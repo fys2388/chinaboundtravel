@@ -1,0 +1,88 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="{{- if .IsHome -}}{{ .Site.Params.description }}{{- else -}}{{ .Description }}{{- end -}}">
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+{{- /* Custom OG/Twitter images */ -}}
+{{- $ogImg := "https://chinaboundtravel.com/images/og-default.jpg" -}}
+<meta property="og:image" content="{{ $ogImg }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChinaBound Travel — China Travel Guide for Foreigners">
+<meta name="twitter:image" content="{{ $ogImg }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="ChinaBound Travel — China Travel Guide for Foreigners">
+{{- /* Article Schema (posts only) */ -}}
+{{- if and .IsPage .Section "posts" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Joran",
+    "url": "https://chinaboundtravel.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ChinaBound Travel",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chinaboundtravel.com/images/og-default.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "image": "{{ $ogImg }}",
+  "keywords": "{{ range first 5 .Params.tags }}{{ . }},{{ end }}"
+}
+</script>
+{{- end -}}
+{{- /* FAQ Schema (pricing page) */ -}}
+{{- if eq .RelPermalink "/pricing/" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I cancel my subscription anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Monthly subscribers can cancel anytime via the link in their account email. Annual subscribers must cancel at least 7 days before renewal. Email support@chinaboundtravel.com with your order number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept all major credit cards, debit cards, and Apple/Google Pay via Stripe secure checkout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I receive my PDF guide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Immediately after purchase. Check your email within 5 minutes. If you do not receive it, contact support@chinaboundtravel.com."
+      }
+    }
+  ]
+}
+</script>
+{{- end -}}
+{{- if .Site.Params.analytics.google.SiteVerificationTag -}}
+<meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}">
+{{- end -}}
+{{- if .Site.Params.analytics.bing.SiteVerificationTag -}}
+<meta name="msvalidate.01" content="{{ .Site.Params.analytics.bing.SiteVerificationTag }}">
+{{- end -}}

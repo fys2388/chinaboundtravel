@@ -1,0 +1,260 @@
+{{- define "main" -}}
+{{- /* Back to Top Button */ -}}
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<article class="post-single">
+    <header class="post-header">
+        {{ partial "breadcrumbs.html" . }}
+        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+        {{- if .Description }}
+        <div class="post-description">{{ .Description }}</div>
+        {{- end }}
+        {{- if not (.Param "hideMeta") }}
+        <div class="post-meta">
+            {{- partial "post_meta.html" . -}}
+            {{- partial "translation_list.html" . -}}
+            {{- partial "edit_post.html" . -}}
+            {{- partial "post_canonical.html" . -}}
+        </div>
+        {{- end }}
+    </header>
+
+    {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+    {{- if .Content }}
+    <div class="post-content md-content">
+        {{- if not (.Param "disableAnchoredHeadings") }}
+        {{- partial "anchored_headings.html" .Content -}}
+        {{- else }}{{ .Content }}{{ end }}
+    </div>
+    {{- end }}
+
+    {{- /* ===== Ebook Annual Pass CTA ===== */ -}}
+    {{- partial "ebook-promo.html" . -}}
+
+    {{- /* ===== Affiliate Recommendation Section ===== */ -}}
+    <div class="article-affiliate">
+        <h4>🛒 Travel Essentials for Your China Trip</h4>
+        <p class="affiliate-intro">Save time &amp; money with Joran's personally tested recommendations:</p>
+        <div class="affiliate-links">
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">📱 <strong>eSIM</strong> – Stay online the moment you land</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🔒 <strong>VPN</strong> – Access your favorite sites in China</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🏨 <strong>Hotels</strong> – Book with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🎫 <strong>Tours & Tickets</strong> – Skip the line at top attractions</a>
+        </div>
+    </div>
+
+    {{- /* ===== Email Subscribe Section (Article) ===== */ -}}
+    {{- partial "email-subscribe.html" . -}}
+
+    {{- /* ===== Travel Promo Section ===== */ -}}
+    {{- partial "travel-promo.html" . -}}
+
+    {{- /* ===== Social Share Buttons ===== */ -}}
+    <div class="share-buttons">
+        <span class="share-label">Share this guide:</span>
+        <a href="https://twitter.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-x" title="Share on X (Twitter)">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" title="Share on Facebook">Facebook</a>
+        <a href="https://pinterest.com/pin/create/button/?url={{ .Permalink | urlquery }}&description={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-pinterest" title="Share on Pinterest">Pinterest</a>
+    </div>
+
+    {{- /* ===== Related Posts ===== */ -}}
+    {{- $related := first 3 (where .Site.RegularPages "Type" "in" (slice "posts")) -}}
+    {{- if $related -}}
+    <section class="related-posts">
+        <h3>📌 More Travel Guides</h3>
+        <div class="related-grid">
+            {{- range $related }}
+            <a href="{{ .RelPermalink }}" class="related-card">
+                <div class="related-meta">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</div>
+                <div class="related-title">{{ .Title }}</div>
+            </a>
+            {{- end }}
+        </div>
+    </section>
+    {{- end -}}
+
+    {{- /* ===== Post Navigation ===== */ -}}
+    {{- if or .PrevInSection .NextInSection -}}
+    <nav class="post-nav-links" aria-label="Post navigation">
+        {{- with .PrevInSection -}}
+        <a href="{{ .RelPermalink }}" class="prev-post">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{- else -}}
+        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">← Previous</span><span class="nav-title">No more posts</span></span>
+        {{- end -}}
+        {{- with .NextInSection -}}
+        <a href="{{ .RelPermalink }}" class="next-post">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{- else -}}
+        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next →</span><span class="nav-title">No more posts</span></span>
+        {{- end -}}
+    </nav>
+    {{- end -}}
+
+    {{- partial "extend_post_content.html" . }}
+
+    <footer class="post-footer">
+        {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+        <ul class="post-tags">
+            {{- range ($.GetTerms $tags) }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            {{- end }}
+        </ul>
+        {{- if (.Param "ShowPostNavLinks") }}
+        {{- partial "post_nav_links.html" . }}
+        {{- end }}
+    </footer>
+
+    {{- if (.Param "comments") }}
+    {{- partial "comments.html" . }}
+    {{- end }}
+</article>
+
+<style>
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 46px;
+    height: 46px;
+    background: #3A6EA5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(58,110,165,0.38);
+    z-index: 999;
+}
+#back-to-top.visible { opacity: 1; visibility: visible; }
+#back-to-top:hover { background: #2d5a8a; transform: translateY(-3px); }
+
+/* Related Posts Grid */
+.related-posts { margin: 2.5rem 0; }
+.related-posts h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3A6EA5;
+    display: inline-block;
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+.related-card {
+    display: block;
+    background: #f8fafc;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+.related-card:hover { border-color: #3A6EA5; background: #f0f5fa; transform: translateY(-2px); }
+.related-meta { font-size: 0.72rem; color: #3A6EA5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.35rem; }
+.related-title { font-size: 0.86rem; font-weight: 600; color: #222; line-height: 1.4; }
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 2rem 0;
+    padding: 1.25rem 0;
+    border-top: 1px solid #e0e4e8;
+    border-bottom: 1px solid #e0e4e8;
+    align-items: center;
+}
+.share-label { font-size: 0.82rem; font-weight: 700; color: #555; margin-right: 0.5rem; }
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.share-x { background: #111; color: white; }
+.share-x:hover { background: #333; color: white; transform: translateY(-1px); }
+.share-facebook { background: #1877f2; color: white; }
+.share-facebook:hover { background: #155db5; color: white; transform: translateY(-1px); }
+.share-pinterest { background: #e60023; color: white; }
+.share-pinterest:hover { background: #c2001d; color: white; transform: translateY(-1px); }
+
+/* Post Navigation */
+.post-nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+.post-nav-links .prev-post, .post-nav-links .next-post {
+    background: #fff;
+    border: 1px solid #e0e4e8;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    transition: all 0.25s ease;
+    text-decoration: none !important;
+    display: block;
+}
+.post-nav-links .prev-post:hover, .post-nav-links .next-post:hover {
+    border-color: #3A6EA5;
+    box-shadow: 0 4px 12px rgba(58,110,165,0.1);
+}
+.post-nav-links .nav-label { font-size: 0.72rem; font-weight: 700; color: #3A6EA5; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; display: block; }
+.post-nav-links .nav-title { font-size: 0.92rem; font-weight: 600; color: #111; }
+.next-post { text-align: right; }
+
+/* Affiliate Section */
+.article-affiliate { background: #f0f5fa; border: 1px solid #c5d5e8; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+.article-affiliate h4 { color: #3A6EA5; font-weight: 700; font-size: 1rem; margin: 0 0 0.5rem 0; }
+.article-affiliate .affiliate-intro { font-size: 0.85rem; color: #555; margin: 0 0 0.85rem 0; }
+.article-affiliate .affiliate-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.article-affiliate .affiliate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #3A6EA5;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+}
+.article-affiliate .affiliate-link:hover { background: #2d5a8a; color: white; transform: translateY(-1px); }
+
+@media (max-width: 768px) {
+    .post-nav-links { grid-template-columns: 1fr; }
+    .share-buttons { flex-direction: column; }
+    #back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+}
+</style>
+
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 300); }, {passive:true});
+    btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+{{- end -}}

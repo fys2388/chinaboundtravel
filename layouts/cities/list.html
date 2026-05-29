@@ -1,0 +1,210 @@
+{{- define "main" -}}
+
+<header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description | markdownify }}</div>
+    {{- end }}
+</header>
+
+{{- /* Section content (from _index.md) */ -}}
+{{- if .Content }}
+<div class="post-content md-content city-index-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- /* ===== City Posts Grid ===== */ -}}
+<section class="cities-posts-section">
+
+    {{- $cityList := slice
+        (dict "slug" "beijing"     "name" "Beijing"     "emoji" "🏯" "desc" "Imperial capital & modern marvel")
+        (dict "slug" "shanghai"    "name" "Shanghai"    "emoji" "🌆" "desc" "The future city with riverside heritage")
+        (dict "slug" "chengdu"     "name" "Chengdu"     "emoji" "🐼" "desc" "Home of pandas & spice")
+        (dict "slug" "xian"        "name" "Xi'an"       "emoji" "🏺" "desc" "Ancient heart of China")
+        (dict "slug" "hangzhou"    "name" "Hangzhou"    "emoji" "🏞️" "desc" "West Lake & tea culture")
+        (dict "slug" "sichuan"     "name" "Western Sichuan" "emoji" "⛰️" "desc" "Overland camping & Tibetan Plateau")
+    -}}
+
+    {{- range $city := $cityList }}
+        {{- $slug := $city.slug }}
+        {{- $cityPosts := slice }}
+        {{- range $.Site.RegularPages }}
+            {{- if and (eq .Section "posts") (in .Params.tags $slug) }}
+                {{- $cityPosts = $cityPosts | append . }}
+            {{- end }}
+        {{- end }}
+
+        <div class="city-group">
+            <div class="city-group-header">
+                <span class="city-group-emoji">{{ $city.emoji }}</span>
+                <div class="city-group-info">
+                    <h2 class="city-group-name">{{ $city.name }}</h2>
+                    <p class="city-group-desc">{{ $city.desc }}</p>
+                </div>
+                <a href="/cities/{{ $slug }}/" class="city-group-link">City Guide →</a>
+            </div>
+
+            {{- if $cityPosts }}
+            <div class="city-posts-row">
+                {{- range $cityPosts }}
+                <a href="{{ .RelPermalink }}" class="city-post-mini-card">
+                    <div class="city-post-mini-meta">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</div>
+                    <div class="city-post-mini-title">{{ .Title }}</div>
+                    <div class="city-post-mini-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+                </a>
+                {{- end }}
+            </div>
+            {{- else }}
+            <p class="city-no-posts">No posts yet — check back soon!</p>
+            {{- end }}
+        </div>
+    {{- end }}
+
+</section>
+
+{{- /* ===== Ebook CTA ===== */ -}}
+{{- partial "ebook-promo.html" . -}}
+
+{{- /* ===== Email Subscribe ===== */ -}}
+{{- partial "email-subscribe.html" . -}}
+
+<style>
+/* City Index Content */
+.city-index-content {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e0e4e8;
+}
+.page-header {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+.page-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+/* Cities Posts Section */
+.cities-posts-section {
+    margin: 2rem 0 3rem;
+}
+
+.city-group {
+    margin-bottom: 2.5rem;
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.city-group-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f5fa 100%);
+    border-bottom: 1px solid #e0e8f0;
+}
+.city-group-emoji {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.city-group-info {
+    flex: 1;
+}
+.city-group-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.15rem 0;
+}
+.city-group-desc {
+    font-size: 0.82rem;
+    color: #777;
+    margin: 0;
+}
+.city-group-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    background: #FF6B35;
+    color: #fff !important;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.city-group-link:hover {
+    background: #e55a2b;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.city-posts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    padding: 1rem 1.25rem;
+}
+
+.city-post-mini-card {
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+    border: 1px solid #e8ecf0;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+.city-post-mini-card:hover {
+    border-color: #FF6B35;
+    background: #fff5f2;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255,107,53,0.1);
+}
+.city-post-mini-meta {
+    font-size: 0.7rem;
+    color: #FF6B35;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+}
+.city-post-mini-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+}
+.city-post-mini-date {
+    font-size: 0.72rem;
+    color: #aaa;
+}
+
+.city-no-posts {
+    padding: 1rem 1.25rem;
+    font-size: 0.85rem;
+    color: #aaa;
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .city-group-header { flex-wrap: wrap; }
+    .city-posts-row { grid-template-columns: 1fr; }
+    .city-group-link { margin-left: auto; }
+}
+</style>
+{{- end -}}

@@ -1,0 +1,162 @@
+2026-05-22 11:08:23 [INFO] ChinaBound Audit v1.0 启动 | dry=True | blog_root=E:\AI\dulizhan\travel-blog
+2026-05-22 11:08:25 [INFO] LLM: deepseek model=deepseek-chat base=https://api.deepseek.com
+2026-05-22 11:08:25 [INFO] [SCAN] 发现 7 篇帖子
+2026-05-22 11:08:25 [INFO] ============================================================
+2026-05-22 11:08:25 [INFO] [AUDIT] 处理: 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md
+2026-05-22 11:08:25 [INFO] ============================================================
+2026-05-22 11:08:25 [INFO] [AUDIT] 备份: 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md
+2026-05-22 11:08:25 [INFO] [EDITOR] 开始严审: How to Use WeChat Pay as a Foreigner
+2026-05-22 11:08:32 [INFO] [EDITOR] 审稿需修复 | 耗时:7.5s | 摘要:Missing VPN/eSIM warning: Add a brief note in the setup section about needing a VPN to download/update WeChat if outside China, or to ensure stable connection during verification.
+2026-05-22 11:08:32 [INFO] [EDITOR]   - Missing VPN/eSIM warning: Add a brief note in the setup section about needing a VPN to download/update WeChat if outside China, or to ensure stable connection during verification.
+2026-05-22 11:08:32 [INFO] [EDITOR]   - Slight overuse of `#TP_BOOKING_PLACEHOLDER#` (three times) – consider reducing to two for better flow.
+2026-05-22 11:08:32 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:08:32 [INFO] [REPORTER] 开始针对性重写 | issues=2
+2026-05-22 11:08:46 [INFO] [REPORTER] 重写完成 | 字数:~1454 | 耗时:13.4s
+2026-05-22 11:08:46 [INFO] [AFFILIATE] 联盟注入 | Klook:2 Booking:5 Trip:0 VPN:0 | 总计:7处
+2026-05-22 11:08:46 [INFO] [AUDIT] ⚠️ DRY-RUN 模式，未实际写入
+2026-05-22 11:08:46 [INFO] ============================================================
+2026-05-22 11:08:46 [INFO] [AUDIT] 处理: western-sichuan-overland-camping-route.md
+2026-05-22 11:08:46 [INFO] ============================================================
+2026-05-22 11:08:46 [INFO] [AUDIT] 备份: western-sichuan-overland-camping-route.md
+2026-05-22 11:08:46 [INFO] [EDITOR] 开始严审: Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness
+2026-05-22 11:08:59 [INFO] [EDITOR] 审稿需修复 | 耗时:13.1s | 摘要:Missing hotel/accommodation recommendations for Tagong (backup option), Daocheng, and Yading Village
+2026-05-22 11:08:59 [INFO] [EDITOR]   - Missing hotel/accommodation recommendations for Tagong (backup option), Daocheng, and Yading Village
+2026-05-22 11:08:59 [INFO] [EDITOR]   - Missing Klook affiliate link opportunity for Yading National Park tickets
+2026-05-22 11:08:59 [INFO] [EDITOR]   - Missing VPN/eSIM warning at natural points (Day 1 departure, Day 2 before losing signal)
+2026-05-22 11:08:59 [INFO] [EDITOR]   - Missing car rental specifics (where to rent in Chengdu, insurance advice, fuel stop locations)
+2026-05-22 11:08:59 [INFO] [EDITOR]   - Leshan Giant Buddha detour is geographically awkward but not a factual error
+2026-05-22 11:08:59 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:08:59 [INFO] [REPORTER] 开始针对性重写 | issues=5
+2026-05-22 11:09:17 [INFO] [REPORTER] 重写完成 | 字数:~1400 | 耗时:18.1s
+2026-05-22 11:09:17 [INFO] [AFFILIATE] 联盟注入 | Klook:1 Booking:6 Trip:6 VPN:3 | 总计:16处
+2026-05-22 11:09:17 [INFO] [AUDIT] ⚠️ DRY-RUN 模式，未实际写入
+2026-05-22 11:09:17 [INFO] ============================================================
+2026-05-22 11:09:17 [INFO] AUDIT COMPLETE | 总:2 | 完美:2 | 修复:0 | 异常:0
+2026-05-22 11:09:17 [INFO] 原始备份目录: E:\AI\dulizhan\travel-blog\content\posts\.audit_backup
+2026-05-22 11:09:17 [INFO] ============================================================
+2026-05-22 11:49:37 [INFO] ChinaBound Audit v1.0 启动 | dry=False | blog_root=E:\AI\dulizhan\travel-blog
+2026-05-22 11:49:38 [INFO] LLM: deepseek model=deepseek-chat base=https://api.deepseek.com
+2026-05-22 11:49:38 [INFO] [SCAN] 发现 8 篇帖子
+2026-05-22 11:49:38 [INFO] ============================================================
+2026-05-22 11:49:38 [INFO] [AUDIT] 处理: 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md
+2026-05-22 11:49:38 [INFO] ============================================================
+2026-05-22 11:49:39 [INFO] [AUDIT] 备份: 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md
+2026-05-22 11:49:39 [INFO] [EDITOR] 开始严审: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
+2026-05-22 11:49:49 [INFO] [EDITOR] 审稿需修复 | 耗时:10.0s | 摘要:Missing eSIM/VPN recommendation where natural (after mentioning WeChat mini-program)
+2026-05-22 11:49:49 [INFO] [EDITOR]   - Missing eSIM/VPN recommendation where natural (after mentioning WeChat mini-program)
+2026-05-22 11:49:49 [INFO] [EDITOR]   - Missing hotel recommendation for overnight stays (brief mention would enhance)
+2026-05-22 11:49:49 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:49:49 [INFO] [REPORTER] 开始针对性重写 | issues=2
+2026-05-22 11:50:00 [INFO] [REPORTER] 重写完成 | 字数:~998 | 耗时:11.6s
+2026-05-22 11:50:00 [INFO] [AFFILIATE] 联盟注入 | Klook:3 Booking:2 Trip:0 VPN:0 | 总计:5处
+2026-05-22 11:50:00 [INFO] [AUDIT] ✅ 写回完成: 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md
+2026-05-22 11:50:00 [INFO] ============================================================
+2026-05-22 11:50:00 [INFO] [AUDIT] 处理: 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md
+2026-05-22 11:50:00 [INFO] ============================================================
+2026-05-22 11:50:00 [INFO] [AUDIT] 备份: 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md
+2026-05-22 11:50:00 [INFO] [EDITOR] 开始严审: How to Use WeChat Pay as a Foreigner
+2026-05-22 11:50:08 [INFO] [EDITOR] 审稿通过 | 耗时:8.4s | 摘要:
+2026-05-22 11:50:08 [INFO] [AUDIT] ✅ 主编判定 PERFECT，直接进入联盟清洗
+2026-05-22 11:50:08 [INFO] [AFFILIATE] 联盟注入 | Klook:2 Booking:8 Trip:0 VPN:0 | 总计:10处
+2026-05-22 11:50:08 [INFO] [AUDIT] ✅ 写回完成: 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md
+2026-05-22 11:50:08 [INFO] ============================================================
+2026-05-22 11:50:08 [INFO] [AUDIT] 处理: western-sichuan-overland-camping-route.md
+2026-05-22 11:50:08 [INFO] ============================================================
+2026-05-22 11:50:08 [INFO] [AUDIT] 备份: western-sichuan-overland-camping-route.md
+2026-05-22 11:50:08 [INFO] [EDITOR] 开始严审: Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness
+2026-05-22 11:50:30 [INFO] [EDITOR] 审稿需修复 | 耗时:21.5s | 摘要:Factual error: Batang is not on the Yading → Kangding return route (Day 6) – it's a significant detour west of
+2026-05-22 11:50:30 [INFO] [EDITOR]   - Factual error: Batang is not on the Yading → Kangding return route (Day 6) – it's a significant detour west of
+2026-05-22 11:50:30 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:50:30 [INFO] [REPORTER] 开始针对性重写 | issues=1
+2026-05-22 11:50:45 [INFO] [REPORTER] 重写完成 | 字数:~1393 | 耗时:14.9s
+2026-05-22 11:50:45 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:5 Trip:5 VPN:0 | 总计:10处
+2026-05-22 11:50:45 [INFO] [AUDIT] ✅ 写回完成: western-sichuan-overland-camping-route.md
+2026-05-22 11:50:45 [INFO] ============================================================
+2026-05-22 11:50:45 [INFO] [AUDIT] 处理: internet-connection-china-esim-vpn-guide.md
+2026-05-22 11:50:45 [INFO] ============================================================
+2026-05-22 11:50:45 [INFO] [AUDIT] 备份: internet-connection-china-esim-vpn-guide.md
+2026-05-22 11:50:45 [INFO] [EDITOR] 开始严审: Untitled
+2026-05-22 11:51:01 [INFO] [EDITOR] 审稿需修复 | 耗时:16.0s | 摘要:Stray `--- draft: false` formatting error in post body
+2026-05-22 11:51:01 [INFO] [EDITOR]   - Stray `--- draft: false` formatting error in post body
+2026-05-22 11:51:01 [INFO] [EDITOR]   - Multiple affiliate link placeholders not filled
+2026-05-22 11:51:01 [INFO] [EDITOR]   - Missing critical warning: VPN apps must be downloaded BEFORE leaving home (not available in Chinese app stores)
+2026-05-22 11:51:01 [INFO] [EDITOR]   - Missing caveat about VPN reliability being unstable in China (services get blocked/unblocked frequently)
+2026-05-22 11:51:01 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:51:01 [INFO] [REPORTER] 开始针对性重写 | issues=4
+2026-05-22 11:51:16 [INFO] [REPORTER] 重写完成 | 字数:~1376 | 耗时:15.5s
+2026-05-22 11:51:16 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:4 Trip:0 VPN:26 | 总计:30处
+2026-05-22 11:51:16 [INFO] [AUDIT] ✅ 写回完成: internet-connection-china-esim-vpn-guide.md
+2026-05-22 11:51:16 [INFO] ============================================================
+2026-05-22 11:51:16 [INFO] [AUDIT] 处理: hello-world.md
+2026-05-22 11:51:16 [INFO] ============================================================
+2026-05-22 11:51:16 [INFO] [AUDIT] 备份: hello-world.md
+2026-05-22 11:51:16 [INFO] [EDITOR] 开始严审: Untitled
+2026-05-22 11:51:26 [INFO] [EDITOR] 审稿需修复 | 耗时:9.1s | 摘要:Tone is generic marketing fluff, not Joran's American expat friend voice
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Tone is generic marketing fluff, not Joran's American expat friend voice
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Opening line "Welcome to ChinaBound - your ultimate guide" is tourism bureau language
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Bullet list format is dry and robotic
+2026-05-22 11:51:26 [INFO] [EDITOR]   - No personal anecdotes, humor, or local insight (Chengdu, wife's family, etc.)
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Sign-off "Happy travels" is generic
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Title "Untitled" is inconsistent with front matter title
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Date set to 2026 is unusual for a welcome post
+2026-05-22 11:51:26 [INFO] [EDITOR]   - Missing natural hooks for VPN/eSIM warnings, hotel recs, Klook bookings, car rental context
+2026-05-22 11:51:26 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:51:26 [INFO] [REPORTER] 开始针对性重写 | issues=8
+2026-05-22 11:51:34 [INFO] [REPORTER] 重写完成 | 字数:~347 | 耗时:8.1s
+2026-05-22 11:51:34 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:2 Trip:0 VPN:1 | 总计:3处
+2026-05-22 11:51:34 [INFO] [AUDIT] ✅ 写回完成: hello-world.md
+2026-05-22 11:51:34 [INFO] ============================================================
+2026-05-22 11:51:34 [INFO] [AUDIT] 处理: alipay-wechat-pay-foreigners-guide.md
+2026-05-22 11:51:34 [INFO] ============================================================
+2026-05-22 11:51:34 [INFO] [AUDIT] 备份: alipay-wechat-pay-foreigners-guide.md
+2026-05-22 11:51:34 [INFO] [EDITOR] 开始严审: Untitled
+2026-05-22 11:51:44 [INFO] [EDITOR] 审稿需修复 | 耗时:10.3s | 摘要:Stray `--- draft: false` line in the body text (between summary and Part 1) needs to be removed
+2026-05-22 11:51:44 [INFO] [EDITOR]   - Stray `--- draft: false` line in the body text (between summary and Part 1) needs to be removed
+2026-05-22 11:51:44 [INFO] [EDITOR]   - Duplicate `draft` declaration (once in front matter, once as markdown)
+2026-05-22 11:51:44 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:51:44 [INFO] [REPORTER] 开始针对性重写 | issues=2
+2026-05-22 11:51:53 [INFO] [REPORTER] 重写完成 | 字数:~833 | 耗时:8.6s
+2026-05-22 11:51:53 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:1 Trip:0 VPN:0 | 总计:1处
+2026-05-22 11:51:53 [INFO] [AUDIT] ✅ 写回完成: alipay-wechat-pay-foreigners-guide.md
+2026-05-22 11:51:53 [INFO] ============================================================
+2026-05-22 11:51:53 [INFO] [AUDIT] 处理: 144-hour-visa-free-transit-guide.md
+2026-05-22 11:51:53 [INFO] ============================================================
+2026-05-22 11:51:53 [INFO] [AUDIT] 备份: 144-hour-visa-free-transit-guide.md
+2026-05-22 11:51:53 [INFO] [EDITOR] 开始严审: 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
+2026-05-22 11:52:05 [INFO] [EDITOR] 审稿需修复 | 耗时:12.4s | 摘要:Beijing West Railway Station listed as eligible port — not a real 144-hour transit port
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Beijing West Railway Station listed as eligible port — not a real 144-hour transit port
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Shanghai Railway Station listed as eligible port — not a real 144-hour transit port
+2026-05-22 11:52:05 [INFO] [EDITOR]   - "Hangzhou is NOT in the Shanghai zone" — incorrect; Hangzhou is in the combined Jiangsu-Zhejiang-Shanghai zone
+2026-05-22 11:52:05 [INFO] [EDITOR]   - "Beijing = Beijing only" — incorrect; Beijing-Tianjin-Hebei is a combined zone
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Link to Hong Kong Immigration Department for mainland China policy — wrong authority
+2026-05-22 11:52:05 [INFO] [EDITOR]   - "240-hour transit pilot" — unverified/speculative without source
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Missing VPN/eSIM warning in natural insertion point
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Missing hotel/accommodation recommendation opportunity
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Missing Klook tour/ticket booking opportunity
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Affiliate link uses placeholder URL (example.com)
+2026-05-22 11:52:05 [INFO] [EDITOR]   - Link to visaforchina-cbp.com is not an official government source
+2026-05-22 11:52:05 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:52:05 [INFO] [REPORTER] 开始针对性重写 | issues=11
+2026-05-22 11:52:20 [INFO] [REPORTER] 重写完成 | 字数:~1199 | 耗时:15.3s
+2026-05-22 11:52:20 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:3 Trip:0 VPN:1 | 总计:4处
+2026-05-22 11:52:20 [INFO] [AUDIT] ✅ 写回完成: 144-hour-visa-free-transit-guide.md
+2026-05-22 11:52:20 [INFO] ============================================================
+2026-05-22 11:52:20 [INFO] [AUDIT] 处理: china-extends-144-hour-visa-free-transit-policy-to-more-countries.md
+2026-05-22 11:52:20 [INFO] ============================================================
+2026-05-22 11:52:20 [INFO] [AUDIT] 备份: china-extends-144-hour-visa-free-transit-policy-to-more-countries.md
+2026-05-22 11:52:20 [INFO] [EDITOR] 开始严审: China Extends 144-hour Visa-free Transit Policy to More Countries
+2026-05-22 11:52:30 [INFO] [EDITOR] 审稿需修复 | 耗时:9.5s | 摘要:Tone is too generic and lacks Joran's signature wit, directness, and personal anecdotes
+2026-05-22 11:52:30 [INFO] [EDITOR]   - Tone is too generic and lacks Joran's signature wit, directness, and personal anecdotes
+2026-05-22 11:52:30 [INFO] [EDITOR]   - Phrases like "fellow travelers," "game-changer," and "China is opening up more than ever" sound like marketing fluff
+2026-05-22 11:52:30 [INFO] [EDITOR]   - "Tips for Foreign Travelers" section is dry and impersonal – needs specific, humorous, or culturally observant advice
+2026-05-22 11:52:30 [INFO] [EDITOR]   - Missing natural hooks for VPN/eSIM warning, hotel recommendations, and Klook bookings
+2026-05-22 11:52:30 [INFO] [EDITOR]   - No Chengdu/local context or personal stories (e.g., mother-in-law, airport arrival stories)
+2026-05-22 11:52:30 [INFO] [AUDIT] 需要修复，调用采编Agent针对性重写
+2026-05-22 11:52:30 [INFO] [REPORTER] 开始针对性重写 | issues=5
+2026-05-22 11:52:43 [INFO] [REPORTER] 重写完成 | 字数:~542 | 耗时:13.3s
+2026-05-22 11:52:43 [INFO] [AFFILIATE] 联盟注入 | Klook:0 Booking:4 Trip:0 VPN:1 | 总计:5处
+2026-05-22 11:52:43 [INFO] [AUDIT] ✅ 写回完成: china-extends-144-hour-visa-free-transit-policy-to-more-countries.md
+2026-05-22 11:52:43 [INFO] ============================================================
+2026-05-22 11:52:43 [INFO] AUDIT COMPLETE | 总:8 | 完美:0 | 修复:8 | 异常:0
+2026-05-22 11:52:43 [INFO] 原始备份目录: E:\AI\dulizhan\travel-blog\content\posts\.audit_backup
+2026-05-22 11:52:43 [INFO] ============================================================

@@ -1,0 +1,45 @@
+# ============================================
+# Git Ignore Configuration
+# ============================================
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Log files
+*.log
+posting_log.txt
+social_bot.log
+
+# Reports
+report_*.md
+
+# Data files
+content_backup.csv
+
+# Browser driver
+chromedriver.exe
+geckodriver.exe
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
+.env/

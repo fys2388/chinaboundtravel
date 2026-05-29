@@ -1,0 +1,82 @@
+/* ================================================
+   Homepage Sections - Latest / Must-Know / Cities
+   ================================================ */
+
+.home-sections {
+    margin-top: 2.5rem;
+}
+
+.home-section-block {
+    margin-bottom: 3rem;
+}
+
+.home-section-block .section-emoji {
+    font-size: 1.3rem;
+    margin-right: 0.4rem;
+}
+
+.post-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid #e0e4e8;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.post-card:hover {
+    border-color: #3A6EA5;
+    box-shadow: 0 4px 14px rgba(58,110,165,0.1);
+    transform: translateY(-2px);
+}
+
+.post-card .card-meta {
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.post-card .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.4;
+}
+
+.post-card .card-title a {
+    color: #111;
+}
+
+.post-card .card-title a:hover {
+    color: #3A6EA5;
+}
+
+.post-card .card-summary {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.post-card .card-tags {
+    margin-top: 0.5rem;
+}
+
+.read-more-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #3A6EA5;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 0.5rem;
+}
+
+.read-more-link:hover {
+    color: #2d5a8a;
+    text-decoration: none;
+}

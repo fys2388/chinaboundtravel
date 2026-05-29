@@ -1,0 +1,111 @@
+{{- define "main" -}}
+{{- partial "home-banner.html" . -}}
+
+<main class="main list" id="main">
+    <div class="home-layout">
+        <!-- Main Content -->
+        <div class="home-content">
+
+            {{- /* Latest News Section */ -}}
+            <section class="home-section-block">
+                <h2 class="section-heading"><span class="section-emoji">🔥</span>Latest News &amp; Visa Updates</h2>
+                <div class="posts-list">
+                    {{- $latest := where (where .Site.RegularPages "Type" "in" (slice "posts")) "Kind" "page" | first 3 -}}
+                    {{- range $latest }}
+                    <article class="post-card">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category-badge">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</span>
+                                <span>·</span>
+                                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                            </div>
+                            <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p class="card-summary">{{ .Summary | truncate 120 }}</p>
+                            <div class="card-tags">
+                                {{- range first 3 .Params.tags -}}
+                                <span class="tag">{{ . }}</span>
+                                {{- end }}
+                            </div>
+                            <a href="{{ .RelPermalink }}" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                    {{- end }}
+                </div>
+            </section>
+
+            {{- /* Must-Know Tips Section */ -}}
+            <section class="home-section-block">
+                <h2 class="section-heading"><span class="section-emoji">✅</span>Must-Know Travel Tips</h2>
+                <div class="posts-list">
+                    {{- range first 3 (where .Site.RegularPages "Type" "in" (slice "posts")) }}
+                    <article class="post-card">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                {{- range first 1 .Params.categories -}}
+                                <span class="category-badge">{{ . }}</span>
+                                {{- end }}
+                                <span>·</span>
+                                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                            </div>
+                            <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p class="card-summary">{{ .Summary | truncate 120 }}</p>
+                            <div class="card-tags">
+                                {{- range first 3 .Params.tags -}}
+                                <span class="tag">{{ . }}</span>
+                                {{- end }}
+                            </div>
+                            <a href="{{ .RelPermalink }}" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                    {{- end }}
+                </div>
+            </section>
+
+            {{- /* Ebook Annual Pass Section */ -}}
+            {{- partial "ebook-promo.html" . -}}
+
+            {{- /* Email Subscribe Section (Homepage) */ -}}
+            {{- partial "email-subscribe.html" . -}}
+
+            {{- /* City Travel Section */ -}}
+            <section class="home-section-block">
+                <h2 class="section-heading"><span class="section-emoji">🏙️</span>China City Travel Guides</h2>
+                <div class="posts-list">
+                    {{- range first 3 (where .Site.RegularPages "Type" "in" (slice "posts")) }}
+                    <article class="post-card">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                {{- range first 1 .Params.categories -}}
+                                <span class="category-badge">{{ . }}</span>
+                                {{- end }}
+                                <span>·</span>
+                                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                            </div>
+                            <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p class="card-summary">{{ .Summary | truncate 120 }}</p>
+                            <div class="card-tags">
+                                {{- range first 3 .Params.tags -}}
+                                <span class="tag">{{ . }}</span>
+                                {{- end }}
+                            </div>
+                            <a href="{{ .RelPermalink }}" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                    {{- end }}
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="home-sidebar">
+            {{- partial "sidebar-author.html" . -}}
+        </aside>
+    </div>
+</main>
+{{- end -}}
+
+{{- /* Also define index to use same layout */ -}}
+{{- define "index" -}}
+{{- template "main" . -}}
+{{- end -}}
