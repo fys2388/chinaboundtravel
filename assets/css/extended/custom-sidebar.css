@@ -1,0 +1,177 @@
+/* ================================================
+   Sidebar - Author Card, Popular, Subscribe
+   ================================================ */
+
+/* Sidebar Container */
+#sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.sidebar-card {
+    background: #fff;
+    border: 1px solid #e0e4e8;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+}
+
+/* Author Card */
+.author-card {
+    text-align: center;
+}
+
+.author-card .author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 3px solid #3A6EA5;
+    margin-bottom: 0.75rem;
+    aspect-ratio: 1 / 1;
+}
+
+.author-card .author-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.4rem;
+}
+
+.author-card .author-bio {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+/* Section Headers in Sidebar */
+.sidebar-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3A6EA5;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Popular Posts List */
+.popular-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f4f8;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.popular-list li:last-child {
+    border-bottom: none;
+}
+
+.popular-list .rank {
+    background: #3A6EA5;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.popular-list .rank-2 { background: #7ba3c9; }
+.popular-list .rank-3 { background: #a8bfd4; }
+
+.popular-list a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+}
+
+.popular-list a:hover {
+    color: #3A6EA5;
+    text-decoration: none !important;
+}
+
+/* Newsletter Subscribe */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subscribe-form input[type="email"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c5d5e8;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    background: #f8fafc;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.subscribe-form input[type="email"]:focus {
+    border-color: #3A6EA5;
+}
+
+.subscribe-form button {
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+/* Tool Links */
+.tool-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tool-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #3A6EA5;
+    padding: 6px 10px;
+    background: #e8f0f8;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.tool-link:hover {
+    background: #3A6EA5;
+    color: white;
+    text-decoration: none !important;
+    transform: translateX(3px);
+}
+
+/* Sidebar on right for article pages */
+.article-sidebar {
+    position: sticky;
+    top: 90px;
+}
+
+@media (max-width: 1024px) {
+    #sidebar {
+        width: 100%;
+    }
+}

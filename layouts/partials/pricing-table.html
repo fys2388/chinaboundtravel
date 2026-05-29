@@ -1,0 +1,567 @@
+<!-- Pricing Table Partial — Three-Tier Plan Display -->
+<style>
+/* ===== Pricing Page Styles ===== */
+.pricing-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.pricing-hero {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.pricing-hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+
+.pricing-hero .hero-sub {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-hero .hero-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 2px solid #e0e4e8;
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(58, 110, 165, 0.15);
+}
+
+.pricing-card.featured {
+    border-color: #FF6B35;
+    box-shadow: 0 8px 32px rgba(255, 107, 53, 0.18);
+}
+
+.pricing-card.featured:hover {
+    box-shadow: 0 16px 48px rgba(255, 107, 53, 0.25);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF6B35;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.pricing-tier-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.pricing-tier-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #FF6B35;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card.featured .pricing-tier-name {
+    color: #FF6B35;
+}
+
+.pricing-price {
+    margin-bottom: 0.35rem;
+}
+
+.pricing-price .amount {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.03em;
+}
+
+.pricing-price .per {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.pricing-tagline {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 2.5rem;
+}
+
+.pricing-divider {
+    border: none;
+    border-top: 1px solid #e0e4e8;
+    margin: 1.5rem 0;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    flex: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #333;
+    padding: 0.4rem 0;
+    line-height: 1.5;
+}
+
+.pricing-features li .check {
+    color: #FF6B35;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pricing-features li .cross {
+    color: #ccc;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pricing-features li.dim {
+    color: #aaa;
+}
+
+/* Refund checkbox */
+.refund-checkbox-wrap {
+    margin-bottom: 1.25rem;
+    background: #fff8f6;
+    border: 1px solid #ffd5c5;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+}
+
+.refund-checkbox-wrap input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #FF6B35;
+    margin-right: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.refund-checkbox-wrap label {
+    font-size: 0.78rem;
+    color: #444;
+    line-height: 1.6;
+    cursor: pointer;
+    display: inline;
+}
+
+.refund-checkbox-wrap label a {
+    color: #FF6B35;
+    text-decoration: underline;
+}
+
+.refund-checkbox-wrap label a:hover {
+    color: #e55a25;
+}
+
+/* CTA Button */
+.pricing-cta {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    background: #3A6EA5;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(58, 110, 165, 0.3);
+}
+
+.pricing-cta:hover {
+    background: #2d5a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(58, 110, 165, 0.4);
+    color: #fff !important;
+}
+
+.pricing-cta.featured {
+    background: linear-gradient(135deg, #FF6B35, #e55a25);
+    box-shadow: 0 4px 18px rgba(255, 107, 53, 0.35);
+}
+
+.pricing-cta.featured:hover {
+    background: linear-gradient(135deg, #e55a25, #cc4a1a);
+    box-shadow: 0 6px 24px rgba(255, 107, 53, 0.45);
+    color: #fff !important;
+}
+
+.pricing-cta:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.pricing-cta-note {
+    font-size: 0.75rem;
+    color: #888;
+    text-align: center;
+    margin-top: 0.6rem;
+}
+
+/* Comparison table */
+.pricing-comparison {
+    background: #fff;
+    border: 1px solid #e0e4e8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.pricing-comparison h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    padding: 1.5rem 1.5rem 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.comp-table th {
+    background: #f5f7fa;
+    padding: 0.85rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    color: #1a1a2e;
+    border-bottom: 2px solid #e0e4e8;
+}
+
+.comp-table th:first-child {
+    text-align: left;
+}
+
+.comp-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+}
+
+.comp-table td:first-child {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.comp-table td:not(:first-child) {
+    text-align: center;
+}
+
+.comp-table .yes { color: #27ae60; font-weight: 700; }
+.comp-table .no { color: #ccc; }
+.comp-table tr:last-child td { border-bottom: none; }
+
+/* FAQ */
+.pricing-faq {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pricing-faq h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border: 1px solid #e0e4e8;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+}
+
+.faq-item h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.5rem 0;
+}
+
+.faq-item p {
+    font-size: 0.88rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pricing-card.featured {
+        order: -1;
+    }
+    .comp-table { font-size: 0.8rem; }
+    .comp-table th, .comp-table td { padding: 0.6rem 0.5rem; }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero h1 { font-size: 1.8rem; }
+    .pricing-price .amount { font-size: 2.2rem; }
+}
+</style>
+
+<div class="pricing-page">
+    <!-- Hero -->
+    <div class="pricing-hero">
+        <h1>Choose Your China Travel Pass</h1>
+        <p class="hero-sub">Real-time visa alerts. Crowd-skipping routes. Scam-proof strategies.</p>
+        <p class="hero-note">All plans include the <strong>ChinaBound Travel Guide 2026.05</strong> PDF — updated monthly.</p>
+    </div>
+
+    <!-- Three Tier Cards -->
+    <div class="pricing-grid">
+
+        <!-- Tier 2: One-Time -->
+        <div class="pricing-card">
+            <div class="pricing-tier-icon">🥈</div>
+            <div class="pricing-tier-name">One-Time Buyout</div>
+            <div class="pricing-price">
+                <span class="amount">$14.99</span>
+                <span class="per"> one-time</span>
+            </div>
+            <p class="pricing-tagline">Current edition only.<br>No future updates.</p>
+            <hr class="pricing-divider">
+            <ul class="pricing-features">
+                <li><span class="check">✓</span> PDF Guide (current edition)</li>
+                <li><span class="cross">✗</span> <span class="dim">Future monthly updates</span></li>
+                <li><span class="cross">✗</span> <span class="dim">Weekly Travel Radar</span></li>
+                <li><span class="cross">✗</span> <span class="dim">Pre-trip city guides</span></li>
+                <li><span class="cross">✗</span> <span class="dim">AI trip planner templates</span></li>
+                <li><span class="cross">✗</span> <span class="dim">Priority support</span></li>
+            </ul>
+            <div class="refund-checkbox-wrap">
+                <input type="checkbox" id="cb-onetime">
+                <label for="cb-onetime">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected plan. I understand this is a one-time purchase with no refunds once the download begins. <a href="/refund-policy" target="_blank">View refund policy</a></label>
+            </div>
+            <a href="{{ .Site.Params.ebook.stripeOnetime | default "#" }}" class="pricing-cta" id="btn-onetime" target="_blank" rel="nofollow sponsored">Buy Now →</a>
+            <p class="pricing-cta-note">Secure checkout via Stripe</p>
+        </div>
+
+        <!-- Tier 3: Monthly -->
+        <div class="pricing-card">
+            <div class="pricing-tier-icon">🥉</div>
+            <div class="pricing-tier-name">Monthly Radar</div>
+            <div class="pricing-price">
+                <span class="amount">$9.99</span>
+                <span class="per">/month</span>
+            </div>
+            <p class="pricing-tagline">First month $1.<br>Cancel anytime.</p>
+            <hr class="pricing-divider">
+            <ul class="pricing-features">
+                <li><span class="check">✓</span> PDF Guide (current edition)</li>
+                <li><span class="check">✓</span> Future monthly updates</li>
+                <li><span class="check">✓</span> Weekly Travel Radar</li>
+                <li><span class="cross">✗</span> <span class="dim">Pre-trip city guides</span></li>
+                <li><span class="cross">✗</span> <span class="dim">AI trip planner templates</span></li>
+                <li><span class="cross">✗</span> <span class="dim">Priority support</span></li>
+            </ul>
+            <div class="refund-checkbox-wrap">
+                <input type="checkbox" id="cb-monthly">
+                <label for="cb-monthly">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected subscription. This recurring subscription will automatically renew unless I cancel. I acknowledge that I will lose my right to refunds once the download begins. <a href="/refund-policy" target="_blank">View refund policy</a></label>
+            </div>
+            <a href="{{ .Site.Params.ebook.stripeMonthly | default "#" }}" class="pricing-cta" id="btn-monthly" target="_blank" rel="nofollow sponsored">Start for $1 →</a>
+            <p class="pricing-cta-note">Secure checkout via Stripe · First month $1</p>
+        </div>
+
+        <!-- Tier 1: Annual — FEATURED -->
+        <div class="pricing-card featured">
+            <div class="pricing-badge">★ MOST POPULAR</div>
+            <div class="pricing-tier-icon">🥇</div>
+            <div class="pricing-tier-name">Annual Elite Pass</div>
+            <div class="pricing-price">
+                <span class="amount">$49.99</span>
+                <span class="per">/year</span>
+            </div>
+            <p class="pricing-tagline">~$4.17/month.<br>All Premium benefits included.</p>
+            <hr class="pricing-divider">
+            <ul class="pricing-features">
+                <li><span class="check">✓</span> PDF Guide (current edition)</li>
+                <li><span class="check">✓</span> Future monthly updates</li>
+                <li><span class="check">✓</span> Weekly Travel Radar</li>
+                <li><span class="check">✓</span> Pre-trip city guides (7 days before travel)</li>
+                <li><span class="check">✓</span> AI trip planner template pack</li>
+                <li><span class="check">✓</span> Priority email support</li>
+            </ul>
+            <div class="refund-checkbox-wrap">
+                <input type="checkbox" id="cb-annual">
+                <label for="cb-annual">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected subscription. I understand this recurring subscription will automatically renew at the end of each billing cycle unless I cancel. I acknowledge that I will lose my right to refunds once the download begins or any premium content is delivered. All sales are final. <a href="/refund-policy" target="_blank">View refund policy</a></label>
+            </div>
+            <a href="{{ .Site.Params.ebook.stripeAnnual | default "#" }}" class="pricing-cta featured" id="btn-annual" target="_blank" rel="nofollow sponsored">Get Instant Access →</a>
+            <p class="pricing-cta-note">Secure checkout via Stripe · Cancel anytime</p>
+        </div>
+
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="pricing-comparison">
+        <h2>Plan Comparison</h2>
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>One-Time</th>
+                    <th>Monthly</th>
+                    <th>Annual Elite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PDF Guide (current edition)</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>Future monthly updates</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>Weekly Travel Radar</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>Pre-trip city guides</td>
+                    <td class="no">✗</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>AI trip planner templates</td>
+                    <td class="no">✗</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>Priority email support</td>
+                    <td class="no">✗</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                </tr>
+                <tr>
+                    <td>Bonus: +1 month free</td>
+                    <td class="no">✗</td>
+                    <td class="no">✗</td>
+                    <td class="yes">✓</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pricing-faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h4>Can I cancel anytime?</h4>
+            <p>Yes. Monthly subscribers can cancel before the next billing cycle. Annual subscribers can cancel up to 7 days before renewal. Email support@chinaboundtravel.com with your order number.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What payment methods do you accept?</h4>
+            <p>All major credit cards, debit cards, and Apple/Google Pay via Stripe.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>When will I receive my PDF?</h4>
+            <p>Immediately after purchase. Check your inbox (and spam folder) for the download link. If you don't receive it within 5 minutes, contact support@chinaboundtravel.com.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is this a subscription?</h4>
+            <p>The Monthly and Annual plans are subscriptions. The One-Time Buyout is a single payment with no recurring charges.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What's the Weekly Travel Radar?</h4>
+            <p>Every Friday, all active subscribers receive a 1-page PDF with the latest visa rule changes, scam alerts, crowd conditions at major attractions, and recommended route adjustments for the week ahead.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+// Enforce refund policy checkbox before checkout
+function setupCheckout(buttonId, checkboxId) {
+    var btn = document.getElementById(buttonId);
+    var cb = document.getElementById(checkboxId);
+    if (!btn || !cb) return;
+
+    // Disable button initially
+    btn.style.pointerEvents = 'none';
+    btn.style.opacity = '0.5';
+
+    cb.addEventListener('change', function() {
+        if (cb.checked) {
+            btn.style.pointerEvents = 'auto';
+            btn.style.opacity = '1';
+        } else {
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.5';
+        }
+    });
+}
+
+setupCheckout('btn-onetime', 'cb-onetime');
+setupCheckout('btn-monthly', 'cb-monthly');
+setupCheckout('btn-annual', 'cb-annual');
+</script>

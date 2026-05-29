@@ -1,0 +1,43 @@
+{
+  "api": {
+    "base_url": "https://api.buffer.com/v1/graphql",
+    "access_token": "***REMOVED***"
+  },
+  "channels": {
+    "twitter": {
+      "name": "fys2388",
+      "channel_id": "6a17e044c687a22dd4346bf4",
+      "enabled": true
+    },
+    "facebook": {
+      "name": "ChinaBound Travel",
+      "channel_id": "6a17e0c4c687a22dd4346d3c",
+      "enabled": true
+    },
+    "instagram": {
+      "name": "joranchinatravel",
+      "channel_id": "6a17e14dc687a22dd4346eb4",
+      "enabled": true
+    }
+  },
+  "default_schedule": {
+    "timezone": "America/New_York",
+    "best_times": ["09:00", "12:00", "15:00", "18:00"]
+  },
+  "post_templates": {
+    "default": {
+      "text": "{title}\n\n{excerpt}\n\n{url}\n\n#ChinaTravel #TravelGuide"
+    },
+    "article": {
+      "text": "New article: {title}\n\n{excerpt}\n\nRead more: {url}\n\n#ChinaTravel #TravelGuide"
+    },
+    "tip": {
+      "text": "Travel Tip: {tip}\n\n{description}\n\n#ChinaTravel #TravelTips"
+    }
+  },
+  "settings": {
+    "auto_publish": false,
+    "dry_run": false,
+    "logging": true
+  }
+}

@@ -1,0 +1,157 @@
+/* ================================================
+   Navigation - Sticky Top + Mobile Hamburger
+   ================================================ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e4e8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    gap: 1rem;
+}
+
+/* Brand */
+.logo {
+    flex-shrink: 0;
+}
+
+.logo a {
+    color: #3A6EA5 !important;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none !important;
+}
+
+.logo a:hover {
+    color: #2d5a8a !important;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: #555 !important;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3A6EA5 !important;
+    background: #e8f0f8;
+    text-decoration: none !important;
+}
+
+/* Search in Nav */
+.nav-search {
+    flex-shrink: 0;
+}
+
+.nav-search a {
+    background: #e8f0f8;
+    color: #3A6EA5 !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #c5d5e8;
+    transition: all 0.2s ease;
+}
+
+.nav-search a:hover {
+    background: #3A6EA5;
+    color: white !important;
+    border-color: #3A6EA5;
+    text-decoration: none !important;
+}
+
+/* Hamburger Button (mobile only) */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #3A6EA5;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-wrap: wrap;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 0;
+        border-top: 1px solid #e0e4e8;
+        margin-top: 0.5rem;
+        gap: 2px;
+    }
+
+    .nav-links.mobile-open {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+    }
+
+    .nav-search {
+        display: none;
+    }
+}
+
+/* Topbar / Announcement strip */
+.top-announcement {
+    background: #3A6EA5;
+    color: white;
+    text-align: center;
+    font-size: 0.82rem;
+    padding: 6px 1rem;
+    font-weight: 500;
+}

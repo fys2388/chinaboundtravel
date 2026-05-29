@@ -1,0 +1,136 @@
+baseURL = 'https://chinaboundtravel.com/'
+languageCode = 'en-us'
+title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
+theme = 'PaperMod'
+defaultContentLanguage = 'en'
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 2
+
+[params]
+  env = 'production'
+  title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
+  description = 'Practical travel guide for foreigners visiting China. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. Written by an American married into a Chengdu family.'
+  author = 'Joran'
+
+  rss = true
+
+  [params.search]
+    enable = true
+    type = "fuse"
+    showMeta = true
+    showDescription = true
+    placeholder = "Search for visa, payment, trains, or pandas..."
+
+  [params.profileMode]
+    enabled = true
+    title = "Hi, I'm Joran"
+    subtitle = "A California native married into a Chengdu family. I've spent 6 years making every single travel mistake in China so you don't have to. Let's break down the digital wall together!"
+    imageUrl = "images/joran-avatar.png"
+    imageWidth = 120
+    imageHeight = 120
+
+  [[params.socialIcons]]
+    name = "X"
+    url = "https://twitter.com/chinaboundtravel"
+  [[params.socialIcons]]
+    name = "Pinterest"
+    url = "https://pinterest.com/chinaboundtravel"
+  [[params.socialIcons]]
+    name = "Youtube"
+    url = "https://youtube.com/@chinaboundtravel"
+  [[params.socialIcons]]
+    name = "Email"
+    url = "mailto:hello@chinaboundtravel.com"
+
+  mainMenu = "main"
+  showMeta = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+
+[[menu.main]]
+  identifier = "search"
+  name = "🔍 Search"
+  url = "/search/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "home"
+  name = "🏡 Home"
+  url = "/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "visa-free"
+  name = "🛂 Visa-Free Guide"
+  url = "/categories/china-essentials/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "internet"
+  name = "🌐 Internet Access"
+  url = "/tags/china-vpn/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "payment"
+  name = "💳 Payment Guide"
+  url = "/tags/alipay/"
+  weight = 50
+
+[[menu.main]]
+  identifier = "pricing"
+  name = "💰 Pricing"
+  url = "/pricing/"
+  weight = 55
+
+[[menu.main]]
+  identifier = "cities"
+  name = "🏙️ City Travel"
+  url = "/cities/"
+  weight = 60
+
+[[menu.main]]
+  identifier = "about"
+  name = "✍️ About Me"
+  url = "/about/"
+  weight = 70
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[minify]
+  disableXML = false
+  minifyOutput = true
+
+[imaging]
+  quality = 75
+  anchor = "smart"
+
+[params.analytics]
+  google = { SiteVerificationTag = "" }
+  bing = { SiteVerificationTag = "" }
+
+[params.affiliate]
+  esim = "https://www.airalo.com/promo/38j3e4"
+  vpn = "https://www.expressrefer.com/refer-friend?referrer_data[handle]=fys2388&handle=join_referral"
+  hotel = "https://www.booking.com/index.html?aid=1234567"
+  klook = "https://klook.tpo.li/ppB4vZQ6"
+
+[params.ebook]
+  version = "2026.05"
+  pdfPath = "/ebook/china-bound-travel-guide.pdf"
+  # Three pricing tiers
+  stripeOnetime = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
+  stripeMonthly = "https://buy.stripe.com/6oUbIV0rS2034qB7L61gs02"
+  stripeAnnual = "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"

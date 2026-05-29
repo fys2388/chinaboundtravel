@@ -1,0 +1,42 @@
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $width := .width -}}
+{{- $height := .height -}}
+
+{{- $resource := resources.Get $src -}}
+{{- if $resource -}}
+    {{- $image := $resource.Fill "512x512 q80 webp" -}}
+    {{- $image480 := $resource.Fill "480x480 q80 webp" -}}
+    {{- $image800 := $resource.Fill "800x800 q80 webp" -}}
+    {{- $image1200 := $resource.Fill "1200x1200 q80 webp" -}}
+    
+    {{- if not $width -}}
+        {{- $width = $image.Width -}}
+    {{- end -}}
+    {{- if not $height -}}
+        {{- $height = $image.Height -}}
+    {{- end -}}
+    
+    <img 
+        src="{{ $image.RelPermalink }}" 
+        srcset="{{ $image480.RelPermalink }} 480w, {{ $image800.RelPermalink }} 800w, {{ $image1200.RelPermalink }} 1200w"
+        sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
+        alt="{{ $alt }}" 
+        class="{{ $class }}" 
+        loading="{{ $loading }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        decoding="async"
+    >
+{{- else -}}
+    <img 
+        src="{{ $src }}" 
+        alt="{{ $alt }}" 
+        class="{{ $class }}" 
+        loading="{{ $loading }}"
+        {{ with $width }}width="{{ . }}"{{ end }}
+        {{ with $height }}height="{{ . }}"{{ end }}
+    >
+{{- end -}}

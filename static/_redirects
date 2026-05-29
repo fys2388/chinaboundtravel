@@ -1,0 +1,4 @@
+# Fallback redirects for non-trailing-slash URLs
+/visa-guides    /visa-guides/     301
+/payment-tips   /payment-tips/   301
+/city-guides    /city-guides/    301

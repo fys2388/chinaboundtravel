@@ -1,0 +1,45 @@
+# ============================================
+# chinaboundtravel.com Social Media Bot
+# Python Dependencies
+# ============================================
+
+# Core dependencies with exact versions
+requests==2.31.0
+feedparser==6.0.11
+schedule==1.2.1
+Pillow==10.3.0
+python-dateutil==2.9.0
+pytz==2024.1
+
+# Reddit API
+praw==7.7.1
+
+# Pinterest API
+pinterest-api-sdk==0.2.6
+
+# Logging
+colorlog==6.8.2
+
+# HTTP client enhancement (compatible with all packages)
+urllib3==1.26.20
+
+# JSON handling
+orjson==3.10.3
+
+# Browser automation (for Quora)
+selenium==4.21.0
+undetected-chromedriver==3.5.4
+webdriver-manager==4.0.1
+python-dotenv==1.0.1
+
+# CSV handling (optional)
+pandas==2.2.2
+
+# Testing
+pytest==8.2.0
+pytest-mock==3.14.0
+
+# Development
+black==24.4.2
+flake8==7.0.0
+isort==5.13.2

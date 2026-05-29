@@ -1,0 +1,43 @@
+/* ============================================
+   Categories Hub - 2x2 Grid Layout (田字格)
+   仅在 /categories/ 页面生效
+   ============================================ */
+
+/* 电脑端：标准田字格四宫格 */
+.terms-wrapper ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.terms-wrapper ul li {
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.terms-wrapper ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.terms-wrapper ul li a {
+    font-size: 1.3rem !important;
+    font-weight: bold;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 手机端：降级为单列，防止挤压 */
+@media (max-width: 768px) {
+    .terms-wrapper ul {
+        grid-template-columns: 1fr !important;
+    }
+}
