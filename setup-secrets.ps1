@@ -6,9 +6,9 @@ $PROJECT_NAME = "chinaboundtravel"
 
 # ========== 在这里填入你的真实密钥 ==========
 $secrets = @{
-    "STRIPE_SECRET_KEY"       = "***REMOVED***"
-    "STRIPE_WEBHOOK_SECRET"   = "***REMOVED***"
-    "RESEND_API_KEY"          = "***REMOVED***"
+    "STRIPE_SECRET_KEY"       = "REPLACE_WITH_YOUR_STRIPE_SECRET_KEY"
+    "STRIPE_WEBHOOK_SECRET"   = "REPLACE_WITH_YOUR_STRIPE_WEBHOOK_SECRET"
+    "RESEND_API_KEY"          = "REPLACE_WITH_YOUR_RESEND_API_KEY"
     "SUCCESS_URL"             = "https://chinaboundtravel.com/success/"
     "CANCEL_URL"              = "https://chinaboundtravel.com/pricing/"
 }

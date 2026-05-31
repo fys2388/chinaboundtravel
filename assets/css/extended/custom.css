@@ -553,3 +553,120 @@ pre {
     color: #FF6B35 !important;
     font-weight: 600;
 }
+
+/* ================================================
+   Subscribe Card - Simple Email Form
+   ================================================ */
+.subscribe-card {
+    background: linear-gradient(135deg, #f0f5fa 0%, #e8f0f8 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid #c5d5e8;
+    margin-bottom: 1.5rem;
+}
+
+.subscribe-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subscribe-heading {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0 0 0.5rem 0;
+}
+
+.subscribe-sub {
+    font-size: 0.95rem;
+    color: #3A6EA5;
+    margin: 0;
+    font-weight: 600;
+}
+
+.subscribe-description {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.subscribe-input {
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #c5d5e8;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    background: white;
+    outline: none;
+}
+
+.subscribe-input:focus {
+    border-color: #3A6EA5;
+    box-shadow: 0 0 0 3px rgba(58, 110, 165, 0.15);
+}
+
+.subscribe-input::placeholder {
+    color: #999;
+}
+
+.subscribe-button {
+    background: linear-gradient(135deg, #3A6EA5, #2d5a8a);
+    color: white !important;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(58, 110, 165, 0.3);
+}
+
+.subscribe-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(58, 110, 165, 0.4);
+    background: linear-gradient(135deg, #2d5a8a, #1a3a5c);
+}
+
+.subscribe-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.subscribe-badges span {
+    background: rgba(58, 110, 165, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #3A6EA5;
+}
+
+.badge-dot {
+    background: transparent !important;
+    padding: 0 !important;
+    color: #999 !important;
+}
+
+@media (max-width: 768px) {
+    .subscribe-card {
+        padding: 1.5rem;
+    }
+    
+    .subscribe-heading {
+        font-size: 1.2rem;
+    }
+}

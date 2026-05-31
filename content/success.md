@@ -1,17 +1,17 @@
----
-title: "Payment Successful"
-draft: false
----
-
-
-
-     !/
-
-     .    (  )         ./
-
- "-"
-     "/" "-"  /
-     "//" "-"  /
-/
-
+---
+title: "Payment Successful"
+draft: false
+---
+
+
+
+     !/
+
+     .    (  )         ./
+
+ "-"
+     "/" "-"  /
+     "//" "-"  /
+/
+
  "-"  '      ,    ".".//
