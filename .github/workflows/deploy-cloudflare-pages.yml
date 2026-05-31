@@ -5,9 +5,11 @@ on:
     branches:
       - main
   schedule:
-    # 每天北京时间 09:00 (UTC 01:00) 自动部署
     - cron: '0 1 * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -16,8 +18,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          submodules: false
-          fetch-depth: 1
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,8 +27,14 @@ jobs:
           hugo-version: '0.147.0'
           extended: true
 
+      - name: Hugo version
+        run: hugo version
+
+      - name: List files
+        run: ls -la
+
       - name: Build Hugo site
-        run: hugo --gc --minify
+        run: hugo --gc --minify --verbose 2>&1
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
