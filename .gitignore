@@ -22,3 +22,6 @@ Thumbs.db
 
 # Build artifacts
 *.pdf
+
+# Temporary scripts
+fix_current_garbled.py

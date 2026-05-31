@@ -116,7 +116,7 @@ If you didn't book online, here's how to buy at the window:
 - Check if you're at the right station (Beijing has 6 stations!)
 - Check the time  trains are listed by departure time
 - Check the display language  some stations default to Chinese, look for English toggle
-- Ask staff: point to the screen and say "?" (which platform?)
+- Ask staff: point to the screen and say "?" (which platform)
 
 ### Problem: "My passport won't scan at the gate"
 

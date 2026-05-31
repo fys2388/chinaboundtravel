@@ -43,7 +43,7 @@ Here's the thing nobody tells you: the Bund is absolutely packed at night. Every
 **What you're looking at:**
 - **The Bund ()**  1.5km waterfront promenade along the Huangpu River
 - **Puxi skyline**  colonial-era Art Deco buildings (1920s-1930s)
-- **Lujiazui (?**  the futuristic financial district with Shanghai Tower, World Financial Center, and Jin Mao Tower
+- **Lujiazui (**  the futuristic financial district with Shanghai Tower, World Financial Center, and Jin Mao Tower
 
 ### Mid-Morning: Walk the Riverfront East Nanjing Road to Bengal Garden
 
@@ -56,7 +56,7 @@ Skip the overpriced restaurants on the Bund waterfront. Walk inland to **Huangsh
 
 > **Joran's Tip:** My go-to move is pointing at whatever the person next to me is eating. Works 100% of the time. I've discovered dishes this way I'd never have ordered otherwise.
 
-### Afternoon: The French Concession (?
+### Afternoon: The French Concession (
 
 This is where Shanghai shows its softer side. The tree-lined streets, the old colonial villas, the hipster coffee shops coexist with traditional wet markets. It's genuinely one of the most pleasant urban walks I've done anywhere in the world.
 
@@ -86,7 +86,7 @@ Start at **Shaanxi South Road Metro Station** (Line 1 or 10). Walk down **Shaanx
 
 Take Metro Line 11 to **Jing'an Temple Station**. The temple itself is... underwhelming if you've seen Chinese temples. But the surrounding area is interesting  old Shanghai coexisting with new development.
 
-> **Joran's Tip:** Skip the "Famous Shanghai Xiaolongguan" near Jing'an Temple. The wait is 2 hours and it's tourist food. Walk 5 minutes to **Mei Long Zhen** (?0)  same quality, zero tourists.
+> **Joran's Tip:** Skip the "Famous Shanghai Xiaolongguan" near Jing'an Temple. The wait is 2 hours and it's tourist food. Walk 5 minutes to **Mei Long Zhen** (0)  same quality, zero tourists.
 
 ### Lunch: Food Market at Yunnan Road (Yunnan Road
 
