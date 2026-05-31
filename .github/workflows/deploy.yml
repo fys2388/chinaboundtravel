@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -20,6 +26,9 @@ jobs:
         with:
           hugo-version: '0.147.0'
           extended: true
+
+      - name: Hugo version
+        run: hugo version
 
       - name: Build Hugo site
         run: hugo --gc --minify
