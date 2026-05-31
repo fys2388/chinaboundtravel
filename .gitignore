@@ -1,4 +1,24 @@
 .vercel
 public/
+node_modules/
 
 .env*.local
+
+# Hugo generated files
+resources/
+.hugo_build.lock
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.pdf
