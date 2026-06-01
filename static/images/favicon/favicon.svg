@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Circular background -->
+  <circle cx="50" cy="50" r="48" fill="#3A6EA5"/>
+  
+  <!-- Pagoda silhouette -->
+  <g fill="#ffffff">
+    <!-- Pagoda roof layers -->
+    <polygon points="50,15 30,28 35,35 42,30 50,38 58,30 65,35 70,28"/>
+    <polygon points="50,38 28,50 35,58 45,52 50,60 55,52 65,58 72,50"/>
+    <polygon points="50,60 35,72 42,80 50,75 58,80 68,72"/>
+    
+    <!-- Pagoda base -->
+    <rect x="42" y="80" width="16" height="12" rx="2"/>
+  </g>
+  
+  <!-- Map pin icon -->
+  <g transform="translate(75, 25)">
+    <path d="M15,0 C15,0 25,10 25,20 C25,26.627 19.627,32 13,32 C6.373,32 1,26.627 1,20 C1,10 15,0 15,0 Z" fill="#E74C3C"/>
+    <circle cx="13" cy="18" r="4" fill="#ffffff"/>
+    <!-- Compass rose -->
+    <circle cx="13" cy="18" r="2.5" fill="#3A6EA5"/>
+    <line x1="13" y1="15" x2="13" y2="21" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="10" y1="18" x2="16" y2="18" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+</svg>
