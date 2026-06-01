@@ -37,7 +37,7 @@ jobs:
         run: ls -la public/
 
       - name: Deploy to Vercel
-        uses: vercel/action@v25
+        uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.CHINABOUND }}
           vercel-org-id: team_uDnbkOAZCcHZd4GXTA31oIuz
