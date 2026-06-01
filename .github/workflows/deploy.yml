@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
+          submodules: false
+          fetch-depth: 1
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3.0.0
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.147.0'
           extended: true
@@ -31,15 +31,45 @@ jobs:
         run: hugo version
 
       - name: Build Hugo site
-        run: hugo --gc --minify
-
-      - name: List public directory
-        run: ls -la public/
+        id: build
+        run: |
+          set -e
+          hugo --gc --minify 2>&1
+          echo "Build successful"
 
       - name: Deploy to Vercel
+        id: deploy
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.CHINABOUND }}
           vercel-org-id: team_uDnbkOAZCcHZd4GXTA31oIuz
           vercel-project-id: prj_QlS4Vg1TFBoK74PJkCJOOIaWc6jK
           vercel-args: '--prod'
+
+      - name: Notify deployment success
+        if: success()
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "interactive",
+              "card": {
+                "header": {"title": {"tag": "plain_text", "content": "✅ Vercel 部署成功"}, "template": "green"},
+                "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: 部署成功"}}]
+              }
+            }'
+        continue-on-error: true
+
+      - name: Notify deployment failure
+        if: failure()
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "interactive",
+              "card": {
+                "header": {"title": {"tag": "plain_text", "content": "❌ Vercel 部署失败"}, "template": "red"},
+                "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: 部署失败\n**查看日志**: https://github.com/fys2388/chinaboundtravel/actions"}}]
+              }
+            }'
+        continue-on-error: true
