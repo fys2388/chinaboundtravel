@@ -30,9 +30,9 @@ Look, I'm just an American guy who married into a Chengdu family. My wife's rela
 
 Here are the posts that'll actually help you:
 
-1. [China Visa for US Citizens](/)
-2. [How to Use Alipay in China (Without Losing Your Mind)](/)
-3. [Best VPN for China (Because the Great Firewall Is Real)](/)
+1. [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+2. [How to Use Alipay & WeChat Pay in China](/posts/alipay-wechat-pay-foreigners-guide/)
+3. [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/)
 
 > **Stay Connected:** Need reliable internet in China? Get a VPN that works even in remote areas. (#TP_VPN_PLACEHOLDER#)
 

@@ -1,4 +1,5 @@
-# Fallback redirects for non-trailing-slash URLs
-/visa-guides    /visa-guides/     301
-/payment-tips   /payment-tips/   301
-/city-guides    /city-guides/    301
+# 强制 HTTPS
+http://* https://$1 301
+
+# 域名标准化 - 裸域重定向到 www
+https://chinaboundtravel.com/* https://www.chinaboundtravel.com/$1 301

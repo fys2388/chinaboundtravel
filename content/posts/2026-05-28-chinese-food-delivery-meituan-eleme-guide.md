@@ -73,7 +73,7 @@ Or: Ask your hotel concierge/reception to write your address in Chinese on a pie
 
 **Alipay and WeChat Pay are the only options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
 
-If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](#) first. Without these, you're stuck with cash-on-delivery at select restaurants.
+If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Without these, you're stuck with cash-on-delivery at select restaurants.
 
 ---
 

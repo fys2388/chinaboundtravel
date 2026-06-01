@@ -129,7 +129,7 @@ If you have extra time, take Metro Line 17 to **Zhujiajiao**. This water town is
 
 Shanghai is the easiest city in China for foreigners. The metro is world-class, payment is seamless with your phone, people are accustomed to tourists, and there's enough English signage to get around. The only real challenge is not spending all your money on xiaolongbao.
 
-**Next read:** If you're heading to Hangzhou after Shanghai, don't miss my [Hangzhou Guide](#)  West Lake is even better in person.
+**Next read:** If you're heading to Hangzhou after Shanghai, don't miss my [Hangzhou Guide](/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/)  West Lake is even better in person.
 
 ---
 

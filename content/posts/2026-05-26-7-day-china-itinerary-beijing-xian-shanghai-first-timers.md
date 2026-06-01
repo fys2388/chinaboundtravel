@@ -34,7 +34,7 @@ This 7-day itinerary is the exact route I've run with friends, family, and reade
 
 **The core logic:** Fly into Beijing → Train to Xi'an → Fly to Shanghai. Three cities, seven days, zero regrets.
 
-> **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/china-high-speed-train-guide/) → A complete guide to booking tickets, seat classes, and etiquette.
+> **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) → A complete guide to booking tickets, seat classes, and etiquette.
 
 ---
 
@@ -83,7 +83,7 @@ Afternoon: Big Wild Goose Pagoda (can skip going up if you've seen pagodas befor
 
 Evening: Muslim Quarter. Try the lamb biangbiang noodles, roujiamo (Chinese burger), and (osmanthus cake). Walk, eat, repeat.
 
-> **Related:** [The Complete Xi'an Food Guide: What and Where to Eat](/posts/xian-food-guide/) → My top 12 dishes ranked by value.
+> **Related:** The best Xi'an food is in the Muslim Quarter - explore it yourself!
 
 ---
 
@@ -128,7 +128,7 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 | Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://www.airalo.com/)  China eSIM, use my link for discount |
 | Noise-canceling earbuds | Long flights + high-speed trains are loud | Sony WF-1000XM5 |
 | Universal adapter | China uses Type I sockets | Amazon |
-| Small daypack | Wall is steep  pack light | [See my gear reviews](/posts/china-travel-gear/) |
+| Small daypack | Wall is steep  pack light | Any durable daypack from Amazon |
 | ExpressVPN | Mandatory for Google/YouTube/Gmail | [ExpressVPN](https://www.expressvpn.com/)  12 months |
 
 ---
