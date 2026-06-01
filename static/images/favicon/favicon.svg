@@ -1,25 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Circular background -->
-  <circle cx="50" cy="50" r="48" fill="#3A6EA5"/>
+  <!-- Background circle -->
+  <defs>
+    <linearGradient id="cGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3A6EA5"/>
+      <stop offset="100%" style="stop-color:#2d5a8a"/>
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#DAA520"/>
+    </linearGradient>
+  </defs>
   
-  <!-- Pagoda silhouette -->
-  <g fill="#ffffff">
-    <!-- Pagoda roof layers -->
-    <polygon points="50,15 30,28 35,35 42,30 50,38 58,30 65,35 70,28"/>
-    <polygon points="50,38 28,50 35,58 45,52 50,60 55,52 65,58 72,50"/>
-    <polygon points="50,60 35,72 42,80 50,75 58,80 68,72"/>
-    
-    <!-- Pagoda base -->
-    <rect x="42" y="80" width="16" height="12" rx="2"/>
+  <!-- Main C shape -->
+  <path 
+    d="M50 10 C25 10 12 25 12 50 C12 75 25 90 50 90 C65 90 78 80 85 65 C88 58 90 50 90 50 C90 50 88 42 85 35 C78 20 65 10 50 10" 
+    fill="none" 
+    stroke="url(#cGradient)" 
+    stroke-width="8" 
+    stroke-linecap="round"
+  />
+  
+  <!-- Pagoda -->
+  <g fill="#E74C3C">
+    <polygon points="50,25 35,38 40,45 48,38 50,45 52,38 60,45 65,38"/>
+    <polygon points="50,45 30,58 38,65 50,58 50,65 62,65 70,58"/>
+    <rect x="42" y="65" width="16" height="12" rx="1" fill="#E74C3C"/>
   </g>
   
-  <!-- Map pin icon -->
-  <g transform="translate(75, 25)">
-    <path d="M15,0 C15,0 25,10 25,20 C25,26.627 19.627,32 13,32 C6.373,32 1,26.627 1,20 C1,10 15,0 15,0 Z" fill="#E74C3C"/>
-    <circle cx="13" cy="18" r="4" fill="#ffffff"/>
-    <!-- Compass rose -->
-    <circle cx="13" cy="18" r="2.5" fill="#3A6EA5"/>
-    <line x1="13" y1="15" x2="13" y2="21" stroke="#ffffff" stroke-width="0.5"/>
-    <line x1="10" y1="18" x2="16" y2="18" stroke="#ffffff" stroke-width="0.5"/>
+  <!-- Great Wall base -->
+  <g fill="#6B7280">
+    <path d="M32 70 L35 65 L40 68 L45 63 L50 68 L55 63 L60 68 L65 65 L68 70 Z"/>
+    <rect x="30" y="70" width="40" height="8" rx="1"/>
+  </g>
+  
+  <!-- Golden path -->
+  <path 
+    d="M65 45 Q75 35 80 25" 
+    fill="none" 
+    stroke="url(#goldGradient)" 
+    stroke-width="3" 
+    stroke-linecap="round"
+  />
+  
+  <!-- Map pin -->
+  <g transform="translate(82, 22)">
+    <path d="M12 0 C12 0 22 12 22 22 C22 28 16 34 10 34 C4 34 0 28 0 22 C0 12 12 0 12 0 Z" fill="#E74C3C"/>
+    <circle cx="10" cy="20" r="4" fill="#FFFFFF"/>
+    <circle cx="10" cy="20" r="2.5" fill="#3A6EA5"/>
+    <line x1="10" y1="17" x2="10" y2="23" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="7" y1="20" x2="13" y2="20" stroke="#FFFFFF" stroke-width="0.5"/>
   </g>
 </svg>
