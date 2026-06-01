@@ -21,7 +21,7 @@ All plans include the current **ChinaBound Travel Guide 2026.05** PDF  updated m
 **$49.99/year**  
 *~$4.17/month  Cancel anytime*
 
-[Get Instant Access →]()
+[Get Instant Access →](https://buy.stripe.com/test_00g2bN9rCn6b9ZnBYZFq2dHx)
 
 ---
 
@@ -31,7 +31,7 @@ All plans include the current **ChinaBound Travel Guide 2026.05** PDF  updated m
 
 Includes the current edition only. No future updates.
 
-[Buy Now →]()
+[Buy Now →](https://buy.stripe.com/test_00g2bN9rCn6b9ZnBYZFq2dHx)
 
 ---
 
@@ -41,7 +41,7 @@ Includes the current edition only. No future updates.
 
 Includes weekly Travel Radar emails + monthly guide updates.
 
-[Start for $1 →]()
+[Start for $1 →](https://buy.stripe.com/14AdR32A05cf9KV1mI1gs04)
 
 ---
 

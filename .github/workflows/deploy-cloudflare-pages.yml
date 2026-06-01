@@ -8,26 +8,32 @@ on:
     - cron: '0 1 * * *'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           submodules: false
-          fetch-depth: 1
+          fetch-depth: 2
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: '0.147.0'
           extended: true
 
       - name: Build Hugo site
+        id: build
+        continue-on-error: true
         run: hugo --gc --minify
 
       - name: Deploy to Cloudflare Pages
+        if: steps.build.outcome == 'success'
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -36,3 +42,48 @@ jobs:
           directory: public
           branch: main
           wranglerVersion: '3'
+
+      - name: Notify deployment success
+        if: steps.build.outcome == 'success'
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "interactive",
+              "card": {
+                "header": {
+                  "title": {"tag": "plain_text", "content": "✅ 部署成功"},
+                  "template": "green"
+                },
+                "elements": [
+                  {"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: 部署成功"}}
+                ]
+              }
+            }'
+
+      - name: Rollback on build failure
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "Hugo build failed, rolling back to previous commit..."
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git reset --hard HEAD~1
+          git push --force origin main
+
+      - name: Notify build failure
+        if: steps.build.outcome == 'failure'
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "interactive",
+              "card": {
+                "header": {
+                  "title": {"tag": "plain_text", "content": "❌ 构建失败"},
+                  "template": "red"
+                },
+                "elements": [
+                  {"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: Hugo构建失败，已自动回滚至上一版本"}}
+                ]
+              }
+            }'

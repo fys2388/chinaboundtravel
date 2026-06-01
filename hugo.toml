@@ -132,5 +132,5 @@ buildExpired = false
   pdfPath = "/ebook/china-bound-travel-guide.pdf"
   # Three pricing tiers
   stripeOnetime = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
-  stripeMonthly = "https://buy.stripe.com/6oUbIV0rS2034qB7L61gs02"
+  stripeMonthly = "https://buy.stripe.com/14AdR32A05cf9KV1mI1gs04"
   stripeAnnual = "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"
