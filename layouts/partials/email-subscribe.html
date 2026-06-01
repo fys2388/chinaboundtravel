@@ -1,25 +1,71 @@
 <!-- Email Subscription Form -->
 <div class="subscribe-card">
     <div class="subscribe-header">
+        <div class="subscribe-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+        </div>
         <h4 class="subscribe-heading">Stay Ahead of the Curve</h4>
         <p class="subscribe-sub">China travel intel, straight to your inbox</p>
     </div>
 
     <p class="subscribe-description">
-        Get the latest China visa rules, internet tips &amp; travel guides delivered to your inbox.
+        Get the latest China visa rules, internet tips & travel guides delivered to your inbox.
     </p>
 
-    <!-- Simple Email Form -->
-    <form class="subscribe-form" action="https://assets.mailerlite.com/html/forms/188150796635866830/signup" method="post" target="_blank">
-        <input type="email" name="email" class="subscribe-input" placeholder="Enter your email address" required>
-        <button type="submit" class="subscribe-button">Subscribe</button>
+    <!-- Email Subscription Form with Validation -->
+    <form class="subscribe-form" action="https://assets.mailerlite.com/html/forms/188150796635866830/signup" method="post" target="_blank" id="emailSubscribeForm">
+        <div class="subscribe-fields">
+            <input 
+                type="email" 
+                name="email" 
+                class="subscribe-input" 
+                placeholder="Enter your email address" 
+                required
+                autocomplete="email"
+            >
+            <button type="submit" class="subscribe-btn">
+                <span class="btn-text">Subscribe Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+        <p class="subscribe-privacy">
+            By subscribing, you agree to receive our monthly newsletter. No spam, ever.
+        </p>
     </form>
 
     <div class="subscribe-badges">
-        <span>100% Free</span>
-        <span class="badge-dot">·</span>
-        <span>Updated Monthly</span>
-        <span class="badge-dot">·</span>
-        <span>Unsubscribe Anytime</span>
+        <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="16 10 10 16 8 14"></polyline>
+            </svg>
+            100% Free
+        </span>
+        <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            Monthly Updates
+        </span>
+        <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+            Cancel Anytime
+        </span>
     </div>
 </div>
+
+<script>
+document.getElementById('emailSubscribeForm')?.addEventListener('submit', function(e) {
+    const btn = this.querySelector('.subscribe-btn');
+    btn.disabled = true;
+    btn.querySelector('.btn-text').textContent = 'Subscribing...';
+});
+</script>
