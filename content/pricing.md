@@ -41,10 +41,21 @@ Includes the current edition only. No future updates. Perfect for one-time trave
 
 ## Monthly Radar
 
-**$1 First Month, Regular $9.99/month**  
-*Use coupon: FIRSTMONTH1 at checkout*
+**$1 First Month, then $9.99/month**  
+*First month $1 with automatic discount auto-applies at checkout*
 
 Includes weekly Travel Radar emails + monthly guide updates. Cancel anytime.
+
+**Price breakdown:**
+- First month: $1.00
+- After: $9.99
+- Cancel anytime.
+
+**How the first month $1 works:**
+1. Click the "Start for $1" button
+2. Complete checkout page
+3. Pay $1 for your first month
+4. Your payment is automatically applied
 
 <a href="https://buy.stripe.com/14AdR32A05cf9KV1mI1gs04" class="buy-link" target="_blank" rel="noopener noreferrer">
   <button class="buy-btn">Start for $1 →</button>
