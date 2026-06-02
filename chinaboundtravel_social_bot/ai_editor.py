@@ -149,9 +149,11 @@ canonicalURL: "{url}"
             "title": title
         }
     
-    def save_article(self, article: Dict, output_dir: str = "content/posts"):
+    def save_article(self, article: Dict, output_dir: str = None):
+        if output_dir is None:
+            output_dir = os.environ.get('AI_OUTPUT_DIR', 'content/posts')
         if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+            os.makedirs(output_dir, exist_ok=True)
         
         filepath = os.path.join(output_dir, article['filename'])
         

@@ -8,13 +8,13 @@ on:
     - cron: '0 12 * * 0'
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+permissions:
+  contents: write
 
 jobs:
   daily-inspection:
     runs-on: ubuntu-latest
-    if: github.event.schedule == '30 1 * * *'
+    if: github.event.schedule == '30 1 * * *' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -31,15 +31,14 @@ jobs:
       - name: Run daily inspection
         run: python boundtravel_daily_inspector.py
         env:
-          INSPECTION_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
 
       - name: Commit inspection report
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Daily inspection report $(date '+%Y-%m-%d')"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily inspection report $(date '+%Y-%m-%d')" && git push) || true
 
   weekly-report:
     runs-on: ubuntu-latest
@@ -53,15 +52,18 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Generate weekly report
+      - name: Install dependencies
         run: |
-          echo "Weekly report generation..."
-          # Add your weekly report logic here
+          pip install requests beautifulsoup4
+
+      - name: Run weekly report (boundtravel_daily_inspector auto-detects Sunday)
+        run: python boundtravel_daily_inspector.py
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
 
       - name: Commit weekly report
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Weekly report $(date '+%Y-W%V')"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly report $(date '+%Y-W%V')" && git push) || true

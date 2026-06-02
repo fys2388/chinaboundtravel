@@ -6,8 +6,8 @@ on:
     - cron: '0 0 * * 1-5'
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+permissions:
+  contents: write
 
 jobs:
   generate-blog:
@@ -21,18 +21,23 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 python-dotenv PyYAML
 
       - name: Run weekly blog update
-        run: |
-          cd chinaboundtravel_social_bot
-          python weekly_update.py
+        env:
+          AI_OUTPUT_DIR: ${{ github.workspace }}/content/posts
+        run: python chinaboundtravel_social_bot/weekly_update.py
 
       - name: Run Front Matter fix
-        run: |
-          python auto-script/utils/frontmatter_fix.py
+        run: python auto-script/utils/frontmatter_fix.py
 
       - name: Build site to verify
         run: hugo --gc --minify
@@ -43,5 +48,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add content/posts/*.md || true
           git add content/social_media_dataset_cbt_2026.csv || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-generated blog posts $(date '+%Y-%m-%d')"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated blog posts $(date '+%Y-%m-%d')" && git push) || true

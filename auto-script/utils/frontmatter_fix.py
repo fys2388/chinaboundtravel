@@ -20,8 +20,13 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
-# 项目根目录
-ROOT_PATH = Path(r"E:\AI\dulizhan\travel-blog")
+# 项目根目录 - 优先使用环境变量 GITHUB_WORKSPACE（用于 CI），否则使用脚本相对路径
+GITHUB_WORKSPACE = os.environ.get('GITHUB_WORKSPACE')
+if GITHUB_WORKSPACE:
+    ROOT_PATH = Path(GITHUB_WORKSPACE)
+else:
+    # 本地开发环境：从脚本位置向上两级找到项目根（auto-script/utils/ → project root）
+    ROOT_PATH = Path(__file__).resolve().parent.parent.parent
 CONTENT_PATH = ROOT_PATH / "content"
 REPORT_PATH = ROOT_PATH / "auto-script" / "log"
 BACKUP_PATH = ROOT_PATH / "auto-script" / "backup"
