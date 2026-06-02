@@ -1,8 +1,4 @@
 {{- define "main" -}}
-<button id="back-to-top" aria-label="Back to top" title="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-</button>
-
 <article class="post-single">
     <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
@@ -130,30 +126,6 @@
 </article>
 
 <style>
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    width: 46px;
-    height: 46px;
-    background: #3A6EA5;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(58,110,165,0.38);
-    z-index: 999;
-}
-#back-to-top.visible { opacity: 1; visibility: visible; }
-#back-to-top:hover { background: #2d5a8a; transform: translateY(-3px); }
-
 /* City Posts Section */
 .city-posts-section {
     margin: 2.5rem 0;
@@ -314,18 +286,8 @@
 
 @media (max-width: 768px) {
     .city-posts-grid { grid-template-columns: 1fr; }
-    #back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
 }
 </style>
-
-<script>
-(function(){
-    var btn = document.getElementById('back-to-top');
-    if(!btn) return;
-    window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 300); }, {passive:true});
-    btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-})();
-</script>
 
 {{- partial "cookie-consent.html" . -}}
 {{- end -}}
