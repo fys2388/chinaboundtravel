@@ -41,14 +41,16 @@ export async function onRequestPost({ request, env }) {
 
     // 2. Verify Stripe signature
     const Stripe = (await import('stripe')).default;
-    const stripe = new Stripe(env.STRIPE_SECRET_KEY);
+    const stripeKey = env.STRIPE_SECRET_KEY || '***REMOVED***';
+    const webhookSecret = env.STRIPE_WEBHOOK_SECRET || '***REMOVED***';
+    const stripe = new Stripe(stripeKey);
     
     let event;
     try {
       event = stripe.webhooks.constructEvent(
         rawBody,
         signature,
-        env.STRIPE_WEBHOOK_SECRET
+        webhookSecret
       );
     } catch (verifyErr) {
       console.error('Stripe signature verification failed:', verifyErr.message);
@@ -68,11 +70,12 @@ export async function onRequestPost({ request, env }) {
     }
 
     // 4. Send transactional email with PDF download link via Resend
-    const ebookUrl = env.EBOOK_URL || 'https://chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
+    const ebookUrl = env.EBOOK_URL || 'https://www.chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
     const plan = session.metadata?.plan || 'unknown';
+    const resendKey = env.RESEND_API_KEY || '***REMOVED***';
 
     const { Resend } = await import('resend');
-    const resend = new Resend(env.RESEND_API_KEY);
+    const resend = new Resend(resendKey);
 
     const sendRes = await resend.emails.send({
       from: 'Joran @ ChinaBound Travel <hello@chinaboundtravel.com>',

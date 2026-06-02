@@ -49,8 +49,9 @@ export async function onRequestPost({ request, env }) {
       return jsonResponse({ error: 'Invalid plan. Use: monthly, annual, or onetime' }, 400, corsHeaders);
     }
 
-    const successUrl = env.SUCCESS_URL || 'https://chinaboundtravel.com/success/';
-    const cancelUrl = env.CANCEL_URL || 'https://chinaboundtravel.com/pricing/';
+    const successUrl = env.SUCCESS_URL || 'https://www.chinaboundtravel.com/success/';
+    const cancelUrl = env.CANCEL_URL || 'https://www.chinaboundtravel.com/pricing/';
+    const stripeKey = env.STRIPE_SECRET_KEY || '***REMOVED***';
 
     // Build session payload
     const sessionPayload = {
