@@ -2,12 +2,12 @@ import csv
 import os
 import logging
 import sys
-import io
 from datetime import datetime
 from typing import Dict, List, Optional
-from content_manager import ContentManager
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+from content_manager import ContentManager
 
 logger = logging.getLogger(__name__)
 

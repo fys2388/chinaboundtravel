@@ -1,18 +1,20 @@
 import sys
-import io
 import os
 import logging
 from datetime import datetime
 import csv
 from typing import Dict, List
-from ai_editor import AIEditor
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+from ai_editor import AIEditor
 
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
+
+logger = logging.getLogger(__name__)
 
 def update_csv_status(processed_ids: List[str]):
     csv_path = "content/social_media_dataset_cbt_2026.csv"

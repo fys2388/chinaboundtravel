@@ -1,0 +1,47 @@
+name: Weekly Blog Auto-Generation
+
+on:
+  schedule:
+    # 每周一至周五 UTC 00:00（北京时间 08:00）自动生成博客
+    - cron: '0 0 * * 1-5'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run weekly blog update
+        run: |
+          cd chinaboundtravel_social_bot
+          python weekly_update.py
+
+      - name: Run Front Matter fix
+        run: |
+          python auto-script/utils/frontmatter_fix.py
+
+      - name: Build site to verify
+        run: hugo --gc --minify
+
+      - name: Commit generated posts
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/posts/*.md || true
+          git add content/social_media_dataset_cbt_2026.csv || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-generated blog posts $(date '+%Y-%m-%d')"
+          git push
