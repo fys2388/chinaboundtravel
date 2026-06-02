@@ -9,7 +9,11 @@ import requests
 import os
 import json
 import datetime
+import sys
 from datetime import date, timedelta
+
+# 修复 Windows 编码问题
+sys.stdout.reconfigure(encoding='utf-8')
 
 class BoundTravelInspector:
     def __init__(self):
@@ -182,12 +186,22 @@ class BoundTravelInspector:
             report += f"### {key.replace('_', ' ').title()}\n"
             report += f"- 状态: {status_icon} {value['status']}\n"
             
-            if isinstance(value["details"], list):
-                report += "- 详情:\n"
-                for detail in value["details"]:
-                    report += f"  - {detail}\n"
-            else:
-                report += f"- 详情: {value['details']}\n"
+            if "details" in value:
+                if isinstance(value["details"], list):
+                    report += "- 详情:\n"
+                    for detail in value["details"]:
+                        report += f"  - {detail}\n"
+                else:
+                    report += f"- 详情: {value['details']}\n"
+            
+            if "files_with_issues" in value:
+                report += f"- 问题文件数: {len(value['files_with_issues'])}\n"
+                report += f"- 总问题数: {value.get('total_issues', 0)}\n"
+            
+            if "broken_links" in value:
+                report += f"- 检查链接数: {value.get('total_checked', 0)}\n"
+                report += f"- 无效链接数: {len(value['broken_links'])}\n"
+            
             report += "\n"
         
         report += "## 总结\n\n"
