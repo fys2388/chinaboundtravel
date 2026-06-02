@@ -104,8 +104,8 @@ Immediately after purchase. Check your inbox (and spam folder) for the download 
 **Is this a subscription?**  
 The Monthly and Annual plans are subscriptions. The One-Time Buyout is a single payment with no recurring charges.
 
-**How does the first month discount work?**  
-Use coupon code **FIRSTMONTH1** at checkout to get $1 for your first month. After the first month, you'll be charged the regular $9.99/month rate. You can cancel anytime before the next billing cycle.
+**How does the first month $1 offer work?**  
+Coupon code **FIRSTMONTH1** is automatically applied when you click the "Start for $1" button. No manual code entry needed. You'll be charged $1 for your first month, then $9.99/month after. Cancel anytime before the next billing cycle.
 
 ---
 
