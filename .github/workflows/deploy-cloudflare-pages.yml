@@ -1,44 +1,32 @@
 name: Deploy to Cloudflare Pages
 
+# 仅在 main 分支推送时触发
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 1 * * *'
-  workflow_dispatch:
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # 1. 拉取代码
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: false
-          fetch-depth: 1
 
+      # 2. 安装 Hugo（使用稳定版）
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.147.0'
+          hugo-version: latest
           extended: true
 
-      - name: Hugo version
-        run: hugo version
+      # 3. 构建静态站点（开启压缩和清理）
+      - name: Build static site
+        run: hugo --gc --minify
 
-      - name: Build Hugo site
-        id: build
-        run: |
-          set -e
-          hugo --gc --minify 2>&1
-          echo "Build successful"
-
+      # 4. 部署到 Cloudflare Pages（无额外逻辑，避免出错）
       - name: Deploy to Cloudflare Pages
-        id: deploy
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -46,32 +34,3 @@ jobs:
           projectName: chinaboundtravel
           directory: public
           branch: main
-          wranglerVersion: '3'
-
-      - name: Notify deployment success
-        if: success()
-        run: |
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "msg_type": "interactive",
-              "card": {
-                "header": {"title": {"tag": "plain_text", "content": "✅ Cloudflare Pages 部署成功"}, "template": "green"},
-                "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: 部署成功"}}]
-              }
-            }'
-        continue-on-error: true
-
-      - name: Notify deployment failure
-        if: failure()
-        run: |
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "msg_type": "interactive",
-              "card": {
-                "header": {"title": {"tag": "plain_text", "content": "❌ Cloudflare Pages 部署失败"}, "template": "red"},
-                "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "**项目**: chinaboundtravel\n**分支**: main\n**状态**: 部署失败\n**查看日志**: https://github.com/fys2388/chinaboundtravel/actions"}}]
-              }
-            }'
-        continue-on-error: true

@@ -1,26 +1,33 @@
 ---
-title: "Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base"
-date: 2026-05-20T10:00:00+08:00
+title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
+date: '2026-05-20T10:00:00+08:00'
 draft: false
-tags: ["Chengdu", "Panda Base", "Sichuan Guide"]
-categories: ["Destinations & Itineraries"]
-summary: "Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  > **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li..."
-
-description: "Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  > **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li..."
-author: "Joran"
+tags:
+- Chengdu
+- Panda Base
+- Sichuan Guide
+categories:
+- Destinations & Itineraries
+summary: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  >
+  **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li...
+description: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  >
+  **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li...
+author: Joran
 params:
   keywords:
-    - "Chengdu pandas"
-    - "Panda Base"
-    - "Sichuan"
-    - "panda tour"
-    - "Beijing"
-    - "Forbidden City"
+  - Chengdu pandas
+  - Panda Base
+  - Sichuan
+  - panda tour
+  - Beijing
+  - Forbidden City
   faq:
-    - question: "What cities should I visit in China?"
-      answer: "Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each offers unique experiences from history to food to pandas."
-    - question: "How do I get around Chinese cities?"
-      answer: "Subway systems in major cities are excellent. Taxis and ride-hailing apps (Didi) are cheap and convenient."
+  - question: What cities should I visit in China?
+    answer: Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each
+      offers unique experiences from history to food to pandas.
+  - question: How do I get around Chinese cities?
+    answer: Subway systems in major cities are excellent. Taxis and ride-hailing apps
+      (Didi) are cheap and convenient.
 ---
 
 

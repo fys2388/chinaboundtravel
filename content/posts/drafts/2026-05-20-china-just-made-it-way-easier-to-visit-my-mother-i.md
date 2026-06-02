@@ -1,10 +1,16 @@
 ---
-title: "China Just Made It WAY Easier to Visit (My Mother-in-Law is STOKED)"
-date: 2026-05-20
+title: China Just Made It WAY Easier to Visit (My Mother-in-Law is STOKED)
+date: '2026-06-02T10:00:00+08:00'
 draft: true
-tags: ["china", "travel", "tips", "visa-free", "chengdu"]
-categories: ["guides"]
-author: "Joran"
+tags:
+- china
+- travel
+- tips
+- visa-free
+- chengdu
+categories:
+- guides
+author: Joran
 ---
 
 Look, Ive been living in China for six years now. Im a California guy who somehow ended up married to a Chengdu woman, and let me tell younothing could have prepared me for the chaos, the food, or the sheer number of times Ive been asked Can you eat spicy?

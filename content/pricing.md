@@ -1,7 +1,7 @@
 ---
-title: "Pricing  ChinaBound Travel Guide"
-description: "Choose your China travel companion. Three plans to fit every travel style."
-date: 2026-01-01
+title: Pricing  ChinaBound Travel Guide
+description: Choose your China travel companion. Three plans to fit every travel style.
+date: '2026-06-02T10:00:00+08:00'
 type: page
 layout: pricing
 hideMeta: true

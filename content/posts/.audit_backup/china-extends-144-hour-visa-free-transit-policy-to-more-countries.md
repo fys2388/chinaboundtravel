@@ -1,13 +1,13 @@
 ---
-title: "China Extends 144-hour Visa-free Transit Policy to More Countries"
-date: 2026-05-20
+title: China Extends 144-hour Visa-free Transit Policy to More Countries
+date: '2026-06-02T10:00:00+08:00'
 draft: false
 tags:
-  - China Travel
-  - Visa
-  - News
+- China Travel
+- Visa
+- News
 categories:
-  - Updates
+- Updates
 ---
 
 Hey there, fellow travelers!

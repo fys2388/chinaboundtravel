@@ -1,10 +1,15 @@
 ---
-title: "2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners"
-date: 2026-05-17T14:00:00+08:00
+title: 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners
+date: '2026-05-17T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)  ## Hey, Joran Here   Okay, real talk: the first time my wife ..."
+tags:
+- China Travel
+- Travel Tips
+categories:
+- China Travel Guide
+summary: '2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese
+  Bank Account Needed)  ## Hey, Joran Here   Okay, real talk: the first time my wife
+  ...'
 ---
 
 # 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)

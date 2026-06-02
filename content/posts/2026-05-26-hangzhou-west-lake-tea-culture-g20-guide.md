@@ -1,25 +1,36 @@
 ---
-title: "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy"
-date: 2026-05-23T09:00:00+08:00
+title: Hangzhou - West Lake, Tea Culture & the G20 Summit Legacy
+date: '2026-05-23T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Hangzhou", "City Guide", "Food & Drink", "Destinations"]
-categories: ["China Travel Guide"]
-summary: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
-description: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
-author: "Joran"
+tags:
+- China Travel
+- Hangzhou
+- City Guide
+- Food & Drink
+- Destinations
+categories:
+- China Travel Guide
+summary: Hangzhou is where China goes to relax. West Lake is beautiful, the tea is
+  real, and the food will ruin you for all other cities. Here's what actually matters.
+description: Hangzhou is where China goes to relax. West Lake is beautiful, the tea
+  is real, and the food will ruin you for all other cities. Here's what actually matters.
+author: Joran
 params:
   keywords:
-    - "China travel"
-    - "travel guide"
-    - "travel tips"
-    - "China tourism"
+  - China travel
+  - travel guide
+  - travel tips
+  - China tourism
   faq:
-    - question: "Is China safe for foreign tourists?"
-      answer: "Yes, China is very safe for tourists. Violent crime is rare, and cities are generally safe day and night."
-    - question: "What's the best time to visit China?"
-      answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
-    - question: "Do I need a VPN for China?"
-      answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
+  - question: Is China safe for foreign tourists?
+    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
+      are generally safe day and night.
+  - question: What's the best time to visit China?
+    answer: Spring (April-May) and autumn (September-October) offer the best weather,
+      with mild temperatures and fewer crowds.
+  - question: Do I need a VPN for China?
+    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
+      is recommended for reliable internet access.
 ---
 
 

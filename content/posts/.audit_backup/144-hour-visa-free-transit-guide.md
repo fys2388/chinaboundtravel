@@ -1,12 +1,17 @@
 ---
-title: "144-Hour Visa-Free Transit in China: The Complete 2026 Guide"
-date: 2026-05-19T08:00:00+08:00
+title: 144-Hour Visa-Free Transit in China - The Complete 2026 Guide
+date: '2026-05-19T10:00:00+08:00'
 draft: false
 weight: 1
-tags: ["China Visa", "Travel Policy", "2026 Travel"]
-categories: ["China Essentials"]
-author: "Joran"
-description: "Your idiot-proof guide to China's 144-hour visa-free transit policy - who qualifies, which cities, and how to not get turned away at the border."
+tags:
+- China Visa
+- Travel Policy
+- 2026 Travel
+categories:
+- China Essentials
+author: Joran
+description: Your idiot-proof guide to China's 144-hour visa-free transit policy -
+  who qualifies, which cities, and how to not get turned away at the border.
 ---
 
 # 144-Hour Visa-Free Transit in China: The Complete 2026 Guide

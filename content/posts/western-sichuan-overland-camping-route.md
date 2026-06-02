@@ -1,10 +1,21 @@
 ---
-title: "Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness"
-date: 2026-05-19T11:00:00+08:00
+title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
+  Most Epic Wilderness'
+date: '2026-05-19T10:00:00+08:00'
 draft: false
-tags: ["Sichuan travel", "camping in China", "overland adventure", "western Sichuan", "China road trip", "Tibetan Plateau", "China travel"]
-categories: ["Guides"]
-summary: "Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness  > **Joran's Choice:** Planning an overlanding trip to Western S..."
+tags:
+- Sichuan travel
+- camping in China
+- overland adventure
+- western Sichuan
+- China road trip
+- Tibetan Plateau
+- China travel
+categories:
+- Guides
+summary: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
+  Most Epic Wilderness  > **Joran''s Choice:** Planning an overlanding trip to Western
+  S...'
 ---
 
 # Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness

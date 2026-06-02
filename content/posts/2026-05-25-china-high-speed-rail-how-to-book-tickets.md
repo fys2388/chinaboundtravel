@@ -1,27 +1,39 @@
 ---
-title: "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)"
-date: 2026-05-24T10:00:00+08:00
+title: 'China''s High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)'
+date: '2026-05-24T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Transportation", "High-Speed Rail", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "CRH trains are the best way to cover China's vast distances. Here's exactly how to book tickets, choose seats, and avoid the rookie mistakes that cost me 3 hours in a Xi'an station."
-description: "CRH trains are the best way to cover China's vast distances. Here's exactly how to book tickets, choose seats, and avoid the rookie mistakes that cost me 3 hours in a Xi'an station."
-author: "Joran"
+tags:
+- China Travel
+- Transportation
+- High-Speed Rail
+- Travel Tips
+categories:
+- China Travel Guide
+summary: CRH trains are the best way to cover China's vast distances. Here's exactly
+  how to book tickets, choose seats, and avoid the rookie mistakes that cost me 3
+  hours in a Xi'an station.
+description: CRH trains are the best way to cover China's vast distances. Here's exactly
+  how to book tickets, choose seats, and avoid the rookie mistakes that cost me 3
+  hours in a Xi'an station.
+author: Joran
 params:
   keywords:
-    - "high-speed rail"
-    - "China trains"
-    - "train tickets"
-    - "transportation"
-    - "12306"
-    - "HSR"
+  - high-speed rail
+  - China trains
+  - train tickets
+  - transportation
+  - '12306'
+  - HSR
   faq:
-    - question: "Is China safe for foreign tourists?"
-      answer: "Yes, China is very safe for tourists. Violent crime is rare, and cities are generally safe day and night."
-    - question: "What's the best time to visit China?"
-      answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
-    - question: "Do I need a VPN for China?"
-      answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
+  - question: Is China safe for foreign tourists?
+    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
+      are generally safe day and night.
+  - question: What's the best time to visit China?
+    answer: Spring (April-May) and autumn (September-October) offer the best weather,
+      with mild temperatures and fewer crowds.
+  - question: Do I need a VPN for China?
+    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
+      is recommended for reliable internet access.
 ---
 
 

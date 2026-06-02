@@ -1,6 +1,6 @@
 ---
-title: "Test Wrong Tag Article"
-date: 2026-06-01
+title: Test Wrong Tag Article
+date: '2026-06-02T10:00:00+08:00'
 ---
 
 # Test Article with Wrong Tag

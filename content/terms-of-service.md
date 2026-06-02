@@ -1,7 +1,8 @@
 ---
-title: "Terms of Service"
-description: "Terms of Service for ChinaBound Travel"
+title: Terms of Service
+description: Terms of Service for ChinaBound Travel
 draft: false
+date: '2026-06-02T10:00:00+08:00'
 ---
 
 

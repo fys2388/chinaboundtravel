@@ -1,10 +1,14 @@
 ---
-title: "Welcome to ChinaBound Travel Blog"
-date: 2026-05-22T08:00:00+08:00
+title: Welcome to ChinaBound Travel Blog
+date: '2026-05-22T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "Welcome to ChinaBound Travel Blog  When I first landed in Chengdu in 2021, I thought I had it all figured out. Six years, 32 cities, and enough digital disaster..."
+tags:
+- China Travel
+- Travel Tips
+categories:
+- China Travel Guide
+summary: Welcome to ChinaBound Travel Blog  When I first landed in Chengdu in 2021,
+  I thought I had it all figured out. Six years, 32 cities, and enough digital disaster...
 ---
 
 # Welcome to ChinaBound Travel Blog

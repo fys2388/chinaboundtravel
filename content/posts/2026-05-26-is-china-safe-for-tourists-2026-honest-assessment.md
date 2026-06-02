@@ -1,29 +1,63 @@
 ---
-title: "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
-description: "Crime rates, food safety, political stability, scams targeting tourists, healthcare access, and emergency contacts  a no-BS safety guide for foreign travelers in China in 2026."
-date: "2026-05-27"
-author: "Joran"
-tags: ["china-safety", "china-travel-tips", "is-china-safe", "travel-advisory", "china-guide"]
-categories: ["china-guide"]
+title: Is China Safe for Tourists in 2026? An Honest Safety Assessment
+description: Crime rates, food safety, political stability, scams targeting tourists,
+  healthcare access, and emergency contacts  a no-BS safety guide for foreign travelers
+  in China in 2026.
+date: '2026-05-27T10:00:00+08:00'
+author: Joran
+tags:
+- china-safety
+- china-travel-tips
+- is-china-safe
+- travel-advisory
+- china-guide
+categories:
+- china-guide
 params:
-  keywords: ["is china safe to travel", "china travel safety 2026", "china crime rate tourists", "china safety tips", "foreigners in china safety"]
+  keywords:
+  - is china safe to travel
+  - china travel safety 2026
+  - china crime rate tourists
+  - china safety tips
+  - foreigners in china safety
   faq:
-    - question: "Is China safe for tourists in 2026?"
-      answer: "Yes  statistically one of the safer major destinations for foreigners. Violent crime against tourists is extremely rare. The main risks are petty theft, scams targeting foreigners in tourist areas, and foodborne illness from street food hygiene variability."
-    - question: "Is there political unrest that tourists should worry about?"
-      answer: "Generally no. Protests are rare and almost never target tourists. The government maintains heavy security in tourist areas. Any politically sensitive areas you should avoid will be obvious  guides and hotels will tell you."
-    - question: "How common are scams targeting tourists in China?"
-      answer: "Common enough to be aware, rare enough not to ruin your trip. Main scams: teahouse scams (price manipulation), taxi drivers not using the meter, and fake tour operators. All solvable by using Didi, booking attractions directly, and walking away from aggressive solicitations."
-    - question: "Can foreigners use emergency services in China?"
-      answer: "Yes: Police 110, Ambulance 120, Fire 119. English operators are hit-or-miss outside major cities. Carry your hotel's business card in Chinese characters so emergency responders know your location. Major hospitals in Beijing, Shanghai, and Xi'an have international clinics with English-speaking staff."
-    - question: "What about food safety for tourists?"
-      answer: "Generally fine  Chinese food safety standards have improved dramatically since 2010. Give your gut 2-3 days to adjust. Stick to well-cooked food and drink sealed bottled water in rural areas during the adjustment period."
-    - question: "Is it safe to travel alone as a woman in China?"
-      answer: "Yes, with standard solo-travel precautions. China's cities are generally safe for women at any hour. Harassment is less common than in many Western cities. The main issues are unwanted attention in tourist areas and being overcharged."
-    - question: "Does China have good healthcare for foreigners?"
-      answer: "Major cities have excellent international clinics and JCI-accredited hospitals. Rural areas have basic clinics. Carry travel insurance that covers China  your home country policy likely doesn't. Basic healthcare is affordable; complex treatment or medical evacuation is expensive."
-    - question: "Are there areas of China off-limits to tourists?"
-      answer: "Tibet requires a special permit and government-organized guide. Parts of Xinjiang near borders have restricted zones. Military areas are off-limits. Your hotel or travel agent will inform you of restrictions for your planned route."
+  - question: Is China safe for tourists in 2026?
+    answer: Yes  statistically one of the safer major destinations for foreigners.
+      Violent crime against tourists is extremely rare. The main risks are petty theft,
+      scams targeting foreigners in tourist areas, and foodborne illness from street
+      food hygiene variability.
+  - question: Is there political unrest that tourists should worry about?
+    answer: Generally no. Protests are rare and almost never target tourists. The
+      government maintains heavy security in tourist areas. Any politically sensitive
+      areas you should avoid will be obvious  guides and hotels will tell you.
+  - question: How common are scams targeting tourists in China?
+    answer: 'Common enough to be aware, rare enough not to ruin your trip. Main scams:
+      teahouse scams (price manipulation), taxi drivers not using the meter, and fake
+      tour operators. All solvable by using Didi, booking attractions directly, and
+      walking away from aggressive solicitations.'
+  - question: Can foreigners use emergency services in China?
+    answer: 'Yes: Police 110, Ambulance 120, Fire 119. English operators are hit-or-miss
+      outside major cities. Carry your hotel''s business card in Chinese characters
+      so emergency responders know your location. Major hospitals in Beijing, Shanghai,
+      and Xi''an have international clinics with English-speaking staff.'
+  - question: What about food safety for tourists?
+    answer: Generally fine  Chinese food safety standards have improved dramatically
+      since 2010. Give your gut 2-3 days to adjust. Stick to well-cooked food and
+      drink sealed bottled water in rural areas during the adjustment period.
+  - question: Is it safe to travel alone as a woman in China?
+    answer: Yes, with standard solo-travel precautions. China's cities are generally
+      safe for women at any hour. Harassment is less common than in many Western cities.
+      The main issues are unwanted attention in tourist areas and being overcharged.
+  - question: Does China have good healthcare for foreigners?
+    answer: Major cities have excellent international clinics and JCI-accredited hospitals.
+      Rural areas have basic clinics. Carry travel insurance that covers China  your
+      home country policy likely doesn't. Basic healthcare is affordable; complex
+      treatment or medical evacuation is expensive.
+  - question: Are there areas of China off-limits to tourists?
+    answer: Tibet requires a special permit and government-organized guide. Parts
+      of Xinjiang near borders have restricted zones. Military areas are off-limits.
+      Your hotel or travel agent will inform you of restrictions for your planned
+      route.
 ---
 
 ## The Most Honest China Safety Analysis You'll Find

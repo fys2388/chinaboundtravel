@@ -1,10 +1,15 @@
 ---
-title: "How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN"
-date: 2026-05-18T09:00:00+08:00
+title: How to Keep Your Internet Connected in China - eSIM vs. Local SIM vs. VPN
+date: '2026-05-18T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)  > **Stay Connected:** Need reliable internet in China? Get a VPN that wo..."
+tags:
+- China Travel
+- Travel Tips
+categories:
+- China Travel Guide
+summary: 'How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN
+  (2026 Tested)  > **Stay Connected:** Need reliable internet in China? Get a VPN
+  that wo...'
 ---
 
 # How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)

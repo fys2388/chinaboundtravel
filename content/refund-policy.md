@@ -1,7 +1,7 @@
 ---
-title: "Refund Policy"
-description: "Chinaboundtravel strict no-refund policy for digital products."
-date: 2026-01-01
+title: Refund Policy
+description: Chinaboundtravel strict no-refund policy for digital products.
+date: '2026-06-02T10:00:00+08:00'
 type: page
 layout: single
 hideMeta: true

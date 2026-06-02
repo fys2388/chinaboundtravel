@@ -1,28 +1,41 @@
 ---
-title: "The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)"
-date: 2026-05-23T09:00:00+08:00
+title: The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
+date: '2026-05-23T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Food & Drink", "App Guide", "Daily Life", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
-
-description: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
-author: "Joran"
+tags:
+- China Travel
+- Food & Drink
+- App Guide
+- Daily Life
+- Travel Tips
+categories:
+- China Travel Guide
+summary: I ordered delivery 47 times in my first month in Chengdu. Here's how to use
+  Meituan and Ele.me as a foreigner  including what to actually order, how to pay,
+  and why your delivery person will call you even though you can't understand them.
+description: I ordered delivery 47 times in my first month in Chengdu. Here's how
+  to use Meituan and Ele.me as a foreigner  including what to actually order, how
+  to pay, and why your delivery person will call you even though you can't understand
+  them.
+author: Joran
 params:
   keywords:
-    - "Chinese food"
-    - "hot pot"
-    - "Sichuan cuisine"
-    - "street food"
-    - "delivery"
-    - "travel guide"
+  - Chinese food
+  - hot pot
+  - Sichuan cuisine
+  - street food
+  - delivery
+  - travel guide
   faq:
-    - question: "Is China safe for foreign tourists?"
-      answer: "Yes, China is very safe for tourists. Violent crime is rare, and cities are generally safe day and night."
-    - question: "What's the best time to visit China?"
-      answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
-    - question: "Do I need a VPN for China?"
-      answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
+  - question: Is China safe for foreign tourists?
+    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
+      are generally safe day and night.
+  - question: What's the best time to visit China?
+    answer: Spring (April-May) and autumn (September-October) offer the best weather,
+      with mild temperatures and fewer crowds.
+  - question: Do I need a VPN for China?
+    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
+      is recommended for reliable internet access.
 ---
 
 

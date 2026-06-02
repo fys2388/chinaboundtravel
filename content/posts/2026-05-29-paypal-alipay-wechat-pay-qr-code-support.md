@@ -1,11 +1,20 @@
 ---
-title: "PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?"
-slug: "paypal-alipay-wechat-pay-qr-code-support"
-date: 2026-05-29T09:00:00+08:00
+title: PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?
+slug: paypal-alipay-wechat-pay-qr-code-support
+date: '2026-05-29T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Payment", "Alipay", "WeChat Pay", "PayPal", "Tech"]
-categories: ["China Essentials"]
-summary: "PayPal quietly rolled out Alipay and WeChat Pay QR code support in 2026. Here's what it actually means for foreign tourists in China  and what it doesn't solve."
+tags:
+- China Travel
+- Payment
+- Alipay
+- WeChat Pay
+- PayPal
+- Tech
+categories:
+- China Essentials
+summary: PayPal quietly rolled out Alipay and WeChat Pay QR code support in 2026.
+  Here's what it actually means for foreign tourists in China  and what it doesn't
+  solve.
 ---
 
 ## Dude, What Just Happened?

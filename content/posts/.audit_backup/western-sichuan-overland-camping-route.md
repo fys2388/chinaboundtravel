@@ -1,10 +1,21 @@
 ---
-title: "Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness"
-date: 2026-05-21
+title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
+  Most Epic Wilderness'
+date: '2026-06-02T10:00:00+08:00'
 draft: false
-tags: ["Sichuan travel", "camping in China", "overland adventure", "western Sichuan", "China road trip", "Tibetan Plateau", "China travel"]
-categories: ["Guides"]
-summary: "A complete 7-day overland camping guide to Western Sichuan's most breathtaking landscapes. From Chengdu to Litang, discover hidden valleys, snow-capped peaks, and authentic Tibetan villages."
+tags:
+- Sichuan travel
+- camping in China
+- overland adventure
+- western Sichuan
+- China road trip
+- Tibetan Plateau
+- China travel
+categories:
+- Guides
+summary: A complete 7-day overland camping guide to Western Sichuan's most breathtaking
+  landscapes. From Chengdu to Litang, discover hidden valleys, snow-capped peaks,
+  and authentic Tibetan villages.
 ---
 
 # Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness

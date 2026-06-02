@@ -1,24 +1,32 @@
 ---
-title: "Shanghai Bund & French Concession  2-Day Deep Dive"
-date: 2026-05-24T09:00:00+08:00
+title: Shanghai Bund & French Concession  2-Day Deep Dive
+date: '2026-05-24T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Shanghai", "City Guide", "Destinations"]
-categories: ["China Travel Guide"]
-summary: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
-
-description: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
-author: "Joran"
+tags:
+- China Travel
+- Shanghai
+- City Guide
+- Destinations
+categories:
+- China Travel Guide
+summary: 'Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession.
+  No tourist traps, no fluff  just the stuff that actually matters.'
+description: Shanghai in 48 Hours - From the Neon-lit Bund to the Tree-Lined French
+  Concession. No tourist traps, no fluff  just the stuff that actually matters.
+author: Joran
 params:
   keywords:
-    - "Shanghai"
-    - "Bund"
-    - "French Concession"
-    - "city guide"
+  - Shanghai
+  - Bund
+  - French Concession
+  - city guide
   faq:
-    - question: "What cities should I visit in China?"
-      answer: "Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each offers unique experiences from history to food to pandas."
-    - question: "How do I get around Chinese cities?"
-      answer: "Subway systems in major cities are excellent. Taxis and ride-hailing apps (Didi) are cheap and convenient."
+  - question: What cities should I visit in China?
+    answer: Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each
+      offers unique experiences from history to food to pandas.
+  - question: How do I get around Chinese cities?
+    answer: Subway systems in major cities are excellent. Taxis and ride-hailing apps
+      (Didi) are cheap and convenient.
 ---
 
 

@@ -1,28 +1,36 @@
 ---
-title: "How to Use WeChat Pay as a Foreigner"
-date: 2026-05-21T09:30:00+08:00
+title: How to Use WeChat Pay as a Foreigner
+date: '2026-05-21T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Travel Tips"]
-categories: ["China Travel Guide"]
-summary: "How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note acr..."
-
-description: "How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note acr..."
-author: "Joran"
+tags:
+- China Travel
+- Travel Tips
+categories:
+- China Travel Guide
+summary: How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When I first
+  landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note acr...
+description: How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When
+  I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB
+  note acr...
+author: Joran
 params:
   keywords:
-    - "WeChat Pay"
-    - "mobile payment"
-    - "China payment"
-    - "foreigners"
-    - "WeChat wallet"
-    - "digital payment"
+  - WeChat Pay
+  - mobile payment
+  - China payment
+  - foreigners
+  - WeChat wallet
+  - digital payment
   faq:
-    - question: "Can foreigners use WeChat Pay in China?"
-      answer: "Yes, foreigners can use WeChat Pay with a foreign credit card (Visa, Mastercard, etc.) or by opening a Chinese bank account."
-    - question: "Is Alipay available for non-Chinese users?"
-      answer: "Absolutely! Alipay supports foreign credit cards and passport verification for international travelers."
-    - question: "What's the best way to pay in China as a foreigner?"
-      answer: "Set up Alipay or WeChat Pay before your trip. Carry some cash as backup, and get a Chinese bank account if you're staying long-term."
+  - question: Can foreigners use WeChat Pay in China?
+    answer: Yes, foreigners can use WeChat Pay with a foreign credit card (Visa, Mastercard,
+      etc.) or by opening a Chinese bank account.
+  - question: Is Alipay available for non-Chinese users?
+    answer: Absolutely! Alipay supports foreign credit cards and passport verification
+      for international travelers.
+  - question: What's the best way to pay in China as a foreigner?
+    answer: Set up Alipay or WeChat Pay before your trip. Carry some cash as backup,
+      and get a Chinese bank account if you're staying long-term.
 ---
 
 
@@ -130,4 +138,3 @@ Look, WeChat Pay isnt perfect. Its a walled garden that demands your passport, y
 > **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
 
 > **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-

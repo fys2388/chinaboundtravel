@@ -1,27 +1,58 @@
 ---
-title: "7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026"
-description: "The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and pro tips from 10 years of running this route."
-date: "2026-05-27"
-author: "Joran"
-tags: ["china-itinerary", "beijing", "xian", "shanghai", "first-timer", "travel-guide"]
-categories: ["china-itinerary"]
+title: '7-Day China First Timer Itinerary: Beijing, Xi''an & Shanghai 2026'
+description: The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden
+  City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and
+  pro tips from 10 years of running this route.
+date: '2026-05-27T10:00:00+08:00'
+author: Joran
+tags:
+- china-itinerary
+- beijing
+- xian
+- shanghai
+- first-timer
+- travel-guide
+categories:
+- china-itinerary
 params:
-  keywords: ["7 day china itinerary", "china first timer guide", "beijing xian shanghai route", "china travel plan", "china 7 days"]
+  keywords:
+  - 7 day china itinerary
+  - china first timer guide
+  - beijing xian shanghai route
+  - china travel plan
+  - china 7 days
   faq:
-    - question: "How many days do you need to see Beijing, Xi'an, and Shanghai?"
-      answer: "Minimum 7 full days. Fly into Beijing (days 1-3), take a high-speed train to Xi'an (day 4-5), then fly or train to Shanghai (days 6-7). This itinerary is the Goldilocks zone  not too rushed, not too slow."
-    - question: "Do I need a visa for a 7-day China trip?"
-      answer: "Most nationalities need a tourist visa (L-visa). However, citizens of many countries (US, UK, Canada, Australia, EU) can use the 144-hour transit visa-free policy if arriving in Beijing or Shanghai and departing within 144 hours. Check your specific situation before booking."
-    - question: "How much does a 7-day China trip cost in 2026?"
-      answer: "Budget travelers: $80-120/day ($560-840 total). Mid-range: $150-250/day ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport, and attractions  not international flights."
-    - question: "What is the best way to travel between Beijing, Xi'an, and Shanghai?"
-      answer: "High-speed rail (Fuxing Hao) is the best option. Beijing → Xi'an: 4.5 hours, ~$85. Shanghai  Beijing: 4.5 hours, ~$95. Flights are also available but high-speed rail is more convenient and avoids airport hassles."
-    - question: "Is 7 days enough to see China?"
-      answer: "No  China is massive. 7 days covers three cities with an efficient route. You won't 'see China' in a week, but you'll get a representative sample of ancient history (Xi'an), modern superpower (Beijing), and global finance (Shanghai). Treat it as a gateway trip."
-    - question: "Can I use credit cards in China?"
-      answer: "Rarely, outside high-end hotels and international chains. Alipay and WeChat Pay are mandatory. Download and activate them before arrival. Carry 500-1,000 RMB cash for small vendors, temples, and rural areas."
-    - question: "Should I get a VPN in China?"
-      answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. ExpressVPN and NordVPN consistently work. Once in China, you'll need the APK file or account already active  you can't download VPN apps inside China."
+  - question: How many days do you need to see Beijing, Xi'an, and Shanghai?
+    answer: Minimum 7 full days. Fly into Beijing (days 1-3), take a high-speed train
+      to Xi'an (day 4-5), then fly or train to Shanghai (days 6-7). This itinerary
+      is the Goldilocks zone  not too rushed, not too slow.
+  - question: Do I need a visa for a 7-day China trip?
+    answer: Most nationalities need a tourist visa (L-visa). However, citizens of
+      many countries (US, UK, Canada, Australia, EU) can use the 144-hour transit
+      visa-free policy if arriving in Beijing or Shanghai and departing within 144
+      hours. Check your specific situation before booking.
+  - question: How much does a 7-day China trip cost in 2026?
+    answer: 'Budget travelers: $80-120/day ($560-840 total). Mid-range: $150-250/day
+      ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport,
+      and attractions  not international flights.'
+  - question: What is the best way to travel between Beijing, Xi'an, and Shanghai?
+    answer: 'High-speed rail (Fuxing Hao) is the best option. Beijing → Xi''an: 4.5
+      hours, ~$85. Shanghai  Beijing: 4.5 hours, ~$95. Flights are also available
+      but high-speed rail is more convenient and avoids airport hassles.'
+  - question: Is 7 days enough to see China?
+    answer: No  China is massive. 7 days covers three cities with an efficient route.
+      You won't 'see China' in a week, but you'll get a representative sample of ancient
+      history (Xi'an), modern superpower (Beijing), and global finance (Shanghai).
+      Treat it as a gateway trip.
+  - question: Can I use credit cards in China?
+    answer: Rarely, outside high-end hotels and international chains. Alipay and WeChat
+      Pay are mandatory. Download and activate them before arrival. Carry 500-1,000
+      RMB cash for small vendors, temples, and rural areas.
+  - question: Should I get a VPN in China?
+    answer: Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and
+      WhatsApp are all blocked. ExpressVPN and NordVPN consistently work. Once in
+      China, you'll need the APK file or account already active  you can't download
+      VPN apps inside China.
 ---
 
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)

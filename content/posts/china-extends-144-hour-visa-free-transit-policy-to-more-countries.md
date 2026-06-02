@@ -1,27 +1,37 @@
 ---
-title: "China Extends 144-hour Visa-free Transit Policy to More Countries"
-date: 2026-05-16T10:30:00+08:00
+title: China Extends 144-hour Visa-free Transit Policy to More Countries
+date: '2026-05-16T10:00:00+08:00'
 draft: false
-tags: ["China Travel", "Visa", "News"]
-categories: ["Updates"]
-summary: "China Extends 144-hour Visa-free Transit Policy to More Countries  When I first landed in Chengdu six years ago, I spent two hours in the immigration line watch..."
-
-description: "China Extends 144-hour Visa-free Transit Policy to More Countries  When I first landed in Chengdu six years ago, I spent two hours in the immigration line watch..."
-author: "Joran"
+tags:
+- China Travel
+- Visa
+- News
+categories:
+- Updates
+summary: China Extends 144-hour Visa-free Transit Policy to More Countries  When I
+  first landed in Chengdu six years ago, I spent two hours in the immigration line
+  watch...
+description: China Extends 144-hour Visa-free Transit Policy to More Countries  When
+  I first landed in Chengdu six years ago, I spent two hours in the immigration line
+  watch...
+author: Joran
 params:
   keywords:
-    - "visa-free"
-    - "China visa"
-    - "transit visa"
-    - "144-hour visa"
-    - "China travel"
+  - visa-free
+  - China visa
+  - transit visa
+  - 144-hour visa
+  - China travel
   faq:
-    - question: "Is China safe for foreign tourists?"
-      answer: "Yes, China is very safe for tourists. Violent crime is rare, and cities are generally safe day and night."
-    - question: "What's the best time to visit China?"
-      answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
-    - question: "Do I need a VPN for China?"
-      answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
+  - question: Is China safe for foreign tourists?
+    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
+      are generally safe day and night.
+  - question: What's the best time to visit China?
+    answer: Spring (April-May) and autumn (September-October) offer the best weather,
+      with mild temperatures and fewer crowds.
+  - question: Do I need a VPN for China?
+    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
+      is recommended for reliable internet access.
 ---
 
 
