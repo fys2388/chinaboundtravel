@@ -74,7 +74,7 @@ export async function onRequestPost({ request, env }) {
     }
 
     const Stripe = (await import('stripe')).default;
-    const stripe = new Stripe(env.STRIPE_SECRET_KEY);
+    const stripe = new Stripe(stripeKey);
 
     const session = await stripe.checkout.sessions.create(sessionPayload);
 

@@ -37,18 +37,18 @@ Includes the current edition only. No future updates. Perfect for one-time trave
 
 ## Monthly Radar
 
-**$1.09 First Month, Regular $9.99/month**  
+**$1 First Month, Regular $9.99/month**  
 *Use coupon: FIRSTMONTH1 at checkout*
 
 Includes weekly Travel Radar emails + monthly guide updates. Cancel anytime.
 
-<button class="buy-btn" data-plan="monthly">Start for $1.09 →</button>
+<button class="buy-btn" data-plan="monthly">Start for $1 →</button>
 
 ---
 
 ## Plan Comparison
 
-| Features | One-Time ($14.99) | Monthly ($1.09/$9.99) | Annual Elite ($49.99) |
+| Features | One-Time ($14.99) | Monthly ($1/$9.99) | Annual Elite ($49.99) |
 |---|:---:|:---:|:---:|
 | PDF Guide (current edition) | ✅ | ✅ | ✅ |
 | Future monthly updates | ❌ | ✅ | ✅ |
@@ -88,7 +88,7 @@ Immediately after purchase. Check your inbox (and spam folder) for the download 
 The Monthly and Annual plans are subscriptions. The One-Time Buyout is a single payment with no recurring charges.
 
 **How does the first month discount work?**  
-Use coupon code **FIRSTMONTH1** at checkout to get $1.09 for your first month. After the first month, you'll be charged the regular $9.99/month rate. You can cancel anytime before the next billing cycle.
+Use coupon code **FIRSTMONTH1** at checkout to get $1 for your first month. After the first month, you'll be charged the regular $9.99/month rate. You can cancel anytime before the next billing cycle.
 
 ---
 
