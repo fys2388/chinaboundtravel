@@ -74,7 +74,7 @@ buildExpired = false
 [[menu.main]]
   identifier = "internet"
   name = "🌐 Internet Access"
-  url = "/tags/china-vpn/"
+  url = "/categories/china-essentials/"
   weight = 40
 
 [[menu.main]]

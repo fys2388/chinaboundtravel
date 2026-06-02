@@ -19,9 +19,9 @@ All plans include the current **ChinaBound Travel Guide 2026.05** PDF  updated m
 ##  Annual Elite Pass  *Most Popular*
 
 **$49.99/year**  
-*~$4.17/month  Cancel anytime*
+*Cancel anytime · PDF included*
 
-[Get Instant Access →](https://buy.stripe.com/test_00g2bN9rCn6b9ZnBYZFq2dHx)
+<button class="buy-btn" data-plan="annual">Get Instant Access →</button>
 
 ---
 
@@ -31,17 +31,17 @@ All plans include the current **ChinaBound Travel Guide 2026.05** PDF  updated m
 
 Includes the current edition only. No future updates.
 
-[Buy Now →](https://buy.stripe.com/test_00g2bN9rCn6b9ZnBYZFq2dHx)
+<button class="buy-btn" data-plan="onetime">Buy Now →</button>
 
 ---
 
 ##  Monthly Radar
 
-**$9.99/month**  *First month $1*
+**$9.99/month**  *First month $1.09 with coupon*
 
 Includes weekly Travel Radar emails + monthly guide updates.
 
-[Start for $1 →](https://buy.stripe.com/14AdR32A05cf9KV1mI1gs04)
+<button class="buy-btn" data-plan="monthly">Start for $1.09 →</button>
 
 ---
 
