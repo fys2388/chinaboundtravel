@@ -21,7 +21,7 @@ export async function onRequestPost({ request, env }) {
     const { plan } = await request.json();
 
     const PLANS = {
-      monthly: { priceId: 'price_1TbjHO9rCn6b9ZnBDg6wfaLJ', mode: 'subscription' },
+      monthly: { priceId: 'price_1TbjHO9rCn6b9ZnBDg6wfaLJ', mode: 'subscription', coupon: 'FIRSTMONTH1' },
       annual: { priceId: 'price_1TaVSM9rCn6b9ZnBurUqHyLw', mode: 'subscription' },
       onetime: { priceId: 'price_1TaVOT9rCn6b9ZnBYZFq2dHx', mode: 'payment' },
     };
@@ -42,6 +42,10 @@ export async function onRequestPost({ request, env }) {
     let successUrlEncoded = encodeURIComponent(successUrl + '?session_id={CHECKOUT_SESSION_ID}');
     let cancelUrlEncoded = encodeURIComponent(cancelUrl);
     let formData = `mode=${planConfig.mode}&success_url=${successUrlEncoded}&cancel_url=${cancelUrlEncoded}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&billing_address_collection=auto`;
+    
+    if (planConfig.coupon) {
+      formData += `&discounts[0][coupon]=${planConfig.coupon}`;
+    }
 
     const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
