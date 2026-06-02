@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "stripe": "^15.0.0",
-    "resend": "^3.0.0"
+    "stripe": "^16.9.0",
+    "resend": "^3.2.0"
   }
 }
