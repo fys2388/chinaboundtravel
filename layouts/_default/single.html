@@ -59,6 +59,12 @@
         <a href="https://twitter.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-x" title="Share on X (Twitter)">X</a>
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" title="Share on Facebook">Facebook</a>
         <a href="https://pinterest.com/pin/create/button/?url={{ .Permalink | urlquery }}&description={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-pinterest" title="Share on Pinterest">Pinterest</a>
+        <a href="https://api.whatsapp.com/send?text={{ .Title | urlquery }}%20{{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp" title="Share on WhatsApp">WhatsApp</a>
+        <a href="https://t.me/share/url?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-telegram" title="Share on Telegram">Telegram</a>
+        <a href="https://reddit.com/submit?url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-reddit" title="Share on Reddit">Reddit</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" title="Share on LinkedIn">LinkedIn</a>
+        <a href="mailto:?subject={{ .Title | urlquery }}&body=Check out this guide: {{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn share-email" title="Share via Email">Email</a>
+        <button class="share-btn share-copy" onclick="navigator.clipboard.writeText('{{ .Permalink }}');alert('Link copied!')" title="Copy link">Copy</button>
     </div>
 
     {{- /* ===== Related Posts ===== */ -}}
@@ -202,6 +208,18 @@
 .share-facebook:hover { background: #155db5; color: white; transform: translateY(-1px); }
 .share-pinterest { background: #e60023; color: white; }
 .share-pinterest:hover { background: #c2001d; color: white; transform: translateY(-1px); }
+.share-whatsapp { background: #25d366; color: white; }
+.share-whatsapp:hover { background: #1da851; color: white; transform: translateY(-1px); }
+.share-telegram { background: #2aabee; color: white; }
+.share-telegram:hover { background: #1d8cd1; color: white; transform: translateY(-1px); }
+.share-reddit { background: #ff4500; color: white; }
+.share-reddit:hover { background: #cc3700; color: white; transform: translateY(-1px); }
+.share-linkedin { background: #0a66c2; color: white; }
+.share-linkedin:hover { background: #0853a0; color: white; transform: translateY(-1px); }
+.share-email { background: #ea4335; color: white; }
+.share-email:hover { background: #c9302c; color: white; transform: translateY(-1px); }
+.share-copy { background: #666; color: white; border: none; }
+.share-copy:hover { background: #444; color: white; transform: translateY(-1px); }
 
 /* Post Navigation */
 .post-nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
