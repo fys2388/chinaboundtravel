@@ -2,10 +2,10 @@ name: Daily Inspection & Auto-Update
 
 on:
   schedule:
-    # 每天北京时间 09:30 (UTC 01:30) 运行巡检
+    # Daily at 01:30 UTC = 21:30 ET prev day / 18:30 PT prev day / 09:30 Beijing (internal monitoring)
     - cron: '30 1 * * *'
-    # 每周日北京时间 20:00 (UTC 12:00) 运行周报
-    - cron: '0 12 * * 0'
+    # Sunday at 14:00 UTC = 10:00 ET / 07:00 PT / 22:00 Beijing (US East morning)
+    - cron: '0 14 * * 0'
   workflow_dispatch:
 
 permissions:
@@ -42,7 +42,7 @@ jobs:
 
   weekly-report:
     runs-on: ubuntu-latest
-    if: github.event.schedule == '0 12 * * 0'
+    if: github.event.schedule == '0 14 * * 0'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
