@@ -1,11 +1,6 @@
 /**
  * Stripe Checkout Session API - ChinaBound Travel
  * POST /api/checkout { plan: "monthly" | "annual" | "onetime" }
- *
- * Env vars (Cloudflare Pages → Settings → Environment Variables):
- *   STRIPE_SECRET_KEY      = sk_live_xxx
- *   SUCCESS_URL            = https://chinaboundtravel.com/success/
- *   CANCEL_URL             = https://chinaboundtravel.com/pricing/
  */
 
 export async function onRequestPost({ request, env }) {
@@ -26,59 +21,44 @@ export async function onRequestPost({ request, env }) {
     const { plan } = await request.json();
 
     const PLANS = {
-      monthly: {
-        priceId: 'price_1TbjHO9rCn6b9ZnBDg6wfaLJ',   // $9.99/month
-        coupon: 'FIRSTMONTH1',                          // first month $1.09
-        name: 'Monthly Radar',
-        mode: 'subscription',
-      },
-      annual: {
-        priceId: 'price_1TaVSM9rCn6b9ZnBurUqHyLw',    // $49.99/year
-        coupon: null,
-        name: 'Annual Elite Pass',
-        mode: 'subscription',
-      },
-      onetime: {
-        priceId: 'price_1TaVOT9rCn6b9ZnBYZFq2dHx',    // $14.99 once
-        coupon: null,
-        name: 'One-Time Buyout',
-        mode: 'payment',
-      },
+      monthly: { priceId: 'price_1TbjHO9rCn6b9ZnBDg6wfaLJ', coupon: 'FIRSTMONTH1', mode: 'subscription' },
+      annual: { priceId: 'price_1TaVSM9rCn6b9ZnBurUqHyLw', coupon: null, mode: 'subscription' },
+      onetime: { priceId: 'price_1TaVOT9rCn6b9ZnBYZFq2dHx', coupon: null, mode: 'payment' },
     };
 
     const planConfig = PLANS[plan];
     if (!planConfig) {
-      return jsonResponse({ error: 'Invalid plan. Use: monthly, annual, or onetime' }, 400, corsHeaders);
+      return jsonResponse({ error: 'Invalid plan' }, 400, corsHeaders);
     }
 
     const successUrl = env.SUCCESS_URL || 'https://www.chinaboundtravel.com/success/';
     const cancelUrl = env.CANCEL_URL || 'https://www.chinaboundtravel.com/pricing/';
-    const stripeKey = env.STRIPE_SECRET_KEY || '***REMOVED***';
+    const stripeKey = env.STRIPE_SECRET_KEY;
 
-    // Build session payload
-    const sessionPayload = {
-      mode: planConfig.mode,
-      success_url: `${successUrl}?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: cancelUrl,
-      line_items: [{ price: planConfig.priceId, quantity: 1 }],
-      metadata: {
-        plan,
-        source: 'chinaboundtravel_website',
-      },
-      payment_method_types: ['card'],
-      allow_promotion_codes: true,
-      billing_address_collection: 'auto',
-    };
-
-    // Apply first-month coupon only for monthly plan
-    if (planConfig.coupon) {
-      sessionPayload.discounts = [{ coupon: planConfig.coupon }];
+    if (!stripeKey) {
+      return jsonResponse({ error: 'Stripe API key not configured' }, 500, corsHeaders);
     }
 
-    const Stripe = (await import('stripe')).default;
-    const stripe = new Stripe(stripeKey);
+    let formData = `mode=${planConfig.mode}&success_url=${encodeURIComponent(`${successUrl}?session_id={CHECKOUT_SESSION_ID}`)}&cancel_url=${encodeURIComponent(cancelUrl)}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&allow_promotion_codes=true&billing_address_collection=auto`;
 
-    const session = await stripe.checkout.sessions.create(sessionPayload);
+    if (planConfig.coupon) {
+      formData += `&discounts[0][coupon]=${planConfig.coupon}`;
+    }
+
+    const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Bearer ${stripeKey}`,
+      },
+      body: formData,
+    });
+
+    const session = await response.json();
+
+    if (!response.ok) {
+      return jsonResponse({ error: session.error?.message || 'Stripe API error' }, response.status, corsHeaders);
+    }
 
     return jsonResponse({ url: session.url }, 200, corsHeaders);
 
