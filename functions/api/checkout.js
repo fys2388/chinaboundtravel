@@ -8,11 +8,13 @@
  *   CANCEL_URL             = https://chinaboundtravel.com/pricing/
  */
 
-const allowedOrigin = 'https://chinaboundtravel.com';
-
 export async function onRequestPost({ request, env }) {
+  const origin = request.headers.get('Origin') || request.headers.get('origin');
+  
   const corsHeaders = {
-    'Access-Control-Allow-Origin': allowedOrigin,
+    'Access-Control-Allow-Origin': origin || 'https://www.chinaboundtravel.com',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Origin',
     'Content-Type': 'application/json',
   };
 
