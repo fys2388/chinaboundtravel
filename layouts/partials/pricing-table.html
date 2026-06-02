@@ -390,7 +390,7 @@
                 <input type="checkbox" id="cb-onetime">
                 <label for="cb-onetime">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected plan. I understand this is a one-time purchase with no refunds once the download begins. <a href="/refund-policy" target="_blank">View refund policy</a></label>
             </div>
-            <button class="pricing-cta" id="btn-onetime" onclick="initiateCheckout('onetime')">Buy Now →</button>
+            <a id="btn-onetime" href="https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01" class="pricing-cta" target="_blank" rel="noopener noreferrer">Buy Now →</a>
             <p class="pricing-cta-note">Secure checkout via Stripe</p>
         </div>
 
@@ -416,7 +416,7 @@
                 <input type="checkbox" id="cb-monthly">
                 <label for="cb-monthly">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected subscription. This recurring subscription will automatically renew unless I cancel. I acknowledge that I will lose my right to refunds once the download begins. <a href="/refund-policy" target="_blank">View refund policy</a></label>
             </div>
-            <button class="pricing-cta" id="btn-monthly" onclick="initiateCheckout('monthly')">Start for $1 →</button>
+            <a id="btn-monthly" href="https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05" class="pricing-cta" target="_blank" rel="noopener noreferrer">Start for $1 →</a>
             <p class="pricing-cta-note">Secure checkout via Stripe · Coupon FIRSTMONTH1 applied</p>
         </div>
 
@@ -443,7 +443,7 @@
                 <input type="checkbox" id="cb-annual">
                 <label for="cb-annual">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected subscription. I understand this recurring subscription will automatically renew at the end of each billing cycle unless I cancel. I acknowledge that I will lose my right to refunds once the download begins or any premium content is delivered. All sales are final. <a href="/refund-policy" target="_blank">View refund policy</a></label>
             </div>
-            <button class="pricing-cta featured" id="btn-annual" onclick="initiateCheckout('annual')">Get Instant Access →</button>
+            <a id="btn-annual" href="https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03" class="pricing-cta featured" target="_blank" rel="noopener noreferrer">Get Instant Access →</a>
             <p class="pricing-cta-note">Secure checkout via Stripe · Cancel anytime</p>
         </div>
 
@@ -541,70 +541,45 @@
 
 <script>
 (function() {
-    // Disable all buttons initially (enable only when checkbox is checked)
-    function disableBtn(id) {
-        var btn = document.getElementById(id);
-        if (btn) {
-            btn.style.pointerEvents = 'none';
-            btn.style.opacity = '0.5';
+    function disableLink(id) {
+        var link = document.getElementById(id);
+        if (link) {
+            link.style.pointerEvents = 'none';
+            link.style.opacity = '0.5';
+            link.removeAttribute('href');
         }
     }
-    function enableBtn(id) {
-        var btn = document.getElementById(id);
-        if (btn) {
-            btn.style.pointerEvents = 'auto';
-            btn.style.opacity = '1';
+    function enableLink(id, href) {
+        var link = document.getElementById(id);
+        if (link) {
+            link.style.pointerEvents = 'auto';
+            link.style.opacity = '1';
+            link.setAttribute('href', href);
         }
     }
 
-    disableBtn('btn-onetime');
-    disableBtn('btn-monthly');
-    disableBtn('btn-annual');
+    var links = {
+        'btn-onetime': 'https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01',
+        'btn-monthly': 'https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05',
+        'btn-annual': 'https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03'
+    };
 
-    // Checkbox enforcement
+    disableLink('btn-onetime');
+    disableLink('btn-monthly');
+    disableLink('btn-annual');
+
     var cbOnetime = document.getElementById('cb-onetime');
     var cbMonthly = document.getElementById('cb-monthly');
     var cbAnnual = document.getElementById('cb-annual');
 
     if (cbOnetime) cbOnetime.addEventListener('change', function() {
-        cbOnetime.checked ? enableBtn('btn-onetime') : disableBtn('btn-onetime');
+        cbOnetime.checked ? enableLink('btn-onetime', links['btn-onetime']) : disableLink('btn-onetime');
     });
     if (cbMonthly) cbMonthly.addEventListener('change', function() {
-        cbMonthly.checked ? enableBtn('btn-monthly') : disableBtn('btn-monthly');
+        cbMonthly.checked ? enableLink('btn-monthly', links['btn-monthly']) : disableLink('btn-monthly');
     });
     if (cbAnnual) cbAnnual.addEventListener('change', function() {
-        cbAnnual.checked ? enableBtn('btn-annual') : disableBtn('btn-annual');
+        cbAnnual.checked ? enableLink('btn-annual', links['btn-annual']) : disableLink('btn-annual');
     });
-
-    // Checkout API handler
-    window.initiateCheckout = async function(plan) {
-        var btn = document.getElementById('btn-' + plan);
-        var originalText = btn.textContent;
-        btn.textContent = 'Loading...';
-        btn.disabled = true;
-        try {
-            var res = await fetch('/api/checkout', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ plan: plan }),
-            });
-            var data;
-            try { data = await res.json(); } catch(e) {
-                var text = await res.text();
-                data = { error: 'Invalid response: ' + text };
-            }
-            if (data.url) {
-                window.location.href = data.url;
-            } else {
-                alert('Checkout unavailable (HTTP ' + res.status + '). Please try again or email hello@chinaboundtravel.com\n\nError: ' + (data.error || 'Unknown'));
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }
-        } catch (err) {
-            alert('Network error: ' + err.message + '\n\nPlease check your connection and try again.');
-            btn.textContent = originalText;
-            btn.disabled = false;
-        }
-    };
 })();
 </script>
