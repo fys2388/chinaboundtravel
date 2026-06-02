@@ -741,3 +741,30 @@ pre {
         justify-content: center;
     }
 }
+
+/* ================================================
+   FTC Affiliate Disclosure Styles
+   ================================================ */
+.affiliate-disclosure {
+    font-size: 0.8rem;
+    color: #64748b;
+    background: rgba(58, 110, 165, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #3A6EA5;
+    margin-bottom: 0.5rem;
+}
+
+.affiliate-disclosure-small {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0 0 1.5rem 0;
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.affiliate-disclosure-small em {
+    font-style: italic;
+}

@@ -36,6 +36,9 @@
 
   {{- if .Content }}
   <div class="post-content md-content">
+    <p class="affiliate-disclosure-small">
+      <em>*Affiliate Disclosure: This post may contain affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.*</em>
+    </p>
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
