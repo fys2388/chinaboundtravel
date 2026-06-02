@@ -57,7 +57,7 @@ Includes weekly Travel Radar emails + monthly guide updates. Cancel anytime.
 3. Pay $1 for your first month
 4. Your payment is automatically applied
 
-<a href="https://buy.stripe.com/14AdR32A05cf9KV1mI1gs04" class="buy-link" target="_blank" rel="noopener noreferrer">
+<a href="https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05" class="buy-link" target="_blank" rel="noopener noreferrer">
   <button class="buy-btn">Start for $1 →</button>
 </a>
 
