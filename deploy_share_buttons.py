@@ -1,0 +1,97 @@
+import os
+import subprocess
+import sys
+
+# 修复 Windows 编码问题
+sys.stdout.reconfigure(encoding='utf-8')
+
+ROOT = r"E:\AI\dulizhan\travel-blog"
+
+#=====阶段1：自动化任务环境自检=====
+def check_env():
+    print("【1】环境&依赖自检")
+    try:
+        subprocess.run(["python", "--version"], check=True, capture_output=True)
+        print("✅Python正常")
+    except:
+        print("❌Python环境异常")
+    try:
+        subprocess.run(["git", "--version"], check=True, capture_output=True)
+        print("✅Git正常")
+    except:
+        print("❌Git异常")
+    try:
+        subprocess.run(["hugo", "version"], check=True, capture_output=True)
+        print("✅Hugo正常")
+    except:
+        print("❌Hugo未配置环境变量")
+
+check_env()
+
+#=====阶段2：生成分享组件share-buttons.html(partial)=====
+partial_path = os.path.join(ROOT, "themes/PaperMod/layouts/partials/share-buttons.html")
+share_code = '''
+<style>
+.share-wrap{display:flex;gap:12px;align-items:center;padding:1.5rem 0;flex-wrap:wrap}
+.share-text{font-size:1.1rem;font-weight:500;margin-right:6px}
+.share-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform 0.2s}
+.share-btn:hover{transform:scale(1.1)}
+.share-btn svg{width:24px;height:24px;fill:#fff}
+.x{background:#000}
+.fb{background:#1877F2}
+.pin{background:#E60023}
+.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.reddit{background:#FF4500}
+.linked{background:#0A66C2}
+</style>
+<div class="share-wrap">
+<span class="share-text">Share This Guide:</span>
+<a class="share-btn x" href="https://twitter.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.31l-5.84-7.58-6.64 7.58H.57l8.69-9.83L0 1.15h7.59l5.24 6.93ZM17.61 20.64h2.04L6.49 3.24H4.3Z"/></svg>
+</a>
+<a class="share-btn fb" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M24 12.07c0-6.63-5.37-12-12-12S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.39H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-2.7c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.39C19.61 23.03 24 18.06 24 12.07Z"/></svg>
+</a>
+<a class="share-btn pin" href="https://pinterest.com/pin/create/button/?url={{ .Permalink | urlquery }}&description={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M12.02 0C5.4 0 .03 5.37.03 11.99c0 5.08 3.16 9.41 7.62 11.16-.11-.95-.2-2.4.04-3.44.22-.94 1.41-5.96 1.41-5.96s-.36-.72-.36-1.78c0-1.66.97-2.91 2.17-2.91 1.02 0 1.52.77 1.52 1.69 0 1.03-.65 2.57-.99 3.99-.29 1.19.6 2.17 1.78 2.17 2.13 0 3.77-2.23 3.77-5.49 0-2.86-2.06-4.87-5.01-4.87-3.41 0-5.41 2.56-5.41 5.2 0 1.03.39 2.14.89 2.74.1.12.11.23.09.35-.08.34-.27 1.1-.31 1.26-.05.12-.16.15-.36.09-1.4-.27-2.42-1.17-2.42-2.35 0-1.73 1.25-3.37 2.89-3.37 1.54 0 2.03 1.15 2.03 2.59 0 1.74-.7 3.43-2.06 4.32-.64.37-1.47.53-2.26.49.63 1.96 2.44 3.39 4.6 3.39 6.61 0 11.99-5.37 11.99-11.99C23.97 5.39 18.59.03 11.99.03Z"/></svg>
+</a>
+<a class="share-btn ig" href="https://www.instagram.com/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.26.07 1.64.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.64-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07 3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32ZM12 16a4 4 0 110-8 4 4 0 010 8Zm6.41-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88Z"/></svg>
+</a>
+<a class="share-btn reddit" href="https://reddit.com/submit?url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.74c.69 0 1.25.56 1.25 1.25a1.25 1.25 0 01-2.5.01v-.01c0-.69.56-1.25 1.25-1.25zm-5.31 9.24c0-.69.56-1.25 1.25-1.25.69 0 1.25.56 1.25 1.25a1.25 1.25 0 01-2.5 0zM17.9 13.3c-.32.16-.65.29-1 .38.32-.39.51-.87.51-1.39a2.78 2.78 0 00-5.56 0c0 .52.19 1 .51 1.39-.35-.09-.68-.22-1-.38a6.2 6.2 0 01-3.94 1.26 6.23 6.23 0 01-3.95-1.26c-.32.16-.65.29-1 .38.32-.39.51-.87.51-1.39a2.78 2.78 0 00-5.56 0c0 .52.19 1 .51 1.39-.35-.09-.68-.22-1-.38A6.23 6.23 0 010 15.86v.01a6.23 6.23 0 016.23 6.23h11.54a6.23 6.23 0 016.23-6.23v-.01a6.23 6.23 0 01-6.1-2.56z"/></svg>
+</a>
+<a class="share-btn linked" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.7v-5.8c0-1.39-.03-3.17-1.92-3.17-1.92 0-2.22 1.5-2.22 3.06v5.91H8.92V9h3.55v1.56h.05c.49-.93 1.69-1.92 3.47-1.92 3.71 0 4.39 2.44 4.39 5.63v6.18ZM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14ZM7.2 20.45H3.48V9H7.2v11.45ZM22.22 0H1.78C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.78 24h20.44c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+</a>
+</div>
+'''
+
+os.makedirs(os.path.dirname(partial_path), exist_ok=True)
+with open(partial_path, "w", encoding="utf-8") as f:
+    f.write(share_code)
+print(f"✅分享组件生成: {partial_path}")
+
+#=====阶段3：插入到single.html文章底部=====
+single_path = os.path.join(ROOT, "themes/PaperMod/layouts/single.html")
+with open(single_path, "r", encoding="utf-8") as f:
+    html = f.read()
+
+insert_code = '{{ partial "share-buttons.html" . }}'
+if insert_code not in html:
+    html = html.replace("</article>", insert_code + "\n</article>")
+    with open(single_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("✅分享按钮已插入文章底部single.html")
+else:
+    print("ℹ️按钮代码已存在无需重复写入")
+
+#=====阶段4：本地预览验证=====
+os.chdir(ROOT)
+print("\n【3】构建预览校验：hugo --gc --minify")
+result = subprocess.run(["hugo", "--gc", "--minify"], capture_output=True, text=True, encoding='utf-8')
+print(result.stdout)
+if result.returncode == 0:
+    print("✅全部部署完毕，提交代码即可上线；如需预览执行：hugo server")
+else:
+    print("❌构建失败:", result.stderr)
