@@ -39,7 +39,7 @@ export async function onRequestPost({ request, env }) {
       return jsonResponse({ error: 'Stripe API key not configured' }, 500, corsHeaders);
     }
 
-    let formData = `mode=${planConfig.mode}&success_url=${encodeURIComponent(`${successUrl}?session_id={CHECKOUT_SESSION_ID}`)}&cancel_url=${encodeURIComponent(cancelUrl)}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&allow_promotion_codes=true&billing_address_collection=auto`;
+    let formData = `mode=${planConfig.mode}&success_url=${encodeURIComponent(`${successUrl}?session_id={CHECKOUT_SESSION_ID}`)}&cancel_url=${encodeURIComponent(cancelUrl)}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&billing_address_collection=auto`;
 
     if (planConfig.coupon) {
       formData += `&discounts[0][coupon]=${planConfig.coupon}`;
