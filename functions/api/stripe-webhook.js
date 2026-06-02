@@ -1,11 +1,11 @@
 /**
  * Stripe Webhook Handler - ChinaBound Travel
- * Receives checkout.session.completed → sends ebook via MailerLite
+ * Receives checkout.session.completed → sends ebook via Resend
  *
  * Env vars (set in Cloudflare Pages → Settings → Environment Variables):
  *   STRIPE_WEBHOOK_SECRET   = whsec_xxx
- *   MAILERLITE_API_KEY     = MailerLite REST API key
- *   Ebook PDF URL (in email body, no secret needed):
+ *   RESEND_API_KEY          = re_xxx (from resend.com)
+ *   STRIPE_SECRET_KEY       = sk_live_xxx
  *   EBOOK_URL              = https://chinaboundtravel.com/ebook/china-bound-travel-guide.pdf
  */
 
@@ -40,36 +40,19 @@ export async function onRequestPost({ request, env }) {
     }
 
     // 2. Verify Stripe signature
+    const Stripe = (await import('stripe')).default;
+    const stripe = new Stripe(env.STRIPE_SECRET_KEY);
+    
     let event;
     try {
-      const parts = signature.split(',');
-      const sigParts = {};
-      for (const part of parts) {
-        const [k, v] = part.split('=');
-        sigParts[k.trim()] = v.trim();
-      }
-      const timestamp = sigParts['t'];
-      const expectedSig = sigParts['v1'];
-
-      // Manual HMAC verification (Cloudflare Workers compatible)
-      const crypto = await import('crypto');
-      const signedPayload = `${timestamp}.${rawBody}`;
-      const computedSig = crypto
-        .createHmac('sha256', env.STRIPE_WEBHOOK_SECRET)
-        .update(signedPayload, 'utf8')
-        .digest('hex');
-
-      if (computedSig !== expectedSig) {
-        // Try without hashing (in case secret is already the raw secret)
-        if (expectedSig !== env.STRIPE_WEBHOOK_SECRET) {
-          return jsonResponse({ error: 'Invalid signature' }, 400, corsHeaders);
-        }
-      }
-
-      event = JSON.parse(rawBody);
+      event = stripe.webhooks.constructEvent(
+        rawBody,
+        signature,
+        env.STRIPE_WEBHOOK_SECRET
+      );
     } catch (verifyErr) {
       console.error('Stripe signature verification failed:', verifyErr.message);
-      return jsonResponse({ error: 'Signature verification failed' }, 400, corsHeaders);
+      return jsonResponse({ error: 'Signature verification failed: ' + verifyErr.message }, 400, corsHeaders);
     }
 
     // 3. Handle checkout.session.completed
@@ -84,119 +67,35 @@ export async function onRequestPost({ request, env }) {
       return jsonResponse({ error: 'No customer email in session' }, 400, corsHeaders);
     }
 
-    // 4. Add subscriber to MailerLite
-    const mlApiKey = env.MAILERLITE_API_KEY;
-    const mlAccountId = '2370480'; // ChinaBound MailerLite account
-
-    // Find or create the subscriber
-    let subscriberId = null;
-
-    // Try to find existing subscriber
-    const searchRes = await fetch(
-      `https://api.mailerlite.com/api/v2/subscribers?search=${encodeURIComponent(customerEmail)}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${mlApiKey}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-
-    if (searchRes.ok) {
-      const searchData = await searchRes.json();
-      const existing = searchData.data?.find(s => s.email === customerEmail);
-      if (existing) {
-        subscriberId = existing.id;
-      }
-    }
-
-    // Create or update subscriber
-    const subscriberPayload = {
-      email: customerEmail,
-      fields: {
-        name: session.customer_details?.name || '',
-      },
-      tags: ['ebook-buyer', 'annual-pass'],
-      status: 'active',
-    };
-
-    let mlRes;
-    if (subscriberId) {
-      // Update existing
-      mlRes = await fetch(`https://api.mailerlite.com/api/v2/subscribers/${subscriberId}`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${mlApiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(subscriberPayload),
-      });
-    } else {
-      // Create new
-      mlRes = await fetch('https://api.mailerlite.com/api/v2/subscribers', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${mlApiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(subscriberPayload),
-      });
-    }
-
-    if (!mlRes.ok) {
-      const mlErr = await mlRes.text();
-      console.error('MailerLite error:', mlErr);
-      // Don't fail the webhook - email might already exist, that's OK
-      return jsonResponse({
-        received: true,
-        warning: 'MailerLite subscriber creation failed',
-        detail: mlErr,
-      }, 200, corsHeaders);
-    }
-
-    const mlData = await mlRes.json();
-
-    // 5. Send transactional email with PDF download link
+    // 4. Send transactional email with PDF download link via Resend
     const ebookUrl = env.EBOOK_URL || 'https://chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
+    const plan = session.metadata?.plan || 'unknown';
 
-    const emailPayload = {
-      to: [{
-        email: customerEmail,
-        name: session.customer_details?.name || customerEmail,
-      }],
+    const { Resend } = await import('resend');
+    const resend = new Resend(env.RESEND_API_KEY);
+
+    const sendRes = await resend.emails.send({
+      from: 'Joran @ ChinaBound Travel <hello@chinaboundtravel.com>',
+      to: customerEmail,
       subject: 'Your China Bound Travel Guide – Download Now 🎋',
-      html: buildWelcomeEmail(customerEmail, ebookUrl),
-      text: buildWelcomeEmailText(customerEmail, ebookUrl),
-      from: {
-        email: 'hello@chinaboundtravel.com',
-        name: 'Joran @ ChinaBound Travel',
-      },
-      inline_css: false,
-    };
-
-    const sendRes = await fetch('https://api.mailerlite.com/api/v2/send', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${mlApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(emailPayload),
+      html: buildWelcomeEmail(customerEmail, ebookUrl, plan),
+      text: buildWelcomeEmailText(customerEmail, ebookUrl, plan),
     });
 
-    if (!sendRes.ok) {
-      const sendErr = await sendRes.text();
-      console.error('MailerLite send error:', sendErr);
+    if (sendRes.error) {
+      console.error('Resend email error:', sendRes.error);
       return jsonResponse({
         received: true,
         warning: 'Email send failed',
-        detail: sendErr,
+        detail: sendRes.error.message,
       }, 200, corsHeaders);
     }
 
     return jsonResponse({
       success: true,
       email: customerEmail,
-      ml_subscriber_id: mlData.id || subscriberId,
+      message_id: sendRes.data.id,
+      plan: plan,
     }, 200, corsHeaders);
 
   } catch (err) {
@@ -209,7 +108,13 @@ function jsonResponse(body, status, headers) {
   return new Response(JSON.stringify(body), { status, headers });
 }
 
-function buildWelcomeEmail(email, ebookUrl) {
+function buildWelcomeEmail(email, ebookUrl, plan) {
+  const planName = {
+    monthly: 'Monthly Radar',
+    annual: 'Annual Elite Pass',
+    onetime: 'One-Time Buyout',
+  }[plan] || plan;
+
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -228,7 +133,7 @@ function buildWelcomeEmail(email, ebookUrl) {
             <td style="background:linear-gradient(135deg,#1a3a5c,#2d5a8a);border-radius:12px 12px 0 0;padding:32px 32px 24px;text-align:center;">
               <p style="margin:0 0 8px;font-size:36px;">📍</p>
               <h1 style="margin:0;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.02em;">China Bound Travel Guide</h1>
-              <p style="margin:8px 0 0;font-size:14px;color:rgba(255,255,255,0.75);">Your Annual Digital Pass · Valid for 1 Year</p>
+              <p style="margin:8px 0 0;font-size:14px;color:rgba(255,255,255,0.75);">Your ${planName} · Access Granted</p>
             </td>
           </tr>
 
@@ -239,7 +144,7 @@ function buildWelcomeEmail(email, ebookUrl) {
                 Hey there 👋
               </p>
               <p style="margin:0 0 20px;font-size:16px;color:#333;line-height:1.6;">
-                Thanks for grabbing the <strong>China Bound Travel Guide – Annual Pass</strong>! You've got full access for the next 12 months.
+                Thanks for grabbing the <strong>China Bound Travel Guide</strong>! Here's your instant download link:
               </p>
 
               <!-- Ebook Download Card -->
@@ -262,10 +167,6 @@ function buildWelcomeEmail(email, ebookUrl) {
                 Save this email — you'll need it to re-download if you switch devices.
               </p>
 
-              <p style="margin:0 0 20px;font-size:16px;color:#333;line-height:1.6;">
-                And if you haven't yet, subscribe to the newsletter for fresh China travel intel every month:
-              </p>
-
               <p style="margin:0;font-size:14px;color:#555;line-height:1.6;">
                 Safe travels,<br>
                 <strong>Joran</strong><br>
@@ -279,7 +180,7 @@ function buildWelcomeEmail(email, ebookUrl) {
             <td style="background:#f0f4f8;border-radius:0 0 12px 12px;padding:20px 32px;text-align:center;border-top:1px solid #e0e8f0;">
               <p style="margin:0;font-size:12px;color:#888;">
                 © 2026 ChinaBound Travel · <a href="https://chinaboundtravel.com" style="color:#3A6EA5;">chinaboundtravel.com</a><br>
-                You're receiving this because you purchased the Annual Pass.
+                You're receiving this because you purchased the ${planName}.
               </p>
             </td>
           </tr>
@@ -292,10 +193,16 @@ function buildWelcomeEmail(email, ebookUrl) {
 </html>`;
 }
 
-function buildWelcomeEmailText(email, ebookUrl) {
+function buildWelcomeEmailText(email, ebookUrl, plan) {
+  const planName = {
+    monthly: 'Monthly Radar',
+    annual: 'Annual Elite Pass',
+    onetime: 'One-Time Buyout',
+  }[plan] || plan;
+
   return `Hey there!
 
-Thanks for grabbing the China Bound Travel Guide – Annual Pass! You've got full access for the next 12 months.
+Thanks for grabbing the China Bound Travel Guide - ${planName}!
 
 📖 Download your PDF here:
 ${ebookUrl}
