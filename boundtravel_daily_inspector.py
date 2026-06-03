@@ -10,9 +10,9 @@ import os
 import json
 import datetime
 import sys
+import argparse
 from datetime import date, timedelta
 
-# 修复 Windows 编码问题
 sys.stdout.reconfigure(encoding='utf-8')
 
 class BoundTravelInspector:
@@ -20,9 +20,10 @@ class BoundTravelInspector:
         self.base_url = "https://www.chinaboundtravel.com"
         self.results = {}
         self.webhook_url = os.environ.get('FEISHU_WEBHOOK_URL', '')
+        self.check_affiliate = False
+        self.weekly_report = False
     
     def check_website_accessibility(self):
-        """检查网站可访问性"""
         result = {"status": "OK", "details": ""}
         try:
             response = requests.get(self.base_url, timeout=30)
@@ -38,7 +39,6 @@ class BoundTravelInspector:
         return result
     
     def check_ssl_certificate(self):
-        """检查SSL证书"""
         result = {"status": "OK", "details": ""}
         try:
             import ssl
@@ -61,7 +61,6 @@ class BoundTravelInspector:
         return result
     
     def check_sitemap(self):
-        """检查sitemap"""
         result = {"status": "OK", "details": ""}
         try:
             response = requests.get(f"{self.base_url}/sitemap.xml", timeout=30)
@@ -79,7 +78,6 @@ class BoundTravelInspector:
         return result
     
     def check_redirects(self):
-        """检查重定向"""
         result = {"status": "OK", "details": []}
         urls = [
             ("http://chinaboundtravel.com", "https://www.chinaboundtravel.com"),
@@ -104,7 +102,6 @@ class BoundTravelInspector:
         return result
     
     def check_garbled_chars(self):
-        """检查乱码字符"""
         result = {"status": "OK", "files_with_issues": [], "total_issues": 0}
         garble_chars = ['\uFFFD', '\u00A0', '\u200B', '\u2028', '\u2029']
         
@@ -128,7 +125,6 @@ class BoundTravelInspector:
         return result
     
     def check_internal_links(self):
-        """检查内链"""
         result = {"status": "OK", "broken_links": [], "total_checked": 0}
         
         import re
@@ -139,12 +135,10 @@ class BoundTravelInspector:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                # 查找 markdown 链接
                 links = re.findall(r'\[.*?\]\(([^)]+)\)', content)
                 for link in links:
                     if link.startswith('/') and not link.startswith('//'):
                         result["total_checked"] += 1
-                        # 检查链接是否有效
                         if '#' in link:
                             link = link.split('#')[0]
                         if not link.endswith('.md') and not link.endswith('/'):
@@ -165,8 +159,53 @@ class BoundTravelInspector:
         self.results["internal_links"] = result
         return result
     
+    def check_affiliate_links(self):
+        result = {"status": "OK", "broken_links": [], "total_checked": 0, "affiliate_domains": []}
+        
+        affiliate_patterns = [
+            'shareasale.com',
+            'cj.com',
+            'rakuten.com',
+            'awin.com',
+            'impactradius.com',
+            'skyscanner.com',
+            'booking.com',
+            'agoda.com',
+            'tripadvisor.com',
+            'viator.com',
+            'getyourguide.com',
+            'klook.com'
+        ]
+        
+        import re
+        import glob
+        
+        for filepath in glob.glob("content/**/*.md", recursive=True):
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                links = re.findall(r'\[.*?\]\(([^)]+)\)', content)
+                for link in links:
+                    if any(pattern in link for pattern in affiliate_patterns):
+                        result["total_checked"] += 1
+                        result["affiliate_domains"].append(link)
+                        try:
+                            response = requests.head(link, timeout=15, allow_redirects=True)
+                            if response.status_code not in [200, 301, 302, 307, 308]:
+                                result["broken_links"].append(f"{filepath}: {link} (HTTP {response.status_code})")
+                        except Exception as e:
+                            result["broken_links"].append(f"{filepath}: {link} ({str(e)})")
+            except Exception:
+                pass
+        
+        if result["broken_links"]:
+            result["status"] = "ERROR"
+        
+        self.results["affiliate_links"] = result
+        return result
+    
     def generate_report(self, report_type="daily"):
-        """生成报告"""
         today = date.today()
         report_title = {
             "daily": f"📅 每日巡检报告 - {today.strftime('%Y年%m月%d日')}",
@@ -215,7 +254,6 @@ class BoundTravelInspector:
         return report
     
     def send_to_feishu(self, message):
-        """发送消息到飞书"""
         if not self.webhook_url:
             print("Feishu webhook not configured, skipping...")
             return False
@@ -224,7 +262,7 @@ class BoundTravelInspector:
             payload = {
                 "msg_type": "markdown",
                 "content": {
-                    "text": message[:4096]  # 飞书限制
+                    "text": message[:4096]
                 }
             }
             response = requests.post(self.webhook_url, json=payload, timeout=30)
@@ -234,19 +272,25 @@ class BoundTravelInspector:
             return False
     
     def save_report(self, report, report_type):
-        """保存报告到文件"""
         today = date.today()
+        os.makedirs("reports", exist_ok=True)
         filename = f"reports/{today.strftime('%Y%m%d')}_{report_type}.md"
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(report)
         return filename
 
 def main():
+    parser = argparse.ArgumentParser(description='ChinaBound Travel Daily Inspector')
+    parser.add_argument('--check-affiliate', action='store_true', help='Check affiliate links')
+    parser.add_argument('--weekly-report', action='store_true', help='Force weekly report mode')
+    args = parser.parse_args()
+    
     inspector = BoundTravelInspector()
+    inspector.check_affiliate = args.check_affiliate
+    inspector.weekly_report = args.weekly_report
     
     print("Running daily inspection...")
     
-    # 执行所有检查
     inspector.check_website_accessibility()
     inspector.check_ssl_certificate()
     inspector.check_sitemap()
@@ -254,27 +298,25 @@ def main():
     inspector.check_garbled_chars()
     inspector.check_internal_links()
     
-    # 判断报告类型
+    if args.check_affiliate:
+        print("Checking affiliate links...")
+        inspector.check_affiliate_links()
+    
     today = date.today()
     report_type = "daily"
     
-    # 判断周报（周日）
-    if today.weekday() == 6:  # Sunday
+    if args.weekly_report or today.weekday() == 6:
         report_type = "weekly"
     
-    # 判断月报（每月1号）
     if today.day == 1:
         report_type = "monthly"
     
-    # 生成报告
     report = inspector.generate_report(report_type)
     print(report)
     
-    # 保存报告
     filename = inspector.save_report(report, report_type)
     print(f"Report saved to: {filename}")
     
-    # 发送到飞书
     if inspector.send_to_feishu(report):
         print("Report sent to Feishu successfully!")
     else:

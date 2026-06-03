@@ -1,17 +1,20 @@
-name: Weekly Blog Auto-Generation
+name: Joran博文生成+双AI自动审核发布
 
 on:
   schedule:
-    # Mon-Fri 13:00 UTC = 09:00 ET / 06:00 PT / 21:00 Beijing (US East morning)
-    - cron: '0 13 * * 1-5'
+    # UTC 00:00 = 北京时间08:00 周一至周五
+    # 生成+审核完毕后，依托Cloudflare CDN对应欧美访客活跃时段
+    - cron: '0 0 * * 1-5'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   generate-blog:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,23 +32,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 python-dotenv PyYAML
+          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity
 
-      - name: Run weekly blog update
+      - name: Run Joran blog generator with AI double review
         env:
-          AI_OUTPUT_DIR: ${{ github.workspace }}/content/posts
-        run: python chinaboundtravel_social_bot/weekly_update.py
-
-      - name: Run Front Matter fix
-        run: python auto-script/utils/frontmatter_fix.py
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BACKUP_API_KEY: ${{ secrets.DEEPSEEK_BACKUP_API_KEY }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: python chinaboundtravel_social_bot/joran_blog_generator.py
 
       - name: Build site to verify
         run: hugo --gc --minify
 
-      - name: Commit generated posts
+      - name: Commit generated posts with [skip ci]
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add content/posts/*.md || true
-          git add content/social_media_dataset_cbt_2026.csv || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated blog posts $(date '+%Y-%m-%d')" && git push) || true
+          git add content/_draft/*.md || true
+          git add manifest.json || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] auto publish Joran blog | $(date '+%Y-%m-%d')" && git push) || true

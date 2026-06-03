@@ -2,8 +2,8 @@ name: Monthly Ebook Guide Update
 
 on:
   schedule:
-    # 1st of every month at 15:00 UTC = 11:00 ET / 08:00 PT / 23:00 Beijing (US East morning)
-    - cron: '0 15 1 * *'
+    # UTC 06:00 = 北京时间14:00 每月1日
+    - cron: '0 6 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -12,6 +12,7 @@ permissions:
 jobs:
   monthly-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -37,7 +38,6 @@ jobs:
           import os
           from datetime import datetime, timedelta
 
-          # 生成版本号：YYYY.MM 例如 2026.06
           now = datetime.utcnow()
           version = now.strftime("%Y.%m")
           month_name = now.strftime("%B %Y")
@@ -45,12 +45,10 @@ jobs:
 
           print(f"生成电子书版本: {version} ({month_name})")
 
-          # 更新定价页面版本号
           pricing_path = "layouts/partials/pricing-table.html"
           if os.path.exists(pricing_path):
               with open(pricing_path, 'r', encoding='utf-8') as f:
                   content = f.read()
-              # 替换版本号格式 2026.05 -> 新版本号
               import re
               content_new = re.sub(r'ChinaBound Travel Guide \d{4}\.\d{2}', f'ChinaBound Travel Guide {version}', content)
               if content != content_new:
@@ -60,7 +58,6 @@ jobs:
               else:
                   print(f"✓ pricing-table.html 已为最新版本 {version}")
 
-          # 生成每月更新公告文章
           posts_dir = "content/posts"
           filename = f"{date_str}-chinabound-travel-guide-{version.replace('.', '-')}-monthly-update.md"
           filepath = os.path.join(posts_dir, filename)
@@ -104,7 +101,7 @@ If you're not yet a subscriber, [view the pricing plans →](/pricing)
 
 - Expect updates on summer travel season planning (if June-July) or winter/spring seasonal guides
 - Additional city-specific mini-guides released weekly
-- AI trip planner template expansion for {{ now.strftime("%B") }} travel
+- AI trip planner template expansion for {now.strftime("%B")} travel
 
 Need something specific covered in the next update? Reply to any newsletter email with your request.
 
@@ -125,10 +122,10 @@ Need something specific covered in the next update? Reply to any newsletter emai
       - name: Build with Hugo
         run: hugo --minify
 
-      - name: Commit and push changes
+      - name: Commit and push changes with [skip ci]
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add layouts/partials/pricing-table.html || true
           git add content/posts/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Monthly ebook update $(date '+%Y.%m')" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] Monthly ebook update $(date '+%Y.%m')" && git push) || true

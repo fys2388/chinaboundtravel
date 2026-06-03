@@ -2,8 +2,8 @@ name: Annual Content Review & Yearly Roundup
 
 on:
   schedule:
-    # Jan 1st at 14:00 UTC = 09:00 ET / 06:00 PT / 22:00 Beijing (US East morning)
-    - cron: '0 14 1 1 *'
+    # UTC 08:00 = 北京时间16:00 每年1月1日
+    - cron: '0 8 1 1 *'
   workflow_dispatch:
 
 permissions:
@@ -12,6 +12,7 @@ permissions:
 jobs:
   annual-review:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -39,19 +40,17 @@ jobs:
           from datetime import datetime, timezone
 
           now = datetime.now(timezone.utc)
-          year = now.year - 1  # 回顾上一年
+          year = now.year - 1
           date_str = now.strftime("%Y-%m-%d")
 
           print(f"生成 {year} 年度内容盘点...")
 
-          # 统计文章数量
           posts_dir = "content/posts"
           all_posts = glob.glob(os.path.join(posts_dir, "*.md"))
           total_posts = len(all_posts)
 
           print(f"总计 {total_posts} 篇文章")
 
-          # 生成年度盘点文章
           year_review_title = f"{year} in Review: The Complete ChinaBound Travel Year in Numbers"
 
           markdown = f"""---
@@ -137,9 +136,9 @@ We'll see you on the road in {year + 1}.
       - name: Build with Hugo
         run: hugo --minify
 
-      - name: Commit and push
+      - name: Commit and push with [skip ci]
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add content/posts/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Annual content review $(date '+%Y')" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] Annual content review $(date '+%Y')" && git push) || true
