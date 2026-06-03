@@ -243,14 +243,33 @@ class BlogGenerator:
         self.notifier = FeishuNotifier()
     
     def select_topic(self):
-        geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
+        convert_rates = self.manifest.data.get("keyword_convert_rate", {})
+        
+        if convert_rates:
+            topics = list(convert_rates.keys())
+            weights = [convert_rates.get(t, 0.1) for t in topics]
+            topic = random.choices(topics, weights=weights)[0]
+        else:
+            topic = random.choice(TOPIC_CATEGORIES)
+        
+        geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
+        if geo_convert_rates:
+            regions = list(geo_convert_rates.keys())
+            geo_weights = [geo_convert_rates.get(r, 0.1) * GEO_WEIGHTS[GEO_REGIONS.index(r)] for r in regions]
+            geo_region = random.choices(regions, weights=geo_weights)[0]
+        else:
+            geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
         for _ in range(10):
-            topic = random.choice(TOPIC_CATEGORIES)
             if not self.manifest.check_topic_repeat(topic, geo_region):
                 return topic, geo_region
+            
+            if convert_rates:
+                topic = random.choices(topics, weights=weights)[0]
+            else:
+                topic = random.choice(TOPIC_CATEGORIES)
         
-        return random.choice(TOPIC_CATEGORIES), geo_region
+        return topic, geo_region
     
     def generate_slug(self, title):
         slug = re.sub(r'[^a-z0-9\s-]', '', title.lower())

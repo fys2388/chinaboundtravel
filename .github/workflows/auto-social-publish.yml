@@ -1,0 +1,44 @@
+name: Auto Social Media Publishing
+
+on:
+  push:
+    paths:
+      - 'content/posts/*.md'
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  social-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Run social media publisher
+        env:
+          PINTEREST_API_KEY: ${{ secrets.PINTEREST_API_KEY }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: python chinaboundtravel_social_bot/social_publisher.py
+
+      - name: Commit social media logs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add social_media_logs/ || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] social media publish logs" && git push) || true
