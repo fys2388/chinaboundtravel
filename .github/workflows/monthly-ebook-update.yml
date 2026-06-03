@@ -21,15 +21,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 weasyprint
+          pip install requests beautifulsoup4 Pillow
 
       - name: Generate monthly ebook update post and PDF
         run: |
@@ -94,9 +88,9 @@ Every month, the ChinaBound Travel Guide PDF gets a fresh update with the latest
 4. **Safety & Scam Alerts** — New scam patterns reported by travelers in the past 30 days
 5. **Recommended Routes** — Seasonal travel recommendations based on current weather, holiday schedules, and crowd patterns
 
-### Download the Guide
+### Get Your Copy
 
-[Download ChinaBound Travel Guide {version} PDF →](/downloads/chinabound-travel-guide-{version.replace('.', '-')}.pdf)
+{{< buy-button url="https://lemonsqueezy.com/b/chinabound-travel-guide" text="Buy the ChinaBound Travel Guide for $14.99" >}}
 
 ### For Subscribers
 
@@ -220,9 +214,9 @@ type: page
 
 ## Get Your ChinaBound Travel Guide {version}
 
-### Download Options
+### Purchase Options
 
-{{< download-button href="/downloads/chinabound-travel-guide-{version.replace('.', '-')}.pdf" text="Download PDF Guide ({version})" >}}
+{{< buy-button url="https://lemonsqueezy.com/b/chinabound-travel-guide" text="Buy the ChinaBound Travel Guide for $14.99" >}}
 
 ### What's Included
 
@@ -260,8 +254,13 @@ Monthly Radar and Annual Elite subscribers get automatic access to all updates:
 
           EOF
 
-      - name: Build with Hugo
-        run: hugo --minify
+      - name: Upload to Lemon Squeezy
+        env:
+          LEMON_SQUEEZY_API_KEY: ${{ secrets.LEMON_SQUEEZY_API_KEY }}
+          LEMON_SQUEEZY_STORE_ID: ${{ secrets.LEMON_SQUEEZY_STORE_ID }}
+          LEMON_SQUEEZY_PRODUCT_ID: ${{ secrets.LEMON_SQUEEZY_PRODUCT_ID }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: python chinaboundtravel_social_bot/lemonsqueezy_uploader.py
 
       - name: Commit and push changes with [skip ci]
         run: |
