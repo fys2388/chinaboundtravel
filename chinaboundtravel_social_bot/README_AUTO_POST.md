@@ -44,7 +44,7 @@ cd e:\AI\dulizhan\travel-blog\chinaboundtravel_social_bot
 
 ```powershell
 cd e:\AI\dulizhan\travel-blog\chinaboundtravel_social_bot
-& "C:\ProgramData\WorkBuddy\chromium-env\1uvcuj0\.workbuddy\binaries\python\envs\social-bot\Scripts\python.exe" auto_post_final.py
+python auto_post_final.py
 ```
 
 ---
@@ -98,4 +98,14 @@ A: 这两个平台反自动化检测最强，建议使用 **Facebook Creator Stu
 
 ---
 
-*Last updated: 2026-05-27*
+## 云端自动分发
+
+社媒自动分发现已迁移至 GitHub Actions，使用 Buffer API 直接推送：
+
+- 文章上线后自动触发
+- 支持 Pinterest、Twitter/X、Facebook
+- 无需本地运行，全云端自动化
+
+---
+
+*Last updated: 2026-06-03*

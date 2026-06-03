@@ -147,7 +147,6 @@ def connect_to_chrome() -> webdriver.Chrome:
     # Try local chromedriver first, then fall back to system PATH
     chromedriver_paths = [
         r"E:\AI\dulizhan\travel-blog\chinaboundtravel_social_bot\chromedriver.exe",
-        r"C:\ProgramData\WorkBuddy\chromium-env\1uvcuj0\.workbuddy\binaries\node\workspace\chromedriver.exe",
     ]
 
     for path in chromedriver_paths:

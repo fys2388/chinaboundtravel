@@ -4,6 +4,7 @@ description: The ultimate 7-day China itinerary for first-timers. Beijing's Forb
   City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and
   pro tips from 10 years of running this route.
 date: '2026-05-27T10:00:00+08:00'
+slug: '7-day-china-first-timer-itinerary-beijing-xian-shanghai'
 author: Joran
 tags:
 - china-itinerary

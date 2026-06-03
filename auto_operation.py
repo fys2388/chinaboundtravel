@@ -379,7 +379,7 @@ def main():
     print("1. Create Feishu robot and get webhook_url, secret")
     print("2. Create Feishu document app and get app_id, app_secret")
     print("3. Fill these into config/feishu_config.py")
-    print("4. Configure WorkBuddy scheduled tasks to call this script")
+    print("4. Configure Buffer API credentials in GitHub Secrets")
 
 if __name__ == "__main__":
     main()
