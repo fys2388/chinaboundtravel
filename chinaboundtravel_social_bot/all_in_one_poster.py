@@ -160,12 +160,24 @@ class AllInOnePoster:
     def get_latest_post(self):
         posts_dir = BASE_DIR / "content" / "posts"
         latest_post = None
-        latest_mtime = 0
+        latest_date = None
         
         for filepath in posts_dir.glob("*.md"):
-            mtime = filepath.stat().st_mtime
-            if mtime > latest_mtime:
-                latest_mtime = mtime
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+            
+            post_date = None
+            for line in content.split('\n'):
+                if line.startswith('date:'):
+                    date_str = line.split(':', 1)[1].strip().strip('"').strip("'")
+                    try:
+                        post_date = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                    except:
+                        pass
+                    break
+            
+            if post_date and (latest_date is None or post_date > latest_date):
+                latest_date = post_date
                 latest_post = filepath
         
         if latest_post:
