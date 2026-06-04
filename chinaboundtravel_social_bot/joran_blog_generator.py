@@ -241,6 +241,7 @@ class BlogGenerator:
         self.manifest = ManifestManager()
         self.ai_engine = AIEngine()
         self.notifier = FeishuNotifier()
+        self.max_retries = 3
     
     def select_topic(self):
         convert_rates = self.manifest.data.get("keyword_convert_rate", {})
@@ -334,6 +335,76 @@ class BlogGenerator:
         
         draft_path.unlink()
     
+    def run_single_post(self, attempt=1):
+        topic, geo_region = self.select_topic()
+        print(f"[Attempt {attempt}] Selected topic: {topic} for {geo_region}")
+        
+        try:
+            content = self.ai_engine.generate_post(topic, geo_region)
+        except Exception as e:
+            self.notifier.send_notification(
+                "❌ AI生成失败",
+                f"第{attempt}次尝试: 文章生成时发生错误: {str(e)}"
+            )
+            raise
+        
+        title = re.search(r'^#\s+(.+)', content, re.MULTILINE)
+        title = title.group(1) if title else f"{topic.title()} Guide"
+        
+        DRAFT_DIR.mkdir(parents=True, exist_ok=True)
+        draft_path = DRAFT_DIR / f"{datetime.now().strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
+        
+        frontmatter = self.create_frontmatter(title, geo_region)
+        self.write_markdown(frontmatter, content, draft_path)
+        
+        persona_ok = self.ai_engine.persona_check(content)
+        if not persona_ok:
+            self.notifier.send_notification(
+                "❌ 人设校验失败",
+                f"第{attempt}次尝试: 文章《{title}》未通过Joran人设校验。"
+            )
+            print(f"[Attempt {attempt}] Persona check failed.")
+            return {"success": False, "reason": "persona_check_failed", "title": title, "draft_path": draft_path}
+        
+        review1_pass = self.ai_engine.assistant_editor_review(content)
+        
+        if not review1_pass:
+            print(f"[Attempt {attempt}] Assistant editor review failed, attempting rewrite...")
+            content = self.ai_engine.rewrite_post(content)
+            review1_pass = self.ai_engine.assistant_editor_review(content)
+        
+        if not review1_pass:
+            self.notifier.send_notification(
+                "❌ 初审未通过",
+                f"第{attempt}次尝试: 文章《{title}》经过一次改写后仍未通过初审。"
+            )
+            print(f"[Attempt {attempt}] Assistant editor review failed after rewrite.")
+            return {"success": False, "reason": "review1_failed", "title": title, "draft_path": draft_path}
+        
+        review2_pass = self.ai_engine.chief_editor_review(content)
+        
+        if not review2_pass:
+            self.notifier.send_notification(
+                "❌ 终审未通过",
+                f"第{attempt}次尝试: 文章《{title}》未通过终审。"
+            )
+            print(f"[Attempt {attempt}] Chief editor review failed.")
+            return {"success": False, "reason": "review2_failed", "title": title, "draft_path": draft_path}
+        
+        self.move_to_posts(draft_path)
+        self.manifest.add_topic(topic, geo_region)
+        self.manifest.increment_post_count()
+        self.manifest.save()
+        
+        canonical_url = frontmatter["canonicalURL"]
+        self.notifier.send_notification(
+            "✅ 新文章上线",
+            f"文章《{title}》已成功发布！\n\n落地链接: {canonical_url}\n目标受众: {geo_region}\n尝试次数: {attempt}"
+        )
+        
+        print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
+        return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region}
+    
     def run(self):
         max_posts = 22
         post_count = self.manifest.get_post_count()
@@ -346,73 +417,24 @@ class BlogGenerator:
             print("Monthly post limit reached. Exiting.")
             return
         
-        topic, geo_region = self.select_topic()
-        print(f"Selected topic: {topic} for {geo_region}")
-        
-        try:
-            content = self.ai_engine.generate_post(topic, geo_region)
-        except Exception as e:
-            self.notifier.send_notification(
-                "❌ AI生成失败",
-                f"文章生成时发生错误: {str(e)}"
-            )
-            raise
-        
-        title = re.search(r'^#\s+(.+)', content, re.MULTILINE)
-        title = title.group(1) if title else f"{topic.title()} Guide"
-        
-        DRAFT_DIR.mkdir(parents=True, exist_ok=True)
-        draft_path = DRAFT_DIR / f"{datetime.now().strftime('%Y-%m-%d')}-{self.generate_slug(title)}.md"
-        
-        frontmatter = self.create_frontmatter(title, geo_region)
-        self.write_markdown(frontmatter, content, draft_path)
-        
-        persona_ok = self.ai_engine.persona_check(content)
-        if not persona_ok:
-            self.notifier.send_notification(
-                "❌ 人设校验失败",
-                f"文章《{title}》未通过Joran人设校验，已存入草稿。"
-            )
-            print("Persona check failed. Post saved to draft.")
-            return
-        
-        review1_pass = self.ai_engine.assistant_editor_review(content)
-        
-        if not review1_pass:
-            print("Assistant editor review failed, attempting rewrite...")
-            content = self.ai_engine.rewrite_post(content)
-            review1_pass = self.ai_engine.assistant_editor_review(content)
-        
-        if not review1_pass:
-            self.notifier.send_notification(
-                "❌ 初审未通过",
-                f"文章《{title}》经过一次改写后仍未通过初审，已存入草稿。"
-            )
-            print("Assistant editor review failed after rewrite. Post saved to draft.")
-            return
-        
-        review2_pass = self.ai_engine.chief_editor_review(content)
-        
-        if not review2_pass:
-            self.notifier.send_notification(
-                "❌ 终审未通过",
-                f"文章《{title}》未通过终审，已存入草稿。"
-            )
-            print("Chief editor review failed. Post saved to draft.")
-            return
-        
-        self.move_to_posts(draft_path)
-        self.manifest.add_topic(topic, geo_region)
-        self.manifest.increment_post_count()
-        self.manifest.save()
-        
-        canonical_url = frontmatter["canonicalURL"]
-        self.notifier.send_notification(
-            "✅ 新文章上线",
-            f"文章《{title}》已成功发布！\n\n落地链接: {canonical_url}\n目标受众: {geo_region}"
-        )
-        
-        print(f"Post published successfully: {canonical_url}")
+        for attempt in range(1, self.max_retries + 1):
+            result = self.run_single_post(attempt)
+            
+            if result["success"]:
+                return
+            
+            if attempt < self.max_retries:
+                print(f"[Attempt {attempt}] 审核失败，准备第 {attempt + 1} 次重试...")
+                self.notifier.send_notification(
+                    f"🔄 第{attempt}次审核失败，正在进行第{attempt + 1}次尝试",
+                    f"失败原因: {result['reason']}\n失败文章: 《{result['title']}》"
+                )
+            else:
+                self.notifier.send_notification(
+                    "⚠️ 今日发文失败",
+                    f"经过 {self.max_retries} 次尝试后仍未能发布文章。所有草稿已存入 content/_draft/ 目录。"
+                )
+                print(f"All {self.max_retries} attempts failed. Post saved to draft.")
 
 if __name__ == "__main__":
     generator = BlogGenerator()

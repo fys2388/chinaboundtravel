@@ -1,7 +1,7 @@
 {
   "month_post_count": 0,
   "last_reset_date": "2026-06-01",
-  "last_social_publish": "2026-06-01 00:00:00",
+  "last_social_publish": "2026-06-03 21:10:37",
   "history_topics": [],
   "keyword_convert_rate": {
     "visa requirements": 0.15,
@@ -12,12 +12,12 @@
     "accommodation tips": 0.07,
     "food recommendations": 0.06,
     "cultural etiquette": 0.05,
-    "budget planning": 0.10,
+    "budget planning": 0.1,
     "travel itineraries": 0.13
   },
   "geo_convert_rate": {
     "EU": 0.12,
     "US": 0.15,
-    "AU": 0.10
+    "AU": 0.1
   }
 }
