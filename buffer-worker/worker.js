@@ -23,24 +23,27 @@
  */
 const CHANNEL_MAP = {
   facebook: {
-    id: 'REPLACE_WITH_FACEBOOK_CHANNEL_ID',  // 例如: '5f8a9b7c1234567890abcdef'
-    name: 'ChinaBoundTravel Facebook Page'
+    id: '6a17e0c4c687a22dd4346d3c',
+    name: 'ChinaBound Travel',
+    service: 'facebook'
   },
   instagram: {
-    id: 'REPLACE_WITH_INSTAGRAM_CHANNEL_ID',  // 例如: '5f8a9b7c1234567890abcdeg'
-    name: 'ChinaBoundTravel Instagram'
+    id: '6a17e14dc687a22dd4346eb4',
+    name: 'joranchinatravel',
+    service: 'instagram'
   },
   x: {
-    id: 'REPLACE_WITH_X_CHANNEL_ID',  // 例如: '5f8a9b7c1234567890abcdeh'
-    name: 'ChinaBoundTravel X (Twitter)'
+    id: '6a202882c687a22dd45735b6',
+    name: 'fys2388',
+    service: 'twitter'
   }
 };
 
 // Buffer GraphQL API端点
-const BUFFER_API_URL = 'https://api.bufferapp.com/graphql';
+const BUFFER_API_URL = 'https://api.buffer.com';
 
-// 目标发布平台
-const TARGET_PLATFORMS = ['facebook', 'instagram', 'x'];
+// 目标发布平台（目前只支持Twitter，FB/IG需要额外配置）
+const TARGET_PLATFORMS = ['x'];
 
 // ============ 主处理函数 ============
 
@@ -97,7 +100,7 @@ export default {
 
   /**
    * Cron定时任务处理
-   * 触发规则：*/30 * * * *（每30分钟）
+   * 触发规则：* /30 * * * *（每30分钟）
    * 
    * @param {ScheduledEvent} event - 定时事件
    * @param {Env} env - 环境变量
@@ -240,76 +243,94 @@ async function publishToBuffer(channelIds, text, mediaUrl, token) {
     details: []
   };
 
-  // GraphQL Mutation
+  // GraphQL Mutation - 使用Buffer官方API正确格式
   const mutation = `
-    mutation CreatePost($channels: [ID!]!, $text: String!, $mediaUrl: String) {
-      createUpdate(input: {
-        channelIds: $channels,
-        text: $text,
-        media: { link: $mediaUrl },
-        scheduling: { scheduleType: QUEUE }
-      }) {
-        updates {
-          id
-          status
-          channel {
-            name
-            service
+    mutation CreatePost($input: CreatePostInput!) {
+      createPost(input: $input) {
+        ... on PostActionSuccess {
+          post {
+            id
+            text
+            dueAt
+            channel {
+              id
+              name
+              service
+            }
           }
+        }
+        ... on MutationError {
+          message
         }
       }
     }
   `;
 
-  const variables = {
-    channels: channelIds,
-    text: text,
-    mediaUrl: mediaUrl || null
-  };
-
-  try {
-    const response = await fetch(BUFFER_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        query: mutation,
-        variables: variables
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error(`Buffer API error: ${response.status}`);
-    }
-
-    const data = await response.json();
+  // 为每个渠道单独发布
+  for (const channelId of channelIds) {
+    // 根据渠道类型设置不同的参数
+    const channelInfo = Object.values(CHANNEL_MAP).find(c => c.id === channelId);
+    const service = channelInfo?.service || 'unknown';
     
-    if (data.errors) {
-      throw new Error(data.errors[0].message);
-    }
+    const input = {
+      text: text,
+      channelId: channelId,
+      schedulingType: 'automatic',
+      mode: 'addToQueue'
+    };
 
-    const updates = data.data?.createUpdate?.updates || [];
-    
-    for (const update of updates) {
-      const platform = update.channel?.service || 'unknown';
-      if (update.id) {
+    const variables = { input };
+
+    try {
+      const response = await fetch(BUFFER_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          query: mutation,
+          variables: variables
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Buffer API error: ${response.status} - ${errorText}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.errors) {
+        throw new Error(data.errors[0].message);
+      }
+
+      const result = data.data?.createPost;
+      
+      if (result?.post) {
+        const platform = result.post?.channel?.service || 'unknown';
         results.success.push(platform);
         results.details.push({
           platform,
-          updateId: update.id,
-          status: update.status
+          postId: result.post?.id,
+          dueAt: result.post?.dueAt
         });
-      } else {
-        results.failed.push(platform);
+      } else if (result?.message) {
+        results.failed.push(channelId);
+        results.details.push({
+          channelId,
+          error: result.message
+        });
       }
-    }
 
-  } catch (error) {
-    console.error('[Buffer API Error]', error);
-    results.failed.push('all');
-    results.error = error.message;
+    } catch (error) {
+      console.error('[Buffer API Error]', error);
+      results.failed.push(channelId);
+      results.details.push({
+        channelId,
+        error: error.message
+      });
+    }
   }
 
   return results;
@@ -324,11 +345,13 @@ async function publishToBuffer(channelIds, text, mediaUrl, token) {
 async function queryChannels(token) {
   const query = `
     query {
-      organization {
-        channels {
-          id
-          name
-          service
+      account {
+        organizations {
+          channels {
+            id
+            name
+            service
+          }
         }
       }
     }
@@ -346,9 +369,18 @@ async function queryChannels(token) {
 
     const data = await response.json();
     
+    // 提取所有组织的渠道
+    const channels = [];
+    const orgs = data.data?.account?.organizations || [];
+    for (const org of orgs) {
+      if (org.channels) {
+        channels.push(...org.channels);
+      }
+    }
+    
     return jsonResponse({
       success: true,
-      channels: data.data?.organization?.channels || []
+      channels: channels
     });
 
   } catch (error) {
