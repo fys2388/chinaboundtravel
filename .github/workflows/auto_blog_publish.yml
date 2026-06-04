@@ -39,6 +39,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Get latest post info
+        id: post-info
+        run: |
+          # 获取最新发布的文章信息
+          LATEST_POST=$(ls -t content/posts/*.md | head -1)
+          echo "post_file=$LATEST_POST" >> $GITHUB_OUTPUT
+          
+          # 提取文章元数据
+          TITLE=$(grep '^title:' "$LATEST_POST" | head -1 | sed 's/title: *//' | tr -d '"')
+          SUMMARY=$(grep '^summary:' "$LATEST_POST" | head -1 | sed 's/summary: *//' | tr -d '"')
+          SLUG=$(grep '^slug:' "$LATEST_POST" | head -1 | sed 's/slug: *//' | tr -d '"')
+          
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          
+          # 构建文章URL
+          echo "url=https://chinaboundtravel.com/posts/${SLUG}/" >> $GITHUB_OUTPUT
+
+      - name: Publish to Buffer (FB/IG/X)
+        env:
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL }}
+        run: |
+          curl -X POST "${BUFFER_WORKER_URL}/publish" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "${{ steps.post-info.outputs.title }}",
+              "desc": "${{ steps.post-info.outputs.summary }}",
+              "cover": "",
+              "url": "${{ steps.post-info.outputs.url }}"
+            }'
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -47,16 +79,14 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run all-in-one social poster
+      - name: Publish to Pinterest & Reddit
         env:
-          ZOHO_CLIENT_ID: ${{ secrets.ZOHO_CLIENT_ID }}
-          ZOHO_CLIENT_SECRET: ${{ secrets.ZOHO_CLIENT_SECRET }}
-          ZOHO_REFRESH_TOKEN: ${{ secrets.ZOHO_REFRESH_TOKEN }}
-          ZOHO_BRAND_ID: ${{ secrets.ZOHO_BRAND_ID }}
-          ZOHO_QUEUE_ID: ${{ secrets.ZOHO_QUEUE_ID }}
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
           PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
           DFR_API_KEY: ${{ secrets.DFR_API_KEY }}
           DFR_QUEUE_ID: ${{ secrets.DFR_QUEUE_ID }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-        run: python chinaboundtravel_social_bot/all_in_one_poster.py
+          POST_TITLE: ${{ steps.post-info.outputs.title }}
+          POST_SUMMARY: ${{ steps.post-info.outputs.summary }}
+          POST_URL: ${{ steps.post-info.outputs.url }}
+        run: python chinaboundtravel_social_bot/social_publisher.py
