@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).parent.parent
 MANIFEST_PATH = BASE_DIR / "manifest.json"
 DRAFT_DIR = BASE_DIR / "content" / "_draft"
 POSTS_DIR = BASE_DIR / "content" / "posts"
+DRAFTS_DIR = BASE_DIR / "content" / "drafts"
 SITE_DOMAIN = "https://chinaboundtravel.com"
 
 GEO_REGIONS = ["EU", "US", "AU"]
@@ -30,7 +31,16 @@ TOPIC_CATEGORIES = [
     "travel itineraries"
 ]
 
-PERSONA_REGEX = r"(?i)(10\s*years|decade).*(living|based|chengdu|china)|california|californian"
+AUTHOR_CFG = {
+    "name": "Joran",
+    "identity": "American from California, long-term resident living in Chengdu over 10 years",
+    "view": "first-person personal travel experience",
+    "tone": "real, casual practical blogger writing style",
+    "forbid": ["randomly add Los Angeles/San Francisco without contextual demand", "shift to third-person narration", "fabricate travel cost data"]
+}
+
+MAX_DAILY_RETRY = 3
+FEISHU_WEBHOOK = os.getenv("FEISHU_WEBHOOK_URL")
 
 class DeepSeekClient:
     def __init__(self):
@@ -73,7 +83,7 @@ class ManifestManager:
         if self.path.exists():
             with open(self.path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        return {"month_post_count": 0, "last_reset_date": datetime.now().strftime("%Y-%m-01"), "history_topics": []}
+        return {"month_post_count": 0, "last_reset_date": datetime.now().strftime("%Y-%m-01"), "history_topics": [], "keyword_convert_rate": {}, "geo_convert_rate": {}}
     
     def save(self):
         with open(self.path, "w", encoding="utf-8") as f:
@@ -115,107 +125,10 @@ class ManifestManager:
         
         return self.data["month_post_count"]
 
-class AIEngine:
-    def __init__(self):
-        self.client = DeepSeekClient()
-    
-    def generate_post(self, topic, geo_region):
-        region_info = {
-            "EU": "European travelers from countries like Germany, France, UK, Italy, Spain",
-            "US": "American travelers from the United States, primarily California and major cities",
-            "AU": "Australian and New Zealand travelers"
-        }
-        
-        prompt = f"""You are Joran, a native Californian American who has been living in Chengdu, China for over 10 years. Write a travel blog post in FIRST PERSON about: {topic}
-
-Target audience: {region_info[geo_region]}
-
-Requirements:
-1. Write in natural, conversational English
-2. Include personal anecdotes about living in China for 10 years
-3. Mention your California roots naturally
-4. Minimum 750 words
-5. Include at least 3 internal links to other China travel topics
-6. Structure: Introduction, 3 main sections, Conclusion
-7. Use markdown format with proper headings
-
-DO NOT include any canonicalURL in the output. Just write the article content.
-"""
-        
-        messages = [{"role": "user", "content": prompt}]
-        return self.client.chat(messages, max_tokens=4000)
-    
-    def assistant_editor_review(self, content):
-        prompt = f"""You are an AI Assistant Editor reviewing this blog post:
-
-{content}
-
-Check these criteria and return ONLY 'PASS' or 'FAIL':
-1. Word count >= 750 words
-2. Contains personal anecdotes about living in China for 10+ years OR mentions California roots
-3. Has proper structure: Introduction, at least 3 main sections, Conclusion
-4. Contains at least 3 internal links (e.g., /posts/xxx/)
-5. No political sensitive content
-6. Topic stays relevant to China travel
-
-If any criteria fail, return 'FAIL'. Otherwise return 'PASS'."""
-        
-        messages = [{"role": "user", "content": prompt}]
-        result = self.client.chat(messages, max_tokens=100)
-        return "PASS" in result.upper()
-    
-    def rewrite_post(self, content, feedback="Make it more engaging and include more personal stories about living in China"):
-        prompt = f"""Rewrite this blog post to improve quality:
-
-{content}
-
-Instructions:
-1. {feedback}
-2. Maintain original topic and key information
-3. Keep it natural and conversational
-4. Ensure it's at least 750 words
-5. Add personal anecdotes about living in China for 10 years
-6. Include California references naturally
-7. Keep markdown format"""
-        
-        messages = [{"role": "user", "content": prompt}]
-        return self.client.chat(messages, max_tokens=4000)
-    
-    def chief_editor_review(self, content):
-        prompt = f"""You are the Chief AI Editor. Review this blog post for final approval:
-
-{content}
-
-Check these final criteria and return ONLY 'PASS' or 'FAIL':
-1. Content is factually accurate about China
-2. No sensitive political content
-3. External links (if any) point only to official government sites (consulates, railways, tourism boards)
-4. Geographical information matches target region
-5. Meta description is complete and compelling
-6. Temporal logic is consistent
-
-If any criteria fail, return 'FAIL'. Otherwise return 'PASS'."""
-        
-        messages = [{"role": "user", "content": prompt}]
-        result = self.client.chat(messages, max_tokens=100)
-        return "PASS" in result.upper()
-    
-    def persona_check(self, content):
-        if re.search(PERSONA_REGEX, content):
-            return True
-        
-        prompt = f"""Does this text sound like it was written by a native Californian who has lived in China for 10 years? Answer ONLY YES or NO.
-
-{content[:2000]}"""
-        
-        messages = [{"role": "user", "content": prompt}]
-        result = self.client.chat(messages, max_tokens=50)
-        return "YES" in result.upper()
-
 class FeishuNotifier:
     @staticmethod
     def send_notification(title, content, webhook_url=None):
-        url = webhook_url or os.getenv("FEISHU_WEBHOOK_URL")
+        url = webhook_url or FEISHU_WEBHOOK
         if not url:
             return
         
@@ -236,12 +149,172 @@ class FeishuNotifier:
         except Exception:
             pass
 
+class AIEngine:
+    def __init__(self):
+        self.client = DeepSeekClient()
+    
+    def generate_post(self, topic, geo_region):
+        region_info = {
+            "EU": "European travelers from countries like Germany, France, UK, Italy, Spain",
+            "US": "American travelers from the United States, primarily California and major cities",
+            "AU": "Australian and New Zealand travelers"
+        }
+        
+        prompt = f"""You are Joran, a native Californian American who has been living in Chengdu, China for over 10 years. Write a travel blog post in FIRST PERSON about: {topic}
+
+Target audience: {region_info[geo_region]}
+
+Requirements:
+1. Write in natural, conversational English
+2. Include personal anecdotes about living in China for 10 years
+3. Mention your California roots naturally
+4. Minimum 750 words
+5. Include at least 2 internal links to other China travel topics
+6. Structure: Introduction, 3 main sections with H2 headings (##), Conclusion
+7. Use markdown format with proper headings
+8. Include relevant images with alt text placeholders
+
+DO NOT include any canonicalURL in the output. Just write the article content."""
+        
+        messages = [{"role": "user", "content": prompt}]
+        return self.client.chat(messages, max_tokens=4000)
+    
+    def rewrite_post(self, content, topic, geo_region):
+        region_info = {
+            "EU": "European travelers",
+            "US": "American travelers",
+            "AU": "Australian and New Zealand travelers"
+        }
+        
+        prompt = f"""Rewrite this blog post to fix formatting and structure issues:
+
+{content}
+
+Instructions:
+1. Ensure minimum 750 words
+2. Add proper markdown structure with H2 headings (##) for main sections
+3. Include at least 2 internal links to other China travel topics
+4. Add image placeholders with alt text
+5. Maintain Joran persona: California native living in Chengdu for 10 years
+6. Keep the original topic: {topic}
+7. Target audience: {region_info[geo_region]}
+8. Make it natural and conversational"""
+        
+        messages = [{"role": "user", "content": prompt}]
+        return self.client.chat(messages, max_tokens=4000)
+
+class SubEditor:
+    def __init__(self):
+        self.client = DeepSeekClient()
+    
+    def full_check(self, article_md, frontmatter):
+        errors = []
+        
+        if "description" not in frontmatter or len(str(frontmatter.get("description", ""))) < 40:
+            errors.append("【格式】缺少合规Meta Description（需≥40字符）")
+        
+        if "summary" not in frontmatter or len(str(frontmatter.get("summary", ""))) < 30:
+            errors.append("【格式】缺少合规摘要（需≥30字符）")
+        
+        if not frontmatter.get("slug"):
+            errors.append("【格式】slug配置缺失")
+        
+        if "## " not in article_md:
+            errors.append("【排版】分级标题未使用H2标签##")
+        
+        img_num = article_md.count("![")
+        if img_num < 2:
+            errors.append("【排版】配图不足2张，请添加图片占位符")
+        
+        link_count = article_md.count("[") - img_num
+        if link_count < 2:
+            errors.append("【SEO】站内锚文本不足2处")
+        
+        word_count = len(article_md.split())
+        if word_count < 750:
+            errors.append(f"【格式】字数不足750词，当前{word_count}词")
+        
+        if "I" not in article_md[:500] and "my" not in article_md[:500] and "I've" not in article_md[:500]:
+            errors.append("【格式】缺少第一人称表述")
+        
+        sensitive_words = ["politics", "government", "communist", "Tiananmen", "Taiwan independence", "Falun Gong"]
+        for w in sensitive_words:
+            if w.lower() in article_md.lower():
+                errors.append(f"【风控】正文含违规词汇:{w}")
+        
+        return len(errors) == 0, errors
+
+class ChiefEditor:
+    def __init__(self):
+        self.client = DeepSeekClient()
+    
+    def full_check(self, content):
+        errors = []
+        
+        if "I" not in content[:600] and "my" not in content[:600] and "I've" not in content[:600]:
+            errors.append("【人设驳回】脱离Joran第一人称旅居博主设定")
+        
+        if ("Los Angeles" in content or "San Francisco" in content) and ("fly from" not in content.lower() and "from LA" not in content.lower() and "from SF" not in content.lower()):
+            errors.append("【人设驳回】无出行上下文强行添加加州城市，破坏原文逻辑")
+        
+        years_in_china = re.search(r'(10\s+years|ten\s+years|decade)', content, re.IGNORECASE)
+        california = re.search(r'california|californian', content, re.IGNORECASE)
+        chengdu = re.search(r'chengdu', content, re.IGNORECASE)
+        
+        if not years_in_china and not (california and chengdu):
+            errors.append("【人设驳回】未体现十年旅居中国+加州出身的核心人设")
+        
+        third_person = re.search(r'\bhe\b|\bshe\b|\bthey\b|\bthe author\b|\bthe writer\b', content[:500], re.IGNORECASE)
+        if third_person and "I" not in content[:500]:
+            errors.append("【人设驳回】文风切换为第三人称，违反Joran第一人称设定")
+        
+        prompt = f"""As Chief Editor, evaluate if this content demonstrates E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness):
+
+Content:
+{content[:3000]}
+
+Checklist:
+1. Does the content show genuine travel experience in China?
+2. Are the travel tips practical and actionable?
+3. Is there evidence of long-term residency in China?
+4. Are claims about travel costs, transportation, and logistics realistic?
+5. Are external links (if any) pointing to authoritative sources?
+
+Answer ONLY 'PASS' or 'FAIL'."""
+        
+        messages = [{"role": "user", "content": prompt}]
+        eeaat_result = self.client.chat(messages, max_tokens=100)
+        if "FAIL" in eeaat_result.upper():
+            errors.append("【E-E-A-T】内容可信度不足，未体现十年旅居实操经验")
+        
+        prompt2 = f"""Check if this travel article has logical flow issues:
+
+Content:
+{content[:3000]}
+
+Check:
+1. Introduction -> Body -> Conclusion structure
+2. Paragraphs follow a logical sequence
+3. Ideas connect coherently
+4. No contradictory statements
+
+Answer ONLY 'PASS' or 'FAIL'."""
+        
+        messages = [{"role": "user", "content": prompt2}]
+        logic_result = self.client.chat(messages, max_tokens=100)
+        if "FAIL" in logic_result.upper():
+            errors.append("【逻辑】文章段落前后不通顺，上下文割裂")
+        
+        return len(errors) == 0, errors
+
 class BlogGenerator:
     def __init__(self):
         self.manifest = ManifestManager()
         self.ai_engine = AIEngine()
+        self.sub_editor = SubEditor()
+        self.chief_editor = ChiefEditor()
         self.notifier = FeishuNotifier()
-        self.max_retries = 3
+        self.max_retries = MAX_DAILY_RETRY
     
     def select_topic(self):
         convert_rates = self.manifest.data.get("keyword_convert_rate", {})
@@ -261,7 +334,7 @@ class BlogGenerator:
         else:
             geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
-        for _ in range(10):
+        for _ in range(20):
             if not self.manifest.check_topic_repeat(topic, geo_region):
                 return topic, geo_region
             
@@ -281,7 +354,7 @@ class BlogGenerator:
         slug = self.generate_slug(title)
         date = datetime.now().strftime("%Y-%m-%dT10:00:00+08:00")
         
-        tags = ["ChinaTravel", "TravelGuide"]
+        tags = ["ChinaTravel", "TravelGuide", "China"]
         if geo_region == "EU":
             tags.append("EuropeToChina")
         elif geo_region == "US":
@@ -292,6 +365,7 @@ class BlogGenerator:
         return {
             "title": title,
             "date": date,
+            "lastmod": date,
             "author": "Joran",
             "slug": slug,
             "tags": tags,
@@ -299,9 +373,12 @@ class BlogGenerator:
             "geo": geo_region,
             "draft": "true",
             "audit_status": "pending",
-            "summary": f"Complete guide about {title.lower()} for travelers visiting China.",
-            "description": f"Everything you need to know about {title.lower()} when traveling to China.",
-            "canonicalURL": f"{SITE_DOMAIN}/posts/{slug}/"
+            "summary": f"Complete {topic} guide for travelers visiting China based on 10 years of experience.",
+            "description": f"Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years.",
+            "canonicalURL": f"{SITE_DOMAIN}/posts/{slug}/",
+            "ShowToc": "true",
+            "TocOpen": "false",
+            "weight": 1
         }
     
     def write_markdown(self, frontmatter, content, filepath):
@@ -321,7 +398,7 @@ class BlogGenerator:
             f.write(full_content)
     
     def move_to_posts(self, draft_path):
-        filename = draft_path.name
+        filename = draft_path.name.replace("-attempt1", "").replace("-attempt2", "").replace("-attempt3", "")
         post_path = POSTS_DIR / filename
         
         with open(draft_path, "r", encoding="utf-8") as f:
@@ -338,14 +415,12 @@ class BlogGenerator:
     def run_single_post(self, attempt=1):
         topic, geo_region = self.select_topic()
         print(f"[Attempt {attempt}] Selected topic: {topic} for {geo_region}")
+        self.notifier.send_notification(f"🔄 开始第{attempt}/{MAX_DAILY_RETRY}轮AI撰稿生成", f"选题: {topic} | 目标地域: {geo_region}")
         
         try:
             content = self.ai_engine.generate_post(topic, geo_region)
         except Exception as e:
-            self.notifier.send_notification(
-                "❌ AI生成失败",
-                f"第{attempt}次尝试: 文章生成时发生错误: {str(e)}"
-            )
+            self.notifier.send_notification("❌ AI生成失败", f"第{attempt}次尝试: 文章生成时发生错误: {str(e)}")
             raise
         
         title = re.search(r'^#\s+(.+)', content, re.MULTILINE)
@@ -357,39 +432,21 @@ class BlogGenerator:
         frontmatter = self.create_frontmatter(title, geo_region)
         self.write_markdown(frontmatter, content, draft_path)
         
-        persona_ok = self.ai_engine.persona_check(content)
-        if not persona_ok:
-            self.notifier.send_notification(
-                "❌ 人设校验失败",
-                f"第{attempt}次尝试: 文章《{title}》未通过Joran人设校验。"
-            )
-            print(f"[Attempt {attempt}] Persona check failed.")
-            return {"success": False, "reason": "persona_check_failed", "title": title, "draft_path": draft_path}
+        sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
+        if not sub_ok:
+            error_msg = "\n".join(sub_errors)
+            self.notifier.send_notification("❌ 副主编初审失败", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n同选题重新生成稿件")
+            print(f"[Attempt {attempt}] Sub-editor review failed: {sub_errors}")
+            return {"success": False, "reason": "sub_editor_failed", "title": title, "draft_path": draft_path, "same_topic": True}
         
-        review1_pass = self.ai_engine.assistant_editor_review(content)
+        self.notifier.send_notification("✅ 副主编初审通过", f"文章《{title}》进入主编终审")
         
-        if not review1_pass:
-            print(f"[Attempt {attempt}] Assistant editor review failed, attempting rewrite...")
-            content = self.ai_engine.rewrite_post(content)
-            review1_pass = self.ai_engine.assistant_editor_review(content)
-        
-        if not review1_pass:
-            self.notifier.send_notification(
-                "❌ 初审未通过",
-                f"第{attempt}次尝试: 文章《{title}》经过一次改写后仍未通过初审。"
-            )
-            print(f"[Attempt {attempt}] Assistant editor review failed after rewrite.")
-            return {"success": False, "reason": "review1_failed", "title": title, "draft_path": draft_path}
-        
-        review2_pass = self.ai_engine.chief_editor_review(content)
-        
-        if not review2_pass:
-            self.notifier.send_notification(
-                "❌ 终审未通过",
-                f"第{attempt}次尝试: 文章《{title}》未通过终审。"
-            )
-            print(f"[Attempt {attempt}] Chief editor review failed.")
-            return {"success": False, "reason": "review2_failed", "title": title, "draft_path": draft_path}
+        chief_ok, chief_errors = self.chief_editor.full_check(content)
+        if not chief_ok:
+            error_msg = "\n".join(chief_errors)
+            self.notifier.send_notification("❌ 主编终审驳回", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n废弃旧选题，换新选题重试")
+            print(f"[Attempt {attempt}] Chief editor review failed: {chief_errors}")
+            return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
         self.move_to_posts(draft_path)
         self.manifest.add_topic(topic, geo_region)
@@ -397,10 +454,7 @@ class BlogGenerator:
         self.manifest.save()
         
         canonical_url = frontmatter["canonicalURL"]
-        self.notifier.send_notification(
-            "✅ 新文章上线",
-            f"文章《{title}》已成功发布！\n\n落地链接: {canonical_url}\n目标受众: {geo_region}\n尝试次数: {attempt}"
-        )
+        self.notifier.send_notification("✅ 双审全通过，正式发布", f"文章《{title}》已成功发布！\n\n落地链接: {canonicalURL}\n目标受众: {geo_region}\n尝试次数: {attempt}")
         
         print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region}
@@ -410,12 +464,11 @@ class BlogGenerator:
         post_count = self.manifest.get_post_count()
         
         if post_count >= max_posts:
-            self.notifier.send_notification(
-                "⚠️ 月度发文额度已满",
-                f"本月已发布 {post_count} 篇文章，达到上限 {max_posts} 篇。自动生成已暂停，次月1日自动恢复。"
-            )
+            self.notifier.send_notification("⚠️ 月度发文额度已满", f"本月已发布 {post_count} 篇文章，达到上限 {max_posts} 篇。自动生成已暂停，次月1日自动恢复。")
             print("Monthly post limit reached. Exiting.")
             return
+        
+        last_topic = None
         
         for attempt in range(1, self.max_retries + 1):
             result = self.run_single_post(attempt)
@@ -423,18 +476,21 @@ class BlogGenerator:
             if result["success"]:
                 return
             
+            if not result.get("same_topic", False):
+                last_topic = None
+            
             if attempt < self.max_retries:
                 print(f"[Attempt {attempt}] 审核失败，准备第 {attempt + 1} 次重试...")
-                self.notifier.send_notification(
-                    f"🔄 第{attempt}次审核失败，正在进行第{attempt + 1}次尝试",
-                    f"失败原因: {result['reason']}\n失败文章: 《{result['title']}》"
-                )
             else:
-                self.notifier.send_notification(
-                    "⚠️ 今日发文失败",
-                    f"经过 {self.max_retries} 次尝试后仍未能发布文章。所有草稿已存入 content/_draft/ 目录。"
-                )
-                print(f"All {self.max_retries} attempts failed. Post saved to draft.")
+                DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
+                draft_path = result.get("draft_path")
+                if draft_path and draft_path.exists():
+                    import shutil
+                    final_draft = DRAFTS_DIR / draft_path.name
+                    shutil.move(str(draft_path), str(final_draft))
+                
+                self.notifier.send_notification("❌ 当日3轮撰稿全部审核失败", f"经过 {self.max_retries} 次尝试后仍未能发布文章。稿件已存入 content/drafts/ 目录，当日停止生成。")
+                print(f"All {self.max_retries} attempts failed. Post saved to drafts.")
 
 if __name__ == "__main__":
     generator = BlogGenerator()
