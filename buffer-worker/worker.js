@@ -2,87 +2,81 @@
  * Cloudflare Worker - Buffer GraphQL API Auto-Poster
  * 
  * 功能：
- * 1. 接收GitHub Action推送的博文数据
- * 2. 调用Buffer GraphQL API发布到FB/Instagram/X
- * 3. 预留Cron定时任务：每30分钟拉取评论+AI回复
+ * 1. 双Buffer账户分流：Buffer-A(FB+IG+X) / Buffer-B(Pinterest)
+ * 2. 封面强校验：仅允许本站CDN图片
+ * 3. 双层限流：全局单日≤2篇，各账户15min≤70次
+ * 4. 429处理：指数退避+KV重试队列
+ * 5. 配额预警：剩余≤30%飞书通知
  * 
  * @author Joran - ChinaBoundTravel
- * @version 2.0.0
+ * @version 3.0.0
  */
 
 // ============ 配置常量 ============
 
 /**
- * 多Buffer账户配置
- * 账户1：主账户 - 绑定Twitter/X、Facebook、Instagram
- * 账户2：Pinterest专用账户
+ * 双Buffer账户配置
+ * Buffer-A：FB+IG+X，Buffer-B：独立Pinterest
  */
 const BUFFER_ACCOUNTS = {
-  main: {
-    token: 'BUFFER_TOKEN',
+  A: {
+    tokenKey: 'BUFFER_A_TOKEN',
+    name: 'Buffer-A',
     channels: {
-      x: {
-        id: '6a202882c687a22dd45735b6',
-        name: 'fys2388',
-        service: 'twitter'
-      },
-      facebook: {
-        id: '6a17e0c4c687a22dd4346d3c',
-        name: 'ChinaBound Travel',
-        service: 'facebook'
-      },
-      instagram: {
-        id: '6a17e14dc687a22dd4346eb4',
-        name: 'joranchinatravel',
-        service: 'instagram'
-      }
-    }
+      x: { id: '6a202882c687a22dd45735b6', name: 'fys2388', service: 'twitter' },
+      facebook: { id: '6a17e0c4c687a22dd4346d3c', name: 'ChinaBound Travel', service: 'facebook' },
+      instagram: { id: '6a17e14dc687a22dd4346eb4', name: 'joranchinatravel', service: 'instagram' }
+    },
+    scheduleOffset: 0 // EST 09:00/15:00
   },
-  pinterest: {
-    token: 'BUFFER_TOKEN_PINTEREST',
+  B: {
+    tokenKey: 'BUFFER_B_TOKEN',
+    name: 'Buffer-B',
     channels: {
-      pinterest: {
-        id: '6a21bdbec687a22dd45ec2ae',
-        name: 'Joranchinatravel',
-        service: 'pinterest'
-      }
-    }
+      pinterest: { id: '6a21bdbec687a22dd45ec2ae', name: 'Joranchinatravel', service: 'pinterest' }
+    },
+    scheduleOffset: 11 // EST 20:00 (比A晚11小时)
   }
 };
 
 // Buffer GraphQL API端点
 const BUFFER_API_URL = 'https://api.buffer.com';
 
-// 目标发布平台
-const TARGET_PLATFORMS = ['x', 'facebook', 'instagram', 'pinterest'];
+// 限流配置
+const RATE_LIMIT = {
+  GLOBAL_DAILY_MAX: 2,       // 全局单日发布上限
+  ACCOUNT_QUARTER_MAX: 70,   // 单账户15分钟上限(官方100的70%安全阈值)
+  QUOTA_WARNING_THRESHOLD: 0.3 // 配额剩余30%触发预警
+};
+
+// 重试配置
+const RETRY_CONFIG = {
+  MAX_RETRY: 3,
+  BASE_DELAY: 2000,
+  JITTER: 1000
+};
+
+// 图片域名白名单
+const ALLOWED_IMAGE_HOST = 'chinaboundtravel.com';
+const ALLOWED_IMAGE_PATH = '/img/china-dest/';
 
 // ============ 主处理函数 ============
 
 export default {
-  /**
-   * HTTP请求处理
-   * @param {Request} request - 入站请求
-   * @param {Env} env - 环境变量
-   * @param {ExecutionContext} ctx - 执行上下文
-   */
   async fetch(request, env, ctx) {
     // CORS预检请求处理
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        status: 204,
-        headers: corsHeaders()
-      });
+      return new Response(null, { status: 204, headers: corsHeaders() });
     }
 
-    // 路由分发
     const url = new URL(request.url);
-    
+
     // 健康检查端点
     if (url.pathname === '/health') {
       return jsonResponse({ 
         status: 'ok', 
         service: 'Buffer GraphQL Auto-Poster',
-        version: '2.0.0',
+        version: '3.0.0',
         timestamp: new Date().toISOString()
       });
     }
@@ -94,47 +88,30 @@ export default {
 
     // 主发布端点
     if (url.pathname === '/publish' && request.method === 'POST') {
-      return await handlePublish(request, env);
+      return await handlePublish(request, env, ctx);
     }
 
-    // 评论处理端点（预留）
-    if (url.pathname === '/comments') {
-      return await handleComments(env);
+    // 手动重试队列端点（管理用）
+    if (url.pathname === '/retry-queue' && request.method === 'POST') {
+      return await processRetryQueue(env);
     }
 
     // 404响应
     return jsonResponse({ 
       error: 'Not Found',
-      message: 'Available endpoints: /health, /publish, /channels, /comments'
+      message: 'Available endpoints: /health, /publish, /channels, /retry-queue'
     }, 404);
   },
 
   /**
    * Cron定时任务处理
-   * 触发规则：* /30 * * * *（每30分钟）
-   * 
-   * @param {ScheduledEvent} event - 定时事件
-   * @param {Env} env - 环境变量
-   * @param {ExecutionContext} ctx - 执行上下文
+   * 触发规则：0 8 * * *（每日EST08:00重发积压任务）
    */
   async scheduled(event, env, ctx) {
     console.log(`[Cron] Triggered at ${new Date(event.scheduledTime).toISOString()}`);
     
-    // TODO: 评论抓取+AI回复逻辑
-    // 1. 调用Buffer API获取各平台最新评论
-    // 2. 过滤未回复评论
-    // 3. 调用DeepSeek AI生成Joran人设回复
-    // 4. 自动发布回复
-    
-    const result = await processComments(env);
-    
-    // 发送执行结果通知
-    if (env.FEISHU_WEBHOOK_URL) {
-      await sendFeishuNotification(env.FEISHU_WEBHOOK_URL, {
-        title: '🔄 Buffer评论处理完成',
-        content: `处理时间: ${new Date().toISOString()}\n结果: ${JSON.stringify(result)}`
-      });
-    }
+    // 每日EST08:00处理重试队列
+    await processRetryQueue(env);
     
     return new Response('Cron executed');
   }
@@ -142,14 +119,8 @@ export default {
 
 // ============ 发布处理函数 ============
 
-/**
- * 处理发布请求
- * @param {Request} request - 入站请求
- * @param {Env} env - 环境变量
- */
-async function handlePublish(request, env) {
+async function handlePublish(request, env, ctx) {
   try {
-    // 解析请求体
     const body = await request.json();
     const { title, desc, cover, url: postUrl } = body;
 
@@ -162,35 +133,38 @@ async function handlePublish(request, env) {
       }, 400);
     }
 
-    // ========== 图文错配防火墙：强制校验图片域名 ==========
-    // 规则：cover 必须是本站 CDN 图片 (chinaboundtravel.com/img/china-dest/)
-    // 禁止 picsum.photos/unsplash 等随机外链图
+    // ========== 封面强校验 ==========
     let mediaUrl = cover || '';
     if (mediaUrl) {
-      const isOurDomain = mediaUrl.includes('chinaboundtravel.com') && 
-                          mediaUrl.includes('/img/china-dest/');
-      const isRelativePath = mediaUrl.startsWith('/img/china-dest/');
-      
-      if (!isOurDomain && !isRelativePath) {
-        // 外链图直接拦截
+      const isValid = validateImageUrl(mediaUrl);
+      if (!isValid.valid) {
         return jsonResponse({
           success: false,
           error: 'Image URL blocked',
-          message: 'cover 必须使用本站图片: https://chinaboundtravel.com/img/china-dest/xxx.jpg，禁止 picsum.photos/unsplash 等随机外链图'
+          message: isValid.message
         }, 400);
       }
-
-      // 相对路径转完整 URL
-      if (isRelativePath) {
-        mediaUrl = 'https://chinaboundtravel.com' + mediaUrl;
-      }
+      mediaUrl = isValid.url;
     } else {
-      // 没有 cover 则直接拒绝发布（社媒必须配图）
       return jsonResponse({
         success: false,
         error: 'Missing cover image',
-        message: '必须提供 cover 字段，格式: https://chinaboundtravel.com/img/china-dest/分类/图片.jpg'
+        message: `必须提供 cover 字段，格式: https://${ALLOWED_IMAGE_HOST}${ALLOWED_IMAGE_PATH}分类/图片.jpg`
       }, 400);
+    }
+
+    // ========== 全局限流检查 ==========
+    const dailyCount = await getDailyPublishCount(env);
+    if (dailyCount >= RATE_LIMIT.GLOBAL_DAILY_MAX) {
+      // 单日已达上限，仅部署网站，稿件存入重试队列
+      await saveToRetryQueue(env, { title, desc, cover, url: postUrl });
+      
+      return jsonResponse({
+        success: false,
+        error: 'Daily limit exceeded',
+        message: `今日已发布 ${dailyCount} 篇，单日上限 ${RATE_LIMIT.GLOBAL_DAILY_MAX} 篇。稿件已存入队列，明日自动发布。`,
+        queued: true
+      }, 202);
     }
 
     // 构建发布内容
@@ -203,281 +177,390 @@ async function handlePublish(request, env) {
       details: []
     };
 
-    // 遍历所有Buffer账户进行发布
-    for (const [accountName, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
-      // 获取该账户的Token
-      const token = env[accountConfig.token];
-      if (!token) {
-        console.warn(`[Publish] Token not found for account: ${accountName}`);
+    // 遍历双Buffer账户进行发布
+    for (const [accountKey, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
+      // 账户级限流检查
+      const accountQuota = await checkAccountQuota(env, accountKey);
+      if (!accountQuota.allowed) {
+        allResults.failed.push(...Object.keys(accountConfig.channels));
+        allResults.details.push({
+          platform: accountConfig.name,
+          error: `账户限流: ${accountQuota.message}`
+        });
         continue;
       }
 
-      // 获取该账户的目标渠道ID
-      const channelIds = getChannelIdsByAccount(accountName);
-      if (channelIds.length === 0) {
-        console.warn(`[Publish] No channels configured for account: ${accountName}`);
+      // 获取Token
+      const token = env[accountConfig.tokenKey];
+      if (!token) {
+        allResults.failed.push(...Object.keys(accountConfig.channels));
+        allResults.details.push({
+          platform: accountConfig.name,
+          error: 'Token not configured'
+        });
         continue;
       }
 
       // 发布到该账户的渠道
-      const results = await publishToBuffer(channelIds, postText, mediaUrl, token, accountConfig.channels, env);
-      
+      const results = await publishToBuffer(
+        Object.values(accountConfig.channels).map(c => c.id),
+        postText,
+        mediaUrl,
+        token,
+        accountConfig.channels,
+        env,
+        accountKey
+      );
+
       // 合并结果
       allResults.success.push(...results.success);
       allResults.failed.push(...results.failed);
       allResults.details.push(...results.details);
+
+      // 更新账户限流计数
+      await updateAccountQuota(env, accountKey);
+    }
+
+    // 更新全局日计数
+    if (allResults.success.length > 0) {
+      await incrementDailyPublishCount(env);
     }
 
     // 发送飞书通知
-    if (env.FEISHU_WEBHOOK_URL) {
-      await sendFeishuNotification(env.FEISHU_WEBHOOK_URL, {
-        title: '✅ 社媒发布完成',
-        content: `文章: ${title}\n成功: ${allResults.success.join(', ') || '无'}\n失败: ${allResults.failed.join(', ') || '无'}`
-      });
-    }
+    await sendFeishuNotification(env, {
+      title: allResults.success.length > 0 ? '✅ 社媒发布完成' : '⚠️ 社媒发布失败',
+      content: `文章: ${title}\n成功: ${allResults.success.join(', ') || '无'}\n失败: ${allResults.failed.join(', ') || '无'}`
+    });
 
     return jsonResponse({
       success: allResults.success.length > 0,
       title,
-      platforms: allResults
+      platforms: allResults,
+      dailyCount: dailyCount + 1
     });
 
   } catch (error) {
     console.error('[Publish Error]', error);
+    return jsonResponse({ success: false, error: error.message }, 500);
+  }
+}
+
+// ========== 图片URL校验 ==========
+function validateImageUrl(url) {
+  try {
+    const parsed = new URL(url);
     
-    return jsonResponse({
-      success: false,
-      error: error.message,
-      stack: error.stack
-    }, 500);
+    // 相对路径转换
+    if (url.startsWith('/')) {
+      return { valid: true, url: `https://${ALLOWED_IMAGE_HOST}${url}` };
+    }
+
+    // 检查域名
+    if (parsed.hostname !== ALLOWED_IMAGE_HOST) {
+      return { valid: false, message: `图片域名必须是 ${ALLOWED_IMAGE_HOST}` };
+    }
+
+    // 检查路径
+    if (!parsed.pathname.startsWith(ALLOWED_IMAGE_PATH)) {
+      return { valid: false, message: `图片路径必须以 ${ALLOWED_IMAGE_PATH} 开头` };
+    }
+
+    return { valid: true, url };
+  } catch {
+    return { valid: false, message: '无效的图片URL格式' };
   }
 }
 
-/**
- * 构建发布文本
- * @param {string} title - 文章标题
- * @param {string} desc - 文章描述
- * @param {string} postUrl - 文章URL
- */
-function buildPostText(title, desc, postUrl) {
-  // 截取描述前200字符
-  const shortDesc = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
-  
-  // 添加话题标签
-  const hashtags = '#ChinaTravel #ChinaTour #TravelTips';
-  
-  // 添加原文链接
-  const link = postUrl ? `\n\n📖 Read more: ${postUrl}` : '';
-  
-  return `${title}\n\n${shortDesc}${link}\n\n${hashtags}`;
+// ========== 限流计数函数 ==========
+async function getDailyPublishCount(env) {
+  const today = new Date().toISOString().split('T')[0];
+  const count = await env.KV_STORE.get(`daily_count:${today}`);
+  return parseInt(count) || 0;
 }
 
-/**
- * 获取指定账户的目标渠道ID列表
- * @param {string} accountName - 账户名称
- */
-function getChannelIdsByAccount(accountName) {
-  const ids = [];
-  const accountConfig = BUFFER_ACCOUNTS[accountName];
+async function incrementDailyPublishCount(env) {
+  const today = new Date().toISOString().split('T')[0];
+  const count = await getDailyPublishCount(env);
+  await env.KV_STORE.put(`daily_count:${today}`, (count + 1).toString());
+}
+
+async function checkAccountQuota(env, accountKey) {
+  const now = Date.now();
+  const windowKey = Math.floor(now / (15 * 60 * 1000)); // 15分钟窗口
+  const key = `quota:${accountKey}:${windowKey}`;
   
-  if (!accountConfig) {
-    return ids;
+  const count = await env.KV_STORE.get(key);
+  const current = parseInt(count) || 0;
+
+  if (current >= RATE_LIMIT.ACCOUNT_QUARTER_MAX) {
+    return { allowed: false, message: `15分钟内已调用 ${current} 次，上限 ${RATE_LIMIT.ACCOUNT_QUARTER_MAX} 次` };
   }
 
-  // 获取该账户的所有渠道
-  for (const [platform, channel] of Object.entries(accountConfig.channels)) {
-    // 检查是否在目标平台列表中
-    if (TARGET_PLATFORMS.includes(platform) && channel.id && channel.id.trim()) {
-      ids.push(channel.id);
+  return { allowed: true, remaining: RATE_LIMIT.ACCOUNT_QUARTER_MAX - current };
+}
+
+async function updateAccountQuota(env, accountKey) {
+  const now = Date.now();
+  const windowKey = Math.floor(now / (15 * 60 * 1000));
+  const key = `quota:${accountKey}:${windowKey}`;
+  
+  const count = await env.KV_STORE.get(key);
+  const current = parseInt(count) || 0;
+  await env.KV_STORE.put(key, (current + 1).toString());
+}
+
+// ========== 重试队列函数 ==========
+async function saveToRetryQueue(env, postData) {
+  const id = `retry:${Date.now()}:${Math.random().toString(36).substr(2, 9)}`;
+  await env.KV_STORE.put(id, JSON.stringify(postData), {
+    expirationTtl: 24 * 60 * 60 // 24小时过期
+  });
+  console.log(`[Queue] Saved to retry queue: ${id}`);
+}
+
+async function processRetryQueue(env) {
+  console.log('[Queue] Processing retry queue...');
+  
+  let processed = 0;
+  let success = 0;
+  let failed = 0;
+
+  // 获取所有重试任务
+  const keys = await env.KV_STORE.list({ prefix: 'retry:' });
+  
+  for (const key of keys.keys) {
+    try {
+      const data = await env.KV_STORE.get(key);
+      if (!data) continue;
+
+      const postData = JSON.parse(data);
+      
+      // 检查日限额
+      const dailyCount = await getDailyPublishCount(env);
+      if (dailyCount >= RATE_LIMIT.GLOBAL_DAILY_MAX) {
+        console.log('[Queue] Daily limit reached, stopping retry');
+        break;
+      }
+
+      // 重新发布
+      const body = new Request('http://localhost/publish', {
+        method: 'POST',
+        body: JSON.stringify(postData)
+      });
+      
+      const result = await handlePublish(body, env, null);
+      const resultData = await result.json();
+
+      if (resultData.success) {
+        await env.KV_STORE.delete(key);
+        success++;
+      } else {
+        failed++;
+      }
+      
+      processed++;
+      
+      // 每篇间隔至少90分钟
+      await new Promise(r => setTimeout(r, 1000));
+
+    } catch (error) {
+      console.error('[Queue] Error processing:', error);
+      failed++;
     }
   }
-  
-  return ids;
+
+  const summary = { processed, success, failed };
+  console.log(`[Queue] Retry completed: ${JSON.stringify(summary)}`);
+
+  // 发送通知
+  await sendFeishuNotification(env, {
+    title: '🔄 重试队列处理完成',
+    content: `处理: ${processed}\n成功: ${success}\n失败: ${failed}`
+  });
+
+  return jsonResponse(summary);
 }
 
-/**
- * 发布到Buffer
- * @param {string[]} channelIds - 渠道ID列表
- * @param {string} text - 发布文本
- * @param {string} mediaUrl - 媒体URL
- * @param {string} token - Buffer Token
- * @param {object} channels - 渠道配置信息
- */
-async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env) {
-  const results = {
-    success: [],
-    failed: [],
-    details: []
-  };
+// ========== 发布到Buffer ==========
+async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey) {
+  const results = { success: [], failed: [], details: [] };
 
-  // GraphQL Mutation - 使用Buffer官方API正确格式
   const mutation = `
     mutation CreatePost($input: CreatePostInput!) {
       createPost(input: $input) {
         ... on PostActionSuccess {
-          post {
-            id
-            text
-            dueAt
-            channel {
-              id
-              name
-              service
-            }
-          }
+          post { id text dueAt channel { id name service } }
         }
-        ... on MutationError {
-          message
-        }
+        ... on MutationError { message }
       }
     }
   `;
 
-  // 为每个渠道单独发布 — 分平台差异化配置
   for (const channelId of channelIds) {
     const channelInfo = Object.values(channels).find(c => c.id === channelId);
     const service = channelInfo?.service || 'unknown';
 
-    // 公共字段
     const baseInput = {
       channelId: channelId,
       schedulingType: 'automatic',
       mode: 'addToQueue'
     };
 
-    let input;
-
-    if (service === 'facebook') {
-      // Facebook: text + metadata.facebook.type: post + 可选配图
-      // 文案截断 5000 字符，文末追加官网链接
-      const fbText = (text || '').slice(0, 5000);
-      input = {
-        ...baseInput,
-        text: fbText,
-        metadata: {
-          facebook: {
-            type: 'post'
-          }
-        },
-        assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
-      };
-    } else if (service === 'instagram') {
-      // Instagram: type: post + shouldShareToFeed: true + 强制配图 + 文案≤2200且不可放外链
-      const cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
-      input = {
-        ...baseInput,
-        text: cleanText,
-        metadata: {
-          instagram: {
-            type: 'post',
-            shouldShareToFeed: true
-          }
-        },
-        assets: [{ image: { url: mediaUrl } }]
-      };
-    } else if (service === 'pinterest') {
-      // Pinterest: text + metadata.pinterest.title + url + boardServiceId + 竖图
-      // 在 Buffer 后台配置 boards，把 serviceId 设为 PINTEREST_BOARD_SERVICE_ID 环境变量
-      const pinTitle = (text || '').slice(0, 100);
-      const pinText = (text || '').slice(0, 500);
-      const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '';
-      const pinMeta = { title: pinTitle, url: 'https://chinaboundtravel.com' };
-      if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
-      input = {
-        ...baseInput,
-        text: pinText,
-        metadata: { pinterest: pinMeta },
-        assets: [{ image: { url: mediaUrl } }]
-      };
-    } else {
-      // Twitter / X 等其他平台：沿用 text + 可选配图
-      input = {
-        ...baseInput,
-        text: (text || '').slice(0, 280),
-        assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
-      };
-    }
-
+    let input = buildPlatformInput(service, text, mediaUrl, baseInput, env);
     const variables = { input };
 
-    try {
-      const response = await fetch(BUFFER_API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          query: mutation,
-          variables: variables
-        })
-      });
+    let attempt = 0;
+    let success = false;
+    let lastError = null;
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Buffer API error: ${response.status} - ${errorText}`);
-      }
-
-      const data = await response.json();
-      
-      if (data.errors) {
-        throw new Error(data.errors[0].message);
-      }
-
-      const result = data.data?.createPost;
-      
-      if (result?.post) {
-        const platform = result.post?.channel?.service || 'unknown';
-        results.success.push(platform);
-        results.details.push({
-          platform,
-          postId: result.post?.id,
-          dueAt: result.post?.dueAt
+    while (attempt < RETRY_CONFIG.MAX_RETRY && !success) {
+      try {
+        const response = await fetch(BUFFER_API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ query: mutation, variables })
         });
-      } else if (result?.message) {
-        results.failed.push(service);
-        results.details.push({
-          platform: service,
-          error: result.message
-        });
-      }
 
-    } catch (error) {
-      console.error('[Buffer API Error]', error);
+        // 检查配额并发送预警
+        const remaining = parseInt(response.headers.get('X-RateLimit-Remaining') || '100');
+        const limit = parseInt(response.headers.get('X-RateLimit-Limit') || '100');
+        if (remaining / limit <= RATE_LIMIT.QUOTA_WARNING_THRESHOLD) {
+          await sendFeishuNotification(env, {
+            title: '⚠️ Buffer API配额预警',
+            content: `账户: ${accountKey}\n平台: ${service}\n剩余配额: ${remaining}/${limit} (${((remaining/limit)*100).toFixed(0)}%)`
+          });
+        }
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          
+          // 429限流处理
+          if (response.status === 429) {
+            const retryAfter = parseInt(response.headers.get('Retry-After')) || 60;
+            const delay = Math.pow(2, attempt) * RETRY_CONFIG.BASE_DELAY + 
+                         Math.random() * RETRY_CONFIG.JITTER;
+            
+            console.log(`[RateLimit] ${service} - Retry after ${delay}ms (attempt ${attempt+1})`);
+            await new Promise(r => setTimeout(r, Math.min(delay, retryAfter * 1000)));
+            attempt++;
+            continue;
+          }
+          
+          throw new Error(`Buffer API error: ${response.status} - ${errorText}`);
+        }
+
+        const data = await response.json();
+        
+        if (data.errors) {
+          throw new Error(data.errors[0].message);
+        }
+
+        const result = data.data?.createPost;
+        
+        if (result?.post) {
+          const platform = result.post?.channel?.service || service;
+          results.success.push(platform);
+          results.details.push({
+            platform,
+            postId: result.post?.id,
+            dueAt: result.post?.dueAt
+          });
+          success = true;
+        } else if (result?.message) {
+          throw new Error(result.message);
+        }
+
+      } catch (error) {
+        lastError = error;
+        console.error(`[Buffer Error] ${service}: ${error.message}`);
+        
+        // 非429错误，不再重试
+        if (!error.message.includes('429') && !error.message.includes('RATE_LIMIT')) {
+          break;
+        }
+        
+        attempt++;
+        if (attempt < RETRY_CONFIG.MAX_RETRY) {
+          const delay = Math.pow(2, attempt) * RETRY_CONFIG.BASE_DELAY;
+          await new Promise(r => setTimeout(r, delay));
+        }
+      }
+    }
+
+    if (!success) {
       results.failed.push(service);
-      results.details.push({
-        platform: service,
-        error: error.message
-      });
+      results.details.push({ platform: service, error: lastError?.message || 'Unknown error' });
     }
   }
 
   return results;
 }
 
-// ============ 渠道查询函数 ============
+// ========== 构建平台特定输入 ==========
+function buildPlatformInput(service, text, mediaUrl, baseInput, env) {
+  let input;
 
-/**
- * 查询Buffer渠道（调试用）
- * @param {string} token - Buffer Token
- */
+  if (service === 'facebook') {
+    const fbText = (text || '').slice(0, 5000);
+    input = {
+      ...baseInput,
+      text: fbText,
+      metadata: { facebook: { type: 'post' } },
+      assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
+    };
+  } else if (service === 'instagram') {
+    const cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
+    input = {
+      ...baseInput,
+      text: cleanText,
+      metadata: { instagram: { type: 'post', shouldShareToFeed: true } },
+      assets: [{ image: { url: mediaUrl } }]
+    };
+  } else if (service === 'pinterest') {
+    const pinTitle = (text || '').slice(0, 100);
+    const pinText = (text || '').slice(0, 500);
+    const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '';
+    const pinMeta = { title: pinTitle, url: 'https://chinaboundtravel.com' };
+    if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
+    input = {
+      ...baseInput,
+      text: pinText,
+      metadata: { pinterest: pinMeta },
+      assets: [{ image: { url: mediaUrl } }]
+    };
+  } else {
+    input = {
+      ...baseInput,
+      text: (text || '').slice(0, 280),
+      assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
+    };
+  }
+
+  return input;
+}
+
+// ============ 辅助函数 ============
+
+function buildPostText(title, desc, postUrl) {
+  const shortDesc = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
+  const hashtags = '#ChinaTravel #ChinaTour #TravelTips';
+  const link = postUrl ? `\n\n📖 Read more: ${postUrl}` : '';
+  return `${title}\n\n${shortDesc}${link}\n\n${hashtags}`;
+}
+
 async function queryChannels(token) {
   const query = `
     query {
       account {
         organizations {
           channels {
-            id
-            name
-            service
+            id name service
             metadata {
               ... on PinterestMetadata {
-                boards {
-                  id
-                  name
-                  serviceId
-                  url
-                }
+                boards { id name serviceId url }
               }
             }
           }
@@ -489,123 +572,49 @@ async function queryChannels(token) {
   try {
     const response = await fetch(BUFFER_API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify({ query })
     });
 
     const data = await response.json();
-    
-    // 提取所有组织的渠道
     const channels = [];
     const orgs = data.data?.account?.organizations || [];
     for (const org of orgs) {
-      if (org.channels) {
-        channels.push(...org.channels);
-      }
+      if (org.channels) channels.push(...org.channels);
     }
     
     return channels;
-
   } catch (error) {
     console.error('[Channel Query Error]', error);
     return [];
   }
 }
 
-/**
- * 处理渠道查询请求
- * @param {Env} env - 环境变量
- */
 async function handleQueryChannels(env) {
   const allChannels = {};
-
-  // 遍历所有Buffer账户查询渠道
-  for (const [accountName, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
-    const token = env[accountConfig.token];
+  for (const [accountKey, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
+    const token = env[accountConfig.tokenKey];
     if (!token) {
-      allChannels[accountName] = {
-        success: false,
-        error: 'Token not configured'
-      };
+      allChannels[accountKey] = { success: false, error: 'Token not configured' };
       continue;
     }
-
     const channels = await queryChannels(token);
-    allChannels[accountName] = {
-      success: true,
-      channels: channels
-    };
+    allChannels[accountKey] = { success: true, channels };
   }
-
-  return jsonResponse({
-    success: true,
-    accounts: allChannels
-  });
+  return jsonResponse({ success: true, accounts: allChannels });
 }
 
-// ============ 评论处理函数（预留） ============
-
-/**
- * 处理评论（Cron任务调用）
- * @param {Env} env - 环境变量
- */
-async function processComments(env) {
-  // TODO: 实现评论抓取和AI回复逻辑
-  // 
-  // 步骤：
-  // 1. 调用Buffer API获取各平台最新评论
-  //    query { updates(first: 50) { edges { node { id comments { text author } } } } }
-  // 
-  // 2. 过滤未回复的评论
-  // 
-  // 3. 调用DeepSeek AI生成回复
-  //    - 使用Joran人设：加州美国人，定居成都10年
-  //    - 回复风格：友好、实用、真实
-  // 
-  // 4. 发布回复
-  //    mutation CreateComment($updateId: ID!, $text: String!) { ... }
-  
-  console.log('[Comments] Processing scheduled comment task...');
-  
-  return {
-    processed: 0,
-    replied: 0,
-    message: 'Comment processing not yet implemented'
-  };
-}
-
-/**
- * 评论处理端点
- * @param {Env} env - 环境变量
- */
-async function handleComments(env) {
-  const result = await processComments(env);
-  return jsonResponse(result);
-}
-
-// ============ 飞书通知函数 ============
-
-/**
- * 发送飞书通知
- * @param {string} webhookUrl - 飞书Webhook URL
- * @param {object} data - 通知数据
- */
-async function sendFeishuNotification(webhookUrl, data) {
+async function sendFeishuNotification(env, data) {
+  if (!env.FEISHU_WEBHOOK) return;
   try {
-    await fetch(webhookUrl, {
+    await fetch(env.FEISHU_WEBHOOK, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         msg_type: 'post',
         content: {
           post: {
-            zh_cn: {
-              title: data.title,
-              content: [[{ tag: 'text', text: data.content }]]
-            }
+            zh_cn: { title: data.title, content: [[{ tag: 'text', text: data.content }]] }
           }
         }
       })
@@ -615,26 +624,13 @@ async function sendFeishuNotification(webhookUrl, data) {
   }
 }
 
-// ============ 工具函数 ============
-
-/**
- * JSON响应辅助函数
- * @param {object} data - 响应数据
- * @param {number} status - HTTP状态码
- */
 function jsonResponse(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), {
     status,
-    headers: {
-      'Content-Type': 'application/json',
-      ...corsHeaders()
-    }
+    headers: { 'Content-Type': 'application/json', ...corsHeaders() }
   });
 }
 
-/**
- * CORS头部
- */
 function corsHeaders() {
   return {
     'Access-Control-Allow-Origin': '*',

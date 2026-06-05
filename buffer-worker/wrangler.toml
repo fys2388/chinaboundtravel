@@ -10,15 +10,22 @@ compatibility_date = "2024-01-01"
 
 [vars]
 # 以下变量通过 wrangler secret put 命令设置
-# BUFFER_TOKEN - Buffer Personal API Token
-# FEISHU_WEBHOOK_URL - 飞书机器人Webhook URL
-# DEEPSEEK_API_KEY - DeepSeek AI密钥（用于评论回复）
+# BUFFER_A_TOKEN - Buffer账户A Token (FB+IG+X)
+# BUFFER_B_TOKEN - Buffer账户B Token (Pinterest独立)
+# FEISHU_WEBHOOK - 飞书机器人Webhook URL
+# PINTEREST_BOARD_SERVICE_ID - Pinterest画板ID
 
 # ============ Cron定时触发器 ============
-# 每30分钟执行一次评论处理
+# 每日EST08:00（UTC 12:00）处理重试队列
 
 [triggers]
-crons = ["*/30 * * * *"]
+crons = ["0 12 * * *"]
+
+# ============ KV存储（限流计数、重试队列） ============
+# 部署前需创建KV命名空间并填入id
+[[kv_namespaces]]
+binding = "KV_STORE"
+id = "" # 需要手动填入KV命名空间ID
 
 # ============ 开发环境配置 ============
 
@@ -30,11 +37,6 @@ name = "buffer-auto-poster-dev"
 [env.production]
 name = "buffer-auto-poster"
 route = "https://buffer-worker.chinaboundtravel.com/*"
-
-# ============ KV存储（预留用于评论缓存） ============
-# [[kv_namespaces]]
-# binding = "COMMENTS_CACHE"
-# id = "YOUR_KV_NAMESPACE_ID"
 
 # ============ 日志配置 ============
 
