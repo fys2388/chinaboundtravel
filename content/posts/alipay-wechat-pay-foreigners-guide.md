@@ -1,6 +1,7 @@
----
+﻿---
 title: 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners
-cover: "https://chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.jpg"
 date: '2026-05-17T10:00:00+08:00'
 draft: false
 tags:

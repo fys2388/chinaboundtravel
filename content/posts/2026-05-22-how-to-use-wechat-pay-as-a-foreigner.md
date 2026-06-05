@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Use WeChat Pay as a Foreigner
-cover: "https://chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"
 date: '2026-05-21T10:00:00+08:00'
 draft: false
 tags:
@@ -139,3 +140,4 @@ Look, WeChat Pay isnt perfect. Its a walled garden that demands your passport, y
 > **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
 
 > **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
+

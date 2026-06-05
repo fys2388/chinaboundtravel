@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)
-cover: "https://chinaboundtravel.com/img/china-dest/general/2026-05-27-how-to-survive-chinese-train-station.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-27-how-to-survive-chinese-train-station.jpg"
 date: '2026-05-23T10:00:00+08:00'
 draft: false
 tags:

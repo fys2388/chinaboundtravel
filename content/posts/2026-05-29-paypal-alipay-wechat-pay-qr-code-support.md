@@ -1,6 +1,7 @@
----
+﻿---
 title: PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?
-cover: "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg"
 slug: paypal-alipay-wechat-pay-qr-code-support
 date: '2026-05-29T10:00:00+08:00'
 draft: false

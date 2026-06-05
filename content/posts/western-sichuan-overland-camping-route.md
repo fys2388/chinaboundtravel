@@ -1,6 +1,7 @@
----
+﻿---
 title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
-cover: "https://chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg"
   Most Epic Wilderness'
 date: '2026-05-19T10:00:00+08:00'
 draft: false

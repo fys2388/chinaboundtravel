@@ -1,6 +1,7 @@
----
+﻿---
 title: 'China''s High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)'
-cover: "https://chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg"
 date: '2026-05-24T10:00:00+08:00'
 draft: false
 tags:

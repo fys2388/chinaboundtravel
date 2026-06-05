@@ -1,6 +1,7 @@
----
+﻿---
 title: Shanghai Bund & French Concession  2-Day Deep Dive
-cover: "https://chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
 date: '2026-05-24T10:00:00+08:00'
 draft: false
 tags:

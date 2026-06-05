@@ -1,6 +1,7 @@
----
+﻿---
 title: Welcome to ChinaBound Travel Blog
-cover: "https://chinaboundtravel.com/img/china-dest/general/hello-world.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/hello-world.jpg"
 date: '2026-05-22T10:00:00+08:00'
 draft: false
 tags:
