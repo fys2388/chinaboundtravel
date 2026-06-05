@@ -20,7 +20,7 @@
  */
 const BUFFER_ACCOUNTS = {
   A: {
-    tokenKey: 'BUFFER_A_TOKEN',
+    tokenKey: 'BUFFER_WORKER_URL',
     name: 'Buffer-A',
     channels: {
       x: { id: '6a202882c687a22dd45735b6', name: 'fys2388', service: 'twitter' },
@@ -30,7 +30,7 @@ const BUFFER_ACCOUNTS = {
     scheduleOffset: 0 // EST 09:00/15:00
   },
   B: {
-    tokenKey: 'BUFFER_B_TOKEN',
+    tokenKey: 'NEW_BUFFER_WORKER_URL',
     name: 'Buffer-B',
     channels: {
       pinterest: { id: '6a21bdbec687a22dd45ec2ae', name: 'Joranchinatravel', service: 'pinterest' }
@@ -605,9 +605,9 @@ async function handleQueryChannels(env) {
 }
 
 async function sendFeishuNotification(env, data) {
-  if (!env.FEISHU_WEBHOOK) return;
+  if (!env.FEISHU_WEBHOOK_URL) return;
   try {
-    await fetch(env.FEISHU_WEBHOOK, {
+    await fetch(env.FEISHU_WEBHOOK_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

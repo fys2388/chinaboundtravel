@@ -10,9 +10,9 @@ compatibility_date = "2024-01-01"
 
 [vars]
 # 以下变量通过 wrangler secret put 命令设置
-# BUFFER_A_TOKEN - Buffer账户A Token (FB+IG+X)
-# BUFFER_B_TOKEN - Buffer账户B Token (Pinterest独立)
-# FEISHU_WEBHOOK - 飞书机器人Webhook URL
+# BUFFER_WORKER_URL - Buffer账户A Token (FB+IG+X) - 已在GH Secrets中
+# NEW_BUFFER_WORKER_URL - Buffer账户B Token (Pinterest独立) - 已在GH Secrets中
+# FEISHU_WEBHOOK_URL - 飞书机器人Webhook URL - 已在GH Secrets中
 # PINTEREST_BOARD_SERVICE_ID - Pinterest画板ID
 
 # ============ Cron定时触发器 ============
