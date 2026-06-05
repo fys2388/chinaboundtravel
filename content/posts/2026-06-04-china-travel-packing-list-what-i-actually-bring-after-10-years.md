@@ -1,5 +1,6 @@
 ---
 title: "China Travel Packing List: What I Actually Bring After 10 Years of Visiting"
+cover: "https://chinaboundtravel.com/img/china-dest/general/china-travel-packing-list-what-i-actually-bring-after-10-years.jpg"
 date: "2026-06-04T10:00:00+08:00"
 lastmod: "2026-06-04T10:00:00+08:00"
 description: "After visiting China over 50 times in the past decade, here's my definitive packing list for travelers heading to China in 2026."

@@ -13,37 +13,48 @@
 // ============ 配置常量 ============
 
 /**
- * 各社交平台Channel ID映射
- * 
- * 如何获取Channel ID：
- * 1. 登录Buffer后台 → Settings → API
- * 2. 使用查询语句获取所有渠道：
- *    query { organization { channels { id, name, service } } }
- * 3. 将返回的id填入下方对应平台
+ * 多Buffer账户配置
+ * 账户1：主账户 - 绑定Twitter/X、Facebook、Instagram
+ * 账户2：Pinterest专用账户
  */
-const CHANNEL_MAP = {
-  facebook: {
-    id: '6a17e0c4c687a22dd4346d3c',
-    name: 'ChinaBound Travel',
-    service: 'facebook'
+const BUFFER_ACCOUNTS = {
+  main: {
+    token: 'BUFFER_TOKEN',
+    channels: {
+      x: {
+        id: '6a202882c687a22dd45735b6',
+        name: 'fys2388',
+        service: 'twitter'
+      },
+      facebook: {
+        id: '6a17e0c4c687a22dd4346d3c',
+        name: 'ChinaBound Travel',
+        service: 'facebook'
+      },
+      instagram: {
+        id: '6a17e14dc687a22dd4346eb4',
+        name: 'joranchinatravel',
+        service: 'instagram'
+      }
+    }
   },
-  instagram: {
-    id: '6a17e14dc687a22dd4346eb4',
-    name: 'joranchinatravel',
-    service: 'instagram'
-  },
-  x: {
-    id: '6a202882c687a22dd45735b6',
-    name: 'fys2388',
-    service: 'twitter'
+  pinterest: {
+    token: 'BUFFER_TOKEN_PINTEREST',
+    channels: {
+      pinterest: {
+        id: '6a21bdbec687a22dd45ec2ae',
+        name: 'Joranchinatravel',
+        service: 'pinterest'
+      }
+    }
   }
 };
 
 // Buffer GraphQL API端点
 const BUFFER_API_URL = 'https://api.buffer.com';
 
-// 目标发布平台（目前只支持Twitter，FB/IG需要额外配置）
-const TARGET_PLATFORMS = ['x'];
+// 目标发布平台
+const TARGET_PLATFORMS = ['x', 'facebook', 'instagram', 'pinterest'];
 
 // ============ 主处理函数 ============
 
@@ -78,7 +89,7 @@ export default {
 
     // 查询渠道端点（调试用）
     if (url.pathname === '/channels') {
-      return await queryChannels(env.BUFFER_TOKEN);
+      return await handleQueryChannels(env);
     }
 
     // 主发布端点
@@ -151,36 +162,84 @@ async function handlePublish(request, env) {
       }, 400);
     }
 
-    // 构建发布内容
-    const postText = buildPostText(title, desc, postUrl);
-    const mediaUrl = cover || '';
+    // ========== 图文错配防火墙：强制校验图片域名 ==========
+    // 规则：cover 必须是本站 CDN 图片 (chinaboundtravel.com/img/china-dest/)
+    // 禁止 picsum.photos/unsplash 等随机外链图
+    let mediaUrl = cover || '';
+    if (mediaUrl) {
+      const isOurDomain = mediaUrl.includes('chinaboundtravel.com') && 
+                          mediaUrl.includes('/img/china-dest/');
+      const isRelativePath = mediaUrl.startsWith('/img/china-dest/');
+      
+      if (!isOurDomain && !isRelativePath) {
+        // 外链图直接拦截
+        return jsonResponse({
+          success: false,
+          error: 'Image URL blocked',
+          message: 'cover 必须使用本站图片: https://chinaboundtravel.com/img/china-dest/xxx.jpg，禁止 picsum.photos/unsplash 等随机外链图'
+        }, 400);
+      }
 
-    // 获取目标渠道ID
-    const channelIds = getChannelIds();
-    
-    if (channelIds.length === 0) {
+      // 相对路径转完整 URL
+      if (isRelativePath) {
+        mediaUrl = 'https://chinaboundtravel.com' + mediaUrl;
+      }
+    } else {
+      // 没有 cover 则直接拒绝发布（社媒必须配图）
       return jsonResponse({
         success: false,
-        error: 'No channels configured',
-        message: 'Please configure CHANNEL_MAP with valid channel IDs'
+        error: 'Missing cover image',
+        message: '必须提供 cover 字段，格式: https://chinaboundtravel.com/img/china-dest/分类/图片.jpg'
       }, 400);
     }
 
-    // 调用Buffer GraphQL API发布
-    const results = await publishToBuffer(channelIds, postText, mediaUrl, env.BUFFER_TOKEN);
+    // 构建发布内容
+    const postText = buildPostText(title, desc, postUrl);
+
+    // 收集所有账户的发布结果
+    const allResults = {
+      success: [],
+      failed: [],
+      details: []
+    };
+
+    // 遍历所有Buffer账户进行发布
+    for (const [accountName, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
+      // 获取该账户的Token
+      const token = env[accountConfig.token];
+      if (!token) {
+        console.warn(`[Publish] Token not found for account: ${accountName}`);
+        continue;
+      }
+
+      // 获取该账户的目标渠道ID
+      const channelIds = getChannelIdsByAccount(accountName);
+      if (channelIds.length === 0) {
+        console.warn(`[Publish] No channels configured for account: ${accountName}`);
+        continue;
+      }
+
+      // 发布到该账户的渠道
+      const results = await publishToBuffer(channelIds, postText, mediaUrl, token, accountConfig.channels, env);
+      
+      // 合并结果
+      allResults.success.push(...results.success);
+      allResults.failed.push(...results.failed);
+      allResults.details.push(...results.details);
+    }
 
     // 发送飞书通知
     if (env.FEISHU_WEBHOOK_URL) {
       await sendFeishuNotification(env.FEISHU_WEBHOOK_URL, {
         title: '✅ 社媒发布完成',
-        content: `文章: ${title}\n平台: ${results.success.join(', ')}\n失败: ${results.failed.join(', ') || '无'}`
+        content: `文章: ${title}\n成功: ${allResults.success.join(', ') || '无'}\n失败: ${allResults.failed.join(', ') || '无'}`
       });
     }
 
     return jsonResponse({
-      success: true,
+      success: allResults.success.length > 0,
       title,
-      platforms: results
+      platforms: allResults
     });
 
   } catch (error) {
@@ -214,14 +273,21 @@ function buildPostText(title, desc, postUrl) {
 }
 
 /**
- * 获取目标渠道ID列表
+ * 获取指定账户的目标渠道ID列表
+ * @param {string} accountName - 账户名称
  */
-function getChannelIds() {
+function getChannelIdsByAccount(accountName) {
   const ids = [];
+  const accountConfig = BUFFER_ACCOUNTS[accountName];
   
-  for (const platform of TARGET_PLATFORMS) {
-    const channel = CHANNEL_MAP[platform];
-    if (channel && channel.id && !channel.id.startsWith('REPLACE_')) {
+  if (!accountConfig) {
+    return ids;
+  }
+
+  // 获取该账户的所有渠道
+  for (const [platform, channel] of Object.entries(accountConfig.channels)) {
+    // 检查是否在目标平台列表中
+    if (TARGET_PLATFORMS.includes(platform) && channel.id && channel.id.trim()) {
       ids.push(channel.id);
     }
   }
@@ -235,8 +301,9 @@ function getChannelIds() {
  * @param {string} text - 发布文本
  * @param {string} mediaUrl - 媒体URL
  * @param {string} token - Buffer Token
+ * @param {object} channels - 渠道配置信息
  */
-async function publishToBuffer(channelIds, text, mediaUrl, token) {
+async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env) {
   const results = {
     success: [],
     failed: [],
@@ -266,18 +333,70 @@ async function publishToBuffer(channelIds, text, mediaUrl, token) {
     }
   `;
 
-  // 为每个渠道单独发布
+  // 为每个渠道单独发布 — 分平台差异化配置
   for (const channelId of channelIds) {
-    // 根据渠道类型设置不同的参数
-    const channelInfo = Object.values(CHANNEL_MAP).find(c => c.id === channelId);
+    const channelInfo = Object.values(channels).find(c => c.id === channelId);
     const service = channelInfo?.service || 'unknown';
-    
-    const input = {
-      text: text,
+
+    // 公共字段
+    const baseInput = {
       channelId: channelId,
       schedulingType: 'automatic',
       mode: 'addToQueue'
     };
+
+    let input;
+
+    if (service === 'facebook') {
+      // Facebook: text + metadata.facebook.type: post + 可选配图
+      // 文案截断 5000 字符，文末追加官网链接
+      const fbText = (text || '').slice(0, 5000);
+      input = {
+        ...baseInput,
+        text: fbText,
+        metadata: {
+          facebook: {
+            type: 'post'
+          }
+        },
+        assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
+      };
+    } else if (service === 'instagram') {
+      // Instagram: type: post + shouldShareToFeed: true + 强制配图 + 文案≤2200且不可放外链
+      const cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
+      input = {
+        ...baseInput,
+        text: cleanText,
+        metadata: {
+          instagram: {
+            type: 'post',
+            shouldShareToFeed: true
+          }
+        },
+        assets: [{ image: { url: mediaUrl } }]
+      };
+    } else if (service === 'pinterest') {
+      // Pinterest: text + metadata.pinterest.title + url + boardServiceId + 竖图
+      // 在 Buffer 后台配置 boards，把 serviceId 设为 PINTEREST_BOARD_SERVICE_ID 环境变量
+      const pinTitle = (text || '').slice(0, 100);
+      const pinText = (text || '').slice(0, 500);
+      const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '';
+      const pinMeta = { title: pinTitle, url: 'https://chinaboundtravel.com' };
+      if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
+      input = {
+        ...baseInput,
+        text: pinText,
+        metadata: { pinterest: pinMeta },
+        assets: [{ image: { url: mediaUrl } }]
+      };
+    } else {
+      // Twitter / X 等其他平台：沿用 text + 可选配图
+      input = {
+        ...baseInput,
+        text: (text || '').slice(0, 280),
+        assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
+      };
+    }
 
     const variables = { input };
 
@@ -316,18 +435,18 @@ async function publishToBuffer(channelIds, text, mediaUrl, token) {
           dueAt: result.post?.dueAt
         });
       } else if (result?.message) {
-        results.failed.push(channelId);
+        results.failed.push(service);
         results.details.push({
-          channelId,
+          platform: service,
           error: result.message
         });
       }
 
     } catch (error) {
       console.error('[Buffer API Error]', error);
-      results.failed.push(channelId);
+      results.failed.push(service);
       results.details.push({
-        channelId,
+        platform: service,
         error: error.message
       });
     }
@@ -351,6 +470,16 @@ async function queryChannels(token) {
             id
             name
             service
+            metadata {
+              ... on PinterestMetadata {
+                boards {
+                  id
+                  name
+                  serviceId
+                  url
+                }
+              }
+            }
           }
         }
       }
@@ -378,17 +507,43 @@ async function queryChannels(token) {
       }
     }
     
-    return jsonResponse({
-      success: true,
-      channels: channels
-    });
+    return channels;
 
   } catch (error) {
-    return jsonResponse({
-      success: false,
-      error: error.message
-    }, 500);
+    console.error('[Channel Query Error]', error);
+    return [];
   }
+}
+
+/**
+ * 处理渠道查询请求
+ * @param {Env} env - 环境变量
+ */
+async function handleQueryChannels(env) {
+  const allChannels = {};
+
+  // 遍历所有Buffer账户查询渠道
+  for (const [accountName, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
+    const token = env[accountConfig.token];
+    if (!token) {
+      allChannels[accountName] = {
+        success: false,
+        error: 'Token not configured'
+      };
+      continue;
+    }
+
+    const channels = await queryChannels(token);
+    allChannels[accountName] = {
+      success: true,
+      channels: channels
+    };
+  }
+
+  return jsonResponse({
+    success: true,
+    accounts: allChannels
+  });
 }
 
 // ============ 评论处理函数（预留） ============

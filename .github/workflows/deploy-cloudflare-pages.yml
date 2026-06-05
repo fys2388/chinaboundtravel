@@ -34,3 +34,14 @@ jobs:
           projectName: chinaboundtravel
           directory: public
           branch: main
+
+      # 5. 扫描刚发布的文章，调用 Worker 发布社媒
+      #    （此时图片已在 CDN 上线，Buffer API 可正常访问）
+      - name: Post to Social Media via Worker
+        run: |
+          echo "=== 扫描近期文章并发布到社媒 ==="
+          pip install requests Pillow --quiet 2>&1 | tail -n 5
+          python chinaboundtravel_social_bot/social_publisher.py
+
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}

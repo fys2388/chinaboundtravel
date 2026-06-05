@@ -1,5 +1,6 @@
 ---
 title: 144-Hour Visa-Free Transit in China - The Complete 2026 Guide
+cover: "https://chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.jpg"
 date: '2026-05-15T10:00:00+08:00'
 draft: false
 tags:

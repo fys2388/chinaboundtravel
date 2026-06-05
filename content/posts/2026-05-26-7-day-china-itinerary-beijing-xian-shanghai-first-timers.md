@@ -1,5 +1,6 @@
 ---
 title: '7-Day China First Timer Itinerary: Beijing, Xi''an & Shanghai 2026'
+cover: "https://chinaboundtravel.com/img/china-dest/beijing/7-day-china-first-timer-itinerary-beijing-xian-shanghai.jpg"
 description: The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden
   City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and
   pro tips from 10 years of running this route.

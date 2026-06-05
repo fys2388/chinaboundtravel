@@ -12,8 +12,118 @@ BASE_DIR = Path(__file__).parent.parent
 MANIFEST_PATH = BASE_DIR / "manifest.json"
 DRAFT_DIR = BASE_DIR / "content" / "_draft"
 POSTS_DIR = BASE_DIR / "content" / "posts"
-DRAFTS_DIR = BASE_DIR / "content" / "drafts"
+DRAFTS_DIR = BASE_DIR / "content" / "content" / "drafts"
 SITE_DOMAIN = "https://chinaboundtravel.com"
+
+# ========== 封面图生成相关常量
+COVER_BASE = BASE_DIR / "static" / "img" / "china-dest"
+SITE_NAME = "chinaboundtravel.com"
+
+CATEGORY_MAP = [
+    ("chengdu", ["chengdu", "panda", "sichuan", "hotpot"]),
+    ("beijing", ["beijing", "great wall", "forbidden city", "tiananmen"]),
+    ("greatwall", ["great wall", "mutianyu", "badaling"]),
+    ("zhangjiajie", ["zhangjiajie", "avatar mountain", "hunan"]),
+    ("xian", ["xi'an", "xian", "terracotta", "warrior", "shaanxi"]),
+    ("shanghai", ["shanghai", "bund", "pudong"]),
+    ("hangzhou", ["hangzhou", "west lake", "xihu"]),
+    ("guilin", ["guilin", "li river", "yangshuo"]),
+    ("yunnan", ["yunnan", "lijiang", "shangri-la", "dali", "kunming"]),
+    ("sichuan", ["sichuan", "leshan", "mount emei", "jiuzhaigou"]),
+]
+
+COLOR_SCHEMES = [
+    ((196, 30, 58), (255, 245, 230)),
+    ((34, 87, 122), (255, 255, 255)),
+    ((88, 53, 39), (255, 235, 205)),
+    ((34, 139, 34), (255, 255, 220)),
+    ((255, 140, 0), (255, 255, 245)),
+]
+
+
+def wrap_text(text, max_chars):
+    words = text.split()
+    lines = []
+    current = ""
+    for w in words:
+        if len(current) + len(w) + 1 <= max_chars:
+            current = current + " " + w if current else w
+        else:
+            lines.append(current)
+            current = w
+    if current:
+        lines.append(current)
+    return lines
+
+
+def generate_cover_for_post(title, slug):
+    """生成 1080x1350 竖版海报封面图，返回 CDN URL"""
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        return None
+
+    # 分类
+    title_lower = title.lower()
+    category = "general"
+    for cat, keywords in CATEGORY_MAP:
+        for kw in keywords:
+            if kw in title_lower:
+                category = cat
+                break
+        if category != "general":
+            break
+
+    # 创建目录
+    cover_dir = COVER_BASE / category
+    cover_dir.mkdir(parents=True, exist_ok=True)
+
+    # 选色
+    color_idx = hash(title) % len(COLOR_SCHEMES)
+    bg_color, text_color = COLOR_SCHEMES[color_idx]
+
+    # 创建画布
+    img = Image.new('RGB', (1080, 1350), color=bg_color)
+    draw = ImageDraw.Draw(img)
+
+    # 尝试字体
+    try:
+        font_title = ImageFont.truetype('DejaVuSans-Bold.ttf', 72)
+        font_sub = ImageFont.truetype('DejaVuSans.ttf', 36)
+    except (OSError, IOError):
+        font_title = ImageFont.load_default()
+        font_sub = ImageFont.load_default()
+
+    # 标题换行
+    title_lines = wrap_text(title, 18)
+    line_height = 90
+    total_height = len(title_lines) * line_height
+    start_y = (1350 - total_height) // 2 - 50
+
+    for i, line in enumerate(title_lines):
+        bbox = draw.textbbox((0, 0), line, font=font_title)
+        text_width = bbox[2] - bbox[0]
+        x = (1080 - text_width) // 2
+        y = start_y + i * line_height
+        draw.text((x, y), line, fill=text_color, font=font_title)
+
+    # 副标题
+    sub = "chinaboundtravel.com"
+    bbox = draw.textbbox((0, 0), sub, font=font_sub)
+    sw = bbox[2] - bbox[0]
+    sx = (1080 - sw) // 2
+    sy = start_y + total_height + 60
+    draw.text((sx, sy), sub, fill=text_color, font=font_sub)
+
+    # 上下装饰线
+    draw.rectangle([150, start_y - 40, 930, start_y - 36], fill=text_color)
+    draw.rectangle([150, sy + 80, 930, sy + 84], fill=text_color)
+
+    # 保存
+    filename = f"{slug}.jpg"
+    img.save(cover_dir / filename, 'JPEG', quality=90, optimize=True)
+    return f"https://{SITE_NAME}/img/china-dest/{category}/{filename}"
+
 
 GEO_REGIONS = ["EU", "US", "AU"]
 GEO_WEIGHTS = [40, 35, 25]
@@ -397,7 +507,7 @@ class BlogGenerator:
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(full_content)
     
-    def move_to_posts(self, draft_path):
+    def move_to_posts(self, draft_path, title, slug):
         filename = draft_path.name.replace("-attempt1", "").replace("-attempt2", "").replace("-attempt3", "")
         post_path = POSTS_DIR / filename
         
@@ -407,10 +517,32 @@ class BlogGenerator:
         content = content.replace('draft: "true"', 'draft: "false"')
         content = content.replace('audit_status: "pending"', 'audit_status: "pass2"')
         
+        # 生成封面图，添加 cover 字段到 frontmatter
+        cover_url = generate_cover_for_post(title, slug)
+        if cover_url:
+            # 在第二个 "---" 前插入 cover 字段
+            parts = content.split("---", 2)
+            if len(parts) >= 3:
+                frontmatter = parts[1]
+                if 'cover:' not in frontmatter:
+                    # 插入 cover 到 frontmatter 开头（title 之后）
+                    lines = frontmatter.split("\n")
+                    new_lines = []
+                    cover_inserted = False
+                    for line in lines:
+                        new_lines.append(line)
+                        if line.startswith('title:') and not cover_inserted:
+                            new_lines.append(f'cover: "{cover_url}"')
+                            cover_inserted = True
+                    new_frontmatter = "\n".join(new_lines)
+                    content = f"---{new_frontmatter}---{parts[2]}"
+        
         with open(post_path, "w", encoding="utf-8") as f:
             f.write(content)
         
         draft_path.unlink()
+        return cover_url
+
     
     def run_single_post(self, attempt=1):
         topic, geo_region = self.select_topic()
@@ -448,16 +580,19 @@ class BlogGenerator:
             print(f"[Attempt {attempt}] Chief editor review failed: {chief_errors}")
             return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
-        self.move_to_posts(draft_path)
+        post_slug = self.generate_slug(title)
+        cover_url = self.move_to_posts(draft_path, title, post_slug)
         self.manifest.add_topic(topic, geo_region)
         self.manifest.increment_post_count()
         self.manifest.save()
         
         canonical_url = frontmatter["canonicalURL"]
-        self.notifier.send_notification("✅ 双审全通过，正式发布", f"文章《{title}》已成功发布！\n\n落地链接: {canonicalURL}\n目标受众: {geo_region}\n尝试次数: {attempt}")
+        cover_msg = f"\n封面图: {cover_url}" if cover_url else ""
+        self.notifier.send_notification("✅ 双审全通过，正式发布", f"文章《{title}》已成功发布！\n\n落地链接: {canonicalURL}\n目标受众: {geo_region}\n尝试次数: {attempt}{cover_msg}")
         
         print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
-        return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region}
+        print(f"  Cover: {cover_url}")
+        return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
         max_posts = 22
