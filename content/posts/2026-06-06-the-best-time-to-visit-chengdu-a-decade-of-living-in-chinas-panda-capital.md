@@ -1,6 +1,7 @@
 ---
 title: "The Best Time to Visit Chengdu: A Decade of Living in China's Panda Capital"
-cover: "https://chinaboundtravel.com/img/china-dest/chengdu/the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/chengdu/the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.jpg"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

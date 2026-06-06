@@ -1,6 +1,7 @@
 ---
 title: "The Sweet Spot: When to Visit Chengdu (and Why Your European Calendar Needs a Reset)"
-cover: "https://chinaboundtravel.com/img/china-dest/chengdu/the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/chengdu/the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.jpg"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

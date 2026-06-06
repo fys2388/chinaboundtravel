@@ -1,6 +1,7 @@
 ---
 title: "Budget Planning for China: Lessons from a California Kid Turned Chengdu Local"
-cover: "https://chinaboundtravel.com/img/china-dest/chengdu/budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/chengdu/budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.jpg"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

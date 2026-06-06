@@ -1,6 +1,7 @@
 ---
 title: "Safety Tips Guide"
-cover: "https://image.pollinations.ai/prompt/Professional%20travel%20blog%20cover%20image%2C%20safe%20travel%20in%20China%20with%20Chinese%20cityscape%20background%2C%20high-resolution%20travel%20photography%2C%20cinematic%20lighting%2C%20vibrant%20colors%2C%204k%20quality%2C%20photorealistic%2C%20beautiful%20scenery?width=1200&height=630&nologo=true&seed=32118"
+cover:
+  image: "https://image.pollinations.ai/prompt/Professional%20travel%20blog%20cover%20image%2C%20safe%20travel%20in%20China%20with%20Chinese%20cityscape%20background%2C%20high-resolution%20travel%20photography%2C%20cinematic%20lighting%2C%20vibrant%20colors%2C%204k%20quality%2C%20photorealistic%2C%20beautiful%20scenery?width=1200&height=630&nologo=true&seed=32118"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"
