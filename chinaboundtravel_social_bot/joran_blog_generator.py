@@ -56,172 +56,53 @@ def wrap_text(text, max_chars):
     return lines
 
 
-def generate_cover_with_gemini(title, slug):
-    """使用 Gemini API 生成封面图"""
-    import requests
-    import base64
-    
-    gemini_api_key = os.getenv("GEMINI_API_KEY")
-    if not gemini_api_key:
-        print("[Gemini] No API key found, falling back to local generation")
-        return None
-    
-    # 根据标题确定场景
+def generate_pollinations_url(title, slug):
+    """生成 Pollinations.ai 动态图片 URL，零存储零下载"""
     title_lower = title.lower()
+
+    # 根据标题关键词生成场景描述
     location_keywords = [
-        ("chengdu", "Chengdu city skyline with pandas, Chinese traditional architecture"),
-        ("beijing", "Beijing Forbidden City, Great Wall of China"),
-        ("shanghai", "Shanghai skyline with Oriental Pearl Tower"),
-        ("xian", "Xian Terracotta Army, ancient city walls"),
-        ("guilin", "Guilin mountains and Li River"),
-        ("zhangjiajie", "Zhangjiajie National Park pillars"),
-        ("hangzhou", "West Lake Hangzhou with pagoda"),
-        ("hong kong", "Hong Kong skyline at night"),
-        ("sichuan", "Sichuan mountains and pandas"),
-        ("yunnan", "Yunnan rice terraces, Lijiang old town"),
+        ("chengdu", "modern Chengdu city with pandas, Sichuan spicy hotpot"),
+        ("beijing", "Beijing Forbidden City, Great Wall of China, imperial palace"),
+        ("shanghai", "Shanghai Bund skyline, Oriental Pearl Tower at night"),
+        ("xian", "Xian Terracotta Army, ancient Chinese city walls"),
+        ("guilin", "Guilin karst mountains, Li River cruise landscape"),
+        ("zhangjiajie", "Zhangjiajie Avatar mountains, quartz sandstone pillars"),
+        ("hangzhou", "West Lake Hangzhou, traditional Chinese pagoda garden"),
+        ("hong kong", "Hong Kong Victoria Harbour night skyline"),
+        ("sichuan", "Sichuan mountains, giant panda in bamboo forest"),
+        ("yunnan", "Yunnan rice terraces, Lijiang ancient town, Shangri-La"),
+        ("great wall", "Great Wall of China winding through mountains"),
+        ("visa", "travel visa document with Chinese flag background"),
+        ("packing", "travel suitcase with China travel essentials checklist"),
+        ("safety", "safe travel in China with Chinese cityscape background"),
+        ("transportation", "China high-speed train, modern subway system"),
+        ("accommodation", "Chinese boutique hotel room interior design"),
+        ("food", "Chinese street food market, dumplings, noodles feast"),
+        ("cultural", "traditional Chinese cultural scene, red lanterns"),
+        ("budget", "budget travel planning with Chinese yuan banknotes"),
+        ("itinerary", "China travel map with compass and passport"),
+        ("best time", "spring cherry blossoms in Beijing or autumn West Lake"),
     ]
-    
-    scene_desc = "Beautiful China travel landscape, vibrant colors"
+
+    scene_desc = "Beautiful China travel landscape photography, cinematic composition"
     for kw, desc in location_keywords:
         if kw in title_lower:
             scene_desc = desc
             break
-    
-    prompt = f"""
-    Professional travel blog cover image, vertical format 1080x1350, 
-    {scene_desc}, 
-    travel photography style, vibrant colors, 
-    clean composition with copy space for text overlay,
-    high quality, professional lighting,
-    no text on image, only beautiful scenery.
-    """
-    
-    try:
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent?key={gemini_api_key}",
-            json={
-                "contents": [{
-                    "parts": [{
-                        "text": prompt
-                    }]
-                }],
-                "generationConfig": {
-                    "responseMimeType": "image/png"
-                }
-            },
-            timeout=60
-        )
-        
-        if response.ok:
-            # 解析 base64 图片
-            data = response.json()
-            if "candidates" in data and data["candidates"]:
-                content = data["candidates"][0].get("content", {})
-                parts = content.get("parts", [])
-                if parts:
-                    image_data = parts[0].get("inlineData", {}).get("data", "")
-                    if image_data:
-                        # 保存图片
-                        title_lower = title.lower()
-                        category = "general"
-                        for cat, keywords in CATEGORY_MAP:
-                            for kw in keywords:
-                                if kw in title_lower:
-                                    category = cat
-                                    break
-                            if category != "general":
-                                break
-                        
-                        cover_dir = COVER_BASE / category
-                        cover_dir.mkdir(parents=True, exist_ok=True)
-                        cover_path = cover_dir / f"{slug}.jpg"
-                        
-                        image_bytes = base64.b64decode(image_data)
-                        with open(cover_path, 'wb') as f:
-                            f.write(image_bytes)
-                        
-                        print(f"[Gemini] Cover generated: {cover_path}")
-                        return f"{SITE_DOMAIN}/img/china-dest/{category}/{slug}.jpg"
-    
-    except Exception as e:
-        print(f"[Gemini] Failed to generate cover: {e}")
-    
-    return None
+
+    # 拼接提示词 + URL 编码
+    prompt = f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
+    encoded_prompt = requests.utils.quote(prompt)
+
+    url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1200&height=630&nologo=true&seed={abs(hash(slug)) % 100000}"
+    print(f"[Pollinations] URL: {url}")
+    return url
 
 
 def generate_cover_for_post(title, slug):
-    """生成 1080x1350 竖版海报封面图，返回 CDN URL"""
-    # 优先尝试 Gemini 生图
-    gemini_result = generate_cover_with_gemini(title, slug)
-    if gemini_result:
-        return gemini_result
-    
-    # fallback 到本地生成
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-    except ImportError:
-        return None
-
-    # 分类
-    title_lower = title.lower()
-    category = "general"
-    for cat, keywords in CATEGORY_MAP:
-        for kw in keywords:
-            if kw in title_lower:
-                category = cat
-                break
-        if category != "general":
-            break
-
-    # 创建目录
-    cover_dir = COVER_BASE / category
-    cover_dir.mkdir(parents=True, exist_ok=True)
-
-    # 选色
-    color_idx = hash(title) % len(COLOR_SCHEMES)
-    bg_color, text_color = COLOR_SCHEMES[color_idx]
-
-    # 创建画布
-    img = Image.new('RGB', (1080, 1350), color=bg_color)
-    draw = ImageDraw.Draw(img)
-
-    # 尝试字体
-    try:
-        font_title = ImageFont.truetype('DejaVuSans-Bold.ttf', 72)
-        font_sub = ImageFont.truetype('DejaVuSans.ttf', 36)
-    except (OSError, IOError):
-        font_title = ImageFont.load_default()
-        font_sub = ImageFont.load_default()
-
-    # 标题换行
-    title_lines = wrap_text(title, 18)
-    line_height = 90
-    total_height = len(title_lines) * line_height
-    start_y = (1350 - total_height) // 2 - 50
-
-    for i, line in enumerate(title_lines):
-        bbox = draw.textbbox((0, 0), line, font=font_title)
-        text_width = bbox[2] - bbox[0]
-        x = (1080 - text_width) // 2
-        y = start_y + i * line_height
-        draw.text((x, y), line, fill=text_color, font=font_title)
-
-    # 副标题
-    sub = "chinaboundtravel.com"
-    bbox = draw.textbbox((0, 0), sub, font=font_sub)
-    sw = bbox[2] - bbox[0]
-    sx = (1080 - sw) // 2
-    sy = start_y + total_height + 60
-    draw.text((sx, sy), sub, fill=text_color, font=font_sub)
-
-    # 上下装饰线
-    draw.rectangle([150, start_y - 40, 930, start_y - 36], fill=text_color)
-    draw.rectangle([150, sy + 80, 930, sy + 84], fill=text_color)
-
-    # 保存
-    filename = f"{slug}.jpg"
-    img.save(cover_dir / filename, 'JPEG', quality=90, optimize=True)
-    return f"https://{SITE_NAME}/img/china-dest/{category}/{filename}"
+    """生成封面图 - 使用 Pollinations.ai 零存储外链方案"""
+    return generate_pollinations_url(title, slug)
 
 
 GEO_REGIONS = ["EU", "US", "AU"]
