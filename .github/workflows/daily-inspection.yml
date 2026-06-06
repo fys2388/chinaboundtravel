@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily inspection report $(date '+%Y-%m-%d')" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "[skip ci] Daily inspection report $(date '+%Y-%m-%d')" && git push) || true
 
   weekly-report:
     runs-on: ubuntu-latest
@@ -68,4 +68,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly report $(date '+%Y-W%V')" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "[skip ci] Weekly report $(date '+%Y-W%V')" && git push) || true

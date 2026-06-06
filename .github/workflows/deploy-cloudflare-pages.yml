@@ -12,6 +12,8 @@ on:
       - 'layouts/**'
       - 'themes/**'
       - 'config/**'
+    tags-ignore:
+      - '*'
 
 # 并发控制：同一时间只允许一个发布任务运行
 concurrency:
@@ -22,6 +24,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 0. 检查是否需要跳过 CI
+      - name: Check for [skip ci]
+        id: skip-check
+        run: |
+          if echo "${{ github.event.head_commit.message }}" | grep -E "\[skip[ _-]?ci\]|\[ci[ _-]?skip\]" -i; then
+            echo "::warning::Skipping deployment due to [skip ci] in commit message"
+            exit 0
+          fi
+
       # 1. 拉取代码
       - name: Checkout repository
         uses: actions/checkout@v4
