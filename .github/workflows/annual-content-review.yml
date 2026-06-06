@@ -1,8 +1,7 @@
-name: Annual Content Review & Yearly Roundup
+name: Annual Content Review
 
 on:
   schedule:
-    # UTC 08:00 = 北京时间16:00 每年1月1日
     - cron: '0 8 1 1 *'
   workflow_dispatch:
 
@@ -29,10 +28,9 @@ jobs:
           extended: true
 
       - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4
 
-      - name: Generate annual content review post
+      - name: Generate annual content review
         run: |
           python << 'EOF'
           import os
@@ -43,13 +41,9 @@ jobs:
           year = now.year - 1
           date_str = now.strftime("%Y-%m-%d")
 
-          print(f"生成 {year} 年度内容盘点...")
-
           posts_dir = "content/posts"
           all_posts = glob.glob(os.path.join(posts_dir, "*.md"))
           total_posts = len(all_posts)
-
-          print(f"总计 {total_posts} 篇文章")
 
           year_review_title = f"{year} in Review: The Complete ChinaBound Travel Year in Numbers"
 
@@ -57,8 +51,8 @@ jobs:
 title: "{year_review_title}"
 date: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
 lastmod: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
-description: "Year {year} was a landmark year for travel between China and the US. Here's everything we published, analyzed, and learned — with hard data on visa rules, crowd levels, payment systems, and the real safety picture."
-summary: "The {year} annual review from ChinaBound Travel: {total_posts}+ articles published, covering visa policy changes, safety reports, payment guides, seasonal travel tips, and subscriber-only content."
+description: "Year {year} was a landmark year for travel between China and the US."
+summary: "The {year} annual review from ChinaBound Travel: {total_posts}+ articles published."
 tags: ["Annual Review", "China Travel", "Year in Review", "Travel Statistics"]
 categories: ["China Essentials"]
 ShowToc: true
@@ -69,68 +63,31 @@ draft: false
 
 ## {year} at ChinaBound Travel
 
-In {year}, we published {total_posts}+ original articles covering every major aspect of China travel for American readers. Here's what you read — and what mattered most.
+In {year}, we published {total_posts}+ original articles covering every major aspect of China travel.
 
 ### What You Read the Most
 
-Every article this year focused on practical, up-to-date information you need before and during your trip. The top-read topics were:
-
-1. **Visa & Entry Rules** — Our flagship guide was updated multiple times as policy evolved
-2. **Safety & Security** — The honest, data-driven safety assessment became a reader favorite
-3. **Payment Systems** — Alipay and WeChat Pay setup guides solved a real pain point for travelers
-4. **Best Time to Visit** — Monthly crowd data helped thousands plan their trip timing
-5. **Packing Lists** — Practical, tested gear recommendations from real travelers
-
-### The State of China Travel in {year}
-
-What changed, what improved, and what stayed the same for American travelers this year:
-
-**✅ What got better**
-- Visa-free entry expansion brought shorter trips within reach
-- International card acceptance continued to improve at major tourist areas
-- English-language signage coverage expanded at key destinations
-- Air quality data at popular cities remained in the healthy range for most of the year
-
-**⚠️ What to watch**
-- Advance planning remains essential for peak travel periods
-- Some payment systems still require pre-setup before arrival
-- Internet connectivity solutions (eSIM, VPN) continue to need regular updates
-
-### The Content Pipeline
-
-Looking at what we published in {year}:
-
-| Category | Focus | Reader Value |
-|---------|-------|-------|
-| Visa & Entry | Current rules, step-by-step guides | High — critical for trip planning |
-| Safety Reports | Honest, data-backed assessments | Very High — addresses #1 reader concern |
-| Payment & Money | Alipay/WeChat Pay, cash, cards | Very High — practical on-the-ground |
-| Cities & Routes | Beijing, Shanghai, Xi'an, Chengdu, and beyond | High — itinerary planning |
-| Seasonal Guides | When to go, weather, crowds | High — trip timing decisions |
+1. Visa & Entry Rules
+2. Safety & Security
+3. Payment Systems
+4. Best Time to Visit
+5. Packing Lists
 
 ### Looking Ahead to {year + 1}
 
-Our focus for next year:
-- **Deeper city guides** — more granular, neighborhood-level travel recommendations
-- **Real-time travel radar** — weekly updates on conditions for active subscribers
-- **AI trip planning templates** — customizable itineraries based on your trip length
-- **Solo travel and family guides** — content for more specific travel scenarios
+Our focus for next year includes deeper city guides and real-time travel radar.
 
-Thank you for reading, sharing, and subscribing in {year}.
+Thank you for reading in {year}.
 We'll see you on the road in {year + 1}.
-
----
-
-*Published {now.strftime("%B %d, %Y")} — The ChinaBound Travel Team*
 """
 
           filepath = os.path.join(posts_dir, f"{date_str}-chinabound-travel-{year}-year-in-review.md")
           if not os.path.exists(filepath):
               with open(filepath, 'w', encoding='utf-8') as f:
                   f.write(markdown)
-              print(f"✓ 已生成年度盘点文章")
+              print("Review created")
           else:
-              print(f"✓ 文章已存在")
+              print("Review already exists")
           EOF
 
       - name: Build with Hugo
@@ -141,4 +98,4 @@ We'll see you on the road in {year + 1}.
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add content/posts/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] Annual content review $(date '+%Y')" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "[skip ci] Annual content review $(date '+%Y')" && git push) || true
