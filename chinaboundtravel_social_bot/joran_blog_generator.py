@@ -56,8 +56,107 @@ def wrap_text(text, max_chars):
     return lines
 
 
+def generate_cover_with_gemini(title, slug):
+    """使用 Gemini API 生成封面图"""
+    import requests
+    import base64
+    
+    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    if not gemini_api_key:
+        print("[Gemini] No API key found, falling back to local generation")
+        return None
+    
+    # 根据标题确定场景
+    title_lower = title.lower()
+    location_keywords = [
+        ("chengdu", "Chengdu city skyline with pandas, Chinese traditional architecture"),
+        ("beijing", "Beijing Forbidden City, Great Wall of China"),
+        ("shanghai", "Shanghai skyline with Oriental Pearl Tower"),
+        ("xian", "Xian Terracotta Army, ancient city walls"),
+        ("guilin", "Guilin mountains and Li River"),
+        ("zhangjiajie", "Zhangjiajie National Park pillars"),
+        ("hangzhou", "West Lake Hangzhou with pagoda"),
+        ("hong kong", "Hong Kong skyline at night"),
+        ("sichuan", "Sichuan mountains and pandas"),
+        ("yunnan", "Yunnan rice terraces, Lijiang old town"),
+    ]
+    
+    scene_desc = "Beautiful China travel landscape, vibrant colors"
+    for kw, desc in location_keywords:
+        if kw in title_lower:
+            scene_desc = desc
+            break
+    
+    prompt = f"""
+    Professional travel blog cover image, vertical format 1080x1350, 
+    {scene_desc}, 
+    travel photography style, vibrant colors, 
+    clean composition with copy space for text overlay,
+    high quality, professional lighting,
+    no text on image, only beautiful scenery.
+    """
+    
+    try:
+        response = requests.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent?key={gemini_api_key}",
+            json={
+                "contents": [{
+                    "parts": [{
+                        "text": prompt
+                    }]
+                }],
+                "generationConfig": {
+                    "responseMimeType": "image/png"
+                }
+            },
+            timeout=60
+        )
+        
+        if response.ok:
+            # 解析 base64 图片
+            data = response.json()
+            if "candidates" in data and data["candidates"]:
+                content = data["candidates"][0].get("content", {})
+                parts = content.get("parts", [])
+                if parts:
+                    image_data = parts[0].get("inlineData", {}).get("data", "")
+                    if image_data:
+                        # 保存图片
+                        title_lower = title.lower()
+                        category = "general"
+                        for cat, keywords in CATEGORY_MAP:
+                            for kw in keywords:
+                                if kw in title_lower:
+                                    category = cat
+                                    break
+                            if category != "general":
+                                break
+                        
+                        cover_dir = COVER_BASE / category
+                        cover_dir.mkdir(parents=True, exist_ok=True)
+                        cover_path = cover_dir / f"{slug}.jpg"
+                        
+                        image_bytes = base64.b64decode(image_data)
+                        with open(cover_path, 'wb') as f:
+                            f.write(image_bytes)
+                        
+                        print(f"[Gemini] Cover generated: {cover_path}")
+                        return f"{SITE_DOMAIN}/img/china-dest/{category}/{slug}.jpg"
+    
+    except Exception as e:
+        print(f"[Gemini] Failed to generate cover: {e}")
+    
+    return None
+
+
 def generate_cover_for_post(title, slug):
     """生成 1080x1350 竖版海报封面图，返回 CDN URL"""
+    # 优先尝试 Gemini 生图
+    gemini_result = generate_cover_with_gemini(title, slug)
+    if gemini_result:
+        return gemini_result
+    
+    # fallback 到本地生成
     try:
         from PIL import Image, ImageDraw, ImageFont
     except ImportError:

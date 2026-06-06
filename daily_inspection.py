@@ -198,6 +198,131 @@ class ContentChecker:
         return issues
 
 
+class AffiliateChecker:
+    """联盟链接检查模块"""
+    
+    def __init__(self):
+        self.issues = []
+        # 常见旅游联盟链接域名
+        self.affiliate_domains = [
+            "ctrip.com",
+            "qunar.com", 
+            "fliggy.com",
+            "booking.com",
+            "agoda.com",
+            "expedia.com",
+            "tripadvisor.com",
+            "viator.com",
+            "klook.com",
+            "getyourguide.com",
+            "ctrip.io",
+            "m.ctrip.com"
+        ]
+        # 联盟链接参数标识
+        self.affiliate_params = ["aff_id", "affiliate_id", "ref", "tracking", "cid", "partner_id"]
+    
+    def check_affiliate_links(self, filepath: Path) -> dict:
+        """检查文章中的联盟链接"""
+        result = {
+            "filepath": str(filepath),
+            "has_affiliate": False,
+            "has_invalid_links": False,
+            "affiliate_links": [],
+            "invalid_links": []
+        }
+        
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 查找所有链接
+            # 匹配 markdown 链接格式: [text](url)
+            link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+            links = link_pattern.findall(content)
+            
+            for text, url in links:
+                # 检查是否是联盟链接
+                is_affiliate = False
+                
+                # 检查域名
+                for domain in self.affiliate_domains:
+                    if domain in url.lower():
+                        is_affiliate = True
+                        break
+                
+                # 检查联盟参数
+                if not is_affiliate:
+                    for param in self.affiliate_params:
+                        if param in url.lower():
+                            is_affiliate = True
+                            break
+                
+                if is_affiliate:
+                    result["has_affiliate"] = True
+                    result["affiliate_links"].append({
+                        "text": text,
+                        "url": url,
+                        "valid": self._check_link_validity(url)
+                    })
+            
+            # 检查是否有无效链接
+            for link in result["affiliate_links"]:
+                if not link["valid"]:
+                    result["has_invalid_links"] = True
+                    result["invalid_links"].append(link)
+        
+        except Exception as e:
+            result["has_invalid_links"] = True
+            result["invalid_links"].append({
+                "error": str(e)
+            })
+        
+        return result
+    
+    def _check_link_validity(self, url: str) -> bool:
+        """检查链接是否有效"""
+        try:
+            # 添加超时，避免阻塞
+            response = urllib.request.urlopen(url, timeout=5)
+            return response.status == 200
+        except Exception:
+            return False
+    
+    def scan_all(self) -> list:
+        logger.info("开始联盟链接检查...")
+        issues = []
+        
+        files = list(POSTS_DIR.glob("*.md"))
+        for filepath in files:
+            result = self.check_affiliate_links(filepath)
+            if result["has_invalid_links"]:
+                issues.append(result)
+                logger.warning(f"发现无效联盟链接: {filepath.name}")
+        
+        return issues
+    
+    def get_affiliate_stats(self) -> dict:
+        """获取联盟链接统计"""
+        stats = {
+            "total_posts": 0,
+            "posts_with_affiliate": 0,
+            "total_affiliate_links": 0,
+            "invalid_links": 0
+        }
+        
+        files = list(POSTS_DIR.glob("*.md"))
+        stats["total_posts"] = len(files)
+        
+        for filepath in files:
+            result = self.check_affiliate_links(filepath)
+            if result["has_affiliate"]:
+                stats["posts_with_affiliate"] += 1
+                stats["total_affiliate_links"] += len(result["affiliate_links"])
+                stats["invalid_links"] += len(result["invalid_links"])
+        
+        return stats
+
+
 class SiteChecker:
     """网站可访问性检查"""
     
@@ -230,7 +355,7 @@ class ReportGenerator:
     def __init__(self):
         self.timestamp = datetime.now().strftime("%Y-%m-%d")
     
-    def generate(self, encoding_issues, content_issues, site_status):
+    def generate(self, encoding_issues, content_issues, affiliate_issues, affiliate_stats, site_status):
         report_path = REPORTS_DIR / f"每日巡检报告_{self.timestamp}.md"
         
         report = f"""# 每日巡检报告_{self.timestamp}
@@ -259,6 +384,7 @@ class ReportGenerator:
                 report += f"- ... 还有 {len(encoding_issues) - 10} 个文件\n"
         
         report += f"""
+
 ## 内容合规性检查
 | 项目 | 状态 | 详情 |
 | --- | --- | --- |
@@ -273,10 +399,28 @@ class ReportGenerator:
                 report += f"- {issue['filepath']}\n"
         
         report += f"""
+
+## 联盟链接检查（核心收益链路）
+| 项目 | 状态 | 详情 |
+| --- | --- | --- |
+| 含联盟链接文章数 | {'OK' if affiliate_stats.get('posts_with_affiliate') > 0 else 'WARN'} | {affiliate_stats.get('posts_with_affiliate', 0)}/{affiliate_stats.get('total_posts', 0)} 篇 |
+| 联盟链接总数 | - | {affiliate_stats.get('total_affiliate_links', 0)} 个 |
+| 无效链接数 | {'OK' if affiliate_stats.get('invalid_links') == 0 else f'FAIL ({affiliate_stats.get("invalid_links")})'} | {affiliate_stats.get('invalid_links', 0)} 个 |
+
+"""
+        if affiliate_issues:
+            report += "\n### 无效联盟链接文件\n"
+            for issue in affiliate_issues[:5]:
+                report += f"- **{issue['filepath']}**\n"
+                for link in issue.get('invalid_links', [])[:3]:
+                    report += f"  - `{link.get('url', link.get('error', 'Unknown'))}`\n"
+        
+        report += f"""
+
 ## 今日结论
-> 整体状态：{'OK' if len(encoding_issues) == 0 and len(content_issues) == 0 and site_status.get('site_up') else '需要注意'}
-> 异常问题：{'无' if len(encoding_issues) == 0 and len(content_issues) == 0 else f'{len(encoding_issues) + len(content_issues)} 个问题'}
-> 修复建议：{'无需修复' if len(encoding_issues) == 0 and len(content_issues) == 0 else '运行 fix_encoding.py 修复编码问题'}
+> 整体状态：{'OK' if len(encoding_issues) == 0 and len(content_issues) == 0 and affiliate_stats.get('invalid_links', 0) == 0 and site_status.get('site_up') else '需要注意'}
+> 异常问题：{'无' if len(encoding_issues) == 0 and len(content_issues) == 0 and affiliate_stats.get('invalid_links', 0) == 0 else f'{len(encoding_issues) + len(content_issues) + affiliate_stats.get("invalid_links", 0)} 个问题'}
+> 修复建议：{'无需修复' if len(encoding_issues) == 0 and len(content_issues) == 0 and affiliate_stats.get('invalid_links', 0) == 0 else '修复编码问题和无效联盟链接'}
 
 ---
 **巡检时间**: {datetime.now().isoformat()}
@@ -312,29 +456,39 @@ def main():
     content_checker = ContentChecker()
     content_issues = content_checker.scan_all()
     
-    # 3. 网站检查
+    # 3. 联盟链接检查（核心收益链路）
+    affiliate_checker = AffiliateChecker()
+    affiliate_issues = affiliate_checker.scan_all()
+    affiliate_stats = affiliate_checker.get_affiliate_stats()
+    
+    # 4. 网站检查
     site_checker = SiteChecker()
     site_status = site_checker.check_site()
     
-    # 4. 生成报告
+    # 5. 生成报告
     report_gen = ReportGenerator()
     report_path = report_gen.generate(
         encoding_issues,
         content_issues,
+        affiliate_issues,
+        affiliate_stats,
         site_status
     )
     
-    # 5. 输出总结
+    # 6. 输出总结
     print("\n" + "="*60)
     print("巡检总结")
     print("="*60)
     print(f"编码问题: {len(encoding_issues)} 个文件")
     print(f"内容问题: {len(content_issues)} 个文件")
+    print(f"联盟链接: {affiliate_stats.get('total_affiliate_links', 0)} 个")
+    print(f"无效链接: {affiliate_stats.get('invalid_links', 0)} 个")
     print(f"网站状态: {'在线' if site_status.get('site_up') else '离线'}")
     print(f"报告位置: {report_path}")
     print("="*60)
     
-    return 0 if len(encoding_issues) == 0 else 1
+    total_issues = len(encoding_issues) + len(content_issues) + affiliate_stats.get('invalid_links', 0)
+    return 0 if total_issues == 0 else 1
 
 
 if __name__ == "__main__":
