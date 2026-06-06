@@ -1,4 +1,4 @@
-﻿---
+﻿﻿﻿---
 title: How to Keep Your Internet Connected in China - eSIM vs. Local SIM vs. VPN
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.jpg"

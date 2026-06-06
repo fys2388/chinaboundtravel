@@ -1,4 +1,4 @@
-﻿---
+﻿﻿﻿---
 title: The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.jpg"

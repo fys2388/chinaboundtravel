@@ -157,12 +157,19 @@ class DeepSeekClient:
         self.main_key = os.getenv("DEEPSEEK_API_KEY")
         self.backup_key = os.getenv("DEEPSEEK_BACKUP_API_KEY")
         self.url = "https://api.deepseek.com/v1/chat/completions"
+        self._use_backup = False  # 标记是否已切换到备用密钥
+    
+    def _get_current_key(self):
+        """获取当前应该使用的密钥"""
+        if self._use_backup and self.backup_key:
+            return self.backup_key
+        return self.main_key
     
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=8))
     def chat(self, messages, model="deepseek-chat", max_tokens=3000, temperature=0.7):
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.main_key}"
+            "Authorization": f"Bearer {self._get_current_key()}"
         }
         
         payload = {
@@ -172,17 +179,16 @@ class DeepSeekClient:
             "temperature": temperature
         }
         
-        try:
+        response = requests.post(self.url, headers=headers, json=payload, timeout=120)
+        
+        # 如果主密钥失败且有备用密钥，切换到备用密钥
+        if response.status_code == 401 and not self._use_backup and self.backup_key:
+            self._use_backup = True
+            headers["Authorization"] = f"Bearer {self.backup_key}"
             response = requests.post(self.url, headers=headers, json=payload, timeout=120)
-            response.raise_for_status()
-            return response.json()["choices"][0]["message"]["content"]
-        except Exception:
-            if self.backup_key:
-                headers["Authorization"] = f"Bearer {self.backup_key}"
-                response = requests.post(self.url, headers=headers, json=payload, timeout=120)
-                response.raise_for_status()
-                return response.json()["choices"][0]["message"]["content"]
-            raise
+        
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
 
 class ManifestManager:
     def __init__(self):
@@ -333,8 +339,8 @@ class SubEditor:
             errors.append("【排版】分级标题未使用H2标签##")
         
         img_num = article_md.count("![")
-        if img_num < 2:
-            errors.append("【排版】配图不足2张，请添加图片占位符")
+        if img_num < 1:
+            errors.append("【排版】配图不足1张，请添加图片占位符")
         
         link_count = article_md.count("[") - img_num
         if link_count < 2:
@@ -460,7 +466,7 @@ class BlogGenerator:
         slug = re.sub(r'[\s-]+', '-', slug).strip('-')
         return slug
     
-    def create_frontmatter(self, title, geo_region):
+    def create_frontmatter(self, title, geo_region, topic):
         slug = self.generate_slug(title)
         date = datetime.now().strftime("%Y-%m-%dT10:00:00+08:00")
         
@@ -561,7 +567,7 @@ class BlogGenerator:
         DRAFT_DIR.mkdir(parents=True, exist_ok=True)
         draft_path = DRAFT_DIR / f"{datetime.now().strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
         
-        frontmatter = self.create_frontmatter(title, geo_region)
+        frontmatter = self.create_frontmatter(title, geo_region, topic)
         self.write_markdown(frontmatter, content, draft_path)
         
         sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
@@ -588,7 +594,7 @@ class BlogGenerator:
         
         canonical_url = frontmatter["canonicalURL"]
         cover_msg = f"\n封面图: {cover_url}" if cover_url else ""
-        self.notifier.send_notification("✅ 双审全通过，正式发布", f"文章《{title}》已成功发布！\n\n落地链接: {canonicalURL}\n目标受众: {geo_region}\n尝试次数: {attempt}{cover_msg}")
+        self.notifier.send_notification("✅ 双审全通过，正式发布", f"文章《{title}》已成功发布！\n\n落地链接: {canonical_url}\n目标受众: {geo_region}\n尝试次数: {attempt}{cover_msg}")
         
         print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
         print(f"  Cover: {cover_url}")

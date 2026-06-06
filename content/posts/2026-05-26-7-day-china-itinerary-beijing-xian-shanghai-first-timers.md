@@ -1,4 +1,4 @@
-﻿---
+﻿﻿﻿---
 title: '7-Day China First Timer Itinerary: Beijing, Xi''an & Shanghai 2026'
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/beijing/7-day-china-first-timer-itinerary-beijing-xian-shanghai.jpg"

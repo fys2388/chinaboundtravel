@@ -1,4 +1,4 @@
-﻿---
+﻿﻿﻿---
 title: Welcome to ChinaBound Travel Blog
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/hello-world.jpg"
