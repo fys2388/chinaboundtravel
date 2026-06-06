@@ -265,10 +265,11 @@ Requirements:
 2. Include personal anecdotes about living in China for 10 years
 3. Mention your California roots naturally
 4. Minimum 750 words
-5. Include at least 2 internal links to other China travel topics
+5. Include at least 2 internal links to other China travel topics using markdown link format like [topic](https://chinaboundtravel.com/posts/topic-slug/)
 6. Structure: Introduction, 3 main sections with H2 headings (##), Conclusion
 7. Use markdown format with proper headings
-8. Include relevant images with alt text placeholders
+8. MUST include at least 1 image placeholder in markdown format: ![alt text describing the image](https://example.com/image.jpg)
+9. DO NOT mention government, politics, or sensitive political topics
 
 DO NOT include any canonicalURL in the output. Just write the article content."""
         
