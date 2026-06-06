@@ -65,4 +65,6 @@ Look, I’m not trying to scare you. China is one of the safest countries I’ve
 
 My advice? Prepare like a Californian: pack light, stay hydrated, and always have a backup plan. Download your apps, carry a power bank, and keep your phone secure. And when you’re walking down a busy street in Chengdu, remember: that scooter might not stop, but the people will. They’ll help you up, hand you your dropped bag, and maybe even point you to the best hotpot spot in town.
 
-So go ahead—book that flight. Eat that spicy skewer. Just keep your phone in your front pocket and your eyes on the road. You’ll be fine. And if you need more tips, I’ll be here, probably eating mapo tofu and missing the California sun. Safe travels, amigos.
+So go ahead—book that flight. Eat that spicy skewer. Just keep your phone in your front pocket and your eyes on the road. You'll be fine. And if you need more tips, I'll be here, probably eating mapo tofu and missing the California sun. Safe travels, amigos.
+
+<!-- Published on 2026-06-06 -->
