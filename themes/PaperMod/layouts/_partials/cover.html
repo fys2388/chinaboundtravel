@@ -19,9 +19,19 @@
         {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
-    {{- $imgdl := (.Params.cover.image) | absURL }}
+    {{- $imgdl := (.Params.cover.image) }}
+    {{- $isExternal := false }}
+
+    {{- /* Check if image is an external URL (starts with http) */}}
+    {{- if hasPrefix $imgdl "http" }}
+        {{- $isExternal = true }}
+    {{- else }}
+        {{- $imgdl = $imgdl | absURL }}
+    {{- end }}
+
     {{- if $cover -}}
         {{- $imgdl = $cover.Permalink }}
+        {{- $isExternal = false }}
     {{- end -}}
 
     {{- if $addLink }}
@@ -29,7 +39,7 @@
     {{- end }}
 
     {{- if $cover -}}
-        {{/* i.e it is present in page bundle */}}
+        {{- /* i.e it is present in page bundle */}}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
             <img loading="{{$loading}}"
                 srcset='{{- range $size := $sizes -}}
@@ -45,6 +55,9 @@
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
             <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
         {{- end }}
+    {{- else if $isExternal }}
+        {{- /* External URL - render directly without absURL processing */}}
+        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
     {{- else }}
         {{- /* For absolute urls and external links, no img processing here */}}
         <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
