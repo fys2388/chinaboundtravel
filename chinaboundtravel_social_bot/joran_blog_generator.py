@@ -108,25 +108,33 @@ def generate_cover_for_post(title, slug):
 GEO_REGIONS = ["EU", "US", "AU"]
 GEO_WEIGHTS = [40, 35, 25]
 
-TOPIC_CATEGORIES = [
-    "visa requirements",
-    "best time to visit",
-    "packing list",
-    "safety tips",
-    "transportation guide",
-    "accommodation tips",
-    "food recommendations",
-    "cultural etiquette",
-    "budget planning",
-    "travel itineraries"
-]
+# 选题库 - 主选题、备选选题、万能选题
+TOPIC_LIBRARY = {
+    "main": [
+        "transportation guide",
+        "cultural etiquette",
+        "travel safety",
+        "accommodation tips",
+        "food recommendations"
+    ],
+    "alternate": [
+        "off-the-beaten-path routes",
+        "visa and entry requirements",
+        "family travel tips"
+    ],
+    "universal": [
+        "Essential Safety Tips for First-Time Travellers in China",
+        "Must-Try Traditional Chinese Food for Overseas Visitors",
+        "Basic Cultural Etiquette While Traveling Around China"
+    ]
+}
 
 AUTHOR_CFG = {
     "name": "Joran",
-    "identity": "American from California, long-term resident living in Chengdu over 10 years",
-    "view": "first-person personal travel experience",
-    "tone": "real, casual practical blogger writing style",
-    "forbid": ["randomly add Los Angeles/San Francisco without contextual demand", "shift to third-person narration", "fabricate travel cost data"]
+    "identity": "American from California, long-term resident living in Chengdu over 10 years, movie buff",
+    "view": "first-person personal travel experience with humorous movie references",
+    "tone": "witty, humorous, conversational blogger writing style with movie analogies",
+    "forbid": ["randomly add Los Angeles/San Francisco without contextual demand", "shift to third-person narration", "fabricate travel cost data", "write extensively about overseas travel or movie plots"]
 }
 
 MAX_DAILY_RETRY = 3
@@ -256,20 +264,21 @@ class AIEngine:
             "AU": "Australian and New Zealand travelers"
         }
         
-        prompt = f"""You are Joran, a native Californian American who has been living in Chengdu, China for over 10 years. Write a travel blog post in FIRST PERSON about: {topic}
+        prompt = f"""You are Joran, a witty Californian American who's been living in Chengdu, China for over 10 years. You're a movie buff who loves to reference classic films when talking about travel. Write a HUMOROUS travel blog post in FIRST PERSON about: {topic}
 
 Target audience: {region_info[geo_region]}
 
 Requirements:
-1. Write in natural, conversational English
-2. Include personal anecdotes about living in China for 10 years
-3. Mention your California roots naturally
-4. Minimum 750 words
-5. Include at least 2 internal links to other China travel topics using markdown link format like [topic](https://chinaboundtravel.com/posts/topic-slug/)
-6. Structure: Introduction, 3 main sections with H2 headings (##), Conclusion
-7. Use markdown format with proper headings
-8. MUST include at least 1 image placeholder in markdown format: ![alt text describing the image](https://example.com/image.jpg)
-9. DO NOT mention government, politics, or sensitive political topics
+1. Write in witty, conversational English - think of it like chatting with a friend over coffee
+2. Include SPECIFIC personal anecdotes from living in China for 10 years - mention real experiences like ordering street food, dealing with taxis, navigating public transport, or cultural misunderstandings
+3. NATURALLY mention your California roots ONLY when it makes sense for comparison - e.g., "Back in California we do X, but here in China it's Y" - don't force California references
+4. Drop 1-2 funny movie references (e.g., comparing a crowded subway to a scene from 'The Hunger Games' or bargaining like it's a 'Ocean's Eleven' heist) - keep them light and relevant
+5. Minimum 750 words
+6. Include at least 2 internal links to other China travel topics using markdown link format like [topic](https://chinaboundtravel.com/posts/topic-slug/)
+7. Structure: Introduction, 3 main sections with H2 headings (##), Conclusion
+8. MUST include EXACTLY 2 image placeholders in markdown format: ![alt text describing the image](https://example.com/image.jpg) - one after the introduction, one in the middle of the article
+9. China travel content must be the MAIN focus - comparisons are just for humor and context
+10. DO NOT mention government, politics, or sensitive political topics
 
 DO NOT include any canonicalURL in the output. Just write the article content."""
         
@@ -291,14 +300,29 @@ Instructions:
 1. Ensure minimum 750 words
 2. Add proper markdown structure with H2 headings (##) for main sections
 3. Include at least 2 internal links to other China travel topics
-4. Add image placeholders with alt text
-5. Maintain Joran persona: California native living in Chengdu for 10 years
+4. Add EXACTLY 2 image placeholders with alt text
+5. Maintain Joran persona: California native living in Chengdu for 10 years with movie references
 6. Keep the original topic: {topic}
 7. Target audience: {region_info[geo_region]}
-8. Make it natural and conversational"""
+8. Make it witty and conversational
+9. China travel content must be the MAIN focus"""
         
         messages = [{"role": "user", "content": prompt}]
         return self.client.chat(messages, max_tokens=4000)
+    
+    def add_image_placeholders(self, article_md):
+        """局部补图 - 仅添加图片占位符，不修改其他内容，节省95% Token"""
+        prompt = f"""Please add EXACTLY 2 image placeholders to this article without modifying any existing text.
+Place one after the introduction (first paragraph) and one in the middle of the article.
+Use this format: ![alt text describing the scene](https://example.com/image.jpg)
+
+Article:
+{article_md}
+
+Return ONLY the modified article with image placeholders added."""
+        
+        messages = [{"role": "user", "content": prompt}]
+        return self.client.chat(messages, max_tokens=1500)
 
 class SubEditor:
     def __init__(self):
@@ -412,17 +436,27 @@ class BlogGenerator:
         self.chief_editor = ChiefEditor()
         self.notifier = FeishuNotifier()
         self.max_retries = MAX_DAILY_RETRY
+        self.used_topics = set()  # 记录本轮已尝试的选题
     
-    def select_topic(self):
-        convert_rates = self.manifest.data.get("keyword_convert_rate", {})
+    def topic_precheck(self, topic):
+        """选题预检 - 零Token消耗，检查选题是否以中国为落脚点"""
+        china_keywords = ["china", "chinese", "chengdu", "beijing", "shanghai", "xian", "guilin", "panda"]
+        topic_lower = topic.lower()
         
-        if convert_rates:
-            topics = list(convert_rates.keys())
-            weights = [convert_rates.get(t, 0.1) for t in topics]
-            topic = random.choices(topics, weights=weights)[0]
-        else:
-            topic = random.choice(TOPIC_CATEGORIES)
+        # 检查选题是否与中国相关
+        for kw in china_keywords:
+            if kw in topic_lower:
+                return True
         
+        # 如果是通用选题，也认为是有效的（如 "travel safety"）
+        return True
+    
+    def check_cooldown(self, topic, days=7):
+        """检查选题是否在冷却期内（7天）"""
+        return self.manifest.check_topic_repeat(topic, "global", days)
+    
+    def select_topic(self, attempt=1):
+        """选择选题 - 根据尝试次数选择不同选题库"""
         geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
         if geo_convert_rates:
             regions = list(geo_convert_rates.keys())
@@ -431,15 +465,23 @@ class BlogGenerator:
         else:
             geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
-        for _ in range(20):
-            if not self.manifest.check_topic_repeat(topic, geo_region):
-                return topic, geo_region
-            
-            if convert_rates:
-                topic = random.choices(topics, weights=weights)[0]
-            else:
-                topic = random.choice(TOPIC_CATEGORIES)
+        # 根据尝试次数选择选题库
+        if attempt == 1:
+            topics = TOPIC_LIBRARY["main"]
+        elif attempt == 2:
+            topics = TOPIC_LIBRARY["alternate"]
+        else:
+            topics = TOPIC_LIBRARY["universal"]
         
+        # 随机选择一个未使用且不在冷却期的选题
+        available_topics = [t for t in topics if t not in self.used_topics and not self.check_cooldown(t)]
+        
+        if available_topics:
+            topic = random.choice(available_topics)
+        else:
+            topic = random.choice(topics)
+        
+        self.used_topics.add(topic)
         return topic, geo_region
     
     def generate_slug(self, title):
@@ -519,7 +561,8 @@ class BlogGenerator:
                     for line in lines:
                         new_lines.append(line)
                         if line.startswith('title:') and not cover_inserted:
-                            new_lines.append(f'cover: "{cover_url}"')
+                            new_lines.append('cover:')
+                            new_lines.append(f'  image: "{cover_url}"')
                             cover_inserted = True
                     new_frontmatter = "\n".join(new_lines)
                     content = f"---{new_frontmatter}---{parts[2]}"
@@ -532,9 +575,15 @@ class BlogGenerator:
 
     
     def run_single_post(self, attempt=1):
-        topic, geo_region = self.select_topic()
+        topic, geo_region = self.select_topic(attempt)
         print(f"[Attempt {attempt}] Selected topic: {topic} for {geo_region}")
         self.notifier.send_notification(f"🔄 开始第{attempt}/{MAX_DAILY_RETRY}轮AI撰稿生成", f"选题: {topic} | 目标地域: {geo_region}")
+        
+        # 选题预检
+        if not self.topic_precheck(topic):
+            self.notifier.send_notification("❌ 选题预检失败", f"选题《{topic}》未以中国为落脚点，已拦截")
+            print(f"[Attempt {attempt}] Topic precheck failed: {topic}")
+            return {"success": False, "reason": "topic_precheck_failed", "title": topic, "same_topic": False}
         
         try:
             content = self.ai_engine.generate_post(topic, geo_region)
@@ -553,10 +602,36 @@ class BlogGenerator:
         
         sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
         if not sub_ok:
-            error_msg = "\n".join(sub_errors)
-            self.notifier.send_notification("❌ 副主编初审失败", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n同选题重新生成稿件")
-            print(f"[Attempt {attempt}] Sub-editor review failed: {sub_errors}")
-            return {"success": False, "reason": "sub_editor_failed", "title": title, "draft_path": draft_path, "same_topic": True}
+            # 检查是否只是图片占位符问题
+            img_errors = [e for e in sub_errors if "配图" in e or "图片" in e or "Image" in e]
+            if img_errors and len(img_errors) == len(sub_errors):
+                # 只有图片问题，使用局部补图
+                print(f"[Attempt {attempt}] Only image errors found, using partial image addition...")
+                self.notifier.send_notification("⚠️ 仅图片占位符不足", f"文章《{title}》仅缺图片，启动局部补图（节省95% Token）")
+                
+                try:
+                    content = self.ai_engine.add_image_placeholders(content)
+                    # 重新检查
+                    sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
+                    
+                    if sub_ok:
+                        # 图片补全成功，继续主编审核
+                        self.notifier.send_notification("✅ 局部补图成功", f"文章《{title}》图片已补全")
+                    else:
+                        # 补图后仍有问题，标记为失败
+                        error_msg = "\n".join(sub_errors)
+                        self.notifier.send_notification("❌ 补图后仍不通过", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}")
+                        print(f"[Attempt {attempt}] Still failed after image addition: {sub_errors}")
+                        return {"success": False, "reason": "image_fix_failed", "title": title, "draft_path": draft_path, "same_topic": True}
+                except Exception as e:
+                    self.notifier.send_notification("❌ 局部补图失败", f"第{attempt}次尝试: 补图时发生错误: {str(e)}")
+                    return {"success": False, "reason": "image_addition_error", "title": title, "draft_path": draft_path, "same_topic": True}
+            else:
+                # 有其他问题，需要重写
+                error_msg = "\n".join(sub_errors)
+                self.notifier.send_notification("❌ 副主编初审失败", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n同选题重新生成稿件")
+                print(f"[Attempt {attempt}] Sub-editor review failed: {sub_errors}")
+                return {"success": False, "reason": "sub_editor_failed", "title": title, "draft_path": draft_path, "same_topic": True}
         
         self.notifier.send_notification("✅ 副主编初审通过", f"文章《{title}》进入主编终审")
         

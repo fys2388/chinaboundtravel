@@ -1,5 +1,5 @@
 {
-  "month_post_count": 4,
+  "month_post_count": 5,
   "last_reset_date": "2026-06-01",
   "last_social_publish": "2026-06-03 21:10:37",
   "history_topics": [
@@ -21,6 +21,11 @@
     {
       "topic": "safety tips",
       "geo_region": "US",
+      "create_date": "2026-06-06"
+    },
+    {
+      "topic": "transportation guide",
+      "geo_region": "EU",
       "create_date": "2026-06-06"
     }
   ],
