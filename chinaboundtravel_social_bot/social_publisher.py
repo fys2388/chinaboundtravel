@@ -221,6 +221,60 @@ def update_manifest():
         json.dump(manifest, f, indent=2)
 
 
+def check_daily_social_limit(daily_limit=5):
+    """检查今日社媒发布是否已达上限，返回 (是否受限, 今日已发布数, 限额)"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    manifest = get_manifest()
+    
+    # 初始化默认值（防止旧版本 manifest 缺失字段）
+    if "daily_social_publish_date" not in manifest:
+        manifest["daily_social_publish_date"] = today
+        manifest["daily_social_publish_count"] = 0
+        manifest["daily_social_publish_limit"] = daily_limit
+        manifest_path = BASE_DIR / "manifest.json"
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2)
+        return False, 0, daily_limit
+    
+    # 新的一天，重置计数
+    if manifest["daily_social_publish_date"] != today:
+        manifest["daily_social_publish_date"] = today
+        manifest["daily_social_publish_count"] = 0
+        manifest_path = BASE_DIR / "manifest.json"
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2)
+        return False, 0, daily_limit
+    
+    # 确保 limit 字段存在
+    if "daily_social_publish_limit" not in manifest:
+        manifest["daily_social_publish_limit"] = daily_limit
+    
+    current_count = manifest.get("daily_social_publish_count", 0)
+    limit = manifest.get("daily_social_publish_limit", daily_limit)
+    is_limited = current_count >= limit
+    
+    return is_limited, current_count, limit
+
+
+def increment_daily_social_count():
+    """社媒发布成功后，递增今日计数"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    manifest_path = BASE_DIR / "manifest.json"
+    manifest = get_manifest()
+    
+    # 新的一天或字段缺失，重置并初始化
+    if manifest.get("daily_social_publish_date") != today:
+        manifest["daily_social_publish_date"] = today
+        manifest["daily_social_publish_count"] = 0
+        if "daily_social_publish_limit" not in manifest:
+            manifest["daily_social_publish_limit"] = 5
+    
+    manifest["daily_social_publish_count"] = manifest.get("daily_social_publish_count", 0) + 1
+    with open(manifest_path, 'w', encoding='utf-8') as f:
+        json.dump(manifest, f, indent=2)
+    return manifest["daily_social_publish_count"]
+
+
 def send_feishu_notification(results: list):
     """发送飞书通知"""
     webhook = os.getenv("FEISHU_WEBHOOK_URL")
@@ -255,6 +309,13 @@ def run():
     last_publish = manifest.get("last_social_publish", "2020-01-01")
     print(f"上次发布时间: {last_publish}")
 
+    # 【每日发布限额】检查今日是否已达社媒发布上限
+    is_limited, current_count, daily_limit = check_daily_social_limit()
+    if is_limited:
+        print(f"⏸️  今日社媒发布已达上限: {current_count}/{daily_limit}")
+        print("为保证社媒曝光效果，今日不再发布新文章。")
+        return
+
     new_posts = []
     for md_file in sorted(POSTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime):
         mtime = datetime.fromtimestamp(md_file.stat().st_mtime)
@@ -268,8 +329,14 @@ def run():
     print(f"发现 {len(new_posts)} 篇待发布文章")
 
     results = []
-    for article in new_posts:
-        print(f"\n--- 处理: {article['title']} ---")
+    for idx, article in enumerate(new_posts):
+        print(f"\n--- 处理 [{idx+1}/{len(new_posts)}]: {article['title']} ---")
+
+        # 【发布前再次检查】是否已达今日上限
+        is_limited_now, current_count_now, _ = check_daily_social_limit()
+        if is_limited_now:
+            print(f"⏸️  已达今日社媒发布上限 ({current_count_now}/{daily_limit})，剩余文章延后至明日发布")
+            break
 
         # 1. 判断分类
         category = classify_category(article["title"])
@@ -291,6 +358,8 @@ def run():
             platforms = worker_resp.get("platforms", {})
             success_platforms = platforms.get("success", [])
             failed_platforms = platforms.get("failed", [])
+            # 【发布成功】递增今日计数
+            increment_daily_social_count()
 
         result = {
             "title": article["title"],

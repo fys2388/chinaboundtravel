@@ -234,6 +234,51 @@ class ManifestManager:
         
         return self.data["month_post_count"]
 
+    def check_daily_social_limit(self, daily_limit=5):
+        """检查今日社媒发布是否已达上限，返回 (是否受限, 今日已发布数, 限额)"""
+        today = datetime.now().strftime("%Y-%m-%d")
+        
+        # 初始化默认值（防止旧版本 manifest 缺失字段）
+        if "daily_social_publish_date" not in self.data:
+            self.data["daily_social_publish_date"] = today
+            self.data["daily_social_publish_count"] = 0
+            self.data["daily_social_publish_limit"] = daily_limit
+            self.save()
+            return False, 0, daily_limit
+        
+        # 新的一天，重置计数
+        if self.data["daily_social_publish_date"] != today:
+            self.data["daily_social_publish_date"] = today
+            self.data["daily_social_publish_count"] = 0
+            self.save()
+            return False, 0, daily_limit
+        
+        # 确保 limit 字段存在
+        if "daily_social_publish_limit" not in self.data:
+            self.data["daily_social_publish_limit"] = daily_limit
+            self.save()
+        
+        current_count = self.data.get("daily_social_publish_count", 0)
+        limit = self.data.get("daily_social_publish_limit", daily_limit)
+        is_limited = current_count >= limit
+        
+        return is_limited, current_count, limit
+
+    def increment_daily_social_count(self):
+        """社媒发布成功后，递增今日计数"""
+        today = datetime.now().strftime("%Y-%m-%d")
+        
+        # 新的一天或字段缺失，重置并初始化
+        if self.data.get("daily_social_publish_date") != today:
+            self.data["daily_social_publish_date"] = today
+            self.data["daily_social_publish_count"] = 0
+            if "daily_social_publish_limit" not in self.data:
+                self.data["daily_social_publish_limit"] = 5
+        
+        self.data["daily_social_publish_count"] = self.data.get("daily_social_publish_count", 0) + 1
+        self.save()
+        return self.data["daily_social_publish_count"]
+
 class FeishuNotifier:
     @staticmethod
     def send_notification(title, content, webhook_url=None):
@@ -613,6 +658,13 @@ class BlogGenerator:
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
+        # 【社媒每日限额】如果今日社媒发布已达上限，就不再生成新文章
+        is_limited, current_count, daily_limit = self.manifest.check_daily_social_limit()
+        if is_limited:
+            self.notifier.send_notification("⏸️ 社媒发布已达日限", f"今日社媒已发布 {current_count} 篇文章，达到每日上限 {daily_limit} 篇。为保证社媒曝光效果，今日不再生成新文章，明日自动恢复。")
+            print(f"Social media limit reached: {current_count}/{daily_limit}. Exiting.")
+            return
+        
         max_posts = 22
         post_count = self.manifest.get_post_count()
         
