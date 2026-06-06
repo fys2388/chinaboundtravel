@@ -1,7 +1,7 @@
 ---
 title: "Budget Planning for China: Lessons from a California Kid Turned Chengdu Local"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.jpg"
+  image: "https://image.pollinations.ai/prompt/Chinese%20yuan%20banknotes%20with%20traditional%20Chinese%20street%20food%20dumplings%20and%20hotpot%20on%20wooden%20table%2C%20budget%20travel%20concept%2C%20warm%20lighting%2C%20professional%20food%20photography%2C%20high%20resolution?width=1200&height=630&nologo=true&seed=20260606"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

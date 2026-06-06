@@ -1,7 +1,7 @@
 ---
 title: "The Sweet Spot: When to Visit Chengdu (and Why Your European Calendar Needs a Reset)"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.jpg"
+  image: "https://image.pollinations.ai/prompt/Chengdu%20pandas%20eating%20bamboo%20in%20green%20forest%20with%20ancient%20Chinese%20tea%20house%20pavilion%20at%20golden%20hour%20sunset%2C%20professional%20travel%20photography%2C%20cinematic%20composition%2C%20high%20resolution%2C%20vibrant%20natural%20colors%2C%20serene%20atmosphere?width=1200&height=630&nologo=true&seed=20260606"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

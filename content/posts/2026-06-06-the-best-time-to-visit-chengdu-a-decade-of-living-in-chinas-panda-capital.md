@@ -1,7 +1,7 @@
 ---
 title: "The Best Time to Visit Chengdu: A Decade of Living in China's Panda Capital"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.jpg"
+  image: "https://image.pollinations.ai/prompt/Giant%20panda%20eating%20bamboo%20in%20Chengdu%20Research%20Base%20with%20cherry%20blossom%20spring%20flowers%2C%20professional%20wildlife%20photography%2C%20soft%20natural%20lighting%2C%20high%20resolution%2C%20adorable%20cute%20panda%20portrait?width=1200&height=630&nologo=true&seed=20260606"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"
