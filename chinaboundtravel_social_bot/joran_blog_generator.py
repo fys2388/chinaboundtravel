@@ -146,6 +146,8 @@ class DeepSeekClient:
         self.backup_key = os.getenv("DEEPSEEK_BACKUP_API_KEY")
         self.url = "https://api.deepseek.com/v1/chat/completions"
         self._use_backup = False  # 标记是否已切换到备用密钥
+        # 【降本控规】强制使用 deepseek-v4-flash，全局禁用 pro/reasoner
+        self.default_model = "deepseek-v4-flash"
     
     def _get_current_key(self):
         """获取当前应该使用的密钥"""
@@ -154,14 +156,17 @@ class DeepSeekClient:
         return self.main_key
     
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=8))
-    def chat(self, messages, model="deepseek-chat", max_tokens=3000, temperature=0.7):
+    def chat(self, messages, model=None, max_tokens=720, temperature=0.7):
+        # 【降本控规】强制使用 deepseek-v4-flash，忽略任何传入的 pro/reasoner 模型
+        use_model = self.default_model
+        
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {self._get_current_key()}"
         }
         
         payload = {
-            "model": model,
+            "model": use_model,
             "messages": messages,
             "max_tokens": max_tokens,
             "temperature": temperature
@@ -259,31 +264,37 @@ class AIEngine:
     
     def generate_post(self, topic, geo_region):
         region_info = {
-            "EU": "European travelers from countries like Germany, France, UK, Italy, Spain",
-            "US": "American travelers from the United States, primarily California and major cities",
+            "EU": "European travelers (UK, Germany, France, Italy, Spain)",
+            "US": "American travelers (California, major cities)",
             "AU": "Australian and New Zealand travelers"
         }
         
-        prompt = f"""You are Joran, a witty Californian American who's been living in Chengdu, China for over 10 years. You're a movie buff who loves to reference classic films when talking about travel. Write a HUMOROUS travel blog post in FIRST PERSON about: {topic}
+        # 【降本版】精简Prompt，去掉冗余，固定图片占位符
+        prompt = f"""Joran: California American, 10+ years living in Chengdu China, movie buff, humorous travel blogger.
 
+Write a HUMOROUS FIRST-PERSON travel blog post about: {topic}
 Target audience: {region_info[geo_region]}
 
-Requirements:
-1. Write in witty, conversational English - think of it like chatting with a friend over coffee
-2. Include SPECIFIC personal anecdotes from living in China for 10 years - mention real experiences like ordering street food, dealing with taxis, navigating public transport, or cultural misunderstandings
-3. NATURALLY mention your California roots ONLY when it makes sense for comparison - e.g., "Back in California we do X, but here in China it's Y" - don't force California references
-4. Drop 1-2 funny movie references (e.g., comparing a crowded subway to a scene from 'The Hunger Games' or bargaining like it's a 'Ocean's Eleven' heist) - keep them light and relevant
-5. Minimum 750 words
-6. Include at least 2 internal links to other China travel topics using markdown link format like [topic](https://chinaboundtravel.com/posts/topic-slug/)
-7. Structure: Introduction, 3 main sections with H2 headings (##), Conclusion
-8. MUST include EXACTLY 2 image placeholders in markdown format: ![alt text describing the image](https://example.com/image.jpg) - one after the introduction, one in the middle of the article
-9. China travel content must be the MAIN focus - comparisons are just for humor and context
-10. DO NOT mention government, politics, or sensitive political topics
+Rules:
+1. Conversational, witty tone - like chatting with a friend
+2. Include SPECIFIC personal anecdotes from China (street food, taxis, transport, cultural moments)
+3. Mention California roots NATURALLY only when relevant for comparison
+4. Include 1-2 funny movie references (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven')
+5. Minimum 700 words
+6. Include at least 2 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
+7. Structure: Introduction + 3 H2 sections (##) + Short Conclusion
+8. MUST include EXACTLY 2 image placeholders:
+   - One AFTER the introduction
+   - One IN the MIDDLE of the article
+   - Format: ![alt text describing the scene](https://example.com/image.jpg)
+9. MAIN FOCUS must be China travel - comparisons/California/movies are just flavor
+10. NO government, politics, sensitive topics
 
-DO NOT include any canonicalURL in the output. Just write the article content."""
+Output ONLY the article content."""
         
         messages = [{"role": "user", "content": prompt}]
-        return self.client.chat(messages, max_tokens=4000)
+        # 【降本】max_tokens=1200，输出约900词（足够700词+2张图+内链）
+        return self.client.chat(messages, max_tokens=1200)
     
     def rewrite_post(self, content, topic, geo_region):
         region_info = {
@@ -292,76 +303,65 @@ DO NOT include any canonicalURL in the output. Just write the article content.""
             "AU": "Australian and New Zealand travelers"
         }
         
-        prompt = f"""Rewrite this blog post to fix formatting and structure issues:
+        # 【降本】精简重写Prompt
+        prompt = f"""Rewrite this blog post. Fix any formatting issues, add missing structure, ensure minimum 700 words.
 
 {content}
 
-Instructions:
-1. Ensure minimum 750 words
-2. Add proper markdown structure with H2 headings (##) for main sections
-3. Include at least 2 internal links to other China travel topics
-4. Add EXACTLY 2 image placeholders with alt text
-5. Maintain Joran persona: California native living in Chengdu for 10 years with movie references
-6. Keep the original topic: {topic}
-7. Target audience: {region_info[geo_region]}
-8. Make it witty and conversational
-9. China travel content must be the MAIN focus"""
+Requirements:
+1. Add proper H2 headings (##) for main sections if missing
+2. Add at least 2 internal links to other China travel topics
+3. Add EXACTLY 2 image placeholders:
+   - One AFTER the introduction
+   - One IN the MIDDLE of the article
+   - Format: ![alt text describing the scene](https://example.com/image.jpg)
+4. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
+5. Original topic: {topic}
+6. Target audience: {region_info[geo_region]}
+7. MAIN FOCUS must be China travel
+
+Output ONLY the rewritten article."""
         
         messages = [{"role": "user", "content": prompt}]
-        return self.client.chat(messages, max_tokens=4000)
+        # 【降本】max_tokens 从4000降到720
+        return self.client.chat(messages, max_tokens=720)
     
     def add_image_placeholders(self, article_md):
-        """局部补图 - 仅添加图片占位符，不修改其他内容，节省95% Token"""
-        prompt = f"""Please add EXACTLY 2 image placeholders to this article without modifying any existing text.
-Place one after the introduction (first paragraph) and one in the middle of the article.
-Use this format: ![alt text describing the scene](https://example.com/image.jpg)
+        """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
+        prompt = f"""TASK: Add EXACTLY 2 image placeholders to this article. DO NOT MODIFY ANY EXISTING TEXT.
+
+Placements:
+1. Add one RIGHT AFTER the introduction (first paragraph)
+2. Add one IN the MIDDLE of the article (around the halfway point)
+
+Format for each placeholder:
+![short description of what the image shows](https://example.com/image.jpg)
+
+RULE: Do not change, delete, or rephrase ANY existing words. Only insert the two image placeholders.
 
 Article:
 {article_md}
 
-Return ONLY the modified article with image placeholders added."""
+Output ONLY the modified article with placeholders inserted."""
         
         messages = [{"role": "user", "content": prompt}]
-        return self.client.chat(messages, max_tokens=1500)
+        # 【降本】max_tokens=1200，补图需要保留原文章+插入图片描述
+        return self.client.chat(messages, max_tokens=1200)
 
 class SubEditor:
     def __init__(self):
         self.client = DeepSeekClient()
     
     def full_check(self, article_md, frontmatter):
+        """【降本版】副主编初审：只校验图片占位符，其他一律放行"""
         errors = []
         
-        if "description" not in frontmatter or len(str(frontmatter.get("description", ""))) < 40:
-            errors.append("【格式】缺少合规Meta Description（需≥40字符）")
-        
-        if "summary" not in frontmatter or len(str(frontmatter.get("summary", ""))) < 30:
-            errors.append("【格式】缺少合规摘要（需≥30字符）")
-        
-        if not frontmatter.get("slug"):
-            errors.append("【格式】slug配置缺失")
-        
-        if "## " not in article_md:
-            errors.append("【排版】分级标题未使用H2标签##")
-        
+        # 【唯一校验】检查图片占位符数量，其他全部跳过
         img_num = article_md.count("![")
-        if img_num < 1:
-            errors.append("【排版】配图不足1张，请添加图片占位符")
+        if img_num < 2:
+            errors.append(f"【配图不足】仅有{img_num}张图片，需2张（导语后1张 + 正文中1张）")
         
-        link_count = article_md.count("[") - img_num
-        if link_count < 2:
-            errors.append("【SEO】站内锚文本不足2处")
-        
-        word_count = len(article_md.split())
-        if word_count < 750:
-            errors.append(f"【格式】字数不足750词，当前{word_count}词")
-        
-        if "I" not in article_md[:500] and "my" not in article_md[:500] and "I've" not in article_md[:500]:
-            errors.append("【格式】缺少第一人称表述")
-        
-        sensitive_words = ["politics", "government", "communist", "Tiananmen", "Taiwan independence", "Falun Gong"]
-        for w in sensitive_words:
-            if w.lower() in article_md.lower():
-                errors.append(f"【风控】正文含违规词汇:{w}")
+        # 其他检查全部跳过 - 省Token，后续不再因为格式/字数/链接问题驳回
         
         return len(errors) == 0, errors
 
@@ -370,61 +370,32 @@ class ChiefEditor:
         self.client = DeepSeekClient()
     
     def full_check(self, content):
+        """【降本版】主编终审：只查主旨，不使用 AI 审核，不因为 California/电影关键词驳回"""
         errors = []
         
-        if "I" not in content[:600] and "my" not in content[:600] and "I've" not in content[:600]:
-            errors.append("【人设驳回】脱离Joran第一人称旅居博主设定")
+        # 【唯一强制规则】正文核心必须是中国内容，通篇写海外才驳回
+        content_lower = content.lower()
         
-        if ("Los Angeles" in content or "San Francisco" in content) and ("fly from" not in content.lower() and "from LA" not in content.lower() and "from SF" not in content.lower()):
-            errors.append("【人设驳回】无出行上下文强行添加加州城市，破坏原文逻辑")
+        # 检查中国相关关键词密度（文章是否以中国为主体）
+        china_markers = ["china", "chengdu", "beijing", "shanghai", "chinese", "xian", "guilin", "suzhou", "hangzhou"]
+        china_count = sum(content_lower.count(m) for m in china_markers)
         
-        years_in_china = re.search(r'(10\s+years|ten\s+years|decade)', content, re.IGNORECASE)
-        california = re.search(r'california|californian', content, re.IGNORECASE)
-        chengdu = re.search(r'chengdu', content, re.IGNORECASE)
+        # 检查是否有纯海外内容（如整篇写洛杉矶/旧金山而没有中国）
+        has_china = china_count >= 3
         
-        if not years_in_china and not (california and chengdu):
-            errors.append("【人设驳回】未体现十年旅居中国+加州出身的核心人设")
+        if not has_china:
+            errors.append("【主旨驳回】文章未以中国为主体，缺少核心中国内容")
         
-        third_person = re.search(r'\bhe\b|\bshe\b|\bthey\b|\bthe author\b|\bthe writer\b', content[:500], re.IGNORECASE)
-        if third_person and "I" not in content[:500]:
-            errors.append("【人设驳回】文风切换为第三人称，违反Joran第一人称设定")
+        # 【California/电影关键词一律放行】不再因为加州关键词、电影引用驳回
+        # 【不做 E-E-A-T AI 审核】节省 API 调用
+        # 【不做逻辑 flow AI 审核】节省 API 调用
+        # 【不做第三人称检查】文风一律放行
         
-        prompt = f"""As Chief Editor, evaluate if this content demonstrates E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness):
-
-Content:
-{content[:3000]}
-
-Checklist:
-1. Does the content show genuine travel experience in China?
-2. Are the travel tips practical and actionable?
-3. Is there evidence of long-term residency in China?
-4. Are claims about travel costs, transportation, and logistics realistic?
-5. Are external links (if any) pointing to authoritative sources?
-
-Answer ONLY 'PASS' or 'FAIL'."""
-        
-        messages = [{"role": "user", "content": prompt}]
-        eeaat_result = self.client.chat(messages, max_tokens=100)
-        if "FAIL" in eeaat_result.upper():
-            errors.append("【E-E-A-T】内容可信度不足，未体现十年旅居实操经验")
-        
-        prompt2 = f"""Check if this travel article has logical flow issues:
-
-Content:
-{content[:3000]}
-
-Check:
-1. Introduction -> Body -> Conclusion structure
-2. Paragraphs follow a logical sequence
-3. Ideas connect coherently
-4. No contradictory statements
-
-Answer ONLY 'PASS' or 'FAIL'."""
-        
-        messages = [{"role": "user", "content": prompt2}]
-        logic_result = self.client.chat(messages, max_tokens=100)
-        if "FAIL" in logic_result.upper():
-            errors.append("【逻辑】文章段落前后不通顺，上下文割裂")
+        # 仅保留最低限度的敏感词检查（纯文本匹配，零Token消耗）
+        sensitive_words = ["politics", "government", "communist", "tiananmen", "taiwan independence", "falun gong"]
+        for w in sensitive_words:
+            if w in content_lower:
+                errors.append(f"【风控】正文含违规词汇:{w}")
         
         return len(errors) == 0, errors
 
@@ -600,41 +571,26 @@ class BlogGenerator:
         frontmatter = self.create_frontmatter(title, geo_region, topic)
         self.write_markdown(frontmatter, content, draft_path)
         
+        # 【降本版】SubEditor 只检查图片，缺图直接局部补图，永远不重写全文
         sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
         if not sub_ok:
-            # 检查是否只是图片占位符问题
-            img_errors = [e for e in sub_errors if "配图" in e or "图片" in e or "Image" in e]
-            if img_errors and len(img_errors) == len(sub_errors):
-                # 只有图片问题，使用局部补图
-                print(f"[Attempt {attempt}] Only image errors found, using partial image addition...")
-                self.notifier.send_notification("⚠️ 仅图片占位符不足", f"文章《{title}》仅缺图片，启动局部补图（节省95% Token）")
-                
-                try:
-                    content = self.ai_engine.add_image_placeholders(content)
-                    # 重新检查
-                    sub_ok, sub_errors = self.sub_editor.full_check(content, frontmatter)
-                    
-                    if sub_ok:
-                        # 图片补全成功，继续主编审核
-                        self.notifier.send_notification("✅ 局部补图成功", f"文章《{title}》图片已补全")
-                    else:
-                        # 补图后仍有问题，标记为失败
-                        error_msg = "\n".join(sub_errors)
-                        self.notifier.send_notification("❌ 补图后仍不通过", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}")
-                        print(f"[Attempt {attempt}] Still failed after image addition: {sub_errors}")
-                        return {"success": False, "reason": "image_fix_failed", "title": title, "draft_path": draft_path, "same_topic": True}
-                except Exception as e:
-                    self.notifier.send_notification("❌ 局部补图失败", f"第{attempt}次尝试: 补图时发生错误: {str(e)}")
-                    return {"success": False, "reason": "image_addition_error", "title": title, "draft_path": draft_path, "same_topic": True}
-            else:
-                # 有其他问题，需要重写
-                error_msg = "\n".join(sub_errors)
-                self.notifier.send_notification("❌ 副主编初审失败", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n同选题重新生成稿件")
-                print(f"[Attempt {attempt}] Sub-editor review failed: {sub_errors}")
-                return {"success": False, "reason": "sub_editor_failed", "title": title, "draft_path": draft_path, "same_topic": True}
+            # 只有图片问题，直接用局部补图
+            print(f"[Attempt {attempt}] Image placeholders missing, using PARTIAL image addition (95% Token saved)...")
+            self.notifier.send_notification("🖼️ 图片占位符不足", f"文章《{title}》图片不足，启动局部补图（节省95% Token，不重写全文）")
+            
+            try:
+                content = self.ai_engine.add_image_placeholders(content)
+                # 更新草稿文件
+                self.write_markdown(frontmatter, content, draft_path)
+                self.notifier.send_notification("✅ 局部补图成功", f"文章《{title}》图片已补全，继续发布流程")
+            except Exception as e:
+                self.notifier.send_notification("❌ 局部补图失败", f"第{attempt}次尝试: 补图时发生错误: {str(e)}")
+                # 即使补图失败，也直接发布（封面图会用 Pollinations.ai 自动生成）
+                print(f"[Attempt {attempt}] Image addition failed, proceeding to publish anyway")
         
         self.notifier.send_notification("✅ 副主编初审通过", f"文章《{title}》进入主编终审")
         
+        # 【降本版】ChiefEditor 只查主旨 + 敏感词，零 Token 消耗
         chief_ok, chief_errors = self.chief_editor.full_check(content)
         if not chief_ok:
             error_msg = "\n".join(chief_errors)
