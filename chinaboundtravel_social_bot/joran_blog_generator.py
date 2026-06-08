@@ -7,6 +7,7 @@ import hashlib
 from datetime import datetime, timedelta
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
+from budget_controller import BudgetController
 
 BASE_DIR = Path(__file__).parent.parent
 MANIFEST_PATH = BASE_DIR / "manifest.json"
@@ -145,33 +146,44 @@ class DeepSeekClient:
         self.main_key = os.getenv("DEEPSEEK_API_KEY")
         self.backup_key = os.getenv("DEEPSEEK_BACKUP_API_KEY")
         self.url = "https://api.deepseek.com/v1/chat/completions"
-        self._use_backup = False  # 标记是否已切换到备用密钥
-        # 【降本控规】强制使用 deepseek-v4-flash，全局禁用 pro/reasoner
-        self.default_model = "deepseek-v4-flash"
-    
+        self._use_backup = False
+        # 【降本控规】强制使用 deepseek-chat（最便宜的模型）
+        # deepseek-chat: ¥0.27/百万输入 ¥1.1/百万输出
+        self.default_model = "deepseek-chat"
+        self._call_count = 0
+        # 【月预算¥50】初始化全局预算控制器
+        from budget_controller import BudgetController
+        self.budget = BudgetController()
+
     def _get_current_key(self):
-        """获取当前应该使用的密钥"""
         if self._use_backup and self.backup_key:
             return self.backup_key
         return self.main_key
-    
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=8))
-    def chat(self, messages, model=None, max_tokens=720, temperature=0.7):
-        # 【降本控规】强制使用 deepseek-v4-flash，忽略任何传入的 pro/reasoner 模型
+
+    @retry(stop=stop_after_attempt(2), wait=wait_exponential(multiplier=2, min=3, max=6))
+    def chat(self, messages, model=None, max_tokens=500, temperature=0.7):
+        # 【降本控规】强制使用 deepseek-chat
         use_model = self.default_model
-        
+
+        # 【预算检查 1/2】前置检查 - 若已超限直接抛出
+        if not self.budget.can_call_api(use_model):
+            raise Exception("[BUDGET] 预算已用尽，停止所有 API 调用")
+
+        # 【降本控规】max_tokens 严格限制
+        effective_max_tokens = min(max_tokens, 500)  # 硬上限 500 tokens
+
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {self._get_current_key()}"
         }
-        
+
         payload = {
             "model": use_model,
             "messages": messages,
-            "max_tokens": max_tokens,
-            "temperature": temperature
+            "max_tokens": effective_max_tokens,
+            "temperature": temperature,
         }
-        
+
         response = requests.post(self.url, headers=headers, json=payload, timeout=120)
         
         # 如果主密钥失败且有备用密钥，切换到备用密钥
@@ -179,9 +191,41 @@ class DeepSeekClient:
             self._use_backup = True
             headers["Authorization"] = f"Bearer {self.backup_key}"
             response = requests.post(self.url, headers=headers, json=payload, timeout=120)
-        
+
         response.raise_for_status()
-        return response.json()["choices"][0]["message"]["content"]
+        result = response.json()
+
+        # 【预算记录 2/2】调用成功后，记录本次消耗
+        usage = result.get("usage", {})
+        input_tokens = usage.get("prompt_tokens", 0)
+        output_tokens = usage.get("completion_tokens", 0)
+        call_cost = self.budget.record_call(use_model, input_tokens, output_tokens)
+        self._call_count += 1
+
+        # 【成本告警】单次调用超过¥0.3或预算达到60%告警
+        if call_cost > 0.30:
+            print(f"[BUDGET] ⚠️ 单次调用费用偏高 ¥{call_cost:.4f} (in:{input_tokens}, out:{output_tokens})")
+
+        day_status = self.budget.get_daily_status()
+        month_status = self.budget.get_monthly_status()
+        if self._call_count % 3 == 0 or day_status["status"] != "ok" or month_status["status"] != "ok":
+            print(f"[BUDGET] 本日:¥{day_status['used_yuan']:.2f}/¥{day_status['budget_yuan']:.2f}({day_status['used_percent']}%) "
+                  f"本月:¥{month_status['used_yuan']:.2f}/¥{month_status['budget_yuan']:.0f}({month_status['used_percent']}%) "
+                  f"调用:{self._call_count}次")
+
+        return result["choices"][0]["message"]["content"]
+
+    def get_cost_summary(self):
+        """获取当前会话成本统计（从预算控制器读取）"""
+        day = self.budget.get_daily_status()
+        month = self.budget.get_monthly_status()
+        return {
+            "calls_this_session": self._call_count,
+            "daily_used_yuan": day["used_yuan"],
+            "daily_budget_yuan": day["budget_yuan"],
+            "monthly_used_yuan": month["used_yuan"],
+            "monthly_budget_yuan": month["budget_yuan"],
+        }
 
 class ManifestManager:
     def __init__(self):
@@ -306,6 +350,52 @@ class FeishuNotifier:
 class AIEngine:
     def __init__(self):
         self.client = DeepSeekClient()
+        self.external_data = self._load_external_data()
+    
+    def _load_external_data(self):
+        """加载外部数据文件（生成前置加载）"""
+        config_dir = BASE_DIR / "config"
+        
+        data = {
+            "error_knowledge": [],
+            "gsc_keywords": [],
+            "competitor_topics": [],
+            "user_feedback": []
+        }
+        
+        # 1. 加载错误知识库
+        try:
+            with open(config_dir / "error_knowledge_base.json", 'r', encoding='utf-8') as f:
+                kb_data = json.load(f)
+                data["error_knowledge"] = kb_data.get("error_patterns", [])
+        except:
+            pass
+        
+        # 2. 加载GSC热搜词
+        try:
+            with open(config_dir / "gsc_hot_keyword.json", 'r', encoding='utf-8') as f:
+                gsc_data = json.load(f)
+                data["gsc_keywords"] = gsc_data.get("keywords", [])
+        except:
+            pass
+        
+        # 3. 加载竞品数据
+        try:
+            with open(config_dir / "competitor_topic.json", 'r', encoding='utf-8') as f:
+                competitor_data = json.load(f)
+                data["competitor_topics"] = competitor_data.get("content_trends", [])
+        except:
+            pass
+        
+        # 4. 加载用户反馈
+        try:
+            with open(config_dir / "user_feedback.json", 'r', encoding='utf-8') as f:
+                feedback_data = json.load(f)
+                data["user_feedback"] = feedback_data.get("feedbacks", [])
+        except:
+            pass
+        
+        return data
     
     def generate_post(self, topic, geo_region):
         region_info = {
@@ -314,11 +404,27 @@ class AIEngine:
             "AU": "Australian and New Zealand travelers"
         }
         
+        # 构建SEO关键词提示（从外部数据）
+        seo_keywords = []
+        for kw in self.external_data["gsc_keywords"][:5]:
+            seo_keywords.append(kw.get("query", ""))
+        
+        # 构建用户需求提示
+        user_needs = []
+        for feedback in self.external_data["user_feedback"][:5]:
+            content = feedback.get("content", "")
+            if content and len(content) > 10:
+                user_needs.append(content)
+        
         # 【降本版】精简Prompt，去掉冗余，固定图片占位符
         prompt = f"""Joran: California American, 10+ years living in Chengdu China, movie buff, humorous travel blogger.
 
 Write a HUMOROUS FIRST-PERSON travel blog post about: {topic}
 Target audience: {region_info[geo_region]}
+
+SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
+
+User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
 Rules:
 1. Conversational, witty tone - like chatting with a friend
@@ -331,15 +437,17 @@ Rules:
 8. MUST include EXACTLY 2 image placeholders:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
-   - Format: ![alt text describing the scene](https://example.com/image.jpg)
+   - FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
+   - IMPORTANT: Do NOT use ![alt text](url) format - ONLY use [Image:xxx] format
 9. MAIN FOCUS must be China travel - comparisons/California/movies are just flavor
 10. NO government, politics, sensitive topics
+11. Address common user concerns: visa information, transportation, budget, safety
 
 Output ONLY the article content."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【降本】max_tokens=1200，输出约900词（足够700词+2张图+内链）
-        return self.client.chat(messages, max_tokens=1200)
+        # 【降本】max_tokens=500，输出约350词（足够核心内容）
+        return self.client.chat(messages, max_tokens=500)
     
     def rewrite_post(self, content, topic, geo_region):
         region_info = {
@@ -369,44 +477,55 @@ Output ONLY the rewritten article."""
         
         messages = [{"role": "user", "content": prompt}]
         # 【降本】max_tokens 从4000降到720
-        return self.client.chat(messages, max_tokens=720)
+        return self.client.chat(messages, max_tokens=400)
     
     def add_image_placeholders(self, article_md):
         """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
-        prompt = f"""TASK: Add EXACTLY 2 image placeholders to this article. DO NOT MODIFY ANY EXISTING TEXT.
+        prompt = f"""TASK: Add or fix EXACTLY 2 image placeholders in this article. DO NOT MODIFY ANY EXISTING TEXT.
 
-Placements:
-1. Add one RIGHT AFTER the introduction (first paragraph)
-2. Add one IN the MIDDLE of the article (around the halfway point)
-
-Format for each placeholder:
-![short description of what the image shows](https://example.com/image.jpg)
-
-RULE: Do not change, delete, or rephrase ANY existing words. Only insert the two image placeholders.
+RULES:
+1. If there are any existing ![alt text](url) format images, CONVERT THEM to [Image:description] format
+2. Add/ensure EXACTLY 2 image placeholders total:
+   - One RIGHT AFTER the introduction (first paragraph)
+   - One IN the MIDDLE of the article (around the halfway point)
+3. FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
+4. DO NOT USE ![alt text](url) format - ONLY use [Image:xxx] format
+5. Do not change, delete, or rephrase ANY existing words.
 
 Article:
 {article_md}
 
-Output ONLY the modified article with placeholders inserted."""
+Output ONLY the modified article with correct [Image:xxx] placeholders."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【降本】max_tokens=1200，补图需要保留原文章+插入图片描述
-        return self.client.chat(messages, max_tokens=1200)
+        # 【降本】max_tokens=500，补图只需要少量token
+        return self.client.chat(messages, max_tokens=500)
 
 class SubEditor:
     def __init__(self):
         self.client = DeepSeekClient()
     
     def full_check(self, article_md, frontmatter):
-        """【降本版】副主编初审：只校验图片占位符，其他一律放行"""
+        """【降本版】副主编初审：校验图片占位符格式 + 链接格式"""
         errors = []
         
-        # 【唯一校验】检查图片占位符数量，其他全部跳过
-        img_num = article_md.count("![")
-        if img_num < 2:
-            errors.append(f"【配图不足】仅有{img_num}张图片，需2张（导语后1张 + 正文中1张）")
+        # 【图片占位符校验】检查 [Image:xxx] 格式的占位符数量
+        import re
+        image_placeholders = re.findall(r'\[\s*Image\s*:\s*[^\]]+\]', article_md, re.IGNORECASE)
+        img_num = len(image_placeholders)
         
-        # 其他检查全部跳过 - 省Token，后续不再因为格式/字数/链接问题驳回
+        # 检查是否有错误格式的图片（![xxx] 格式）
+        md_images = article_md.count("![")
+        if md_images > 0:
+            errors.append(f"【图片格式错误】发现{md_images}处 ![alt](url) 格式图片，请使用标准 [Image:描述] 格式")
+        
+        # 检查图片数量是否达标
+        if img_num < 2:
+            errors.append(f"【配图不足】仅有{img_num}个 [Image:xxx] 占位符，需2个（导语后1个 + 正文中1个）")
+        
+        # 【链接格式校验】检查是否有无效链接格式（如 <link> 标签）
+        if '<link' in article_md.lower():
+            errors.append("【链接格式】发现无效 <link> 标签，请使用标准 Markdown 链接格式 [文字](链接)")
         
         return len(errors) == 0, errors
 

@@ -42,7 +42,7 @@ class LLMConfig:
     model:       str           = "deepseek-chat"
     base_url:    str           = "https://api.deepseek.com"
     api_key:     str           = ""
-    max_tokens:  int           = 2048
+    max_tokens:  int           = 400    # 【降本】月预算¥50，进一步降低至400
     temperature: float         = 0.7
 
 @dataclass
@@ -90,18 +90,45 @@ class LLMClient:
             self.logger.info(f"LLM: claude model={self.cfg.model}")
 
     def chat(self, system: str, user: str, temperature: float = None, max_tokens: int = None) -> str:
+        # 【预算控制 1/2】前置检查
+        try:
+            from budget_controller import can_call_api
+            if not can_call_api("deepseek-chat"):
+                raise Exception("[BUDGET] 预算已用尽，停止所有 API 调用")
+        except Exception as e:
+            if "[BUDGET]" in str(e):
+                raise
+
         t = temperature or self.cfg.temperature
         m = max_tokens or self.cfg.max_tokens
+        # 【降本】硬上限 500 tokens
+        m = min(m, 500)
+
         if self.cfg.provider in (ModelProvider.DEEPSEEK, ModelProvider.OPENAI, ModelProvider.QWEN):
             r = self._client.chat.completions.create(
                 model=self.cfg.model,
                 messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
                 temperature=t, max_tokens=m)
+            # 【预算控制 2/2】记录消耗
+            self._record_cost(r)
             return r.choices[0].message.content
         elif self.cfg.provider == ModelProvider.CLAUDE:
             r = self._client.messages.create(model=self.cfg.model, system=system,
                 messages=[{"role": "user", "content": user}], temperature=t, max_tokens=m)
             return r.content[0].text
+
+    def _record_cost(self, response):
+        """记录 API 调用成本（仅 DeepSeek 兼容）"""
+        try:
+            usage = getattr(response, "usage", None)
+            if usage:
+                from budget_controller import record_cost
+                in_tok = getattr(usage, "prompt_tokens", 0) or 0
+                out_tok = getattr(usage, "completion_tokens", 0) or 0
+                if in_tok or out_tok:
+                    record_cost("deepseek-chat", in_tok, out_tok)
+        except Exception:
+            pass
 
 # ============================================================
 # SECTION 4: 主编 Agent (STEP 1)
@@ -166,7 +193,7 @@ class EditorAuditor:
         t0 = time.time()
         response = self.llm.chat(EDITOR_AUDIT_SYSTEM,
             f"Please review this post titled '{title}':\n\n{body}",
-            temperature=0.2, max_tokens=1536)
+            temperature=0.2, max_tokens=400)
         elapsed = time.time() - t0
         result, summary, issues = self._extract_result(response)
         self.logger.info(f"[EDITOR] 审稿{'通过' if result == 'PERFECT' else '需修复'} | 耗时:{elapsed:.1f}s | 摘要:{summary}")
@@ -204,7 +231,7 @@ class ReporterRevisor:
         t0 = time.time()
         revised = self.llm.chat(REPORTER_REVISION_SYSTEM,
             f"Original article title: {title}\n\n--- ORIGINAL ARTICLE ---\n{body}\n\n--- EDITOR'S MODIFICATION REQUESTS ---\n{issues_text}\n\nPlease rewrite the article addressing all issues above.",
-            temperature=0.6, max_tokens=2048)
+            temperature=0.6, max_tokens=500)
         elapsed = time.time() - t0
         self.logger.info(f"[REPORTER] 重写完成 | 字数:~{len(revised.split())} | 耗时:{elapsed:.1f}s")
         self.logger.debug(f"[REPORTER] 预览:\n{revised[:200]}")
@@ -414,7 +441,7 @@ def resolve_api_key(provider: ModelProvider) -> str:
 def main():
     parser = argparse.ArgumentParser(description="ChinaBound Post Auditor & Re-Enhancer")
     parser.add_argument("--dry-run",   action="store_true", help="只审读不写回（测试模式）")
-    parser.add_argument("--limit",     type=int, default=0,  help="最多处理帖数（默认全部）")
+    parser.add_argument("--limit",     type=int, default=1, help="最多处理帖数（默认1，避免浪费token。如需全量显式传入 --limit 0）")
     parser.add_argument("--model",      "-m", choices=["deepseek","openai","claude","qwen"], default="deepseek")
     parser.add_argument("--base-url",   "-b", default="",    help="API Base URL")
     parser.add_argument("--api-key",    help="API Key")

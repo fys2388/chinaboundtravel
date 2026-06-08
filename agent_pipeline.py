@@ -26,7 +26,7 @@ class LLMConfig:
     model:       str           = "deepseek-chat"
     base_url:    str           = "https://api.deepseek.com"
     api_key:     str           = ""
-    max_tokens:  int           = 2048
+    max_tokens:  int           = 500    # 【降本】月预算¥50，进一步降低至500
     temperature: float         = 0.7
 
 @dataclass
@@ -67,19 +67,48 @@ class LLMClient:
             self.logger.info(f"LLM: claude model={self.cfg.model}")
 
     def chat(self, system: str, user: str, temperature: float = None, max_tokens: int = None) -> str:
+        # 【预算控制 1/2】前置检查
+        try:
+            from budget_controller import can_call_api
+            if not can_call_api("deepseek-chat"):
+                raise Exception("[BUDGET] 预算已用尽，停止所有 API 调用")
+        except Exception as e:
+            if "[BUDGET]" in str(e):
+                raise
+            # 如果模块导入失败，继续执行（不中断流程）
+            pass
+
         t = temperature or self.cfg.temperature
         m = max_tokens or self.cfg.max_tokens
+        # 【降本】硬上限 500 tokens
+        m = min(m, 500)
+
         if self.cfg.provider in (ModelProvider.DEEPSEEK, ModelProvider.OPENAI, ModelProvider.QWEN):
             r = self._client.chat.completions.create(
                 model=self.cfg.model,
                 messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
                 temperature=t, max_tokens=m)
+            # 【预算控制 2/2】记录消耗
+            self._record_cost(r)
             return r.choices[0].message.content
         elif self.cfg.provider == ModelProvider.CLAUDE:
             r = self._client.messages.create(
                 model=self.cfg.model, system=system,
                 messages=[{"role": "user", "content": user}], temperature=t, max_tokens=m)
             return r.content[0].text
+
+    def _record_cost(self, response):
+        """记录 API 调用成本（仅 DeepSeek 兼容）"""
+        try:
+            usage = getattr(response, "usage", None)
+            if usage:
+                from budget_controller import record_cost
+                in_tok = getattr(usage, "prompt_tokens", 0) or 0
+                out_tok = getattr(usage, "completion_tokens", 0) or 0
+                if in_tok or out_tok:
+                    record_cost("deepseek-chat", in_tok, out_tok)
+        except Exception:
+            pass
 
 REPORTER_SYSTEM = """You are Joran, a California native married into a Chengdu family.
 You have lived and traveled extensively in China for 6 years.
@@ -104,7 +133,7 @@ class ReporterAgent:
         article = self.llm.chat(
             REPORTER_SYSTEM,
             f"Write a ~{self.cfg.target_word_count}-word travel guide about: {topic}\n\nStart immediately with the H1 title.",
-            temperature=0.75, max_tokens=2048)
+            temperature=0.75, max_tokens=500)
         elapsed = time.time() - t0
         self.logger.info(f"[STEP-1] 采编完成 | 字数:~{len(article.split())} | 耗时:{elapsed:.1f}s")
         self.logger.debug(f"[STEP-1] 预览:\n{article[:200]}")
@@ -159,7 +188,7 @@ class EditorAgent:
             response = self.llm.chat(
                 EDITOR_SYSTEM,
                 f"Please review this article:\n\n{current}",
-                temperature=0.2, max_tokens=1024)
+                temperature=0.2, max_tokens=400)
             elapsed = time.time() - t0
             is_pass, reason = self._extract_result(response)
             self.logger.info(f"[STEP-2] 审稿{'通过' if is_pass else '驳回'} | 耗时:{elapsed:.1f}s | 原因:{reason or 'N/A'}")
@@ -171,7 +200,7 @@ class EditorAgent:
             t0 = time.time()
             current = self.llm.chat(
                 EDITOR_REVISION.format(reason=reason), "",
-                temperature=0.6, max_tokens=2048)
+                temperature=0.6, max_tokens=500)
             self.logger.info(f"[STEP-2] 重新生成完成 | 耗时:{time.time()-t0:.1f}s")
         return True, current, attempt
 
