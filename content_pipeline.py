@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 content_pipeline.py - ChinaBound Travel 完整内容生产流水线
-选题池调度 → Joran生成 → 副主编初审 → 主编终审 → 发布上线 → 凌晨巡检 → 学习迭代
+选题池调度 → Joran生成 → 副主编初审 → 主编终审 → 图片处理 → 发布上线 → 凌晨巡检 → 学习迭代
 
 Version: 1.0
 """
@@ -14,6 +14,13 @@ import hashlib
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Any
+
+# 导入图片处理器
+try:
+    from image_processor import process_markdown_images
+except ImportError:
+    sys.path.insert(0, str(Path(__file__).parent))
+    from image_processor import process_markdown_images
 
 BASE_DIR = Path(__file__).parent.resolve()
 CONFIG_DIR = BASE_DIR / "config"
@@ -360,6 +367,11 @@ class Publisher:
             
             if not slug:
                 slug = "untitled-post"
+            
+            # 处理图片占位符 - 将 [Image:xxx] 转换为实际图片URL
+            logger.info("🖼️ 处理图片占位符...")
+            content = process_markdown_images(content)
+            logger.info("✅ 图片占位符处理完成")
             
             # 生成文件名
             date_str = datetime.now().strftime("%Y-%m-%d")
