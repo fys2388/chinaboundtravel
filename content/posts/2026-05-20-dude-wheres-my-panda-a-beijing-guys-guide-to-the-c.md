@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"

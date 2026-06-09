@@ -59,6 +59,7 @@ const RETRY_CONFIG = {
 // 图片域名白名单
 const ALLOWED_IMAGE_HOST = 'chinaboundtravel.com';
 const ALLOWED_IMAGE_PATH = '/img/china-dest/';
+const ALLOWED_EXTERNAL_HOSTS = ['image.pollinations.ai', 'images.unsplash.com'];
 
 // ============ 主处理函数 ============
 
@@ -255,9 +256,14 @@ function validateImageUrl(url) {
       return { valid: true, url: `https://${ALLOWED_IMAGE_HOST}${url}` };
     }
 
+    // 检查是否为允许的外部图片服务
+    if (ALLOWED_EXTERNAL_HOSTS.includes(parsed.hostname)) {
+      return { valid: true, url };
+    }
+
     // 检查域名
     if (parsed.hostname !== ALLOWED_IMAGE_HOST) {
-      return { valid: false, message: `图片域名必须是 ${ALLOWED_IMAGE_HOST}` };
+      return { valid: false, message: `图片域名必须是 ${ALLOWED_IMAGE_HOST} 或允许的外部服务` };
     }
 
     // 检查路径

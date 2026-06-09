@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to Use WeChat Pay as a Foreigner
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"

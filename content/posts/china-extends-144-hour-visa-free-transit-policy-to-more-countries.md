@@ -1,4 +1,4 @@
-﻿---
+---
 title: China Extends 144-hour Visa-free Transit Policy to More Countries
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.jpg"

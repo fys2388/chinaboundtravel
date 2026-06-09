@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg"
@@ -83,7 +83,7 @@ Here's exactly what you need to do before you land in China:
 Make sure you're running the latest version. This feature rolled out gradually, so an older version won't show the option.
 
 **Step 2: Link your card or bank**
-Go to Wallet â†’ Link a card or bank. Standard stuff.
+Go to Wallet ¡ú Link a card or bank. Standard stuff.
 
 **Step 3: Try it**
 When you find a merchant in China that only takes Alipay/WeChat Pay, select PayPal at checkout, choose Alipay or WeChat Pay, and let PayPal generate the QR code.

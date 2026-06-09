@@ -56,7 +56,7 @@ Book through [Insert Trip.com Affiliate Link Here] - they have great deals on 4W
 Start early - like, *really* early. We left at 6 AM to beat the traffic out of Chengdu. The first half of the drive is highway, so you can make good time.
 
 ### Lunch Stop: Luding
-Grab lunch in Luding, famous for the Luding Bridge (泸定桥) from the Long March. Try the local specialty: *dan dan mian* (担担面) at a tiny street stall. Trust me, it's better than any restaurant in Chengdu.
+Grab lunch in Luding, famous for the Luding Bridge (泸定�? from the Long March. Try the local specialty: *dan dan mian* (担担�? at a tiny street stall. Trust me, it's better than any restaurant in Chengdu.
 
 ### Afternoon: Entering the Mountains
 Once you pass Luding, the road starts climbing. This is where the fun begins. The views get better and better as you gain altitude. Keep an eye out for waterfalls and herds of yaks.
@@ -73,7 +73,7 @@ Kangding (康定) is your first taste of Tibetan culture. Stay at [Insert Bookin
 Today you'll leave the paved roads behind. The drive to Tagong (塔公) is *unreal*. You'll wind through mountain passes with views of snow-capped peaks that seem close enough to touch.
 
 ### Stop 1: Xinduqiao
-Xinduqiao (新都桥) is known as the "Photographer's Paradise." Pull over anywhere - every corner is a postcard.
+Xinduqiao (新都�? is known as the "Photographer's Paradise." Pull over anywhere - every corner is a postcard.
 
 ### Stop 2: Tagong Monastery
 Visit the ancient Tagong Monastery. It's one of the most important Tibetan Buddhist monasteries in Sichuan. Be respectful - dress modestly and ask before taking photos.
@@ -87,7 +87,7 @@ This is where we set up camp for the first time. The grasslands stretch as far a
 
 **The High Altitude Challenge**
 
-Today you'll cross the Zheduo Pass (折多山) at 4,298 meters. This is where altitude sickness usually hits. Take it slow, drink plenty of water, and don't push yourself.
+Today you'll cross the Zheduo Pass (折多�? at 4,298 meters. This is where altitude sickness usually hits. Take it slow, drink plenty of water, and don't push yourself.
 
 ### Stop: Ganzi
 Ganzi (甘孜) is a small Tibetan town with a beautiful market. Grab some snacks for the road - *tsampa* (糌粑) and dried yak meat are great energy boosters.
@@ -117,8 +117,8 @@ Yading (亚丁) is *the* highlight of the trip. This is where you'll see those i
 
 ### The Hike
 There are two main hikes:
-1. **Short Hike**: Lake Pearl (珍珠海) - 2-3 hours round trip, easier
-2. **Long Hike**: Five-Colored Lake & Milk Lake (五色海 & 牛奶海) - 6-8 hours, challenging but *worth it*
+1. **Short Hike**: Lake Pearl (珍珠�? - 2-3 hours round trip, easier
+2. **Long Hike**: Five-Colored Lake & Milk Lake (五色�?& 牛奶�? - 6-8 hours, challenging but *worth it*
 
 **Pro Tip**: Start at sunrise (6:30 AM) to beat the crowds and the heat. Bring plenty of water and snacks.
 

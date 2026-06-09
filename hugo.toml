@@ -68,19 +68,19 @@ buildExpired = false
 [[menu.main]]
   identifier = "visa-free"
   name = "🛂 Visa-Free Guide"
-  url = "/categories/china-essentials/"
+  url = "/categories/visa/"
   weight = 30
 
 [[menu.main]]
   identifier = "internet"
   name = "🌐 Internet Access"
-  url = "/categories/china-essentials/"
+  url = "/categories/internet/"
   weight = 40
 
 [[menu.main]]
-  identifier = "payment"
+  identifier = "payment-guide"
   name = "💳 Payment Guide"
-  url = "/tags/alipay/"
+  url = "/categories/payment/"
   weight = 50
 
 [[menu.main]]

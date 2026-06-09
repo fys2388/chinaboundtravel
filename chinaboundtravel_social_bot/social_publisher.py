@@ -285,10 +285,14 @@ def send_feishu_notification(results: list):
     for r in results:
         status_icon = "✅" if r.get("worker_success") else "❌"
         summary_lines.append(f"{status_icon} {r['title']}")
-        if "success_platforms" in r:
-            summary_lines.append(f"   成功: {r['success_platforms']}")
-        if "failed_platforms" in r and r["failed_platforms"]:
-            summary_lines.append(f"   失败: {r['failed_platforms']}")
+        
+        success_platforms = r.get("success_platforms", "")
+        failed_platforms = r.get("failed_platforms", "")
+        
+        if success_platforms:
+            summary_lines.append(f"   成功: {success_platforms}")
+        elif not r.get("worker_success"):
+            summary_lines.append(f"   失败: {failed_platforms if failed_platforms else 'Worker调用失败'}")
 
     content = "\n".join(summary_lines)
     payload = {

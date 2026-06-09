@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-delete_buffer_drafts.py - 删除Buffer草稿箱中的所有帖子
+delete_buffer_posts.py - 删除Buffer中的帖子
 
 功能：
-1. 获取Buffer账户中所有的草稿帖子
-2. 删除所有草稿帖子
+1. 删除草稿箱中的所有帖子
+2. 删除已发布(Sent)的所有帖子
 3. 禁止提前缓存，只有触发时才缓存
 
 注意：此脚本需要Buffer API权限
@@ -14,12 +14,13 @@ import json
 import os
 import requests
 import sys
+import argparse
 from typing import List, Dict
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 
-class BufferDraftDeleter:
+class BufferPostDeleter:
     def __init__(self):
         self.config = self._load_config()
         self.base_url = self.config['api']['base_url']
@@ -27,7 +28,6 @@ class BufferDraftDeleter:
     
     def _load_config(self) -> Dict:
         """加载Buffer配置"""
-        # 尝试从多个位置加载配置
         config_paths = [
             'buffer_config.json',
             'chinaboundtravel_social_bot/buffer_config.json',
@@ -106,6 +106,33 @@ class BufferDraftDeleter:
         edges = result.get('account', {}).get('drafts', {}).get('edges', [])
         return [edge['node'] for edge in edges]
     
+    def get_sent_posts(self) -> List[Dict]:
+        """获取所有已发布(Sent)的帖子"""
+        query = """
+        query {
+          account {
+            sentPosts {
+              edges {
+                node {
+                  id
+                  text
+                  createdAt
+                  channel {
+                    id
+                    name
+                    service
+                  }
+                }
+              }
+            }
+          }
+        }
+        """
+        
+        result = self._graphql_request(query)
+        edges = result.get('account', {}).get('sentPosts', {}).get('edges', [])
+        return [edge['node'] for edge in edges]
+    
     def delete_post(self, post_id: str) -> bool:
         """删除指定的帖子"""
         query = """
@@ -171,24 +198,83 @@ class BufferDraftDeleter:
         print(f"删除失败: {failed} 篇")
         
         return {"deleted": deleted, "failed": failed}
+    
+    def delete_all_sent(self) -> Dict:
+        """删除所有已发布的帖子"""
+        print("=== 正在获取已发布帖子列表 ===")
+        sent_posts = self.get_sent_posts()
+        
+        if not sent_posts:
+            print("✓ 已发布列表为空，无需删除")
+            return {"deleted": 0, "failed": 0}
+        
+        print(f"找到 {len(sent_posts)} 篇已发布帖子:")
+        for i, post in enumerate(sent_posts, 1):
+            channel_info = f"{post['channel']['name']} ({post['channel']['service']})"
+            text_preview = post['text'][:50] + "..." if len(post['text']) > 50 else post['text']
+            print(f"  {i}. [{channel_info}] {text_preview}")
+        
+        print("\n=== 开始删除已发布帖子 ===")
+        deleted = 0
+        failed = 0
+        
+        for post in sent_posts:
+            if self.delete_post(post['id']):
+                deleted += 1
+            else:
+                failed += 1
+        
+        print(f"\n=== 删除完成 ===")
+        print(f"已删除: {deleted} 篇")
+        print(f"删除失败: {failed} 篇")
+        
+        return {"deleted": deleted, "failed": failed}
 
 
 def main():
     """主函数"""
+    parser = argparse.ArgumentParser(description='删除Buffer中的帖子')
+    parser.add_argument('--drafts', action='store_true', help='删除草稿箱')
+    parser.add_argument('--sent', action='store_true', help='删除已发布帖子')
+    parser.add_argument('--all', action='store_true', help='删除所有帖子（草稿+已发布）')
+    
+    args = parser.parse_args()
+    
     print("=" * 60)
-    print("Buffer 草稿删除工具")
+    print("Buffer 帖子删除工具")
     print("=" * 60)
     
-    deleter = BufferDraftDeleter()
-    result = deleter.delete_all_drafts()
+    deleter = BufferPostDeleter()
     
-    # 输出最终结果
+    total_deleted = 0
+    total_failed = 0
+    
+    if args.drafts or args.all:
+        print("\n--- 处理草稿箱 ---")
+        result = deleter.delete_all_drafts()
+        total_deleted += result['deleted']
+        total_failed += result['failed']
+    
+    if args.sent or args.all:
+        print("\n--- 处理已发布帖子 ---")
+        result = deleter.delete_all_sent()
+        total_deleted += result['deleted']
+        total_failed += result['failed']
+    
+    if not args.drafts and not args.sent and not args.all:
+        print("ERROR: 请指定删除类型: --drafts, --sent, 或 --all")
+        parser.print_help()
+        sys.exit(1)
+    
     print("\n" + "=" * 60)
-    if result['failed'] == 0:
-        print("✓ 所有草稿已成功删除")
+    print(f"总计删除: {total_deleted} 篇")
+    print(f"删除失败: {total_failed} 篇")
+    
+    if total_failed == 0:
+        print("✓ 所有帖子已成功删除")
         sys.exit(0)
     else:
-        print(f"⚠️ 部分草稿删除失败 ({result['failed']} 篇)")
+        print(f"⚠️ 部分帖子删除失败 ({total_failed} 篇)")
         sys.exit(1)
 
 
