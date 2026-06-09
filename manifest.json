@@ -37,6 +37,11 @@
       "create_date": "2026-06-06"
     },
     {
+      "topic": "food recommendations",
+      "geo_region": "AU",
+      "create_date": "2026-06-08"
+    },
+    {
       "topic": "accommodation tips",
       "geo_region": "US",
       "create_date": "2026-06-09"
