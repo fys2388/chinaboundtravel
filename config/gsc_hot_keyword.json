@@ -1,0 +1,17 @@
+{
+  "keywords": [
+    {"query": "china visa requirements", "clicks": 234, "impressions": 1234, "position": 7.8},
+    {"query": "chengdu travel tips", "clicks": 156, "impressions": 892, "position": 4.2},
+    {"query": "best time to visit chengdu", "clicks": 134, "impressions": 723, "position": 3.8},
+    {"query": "china travel budget", "clicks": 98, "impressions": 543, "position": 6.1},
+    {"query": "chengdu panda tour", "clicks": 178, "impressions": 956, "position": 2.1},
+    {"query": "sichuan hotpot", "clicks": 87, "impressions": 412, "position": 5.3},
+    {"query": "china transportation", "clicks": 67, "impressions": 345, "position": 8.2},
+    {"query": "chinese street food", "clicks": 145, "impressions": 678, "position": 4.5},
+    {"query": "china travel safety", "clicks": 112, "impressions": 567, "position": 5.9},
+    {"query": "chengdu accommodation", "clicks": 89, "impressions": 456, "position": 6.7}
+  ],
+  "total_queries": 10,
+  "top_query": "chengdu panda tour",
+  "updated_at": "2026-06-06T16:00:00"
+}

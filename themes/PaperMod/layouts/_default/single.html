@@ -1,0 +1,234 @@
+{{- define "main" -}}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    {{- if .Params.cover.image -}}
+      {{- $cover := .Params.cover.image -}}
+      {{- if not (strings.HasPrefix $cover "http") -}}
+        {{- $cover = .Resources.GetMatch $cover | default (resources.GetRemote $cover) -}}
+      {{- end -}}
+      {{- if $cover -}}
+        <div class="post-cover">
+          <img src="{{ $cover.RelPermalink | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" />
+          {{- if .Params.cover.caption -}}
+            <span class="cover-caption">{{ .Params.cover.caption | markdownify }}</span>
+          {{- end -}}
+        </div>
+      {{- end -}}
+    {{- end -}}
+
+    <h1 class="post-title">{{ .Title | markdownify }}</h1>
+    {{- if .Description -}}
+      <p class="post-description">{{ .Description | markdownify }}</p>
+    {{- end -}}
+
+    {{- $showAuthor := .Params.author | default .Site.Params.author -}}
+    {{- if or $showAuthor .Date .IsTranslated }}
+      <div class="post-meta">
+        {{- if $showAuthor -}}
+          {{- $author := .Site.Author.name | default "Author" -}}
+          {{- $authorLink := .Site.Author.link | default "#" -}}
+          <a href="{{ $authorLink }}">{{ $author }}</a>
+        {{- end -}}
+        {{- if .Date -}}
+          <span class="meta-divider"></span>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</time>
+        {{- end -}}
+        {{- if .IsTranslated -}}
+          <span class="meta-divider"></span>
+          {{- i18n "translations" }}
+          {{- range .Translations -}}
+            <a href="{{ .Permalink }}">{{ .Lang | upper }}</a>
+          {{- end -}}
+        {{- end -}}
+      </div>
+    {{- end -}}
+  </header>
+
+  <div class="post-content">
+    {{- .Content -}}
+  </div>
+
+  <footer class="post-footer">
+    {{- if .Params.tags -}}
+      <ul class="post-tags">
+        {{- range .Params.tags -}}
+          <li><a href="{{ ($.Site.GetPage "taxonomy" (printf "tags/%s" .)).Permalink }}">{{ . }}</a></li>
+        {{- end -}}
+      </ul>
+    {{- end -}}
+
+    {{- if .IsTranslated -}}
+      <div class="post-translations">
+        {{- i18n "translations" }}:
+        {{- range .Translations -}}
+          <a href="{{ .Permalink }}">{{ .Lang | upper }}</a>
+        {{- end -}}
+      </div>
+    {{- end -}}
+  </footer>
+
+  <!-- 用户反馈表单 -->
+  <div class="feedback-section">
+    <h3>Was this travel guide helpful?</h3>
+    <div class="feedback-rating">
+      <button class="rating-btn" data-rating="1" title="Not helpful">1️⃣</button>
+      <button class="rating-btn" data-rating="2" title="Not very helpful">2️⃣</button>
+      <button class="rating-btn" data-rating="3" title="Neutral">3️⃣</button>
+      <button class="rating-btn" data-rating="4" title="Helpful">4️⃣</button>
+      <button class="rating-btn" data-rating="5" title="Very helpful">5️⃣</button>
+    </div>
+    <textarea id="feedback-content" placeholder="Share your feedback or suggestions..." rows="3"></textarea>
+    <button id="submit-feedback">Submit Feedback</button>
+    <div id="feedback-message"></div>
+  </div>
+
+  {{- if .Site.Config.Services.Disqus.Shortname -}}
+    {{- partial "comments/disqus.html" . -}}
+  {{- end -}}
+  {{- if .Site.Params.commentoEnable -}}
+    {{- partial "comments/commento.html" . -}}
+  {{- end -}}
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const ratingBtns = document.querySelectorAll('.rating-btn');
+  const submitBtn = document.getElementById('submit-feedback');
+  const feedbackContent = document.getElementById('feedback-content');
+  const feedbackMessage = document.getElementById('feedback-message');
+  
+  let selectedRating = null;
+  
+  ratingBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+      ratingBtns.forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+  });
+  
+  submitBtn.addEventListener('click', function() {
+    const content = feedbackContent.value.trim();
+    
+    if (!selectedRating && !content) {
+      feedbackMessage.textContent = 'Please provide a rating or feedback.';
+      feedbackMessage.style.color = '#dc2626';
+      return;
+    }
+    
+    const feedbackData = {
+      rating: selectedRating,
+      content: content,
+      url: window.location.href,
+      title: document.title,
+      timestamp: new Date().toISOString()
+    };
+    
+    fetch('/api/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(feedbackData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        feedbackMessage.textContent = 'Thank you for your feedback!';
+        feedbackMessage.style.color = '#16a34a';
+        feedbackContent.value = '';
+        selectedRating = null;
+        ratingBtns.forEach(b => b.classList.remove('selected'));
+      } else {
+        feedbackMessage.textContent = 'Failed to submit feedback. Please try again.';
+        feedbackMessage.style.color = '#dc2626';
+      }
+    })
+    .catch(error => {
+      feedbackMessage.textContent = 'Error submitting feedback.';
+      feedbackMessage.style.color = '#dc2626';
+    });
+  });
+});
+</script>
+
+<style>
+.feedback-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.feedback-section h3 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.feedback-rating {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rating-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #cbd5e1;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rating-btn:hover {
+  border-color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.rating-btn.selected {
+  border-color: #3b82f6;
+  background: #dbeafe;
+}
+
+.feedback-section textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.feedback-section textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+#submit-feedback {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#submit-feedback:hover {
+  background: #2563eb;
+}
+
+#feedback-message {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+</style>
+
+{{- end -}}

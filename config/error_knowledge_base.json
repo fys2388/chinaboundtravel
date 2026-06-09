@@ -1,0 +1,171 @@
+{
+  "error_patterns": [
+    {
+      "hash": "img_format_err",
+      "type": "配图格式",
+      "message": "发现错误的图片格式 ![alt](url)",
+      "occurrences": 3,
+      "first_seen": "2026-06-01T09:00:00",
+      "last_seen": "2026-06-05T14:30:00",
+      "files": ["old-post-1.md", "old-post-2.md"],
+      "suggestion": "使用 [Image:描述|alt=xxx] 格式",
+      "resolved": true
+    },
+    {
+      "hash": "empty_link_err",
+      "type": "链接问题",
+      "message": "空链接未填充",
+      "occurrences": 2,
+      "first_seen": "2026-06-02T10:00:00",
+      "last_seen": "2026-06-04T11:00:00",
+      "files": ["old-post-3.md"],
+      "suggestion": "填充有效的站内链接或删除空链接",
+      "resolved": false
+    },
+    {
+      "hash": "missing_image_err",
+      "type": "配图格式",
+      "message": "配图数量不足",
+      "occurrences": 5,
+      "first_seen": "2026-06-01T09:00:00",
+      "last_seen": "2026-06-06T08:00:00",
+      "files": ["post-1.md", "post-2.md", "post-3.md"],
+      "suggestion": "每篇文章至少添加2个图片占位符",
+      "resolved": false
+    },
+    {
+      "hash": "desc_length_err",
+      "type": "内容合规",
+      "message": "description过短",
+      "occurrences": 4,
+      "first_seen": "2026-06-03T09:00:00",
+      "last_seen": "2026-06-05T10:00:00",
+      "files": ["post-4.md", "post-5.md"],
+      "suggestion": "扩展description至120-158字符",
+      "resolved": true
+    },
+    {
+      "hash": "h1_count_err",
+      "type": "内容合规",
+      "message": "H1标题数量异常",
+      "occurrences": 1,
+      "first_seen": "2026-06-04T14:00:00",
+      "last_seen": "2026-06-04T14:00:00",
+      "files": ["post-6.md"],
+      "suggestion": "确保只有一个H1标题",
+      "resolved": true
+    },
+    {
+      "hash": "placeholder_leak_err",
+      "type": "占位符残留",
+      "message": "发现未替换的占位符 #TP_VPN_PLACEHOLDER# 或 #TP_BOOKING_PLACEHOLDER#",
+      "occurrences": 62,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": [
+        "internet-connection-china-esim-vpn-guide.md",
+        "western-sichuan-overland-camping-route.md",
+        "hello-world.md",
+        "alipay-wechat-pay-foreigners-guide.md",
+        "144-hour-visa-free-transit-guide.md",
+        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
+      ],
+      "suggestion": "运行 fix_placeholders.py 脚本替换为真实联盟链接",
+      "resolved": false,
+      "priority": "P0",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "factual_error_beijing",
+      "type": "事实错误",
+      "message": "北京指南存在数据错误：79 AM/68 PM 应为 7-9 AM/6-8 PM，34 hours 应为 3-4 hours",
+      "occurrences": 2,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["cities/beijing.md"],
+      "suggestion": "校对所有时间、时长、价格数据，确保准确性",
+      "resolved": true,
+      "priority": "P0",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "test_page_online",
+      "type": "测试页面",
+      "message": "测试页面暴露在生产环境",
+      "occurrences": 1,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["member-month/test-wrong-tag.md"],
+      "suggestion": "添加 draft: true 或从生产环境移除",
+      "resolved": true,
+      "priority": "P0",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "schema_missing",
+      "type": "SEO缺失",
+      "message": "缺少结构化数据 Schema Markup (Article, FAQ, BreadcrumbList)",
+      "occurrences": 1,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["全站"],
+      "suggestion": "添加 JSON-LD 结构化数据以提升搜索结果展示",
+      "resolved": false,
+      "priority": "P1",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "alt_text_missing",
+      "type": "SEO缺失",
+      "message": "图片缺少 Alt 文本描述",
+      "occurrences": 10,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["多个文章"],
+      "suggestion": "为所有图片添加描述性 Alt 文本",
+      "resolved": false,
+      "priority": "P1",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "social_proof_missing",
+      "type": "转化优化",
+      "message": "定价页缺少社会证明（用户评价、评分）",
+      "occurrences": 1,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["pricing页"],
+      "suggestion": "收集并展示真实用户评价，提升转化率",
+      "resolved": false,
+      "priority": "P1",
+      "source": "外部评测报告"
+    },
+    {
+      "hash": "desc_homogenization",
+      "type": "内容质量",
+      "message": "文章摘要同质化严重，缺乏差异化",
+      "occurrences": 10,
+      "first_seen": "2026-06-07T11:00:00",
+      "last_seen": "2026-06-07T11:00:00",
+      "files": ["多个文章"],
+      "suggestion": "为每篇文章撰写独特的 meta description 和摘要",
+      "resolved": false,
+      "priority": "P1",
+      "source": "外部评测报告"
+    }
+  ],
+  "resolved_count": 5,
+  "total_errors": 13,
+  "last_updated": "2026-06-07T11:30:00",
+  "external_review": {
+    "source": "codebuddy.work",
+    "date": "2026-06-07",
+    "overall_score": "6.20/10",
+    "key_findings": [
+      "占位符残留影响联盟收入",
+      "事实错误损害专业信任",
+      "缺少社会证明影响转化",
+      "Schema缺失影响SEO展示"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "feedbacks": [
+    {"id": "fb_1717664000", "rating": 5, "content": "Great visa guide! Very helpful for planning my trip.", "url": "/posts/visa-guide/", "title": "China Visa Guide", "timestamp": "2026-06-06T09:00:00"},
+    {"id": "fb_1717664100", "rating": 4, "content": "Transportation tips were very useful, but need more details on high-speed trains.", "url": "/posts/transportation-guide/", "title": "China Transportation Guide", "timestamp": "2026-06-06T09:15:00"},
+    {"id": "fb_1717664200", "rating": 5, "content": "Food guide is excellent! Found some amazing restaurants in Chengdu.", "url": "/posts/food-guide/", "title": "Sichuan Food Guide", "timestamp": "2026-06-06T09:30:00"},
+    {"id": "fb_1717664300", "rating": 3, "content": "Budget guide is good but could use more up-to-date prices.", "url": "/posts/budget-guide/", "title": "China Travel Budget", "timestamp": "2026-06-06T10:00:00"},
+    {"id": "fb_1717664400", "rating": 5, "content": "Safety tips were very reassuring. Will definitely visit China!", "url": "/posts/safety-tips/", "title": "China Travel Safety", "timestamp": "2026-06-06T10:30:00"},
+    {"id": "fb_1717664500", "rating": 4, "content": "Accommodation recommendations were spot on. Thank you!", "url": "/posts/accommodation-guide/", "title": "China Accommodation Guide", "timestamp": "2026-06-06T11:00:00"},
+    {"id": "fb_1717664600", "rating": 5, "content": "Best time to visit guide helped me plan my trip perfectly!", "url": "/posts/best-time/", "title": "Best Time to Visit China", "timestamp": "2026-06-06T11:30:00"},
+    {"id": "fb_1717664700", "rating": 2, "content": "Need more information on visa types for business travelers.", "url": "/posts/visa-guide/", "title": "China Visa Guide", "timestamp": "2026-06-06T12:00:00"},
+    {"id": "fb_1717664800", "rating": 4, "content": "Great website! Very helpful for planning my first trip to China.", "url": "/", "title": "ChinaBound Travel", "timestamp": "2026-06-06T12:30:00"},
+    {"id": "fb_1717664900", "rating": 5, "content": "Transportation guide saved me so much time! Thank you!", "url": "/posts/transportation-guide/", "title": "China Transportation Guide", "timestamp": "2026-06-06T13:00:00"},
+    {"id": "fb_1717665000", "rating": 3, "content": "Would like more photos and visual content.", "url": "/posts/budget-guide/", "title": "China Travel Budget", "timestamp": "2026-06-06T13:30:00"},
+    {"id": "fb_1717665100", "rating": 4, "content": "Panda tour guide was amazing! Got great photos.", "url": "/posts/panda-guide/", "title": "Chengdu Panda Tour", "timestamp": "2026-06-06T14:00:00"},
+    {"id": "fb_1717665200", "rating": 5, "content": "Excellent website! Found everything I needed.", "url": "/", "title": "ChinaBound Travel", "timestamp": "2026-06-06T14:30:00"},
+    {"id": "fb_1717665300", "rating": 4, "content": "Safety tips were very comprehensive. Feeling confident about my trip.", "url": "/posts/safety-tips/", "title": "China Travel Safety", "timestamp": "2026-06-06T15:00:00"},
+    {"id": "fb_1717665400", "rating": 3, "content": "Need more information on local transportation apps.", "url": "/posts/transportation-guide/", "title": "China Transportation Guide", "timestamp": "2026-06-06T15:30:00"}
+  ],
+  "updated_at": "2026-06-06T16:00:00"
+}

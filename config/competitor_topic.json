@@ -1,0 +1,19 @@
+{
+  "competitors": [
+    {
+      "url": "https://www.chinatravel.com",
+      "articles": ["Best China Travel Destinations 2026", "China Visa Requirements Updated", "Top 10 Chinese Foods You Must Try", "China Travel Safety Tips", "How to Travel China on a Budget"]
+    },
+    {
+      "url": "https://www.travelchinaguide.com",
+      "articles": ["Complete China Travel Guide", "China Train Travel Guide", "Chinese Culture Guide", "China Travel FAQ", "Best Time to Visit China"]
+    },
+    {
+      "url": "https://www.wanderlustchina.com",
+      "articles": ["Hidden Gems in China", "China Solo Travel Guide", "Digital Nomad in China", "China Food Adventure", "Chengdu Travel Guide"]
+    }
+  ],
+  "hot_topics": ["China visa", "China travel tips", "Chengdu travel", "China budget travel", "Chinese food", "China transportation", "China safety", "best time to visit China", "China hidden gems", "China digital nomad"],
+  "content_trends": ["budget", "food", "street food", "hotpot", "transportation", "train", "flight", "accommodation", "hotel", "visa", "travel tips", "guide", "panda", "tour", "attraction", "safety", "best time", "season", "solo travel", "digital nomad"],
+  "updated_at": "2026-06-06T16:00:00"
+}
