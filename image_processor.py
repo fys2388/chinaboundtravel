@@ -3,7 +3,11 @@
 image_processor.py - 图片占位符处理模块
 将文章中的 [Image:xxx] 占位符转换为实际的图片URL
 
-Version: 1.0
+支持的图片生成服务:
+1. Pollinations.ai - 默认，免费，无需API密钥
+2. Gemini API - 高质量，需要API密钥
+
+Version: 1.1
 """
 
 import re
@@ -11,15 +15,16 @@ import hashlib
 from urllib.parse import quote
 
 
-def generate_image_url(prompt: str, seed: int = None, width: int = 800, height: int = 600) -> str:
+def generate_image_url(prompt: str, seed: int = None, width: int = 800, height: int = 600, service: str = "pollinations") -> str:
     """
-    使用 Pollinations.ai 生成图片URL
+    生成图片URL
     
     Args:
         prompt: 图片描述
         seed: 随机种子（用于生成相同图片）
         width: 图片宽度
         height: 图片高度
+        service: 图片生成服务，支持 'pollinations' 或 'gemini'
     
     Returns:
         图片URL
@@ -31,13 +36,65 @@ def generate_image_url(prompt: str, seed: int = None, width: int = 800, height: 
     if seed is None:
         seed = abs(hash(prompt)) % 100000
     
-    # URL编码提示词
-    encoded_prompt = quote(clean_prompt)
+    if service.lower() == "gemini":
+        return generate_gemini_url(clean_prompt, width, height)
+    else:
+        return generate_pollinations_url(clean_prompt, seed, width, height)
+
+
+def generate_pollinations_url(prompt: str, seed: int, width: int, height: int) -> str:
+    """
+    使用 Pollinations.ai 生成图片URL（免费，无需API密钥）
     
-    # 构建URL
+    Args:
+        prompt: 图片描述
+        seed: 随机种子
+        width: 图片宽度
+        height: 图片高度
+    
+    Returns:
+        图片URL
+    """
+    encoded_prompt = quote(prompt)
     url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width={width}&height={height}&nologo=true&seed={seed}"
-    
     return url
+
+
+def generate_gemini_url(prompt: str, width: int = 1024, height: int = 1024) -> str:
+    """
+    使用 Gemini API 生成图片URL（高质量，需要API密钥）
+    
+    注意：此函数生成的URL需要在后端或客户端使用API密钥调用
+    这里返回的是一个占位符URL，实际使用时需要替换为真实的API调用
+    
+    Args:
+        prompt: 图片描述
+        width: 图片宽度（Gemini默认支持512, 1024, 1024+, 最小512x512）
+        height: 图片高度
+    
+    Returns:
+        图片URL占位符或CDN URL
+    """
+    # Gemini 1.5 Pro 支持的图片尺寸:
+    # - 512x512
+    # - 1024x1024
+    # - 1024x1792 (宽x高，适合纵向图片)
+    # - 1792x1024 (宽x高，适合横向图片)
+    
+    # 选择最接近的支持尺寸
+    if width >= 1792 and height >= 1024:
+        size = "1792x1024"
+    elif height >= 1792 and width >= 1024:
+        size = "1024x1792"
+    elif width >= 1024 and height >= 1024:
+        size = "1024x1024"
+    else:
+        size = "512x512"
+    
+    # 生成一个标记，用于后续替换为真实的Gemini生成图片
+    # 实际使用时需要通过API调用获取真实图片URL
+    encoded_prompt = quote(prompt)
+    return f"gemini://image?prompt={encoded_prompt}&size={size}"
 
 
 def replace_image_placeholders(content: str, seed: int = None) -> str:

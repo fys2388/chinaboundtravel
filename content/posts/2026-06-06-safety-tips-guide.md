@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 ---
 
-![A bustling street scene in Chengdu at night with neon signs and pedestrians](https://example.com/chengdu-night-street-safety.jpg)
+![A bustling street scene in Chengdu at night with neon signs and pedestrians](https://image.pollinations.ai/prompt/A%20bustling%20street%20scene%20in%20Chengdu%20at%20night%20with%20neon%20signs%20and%20pedestrians?width=800&height=600&nologo=true&seed=20564)
 
 **Title: Still Alive and Kicking: Real Safety Tips for Americans in China (From a California Expat Who’s Been Here a Decade)**
 

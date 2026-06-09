@@ -28,7 +28,7 @@ weight: "1"
 
 You know that scene in *Lost in Translation* where Scarlett Johansson stares out the taxi window, utterly bewildered by Tokyo’s neon blur? Yeah, that was me, but swap the kimono for a sweaty T-shirt and replace Tokyo with Chengdu. Ten years ago, I landed in China’s spicy capital as a California kid who thought “public transit” meant Uber Pool with a surfboard rack. Now? I navigate Chinese transportation like a seasoned pro—or at least like someone who’s learned to laugh instead of cry. If you’re a European traveler used to Deutsche Bahn punctuality or London’s Oyster card simplicity, buckle up. This isn’t your grandma’s train ride. This is *The Fast and the Furious: Sichuan Drift*.
 
-![A chaotic street scene in Chengdu showing a packed bus, a bicycle weaving through scooters, and a street vendor selling skewers in the foreground](https://example.com/chengdu-transport-chaos.jpg)
+![A chaotic street scene in Chengdu showing a packed bus, a bicycle weaving through scooters, and a street vendor selling skewers in the foreground](https://image.pollinations.ai/prompt/A%20chaotic%20street%20scene%20in%20Chengdu%20showing%20a%20packed%20bus%2C%20a%20bicycle%20weaving%20through%20scooters%2C%20and%20a%20street%20vendor%20selling%20skewers%20in%20the%20foreground?width=800&height=600&nologo=true&seed=50446)
 
 ## The Art of the Taxi: Where Every Ride Is a Scene from *Ocean’s Eleven*
 
@@ -60,7 +60,7 @@ For European travelers, this is both terrifying and liberating. You can bike fro
 
 If you’re feeling adventurous, try a [local rickshaw ride](https://chinaboundtravel.com/posts/chengdu-rickshaw-adventures)—it’s like a roller coaster but with more exhaust fumes. And if you’re planning to explore beyond the city, check out my guide on [navigating China’s high-speed trains](https://chinaboundtravel.com/posts/china-high-speed-train-tips). They’re faster than my California ex-boyfriend’s excuses.
 
-![A crowded bike-sharing station in Chengdu with colorful bicycles lined up next to a busy street](https://example.com/chengdu-bike-sharing.jpg)
+![A crowded bike-sharing station in Chengdu with colorful bicycles lined up next to a busy street](https://image.pollinations.ai/prompt/A%20crowded%20bike-sharing%20station%20in%20Chengdu%20with%20colorful%20bicycles%20lined%20up%20next%20to%20a%20busy%20street?width=800&height=600&nologo=true&seed=40098)
 
 ## Conclusion: Embrace the Chaos
 

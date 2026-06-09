@@ -71,5 +71,5 @@ Pack your bags, grab your passport, and come see why Chengdu is more than just p
 *— Joran*  
 *Still missing In-N-Out, but loving mapo tofu more every day.*
 
-![Chengdu cherry blossoms in spring along Jinli Street](placeholder.jpg)  
+![Chengdu cherry blossoms in spring along Jinli Street](https://image.pollinations.ai/prompt/Chengdu%20cherry%20blossoms%20in%20spring%20along%20Jinli%20Street?width=800&height=600&nologo=true&seed=5407)  
 *A local teahouse in People's Park during autumn, with gingko leaves covering the ground.* (placeholder.jpg)
