@@ -153,20 +153,17 @@ class BufferGraphQLClient:
         return scheduled.isoformat()
     
     def run_scheduler(self, content_provider) -> None:
-        print("Buffer GraphQL Scheduler started")
-        print(f"Timezone: {self.timezone}")
-        print(f"Best times: {', '.join(self.best_times)}")
+        """
+        调度器已禁用自动预缓存功能。
+        帖子将不再提前缓存到Buffer草稿箱，只有在触发时才会发布。
+        """
+        print("Buffer GraphQL Scheduler is DISABLED")
+        print("WARNING: Auto-scheduling and pre-caching is disabled.")
+        print("Posts will only be created when explicitly triggered.")
         
-        def daily_job():
-            print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Scheduling today's posts...")
-            content_list = content_provider.get_content()
-            self.schedule_daily_posts(content_list)
-        
-        schedule.every().day.at("07:00").do(daily_job)
-        
+        # 保持空循环但不做任何调度
         while True:
-            schedule.run_pending()
-            time.sleep(60)
+            time.sleep(3600)  # 每小时检查一次，但不执行任何操作
 
 def example_content_provider():
     return [

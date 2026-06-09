@@ -119,21 +119,11 @@ class PublicationScheduler:
         return self._publish(platform, content)
     
     def schedule_posts(self):
-        for platform, config in SCHEDULE_CONFIG.items():
-            if not config.get('enabled', False):
-                continue
-            
-            if platform not in self.publishers:
-                logger.warning(f"No publisher registered for {platform}, skipping schedule")
-                continue
-            
-            for hour in config.get('hours', []):
-                schedule.every().day.at(f"{hour:02d}:00").do(
-                    self._scheduled_publish_task,
-                    platform=platform
-                )
-                
-                logger.info(f"Scheduled {platform} posts at {hour:02d}:00")
+        """
+        调度器已禁用自动预缓存功能。
+        帖子将不再提前缓存到Buffer草稿箱，只有在触发时才会发布。
+        """
+        logger.warning("Auto-scheduling is DISABLED - posts will only be published when explicitly triggered")
     
     def _scheduled_publish_task(self, platform: str):
         logger.info(f"Running scheduled publish task for {platform}")

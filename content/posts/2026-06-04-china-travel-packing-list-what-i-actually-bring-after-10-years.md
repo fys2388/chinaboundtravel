@@ -1,4 +1,4 @@
-﻿﻿﻿---
+﻿﻿﻿﻿﻿---
 title: "China Travel Packing List: What I Actually Bring After 10 Years of Visiting"
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/china-travel-packing-list-what-i-actually-bring-after-10-years.jpg"

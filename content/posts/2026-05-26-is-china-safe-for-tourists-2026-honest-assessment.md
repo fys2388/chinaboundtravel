@@ -1,4 +1,4 @@
-﻿﻿﻿---
+﻿﻿﻿﻿﻿---
 title: Is China Safe for Tourists in 2026? An Honest Safety Assessment
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.jpg"
