@@ -97,13 +97,14 @@ def generate_gemini_url(prompt: str, width: int = 1024, height: int = 1024) -> s
     return f"gemini://image?prompt={encoded_prompt}&size={size}"
 
 
-def replace_image_placeholders(content: str, seed: int = None) -> str:
+def replace_image_placeholders(content: str, seed: int = None, base_seed: int = None) -> str:
     """
     将文章中的 [Image:xxx] 占位符替换为实际的图片URL
     
     Args:
         content: 文章内容
         seed: 随机种子（用于生成相同图片）
+        base_seed: 基础seed（用于为每个占位符生成唯一seed）
     
     Returns:
         替换后的文章内容
@@ -112,12 +113,27 @@ def replace_image_placeholders(content: str, seed: int = None) -> str:
     # 支持格式: [Image:描述] 或 [Image:描述|alt=xxx]
     pattern = r'\[\s*Image\s*:\s*([^\]|]+)(?:\s*\|\s*alt\s*=\s*([^\]]+))?\s*\]'
     
+    # 计数器用于区分多个相同描述的图片
+    counter = [0]  # 使用列表以便在嵌套函数中修改
+    
     def replace_match(match):
         prompt = match.group(1).strip()
         alt_text = match.group(2).strip() if match.group(2) else prompt
         
+        # 为每个占位符生成唯一的seed
+        if base_seed is not None:
+            # 使用base_seed + prompt_hash + counter确保每个占位符唯一
+            prompt_seed = abs(hash(prompt + str(counter[0]))) % 100000
+            final_seed = (base_seed + prompt_seed) % 100000
+            counter[0] += 1
+        elif seed is not None:
+            final_seed = seed
+        else:
+            # 使用prompt的hash作为seed
+            final_seed = abs(hash(prompt)) % 100000
+        
         # 生成图片URL
-        image_url = generate_image_url(prompt, seed=seed)
+        image_url = generate_image_url(prompt, seed=final_seed)
         
         # 返回Markdown图片格式
         return f"![{alt_text}]({image_url})"
@@ -141,8 +157,8 @@ def process_markdown_images(content: str) -> str:
     # 使用文章内容的hash作为seed，确保相同内容生成相同图片
     content_hash = abs(hash(content)) % 100000
     
-    # 替换图片占位符
-    return replace_image_placeholders(content, seed=content_hash)
+    # 替换图片占位符（传入base_seed使每个占位符使用不同seed）
+    return replace_image_placeholders(content, base_seed=content_hash)
 
 
 # 测试函数
