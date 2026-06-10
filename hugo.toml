@@ -118,7 +118,7 @@ buildExpired = false
   anchor = "smart"
 
 [params.analytics]
-  google = { SiteVerificationTag = "" }
+  google = { SiteVerificationTag = "", TrackingID = "G-GECBME3YVJ" }
   bing = { SiteVerificationTag = "" }
 
 [params.affiliate]
