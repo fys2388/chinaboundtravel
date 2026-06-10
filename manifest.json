@@ -1,5 +1,5 @@
 {
-  "month_post_count": 8,
+  "month_post_count": 9,
   "last_reset_date": "2026-06-01",
   "last_social_publish": "2026-06-03 21:10:37",
   "daily_social_publish_date": "2026-06-10",
@@ -49,6 +49,11 @@
     {
       "topic": "Essential Safety Tips for First-Time Travellers in China",
       "geo_region": "EU",
+      "create_date": "2026-06-10"
+    },
+    {
+      "topic": "off-the-beaten-path routes",
+      "geo_region": "US",
       "create_date": "2026-06-10"
     }
   ],
