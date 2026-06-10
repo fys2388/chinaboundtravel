@@ -30,15 +30,15 @@ Hey mates! I’m Joran—born and raised in sunny California, but for the past t
 
 ## Why Timing Matters: My First Year in Chengdu
 
-I remember my first winter here, back in 2014. I’d just moved from San Diego, where “cold�?meant wearing a hoodie in December. I thought I was tough, but Chengdu’s winter fog? That stuff is relentless. It’s not just cold—it’s a damp, bone-chilling gray that seeps into your soul. I spent January huddled in a tiny apartment near Wuhou Temple, sipping hot tea and wondering why I’d left the California sun. But then spring hit, and everything changed. The plum blossoms exploded, the air cleared, and I fell in love with this city.
+I remember my first winter here, back in 2014. I’d just moved from San Diego, where “cold?meant wearing a hoodie in December. I thought I was tough, but Chengdu’s winter fog? That stuff is relentless. It’s not just cold—it’s a damp, bone-chilling gray that seeps into your soul. I spent January huddled in a tiny apartment near Wuhou Temple, sipping hot tea and wondering why I’d left the California sun. But then spring hit, and everything changed. The plum blossoms exploded, the air cleared, and I fell in love with this city.
 
 So, here’s the deal: Chengdu has four distinct seasons, but they’re not like what you’re used to down under. We don’t have a scorching summer like Brisbane or a mild winter like Auckland. Instead, we’ve got a humid subtropical vibe that can surprise you. Let me break it down for you, based on my own mistakes and discoveries.
 
 ### Spring (March to May): The Sweet Spot
 
-If I had to pick one time to visit, it’s spring. Hands down. March is when the city wakes up from its foggy slumber. The cherry blossoms along Jinli Ancient Street are stunning, and the temperature hovers around 15-25°C (59-77°F)—perfect for wandering without sweating or shivering. I’ve taken dozens of mates from Melbourne and Perth through the teahouses in People’s Park during April, and they always say the same thing: “This is the life.�?
+If I had to pick one time to visit, it’s spring. Hands down. March is when the city wakes up from its foggy slumber. The cherry blossoms along Jinli Ancient Street are stunning, and the temperature hovers around 15-25°C (59-77°F)—perfect for wandering without sweating or shivering. I’ve taken dozens of mates from Melbourne and Perth through the teahouses in People’s Park during April, and they always say the same thing: “This is the life.?
 
-But here’s a pro tip from a decade of living here: spring also brings “floating dust�?from the Gobi Desert. Yeah, it’s a thing. Some days the sky turns a bit hazy, but it’s nothing a light mask can’t handle. Plus, you’ll avoid the summer crowds. The pandas at the Chengdu Research Base are more active in cooler weather, so you’ll see them munching bamboo instead of napping in the heat. I once spent an entire afternoon watching a panda cub roll down a hill in April—it was pure magic.
+But here’s a pro tip from a decade of living here: spring also brings “floating dust?from the Gobi Desert. Yeah, it’s a thing. Some days the sky turns a bit hazy, but it’s nothing a light mask can’t handle. Plus, you’ll avoid the summer crowds. The pandas at the Chengdu Research Base are more active in cooler weather, so you’ll see them munching bamboo instead of napping in the heat. I once spent an entire afternoon watching a panda cub roll down a hill in April—it was pure magic.
 
 ### Summer (June to August): Hot, Humid, and Hot Pot Heaven
 
@@ -56,7 +56,7 @@ But watch out for November. It gets cooler (10-15°C or 50-59°F), and the fog s
 
 ### Winter (December to February): For the Brave (and the Bargain Hunters)
 
-Okay, let’s be real: winter in Chengdu is not for everyone. It’s cold (5-10°C or 41-50°F), gray, and damp. The sun might not show its face for weeks. I’ve had winters where I forgot what blue sky looked like. But if you’re coming from a place like Queenstown or Tasmania, you’ll probably laugh at what I call “cold.�?The real issue is the lack of central heating in many older buildings—you’ll be layering up like an onion.
+Okay, let’s be real: winter in Chengdu is not for everyone. It’s cold (5-10°C or 41-50°F), gray, and damp. The sun might not show its face for weeks. I’ve had winters where I forgot what blue sky looked like. But if you’re coming from a place like Queenstown or Tasmania, you’ll probably laugh at what I call “cold.?The real issue is the lack of central heating in many older buildings—you’ll be layering up like an onion.
 
 But here’s the upside: winter is the cheapest time to fly and book hotels. You’ll have the pandas almost to yourself, and the hot pot restaurants are cozy and packed with locals. I’ve spent many a December evening in a tiny *huoguo* joint, sweating out the chill with friends from all over the world. Also, the Chinese New Year (usually late January or February) is a spectacle. The lantern festival at the Dujiangyan Irrigation System is unforgettable—think thousands of red lanterns lighting up the night sky.
 
@@ -68,7 +68,7 @@ So, here’s my final advice, mate. If you want perfect weather and vibrant scen
 
 Pack your bags, grab your passport, and come see why Chengdu is more than just pandas—it’s a city that will steal your heart, one bowl of noodles at a time. See you in the teahouse!
 
-*�?Joran*  
+*?Joran*  
 *Still missing In-N-Out, but loving mapo tofu more every day.*
 
 ![Chengdu cherry blossoms in spring along Jinli Street](https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&h=400&fit=crop)  

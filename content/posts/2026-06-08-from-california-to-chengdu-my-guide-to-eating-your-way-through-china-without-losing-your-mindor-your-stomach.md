@@ -26,7 +26,7 @@ weight: "1"
 
 # From California to Chengdu: My Guide to Eating Your Way Through China (Without Losing Your Mind—or Your Stomach)
 
-Look, I’m not going to pretend I woke up one day in San Diego, looked at a map, and thought, “You know what? I’ll move to Chengdu for a decade.�?But here I am—a California kid who now navigates Sichuan spice like it’s a gentle breeze compared to the Santa Ana winds. After 10+ years of eating, bargaining, and occasionally regretting my life choices in China’s food scene, I’ve got some **China travel** advice for my fellow Aussies and Kiwis. Because let’s be honest: you lot know a thing or two about good food, bad beer, and surviving heat that makes your own backyards look like a spa retreat. So grab a cold one, settle in, and let me save you from ordering “chicken feet surprise�?by accident.
+Look, I’m not going to pretend I woke up one day in San Diego, looked at a map, and thought, “You know what? I’ll move to Chengdu for a decade.?But here I am—a California kid who now navigates Sichuan spice like it’s a gentle breeze compared to the Santa Ana winds. After 10+ years of eating, bargaining, and occasionally regretting my life choices in China’s food scene, I’ve got some **China travel** advice for my fellow Aussies and Kiwis. Because let’s be honest: you lot know a thing or two about good food, bad beer, and surviving heat that makes your own backyards look like a spa retreat. So grab a cold one, settle in, and let me save you from ordering “chicken feet surprise?by accident.
 
 ![Chinese food journey from California to Chengdu](https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=400&fit=crop)
 

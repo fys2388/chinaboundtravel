@@ -39,7 +39,7 @@ params:
       ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport,
       and attractions  not international flights.'
   - question: What is the best way to travel between Beijing, Xi'an, and Shanghai?
-    answer: 'High-speed rail (Fuxing Hao) is the best option. Beijing ¡ú Xi''an: 4.5
+    answer: 'High-speed rail (Fuxing Hao) is the best option. Beijing  Xi''an: 4.5
       hours, ~$85. Shanghai  Beijing: 4.5 hours, ~$95. Flights are also available
       but high-speed rail is more convenient and avoids airport hassles.'
   - question: Is 7 days enough to see China?
@@ -66,9 +66,9 @@ I remember my first China trip. I spent three weeks planning, made every rookie 
 
 This 7-day itinerary is the exact route I've run with friends, family, and readers for years. It's tight, it's efficient, and it's designed to actually work  not some inflated 14-day itinerary that only backpacker blogs recommend.
 
-**The core logic:** Fly into Beijing ¡ú Train to Xi'an ¡ú Fly to Shanghai. Three cities, seven days, zero regrets.
+**The core logic:** Fly into Beijing  Train to Xi'an  Fly to Shanghai. Three cities, seven days, zero regrets.
 
-> **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) ¡ú A complete guide to booking tickets, seat classes, and etiquette.
+> **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/)  A complete guide to booking tickets, seat classes, and etiquette.
 
 ---
 

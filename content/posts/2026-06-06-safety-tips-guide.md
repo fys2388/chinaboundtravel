@@ -30,7 +30,7 @@ weight: "1"
 
 Hey, fellow Californians. If you’re reading this, you’re probably planning a trip to China—maybe to see the pandas in Chengdu, walk the Great Wall, or eat your weight in dumplings. I get it. I’m Joran, born and raised in San Diego, and I’ve been living right here in Chengdu for over ten years now. That’s a decade of Sichuan peppercorns, smoggy mornings, and navigating a country that can feel both futuristic and ancient at the same time.
 
-When I first told my friends back in LA that I was moving to China, the reaction was almost always the same: “Isn’t it dangerous?�?They imagined pickpockets on every corner, sketchy food stalls, and a language barrier that would leave me stranded. Ten years later, I can tell you: China is, for the most part, incredibly safe—often safer than many parts of California. But “safe�?doesn’t mean “no-brainer.�?There are real differences in how safety works here, and if you’re not prepared, you can still get into trouble. So let me break it down for you, straight from my own experiences.
+When I first told my friends back in LA that I was moving to China, the reaction was almost always the same: “Isn’t it dangerous??They imagined pickpockets on every corner, sketchy food stalls, and a language barrier that would leave me stranded. Ten years later, I can tell you: China is, for the most part, incredibly safe—often safer than many parts of California. But “safe?doesn’t mean “no-brainer.?There are real differences in how safety works here, and if you’re not prepared, you can still get into trouble. So let me break it down for you, straight from my own experiences.
 
 ## The Golden Rule: Your Phone Is Your Lifeline (and Your Weakness)
 
@@ -52,13 +52,13 @@ For more on getting around safely, check out my post on [public transportation i
 
 ## Food, Drink, and Your Stomach’s Best Friend
 
-Let’s talk about the biggest safety concern for most Americans: the food. I’ll be honest—I’ve had some rough nights. My first month in Chengdu, I ate a street skewer that looked innocent enough. It was chicken heart, I think, but it was also swimming in chili oil that had probably been sitting out all day. Three hours later, I was praying to the porcelain gods. The locals call it “la du zi�?(spicy stomach), and it’s a rite of passage.
+Let’s talk about the biggest safety concern for most Americans: the food. I’ll be honest—I’ve had some rough nights. My first month in Chengdu, I ate a street skewer that looked innocent enough. It was chicken heart, I think, but it was also swimming in chili oil that had probably been sitting out all day. Three hours later, I was praying to the porcelain gods. The locals call it “la du zi?(spicy stomach), and it’s a rite of passage.
 
 But here’s the thing: **Street food is generally safe if you follow a few rules.** Only eat from stalls that are busy—high turnover means fresh ingredients. Look for vendors who use disposable chopsticks and boiling water to rinse bowls. Avoid anything that’s been sitting out uncovered, especially in summer heat. And always carry your own toilet paper and hand sanitizer. Public restrooms often don’t have soap or paper, and you’ll thank me later.
 
 Drinking water is another big one. **Never drink tap water.** I know, I know—in California we’re all about filtered water from the fridge. Here, tap water is for washing, not drinking. Even locals boil it or buy bottled. I’ve seen tourists fill their water bottles from a hotel sink and end up with a nasty case of traveler’s diarrhea. Stick to bottled water or boiled water from your hotel kettle. Also, ice in drinks? Most restaurants use filtered ice, but if you’re at a street stall, skip it.
 
-One more thing: **Be careful with alcohol.** Chinese baijiu (a grain liquor) is potent—often 50% alcohol or more. It’s a cultural thing to toast, and you’ll be pressured to drink. I’ve been at banquets where locals down shot after shot, and I’ve learned to pace myself. If you don’t drink, just say “wo bu he jiu�?(I don’t drink alcohol) with a smile. No one will force you, but they might insist on tea instead.
+One more thing: **Be careful with alcohol.** Chinese baijiu (a grain liquor) is potent—often 50% alcohol or more. It’s a cultural thing to toast, and you’ll be pressured to drink. I’ve been at banquets where locals down shot after shot, and I’ve learned to pace myself. If you don’t drink, just say “wo bu he jiu?(I don’t drink alcohol) with a smile. No one will force you, but they might insist on tea instead.
 
 ## Conclusion: Relax, But Don’t Let Your Guard Down
 

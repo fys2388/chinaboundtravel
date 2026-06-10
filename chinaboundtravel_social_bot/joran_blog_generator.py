@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
 from budget_controller import BudgetController
+from doubao_ark_client import DoubaoArkClient
 
 BASE_DIR = Path(__file__).parent.parent
 MANIFEST_PATH = BASE_DIR / "manifest.json"
@@ -141,90 +142,26 @@ AUTHOR_CFG = {
 MAX_DAILY_RETRY = 3
 FEISHU_WEBHOOK = os.getenv("FEISHU_WEBHOOK_URL")
 
-class DeepSeekClient:
+class BlogAIClient:
+    """统一的博客AI客户端 - 使用豆包API"""
     def __init__(self):
-        self.main_key = os.getenv("DEEPSEEK_API_KEY")
-        self.backup_key = os.getenv("DEEPSEEK_BACKUP_API_KEY")
-        self.url = "https://api.deepseek.com/v1/chat/completions"
-        self._use_backup = False
-        # 【降本控规】强制使用 deepseek-chat（最便宜的模型）
-        # deepseek-chat: ¥0.27/百万输入 ¥1.1/百万输出
-        self.default_model = "deepseek-chat"
+        self.client = DoubaoArkClient()
         self._call_count = 0
-        # 【月预算¥50】初始化全局预算控制器
-        from budget_controller import BudgetController
-        self.budget = BudgetController()
 
-    def _get_current_key(self):
-        if self._use_backup and self.backup_key:
-            return self.backup_key
-        return self.main_key
-
-    @retry(stop=stop_after_attempt(2), wait=wait_exponential(multiplier=2, min=3, max=6))
-    def chat(self, messages, model=None, max_tokens=500, temperature=0.7):
-        # 【降本控规】强制使用 deepseek-chat
-        use_model = self.default_model
-
-        # 【预算检查 1/2】前置检查 - 若已超限直接抛出
-        if not self.budget.can_call_api(use_model):
-            raise Exception("[BUDGET] 预算已用尽，停止所有 API 调用")
-
-        # 【降本控规】max_tokens 严格限制
-        effective_max_tokens = min(max_tokens, 500)  # 硬上限 500 tokens
-
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self._get_current_key()}"
-        }
-
-        payload = {
-            "model": use_model,
-            "messages": messages,
-            "max_tokens": effective_max_tokens,
-            "temperature": temperature,
-        }
-
-        response = requests.post(self.url, headers=headers, json=payload, timeout=120)
-        
-        # 如果主密钥失败且有备用密钥，切换到备用密钥
-        if response.status_code == 401 and not self._use_backup and self.backup_key:
-            self._use_backup = True
-            headers["Authorization"] = f"Bearer {self.backup_key}"
-            response = requests.post(self.url, headers=headers, json=payload, timeout=120)
-
-        response.raise_for_status()
-        result = response.json()
-
-        # 【预算记录 2/2】调用成功后，记录本次消耗
-        usage = result.get("usage", {})
-        input_tokens = usage.get("prompt_tokens", 0)
-        output_tokens = usage.get("completion_tokens", 0)
-        call_cost = self.budget.record_call(use_model, input_tokens, output_tokens)
+    def chat(self, messages, model=None, max_tokens=2000, temperature=0.7):
+        """调用豆包API生成内容"""
+        result = self.client.chat(messages, model=model, max_tokens=max_tokens, temperature=temperature)
         self._call_count += 1
-
-        # 【成本告警】单次调用超过¥0.3或预算达到60%告警
-        if call_cost > 0.30:
-            print(f"[BUDGET] ⚠️ 单次调用费用偏高 ¥{call_cost:.4f} (in:{input_tokens}, out:{output_tokens})")
-
-        day_status = self.budget.get_daily_status()
-        month_status = self.budget.get_monthly_status()
-        if self._call_count % 3 == 0 or day_status["status"] != "ok" or month_status["status"] != "ok":
-            print(f"[BUDGET] 本日:¥{day_status['used_yuan']:.2f}/¥{day_status['budget_yuan']:.2f}({day_status['used_percent']}%) "
-                  f"本月:¥{month_status['used_yuan']:.2f}/¥{month_status['budget_yuan']:.0f}({month_status['used_percent']}%) "
-                  f"调用:{self._call_count}次")
-
-        return result["choices"][0]["message"]["content"]
+        print(f"[AI] 调用 #{self._call_count}, 输出 {result.get('output_tokens', 0)} tokens")
+        return result["content"]
 
     def get_cost_summary(self):
-        """获取当前会话成本统计（从预算控制器读取）"""
-        day = self.budget.get_daily_status()
-        month = self.budget.get_monthly_status()
         return {
             "calls_this_session": self._call_count,
-            "daily_used_yuan": day["used_yuan"],
-            "daily_budget_yuan": day["budget_yuan"],
-            "monthly_used_yuan": month["used_yuan"],
-            "monthly_budget_yuan": month["budget_yuan"],
+            "daily_used_yuan": 0,
+            "daily_budget_yuan": 0,
+            "monthly_used_yuan": 0,
+            "monthly_budget_yuan": 0,
         }
 
 class ManifestManager:
@@ -349,7 +286,7 @@ class FeishuNotifier:
 
 class AIEngine:
     def __init__(self):
-        self.client = DeepSeekClient()
+        self.client = BlogAIClient()
         self.external_data = self._load_external_data()
     
     def _load_external_data(self):
@@ -416,38 +353,44 @@ class AIEngine:
             if content and len(content) > 10:
                 user_needs.append(content)
         
-        # 【降本版】精简Prompt，去掉冗余，固定图片占位符
-        prompt = f"""Joran: California American, 10+ years living in Chengdu China, movie buff, humorous travel blogger.
+        # 【深度版】增强Prompt，要求深入分析和实用价值
+        prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
-Write a HUMOROUS FIRST-PERSON travel blog post about: {topic}
+Write an IN-DEPTH, HUMOROUS FIRST-PERSON travel blog post about: {topic}
 Target audience: {region_info[geo_region]}
 
 SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
 
 User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
-Rules:
-1. Conversational, witty tone - like chatting with a friend
-2. Include SPECIFIC personal anecdotes from China (street food, taxis, transport, cultural moments)
-3. Mention California roots NATURALLY only when relevant for comparison
-4. Include 1-2 funny movie references (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven')
-5. Minimum 700 words
-6. Include at least 2 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
-7. Structure: Introduction + 3 H2 sections (##) + Short Conclusion
-8. MUST include EXACTLY 2 image placeholders:
+Requirements:
+1. TONE: Conversational, witty, like chatting with a trusted friend who's been there
+2. DEPTH: Provide detailed, actionable insights - not just surface-level tips
+3. PERSONAL ANECDOTES: Include SPECIFIC stories from my 10+ years in China (street food adventures, taxi rides, cultural misunderstandings, funny mishaps)
+4. COMPARISONS: Mention California roots NATURALLY only when relevant for humorous comparison
+5. MOVIE REFERENCES: Include 1-2 funny movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven')
+6. LENGTH: Minimum 1000 words - provide comprehensive coverage
+7. STRUCTURE: 
+   - Engaging introduction with hook
+   - 3-4 detailed H2 sections (##) with subpoints
+   - Practical takeaways in each section
+   - Memorable conclusion with call to action
+8. INTERNAL LINKS: Include at least 3 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
+9. IMAGE PLACEHOLDERS: MUST include EXACTLY 2 image placeholders:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
    - FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
-   - IMPORTANT: Do NOT use ![alt text](url) format - ONLY use [Image:xxx] format
-9. MAIN FOCUS must be China travel - comparisons/California/movies are just flavor
-10. NO government, politics, sensitive topics
-11. Address common user concerns: visa information, transportation, budget, safety
+10. PRACTICAL VALUE: Provide specific tips, hidden gems, local secrets, and actionable advice
+11. CULTURAL INSIGHTS: Explain the 'why' behind Chinese customs and behaviors
+12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor
+13. NO sensitive topics: government, politics, etc.
+14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these naturally
 
-Output ONLY the article content."""
+Output ONLY the article content with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【降本】max_tokens=500，输出约350词（足够核心内容）
-        return self.client.chat(messages, max_tokens=500)
+        # 【深度内容】max_tokens=2000，确保足够深度
+        return self.client.chat(messages, max_tokens=2000)
     
     def rewrite_post(self, content, topic, geo_region):
         region_info = {
@@ -456,28 +399,30 @@ Output ONLY the article content."""
             "AU": "Australian and New Zealand travelers"
         }
         
-        # 【降本】精简重写Prompt
-        prompt = f"""Rewrite this blog post. Fix any formatting issues, add missing structure, ensure minimum 700 words.
+        # 【深度版】增强重写Prompt
+        prompt = f"""Rewrite and ENHANCE this blog post to be more in-depth and engaging.
 
 {content}
 
 Requirements:
 1. Add proper H2 headings (##) for main sections if missing
-2. Add at least 2 internal links to other China travel topics
-3. Add EXACTLY 2 image placeholders:
+2. Expand content to minimum 1000 words with detailed insights
+3. Add at least 3 internal links to other China travel topics
+4. Add EXACTLY 2 image placeholders:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
-   - Format: ![alt text describing the scene](https://example.com/image.jpg)
-4. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
-5. Original topic: {topic}
-6. Target audience: {region_info[geo_region]}
-7. MAIN FOCUS must be China travel
+   - Format: [Image:detailed description of the scene, including subject, setting, mood]
+5. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
+6. Add more personal anecdotes and actionable tips
+7. Original topic: {topic}
+8. Target audience: {region_info[geo_region]}
+9. MAIN FOCUS must be China travel
 
-Output ONLY the rewritten article."""
+Output ONLY the rewritten article with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【降本】max_tokens 从4000降到720
-        return self.client.chat(messages, max_tokens=400)
+        # 【深度重写】max_tokens=1500
+        return self.client.chat(messages, max_tokens=1500)
     
     def add_image_placeholders(self, article_md):
         """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
@@ -503,14 +448,13 @@ Output ONLY the modified article with correct [Image:xxx] placeholders."""
 
 class SubEditor:
     def __init__(self):
-        self.client = DeepSeekClient()
+        self.client = BlogAIClient()
     
     def full_check(self, article_md, frontmatter):
-        """【降本版】副主编初审：校验图片占位符格式 + 链接格式"""
+        """副主编初审：校验图片占位符格式 + 链接格式 + 内容质量"""
         errors = []
         
         # 【图片占位符校验】检查 [Image:xxx] 格式的占位符数量
-        import re
         image_placeholders = re.findall(r'\[\s*Image\s*:\s*[^\]]+\]', article_md, re.IGNORECASE)
         img_num = len(image_placeholders)
         
@@ -527,35 +471,34 @@ class SubEditor:
         if '<link' in article_md.lower():
             errors.append("【链接格式】发现无效 <link> 标签，请使用标准 Markdown 链接格式 [文字](链接)")
         
+        # 【内容长度检查】确保内容足够深入
+        word_count = len(article_md.split())
+        if word_count < 600:
+            errors.append(f"【内容过短】当前仅{word_count}词，建议至少800词以保证内容深度")
+        
         return len(errors) == 0, errors
 
 class ChiefEditor:
     def __init__(self):
-        self.client = DeepSeekClient()
+        self.client = BlogAIClient()
     
     def full_check(self, content):
-        """【降本版】主编终审：只查主旨，不使用 AI 审核，不因为 California/电影关键词驳回"""
+        """主编终审：检查主旨、深度和原创性"""
         errors = []
         
-        # 【唯一强制规则】正文核心必须是中国内容，通篇写海外才驳回
+        # 【主旨检查】正文核心必须是中国内容
         content_lower = content.lower()
-        
-        # 检查中国相关关键词密度（文章是否以中国为主体）
         china_markers = ["china", "chengdu", "beijing", "shanghai", "chinese", "xian", "guilin", "suzhou", "hangzhou"]
         china_count = sum(content_lower.count(m) for m in china_markers)
         
-        # 检查是否有纯海外内容（如整篇写洛杉矶/旧金山而没有中国）
-        has_china = china_count >= 3
-        
-        if not has_china:
+        if china_count < 3:
             errors.append("【主旨驳回】文章未以中国为主体，缺少核心中国内容")
         
-        # 【California/电影关键词一律放行】不再因为加州关键词、电影引用驳回
-        # 【不做 E-E-A-T AI 审核】节省 API 调用
-        # 【不做逻辑 flow AI 审核】节省 API 调用
-        # 【不做第三人称检查】文风一律放行
+        # 【深度检查】确保有足够的细节和分析
+        if len(content.split()) < 700:
+            errors.append("【内容深度不足】文章内容过短，缺少深度分析和实用信息")
         
-        # 仅保留最低限度的敏感词检查（纯文本匹配，零Token消耗）
+        # 【敏感词检查】纯文本匹配
         sensitive_words = ["politics", "government", "communist", "tiananmen", "taiwan independence", "falun gong"]
         for w in sensitive_words:
             if w in content_lower:

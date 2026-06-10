@@ -88,7 +88,7 @@ Many more cities added in 2024-2025 expansion.
 
 ###  You Qualify If:
 1. You hold a passport from an **eligible country** (US, UK, Canada, Australia, Japan, most EU, and many more)
-2. You have a **confirmed onward ticket** to a third country/region (e.g., US ¡ú Shanghai ¡ú Japan = qualifies)
+2. You have a **confirmed onward ticket** to a third country/region (e.g., US ?Shanghai ?Japan = qualifies)
 3. Your **layover is 144 hours or less**
 4. You enter and exit through an **eligible port**
 5. You **stay within the permitted zone** (e.g., Shanghai zone includes Jiangsu, Zhejiang, and Anhui)

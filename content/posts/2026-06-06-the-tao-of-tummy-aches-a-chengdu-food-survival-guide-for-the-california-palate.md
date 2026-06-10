@@ -26,7 +26,7 @@ weight: "1"
 
 # The Tao of Tummy Aches: A Chengdu Food Survival Guide for the California Palate
 
-Let me tell you something about moving from Los Angeles to Chengdu: the first time a street vendor handed me a skewer of what I *thought* was chicken heart, and it turned out to be what I can only describe as “the soul of a very angry, very small bird,�?I looked around at the chaos—the scooters buzzing past like angry hornets, the old man loudly bargaining for frog legs, the steam rising from a cauldron that smelled like a dare—and I thought, *I’m a long way from the In-N-Out on Sunset.*
+Let me tell you something about moving from Los Angeles to Chengdu: the first time a street vendor handed me a skewer of what I *thought* was chicken heart, and it turned out to be what I can only describe as “the soul of a very angry, very small bird,?I looked around at the chaos—the scooters buzzing past like angry hornets, the old man loudly bargaining for frog legs, the steam rising from a cauldron that smelled like a dare—and I thought, *I’m a long way from the In-N-Out on Sunset.*
 
 ![A bustling night market in Chengdu with skewers of meat and vegetables grilling over glowing coals, smoke rising around a crowd of locals and tourists, neon signs flickering in the background](https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&h=400&fit=crop)
 
