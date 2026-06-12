@@ -1,8 +1,8 @@
 {
-  "month_post_count": 10,
+  "month_post_count": 11,
   "last_reset_date": "2026-06-01",
   "last_social_publish": "2026-06-03 21:10:37",
-  "daily_social_publish_date": "2026-06-11",
+  "daily_social_publish_date": "2026-06-12",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -60,6 +60,11 @@
       "topic": "food recommendations",
       "geo_region": "US",
       "create_date": "2026-06-11"
+    },
+    {
+      "topic": "family travel tips",
+      "geo_region": "EU",
+      "create_date": "2026-06-12"
     }
   ],
   "keyword_convert_rate": {
