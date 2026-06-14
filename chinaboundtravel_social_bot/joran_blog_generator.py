@@ -59,10 +59,11 @@ def wrap_text(text, max_chars):
 
 
 NANOBANANA_API_KEY = "65ddfd1e0f8c71acddcba5e3cde3201f"
-NANOBANANA_API_URL = "https://api.nanobananaapi.com/api/text2image"
+NANOBANANA_GENERATE_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/generate"
+NANOBANANA_RECORD_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/record-info"
 
-def generate_nanobanana_url(title, slug):
-    """生成 NanoBananaAPI 动态图片 URL"""
+def generate_nanobanana_url(title, slug, size="16:9"):
+    """生成 NanoBananaAPI 动态图片 URL（异步任务模式）"""
     title_lower = title.lower()
 
     location_keywords = [
@@ -102,28 +103,63 @@ def generate_nanobanana_url(title, slug):
             "Authorization": f"Bearer {NANOBANANA_API_KEY}",
             "Content-Type": "application/json"
         }
-        
+
+        # Step 1: 提交生成任务
         payload = {
             "prompt": prompt,
-            "width": 1200,
-            "height": 630,
-            "seed": abs(hash(slug)) % 100000,
-            "style": "photorealistic"
+            "numImages": 1,
+            "type": "TEXTTOIAMGE",
+            "image_size": size,
+            "callBackUrl": "https://example.com/callback"
         }
-        
-        response = requests.post(NANOBANANA_API_URL, headers=headers, json=payload, timeout=60)
-        response.raise_for_status()
-        
-        result = response.json()
-        image_url = result.get("url")
-        
-        if image_url:
-            print(f"[NanoBananaAPI] URL: {image_url}")
-            return image_url
-        else:
-            print("[NanoBananaAPI] Error: No URL returned")
+
+        gen_response = requests.post(NANOBANANA_GENERATE_URL, headers=headers, json=payload, timeout=60,
+                                   proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"})
+        gen_response.raise_for_status()
+        gen_result = gen_response.json()
+
+        if gen_result.get("code") != 200:
+            print(f"[NanoBananaAPI] Generation failed: {gen_result}")
             return None
-            
+
+        task_id = gen_result.get("data", {}).get("taskId")
+        if not task_id:
+            print("[NanoBananaAPI] No taskId returned")
+            return None
+
+        print(f"[NanoBananaAPI] Task submitted: {task_id}, waiting for completion...")
+
+        # Step 2: 轮询获取图片URL
+        image_url = None
+        for attempt in range(12):
+            time.sleep(2)
+            try:
+                record_response = requests.get(
+                    f"{NANOBANANA_RECORD_URL}?taskId={task_id}",
+                    headers=headers,
+                    timeout=30,
+                    proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"}
+                )
+                record_result = record_response.json()
+                
+                if record_result.get("code") == 200:
+                    success_flag = record_result.get("data", {}).get("successFlag")
+                    response_data = record_result.get("data", {}).get("response", {})
+                    result_url = response_data.get("resultImageUrl")
+                    
+                    if success_flag == 1 and result_url:
+                        image_url = result_url
+                        print(f"[NanoBananaAPI] Success: {image_url}")
+                        break
+                    elif success_flag == 2 or response_data.get("errorCode"):
+                        print(f"[NanoBananaAPI] Task failed")
+                        break
+            except Exception as inner_e:
+                print(f"[NanoBananaAPI] Poll error: {inner_e}")
+                continue
+
+        return image_url
+
     except Exception as e:
         print(f"[NanoBananaAPI] Error: {str(e)}")
         return None
@@ -131,7 +167,7 @@ def generate_nanobanana_url(title, slug):
 
 def generate_cover_for_post(title, slug):
     """生成封面图 - 使用 NanoBananaAPI"""
-    return generate_nanobanana_url(title, slug)
+    return generate_nanobanana_url(title, slug, size="16:9")
 
 
 GEO_REGIONS = ["EU", "US", "AU"]
