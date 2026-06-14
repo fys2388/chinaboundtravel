@@ -96,7 +96,7 @@ def generate_nanobanana_direct(prompt, size="16:9"):
 
         print(f"[NanoBananaAPI] Task submitted: {task_id}")
 
-        for attempt in range(12):
+        for attempt in range(15):
             time.sleep(2)
             try:
                 record_response = requests.get(
@@ -107,18 +107,19 @@ def generate_nanobanana_direct(prompt, size="16:9"):
                     verify=False
                 )
                 record_result = record_response.json()
-                
+
                 if record_result.get("code") == 200:
-                    success_flag = record_result.get("data", {}).get("successFlag")
-                    response_data = record_result.get("data", {}).get("response", {})
+                    data = record_result.get("data") or {}
+                    success_flag = data.get("successFlag")
+                    response_data = data.get("response") or {}
                     result_url = response_data.get("resultImageUrl")
-                    
+
                     if success_flag == 1 and result_url:
                         print(f"[NanoBananaAPI] Success: {result_url}")
                         return result_url
                     elif success_flag == 2 or response_data.get("errorCode"):
                         print(f"[NanoBananaAPI] Task failed")
-                        break
+                        return None
             except Exception as inner_e:
                 continue
 
