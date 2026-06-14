@@ -58,72 +58,79 @@ def wrap_text(text, max_chars):
     return lines
 
 
-# Google Gemini API 配置（免费 500 图/天）
-GEMINI_API_KEY = "***REMOVED***pA1sD2fG3hJ4kL5mN6bV7nC8xZ9cV0bN1mK2lJ3kH4gF5fD6dS7aA8sS9dF0gG1hH2jJ3kK4lL5mM6nN7oO8pP9qQ0rR1sS2tT3uU4vV5wW6xX7yY8zZ9"
-GEMINI_MODEL = "gemini-2.5-flash-image-preview"
-GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+# NanoBanana API 配置（已验证可用）
+NANOBANANA_API_KEY = "65ddfd1e0f8c71acddcba5e3cde3201f"
+NANOBANANA_GENERATE_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/generate"
+NANOBANANA_RECORD_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/record-info"
 
-def generate_gemini_image(prompt, size="16:9"):
-    """使用 Google Gemini 2.5 Flash Image API 生成图片（免费 500 图/天）"""
-    size_map = {
-        "16:9": {"width": 1792, "height": 1024},
-        "9:16": {"width": 1024, "height": 1792},
-        "1:1": {"width": 1024, "height": 1024},
-        "4:3": {"width": 1024, "height": 768},
-        "3:4": {"width": 768, "height": 1024},
-    }
-    
-    dimensions = size_map.get(size, {"width": 1792, "height": 1024})
-    
-    payload = {
-        "contents": [{
-            "parts": [{
-                "text": prompt
-            }]
-        }],
-        "generationConfig": {
-            "responseMimeType": "image/png",
-            "width": dimensions["width"],
-            "height": dimensions["height"]
-        }
-    }
-    
+def generate_nanobanana_direct(prompt, size="16:9"):
+    """使用 NanoBanana API 生成图片（已验证可用）"""
     try:
-        url = f"{GEMINI_API_URL}?key={GEMINI_API_KEY}"
-        response = requests.post(url, json=payload, timeout=60,
-                                proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"},
-                                verify=False)
-        response.raise_for_status()
-        
-        result = response.json()
-        
-        if "error" in result:
-            print(f"[Gemini API] Error: {result['error'].get('message', 'Unknown error')}")
+        headers = {
+            "Authorization": f"Bearer {NANOBANANA_API_KEY}",
+            "Content-Type": "application/json"
+        }
+
+        payload = {
+            "prompt": prompt,
+            "numImages": 1,
+            "type": "TEXTTOIAMGE",
+            "image_size": size,
+            "callBackUrl": "https://example.com/callback"
+        }
+
+        gen_response = requests.post(NANOBANANA_GENERATE_URL, headers=headers, json=payload, timeout=60,
+                                   proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"},
+                                   verify=False)
+        gen_response.raise_for_status()
+        gen_result = gen_response.json()
+
+        if gen_result.get("code") != 200:
+            print(f"[NanoBananaAPI] Generation failed: {gen_result}")
             return None
-        
-        candidates = result.get("candidates", [])
-        if candidates:
-            content = candidates[0].get("content", {})
-            parts = content.get("parts", [])
-            if parts:
-                image_data = parts[0].get("inlineData", {}).get("data")
-                if image_data:
-                    import base64
-                    # 返回 base64 数据或 URL（Gemini 返回的是 base64 编码的图片数据）
-                    image_url = f"data:image/png;base64,{image_data}"
-                    print(f"[Gemini API] Image generated successfully")
-                    return image_url
-        
-        print("[Gemini API] No image data returned")
+
+        task_id = gen_result.get("data", {}).get("taskId")
+        if not task_id:
+            print("[NanoBananaAPI] No taskId returned")
+            return None
+
+        print(f"[NanoBananaAPI] Task submitted: {task_id}")
+
+        for attempt in range(12):
+            time.sleep(2)
+            try:
+                record_response = requests.get(
+                    f"{NANOBANANA_RECORD_URL}?taskId={task_id}",
+                    headers=headers,
+                    timeout=30,
+                    proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"},
+                    verify=False
+                )
+                record_result = record_response.json()
+                
+                if record_result.get("code") == 200:
+                    success_flag = record_result.get("data", {}).get("successFlag")
+                    response_data = record_result.get("data", {}).get("response", {})
+                    result_url = response_data.get("resultImageUrl")
+                    
+                    if success_flag == 1 and result_url:
+                        print(f"[NanoBananaAPI] Success: {result_url}")
+                        return result_url
+                    elif success_flag == 2 or response_data.get("errorCode"):
+                        print(f"[NanoBananaAPI] Task failed")
+                        break
+            except Exception as inner_e:
+                continue
+
         return None
-        
+
     except Exception as e:
-        print(f"[Gemini API] Error: {str(e)}")
+        print(f"[NanoBananaAPI] Error: {str(e)}")
         return None
 
 
 def generate_nanobanana_url(title, slug, size="16:9"):
-    """生成 AI 图片 URL（使用 Google Gemini API）"""
+    """生成 AI 图片 URL（使用 NanoBanana API）"""
     title_lower = title.lower()
 
     location_keywords = [
@@ -158,11 +165,11 @@ def generate_nanobanana_url(title, slug, size="16:9"):
 
     prompt = f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
     
-    return generate_gemini_image(prompt, size)
+    return generate_nanobanana_direct(prompt, size)
 
 
 def generate_cover_for_post(title, slug):
-    """生成封面图 - 使用 Google Gemini API（免费 500 图/天）"""
+    """生成封面图 - 使用 NanoBanana API"""
     return generate_nanobanana_url(title, slug, size="16:9")
 
 
