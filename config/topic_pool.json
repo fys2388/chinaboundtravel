@@ -2,65 +2,161 @@
   "topics": [
     {
       "id": "a1b2c3d4",
-      "title": "China Visa Requirements 2026",
+      "title": "China Visa Requirements 2026: Complete Guide for Foreigners",
       "category": "visa",
       "geo": "US",
-      "keywords": ["china visa", "china travel visa", "chinese visa application"],
+      "keywords": ["china visa", "china travel visa", "chinese visa application", "china visa requirements"],
       "priority": 5,
       "status": "pending",
       "source": "gsc",
       "created_at": "2026-06-06T10:00:00",
-      "used_at": null
+      "used_at": null,
+      "depth": "deep"
     },
     {
       "id": "e5f6g7h8",
-      "title": "Best Time to Visit Chengdu",
+      "title": "Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons",
       "category": "travel",
       "geo": "EU",
-      "keywords": ["chengdu travel", "best time chengdu", "chengdu weather"],
+      "keywords": ["chengdu travel", "best time chengdu", "chengdu weather", "chengdu festivals"],
       "priority": 4,
       "status": "pending",
       "source": "gsc",
       "created_at": "2026-06-06T10:05:00",
-      "used_at": null
+      "used_at": null,
+      "depth": "deep"
     },
     {
       "id": "i9j0k1l2",
-      "title": "China Travel Budget Guide",
+      "title": "China Travel Budget Guide 2026: Detailed Costs for Every Budget",
       "category": "budget",
       "geo": "US",
-      "keywords": ["china travel budget", "travel to china cost", "china trip cost"],
+      "keywords": ["china travel budget", "travel to china cost", "china trip cost", "china travel expenses"],
       "priority": 5,
       "status": "pending",
       "source": "affiliate",
       "created_at": "2026-06-06T10:10:00",
-      "used_at": null
+      "used_at": null,
+      "depth": "deep"
     },
     {
       "id": "m3n4o5p6",
-      "title": "Sichuan Hotpot Guide",
+      "title": "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance",
       "category": "food",
       "geo": "AU",
-      "keywords": ["sichuan hotpot", "chengdu food", "chinese hotpot"],
+      "keywords": ["sichuan hotpot", "chengdu food", "chinese hotpot", "hotpot history"],
       "priority": 3,
       "status": "pending",
       "source": "competitor",
       "created_at": "2026-06-06T10:15:00",
-      "used_at": null
+      "used_at": null,
+      "depth": "deep"
     },
     {
       "id": "q7r8s9t0",
-      "title": "China Transportation Guide",
+      "title": "China Transportation Guide: High-Speed Rail, Subways, and Local Transport",
       "category": "transportation",
       "geo": "EU",
-      "keywords": ["china transportation", "china high speed train", "china subway"],
+      "keywords": ["china transportation", "china high speed train", "china subway", "china local transport"],
       "priority": 4,
       "status": "pending",
       "source": "user_feedback",
       "created_at": "2026-06-06T10:20:00",
-      "used_at": null
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "u1v2w3x4",
+      "title": "The History and Culture of the Great Wall: Beyond the Tourist Trail",
+      "category": "culture",
+      "geo": "US",
+      "keywords": ["great wall of china", "great wall history", "great wall culture", "great wall hidden spots"],
+      "priority": 5,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-06-14T10:00:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "y5z6a7b8",
+      "title": "Xi'an Terracotta Army: History, Discovery, and Insider Tips",
+      "category": "culture",
+      "geo": "EU",
+      "keywords": ["terracotta army", "xi'an travel", "ancient china", "qin dynasty"],
+      "priority": 5,
+      "status": "pending",
+      "source": "competitor",
+      "created_at": "2026-06-14T10:05:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "c9d0e1f2",
+      "title": "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture",
+      "category": "travel",
+      "geo": "AU",
+      "keywords": ["shanghai travel", "shanghai hidden gems", "shanghai neighborhoods", "shanghai local life"],
+      "priority": 4,
+      "status": "pending",
+      "source": "user_feedback",
+      "created_at": "2026-06-14T10:10:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "g3h4i5j6",
+      "title": "Chinese Tea Culture: History, Types, and Tea Ceremony Guide",
+      "category": "culture",
+      "geo": "US",
+      "keywords": ["chinese tea", "china tea culture", "tea ceremony", "chinese tea types"],
+      "priority": 4,
+      "status": "pending",
+      "source": "affiliate",
+      "created_at": "2026-06-14T10:15:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "k7l8m9n0",
+      "title": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
+      "category": "travel",
+      "geo": "EU",
+      "keywords": ["yunnan travel", "rice terraces", "lijiang", "ethnic minorities"],
+      "priority": 5,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-06-14T10:20:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "p1q2r3s4",
+      "title": "China Food Guide: Regional Cuisines and Must-Try Dishes",
+      "category": "food",
+      "geo": "AU",
+      "keywords": ["chinese food", "china regional cuisine", "must try chinese dishes", "chinese street food"],
+      "priority": 5,
+      "status": "pending",
+      "source": "competitor",
+      "created_at": "2026-06-14T10:25:00",
+      "used_at": null,
+      "depth": "deep"
+    },
+    {
+      "id": "t5u6v7w8",
+      "title": "Living in China as a Foreigner: Cultural Adaptation and Daily Life",
+      "category": "lifestyle",
+      "geo": "US",
+      "keywords": ["living in china", "expat life china", "cultural adaptation", "china daily life"],
+      "priority": 4,
+      "status": "pending",
+      "source": "user_feedback",
+      "created_at": "2026-06-14T10:30:00",
+      "used_at": null,
+      "depth": "deep"
     }
   ],
   "used_topics": [],
-  "last_update": "2026-06-06T16:00:00"
+  "last_update": "2026-06-14T16:00:00"
 }

@@ -353,44 +353,54 @@ class AIEngine:
             if content and len(content) > 10:
                 user_needs.append(content)
         
-        # 【深度版】增强Prompt，要求深入分析和实用价值
+        # 【深度版】增强Prompt，要求深入分析和实用价值（深度好文）
         prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
-Write an IN-DEPTH, HUMOROUS FIRST-PERSON travel blog post about: {topic}
+Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
 Target audience: {region_info[geo_region]}
 
 SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
 
 User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
-Requirements:
-1. TONE: Conversational, witty, like chatting with a trusted friend who's been there
-2. DEPTH: Provide detailed, actionable insights - not just surface-level tips
-3. PERSONAL ANECDOTES: Include SPECIFIC stories from my 10+ years in China (street food adventures, taxi rides, cultural misunderstandings, funny mishaps)
-4. COMPARISONS: Mention California roots NATURALLY only when relevant for humorous comparison
-5. MOVIE REFERENCES: Include 1-2 funny movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven')
-6. LENGTH: Minimum 1000 words - provide comprehensive coverage
+Requirements for HIGH-QUALITY CONTENT:
+1. TONE: Conversational, witty, authoritative - like chatting with a trusted friend who's been there and done it
+2. DEPTH: Provide EXTREMELY detailed, actionable insights - NO surface-level tips. Go DEEP into topics.
+3. PERSONAL ANECDOTES: Include MULTIPLE SPECIFIC stories from my 10+ years in China:
+   - Funny mishaps (getting lost, language barriers, cultural misunderstandings)
+   - Street food adventures (specific stalls, weird foods tried)
+   - Transportation stories (crazy taxi rides, subway experiences)
+   - Personal connections (local friends, unexpected friendships)
+4. COMPARISONS: Mention California roots NATURALLY for humorous comparison (e.g., "In LA we have In-N-Out, but in Chengdu...")
+5. MOVIE REFERENCES: Include 2-3 funny movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven', Chinese bureaucracy like 'The Matrix')
+6. LENGTH: MINIMUM 2000 words - provide COMPREHENSIVE coverage with plenty of details
 7. STRUCTURE: 
-   - Engaging introduction with hook
-   - 3-4 detailed H2 sections (##) with subpoints
-   - Practical takeaways in each section
-   - Memorable conclusion with call to action
-8. INTERNAL LINKS: Include at least 3 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
+   - Engaging introduction with a strong hook (story, surprising fact, or question)
+   - 5-7 DETAILED H2 sections (##) with SUBPOINTS and EXAMPLES
+   - Each section must have PRACTICAL takeaways/summary
+   - Memorable conclusion with call to action and personal reflection
+8. INTERNAL LINKS: Include at least 4 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
 9. IMAGE PLACEHOLDERS: MUST include EXACTLY 2 image placeholders:
-   - One AFTER the introduction
-   - One IN the MIDDLE of the article
+   - One RIGHT AFTER the introduction
+   - One IN the MIDDLE of the article (around 40-60% mark)
    - FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
-10. PRACTICAL VALUE: Provide specific tips, hidden gems, local secrets, and actionable advice
-11. CULTURAL INSIGHTS: Explain the 'why' behind Chinese customs and behaviors
-12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor
-13. NO sensitive topics: government, politics, etc.
-14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these naturally
+10. PRACTICAL VALUE: Provide SPECIFIC tips, hidden gems, local secrets, and actionable advice:
+    - Exact addresses or areas to visit
+    - How much things cost (specific prices)
+    - Best times to go
+    - What to avoid
+    - Step-by-step guides
+11. CULTURAL INSIGHTS: Explain the 'WHY' behind Chinese customs and behaviors - give historical/cultural context
+12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor, NOT the main dish
+13. NO sensitive topics: government, politics, religion, or controversial issues
+14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these naturally throughout
+15. AUTHORITY: Reference my 10+ years experience frequently but naturally
 
 Output ONLY the article content with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【深度内容】max_tokens=2000，确保足够深度
-        return self.client.chat(messages, max_tokens=2000)
+        # 【深度内容】max_tokens=3500，确保足够深度（生成2000+词文章）
+        return self.client.chat(messages, max_tokens=3500)
     
     def rewrite_post(self, content, topic, geo_region):
         region_info = {
@@ -421,8 +431,8 @@ Requirements:
 Output ONLY the rewritten article with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【深度重写】max_tokens=1500
-        return self.client.chat(messages, max_tokens=1500)
+        # 【深度重写】max_tokens=2500，确保足够深度
+        return self.client.chat(messages, max_tokens=2500)
     
     def add_image_placeholders(self, article_md):
         """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
