@@ -58,120 +58,216 @@ def wrap_text(text, max_chars):
     return lines
 
 
-# NanoBanana API 配置（已验证可用）
-NANOBANANA_API_KEY = "65ddfd1e0f8c71acddcba5e3cde3201f"
-NANOBANANA_GENERATE_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/generate"
-NANOBANANA_RECORD_URL = "https://api.nanobananaapi.ai/api/v1/nanobanana/record-info"
+# ========== 多 API 图片生成系统（智能降级）
+# 背景: 平台代理阻断了 googleapis.com 等海外 AI 服务，
+#       因此使用国内可通的 API，按优先级自动降级尝试
 
-def generate_nanobanana_direct(prompt, size="16:9"):
-    """使用 NanoBanana API 生成图片（已验证可用）"""
-    try:
-        headers = {
-            "Authorization": f"Bearer {NANOBANANA_API_KEY}",
-            "Content-Type": "application/json"
-        }
+PROXIES = {"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"}
 
-        payload = {
-            "prompt": prompt,
-            "numImages": 1,
-            "type": "TEXTTOIAMGE",
-            "image_size": size,
-            "callBackUrl": "https://example.com/callback"
-        }
+IMAGE_API_CONFIG = {
+    "nanobanana": {
+        "name": "NanoBanana API",
+        "api_key": os.getenv("NANOBANANA_API_KEY", "65ddfd1e0f8c71acddcba5e3cde3201f"),
+        "gen_url": "https://api.nanobananaapi.ai/api/v1/nanobanana/generate",
+        "record_url": "https://api.nanobananaapi.ai/api/v1/nanobanana/record-info",
+        "priority": 1,
+    },
+    "zhizengzeng": {
+        "name": "智增增 API",
+        "api_key": os.getenv("ZHIZENGZENG_API_KEY", ""),
+        "url": "https://api.zhizengzeng.com/v1/images/generations",
+        "priority": 2,
+    },
+    "aigc2d": {
+        "name": "AIGC2D API",
+        "api_key": os.getenv("AIGC2D_API_KEY", ""),
+        "url": "https://api.aigc2d.com/v1/images/generations",
+        "priority": 3,
+    },
+    "chatanywhere": {
+        "name": "ChatAnywhere API",
+        "api_key": os.getenv("CHATANYWHERE_API_KEY", ""),
+        "url": "https://api.chatanywhere.tech/v1/images/generations",
+        "priority": 4,
+    },
+    "pollinations": {
+        "name": "Pollinations.ai (免费AI)",
+        "api_key": "",
+        "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
+        "priority": 98,
+    },
+    "picsum": {
+        "name": "Picsum.photos (占位图兜底)",
+        "api_key": "",
+        "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
+        "priority": 99,
+    },
+}
 
-        gen_response = requests.post(NANOBANANA_GENERATE_URL, headers=headers, json=payload, timeout=60,
-                                   proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"},
-                                   verify=False)
-        gen_response.raise_for_status()
-        gen_result = gen_response.json()
+LOCATION_KEYWORDS = [
+    ("chengdu", "modern Chengdu city with pandas, Sichuan spicy hotpot"),
+    ("beijing", "Beijing Forbidden City, Great Wall of China, imperial palace"),
+    ("shanghai", "Shanghai Bund skyline, Oriental Pearl Tower at night"),
+    ("xian", "Xian Terracotta Army, ancient Chinese city walls"),
+    ("guilin", "Guilin karst mountains, Li River cruise landscape"),
+    ("zhangjiajie", "Zhangjiajie Avatar mountains, quartz sandstone pillars"),
+    ("hangzhou", "West Lake Hangzhou, traditional Chinese pagoda garden"),
+    ("hong kong", "Hong Kong Victoria Harbour night skyline"),
+    ("sichuan", "Sichuan mountains, giant panda in bamboo forest"),
+    ("yunnan", "Yunnan rice terraces, Lijiang ancient town, Shangri-La"),
+    ("great wall", "Great Wall of China winding through mountains"),
+    ("visa", "travel visa document with Chinese flag background"),
+    ("packing", "travel suitcase with China travel essentials checklist"),
+    ("safety", "safe travel in China with Chinese cityscape background"),
+    ("transportation", "China high-speed train, modern subway system"),
+    ("accommodation", "Chinese boutique hotel room interior design"),
+    ("food", "Chinese street food market, dumplings, noodles feast"),
+    ("cultural", "traditional Chinese cultural scene, red lanterns"),
+    ("budget", "budget travel planning with Chinese yuan banknotes"),
+    ("itinerary", "China travel map with compass and passport"),
+    ("best time", "spring cherry blossoms in Beijing or autumn West Lake"),
+]
 
-        if gen_result.get("code") != 200:
-            print(f"[NanoBananaAPI] Generation failed: {gen_result}")
-            return None
-
-        task_id = gen_result.get("data", {}).get("taskId")
-        if not task_id:
-            print("[NanoBananaAPI] No taskId returned")
-            return None
-
-        print(f"[NanoBananaAPI] Task submitted: {task_id}")
-
-        for attempt in range(15):
-            time.sleep(2)
-            try:
-                record_response = requests.get(
-                    f"{NANOBANANA_RECORD_URL}?taskId={task_id}",
-                    headers=headers,
-                    timeout=30,
-                    proxies={"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"},
-                    verify=False
-                )
-                record_result = record_response.json()
-
-                if record_result.get("code") == 200:
-                    data = record_result.get("data") or {}
-                    success_flag = data.get("successFlag")
-                    response_data = data.get("response") or {}
-                    result_url = response_data.get("resultImageUrl")
-
-                    if success_flag == 1 and result_url:
-                        print(f"[NanoBananaAPI] Success: {result_url}")
-                        return result_url
-                    elif success_flag == 2 or response_data.get("errorCode"):
-                        print(f"[NanoBananaAPI] Task failed")
-                        return None
-            except Exception as inner_e:
-                continue
-
-        return None
-
-    except Exception as e:
-        print(f"[NanoBananaAPI] Error: {str(e)}")
-        return None
-
-
-def generate_nanobanana_url(title, slug, size="16:9"):
-    """生成 AI 图片 URL（使用 NanoBanana API）"""
+def build_prompt(title, slug):
+    """根据标题构建图片生成 prompt"""
     title_lower = title.lower()
-
-    location_keywords = [
-        ("chengdu", "modern Chengdu city with pandas, Sichuan spicy hotpot"),
-        ("beijing", "Beijing Forbidden City, Great Wall of China, imperial palace"),
-        ("shanghai", "Shanghai Bund skyline, Oriental Pearl Tower at night"),
-        ("xian", "Xian Terracotta Army, ancient Chinese city walls"),
-        ("guilin", "Guilin karst mountains, Li River cruise landscape"),
-        ("zhangjiajie", "Zhangjiajie Avatar mountains, quartz sandstone pillars"),
-        ("hangzhou", "West Lake Hangzhou, traditional Chinese pagoda garden"),
-        ("hong kong", "Hong Kong Victoria Harbour night skyline"),
-        ("sichuan", "Sichuan mountains, giant panda in bamboo forest"),
-        ("yunnan", "Yunnan rice terraces, Lijiang ancient town, Shangri-La"),
-        ("great wall", "Great Wall of China winding through mountains"),
-        ("visa", "travel visa document with Chinese flag background"),
-        ("packing", "travel suitcase with China travel essentials checklist"),
-        ("safety", "safe travel in China with Chinese cityscape background"),
-        ("transportation", "China high-speed train, modern subway system"),
-        ("accommodation", "Chinese boutique hotel room interior design"),
-        ("food", "Chinese street food market, dumplings, noodles feast"),
-        ("cultural", "traditional Chinese cultural scene, red lanterns"),
-        ("budget", "budget travel planning with Chinese yuan banknotes"),
-        ("itinerary", "China travel map with compass and passport"),
-        ("best time", "spring cherry blossoms in Beijing or autumn West Lake"),
-    ]
-
     scene_desc = "Beautiful China travel landscape photography, cinematic composition"
-    for kw, desc in location_keywords:
+    for kw, desc in LOCATION_KEYWORDS:
         if kw in title_lower:
             scene_desc = desc
             break
+    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
 
-    prompt = f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
+def try_nanobanana(prompt, size="16:9"):
+    """API #1: NanoBanana（异步任务模式）"""
+    cfg = IMAGE_API_CONFIG["nanobanana"]
+    if not cfg["api_key"]:
+        return None
+    try:
+        headers = {"Authorization": f"Bearer {cfg['api_key']}", "Content-Type": "application/json"}
+        payload = {"prompt": prompt, "numImages": 1, "type": "TEXTTOIAMGE",
+                   "image_size": size, "callBackUrl": "https://example.com/callback"}
+        r = requests.post(cfg["gen_url"], headers=headers, json=payload,
+                         timeout=60, proxies=PROXIES, verify=False)
+        result = r.json()
+        if result.get("code") != 200:
+            print(f"  [{cfg['name']}] {result.get('msg', 'unknown error')}")
+            return None
+        task_id = result.get("data", {}).get("taskId")
+        if not task_id:
+            return None
+        print(f"  [{cfg['name']}] Task: {task_id}")
+        for _ in range(15):
+            time.sleep(2)
+            try:
+                rec = requests.get(f"{cfg['record_url']}?taskId={task_id}",
+                                  headers=headers, timeout=30, proxies=PROXIES, verify=False).json()
+                if rec.get("code") == 200:
+                    data = rec.get("data") or {}
+                    flag = data.get("successFlag")
+                    url = (data.get("response") or {}).get("resultImageUrl")
+                    if flag == 1 and url:
+                        return url
+                    elif flag == 2:
+                        return None
+            except:
+                continue
+        return None
+    except Exception as e:
+        print(f"  [{cfg['name']}] {type(e).__name__}: {str(e)[:80]}")
+        return None
+
+def try_openai_compatible(prompt, api_name, api_key, url, size="1024x1024"):
+    """API #2-#4: OpenAI 兼容格式（智增增 / AIGC2D / ChatAnywhere）"""
+    if not api_key:
+        print(f"  [{api_name}] 未配置 API Key，跳过")
+        return None
+    try:
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+        payload = {
+            "model": "dall-e-3",
+            "prompt": prompt,
+            "n": 1,
+            "size": size,
+            "response_format": "url"
+        }
+        r = requests.post(url, headers=headers, json=payload,
+                         timeout=120, proxies=PROXIES, verify=False)
+        result = r.json()
+        if "error" in result:
+            err = result["error"].get("message", str(result["error"]))
+            print(f"  [{api_name}] {err[:120]}")
+            return None
+        images = result.get("data", [])
+        if images and images[0].get("url"):
+            return images[0]["url"]
+        return None
+    except Exception as e:
+        print(f"  [{api_name}] {type(e).__name__}: {str(e)[:80]}")
+        return None
+
+def try_pollinations(prompt, width=1200, height=630):
+    """API #5: Pollinations.ai（免费，无 key，直接 GET URL）"""
+    try:
+        seed = abs(hash(prompt)) % 100000
+        encoded = requests.utils.quote(prompt)
+        url = f"https://image.pollinations.ai/prompt/{encoded}?width={width}&height={height}&nologo=true&seed={seed}"
+        r = requests.get(url, timeout=60, proxies=PROXIES, verify=False, stream=True)
+        ct = r.headers.get("content-type", "")
+        if r.status_code == 200 and "image" in ct.lower():
+            return url
+        print(f"  [{IMAGE_API_CONFIG['pollinations']['name']}] HTTP {r.status_code}, content-type: {ct}")
+        return None
+    except Exception as e:
+        print(f"  [{IMAGE_API_CONFIG['pollinations']['name']}] {type(e).__name__}: {str(e)[:80]}")
+        return None
+
+def generate_image_url(prompt, size_str="16:9"):
+    """主入口：按优先级尝试所有可用 API，返回第一个成功的图片 URL"""
+    print(f"\n[ImageGen] 开始生成 (prompt: {prompt[:60]}...)")
     
-    return generate_nanobanana_direct(prompt, size)
-
+    # 尺寸映射
+    size_map = {"16:9": ("1792", "1024"), "1:1": ("1024", "1024"), "4:3": ("1024", "768")}
+    w, h = size_map.get(size_str, ("1792", "1024"))
+    openai_size = f"{w}x{h}"
+    
+    # 优先级排序
+    apis = sorted(IMAGE_API_CONFIG.items(), key=lambda x: x[1]["priority"])
+    
+    for api_id, cfg in apis:
+        print(f"  尝试 [{cfg['name']}] (priority={cfg['priority']})...")
+        
+        result = None
+        if api_id == "nanobanana":
+            result = try_nanobanana(prompt, size_str)
+        elif api_id == "pollinations":
+            result = try_pollinations(prompt, int(w), int(h))
+        elif api_id == "picsum":
+            seed = abs(hash(prompt)) % 1000000
+            picsum_url = f"https://picsum.photos/seed/{seed}/{w}/{h}"
+            try:
+                r = requests.get(picsum_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
+                if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
+                    result = picsum_url
+            except:
+                pass
+        else:
+            result = try_openai_compatible(prompt, cfg["name"], cfg["api_key"], cfg["url"], openai_size)
+        
+        if result:
+            print(f"  ✅ [{cfg['name']}] 成功: {result[:80]}")
+            return result
+        else:
+            print(f"  ❌ [{cfg['name']}] 失败，尝试下一个...")
+    
+    print(f"\n  ⚠️ 所有 API 均失败，返回最终兜底图")
+    final_seed = abs(hash(prompt)) % 1000000
+    return f"https://picsum.photos/seed/{final_seed}/{w}/{h}"
 
 def generate_cover_for_post(title, slug):
-    """生成封面图 - 使用 NanoBanana API"""
-    return generate_nanobanana_url(title, slug, size="16:9")
+    """生成博文封面图"""
+    prompt = build_prompt(title, slug)
+    return generate_image_url(prompt, "16:9")
 
 
 GEO_REGIONS = ["EU", "US", "AU"]
