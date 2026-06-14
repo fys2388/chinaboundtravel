@@ -2,7 +2,6 @@ name: Joran博文生成+双AI自动审核发布
 
 on:
   schedule:
-    # 【恢复】每天生成1篇（使用 deepseek-chat + 低max_tokens，月消耗仍可控）
     - cron: '0 0 * * 1-5'
   workflow_dispatch:
 
@@ -26,7 +25,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.147.0'
           extended: true
 
       - name: Install dependencies
@@ -42,11 +41,11 @@ jobs:
       - name: Build site to verify
         run: hugo --gc --minify
 
-      - name: Commit generated posts with [skip ci]
+      - name: Commit and push generated posts
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add content/posts/*.md || true
-          git add content/_draft/*.md || true
-          git add manifest.json || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] auto publish Joran blog | $(date '+%Y-%m-%d')" && git push) || true
+          git add content/posts/*.md 2>/dev/null || true
+          git add content/_draft/*.md 2>/dev/null || true
+          git add manifest.json 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto publish Joran blog | $(date '+%Y-%m-%d')" && git push) || true

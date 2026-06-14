@@ -1,54 +1,40 @@
 name: Deploy to Cloudflare Pages
 
-# 仅在 main 分支推送时触发，且只监听内容相关文件变更
 on:
   push:
     branches:
       - main
     paths:
       - 'content/posts/**'
-      - 'static/img/china-dest/**'
       - 'content/_draft/**'
+      - 'static/**'
       - 'layouts/**'
       - 'themes/**'
       - 'config/**'
-    tags-ignore:
-      - '*'
+      - 'hugo.toml'
+      - '.github/workflows/deploy-cloudflare-pages.yml'
+  workflow_dispatch:
 
-# 并发控制：同一时间只允许一个发布任务运行
 concurrency:
-  group: social-publish
+  group: cloudflare-pages-deploy
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 0. 检查是否需要跳过 CI
-      - name: Check for [skip ci]
-        id: skip-check
-        run: |
-          if echo "${{ github.event.head_commit.message }}" | grep -E "\[skip[ _-]?ci\]|\[ci[ _-]?skip\]" -i; then
-            echo "::warning::Skipping deployment due to [skip ci] in commit message"
-            exit 0
-          fi
-
-      # 1. 拉取代码
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. 安装 Hugo（使用稳定版）
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: latest
+          hugo-version: '0.147.0'
           extended: true
 
-      # 3. 构建静态站点（开启压缩和清理）
       - name: Build static site
         run: hugo --gc --minify
 
-      # 4. 部署到 Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -58,46 +44,10 @@ jobs:
           directory: public
           branch: main
 
-      # 5. 扫描刚发布的文章，调用 Worker 发布社媒
       - name: Post to Social Media via Worker
         run: |
           echo "=== 扫描近期文章并发布到社媒 ==="
           pip install requests Pillow --quiet 2>&1 | tail -n 5
-          python chinaboundtravel_social_bot/social_publisher.py
+          python chinaboundtravel_social_bot/social_publisher.py || echo "社媒发布跳过"
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-
-      # 6. 月度发文统计
-      - name: Monthly Post Statistics
-        run: |
-          echo "=== 月度发文统计 ==="
-          python << 'EOF'
-          import os
-          from datetime import datetime
-          
-          now = datetime.now()
-          current_month = now.strftime("%Y-%m")
-          
-          posts_dir = "content/posts"
-          monthly_count = 0
-          
-          for f in os.listdir(posts_dir):
-              if f.endswith(".md"):
-                  filepath = os.path.join(posts_dir, f)
-                  try:
-                      with open(filepath, 'r', encoding='utf-8') as file:
-                          content = file.read()
-                          if f.startswith(current_month.replace('-', '')):
-                              monthly_count += 1
-                  except:
-                      pass
-          
-          print(f"当月发文量: {monthly_count} 篇")
-          print(f"保底目标: 25 篇")
-          print(f"进度: {(monthly_count/25*100):.1f}%")
-          
-          if monthly_count >= 25:
-              print("✅ 已达成月度保底目标！")
-          else:
-              print(f"⚠️ 还差 {25 - monthly_count} 篇达成目标")
-          EOF

@@ -2,11 +2,15 @@ name: 全站巡检+周报汇总
 
 on:
   schedule:
-    # UTC 01:00 = 北京时间09:00 每日巡检
     - cron: '0 1 * * *'
-    # UTC 12:00 = 北京时间20:00 每周日周报
     - cron: '0 12 * * 0'
   workflow_dispatch:
+    inputs:
+      auto_fix:
+        description: '启用自动修复'
+        required: false
+        default: 'true'
+        type: boolean
 
 permissions:
   contents: write
@@ -29,6 +33,10 @@ jobs:
         run: |
           pip install requests beautifulsoup4 python-frontmatter
 
+      - name: Run auto-fix first
+        if: github.event.inputs.auto_fix == 'true' || github.event.schedule == '0 1 * * *'
+        run: python daily_inspection.py --auto-fix
+
       - name: Run daily inspection with Feishu notification
         run: python daily_inspection.py --send-feishu --sync-external
         env:
@@ -40,12 +48,14 @@ jobs:
           BOOKING_API_KEY: ${{ secrets.BOOKING_API_KEY }}
           AGODA_API_KEY: ${{ secrets.AGODA_API_KEY }}
 
-      - name: Commit inspection report
+      - name: Commit fixed files (triggers deployment)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "[skip ci] Daily inspection report $(date '+%Y-%m-%d')" && git push) || true
+          git add content/posts/*.md 2>/dev/null || true
+          git add config/error_knowledge_base.json 2>/dev/null || true
+          git add reports/ 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-fix + daily inspection $(date '+%Y-%m-%d')" && git push) || true
 
   weekly-report:
     runs-on: ubuntu-latest
@@ -70,9 +80,9 @@ jobs:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
 
-      - name: Commit weekly report
+      - name: Commit weekly report (triggers deployment)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add reports/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "[skip ci] Weekly report $(date '+%Y-W%V')" && git push) || true
+          git add reports/ 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: weekly report $(date '+%Y-W%V')" && git push) || true
