@@ -58,11 +58,13 @@ def wrap_text(text, max_chars):
     return lines
 
 
-def generate_pollinations_url(title, slug):
-    """生成 Pollinations.ai 动态图片 URL，零存储零下载"""
+NANOBANANA_API_KEY = "65ddfd1e0f8c71acddcba5e3cde3201f"
+NANOBANANA_API_URL = "https://api.nanobananaapi.com/api/text2image"
+
+def generate_nanobanana_url(title, slug):
+    """生成 NanoBananaAPI 动态图片 URL"""
     title_lower = title.lower()
 
-    # 根据标题关键词生成场景描述
     location_keywords = [
         ("chengdu", "modern Chengdu city with pandas, Sichuan spicy hotpot"),
         ("beijing", "Beijing Forbidden City, Great Wall of China, imperial palace"),
@@ -93,18 +95,43 @@ def generate_pollinations_url(title, slug):
             scene_desc = desc
             break
 
-    # 拼接提示词 + URL 编码
     prompt = f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
-    encoded_prompt = requests.utils.quote(prompt)
-
-    url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1200&height=630&nologo=true&seed={abs(hash(slug)) % 100000}"
-    print(f"[Pollinations] URL: {url}")
-    return url
+    
+    try:
+        headers = {
+            "Authorization": f"Bearer {NANOBANANA_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        payload = {
+            "prompt": prompt,
+            "width": 1200,
+            "height": 630,
+            "seed": abs(hash(slug)) % 100000,
+            "style": "photorealistic"
+        }
+        
+        response = requests.post(NANOBANANA_API_URL, headers=headers, json=payload, timeout=60)
+        response.raise_for_status()
+        
+        result = response.json()
+        image_url = result.get("url")
+        
+        if image_url:
+            print(f"[NanoBananaAPI] URL: {image_url}")
+            return image_url
+        else:
+            print("[NanoBananaAPI] Error: No URL returned")
+            return None
+            
+    except Exception as e:
+        print(f"[NanoBananaAPI] Error: {str(e)}")
+        return None
 
 
 def generate_cover_for_post(title, slug):
-    """生成封面图 - 使用 Pollinations.ai 零存储外链方案"""
-    return generate_pollinations_url(title, slug)
+    """生成封面图 - 使用 NanoBananaAPI"""
+    return generate_nanobanana_url(title, slug)
 
 
 GEO_REGIONS = ["EU", "US", "AU"]
