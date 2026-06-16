@@ -49,3 +49,11 @@ jobs:
           git add content/_draft/*.md 2>/dev/null || true
           git add manifest.json 2>/dev/null || true
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto publish Joran blog | $(date '+%Y-%m-%d')" && git push) || true
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: chinaboundtravel
+          directory: public
