@@ -44,4 +44,4 @@ jobs:
           git add content/posts/ 2>/dev/null || true
           git add content/ebook/ 2>/dev/null || true
           git add static/downloads/ 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: [skip ci] Monthly ebook update" && git push) || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: monthly ebook update" && git push) || true
