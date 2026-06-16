@@ -818,6 +818,18 @@ class BlogGenerator:
                     new_frontmatter = "\n".join(new_lines)
                     content = f"---{new_frontmatter}---{parts[2]}"
         
+        # 替换文章正文中的 [Image:xxx] 占位符为真实图片
+        import re
+        image_placeholders = re.findall(r'\[\s*Image\s*:\s*([^\]]+)\]', content, re.IGNORECASE)
+        for idx, placeholder in enumerate(image_placeholders):
+            print(f"  [ImageGen] Replacing placeholder {idx+1}: {placeholder[:50]}...")
+            img_url = generate_image_url(placeholder, "4:3")
+            if img_url:
+                old_text = f"[Image: {placeholder}]"
+                new_text = f"![{placeholder}]({img_url})"
+                content = content.replace(old_text, new_text)
+                print(f"  [ImageGen] OK: {img_url[:80]}")
+        
         with open(post_path, "w", encoding="utf-8") as f:
             f.write(content)
         

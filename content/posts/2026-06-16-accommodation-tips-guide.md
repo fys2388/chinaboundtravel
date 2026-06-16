@@ -30,7 +30,7 @@ weight: "1"
 
 Hey there, fellow travelers from across the pond! You know, when I first landed in Chengdu over 10 years ago, I had no idea what to expect. I was this California kid, used to the beaches and the laid - back vibe, and here I was in the heart of China. It was like stepping into a whole new world, and I mean that in the best possible way. Now, I've been asked to share some of my insights on accommodation in Chengdu, but I'm not just going to stop there. I'm going to take you on a journey through this amazing city, from the visa requirements to the best times to visit, and everything in between. So, fasten your seatbelts, because this is going to be one wild ride!
 
-[Image: A bustling street in Chengdu, filled with people, shops, and a colorful array of signs. The atmosphere is lively and energetic, with a mix of modern and traditional architecture in the background.]
+![A bustling street in Chengdu, filled with people, shops, and a colorful array of signs. The atmosphere is lively and energetic, with a mix of modern and traditional architecture in the background.](https://picsum.photos/seed/750853/1024/768)
 
 ## Visa Requirements: Navigating the官僚迷宫 (Bureaucracy Maze)
 
@@ -138,4 +138,4 @@ Well, there you have it, folks! My comprehensive guide to traveling in Chengdu. 
 
 And if you're interested in reading more about my travels in China, you can check out my other blog posts [here](https://chinaboundtravel.com/posts/). And don't forget to follow me on social media for more travel tips and inspiration!
 
-[Image: A panda cub playing in the bamboo forest, looking cute and adorable.]
+![A panda cub playing in the bamboo forest, looking cute and adorable.](https://picsum.photos/seed/196804/1024/768)
