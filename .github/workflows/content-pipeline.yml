@@ -27,7 +27,7 @@ jobs:
     if: (github.event.inputs.action == 'run-pipeline')
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -57,7 +57,7 @@ jobs:
     if: (github.event.schedule == '0 19 * * 5') || (github.event.inputs.action == 'daily-inspection')
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -95,7 +95,7 @@ jobs:
     if: (github.event.schedule == '0 2 * * 1') || (github.event.schedule == '0 2 * * 2') || (github.event.schedule == '0 2 * * 3') || (github.event.schedule == '0 2 * * 4') || (github.event.schedule == '0 2 * * 5') || (github.event.inputs.action == 'run-pipeline')
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
