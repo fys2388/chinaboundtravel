@@ -29,7 +29,7 @@ weight: "1"
 ## Introduction
 Hey there, fellow European travelers! Are you ready to embark on an adventure to the land of pandas, noodles, and ancient wonders? Well, hold on tight because I'm about to share some essential safety tips that will make your trip to China a breeze. As an American who has lived in Chengdu for over 10 years, I've had my fair share of experiences, both good and bad. But fear not, my friends, for I am here to guide you through the ups and downs of traveling in China. So, let's get started!
 
-[Image: A busy street in Chengdu, filled with people, shops, and food stalls. The atmosphere is lively and bustling, with a mix of traditional and modern architecture.]
+![A busy street in Chengdu, filled with people, shops, and food stalls. The atmosphere is lively and bustling, with a mix of traditional and modern architecture.](https://picsum.photos/seed/718517/1024/768)
 
 ## Visa Requirements
 First things first, let's talk about visas. As a European traveler, you will need a visa to enter China. The process can be a bit daunting, but don't worry, I've got you covered. The first step is to determine which type of visa you need. There are several types of visas available, including tourist visas, business visas, and student visas. For most tourists, a tourist visa is the way to go.
@@ -81,7 +81,7 @@ If you're planning to visit any tourist attractions, make sure to follow the rul
 
 Finally, if you遇到任何问题或紧急情况, make sure to contact the local police or your embassy or consulate. China has a well-trained police force, so they should be able to help you in case of an emergency.
 
-[Image: A group of tourists visiting the pandas in Chengdu. The pandas are cute and playful, and the tourists are having a great time.]
+![A group of tourists visiting the pandas in Chengdu. The pandas are cute and playful, and the tourists are having a great time.](https://picsum.photos/seed/841107/1024/768)
 
 ## Cultural Insights
 In addition to safety tips, it's also important to have some cultural insights when traveling in China. China is a country with a rich history and culture, so it's important to respect the local customs and traditions.

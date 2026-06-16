@@ -34,7 +34,7 @@ Have you ever watched a movie like "Indiana Jones" and wondered what it would be
 
 When I first arrived in Chengdu, I was immediately drawn to the city's vibrant energy and rich history. But it wasn't until I started exploring the areas outside of the main tourist attractions that I truly began to appreciate the beauty and diversity of China.
 
-[Image: A bustling street in Chengdu, filled with vendors selling delicious street food. The air is filled with the smell of spices and the sounds of bargaining. The mood is lively and exciting.]
+![A bustling street in Chengdu, filled with vendors selling delicious street food. The air is filled with the smell of spices and the sounds of bargaining. The mood is lively and exciting.](https://picsum.photos/seed/32820/1024/768)
 
 ## China Visa Requirements: Navigating the Red Tape
 
@@ -94,7 +94,7 @@ When you visit the panda base, you'll be able to see pandas of all ages and size
 
 But the panda base isn't just about seeing pandas. It's also a place where you can learn about pandas and their conservation. The base has a variety of exhibits and educational programs that teach visitors about the pandas' habitat, diet, and behavior.
 
-[Image: A cute panda cub playing in a bamboo forest. The cub is rolling around in the grass and chasing after a bamboo stick. The mood is playful and adorable.]
+![A cute panda cub playing in a bamboo forest. The cub is rolling around in the grass and chasing after a bamboo stick. The mood is playful and adorable.](https://picsum.photos/seed/633379/1024/768)
 
 ## Cultural Insights: Understanding Chinese Customs and Behaviors
 

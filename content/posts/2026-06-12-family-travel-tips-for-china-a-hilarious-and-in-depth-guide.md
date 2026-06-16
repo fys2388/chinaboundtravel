@@ -31,7 +31,7 @@ Hey there, European travelers! Are you ready to embark on an epic family adventu
 
 I remember my first trip to China like it was yesterday. I was like a fish out of water, trying to figure out how to use the subway without getting pushed off the platform. It was a wild ride, but over the years, I've learned a thing or two about traveling in this amazing country. So, let's get started!
 
-[Image: A family of four standing in front of the Giant Panda statue in Chengdu, with big smiles on their faces and the city skyline in the background. The mood is excited and anticipatory.]
+![A family of four standing in front of the Giant Panda statue in Chengdu, with big smiles on their faces and the city skyline in the background. The mood is excited and anticipatory.](https://picsum.photos/seed/620255/1024/768)
 
 ## China Visa Requirements
 Okay, let's start with the not - so - fun part: visas. But don't worry, it's not as bad as it seems. First of all, make sure you check the latest China visa requirements well in advance. You can usually apply for a tourist visa at your local Chinese embassy or consulate.
@@ -52,7 +52,7 @@ If you prefer a more private mode of transportation, you can rent a car. But be 
 ### Accommodation
 When it comes to accommodation, Chengdu has a wide range of options. You can stay in a luxury hotel in the city center or a budget hostel on the outskirts. If you're traveling with your family, I recommend looking for a hotel with a swimming pool and a kids' club. It's like having your own little paradise in the middle of the city.
 
-[Image: A busy street in Chengdu filled with restaurants, shops, and people. There are colorful signs and a lively atmosphere.]
+![A busy street in Chengdu filled with restaurants, shops, and people. There are colorful signs and a lively atmosphere.](https://picsum.photos/seed/975388/1024/768)
 
 ## Best Time to Visit Chengdu
 The best time to visit Chengdu is during the spring (March - May) and autumn (September - November). The weather is mild, and there are fewer tourists. It's like having the city all to yourself!

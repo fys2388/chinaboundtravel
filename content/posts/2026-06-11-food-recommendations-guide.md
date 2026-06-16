@@ -76,7 +76,7 @@ Another important aspect of Chengdu cuisine is the use of spices. Sichuan pepper
 ### Conclusion
 Well, there you have it - my guide to the best food in Chengdu. I hope this article has been helpful and informative, and I hope it has inspired you to visit this amazing city. Remember, food is not only a way to satisfy your taste buds, but it's also a way to experience the culture of a place. So, go out there and explore the streets of Chengdu, and don't be afraid to try new things. And if you have any questions or comments, please feel free to leave them below. I'd love to hear from you!
 
-[Image: A busy street in Chengdu, filled with people and food vendors. The scene is chaotic but also full of energy and excitement.]
+![A busy street in Chengdu, filled with people and food vendors. The scene is chaotic but also full of energy and excitement.](https://picsum.photos/seed/545918/1024/768)
 
 ### Tips for Ordering Food in Chengdu
 When ordering food in Chengdu, it's important to keep a few things in mind. First of all, most restaurants in Chengdu do not have English menus, so it's a good idea to learn some basic Chinese phrases or bring a translation app with you. Secondly, it's common to order a few dishes to share, rather than ordering individual meals. This is a great way to try a variety of different dishes and experience the flavors of Chengdu. Finally, be prepared for spicy food! Chengdu cuisine is known for its spicy and flavorful dishes, so if you're not a fan of spicy food, make sure to order something milder.
@@ -84,7 +84,7 @@ When ordering food in Chengdu, it's important to keep a few things in mind. Firs
 ### How to Bargain in Chengdu
 Bargaining is a common practice in Chengdu, especially when it comes to street food and souvenirs. When bargaining, it's important to be polite and respectful, but also firm. Start by offering a lower price than the asking price, and be prepared to negotiate. If the seller is not willing to lower the price, you can always walk away and try another vendor. Remember, bargaining is a game, and it's all about having fun and getting a good deal
 
-[Image: A group of people sitting around a hot pot, laughing and enjoying their meal. The scene is cozy and inviting, and it shows the importance of food and community in Chengdu.]
+![A group of people sitting around a hot pot, laughing and enjoying their meal. The scene is cozy and inviting, and it shows the importance of food and community in Chengdu.](https://picsum.photos/seed/622818/1024/768)
 
 ### Conclusion
 Well, there you have it - my guide to the best food in Chengdu. I hope this article has been helpful and informative, and I hope

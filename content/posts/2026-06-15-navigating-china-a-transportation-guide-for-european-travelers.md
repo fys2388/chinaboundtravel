@@ -33,7 +33,7 @@ Let's start with a little story. When I first arrived in Chengdu, I was overwhel
 
 But don't worry, with a little knowledge and some insider tips, you'll be navigating China like a pro in no time. In this guide, I'll cover everything from getting a visa to traveling by high-speed train, and I'll even share some of my favorite street food stalls along the way. So, let's get started!
 
-[Image: A busy street in Chengdu with cars, buses, and people everywhere. The scene is chaotic but also full of energy.]
+![A busy street in Chengdu with cars, buses, and people everywhere. The scene is chaotic but also full of energy.](https://picsum.photos/seed/251727/1024/768)
 
 ## Getting a Visa
 Before you can start planning your trip to China, you'll need to get a visa. The process can be a bit confusing, but don't worry, I'm here to help.
@@ -179,4 +179,4 @@ And if you have any questions or need any more information, don't hesitate to co
 
 So, what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-[Image: A group of people standing in front of the Giant Panda Breeding Research Base in Chengdu. The scene is happy and excited.]
+![A group of people standing in front of the Giant Panda Breeding Research Base in Chengdu. The scene is happy and excited.](https://picsum.photos/seed/9938/1024/768)
