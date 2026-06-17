@@ -5,12 +5,6 @@ on:
     - cron: '0 1 * * *'
     - cron: '0 12 * * 0'
   workflow_dispatch:
-    inputs:
-      auto_fix:
-        description: '启用自动修复'
-        required: false
-        default: 'true'
-        type: boolean
 
 permissions:
   contents: write
@@ -19,10 +13,12 @@ jobs:
   daily-inspection:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: github.event.schedule == '0 1 * * *' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -31,39 +27,49 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 python-frontmatter
+          pip install requests beautifulsoup4 python-frontmatter python-dotenv
 
-      - name: Run auto-fix first
-        if: github.event.inputs.auto_fix == 'true' || github.event.schedule == '0 1 * * *'
-        run: python daily_inspection.py --auto-fix
+      - name: Debug info
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Schedule: ${{ github.event.schedule }}"
+          echo "Ref: ${{ github.ref }}"
 
-      - name: Run daily inspection with Feishu notification
-        run: python daily_inspection.py --send-feishu --sync-external
+      - name: Run daily inspection
+        run: python daily_inspection.py --send-feishu --sync-external || true
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
           GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
-          BOOKING_API_KEY: ${{ secrets.BOOKING_API_KEY }}
-          AGODA_API_KEY: ${{ secrets.AGODA_API_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_GA_KEY_JSON: ${{ secrets.GOOGLE_GA_KEY_JSON }}
 
-      - name: Commit fixed files (triggers deployment)
+      - name: Commit fixed files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add content/posts/*.md 2>/dev/null || true
           git add config/error_knowledge_base.json 2>/dev/null || true
           git add reports/ 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-fix + daily inspection $(date '+%Y-%m-%d')" && git push) || true
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore: auto-fix + daily inspection $(date '+%Y-%m-%d')"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          fi
 
   weekly-report:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: github.event.schedule == '0 12 * * 0'
+    if: contains(github.event.schedule, '0 12 * * 0')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -72,27 +78,36 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 python-frontmatter
+          pip install requests beautifulsoup4 python-frontmatter python-dotenv
 
-      - name: Run weekly report with full audit
-        run: python daily_inspection.py --weekly-report --send-feishu
+      - name: Run weekly report
+        run: python daily_inspection.py --weekly-report --send-feishu || true
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+          GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_GA_KEY_JSON: ${{ secrets.GOOGLE_GA_KEY_JSON }}
 
-      - name: Commit weekly report (triggers deployment)
+      - name: Commit weekly report
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add reports/ 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: weekly report $(date '+%Y-W%V')" && git push) || true
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore: weekly report $(date '+%Y-W%V')"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          fi
 
-  # ========== 失败告警 ==========
   failure-notification:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     needs: [daily-inspection, weekly-report]
-    if: failure()
+    if: always() && (needs.daily-inspection.result == 'failure' || needs.weekly-report.result == 'failure')
     steps:
       - name: Send failure notification to Feishu
         run: |
