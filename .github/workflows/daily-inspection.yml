@@ -42,11 +42,16 @@ jobs:
           echo "Run ID: ${{ github.run_id }}"
           echo "=== Python Version ==="
           python --version
-          echo "=== Environment Variables ==="
-          echo "FEISHU_WEBHOOK_URL: ${FEISHU_WEBHOOK_URL:0:30}..."
-          echo "CLOUDFLARE_API_TOKEN: ${CLOUDFLARE_API_TOKEN:0:8}..."
-          echo "TRAVELPAYOUTS_API_TOKEN: ${TRAVELPAYOUTS_API_TOKEN:0:8}..."
-          echo "GSC_API_KEY: ${GSC_API_KEY:0:8}..."
+          echo "=== Script Arguments ==="
+          python daily_inspection.py --help
+
+      - name: Run auto-fix first
+        id: auto-fix
+        continue-on-error: true
+        run: |
+          echo "=== Starting auto-fix ==="
+          python daily_inspection.py --auto-fix
+          echo "=== Auto-fix completed ==="
 
       - name: Run daily inspection with full logging
         id: inspection
