@@ -56,9 +56,18 @@ jobs:
       - name: Run daily inspection with full logging
         id: inspection
         continue-on-error: true
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+          GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
         run: |
           echo "=== Starting daily inspection ==="
-          python daily_inspection.py --send-feishu --sync-external 2>&1 || echo "INSPECTION_EXIT_CODE=$?" >> $GITHUB_ENV
+          echo "FEISHU_WEBHOOK_URL is set: $([ -n "$FEISHU_WEBHOOK_URL" ] && echo "YES" || echo "NO")"
+          echo "FEISHU_SECRET is set: $([ -n "$FEISHU_SECRET" ] && echo "YES" || echo "NO")"
+          python daily_inspection.py --send-feishu --sync-external
           echo "=== Inspection completed ==="
 
       - name: Capture inspection output
@@ -103,9 +112,16 @@ jobs:
       - name: Run weekly report with full logging
         id: weekly
         continue-on-error: true
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+          GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
         run: |
           echo "=== Starting weekly report ==="
-          python daily_inspection.py --weekly-report --send-feishu 2>&1 || echo "WEEKLY_EXIT_CODE=$?" >> $GITHUB_ENV
+          python daily_inspection.py --weekly-report --send-feishu
           echo "=== Weekly report completed ==="
 
       - name: Commit weekly report
