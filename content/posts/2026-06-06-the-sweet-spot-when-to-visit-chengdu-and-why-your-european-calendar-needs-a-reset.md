@@ -1,73 +1,73 @@
----
-title: "The Sweet Spot: When to Visit Chengdu (and Why Your European Calendar Needs a Reset)"
-cover:
-  image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&h=630&fit=crop"
-date: "2026-06-06T10:00:00+08:00"
-lastmod: "2026-06-06T10:00:00+08:00"
-author: "Joran"
-slug: "the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset"
-tags:
-  - ChinaTravel
-  - TravelGuide
-  - China
-  - EuropeToChina
-categories:
-  - China
-geo: "EU"
-draft: "false"
-audit_status: "pass2"
-summary: "Why your European travel calendar won't work in China. Learn the secrets to avoiding crowds and enjoying the best weather in Chengdu and beyond."
-description: "Discover the best time to visit Chengdu and China. Learn why European travel calendars don't work here and how to avoid crowds while enjoying perfect weather."
-canonicalURL: "https://chinaboundtravel.com/posts/the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset/"
-ShowToc: "true"
-TocOpen: "false"
-weight: "1"
----
-
-# The Sweet Spot: When to Visit Chengdu (and Why Your European Calendar Needs a Reset)
-
-Hey there, fellow wanderers. I’m Joran—born and raised in San Diego, California, where the biggest weather drama is whether the marine layer will burn off by 10 a.m. But for the last ten years, I’ve called Chengdu, China, home. Yeah, I traded surfboards for spicy hotpot, and I’ve never looked back. If you’re reading this from a rainy café in Berlin, a sun-drenched plaza in Seville, or a cozy pub in London, you’re probably wondering: *When’s the best time to visit this panda-filled, tea-house-dotted city?*
-
-Let me save you from Googling “Chengdu weather averages?and getting a spreadsheet that means nothing. After a decade of breathing in Sichuan’s misty air, sweating through its summers, and shivering in its damp winters (yes, it’s a thing), I’ve got the real scoop. And spoiler: it’s not when you think.
-
-## Why Your European Seasons Don’t Translate
-
-First, a confession: I used to think “spring?meant cherry blossoms and mild breezes. California spring is basically a two-week transition from “slightly chilly?to “perfect.?Chengdu? Spring is a moody artist who can’t decide if it wants to paint with sunshine or drizzle. March and April here are lovely—the city’s ginkgo trees burst into fresh green, and the air smells like blooming jasmine. But it’s also the season of *meiyu*—that endless, clingy rain that makes you wonder if you’ve moved to a subtropical version of London.
-
-I remember my first spring in Chengdu, 2014. I’d just arrived from California, where “rain?means a 20-minute sprinkle that clears the smog. Here, I watched a drizzle turn into a week-long weep. My European friends from the UK laughed and said, “Welcome to our world!?But here’s the thing: Chengdu’s spring rain is warm. It’s not the bone-chilling damp of a Parisian February. So if you’re from, say, Milan or Munich, you’ll find it refreshing. Just pack a light rain jacket and an umbrella that *actually works* (the cheap ones collapse in the first gust—trust me).
-
-But here’s the best-kept secret: **April and October are your golden months**. Why? The temperature hovers around 18?5°C (64?7°F), the humidity takes a vacation, and the pandas are active. I’ve taken dozens of friends from Europe to the Chengdu Panda Base in April, and they always say the same thing: “This is *perfect*.?You can walk the bamboo-lined paths without sweating through your shirt, and the pandas are too busy munching to nap through your photo op.
-
-## The Summer Swamp and the Winter Chill (But Don’t Rule Them Out)
-
-Okay, let’s be real: Chengdu summers are a humid beast. July and August hit 35°C (95°F) with humidity that makes you feel like you’re breathing through a wet blanket. I’ve seen Italians—people who handle Mediterranean heat like champs—melt here. My friend Marco from Rome visited in August and spent the first two days in a cold shower. “Joran,?he said, “this is *not* the same heat. This is?soup.?
-
-But here’s the twist: **summer is the best time for food**. The Sichuanese believe in “yi xing bu xing?(using food to balance the body), so they crank up the spicy dishes to make you sweat and cool down. Go to a *malatang* joint in July, and you’ll see locals slurping broth with sweat dripping down their faces. It’s a communal, almost religious experience. Plus, the night markets come alive. The air thick with the smell of grilled skewers, stinky tofu (don’t knock it till you try it), and the sizzle of *jianbing* (Chinese crepes). If you’re from Spain, where late-night eating is sacred, you’ll feel right at home.
-
-Winter, on the other hand, is a different story. December to February sees temperatures around 5?0°C (41?0°F), but the real kicker is the *damp*. It’s a wet cold that seeps into your bones. I’ve had friends from Norway—people who laugh at -20°C—shiver in Chengdu’s winter. “It’s not the cold,?they said, “it’s the *feeling* of cold.?But again, there’s a silver lining: **winter is the season of hotpot**. Nothing beats sitting in a steamy restaurant with a bubbling pot of *hong you* (red oil) broth, dipping lamb and mushrooms while the foggy windows hide the gray outside. It’s cozy, communal, and deeply satisfying. If you’re from Germany, where *Glühwein* and Christmas markets rule, you’ll appreciate the ritual.
-
-## The Shoulder Seasons: Your Secret Weapon (and a Panda Pro-Tip)
-
-Here’s where I get specific. For European travelers, I’d recommend **late March to early April** or **mid-October to early November**. Why? Because these windows avoid the Chinese national holidays (Golden Week in October and Labor Day in May), when the entire country travels and prices triple. I made that mistake once—trying to visit the Leshan Giant Buddha in October—and ended up in a queue that snaked for three hours. Never again.
-
-In late March, the plum blossoms are out, and the air is crisp. I took a group of French tourists to the Jinli Ancient Street last April, and they spent an entire afternoon just sipping *gaiwan* tea in a courtyard, watching the locals play mahjong. “This is the real China,?one of them said. And she was right. The crowds are thin, the tea houses are peaceful, and you can actually hear the birds over the honking scooters.
-
-October is equally magical. The summer humidity breaks, and the sky turns that rare, clear blue that Chengdu is famous for—when the smog lifts and you can actually see the mountains in the distance. I remember biking along the Funan River with a friend from the UK in 2022. She kept stopping to take photos of the golden ginkgo leaves reflecting in the water. “I thought China was all gray cities,?she said. “This is like a painting.?
-
-One more pro-tip: **avoid July and August unless you’re a die-hard foodie**. And if you *do* come in summer, book your hotel with AC that *works*. I’ve learned the hard way that “air conditioning?in some budget places means a rattling window unit that sounds like a dying lawnmower.
-
-## Conclusion: When Should You Book That Flight?
-
-So, here’s the bottom line: if you’re from Europe and want the most comfortable, photogenic, and culturally immersive trip, aim for **April or October**. You’ll get mild weather, fewer crowds (if you dodge the holidays), and a city that’s awake but not overwhelmed. But don’t write off the other seasons. Summer is for foodies and night owls. Winter is for hotpot lovers and cozy introverts. Spring and fall are for everyone else.
-
-After a decade here, I’ve learned that Chengdu doesn’t have a “bad?season—it just has different moods. Kind of like California, actually. We’ve got fog, wildfires, and perfect beach days. Chengdu has mist, sweat, and the world’s best soup. And honestly? I wouldn’t trade it for anything.
-
-If you’re planning your trip, check out my guide on [**Navigating Chengdu’s Tea Culture**] and [**How to Eat Hotpot Without Burning Your Face Off**]—both essential survival skills. And if you see a tall Californian guy sweating over a bowl of *dandanmian* in a back-alley noodle shop, come say hi. I’ll buy you a *baijiu* shot. (Fair warning: it’s stronger than grappa.)
-
-Safe travels, and see you in the mist.
-
-*?Joran*
-
-![Alt text: A misty Chengdu street with red lanterns hanging over a canal, reflecting golden light.]  
-![Alt text: A giant panda sitting in a bamboo grove, munching on a stalk, with a calm expression.]  
-![Alt text: A steaming bowl of Sichuan hotpot with chili peppers and floating peppercorns, surrounded by plates of raw ingredients.]
+-------
+-t-i-t-l-e-:- -"-T-h-e- -S-w-e-e-t- -S-p-o-t-:- -W-h-e-n- -t-o- -V-i-s-i-t- -C-h-e-n-g-d-u- -(-a-n-d- -W-h-y- -Y-o-u-r- -E-u-r-o-p-e-a-n- -C-a-l-e-n-d-a-r- -N-e-e-d-s- -a- -R-e-s-e-t-)-"-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-i-m-a-g-e-s-.-u-n-s-p-l-a-s-h-.-c-o-m-/-p-h-o-t-o---1-5-0-8-8-0-4-1-8-5-8-7-2---d-7-b-a-d-a-d-0-0-f-7-d-w-=-1-2-0-0-&-h-=-6-3-0-&-f-i-t-=-c-r-o-p-"-
+-d-a-t-e-:- -"-2-0-2-6---0-6---0-6-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-l-a-s-t-m-o-d-:- -"-2-0-2-6---0-6---0-6-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-a-u-t-h-o-r-:- -"-J-o-r-a-n-"-
+-s-l-u-g-:- -"-t-h-e---s-w-e-e-t---s-p-o-t---w-h-e-n---t-o---v-i-s-i-t---c-h-e-n-g-d-u---a-n-d---w-h-y---y-o-u-r---e-u-r-o-p-e-a-n---c-a-l-e-n-d-a-r---n-e-e-d-s---a---r-e-s-e-t-"-
+-t-a-g-s-:-
+- - --- -C-h-i-n-a-T-r-a-v-e-l-
+- - --- -T-r-a-v-e-l-G-u-i-d-e-
+- - --- -C-h-i-n-a-
+- - --- -E-u-r-o-p-e-T-o-C-h-i-n-a-
+-c-a-t-e-g-o-r-i-e-s-:-
+- - --- -C-h-i-n-a-
+-g-e-o-:- -"-E-U-"-
+-d-r-a-f-t-:- -"-f-a-l-s-e-"-
+-a-u-d-i-t-_-s-t-a-t-u-s-:- -"-p-a-s-s-2-"-
+-s-u-m-m-a-r-y-:- -"-W-h-y- -y-o-u-r- -E-u-r-o-p-e-a-n- -t-r-a-v-e-l- -c-a-l-e-n-d-a-r- -w-o-n-'-t- -w-o-r-k- -i-n- -C-h-i-n-a-.- -L-e-a-r-n- -t-h-e- -s-e-c-r-e-t-s- -t-o- -a-v-o-i-d-i-n-g- -c-r-o-w-d-s- -a-n-d- -e-n-j-o-y-i-n-g- -t-h-e- -b-e-s-t- -w-e-a-t-h-e-r- -i-n- -C-h-e-n-g-d-u- -a-n-d- -b-e-y-o-n-d-.-"-
+-d-e-s-c-r-i-p-t-i-o-n-:- -"-D-i-s-c-o-v-e-r- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -C-h-e-n-g-d-u- -a-n-d- -C-h-i-n-a-.- -L-e-a-r-n- -w-h-y- -E-u-r-o-p-e-a-n- -t-r-a-v-e-l- -c-a-l-e-n-d-a-r-s- -d-o-n-'-t- -w-o-r-k- -h-e-r-e- -a-n-d- -h-o-w- -t-o- -a-v-o-i-d- -c-r-o-w-d-s- -w-h-i-l-e- -e-n-j-o-y-i-n-g- -p-e-r-f-e-c-t- -w-e-a-t-h-e-r-.-"-
+-c-a-n-o-n-i-c-a-l-U-R-L-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-p-o-s-t-s-/-t-h-e---s-w-e-e-t---s-p-o-t---w-h-e-n---t-o---v-i-s-i-t---c-h-e-n-g-d-u---a-n-d---w-h-y---y-o-u-r---e-u-r-o-p-e-a-n---c-a-l-e-n-d-a-r---n-e-e-d-s---a---r-e-s-e-t-/-"-
+-S-h-o-w-T-o-c-:- -"-t-r-u-e-"-
+-T-o-c-O-p-e-n-:- -"-f-a-l-s-e-"-
+-w-e-i-g-h-t-:- -"-1-"-
+-------
+-
+-#- -T-h-e- -S-w-e-e-t- -S-p-o-t-:- -W-h-e-n- -t-o- -V-i-s-i-t- -C-h-e-n-g-d-u- -(-a-n-d- -W-h-y- -Y-o-u-r- -E-u-r-o-p-e-a-n- -C-a-l-e-n-d-a-r- -N-e-e-d-s- -a- -R-e-s-e-t-)-
+-
+-H-e-y- -t-h-e-r-e-,- -f-e-l-l-o-w- -w-a-n-d-e-r-e-r-s-.- -I-’-m- -J-o-r-a-n-—-b-o-r-n- -a-n-d- -r-a-i-s-e-d- -i-n- -S-a-n- -D-i-e-g-o-,- -C-a-l-i-f-o-r-n-i-a-,- -w-h-e-r-e- -t-h-e- -b-i-g-g-e-s-t- -w-e-a-t-h-e-r- -d-r-a-m-a- -i-s- -w-h-e-t-h-e-r- -t-h-e- -m-a-r-i-n-e- -l-a-y-e-r- -w-i-l-l- -b-u-r-n- -o-f-f- -b-y- -1-0- -a-.-m-.- -B-u-t- -f-o-r- -t-h-e- -l-a-s-t- -t-e-n- -y-e-a-r-s-,- -I-’-v-e- -c-a-l-l-e-d- -C-h-e-n-g-d-u-,- -C-h-i-n-a-,- -h-o-m-e-.- -Y-e-a-h-,- -I- -t-r-a-d-e-d- -s-u-r-f-b-o-a-r-d-s- -f-o-r- -s-p-i-c-y- -h-o-t-p-o-t-,- -a-n-d- -I-’-v-e- -n-e-v-e-r- -l-o-o-k-e-d- -b-a-c-k-.- -I-f- -y-o-u-’-r-e- -r-e-a-d-i-n-g- -t-h-i-s- -f-r-o-m- -a- -r-a-i-n-y- -c-a-f-é- -i-n- -B-e-r-l-i-n-,- -a- -s-u-n---d-r-e-n-c-h-e-d- -p-l-a-z-a- -i-n- -S-e-v-i-l-l-e-,- -o-r- -a- -c-o-z-y- -p-u-b- -i-n- -L-o-n-d-o-n-,- -y-o-u-’-r-e- -p-r-o-b-a-b-l-y- -w-o-n-d-e-r-i-n-g-:- -*-W-h-e-n-’-s- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -t-h-i-s- -p-a-n-d-a---f-i-l-l-e-d-,- -t-e-a---h-o-u-s-e---d-o-t-t-e-d- -c-i-t-y-*-
+-
+-L-e-t- -m-e- -s-a-v-e- -y-o-u- -f-r-o-m- -G-o-o-g-l-i-n-g- -“-C-h-e-n-g-d-u- -w-e-a-t-h-e-r- -a-v-e-r-a-g-e-s-a-n-d- -g-e-t-t-i-n-g- -a- -s-p-r-e-a-d-s-h-e-e-t- -t-h-a-t- -m-e-a-n-s- -n-o-t-h-i-n-g-.- -A-f-t-e-r- -a- -d-e-c-a-d-e- -o-f- -b-r-e-a-t-h-i-n-g- -i-n- -S-i-c-h-u-a-n-’-s- -m-i-s-t-y- -a-i-r-,- -s-w-e-a-t-i-n-g- -t-h-r-o-u-g-h- -i-t-s- -s-u-m-m-e-r-s-,- -a-n-d- -s-h-i-v-e-r-i-n-g- -i-n- -i-t-s- -d-a-m-p- -w-i-n-t-e-r-s- -(-y-e-s-,- -i-t-’-s- -a- -t-h-i-n-g-)-,- -I-’-v-e- -g-o-t- -t-h-e- -r-e-a-l- -s-c-o-o-p-.- -A-n-d- -s-p-o-i-l-e-r-:- -i-t-’-s- -n-o-t- -w-h-e-n- -y-o-u- -t-h-i-n-k-.-
+-
+-#-#- -W-h-y- -Y-o-u-r- -E-u-r-o-p-e-a-n- -S-e-a-s-o-n-s- -D-o-n-’-t- -T-r-a-n-s-l-a-t-e-
+-
+-F-i-r-s-t-,- -a- -c-o-n-f-e-s-s-i-o-n-:- -I- -u-s-e-d- -t-o- -t-h-i-n-k- -“-s-p-r-i-n-g-m-e-a-n-t- -c-h-e-r-r-y- -b-l-o-s-s-o-m-s- -a-n-d- -m-i-l-d- -b-r-e-e-z-e-s-.- -C-a-l-i-f-o-r-n-i-a- -s-p-r-i-n-g- -i-s- -b-a-s-i-c-a-l-l-y- -a- -t-w-o---w-e-e-k- -t-r-a-n-s-i-t-i-o-n- -f-r-o-m- -“-s-l-i-g-h-t-l-y- -c-h-i-l-l-y-t-o- -“-p-e-r-f-e-c-t-.-C-h-e-n-g-d-u- -S-p-r-i-n-g- -i-s- -a- -m-o-o-d-y- -a-r-t-i-s-t- -w-h-o- -c-a-n-’-t- -d-e-c-i-d-e- -i-f- -i-t- -w-a-n-t-s- -t-o- -p-a-i-n-t- -w-i-t-h- -s-u-n-s-h-i-n-e- -o-r- -d-r-i-z-z-l-e-.- -M-a-r-c-h- -a-n-d- -A-p-r-i-l- -h-e-r-e- -a-r-e- -l-o-v-e-l-y-—-t-h-e- -c-i-t-y-’-s- -g-i-n-k-g-o- -t-r-e-e-s- -b-u-r-s-t- -i-n-t-o- -f-r-e-s-h- -g-r-e-e-n-,- -a-n-d- -t-h-e- -a-i-r- -s-m-e-l-l-s- -l-i-k-e- -b-l-o-o-m-i-n-g- -j-a-s-m-i-n-e-.- -B-u-t- -i-t-’-s- -a-l-s-o- -t-h-e- -s-e-a-s-o-n- -o-f- -*-m-e-i-y-u-*-—-t-h-a-t- -e-n-d-l-e-s-s-,- -c-l-i-n-g-y- -r-a-i-n- -t-h-a-t- -m-a-k-e-s- -y-o-u- -w-o-n-d-e-r- -i-f- -y-o-u-’-v-e- -m-o-v-e-d- -t-o- -a- -s-u-b-t-r-o-p-i-c-a-l- -v-e-r-s-i-o-n- -o-f- -L-o-n-d-o-n-.-
+-
+-I- -r-e-m-e-m-b-e-r- -m-y- -f-i-r-s-t- -s-p-r-i-n-g- -i-n- -C-h-e-n-g-d-u-,- -2-0-1-4-.- -I-’-d- -j-u-s-t- -a-r-r-i-v-e-d- -f-r-o-m- -C-a-l-i-f-o-r-n-i-a-,- -w-h-e-r-e- -“-r-a-i-n-m-e-a-n-s- -a- -2-0---m-i-n-u-t-e- -s-p-r-i-n-k-l-e- -t-h-a-t- -c-l-e-a-r-s- -t-h-e- -s-m-o-g-.- -H-e-r-e-,- -I- -w-a-t-c-h-e-d- -a- -d-r-i-z-z-l-e- -t-u-r-n- -i-n-t-o- -a- -w-e-e-k---l-o-n-g- -w-e-e-p-.- -M-y- -E-u-r-o-p-e-a-n- -f-r-i-e-n-d-s- -f-r-o-m- -t-h-e- -U-K- -l-a-u-g-h-e-d- -a-n-d- -s-a-i-d-,- -“-W-e-l-c-o-m-e- -t-o- -o-u-r- -w-o-r-l-d-!-B-u-t- -h-e-r-e-’-s- -t-h-e- -t-h-i-n-g-:- -C-h-e-n-g-d-u-’-s- -s-p-r-i-n-g- -r-a-i-n- -i-s- -w-a-r-m-.- -I-t-’-s- -n-o-t- -t-h-e- -b-o-n-e---c-h-i-l-l-i-n-g- -d-a-m-p- -o-f- -a- -P-a-r-i-s-i-a-n- -F-e-b-r-u-a-r-y-.- -S-o- -i-f- -y-o-u-’-r-e- -f-r-o-m-,- -s-a-y-,- -M-i-l-a-n- -o-r- -M-u-n-i-c-h-,- -y-o-u-’-l-l- -f-i-n-d- -i-t- -r-e-f-r-e-s-h-i-n-g-.- -J-u-s-t- -p-a-c-k- -a- -l-i-g-h-t- -r-a-i-n- -j-a-c-k-e-t- -a-n-d- -a-n- -u-m-b-r-e-l-l-a- -t-h-a-t- -*-a-c-t-u-a-l-l-y- -w-o-r-k-s-*- -(-t-h-e- -c-h-e-a-p- -o-n-e-s- -c-o-l-l-a-p-s-e- -i-n- -t-h-e- -f-i-r-s-t- -g-u-s-t-—-t-r-u-s-t- -m-e-)-.-
+-
+-B-u-t- -h-e-r-e-’-s- -t-h-e- -b-e-s-t---k-e-p-t- -s-e-c-r-e-t-:- -*-*-A-p-r-i-l- -a-n-d- -O-c-t-o-b-e-r- -a-r-e- -y-o-u-r- -g-o-l-d-e-n- -m-o-n-t-h-s-*-*-.- -W-h-y- -T-h-e- -t-e-m-p-e-r-a-t-u-r-e- -h-o-v-e-r-s- -a-r-o-u-n-d- -1-8-5-°-C- -(-6-4-7-°-F-)-,- -t-h-e- -h-u-m-i-d-i-t-y- -t-a-k-e-s- -a- -v-a-c-a-t-i-o-n-,- -a-n-d- -t-h-e- -p-a-n-d-a-s- -a-r-e- -a-c-t-i-v-e-.- -I-’-v-e- -t-a-k-e-n- -d-o-z-e-n-s- -o-f- -f-r-i-e-n-d-s- -f-r-o-m- -E-u-r-o-p-e- -t-o- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e- -i-n- -A-p-r-i-l-,- -a-n-d- -t-h-e-y- -a-l-w-a-y-s- -s-a-y- -t-h-e- -s-a-m-e- -t-h-i-n-g-:- -“-T-h-i-s- -i-s- -*-p-e-r-f-e-c-t-*-.-Y-o-u- -c-a-n- -w-a-l-k- -t-h-e- -b-a-m-b-o-o---l-i-n-e-d- -p-a-t-h-s- -w-i-t-h-o-u-t- -s-w-e-a-t-i-n-g- -t-h-r-o-u-g-h- -y-o-u-r- -s-h-i-r-t-,- -a-n-d- -t-h-e- -p-a-n-d-a-s- -a-r-e- -t-o-o- -b-u-s-y- -m-u-n-c-h-i-n-g- -t-o- -n-a-p- -t-h-r-o-u-g-h- -y-o-u-r- -p-h-o-t-o- -o-p-.-
+-
+-#-#- -T-h-e- -S-u-m-m-e-r- -S-w-a-m-p- -a-n-d- -t-h-e- -W-i-n-t-e-r- -C-h-i-l-l- -(-B-u-t- -D-o-n-’-t- -R-u-l-e- -T-h-e-m- -O-u-t-)-
+-
+-O-k-a-y-,- -l-e-t-’-s- -b-e- -r-e-a-l-:- -C-h-e-n-g-d-u- -s-u-m-m-e-r-s- -a-r-e- -a- -h-u-m-i-d- -b-e-a-s-t-.- -J-u-l-y- -a-n-d- -A-u-g-u-s-t- -h-i-t- -3-5-°-C- -(-9-5-°-F-)- -w-i-t-h- -h-u-m-i-d-i-t-y- -t-h-a-t- -m-a-k-e-s- -y-o-u- -f-e-e-l- -l-i-k-e- -y-o-u-’-r-e- -b-r-e-a-t-h-i-n-g- -t-h-r-o-u-g-h- -a- -w-e-t- -b-l-a-n-k-e-t-.- -I-’-v-e- -s-e-e-n- -I-t-a-l-i-a-n-s-—-p-e-o-p-l-e- -w-h-o- -h-a-n-d-l-e- -M-e-d-i-t-e-r-r-a-n-e-a-n- -h-e-a-t- -l-i-k-e- -c-h-a-m-p-s-—-m-e-l-t- -h-e-r-e-.- -M-y- -f-r-i-e-n-d- -M-a-r-c-o- -f-r-o-m- -R-o-m-e- -v-i-s-i-t-e-d- -i-n- -A-u-g-u-s-t- -a-n-d- -s-p-e-n-t- -t-h-e- -f-i-r-s-t- -t-w-o- -d-a-y-s- -i-n- -a- -c-o-l-d- -s-h-o-w-e-r-.- -“-J-o-r-a-n-,-h-e- -s-a-i-d-,- -“-t-h-i-s- -i-s- -*-n-o-t-*- -t-h-e- -s-a-m-e- -h-e-a-t-.- -T-h-i-s- -i-s-s-o-u-p-.-
+-
+-B-u-t- -h-e-r-e-’-s- -t-h-e- -t-w-i-s-t-:- -*-*-s-u-m-m-e-r- -i-s- -t-h-e- -b-e-s-t- -t-i-m-e- -f-o-r- -f-o-o-d-*-*-.- -T-h-e- -S-i-c-h-u-a-n-e-s-e- -b-e-l-i-e-v-e- -i-n- -“-y-i- -x-i-n-g- -b-u- -x-i-n-g-(-u-s-i-n-g- -f-o-o-d- -t-o- -b-a-l-a-n-c-e- -t-h-e- -b-o-d-y-)-,- -s-o- -t-h-e-y- -c-r-a-n-k- -u-p- -t-h-e- -s-p-i-c-y- -d-i-s-h-e-s- -t-o- -m-a-k-e- -y-o-u- -s-w-e-a-t- -a-n-d- -c-o-o-l- -d-o-w-n-.- -G-o- -t-o- -a- -*-m-a-l-a-t-a-n-g-*- -j-o-i-n-t- -i-n- -J-u-l-y-,- -a-n-d- -y-o-u-’-l-l- -s-e-e- -l-o-c-a-l-s- -s-l-u-r-p-i-n-g- -b-r-o-t-h- -w-i-t-h- -s-w-e-a-t- -d-r-i-p-p-i-n-g- -d-o-w-n- -t-h-e-i-r- -f-a-c-e-s-.- -I-t-’-s- -a- -c-o-m-m-u-n-a-l-,- -a-l-m-o-s-t- -r-e-l-i-g-i-o-u-s- -e-x-p-e-r-i-e-n-c-e-.- -P-l-u-s-,- -t-h-e- -n-i-g-h-t- -m-a-r-k-e-t-s- -c-o-m-e- -a-l-i-v-e-.- -T-h-e- -a-i-r- -t-h-i-c-k- -w-i-t-h- -t-h-e- -s-m-e-l-l- -o-f- -g-r-i-l-l-e-d- -s-k-e-w-e-r-s-,- -s-t-i-n-k-y- -t-o-f-u- -(-d-o-n-’-t- -k-n-o-c-k- -i-t- -t-i-l-l- -y-o-u- -t-r-y- -i-t-)-,- -a-n-d- -t-h-e- -s-i-z-z-l-e- -o-f- -*-j-i-a-n-b-i-n-g-*- -(-C-h-i-n-e-s-e- -c-r-e-p-e-s-)-.- -I-f- -y-o-u-’-r-e- -f-r-o-m- -S-p-a-i-n-,- -w-h-e-r-e- -l-a-t-e---n-i-g-h-t- -e-a-t-i-n-g- -i-s- -s-a-c-r-e-d-,- -y-o-u-’-l-l- -f-e-e-l- -r-i-g-h-t- -a-t- -h-o-m-e-.-
+-
+-W-i-n-t-e-r-,- -o-n- -t-h-e- -o-t-h-e-r- -h-a-n-d-,- -i-s- -a- -d-i-f-f-e-r-e-n-t- -s-t-o-r-y-.- -D-e-c-e-m-b-e-r- -t-o- -F-e-b-r-u-a-r-y- -s-e-e-s- -t-e-m-p-e-r-a-t-u-r-e-s- -a-r-o-u-n-d- -5-0-°-C- -(-4-1-0-°-F-)-,- -b-u-t- -t-h-e- -r-e-a-l- -k-i-c-k-e-r- -i-s- -t-h-e- -*-d-a-m-p-*-.- -I-t-’-s- -a- -w-e-t- -c-o-l-d- -t-h-a-t- -s-e-e-p-s- -i-n-t-o- -y-o-u-r- -b-o-n-e-s-.- -I-’-v-e- -h-a-d- -f-r-i-e-n-d-s- -f-r-o-m- -N-o-r-w-a-y-—-p-e-o-p-l-e- -w-h-o- -l-a-u-g-h- -a-t- ---2-0-°-C-—-s-h-i-v-e-r- -i-n- -C-h-e-n-g-d-u-’-s- -w-i-n-t-e-r-.- -“-I-t-’-s- -n-o-t- -t-h-e- -c-o-l-d-,-t-h-e-y- -s-a-i-d-,- -“-i-t-’-s- -t-h-e- -*-f-e-e-l-i-n-g-*- -o-f- -c-o-l-d-.-B-u-t- -a-g-a-i-n-,- -t-h-e-r-e-’-s- -a- -s-i-l-v-e-r- -l-i-n-i-n-g-:- -*-*-w-i-n-t-e-r- -i-s- -t-h-e- -s-e-a-s-o-n- -o-f- -h-o-t-p-o-t-*-*-.- -N-o-t-h-i-n-g- -b-e-a-t-s- -s-i-t-t-i-n-g- -i-n- -a- -s-t-e-a-m-y- -r-e-s-t-a-u-r-a-n-t- -w-i-t-h- -a- -b-u-b-b-l-i-n-g- -p-o-t- -o-f- -*-h-o-n-g- -y-o-u-*- -(-r-e-d- -o-i-l-)- -b-r-o-t-h-,- -d-i-p-p-i-n-g- -l-a-m-b- -a-n-d- -m-u-s-h-r-o-o-m-s- -w-h-i-l-e- -t-h-e- -f-o-g-g-y- -w-i-n-d-o-w-s- -h-i-d-e- -t-h-e- -g-r-a-y- -o-u-t-s-i-d-e-.- -I-t-’-s- -c-o-z-y-,- -c-o-m-m-u-n-a-l-,- -a-n-d- -d-e-e-p-l-y- -s-a-t-i-s-f-y-i-n-g-.- -I-f- -y-o-u-’-r-e- -f-r-o-m- -G-e-r-m-a-n-y-,- -w-h-e-r-e- -*-G-l-ü-h-w-e-i-n-*- -a-n-d- -C-h-r-i-s-t-m-a-s- -m-a-r-k-e-t-s- -r-u-l-e-,- -y-o-u-’-l-l- -a-p-p-r-e-c-i-a-t-e- -t-h-e- -r-i-t-u-a-l-.-
+-
+-#-#- -T-h-e- -S-h-o-u-l-d-e-r- -S-e-a-s-o-n-s-:- -Y-o-u-r- -S-e-c-r-e-t- -W-e-a-p-o-n- -(-a-n-d- -a- -P-a-n-d-a- -P-r-o---T-i-p-)-
+-
+-H-e-r-e-’-s- -w-h-e-r-e- -I- -g-e-t- -s-p-e-c-i-f-i-c-.- -F-o-r- -E-u-r-o-p-e-a-n- -t-r-a-v-e-l-e-r-s-,- -I-’-d- -r-e-c-o-m-m-e-n-d- -*-*-l-a-t-e- -M-a-r-c-h- -t-o- -e-a-r-l-y- -A-p-r-i-l-*-*- -o-r- -*-*-m-i-d---O-c-t-o-b-e-r- -t-o- -e-a-r-l-y- -N-o-v-e-m-b-e-r-*-*-.- -W-h-y- -B-e-c-a-u-s-e- -t-h-e-s-e- -w-i-n-d-o-w-s- -a-v-o-i-d- -t-h-e- -C-h-i-n-e-s-e- -n-a-t-i-o-n-a-l- -h-o-l-i-d-a-y-s- -(-G-o-l-d-e-n- -W-e-e-k- -i-n- -O-c-t-o-b-e-r- -a-n-d- -L-a-b-o-r- -D-a-y- -i-n- -M-a-y-)-,- -w-h-e-n- -t-h-e- -e-n-t-i-r-e- -c-o-u-n-t-r-y- -t-r-a-v-e-l-s- -a-n-d- -p-r-i-c-e-s- -t-r-i-p-l-e-.- -I- -m-a-d-e- -t-h-a-t- -m-i-s-t-a-k-e- -o-n-c-e-—-t-r-y-i-n-g- -t-o- -v-i-s-i-t- -t-h-e- -L-e-s-h-a-n- -G-i-a-n-t- -B-u-d-d-h-a- -i-n- -O-c-t-o-b-e-r-—-a-n-d- -e-n-d-e-d- -u-p- -i-n- -a- -q-u-e-u-e- -t-h-a-t- -s-n-a-k-e-d- -f-o-r- -t-h-r-e-e- -h-o-u-r-s-.- -N-e-v-e-r- -a-g-a-i-n-.-
+-
+-I-n- -l-a-t-e- -M-a-r-c-h-,- -t-h-e- -p-l-u-m- -b-l-o-s-s-o-m-s- -a-r-e- -o-u-t-,- -a-n-d- -t-h-e- -a-i-r- -i-s- -c-r-i-s-p-.- -I- -t-o-o-k- -a- -g-r-o-u-p- -o-f- -F-r-e-n-c-h- -t-o-u-r-i-s-t-s- -t-o- -t-h-e- -J-i-n-l-i- -A-n-c-i-e-n-t- -S-t-r-e-e-t- -l-a-s-t- -A-p-r-i-l-,- -a-n-d- -t-h-e-y- -s-p-e-n-t- -a-n- -e-n-t-i-r-e- -a-f-t-e-r-n-o-o-n- -j-u-s-t- -s-i-p-p-i-n-g- -*-g-a-i-w-a-n-*- -t-e-a- -i-n- -a- -c-o-u-r-t-y-a-r-d-,- -w-a-t-c-h-i-n-g- -t-h-e- -l-o-c-a-l-s- -p-l-a-y- -m-a-h-j-o-n-g-.- -“-T-h-i-s- -i-s- -t-h-e- -r-e-a-l- -C-h-i-n-a-,-o-n-e- -o-f- -t-h-e-m- -s-a-i-d-.- -A-n-d- -s-h-e- -w-a-s- -r-i-g-h-t-.- -T-h-e- -c-r-o-w-d-s- -a-r-e- -t-h-i-n-,- -t-h-e- -t-e-a- -h-o-u-s-e-s- -a-r-e- -p-e-a-c-e-f-u-l-,- -a-n-d- -y-o-u- -c-a-n- -a-c-t-u-a-l-l-y- -h-e-a-r- -t-h-e- -b-i-r-d-s- -o-v-e-r- -t-h-e- -h-o-n-k-i-n-g- -s-c-o-o-t-e-r-s-.-
+-
+-O-c-t-o-b-e-r- -i-s- -e-q-u-a-l-l-y- -m-a-g-i-c-a-l-.- -T-h-e- -s-u-m-m-e-r- -h-u-m-i-d-i-t-y- -b-r-e-a-k-s-,- -a-n-d- -t-h-e- -s-k-y- -t-u-r-n-s- -t-h-a-t- -r-a-r-e-,- -c-l-e-a-r- -b-l-u-e- -t-h-a-t- -C-h-e-n-g-d-u- -i-s- -f-a-m-o-u-s- -f-o-r-—-w-h-e-n- -t-h-e- -s-m-o-g- -l-i-f-t-s- -a-n-d- -y-o-u- -c-a-n- -a-c-t-u-a-l-l-y- -s-e-e- -t-h-e- -m-o-u-n-t-a-i-n-s- -i-n- -t-h-e- -d-i-s-t-a-n-c-e-.- -I- -r-e-m-e-m-b-e-r- -b-i-k-i-n-g- -a-l-o-n-g- -t-h-e- -F-u-n-a-n- -R-i-v-e-r- -w-i-t-h- -a- -f-r-i-e-n-d- -f-r-o-m- -t-h-e- -U-K- -i-n- -2-0-2-2-.- -S-h-e- -k-e-p-t- -s-t-o-p-p-i-n-g- -t-o- -t-a-k-e- -p-h-o-t-o-s- -o-f- -t-h-e- -g-o-l-d-e-n- -g-i-n-k-g-o- -l-e-a-v-e-s- -r-e-f-l-e-c-t-i-n-g- -i-n- -t-h-e- -w-a-t-e-r-.- -“-I- -t-h-o-u-g-h-t- -C-h-i-n-a- -w-a-s- -a-l-l- -g-r-a-y- -c-i-t-i-e-s-,-s-h-e- -s-a-i-d-.- -“-T-h-i-s- -i-s- -l-i-k-e- -a- -p-a-i-n-t-i-n-g-.-
+-
+-O-n-e- -m-o-r-e- -p-r-o---t-i-p-:- -*-*-a-v-o-i-d- -J-u-l-y- -a-n-d- -A-u-g-u-s-t- -u-n-l-e-s-s- -y-o-u-’-r-e- -a- -d-i-e---h-a-r-d- -f-o-o-d-i-e-*-*-.- -A-n-d- -i-f- -y-o-u- -*-d-o-*- -c-o-m-e- -i-n- -s-u-m-m-e-r-,- -b-o-o-k- -y-o-u-r- -h-o-t-e-l- -w-i-t-h- -A-C- -t-h-a-t- -*-w-o-r-k-s-*-.- -I-’-v-e- -l-e-a-r-n-e-d- -t-h-e- -h-a-r-d- -w-a-y- -t-h-a-t- -“-a-i-r- -c-o-n-d-i-t-i-o-n-i-n-g-i-n- -s-o-m-e- -b-u-d-g-e-t- -p-l-a-c-e-s- -m-e-a-n-s- -a- -r-a-t-t-l-i-n-g- -w-i-n-d-o-w- -u-n-i-t- -t-h-a-t- -s-o-u-n-d-s- -l-i-k-e- -a- -d-y-i-n-g- -l-a-w-n-m-o-w-e-r-.-
+-
+-#-#- -C-o-n-c-l-u-s-i-o-n-:- -W-h-e-n- -S-h-o-u-l-d- -Y-o-u- -B-o-o-k- -T-h-a-t- -F-l-i-g-h-t-
+-
+-S-o-,- -h-e-r-e-’-s- -t-h-e- -b-o-t-t-o-m- -l-i-n-e-:- -i-f- -y-o-u-’-r-e- -f-r-o-m- -E-u-r-o-p-e- -a-n-d- -w-a-n-t- -t-h-e- -m-o-s-t- -c-o-m-f-o-r-t-a-b-l-e-,- -p-h-o-t-o-g-e-n-i-c-,- -a-n-d- -c-u-l-t-u-r-a-l-l-y- -i-m-m-e-r-s-i-v-e- -t-r-i-p-,- -a-i-m- -f-o-r- -*-*-A-p-r-i-l- -o-r- -O-c-t-o-b-e-r-*-*-.- -Y-o-u-’-l-l- -g-e-t- -m-i-l-d- -w-e-a-t-h-e-r-,- -f-e-w-e-r- -c-r-o-w-d-s- -(-i-f- -y-o-u- -d-o-d-g-e- -t-h-e- -h-o-l-i-d-a-y-s-)-,- -a-n-d- -a- -c-i-t-y- -t-h-a-t-’-s- -a-w-a-k-e- -b-u-t- -n-o-t- -o-v-e-r-w-h-e-l-m-e-d-.- -B-u-t- -d-o-n-’-t- -w-r-i-t-e- -o-f-f- -t-h-e- -o-t-h-e-r- -s-e-a-s-o-n-s-.- -S-u-m-m-e-r- -i-s- -f-o-r- -f-o-o-d-i-e-s- -a-n-d- -n-i-g-h-t- -o-w-l-s-.- -W-i-n-t-e-r- -i-s- -f-o-r- -h-o-t-p-o-t- -l-o-v-e-r-s- -a-n-d- -c-o-z-y- -i-n-t-r-o-v-e-r-t-s-.- -S-p-r-i-n-g- -a-n-d- -f-a-l-l- -a-r-e- -f-o-r- -e-v-e-r-y-o-n-e- -e-l-s-e-.-
+-
+-A-f-t-e-r- -a- -d-e-c-a-d-e- -h-e-r-e-,- -I-’-v-e- -l-e-a-r-n-e-d- -t-h-a-t- -C-h-e-n-g-d-u- -d-o-e-s-n-’-t- -h-a-v-e- -a- -“-b-a-d-s-e-a-s-o-n-—-i-t- -j-u-s-t- -h-a-s- -d-i-f-f-e-r-e-n-t- -m-o-o-d-s-.- -K-i-n-d- -o-f- -l-i-k-e- -C-a-l-i-f-o-r-n-i-a-,- -a-c-t-u-a-l-l-y-.- -W-e-’-v-e- -g-o-t- -f-o-g-,- -w-i-l-d-f-i-r-e-s-,- -a-n-d- -p-e-r-f-e-c-t- -b-e-a-c-h- -d-a-y-s-.- -C-h-e-n-g-d-u- -h-a-s- -m-i-s-t-,- -s-w-e-a-t-,- -a-n-d- -t-h-e- -w-o-r-l-d-’-s- -b-e-s-t- -s-o-u-p-.- -A-n-d- -h-o-n-e-s-t-l-y- -I- -w-o-u-l-d-n-’-t- -t-r-a-d-e- -i-t- -f-o-r- -a-n-y-t-h-i-n-g-.-
+-
+-I-f- -y-o-u-’-r-e- -p-l-a-n-n-i-n-g- -y-o-u-r- -t-r-i-p-,- -c-h-e-c-k- -o-u-t- -m-y- -g-u-i-d-e- -o-n- -[-*-*-N-a-v-i-g-a-t-i-n-g- -C-h-e-n-g-d-u-’-s- -T-e-a- -C-u-l-t-u-r-e-*-*-]- -a-n-d- -[-*-*-H-o-w- -t-o- -E-a-t- -H-o-t-p-o-t- -W-i-t-h-o-u-t- -B-u-r-n-i-n-g- -Y-o-u-r- -F-a-c-e- -O-f-f-*-*-]-—-b-o-t-h- -e-s-s-e-n-t-i-a-l- -s-u-r-v-i-v-a-l- -s-k-i-l-l-s-.- -A-n-d- -i-f- -y-o-u- -s-e-e- -a- -t-a-l-l- -C-a-l-i-f-o-r-n-i-a-n- -g-u-y- -s-w-e-a-t-i-n-g- -o-v-e-r- -a- -b-o-w-l- -o-f- -*-d-a-n-d-a-n-m-i-a-n-*- -i-n- -a- -b-a-c-k---a-l-l-e-y- -n-o-o-d-l-e- -s-h-o-p-,- -c-o-m-e- -s-a-y- -h-i-.- -I-’-l-l- -b-u-y- -y-o-u- -a- -*-b-a-i-j-i-u-*- -s-h-o-t-.- -(-F-a-i-r- -w-a-r-n-i-n-g-:- -i-t-’-s- -s-t-r-o-n-g-e-r- -t-h-a-n- -g-r-a-p-p-a-.-)-
+-
+-S-a-f-e- -t-r-a-v-e-l-s-,- -a-n-d- -s-e-e- -y-o-u- -i-n- -t-h-e- -m-i-s-t-.-
+-
+-*-J-o-r-a-n-*-
+-
+-!-[-A-l-t- -t-e-x-t-:- -A- -m-i-s-t-y- -C-h-e-n-g-d-u- -s-t-r-e-e-t- -w-i-t-h- -r-e-d- -l-a-n-t-e-r-n-s- -h-a-n-g-i-n-g- -o-v-e-r- -a- -c-a-n-a-l-,- -r-e-f-l-e-c-t-i-n-g- -g-o-l-d-e-n- -l-i-g-h-t-.-]- - -
+-!-[-A-l-t- -t-e-x-t-:- -A- -g-i-a-n-t- -p-a-n-d-a- -s-i-t-t-i-n-g- -i-n- -a- -b-a-m-b-o-o- -g-r-o-v-e-,- -m-u-n-c-h-i-n-g- -o-n- -a- -s-t-a-l-k-,- -w-i-t-h- -a- -c-a-l-m- -e-x-p-r-e-s-s-i-o-n-.-]- - -
+-!-[-A-l-t- -t-e-x-t-:- -A- -s-t-e-a-m-i-n-g- -b-o-w-l- -o-f- -S-i-c-h-u-a-n- -h-o-t-p-o-t- -w-i-t-h- -c-h-i-l-i- -p-e-p-p-e-r-s- -a-n-d- -f-l-o-a-t-i-n-g- -p-e-p-p-e-r-c-o-r-n-s-,- -s-u-r-r-o-u-n-d-e-d- -b-y- -p-l-a-t-e-s- -o-f- -r-a-w- -i-n-g-r-e-d-i-e-n-t-s-.-]-

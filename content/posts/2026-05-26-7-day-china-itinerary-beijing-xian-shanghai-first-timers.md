@@ -1,184 +1,185 @@
-??????---
-title: '7-Day China First Timer Itinerary: Beijing, Xi''an & Shanghai 2026'
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/beijing/7-day-china-first-timer-itinerary-beijing-xian-shanghai.jpg"
-description: The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden
-  City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and
-  pro tips from 10 years of running this route.
-date: '2026-05-27T10:00:00+08:00'
-slug: '7-day-china-first-timer-itinerary-beijing-xian-shanghai'
-author: Joran
-tags:
-- china-itinerary
-- beijing
-- xian
-- shanghai
-- first-timer
-- travel-guide
-categories:
-- china-itinerary
-params:
-  keywords:
-  - 7 day china itinerary
-  - china first timer guide
-  - beijing xian shanghai route
-  - china travel plan
-  - china 7 days
-  faq:
-  - question: How many days do you need to see Beijing, Xi'an, and Shanghai?
-    answer: Minimum 7 full days. Fly into Beijing (days 1-3), take a high-speed train
-      to Xi'an (day 4-5), then fly or train to Shanghai (days 6-7). This itinerary
-      is the Goldilocks zone  not too rushed, not too slow.
-  - question: Do I need a visa for a 7-day China trip?
-    answer: Most nationalities need a tourist visa (L-visa). However, citizens of
-      many countries (US, UK, Canada, Australia, EU) can use the 144-hour transit
-      visa-free policy if arriving in Beijing or Shanghai and departing within 144
-      hours. Check your specific situation before booking.
-  - question: How much does a 7-day China trip cost in 2026?
-    answer: 'Budget travelers: $80-120/day ($560-840 total). Mid-range: $150-250/day
-      ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport,
-      and attractions  not international flights.'
-  - question: What is the best way to travel between Beijing, Xi'an, and Shanghai?
-    answer: 'High-speed rail (Fuxing Hao) is the best option. Beijing  Xi''an: 4.5
-      hours, ~$85. Shanghai  Beijing: 4.5 hours, ~$95. Flights are also available
-      but high-speed rail is more convenient and avoids airport hassles.'
-  - question: Is 7 days enough to see China?
-    answer: No  China is massive. 7 days covers three cities with an efficient route.
-      You won't 'see China' in a week, but you'll get a representative sample of ancient
-      history (Xi'an), modern superpower (Beijing), and global finance (Shanghai).
-      Treat it as a gateway trip.
-  - question: Can I use credit cards in China?
-    answer: Rarely, outside high-end hotels and international chains. Alipay and WeChat
-      Pay are mandatory. Download and activate them before arrival. Carry 500-1,000
-      RMB cash for small vendors, temples, and rural areas.
-  - question: Should I get a VPN in China?
-    answer: Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and
-      WhatsApp are all blocked. ExpressVPN and NordVPN consistently work. Once in
-      China, you'll need the APK file or account already active  you can't download
-      VPN apps inside China.
----
-
-## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)
-
-**By Joran | 10+ years navigating China as a foreigner**
-
-I remember my first China trip. I spent three weeks planning, made every rookie mistake in the book, and still ended up missing the Terracotta Army because I ran out of time. Don't be that guy.
-
-This 7-day itinerary is the exact route I've run with friends, family, and readers for years. It's tight, it's efficient, and it's designed to actually work  not some inflated 14-day itinerary that only backpacker blogs recommend.
-
-**The core logic:** Fly into Beijing  Train to Xi'an  Fly to Shanghai. Three cities, seven days, zero regrets.
-
-> **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/)  A complete guide to booking tickets, seat classes, and etiquette.
-
----
-
-## Day-by-Day Breakdown
-
-### Days 1-3: Beijing (Imperial China at Its Peak)
-
-**Arrival tip:** Land at Beijing Capital (PEK) or Daxing (PKX). Take the subway or Didi (Chinese Uber) to your hotel. Do NOT try to flag a regular taxi as a first-timer  the license plates confuse everyone.
-
-**Day 1  Temple of Heaven + Wangfujing**
-Start at the Temple of Heaven before 8 AM to beat the tour groups. Locals do their morning tai chi here  it's the most authentic Beijing experience you'll get for free.
-
-Evening: Walk Wangfujing Street. Try traditional candied hawthorn berries on a stick. Yes, it's weird. Yes, you should.
-
-**Day 2  Forbidden City + Jingshan Park + Houhai**
-Enter through Tiananmen Gate (bring your passport). The Forbidden City needs 3-4 hours minimum  don't rush it.
-
-After, climb Jingshan Park directly north for the iconic view of the entire Forbidden City from above.
-
-Evening: Houhai neighborhood. Sit by the lake, drink a Yanjing beer, listen to locals singing karaoke in the park. This is the real Beijing.
-
-**Day 3  Great Wall (Mutianyu or Jinshanling)**
-*Do not* go to Badaling. It's the most crowded section and tourist-trapped. Mutianyu is 70km from Beijing, has a cable car, and is in decent restoration condition. If you want wild Wall with zero crowds, go to Jinshanling (2.5 hours each way)  but you'll need a full day.
-
-Book your ticket through a reputable tour operator or directly at the Mutianyu section's official website. Avoid the aggressive "free rides" solicited outside subway stations.
-
- **Premium Detail:** The exact GPS waypoints for the Jinshanling wild Wall hike, the hidden Simatai section, and the off-radar Jiankou trek  plus my personal contact for a licensed guide who speaks English  are in the [ChinaBound Travel Members Hub](/member). This info is worth more than the $49.99 annual pass.
-
----
-
-### Days 4-5: Xi'an (Where History Hits Different)
-
-**Getting there:** Take the Fuxing Hao high-speed train from Beijing Qinghe or Beijing Fengtai station. 4.5 hours, ~$85. Book via the 12306 app (in English) or at the station counter. Morning departure gets you to Xi'an by early afternoon.
-
-**Day 4  Terracotta Army**
-Arrive, drop bags at hotel near the South Gate. Go to the Terracotta Army before 9 AM or after 3 PM  it's less crowded and the afternoon light is better for photos.
-
-What no one tells you: The "best" warriors are in Pit 1. Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
-
-Budget tip: Eating near the museum is expensive and mediocre. Bring your own snacks or eat after you leave.
-
-**Day 5  City Wall + Big Wild Goose Pagoda + Muslim Quarter**
-Rent a bike on the ancient City Wall ($5/hour). 14km loop  2 hours max. Start at the South Gate (Yongning Gate) for the most iconic photo angle.
-
-Afternoon: Big Wild Goose Pagoda (can skip going up if you've seen pagodas before).
-
-Evening: Muslim Quarter. Try the lamb biangbiang noodles, roujiamo (Chinese burger), and (osmanthus cake). Walk, eat, repeat.
-
-> **Related:** The best Xi'an food is in the Muslim Quarter - explore it yourself!
-
----
-
-### Days 6-7: Shanghai (The Future Is Already Here)
-
-**Getting there:** Take a 2-hour flight from Xi'an Xianyang Airport (~$80-120) or the high-speed train (6 hours, cheaper).
-
-**Day 6  The Bund + Nanjing Road + Yu Garden**
-Morning: The Bund at sunrise  it's empty and magical. Walk the full waterfront from the Pu Dong side back to the Puxi side.
-
-Midday: Nanjing Road pedestrian shopping street. Not to buy  just to experience the chaos.
-
-Afternoon: Yu Garden (Yuyuan)  the classical Ming dynasty garden inside the old city. Beautiful, crowded, expensive tea houses inside. Walk the surrounding old streets for free.
-
-Evening: The Bund at night. The lights come on around 7 PM. The contrast between historic riverside buildings and Pu Dong's glass-and-steel skyline is worth every minute of jet lag.
-
-**Day 7   + Jade Temple + Departure**
-Morning walk in the . Tree-lined streets, historic lane houses, independent cafs. This is Shanghai's most livable neighborhood.
-
-Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is worth 45 minutes.
-
-**Departure tip:** Shanghai has two airports  Pudong (PVG, international) and Hongqiao (SHA, domestic + some international). Give yourself 3 hours at Pudong for international flights.
-
----
-
-## Quick-Reference Cost Table
-
-| Item | Budget | Mid-Range | Comfort |
-|------|--------|-----------|---------|
-| Hotel/night (dbl) | $25-40 | $60-120 | $200+ |
-| Meals/day | $10-20 | $25-50 | $80+ |
-| Transport (7 days) | $50-80 | $100-150 | $200+ |
-| Attractions (all) | $40-60 | $80-120 | $120+ |
-| **Total per person** | **$560-840** | **$1,200-2,000** | **$3,000+** |
-
----
-
-## Gear I Actually Recommend for This Trip
-
-| Item | Why | Where to Buy |
-|------|-----|-------------|
-| Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://www.airalo.com/)  China eSIM, use my link for discount |
-| Noise-canceling earbuds | Long flights + high-speed trains are loud | Sony WF-1000XM5 |
-| Universal adapter | China uses Type I sockets | Amazon |
-| Small daypack | Wall is steep  pack light | Any durable daypack from Amazon |
-| ExpressVPN | Mandatory for Google/YouTube/Gmail | [ExpressVPN](https://www.expressvpn.com/)  12 months |
-
----
-
-## Final Verdict: Is 7 Days Enough?
-
-No  but it's a start.
-
-China is not a one-trip country. The geography alone spans five climate zones. This route gives you three completely different Chinas: Imperial Beijing, Ancient Xi'an, and Futuristic Shanghai.
-
-**Bookmark this page. Come back. Bring more time.**
-
-And when you're ready for round two: Western Sichuan, Yunnan, Tibet, or the Silk Road. That's when China stops being a checkbox and starts being an obsession.
-
- **[Join the ChinaBound Travel Members Hub](/member)** for GPS waypoints, off-book tips, and direct access to my travel network in each city. Annual pass $49.99  less than one night in Beijing.
-
----
-
-*Have a question about this itinerary? Drop it in the comments  I personally respond to every legitimate question within 48 hours.*
+-------
+-t-i-t-l-e-:- -'-7---D-a-y- -C-h-i-n-a- -F-i-r-s-t- -T-i-m-e-r- -I-t-i-n-e-r-a-r-y-:- -B-e-i-j-i-n-g-,- -X-i-'-'-a-n- -&- -S-h-a-n-g-h-a-i- -2-0-2-6-'-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-b-e-i-j-i-n-g-/-7---d-a-y---c-h-i-n-a---f-i-r-s-t---t-i-m-e-r---i-t-i-n-e-r-a-r-y---b-e-i-j-i-n-g---x-i-a-n---s-h-a-n-g-h-a-i-.-j-p-g-"-
+-d-e-s-c-r-i-p-t-i-o-n-:- -T-h-e- -u-l-t-i-m-a-t-e- -7---d-a-y- -C-h-i-n-a- -i-t-i-n-e-r-a-r-y- -f-o-r- -f-i-r-s-t---t-i-m-e-r-s-.- -B-e-i-j-i-n-g-'-s- -F-o-r-b-i-d-d-e-n-
+- - -C-i-t-y-,- -X-i-'-a-n-'-s- -T-e-r-r-a-c-o-t-t-a- -A-r-m-y-,- -S-h-a-n-g-h-a-i-'-s- -B-u-n-d- - -p-l-u-s- -h-o-n-e-s-t- -l-o-g-i-s-t-i-c-s-,- -c-o-s-t-s-,- -a-n-d-
+- - -p-r-o- -t-i-p-s- -f-r-o-m- -1-0- -y-e-a-r-s- -o-f- -r-u-n-n-i-n-g- -t-h-i-s- -r-o-u-t-e-.-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-7-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-s-l-u-g-:- -'-7---d-a-y---c-h-i-n-a---f-i-r-s-t---t-i-m-e-r---i-t-i-n-e-r-a-r-y---b-e-i-j-i-n-g---x-i-a-n---s-h-a-n-g-h-a-i-'-
+-a-u-t-h-o-r-:- -J-o-r-a-n-
+-t-a-g-s-:-
+--- -c-h-i-n-a---i-t-i-n-e-r-a-r-y-
+--- -b-e-i-j-i-n-g-
+--- -x-i-a-n-
+--- -s-h-a-n-g-h-a-i-
+--- -f-i-r-s-t---t-i-m-e-r-
+--- -t-r-a-v-e-l---g-u-i-d-e-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -c-h-i-n-a---i-t-i-n-e-r-a-r-y-
+-p-a-r-a-m-s-:-
+- - -k-e-y-w-o-r-d-s-:-
+- - --- -7- -d-a-y- -c-h-i-n-a- -i-t-i-n-e-r-a-r-y-
+- - --- -c-h-i-n-a- -f-i-r-s-t- -t-i-m-e-r- -g-u-i-d-e-
+- - --- -b-e-i-j-i-n-g- -x-i-a-n- -s-h-a-n-g-h-a-i- -r-o-u-t-e-
+- - --- -c-h-i-n-a- -t-r-a-v-e-l- -p-l-a-n-
+- - --- -c-h-i-n-a- -7- -d-a-y-s-
+- - -f-a-q-:-
+- - --- -q-u-e-s-t-i-o-n-:- -H-o-w- -m-a-n-y- -d-a-y-s- -d-o- -y-o-u- -n-e-e-d- -t-o- -s-e-e- -B-e-i-j-i-n-g-,- -X-i-'-a-n-,- -a-n-d- -S-h-a-n-g-h-a-i-
+- - - - -a-n-s-w-e-r-:- -M-i-n-i-m-u-m- -7- -f-u-l-l- -d-a-y-s-.- -F-l-y- -i-n-t-o- -B-e-i-j-i-n-g- -(-d-a-y-s- -1---3-)-,- -t-a-k-e- -a- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n-
+- - - - - - -t-o- -X-i-'-a-n- -(-d-a-y- -4---5-)-,- -t-h-e-n- -f-l-y- -o-r- -t-r-a-i-n- -t-o- -S-h-a-n-g-h-a-i- -(-d-a-y-s- -6---7-)-.- -T-h-i-s- -i-t-i-n-e-r-a-r-y-
+- - - - - - -i-s- -t-h-e- -G-o-l-d-i-l-o-c-k-s- -z-o-n-e- - -n-o-t- -t-o-o- -r-u-s-h-e-d-,- -n-o-t- -t-o-o- -s-l-o-w-.-
+- - --- -q-u-e-s-t-i-o-n-:- -D-o- -I- -n-e-e-d- -a- -v-i-s-a- -f-o-r- -a- -7---d-a-y- -C-h-i-n-a- -t-r-i-p-
+- - - - -a-n-s-w-e-r-:- -M-o-s-t- -n-a-t-i-o-n-a-l-i-t-i-e-s- -n-e-e-d- -a- -t-o-u-r-i-s-t- -v-i-s-a- -(-L---v-i-s-a-)-.- -H-o-w-e-v-e-r-,- -c-i-t-i-z-e-n-s- -o-f-
+- - - - - - -m-a-n-y- -c-o-u-n-t-r-i-e-s- -(-U-S-,- -U-K-,- -C-a-n-a-d-a-,- -A-u-s-t-r-a-l-i-a-,- -E-U-)- -c-a-n- -u-s-e- -t-h-e- -1-4-4---h-o-u-r- -t-r-a-n-s-i-t-
+- - - - - - -v-i-s-a---f-r-e-e- -p-o-l-i-c-y- -i-f- -a-r-r-i-v-i-n-g- -i-n- -B-e-i-j-i-n-g- -o-r- -S-h-a-n-g-h-a-i- -a-n-d- -d-e-p-a-r-t-i-n-g- -w-i-t-h-i-n- -1-4-4-
+- - - - - - -h-o-u-r-s-.- -C-h-e-c-k- -y-o-u-r- -s-p-e-c-i-f-i-c- -s-i-t-u-a-t-i-o-n- -b-e-f-o-r-e- -b-o-o-k-i-n-g-.-
+- - --- -q-u-e-s-t-i-o-n-:- -H-o-w- -m-u-c-h- -d-o-e-s- -a- -7---d-a-y- -C-h-i-n-a- -t-r-i-p- -c-o-s-t- -i-n- -2-0-2-6-
+- - - - -a-n-s-w-e-r-:- -'-B-u-d-g-e-t- -t-r-a-v-e-l-e-r-s-:- -$-8-0---1-2-0-/-d-a-y- -(-$-5-6-0---8-4-0- -t-o-t-a-l-)-.- -M-i-d---r-a-n-g-e-:- -$-1-5-0---2-5-0-/-d-a-y-
+- - - - - - -(-$-1-,-0-5-0---1-,-7-5-0-)-.- -C-o-m-f-o-r-t-:- -$-3-0-0-+-/-d-a-y-.- -T-h-i-s- -i-n-c-l-u-d-e-s- -a-c-c-o-m-m-o-d-a-t-i-o-n-,- -f-o-o-d-,- -t-r-a-n-s-p-o-r-t-,-
+- - - - - - -a-n-d- -a-t-t-r-a-c-t-i-o-n-s- - -n-o-t- -i-n-t-e-r-n-a-t-i-o-n-a-l- -f-l-i-g-h-t-s-.-'-
+- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t- -i-s- -t-h-e- -b-e-s-t- -w-a-y- -t-o- -t-r-a-v-e-l- -b-e-t-w-e-e-n- -B-e-i-j-i-n-g-,- -X-i-'-a-n-,- -a-n-d- -S-h-a-n-g-h-a-i-
+- - - - -a-n-s-w-e-r-:- -'-H-i-g-h---s-p-e-e-d- -r-a-i-l- -(-F-u-x-i-n-g- -H-a-o-)- -i-s- -t-h-e- -b-e-s-t- -o-p-t-i-o-n-.- -B-e-i-j-i-n-g- - -X-i-'-'-a-n-:- -4-.-5-
+- - - - - - -h-o-u-r-s-,- -~-$-8-5-.- -S-h-a-n-g-h-a-i- - -B-e-i-j-i-n-g-:- -4-.-5- -h-o-u-r-s-,- -~-$-9-5-.- -F-l-i-g-h-t-s- -a-r-e- -a-l-s-o- -a-v-a-i-l-a-b-l-e-
+- - - - - - -b-u-t- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -i-s- -m-o-r-e- -c-o-n-v-e-n-i-e-n-t- -a-n-d- -a-v-o-i-d-s- -a-i-r-p-o-r-t- -h-a-s-s-l-e-s-.-'-
+- - --- -q-u-e-s-t-i-o-n-:- -I-s- -7- -d-a-y-s- -e-n-o-u-g-h- -t-o- -s-e-e- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -N-o- - -C-h-i-n-a- -i-s- -m-a-s-s-i-v-e-.- -7- -d-a-y-s- -c-o-v-e-r-s- -t-h-r-e-e- -c-i-t-i-e-s- -w-i-t-h- -a-n- -e-f-f-i-c-i-e-n-t- -r-o-u-t-e-.-
+- - - - - - -Y-o-u- -w-o-n-'-t- -'-s-e-e- -C-h-i-n-a-'- -i-n- -a- -w-e-e-k-,- -b-u-t- -y-o-u-'-l-l- -g-e-t- -a- -r-e-p-r-e-s-e-n-t-a-t-i-v-e- -s-a-m-p-l-e- -o-f- -a-n-c-i-e-n-t-
+- - - - - - -h-i-s-t-o-r-y- -(-X-i-'-a-n-)-,- -m-o-d-e-r-n- -s-u-p-e-r-p-o-w-e-r- -(-B-e-i-j-i-n-g-)-,- -a-n-d- -g-l-o-b-a-l- -f-i-n-a-n-c-e- -(-S-h-a-n-g-h-a-i-)-.-
+- - - - - - -T-r-e-a-t- -i-t- -a-s- -a- -g-a-t-e-w-a-y- -t-r-i-p-.-
+- - --- -q-u-e-s-t-i-o-n-:- -C-a-n- -I- -u-s-e- -c-r-e-d-i-t- -c-a-r-d-s- -i-n- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -R-a-r-e-l-y-,- -o-u-t-s-i-d-e- -h-i-g-h---e-n-d- -h-o-t-e-l-s- -a-n-d- -i-n-t-e-r-n-a-t-i-o-n-a-l- -c-h-a-i-n-s-.- -A-l-i-p-a-y- -a-n-d- -W-e-C-h-a-t-
+- - - - - - -P-a-y- -a-r-e- -m-a-n-d-a-t-o-r-y-.- -D-o-w-n-l-o-a-d- -a-n-d- -a-c-t-i-v-a-t-e- -t-h-e-m- -b-e-f-o-r-e- -a-r-r-i-v-a-l-.- -C-a-r-r-y- -5-0-0---1-,-0-0-0-
+- - - - - - -R-M-B- -c-a-s-h- -f-o-r- -s-m-a-l-l- -v-e-n-d-o-r-s-,- -t-e-m-p-l-e-s-,- -a-n-d- -r-u-r-a-l- -a-r-e-a-s-.-
+- - --- -q-u-e-s-t-i-o-n-:- -S-h-o-u-l-d- -I- -g-e-t- -a- -V-P-N- -i-n- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -b-e-f-o-r-e- -y-o-u- -a-r-r-i-v-e-.- -G-m-a-i-l-,- -G-o-o-g-l-e-,- -Y-o-u-T-u-b-e-,- -F-a-c-e-b-o-o-k-,- -I-n-s-t-a-g-r-a-m-,- -a-n-d-
+- - - - - - -W-h-a-t-s-A-p-p- -a-r-e- -a-l-l- -b-l-o-c-k-e-d-.- -E-x-p-r-e-s-s-V-P-N- -a-n-d- -N-o-r-d-V-P-N- -c-o-n-s-i-s-t-e-n-t-l-y- -w-o-r-k-.- -O-n-c-e- -i-n-
+- - - - - - -C-h-i-n-a-,- -y-o-u-'-l-l- -n-e-e-d- -t-h-e- -A-P-K- -f-i-l-e- -o-r- -a-c-c-o-u-n-t- -a-l-r-e-a-d-y- -a-c-t-i-v-e- - -y-o-u- -c-a-n-'-t- -d-o-w-n-l-o-a-d-
+- - - - - - -V-P-N- -a-p-p-s- -i-n-s-i-d-e- -C-h-i-n-a-.-
+-------
+-
+-#-#- -T-h-e- -H-o-n-e-s-t- -7---D-a-y- -C-h-i-n-a- -I-t-i-n-e-r-a-r-y- -(-N-o- -F-l-u-f-f-,- -N-o- -G-a-t-e-k-e-e-p-i-n-g-)-
+-
+-*-*-B-y- -J-o-r-a-n- -|- -1-0-+- -y-e-a-r-s- -n-a-v-i-g-a-t-i-n-g- -C-h-i-n-a- -a-s- -a- -f-o-r-e-i-g-n-e-r-*-*-
+-
+-I- -r-e-m-e-m-b-e-r- -m-y- -f-i-r-s-t- -C-h-i-n-a- -t-r-i-p-.- -I- -s-p-e-n-t- -t-h-r-e-e- -w-e-e-k-s- -p-l-a-n-n-i-n-g-,- -m-a-d-e- -e-v-e-r-y- -r-o-o-k-i-e- -m-i-s-t-a-k-e- -i-n- -t-h-e- -b-o-o-k-,- -a-n-d- -s-t-i-l-l- -e-n-d-e-d- -u-p- -m-i-s-s-i-n-g- -t-h-e- -T-e-r-r-a-c-o-t-t-a- -A-r-m-y- -b-e-c-a-u-s-e- -I- -r-a-n- -o-u-t- -o-f- -t-i-m-e-.- -D-o-n-'-t- -b-e- -t-h-a-t- -g-u-y-.-
+-
+-T-h-i-s- -7---d-a-y- -i-t-i-n-e-r-a-r-y- -i-s- -t-h-e- -e-x-a-c-t- -r-o-u-t-e- -I-'-v-e- -r-u-n- -w-i-t-h- -f-r-i-e-n-d-s-,- -f-a-m-i-l-y-,- -a-n-d- -r-e-a-d-e-r-s- -f-o-r- -y-e-a-r-s-.- -I-t-'-s- -t-i-g-h-t-,- -i-t-'-s- -e-f-f-i-c-i-e-n-t-,- -a-n-d- -i-t-'-s- -d-e-s-i-g-n-e-d- -t-o- -a-c-t-u-a-l-l-y- -w-o-r-k- - -n-o-t- -s-o-m-e- -i-n-f-l-a-t-e-d- -1-4---d-a-y- -i-t-i-n-e-r-a-r-y- -t-h-a-t- -o-n-l-y- -b-a-c-k-p-a-c-k-e-r- -b-l-o-g-s- -r-e-c-o-m-m-e-n-d-.-
+-
+-*-*-T-h-e- -c-o-r-e- -l-o-g-i-c-:-*-*- -F-l-y- -i-n-t-o- -B-e-i-j-i-n-g- - -T-r-a-i-n- -t-o- -X-i-'-a-n- - -F-l-y- -t-o- -S-h-a-n-g-h-a-i-.- -T-h-r-e-e- -c-i-t-i-e-s-,- -s-e-v-e-n- -d-a-y-s-,- -z-e-r-o- -r-e-g-r-e-t-s-.-
+-
+->- -*-*-R-e-l-a-t-e-d-:-*-*- -[-H-o-w- -t-o- -R-i-d-e- -C-h-i-n-a-'-s- -H-i-g-h---S-p-e-e-d- -R-a-i-l- -L-i-k-e- -a- -P-r-o-]-(-/-p-o-s-t-s-/-2-0-2-6---0-5---2-5---c-h-i-n-a---h-i-g-h---s-p-e-e-d---r-a-i-l---h-o-w---t-o---b-o-o-k---t-i-c-k-e-t-s-/-)- - -A- -c-o-m-p-l-e-t-e- -g-u-i-d-e- -t-o- -b-o-o-k-i-n-g- -t-i-c-k-e-t-s-,- -s-e-a-t- -c-l-a-s-s-e-s-,- -a-n-d- -e-t-i-q-u-e-t-t-e-.-
+-
+-------
+-
+-#-#- -D-a-y---b-y---D-a-y- -B-r-e-a-k-d-o-w-n-
+-
+-#-#-#- -D-a-y-s- -1---3-:- -B-e-i-j-i-n-g- -(-I-m-p-e-r-i-a-l- -C-h-i-n-a- -a-t- -I-t-s- -P-e-a-k-)-
+-
+-*-*-A-r-r-i-v-a-l- -t-i-p-:-*-*- -L-a-n-d- -a-t- -B-e-i-j-i-n-g- -C-a-p-i-t-a-l- -(-P-E-K-)- -o-r- -D-a-x-i-n-g- -(-P-K-X-)-.- -T-a-k-e- -t-h-e- -s-u-b-w-a-y- -o-r- -D-i-d-i- -(-C-h-i-n-e-s-e- -U-b-e-r-)- -t-o- -y-o-u-r- -h-o-t-e-l-.- -D-o- -N-O-T- -t-r-y- -t-o- -f-l-a-g- -a- -r-e-g-u-l-a-r- -t-a-x-i- -a-s- -a- -f-i-r-s-t---t-i-m-e-r- - -t-h-e- -l-i-c-e-n-s-e- -p-l-a-t-e-s- -c-o-n-f-u-s-e- -e-v-e-r-y-o-n-e-.-
+-
+-*-*-D-a-y- -1- - -T-e-m-p-l-e- -o-f- -H-e-a-v-e-n- -+- -W-a-n-g-f-u-j-i-n-g-*-*-
+-S-t-a-r-t- -a-t- -t-h-e- -T-e-m-p-l-e- -o-f- -H-e-a-v-e-n- -b-e-f-o-r-e- -8- -A-M- -t-o- -b-e-a-t- -t-h-e- -t-o-u-r- -g-r-o-u-p-s-.- -L-o-c-a-l-s- -d-o- -t-h-e-i-r- -m-o-r-n-i-n-g- -t-a-i- -c-h-i- -h-e-r-e- - -i-t-'-s- -t-h-e- -m-o-s-t- -a-u-t-h-e-n-t-i-c- -B-e-i-j-i-n-g- -e-x-p-e-r-i-e-n-c-e- -y-o-u-'-l-l- -g-e-t- -f-o-r- -f-r-e-e-.-
+-
+-E-v-e-n-i-n-g-:- -W-a-l-k- -W-a-n-g-f-u-j-i-n-g- -S-t-r-e-e-t-.- -T-r-y- -t-r-a-d-i-t-i-o-n-a-l- -c-a-n-d-i-e-d- -h-a-w-t-h-o-r-n- -b-e-r-r-i-e-s- -o-n- -a- -s-t-i-c-k-.- -Y-e-s-,- -i-t-'-s- -w-e-i-r-d-.- -Y-e-s-,- -y-o-u- -s-h-o-u-l-d-.-
+-
+-*-*-D-a-y- -2- - -F-o-r-b-i-d-d-e-n- -C-i-t-y- -+- -J-i-n-g-s-h-a-n- -P-a-r-k- -+- -H-o-u-h-a-i-*-*-
+-E-n-t-e-r- -t-h-r-o-u-g-h- -T-i-a-n-a-n-m-e-n- -G-a-t-e- -(-b-r-i-n-g- -y-o-u-r- -p-a-s-s-p-o-r-t-)-.- -T-h-e- -F-o-r-b-i-d-d-e-n- -C-i-t-y- -n-e-e-d-s- -3---4- -h-o-u-r-s- -m-i-n-i-m-u-m- - -d-o-n-'-t- -r-u-s-h- -i-t-.-
+-
+-A-f-t-e-r-,- -c-l-i-m-b- -J-i-n-g-s-h-a-n- -P-a-r-k- -d-i-r-e-c-t-l-y- -n-o-r-t-h- -f-o-r- -t-h-e- -i-c-o-n-i-c- -v-i-e-w- -o-f- -t-h-e- -e-n-t-i-r-e- -F-o-r-b-i-d-d-e-n- -C-i-t-y- -f-r-o-m- -a-b-o-v-e-.-
+-
+-E-v-e-n-i-n-g-:- -H-o-u-h-a-i- -n-e-i-g-h-b-o-r-h-o-o-d-.- -S-i-t- -b-y- -t-h-e- -l-a-k-e-,- -d-r-i-n-k- -a- -Y-a-n-j-i-n-g- -b-e-e-r-,- -l-i-s-t-e-n- -t-o- -l-o-c-a-l-s- -s-i-n-g-i-n-g- -k-a-r-a-o-k-e- -i-n- -t-h-e- -p-a-r-k-.- -T-h-i-s- -i-s- -t-h-e- -r-e-a-l- -B-e-i-j-i-n-g-.-
+-
+-*-*-D-a-y- -3- - -G-r-e-a-t- -W-a-l-l- -(-M-u-t-i-a-n-y-u- -o-r- -J-i-n-s-h-a-n-l-i-n-g-)-*-*-
+-*-D-o- -n-o-t-*- -g-o- -t-o- -B-a-d-a-l-i-n-g-.- -I-t-'-s- -t-h-e- -m-o-s-t- -c-r-o-w-d-e-d- -s-e-c-t-i-o-n- -a-n-d- -t-o-u-r-i-s-t---t-r-a-p-p-e-d-.- -M-u-t-i-a-n-y-u- -i-s- -7-0-k-m- -f-r-o-m- -B-e-i-j-i-n-g-,- -h-a-s- -a- -c-a-b-l-e- -c-a-r-,- -a-n-d- -i-s- -i-n- -d-e-c-e-n-t- -r-e-s-t-o-r-a-t-i-o-n- -c-o-n-d-i-t-i-o-n-.- -I-f- -y-o-u- -w-a-n-t- -w-i-l-d- -W-a-l-l- -w-i-t-h- -z-e-r-o- -c-r-o-w-d-s-,- -g-o- -t-o- -J-i-n-s-h-a-n-l-i-n-g- -(-2-.-5- -h-o-u-r-s- -e-a-c-h- -w-a-y-)- - -b-u-t- -y-o-u-'-l-l- -n-e-e-d- -a- -f-u-l-l- -d-a-y-.-
+-
+-B-o-o-k- -y-o-u-r- -t-i-c-k-e-t- -t-h-r-o-u-g-h- -a- -r-e-p-u-t-a-b-l-e- -t-o-u-r- -o-p-e-r-a-t-o-r- -o-r- -d-i-r-e-c-t-l-y- -a-t- -t-h-e- -M-u-t-i-a-n-y-u- -s-e-c-t-i-o-n-'-s- -o-f-f-i-c-i-a-l- -w-e-b-s-i-t-e-.- -A-v-o-i-d- -t-h-e- -a-g-g-r-e-s-s-i-v-e- -"-f-r-e-e- -r-i-d-e-s-"- -s-o-l-i-c-i-t-e-d- -o-u-t-s-i-d-e- -s-u-b-w-a-y- -s-t-a-t-i-o-n-s-.-
+-
+- -*-*-P-r-e-m-i-u-m- -D-e-t-a-i-l-:-*-*- -T-h-e- -e-x-a-c-t- -G-P-S- -w-a-y-p-o-i-n-t-s- -f-o-r- -t-h-e- -J-i-n-s-h-a-n-l-i-n-g- -w-i-l-d- -W-a-l-l- -h-i-k-e-,- -t-h-e- -h-i-d-d-e-n- -S-i-m-a-t-a-i- -s-e-c-t-i-o-n-,- -a-n-d- -t-h-e- -o-f-f---r-a-d-a-r- -J-i-a-n-k-o-u- -t-r-e-k- - -p-l-u-s- -m-y- -p-e-r-s-o-n-a-l- -c-o-n-t-a-c-t- -f-o-r- -a- -l-i-c-e-n-s-e-d- -g-u-i-d-e- -w-h-o- -s-p-e-a-k-s- -E-n-g-l-i-s-h- - -a-r-e- -i-n- -t-h-e- -[-C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -M-e-m-b-e-r-s- -H-u-b-]-(-/-m-e-m-b-e-r-)-.- -T-h-i-s- -i-n-f-o- -i-s- -w-o-r-t-h- -m-o-r-e- -t-h-a-n- -t-h-e- -$-4-9-.-9-9- -a-n-n-u-a-l- -p-a-s-s-.-
+-
+-------
+-
+-#-#-#- -D-a-y-s- -4---5-:- -X-i-'-a-n- -(-W-h-e-r-e- -H-i-s-t-o-r-y- -H-i-t-s- -D-i-f-f-e-r-e-n-t-)-
+-
+-*-*-G-e-t-t-i-n-g- -t-h-e-r-e-:-*-*- -T-a-k-e- -t-h-e- -F-u-x-i-n-g- -H-a-o- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -f-r-o-m- -B-e-i-j-i-n-g- -Q-i-n-g-h-e- -o-r- -B-e-i-j-i-n-g- -F-e-n-g-t-a-i- -s-t-a-t-i-o-n-.- -4-.-5- -h-o-u-r-s-,- -~-$-8-5-.- -B-o-o-k- -v-i-a- -t-h-e- -1-2-3-0-6- -a-p-p- -(-i-n- -E-n-g-l-i-s-h-)- -o-r- -a-t- -t-h-e- -s-t-a-t-i-o-n- -c-o-u-n-t-e-r-.- -M-o-r-n-i-n-g- -d-e-p-a-r-t-u-r-e- -g-e-t-s- -y-o-u- -t-o- -X-i-'-a-n- -b-y- -e-a-r-l-y- -a-f-t-e-r-n-o-o-n-.-
+-
+-*-*-D-a-y- -4- - -T-e-r-r-a-c-o-t-t-a- -A-r-m-y-*-*-
+-A-r-r-i-v-e-,- -d-r-o-p- -b-a-g-s- -a-t- -h-o-t-e-l- -n-e-a-r- -t-h-e- -S-o-u-t-h- -G-a-t-e-.- -G-o- -t-o- -t-h-e- -T-e-r-r-a-c-o-t-t-a- -A-r-m-y- -b-e-f-o-r-e- -9- -A-M- -o-r- -a-f-t-e-r- -3- -P-M- - -i-t-'-s- -l-e-s-s- -c-r-o-w-d-e-d- -a-n-d- -t-h-e- -a-f-t-e-r-n-o-o-n- -l-i-g-h-t- -i-s- -b-e-t-t-e-r- -f-o-r- -p-h-o-t-o-s-.-
+-
+-W-h-a-t- -n-o- -o-n-e- -t-e-l-l-s- -y-o-u-:- -T-h-e- -"-b-e-s-t-"- -w-a-r-r-i-o-r-s- -a-r-e- -i-n- -P-i-t- -1-.- -D-o-n-'-t- -s-p-e-n-d- -a-l-l- -y-o-u-r- -t-i-m-e- -i-n- -t-h-e- -s-m-a-l-l-e-r- -p-i-t-s-.- -T-h-e- -b-r-o-n-z-e- -c-h-a-r-i-o-t-s- -o-n- -d-i-s-p-l-a-y- -a-r-e- -t-h-e- -r-e-a-l- -t-r-e-a-s-u-r-e-s-.-
+-
+-B-u-d-g-e-t- -t-i-p-:- -E-a-t-i-n-g- -n-e-a-r- -t-h-e- -m-u-s-e-u-m- -i-s- -e-x-p-e-n-s-i-v-e- -a-n-d- -m-e-d-i-o-c-r-e-.- -B-r-i-n-g- -y-o-u-r- -o-w-n- -s-n-a-c-k-s- -o-r- -e-a-t- -a-f-t-e-r- -y-o-u- -l-e-a-v-e-.-
+-
+-*-*-D-a-y- -5- - -C-i-t-y- -W-a-l-l- -+- -B-i-g- -W-i-l-d- -G-o-o-s-e- -P-a-g-o-d-a- -+- -M-u-s-l-i-m- -Q-u-a-r-t-e-r-*-*-
+-R-e-n-t- -a- -b-i-k-e- -o-n- -t-h-e- -a-n-c-i-e-n-t- -C-i-t-y- -W-a-l-l- -(-$-5-/-h-o-u-r-)-.- -1-4-k-m- -l-o-o-p- - -2- -h-o-u-r-s- -m-a-x-.- -S-t-a-r-t- -a-t- -t-h-e- -S-o-u-t-h- -G-a-t-e- -(-Y-o-n-g-n-i-n-g- -G-a-t-e-)- -f-o-r- -t-h-e- -m-o-s-t- -i-c-o-n-i-c- -p-h-o-t-o- -a-n-g-l-e-.-
+-
+-A-f-t-e-r-n-o-o-n-:- -B-i-g- -W-i-l-d- -G-o-o-s-e- -P-a-g-o-d-a- -(-c-a-n- -s-k-i-p- -g-o-i-n-g- -u-p- -i-f- -y-o-u-'-v-e- -s-e-e-n- -p-a-g-o-d-a-s- -b-e-f-o-r-e-)-.-
+-
+-E-v-e-n-i-n-g-:- -M-u-s-l-i-m- -Q-u-a-r-t-e-r-.- -T-r-y- -t-h-e- -l-a-m-b- -b-i-a-n-g-b-i-a-n-g- -n-o-o-d-l-e-s-,- -r-o-u-j-i-a-m-o- -(-C-h-i-n-e-s-e- -b-u-r-g-e-r-)-,- -a-n-d- -(-o-s-m-a-n-t-h-u-s- -c-a-k-e-)-.- -W-a-l-k-,- -e-a-t-,- -r-e-p-e-a-t-.-
+-
+->- -*-*-R-e-l-a-t-e-d-:-*-*- -T-h-e- -b-e-s-t- -X-i-'-a-n- -f-o-o-d- -i-s- -i-n- -t-h-e- -M-u-s-l-i-m- -Q-u-a-r-t-e-r- --- -e-x-p-l-o-r-e- -i-t- -y-o-u-r-s-e-l-f-!-
+-
+-------
+-
+-#-#-#- -D-a-y-s- -6---7-:- -S-h-a-n-g-h-a-i- -(-T-h-e- -F-u-t-u-r-e- -I-s- -A-l-r-e-a-d-y- -H-e-r-e-)-
+-
+-*-*-G-e-t-t-i-n-g- -t-h-e-r-e-:-*-*- -T-a-k-e- -a- -2---h-o-u-r- -f-l-i-g-h-t- -f-r-o-m- -X-i-'-a-n- -X-i-a-n-y-a-n-g- -A-i-r-p-o-r-t- -(-~-$-8-0---1-2-0-)- -o-r- -t-h-e- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -(-6- -h-o-u-r-s-,- -c-h-e-a-p-e-r-)-.-
+-
+-*-*-D-a-y- -6- - -T-h-e- -B-u-n-d- -+- -N-a-n-j-i-n-g- -R-o-a-d- -+- -Y-u- -G-a-r-d-e-n-*-*-
+-M-o-r-n-i-n-g-:- -T-h-e- -B-u-n-d- -a-t- -s-u-n-r-i-s-e- - -i-t-'-s- -e-m-p-t-y- -a-n-d- -m-a-g-i-c-a-l-.- -W-a-l-k- -t-h-e- -f-u-l-l- -w-a-t-e-r-f-r-o-n-t- -f-r-o-m- -t-h-e- -P-u- -D-o-n-g- -s-i-d-e- -b-a-c-k- -t-o- -t-h-e- -P-u-x-i- -s-i-d-e-.-
+-
+-M-i-d-d-a-y-:- -N-a-n-j-i-n-g- -R-o-a-d- -p-e-d-e-s-t-r-i-a-n- -s-h-o-p-p-i-n-g- -s-t-r-e-e-t-.- -N-o-t- -t-o- -b-u-y- - -j-u-s-t- -t-o- -e-x-p-e-r-i-e-n-c-e- -t-h-e- -c-h-a-o-s-.-
+-
+-A-f-t-e-r-n-o-o-n-:- -Y-u- -G-a-r-d-e-n- -(-Y-u-y-u-a-n-)- - -t-h-e- -c-l-a-s-s-i-c-a-l- -M-i-n-g- -d-y-n-a-s-t-y- -g-a-r-d-e-n- -i-n-s-i-d-e- -t-h-e- -o-l-d- -c-i-t-y-.- -B-e-a-u-t-i-f-u-l-,- -c-r-o-w-d-e-d-,- -e-x-p-e-n-s-i-v-e- -t-e-a- -h-o-u-s-e-s- -i-n-s-i-d-e-.- -W-a-l-k- -t-h-e- -s-u-r-r-o-u-n-d-i-n-g- -o-l-d- -s-t-r-e-e-t-s- -f-o-r- -f-r-e-e-.-
+-
+-E-v-e-n-i-n-g-:- -T-h-e- -B-u-n-d- -a-t- -n-i-g-h-t-.- -T-h-e- -l-i-g-h-t-s- -c-o-m-e- -o-n- -a-r-o-u-n-d- -7- -P-M-.- -T-h-e- -c-o-n-t-r-a-s-t- -b-e-t-w-e-e-n- -h-i-s-t-o-r-i-c- -r-i-v-e-r-s-i-d-e- -b-u-i-l-d-i-n-g-s- -a-n-d- -P-u- -D-o-n-g-'-s- -g-l-a-s-s---a-n-d---s-t-e-e-l- -s-k-y-l-i-n-e- -i-s- -w-o-r-t-h- -e-v-e-r-y- -m-i-n-u-t-e- -o-f- -j-e-t- -l-a-g-.-
+-
+-*-*-D-a-y- -7- - - -+- -J-a-d-e- -T-e-m-p-l-e- -+- -D-e-p-a-r-t-u-r-e-*-*-
+-M-o-r-n-i-n-g- -w-a-l-k- -i-n- -t-h-e- -.- -T-r-e-e---l-i-n-e-d- -s-t-r-e-e-t-s-,- -h-i-s-t-o-r-i-c- -l-a-n-e- -h-o-u-s-e-s-,- -i-n-d-e-p-e-n-d-e-n-t- -c-a-f-s-.- -T-h-i-s- -i-s- -S-h-a-n-g-h-a-i-'-s- -m-o-s-t- -l-i-v-a-b-l-e- -n-e-i-g-h-b-o-r-h-o-o-d-.-
+-
+-J-a-d-e- -B-u-d-d-h-a- -T-e-m-p-l-e- -(-Y-u-f-o- -G-o-n-g-)- - -e-v-e-n- -i-f- -y-o-u-'-r-e- -n-o-t- -B-u-d-d-h-i-s-t-,- -t-h-e- -a-r-c-h-i-t-e-c-t-u-r-e- -i-s- -w-o-r-t-h- -4-5- -m-i-n-u-t-e-s-.-
+-
+-*-*-D-e-p-a-r-t-u-r-e- -t-i-p-:-*-*- -S-h-a-n-g-h-a-i- -h-a-s- -t-w-o- -a-i-r-p-o-r-t-s- - -P-u-d-o-n-g- -(-P-V-G-,- -i-n-t-e-r-n-a-t-i-o-n-a-l-)- -a-n-d- -H-o-n-g-q-i-a-o- -(-S-H-A-,- -d-o-m-e-s-t-i-c- -+- -s-o-m-e- -i-n-t-e-r-n-a-t-i-o-n-a-l-)-.- -G-i-v-e- -y-o-u-r-s-e-l-f- -3- -h-o-u-r-s- -a-t- -P-u-d-o-n-g- -f-o-r- -i-n-t-e-r-n-a-t-i-o-n-a-l- -f-l-i-g-h-t-s-.-
+-
+-------
+-
+-#-#- -Q-u-i-c-k---R-e-f-e-r-e-n-c-e- -C-o-s-t- -T-a-b-l-e-
+-
+-|- -I-t-e-m- -|- -B-u-d-g-e-t- -|- -M-i-d---R-a-n-g-e- -|- -C-o-m-f-o-r-t- -|-
+-|-------------|-----------------|-----------------------|-------------------|-
+-|- -H-o-t-e-l-/-n-i-g-h-t- -(-d-b-l-)- -|- -$-2-5---4-0- -|- -$-6-0---1-2-0- -|- -$-2-0-0-+- -|-
+-|- -M-e-a-l-s-/-d-a-y- -|- -$-1-0---2-0- -|- -$-2-5---5-0- -|- -$-8-0-+- -|-
+-|- -T-r-a-n-s-p-o-r-t- -(-7- -d-a-y-s-)- -|- -$-5-0---8-0- -|- -$-1-0-0---1-5-0- -|- -$-2-0-0-+- -|-
+-|- -A-t-t-r-a-c-t-i-o-n-s- -(-a-l-l-)- -|- -$-4-0---6-0- -|- -$-8-0---1-2-0- -|- -$-1-2-0-+- -|-
+-|- -*-*-T-o-t-a-l- -p-e-r- -p-e-r-s-o-n-*-*- -|- -*-*-$-5-6-0---8-4-0-*-*- -|- -*-*-$-1-,-2-0-0---2-,-0-0-0-*-*- -|- -*-*-$-3-,-0-0-0-+-*-*- -|-
+-
+-------
+-
+-#-#- -G-e-a-r- -I- -A-c-t-u-a-l-l-y- -R-e-c-o-m-m-e-n-d- -f-o-r- -T-h-i-s- -T-r-i-p-
+-
+-|- -I-t-e-m- -|- -W-h-y- -|- -W-h-e-r-e- -t-o- -B-u-y- -|-
+-|-------------|-----------|---------------------------|-
+-|- -P-o-r-t-a-b-l-e- -W-i-F-i- -/- -e-S-I-M- -|- -A-l-i-p-a-y-/-W-e-C-h-a-t- -r-e-q-u-i-r-e- -c-o-n-n-e-c-t-i-v-i-t-y- -|- -[-A-i-r-a-l-o- -e-S-I-M-]-(-h-t-t-p-s-:-/-/-w-w-w-.-a-i-r-a-l-o-.-c-o-m-/-)- - -C-h-i-n-a- -e-S-I-M-,- -u-s-e- -m-y- -l-i-n-k- -f-o-r- -d-i-s-c-o-u-n-t- -|-
+-|- -N-o-i-s-e---c-a-n-c-e-l-i-n-g- -e-a-r-b-u-d-s- -|- -L-o-n-g- -f-l-i-g-h-t-s- -+- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n-s- -a-r-e- -l-o-u-d- -|- -S-o-n-y- -W-F---1-0-0-0-X-M-5- -|-
+-|- -U-n-i-v-e-r-s-a-l- -a-d-a-p-t-e-r- -|- -C-h-i-n-a- -u-s-e-s- -T-y-p-e- -I- -s-o-c-k-e-t-s- -|- -A-m-a-z-o-n- -|-
+-|- -S-m-a-l-l- -d-a-y-p-a-c-k- -|- -W-a-l-l- -i-s- -s-t-e-e-p- - -p-a-c-k- -l-i-g-h-t- -|- -A-n-y- -d-u-r-a-b-l-e- -d-a-y-p-a-c-k- -f-r-o-m- -A-m-a-z-o-n- -|-
+-|- -E-x-p-r-e-s-s-V-P-N- -|- -M-a-n-d-a-t-o-r-y- -f-o-r- -G-o-o-g-l-e-/-Y-o-u-T-u-b-e-/-G-m-a-i-l- -|- -[-E-x-p-r-e-s-s-V-P-N-]-(-h-t-t-p-s-:-/-/-w-w-w-.-e-x-p-r-e-s-s-v-p-n-.-c-o-m-/-)- - -1-2- -m-o-n-t-h-s- -|-
+-
+-------
+-
+-#-#- -F-i-n-a-l- -V-e-r-d-i-c-t-:- -I-s- -7- -D-a-y-s- -E-n-o-u-g-h-
+-
+-N-o- - -b-u-t- -i-t-'-s- -a- -s-t-a-r-t-.-
+-
+-C-h-i-n-a- -i-s- -n-o-t- -a- -o-n-e---t-r-i-p- -c-o-u-n-t-r-y-.- -T-h-e- -g-e-o-g-r-a-p-h-y- -a-l-o-n-e- -s-p-a-n-s- -f-i-v-e- -c-l-i-m-a-t-e- -z-o-n-e-s-.- -T-h-i-s- -r-o-u-t-e- -g-i-v-e-s- -y-o-u- -t-h-r-e-e- -c-o-m-p-l-e-t-e-l-y- -d-i-f-f-e-r-e-n-t- -C-h-i-n-a-s-:- -I-m-p-e-r-i-a-l- -B-e-i-j-i-n-g-,- -A-n-c-i-e-n-t- -X-i-'-a-n-,- -a-n-d- -F-u-t-u-r-i-s-t-i-c- -S-h-a-n-g-h-a-i-.-
+-
+-*-*-B-o-o-k-m-a-r-k- -t-h-i-s- -p-a-g-e-.- -C-o-m-e- -b-a-c-k-.- -B-r-i-n-g- -m-o-r-e- -t-i-m-e-.-*-*-
+-
+-A-n-d- -w-h-e-n- -y-o-u-'-r-e- -r-e-a-d-y- -f-o-r- -r-o-u-n-d- -t-w-o-:- -W-e-s-t-e-r-n- -S-i-c-h-u-a-n-,- -Y-u-n-n-a-n-,- -T-i-b-e-t-,- -o-r- -t-h-e- -S-i-l-k- -R-o-a-d-.- -T-h-a-t-'-s- -w-h-e-n- -C-h-i-n-a- -s-t-o-p-s- -b-e-i-n-g- -a- -c-h-e-c-k-b-o-x- -a-n-d- -s-t-a-r-t-s- -b-e-i-n-g- -a-n- -o-b-s-e-s-s-i-o-n-.-
+-
+- -*-*-[-J-o-i-n- -t-h-e- -C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -M-e-m-b-e-r-s- -H-u-b-]-(-/-m-e-m-b-e-r-)-*-*- -f-o-r- -G-P-S- -w-a-y-p-o-i-n-t-s-,- -o-f-f---b-o-o-k- -t-i-p-s-,- -a-n-d- -d-i-r-e-c-t- -a-c-c-e-s-s- -t-o- -m-y- -t-r-a-v-e-l- -n-e-t-w-o-r-k- -i-n- -e-a-c-h- -c-i-t-y-.- -A-n-n-u-a-l- -p-a-s-s- -$-4-9-.-9-9- - -l-e-s-s- -t-h-a-n- -o-n-e- -n-i-g-h-t- -i-n- -B-e-i-j-i-n-g-.-
+-
+-------
+-
+-*-H-a-v-e- -a- -q-u-e-s-t-i-o-n- -a-b-o-u-t- -t-h-i-s- -i-t-i-n-e-r-a-r-y- -D-r-o-p- -i-t- -i-n- -t-h-e- -c-o-m-m-e-n-t-s- - -I- -p-e-r-s-o-n-a-l-l-y- -r-e-s-p-o-n-d- -t-o- -e-v-e-r-y- -l-e-g-i-t-i-m-a-t-e- -q-u-e-s-t-i-o-n- -w-i-t-h-i-n- -4-8- -h-o-u-r-s-.-*-
+-

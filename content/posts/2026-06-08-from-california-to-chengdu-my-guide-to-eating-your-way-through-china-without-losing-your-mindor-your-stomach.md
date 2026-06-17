@@ -1,41 +1,41 @@
----
-title: "From California to Chengdu: My Guide to Eating Your Way Through China (Without Losing Your Mind—or Your Stomach)"
-cover:
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop"
-date: "2026-06-08T10:00:00+08:00"
-lastmod: "2026-06-08T10:00:00+08:00"
-author: "Joran"
-slug: "from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach"
-tags:
-  - ChinaTravel
-  - TravelGuide
-  - China
-  - AustraliaToChina
-categories:
-  - China
-geo: "AU"
-draft: "false"
-audit_status: "pass2"
-summary: "From In-N-Out to hot pot: My journey discovering China's incredible food scene. Learn what to eat, where to eat, and how to order like a local."
-description: "A California native's journey through China's incredible food scene. Discover what to eat, where to eat, and how to navigate Chinese cuisine without losing your stomach."
-canonicalURL: "https://chinaboundtravel.com/posts/from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach/"
-ShowToc: "true"
-TocOpen: "false"
-weight: "1"
----
-
-# From California to Chengdu: My Guide to Eating Your Way Through China (Without Losing Your Mind—or Your Stomach)
-
-Look, I’m not going to pretend I woke up one day in San Diego, looked at a map, and thought, “You know what? I’ll move to Chengdu for a decade.?But here I am—a California kid who now navigates Sichuan spice like it’s a gentle breeze compared to the Santa Ana winds. After 10+ years of eating, bargaining, and occasionally regretting my life choices in China’s food scene, I’ve got some **China travel** advice for my fellow Aussies and Kiwis. Because let’s be honest: you lot know a thing or two about good food, bad beer, and surviving heat that makes your own backyards look like a spa retreat. So grab a cold one, settle in, and let me save you from ordering “chicken feet surprise?by accident.
-
-![Chinese food journey from California to Chengdu](https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=400&fit=crop)
-
----
-
-## ## The Great Street Food Gamble: How to Eat Like a Local Without a Translator
-
-You've landed in **Chengdu**—the city that makes your taste buds do backflips and your toilet schedule a mystery. First rule of street food: don't be a hero. I learned this the hard way my first week when I saw a vendor selling something that looked like a cross between a pancake and a science experiment. I pointed, smiled, and ended up with a plate of fermented tofu that smelled like a gym sock after a marathon. My California roots screamed "avocado toast," but my new Chinese reality whispered "you're in the big leagues now."
-
-![Street food skewers grilling](https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&h=400&fit=crop)
-
-Here’s the trick: find the stalls with the longest queues of locals. In Chengdu, that’s usually for *dan dan mian* (noodles with minced pork and chili oil) or
+-------
+-t-i-t-l-e-:- -"-F-r-o-m- -C-a-l-i-f-o-r-n-i-a- -t-o- -C-h-e-n-g-d-u-:- -M-y- -G-u-i-d-e- -t-o- -E-a-t-i-n-g- -Y-o-u-r- -W-a-y- -T-h-r-o-u-g-h- -C-h-i-n-a- -(-W-i-t-h-o-u-t- -L-o-s-i-n-g- -Y-o-u-r- -M-i-n-d-—-o-r- -Y-o-u-r- -S-t-o-m-a-c-h-)-"-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-i-m-a-g-e-s-.-u-n-s-p-l-a-s-h-.-c-o-m-/-p-h-o-t-o---1-5-0-4-6-7-4-9-0-0-2-4-7---0-8-7-7-d-f-9-c-c-8-3-6-w-=-1-2-0-0-&-h-=-6-3-0-&-f-i-t-=-c-r-o-p-"-
+-d-a-t-e-:- -"-2-0-2-6---0-6---0-8-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-l-a-s-t-m-o-d-:- -"-2-0-2-6---0-6---0-8-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-a-u-t-h-o-r-:- -"-J-o-r-a-n-"-
+-s-l-u-g-:- -"-f-r-o-m---c-a-l-i-f-o-r-n-i-a---t-o---c-h-e-n-g-d-u---m-y---g-u-i-d-e---t-o---e-a-t-i-n-g---y-o-u-r---w-a-y---t-h-r-o-u-g-h---c-h-i-n-a---w-i-t-h-o-u-t---l-o-s-i-n-g---y-o-u-r---m-i-n-d-o-r---y-o-u-r---s-t-o-m-a-c-h-"-
+-t-a-g-s-:-
+- - --- -C-h-i-n-a-T-r-a-v-e-l-
+- - --- -T-r-a-v-e-l-G-u-i-d-e-
+- - --- -C-h-i-n-a-
+- - --- -A-u-s-t-r-a-l-i-a-T-o-C-h-i-n-a-
+-c-a-t-e-g-o-r-i-e-s-:-
+- - --- -C-h-i-n-a-
+-g-e-o-:- -"-A-U-"-
+-d-r-a-f-t-:- -"-f-a-l-s-e-"-
+-a-u-d-i-t-_-s-t-a-t-u-s-:- -"-p-a-s-s-2-"-
+-s-u-m-m-a-r-y-:- -"-F-r-o-m- -I-n---N---O-u-t- -t-o- -h-o-t- -p-o-t-:- -M-y- -j-o-u-r-n-e-y- -d-i-s-c-o-v-e-r-i-n-g- -C-h-i-n-a-'-s- -i-n-c-r-e-d-i-b-l-e- -f-o-o-d- -s-c-e-n-e-.- -L-e-a-r-n- -w-h-a-t- -t-o- -e-a-t-,- -w-h-e-r-e- -t-o- -e-a-t-,- -a-n-d- -h-o-w- -t-o- -o-r-d-e-r- -l-i-k-e- -a- -l-o-c-a-l-.-"-
+-d-e-s-c-r-i-p-t-i-o-n-:- -"-A- -C-a-l-i-f-o-r-n-i-a- -n-a-t-i-v-e-'-s- -j-o-u-r-n-e-y- -t-h-r-o-u-g-h- -C-h-i-n-a-'-s- -i-n-c-r-e-d-i-b-l-e- -f-o-o-d- -s-c-e-n-e-.- -D-i-s-c-o-v-e-r- -w-h-a-t- -t-o- -e-a-t-,- -w-h-e-r-e- -t-o- -e-a-t-,- -a-n-d- -h-o-w- -t-o- -n-a-v-i-g-a-t-e- -C-h-i-n-e-s-e- -c-u-i-s-i-n-e- -w-i-t-h-o-u-t- -l-o-s-i-n-g- -y-o-u-r- -s-t-o-m-a-c-h-.-"-
+-c-a-n-o-n-i-c-a-l-U-R-L-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-p-o-s-t-s-/-f-r-o-m---c-a-l-i-f-o-r-n-i-a---t-o---c-h-e-n-g-d-u---m-y---g-u-i-d-e---t-o---e-a-t-i-n-g---y-o-u-r---w-a-y---t-h-r-o-u-g-h---c-h-i-n-a---w-i-t-h-o-u-t---l-o-s-i-n-g---y-o-u-r---m-i-n-d-o-r---y-o-u-r---s-t-o-m-a-c-h-/-"-
+-S-h-o-w-T-o-c-:- -"-t-r-u-e-"-
+-T-o-c-O-p-e-n-:- -"-f-a-l-s-e-"-
+-w-e-i-g-h-t-:- -"-1-"-
+-------
+-
+-#- -F-r-o-m- -C-a-l-i-f-o-r-n-i-a- -t-o- -C-h-e-n-g-d-u-:- -M-y- -G-u-i-d-e- -t-o- -E-a-t-i-n-g- -Y-o-u-r- -W-a-y- -T-h-r-o-u-g-h- -C-h-i-n-a- -(-W-i-t-h-o-u-t- -L-o-s-i-n-g- -Y-o-u-r- -M-i-n-d-—-o-r- -Y-o-u-r- -S-t-o-m-a-c-h-)-
+-
+-L-o-o-k-,- -I-’-m- -n-o-t- -g-o-i-n-g- -t-o- -p-r-e-t-e-n-d- -I- -w-o-k-e- -u-p- -o-n-e- -d-a-y- -i-n- -S-a-n- -D-i-e-g-o-,- -l-o-o-k-e-d- -a-t- -a- -m-a-p-,- -a-n-d- -t-h-o-u-g-h-t-,- -“-Y-o-u- -k-n-o-w- -w-h-a-t- -I-’-l-l- -m-o-v-e- -t-o- -C-h-e-n-g-d-u- -f-o-r- -a- -d-e-c-a-d-e-.-B-u-t- -h-e-r-e- -I- -a-m-—-a- -C-a-l-i-f-o-r-n-i-a- -k-i-d- -w-h-o- -n-o-w- -n-a-v-i-g-a-t-e-s- -S-i-c-h-u-a-n- -s-p-i-c-e- -l-i-k-e- -i-t-’-s- -a- -g-e-n-t-l-e- -b-r-e-e-z-e- -c-o-m-p-a-r-e-d- -t-o- -t-h-e- -S-a-n-t-a- -A-n-a- -w-i-n-d-s-.- -A-f-t-e-r- -1-0-+- -y-e-a-r-s- -o-f- -e-a-t-i-n-g-,- -b-a-r-g-a-i-n-i-n-g-,- -a-n-d- -o-c-c-a-s-i-o-n-a-l-l-y- -r-e-g-r-e-t-t-i-n-g- -m-y- -l-i-f-e- -c-h-o-i-c-e-s- -i-n- -C-h-i-n-a-’-s- -f-o-o-d- -s-c-e-n-e-,- -I-’-v-e- -g-o-t- -s-o-m-e- -*-*-C-h-i-n-a- -t-r-a-v-e-l-*-*- -a-d-v-i-c-e- -f-o-r- -m-y- -f-e-l-l-o-w- -A-u-s-s-i-e-s- -a-n-d- -K-i-w-i-s-.- -B-e-c-a-u-s-e- -l-e-t-’-s- -b-e- -h-o-n-e-s-t-:- -y-o-u- -l-o-t- -k-n-o-w- -a- -t-h-i-n-g- -o-r- -t-w-o- -a-b-o-u-t- -g-o-o-d- -f-o-o-d-,- -b-a-d- -b-e-e-r-,- -a-n-d- -s-u-r-v-i-v-i-n-g- -h-e-a-t- -t-h-a-t- -m-a-k-e-s- -y-o-u-r- -o-w-n- -b-a-c-k-y-a-r-d-s- -l-o-o-k- -l-i-k-e- -a- -s-p-a- -r-e-t-r-e-a-t-.- -S-o- -g-r-a-b- -a- -c-o-l-d- -o-n-e-,- -s-e-t-t-l-e- -i-n-,- -a-n-d- -l-e-t- -m-e- -s-a-v-e- -y-o-u- -f-r-o-m- -o-r-d-e-r-i-n-g- -“-c-h-i-c-k-e-n- -f-e-e-t- -s-u-r-p-r-i-s-e-b-y- -a-c-c-i-d-e-n-t-.-
+-
+-!-[-C-h-i-n-e-s-e- -f-o-o-d- -j-o-u-r-n-e-y- -f-r-o-m- -C-a-l-i-f-o-r-n-i-a- -t-o- -C-h-e-n-g-d-u-]-(-h-t-t-p-s-:-/-/-i-m-a-g-e-s-.-u-n-s-p-l-a-s-h-.-c-o-m-/-p-h-o-t-o---1-5-0-4-6-7-4-9-0-0-2-4-7---0-8-7-7-d-f-9-c-c-8-3-6-w-=-8-0-0-&-h-=-4-0-0-&-f-i-t-=-c-r-o-p-)-
+-
+-------
+-
+-#-#- -#-#- -T-h-e- -G-r-e-a-t- -S-t-r-e-e-t- -F-o-o-d- -G-a-m-b-l-e-:- -H-o-w- -t-o- -E-a-t- -L-i-k-e- -a- -L-o-c-a-l- -W-i-t-h-o-u-t- -a- -T-r-a-n-s-l-a-t-o-r-
+-
+-Y-o-u-'-v-e- -l-a-n-d-e-d- -i-n- -*-*-C-h-e-n-g-d-u-*-*-—-t-h-e- -c-i-t-y- -t-h-a-t- -m-a-k-e-s- -y-o-u-r- -t-a-s-t-e- -b-u-d-s- -d-o- -b-a-c-k-f-l-i-p-s- -a-n-d- -y-o-u-r- -t-o-i-l-e-t- -s-c-h-e-d-u-l-e- -a- -m-y-s-t-e-r-y-.- -F-i-r-s-t- -r-u-l-e- -o-f- -s-t-r-e-e-t- -f-o-o-d-:- -d-o-n-'-t- -b-e- -a- -h-e-r-o-.- -I- -l-e-a-r-n-e-d- -t-h-i-s- -t-h-e- -h-a-r-d- -w-a-y- -m-y- -f-i-r-s-t- -w-e-e-k- -w-h-e-n- -I- -s-a-w- -a- -v-e-n-d-o-r- -s-e-l-l-i-n-g- -s-o-m-e-t-h-i-n-g- -t-h-a-t- -l-o-o-k-e-d- -l-i-k-e- -a- -c-r-o-s-s- -b-e-t-w-e-e-n- -a- -p-a-n-c-a-k-e- -a-n-d- -a- -s-c-i-e-n-c-e- -e-x-p-e-r-i-m-e-n-t-.- -I- -p-o-i-n-t-e-d-,- -s-m-i-l-e-d-,- -a-n-d- -e-n-d-e-d- -u-p- -w-i-t-h- -a- -p-l-a-t-e- -o-f- -f-e-r-m-e-n-t-e-d- -t-o-f-u- -t-h-a-t- -s-m-e-l-l-e-d- -l-i-k-e- -a- -g-y-m- -s-o-c-k- -a-f-t-e-r- -a- -m-a-r-a-t-h-o-n-.- -M-y- -C-a-l-i-f-o-r-n-i-a- -r-o-o-t-s- -s-c-r-e-a-m-e-d- -"-a-v-o-c-a-d-o- -t-o-a-s-t-,-"- -b-u-t- -m-y- -n-e-w- -C-h-i-n-e-s-e- -r-e-a-l-i-t-y- -w-h-i-s-p-e-r-e-d- -"-y-o-u-'-r-e- -i-n- -t-h-e- -b-i-g- -l-e-a-g-u-e-s- -n-o-w-.-"-
+-
+-!-[-S-t-r-e-e-t- -f-o-o-d- -s-k-e-w-e-r-s- -g-r-i-l-l-i-n-g-]-(-h-t-t-p-s-:-/-/-i-m-a-g-e-s-.-u-n-s-p-l-a-s-h-.-c-o-m-/-p-h-o-t-o---1-5-2-9-6-9-2-2-3-6-6-7-1---f-1-f-6-c-f-9-6-8-3-b-a-w-=-8-0-0-&-h-=-4-0-0-&-f-i-t-=-c-r-o-p-)-
+-
+-H-e-r-e-’-s- -t-h-e- -t-r-i-c-k-:- -f-i-n-d- -t-h-e- -s-t-a-l-l-s- -w-i-t-h- -t-h-e- -l-o-n-g-e-s-t- -q-u-e-u-e-s- -o-f- -l-o-c-a-l-s-.- -I-n- -C-h-e-n-g-d-u-,- -t-h-a-t-’-s- -u-s-u-a-l-l-y- -f-o-r- -*-d-a-n- -d-a-n- -m-i-a-n-*- -(-n-o-o-d-l-e-s- -w-i-t-h- -m-i-n-c-e-d- -p-o-r-k- -a-n-d- -c-h-i-l-i- -o-i-l-)- -o-r-

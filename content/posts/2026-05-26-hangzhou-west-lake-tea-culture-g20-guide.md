@@ -1,174 +1,175 @@
----
-title: Hangzhou - West Lake, Tea Culture & the G20 Summit Legacy
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/hangzhou/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.jpg"
-date: '2026-05-23T10:00:00+08:00'
-draft: false
-tags:
-- China Travel
-- Hangzhou
-- City Guide
-- Food & Drink
-- Destinations
-categories:
-- China Travel Guide
-summary: Hangzhou is where China goes to relax. West Lake is beautiful, the tea is
-  real, and the food will ruin you for all other cities. Here's what actually matters.
-description: Hangzhou is where China goes to relax. West Lake is beautiful, the tea
-  is real, and the food will ruin you for all other cities. Here's what actually matters.
-author: Joran
-params:
-  keywords:
-  - China travel
-  - travel guide
-  - travel tips
-  - China tourism
-  faq:
-  - question: Is China safe for foreign tourists?
-    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
-      are generally safe day and night.
-  - question: What's the best time to visit China?
-    answer: Spring (April-May) and autumn (September-October) offer the best weather,
-      with mild temperatures and fewer crowds.
-  - question: Do I need a VPN for China?
-    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
-      is recommended for reliable internet access.
----
-
-
-# Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy
-
-## Hey, Joran Here 
-
-When I told my Chengdu wife I was going to Hangzhou for a weekend, she got genuinely excited. "You'll love it," she said. "It's very chill. Very beautiful."
-
-She was right. Hangzhou is China's "laid-back city"  the place where people from Beijing and Shanghai escape to drink tea and look at water. West Lake is legitimately one of the most beautiful urban spaces I've been to anywhere in the world. And I've been to a lot of places.
-
-This guide covers what to do, what to skip, and how to not look like an idiot at a tea plantation.
-
----
-
-## Why Hangzhou Matters
-
-Hangzhou sits at the foot of the Qiantang River and has been a center of Chinese civilization for 2,200 years. It was the capital of the Southern Song Dynasty (1127-1279), and Marco Polo reportedly called it "the most beautiful and magnificent city in the world."
-
-Today, it's famous for:
-- **West Lake ()**  UNESCO World Heritage, 2,000+ years of poetic inspiration
-- **Longjing Tea ()**  The most famous green tea in China, grown in Hangzhou's own backyard
-- **G20 Summit 2016**  China spent $40 billion upgrading the city for the summit. The infrastructure is brand new.
-- **Alibaba**  HQ is here, which means the city is unusually tech-forward
-
----
-
-## Day 1: West Lake & The City
-
-### Morning: West Lake at Dawn
-
-Do the same thing I tell you for every city: go early. West Lake at 6:30am is misty, quiet, and empty. By 9am it's tour buses.
-
-**The Classic Loop:**
-Start at **Remmink Park ()**  no, the bridge doesn't actually break (it's "" meaning "broken," referring to a visual effect). Walk counter-clockwise around the lake:
-
-- **West Lake**  genuinely beautiful, especially in spring with the lotus flowers
-- **Lingyin Temple ()**  1,700 years old, one of the most important Buddhist temples in China. Go early, it gets PACKED.
-- **Leifeng Pagoda**  the reconstructed pagoda from "" (Legend of the White Snake). Take the elevator up for the view.
-
-> **Joran's Tip:** Rent a bicycle. Hangzhou has a city-wide bike share system () with bikes everywhere. You can cycle the entire West Lake perimeter in 2 hours. Cost: about $0.50.
-
-### Lunch: Hepi Kitchen ()
-
-Skip the tourist restaurants on the lake shore. Walk 10 minutes inland to ** (Waipo Jia)**  a chain restaurant that does solid Hangzhou food at Shanghai prices, which means it's cheap by national standards. Order:
-
-- **West Lake Vinegar Fish ()**  sweet-sour fish, the signature dish
-- **Dongpo Pork ()**  braised pork belly, melt-in-your-mouth
-- **Spinach with Sesame ()**  yes, it's just spinach, but the sesame sauce is incredible
-
-### Afternoon: The Tea Fields of Longjing
-
-This is the highlight of Hangzhou for me. **Longjing (Dragon Well) Village** is a 30-minute bus ride from West Lake. The tea fields here produce the most famous green tea in China.
-
-**What to actually do:**
-1. Walk into any tea house (they'll find you, honestly  it's aggressive but you can negotiate)
-2. Ask for a **tea tasting** ()
-3. Buy tea only if you actually like it  and **negotiate the price** (always)
-
-> **Joran's Tip:** The "private tea ceremony" experiences marketed to tourists are... manufactured. The best tea experience I had was sitting in a plastic chair at a roadside stall run by an 80-year-old grandmother who spoke zero English. We communicated by pointing at tea leaves and smiling. It was $3 for an hour of the best Longjing I've ever had.
-
-Expect to pay $15-50 for 50g of authentic Longjing. Anything cheaper is probably from another province.
-
-### Evening: Qinghefang Old Street ()
-
-The old street near West Lake has been renovated but keeps some character. Food stalls, souvenir shops, and the occasional traditional medicine shop. It's touristy but pleasant for a walk.
-
----
-
-## Day 2: G20 Legacy & Modern Hangzhou
-
-### Morning: Qianjiang New City ()
-
-After the G20 Summit, Hangzhou built an entire new district on the east side of the river. The CBD is genuinely impressive  futuristic buildings, wide boulevards, and the **Qianjiang Water Conservancy Project** that turned what was once a muddy river into a centerpiece.
-
-**Don't miss:**
-- **CBD Sky View ()**  Free observation deck overlooking the Qiantang River. At night, the LED light show on the buildings is wild.
-- **Hangzhou's "Urban Oxygen Bar"**  The district has more trees per capita than almost any other Chinese city. Walk along the riverfront.
-
-### Lunch: Binjiang Food Street ()
-
-On the east side of the river, near Alibaba HQ. This is where tech workers eat  cheap, fast, and actually good.
-
-### Afternoon: China National Silk Museum ()
-
-Yes, it's about silk. Yes, it sounds boring. But this is actually a world-class museum with beautiful architecture and exhibits on the 5,000-year history of Chinese silk production. It's also free.
-
-Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about $5 and takes you to **Three Pools Mirroring the Moon ()**  the image on the back of the 1 yuan note.
-
----
-
-## Getting There & Around
-
-| Transport | Details |
-|-----------|---------|
-| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) |
-| **From Beijing** | G train, 4 hours |
-| **From Nanjing** | G train, 1 hour |
-| **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |
-| **Airport** | Hangzhou Xiaoshan (HGH), Metro Line 1 connects |
-
-> **Book your train to Hangzhou on [#TRIP_COM_TRAIN#](Trip.com trains).**
-
----
-
-## Budget Breakdown
-
-| Item | Cost (USD) |
-|------|-----------|
-| West Lake (on foot) | Free |
-| Boat on West Lake | $5 |
-| Longjing tea tasting | Free (with purchase) |
-| 50g authentic Longjing tea | $15-50 |
-| Lunch for two | $15-25 |
-| Budget hotel (night) | $30-50 |
-| Mid-range hotel | $80-120 |
-
----
-
-## What to Buy in Hangzhou
-
-| Item | Where | Price Guide |
-|------|-------|------------|
-| Longjing Tea | Longjing Village | $15-80/50g |
-| Silk products | Hepi Road shops | $10-50 |
-| Wang Xian Noodles () | Supermarket | $1  yes, instant noodles make a good souvenir |
-| West Lake Lotus Art | Old Street | $5-20 |
-
----
-
-## Bottom Line
-
-Hangzhou is China's most livable city  clean, beautiful, well-organized, and genuinely relaxing. It's the perfect 2-3 day escape from the chaos of bigger cities. The G20 upgrades mean the infrastructure is excellent, and unlike some "beautiful" Chinese cities that are only beautiful in photos, Hangzhou is actually pleasant to walk around in real life.
-
-**Come for the tea, stay for the lake, leave with a full belly and some very good green tea.**
-
----
-
-*Last updated: May 2026 | Joran*
+-------
+-t-i-t-l-e-:- -H-a-n-g-z-h-o-u- --- -W-e-s-t- -L-a-k-e-,- -T-e-a- -C-u-l-t-u-r-e- -&- -t-h-e- -G-2-0- -S-u-m-m-i-t- -L-e-g-a-c-y-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-h-a-n-g-z-h-o-u-/-2-0-2-6---0-5---2-6---h-a-n-g-z-h-o-u---w-e-s-t---l-a-k-e---t-e-a---c-u-l-t-u-r-e---g-2-0---g-u-i-d-e-.-j-p-g-"-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-3-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-d-r-a-f-t-:- -f-a-l-s-e-
+-t-a-g-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l-
+--- -H-a-n-g-z-h-o-u-
+--- -C-i-t-y- -G-u-i-d-e-
+--- -F-o-o-d- -&- -D-r-i-n-k-
+--- -D-e-s-t-i-n-a-t-i-o-n-s-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l- -G-u-i-d-e-
+-s-u-m-m-a-r-y-:- -H-a-n-g-z-h-o-u- -i-s- -w-h-e-r-e- -C-h-i-n-a- -g-o-e-s- -t-o- -r-e-l-a-x-.- -W-e-s-t- -L-a-k-e- -i-s- -b-e-a-u-t-i-f-u-l-,- -t-h-e- -t-e-a- -i-s-
+- - -r-e-a-l-,- -a-n-d- -t-h-e- -f-o-o-d- -w-i-l-l- -r-u-i-n- -y-o-u- -f-o-r- -a-l-l- -o-t-h-e-r- -c-i-t-i-e-s-.- -H-e-r-e-'-s- -w-h-a-t- -a-c-t-u-a-l-l-y- -m-a-t-t-e-r-s-.-
+-d-e-s-c-r-i-p-t-i-o-n-:- -H-a-n-g-z-h-o-u- -i-s- -w-h-e-r-e- -C-h-i-n-a- -g-o-e-s- -t-o- -r-e-l-a-x-.- -W-e-s-t- -L-a-k-e- -i-s- -b-e-a-u-t-i-f-u-l-,- -t-h-e- -t-e-a-
+- - -i-s- -r-e-a-l-,- -a-n-d- -t-h-e- -f-o-o-d- -w-i-l-l- -r-u-i-n- -y-o-u- -f-o-r- -a-l-l- -o-t-h-e-r- -c-i-t-i-e-s-.- -H-e-r-e-'-s- -w-h-a-t- -a-c-t-u-a-l-l-y- -m-a-t-t-e-r-s-.-
+-a-u-t-h-o-r-:- -J-o-r-a-n-
+-p-a-r-a-m-s-:-
+- - -k-e-y-w-o-r-d-s-:-
+- - --- -C-h-i-n-a- -t-r-a-v-e-l-
+- - --- -t-r-a-v-e-l- -g-u-i-d-e-
+- - --- -t-r-a-v-e-l- -t-i-p-s-
+- - --- -C-h-i-n-a- -t-o-u-r-i-s-m-
+- - -f-a-q-:-
+- - --- -q-u-e-s-t-i-o-n-:- -I-s- -C-h-i-n-a- -s-a-f-e- -f-o-r- -f-o-r-e-i-g-n- -t-o-u-r-i-s-t-s-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -C-h-i-n-a- -i-s- -v-e-r-y- -s-a-f-e- -f-o-r- -t-o-u-r-i-s-t-s-.- -V-i-o-l-e-n-t- -c-r-i-m-e- -i-s- -r-a-r-e-,- -a-n-d- -c-i-t-i-e-s-
+- - - - - - -a-r-e- -g-e-n-e-r-a-l-l-y- -s-a-f-e- -d-a-y- -a-n-d- -n-i-g-h-t-.-
+- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t-'-s- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -S-p-r-i-n-g- -(-A-p-r-i-l---M-a-y-)- -a-n-d- -a-u-t-u-m-n- -(-S-e-p-t-e-m-b-e-r---O-c-t-o-b-e-r-)- -o-f-f-e-r- -t-h-e- -b-e-s-t- -w-e-a-t-h-e-r-,-
+- - - - - - -w-i-t-h- -m-i-l-d- -t-e-m-p-e-r-a-t-u-r-e-s- -a-n-d- -f-e-w-e-r- -c-r-o-w-d-s-.-
+- - --- -q-u-e-s-t-i-o-n-:- -D-o- -I- -n-e-e-d- -a- -V-P-N- -f-o-r- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -m-o-s-t- -W-e-s-t-e-r-n- -a-p-p-s- -a-n-d- -w-e-b-s-i-t-e-s- -a-r-e- -b-l-o-c-k-e-d-.- -A-n- -e-S-I-M- -w-i-t-h- -V-P-N- -s-e-r-v-i-c-e-
+- - - - - - -i-s- -r-e-c-o-m-m-e-n-d-e-d- -f-o-r- -r-e-l-i-a-b-l-e- -i-n-t-e-r-n-e-t- -a-c-c-e-s-s-.-
+-------
+-
+-
+-#- -H-a-n-g-z-h-o-u-:- -W-e-s-t- -L-a-k-e-,- -T-e-a- -C-u-l-t-u-r-e- -&- -t-h-e- -G-2-0- -S-u-m-m-i-t- -L-e-g-a-c-y-
+-
+-#-#- -H-e-y-,- -J-o-r-a-n- -H-e-r-e- -
+-
+-W-h-e-n- -I- -t-o-l-d- -m-y- -C-h-e-n-g-d-u- -w-i-f-e- -I- -w-a-s- -g-o-i-n-g- -t-o- -H-a-n-g-z-h-o-u- -f-o-r- -a- -w-e-e-k-e-n-d-,- -s-h-e- -g-o-t- -g-e-n-u-i-n-e-l-y- -e-x-c-i-t-e-d-.- -"-Y-o-u-'-l-l- -l-o-v-e- -i-t-,-"- -s-h-e- -s-a-i-d-.- -"-I-t-'-s- -v-e-r-y- -c-h-i-l-l-.- -V-e-r-y- -b-e-a-u-t-i-f-u-l-.-"-
+-
+-S-h-e- -w-a-s- -r-i-g-h-t-.- -H-a-n-g-z-h-o-u- -i-s- -C-h-i-n-a-'-s- -"-l-a-i-d---b-a-c-k- -c-i-t-y-"- - -t-h-e- -p-l-a-c-e- -w-h-e-r-e- -p-e-o-p-l-e- -f-r-o-m- -B-e-i-j-i-n-g- -a-n-d- -S-h-a-n-g-h-a-i- -e-s-c-a-p-e- -t-o- -d-r-i-n-k- -t-e-a- -a-n-d- -l-o-o-k- -a-t- -w-a-t-e-r-.- -W-e-s-t- -L-a-k-e- -i-s- -l-e-g-i-t-i-m-a-t-e-l-y- -o-n-e- -o-f- -t-h-e- -m-o-s-t- -b-e-a-u-t-i-f-u-l- -u-r-b-a-n- -s-p-a-c-e-s- -I-'-v-e- -b-e-e-n- -t-o- -a-n-y-w-h-e-r-e- -i-n- -t-h-e- -w-o-r-l-d-.- -A-n-d- -I-'-v-e- -b-e-e-n- -t-o- -a- -l-o-t- -o-f- -p-l-a-c-e-s-.-
+-
+-T-h-i-s- -g-u-i-d-e- -c-o-v-e-r-s- -w-h-a-t- -t-o- -d-o-,- -w-h-a-t- -t-o- -s-k-i-p-,- -a-n-d- -h-o-w- -t-o- -n-o-t- -l-o-o-k- -l-i-k-e- -a-n- -i-d-i-o-t- -a-t- -a- -t-e-a- -p-l-a-n-t-a-t-i-o-n-.-
+-
+-------
+-
+-#-#- -W-h-y- -H-a-n-g-z-h-o-u- -M-a-t-t-e-r-s-
+-
+-H-a-n-g-z-h-o-u- -s-i-t-s- -a-t- -t-h-e- -f-o-o-t- -o-f- -t-h-e- -Q-i-a-n-t-a-n-g- -R-i-v-e-r- -a-n-d- -h-a-s- -b-e-e-n- -a- -c-e-n-t-e-r- -o-f- -C-h-i-n-e-s-e- -c-i-v-i-l-i-z-a-t-i-o-n- -f-o-r- -2-,-2-0-0- -y-e-a-r-s-.- -I-t- -w-a-s- -t-h-e- -c-a-p-i-t-a-l- -o-f- -t-h-e- -S-o-u-t-h-e-r-n- -S-o-n-g- -D-y-n-a-s-t-y- -(-1-1-2-7---1-2-7-9-)-,- -a-n-d- -M-a-r-c-o- -P-o-l-o- -r-e-p-o-r-t-e-d-l-y- -c-a-l-l-e-d- -i-t- -"-t-h-e- -m-o-s-t- -b-e-a-u-t-i-f-u-l- -a-n-d- -m-a-g-n-i-f-i-c-e-n-t- -c-i-t-y- -i-n- -t-h-e- -w-o-r-l-d-.-"-
+-
+-T-o-d-a-y-,- -i-t-'-s- -f-a-m-o-u-s- -f-o-r-:-
+--- -*-*-W-e-s-t- -L-a-k-e- -(-)-*-*- - -U-N-E-S-C-O- -W-o-r-l-d- -H-e-r-i-t-a-g-e-,- -2-,-0-0-0-+- -y-e-a-r-s- -o-f- -p-o-e-t-i-c- -i-n-s-p-i-r-a-t-i-o-n-
+--- -*-*-L-o-n-g-j-i-n-g- -T-e-a- -(-)-*-*- - -T-h-e- -m-o-s-t- -f-a-m-o-u-s- -g-r-e-e-n- -t-e-a- -i-n- -C-h-i-n-a-,- -g-r-o-w-n- -i-n- -H-a-n-g-z-h-o-u-'-s- -o-w-n- -b-a-c-k-y-a-r-d-
+--- -*-*-G-2-0- -S-u-m-m-i-t- -2-0-1-6-*-*- - -C-h-i-n-a- -s-p-e-n-t- -$-4-0- -b-i-l-l-i-o-n- -u-p-g-r-a-d-i-n-g- -t-h-e- -c-i-t-y- -f-o-r- -t-h-e- -s-u-m-m-i-t-.- -T-h-e- -i-n-f-r-a-s-t-r-u-c-t-u-r-e- -i-s- -b-r-a-n-d- -n-e-w-.-
+--- -*-*-A-l-i-b-a-b-a-*-*- - -H-Q- -i-s- -h-e-r-e-,- -w-h-i-c-h- -m-e-a-n-s- -t-h-e- -c-i-t-y- -i-s- -u-n-u-s-u-a-l-l-y- -t-e-c-h---f-o-r-w-a-r-d-
+-
+-------
+-
+-#-#- -D-a-y- -1-:- -W-e-s-t- -L-a-k-e- -&- -T-h-e- -C-i-t-y-
+-
+-#-#-#- -M-o-r-n-i-n-g-:- -W-e-s-t- -L-a-k-e- -a-t- -D-a-w-n-
+-
+-D-o- -t-h-e- -s-a-m-e- -t-h-i-n-g- -I- -t-e-l-l- -y-o-u- -f-o-r- -e-v-e-r-y- -c-i-t-y-:- -g-o- -e-a-r-l-y-.- -W-e-s-t- -L-a-k-e- -a-t- -6-:-3-0-a-m- -i-s- -m-i-s-t-y-,- -q-u-i-e-t-,- -a-n-d- -e-m-p-t-y-.- -B-y- -9-a-m- -i-t-'-s- -t-o-u-r- -b-u-s-e-s-.-
+-
+-*-*-T-h-e- -C-l-a-s-s-i-c- -L-o-o-p-:-*-*-
+-S-t-a-r-t- -a-t- -*-*-R-e-m-m-i-n-k- -P-a-r-k- -(-)-*-*- - -n-o-,- -t-h-e- -b-r-i-d-g-e- -d-o-e-s-n-'-t- -a-c-t-u-a-l-l-y- -b-r-e-a-k- -(-i-t-'-s- -"-"- -m-e-a-n-i-n-g- -"-b-r-o-k-e-n-,-"- -r-e-f-e-r-r-i-n-g- -t-o- -a- -v-i-s-u-a-l- -e-f-f-e-c-t-)-.- -W-a-l-k- -c-o-u-n-t-e-r---c-l-o-c-k-w-i-s-e- -a-r-o-u-n-d- -t-h-e- -l-a-k-e-:-
+-
+--- -*-*-W-e-s-t- -L-a-k-e-*-*- - -g-e-n-u-i-n-e-l-y- -b-e-a-u-t-i-f-u-l-,- -e-s-p-e-c-i-a-l-l-y- -i-n- -s-p-r-i-n-g- -w-i-t-h- -t-h-e- -l-o-t-u-s- -f-l-o-w-e-r-s-
+--- -*-*-L-i-n-g-y-i-n- -T-e-m-p-l-e- -(-)-*-*- - -1-,-7-0-0- -y-e-a-r-s- -o-l-d-,- -o-n-e- -o-f- -t-h-e- -m-o-s-t- -i-m-p-o-r-t-a-n-t- -B-u-d-d-h-i-s-t- -t-e-m-p-l-e-s- -i-n- -C-h-i-n-a-.- -G-o- -e-a-r-l-y-,- -i-t- -g-e-t-s- -P-A-C-K-E-D-.-
+--- -*-*-L-e-i-f-e-n-g- -P-a-g-o-d-a-*-*- - -t-h-e- -r-e-c-o-n-s-t-r-u-c-t-e-d- -p-a-g-o-d-a- -f-r-o-m- -"-"- -(-L-e-g-e-n-d- -o-f- -t-h-e- -W-h-i-t-e- -S-n-a-k-e-)-.- -T-a-k-e- -t-h-e- -e-l-e-v-a-t-o-r- -u-p- -f-o-r- -t-h-e- -v-i-e-w-.-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -R-e-n-t- -a- -b-i-c-y-c-l-e-.- -H-a-n-g-z-h-o-u- -h-a-s- -a- -c-i-t-y---w-i-d-e- -b-i-k-e- -s-h-a-r-e- -s-y-s-t-e-m- -(-)- -w-i-t-h- -b-i-k-e-s- -e-v-e-r-y-w-h-e-r-e-.- -Y-o-u- -c-a-n- -c-y-c-l-e- -t-h-e- -e-n-t-i-r-e- -W-e-s-t- -L-a-k-e- -p-e-r-i-m-e-t-e-r- -i-n- -2- -h-o-u-r-s-.- -C-o-s-t-:- -a-b-o-u-t- -$-0-.-5-0-.-
+-
+-#-#-#- -L-u-n-c-h-:- -H-e-p-i- -K-i-t-c-h-e-n- -(-)-
+-
+-S-k-i-p- -t-h-e- -t-o-u-r-i-s-t- -r-e-s-t-a-u-r-a-n-t-s- -o-n- -t-h-e- -l-a-k-e- -s-h-o-r-e-.- -W-a-l-k- -1-0- -m-i-n-u-t-e-s- -i-n-l-a-n-d- -t-o- -*-*- -(-W-a-i-p-o- -J-i-a-)-*-*- - -a- -c-h-a-i-n- -r-e-s-t-a-u-r-a-n-t- -t-h-a-t- -d-o-e-s- -s-o-l-i-d- -H-a-n-g-z-h-o-u- -f-o-o-d- -a-t- -S-h-a-n-g-h-a-i- -p-r-i-c-e-s-,- -w-h-i-c-h- -m-e-a-n-s- -i-t-'-s- -c-h-e-a-p- -b-y- -n-a-t-i-o-n-a-l- -s-t-a-n-d-a-r-d-s-.- -O-r-d-e-r-:-
+-
+--- -*-*-W-e-s-t- -L-a-k-e- -V-i-n-e-g-a-r- -F-i-s-h- -(-)-*-*- - -s-w-e-e-t---s-o-u-r- -f-i-s-h-,- -t-h-e- -s-i-g-n-a-t-u-r-e- -d-i-s-h-
+--- -*-*-D-o-n-g-p-o- -P-o-r-k- -(-)-*-*- - -b-r-a-i-s-e-d- -p-o-r-k- -b-e-l-l-y-,- -m-e-l-t---i-n---y-o-u-r---m-o-u-t-h-
+--- -*-*-S-p-i-n-a-c-h- -w-i-t-h- -S-e-s-a-m-e- -(-)-*-*- - -y-e-s-,- -i-t-'-s- -j-u-s-t- -s-p-i-n-a-c-h-,- -b-u-t- -t-h-e- -s-e-s-a-m-e- -s-a-u-c-e- -i-s- -i-n-c-r-e-d-i-b-l-e-
+-
+-#-#-#- -A-f-t-e-r-n-o-o-n-:- -T-h-e- -T-e-a- -F-i-e-l-d-s- -o-f- -L-o-n-g-j-i-n-g-
+-
+-T-h-i-s- -i-s- -t-h-e- -h-i-g-h-l-i-g-h-t- -o-f- -H-a-n-g-z-h-o-u- -f-o-r- -m-e-.- -*-*-L-o-n-g-j-i-n-g- -(-D-r-a-g-o-n- -W-e-l-l-)- -V-i-l-l-a-g-e-*-*- -i-s- -a- -3-0---m-i-n-u-t-e- -b-u-s- -r-i-d-e- -f-r-o-m- -W-e-s-t- -L-a-k-e-.- -T-h-e- -t-e-a- -f-i-e-l-d-s- -h-e-r-e- -p-r-o-d-u-c-e- -t-h-e- -m-o-s-t- -f-a-m-o-u-s- -g-r-e-e-n- -t-e-a- -i-n- -C-h-i-n-a-.-
+-
+-*-*-W-h-a-t- -t-o- -a-c-t-u-a-l-l-y- -d-o-:-*-*-
+-1-.- -W-a-l-k- -i-n-t-o- -a-n-y- -t-e-a- -h-o-u-s-e- -(-t-h-e-y-'-l-l- -f-i-n-d- -y-o-u-,- -h-o-n-e-s-t-l-y- - -i-t-'-s- -a-g-g-r-e-s-s-i-v-e- -b-u-t- -y-o-u- -c-a-n- -n-e-g-o-t-i-a-t-e-)-
+-2-.- -A-s-k- -f-o-r- -a- -*-*-t-e-a- -t-a-s-t-i-n-g-*-*- -(-)-
+-3-.- -B-u-y- -t-e-a- -o-n-l-y- -i-f- -y-o-u- -a-c-t-u-a-l-l-y- -l-i-k-e- -i-t- - -a-n-d- -*-*-n-e-g-o-t-i-a-t-e- -t-h-e- -p-r-i-c-e-*-*- -(-a-l-w-a-y-s-)-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -T-h-e- -"-p-r-i-v-a-t-e- -t-e-a- -c-e-r-e-m-o-n-y-"- -e-x-p-e-r-i-e-n-c-e-s- -m-a-r-k-e-t-e-d- -t-o- -t-o-u-r-i-s-t-s- -a-r-e-.-.-.- -m-a-n-u-f-a-c-t-u-r-e-d-.- -T-h-e- -b-e-s-t- -t-e-a- -e-x-p-e-r-i-e-n-c-e- -I- -h-a-d- -w-a-s- -s-i-t-t-i-n-g- -i-n- -a- -p-l-a-s-t-i-c- -c-h-a-i-r- -a-t- -a- -r-o-a-d-s-i-d-e- -s-t-a-l-l- -r-u-n- -b-y- -a-n- -8-0---y-e-a-r---o-l-d- -g-r-a-n-d-m-o-t-h-e-r- -w-h-o- -s-p-o-k-e- -z-e-r-o- -E-n-g-l-i-s-h-.- -W-e- -c-o-m-m-u-n-i-c-a-t-e-d- -b-y- -p-o-i-n-t-i-n-g- -a-t- -t-e-a- -l-e-a-v-e-s- -a-n-d- -s-m-i-l-i-n-g-.- -I-t- -w-a-s- -$-3- -f-o-r- -a-n- -h-o-u-r- -o-f- -t-h-e- -b-e-s-t- -L-o-n-g-j-i-n-g- -I-'-v-e- -e-v-e-r- -h-a-d-.-
+-
+-E-x-p-e-c-t- -t-o- -p-a-y- -$-1-5---5-0- -f-o-r- -5-0-g- -o-f- -a-u-t-h-e-n-t-i-c- -L-o-n-g-j-i-n-g-.- -A-n-y-t-h-i-n-g- -c-h-e-a-p-e-r- -i-s- -p-r-o-b-a-b-l-y- -f-r-o-m- -a-n-o-t-h-e-r- -p-r-o-v-i-n-c-e-.-
+-
+-#-#-#- -E-v-e-n-i-n-g-:- -Q-i-n-g-h-e-f-a-n-g- -O-l-d- -S-t-r-e-e-t- -(-)-
+-
+-T-h-e- -o-l-d- -s-t-r-e-e-t- -n-e-a-r- -W-e-s-t- -L-a-k-e- -h-a-s- -b-e-e-n- -r-e-n-o-v-a-t-e-d- -b-u-t- -k-e-e-p-s- -s-o-m-e- -c-h-a-r-a-c-t-e-r-.- -F-o-o-d- -s-t-a-l-l-s-,- -s-o-u-v-e-n-i-r- -s-h-o-p-s-,- -a-n-d- -t-h-e- -o-c-c-a-s-i-o-n-a-l- -t-r-a-d-i-t-i-o-n-a-l- -m-e-d-i-c-i-n-e- -s-h-o-p-.- -I-t-'-s- -t-o-u-r-i-s-t-y- -b-u-t- -p-l-e-a-s-a-n-t- -f-o-r- -a- -w-a-l-k-.-
+-
+-------
+-
+-#-#- -D-a-y- -2-:- -G-2-0- -L-e-g-a-c-y- -&- -M-o-d-e-r-n- -H-a-n-g-z-h-o-u-
+-
+-#-#-#- -M-o-r-n-i-n-g-:- -Q-i-a-n-j-i-a-n-g- -N-e-w- -C-i-t-y- -(-)-
+-
+-A-f-t-e-r- -t-h-e- -G-2-0- -S-u-m-m-i-t-,- -H-a-n-g-z-h-o-u- -b-u-i-l-t- -a-n- -e-n-t-i-r-e- -n-e-w- -d-i-s-t-r-i-c-t- -o-n- -t-h-e- -e-a-s-t- -s-i-d-e- -o-f- -t-h-e- -r-i-v-e-r-.- -T-h-e- -C-B-D- -i-s- -g-e-n-u-i-n-e-l-y- -i-m-p-r-e-s-s-i-v-e- - -f-u-t-u-r-i-s-t-i-c- -b-u-i-l-d-i-n-g-s-,- -w-i-d-e- -b-o-u-l-e-v-a-r-d-s-,- -a-n-d- -t-h-e- -*-*-Q-i-a-n-j-i-a-n-g- -W-a-t-e-r- -C-o-n-s-e-r-v-a-n-c-y- -P-r-o-j-e-c-t-*-*- -t-h-a-t- -t-u-r-n-e-d- -w-h-a-t- -w-a-s- -o-n-c-e- -a- -m-u-d-d-y- -r-i-v-e-r- -i-n-t-o- -a- -c-e-n-t-e-r-p-i-e-c-e-.-
+-
+-*-*-D-o-n-'-t- -m-i-s-s-:-*-*-
+--- -*-*-C-B-D- -S-k-y- -V-i-e-w- -(-)-*-*- - -F-r-e-e- -o-b-s-e-r-v-a-t-i-o-n- -d-e-c-k- -o-v-e-r-l-o-o-k-i-n-g- -t-h-e- -Q-i-a-n-t-a-n-g- -R-i-v-e-r-.- -A-t- -n-i-g-h-t-,- -t-h-e- -L-E-D- -l-i-g-h-t- -s-h-o-w- -o-n- -t-h-e- -b-u-i-l-d-i-n-g-s- -i-s- -w-i-l-d-.-
+--- -*-*-H-a-n-g-z-h-o-u-'-s- -"-U-r-b-a-n- -O-x-y-g-e-n- -B-a-r-"-*-*- - -T-h-e- -d-i-s-t-r-i-c-t- -h-a-s- -m-o-r-e- -t-r-e-e-s- -p-e-r- -c-a-p-i-t-a- -t-h-a-n- -a-l-m-o-s-t- -a-n-y- -o-t-h-e-r- -C-h-i-n-e-s-e- -c-i-t-y-.- -W-a-l-k- -a-l-o-n-g- -t-h-e- -r-i-v-e-r-f-r-o-n-t-.-
+-
+-#-#-#- -L-u-n-c-h-:- -B-i-n-j-i-a-n-g- -F-o-o-d- -S-t-r-e-e-t- -(-)-
+-
+-O-n- -t-h-e- -e-a-s-t- -s-i-d-e- -o-f- -t-h-e- -r-i-v-e-r-,- -n-e-a-r- -A-l-i-b-a-b-a- -H-Q-.- -T-h-i-s- -i-s- -w-h-e-r-e- -t-e-c-h- -w-o-r-k-e-r-s- -e-a-t- - -c-h-e-a-p-,- -f-a-s-t-,- -a-n-d- -a-c-t-u-a-l-l-y- -g-o-o-d-.-
+-
+-#-#-#- -A-f-t-e-r-n-o-o-n-:- -C-h-i-n-a- -N-a-t-i-o-n-a-l- -S-i-l-k- -M-u-s-e-u-m- -(-)-
+-
+-Y-e-s-,- -i-t-'-s- -a-b-o-u-t- -s-i-l-k-.- -Y-e-s-,- -i-t- -s-o-u-n-d-s- -b-o-r-i-n-g-.- -B-u-t- -t-h-i-s- -i-s- -a-c-t-u-a-l-l-y- -a- -w-o-r-l-d---c-l-a-s-s- -m-u-s-e-u-m- -w-i-t-h- -b-e-a-u-t-i-f-u-l- -a-r-c-h-i-t-e-c-t-u-r-e- -a-n-d- -e-x-h-i-b-i-t-s- -o-n- -t-h-e- -5-,-0-0-0---y-e-a-r- -h-i-s-t-o-r-y- -o-f- -C-h-i-n-e-s-e- -s-i-l-k- -p-r-o-d-u-c-t-i-o-n-.- -I-t-'-s- -a-l-s-o- -f-r-e-e-.-
+-
+-O-r-:- -t-a-k-e- -a- -b-o-a-t- -o-n- -W-e-s-t- -L-a-k-e-.- -Y-e-s-,- -t-o-u-r-i-s-t-y-.- -Y-e-s-,- -w-o-r-t-h- -i-t-.- -T-h-e- -b-o-a-t- -c-o-s-t-s- -a-b-o-u-t- -$-5- -a-n-d- -t-a-k-e-s- -y-o-u- -t-o- -*-*-T-h-r-e-e- -P-o-o-l-s- -M-i-r-r-o-r-i-n-g- -t-h-e- -M-o-o-n- -(-)-*-*- - -t-h-e- -i-m-a-g-e- -o-n- -t-h-e- -b-a-c-k- -o-f- -t-h-e- -1- -y-u-a-n- -n-o-t-e-.-
+-
+-------
+-
+-#-#- -G-e-t-t-i-n-g- -T-h-e-r-e- -&- -A-r-o-u-n-d-
+-
+-|- -T-r-a-n-s-p-o-r-t- -|- -D-e-t-a-i-l-s- -|-
+-|-----------------------|-------------------|-
+-|- -*-*-F-r-o-m- -S-h-a-n-g-h-a-i-*-*- -|- -G- -t-r-a-i-n-,- -4-5- -m-i-n- -(-H-o-u-r-l-y-,- -d-e-p-a-r-t-s- -S-h-a-n-g-h-a-i- -H-o-n-g-q-i-a-o-)- -|-
+-|- -*-*-F-r-o-m- -B-e-i-j-i-n-g-*-*- -|- -G- -t-r-a-i-n-,- -4- -h-o-u-r-s- -|-
+-|- -*-*-F-r-o-m- -N-a-n-j-i-n-g-*-*- -|- -G- -t-r-a-i-n-,- -1- -h-o-u-r- -|-
+-|- -*-*-L-o-c-a-l- -t-r-a-n-s-p-o-r-t-*-*- -|- -M-e-t-r-o- -(-l-i-n-e-s- -1-,- -2-,- -4-)- -+- -b-i-k-e- -s-h-a-r-e- -+- -D-i-d-i- -|-
+-|- -*-*-A-i-r-p-o-r-t-*-*- -|- -H-a-n-g-z-h-o-u- -X-i-a-o-s-h-a-n- -(-H-G-H-)-,- -M-e-t-r-o- -L-i-n-e- -1- -c-o-n-n-e-c-t-s- -|-
+-
+->- -*-*-B-o-o-k- -y-o-u-r- -t-r-a-i-n- -t-o- -H-a-n-g-z-h-o-u- -o-n- -[-#-T-R-I-P-_-C-O-M-_-T-R-A-I-N-#-]-(-T-r-i-p-.-c-o-m- -t-r-a-i-n-s-)-.-*-*-
+-
+-------
+-
+-#-#- -B-u-d-g-e-t- -B-r-e-a-k-d-o-w-n-
+-
+-|- -I-t-e-m- -|- -C-o-s-t- -(-U-S-D-)- -|-
+-|-------------|-----------------------|-
+-|- -W-e-s-t- -L-a-k-e- -(-o-n- -f-o-o-t-)- -|- -F-r-e-e- -|-
+-|- -B-o-a-t- -o-n- -W-e-s-t- -L-a-k-e- -|- -$-5- -|-
+-|- -L-o-n-g-j-i-n-g- -t-e-a- -t-a-s-t-i-n-g- -|- -F-r-e-e- -(-w-i-t-h- -p-u-r-c-h-a-s-e-)- -|-
+-|- -5-0-g- -a-u-t-h-e-n-t-i-c- -L-o-n-g-j-i-n-g- -t-e-a- -|- -$-1-5---5-0- -|-
+-|- -L-u-n-c-h- -f-o-r- -t-w-o- -|- -$-1-5---2-5- -|-
+-|- -B-u-d-g-e-t- -h-o-t-e-l- -(-n-i-g-h-t-)- -|- -$-3-0---5-0- -|-
+-|- -M-i-d---r-a-n-g-e- -h-o-t-e-l- -|- -$-8-0---1-2-0- -|-
+-
+-------
+-
+-#-#- -W-h-a-t- -t-o- -B-u-y- -i-n- -H-a-n-g-z-h-o-u-
+-
+-|- -I-t-e-m- -|- -W-h-e-r-e- -|- -P-r-i-c-e- -G-u-i-d-e- -|-
+-|-------------|---------------|-------------------------|-
+-|- -L-o-n-g-j-i-n-g- -T-e-a- -|- -L-o-n-g-j-i-n-g- -V-i-l-l-a-g-e- -|- -$-1-5---8-0-/-5-0-g- -|-
+-|- -S-i-l-k- -p-r-o-d-u-c-t-s- -|- -H-e-p-i- -R-o-a-d- -s-h-o-p-s- -|- -$-1-0---5-0- -|-
+-|- -W-a-n-g- -X-i-a-n- -N-o-o-d-l-e-s- -(-)- -|- -S-u-p-e-r-m-a-r-k-e-t- -|- -$-1- - -y-e-s-,- -i-n-s-t-a-n-t- -n-o-o-d-l-e-s- -m-a-k-e- -a- -g-o-o-d- -s-o-u-v-e-n-i-r- -|-
+-|- -W-e-s-t- -L-a-k-e- -L-o-t-u-s- -A-r-t- -|- -O-l-d- -S-t-r-e-e-t- -|- -$-5---2-0- -|-
+-
+-------
+-
+-#-#- -B-o-t-t-o-m- -L-i-n-e-
+-
+-H-a-n-g-z-h-o-u- -i-s- -C-h-i-n-a-'-s- -m-o-s-t- -l-i-v-a-b-l-e- -c-i-t-y- - -c-l-e-a-n-,- -b-e-a-u-t-i-f-u-l-,- -w-e-l-l---o-r-g-a-n-i-z-e-d-,- -a-n-d- -g-e-n-u-i-n-e-l-y- -r-e-l-a-x-i-n-g-.- -I-t-'-s- -t-h-e- -p-e-r-f-e-c-t- -2---3- -d-a-y- -e-s-c-a-p-e- -f-r-o-m- -t-h-e- -c-h-a-o-s- -o-f- -b-i-g-g-e-r- -c-i-t-i-e-s-.- -T-h-e- -G-2-0- -u-p-g-r-a-d-e-s- -m-e-a-n- -t-h-e- -i-n-f-r-a-s-t-r-u-c-t-u-r-e- -i-s- -e-x-c-e-l-l-e-n-t-,- -a-n-d- -u-n-l-i-k-e- -s-o-m-e- -"-b-e-a-u-t-i-f-u-l-"- -C-h-i-n-e-s-e- -c-i-t-i-e-s- -t-h-a-t- -a-r-e- -o-n-l-y- -b-e-a-u-t-i-f-u-l- -i-n- -p-h-o-t-o-s-,- -H-a-n-g-z-h-o-u- -i-s- -a-c-t-u-a-l-l-y- -p-l-e-a-s-a-n-t- -t-o- -w-a-l-k- -a-r-o-u-n-d- -i-n- -r-e-a-l- -l-i-f-e-.-
+-
+-*-*-C-o-m-e- -f-o-r- -t-h-e- -t-e-a-,- -s-t-a-y- -f-o-r- -t-h-e- -l-a-k-e-,- -l-e-a-v-e- -w-i-t-h- -a- -f-u-l-l- -b-e-l-l-y- -a-n-d- -s-o-m-e- -v-e-r-y- -g-o-o-d- -g-r-e-e-n- -t-e-a-.-*-*-
+-
+-------
+-
+-*-L-a-s-t- -u-p-d-a-t-e-d-:- -M-a-y- -2-0-2-6- -|- -J-o-r-a-n-*-
+-

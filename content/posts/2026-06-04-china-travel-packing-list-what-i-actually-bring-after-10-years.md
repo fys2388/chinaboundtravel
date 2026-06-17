@@ -1,67 +1,68 @@
-??????---
-title: "China Travel Packing List: What I Actually Bring After 10 Years of Visiting"
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-travel-packing-list-what-i-actually-bring-after-10-years.jpg"
-date: "2026-06-04T10:00:00+08:00"
-lastmod: "2026-06-04T10:00:00+08:00"
-description: "After visiting China over 50 times in the past decade, here's my definitive packing list for travelers heading to China in 2026."
-summary: "The ultimate China packing guide based on 10 years of personal experience traveling across the country."
-tags: ["China Travel", "Packing List", "Travel Tips", "China Essentials"]
-categories: ["China"]
-geo: "US"
-draft: "false"
-author: "Joran"
-slug: "china-travel-packing-list-what-i-actually-bring-after-10-years"
-canonicalURL: "https://chinaboundtravel.com/posts/china-travel-packing-list-what-i-actually-bring-after-10-years/"
-ShowToc: true
-TocOpen: false
-weight: 1
----
-
-## My China Packing List: 10 Years of Lessons Learned
-
-As someone who's been living in China for over a decade and has traveled to every province, I've refined my packing list to absolute essentials. Let me share what I actually pack when heading out on another China adventure.
-
-### Documents & Digital
-
-- **Passport + visa** - Obviously essential. Keep a digital copy in your email too.
-- **VPN** - A must for staying connected. I recommend keeping it on your phone and laptop.
-- **Offline maps** - Google Maps doesn't work in China. Download Baidu Maps or Amap offline.
-- **Translation app** - Google Translate with offline language packs is a lifesaver.
-
-### Electronics
-
-- **Universal adapter** - China uses Type A, C, and I plugs.
-- **Power bank** - At least 20,000 mAh. Power outlets can be scarce in public spaces.
-- **Phone charger** - Bring an extra cable, they seem to disappear easily.
-
-### Clothing
-
-- **Comfortable walking shoes** - You'll do more walking than you think.
-- **Layers** - Air conditioning can be freezing in summer, while winters get very cold in northern China.
-- **Quick-dry clothes** - Hand washing is common, and clothes dry faster.
-- **Swimsuit** - Many hotels have pools, even in winter.
-
-### Health & Toiletries
-
-- **Medications** - Bring enough for your trip plus extras.
-- **Face masks** - Still widely used in public transport during flu season.
-- **Hand sanitizer** - Always handy when eating street food.
-
-### Money & Payments
-
-- **Cash** - Small bills are essential for taxis, markets, and small shops.
-- **UnionPay card** - Most places accept UnionPay, but foreign cards work too.
-- **Alipay/WeChat Pay setup** - If you can, set these up before arriving.
-
-### Miscellaneous
-
-- **Reusable water bottle** - Tap water isn't drinkable, but bottled water is cheap.
-- **Snacks** - For long train rides or bus trips.
-- **Notebook and pen** - Handy for notes or filling out forms.
-
-## Final Tips
-
-Pack light - you can buy most things in China. Focus on the essentials and enjoy your trip!
-
-*Joran, California native living in Chengdu since 2016*
+-------
+-t-i-t-l-e-:- -"-C-h-i-n-a- -T-r-a-v-e-l- -P-a-c-k-i-n-g- -L-i-s-t-:- -W-h-a-t- -I- -A-c-t-u-a-l-l-y- -B-r-i-n-g- -A-f-t-e-r- -1-0- -Y-e-a-r-s- -o-f- -V-i-s-i-t-i-n-g-"-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-g-e-n-e-r-a-l-/-c-h-i-n-a---t-r-a-v-e-l---p-a-c-k-i-n-g---l-i-s-t---w-h-a-t---i---a-c-t-u-a-l-l-y---b-r-i-n-g---a-f-t-e-r---1-0---y-e-a-r-s-.-j-p-g-"-
+-d-a-t-e-:- -"-2-0-2-6---0-6---0-4-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-l-a-s-t-m-o-d-:- -"-2-0-2-6---0-6---0-4-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-d-e-s-c-r-i-p-t-i-o-n-:- -"-A-f-t-e-r- -v-i-s-i-t-i-n-g- -C-h-i-n-a- -o-v-e-r- -5-0- -t-i-m-e-s- -i-n- -t-h-e- -p-a-s-t- -d-e-c-a-d-e-,- -h-e-r-e-'-s- -m-y- -d-e-f-i-n-i-t-i-v-e- -p-a-c-k-i-n-g- -l-i-s-t- -f-o-r- -t-r-a-v-e-l-e-r-s- -h-e-a-d-i-n-g- -t-o- -C-h-i-n-a- -i-n- -2-0-2-6-.-"-
+-s-u-m-m-a-r-y-:- -"-T-h-e- -u-l-t-i-m-a-t-e- -C-h-i-n-a- -p-a-c-k-i-n-g- -g-u-i-d-e- -b-a-s-e-d- -o-n- -1-0- -y-e-a-r-s- -o-f- -p-e-r-s-o-n-a-l- -e-x-p-e-r-i-e-n-c-e- -t-r-a-v-e-l-i-n-g- -a-c-r-o-s-s- -t-h-e- -c-o-u-n-t-r-y-.-"-
+-t-a-g-s-:- -[-"-C-h-i-n-a- -T-r-a-v-e-l-"-,- -"-P-a-c-k-i-n-g- -L-i-s-t-"-,- -"-T-r-a-v-e-l- -T-i-p-s-"-,- -"-C-h-i-n-a- -E-s-s-e-n-t-i-a-l-s-"-]-
+-c-a-t-e-g-o-r-i-e-s-:- -[-"-C-h-i-n-a-"-]-
+-g-e-o-:- -"-U-S-"-
+-d-r-a-f-t-:- -"-f-a-l-s-e-"-
+-a-u-t-h-o-r-:- -"-J-o-r-a-n-"-
+-s-l-u-g-:- -"-c-h-i-n-a---t-r-a-v-e-l---p-a-c-k-i-n-g---l-i-s-t---w-h-a-t---i---a-c-t-u-a-l-l-y---b-r-i-n-g---a-f-t-e-r---1-0---y-e-a-r-s-"-
+-c-a-n-o-n-i-c-a-l-U-R-L-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-p-o-s-t-s-/-c-h-i-n-a---t-r-a-v-e-l---p-a-c-k-i-n-g---l-i-s-t---w-h-a-t---i---a-c-t-u-a-l-l-y---b-r-i-n-g---a-f-t-e-r---1-0---y-e-a-r-s-/-"-
+-S-h-o-w-T-o-c-:- -t-r-u-e-
+-T-o-c-O-p-e-n-:- -f-a-l-s-e-
+-w-e-i-g-h-t-:- -1-
+-------
+-
+-#-#- -M-y- -C-h-i-n-a- -P-a-c-k-i-n-g- -L-i-s-t-:- -1-0- -Y-e-a-r-s- -o-f- -L-e-s-s-o-n-s- -L-e-a-r-n-e-d-
+-
+-A-s- -s-o-m-e-o-n-e- -w-h-o-'-s- -b-e-e-n- -l-i-v-i-n-g- -i-n- -C-h-i-n-a- -f-o-r- -o-v-e-r- -a- -d-e-c-a-d-e- -a-n-d- -h-a-s- -t-r-a-v-e-l-e-d- -t-o- -e-v-e-r-y- -p-r-o-v-i-n-c-e-,- -I-'-v-e- -r-e-f-i-n-e-d- -m-y- -p-a-c-k-i-n-g- -l-i-s-t- -t-o- -a-b-s-o-l-u-t-e- -e-s-s-e-n-t-i-a-l-s-.- -L-e-t- -m-e- -s-h-a-r-e- -w-h-a-t- -I- -a-c-t-u-a-l-l-y- -p-a-c-k- -w-h-e-n- -h-e-a-d-i-n-g- -o-u-t- -o-n- -a-n-o-t-h-e-r- -C-h-i-n-a- -a-d-v-e-n-t-u-r-e-.-
+-
+-#-#-#- -D-o-c-u-m-e-n-t-s- -&- -D-i-g-i-t-a-l-
+-
+--- -*-*-P-a-s-s-p-o-r-t- -+- -v-i-s-a-*-*- --- -O-b-v-i-o-u-s-l-y- -e-s-s-e-n-t-i-a-l-.- -K-e-e-p- -a- -d-i-g-i-t-a-l- -c-o-p-y- -i-n- -y-o-u-r- -e-m-a-i-l- -t-o-o-.-
+--- -*-*-V-P-N-*-*- --- -A- -m-u-s-t- -f-o-r- -s-t-a-y-i-n-g- -c-o-n-n-e-c-t-e-d-.- -I- -r-e-c-o-m-m-e-n-d- -k-e-e-p-i-n-g- -i-t- -o-n- -y-o-u-r- -p-h-o-n-e- -a-n-d- -l-a-p-t-o-p-.-
+--- -*-*-O-f-f-l-i-n-e- -m-a-p-s-*-*- --- -G-o-o-g-l-e- -M-a-p-s- -d-o-e-s-n-'-t- -w-o-r-k- -i-n- -C-h-i-n-a-.- -D-o-w-n-l-o-a-d- -B-a-i-d-u- -M-a-p-s- -o-r- -A-m-a-p- -o-f-f-l-i-n-e-.-
+--- -*-*-T-r-a-n-s-l-a-t-i-o-n- -a-p-p-*-*- --- -G-o-o-g-l-e- -T-r-a-n-s-l-a-t-e- -w-i-t-h- -o-f-f-l-i-n-e- -l-a-n-g-u-a-g-e- -p-a-c-k-s- -i-s- -a- -l-i-f-e-s-a-v-e-r-.-
+-
+-#-#-#- -E-l-e-c-t-r-o-n-i-c-s-
+-
+--- -*-*-U-n-i-v-e-r-s-a-l- -a-d-a-p-t-e-r-*-*- --- -C-h-i-n-a- -u-s-e-s- -T-y-p-e- -A-,- -C-,- -a-n-d- -I- -p-l-u-g-s-.-
+--- -*-*-P-o-w-e-r- -b-a-n-k-*-*- --- -A-t- -l-e-a-s-t- -2-0-,-0-0-0- -m-A-h-.- -P-o-w-e-r- -o-u-t-l-e-t-s- -c-a-n- -b-e- -s-c-a-r-c-e- -i-n- -p-u-b-l-i-c- -s-p-a-c-e-s-.-
+--- -*-*-P-h-o-n-e- -c-h-a-r-g-e-r-*-*- --- -B-r-i-n-g- -a-n- -e-x-t-r-a- -c-a-b-l-e-,- -t-h-e-y- -s-e-e-m- -t-o- -d-i-s-a-p-p-e-a-r- -e-a-s-i-l-y-.-
+-
+-#-#-#- -C-l-o-t-h-i-n-g-
+-
+--- -*-*-C-o-m-f-o-r-t-a-b-l-e- -w-a-l-k-i-n-g- -s-h-o-e-s-*-*- --- -Y-o-u-'-l-l- -d-o- -m-o-r-e- -w-a-l-k-i-n-g- -t-h-a-n- -y-o-u- -t-h-i-n-k-.-
+--- -*-*-L-a-y-e-r-s-*-*- --- -A-i-r- -c-o-n-d-i-t-i-o-n-i-n-g- -c-a-n- -b-e- -f-r-e-e-z-i-n-g- -i-n- -s-u-m-m-e-r-,- -w-h-i-l-e- -w-i-n-t-e-r-s- -g-e-t- -v-e-r-y- -c-o-l-d- -i-n- -n-o-r-t-h-e-r-n- -C-h-i-n-a-.-
+--- -*-*-Q-u-i-c-k---d-r-y- -c-l-o-t-h-e-s-*-*- --- -H-a-n-d- -w-a-s-h-i-n-g- -i-s- -c-o-m-m-o-n-,- -a-n-d- -c-l-o-t-h-e-s- -d-r-y- -f-a-s-t-e-r-.-
+--- -*-*-S-w-i-m-s-u-i-t-*-*- --- -M-a-n-y- -h-o-t-e-l-s- -h-a-v-e- -p-o-o-l-s-,- -e-v-e-n- -i-n- -w-i-n-t-e-r-.-
+-
+-#-#-#- -H-e-a-l-t-h- -&- -T-o-i-l-e-t-r-i-e-s-
+-
+--- -*-*-M-e-d-i-c-a-t-i-o-n-s-*-*- --- -B-r-i-n-g- -e-n-o-u-g-h- -f-o-r- -y-o-u-r- -t-r-i-p- -p-l-u-s- -e-x-t-r-a-s-.-
+--- -*-*-F-a-c-e- -m-a-s-k-s-*-*- --- -S-t-i-l-l- -w-i-d-e-l-y- -u-s-e-d- -i-n- -p-u-b-l-i-c- -t-r-a-n-s-p-o-r-t- -d-u-r-i-n-g- -f-l-u- -s-e-a-s-o-n-.-
+--- -*-*-H-a-n-d- -s-a-n-i-t-i-z-e-r-*-*- --- -A-l-w-a-y-s- -h-a-n-d-y- -w-h-e-n- -e-a-t-i-n-g- -s-t-r-e-e-t- -f-o-o-d-.-
+-
+-#-#-#- -M-o-n-e-y- -&- -P-a-y-m-e-n-t-s-
+-
+--- -*-*-C-a-s-h-*-*- --- -S-m-a-l-l- -b-i-l-l-s- -a-r-e- -e-s-s-e-n-t-i-a-l- -f-o-r- -t-a-x-i-s-,- -m-a-r-k-e-t-s-,- -a-n-d- -s-m-a-l-l- -s-h-o-p-s-.-
+--- -*-*-U-n-i-o-n-P-a-y- -c-a-r-d-*-*- --- -M-o-s-t- -p-l-a-c-e-s- -a-c-c-e-p-t- -U-n-i-o-n-P-a-y-,- -b-u-t- -f-o-r-e-i-g-n- -c-a-r-d-s- -w-o-r-k- -t-o-o-.-
+--- -*-*-A-l-i-p-a-y-/-W-e-C-h-a-t- -P-a-y- -s-e-t-u-p-*-*- --- -I-f- -y-o-u- -c-a-n-,- -s-e-t- -t-h-e-s-e- -u-p- -b-e-f-o-r-e- -a-r-r-i-v-i-n-g-.-
+-
+-#-#-#- -M-i-s-c-e-l-l-a-n-e-o-u-s-
+-
+--- -*-*-R-e-u-s-a-b-l-e- -w-a-t-e-r- -b-o-t-t-l-e-*-*- --- -T-a-p- -w-a-t-e-r- -i-s-n-'-t- -d-r-i-n-k-a-b-l-e-,- -b-u-t- -b-o-t-t-l-e-d- -w-a-t-e-r- -i-s- -c-h-e-a-p-.-
+--- -*-*-S-n-a-c-k-s-*-*- --- -F-o-r- -l-o-n-g- -t-r-a-i-n- -r-i-d-e-s- -o-r- -b-u-s- -t-r-i-p-s-.-
+--- -*-*-N-o-t-e-b-o-o-k- -a-n-d- -p-e-n-*-*- --- -H-a-n-d-y- -f-o-r- -n-o-t-e-s- -o-r- -f-i-l-l-i-n-g- -o-u-t- -f-o-r-m-s-.-
+-
+-#-#- -F-i-n-a-l- -T-i-p-s-
+-
+-P-a-c-k- -l-i-g-h-t- --- -y-o-u- -c-a-n- -b-u-y- -m-o-s-t- -t-h-i-n-g-s- -i-n- -C-h-i-n-a-.- -F-o-c-u-s- -o-n- -t-h-e- -e-s-s-e-n-t-i-a-l-s- -a-n-d- -e-n-j-o-y- -y-o-u-r- -t-r-i-p-!-
+-
+-*-J-o-r-a-n-,- -C-a-l-i-f-o-r-n-i-a- -n-a-t-i-v-e- -l-i-v-i-n-g- -i-n- -C-h-e-n-g-d-u- -s-i-n-c-e- -2-0-1-6-*-
+-

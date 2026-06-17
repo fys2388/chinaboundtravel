@@ -1,53 +1,54 @@
-??????---
-title: Welcome to ChinaBound Travel Blog
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/hello-world.jpg"
-date: '2026-05-22T10:00:00+08:00'
-draft: false
-tags:
-- China Travel
-- Travel Tips
-categories:
-- China Travel Guide
-summary: Welcome to ChinaBound Travel Blog  When I first landed in Chengdu in 2021,
-  I thought I had it all figured out. Six years, 32 cities, and enough digital disaster...
----
-
-# Welcome to ChinaBound Travel Blog
-
-When I first landed in Chengdu in 2021, I thought I had it all figured out. Six years, 32 cities, and enough digital disasters to fill a small novel later, I'm here to save you from making the same mistakes I did.
-
-## Why ChinaBound?
-
-Look, I'm just an American guy who married into a Chengdu family. My wife's relatives still laugh about the time I tried to pay for hotpot with a crumpled $20 bill. That's the kind of stuff you learn the hard wayand that's exactly why I started this blog.
-
-### What You'll Actually Find Here
-
-- **Visa Guides**: Not the generic "apply early" advice. I'll walk you through the L-visa vs. Q-visa nightmare, including the time I showed up at the consulate without a photocopy of my marriage certificate.
-- **Payment Tips**: Yes, Alipay and WeChat Pay work. But do you know how to link a foreign card without getting locked out for 72 hours? I do. Because I did it. Twice.
-- **City Guides**: I've been to Beijing, Shanghai, Xi'an, and more. But my real expertise? Chengdu. I can tell you which hotpot spots accept foreign cards, which metro exits have working escalators, and which street vendors will let you scan their QR code without a Chinese phone number.
-- **Travel Stories**: Like the time I booked a hotel through Klook and ended up in a "business suite" that was literally a closet with a bed. Or when I tried to rent a car in Yunnan and discovered my California license meant nothing without an International Driving Permit.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-## Start Exploring (Without the Headaches)
-
-Here are the posts that'll actually help you:
-
-1. [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
-2. [How to Use Alipay & WeChat Pay in China](/posts/alipay-wechat-pay-foreigners-guide/)
-3. [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/)
-
-> **Stay Connected:** Need reliable internet in China? Get a VPN that works even in remote areas. (#TP_VPN_PLACEHOLDER#)
-
-
-
-And if you're wondering about eSIMs, hotel recommendations, or why you should never trust a "free walking tour" in ShanghaiI've got you covered.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-Trust me, I learned this the hard way so you don't have to.
+-------
+-t-i-t-l-e-:- -W-e-l-c-o-m-e- -t-o- -C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -B-l-o-g-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-g-e-n-e-r-a-l-/-h-e-l-l-o---w-o-r-l-d-.-j-p-g-"-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-2-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-d-r-a-f-t-:- -f-a-l-s-e-
+-t-a-g-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l-
+--- -T-r-a-v-e-l- -T-i-p-s-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l- -G-u-i-d-e-
+-s-u-m-m-a-r-y-:- -W-e-l-c-o-m-e- -t-o- -C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -B-l-o-g- - -W-h-e-n- -I- -f-i-r-s-t- -l-a-n-d-e-d- -i-n- -C-h-e-n-g-d-u- -i-n- -2-0-2-1-,-
+- - -I- -t-h-o-u-g-h-t- -I- -h-a-d- -i-t- -a-l-l- -f-i-g-u-r-e-d- -o-u-t-.- -S-i-x- -y-e-a-r-s-,- -3-2- -c-i-t-i-e-s-,- -a-n-d- -e-n-o-u-g-h- -d-i-g-i-t-a-l- -d-i-s-a-s-t-e-r-.-.-.-
+-------
+-
+-#- -W-e-l-c-o-m-e- -t-o- -C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -B-l-o-g-
+-
+-W-h-e-n- -I- -f-i-r-s-t- -l-a-n-d-e-d- -i-n- -C-h-e-n-g-d-u- -i-n- -2-0-2-1-,- -I- -t-h-o-u-g-h-t- -I- -h-a-d- -i-t- -a-l-l- -f-i-g-u-r-e-d- -o-u-t-.- -S-i-x- -y-e-a-r-s-,- -3-2- -c-i-t-i-e-s-,- -a-n-d- -e-n-o-u-g-h- -d-i-g-i-t-a-l- -d-i-s-a-s-t-e-r-s- -t-o- -f-i-l-l- -a- -s-m-a-l-l- -n-o-v-e-l- -l-a-t-e-r-,- -I-'-m- -h-e-r-e- -t-o- -s-a-v-e- -y-o-u- -f-r-o-m- -m-a-k-i-n-g- -t-h-e- -s-a-m-e- -m-i-s-t-a-k-e-s- -I- -d-i-d-.-
+-
+-#-#- -W-h-y- -C-h-i-n-a-B-o-u-n-d-
+-
+-L-o-o-k-,- -I-'-m- -j-u-s-t- -a-n- -A-m-e-r-i-c-a-n- -g-u-y- -w-h-o- -m-a-r-r-i-e-d- -i-n-t-o- -a- -C-h-e-n-g-d-u- -f-a-m-i-l-y-.- -M-y- -w-i-f-e-'-s- -r-e-l-a-t-i-v-e-s- -s-t-i-l-l- -l-a-u-g-h- -a-b-o-u-t- -t-h-e- -t-i-m-e- -I- -t-r-i-e-d- -t-o- -p-a-y- -f-o-r- -h-o-t-p-o-t- -w-i-t-h- -a- -c-r-u-m-p-l-e-d- -$-2-0- -b-i-l-l-.- -T-h-a-t-'-s- -t-h-e- -k-i-n-d- -o-f- -s-t-u-f-f- -y-o-u- -l-e-a-r-n- -t-h-e- -h-a-r-d- -w-a-y-a-n-d- -t-h-a-t-'-s- -e-x-a-c-t-l-y- -w-h-y- -I- -s-t-a-r-t-e-d- -t-h-i-s- -b-l-o-g-.-
+-
+-#-#-#- -W-h-a-t- -Y-o-u-'-l-l- -A-c-t-u-a-l-l-y- -F-i-n-d- -H-e-r-e-
+-
+--- -*-*-V-i-s-a- -G-u-i-d-e-s-*-*-:- -N-o-t- -t-h-e- -g-e-n-e-r-i-c- -"-a-p-p-l-y- -e-a-r-l-y-"- -a-d-v-i-c-e-.- -I-'-l-l- -w-a-l-k- -y-o-u- -t-h-r-o-u-g-h- -t-h-e- -L---v-i-s-a- -v-s-.- -Q---v-i-s-a- -n-i-g-h-t-m-a-r-e-,- -i-n-c-l-u-d-i-n-g- -t-h-e- -t-i-m-e- -I- -s-h-o-w-e-d- -u-p- -a-t- -t-h-e- -c-o-n-s-u-l-a-t-e- -w-i-t-h-o-u-t- -a- -p-h-o-t-o-c-o-p-y- -o-f- -m-y- -m-a-r-r-i-a-g-e- -c-e-r-t-i-f-i-c-a-t-e-.-
+--- -*-*-P-a-y-m-e-n-t- -T-i-p-s-*-*-:- -Y-e-s-,- -A-l-i-p-a-y- -a-n-d- -W-e-C-h-a-t- -P-a-y- -w-o-r-k-.- -B-u-t- -d-o- -y-o-u- -k-n-o-w- -h-o-w- -t-o- -l-i-n-k- -a- -f-o-r-e-i-g-n- -c-a-r-d- -w-i-t-h-o-u-t- -g-e-t-t-i-n-g- -l-o-c-k-e-d- -o-u-t- -f-o-r- -7-2- -h-o-u-r-s- -I- -d-o-.- -B-e-c-a-u-s-e- -I- -d-i-d- -i-t-.- -T-w-i-c-e-.-
+--- -*-*-C-i-t-y- -G-u-i-d-e-s-*-*-:- -I-'-v-e- -b-e-e-n- -t-o- -B-e-i-j-i-n-g-,- -S-h-a-n-g-h-a-i-,- -X-i-'-a-n-,- -a-n-d- -m-o-r-e-.- -B-u-t- -m-y- -r-e-a-l- -e-x-p-e-r-t-i-s-e- -C-h-e-n-g-d-u-.- -I- -c-a-n- -t-e-l-l- -y-o-u- -w-h-i-c-h- -h-o-t-p-o-t- -s-p-o-t-s- -a-c-c-e-p-t- -f-o-r-e-i-g-n- -c-a-r-d-s-,- -w-h-i-c-h- -m-e-t-r-o- -e-x-i-t-s- -h-a-v-e- -w-o-r-k-i-n-g- -e-s-c-a-l-a-t-o-r-s-,- -a-n-d- -w-h-i-c-h- -s-t-r-e-e-t- -v-e-n-d-o-r-s- -w-i-l-l- -l-e-t- -y-o-u- -s-c-a-n- -t-h-e-i-r- -Q-R- -c-o-d-e- -w-i-t-h-o-u-t- -a- -C-h-i-n-e-s-e- -p-h-o-n-e- -n-u-m-b-e-r-.-
+--- -*-*-T-r-a-v-e-l- -S-t-o-r-i-e-s-*-*-:- -L-i-k-e- -t-h-e- -t-i-m-e- -I- -b-o-o-k-e-d- -a- -h-o-t-e-l- -t-h-r-o-u-g-h- -K-l-o-o-k- -a-n-d- -e-n-d-e-d- -u-p- -i-n- -a- -"-b-u-s-i-n-e-s-s- -s-u-i-t-e-"- -t-h-a-t- -w-a-s- -l-i-t-e-r-a-l-l-y- -a- -c-l-o-s-e-t- -w-i-t-h- -a- -b-e-d-.- -O-r- -w-h-e-n- -I- -t-r-i-e-d- -t-o- -r-e-n-t- -a- -c-a-r- -i-n- -Y-u-n-n-a-n- -a-n-d- -d-i-s-c-o-v-e-r-e-d- -m-y- -C-a-l-i-f-o-r-n-i-a- -l-i-c-e-n-s-e- -m-e-a-n-t- -n-o-t-h-i-n-g- -w-i-t-h-o-u-t- -a-n- -I-n-t-e-r-n-a-t-i-o-n-a-l- -D-r-i-v-i-n-g- -P-e-r-m-i-t-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-#-#- -S-t-a-r-t- -E-x-p-l-o-r-i-n-g- -(-W-i-t-h-o-u-t- -t-h-e- -H-e-a-d-a-c-h-e-s-)-
+-
+-H-e-r-e- -a-r-e- -t-h-e- -p-o-s-t-s- -t-h-a-t-'-l-l- -a-c-t-u-a-l-l-y- -h-e-l-p- -y-o-u-:-
+-
+-1-.- -[-1-4-4---H-o-u-r- -V-i-s-a---F-r-e-e- -T-r-a-n-s-i-t- -G-u-i-d-e-]-(-/-p-o-s-t-s-/-1-4-4---h-o-u-r---v-i-s-a---f-r-e-e---t-r-a-n-s-i-t---g-u-i-d-e-/-)-
+-2-.- -[-H-o-w- -t-o- -U-s-e- -A-l-i-p-a-y- -&- -W-e-C-h-a-t- -P-a-y- -i-n- -C-h-i-n-a-]-(-/-p-o-s-t-s-/-a-l-i-p-a-y---w-e-c-h-a-t---p-a-y---f-o-r-e-i-g-n-e-r-s---g-u-i-d-e-/-)-
+-3-.- -[-I-n-t-e-r-n-e-t- -i-n- -C-h-i-n-a-:- -e-S-I-M- -&- -V-P-N- -G-u-i-d-e-]-(-/-p-o-s-t-s-/-i-n-t-e-r-n-e-t---c-o-n-n-e-c-t-i-o-n---c-h-i-n-a---e-s-i-m---v-p-n---g-u-i-d-e-/-)-
+-
+->- -*-*-S-t-a-y- -C-o-n-n-e-c-t-e-d-:-*-*- -N-e-e-d- -r-e-l-i-a-b-l-e- -i-n-t-e-r-n-e-t- -i-n- -C-h-i-n-a- -G-e-t- -a- -V-P-N- -t-h-a-t- -w-o-r-k-s- -e-v-e-n- -i-n- -r-e-m-o-t-e- -a-r-e-a-s-.- -(-#-T-P-_-V-P-N-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-A-n-d- -i-f- -y-o-u-'-r-e- -w-o-n-d-e-r-i-n-g- -a-b-o-u-t- -e-S-I-M-s-,- -h-o-t-e-l- -r-e-c-o-m-m-e-n-d-a-t-i-o-n-s-,- -o-r- -w-h-y- -y-o-u- -s-h-o-u-l-d- -n-e-v-e-r- -t-r-u-s-t- -a- -"-f-r-e-e- -w-a-l-k-i-n-g- -t-o-u-r-"- -i-n- -S-h-a-n-g-h-a-i-I-'-v-e- -g-o-t- -y-o-u- -c-o-v-e-r-e-d-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-T-r-u-s-t- -m-e-,- -I- -l-e-a-r-n-e-d- -t-h-i-s- -t-h-e- -h-a-r-d- -w-a-y- -s-o- -y-o-u- -d-o-n-'-t- -h-a-v-e- -t-o-.-
+-

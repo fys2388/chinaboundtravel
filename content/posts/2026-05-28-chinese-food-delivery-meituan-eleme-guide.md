@@ -1,235 +1,236 @@
-??????---
-title: The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.jpg"
-date: '2026-05-23T10:00:00+08:00'
-draft: false
-tags:
-- China Travel
-- Food & Drink
-- App Guide
-- Daily Life
-- Travel Tips
-categories:
-- China Travel Guide
-summary: I ordered delivery 47 times in my first month in Chengdu. Here's how to use
-  Meituan and Ele.me as a foreigner  including what to actually order, how to pay,
-  and why your delivery person will call you even though you can't understand them.
-description: I ordered delivery 47 times in my first month in Chengdu. Here's how
-  to use Meituan and Ele.me as a foreigner  including what to actually order, how
-  to pay, and why your delivery person will call you even though you can't understand
-  them.
-author: Joran
-params:
-  keywords:
-  - Chinese food
-  - hot pot
-  - Sichuan cuisine
-  - street food
-  - delivery
-  - travel guide
-  faq:
-  - question: Is China safe for foreign tourists?
-    answer: Yes, China is very safe for tourists. Violent crime is rare, and cities
-      are generally safe day and night.
-  - question: What's the best time to visit China?
-    answer: Spring (April-May) and autumn (September-October) offer the best weather,
-      with mild temperatures and fewer crowds.
-  - question: Do I need a VPN for China?
-    answer: Yes, most Western apps and websites are blocked. An eSIM with VPN service
-      is recommended for reliable internet access.
----
-
-
-# The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
-
-## Hey, Joran Here 
-
-In my first month in Chengdu, I ordered food delivery 47 times. I counted. Not because I'm lazy (okay, partly because I'm lazy) but because I was too scared to order in restaurants. My Chinese was "nihao and thank you," and menus were walls of indecipherable characters.
-
-Meituan and Ele.me became my lifeline. Today, I order delivery like a local  and I want you to be able to do the same, even if your Chinese is worse than my martial arts (which, trust me, is saying something).
-
-This guide works whether you're in Beijing, Shanghai, Chengdu, Hangzhou, or any city in China. The apps are the same, the experience is the same.
-
----
-
-## Which App to Use: Meituan vs. Ele.me
-
-| App | Pros | Cons |
-|-----|------|------|
-| **Meituan ()** | More English-friendly, slightly better UX | Sometimes more expensive |
-| **Ele.me ()** | Usually cheaper delivery fees | Less English, better promotions |
-| **Both** | Same restaurants, similar prices | Just use both and compare |
-
-My routine: Open both apps, search the same restaurant, pick the cheaper one. Takes 30 extra seconds, saves $2.
-
-> **Joran's Tip:** Download both from the Chinese App Store or APK. If you can't access Chinese app stores, ask your hotel concierge to help you install one  they'll do it in 2 minutes.
-
----
-
-## How to Set Up (English Guide)
-
-### Step 1: Phone Number
-
-Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. Without a Chinese number, you can't receive the verification code to log in.
-
-### Step 2: Address in Chinese
-
-This is the hard part. Your address needs to be in Chinese characters. Here's how:
-
-1. Open your map app (Amap/ or Apple Maps)
-2. Search for your hotel or apartment
-3. Tap "Share"  copy the address in Chinese
-4. Paste it into Meituan/Ele.me's address field
-
-Or: Ask your hotel concierge/reception to write your address in Chinese on a piece of paper. Take a photo. Show it to delivery people when they call.
-
-### Step 3: Payment
-
-**Alipay and WeChat Pay are the only options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
-
-If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Without these, you're stuck with cash-on-delivery at select restaurants.
-
----
-
-## How to Order: Step by Step
-
-### Finding Food
-
-1. Open the app  location should auto-detect
-2. Search for food type or specific restaurant
-3. Browse the recommendations or use filters (/distance, /rating, /sales volume)
-4. Tap a restaurant  see menu
-
-> **Joran's Tip:** Sort by "" (highest sales volume) not "" (closest distance). A slightly further restaurant with 10,000+ monthly orders is more reliable than the closest one with 50 orders.
-
-### Reading the Menu
-
-Restaurant menus in delivery apps are actually easier than physical menus because:
-- Photos are mandatory
-- Prices are in RMB and clearly displayed
-- Dish descriptions are often in Chinese with occasional English
-
-Common menu sections:
-- ****  Signature dishes
-- ****  Best sellers
-- ****  New items
-- ****  Discounted items (check these first  restaurants put random items on sale)
-- ****  Single person set meals (best value)
-
-### Adding to Cart & Ordering
-
-1. Tap items  add to cart ()
-2. Adjust quantity if needed
-3. Check out ()
-4. Verify delivery address
-5. Add delivery instructions (optional): e.g., "please leave at door" in Chinese: "" (fng mn ku)
-6. Select payment: Alipay or WeChat Pay
-7. Confirm and pay
-
----
-
-## What to Order (For Beginners)
-
-Start with these  easy to order, hard to get wrong:
-
-### Safe Bets
-
-| Dish | Chinese | Why It's Safe |
-|------|---------|--------------|
-| Fried rice |  | Can't be messed up |
-| Braised pork rice bowls |  | Tasty, filling, consistent |
-| Dumplings | / | Universally liked |
-| Dandan noodles |  | Spicy but delicious |
-| Hot pot for one |  | Hot pot is always worth it |
-
-### Dishes to Avoid (At First)
-
-| Dish | Why Avoid |
-|------|-----------|
-| Organ meats () | Some foreigners are not prepared |
-| Whole fish () | Bone issues |
-| Anything marked "" (stinky fermented) | Acquired taste |
-| Spicy intestines () | See above |
-
----
-
-## The Delivery Process: What Happens Next
-
-After you order, here's the timeline:
-
-### 1. Order Confirmed ()
-You get a push notification. The restaurant starts cooking.
-
-### 2. Pickup ()
-A delivery driver accepts the job. You see their name, photo, and phone number.
-
-### 3. Picking Up ()
-The driver has your food. This is usually 15-25 minutes after ordering, depending on distance.
-
-### 4. On the Way ()
-Driver is heading to you. You can track them on the map in real-time.
-
-### 5. The Call (Important!)
-**The delivery person WILL call you when they arrive.** This is normal. They can't find your building, or the gate is locked.
-
-> **Joran's Tip:** Have these phrases ready on your phone in Chinese:
-> - "" (w zi mn ku) = I'm at the door
-> - "" (qng fng mn ku) = Please leave it at the door
-> - "" (w xi li) = I'm coming down
->
-> Show the phrase on your phone screen when you meet them.
-
-### 6. Food Arrives
-Collect your food. Check the bag  if something's wrong, you can request a refund in the app (the process is very foreigner-friendly).
-
----
-
-## Troubleshooting
-
-### "The app won't let me login"
-
-**Fix:** Make sure you're using the correct phone country code (+86 for China). If you're using an international phone number, you might need to switch to a Chinese eSIM number.
-
-### "I can't find my address"
-
-**Fix:** Use your phone's GPS to auto-detect location, then manually correct the building/apartment number. Or show the address on your phone to a taxi driver or hotel staff to get the correct Chinese characters.
-
-### "My food is wrong/missing/terrible"
-
-**Fix:** Meituan and Ele.me both have robust refund processes:
-1. Go to "My Orders" ()
-2. Find the order
-3. Tap "" (apply for after-sales service)
-4. Select the issue (missing item, wrong item, quality problem)
-5. Upload a photo if food quality is the issue
-6. Submit  refund usually processes in 24 hours
-
-### "The delivery person called and I can't understand them"
-
-**Fix:** Just say "" (sho dng = wait a moment) and go meet them. Don't panic. They're just telling you they can't find the entrance.
-
----
-
-## Delivery Fees & Tipping
-
-| Item | Cost |
-|------|------|
-| Delivery fee | $0.50 - $3.00 (varies by distance) |
-| Small order fee | $0.50 - $1.00 (for orders under ~$5) |
-| Packaging fee | Usually included in item price |
-| Tipping | **Not expected**  delivery workers are paid by the app, not tips |
-
-> **Joran's Tip:** Watch for discount promotions. Ele.me frequently offers "15" (first order minus 15 RMB) or "255" (spend 25, get 5 off). These stack with credit card rewards.
-
----
-
-## Bottom Line
-
-Food delivery in China is one of the great modern conveniences of daily life. The apps are fast, the food is good, the prices are cheap, and the system just works. It took me one bad experience (wrong noodles, refunded in 30 seconds) to trust the system.
-
-Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're ready to eat like an emperor from your couch.
-
----
-
-*Last updated: May 2026 | Joran*
+-------
+-t-i-t-l-e-:- -T-h-e- -F-o-r-e-i-g-n-e-r-'-s- -G-u-i-d-e- -t-o- -C-h-i-n-e-s-e- -F-o-o-d- -D-e-l-i-v-e-r-y- -(-M-e-i-t-u-a-n- -&- -E-l-e-.-m-e-)-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-g-e-n-e-r-a-l-/-2-0-2-6---0-5---2-8---c-h-i-n-e-s-e---f-o-o-d---d-e-l-i-v-e-r-y---m-e-i-t-u-a-n---e-l-e-m-e---g-u-i-d-e-.-j-p-g-"-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-3-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-d-r-a-f-t-:- -f-a-l-s-e-
+-t-a-g-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l-
+--- -F-o-o-d- -&- -D-r-i-n-k-
+--- -A-p-p- -G-u-i-d-e-
+--- -D-a-i-l-y- -L-i-f-e-
+--- -T-r-a-v-e-l- -T-i-p-s-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l- -G-u-i-d-e-
+-s-u-m-m-a-r-y-:- -I- -o-r-d-e-r-e-d- -d-e-l-i-v-e-r-y- -4-7- -t-i-m-e-s- -i-n- -m-y- -f-i-r-s-t- -m-o-n-t-h- -i-n- -C-h-e-n-g-d-u-.- -H-e-r-e-'-s- -h-o-w- -t-o- -u-s-e-
+- - -M-e-i-t-u-a-n- -a-n-d- -E-l-e-.-m-e- -a-s- -a- -f-o-r-e-i-g-n-e-r- - -i-n-c-l-u-d-i-n-g- -w-h-a-t- -t-o- -a-c-t-u-a-l-l-y- -o-r-d-e-r-,- -h-o-w- -t-o- -p-a-y-,-
+- - -a-n-d- -w-h-y- -y-o-u-r- -d-e-l-i-v-e-r-y- -p-e-r-s-o-n- -w-i-l-l- -c-a-l-l- -y-o-u- -e-v-e-n- -t-h-o-u-g-h- -y-o-u- -c-a-n-'-t- -u-n-d-e-r-s-t-a-n-d- -t-h-e-m-.-
+-d-e-s-c-r-i-p-t-i-o-n-:- -I- -o-r-d-e-r-e-d- -d-e-l-i-v-e-r-y- -4-7- -t-i-m-e-s- -i-n- -m-y- -f-i-r-s-t- -m-o-n-t-h- -i-n- -C-h-e-n-g-d-u-.- -H-e-r-e-'-s- -h-o-w-
+- - -t-o- -u-s-e- -M-e-i-t-u-a-n- -a-n-d- -E-l-e-.-m-e- -a-s- -a- -f-o-r-e-i-g-n-e-r- - -i-n-c-l-u-d-i-n-g- -w-h-a-t- -t-o- -a-c-t-u-a-l-l-y- -o-r-d-e-r-,- -h-o-w-
+- - -t-o- -p-a-y-,- -a-n-d- -w-h-y- -y-o-u-r- -d-e-l-i-v-e-r-y- -p-e-r-s-o-n- -w-i-l-l- -c-a-l-l- -y-o-u- -e-v-e-n- -t-h-o-u-g-h- -y-o-u- -c-a-n-'-t- -u-n-d-e-r-s-t-a-n-d-
+- - -t-h-e-m-.-
+-a-u-t-h-o-r-:- -J-o-r-a-n-
+-p-a-r-a-m-s-:-
+- - -k-e-y-w-o-r-d-s-:-
+- - --- -C-h-i-n-e-s-e- -f-o-o-d-
+- - --- -h-o-t- -p-o-t-
+- - --- -S-i-c-h-u-a-n- -c-u-i-s-i-n-e-
+- - --- -s-t-r-e-e-t- -f-o-o-d-
+- - --- -d-e-l-i-v-e-r-y-
+- - --- -t-r-a-v-e-l- -g-u-i-d-e-
+- - -f-a-q-:-
+- - --- -q-u-e-s-t-i-o-n-:- -I-s- -C-h-i-n-a- -s-a-f-e- -f-o-r- -f-o-r-e-i-g-n- -t-o-u-r-i-s-t-s-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -C-h-i-n-a- -i-s- -v-e-r-y- -s-a-f-e- -f-o-r- -t-o-u-r-i-s-t-s-.- -V-i-o-l-e-n-t- -c-r-i-m-e- -i-s- -r-a-r-e-,- -a-n-d- -c-i-t-i-e-s-
+- - - - - - -a-r-e- -g-e-n-e-r-a-l-l-y- -s-a-f-e- -d-a-y- -a-n-d- -n-i-g-h-t-.-
+- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t-'-s- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -S-p-r-i-n-g- -(-A-p-r-i-l---M-a-y-)- -a-n-d- -a-u-t-u-m-n- -(-S-e-p-t-e-m-b-e-r---O-c-t-o-b-e-r-)- -o-f-f-e-r- -t-h-e- -b-e-s-t- -w-e-a-t-h-e-r-,-
+- - - - - - -w-i-t-h- -m-i-l-d- -t-e-m-p-e-r-a-t-u-r-e-s- -a-n-d- -f-e-w-e-r- -c-r-o-w-d-s-.-
+- - --- -q-u-e-s-t-i-o-n-:- -D-o- -I- -n-e-e-d- -a- -V-P-N- -f-o-r- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -m-o-s-t- -W-e-s-t-e-r-n- -a-p-p-s- -a-n-d- -w-e-b-s-i-t-e-s- -a-r-e- -b-l-o-c-k-e-d-.- -A-n- -e-S-I-M- -w-i-t-h- -V-P-N- -s-e-r-v-i-c-e-
+- - - - - - -i-s- -r-e-c-o-m-m-e-n-d-e-d- -f-o-r- -r-e-l-i-a-b-l-e- -i-n-t-e-r-n-e-t- -a-c-c-e-s-s-.-
+-------
+-
+-
+-#- -T-h-e- -F-o-r-e-i-g-n-e-r-'-s- -G-u-i-d-e- -t-o- -C-h-i-n-e-s-e- -F-o-o-d- -D-e-l-i-v-e-r-y- -(-M-e-i-t-u-a-n- -&- -E-l-e-.-m-e-)-
+-
+-#-#- -H-e-y-,- -J-o-r-a-n- -H-e-r-e- -
+-
+-I-n- -m-y- -f-i-r-s-t- -m-o-n-t-h- -i-n- -C-h-e-n-g-d-u-,- -I- -o-r-d-e-r-e-d- -f-o-o-d- -d-e-l-i-v-e-r-y- -4-7- -t-i-m-e-s-.- -I- -c-o-u-n-t-e-d-.- -N-o-t- -b-e-c-a-u-s-e- -I-'-m- -l-a-z-y- -(-o-k-a-y-,- -p-a-r-t-l-y- -b-e-c-a-u-s-e- -I-'-m- -l-a-z-y-)- -b-u-t- -b-e-c-a-u-s-e- -I- -w-a-s- -t-o-o- -s-c-a-r-e-d- -t-o- -o-r-d-e-r- -i-n- -r-e-s-t-a-u-r-a-n-t-s-.- -M-y- -C-h-i-n-e-s-e- -w-a-s- -"-n-i-h-a-o- -a-n-d- -t-h-a-n-k- -y-o-u-,-"- -a-n-d- -m-e-n-u-s- -w-e-r-e- -w-a-l-l-s- -o-f- -i-n-d-e-c-i-p-h-e-r-a-b-l-e- -c-h-a-r-a-c-t-e-r-s-.-
+-
+-M-e-i-t-u-a-n- -a-n-d- -E-l-e-.-m-e- -b-e-c-a-m-e- -m-y- -l-i-f-e-l-i-n-e-.- -T-o-d-a-y-,- -I- -o-r-d-e-r- -d-e-l-i-v-e-r-y- -l-i-k-e- -a- -l-o-c-a-l- - -a-n-d- -I- -w-a-n-t- -y-o-u- -t-o- -b-e- -a-b-l-e- -t-o- -d-o- -t-h-e- -s-a-m-e-,- -e-v-e-n- -i-f- -y-o-u-r- -C-h-i-n-e-s-e- -i-s- -w-o-r-s-e- -t-h-a-n- -m-y- -m-a-r-t-i-a-l- -a-r-t-s- -(-w-h-i-c-h-,- -t-r-u-s-t- -m-e-,- -i-s- -s-a-y-i-n-g- -s-o-m-e-t-h-i-n-g-)-.-
+-
+-T-h-i-s- -g-u-i-d-e- -w-o-r-k-s- -w-h-e-t-h-e-r- -y-o-u-'-r-e- -i-n- -B-e-i-j-i-n-g-,- -S-h-a-n-g-h-a-i-,- -C-h-e-n-g-d-u-,- -H-a-n-g-z-h-o-u-,- -o-r- -a-n-y- -c-i-t-y- -i-n- -C-h-i-n-a-.- -T-h-e- -a-p-p-s- -a-r-e- -t-h-e- -s-a-m-e-,- -t-h-e- -e-x-p-e-r-i-e-n-c-e- -i-s- -t-h-e- -s-a-m-e-.-
+-
+-------
+-
+-#-#- -W-h-i-c-h- -A-p-p- -t-o- -U-s-e-:- -M-e-i-t-u-a-n- -v-s-.- -E-l-e-.-m-e-
+-
+-|- -A-p-p- -|- -P-r-o-s- -|- -C-o-n-s- -|-
+-|-----------|-------------|-------------|-
+-|- -*-*-M-e-i-t-u-a-n- -(-)-*-*- -|- -M-o-r-e- -E-n-g-l-i-s-h---f-r-i-e-n-d-l-y-,- -s-l-i-g-h-t-l-y- -b-e-t-t-e-r- -U-X- -|- -S-o-m-e-t-i-m-e-s- -m-o-r-e- -e-x-p-e-n-s-i-v-e- -|-
+-|- -*-*-E-l-e-.-m-e- -(-)-*-*- -|- -U-s-u-a-l-l-y- -c-h-e-a-p-e-r- -d-e-l-i-v-e-r-y- -f-e-e-s- -|- -L-e-s-s- -E-n-g-l-i-s-h-,- -b-e-t-t-e-r- -p-r-o-m-o-t-i-o-n-s- -|-
+-|- -*-*-B-o-t-h-*-*- -|- -S-a-m-e- -r-e-s-t-a-u-r-a-n-t-s-,- -s-i-m-i-l-a-r- -p-r-i-c-e-s- -|- -J-u-s-t- -u-s-e- -b-o-t-h- -a-n-d- -c-o-m-p-a-r-e- -|-
+-
+-M-y- -r-o-u-t-i-n-e-:- -O-p-e-n- -b-o-t-h- -a-p-p-s-,- -s-e-a-r-c-h- -t-h-e- -s-a-m-e- -r-e-s-t-a-u-r-a-n-t-,- -p-i-c-k- -t-h-e- -c-h-e-a-p-e-r- -o-n-e-.- -T-a-k-e-s- -3-0- -e-x-t-r-a- -s-e-c-o-n-d-s-,- -s-a-v-e-s- -$-2-.-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -D-o-w-n-l-o-a-d- -b-o-t-h- -f-r-o-m- -t-h-e- -C-h-i-n-e-s-e- -A-p-p- -S-t-o-r-e- -o-r- -A-P-K-.- -I-f- -y-o-u- -c-a-n-'-t- -a-c-c-e-s-s- -C-h-i-n-e-s-e- -a-p-p- -s-t-o-r-e-s-,- -a-s-k- -y-o-u-r- -h-o-t-e-l- -c-o-n-c-i-e-r-g-e- -t-o- -h-e-l-p- -y-o-u- -i-n-s-t-a-l-l- -o-n-e- - -t-h-e-y-'-l-l- -d-o- -i-t- -i-n- -2- -m-i-n-u-t-e-s-.-
+-
+-------
+-
+-#-#- -H-o-w- -t-o- -S-e-t- -U-p- -(-E-n-g-l-i-s-h- -G-u-i-d-e-)-
+-
+-#-#-#- -S-t-e-p- -1-:- -P-h-o-n-e- -N-u-m-b-e-r-
+-
+-B-o-t-h- -a-p-p-s- -r-e-q-u-i-r-e- -a- -C-h-i-n-e-s-e- -p-h-o-n-e- -n-u-m-b-e-r- -(-+-8-6-)-.- -I-f- -y-o-u- -h-a-v-e- -a-n- -e-S-I-M- -w-i-t-h- -a- -C-h-i-n-e-s-e- -n-u-m-b-e-r- -(-A-i-r-a-l-o-,- -N-o-m-a-d-,- -o-r- -y-o-u-r- -l-o-c-a-l- -c-a-r-r-i-e-r-'-s- -C-h-i-n-a- -o-p-t-i-o-n-)-,- -t-h-i-s- -w-o-r-k-s-.- -W-i-t-h-o-u-t- -a- -C-h-i-n-e-s-e- -n-u-m-b-e-r-,- -y-o-u- -c-a-n-'-t- -r-e-c-e-i-v-e- -t-h-e- -v-e-r-i-f-i-c-a-t-i-o-n- -c-o-d-e- -t-o- -l-o-g- -i-n-.-
+-
+-#-#-#- -S-t-e-p- -2-:- -A-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e-
+-
+-T-h-i-s- -i-s- -t-h-e- -h-a-r-d- -p-a-r-t-.- -Y-o-u-r- -a-d-d-r-e-s-s- -n-e-e-d-s- -t-o- -b-e- -i-n- -C-h-i-n-e-s-e- -c-h-a-r-a-c-t-e-r-s-.- -H-e-r-e-'-s- -h-o-w-:-
+-
+-1-.- -O-p-e-n- -y-o-u-r- -m-a-p- -a-p-p- -(-A-m-a-p-/- -o-r- -A-p-p-l-e- -M-a-p-s-)-
+-2-.- -S-e-a-r-c-h- -f-o-r- -y-o-u-r- -h-o-t-e-l- -o-r- -a-p-a-r-t-m-e-n-t-
+-3-.- -T-a-p- -"-S-h-a-r-e-"- - -c-o-p-y- -t-h-e- -a-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e-
+-4-.- -P-a-s-t-e- -i-t- -i-n-t-o- -M-e-i-t-u-a-n-/-E-l-e-.-m-e-'-s- -a-d-d-r-e-s-s- -f-i-e-l-d-
+-
+-O-r-:- -A-s-k- -y-o-u-r- -h-o-t-e-l- -c-o-n-c-i-e-r-g-e-/-r-e-c-e-p-t-i-o-n- -t-o- -w-r-i-t-e- -y-o-u-r- -a-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e- -o-n- -a- -p-i-e-c-e- -o-f- -p-a-p-e-r-.- -T-a-k-e- -a- -p-h-o-t-o-.- -S-h-o-w- -i-t- -t-o- -d-e-l-i-v-e-r-y- -p-e-o-p-l-e- -w-h-e-n- -t-h-e-y- -c-a-l-l-.-
+-
+-#-#-#- -S-t-e-p- -3-:- -P-a-y-m-e-n-t-
+-
+-*-*-A-l-i-p-a-y- -a-n-d- -W-e-C-h-a-t- -P-a-y- -a-r-e- -t-h-e- -o-n-l-y- -o-p-t-i-o-n-s-*-*- -f-o-r- -i-n---a-p-p- -p-a-y-m-e-n-t-.- -F-o-r-e-i-g-n- -c-r-e-d-i-t- -c-a-r-d-s- -d-o-n-'-t- -w-o-r-k- -d-i-r-e-c-t-l-y- -o-n- -f-o-o-d- -d-e-l-i-v-e-r-y- -a-p-p-s- -(-t-h-e-y- -w-o-r-k- -o-n- -M-e-i-t-u-a-n-'-s- -t-r-a-v-e-l- -a-n-d- -h-o-t-e-l- -b-o-o-k-i-n-g-,- -b-u-t- -n-o-t- -f-o-o-d- -d-e-l-i-v-e-r-y-)-.-
+-
+-I-f- -y-o-u- -d-o-n-'-t- -h-a-v-e- -A-l-i-p-a-y- -o-r- -W-e-C-h-a-t- -P-a-y- -s-e-t- -u-p- -y-e-t-,- -r-e-a-d- -m-y- -[-A-l-i-p-a-y- -&- -W-e-C-h-a-t- -P-a-y- -G-u-i-d-e-]-(-/-p-o-s-t-s-/-a-l-i-p-a-y---w-e-c-h-a-t---p-a-y---f-o-r-e-i-g-n-e-r-s---g-u-i-d-e-/-)- -f-i-r-s-t-.- -W-i-t-h-o-u-t- -t-h-e-s-e-,- -y-o-u-'-r-e- -s-t-u-c-k- -w-i-t-h- -c-a-s-h---o-n---d-e-l-i-v-e-r-y- -a-t- -s-e-l-e-c-t- -r-e-s-t-a-u-r-a-n-t-s-.-
+-
+-------
+-
+-#-#- -H-o-w- -t-o- -O-r-d-e-r-:- -S-t-e-p- -b-y- -S-t-e-p-
+-
+-#-#-#- -F-i-n-d-i-n-g- -F-o-o-d-
+-
+-1-.- -O-p-e-n- -t-h-e- -a-p-p- - -l-o-c-a-t-i-o-n- -s-h-o-u-l-d- -a-u-t-o---d-e-t-e-c-t-
+-2-.- -S-e-a-r-c-h- -f-o-r- -f-o-o-d- -t-y-p-e- -o-r- -s-p-e-c-i-f-i-c- -r-e-s-t-a-u-r-a-n-t-
+-3-.- -B-r-o-w-s-e- -t-h-e- -r-e-c-o-m-m-e-n-d-a-t-i-o-n-s- -o-r- -u-s-e- -f-i-l-t-e-r-s- -(-/-d-i-s-t-a-n-c-e-,- -/-r-a-t-i-n-g-,- -/-s-a-l-e-s- -v-o-l-u-m-e-)-
+-4-.- -T-a-p- -a- -r-e-s-t-a-u-r-a-n-t- - -s-e-e- -m-e-n-u-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -S-o-r-t- -b-y- -"-"- -(-h-i-g-h-e-s-t- -s-a-l-e-s- -v-o-l-u-m-e-)- -n-o-t- -"-"- -(-c-l-o-s-e-s-t- -d-i-s-t-a-n-c-e-)-.- -A- -s-l-i-g-h-t-l-y- -f-u-r-t-h-e-r- -r-e-s-t-a-u-r-a-n-t- -w-i-t-h- -1-0-,-0-0-0-+- -m-o-n-t-h-l-y- -o-r-d-e-r-s- -i-s- -m-o-r-e- -r-e-l-i-a-b-l-e- -t-h-a-n- -t-h-e- -c-l-o-s-e-s-t- -o-n-e- -w-i-t-h- -5-0- -o-r-d-e-r-s-.-
+-
+-#-#-#- -R-e-a-d-i-n-g- -t-h-e- -M-e-n-u-
+-
+-R-e-s-t-a-u-r-a-n-t- -m-e-n-u-s- -i-n- -d-e-l-i-v-e-r-y- -a-p-p-s- -a-r-e- -a-c-t-u-a-l-l-y- -e-a-s-i-e-r- -t-h-a-n- -p-h-y-s-i-c-a-l- -m-e-n-u-s- -b-e-c-a-u-s-e-:-
+--- -P-h-o-t-o-s- -a-r-e- -m-a-n-d-a-t-o-r-y-
+--- -P-r-i-c-e-s- -a-r-e- -i-n- -R-M-B- -a-n-d- -c-l-e-a-r-l-y- -d-i-s-p-l-a-y-e-d-
+--- -D-i-s-h- -d-e-s-c-r-i-p-t-i-o-n-s- -a-r-e- -o-f-t-e-n- -i-n- -C-h-i-n-e-s-e- -w-i-t-h- -o-c-c-a-s-i-o-n-a-l- -E-n-g-l-i-s-h-
+-
+-C-o-m-m-o-n- -m-e-n-u- -s-e-c-t-i-o-n-s-:-
+--- -*-*-*-*- - -S-i-g-n-a-t-u-r-e- -d-i-s-h-e-s-
+--- -*-*-*-*- - -B-e-s-t- -s-e-l-l-e-r-s-
+--- -*-*-*-*- - -N-e-w- -i-t-e-m-s-
+--- -*-*-*-*- - -D-i-s-c-o-u-n-t-e-d- -i-t-e-m-s- -(-c-h-e-c-k- -t-h-e-s-e- -f-i-r-s-t- - -r-e-s-t-a-u-r-a-n-t-s- -p-u-t- -r-a-n-d-o-m- -i-t-e-m-s- -o-n- -s-a-l-e-)-
+--- -*-*-*-*- - -S-i-n-g-l-e- -p-e-r-s-o-n- -s-e-t- -m-e-a-l-s- -(-b-e-s-t- -v-a-l-u-e-)-
+-
+-#-#-#- -A-d-d-i-n-g- -t-o- -C-a-r-t- -&- -O-r-d-e-r-i-n-g-
+-
+-1-.- -T-a-p- -i-t-e-m-s- - -a-d-d- -t-o- -c-a-r-t- -(-)-
+-2-.- -A-d-j-u-s-t- -q-u-a-n-t-i-t-y- -i-f- -n-e-e-d-e-d-
+-3-.- -C-h-e-c-k- -o-u-t- -(-)-
+-4-.- -V-e-r-i-f-y- -d-e-l-i-v-e-r-y- -a-d-d-r-e-s-s-
+-5-.- -A-d-d- -d-e-l-i-v-e-r-y- -i-n-s-t-r-u-c-t-i-o-n-s- -(-o-p-t-i-o-n-a-l-)-:- -e-.-g-.-,- -"-p-l-e-a-s-e- -l-e-a-v-e- -a-t- -d-o-o-r-"- -i-n- -C-h-i-n-e-s-e-:- -"-"- -(-f-n-g- -m-n- -k-u-)-
+-6-.- -S-e-l-e-c-t- -p-a-y-m-e-n-t-:- -A-l-i-p-a-y- -o-r- -W-e-C-h-a-t- -P-a-y-
+-7-.- -C-o-n-f-i-r-m- -a-n-d- -p-a-y-
+-
+-------
+-
+-#-#- -W-h-a-t- -t-o- -O-r-d-e-r- -(-F-o-r- -B-e-g-i-n-n-e-r-s-)-
+-
+-S-t-a-r-t- -w-i-t-h- -t-h-e-s-e- - -e-a-s-y- -t-o- -o-r-d-e-r-,- -h-a-r-d- -t-o- -g-e-t- -w-r-o-n-g-:-
+-
+-#-#-#- -S-a-f-e- -B-e-t-s-
+-
+-|- -D-i-s-h- -|- -C-h-i-n-e-s-e- -|- -W-h-y- -I-t-'-s- -S-a-f-e- -|-
+-|-------------|-------------------|-----------------------------|-
+-|- -F-r-i-e-d- -r-i-c-e- -|- - -|- -C-a-n-'-t- -b-e- -m-e-s-s-e-d- -u-p- -|-
+-|- -B-r-a-i-s-e-d- -p-o-r-k- -r-i-c-e- -b-o-w-l-s- -|- - -|- -T-a-s-t-y-,- -f-i-l-l-i-n-g-,- -c-o-n-s-i-s-t-e-n-t- -|-
+-|- -D-u-m-p-l-i-n-g-s- -|- -/- -|- -U-n-i-v-e-r-s-a-l-l-y- -l-i-k-e-d- -|-
+-|- -D-a-n-d-a-n- -n-o-o-d-l-e-s- -|- - -|- -S-p-i-c-y- -b-u-t- -d-e-l-i-c-i-o-u-s- -|-
+-|- -H-o-t- -p-o-t- -f-o-r- -o-n-e- -|- - -|- -H-o-t- -p-o-t- -i-s- -a-l-w-a-y-s- -w-o-r-t-h- -i-t- -|-
+-
+-#-#-#- -D-i-s-h-e-s- -t-o- -A-v-o-i-d- -(-A-t- -F-i-r-s-t-)-
+-
+-|- -D-i-s-h- -|- -W-h-y- -A-v-o-i-d- -|-
+-|-------------|-----------------------|-
+-|- -O-r-g-a-n- -m-e-a-t-s- -(-)- -|- -S-o-m-e- -f-o-r-e-i-g-n-e-r-s- -a-r-e- -n-o-t- -p-r-e-p-a-r-e-d- -|-
+-|- -W-h-o-l-e- -f-i-s-h- -(-)- -|- -B-o-n-e- -i-s-s-u-e-s- -|-
+-|- -A-n-y-t-h-i-n-g- -m-a-r-k-e-d- -"-"- -(-s-t-i-n-k-y- -f-e-r-m-e-n-t-e-d-)- -|- -A-c-q-u-i-r-e-d- -t-a-s-t-e- -|-
+-|- -S-p-i-c-y- -i-n-t-e-s-t-i-n-e-s- -(-)- -|- -S-e-e- -a-b-o-v-e- -|-
+-
+-------
+-
+-#-#- -T-h-e- -D-e-l-i-v-e-r-y- -P-r-o-c-e-s-s-:- -W-h-a-t- -H-a-p-p-e-n-s- -N-e-x-t-
+-
+-A-f-t-e-r- -y-o-u- -o-r-d-e-r-,- -h-e-r-e-'-s- -t-h-e- -t-i-m-e-l-i-n-e-:-
+-
+-#-#-#- -1-.- -O-r-d-e-r- -C-o-n-f-i-r-m-e-d- -(-)-
+-Y-o-u- -g-e-t- -a- -p-u-s-h- -n-o-t-i-f-i-c-a-t-i-o-n-.- -T-h-e- -r-e-s-t-a-u-r-a-n-t- -s-t-a-r-t-s- -c-o-o-k-i-n-g-.-
+-
+-#-#-#- -2-.- -P-i-c-k-u-p- -(-)-
+-A- -d-e-l-i-v-e-r-y- -d-r-i-v-e-r- -a-c-c-e-p-t-s- -t-h-e- -j-o-b-.- -Y-o-u- -s-e-e- -t-h-e-i-r- -n-a-m-e-,- -p-h-o-t-o-,- -a-n-d- -p-h-o-n-e- -n-u-m-b-e-r-.-
+-
+-#-#-#- -3-.- -P-i-c-k-i-n-g- -U-p- -(-)-
+-T-h-e- -d-r-i-v-e-r- -h-a-s- -y-o-u-r- -f-o-o-d-.- -T-h-i-s- -i-s- -u-s-u-a-l-l-y- -1-5---2-5- -m-i-n-u-t-e-s- -a-f-t-e-r- -o-r-d-e-r-i-n-g-,- -d-e-p-e-n-d-i-n-g- -o-n- -d-i-s-t-a-n-c-e-.-
+-
+-#-#-#- -4-.- -O-n- -t-h-e- -W-a-y- -(-)-
+-D-r-i-v-e-r- -i-s- -h-e-a-d-i-n-g- -t-o- -y-o-u-.- -Y-o-u- -c-a-n- -t-r-a-c-k- -t-h-e-m- -o-n- -t-h-e- -m-a-p- -i-n- -r-e-a-l---t-i-m-e-.-
+-
+-#-#-#- -5-.- -T-h-e- -C-a-l-l- -(-I-m-p-o-r-t-a-n-t-!-)-
+-*-*-T-h-e- -d-e-l-i-v-e-r-y- -p-e-r-s-o-n- -W-I-L-L- -c-a-l-l- -y-o-u- -w-h-e-n- -t-h-e-y- -a-r-r-i-v-e-.-*-*- -T-h-i-s- -i-s- -n-o-r-m-a-l-.- -T-h-e-y- -c-a-n-'-t- -f-i-n-d- -y-o-u-r- -b-u-i-l-d-i-n-g-,- -o-r- -t-h-e- -g-a-t-e- -i-s- -l-o-c-k-e-d-.-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -H-a-v-e- -t-h-e-s-e- -p-h-r-a-s-e-s- -r-e-a-d-y- -o-n- -y-o-u-r- -p-h-o-n-e- -i-n- -C-h-i-n-e-s-e-:-
+->- --- -"-"- -(-w- -z-i- -m-n- -k-u-)- -=- -I-'-m- -a-t- -t-h-e- -d-o-o-r-
+->- --- -"-"- -(-q-n-g- -f-n-g- -m-n- -k-u-)- -=- -P-l-e-a-s-e- -l-e-a-v-e- -i-t- -a-t- -t-h-e- -d-o-o-r-
+->- --- -"-"- -(-w- -x-i- -l-i-)- -=- -I-'-m- -c-o-m-i-n-g- -d-o-w-n-
+->-
+->- -S-h-o-w- -t-h-e- -p-h-r-a-s-e- -o-n- -y-o-u-r- -p-h-o-n-e- -s-c-r-e-e-n- -w-h-e-n- -y-o-u- -m-e-e-t- -t-h-e-m-.-
+-
+-#-#-#- -6-.- -F-o-o-d- -A-r-r-i-v-e-s-
+-C-o-l-l-e-c-t- -y-o-u-r- -f-o-o-d-.- -C-h-e-c-k- -t-h-e- -b-a-g- - -i-f- -s-o-m-e-t-h-i-n-g-'-s- -w-r-o-n-g-,- -y-o-u- -c-a-n- -r-e-q-u-e-s-t- -a- -r-e-f-u-n-d- -i-n- -t-h-e- -a-p-p- -(-t-h-e- -p-r-o-c-e-s-s- -i-s- -v-e-r-y- -f-o-r-e-i-g-n-e-r---f-r-i-e-n-d-l-y-)-.-
+-
+-------
+-
+-#-#- -T-r-o-u-b-l-e-s-h-o-o-t-i-n-g-
+-
+-#-#-#- -"-T-h-e- -a-p-p- -w-o-n-'-t- -l-e-t- -m-e- -l-o-g-i-n-"-
+-
+-*-*-F-i-x-:-*-*- -M-a-k-e- -s-u-r-e- -y-o-u-'-r-e- -u-s-i-n-g- -t-h-e- -c-o-r-r-e-c-t- -p-h-o-n-e- -c-o-u-n-t-r-y- -c-o-d-e- -(-+-8-6- -f-o-r- -C-h-i-n-a-)-.- -I-f- -y-o-u-'-r-e- -u-s-i-n-g- -a-n- -i-n-t-e-r-n-a-t-i-o-n-a-l- -p-h-o-n-e- -n-u-m-b-e-r-,- -y-o-u- -m-i-g-h-t- -n-e-e-d- -t-o- -s-w-i-t-c-h- -t-o- -a- -C-h-i-n-e-s-e- -e-S-I-M- -n-u-m-b-e-r-.-
+-
+-#-#-#- -"-I- -c-a-n-'-t- -f-i-n-d- -m-y- -a-d-d-r-e-s-s-"-
+-
+-*-*-F-i-x-:-*-*- -U-s-e- -y-o-u-r- -p-h-o-n-e-'-s- -G-P-S- -t-o- -a-u-t-o---d-e-t-e-c-t- -l-o-c-a-t-i-o-n-,- -t-h-e-n- -m-a-n-u-a-l-l-y- -c-o-r-r-e-c-t- -t-h-e- -b-u-i-l-d-i-n-g-/-a-p-a-r-t-m-e-n-t- -n-u-m-b-e-r-.- -O-r- -s-h-o-w- -t-h-e- -a-d-d-r-e-s-s- -o-n- -y-o-u-r- -p-h-o-n-e- -t-o- -a- -t-a-x-i- -d-r-i-v-e-r- -o-r- -h-o-t-e-l- -s-t-a-f-f- -t-o- -g-e-t- -t-h-e- -c-o-r-r-e-c-t- -C-h-i-n-e-s-e- -c-h-a-r-a-c-t-e-r-s-.-
+-
+-#-#-#- -"-M-y- -f-o-o-d- -i-s- -w-r-o-n-g-/-m-i-s-s-i-n-g-/-t-e-r-r-i-b-l-e-"-
+-
+-*-*-F-i-x-:-*-*- -M-e-i-t-u-a-n- -a-n-d- -E-l-e-.-m-e- -b-o-t-h- -h-a-v-e- -r-o-b-u-s-t- -r-e-f-u-n-d- -p-r-o-c-e-s-s-e-s-:-
+-1-.- -G-o- -t-o- -"-M-y- -O-r-d-e-r-s-"- -(-)-
+-2-.- -F-i-n-d- -t-h-e- -o-r-d-e-r-
+-3-.- -T-a-p- -"-"- -(-a-p-p-l-y- -f-o-r- -a-f-t-e-r---s-a-l-e-s- -s-e-r-v-i-c-e-)-
+-4-.- -S-e-l-e-c-t- -t-h-e- -i-s-s-u-e- -(-m-i-s-s-i-n-g- -i-t-e-m-,- -w-r-o-n-g- -i-t-e-m-,- -q-u-a-l-i-t-y- -p-r-o-b-l-e-m-)-
+-5-.- -U-p-l-o-a-d- -a- -p-h-o-t-o- -i-f- -f-o-o-d- -q-u-a-l-i-t-y- -i-s- -t-h-e- -i-s-s-u-e-
+-6-.- -S-u-b-m-i-t- - -r-e-f-u-n-d- -u-s-u-a-l-l-y- -p-r-o-c-e-s-s-e-s- -i-n- -2-4- -h-o-u-r-s-
+-
+-#-#-#- -"-T-h-e- -d-e-l-i-v-e-r-y- -p-e-r-s-o-n- -c-a-l-l-e-d- -a-n-d- -I- -c-a-n-'-t- -u-n-d-e-r-s-t-a-n-d- -t-h-e-m-"-
+-
+-*-*-F-i-x-:-*-*- -J-u-s-t- -s-a-y- -"-"- -(-s-h-o- -d-n-g- -=- -w-a-i-t- -a- -m-o-m-e-n-t-)- -a-n-d- -g-o- -m-e-e-t- -t-h-e-m-.- -D-o-n-'-t- -p-a-n-i-c-.- -T-h-e-y-'-r-e- -j-u-s-t- -t-e-l-l-i-n-g- -y-o-u- -t-h-e-y- -c-a-n-'-t- -f-i-n-d- -t-h-e- -e-n-t-r-a-n-c-e-.-
+-
+-------
+-
+-#-#- -D-e-l-i-v-e-r-y- -F-e-e-s- -&- -T-i-p-p-i-n-g-
+-
+-|- -I-t-e-m- -|- -C-o-s-t- -|-
+-|-------------|-------------|-
+-|- -D-e-l-i-v-e-r-y- -f-e-e- -|- -$-0-.-5-0- --- -$-3-.-0-0- -(-v-a-r-i-e-s- -b-y- -d-i-s-t-a-n-c-e-)- -|-
+-|- -S-m-a-l-l- -o-r-d-e-r- -f-e-e- -|- -$-0-.-5-0- --- -$-1-.-0-0- -(-f-o-r- -o-r-d-e-r-s- -u-n-d-e-r- -~-$-5-)- -|-
+-|- -P-a-c-k-a-g-i-n-g- -f-e-e- -|- -U-s-u-a-l-l-y- -i-n-c-l-u-d-e-d- -i-n- -i-t-e-m- -p-r-i-c-e- -|-
+-|- -T-i-p-p-i-n-g- -|- -*-*-N-o-t- -e-x-p-e-c-t-e-d-*-*- - -d-e-l-i-v-e-r-y- -w-o-r-k-e-r-s- -a-r-e- -p-a-i-d- -b-y- -t-h-e- -a-p-p-,- -n-o-t- -t-i-p-s- -|-
+-
+->- -*-*-J-o-r-a-n-'-s- -T-i-p-:-*-*- -W-a-t-c-h- -f-o-r- -d-i-s-c-o-u-n-t- -p-r-o-m-o-t-i-o-n-s-.- -E-l-e-.-m-e- -f-r-e-q-u-e-n-t-l-y- -o-f-f-e-r-s- -"-1-5-"- -(-f-i-r-s-t- -o-r-d-e-r- -m-i-n-u-s- -1-5- -R-M-B-)- -o-r- -"-2-5-5-"- -(-s-p-e-n-d- -2-5-,- -g-e-t- -5- -o-f-f-)-.- -T-h-e-s-e- -s-t-a-c-k- -w-i-t-h- -c-r-e-d-i-t- -c-a-r-d- -r-e-w-a-r-d-s-.-
+-
+-------
+-
+-#-#- -B-o-t-t-o-m- -L-i-n-e-
+-
+-F-o-o-d- -d-e-l-i-v-e-r-y- -i-n- -C-h-i-n-a- -i-s- -o-n-e- -o-f- -t-h-e- -g-r-e-a-t- -m-o-d-e-r-n- -c-o-n-v-e-n-i-e-n-c-e-s- -o-f- -d-a-i-l-y- -l-i-f-e-.- -T-h-e- -a-p-p-s- -a-r-e- -f-a-s-t-,- -t-h-e- -f-o-o-d- -i-s- -g-o-o-d-,- -t-h-e- -p-r-i-c-e-s- -a-r-e- -c-h-e-a-p-,- -a-n-d- -t-h-e- -s-y-s-t-e-m- -j-u-s-t- -w-o-r-k-s-.- -I-t- -t-o-o-k- -m-e- -o-n-e- -b-a-d- -e-x-p-e-r-i-e-n-c-e- -(-w-r-o-n-g- -n-o-o-d-l-e-s-,- -r-e-f-u-n-d-e-d- -i-n- -3-0- -s-e-c-o-n-d-s-)- -t-o- -t-r-u-s-t- -t-h-e- -s-y-s-t-e-m-.-
+-
+-S-e-t- -u-p- -A-l-i-p-a-y- -o-r- -W-e-C-h-a-t- -P-a-y- -f-i-r-s-t-,- -g-e-t- -a- -C-h-i-n-e-s-e- -n-u-m-b-e-r- -o-r- -e-S-I-M-,- -a-n-d- -y-o-u-'-r-e- -r-e-a-d-y- -t-o- -e-a-t- -l-i-k-e- -a-n- -e-m-p-e-r-o-r- -f-r-o-m- -y-o-u-r- -c-o-u-c-h-.-
+-
+-------
+-
+-*-L-a-s-t- -u-p-d-a-t-e-d-:- -M-a-y- -2-0-2-6- -|- -J-o-r-a-n-*-
+-

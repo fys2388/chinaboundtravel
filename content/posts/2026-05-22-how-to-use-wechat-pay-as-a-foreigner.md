@@ -1,143 +1,144 @@
----
-title: How to Use WeChat Pay as a Foreigner
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"
-date: '2026-05-21T10:00:00+08:00'
-draft: false
-tags:
-- China Travel
-- Travel Tips
-categories:
-- China Travel Guide
-summary: How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When I first
-  landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note acr...
-description: How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)  When
-  I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB
-  note acr...
-author: Joran
-params:
-  keywords:
-  - WeChat Pay
-  - mobile payment
-  - China payment
-  - foreigners
-  - WeChat wallet
-  - digital payment
-  faq:
-  - question: Can foreigners use WeChat Pay in China?
-    answer: Yes, foreigners can use WeChat Pay with a foreign credit card (Visa, Mastercard,
-      etc.) or by opening a Chinese bank account.
-  - question: Is Alipay available for non-Chinese users?
-    answer: Absolutely! Alipay supports foreign credit cards and passport verification
-      for international travelers.
-  - question: What's the best way to pay in China as a foreigner?
-    answer: Set up Alipay or WeChat Pay before your trip. Carry some cash as backup,
-      and get a Chinese bank account if you're staying long-term.
----
-
-
-# How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)
-
-When I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note across the counter, and the owner looked at me like Id just offered him a live chicken. Thats when I learned the first rule of modern China: cash is for tourists who dont know any better. WeChat Pay is the real currency. And if youre a foreigner, the system feels like it was designed to test your patience, your bank account, and your ability to navigate a labyrinth of QR codes. But Ive been there, done that, and Im here to tell you: you can make it work. Heres the no-BS guide to getting WeChat Pay up and running as a foreigner.
-
-## The Setup: Why Your Credit Card Will Hate You
-
-Lets cut to the chase: WeChat Pay is a digital wallet tied to your WeChat account, and for foreigners, the setup process is a mix of Oh, that was easy and Why is this app asking for my passport photo at 2 AM? The first step is downloading WeChat (duh) and creating an account. Use your real namethis isnt the time for a fake alias like Johnny Noodle. Youll need to link a bank card, and heres where the fun begins.
-
-I tried linking my U.S. Chase Visa card the first time. WeChat gave me a cheerful error message that translated roughly to Nice try, but no. Most Chinese bank cards work seamlessly, but foreign cards? Its a gamble. The trick is to use a card from a bank that supports cross-border paymentsthink Visa or Mastercard from major issuers like Citibank, HSBC, or Bank of America. Even then, expect a 3% fee per transaction. Trust me, I learned this the hard way when I bought a $5 bubble tea and got charged an extra $0.15 for the privilege.
-
-The real game-changer? Open a Chinese bank account. It sounds daunting, but its the smoothest path. Visit any major bankICBC, Bank of China, or China Merchants Bankwith your passport and visa. The teller will hand you a debit card in 20 minutes. Link that to WeChat Pay, and youre golden. No fees, no glitches, just pure digital spending power. If youre only in China for two weeks, skip this step and accept the fees. But if youre staying longer, do yourself a favor and get that bank card.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-
-
-## The QR Code Dance: Scanning Like a Local
-
-Once youve got WeChat Pay active, the real world kicks in. Youll see QR codes everywhereon street vendor carts, at the dentists office, even pinned to a grandmas apron selling steamed buns. The etiquette is simple: you scan their code, or they scan yours. But theres a nuance that took me six months to figure out.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-
-
-When I first tried to pay at a night market in Kunming, I fumbled with my phone, opened the Scan function, and the vendora tiny woman with a gold toothjust stared at me. She pointed at her own phone, then at mine. I finally realized: some merchants prefer you to show your payment QR code (the one in your WeChat Pay wallet) so they can scan it. Its faster for them. So, heres the rule: if they have a static QR code on the counter, scan it. If theyre holding their phone out, open your wallet and tap Pay to generate your code. Its like a digital tango, and youre the lead.
-
-Pro tip: Keep your phones screen brightness high. Nothing kills the vibe like a dim screen that wont scan. I once held up my phone for 30 seconds at a convenience store while the clerk sighed, and I felt like Id failed a test. Brightness up, people.
-
-## The Top-Up Trap: When Your Wallet Runs Dry
-
-Heres the scenario: youre at a hotpot joint in Chongqing, the food is spicy enough to make you cry, and the bill comes. You open WeChat Pay, and it says Insufficient balance. Panic sets in. You cant add money from a foreign card directlyWeChat blocks that for most non-Chinese accounts. So what do you do?
-
-Ive been there, sweating over a bowl of tripe. The solution is simple but annoying: ask a Chinese friend to transfer you money via WeChat, then pay them back in cash or via another app. Or, if youre solo, find a convenience store like 7-Eleven or FamilyMart. Many of them let you top up your WeChat wallet with cash at the counter. Hand over 100 RMB, they scan a code, and your balance jumps. Its ancient-tech meets modern-payment, and it works.
-
-Another option: if you have a Chinese bank account linked, you can transfer money from your bank to WeChat instantly. But if youre relying on a foreign card, youre stuck with the friend method. Ive become the unofficial WeChat banker for every tourist I meet. My advice? Keep at least 200 RMB in your wallet at all times. You never know when youll need to bribe a taxi driver or buy a sudden craving for stinky tofu.
-
-## The Security Scare: Dont Panic, Its Just WeChat
-
-Every foreigner Ive met has had that moment: you open WeChat Pay, and a red banner appears: Your account has been temporarily restricted. Your heart drops. You think youve been hacked. The reality is usually boring. WeChats security system flags any unusual activitylike logging in from a new phone, making a large payment, or using the app in a different city. Its their version of Are you a robot?
-
-When this happened to me in Lijiang, I spent an hour panicking before realizing the fix: verify your identity. Open the app, go to Me > Pay > Security and follow the prompts. Youll likely need to upload a photo of your passport again. Yes, the same passport you already uploaded. Its annoying, but it works. Within 10 minutes, my account was back. The key is to have your passport saved as a photo on your phone. Trust me, you dont want to be digging through emails in a Yunnan hostel with spotty Wi-Fi.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-
-
-One more thing: never share your payment QR code publicly. Ive seen scammers in tourist areas print fake QR codes over real ones. Always check the merchants name before confirming payment. If the name is Happy Noodles but the code says VIP888, run.
-
-> **What I Wish I Knew Before**  
-> I wish someone had told me that WeChat Pay isnt just for paymentsits your entire life. Youll use it to split bills, send red envelopes during Chinese New Year, pay utility bills, and even donate to street musicians. The learning curve is steep, but once youre in, youre in. Also, dont forget to set up a payment password thats different from your login password. I didnt do this, and my friend once sent himself 50 RMB while I was in the bathroom. Never again.
-
-## The Final Frontier: WeChat Pay Outside China
-
-Heres a twist: WeChat Pay works in some places outside Chinalike Japan, Thailand, and Singaporebut only if youre paying a Chinese merchant or a store that accepts it. I tried using it at a 7-Eleven in Bangkok, and the cashier stared at my QR code like it was a alien artifact. The reality is that WeChat Pay is a China-first tool. Dont expect it to replace Apple Pay in the U.S. or Europe.
-
-But when it works, its magic. Ive paid for dumplings in Xian, train tickets in Guangzhou, and even a massage in Guilinall with a single scan. The app also lets you send money to other WeChat users instantly, which is great for splitting dinner bills with Chinese friends. Just be ready for the inevitable Why dont you use Alipay? question. The answer: because Im already committed, and I dont need another app draining my phone battery.
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-
-
-
-
-## Jorans Take
-
-Look, WeChat Pay isnt perfect. Its a walled garden that demands your passport, your patience, and your willingness to accept occasional glitches. But once you get past the setup pain, its the most convenient way to exist in China. Ive paid for everything from a $0.50 bag of spicy chips to a $200 hotel room with the same app. Its the digital glue that holds daily life together here. So, bite the bullet, get that Chinese bank card, and embrace the QR code life. Your walletand your sanitywill thank you. And if you ever see me at a hotpot joint in Chengdu, dont ask me to pay with cash. Ive moved on. You should too.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
+-------
+-t-i-t-l-e-:- -H-o-w- -t-o- -U-s-e- -W-e-C-h-a-t- -P-a-y- -a-s- -a- -F-o-r-e-i-g-n-e-r-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-g-e-n-e-r-a-l-/-2-0-2-6---0-5---2-2---h-o-w---t-o---u-s-e---w-e-c-h-a-t---p-a-y---a-s---a---f-o-r-e-i-g-n-e-r-.-j-p-g-"-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-1-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-d-r-a-f-t-:- -f-a-l-s-e-
+-t-a-g-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l-
+--- -T-r-a-v-e-l- -T-i-p-s-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -C-h-i-n-a- -T-r-a-v-e-l- -G-u-i-d-e-
+-s-u-m-m-a-r-y-:- -H-o-w- -t-o- -U-s-e- -W-e-C-h-a-t- -P-a-y- -a-s- -a- -F-o-r-e-i-g-n-e-r- -(-W-i-t-h-o-u-t- -L-o-s-i-n-g- -Y-o-u-r- -M-i-n-d-)- - -W-h-e-n- -I- -f-i-r-s-t-
+- - -l-a-n-d-e-d- -i-n- -C-h-e-n-g-d-u-,- -I- -w-a-l-k-e-d- -i-n-t-o- -a- -t-i-n-y- -n-o-o-d-l-e- -s-h-o-p-,- -s-l-i-d- -a- -c-r-i-s-p- -1-0-0- -R-M-B- -n-o-t-e- -a-c-r-.-.-.-
+-d-e-s-c-r-i-p-t-i-o-n-:- -H-o-w- -t-o- -U-s-e- -W-e-C-h-a-t- -P-a-y- -a-s- -a- -F-o-r-e-i-g-n-e-r- -(-W-i-t-h-o-u-t- -L-o-s-i-n-g- -Y-o-u-r- -M-i-n-d-)- - -W-h-e-n-
+- - -I- -f-i-r-s-t- -l-a-n-d-e-d- -i-n- -C-h-e-n-g-d-u-,- -I- -w-a-l-k-e-d- -i-n-t-o- -a- -t-i-n-y- -n-o-o-d-l-e- -s-h-o-p-,- -s-l-i-d- -a- -c-r-i-s-p- -1-0-0- -R-M-B-
+- - -n-o-t-e- -a-c-r-.-.-.-
+-a-u-t-h-o-r-:- -J-o-r-a-n-
+-p-a-r-a-m-s-:-
+- - -k-e-y-w-o-r-d-s-:-
+- - --- -W-e-C-h-a-t- -P-a-y-
+- - --- -m-o-b-i-l-e- -p-a-y-m-e-n-t-
+- - --- -C-h-i-n-a- -p-a-y-m-e-n-t-
+- - --- -f-o-r-e-i-g-n-e-r-s-
+- - --- -W-e-C-h-a-t- -w-a-l-l-e-t-
+- - --- -d-i-g-i-t-a-l- -p-a-y-m-e-n-t-
+- - -f-a-q-:-
+- - --- -q-u-e-s-t-i-o-n-:- -C-a-n- -f-o-r-e-i-g-n-e-r-s- -u-s-e- -W-e-C-h-a-t- -P-a-y- -i-n- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -f-o-r-e-i-g-n-e-r-s- -c-a-n- -u-s-e- -W-e-C-h-a-t- -P-a-y- -w-i-t-h- -a- -f-o-r-e-i-g-n- -c-r-e-d-i-t- -c-a-r-d- -(-V-i-s-a-,- -M-a-s-t-e-r-c-a-r-d-,-
+- - - - - - -e-t-c-.-)- -o-r- -b-y- -o-p-e-n-i-n-g- -a- -C-h-i-n-e-s-e- -b-a-n-k- -a-c-c-o-u-n-t-.-
+- - --- -q-u-e-s-t-i-o-n-:- -I-s- -A-l-i-p-a-y- -a-v-a-i-l-a-b-l-e- -f-o-r- -n-o-n---C-h-i-n-e-s-e- -u-s-e-r-s-
+- - - - -a-n-s-w-e-r-:- -A-b-s-o-l-u-t-e-l-y-!- -A-l-i-p-a-y- -s-u-p-p-o-r-t-s- -f-o-r-e-i-g-n- -c-r-e-d-i-t- -c-a-r-d-s- -a-n-d- -p-a-s-s-p-o-r-t- -v-e-r-i-f-i-c-a-t-i-o-n-
+- - - - - - -f-o-r- -i-n-t-e-r-n-a-t-i-o-n-a-l- -t-r-a-v-e-l-e-r-s-.-
+- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t-'-s- -t-h-e- -b-e-s-t- -w-a-y- -t-o- -p-a-y- -i-n- -C-h-i-n-a- -a-s- -a- -f-o-r-e-i-g-n-e-r-
+- - - - -a-n-s-w-e-r-:- -S-e-t- -u-p- -A-l-i-p-a-y- -o-r- -W-e-C-h-a-t- -P-a-y- -b-e-f-o-r-e- -y-o-u-r- -t-r-i-p-.- -C-a-r-r-y- -s-o-m-e- -c-a-s-h- -a-s- -b-a-c-k-u-p-,-
+- - - - - - -a-n-d- -g-e-t- -a- -C-h-i-n-e-s-e- -b-a-n-k- -a-c-c-o-u-n-t- -i-f- -y-o-u-'-r-e- -s-t-a-y-i-n-g- -l-o-n-g---t-e-r-m-.-
+-------
+-
+-
+-#- -H-o-w- -t-o- -U-s-e- -W-e-C-h-a-t- -P-a-y- -a-s- -a- -F-o-r-e-i-g-n-e-r- -(-W-i-t-h-o-u-t- -L-o-s-i-n-g- -Y-o-u-r- -M-i-n-d-)-
+-
+-W-h-e-n- -I- -f-i-r-s-t- -l-a-n-d-e-d- -i-n- -C-h-e-n-g-d-u-,- -I- -w-a-l-k-e-d- -i-n-t-o- -a- -t-i-n-y- -n-o-o-d-l-e- -s-h-o-p-,- -s-l-i-d- -a- -c-r-i-s-p- -1-0-0- -R-M-B- -n-o-t-e- -a-c-r-o-s-s- -t-h-e- -c-o-u-n-t-e-r-,- -a-n-d- -t-h-e- -o-w-n-e-r- -l-o-o-k-e-d- -a-t- -m-e- -l-i-k-e- -I-d- -j-u-s-t- -o-f-f-e-r-e-d- -h-i-m- -a- -l-i-v-e- -c-h-i-c-k-e-n-.- -T-h-a-t-s- -w-h-e-n- -I- -l-e-a-r-n-e-d- -t-h-e- -f-i-r-s-t- -r-u-l-e- -o-f- -m-o-d-e-r-n- -C-h-i-n-a-:- -c-a-s-h- -i-s- -f-o-r- -t-o-u-r-i-s-t-s- -w-h-o- -d-o-n-t- -k-n-o-w- -a-n-y- -b-e-t-t-e-r-.- -W-e-C-h-a-t- -P-a-y- -i-s- -t-h-e- -r-e-a-l- -c-u-r-r-e-n-c-y-.- -A-n-d- -i-f- -y-o-u-r-e- -a- -f-o-r-e-i-g-n-e-r-,- -t-h-e- -s-y-s-t-e-m- -f-e-e-l-s- -l-i-k-e- -i-t- -w-a-s- -d-e-s-i-g-n-e-d- -t-o- -t-e-s-t- -y-o-u-r- -p-a-t-i-e-n-c-e-,- -y-o-u-r- -b-a-n-k- -a-c-c-o-u-n-t-,- -a-n-d- -y-o-u-r- -a-b-i-l-i-t-y- -t-o- -n-a-v-i-g-a-t-e- -a- -l-a-b-y-r-i-n-t-h- -o-f- -Q-R- -c-o-d-e-s-.- -B-u-t- -I-v-e- -b-e-e-n- -t-h-e-r-e-,- -d-o-n-e- -t-h-a-t-,- -a-n-d- -I-m- -h-e-r-e- -t-o- -t-e-l-l- -y-o-u-:- -y-o-u- -c-a-n- -m-a-k-e- -i-t- -w-o-r-k-.- -H-e-r-e-s- -t-h-e- -n-o---B-S- -g-u-i-d-e- -t-o- -g-e-t-t-i-n-g- -W-e-C-h-a-t- -P-a-y- -u-p- -a-n-d- -r-u-n-n-i-n-g- -a-s- -a- -f-o-r-e-i-g-n-e-r-.-
+-
+-#-#- -T-h-e- -S-e-t-u-p-:- -W-h-y- -Y-o-u-r- -C-r-e-d-i-t- -C-a-r-d- -W-i-l-l- -H-a-t-e- -Y-o-u-
+-
+-L-e-t-s- -c-u-t- -t-o- -t-h-e- -c-h-a-s-e-:- -W-e-C-h-a-t- -P-a-y- -i-s- -a- -d-i-g-i-t-a-l- -w-a-l-l-e-t- -t-i-e-d- -t-o- -y-o-u-r- -W-e-C-h-a-t- -a-c-c-o-u-n-t-,- -a-n-d- -f-o-r- -f-o-r-e-i-g-n-e-r-s-,- -t-h-e- -s-e-t-u-p- -p-r-o-c-e-s-s- -i-s- -a- -m-i-x- -o-f- -O-h-,- -t-h-a-t- -w-a-s- -e-a-s-y- -a-n-d- -W-h-y- -i-s- -t-h-i-s- -a-p-p- -a-s-k-i-n-g- -f-o-r- -m-y- -p-a-s-s-p-o-r-t- -p-h-o-t-o- -a-t- -2- -A-M- -T-h-e- -f-i-r-s-t- -s-t-e-p- -i-s- -d-o-w-n-l-o-a-d-i-n-g- -W-e-C-h-a-t- -(-d-u-h-)- -a-n-d- -c-r-e-a-t-i-n-g- -a-n- -a-c-c-o-u-n-t-.- -U-s-e- -y-o-u-r- -r-e-a-l- -n-a-m-e-t-h-i-s- -i-s-n-t- -t-h-e- -t-i-m-e- -f-o-r- -a- -f-a-k-e- -a-l-i-a-s- -l-i-k-e- -J-o-h-n-n-y- -N-o-o-d-l-e-.- -Y-o-u-l-l- -n-e-e-d- -t-o- -l-i-n-k- -a- -b-a-n-k- -c-a-r-d-,- -a-n-d- -h-e-r-e-s- -w-h-e-r-e- -t-h-e- -f-u-n- -b-e-g-i-n-s-.-
+-
+-I- -t-r-i-e-d- -l-i-n-k-i-n-g- -m-y- -U-.-S-.- -C-h-a-s-e- -V-i-s-a- -c-a-r-d- -t-h-e- -f-i-r-s-t- -t-i-m-e-.- -W-e-C-h-a-t- -g-a-v-e- -m-e- -a- -c-h-e-e-r-f-u-l- -e-r-r-o-r- -m-e-s-s-a-g-e- -t-h-a-t- -t-r-a-n-s-l-a-t-e-d- -r-o-u-g-h-l-y- -t-o- -N-i-c-e- -t-r-y-,- -b-u-t- -n-o-.- -M-o-s-t- -C-h-i-n-e-s-e- -b-a-n-k- -c-a-r-d-s- -w-o-r-k- -s-e-a-m-l-e-s-s-l-y-,- -b-u-t- -f-o-r-e-i-g-n- -c-a-r-d-s- -I-t-s- -a- -g-a-m-b-l-e-.- -T-h-e- -t-r-i-c-k- -i-s- -t-o- -u-s-e- -a- -c-a-r-d- -f-r-o-m- -a- -b-a-n-k- -t-h-a-t- -s-u-p-p-o-r-t-s- -c-r-o-s-s---b-o-r-d-e-r- -p-a-y-m-e-n-t-s-t-h-i-n-k- -V-i-s-a- -o-r- -M-a-s-t-e-r-c-a-r-d- -f-r-o-m- -m-a-j-o-r- -i-s-s-u-e-r-s- -l-i-k-e- -C-i-t-i-b-a-n-k-,- -H-S-B-C-,- -o-r- -B-a-n-k- -o-f- -A-m-e-r-i-c-a-.- -E-v-e-n- -t-h-e-n-,- -e-x-p-e-c-t- -a- -3-%- -f-e-e- -p-e-r- -t-r-a-n-s-a-c-t-i-o-n-.- -T-r-u-s-t- -m-e-,- -I- -l-e-a-r-n-e-d- -t-h-i-s- -t-h-e- -h-a-r-d- -w-a-y- -w-h-e-n- -I- -b-o-u-g-h-t- -a- -$-5- -b-u-b-b-l-e- -t-e-a- -a-n-d- -g-o-t- -c-h-a-r-g-e-d- -a-n- -e-x-t-r-a- -$-0-.-1-5- -f-o-r- -t-h-e- -p-r-i-v-i-l-e-g-e-.-
+-
+-T-h-e- -r-e-a-l- -g-a-m-e---c-h-a-n-g-e-r- -O-p-e-n- -a- -C-h-i-n-e-s-e- -b-a-n-k- -a-c-c-o-u-n-t-.- -I-t- -s-o-u-n-d-s- -d-a-u-n-t-i-n-g-,- -b-u-t- -i-t-s- -t-h-e- -s-m-o-o-t-h-e-s-t- -p-a-t-h-.- -V-i-s-i-t- -a-n-y- -m-a-j-o-r- -b-a-n-k-I-C-B-C-,- -B-a-n-k- -o-f- -C-h-i-n-a-,- -o-r- -C-h-i-n-a- -M-e-r-c-h-a-n-t-s- -B-a-n-k-w-i-t-h- -y-o-u-r- -p-a-s-s-p-o-r-t- -a-n-d- -v-i-s-a-.- -T-h-e- -t-e-l-l-e-r- -w-i-l-l- -h-a-n-d- -y-o-u- -a- -d-e-b-i-t- -c-a-r-d- -i-n- -2-0- -m-i-n-u-t-e-s-.- -L-i-n-k- -t-h-a-t- -t-o- -W-e-C-h-a-t- -P-a-y-,- -a-n-d- -y-o-u-r-e- -g-o-l-d-e-n-.- -N-o- -f-e-e-s-,- -n-o- -g-l-i-t-c-h-e-s-,- -j-u-s-t- -p-u-r-e- -d-i-g-i-t-a-l- -s-p-e-n-d-i-n-g- -p-o-w-e-r-.- -I-f- -y-o-u-r-e- -o-n-l-y- -i-n- -C-h-i-n-a- -f-o-r- -t-w-o- -w-e-e-k-s-,- -s-k-i-p- -t-h-i-s- -s-t-e-p- -a-n-d- -a-c-c-e-p-t- -t-h-e- -f-e-e-s-.- -B-u-t- -i-f- -y-o-u-r-e- -s-t-a-y-i-n-g- -l-o-n-g-e-r-,- -d-o- -y-o-u-r-s-e-l-f- -a- -f-a-v-o-r- -a-n-d- -g-e-t- -t-h-a-t- -b-a-n-k- -c-a-r-d-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-
+-
+-#-#- -T-h-e- -Q-R- -C-o-d-e- -D-a-n-c-e-:- -S-c-a-n-n-i-n-g- -L-i-k-e- -a- -L-o-c-a-l-
+-
+-O-n-c-e- -y-o-u-v-e- -g-o-t- -W-e-C-h-a-t- -P-a-y- -a-c-t-i-v-e-,- -t-h-e- -r-e-a-l- -w-o-r-l-d- -k-i-c-k-s- -i-n-.- -Y-o-u-l-l- -s-e-e- -Q-R- -c-o-d-e-s- -e-v-e-r-y-w-h-e-r-e-o-n- -s-t-r-e-e-t- -v-e-n-d-o-r- -c-a-r-t-s-,- -a-t- -t-h-e- -d-e-n-t-i-s-t-s- -o-f-f-i-c-e-,- -e-v-e-n- -p-i-n-n-e-d- -t-o- -a- -g-r-a-n-d-m-a-s- -a-p-r-o-n- -s-e-l-l-i-n-g- -s-t-e-a-m-e-d- -b-u-n-s-.- -T-h-e- -e-t-i-q-u-e-t-t-e- -i-s- -s-i-m-p-l-e-:- -y-o-u- -s-c-a-n- -t-h-e-i-r- -c-o-d-e-,- -o-r- -t-h-e-y- -s-c-a-n- -y-o-u-r-s-.- -B-u-t- -t-h-e-r-e-s- -a- -n-u-a-n-c-e- -t-h-a-t- -t-o-o-k- -m-e- -s-i-x- -m-o-n-t-h-s- -t-o- -f-i-g-u-r-e- -o-u-t-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-
+-
+-W-h-e-n- -I- -f-i-r-s-t- -t-r-i-e-d- -t-o- -p-a-y- -a-t- -a- -n-i-g-h-t- -m-a-r-k-e-t- -i-n- -K-u-n-m-i-n-g-,- -I- -f-u-m-b-l-e-d- -w-i-t-h- -m-y- -p-h-o-n-e-,- -o-p-e-n-e-d- -t-h-e- -S-c-a-n- -f-u-n-c-t-i-o-n-,- -a-n-d- -t-h-e- -v-e-n-d-o-r-a- -t-i-n-y- -w-o-m-a-n- -w-i-t-h- -a- -g-o-l-d- -t-o-o-t-h-j-u-s-t- -s-t-a-r-e-d- -a-t- -m-e-.- -S-h-e- -p-o-i-n-t-e-d- -a-t- -h-e-r- -o-w-n- -p-h-o-n-e-,- -t-h-e-n- -a-t- -m-i-n-e-.- -I- -f-i-n-a-l-l-y- -r-e-a-l-i-z-e-d-:- -s-o-m-e- -m-e-r-c-h-a-n-t-s- -p-r-e-f-e-r- -y-o-u- -t-o- -s-h-o-w- -y-o-u-r- -p-a-y-m-e-n-t- -Q-R- -c-o-d-e- -(-t-h-e- -o-n-e- -i-n- -y-o-u-r- -W-e-C-h-a-t- -P-a-y- -w-a-l-l-e-t-)- -s-o- -t-h-e-y- -c-a-n- -s-c-a-n- -i-t-.- -I-t-s- -f-a-s-t-e-r- -f-o-r- -t-h-e-m-.- -S-o-,- -h-e-r-e-s- -t-h-e- -r-u-l-e-:- -i-f- -t-h-e-y- -h-a-v-e- -a- -s-t-a-t-i-c- -Q-R- -c-o-d-e- -o-n- -t-h-e- -c-o-u-n-t-e-r-,- -s-c-a-n- -i-t-.- -I-f- -t-h-e-y-r-e- -h-o-l-d-i-n-g- -t-h-e-i-r- -p-h-o-n-e- -o-u-t-,- -o-p-e-n- -y-o-u-r- -w-a-l-l-e-t- -a-n-d- -t-a-p- -P-a-y- -t-o- -g-e-n-e-r-a-t-e- -y-o-u-r- -c-o-d-e-.- -I-t-s- -l-i-k-e- -a- -d-i-g-i-t-a-l- -t-a-n-g-o-,- -a-n-d- -y-o-u-r-e- -t-h-e- -l-e-a-d-.-
+-
+-P-r-o- -t-i-p-:- -K-e-e-p- -y-o-u-r- -p-h-o-n-e-s- -s-c-r-e-e-n- -b-r-i-g-h-t-n-e-s-s- -h-i-g-h-.- -N-o-t-h-i-n-g- -k-i-l-l-s- -t-h-e- -v-i-b-e- -l-i-k-e- -a- -d-i-m- -s-c-r-e-e-n- -t-h-a-t- -w-o-n-t- -s-c-a-n-.- -I- -o-n-c-e- -h-e-l-d- -u-p- -m-y- -p-h-o-n-e- -f-o-r- -3-0- -s-e-c-o-n-d-s- -a-t- -a- -c-o-n-v-e-n-i-e-n-c-e- -s-t-o-r-e- -w-h-i-l-e- -t-h-e- -c-l-e-r-k- -s-i-g-h-e-d-,- -a-n-d- -I- -f-e-l-t- -l-i-k-e- -I-d- -f-a-i-l-e-d- -a- -t-e-s-t-.- -B-r-i-g-h-t-n-e-s-s- -u-p-,- -p-e-o-p-l-e-.-
+-
+-#-#- -T-h-e- -T-o-p---U-p- -T-r-a-p-:- -W-h-e-n- -Y-o-u-r- -W-a-l-l-e-t- -R-u-n-s- -D-r-y-
+-
+-H-e-r-e-s- -t-h-e- -s-c-e-n-a-r-i-o-:- -y-o-u-r-e- -a-t- -a- -h-o-t-p-o-t- -j-o-i-n-t- -i-n- -C-h-o-n-g-q-i-n-g-,- -t-h-e- -f-o-o-d- -i-s- -s-p-i-c-y- -e-n-o-u-g-h- -t-o- -m-a-k-e- -y-o-u- -c-r-y-,- -a-n-d- -t-h-e- -b-i-l-l- -c-o-m-e-s-.- -Y-o-u- -o-p-e-n- -W-e-C-h-a-t- -P-a-y-,- -a-n-d- -i-t- -s-a-y-s- -I-n-s-u-f-f-i-c-i-e-n-t- -b-a-l-a-n-c-e-.- -P-a-n-i-c- -s-e-t-s- -i-n-.- -Y-o-u- -c-a-n-t- -a-d-d- -m-o-n-e-y- -f-r-o-m- -a- -f-o-r-e-i-g-n- -c-a-r-d- -d-i-r-e-c-t-l-y-W-e-C-h-a-t- -b-l-o-c-k-s- -t-h-a-t- -f-o-r- -m-o-s-t- -n-o-n---C-h-i-n-e-s-e- -a-c-c-o-u-n-t-s-.- -S-o- -w-h-a-t- -d-o- -y-o-u- -d-o-
+-
+-I-v-e- -b-e-e-n- -t-h-e-r-e-,- -s-w-e-a-t-i-n-g- -o-v-e-r- -a- -b-o-w-l- -o-f- -t-r-i-p-e-.- -T-h-e- -s-o-l-u-t-i-o-n- -i-s- -s-i-m-p-l-e- -b-u-t- -a-n-n-o-y-i-n-g-:- -a-s-k- -a- -C-h-i-n-e-s-e- -f-r-i-e-n-d- -t-o- -t-r-a-n-s-f-e-r- -y-o-u- -m-o-n-e-y- -v-i-a- -W-e-C-h-a-t-,- -t-h-e-n- -p-a-y- -t-h-e-m- -b-a-c-k- -i-n- -c-a-s-h- -o-r- -v-i-a- -a-n-o-t-h-e-r- -a-p-p-.- -O-r-,- -i-f- -y-o-u-r-e- -s-o-l-o-,- -f-i-n-d- -a- -c-o-n-v-e-n-i-e-n-c-e- -s-t-o-r-e- -l-i-k-e- -7---E-l-e-v-e-n- -o-r- -F-a-m-i-l-y-M-a-r-t-.- -M-a-n-y- -o-f- -t-h-e-m- -l-e-t- -y-o-u- -t-o-p- -u-p- -y-o-u-r- -W-e-C-h-a-t- -w-a-l-l-e-t- -w-i-t-h- -c-a-s-h- -a-t- -t-h-e- -c-o-u-n-t-e-r-.- -H-a-n-d- -o-v-e-r- -1-0-0- -R-M-B-,- -t-h-e-y- -s-c-a-n- -a- -c-o-d-e-,- -a-n-d- -y-o-u-r- -b-a-l-a-n-c-e- -j-u-m-p-s-.- -I-t-s- -a-n-c-i-e-n-t---t-e-c-h- -m-e-e-t-s- -m-o-d-e-r-n---p-a-y-m-e-n-t-,- -a-n-d- -i-t- -w-o-r-k-s-.-
+-
+-A-n-o-t-h-e-r- -o-p-t-i-o-n-:- -i-f- -y-o-u- -h-a-v-e- -a- -C-h-i-n-e-s-e- -b-a-n-k- -a-c-c-o-u-n-t- -l-i-n-k-e-d-,- -y-o-u- -c-a-n- -t-r-a-n-s-f-e-r- -m-o-n-e-y- -f-r-o-m- -y-o-u-r- -b-a-n-k- -t-o- -W-e-C-h-a-t- -i-n-s-t-a-n-t-l-y-.- -B-u-t- -i-f- -y-o-u-r-e- -r-e-l-y-i-n-g- -o-n- -a- -f-o-r-e-i-g-n- -c-a-r-d-,- -y-o-u-r-e- -s-t-u-c-k- -w-i-t-h- -t-h-e- -f-r-i-e-n-d- -m-e-t-h-o-d-.- -I-v-e- -b-e-c-o-m-e- -t-h-e- -u-n-o-f-f-i-c-i-a-l- -W-e-C-h-a-t- -b-a-n-k-e-r- -f-o-r- -e-v-e-r-y- -t-o-u-r-i-s-t- -I- -m-e-e-t-.- -M-y- -a-d-v-i-c-e- -K-e-e-p- -a-t- -l-e-a-s-t- -2-0-0- -R-M-B- -i-n- -y-o-u-r- -w-a-l-l-e-t- -a-t- -a-l-l- -t-i-m-e-s-.- -Y-o-u- -n-e-v-e-r- -k-n-o-w- -w-h-e-n- -y-o-u-l-l- -n-e-e-d- -t-o- -b-r-i-b-e- -a- -t-a-x-i- -d-r-i-v-e-r- -o-r- -b-u-y- -a- -s-u-d-d-e-n- -c-r-a-v-i-n-g- -f-o-r- -s-t-i-n-k-y- -t-o-f-u-.-
+-
+-#-#- -T-h-e- -S-e-c-u-r-i-t-y- -S-c-a-r-e-:- -D-o-n-t- -P-a-n-i-c-,- -I-t-s- -J-u-s-t- -W-e-C-h-a-t-
+-
+-E-v-e-r-y- -f-o-r-e-i-g-n-e-r- -I-v-e- -m-e-t- -h-a-s- -h-a-d- -t-h-a-t- -m-o-m-e-n-t-:- -y-o-u- -o-p-e-n- -W-e-C-h-a-t- -P-a-y-,- -a-n-d- -a- -r-e-d- -b-a-n-n-e-r- -a-p-p-e-a-r-s-:- -Y-o-u-r- -a-c-c-o-u-n-t- -h-a-s- -b-e-e-n- -t-e-m-p-o-r-a-r-i-l-y- -r-e-s-t-r-i-c-t-e-d-.- -Y-o-u-r- -h-e-a-r-t- -d-r-o-p-s-.- -Y-o-u- -t-h-i-n-k- -y-o-u-v-e- -b-e-e-n- -h-a-c-k-e-d-.- -T-h-e- -r-e-a-l-i-t-y- -i-s- -u-s-u-a-l-l-y- -b-o-r-i-n-g-.- -W-e-C-h-a-t-s- -s-e-c-u-r-i-t-y- -s-y-s-t-e-m- -f-l-a-g-s- -a-n-y- -u-n-u-s-u-a-l- -a-c-t-i-v-i-t-y-l-i-k-e- -l-o-g-g-i-n-g- -i-n- -f-r-o-m- -a- -n-e-w- -p-h-o-n-e-,- -m-a-k-i-n-g- -a- -l-a-r-g-e- -p-a-y-m-e-n-t-,- -o-r- -u-s-i-n-g- -t-h-e- -a-p-p- -i-n- -a- -d-i-f-f-e-r-e-n-t- -c-i-t-y-.- -I-t-s- -t-h-e-i-r- -v-e-r-s-i-o-n- -o-f- -A-r-e- -y-o-u- -a- -r-o-b-o-t-
+-
+-W-h-e-n- -t-h-i-s- -h-a-p-p-e-n-e-d- -t-o- -m-e- -i-n- -L-i-j-i-a-n-g-,- -I- -s-p-e-n-t- -a-n- -h-o-u-r- -p-a-n-i-c-k-i-n-g- -b-e-f-o-r-e- -r-e-a-l-i-z-i-n-g- -t-h-e- -f-i-x-:- -v-e-r-i-f-y- -y-o-u-r- -i-d-e-n-t-i-t-y-.- -O-p-e-n- -t-h-e- -a-p-p-,- -g-o- -t-o- -M-e- ->- -P-a-y- ->- -S-e-c-u-r-i-t-y- -a-n-d- -f-o-l-l-o-w- -t-h-e- -p-r-o-m-p-t-s-.- -Y-o-u-l-l- -l-i-k-e-l-y- -n-e-e-d- -t-o- -u-p-l-o-a-d- -a- -p-h-o-t-o- -o-f- -y-o-u-r- -p-a-s-s-p-o-r-t- -a-g-a-i-n-.- -Y-e-s-,- -t-h-e- -s-a-m-e- -p-a-s-s-p-o-r-t- -y-o-u- -a-l-r-e-a-d-y- -u-p-l-o-a-d-e-d-.- -I-t-s- -a-n-n-o-y-i-n-g-,- -b-u-t- -i-t- -w-o-r-k-s-.- -W-i-t-h-i-n- -1-0- -m-i-n-u-t-e-s-,- -m-y- -a-c-c-o-u-n-t- -w-a-s- -b-a-c-k-.- -T-h-e- -k-e-y- -i-s- -t-o- -h-a-v-e- -y-o-u-r- -p-a-s-s-p-o-r-t- -s-a-v-e-d- -a-s- -a- -p-h-o-t-o- -o-n- -y-o-u-r- -p-h-o-n-e-.- -T-r-u-s-t- -m-e-,- -y-o-u- -d-o-n-t- -w-a-n-t- -t-o- -b-e- -d-i-g-g-i-n-g- -t-h-r-o-u-g-h- -e-m-a-i-l-s- -i-n- -a- -Y-u-n-n-a-n- -h-o-s-t-e-l- -w-i-t-h- -s-p-o-t-t-y- -W-i---F-i-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-
+-
+-O-n-e- -m-o-r-e- -t-h-i-n-g-:- -n-e-v-e-r- -s-h-a-r-e- -y-o-u-r- -p-a-y-m-e-n-t- -Q-R- -c-o-d-e- -p-u-b-l-i-c-l-y-.- -I-v-e- -s-e-e-n- -s-c-a-m-m-e-r-s- -i-n- -t-o-u-r-i-s-t- -a-r-e-a-s- -p-r-i-n-t- -f-a-k-e- -Q-R- -c-o-d-e-s- -o-v-e-r- -r-e-a-l- -o-n-e-s-.- -A-l-w-a-y-s- -c-h-e-c-k- -t-h-e- -m-e-r-c-h-a-n-t-s- -n-a-m-e- -b-e-f-o-r-e- -c-o-n-f-i-r-m-i-n-g- -p-a-y-m-e-n-t-.- -I-f- -t-h-e- -n-a-m-e- -i-s- -H-a-p-p-y- -N-o-o-d-l-e-s- -b-u-t- -t-h-e- -c-o-d-e- -s-a-y-s- -V-I-P-8-8-8-,- -r-u-n-.-
+-
+->- -*-*-W-h-a-t- -I- -W-i-s-h- -I- -K-n-e-w- -B-e-f-o-r-e-*-*- - -
+->- -I- -w-i-s-h- -s-o-m-e-o-n-e- -h-a-d- -t-o-l-d- -m-e- -t-h-a-t- -W-e-C-h-a-t- -P-a-y- -i-s-n-t- -j-u-s-t- -f-o-r- -p-a-y-m-e-n-t-s-i-t-s- -y-o-u-r- -e-n-t-i-r-e- -l-i-f-e-.- -Y-o-u-l-l- -u-s-e- -i-t- -t-o- -s-p-l-i-t- -b-i-l-l-s-,- -s-e-n-d- -r-e-d- -e-n-v-e-l-o-p-e-s- -d-u-r-i-n-g- -C-h-i-n-e-s-e- -N-e-w- -Y-e-a-r-,- -p-a-y- -u-t-i-l-i-t-y- -b-i-l-l-s-,- -a-n-d- -e-v-e-n- -d-o-n-a-t-e- -t-o- -s-t-r-e-e-t- -m-u-s-i-c-i-a-n-s-.- -T-h-e- -l-e-a-r-n-i-n-g- -c-u-r-v-e- -i-s- -s-t-e-e-p-,- -b-u-t- -o-n-c-e- -y-o-u-r-e- -i-n-,- -y-o-u-r-e- -i-n-.- -A-l-s-o-,- -d-o-n-t- -f-o-r-g-e-t- -t-o- -s-e-t- -u-p- -a- -p-a-y-m-e-n-t- -p-a-s-s-w-o-r-d- -t-h-a-t-s- -d-i-f-f-e-r-e-n-t- -f-r-o-m- -y-o-u-r- -l-o-g-i-n- -p-a-s-s-w-o-r-d-.- -I- -d-i-d-n-t- -d-o- -t-h-i-s-,- -a-n-d- -m-y- -f-r-i-e-n-d- -o-n-c-e- -s-e-n-t- -h-i-m-s-e-l-f- -5-0- -R-M-B- -w-h-i-l-e- -I- -w-a-s- -i-n- -t-h-e- -b-a-t-h-r-o-o-m-.- -N-e-v-e-r- -a-g-a-i-n-.-
+-
+-#-#- -T-h-e- -F-i-n-a-l- -F-r-o-n-t-i-e-r-:- -W-e-C-h-a-t- -P-a-y- -O-u-t-s-i-d-e- -C-h-i-n-a-
+-
+-H-e-r-e-s- -a- -t-w-i-s-t-:- -W-e-C-h-a-t- -P-a-y- -w-o-r-k-s- -i-n- -s-o-m-e- -p-l-a-c-e-s- -o-u-t-s-i-d-e- -C-h-i-n-a-l-i-k-e- -J-a-p-a-n-,- -T-h-a-i-l-a-n-d-,- -a-n-d- -S-i-n-g-a-p-o-r-e-b-u-t- -o-n-l-y- -i-f- -y-o-u-r-e- -p-a-y-i-n-g- -a- -C-h-i-n-e-s-e- -m-e-r-c-h-a-n-t- -o-r- -a- -s-t-o-r-e- -t-h-a-t- -a-c-c-e-p-t-s- -i-t-.- -I- -t-r-i-e-d- -u-s-i-n-g- -i-t- -a-t- -a- -7---E-l-e-v-e-n- -i-n- -B-a-n-g-k-o-k-,- -a-n-d- -t-h-e- -c-a-s-h-i-e-r- -s-t-a-r-e-d- -a-t- -m-y- -Q-R- -c-o-d-e- -l-i-k-e- -i-t- -w-a-s- -a- -a-l-i-e-n- -a-r-t-i-f-a-c-t-.- -T-h-e- -r-e-a-l-i-t-y- -i-s- -t-h-a-t- -W-e-C-h-a-t- -P-a-y- -i-s- -a- -C-h-i-n-a---f-i-r-s-t- -t-o-o-l-.- -D-o-n-t- -e-x-p-e-c-t- -i-t- -t-o- -r-e-p-l-a-c-e- -A-p-p-l-e- -P-a-y- -i-n- -t-h-e- -U-.-S-.- -o-r- -E-u-r-o-p-e-.-
+-
+-B-u-t- -w-h-e-n- -i-t- -w-o-r-k-s-,- -i-t-s- -m-a-g-i-c-.- -I-v-e- -p-a-i-d- -f-o-r- -d-u-m-p-l-i-n-g-s- -i-n- -X-i-a-n-,- -t-r-a-i-n- -t-i-c-k-e-t-s- -i-n- -G-u-a-n-g-z-h-o-u-,- -a-n-d- -e-v-e-n- -a- -m-a-s-s-a-g-e- -i-n- -G-u-i-l-i-n-a-l-l- -w-i-t-h- -a- -s-i-n-g-l-e- -s-c-a-n-.- -T-h-e- -a-p-p- -a-l-s-o- -l-e-t-s- -y-o-u- -s-e-n-d- -m-o-n-e-y- -t-o- -o-t-h-e-r- -W-e-C-h-a-t- -u-s-e-r-s- -i-n-s-t-a-n-t-l-y-,- -w-h-i-c-h- -i-s- -g-r-e-a-t- -f-o-r- -s-p-l-i-t-t-i-n-g- -d-i-n-n-e-r- -b-i-l-l-s- -w-i-t-h- -C-h-i-n-e-s-e- -f-r-i-e-n-d-s-.- -J-u-s-t- -b-e- -r-e-a-d-y- -f-o-r- -t-h-e- -i-n-e-v-i-t-a-b-l-e- -W-h-y- -d-o-n-t- -y-o-u- -u-s-e- -A-l-i-p-a-y- -q-u-e-s-t-i-o-n-.- -T-h-e- -a-n-s-w-e-r-:- -b-e-c-a-u-s-e- -I-m- -a-l-r-e-a-d-y- -c-o-m-m-i-t-t-e-d-,- -a-n-d- -I- -d-o-n-t- -n-e-e-d- -a-n-o-t-h-e-r- -a-p-p- -d-r-a-i-n-i-n-g- -m-y- -p-h-o-n-e- -b-a-t-t-e-r-y-.-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+-
+-
+-
+-
+-#-#- -J-o-r-a-n-s- -T-a-k-e-
+-
+-L-o-o-k-,- -W-e-C-h-a-t- -P-a-y- -i-s-n-t- -p-e-r-f-e-c-t-.- -I-t-s- -a- -w-a-l-l-e-d- -g-a-r-d-e-n- -t-h-a-t- -d-e-m-a-n-d-s- -y-o-u-r- -p-a-s-s-p-o-r-t-,- -y-o-u-r- -p-a-t-i-e-n-c-e-,- -a-n-d- -y-o-u-r- -w-i-l-l-i-n-g-n-e-s-s- -t-o- -a-c-c-e-p-t- -o-c-c-a-s-i-o-n-a-l- -g-l-i-t-c-h-e-s-.- -B-u-t- -o-n-c-e- -y-o-u- -g-e-t- -p-a-s-t- -t-h-e- -s-e-t-u-p- -p-a-i-n-,- -i-t-s- -t-h-e- -m-o-s-t- -c-o-n-v-e-n-i-e-n-t- -w-a-y- -t-o- -e-x-i-s-t- -i-n- -C-h-i-n-a-.- -I-v-e- -p-a-i-d- -f-o-r- -e-v-e-r-y-t-h-i-n-g- -f-r-o-m- -a- -$-0-.-5-0- -b-a-g- -o-f- -s-p-i-c-y- -c-h-i-p-s- -t-o- -a- -$-2-0-0- -h-o-t-e-l- -r-o-o-m- -w-i-t-h- -t-h-e- -s-a-m-e- -a-p-p-.- -I-t-s- -t-h-e- -d-i-g-i-t-a-l- -g-l-u-e- -t-h-a-t- -h-o-l-d-s- -d-a-i-l-y- -l-i-f-e- -t-o-g-e-t-h-e-r- -h-e-r-e-.- -S-o-,- -b-i-t-e- -t-h-e- -b-u-l-l-e-t-,- -g-e-t- -t-h-a-t- -C-h-i-n-e-s-e- -b-a-n-k- -c-a-r-d-,- -a-n-d- -e-m-b-r-a-c-e- -t-h-e- -Q-R- -c-o-d-e- -l-i-f-e-.- -Y-o-u-r- -w-a-l-l-e-t-a-n-d- -y-o-u-r- -s-a-n-i-t-y-w-i-l-l- -t-h-a-n-k- -y-o-u-.- -A-n-d- -i-f- -y-o-u- -e-v-e-r- -s-e-e- -m-e- -a-t- -a- -h-o-t-p-o-t- -j-o-i-n-t- -i-n- -C-h-e-n-g-d-u-,- -d-o-n-t- -a-s-k- -m-e- -t-o- -p-a-y- -w-i-t-h- -c-a-s-h-.- -I-v-e- -m-o-v-e-d- -o-n-.- -Y-o-u- -s-h-o-u-l-d- -t-o-o-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-

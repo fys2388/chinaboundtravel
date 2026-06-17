@@ -1,93 +1,94 @@
----
-title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
-cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"
-date: '2026-05-20T10:00:00+08:00'
-draft: false
-tags:
-- Chengdu
-- Panda Base
-- Sichuan Guide
-categories:
-- Destinations & Itineraries
-summary: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  >
-  **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li...
-description: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base  >
-  **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-li...
-author: Joran
-params:
-  keywords:
-  - Chengdu pandas
-  - Panda Base
-  - Sichuan
-  - panda tour
-  - Beijing
-  - Forbidden City
-  faq:
-  - question: What cities should I visit in China?
-    answer: Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each
-      offers unique experiences from history to food to pandas.
-  - question: How do I get around Chinese cities?
-    answer: Subway systems in major cities are excellent. Taxis and ride-hailing apps
-      (Didi) are cheap and convenient.
----
-
-
-# Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-
-
-Okay, so youre in Beijing. Youve done the Wall, youve sweated through the Forbidden City, and youve eaten enough Peking duck to make a cardiologist weep. Now youre thinking, I came to China to see a panda, not a t-shirt with a panda on it. I get it. My wife, Xiao Li, is from Chengdu, and for the first three years of our marriage, she would not let me near the Panda Base because she said Id embarrass the family by trying to hug one.
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-
-
-She was right. I definitely would have.
-
-But heres the thing: a day trip from Beijing to Chengdu to see the pandas is totally doable, and its one of the most absurdly fun things you can do in China. Just dont be like me on my first visit.
-
-**The Pre-Dawn Panic**
-
-My first solo trip to the Panda Base was a disaster of my own making. Id read online that the pandas are most active in the morninglike, 8:00 AM active. Coming from California, 8:00 AM is what I call still technically nighttime. So I took a high-speed train from Beijing West to Chengdu East (about 7.5 hours)  my first mistake. By the time I walked into the panda nursery at 7:45 AM, I was running on caffeine and regret. The pandas? Still dead asleep. I stood there whispering, "Wake up, you glorious bastards." They did not care. It was my first lesson: if you're coming from Beijing, fly. The train is a beautiful experience, but it eats your whole day  and a day trip from Beijing to Chengdu only works if you're airborne.
-
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use [Klook](https://klook.tpo.li/ppB4vZQ6) to lock in your slots early!
-
-
-
-I walked into the panda nursery, and there they were: a dozen fluffy, black-and-white potato shapes, all completely unconscious. One was draped over a branch like a wet towel. Another was facedown in a pile of bamboo, snoring so loud I could hear it through the glass. I stood there, jet-lagged and coffee-jittery, whispering, Wake up, you glorious bastards. They did not wake up. They did not care. It was my first lesson: pandas operate on their own schedule. You are just a guest in their nap house.
-
-**The Second Attempt: With Local Intel**
-
-Xiao Li finally relented and came with me on my second trip. She told me three things that changed my life:
-
-1. **Go on a weekday.** Weekends are a zoo of humans, and the pandas get overwhelmed. They hide.
-2. **Arrive by 7:30 AM, but dont expect action until 8:30.** The keepers bring fresh bamboo at 8:30, and thats when the magic happens. The pandas go from dead to the world to aggressively munching in about 30 seconds. Its like watching a slow-motion car crash of cuteness.
-3. **The Moonlight Nursery is the real deal.** The main base is fine, but the Moonlight Nursery (a separate area) has the baby pandas. And let me tell you, seeing a baby panda trying to climb a tree and failing, then rolling down a hill, is the closest Ive ever felt to pure joy.
-
-We got there at 7:15 AM. By 8:35, I was standing next to a panda that was eating bamboo while sitting on a toilet. It was not ashamed. I was. Xiao Li was laughing at me. See? Theyre just like your uncle after Thanksgiving dinner.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-**The Logistics That Dont Suck**
-
-Heres the practical stuff, because I know you need it:
-
-- **Getting there from Beijing:** Fly. Seriously. The bullet train is cool, but it eats your whole day. Book a 6:00 AM flight from Beijing Capital (PEK) to Chengdu Shuangliu (CTU). You'll land around 9:00 AM. Take a Didi (China's Uber) directly to the baseabout 35 minutes, maybe 80 RMB ($11). You'll be at the panda entrance by 10:00 AM. That's prime "pandas are still eating" time.
-- **Tickets:** Book online in advance. The official WeChat mini-program is the easiest path, but if you're outside China or don't have a Chinese phone number set up yet, you'll need a VPN to access it  and honestly, just use {{< klook-link "Klook" >}} instead. Foreign-friendly, English interface, and you skip the queue at the gate. It's about 55 RMB ($8). Worth every penny. And while you're at it, grab an eSIM from {{< airalo-link "Airalo" >}} before you land  trust me, I learned this the hard way when my US SIM crapped out at baggage claim and I spent an hour trying to connect to airport Wi-Fi. You'll need that data for Didi, WeChat, and navigating the base without looking like a lost tourist.
-- **What to bring:** Water, a hat (Chengdu is muggy), and patience. Don't bring your own bamboo. Trust me, the pandas are picky. They will look at your grocery-store bamboo like you're offering them a gas-station burrito.
-- **If you want to make an overnight trip of it:** Stay at the {{< booking-link "Chengdu Lazybones Hostel" >}} near the base  it's cheap, clean, and has a rooftop bar where you can decompress after a day of panda-gawking. Or if you're fancy, the {{< booking-link "Chengdu Marriott Hotel Financial Center" >}} is a solid choice. Either way, you'll be close enough to hit the base at 7 AM without waking up at 4.
-
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. (#TP_BOOKING_PLACEHOLDER#)
-
-
-
-**The Real Magic**
-
-The best moment of my day wasnt even the pandas. It was watching a group of Chinese touristsgrandparents, parents, and a toddlerall staring at a panda that was methodically peeling a bamboo stalk. The toddler pointed and said,  (Mom, its so lazy!). The grandfather laughed and said, . (Just like your dad). Everyone cracked up. For a second, I forgot I was a foreigner. I was just another person in a crowd of panda-worshippers.
-
-So go. Take the flight. Wake up early. Dont try to hug one. And if you see a panda sleeping on a branch, just know: its living its best life. You should too.
+-------
+-t-i-t-l-e-:- -D-u-d-e-,- -W-h-e-r-e-'-s- -M-y- -P-a-n-d-a- -A- -B-e-i-j-i-n-g- -G-u-y-'-s- -G-u-i-d-e- -t-o- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-c-h-e-n-g-d-u-/-2-0-2-6---0-5---2-0---d-u-d-e---w-h-e-r-e-s---m-y---p-a-n-d-a---a---b-e-i-j-i-n-g---g-u-y-s---g-u-i-d-e---t-o---t-h-e---c-.-j-p-g-"-
+-d-a-t-e-:- -'-2-0-2-6---0-5---2-0-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
+-d-r-a-f-t-:- -f-a-l-s-e-
+-t-a-g-s-:-
+--- -C-h-e-n-g-d-u-
+--- -P-a-n-d-a- -B-a-s-e-
+--- -S-i-c-h-u-a-n- -G-u-i-d-e-
+-c-a-t-e-g-o-r-i-e-s-:-
+--- -D-e-s-t-i-n-a-t-i-o-n-s- -&- -I-t-i-n-e-r-a-r-i-e-s-
+-s-u-m-m-a-r-y-:- -D-u-d-e-,- -W-h-e-r-e-'-s- -M-y- -P-a-n-d-a- -A- -B-e-i-j-i-n-g- -G-u-y-'-s- -G-u-i-d-e- -t-o- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e- - ->-
+- - -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-.-.-.-
+-d-e-s-c-r-i-p-t-i-o-n-:- -D-u-d-e-,- -W-h-e-r-e-'-s- -M-y- -P-a-n-d-a- -A- -B-e-i-j-i-n-g- -G-u-y-'-s- -G-u-i-d-e- -t-o- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e- - ->-
+- - -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-.-.-.-
+-a-u-t-h-o-r-:- -J-o-r-a-n-
+-p-a-r-a-m-s-:-
+- - -k-e-y-w-o-r-d-s-:-
+- - --- -C-h-e-n-g-d-u- -p-a-n-d-a-s-
+- - --- -P-a-n-d-a- -B-a-s-e-
+- - --- -S-i-c-h-u-a-n-
+- - --- -p-a-n-d-a- -t-o-u-r-
+- - --- -B-e-i-j-i-n-g-
+- - --- -F-o-r-b-i-d-d-e-n- -C-i-t-y-
+- - -f-a-q-:-
+- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t- -c-i-t-i-e-s- -s-h-o-u-l-d- -I- -v-i-s-i-t- -i-n- -C-h-i-n-a-
+- - - - -a-n-s-w-e-r-:- -B-e-i-j-i-n-g-,- -S-h-a-n-g-h-a-i-,- -C-h-e-n-g-d-u-,- -a-n-d- -X-i-'-a-n- -a-r-e- -g-r-e-a-t- -s-t-a-r-t-i-n-g- -p-o-i-n-t-s-.- -E-a-c-h-
+- - - - - - -o-f-f-e-r-s- -u-n-i-q-u-e- -e-x-p-e-r-i-e-n-c-e-s- -f-r-o-m- -h-i-s-t-o-r-y- -t-o- -f-o-o-d- -t-o- -p-a-n-d-a-s-.-
+- - --- -q-u-e-s-t-i-o-n-:- -H-o-w- -d-o- -I- -g-e-t- -a-r-o-u-n-d- -C-h-i-n-e-s-e- -c-i-t-i-e-s-
+- - - - -a-n-s-w-e-r-:- -S-u-b-w-a-y- -s-y-s-t-e-m-s- -i-n- -m-a-j-o-r- -c-i-t-i-e-s- -a-r-e- -e-x-c-e-l-l-e-n-t-.- -T-a-x-i-s- -a-n-d- -r-i-d-e---h-a-i-l-i-n-g- -a-p-p-s-
+- - - - - - -(-D-i-d-i-)- -a-r-e- -c-h-e-a-p- -a-n-d- -c-o-n-v-e-n-i-e-n-t-.-
+-------
+-
+-
+-#- -D-u-d-e-,- -W-h-e-r-e-'-s- -M-y- -P-a-n-d-a- -A- -B-e-i-j-i-n-g- -G-u-y-'-s- -G-u-i-d-e- -t-o- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+-
+-
+-O-k-a-y-,- -s-o- -y-o-u-r-e- -i-n- -B-e-i-j-i-n-g-.- -Y-o-u-v-e- -d-o-n-e- -t-h-e- -W-a-l-l-,- -y-o-u-v-e- -s-w-e-a-t-e-d- -t-h-r-o-u-g-h- -t-h-e- -F-o-r-b-i-d-d-e-n- -C-i-t-y-,- -a-n-d- -y-o-u-v-e- -e-a-t-e-n- -e-n-o-u-g-h- -P-e-k-i-n-g- -d-u-c-k- -t-o- -m-a-k-e- -a- -c-a-r-d-i-o-l-o-g-i-s-t- -w-e-e-p-.- -N-o-w- -y-o-u-r-e- -t-h-i-n-k-i-n-g-,- -I- -c-a-m-e- -t-o- -C-h-i-n-a- -t-o- -s-e-e- -a- -p-a-n-d-a-,- -n-o-t- -a- -t---s-h-i-r-t- -w-i-t-h- -a- -p-a-n-d-a- -o-n- -i-t-.- -I- -g-e-t- -i-t-.- -M-y- -w-i-f-e-,- -X-i-a-o- -L-i-,- -i-s- -f-r-o-m- -C-h-e-n-g-d-u-,- -a-n-d- -f-o-r- -t-h-e- -f-i-r-s-t- -t-h-r-e-e- -y-e-a-r-s- -o-f- -o-u-r- -m-a-r-r-i-a-g-e-,- -s-h-e- -w-o-u-l-d- -n-o-t- -l-e-t- -m-e- -n-e-a-r- -t-h-e- -P-a-n-d-a- -B-a-s-e- -b-e-c-a-u-s-e- -s-h-e- -s-a-i-d- -I-d- -e-m-b-a-r-r-a-s-s- -t-h-e- -f-a-m-i-l-y- -b-y- -t-r-y-i-n-g- -t-o- -h-u-g- -o-n-e-.-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+-
+-
+-S-h-e- -w-a-s- -r-i-g-h-t-.- -I- -d-e-f-i-n-i-t-e-l-y- -w-o-u-l-d- -h-a-v-e-.-
+-
+-B-u-t- -h-e-r-e-s- -t-h-e- -t-h-i-n-g-:- -a- -d-a-y- -t-r-i-p- -f-r-o-m- -B-e-i-j-i-n-g- -t-o- -C-h-e-n-g-d-u- -t-o- -s-e-e- -t-h-e- -p-a-n-d-a-s- -i-s- -t-o-t-a-l-l-y- -d-o-a-b-l-e-,- -a-n-d- -i-t-s- -o-n-e- -o-f- -t-h-e- -m-o-s-t- -a-b-s-u-r-d-l-y- -f-u-n- -t-h-i-n-g-s- -y-o-u- -c-a-n- -d-o- -i-n- -C-h-i-n-a-.- -J-u-s-t- -d-o-n-t- -b-e- -l-i-k-e- -m-e- -o-n- -m-y- -f-i-r-s-t- -v-i-s-i-t-.-
+-
+-*-*-T-h-e- -P-r-e---D-a-w-n- -P-a-n-i-c-*-*-
+-
+-M-y- -f-i-r-s-t- -s-o-l-o- -t-r-i-p- -t-o- -t-h-e- -P-a-n-d-a- -B-a-s-e- -w-a-s- -a- -d-i-s-a-s-t-e-r- -o-f- -m-y- -o-w-n- -m-a-k-i-n-g-.- -I-d- -r-e-a-d- -o-n-l-i-n-e- -t-h-a-t- -t-h-e- -p-a-n-d-a-s- -a-r-e- -m-o-s-t- -a-c-t-i-v-e- -i-n- -t-h-e- -m-o-r-n-i-n-g-l-i-k-e-,- -8-:-0-0- -A-M- -a-c-t-i-v-e-.- -C-o-m-i-n-g- -f-r-o-m- -C-a-l-i-f-o-r-n-i-a-,- -8-:-0-0- -A-M- -i-s- -w-h-a-t- -I- -c-a-l-l- -s-t-i-l-l- -t-e-c-h-n-i-c-a-l-l-y- -n-i-g-h-t-t-i-m-e-.- -S-o- -I- -t-o-o-k- -a- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -f-r-o-m- -B-e-i-j-i-n-g- -W-e-s-t- -t-o- -C-h-e-n-g-d-u- -E-a-s-t- -(-a-b-o-u-t- -7-.-5- -h-o-u-r-s-)- - -m-y- -f-i-r-s-t- -m-i-s-t-a-k-e-.- -B-y- -t-h-e- -t-i-m-e- -I- -w-a-l-k-e-d- -i-n-t-o- -t-h-e- -p-a-n-d-a- -n-u-r-s-e-r-y- -a-t- -7-:-4-5- -A-M-,- -I- -w-a-s- -r-u-n-n-i-n-g- -o-n- -c-a-f-f-e-i-n-e- -a-n-d- -r-e-g-r-e-t-.- -T-h-e- -p-a-n-d-a-s- -S-t-i-l-l- -d-e-a-d- -a-s-l-e-e-p-.- -I- -s-t-o-o-d- -t-h-e-r-e- -w-h-i-s-p-e-r-i-n-g-,- -"-W-a-k-e- -u-p-,- -y-o-u- -g-l-o-r-i-o-u-s- -b-a-s-t-a-r-d-s-.-"- -T-h-e-y- -d-i-d- -n-o-t- -c-a-r-e-.- -I-t- -w-a-s- -m-y- -f-i-r-s-t- -l-e-s-s-o-n-:- -i-f- -y-o-u-'-r-e- -c-o-m-i-n-g- -f-r-o-m- -B-e-i-j-i-n-g-,- -f-l-y-.- -T-h-e- -t-r-a-i-n- -i-s- -a- -b-e-a-u-t-i-f-u-l- -e-x-p-e-r-i-e-n-c-e-,- -b-u-t- -i-t- -e-a-t-s- -y-o-u-r- -w-h-o-l-e- -d-a-y- - -a-n-d- -a- -d-a-y- -t-r-i-p- -f-r-o-m- -B-e-i-j-i-n-g- -t-o- -C-h-e-n-g-d-u- -o-n-l-y- -w-o-r-k-s- -i-f- -y-o-u-'-r-e- -a-i-r-b-o-r-n-e-.-
+-
+->- -*-*-P-r-o- -T-i-p-:-*-*- -F-o-r- -b-o-o-k-i-n-g- -h-i-g-h---s-p-e-e-d- -r-a-i-l- -t-i-c-k-e-t-s-,- -E-n-g-l-i-s-h- -t-o-u-r- -g-u-i-d-e-s-,- -o-r- -s-k-i-p---t-h-e---l-i-n-e- -t-i-c-k-e-t-s- -a-t- -t-h-e- -C-h-e-n-g-d-u- -P-a-n-d-a- -B-a-s-e-,- -u-s-e- -[-K-l-o-o-k-]-(-h-t-t-p-s-:-/-/-k-l-o-o-k-.-t-p-o-.-l-i-/-p-p-B-4-v-Z-Q-6-)- -t-o- -l-o-c-k- -i-n- -y-o-u-r- -s-l-o-t-s- -e-a-r-l-y-!-
+-
+-
+-
+-I- -w-a-l-k-e-d- -i-n-t-o- -t-h-e- -p-a-n-d-a- -n-u-r-s-e-r-y-,- -a-n-d- -t-h-e-r-e- -t-h-e-y- -w-e-r-e-:- -a- -d-o-z-e-n- -f-l-u-f-f-y-,- -b-l-a-c-k---a-n-d---w-h-i-t-e- -p-o-t-a-t-o- -s-h-a-p-e-s-,- -a-l-l- -c-o-m-p-l-e-t-e-l-y- -u-n-c-o-n-s-c-i-o-u-s-.- -O-n-e- -w-a-s- -d-r-a-p-e-d- -o-v-e-r- -a- -b-r-a-n-c-h- -l-i-k-e- -a- -w-e-t- -t-o-w-e-l-.- -A-n-o-t-h-e-r- -w-a-s- -f-a-c-e-d-o-w-n- -i-n- -a- -p-i-l-e- -o-f- -b-a-m-b-o-o-,- -s-n-o-r-i-n-g- -s-o- -l-o-u-d- -I- -c-o-u-l-d- -h-e-a-r- -i-t- -t-h-r-o-u-g-h- -t-h-e- -g-l-a-s-s-.- -I- -s-t-o-o-d- -t-h-e-r-e-,- -j-e-t---l-a-g-g-e-d- -a-n-d- -c-o-f-f-e-e---j-i-t-t-e-r-y-,- -w-h-i-s-p-e-r-i-n-g-,- -W-a-k-e- -u-p-,- -y-o-u- -g-l-o-r-i-o-u-s- -b-a-s-t-a-r-d-s-.- -T-h-e-y- -d-i-d- -n-o-t- -w-a-k-e- -u-p-.- -T-h-e-y- -d-i-d- -n-o-t- -c-a-r-e-.- -I-t- -w-a-s- -m-y- -f-i-r-s-t- -l-e-s-s-o-n-:- -p-a-n-d-a-s- -o-p-e-r-a-t-e- -o-n- -t-h-e-i-r- -o-w-n- -s-c-h-e-d-u-l-e-.- -Y-o-u- -a-r-e- -j-u-s-t- -a- -g-u-e-s-t- -i-n- -t-h-e-i-r- -n-a-p- -h-o-u-s-e-.-
+-
+-*-*-T-h-e- -S-e-c-o-n-d- -A-t-t-e-m-p-t-:- -W-i-t-h- -L-o-c-a-l- -I-n-t-e-l-*-*-
+-
+-X-i-a-o- -L-i- -f-i-n-a-l-l-y- -r-e-l-e-n-t-e-d- -a-n-d- -c-a-m-e- -w-i-t-h- -m-e- -o-n- -m-y- -s-e-c-o-n-d- -t-r-i-p-.- -S-h-e- -t-o-l-d- -m-e- -t-h-r-e-e- -t-h-i-n-g-s- -t-h-a-t- -c-h-a-n-g-e-d- -m-y- -l-i-f-e-:-
+-
+-1-.- -*-*-G-o- -o-n- -a- -w-e-e-k-d-a-y-.-*-*- -W-e-e-k-e-n-d-s- -a-r-e- -a- -z-o-o- -o-f- -h-u-m-a-n-s-,- -a-n-d- -t-h-e- -p-a-n-d-a-s- -g-e-t- -o-v-e-r-w-h-e-l-m-e-d-.- -T-h-e-y- -h-i-d-e-.-
+-2-.- -*-*-A-r-r-i-v-e- -b-y- -7-:-3-0- -A-M-,- -b-u-t- -d-o-n-t- -e-x-p-e-c-t- -a-c-t-i-o-n- -u-n-t-i-l- -8-:-3-0-.-*-*- -T-h-e- -k-e-e-p-e-r-s- -b-r-i-n-g- -f-r-e-s-h- -b-a-m-b-o-o- -a-t- -8-:-3-0-,- -a-n-d- -t-h-a-t-s- -w-h-e-n- -t-h-e- -m-a-g-i-c- -h-a-p-p-e-n-s-.- -T-h-e- -p-a-n-d-a-s- -g-o- -f-r-o-m- -d-e-a-d- -t-o- -t-h-e- -w-o-r-l-d- -t-o- -a-g-g-r-e-s-s-i-v-e-l-y- -m-u-n-c-h-i-n-g- -i-n- -a-b-o-u-t- -3-0- -s-e-c-o-n-d-s-.- -I-t-s- -l-i-k-e- -w-a-t-c-h-i-n-g- -a- -s-l-o-w---m-o-t-i-o-n- -c-a-r- -c-r-a-s-h- -o-f- -c-u-t-e-n-e-s-s-.-
+-3-.- -*-*-T-h-e- -M-o-o-n-l-i-g-h-t- -N-u-r-s-e-r-y- -i-s- -t-h-e- -r-e-a-l- -d-e-a-l-.-*-*- -T-h-e- -m-a-i-n- -b-a-s-e- -i-s- -f-i-n-e-,- -b-u-t- -t-h-e- -M-o-o-n-l-i-g-h-t- -N-u-r-s-e-r-y- -(-a- -s-e-p-a-r-a-t-e- -a-r-e-a-)- -h-a-s- -t-h-e- -b-a-b-y- -p-a-n-d-a-s-.- -A-n-d- -l-e-t- -m-e- -t-e-l-l- -y-o-u-,- -s-e-e-i-n-g- -a- -b-a-b-y- -p-a-n-d-a- -t-r-y-i-n-g- -t-o- -c-l-i-m-b- -a- -t-r-e-e- -a-n-d- -f-a-i-l-i-n-g-,- -t-h-e-n- -r-o-l-l-i-n-g- -d-o-w-n- -a- -h-i-l-l-,- -i-s- -t-h-e- -c-l-o-s-e-s-t- -I-v-e- -e-v-e-r- -f-e-l-t- -t-o- -p-u-r-e- -j-o-y-.-
+-
+-W-e- -g-o-t- -t-h-e-r-e- -a-t- -7-:-1-5- -A-M-.- -B-y- -8-:-3-5-,- -I- -w-a-s- -s-t-a-n-d-i-n-g- -n-e-x-t- -t-o- -a- -p-a-n-d-a- -t-h-a-t- -w-a-s- -e-a-t-i-n-g- -b-a-m-b-o-o- -w-h-i-l-e- -s-i-t-t-i-n-g- -o-n- -a- -t-o-i-l-e-t-.- -I-t- -w-a-s- -n-o-t- -a-s-h-a-m-e-d-.- -I- -w-a-s-.- -X-i-a-o- -L-i- -w-a-s- -l-a-u-g-h-i-n-g- -a-t- -m-e-.- -S-e-e- -T-h-e-y-r-e- -j-u-s-t- -l-i-k-e- -y-o-u-r- -u-n-c-l-e- -a-f-t-e-r- -T-h-a-n-k-s-g-i-v-i-n-g- -d-i-n-n-e-r-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-*-*-T-h-e- -L-o-g-i-s-t-i-c-s- -T-h-a-t- -D-o-n-t- -S-u-c-k-*-*-
+-
+-H-e-r-e-s- -t-h-e- -p-r-a-c-t-i-c-a-l- -s-t-u-f-f-,- -b-e-c-a-u-s-e- -I- -k-n-o-w- -y-o-u- -n-e-e-d- -i-t-:-
+-
+--- -*-*-G-e-t-t-i-n-g- -t-h-e-r-e- -f-r-o-m- -B-e-i-j-i-n-g-:-*-*- -F-l-y-.- -S-e-r-i-o-u-s-l-y-.- -T-h-e- -b-u-l-l-e-t- -t-r-a-i-n- -i-s- -c-o-o-l-,- -b-u-t- -i-t- -e-a-t-s- -y-o-u-r- -w-h-o-l-e- -d-a-y-.- -B-o-o-k- -a- -6-:-0-0- -A-M- -f-l-i-g-h-t- -f-r-o-m- -B-e-i-j-i-n-g- -C-a-p-i-t-a-l- -(-P-E-K-)- -t-o- -C-h-e-n-g-d-u- -S-h-u-a-n-g-l-i-u- -(-C-T-U-)-.- -Y-o-u-'-l-l- -l-a-n-d- -a-r-o-u-n-d- -9-:-0-0- -A-M-.- -T-a-k-e- -a- -D-i-d-i- -(-C-h-i-n-a-'-s- -U-b-e-r-)- -d-i-r-e-c-t-l-y- -t-o- -t-h-e- -b-a-s-e-a-b-o-u-t- -3-5- -m-i-n-u-t-e-s-,- -m-a-y-b-e- -8-0- -R-M-B- -(-$-1-1-)-.- -Y-o-u-'-l-l- -b-e- -a-t- -t-h-e- -p-a-n-d-a- -e-n-t-r-a-n-c-e- -b-y- -1-0-:-0-0- -A-M-.- -T-h-a-t-'-s- -p-r-i-m-e- -"-p-a-n-d-a-s- -a-r-e- -s-t-i-l-l- -e-a-t-i-n-g-"- -t-i-m-e-.-
+--- -*-*-T-i-c-k-e-t-s-:-*-*- -B-o-o-k- -o-n-l-i-n-e- -i-n- -a-d-v-a-n-c-e-.- -T-h-e- -o-f-f-i-c-i-a-l- -W-e-C-h-a-t- -m-i-n-i---p-r-o-g-r-a-m- -i-s- -t-h-e- -e-a-s-i-e-s-t- -p-a-t-h-,- -b-u-t- -i-f- -y-o-u-'-r-e- -o-u-t-s-i-d-e- -C-h-i-n-a- -o-r- -d-o-n-'-t- -h-a-v-e- -a- -C-h-i-n-e-s-e- -p-h-o-n-e- -n-u-m-b-e-r- -s-e-t- -u-p- -y-e-t-,- -y-o-u-'-l-l- -n-e-e-d- -a- -V-P-N- -t-o- -a-c-c-e-s-s- -i-t- - -a-n-d- -h-o-n-e-s-t-l-y-,- -j-u-s-t- -u-s-e- -{-{-<- -k-l-o-o-k---l-i-n-k- -"-K-l-o-o-k-"- ->-}-}- -i-n-s-t-e-a-d-.- -F-o-r-e-i-g-n---f-r-i-e-n-d-l-y-,- -E-n-g-l-i-s-h- -i-n-t-e-r-f-a-c-e-,- -a-n-d- -y-o-u- -s-k-i-p- -t-h-e- -q-u-e-u-e- -a-t- -t-h-e- -g-a-t-e-.- -I-t-'-s- -a-b-o-u-t- -5-5- -R-M-B- -(-$-8-)-.- -W-o-r-t-h- -e-v-e-r-y- -p-e-n-n-y-.- -A-n-d- -w-h-i-l-e- -y-o-u-'-r-e- -a-t- -i-t-,- -g-r-a-b- -a-n- -e-S-I-M- -f-r-o-m- -{-{-<- -a-i-r-a-l-o---l-i-n-k- -"-A-i-r-a-l-o-"- ->-}-}- -b-e-f-o-r-e- -y-o-u- -l-a-n-d- - -t-r-u-s-t- -m-e-,- -I- -l-e-a-r-n-e-d- -t-h-i-s- -t-h-e- -h-a-r-d- -w-a-y- -w-h-e-n- -m-y- -U-S- -S-I-M- -c-r-a-p-p-e-d- -o-u-t- -a-t- -b-a-g-g-a-g-e- -c-l-a-i-m- -a-n-d- -I- -s-p-e-n-t- -a-n- -h-o-u-r- -t-r-y-i-n-g- -t-o- -c-o-n-n-e-c-t- -t-o- -a-i-r-p-o-r-t- -W-i---F-i-.- -Y-o-u-'-l-l- -n-e-e-d- -t-h-a-t- -d-a-t-a- -f-o-r- -D-i-d-i-,- -W-e-C-h-a-t-,- -a-n-d- -n-a-v-i-g-a-t-i-n-g- -t-h-e- -b-a-s-e- -w-i-t-h-o-u-t- -l-o-o-k-i-n-g- -l-i-k-e- -a- -l-o-s-t- -t-o-u-r-i-s-t-.-
+--- -*-*-W-h-a-t- -t-o- -b-r-i-n-g-:-*-*- -W-a-t-e-r-,- -a- -h-a-t- -(-C-h-e-n-g-d-u- -i-s- -m-u-g-g-y-)-,- -a-n-d- -p-a-t-i-e-n-c-e-.- -D-o-n-'-t- -b-r-i-n-g- -y-o-u-r- -o-w-n- -b-a-m-b-o-o-.- -T-r-u-s-t- -m-e-,- -t-h-e- -p-a-n-d-a-s- -a-r-e- -p-i-c-k-y-.- -T-h-e-y- -w-i-l-l- -l-o-o-k- -a-t- -y-o-u-r- -g-r-o-c-e-r-y---s-t-o-r-e- -b-a-m-b-o-o- -l-i-k-e- -y-o-u-'-r-e- -o-f-f-e-r-i-n-g- -t-h-e-m- -a- -g-a-s---s-t-a-t-i-o-n- -b-u-r-r-i-t-o-.-
+--- -*-*-I-f- -y-o-u- -w-a-n-t- -t-o- -m-a-k-e- -a-n- -o-v-e-r-n-i-g-h-t- -t-r-i-p- -o-f- -i-t-:-*-*- -S-t-a-y- -a-t- -t-h-e- -{-{-<- -b-o-o-k-i-n-g---l-i-n-k- -"-C-h-e-n-g-d-u- -L-a-z-y-b-o-n-e-s- -H-o-s-t-e-l-"- ->-}-}- -n-e-a-r- -t-h-e- -b-a-s-e- - -i-t-'-s- -c-h-e-a-p-,- -c-l-e-a-n-,- -a-n-d- -h-a-s- -a- -r-o-o-f-t-o-p- -b-a-r- -w-h-e-r-e- -y-o-u- -c-a-n- -d-e-c-o-m-p-r-e-s-s- -a-f-t-e-r- -a- -d-a-y- -o-f- -p-a-n-d-a---g-a-w-k-i-n-g-.- -O-r- -i-f- -y-o-u-'-r-e- -f-a-n-c-y-,- -t-h-e- -{-{-<- -b-o-o-k-i-n-g---l-i-n-k- -"-C-h-e-n-g-d-u- -M-a-r-r-i-o-t-t- -H-o-t-e-l- -F-i-n-a-n-c-i-a-l- -C-e-n-t-e-r-"- ->-}-}- -i-s- -a- -s-o-l-i-d- -c-h-o-i-c-e-.- -E-i-t-h-e-r- -w-a-y-,- -y-o-u-'-l-l- -b-e- -c-l-o-s-e- -e-n-o-u-g-h- -t-o- -h-i-t- -t-h-e- -b-a-s-e- -a-t- -7- -A-M- -w-i-t-h-o-u-t- -w-a-k-i-n-g- -u-p- -a-t- -4-.-
+-
+->- -*-*-S-t-a-y- -S-m-a-r-t-:-*-*- -L-o-o-k-i-n-g- -f-o-r- -c-o-m-f-o-r-t-a-b-l-e- -a-c-c-o-m-m-o-d-a-t-i-o-n- -w-i-t-h- -g-r-e-a-t- -r-e-v-i-e-w-s- -B-o-o-k- -t-h-r-o-u-g-h- -o-u-r- -p-a-r-t-n-e-r- -f-o-r- -t-h-e- -b-e-s-t- -r-a-t-e-s-.- -(-#-T-P-_-B-O-O-K-I-N-G-_-P-L-A-C-E-H-O-L-D-E-R-#-)-
+-
+-
+-
+-*-*-T-h-e- -R-e-a-l- -M-a-g-i-c-*-*-
+-
+-T-h-e- -b-e-s-t- -m-o-m-e-n-t- -o-f- -m-y- -d-a-y- -w-a-s-n-t- -e-v-e-n- -t-h-e- -p-a-n-d-a-s-.- -I-t- -w-a-s- -w-a-t-c-h-i-n-g- -a- -g-r-o-u-p- -o-f- -C-h-i-n-e-s-e- -t-o-u-r-i-s-t-s-g-r-a-n-d-p-a-r-e-n-t-s-,- -p-a-r-e-n-t-s-,- -a-n-d- -a- -t-o-d-d-l-e-r-a-l-l- -s-t-a-r-i-n-g- -a-t- -a- -p-a-n-d-a- -t-h-a-t- -w-a-s- -m-e-t-h-o-d-i-c-a-l-l-y- -p-e-e-l-i-n-g- -a- -b-a-m-b-o-o- -s-t-a-l-k-.- -T-h-e- -t-o-d-d-l-e-r- -p-o-i-n-t-e-d- -a-n-d- -s-a-i-d-,- - -(-M-o-m-,- -i-t-s- -s-o- -l-a-z-y-!-)-.- -T-h-e- -g-r-a-n-d-f-a-t-h-e-r- -l-a-u-g-h-e-d- -a-n-d- -s-a-i-d-,- -.- -(-J-u-s-t- -l-i-k-e- -y-o-u-r- -d-a-d-)-.- -E-v-e-r-y-o-n-e- -c-r-a-c-k-e-d- -u-p-.- -F-o-r- -a- -s-e-c-o-n-d-,- -I- -f-o-r-g-o-t- -I- -w-a-s- -a- -f-o-r-e-i-g-n-e-r-.- -I- -w-a-s- -j-u-s-t- -a-n-o-t-h-e-r- -p-e-r-s-o-n- -i-n- -a- -c-r-o-w-d- -o-f- -p-a-n-d-a---w-o-r-s-h-i-p-p-e-r-s-.-
+-
+-S-o- -g-o-.- -T-a-k-e- -t-h-e- -f-l-i-g-h-t-.- -W-a-k-e- -u-p- -e-a-r-l-y-.- -D-o-n-t- -t-r-y- -t-o- -h-u-g- -o-n-e-.- -A-n-d- -i-f- -y-o-u- -s-e-e- -a- -p-a-n-d-a- -s-l-e-e-p-i-n-g- -o-n- -a- -b-r-a-n-c-h-,- -j-u-s-t- -k-n-o-w-:- -i-t-s- -l-i-v-i-n-g- -i-t-s- -b-e-s-t- -l-i-f-e-.- -Y-o-u- -s-h-o-u-l-d- -t-o-o-.-
+-
