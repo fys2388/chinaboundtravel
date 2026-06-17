@@ -1241,35 +1241,45 @@ class FeishuNotifier:
         return base64.b64encode(signature).decode('utf-8')
     
     def send_daily_report(self, report_summary):
-        """"""
+        """发送日报到飞书"""
         if not self.webhook_url:
-            logger.warning(" Webhook ")
+            logger.warning("Feishu Webhook URL 未配置，跳过飞书通知")
             return False
         
         try:
-            timestamp = str(int(datetime.now().timestamp()))
-            signature = self._generate_signature(timestamp)
-            
-            headers = {
-                "Content-Type": "application/json",
-            }
-            
             payload = {
-                "timestamp": timestamp,
-                "sign": signature,
                 "msg_type": "text",
                 "content": {
                     "text": report_summary
                 }
             }
             
-            response = requests.post(self.webhook_url, headers=headers, json=payload, timeout=10)
+            # 仅当配置了 secret 时才附加签名信息
+            if self.secret:
+                timestamp = str(int(datetime.now().timestamp()))
+                signature = self._generate_signature(timestamp)
+                payload["timestamp"] = timestamp
+                payload["sign"] = signature
+                logger.info(f"飞书: 已启用签名验证 (timestamp={timestamp[:8]}...)")
+            else:
+                logger.info("飞书: 未配置签名密钥，以明文模式发送")
+            
+            response = requests.post(self.webhook_url, headers={"Content-Type": "application/json"}, json=payload, timeout=10)
+            
+            logger.info(f"飞书 HTTP 状态: {response.status_code}")
+            logger.info(f"飞书 HTTP 响应: {response.text[:200]}")
             response.raise_for_status()
-            logger.info("")
-            return True
+            
+            data = response.json()
+            if data.get("code") == 0:
+                logger.info("飞书通知发送成功")
+                return True
+            else:
+                logger.error(f"飞书返回错误: code={data.get('code')}, msg={data.get('msg')}")
+                return False
             
         except Exception as e:
-            logger.error(f": {e}")
+            logger.error(f"飞书通知发送异常: {e}")
             return False
 
 
