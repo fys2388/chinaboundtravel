@@ -1,8 +1,8 @@
 {
-  "month_post_count": 14,
+  "month_post_count": 15,
   "last_reset_date": "2026-06-01",
   "last_social_publish": "2026-06-03 21:10:37",
-  "daily_social_publish_date": "2026-06-16",
+  "daily_social_publish_date": "2026-06-17",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -80,6 +80,11 @@
       "topic": "accommodation tips",
       "geo_region": "EU",
       "create_date": "2026-06-16"
+    },
+    {
+      "topic": "accommodation tips",
+      "geo_region": "US",
+      "create_date": "2026-06-17"
     }
   ],
   "keyword_convert_rate": {
