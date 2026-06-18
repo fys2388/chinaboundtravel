@@ -707,7 +707,7 @@ class BlogGenerator:
         return self.manifest.check_topic_repeat(topic, "global", days)
     
     def select_topic(self, attempt=1):
-        """选择选题 - 根据尝试次数选择不同选题库"""
+        """选择选题 - 优先从外部选题库选择，只有选题库为空时才回退到内置选题库"""
         geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
         if geo_convert_rates:
             regions = list(geo_convert_rates.keys())
@@ -716,7 +716,33 @@ class BlogGenerator:
         else:
             geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
-        # 根据尝试次数选择选题库
+        # 优先从外部选题库选择（100%概率，不再回退到旧选题库）
+        topic_pool = self.load_topic_pool()
+        if topic_pool:
+            available_topics = [t for t in topic_pool 
+                              if t.get("status") == "pending"
+                              and t.get("geo") == geo_region
+                              and t.get("title") not in self.used_topics]
+            
+            if available_topics:
+                topic_data = random.choice(available_topics)
+                topic = topic_data["title"]
+                self.used_topics.add(topic)
+                return topic, geo_region
+            
+            # 如果当前地域没有可用选题，尝试其他地域
+            available_topics = [t for t in topic_pool 
+                              if t.get("status") == "pending"
+                              and t.get("title") not in self.used_topics]
+            
+            if available_topics:
+                topic_data = random.choice(available_topics)
+                topic = topic_data["title"]
+                geo_region = topic_data.get("geo", geo_region)
+                self.used_topics.add(topic)
+                return topic, geo_region
+        
+        # 只有当外部选题库为空或所有选题都已使用时，才回退到内置选题库
         if attempt == 1:
             topics = TOPIC_LIBRARY["main"]
         elif attempt == 2:
@@ -724,7 +750,6 @@ class BlogGenerator:
         else:
             topics = TOPIC_LIBRARY["universal"]
         
-        # 随机选择一个未使用且不在冷却期的选题
         available_topics = [t for t in topics if t not in self.used_topics and not self.check_cooldown(t)]
         
         if available_topics:

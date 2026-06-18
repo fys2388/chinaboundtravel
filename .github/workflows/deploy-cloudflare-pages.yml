@@ -51,3 +51,12 @@ jobs:
           python chinaboundtravel_social_bot/social_publisher.py || echo "社媒发布跳过"
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+
+      - name: Purge Cloudflare CDN Cache
+        run: |
+          echo "=== Purging Cloudflare CDN cache ==="
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything":true}' \
+            --fail --show-error --silent || echo "Cache purge skipped (CLOUDFLARE_ZONE_ID may not be set)"
