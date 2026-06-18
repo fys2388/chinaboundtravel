@@ -183,9 +183,9 @@
       "hash": "21487821931ff6dba72640f3f80a7afe",
       "type": "Encoding Error",
       "message": "Bad char: ‍",
-      "occurrences": 1,
+      "occurrences": 2,
       "first_seen": "2026-06-17T10:21:00.275193",
-      "last_seen": "2026-06-17T10:21:00.275196",
+      "last_seen": "2026-06-18T05:30:24.380191",
       "files": [
         "hangzhou.md"
       ],
@@ -234,9 +234,9 @@
       "hash": "9ef3db79ccfcf12ac9b10df8fb5685bf",
       "type": "",
       "message": ": title",
-      "occurrences": 15,
+      "occurrences": 17,
       "first_seen": "2026-06-17T10:21:00.279795",
-      "last_seen": "2026-06-17T10:21:00.302635",
+      "last_seen": "2026-06-18T05:30:24.385418",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -252,7 +252,9 @@
         "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
         "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md"
+        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
+        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -261,9 +263,9 @@
       "hash": "1245bc52890a99a7e88982a689840c5a",
       "type": "",
       "message": ": description",
-      "occurrences": 15,
+      "occurrences": 17,
       "first_seen": "2026-06-17T10:21:00.280054",
-      "last_seen": "2026-06-17T10:21:00.302928",
+      "last_seen": "2026-06-18T05:30:24.385951",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -279,7 +281,9 @@
         "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
         "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md"
+        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
+        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -288,9 +292,9 @@
       "hash": "357eedb10c8daa1d6e97be62254ebd5e",
       "type": "",
       "message": ": date",
-      "occurrences": 15,
+      "occurrences": 17,
       "first_seen": "2026-06-17T10:21:00.280322",
-      "last_seen": "2026-06-17T10:21:00.303269",
+      "last_seen": "2026-06-18T05:30:24.386477",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -306,7 +310,9 @@
         "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
         "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md"
+        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
+        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -315,9 +321,9 @@
       "hash": "19e85d1c9af72bfe741a35afbb508d61",
       "type": "",
       "message": ": author",
-      "occurrences": 15,
+      "occurrences": 17,
       "first_seen": "2026-06-17T10:21:00.280615",
-      "last_seen": "2026-06-17T10:21:00.303584",
+      "last_seen": "2026-06-18T05:30:24.387072",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -333,7 +339,9 @@
         "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
         "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md"
+        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
+        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -382,9 +390,9 @@
       "hash": "d41d8cd98f00b204e9800998ecf8427e",
       "type": "",
       "message": "",
-      "occurrences": 34,
+      "occurrences": 36,
       "first_seen": "2026-06-17T10:21:00.307347",
-      "last_seen": "2026-06-17T10:21:00.319336",
+      "last_seen": "2026-06-18T05:30:24.388928",
       "files": [
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
         "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
@@ -441,7 +449,7 @@
   ],
   "resolved_count": 5,
   "total_errors": 25,
-  "last_updated": "2026-06-17T10:21:00.319337",
+  "last_updated": "2026-06-18T05:30:24.388932",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
