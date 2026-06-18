@@ -1,0 +1,150 @@
+{{- /* Home Page Banner Section */ -}}
+<section class="home-banner">
+    <div class="banner-inner">
+        <div class="banner-content">
+            <p class="banner-kicker">🇨🇳 Your Trusted China Travel Guide</p>
+            <h1 class="banner-headline">Travel China <span class="highlight">Easily</span></h1>
+            <p class="banner-sub">Practical Guide for Foreigners · Visa, Internet, Payment &amp; City Tips</p>
+            <p class="banner-author">Written by <strong>Joran</strong> · American Living in Chengdu</p>
+            <div class="banner-cta">
+                <a href="/search/" class="banner-btn-primary">🔍 Start Searching</a>
+                <a href="/categories/" class="banner-btn-secondary">📂 Browse Topics</a>
+            </div>
+        </div>
+        <div class="banner-visual">
+            <div class="banner-illustration">
+                <span style="font-size:6rem">🏔️</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.home-banner {
+    background: linear-gradient(135deg, #e8f0f8 0%, #f0f5fa 60%, #ffffff 100%);
+    border-bottom: 1px solid #e0e4e8;
+    padding: 3.5rem 0 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.banner-kicker {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #3A6EA5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+}
+
+.banner-headline {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #111;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.1;
+}
+
+.banner-headline .highlight {
+    color: #3A6EA5;
+}
+
+.banner-sub {
+    font-size: 1.05rem;
+    color: #555;
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+}
+
+.banner-author {
+    font-size: 0.88rem;
+    color: #888;
+    margin: 0 0 1.5rem 0;
+}
+
+.banner-cta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.banner-btn-primary {
+    background: #3A6EA5;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.banner-btn-primary:hover {
+    background: #2d5a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58,110,165,0.3);
+    color: white;
+}
+
+.banner-btn-secondary {
+    background: white;
+    color: #3A6EA5;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    border: 2px solid #3A6EA5;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.banner-btn-secondary:hover {
+    background: #e8f0f8;
+    transform: translateY(-2px);
+    color: #2d5a8a;
+    border-color: #2d5a8a;
+}
+
+.banner-visual {
+    flex-shrink: 0;
+}
+
+.banner-illustration {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .home-banner {
+        padding: 2rem 0 2rem;
+    }
+    .banner-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-headline {
+        font-size: 2rem;
+    }
+    .banner-cta {
+        justify-content: center;
+    }
+    .banner-visual {
+        display: none;
+    }
+}
+</style>
