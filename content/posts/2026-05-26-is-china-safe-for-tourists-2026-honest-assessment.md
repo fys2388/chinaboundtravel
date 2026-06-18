@@ -1,149 +1,110 @@
--------
--t-i-t-l-e-:- -I-s- -C-h-i-n-a- -S-a-f-e- -f-o-r- -T-o-u-r-i-s-t-s- -i-n- -2-0-2-6- -A-n- -H-o-n-e-s-t- -S-a-f-e-t-y- -A-s-s-e-s-s-m-e-n-t-
--c-o-v-e-r-:-
-- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-i-m-g-/-c-h-i-n-a---d-e-s-t-/-g-e-n-e-r-a-l-/-2-0-2-6---0-5---2-6---i-s---c-h-i-n-a---s-a-f-e---f-o-r---t-o-u-r-i-s-t-s---2-0-2-6---h-o-n-e-s-t---a-s-s-e-s-s-m-e-n-t-.-j-p-g-"-
--d-e-s-c-r-i-p-t-i-o-n-:- -C-r-i-m-e- -r-a-t-e-s-,- -f-o-o-d- -s-a-f-e-t-y-,- -p-o-l-i-t-i-c-a-l- -s-t-a-b-i-l-i-t-y-,- -s-c-a-m-s- -t-a-r-g-e-t-i-n-g- -t-o-u-r-i-s-t-s-,-
-- - -h-e-a-l-t-h-c-a-r-e- -a-c-c-e-s-s-,- -a-n-d- -e-m-e-r-g-e-n-c-y- -c-o-n-t-a-c-t-s- - -a- -n-o---B-S- -s-a-f-e-t-y- -g-u-i-d-e- -f-o-r- -f-o-r-e-i-g-n- -t-r-a-v-e-l-e-r-s-
-- - -i-n- -C-h-i-n-a- -i-n- -2-0-2-6-.-
--d-a-t-e-:- -'-2-0-2-6---0-5---2-7-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-'-
--a-u-t-h-o-r-:- -J-o-r-a-n-
--t-a-g-s-:-
---- -c-h-i-n-a---s-a-f-e-t-y-
---- -c-h-i-n-a---t-r-a-v-e-l---t-i-p-s-
---- -i-s---c-h-i-n-a---s-a-f-e-
---- -t-r-a-v-e-l---a-d-v-i-s-o-r-y-
---- -c-h-i-n-a---g-u-i-d-e-
--c-a-t-e-g-o-r-i-e-s-:-
---- -c-h-i-n-a---g-u-i-d-e-
--p-a-r-a-m-s-:-
-- - -k-e-y-w-o-r-d-s-:-
-- - --- -i-s- -c-h-i-n-a- -s-a-f-e- -t-o- -t-r-a-v-e-l-
-- - --- -c-h-i-n-a- -t-r-a-v-e-l- -s-a-f-e-t-y- -2-0-2-6-
-- - --- -c-h-i-n-a- -c-r-i-m-e- -r-a-t-e- -t-o-u-r-i-s-t-s-
-- - --- -c-h-i-n-a- -s-a-f-e-t-y- -t-i-p-s-
-- - --- -f-o-r-e-i-g-n-e-r-s- -i-n- -c-h-i-n-a- -s-a-f-e-t-y-
-- - -f-a-q-:-
-- - --- -q-u-e-s-t-i-o-n-:- -I-s- -C-h-i-n-a- -s-a-f-e- -f-o-r- -t-o-u-r-i-s-t-s- -i-n- -2-0-2-6-
-- - - - -a-n-s-w-e-r-:- -Y-e-s- - -s-t-a-t-i-s-t-i-c-a-l-l-y- -o-n-e- -o-f- -t-h-e- -s-a-f-e-r- -m-a-j-o-r- -d-e-s-t-i-n-a-t-i-o-n-s- -f-o-r- -f-o-r-e-i-g-n-e-r-s-.-
-- - - - - - -V-i-o-l-e-n-t- -c-r-i-m-e- -a-g-a-i-n-s-t- -t-o-u-r-i-s-t-s- -i-s- -e-x-t-r-e-m-e-l-y- -r-a-r-e-.- -T-h-e- -m-a-i-n- -r-i-s-k-s- -a-r-e- -p-e-t-t-y- -t-h-e-f-t-,-
-- - - - - - -s-c-a-m-s- -t-a-r-g-e-t-i-n-g- -f-o-r-e-i-g-n-e-r-s- -i-n- -t-o-u-r-i-s-t- -a-r-e-a-s-,- -a-n-d- -f-o-o-d-b-o-r-n-e- -i-l-l-n-e-s-s- -f-r-o-m- -s-t-r-e-e-t-
-- - - - - - -f-o-o-d- -h-y-g-i-e-n-e- -v-a-r-i-a-b-i-l-i-t-y-.-
-- - --- -q-u-e-s-t-i-o-n-:- -I-s- -t-h-e-r-e- -p-o-l-i-t-i-c-a-l- -u-n-r-e-s-t- -t-h-a-t- -t-o-u-r-i-s-t-s- -s-h-o-u-l-d- -w-o-r-r-y- -a-b-o-u-t-
-- - - - -a-n-s-w-e-r-:- -G-e-n-e-r-a-l-l-y- -n-o-.- -P-r-o-t-e-s-t-s- -a-r-e- -r-a-r-e- -a-n-d- -a-l-m-o-s-t- -n-e-v-e-r- -t-a-r-g-e-t- -t-o-u-r-i-s-t-s-.- -T-h-e-
-- - - - - - -g-o-v-e-r-n-m-e-n-t- -m-a-i-n-t-a-i-n-s- -h-e-a-v-y- -s-e-c-u-r-i-t-y- -i-n- -t-o-u-r-i-s-t- -a-r-e-a-s-.- -A-n-y- -p-o-l-i-t-i-c-a-l-l-y- -s-e-n-s-i-t-i-v-e-
-- - - - - - -a-r-e-a-s- -y-o-u- -s-h-o-u-l-d- -a-v-o-i-d- -w-i-l-l- -b-e- -o-b-v-i-o-u-s- - -g-u-i-d-e-s- -a-n-d- -h-o-t-e-l-s- -w-i-l-l- -t-e-l-l- -y-o-u-.-
-- - --- -q-u-e-s-t-i-o-n-:- -H-o-w- -c-o-m-m-o-n- -a-r-e- -s-c-a-m-s- -t-a-r-g-e-t-i-n-g- -t-o-u-r-i-s-t-s- -i-n- -C-h-i-n-a-
-- - - - -a-n-s-w-e-r-:- -'-C-o-m-m-o-n- -e-n-o-u-g-h- -t-o- -b-e- -a-w-a-r-e-,- -r-a-r-e- -e-n-o-u-g-h- -n-o-t- -t-o- -r-u-i-n- -y-o-u-r- -t-r-i-p-.- -M-a-i-n- -s-c-a-m-s-:-
-- - - - - - -t-e-a-h-o-u-s-e- -s-c-a-m-s- -(-p-r-i-c-e- -m-a-n-i-p-u-l-a-t-i-o-n-)-,- -t-a-x-i- -d-r-i-v-e-r-s- -n-o-t- -u-s-i-n-g- -t-h-e- -m-e-t-e-r-,- -a-n-d- -f-a-k-e-
-- - - - - - -t-o-u-r- -o-p-e-r-a-t-o-r-s-.- -A-l-l- -s-o-l-v-a-b-l-e- -b-y- -u-s-i-n-g- -D-i-d-i-,- -b-o-o-k-i-n-g- -a-t-t-r-a-c-t-i-o-n-s- -d-i-r-e-c-t-l-y-,- -a-n-d-
-- - - - - - -w-a-l-k-i-n-g- -a-w-a-y- -f-r-o-m- -a-g-g-r-e-s-s-i-v-e- -s-o-l-i-c-i-t-a-t-i-o-n-s-.-'-
-- - --- -q-u-e-s-t-i-o-n-:- -C-a-n- -f-o-r-e-i-g-n-e-r-s- -u-s-e- -e-m-e-r-g-e-n-c-y- -s-e-r-v-i-c-e-s- -i-n- -C-h-i-n-a-
-- - - - -a-n-s-w-e-r-:- -'-Y-e-s-:- -P-o-l-i-c-e- -1-1-0-,- -A-m-b-u-l-a-n-c-e- -1-2-0-,- -F-i-r-e- -1-1-9-.- -E-n-g-l-i-s-h- -o-p-e-r-a-t-o-r-s- -a-r-e- -h-i-t---o-r---m-i-s-s-
-- - - - - - -o-u-t-s-i-d-e- -m-a-j-o-r- -c-i-t-i-e-s-.- -C-a-r-r-y- -y-o-u-r- -h-o-t-e-l-'-'-s- -b-u-s-i-n-e-s-s- -c-a-r-d- -i-n- -C-h-i-n-e-s-e- -c-h-a-r-a-c-t-e-r-s-
-- - - - - - -s-o- -e-m-e-r-g-e-n-c-y- -r-e-s-p-o-n-d-e-r-s- -k-n-o-w- -y-o-u-r- -l-o-c-a-t-i-o-n-.- -M-a-j-o-r- -h-o-s-p-i-t-a-l-s- -i-n- -B-e-i-j-i-n-g-,- -S-h-a-n-g-h-a-i-,-
-- - - - - - -a-n-d- -X-i-'-'-a-n- -h-a-v-e- -i-n-t-e-r-n-a-t-i-o-n-a-l- -c-l-i-n-i-c-s- -w-i-t-h- -E-n-g-l-i-s-h---s-p-e-a-k-i-n-g- -s-t-a-f-f-.-'-
-- - --- -q-u-e-s-t-i-o-n-:- -W-h-a-t- -a-b-o-u-t- -f-o-o-d- -s-a-f-e-t-y- -f-o-r- -t-o-u-r-i-s-t-s-
-- - - - -a-n-s-w-e-r-:- -G-e-n-e-r-a-l-l-y- -f-i-n-e- - -C-h-i-n-e-s-e- -f-o-o-d- -s-a-f-e-t-y- -s-t-a-n-d-a-r-d-s- -h-a-v-e- -i-m-p-r-o-v-e-d- -d-r-a-m-a-t-i-c-a-l-l-y-
-- - - - - - -s-i-n-c-e- -2-0-1-0-.- -G-i-v-e- -y-o-u-r- -g-u-t- -2---3- -d-a-y-s- -t-o- -a-d-j-u-s-t-.- -S-t-i-c-k- -t-o- -w-e-l-l---c-o-o-k-e-d- -f-o-o-d- -a-n-d-
-- - - - - - -d-r-i-n-k- -s-e-a-l-e-d- -b-o-t-t-l-e-d- -w-a-t-e-r- -i-n- -r-u-r-a-l- -a-r-e-a-s- -d-u-r-i-n-g- -t-h-e- -a-d-j-u-s-t-m-e-n-t- -p-e-r-i-o-d-.-
-- - --- -q-u-e-s-t-i-o-n-:- -I-s- -i-t- -s-a-f-e- -t-o- -t-r-a-v-e-l- -a-l-o-n-e- -a-s- -a- -w-o-m-a-n- -i-n- -C-h-i-n-a-
-- - - - -a-n-s-w-e-r-:- -Y-e-s-,- -w-i-t-h- -s-t-a-n-d-a-r-d- -s-o-l-o---t-r-a-v-e-l- -p-r-e-c-a-u-t-i-o-n-s-.- -C-h-i-n-a-'-s- -c-i-t-i-e-s- -a-r-e- -g-e-n-e-r-a-l-l-y-
-- - - - - - -s-a-f-e- -f-o-r- -w-o-m-e-n- -a-t- -a-n-y- -h-o-u-r-.- -H-a-r-a-s-s-m-e-n-t- -i-s- -l-e-s-s- -c-o-m-m-o-n- -t-h-a-n- -i-n- -m-a-n-y- -W-e-s-t-e-r-n- -c-i-t-i-e-s-.-
-- - - - - - -T-h-e- -m-a-i-n- -i-s-s-u-e-s- -a-r-e- -u-n-w-a-n-t-e-d- -a-t-t-e-n-t-i-o-n- -i-n- -t-o-u-r-i-s-t- -a-r-e-a-s- -a-n-d- -b-e-i-n-g- -o-v-e-r-c-h-a-r-g-e-d-.-
-- - --- -q-u-e-s-t-i-o-n-:- -D-o-e-s- -C-h-i-n-a- -h-a-v-e- -g-o-o-d- -h-e-a-l-t-h-c-a-r-e- -f-o-r- -f-o-r-e-i-g-n-e-r-s-
-- - - - -a-n-s-w-e-r-:- -M-a-j-o-r- -c-i-t-i-e-s- -h-a-v-e- -e-x-c-e-l-l-e-n-t- -i-n-t-e-r-n-a-t-i-o-n-a-l- -c-l-i-n-i-c-s- -a-n-d- -J-C-I---a-c-c-r-e-d-i-t-e-d- -h-o-s-p-i-t-a-l-s-.-
-- - - - - - -R-u-r-a-l- -a-r-e-a-s- -h-a-v-e- -b-a-s-i-c- -c-l-i-n-i-c-s-.- -C-a-r-r-y- -t-r-a-v-e-l- -i-n-s-u-r-a-n-c-e- -t-h-a-t- -c-o-v-e-r-s- -C-h-i-n-a- - -y-o-u-r-
-- - - - - - -h-o-m-e- -c-o-u-n-t-r-y- -p-o-l-i-c-y- -l-i-k-e-l-y- -d-o-e-s-n-'-t-.- -B-a-s-i-c- -h-e-a-l-t-h-c-a-r-e- -i-s- -a-f-f-o-r-d-a-b-l-e-;- -c-o-m-p-l-e-x-
-- - - - - - -t-r-e-a-t-m-e-n-t- -o-r- -m-e-d-i-c-a-l- -e-v-a-c-u-a-t-i-o-n- -i-s- -e-x-p-e-n-s-i-v-e-.-
-- - --- -q-u-e-s-t-i-o-n-:- -A-r-e- -t-h-e-r-e- -a-r-e-a-s- -o-f- -C-h-i-n-a- -o-f-f---l-i-m-i-t-s- -t-o- -t-o-u-r-i-s-t-s-
-- - - - -a-n-s-w-e-r-:- -T-i-b-e-t- -r-e-q-u-i-r-e-s- -a- -s-p-e-c-i-a-l- -p-e-r-m-i-t- -a-n-d- -g-o-v-e-r-n-m-e-n-t---o-r-g-a-n-i-z-e-d- -g-u-i-d-e-.- -P-a-r-t-s-
-- - - - - - -o-f- -X-i-n-j-i-a-n-g- -n-e-a-r- -b-o-r-d-e-r-s- -h-a-v-e- -r-e-s-t-r-i-c-t-e-d- -z-o-n-e-s-.- -M-i-l-i-t-a-r-y- -a-r-e-a-s- -a-r-e- -o-f-f---l-i-m-i-t-s-.-
-- - - - - - -Y-o-u-r- -h-o-t-e-l- -o-r- -t-r-a-v-e-l- -a-g-e-n-t- -w-i-l-l- -i-n-f-o-r-m- -y-o-u- -o-f- -r-e-s-t-r-i-c-t-i-o-n-s- -f-o-r- -y-o-u-r- -p-l-a-n-n-e-d-
-- - - - - - -r-o-u-t-e-.-
--------
--
--#-#- -T-h-e- -M-o-s-t- -H-o-n-e-s-t- -C-h-i-n-a- -S-a-f-e-t-y- -A-n-a-l-y-s-i-s- -Y-o-u-'-l-l- -F-i-n-d-
--
--*-*-B-y- -J-o-r-a-n- -|- -1-0-+- -y-e-a-r-s- -l-i-v-i-n-g- -i-n- -a-n-d- -t-r-a-v-e-l-i-n-g- -C-h-i-n-a-*-*-
--
--E-v-e-r-y- -s-a-f-e-t-y- -a-r-t-i-c-l-e- -a-b-o-u-t- -C-h-i-n-a- -f-a-l-l-s- -i-n-t-o- -o-n-e- -o-f- -t-w-o- -t-r-a-p-s-:- -e-i-t-h-e-r- -i-t- -p-a-i-n-t-s- -C-h-i-n-a- -a-s- -a- -d-y-s-t-o-p-i-a-n- -h-e-l-l-h-o-l-e- -w-h-e-r-e- -t-o-u-r-i-s-t-s- -g-e-t- -a-r-r-e-s-t-e-d- -f-o-r- -n-o-t-h-i-n-g-,- -o-r- -i-t- -o-v-e-r-c-o-r-r-e-c-t-s- -i-n-t-o- -"-a-c-t-u-a-l-l-y- -i-t-'-s- -s-u-p-e-r- -s-a-f-e-,- -n-o-t-h-i-n-g- -t-o- -w-o-r-r-y- -a-b-o-u-t-.-"- -T-h-e- -t-r-u-t-h- -i-s- -m-o-r-e- -n-u-a-n-c-e-d- - -a-n-d- -m-o-r-e- -u-s-e-f-u-l-.-
--
--I-'-v-e- -b-e-e-n- -r-o-b-b-e-d- -o-n-c-e- -(-2-0-1-4-)-,- -s-c-a-m-m-e-d- -a- -d-o-z-e-n- -t-i-m-e-s-,- -h-a-d- -f-o-o-d- -p-o-i-s-o-n-i-n-g- -t-h-r-e-e- -t-i-m-e-s-,- -a-n-d- -n-e-e-d-e-d- -h-o-s-p-i-t-a-l-s- -t-w-i-c-e-.- -I-'-v-e- -a-l-s-o- -w-a-l-k-e-d- -h-o-m-e- -a-l-o-n-e- -a-t- -3- -A-M- -t-h-r-o-u-g-h- -C-h-e-n-g-d-u-'-s- -c-o-o-l-e-s-t- -n-e-i-g-h-b-o-r-h-o-o-d-s- -w-i-t-h-o-u-t- -a- -s-i-n-g-l-e- -u-n-c-o-m-f-o-r-t-a-b-l-e- -m-o-m-e-n-t-.-
--
--*-*-H-e-r-e-'-s- -t-h-e- -a-c-t-u-a-l- -r-i-s-k- -m-a-t-r-i-x- -f-o-r- -2-0-2-6-.-*-*-
--
--------
--
--#-#- -R-i-s-k- -M-a-t-r-i-x-:- -W-h-a-t- -A-c-t-u-a-l-l-y- -T-h-r-e-a-t-e-n-s- -T-o-u-r-i-s-t-s-
--
--|- -R-i-s-k- -C-a-t-e-g-o-r-y- -|- -R-e-a-l- -L-e-v-e-l- -|- -W-h-a-t- -I-t- -L-o-o-k-s- -L-i-k-e- -|- -P-r-e-v-e-n-t-i-o-n- -|-
--|-----------------------------|-------------------------|---------------------------------------|-------------------------|-
--|- -V-i-o-l-e-n-t- -c-r-i-m-e- -|- - -E-x-t-r-e-m-e-l-y- -L-o-w- -|- -A-l-m-o-s-t- -u-n-h-e-a-r-d- -o-f- -a-g-a-i-n-s-t- -t-o-u-r-i-s-t-s- -|- -S-t-a-n-d-a-r-d- -u-r-b-a-n- -a-w-a-r-e-n-e-s-s- -|-
--|- -P-e-t-t-y- -t-h-e-f-t- -|- - -L-o-w- -|- -P-i-c-k-p-o-c-k-e-t-s- -o-n- -s-u-b-w-a-y- -d-u-r-i-n-g- -p-e-a-k- -h-o-u-r-s- -|- -M-o-n-e-y- -b-e-l-t-,- -l-o-c-k-e-d- -b-a-g- -|-
--|- -S-c-a-m-s- -|- - -M-o-d-e-r-a-t-e- -|- -T-e-a-h-o-u-s-e- -b-a-i-t---a-n-d---s-w-i-t-c-h-,- -u-n-t-a-x-e-d- -t-a-x-i- -|- -U-s-e- -D-i-d-i-,- -b-o-o-k- -d-i-r-e-c-t-l-y- -|-
--|- -F-o-o-d-/-w-a-t-e-r- -|- - -M-o-d-e-r-a-t-e- -|- -G-I- -a-d-j-u-s-t-m-e-n-t-,- -s-t-r-e-e-t- -f-o-o-d- -h-y-g-i-e-n-e- -|- -4-8---h-r- -g-u-t- -a-d-j-u-s-t-m-e-n-t- -p-e-r-i-o-d- -|-
--|- -P-o-l-i-t-i-c-a-l- -r-i-s-k- -|- - -N-e-g-l-i-g-i-b-l-e- -|- -Z-e-r-o- -t-o-u-r-i-s-t---t-a-r-g-e-t-e-d- -i-n-c-i-d-e-n-t-s- -|- -J-u-s-t- -d-o-n-'-t- -b-e- -s-t-u-p-i-d- -|-
--|- -M-e-d-i-c-a-l- -e-m-e-r-g-e-n-c-y- -|- - -M-o-d-e-r-a-t-e- -|- -L-a-n-g-u-a-g-e- -b-a-r-r-i-e-r-,- -c-o-s-t- -i-f- -u-n-i-n-s-u-r-e-d- -|- -T-r-a-v-e-l- -i-n-s-u-r-a-n-c-e- -+- -h-o-t-e-l- -c-a-r-d- -|-
--|- -T-r-a-f-f-i-c-/-a-c-c-i-d-e-n-t- -|- - -S-i-g-n-i-f-i-c-a-n-t- -|- -P-e-d-e-s-t-r-i-a-n- -c-u-l-t-u-r-e- -s-h-o-c-k- -|- -L-o-o-k- -B-O-T-H- -w-a-y-s-,- -a-l-w-a-y-s- -|-
--
--------
--
--#-#- -W-h-a-t- -A-c-t-u-a-l-l-y- -W-e-n-t- -W-r-o-n-g- -(-A-n-d- -H-o-w- -t-o- -A-v-o-i-d- -I-t-)-
--
--#-#-#- -T-h-e- -T-e-a-h-o-u-s-e- -S-c-a-m- - -X-i-'-a-n-,- -2-0-1-7-
--A- -"-f-r-i-e-n-d-l-y- -l-o-c-a-l-"- -s-t-r-u-c-k- -u-p- -c-o-n-v-e-r-s-a-t-i-o-n- -o-u-t-s-i-d-e- -t-h-e- -B-e-l-l- -T-o-w-e-r-.- -I-n-v-i-t-e-d- -m-e- -f-o-r- -t-e-a-.- -T-h-r-e-e- -h-o-u-r-s- -l-a-t-e-r-:- -8-0-0- -R-M-B- -b-i-l-l- -(-~-$-1-1-0-)-.- -I- -p-a-i-d- -b-e-c-a-u-s-e- -I- -w-a-s- -s-c-a-r-e-d-.-
--
--*-*-F-i-x-:-*-*- -I-f- -a- -s-t-r-a-n-g-e-r- -i-n-v-i-t-e-s- -y-o-u- -f-o-r- -t-e-a-,- -t-h-e- -a-n-s-w-e-r- -i-s- -"-"- -(-n-o- -t-h-a-n-k- -y-o-u-)-.- -I-f- -y-o-u- -a-c-c-e-p-t-,- -a-g-r-e-e- -o-n- -a- -p-r-i-c-e- -B-E-F-O-R-E- -y-o-u- -s-i-t-.- -M-a-x-i-m-u-m- -3-0- -R-M-B- -f-o-r- -b-a-s-i-c- -t-e-a-.-
--
--#-#-#- -T-h-e- -S-t-r-e-e-t- -F-o-o-d- -G-I- -B-o-m-b- - -C-h-e-n-g-d-u-,- -2-0-1-9-
--I-n-c-r-e-d-i-b-l-e- -s-k-e-w-e-r- -s-t-a-n-d-,- -t-h-i-r-d- -n-i-g-h-t-.- -N-e-x-t- -m-o-r-n-i-n-g-:- -h-o-t-e-l- -b-a-t-h-r-o-o-m-,- -t-w-i-c-e-.-
--
--*-*-F-i-x-:-*-*- -F-i-r-s-t- -4-8- -h-o-u-r-s-,- -e-a-t- -w-e-l-l---c-o-o-k-e-d- -f-o-o-d-.- -A-f-t-e-r- -t-h-a-t-,- -g-o- -n-u-t-s-.-
--
--#-#-#- -T-h-e- -T-a-x-i- -M-e-t-e-r- -R-e-f-u-s-a-l- - -B-e-i-j-i-n-g-,- -2-0-2-2-
--A-i-r-p-o-r-t- -t-a-x-i- -r-e-f-u-s-e-d- -m-e-t-e-r-,- -w-a-n-t-e-d- -1-5-0- -R-M-B- -f-o-r- -a- -6-0- -R-M-B- -r-i-d-e-.-
--
--*-*-F-i-x-:-*-*- -U-s-e- -D-i-d-i-.- -I-t- -s-h-o-w-s- -t-h-e- -f-a-r-e- -u-p-f-r-o-n-t-.- -I-f- -a- -t-a-x-i- -w-o-n-'-t- -u-s-e- -t-h-e- -m-e-t-e-r-,- -g-e-t- -o-u-t-.-
--
--------
--
--#-#- -T-h-e- -B-o-r-i-n-g- -S-t-u-f-f- -T-h-a-t- -A-c-t-u-a-l-l-y- -K-e-e-p-s- -Y-o-u- -S-a-f-e-
--
--1-.- -*-*-C-a-r-r-y- -y-o-u-r- -p-a-s-s-p-o-r-t- -r-e-g-i-s-t-r-a-t-i-o-n- -s-l-i-p-*-*- - -H-o-t-e-l-s- -s-c-a-n- -y-o-u-r- -p-a-s-s-p-o-r-t- -a-n-d- -g-i-v-e- -y-o-u- -a- -r-e-g-i-s-t-r-a-t-i-o-n- -s-l-i-p-.- -P-o-l-i-c-e- -c-h-e-c-k-s- -h-a-p-p-e-n- -i-n- -t-o-u-r-i-s-t- -a-r-e-a-s-.- -Y-o-u- -n-e-e-d- -t-o- -p-r-o-v-e- -y-o-u-'-r-e- -l-e-g-a-l-l-y- -r-e-g-i-s-t-e-r-e-d-.-
--
--2-.- -*-*-K-e-e-p- -a- -d-i-g-i-t-a-l- -c-o-p-y- -o-f- -y-o-u-r- -p-a-s-s-p-o-r-t-*-*- - -P-h-o-t-o-s- -o-n- -y-o-u-r- -p-h-o-n-e-,- -e-m-a-i-l-e-d- -t-o- -y-o-u-r-s-e-l-f-,- -c-l-o-u-d- -s-t-o-r-a-g-e-.- -E-m-b-a-s-s-i-e-s- -t-a-k-e- -2-4---4-8- -h-o-u-r-s- -f-o-r- -e-m-e-r-g-e-n-c-y- -d-o-c-u-m-e-n-t-s-.-
--
--3-.- -*-*-U-s-e- -D-i-d-i-,- -n-o-t- -t-a-x-i-s-*-*- - -E-n-g-l-i-s-h- -i-n-t-e-r-f-a-c-e-,- -u-p-f-r-o-n-t- -p-r-i-c-i-n-g-,- -f-u-l-l- -r-e-c-o-r-d-.- -W-o-r-k-s- -i-n- -a-l-l- -m-a-j-o-r- -c-i-t-i-e-s-.-
--
--4-.- -*-*-D-o-w-n-l-o-a-d- -o-f-f-l-i-n-e- -m-a-p-s-*-*- - -G-o-o-g-l-e- -M-a-p-s- -o-f-f-l-i-n-e- -p-a-c-k-a-g-e-s- -o-r- -M-a-p-s-.-m-e- -f-o-r- -e-a-c-h- -c-i-t-y-.- -I-n-t-e-r-n-e-t- -c-u-t-s- -o-u-t- -i-n- -t-h-e- -s-u-b-w-a-y- -c-o-n-s-t-a-n-t-l-y-.-
--
--5-.- -*-*-K-n-o-w- -y-o-u-r- -h-o-s-p-i-t-a-l-*-*- - -B-e-f-o-r-e- -y-o-u- -n-e-e-d- -i-t-,- -s-e-a-r-c-h- -"-i-n-t-e-r-n-a-t-i-o-n-a-l- -h-o-s-p-i-t-a-l- -+- -y-o-u-r- -c-i-t-y- -+- -E-n-g-l-i-s-h-.-"- -S-a-v-e- -t-h-e- -a-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e- -o-n- -y-o-u-r- -p-h-o-n-e-.- -S-h-o-w- -i-t- -t-o- -D-i-d-i- -d-r-i-v-e-r-s-.-
--
--------
--
--#-#- -V-P-N- -I-s- -a- -S-a-f-e-t-y- -T-o-o-l- -i-n- -C-h-i-n-a-
--
--T-h-i-s- -i-s- -n-o-t- -o-p-t-i-o-n-a-l-.- -G-m-a-i-l-,- -G-o-o-g-l-e- -M-a-p-s-,- -G-o-o-g-l-e- -T-r-a-n-s-l-a-t-e-,- -Y-o-u-T-u-b-e-,- -F-a-c-e-b-o-o-k-,- -I-n-s-t-a-g-r-a-m-,- -W-h-a-t-s-A-p-p- - -a-l-l- -b-l-o-c-k-e-d-.- -I-f- -y-o-u- -h-a-v-e- -a- -m-e-d-i-c-a-l- -e-m-e-r-g-e-n-c-y- -a-n-d- -c-a-n-'-t- -a-c-c-e-s-s- -y-o-u-r- -t-r-a-v-e-l- -i-n-s-u-r-a-n-c-e- -a-p-p-,- -t-h-a-t-'-s- -a- -s-a-f-e-t-y- -i-s-s-u-e-.-
--
--I- -u-s-e- -{-{-<- -v-p-n---l-i-n-k- -"-E-x-p-r-e-s-s-V-P-N-"- ->-}-}-.- -I-t- -c-o-n-s-i-s-t-e-n-t-l-y- -w-o-r-k-s-,- -h-a-s- -2-4-/-7- -l-i-v-e- -s-u-p-p-o-r-t-,- -a-n-d- -y-o-u- -c-a-n- -i-n-s-t-a-l-l- -i-t- -o-n- -u-p- -t-o- -8- -d-e-v-i-c-e-s-.- -O-n-c-e- -y-o-u-'-r-e- -i-n- -C-h-i-n-a-,- -y-o-u- -c-a-n-'-t- -d-o-w-n-l-o-a-d- -V-P-N- -a-p-p-s- - -i-n-s-t-a-l-l- -i-t- -B-E-F-O-R-E- -a-r-r-i-v-a-l-.-
--
--F-o-r- -a-n- -e-S-I-M- -w-i-t-h- -d-a-t-a- -t-h-a-t- -w-o-r-k-s- -i-n- -C-h-i-n-a-,- -I- -u-s-e- -{-{-<- -e-s-i-m---l-i-n-k- -"-A-i-r-a-l-o- -e-S-I-M-"- ->-}-}- - -o-r-d-e-r- -i-t- -b-e-f-o-r-e- -y-o-u- -l-e-a-v-e- -h-o-m-e-,- -s-c-a-n- -t-h-e- -Q-R- -c-o-d-e- -w-h-e-n- -y-o-u- -l-a-n-d-,- -y-o-u-'-r-e- -o-n-l-i-n-e- -b-e-f-o-r-e- -y-o-u- -e-x-i-t- -t-h-e- -t-e-r-m-i-n-a-l-.-
--
--------
--
--#-#- -T-h-e- -V-e-r-d-i-c-t-
--
--C-h-i-n-a- -i-n- -2-0-2-6- -i-s- -s-t-a-t-i-s-t-i-c-a-l-l-y- -s-a-f-e-r- -f-o-r- -t-o-u-r-i-s-t-s- -t-h-a-n- -m-o-s-t- -p-e-o-p-l-e- -t-h-i-n-k-.- -V-i-o-l-e-n-t- -c-r-i-m-e- -i-s- -n-e-a-r---z-e-r-o-.- -T-h-e- -r-e-a-l- -r-i-s-k-s- -a-r-e- -p-e-t-t-y- -s-c-a-m-s-,- -g-a-s-t-r-o-i-n-t-e-s-t-i-n-a-l- -a-d-j-u-s-t-m-e-n-t-,- -a-n-d- -t-r-a-f-f-i-c- - -a-l-l- -m-a-n-a-g-e-a-b-l-e- -w-i-t-h- -b-a-s-i-c- -a-w-a-r-e-n-e-s-s-.-
--
--T-h-e- -n-u-m-b-e-r- -o-n-e- -m-i-s-t-a-k-e- -f-i-r-s-t---t-i-m-e-r-s- -m-a-k-e-:- -b-e-i-n-g- -s-o- -p-a-r-a-n-o-i-d- -a-b-o-u-t- -s-a-f-e-t-y- -t-h-a-t- -t-h-e-y- -m-i-s-s- -t-h-e- -e-x-p-e-r-i-e-n-c-e-.- -D-o-n-'-t- -b-e- -t-h-a-t- -p-e-r-s-o-n- -e-i-t-h-e-r-.-
--
--*-*-G-o-.- -S-e-e- -i-t-.- -U-s-e- -y-o-u-r- -h-e-a-d-.-*-*-
--
--A-n-d- -f-o-r- -t-h-e- -G-P-S- -w-a-y-p-o-i-n-t-s- -t-o- -t-h-e- -h-o-s-p-i-t-a-l-s- -i-n- -B-e-i-j-i-n-g-,- -S-h-a-n-g-h-a-i-,- -C-h-e-n-g-d-u-,- -a-n-d- -X-i-'-a-n- - -p-l-u-s- -m-y- -p-e-r-s-o-n-a-l- -c-o-n-t-a-c-t- -n-u-m-b-e-r-s- -f-o-r- -l-i-c-e-n-s-e-d- -d-r-i-v-e-r-s- -a-n-d- -E-n-g-l-i-s-h---s-p-e-a-k-i-n-g- -g-u-i-d-e-s- -i-n- -e-a-c-h- -c-i-t-y- - -c-h-e-c-k- -t-h-e- -[-C-h-i-n-a-B-o-u-n-d- -T-r-a-v-e-l- -M-e-m-b-e-r-s- -H-u-b-]-(-/-m-e-m-b-e-r-)-.-
--
-- -A-n-n-u-a-l- -p-a-s-s- -$-4-9-.-9-9-.- -L-e-s-s- -t-h-a-n- -o-n-e- -n-i-g-h-t- -i-n- -a- -B-e-i-j-i-n-g- -h-o-t-e-l-.- -C-o-m-e-s- -w-i-t-h- -t-h-e- -f-u-l-l- -o-f-f-l-i-n-e- -C-h-i-n-a- -t-r-a-v-e-l- -t-o-o-l-k-i-t-.-
--
--------
--
--*-H-a-v-e- -a- -s-p-e-c-i-f-i-c- -s-a-f-e-t-y- -c-o-n-c-e-r-n- -D-r-o-p- -i-t- -i-n- -t-h-e- -c-o-m-m-e-n-t-s- - -I- -r-e-s-p-o-n-d- -t-o- -e-v-e-r-y- -l-e-g-i-t-i-m-a-t-e- -q-u-e-s-t-i-o-n- -w-i-t-h-i-n- -4-8- -h-o-u-r-s-.-*-
--
+---
+title: "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
+description: "Crime rates, food safety, political stability, scams targeting tourists, healthcare access, and emergency contacts — a no-BS safety guide for foreign travelers in China in 2026."
+date: "2026-05-27"
+tags: ["china-safety", "china-travel-tips", "is-china-safe", "travel-advisory", "china-guide"]
+keywords: ["is china safe to travel", "china travel safety 2026", "china crime rate tourists", "china safety tips", "foreigners in china safety"]
+categories: ["china-guide"]
+faq:
+  - question: "Is China safe for tourists in 2026?"
+    answer: "Yes — statistically one of the safer major destinations for foreigners. Violent crime against tourists is extremely rare. The main risks are petty theft, scams targeting foreigners in tourist areas, and foodborne illness from street food hygiene variability."
+  - question: "Is there political unrest that tourists should worry about?"
+    answer: "Generally no. Protests are rare and almost never target tourists. The government maintains heavy security in tourist areas. Any politically sensitive areas you should avoid will be obvious — guides and hotels will tell you."
+  - question: "How common are scams targeting tourists in China?"
+    answer: "Common enough to be aware, rare enough not to ruin your trip. Main scams: teahouse scams (price manipulation), taxi drivers not using the meter, and fake tour operators. All solvable by using Didi, booking attractions directly, and walking away from aggressive solicitations."
+  - question: "Can foreigners use emergency services in China?"
+    answer: "Yes: Police 110, Ambulance 120, Fire 119. English operators are hit-or-miss outside major cities. Carry your hotel's business card in Chinese characters so emergency responders know your location. Major hospitals in Beijing, Shanghai, and Xi'an have international clinics with English-speaking staff."
+  - question: "What about food safety for tourists?"
+    answer: "Generally fine — Chinese food safety standards have improved dramatically since 2010. Give your gut 2-3 days to adjust. Stick to well-cooked food and drink sealed bottled water in rural areas during the adjustment period."
+  - question: "Is it safe to travel alone as a woman in China?"
+    answer: "Yes, with standard solo-travel precautions. China's cities are generally safe for women at any hour. Harassment is less common than in many Western cities. The main issues are unwanted attention in tourist areas and being overcharged."
+  - question: "Does China have good healthcare for foreigners?"
+    answer: "Major cities have excellent international clinics and JCI-accredited hospitals. Rural areas have basic clinics. Carry travel insurance that covers China — your home country policy likely doesn't. Basic healthcare is affordable; complex treatment or medical evacuation is expensive."
+  - question: "Are there areas of China off-limits to tourists?"
+    answer: "Tibet requires a special permit and government-organized guide. Parts of Xinjiang near borders have restricted zones. Military areas are off-limits. Your hotel or travel agent will inform you of restrictions for your planned route."
+---
+
+## The Most Honest China Safety Analysis You'll Find
+
+**By Joran | 10+ years living in and traveling China**
+
+Every safety article about China falls into one of two traps: either it paints China as a dystopian hellhole where tourists get arrested for nothing, or it overcorrects into "actually it's super safe, nothing to worry about." The truth is more nuanced — and more useful.
+
+I've been robbed once (2014), scammed a dozen times, had food poisoning three times, and needed hospitals twice. I've also walked home alone at 3 AM through Chengdu's coolest neighborhoods without a single uncomfortable moment.
+
+**Here's the actual risk matrix for 2026.**
+
+---
+
+## Risk Matrix: What Actually Threatens Tourists
+
+| Risk Category | Real Level | What It Looks Like | Prevention |
+|--------------|------------|-------------------|------------|
+| Violent crime | ⬛ Extremely Low | Almost unheard of against tourists | Standard urban awareness |
+| Petty theft | 🟩 Low | Pickpockets on subway during peak hours | Money belt, locked bag |
+| Scams | 🟧 Moderate | Teahouse bait-and-switch, untaxed taxi | Use Didi, book directly |
+| Food/water | 🟧 Moderate | GI adjustment, street food hygiene | 48-hr gut adjustment period |
+| Political risk | ⬜ Negligible | Zero tourist-targeted incidents | Just don't be stupid |
+| Medical emergency | 🟧 Moderate | Language barrier, cost if uninsured | Travel insurance + hotel card |
+| Traffic/accident | 🟨 Significant | Pedestrian culture shock | Look BOTH ways, always |
+
+---
+
+## What Actually Went Wrong (And How to Avoid It)
+
+### The Teahouse Scam — Xi'an, 2017
+A "friendly local" struck up conversation outside the Bell Tower. Invited me for tea. Three hours later: 800 RMB bill (~$110). I paid because I was scared.
+
+**Fix:** If a stranger invites you for tea, the answer is "不了谢谢" (no thank you). If you accept, agree on a price BEFORE you sit. Maximum 30 RMB for basic tea.
+
+### The Street Food GI Bomb — Chengdu, 2019
+Incredible skewer stand, third night. Next morning: hotel bathroom, twice.
+
+**Fix:** First 48 hours, eat well-cooked food. After that, go nuts.
+
+### The Taxi Meter Refusal — Beijing, 2022
+Airport taxi refused meter, wanted 150 RMB for a 60 RMB ride.
+
+**Fix:** Use Didi. It shows the fare upfront. If a taxi won't use the meter, get out.
+
+---
+
+## The Boring Stuff That Actually Keeps You Safe
+
+1. **Carry your passport registration slip** — Hotels scan your passport and give you a registration slip. Police checks happen in tourist areas. You need to prove you're legally registered.
+
+2. **Keep a digital copy of your passport** — Photos on your phone, emailed to yourself, cloud storage. Embassies take 24-48 hours for emergency documents.
+
+3. **Use Didi, not taxis** — English interface, upfront pricing, full record. Works in all major cities.
+
+4. **Download offline maps** — Google Maps offline packages or Maps.me for each city. Internet cuts out in the subway constantly.
+
+5. **Know your hospital** — Before you need it, search "international hospital + your city + English." Save the address in Chinese on your phone. Show it to Didi drivers.
+
+---
+
+## VPN Is a Safety Tool in China
+
+This is not optional. Gmail, Google Maps, Google Translate, YouTube, Facebook, Instagram, WhatsApp — all blocked. If you have a medical emergency and can't access your travel insurance app, that's a safety issue.
+
+I use [ExpressVPN]({{< vpn-link "ExpressVPN 12 months" >}}). It consistently works, has 24/7 live support, and you can install it on up to 8 devices. Once you're in China, you can't download VPN apps — install it BEFORE arrival.
+
+For an eSIM with data that works in China, I use [Airalo]({{< esim-link "China eSIM" >}}) — order it before you leave home, scan the QR code when you land, you're online before you exit the terminal.
+
+---
+
+## The Verdict
+
+China in 2026 is statistically safer for tourists than most people think. Violent crime is near-zero. The real risks are petty scams, gastrointestinal adjustment, and traffic — all manageable with basic awareness.
+
+The number one mistake first-timers make: being so paranoid about safety that they miss the experience. Don't be that person either.
+
+**Go. See it. Use your head.**
+
+And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi'an — plus my personal contact numbers for licensed drivers and English-speaking guides in each city — check the [ChinaBound Travel Members Hub](/member).
+
+🔒 Annual pass $49.99. Less than one night in a Beijing hotel. Comes with the full offline China travel toolkit.
+
+---
+
+*Have a specific safety concern? Drop it in the comments — I respond to every legitimate question within 48 hours.*
