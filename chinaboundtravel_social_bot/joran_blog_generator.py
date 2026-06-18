@@ -705,7 +705,19 @@ class BlogGenerator:
     def check_cooldown(self, topic, days=7):
         """检查选题是否在冷却期内（7天）"""
         return self.manifest.check_topic_repeat(topic, "global", days)
-    
+
+    def load_topic_pool(self):
+        """加载外部选题库 (config/topic_pool.json)"""
+        topic_pool_path = BASE_DIR / "config" / "topic_pool.json"
+        try:
+            if topic_pool_path.exists():
+                with open(topic_pool_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    return data.get("topics", [])
+        except Exception as e:
+            print(f"[WARN] 加载选题库失败: {e}")
+        return []
+
     def select_topic(self, attempt=1):
         """选择选题 - 优先从外部选题库选择，只有选题库为空时才回退到内置选题库"""
         geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
