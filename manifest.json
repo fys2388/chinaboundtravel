@@ -1,8 +1,8 @@
 {
-  "month_post_count": 17,
+  "month_post_count": 18,
   "last_reset_date": "2026-06-01",
   "last_social_publish": "2026-06-03 21:10:37",
-  "daily_social_publish_date": "2026-06-18",
+  "daily_social_publish_date": "2026-06-19",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -95,6 +95,11 @@
       "topic": "Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons",
       "geo_region": "EU",
       "create_date": "2026-06-18"
+    },
+    {
+      "topic": "The History and Culture of the Great Wall: Beyond the Tourist Trail",
+      "geo_region": "US",
+      "create_date": "2026-06-19"
     }
   ],
   "keyword_convert_rate": {
