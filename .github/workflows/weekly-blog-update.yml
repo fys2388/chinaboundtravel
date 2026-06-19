@@ -39,6 +39,24 @@ jobs:
         run: python chinaboundtravel_social_bot/joran_blog_generator.py
 
       - name: Build site to verify
+        id: hugo-build
+        continue-on-error: true
+        run: hugo --gc --minify
+
+      - name: Auto-fix build errors
+        id: auto-fix
+        if: steps.hugo-build.outcome == 'failure'
+        run: |
+          echo "=== Attempting auto-fix ==="
+          python scripts/auto_fix_build.py
+          if [ $? -eq 0 ]; then
+            echo "::set-output name=fixed::true"
+          else
+            echo "::set-output name=fixed::false"
+          fi
+
+      - name: Rebuild after auto-fix
+        if: steps.auto-fix.outputs.fixed == 'true'
         run: hugo --gc --minify
 
       - name: Commit and push generated posts
@@ -49,6 +67,8 @@ jobs:
           git add content/_draft/*.md 2>/dev/null || true
           git add manifest.json 2>/dev/null || true
           git add config/topic_pool.json 2>/dev/null || true
+          git add config/error_knowledge_base.json 2>/dev/null || true
+          git add layouts/shortcodes/*.html 2>/dev/null || true
           
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to commit"
@@ -76,7 +96,6 @@ jobs:
             -d '{"purge_everything":true}' \
             --fail --show-error --silent || echo "Cache purge skipped (CLOUDFLARE_ZONE_ID may not be set)"
 
-  # ========== 失败告警 ==========
   failure-notification:
     runs-on: ubuntu-latest
     timeout-minutes: 5

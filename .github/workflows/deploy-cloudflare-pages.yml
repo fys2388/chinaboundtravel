@@ -32,7 +32,31 @@ jobs:
           hugo-version: '0.147.0'
           extended: true
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Build static site
+        id: hugo-build
+        continue-on-error: true
+        run: hugo --gc --minify
+
+      - name: Auto-fix build errors
+        id: auto-fix
+        if: steps.hugo-build.outcome == 'failure'
+        run: |
+          echo "=== Attempting auto-fix ==="
+          pip install requests --quiet
+          python scripts/auto_fix_build.py --push
+          if [ $? -eq 0 ]; then
+            echo "::set-output name=fixed::true"
+          else
+            echo "::set-output name=fixed::false"
+          fi
+
+      - name: Rebuild after auto-fix
+        if: steps.auto-fix.outputs.fixed == 'true'
         run: hugo --gc --minify
 
       - name: Deploy to Cloudflare Pages
