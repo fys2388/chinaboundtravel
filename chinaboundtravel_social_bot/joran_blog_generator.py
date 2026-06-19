@@ -273,6 +273,185 @@ def generate_cover_for_post(title, slug):
 GEO_REGIONS = ["EU", "US", "AU"]
 GEO_WEIGHTS = [40, 35, 25]
 
+# ========== SEO Meta Description 生成系统
+# 依据 chinaboundtravel.com Meta Description 批量生成模板与优化规范
+# 字符长度：120-155字符，必含三要素：核心价值+信任背书+弱行动号召
+
+# 人设差异化结尾（轮换使用，避免重复）
+JORAN_ENDINGS = [
+    "from a US expat based in Chengdu",
+    "from on-the-ground experience in China",
+    "curated by a US-based China travel expert",
+    "real tips from someone living in China since 2016",
+    "by an American expat with 10 years in China"
+]
+
+# 品类模板定义
+SEO_TEMPLATES = {
+    "visa": {
+        "template": "[Updated 2026] {topic} guide. {key_points} {ending}.",
+        "key_points_examples": [
+            "rules, eligible cities & common mistakes for travelers",
+            "step-by-step process, required documents & latest policy updates",
+            "requirements, application tips & insider advice"
+        ]
+    },
+    "city_guide": {
+        "template": "Complete {city} travel guide 2026. {highlights} {ending}.",
+        "highlights_examples": [
+            "best local food, 3-5 day itineraries & hidden gems",
+            "top attractions, transportation tips & where to stay",
+            "itineraries, local food & cultural experiences"
+        ]
+    },
+    "internet_vpn": {
+        "template": "Best {topic} for China in 2026 tested monthly. {benefits} {ending}.",
+        "benefits_examples": [
+            "reliable options for Google, WhatsApp & streaming",
+            "tested & updated for reliable connectivity",
+            "top picks for staying online without restrictions"
+        ]
+    },
+    "payment": {
+        "template": "{topic} guide for travelers in China 2026. {benefits} {ending}.",
+        "benefits_examples": [
+            "setup steps, limits & tips for foreigners",
+            "step-by-step process, common pitfalls to avoid",
+            "how to use without a Chinese bank account"
+        ]
+    },
+    "accommodation": {
+        "template": "Where to stay in {city} China 2026. {highlights} {ending}.",
+        "highlights_examples": [
+            "best neighborhoods, hotel recommendations & budget options",
+            "area guide, top hotel picks & local boutiques",
+            "accommodation options for all types of travelers"
+        ]
+    },
+    "food": {
+        "template": "{city} food guide: {highlights}. {ending}.",
+        "highlights_examples": [
+            "must-try local dishes & best restaurants",
+            "top local snacks, where to find them & what to avoid",
+            "authentic picks & hidden culinary gems"
+        ]
+    },
+    "transportation": {
+        "template": "China {topic}: complete guide 2026. {benefits} {ending}.",
+        "benefits_examples": [
+            "booking tips, seat classes & rookie mistakes to avoid",
+            "how to navigate like a local, tested strategies",
+            "practical guide based on 200+ rides experience"
+        ]
+    },
+    "safety": {
+        "template": "Is China safe for travelers in 2026? {highlights} {ending}.",
+        "highlights_examples": [
+            "honest assessment, crime rates & common scams to avoid",
+            "practical safety tips from someone who lives here",
+            "what to know before you go, real talk on safety"
+        ]
+    },
+    "default": {
+        "template": "{topic} for travelers visiting China. {highlights} {ending}.",
+        "highlights_examples": [
+            "practical tips & common mistakes to avoid",
+            "essential guide based on 10 years of experience",
+            "what you need to know before your trip"
+        ]
+    }
+}
+
+def classify_topic(topic, title):
+    """根据选题和标题分类，返回类别标识"""
+    topic_lower = (topic + " " + title).lower()
+    
+    if any(k in topic_lower for k in ["visa", "144-hour", "transit", "entry"]):
+        return "visa"
+    elif any(k in topic_lower for k in ["vpn", "internet", "esim", "sim", "wifi", "connect"]):
+        return "internet_vpn"
+    elif any(k in topic_lower for k in ["alipay", "wechat", "payment", "pay", "cash", "card"]):
+        return "payment"
+    elif any(k in topic_lower for k in ["hotel", "stay", "accommodation", "hostel", "airbnb"]):
+        return "accommodation"
+    elif any(k in topic_lower for k in ["food", "eat", "restaurant", "dish", "cuisine", "dumpling", "noodle"]):
+        return "food"
+    elif any(k in topic_lower for k in ["train", "metro", "taxi", "transport", "bus", "flight", "subway", "ride"]):
+        return "transportation"
+    elif any(k in topic_lower for k in ["safety", "safe", "crime", "scam", "danger", "risk"]):
+        return "safety"
+    elif any(k in topic_lower for k in ["chengdu", "beijing", "shanghai", "xian", "hangzhou", "guilin", "yunnan", "sichuan"]):
+        return "city_guide"
+    else:
+        return "default"
+
+def extract_city_name(topic, title):
+    """从选题和标题中提取城市名"""
+    cities = [
+        "Beijing", "Shanghai", "Chengdu", "Xi'an", "Hangzhou", "Guilin",
+        "Xian", "Guangzhou", "Shenzhen", "Hong Kong", "Macau",
+        "Lijiang", "Dali", "Kunming", "Lhasa", "Jiuzhaigou"
+    ]
+    text = topic + " " + title
+    for city in cities:
+        if city.lower() in text.lower():
+            return city
+    return "China"
+
+def generate_seo_description(topic, title):
+    """生成 SEO 优化的 meta description"""
+    category = classify_topic(topic, title)
+    template_config = SEO_TEMPLATES.get(category, SEO_TEMPLATES["default"])
+    template = template_config["template"]
+    
+    # 提取城市名
+    city = extract_city_name(topic, title)
+    
+    # 替换模板变量
+    description = template
+    description = description.replace("{topic}", topic.replace(" guide", "").replace(" Guide", ""))
+    description = description.replace("{city}", city)
+    
+    # 添加随机亮点
+    if "key_points_examples" in template_config:
+        key_point = random.choice(template_config["key_points_examples"])
+        description = description.replace("{key_points}", key_point)
+    elif "highlights_examples" in template_config:
+        highlight = random.choice(template_config["highlights_examples"])
+        description = description.replace("{highlights}", highlight)
+    elif "benefits_examples" in template_config:
+        benefit = random.choice(template_config["benefits_examples"])
+        description = description.replace("{benefits}", benefit)
+    else:
+        description = description.replace("{highlights}", "practical tips & essential guide")
+    
+    # 添加随机结尾
+    ending = random.choice(JORAN_ENDINGS)
+    description = description.replace("{ending}", ending)
+    
+    # 清理多余空格
+    description = re.sub(r'\s+', ' ', description).strip()
+    
+    # 确保字符长度在 120-155 之间
+    while len(description) > 155 and len(description) > 0:
+        # 找到最后一个逗号或介词，尝试截断
+        if ", " in description:
+            description = description.rsplit(", ", 1)[0]
+        elif " & " in description:
+            description = description.rsplit(" & ", 1)[0]
+        else:
+            break
+    
+    while len(description) < 120:
+        # 添加额外信息
+        extra = "practical guide for foreign travelers"
+        if description.endswith("."):
+            description = description[:-1] + ", " + extra + "."
+        else:
+            description = description + ". " + extra
+    
+    return description
+
 # 选题库 - 主选题、备选选题、万能选题
 TOPIC_LIBRARY = {
     "main": [
@@ -789,6 +968,10 @@ class BlogGenerator:
         elif geo_region == "AU":
             tags.append("AustraliaToChina")
         
+        # 生成 SEO 优化的 meta description
+        seo_description = generate_seo_description(topic, title)
+        seo_summary = seo_description  # summary 也使用同一描述
+        
         return {
             "title": title,
             "date": date,
@@ -800,8 +983,8 @@ class BlogGenerator:
             "geo": geo_region,
             "draft": "true",
             "audit_status": "pending",
-            "summary": f"Complete {topic} guide for travelers visiting China based on 10 years of experience.",
-            "description": f"Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years.",
+            "summary": seo_summary,
+            "description": seo_description,
             "canonicalURL": f"{SITE_DOMAIN}/posts/{slug}/",
             "ShowToc": "true",
             "TocOpen": "false",
