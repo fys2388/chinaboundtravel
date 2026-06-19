@@ -1,5 +1,5 @@
 ---
-title: "'How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)'"
+title: "How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)"
 date: "2026-05-19T14:00:00+08:00"
 draft: false
 weight: 2
