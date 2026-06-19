@@ -183,9 +183,9 @@
       "hash": "21487821931ff6dba72640f3f80a7afe",
       "type": "Encoding Error",
       "message": "Bad char: ‍",
-      "occurrences": 2,
+      "occurrences": 3,
       "first_seen": "2026-06-17T10:21:00.275193",
-      "last_seen": "2026-06-18T05:30:24.380191",
+      "last_seen": "2026-06-19T06:09:45.873789",
       "files": [
         "hangzhou.md"
       ],
@@ -234,9 +234,9 @@
       "hash": "9ef3db79ccfcf12ac9b10df8fb5685bf",
       "type": "",
       "message": ": title",
-      "occurrences": 17,
+      "occurrences": 21,
       "first_seen": "2026-06-17T10:21:00.279795",
-      "last_seen": "2026-06-18T05:30:24.385418",
+      "last_seen": "2026-06-19T06:09:45.882187",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -254,7 +254,9 @@
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
         "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
+        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -263,9 +265,9 @@
       "hash": "1245bc52890a99a7e88982a689840c5a",
       "type": "",
       "message": ": description",
-      "occurrences": 17,
+      "occurrences": 21,
       "first_seen": "2026-06-17T10:21:00.280054",
-      "last_seen": "2026-06-18T05:30:24.385951",
+      "last_seen": "2026-06-19T06:09:45.882613",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -283,7 +285,9 @@
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
         "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
+        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -292,9 +296,9 @@
       "hash": "357eedb10c8daa1d6e97be62254ebd5e",
       "type": "",
       "message": ": date",
-      "occurrences": 17,
+      "occurrences": 21,
       "first_seen": "2026-06-17T10:21:00.280322",
-      "last_seen": "2026-06-18T05:30:24.386477",
+      "last_seen": "2026-06-19T06:09:45.883189",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -312,7 +316,9 @@
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
         "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
+        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -321,9 +327,9 @@
       "hash": "19e85d1c9af72bfe741a35afbb508d61",
       "type": "",
       "message": ": author",
-      "occurrences": 17,
+      "occurrences": 21,
       "first_seen": "2026-06-17T10:21:00.280615",
-      "last_seen": "2026-06-18T05:30:24.387072",
+      "last_seen": "2026-06-19T06:09:45.883717",
       "files": [
         "2026-06-10-off-the-beaten-path-routes-guide.md",
         "2026-06-11-food-recommendations-guide.md",
@@ -341,7 +347,9 @@
         "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
         "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
+        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
       ],
       "suggestion": ": Front Matter",
       "resolved": false
@@ -390,9 +398,9 @@
       "hash": "d41d8cd98f00b204e9800998ecf8427e",
       "type": "",
       "message": "",
-      "occurrences": 36,
+      "occurrences": 40,
       "first_seen": "2026-06-17T10:21:00.307347",
-      "last_seen": "2026-06-18T05:30:24.388928",
+      "last_seen": "2026-06-19T06:09:45.886515",
       "files": [
         "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
         "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
@@ -427,7 +435,9 @@
         "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
         "western-sichuan-overland-camping-route.md",
         "hello-world.md",
-        "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md"
+        "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md",
+        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
+        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
       ],
       "suggestion": ": 2",
       "resolved": false
@@ -449,7 +459,7 @@
   ],
   "resolved_count": 5,
   "total_errors": 25,
-  "last_updated": "2026-06-18T05:30:24.388932",
+  "last_updated": "2026-06-19T06:09:45.886516",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

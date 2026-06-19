@@ -1,253 +1,253 @@
----
-title: "Best Time To Visit Chengdu: Weather, Festivals, And Hidden Seasons Guide"
-cover:
-  image: "https://image.pollinations.ai/prompt/Professional%20travel%20blog%20cover%20image%2C%20modern%20Chengdu%20city%20with%20pandas%2C%20Sichuan%20spicy%20hotpot%2C%20high-resolution%20travel%20photography%2C%20cinematic%20lighting%2C%20vibrant%20colors%2C%204k%20quality%2C%20photorealistic%2C%20beautiful%20scenery?width=1792&height=1024&nologo=true&seed=39028"
-date: "2026-06-18T10:00:00+08:00"
-lastmod: "2026-06-18T10:00:00+08:00"
-author: "Joran"
-slug: "best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide"
-tags:
-  - ChinaTravel
-  - TravelGuide
-  - China
-  - EuropeToChina
-categories:
-  - China
-geo: "EU"
-draft: "false"
-audit_status: "pass2"
-summary: "Complete Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons guide for travelers visiting China based on 10 years of experience."
-description: "Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years."
-canonicalURL: "https://chinaboundtravel.com/posts/best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide/"
-ShowToc: "true"
-TocOpen: "false"
-weight: "1"
----
-
-Title: Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons
-
-Introduction
-
-Hey there, European travelers! You're probably sitting in your cozy homes in the UK, Germany, France, Italy, or Spain, daydreaming about a trip to the vibrant city of Chengdu. Well, you've come to the right place. I'm Joran, an American who has been living in Chengdu for over 10 years. I've got all the inside scoop on the best time to visit this amazing city.
-
-Let me start with a little story. When I first arrived in Chengdu, I was completely clueless about the local customs and the best time to do anything. I remember one time when I was trying to find a particular street food stall that everyone raved about. I walked around for what felt like hours, getting lost in the maze of narrow alleys. Finally, I found it, and it was like discovering a hidden treasure. That's the kind of adventure you can expect in Chengdu.
-
-Now, let's talk about the weather. Chengdu has a subtropical monsoon climate, which means it can get pretty hot and humid in the summer and cold and damp in the winter. But don't let that scare you off. Each season has its own charm.
-
-![A bustling street in Chengdu during a festival, with colorful lanterns hanging everywhere, people smiling and enjoying the festivities, creating a lively and joyous mood.](https://image.pollinations.ai/prompt/A%20bustling%20street%20in%20Chengdu%20during%20a%20festival%2C%20with%20colorful%20lanterns%20hanging%20everywhere%2C%20people%20smiling%20and%20enjoying%20the%20festivities%2C%20creating%20a%20lively%20and%20joyous%20mood.?width=1024&height=768&nologo=true&seed=14239)
-
-## Weather in Chengdu
-
-### Spring (March - May)
-
-Spring in Chengdu is like a breath of fresh air. The temperatures start to rise, and the city comes alive with colorful flowers. It's a great time to visit the many parks and gardens in the city. For example, the People's Park is a popular spot. You can see locals flying kites, doing tai chi, or just taking a stroll.
-
-The only downside is that it can be a bit rainy. So, make sure you bring an umbrella. But don't worry, the rain usually doesn't last long.
-
-Practical Takeaway: Spring is a great time for outdoor activities like visiting parks. Just be prepared for some rain.
-
-### Summer (June - August)
-
-Summer in Chengdu is hot and humid. It can get really sticky, especially in July and August. But it's also a great time for festivals. The Chengdu International Panda Festival is one of the biggest events in the summer. You can see pandas up close, watch cultural performances, and enjoy delicious food.
-
-If you're not a fan of the heat, you can always stay indoors and visit the many museums and shopping malls. The Jinsha Site Museum is a great place to learn about the history of Chengdu.
-
-Practical Takeaway: Summer is festival time, but be prepared for the heat. Indoor activities are also available.
-
-### Autumn (September - November)
-
-Autumn is my favorite season in Chengdu. The weather is mild, and the leaves start to change color. It's a great time to go hiking in the nearby mountains. The Qingcheng Mountain is a popular destination. You can enjoy the beautiful scenery and get some exercise at the same time.
-
-Another great thing about autumn is the food. There are many local specialties that are only available during this season. For example, the osmanthus cakes are a must-try. They are sweet and fragrant, with a hint of osmanthus flavor.
-
-Practical Takeaway: Autumn is perfect for outdoor activities like hiking and enjoying local food.
-
-### Winter (December - February)
-
-Winter in Chengdu is cold and damp. It doesn't snow very often, but when it does, it's a beautiful sight. You can visit the Dujiangyan Scenic Area, which is a UNESCO World Heritage Site. You can see the ancient irrigation system and enjoy the beautiful scenery.
-
-If you're feeling cold, you can always warm up with a cup of hot tea or a bowl of spicy hot pot. Hot pot is a local specialty that is perfect for the winter. It's spicy, flavorful, and will definitely warm you up from the inside out.
-
-Practical Takeaway: Winter is a great time to visit historical sites and enjoy hot pot.
-
-## Festivals in Chengdu
-
-### Spring Festival (January - February)
-
-The Spring Festival is the most important festival in China. It's a time for family reunions, feasting, and celebration. In Chengdu, you can see lion and dragon dances, fireworks, and traditional performances.
-
-One of the best places to experience the Spring Festival is the Wuhou Temple. There are many stalls selling traditional snacks, handicrafts, and souvenirs. You can also see the famous "Red Envelope" tradition, where people give money to children as a gift.
-
-Practical Takeaway: Spring Festival is a great time to experience Chinese culture. Visit the Wuhou Temple for a full experience.
-
-### Lantern Festival (February - March)
-
-The Lantern Festival is another important festival in China. It marks the end of the Spring Festival celebrations. In Chengdu, you can see beautiful lantern displays in the streets and parks.
-
-The Jinli Ancient Street is a popular spot for the Lantern Festival. There are many traditional lanterns on display, as well as food stalls and performances. You can also try some of the local specialties, such as yuanxiao, which are sweet dumplings.
-
-Practical Takeaway: Lantern Festival is a great time to see beautiful lantern displays. Visit Jinli Ancient Street for a memorable experience.
-
-### Dragon Boat Festival (June)
-
-The Dragon Boat Festival is a traditional Chinese festival that commemorates the death of the poet Qu Yuan. In Chengdu, you can see dragon boat races on the Jinjiang River. There are also many food stalls selling zongzi, which are glutinous rice dumplings filled with meat, beans, or other ingredients.
-
-The People's Park is a great place to watch the dragon boat races. You can also participate in the traditional activities, such as making zongzi or wearing fragrant sachets.
-
-Practical Takeaway: Dragon Boat Festival is a great time to watch dragon boat races and try zongzi. Visit the People's Park for a fun experience.
-
-### Mid-Autumn Festival (September - October)
-
-The Mid-Autumn Festival is a time for family reunions and赏月. In Chengdu, you can see beautiful mooncakes on sale in the streets and shops. Mooncakes are a traditional Chinese dessert that is filled with sweet fillings, such as red bean paste, nuts, or egg yolks.
-
-One of the best places to enjoy the Mid-Autumn Festival is the Wangjianglou Park. You can see the full moon rising over the park and enjoy the beautiful scenery. There are also many food stalls and performances.
-
-Practical Takeaway: Mid-Autumn Festival is a great time to enjoy mooncakes and the full moon. Visit Wangjianglou Park for a romantic experience.
-
-## Hidden Seasons in Chengdu
-
-### The "Cherry Blossom Season" (March - April)
-
-While not as well-known as the spring flowers, the cherry blossom season in Chengdu is a hidden gem. There are several parks and streets where you can see beautiful cherry blossoms in bloom.
-
-One of the best places to see cherry blossoms is the Tianfu Square. There are many cherry trees around the square, and when they are in bloom, it's like a pink snowfall. You can also visit the Sichuan University campus, which has a beautiful cherry blossom avenue.
-
-Practical Takeaway: The cherry blossom season is a great time to see beautiful flowers. Visit Tianfu Square or Sichuan University for a unique experience.
-
-### The "Hot Pot Season" (All Year Round)
-
-Hot pot is a local specialty that is available all year round in Chengdu. But there is something special about eating hot pot in the winter. The spicy broth and the warm atmosphere make it the perfect meal for a cold day.
-
-There are many hot pot restaurants in Chengdu, each with its own unique flavor. Some of the popular ones include the Haidilao Hot Pot and the小龙坎老火锅. You can also try some of the local specialties, such as the毛肚 (ox stomach) and the鸭肠 (duck intestine).
-
-Practical Takeaway: Hot pot is a must-try in Chengdu. Visit a local hot pot restaurant for a delicious meal.
-
-### The "Tea Season" (April - May)
-
-Chengdu is known for its tea culture, and the tea season is a great time to experience it. There are many tea houses in the city where you can enjoy a cup of tea and relax.
-
-One of the best places to visit during the tea season is the Wenshu Monastery. There is a beautiful tea house in the monastery where you can enjoy a cup of tea and listen to traditional music. You can also visit the Jinsha Site Museum, which has a tea house where you can learn about the history of tea in China.
-
-Practical Takeaway: The tea season is a great time to experience Chengdu's tea culture. Visit a tea house for a relaxing afternoon.
-
-## China Visa Requirements
-
-If you're a European traveler, you will need a visa to enter China. The process can be a bit complicated, but don't worry, I'm here to help.
-
-First, you need to determine what type of visa you need. The most common type of visa for tourists is the L visa. You can apply for the visa at the Chinese embassy or consulate in your home country.
-
-You will need to provide some documents, such as your passport, a completed visa application form, and a recent passport-sized photo. You may also need to provide additional documents, such as an invitation letter from a Chinese citizen or a hotel reservation.
-
-The processing time for the visa can vary, but it usually takes a few days to a week. Make sure you apply for the visa well in advance of your trip.
-
-Practical Takeaway: Apply for a visa well in advance and make sure you have all the necessary documents.
-
-## Transportation in Chengdu
-
-### Subway
-
-The subway system in Chengdu is a convenient and affordable way to get around the city. There are several lines that cover most of the major areas.
-
-The subway is clean, fast, and efficient. You can buy a single-trip ticket or a rechargeable card. The rechargeable card is more convenient if you plan to use the subway frequently.
-
-One thing to note is that the subway can get very crowded during rush hour. It's like being in a scene from 'The Hunger Games'. But don't worry, it's only for a short time.
-
-Practical Takeaway: The subway is a great way to get around. Avoid rush hour if possible.
-
-### Bus
-
-The bus system in Chengdu is also a convenient way to get around. There are many bus routes that cover the entire city.
-
-The bus is cheaper than the subway, but it can be a bit slower. You can buy a single-trip ticket or a rechargeable card. The rechargeable card is more convenient if you plan to use the bus frequently.
-
-One thing to note is that the bus can get very crowded during rush hour. It's like being in a sardine can. But don't worry, it's only for a short time.
-
-Practical Takeaway: The bus is a great way to get around. Avoid rush hour if possible.
-
-### Taxi
-
-Taxis are available in Chengdu, but they can be a bit expensive. The fare is calculated based on the distance and the time.
-
-One thing to note is that some taxi drivers may not speak English. It can be a bit of a challenge to communicate with them. But don't worry, you can always show them the address in Chinese.
-
-Practical Takeaway: Taxis are available, but they can be expensive. Make sure you have the address in Chinese.
-
-### High-Speed Train
-
-If you want to travel outside of Chengdu, the high-speed train is a great option. It's fast, comfortable, and affordable.
-
-There are several high-speed train lines that connect Chengdu to other major cities in China. You can buy a ticket at the train station or online.
-
-One thing to note is that the high-speed train can get very crowded during peak season. It's like being in a cattle car. But don't worry, it's only for a short time.
-
-Practical Takeaway: The high-speed train is a great way to travel outside of Chengdu. Book your ticket in advance.
-
-## China Travel Budget
-
-The cost of traveling in China can vary depending on your travel style and your budget. Here are some estimates to help you plan your trip.
-
-### Accommodation
-
-The cost of accommodation in Chengdu can vary depending on the type of hotel you choose. A budget hotel can cost as little as $20 per night, while a luxury hotel can cost hundreds of dollars per night.
-
-If you're on a budget, you can consider staying in a guesthouse or a hostel. These are usually cheaper and offer a more authentic experience.
-
-Practical Takeaway: Accommodation costs can vary. Consider staying in a guesthouse or hostel if you're on a budget.
-
-### Food
-
-The cost of food in Chengdu is relatively inexpensive. You can find delicious street food for as little as $1 per item. A meal in a restaurant can cost anywhere from $5 to $20 per person.
-
-One thing to note is that the food in Chengdu is very spicy. If you're not used to spicy food, you may want to order something mild.
-
-Practical Takeaway: Food is relatively inexpensive in Chengdu. Be careful with the spice level.
-
-### Transportation
-
-The cost of transportation in Chengdu is also relatively inexpensive. A single-trip subway ticket costs around $0.50, while a bus ticket costs around $0.25. A taxi ride can cost anywhere from $5 to $20 depending on the distance.
-
-If you plan to travel outside of Chengdu, the high-speed train is a great option. The cost of a high-speed train ticket can vary depending on the distance and the class of service.
-
-Practical Takeaway: Transportation is relatively inexpensive in Chengdu. Consider using public transportation.
-
-### Activities
-
-The cost of activities in Chengdu can vary depending on the type of activity you choose. A visit to a museum or a park is usually free or very inexpensive. A visit to a theme park or a tourist attraction can cost more.
-
-One thing to note is that some activities may require advance booking. Make sure you check the website or the ticket office before you go.
-
-Practical Takeaway: Activities can vary in cost. Check for advance booking requirements.
-
-## Safety Tips
-
-Chengdu is a relatively safe city, but like any big city, there are some precautions you should take.
-
-### Personal Safety
-
-- Be aware of your surroundings and keep your valuables safe.
-- Avoid walking alone at night in unfamiliar areas.
-- Don't accept rides from strangers.
-
-### Food Safety
-
-- Make sure you eat at clean and reputable restaurants.
-- Avoid eating raw or undercooked food.
-- Drink only bottled water.
-
-### Cultural Safety
-
-- Respect the local customs and traditions.
-- Don't take pictures of people without their permission.
-- Don't touch or move any cultural artifacts.
-
-Practical Takeaway: Follow these safety tips to ensure a safe and enjoyable trip.
-
-Conclusion
-
-Well, there you have it, folks. My comprehensive guide to the best time to visit Chengdu. Whether you're interested in the weather, the festivals, or the hidden seasons, there's something for everyone in this amazing city.
-
-So, what are you waiting for? Book your trip to Chengdu today and experience the beauty and culture of this amazing city for yourself. And don't forget to follow my tips and tricks to make the most of your trip.
-
-As for me, I'll be here in Chengdu, waiting for you to join me on my next adventure. See you soon!
-
-![A beautiful sunset over Chengdu, with the city skyline in the background, creating a peaceful and romantic mood.](https://image.pollinations.ai/prompt/A%20beautiful%20sunset%20over%20Chengdu%2C%20with%20the%20city%20skyline%20in%20the%20background%2C%20creating%20a%20peaceful%20and%20romantic%20mood.?width=1024&height=768&nologo=true&seed=62473)
+-------
+-t-i-t-l-e-:- -"-B-e-s-t- -T-i-m-e- -T-o- -V-i-s-i-t- -C-h-e-n-g-d-u-:- -W-e-a-t-h-e-r-,- -F-e-s-t-i-v-a-l-s-,- -A-n-d- -H-i-d-d-e-n- -S-e-a-s-o-n-s- -G-u-i-d-e-"-
+-c-o-v-e-r-:-
+- - -i-m-a-g-e-:- -"-h-t-t-p-s-:-/-/-i-m-a-g-e-.-p-o-l-l-i-n-a-t-i-o-n-s-.-a-i-/-p-r-o-m-p-t-/-P-r-o-f-e-s-s-i-o-n-a-l-%-2-0-t-r-a-v-e-l-%-2-0-b-l-o-g-%-2-0-c-o-v-e-r-%-2-0-i-m-a-g-e-%-2-C-%-2-0-m-o-d-e-r-n-%-2-0-C-h-e-n-g-d-u-%-2-0-c-i-t-y-%-2-0-w-i-t-h-%-2-0-p-a-n-d-a-s-%-2-C-%-2-0-S-i-c-h-u-a-n-%-2-0-s-p-i-c-y-%-2-0-h-o-t-p-o-t-%-2-C-%-2-0-h-i-g-h---r-e-s-o-l-u-t-i-o-n-%-2-0-t-r-a-v-e-l-%-2-0-p-h-o-t-o-g-r-a-p-h-y-%-2-C-%-2-0-c-i-n-e-m-a-t-i-c-%-2-0-l-i-g-h-t-i-n-g-%-2-C-%-2-0-v-i-b-r-a-n-t-%-2-0-c-o-l-o-r-s-%-2-C-%-2-0-4-k-%-2-0-q-u-a-l-i-t-y-%-2-C-%-2-0-p-h-o-t-o-r-e-a-l-i-s-t-i-c-%-2-C-%-2-0-b-e-a-u-t-i-f-u-l-%-2-0-s-c-e-n-e-r-y-w-i-d-t-h-=-1-7-9-2-&-h-e-i-g-h-t-=-1-0-2-4-&-n-o-l-o-g-o-=-t-r-u-e-&-s-e-e-d-=-3-9-0-2-8-"-
+-d-a-t-e-:- -"-2-0-2-6---0-6---1-8-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-l-a-s-t-m-o-d-:- -"-2-0-2-6---0-6---1-8-T-1-0-:-0-0-:-0-0-+-0-8-:-0-0-"-
+-a-u-t-h-o-r-:- -"-J-o-r-a-n-"-
+-s-l-u-g-:- -"-b-e-s-t---t-i-m-e---t-o---v-i-s-i-t---c-h-e-n-g-d-u---w-e-a-t-h-e-r---f-e-s-t-i-v-a-l-s---a-n-d---h-i-d-d-e-n---s-e-a-s-o-n-s---g-u-i-d-e-"-
+-t-a-g-s-:-
+- - --- -C-h-i-n-a-T-r-a-v-e-l-
+- - --- -T-r-a-v-e-l-G-u-i-d-e-
+- - --- -C-h-i-n-a-
+- - --- -E-u-r-o-p-e-T-o-C-h-i-n-a-
+-c-a-t-e-g-o-r-i-e-s-:-
+- - --- -C-h-i-n-a-
+-g-e-o-:- -"-E-U-"-
+-d-r-a-f-t-:- -"-f-a-l-s-e-"-
+-a-u-d-i-t-_-s-t-a-t-u-s-:- -"-p-a-s-s-2-"-
+-s-u-m-m-a-r-y-:- -"-C-o-m-p-l-e-t-e- -B-e-s-t- -T-i-m-e- -t-o- -V-i-s-i-t- -C-h-e-n-g-d-u-:- -W-e-a-t-h-e-r-,- -F-e-s-t-i-v-a-l-s-,- -a-n-d- -H-i-d-d-e-n- -S-e-a-s-o-n-s- -g-u-i-d-e- -f-o-r- -t-r-a-v-e-l-e-r-s- -v-i-s-i-t-i-n-g- -C-h-i-n-a- -b-a-s-e-d- -o-n- -1-0- -y-e-a-r-s- -o-f- -e-x-p-e-r-i-e-n-c-e-.-"-
+-d-e-s-c-r-i-p-t-i-o-n-:- -"-E-v-e-r-y-t-h-i-n-g- -y-o-u- -n-e-e-d- -t-o- -k-n-o-w- -a-b-o-u-t- -t-r-a-v-e-l-i-n-g- -t-o- -C-h-i-n-a-.- -P-r-a-c-t-i-c-a-l- -t-i-p-s- -f-r-o-m- -a- -C-a-l-i-f-o-r-n-i-a- -n-a-t-i-v-e- -l-i-v-i-n-g- -i-n- -C-h-e-n-g-d-u- -f-o-r- -o-v-e-r- -1-0- -y-e-a-r-s-.-"-
+-c-a-n-o-n-i-c-a-l-U-R-L-:- -"-h-t-t-p-s-:-/-/-c-h-i-n-a-b-o-u-n-d-t-r-a-v-e-l-.-c-o-m-/-p-o-s-t-s-/-b-e-s-t---t-i-m-e---t-o---v-i-s-i-t---c-h-e-n-g-d-u---w-e-a-t-h-e-r---f-e-s-t-i-v-a-l-s---a-n-d---h-i-d-d-e-n---s-e-a-s-o-n-s---g-u-i-d-e-/-"-
+-S-h-o-w-T-o-c-:- -"-t-r-u-e-"-
+-T-o-c-O-p-e-n-:- -"-f-a-l-s-e-"-
+-w-e-i-g-h-t-:- -"-1-"-
+-------
+-
+-T-i-t-l-e-:- -B-e-s-t- -T-i-m-e- -t-o- -V-i-s-i-t- -C-h-e-n-g-d-u-:- -W-e-a-t-h-e-r-,- -F-e-s-t-i-v-a-l-s-,- -a-n-d- -H-i-d-d-e-n- -S-e-a-s-o-n-s-
+-
+-I-n-t-r-o-d-u-c-t-i-o-n-
+-
+-H-e-y- -t-h-e-r-e-,- -E-u-r-o-p-e-a-n- -t-r-a-v-e-l-e-r-s-!- -Y-o-u-'-r-e- -p-r-o-b-a-b-l-y- -s-i-t-t-i-n-g- -i-n- -y-o-u-r- -c-o-z-y- -h-o-m-e-s- -i-n- -t-h-e- -U-K-,- -G-e-r-m-a-n-y-,- -F-r-a-n-c-e-,- -I-t-a-l-y-,- -o-r- -S-p-a-i-n-,- -d-a-y-d-r-e-a-m-i-n-g- -a-b-o-u-t- -a- -t-r-i-p- -t-o- -t-h-e- -v-i-b-r-a-n-t- -c-i-t-y- -o-f- -C-h-e-n-g-d-u-.- -W-e-l-l-,- -y-o-u-'-v-e- -c-o-m-e- -t-o- -t-h-e- -r-i-g-h-t- -p-l-a-c-e-.- -I-'-m- -J-o-r-a-n-,- -a-n- -A-m-e-r-i-c-a-n- -w-h-o- -h-a-s- -b-e-e-n- -l-i-v-i-n-g- -i-n- -C-h-e-n-g-d-u- -f-o-r- -o-v-e-r- -1-0- -y-e-a-r-s-.- -I-'-v-e- -g-o-t- -a-l-l- -t-h-e- -i-n-s-i-d-e- -s-c-o-o-p- -o-n- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -t-h-i-s- -a-m-a-z-i-n-g- -c-i-t-y-.-
+-
+-L-e-t- -m-e- -s-t-a-r-t- -w-i-t-h- -a- -l-i-t-t-l-e- -s-t-o-r-y-.- -W-h-e-n- -I- -f-i-r-s-t- -a-r-r-i-v-e-d- -i-n- -C-h-e-n-g-d-u-,- -I- -w-a-s- -c-o-m-p-l-e-t-e-l-y- -c-l-u-e-l-e-s-s- -a-b-o-u-t- -t-h-e- -l-o-c-a-l- -c-u-s-t-o-m-s- -a-n-d- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -d-o- -a-n-y-t-h-i-n-g-.- -I- -r-e-m-e-m-b-e-r- -o-n-e- -t-i-m-e- -w-h-e-n- -I- -w-a-s- -t-r-y-i-n-g- -t-o- -f-i-n-d- -a- -p-a-r-t-i-c-u-l-a-r- -s-t-r-e-e-t- -f-o-o-d- -s-t-a-l-l- -t-h-a-t- -e-v-e-r-y-o-n-e- -r-a-v-e-d- -a-b-o-u-t-.- -I- -w-a-l-k-e-d- -a-r-o-u-n-d- -f-o-r- -w-h-a-t- -f-e-l-t- -l-i-k-e- -h-o-u-r-s-,- -g-e-t-t-i-n-g- -l-o-s-t- -i-n- -t-h-e- -m-a-z-e- -o-f- -n-a-r-r-o-w- -a-l-l-e-y-s-.- -F-i-n-a-l-l-y-,- -I- -f-o-u-n-d- -i-t-,- -a-n-d- -i-t- -w-a-s- -l-i-k-e- -d-i-s-c-o-v-e-r-i-n-g- -a- -h-i-d-d-e-n- -t-r-e-a-s-u-r-e-.- -T-h-a-t-'-s- -t-h-e- -k-i-n-d- -o-f- -a-d-v-e-n-t-u-r-e- -y-o-u- -c-a-n- -e-x-p-e-c-t- -i-n- -C-h-e-n-g-d-u-.-
+-
+-N-o-w-,- -l-e-t-'-s- -t-a-l-k- -a-b-o-u-t- -t-h-e- -w-e-a-t-h-e-r-.- -C-h-e-n-g-d-u- -h-a-s- -a- -s-u-b-t-r-o-p-i-c-a-l- -m-o-n-s-o-o-n- -c-l-i-m-a-t-e-,- -w-h-i-c-h- -m-e-a-n-s- -i-t- -c-a-n- -g-e-t- -p-r-e-t-t-y- -h-o-t- -a-n-d- -h-u-m-i-d- -i-n- -t-h-e- -s-u-m-m-e-r- -a-n-d- -c-o-l-d- -a-n-d- -d-a-m-p- -i-n- -t-h-e- -w-i-n-t-e-r-.- -B-u-t- -d-o-n-'-t- -l-e-t- -t-h-a-t- -s-c-a-r-e- -y-o-u- -o-f-f-.- -E-a-c-h- -s-e-a-s-o-n- -h-a-s- -i-t-s- -o-w-n- -c-h-a-r-m-.-
+-
+-!-[-A- -b-u-s-t-l-i-n-g- -s-t-r-e-e-t- -i-n- -C-h-e-n-g-d-u- -d-u-r-i-n-g- -a- -f-e-s-t-i-v-a-l-,- -w-i-t-h- -c-o-l-o-r-f-u-l- -l-a-n-t-e-r-n-s- -h-a-n-g-i-n-g- -e-v-e-r-y-w-h-e-r-e-,- -p-e-o-p-l-e- -s-m-i-l-i-n-g- -a-n-d- -e-n-j-o-y-i-n-g- -t-h-e- -f-e-s-t-i-v-i-t-i-e-s-,- -c-r-e-a-t-i-n-g- -a- -l-i-v-e-l-y- -a-n-d- -j-o-y-o-u-s- -m-o-o-d-.-]-(-h-t-t-p-s-:-/-/-i-m-a-g-e-.-p-o-l-l-i-n-a-t-i-o-n-s-.-a-i-/-p-r-o-m-p-t-/-A-%-2-0-b-u-s-t-l-i-n-g-%-2-0-s-t-r-e-e-t-%-2-0-i-n-%-2-0-C-h-e-n-g-d-u-%-2-0-d-u-r-i-n-g-%-2-0-a-%-2-0-f-e-s-t-i-v-a-l-%-2-C-%-2-0-w-i-t-h-%-2-0-c-o-l-o-r-f-u-l-%-2-0-l-a-n-t-e-r-n-s-%-2-0-h-a-n-g-i-n-g-%-2-0-e-v-e-r-y-w-h-e-r-e-%-2-C-%-2-0-p-e-o-p-l-e-%-2-0-s-m-i-l-i-n-g-%-2-0-a-n-d-%-2-0-e-n-j-o-y-i-n-g-%-2-0-t-h-e-%-2-0-f-e-s-t-i-v-i-t-i-e-s-%-2-C-%-2-0-c-r-e-a-t-i-n-g-%-2-0-a-%-2-0-l-i-v-e-l-y-%-2-0-a-n-d-%-2-0-j-o-y-o-u-s-%-2-0-m-o-o-d-.-w-i-d-t-h-=-1-0-2-4-&-h-e-i-g-h-t-=-7-6-8-&-n-o-l-o-g-o-=-t-r-u-e-&-s-e-e-d-=-1-4-2-3-9-)-
+-
+-#-#- -W-e-a-t-h-e-r- -i-n- -C-h-e-n-g-d-u-
+-
+-#-#-#- -S-p-r-i-n-g- -(-M-a-r-c-h- --- -M-a-y-)-
+-
+-S-p-r-i-n-g- -i-n- -C-h-e-n-g-d-u- -i-s- -l-i-k-e- -a- -b-r-e-a-t-h- -o-f- -f-r-e-s-h- -a-i-r-.- -T-h-e- -t-e-m-p-e-r-a-t-u-r-e-s- -s-t-a-r-t- -t-o- -r-i-s-e-,- -a-n-d- -t-h-e- -c-i-t-y- -c-o-m-e-s- -a-l-i-v-e- -w-i-t-h- -c-o-l-o-r-f-u-l- -f-l-o-w-e-r-s-.- -I-t-'-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -v-i-s-i-t- -t-h-e- -m-a-n-y- -p-a-r-k-s- -a-n-d- -g-a-r-d-e-n-s- -i-n- -t-h-e- -c-i-t-y-.- -F-o-r- -e-x-a-m-p-l-e-,- -t-h-e- -P-e-o-p-l-e-'-s- -P-a-r-k- -i-s- -a- -p-o-p-u-l-a-r- -s-p-o-t-.- -Y-o-u- -c-a-n- -s-e-e- -l-o-c-a-l-s- -f-l-y-i-n-g- -k-i-t-e-s-,- -d-o-i-n-g- -t-a-i- -c-h-i-,- -o-r- -j-u-s-t- -t-a-k-i-n-g- -a- -s-t-r-o-l-l-.-
+-
+-T-h-e- -o-n-l-y- -d-o-w-n-s-i-d-e- -i-s- -t-h-a-t- -i-t- -c-a-n- -b-e- -a- -b-i-t- -r-a-i-n-y-.- -S-o-,- -m-a-k-e- -s-u-r-e- -y-o-u- -b-r-i-n-g- -a-n- -u-m-b-r-e-l-l-a-.- -B-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -t-h-e- -r-a-i-n- -u-s-u-a-l-l-y- -d-o-e-s-n-'-t- -l-a-s-t- -l-o-n-g-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -S-p-r-i-n-g- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -f-o-r- -o-u-t-d-o-o-r- -a-c-t-i-v-i-t-i-e-s- -l-i-k-e- -v-i-s-i-t-i-n-g- -p-a-r-k-s-.- -J-u-s-t- -b-e- -p-r-e-p-a-r-e-d- -f-o-r- -s-o-m-e- -r-a-i-n-.-
+-
+-#-#-#- -S-u-m-m-e-r- -(-J-u-n-e- --- -A-u-g-u-s-t-)-
+-
+-S-u-m-m-e-r- -i-n- -C-h-e-n-g-d-u- -i-s- -h-o-t- -a-n-d- -h-u-m-i-d-.- -I-t- -c-a-n- -g-e-t- -r-e-a-l-l-y- -s-t-i-c-k-y-,- -e-s-p-e-c-i-a-l-l-y- -i-n- -J-u-l-y- -a-n-d- -A-u-g-u-s-t-.- -B-u-t- -i-t-'-s- -a-l-s-o- -a- -g-r-e-a-t- -t-i-m-e- -f-o-r- -f-e-s-t-i-v-a-l-s-.- -T-h-e- -C-h-e-n-g-d-u- -I-n-t-e-r-n-a-t-i-o-n-a-l- -P-a-n-d-a- -F-e-s-t-i-v-a-l- -i-s- -o-n-e- -o-f- -t-h-e- -b-i-g-g-e-s-t- -e-v-e-n-t-s- -i-n- -t-h-e- -s-u-m-m-e-r-.- -Y-o-u- -c-a-n- -s-e-e- -p-a-n-d-a-s- -u-p- -c-l-o-s-e-,- -w-a-t-c-h- -c-u-l-t-u-r-a-l- -p-e-r-f-o-r-m-a-n-c-e-s-,- -a-n-d- -e-n-j-o-y- -d-e-l-i-c-i-o-u-s- -f-o-o-d-.-
+-
+-I-f- -y-o-u-'-r-e- -n-o-t- -a- -f-a-n- -o-f- -t-h-e- -h-e-a-t-,- -y-o-u- -c-a-n- -a-l-w-a-y-s- -s-t-a-y- -i-n-d-o-o-r-s- -a-n-d- -v-i-s-i-t- -t-h-e- -m-a-n-y- -m-u-s-e-u-m-s- -a-n-d- -s-h-o-p-p-i-n-g- -m-a-l-l-s-.- -T-h-e- -J-i-n-s-h-a- -S-i-t-e- -M-u-s-e-u-m- -i-s- -a- -g-r-e-a-t- -p-l-a-c-e- -t-o- -l-e-a-r-n- -a-b-o-u-t- -t-h-e- -h-i-s-t-o-r-y- -o-f- -C-h-e-n-g-d-u-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -S-u-m-m-e-r- -i-s- -f-e-s-t-i-v-a-l- -t-i-m-e-,- -b-u-t- -b-e- -p-r-e-p-a-r-e-d- -f-o-r- -t-h-e- -h-e-a-t-.- -I-n-d-o-o-r- -a-c-t-i-v-i-t-i-e-s- -a-r-e- -a-l-s-o- -a-v-a-i-l-a-b-l-e-.-
+-
+-#-#-#- -A-u-t-u-m-n- -(-S-e-p-t-e-m-b-e-r- --- -N-o-v-e-m-b-e-r-)-
+-
+-A-u-t-u-m-n- -i-s- -m-y- -f-a-v-o-r-i-t-e- -s-e-a-s-o-n- -i-n- -C-h-e-n-g-d-u-.- -T-h-e- -w-e-a-t-h-e-r- -i-s- -m-i-l-d-,- -a-n-d- -t-h-e- -l-e-a-v-e-s- -s-t-a-r-t- -t-o- -c-h-a-n-g-e- -c-o-l-o-r-.- -I-t-'-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -g-o- -h-i-k-i-n-g- -i-n- -t-h-e- -n-e-a-r-b-y- -m-o-u-n-t-a-i-n-s-.- -T-h-e- -Q-i-n-g-c-h-e-n-g- -M-o-u-n-t-a-i-n- -i-s- -a- -p-o-p-u-l-a-r- -d-e-s-t-i-n-a-t-i-o-n-.- -Y-o-u- -c-a-n- -e-n-j-o-y- -t-h-e- -b-e-a-u-t-i-f-u-l- -s-c-e-n-e-r-y- -a-n-d- -g-e-t- -s-o-m-e- -e-x-e-r-c-i-s-e- -a-t- -t-h-e- -s-a-m-e- -t-i-m-e-.-
+-
+-A-n-o-t-h-e-r- -g-r-e-a-t- -t-h-i-n-g- -a-b-o-u-t- -a-u-t-u-m-n- -i-s- -t-h-e- -f-o-o-d-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -l-o-c-a-l- -s-p-e-c-i-a-l-t-i-e-s- -t-h-a-t- -a-r-e- -o-n-l-y- -a-v-a-i-l-a-b-l-e- -d-u-r-i-n-g- -t-h-i-s- -s-e-a-s-o-n-.- -F-o-r- -e-x-a-m-p-l-e-,- -t-h-e- -o-s-m-a-n-t-h-u-s- -c-a-k-e-s- -a-r-e- -a- -m-u-s-t---t-r-y-.- -T-h-e-y- -a-r-e- -s-w-e-e-t- -a-n-d- -f-r-a-g-r-a-n-t-,- -w-i-t-h- -a- -h-i-n-t- -o-f- -o-s-m-a-n-t-h-u-s- -f-l-a-v-o-r-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -A-u-t-u-m-n- -i-s- -p-e-r-f-e-c-t- -f-o-r- -o-u-t-d-o-o-r- -a-c-t-i-v-i-t-i-e-s- -l-i-k-e- -h-i-k-i-n-g- -a-n-d- -e-n-j-o-y-i-n-g- -l-o-c-a-l- -f-o-o-d-.-
+-
+-#-#-#- -W-i-n-t-e-r- -(-D-e-c-e-m-b-e-r- --- -F-e-b-r-u-a-r-y-)-
+-
+-W-i-n-t-e-r- -i-n- -C-h-e-n-g-d-u- -i-s- -c-o-l-d- -a-n-d- -d-a-m-p-.- -I-t- -d-o-e-s-n-'-t- -s-n-o-w- -v-e-r-y- -o-f-t-e-n-,- -b-u-t- -w-h-e-n- -i-t- -d-o-e-s-,- -i-t-'-s- -a- -b-e-a-u-t-i-f-u-l- -s-i-g-h-t-.- -Y-o-u- -c-a-n- -v-i-s-i-t- -t-h-e- -D-u-j-i-a-n-g-y-a-n- -S-c-e-n-i-c- -A-r-e-a-,- -w-h-i-c-h- -i-s- -a- -U-N-E-S-C-O- -W-o-r-l-d- -H-e-r-i-t-a-g-e- -S-i-t-e-.- -Y-o-u- -c-a-n- -s-e-e- -t-h-e- -a-n-c-i-e-n-t- -i-r-r-i-g-a-t-i-o-n- -s-y-s-t-e-m- -a-n-d- -e-n-j-o-y- -t-h-e- -b-e-a-u-t-i-f-u-l- -s-c-e-n-e-r-y-.-
+-
+-I-f- -y-o-u-'-r-e- -f-e-e-l-i-n-g- -c-o-l-d-,- -y-o-u- -c-a-n- -a-l-w-a-y-s- -w-a-r-m- -u-p- -w-i-t-h- -a- -c-u-p- -o-f- -h-o-t- -t-e-a- -o-r- -a- -b-o-w-l- -o-f- -s-p-i-c-y- -h-o-t- -p-o-t-.- -H-o-t- -p-o-t- -i-s- -a- -l-o-c-a-l- -s-p-e-c-i-a-l-t-y- -t-h-a-t- -i-s- -p-e-r-f-e-c-t- -f-o-r- -t-h-e- -w-i-n-t-e-r-.- -I-t-'-s- -s-p-i-c-y-,- -f-l-a-v-o-r-f-u-l-,- -a-n-d- -w-i-l-l- -d-e-f-i-n-i-t-e-l-y- -w-a-r-m- -y-o-u- -u-p- -f-r-o-m- -t-h-e- -i-n-s-i-d-e- -o-u-t-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -W-i-n-t-e-r- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -v-i-s-i-t- -h-i-s-t-o-r-i-c-a-l- -s-i-t-e-s- -a-n-d- -e-n-j-o-y- -h-o-t- -p-o-t-.-
+-
+-#-#- -F-e-s-t-i-v-a-l-s- -i-n- -C-h-e-n-g-d-u-
+-
+-#-#-#- -S-p-r-i-n-g- -F-e-s-t-i-v-a-l- -(-J-a-n-u-a-r-y- --- -F-e-b-r-u-a-r-y-)-
+-
+-T-h-e- -S-p-r-i-n-g- -F-e-s-t-i-v-a-l- -i-s- -t-h-e- -m-o-s-t- -i-m-p-o-r-t-a-n-t- -f-e-s-t-i-v-a-l- -i-n- -C-h-i-n-a-.- -I-t-'-s- -a- -t-i-m-e- -f-o-r- -f-a-m-i-l-y- -r-e-u-n-i-o-n-s-,- -f-e-a-s-t-i-n-g-,- -a-n-d- -c-e-l-e-b-r-a-t-i-o-n-.- -I-n- -C-h-e-n-g-d-u-,- -y-o-u- -c-a-n- -s-e-e- -l-i-o-n- -a-n-d- -d-r-a-g-o-n- -d-a-n-c-e-s-,- -f-i-r-e-w-o-r-k-s-,- -a-n-d- -t-r-a-d-i-t-i-o-n-a-l- -p-e-r-f-o-r-m-a-n-c-e-s-.-
+-
+-O-n-e- -o-f- -t-h-e- -b-e-s-t- -p-l-a-c-e-s- -t-o- -e-x-p-e-r-i-e-n-c-e- -t-h-e- -S-p-r-i-n-g- -F-e-s-t-i-v-a-l- -i-s- -t-h-e- -W-u-h-o-u- -T-e-m-p-l-e-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -s-t-a-l-l-s- -s-e-l-l-i-n-g- -t-r-a-d-i-t-i-o-n-a-l- -s-n-a-c-k-s-,- -h-a-n-d-i-c-r-a-f-t-s-,- -a-n-d- -s-o-u-v-e-n-i-r-s-.- -Y-o-u- -c-a-n- -a-l-s-o- -s-e-e- -t-h-e- -f-a-m-o-u-s- -"-R-e-d- -E-n-v-e-l-o-p-e-"- -t-r-a-d-i-t-i-o-n-,- -w-h-e-r-e- -p-e-o-p-l-e- -g-i-v-e- -m-o-n-e-y- -t-o- -c-h-i-l-d-r-e-n- -a-s- -a- -g-i-f-t-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -S-p-r-i-n-g- -F-e-s-t-i-v-a-l- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -e-x-p-e-r-i-e-n-c-e- -C-h-i-n-e-s-e- -c-u-l-t-u-r-e-.- -V-i-s-i-t- -t-h-e- -W-u-h-o-u- -T-e-m-p-l-e- -f-o-r- -a- -f-u-l-l- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-#-#-#- -L-a-n-t-e-r-n- -F-e-s-t-i-v-a-l- -(-F-e-b-r-u-a-r-y- --- -M-a-r-c-h-)-
+-
+-T-h-e- -L-a-n-t-e-r-n- -F-e-s-t-i-v-a-l- -i-s- -a-n-o-t-h-e-r- -i-m-p-o-r-t-a-n-t- -f-e-s-t-i-v-a-l- -i-n- -C-h-i-n-a-.- -I-t- -m-a-r-k-s- -t-h-e- -e-n-d- -o-f- -t-h-e- -S-p-r-i-n-g- -F-e-s-t-i-v-a-l- -c-e-l-e-b-r-a-t-i-o-n-s-.- -I-n- -C-h-e-n-g-d-u-,- -y-o-u- -c-a-n- -s-e-e- -b-e-a-u-t-i-f-u-l- -l-a-n-t-e-r-n- -d-i-s-p-l-a-y-s- -i-n- -t-h-e- -s-t-r-e-e-t-s- -a-n-d- -p-a-r-k-s-.-
+-
+-T-h-e- -J-i-n-l-i- -A-n-c-i-e-n-t- -S-t-r-e-e-t- -i-s- -a- -p-o-p-u-l-a-r- -s-p-o-t- -f-o-r- -t-h-e- -L-a-n-t-e-r-n- -F-e-s-t-i-v-a-l-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -t-r-a-d-i-t-i-o-n-a-l- -l-a-n-t-e-r-n-s- -o-n- -d-i-s-p-l-a-y-,- -a-s- -w-e-l-l- -a-s- -f-o-o-d- -s-t-a-l-l-s- -a-n-d- -p-e-r-f-o-r-m-a-n-c-e-s-.- -Y-o-u- -c-a-n- -a-l-s-o- -t-r-y- -s-o-m-e- -o-f- -t-h-e- -l-o-c-a-l- -s-p-e-c-i-a-l-t-i-e-s-,- -s-u-c-h- -a-s- -y-u-a-n-x-i-a-o-,- -w-h-i-c-h- -a-r-e- -s-w-e-e-t- -d-u-m-p-l-i-n-g-s-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -L-a-n-t-e-r-n- -F-e-s-t-i-v-a-l- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -s-e-e- -b-e-a-u-t-i-f-u-l- -l-a-n-t-e-r-n- -d-i-s-p-l-a-y-s-.- -V-i-s-i-t- -J-i-n-l-i- -A-n-c-i-e-n-t- -S-t-r-e-e-t- -f-o-r- -a- -m-e-m-o-r-a-b-l-e- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-#-#-#- -D-r-a-g-o-n- -B-o-a-t- -F-e-s-t-i-v-a-l- -(-J-u-n-e-)-
+-
+-T-h-e- -D-r-a-g-o-n- -B-o-a-t- -F-e-s-t-i-v-a-l- -i-s- -a- -t-r-a-d-i-t-i-o-n-a-l- -C-h-i-n-e-s-e- -f-e-s-t-i-v-a-l- -t-h-a-t- -c-o-m-m-e-m-o-r-a-t-e-s- -t-h-e- -d-e-a-t-h- -o-f- -t-h-e- -p-o-e-t- -Q-u- -Y-u-a-n-.- -I-n- -C-h-e-n-g-d-u-,- -y-o-u- -c-a-n- -s-e-e- -d-r-a-g-o-n- -b-o-a-t- -r-a-c-e-s- -o-n- -t-h-e- -J-i-n-j-i-a-n-g- -R-i-v-e-r-.- -T-h-e-r-e- -a-r-e- -a-l-s-o- -m-a-n-y- -f-o-o-d- -s-t-a-l-l-s- -s-e-l-l-i-n-g- -z-o-n-g-z-i-,- -w-h-i-c-h- -a-r-e- -g-l-u-t-i-n-o-u-s- -r-i-c-e- -d-u-m-p-l-i-n-g-s- -f-i-l-l-e-d- -w-i-t-h- -m-e-a-t-,- -b-e-a-n-s-,- -o-r- -o-t-h-e-r- -i-n-g-r-e-d-i-e-n-t-s-.-
+-
+-T-h-e- -P-e-o-p-l-e-'-s- -P-a-r-k- -i-s- -a- -g-r-e-a-t- -p-l-a-c-e- -t-o- -w-a-t-c-h- -t-h-e- -d-r-a-g-o-n- -b-o-a-t- -r-a-c-e-s-.- -Y-o-u- -c-a-n- -a-l-s-o- -p-a-r-t-i-c-i-p-a-t-e- -i-n- -t-h-e- -t-r-a-d-i-t-i-o-n-a-l- -a-c-t-i-v-i-t-i-e-s-,- -s-u-c-h- -a-s- -m-a-k-i-n-g- -z-o-n-g-z-i- -o-r- -w-e-a-r-i-n-g- -f-r-a-g-r-a-n-t- -s-a-c-h-e-t-s-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -D-r-a-g-o-n- -B-o-a-t- -F-e-s-t-i-v-a-l- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -w-a-t-c-h- -d-r-a-g-o-n- -b-o-a-t- -r-a-c-e-s- -a-n-d- -t-r-y- -z-o-n-g-z-i-.- -V-i-s-i-t- -t-h-e- -P-e-o-p-l-e-'-s- -P-a-r-k- -f-o-r- -a- -f-u-n- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-#-#-#- -M-i-d---A-u-t-u-m-n- -F-e-s-t-i-v-a-l- -(-S-e-p-t-e-m-b-e-r- --- -O-c-t-o-b-e-r-)-
+-
+-T-h-e- -M-i-d---A-u-t-u-m-n- -F-e-s-t-i-v-a-l- -i-s- -a- -t-i-m-e- -f-o-r- -f-a-m-i-l-y- -r-e-u-n-i-o-n-s- -a-n-d-赏-月-.- -I-n- -C-h-e-n-g-d-u-,- -y-o-u- -c-a-n- -s-e-e- -b-e-a-u-t-i-f-u-l- -m-o-o-n-c-a-k-e-s- -o-n- -s-a-l-e- -i-n- -t-h-e- -s-t-r-e-e-t-s- -a-n-d- -s-h-o-p-s-.- -M-o-o-n-c-a-k-e-s- -a-r-e- -a- -t-r-a-d-i-t-i-o-n-a-l- -C-h-i-n-e-s-e- -d-e-s-s-e-r-t- -t-h-a-t- -i-s- -f-i-l-l-e-d- -w-i-t-h- -s-w-e-e-t- -f-i-l-l-i-n-g-s-,- -s-u-c-h- -a-s- -r-e-d- -b-e-a-n- -p-a-s-t-e-,- -n-u-t-s-,- -o-r- -e-g-g- -y-o-l-k-s-.-
+-
+-O-n-e- -o-f- -t-h-e- -b-e-s-t- -p-l-a-c-e-s- -t-o- -e-n-j-o-y- -t-h-e- -M-i-d---A-u-t-u-m-n- -F-e-s-t-i-v-a-l- -i-s- -t-h-e- -W-a-n-g-j-i-a-n-g-l-o-u- -P-a-r-k-.- -Y-o-u- -c-a-n- -s-e-e- -t-h-e- -f-u-l-l- -m-o-o-n- -r-i-s-i-n-g- -o-v-e-r- -t-h-e- -p-a-r-k- -a-n-d- -e-n-j-o-y- -t-h-e- -b-e-a-u-t-i-f-u-l- -s-c-e-n-e-r-y-.- -T-h-e-r-e- -a-r-e- -a-l-s-o- -m-a-n-y- -f-o-o-d- -s-t-a-l-l-s- -a-n-d- -p-e-r-f-o-r-m-a-n-c-e-s-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -M-i-d---A-u-t-u-m-n- -F-e-s-t-i-v-a-l- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -e-n-j-o-y- -m-o-o-n-c-a-k-e-s- -a-n-d- -t-h-e- -f-u-l-l- -m-o-o-n-.- -V-i-s-i-t- -W-a-n-g-j-i-a-n-g-l-o-u- -P-a-r-k- -f-o-r- -a- -r-o-m-a-n-t-i-c- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-#-#- -H-i-d-d-e-n- -S-e-a-s-o-n-s- -i-n- -C-h-e-n-g-d-u-
+-
+-#-#-#- -T-h-e- -"-C-h-e-r-r-y- -B-l-o-s-s-o-m- -S-e-a-s-o-n-"- -(-M-a-r-c-h- --- -A-p-r-i-l-)-
+-
+-W-h-i-l-e- -n-o-t- -a-s- -w-e-l-l---k-n-o-w-n- -a-s- -t-h-e- -s-p-r-i-n-g- -f-l-o-w-e-r-s-,- -t-h-e- -c-h-e-r-r-y- -b-l-o-s-s-o-m- -s-e-a-s-o-n- -i-n- -C-h-e-n-g-d-u- -i-s- -a- -h-i-d-d-e-n- -g-e-m-.- -T-h-e-r-e- -a-r-e- -s-e-v-e-r-a-l- -p-a-r-k-s- -a-n-d- -s-t-r-e-e-t-s- -w-h-e-r-e- -y-o-u- -c-a-n- -s-e-e- -b-e-a-u-t-i-f-u-l- -c-h-e-r-r-y- -b-l-o-s-s-o-m-s- -i-n- -b-l-o-o-m-.-
+-
+-O-n-e- -o-f- -t-h-e- -b-e-s-t- -p-l-a-c-e-s- -t-o- -s-e-e- -c-h-e-r-r-y- -b-l-o-s-s-o-m-s- -i-s- -t-h-e- -T-i-a-n-f-u- -S-q-u-a-r-e-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -c-h-e-r-r-y- -t-r-e-e-s- -a-r-o-u-n-d- -t-h-e- -s-q-u-a-r-e-,- -a-n-d- -w-h-e-n- -t-h-e-y- -a-r-e- -i-n- -b-l-o-o-m-,- -i-t-'-s- -l-i-k-e- -a- -p-i-n-k- -s-n-o-w-f-a-l-l-.- -Y-o-u- -c-a-n- -a-l-s-o- -v-i-s-i-t- -t-h-e- -S-i-c-h-u-a-n- -U-n-i-v-e-r-s-i-t-y- -c-a-m-p-u-s-,- -w-h-i-c-h- -h-a-s- -a- -b-e-a-u-t-i-f-u-l- -c-h-e-r-r-y- -b-l-o-s-s-o-m- -a-v-e-n-u-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-h-e- -c-h-e-r-r-y- -b-l-o-s-s-o-m- -s-e-a-s-o-n- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -s-e-e- -b-e-a-u-t-i-f-u-l- -f-l-o-w-e-r-s-.- -V-i-s-i-t- -T-i-a-n-f-u- -S-q-u-a-r-e- -o-r- -S-i-c-h-u-a-n- -U-n-i-v-e-r-s-i-t-y- -f-o-r- -a- -u-n-i-q-u-e- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-#-#-#- -T-h-e- -"-H-o-t- -P-o-t- -S-e-a-s-o-n-"- -(-A-l-l- -Y-e-a-r- -R-o-u-n-d-)-
+-
+-H-o-t- -p-o-t- -i-s- -a- -l-o-c-a-l- -s-p-e-c-i-a-l-t-y- -t-h-a-t- -i-s- -a-v-a-i-l-a-b-l-e- -a-l-l- -y-e-a-r- -r-o-u-n-d- -i-n- -C-h-e-n-g-d-u-.- -B-u-t- -t-h-e-r-e- -i-s- -s-o-m-e-t-h-i-n-g- -s-p-e-c-i-a-l- -a-b-o-u-t- -e-a-t-i-n-g- -h-o-t- -p-o-t- -i-n- -t-h-e- -w-i-n-t-e-r-.- -T-h-e- -s-p-i-c-y- -b-r-o-t-h- -a-n-d- -t-h-e- -w-a-r-m- -a-t-m-o-s-p-h-e-r-e- -m-a-k-e- -i-t- -t-h-e- -p-e-r-f-e-c-t- -m-e-a-l- -f-o-r- -a- -c-o-l-d- -d-a-y-.-
+-
+-T-h-e-r-e- -a-r-e- -m-a-n-y- -h-o-t- -p-o-t- -r-e-s-t-a-u-r-a-n-t-s- -i-n- -C-h-e-n-g-d-u-,- -e-a-c-h- -w-i-t-h- -i-t-s- -o-w-n- -u-n-i-q-u-e- -f-l-a-v-o-r-.- -S-o-m-e- -o-f- -t-h-e- -p-o-p-u-l-a-r- -o-n-e-s- -i-n-c-l-u-d-e- -t-h-e- -H-a-i-d-i-l-a-o- -H-o-t- -P-o-t- -a-n-d- -t-h-e-小-龙-坎-老-火-锅-.- -Y-o-u- -c-a-n- -a-l-s-o- -t-r-y- -s-o-m-e- -o-f- -t-h-e- -l-o-c-a-l- -s-p-e-c-i-a-l-t-i-e-s-,- -s-u-c-h- -a-s- -t-h-e-毛-肚- -(-o-x- -s-t-o-m-a-c-h-)- -a-n-d- -t-h-e-鸭-肠- -(-d-u-c-k- -i-n-t-e-s-t-i-n-e-)-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -H-o-t- -p-o-t- -i-s- -a- -m-u-s-t---t-r-y- -i-n- -C-h-e-n-g-d-u-.- -V-i-s-i-t- -a- -l-o-c-a-l- -h-o-t- -p-o-t- -r-e-s-t-a-u-r-a-n-t- -f-o-r- -a- -d-e-l-i-c-i-o-u-s- -m-e-a-l-.-
+-
+-#-#-#- -T-h-e- -"-T-e-a- -S-e-a-s-o-n-"- -(-A-p-r-i-l- --- -M-a-y-)-
+-
+-C-h-e-n-g-d-u- -i-s- -k-n-o-w-n- -f-o-r- -i-t-s- -t-e-a- -c-u-l-t-u-r-e-,- -a-n-d- -t-h-e- -t-e-a- -s-e-a-s-o-n- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -e-x-p-e-r-i-e-n-c-e- -i-t-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -t-e-a- -h-o-u-s-e-s- -i-n- -t-h-e- -c-i-t-y- -w-h-e-r-e- -y-o-u- -c-a-n- -e-n-j-o-y- -a- -c-u-p- -o-f- -t-e-a- -a-n-d- -r-e-l-a-x-.-
+-
+-O-n-e- -o-f- -t-h-e- -b-e-s-t- -p-l-a-c-e-s- -t-o- -v-i-s-i-t- -d-u-r-i-n-g- -t-h-e- -t-e-a- -s-e-a-s-o-n- -i-s- -t-h-e- -W-e-n-s-h-u- -M-o-n-a-s-t-e-r-y-.- -T-h-e-r-e- -i-s- -a- -b-e-a-u-t-i-f-u-l- -t-e-a- -h-o-u-s-e- -i-n- -t-h-e- -m-o-n-a-s-t-e-r-y- -w-h-e-r-e- -y-o-u- -c-a-n- -e-n-j-o-y- -a- -c-u-p- -o-f- -t-e-a- -a-n-d- -l-i-s-t-e-n- -t-o- -t-r-a-d-i-t-i-o-n-a-l- -m-u-s-i-c-.- -Y-o-u- -c-a-n- -a-l-s-o- -v-i-s-i-t- -t-h-e- -J-i-n-s-h-a- -S-i-t-e- -M-u-s-e-u-m-,- -w-h-i-c-h- -h-a-s- -a- -t-e-a- -h-o-u-s-e- -w-h-e-r-e- -y-o-u- -c-a-n- -l-e-a-r-n- -a-b-o-u-t- -t-h-e- -h-i-s-t-o-r-y- -o-f- -t-e-a- -i-n- -C-h-i-n-a-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-h-e- -t-e-a- -s-e-a-s-o-n- -i-s- -a- -g-r-e-a-t- -t-i-m-e- -t-o- -e-x-p-e-r-i-e-n-c-e- -C-h-e-n-g-d-u-'-s- -t-e-a- -c-u-l-t-u-r-e-.- -V-i-s-i-t- -a- -t-e-a- -h-o-u-s-e- -f-o-r- -a- -r-e-l-a-x-i-n-g- -a-f-t-e-r-n-o-o-n-.-
+-
+-#-#- -C-h-i-n-a- -V-i-s-a- -R-e-q-u-i-r-e-m-e-n-t-s-
+-
+-I-f- -y-o-u-'-r-e- -a- -E-u-r-o-p-e-a-n- -t-r-a-v-e-l-e-r-,- -y-o-u- -w-i-l-l- -n-e-e-d- -a- -v-i-s-a- -t-o- -e-n-t-e-r- -C-h-i-n-a-.- -T-h-e- -p-r-o-c-e-s-s- -c-a-n- -b-e- -a- -b-i-t- -c-o-m-p-l-i-c-a-t-e-d-,- -b-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -I-'-m- -h-e-r-e- -t-o- -h-e-l-p-.-
+-
+-F-i-r-s-t-,- -y-o-u- -n-e-e-d- -t-o- -d-e-t-e-r-m-i-n-e- -w-h-a-t- -t-y-p-e- -o-f- -v-i-s-a- -y-o-u- -n-e-e-d-.- -T-h-e- -m-o-s-t- -c-o-m-m-o-n- -t-y-p-e- -o-f- -v-i-s-a- -f-o-r- -t-o-u-r-i-s-t-s- -i-s- -t-h-e- -L- -v-i-s-a-.- -Y-o-u- -c-a-n- -a-p-p-l-y- -f-o-r- -t-h-e- -v-i-s-a- -a-t- -t-h-e- -C-h-i-n-e-s-e- -e-m-b-a-s-s-y- -o-r- -c-o-n-s-u-l-a-t-e- -i-n- -y-o-u-r- -h-o-m-e- -c-o-u-n-t-r-y-.-
+-
+-Y-o-u- -w-i-l-l- -n-e-e-d- -t-o- -p-r-o-v-i-d-e- -s-o-m-e- -d-o-c-u-m-e-n-t-s-,- -s-u-c-h- -a-s- -y-o-u-r- -p-a-s-s-p-o-r-t-,- -a- -c-o-m-p-l-e-t-e-d- -v-i-s-a- -a-p-p-l-i-c-a-t-i-o-n- -f-o-r-m-,- -a-n-d- -a- -r-e-c-e-n-t- -p-a-s-s-p-o-r-t---s-i-z-e-d- -p-h-o-t-o-.- -Y-o-u- -m-a-y- -a-l-s-o- -n-e-e-d- -t-o- -p-r-o-v-i-d-e- -a-d-d-i-t-i-o-n-a-l- -d-o-c-u-m-e-n-t-s-,- -s-u-c-h- -a-s- -a-n- -i-n-v-i-t-a-t-i-o-n- -l-e-t-t-e-r- -f-r-o-m- -a- -C-h-i-n-e-s-e- -c-i-t-i-z-e-n- -o-r- -a- -h-o-t-e-l- -r-e-s-e-r-v-a-t-i-o-n-.-
+-
+-T-h-e- -p-r-o-c-e-s-s-i-n-g- -t-i-m-e- -f-o-r- -t-h-e- -v-i-s-a- -c-a-n- -v-a-r-y-,- -b-u-t- -i-t- -u-s-u-a-l-l-y- -t-a-k-e-s- -a- -f-e-w- -d-a-y-s- -t-o- -a- -w-e-e-k-.- -M-a-k-e- -s-u-r-e- -y-o-u- -a-p-p-l-y- -f-o-r- -t-h-e- -v-i-s-a- -w-e-l-l- -i-n- -a-d-v-a-n-c-e- -o-f- -y-o-u-r- -t-r-i-p-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -A-p-p-l-y- -f-o-r- -a- -v-i-s-a- -w-e-l-l- -i-n- -a-d-v-a-n-c-e- -a-n-d- -m-a-k-e- -s-u-r-e- -y-o-u- -h-a-v-e- -a-l-l- -t-h-e- -n-e-c-e-s-s-a-r-y- -d-o-c-u-m-e-n-t-s-.-
+-
+-#-#- -T-r-a-n-s-p-o-r-t-a-t-i-o-n- -i-n- -C-h-e-n-g-d-u-
+-
+-#-#-#- -S-u-b-w-a-y-
+-
+-T-h-e- -s-u-b-w-a-y- -s-y-s-t-e-m- -i-n- -C-h-e-n-g-d-u- -i-s- -a- -c-o-n-v-e-n-i-e-n-t- -a-n-d- -a-f-f-o-r-d-a-b-l-e- -w-a-y- -t-o- -g-e-t- -a-r-o-u-n-d- -t-h-e- -c-i-t-y-.- -T-h-e-r-e- -a-r-e- -s-e-v-e-r-a-l- -l-i-n-e-s- -t-h-a-t- -c-o-v-e-r- -m-o-s-t- -o-f- -t-h-e- -m-a-j-o-r- -a-r-e-a-s-.-
+-
+-T-h-e- -s-u-b-w-a-y- -i-s- -c-l-e-a-n-,- -f-a-s-t-,- -a-n-d- -e-f-f-i-c-i-e-n-t-.- -Y-o-u- -c-a-n- -b-u-y- -a- -s-i-n-g-l-e---t-r-i-p- -t-i-c-k-e-t- -o-r- -a- -r-e-c-h-a-r-g-e-a-b-l-e- -c-a-r-d-.- -T-h-e- -r-e-c-h-a-r-g-e-a-b-l-e- -c-a-r-d- -i-s- -m-o-r-e- -c-o-n-v-e-n-i-e-n-t- -i-f- -y-o-u- -p-l-a-n- -t-o- -u-s-e- -t-h-e- -s-u-b-w-a-y- -f-r-e-q-u-e-n-t-l-y-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -t-h-e- -s-u-b-w-a-y- -c-a-n- -g-e-t- -v-e-r-y- -c-r-o-w-d-e-d- -d-u-r-i-n-g- -r-u-s-h- -h-o-u-r-.- -I-t-'-s- -l-i-k-e- -b-e-i-n-g- -i-n- -a- -s-c-e-n-e- -f-r-o-m- -'-T-h-e- -H-u-n-g-e-r- -G-a-m-e-s-'-.- -B-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -i-t-'-s- -o-n-l-y- -f-o-r- -a- -s-h-o-r-t- -t-i-m-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-h-e- -s-u-b-w-a-y- -i-s- -a- -g-r-e-a-t- -w-a-y- -t-o- -g-e-t- -a-r-o-u-n-d-.- -A-v-o-i-d- -r-u-s-h- -h-o-u-r- -i-f- -p-o-s-s-i-b-l-e-.-
+-
+-#-#-#- -B-u-s-
+-
+-T-h-e- -b-u-s- -s-y-s-t-e-m- -i-n- -C-h-e-n-g-d-u- -i-s- -a-l-s-o- -a- -c-o-n-v-e-n-i-e-n-t- -w-a-y- -t-o- -g-e-t- -a-r-o-u-n-d-.- -T-h-e-r-e- -a-r-e- -m-a-n-y- -b-u-s- -r-o-u-t-e-s- -t-h-a-t- -c-o-v-e-r- -t-h-e- -e-n-t-i-r-e- -c-i-t-y-.-
+-
+-T-h-e- -b-u-s- -i-s- -c-h-e-a-p-e-r- -t-h-a-n- -t-h-e- -s-u-b-w-a-y-,- -b-u-t- -i-t- -c-a-n- -b-e- -a- -b-i-t- -s-l-o-w-e-r-.- -Y-o-u- -c-a-n- -b-u-y- -a- -s-i-n-g-l-e---t-r-i-p- -t-i-c-k-e-t- -o-r- -a- -r-e-c-h-a-r-g-e-a-b-l-e- -c-a-r-d-.- -T-h-e- -r-e-c-h-a-r-g-e-a-b-l-e- -c-a-r-d- -i-s- -m-o-r-e- -c-o-n-v-e-n-i-e-n-t- -i-f- -y-o-u- -p-l-a-n- -t-o- -u-s-e- -t-h-e- -b-u-s- -f-r-e-q-u-e-n-t-l-y-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -t-h-e- -b-u-s- -c-a-n- -g-e-t- -v-e-r-y- -c-r-o-w-d-e-d- -d-u-r-i-n-g- -r-u-s-h- -h-o-u-r-.- -I-t-'-s- -l-i-k-e- -b-e-i-n-g- -i-n- -a- -s-a-r-d-i-n-e- -c-a-n-.- -B-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -i-t-'-s- -o-n-l-y- -f-o-r- -a- -s-h-o-r-t- -t-i-m-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-h-e- -b-u-s- -i-s- -a- -g-r-e-a-t- -w-a-y- -t-o- -g-e-t- -a-r-o-u-n-d-.- -A-v-o-i-d- -r-u-s-h- -h-o-u-r- -i-f- -p-o-s-s-i-b-l-e-.-
+-
+-#-#-#- -T-a-x-i-
+-
+-T-a-x-i-s- -a-r-e- -a-v-a-i-l-a-b-l-e- -i-n- -C-h-e-n-g-d-u-,- -b-u-t- -t-h-e-y- -c-a-n- -b-e- -a- -b-i-t- -e-x-p-e-n-s-i-v-e-.- -T-h-e- -f-a-r-e- -i-s- -c-a-l-c-u-l-a-t-e-d- -b-a-s-e-d- -o-n- -t-h-e- -d-i-s-t-a-n-c-e- -a-n-d- -t-h-e- -t-i-m-e-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -s-o-m-e- -t-a-x-i- -d-r-i-v-e-r-s- -m-a-y- -n-o-t- -s-p-e-a-k- -E-n-g-l-i-s-h-.- -I-t- -c-a-n- -b-e- -a- -b-i-t- -o-f- -a- -c-h-a-l-l-e-n-g-e- -t-o- -c-o-m-m-u-n-i-c-a-t-e- -w-i-t-h- -t-h-e-m-.- -B-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -y-o-u- -c-a-n- -a-l-w-a-y-s- -s-h-o-w- -t-h-e-m- -t-h-e- -a-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-a-x-i-s- -a-r-e- -a-v-a-i-l-a-b-l-e-,- -b-u-t- -t-h-e-y- -c-a-n- -b-e- -e-x-p-e-n-s-i-v-e-.- -M-a-k-e- -s-u-r-e- -y-o-u- -h-a-v-e- -t-h-e- -a-d-d-r-e-s-s- -i-n- -C-h-i-n-e-s-e-.-
+-
+-#-#-#- -H-i-g-h---S-p-e-e-d- -T-r-a-i-n-
+-
+-I-f- -y-o-u- -w-a-n-t- -t-o- -t-r-a-v-e-l- -o-u-t-s-i-d-e- -o-f- -C-h-e-n-g-d-u-,- -t-h-e- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -i-s- -a- -g-r-e-a-t- -o-p-t-i-o-n-.- -I-t-'-s- -f-a-s-t-,- -c-o-m-f-o-r-t-a-b-l-e-,- -a-n-d- -a-f-f-o-r-d-a-b-l-e-.-
+-
+-T-h-e-r-e- -a-r-e- -s-e-v-e-r-a-l- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -l-i-n-e-s- -t-h-a-t- -c-o-n-n-e-c-t- -C-h-e-n-g-d-u- -t-o- -o-t-h-e-r- -m-a-j-o-r- -c-i-t-i-e-s- -i-n- -C-h-i-n-a-.- -Y-o-u- -c-a-n- -b-u-y- -a- -t-i-c-k-e-t- -a-t- -t-h-e- -t-r-a-i-n- -s-t-a-t-i-o-n- -o-r- -o-n-l-i-n-e-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -t-h-e- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -c-a-n- -g-e-t- -v-e-r-y- -c-r-o-w-d-e-d- -d-u-r-i-n-g- -p-e-a-k- -s-e-a-s-o-n-.- -I-t-'-s- -l-i-k-e- -b-e-i-n-g- -i-n- -a- -c-a-t-t-l-e- -c-a-r-.- -B-u-t- -d-o-n-'-t- -w-o-r-r-y-,- -i-t-'-s- -o-n-l-y- -f-o-r- -a- -s-h-o-r-t- -t-i-m-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-h-e- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -i-s- -a- -g-r-e-a-t- -w-a-y- -t-o- -t-r-a-v-e-l- -o-u-t-s-i-d-e- -o-f- -C-h-e-n-g-d-u-.- -B-o-o-k- -y-o-u-r- -t-i-c-k-e-t- -i-n- -a-d-v-a-n-c-e-.-
+-
+-#-#- -C-h-i-n-a- -T-r-a-v-e-l- -B-u-d-g-e-t-
+-
+-T-h-e- -c-o-s-t- -o-f- -t-r-a-v-e-l-i-n-g- -i-n- -C-h-i-n-a- -c-a-n- -v-a-r-y- -d-e-p-e-n-d-i-n-g- -o-n- -y-o-u-r- -t-r-a-v-e-l- -s-t-y-l-e- -a-n-d- -y-o-u-r- -b-u-d-g-e-t-.- -H-e-r-e- -a-r-e- -s-o-m-e- -e-s-t-i-m-a-t-e-s- -t-o- -h-e-l-p- -y-o-u- -p-l-a-n- -y-o-u-r- -t-r-i-p-.-
+-
+-#-#-#- -A-c-c-o-m-m-o-d-a-t-i-o-n-
+-
+-T-h-e- -c-o-s-t- -o-f- -a-c-c-o-m-m-o-d-a-t-i-o-n- -i-n- -C-h-e-n-g-d-u- -c-a-n- -v-a-r-y- -d-e-p-e-n-d-i-n-g- -o-n- -t-h-e- -t-y-p-e- -o-f- -h-o-t-e-l- -y-o-u- -c-h-o-o-s-e-.- -A- -b-u-d-g-e-t- -h-o-t-e-l- -c-a-n- -c-o-s-t- -a-s- -l-i-t-t-l-e- -a-s- -$-2-0- -p-e-r- -n-i-g-h-t-,- -w-h-i-l-e- -a- -l-u-x-u-r-y- -h-o-t-e-l- -c-a-n- -c-o-s-t- -h-u-n-d-r-e-d-s- -o-f- -d-o-l-l-a-r-s- -p-e-r- -n-i-g-h-t-.-
+-
+-I-f- -y-o-u-'-r-e- -o-n- -a- -b-u-d-g-e-t-,- -y-o-u- -c-a-n- -c-o-n-s-i-d-e-r- -s-t-a-y-i-n-g- -i-n- -a- -g-u-e-s-t-h-o-u-s-e- -o-r- -a- -h-o-s-t-e-l-.- -T-h-e-s-e- -a-r-e- -u-s-u-a-l-l-y- -c-h-e-a-p-e-r- -a-n-d- -o-f-f-e-r- -a- -m-o-r-e- -a-u-t-h-e-n-t-i-c- -e-x-p-e-r-i-e-n-c-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -A-c-c-o-m-m-o-d-a-t-i-o-n- -c-o-s-t-s- -c-a-n- -v-a-r-y-.- -C-o-n-s-i-d-e-r- -s-t-a-y-i-n-g- -i-n- -a- -g-u-e-s-t-h-o-u-s-e- -o-r- -h-o-s-t-e-l- -i-f- -y-o-u-'-r-e- -o-n- -a- -b-u-d-g-e-t-.-
+-
+-#-#-#- -F-o-o-d-
+-
+-T-h-e- -c-o-s-t- -o-f- -f-o-o-d- -i-n- -C-h-e-n-g-d-u- -i-s- -r-e-l-a-t-i-v-e-l-y- -i-n-e-x-p-e-n-s-i-v-e-.- -Y-o-u- -c-a-n- -f-i-n-d- -d-e-l-i-c-i-o-u-s- -s-t-r-e-e-t- -f-o-o-d- -f-o-r- -a-s- -l-i-t-t-l-e- -a-s- -$-1- -p-e-r- -i-t-e-m-.- -A- -m-e-a-l- -i-n- -a- -r-e-s-t-a-u-r-a-n-t- -c-a-n- -c-o-s-t- -a-n-y-w-h-e-r-e- -f-r-o-m- -$-5- -t-o- -$-2-0- -p-e-r- -p-e-r-s-o-n-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -t-h-e- -f-o-o-d- -i-n- -C-h-e-n-g-d-u- -i-s- -v-e-r-y- -s-p-i-c-y-.- -I-f- -y-o-u-'-r-e- -n-o-t- -u-s-e-d- -t-o- -s-p-i-c-y- -f-o-o-d-,- -y-o-u- -m-a-y- -w-a-n-t- -t-o- -o-r-d-e-r- -s-o-m-e-t-h-i-n-g- -m-i-l-d-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -F-o-o-d- -i-s- -r-e-l-a-t-i-v-e-l-y- -i-n-e-x-p-e-n-s-i-v-e- -i-n- -C-h-e-n-g-d-u-.- -B-e- -c-a-r-e-f-u-l- -w-i-t-h- -t-h-e- -s-p-i-c-e- -l-e-v-e-l-.-
+-
+-#-#-#- -T-r-a-n-s-p-o-r-t-a-t-i-o-n-
+-
+-T-h-e- -c-o-s-t- -o-f- -t-r-a-n-s-p-o-r-t-a-t-i-o-n- -i-n- -C-h-e-n-g-d-u- -i-s- -a-l-s-o- -r-e-l-a-t-i-v-e-l-y- -i-n-e-x-p-e-n-s-i-v-e-.- -A- -s-i-n-g-l-e---t-r-i-p- -s-u-b-w-a-y- -t-i-c-k-e-t- -c-o-s-t-s- -a-r-o-u-n-d- -$-0-.-5-0-,- -w-h-i-l-e- -a- -b-u-s- -t-i-c-k-e-t- -c-o-s-t-s- -a-r-o-u-n-d- -$-0-.-2-5-.- -A- -t-a-x-i- -r-i-d-e- -c-a-n- -c-o-s-t- -a-n-y-w-h-e-r-e- -f-r-o-m- -$-5- -t-o- -$-2-0- -d-e-p-e-n-d-i-n-g- -o-n- -t-h-e- -d-i-s-t-a-n-c-e-.-
+-
+-I-f- -y-o-u- -p-l-a-n- -t-o- -t-r-a-v-e-l- -o-u-t-s-i-d-e- -o-f- -C-h-e-n-g-d-u-,- -t-h-e- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -i-s- -a- -g-r-e-a-t- -o-p-t-i-o-n-.- -T-h-e- -c-o-s-t- -o-f- -a- -h-i-g-h---s-p-e-e-d- -t-r-a-i-n- -t-i-c-k-e-t- -c-a-n- -v-a-r-y- -d-e-p-e-n-d-i-n-g- -o-n- -t-h-e- -d-i-s-t-a-n-c-e- -a-n-d- -t-h-e- -c-l-a-s-s- -o-f- -s-e-r-v-i-c-e-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -T-r-a-n-s-p-o-r-t-a-t-i-o-n- -i-s- -r-e-l-a-t-i-v-e-l-y- -i-n-e-x-p-e-n-s-i-v-e- -i-n- -C-h-e-n-g-d-u-.- -C-o-n-s-i-d-e-r- -u-s-i-n-g- -p-u-b-l-i-c- -t-r-a-n-s-p-o-r-t-a-t-i-o-n-.-
+-
+-#-#-#- -A-c-t-i-v-i-t-i-e-s-
+-
+-T-h-e- -c-o-s-t- -o-f- -a-c-t-i-v-i-t-i-e-s- -i-n- -C-h-e-n-g-d-u- -c-a-n- -v-a-r-y- -d-e-p-e-n-d-i-n-g- -o-n- -t-h-e- -t-y-p-e- -o-f- -a-c-t-i-v-i-t-y- -y-o-u- -c-h-o-o-s-e-.- -A- -v-i-s-i-t- -t-o- -a- -m-u-s-e-u-m- -o-r- -a- -p-a-r-k- -i-s- -u-s-u-a-l-l-y- -f-r-e-e- -o-r- -v-e-r-y- -i-n-e-x-p-e-n-s-i-v-e-.- -A- -v-i-s-i-t- -t-o- -a- -t-h-e-m-e- -p-a-r-k- -o-r- -a- -t-o-u-r-i-s-t- -a-t-t-r-a-c-t-i-o-n- -c-a-n- -c-o-s-t- -m-o-r-e-.-
+-
+-O-n-e- -t-h-i-n-g- -t-o- -n-o-t-e- -i-s- -t-h-a-t- -s-o-m-e- -a-c-t-i-v-i-t-i-e-s- -m-a-y- -r-e-q-u-i-r-e- -a-d-v-a-n-c-e- -b-o-o-k-i-n-g-.- -M-a-k-e- -s-u-r-e- -y-o-u- -c-h-e-c-k- -t-h-e- -w-e-b-s-i-t-e- -o-r- -t-h-e- -t-i-c-k-e-t- -o-f-f-i-c-e- -b-e-f-o-r-e- -y-o-u- -g-o-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -A-c-t-i-v-i-t-i-e-s- -c-a-n- -v-a-r-y- -i-n- -c-o-s-t-.- -C-h-e-c-k- -f-o-r- -a-d-v-a-n-c-e- -b-o-o-k-i-n-g- -r-e-q-u-i-r-e-m-e-n-t-s-.-
+-
+-#-#- -S-a-f-e-t-y- -T-i-p-s-
+-
+-C-h-e-n-g-d-u- -i-s- -a- -r-e-l-a-t-i-v-e-l-y- -s-a-f-e- -c-i-t-y-,- -b-u-t- -l-i-k-e- -a-n-y- -b-i-g- -c-i-t-y-,- -t-h-e-r-e- -a-r-e- -s-o-m-e- -p-r-e-c-a-u-t-i-o-n-s- -y-o-u- -s-h-o-u-l-d- -t-a-k-e-.-
+-
+-#-#-#- -P-e-r-s-o-n-a-l- -S-a-f-e-t-y-
+-
+--- -B-e- -a-w-a-r-e- -o-f- -y-o-u-r- -s-u-r-r-o-u-n-d-i-n-g-s- -a-n-d- -k-e-e-p- -y-o-u-r- -v-a-l-u-a-b-l-e-s- -s-a-f-e-.-
+--- -A-v-o-i-d- -w-a-l-k-i-n-g- -a-l-o-n-e- -a-t- -n-i-g-h-t- -i-n- -u-n-f-a-m-i-l-i-a-r- -a-r-e-a-s-.-
+--- -D-o-n-'-t- -a-c-c-e-p-t- -r-i-d-e-s- -f-r-o-m- -s-t-r-a-n-g-e-r-s-.-
+-
+-#-#-#- -F-o-o-d- -S-a-f-e-t-y-
+-
+--- -M-a-k-e- -s-u-r-e- -y-o-u- -e-a-t- -a-t- -c-l-e-a-n- -a-n-d- -r-e-p-u-t-a-b-l-e- -r-e-s-t-a-u-r-a-n-t-s-.-
+--- -A-v-o-i-d- -e-a-t-i-n-g- -r-a-w- -o-r- -u-n-d-e-r-c-o-o-k-e-d- -f-o-o-d-.-
+--- -D-r-i-n-k- -o-n-l-y- -b-o-t-t-l-e-d- -w-a-t-e-r-.-
+-
+-#-#-#- -C-u-l-t-u-r-a-l- -S-a-f-e-t-y-
+-
+--- -R-e-s-p-e-c-t- -t-h-e- -l-o-c-a-l- -c-u-s-t-o-m-s- -a-n-d- -t-r-a-d-i-t-i-o-n-s-.-
+--- -D-o-n-'-t- -t-a-k-e- -p-i-c-t-u-r-e-s- -o-f- -p-e-o-p-l-e- -w-i-t-h-o-u-t- -t-h-e-i-r- -p-e-r-m-i-s-s-i-o-n-.-
+--- -D-o-n-'-t- -t-o-u-c-h- -o-r- -m-o-v-e- -a-n-y- -c-u-l-t-u-r-a-l- -a-r-t-i-f-a-c-t-s-.-
+-
+-P-r-a-c-t-i-c-a-l- -T-a-k-e-a-w-a-y-:- -F-o-l-l-o-w- -t-h-e-s-e- -s-a-f-e-t-y- -t-i-p-s- -t-o- -e-n-s-u-r-e- -a- -s-a-f-e- -a-n-d- -e-n-j-o-y-a-b-l-e- -t-r-i-p-.-
+-
+-C-o-n-c-l-u-s-i-o-n-
+-
+-W-e-l-l-,- -t-h-e-r-e- -y-o-u- -h-a-v-e- -i-t-,- -f-o-l-k-s-.- -M-y- -c-o-m-p-r-e-h-e-n-s-i-v-e- -g-u-i-d-e- -t-o- -t-h-e- -b-e-s-t- -t-i-m-e- -t-o- -v-i-s-i-t- -C-h-e-n-g-d-u-.- -W-h-e-t-h-e-r- -y-o-u-'-r-e- -i-n-t-e-r-e-s-t-e-d- -i-n- -t-h-e- -w-e-a-t-h-e-r-,- -t-h-e- -f-e-s-t-i-v-a-l-s-,- -o-r- -t-h-e- -h-i-d-d-e-n- -s-e-a-s-o-n-s-,- -t-h-e-r-e-'-s- -s-o-m-e-t-h-i-n-g- -f-o-r- -e-v-e-r-y-o-n-e- -i-n- -t-h-i-s- -a-m-a-z-i-n-g- -c-i-t-y-.-
+-
+-S-o-,- -w-h-a-t- -a-r-e- -y-o-u- -w-a-i-t-i-n-g- -f-o-r- -B-o-o-k- -y-o-u-r- -t-r-i-p- -t-o- -C-h-e-n-g-d-u- -t-o-d-a-y- -a-n-d- -e-x-p-e-r-i-e-n-c-e- -t-h-e- -b-e-a-u-t-y- -a-n-d- -c-u-l-t-u-r-e- -o-f- -t-h-i-s- -a-m-a-z-i-n-g- -c-i-t-y- -f-o-r- -y-o-u-r-s-e-l-f-.- -A-n-d- -d-o-n-'-t- -f-o-r-g-e-t- -t-o- -f-o-l-l-o-w- -m-y- -t-i-p-s- -a-n-d- -t-r-i-c-k-s- -t-o- -m-a-k-e- -t-h-e- -m-o-s-t- -o-f- -y-o-u-r- -t-r-i-p-.-
+-
+-A-s- -f-o-r- -m-e-,- -I-'-l-l- -b-e- -h-e-r-e- -i-n- -C-h-e-n-g-d-u-,- -w-a-i-t-i-n-g- -f-o-r- -y-o-u- -t-o- -j-o-i-n- -m-e- -o-n- -m-y- -n-e-x-t- -a-d-v-e-n-t-u-r-e-.- -S-e-e- -y-o-u- -s-o-o-n-!-
+-
+-!-[-A- -b-e-a-u-t-i-f-u-l- -s-u-n-s-e-t- -o-v-e-r- -C-h-e-n-g-d-u-,- -w-i-t-h- -t-h-e- -c-i-t-y- -s-k-y-l-i-n-e- -i-n- -t-h-e- -b-a-c-k-g-r-o-u-n-d-,- -c-r-e-a-t-i-n-g- -a- -p-e-a-c-e-f-u-l- -a-n-d- -r-o-m-a-n-t-i-c- -m-o-o-d-.-]-(-h-t-t-p-s-:-/-/-i-m-a-g-e-.-p-o-l-l-i-n-a-t-i-o-n-s-.-a-i-/-p-r-o-m-p-t-/-A-%-2-0-b-e-a-u-t-i-f-u-l-%-2-0-s-u-n-s-e-t-%-2-0-o-v-e-r-%-2-0-C-h-e-n-g-d-u-%-2-C-%-2-0-w-i-t-h-%-2-0-t-h-e-%-2-0-c-i-t-y-%-2-0-s-k-y-l-i-n-e-%-2-0-i-n-%-2-0-t-h-e-%-2-0-b-a-c-k-g-r-o-u-n-d-%-2-C-%-2-0-c-r-e-a-t-i-n-g-%-2-0-a-%-2-0-p-e-a-c-e-f-u-l-%-2-0-a-n-d-%-2-0-r-o-m-a-n-t-i-c-%-2-0-m-o-o-d-.-w-i-d-t-h-=-1-0-2-4-&-h-e-i-g-h-t-=-7-6-8-&-n-o-l-o-g-o-=-t-r-u-e-&-s-e-e-d-=-6-2-4-7-3-)-
