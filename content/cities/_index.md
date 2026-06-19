@@ -1,8 +1,8 @@
-+++
-title = "China City Travel Guides"
-description = "Explore China's greatest cities with insider tips from Joran"
-url = "/cities/"
-+++
+---
+title: "China City Travel Guides"
+description: "Explore China's greatest cities with insider tips from Joran"
+date: 2026-06-09T10:00:00+08:00
+---
 
 <div class="city-hero">
     <h1 class="city-hero-title"> China City Travel Guides</h1>

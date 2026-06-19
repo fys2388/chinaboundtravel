@@ -96,6 +96,12 @@ buildExpired = false
   weight = 60
 
 [[menu.main]]
+  identifier = "posts"
+  name = "📝 Blog"
+  url = "/posts/"
+  weight = 65
+
+[[menu.main]]
   identifier = "about"
   name = "✍️ About Me"
   url = "/about/"
