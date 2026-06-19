@@ -1006,6 +1006,35 @@ class BlogGenerator:
         
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(full_content)
+        
+        self._validate_file(filepath)
+    
+    def _validate_file(self, filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+            
+            corruption_patterns = ["-t-i-t-l-e-", "-d-e-s-c-r-i-p-t-i-o-n-", "-d-a-t-e-", "-a-u-t-h-o-r-"]
+            for pattern in corruption_patterns:
+                if pattern in content:
+                    print(f"⚠️ 检测到文件损坏模式: {pattern}")
+                    os.remove(filepath)
+                    raise ValueError(f"File corrupted with pattern: {pattern}")
+            
+            if content.count("---") < 2:
+                print("⚠️ 检测到 YAML 边界缺失")
+                os.remove(filepath)
+                raise ValueError("YAML frontmatter boundary missing")
+            
+            if len(content) < 10:
+                print("⚠️ 检测到文件内容过短")
+                os.remove(filepath)
+                raise ValueError("File content too short")
+            
+            print(f"✅ 文件验证通过: {filepath}")
+        except Exception as e:
+            print(f"❌ 文件验证失败: {e}")
+            raise
     
     def move_to_posts(self, draft_path, title, slug):
         filename = draft_path.name.replace("-attempt1", "").replace("-attempt2", "").replace("-attempt3", "")

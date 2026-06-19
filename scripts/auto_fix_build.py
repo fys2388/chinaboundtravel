@@ -47,19 +47,19 @@ def auto_fix_build_errors(repo_path: str) -> bool:
     fixed = error_handler.auto_fix(error_record)
     
     if fixed:
-        print("✅ Auto-fix applied, retrying build...")
-        build_output, exit_code = run_hugo_build(repo_path)
-        
-        if exit_code == 0:
-            print("✅ Build succeeded after auto-fix!")
-            error_handler.mark_resolved(error_record["id"])
-            return True
+            print("✅ Auto-fix applied, retrying build...")
+            build_output, exit_code = run_hugo_build(repo_path)
+            
+            if exit_code == 0:
+                print("✅ Build succeeded after auto-fix!")
+                error_handler.mark_resolved(error_record.get("id", ""))
+                return True
+            else:
+                print(f"❌ Build still failing: {build_output}")
+                return False
         else:
-            print(f"❌ Build still failing: {build_output}")
+            print("❌ No auto-fix available for this error")
             return False
-    else:
-        print("❌ No auto-fix available for this error")
-        return False
 
 def push_changes(repo_path: str, commit_message: str = "auto-fix: resolve build errors") -> bool:
     """推送修复到远程仓库"""
