@@ -34,6 +34,11 @@
   Cache-Control: public, max-age=3600, must-revalidate
   Cloudflare-CDN-Cache-Control: max-age=3600
 
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=3600
+
 # Root index — shortest cache for frequent updates
 /index.html
   Cache-Control: public, max-age=60, must-revalidate
