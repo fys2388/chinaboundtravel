@@ -51,21 +51,21 @@ Think of it as China's "we promise we're not trying to make your transit miserab
 - **Shenzhen Bao'an Airport** (SZX)
 - **Shenzhen Bay Port**
 
-### Jiangsu、浙江、云南、重庆、成都、大�?etc.
+### Jiangsu, Zhejiang, Yunnan, Chongqing, Chengdu, Dalian, etc.
 Many more cities added in 2024-2025 expansion.
 
 **>>> [Check the full list of eligible ports on China Immigration](https://www.immd.gov.hk/eng/visa_descriptions/china-144-hour-visa-free.html) <<<**
 
 ## Eligibility: Can YOU Use It?
 
-### �?You Qualify If:
+### YES You Qualify If:
 1. You hold a passport from an **eligible country** (US, UK, Canada, Australia, Japan, most EU, and many more)
-2. You have a **confirmed onward ticket** to a third country/region (e.g., US �?Shanghai �?Japan = qualifies)
+2. You have a **confirmed onward ticket** to a third country/region (e.g., US -> Shanghai -> Japan = qualifies)
 3. Your **layover is 144 hours or less**
 4. You enter and exit through an **eligible port**
-5. You **stay within the permitted zone** (e.g., Shanghai zone �?Beijing zone)
+5. You **stay within the permitted zone** (e.g., Shanghai zone NOT Beijing zone)
 
-### �?You DON'T Qualify If:
+### NO You DON'T Qualify If:
 - You're a Chinese citizen (even with foreign passports)
 - You're coming FROM China and going back to your home country (it must be transit to a THIRD country)
 - Your passport is from a non-eligible country
@@ -140,7 +140,7 @@ Look, I get it—bureaucracy is bureaucracy, and China's immigration rules have 
 
 Drop a comment below or [reach out via the contact form](/about/). I've helped hundreds of travelers navigate this successfully—yes, even that guy who was convinced his dog needed a visa.
 
-And if you found this guide helpful? Share it with a friend who's planning a China trip. Trust me, they'll thank you later—and so will I. 🇨🇳
+And if you found this guide helpful? Share it with a friend who's planning a China trip. Trust me, they'll thank you later—and so will I.
 
 ---
 
