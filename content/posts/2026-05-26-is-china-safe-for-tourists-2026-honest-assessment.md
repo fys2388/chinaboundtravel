@@ -89,9 +89,9 @@ Airport taxi refused meter, wanted 150 RMB for a 60 RMB ride.
 
 This is not optional. Gmail, Google Maps, Google Translate, YouTube, Facebook, Instagram, WhatsApp  all blocked. If you have a medical emergency and can't access your travel insurance app, that's a safety issue.
 
-I use {{< vpn-link "ExpressVPN" >}}. It consistently works, has 24/7 live support, and you can install it on up to 8 devices. Once you're in China, you can't download VPN apps  install it BEFORE arrival.
+I use {{< vpn-link "NordVPN" />}}. It consistently works, has 24/7 live support, and you can install it on up to 8 devices. Once you're in China, you can't download VPN apps  install it BEFORE arrival.
 
-For an eSIM with data that works in China, I use {{< esim-link "Airalo eSIM" >}}  order it before you leave home, scan the QR code when you land, you're online before you exit the terminal.
+For an eSIM with data that works in China, I use {{< esim-link "Airalo eSIM" />}}  order it before you leave home, scan the QR code when you land, you're online before you exit the terminal.
 
 ---
 

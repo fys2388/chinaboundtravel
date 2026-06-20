@@ -59,7 +59,7 @@ An eSIM (embedded SIM) is a digital SIM card that allows you to activate a mobil
 2. **Airalo** - Global eSIM service with China plans
 3. **Holafly** - Popular choice among travelers
 
-**Where to Buy**: [Insert Trip.com eSIM Link Here] or directly from airport counters
+**Where to Buy**: {{< klook-link "Get China eSIM on Klook" />}} or directly from airport counters
 
 ### Step-by-Step Activation
 
@@ -139,10 +139,9 @@ A VPN (Virtual Private Network) encrypts your internet connection and routes it 
 
 After extensive testing in multiple cities, these VPNs consistently work:
 
-1. **ExpressVPN** - Fastest speeds, reliable connections [Insert ExpressVPN Affiliate Link Here]
-2. **NordVPN** - Strong encryption, large server network
-3. **Surfshark** - Affordable, unlimited devices
-4. **Astrill** - Specialized for China, excellent track record
+1. **NordVPN** - Strong encryption, large server network, consistently works in China {{< vpn-link "Get NordVPN" />}}
+2. **Surfshark** - Affordable, unlimited devices
+3. **Astrill** - Specialized for China, excellent track record
 
 ### VPN Setup Tips
 
@@ -172,8 +171,8 @@ After extensive testing in multiple cities, these VPNs consistently work:
 ### For Tourists (1-2 Weeks)
 - **Best Option**: eSIM + VPN  
 - **Why**: eSIM provides local connectivity, VPN for accessing blocked services
-- [Purchase eSIM: Insert Trip.com eSIM Link Here]
-- [Get VPN: Insert ExpressVPN Affiliate Link Here]
+- Purchase eSIM: {{< klook-link "Get China eSIM on Klook" />}}
+- Get VPN: {{< vpn-link "Get NordVPN" />}}
 
 ### For Business Travelers (2-4 Weeks)
 - **Best Option**: Local SIM + VPN  
