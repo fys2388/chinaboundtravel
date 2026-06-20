@@ -10,7 +10,7 @@ buildFuture = false
 buildExpired = false
 
 [pagination]
-  pagerSize = 2
+  pagerSize = 10
 
 [params]
   env = 'production'
@@ -19,6 +19,8 @@ buildExpired = false
   author = 'Joran'
 
   rss = true
+
+  sitemapExclude = ["tags", "categories", "_draft", "pricing", "member-month", "member-year", "cancel", "success", "search", "static-package", "refund-policy", "terms-of-service", "disclaimer", "privacy-policy"]
 
   [params.search]
     enable = true
@@ -110,7 +112,7 @@ buildExpired = false
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
 
 [markup.goldmark.renderer]
   unsafe = true

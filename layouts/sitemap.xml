@@ -1,0 +1,22 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- $excludePaths := .Site.Params.sitemapExclude | default slice -}}
+{{- range .Data.Pages -}}
+{{- $pagePath := .RelPermalink -}}
+{{- $shouldExclude := false -}}
+{{- range $excludePaths -}}
+{{- $excludePath := . -}}
+{{- if or (strings.HasPrefix $pagePath (printf "/%s/" $excludePath)) (strings.HasPrefix $pagePath (printf "/%s" $excludePath)) -}}
+{{- $shouldExclude = true -}}
+{{- end -}}
+{{- end -}}
+{{- if and (not $shouldExclude) (not .Draft) -}}
+<url>
+  <loc>{{ .Permalink }}</loc>
+  {{- if .Lastmod }}
+  <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</lastmod>
+  {{- end }}
+</url>
+{{- end -}}
+{{- end -}}
+</urlset>
