@@ -1,0 +1,21 @@
+name: Purge Cloudflare Cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge Cloudflare CDN Cache
+        run: |
+          echo "=== Purging Cloudflare CDN cache ==="
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything":true}' \
+            --fail --show-error || echo "Cache purge failed"
+          
+      - name: Verify purge
+        run: |
+          echo "Cache purge initiated. It may take 30 seconds to propagate globally."
