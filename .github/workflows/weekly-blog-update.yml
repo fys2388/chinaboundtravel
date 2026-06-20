@@ -38,6 +38,30 @@ jobs:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: python chinaboundtravel_social_bot/joran_blog_generator.py
 
+      - name: Check affiliate link expiry
+        id: affiliate-check
+        run: |
+          echo "=== Checking affiliate link expiry ==="
+          python scripts/check_affiliate_expiry.py
+          if [ $? -eq 1 ]; then
+            echo "::set-output name=expiring::true"
+          else
+            echo "::set-output name=expiring::false"
+          fi
+
+      - name: Send expiry warning to Feishu
+        if: steps.affiliate-check.outputs.expiring == 'true'
+        run: |
+          echo "=== Sending expiry warning ==="
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "text",
+              "content": {
+                "text": "⚠️ Klook 联盟链接即将过期！\n请尽快在 hugo.toml 中更新新的 Klook 链接。"
+              }
+            }' || echo "Feishu notification failed"
+
       - name: Build site to verify
         id: hugo-build
         continue-on-error: true

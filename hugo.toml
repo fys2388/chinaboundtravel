@@ -129,12 +129,13 @@ buildExpired = false
 
 [params.affiliate]
   esim = "https://www.airalo.com/promo/38j3e4"
-  vpn = "https://get.affiliates.nordnet.net/?offer_id=15384&aff_id=150687&url_id=613"
-  vpnNord = "https://get.affiliates.nordnet.net/?offer_id=15384&aff_id=150687&url_id=613"
+  vpn = "https://get.affiliatesnord.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
+  vpnNord = "https://get.affiliatesnord.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   vpnSurfshark = "https://get.surfshark.net/aff_c?offer_id=6&aff_id=549763"
   nordpass = "https://go.nordpass.io/off/?offer_id=488&aff_id=150687&url_id=9356"
   hotel = "https://www.booking.com/index.html?aid=1234567"
-  klook = "https://klook.tpo.li/ppB4vZQ6"
+  klook = "https://klook.tpo.li/vrPkmS2v"
+  klook_expire_date = "2026-06-27"
 
 [params.ebook]
   version = "2026.05"
