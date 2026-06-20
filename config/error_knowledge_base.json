@@ -7,10 +7,7 @@
       "occurrences": 3,
       "first_seen": "2026-06-01T09:00:00",
       "last_seen": "2026-06-05T14:30:00",
-      "files": [
-        "old-post-1.md",
-        "old-post-2.md"
-      ],
+      "files": ["old-post-1.md", "old-post-2.md"],
       "suggestion": "使用 [Image:描述|alt=xxx] 格式",
       "resolved": true
     },
@@ -21,9 +18,7 @@
       "occurrences": 2,
       "first_seen": "2026-06-02T10:00:00",
       "last_seen": "2026-06-04T11:00:00",
-      "files": [
-        "old-post-3.md"
-      ],
+      "files": ["old-post-3.md"],
       "suggestion": "填充有效的站内链接或删除空链接",
       "resolved": false
     },
@@ -34,11 +29,7 @@
       "occurrences": 5,
       "first_seen": "2026-06-01T09:00:00",
       "last_seen": "2026-06-06T08:00:00",
-      "files": [
-        "post-1.md",
-        "post-2.md",
-        "post-3.md"
-      ],
+      "files": ["post-1.md", "post-2.md", "post-3.md"],
       "suggestion": "每篇文章至少添加2个图片占位符",
       "resolved": false
     },
@@ -49,10 +40,7 @@
       "occurrences": 4,
       "first_seen": "2026-06-03T09:00:00",
       "last_seen": "2026-06-05T10:00:00",
-      "files": [
-        "post-4.md",
-        "post-5.md"
-      ],
+      "files": ["post-4.md", "post-5.md"],
       "suggestion": "扩展description至120-158字符",
       "resolved": true
     },
@@ -63,9 +51,7 @@
       "occurrences": 1,
       "first_seen": "2026-06-04T14:00:00",
       "last_seen": "2026-06-04T14:00:00",
-      "files": [
-        "post-6.md"
-      ],
+      "files": ["post-6.md"],
       "suggestion": "确保只有一个H1标题",
       "resolved": true
     },
@@ -76,18 +62,12 @@
       "occurrences": 62,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "internet-connection-china-esim-vpn-guide.md",
-        "western-sichuan-overland-camping-route.md",
-        "hello-world.md",
-        "alipay-wechat-pay-foreigners-guide.md",
-        "144-hour-visa-free-transit-guide.md",
-        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
-      ],
+      "files": ["internet-connection-china-esim-vpn-guide.md", "western-sichuan-overland-camping-route.md", "hello-world.md", "alipay-wechat-pay-foreigners-guide.md", "144-hour-visa-free-transit-guide.md", "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"],
       "suggestion": "运行 fix_placeholders.py 脚本替换为真实联盟链接",
-      "resolved": false,
+      "resolved": true,
       "priority": "P0",
-      "source": "外部评测报告"
+      "source": "外部评测报告",
+      "prevention_rules": ["使用 {{< vpn-link \"text\" />}} 和 {{< klook-link \"text\" />}} 短代码", "在生成时直接使用联盟链接短代码", "生成后检查是否存在未替换的占位符"]
     },
     {
       "hash": "factual_error_beijing",
@@ -96,13 +76,12 @@
       "occurrences": 2,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "cities/beijing.md"
-      ],
+      "files": ["cities/beijing.md"],
       "suggestion": "校对所有时间、时长、价格数据，确保准确性",
       "resolved": true,
       "priority": "P0",
-      "source": "外部评测报告"
+      "source": "外部评测报告",
+      "prevention_rules": ["生成时验证时间格式（如 7-9 AM 而非 79 AM）", "验证时长数据合理性", "重要数据在发布前进行二次确认"]
     },
     {
       "hash": "test_page_online",
@@ -111,13 +90,12 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "member-month/test-wrong-tag.md"
-      ],
+      "files": ["member-month/test-wrong-tag.md"],
       "suggestion": "添加 draft: true 或从生产环境移除",
       "resolved": true,
       "priority": "P0",
-      "source": "外部评测报告"
+      "source": "外部评测报告",
+      "prevention_rules": ["测试文章添加 draft: true", "定期清理测试文件", "不在生产目录创建测试文件"]
     },
     {
       "hash": "schema_missing",
@@ -126,9 +104,7 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "全站"
-      ],
+      "files": ["全站"],
       "suggestion": "添加 JSON-LD 结构化数据以提升搜索结果展示",
       "resolved": false,
       "priority": "P1",
@@ -141,13 +117,12 @@
       "occurrences": 10,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "多个文章"
-      ],
+      "files": ["多个文章"],
       "suggestion": "为所有图片添加描述性 Alt 文本",
       "resolved": false,
       "priority": "P1",
-      "source": "外部评测报告"
+      "source": "外部评测报告",
+      "prevention_rules": ["生成图片时添加描述性 Alt 文本", "在 [Image:description] 格式中包含详细描述"]
     },
     {
       "hash": "social_proof_missing",
@@ -156,9 +131,7 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "pricing页"
-      ],
+      "files": ["pricing页"],
       "suggestion": "收集并展示真实用户评价，提升转化率",
       "resolved": false,
       "priority": "P1",
@@ -171,330 +144,48 @@
       "occurrences": 10,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": [
-        "多个文章"
-      ],
+      "files": ["多个文章"],
       "suggestion": "为每篇文章撰写独特的 meta description 和摘要",
       "resolved": false,
       "priority": "P1",
-      "source": "外部评测报告"
+      "source": "外部评测报告",
+      "prevention_rules": ["确保每篇文章的 description 和 summary 唯一", "根据文章内容生成差异化摘要"]
     },
     {
-      "hash": "21487821931ff6dba72640f3f80a7afe",
-      "type": "Encoding Error",
-      "message": "Bad char: ‍",
-      "occurrences": 3,
-      "first_seen": "2026-06-17T10:21:00.275193",
-      "last_seen": "2026-06-19T06:09:45.873789",
-      "files": [
-        "hangzhou.md"
-      ],
-      "suggestion": "Solution: Convert to UTF-8",
-      "resolved": false
+      "hash": "encoding_bad_char",
+      "type": "编码错误",
+      "message": "发现非法字符导致编码损坏",
+      "occurrences": 4,
+      "first_seen": "2026-06-17T10:21:00",
+      "last_seen": "2026-06-19T06:09:45",
+      "files": ["hangzhou.md", "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md"],
+      "suggestion": "文件保存时使用 UTF-8 编码，避免特殊控制字符",
+      "resolved": false,
+      "priority": "P0",
+      "prevention_rules": ["文件保存时使用 UTF-8 编码", "避免在内容中使用零宽字符", "生成后进行编码验证"]
     },
     {
       "hash": "garbled_characters_2026_06_20",
-      "type": "Encoding Error",
+      "type": "编码错误",
       "message": "发现乱码字符 (� / U+FFFD) - 字符编码损坏",
       "occurrences": 14,
       "first_seen": "2026-06-20T10:00:00",
       "last_seen": "2026-06-20T10:00:00",
-      "files": [
-        "144-hour-visa-free-transit-guide.md",
-        "western-sichuan-overland-camping-route.md",
-        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
-      ],
-      "suggestion": "CRITICAL: 生成文章时只使用 ASCII 字符。避免使用中文汉字、emoji、特殊引号(如「」『』)、箭头符号(→)。将所有中文转换为拼音或英文，引号使用标准英文引号(\" \")。",
+      "files": ["144-hour-visa-free-transit-guide.md", "western-sichuan-overland-camping-route.md", "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"],
+      "suggestion": "生成文章时只使用 ASCII 字符，避免中文、emoji、特殊符号",
       "resolved": true,
       "priority": "P0",
       "source": "自动化扫描",
-      "prevention_rules": [
-        "禁止在文章中包含中文字符（包括城市名、景点名、食物名）",
-        "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）",
-        "中文食物名使用英文翻译（如 dan dan noodles, hotpot）",
-        "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）",
-        "使用标准 ASCII 引号 (\" \") 而非中文引号",
-        "使用英文标点符号（如 . , ! ? ）而非中文标点",
-        "箭头使用 -> 或文字描述（如 leads to）而非 →"
-      ]
-    },
-    {
-      "hash": "53472be9805480ea149d876d31dad905",
-      "type": "Encoding Error",
-      "message": "Bad char: ﻿",
-      "occurrences": 1,
-      "first_seen": "2026-06-17T10:21:00.275536",
-      "last_seen": "2026-06-17T10:21:00.275538",
-      "files": [
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md"
-      ],
-      "suggestion": "Solution: Convert to UTF-8",
-      "resolved": false
-    },
-    {
-      "hash": "d8e999a64ba30b61c651e2935704dea3",
-      "type": "",
-      "message": ": expected a single document in the stream\n  in \"<unicode string>\", line 2, column 1\nbut found another document\n  in \"<unicode string>\", line 8, column 1",
-      "occurrences": 13,
-      "first_seen": "2026-06-17T10:21:00.279283",
-      "last_seen": "2026-06-17T10:21:00.304606",
-      "files": [
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
-        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-        "alipay-wechat-pay-foreigners-guide.md",
-        "2026-05-27-how-to-survive-chinese-train-station.md",
-        "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
-        "2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
-        "internet-connection-china-esim-vpn-guide.md",
-        "144-hour-visa-free-transit-guide.md",
-        "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-        "hello-world.md",
-        "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "9ef3db79ccfcf12ac9b10df8fb5685bf",
-      "type": "",
-      "message": ": title",
-      "occurrences": 21,
-      "first_seen": "2026-06-17T10:21:00.279795",
-      "last_seen": "2026-06-19T06:09:45.882187",
-      "files": [
-        "2026-06-10-off-the-beaten-path-routes-guide.md",
-        "2026-06-11-food-recommendations-guide.md",
-        "2026-06-17-accommodation-tips-guide.md",
-        "2026-06-06-the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.md",
-        "2026-06-06-safety-tips-guide.md",
-        "2026-06-09-accommodation-tips-guide.md",
-        "2026-06-10-essential-safety-tips-for-first-time-travellers-in-china.md",
-        "2026-06-04-china-travel-packing-list-what-i-actually-bring-after-10-years.md",
-        "2026-06-06-the-tao-of-tummy-aches-a-chengdu-food-survival-guide-for-the-california-palate.md",
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md",
-        "2026-06-15-navigating-china-a-transportation-guide-for-european-travelers.md",
-        "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
-        "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
-        "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
-        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "1245bc52890a99a7e88982a689840c5a",
-      "type": "",
-      "message": ": description",
-      "occurrences": 21,
-      "first_seen": "2026-06-17T10:21:00.280054",
-      "last_seen": "2026-06-19T06:09:45.882613",
-      "files": [
-        "2026-06-10-off-the-beaten-path-routes-guide.md",
-        "2026-06-11-food-recommendations-guide.md",
-        "2026-06-17-accommodation-tips-guide.md",
-        "2026-06-06-the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.md",
-        "2026-06-06-safety-tips-guide.md",
-        "2026-06-09-accommodation-tips-guide.md",
-        "2026-06-10-essential-safety-tips-for-first-time-travellers-in-china.md",
-        "2026-06-04-china-travel-packing-list-what-i-actually-bring-after-10-years.md",
-        "2026-06-06-the-tao-of-tummy-aches-a-chengdu-food-survival-guide-for-the-california-palate.md",
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md",
-        "2026-06-15-navigating-china-a-transportation-guide-for-european-travelers.md",
-        "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
-        "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
-        "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
-        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "357eedb10c8daa1d6e97be62254ebd5e",
-      "type": "",
-      "message": ": date",
-      "occurrences": 21,
-      "first_seen": "2026-06-17T10:21:00.280322",
-      "last_seen": "2026-06-19T06:09:45.883189",
-      "files": [
-        "2026-06-10-off-the-beaten-path-routes-guide.md",
-        "2026-06-11-food-recommendations-guide.md",
-        "2026-06-17-accommodation-tips-guide.md",
-        "2026-06-06-the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.md",
-        "2026-06-06-safety-tips-guide.md",
-        "2026-06-09-accommodation-tips-guide.md",
-        "2026-06-10-essential-safety-tips-for-first-time-travellers-in-china.md",
-        "2026-06-04-china-travel-packing-list-what-i-actually-bring-after-10-years.md",
-        "2026-06-06-the-tao-of-tummy-aches-a-chengdu-food-survival-guide-for-the-california-palate.md",
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md",
-        "2026-06-15-navigating-china-a-transportation-guide-for-european-travelers.md",
-        "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
-        "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
-        "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
-        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "19e85d1c9af72bfe741a35afbb508d61",
-      "type": "",
-      "message": ": author",
-      "occurrences": 21,
-      "first_seen": "2026-06-17T10:21:00.280615",
-      "last_seen": "2026-06-19T06:09:45.883717",
-      "files": [
-        "2026-06-10-off-the-beaten-path-routes-guide.md",
-        "2026-06-11-food-recommendations-guide.md",
-        "2026-06-17-accommodation-tips-guide.md",
-        "2026-06-06-the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.md",
-        "2026-06-06-safety-tips-guide.md",
-        "2026-06-09-accommodation-tips-guide.md",
-        "2026-06-10-essential-safety-tips-for-first-time-travellers-in-china.md",
-        "2026-06-04-china-travel-packing-list-what-i-actually-bring-after-10-years.md",
-        "2026-06-06-the-tao-of-tummy-aches-a-chengdu-food-survival-guide-for-the-california-palate.md",
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md",
-        "2026-06-15-navigating-china-a-transportation-guide-for-european-travelers.md",
-        "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
-        "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
-        "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
-        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "daca2d18bc8f83c5e3c880ce4332dc3c",
-      "type": "",
-      "message": ": expected a single document in the stream\n  in \"<unicode string>\", line 2, column 1\nbut found another document\n  in \"<unicode string>\", line 12, column 1",
-      "occurrences": 1,
-      "first_seen": "2026-06-17T10:21:00.280908",
-      "last_seen": "2026-06-17T10:21:00.280909",
-      "files": [
-        "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "d9bdad4d98f93b9003013622ec6f0d1d",
-      "type": "",
-      "message": ": expected a single document in the stream\n  in \"<unicode string>\", line 2, column 1\nbut found another document\n  in \"<unicode string>\", line 9, column 1",
-      "occurrences": 2,
-      "first_seen": "2026-06-17T10:21:00.286644",
-      "last_seen": "2026-06-17T10:21:00.303927",
-      "files": [
-        "2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
-        "western-sichuan-overland-camping-route.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "47e8d4ba2ab5d6d3ead4e8674faed0b1",
-      "type": "",
-      "message": ": expected a single document in the stream\n  in \"<unicode string>\", line 2, column 1\nbut found another document\n  in \"<unicode string>\", line 11, column 1",
-      "occurrences": 1,
-      "first_seen": "2026-06-17T10:21:00.300676",
-      "last_seen": "2026-06-17T10:21:00.300677",
-      "files": [
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md"
-      ],
-      "suggestion": ": Front Matter",
-      "resolved": false
-    },
-    {
-      "hash": "d41d8cd98f00b204e9800998ecf8427e",
-      "type": "",
-      "message": "",
-      "occurrences": 40,
-      "first_seen": "2026-06-17T10:21:00.307347",
-      "last_seen": "2026-06-19T06:09:45.886515",
-      "files": [
-        "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
-        "2026-06-10-off-the-beaten-path-routes-guide.md",
-        "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-        "2026-06-11-food-recommendations-guide.md",
-        "2026-06-17-accommodation-tips-guide.md",
-        "alipay-wechat-pay-foreigners-guide.md",
-        "2026-06-16-accommodation-tips-guide.md",
-        "2026-06-06-the-sweet-spot-when-to-visit-chengdu-and-why-your-european-calendar-needs-a-reset.md",
-        "2026-06-06-safety-tips-guide.md",
-        "2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
-        "2026-05-27-how-to-survive-chinese-train-station.md",
-        "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "2026-06-09-accommodation-tips-guide.md",
-        "2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
-        "2026-06-10-essential-safety-tips-for-first-time-travellers-in-china.md",
-        "2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
-        "2026-06-04-china-travel-packing-list-what-i-actually-bring-after-10-years.md",
-        "2026-06-06-the-tao-of-tummy-aches-a-chengdu-food-survival-guide-for-the-california-palate.md",
-        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md",
-        "2026-06-15-navigating-china-a-transportation-guide-for-european-travelers.md",
-        "internet-connection-china-esim-vpn-guide.md",
-        "2026-06-06-from-hollywood-to-hotpot-my-survival-guide-to-chinese-transportation-with-a-side-of-chaos.md",
-        "2026-06-14-unveiling-the-wonders-of-chengdu-a-travelers-guide-to-accommodation-and-beyond.md",
-        "144-hour-visa-free-transit-guide.md",
-        "2026-06-08-from-california-to-chengdu-my-guide-to-eating-your-way-through-china-without-losing-your-mindor-your-stomach.md",
-        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-        "2026-06-06-the-best-time-to-visit-chengdu-a-decade-of-living-in-chinas-panda-capital.md",
-        "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-        "2026-06-12-family-travel-tips-for-china-a-hilarious-and-in-depth-guide.md",
-        "western-sichuan-overland-camping-route.md",
-        "hello-world.md",
-        "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md",
-        "2026-06-18-living-in-china-as-a-foreigner-cultural-adaptation-and-daily-life.md",
-        "2026-06-18-best-time-to-visit-chengdu-weather-festivals-and-hidden-seasons-guide.md"
-      ],
-      "suggestion": ": 2",
-      "resolved": false
-    },
-    {
-      "hash": "62c68067cb26a7ef72f23f3e000b5417",
-      "type": "",
-      "message": " ![alt](url)",
-      "occurrences": 2,
-      "first_seen": "2026-06-17T10:21:00.310067",
-      "last_seen": "2026-06-17T10:21:00.315844",
-      "files": [
-        "2026-06-16-accommodation-tips-guide.md",
-        "2026-06-14-unveiling-the-wonders-of-chengdu-a-travelers-guide-to-accommodation-and-beyond.md"
-      ],
-      "suggestion": ":  [Image:|alt=xxx] ",
-      "resolved": false
+      "prevention_rules": ["禁止在文章中包含中文字符（包括城市名、景点名、食物名）", "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）", "中文食物名使用英文翻译（如 dan dan noodles, hotpot）", "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）", "使用标准 ASCII 引号 (\" \") 而非中文引号", "使用英文标点符号（如 . , ! ?）而非中文标点", "箭头使用 -> 或文字描述（如 leads to）而非 →"]
     }
   ],
-  "resolved_count": 5,
-  "total_errors": 25,
-  "last_updated": "2026-06-19T06:09:45.886516",
+  "resolved_count": 7,
+  "total_errors": 14,
+  "last_updated": "2026-06-20T10:00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
     "overall_score": "6.20/10",
-    "key_findings": [
-      "占位符残留影响联盟收入",
-      "事实错误损害专业信任",
-      "缺少社会证明影响转化",
-      "Schema缺失影响SEO展示"
-    ]
+    "key_findings": ["占位符残留影响联盟收入", "事实错误损害专业信任", "缺少社会证明影响转化", "Schema缺失影响SEO展示"]
   }
 }

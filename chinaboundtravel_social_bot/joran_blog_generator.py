@@ -676,6 +676,52 @@ class AIEngine:
         
         return data
     
+    def _build_prevention_rules(self):
+        """从错误知识库构建预防规则，注入到生成Prompt中"""
+        rules = []
+        
+        rules.append("ENCODING RULES (CRITICAL):")
+        rules.append("  - NEVER use Chinese characters (use Pinyin or English instead)")
+        rules.append("  - NEVER use emojis or special symbols (→, ✅, ❌, 🇨🇳, etc.)")
+        rules.append("  - NEVER use Chinese quotation marks 「」『』")
+        rules.append("  - Use ONLY standard ASCII quotes (\")")
+        rules.append("  - Use ONLY English punctuation (. , ! ? ;)")
+        rules.append("  - Use \"->\" or \"leads to\" instead of arrow symbols")
+        rules.append("  - Chinese place names: use Pinyin (Chengdu, Beijing, Shanghai)")
+        rules.append("  - Chinese food names: use English translation (hotpot, dumplings, noodles)")
+        
+        for error in self.external_data["error_knowledge"]:
+            if error.get("prevention_rules"):
+                rules.append("")
+                rules.append(f"FROM ERROR: {error.get('message', '')[:50]}...")
+                for rule in error["prevention_rules"]:
+                    rules.append(f"  - {rule}")
+        
+        rules.append("")
+        rules.append("PLACEHOLDER RULES:")
+        rules.append("  - Use [Image:description] format for image placeholders")
+        rules.append("  - NEVER use ![alt](url) format")
+        rules.append("  - Use {{< vpn-link \"text\" />}} for VPN affiliate links")
+        rules.append("  - Use {{< klook-link \"text\" />}} for booking/hotel affiliate links")
+        rules.append("  - NEVER leave placeholder text like \"#TP_VPN_PLACEHOLDER#\"")
+        
+        rules.append("")
+        rules.append("FRONT MATTER RULES:")
+        rules.append("  - title: must be properly quoted")
+        rules.append("  - description: must be 120-155 characters")
+        rules.append("  - date: must follow ISO format YYYY-MM-DDTHH:MM:SS+08:00")
+        rules.append("  - NO duplicate documents in YAML stream")
+        
+        rules.append("")
+        rules.append("CONTENT QUALITY RULES:")
+        rules.append("  - NO factual errors (verify time, prices, durations)")
+        rules.append("  - description/summary must be unique per article")
+        rules.append("  - NO test pages in production")
+        rules.append("  - Include Schema markup for SEO")
+        rules.append("  - Add Alt text for all images")
+        
+        return "\n".join(rules)
+    
     def generate_post(self, topic, geo_region):
         region_info = {
             "EU": "European travelers (UK, Germany, France, Italy, Spain)",
@@ -695,7 +741,8 @@ class AIEngine:
             if content and len(content) > 10:
                 user_needs.append(content)
         
-        # 【深度版】增强Prompt，要求深入分析和实用价值（深度好文）
+        prevention_rules = self._build_prevention_rules()
+        
         prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
 Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
@@ -704,6 +751,10 @@ Target audience: {region_info[geo_region]}
 SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
 
 User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
+
+===== CRITICAL PREVENTION RULES (MUST FOLLOW) =====
+{prevention_rules}
+===== END PREVENTION RULES =====
 
 Requirements for HIGH-QUALITY CONTENT:
 1. TONE: Conversational, witty, authoritative - like chatting with a trusted friend who's been there and done it
@@ -803,8 +854,34 @@ class SubEditor:
         self.client = BlogAIClient()
     
     def full_check(self, article_md, frontmatter):
-        """副主编初审：校验图片占位符格式 + 链接格式 + 内容质量"""
+        """副主编初审：校验图片占位符格式 + 链接格式 + 内容质量 + 编码验证"""
         errors = []
+        
+        # 【编码校验】检查乱码字符
+        garbled_count = article_md.count("\ufffd") + article_md.count("�")
+        if garbled_count > 0:
+            errors.append(f"【编码错误】发现{garbled_count}处乱码字符（�），必须修复后才能发布")
+        
+        # 【编码校验】检查中文字符
+        chinese_chars = re.findall(r'[\u4e00-\u9fff]', article_md)
+        if chinese_chars:
+            errors.append(f"【编码错误】发现中文字符，应使用拼音或英文替代")
+        
+        # 【编码校验】检查 emoji
+        emoji_pattern = re.compile(r'[\u2700-\u27bf]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDEFF]')
+        emojis = emoji_pattern.findall(article_md)
+        if emojis:
+            errors.append(f"【编码错误】发现{len(emojis)}个emoji，应使用文字描述替代")
+        
+        # 【编码校验】检查特殊箭头符号
+        special_arrows = article_md.count("→") + article_md.count("←") + article_md.count("↑") + article_md.count("↓")
+        if special_arrows > 0:
+            errors.append(f"【编码错误】发现特殊箭头符号，应使用 -> 或文字描述替代")
+        
+        # 【编码校验】检查中文引号
+        chinese_quotes = article_md.count("「") + article_md.count("」") + article_md.count("『") + article_md.count("』")
+        if chinese_quotes > 0:
+            errors.append(f"【编码错误】发现中文引号，应使用标准英文引号")
         
         # 【图片占位符校验】检查 [Image:xxx] 格式的占位符数量
         image_placeholders = re.findall(r'\[\s*Image\s*:\s*[^\]]+\]', article_md, re.IGNORECASE)
@@ -822,6 +899,10 @@ class SubEditor:
         # 【链接格式校验】检查是否有无效链接格式（如 <link> 标签）
         if '<link' in article_md.lower():
             errors.append("【链接格式】发现无效 <link> 标签，请使用标准 Markdown 链接格式 [文字](链接)")
+        
+        # 【占位符校验】检查未替换的占位符
+        if "#TP_VPN_PLACEHOLDER#" in article_md or "#TP_BOOKING_PLACEHOLDER#" in article_md:
+            errors.append("【占位符残留】发现未替换的联盟链接占位符")
         
         # 【内容长度检查】确保内容足够深入
         word_count = len(article_md.split())
