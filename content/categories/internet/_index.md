@@ -29,15 +29,17 @@ Stay connected during your trip to China. Our comprehensive guide covers everyth
 - Battery-powered portability
 - Ideal for group travel
 
-## Recommended VPN Services
+## Recommended VPN Service
 
-Choose a VPN that works reliably in China:
+For reliable internet access in China, we recommend:
 
-| Provider | Price | Features |
-|----------|-------|----------|
-| ExpressVPN | $12.95/month | Fast, reliable, 30-day money-back |
-| NordVPN | $11.95/month | Large server network |
-| Surfshark | $12.95/month | Unlimited devices |
+{{< vpn-link "NordVPN - Best VPN for China" />}}
+
+**Why NordVPN?**
+- Works reliably in China with obfuscated servers
+- Large server network across 60+ countries
+- 30-day money-back guarantee
+- Fast speeds for streaming and browsing
 
 ## Tips for Staying Connected
 

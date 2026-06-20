@@ -21,7 +21,7 @@ params:
     - question: "Can I use credit cards in China?"
       answer: "Rarely, outside high-end hotels and international chains. Alipay and WeChat Pay are mandatory. Download and activate them before arrival. Carry 500-1,000 RMB cash for small vendors, temples, and rural areas."
     - question: "Should I get a VPN in China?"
-      answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. ExpressVPN and NordVPN consistently work. Once in China, you'll need the APK file or account already active  you can't download VPN apps inside China."
+      answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. {{< vpn-link \"NordVPN\" />}} consistently works. Once in China, you'll need the APK file or account already active - you can't download VPN apps inside China."
 ---
 
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)
@@ -129,7 +129,7 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 | Noise-canceling earbuds | Long flights + high-speed trains are loud | Sony WF-1000XM5 |
 | Universal adapter | China uses Type I sockets | Amazon |
 | Small daypack | Wall is steep  pack light | Any durable daypack from Amazon |
-| ExpressVPN | Mandatory for Google/YouTube/Gmail | [ExpressVPN](https://www.expressvpn.com/)  12 months |
+| {{< vpn-link "NordVPN" />}} | Mandatory for Google/YouTube/Gmail | {{< vpn-link "Get NordVPN" />}} - 12 months |
 
 ---
 

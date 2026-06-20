@@ -135,13 +135,17 @@ A VPN (Virtual Private Network) encrypts your internet connection and routes it 
 - **Cost**: Monthly subscription required
 - **Setup Required**: Must configure before arrival
 
-### Recommended VPNs for China (2026 Tested)
+### Recommended VPN for China (2026 Tested)
 
-After extensive testing in multiple cities, these VPNs consistently work:
+After extensive testing in multiple cities, we recommend:
 
-1. **NordVPN** - Strong encryption, large server network, consistently works in China {{< vpn-link "Get NordVPN" />}}
-2. **Surfshark** - Affordable, unlimited devices
-3. **Astrill** - Specialized for China, excellent track record
+{{< vpn-link "NordVPN - Best VPN for China" />}}
+
+**Why NordVPN?**
+- Strong encryption and obfuscated servers
+- Large server network across 60+ countries
+- Consistently works in China
+- 30-day money-back guarantee
 
 ### VPN Setup Tips
 
