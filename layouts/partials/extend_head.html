@@ -1,3 +1,72 @@
 {{- /* Head custom content area start */ -}}
 {{- /* Google Analytics is loaded via google_analytics.html partial */ -}}
+
+{{- /* Schema Structured Data */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{- /* BreadcrumbList */ -}}
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "{{ .Site.Title }}",
+          "item": "{{ .Site.BaseURL }}"
+        }
+        {{- if .IsPage }}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ .Section | humanize }}",
+          "item": "{{ .Section | relURL }}"
+        }
+        ,{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ .Title }}",
+          "item": "{{ .Permalink }}"
+        }
+        {{- else if .IsSection }}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ .Title }}",
+          "item": "{{ .Permalink }}"
+        }
+        {{- end }}
+      ]
+    }
+    {{- if .IsPage -}}
+    ,{
+      "@type": "Article",
+      "@id": "{{ .Permalink }}#article",
+      "headline": "{{ .Title }}",
+      "description": "{{ .Description | default .Summary }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Author.name | default .Site.Params.author }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ .Site.BaseURL }}favicon.ico"
+        }
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+      "image": "{{ if .Params.cover.image }}{{ .Params.cover.image }}{{ else }}{{ .Site.BaseURL }}images/default.jpg{{ end }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      }
+    }
+    {{- end -}}
+  ]
+}
+</script>
 {{- /* Head custom content area end */ -}}

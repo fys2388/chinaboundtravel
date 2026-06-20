@@ -23,7 +23,7 @@ params:
 ---
 
 
-# Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy
+## Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy
 
 ## Hey, Joran Here 
 

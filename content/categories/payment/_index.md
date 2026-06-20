@@ -6,7 +6,7 @@ cover:
   image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=630&fit=crop"
 ---
 
-# 💳 Payment Guide for China
+## 💳 Payment Guide for China
 
 ![Mobile payment with smartphone](https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop)
 

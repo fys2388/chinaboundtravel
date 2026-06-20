@@ -25,7 +25,7 @@ params:
 ---
 
 
-# How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)
+## How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)
 
 ## Hey, Joran Here 
 

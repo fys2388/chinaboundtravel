@@ -11,7 +11,7 @@ summary: How to Use WeChat Pay as a Foreigner...
 ---
 
 
-# How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)
+## How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)
 
 When I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note across the counter, and the owner looked at me like I’d just offered him a live chicken. That’s when I learned the first rule of modern China: cash is for tourists who don’t know any better. WeChat Pay is the real currency. And if you’re a foreigner, the system feels like it was designed to test your patience, your bank account, and your ability to navigate a labyrinth of QR codes. But I’ve been there, done that, and I’m here to tell you: you can make it work. Here’s the no-BS guide to getting WeChat Pay up and running as a foreigner.
 

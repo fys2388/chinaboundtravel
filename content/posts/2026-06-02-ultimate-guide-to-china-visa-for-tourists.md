@@ -9,7 +9,7 @@ description: 'Everything you need to know about applying for a China tourist vis
 canonicalURL: "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/"
 ---
 
-# Ultimate Guide to China Visa for Tourists 2026
+## Ultimate Guide to China Visa for Tourists 2026
 
 Planning a trip to China? Understanding the visa application process is crucial. This comprehensive guide covers everything you need to know about obtaining a Chinese tourist visa in 2026.
 

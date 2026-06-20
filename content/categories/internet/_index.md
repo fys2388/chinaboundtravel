@@ -6,7 +6,7 @@ cover:
   image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=630&fit=crop"
 ---
 
-# 🌐 Internet Access in China
+## 🌐 Internet Access in China
 
 ![Global internet connectivity](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop)
 

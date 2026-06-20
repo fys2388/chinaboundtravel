@@ -14,7 +14,7 @@ description: Your idiot-proof guide to China's 144-hour visa-free transit policy
   who qualifies, which cities, and how to not get turned away at the border.
 ---
 
-# 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
+## 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
 
 ## Hey, Joran Here 👋
 

@@ -18,7 +18,7 @@ summary: A complete 7-day overland camping guide to Western Sichuan's most breat
   and authentic Tibetan villages.
 ---
 
-# Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness
+## Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness
 
 Let me set the scene for you. It's 5:30 AM in Chengdu, and I'm standing in a parking lot next to my beat-up old SUV, staring at a mountain of camping gear. My wife, Xiao Li, is giving me "the look" - the one that says, "You're crazy, but I'll go with you because I love you." 
 

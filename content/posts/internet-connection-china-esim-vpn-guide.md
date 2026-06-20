@@ -12,7 +12,7 @@ categories:
 summary: "Complete comparison of eSIM, local SIM, and VPN options for staying connected in China. Tested recommendations for 2026."
 ---
 
-# How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN
+## How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN
 
 ## Hey, Joran Here 👋
 

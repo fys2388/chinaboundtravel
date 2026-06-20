@@ -6,7 +6,7 @@ cover:
   image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&h=630&fit=crop"
 ---
 
-# 🛂 China Visa Guide
+## 🛂 China Visa Guide
 
 ![Passport and travel documents](https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=400&fit=crop)
 

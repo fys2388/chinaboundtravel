@@ -14,7 +14,7 @@ categories:
 summary: "Complete step-by-step guide for foreigners to use Alipay and WeChat Pay in China without a Chinese bank account. Learn how to bind foreign credit cards and pay like a local."
 ---
 
-# 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners
+## 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners
 
 ## Hey, Joran Here 👋
 

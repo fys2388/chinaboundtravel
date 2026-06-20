@@ -25,7 +25,7 @@ params:
 ---
 
 
-# China's High-Speed Rail: How to Book Tickets Like a Local
+## China's High-Speed Rail: How to Book Tickets Like a Local
 
 ## Hey, Joran Here 
 
@@ -164,11 +164,11 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
-| Shanghai â†’ Hangzhou | 45 min | Perfect first CRH trip |
-| Shanghai â†’ Suzhou | 25 min | Ancient water town vibes |
-| Beijing â†’ Tianjin | 30 min | Cheapest G train (~$8) |
-| Chengdu â†’ Chongqing | 1 hr | Mountain city double feature |
-| Beijing â†’ Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
+| Shanghai â†?Hangzhou | 45 min | Perfect first CRH trip |
+| Shanghai â†?Suzhou | 25 min | Ancient water town vibes |
+| Beijing â†?Tianjin | 30 min | Cheapest G train (~$8) |
+| Chengdu â†?Chongqing | 1 hr | Mountain city double feature |
+| Beijing â†?Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
 
 ---
 
