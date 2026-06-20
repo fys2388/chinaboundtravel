@@ -90,6 +90,41 @@ git commit -m "chore: auto-generated post"
 
 ---
 
+## 🚫 编码规范 - 避免乱码（CRITICAL）
+
+### 问题背景
+2026-06-20 扫描发现 3 篇文章存在乱码字符（� / U+FFFD），导致网站显示异常。
+
+### 影响文件
+- `144-hour-visa-free-transit-guide.md`
+- `western-sichuan-overland-camping-route.md`
+- `2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md`
+
+### 乱码原因
+- 中文字符、emoji、特殊引号在文件传输/处理过程中编码损坏
+- 生成内容包含非 ASCII 字符，在 Windows/PowerShell 环境下保存时出错
+
+### 生成规范（必须遵守）
+
+| 禁止项 | 替代方案 | 示例 |
+|--------|----------|------|
+| 中文汉字 | 拼音或英文 | 成都 → Chengdu, 火锅 → hotpot |
+| Emoji 表情 | 文字描述 | ✅ → "YES", ❌ → "NO" |
+| 特殊箭头 → | ASCII 箭头或文字 | → → -> 或 "leads to" |
+| 中文引号「」『』 | 标准英文引号 | 「」→ " " |
+| 中文标点符号 | 英文标点 | ，。！？ → , . ! ? |
+| 特殊符号 | ASCII 替代 | … → ..., — → -- |
+
+### 验证清单
+生成文章后，必须检查：
+- [ ] 全文无中文字符
+- [ ] 无 Emoji（可用 emoji 检测工具）
+- [ ] 所有引号为标准 ASCII 引号
+- [ ] 文件保存为 UTF-8 编码
+- [ ] 在 Hugo 构建前无 � 字符
+
+---
+
 **学习日期**: 2026-06-16
 **更新人**: AI运维专员
 **状态**: 已沉淀到错误知识库

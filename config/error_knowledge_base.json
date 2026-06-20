@@ -193,6 +193,32 @@
       "resolved": false
     },
     {
+      "hash": "garbled_characters_2026_06_20",
+      "type": "Encoding Error",
+      "message": "发现乱码字符 (� / U+FFFD) - 字符编码损坏",
+      "occurrences": 14,
+      "first_seen": "2026-06-20T10:00:00",
+      "last_seen": "2026-06-20T10:00:00",
+      "files": [
+        "144-hour-visa-free-transit-guide.md",
+        "western-sichuan-overland-camping-route.md",
+        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
+      ],
+      "suggestion": "CRITICAL: 生成文章时只使用 ASCII 字符。避免使用中文汉字、emoji、特殊引号(如「」『』)、箭头符号(→)。将所有中文转换为拼音或英文，引号使用标准英文引号(\" \")。",
+      "resolved": true,
+      "priority": "P0",
+      "source": "自动化扫描",
+      "prevention_rules": [
+        "禁止在文章中包含中文字符（包括城市名、景点名、食物名）",
+        "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）",
+        "中文食物名使用英文翻译（如 dan dan noodles, hotpot）",
+        "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）",
+        "使用标准 ASCII 引号 (\" \") 而非中文引号",
+        "使用英文标点符号（如 . , ! ? ）而非中文标点",
+        "箭头使用 -> 或文字描述（如 leads to）而非 →"
+      ]
+    },
+    {
       "hash": "53472be9805480ea149d876d31dad905",
       "type": "Encoding Error",
       "message": "Bad char: ﻿",
