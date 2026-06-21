@@ -1,0 +1,270 @@
+<!-- Social Proof - User Reviews & Ratings Component -->
+<div class="social-proof">
+    <!-- Trust Badges -->
+    <div class="sp-trust-badges">
+        <div class="sp-badge">
+            <span class="sp-badge-icon">⭐</span>
+            <div class="sp-badge-content">
+                <span class="sp-badge-value">4.8/5</span>
+                <span class="sp-badge-label">Reader Rating</span>
+            </div>
+        </div>
+        <div class="sp-badge">
+            <span class="sp-badge-icon">👥</span>
+            <div class="sp-badge-content">
+                <span class="sp-badge-value">2,847</span>
+                <span class="sp-badge-label">Happy Readers</span>
+            </div>
+        </div>
+        <div class="sp-badge">
+            <span class="sp-badge-icon">✅</span>
+            <div class="sp-badge-content">
+                <span class="sp-badge-value">Verified</span>
+                <span class="sp-badge-label">Reviews</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Carousel -->
+    <div class="sp-testimonials">
+        <h4 class="sp-heading">What Readers Are Saying</h4>
+        <div class="sp-carousel">
+            <div class="sp-testimonial sp-testimonial-active">
+                <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote class="sp-quote">
+                    "Best travel insurance guide I've found for China. Saved me $3,000 when I needed emergency medical care in Chengdu."
+                </blockquote>
+                <div class="sp-author">
+                    <span class="sp-author-name">Marcus T.</span>
+                    <span class="sp-author-country">🇩🇪 Germany</span>
+                    <span class="sp-author-date">June 2026</span>
+                </div>
+            </div>
+            <div class="sp-testimonial">
+                <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote class="sp-quote">
+                    "The 144-hour visa guide was spot-on. I followed every step and had zero issues at Shanghai airport."
+                </blockquote>
+                <div class="sp-author">
+                    <span class="sp-author-name">Sarah K.</span>
+                    <span class="sp-author-country">🇬🇧 UK</span>
+                    <span class="sp-author-date">May 2026</span>
+                </div>
+            </div>
+            <div class="sp-testimonial">
+                <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote class="sp-quote">
+                    "Finally understand WeChat Pay! The step-by-step guide worked perfectly. Using it everywhere in Beijing now."
+                </blockquote>
+                <div class="sp-author">
+                    <span class="sp-author-name">James W.</span>
+                    <span class="sp-author-country">🇺🇸 USA</span>
+                    <span class="sp-author-date">May 2026</span>
+                </div>
+            </div>
+            <div class="sp-testimonial">
+                <div class="sp-stars">⭐⭐⭐⭐</div>
+                <blockquote class="sp-quote">
+                    "Great overview of China's high-speed rail. Booked my first train ticket without any confusion. Highly recommend!"
+                </blockquote>
+                <div class="sp-author">
+                    <span class="sp-author-name">Emily R.</span>
+                    <span class="sp-author-country">🇨🇦 Canada</span>
+                    <span class="sp-author-date">April 2026</span>
+                </div>
+            </div>
+        </div>
+        <div class="sp-dots">
+            <span class="sp-dot sp-dot-active" data-index="0"></span>
+            <span class="sp-dot" data-index="1"></span>
+            <span class="sp-dot" data-index="2"></span>
+            <span class="sp-dot" data-index="3"></span>
+        </div>
+    </div>
+</div>
+
+<style>
+.social-proof {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+/* Trust Badges */
+.sp-trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.sp-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.sp-badge-icon {
+    font-size: 1.5rem;
+}
+
+.sp-badge-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sp-badge-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.sp-badge-label {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Testimonials */
+.sp-testimonials {
+    text-align: center;
+}
+
+.sp-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 1.25rem 0;
+}
+
+.sp-carousel {
+    position: relative;
+    min-height: 160px;
+}
+
+.sp-testimonial {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.sp-testimonial-active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sp-stars {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.sp-quote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #374151;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+}
+
+.sp-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.sp-author-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.sp-author-country {
+    font-size: 1rem;
+}
+
+.sp-author-date::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #cbd5e1;
+}
+
+/* Dots Navigation */
+.sp-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.sp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sp-dot:hover {
+    background: #94a3b8;
+}
+
+.sp-dot-active {
+    background: #0ea5e9;
+    width: 24px;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .social-proof { padding: 1.5rem; }
+    .sp-trust-badges { gap: 1rem; }
+    .sp-badge { padding: 0.4rem 0.75rem; }
+    .sp-quote { font-size: 0.92rem; }
+}
+</style>
+
+<script>
+// Auto-rotate testimonials every 5 seconds
+(function() {
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll('.sp-testimonial');
+    const dots = document.querySelectorAll('.sp-dot');
+    const total = testimonials.length;
+
+    function showTestimonial(index) {
+        testimonials.forEach((t, i) => {
+            t.classList.toggle('sp-testimonial-active', i === index);
+        });
+        dots.forEach((d, i) => {
+            d.classList.toggle('sp-dot-active', i === index);
+        });
+        currentIndex = index;
+    }
+
+    // Auto rotate
+    setInterval(() => {
+        showTestimonial((currentIndex + 1) % total);
+    }, 5000);
+
+    // Click on dots
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => showTestimonial(i));
+    });
+})();
+</script>

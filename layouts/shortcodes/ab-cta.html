@@ -1,0 +1,164 @@
+<!-- A/B Test CTA Button Component -->
+{{- $test_id := .test_id | default "cta-default" }}
+{{- $variant_a := .variant_a | default "Get Quote" }}
+{{- $variant_b := .variant_b | default "See My Pick" }}
+{{- $url := .url | default "#" }}
+{{- $style := .style | default "primary" }}
+{{- $analytics_id := .analytics_id | default "cta_click" }}
+
+<span class="ab-cta" data-test-id="{{ $test_id }}" data-analytics="{{ $analytics_id }}">
+    <a href="{{ $url }}" target="_blank" rel="nofollow sponsored" class="ab-cta-btn ab-cta-{{ $style }}" data-variant="loading">
+        <span class="ab-cta-text">{{ $variant_a }}</span>
+        <span class="ab-cta-arrow">→</span>
+    </a>
+    <span class="ab-cta-label">🔄 A/B Test Active</span>
+</span>
+
+<style>
+.ab-cta {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.ab-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.ab-cta-btn:hover {
+    transform: translateY(-2px);
+}
+
+.ab-cta-btn[data-variant="loading"] {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Primary Style (Blue) */
+.ab-cta-primary {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+}
+
+.ab-cta-primary:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+}
+
+/* Secondary Style (Amber) */
+.ab-cta-secondary {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.ab-cta-secondary:hover {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+}
+
+/* Outline Style */
+.ab-cta-outline {
+    background: #fff;
+    color: #1f2937 !important;
+    border: 2px solid #e2e8f0;
+    box-shadow: none;
+}
+
+.ab-cta-outline:hover {
+    border-color: #0ea5e9;
+    color: #0ea5e9 !important;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.ab-cta-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.ab-cta-btn:hover .ab-cta-arrow {
+    transform: translateX(4px);
+}
+
+.ab-cta-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+</style>
+
+<script>
+// A/B Test CTA Logic - Randomly assigns variant and logs clicks
+(function() {
+    const CTORAGE_KEY = 'ab_cta_variants';
+    const COOKIE_DAYS = 7;
+
+    function getVariants() {
+        try {
+            return JSON.parse(localStorage.getItem(CTORAGE_KEY) || '{}');
+        } catch {
+            return {};
+        }
+    }
+
+    function saveVariants(variants) {
+        localStorage.setItem(CTORAGE_KEY, JSON.stringify(variants));
+    }
+
+    function getVariant(testId, totalVariants = 2) {
+        const variants = getVariants();
+        if (variants[testId] !== undefined) {
+            return variants[testId];
+        }
+        const assigned = Math.floor(Math.random() * totalVariants);
+        variants[testId] = assigned;
+        saveVariants(variants);
+        return assigned;
+    }
+
+    function trackClick(testId, variant, analyticsId) {
+        // Log to console (in production, send to analytics)
+        console.log(`[A/B Test] CTA Click: test=${testId} variant=${variant} analytics=${analyticsId}`);
+        
+        // Google Analytics 4 event (if gtag is available)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'ab_cta_click', {
+                'test_id': testId,
+                'variant': variant === 0 ? 'a' : 'b',
+                'test_name': analyticsId
+            });
+        }
+    }
+
+    // Initialize all A/B CTA buttons
+    document.querySelectorAll('.ab-cta').forEach(container => {
+        const testId = container.dataset.testId;
+        const btn = container.querySelector('.ab-cta-btn');
+        const textEl = container.querySelector('.ab-cta-text');
+        const variantA = btn.dataset.variantA || 'Get Quote';
+        const variantB = btn.dataset.variantB || 'See My Pick';
+        const analyticsId = container.dataset.analytics;
+
+        // Assign variant
+        const variant = getVariant(testId, 2);
+        textEl.textContent = variant === 0 ? variantA : variantB;
+        btn.dataset.variant = variant === 0 ? 'a' : 'b';
+
+        // Track clicks
+        btn.addEventListener('click', () => {
+            trackClick(testId, variant, analyticsId);
+        });
+    });
+})();
+</script>
