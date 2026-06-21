@@ -98,6 +98,12 @@ buildExpired = false
   weight = 60
 
 [[menu.main]]
+  identifier = "resources"
+  name = "🧰 Resources"
+  url = "/resources/"
+  weight = 62
+
+[[menu.main]]
   identifier = "posts"
   name = "📝 Blog"
   url = "/posts/"
@@ -138,6 +144,8 @@ buildExpired = false
   klook = "https://klook.tpo.li/vrPkmS2v"
   klook_expire_date = "2026-06-27"
   safetywing = "https://safetywing.com/ambassador/refer/26548976"
+  trip = "https://www.trip.com/"
+  worldnomads = "https://www.worldnomads.com"
 
 [params.ebook]
   version = "2026.05"

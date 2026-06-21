@@ -1,15 +1,29 @@
-<!-- Travel Services Promo Section - End of Article -->
+<!-- Travel Services Promo Section - End of Article (China-Mike Style) -->
 <div class="promo-card promo-card-travel">
     <h4 class="promo-section-heading">🗺️ Plan Your China Trip With Joran</h4>
-    <p class="promo-section-sub">Hand-picked services Joran uses personally — no fluff, no sponsored junk:</p>
+    <p class="promo-section-sub">Hand-picked services Joran uses personally after 10+ years of living in China — tested, trusted, no fluff:</p>
 
     <div class="travel-promo-grid">
+        <!-- Travel Insurance (TOP PRIORITY) -->
+        <div class="travel-promo-item travel-promo-pick">
+            <span class="travel-promo-badge">⭐ TOP PICK</span>
+            <span class="travel-promo-icon">🛡️</span>
+            <div class="travel-promo-info">
+                <strong>Travel Insurance — Don't Skip This</strong>
+                <span>One hospital visit without insurance can cost $10,000+. SafetyWing covers you for $56/month.</span>
+            </div>
+            <a href="{{ .Site.Params.affiliate.safetywing | default "#" }}"
+               class="travel-promo-link"
+               target="_blank"
+               rel="nofollow sponsored">Get SafetyWing →</a>
+        </div>
+
         <!-- eSIM -->
         <div class="travel-promo-item">
             <span class="travel-promo-icon">📱</span>
             <div class="travel-promo-info">
                 <strong>Internet on Arrival</strong>
-                <span>eSIM ready the moment you land — no China SIM needed</span>
+                <span>eSIM ready the moment you land — Google Maps, WhatsApp, everything works from minute one.</span>
             </div>
             <a href="{{ .Site.Params.affiliate.esim | default "#" }}"
                class="travel-promo-link"
@@ -21,8 +35,8 @@
         <div class="travel-promo-item">
             <span class="travel-promo-icon">🔒</span>
             <div class="travel-promo-info">
-                <strong>VPN That Actually Works</strong>
-                <span>In China, your usual apps go dark. Get connected before you go.</span>
+                <strong>VPN That Actually Works in China</strong>
+                <span>Most VPNs fail behind the firewall. This one is tested daily — get it BEFORE you board.</span>
             </div>
             <a href="{{ .Site.Params.affiliate.vpn | default "#" }}"
                class="travel-promo-link"
@@ -35,7 +49,7 @@
             <span class="travel-promo-icon">🏨</span>
             <div class="travel-promo-info">
                 <strong>Hotels with Free Cancellation</strong>
-                <span>Book flexible, pay less, cancel if plans change — Joran's go-to</span>
+                <span>Plans change — book flexible, pay less, cancel anytime. Joran's go-to booking site.</span>
             </div>
             <a href="{{ .Site.Params.affiliate.hotel | default "#" }}"
                class="travel-promo-link"
@@ -48,7 +62,7 @@
             <span class="travel-promo-icon">🎫</span>
             <div class="travel-promo-info">
                 <strong>Tours & Skip-the-Line Tickets</strong>
-                <span>Panda Base, Giant Buddha, Great Wall — book English-guided tours</span>
+                <span>Panda Base, Giant Buddha, Great Wall — book English-guided tours and skip 2-hour queues.</span>
             </div>
             <a href="{{ .Site.Params.affiliate.klook | default "#" }}"
                class="travel-promo-link"
@@ -56,4 +70,167 @@
                rel="nofollow sponsored">Find Tours →</a>
         </div>
     </div>
+
+    <div class="promo-disclosure">
+        <strong>Transparency:</strong> Some links above are affiliate links. We may earn a commission at no extra cost to you.
+        We only recommend tools we've personally used. <a href="/disclosure/">Learn more →</a>
+    </div>
 </div>
+
+<style>
+.promo-card-travel {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.promo-section-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.4rem 0;
+}
+
+.promo-section-sub {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+}
+
+.travel-promo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.travel-promo-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.travel-promo-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transform: translateY(-1px);
+}
+
+.travel-promo-pick {
+    background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+    border: 2px solid #f59e0b;
+    box-shadow: 0 2px 12px rgba(245, 158, 11, 0.08);
+}
+
+.travel-promo-pick:hover {
+    border-color: #d97706;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15);
+}
+
+.travel-promo-badge {
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    background: #f59e0b;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 10px;
+    letter-spacing: 0.05em;
+}
+
+.travel-promo-icon {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.travel-promo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.travel-promo-info strong {
+    font-size: 0.98rem;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.travel-promo-info span {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.travel-promo-link {
+    display: inline-block;
+    background: #0ea5e9;
+    color: #fff !important;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.travel-promo-link:hover {
+    background: #0284c7;
+    transform: translateY(-1px);
+}
+
+.travel-promo-pick .travel-promo-link {
+    background: #f59e0b;
+}
+
+.travel-promo-pick .travel-promo-link:hover {
+    background: #d97706;
+}
+
+.promo-disclosure {
+    padding: 0.85rem 1rem;
+    background: #f0f9ff;
+    border-left: 3px solid #0ea5e9;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.55;
+}
+
+.promo-disclosure strong {
+    color: #0c4a6e;
+}
+
+.promo-disclosure a {
+    color: #0ea5e9;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .promo-card-travel { padding: 1.5rem; }
+    .travel-promo-item {
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: auto auto;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    .travel-promo-link {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+</style>
