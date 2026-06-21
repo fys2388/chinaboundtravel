@@ -120,6 +120,31 @@ jobs:
             -d '{"purge_everything":true}' \
             --fail --show-error --silent || echo "Cache purge skipped (CLOUDFLARE_ZONE_ID may not be set)"
 
+      - name: Install Pillow for cover image generation
+        run: pip install Pillow
+
+      - name: Run social media distribution
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          echo "=== Running social media distribution ==="
+          python chinaboundtravel_social_bot/social_publisher.py || echo "Social media distribution failed (continuing workflow)"
+
+      - name: Commit cover image updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/posts/*.md 2>/dev/null || true
+          git add static/img/china-dest/ 2>/dev/null || true
+          git add manifest.json 2>/dev/null || true
+          
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No cover/image changes to commit"
+          else
+            git commit -m "chore: update post covers for social media | $(date '+%Y-%m-%d')"
+            git push || echo "Push skipped"
+          fi
+
   failure-notification:
     runs-on: ubuntu-latest
     timeout-minutes: 5
