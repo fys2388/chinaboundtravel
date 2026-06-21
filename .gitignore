@@ -25,3 +25,6 @@ Thumbs.db
 
 # Temporary scripts
 fix_current_garbled.py
+
+# GSC Service Account Key
+gsc-service-account-key.json
