@@ -43,7 +43,9 @@ def build_site():
         ["hugo", "--gc", "--minify"],
         cwd=PROJECT_ROOT,
         capture_output=True,
-        text=True
+        text=True,
+        encoding='utf-8',
+        errors='ignore'
     )
     if result.returncode == 0:
         print("站点构建成功")
@@ -61,7 +63,9 @@ def commit_and_push():
         ["git", "commit", "-m", "Auto rebuild and deploy via GSC API"],
         cwd=PROJECT_ROOT,
         capture_output=True,
-        text=True
+        text=True,
+        encoding='utf-8',
+        errors='ignore'
     )
     
     if "nothing to commit" in result.stdout:
@@ -75,7 +79,9 @@ def commit_and_push():
         ["git", "push", "origin", "main"],
         cwd=PROJECT_ROOT,
         capture_output=True,
-        text=True
+        text=True,
+        encoding='utf-8',
+        errors='ignore'
     )
     if result.returncode == 0:
         print("推送成功")
