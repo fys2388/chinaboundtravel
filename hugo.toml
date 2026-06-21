@@ -137,6 +137,7 @@ buildExpired = false
   hotel = "https://www.booking.com/index.html?aid=1234567"
   klook = "https://klook.tpo.li/vrPkmS2v"
   klook_expire_date = "2026-06-27"
+  safetywing = "https://safetywing.com/ambassador/refer/26548976"
 
 [params.ebook]
   version = "2026.05"

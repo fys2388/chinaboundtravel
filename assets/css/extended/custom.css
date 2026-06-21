@@ -3,77 +3,126 @@
    Color Scheme: Foggy Blue #3A6EA5 (Western Travel Blog)
    ================================================ */
 
-/* ---------- Color Palette Overrides ---------- */
+/* ---------- Color Palette Overrides (2026优化版) ---------- */
 :root {
-    --primary: #3A6EA5;
-    --primary-hover: #2d5a8a;
-    --primary-light: #e8f0f8;
-    --border: #e0e4e8;
+    /* 主色系统 - 天蓝色（旅行、信任、专业） */
+    --primary: #0ea5e9;
+    --primary-hover: #0284c7;
+    --primary-light: #e0f2fe;
+    
+    /* 次要色 - 深灰（稳重、专业） */
+    --secondary: #1f2937;
+    --secondary-light: #374151;
+    
+    /* 点缀色 - 琥珀色（温暖、提示） */
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    
+    /* 功能色 */
+    --success: #10b981;  /* 安全、保险（SafetyWing） */
+    --warning: #f59e0b;
+    --error: #ef4444;
+    
+    /* VPN专属色 - 紫色（隐私、安全） */
+    --vpn-color: #8b5cf6;
+    --vpn-hover: #7c3aed;
+    
+    /* 背景色 */
+    --background: #fafafa;
+    --background-alt: #f1f5f9;
+    
+    /* 边框色 */
+    --border: #e2e8f0;
+    --border-light: #f1f5f9;
+    
+    /* 文本色 */
+    --content: #1f2937;
+    --content-light: #64748b;
+    --content-muted: #94a3b8;
+    
+    /* 代码块 */
+    --code-bg: #f1f5f9;
+    --code-block-bg: #1e293b;
+    
+    /* 玻璃态效果 */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(14, 165, 233, 0.1);
+    
+    /* 保留旧变量兼容 */
     --theme: #ffffff;
     --entry: #f8f9fa;
-    --content: #333333;
-    --code-bg: #f4f6f8;
-    --code-block-bg: #2d2d2d;
 }
 
 /* ---------- Links ---------- */
 a {
-    color: #3A6EA5;
+    color: var(--primary);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 a:hover {
-    color: #2d5a8a;
+    color: var(--primary-hover);
     text-decoration: underline;
+    text-shadow: 0 0 4px rgba(14, 165, 233, 0.2);
 }
 
 /* ---------- Navigation ---------- */
 .header-nav {
     background: rgba(255,255,255,0.97) !important;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid #e0e4e8;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
 .logo a {
-    color: #3A6EA5 !important;
+    color: var(--primary) !important;
     font-weight: 800;
     font-size: 1.2rem;
     letter-spacing: -0.02em;
+    transition: transform 0.2s ease, color 0.25s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+    color: var(--primary-hover) !important;
 }
 
 .nav-links a {
-    color: #555 !important;
+    color: var(--secondary) !important;
     font-weight: 500;
     font-size: 0.9rem;
-    padding: 4px 10px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #3A6EA5 !important;
-    background: #e8f0f8;
+    color: var(--primary) !important;
+    background: var(--primary-light);
     text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.15);
 }
 
 /* ---------- Buttons ---------- */
 button, input[type="submit"], input[type="button"], .btn {
-    background-color: #3A6EA5;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
     color: white !important;
     border: none;
-    padding: 0.55rem 1.2rem;
-    border-radius: 6px;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: background-color 0.25s ease, transform 0.15s ease;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 12px rgba(14, 165, 233, 0.3);
 }
 
 button:hover, input[type="submit"]:hover, input[type="button"]:hover, .btn:hover {
-    background-color: #2d5a8a;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, var(--primary-hover), #0369a1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(14, 165, 233, 0.4);
 }
 
 /* ---------- Typography ---------- */
@@ -92,31 +141,56 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5em;
 }
 
-/* ---------- Article Cards ---------- */
+/* ---------- Article Cards (Glassmorphism 2026) ---------- */
 .post-entry {
-    background: #fff;
-    border: 1px solid #e0e4e8;
-    border-radius: 10px;
+    /* 玻璃态效果 */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    
+    /* 基础样式 */
+    border-radius: 12px;
     padding: 1.5rem;
-    transition: all 0.25s ease;
     margin-bottom: 1rem;
+    
+    /* 阴影和过渡 */
+    box-shadow: 0 4px 16px var(--glass-shadow);
+    transition: transform 0.25s ease, 
+                box-shadow 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
 }
 
 .post-entry:hover {
-    border-color: #3A6EA5;
-    box-shadow: 0 4px 16px rgba(58,110,165,0.1);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.15);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(14, 165, 233, 0.2);
 }
 
 .post-title a {
-    color: #111 !important;
+    color: var(--secondary) !important;
     font-weight: 700;
     font-size: 1.15rem;
+    transition: color 0.25s ease;
 }
 
 .post-title a:hover {
-    color: #3A6EA5 !important;
+    color: var(--primary) !important;
     text-decoration: none !important;
+}
+
+/* 深色模式适配 */
+.dark .post-entry {
+    background: rgba(30, 30, 35, 0.7);
+    border: 1px solid rgba(60, 60, 65, 0.3);
+}
+
+.dark .post-entry:hover {
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.25);
+    background: rgba(30, 30, 35, 0.85);
+    border-color: rgba(14, 165, 233, 0.3);
 }
 
 /* ---------- Tags & Categories Pills ---------- */
@@ -767,4 +841,119 @@ pre {
 
 .affiliate-disclosure-small em {
     font-style: italic;
+}
+
+/* ================================================
+   Affiliate CTA Buttons (2026优化版)
+   ================================================ */
+
+/* 基础联盟链接样式 */
+.affiliate-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 12px rgba(14, 165, 233, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.affiliate-link:hover {
+    background: linear-gradient(135deg, var(--primary-hover), #0369a1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(14, 165, 233, 0.4);
+    color: white !important;
+}
+
+/* SafetyWing 专属样式 - 绿色（安全、保险） */
+.affiliate-link-safetywing {
+    background: linear-gradient(135deg, var(--success), #059669);
+    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.3);
+}
+
+.affiliate-link-safetywing:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    box-shadow: 0 5px 18px rgba(16, 185, 129, 0.4);
+}
+
+/* VPN 专属样式 - 紫色（隐私、安全） */
+.affiliate-link-vpn {
+    background: linear-gradient(135deg, var(--vpn-color), var(--vpn-hover));
+    box-shadow: 0 3px 12px rgba(139, 92, 246, 0.3);
+}
+
+.affiliate-link-vpn:hover {
+    background: linear-gradient(135deg, var(--vpn-hover), #6d28d9);
+    box-shadow: 0 5px 18px rgba(139, 92, 246, 0.4);
+}
+
+/* eSIM 专属样式 - 蓝紫色 */
+.affiliate-link-esim {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    box-shadow: 0 3px 12px rgba(99, 102, 241, 0.3);
+}
+
+.affiliate-link-esim:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    box-shadow: 0 5px 18px rgba(99, 102, 241, 0.4);
+}
+
+/* 酒店 专属样式 - 橙色（温暖、住宿） */
+.affiliate-link-hotel {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    box-shadow: 0 3px 12px rgba(245, 158, 11, 0.3);
+}
+
+.affiliate-link-hotel:hover {
+    background: linear-gradient(135deg, var(--accent-hover), #b45309);
+    box-shadow: 0 5px 18px rgba(245, 158, 11, 0.4);
+}
+
+/* 大号 CTA 按钮 */
+.affiliate-link-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* 卡片内的联盟链接 */
+.affiliate-card {
+    background: var(--background-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.affiliate-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.affiliate-card-desc {
+    font-size: 0.9rem;
+    color: var(--content-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* 深色模式适配 */
+.dark .affiliate-link {
+    box-shadow: 0 3px 12px rgba(14, 165, 233, 0.4);
+}
+
+.dark .affiliate-link:hover {
+    box-shadow: 0 5px 18px rgba(14, 165, 233, 0.5);
+}
+
+.dark .affiliate-card {
+    background: rgba(30, 30, 35, 0.7);
+    border: 1px solid rgba(60, 60, 65, 0.3);
 }

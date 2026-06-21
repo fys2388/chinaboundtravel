@@ -136,7 +136,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 ## Still Have Questions?
 
-Look, I get it—bureaucracy is bureaucracy, and China's immigration rules have more fine print than my mother-in-law's grocery lists (love you, mom). But here's the thing: the 144-hour transit policy is genuinely one of the most traveler-friendly things China offers, and if you follow the rules, it works beautifully.
+Look, I get it—rules are rules, and China's immigration requirements have more details than my mother-in-law's grocery lists (love you, mom). But here's the thing: the 144-hour transit policy is genuinely one of the most traveler-friendly things China offers, and if you follow the rules, it works beautifully.
 
 Drop a comment below or [reach out via the contact form](/about/). I've helped hundreds of travelers navigate this successfully—yes, even that guy who was convinced his dog needed a visa.
 
