@@ -1,3 +1,5 @@
+/sitemap.xml /sitemap.xml 200
+
 # 域名标准化 - 裸域先重定向到 www
 http://chinaboundtravel.com/* https://www.chinaboundtravel.com/$1 301
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/$1 301
