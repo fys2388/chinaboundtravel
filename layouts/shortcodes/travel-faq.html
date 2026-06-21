@@ -1,0 +1,60 @@
+<div class="travel-faq">
+    <h3 class="tf-heading">❓ Frequently Asked Questions</h3>
+    <div class="tf-list">
+        <details class="tf-item">
+            <summary class="tf-question">Do I really need travel insurance for China?</summary>
+            <div class="tf-answer">
+                <p>Yes. Without it, you could face medical bills of $10,000+ for a single hospital visit, plus full costs for emergency evacuation (which can exceed $50,000). Most countries' health insurance doesn't cover China, and travel insurance is the only safety net. For most travelers, <a href="{{ .Site.Params.affiliate.safetywing }}" rel="nofollow sponsored" target="_blank">SafetyWing</a> is the easiest and most affordable option at around $50-80/month.</p>
+            </div>
+        </details>
+        <details class="tf-item">
+            <summary class="tf-question">Will my phone work in China without a VPN?</summary>
+            <div class="tf-answer">
+                <p>Google, Facebook, Instagram, WhatsApp, and most Western apps are blocked in China. You'll need a VPN <strong>before</strong> you arrive. We recommend <a href="{{ .Site.Params.affiliate.vpn }}" rel="nofollow sponsored" target="_blank">NordVPN</a> for its reliability inside China's firewall.</p>
+            </div>
+        </details>
+        <details class="tf-item">
+            <summary class="tf-question">How do I pay for things in China as a foreigner?</summary>
+            <div class="tf-answer">
+                <p>Set up <strong>Alipay</strong> and <strong>WeChat Pay</strong> before your trip. Both now accept foreign credit cards directly in the app. Most vendors, including street markets, taxis, and high-speed rail stations, accept mobile payments. Cash is becoming rare but still useful as backup.</p>
+            </div>
+        </details>
+        <details class="tf-item">
+            <summary class="tf-question">What's the cheapest way to book high-speed train tickets?</summary>
+            <div class="tf-answer">
+                <p>Use <a href="{{ .Site.Params.affiliate.trip }}" rel="nofollow sponsored" target="_blank">Trip.com</a> for English-language booking. Tickets go on sale 15 days in advance and sell out fast for popular routes. Book early for the best seat selection.</p>
+            </div>
+        </details>
+        <details class="tf-item">
+            <summary class="tf-question">Is China safe for tourists in 2026?</summary>
+            <div class="tf-answer">
+                <p>Yes, China is statistically one of the safest countries for tourists. Violent crime against foreigners is extremely rare. The main risks are petty scams (overcharging taxis, tea ceremony scams) and getting caught without internet/VPN. Read our <a href="/posts/is-china-safe-for-tourists/">full safety guide</a> for details.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<style>
+.travel-faq {
+    background: #f8fafc; border-radius: 12px; padding: 1.75rem; margin: 2rem 0; border: 1px solid #e2e8f0;
+}
+.tf-heading { font-size: 1.25rem; font-weight: 700; color: #1f2937; margin: 0 0 1rem 0; }
+.tf-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.tf-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; transition: border-color 0.2s ease; }
+.tf-item:hover { border-color: #cbd5e1; }
+.tf-item[open] { border-color: #0ea5e9; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.08); }
+.tf-question { padding: 0.9rem 1.1rem; font-weight: 600; color: #1f2937; cursor: pointer; list-style: none; position: relative; padding-right: 2.5rem; font-size: 0.95rem; }
+.tf-question::-webkit-details-marker { display: none; }
+.tf-question::after { content: '+'; position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: #64748b; font-weight: 400; transition: transform 0.2s ease; }
+.tf-item[open] .tf-question::after { content: '−'; color: #0ea5e9; }
+.tf-answer { padding: 0 1.1rem 1rem 1.1rem; color: #475569; font-size: 0.92rem; line-height: 1.7; }
+.tf-answer p { margin: 0; }
+.tf-answer a { color: #0ea5e9; text-decoration: underline; font-weight: 500; }
+.tf-answer a:hover { color: #0284c7; }
+@media (max-width: 600px) {
+    .travel-faq { padding: 1.25rem; }
+    .tf-question { font-size: 0.9rem; padding: 0.8rem 1rem; padding-right: 2.2rem; }
+    .tf-question::after { right: 1rem; }
+    .tf-answer { padding: 0 1rem 0.9rem 1rem; font-size: 0.88rem; }
+}
+</style>

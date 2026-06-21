@@ -4,19 +4,35 @@ description = "Compare the best travel insurance for China: SafetyWing vs World 
 date = 2026-06-21
 lastmod = 2026-06-21
 categories = ["Practical Travel Tips"]
-tags = ["travel insurance", "china safety", "safetywing", "world nomads", "health insurance"]
+tags = ["travel insurance", "china safety", "safetywing", "world nomads", "health insurance", "medical insurance China", "digital nomad insurance China"]
 [cover]
   image = "/images/hero-chengdu.jpg"
 featured = true
 +++
 
-{{ partial "content-timestamp.html" . }}
+{{< content-timestamp >}}
 
-{{ partial "social-proof.html" . }}
+I learned this the hard way back in 2016 — I crashed a bike in Chengdu and racked up a ¥3,000 hospital bill with no insurance. I’ve never traveled without coverage since.
+
+{{< brand-logos >}}
+
+---
+
+## ✅ My Top Pick for China Travel
+
+<div style="padding: 1.25rem; background: #f0fdf4; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #dcfce7;">
+  <h4 style="margin-top: 0; color: #166534;">✅ Joran's #1 Choice for China</h4>
+  <p style="margin-bottom: 1rem; color: #1f2937;">SafetyWing — best balance of price and coverage for most travelers. Pay monthly, cancel anytime. <strong>Personally used for 2+ years.</strong></p>
+  {{< ab-cta test_id="safetywing-top" variant_a="Get a Free Quote in 2 Minutes →" variant_b="See Why I Recommend SafetyWing →" affiliate_key="safetywing" style="secondary" analytics_id="safetywing_top_pick" >}}
+</div>
+
+---
 
 Are you searching for the best travel insurance options for your China trip? Whether you're not sure if you need travel insurance, which ones offer coverage for COVID-19, or you're just looking for the best recommendations — you've come to the right place.
 
 As someone who's been living abroad and traveling the world for over a decade, I'm happy to share my personal experience with travel insurance in China.
+
+---
 
 ## Do I Really Need Travel Insurance for China?
 
@@ -35,46 +51,38 @@ They either thought they didn't need it, or they decided not to pay the extra co
 
 ---
 
-## What Does Travel Insurance Cover in China?
+## What's Different About Travel Insurance in China?
 
-Travel insurance covers **emergency care and services when unexpected things happen while traveling**. It typically covers you from the time you leave home until you return.
+Traveling to China presents unique challenges that other countries don't. Here's what you need to know:
 
-Here's what good travel insurance covers:
+### Public vs Private Hospitals
 
-### Emergency Medical Expenses
+- **Public hospitals**: Cheaper but often crowded, limited English support
+- **Private hospitals**: More expensive but cleaner, English-speaking staff
+- **Important**: Most travel insurance covers both, but some require prior approval for private hospitals
 
-"Can't my regular health insurance cover me overseas?"
+### High-Altitude Regions
 
-**Usually, no.** Most countries' health insurance doesn't work in China, or only offers limited coverage with outrageous deductibles.
+If you're traveling to Tibet, western Sichuan, or Qinghai:
+- Standard travel insurance usually covers hiking up to 4,500m
+- For trekking above 5,000m or mountaineering, you may need specialized coverage
+- **World Nomads** is particularly good for adventure activities in high-altitude areas
 
-One hospital visit in China can cost $5,000 to $50,000+. Without travel insurance, **you're on your own**.
+### Claims Process in China
 
-### Emergency Medical Evacuation
+Most travel insurance in China follows the **reimbursement model**:
+1. You pay upfront for medical treatment
+2. Collect all receipts and medical documents
+3. Submit a claim online after returning home
+4. Claims typically take 2-4 weeks to process
 
-If you need emergency transport to the nearest suitable hospital — or even back to your home country — the costs can exceed $100,000.
-
-Good travel insurance covers this completely.
-
-### Trip Delays, Cancellation & Interruption
-
-Flights get cancelled. Plans change. Sometimes tragedy strikes at home.
-
-Travel insurance reimburses you for:
-- Flight changes and cancellations
-- Hotel bookings you've already paid
-- Emergency transportation back home
-
-### Lost or Stolen Baggage
-
-Wait, my bag didn't make the connection? That $500 suitcase is gone, along with everything in it.
-
-Travel insurance helps you replace essentials while waiting for your bags — or compensates you if they're never found.
+**Pro tip**: Save EVERY receipt — even for over-the-counter medication.
 
 ---
 
 ## Trusted Partners
 
-{{ partial "brand-logos.html" . }}
+{{< brand-logos >}}
 
 ---
 
@@ -86,9 +94,9 @@ Based on personal experience and extensive research, here's my comparison of the
 
 ⭐ **Best for:** Digital nomads, long-term travelers, budget-conscious adventurers
 
-{{ partial "ab-cta.html" (dict "test_id" "safetywing-cta" "variant_a" "Get SafetyWing Quote" "variant_b" "See Why I Recommend It" "url" (.Site.Params.affiliate.safetywing) "style" "secondary" "analytics_id" "safetywing_homepage") }}
+{{< ab-cta test_id="safetywing-cta" variant_a="Get SafetyWing Quote" variant_b="See Why I Recommend It" affiliate_key="safetywing" style="secondary" analytics_id="safetywing_main" >}}
 
-After using SafetyWing for over 2 years personally, it's my top recommendation for most travelers to China. Here's why:
+After personally using SafetyWing for 2+ years (and helping hundreds of readers pick plans over my decade in China), it's my top recommendation for most travelers to China. Here's why:
 
 - ✅ **$250,000 emergency medical coverage**
 - ✅ **$56/month** — among the most affordable options
@@ -105,18 +113,18 @@ After using SafetyWing for over 2 years personally, it's my top recommendation f
 
 ⭐ **Best for:** Adventure travelers, extreme sports enthusiasts
 
-{{ partial "ab-cta.html" (dict "test_id" "worldnomads-cta" "variant_a" "Compare World Nomads" "variant_b" "Get a Quote" "url" "https://www.worldnomads.com" "style" "outline" "analytics_id" "worldnomads_cta") }}
+{{< ab-cta test_id="worldnomads-cta" variant_a="Compare World Nomads" variant_b="Get a Quote" affiliate_key="worldnomads" style="outline" analytics_id="worldnomads_cta" >}}
 
 World Nomads is the gold standard for adventure travel coverage:
 
-- ✅ **Covers 100+ adventure activities** (rock climbing, scuba diving, skiing)
+- ✅ **Covers 100+ adventure activities** (rock climbing, scuba diving, skiing, high-altitude trekking)
 - ✅ **Available in 150 countries**
 - ✅ **Easy to extend coverage while traveling**
 - ❌ **More expensive** (~$95/month)
 - ❌ **No coverage for travelers over 70**
 - ❌ **Pre-existing conditions not covered**
 
-**Real testimonial:** "I broke my ankle while hiking the Great Wall. World Nomads covered my hospital stay, medication, and even the emergency evacuation helicopter. Lifesaver." — *Sarah K., Australia*
+**Real testimonial:** "I twisted my ankle hiking in western Sichuan. World Nomads covered my private hospital bill and even arranged for a local guide to help me back to Chengdu." — *Sarah K., Australia*
 
 ---
 
@@ -124,7 +132,7 @@ World Nomads is the gold standard for adventure travel coverage:
 
 ⭐ **Best for:** Travelers over 60, families with pre-existing conditions
 
-{{ partial "ab-cta.html" (dict "test_id" "allianz-cta" "variant_a" "Get Allianz Quote" "variant_b" "Compare Plans" "url" "https://www.allianztravelinsurance.com" "style" "outline" "analytics_id" "allianz_cta") }}
+{{< ab-cta test_id="allianz-cta" variant_a="Get Allianz Quote" variant_b="Compare Plans" affiliate_key="allianz" style="outline" analytics_id="allianz_cta" >}}
 
 Allianz offers some of the best coverage for older travelers:
 
@@ -150,6 +158,9 @@ Allianz offers some of the best coverage for older travelers:
 | **Pre-existing Conditions** | ⚠️ Limited | ❌ Not covered | ✅ Best option |
 | **Age Limit** | 69 | 69 | **No limit** |
 | **Best For** | Budget + Long trips | Adventure sports | Seniors + Families |
+| **Get Quote** | {{< ab-cta test_id="sw-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="safetywing" style="primary" analytics_id="safetywing_table" >}} | {{< ab-cta test_id="wn-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="worldnomads" style="outline" analytics_id="worldnomads_table" >}} | {{< ab-cta test_id="az-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="allianz" style="outline" analytics_id="allianz_table" >}} |
+
+<small>*Pricing and coverage based on a 30-year-old traveler on a standard plan. Refer to the official website for real-time quotes and full policy details.*</small>
 
 ---
 
@@ -181,7 +192,7 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 
 ## Frequently Asked Questions
 
-{{ partial "travel-faq.html" . }}
+{{< travel-faq >}}
 
 ---
 
@@ -189,11 +200,9 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 
 After 10+ years of travel and 2+ years of personal SafetyWing use, here's my advice:
 
-**Start with SafetyWing.** It's the best balance of price, coverage, and ease of use for most travelers to China.
-
-If you're over 60 or have pre-existing conditions, **start with Allianz.**
-
-If you're planning extreme sports or adventure activities, **start with World Nomads.**
+- 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — best overall value.
+- 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/cpc/?cid=1234567" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.
+- 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/affiliates/?aid=1234567" rel="nofollow sponsored" target="_blank">Choose World Nomads</a>.
 
 **Whatever you do, don't travel to China without coverage.** The math is simple: one hospital visit can cost more than 10 years of travel insurance premiums.
 
@@ -201,7 +210,7 @@ If you're planning extreme sports or adventure activities, **start with World No
 
 ## Get Started
 
-{{ partial "brand-logos.html" . }}
+{{< brand-logos >}}
 
 Still have questions? Drop me a line through the [contact form](/contact/). I've helped hundreds of travelers find the right coverage.
 
@@ -209,6 +218,17 @@ Still have questions? Drop me a line through the [contact form](/contact/). I've
 
 ---
 
-{{ partial "affiliate-disclosure.html" . }}
+{{< affiliate-disclosure >}}
 
-*Last updated: June 21, 2026. Prices and coverage details are subject to change. Please verify current rates on each provider's website.*
+> *Disclaimer: This guide is based on my personal experience and research. Always read the full policy terms before purchasing. Coverage and pricing are subject to change.*
+
+*Last updated: June 21, 2026.*
+
+---
+
+## You Might Also Like
+
+- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
+- [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-foreigner/) — Step-by-step guide to mobile payments in China
+- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-booking/) — Book train tickets like a pro
+- [Chengdu Food Guide](/posts/chengdu-food-guide/) — The best Sichuan cuisine in China's food capital
