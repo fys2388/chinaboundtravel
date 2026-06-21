@@ -75,11 +75,43 @@ date: 2026-06-09T10:00:00+08:00
 
 ---
 
+## Guilin   China's Postcard Landscape
+
+**Vibe:** Where the mountains meet the river. Karst peaks rising from emerald waters, ancient villages, and the most photographed scenery in China.
+
+**Don't Miss:**
+- Li River Cruise (4-hour boat ride to Yangshuo)
+- Elephant Trunk Hill (Guilin's iconic landmark)
+- Reed Flute Cave (a magical underground world)
+- Seven Star Park with Camel Mountain
+
+**Joran's Real Tip:** "Book your Li River cruise for early morning. The mist over the mountains is pure magic, and the crowds are thinner."
+
+**Getting Around:** Buses connect everything. Rent an electric bike to explore the countryside.
+
+---
+
+## Yangshuo   Slow Travel Paradise
+
+**Vibe:** Guilin's laid-back little sister. Bicycle rides through rice fields, bamboo rafting, and a backpacker vibe that's been going strong since the 90s.
+
+**Don't Miss:**
+- Yulong River Bamboo Rafting (quieter than Li River)
+- West Street (cafes, shops, and street performers)
+- Moon Hill (climb 800 steps for panoramic views)
+- Ten-Mile Gallery scenic cycling route
+- Impression Liu Sanjie (spectacular outdoor light show)
+
+**Joran's Real Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunchyou'll find the best beer fish in town."
+
+**Getting Around:** Bicycle is king here. Rent one for ~20 RMB/day and explore.
+
+---
+
 ## More Cities Coming Soon
 
 | Month | City Guide |
 |-------|-----------|
-| June 2026 | Guilin & Yangshuo |
 | July 2026 | Zhangjiajie |
 | August 2026 | Dali, Lijiang & Shangri-La |
 | September 2026 | Hangzhou & Suzhou |
