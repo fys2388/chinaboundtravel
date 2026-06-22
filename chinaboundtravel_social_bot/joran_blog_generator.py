@@ -690,12 +690,28 @@ class AIEngine:
         rules.append("  - Chinese place names: use Pinyin (Chengdu, Beijing, Shanghai)")
         rules.append("  - Chinese food names: use English translation (hotpot, dumplings, noodles)")
         
-        for error in self.external_data["error_knowledge"]:
-            if error.get("prevention_rules"):
-                rules.append("")
-                rules.append(f"FROM ERROR: {error.get('message', '')[:50]}...")
-                for rule in error["prevention_rules"]:
-                    rules.append(f"  - {rule}")
+        unresolved_errors = [e for e in self.external_data["error_knowledge"] if not e.get("resolved")]
+        if unresolved_errors:
+            rules.append("")
+            rules.append("==== LEARNING BASE (ACTIVE ISSUES) ====")
+            rules.append("THESE ARE CRITICAL ISSUES THAT CAUSED REJECTIONS - MUST FOLLOW:")
+            for error in unresolved_errors:
+                if error.get("prevention_rules"):
+                    rules.append("")
+                    rules.append(f"[ACTIVE] {error.get('message', '')[:60]} (occurred {error.get('occurrences', 0)} times)")
+                    for rule in error["prevention_rules"]:
+                        rules.append(f"  - MUST: {rule}")
+        
+        resolved_errors = [e for e in self.external_data["error_knowledge"] if e.get("resolved")]
+        if resolved_errors:
+            rules.append("")
+            rules.append("==== HISTORICAL LEARNING (RESOLVED) ====")
+            for error in resolved_errors:
+                if error.get("prevention_rules"):
+                    rules.append("")
+                    rules.append(f"[RESOLVED] {error.get('message', '')[:40]}...")
+                    for rule in error["prevention_rules"]:
+                        rules.append(f"  - {rule}")
         
         rules.append("")
         rules.append("PLACEHOLDER RULES:")
@@ -963,6 +979,9 @@ class BlogGenerator:
         self.notifier = FeishuNotifier()
         self.max_retries = MAX_DAILY_RETRY
         self.used_topics = set()  # 记录本轮已尝试的选题
+        
+        from scripts.error_handler import ErrorHandler
+        self.error_handler = ErrorHandler(str(BASE_DIR))
     
     def topic_precheck(self, topic):
         """选题预检 - 零Token消耗，检查选题是否以中国为落脚点"""
@@ -1051,6 +1070,41 @@ class BlogGenerator:
         slug = re.sub(r'[^a-z0-9\s-]', '', title.lower())
         slug = re.sub(r'[\s-]+', '-', slug).strip('-')
         return slug
+    
+    def _record_audit_failure(self, error_hash, error_message, title):
+        kb = self.error_handler.kb
+        existing_pattern = None
+        
+        for pattern in kb.get("error_patterns", []):
+            if pattern.get("hash") == error_hash:
+                existing_pattern = pattern
+                break
+        
+        if existing_pattern:
+            existing_pattern["occurrences"] = existing_pattern.get("occurrences", 0) + 1
+            existing_pattern["last_seen"] = datetime.now().isoformat()
+            if title not in existing_pattern.get("files", []):
+                existing_pattern["files"].append(title)
+        else:
+            new_pattern = {
+                "hash": error_hash,
+                "type": "内容质量" if error_hash == "content_depth_insufficient" else "风控" if error_hash == "sensitive_content_politics" else "选题",
+                "message": error_message,
+                "occurrences": 1,
+                "first_seen": datetime.now().isoformat(),
+                "last_seen": datetime.now().isoformat(),
+                "files": [title],
+                "suggestion": "确保文章至少700词" if error_hash == "content_depth_insufficient" else "避免政治敏感内容",
+                "resolved": False,
+                "priority": "P0",
+                "source": "主编终审"
+            }
+            kb["error_patterns"].append(new_pattern)
+        
+        kb["total_errors"] = kb.get("total_errors", 0) + 1
+        kb["last_updated"] = datetime.now().isoformat()
+        self.error_handler.save_knowledge_base()
+        print(f"[Learning] Recorded audit failure: {error_hash} - {title}")
     
     def create_frontmatter(self, title, geo_region, topic):
         slug = self.generate_slug(title)
@@ -1263,6 +1317,20 @@ class BlogGenerator:
             
             if not chief_ok:
                 self.notifier.send_notification("❌ 主编终审驳回", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n废弃旧选题，换新选题重试")
+                
+                for et in error_types:
+                    error_hash = {
+                        "depth": "content_depth_insufficient",
+                        "sensitive": "sensitive_content_politics",
+                        "topic": "topic_inappropriate"
+                    }.get(et, "unknown_audit_error")
+                    error_message = {
+                        "depth": f"内容深度不足（{word_count}词，需至少700词）",
+                        "sensitive": "正文含违规词汇",
+                        "topic": "选题方向不符合要求"
+                    }.get(et, error_msg)
+                    self._record_audit_failure(error_hash, error_message, title)
+                
                 return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
         post_slug = self.generate_slug(title)

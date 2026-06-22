@@ -177,6 +177,34 @@
       "priority": "P0",
       "source": "自动化扫描",
       "prevention_rules": ["禁止在文章中包含中文字符（包括城市名、景点名、食物名）", "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）", "中文食物名使用英文翻译（如 dan dan noodles, hotpot）", "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）", "使用标准 ASCII 引号 (\" \") 而非中文引号", "使用英文标点符号（如 . , ! ?）而非中文标点", "箭头使用 -> 或文字描述（如 leads to）而非 →"]
+    },
+    {
+      "hash": "content_depth_insufficient",
+      "type": "内容质量",
+      "message": "文章内容深度不足（词数<700），缺少深度分析和实用信息",
+      "occurrences": 2,
+      "first_seen": "2026-06-22T05:00:00",
+      "last_seen": "2026-06-22T05:00:00",
+      "files": ["Yunnan Adventure: Rice Terraces.md", "China Transportation Guide.md"],
+      "suggestion": "确保文章至少700词，包含详细的实用信息和深度分析",
+      "resolved": false,
+      "priority": "P0",
+      "source": "主编终审",
+      "prevention_rules": ["文章必须达到至少700词的内容深度", "每个主题都需要详细的实用信息和深度分析", "包含具体的旅行建议、价格、时间、地址等细节", "每个H2部分都要有丰富的子点和示例", "避免表面层次的描述，深入挖掘主题"]
+    },
+    {
+      "hash": "sensitive_content_politics",
+      "type": "风控",
+      "message": "文章包含敏感词汇（politics, government, communist等）",
+      "occurrences": 1,
+      "first_seen": "2026-06-22T05:00:00",
+      "last_seen": "2026-06-22T05:00:00",
+      "files": ["The History and Culture of the Great Wall.md"],
+      "suggestion": "避免任何政治、政府相关的敏感内容，聚焦旅行主题",
+      "resolved": false,
+      "priority": "P0",
+      "source": "主编终审",
+      "prevention_rules": ["绝对禁止提及 politics, government, communist 等政治词汇", "绝对禁止提及 Tiananmen, Taiwan independence, Falun Gong", "不讨论任何政治话题或敏感历史事件", "历史内容仅限古代史（朝代时期），避免近现代政治内容", "聚焦旅行、文化、美食、交通等实用主题", "避免任何社会评论或政治分析"]
     }
   ],
   "resolved_count": 7,
