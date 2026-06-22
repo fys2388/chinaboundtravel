@@ -4,6 +4,7 @@ import json
 import random
 import requests
 import hashlib
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -11,6 +12,9 @@ from budget_controller import BudgetController
 from doubao_ark_client import DoubaoArkClient
 
 BASE_DIR = Path(__file__).parent.parent
+sys.path.insert(0, str(BASE_DIR))
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 MANIFEST_PATH = BASE_DIR / "manifest.json"
 DRAFT_DIR = BASE_DIR / "content" / "_draft"
 POSTS_DIR = BASE_DIR / "content" / "posts"
@@ -96,10 +100,10 @@ IMAGE_API_CONFIG = {
         "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
         "priority": 98,
     },
-    "picsum": {
-        "name": "Picsum.photos (占位图兜底)",
+    "unsplash": {
+        "name": "Unsplash (可靠图片服务)",
         "api_key": "",
-        "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
+        "url": "https://images.unsplash.com/photo-{seed}?w={w}&h={h}&fit=crop",
         "priority": 99,
     },
 }
@@ -242,13 +246,13 @@ def generate_image_url(prompt, size_str="16:9"):
             result = try_nanobanana(prompt, size_str)
         elif api_id == "pollinations":
             result = try_pollinations(prompt, int(w), int(h))
-        elif api_id == "picsum":
+        elif api_id == "unsplash":
             seed = abs(hash(prompt)) % 1000000
-            picsum_url = f"https://picsum.photos/seed/{seed}/{w}/{h}"
+            unsplash_url = f"https://images.unsplash.com/photo-{seed}?w={w}&h={h}&fit=crop"
             try:
-                r = requests.get(picsum_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
+                r = requests.get(unsplash_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
                 if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
-                    result = picsum_url
+                    result = unsplash_url
             except:
                 pass
         else:
@@ -262,7 +266,7 @@ def generate_image_url(prompt, size_str="16:9"):
     
     print(f"\n  ⚠️ 所有 API 均失败，返回最终兜底图")
     final_seed = abs(hash(prompt)) % 1000000
-    return f"https://picsum.photos/seed/{final_seed}/{w}/{h}"
+    return f"https://images.unsplash.com/photo-{final_seed}?w={w}&h={h}&fit=crop"
 
 def generate_cover_for_post(title, slug):
     """生成博文封面图"""
