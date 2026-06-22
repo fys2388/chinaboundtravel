@@ -5,11 +5,14 @@ import random
 import requests
 import hashlib
 import sys
+import base64
 from datetime import datetime, timedelta
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
 from budget_controller import BudgetController
 from doubao_ark_client import DoubaoArkClient
+from google import genai
+from google.genai import types
 
 BASE_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(BASE_DIR))
@@ -63,13 +66,23 @@ def wrap_text(text, max_chars):
 
 
 # ========== 多 API 图片生成系统（智能降级）
-# 优先级: Google AI Studio > Pollinations.ai > Picsum.photos
+# 优先级: Google Gemini 官方 API > Google AI Studio > Pollinations.ai > Picsum.photos
 
 PROXIES = {}
 
+IMAGE_SAVE_DIR = BASE_DIR / "static" / "generated_images"
+IMAGE_SAVE_DIR.mkdir(parents=True, exist_ok=True)
+
 IMAGE_API_CONFIG = {
+    "google_gemini": {
+        "name": "Google Gemini (主力生产)",
+        "priority": 0,
+        "api_key": os.getenv("GEMINI_API_KEY", ""),
+        "model": "gemini-2.5-flash-image",
+        "proxy": os.getenv("GEMINI_PROXY", ""),
+    },
     "google_aistudio": {
-        "name": "Google AI Studio (主力生产)",
+        "name": "Google AI Studio (备用)",
         "api_key": os.getenv("GOOGLE_AISTUDIO_API_KEY", ""),
         "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={api_key}",
         "priority": 1,
@@ -78,13 +91,13 @@ IMAGE_API_CONFIG = {
         "name": "Pollinations.ai (免费兜底)",
         "api_key": "",
         "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
-        "priority": 2,
+        "priority": 98,
     },
     "picsum": {
         "name": "Picsum.photos (最终占位兜底)",
         "api_key": "",
         "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
-        "priority": 3,
+        "priority": 99,
     },
 }
 
@@ -210,8 +223,12 @@ def generate_image_url(prompt, size_str="16:9"):
     print(f"\n[ImageGen] 开始生成 (prompt: {prompt[:60]}...)")
     
     # 尺寸映射
-    size_map = {"16:9": ("1792", "1024"), "1:1": ("1024", "1024"), "4:3": ("1024", "768")}
-    w, h = size_map.get(size_str, ("1792", "1024"))
+    size_map = {
+        "16:9": {"aspect_ratio": "16:9", "w": 1792, "h": 1024},
+        "4:3": {"aspect_ratio": "4:3", "w": 1024, "h": 768},
+        "1:1": {"aspect_ratio": "1:1", "w": 1024, "h": 1024},
+    }
+    size_cfg = size_map.get(size_str, size_map["16:9"])
     
     # 优先级排序
     apis = sorted(IMAGE_API_CONFIG.items(), key=lambda x: x[1]["priority"])
@@ -220,19 +237,58 @@ def generate_image_url(prompt, size_str="16:9"):
         print(f"  尝试 [{cfg['name']}] (priority={cfg['priority']})...")
         
         result = None
-        if api_id == "google_aistudio":
-            result = try_google_aistudio(prompt, f"{w}x{h}")
-        elif api_id == "pollinations":
-            result = try_pollinations(prompt, int(w), int(h))
-        elif api_id == "picsum":
-            seed = abs(hash(prompt)) % 1000000
-            picsum_url = f"https://picsum.photos/seed/{seed}/{w}/{h}"
-            try:
+        try:
+            if api_id == "google_gemini":
+                if not cfg["api_key"]:
+                    print(f"  [{cfg['name']}] 未配置 API Key，跳过")
+                    continue
+                
+                client_kwargs = {"api_key": cfg["api_key"]}
+                if cfg.get("proxy"):
+                    client_kwargs["http_options"] = {"proxy": cfg["proxy"]}
+                client = genai.Client(**client_kwargs)
+                
+                response = client.models.generate_content(
+                    model=cfg["model"],
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_modalities=["IMAGE"],
+                        image_config=types.ImageConfig(
+                            aspect_ratio=size_cfg["aspect_ratio"],
+                        ),
+                    ),
+                )
+                
+                for part in response.candidates[0].content.parts:
+                    if part.inline_data:
+                        img_seed = abs(hash(prompt + size_str)) % 1000000
+                        img_filename = f"gemini_{img_seed}.png"
+                        img_path = IMAGE_SAVE_DIR / img_filename
+                        
+                        if img_path.exists():
+                            print(f"  [{cfg['name']}] 图片已存在，复用: {img_filename}")
+                            result = f"/static/generated_images/{img_filename}"
+                            break
+                        
+                        img_bytes = base64.b64decode(part.inline_data.data)
+                        with open(img_path, "wb") as f:
+                            f.write(img_bytes)
+                        
+                        result = f"/static/generated_images/{img_filename}"
+                        break
+                    
+            elif api_id == "google_aistudio":
+                result = try_google_aistudio(prompt, f"{size_cfg['w']}x{size_cfg['h']}")
+            elif api_id == "pollinations":
+                result = try_pollinations(prompt, size_cfg["w"], size_cfg["h"])
+            elif api_id == "picsum":
+                seed = abs(hash(prompt)) % 1000000
+                picsum_url = f"https://picsum.photos/seed/{seed}/{size_cfg['w']}/{size_cfg['h']}"
                 r = requests.get(picsum_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
                 if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
                     result = picsum_url
-            except:
-                pass
+        except Exception as e:
+            print(f"  [{cfg['name']}] 调用失败: {type(e).__name__}: {str(e)[:80]}")
         
         if result:
             print(f"  ✅ [{cfg['name']}] 成功: {result[:80]}")
@@ -242,7 +298,7 @@ def generate_image_url(prompt, size_str="16:9"):
     
     print(f"\n  ⚠️ 所有 API 均失败，返回最终兜底图")
     final_seed = abs(hash(prompt)) % 1000000
-    return f"https://picsum.photos/seed/{final_seed}/{w}/{h}"
+    return f"https://picsum.photos/seed/{final_seed}/{size_cfg['w']}/{size_cfg['h']}"
 
 def generate_cover_for_post(title, slug):
     """生成博文封面图"""

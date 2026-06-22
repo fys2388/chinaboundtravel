@@ -8,6 +8,9 @@ node_modules/
 /resources/
 .hugo_build.lock
 
+# Generated images
+/static/generated_images/
+
 # Logs
 *.log
 
