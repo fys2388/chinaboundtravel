@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-22T10:00:00",
+  "total_entries": 0,
+  "sources": ["xiaohongshu", "douyin", "zhihu", "mafengwo", "ctrip", "weibo", "blog"],
+  "knowledge_categories": {
+    "destinations": [],
+    "transportation": [],
+    "accommodation": [],
+    "food": [],
+    "culture": [],
+    "tips": [],
+    "seasons": [],
+    "budget": [],
+    "safety": [],
+    "visa": []
+  },
+  "learning_metrics": {
+    "total_learned": 0,
+    "total_deduplicated": 0,
+    "total_filtered": 0,
+    "last_learning_date": "2026-06-22"
+  }
+}

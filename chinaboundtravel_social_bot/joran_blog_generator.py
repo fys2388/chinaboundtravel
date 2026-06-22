@@ -639,7 +639,8 @@ class AIEngine:
             "error_knowledge": [],
             "gsc_keywords": [],
             "competitor_topics": [],
-            "user_feedback": []
+            "user_feedback": [],
+            "content_knowledge": []
         }
         
         # 1. 加载错误知识库
@@ -671,6 +672,17 @@ class AIEngine:
             with open(config_dir / "user_feedback.json", 'r', encoding='utf-8') as f:
                 feedback_data = json.load(f)
                 data["user_feedback"] = feedback_data.get("feedbacks", [])
+        except:
+            pass
+        
+        # 5. 加载旅行知识库（从外部学习的内容）
+        try:
+            with open(config_dir / "content_knowledge_base.json", 'r', encoding='utf-8') as f:
+                kb_data = json.load(f)
+                all_knowledge = []
+                for category, entries in kb_data.get("knowledge_categories", {}).items():
+                    all_knowledge.extend(entries)
+                data["content_knowledge"] = all_knowledge
         except:
             pass
         
@@ -748,6 +760,22 @@ class AIEngine:
         
         return "\n".join(rules)
     
+    def _get_related_knowledge(self, topic):
+        topic_lower = topic.lower()
+        related = []
+        
+        for item in self.external_data.get("content_knowledge", []):
+            item_keyword = item.get("keyword", "").lower()
+            item_content = item.get("content", "").lower()
+            
+            if topic_lower in item_keyword or item_keyword in topic_lower:
+                related.append(item)
+            elif any(kw in topic_lower for kw in item_content.split()[:15]):
+                related.append(item)
+        
+        related.sort(key=lambda x: x.get("relevance", 0), reverse=True)
+        return related[:5]
+    
     def generate_post(self, topic, geo_region):
         region_info = {
             "EU": "European travelers (UK, Germany, France, Italy, Spain)",
@@ -769,6 +797,15 @@ class AIEngine:
         
         prevention_rules = self._build_prevention_rules()
         
+        related_knowledge = self._get_related_knowledge(topic)
+        knowledge_section = ""
+        if related_knowledge:
+            knowledge_section = "\n===== RELATED TRAVEL KNOWLEDGE (LEARNED FROM OTHER BLOGGERS) =====\n"
+            for idx, item in enumerate(related_knowledge[:5], 1):
+                key_points = "\n".join([f"  - {kp}" for kp in item.get("key_points", [])])
+                knowledge_section += f"[{idx}] {item.get('keyword', '')}\n{key_points}\n\n"
+            knowledge_section += "===== END RELATED KNOWLEDGE =====\n\n"
+        
         prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
 Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
@@ -778,9 +815,20 @@ SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else
 
 User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
+{knowledge_section}
+
 ===== CRITICAL PREVENTION RULES (MUST FOLLOW) =====
 {prevention_rules}
 ===== END PREVENTION RULES =====
+
+===== ORIGINALITY GUARANTEE (MANDATORY) =====
+1. ORIGINAL CONTENT: Write ENTIRELY original content - NEVER copy, paraphrase, or closely mimic other blogs
+2. UNIQUE ANGLE: Find a unique perspective or angle that other travel blogs haven't covered
+3. NEW INFORMATION: Include facts, tips, or stories that are NOT commonly found in other China travel guides
+4. PERSONAL VOICE: Use your own unique voice and experiences - don't regurgitate generic travel advice
+5. NO PLAGIARISM: Do NOT use sentences or paragraphs from other sources - write everything in your own words
+6. VALUE ADD: Provide MORE value than what's available on popular travel sites - go deeper, be more specific
+===== END ORIGINALITY RULES =====
 
 Requirements for HIGH-QUALITY CONTENT:
 1. TONE: Conversational, witty, authoritative - like chatting with a trusted friend who's been there and done it
