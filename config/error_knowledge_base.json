@@ -205,6 +205,48 @@
       "priority": "P0",
       "source": "主编终审",
       "prevention_rules": ["绝对禁止提及 politics, government, communist 等政治词汇", "绝对禁止提及 Tiananmen, Taiwan independence, Falun Gong", "不讨论任何政治话题或敏感历史事件", "历史内容仅限古代史（朝代时期），避免近现代政治内容", "聚焦旅行、文化、美食、交通等实用主题", "避免任何社会评论或政治分析"]
+    },
+    {
+      "hash": "chinese_characters_leak",
+      "type": "内容质量",
+      "message": "文章包含中文字符（如碧螺春、多功能的），必须全部使用英文或拼音",
+      "occurrences": 3,
+      "first_seen": "2026-06-22T14:00:00",
+      "last_seen": "2026-06-22T15:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "suggestion": "所有中文词汇必须转换为英文或拼音（如 Biluochun tea, multi-functional）",
+      "resolved": false,
+      "priority": "P0",
+      "source": "自动化扫描",
+      "prevention_rules": ["绝对禁止在文章中使用任何中文字符", "中文茶名使用英文翻译或拼音（如 Dragon Well tea/Longjing, Biluochun tea）", "中文地名使用拼音（Chengdu, Beijing, Shanghai）", "中文食物名使用英文翻译（hotpot, dumplings, noodles）", "使用英文形容词替代中文形容词（multi-functional 而非 多功能的）", "生成后自动检测并替换所有中文字符"]
+    },
+    {
+      "hash": "image_placeholder_not_replaced",
+      "type": "配图格式",
+      "message": "文章中的 [Image:xxx] 占位符未被替换为真实图片URL",
+      "occurrences": 2,
+      "first_seen": "2026-06-22T14:00:00",
+      "last_seen": "2026-06-22T15:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "suggestion": "确保图片替换逻辑正确处理所有 [Image:xxx] 格式占位符",
+      "resolved": false,
+      "priority": "P0",
+      "source": "自动化扫描",
+      "prevention_rules": ["生成文章时使用 [Image:description] 格式占位符", "文章保存前必须将所有占位符替换为真实图片URL", "使用正则表达式匹配占位符格式（忽略空格差异）", "替换后验证没有残留的 [Image:xxx] 格式", "确保图片URL使用Pollinations AI服务"]
+    },
+    {
+      "hash": "article_truncated",
+      "type": "内容质量",
+      "message": "文章结尾被截断，缺少完整的结论段落",
+      "occurrences": 1,
+      "first_seen": "2026-06-22T15:00:00",
+      "last_seen": "2026-06-22T15:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "suggestion": "确保文章完整，包含完整的结论段落",
+      "resolved": false,
+      "priority": "P1",
+      "source": "自动化扫描",
+      "prevention_rules": ["文章必须以完整的结论段落结束", "检查文章结尾是否有完整的句号", "确保文章长度达到700词以上", "审核时验证文章完整性"]
     }
   ],
   "resolved_count": 7,

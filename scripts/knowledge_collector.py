@@ -105,19 +105,18 @@ class KnowledgeCollector:
         results = []
         try:
             encoded_keyword = quote(keyword)
-            url = f"https://www.google.com/search?q={encoded_keyword}+travel+blog"
+            url = f"https://www.bing.com/search?q={encoded_keyword}+travel+blog"
             headers = {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             }
-            response = requests.get(url, headers=headers, timeout=10)
+            response = requests.get(url, headers=headers, timeout=15)
             
             if response.status_code == 200:
-                links = re.findall(r'<a href="/url\?q=([^&]+)&', response.text)
-                for i, link in enumerate(links[:max_results]):
+                links = re.findall(r'<a href="([^"]+)" h=".*?">', response.text)
+                for i, link in enumerate(links[:max_results * 2]):
                     try:
-                        decoded_link = requests.utils.unquote(link)
-                        if decoded_link.startswith("http") and "google" not in decoded_link:
-                            results.append({"url": decoded_link, "keyword": keyword})
+                        if link.startswith("http") and "bing.com" not in link and "microsoft.com" not in link:
+                            results.append({"url": link, "keyword": keyword})
                     except:
                         continue
         except Exception as e:
