@@ -1,8 +1,16 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-22T10:00:00",
+  "last_updated": "2026-06-22T14:24:30.363816",
   "total_entries": 0,
-  "sources": ["xiaohongshu", "douyin", "zhihu", "mafengwo", "ctrip", "weibo", "blog"],
+  "sources": [
+    "xiaohongshu",
+    "douyin",
+    "zhihu",
+    "mafengwo",
+    "ctrip",
+    "weibo",
+    "blog"
+  ],
   "knowledge_categories": {
     "destinations": [],
     "transportation": [],
