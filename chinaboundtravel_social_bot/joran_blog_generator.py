@@ -63,48 +63,28 @@ def wrap_text(text, max_chars):
 
 
 # ========== 多 API 图片生成系统（智能降级）
-# 背景: 平台代理阻断了 googleapis.com 等海外 AI 服务，
-#       因此使用国内可通的 API，按优先级自动降级尝试
+# 优先级: Google AI Studio > Pollinations.ai > Picsum.photos
 
-PROXIES = {"https": "http://127.0.0.1:18080", "http": "http://127.0.0.1:18080"}
+PROXIES = {}
 
 IMAGE_API_CONFIG = {
-    "nanobanana": {
-        "name": "NanoBanana API",
-        "api_key": os.getenv("NANOBANANA_API_KEY", "65ddfd1e0f8c71acddcba5e3cde3201f"),
-        "gen_url": "https://api.nanobananaapi.ai/api/v1/nanobanana/generate",
-        "record_url": "https://api.nanobananaapi.ai/api/v1/nanobanana/record-info",
+    "google_aistudio": {
+        "name": "Google AI Studio (主力生产)",
+        "api_key": os.getenv("GOOGLE_AISTUDIO_API_KEY", ""),
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={api_key}",
         "priority": 1,
     },
-    "zhizengzeng": {
-        "name": "智增增 API",
-        "api_key": os.getenv("ZHIZENGZENG_API_KEY", ""),
-        "url": "https://api.zhizengzeng.com/v1/images/generations",
-        "priority": 2,
-    },
-    "aigc2d": {
-        "name": "AIGC2D API",
-        "api_key": os.getenv("AIGC2D_API_KEY", ""),
-        "url": "https://api.aigc2d.com/v1/images/generations",
-        "priority": 3,
-    },
-    "chatanywhere": {
-        "name": "ChatAnywhere API",
-        "api_key": os.getenv("CHATANYWHERE_API_KEY", ""),
-        "url": "https://api.chatanywhere.tech/v1/images/generations",
-        "priority": 4,
-    },
     "pollinations": {
-        "name": "Pollinations.ai (免费AI)",
+        "name": "Pollinations.ai (免费兜底)",
         "api_key": "",
         "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
-        "priority": 98,
+        "priority": 2,
     },
     "picsum": {
-        "name": "Picsum.photos (占位图兜底)",
+        "name": "Picsum.photos (最终占位兜底)",
         "api_key": "",
         "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
-        "priority": 99,
+        "priority": 3,
     },
 }
 
@@ -142,76 +122,75 @@ def build_prompt(title, slug):
             break
     return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
 
-def try_nanobanana(prompt, size="16:9"):
-    """API #1: NanoBanana（异步任务模式）"""
-    cfg = IMAGE_API_CONFIG["nanobanana"]
-    if not cfg["api_key"]:
+def try_google_aistudio(prompt, size="1024x1024"):
+    """API #1: Google AI Studio (主力生产) - Gemini 2.5 Flash Image"""
+    cfg = IMAGE_API_CONFIG["google_aistudio"]
+    api_key = cfg["api_key"]
+    if not api_key:
+        print(f"  [{cfg['name']}] 未配置 API Key，跳过")
         return None
     try:
-        headers = {"Authorization": f"Bearer {cfg['api_key']}", "Content-Type": "application/json"}
-        payload = {"prompt": prompt, "numImages": 1, "type": "TEXTTOIAMGE",
-                   "image_size": size, "callBackUrl": "https://example.com/callback"}
-        r = requests.post(cfg["gen_url"], headers=headers, json=payload,
-                         timeout=60, proxies=PROXIES, verify=False)
+        url = cfg["url"].format(api_key=api_key)
+        headers = {"Content-Type": "application/json"}
+        payload = {
+            "contents": [{
+                "parts": [{
+                    "text": prompt
+                }]
+            }]
+        }
+        r = requests.post(url, headers=headers, json=payload, timeout=60)
         result = r.json()
-        if result.get("code") != 200:
-            print(f"  [{cfg['name']}] {result.get('msg', 'unknown error')}")
+        if "error" in result:
+            err = result["error"].get("message", str(result["error"]))
+            print(f"  [{cfg['name']}] {err[:120]}")
             return None
-        task_id = result.get("data", {}).get("taskId")
-        if not task_id:
-            return None
-        print(f"  [{cfg['name']}] Task: {task_id}")
-        for _ in range(15):
-            time.sleep(2)
-            try:
-                rec = requests.get(f"{cfg['record_url']}?taskId={task_id}",
-                                  headers=headers, timeout=30, proxies=PROXIES, verify=False).json()
-                if rec.get("code") == 200:
-                    data = rec.get("data") or {}
-                    flag = data.get("successFlag")
-                    url = (data.get("response") or {}).get("resultImageUrl")
-                    if flag == 1 and url:
-                        return url
-                    elif flag == 2:
-                        return None
-            except:
-                continue
+        candidates = result.get("candidates", [])
+        if candidates:
+            content = candidates[0].get("content", {})
+            parts = content.get("parts", [])
+            if parts:
+                part = parts[0]
+                if "inlineData" in part:
+                    base64_str = part["inlineData"].get("data", "")
+                    if base64_str:
+                        import base64
+                        img_data = base64.b64decode(base64_str)
+                        import io
+                        from PIL import Image
+                        img = Image.open(io.BytesIO(img_data))
+                        img_format = img.format or "PNG"
+                        import hashlib
+                        img_hash = hashlib.md5(img_data).hexdigest()[:16]
+                        img_dir = BASE_DIR / "static" / "generated"
+                        img_dir.mkdir(parents=True, exist_ok=True)
+                        img_path = img_dir / f"gai-{img_hash}.{img_format.lower()}"
+                        img.save(img_path, format=img_format)
+                        return f"/static/generated/{img_path.name}"
+                elif "text" in part:
+                    text_content = part["text"]
+                    if text_content.startswith("data:image/"):
+                        import base64
+                        base64_str = text_content.split(",", 1)[1]
+                        img_data = base64.b64decode(base64_str)
+                        import io
+                        from PIL import Image
+                        img = Image.open(io.BytesIO(img_data))
+                        img_format = img.format or "PNG"
+                        import hashlib
+                        img_hash = hashlib.md5(img_data).hexdigest()[:16]
+                        img_dir = BASE_DIR / "static" / "generated"
+                        img_dir.mkdir(parents=True, exist_ok=True)
+                        img_path = img_dir / f"gai-{img_hash}.{img_format.lower()}"
+                        img.save(img_path, format=img_format)
+                        return f"/static/generated/{img_path.name}"
         return None
     except Exception as e:
         print(f"  [{cfg['name']}] {type(e).__name__}: {str(e)[:80]}")
         return None
 
-def try_openai_compatible(prompt, api_name, api_key, url, size="1024x1024"):
-    """API #2-#4: OpenAI 兼容格式（智增增 / AIGC2D / ChatAnywhere）"""
-    if not api_key:
-        print(f"  [{api_name}] 未配置 API Key，跳过")
-        return None
-    try:
-        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-        payload = {
-            "model": "dall-e-3",
-            "prompt": prompt,
-            "n": 1,
-            "size": size,
-            "response_format": "url"
-        }
-        r = requests.post(url, headers=headers, json=payload,
-                         timeout=120, proxies=PROXIES, verify=False)
-        result = r.json()
-        if "error" in result:
-            err = result["error"].get("message", str(result["error"]))
-            print(f"  [{api_name}] {err[:120]}")
-            return None
-        images = result.get("data", [])
-        if images and images[0].get("url"):
-            return images[0]["url"]
-        return None
-    except Exception as e:
-        print(f"  [{api_name}] {type(e).__name__}: {str(e)[:80]}")
-        return None
-
 def try_pollinations(prompt, width=1200, height=630):
-    """API #5: Pollinations.ai（免费，无 key，直接 GET URL）"""
+    """API #2: Pollinations.ai（免费兜底）"""
     try:
         seed = abs(hash(prompt)) % 100000
         encoded = requests.utils.quote(prompt)
@@ -233,7 +212,6 @@ def generate_image_url(prompt, size_str="16:9"):
     # 尺寸映射
     size_map = {"16:9": ("1792", "1024"), "1:1": ("1024", "1024"), "4:3": ("1024", "768")}
     w, h = size_map.get(size_str, ("1792", "1024"))
-    openai_size = f"{w}x{h}"
     
     # 优先级排序
     apis = sorted(IMAGE_API_CONFIG.items(), key=lambda x: x[1]["priority"])
@@ -242,8 +220,8 @@ def generate_image_url(prompt, size_str="16:9"):
         print(f"  尝试 [{cfg['name']}] (priority={cfg['priority']})...")
         
         result = None
-        if api_id == "nanobanana":
-            result = try_nanobanana(prompt, size_str)
+        if api_id == "google_aistudio":
+            result = try_google_aistudio(prompt, f"{w}x{h}")
         elif api_id == "pollinations":
             result = try_pollinations(prompt, int(w), int(h))
         elif api_id == "picsum":
@@ -255,8 +233,6 @@ def generate_image_url(prompt, size_str="16:9"):
                     result = picsum_url
             except:
                 pass
-        else:
-            result = try_openai_compatible(prompt, cfg["name"], cfg["api_key"], cfg["url"], openai_size)
         
         if result:
             print(f"  ✅ [{cfg['name']}] 成功: {result[:80]}")
