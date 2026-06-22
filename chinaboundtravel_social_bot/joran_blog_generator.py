@@ -719,6 +719,16 @@ class AIEngine:
         rules.append("  - NO test pages in production")
         rules.append("  - Include Schema markup for SEO")
         rules.append("  - Add Alt text for all images")
+        rules.append("  - MINIMUM 1500 words required - provide EXTREMELY detailed content")
+        
+        rules.append("")
+        rules.append("SENSITIVE CONTENT RULES (MANDATORY):")
+        rules.append("  - NEVER mention politics, government, communist, or any political topics")
+        rules.append("  - NEVER mention Tiananmen, Taiwan independence, or Falun Gong")
+        rules.append("  - NEVER discuss controversial topics or sensitive historical events")
+        rules.append("  - Focus ONLY on travel, culture, food, transportation, and practical tips")
+        rules.append("  - If discussing history, focus on ancient history (dynasty era) only")
+        rules.append("  - Avoid any modern political or social commentary")
         
         return "\n".join(rules)
     
@@ -918,6 +928,7 @@ class ChiefEditor:
     def full_check(self, content):
         """主编终审：检查主旨、深度和原创性"""
         errors = []
+        error_types = []
         
         # 【主旨检查】正文核心必须是中国内容
         content_lower = content.lower()
@@ -926,18 +937,22 @@ class ChiefEditor:
         
         if china_count < 3:
             errors.append("【主旨驳回】文章未以中国为主体，缺少核心中国内容")
+            error_types.append("topic")
         
         # 【深度检查】确保有足够的细节和分析
-        if len(content.split()) < 700:
-            errors.append("【内容深度不足】文章内容过短，缺少深度分析和实用信息")
+        word_count = len(content.split())
+        if word_count < 700:
+            errors.append(f"【内容深度不足】文章内容过短({word_count}词)，缺少深度分析和实用信息")
+            error_types.append("depth")
         
         # 【敏感词检查】纯文本匹配
         sensitive_words = ["politics", "government", "communist", "tiananmen", "taiwan independence", "falun gong"]
         for w in sensitive_words:
             if w in content_lower:
                 errors.append(f"【风控】正文含违规词汇:{w}")
+                error_types.append("sensitive")
         
-        return len(errors) == 0, errors
+        return len(errors) == 0, errors, error_types, word_count
 
 class BlogGenerator:
     def __init__(self):
@@ -1213,12 +1228,42 @@ class BlogGenerator:
         self.notifier.send_notification("✅ 副主编初审通过", f"文章《{title}》进入主编终审")
         
         # 【降本版】ChiefEditor 只查主旨 + 敏感词，零 Token 消耗
-        chief_ok, chief_errors = self.chief_editor.full_check(content)
+        chief_ok, chief_errors, error_types, word_count = self.chief_editor.full_check(content)
         if not chief_ok:
             error_msg = "\n".join(chief_errors)
-            self.notifier.send_notification("❌ 主编终审驳回", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n废弃旧选题，换新选题重试")
-            print(f"[Attempt {attempt}] Chief editor review failed: {chief_errors}")
-            return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
+            print(f"[Attempt {attempt}] Chief editor review failed: {chief_errors}, types: {error_types}")
+            
+            can_fix = False
+            fix_attempts = 0
+            max_fix_attempts = 2
+            
+            while not chief_ok and fix_attempts < max_fix_attempts:
+                fix_attempts += 1
+                
+                if "depth" in error_types and "sensitive" not in error_types and "topic" not in error_types:
+                    can_fix = True
+                    print(f"[Attempt {attempt}] 内容深度不足({word_count}词)，尝试自动扩写修复...")
+                    self.notifier.send_notification("📝 内容深度不足，启动自动扩写", f"文章《{title}》当前{word_count}词，需至少700词，启动AI扩写修复")
+                    
+                    try:
+                        content = self.ai_engine.rewrite_post(content, topic, geo_region)
+                        self.write_markdown(frontmatter, content, draft_path)
+                        chief_ok, chief_errors, error_types, word_count = self.chief_editor.full_check(content)
+                        
+                        if chief_ok:
+                            print(f"[Attempt {attempt}] 自动扩写成功!")
+                            self.notifier.send_notification("✅ 自动扩写成功", f"文章《{title}》已扩展到{word_count}词，继续发布流程")
+                        else:
+                            print(f"[Attempt {attempt}] 自动扩写后仍未通过: {chief_errors}")
+                    except Exception as e:
+                        print(f"[Attempt {attempt}] 自动扩写失败: {e}")
+                        break
+                else:
+                    break
+            
+            if not chief_ok:
+                self.notifier.send_notification("❌ 主编终审驳回", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n废弃旧选题，换新选题重试")
+                return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
         post_slug = self.generate_slug(title)
         cover_url = self.move_to_posts(draft_path, title, post_slug)
