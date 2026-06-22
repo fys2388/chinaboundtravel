@@ -21,7 +21,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "{{ .Section | humanize }}",
-          "item": "{{ .Section | relURL }}"
+          "item": "{{ .Site.BaseURL }}{{ .Section }}"
         }
         ,{
           "@type": "ListItem",

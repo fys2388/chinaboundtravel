@@ -41,9 +41,9 @@
     {{- if (and $index)}}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{ add 1 $index  }},
-      "name": {{ $bc_pg.Name }},
-      "item": {{ $bc_pg.Permalink | safeHTML }}
+      "position": {{ add 1 $index }},
+      "name": "{{ $bc_pg.Name }}",
+      "item": "{{ $bc_pg.Permalink }}"
     }
     {{- end }}
 
@@ -52,9 +52,9 @@
   {{- if (ge (len $bc_list) 2) }}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{len $bc_list}},
-      "name": {{ .Name }},
-      "item": {{ .Permalink | safeHTML }}
+      "position": {{ len $bc_list }},
+      "name": "{{ .Name }}",
+      "item": "{{ .Permalink }}"
     }
   ]
 }
