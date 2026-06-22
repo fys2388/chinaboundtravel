@@ -1,0 +1,12 @@
+{{- $key := .Get "key" -}}
+{{- $text := .Get "text" | default .Inner -}}
+
+{{- if not $key -}}
+  {{- errorf "affiliate-link shortcode requires a 'key' parameter" -}}
+{{- end -}}
+
+{{- $url := index .Site.Params.affiliate $key | default "#" -}}
+
+<a href="{{ $url }}" rel="nofollow sponsored" target="_blank">
+{{- $text | safeHTML -}}
+</a>

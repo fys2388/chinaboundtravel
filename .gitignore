@@ -5,7 +5,7 @@ node_modules/
 .env*.local
 
 # Hugo generated files
-resources/
+/resources/
 .hugo_build.lock
 
 # Logs
