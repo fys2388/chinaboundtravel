@@ -7,6 +7,8 @@ on:
     paths:
       - 'content/posts/**'
       - 'content/_draft/**'
+      - 'content/resources/**'
+      - 'content/cities/**'
       - 'static/**'
       - 'layouts/**'
       - 'themes/**'
