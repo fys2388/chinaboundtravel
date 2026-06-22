@@ -78,7 +78,7 @@ IMAGE_API_CONFIG = {
         "name": "Google Gemini (主力生产)",
         "priority": 0,
         "api_key": os.getenv("GEMINI_API_KEY", ""),
-        "model": "gemini-2.5-flash-image",
+        "model": "gemini-2.5-flash-image-preview",
         "proxy": os.getenv("GEMINI_PROXY", ""),
     },
     "google_aistudio": {
