@@ -100,10 +100,10 @@ IMAGE_API_CONFIG = {
         "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
         "priority": 98,
     },
-    "unsplash": {
-        "name": "Unsplash (可靠图片服务)",
+    "picsum": {
+        "name": "Picsum.photos (占位图兜底)",
         "api_key": "",
-        "url": "https://images.unsplash.com/photo-{seed}?w={w}&h={h}&fit=crop",
+        "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
         "priority": 99,
     },
 }
@@ -246,13 +246,13 @@ def generate_image_url(prompt, size_str="16:9"):
             result = try_nanobanana(prompt, size_str)
         elif api_id == "pollinations":
             result = try_pollinations(prompt, int(w), int(h))
-        elif api_id == "unsplash":
+        elif api_id == "picsum":
             seed = abs(hash(prompt)) % 1000000
-            unsplash_url = f"https://images.unsplash.com/photo-{seed}?w={w}&h={h}&fit=crop"
+            picsum_url = f"https://picsum.photos/seed/{seed}/{w}/{h}"
             try:
-                r = requests.get(unsplash_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
+                r = requests.get(picsum_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
                 if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
-                    result = unsplash_url
+                    result = picsum_url
             except:
                 pass
         else:
@@ -266,7 +266,7 @@ def generate_image_url(prompt, size_str="16:9"):
     
     print(f"\n  ⚠️ 所有 API 均失败，返回最终兜底图")
     final_seed = abs(hash(prompt)) % 1000000
-    return f"https://images.unsplash.com/photo-{final_seed}?w={w}&h={h}&fit=crop"
+    return f"https://picsum.photos/seed/{final_seed}/{w}/{h}"
 
 def generate_cover_for_post(title, slug):
     """生成博文封面图"""
