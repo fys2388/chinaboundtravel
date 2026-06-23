@@ -357,7 +357,13 @@ API调用: {data.get('api_calls', 0)} 次
         else:
             print(f"   ⚠️ 文章目录不存在: {POSTS_DIR}")
         
-        # 4. Travelpayouts数据
+        # 4. Cloudflare流量数据
+        cf_data = self._fetch_cloudflare()
+        if cf_data:
+            data["visitors"] = cf_data.get("visitors", 0)
+            data["page_views"] = cf_data.get("page_views", 0)
+        
+        # 5. Travelpayouts数据
         tp_data = self._fetch_travelpayouts()
         if tp_data:
             data["tp_clicks"] = tp_data.get("clicks", 0)
@@ -391,6 +397,52 @@ API调用: {data.get('api_calls', 0)} 次
         except:
             pass
         return False
+    
+    def _fetch_cloudflare(self) -> dict:
+        """获取Cloudflare流量数据"""
+        if not CLOUDFLARE_API_TOKEN or not CLOUDFLARE_ZONE_ID:
+            return None
+        
+        try:
+            end_time = datetime.now()
+            start_time = end_time - timedelta(days=1)
+            
+            url = f"https://api.cloudflare.com/client/v4/zones/{CLOUDFLARE_ZONE_ID}/analytics/dashboard"
+            headers = {
+                "Authorization": f"Bearer {CLOUDFLARE_API_TOKEN}",
+                "Content-Type": "application/json"
+            }
+            
+            params = {
+                "since": start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "until": end_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "continuous": "true"
+            }
+            
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("success"):
+                    result_info = result.get("result", {})
+                    
+                    requests_count = result_info.get("requests", 0)
+                    page_views = requests_count
+                    
+                    visitor_count = 0
+                    browsers = result_info.get("browsers", [])
+                    if browsers:
+                        visitor_count = sum(b.get("requests", 0) for b in browsers)
+                    
+                    return {
+                        "visitors": visitor_count,
+                        "page_views": page_views
+                    }
+                    
+        except Exception as e:
+            print(f"⚠️ Cloudflare API 获取失败: {e}")
+        
+        return None
     
     def _fetch_travelpayouts(self) -> dict:
         """获取Travelpayouts数据"""
