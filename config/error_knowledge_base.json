@@ -299,7 +299,72 @@
       "prevention_rules": [
         "在文章中加入真实的第一人称经历（如I remember one time...）",
         "提供具体地点、价格、时间等可验证的细节",
-        "避免空洞的总结性语句，加入实用tips"
+        "避免空洞的总结性语句，加入实用tips",
+        "使用对话式语气，避免AI生成的机器人语言",
+        "遵循深度好文标准：1500-2000词、5个核心主题、8个实用Tips、2个深度分析点、2个个人故事"
+      ]
+    },
+    {
+      "hash": "description_homogenization",
+      "type": "内容质量",
+      "message": "文章描述同质化：多个文章使用相似的description和summary，不利于SEO",
+      "occurrences": 3,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "suggestion": "每篇文章使用独特的description和summary，包含文章特有的关键词和价值主张",
+      "resolved": true,
+      "priority": "P1",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "description和summary必须每篇文章唯一",
+        "包含文章特有的关键词（如tea ceremony, hotpot, Shanghai hidden neighborhoods）",
+        "长度控制在120-155字符",
+        "避免重复使用相同的短语（如practical guide for foreign travelers）"
+      ]
+    },
+    {
+      "hash": "alt_text_missing",
+      "type": "SEO问题",
+      "message": "图片缺失详细的Alt文本，影响SEO和可访问性",
+      "occurrences": 3,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "suggestion": "为每一张图片添加详细的描述性Alt文本（10-15词）",
+      "resolved": true,
+      "priority": "P1",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "每篇文章至少3张图片",
+        "每张图片必须有详细的Alt文本（10-15词）",
+        "Alt文本描述图片内容和上下文",
+        "图片prompt必须包含主题、场景、光线、风格"
+      ]
+    },
+    {
+      "hash": "deep_writing_standard",
+      "type": "质量标准",
+      "message": "深度好文标准已建立：1500-2000词、5个核心主题、8个实用Tips、2个深度分析点、2个个人故事",
+      "occurrences": 1,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["deep_writing_standards.json"],
+      "suggestion": "所有新文章必须遵循深度好文标准",
+      "resolved": true,
+      "priority": "P0",
+      "source": "内部标准制定",
+      "prevention_rules": [
+        "文章长度：1500-2000词",
+        "核心主题：至少5个",
+        "实用Tips：至少8个",
+        "深度分析：至少2个（文化背景、历史渊源）",
+        "个人故事：至少2个",
+        "第一人称视角写作",
+        "数据可验证（价格、时间、地址）",
+        "独特视角和原创内容",
+        "对话式语气，避免AI痕迹",
+        "清晰的结构：引言→主体→结论→CTA"
       ]
     },
     {

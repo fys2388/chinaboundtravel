@@ -1,0 +1,148 @@
+{
+  "version": "1.0",
+  "created_at": "2026-06-23",
+  "title": "深度好文写作标准",
+  "description": "为 Joran 制定的高质量文章写作规范，确保每篇文章都是深度、原创、实用的旅行指南",
+  "standards": {
+    "content_depth": {
+      "title": "内容深度标准",
+      "requirements": [
+        {
+          "rule": "文章长度",
+          "min_requirement": "1500-2000词",
+          "description": "文章必须达到1500词以上，确保足够的深度和细节"
+        },
+        {
+          "rule": "主题覆盖",
+          "min_requirement": "5个以上核心主题",
+          "description": "每个主题必须有详细的子点和实用信息"
+        },
+        {
+          "rule": "实用信息",
+          "min_requirement": "每篇至少8个实用Tips",
+          "description": "包含具体的价格、时间、地址、交通方式等可操作信息"
+        },
+        {
+          "rule": "深度分析",
+          "min_requirement": "至少2个深入分析点",
+          "description": "提供超越表面的分析，如文化背景、历史渊源、当地特色"
+        },
+        {
+          "rule": "案例/故事",
+          "min_requirement": "至少2个真实案例或个人经历",
+          "description": "通过第一人称经历增加真实性和可信度"
+        }
+      ]
+    },
+    "originality": {
+      "title": "原创性标准",
+      "requirements": [
+        {
+          "rule": "独特视角",
+          "requirement": "第一人称视角",
+          "description": "以国外旅行者身份提供独特视角，避免泛泛而谈"
+        },
+        {
+          "rule": "新信息",
+          "requirement": "提供新鲜内容",
+          "description": "包含读者在其他地方找不到的信息或独特见解"
+        },
+        {
+          "rule": "个人声音",
+          "requirement": "独特的写作风格",
+          "description": "使用口语化表达，避免AI生成痕迹"
+        },
+        {
+          "rule": "去重",
+          "requirement": "内容独特性检查",
+          "description": "避免与知识库中已有内容重复"
+        }
+      ]
+    },
+    "structure": {
+      "title": "结构标准",
+      "requirements": [
+        {
+          "rule": "开头吸引力",
+          "requirement": "3秒抓住注意力",
+          "description": "使用个人故事、惊人事实或提问式开头"
+        },
+        {
+          "rule": "逻辑清晰",
+          "requirement": "清晰的层次结构",
+          "description": "使用H2/H3标题组织内容，每部分有明确主题"
+        },
+        {
+          "rule": "结尾行动召唤",
+          "requirement": "清晰的CTA",
+          "description": "鼓励读者订阅、评论或分享"
+        },
+        {
+          "rule": "内部链接",
+          "requirement": "3-5个相关链接",
+          "description": "链接到网站内其他相关文章"
+        }
+      ]
+    },
+    "quality": {
+      "title": "质量标准",
+      "requirements": [
+        {
+          "rule": "事实准确性",
+          "requirement": "100%准确",
+          "description": "所有数据、价格、时间、地址必须经过验证"
+        },
+        {
+          "rule": "语言流畅",
+          "requirement": "自然流畅",
+          "description": "避免生硬翻译和复杂句式"
+        },
+        {
+          "rule": "图片质量",
+          "requirement": "高质量相关图片",
+          "description": "每篇至少3张相关图片，包含详细Alt文本"
+        },
+        {
+          "rule": "SEO优化",
+          "requirement": "关键词自然融入",
+          "description": "标题、描述、内容中自然包含目标关键词"
+        }
+      ]
+    }
+  },
+  "writing_templates": {
+    "intro_template": "使用个人故事开头 → 介绍主题重要性 → 提供文章价值承诺",
+    "section_template": "主题介绍 → 深度分析 → 实用Tips → 个人经历",
+    "conclusion_template": "总结核心要点 → 重申价值 → 行动召唤 → 相关链接",
+    "tip_template": "Actionable tip: [具体建议] - [解释为什么有效]"
+  },
+  "forbidden_patterns": [
+    "泛泛而谈的描述",
+    "无意义的填充内容",
+    "重复的信息",
+    "生硬的翻译",
+    "AI生成的套话",
+    "缺乏细节的内容",
+    "无来源的数据",
+    "模糊的时间和价格"
+  ],
+  "examples_of_good_writing": [
+    "I remember my first trip to Chengdu...",
+    "One hidden gem I discovered is...",
+    "You can take bus 345 from the train station, it costs 2 yuan...",
+    "The best time to visit is early morning when...",
+    "Local families recommend this small restaurant near..."
+  ],
+  "quality_checklist": [
+    "文章是否达到1500词？",
+    "是否包含5个以上核心主题？",
+    "是否有8个以上实用Tips？",
+    "是否包含个人经历？",
+    "数据是否准确可验证？",
+    "是否有独特视角？",
+    "是否有清晰的CTA？",
+    "图片是否有详细Alt文本？",
+    "内部链接是否相关？",
+    "是否有3张以上相关图片？"
+  ]
+}
