@@ -53,6 +53,9 @@ TRAVELPAYOUTS_API_TOKEN = os.environ.get("TRAVELPAYOUTS_API_TOKEN", "")
 TRAVELPAYOUTS_MARKER = os.environ.get("TRAVELPAYOUTS_MARKER", "730795")
 CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
 CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
+# GA4配置
+GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 
 
 class FeishuDailyReporter:
@@ -309,12 +312,18 @@ class FeishuDailyReporter:
             print(f"   ⚠️ 网站检查失败: {e}")
             data["site_up"] = False
         
-        # 2. Cloudflare 流量数据
-        cf_data = self._fetch_cloudflare()
-        if cf_data:
-            data.update(cf_data)
-            print(f"   ✅ 流量数据: {data['visitors']:,} 访客, {data['requests']:,} 请求")
+        # 2. GA4 流量数据（优先）
+        ga4_data = self._fetch_ga4()
+        if ga4_data:
+            data.update(ga4_data)
+            print(f"   ✅ GA4流量数据: {data['visitors']:,} 访客, {data['requests']:,} 请求")
             print(f"   ✅ Top页面: {len(data['top_pages'])} 个")
+        else:
+            # 降级到 Cloudflare
+            cf_data = self._fetch_cloudflare()
+            if cf_data:
+                data.update(cf_data)
+                print(f"   ✅ Cloudflare流量数据: {data['visitors']:,} 访客, {data['requests']:,} 请求")
         
         # 3. 本地内容质量巡检
         content_issues = self._scan_content_quality()
@@ -416,6 +425,110 @@ class FeishuDailyReporter:
                         
         except Exception as e:
             print(f"   ⚠️ Cloudflare API 获取失败: {e}")
+        
+        return None
+    
+    def _fetch_ga4(self) -> dict:
+        """获取 GA4 数据"""
+        if not GA4_API_KEY or not GA4_PROPERTY_ID:
+            print("   ⚠️ GA4 API Key 或 Property ID 未配置")
+            return None
+        
+        try:
+            today = datetime.now().strftime("%Y-%m-%d")
+            yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            
+            # 获取今日访客和页面浏览
+            url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
+            headers = {
+                "Authorization": f"Bearer {GA4_API_KEY}",
+                "Content-Type": "application/json"
+            }
+            
+            payload = {
+                "dateRanges": [
+                    {
+                        "startDate": today,
+                        "endDate": today
+                    },
+                    {
+                        "startDate": yesterday,
+                        "endDate": yesterday
+                    }
+                ],
+                "metrics": [
+                    {"name": "activeUsers"},
+                    {"name": "sessions"},
+                    {"name": "screenPageViews"}
+                ],
+                "dimensions": []
+            }
+            
+            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            
+            if response.status_code == 200:
+                result = response.json()
+                rows = result.get("rows", [])
+                
+                if rows:
+                    today_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
+                    today_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
+                    today_pageviews = int(rows[0].get("metricValues", [{}])[2].get("value", "0"))
+                    
+                    yesterday_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
+                    
+                    trend = "N/A"
+                    if yesterday_users > 0:
+                        change = ((today_users - yesterday_users) / yesterday_users) * 100
+                        trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
+                    
+                    # 获取 Top 页面
+                    top_pages_url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
+                    top_pages_payload = {
+                        "dateRanges": [
+                            {
+                                "startDate": today,
+                                "endDate": today
+                            }
+                        ],
+                        "metrics": [
+                            {"name": "screenPageViews"}
+                        ],
+                        "dimensions": [
+                            {"name": "pagePath"}
+                        ],
+                        "orderBys": [
+                            {
+                                "metric": {
+                                    "metricName": "screenPageViews"
+                                },
+                                "desc": True
+                            }
+                        ],
+                        "limit": 10
+                    }
+                    
+                    tp_response = requests.post(top_pages_url, headers=headers, json=top_pages_payload, timeout=30)
+                    top_pages = []
+                    
+                    if tp_response.status_code == 200:
+                        tp_result = tp_response.json()
+                        tp_rows = tp_result.get("rows", [])
+                        for row in tp_rows:
+                            path = row.get("dimensionValues", [{}])[0].get("value", "")
+                            views = int(row.get("metricValues", [{}])[0].get("value", "0"))
+                            if path and views > 0:
+                                top_pages.append({"path": path, "views": views})
+                    
+                    return {
+                        "visitors": today_users,
+                        "requests": today_pageviews,
+                        "visitors_trend": trend,
+                        "top_pages": top_pages
+                    }
+                    
+        except Exception as e:
+            print(f"   ⚠️ GA4 API 获取失败: {e}")
         
         return None
     
