@@ -247,6 +247,78 @@
       "priority": "P1",
       "source": "自动化扫描",
       "prevention_rules": ["文章必须以完整的结论段落结束", "检查文章结尾是否有完整的句号", "确保文章长度达到700词以上", "审核时验证文章完整性"]
+    },
+    {
+      "hash": "h1_duplicate_round8",
+      "type": "SEO问题",
+      "message": "H1标签重复：Markdown内容中的#标题与frontmatter的title重复，Hugo会生成两个H1",
+      "occurrences": 3,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "suggestion": "删除Markdown内容中的#一级标题，直接从##开始（因为frontmatter的title会自动渲染为H1）",
+      "resolved": true,
+      "priority": "P0",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "生成文章时不要在frontmatter title之外再写#一级标题",
+        "Hugo模板会自动使用title作为H1，文章正文应从##开始",
+        "生成后检查H1数量，确保全文只有1个H1"
+      ]
+    },
+    {
+      "hash": "internal_link_placeholder",
+      "type": "内链占位符",
+      "message": "文章底部内链为占位符文本（如[link to a blog post about...]），未替换为真实链接",
+      "occurrences": 1,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "suggestion": "在文章生成时直接插入真实的相关文章URL，使用绝对URL格式",
+      "resolved": true,
+      "priority": "P0",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "生成文章时使用真实的相关文章URL填充底部内链",
+        "禁止使用[link to a blog post about...]这样的占位符",
+        "使用绝对URL格式：https://chinaboundtravel.com/posts/slug/"
+      ]
+    },
+    {
+      "hash": "ai_trace_obvious_round8",
+      "type": "内容质量",
+      "message": "新文章AI生成痕迹明显，缺乏个人视角和真实经验",
+      "occurrences": 3,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "suggestion": "增加个人故事、真实案例、具体地点和时间等细节，减少AI生成痕迹",
+      "resolved": false,
+      "priority": "P1",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "在文章中加入真实的第一人称经历（如I remember one time...）",
+        "提供具体地点、价格、时间等可验证的细节",
+        "避免空洞的总结性语句，加入实用tips"
+      ]
+    },
+    {
+      "hash": "irrelevant_tags_round8",
+      "type": "标签合规",
+      "message": "标签与文章主题不相关（如四川火锅使用通用的ChinaTravel标签）",
+      "occurrences": 2,
+      "first_seen": "2026-06-23T00:00:00",
+      "last_seen": "2026-06-23T00:00:00",
+      "files": ["2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md", "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "suggestion": "使用与文章主题直接相关的具体标签（如Sichuan, Chengdu, TeaCulture）",
+      "resolved": true,
+      "priority": "P1",
+      "source": "第八轮外部测评",
+      "prevention_rules": [
+        "标签应包含具体主题词（如Sichuan, Shanghai, TeaCulture）",
+        "标签数量控制在3-5个，过多会分散权重",
+        "避免使用过于通用的标签（如TravelGuide）"
+      ]
     }
   ],
   "resolved_count": 7,
@@ -257,5 +329,13 @@
     "date": "2026-06-07",
     "overall_score": "6.20/10",
     "key_findings": ["占位符残留影响联盟收入", "事实错误损害专业信任", "缺少社会证明影响转化", "Schema缺失影响SEO展示"]
+  },
+  "round8_review": {
+    "source": "豆包AI",
+    "date": "2026-06-23",
+    "round": 8,
+    "score": "79/100",
+    "score_change": "-1",
+    "key_findings": ["P0问题回归：H1标签重复问题在新文章中再次出现", "P0问题：文章底部内链为占位符文本，未替换为真实链接", "内容质量下滑：新文章AI生成痕迹明显，存在中文混入、标签不相关等问题", "图片风险：使用外部AI生成图片（Pollinations.ai），存在性能和版权双重风险", "技术性能下滑：外部图片加载增加性能损耗，LCP约2.5s", "合规风险增加：AI图片版权风险、标签合规问题"]
   }
 }

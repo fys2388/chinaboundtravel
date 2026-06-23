@@ -10,6 +10,7 @@ tags:
   - ChinaTravel
   - TravelGuide
   - China
+  - Shanghai
   - AustraliaToChina
 categories:
   - China
