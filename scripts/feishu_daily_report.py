@@ -21,15 +21,34 @@ import base64
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# GA4服务账号认证依赖
 try:
-    from dotenv import load_dotenv
-    load_dotenv()
+    from google.oauth2 import service_account
+    from google.auth.transport.requests import Request
+    HAS_GOOGLE_AUTH = True
 except ImportError:
-    pass
+    HAS_GOOGLE_AUTH = False
+    print("⚠️ google-auth 未安装，将使用 API Key 方式（可能不可用）")
 
 # ==================== 配置 ====================
 SCRIPT_DIR = Path(__file__).parent.resolve()
 BLOG_ROOT = SCRIPT_DIR.parent
+
+# 加载 .env 文件
+try:
+    from dotenv import load_dotenv
+    dotenv_path = BLOG_ROOT / ".env"
+    print(f"DEBUG: Loading .env from {dotenv_path}")
+    print(f"DEBUG: .env exists: {dotenv_path.exists()}")
+    load_dotenv(dotenv_path)
+    # 验证加载
+    test_key = os.environ.get("GA4_API_KEY", "")
+    print(f"DEBUG: GA4_API_KEY after load_dotenv: {'已配置' if test_key else '未配置'}")
+    if test_key:
+        print(f"DEBUG: GA4_API_KEY length: {len(test_key)}")
+except ImportError:
+    print("DEBUG: dotenv not installed")
+
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
 CONFIG_DIR = BLOG_ROOT / "config"
@@ -37,16 +56,6 @@ CONFIG_DIR = BLOG_ROOT / "config"
 # 飞书配置
 FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
 FEISHU_SECRET = os.environ.get("FEISHU_SECRET", "")
-
-# 如果环境变量未设置，尝试从 .env 文件读取
-if not FEISHU_WEBHOOK_URL:
-    try:
-        from dotenv import load_dotenv
-        load_dotenv()
-        FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
-        FEISHU_SECRET = os.environ.get("FEISHU_SECRET", "")
-    except:
-        pass
 
 # API配置
 TRAVELPAYOUTS_API_TOKEN = os.environ.get("TRAVELPAYOUTS_API_TOKEN", "")
@@ -56,7 +65,7 @@ CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
 # GA4配置
 GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
 GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
-
+GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 
 class FeishuDailyReporter:
     """飞书每日日报推送器"""
@@ -433,19 +442,41 @@ class FeishuDailyReporter:
     
     def _fetch_ga4(self) -> dict:
         """获取 GA4 数据（昨日自然日）"""
-        if not GA4_API_KEY or not GA4_PROPERTY_ID:
-            print("   ⚠️ GA4 API Key 或 Property ID 未配置")
+        if not GA4_PROPERTY_ID:
+            print("   ⚠️ GA4 Property ID 未配置")
             return None
         
         try:
-            # 昨日自然日数据
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
             
-            # 获取昨日访客和页面浏览
+            print(f"   🔍 正在调用 GA4 API ({yesterday})...")
+            
             url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
+            
+            # 获取认证 Token
+            auth_token = None
+            if GA4_SERVICE_ACCOUNT_JSON and HAS_GOOGLE_AUTH:
+                try:
+                    service_account_info = json.loads(GA4_SERVICE_ACCOUNT_JSON)
+                    credentials = service_account.Credentials.from_service_account_info(
+                        service_account_info,
+                        scopes=["https://www.googleapis.com/auth/analytics.readonly"]
+                    )
+                    credentials.refresh(Request())
+                    auth_token = credentials.token
+                    print("   ✅ 使用服务账号认证")
+                except Exception as e:
+                    print(f"   ⚠️ 服务账号认证失败: {e}")
+            elif GA4_API_KEY:
+                auth_token = GA4_API_KEY
+                print("   ⚠️ 使用 API Key 认证（可能过期）")
+            else:
+                print("   ⚠️ 未配置 GA4 认证信息")
+                return None
+            
             headers = {
-                "Authorization": f"Bearer {GA4_API_KEY}",
+                "Authorization": f"Bearer {auth_token}",
                 "Content-Type": "application/json"
             }
             
@@ -469,6 +500,7 @@ class FeishuDailyReporter:
             }
             
             response = requests.post(url, headers=headers, json=payload, timeout=30)
+            print(f"   📡 GA4 API 响应状态: {response.status_code}")
             
             if response.status_code == 200:
                 result = response.json()
@@ -486,7 +518,6 @@ class FeishuDailyReporter:
                         change = ((yesterday_users - two_days_ago_users) / two_days_ago_users) * 100
                         trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
                     
-                    # 获取昨日 Top 页面
                     top_pages_url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
                     top_pages_payload = {
                         "dateRanges": [
