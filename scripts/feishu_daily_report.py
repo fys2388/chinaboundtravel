@@ -505,6 +505,8 @@ class FeishuDailyReporter:
             if response.status_code == 200:
                 result = response.json()
                 rows = result.get("rows", [])
+                print(f"   📊 GA4 响应行数: {len(rows)}")
+                print(f"   📊 GA4 完整响应: {json.dumps(result, indent=2)[:500]}")
                 
                 if rows:
                     yesterday_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
