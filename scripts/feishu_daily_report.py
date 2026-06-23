@@ -148,11 +148,14 @@ class FeishuDailyReporter:
                 todos_lines.append(f"{i}. {todo}")
             todos_str = "\n".join(todos_lines)
         
+        # 获取报告数据日期（昨日）
+        report_date = data.get("report_date", (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d"))
+        
         card = {
             "header": {
                 "title": {
                     "tag": "plain_text",
-                    "content": f"🌍 ChinaBound Travel 每日运营日报 | {today}"
+                    "content": f"🌍 ChinaBound Travel 每日运营日报 | {report_date}（昨日数据）"
                 },
                 "template": "blue"
             },
@@ -162,13 +165,13 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**📊 1. 流量总览（Cloudflare）** {traffic_status}
+                        "content": f"""**📊 1. 流量总览（GA4 | {report_date}）** {traffic_status}
 
 | 指标 | 数据 |
 | --- | --- |
-| 今日访客数 | {data.get('visitors', 0):,} 人 |
-| 今日请求数 | {data.get('requests', 0):,} 次 |
-| 同比昨日 | {data.get('visitors_trend', 'N/A')} |
+| 昨日访客数 | {data.get('visitors', 0):,} 人 |
+| 昨日请求数 | {data.get('requests', 0):,} 次 |
+| 同比前日 | {data.get('visitors_trend', 'N/A')} |
 
 **🔥 Top3 流量页面**
 {top_pages_str}"""
@@ -216,21 +219,21 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**💰 4. 联盟变现数据**
+                        "content": f"""**💰 4. 联盟变现数据（{report_date} 昨日）**
 
 🏨 **Travelpayouts（酒店/活动）**
 | 指标 | 数据 |
 | --- | --- |
-| 今日点击 | {data.get('tp_clicks', 0)} 次 |
-| 今日订单 | {data.get('tp_bookings', 0)} 单 |
-| 今日佣金 | ${data.get('tp_revenue', 0):.2f} |
+| 昨日点击 | {data.get('tp_clicks', 0)} 次 |
+| 昨日订单 | {data.get('tp_bookings', 0)} 单 |
+| 昨日佣金 | ${data.get('tp_revenue', 0):.2f} |
 
 🌐 **NordVPN / NordPass**
 | 指标 | 数据 |
 | --- | --- |
-| 今日点击 | {data.get('nord_clicks', 0)} 次 |
-| 今日转化 | {data.get('nord_conversions', 0)} 单 |
-| 今日佣金 | ${data.get('nord_revenue', 0):.2f} |
+| 昨日点击 | {data.get('nord_clicks', 0)} 次 |
+| 昨日转化 | {data.get('nord_conversions', 0)} 单 |
+| 昨日佣金 | ${data.get('nord_revenue', 0):.2f} |
 
 **Top 转化页面**: {data.get('top_converting_article', 'N/A')}"""
                     }
@@ -429,16 +432,17 @@ class FeishuDailyReporter:
         return None
     
     def _fetch_ga4(self) -> dict:
-        """获取 GA4 数据"""
+        """获取 GA4 数据（昨日自然日）"""
         if not GA4_API_KEY or not GA4_PROPERTY_ID:
             print("   ⚠️ GA4 API Key 或 Property ID 未配置")
             return None
         
         try:
-            today = datetime.now().strftime("%Y-%m-%d")
+            # 昨日自然日数据
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
             
-            # 获取今日访客和页面浏览
+            # 获取昨日访客和页面浏览
             url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
             headers = {
                 "Authorization": f"Bearer {GA4_API_KEY}",
@@ -448,12 +452,12 @@ class FeishuDailyReporter:
             payload = {
                 "dateRanges": [
                     {
-                        "startDate": today,
-                        "endDate": today
-                    },
-                    {
                         "startDate": yesterday,
                         "endDate": yesterday
+                    },
+                    {
+                        "startDate": two_days_ago,
+                        "endDate": two_days_ago
                     }
                 ],
                 "metrics": [
@@ -471,24 +475,24 @@ class FeishuDailyReporter:
                 rows = result.get("rows", [])
                 
                 if rows:
-                    today_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
-                    today_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
-                    today_pageviews = int(rows[0].get("metricValues", [{}])[2].get("value", "0"))
+                    yesterday_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
+                    yesterday_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
+                    yesterday_pageviews = int(rows[0].get("metricValues", [{}])[2].get("value", "0"))
                     
-                    yesterday_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
+                    two_days_ago_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
                     
                     trend = "N/A"
-                    if yesterday_users > 0:
-                        change = ((today_users - yesterday_users) / yesterday_users) * 100
+                    if two_days_ago_users > 0:
+                        change = ((yesterday_users - two_days_ago_users) / two_days_ago_users) * 100
                         trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
                     
-                    # 获取 Top 页面
+                    # 获取昨日 Top 页面
                     top_pages_url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
                     top_pages_payload = {
                         "dateRanges": [
                             {
-                                "startDate": today,
-                                "endDate": today
+                                "startDate": yesterday,
+                                "endDate": yesterday
                             }
                         ],
                         "metrics": [
@@ -521,8 +525,9 @@ class FeishuDailyReporter:
                                 top_pages.append({"path": path, "views": views})
                     
                     return {
-                        "visitors": today_users,
-                        "requests": today_pageviews,
+                        "report_date": yesterday,
+                        "visitors": yesterday_users,
+                        "requests": yesterday_pageviews,
                         "visitors_trend": trend,
                         "top_pages": top_pages
                     }
@@ -586,7 +591,7 @@ class FeishuDailyReporter:
         return result
     
     def _fetch_travelpayouts(self) -> dict:
-        """获取 Travelpayouts 数据"""
+        """获取 Travelpayouts 数据（昨日）"""
         if not TRAVELPAYOUTS_API_TOKEN:
             print("   ⚠️ Travelpayouts API Token 未配置")
             return None
@@ -598,14 +603,13 @@ class FeishuDailyReporter:
                 "Content-Type": "application/json"
             }
             
-            end_date = datetime.now().strftime("%Y-%m-%d")
-            start_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            # 只获取昨日数据
+            yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             
             payload = {
                 "fields": ["action_id", "sub_id", "price_usd", "paid_profit_usd", "state", "date", "type", "host"],
                 "filters": [
-                    {"field": "date", "op": "ge", "value": start_date},
-                    {"field": "date", "op": "le", "value": end_date}
+                    {"field": "date", "op": "eq", "value": yesterday}
                 ],
                 "sort": [{"field": "paid_profit_usd", "order": "desc"}],
                 "offset": 0,
