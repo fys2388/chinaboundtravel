@@ -64,7 +64,7 @@ CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
 CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
 # GA4配置
 GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
-GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "192133217")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 
 class FeishuDailyReporter:
