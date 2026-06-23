@@ -36,6 +36,16 @@ CONFIG_DIR = BLOG_ROOT / "config"
 FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
 FEISHU_SECRET = os.environ.get("FEISHU_SECRET", "")
 
+# 如果环境变量未设置，尝试从 .env 文件读取
+if not FEISHU_WEBHOOK_URL:
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+        FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
+        FEISHU_SECRET = os.environ.get("FEISHU_SECRET", "")
+    except:
+        pass
+
 # API配置
 TRAVELPAYOUTS_API_TOKEN = os.environ.get("TRAVELPAYOUTS_API_TOKEN", "")
 CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
@@ -87,9 +97,49 @@ class FeishuDailyReporter:
                 timeout=15
             )
             
+            print(f"📤 飞书响应状态码: {response.status_code}")
+            print(f"📤 飞书响应内容: {response.text[:500]}")
+            
             result = response.json()
             if result.get("code") == 0:
                 print("✅ 飞书日报推送成功")
+                return True
+            else:
+                print(f"❌ 飞书推送失败: {result.get('msg', 'Unknown error')}")
+                return False
+                
+        except Exception as e:
+            print(f"❌ 飞书推送异常: {e}")
+            return False
+    
+    def send_text_message(self, text_content: str) -> bool:
+        """发送飞书文本消息（备用）"""
+        if not self.webhook_url:
+            print("⚠️ 飞书 Webhook URL 未配置")
+            return False
+        
+        try:
+            payload = {
+                "msg_type": "text",
+                "content": {
+                    "text": text_content
+                }
+            }
+            
+            headers = {"Content-Type": "application/json"}
+            response = requests.post(
+                self.webhook_url,
+                headers=headers,
+                json=payload,
+                timeout=15
+            )
+            
+            print(f"📤 飞书响应状态码: {response.status_code}")
+            print(f"📤 飞书响应内容: {response.text[:500]}")
+            
+            result = response.json()
+            if result.get("code") == 0:
+                print("✅ 飞书文本消息推送成功")
                 return True
             else:
                 print(f"❌ 飞书推送失败: {result.get('msg', 'Unknown error')}")
@@ -108,6 +158,11 @@ class FeishuDailyReporter:
         content_status = "🟢" if data.get("content_issues", 0) == 0 else "🟡"
         affiliate_status = "🟢" if data.get("affiliate_revenue", 0) > 0 else "⚪"
         ops_status = "🟢" if data.get("ops_issues", 0) == 0 else "🔴"
+        
+        # 数据来源说明
+        data_source_note = ""
+        if data.get("visitors", 0) == 0:
+            data_source_note += "\n\n> ⚠️ 流量数据需配置 Cloudflare API"
         
         card = {
             "header": {
@@ -129,8 +184,8 @@ class FeishuDailyReporter:
 | --- | --- |
 | 访客数 | {data.get('visitors', 0):,} |
 | 页面浏览 | {data.get('page_views', 0):,} |
-| Top1文章 | {data.get('top_article', 'N/A')} |
-| 新增关键词 | {data.get('new_keywords', 0)} 个"""
+| 响应时长 | {data.get('response_time', 0):.0f} ms |
+| Top1文章 | {data.get('top_article', 'N/A')}"""
                     }
                 },
                 {"tag": "hr"},
@@ -209,9 +264,21 @@ API调用: {data.get('api_calls', 0)} 次
                     "elements": [
                         {
                             "tag": "plain_text",
-                            "content": f"⚠️ 待处理问题: {data.get('total_issues', 0)} 个 | 详情请查看 reports 目录"
+                            "content": f"⚠️ 待处理问题: {data.get('total_issues', 0)} 个 | 📁 详情: reports/feishu_daily/"
                         }
                     ]
+                },
+                
+                # === 数据来源说明 ===
+                {
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": """> 📌 数据来源说明
+> - 访客数/页面浏览: 需配置 Cloudflare API
+> - 联盟收入: 需配置 Travelpayouts API Token
+> - AI成本: 需配置 manifest.json 路径"""
+                    }
                 }
             ]
         }
@@ -257,33 +324,38 @@ API调用: {data.get('api_calls', 0)} 次
         try:
             response = requests.get("https://chinaboundtravel.com", timeout=10)
             data["site_up"] = response.status_code == 200
-        except:
+            data["response_time"] = response.elapsed.total_seconds() * 1000  # 毫秒
+        except Exception as e:
+            print(f"   ⚠️ 网站检查失败: {e}")
             data["site_up"] = False
         
         # 2. 统计文章数量
-        posts = list(POSTS_DIR.glob("*.md"))
-        today_posts = [p for p in posts if self._is_today_post(p)]
-        data["new_posts"] = len(today_posts)
-        data["pending_posts"] = len([p for p in posts if "_draft" in str(p) or "draft" in str(p)])
-        
-        # 3. 检查占位符和配图问题
-        placeholder_count = 0
-        missing_image_count = 0
-        
-        for post in posts:
-            try:
-                content = post.read_text(encoding='utf-8')
-                # 检查占位符
-                if "#TP_" in content or "#VPN_" in content or "PLACEHOLDER" in content:
-                    placeholder_count += 1
-                # 检查配图
-                if "[Image:" in content and "](http" not in content:
-                    missing_image_count += 1
-            except:
-                pass
-        
-        data["placeholder_articles"] = placeholder_count
-        data["missing_images"] = missing_image_count
+        if POSTS_DIR.exists():
+            posts = list(POSTS_DIR.glob("*.md"))
+            today_posts = [p for p in posts if self._is_today_post(p)]
+            data["new_posts"] = len(today_posts)
+            data["pending_posts"] = len([p for p in posts if "_draft" in str(p) or "draft" in str(p)])
+            
+            # 3. 检查占位符和配图问题
+            placeholder_count = 0
+            missing_image_count = 0
+            
+            for post in posts:
+                try:
+                    content = post.read_text(encoding='utf-8')
+                    # 检查占位符
+                    if "#TP_" in content or "#VPN_" in content or "PLACEHOLDER" in content:
+                        placeholder_count += 1
+                    # 检查配图
+                    if "[Image:" in content and "](http" not in content and "](/static" not in content:
+                        missing_image_count += 1
+                except:
+                    pass
+            
+            data["placeholder_articles"] = placeholder_count
+            data["missing_images"] = missing_image_count
+        else:
+            print(f"   ⚠️ 文章目录不存在: {POSTS_DIR}")
         
         # 4. Travelpayouts数据
         tp_data = self._fetch_travelpayouts()
@@ -409,13 +481,25 @@ API调用: {data.get('api_calls', 0)} 次
         print("📥 收集数据...")
         data = self.collect_data()
         
+        print(f"📊 收集到的数据:")
+        print(f"   - 网站状态: {'正常' if data['site_up'] else '异常'}")
+        print(f"   - 今日新发: {data['new_posts']} 篇")
+        print(f"   - 占位符未替换: {data['placeholder_articles']} 篇")
+        print(f"   - 配图缺失: {data['missing_images']} 篇")
+        print(f"   - Travelpayouts收入: ${data['tp_revenue']:.2f}")
+        
         # 2. 构建卡片
         print("📝 构建飞书卡片...")
         card = self.build_daily_card(data)
         
-        # 3. 发送消息
+        # 3. 发送消息（先尝试卡片，失败则降级到文本）
         print("📤 发送飞书消息...")
         success = self.send_card_message(card)
+        
+        if not success:
+            print("⚠️ 卡片推送失败，尝试文本格式...")
+            text_report = self.build_text_report(data)
+            success = self.send_text_message(text_report)
         
         # 4. 保存日报记录
         self._save_report(data)
@@ -425,6 +509,35 @@ API调用: {data.get('api_calls', 0)} 次
         print("=" * 60)
         
         return success
+    
+    def build_text_report(self, data: dict) -> str:
+        """构建文本格式日报"""
+        today = datetime.now().strftime("%Y-%m-%d")
+        report = f"""📊 ChinaBound Travel 每日日报 ({today})
+
+🚀 流量数据:
+- 网站状态: {'🟢 正常' if data['site_up'] else '🔴 异常'}
+- 今日访客: {data['visitors']:,}
+- 页面浏览: {data['page_views']:,}
+
+📝 内容生产:
+- 今日新发: {data['new_posts']} 篇
+- 待发布: {data['pending_posts']} 篇
+- 占位符未替换: {data['placeholder_articles']} 篇
+- 配图缺失: {data['missing_images']} 篇
+
+💰 联盟变现:
+- Travelpayouts: {data['tp_clicks']} 点击, {data['tp_bookings']} 订单, ${data['tp_revenue']:.2f}
+
+🔧 运维合规:
+- 404页面: {data['404_count']} 个
+- GSC错误: {data['gsc_errors']} 个
+
+🤖 AI成本:
+- 今日消耗: ¥{data['ai_cost']:.2f} / ¥30.00
+
+⚠️ 待处理问题: {data['total_issues']} 个"""
+        return report
     
     def _save_report(self, data: dict):
         """保存日报记录"""
