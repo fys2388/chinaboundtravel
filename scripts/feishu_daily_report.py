@@ -451,6 +451,7 @@ class FeishuDailyReporter:
             two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
             
             print(f"   🔍 正在调用 GA4 API ({yesterday})...")
+            print(f"   🔍 Property ID: {GA4_PROPERTY_ID}")
             
             url = f"https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY_ID}:runReport"
             
@@ -466,6 +467,7 @@ class FeishuDailyReporter:
                     credentials.refresh(Request())
                     auth_token = credentials.token
                     print("   ✅ 使用服务账号认证")
+                    print(f"   ✅ Token 获取成功，长度: {len(auth_token) if auth_token else 0}")
                 except Exception as e:
                     print(f"   ⚠️ 服务账号认证失败: {e}")
             elif GA4_API_KEY:
@@ -506,12 +508,14 @@ class FeishuDailyReporter:
                 result = response.json()
                 rows = result.get("rows", [])
                 print(f"   📊 GA4 响应行数: {len(rows)}")
-                print(f"   📊 GA4 完整响应: {json.dumps(result, indent=2)[:500]}")
+                print(f"   📊 GA4 完整响应: {json.dumps(result, indent=2)}")
                 
                 if rows:
                     yesterday_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
                     yesterday_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
                     yesterday_pageviews = int(rows[0].get("metricValues", [{}])[2].get("value", "0"))
+                    
+                    print(f"   📊 昨日数据: {yesterday_users} 访客, {yesterday_pageviews} 页面浏览")
                     
                     two_days_ago_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
                     
@@ -564,7 +568,16 @@ class FeishuDailyReporter:
                         "visitors_trend": trend,
                         "top_pages": top_pages
                     }
+                else:
+                    print("   ⚠️ GA4 返回空数据，请检查：")
+                    print("   - GA4 是否有数据（可能延迟24-48小时）")
+                    print("   - Property ID 是否正确")
+                    print("   - 日期范围是否在数据范围内")
                     
+            else:
+                print(f"   ❌ GA4 API 请求失败")
+                print(f"   ❌ 响应内容: {response.text}")
+                
         except Exception as e:
             print(f"   ⚠️ GA4 API 获取失败: {e}")
         
