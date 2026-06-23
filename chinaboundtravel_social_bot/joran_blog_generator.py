@@ -775,6 +775,21 @@ class AIEngine:
         rules.append("  - description: must be 120-155 characters")
         rules.append("  - date: must follow ISO format YYYY-MM-DDTHH:MM:SS+08:00")
         rules.append("  - NO duplicate documents in YAML stream")
+        rules.append("  - tags: MUST use specific topic-related tags (e.g., Sichuan, Shanghai, TeaCulture)")
+        rules.append("  - tags: MAXIMUM 5 tags, avoid generic tags like TravelGuide")
+        
+        rules.append("")
+        rules.append("MARKDOWN STRUCTURE RULES (CRITICAL):")
+        rules.append("  - NEVER add # (H1) heading after frontmatter - Hugo auto-generates H1 from title")
+        rules.append("  - Start content directly with ## (H2) headings")
+        rules.append("  - ONE H1 only - the frontmatter title becomes the H1 automatically")
+        
+        rules.append("")
+        rules.append("INTERNAL LINK RULES:")
+        rules.append("  - Use REAL article URLs for internal links")
+        rules.append("  - NEVER use placeholder text like [link to a blog post about...]")
+        rules.append("  - Use absolute URLs: https://chinaboundtravel.com/posts/slug/")
+        rules.append("  - Include 3-5 related article links at the end of each article")
         
         rules.append("")
         rules.append("CONTENT QUALITY RULES:")

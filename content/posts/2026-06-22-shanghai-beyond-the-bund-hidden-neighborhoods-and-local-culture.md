@@ -25,8 +25,6 @@ TocOpen: "false"
 weight: "1"
 ---
 
-# Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture
-
 ## Introduction
 Hey there, Aussie and Kiwi travelers! You know, when I first landed in Shanghai, I was like a kid in a candy store. The Bund was this shiny, glitzy wonderland that screamed "modern China." But after a while, I started to feel like I was missing out on the real Shanghai. So, I decided to venture beyond the Bund and discover the hidden neighborhoods and local culture that make this city so special. And let me tell you, it was like opening a whole new box of Chinese treasures.
 
@@ -98,3 +96,5 @@ Shanghai is a very safe city. However, like any big city, there are some areas t
 
 ## Conclusion
 Shanghai is a city that has something for everyone. Whether you're interested in exploring the hidden neighborhoods, experiencing the local culture, or just having a good time, there's no shortage of things to do. And with the practical information I've provided, you should be well-prepared to plan your trip. So, what are you waiting for? Book your trip to Shanghai today and start exploring this amazing city. And don't forget to add Chengdu to your itinerary if you have the time. Trust me, you won't be disappointed.
+
+For more China travel guides, explore our [7-Day China Itinerary](https://chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/), [Shanghai Bund French Concession Guide](https://chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/), and [Sichuan Hotpot Guide](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
