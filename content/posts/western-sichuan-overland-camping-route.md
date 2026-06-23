@@ -26,7 +26,7 @@ Six years living in China, and I'd never ventured beyond the city limits of Chen
 
 ## Why Western Sichuan?
 
-Western Sichuan (川西) is China's best-kept secret. While tourists flock to Lijiang and Zhangjiajie, the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
+Western Sichuan (Chuan Xi) is China's best-kept secret. While tourists flock to Lijiang and Zhangjiajie, the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
 
 But let's be real - this isn't a trip for the faint of heart. You're going to drive on roads that make rollercoasters look tame. You're going to camp at altitudes where breathing feels like running a marathon. And yes, you might get a little (okay, a lot) carsick.
 
@@ -37,7 +37,7 @@ But trust me - it's worth every single minute.
 Let me save you some pain. I made every mistake in the book on my first trip, so you don't have to.
 
 ### The Essentials (Don't Leave Home Without These)
-- **Altitude sickness meds**: I cannot stress this enough. We're talking 3,000-4,500 meters here. Get Diamox (乙酰唑胺) from your doctor *before* you go.
+- **Altitude sickness meds**: I cannot stress this enough. We're talking 3,000-4,500 meters here. Get Diamox (acetazolamide) from your doctor *before* you go.
 - **Warm layers**: Even in summer, nights drop below freezing. Bring a down jacket, thermal underwear, and wool socks.
 - **Sunscreen & lip balm**: The UV at high altitude is no joke. I forgot lip balm once - never again. My lips cracked so bad I couldn't smile for a week.
 - **Tire repair kit**: You will hit rocks. You will get flats. Be prepared.
@@ -62,15 +62,15 @@ Grab lunch in Luding, famous for the Luding Bridge (Luding Bridge) from the Long
 Once you pass Luding, the road starts climbing. This is where the fun begins. The views get better and better as you gain altitude. Keep an eye out for waterfalls and herds of yaks.
 
 ### Overnight: Kangding
-Kangding (康定) is your first taste of Tibetan culture. Stay at {{< booking-link "Book Hotels in Kangding" />}} - they have cozy rooms with mountain views.
+Kangding (Kang Ding) is your first taste of Tibetan culture. Stay at {{< booking-link "Book Hotels in Kangding" />}} - they have cozy rooms with mountain views.
 
-**Pro Tip**: Grab dinner at a local Tibetan restaurant. Try *shaokao* (烧烤) with yak meat - it's surprisingly delicious.
+**Pro Tip**: Grab dinner at a local Tibetan restaurant. Try *shaokao* (Tibetan BBQ) with yak meat - it's surprisingly delicious.
 
 ## Day 2: Kangding to Tagong Grasslands (110km, ~3 hours)
 
 **The Real Adventure Begins**
 
-Today you'll leave the paved roads behind. The drive to Tagong (塔公) is *unreal*. You'll wind through mountain passes with views of snow-capped peaks that seem close enough to touch.
+Today you'll leave the paved roads behind. The drive to Tagong (Ta Gong) is *unreal*. You'll wind through mountain passes with views of snow-capped peaks that seem close enough to touch.
 
 ### Stop 1: Xinduqiao
 Xinduqiao (Xinduqiao) is known as the "Photographer's Paradise." Pull over anywhere - every corner is a postcard.
@@ -79,7 +79,7 @@ Xinduqiao (Xinduqiao) is known as the "Photographer's Paradise." Pull over anywh
 Visit the ancient Tagong Monastery. It's one of the most important Tibetan Buddhist monasteries in Sichuan. Be respectful - dress modestly and ask before taking photos.
 
 ### Camping: Tagong Grasslands
-This is where we set up camp for the first time. The grasslands stretch as far as the eye can see, with the Yala Snow Mountain (雅拉雪山) as your backdrop.
+This is where we set up camp for the first time. The grasslands stretch as far as the eye can see, with the Yala Snow Mountain (Yala Xue Shan) as your backdrop.
 
 **Camping Tip**: The wind can get *extremely* strong at night. Bring a sturdy tent with good stakes. We forgot - our tent almost blew away!
 
@@ -90,10 +90,10 @@ This is where we set up camp for the first time. The grasslands stretch as far a
 Today you'll cross the Zheduo Pass (Zheduo Pass) at 4,298 meters. This is where altitude sickness usually hits. Take it slow, drink plenty of water, and don't push yourself.
 
 ### Stop: Ganzi
-Ganzi (甘孜) is a small Tibetan town with a beautiful market. Grab some snacks for the road - *tsampa* (糌粑) and dried yak meat are great energy boosters.
+Ganzi (Gan Zi) is a small Tibetan town with a beautiful market. Grab some snacks for the road - *tsampa* (roasted barley flour) and dried yak meat are great energy boosters.
 
 ### Overnight: Litang
-Litang (理塘) is the highest county town in China at 4,014 meters. Stay at a guesthouse - camping here might be too cold for beginners.
+Litang (Li Tang) is the highest county town in China at 4,014 meters. Stay at a guesthouse - camping here might be too cold for beginners.
 
 **Fun Fact**: Litang is the birthplace of the Dalai Lama. There's a small museum worth visiting.
 
@@ -107,13 +107,13 @@ This stretch is why you came. The scenery becomes otherworldly - rolling hills c
 Pull over and have a picnic. The grasslands here are dotted with yaks and sheep. If you're lucky, you might see Tibetan nomads herding their animals.
 
 ### Overnight: Daocheng
-Daocheng (稻城) is your gateway to Yading Nature Reserve. Stay in town and rest up - tomorrow is going to be a big day.
+Daocheng (Dao Cheng) is your gateway to Yading Nature Reserve. Stay in town and rest up - tomorrow is going to be a big day.
 
 ## Day 5: Daocheng Yading National Park
 
 **The Main Event**
 
-Yading (亚丁) is *the* highlight of the trip. This is where you'll see those iconic photos of snow-capped peaks reflected in turquoise lakes.
+Yading (Ya Ding) is *the* highlight of the trip. This is where you'll see those iconic photos of snow-capped peaks reflected in turquoise lakes.
 
 ### The Hike
 There are two main hikes:
@@ -132,7 +132,7 @@ You can camp near Yading Village, but facilities are basic. Make sure to bring y
 Today is mostly driving, but the scenery is still amazing. Take your time and stop for photos whenever you want.
 
 ### Stop: Batang
-Batang (巴塘) is a great place for lunch. Try *zongzi* (粽子) from a street vendor - they're huge and filled with meat and beans.
+Batang (Ba Tang) is a great place for lunch. Try *zongzi* (sticky rice dumplings) from a street vendor - they're huge and filled with meat and beans.
 
 ## Day 7: Kangding to Chengdu (280km, ~5 hours)
 
