@@ -30,19 +30,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity google-generativeai
-          pip list | grep -i google
+          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity
 
       - name: Run Joran blog generator with Doubao AI
         env:
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GOOGLE_AISTUDIO_API_KEY: ${{ secrets.GOOGLE_AISTUDIO_API_KEY }}
-        run: |
-          python -c "import google; print('Google module imported successfully')"
-          python chinaboundtravel_social_bot/joran_blog_generator.py
+        run: python chinaboundtravel_social_bot/joran_blog_generator.py
 
       - name: Check affiliate link expiry
         id: affiliate-check

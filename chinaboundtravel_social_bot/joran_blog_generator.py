@@ -11,8 +11,6 @@ from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
 from budget_controller import BudgetController
 from doubao_ark_client import DoubaoArkClient
-from google import genai
-from google.genai import types
 
 BASE_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(BASE_DIR))
@@ -74,30 +72,17 @@ IMAGE_SAVE_DIR = BASE_DIR / "static" / "generated_images"
 IMAGE_SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
 IMAGE_API_CONFIG = {
-    "google_gemini": {
-        "name": "Google Gemini (主力生产)",
-        "priority": 0,
-        "api_key": os.getenv("GEMINI_API_KEY", ""),
-        "model": "gemini-2.5-flash-image-preview",
-        "proxy": os.getenv("GEMINI_PROXY", ""),
-    },
-    "google_aistudio": {
-        "name": "Google AI Studio (备用)",
-        "api_key": os.getenv("GOOGLE_AISTUDIO_API_KEY", ""),
-        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={api_key}",
-        "priority": 1,
-    },
     "pollinations": {
-        "name": "Pollinations.ai (免费兜底)",
+        "name": "Pollinations.ai (主力生产)",
         "api_key": "",
         "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
-        "priority": 98,
+        "priority": 0,
     },
     "picsum": {
-        "name": "Picsum.photos (最终占位兜底)",
+        "name": "Picsum.photos (兜底)",
         "api_key": "",
         "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
-        "priority": 99,
+        "priority": 1,
     },
 }
 
@@ -135,79 +120,17 @@ def build_prompt(title, slug):
             break
     return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
 
-def try_google_aistudio(prompt, size="1024x1024"):
-    """API #1: Google AI Studio (主力生产) - Gemini 2.5 Flash Image"""
-    cfg = IMAGE_API_CONFIG["google_aistudio"]
-    api_key = cfg["api_key"]
-    if not api_key:
-        print(f"  [{cfg['name']}] 未配置 API Key，跳过")
-        return None
-    try:
-        url = cfg["url"].format(api_key=api_key)
-        headers = {"Content-Type": "application/json"}
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": prompt
-                }]
-            }]
-        }
-        r = requests.post(url, headers=headers, json=payload, timeout=60)
-        result = r.json()
-        if "error" in result:
-            err = result["error"].get("message", str(result["error"]))
-            print(f"  [{cfg['name']}] {err[:120]}")
-            return None
-        candidates = result.get("candidates", [])
-        if candidates:
-            content = candidates[0].get("content", {})
-            parts = content.get("parts", [])
-            if parts:
-                part = parts[0]
-                if "inlineData" in part:
-                    base64_str = part["inlineData"].get("data", "")
-                    if base64_str:
-                        import base64
-                        img_data = base64.b64decode(base64_str)
-                        import io
-                        from PIL import Image
-                        img = Image.open(io.BytesIO(img_data))
-                        img_format = img.format or "PNG"
-                        import hashlib
-                        img_hash = hashlib.md5(img_data).hexdigest()[:16]
-                        img_dir = BASE_DIR / "static" / "generated"
-                        img_dir.mkdir(parents=True, exist_ok=True)
-                        img_path = img_dir / f"gai-{img_hash}.{img_format.lower()}"
-                        img.save(img_path, format=img_format)
-                        return f"/static/generated/{img_path.name}"
-                elif "text" in part:
-                    text_content = part["text"]
-                    if text_content.startswith("data:image/"):
-                        import base64
-                        base64_str = text_content.split(",", 1)[1]
-                        img_data = base64.b64decode(base64_str)
-                        import io
-                        from PIL import Image
-                        img = Image.open(io.BytesIO(img_data))
-                        img_format = img.format or "PNG"
-                        import hashlib
-                        img_hash = hashlib.md5(img_data).hexdigest()[:16]
-                        img_dir = BASE_DIR / "static" / "generated"
-                        img_dir.mkdir(parents=True, exist_ok=True)
-                        img_path = img_dir / f"gai-{img_hash}.{img_format.lower()}"
-                        img.save(img_path, format=img_format)
-                        return f"/static/generated/{img_path.name}"
-        return None
-    except Exception as e:
-        print(f"  [{cfg['name']}] {type(e).__name__}: {str(e)[:80]}")
-        return None
-
 def try_pollinations(prompt, width=1200, height=630):
-    """API #2: Pollinations.ai（免费兜底）"""
+    """API #2: Pollinations.ai (free fallback) with negative prompt for better quality"""
     try:
         seed = abs(hash(prompt)) % 100000
-        encoded = requests.utils.quote(prompt)
-        url = f"https://image.pollinations.ai/prompt/{encoded}?width={width}&height={height}&nologo=true&seed={seed}"
+        # Enhance prompt with quality modifiers
+        enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus"
+        # Add negative prompt to avoid distortions
+        negative_prompt = "blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, bad anatomy, low quality, watermark, text"
+        encoded = requests.utils.quote(enhanced_prompt)
+        encoded_negative = requests.utils.quote(negative_prompt)
+        url = f"https://image.pollinations.ai/prompt/{encoded}?width={width}&height={height}&nologo=true&seed={seed}&negative={encoded_negative}&model=flux"
         r = requests.get(url, timeout=60, proxies=PROXIES, verify=False, stream=True)
         ct = r.headers.get("content-type", "")
         if r.status_code == 200 and "image" in ct.lower():
@@ -222,15 +145,13 @@ def generate_image_url(prompt, size_str="16:9"):
     """主入口：按优先级尝试所有可用 API，返回第一个成功的图片 URL"""
     print(f"\n[ImageGen] 开始生成 (prompt: {prompt[:60]}...)")
     
-    # 尺寸映射
     size_map = {
-        "16:9": {"aspect_ratio": "16:9", "w": 1792, "h": 1024},
-        "4:3": {"aspect_ratio": "4:3", "w": 1024, "h": 768},
-        "1:1": {"aspect_ratio": "1:1", "w": 1024, "h": 1024},
+        "16:9": {"w": 1792, "h": 1024},
+        "4:3": {"w": 1024, "h": 768},
+        "1:1": {"w": 1024, "h": 1024},
     }
     size_cfg = size_map.get(size_str, size_map["16:9"])
     
-    # 优先级排序
     apis = sorted(IMAGE_API_CONFIG.items(), key=lambda x: x[1]["priority"])
     
     for api_id, cfg in apis:
@@ -238,48 +159,7 @@ def generate_image_url(prompt, size_str="16:9"):
         
         result = None
         try:
-            if api_id == "google_gemini":
-                if not cfg["api_key"]:
-                    print(f"  [{cfg['name']}] 未配置 API Key，跳过")
-                    continue
-                
-                client_kwargs = {"api_key": cfg["api_key"]}
-                if cfg.get("proxy"):
-                    client_kwargs["http_options"] = {"proxy": cfg["proxy"]}
-                client = genai.Client(**client_kwargs)
-                
-                response = client.models.generate_content(
-                    model=cfg["model"],
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        response_modalities=["IMAGE"],
-                        image_config=types.ImageConfig(
-                            aspect_ratio=size_cfg["aspect_ratio"],
-                        ),
-                    ),
-                )
-                
-                for part in response.candidates[0].content.parts:
-                    if part.inline_data:
-                        img_seed = abs(hash(prompt + size_str)) % 1000000
-                        img_filename = f"gemini_{img_seed}.png"
-                        img_path = IMAGE_SAVE_DIR / img_filename
-                        
-                        if img_path.exists():
-                            print(f"  [{cfg['name']}] 图片已存在，复用: {img_filename}")
-                            result = f"/static/generated_images/{img_filename}"
-                            break
-                        
-                        img_bytes = base64.b64decode(part.inline_data.data)
-                        with open(img_path, "wb") as f:
-                            f.write(img_bytes)
-                        
-                        result = f"/static/generated_images/{img_filename}"
-                        break
-                    
-            elif api_id == "google_aistudio":
-                result = try_google_aistudio(prompt, f"{size_cfg['w']}x{size_cfg['h']}")
-            elif api_id == "pollinations":
+            if api_id == "pollinations":
                 result = try_pollinations(prompt, size_cfg["w"], size_cfg["h"])
             elif api_id == "picsum":
                 seed = abs(hash(prompt)) % 1000000
@@ -1328,26 +1208,22 @@ class BlogGenerator:
         content = content.replace('draft: "true"', 'draft: "false"')
         content = content.replace('audit_status: "pending"', 'audit_status: "pass2"')
         
-        # 生成封面图，添加 cover 字段到 frontmatter
-        cover_url = generate_cover_for_post(title, slug)
-        if cover_url:
-            # 在第二个 "---" 前插入 cover 字段
-            parts = content.split("---", 2)
-            if len(parts) >= 3:
-                frontmatter = parts[1]
-                if 'cover:' not in frontmatter:
-                    # 插入 cover 到 frontmatter 开头（title 之后）
-                    lines = frontmatter.split("\n")
-                    new_lines = []
-                    cover_inserted = False
-                    for line in lines:
-                        new_lines.append(line)
-                        if line.startswith('title:') and not cover_inserted:
-                            new_lines.append('cover:')
-                            new_lines.append(f'  image: "{cover_url}"')
-                            cover_inserted = True
-                    new_frontmatter = "\n".join(new_lines)
-                    content = f"---{new_frontmatter}---{parts[2]}"
+        # 使用 social_publisher 的分类和封面图生成（符合 Worker 白名单路径）
+        from social_publisher import classify_category, generate_cover_image, update_article_cover
+        category = classify_category(title)
+        cover_url = generate_cover_image(title, slug, category)
+        print(f"  [CoverGen] Category: {category}, Cover URL: {cover_url}")
+        
+        # 更新文章 frontmatter 的 cover 字段
+        update_article_cover(post_path if post_path.exists() else draft_path, cover_url)
+        
+        # 读取更新后的内容（包含正确的 cover 字段）
+        if post_path.exists():
+            with open(post_path, "r", encoding="utf-8") as f:
+                content = f.read()
+        else:
+            with open(draft_path, "r", encoding="utf-8") as f:
+                content = f.read()
         
         # 替换文章正文中的 [Image:xxx] 占位符为真实图片
         import re
@@ -1479,6 +1355,17 @@ class BlogGenerator:
         
         print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
         print(f"  Cover: {cover_url}")
+        
+        # ========== 触发社媒发布 ==========
+        try:
+            from social_publisher import run as run_social_publish
+            print(f"[Attempt {attempt}] Triggering social media publishing...")
+            run_social_publish()
+            print(f"[Attempt {attempt}] Social media publishing completed")
+        except Exception as e:
+            print(f"[Attempt {attempt}] Social media publishing failed: {e}")
+            self.notifier.send_notification("⚠️ 社媒发布失败", f"文章《{title}》社媒发布时出错: {str(e)}")
+        
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
