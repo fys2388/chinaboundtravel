@@ -36,6 +36,8 @@ jobs:
         env:
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AISTUDIO_API_KEY: ${{ secrets.GOOGLE_AISTUDIO_API_KEY }}
         run: python chinaboundtravel_social_bot/joran_blog_generator.py
 
       - name: Check affiliate link expiry
