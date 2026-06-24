@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity
+          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity google-generativeai
 
       - name: Run Joran blog generator with Doubao AI
         env:
