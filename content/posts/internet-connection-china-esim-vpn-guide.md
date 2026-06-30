@@ -34,7 +34,6 @@ Six years later, I've tried every possible way to stay connected in China, and I
 - **International Services**: Most global social media, search engines, and messaging apps are blocked
 
 ---
-draft: false
 
 ## Option 1: eSIM for China
 

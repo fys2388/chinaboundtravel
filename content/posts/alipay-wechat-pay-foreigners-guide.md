@@ -34,7 +34,6 @@ Good news: it got WAY easier in 2026. Let me walk you through exactly what to do
 - **Discounts**: Exclusive offers and cashback for mobile payments
 
 ---
-draft: false
 
 ## Part 1: Setting Up Alipay for Foreigners
 
