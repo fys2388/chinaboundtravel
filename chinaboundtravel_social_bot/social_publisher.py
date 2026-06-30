@@ -166,7 +166,7 @@ def get_article_info(md_path: Path) -> dict:
 
 
 def extract_images_from_article(md_path: Path) -> list:
-    """提取文章中的所有图片（封面图 + 正文插图）"""
+    """提取文章中的所有图片，正文实景图优先排前面（社媒发帖用实景图效果更好）"""
     try:
         with open(md_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -175,20 +175,24 @@ def extract_images_from_article(md_path: Path) -> list:
             content = f.read()
         content = content.encode('utf-8', errors='replace').decode('utf-8', errors='replace')
 
-    images = []
+    body_images = []   # 正文实景图（优先用于社媒）
+    cover_images = []  # 封面图（备用）
 
     fm_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
     if fm_match:
         fm_text = fm_match.group(1)
-        cover_match = re.search(r'^\s*cover\s*:', fm_text, re.MULTILINE)
-        if cover_match:
-            cover_value = re.search(r'cover:\s*"?([^"\n]+)"?', fm_text)
-            if cover_value:
-                cover_url = cover_value.group(1).strip()
-                if cover_url:
-                    if not cover_url.startswith('http'):
-                        cover_url = f"https://{SITE_DOMAIN}{cover_url}"
-                    images.append({"url": cover_url, "type": "cover"})
+        # 支持两种 cover 格式:
+        # 1. cover: "url" (单行)
+        # 2. cover:\n  image: "url" (多行 map)
+        cover_img_match = re.search(r'^\s*cover\s*:\s*\n\s*image\s*:\s*"?([^"\n]+)"?', fm_text, re.MULTILINE)
+        if not cover_img_match:
+            cover_img_match = re.search(r'^\s*cover\s*:\s*"?([^"\n]+)"?', fm_text, re.MULTILINE)
+        if cover_img_match:
+            cover_url = cover_img_match.group(1).strip()
+            if cover_url:
+                if not cover_url.startswith('http'):
+                    cover_url = f"https://{SITE_DOMAIN}{cover_url}"
+                cover_images.append({"url": cover_url, "type": "cover"})
 
     body_content = content[fm_match.end():] if fm_match else content
     img_pattern = r'!\[([^\]]*)\]\(([^)]+)\)'
@@ -198,13 +202,14 @@ def extract_images_from_article(md_path: Path) -> list:
         if img_url and ('pollinations' in img_url or 'picsum' in img_url or SITE_DOMAIN in img_url):
             if not img_url.startswith('http'):
                 img_url = f"https://{SITE_DOMAIN}{img_url}"
-            images.append({"url": img_url, "type": "body", "alt": alt_text})
+            body_images.append({"url": img_url, "type": "body", "alt": alt_text})
 
-    return images
+    # 正文实景图排前面，封面海报排后面（社媒优先用实景图）
+    return body_images + cover_images
 
 
 def generate_social_posts(article: dict, images: list) -> list:
-    """根据文章内容和配图生成多条不同的社媒帖子"""
+    """根据文章内容和配图生成多条不同的社媒帖子，适配 IG/Pinterest/X 不同风格"""
     title = article["title"]
     desc = article["description"]
     url = article["url"]
@@ -212,44 +217,50 @@ def generate_social_posts(article: dict, images: list) -> list:
     posts = []
     used_images = set()
 
-    if images:
-        cover_img = images[0]
-        used_images.add(cover_img["url"])
-        
-        posts.append({
-            "text": f"New post: {title}\n\n{desc[:150]}...\n\nRead more: {url}\n\n#ChinaTravel #TravelGuide",
-            "image": cover_img["url"],
-            "variant": "main"
-        })
+    # 优先使用正文中的实景图片（type=body），cover 海报仅作 fallback
+    body_images = [img for img in images if img.get("type") == "body"]
+    cover_images = [img for img in images if img.get("type") == "cover"]
 
-    for i, img in enumerate(images[1:], 1):
-        if len(posts) >= 2:
+    # 如果没有正文图片，使用 cover 图
+    available_images = body_images if body_images else cover_images
+    if not available_images:
+        return posts
+
+    clean_desc = re.sub(r'\s+', ' ', desc).strip()
+    desc_snippet = clean_desc[:180] if len(clean_desc) > 180 else clean_desc
+
+    # 帖子 1: IG 风格主帖，用第一张实景图，注重视觉冲击与情绪共鸣
+    first_img = available_images[0]
+    used_images.add(first_img["url"])
+    posts.append({
+        "text": f"{title}\n\n{desc_snippet}\n\nRead the full guide: {url}\n\n#ChinaTravel #TravelChina #VisitChina #ChinaLife",
+        "image": first_img["url"],
+        "variant": "ig_main"
+    })
+
+    # 帖子 2: Pinterest/X 风格补充帖，用第二张不同的图，注重信息密度与引导点击
+    for img in available_images[1:]:
+        if img["url"] not in used_images:
+            used_images.add(img["url"])
+            alt_text = img.get("alt", "")
+            if alt_text and len(alt_text) > 10:
+                caption = alt_text[:80]
+            else:
+                caption = f"More from {title[:50]}"
+            posts.append({
+                "text": f"{caption}\n\nDiscover more in our latest guide: {url}\n\n#ChinaTravel #TravelTips #ChinaDestination",
+                "image": img["url"],
+                "variant": "pin_secondary"
+            })
             break
-        if img["url"] in used_images:
-            continue
-        
-        used_images.add(img["url"])
-        alt_text = img.get("alt", "Beautiful scenery")
-        
-        if i == 1:
-            posts.append({
-                "text": f"Highlight: {alt_text[:50]}...\n\nDiscover more about {title[:40]}...\n\nRead: {url}\n\n#ChinaTravel #TravelTips",
-                "image": img["url"],
-                "variant": "highlight"
-            })
-        else:
-            posts.append({
-                "text": f"Preview: {title[:60]}\n\nHere's a sneak peek - {alt_text[:30]}...\n\nRead the full guide: {url}\n\n#ChinaTravel #Wanderlust",
-                "image": img["url"],
-                "variant": "teaser"
-            })
 
-    if len(posts) < 2 and images:
-        second_img = images[0] if len(images) == 1 else images[1]
+    # 如果只有一张图，复制第一张但换文案（X 短平快风格）
+    if len(posts) < 2 and available_images:
+        first_img = available_images[0]
         posts.append({
-            "text": f"Travel inspiration: {desc[:120]}...\n\nFull article: {url}\n\n#ChinaTravel #TravelInspiration",
-            "image": second_img["url"],
-            "variant": "quote"
+            "text": f"Travel inspiration: {desc[:120]}...\n\nFull article: {url}\n\n#ChinaTravel #TravelInspiration #Wanderlust",
+            "image": first_img["url"],
+            "variant": "x_quote"
         })
 
     return posts[:2]
@@ -294,7 +305,7 @@ def publish_to_worker(article: dict, cover_url: str, custom_text: str = None) ->
         "title": article["title"],
         "desc": custom_text or article["description"],
         "cover": cover_url,
-        "url": article["url"],
+        "url": article.get("url", ""),
         "custom_text": custom_text
     }
 

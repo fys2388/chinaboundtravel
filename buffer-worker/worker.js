@@ -210,7 +210,8 @@ async function handlePublish(request, env, ctx) {
         token,
         accountConfig.channels,
         env,
-        accountKey
+        accountKey,
+        postUrl
       );
 
       // 合并结果
@@ -388,7 +389,7 @@ async function processRetryQueue(env) {
 }
 
 // ========== 发布到Buffer ==========
-async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey) {
+async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey, postUrl) {
   const results = { success: [], failed: [], details: [] };
 
   const mutation = `
@@ -412,7 +413,7 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
       mode: 'addToQueue'
     };
 
-    let input = buildPlatformInput(service, text, mediaUrl, baseInput, env);
+    let input = buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl);
     const variables = { input };
 
     let attempt = 0;
@@ -506,7 +507,7 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
 }
 
 // ========== 构建平台特定输入 ==========
-function buildPlatformInput(service, text, mediaUrl, baseInput, env) {
+function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
   let input;
 
   if (service === 'facebook') {
@@ -529,7 +530,11 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env) {
     const pinTitle = (text || '').slice(0, 100);
     const pinText = (text || '').slice(0, 500);
     const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '';
-    const pinMeta = { title: pinTitle, url: 'https://chinaboundtravel.com' };
+    const pinMeta = {
+      title: pinTitle,
+      url: postUrl || 'https://chinaboundtravel.com',
+      description: pinText
+    };
     if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
     input = {
       ...baseInput,
