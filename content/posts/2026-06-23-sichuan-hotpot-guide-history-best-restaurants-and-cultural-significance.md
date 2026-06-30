@@ -15,7 +15,7 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "false"
+draft: false
 audit_status: "pass2"
 summary: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."
 description: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."

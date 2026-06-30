@@ -15,7 +15,7 @@ tags:
 categories:
   - China
 geo: "US"
-draft: "false"
+draft: false
 audit_status: "pass2"
 summary: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."
 description: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."

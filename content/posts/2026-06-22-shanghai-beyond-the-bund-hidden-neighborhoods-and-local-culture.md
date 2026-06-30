@@ -15,7 +15,7 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "false"
+draft: false
 audit_status: "pass2"
 summary: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 10 years in China."
 description: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 10 years in China."
