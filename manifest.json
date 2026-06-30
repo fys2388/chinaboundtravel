@@ -1,11 +1,17 @@
 {
-  "month_post_count": 0,
-  "last_reset_date": "2026-07-01",
-  "last_social_publish": "",
-  "daily_social_publish_date": "",
+  "month_post_count": 1,
+  "last_reset_date": "2026-06-01",
+  "last_social_publish": "2026-06-30 01:27:45",
+  "daily_social_publish_date": "2026-06-30",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
-  "history_topics": [],
+  "history_topics": [
+    {
+      "topic": "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park",
+      "geo_region": "US",
+      "create_date": "2026-06-30"
+    }
+  ],
   "keyword_convert_rate": {
     "visa requirements": 0.15,
     "best time to visit": 0.12,

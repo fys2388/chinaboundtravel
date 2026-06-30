@@ -5,7 +5,12 @@
       "title": "China Visa Requirements 2026: Complete Guide for Foreigners",
       "category": "visa",
       "geo": "US",
-      "keywords": ["china visa", "china travel visa", "chinese visa application", "china visa requirements"],
+      "keywords": [
+        "china visa",
+        "china travel visa",
+        "chinese visa application",
+        "china visa requirements"
+      ],
       "priority": 5,
       "status": "used",
       "source": "gsc",
@@ -18,7 +23,12 @@
       "title": "Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons",
       "category": "travel",
       "geo": "EU",
-      "keywords": ["chengdu travel", "best time chengdu", "chengdu weather", "chengdu festivals"],
+      "keywords": [
+        "chengdu travel",
+        "best time chengdu",
+        "chengdu weather",
+        "chengdu festivals"
+      ],
       "priority": 4,
       "status": "used",
       "source": "gsc",
@@ -31,7 +41,12 @@
       "title": "China Travel Budget Guide 2026: Detailed Costs for Every Budget",
       "category": "budget",
       "geo": "US",
-      "keywords": ["china travel budget", "travel to china cost", "china trip cost", "china travel expenses"],
+      "keywords": [
+        "china travel budget",
+        "travel to china cost",
+        "china trip cost",
+        "china travel expenses"
+      ],
       "priority": 5,
       "status": "used",
       "source": "affiliate",
@@ -44,7 +59,12 @@
       "title": "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance",
       "category": "food",
       "geo": "AU",
-      "keywords": ["sichuan hotpot", "chengdu food", "chinese hotpot", "hotpot history"],
+      "keywords": [
+        "sichuan hotpot",
+        "chengdu food",
+        "chinese hotpot",
+        "hotpot history"
+      ],
       "priority": 3,
       "status": "used",
       "source": "competitor",
@@ -57,7 +77,12 @@
       "title": "China Transportation Guide: High-Speed Rail, Subways, and Local Transport",
       "category": "transportation",
       "geo": "EU",
-      "keywords": ["china transportation", "china high speed train", "china subway", "china local transport"],
+      "keywords": [
+        "china transportation",
+        "china high speed train",
+        "china subway",
+        "china local transport"
+      ],
       "priority": 4,
       "status": "used",
       "source": "user_feedback",
@@ -70,7 +95,12 @@
       "title": "The History and Culture of the Great Wall: Beyond the Tourist Trail",
       "category": "culture",
       "geo": "US",
-      "keywords": ["great wall of china", "great wall history", "great wall culture", "great wall hidden spots"],
+      "keywords": [
+        "great wall of china",
+        "great wall history",
+        "great wall culture",
+        "great wall hidden spots"
+      ],
       "priority": 5,
       "status": "used",
       "source": "gsc",
@@ -83,7 +113,12 @@
       "title": "Xi'an Terracotta Army: History, Discovery, and Insider Tips",
       "category": "culture",
       "geo": "EU",
-      "keywords": ["terracotta army", "xi'an travel", "ancient china", "qin dynasty"],
+      "keywords": [
+        "terracotta army",
+        "xi'an travel",
+        "ancient china",
+        "qin dynasty"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "competitor",
@@ -96,7 +131,12 @@
       "title": "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture",
       "category": "travel",
       "geo": "AU",
-      "keywords": ["shanghai travel", "shanghai hidden gems", "shanghai neighborhoods", "shanghai local life"],
+      "keywords": [
+        "shanghai travel",
+        "shanghai hidden gems",
+        "shanghai neighborhoods",
+        "shanghai local life"
+      ],
       "priority": 4,
       "status": "used",
       "source": "user_feedback",
@@ -109,7 +149,12 @@
       "title": "Chinese Tea Culture: History, Types, and Tea Ceremony Guide",
       "category": "culture",
       "geo": "US",
-      "keywords": ["chinese tea", "china tea culture", "tea ceremony", "chinese tea types"],
+      "keywords": [
+        "chinese tea",
+        "china tea culture",
+        "tea ceremony",
+        "chinese tea types"
+      ],
       "priority": 4,
       "status": "used",
       "source": "affiliate",
@@ -122,7 +167,12 @@
       "title": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
       "category": "travel",
       "geo": "EU",
-      "keywords": ["yunnan travel", "rice terraces", "lijiang", "ethnic minorities"],
+      "keywords": [
+        "yunnan travel",
+        "rice terraces",
+        "lijiang",
+        "ethnic minorities"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "gsc",
@@ -135,7 +185,12 @@
       "title": "China Food Guide: Regional Cuisines and Must-Try Dishes",
       "category": "food",
       "geo": "AU",
-      "keywords": ["chinese food", "china regional cuisine", "must try chinese dishes", "chinese street food"],
+      "keywords": [
+        "chinese food",
+        "china regional cuisine",
+        "must try chinese dishes",
+        "chinese street food"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "competitor",
@@ -148,7 +203,12 @@
       "title": "Living in China as a Foreigner: Cultural Adaptation and Daily Life",
       "category": "lifestyle",
       "geo": "US",
-      "keywords": ["living in china", "expat life china", "cultural adaptation", "china daily life"],
+      "keywords": [
+        "living in china",
+        "expat life china",
+        "cultural adaptation",
+        "china daily life"
+      ],
       "priority": 4,
       "status": "used",
       "source": "user_feedback",
@@ -161,12 +221,17 @@
       "title": "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park",
       "category": "travel",
       "geo": "US",
-      "keywords": ["zhangjiajie", "avatar mountains", "china national park", "hunan travel"],
+      "keywords": [
+        "zhangjiajie",
+        "avatar mountains",
+        "china national park",
+        "hunan travel"
+      ],
       "priority": 5,
-      "status": "pending",
+      "status": "used",
       "source": "gsc",
       "created_at": "2026-07-01T12:00:00",
-      "used_at": null,
+      "used_at": "2026-06-30T01:27:44.214517",
       "depth": "deep"
     },
     {
@@ -174,7 +239,12 @@
       "title": "Guilin and Yangshuo: The Ultimate Karst Landscape Guide for 2026",
       "category": "travel",
       "geo": "EU",
-      "keywords": ["guilin travel", "yangshuo", "li river cruise", "karst landscape"],
+      "keywords": [
+        "guilin travel",
+        "yangshuo",
+        "li river cruise",
+        "karst landscape"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "gsc",
@@ -187,7 +257,12 @@
       "title": "How to Use Alipay as a Foreigner: Complete Setup Guide 2026",
       "category": "payment",
       "geo": "US",
-      "keywords": ["alipay foreigners", "china payment apps", "alipay setup", "china mobile payment"],
+      "keywords": [
+        "alipay foreigners",
+        "china payment apps",
+        "alipay setup",
+        "china mobile payment"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "user_feedback",
@@ -200,7 +275,12 @@
       "title": "Best eSIM and VPN Options for China Travel in 2026",
       "category": "internet",
       "geo": "EU",
-      "keywords": ["china esim", "china vpn", "internet in china", "stay connected china"],
+      "keywords": [
+        "china esim",
+        "china vpn",
+        "internet in china",
+        "stay connected china"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "affiliate",
@@ -213,7 +293,12 @@
       "title": "China High-Speed Train Survival Guide: Booking, Classes, and Insider Tips",
       "category": "transportation",
       "geo": "AU",
-      "keywords": ["china high speed train", "china railway", "train travel china", "book train china"],
+      "keywords": [
+        "china high speed train",
+        "china railway",
+        "train travel china",
+        "book train china"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "competitor",
@@ -226,7 +311,12 @@
       "title": "Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls",
       "category": "food",
       "geo": "US",
-      "keywords": ["chinese street food", "china night market", "street food guide", "china food tour"],
+      "keywords": [
+        "chinese street food",
+        "china night market",
+        "street food guide",
+        "china food tour"
+      ],
       "priority": 4,
       "status": "pending",
       "source": "competitor",
@@ -239,7 +329,12 @@
       "title": "144-Hour Visa-Free Transit: How to Use It and Which Cities You Can Visit",
       "category": "visa",
       "geo": "EU",
-      "keywords": ["144 hour visa free", "china transit visa", "visa free china", "china layover"],
+      "keywords": [
+        "144 hour visa free",
+        "china transit visa",
+        "visa free china",
+        "china layover"
+      ],
       "priority": 5,
       "status": "pending",
       "source": "gsc",
@@ -252,7 +347,12 @@
       "title": "WeChat Pay for Foreigners: Step-by-Step Setup and Common Mistakes to Avoid",
       "category": "payment",
       "geo": "AU",
-      "keywords": ["wechat pay foreigners", "china payment", "wechat pay setup", "china travel payment"],
+      "keywords": [
+        "wechat pay foreigners",
+        "china payment",
+        "wechat pay setup",
+        "china travel payment"
+      ],
       "priority": 4,
       "status": "pending",
       "source": "user_feedback",
