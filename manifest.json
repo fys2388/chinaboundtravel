@@ -1,7 +1,7 @@
 {
-  "month_post_count": 1,
+  "month_post_count": 2,
   "last_reset_date": "2026-06-01",
-  "last_social_publish": "2026-06-30 01:27:45",
+  "last_social_publish": "2026-06-30 04:08:39",
   "daily_social_publish_date": "2026-06-30",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
@@ -9,6 +9,11 @@
     {
       "topic": "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park",
       "geo_region": "US",
+      "create_date": "2026-06-30"
+    },
+    {
+      "topic": "Xi'an Terracotta Army: History, Discovery, and Insider Tips",
+      "geo_region": "EU",
       "create_date": "2026-06-30"
     }
   ],

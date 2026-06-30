@@ -120,10 +120,10 @@
         "qin dynasty"
       ],
       "priority": 5,
-      "status": "pending",
+      "status": "used",
       "source": "competitor",
       "created_at": "2026-07-01T10:00:00",
-      "used_at": null,
+      "used_at": "2026-06-30T04:08:37.720902",
       "depth": "deep"
     },
     {
