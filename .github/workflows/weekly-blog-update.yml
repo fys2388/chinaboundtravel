@@ -133,23 +133,8 @@ jobs:
             echo "Changes pushed successfully"
           fi
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: chinaboundtravel
-          directory: public
-          branch: main
-
-      - name: Purge Cloudflare CDN Cache
-        run: |
-          echo "=== Purging Cloudflare CDN cache ==="
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"purge_everything":true}' \
-            --fail --show-error --silent || echo "Cache purge skipped (CLOUDFLARE_ZONE_ID may not be set)"
+      # Cloudflare 部署由 deploy-cloudflare-pages.yml 自动处理（push 触发）
+      # 不在这里重复部署，避免两个 workflow 互相 cancel
 
       - name: Install Pillow for cover image generation
         run: pip install Pillow
