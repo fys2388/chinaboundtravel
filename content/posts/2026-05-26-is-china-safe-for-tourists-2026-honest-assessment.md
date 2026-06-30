@@ -24,6 +24,8 @@ params:
       answer: "Major cities have excellent international clinics and JCI-accredited hospitals. Rural areas have basic clinics. Carry travel insurance that covers China  your home country policy likely doesn't. Basic healthcare is affordable; complex treatment or medical evacuation is expensive."
     - question: "Are there areas of China off-limits to tourists?"
       answer: "Tibet requires a special permit and government-organized guide. Parts of Xinjiang near borders have restricted zones. Military areas are off-limits. Your hotel or travel agent will inform you of restrictions for your planned route."
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.jpg"
 ---
 
 ## The Most Honest China Safety Analysis You'll Find

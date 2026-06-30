@@ -19,6 +19,8 @@ params:
       answer: "Beijing, Shanghai, Chengdu, and Xi'an are great starting points. Each offers unique experiences from history to food to pandas."
     - question: "How do I get around Chinese cities?"
       answer: "Subway systems in major cities are excellent. Taxis and ride-hailing apps (Didi) are cheap and convenient."
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
 ---
 
 

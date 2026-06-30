@@ -37,6 +37,10 @@ buildExpired = false
     imageWidth = 120
     imageHeight = 120
 
+  [params.label]
+    icon = "images/favicon/favicon.svg"
+    iconHeight = 32
+
   [[params.socialIcons]]
     name = "X"
     url = "https://twitter.com/chinaboundtravel"

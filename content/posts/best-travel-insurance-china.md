@@ -1,3 +1,9 @@
+---
+title: "Best Travel Insurance China"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/best-travel-insurance-china.jpg"
+---
+
 +++
 title = "Best Travel Insurance for China 2026 — Complete Buyer's Guide"
 description = "Compare the best travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."

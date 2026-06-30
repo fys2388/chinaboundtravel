@@ -1,14 +1,35 @@
-{{- with .cxt}} {{/* Apply proper context from dict */}}
-{{- if (and .Params.cover.image (not $.isHidden)) }}
+{{- with .cxt }} {{- /* Apply proper context from dict */ -}}
+{{- /* Detect cover format: new (object with .image) or old (string) */ -}}
+{{- $hasObjectCover := false -}}
+{{- if .Params.cover -}}
+    {{- if not (reflect.IsSlice .Params.cover) -}}
+        {{- if not (eq (printf "%T" .Params.cover) "string") -}}
+            {{- $hasObjectCover = true -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- $coverImage := "" -}}
+{{- $coverAlt := "" -}}
+{{- $coverResponsive := true -}}
+{{- if $hasObjectCover -}}
+    {{- $coverImage = .Params.cover.image | default "" -}}
+    {{- $coverAlt = .Params.cover.alt | default .Params.cover.caption | default "" -}}
+    {{- $coverResponsive = .Params.cover.responsiveImages | default site.Params.cover.responsiveImages | default true -}}
+{{- else -}}
+    {{- $coverImage = .Params.cover | default "" -}}
+    {{- $coverResponsive = site.Params.cover.responsiveImages | default true -}}
+{{- end -}}
+
+{{- if (and $coverImage (not $.isHidden)) }}
 <figure class="entry-cover">
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-    {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
-    {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
+    {{- $alt := ($coverAlt | default $coverImage | plainify) }}
 
-    {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
-    {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+    {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" $coverImage) }}
+    {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" $coverImage) }}
     {{- $cover := (or $pageBundleCover $globalResourcesCover)}}
     {{- /* We are not using the .Param.cover.relative to decide the location of image */}}
     {{- /* If we have the image in pageBundle or globalResources we can process the image */}}
@@ -19,7 +40,7 @@
         {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
-    {{- $imgdl := (.Params.cover.image) }}
+    {{- $imgdl := $coverImage }}
     {{- $isExternal := false }}
 
     {{- /* Check if image is an external URL (starts with http) */}}
@@ -40,7 +61,7 @@
 
     {{- if $cover -}}
         {{- /* i.e it is present in page bundle */}}
-        {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
+        {{- if (and (in $processableFormats $cover.MediaType.SubType) ($coverResponsive) (eq $prod true)) }}
             <img loading="{{$loading}}"
                 srcset='{{- range $size := $sizes -}}
                             {{- if (ge $cover.Width $size) }}
@@ -69,8 +90,10 @@
 
     {{- /*  Display Caption  */}}
     {{- if $.IsSingle }}
-        {{ with .Params.cover.caption -}}
-            <figcaption>{{ . | markdownify }}</figcaption>
+        {{- if $hasObjectCover }}
+            {{ with .Params.cover.caption -}}
+                <figcaption>{{ . | markdownify }}</figcaption>
+            {{- end }}
         {{- end }}
     {{- end }}
 </figure>

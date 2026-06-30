@@ -451,6 +451,29 @@ class ManifestManager:
             "geo_region": geo_region,
             "create_date": datetime.now().strftime("%Y-%m-%d")
         })
+        # 同步更新 topic_pool.json 的 status 为 used，防止重复选题
+        self._mark_topic_used_in_pool(topic)
+
+    def _mark_topic_used_in_pool(self, topic):
+        """将已使用的选题在 topic_pool.json 中标记为 used"""
+        topic_pool_path = BASE_DIR / "config" / "topic_pool.json"
+        if not topic_pool_path.exists():
+            return
+        try:
+            with open(topic_pool_path, 'r', encoding='utf-8') as f:
+                pool_data = json.load(f)
+            changed = False
+            for t in pool_data.get("topics", []):
+                if t.get("title") == topic and t.get("status") == "pending":
+                    t["status"] = "used"
+                    t["used_at"] = datetime.now().isoformat()
+                    changed = True
+                    print(f"[Manifest] Topic '{topic}' marked as used in topic_pool.json")
+            if changed:
+                with open(topic_pool_path, 'w', encoding='utf-8') as f:
+                    json.dump(pool_data, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"[Manifest] Failed to update topic_pool.json: {e}")
     
     def increment_post_count(self):
         today = datetime.now()
@@ -1208,22 +1231,22 @@ class BlogGenerator:
         content = content.replace('draft: "true"', 'draft: "false"')
         content = content.replace('audit_status: "pending"', 'audit_status: "pass2"')
         
+        # 先将 draft/audit 修改写回 draft_path，确保后续 update_article_cover 基于正确内容
+        with open(draft_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        
         # 使用 social_publisher 的分类和封面图生成（符合 Worker 白名单路径）
         from social_publisher import classify_category, generate_cover_image, update_article_cover
         category = classify_category(title)
         cover_url = generate_cover_image(title, slug, category)
         print(f"  [CoverGen] Category: {category}, Cover URL: {cover_url}")
         
-        # 更新文章 frontmatter 的 cover 字段
-        update_article_cover(post_path if post_path.exists() else draft_path, cover_url)
+        # 更新文章 frontmatter 的 cover 字段（修改 draft_path）
+        update_article_cover(draft_path, cover_url)
         
-        # 读取更新后的内容（包含正确的 cover 字段）
-        if post_path.exists():
-            with open(post_path, "r", encoding="utf-8") as f:
-                content = f.read()
-        else:
-            with open(draft_path, "r", encoding="utf-8") as f:
-                content = f.read()
+        # 读取包含 cover 字段的最新内容
+        with open(draft_path, "r", encoding="utf-8") as f:
+            content = f.read()
         
         # 替换文章正文中的 [Image:xxx] 占位符为真实图片
         import re
@@ -1369,14 +1392,14 @@ class BlogGenerator:
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
-        # 【社媒每日限额】如果今日社媒发布已达上限，就不再生成新文章
+        # 【社媒每日限额】放宽到5篇/天（原2篇太严格，频繁阻断生成）
         is_limited, current_count, daily_limit = self.manifest.check_daily_social_limit()
         if is_limited:
             self.notifier.send_notification("⏸️ 社媒发布已达日限", f"今日社媒已发布 {current_count} 篇文章，达到每日上限 {daily_limit} 篇。为保证社媒曝光效果，今日不再生成新文章，明日自动恢复。")
             print(f"Social media limit reached: {current_count}/{daily_limit}. Exiting.")
             return
         
-        max_posts = 22
+        max_posts = 30  # 从22提高到30，避免频繁撞上限
         post_count = self.manifest.get_post_count()
         
         if post_count >= max_posts:
@@ -1387,7 +1410,12 @@ class BlogGenerator:
         last_topic = None
         
         for attempt in range(1, self.max_retries + 1):
-            result = self.run_single_post(attempt)
+            try:
+                result = self.run_single_post(attempt)
+            except Exception as e:
+                self.notifier.send_notification("❌ 第{}次尝试发生未预期错误".format(attempt), f"错误: {str(e)[:200]}\n\n直接跳过本轮，不重试。")
+                print(f"[Attempt {attempt}] Unexpected error: {e}")
+                break
             
             if result["success"]:
                 return

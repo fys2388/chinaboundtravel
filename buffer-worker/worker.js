@@ -44,7 +44,7 @@ const BUFFER_API_URL = 'https://api.buffer.com';
 
 // 限流配置
 const RATE_LIMIT = {
-  GLOBAL_DAILY_MAX: 2,       // 全局单日发布上限
+  GLOBAL_DAILY_MAX: 5,       // 全局单日发布上限（支持多篇不同内容/配图的帖子）
   ACCOUNT_QUARTER_MAX: 70,   // 单账户15分钟上限(官方100的70%安全阈值)
   QUOTA_WARNING_THRESHOLD: 0.3 // 配额剩余30%触发预警
 };
@@ -168,8 +168,8 @@ async function handlePublish(request, env, ctx) {
       }, 202);
     }
 
-    // 构建发布内容
-    const postText = buildPostText(title, desc, postUrl);
+    // 构建发布内容（优先使用自定义文本）
+    const postText = body.custom_text || buildPostText(title, desc, postUrl);
 
     // 收集所有账户的发布结果
     const allResults = {

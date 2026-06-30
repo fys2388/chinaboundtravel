@@ -45,3 +45,4 @@ def check_klook_expiry():
 
 if __name__ == "__main__":
     expired = check_klook_expiry()
+    sys.exit(1 if expired else 0)

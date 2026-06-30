@@ -1,4 +1,4 @@
-﻿+++
+﻿﻿﻿﻿﻿﻿﻿+++
 title = "Yangshuo Travel Guide 2026"
 description = "Yangshuo travel guide: bicycle rides, bamboo rafts, West Street, and the laid-back alternative to Guilin"
 date = 2026-06-21

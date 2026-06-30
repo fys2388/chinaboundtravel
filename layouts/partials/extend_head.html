@@ -59,7 +59,7 @@
       },
       "datePublished": "{{ .Date.Format "2006-01-02" }}",
       "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-      "image": "{{ if .Params.cover.image }}{{ .Params.cover.image }}{{ else }}{{ .Site.BaseURL }}images/default.jpg{{ end }}",
+      "image": "{{ if (and .Params.cover (isset .Params.cover "image")) }}{{ .Params.cover.image }}{{ else if .Params.cover }}{{ if not (reflect.IsSlice .Params.cover) }}{{ if not (eq (printf "%T" .Params.cover) "string") }}{{ .Params.cover.image | default .Site.BaseURL }}{{ else }}{{ .Params.cover }}{{ end }}{{ else }}{{ .Params.cover | default .Site.BaseURL }}{{ end }}{{ else }}{{ .Site.BaseURL }}images/default.jpg{{ end }}",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"

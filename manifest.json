@@ -1,112 +1,11 @@
 {
-  "month_post_count": 19,
-  "last_reset_date": "2026-06-01",
-  "last_social_publish": "2026-06-03 21:10:37",
-  "daily_social_publish_date": "2026-06-22",
+  "month_post_count": 0,
+  "last_reset_date": "2026-07-01",
+  "last_social_publish": "",
+  "daily_social_publish_date": "",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
-  "history_topics": [
-    {
-      "topic": "budget planning",
-      "geo_region": "EU",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "best time to visit",
-      "geo_region": "AU",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "best time to visit",
-      "geo_region": "EU",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "safety tips",
-      "geo_region": "US",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "transportation guide",
-      "geo_region": "EU",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "food recommendations",
-      "geo_region": "US",
-      "create_date": "2026-06-06"
-    },
-    {
-      "topic": "food recommendations",
-      "geo_region": "AU",
-      "create_date": "2026-06-08"
-    },
-    {
-      "topic": "accommodation tips",
-      "geo_region": "US",
-      "create_date": "2026-06-09"
-    },
-    {
-      "topic": "Essential Safety Tips for First-Time Travellers in China",
-      "geo_region": "EU",
-      "create_date": "2026-06-10"
-    },
-    {
-      "topic": "off-the-beaten-path routes",
-      "geo_region": "US",
-      "create_date": "2026-06-10"
-    },
-    {
-      "topic": "food recommendations",
-      "geo_region": "US",
-      "create_date": "2026-06-11"
-    },
-    {
-      "topic": "family travel tips",
-      "geo_region": "EU",
-      "create_date": "2026-06-12"
-    },
-    {
-      "topic": "accommodation tips",
-      "geo_region": "EU",
-      "create_date": "2026-06-14"
-    },
-    {
-      "topic": "transportation guide",
-      "geo_region": "EU",
-      "create_date": "2026-06-15"
-    },
-    {
-      "topic": "accommodation tips",
-      "geo_region": "EU",
-      "create_date": "2026-06-16"
-    },
-    {
-      "topic": "accommodation tips",
-      "geo_region": "US",
-      "create_date": "2026-06-17"
-    },
-    {
-      "topic": "Living in China as a Foreigner: Cultural Adaptation and Daily Life",
-      "geo_region": "US",
-      "create_date": "2026-06-18"
-    },
-    {
-      "topic": "Best Time to Visit Chengdu: Weather, Festivals, and Hidden Seasons",
-      "geo_region": "EU",
-      "create_date": "2026-06-18"
-    },
-    {
-      "topic": "The History and Culture of the Great Wall: Beyond the Tourist Trail",
-      "geo_region": "US",
-      "create_date": "2026-06-19"
-    },
-    {
-      "topic": "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture",
-      "geo_region": "AU",
-      "create_date": "2026-06-22"
-    }
-  ],
+  "history_topics": [],
   "keyword_convert_rate": {
     "visa requirements": 0.15,
     "best time to visit": 0.12,

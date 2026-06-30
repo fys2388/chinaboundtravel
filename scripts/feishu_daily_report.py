@@ -260,6 +260,17 @@ class FeishuDailyReporter:
                     }
                 },
                 
+                # === 数据状态提醒 ===
+                {
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": f"""**⚙️ 数据状态提醒**
+
+{self._build_status_message(data)}"""
+                    }
+                },
+                
                 # === 运维状态 ===
                 {
                     "tag": "note",
@@ -274,6 +285,19 @@ class FeishuDailyReporter:
         }
         
         return card
+    
+    def _build_status_message(self, data: dict) -> str:
+        """构建数据状态提示信息"""
+        status_list = data.get("data_status", [])
+        
+        if not status_list:
+            return "✅ 所有数据来源正常"
+        
+        message = ""
+        for status in status_list:
+            message += f"⚠️ {status}\n"
+        
+        return message
     
     def collect_data(self) -> dict:
         """收集日报数据 - 完整版"""
@@ -309,7 +333,9 @@ class FeishuDailyReporter:
             "top_converting_article": "N/A",
             "affiliate_revenue": 0.0,
             # 高优先级待办
-            "high_priority_todos": []
+            "high_priority_todos": [],
+            # 数据获取状态
+            "data_status": []
         }
         
         print("📥 收集数据...")
@@ -323,6 +349,7 @@ class FeishuDailyReporter:
         except Exception as e:
             print(f"   ⚠️ 网站检查失败: {e}")
             data["site_up"] = False
+            data["data_status"].append("网站状态检查失败")
         
         # 2. GA4 流量数据（优先）
         ga4_data = self._fetch_ga4()
@@ -331,11 +358,14 @@ class FeishuDailyReporter:
             print(f"   ✅ GA4流量数据: {data['visitors']:,} 访客, {data['requests']:,} 请求")
             print(f"   ✅ Top页面: {len(data['top_pages'])} 个")
         else:
+            data["data_status"].append("GA4流量数据获取失败（请配置GA4_SERVICE_ACCOUNT_JSON）")
             # 降级到 Cloudflare
             cf_data = self._fetch_cloudflare()
             if cf_data:
                 data.update(cf_data)
                 print(f"   ✅ Cloudflare流量数据: {data['visitors']:,} 访客, {data['requests']:,} 请求")
+            else:
+                data["data_status"].append("Cloudflare流量数据未配置")
         
         # 3. 本地内容质量巡检
         content_issues = self._scan_content_quality()
@@ -347,6 +377,8 @@ class FeishuDailyReporter:
         if tp_data:
             data.update(tp_data)
             print(f"   ✅ Travelpayouts: {data['tp_clicks']} 点击, {data['tp_bookings']} 订单, ${data['tp_revenue']:.2f}")
+        else:
+            data["data_status"].append("Travelpayouts联盟数据未配置")
         
         # 5. 生成高优先级待办
         data["high_priority_todos"] = self._generate_todos(data)
@@ -457,6 +489,8 @@ class FeishuDailyReporter:
             
             # 获取认证 Token
             auth_token = None
+            auth_method = None
+            
             if GA4_SERVICE_ACCOUNT_JSON and HAS_GOOGLE_AUTH:
                 try:
                     service_account_info = json.loads(GA4_SERVICE_ACCOUNT_JSON)
@@ -466,15 +500,20 @@ class FeishuDailyReporter:
                     )
                     credentials.refresh(Request())
                     auth_token = credentials.token
+                    auth_method = "service_account"
                     print("   ✅ 使用服务账号认证")
                     print(f"   ✅ Token 获取成功，长度: {len(auth_token) if auth_token else 0}")
                 except Exception as e:
                     print(f"   ⚠️ 服务账号认证失败: {e}")
-            elif GA4_API_KEY:
+                    print("   ⚠️ 尝试使用 API Key...")
+            
+            if not auth_token and GA4_API_KEY:
                 auth_token = GA4_API_KEY
-                print("   ⚠️ 使用 API Key 认证（可能过期）")
-            else:
-                print("   ⚠️ 未配置 GA4 认证信息")
+                auth_method = "api_key"
+                print("   ⚠️ 使用 API Key 认证（注意：GA4 Analytics Data API 需要 OAuth 2.0，API Key 可能无效）")
+            
+            if not auth_token:
+                print("   ❌ 未配置 GA4 认证信息")
                 return None
             
             headers = {
@@ -577,6 +616,9 @@ class FeishuDailyReporter:
             else:
                 print(f"   ❌ GA4 API 请求失败")
                 print(f"   ❌ 响应内容: {response.text}")
+                if response.status_code == 401:
+                    print("   ❌ 认证失败！GA4 Analytics Data API 需要 OAuth 2.0 认证（服务账号）")
+                    print("   ❌ 请配置 GA4_SERVICE_ACCOUNT_JSON 环境变量")
                 
         except Exception as e:
             print(f"   ⚠️ GA4 API 获取失败: {e}")
@@ -602,15 +644,15 @@ class FeishuDailyReporter:
         result["total_posts"] = len(posts)
         
         today = datetime.now().date()
+        today_str = today.strftime("%Y-%m-%d")
         
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
                 
-                # 检查是否今日新发
+                # 检查是否今日新发（根据文件名日期前缀判断）
                 try:
-                    mtime = datetime.fromtimestamp(post.stat().st_mtime).date()
-                    if mtime == today:
+                    if post.name.startswith(today_str):
                         result["new_posts"] += 1
                 except:
                     pass

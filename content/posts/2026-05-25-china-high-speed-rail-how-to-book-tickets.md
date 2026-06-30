@@ -1,6 +1,6 @@
 ---
 title: "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)"
-date: 2026-05-24T10:00:00+08:00
+date: 2026-05-25T10:00:00+08:00
 draft: false
 tags: ["China Travel", "Transportation", "High-Speed Rail", "Travel Tips"]
 categories: ["China Travel Guide"]
@@ -22,6 +22,8 @@ params:
       answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
     - question: "Do I need a VPN for China?"
       answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg"
 ---
 
 
@@ -164,11 +166,11 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
-| Shanghai �?Hangzhou | 45 min | Perfect first CRH trip |
-| Shanghai �?Suzhou | 25 min | Ancient water town vibes |
-| Beijing �?Tianjin | 30 min | Cheapest G train (~$8) |
-| Chengdu �?Chongqing | 1 hr | Mountain city double feature |
-| Beijing �?Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
+| Shanghai â?Hangzhou | 45 min | Perfect first CRH trip |
+| Shanghai â?Suzhou | 25 min | Ancient water town vibes |
+| Beijing â?Tianjin | 30 min | Cheapest G train (~$8) |
+| Chengdu â?Chongqing | 1 hr | Mountain city double feature |
+| Beijing â?Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
 
 ---
 

@@ -30,7 +30,35 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity
+          pip install requests beautifulsoup4 python-dotenv PyYAML tenacity Pillow
+
+      - name: Reset stale daily counters (auto-fix stale state)
+        run: |
+          python -c "
+          import json, os
+          from datetime import datetime
+          manifest_path = 'manifest.json'
+          if os.path.exists(manifest_path):
+              with open(manifest_path, 'r') as f:
+                  data = json.load(f)
+              today = datetime.now().strftime('%Y-%m-%d')
+              month = datetime.now().strftime('%Y-%m')
+              # Auto-reset daily social count if stale (not today)
+              if data.get('daily_social_publish_date') != today:
+                  data['daily_social_publish_date'] = today
+                  data['daily_social_publish_count'] = 0
+                  print(f'[Auto-fix] Reset daily social count for {today}')
+              # Auto-reset monthly count if new month
+              expected_reset = f'{month}-01'
+              if data.get('last_reset_date', '') != expected_reset:
+                  data['month_post_count'] = 0
+                  data['last_reset_date'] = expected_reset
+                  data['history_topics'] = []
+                  print(f'[Auto-fix] Reset monthly count for {month}')
+              with open(manifest_path, 'w') as f:
+                  json.dump(data, f, indent=2, ensure_ascii=False)
+              print('Manifest state verified OK')
+          "
 
       - name: Run Joran blog generator with Doubao AI
         env:
@@ -44,9 +72,9 @@ jobs:
           echo "=== Checking affiliate link expiry ==="
           python scripts/check_affiliate_expiry.py
           if [ $? -eq 1 ]; then
-            echo "::set-output name=expiring::true"
+            echo "expiring=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=expiring::false"
+            echo "expiring=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Send expiry warning to Feishu
@@ -74,9 +102,9 @@ jobs:
           echo "=== Attempting auto-fix ==="
           python scripts/auto_fix_build.py
           if [ $? -eq 0 ]; then
-            echo "::set-output name=fixed::true"
+            echo "fixed=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=fixed::false"
+            echo "fixed=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Rebuild after auto-fix
@@ -87,12 +115,15 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add content/posts/*.md 2>/dev/null || true
-          git add content/_draft/*.md 2>/dev/null || true
+          
+          # Add ALL content directories comprehensively
+          git add content/posts/ 2>/dev/null || true
+          git add content/_draft/ 2>/dev/null || true
           git add manifest.json 2>/dev/null || true
           git add config/topic_pool.json 2>/dev/null || true
           git add config/error_knowledge_base.json 2>/dev/null || true
           git add layouts/shortcodes/*.html 2>/dev/null || true
+          git add static/img/ 2>/dev/null || true
           
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to commit"
@@ -134,8 +165,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add content/posts/*.md 2>/dev/null || true
-          git add static/img/china-dest/ 2>/dev/null || true
+          git add content/posts/ 2>/dev/null || true
+          git add static/img/ 2>/dev/null || true
           git add manifest.json 2>/dev/null || true
           
           if git diff --quiet && git diff --staged --quiet; then

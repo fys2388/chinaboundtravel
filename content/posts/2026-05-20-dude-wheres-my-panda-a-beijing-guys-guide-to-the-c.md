@@ -10,6 +10,8 @@ tags:
 categories:
 - Destinations & Itineraries
 author: Joran
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"
 ---
 
 Okay, so you’re in Beijing. You’ve done the Wall, you’ve sweated through the Forbidden City, and you’ve eaten enough Peking duck to make a cardiologist weep. Now you’re thinking, “I came to China to see a panda, not a t-shirt with a panda on it.�?I get it. My wife, Xiao Li, is from Chengdu, and for the first three years of our marriage, she would not let me near the Panda Base because she said I’d “embarrass the family by trying to hug one.�?
