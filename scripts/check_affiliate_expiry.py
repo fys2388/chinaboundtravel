@@ -45,4 +45,5 @@ def check_klook_expiry():
 
 if __name__ == "__main__":
     expired = check_klook_expiry()
-    sys.exit(1 if expired else 0)
+    # 过期只发警告通知，不阻断博文发布流程（exit 0 让 workflow 继续运行）
+    sys.exit(0)
