@@ -20,7 +20,8 @@ canonicalURL: "https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-c
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
-cover: "https://chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
+cover:
+  image: "https://chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
 ---
 
 # Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park
