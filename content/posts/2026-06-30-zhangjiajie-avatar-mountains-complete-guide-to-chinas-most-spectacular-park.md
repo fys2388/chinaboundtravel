@@ -12,7 +12,7 @@ tags:
 categories:
   - China
 geo: "US"
-draft: "false"
+draft: false
 audit_status: "pass2"
 summary: "Zhangjiajie Avatar Mountains: Complete to China's Most Spectacular Park for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
 description: "Zhangjiajie Avatar Mountains: Complete to China's Most Spectacular Park for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."

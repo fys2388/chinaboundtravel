@@ -1228,7 +1228,7 @@ class BlogGenerator:
         with open(draft_path, "r", encoding="utf-8") as f:
             content = f.read()
         
-        content = content.replace('draft: "true"', 'draft: "false"')
+        content = content.replace('draft: "true"', 'draft: false')
         content = content.replace('audit_status: "pending"', 'audit_status: "pass2"')
         
         # 先将 draft/audit 修改写回 draft_path，确保后续 update_article_cover 基于正确内容
