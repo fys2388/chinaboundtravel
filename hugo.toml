@@ -146,7 +146,7 @@ buildExpired = false
   nordpass = "https://go.nordpass.io/off/?offer_id=488&aff_id=150687&url_id=9356"
   hotel = "https://www.booking.com/index.html?aid=1234567"
   klook = "https://klook.tpo.li/vrPkmS2v"
-  klook_expire_date = "2026-12-31"
+  klook_expire_date = "2026-06-27"
   safetywing = "https://safetywing.com/ambassador/refer/26548976"
   trip = "https://www.trip.com/"
   worldnomads = "https://www.worldnomads.com/affiliates/?aid=1234567"
