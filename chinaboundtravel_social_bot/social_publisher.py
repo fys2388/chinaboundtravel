@@ -267,20 +267,22 @@ def update_article_cover(md_path: Path, cover_url: str):
         content = content.encode('utf-8', errors='replace').decode('utf-8', errors='replace')
 
     fm_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+    cover_block = f'cover:\n  image: "{cover_url}"'
     if fm_match:
         existing_fm = fm_match.group(1)
         # 检查是否已有 cover
         if re.search(r'^\s*cover\s*:', existing_fm, re.MULTILINE):
-            new_fm = re.sub(r'^\s*cover\s*:.*$',
-                          f'cover: "{cover_url}"',
+            # 替换已有的 cover（包括可能的多行 map 格式）
+            new_fm = re.sub(r'^\s*cover\s*:(?:\n\s+\w+\s*:.*$)*',
+                          cover_block,
                           existing_fm, flags=re.MULTILINE)
         else:
-            new_fm = existing_fm + f'\ncover: "{cover_url}"'
+            new_fm = existing_fm + f'\n{cover_block}'
 
         content = content.replace(fm_match.group(0), f"---\n{new_fm}\n---", 1)
     else:
         # 没有 frontmatter，新建
-        content = f'---\ntitle: "{md_path.stem.replace("-", " ").title()}"\ncover: "{cover_url}"\n---\n\n' + content
+        content = f'---\ntitle: "{md_path.stem.replace("-", " ").title()}"\n{cover_block}\n---\n\n' + content
 
     with open(md_path, 'w', encoding='utf-8') as f:
         f.write(content)
