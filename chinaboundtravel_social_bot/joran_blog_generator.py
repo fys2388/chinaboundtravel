@@ -628,7 +628,8 @@ class AIEngine:
         # 6. 加载站点文章索引（用于生成准确的内链）
         try:
             with open(config_dir / "post_index.json", 'r', encoding='utf-8') as f:
-                data["post_index"] = json.load(f)
+                index_data = json.load(f)
+                data["post_index"] = index_data.get("posts", [])
         except:
             data["post_index"] = []
         
@@ -759,6 +760,8 @@ class AIEngine:
         related = []
         
         for item in self.external_data.get("content_knowledge", []):
+            if not isinstance(item, dict):
+                continue
             item_keyword = item.get("keyword", "").lower()
             item_content = item.get("content", "").lower()
             
@@ -781,12 +784,18 @@ class AIEngine:
         # 构建SEO关键词提示（从外部数据）
         seo_keywords = []
         for kw in self.external_data["gsc_keywords"][:5]:
-            seo_keywords.append(kw.get("query", ""))
+            if isinstance(kw, dict):
+                seo_keywords.append(kw.get("query", ""))
+            else:
+                seo_keywords.append(str(kw))
         
         # 构建用户需求提示
         user_needs = []
         for feedback in self.external_data["user_feedback"][:5]:
-            content = feedback.get("content", "")
+            if isinstance(feedback, dict):
+                content = feedback.get("content", "")
+            else:
+                content = str(feedback)
             if content and len(content) > 10:
                 user_needs.append(content)
         
@@ -807,6 +816,8 @@ class AIEngine:
         if post_index:
             post_index_section = "\n===== EXISTING SITE ARTICLES (USE THESE FOR INTERNAL LINKS) =====\n"
             for post in post_index:
+                if not isinstance(post, dict):
+                    continue
                 title = post.get("title", "")
                 slug = post.get("slug", "")
                 tags = ", ".join(post.get("tags", []))
@@ -898,6 +909,8 @@ Output ONLY the article content with proper Markdown formatting."""
         if post_index:
             post_index_section = "\n===== EXISTING SITE ARTICLES (USE THESE FOR INTERNAL LINKS) =====\n"
             for post in post_index:
+                if not isinstance(post, dict):
+                    continue
                 title = post.get("title", "")
                 slug = post.get("slug", "")
                 post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)\n"
