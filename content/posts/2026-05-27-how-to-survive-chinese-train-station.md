@@ -4,8 +4,6 @@ date: 2026-05-23T09:00:00+08:00
 draft: false
 tags: ["China Travel", "Transportation", "Train Station", "Travel Tips"]
 categories: ["China Travel Guide"]
-summary: "Chinese train stations are bigger than some airports and ten times more confusing. Here's the complete survival guide  from buying tickets to finding your platform without having a breakdown."
-
 description: "Chinese train stations are bigger than some airports and ten times more confusing. Here's the complete survival guide  from buying tickets to finding your platform without having a breakdown."
 author: "Joran"
 params:

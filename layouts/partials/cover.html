@@ -26,7 +26,7 @@
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-    {{- $alt := ($coverAlt | default $coverImage | plainify) }}
+    {{- $alt := ($coverAlt | default .Title | default $coverImage | plainify) }}
 
     {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" $coverImage) }}
     {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" $coverImage) }}

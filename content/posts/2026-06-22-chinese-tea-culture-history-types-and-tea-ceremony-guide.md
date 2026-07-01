@@ -1,7 +1,7 @@
 ---
 title: "Chinese Tea Culture: History, Types, and Tea Ceremony Guide"
 cover:
-  image: "https://image.pollinations.ai/prompt/Traditional%20Chinese%20tea%20ceremony%20gaiwan%20tea%20set%20steam%20rising%20warm%20lighting%20professional%20food%20photography%20wooden%20table%20cultural%20atmosphere%20elegant%20composition?width=1920&height=1080&nologo=true&seed=723713"
+  image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.jpg"
 date: "2026-06-22T10:00:00+08:00"
 lastmod: "2026-06-22T10:00:00+08:00"
 author: "Joran"
@@ -17,7 +17,6 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."
 description: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."
 canonicalURL: "https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/"
 ShowToc: "true"
@@ -35,7 +34,7 @@ That was just the humble beginning of my epic adventure into the world of Chines
 
 So, whether you're a seasoned tea connoisseur or just starting out on your tea-drinking journey, grab a cup (preferably a gaiwan if you can get your hands on one), and join me as we embark on an exploration of the captivating world of Chinese tea culture.
 
-![An old Chinese tea master in traditional outfit brewing tea with gaiwan in a Chengdu tea house, warm lighting, steam rising, authentic atmosphere](https://image.pollinations.ai/prompt/elderly%20Chinese%20tea%20master%20in%20traditional%20silk%20robe%20brewing%20tea%20with%20gaiwan%20in%20Chengdu%20tea%20house%20warm%20amber%20lighting%20steam%20rising%20authentic%20atmosphere%20professional%20photography?width=1280&height=960&nologo=true&seed=12345)
+![An old Chinese tea master in traditional outfit brewing tea with gaiwan in a Chengdu tea house, warm lighting, steam rising, authentic atmosphere](/img/china-dest/chengdu/tea-master-gaiwan.jpg)
 
 ## History of Chinese Tea Culture
 
@@ -47,7 +46,7 @@ Tea also had strong connections with the three major religions in China - Confuc
 
 In the 7th century, tea made its way to Japan thanks to the efforts of Buddhist monks. These monks, who were traveling between China and Japan, brought with them not only the teachings of Buddhism but also the art of tea. From Japan, tea continued to spread to other parts of Asia, leaving its mark on the cultures it encountered.
 
-![Chinese scholars in traditional Hanfu robes having tea ceremony in a classical garden pavilion, elegant tea set on wooden table, tranquil atmosphere, bamboo and rockery background](https://image.pollinations.ai/prompt/Chinese%20scholars%20in%20traditional%20Hanfu%20robes%20having%20formal%20tea%20ceremony%20in%20classical%20garden%20pavilion%20elegant%20ceramic%20tea%20set%20on%20wooden%20table%20tranquil%20atmosphere%20bamboo%20rockery%20background%20professional%20photography?width=1280&height=960&nologo=true&seed=23456)
+![Chinese scholars in traditional Hanfu robes having tea ceremony in a classical garden pavilion, elegant tea set on wooden table, tranquil atmosphere, bamboo and rockery background](/img/china-dest/chengdu/hanfu-tea-ceremony-garden.jpg)
 
 ## Types of Chinese Tea
 

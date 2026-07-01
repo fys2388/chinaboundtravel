@@ -4,7 +4,6 @@ date: 2026-05-23T09:00:00+08:00
 draft: false
 tags: ["China Travel", "Hangzhou", "City Guide", "Food & Drink", "Destinations"]
 categories: ["China Travel Guide"]
-summary: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
 description: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
 author: "Joran"
 params:

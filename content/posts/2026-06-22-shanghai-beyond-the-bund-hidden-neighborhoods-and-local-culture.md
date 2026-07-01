@@ -1,7 +1,7 @@
 ---
 title: "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture"
 cover:
-  image: "https://image.pollinations.ai/prompt/Shanghai%20city%20skyline%20Oriental%20Pearl%20Tower%20modern%20skyscrapers%20at%20golden%20hour%20beautiful%20lighting%20professional%20travel%20photography%20wide%20angle%20stunning%20composition?width=1920&height=1080&nologo=true&seed=12345"
+  image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.jpg"
 date: "2026-06-22T10:00:00+08:00"
 lastmod: "2026-06-22T10:00:00+08:00"
 author: "Joran"
@@ -17,7 +17,6 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-summary: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 10 years in China."
 description: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 10 years in China."
 canonicalURL: "https://chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/"
 ShowToc: "true"
@@ -32,7 +31,7 @@ Now, I know what you're thinking. "Joran, I'm not sure I can afford to travel to
 
 But first, let's talk about the elephant in the room. Or should I say, the pandas in Chengdu? You see, I live in Chengdu, and let me tell you, it's not just about the pandas. Sure, they're cute as buttons, but there's so much more to this city. And if you're planning a trip to China, I highly recommend adding Chengdu to your itinerary. But more on that later.
 
-![Shanghai street scene at Nanjing Road busy intersection with people crossing, modern billboards, urban atmosphere, professional street photography](https://image.pollinations.ai/prompt/Shanghai%20Nanjing%20Road%20busy%20intersection%20people%20crossing%20street%20modern%20billboards%20urban%20atmosphere%20professional%20street%20photography%20dynamic%20composition?width=1280&height=960&nologo=true&seed=23456)
+![Shanghai street scene at Nanjing Road busy intersection with people crossing, modern billboards, urban atmosphere, professional street photography](/img/china-dest/shanghai/nanjing-road-street.jpg)
 
 ## The Hidden Neighborhoods of Shanghai
 
@@ -47,7 +46,7 @@ Another great thing about the Former French Concession is the food. There are so
 
 Actionable tip: If you visit the Former French Concession on a weekend, be prepared for crowds. To avoid the rush, try to go on a weekday. Also, make sure to bring your camera to capture all the beautiful architecture.
 
-![Former French Concession Shanghai tree-lined street with European-style buildings, sidewalk cafes, people sitting outside enjoying coffee, charming atmosphere, professional photography](https://image.pollinations.ai/prompt/Shanghai%20Former%20French%20Concession%20tree%20lined%20street%20European%20style%20buildings%20sidewalk%20cafes%20people%20sitting%20outside%20charming%20atmosphere%20professional%20photography%20warm%20sunlight?width=1280&height=960&nologo=true&seed=34567)
+![Former French Concession Shanghai tree-lined street with European-style buildings, sidewalk cafes, people sitting outside enjoying coffee, charming atmosphere, professional photography](/img/china-dest/shanghai/french-concession-street.jpg)
 
 ### Tianzifang
 Tianzifang is another hidden neighborhood in Shanghai that is full of character. It's a maze of narrow alleys and traditional Shanghai shikumen houses. This area has been transformed into a trendy neighborhood with art galleries, boutiques, and cafes.

@@ -18,7 +18,6 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "Everything you need to plan the perfect Zhangjiajie trip in 2026 — ticket prices, the 4-day itinerary locals use, how to skip the crowds at Avatar Mountain, and which cable car is actually worth the money. Written by an American expat living in China."
 description: "Everything you need to plan the perfect Zhangjiajie trip in 2026 — ticket prices, the 4-day itinerary locals use, how to skip the crowds at Avatar Mountain, and which cable car is actually worth the money. Written by an American expat living in China."
 canonicalURL: "https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/"
 ShowToc: "true"
@@ -36,7 +35,7 @@ Standing on the **Yuanjiajie viewing platform** at sunrise, watching those sands
 
 This guide is everything I wish I'd known before going. I've packed it with real ticket prices (updated for 2026), the exact 4-day route that worked for us, mistakes to avoid, and the unspoken rules that will save you time, money, and sanity.
 
-![Aerial view of Zhangjiajie Avatar Mountains with its towering sandstone pillars and lush greenery. The sky is a bright blue, and there are wisps of white clouds floating around the peaks.](https://image.pollinations.ai/prompt/Aerial%20view%20of%20Zhangjiajie%20Avatar%20Mountains%20with%20its%20towering%20sandstone%20pillars%20and%20lush%20greenery.%20The%20sky%20is%20a%20bright%20blue%2C%20and%20there%20are%20wisps%20of%20white%20clouds%20floating%20around%20the%20peaks.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=59593&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![Aerial view of Zhangjiajie Avatar Mountains with its towering sandstone pillars and lush greenery. The sky is a bright blue, and there are wisps of white clouds floating around the peaks.](/img/china-dest/zhangjiajie/avatar-mountains-aerial.jpg)
 
 ## Know Before You Go: Two Separate Parks (Not Three)
 
@@ -143,7 +142,7 @@ If you have the energy, the **Grand Canyon Glass Bridge** is worth the trip. It'
 
 If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park** (土家风情园). If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo (三下锅) before heading out.
 
-![Panoramic view from Tianzi Mountain at sunset showing the sea of clouds surrounding the sandstone pillars at Zhangjiajie](https://image.pollinations.ai/prompt/Panoramic%20sunset%20view%20from%20Tianzi%20Mountain%20Zhangjiajie%20showing%20sea%20of%20clouds%20surrounding%20sandstone%20pillars%20golden%20hour%20photography%20dramatic%20lighting%20travel%20landscape%20professional%20quality?width=1024&height=768&nologo=true&seed=28471&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20watermark%2C%20text&model=flux)
+![Panoramic view from Tianzi Mountain at sunset showing the sea of clouds surrounding the sandstone pillars at Zhangjiajie](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.jpg)
 
 ## Where to Stay
 
@@ -224,7 +223,7 @@ Between booking DiDi rides, translating menus, and sharing photos, you'll want d
 - **Physical SIM:** Buy a China Unicom SIM at the airport. About ¥50 ($7) for a week of data
 - **VPN:** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
 
-![Close-up of the sandstone pillar formations at Zhangjiajie with lush green vegetation growing between the rocks](https://image.pollinations.ai/prompt/Close-up%20sandstone%20pillar%20formations%20at%20Zhangjiajie%20with%20lush%20green%20vegetation%20growing%20between%20the%20rocks%20dramatic%20vertical%20composition%20moody%20atmosphere%20travel%20photography%20high%20resolution?width=1024&height=768&nologo=true&seed=71834&negative=blurry%2C%20distorted%2C%20watermark%2C%20text&model=flux)
+![Close-up of the sandstone pillar formations at Zhangjiajie with lush green vegetation growing between the rocks](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.jpg)
 
 ## Getting Travel Insurance (Don't Skip This)
 

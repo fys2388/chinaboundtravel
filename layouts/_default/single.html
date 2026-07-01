@@ -2,7 +2,7 @@
 <article class="post-single">
     <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
-        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+        <div class="post-title entry-hint-parent" aria-level="1" role="heading">{{ .Title }}</div>
         {{- if .Description }}
         <div class="post-description">{{ .Description }}</div>
         {{- end }}
@@ -149,6 +149,14 @@
 </article>
 
 <style>
+/* Ensure the visually-styled title div matches h1 appearance */
+.post-title[role="heading"] {
+    font-size: 1.563rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 0.5rem 0;
+}
+
 /* Related Posts Grid */
 .related-posts { margin: 2.5rem 0; }
 .related-posts h3 {

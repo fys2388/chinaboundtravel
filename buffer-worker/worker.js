@@ -97,10 +97,117 @@ export default {
       return await processRetryQueue(env);
     }
 
-    // 404响应
+    // 调试端点：列出排期帖子
+  if (url.pathname === '/list-posts') {
+    const query = `query GetScheduledPosts($input: PostsInput!) {
+      posts(input: $input) {
+        edges { node { id text dueAt channel { id name service } } }
+      }
+    }`;
+    const results = {};
+    // Buffer-A (FB/IG/Twitter)
+    const tokenA = env.BUFFER_WORKER_URL || '';
+    try {
+      const resp = await fetch(BUFFER_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${tokenA}` },
+        body: JSON.stringify({
+          query,
+          variables: { input: { organizationId: '6a17ddf5e051bed5895272f0', sort: [{ field: 'dueAt', direction: 'asc' }], filter: { status: ['scheduled'] } } }
+        })
+      });
+      results['Buffer-A'] = await resp.json();
+    } catch(e) { results['Buffer-A'] = { error: e.message }; }
+    // Buffer-B (Pinterest)
+    const tokenB = env.NEW_BUFFER_WORKER_URL || '';
+    try {
+      const resp = await fetch(BUFFER_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${tokenB}` },
+        body: JSON.stringify({
+          query,
+          variables: { input: { organizationId: '6a20329943b37a7289e25b6d', sort: [{ field: 'dueAt', direction: 'asc' }], filter: { status: ['scheduled'] } } }
+        })
+      });
+      results['Buffer-B'] = await resp.json();
+    } catch(e) { results['Buffer-B'] = { error: e.message }; }
+    return jsonResponse(results);
+  }
+
+  // 调试端点：查询 Pinterest boards
+  if (url.pathname === '/debug-boards') {
+    const token = env.NEW_BUFFER_WORKER_URL || '';
+    const queries = [
+      { name: 'pinterest_channels', query: 'query { channels(input: { organizationId: "6a20329943b37a7289e25b6d" }) { id name service metadata { ... on PinterestMetadata { boards { id name serviceId url } } } } }' },
+      { name: 'all_channels', query: 'query { channels(input: { organizationId: "6a20329943b37a7289e25b6d" }) { id name service } }' }
+    ];
+    const results = {};
+    for (const q of queries) {
+      try {
+        const resp = await fetch(BUFFER_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+          body: JSON.stringify({ query: q.query })
+        });
+        results[q.name] = await resp.json();
+      } catch(e) { results[q.name] = { error: e.message }; }
+    }
+    return jsonResponse(results);
+  }
+
+  // 重置每日计数端点（管理用）
+    if (url.pathname === '/reset-daily-count' && request.method === 'POST') {
+      const today = new Date().toISOString().split('T')[0];
+      const oldCount = await env.KV_STORE.get(`daily_count:${today}`);
+      await env.KV_STORE.put(`daily_count:${today}`, '0');
+      // 同时重置账户级配额
+      for (const accountKey of Object.keys(BUFFER_ACCOUNTS)) {
+        await env.KV_STORE.delete(`account_quota:${accountKey}`);
+      }
+      return jsonResponse({
+        success: true,
+        message: `Daily count reset: ${oldCount} -> 0 for ${today}`,
+        date: today,
+        accountQuotasReset: true
+      });
+    }
+
+    // 查询当前每日计数（调试用）
+    if (url.pathname === '/daily-count') {
+      const today = new Date().toISOString().split('T')[0];
+      const count = await env.KV_STORE.get(`daily_count:${today}`);
+      const quotaInfo = {};
+      for (const [key, config] of Object.entries(BUFFER_ACCOUNTS)) {
+        const quota = await env.KV_STORE.get(`account_quota:${key}`);
+        quotaInfo[config.name] = quota || 'no quota record';
+      }
+      return jsonResponse({
+        date: today,
+        daily_count: parseInt(count) || 0,
+        daily_max: RATE_LIMIT.GLOBAL_DAILY_MAX,
+        account_quotas: quotaInfo
+      });
+    }
+
+    // GA4 周报数据端点（JSON）
+  if (url.pathname === '/ga4-report') {
+    return await handleGA4Report(env);
+  }
+
+  // GA4 周报HTML端点
+  if (url.pathname === '/ga4-report-html') {
+    return await handleGA4ReportHTML(env);
+  }
+
+  // GA4 调试端点（返回原始API响应）
+  if (url.pathname === '/ga4-debug') {
+    return await handleGA4Debug(env);
+  }
+
+  // 404响应
     return jsonResponse({ 
       error: 'Not Found',
-      message: 'Available endpoints: /health, /publish, /channels, /retry-queue'
+      message: 'Available endpoints: /health, /publish, /channels, /retry-queue, /reset-daily-count, /daily-count'
     }, 404);
   },
 
@@ -391,6 +498,7 @@ async function processRetryQueue(env) {
 // ========== 发布到Buffer ==========
 async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey, postUrl) {
   const results = { success: [], failed: [], details: [] };
+  const accountConfig = BUFFER_ACCOUNTS[accountKey] || {};
 
   const mutation = `
     mutation CreatePost($input: CreatePostInput!) {
@@ -407,10 +515,16 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
     const channelInfo = Object.values(channels).find(c => c.id === channelId);
     const service = channelInfo?.service || 'unknown';
 
+    // 计算发布时间：基于账户 scheduleOffset 和平台索引错开发布
+    const now = new Date();
+    const offsetMs = (accountConfig.scheduleOffset || 0) * 3600000 + (channelIds.indexOf(channelId) + 1) * 7200000;
+    const publishTime = new Date(now.getTime() + offsetMs);
+
     const baseInput = {
       channelId: channelId,
       schedulingType: 'automatic',
-      mode: 'addToQueue'
+      mode: 'customScheduled',
+      dueAt: publishTime.toISOString()
     };
 
     let input = buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl);
@@ -484,6 +598,21 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
         lastError = error;
         console.error(`[Buffer Error] ${service}: ${error.message}`);
         
+        // Pinterest Board ID 缺失时，自动查询并重试
+        if (service === 'pinterest' && error.message.includes('Board ID') && attempt === 0) {
+          console.log('[Pinterest] Board ID missing, querying boards...');
+          const boardId = await queryPinterestBoardId(token);
+          if (boardId) {
+            console.log(`[Pinterest] Found board: ${boardId}`);
+            env.PINTEREST_BOARD_SERVICE_ID = boardId;
+            // 重建 input 带 board ID
+            input = buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl);
+            variables.input = input;
+            attempt++;
+            continue;
+          }
+        }
+        
         // 非429错误，不再重试
         if (!error.message.includes('429') && !error.message.includes('RATE_LIMIT')) {
           break;
@@ -528,17 +657,16 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
     };
   } else if (service === 'pinterest') {
     const pinTitle = (text || '').slice(0, 100);
-    const pinText = (text || '').slice(0, 500);
-    const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '';
+    const pinBoardServiceId = env.PINTEREST_BOARD_SERVICE_ID || '719309440424840288';
+    const pinLink = postUrl && postUrl.startsWith('http') ? postUrl : 'https://chinaboundtravel.com';
     const pinMeta = {
       title: pinTitle,
-      url: postUrl || 'https://chinaboundtravel.com',
-      description: pinText
+      url: pinLink
     };
     if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
     input = {
       ...baseInput,
-      text: pinText,
+      text: pinTitle,
       metadata: { pinterest: pinMeta },
       assets: [{ image: { url: mediaUrl } }]
     };
@@ -553,7 +681,57 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
   return input;
 }
 
-// ============ 辅助函数 ============
+// ========== Pinterest Board 查询 ==========
+async function queryPinterestBoardId(token) {
+  const query = `
+    query {
+      account {
+        organizations {
+          channels(service: "pinterest") {
+            id name service
+            metadata {
+              ... on PinterestMetadata {
+                boards { id name serviceId url }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await fetch(BUFFER_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ query })
+    });
+
+    const data = await response.json();
+    const orgs = data.data?.account?.organizations || [];
+    
+    for (const org of orgs) {
+      for (const channel of (org.channels || [])) {
+        const boards = channel.metadata?.boards || [];
+        if (boards.length > 0) {
+          // 返回第一个 board 的 serviceId
+          return boards[0].serviceId || boards[0].id;
+        }
+      }
+    }
+    
+    console.log('[Pinterest] No boards found in channel metadata');
+    return null;
+  } catch (error) {
+    console.error('[Pinterest Board Query Error]', error);
+    return null;
+  }
+}
+
+// ========== 辅助函数 ==========
 
 function buildPostText(title, desc, postUrl) {
   const shortDesc = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
@@ -648,4 +826,442 @@ function corsHeaders() {
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   };
+}
+
+// ============ GA4 Analytics Report ============
+
+async function handleGA4Report(env) {
+  const GA4_PROPERTY_ID = env.GA4_PROPERTY_ID || '192133217';
+  const GA4_SA_KEY = env.GA4_SERVICE_ACCOUNT_KEY || '';
+  const GA_API_URL = `https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport`;
+  const GA_TOKEN_URL = 'https://oauth2.googleapis.com/token';
+
+  // Parse SA key if not already parsed
+  let saKey;
+  try {
+    saKey = typeof GA4_SA_KEY === 'string' ? JSON.parse(GA4_SA_KEY) : GA4_SA_KEY;
+  } catch (e) {
+    return jsonResponse({ error: 'Invalid GA4 Service Account Key format', detail: e.message }, 500);
+  }
+
+  if (!saKey.client_email || !saKey.private_key) {
+    return jsonResponse({ error: 'GA4 Service Account Key missing client_email or private_key. Set GA4_SERVICE_ACCOUNT_KEY env variable.' }, 500);
+  }
+
+  // Build JWT
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const now = Math.floor(Date.now() / 1000);
+  const payload = {
+    iss: saKey.client_email,
+    scope: 'https://www.googleapis.com/auth/analytics.readonly',
+    aud: GA_TOKEN_URL,
+    iat: now,
+    exp: now + 3600
+  };
+
+  async function base64url(data) {
+    const encoded = btoa(typeof data === 'string' ? data : JSON.stringify(data));
+    return encoded.replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+  }
+
+  async function createJWT() {
+    const h = await base64url(JSON.stringify(header));
+    const p = await base64url(JSON.stringify(payload));
+    const message = `${h}.${p}`;
+
+    let keyData = structuredClone(saKey.private_key);
+    // Ensure proper PEM format
+    if (!keyData.includes('-----BEGIN')) {
+      keyData = `-----BEGIN PRIVATE KEY-----\n${keyData}\n-----END PRIVATE KEY-----`;
+    }
+
+    const key = await crypto.subtle.importKey(
+      'pkcs8',
+      pemToArrayBuffer(keyData),
+      { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+      false,
+      ['sign']
+    );
+
+    const sig = await crypto.subtle.sign(
+      { name: 'RSASSA-PKCS1-v1_5' },
+      key,
+      new TextEncoder().encode(message)
+    );
+
+    const sigB64 = await base64url(String.fromCharCode(...new Uint8Array(sig)));
+    return `${message}.${sigB64}`;
+  }
+
+  function pemToArrayBuffer(pem) {
+    const b64 = pem.replace(/-----BEGIN[^-]+-----/g, '').replace(/-----END[^-]+-----/g, '').replace(/\s/g, '');
+    const binary = atob(b64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes.buffer;
+  }
+
+  // Get access token
+  const jwt = await createJWT();
+  const tokenResp = await fetch(GA_TOKEN_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${jwt}`
+  });
+
+  if (!tokenResp.ok) {
+    const errText = await tokenResp.text();
+    return jsonResponse({ error: 'Failed to get GA4 access token', detail: errText }, 500);
+  }
+  const tokenData = await tokenResp.json();
+  const accessToken = tokenData.access_token;
+
+  const gaHeaders = {
+    'Authorization': `Bearer ${accessToken}`,
+    'Content-Type': 'application/json'
+  };
+
+  // Date range
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const sevenDaysAgo = new Date(today);
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+  const fmt = (d) => d.toISOString().split('T')[0];
+  const dateRange = { startDate: fmt(sevenDaysAgo), endDate: fmt(yesterday) };
+
+  // Run multiple reports in parallel
+  const reports = {};
+
+  // 1. Daily metrics
+  reports.daily = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'date' }],
+    metrics: [
+      { name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' },
+      { name: 'engagedSessions' }, { name: 'bounceRate' }, { name: 'averageSessionDuration' }
+    ],
+    orderBys: [{ field: 'date', sortOrder: 'ASCENDING' }]
+  };
+
+  // 2. Top pages
+  reports.topPages = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'pageTitle' }, { name: 'pagePath' }],
+    metrics: [
+      { name: 'screenPageViews' }, { name: 'sessions' }, { name: 'activeUsers' }, { name: 'averageSessionDuration' }
+    ],
+    orderBys: [{ field: 'screenPageViews', sortOrder: 'DESCENDING' }],
+    limit: 20
+  };
+
+  // 3. Traffic sources
+  reports.sources = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+    metrics: [{ name: 'sessions' }, { name: 'activeUsers' }, { name: 'engagementRate' }],
+    orderBys: [{ field: 'sessions', sortOrder: 'DESCENDING' }]
+  };
+
+  // 4. Countries
+  reports.countries = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'country' }],
+    metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }],
+    orderBys: [{ field: 'activeUsers', sortOrder: 'DESCENDING' }],
+    limit: 15
+  };
+
+  // 5. Devices
+  reports.devices = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'deviceCategory' }],
+    metrics: [{ name: 'sessions' }, { name: 'activeUsers' }, { name: 'screenPageViews' }],
+    orderBys: [{ field: 'sessions', sortOrder: 'DESCENDING' }]
+  };
+
+  // 6. New vs Returning
+  reports.userType = {
+    dateRanges: [dateRange],
+    dimensions: [{ name: 'newVsReturning' }],
+    metrics: [{ name: 'sessions' }, { name: 'activeUsers' }],
+    orderBys: [{ field: 'sessions', sortOrder: 'DESCENDING' }]
+  };
+
+  // Execute all reports in parallel
+  const results = {};
+  for (const [key, body] of Object.entries(reports)) {
+    try {
+      const resp = await fetch(GA_API_URL, {
+        method: 'POST',
+        headers: gaHeaders,
+        body: JSON.stringify(body)
+      });
+      if (resp.ok) {
+        results[key] = await resp.json();
+      } else {
+        results[key] = { error: resp.status, text: await resp.text() };
+      }
+    } catch (e) {
+      results[key] = { error: e.message };
+    }
+  }
+
+  return jsonResponse({
+    success: true,
+    propertyId: GA4_PROPERTY_ID,
+    dateRange,
+    reports: results
+  });
+}
+
+// ============ GA4 HTML Report ============
+
+async function handleGA4ReportHTML(env) {
+  // Reuse the JSON report function but parse and render as HTML
+  const jsonResp = await handleGA4Report(env);
+  const text = await jsonResp.text();
+  let data;
+  try { data = JSON.parse(text); } catch(e) {
+    return new Response('Failed to parse GA4 data', { status: 500, headers: { 'Content-Type': 'text/html' } });
+  }
+
+  if (!data.success) {
+    return new Response('<h1>Error</h1><p>' + JSON.stringify(data) + '</p>', { status: 500, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+  }
+
+  const r = data.reports;
+  const dateRange = data.dateRange;
+
+  // Helper
+  function fmtDur(s) {
+    s = Number(s) || 0;
+    if (s >= 3600) return Math.floor(s/3600) + 'h ' + Math.floor((s%3600)/60) + 'm';
+    return Math.floor(s/60) + 'm ' + Math.floor(s%60) + 's';
+  }
+
+  // Parse daily
+  const daily = (r.daily?.rows || []).map(row => {
+    const d = row.dimensionValues[0].value;
+    const m = row.metricValues.map(v => v.value);
+    return { date: d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6,8), users: +m[0], sessions: +m[1], pv: +m[2], engaged: +m[3], bounce: +m[4]*100, dur: +m[5] };
+  });
+
+  const topPages = (r.topPages?.rows || []).map(row => {
+    const dims = row.dimensionValues.map(v => v.value);
+    const m = row.metricValues.map(v => v.value);
+    return { title: dims[0], path: dims[1], views: +m[0], sessions: +m[1], users: +m[2], dur: +m[3] };
+  });
+
+  const chNames = { 'Organic Search':'自然搜索', 'Direct':'直接访问', 'Social':'社交媒体', 'Referral':'外部引荐', 'Paid Search':'付费搜索', 'Email':'邮件营销', '(Other)':'其他' };
+  const sources = (r.sources?.rows || []).map(row => {
+    const ch = row.dimensionValues[0].value;
+    const m = row.metricValues.map(v => v.value);
+    return { channel: ch, sessions: +m[0], users: +m[1], eng: +m[2]*100 };
+  });
+
+  const countries = (r.countries?.rows || []).map(row => {
+    const c = row.dimensionValues[0].value;
+    const m = row.metricValues.map(v => v.value);
+    return { country: c, users: +m[0], sessions: +m[1], pv: +m[2] };
+  });
+
+  const devNames = { desktop:'桌面端', mobile:'移动端', tablet:'平板' };
+  const devices = (r.devices?.rows || []).map(row => {
+    const dev = row.dimensionValues[0].value;
+    const m = row.metricValues.map(v => v.value);
+    return { device: dev, sessions: +m[0], users: +m[1], pv: +m[2] };
+  });
+
+  const userType = (r.userType?.rows || []).map(row => {
+    const t = row.dimensionValues[0].value;
+    const m = row.metricValues.map(v => v.value);
+    return { type: t, sessions: +m[0], users: +m[1] };
+  });
+
+  // Totals
+  const tU = daily.reduce((s,d)=>s+d.users,0);
+  const tS = daily.reduce((s,d)=>s+d.sessions,0);
+  const tP = daily.reduce((s,d)=>s+d.pv,0);
+  const tE = daily.reduce((s,d)=>s+d.engaged,0);
+  const aB = daily.length ? daily.reduce((s,d)=>s+d.bounce,0)/daily.length : 0;
+  const aD = daily.length ? daily.reduce((s,d)=>s+d.dur,0)/daily.length : 0;
+
+  const today = new Date().toISOString().split('T')[0];
+
+  let h = `<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><title>GA4 周报 - ChinaBoundTravel</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#1a1a2e;padding:20px}
+.container{max-width:960px;margin:0 auto}
+h1{font-size:24px;margin-bottom:4px}
+h2{font-size:18px;margin:24px 0 12px;padding-bottom:8px;border-bottom:2px solid #e8ecf1}
+.meta{color:#666;font-size:13px;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.card .label{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:0.5px}
+.card .value{font-size:28px;font-weight:700;margin-top:4px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);margin-bottom:20px}
+th{background:#f8f9fb;font-size:12px;text-align:left;padding:10px 12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:0.3px}
+td{padding:10px 12px;font-size:14px;border-top:1px solid #f0f2f5}
+tr:hover td{background:#fafbfc}
+.tag{display:inline-block;background:#e8f4fd;color:#0288d1;padding:2px 8px;border-radius:4px;font-size:12px}
+.insights{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.insights li{margin:8px 0;font-size:14px;line-height:1.6}
+.trend{font-size:14px;padding:12px 16px;background:#fff;border-radius:10px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+</style></head><body>
+<div class="container">
+<h1>ChinaBoundTravel - 周度数据分析报告</h1>
+<p class="meta">报告生成时间：${today} | 数据周期：${dateRange.startDate} ~ ${dateRange.endDate}</p>
+
+<h2>核心指标概览</h2>
+<div class="cards">
+<div class="card"><div class="label">活跃用户</div><div class="value">${tU.toLocaleString()}</div></div>
+<div class="card"><div class="label">会话总数</div><div class="value">${tS.toLocaleString()}</div></div>
+<div class="card"><div class="label">页面浏览量</div><div class="value">${tP.toLocaleString()}</div></div>
+<div class="card"><div class="label">互动会话</div><div class="value">${tE.toLocaleString()}</div></div>
+<div class="card"><div class="label">平均跳出率</div><div class="value">${aB.toFixed(1)}%</div></div>
+<div class="card"><div class="label">平均会话时长</div><div class="value">${fmtDur(aD)}</div></div>
+</div>`;
+
+  // Daily trend
+  if (daily.length >= 2) {
+    const half = Math.floor(daily.length/2);
+    const fH = daily.slice(0,half).reduce((s,d)=>s+d.users,0);
+    const sH = daily.slice(half).reduce((s,d)=>s+d.users,0);
+    const trend = sH > fH ? '📈 上升' : sH < fH ? '📉 下降' : '➡️ 持平';
+    h += `<div class="trend">趋势：${trend}（前半周 ${fH} 访客 → 后半周 ${sH} 访客）</div>`;
+  }
+
+  h += `<h2>每日趋势</h2><table><tr><th>日期</th><th>访客数</th><th>会话数</th><th>浏览量</th><th>互动会话</th><th>跳出率</th><th>平均时长</th></tr>`;
+  for (const d of daily) {
+    h += `<tr><td>${d.date}</td><td>${d.users}</td><td>${d.sessions}</td><td>${d.pv}</td><td>${d.engaged}</td><td>${d.bounce.toFixed(1)}%</td><td>${fmtDur(d.dur)}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Top pages
+  h += `<h2>热门页面 Top 10</h2><table><tr><th>#</th><th>页面标题</th><th>路径</th><th>浏览量</th><th>会话数</th><th>访客数</th><th>平均时长</th></tr>`;
+  for (let i = 0; i < Math.min(topPages.length, 10); i++) {
+    const p = topPages[i];
+    h += `<tr><td>${i+1}</td><td>${p.title.slice(0,50)}</td><td><span class="tag">${p.path}</span></td><td>${p.views}</td><td>${p.sessions}</td><td>${p.users}</td><td>${fmtDur(p.dur)}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Sources
+  h += `<h2>流量来源渠道</h2><table><tr><th>渠道</th><th>会话数</th><th>访客数</th><th>互动率</th></tr>`;
+  for (const s of sources) {
+    h += `<tr><td>${chNames[s.channel]||s.channel} (${s.channel})</td><td>${s.sessions}</td><td>${s.users}</td><td>${s.eng.toFixed(1)}%</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Countries
+  h += `<h2>访客地区分布</h2><table><tr><th>国家/地区</th><th>访客数</th><th>会话数</th><th>浏览量</th></tr>`;
+  for (let i = 0; i < Math.min(countries.length, 10); i++) {
+    const c = countries[i];
+    h += `<tr><td>${c.country}</td><td>${c.users}</td><td>${c.sessions}</td><td>${c.pv}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Devices
+  h += `<h2>设备分布</h2><table><tr><th>设备类型</th><th>会话数</th><th>访客数</th><th>浏览量</th></tr>`;
+  for (const d of devices) {
+    h += `<tr><td>${devNames[d.device.toLowerCase()]||d.device}</td><td>${d.sessions}</td><td>${d.users}</td><td>${d.pv}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // User type
+  h += `<h2>新老访客比例</h2><table><tr><th>类型</th><th>会话数</th><th>访客数</th></tr>`;
+  for (const u of userType) {
+    const cn = u.type==='new'?'新访客':u.type==='returning'?'回访访客':u.type;
+    h += `<tr><td>${cn}</td><td>${u.sessions}</td><td>${u.users}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Insights
+  h += `<h2>洞察与建议</h2><div class="insights"><ul>`;
+  if (topPages.length > 0) h += `<li><strong>最受欢迎页面</strong>: "${topPages[0].title.slice(0,50)}"（${topPages[0].views} 次浏览）</li>`;
+  if (sources.length > 0) h += `<li><strong>最大流量渠道</strong>: ${chNames[sources[0].channel]||sources[0].channel}（${sources[0].sessions} 个会话）</li>`;
+  const nw = userType.find(u=>u.type==='new');
+  if (nw && tU > 0) {
+    const pct = (nw.users/tU*100).toFixed(1);
+    h += `<li><strong>新访客占比</strong>: ${pct}%</li>`;
+  }
+  if (aB > 70) h += `<li>⚠️ 跳出率偏高 (${aB.toFixed(1)}%) — 建议优化落地页</li>`;
+  else if (aB > 0 && aB < 40) h += `<li>✅ 跳出率健康 (${aB.toFixed(1)}%)</li>`;
+  h += `</ul></div>`;
+
+  h += `<p style="text-align:center;color:#999;font-size:12px;margin-top:30px">数据来源：Google Analytics 4 | 由 GA4 Analytics Data API 自动生成</p></div></body></html>`;
+
+  return new Response(h, {
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Access-Control-Allow-Origin': '*' }
+  });
+}
+
+// ============ GA4 Debug ============
+
+async function handleGA4Debug(env) {
+  const GA4_PROPERTY_ID = env.GA4_PROPERTY_ID || '192133217';
+  const GA4_SA_KEY = env.GA4_SERVICE_ACCOUNT_KEY || '';
+  const GA_TOKEN_URL = 'https://oauth2.googleapis.com/token';
+  const GA_API_URL = `https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport`;
+
+  // Check if key exists
+  const debug = { hasKey: !!GA4_SA_KEY, keyLength: GA4_SA_KEY.length, propertyId: GA4_PROPERTY_ID };
+
+  if (!GA4_SA_KEY) {
+    return jsonResponse({ ...debug, error: 'GA4_SERVICE_ACCOUNT_KEY not set' });
+  }
+
+  let saKey;
+  try { saKey = JSON.parse(GA4_SA_KEY); } catch(e) { return jsonResponse({ ...debug, error: 'Invalid JSON key', parseError: e.message }); }
+
+  // Build JWT
+  async function base64url(data) {
+    const encoded = btoa(typeof data === 'string' ? data : JSON.stringify(data));
+    return encoded.replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+  }
+
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const now = Math.floor(Date.now() / 1000);
+  const payload = { iss: saKey.client_email, scope: 'https://www.googleapis.com/auth/analytics.readonly', aud: GA_TOKEN_URL, iat: now, exp: now + 3600 };
+
+  try {
+    const h = await base64url(JSON.stringify(header));
+    const p = await base64url(JSON.stringify(payload));
+    const message = `${h}.${p}`;
+
+    const keyData = saKey.private_key;
+    const key = await crypto.subtle.importKey('pkcs8', pemToArrayBuffer(keyData), { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['sign']);
+    const sig = await crypto.subtle.sign({ name: 'RSASSA-PKCS1-v1_5' }, key, new TextEncoder().encode(message));
+    const sigB64 = await base64url(String.fromCharCode(...new Uint8Array(sig)));
+    const jwt = `${message}.${sigB64}`;
+
+    // Get token
+    const tokenResp = await fetch(GA_TOKEN_URL, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${jwt}` });
+    const tokenData = await tokenResp.json();
+    debug.tokenStatus = tokenResp.status;
+    debug.tokenError = tokenData.error || null;
+
+    if (!tokenResp.ok) {
+      return jsonResponse({ ...debug, error: 'Token request failed' });
+    }
+
+    const accessToken = tokenData.access_token;
+    debug.tokenLength = accessToken.length;
+
+    // Simple test query
+    const testResp = await fetch(GA_API_URL, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dateRanges: [{ startDate: '2026-06-23', endDate: '2026-06-29' }], dimensions: [{ name: 'date' }], metrics: [{ name: 'activeUsers' }] })
+    });
+    const testData = await testResp.json();
+    debug.apiStatus = testResp.status;
+    debug.apiResponse = testData;
+
+    return jsonResponse(debug);
+  } catch(e) {
+    return jsonResponse({ ...debug, error: e.message, stack: e.stack });
+  }
 }

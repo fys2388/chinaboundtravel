@@ -1,7 +1,7 @@
 ---
 title: "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance"
 cover:
-  image: "https://image.pollinations.ai/prompt/Professional%20travel%20blog%20cover%20image%2C%20Sichuan%20mountains%2C%20giant%20panda%20in%20bamboo%20forest%2C%20high-resolution%20travel%20photography%2C%20cinematic%20lighting%2C%20vibrant%20colors%2C%204k%20quality%2C%20photorealistic%2C%20beautiful%20scenery?width=1792&height=1024&nologo=true&seed=96965"
+  image: "/img/china-dest/chengdu/sichuan-hotpot-cover.jpg"
 date: "2026-06-23T10:00:00+08:00"
 lastmod: "2026-06-23T10:00:00+08:00"
 author: "Joran"
@@ -17,7 +17,6 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-summary: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."
 description: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."
 canonicalURL: "https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/"
 ShowToc: "true"
@@ -29,7 +28,7 @@ weight: "1"
 
 Hey there, Aussie and Kiwi travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
 
-![A bustling street in Chengdu with people walking by, and in the background, a sign of a Sichuan hotpot restaurant with steam rising from the entrance, creating an inviting and lively atmosphere.](https://image.pollinations.ai/prompt/A%20bustling%20street%20in%20Chengdu%20with%20people%20walking%20by%2C%20and%20in%20the%20background%2C%20a%20sign%20of%20a%20Sichuan%20hotpot%20restaurant%20with%20steam%20rising%20from%20the%20entrance%2C%20creating%20an%20inviting%20and%20lively%20atmosphere.?width=1024&height=768&nologo=true&seed=68557)
+![A bustling street in Chengdu with people walking by, and in the background, a sign of a Sichuan hotpot restaurant with steam rising from the entrance, creating an inviting and lively atmosphere.](/img/china-dest/chengdu/chengdu-hotpot-street.jpg)
 
 ## History of Sichuan Hotpot
 
@@ -39,7 +38,7 @@ Over time, as the dish started to spread throughout the Sichuan province, it und
 
 Chili peppers, on the other hand, were a later addition to the Sichuan hotpot story. Introduced to China from South America in the 16th century, they quickly found their way into the local cuisine. The combination of Sichuan peppercorns and chili peppers is what creates the characteristic "ma la" flavor that is so beloved by locals and tourists alike. It's a flavor profile that is both intense and addictive, a perfect balance of numbing and spicy that dances on the taste buds.
 
-![A close - up of a plate filled with fresh Sichuan peppercorns and chili peppers, with a wooden spoon beside it, set on a rustic table in a traditional Sichuan kitchen.](https://image.pollinations.ai/prompt/A%20close%20-%20up%20of%20a%20plate%20filled%20with%20fresh%20Sichuan%20peppercorns%20and%20chili%20peppers%2C%20with%20a%20wooden%20spoon%20beside%20it%2C%20set%20on%20a%20rustic%20table%20in%20a%20traditional%20Sichuan%20kitchen.?width=1024&height=768&nologo=true&seed=66192)
+![A close - up of a plate filled with fresh Sichuan peppercorns and chili peppers, with a wooden spoon beside it, set on a rustic table in a traditional Sichuan kitchen.](/img/china-dest/chengdu/sichuan-peppercorns-chili.jpg)
 
 ## Cultural Significance of Sichuan Hotpot
 

@@ -22,7 +22,7 @@ async function main() {
   let mut = 'mutation CreatePost($input: CreatePostInput!) { createPost(input: $input) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }';
   let vars = { input: {
     text: 'China Travel - Discover amazing places to visit in China! #China #Travel',
-    channelId: '6a219362c687a22dd45dd1d5',
+    channelId: '6a21bdbec687a22dd45ec2ae',
     schedulingType: 'automatic',
     mode: 'addToQueue',
     metadata: { pinterest: { title: 'China Travel Guide' } },

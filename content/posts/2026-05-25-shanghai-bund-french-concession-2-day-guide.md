@@ -4,8 +4,6 @@ date: 2026-05-24T09:00:00+08:00
 draft: false
 tags: ["China Travel", "Shanghai", "City Guide", "Destinations"]
 categories: ["China Travel Guide"]
-summary: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
-
 description: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
 author: "Joran"
 params:

@@ -4,8 +4,6 @@ date: 2026-05-23T09:00:00+08:00
 draft: false
 tags: ["China Travel", "Food & Drink", "App Guide", "Daily Life", "Travel Tips"]
 categories: ["China Travel Guide"]
-summary: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
-
 description: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
 author: "Joran"
 params:
