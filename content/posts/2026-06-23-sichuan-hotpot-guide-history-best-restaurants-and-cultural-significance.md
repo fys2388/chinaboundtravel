@@ -28,7 +28,7 @@ weight: "1"
 
 ## Introduction
 
-Hey there, Aussie and Kiwi travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
+Hey there, fellow travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
 
 ![A bustling street in Chengdu with people walking by, and in the background, a sign of a Sichuan hotpot restaurant with steam rising from the entrance, creating an inviting and lively atmosphere.](/img/china-dest/chengdu/chengdu-hotpot-street.jpg)
 
