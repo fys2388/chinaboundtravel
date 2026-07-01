@@ -44,7 +44,7 @@ const BUFFER_API_URL = 'https://api.buffer.com';
 
 // 限流配置
 const RATE_LIMIT = {
-  GLOBAL_DAILY_MAX: 5,       // 全局单日发布上限（支持多篇不同内容/配图的帖子）
+  GLOBAL_DAILY_MAX: 3,       // 全局单日发布上限（每篇文章1条社媒，每天最多3篇）
   ACCOUNT_QUARTER_MAX: 70,   // 单账户15分钟上限(官方100的70%安全阈值)
   QUOTA_WARNING_THRESHOLD: 0.3 // 配额剩余30%触发预警
 };
@@ -241,6 +241,19 @@ async function handlePublish(request, env, ctx) {
       }, 400);
     }
 
+    // ========== 内容去重检查 ==========
+    const contentKey = `${title}::${postUrl || ''}`;
+    const contentHash = await sha256(contentKey);
+    const dedupKey = `dedup:${contentHash}`;
+    const alreadyPosted = await env.KV_STORE.get(dedupKey);
+    if (alreadyPosted) {
+      return jsonResponse({
+        success: false,
+        error: 'Duplicate content',
+        message: `相同内容已在 ${alreadyPosted} 发布过，跳过重复。标题: ${title.substring(0, 50)}`
+      }, 200);
+    }
+
     // ========== 封面强校验 ==========
     let mediaUrl = cover || '';
     if (mediaUrl) {
@@ -330,9 +343,12 @@ async function handlePublish(request, env, ctx) {
       await updateAccountQuota(env, accountKey);
     }
 
-    // 更新全局日计数
+    // 更新全局日计数 + 记录去重hash
     if (allResults.success.length > 0) {
       await incrementDailyPublishCount(env);
+      await env.KV_STORE.put(dedupKey, new Date().toISOString(), {
+        expirationTtl: 30 * 24 * 60 * 60
+      });
     }
 
     // 发送飞书通知
@@ -465,17 +481,24 @@ async function processRetryQueue(env) {
       const result = await handlePublish(body, env, null);
       const resultData = await result.json();
 
-      if (resultData.success) {
+      if (resultData.success || resultData.queued) {
         await env.KV_STORE.delete(key);
         success++;
+      } else if (resultData.error === 'Duplicate content') {
+        // 去重检查命中，直接丢弃
+        await env.KV_STORE.delete(key);
+        success++;
+        console.log('[Queue] Duplicate detected, removed from queue');
       } else {
+        // 发布失败但非重复，最多重试一次（已在这里了），删除避免无限循环
+        await env.KV_STORE.delete(key);
         failed++;
       }
       
       processed++;
       
-      // 每篇间隔至少90分钟
-      await new Promise(r => setTimeout(r, 1000));
+      // 每篇间隔（Worker cron模式下次运行间隔足够）
+      await new Promise(r => setTimeout(r, 5000));
 
     } catch (error) {
       console.error('[Queue] Error processing:', error);
@@ -811,6 +834,11 @@ async function sendFeishuNotification(env, data) {
   } catch (error) {
     console.error('[Feishu Error]', error);
   }
+}
+
+async function sha256(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
 function jsonResponse(data, status = 200) {
