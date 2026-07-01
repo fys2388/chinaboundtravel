@@ -5,8 +5,7 @@ date: 2026-06-09T10:00:00+08:00
 ---
 
 <div class="city-hero">
-    <h1 class="city-hero-title"> China City Travel Guides</h1>
-    <p class="city-hero-sub">Real talk on China's most traveler-friendly cities. No fluff, no tourist trapsjust what you actually need to know.</p>
+    <p class="city-hero-sub">Real talk on China's most traveler-friendly cities. No fluff, no tourist traps, just what you actually need to know.</p>
 </div>
 
 ---
@@ -16,7 +15,7 @@ date: 2026-06-09T10:00:00+08:00
 **Vibe:** Ancient power meets modern swagger. Think Forbidden City mornings and craft-beer hutong nights.
 
 **Don't Miss:**
-- The Forbidden City (book tickets 7 days aheadseriously)
+- The Forbidden City (book tickets 7 days ahead — seriously)
 - Temple of Heaven at sunrise
 - Great Wall at Mutianyu (fewer crowds than Badaling)
 - Hutong alleyways around Nanluoguxiang
@@ -53,7 +52,7 @@ date: 2026-06-09T10:00:00+08:00
 - Muslim Quarter at night (lamb skewers + pomegranate juice)
 - Big Wild Goose Pagoda fountain show
 
-**Joran's Real Tip:** "The warriors are cool, but the Muslim Quarter is where the magic happens. Try the yangroupaomo (lamb bread soup)it's a full meal and a half."
+**Joran's Real Tip:** "The warriors are cool, but the Muslim Quarter is where the magic happens. Try the yangroupaomo (lamb bread soup) — it's a full meal and a half."
 
 **Getting Around:** Metro is limited but growing. Taxis and Didi are cheap.
 
@@ -69,9 +68,9 @@ date: 2026-06-09T10:00:00+08:00
 - Jinli Ancient Street (touristy but pretty at night)
 - Sichuan Opera face-changing show
 
-**Joran's Real Tip:** "This is my home base. Ask me anythingespecially about hot pot. Pro move: order 'wei la' (mildly spicy) unless you want to cry."
+**Joran's Real Tip:** "This is my home base. Ask me anything, especially about hot pot. Pro move: order 'wei la' (mildly spicy) unless you want to cry."
 
-**Getting Around:** Metro is excellent. Biking is popular tooChengdu is flat.
+**Getting Around:** Metro is excellent. Biking is popular too — Chengdu is flat.
 
 ---
 
@@ -102,7 +101,7 @@ date: 2026-06-09T10:00:00+08:00
 - Ten-Mile Gallery scenic cycling route
 - Impression Liu Sanjie (spectacular outdoor light show)
 
-**Joran's Real Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunchyou'll find the best beer fish in town."
+**Joran's Real Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunch — you'll find the best beer fish in town."
 
 **Getting Around:** Bicycle is king here. Rent one for ~20 RMB/day and explore.
 
