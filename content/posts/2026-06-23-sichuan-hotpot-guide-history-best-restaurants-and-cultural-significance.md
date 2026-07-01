@@ -42,9 +42,9 @@ Chili peppers, on the other hand, were a later addition to the Sichuan hotpot st
 
 ## Cultural Significance of Sichuan Hotpot
 
-Sichuan hotpot is not just a delicious meal; it is an integral part of Sichuan culture. In Sichuan, hotpot is often eaten with friends and family. It's a time when people come together, share stories, and create memories. The act of cooking and sharing food in a hotpot is seen as a symbol of community and togetherness. It's like a mini - celebration every time you gather around the hotpot table.
+Sichuan hotpot is not just a delicious meal; it is an integral part of Sichuan culture. In Sichuan, hotpot is often eaten with friends and family. It's a time when people come together, share stories, and create memories. The act of cooking and sharing food in a hotpot is seen as a symbol of community and togetherness. It's like a mini-celebration every time you gather around the hotpot table.
 
-I remember one time when I was invited to a local family's home for a hotpot dinner. The house was filled with the aroma of spices, and as we sat down around the table, there was a sense of warmth and hospitality. We cooked a variety of ingredients, from thinly sliced meats to fresh vegetables, and as we ate, we laughed and talked, sharing our day - to - day experiences. It was a moment that truly made me understand the cultural significance of Sichuan hotpot.
+I remember one time when I was invited to a local family's home for a hotpot dinner. The house was filled with the aroma of spices, and as we sat down around the table, there was a sense of warmth and hospitality. We cooked a variety of ingredients, from thinly sliced meats to fresh vegetables, and as we ate, we laughed and talked, sharing our day-to-day experiences. It was a moment that truly made me understand the cultural significance of Sichuan hotpot.
 
 Another aspect of its cultural significance lies in the variety of ingredients. Sichuan hotpot offers a wide range of choices, from the more common meats like beef, lamb, and pork, to more exotic options like tripe and duck blood. This variety not only caters to different tastes but also represents the rich biodiversity of the region. Each ingredient has its own unique texture and flavor, and when cooked in the hotpot, they all come together in a harmonious symphony of tastes.
 
@@ -54,7 +54,7 @@ Now, let's talk about the best restaurants to experience Sichuan hotpot. One of 
 
 Another great option is "Liu Yi Shou." This restaurant is known for its traditional Sichuan hotpot flavors. The broth here is rich and flavorful, with just the right amount of "ma la" kick. They also offer a wide selection of fresh ingredients, ensuring that every bite is a delicious experience.
 
-If you're looking for a more local and authentic experience, I would recommend checking out some of the smaller, hole - in - the - wall restaurants in the old parts of Chengdu. These places often serve the most delicious and traditional hotpot, and they are usually much more affordable. Just be prepared to deal with a bit of chaos and a language barrier, but trust me, it's worth it for the taste.
+If you're looking for a more local and authentic experience, I would recommend checking out some of the smaller, hole-in-the-wall restaurants in the old parts of Chengdu. These places often serve the most delicious and traditional hotpot, and they are usually much more affordable. Just be prepared to deal with a bit of chaos and a language barrier, but trust me, it's worth it for the taste.
 
 ## Tips for Enjoying Sichuan Hotpot
 

@@ -12,4 +12,126 @@
 
 {{- /* BreadcrumbList + BlogPosting schemas handled by PaperMod schema_json.html override */ -}}
 
+{{- /* ===== Text Overlap Fixes ===== */ -}}
+<style>
+/* ---------------------------------------------------
+   Fix 1: Homepage article card title/summary overlap
+   --------------------------------------------------- */
+.post-card .card-title {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.post-card .card-summary {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+    line-height: 1.6;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* Also ensure PaperMod default .entry-header h2 and .entry-content don't overlap */
+.entry-header h2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.entry-content {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+/* ---------------------------------------------------
+   Fix 2: Email subscription card title/subtitle overlap
+   The HTML has subscribe-heading (h4) and subscribe-sub (p)
+   as siblings inside subscribe-header (flex row).
+   Ensure they stack properly and have adequate spacing.
+   --------------------------------------------------- */
+.subscribe-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+/* The title+sub wrapper inside header */
+.subscribe-header .subscribe-heading,
+.subscribe-header .subscribe-sub {
+    overflow: hidden;
+}
+
+.subscribe-heading {
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+}
+
+.subscribe-sub {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.subscribe-description {
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------------
+   Fix 3: Footer text overlap
+   The .affiliate-disclosure class has padding/border
+   designed for block elements, but is used inside a
+   <span> in the footer. Reset to inline-friendly styles.
+   --------------------------------------------------- */
+.footer .affiliate-disclosure {
+    display: inline;
+    padding: 0;
+    border: none;
+    border-left: none;
+    background: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+/* Ensure footer has proper line-height and wrapping */
+.footer {
+    line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.footer span {
+    display: inline;
+}
+
+/* ---------------------------------------------------
+   Fix 4: Article page subscribe card (same as Fix 2)
+   Ensures subscribe card embedded in article pages
+   also has proper spacing.
+   --------------------------------------------------- */
+.article-affiliate + .subscribe-card,
+.post-content + .subscribe-card {
+    margin-top: 2.5rem;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------
+   General safety: prevent heading text from overlapping
+   following inline/block siblings across the site
+   --------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+}
+
+.post-entry {
+    overflow: hidden;
+}
+</style>
+
 {{- /* Head custom content area end */ -}}

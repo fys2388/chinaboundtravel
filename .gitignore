@@ -35,3 +35,6 @@ gsc-service-account-key.json
 # Test files with API keys (do NOT commit)
 test_gemini_image.py
 test_google_api.py
+
+# Wrangler temp files
+buffer-worker/.wrangler/tmp/
