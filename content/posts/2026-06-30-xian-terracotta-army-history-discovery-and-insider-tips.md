@@ -113,7 +113,7 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 ![A panoramic view of the Terracotta Army, with rows and rows of warriors stretching out into the distance. The sky is blue, and the sun is shining, creating a beautiful and awe-inspiring scene.](/img/china-dest/xian/terracotta-army-panoramic.jpg)
 
 ## Related Links
-- [Chengdu Travel Tips](https://chinaboundtravel.com/posts/chengdu-travel-tips/)
-- [Best Time to Visit Chengdu](https://chinaboundtravel.com/posts/best-time-to-visit-chengdu/)
-- [China Travel Budget](https://chinaboundtravel.com/posts/china-travel-budget/)
-- [Chengdu Panda Tour](https://chinaboundtravel.com/posts/chengdu-panda-tour/)
+- [Chengdu Panda Adventure Guide](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Panda Base Visit Tips](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Is China Safe for Tourists?](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/)
+- [Chengdu Panda Guide](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)

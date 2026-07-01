@@ -258,9 +258,9 @@ If you do one thing right on this trip, it's this: **wake up before dawn, get to
 And if you found this guide helpful, [bookmark it for your trip planning](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) and check out these related guides:
 
 **More destination guides:**
-- [Fenghuang Ancient Town: Is It Worth the Trip from Zhangjiajie?](https://chinaboundtravel.com/posts/) — The famous riverside town is only 3 hours away
-- [Huangshan (Yellow Mountain) vs. Zhangjiajie: Which One to Pick?](https://chinaboundtravel.com/posts/) — I've done both, here's the honest comparison
-- [Chengdu City Guide: A Complete Guide to the City of Pandas](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.html) — My adopted hometown and gateway to Sichuan
+- Fenghuang Ancient Town: Is It Worth the Trip from Zhangjiajie? — The famous riverside town is only 3 hours away
+- Huangshan (Yellow Mountain) vs. Zhangjiajie: Which One to Pick? — I've done both, here's the honest comparison
+- [Chengdu City Guide: A Complete Guide to the City of Pandas](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c) — My adopted hometown and gateway to Sichuan
 
 **Practical China guides:**
 - [How to Survive Chinese Train Stations](https://chinaboundtravel.com/posts/2026-05-27-how-to-survive-chinese-train-station/)
