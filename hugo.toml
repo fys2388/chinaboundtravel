@@ -78,16 +78,10 @@ buildExpired = false
   weight = 30
 
 [[menu.main]]
-  identifier = "internet"
-  name = "🌐 Internet Access"
-  url = "/categories/internet/"
-  weight = 40
-
-[[menu.main]]
   identifier = "payment-guide"
   name = "💳 Payment Guide"
   url = "/categories/payment/"
-  weight = 50
+  weight = 40
 
 [[menu.main]]
   identifier = "pricing"
