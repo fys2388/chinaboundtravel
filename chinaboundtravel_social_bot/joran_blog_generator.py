@@ -1280,10 +1280,24 @@ class BlogGenerator:
         if emoji_pattern:
             issues.append(f"[P0] Emoji/symbols detected: {set(emoji_pattern)} - use ASCII only")
         
+        # 8. Check for hyphen-space artifacts (AI generation artifact)
+        # Pattern: "word - word" where spaces surround a hyphen in compound words
+        hyphen_space_matches = re.findall(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', content)
+        if hyphen_space_matches:
+            samples = list(set(hyphen_space_matches))[:5]
+            issues.append(f"[P0] Hyphen-space artifact detected ({len(hyphen_space_matches)} instances): {samples} - remove spaces around hyphens in compound words")
+        
+        # Auto-fix hyphen-space artifacts in content
+        if hyphen_space_matches:
+            content = re.sub(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content)
+        
         passed = not any("[P0]" in issue for issue in issues)
         return passed, issues
     
     def write_markdown(self, frontmatter, content, filepath):
+        # Auto-fix hyphen-space artifacts before writing (AI generation pattern)
+        content = re.sub(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content)
+        
         frontmatter_lines = ["---"]
         for key, value in frontmatter.items():
             if isinstance(value, list):
