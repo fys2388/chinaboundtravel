@@ -26,7 +26,7 @@ TocOpen: "false"
 weight: "1"
 ---
 
-## Introduction
+## Why Sichuan Hotpot Is More Than Just a Meal
 
 Hey there, fellow travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
 

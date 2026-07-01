@@ -27,7 +27,7 @@ cover:
 
 ## Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls
 
-## Introduction
+## My First Night at a Chinese Night Market
 Let me take you back to that fateful day when I first set foot in a Chinese night market. I was a wide-eyed Californian tourist who felt like an alien in a strange new world. As I stepped into the market, the air hit me like a spicy, flavorful wave. The thick aroma of various spices filled my nostrils, the sounds of vendors passionately shouting their wares echoed in my ears, and the sight of colorful lights twinkling everywhere was like something straight out of a fairytale movie. I was right in the middle of an adventure that I would never forget.
 
 If you're planning a trip to China, exploring the street food is an absolute must. Chinese street food is not just about satisfying your taste buds; it's a portal to the local culture, traditions, and daily life. In this guide, I'll draw on my 10-plus years of experience living in Chengdu to give you an in-depth look at Chinese street food. From the best night markets to the must-try dishes, I've got you covered.

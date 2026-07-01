@@ -30,7 +30,7 @@ weight: "1"
 
 Hey there, fellow Californians! Joran here, your friendly neighborhood China expert with over 10 years of living in Chengdu under my belt. You might be thinking, "Joran, I've seen the pictures of the Great Wall. It's just a big wall, right?" Well, let me tell you, there's so much more to this iconic structure than meets the eye. In this blog post, I'm going to take you on a journey beyond the tourist trail and explore the rich history and culture of the Great Wall.
 
-## Introduction: The Great Wall - A Wonder of the World
+## The Great Wall: A Wonder of the World
 Have you ever wondered what it would be like to walk in the footsteps of ancient soldiers? To stand on a wall that has withstood the test of time for over 2,000 years? The Great Wall of China is not just a wall; it's a living, breathing testament to the ingenuity and perseverance of the Chinese people.
 
 As an American who has spent a decade in China, I've had the privilege of visiting the Great Wall multiple times. Each time, I'm struck by something new — not just its sheer magnitude, but the layers of history embedded in every brick. From the watchtowers that once signaled enemy approaches with smoke and fire, to the laborers who spent their lives building it, the Wall is far more than a photo backdrop. It's a story of survival, strategy, and human sacrifice that most visitors never hear.

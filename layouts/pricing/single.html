@@ -1,0 +1,23 @@
+{{- define "main" -}}
+<article class="post-single">
+    <header class="post-header">
+        {{ partial "breadcrumbs.html" . }}
+        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+        {{- if .Description }}
+        <div class="post-description">{{ .Description }}</div>
+        {{- end }}
+    </header>
+
+    {{- partial "pricing-table.html" . -}}
+
+    {{- /* ===== Email Subscribe Section ===== */ -}}
+    {{- partial "email-subscribe.html" . -}}
+
+    <footer class="post-footer"></footer>
+</article>
+
+<style>
+/* Pricing page: hide post-nav, share, related, affiliate — only show pricing table + subscribe */
+.post-content.md-content { display: none; }
+</style>
+{{- end -}}

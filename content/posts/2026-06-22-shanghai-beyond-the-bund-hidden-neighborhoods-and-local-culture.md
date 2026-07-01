@@ -26,7 +26,7 @@ TocOpen: "false"
 weight: "1"
 ---
 
-## Introduction
+## What Makes Shanghai's Hidden Neighborhoods Special
 Hey there, fellow travelers! You know, when I first landed in Shanghai, I was like a kid in a candy store. The Bund was this shiny, glitzy wonderland that screamed "modern China." But after a while, I started to feel like I was missing out on the real Shanghai. So, I decided to venture beyond the Bund and discover the hidden neighborhoods and local culture that make this city so special. And let me tell you, it was like opening a whole new box of Chinese treasures.
 
 Now, I know what you're thinking. "Joran, I'm not sure I can afford to travel to China. What are the visa requirements? And how much will it cost?" Well, don't worry, I've got you covered. In this blog post, I'll not only take you on a journey through Shanghai's hidden gems but also give you all the practical info you need to plan your trip. From visa requirements to transportation tips, budget guides to safety advice, I'll share everything I've learned during my 10+ years in China.

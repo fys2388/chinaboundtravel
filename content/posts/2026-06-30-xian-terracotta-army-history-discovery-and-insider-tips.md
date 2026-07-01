@@ -28,7 +28,7 @@ cover:
 
 ## Xi'an Terracotta Army: History, Discovery, and Insider Tips
 
-## Introduction
+## My First Encounter With the Terracotta Army
 I remember my first trip to Xi'an like it was yesterday. I had been living in Chengdu for a few years at that point, and I was eager to explore more of China's rich history and culture. As an American expat, I was no stranger to the wonders of this ancient land, but the Terracotta Army was something I had always dreamed of seeing. Little did I know that this visit would not only be a journey back in time but also a hilarious adventure filled with cultural misunderstandings and unexpected discoveries.
 
 The importance of the Terracotta Army cannot be overstated. It is not just a collection of ancient sculptures; it is a testament to the power and ingenuity of the Qin Dynasty. These life-sized warriors, horses, and chariots were buried with Emperor Qin Shi Huang in the 3rd century BC to protect him in the afterlife. The sheer scale and detail of this underground army are truly breathtaking, and it is no wonder that it is considered one of the greatest archaeological discoveries of the 20th century.
