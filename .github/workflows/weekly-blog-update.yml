@@ -133,8 +133,16 @@ jobs:
             echo "Changes pushed successfully"
           fi
 
-      # Cloudflare 部署由 deploy-cloudflare-pages.yml 自动处理（push 触发）
-      # 不在这里重复部署，避免两个 workflow 互相 cancel
+      # GITHUB_TOKEN push 不会触发其他 workflow 的 on:push（GitHub 安全限制）
+      # 所以需要显式触发 deploy-cloudflare-pages workflow
+      - name: Trigger Cloudflare Pages deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Triggering Cloudflare Pages deploy workflow ==="
+          gh workflow run deploy-cloudflare-pages.yml --ref main
+          echo "Deploy workflow triggered (may take 1-2 min to start)"
 
       - name: Install Pillow for cover image generation
         run: pip install Pillow
