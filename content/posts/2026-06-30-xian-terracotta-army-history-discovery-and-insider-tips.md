@@ -1,4 +1,5 @@
 ---
+
 title: "Xi'an Terracotta Army: History, Discovery, and Insider Tips"
 date: "2026-06-30T10:00:00+08:00"
 lastmod: "2026-06-30T10:00:00+08:00"
@@ -6,7 +7,7 @@ author: "Joran"
 slug: "xian-terracotta-army-history-discovery-and-insider-tips"
 tags:
   - ChinaTravel
-  - TravelGuide
+  - ChinaTravelGuide
   - China
   - EuropeToChina
 categories:

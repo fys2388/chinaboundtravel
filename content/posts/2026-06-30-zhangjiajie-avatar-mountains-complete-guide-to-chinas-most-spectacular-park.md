@@ -1,4 +1,5 @@
 ---
+
 title: "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park"
 date: "2026-06-30T10:00:00+08:00"
 lastmod: "2026-06-30T10:00:00+08:00"
@@ -6,12 +7,12 @@ author: "Joran"
 slug: "zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park"
 tags:
   - Zhangjiajie
-  - Avatar Mountains China
-  - Hunan Travel
-  - Tianmen Mountain
-  - China National Parks
-  - China Hiking
-  - Zhangjiajie Itinerary
+  - AvatarMountainsChina
+  - HunanTravel
+  - TianmenMountain
+  - ChinaNationalParks
+  - ChinaHiking
+  - ZhangjiajieItinerary
   - Yuanjiajie
 categories:
   - China

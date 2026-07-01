@@ -20,7 +20,7 @@ buildExpired = false
 
   rss = true
 
-  sitemapExclude = ["tags", "categories", "_draft", "member-month", "member-year", "cancel", "success", "search", "static-package", "refund-policy", "terms-of-service", "disclaimer", "privacy-policy"]
+  sitemapExclude = ["categories", "_draft", "member-month", "member-year", "cancel", "success", "search", "static-package", "refund-policy", "terms-of-service", "disclaimer", "privacy-policy"]
 
   [params.search]
     enable = true

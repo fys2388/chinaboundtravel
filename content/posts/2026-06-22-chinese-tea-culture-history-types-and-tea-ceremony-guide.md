@@ -1,4 +1,5 @@
 ---
+
 title: "Chinese Tea Culture: History, Types, and Tea Ceremony Guide"
 cover:
   image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.jpg"
@@ -8,7 +9,7 @@ author: "Joran"
 slug: "chinese-tea-culture-history-types-and-tea-ceremony-guide"
 tags:
   - ChinaTravel
-  - TravelGuide
+  - ChinaTravelGuide
   - China
   - TeaCulture
   - USToChina

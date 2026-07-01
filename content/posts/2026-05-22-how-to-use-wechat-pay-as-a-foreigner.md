@@ -3,8 +3,9 @@ title: How to Use WeChat Pay as a Foreigner
 date: '2026-05-22T10:00:00+08:00'
 draft: false
 tags:
-- China Travel
-- Travel Tips
+- ChinaTravel
+- WeChatPay
+- ChinaTravelTips
 categories:
 - China Travel Guide
 summary: How to Use WeChat Pay as a Foreigner...

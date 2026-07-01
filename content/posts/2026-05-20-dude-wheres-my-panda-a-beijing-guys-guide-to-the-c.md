@@ -5,8 +5,9 @@ draft: false
 weight: 10
 tags:
 - Chengdu
-- Panda Base
-- Sichuan Guide
+- ChengduPandaBase
+- SichuanGuide
+- ChinaTravel
 categories:
 - Destinations & Itineraries
 author: Joran

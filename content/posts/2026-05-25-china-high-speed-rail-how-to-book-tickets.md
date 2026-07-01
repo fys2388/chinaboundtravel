@@ -2,7 +2,7 @@
 title: "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)"
 date: 2026-05-25T10:00:00+08:00
 draft: false
-tags: ["China Travel", "Transportation", "High-Speed Rail", "Travel Tips"]
+tags: ["ChinaTravel", "ChinaTransportation", "HighSpeedRail", "ChinaTravelTips"]
 categories: ["China Travel Guide"]
 description: "CRH trains are the best way to cover China's vast distances. Here's exactly how to book tickets, choose seats, and avoid the rookie mistakes that cost me 3 hours in a Xi'an station."
 author: "Joran"

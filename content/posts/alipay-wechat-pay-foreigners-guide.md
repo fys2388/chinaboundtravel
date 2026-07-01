@@ -1,14 +1,15 @@
 ---
+
 title: "'2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'"
 date: "2026-05-19T12:00:00+08:00"
 draft: false
 tags:
-  - alipay
-  - wechat pay
-  - china payment
-  - foreigners in china
-  - travel tips
-  - china travel
+  - Alipay
+  - WeChatPay
+  - ChinaPayment
+  - ForeignersInChina
+  - ChinaTravelTips
+  - ChinaTravel
 categories:
   - guides
 summary: "Complete step-by-step guide for foreigners to use Alipay and WeChat Pay in China without a Chinese bank account. Learn how to bind foreign credit cards and pay like a local."

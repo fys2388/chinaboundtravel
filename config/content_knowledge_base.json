@@ -1,7 +1,7 @@
 {
-  "version": "1.0",
-  "last_updated": "2026-06-22T15:44:52.032348",
-  "total_entries": 0,
+  "version": "1.1",
+  "last_updated": "2026-07-01T01:49:51.979Z",
+  "total_entries": 23,
   "sources": [
     "xiaohongshu",
     "douyin",
@@ -13,20 +13,606 @@
   ],
   "knowledge_categories": {
     "destinations": [],
-    "transportation": [],
+    "transportation": [
+      {
+        "hash": "8e8917687a03370117cf04bf56899721",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-27-how-to-survive-chinese-train-station/",
+        "keyword": "How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)",
+        "slug": "2026-05-27-how-to-survive-chinese-train-station",
+        "tags": [
+          "[\"China Travel\", \"Transportation\", \"Train Station\", \"Travel Tips\"]"
+        ],
+        "category": "transportation",
+        "content": "I want to start with a confession: I have cried in a Chinese train station. Not proud of it. It was Xi'an North Station, 2019, I was 6 months into China life, my Chinese was terrible, and I was convinced my train had left without me when it had actually been delayed. The station staff found me crying by a vending machine. They gave me tea. They walked me to my platform. They were incredibly kind. But still  I cried. The good news: you will never need to cry in a Chinese train station if you read...",
+        "key_points": [
+          "Section: How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)",
+          "Section: Hey, Joran Here",
+          "Section: The Anatomy of a Chinese Train Station",
+          "Section: Step-by-Step: From Street to Platform",
+          "Section: How to Buy Tickets at the Station (In Person)",
+          "Section: The Most Common Problems & Solutions",
+          "Section: Station Vocabulary Cheat Sheet",
+          "Section: What NOT to Do at a Train Station",
+          "Section: Bottom Line",
+          "Look at your ticket/confirmation  it says \"X\" (Platform X) and \"\" (Carriage X)"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.953Z",
+        "relevance": 10
+      },
+      {
+        "hash": "94b992045339fe625eb4f608284e2cc3",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/",
+        "keyword": "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)",
+        "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
+        "tags": [
+          "[\"China Travel\", \"Transportation\", \"High-Speed Rail\", \"Travel Tips\"]"
+        ],
+        "category": "transportation",
+        "content": "I once spent 3 hours at Xi'an North Station because I showed up to the wrong terminal for a train that was boarding in 20 minutes. The station was the size of an airport. I sprinted. I sweat through my shirt. I missed the train. I bought another one at the counter and paid double. That was 2022. Since then, I've taken probably 200+ high-speed rail trips across China. I know the system inside and out. Let me save you from my own worst moments. China has the world's largest high-speed rail network...",
+        "key_points": [
+          "Section: China's High-Speed Rail: How to Book Tickets Like a Local",
+          "Section: Hey, Joran Here",
+          "Section: Why High-Speed Rail (CRH) is the Way to Go",
+          "Section: How to Book: Trip.com vs. 12306",
+          "Section: Understanding Train Numbers & Classes",
+          "Section: How to Actually Find Your Platform",
+          "Section: What to Bring on the Train",
+          "Section: Common Mistakes (Don't Be Me)",
+          "Section: My Recommended Routes (Beginners Start Here)",
+          "Section: Bottom Line"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.956Z",
+        "relevance": 10
+      },
+      {
+        "hash": "d2f1cc94b03765d9eee25f0b3de0c1a5",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
+        "keyword": "'2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'",
+        "slug": "alipay-wechat-pay-foreigners-guide",
+        "tags": [],
+        "category": "transportation",
+        "content": "Okay, real talk: the first time my wife (she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity. That was 2019. Today, I'm the guy who helps tourists at the Chengdu teah...",
+        "key_points": [
+          "Section: 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners",
+          "Section: Hey, Joran Here 👋",
+          "Section: Why You Need Mobile Payment in China",
+          "Section: Part 1: Setting Up Alipay for Foreigners",
+          "Section: Part 2: Setting Up WeChat Pay for Foreigners",
+          "Section: Part 3: Tips for Smooth Transactions",
+          "Section: Part 4: Alternatives When Mobile Payment Isn't Working",
+          "Section: Final Thoughts from Joran",
+          "Download Alipay from App Store or Google Play",
+          "Select \"Sign Up\" and choose your country/region"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.958Z",
+        "relevance": 10
+      },
+      {
+        "hash": "43b7479ecaea6df01db5c2f097578caf",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+        "keyword": "7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026",
+        "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+        "tags": [
+          "[\"china-itinerary\", \"beijing\", \"xian\", \"shanghai\", \"first-timer\", \"travel-guide\"]"
+        ],
+        "category": "transportation",
+        "content": "By Joran | 10+ years navigating China as a foreigner I remember my first China trip. I spent three weeks planning, made every rookie mistake in the book, and still ended up missing the Terracotta Army because I ran out of time. Don't be that guy. This 7-day itinerary is the exact route I've run with friends, family, and readers for years. It's tight, it's efficient, and it's designed to actually work  not some inflated 14-day itinerary that only backpacker blogs recommend. The core logic: Fly in...",
+        "key_points": [
+          "Section: The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)",
+          "Section: Day-by-Day Breakdown",
+          "Section: Quick-Reference Cost Table",
+          "Section: Gear I Actually Recommend for This Trip",
+          "Section: Final Verdict: Is 7 Days Enough?",
+          "Practical: 1  Temple of Heaven",
+          "Practical: 8 AM to beat the tour groups",
+          "Practical: 2  Forbidden City",
+          "Practical: 4 hours minimum  don",
+          "Practical: 3  Great Wall"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.973Z",
+        "relevance": 10
+      },
+      {
+        "hash": "074db94bf29fb57f490dd8093f613f11",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
+        "keyword": "PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?",
+        "slug": "paypal-alipay-wechat-pay-qr-code-support",
+        "tags": [
+          "[\"China Travel\", \"Payment\", \"Alipay\", \"WeChat Pay\", \"PayPal\", \"Tech\"]"
+        ],
+        "category": "transportation",
+        "content": "Okay, real talk. I almost spat out my coffee when I saw this headline: PayPal now lets you pay via Alipay and WeChat Pay QR codes. For context: I've been traveling back and forth to China for over a decade. Every single time, the payment situation for us foreigners has been... painful. You arrive with your fancy Western credit card, try to pay somewhere, and get hit with that awkward \"sorry, we only accept WeChat or Alipay\" look. And setting up those apps as a non-Chinese phone number? An absolu...",
+        "key_points": [
+          "Section: Dude, What Just Happened?",
+          "Section: What PayPal Actually Announced",
+          "Section: Why This Matters for Travelers",
+          "Section: How to Set It Up (Step by Step)",
+          "Section: Real World Test: I Tried It in Shanghai Last Month",
+          "Section: My Take After Years of Struggling with Payments in China",
+          "Section: Quick FAQ",
+          "Section: Bottom Line",
+          "You open PayPal and link your US/foreign credit card or bank account as normal",
+          "When checking out in China, you select Alipay or WeChat Pay as the payment method"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.979Z",
+        "relevance": 10
+      }
+    ],
     "accommodation": [],
-    "food": [],
-    "culture": [],
-    "tips": [],
+    "food": [
+      {
+        "hash": "57e32eed34629ead116a461aea55cfdf",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+        "keyword": "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance",
+        "slug": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+        "tags": [],
+        "category": "food",
+        "content": "Hey there, Aussie and Kiwi travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool! The hist...",
+        "key_points": [
+          "Section: Introduction",
+          "Section: History of Sichuan Hotpot",
+          "Section: Cultural Significance of Sichuan Hotpot",
+          "Section: Best Restaurants for Sichuan Hotpot",
+          "Section: Tips for Enjoying Sichuan Hotpot",
+          "Section: Conclusion",
+          "Practical: 10 years living in Chengdu",
+          "Practical: 16th century"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.934Z",
+        "relevance": 8
+      },
+      {
+        "hash": "eacef569b1e16696a2a76a205a3cd520",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+        "keyword": "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture",
+        "slug": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+        "tags": [],
+        "category": "food",
+        "content": "Now, I know what you're thinking. \"Joran, I'm not sure I can afford to travel to China. What are the visa requirements? And how much will it cost?\" Well, don't worry, I've got you covered. In this blog post, I'll not only take you on a journey through Shanghai's hidden gems but also give you all the practical info you need to plan your trip. From visa requirements to transportation tips, budget guides to safety advice, I'll share everything I've learned during my 10+ years in China. But first, l...",
+        "key_points": [
+          "Section: Introduction",
+          "Section: The Hidden Neighborhoods of Shanghai",
+          "Section: Local Culture in Shanghai",
+          "Section: Practical Information for Your Trip",
+          "Section: Conclusion",
+          "Practical: 1930s and are now a protected historical site"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.937Z",
+        "relevance": 6
+      },
+      {
+        "hash": "3c641d5791ebebcdad0c9695767b908c",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
+        "keyword": "The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)",
+        "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
+        "tags": [
+          "[\"China Travel\", \"Food & Drink\", \"App Guide\", \"Daily Life\", \"Travel Tips\"]"
+        ],
+        "category": "food",
+        "content": "In my first month in Chengdu, I ordered food delivery 47 times. I counted. Not because I'm lazy (okay, partly because I'm lazy) but because I was too scared to order in restaurants. My Chinese was \"nihao and thank you,\" and menus were walls of indecipherable characters. Meituan and Ele.me became my lifeline. Today, I order delivery like a local  and I want you to be able to do the same, even if your Chinese is worse than my martial arts (which, trust me, is saying something). This guide works wh...",
+        "key_points": [
+          "Section: The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)",
+          "Section: Hey, Joran Here",
+          "Section: Which App to Use: Meituan vs. Ele.me",
+          "Section: How to Set Up (English Guide)",
+          "Section: How to Order: Step by Step",
+          "Section: What to Order (For Beginners)",
+          "Section: The Delivery Process: What Happens Next",
+          "Section: Troubleshooting",
+          "Section: Delivery Fees & Tipping",
+          "Section: Bottom Line"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.954Z",
+        "relevance": 10
+      },
+      {
+        "hash": "6488650019b9936409e7488c18e65841",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+        "keyword": "Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s",
+        "slug": "western-sichuan-overland-camping-route",
+        "tags": [],
+        "category": "food",
+        "content": "Let me set the scene for you. It's 5:30 AM in Chengdu, and I'm standing in a parking lot next to my beat-up old SUV, staring at a mountain of camping gear. My wife, Xiao Li, is giving me \"the look\" - the one that says, \"You're crazy, but I'll go with you because I love you.\" Six years living in China, and I'd never ventured beyond the city limits of Chengdu. But when my friend Lao Wang showed me photos of the Tibetan Plateau, I knew I had to go. This wasn't just a road trip - this was going to b...",
+        "key_points": [
+          "Section: Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness",
+          "Section: Why Western Sichuan?",
+          "Section: Pre-Trip Prep: What You Really Need to Pack",
+          "Section: Day 1: Chengdu to Kangding (280km, ~5 hours)",
+          "Section: Day 2: Kangding to Tagong Grasslands (110km, ~3 hours)",
+          "Section: Day 3: Tagong to Litang (180km, ~5 hours)",
+          "Section: Day 4: Litang to Daocheng (200km, ~5 hours)",
+          "Section: Day 5: Daocheng Yading National Park",
+          "Section: Day 6: Yading to Kangding (350km, ~8 hours)",
+          "Section: Day 7: Kangding to Chengdu (280km, ~5 hours)"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.965Z",
+        "relevance": 10
+      },
+      {
+        "hash": "7431060533ceee87afe92057947aa446",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/",
+        "keyword": "How to Use WeChat Pay as a Foreigner",
+        "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
+        "tags": [],
+        "category": "food",
+        "content": "When I first landed in Chengdu, I walked into a tiny noodle shop, slid a crisp 100 RMB note across the counter, and the owner looked at me like I’d just offered him a live chicken. That’s when I learned the first rule of modern China: cash is for tourists who don’t know any better. WeChat Pay is the real currency. And if you’re a foreigner, the system feels like it was designed to test your patience, your bank account, and your ability to navigate a labyrinth of QR codes. But I’ve been there, do...",
+        "key_points": [
+          "Section: How to Use WeChat Pay as a Foreigner (Without Losing Your Mind)",
+          "Section: The Setup: Why Your Credit Card Will Hate You",
+          "Section: The QR Code Dance: Scanning Like a Local",
+          "Section: The Top-Up Trap: When Your Wallet Runs Dry",
+          "Section: The Security Scare: Don’t Panic, It’s Just WeChat",
+          "Section: The Final Frontier: WeChat Pay Outside China",
+          "Section: Joran’s Take",
+          "Practical: 100 RMB note across the counter",
+          "Practical: $5 bubble tea and got charged an extra",
+          "Practical: 15 for the privilege"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.975Z",
+        "relevance": 10
+      }
+    ],
+    "culture": [
+      {
+        "hash": "1952b3bed27d8b428abd894dc813ebd7",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/",
+        "keyword": "Chinese Tea Culture: History, Types, and Tea Ceremony Guide",
+        "slug": "chinese-tea-culture-history-types-and-tea-ceremony-guide",
+        "tags": [],
+        "category": "culture",
+        "content": "Ah, China, a land that seems to hold a billion secrets, where pandas roam with an air of nonchalance, and tea flows like a liquid poem through the veins of its cities and countryside. As a Californian who has spent over 10 years soaking up the unique charm of Chengdu, I've had the extraordinary privilege of delving deep into the enchanting world of Chinese tea culture. And let me tell you, it's a world that could rival the most elaborate of Tolkien's Middle-earth in its complexity and allure. I ...",
+        "key_points": [
+          "Section: Introduction",
+          "Section: History of Chinese Tea Culture",
+          "Section: Types of Chinese Tea",
+          "Section: Chinese Tea Ceremony Guide",
+          "Practical: 10 years soaking up the unique charm of Chengdu",
+          "Practical: 7th century",
+          "Practical: 80 degrees Celsius",
+          "Practical: 10 minutes or more"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.939Z",
+        "relevance": 8
+      },
+      {
+        "hash": "6719fed424a9de71aa98d7758ff750e5",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+        "keyword": "Xi'an Terracotta Army: History, Discovery, and Insider Tips",
+        "slug": "xian-terracotta-army-history-discovery-and-insider-tips",
+        "tags": [],
+        "category": "culture",
+        "content": "The importance of the Terracotta Army cannot be overstated. It is not just a collection of ancient sculptures; it is a testament to the power and ingenuity of the Qin Dynasty. These life-sized warriors, horses, and chariots were buried with Emperor Qin Shi Huang in the 3rd century BC to protect him in the afterlife. The sheer scale and detail of this underground army are truly breathtaking, and it is no wonder that it is considered one of the greatest archaeological discoveries of the 20th centu...",
+        "key_points": [
+          "Section: Introduction",
+          "Section: History of the Terracotta Army",
+          "Section: Discovery of the Terracotta Army",
+          "Section: Insider Tips for Visiting the Terracotta Army",
+          "Section: Cultural Insights",
+          "Section: Personal Stories",
+          "Section: Conclusion",
+          "Section: Related Links",
+          "[Chengdu Travel Tips](https://chinaboundtravel.com/posts/chengdu-travel-tips/)",
+          "[Best Time to Visit Chengdu](https://chinaboundtravel.com/posts/best-time-to-visit-chengdu/)"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.942Z",
+        "relevance": 10
+      },
+      {
+        "hash": "98b90e07cb4f2b9dc21e6fd24e288408",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
+        "keyword": "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy",
+        "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
+        "tags": [
+          "[\"China Travel\", \"Hangzhou\", \"City Guide\", \"Food & Drink\", \"Destinations\"]"
+        ],
+        "category": "culture",
+        "content": "When I told my Chengdu wife I was going to Hangzhou for a weekend, she got genuinely excited. \"You'll love it,\" she said. \"It's very chill. Very beautiful.\" She was right. Hangzhou is China's \"laid-back city\"  the place where people from Beijing and Shanghai escape to drink tea and look at water. West Lake is legitimately one of the most beautiful urban spaces I've been to anywhere in the world. And I've been to a lot of places. This guide covers what to do, what to skip, and how to not look lik...",
+        "key_points": [
+          "Section: Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy",
+          "Section: Hey, Joran Here",
+          "Section: Why Hangzhou Matters",
+          "Section: Day 1: West Lake & The City",
+          "Section: Day 2: G20 Legacy & Modern Hangzhou",
+          "Section: Getting There & Around",
+          "Section: Budget Breakdown",
+          "Section: What to Buy in Hangzhou",
+          "Section: Bottom Line",
+          "Walk into any tea house (they'll find you, honestly  it's aggressive but you can negotiate)"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.951Z",
+        "relevance": 10
+      }
+    ],
+    "tips": [
+      {
+        "hash": "551f899ce9df18910410588bcf301ac6",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/",
+        "keyword": "Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base",
+        "slug": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c",
+        "tags": [],
+        "category": "tips",
+        "content": "Okay, so you’re in Beijing. You’ve done the Wall, you’ve sweated through the Forbidden City, and you’ve eaten enough Peking duck to make a cardiologist weep. Now you’re thinking, “I came to China to see a panda, not a t-shirt with a panda on it.�?I get it. My wife, Xiao Li, is from Chengdu, and for the first three years of our marriage, she would not let me near the Panda Base because she said I’d “embarrass the family by trying to hug one.�? She was right. I definitely would have. But here’s th...",
+        "key_points": [
+          "Go on a weekday. Weekends are a zoo of humans, and the pandas get overwhelmed. They hide.",
+          "Practical: 00 AM active",
+          "Practical: 00 AM is what I call",
+          "Practical: 00 AM flight from Beijing Capital"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.976Z",
+        "relevance": 4
+      }
+    ],
     "seasons": [],
-    "budget": [],
-    "safety": [],
-    "visa": []
+    "budget": [
+      {
+        "hash": "d9ca3c3fe05e5039577ed14ee6c4b5e6",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/",
+        "keyword": "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park",
+        "slug": "zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park",
+        "tags": [],
+        "category": "budget",
+        "content": "As an American who's lived in Chengdu for over 10 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong. Standing on the Yuanjiajie viewing platform at sunrise, watching those sandstone pillars punch through a sea of clouds like something straight out of a James Cameron movie, I actually got emotional. It's one of those places where photos genuinely don't do it justice — you have to feel the mist on your face and hea...",
+        "key_points": [
+          "Section: Know Before You Go: Two Separate Parks (Not Three)",
+          "Section: 2026 Ticket Prices (No BS)",
+          "Section: How to Get There",
+          "Section: The 4-Day Itinerary That Actually Works",
+          "Section: Where to Stay",
+          "Section: What to Eat",
+          "Section: Best Time to Visit (Honestly)",
+          "Section: Things I Wish I Knew Before Going",
+          "Section: Estimated Budget for 3-4 Days",
+          "Section: Internet in Zhangjiajie (Yes, You'll Need It)"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.948Z",
+        "relevance": 10
+      },
+      {
+        "hash": "1c785f215eb1a6441227d3fe77e70120",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
+        "keyword": "Shanghai Bund & French Concession  2-Day Deep Dive",
+        "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
+        "tags": [
+          "[\"China Travel\", \"Shanghai\", \"City Guide\", \"Destinations\"]"
+        ],
+        "category": "budget",
+        "content": "The first time I saw Shanghai's skyline from the Bund, I genuinely thought I was looking at a movie set. Like, no city can actually look like this, right? Turns out, Shanghai said \"hold my beer\" and kept building upward. Six years later, this city still punches me in the face every time I visit  which is about twice a month from Chengdu. Wife has family there, I have a minor obsession with xiaolongbao. This guide is for people who want to actually understand Shanghai, not just collect Instagram ...",
+        "key_points": [
+          "Section: Shanghai Bund & French Concession  2-Day Deep Dive",
+          "Section: Hey, Joran Here",
+          "Section: Day 1: The Bund Nanjing Road The Riverwalk",
+          "Section: Day 2: City Exploration & Hidden Shanghai",
+          "Section: Joran's Practical Tips for Shanghai",
+          "Section: What to Actually Budget",
+          "Section: Bottom Line",
+          "The Bund ()  1.5km waterfront promenade along the Huangpu River",
+          "Puxi skyline  colonial-era Art Deco buildings (1920s-1930s)",
+          "Lujiazui (  the futuristic financial district with Shanghai Tower, World Financial Center, and Jin Mao Tower"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.949Z",
+        "relevance": 10
+      },
+      {
+        "hash": "bdc7d981748e0ee2df293cce2f92bdd1",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/",
+        "keyword": "How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)",
+        "slug": "internet-connection-china-esim-vpn-guide",
+        "tags": [],
+        "category": "budget",
+        "content": "Alright, let me tell you about the worst Wi-Fi experience of my life. It was 2019, my first week in Chengdu. I'd just landed, was desperately trying to message my wife (girlfriend at the time—she was picking me up from the airport) that I'd arrived. Except, of course, I couldn't access WhatsApp. Or Gmail. Or... basically anything that wasn't WeChat. So there I am, standing in the Chengdu airport, staring at a captive Wi-Fi portal that was asking me to enter a Chinese phone number to get a verifi...",
+        "key_points": [
+          "Section: How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN",
+          "Section: Hey, Joran Here 👋",
+          "Section: Understanding China's Internet Landscape",
+          "Section: Option 1: eSIM for China",
+          "Section: Option 2: Local SIM Card",
+          "Section: Option 3: VPN for China",
+          "Section: Comparison Table: eSIM vs. Local SIM vs. VPN",
+          "Section: Our Recommendations",
+          "Section: Final Tips for Staying Connected",
+          "Section: Final Thoughts from Joran"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.960Z",
+        "relevance": 10
+      },
+      {
+        "hash": "12afa338e1484bc82b05bb6aaffe1458",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/",
+        "keyword": "The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide",
+        "slug": "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
+        "tags": [],
+        "category": "budget",
+        "content": "The History and Culture of the Great Wall: Beyond the Tourist Trail Hey there, fellow Californians! Joran here, your friendly neighborhood China expert with over 10 years of living in Chengdu under my belt. You might be thinking, \"Joran, I've seen the pictures of the Great Wall. It's just a big wall, right?\" Well, let me tell you, there's so much more to this iconic structure than meets the eye. In this blog post, I'm going to take you on a journey beyond the tourist trail and explore the rich h...",
+        "key_points": [
+          "Section: Introduction: The Great Wall - A Wonder of the World",
+          "Section: The History of the Great Wall",
+          "Section: The Culture of the Great Wall",
+          "Section: Beyond the Tourist Trail: Hidden Gems and Local Secrets",
+          "Section: Transportation and Logistics",
+          "Section: Budgeting for Your Trip",
+          "Section: Safety Tips and Precautions",
+          "Section: Conclusion: A Journey of Discovery",
+          "Practical: 10 years of living in Chengdu under my belt",
+          "Practical: 7th century BC"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.963Z",
+        "relevance": 10
+      },
+      {
+        "hash": "c4e96a13200f7d4558bde2372aad5367",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/best-travel-insurance-china/",
+        "keyword": "Best Travel Insurance China",
+        "slug": "best-travel-insurance-china",
+        "tags": [],
+        "category": "budget",
+        "content": "+++\r\ntitle = \"Best Travel Insurance for China 2026 — Complete Buyer's Guide\"\r\ndescription = \"Compare the best travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters.\"\r\ndate = 2026-06-21\r\nlastmod = 2026-06-21\r\ncategories = [\"Practical Travel Tips\"]\r\ntags = [\"travel insurance\", \"china safety\", \"safetywing\", \"world nomads\", \"health insurance\", \"medical insurance China\", \"digital nomad insurance China\"]\r\n[cover]\r\n  image = \"/im...",
+        "key_points": [
+          "Section: ✅ My Top Pick for China Travel",
+          "Section: Do I Really Need Travel Insurance for China?",
+          "Section: What's Different About Travel Insurance in China?",
+          "Section: Trusted Partners",
+          "Section: Best Travel Insurance for China 2026 — Comparison",
+          "Section: Side-by-Side Comparison Table",
+          "Section: What Travel Insurance Does NOT Cover",
+          "Section: Frequently Asked Questions",
+          "Section: My Final Recommendation",
+          "Section: Get Started"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.968Z",
+        "relevance": 10
+      }
+    ],
+    "safety": [
+      {
+        "hash": "eaf8d9704f323aec4ec3cbb797a0e630",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+        "keyword": "Is China Safe for Tourists in 2026? An Honest Safety Assessment",
+        "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
+        "tags": [
+          "[\"china-safety\", \"china-travel-tips\", \"is-china-safe\", \"travel-advisory\", \"china-guide\"]"
+        ],
+        "category": "safety",
+        "content": "By Joran | 10+ years living in and traveling China Every safety article about China falls into one of two traps: either it paints China as a dystopian hellhole where tourists get arrested for nothing, or it overcorrects into \"actually it's super safe, nothing to worry about.\" The truth is more nuanced  and more useful. I've been robbed once (2014), scammed a dozen times, had food poisoning three times, and needed hospitals twice. I've also walked home alone at 3 AM through Chengdu's coolest neig...",
+        "key_points": [
+          "Section: The Most Honest China Safety Analysis You'll Find",
+          "Section: Risk Matrix: What Actually Threatens Tourists",
+          "Section: What Actually Went Wrong (And How to Avoid It)",
+          "Section: The Boring Stuff That Actually Keeps You Safe",
+          "Section: VPN Is a Safety Tool in China",
+          "Section: The Verdict",
+          "Use Didi, not taxis  English interface, upfront pricing, full record. Works in all major cities.",
+          "Practical: 3 AM through Chengdu",
+          "Practical: 800 RMB bill",
+          "Practical: 30 RMB for basic tea"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.972Z",
+        "relevance": 10
+      }
+    ],
+    "visa": [
+      {
+        "hash": "da0d174816093726a86f86fd5ae04979",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+        "keyword": "China Extends 144-hour Visa-free Transit Policy to More Countries",
+        "slug": "china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+        "tags": [],
+        "category": "visa",
+        "content": "I'm Joran, your friendly California guy who married a local Chengdu girl and has been living in China for years. Let me break down this latest immigration news for you in plain English. The National Immigration Administration announced today that the 144-hour visa-free transit policy will be extended to citizens from an additional 15 countries, making it easier for international travelers to visit China without a visa. Newly added countries: While the official list hasn't been fully released yet...",
+        "key_points": [
+          "Section: China Extends 144-hour Visa-free Transit Policy to More Countries",
+          "Section: What's New?",
+          "Section: My Take as a Local Expat",
+          "Section: How the 144-Hour Visa-free Transit Works",
+          "Section: Tips for Making the Most of Your 144 Hours",
+          "Section: Common Questions",
+          "Section: Final Thoughts",
+          "Section: Ready to Plan Your Trip?",
+          "Be a citizen of an eligible country: Check the official list before planning your trip",
+          "Have a valid passport: With at least 6 months validity"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.966Z",
+        "relevance": 10
+      },
+      {
+        "hash": "d089100b078150bd6bd4a12bfd8e548b",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/",
+        "keyword": "Ultimate Guide to China Visa for Tourists 2026",
+        "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
+        "tags": [
+          "[\"ChinaVisa\", \"TravelGuide\", \"ChinaTravel\", \"VisaApplication\"]"
+        ],
+        "category": "visa",
+        "content": "Planning a trip to China? Understanding the visa application process is crucial. This comprehensive guide covers everything you need to know about obtaining a Chinese tourist visa in 2026. China offers several types of visas for tourists, each with specific purposes and requirements: The standard tourist visa for leisure travel. Valid for 30-90 days depending on your nationality. Some nationalities can get multiple-entry visas valid for 6 months to 5 years. Who needs it: Anyone visiting China fo...",
+        "key_points": [
+          "Section: Ultimate Guide to China Visa for Tourists 2026",
+          "Section: Types of China Visas for Tourists",
+          "Section: Step-by-Step Application Process",
+          "Section: Tips for a Successful Application",
+          "Section: Common Questions",
+          "Section: Country-Specific Requirements",
+          "Section: Useful Resources",
+          "Section: Final Checklist",
+          "Go to the local PSB office",
+          "Bring your passport and visa"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.970Z",
+        "relevance": 10
+      },
+      {
+        "hash": "34afb6b51f3111a7b38015e177be34f0",
+        "source": "blog_post",
+        "url": "https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+        "keyword": "144-Hour Visa-Free Transit in China - The Complete 2026 Guide",
+        "slug": "144-hour-visa-free-transit-guide",
+        "tags": [],
+        "category": "visa",
+        "content": "Look, I'll be honest with you—I almost ruined my first China trip because I didn't understand this stupid 144-hour rule. I was flying from LA to Tokyo, saw a cheap layover in Shanghai, thought \"why not?\" without reading the fine print. Long story short: I ended up spending 6 hours at the immigration counter arguing my case while my connecting flight took off without me. That was 2019. These days, after marrying my wife (who grew up in Chengdu—she's the real expert here, I'm just the translator),...",
+        "key_points": [
+          "Section: 144-Hour Visa-Free Transit in China: The Complete 2026 Guide",
+          "Section: Hey, Joran Here 👋",
+          "Section: What Is the 144-Hour Visa-Free Transit?",
+          "Section: Which Cities and Ports Accept 144-Hour Transit?",
+          "Section: Eligibility: Can YOU Use It?",
+          "Section: Step-by-Step: How to Use the 144-Hour Rule",
+          "Section: The 3 Most Common Mistakes (Don't Be That Guy)",
+          "Section: 2026 Updates You Need to Know",
+          "Section: Travel Insurance Recommendation",
+          "Section: Still Have Questions?"
+        ],
+        "language": "en",
+        "learned_at": "2026-07-01T01:49:51.977Z",
+        "relevance": 10
+      }
+    ]
   },
   "learning_metrics": {
-    "total_learned": 0,
+    "total_learned": 23,
     "total_deduplicated": 0,
     "total_filtered": 0,
-    "last_learning_date": "2026-06-22"
+    "last_learning_date": "2026-07-01"
   }
 }

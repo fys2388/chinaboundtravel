@@ -1,4 +1,5 @@
 ---
+
 title: "The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide"
 cover:
   image: "https://picsum.photos/seed/657773/1792/1024"
@@ -8,7 +9,7 @@ author: "Joran"
 slug: "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide"
 tags:
   - ChinaTravel
-  - TravelGuide
+  - ChinaTravelGuide
   - China
   - USToChina
 categories:

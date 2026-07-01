@@ -4,9 +4,10 @@ date: '2026-05-19T10:00:00+08:00'
 draft: false
 weight: 1
 tags:
-- China Visa
-- Travel Policy
-- 2026 Travel
+- ChinaVisa
+- ChinaTravelPolicy
+- ChinaTravel2026
+- ChinaTransit
 categories:
 - China Essentials
 author: Joran

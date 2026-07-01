@@ -1,4 +1,5 @@
 ---
+
 title: "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture"
 cover:
   image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.jpg"
@@ -8,7 +9,7 @@ author: "Joran"
 slug: "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture"
 tags:
   - ChinaTravel
-  - TravelGuide
+  - ChinaTravelGuide
   - China
   - Shanghai
   - AustraliaToChina

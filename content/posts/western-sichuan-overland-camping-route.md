@@ -4,13 +4,13 @@ title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China
 date: '2026-06-02T10:00:00+08:00'
 draft: false
 tags:
-- Sichuan travel
-- camping in China
-- overland adventure
-- western Sichuan
-- China road trip
-- Tibetan Plateau
-- China travel
+- SichuanTravel
+- ChinaCamping
+- OverlandAdventure
+- WesternSichuan
+- ChinaRoadTrip
+- TibetanPlateau
+- ChinaTravel
 categories:
 - Guides
 summary: A complete 7-day overland camping guide to Western Sichuan's most breathtaking

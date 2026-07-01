@@ -625,6 +625,13 @@ class AIEngine:
         except:
             pass
         
+        # 6. 加载站点文章索引（用于生成准确的内链）
+        try:
+            with open(config_dir / "post_index.json", 'r', encoding='utf-8') as f:
+                data["post_index"] = json.load(f)
+        except:
+            data["post_index"] = []
+        
         return data
     
     def _build_prevention_rules(self):
@@ -764,10 +771,11 @@ class AIEngine:
         return related[:5]
     
     def generate_post(self, topic, geo_region):
-        region_info = {
-            "EU": "European travelers (UK, Germany, France, Italy, Spain)",
-            "US": "American travelers (California, major cities)",
-            "AU": "Australian and New Zealand travelers"
+        # Geo-region affects CONTENT DETAILS (currency, visa notes), NOT persona voice
+        region_context = {
+            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 144-hour visa-free transit in China", "audience_hint": "International travelers from Europe who want authentic, practical China travel advice"},
+            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 144-hour visa-free transit in China", "audience_hint": "American travelers looking for insider China tips from a fellow American expat"},
+            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 144-hour visa-free transit in China", "audience_hint": "Travelers from Australia and New Zealand seeking practical China travel guidance"}
         }
         
         # 构建SEO关键词提示（从外部数据）
@@ -793,16 +801,36 @@ class AIEngine:
                 knowledge_section += f"[{idx}] {item.get('keyword', '')}\n{key_points}\n\n"
             knowledge_section += "===== END RELATED KNOWLEDGE =====\n\n"
         
+        # 构建站点文章索引（用于准确内链）
+        post_index = self.external_data.get("post_index", [])
+        post_index_section = ""
+        if post_index:
+            post_index_section = "\n===== EXISTING SITE ARTICLES (USE THESE FOR INTERNAL LINKS) =====\n"
+            for post in post_index:
+                title = post.get("title", "")
+                slug = post.get("slug", "")
+                tags = ", ".join(post.get("tags", []))
+                post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)  (tags: {tags})\n"
+            post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
+        
         prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
 Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
-Target audience: {region_info[geo_region]}
+Audience: {region_context[geo_region]["audience_hint"]}
+
+IMPORTANT PERSONA RULES:
+- ALWAYS write as Joran (California native, 10+ years in Chengdu) - NEVER change your voice or greeting based on audience
+- NEVER start with "Hey there, [country] travelers!" or any geo-specific greeting
+- Use a universal, warm opening like "If you're planning a trip to..." or "Let me tell you about..." or start with a personal story
+- Geo-region affects ONLY practical details: mention {region_context[geo_region]["currency"]} for prices, note "{region_context[geo_region]["visa_note"]}" when discussing visas
+- Your California personality stays CONSISTENT regardless of who's reading
 
 SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
 
 User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
 {knowledge_section}
+{post_index_section}
 
 ===== CRITICAL PREVENTION RULES (MUST FOLLOW) =====
 {prevention_rules}
@@ -833,7 +861,7 @@ Requirements for HIGH-QUALITY CONTENT:
    - 5-7 DETAILED H2 sections (##) with SUBPOINTS and EXAMPLES
    - Each section must have PRACTICAL takeaways/summary
    - Memorable conclusion with call to action and personal reflection
-8. INTERNAL LINKS: Include at least 4 internal links like [topic](https://chinaboundtravel.com/posts/topic-slug/)
+8. INTERNAL LINKS: Include at least 4 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 4+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
 9. IMAGE PLACEHOLDERS: MUST include EXACTLY 2 image placeholders:
    - One RIGHT AFTER the introduction
    - One IN the MIDDLE of the article (around 40-60% mark)
@@ -857,11 +885,23 @@ Output ONLY the article content with proper Markdown formatting."""
         return self.client.chat(messages, max_tokens=3500)
     
     def rewrite_post(self, content, topic, geo_region):
-        region_info = {
-            "EU": "European travelers",
-            "US": "American travelers",
-            "AU": "Australian and New Zealand travelers"
+        # Geo-region affects content details, not persona voice
+        region_context = {
+            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 144-hour visa-free transit in China"},
+            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 144-hour visa-free transit in China"},
+            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 144-hour visa-free transit in China"}
         }
+        
+        # 构建站点文章索引（用于准确内链）
+        post_index = self.external_data.get("post_index", [])
+        post_index_section = ""
+        if post_index:
+            post_index_section = "\n===== EXISTING SITE ARTICLES (USE THESE FOR INTERNAL LINKS) =====\n"
+            for post in post_index:
+                title = post.get("title", "")
+                slug = post.get("slug", "")
+                post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)\n"
+            post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
         # 【深度版】增强重写Prompt
         prompt = f"""Rewrite and ENHANCE this blog post to be more in-depth and engaging.
@@ -871,17 +911,20 @@ Output ONLY the article content with proper Markdown formatting."""
 Requirements:
 1. Add proper H2 headings (##) for main sections if missing
 2. Expand content to minimum 1000 words with detailed insights
-3. Add at least 3 internal links to other China travel topics
+3. Add at least 3 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list below for valid URLs. NEVER invent URLs.
 4. Add EXACTLY 2 image placeholders:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
    - Format: [Image:detailed description of the scene, including subject, setting, mood]
 5. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
+   - IMPORTANT: NEVER start with geo-specific greetings like "Hey there, Aussie travelers!"
+   - Your voice stays CONSISTENT regardless of audience
 6. Add more personal anecdotes and actionable tips
 7. Original topic: {topic}
-8. Target audience: {region_info[geo_region]}
+8. Audience region: {region_context[geo_region]["origin"]} - use {region_context[geo_region]["currency"]} for prices
 9. MAIN FOCUS must be China travel
 
+{post_index_section}
 Output ONLY the rewritten article with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
@@ -1175,6 +1218,57 @@ class BlogGenerator:
             "TocOpen": "false",
             "weight": 1
         }
+    
+    def validate_content_quality(self, content, title, topic):
+        """Post-generation quality validation. Returns (passed, issues_list)."""
+        issues = []
+        
+        # 1. Word count check
+        words = content.split()
+        word_count = len(words)
+        if word_count < 1500:
+            issues.append(f"[P0] Word count {word_count} is below 1500 minimum (target: 2000+)")
+        elif word_count < 2000:
+            issues.append(f"[P1] Word count {word_count} is below 2000 target")
+        
+        # 2. Internal link count
+        internal_links = []
+        for match in re.finditer(r'\[([^\]]+)\]\((https?://chinaboundtravel\.com/posts/[^)]+)\)', content):
+            link_url = match.group(2)
+            link_text = match.group(1)
+            internal_links.append({"text": link_text, "url": link_url})
+        
+        if len(internal_links) < 3:
+            issues.append(f"[P1] Only {len(internal_links)} internal links (minimum: 3, target: 4+)")
+        
+        # 3. H2 heading structure
+        h2_headings = re.findall(r'^##\s+(.+)$', content, re.MULTILINE)
+        if len(h2_headings) < 4:
+            issues.append(f"[P1] Only {len(h2_headings)} H2 sections (target: 5-7)")
+        
+        # 4. Image placeholder check
+        image_placeholders = re.findall(r'\[Image:[^\]]+\]', content)
+        if len(image_placeholders) < 2:
+            issues.append(f"[P1] Only {len(image_placeholders)} image placeholders (target: 2)")
+        
+        # 5. Persona consistency check
+        geo_greetings = ["Aussie and Kiwi", "European travelers", "American travelers"]
+        for greeting in geo_greetings:
+            if greeting.lower() in content.lower():
+                issues.append(f"[P0] Geo-specific greeting detected: '{greeting}' - persona must be universal")
+        
+        # 6. Check for Chinese characters (encoding violation)
+        chinese_chars = re.findall(r'[\u4e00-\u9fff]', content)
+        if len(chinese_chars) > 3:
+            issues.append(f"[P0] {len(chinese_chars)} Chinese characters detected - use Pinyin/English only")
+        
+        # 7. Check for banned emoji/symbols
+        emoji_pattern = re.findall(r'[→✅❌🇨🇳←→⬆⬇🚀💡🌟⭐🔥❤️👍👎✓✗]', content)
+        if emoji_pattern:
+            issues.append(f"[P0] Emoji/symbols detected: {set(emoji_pattern)} - use ASCII only")
+        
+        passed = not any("[P0]" in issue for issue in issues)
+        return passed, issues
     
     def write_markdown(self, frontmatter, content, filepath):
         frontmatter_lines = ["---"]
