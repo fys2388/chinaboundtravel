@@ -1,4 +1,4 @@
-baseURL = 'https://www.chinaboundtravel.com/'
+baseURL = 'https://www.chinaboundtravel.com/' # auto-deploy trigger
 languageCode = 'en-us'
 title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
 theme = 'PaperMod'
