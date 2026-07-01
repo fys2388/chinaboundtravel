@@ -49,68 +49,90 @@ def classify_category(title: str) -> str:
 
 def generate_cover_image(title: str, slug: str, category: str) -> str:
     """
-    生成 1080x1350 竖版海报封面图，保存在 static/img/china-dest/<category>/
-    返回图片的完整 URL
+    生成真实风景照片封面图（不再使用纯文字海报）。
+    优先使用 Pollinations.ai 生成 AI 风景照片，兜底使用 Unsplash 高质量图片。
+    下载后保存到 static/img/china-dest/<category>/ 并返回完整 URL。
     """
     # 创建目录
-    cover_dir = BASE_DIR / COVER_BASE / category
+    cover_dir = BASE_DIR / "static" / "img" / "china-dest" / category
     cover_dir.mkdir(parents=True, exist_ok=True)
 
-    # 选择配色
-    color_idx = hash(title) % len(COLOR_SCHEMES)
-    bg_color, text_color, _ = COLOR_SCHEMES[color_idx]
+    # 构建场景描述
+    title_lower = title.lower()
+    scene_keywords = {
+        "chengdu": "Chengdu China cityscape pandas bamboo",
+        "beijing": "Beijing China Forbidden City Great Wall",
+        "greatwall": "Great Wall of China mountains scenic",
+        "zhangjiajie": "Zhangjiajie Avatar mountains sandstone pillars",
+        "xian": "Xian China Terracotta Army ancient city",
+        "shanghai": "Shanghai Bund skyline Oriental Pearl night",
+        "hangzhou": "Hangzhou West Lake pagoda garden traditional",
+        "guilin": "Guilin karst mountains Li River landscape",
+        "yunnan": "Yunnan rice terraces Lijiang ancient town",
+        "sichuan": "Sichuan mountains panda bamboo forest",
+    }
+    scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
-    # 创建画布
-    img = Image.new('RGB', (1080, 1350), color=bg_color)
-    draw = ImageDraw.Draw(img)
+    # 尝试 Pollinations.ai（免费 AI 图片生成）
+    prompt = f"Professional travel photography of {scene_desc}, cinematic composition, golden hour lighting, vibrant colors, photorealistic, 4k quality, no text no watermark"
+    seed = abs(hash(title)) % 1000000
+    image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux"
 
-    # 尝试加载字体，失败则用默认
     try:
-        title_font = ImageFont.truetype('arial.ttf', 72)
-        sub_font = ImageFont.truetype('arial.ttf', 40)
-    except (OSError, IOError):
-        try:
-            title_font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 72)
-            sub_font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
-        except (OSError, IOError):
-            title_font = ImageFont.load_default()
-            sub_font = ImageFont.load_default()
+        print(f"  [CoverGen] Downloading cover image via Pollinations.ai...")
+        r = requests.get(image_url, timeout=90, stream=True)
+        if r.status_code == 200 and "image" in r.headers.get("content-type", "").lower():
+            filename = f"{slug}.jpg"
+            image_path = cover_dir / filename
+            with open(image_path, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            file_size_kb = image_path.stat().st_size / 1024
+            print(f"  [CoverGen] Saved: {filename} ({file_size_kb:.0f} KB)")
+            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+        else:
+            print(f"  [CoverGen] Pollinations failed: HTTP {r.status_code}")
+    except Exception as e:
+        print(f"  [CoverGen] Pollinations error: {e}")
 
-    # 标题自动换行
-    title_lines = wrap_text(title, 18)
+    # 兜底：使用 Unsplash Source（高质量真实照片）
+    print(f"  [CoverGen] Falling back to Unsplash...")
+    unsplash_url = f"https://source.unsplash.com/1792x1024/?{requests.utils.quote(scene_desc.replace(',', ''))}"
+    try:
+        r = requests.get(unsplash_url, timeout=60, stream=True, allow_redirects=True)
+        if r.status_code == 200 and "image" in r.headers.get("content-type", "").lower():
+            filename = f"{slug}.jpg"
+            image_path = cover_dir / filename
+            with open(image_path, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            file_size_kb = image_path.stat().st_size / 1024
+            print(f"  [CoverGen] Saved (Unsplash): {filename} ({file_size_kb:.0f} KB)")
+            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+        else:
+            print(f"  [CoverGen] Unsplash failed: HTTP {r.status_code}")
+    except Exception as e:
+        print(f"  [CoverGen] Unsplash error: {e}")
 
-    # 垂直居中绘制标题
-    line_height = 90
-    total_height = len(title_lines) * line_height
-    start_y = (1350 - total_height) // 2 - 50
+    # 最后兜底：Picsum（随机高质量照片）
+    picsum_url = f"https://picsum.photos/seed/{seed}/1792/1024"
+    try:
+        r = requests.get(picsum_url, timeout=30, stream=True)
+        if r.status_code == 200:
+            filename = f"{slug}.jpg"
+            image_path = cover_dir / filename
+            with open(image_path, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            file_size_kb = image_path.stat().st_size / 1024
+            print(f"  [CoverGen] Saved (Picsum): {filename} ({file_size_kb:.0f} KB)")
+            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+    except Exception as e:
+        print(f"  [CoverGen] Picsum error: {e}")
 
-    for i, line in enumerate(title_lines):
-        bbox = draw.textbbox((0, 0), line, font=title_font)
-        text_width = bbox[2] - bbox[0]
-        x = (1080 - text_width) // 2
-        y = start_y + i * line_height
-        draw.text((x, y), line, fill=text_color, font=title_font)
-
-    # 绘制副标题 / 网站信息
-    sub_text = "chinaboundtravel.com"
-    bbox = draw.textbbox((0, 0), sub_text, font=sub_font)
-    sw = bbox[2] - bbox[0]
-    sx = (1080 - sw) // 2
-    sy = start_y + total_height + 60
-    draw.text((sx, sy), sub_text, fill=text_color, font=sub_font, alpha=200)
-
-    # 上下装饰线
-    line_y_top = start_y - 40
-    line_y_bottom = sy + 80
-    draw.rectangle([150, line_y_top, 930, line_y_top + 4], fill=text_color)
-    draw.rectangle([150, line_y_bottom, 930, line_y_bottom + 4], fill=text_color)
-
-    # 保存为 jpg
-    filename = f"{slug}.jpg"
-    image_path = cover_dir / filename
-    img.save(image_path, 'JPEG', quality=90, optimize=True)
-
-    return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+    # 所有方法失败，返回空
+    print(f"  [CoverGen] FAILED: all image sources failed")
+    return ""
 
 
 def wrap_text(text, max_chars):
