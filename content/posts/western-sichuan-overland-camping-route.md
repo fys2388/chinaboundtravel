@@ -11,6 +11,7 @@ tags:
 - ChinaRoadTrip
 - TibetanPlateau
 - ChinaTravel
+- sichuan
 categories:
 - Guides
 summary: A complete 7-day overland camping guide to Western Sichuan's most breathtaking

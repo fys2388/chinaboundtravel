@@ -2,7 +2,7 @@
 title: "Shanghai Bund & French Concession  2-Day Deep Dive"
 date: 2026-05-24T09:00:00+08:00
 draft: false
-tags: ["ChinaTravel", "Shanghai", "ChinaCityGuide", "ChinaDestinations"]
+tags: ["ChinaTravel", "Shanghai", "ChinaCityGuide", "ChinaDestinations", "shanghai"]
 categories: ["China Travel Guide"]
 description: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
 author: "Joran"

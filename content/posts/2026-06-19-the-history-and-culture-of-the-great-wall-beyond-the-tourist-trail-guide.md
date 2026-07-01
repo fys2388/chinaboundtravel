@@ -12,6 +12,7 @@ tags:
   - ChinaTravelGuide
   - China
   - USToChina
+  - beijing
 categories:
   - China
 geo: "US"

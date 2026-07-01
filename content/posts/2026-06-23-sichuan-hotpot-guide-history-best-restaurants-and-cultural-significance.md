@@ -12,6 +12,8 @@ tags:
   - Sichuan
   - Chengdu
   - AustraliaToChina
+  - sichuan
+  - chengdu
 categories:
   - China
 geo: "AU"

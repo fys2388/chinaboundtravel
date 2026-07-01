@@ -13,6 +13,7 @@ tags:
   - China
   - Shanghai
   - AustraliaToChina
+  - shanghai
 categories:
   - China
 geo: "AU"

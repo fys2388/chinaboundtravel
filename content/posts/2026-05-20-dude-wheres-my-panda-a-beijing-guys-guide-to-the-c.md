@@ -8,6 +8,7 @@ tags:
 - ChengduPandaBase
 - SichuanGuide
 - ChinaTravel
+- chengdu
 categories:
 - Destinations & Itineraries
 author: Joran

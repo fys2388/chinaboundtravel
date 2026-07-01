@@ -9,6 +9,7 @@ tags:
   - TravelGuide
   - China
   - USToChina
+  - chengdu
 categories:
   - China
 geo: "US"

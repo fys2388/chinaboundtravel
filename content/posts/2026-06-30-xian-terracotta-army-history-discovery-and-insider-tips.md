@@ -10,6 +10,7 @@ tags:
   - ChinaTravelGuide
   - China
   - EuropeToChina
+  - xian
 categories:
   - China
 geo: "EU"
