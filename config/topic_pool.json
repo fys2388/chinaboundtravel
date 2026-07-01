@@ -318,10 +318,10 @@
         "china food tour"
       ],
       "priority": 4,
-      "status": "pending",
+      "status": "used",
       "source": "competitor",
       "created_at": "2026-07-01T12:25:00",
-      "used_at": null,
+      "used_at": "2026-07-01T06:28:47.264581",
       "depth": "deep"
     },
     {

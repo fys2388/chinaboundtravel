@@ -1,11 +1,17 @@
 {
-  "month_post_count": 0,
+  "month_post_count": 1,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-01 04:22:40",
+  "last_social_publish": "2026-07-01 06:28:49",
   "daily_social_publish_date": "2026-07-01",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
-  "history_topics": [],
+  "history_topics": [
+    {
+      "topic": "Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls",
+      "geo_region": "US",
+      "create_date": "2026-07-01"
+    }
+  ],
   "keyword_convert_rate": {
     "visa requirements": 0.15,
     "best time to visit": 0.12,
