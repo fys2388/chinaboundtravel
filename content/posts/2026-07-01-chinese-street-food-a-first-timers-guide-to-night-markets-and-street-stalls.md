@@ -25,7 +25,7 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg"
 ---
 
-# Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls
+## Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls
 
 ## Introduction
 Let me take you back to that fateful day when I first set foot in a Chinese night market. I was a wide-eyed Californian tourist who felt like an alien in a strange new world. As I stepped into the market, the air hit me like a spicy, flavorful wave. The thick aroma of various spices filled my nostrils, the sounds of vendors passionately shouting their wares echoed in my ears, and the sight of colorful lights twinkling everywhere was like something straight out of a fairytale movie. I was right in the middle of an adventure that I would never forget.

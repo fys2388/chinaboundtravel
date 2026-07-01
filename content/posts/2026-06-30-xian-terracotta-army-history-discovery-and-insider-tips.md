@@ -26,7 +26,7 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.jpg"
 ---
 
-# Xi'an Terracotta Army: History, Discovery, and Insider Tips
+## Xi'an Terracotta Army: History, Discovery, and Insider Tips
 
 ## Introduction
 I remember my first trip to Xi'an like it was yesterday. I had been living in Chengdu for a few years at that point, and I was eager to explore more of China's rich history and culture. As an American expat, I was no stranger to the wonders of this ancient land, but the Terracotta Army was something I had always dreamed of seeing. Little did I know that this visit would not only be a journey back in time but also a hilarious adventure filled with cultural misunderstandings and unexpected discoveries.

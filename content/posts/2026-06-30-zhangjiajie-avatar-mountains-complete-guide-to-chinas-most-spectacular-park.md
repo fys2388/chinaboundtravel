@@ -28,7 +28,7 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
 ---
 
-# Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park
+## Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park
 
 As an American who's lived in Chengdu for over 10 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong.
 

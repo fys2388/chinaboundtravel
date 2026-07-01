@@ -1297,6 +1297,15 @@ class BlogGenerator:
     def write_markdown(self, frontmatter, content, filepath):
         # Auto-fix hyphen-space artifacts before writing (AI generation pattern)
         content = re.sub(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content)
+
+        # Auto-fix duplicate H1: Hugo renders title from frontmatter as H1,
+        # so the first # heading in content should be ## (H2) instead
+        title = frontmatter.get('title', '')
+        if title:
+            # Match first H1 that matches the title (case-insensitive)
+            h1_pattern = re.compile(r'^# ' + re.escape(title) + r'\s*$', re.MULTILINE | re.IGNORECASE)
+            if h1_pattern.search(content):
+                content = h1_pattern.sub(r'## ' + title, content, count=1)
         
         frontmatter_lines = ["---"]
         for key, value in frontmatter.items():
