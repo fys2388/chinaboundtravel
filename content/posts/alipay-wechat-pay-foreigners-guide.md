@@ -1,4 +1,4 @@
----
+﻿---
 
 title: "'2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'"
 date: "2026-05-19T12:00:00+08:00"
@@ -25,13 +25,13 @@ Okay, real talk: the first time my wife (she's from Chengdu, married 6 years now
 
 That was 2019. Today, I'm the guy who helps tourists at the Chengdu teahouse figure this stuff out—because let me tell you, paying as a foreigner in China without mobile payment is like trying to eat hot pot with a fork. Technically possible, but you're going to have a bad time and everyone around you will feel awkward.
 
-Good news: it got WAY easier in 2026. Let me walk you through exactly what to do. For a deeper dive specifically on WeChat Pay, check out our [WeChat Pay for foreigners guide](https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/).
+Good news: it got WAY easier in 2026. Let me walk you through exactly what to do. For a deeper dive specifically on WeChat Pay, check out our [WeChat Pay for foreigners guide](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/).
 
 ## Why You Need Mobile Payment in China
 
 - **Convenience**: Street vendors, restaurants, taxis, and even small shops prefer mobile payments
 - **Safety**: No need to carry large amounts of cash
-- **Essential Services**: Many attractions, transportation, and [delivery apps](https://chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
+- **Essential Services**: Many attractions, transportation, and [delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
 - **Discounts**: Exclusive offers and cashback for mobile payments
 
 ---
@@ -135,7 +135,7 @@ Alipay requires real-name verification to unlock full features:
 - **UnionPay Cards**: Widely accepted at ATMs and larger stores
 - **Cash**: Always carry some RMB for small vendors
 - **Travel Cards**: Prepaid cards designed for China travel
-- **PayPal + Alipay/WeChat Pay**: PayPal now supports paying via Alipay and WeChat Pay QR codes — see our [PayPal integration guide](https://chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/) for details
+- **PayPal + Alipay/WeChat Pay**: PayPal now supports paying via Alipay and WeChat Pay QR codes — see our [PayPal integration guide](posts/paypal-alipay-wechat-pay-qr-code-support/) for details
 
 ---
 
@@ -143,12 +143,12 @@ Alipay requires real-name verification to unlock full features:
 
 With this guide, you're ready to navigate China's cashless economy like a pro. Both Alipay and WeChat Pay have made significant improvements for foreign users in 2026, making it easier than ever to pay without a Chinese bank account.
 
-**Pro Tip**: Set up both apps before your trip to avoid airport stress! You'll also want to get your [internet connectivity sorted](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) before arrival, and consider [travel insurance](https://chinaboundtravel.com/posts/best-travel-insurance-china/) in case anything goes wrong.
+**Pro Tip**: Set up both apps before your trip to avoid airport stress! You'll also want to get your [internet connectivity sorted](posts/internet-connection-china-esim-vpn-guide/) before arrival, and consider [travel insurance](posts/best-travel-insurance-china/) in case anything goes wrong.
 
 ### Further Reading
 
-- [How to Use WeChat Pay as a Foreigner](https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — The comprehensive WeChat-specific walkthrough
-- [Chinese Food Delivery Apps Guide](https://chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) — Meituan and Ele.me require Alipay or WeChat Pay
+- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — The comprehensive WeChat-specific walkthrough
+- [Chinese Food Delivery Apps Guide](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) — Meituan and Ele.me require Alipay or WeChat Pay
 
 And if you hit a wall? (Because you will, that's just part of the China experience.) Head to any 7-Eleven or hotel lobby—they've seen every foreigner payment problem in the book and usually know exactly how to help.
 

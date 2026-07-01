@@ -1,4 +1,4 @@
----
+﻿---
 
 title: "Xi'an Terracotta Army: History, Discovery, and Insider Tips"
 date: "2026-06-30T10:00:00+08:00"
@@ -114,7 +114,7 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 ![A panoramic view of the Terracotta Army, with rows and rows of warriors stretching out into the distance. The sky is blue, and the sun is shining, creating a beautiful and awe-inspiring scene.](/img/china-dest/xian/terracotta-army-panoramic.jpg)
 
 ## Related Links
-- [Chengdu Panda Adventure Guide](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [Panda Base Visit Tips](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [Is China Safe for Tourists?](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/)
-- [Chengdu Panda Guide](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Chengdu Panda Adventure Guide](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Panda Base Visit Tips](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/)
+- [Chengdu Panda Guide](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Best Travel Insurance China"
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/best-travel-insurance-china.jpg"
@@ -218,7 +218,7 @@ After 10+ years of travel and 2+ years of personal SafetyWing use, here's my adv
 
 {{< brand-logos >}}
 
-Still have questions? Drop me a line through the [contact form](/contact/). I've helped hundreds of travelers find the right coverage.
+Still have questions? Drop me a line by [Contacting Us](mailto:support@chinaboundtravel.com). I've helped hundreds of travelers find the right coverage.
 
 *Safe travels! — Joran*
 
@@ -234,8 +234,8 @@ Still have questions? Drop me a line through the [contact form](/contact/). I've
 
 ## You Might Also Like
 
-- [144-Hour Visa-Free Transit Guide](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
-- [How to Use WeChat Pay as a Foreigner](https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — Step-by-step guide to mobile payments in China
-- [China High-Speed Rail Booking Guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Book train tickets like a pro
-- [Ultimate China Visa Guide for Tourists](https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough
-- [Is China Safe for Tourists?](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Honest safety assessment for 2026
+- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
+- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — Step-by-step guide to mobile payments in China
+- [China High-Speed Rail Booking Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Book train tickets like a pro
+- [Ultimate China Visa Guide for Tourists](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough
+- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Honest safety assessment for 2026

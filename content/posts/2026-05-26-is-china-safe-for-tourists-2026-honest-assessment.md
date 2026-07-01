@@ -1,4 +1,4 @@
----
+﻿---
 title: "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
 description: "Crime rates, food safety, political stability, scams targeting tourists, healthcare access, and emergency contacts  a no-BS safety guide for foreign travelers in China in 2026."
 date: "2026-05-27"
@@ -34,7 +34,7 @@ cover:
 
 Every safety article about China falls into one of two traps: either it paints China as a dystopian hellhole where tourists get arrested for nothing, or it overcorrects into "actually it's super safe, nothing to worry about." The truth is more nuanced  and more useful.
 
-I've been robbed once (2014), scammed a dozen times, had food poisoning three times, and needed hospitals twice. After the hospital incident, I learned the hard way why [travel insurance for China](https://chinaboundtravel.com/posts/best-travel-insurance-china/) is non-negotiable. I've also walked home alone at 3 AM through Chengdu's coolest neighborhoods without a single uncomfortable moment.
+I've been robbed once (2014), scammed a dozen times, had food poisoning three times, and needed hospitals twice. After the hospital incident, I learned the hard way why [travel insurance for China](posts/best-travel-insurance-china/) is non-negotiable. I've also walked home alone at 3 AM through Chengdu's coolest neighborhoods without a single uncomfortable moment.
 
 **Here's the actual risk matrix for 2026.**
 
@@ -51,7 +51,7 @@ I've been robbed once (2014), scammed a dozen times, had food poisoning three ti
 | Political risk |  Negligible | Zero tourist-targeted incidents | Just don't be stupid |
 | Medical emergency |  Moderate | Language barrier, cost if uninsured | Travel insurance + hotel card |
 
-For a deep dive on choosing the right coverage, see our [best travel insurance for China guide](https://chinaboundtravel.com/posts/best-travel-insurance-china/).
+For a deep dive on choosing the right coverage, see our [best travel insurance for China guide](posts/best-travel-insurance-china/).
 | Traffic/accident |  Significant | Pedestrian culture shock | Look BOTH ways, always |
 
 ---
@@ -91,7 +91,7 @@ Airport taxi refused meter, wanted 150 RMB for a 60 RMB ride.
 
 ## VPN Is a Safety Tool in China
 
-This is not optional. Gmail, Google Maps, Google Translate, YouTube, Facebook, Instagram, WhatsApp — all blocked. If you have a medical emergency and can't access your travel insurance app, that's a safety issue. Our [complete eSIM & VPN guide for China](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) covers all the options.
+This is not optional. Gmail, Google Maps, Google Translate, YouTube, Facebook, Instagram, WhatsApp — all blocked. If you have a medical emergency and can't access your travel insurance app, that's a safety issue. Our [complete eSIM & VPN guide for China](posts/internet-connection-china-esim-vpn-guide/) covers all the options.
 
 I use {{< vpn-link "NordVPN" />}}. It consistently works, has 24/7 live support, and you can install it on up to 8 devices. Once you're in China, you can't download VPN apps  install it BEFORE arrival.
 
@@ -103,17 +103,17 @@ For an eSIM with data that works in China, I use {{< esim-link "Airalo eSIM" />}
 
 China in 2026 is statistically safer for tourists than most people think. Violent crime is near-zero. The real risks are petty scams, gastrointestinal adjustment, and traffic  all manageable with basic awareness.
 
-The number one mistake first-timers make: being so paranoid about safety that they miss the experience. Don't be that person either. If this is your first trip, our [7-day Beijing-Xi'an-Shanghai itinerary](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is a safe and efficient introduction to China's top cities.
+The number one mistake first-timers make: being so paranoid about safety that they miss the experience. Don't be that person either. If this is your first trip, our [7-day Beijing-Xi'an-Shanghai itinerary](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is a safe and efficient introduction to China's top cities.
 
 ### Further Reading
 
-- [144-Hour Visa-Free Transit Guide](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) — Use China's visa-free transit policy to visit safely and legally
-- [How to Survive a Chinese Train Station](https://chinaboundtravel.com/posts/2026-05-27-how-to-survive-chinese-train-station/) — Stations are safe but confusing; this guide helps you navigate them
-- [Alipay & WeChat Pay for Foreigners](https://chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/) — Going cashless is actually safer than carrying large amounts of RMB
+- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) — Use China's visa-free transit policy to visit safely and legally
+- [How to Survive a Chinese Train Station](posts/2026-05-27-how-to-survive-chinese-train-station/) — Stations are safe but confusing; this guide helps you navigate them
+- [Alipay & WeChat Pay for Foreigners](posts/alipay-wechat-pay-foreigners-guide/) — Going cashless is actually safer than carrying large amounts of RMB
 
 **Go. See it. Use your head.**
 
-And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi'an  plus my personal contact numbers for licensed drivers and English-speaking guides in each city  check the [ChinaBound Travel Members Hub](/member).
+And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi'an  plus my personal contact numbers for licensed drivers and English-speaking guides in each city  check the [Members Hub — View Pricing Plans](/pricing/).
 
  Annual pass $49.99. Less than one night in a Beijing hotel. Comes with the full offline China travel toolkit.
 

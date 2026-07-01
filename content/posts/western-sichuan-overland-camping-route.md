@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
   Most Epic Wilderness'
 date: '2026-06-02T10:00:00+08:00'
@@ -29,7 +29,7 @@ Six years living in China, and I'd never ventured beyond the city limits of Chen
 
 ## Why Western Sichuan?
 
-Western Sichuan (Chuan Xi) is China's best-kept secret. While tourists flock to Lijiang and [Zhangjiajie](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/), the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
+Western Sichuan (Chuan Xi) is China's best-kept secret. While tourists flock to Lijiang and [Zhangjiajie](posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/), the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
 
 But let's be real - this isn't a trip for the faint of heart. You're going to drive on roads that make rollercoasters look tame. You're going to camp at altitudes where breathing feels like running a marathon. And yes, you might get a little (okay, a lot) carsick.
 
@@ -44,7 +44,7 @@ Let me save you some pain. I made every mistake in the book on my first trip, so
 - **Warm layers**: Even in summer, nights drop below freezing. Bring a down jacket, thermal underwear, and wool socks.
 - **Sunscreen & lip balm**: The UV at high altitude is no joke. I forgot lip balm once - never again. My lips cracked so bad I couldn't smile for a week.
 - **Tire repair kit**: You will hit rocks. You will get flats. Be prepared.
-- **Portable charger**: Power outlets are few and far between. Get something with at least 20,000 mAh. You'll also want to sort out your [internet connectivity](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) before heading into remote areas.
+- **Portable charger**: Power outlets are few and far between. Get something with at least 20,000 mAh. You'll also want to sort out your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) before heading into remote areas.
 - **Cash**: Most villages don't take Alipay. Bring plenty of RMB - ATMs are rare.
 
 ### Pro Tip: Renting a Vehicle
@@ -67,7 +67,7 @@ Once you pass Luding, the road starts climbing. This is where the fun begins. Th
 ### Overnight: Kangding
 Kangding (Kang Ding) is your first taste of Tibetan culture. Stay at {{< booking-link "Book Hotels in Kangding" />}} - they have cozy rooms with mountain views.
 
-**Pro Tip**: Grab dinner at a local Tibetan restaurant. Try *shaokao* (Tibetan BBQ) with yak meat — it's surprisingly delicious. For more on Sichuan's legendary food culture, see our [Sichuan hotpot guide](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
+**Pro Tip**: Grab dinner at a local Tibetan restaurant. Try *shaokao* (Tibetan BBQ) with yak meat — it's surprisingly delicious. For more on Sichuan's legendary food culture, see our [Sichuan hotpot guide](posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
 
 ## Day 2: Kangding to Tagong Grasslands (110km, ~3 hours)
 
@@ -162,19 +162,19 @@ If you have time, detour to Leshan to see the giant Buddha. It's the largest sto
 
 ### Internet & Communication
 - **Cell service**: Most areas have 4G, but it's spotty
-- **VPN**: You'll need one for Google Maps and messaging apps. See our [eSIM & VPN guide](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) for recommendations that work in China.
+- **VPN**: You'll need one for Google Maps and messaging apps. See our [eSIM & VPN guide](posts/internet-connection-china-esim-vpn-guide/) for recommendations that work in China.
 
 ## Final Thoughts: Why This Trip Changed My Life
 
 When I first came to China, I thought I knew what "adventure" meant. Then I drove through Western Sichuan.
 
-This isn't just a road trip — it's a journey into the heart of China's wild west. If you're starting from Chengdu, you might also want to visit the [Chengdu Panda Base](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/) before heading west.
+This isn't just a road trip — it's a journey into the heart of China's wild west. If you're starting from Chengdu, you might also want to visit the [Chengdu Panda Base](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/) before heading west.
 
 ### Further Reading
 
-- [Best Travel Insurance for China](https://chinaboundtravel.com/posts/best-travel-insurance-china/) — Essential for high-altitude adventure travel; World Nomads covers trekking above 5,000m
-- [Is China Safe for Tourists in 2026?](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Western Sichuan is safe but remote; know the risks
-- [China High-Speed Rail Guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Get to Chengdu by rail from Beijing or Shanghai to start your road trip
+- [Best Travel Insurance for China](posts/best-travel-insurance-china/) — Essential for high-altitude adventure travel; World Nomads covers trekking above 5,000m
+- [Is China Safe for Tourists in 2026?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Western Sichuan is safe but remote; know the risks
+- [China High-Speed Rail Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Get to Chengdu by rail from Beijing or Shanghai to start your road trip
 
 You'll meet people who live lives completely different from yours. You'll see landscapes that make you question if you're still on Earth. And you'll come back changed - humbler, more grateful, and with stories that will last a lifetime.
 

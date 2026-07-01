@@ -1,4 +1,4 @@
----
+﻿---
 title: 144-Hour Visa-Free Transit in China - The Complete 2026 Guide
 date: '2026-05-19T10:00:00+08:00'
 draft: false
@@ -31,11 +31,11 @@ That was 2019. These days, after marrying my wife (who grew up in Chengdu—she'
 
 China offers a **144-hour (6-day) visa exemption** for travelers from [55+ eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed—if you're only staying in a designated zone for up to 6 days.
 
-Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world. If you need a proper tourist visa instead, check out our [complete guide to China visas for tourists](https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
+Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world. If you need a proper tourist visa instead, check out our [complete guide to China visas for tourists](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
 
 ## Which Cities and Ports Accept 144-Hour Transit?
 
-**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 144-hour visa-free transit policy to even more countries](https://chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
+**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 144-hour visa-free transit policy to even more countries](posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
 
 ### Beijing/Tianjin/Hebei
 - **Beijing Capital Airport** (PEK/PKX)
@@ -59,7 +59,7 @@ Many more cities added in 2024-2025 expansion.
 
 **>>> [Check the full list of eligible ports on China Immigration](https://www.immd.gov.hk/eng/visa_descriptions/china-144-hour-visa-free.html) <<<**
 
-If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & French Concession guide](https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) covers the must-see spots. And if you're planning a longer trip that goes beyond the transit window, our [7-day Beijing-Xi'an-Shanghai itinerary](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the perfect next step.
+If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & French Concession guide](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) covers the must-see spots. And if you're planning a longer trip that goes beyond the transit window, our [7-day Beijing-Xi'an-Shanghai itinerary](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the perfect next step.
 
 ## Eligibility: Can YOU Use It?
 
@@ -135,7 +135,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 **Don't even think about traveling without it.** Medical costs in China add up fast, and the 144-hour window leaves zero margin for "I'll deal with it when I get home."
 
-**[>>> Compare travel insurance options for China travel (SafetyWing, World Nomads, etc.) <<<](https://chinaboundtravel.com/posts/best-travel-insurance-china/)**
+**[>>> Compare travel insurance options for China travel (SafetyWing, World Nomads, etc.) <<<](posts/best-travel-insurance-china/)**
 
 ---
 
@@ -143,7 +143,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 Look, I get it—rules are rules, and China's immigration requirements have more details than my mother-in-law's grocery lists (love you, mom). But here's the thing: the 144-hour transit policy is genuinely one of the most traveler-friendly things China offers, and if you follow the rules, it works beautifully.
 
-Drop a comment below or [reach out via the contact form](/about/). I've helped hundreds of travelers navigate this successfully—yes, even that guy who was convinced his dog needed a visa.
+Drop a comment below or [reach out via the contact form](/). I've helped hundreds of travelers navigate this successfully—yes, even that guy who was convinced his dog needed a visa.
 
 And if you found this guide helpful? Share it with a friend who's planning a China trip. Trust me, they'll thank you later—and so will I.
 

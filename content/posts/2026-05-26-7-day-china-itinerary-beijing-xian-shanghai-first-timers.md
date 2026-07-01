@@ -1,4 +1,4 @@
----
+﻿---
 title: "7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026"
 description: "The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and pro tips from 10 years of running this route."
 date: "2026-05-27"
@@ -34,7 +34,7 @@ I remember my first China trip. I spent three weeks planning, made every rookie 
 
 This 7-day itinerary is the exact route I've run with friends, family, and readers for years. It's tight, it's efficient, and it's designed to actually work  not some inflated 14-day itinerary that only backpacker blogs recommend.
 
-**The core logic:** Fly into Beijing → Train to Xi'an → Fly to Shanghai. Three cities, seven days, zero regrets. Before you go, make sure you've sorted your [China visa](https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) (or check if you qualify for the [144-hour visa-free transit](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)).
+**The core logic:** Fly into Beijing → Train to Xi'an → Fly to Shanghai. Three cities, seven days, zero regrets. Before you go, make sure you've sorted your [China visa](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) (or check if you qualify for the [144-hour visa-free transit](posts/144-hour-visa-free-transit-guide/)).
 
 > **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) → A complete guide to booking tickets, seat classes, and etiquette.
 
@@ -59,11 +59,11 @@ After, climb Jingshan Park directly north for the iconic view of the entire Forb
 Evening: Houhai neighborhood. Sit by the lake, drink a Yanjing beer, listen to locals singing karaoke in the park. This is the real Beijing.
 
 **Day 3 — Great Wall (Mutianyu or Jinshanling)**
-*Do not* go to Badaling. It's the most crowded section and tourist-trapped. For more on choosing the right section and what to expect, see our [complete Great Wall guide](https://chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/). Mutianyu is 70km from Beijing, has a cable car, and is in decent restoration condition. If you want wild Wall with zero crowds, go to Jinshanling (2.5 hours each way)  but you'll need a full day.
+*Do not* go to Badaling. It's the most crowded section and tourist-trapped. For more on choosing the right section and what to expect, see our [complete Great Wall guide](posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/). Mutianyu is 70km from Beijing, has a cable car, and is in decent restoration condition. If you want wild Wall with zero crowds, go to Jinshanling (2.5 hours each way)  but you'll need a full day.
 
 Book your ticket through a reputable tour operator or directly at the Mutianyu section's official website. Avoid the aggressive "free rides" solicited outside subway stations.
 
- **Premium Detail:** The exact GPS waypoints for the Jinshanling wild Wall hike, the hidden Simatai section, and the off-radar Jiankou trek  plus my personal contact for a licensed guide who speaks English  are in the [ChinaBound Travel Members Hub](/member). This info is worth more than the $49.99 annual pass.
+ **Premium Detail:** The exact GPS waypoints for the Jinshanling wild Wall hike, the hidden Simatai section, and the off-radar Jiankou trek  plus my personal contact for a licensed guide who speaks English  are in the [Members Hub — View Pricing Plans](/pricing/). This info is worth more than the $49.99 annual pass.
 
 ---
 
@@ -74,7 +74,7 @@ Book your ticket through a reputable tour operator or directly at the Mutianyu s
 **Day 4  Terracotta Army**
 Arrive, drop bags at hotel near the South Gate. Go to the Terracotta Army before 9 AM or after 3 PM  it's less crowded and the afternoon light is better for photos.
 
-What no one tells you: The "best" warriors are in Pit 1. For the full history and insider tips, read our [Xi'an Terracotta Army guide](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
+What no one tells you: The "best" warriors are in Pit 1. For the full history and insider tips, read our [Xi'an Terracotta Army guide](posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
 
 Budget tip: Eating near the museum is expensive and mediocre. Bring your own snacks or eat after you leave.
 
@@ -107,7 +107,7 @@ Morning walk in the . Tree-lined streets, historic lane houses, independent cafs
 
 Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is worth 45 minutes.
 
-**Departure tip:** Shanghai has two airports. If you have extra time, our [2-day Shanghai deep dive](https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) covers even more ground.  Pudong (PVG, international) and Hongqiao (SHA, domestic + some international). Give yourself 3 hours at Pudong for international flights.
+**Departure tip:** Shanghai has two airports. If you have extra time, our [2-day Shanghai deep dive](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) covers even more ground.  Pudong (PVG, international) and Hongqiao (SHA, domestic + some international). Give yourself 3 hours at Pudong for international flights.
 
 ---
 
@@ -127,7 +127,7 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 
 | Item | Why | Where to Buy |
 |------|-----|-------------|
-| Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://www.airalo.com/) China eSIM — see our [full internet guide](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) for options |
+| Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://www.airalo.com/) China eSIM — see our [full internet guide](posts/internet-connection-china-esim-vpn-guide/) for options |
 | Noise-canceling earbuds | Long flights + high-speed trains are loud | Sony WF-1000XM5 |
 | Universal adapter | China uses Type I sockets | Amazon |
 | Small daypack | Wall is steep  pack light | Any durable daypack from Amazon |
@@ -145,7 +145,7 @@ China is not a one-trip country. The geography alone spans five climate zones. T
 
 And when you're ready for round two: Western Sichuan, Yunnan, Tibet, or the Silk Road. That's when China stops being a checkbox and starts being an obsession.
 
- **[Join the ChinaBound Travel Members Hub](/member)** for GPS waypoints, off-book tips, and direct access to my travel network in each city. Annual pass $49.99  less than one night in Beijing.
+ **[View Pricing Plans](/pricing/)** for GPS waypoints, off-book tips, and direct access to my travel network in each city. Annual pass $49.99  less than one night in Beijing.
 
 ---
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "How to Survive a Chinese Train Station (And Not Look Like a Lost Tourist)"
 date: 2026-05-23T09:00:00+08:00
 draft: false
@@ -33,7 +33,7 @@ I want to start with a confession: I have cried in a Chinese train station. Not 
 
 The station staff found me crying by a vending machine. They gave me tea. They walked me to my platform. They were incredibly kind. But still  I cried.
 
-The good news: you will never need to cry in a Chinese train station if you read this guide. For the booking side of things, our [China high-speed rail ticket guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) covers how to actually buy tickets. I am giving you the cheat sheet I wish someone had given me in 2019.
+The good news: you will never need to cry in a Chinese train station if you read this guide. For the booking side of things, our [China high-speed rail ticket guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) covers how to actually buy tickets. I am giving you the cheat sheet I wish someone had given me in 2019.
 
 ---
 
@@ -102,7 +102,7 @@ If you didn't book online, here's how to buy at the window:
 2. Look for the shortest line (this is hard, they're all long)
 3. When it's your turn: Show your passport, say your destination (or show it on your phone), give your date/time
 4. They'll tell you what's available  confirm the train number and seat class
-5. Pay (cash or Chinese bank card — foreign cards often don't work at window machines). If you need to set up Chinese payment apps first, our [Alipay & WeChat Pay guide](https://chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/) has you covered.
+5. Pay (cash or Chinese bank card — foreign cards often don't work at window machines). If you need to set up Chinese payment apps first, our [Alipay & WeChat Pay guide](posts/alipay-wechat-pay-foreigners-guide/) has you covered.
 
 > **Joran's Tip:** Use the **automatic ticket machines ()** instead of windows. They're faster, accept passport input, and usually work with foreign cards. Look for the blue machines near the ticket windows.
 
@@ -181,12 +181,12 @@ If you didn't book online, here's how to buy at the window:
 
 Chinese train stations are intimidating the first time. But they're actually incredibly well-organized once you understand the system. The signage is in Chinese and English, staff are helpful, and the process is faster than airports once you know it.
 
-Remember: **find your platform, know your carriage number, keep your passport handy, and do not cry by the vending machine.** Chinese train stations are also very safe — [China is one of the safest countries for tourists](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/), and stations have heavy security presence.
+Remember: **find your platform, know your carriage number, keep your passport handy, and do not cry by the vending machine.** Chinese train stations are also very safe — [China is one of the safest countries for tourists](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/), and stations have heavy security presence.
 
 ### Further Reading
 
-- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — This classic route relies entirely on high-speed rail
-- [China High-Speed Rail Booking Guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — How to buy tickets on Trip.com and 12306
+- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — This classic route relies entirely on high-speed rail
+- [China High-Speed Rail Booking Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — How to buy tickets on Trip.com and 12306
 
 ---
 
