@@ -4,7 +4,7 @@ description: "Crime rates, food safety, political stability, scams targeting tou
 date: "2026-05-27"
 author: "Joran"
 tags: ["ChinaSafety", "ChinaTravelTips", "ChinaTravel"]
-categories: ["china-guide"]
+categories: ["China Travel Guide"]
 params:
   keywords: ["is china safe to travel", "china travel safety 2026", "china crime rate tourists", "china safety tips", "foreigners in china safety"]
   faq:

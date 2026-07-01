@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: "Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park"
 date: "2026-06-30T10:00:00+08:00"
@@ -20,7 +20,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 description: "Everything you need to plan the perfect Zhangjiajie trip in 2026 — ticket prices, the 4-day itinerary locals use, how to skip the crowds at Avatar Mountain, and which cable car is actually worth the money. Written by an American expat living in China."
-canonicalURL: "https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

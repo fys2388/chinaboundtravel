@@ -19,7 +19,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 description: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."
-canonicalURL: "https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

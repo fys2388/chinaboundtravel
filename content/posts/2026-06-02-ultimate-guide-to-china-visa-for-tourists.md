@@ -1,9 +1,9 @@
 ﻿---
 title: 'Ultimate Guide to China Visa for Tourists 2026'
 date: 2026-06-02T10:00:00+08:00
-author: ChinaBound Travel
+author: Joran
 tags: ["ChinaVisa", "TravelGuide", "ChinaTravel", "VisaApplication"]
-categories: ["China"]
+categories: ["China Travel Guide"]
 summary: 'Complete guide to obtaining a China tourist visa in 2026. Everything you need to know about application process, requirements, documents, and tips for a smooth approval.'
 description: 'Everything you need to know about applying for a China tourist visa in 2026. Complete guide with requirements, application process, documents checklist, and insider tips.'
 canonicalURL: "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/"

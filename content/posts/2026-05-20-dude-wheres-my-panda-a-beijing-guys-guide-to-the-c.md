@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -12,6 +12,8 @@ tags:
 categories:
 - Destinations & Itineraries
 author: Joran
+summary: "A Beijing local's hilarious guide to visiting the Chengdu Panda Base — how to get there, when to go, and what not to do with the pandas."
+description: "Complete guide to visiting Chengdu Panda Base from Beijing — transport tips, best times to see pandas active, ticket info, and hilarious mistakes to avoid."
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"
 ---

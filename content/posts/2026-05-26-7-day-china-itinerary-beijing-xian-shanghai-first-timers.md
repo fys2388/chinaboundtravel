@@ -4,7 +4,7 @@ description: "The ultimate 7-day China itinerary for first-timers. Beijing's For
 date: "2026-05-27"
 author: "Joran"
 tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide", "beijing", "xian", "shanghai"]
-categories: ["china-itinerary"]
+categories: ["China Itinerary"]
 params:
   keywords: ["7 day china itinerary", "china first timer guide", "beijing xian shanghai route", "china travel plan", "china 7 days"]
   faq:

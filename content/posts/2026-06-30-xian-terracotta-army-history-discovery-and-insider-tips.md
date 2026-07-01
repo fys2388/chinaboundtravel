@@ -18,7 +18,7 @@ draft: false
 audit_status: "pass2"
 summary: "Xi'an Terracotta Army: History, Discovery, and a practical guide for foreign travelers."
 description: "Xi'an Terracotta Army: History, Discovery, and a practical guide for foreign travelers."
-canonicalURL: "https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

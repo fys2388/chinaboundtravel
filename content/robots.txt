@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://chinaboundtravel.com/sitemap.xml
+Sitemap: https://www.chinaboundtravel.com/sitemap.xml

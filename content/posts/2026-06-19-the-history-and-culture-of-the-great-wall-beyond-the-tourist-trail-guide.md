@@ -20,7 +20,7 @@ draft: false
 audit_status: "pass2"
 summary: "Beyond the crowded Badaling section lies the real Great Wall — a 2,000-year story of military strategy, human sacrifice, and cultural significance. Discover the hidden history most tourists never see."
 description: "Explore the Great Wall beyond the tourist trail. Uncover its military history, the stories of the laborers who built it, and the cultural myths that surround this iconic structure. Written by an American who's spent a decade in China."
-canonicalURL: "https://chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

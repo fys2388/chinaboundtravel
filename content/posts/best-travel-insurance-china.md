@@ -1,5 +1,6 @@
 ﻿---
 title: "Best Travel Insurance China"
+author: Joran
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/best-travel-insurance-china.jpg"
 ---

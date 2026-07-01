@@ -9,7 +9,13 @@
   "name": {{ site.Title | jsonify }},
   "url": {{ site.Home.Permalink | jsonify }},
   "description": {{ site.Params.description | plainify | truncate 180 | jsonify }},
-  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }},
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",
+    "contentUrl": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",
+    "width": 60,
+    "height": 60
+  },
   "sameAs": [
     {{- range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url | jsonify }}{{ end }}
   ]
@@ -99,7 +105,10 @@
     "url": {{ site.Home.Permalink | jsonify }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }}
+      "url": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",
+      "contentUrl": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",
+      "width": 60,
+      "height": 60
     }
   }
 }

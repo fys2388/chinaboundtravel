@@ -20,7 +20,7 @@ geo: "AU"
 draft: false
 audit_status: "pass2"
 description: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 10 years in China."
-canonicalURL: "https://chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

@@ -20,7 +20,7 @@ geo: "AU"
 draft: false
 audit_status: "pass2"
 description: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."
-canonicalURL: "https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
