@@ -49,32 +49,28 @@
 }
 
 /* ---------------------------------------------------
-   Fix 2: Email subscription card title/subtitle overlap
-   The HTML has subscribe-heading (h4) and subscribe-sub (p)
-   as siblings inside subscribe-header (flex row).
-   Ensure they stack properly and have adequate spacing.
+   Fix 2: Email subscription card — ensure vertical stacking
+   The subscribe-header should stack icon/heading/sub vertically
+   (custom.css uses text-align:center, NOT flex).
+   Prevent any inherited flex from breaking the layout.
    --------------------------------------------------- */
 .subscribe-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    overflow: hidden;
-}
-
-/* The title+sub wrapper inside header */
-.subscribe-header .subscribe-heading,
-.subscribe-header .subscribe-sub {
+    display: block !important;
+    text-align: center;
     overflow: hidden;
 }
 
 .subscribe-heading {
-    margin-bottom: 0.35rem;
-    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    overflow: hidden;
 }
 
 .subscribe-sub {
     margin-top: 0;
+    margin-bottom: 0;
     line-height: 1.4;
+    overflow: hidden;
 }
 
 .subscribe-description {
@@ -108,6 +104,13 @@
 
 .footer span {
     display: inline;
+}
+
+/* Force line breaks between footer sections to prevent overlap */
+.footer .footer-break {
+    display: block;
+    content: '';
+    margin: 0.4rem 0;
 }
 
 /* ---------------------------------------------------
