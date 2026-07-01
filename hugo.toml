@@ -58,6 +58,7 @@ buildExpired = false
   showMeta = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  comments = true
 
 [[menu.main]]
   identifier = "search"
@@ -72,40 +73,28 @@ buildExpired = false
   weight = 20
 
 [[menu.main]]
-  identifier = "visa-free"
-  name = "🛂 Visa-Free Guide"
-  url = "/categories/visa/"
-  weight = 30
-
-[[menu.main]]
-  identifier = "payment-guide"
-  name = "💳 Payment Guide"
-  url = "/categories/payment/"
-  weight = 40
-
-[[menu.main]]
   identifier = "pricing"
   name = "💰 Pricing"
   url = "/pricing/"
-  weight = 55
+  weight = 40
 
 [[menu.main]]
   identifier = "cities"
   name = "🏙️ City Travel"
   url = "/cities/"
-  weight = 60
+  weight = 50
 
 [[menu.main]]
   identifier = "resources"
   name = "🧰 Resources"
   url = "/resources/"
-  weight = 62
+  weight = 52
 
 [[menu.main]]
   identifier = "posts"
   name = "📝 Blog"
   url = "/posts/"
-  weight = 65
+  weight = 55
 
 [[menu.main]]
   identifier = "about"

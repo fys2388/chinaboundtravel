@@ -1,3 +1,33 @@
-{{- /* Comments area start */ -}}
-{{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
-{{- /* Comments area end */ -}}
+{{- /* Giscus Comments System 
+  Setup: Visit https://giscus.app to generate data-repo-id and data-category-id 
+  1. Enable Discussions on your GitHub repo
+  2. Install the Giscus GitHub App: https://github.com/apps/giscus
+  3. Replace data-repo-id and data-category-id below with your values
+*/ -}}
+{{- if .Param "comments" -}}
+<div id="giscus-container"></div>
+<script>
+// Giscus will be loaded after DOM is ready
+// Configure at https://giscus.app and update values below
+document.addEventListener('DOMContentLoaded', function() {
+  var s = document.createElement('script');
+  s.src = 'https://giscus.app/client.js';
+  s.setAttribute('data-repo', 'fys2388/chinaboundtravel');
+  s.setAttribute('data-repo-id', '');  // TODO: Replace with actual repo-id from giscus.app
+  s.setAttribute('data-category', 'General');
+  s.setAttribute('data-category-id', '');  // TODO: Replace with actual category-id from giscus.app
+  s.setAttribute('data-mapping', 'pathname');
+  s.setAttribute('data-strict', '0');
+  s.setAttribute('data-reactions-enabled', '1');
+  s.setAttribute('data-emit-metadata', '0');
+  s.setAttribute('data-input-position', 'top');
+  s.setAttribute('data-theme', 'preferred_color_scheme');
+  s.setAttribute('data-lang', 'en');
+  s.setAttribute('data-loading', 'lazy');
+  s.setAttribute('crossorigin', 'anonymous');
+  s.async = true;
+  document.getElementById('giscus-container').appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://giscus.app">comments powered by Giscus.</a></noscript>
+{{- end -}}
