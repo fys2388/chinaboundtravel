@@ -42,7 +42,7 @@ Hangzhou sits at the foot of the Qiantang River and has been a center of Chinese
 
 Today, it's famous for:
 - **West Lake ()**  UNESCO World Heritage, 2,000+ years of poetic inspiration
-- **Longjing Tea ()**  The most famous green tea in China, grown in Hangzhou's own backyard
+- **Longjing Tea ()** — The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
 - **G20 Summit 2016**  China spent $40 billion upgrading the city for the summit. The infrastructure is brand new.
 - **Alibaba**  HQ is here, which means the city is unusually tech-forward
 
@@ -116,7 +116,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 
 | Transport | Details |
 |-----------|---------|
-| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) |
+| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) — see our [high-speed rail guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) for booking tips |
 | **From Beijing** | G train, 4 hours |
 | **From Nanjing** | G train, 1 hour |
 | **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |
@@ -155,7 +155,13 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 
 Hangzhou is China's most livable city  clean, beautiful, well-organized, and genuinely relaxing. It's the perfect 2-3 day escape from the chaos of bigger cities. The G20 upgrades mean the infrastructure is excellent, and unlike some "beautiful" Chinese cities that are only beautiful in photos, Hangzhou is actually pleasant to walk around in real life.
 
-**Come for the tea, stay for the lake, leave with a full belly and some very good green tea.**
+**Come for the tea, stay for the lake, leave with a full belly and some very good green tea.** Hangzhou is also within the [144-hour visa-free transit zone from Shanghai](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/), making it an easy addition to a transit trip.
+
+### Further Reading
+
+- [Shanghai Bund & French Concession 2-Day Guide](https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) — Pair Hangzhou with a Shanghai visit
+- [Is China Safe for Tourists?](https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Hangzhou is one of China's safest cities
+- [Chinese Tea Culture Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) — Deep dive into the tradition behind Longjing and other famous teas
 
 ---
 

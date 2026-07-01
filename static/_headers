@@ -1,45 +1,33 @@
-# Cloudflare Pages Headers - Static Asset Caching
-# Improve repeat visit performance with long-lived cache
-
-# Security headers
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-XSS-Protection: 1; mode=block
 
-# Static assets — 1 year cache (immutable, versioned filenames via Hugo fingerprint)
+# Cache static assets
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS/JS with content hash
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
-  Cloudflare-CDN-Cache-Control: max-age=31536000
 
-# WebP images — 6 months, optimized with Polish
-/images/*.webp
-  Cache-Control: public, max-age=15552000, immutable
-  Cloudflare-CDN-Cache-Control: max-age=15552000, polish=lossless
-
-# Other images — 6 months
-/images/*
-  Cache-Control: public, max-age=15552000
-  Cloudflare-CDN-Cache-Control: max-age=15552000, polish=lossy
-
-# Fonts — 1 year (fonts are immutable)
-/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-  Cloudflare-CDN-Cache-Control: max-age=31536000
-
-# HTML pages — short cache, must revalidate
+# HTML pages - short cache
 /*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-  Cloudflare-CDN-Cache-Control: max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
+# XML sitemaps
 /sitemap.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: public, max-age=3600, must-revalidate
-  Cloudflare-CDN-Cache-Control: max-age=3600
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600
 
-# Root index — shortest cache for frequent updates
-/index.html
-  Cache-Control: public, max-age=60, must-revalidate
-  Cloudflare-CDN-Cache-Control: max-age=60
+# RSS feed
+/index.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/rss+xml; charset=utf-8

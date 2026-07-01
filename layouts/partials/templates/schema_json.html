@@ -1,0 +1,108 @@
+{{- /* Safe override of PaperMod schema_json.html — all values use jsonify for JSON safety */ -}}
+{{- /* Enhanced with full Author Person schema for Joran */ -}}
+
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ site.Home.Permalink | jsonify }},
+  "description": {{ site.Params.description | plainify | truncate 180 | jsonify }},
+  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }},
+  "sameAs": [
+    {{- range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url | jsonify }}{{ end }}
+  ]
+}
+</script>
+{{- else if (or .IsPage .IsSection) }}
+{{/* BreadcrumbList */}}
+{{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
+{{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
+{{- $bc_list := (split $lang_url "/")}}
+{{- $scratch := newScratch }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {{- range $index, $element := $bc_list }}
+    {{- $scratch.Add "path" (printf "%s/" $element ) | safeJS }}
+    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
+    {{- if (and ($bc_pg) (gt (len . ) 0))}}
+    {{- if (and $index)}}, {{end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add 1 $index }},
+      "name": {{ $bc_pg.Name | jsonify }},
+      "item": {{ $bc_pg.Permalink | jsonify }}
+    }
+    {{- end }}
+  {{- end }}
+  {{- if (ge (len $bc_list) 2) }}, {{end }}
+    {
+      "@type": "ListItem",
+      "position": {{ len $bc_list }},
+      "name": {{ .Name | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | plainify | jsonify }},
+  "name": {{ .Title | plainify | jsonify }},
+  "description": {{ with .Description | plainify }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
+  "keywords": [
+    {{- if .Params.keywords }}
+    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+    {{- else }}
+    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+    {{- end }}
+  ],
+  "wordCount": {{ .WordCount }},
+  "inLanguage": {{ .Language.Lang | default "en-us" | jsonify }},
+  {{- if .Params.cover.image -}}
+  "image": {{ .Params.cover.image | absURL | jsonify }},
+  {{- end -}}
+  "datePublished": {{ .PublishDate | jsonify }},
+  "dateModified": {{ .Lastmod | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Joran",
+    "url": "https://www.chinaboundtravel.com/about/",
+    "image": "https://www.chinaboundtravel.com/images/joran-avatar.png",
+    "jobTitle": "China Travel Blogger",
+    "description": "A California native married into a Chengdu family with 10+ years of China travel experience.",
+    "sameAs": [
+      "https://twitter.com/chinaboundtravel",
+      "https://pinterest.com/chinaboundtravel",
+      "https://youtube.com/@chinaboundtravel"
+    ],
+    "knowsAbout": ["China Travel", "Chinese Visa", "Alipay", "WeChat Pay", "Chengdu", "Sichuan Food", "High-Speed Rail"],
+    "nationality": {
+      "@type": "Country",
+      "name": "United States"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.Title | jsonify }},
+    "url": {{ site.Home.Permalink | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }}
+    }
+  }
+}
+</script>
+{{- end }}{{/* .IsPage end */}}
+{{- end }}

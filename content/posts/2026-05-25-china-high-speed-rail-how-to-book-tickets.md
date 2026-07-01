@@ -30,7 +30,7 @@ cover:
 
 ## Hey, Joran Here 
 
-I once spent 3 hours at Xi'an North Station because I showed up to the wrong terminal for a train that was boarding in 20 minutes. The station was the size of an airport. I sprinted. I sweat through my shirt. I missed the train. I bought another one at the counter and paid double.
+I once spent 3 hours at Xi'an North Station because I showed up to the wrong terminal for a train that was boarding in 20 minutes. If you've never navigated a Chinese station before, read our [train station survival guide](https://chinaboundtravel.com/posts/2026-05-27-how-to-survive-chinese-train-station/) first — it'll save you tears. The station was the size of an airport. I sprinted. I sweat through my shirt. I missed the train. I bought another one at the counter and paid double.
 
 That was 2022. Since then, I've taken probably 200+ high-speed rail trips across China. I know the system inside and out. Let me save you from my own worst moments.
 
@@ -76,7 +76,7 @@ For most routes under 800km, CRH is faster door-to-door.
 2. Register with your passport number (requires Chinese phone number for verification code  this is the hard part for foreigners)
 3. Book and pay with Chinese payment apps (Alipay/WeChat Pay)
 
-> **Joran's Tip:** If you have a Chinese phone number (from an eSIM like Airalo or Nomad), you *can* register on 12306. The verification code goes to your Chinese number. I've done this  works fine.
+> **Joran's Tip:** If you have a Chinese phone number (from an [eSIM like Airalo or Nomad](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)), you *can* register on 12306. The verification code goes to your Chinese number. I've done this  works fine.
 
 **Book train tickets in advance on [#TRIP_COM_TRAIN#](Trip.com trains).**
 
@@ -165,7 +165,7 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
-| Shanghai â?Hangzhou | 45 min | Perfect first CRH trip |
+| Shanghai → Hangzhou | 45 min | Perfect first CRH trip — see our [Hangzhou guide](https://chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/) |
 | Shanghai â?Suzhou | 25 min | Ancient water town vibes |
 | Beijing â?Tianjin | 30 min | Cheapest G train (~$8) |
 | Chengdu â?Chongqing | 1 hr | Mountain city double feature |
@@ -175,7 +175,12 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 ## Bottom Line
 
-China's high-speed rail is one of the world's great travel experiences. Clean, punctual, cheap, and covers everywhere you want to go. Get the Trip.com app, book a short route first (Shanghai-Hangzhou is perfect), and you'll be a pro by your third trip.
+China's high-speed rail is one of the world's great travel experiences. Clean, punctual, cheap, and covers everywhere you want to go. Get the Trip.com app, book a short route first (Shanghai-Hangzhou is perfect), and you'll be a pro by your third trip. For a complete trip built around the rail network, check out our [7-day Beijing-Xi'an-Shanghai itinerary](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/). And if you're using the 144-hour visa-free transit to ride these trains, our [144-hour transit guide](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) has everything you need to know.
+
+### Further Reading
+
+- [How to Survive a Chinese Train Station](https://chinaboundtravel.com/posts/2026-05-27-how-to-survive-chinese-train-station/) — Finding your platform without a breakdown
+- [Shanghai Bund & French Concession 2-Day Guide](https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) — Many great rail routes start or end here
 
 ---
 

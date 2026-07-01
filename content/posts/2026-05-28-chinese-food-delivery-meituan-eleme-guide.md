@@ -56,7 +56,7 @@ My routine: Open both apps, search the same restaurant, pick the cheaper one. Ta
 
 ### Step 1: Phone Number
 
-Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. Without a Chinese number, you can't receive the verification code to log in.
+Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. For the best eSIM options, see our [internet connectivity guide for China](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/). Without a Chinese number, you can't receive the verification code to log in.
 
 ### Step 2: Address in Chinese
 
@@ -73,7 +73,7 @@ Or: Ask your hotel concierge/reception to write your address in Chinese on a pie
 
 **Alipay and WeChat Pay are the only options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
 
-If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Without these, you're stuck with cash-on-delivery at select restaurants.
+If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Another new option is [PayPal's integration with Alipay and WeChat Pay](https://chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/), which lets you pay without setting up either app. Without these, you're stuck with cash-on-delivery at select restaurants.
 
 ---
 
@@ -126,7 +126,7 @@ Start with these  easy to order, hard to get wrong:
 | Braised pork rice bowls |  | Tasty, filling, consistent |
 | Dumplings | / | Universally liked |
 | Dandan noodles |  | Spicy but delicious |
-| Hot pot for one |  | Hot pot is always worth it |
+| Hot pot for one |  | Hot pot is always worth it — learn more in our [Sichuan hotpot guide](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) |
 
 ### Dishes to Avoid (At First)
 
@@ -213,7 +213,12 @@ Collect your food. Check the bag  if something's wrong, you can request a refund
 
 Food delivery in China is one of the great modern conveniences of daily life. The apps are fast, the food is good, the prices are cheap, and the system just works. It took me one bad experience (wrong noodles, refunded in 30 seconds) to trust the system.
 
-Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're ready to eat like an emperor from your couch.
+Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're ready to eat like an emperor from your couch. And if you're traveling between cities by rail, don't miss our [high-speed rail booking guide](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — train food is no match for delivery.
+
+### Further Reading
+
+- [WeChat Pay for Foreigners](https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — The deeper dive into one of China's two essential payment apps
+- [Internet in China: eSIM & VPN](https://chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) — You need connectivity for delivery apps to work
 
 ---
 

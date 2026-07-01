@@ -40,7 +40,7 @@ For tourists traveling in a group of 5 or more people. The travel agency handles
 
 ### 144-Hour Visa-Free Transit
 
-Available for citizens of 53 countries visiting select Chinese cities without a visa. You can stay for up to 144 hours (6 days) in designated transit areas.
+Available for citizens of 53 countries visiting select Chinese cities without a visa. You can stay for up to 144 hours (6 days) in designated transit areas. For the complete walkthrough of how to use this policy, see our [144-hour visa-free transit guide](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/). China also recently [extended this policy to more countries](https://chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
 
 **Eligible cities**: Beijing, Shanghai, Guangzhou, Chengdu, Chongqing, and more.
 
@@ -62,7 +62,7 @@ Gather all the necessary documents before submitting your application:
 - **Hotel reservation confirmation**: Must cover the entire duration of your stay
 - **Round-trip flight tickets**: Confirmed bookings
 - **Invitation letter** (if visiting friends/family): Notarized invitation from host in China
-- **Travel insurance** (recommended): Coverage for medical emergencies
+- **Travel insurance** (recommended): Coverage for medical emergencies. Our [best travel insurance for China guide](https://chinaboundtravel.com/posts/best-travel-insurance-china/) compares the top providers.
 
 ### Step 2: Submit Application
 
@@ -150,7 +150,7 @@ Yes, visa extensions are possible through local Public Security Bureau (PSB) off
 
 ### Is travel insurance required?
 
-While not mandatory for visa application, travel insurance is highly recommended. Some hotels and tour operators may require it.
+While not mandatory for visa application, travel insurance is highly recommended. Some hotels and tour operators may require it. For a comprehensive comparison, check our [best travel insurance for China](https://chinaboundtravel.com/posts/best-travel-insurance-china/) guide.
 
 ### Can I apply for a visa online?
 
@@ -206,7 +206,7 @@ If rejected, you can reapply after addressing the reasons for rejection. Common 
 
 ---
 
-Ready to start your China adventure? [Get your visa application started today](https://www.chinaboundtravel.com/contact/).
+Ready to start your China adventure? [Get your visa application started today](https://www.chinaboundtravel.com/contact/). Once your visa is sorted, our [7-day Beijing-Xi'an-Shanghai itinerary](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the perfect first trip to plan.
 
 ---
 

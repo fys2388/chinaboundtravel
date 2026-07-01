@@ -31,11 +31,11 @@ That was 2019. These days, after marrying my wife (who grew up in Chengdu—she'
 
 China offers a **144-hour (6-day) visa exemption** for travelers from [55+ eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed—if you're only staying in a designated zone for up to 6 days.
 
-Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world.
+Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world. If you need a proper tourist visa instead, check out our [complete guide to China visas for tourists](https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
 
 ## Which Cities and Ports Accept 144-Hour Transit?
 
-**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever. Here are the main zones:
+**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 144-hour visa-free transit policy to even more countries](https://chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
 
 ### Beijing/Tianjin/Hebei
 - **Beijing Capital Airport** (PEK/PKX)
@@ -58,6 +58,8 @@ Think of it as China's "we promise we're not trying to make your transit miserab
 Many more cities added in 2024-2025 expansion.
 
 **>>> [Check the full list of eligible ports on China Immigration](https://www.immd.gov.hk/eng/visa_descriptions/china-144-hour-visa-free.html) <<<**
+
+If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & French Concession guide](https://chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) covers the must-see spots. And if you're planning a longer trip that goes beyond the transit window, our [7-day Beijing-Xi'an-Shanghai itinerary](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the perfect next step.
 
 ## Eligibility: Can YOU Use It?
 
@@ -133,7 +135,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 **Don't even think about traveling without it.** Medical costs in China add up fast, and the 144-hour window leaves zero margin for "I'll deal with it when I get home."
 
-**[>>> Compare travel insurance options for China travel (SafetyWing, World Nomads, etc.) <<<](https://www.example.com/affiliate)**
+**[>>> Compare travel insurance options for China travel (SafetyWing, World Nomads, etc.) <<<](https://chinaboundtravel.com/posts/best-travel-insurance-china/)**
 
 ---
 

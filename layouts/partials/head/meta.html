@@ -13,39 +13,8 @@
 <meta name="twitter:image" content="{{ $ogImg }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image:alt" content="ChinaBound Travel — China Travel Guide for Foreigners">
-{{- /* Article Schema (posts only) */ -}}
-{{- if and .IsPage .Section "posts" -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ .Title }}",
-  "description": "{{ .Description }}",
-  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-  "author": {
-    "@type": "Person",
-    "name": "Joran",
-    "url": "https://chinaboundtravel.com/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ChinaBound Travel",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://chinaboundtravel.com/images/og-default.jpg"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
-  },
-  "image": "{{ $ogImg }}",
-  "keywords": "{{ range first 5 .Params.tags }}{{ . }},{{ end }}"
-}
-</script>
-{{- end -}}
-{{- /* FAQ Schema (pricing page) */ -}}
+{{- /* Article/BlogPosting + FAQ schemas handled by PaperMod schema_json.html override */ -}}
+{{- /* FAQ Schema (pricing page only) */ -}}
 {{- if eq .RelPermalink "/pricing/" -}}
 <script type="application/ld+json">
 {
