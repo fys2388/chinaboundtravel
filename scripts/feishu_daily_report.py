@@ -389,83 +389,86 @@ class FeishuDailyReporter:
         return data
     
     def _fetch_cloudflare(self) -> dict:
-        """获取 Cloudflare 流量数据"""
+        """获取 Cloudflare 流量数据（使用 GraphQL API）"""
         if not CLOUDFLARE_API_TOKEN or not CLOUDFLARE_ZONE_ID:
             print("   ⚠️ Cloudflare API Token 未配置")
             return None
         
         try:
-            end_time = datetime.now()
-            start_time = end_time - timedelta(days=1)
+            yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
             
-            url = f"https://api.cloudflare.com/client/v4/zones/{CLOUDFLARE_ZONE_ID}/analytics/dashboard"
+            # 使用 Cloudflare GraphQL API
+            url = "https://api.cloudflare.com/client/v4/graphql"
             headers = {
                 "Authorization": f"Bearer {CLOUDFLARE_API_TOKEN}",
                 "Content-Type": "application/json"
             }
             
-            params = {
-                "since": int((end_time - timedelta(hours=24)).timestamp()),
-                "until": int(end_time.timestamp()),
-                "continuous": "true"
-            }
+            query = f"""{{
+                viewer {{
+                    zones(filter: {{zoneTag: "{CLOUDFLARE_ZONE_ID}"}}) {{
+                        httpRequests1dGroups(
+                            limit: 2,
+                            filter: {{date_geq: "{two_days_ago}", date_leq: "{yesterday}"}},
+                            orderBy: [date_ASC]
+                        ) {{
+                            dimensions {{ date }}
+                            sum {{ requests pageViews }}
+                            uniq {{ uniques }}
+                        }}
+                    }}
+                }}
+            }}"""
             
-            response = requests.get(url, headers=headers, params=params, timeout=30)
+            print(f"   🔍 正在调用 Cloudflare GraphQL API ({yesterday})...")
+            response = requests.post(url, headers=headers, json={"query": query}, timeout=30)
             
             if response.status_code == 200:
                 result = response.json()
-                if result.get("success"):
-                    result_info = result.get("result", {})
-                    timeseries = result_info.get("timeseriesGroup", [])
+                data = result.get("data", {}).get("viewer", {}).get("zones", [])
+                
+                if not data:
+                    print("   ⚠️ Cloudflare GraphQL 返回空数据")
+                    return None
+                
+                groups = data[0].get("httpRequests1dGroups", [])
+                
+                yesterday_requests = 0
+                yesterday_pageviews = 0
+                yesterday_uniques = 0
+                two_days_ago_requests = 0
+                
+                for group in groups:
+                    date = group.get("dimensions", {}).get("date", "")
+                    req = int(group.get("sum", {}).get("requests", 0))
+                    pv = int(group.get("sum", {}).get("pageViews", 0))
+                    uv = int(group.get("uniq", {}).get("uniques", 0))
                     
-                    # 计算今日请求数
-                    today_requests = 0
-                    yesterday_requests = 0
-                    
-                    for group in timeseries:
-                        if group.get("维度") == "requests":
-                            for ts in group.get("timeseries", []):
-                                ts_date = datetime.fromtimestamp(ts.get("since", 0))
-                                ts_requests = ts.get("requests", 0)
-                                if ts_date.date() == datetime.now().date():
-                                    today_requests += ts_requests
-                                elif ts_date.date() == (datetime.now() - timedelta(days=1)).date():
-                                    yesterday_requests += ts_requests
-                    
-                    # 获取 Top 页面
-                    top_pages = []
-                    for group in timeseries:
-                        if group.get("维度") == "statusCode":
-                            for page_data in group.get("timeseries", []):
-                                if page_data.get("since"):
-                                    continue
-                                # 简化处理，实际应该用 GraphQL API 获取页面维度
-                            
-                    # 获取 Top 页面（从 timeseries 获取）
-                    for group in timeseries:
-                        if "page" in str(group.get("维度", "")).lower():
-                            for item in group.get("timeseries", []):
-                                if item.get("page"):
-                                    path = item["page"]
-                                    views = item.get("requests", 0)
-                                    if views > 0:
-                                        top_pages.append({"path": path, "views": views})
-                    
-                    # 按访问量排序
-                    top_pages = sorted(top_pages, key=lambda x: x.get("views", 0), reverse=True)[:10]
-                    
-                    # 计算同比
-                    trend = "N/A"
-                    if yesterday_requests > 0:
-                        change = ((today_requests - yesterday_requests) / yesterday_requests) * 100
-                        trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
-                    
-                    return {
-                        "visitors": today_requests,
-                        "requests": today_requests,
-                        "visitors_trend": trend,
-                        "top_pages": top_pages
-                    }
+                    if date == yesterday:
+                        yesterday_requests = req
+                        yesterday_pageviews = pv
+                        yesterday_uniques = uv
+                    elif date == two_days_ago:
+                        two_days_ago_requests = req
+                
+                # 计算同比
+                trend = "N/A"
+                if two_days_ago_requests > 0:
+                    change = ((yesterday_requests - two_days_ago_requests) / two_days_ago_requests) * 100
+                    trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
+                
+                print(f"   ✅ Cloudflare 数据: {yesterday_uniques} 访客, {yesterday_requests} 请求, {yesterday_pageviews} 浏览量")
+                
+                return {
+                    "visitors": yesterday_uniques,
+                    "requests": yesterday_requests,
+                    "pageviews": yesterday_pageviews,
+                    "visitors_trend": trend,
+                    "top_pages": []
+                }
+            else:
+                print(f"   ⚠️ Cloudflare GraphQL API 响应: {response.status_code}")
                         
         except Exception as e:
             print(f"   ⚠️ Cloudflare API 获取失败: {e}")
@@ -669,9 +672,11 @@ class FeishuDailyReporter:
                 if re.search(r'\[([^\]]+)\]\(\s*\)', content):
                     result["empty_links"] += 1
                 
-                # 检查图片 Alt 缺失
-                if re.search(r'!\[([^\]]*)\]\((?!http)', content):
-                    result["missing_alt"] += 1
+                # 检查图片 Alt 缺失（排除相对路径但无alt文本的情况）
+                for img_match in re.finditer(r'!\[([^\]]*)\]\([^)]+\)', content):
+                    alt_text = img_match.group(1).strip()
+                    if not alt_text:
+                        result["missing_alt"] += 1
                     
             except Exception as e:
                 print(f"   ⚠️ 扫描文件失败: {post.name}")
