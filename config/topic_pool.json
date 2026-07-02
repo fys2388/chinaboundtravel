@@ -354,10 +354,10 @@
         "china travel payment"
       ],
       "priority": 4,
-      "status": "pending",
+      "status": "used",
       "source": "user_feedback",
       "created_at": "2026-07-01T12:35:00",
-      "used_at": null,
+      "used_at": "2026-07-02T04:04:50.476770",
       "depth": "deep"
     }
   ],

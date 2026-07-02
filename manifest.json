@@ -1,7 +1,7 @@
 {
-  "month_post_count": 2,
+  "month_post_count": 3,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-02 03:33:28",
+  "last_social_publish": "2026-07-02 04:04:53",
   "daily_social_publish_date": "2026-07-02",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
@@ -14,6 +14,11 @@
     {
       "topic": "How to Use Alipay as a Foreigner: Complete Setup Guide 2026",
       "geo_region": "US",
+      "create_date": "2026-07-02"
+    },
+    {
+      "topic": "WeChat Pay for Foreigners: Step-by-Step Setup and Common Mistakes to Avoid",
+      "geo_region": "AU",
       "create_date": "2026-07-02"
     }
   ],
