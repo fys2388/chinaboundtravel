@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy"
 date: 2026-05-23T09:00:00+08:00
 draft: false
@@ -122,7 +122,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 | **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |
 | **Airport** | Hangzhou Xiaoshan (HGH), Metro Line 1 connects |
 
-> **Book your train to Hangzhou on [Trip.com Trains](https://www.trip.com).**
+> **Book your train to Hangzhou on [Trip.com](https://trip.tpo.li/trains?marker=730795).**
 
 ---
 

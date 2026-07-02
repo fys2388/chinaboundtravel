@@ -14,10 +14,9 @@ Last updated: May 19, 2026
 ChinaBound Travel participates in various affiliate marketing programs, which means we may earn commissions from qualifying purchases made through links on this Site.
 
 ### Participating Programs
-- **Trip.com**: Affiliate commissions from hotel and flight bookings
+- **Travelpayouts**: Affiliate commissions from hotel, flight, and train bookings (through HotelLook, Trip.com, Klook)
 - **Airalo**: Affiliate commissions from eSIM purchases
 - **NordVPN**: Affiliate commissions from VPN subscriptions
-- **Booking.com**: Affiliate commissions from hotel bookings
 - **KLOOK**: Affiliate commissions from tour and activity bookings
 
 ### How It Works

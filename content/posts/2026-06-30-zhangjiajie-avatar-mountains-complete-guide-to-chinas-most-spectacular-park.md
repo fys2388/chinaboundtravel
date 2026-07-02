@@ -152,7 +152,7 @@ If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tu
 - Tons of restaurants, shops, and hotel options for all budgets
 - Budget: ¥80–150/night ($11–20) — try the area around the bus station
 - Mid-range: ¥200–400/night ($28–55)
-- Compare prices and book with free cancellation [here →](https://www.booking.com/index.html?aid=1234567)
+- Compare prices and book with free cancellation [here →](https://www.hotellook.com/search?marker=730795)
 
 ### Option 2: Mountain-Top Guesthouses (Inside the Park) — Best for Sunrise & Slow Travel
 - Located inside the park near Yuanjiajie / Tianzi Mountain — no need to exit and re-enter

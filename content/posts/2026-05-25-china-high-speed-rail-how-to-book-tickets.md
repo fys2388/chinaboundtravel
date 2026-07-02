@@ -1,4 +1,4 @@
-﻿---
+﻿﻿﻿---
 title: "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)"
 date: 2026-05-25T10:00:00+08:00
 draft: false
@@ -78,7 +78,7 @@ For most routes under 800km, CRH is faster door-to-door.
 
 > **Joran's Tip:** If you have a Chinese phone number (from an [eSIM like Airalo or Nomad](posts/internet-connection-china-esim-vpn-guide/)), you *can* register on 12306. The verification code goes to your Chinese number. I've done this  works fine.
 
-**Book train tickets in advance on [Trip.com Trains](https://www.trip.com).**
+**Book train tickets in advance on [Trip.com](https://trip.tpo.li/trains?marker=730795).**
 
 ---
 
