@@ -642,8 +642,7 @@ class FeishuDailyReporter:
             
             def gsc_query(start, end, dimensions=None, row_limit=10):
                 """封装 GSC 查询"""
-                body = {
-                    "siteUrl": site_url,
+                request_body = {
                     "startDate": start,
                     "endDate": end,
                     "type": "web",
@@ -651,8 +650,10 @@ class FeishuDailyReporter:
                     "dataState": "final"
                 }
                 if dimensions:
-                    body["dimensions"] = dimensions
-                return service.searchanalytics().query(body=body).execute()
+                    request_body["dimensions"] = dimensions
+                return service.searchanalytics().query(
+                    siteUrl=site_url, body=request_body
+                ).execute()
             
             # === 昨日总览 ===
             response = gsc_query(three_days_ago, yesterday)
