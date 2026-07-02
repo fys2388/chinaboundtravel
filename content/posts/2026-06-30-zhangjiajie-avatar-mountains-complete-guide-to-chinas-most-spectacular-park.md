@@ -93,7 +93,7 @@ This is the route we followed after talking to a local guide at our hotel. It ma
 
 Start early — gates open at 7:00 AM, and you want to be there by 7:30 to beat the tour bus crowds.
 
-**Morning: Golden Whip Stream (金鞭溪)**
+**Morning: Golden Whip Stream (Jīnbiān Xī / 金鞭溪)**
 - This is a flat 7.5 km walk along a stream at the base of the park
 - Easy, paved, shaded — perfect for acclimatizing
 - You'll pass several iconic rock formations including the "Rock of Welcoming Guests"
@@ -115,7 +115,7 @@ This is what you came for.
 - Take the park bus to the Bailong Elevator — this thing shoots you 326 meters up the side of a cliff in under 2 minutes
 - From the top, walk 20 minutes to the **"Hallelujah Mountain" viewing platform** — this is the pillar that inspired the floating mountains in Avatar
 - **The secret:** Go before 8 AM. By 10 AM, you'll be elbow-to-elbow with hundreds of people. We arrived at 7:15 and had the platform to ourselves for 15 magical minutes
-- Continue along the Yuanjiajie trail to the "First Bridge Under Heaven" (天下第一桥) — a natural stone bridge spanning two peaks
+- Continue along the Yuanjiajie trail to the "First Bridge Under Heaven" (Tiānxià Dìyī Qiáo / 天下第一桥) — a natural stone bridge spanning two peaks
 
 **Afternoon: Tianzi Mountain**
 - Take the park bus from Yuanjiajie to Tianzi Mountain (about 40 minutes) — remember, Tianzi Mountain is inside the same park, covered by your existing ticket
@@ -141,7 +141,7 @@ Take a taxi from your hotel to the Tianmen Mountain cable car station. This is a
 
 If you have the energy, the **Grand Canyon Glass Bridge** is worth the trip. It's the world's longest and highest glass-bottomed bridge at 430 meters long and 300 meters above the canyon floor.
 
-If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park** (土家风情园). If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo (三下锅) before heading out.
+If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park (Tǔjiā Fēngqíng Yuán / 土家风情园)**. If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo (三下锅) before heading out.
 
 ![Tianzi Mountain sunset with sea of clouds around Zhangjiajie sandstone pillars](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.jpg)
 

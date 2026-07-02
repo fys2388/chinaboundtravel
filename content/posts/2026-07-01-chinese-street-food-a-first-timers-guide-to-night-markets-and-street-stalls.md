@@ -70,7 +70,7 @@ Dumplings are another Chinese street food favorite. There are many different typ
 Another type of dumpling is the xiao long bao. These are steamed dumplings that are filled with a savory broth and a small piece of meat. They are very delicate and need to be eaten carefully to avoid burning your mouth on the hot broth.
 
 ### Skewers
-Skewers are a popular street food in China, especially in the evening. You can find a variety of skewers, including grilled meats, vegetables, and even fruits. One of the most famous types of skewers is the羊肉串. These are made from marinated lamb meat that is grilled over an open fire. The meat is usually seasoned with cumin, chili powder, and other spices, giving it a delicious and spicy flavor.
+Skewers are a popular street food in China, especially in the evening. You can find a variety of skewers, including grilled meats, vegetables, and even fruits. One of the most famous types of skewers is the **yangrouchuan** (lamb skewers). These are made from marinated lamb meat that is grilled over an open fire. The meat is usually seasoned with cumin, chili powder, and other spices, giving it a delicious and spicy flavor.
 
 Vegetable skewers are also very popular. You can find skewers of mushrooms, onions, peppers, and other vegetables. These are often grilled and then brushed with a spicy sauce.
 
