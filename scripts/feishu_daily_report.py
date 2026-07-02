@@ -60,6 +60,8 @@ FEISHU_SECRET = os.environ.get("FEISHU_SECRET", "")
 # API配置
 TRAVELPAYOUTS_API_TOKEN = os.environ.get("TRAVELPAYOUTS_API_TOKEN", "")
 TRAVELPAYOUTS_MARKER = os.environ.get("TRAVELPAYOUTS_MARKER", "730795")
+NORDVPN_API_KEY = os.environ.get("NORDVPN_API_KEY", "")
+NORDVPN_AFFILIATE_ID = os.environ.get("NORDVPN_AFFILIATE_ID", "")
 CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
 CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
 # GA4配置
@@ -296,7 +298,7 @@ class FeishuDailyReporter:
                         "tag": "lark_md",
                         "content": f"""**💰 4. 联盟变现数据（{report_date}）** {affiliate_status}
 
-🏨 **Travelpayouts（酒店/航班）**
+🏨 **Travelpayouts（酒店/航班/门票/租车）**
 | 指标 | 数据 |
 | --- | --- |
 | 昨日点击 | {data.get('tp_clicks', 0)} 次 |
@@ -310,11 +312,7 @@ class FeishuDailyReporter:
 | 昨日转化 | {data.get('nord_conversions', 0)} 单 |
 | 昨日佣金 | ${data.get('nord_revenue', 0):.2f} |
 
-🏨 **Klook（玩乐）** — 需手动查看 Klook Partner 后台
-🌐 **Booking.com（酒店）** — 需手动查看 Booking Affiliate 后台
-🛡️ **WorldNomads（保险）** — 需手动查看 Partner 后台
-
-**合计昨日佣金**: ${data.get('affiliate_revenue', 0):.2f} ｜ **Top转化页面**: {data.get('top_converting_article', 'N/A')}"""
+**合计昨日佣金**: ${data.get('tp_revenue', 0) + data.get('nord_revenue', 0):.2f} ｜ **Top转化页面**: {data.get('top_converting_article', 'N/A')}"""
                     }
                 },
                 {"tag": "hr"},
@@ -500,7 +498,15 @@ class FeishuDailyReporter:
         else:
             data["data_status"].append("Travelpayouts联盟数据未配置")
         
-        # 5. MailerLite 订阅数据
+        # 5. NordVPN 数据
+        nord_data = self._fetch_nordvpn()
+        if nord_data:
+            data.update(nord_data)
+            print(f"   ✅ NordVPN: {data['nord_clicks']} 点击, {data['nord_conversions']} 转化, ${data['nord_revenue']:.2f}")
+        else:
+            data["data_status"].append("NordVPN联盟数据未配置")
+        
+        # 6. MailerLite 订阅数据
         ml_data = self._fetch_mailerlite()
         if ml_data:
             data.update(ml_data)
@@ -517,8 +523,9 @@ class FeishuDailyReporter:
         # 7. 生成高优先级待办
         data["high_priority_todos"] = self._generate_todos(data)
         
-        # 6. 统计总问题数
+        # 8. 统计总问题数和总佣金
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]
+        data["affiliate_revenue"] = data.get("tp_revenue", 0) + data.get("nord_revenue", 0)
         
         return data
     
@@ -1082,6 +1089,51 @@ class FeishuDailyReporter:
                 
         except Exception as e:
             print(f"   ⚠️ Travelpayouts API 获取失败: {e}")
+        
+        return None
+    
+    def _fetch_nordvpn(self) -> dict:
+        """获取 NordVPN 联盟数据（昨日点击、转化、佣金）"""
+        if not NORDVPN_API_KEY:
+            print("   ⚠️ NordVPN API Key 未配置")
+            return None
+        
+        try:
+            yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            
+            url = f"https://api.nordvpn.com/v2/affiliate/statistics"
+            headers = {
+                "Authorization": f"Bearer {NORDVPN_API_KEY}",
+                "Content-Type": "application/json"
+            }
+            
+            payload = {
+                "date_from": yesterday,
+                "date_to": yesterday,
+                "sub_id": NORDVPN_AFFILIATE_ID
+            }
+            
+            response = requests.get(url, headers=headers, params=payload, timeout=30)
+            
+            if response.status_code == 200:
+                result = response.json()
+                
+                clicks = result.get("clicks", 0)
+                conversions = result.get("conversions", 0)
+                revenue = float(result.get("revenue", 0) or 0)
+                
+                print(f"   ✅ NordVPN: {clicks} 点击, {conversions} 转化, ${revenue:.2f}")
+                
+                return {
+                    "nord_clicks": clicks,
+                    "nord_conversions": conversions,
+                    "nord_revenue": round(revenue, 2)
+                }
+            else:
+                print(f"   ⚠️ NordVPN API 响应 {response.status_code}: {response.text[:200]}")
+                
+        except Exception as e:
+            print(f"   ⚠️ NordVPN API 获取失败: {e}")
         
         return None
     
