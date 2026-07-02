@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture"
 cover:
@@ -31,9 +31,9 @@ Hey there, fellow travelers! You know, when I first landed in Shanghai, I was li
 
 Now, I know what you're thinking. "Joran, I'm not sure I can afford to travel to China. What are the visa requirements? And how much will it cost?" Well, don't worry, I've got you covered. In this blog post, I'll not only take you on a journey through Shanghai's hidden gems but also give you all the practical info you need to plan your trip. From visa requirements to transportation tips, budget guides to safety advice, I'll share everything I've learned during my 10+ years in China.
 
-But first, let's talk about the elephant in the room. Or should I say, the pandas in Chengdu? You see, I live in Chengdu, and let me tell you, it's not just about the pandas. Sure, they're cute as buttons, but there's so much more to this city. And if you're planning a trip to China, I highly recommend adding Chengdu to your itinerary. But more on that later.
+But first, let's talk about the elephant in the room. Or should I say, the pandas in Chengdu? You see, I live in Chengdu, and let me tell you, it's not just about the pandas. Chengdu is also home to incredible [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) and some of China's best [street food](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/). If you're planning a trip to China, I highly recommend adding Chengdu to your itinerary.
 
-![Shanghai street scene at Nanjing Road busy intersection with people crossing, modern billboards, urban atmosphere, professional street photography](/img/china-dest/shanghai/nanjing-road-street.jpg)
+![Nanjing Road busy intersection with pedestrians crossing and modern billboards](/img/china-dest/shanghai/nanjing-road-street.jpg)
 
 ## The Hidden Neighborhoods of Shanghai
 
@@ -48,7 +48,7 @@ Another great thing about the Former French Concession is the food. There are so
 
 Actionable tip: If you visit the Former French Concession on a weekend, be prepared for crowds. To avoid the rush, try to go on a weekday. Also, make sure to bring your camera to capture all the beautiful architecture.
 
-![Former French Concession Shanghai tree-lined street with European-style buildings, sidewalk cafes, people sitting outside enjoying coffee, charming atmosphere, professional photography](/img/china-dest/shanghai/french-concession-street.jpg)
+![Shanghai French Concession tree-lined street with European buildings and sidewalk cafes](/img/china-dest/shanghai/french-concession-street.jpg)
 
 ### Tianzifang
 Tianzifang is another hidden neighborhood in Shanghai that is full of character. It's a maze of narrow alleys and traditional Shanghai shikumen houses. This area has been transformed into a trendy neighborhood with art galleries, boutiques, and cafes.
@@ -84,13 +84,13 @@ Actionable tip: If you want to watch a Chinese opera performance, book your tick
 ## Practical Information for Your Trip
 
 ### Visa Requirements
-For Australian and New Zealand travelers, you will need a tourist visa to enter China. The process can be a bit tedious, but it's not too difficult. You will need to fill out an application form, provide your passport, and pay a fee. It's a good idea to apply for your visa at least a few weeks before your trip.
+For Australian and New Zealand travelers, you will need a tourist visa to enter China. The process can be a bit tedious, but it's not too difficult. You will need to fill out an application form, provide your passport, and pay a fee. It's a good idea to apply for your visa at least a few weeks before your trip. Depending on your nationality and itinerary, you may also qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) -- check our guide to see if you're eligible.
 
 ### Transportation
-Shanghai has an extensive transportation system. The subway is the most convenient way to get around the city. It's fast, clean, and affordable. You can also take buses, but they can be a bit crowded during peak hours. And if you want to explore the city at your own pace, you can rent a bike.
+Shanghai has an extensive transportation system. The subway is the most convenient way to get around the city. It's fast, clean, and affordable. To use ride-hailing apps and maps while exploring, make sure you have [internet access set up before you arrive](/posts/internet-connection-china-esim-vpn-guide/). You can also take buses, but they can be a bit crowded during peak hours. And if you want to explore the city at your own pace, you can rent a bike.
 
 ### Budget
-Shanghai can be a relatively expensive city, but it's possible to travel on a budget. You can find affordable accommodation in hostels or budget hotels. And if you're willing to eat at local street food stalls and cafes, you can save a lot of money on food.
+Shanghai can be a relatively expensive city, but it's possible to travel on a budget. You can find affordable accommodation in hostels or budget hotels. And if you're willing to eat at local street food stalls and cafes, you can save a lot of money on food. Most places accept [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) -- setting these up before your trip will make paying for everything much easier.
 
 ### Safety
 Shanghai is a very safe city. However, like any big city, there are some areas that you should avoid, especially at night. It's also a good idea to keep your valuables safe and be aware of your surroundings.

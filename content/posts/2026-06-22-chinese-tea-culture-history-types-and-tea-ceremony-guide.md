@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: "Chinese Tea Culture: History, Types, and Tea Ceremony Guide"
 cover:
@@ -35,7 +35,7 @@ That was just the humble beginning of my epic adventure into the world of Chines
 
 So, whether you're a seasoned tea connoisseur or just starting out on your tea-drinking journey, grab a cup (preferably a gaiwan if you can get your hands on one), and join me as we embark on an exploration of the captivating world of Chinese tea culture.
 
-![An old Chinese tea master in traditional outfit brewing tea with gaiwan in a Chengdu tea house, warm lighting, steam rising, authentic atmosphere](/img/china-dest/chengdu/tea-master-gaiwan.jpg)
+![Chinese tea master brewing tea with a gaiwan in a traditional Chengdu tea house](/img/china-dest/chengdu/tea-master-gaiwan.jpg)
 
 ## History of Chinese Tea Culture
 
@@ -47,7 +47,7 @@ Tea also had strong connections with the three major religions in China - Confuc
 
 In the 7th century, tea made its way to Japan thanks to the efforts of Buddhist monks. These monks, who were traveling between China and Japan, brought with them not only the teachings of Buddhism but also the art of tea. From Japan, tea continued to spread to other parts of Asia, leaving its mark on the cultures it encountered.
 
-![Chinese scholars in traditional Hanfu robes having tea ceremony in a classical garden pavilion, elegant tea set on wooden table, tranquil atmosphere, bamboo and rockery background](/img/china-dest/chengdu/hanfu-tea-ceremony-garden.jpg)
+![Scholars in Hanfu robes performing a traditional Chinese tea ceremony in a garden pavilion](/img/china-dest/chengdu/hanfu-tea-ceremony-garden.jpg)
 
 ## Types of Chinese Tea
 

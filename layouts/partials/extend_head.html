@@ -206,6 +206,34 @@ html, body {
 img, table, pre, video, iframe {
     max-width: 100% !important;
 }
+
+/* Hide Hugo heading anchor links (#) — accessible via keyboard, hidden visually */
+.heading-wrapper > a.header-anchor,
+h1 > a[href^="#"],
+h2 > a[href^="#"],
+h3 > a[href^="#"],
+h4 > a[href^="#"],
+h5 > a[href^="#"],
+h6 > a[href^="#"] {
+    opacity: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+/* Show on hover for accessibility */
+h2:hover > a[href^="#"],
+h3:hover > a[href^="#"],
+h4:hover > a[href^="#"] {
+    opacity: 0.5;
+    font-size: 0.875rem;
+    width: auto;
+    height: auto;
+    position: static;
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
 </style>
 
 {{- /* Head custom content area end */ -}}

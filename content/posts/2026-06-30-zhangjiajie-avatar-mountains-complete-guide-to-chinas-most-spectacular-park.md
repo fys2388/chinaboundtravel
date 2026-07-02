@@ -30,13 +30,13 @@ cover:
 
 ## Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park
 
-As an American who's lived in Chengdu for over 10 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong.
+As an American who's lived in Chengdu for over 10 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong. (If you're heading to Chengdu before or after Zhangjiajie, don't miss the [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) -- it's the perfect way to refuel after days of hiking.)
 
 Standing on the **Yuanjiajie viewing platform** at sunrise, watching those sandstone pillars punch through a sea of clouds like something straight out of a James Cameron movie, I actually got emotional. It's one of those places where photos genuinely don't do it justice — you have to feel the mist on your face and hear the wind funneling through the rock formations.
 
 This guide is everything I wish I'd known before going. I've packed it with real ticket prices (updated for 2026), the exact 4-day route that worked for us, mistakes to avoid, and the unspoken rules that will save you time, money, and sanity.
 
-![Aerial view of Zhangjiajie Avatar Mountains with its towering sandstone pillars and lush greenery. The sky is a bright blue, and there are wisps of white clouds floating around the peaks.](/img/china-dest/zhangjiajie/avatar-mountains-aerial.jpg)
+![Zhangjiajie Avatar Mountains towering sandstone pillars seen from aerial view](/img/china-dest/zhangjiajie/avatar-mountains-aerial.jpg)
 
 ## Know Before You Go: Two Separate Parks (Not Three)
 
@@ -79,7 +79,7 @@ Prices updated from the official Zhangjiajie ticketing system. They change seaso
 
 **By plane:** Zhangjiajie Hehua Airport (DYG) has direct flights from Beijing, Shanghai, Chengdu, Guangzhou, and Xi'an. If you're coming from the US, you'll likely connect through one of these. We flew Chengdu → Zhangjiajie for about ¥600 (~$85) one way.
 
-**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option.
+**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option. For tips on booking train tickets in China, check out our [high-speed rail guide](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/).
 
 **From airport to town:** The airport is only 5 km from the city center. A taxi costs about ¥20–30 (~$3–4). There's also a bus (¥4) but it only runs a few times per day.
 
@@ -143,7 +143,7 @@ If you have the energy, the **Grand Canyon Glass Bridge** is worth the trip. It'
 
 If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park** (土家风情园). If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo (三下锅) before heading out.
 
-![Panoramic view from Tianzi Mountain at sunset showing the sea of clouds surrounding the sandstone pillars at Zhangjiajie](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.jpg)
+![Tianzi Mountain sunset with sea of clouds around Zhangjiajie sandstone pillars](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.jpg)
 
 ## Where to Stay
 
@@ -222,13 +222,13 @@ Between booking DiDi rides, translating menus, and sharing photos, you'll want d
 
 - **eSIM:** The easiest option for short trips. I buy mine from [Airalo](https://www.airalo.com/promo/38j3e4) — their China eSIM gives you 10GB for ~$15, works all over Hunan. [Check plans here →](https://www.airalo.com/promo/38j3e4)
 - **Physical SIM:** Buy a China Unicom SIM at the airport. About ¥50 ($7) for a week of data
-- **VPN:** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
+- **VPN:** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. For a full breakdown of internet options in China, including eSIM and VPN recommendations, see our [internet guide for China](/posts/internet-connection-china-esim-vpn-guide/). [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
 
-![Close-up of the sandstone pillar formations at Zhangjiajie with lush green vegetation growing between the rocks](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.jpg)
+![Close-up of Zhangjiajie sandstone pillar formations with green vegetation](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.jpg)
 
 ## Getting Travel Insurance (Don't Skip This)
 
-The hiking trails at Zhangjiajie are genuinely hazardous — wet stone steps, steep cliffs, and sheer drops without guardrails in some sections. I watched a guy trip on the descent from Huangshi Village and need a helicopter evacuation. His insurance covered it. Without it? You're paying out of pocket.
+The hiking trails at Zhangjiajie are genuinely hazardous -- wet stone steps, steep cliffs, and sheer drops without guardrails in some sections. I watched a guy trip on the descent from Huangshi Village and need a helicopter evacuation. His insurance covered it. Without it? You're paying out of pocket. For recommendations on which policies cover hiking and outdoor activities, see our [travel insurance guide for China](/posts/best-travel-insurance-china/).
 
 I use [SafetyWing](https://safetywing.com/ambassador/refer/26548976) for all my travel in China — it covers hiking and outdoor activities, and claims are straightforward. [Get a free quote here →](https://safetywing.com/ambassador/refer/26548976)
 
