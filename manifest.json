@@ -1,8 +1,8 @@
 {
-  "month_post_count": 3,
+  "month_post_count": 4,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-02 04:04:53",
-  "daily_social_publish_date": "2026-07-02",
+  "last_social_publish": "2026-07-03 12:20:08",
+  "daily_social_publish_date": "2026-07-03",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -20,6 +20,11 @@
       "topic": "WeChat Pay for Foreigners: Step-by-Step Setup and Common Mistakes to Avoid",
       "geo_region": "AU",
       "create_date": "2026-07-02"
+    },
+    {
+      "topic": "Guilin and Yangshuo: The Ultimate Karst Landscape Guide for 2026",
+      "geo_region": "EU",
+      "create_date": "2026-07-03"
     }
   ],
   "keyword_convert_rate": {
