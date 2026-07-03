@@ -1519,6 +1519,29 @@ class BlogGenerator:
             print(f"[Attempt {attempt}] Social media publishing failed: {e}")
             self.notifier.send_notification("⚠️ 社媒发布失败", f"文章《{title}》社媒发布时出错: {str(e)}")
         
+        # ========== 自动推送Git触发部署 ==========
+        try:
+            import subprocess
+            print(f"[Attempt {attempt}] Pushing to Git to trigger deployment...")
+            
+            subprocess.run(["git", "add", "."], cwd=BASE_DIR, check=True, capture_output=True)
+            subprocess.run(["git", "reset", "HEAD", ".env"], cwd=BASE_DIR, check=True, capture_output=True)
+            subprocess.run(["git", "reset", "HEAD", ".env.*"], cwd=BASE_DIR, check=True, capture_output=True)
+            
+            result = subprocess.run(["git", "diff", "--cached", "--name-only"], cwd=BASE_DIR, capture_output=True, text=True)
+            if not result.stdout.strip():
+                print(f"[Attempt {attempt}] No files to commit, skipping git push")
+            else:
+                commit_msg = f"feat: publish new post - {title}"
+                subprocess.run(["git", "commit", "-m", commit_msg], cwd=BASE_DIR, check=True, capture_output=True)
+                subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, check=True, capture_output=True)
+                
+                print(f"[Attempt {attempt}] Git push successful! Deployment triggered.")
+                self.notifier.send_notification("🚀 部署已触发", f"文章《{title}》已推送到GitHub，Cloudflare Pages自动部署中...")
+        except Exception as e:
+            print(f"[Attempt {attempt}] Git push failed: {e}")
+            self.notifier.send_notification("⚠️ Git推送失败", f"文章《{title}》Git推送失败，请手动部署: {str(e)}")
+        
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
