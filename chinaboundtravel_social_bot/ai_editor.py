@@ -2,7 +2,7 @@ import csv
 import os
 import logging
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -21,7 +21,7 @@ class AIEditor:
         review_result = {
             "content_id": content.get('id', ''),
             "title": content.get('title', ''),
-            "reviewed_at": datetime.now().isoformat(),
+            "reviewed_at": datetime.now(timezone.utc).isoformat(),
             "approved": False,
             "issues": [],
             "suggestions": []
@@ -55,7 +55,7 @@ class AIEditor:
         review_result = {
             "content_id": content.get('id', ''),
             "title": content.get('title', ''),
-            "reviewed_at": datetime.now().isoformat(),
+            "reviewed_at": datetime.now(timezone.utc).isoformat(),
             "approved": False,
             "issues": [],
             "suggestions": []
@@ -114,7 +114,7 @@ class AIEditor:
         content_text = content.get('content', '')
         url = content.get('url', '')
         
-        today = datetime.now().strftime('%Y-%m-%d')
+        today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
         slug = title.lower().replace(' ', '-').replace('"', '').replace("'", '').replace('/', '-').replace('?', '').replace('(', '').replace(')', '').replace(':', '-').replace(',', '').replace('.', '').replace('!', '').replace('&', 'and').replace('---', '-')
         if len(slug) > 100:
             slug = slug[:100]
@@ -122,7 +122,7 @@ class AIEditor:
         
         article = f"""---
 title: "{title}"
-date: {datetime.now().isoformat()}
+date: {datetime.now(timezone.utc).isoformat()}
 author: ChinaBound Travel
 tags: ["ChinaTravel", "TravelGuide"]
 categories: ["China"]

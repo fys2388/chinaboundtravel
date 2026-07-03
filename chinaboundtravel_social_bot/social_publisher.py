@@ -2,7 +2,7 @@ import os
 import json
 import requests
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -352,14 +352,14 @@ def update_manifest():
     """更新发布时间"""
     manifest_path = BASE_DIR / "manifest.json"
     manifest = get_manifest()
-    manifest["last_social_publish"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    manifest["last_social_publish"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     with open(manifest_path, 'w', encoding='utf-8') as f:
         json.dump(manifest, f, indent=2)
 
 
 def check_daily_social_limit(daily_limit=5):
     """检查今日社媒发布是否已达上限，返回 (是否受限, 今日已发布数, 限额)"""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     manifest = get_manifest()
     
     # 初始化默认值（防止旧版本 manifest 缺失字段）
@@ -394,7 +394,7 @@ def check_daily_social_limit(daily_limit=5):
 
 def increment_daily_social_count():
     """社媒发布成功后，递增今日计数"""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     manifest_path = BASE_DIR / "manifest.json"
     manifest = get_manifest()
     
@@ -445,7 +445,7 @@ def send_feishu_notification(results: list):
 
 def run():
     """主流程：每次只处理一篇最新文章，生成多条不同内容的社媒帖子"""
-    print(f"[{datetime.now()}] 开始扫描新文章...")
+    print(f"[{datetime.now(timezone.utc)}] 开始扫描新文章...")
     manifest = get_manifest()
     last_publish = manifest.get("last_social_publish", "2020-01-01")
     print(f"上次发布时间: {last_publish}")
@@ -534,7 +534,7 @@ def run():
         update_manifest()
         send_feishu_notification(results)
 
-    print(f"\n[{datetime.now()}] 完成，共发布 {len(results)} 条社媒帖子")
+    print(f"\n[{datetime.now(timezone.utc)}] 完成，共发布 {len(results)} 条社媒帖子")
 
 
 if __name__ == "__main__":

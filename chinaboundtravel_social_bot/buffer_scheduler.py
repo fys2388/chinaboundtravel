@@ -2,7 +2,7 @@ import json
 import requests
 import schedule
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import sys
 
@@ -64,11 +64,11 @@ class BufferScheduler:
                     print(f"FAILED: {account['name']} - Schedule failed: {result.get('error', 'Unknown error')}")
     
     def _get_scheduled_time(self, time_str: str) -> str:
-        today = datetime.now()
+        today = datetime.now(timezone.utc)
         hour, minute = map(int, time_str.split(':'))
         scheduled = today.replace(hour=hour, minute=minute, second=0, microsecond=0)
         
-        if scheduled < datetime.now():
+        if scheduled < datetime.now(timezone.utc):
             scheduled += timedelta(days=1)
         
         return scheduled.isoformat() + 'Z'

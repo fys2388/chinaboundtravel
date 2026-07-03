@@ -3,7 +3,7 @@ import schedule
 import time
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 from config import SCHEDULE_CONFIG, LOGGING_CONFIG
 from content_manager import ContentManager
@@ -35,8 +35,8 @@ class PublicationScheduler:
     
     def submit_for_approval(self, content: Dict, platform: str) -> Dict:
         approval_item = {
-            'id': f"approval_{int(datetime.now().timestamp())}",
-            'timestamp': datetime.now().isoformat(),
+            'id': f"approval_{int(datetime.now(timezone.utc).timestamp())}",
+            'timestamp': datetime.now(timezone.utc).isoformat(),
             'platform': platform,
             'content': content,
             'status': 'pending',
@@ -54,7 +54,7 @@ class PublicationScheduler:
             if item['id'] == approval_id and item['status'] == 'pending':
                 item['status'] = 'approved'
                 item['reviewed_by'] = 'system'
-                item['reviewed_at'] = datetime.now().isoformat()
+                item['reviewed_at'] = datetime.now(timezone.utc).isoformat()
                 
                 platform = item['platform']
                 if platform in self.publishers:
@@ -70,7 +70,7 @@ class PublicationScheduler:
             if item['id'] == approval_id and item['status'] == 'pending':
                 item['status'] = 'rejected'
                 item['reviewed_by'] = 'system'
-                item['reviewed_at'] = datetime.now().isoformat()
+                item['reviewed_at'] = datetime.now(timezone.utc).isoformat()
                 item['rejection_reason'] = reason
                 logger.info(f"Content rejected: {approval_id} - {reason}")
                 return True
@@ -89,8 +89,8 @@ class PublicationScheduler:
             result = publisher.post(content)
             
             log_entry = {
-                'id': f"log_{int(datetime.now().timestamp())}",
-                'timestamp': datetime.now().isoformat(),
+                'id': f"log_{int(datetime.now(timezone.utc).timestamp())}",
+                'timestamp': datetime.now(timezone.utc).isoformat(),
                 'platform': platform,
                 'content_title': content.get('title', ''),
                 'content_url': content.get('url', ''),
@@ -158,7 +158,7 @@ class PublicationScheduler:
             'by_platform': {},
             'pending_approvals': len(self.get_pending_approvals()),
             'total_content': len(self.content_manager.posts),
-            'last_run': datetime.now().isoformat()
+            'last_run': datetime.now(timezone.utc).isoformat()
         }
         
         for log in self.publish_log:
@@ -175,7 +175,7 @@ class PublicationScheduler:
     
     def save_log(self, filepath: str = None):
         if not filepath:
-            filepath = f"publish_log_{datetime.now().strftime('%Y%m%d')}.json"
+            filepath = f"publish_log_{datetime.now(timezone.utc).strftime('%Y%m%d')}.json"
         
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(self.publish_log, f, indent=2, ensure_ascii=False)

@@ -9,7 +9,7 @@
 """
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 # 配置路径：放在项目根目录的 manifest.json (与各脚本同级目录)
@@ -82,8 +82,8 @@ class BudgetController:
 
     def _ensure_cost_tracking(self):
         """确保成本追踪字段存在"""
-        today = datetime.now().strftime("%Y-%m-%d")
-        month_key = datetime.now().strftime("%Y-%m")
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        month_key = datetime.now(timezone.utc).strftime("%Y-%m")
 
         if "cost_tracking" not in self.data:
             self.data["cost_tracking"] = {}
@@ -116,7 +116,7 @@ class BudgetController:
         """清理过期的成本数据"""
         if "cost_tracking" in self.data:
             import datetime as dt
-            cutoff = (datetime.now() - dt.timedelta(days=days_to_keep)).strftime("%Y-%m-%d")
+            cutoff = (datetime.now(timezone.utc) - dt.timedelta(days=days_to_keep)).strftime("%Y-%m-%d")
             for date_key in list(self.data["cost_tracking"].keys()):
                 if date_key == "monthly":
                     continue
@@ -164,8 +164,8 @@ class BudgetController:
 
     def record_call(self, model: str, input_tokens: int, output_tokens: int) -> float:
         """记录一次 API 调用并返回实际成本"""
-        today = datetime.now().strftime("%Y-%m-%d")
-        month_key = datetime.now().strftime("%Y-%m")
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        month_key = datetime.now(timezone.utc).strftime("%Y-%m")
 
         prices = MODEL_PRICING.get(model, MODEL_PRICING["deepseek-chat"])
         cost = (input_tokens * prices["input"] + output_tokens * prices["output"]) / 1_000_000
@@ -195,7 +195,7 @@ class BudgetController:
         return cost
 
     def get_daily_status(self) -> dict:
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         self._ensure_cost_tracking()
         today_data = self.data["cost_tracking"][today]
         used = today_data["total_cost_yuan"]
@@ -217,7 +217,7 @@ class BudgetController:
         }
 
     def get_monthly_status(self) -> dict:
-        month_key = datetime.now().strftime("%Y-%m")
+        month_key = datetime.now(timezone.utc).strftime("%Y-%m")
         self._ensure_cost_tracking()
         month_data = self.data["cost_tracking"]["monthly"].get(month_key, {
             "total_cost_yuan": 0.0,

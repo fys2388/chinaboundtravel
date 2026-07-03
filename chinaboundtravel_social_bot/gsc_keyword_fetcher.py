@@ -1,7 +1,7 @@
 import os
 import json
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
@@ -24,8 +24,8 @@ class GSCKeywordFetcher:
                 "Content-Type": "application/json"
             }
             
-            start_date = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
-            end_date = datetime.now().strftime("%Y-%m-%d")
+            start_date = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
+            end_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             
             body = {
                 "startDate": start_date,
@@ -128,7 +128,7 @@ class GSCKeywordFetcher:
             manifest = {}
         
         manifest["high_potential_keywords"] = all_keywords
-        manifest["last_keyword_update"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        manifest["last_keyword_update"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         
         with open(self.manifest_path, "w", encoding="utf-8") as f:
             json.dump(manifest, f, indent=2)

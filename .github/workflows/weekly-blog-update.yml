@@ -37,13 +37,13 @@ jobs:
         run: |
           python -c "
           import json, os
-          from datetime import datetime
+          from datetime import datetime, timezone
           manifest_path = 'manifest.json'
           if os.path.exists(manifest_path):
               with open(manifest_path, 'r') as f:
                   data = json.load(f)
-              today = datetime.now().strftime('%Y-%m-%d')
-              month = datetime.now().strftime('%Y-%m')
+              today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+              month = datetime.now(timezone.utc).strftime('%Y-%m')
               # Auto-reset daily social count if stale (not today)
               if data.get('daily_social_publish_date') != today:
                   data['daily_social_publish_date'] = today
@@ -144,9 +144,6 @@ jobs:
           echo "=== Triggering Cloudflare Pages deploy workflow ==="
           gh workflow run deploy-cloudflare-pages.yml --ref main
           echo "Deploy workflow triggered (may take 1-2 min to start)"
-
-      - name: Install Pillow for cover image generation
-        run: pip install Pillow
 
       - name: Run social media distribution
         env:

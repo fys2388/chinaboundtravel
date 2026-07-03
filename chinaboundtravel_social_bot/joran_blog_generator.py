@@ -6,7 +6,7 @@ import requests
 import hashlib
 import sys
 import base64
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
 from budget_controller import BudgetController
@@ -431,14 +431,14 @@ class ManifestManager:
         if self.path.exists():
             with open(self.path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        return {"month_post_count": 0, "last_reset_date": datetime.now().strftime("%Y-%m-01"), "history_topics": [], "keyword_convert_rate": {}, "geo_convert_rate": {}}
+        return {"month_post_count": 0, "last_reset_date": datetime.now(timezone.utc).strftime("%Y-%m-01"), "history_topics": [], "keyword_convert_rate": {}, "geo_convert_rate": {}}
     
     def save(self):
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.data, f, indent=2)
     
     def check_topic_repeat(self, topic, geo_region, days=30):
-        cutoff_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
         for record in self.data["history_topics"]:
             if record["topic"] == topic and record["geo_region"] == geo_region:
                 if record["create_date"] >= cutoff_date:
@@ -449,7 +449,7 @@ class ManifestManager:
         self.data["history_topics"].append({
             "topic": topic,
             "geo_region": geo_region,
-            "create_date": datetime.now().strftime("%Y-%m-%d")
+            "create_date": datetime.now(timezone.utc).strftime("%Y-%m-%d")
         })
         # 同步更新 topic_pool.json 的 status 为 used，防止重复选题
         self._mark_topic_used_in_pool(topic)
@@ -466,7 +466,7 @@ class ManifestManager:
             for t in pool_data.get("topics", []):
                 if t.get("title") == topic and t.get("status") == "pending":
                     t["status"] = "used"
-                    t["used_at"] = datetime.now().isoformat()
+                    t["used_at"] = datetime.now(timezone.utc).isoformat()
                     changed = True
                     print(f"[Manifest] Topic '{topic}' marked as used in topic_pool.json")
             if changed:
@@ -476,7 +476,7 @@ class ManifestManager:
             print(f"[Manifest] Failed to update topic_pool.json: {e}")
     
     def increment_post_count(self):
-        today = datetime.now()
+        today = datetime.now(timezone.utc)
         current_month = f"{today.year}-{today.month:02d}-01"
         
         if self.data["last_reset_date"] != current_month:
@@ -486,7 +486,7 @@ class ManifestManager:
         self.data["month_post_count"] += 1
     
     def get_post_count(self):
-        today = datetime.now()
+        today = datetime.now(timezone.utc)
         current_month = f"{today.year}-{today.month:02d}-01"
         
         if self.data["last_reset_date"] != current_month:
@@ -498,7 +498,7 @@ class ManifestManager:
 
     def check_daily_social_limit(self, daily_limit=5):
         """检查今日社媒发布是否已达上限，返回 (是否受限, 今日已发布数, 限额)"""
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
         # 初始化默认值（防止旧版本 manifest 缺失字段）
         if "daily_social_publish_date" not in self.data:
@@ -528,7 +528,7 @@ class ManifestManager:
 
     def increment_daily_social_count(self):
         """社媒发布成功后，递增今日计数"""
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         
         # 新的一天或字段缺失，重置并初始化
         if self.data.get("daily_social_publish_date") != today:
@@ -1173,7 +1173,7 @@ class BlogGenerator:
         
         if existing_pattern:
             existing_pattern["occurrences"] = existing_pattern.get("occurrences", 0) + 1
-            existing_pattern["last_seen"] = datetime.now().isoformat()
+            existing_pattern["last_seen"] = datetime.now(timezone.utc).isoformat()
             if title not in existing_pattern.get("files", []):
                 existing_pattern["files"].append(title)
         else:
@@ -1182,8 +1182,8 @@ class BlogGenerator:
                 "type": "内容质量" if error_hash == "content_depth_insufficient" else "风控" if error_hash == "sensitive_content_politics" else "选题",
                 "message": error_message,
                 "occurrences": 1,
-                "first_seen": datetime.now().isoformat(),
-                "last_seen": datetime.now().isoformat(),
+                "first_seen": datetime.now(timezone.utc).isoformat(),
+                "last_seen": datetime.now(timezone.utc).isoformat(),
                 "files": [title],
                 "suggestion": "确保文章至少700词" if error_hash == "content_depth_insufficient" else "避免政治敏感内容",
                 "resolved": False,
@@ -1193,13 +1193,13 @@ class BlogGenerator:
             kb["error_patterns"].append(new_pattern)
         
         kb["total_errors"] = kb.get("total_errors", 0) + 1
-        kb["last_updated"] = datetime.now().isoformat()
+        kb["last_updated"] = datetime.now(timezone.utc).isoformat()
         self.error_handler.save_knowledge_base()
         print(f"[Learning] Recorded audit failure: {error_hash} - {title}")
     
     def create_frontmatter(self, title, geo_region, topic):
         slug = self.generate_slug(title)
-        date = datetime.now().strftime("%Y-%m-%dT10:00:00+08:00")
+        date = datetime.now(timezone.utc).strftime("%Y-%m-%dT10:00:00+08:00")
         
         tags = ["ChinaTravel", "TravelGuide", "China"]
         if geo_region == "EU":
@@ -1420,7 +1420,7 @@ class BlogGenerator:
         title = title.group(1) if title else f"{topic.title()} Guide"
         
         DRAFT_DIR.mkdir(parents=True, exist_ok=True)
-        draft_path = DRAFT_DIR / f"{datetime.now().strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
+        draft_path = DRAFT_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
         
         frontmatter = self.create_frontmatter(title, geo_region, topic)
         self.write_markdown(frontmatter, content, draft_path)
