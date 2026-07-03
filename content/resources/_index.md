@@ -78,7 +78,7 @@ For hotels in China, Booking.com consistently has the best selection and pricing
 - ✅ Real customer reviews from verified stays
 - ✅ English-language support 24/7
 
-<a href="https://www.booking.com/index.html?aid=1234567" rel="nofollow sponsored" target="_blank"><strong>Browse China Hotels →</strong></a>
+<a href="https://www.hotellook.com/search?marker=730795" rel="nofollow sponsored" target="_blank"><strong>Search China Hotels →</strong></a>
 
 ### Hostelworld — Budget Stays
 
@@ -90,16 +90,16 @@ For backpackers and budget travelers, Hostelworld has the best selection of host
 
 ## 🚄 Transportation in China
 
-### Trip.com — Flights, Trains, Tours
+### Flight Search — Compare Prices Across Airlines
 
-Trip.com (formerly Ctrip) is the best English-language platform for booking China transportation:
+Search and compare flight prices across multiple airlines and booking platforms to find the best deals for China travel:
 
-- ✅ **Flights** — Often cheaper than Expedia or Kayak
+- ✅ **Flights** — Compare prices across 200+ airlines
 - ✅ **High-speed trains** — 15-day advance booking recommended
-- ✅ **Tours & activities** — Skip-the-line tickets for major attractions
-- ✅ **Hotel bundles** — Save 10-20% on package deals
+- ✅ **No booking fees** — Get the best price without extra charges
+- ✅ **Free cancellation** — Flexible booking options
 
-[**Price China Flights on Trip.com →**](https://www.trip.com)
+[**Search China Flights →**](https://www.travelpayouts.com/click?marker=730795&currency=USD&destination=CN)
 
 ### Klook — Tours & Skip-the-Line Tickets
 
@@ -110,7 +110,7 @@ If you want English-guided tours of the Great Wall, Terracotta Warriors, or Pand
 - ✅ Beijing airport transfers
 - ✅ Verified reviews from other travelers
 
-<a href="https://klook.tpo.li/vrPkmS2v" rel="nofollow sponsored" target="_blank"><strong>Find China Tours on Klook →</strong></a>
+<a href="https://klook.tpo.li/ppB4vZQ6" rel="nofollow sponsored" target="_blank"><strong>Find China Tours on Klook →</strong></a>
 
 ---
 
