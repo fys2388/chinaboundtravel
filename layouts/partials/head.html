@@ -10,7 +10,7 @@
 {{- $isNoIndexPath = true }}
 {{- end }}
 {{- end }}
-{{- if and (hugo.IsProduction | or (eq site.Params.env "production")) (not .Params.robotsNoIndex) (not $isNoIndexPath) }}
+{{- if and (or hugo.IsProduction (eq site.Params.env "production")) (not .Params.robotsNoIndex) (not $isNoIndexPath) }}
 <meta name="robots" content="index, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
