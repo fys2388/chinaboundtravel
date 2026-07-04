@@ -7,7 +7,10 @@
       "occurrences": 3,
       "first_seen": "2026-06-01T09:00:00",
       "last_seen": "2026-06-05T14:30:00",
-      "files": ["old-post-1.md", "old-post-2.md"],
+      "files": [
+        "old-post-1.md",
+        "old-post-2.md"
+      ],
       "suggestion": "使用 [Image:描述|alt=xxx] 格式",
       "resolved": true
     },
@@ -18,7 +21,9 @@
       "occurrences": 2,
       "first_seen": "2026-06-02T10:00:00",
       "last_seen": "2026-06-04T11:00:00",
-      "files": ["old-post-3.md"],
+      "files": [
+        "old-post-3.md"
+      ],
       "suggestion": "填充有效的站内链接或删除空链接",
       "resolved": false
     },
@@ -29,7 +34,11 @@
       "occurrences": 5,
       "first_seen": "2026-06-01T09:00:00",
       "last_seen": "2026-06-06T08:00:00",
-      "files": ["post-1.md", "post-2.md", "post-3.md"],
+      "files": [
+        "post-1.md",
+        "post-2.md",
+        "post-3.md"
+      ],
       "suggestion": "每篇文章至少添加2个图片占位符",
       "resolved": false
     },
@@ -40,7 +49,10 @@
       "occurrences": 4,
       "first_seen": "2026-06-03T09:00:00",
       "last_seen": "2026-06-05T10:00:00",
-      "files": ["post-4.md", "post-5.md"],
+      "files": [
+        "post-4.md",
+        "post-5.md"
+      ],
       "suggestion": "扩展description至120-158字符",
       "resolved": true
     },
@@ -51,7 +63,9 @@
       "occurrences": 1,
       "first_seen": "2026-06-04T14:00:00",
       "last_seen": "2026-06-04T14:00:00",
-      "files": ["post-6.md"],
+      "files": [
+        "post-6.md"
+      ],
       "suggestion": "确保只有一个H1标题",
       "resolved": true
     },
@@ -62,12 +76,23 @@
       "occurrences": 62,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["internet-connection-china-esim-vpn-guide.md", "western-sichuan-overland-camping-route.md", "hello-world.md", "alipay-wechat-pay-foreigners-guide.md", "144-hour-visa-free-transit-guide.md", "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"],
+      "files": [
+        "internet-connection-china-esim-vpn-guide.md",
+        "western-sichuan-overland-camping-route.md",
+        "hello-world.md",
+        "alipay-wechat-pay-foreigners-guide.md",
+        "144-hour-visa-free-transit-guide.md",
+        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
+      ],
       "suggestion": "运行 fix_placeholders.py 脚本替换为真实联盟链接",
       "resolved": true,
       "priority": "P0",
       "source": "外部评测报告",
-      "prevention_rules": ["使用 {{< vpn-link \"text\" />}} 和 {{< klook-link \"text\" />}} 短代码", "在生成时直接使用联盟链接短代码", "生成后检查是否存在未替换的占位符"]
+      "prevention_rules": [
+        "使用 {{< vpn-link \"text\" />}} 和 {{< klook-link \"text\" />}} 短代码",
+        "在生成时直接使用联盟链接短代码",
+        "生成后检查是否存在未替换的占位符"
+      ]
     },
     {
       "hash": "factual_error_beijing",
@@ -76,12 +101,18 @@
       "occurrences": 2,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["cities/beijing.md"],
+      "files": [
+        "cities/beijing.md"
+      ],
       "suggestion": "校对所有时间、时长、价格数据，确保准确性",
       "resolved": true,
       "priority": "P0",
       "source": "外部评测报告",
-      "prevention_rules": ["生成时验证时间格式（如 7-9 AM 而非 79 AM）", "验证时长数据合理性", "重要数据在发布前进行二次确认"]
+      "prevention_rules": [
+        "生成时验证时间格式（如 7-9 AM 而非 79 AM）",
+        "验证时长数据合理性",
+        "重要数据在发布前进行二次确认"
+      ]
     },
     {
       "hash": "test_page_online",
@@ -90,12 +121,18 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["member-month/test-wrong-tag.md"],
+      "files": [
+        "member-month/test-wrong-tag.md"
+      ],
       "suggestion": "添加 draft: true 或从生产环境移除",
       "resolved": true,
       "priority": "P0",
       "source": "外部评测报告",
-      "prevention_rules": ["测试文章添加 draft: true", "定期清理测试文件", "不在生产目录创建测试文件"]
+      "prevention_rules": [
+        "测试文章添加 draft: true",
+        "定期清理测试文件",
+        "不在生产目录创建测试文件"
+      ]
     },
     {
       "hash": "schema_missing",
@@ -104,7 +141,9 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["全站"],
+      "files": [
+        "全站"
+      ],
       "suggestion": "添加 JSON-LD 结构化数据以提升搜索结果展示",
       "resolved": false,
       "priority": "P1",
@@ -117,12 +156,17 @@
       "occurrences": 10,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["多个文章"],
+      "files": [
+        "多个文章"
+      ],
       "suggestion": "为所有图片添加描述性 Alt 文本",
       "resolved": false,
       "priority": "P1",
       "source": "外部评测报告",
-      "prevention_rules": ["生成图片时添加描述性 Alt 文本", "在 [Image:description] 格式中包含详细描述"]
+      "prevention_rules": [
+        "生成图片时添加描述性 Alt 文本",
+        "在 [Image:description] 格式中包含详细描述"
+      ]
     },
     {
       "hash": "social_proof_missing",
@@ -131,7 +175,9 @@
       "occurrences": 1,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["pricing页"],
+      "files": [
+        "pricing页"
+      ],
       "suggestion": "收集并展示真实用户评价，提升转化率",
       "resolved": false,
       "priority": "P1",
@@ -144,12 +190,17 @@
       "occurrences": 10,
       "first_seen": "2026-06-07T11:00:00",
       "last_seen": "2026-06-07T11:00:00",
-      "files": ["多个文章"],
+      "files": [
+        "多个文章"
+      ],
       "suggestion": "为每篇文章撰写独特的 meta description 和摘要",
       "resolved": false,
       "priority": "P1",
       "source": "外部评测报告",
-      "prevention_rules": ["确保每篇文章的 description 和 summary 唯一", "根据文章内容生成差异化摘要"]
+      "prevention_rules": [
+        "确保每篇文章的 description 和 summary 唯一",
+        "根据文章内容生成差异化摘要"
+      ]
     },
     {
       "hash": "encoding_bad_char",
@@ -158,11 +209,18 @@
       "occurrences": 4,
       "first_seen": "2026-06-17T10:21:00",
       "last_seen": "2026-06-19T06:09:45",
-      "files": ["hangzhou.md", "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md"],
+      "files": [
+        "hangzhou.md",
+        "2026-06-06-budget-planning-for-china-lessons-from-a-california-kid-turned-chengdu-local.md"
+      ],
       "suggestion": "文件保存时使用 UTF-8 编码，避免特殊控制字符",
       "resolved": false,
       "priority": "P0",
-      "prevention_rules": ["文件保存时使用 UTF-8 编码", "避免在内容中使用零宽字符", "生成后进行编码验证"]
+      "prevention_rules": [
+        "文件保存时使用 UTF-8 编码",
+        "避免在内容中使用零宽字符",
+        "生成后进行编码验证"
+      ]
     },
     {
       "hash": "garbled_characters_2026_06_20",
@@ -171,26 +229,48 @@
       "occurrences": 14,
       "first_seen": "2026-06-20T10:00:00",
       "last_seen": "2026-06-20T10:00:00",
-      "files": ["144-hour-visa-free-transit-guide.md", "western-sichuan-overland-camping-route.md", "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"],
+      "files": [
+        "144-hour-visa-free-transit-guide.md",
+        "western-sichuan-overland-camping-route.md",
+        "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md"
+      ],
       "suggestion": "生成文章时只使用 ASCII 字符，避免中文、emoji、特殊符号",
       "resolved": true,
       "priority": "P0",
       "source": "自动化扫描",
-      "prevention_rules": ["禁止在文章中包含中文字符（包括城市名、景点名、食物名）", "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）", "中文食物名使用英文翻译（如 dan dan noodles, hotpot）", "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）", "使用标准 ASCII 引号 (\" \") 而非中文引号", "使用英文标点符号（如 . , ! ?）而非中文标点", "箭头使用 -> 或文字描述（如 leads to）而非 →"]
+      "prevention_rules": [
+        "禁止在文章中包含中文字符（包括城市名、景点名、食物名）",
+        "中文地名使用拼音（如 Chengdu, Beijing, Shanghai）",
+        "中文食物名使用英文翻译（如 dan dan noodles, hotpot）",
+        "禁止 emoji 和特殊符号（如 →, ✅, ❌, 🇨🇳）",
+        "使用标准 ASCII 引号 (\" \") 而非中文引号",
+        "使用英文标点符号（如 . , ! ?）而非中文标点",
+        "箭头使用 -> 或文字描述（如 leads to）而非 →"
+      ]
     },
     {
       "hash": "content_depth_insufficient",
       "type": "内容质量",
       "message": "文章内容深度不足（词数<700），缺少深度分析和实用信息",
-      "occurrences": 2,
+      "occurrences": 3,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-06-22T05:00:00",
-      "files": ["Yunnan Adventure: Rice Terraces.md", "China Transportation Guide.md"],
+      "last_seen": "2026-07-04T02:41:18.384411+00:00",
+      "files": [
+        "Yunnan Adventure: Rice Terraces.md",
+        "China Transportation Guide.md",
+        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities"
+      ],
       "suggestion": "确保文章至少700词，包含详细的实用信息和深度分析",
       "resolved": false,
       "priority": "P0",
       "source": "主编终审",
-      "prevention_rules": ["文章必须达到至少700词的内容深度", "每个主题都需要详细的实用信息和深度分析", "包含具体的旅行建议、价格、时间、地址等细节", "每个H2部分都要有丰富的子点和示例", "避免表面层次的描述，深入挖掘主题"]
+      "prevention_rules": [
+        "文章必须达到至少700词的内容深度",
+        "每个主题都需要详细的实用信息和深度分析",
+        "包含具体的旅行建议、价格、时间、地址等细节",
+        "每个H2部分都要有丰富的子点和示例",
+        "避免表面层次的描述，深入挖掘主题"
+      ]
     },
     {
       "hash": "sensitive_content_politics",
@@ -199,12 +279,21 @@
       "occurrences": 1,
       "first_seen": "2026-06-22T05:00:00",
       "last_seen": "2026-06-22T05:00:00",
-      "files": ["The History and Culture of the Great Wall.md"],
+      "files": [
+        "The History and Culture of the Great Wall.md"
+      ],
       "suggestion": "避免任何政治、政府相关的敏感内容，聚焦旅行主题",
       "resolved": false,
       "priority": "P0",
       "source": "主编终审",
-      "prevention_rules": ["绝对禁止提及 politics, government, communist 等政治词汇", "绝对禁止提及 Tiananmen, Taiwan independence, Falun Gong", "不讨论任何政治话题或敏感历史事件", "历史内容仅限古代史（朝代时期），避免近现代政治内容", "聚焦旅行、文化、美食、交通等实用主题", "避免任何社会评论或政治分析"]
+      "prevention_rules": [
+        "绝对禁止提及 politics, government, communist 等政治词汇",
+        "绝对禁止提及 Tiananmen, Taiwan independence, Falun Gong",
+        "不讨论任何政治话题或敏感历史事件",
+        "历史内容仅限古代史（朝代时期），避免近现代政治内容",
+        "聚焦旅行、文化、美食、交通等实用主题",
+        "避免任何社会评论或政治分析"
+      ]
     },
     {
       "hash": "chinese_characters_leak",
@@ -213,12 +302,21 @@
       "occurrences": 3,
       "first_seen": "2026-06-22T14:00:00",
       "last_seen": "2026-06-22T15:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"
+      ],
       "suggestion": "所有中文词汇必须转换为英文或拼音（如 Biluochun tea, multi-functional）",
       "resolved": false,
       "priority": "P0",
       "source": "自动化扫描",
-      "prevention_rules": ["绝对禁止在文章中使用任何中文字符", "中文茶名使用英文翻译或拼音（如 Dragon Well tea/Longjing, Biluochun tea）", "中文地名使用拼音（Chengdu, Beijing, Shanghai）", "中文食物名使用英文翻译（hotpot, dumplings, noodles）", "使用英文形容词替代中文形容词（multi-functional 而非 多功能的）", "生成后自动检测并替换所有中文字符"]
+      "prevention_rules": [
+        "绝对禁止在文章中使用任何中文字符",
+        "中文茶名使用英文翻译或拼音（如 Dragon Well tea/Longjing, Biluochun tea）",
+        "中文地名使用拼音（Chengdu, Beijing, Shanghai）",
+        "中文食物名使用英文翻译（hotpot, dumplings, noodles）",
+        "使用英文形容词替代中文形容词（multi-functional 而非 多功能的）",
+        "生成后自动检测并替换所有中文字符"
+      ]
     },
     {
       "hash": "image_placeholder_not_replaced",
@@ -227,12 +325,20 @@
       "occurrences": 2,
       "first_seen": "2026-06-22T14:00:00",
       "last_seen": "2026-06-22T15:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"
+      ],
       "suggestion": "确保图片替换逻辑正确处理所有 [Image:xxx] 格式占位符",
       "resolved": false,
       "priority": "P0",
       "source": "自动化扫描",
-      "prevention_rules": ["生成文章时使用 [Image:description] 格式占位符", "文章保存前必须将所有占位符替换为真实图片URL", "使用正则表达式匹配占位符格式（忽略空格差异）", "替换后验证没有残留的 [Image:xxx] 格式", "确保图片URL使用Pollinations AI服务"]
+      "prevention_rules": [
+        "生成文章时使用 [Image:description] 格式占位符",
+        "文章保存前必须将所有占位符替换为真实图片URL",
+        "使用正则表达式匹配占位符格式（忽略空格差异）",
+        "替换后验证没有残留的 [Image:xxx] 格式",
+        "确保图片URL使用Pollinations AI服务"
+      ]
     },
     {
       "hash": "article_truncated",
@@ -241,12 +347,19 @@
       "occurrences": 1,
       "first_seen": "2026-06-22T15:00:00",
       "last_seen": "2026-06-22T15:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"
+      ],
       "suggestion": "确保文章完整，包含完整的结论段落",
       "resolved": false,
       "priority": "P1",
       "source": "自动化扫描",
-      "prevention_rules": ["文章必须以完整的结论段落结束", "检查文章结尾是否有完整的句号", "确保文章长度达到700词以上", "审核时验证文章完整性"]
+      "prevention_rules": [
+        "文章必须以完整的结论段落结束",
+        "检查文章结尾是否有完整的句号",
+        "确保文章长度达到700词以上",
+        "审核时验证文章完整性"
+      ]
     },
     {
       "hash": "h1_duplicate_round8",
@@ -255,7 +368,11 @@
       "occurrences": 3,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+        "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"
+      ],
       "suggestion": "删除Markdown内容中的#一级标题，直接从##开始（因为frontmatter的title会自动渲染为H1）",
       "resolved": true,
       "priority": "P0",
@@ -273,7 +390,9 @@
       "occurrences": 1,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "files": [
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"
+      ],
       "suggestion": "在文章生成时直接插入真实的相关文章URL，使用绝对URL格式",
       "resolved": true,
       "priority": "P0",
@@ -291,7 +410,11 @@
       "occurrences": 3,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+        "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"
+      ],
       "suggestion": "增加个人故事、真实案例、具体地点和时间等细节，减少AI生成痕迹",
       "resolved": false,
       "priority": "P1",
@@ -311,7 +434,11 @@
       "occurrences": 3,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+        "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"
+      ],
       "suggestion": "每篇文章使用独特的description和summary，包含文章特有的关键词和价值主张",
       "resolved": true,
       "priority": "P1",
@@ -330,7 +457,11 @@
       "occurrences": 3,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md", "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"],
+      "files": [
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+        "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"
+      ],
       "suggestion": "为每一张图片添加详细的描述性Alt文本（10-15词）",
       "resolved": true,
       "priority": "P1",
@@ -349,7 +480,9 @@
       "occurrences": 1,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["deep_writing_standards.json"],
+      "files": [
+        "deep_writing_standards.json"
+      ],
       "suggestion": "所有新文章必须遵循深度好文标准",
       "resolved": true,
       "priority": "P0",
@@ -374,7 +507,10 @@
       "occurrences": 2,
       "first_seen": "2026-06-23T00:00:00",
       "last_seen": "2026-06-23T00:00:00",
-      "files": ["2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md", "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"],
+      "files": [
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md"
+      ],
       "suggestion": "使用与文章主题直接相关的具体标签（如Sichuan, Chengdu, TeaCulture）",
       "resolved": true,
       "priority": "P1",
@@ -384,16 +520,36 @@
         "标签数量控制在3-5个，过多会分散权重",
         "避免使用过于通用的标签（如TravelGuide）"
       ]
+    },
+    {
+      "hash": "topic_inappropriate",
+      "type": "选题",
+      "message": "选题方向不符合要求",
+      "occurrences": 1,
+      "first_seen": "2026-07-04T02:41:18.383369+00:00",
+      "last_seen": "2026-07-04T02:41:18.383386+00:00",
+      "files": [
+        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities"
+      ],
+      "suggestion": "避免政治敏感内容",
+      "resolved": false,
+      "priority": "P0",
+      "source": "主编终审"
     }
   ],
   "resolved_count": 7,
-  "total_errors": 14,
-  "last_updated": "2026-06-20T10:00:00",
+  "total_errors": 16,
+  "last_updated": "2026-07-04T02:41:18.384419+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
     "overall_score": "6.20/10",
-    "key_findings": ["占位符残留影响联盟收入", "事实错误损害专业信任", "缺少社会证明影响转化", "Schema缺失影响SEO展示"]
+    "key_findings": [
+      "占位符残留影响联盟收入",
+      "事实错误损害专业信任",
+      "缺少社会证明影响转化",
+      "Schema缺失影响SEO展示"
+    ]
   },
   "round8_review": {
     "source": "豆包AI",
@@ -401,6 +557,13 @@
     "round": 8,
     "score": "79/100",
     "score_change": "-1",
-    "key_findings": ["P0问题回归：H1标签重复问题在新文章中再次出现", "P0问题：文章底部内链为占位符文本，未替换为真实链接", "内容质量下滑：新文章AI生成痕迹明显，存在中文混入、标签不相关等问题", "图片风险：使用外部AI生成图片（Pollinations.ai），存在性能和版权双重风险", "技术性能下滑：外部图片加载增加性能损耗，LCP约2.5s", "合规风险增加：AI图片版权风险、标签合规问题"]
+    "key_findings": [
+      "P0问题回归：H1标签重复问题在新文章中再次出现",
+      "P0问题：文章底部内链为占位符文本，未替换为真实链接",
+      "内容质量下滑：新文章AI生成痕迹明显，存在中文混入、标签不相关等问题",
+      "图片风险：使用外部AI生成图片（Pollinations.ai），存在性能和版权双重风险",
+      "技术性能下滑：外部图片加载增加性能损耗，LCP约2.5s",
+      "合规风险增加：AI图片版权风险、标签合规问题"
+    ]
   }
 }
