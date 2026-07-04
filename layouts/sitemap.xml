@@ -12,9 +12,22 @@
 {{- end -}}
 {{- if and (not $shouldExclude) (not .Draft) -}}
 <url>
-  <loc>{{ .Permalink }}</loc>
+  <loc>{{- if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }}{{- end -}}</loc>
   {{- if .Lastmod }}
-  <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</lastmod>
+  <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z" | safeHTML }}</lastmod>
+  {{- end }}
+  {{- if .IsHome }}
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  {{- else if .IsPage }}
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+  {{- else if or (strings.HasPrefix $pagePath "/posts/") (strings.HasPrefix $pagePath "/tags/") }}
+  <priority>0.7</priority>
+  <changefreq>weekly</changefreq>
+  {{- else }}
+  <priority>0.5</priority>
+  <changefreq>monthly</changefreq>
   {{- end }}
 </url>
 {{- end -}}

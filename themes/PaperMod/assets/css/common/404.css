@@ -1,11 +1,51 @@
-.not-found {
+.not-found-container {
     position: absolute;
     left: 0;
     right: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80%;
+    text-align: center;
+}
+
+.not-found {
     font-size: 160px;
     font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.not-found-message {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.not-found-hint {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.not-found-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.not-found-links li {
+    margin-bottom: 10px;
+}
+
+.not-found-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.not-found-links a:hover {
+    color: var(--highlight);
+    text-decoration: underline;
 }
