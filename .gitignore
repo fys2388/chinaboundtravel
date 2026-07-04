@@ -2,6 +2,7 @@
 public/
 node_modules/
 
+.env
 .env*.local
 
 # Hugo generated files
