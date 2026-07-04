@@ -1,5 +1,5 @@
 ---
-title: "Guilin And Yangshuo: The Ultimate Karst Landscape Guide For 2026 Guide"
+title: "Guilin And Yangshuo: The Ultimate Karst Landscape Guide For 2026"
 date: "2026-07-03T10:00:00+08:00"
 lastmod: "2026-07-03T10:00:00+08:00"
 author: "Joran"

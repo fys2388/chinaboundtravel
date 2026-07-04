@@ -1,5 +1,5 @@
 ---
-title: "How To Use Alipay As A Foreigner: Complete Setup Guide 2026 Guide"
+title: "How To Use Alipay As A Foreigner: Complete Setup Guide 2026"
 date: "2026-07-02T10:00:00+08:00"
 lastmod: "2026-07-02T10:00:00+08:00"
 author: "Joran"
@@ -23,14 +23,6 @@ weight: "1"
 cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg"
 ---
-
-Title: How to Use Alipay as a Foreigner: Complete Setup Guide 2026
-
-Description: Learn how to set up and use Alipay in China as a foreigner with this detailed guide. Discover tips for smooth transactions and alternatives when mobile payment isn't working.
-
-Date: 2026-08-15T12:00:00+08:00
-
-Tags: Alipay, ChinaPayment, ForeignersInChina, ChinaTravelTips, ChinaTravel
 
 ## Introduction
 

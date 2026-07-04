@@ -1,14 +1,13 @@
-{{- /* Safe override of PaperMod schema_json.html — all values use jsonify for JSON safety */ -}}
-{{- /* Enhanced with full Author Person schema for Joran */ -}}
+{{- /* Safe override of PaperMod schema_json.html */ -}}
 
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": {{ site.Title | jsonify }},
-  "url": {{ site.Home.Permalink | jsonify }},
-  "description": {{ site.Params.description | plainify | truncate 180 | jsonify }},
+  "name": "{{- site.Title | safeJS -}}",
+  "url": "{{- site.Home.Permalink | safeJS -}}",
+  "description": "{{- site.Params.description | plainify | truncate 180 | safeJS -}}",
   "logo": {
     "@type": "ImageObject",
     "url": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",
@@ -17,7 +16,7 @@
     "height": 60
   },
   "sameAs": [
-    {{- range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url | jsonify }}{{ end }}
+    {{- range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}"{{- $e.url | safeJS -}}"{{ end }}
   ]
 }
 </script>
@@ -40,8 +39,8 @@
     {
       "@type": "ListItem",
       "position": {{ add 1 $index }},
-      "name": {{ $bc_pg.Name | jsonify }},
-      "item": {{ $bc_pg.Permalink | jsonify }}
+      "name": "{{- $bc_pg.Name | safeJS -}}",
+      "item": "{{- $bc_pg.Permalink | safeJS -}}"
     }
     {{- end }}
   {{- end }}
@@ -49,8 +48,8 @@
     {
       "@type": "ListItem",
       "position": {{ len $bc_list }},
-      "name": {{ .Name | jsonify }},
-      "item": {{ .Permalink | jsonify }}
+      "name": "{{- .Name | safeJS -}}",
+      "item": "{{- .Permalink | safeJS -}}"
     }
   ]
 }
@@ -59,24 +58,30 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | plainify | jsonify }},
-  "name": {{ .Title | plainify | jsonify }},
-  "description": {{ with .Description | plainify }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
+  "@type": "{{- if .Section | eq "pricing" }}Product{{- else }}BlogPosting{{- end -}}",
+  "headline": "{{- .Title | plainify | safeJS -}}",
+  "name": "{{- .Title | plainify | safeJS -}}",
+  "description": "{{- with .Description | plainify }}{{- . | safeJS -}}{{- else }}{{- .Summary | plainify | safeJS -}}{{- end -}}",
   "keywords": [
     {{- if .Params.keywords }}
-    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+    {{- range $i, $e := .Params.keywords }}{{- if $i }}, {{ end }}"{{- $e | safeJS -}}"{{- end }}
     {{- else }}
-    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+    {{- range $i, $e := .Params.tags }}{{- if $i }}, {{ end }}"{{- $e | safeJS -}}"{{- end }}
     {{- end }}
   ],
+  {{- if not (.Section | eq "pricing") }}
   "wordCount": {{ .WordCount }},
-  "inLanguage": {{ .Language.Lang | default "en-us" | jsonify }},
+  {{- end }}
+  "inLanguage": "{{- .Language.Lang | default "en-us" | safeJS -}}",
   {{- if .Params.cover.image -}}
-  "image": {{ .Params.cover.image | absURL | jsonify }},
+  "image": "{{- .Params.cover.image | absURL | safeJS -}}",
   {{- end -}}
-  "datePublished": {{ .PublishDate | jsonify }},
-  "dateModified": {{ .Lastmod | jsonify }},
+  {{- if .PublishDate }}
+  "datePublished": "{{- .PublishDate.Format "2006-01-02T15:04:05Z" | safeJS -}}",
+  {{- end }}
+  {{- if .Lastmod }}
+  "dateModified": "{{- .Lastmod.Format "2006-01-02T15:04:05Z" | safeJS -}}",
+  {{- end }}
   "author": {
     "@type": "Person",
     "name": "Joran",
@@ -97,12 +102,12 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
+    "@id": "{{- .Permalink | safeJS -}}"
   },
   "publisher": {
     "@type": "Organization",
-    "name": {{ site.Title | jsonify }},
-    "url": {{ site.Home.Permalink | jsonify }},
+    "name": "{{- site.Title | safeJS -}}",
+    "url": "{{- site.Home.Permalink | safeJS -}}",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.chinaboundtravel.com/images/favicon/favicon.svg",

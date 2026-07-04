@@ -1,8 +1,2 @@
-/sitemap.xml /sitemap.xml 200
-
-# 域名标准化 - 裸域先重定向到 www
-http://chinaboundtravel.com/* https://www.chinaboundtravel.com/$1 301
-https://chinaboundtravel.com/* https://www.chinaboundtravel.com/$1 301
-
-# 强制 HTTPS - 其他 http 到 https
-http://* https://$1 301
+http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
+https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
