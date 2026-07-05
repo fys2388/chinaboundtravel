@@ -1,9 +1,9 @@
 {
-  "month_post_count": 5,
+  "month_post_count": 6,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-04 02:44:30",
-  "daily_social_publish_date": "2026-07-04",
-  "daily_social_publish_count": 0,
+  "last_social_publish": "2026-07-05 02:54:26",
+  "daily_social_publish_date": "2026-07-05",
+  "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -30,6 +30,11 @@
       "topic": "China High-Speed Train Survival Guide: Booking, Classes, and Insider Tips",
       "geo_region": "AU",
       "create_date": "2026-07-04"
+    },
+    {
+      "topic": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
+      "geo_region": "EU",
+      "create_date": "2026-07-05"
     }
   ],
   "keyword_convert_rate": {
