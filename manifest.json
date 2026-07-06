@@ -1,8 +1,8 @@
 {
-  "month_post_count": 6,
+  "month_post_count": 7,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-05 02:54:26",
-  "daily_social_publish_date": "2026-07-05",
+  "last_social_publish": "2026-07-06 03:00:50",
+  "daily_social_publish_date": "2026-07-06",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -35,6 +35,11 @@
       "topic": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
       "geo_region": "EU",
       "create_date": "2026-07-05"
+    },
+    {
+      "topic": "food recommendations",
+      "geo_region": "EU",
+      "create_date": "2026-07-06"
     }
   ],
   "keyword_convert_rate": {
