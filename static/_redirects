@@ -1,2 +1,18 @@
+# 1) Non-www -> www redirect (keep first)
 http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
+
+# 2) Date-prefixed post URLs -> slug-only URLs (social media links may contain date prefix)
+/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ 301
+/posts/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ /posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ 301
+/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/ /posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/ 301
+/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/ /posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/ 301
+/posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ /posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ 301
+/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ /posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ 301
+/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ 301
+/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips/ /posts/xian-terracotta-army-history-discovery-and-insider-tips/ 301
+/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ /posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ 301
+/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/ /posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/ 301
+/posts/2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide/ /posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/ 301
+/posts/2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ /posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ 301
+/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/ /posts/ultimate-guide-to-china-visa-for-tourists/ 301
