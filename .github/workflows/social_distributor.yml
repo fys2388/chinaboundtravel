@@ -1,0 +1,77 @@
+name: Social Media Distributor
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: "Target platforms (comma-separated: facebook,twitter,linkedin,tiktok,youtube)"
+        required: false
+        default: "facebook,twitter,linkedin"
+        type: string
+      type:
+        description: "Content type: post, video, reel"
+        required: false
+        default: "post"
+        type: string
+      dry_run:
+        description: "Dry run without actually publishing"
+        required: false
+        default: "true"
+        type: boolean
+  schedule:
+    - cron: "0 9 * * *"  # Daily at 9:00 UTC
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          cd chinaboundtravel_social_bot
+          pip install requests python-dotenv requests-oauthlib google-api-python-client
+
+      - name: Run Distributor
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_COMPANY_URN: ${{ secrets.LINKEDIN_COMPANY_URN }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          YOUTUBE_OAUTH_REFRESH_TOKEN: ${{ secrets.YOUTUBE_OAUTH_REFRESH_TOKEN }}
+        run: |
+          cd chinaboundtravel_social_bot
+          PLATFORM="${{ github.event.inputs.platform || 'facebook,twitter,linkedin' }}"
+          TYPE="${{ github.event.inputs.type || 'post' }}"
+          DRY_RUN="${{ github.event.inputs.dry_run || 'true' }}"
+
+          FLAGS=""
+          if [ "$DRY_RUN" = "true" ]; then
+            FLAGS="--dry-run"
+          fi
+
+          python social_distributor.py --platform "$PLATFORM" --type "$TYPE" $FLAGS
+
+      - name: Report Results
+        if: always()
+        run: |
+          echo "## Distribution Summary"
+          echo "Platform: ${{ github.event.inputs.platform || 'facebook,twitter,linkedin' }}"
+          echo "Type: ${{ github.event.inputs.type || 'post' }}"
+          echo "Dry Run: ${{ github.event.inputs.dry_run || 'true' }}"
