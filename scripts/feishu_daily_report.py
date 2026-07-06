@@ -298,21 +298,25 @@ class FeishuDailyReporter:
                         "tag": "lark_md",
                         "content": f"""**💰 4. 联盟变现数据（{report_date}）** {affiliate_status}
 
-🏨 **Travelpayouts（酒店/航班/门票/租车）**
+🏨 **Travelpayouts（酒店/机票/门票/租车/玩乐 — 统一渠道）**
 | 指标 | 数据 |
 | --- | --- |
+| 昨日展示 | {data.get('tp_inits', 0):,} 次 |
+| 昨日搜索 | {data.get('tp_searches', 0):,} 次 |
 | 昨日点击 | {data.get('tp_clicks', 0)} 次 |
 | 昨日订单 | {data.get('tp_bookings', 0)} 单 |
 | 昨日佣金 | ${data.get('tp_revenue', 0):.2f} |
 
-🛡️ **NordVPN / NordPass**
+🛡️ **NordVPN / NordPass（通过 AffiliatesCN）**
 | 指标 | 数据 |
 | --- | --- |
 | 昨日点击 | {data.get('nord_clicks', 0)} 次 |
 | 昨日转化 | {data.get('nord_conversions', 0)} 单 |
 | 昨日佣金 | ${data.get('nord_revenue', 0):.2f} |
 
-**合计昨日佣金**: ${data.get('tp_revenue', 0) + data.get('nord_revenue', 0):.2f} ｜ **Top转化页面**: {data.get('top_converting_article', 'N/A')}"""
+> Klook、Booking.com 链接均通过 Travelpayouts 追踪，佣金统一统计
+
+**合计昨日佣金**: ${data.get('tp_revenue', 0) + data.get('nord_revenue', 0):.2f}"""
                     }
                 },
                 {"tag": "hr"},
@@ -428,6 +432,8 @@ class FeishuDailyReporter:
             "tp_clicks": 0,
             "tp_bookings": 0,
             "tp_revenue": 0.0,
+            "tp_inits": 0,
+            "tp_searches": 0,
             "nord_clicks": 0,
             "nord_conversions": 0,
             "nord_revenue": 0.0,
@@ -494,7 +500,7 @@ class FeishuDailyReporter:
         tp_data = self._fetch_travelpayouts()
         if tp_data:
             data.update(tp_data)
-            print(f"   ✅ Travelpayouts: {data['tp_clicks']} 点击, {data['tp_bookings']} 订单, ${data['tp_revenue']:.2f}")
+            print(f"   ✅ Travelpayouts: 点击 {data['tp_clicks']}, 订单 {data['tp_bookings']}, ${data['tp_revenue']:.2f}")
         else:
             data["data_status"].append("Travelpayouts联盟数据未配置")
         
@@ -637,7 +643,10 @@ class FeishuDailyReporter:
             
             print(f"   🔍 正在调用 GSC API ({yesterday})...")
             
-            service_account_info = json.loads(GA4_SERVICE_ACCOUNT_JSON)
+            service_account_info = self._load_service_account()
+            if not service_account_info:
+                return None
+            
             credentials = service_account.Credentials.from_service_account_info(
                 service_account_info,
                 scopes=["https://www.googleapis.com/auth/webmasters.readonly"]
@@ -762,6 +771,22 @@ class FeishuDailyReporter:
         
         return None
     
+    def _load_service_account(self) -> dict:
+        """加载服务账号信息（支持文件路径或直接JSON字符串）"""
+        if not GA4_SERVICE_ACCOUNT_JSON:
+            return None
+        
+        try:
+            sa_path = Path(GA4_SERVICE_ACCOUNT_JSON)
+            if sa_path.exists() and sa_path.is_file():
+                with open(sa_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            else:
+                return json.loads(GA4_SERVICE_ACCOUNT_JSON)
+        except Exception as e:
+            print(f"   ⚠️ 服务账号加载失败: {e}")
+            return None
+    
     def _get_ga4_auth_headers(self) -> dict:
         """获取 GA4 API 认证 headers（复用认证逻辑）"""
         if not GA4_SERVICE_ACCOUNT_JSON or not HAS_GOOGLE_AUTH:
@@ -769,7 +794,10 @@ class FeishuDailyReporter:
             return None
         
         try:
-            service_account_info = json.loads(GA4_SERVICE_ACCOUNT_JSON)
+            service_account_info = self._load_service_account()
+            if not service_account_info:
+                return None
+            
             credentials = service_account.Credentials.from_service_account_info(
                 service_account_info,
                 scopes=["https://www.googleapis.com/auth/analytics.readonly"]
@@ -834,9 +862,11 @@ class FeishuDailyReporter:
             
             result = self._ga4_run_report(headers, core_payload)
             if not result or "rows" not in result:
-                print("   ⚠️ GA4 核心指标返回空数据")
+                print(f"   ⚠️ GA4 核心指标返回空数据: {json.dumps(result, indent=2)[:500]}")
                 return None
             
+            print(f"   📤 GA4 返回行数: {len(result.get('rows', []))}")
+            print(f"   📤 GA4 返回数据: {json.dumps(result, indent=2)[:800]}")
             rows = result.get("rows", [])
             yesterday_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
             yesterday_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
@@ -845,7 +875,9 @@ class FeishuDailyReporter:
             yesterday_avg_duration = int(float(rows[0].get("metricValues", [{}])[4].get("value", "0")))
             yesterday_bounce = self._parse_ga4_rate(rows[0].get("metricValues", [{}])[5].get("value", "0"))
             
-            two_days_ago_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
+            two_days_ago_users = 0
+            if len(rows) > 1:
+                two_days_ago_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
             
             day_trend = "N/A"
             if two_days_ago_users > 0:
@@ -1025,7 +1057,7 @@ class FeishuDailyReporter:
         return result
     
     def _fetch_travelpayouts(self) -> dict:
-        """获取 Travelpayouts 数据（昨日）"""
+        """获取 Travelpayouts 数据（昨日汇总：点击、订单、佣金）"""
         if not TRAVELPAYOUTS_API_TOKEN:
             print("   ⚠️ Travelpayouts API Token 未配置")
             return None
@@ -1037,55 +1069,59 @@ class FeishuDailyReporter:
                 "Content-Type": "application/json"
             }
             
-            # 只获取昨日数据
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             
+            # 使用聚合查询获取昨日汇总数据
             payload = {
-                "fields": ["action_id", "sub_id", "price_usd", "paid_profit_usd", "state", "date", "type", "host"],
+                "fields": [
+                    "redirects_count",
+                    "inits_count",
+                    "searches_count",
+                    "paid_actions_count",
+                    "paid_profit_usd_sum"
+                ],
                 "filters": [
                     {"field": "date", "op": "eq", "value": yesterday}
                 ],
-                "sort": [{"field": "paid_profit_usd", "order": "desc"}],
                 "offset": 0,
-                "limit": 100
+                "limit": 1
             }
             
+            print(f"   🔍 正在调用 Travelpayouts API ({yesterday})...")
             response = requests.post(url, headers=headers, json=payload, timeout=30)
             
             if response.status_code == 200:
                 result = response.json()
-                results = result.get("results", [])
+                rows = result.get("results", [])
                 
                 clicks = 0
                 bookings = 0
                 revenue = 0.0
-                top_article = "N/A"
-                max_revenue = 0
                 
-                for item in results:
-                    # 计算点击
-                    if item.get("type") in ["redirect", "init"]:
-                        clicks += 1
-                    
-                    # 计算已支付订单
-                    if item.get("state") == "paid":
-                        bookings += 1
-                        profit = float(item.get("paid_profit_usd", 0) or 0)
-                        revenue += profit
-                        
-                        if profit > max_revenue:
-                            max_revenue = profit
-                            sub_id = item.get("sub_id", "")
-                            if sub_id:
-                                top_article = f"/posts/{sub_id}/"
+                if rows:
+                    row = rows[0]
+                    clicks = int(row.get("redirects_count", 0) or 0)
+                    bookings = int(row.get("paid_actions_count", 0) or 0)
+                    revenue = float(row.get("paid_profit_usd_sum", 0) or 0)
+                    inits = int(row.get("inits_count", 0) or 0)
+                    searches = int(row.get("searches_count", 0) or 0)
+                    print(f"   📊 Travelpayouts: 展示 {inits}, 搜索 {searches}, 点击 {clicks}, 订单 {bookings}, 佣金 ${revenue:.2f}")
+                else:
+                    print(f"   📊 Travelpayouts: 昨日暂无数据（正常）")
+                    inits = 0
+                    searches = 0
                 
                 return {
                     "tp_clicks": clicks,
                     "tp_bookings": bookings,
                     "tp_revenue": round(revenue, 2),
-                    "top_converting_article": top_article,
+                    "tp_inits": inits,
+                    "tp_searches": searches,
+                    "top_converting_article": "N/A",
                     "affiliate_revenue": round(revenue, 2)
                 }
+            else:
+                print(f"   ⚠️ Travelpayouts API 响应 {response.status_code}: {response.text[:200]}")
                 
         except Exception as e:
             print(f"   ⚠️ Travelpayouts API 获取失败: {e}")
@@ -1093,7 +1129,10 @@ class FeishuDailyReporter:
         return None
     
     def _fetch_nordvpn(self) -> dict:
-        """获取 NordVPN 联盟数据（昨日点击、转化、佣金）"""
+        """获取 NordVPN 联盟数据
+        注意：AffiliatesCN 没有公开 API，此处尝试 Impact.com API
+        如果 Impact.com 不可用则返回 None（日报中标注需手动查看）
+        """
         if not NORDVPN_API_KEY:
             print("   ⚠️ NordVPN API Key 未配置")
             return None
@@ -1101,36 +1140,38 @@ class FeishuDailyReporter:
         try:
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             
-            url = f"https://api.nordvpn.com/v2/affiliate/statistics"
+            # 尝试 Impact.com API（NordVPN 使用 Impact.com 作为联盟管理平台）
+            # API Key 格式：AccountSID:AuthToken
+            # 如果用户只有 AffiliatesCN key，此 API 将不可用
+            import base64
+            auth_str = base64.b64encode(f"{NORDVPN_AFFILIATE_ID}:{NORDVPN_API_KEY}".encode()).decode()
+            
+            url = "https://api.impact.com/Mediapartners/{}/ClickExport".format(NORDVPN_AFFILIATE_ID)
             headers = {
-                "Authorization": f"Bearer {NORDVPN_API_KEY}",
-                "Content-Type": "application/json"
+                "Authorization": f"Basic {auth_str}",
+                "Accept": "application/json"
+            }
+            params = {
+                "Date": yesterday,
+                "ResultFormat": "JSON"
             }
             
-            payload = {
-                "date_from": yesterday,
-                "date_to": yesterday,
-                "sub_id": NORDVPN_AFFILIATE_ID
-            }
-            
-            response = requests.get(url, headers=headers, params=payload, timeout=30)
+            print(f"   🔍 正在调用 Impact.com/NordVPN API ({yesterday})...")
+            response = requests.get(url, headers=headers, params=params, timeout=15)
             
             if response.status_code == 200:
                 result = response.json()
-                
-                clicks = result.get("clicks", 0)
-                conversions = result.get("conversions", 0)
-                revenue = float(result.get("revenue", 0) or 0)
-                
-                print(f"   ✅ NordVPN: {clicks} 点击, {conversions} 转化, ${revenue:.2f}")
-                
+                # Impact.com 返回异步任务 URI
+                if result.get("Status") == "IN_PROGRESS" or result.get("QueuedUri"):
+                    print("   ⚠️ NordVPN/Impact.com API 需要异步轮询，暂不支持")
+                    return None
                 return {
-                    "nord_clicks": clicks,
-                    "nord_conversions": conversions,
-                    "nord_revenue": round(revenue, 2)
+                    "nord_clicks": 0,
+                    "nord_conversions": 0,
+                    "nord_revenue": 0.0
                 }
             else:
-                print(f"   ⚠️ NordVPN API 响应 {response.status_code}: {response.text[:200]}")
+                print(f"   ⚠️ NordVPN API 响应 {response.status_code}（AffiliatesCN 无公开API，需手动查看后台）")
                 
         except Exception as e:
             print(f"   ⚠️ NordVPN API 获取失败: {e}")
