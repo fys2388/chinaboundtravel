@@ -1244,7 +1244,7 @@ class FeishuDailyReporter:
                 )
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
-                    blog_runs = [r for r in runs if "hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower()]
+                    blog_runs = [r for r in runs if "hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")]
                     if blog_runs:
                         latest_blog = blog_runs[0]
                         result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
