@@ -777,15 +777,23 @@ class FeishuDailyReporter:
             return None
         
         try:
+            # 优先尝试直接解析为 JSON（环境变量通常是 JSON 字符串）
+            return json.loads(GA4_SERVICE_ACCOUNT_JSON)
+        except (json.JSONDecodeError, TypeError):
+            pass
+        
+        try:
+            # 如果不是有效 JSON，尝试作为文件路径读取
             sa_path = Path(GA4_SERVICE_ACCOUNT_JSON)
             if sa_path.exists() and sa_path.is_file():
                 with open(sa_path, "r", encoding="utf-8") as f:
                     return json.load(f)
-            else:
-                return json.loads(GA4_SERVICE_ACCOUNT_JSON)
         except Exception as e:
             print(f"   ⚠️ 服务账号加载失败: {e}")
             return None
+        
+        print(f"   ⚠️ 服务账号加载失败: 无法解析 JSON 或读取文件")
+        return None
     
     def _get_ga4_auth_headers(self) -> dict:
         """获取 GA4 API 认证 headers（复用认证逻辑）"""
