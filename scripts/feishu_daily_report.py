@@ -510,7 +510,7 @@ class FeishuDailyReporter:
             data.update(nord_data)
             print(f"   ✅ NordVPN: {data['nord_clicks']} 点击, {data['nord_conversions']} 转化, ${data['nord_revenue']:.2f}")
         else:
-            data["data_status"].append("NordVPN联盟数据未配置")
+            data["data_status"].append("NordVPN: 需手动查看 Impact.com 后台")
         
         # 6. MailerLite 订阅数据
         ml_data = self._fetch_mailerlite()
@@ -776,15 +776,25 @@ class FeishuDailyReporter:
         if not GA4_SERVICE_ACCOUNT_JSON:
             return None
         
+        sa_json = GA4_SERVICE_ACCOUNT_JSON
+        
         try:
-            # 优先尝试直接解析为 JSON（环境变量通常是 JSON 字符串）
-            return json.loads(GA4_SERVICE_ACCOUNT_JSON)
+            # 优先尝试直接解析为 JSON
+            return json.loads(sa_json)
+        except (json.JSONDecodeError, TypeError):
+            pass
+        
+        # GitHub Secrets 存储时可能将 \n 转义为字面 \\n，尝试修复
+        try:
+            if "\\n" in sa_json and "BEGIN PRIVATE KEY" in sa_json:
+                fixed_json = sa_json.replace("\\n", "\n")
+                return json.loads(fixed_json)
         except (json.JSONDecodeError, TypeError):
             pass
         
         try:
             # 如果不是有效 JSON，尝试作为文件路径读取
-            sa_path = Path(GA4_SERVICE_ACCOUNT_JSON)
+            sa_path = Path(sa_json)
             if sa_path.exists() and sa_path.is_file():
                 with open(sa_path, "r", encoding="utf-8") as f:
                     return json.load(f)
@@ -1138,52 +1148,12 @@ class FeishuDailyReporter:
     
     def _fetch_nordvpn(self) -> dict:
         """获取 NordVPN 联盟数据
-        注意：AffiliatesCN 没有公开 API，此处尝试 Impact.com API
-        如果 Impact.com 不可用则返回 None（日报中标注需手动查看）
+        Impact.com 使用异步导出机制，无法在日报中实时获取数据。
+        返回 None 让日报显示"需手动查看 Impact.com 后台"。
         """
-        if not NORDVPN_API_KEY:
-            print("   ⚠️ NordVPN API Key 未配置")
-            return None
-        
-        try:
-            yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-            
-            # 尝试 Impact.com API（NordVPN 使用 Impact.com 作为联盟管理平台）
-            # API Key 格式：AccountSID:AuthToken
-            # 如果用户只有 AffiliatesCN key，此 API 将不可用
-            import base64
-            auth_str = base64.b64encode(f"{NORDVPN_AFFILIATE_ID}:{NORDVPN_API_KEY}".encode()).decode()
-            
-            url = "https://api.impact.com/Mediapartners/{}/ClickExport".format(NORDVPN_AFFILIATE_ID)
-            headers = {
-                "Authorization": f"Basic {auth_str}",
-                "Accept": "application/json"
-            }
-            params = {
-                "Date": yesterday,
-                "ResultFormat": "JSON"
-            }
-            
-            print(f"   🔍 正在调用 Impact.com/NordVPN API ({yesterday})...")
-            response = requests.get(url, headers=headers, params=params, timeout=15)
-            
-            if response.status_code == 200:
-                result = response.json()
-                # Impact.com 返回异步任务 URI
-                if result.get("Status") == "IN_PROGRESS" or result.get("QueuedUri"):
-                    print("   ⚠️ NordVPN/Impact.com API 需要异步轮询，暂不支持")
-                    return None
-                return {
-                    "nord_clicks": 0,
-                    "nord_conversions": 0,
-                    "nord_revenue": 0.0
-                }
-            else:
-                print(f"   ⚠️ NordVPN API 响应 {response.status_code}（AffiliatesCN 无公开API，需手动查看后台）")
-                
-        except Exception as e:
-            print(f"   ⚠️ NordVPN API 获取失败: {e}")
-        
+        # Impact.com API 是异步导出模式，不适合日报实时调用
+        # 如果未来需要集成，可以通过 Partners API 的 Real-Time Report 实现
+        print("   ℹ️ NordVPN/Impact.com: 需手动查看 Impact.com 后台获取数据")
         return None
     
     def _fetch_mailerlite(self) -> dict:
@@ -1265,12 +1235,12 @@ class FeishuDailyReporter:
                 resp = requests.get(
                     base_url,
                     headers=headers,
-                    params={"per_page": 10},
+                    params={"per_page": 20},
                     timeout=15
                 )
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
-                    blog_runs = [r for r in runs if "hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower()]
+                    blog_runs = [r for r in runs if "hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower()]
                     if blog_runs:
                         latest_blog = blog_runs[0]
                         result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
@@ -1283,7 +1253,7 @@ class FeishuDailyReporter:
             
             # 检查日报工作流
             try:
-                report_runs = [r for r in runs if "daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower()]
+                report_runs = [r for r in runs if "daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()]
                 if report_runs:
                     latest_report = report_runs[0]
                     result["gh_report_success"] = latest_report.get("conclusion") == "success"
