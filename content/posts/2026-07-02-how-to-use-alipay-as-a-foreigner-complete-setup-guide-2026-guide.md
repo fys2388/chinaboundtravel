@@ -8,10 +8,10 @@ tags:
   - ChinaTravel
   - TravelGuide
   - China
-  - USToChina
+  - EuropeToChina
 categories:
   - China
-geo: "US"
+geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "Step-by-step Alipay setup guide for foreigners in China (2026). Link international cards, pay anywhere, and skip the tourist traps with practical tips from an expat."

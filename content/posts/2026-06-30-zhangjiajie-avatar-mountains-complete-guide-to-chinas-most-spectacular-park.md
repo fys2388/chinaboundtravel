@@ -79,7 +79,7 @@ Prices updated from the official Zhangjiajie ticketing system. They change seaso
 
 **By plane:** Zhangjiajie Hehua Airport (DYG) has direct flights from Beijing, Shanghai, Chengdu, Guangzhou, and Xi'an. If you're coming from the US, you'll likely connect through one of these. We flew Chengdu → Zhangjiajie for about ¥600 (~$85) one way.
 
-**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option. For tips on booking train tickets in China, check out our [high-speed rail guide](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/).
+**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option. For tips on booking train tickets in China, check out our [high-speed rail guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/).
 
 **From airport to town:** The airport is only 5 km from the city center. A taxi costs about ¥20–30 (~$3–4). There's also a bus (¥4) but it only runs a few times per day.
 
@@ -193,7 +193,7 @@ Zhangjiajie's food is Hunan-style — spicy, sour, and deeply flavorful. A few m
 
 **4. Wear proper hiking shoes.** I saw a woman in flip-flops trying to descend from Yuanjiajie. She was in tears 10 minutes later. The stone steps are uneven, often wet, and occasionally sheer drops. Trail runners or lightweight hiking shoes are ideal.
 
-**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/).
+**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/).
 
 **6. Cash is still king in Zhangjiajie.** While Alipay and WeChat Pay are accepted everywhere in the city, some vendors near the park entrance and at the mountain top still prefer cash. Bring ¥200–300 in small bills.
 
@@ -255,16 +255,14 @@ Zhangjiajie isn't just a "check it off the list" destination. It's the kind of p
 
 If you do one thing right on this trip, it's this: **wake up before dawn, get to the Yuanjiajie viewing platform before the crowds, and just stand there.** No phone, no photos for the first five minutes. Just... look. That's what travel is supposed to feel like.
 
-And if you found this guide helpful, [bookmark it for your trip planning](posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) and check out these related guides:
+And if you found this guide helpful, [bookmark it for your trip planning](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) and check out these related guides:
 
 **More destination guides:**
-- Fenghuang Ancient Town: Is It Worth the Trip from Zhangjiajie? — The famous riverside town is only 3 hours away
-- Huangshan (Yellow Mountain) vs. Zhangjiajie: Which One to Pick? — I've done both, here's the honest comparison
-- [Chengdu City Guide: A Complete Guide to the City of Pandas](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c) — My adopted hometown and gateway to Sichuan
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Guilin and Yangshuo: The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/)
 
 **Practical China guides:**
-- [How to Survive Chinese Train Stations](posts/2026-05-27-how-to-survive-chinese-train-station/)
-- [China Food Delivery Guide: Meituan & Eleme for Foreigners](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/)
-- [How to Use WeChat Pay as a Foreigner (No Chinese Bank Account)](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
+- [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
+- [How to Use WeChat Pay as a Foreigner](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
 
 Questions about your Zhangjiajie trip? Drop a comment or DM me on Twitter — [@chinaboundtravel](https://twitter.com/chinaboundtravel).

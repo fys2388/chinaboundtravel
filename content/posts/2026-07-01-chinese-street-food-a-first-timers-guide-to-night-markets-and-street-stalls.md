@@ -8,11 +8,11 @@ tags:
   - ChinaTravel
   - TravelGuide
   - China
-  - USToChina
+  - EuropeToChina
   - chengdu
 categories:
   - China
-geo: "US"
+geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China food guide: top local snacks, where to find them & what to avoid. by an American expat with 10 years in China, practical guide for foreign travelers."
@@ -86,7 +86,7 @@ If you don't speak Chinese, don't worry too much. Many street food vendors can u
 When it comes to street food, hygiene is always a concern. To be on the safe side, make sure the food is cooked fresh in front of you. Avoid food that has been sitting out for a long time or looks unappetizing. Also, make sure to use clean utensils and avoid touching the food with your hands.
 
 ### Payment
-In China, most street food vendors accept mobile payment methods like [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/). It's a good idea to have these apps installed on your phone and linked to your bank account or a prepaid card. However, it's also a good idea to carry some cash with you, just in case.
+In China, most street food vendors accept mobile payment methods like [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/). It's a good idea to have these apps installed on your phone and linked to your bank account or a prepaid card. However, it's also a good idea to carry some cash with you, just in case.
 
 ### Exploring Different Areas
 Don't limit yourself to just one night market or street. China is a vast country with a rich culinary heritage, and each region has its own unique street food. So, make sure to explore different areas and try as many different dishes as possible. You might discover a new favorite that you never knew existed.
