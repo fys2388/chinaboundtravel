@@ -54,18 +54,17 @@ class BufferGraphQLClient:
     
     def get_channels(self) -> List[Dict]:
         query = """
-        query {
-          account {
-            channels {
-              id
-              service
-              name
-            }
+        query GetChannels($input: ChannelsInput!) {
+          channels(input: $input) {
+            id
+            service
+            name
           }
         }
         """
-        result = self._graphql_request(query)
-        return result.get('account', {}).get('channels', [])
+        org_id = self.config.get('organization_id', '6a20329943b37a7289e25b6d')
+        result = self._graphql_request(query, {'input': {'organizationId': org_id}})
+        return result.get('channels', [])
     
     def create_post(self, channel_id: str, text: str, scheduled_at: Optional[str] = None) -> Dict:
         query = """

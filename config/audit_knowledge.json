@@ -154,5 +154,75 @@
       "确保图片与内容相关"
     ]
   },
-  "next_review_date": "2026-08-04"
+  "next_review_date": "2026-08-04",
+  "social_media_config": {
+    "brand_name": "ChinaBound Travel",
+    "author_name": "Joran",
+    "consistent_description": "China travel guide for foreigners. Visa, Alipay, WeChat Pay, eSIM & VPN tips. By Joran, an American married into a Chengdu family.",
+    "platforms": {
+      "twitter": {
+        "handle": "@chinaboundtravel",
+        "url": "https://twitter.com/chinaboundtravel",
+        "display_name": "ChinaBound Travel",
+        "configured": true
+      },
+      "pinterest": {
+        "handle": "chinaboundtravel",
+        "url": "https://pinterest.com/chinaboundtravel",
+        "display_name": "ChinaBound Travel",
+        "configured": true
+      },
+      "youtube": {
+        "handle": "@chinaboundtravel",
+        "url": "https://youtube.com/@chinaboundtravel",
+        "display_name": "ChinaBound Travel",
+        "description": "China travel guide for foreigners. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. By Joran, an American married into a Chengdu family.",
+        "configured": true
+      },
+      "tiktok": {
+        "handle": "@petshome001",
+        "url": "https://www.tiktok.com/@petshome001",
+        "display_name": "ChinaBound Travel",
+        "description": "China travel guide for foreigners. Visa, Alipay, WeChat Pay, eSIM & VPN tips.",
+        "configured": true
+      },
+      "email": {
+        "address": "hello@chinaboundtravel.com",
+        "configured": true
+      }
+    },
+    "profile_photo": "https://www.chinaboundtravel.com/images/joran-avatar.png",
+    "notes": [
+      "TikTok用户名@petshome001与其他平台不一致，TikTok系统限制每7天只能更改一次昵称，当前可在2026-07-11后再次尝试更改为@chinaboundtravel",
+      "YouTube标识名已从JoranFan更改为chinaboundtravel，现在所有平台标识名统一为@chinaboundtravel（除TikTok）",
+      "所有平台显示名称统一为'ChinaBound Travel'",
+      "所有平台简介保持一致的品牌定位（中国旅行指南+签证/支付/网络等实用信息）",
+      "YouTube头像由于浏览器安全限制无法自动上传，需手动完成"
+    ],
+    "last_updated": "2026-07-04",
+    "verified": true,
+    "social_distribution_test": {
+      "test_date": "2026-07-04",
+      "buffer_api": {
+        "status": "connected",
+        "endpoint": "https://api.buffer.com",
+        "channels": [
+          {"name": "Joran Fan", "service": "youtube", "channel_id": "6a48cfec5ab6d2f106a2b9fe"},
+          {"name": "Joranchinatravel", "service": "pinterest", "channel_id": "6a21bdbec687a22dd45ec2ae"},
+          {"name": "petshome001", "service": "tiktok", "channel_id": "6a48cf985ab6d2f106a2b9fe"}
+        ],
+        "post_format": "title + summary + url + tags"
+      },
+      "video_pipeline": {
+        "modules": ["script_generator", "voiceover", "video_assembler", "uploader"],
+        "status": "api_key_needed",
+        "notes": "DeepSeek API key required for script generation"
+      },
+      "issues": [
+        "Pinterest posts require at least one image",
+        "YouTube posts require video, title, and category",
+        "TikTok posts require at least one image or video"
+      ]
+    }
+  }
 }

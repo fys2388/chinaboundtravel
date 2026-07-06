@@ -1,22 +1,23 @@
 {
   "api": {
-    "base_url": "https://api.buffer.com/v1/graphql",
-    "access_token": "***REMOVED***"
+    "base_url": "https://api.buffer.com",
+    "access_token": "***REMOVED***",
+    "organization_id": "6a20329943b37a7289e25b6d"
   },
   "channels": {
-    "twitter": {
-      "name": "fys2388",
-      "channel_id": "6a17e044c687a22dd4346bf4",
+    "pinterest": {
+      "name": "Joranchinatravel",
+      "channel_id": "6a21bdbec687a22dd45ec2ae",
       "enabled": true
     },
-    "facebook": {
-      "name": "ChinaBound Travel",
-      "channel_id": "6a17e0c4c687a22dd4346d3c",
+    "youtube": {
+      "name": "Joran Fan",
+      "channel_id": "6a48cfec5ab6d2f106a2b9fe",
       "enabled": true
     },
-    "instagram": {
-      "name": "joranchinatravel",
-      "channel_id": "6a17e14dc687a22dd4346eb4",
+    "tiktok": {
+      "name": "petshome001",
+      "channel_id": "6a48cf985ab6d2f106a2b8b8",
       "enabled": true
     }
   },

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 title: "China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)"
 date: 2026-05-25T10:00:00+08:00
 draft: false
