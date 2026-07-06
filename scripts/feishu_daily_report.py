@@ -767,7 +767,9 @@ class FeishuDailyReporter:
             }
                 
         except Exception as e:
+            import traceback
             print(f"   ⚠️ GSC API 获取失败: {e}")
+            print(f"   ⚠️ GSC traceback: {traceback.format_exc()[-500:]}")
         
         return None
     
@@ -1008,7 +1010,9 @@ class FeishuDailyReporter:
             }
                 
         except Exception as e:
+            import traceback
             print(f"   ⚠️ GA4 API 获取失败: {e}")
+            print(f"   ⚠️ GA4 traceback: {traceback.format_exc()[-500:]}")
         
         return None
     
