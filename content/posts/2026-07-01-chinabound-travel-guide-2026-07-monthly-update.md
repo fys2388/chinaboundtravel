@@ -1,9 +1,11 @@
 ---
 title: "ChinaBound Travel Guide 2026.07 - Now Updated With Latest Visa Rules"
-date: 2026-07-01T10:02:44+00:00
-lastmod: 2026-07-01T10:02:44+00:00
+date: "2026-07-01T10:02:44+00:00"
+lastmod: "2026-07-01T10:02:44+00:00"
 description: "The July 2026 edition of the ChinaBound Travel Guide is here - updated with this month's visa policy changes."
 summary: "Monthly update: the July 2026 edition covers all visa rule changes and safety recommendations."
+slug: "chinabound-travel-guide-2026-07-monthly-update"
+canonicalURL: "https://chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/"
 tags: ["China Travel", "Visa Updates", "Travel Guide"]
 categories: ["China Essentials"]
 ShowToc: true

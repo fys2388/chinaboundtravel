@@ -14,8 +14,8 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass2"
-summary: "Complete China travel guide 2026. itineraries, local food & cultural experiences from on-the-ground experience in China."
-description: "Complete China travel guide 2026. itineraries, local food & cultural experiences from on-the-ground experience in China."
+summary: "Explore Yunnan's rice terraces, ancient towns, and ethnic minorities in this travel guide—from Yuanyang to Lijiang and beyond."
+description: "A first-hand Yunnan travel guide covering the Yuanyang rice terraces, ancient towns like Lijiang and Dali, and the traditions of ethnic minorities. Plan your Yunnan adventure."
 canonicalURL: "https://chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -61,7 +61,7 @@ Another ancient town worth visiting is Dali. Dali is located in the west of the 
 
 In Dali, I visited the famous Three Pagodas of Chongsheng Temple. These pagodas are some of the oldest and most famous landmarks in Yunnan. I also took a walk along the Erhai Lake, which is located just outside the town. The lake is surrounded by beautiful mountains and is a great place to relax and enjoy the scenery.
 
-Practical tip: When visiting the ancient towns in Yunnan, make sure to try the local cuisine. Some of the must-try dishes include过桥米线 (guoqiao mixian), a type of rice noodle soup, and 鲜花饼 (xianhua bing), a sweet pastry filled with flower petals.
+Practical tip: When visiting the ancient towns in Yunnan, make sure to try the local cuisine. Some of the must-try dishes include cross-bridge rice noodles (guoqiao mixian), a type of rice noodle soup, and flower pastry (xianhua bing), a sweet pastry filled with flower petals.
 
 ## Ethnic Minorities in Yunnan
 Yunnan is home to a large number of ethnic minorities, each with their own unique culture and traditions. These ethnic minorities include the Hani, Naxi, Bai, Yi, and many others.
