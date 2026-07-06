@@ -13,7 +13,7 @@ categories:
   - China
 geo: "EU"
 draft: false
-audit_status: "pass3"
+audit_status: "pass4"
 summary: "A practical 2026 setup guide for WeChat Pay for foreigners in China—covering linking cards, avoiding common pitfalls, and paying like a local."
 description: "Learn how to set up WeChat Pay as a foreigner in China in 2026. This step-by-step guide covers account creation, bank linking, identity verification, and common mistakes to avoid."
 canonicalURL: "https://chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/"
@@ -130,6 +130,34 @@ A few extra pointers specifically for travelers coming from Europe:
 
 5. **Carry a small amount of cash as a last resort.** Even in 2026, there are occasional situations where digital payments fail -- network outages, dead phone battery, or a merchant whose QR code is not working. Having 200-300 RMB in small bills is a smart safety net.
 
+## WeChat Pay vs Alipay: Which Should You Set Up First?
+
+Short answer: **both**, but in this order. Here is the comparison based on my experience using both daily in China:
+
+| Feature | WeChat Pay | Alipay |
+|---------|-----------|--------|
+| Foreign card support (2026) | Tour Card for Visa/Mastercard | International card linking |
+| Accepted at street stalls | Yes, very common | Yes, very common |
+| Mini Programs (book tickets, order food) | Extensive, the best | Good but fewer options |
+| Transfer to other users | Yes (most popular in China) | Yes |
+| English interface | Yes | Yes |
+| Setup difficulty | Moderate (Tour Card step) | Easy |
+| Best for | Social payments, Mini Programs, daily use | Online shopping, larger merchants |
+
+**My recommendation:** Set up WeChat Pay first because of Mini Programs — you can book high-speed train tickets, order food delivery, and access hundreds of services directly within WeChat. Then add Alipay as your backup for merchants that only accept Alipay (some small restaurants and certain online platforms). For the full Alipay setup walkthrough, see our [step-by-step Alipay guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/).
+
 ## Conclusion
 
 WeChat Pay transforms your travel experience in China from a constant scramble for cash and correct change into something seamless. The setup takes maybe 30 minutes if you do it from home, and the payoff is enormous -- from scanning your way through [street food markets](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) in Chengdu to paying for your [high-speed train](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) to [Shanghai](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/). Register before you go, activate the Tour Card, make a small test payment, and you are ready to pay like a local.
+
+### WeChat Pay Spending Quick Reference
+
+| Category | Typical Cost (RMB) | Typical Cost (EUR) |
+|----------|-------------------|-------------------|
+| Street food snack | 5-20 | 0.60-2.50 |
+| Convenience store drink | 3-8 | 0.40-1.00 |
+| Taxi ride (city center) | 15-40 | 1.90-5.00 |
+| Subway ticket | 2-7 | 0.25-0.90 |
+| Museum entry fee | 30-60 | 3.75-7.50 |
+| Mid-range restaurant meal | 50-120 | 6.25-15.00 |
+| High-speed train ticket (short route) | 75-300 | 9.40-37.50 |
