@@ -5,10 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'content/posts/**'
-      - 'content/_draft/**'
-      - 'content/resources/**'
-      - 'content/cities/**'
+      - 'content/**'
       - 'static/**'
       - 'layouts/**'
       - 'themes/**'
@@ -35,7 +32,9 @@ jobs:
           extended: true
 
       - name: Build static site
-        run: hugo --gc --minify
+        run: |
+          hugo version
+          hugo --gc --minify -v 2>&1 || hugo --gc --minify 2>&1
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
