@@ -1,0 +1,50 @@
+name: Content Rotation Distributor
+
+on:
+  schedule:
+    # 每天 UTC 2:00 和 10:00（北京时间 10:00 和 18:00）
+    - cron: "0 2,10 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Number of articles to distribute (1-5)"
+        required: false
+        default: "2"
+        type: string
+      dry_run:
+        description: "Dry run mode"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests Pillow
+
+      - name: Run Content Rotator
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '2' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          FLAGS=""
+          if [ "$DRY" = "true" ]; then FLAGS="--dry-run"; fi
+          python scripts/content_rotator.py --count $COUNT $FLAGS
+
+      - name: Commit manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add manifest_rotator.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: update content rotation manifest [skip ci]"
+          git push || true
