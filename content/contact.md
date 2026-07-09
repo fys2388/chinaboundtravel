@@ -1,45 +1,29 @@
 ---
-title: "Contact Us"
-date: 2026-07-08
+title: "Contact ChinaBound Travel"
+date: "2026-07-08T10:00:00+08:00"
+description: "Get in touch with Joran at ChinaBound Travel for questions about China travel, collaboration opportunities, or advertising inquiries."
 slug: "contact"
-description: "Get in touch with Joran for questions about travelling in China, partnerships, or feedback about ChinaBound Travel."
-robots: "index, follow"
+ShowToc: "false"
 ---
 
 ## Get in Touch
 
-Have a question about travelling in China? Want to collaborate on content? Or just want to say hi? I'd love to hear from you.
+Have a question about traveling in China that isn't covered in our guides? Want to collaborate on content, or discuss advertising opportunities? I'd love to hear from you.
 
-### Email
+**Email:** joran@chinaboundtravel.com
 
-For general questions, partnerships, or feedback:
+### What I Can Help With
 
-**hello@chinaboundtravel.com**
-
-I read every email and respond within 24-48 hours.
-
-### For Readers
-
-If you've used my guides to plan your China trip, I'd love to hear how it went. Drop me an email with your trip highlights, tips for other travellers, or any corrections you'd suggest. Real traveller feedback helps me keep these guides accurate and up-to-date.
-
-### For Business Inquiries
-
-- **Content partnerships:** Sponsored content, guest posts, or collaborative guides
-- **Affiliate partnerships:** Travel products and services relevant to China travellers
-- **Press and media:** Interviews, expert commentary on China travel
-
-Email: hello@chinaboundtravel.com
+- China travel itinerary planning advice
+- Visa and entry requirement questions
+- Payment setup (Alipay/WeChat Pay) troubleshooting
+- General China travel safety concerns
+- Business inquiries and partnerships
 
 ### Response Time
 
-I'm a one-person operation based in Chengdu, China. I typically respond to emails within 24-48 hours, Monday through Friday. During Chinese public holidays, responses may take a bit longer.
+I do my best to respond within 24-48 hours. For urgent travel questions, leaving a comment on the relevant article is often the fastest way to get a response, as I check comments regularly.
 
-### Connect on Social Media
+### Collaboration
 
-- [X (Twitter)](https://twitter.com/chinaboundtravel)
-- [Pinterest](https://pinterest.com/chinaboundtravel)
-- [YouTube](https://youtube.com/@chinaboundtravel)
-
----
-
-*Note: I'm currently focused on creating the most comprehensive China travel guides for foreign visitors. While I appreciate all inquiries, I may not be able to accommodate every partnership request.*
+If you're a fellow travel blogger, tourism board, or hospitality brand interested in working together, please reach out with specifics about your proposal. I'm always open to authentic partnerships that benefit my readers.

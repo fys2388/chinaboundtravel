@@ -1,57 +1,33 @@
-{{- /* Extract FAQ sections from rendered page content and output FAQPage schema */ -}}
+{{- /* Auto-detect FAQ sections and generate FAQPage JSON-LD */ -}}
 {{- $content := .Content -}}
-{{- /* Match H2 headings that indicate an FAQ section */ -}}
-{{- $faqRegex := `(?is)<h2[^>]*id="[^"]*"[^>]*>\s*(FAQ|Frequently Asked Questions|Common Questions|Commonly Asked Questions)\s*</h2>` -}}
-{{- $faqMatches := findRE $faqRegex $content -}}
-{{- if gt (len $faqMatches) 0 -}}
-  {{- /* Find the position of the first FAQ heading */ -}}
-  {{- $firstMatch := index $faqMatches 0 -}}
-  {{- $faqStart := strings.Index $content $firstMatch -}}
-  {{- if ge $faqStart 0 -}}
-    {{- /* Extract content starting from the FAQ heading */ -}}
-    {{- $faqSection := slicestr $content $faqStart -}}
-    {{- /* Remove the FAQ H2 heading itself to get only the Q&A content */ -}}
-    {{- $faqBody := replaceRE `(?is)^<h2[^>]*>.*?</h2>\s*` "" $faqSection -}}
-    {{- /* Match H3 items as questions: <h3 id="...">Question text</h3> */ -}}
-    {{- $questionRegex := `<h3[^>]*>(.*?)</h3>` -}}
-    {{- $questions := findRE $questionRegex $faqBody -}}
-    {{- if gt (len $questions) 0 -}}
-      {{- $scratch := newScratch -}}
-      {{- $scratch.Add "items" (slice) -}}
-      {{- range $questions -}}
-        {{- /* Extract question name from H3, strip HTML */ -}}
-        {{- $qName := replaceRE `<h3[^>]*>(.*?)</h3>` "$1" . | plainify -}}
-        {{- /* Find the answer content after this H3 until the next H3 or end */ -}}
-        {{- $qPos := strings.Index $faqBody . -}}
-        {{- $afterQ := slicestr $faqBody (add $qPos (len .)) -}}
-        {{- /* Trim content up to the next H3 or end of section */ -}}
-        {{- $answerText := replaceRE `(?is)(<h3[^>]*>.*?</h3>|<h2[^>]*>.*?</h2>|<hr\s*/?>|<div class="post-nav-links).*$` "" $afterQ | plainify | strings.TrimSpace -}}
-        {{- if and (gt (len $qName) 0) (gt (len $answerText) 0) -}}
-          {{- $scratch.Add "items" (dict "name" $qName "text" $answerText) -}}
-        {{- end -}}
-      {{- end -}}
-      {{- $items := $scratch.Get "items" -}}
-      {{- if gt (len $items) 0 -}}
+{{- $hasFaq := in $content "## FAQ" -}}
+{{- if and .IsPage $hasFaq -}}
+{{- $faqContent := replaceRE `(?s).*?## FAQ\s*` "" $content -}}
+{{- $questions := findRE `(?s)<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>` $faqContent -}}
+{{- if gt (len $questions) 0 -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {{- range $index, $item := $items -}}
-    {{- if $index }},{{ end }}
+    {{- range $i, $q := $questions -}}
+    {{- $parts := findRE `<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>` $q -}}
+    {{- if gt (len $parts) 0 -}}
+    {{- $question := index (findRE `>(.*?)<` (index $parts 0)) 0 -}}
+    {{- $answer := index (findRE `<p>(.*?)</p>` (index $parts 0)) 0 -}}
+    {{- if $i }}, {{end -}}
     {
       "@type": "Question",
-      "name": {{ $item.name | jsonify }},
+      "name": {{ $question | plainify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $item.text | jsonify }}
+        "text": {{ $answer | plainify | safeJS }}
       }
     }
+    {{- end -}}
     {{- end -}}
   ]
 }
 </script>
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
+{{- end -}}
 {{- end -}}
