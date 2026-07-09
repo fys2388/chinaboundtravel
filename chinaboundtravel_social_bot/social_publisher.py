@@ -332,7 +332,7 @@ def update_article_cover(md_path: Path, cover_url: str):
 
 
 def publish_to_worker(article: dict, cover_url: str, custom_text: str = None) -> dict:
-    """调用 Cloudflare Worker 发布到多平台，带重试机制"""
+    """调用 Cloudflare Worker 发布到多平台"""
     payload = {
         "title": article["title"],
         "desc": custom_text or article["description"],
@@ -341,44 +341,12 @@ def publish_to_worker(article: dict, cover_url: str, custom_text: str = None) ->
         "custom_text": custom_text
     }
 
-    max_retries = 3
-    retry_delay = 5
-    last_error = ""
-
-    for attempt in range(max_retries):
-        try:
-            print(f"  Worker调用 [尝试 {attempt+1}/{max_retries}]...")
-            resp = requests.post(WORKER_URL, json=payload, timeout=90)
-            
-            if resp.status_code == 202:
-                result = resp.json()
-                print(f"  Worker返回: 已达每日限额，稿件已入队")
-                return result
-            
-            resp.raise_for_status()
-            result = resp.json()
-            
-            if result.get("success"):
-                print(f"  Worker调用成功")
-                return result
-            else:
-                error_msg = result.get("error", "Unknown error")
-                print(f"  Worker返回失败: {error_msg}")
-                if "Daily limit exceeded" in error_msg:
-                    return result
-                last_error = error_msg
-                
-        except requests.exceptions.RequestException as e:
-            last_error = str(e)
-            print(f"  Worker调用异常: {last_error}")
-        
-        if attempt < max_retries - 1:
-            print(f"  等待 {retry_delay}秒后重试...")
-            import time
-            time.sleep(retry_delay)
-            retry_delay *= 2
-
-    return {"success": False, "error": last_error}
+    try:
+        resp = requests.post(WORKER_URL, json=payload, timeout=90)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
+        return {"success": False, "error": str(e)}
 
 
 def get_manifest():

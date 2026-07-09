@@ -1,6 +1,6 @@
 ---
 
-title: "'How to Use Alipay & WeChat Pay in China Without a Chinese Bank'"
+title: "'2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'"
 author: Joran
 date: "2026-05-19T12:00:00+08:00"
 draft: false

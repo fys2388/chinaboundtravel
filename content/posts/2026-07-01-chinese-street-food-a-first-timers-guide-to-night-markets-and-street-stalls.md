@@ -1,5 +1,5 @@
 ---
-title: "Chinese Street Food: First-Timer's Guide to Night Markets"
+title: "Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls"
 date: "2026-07-01T10:00:00+08:00"
 lastmod: "2026-07-01T10:00:00+08:00"
 author: "Joran"

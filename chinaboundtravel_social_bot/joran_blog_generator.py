@@ -1534,78 +1534,15 @@ class BlogGenerator:
             else:
                 commit_msg = f"feat: publish new post - {title}"
                 subprocess.run(["git", "commit", "-m", commit_msg], cwd=BASE_DIR, check=True, capture_output=True)
+                subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, check=True, capture_output=True)
                 
-                push_success = self._git_push_with_retry(BASE_DIR)
-                if push_success:
-                    print(f"[Attempt {attempt}] Git push successful! Deployment triggered.")
-                    self.notifier.send_notification("🚀 部署已触发", f"文章《{title}》已推送到GitHub，Cloudflare Pages自动部署中...")
-                else:
-                    print(f"[Attempt {attempt}] Git push failed after retries")
-                    self.notifier.send_notification("⚠️ Git推送失败", f"文章《{title}》Git推送失败，请手动部署。建议检查SSH密钥配置或使用GitHub CLI。")
+                print(f"[Attempt {attempt}] Git push successful! Deployment triggered.")
+                self.notifier.send_notification("🚀 部署已触发", f"文章《{title}》已推送到GitHub，Cloudflare Pages自动部署中...")
         except Exception as e:
             print(f"[Attempt {attempt}] Git push failed: {e}")
             self.notifier.send_notification("⚠️ Git推送失败", f"文章《{title}》Git推送失败，请手动部署: {str(e)}")
         
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
-    
-    def _git_push_with_retry(self, repo_dir: str) -> bool:
-        """Git推送带重试机制，支持SSH和HTTPS两种方式"""
-        import subprocess
-        attempts = 3
-        
-        for attempt in range(attempts):
-            try:
-                print(f"  Git推送 [尝试 {attempt+1}/{attempts}]...")
-                
-                result = subprocess.run(
-                    ["git", "push", "origin", "main"], 
-                    cwd=repo_dir, 
-                    capture_output=True, 
-                    text=True,
-                    timeout=60
-                )
-                
-                if result.returncode == 0:
-                    return True
-                
-                print(f"  Git推送失败 (状态码 {result.returncode}):")
-                if result.stderr:
-                    print(f"    stderr: {result.stderr[:200]}")
-                
-                if "Permission denied (publickey)" in result.stderr:
-                    print(f"  尝试使用HTTPS协议推送...")
-                    github_token = os.getenv("GITHUB_TOKEN")
-                    if github_token:
-                        subprocess.run(["git", "remote", "set-url", "origin", 
-                                      f"https://{github_token}@github.com/fys2388/chinaboundtravel.git"], 
-                                     cwd=repo_dir, capture_output=True)
-                        result = subprocess.run(
-                            ["git", "push", "origin", "main"], 
-                            cwd=repo_dir, 
-                            capture_output=True, 
-                            text=True,
-                            timeout=60
-                        )
-                        subprocess.run(["git", "remote", "set-url", "origin", 
-                                      "git@github.com:fys2388/chinaboundtravel.git"], 
-                                     cwd=repo_dir, capture_output=True)
-                        if result.returncode == 0:
-                            return True
-                
-                if attempt < attempts - 1:
-                    print(f"  等待10秒后重试...")
-                    import time
-                    time.sleep(10)
-                    
-            except subprocess.TimeoutExpired:
-                print(f"  Git推送超时")
-                if attempt < attempts - 1:
-                    import time
-                    time.sleep(10)
-            except Exception as e:
-                print(f"  Git推送异常: {e}")
-        
-        return False
     
     def run(self):
         # 【社媒每日限额】放宽到5篇/天（原2篇太严格，频繁阻断生成）

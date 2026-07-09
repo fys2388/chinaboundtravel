@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "Guilin and Yangshuo travel guide: Li River cruise options with prices, a 3-day itinerary, budget breakdown, best time to visit, local food picks, and insider tips from a 10-year China expat."
-description: "Guilin & Yangshuo 2026 guide: Li River raft vs cruise, 3-day itinerary, costs, where to stay & eat, and what most tourists miss."
+description: "Plan your Guilin and Yangshuo trip with this complete 2026 guide — Li River bamboo raft vs cruise, 3-day itinerary with costs, where to stay and eat, and what most tourists miss about China's karst landscapes."
 canonicalURL: "https://chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/"
 ShowToc: "true"
 TocOpen: "false"

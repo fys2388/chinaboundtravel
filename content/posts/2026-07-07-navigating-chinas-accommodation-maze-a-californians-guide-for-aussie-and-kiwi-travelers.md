@@ -1,5 +1,5 @@
 ---
-title: "Where to Stay in China: Honest Guide for Aussie & Kiwi Travellers"
+title: "Navigating China's Accommodation Maze: A Californian's Guide for Aussie and Kiwi Travelers"
 date: "2026-07-07T10:00:00+08:00"
 lastmod: "2026-07-07T10:00:00+08:00"
 author: "Joran"
@@ -14,8 +14,8 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-summary: "Where to stay in China in 2026: best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
-description: "Where to stay in China in 2026: best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
+summary: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
+description: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
 canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/"
 ShowToc: "true"
 TocOpen: "false"

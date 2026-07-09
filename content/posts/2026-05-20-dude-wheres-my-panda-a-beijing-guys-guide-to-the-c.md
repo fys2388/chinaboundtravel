@@ -1,5 +1,5 @@
 ---
-title: "Chengdu Panda Base: The Honest Visitor Guide (2026)"
+title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
 date: '2026-06-02T10:00:00+08:00'
 draft: false
 weight: 10

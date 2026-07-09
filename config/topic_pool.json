@@ -177,11 +177,7 @@
       "status": "used",
       "source": "gsc",
       "created_at": "2026-07-01T10:05:00",
-<<<<<<< Updated upstream
-      "used_at": "2026-07-05T02:54:19.852250+00:00",
-=======
       "used_at": "2026-07-05T21:43:01.210315",
->>>>>>> Stashed changes
       "depth": "deep"
     },
     {
@@ -307,11 +303,7 @@
       "status": "used",
       "source": "competitor",
       "created_at": "2026-07-01T12:20:00",
-<<<<<<< Updated upstream
-      "used_at": "2026-07-04T02:43:44.930555+00:00",
-=======
       "used_at": "2026-07-05T21:47:54.154338",
->>>>>>> Stashed changes
       "depth": "deep"
     },
     {

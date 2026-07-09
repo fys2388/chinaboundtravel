@@ -1,10 +1,10 @@
----
+﻿---
 title: "The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 tags: ["ChinaTravel", "ChinaFood", "ChinaAppGuide", "ChinaDailyLife", "ChinaTravelTips"]
 categories: ["China Travel Guide"]
-description: "How to use Meituan and Ele.me food delivery as a foreigner in China. What to order, how to pay, and tips from 47 deliveries in one month."
+description: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
 author: "Joran"
 params:
   keywords:

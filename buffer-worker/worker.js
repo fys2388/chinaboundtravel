@@ -257,11 +257,11 @@ async function handlePublish(request, env, ctx) {
     // ========== 封面强校验 ==========
     let mediaUrl = cover || '';
     if (mediaUrl) {
-      const isValid = validateMediaUrl(mediaUrl);
+      const isValid = validateImageUrl(mediaUrl);
       if (!isValid.valid) {
         return jsonResponse({
           success: false,
-          error: 'Media URL blocked',
+          error: 'Image URL blocked',
           message: isValid.message
         }, 400);
       }
@@ -270,7 +270,7 @@ async function handlePublish(request, env, ctx) {
       return jsonResponse({
         success: false,
         error: 'Missing cover image',
-        message: `必须提供 cover 字段（支持图片或视频），格式: https://${ALLOWED_IMAGE_HOST}${ALLOWED_IMAGE_PATH}分类/文件.jpg`
+        message: `必须提供 cover 字段，格式: https://${ALLOWED_IMAGE_HOST}${ALLOWED_IMAGE_PATH}分类/图片.jpg`
       }, 400);
     }
 
@@ -370,15 +370,8 @@ async function handlePublish(request, env, ctx) {
   }
 }
 
-// ========== 媒体URL校验（图片+视频） ==========
-const VIDEO_EXTENSIONS = ['.mp4', '.mov', '.avi', '.webm', '.m4v', '.mkv'];
-
-function isVideoUrl(url) {
-  const lower = (url || '').toLowerCase().split('?')[0].split('#')[0];
-  return VIDEO_EXTENSIONS.some(ext => lower.endsWith(ext));
-}
-
-function validateMediaUrl(url) {
+// ========== 图片URL校验 ==========
+function validateImageUrl(url) {
   try {
     const parsed = new URL(url);
     
@@ -394,17 +387,17 @@ function validateMediaUrl(url) {
 
     // 检查域名
     if (parsed.hostname !== ALLOWED_IMAGE_HOST) {
-      return { valid: false, message: `媒体域名必须是 ${ALLOWED_IMAGE_HOST} 或允许的外部服务` };
+      return { valid: false, message: `图片域名必须是 ${ALLOWED_IMAGE_HOST} 或允许的外部服务` };
     }
 
-    // 检查路径（图片和视频都允许）
+    // 检查路径
     if (!parsed.pathname.startsWith(ALLOWED_IMAGE_PATH)) {
-      return { valid: false, message: `媒体路径必须以 ${ALLOWED_IMAGE_PATH} 开头` };
+      return { valid: false, message: `图片路径必须以 ${ALLOWED_IMAGE_PATH} 开头` };
     }
 
     return { valid: true, url };
   } catch {
-    return { valid: false, message: '无效的媒体URL格式' };
+    return { valid: false, message: '无效的图片URL格式' };
   }
 }
 
@@ -667,8 +660,6 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
 
 // ========== 构建平台特定输入 ==========
 function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
-  const video = isVideoUrl(mediaUrl);
-  const mediaAsset = mediaUrl ? (video ? { video: { url: mediaUrl } } : { image: { url: mediaUrl } }) : null;
   let input;
 
   if (service === 'facebook') {
@@ -677,15 +668,15 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
       ...baseInput,
       text: fbText,
       metadata: { facebook: { type: 'post' } },
-      assets: mediaAsset ? [mediaAsset] : []
+      assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
     };
   } else if (service === 'instagram') {
     const cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
     input = {
       ...baseInput,
       text: cleanText,
-      metadata: { instagram: { type: video ? 'video' : 'post', shouldShareToFeed: true } },
-      assets: [mediaAsset]
+      metadata: { instagram: { type: 'post', shouldShareToFeed: true } },
+      assets: [{ image: { url: mediaUrl } }]
     };
   } else if (service === 'pinterest') {
     const pinTitle = (text || '').slice(0, 100);
@@ -700,13 +691,13 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
       ...baseInput,
       text: pinTitle,
       metadata: { pinterest: pinMeta },
-      assets: [mediaAsset]
+      assets: [{ image: { url: mediaUrl } }]
     };
   } else {
     input = {
       ...baseInput,
       text: (text || '').slice(0, 280),
-      assets: mediaAsset ? [mediaAsset] : []
+      assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
     };
   }
 

@@ -1,5 +1,5 @@
 ---
-title: "China High-Speed Train Guide: Booking, Classes & Insider Tips"
+title: "China High - Speed Train Survival Guide: Booking, Classes, and Insider Tips"
 date: "2026-07-04T10:00:00+08:00"
 lastmod: "2026-07-04T10:00:00+08:00"
 author: "Joran"
