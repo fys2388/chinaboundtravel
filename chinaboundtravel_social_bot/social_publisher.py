@@ -74,7 +74,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
-    prompt = f"Professional travel photography of {scene_desc}, cinematic composition, golden hour lighting, vibrant colors, photorealistic, 4k quality, no text no watermark"
+    prompt = f"Professional travel photography of {scene_desc}, cinematic composition, golden hour lighting, vibrant colors, photorealistic, 4k quality, no text no watermark, no people, no persons, no faces, no portraits, no human figures, empty scene, pure landscape architecture food objects only"
     seed = abs(hash(title)) % 1000000
     image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux"
 

@@ -118,16 +118,16 @@ def build_prompt(title, slug):
         if kw in title_lower:
             scene_desc = desc
             break
-    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery"
+    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, no people, no persons, no faces, no portraits, no human figures, empty scene, pure landscape architecture food objects only"
 
 def try_pollinations(prompt, width=1200, height=630):
     """API #2: Pollinations.ai (free fallback) with negative prompt for better quality"""
     try:
         seed = abs(hash(prompt)) % 100000
         # Enhance prompt with quality modifiers
-        enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus"
-        # Add negative prompt to avoid distortions
-        negative_prompt = "blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, bad anatomy, low quality, watermark, text"
+        enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus, no people, no persons, no faces, no portraits, no human figures, empty scene"
+        # Add negative prompt to avoid distortions and people
+        negative_prompt = "blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, bad anatomy, low quality, watermark, text, person, people, face, portrait, human, figure, crowd, man, woman, child, close-up face"
         encoded = requests.utils.quote(enhanced_prompt)
         encoded_negative = requests.utils.quote(negative_prompt)
         url = f"https://image.pollinations.ai/prompt/{encoded}?width={width}&height={height}&nologo=true&seed={seed}&negative={encoded_negative}&model=flux"
