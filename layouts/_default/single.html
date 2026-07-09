@@ -2,7 +2,7 @@
 <article class="post-single">
     <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
-        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+        <div class="post-title entry-hint-parent" aria-level="1" role="heading">{{ .Title }}</div>
         {{- if .Description }}
         <div class="post-description">{{ .Description }}</div>
         {{- end }}
@@ -32,7 +32,7 @@
     {{- partial "ebook-promo.html" . -}}
 
     {{- /* ===== Affiliate Recommendation Section ===== */ -}}
-    <div class="affiliate-disclosure-notice"><small>Some links on this page are affiliate links. If you purchase through them, I earn a commission at no extra cost to you. I only recommend products I personally use and trust. <a href="/affiliate-disclosure/" style="text-decoration:underline;">Full disclosure</a>.</small></div>
+    <div class="affiliate-disclosure-notice"><small>Some links on this page are affiliate links. If you purchase through them, I earn a commission at no extra cost to you. I only recommend products I personally use and trust. <a href="/disclaimer/" style="text-decoration:underline;">Full disclosure</a>.</small></div>
     <div class="article-affiliate">
         <h3>🛒 Travel Essentials for Your China Trip</h3>
         <p class="affiliate-intro">Save time &amp; money with Joran's personally tested recommendations:</p>
@@ -93,26 +93,9 @@
         </div>
     </div>
 
-    {{- /* ===== Related Posts ===== */ -}}
-    {{- $tags := .GetTerms "tags" -}}
-    {{- $tagIDs := slice -}}
-    {{- range $tags }}{{ $tagIDs = $tagIDs | append .Title }}{{ end -}}
-    {{- $related := slice -}}
-    {{- if gt (len $tagIDs) 0 -}}
-      {{- $allPosts := where .Site.RegularPages "Type" "in" (slice "posts") | where .Permalink "!=" .Permalink -}}
-      {{- range $allPosts -}}
-        {{- $pTags := .GetTerms "tags" -}}
-        {{- range $pTags -}}
-          {{- if in $tagIDs .Title -}}
-            {{- $related = $related | append . -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-      {{- $related = $related | uniq | first 3 -}}
-    {{- end -}}
-    {{- if not (gt (len $related) 0) -}}
-      {{- $related = first 3 (where .Site.RegularPages "Type" "in" (slice "posts") | where .Permalink "!=" .Permalink) -}}
-    {{- end -}}
+    {{- /* ===== Related Posts (posts only) ===== */ -}}
+    {{- if eq .Type "posts" -}}
+    {{- $related := first 3 (where .Site.RegularPages "Type" "posts") -}}
     {{- if $related -}}
     <section class="related-posts">
         <h3>📌 More Travel Guides</h3>
@@ -127,7 +110,7 @@
     </section>
     {{- end -}}
 
-    {{- /* ===== Post Navigation ===== */ -}}
+    {{- /* ===== Post Navigation (posts only) ===== */ -}}
     {{- if or .PrevInSection .NextInSection -}}
     <nav class="post-nav-links" aria-label="Post navigation">
         {{- with .PrevInSection -}}
@@ -147,6 +130,7 @@
         <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next →</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
     </nav>
+    {{- end -}}
     {{- end -}}
 
     {{- partial "extend_post_content.html" . }}
@@ -169,7 +153,8 @@
 </article>
 
 <style>
-.post-title {
+/* Ensure the visually-styled title div matches h1 appearance */
+.post-title[role="heading"] {
     font-size: 1.563rem;
     font-weight: 700;
     line-height: 1.3;

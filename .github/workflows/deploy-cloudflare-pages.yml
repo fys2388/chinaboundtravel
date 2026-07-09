@@ -34,7 +34,7 @@ jobs:
       - name: Build static site
         run: |
           hugo version
-          hugo --gc --minify --verbose 2>&1 || hugo --gc --minify 2>&1
+          hugo --gc --minify 2>&1
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
