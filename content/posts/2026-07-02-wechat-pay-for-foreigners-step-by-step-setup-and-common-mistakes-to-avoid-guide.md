@@ -1,5 +1,5 @@
 ---
-title: "Wechat Pay For Foreigners: Step-By-Step Setup And Common Mistakes To Avoid Guide"
+title: "WeChat Pay for Foreigners: Setup Guide & Common Mistakes"
 date: "2026-07-02T10:00:00+08:00"
 lastmod: "2026-07-02T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "A practical 2026 setup guide for WeChat Pay for foreigners in China—covering linking cards, avoiding common pitfalls, and paying like a local."
-description: "Learn how to set up WeChat Pay as a foreigner in China in 2026. This step-by-step guide covers account creation, bank linking, identity verification, and common mistakes to avoid."
+description: "Set up WeChat Pay as a foreigner in China (2026). Step-by-step guide for account creation, bank linking, and avoiding common mistakes."
 canonicalURL: "https://chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/"
 ShowToc: "true"
 TocOpen: "false"

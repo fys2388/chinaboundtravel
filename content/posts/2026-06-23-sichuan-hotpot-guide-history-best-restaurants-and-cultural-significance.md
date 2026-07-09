@@ -1,5 +1,5 @@
 ---
-title: "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance"
+title: "Sichuan Hotpot: History, Best Restaurants & Culture"
 cover:
   image: "/img/china-dest/chengdu/sichuan-hotpot-cover.jpg"
 date: "2026-06-23T10:00:00+08:00"

@@ -1,0 +1,68 @@
+{
+  "hook": "Visa - free China? Yes, it's possible!",
+  "narration": "Hey there, EU travelers! I'm Joran. The 144 - hour visa - free transit in China is getting even better. New countries are being added. You can visit amazing cities like Beijing, Shanghai, or Chengdu during this visa - free period. Plan your route now. Which city will you choose?",
+  "scenes": [
+    {
+      "time": "0 - 5s",
+      "description": "A map of China with visa - free cities highlighted",
+      "image_prompt": "A map of China with Beijing, Shanghai, and Chengdu glowing"
+    },
+    {
+      "time": "5 - 10s",
+      "description": "Shots of people exploring the Forbidden City in Beijing",
+      "image_prompt": "Tourists walking around the Forbidden City"
+    },
+    {
+      "time": "10 - 15s",
+      "description": "Scenes of the Bund in Shanghai",
+      "image_prompt": "The Bund at night with lights"
+    },
+    {
+      "time": "15 - 20s",
+      "description": "People enjoying food in a Chengdu street market",
+      "image_prompt": "A busy street market in Chengdu with people eating"
+    },
+    {
+      "time": "20 - 25s",
+      "description": "A calendar with days marked for a 144 - hour transit",
+      "image_prompt": "A calendar with 6 days circled"
+    },
+    {
+      "time": "25 - 30s",
+      "description": "A question mark on the screen",
+      "image_prompt": "A big question mark"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0 - 3s",
+      "text": "Visa - free China?"
+    },
+    {
+      "time": "3 - 6s",
+      "text": "144 - hour transit for EU travelers"
+    },
+    {
+      "time": "6 - 9s",
+      "text": "New countries added"
+    },
+    {
+      "time": "9 - 12s",
+      "text": "Visit Beijing, Shanghai, Chengdu"
+    },
+    {
+      "time": "12 - 15s",
+      "text": "Plan your route"
+    },
+    {
+      "time": "15 - 18s",
+      "text": "Which city will you choose?"
+    }
+  ],
+  "tags": [
+    "#144hourvisafree",
+    "#chinatransitvisa",
+    "#visafreechina",
+    "#chinalayover"
+  ]
+}

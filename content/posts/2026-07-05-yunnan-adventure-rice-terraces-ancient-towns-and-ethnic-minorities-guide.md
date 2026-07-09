@@ -1,5 +1,5 @@
 ---
-title: "Yunnan Adventure: Rice Terraces, Ancient Towns, And Ethnic Minorities Guide"
+title: "Yunnan Travel Guide: Rice Terraces, Ancient Towns & Minorities"
 date: "2026-07-05T10:00:00+08:00"
 lastmod: "2026-07-05T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "Yunnan travel guide: 7-day itinerary with budget, Yuanyang rice terraces, Dali and Lijiang ancient towns, ethnic minority culture, and transport tips from a China expat."
-description: "A complete Yunnan travel guide with a 7-day itinerary — Kunming to Yuanyang rice terraces, Dali, Lijiang, and Jade Dragon Snow Mountain. Real prices, transport tips, and what most tourists miss."
+description: "7-day Yunnan itinerary: Kunming, Yuanyang rice terraces, Dali, Lijiang & Jade Dragon Snow Mountain. Real prices, transport tips & hidden gems."
 canonicalURL: "https://chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/"
 ShowToc: "true"
 TocOpen: "false"

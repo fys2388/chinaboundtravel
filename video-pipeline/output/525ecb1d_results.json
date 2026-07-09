@@ -1,0 +1,27 @@
+{
+  "video_id": "525ecb1d",
+  "topic_title": "China Food Guide: Regional Cuisines and Must-Try Dishes",
+  "topic_id": "p1q2r3s4",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\525ecb1d_script.json"
+    },
+    "voiceover": {
+      "status": "failed",
+      "error": "Empty output"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\525ecb1d.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

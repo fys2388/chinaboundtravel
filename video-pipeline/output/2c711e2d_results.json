@@ -1,0 +1,27 @@
+{
+  "video_id": "2c711e2d",
+  "topic_title": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
+  "topic_id": "k7l8m9n0",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\2c711e2d_script.json"
+    },
+    "voiceover": {
+      "status": "failed",
+      "error": "Empty output"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\2c711e2d.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

@@ -1,0 +1,26 @@
+{
+  "video_id": "973773db",
+  "topic_title": "Hong Kong Travel: Victoria Harbour and Local Eats",
+  "topic_id": "test-buffer-03",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\973773db_script.json"
+    },
+    "voiceover": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\temp\\973773db_voiceover.mp3"
+    },
+    "video": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\973773db.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "buffer": ""
+      }
+    }
+  },
+  "success": true
+}

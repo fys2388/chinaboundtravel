@@ -1,6 +1,5 @@
 ---
-title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
-  Most Epic Wilderness'
+title: 'Western Sichuan Camping: 7-Day Overland Adventure Guide'
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false

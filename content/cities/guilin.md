@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
 title = "Guilin Travel Guide 2026"
 description = "Guilin travel guide: karst mountains, Li River cruises, and the most scenic landscape in China"
 date = 2026-06-21

@@ -1,0 +1,26 @@
+{
+  "video_id": "c663f95a",
+  "topic_title": "Chengdu Panda Adventure: Visit the Giant Panda Reserve",
+  "topic_id": "test-buffer-02",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\c663f95a_script.json"
+    },
+    "voiceover": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\temp\\c663f95a_voiceover.mp3"
+    },
+    "video": {
+      "status": "success",
+      "path": "e:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\c663f95a.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "buffer": ""
+      }
+    }
+  },
+  "success": true
+}

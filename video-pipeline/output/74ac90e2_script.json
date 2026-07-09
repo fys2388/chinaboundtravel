@@ -1,0 +1,60 @@
+{
+  "hook": "Shanghai - where East meets West!",
+  "narration": "Shanghai has amazing hidden gems. Wander in local alleys, discover unique cafes. Learn about visa, budget, safety. Plan your trip now!",
+  "scenes": [
+    {
+      "time": "0-5s",
+      "description": "A shot of the Shanghai skyline with the Bund and modern skyscrapers",
+      "image_prompt": "Shanghai skyline with Bund and modern buildings"
+    },
+    {
+      "time": "5-10s",
+      "description": "A local alley with traditional Chinese architecture and people going about their daily lives",
+      "image_prompt": "Local alley in Shanghai with traditional architecture and people"
+    },
+    {
+      "time": "10-15s",
+      "description": "A unique cafe interior with Chinese and Western elements",
+      "image_prompt": "Interior of a unique Shanghai cafe with Chinese and Western decor"
+    },
+    {
+      "time": "15-20s",
+      "description": "A sign showing visa requirements and a map with transportation options",
+      "image_prompt": "Visa requirements sign and transportation map of Shanghai"
+    },
+    {
+      "time": "20-25s",
+      "description": "A person looking at a budget sheet and safety tips",
+      "image_prompt": "Person looking at budget and safety tips for Shanghai"
+    },
+    {
+      "time": "25-30s",
+      "description": "A call to action text on the screen like 'Plan your Shanghai adventure'",
+      "image_prompt": "Call to action text on a Shanghai - themed background"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0-3s",
+      "text": "Discover Shanghai's Hidden Gems"
+    },
+    {
+      "time": "3-6s",
+      "text": "Unique Local Experiences"
+    },
+    {
+      "time": "6-9s",
+      "text": "Visa, Budget, Safety Info"
+    },
+    {
+      "time": "9-12s",
+      "text": "Plan Your Trip Now"
+    }
+  ],
+  "tags": [
+    "#shanghaitravel",
+    "#shanghaihiddengems",
+    "#shanghailocal",
+    "#chinatravel"
+  ]
+}

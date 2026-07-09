@@ -187,18 +187,30 @@ class AllInOnePoster:
             title = ""
             summary = ""
             slug = latest_post.stem
+            canonical_url = ""
             
             for line in content.split('\n'):
                 if line.startswith('title:'):
                     title = line.split(':', 1)[1].strip().strip('"').strip("'")
                 elif line.startswith('summary:'):
                     summary = line.split(':', 1)[1].strip().strip('"').strip("'")
+                elif line.startswith('slug:'):
+                    slug = line.split(':', 1)[1].strip().strip('"').strip("'")
+                elif line.startswith('canonicalURL:'):
+                    canonical_url = line.split(':', 1)[1].strip().strip('"').strip("'")
+            
+            if canonical_url:
+                if not canonical_url.startswith("http"):
+                    canonical_url = f"https://{canonical_url}"
+                url = canonical_url
+            else:
+                url = f"https://chinaboundtravel.com/posts/{slug}/"
             
             return {
                 "title": title,
                 "summary": summary,
                 "slug": slug,
-                "url": f"https://chinaboundtravel.com/posts/{slug}/",
+                "url": url,
                 "image_url": f"https://chinaboundtravel.com/images/{slug}.webp"
             }
         return None

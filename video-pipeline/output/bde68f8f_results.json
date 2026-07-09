@@ -1,0 +1,27 @@
+{
+  "video_id": "bde68f8f",
+  "topic_title": "China High-Speed Train Survival Guide: Booking, Classes, and Insider Tips",
+  "topic_id": "new-005",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\bde68f8f_script.json"
+    },
+    "voiceover": {
+      "status": "failed",
+      "error": "Empty output"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\bde68f8f.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

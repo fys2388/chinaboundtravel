@@ -1,0 +1,84 @@
+{
+  "hook": "Struggling to stay connected in China?",
+  "narration": "In 2026, when traveling in China, having the right eSIM and VPN is crucial. Avoid the Wi-Fi woes of the past. Get the best eSIM for seamless internet access. And a reliable VPN to unblock your favorite apps. Stay connected like never before. So, are you ready to explore China without internet hassles?",
+  "scenes": [
+    {
+      "time": "0-5s",
+      "description": "A foreign traveler looking frustrated while trying to use a phone in an airport",
+      "image_prompt": "A foreign traveler with a confused expression, holding a phone in an airport terminal"
+    },
+    {
+      "time": "5-10s",
+      "description": "Show different eSIM cards and a VPN logo",
+      "image_prompt": "Close - up of various eSIM cards laid out and a VPN logo on a screen"
+    },
+    {
+      "time": "10-15s",
+      "description": "The traveler using the phone with a smile after getting connected",
+      "image_prompt": "The same traveler smiling and using the phone comfortably"
+    },
+    {
+      "time": "15-20s",
+      "description": "Show a map of China with dots indicating places where good connectivity is possible",
+      "image_prompt": "A map of China with glowing dots at various locations"
+    },
+    {
+      "time": "20-25s",
+      "description": "The traveler exploring China while staying connected",
+      "image_prompt": "The traveler walking through a Chinese street, looking at the phone occasionally"
+    },
+    {
+      "time": "25-30s",
+      "description": "The camera pans out to show the traveler in a beautiful Chinese landscape",
+      "image_prompt": "The traveler in a scenic Chinese landscape"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0-3s",
+      "text": "Stay Connected in China"
+    },
+    {
+      "time": "3-6s",
+      "text": "Best eSIM and VPN in 2026"
+    },
+    {
+      "time": "6-9s",
+      "text": "Avoid Wi-Fi Woes"
+    },
+    {
+      "time": "9-12s",
+      "text": "Unblock Your Apps"
+    },
+    {
+      "time": "12-15s",
+      "text": "Explore Without Hassles"
+    },
+    {
+      "time": "15-18s",
+      "text": "Reliable Connectivity"
+    },
+    {
+      "time": "18-21s",
+      "text": "Stay Connected Everywhere"
+    },
+    {
+      "time": "21-24s",
+      "text": "Seamless Travel Experience"
+    },
+    {
+      "time": "24-27s",
+      "text": "Are You Ready?"
+    },
+    {
+      "time": "27-30s",
+      "text": "Discover China with Ease"
+    }
+  ],
+  "tags": [
+    "#ChinaTravel",
+    "#eSIM",
+    "#VPN",
+    "#StayConnected"
+  ]
+}

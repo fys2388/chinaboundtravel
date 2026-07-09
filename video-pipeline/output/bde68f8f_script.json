@@ -1,0 +1,63 @@
+{
+  "hook": "Avoid train travel disasters in China!",
+  "narration": "China's high - speed trains are great, but can be tricky. I've been there. Here's how to book, choose classes, and get insider tips. Don't end up like I did, missing a train. Learn and enjoy your journey.",
+  "scenes": [
+    {
+      "time": "0 - 5s",
+      "description": "Show a high - speed train speeding through the countryside",
+      "image_prompt": "A high - speed train on a bridge over a river with green fields in the background"
+    },
+    {
+      "time": "5 - 10s",
+      "description": "Display the chaos of a large train station",
+      "image_prompt": "A crowded train station with people rushing around, signs in Chinese and English"
+    },
+    {
+      "time": "10 - 15s",
+      "description": "Show different classes of the train",
+      "image_prompt": "First - class and second - class train seats side by side"
+    },
+    {
+      "time": "15 - 20s",
+      "description": "Show a person booking a train ticket on a computer",
+      "image_prompt": "A person sitting at a desk with a laptop, showing the train booking website"
+    },
+    {
+      "time": "20 - 25s",
+      "description": "Show the speaker smiling and giving a thumbs - up",
+      "image_prompt": "The speaker in front of a train with a friendly expression and a thumbs - up gesture"
+    },
+    {
+      "time": "25 - 30s",
+      "description": "Show a map of China's high - speed rail network",
+      "image_prompt": "A colorful map of China with high - speed rail lines highlighted"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0 - 3s",
+      "text": "China High - Speed Train Survival Guide"
+    },
+    {
+      "time": "3 - 6s",
+      "text": "Book, Classes, Insider Tips"
+    },
+    {
+      "time": "6 - 9s",
+      "text": "Avoid Train Travel Disasters"
+    },
+    {
+      "time": "9 - 12s",
+      "text": "Learn and Enjoy Your Journey"
+    },
+    {
+      "time": "12 - 15s",
+      "text": "China's Vast High - Speed Rail Network"
+    }
+  ],
+  "tags": [
+    "#ChinaHighSpeedTrain",
+    "#TrainTravelChina",
+    "#TravelTips"
+  ]
+}

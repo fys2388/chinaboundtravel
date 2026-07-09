@@ -17,7 +17,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "Xi'an Terracotta Army visitor guide: 2026 ticket prices, transport from Xi'an, photography rules, and what most tourists miss."
-description: "A practical guide to visiting Xi'an's Terracotta Army in 2026 — ticket prices, how to get there, best time to visit, photography rules, and insider tips from an expat who's been multiple times."
+description: "Xi'an Terracotta Army guide 2026: ticket prices, transport, best time to visit, photo rules & insider tips from multiple visits."
 canonicalURL: "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/"
 ShowToc: "true"
 TocOpen: "false"

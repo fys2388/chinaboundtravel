@@ -1,5 +1,5 @@
 ---
-title: "A Gastronomic Adventure in China: A Foodie's Guide for European Travelers"
+title: "China Food Guide for European Travelers (2026)"
 date: "2026-07-06T10:00:00+08:00"
 lastmod: "2026-07-06T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "The essential China food guide for European travelers — from Sichuan hotpot to Cantonese dim sum, real restaurant picks, ordering hacks, and what surprised a Californian the most about Chinese cuisine."
-description: "China food guide for European travelers: discover 8 regional cuisines, must-try dishes, real restaurant recommendations, ordering tips, and what surprised an expat most after 10+ years in China."
+description: "China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks & ordering tips from a 10-year China expat."
 canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"

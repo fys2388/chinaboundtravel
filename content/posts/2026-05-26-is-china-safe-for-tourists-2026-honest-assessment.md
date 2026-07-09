@@ -1,6 +1,6 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 title: "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
-description: "Crime rates, food safety, political stability, scams targeting tourists, healthcare access, and emergency contacts  a no-BS safety guide for foreign travelers in China in 2026."
+description: "Is China safe in 2026? Crime rates, scams, food safety, healthcare & emergency contacts — a no-BS guide for foreign travelers."
 date: "2026-05-27"
 author: "Joran"
 tags: ["ChinaSafety", "ChinaTravelTips", "ChinaTravel"]

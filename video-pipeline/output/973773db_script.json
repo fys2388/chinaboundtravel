@@ -1,0 +1,49 @@
+{
+  "hook": "Discover Hong Kong's wonders!",
+  "narration": "Welcome to Hong Kong! First, soak in the beauty of Victoria Harbour. Then, dive into local eats like delicious dim sum. Explore the vibrant streets. Hong Kong awaits. Are you ready?",
+  "scenes": [
+    {
+      "time": "0-5s",
+      "description": "Aerial view of Victoria Harbour with boats and skyscrapers",
+      "image_prompt": "Aerial view of Victoria Harbour, boats, skyscrapers, sunny day"
+    },
+    {
+      "time": "5-10s",
+      "description": "Close - up of various dim sum on a table",
+      "image_prompt": "Close - up of dim sum, steamer baskets, colorful dishes"
+    },
+    {
+      "time": "10-15s",
+      "description": "People walking on a busy street in Hong Kong with local shops",
+      "image_prompt": "Busy street, local shops, people walking, Hong Kong street signs"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0-3s",
+      "text": "Hong Kong: A Traveler's Dream"
+    },
+    {
+      "time": "3-6s",
+      "text": "Victoria Harbour's Beauty"
+    },
+    {
+      "time": "6-9s",
+      "text": "Taste Local Eats - Dim Sum"
+    },
+    {
+      "time": "9-12s",
+      "text": "Explore the Streets"
+    },
+    {
+      "time": "12-15s",
+      "text": "Are You Ready?"
+    }
+  ],
+  "tags": [
+    "#hongkongtravel",
+    "#victoriaharbour",
+    "#hongkongfood",
+    "#chinatravel"
+  ]
+}

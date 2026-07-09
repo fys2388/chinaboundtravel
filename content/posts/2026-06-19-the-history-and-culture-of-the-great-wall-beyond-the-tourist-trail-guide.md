@@ -1,6 +1,6 @@
 ---
 
-title: "The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide"
+title: "The Great Wall: History & Culture Beyond the Tourist Trail"
 cover:
   image: "https://picsum.photos/seed/657773/1792/1024"
 date: "2026-06-19T10:00:00+08:00"
@@ -19,7 +19,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Beyond the crowded Badaling section lies the real Great Wall — a 2,000-year story of military strategy, human sacrifice, and cultural significance. Discover the hidden history most tourists never see."
-description: "Explore the Great Wall beyond the tourist trail. Uncover its military history, the stories of the laborers who built it, and the cultural myths that surround this iconic structure. Written by an American who's spent a decade in China."
+description: "Explore the Great Wall beyond the tourist trail: military history, builder stories & cultural myths from an American with a decade in China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/"
 ShowToc: "true"
 TocOpen: "false"

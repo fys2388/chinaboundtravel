@@ -1,0 +1,27 @@
+{
+  "video_id": "bec7aeb4",
+  "topic_title": "Best eSIM and VPN Options for China Travel in 2026",
+  "topic_id": "new-004",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\bec7aeb4_script.json"
+    },
+    "voiceover": {
+      "status": "failed",
+      "error": "Empty output"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\bec7aeb4.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

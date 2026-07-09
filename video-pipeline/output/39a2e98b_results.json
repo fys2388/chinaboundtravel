@@ -1,0 +1,27 @@
+{
+  "video_id": "39a2e98b",
+  "topic_title": "144-Hour Visa-Free Transit: How to Use It and Which Cities You Can Visit",
+  "topic_id": "new-007",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\39a2e98b_script.json"
+    },
+    "voiceover": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\temp\\39a2e98b_voiceover.mp3"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\39a2e98b.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

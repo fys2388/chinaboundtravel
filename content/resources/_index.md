@@ -7,7 +7,7 @@ layout = "single"
 
 The right travel tool can make the journey so much easier. After 10+ years of living in China and helping thousands of travelers, these are the resources I personally use and trust for every China trip.
 
-Some links below are affiliate links — at no extra cost to you, we may earn a commission. We only recommend tools we've personally used. <a href="/disclosure/">Learn more →</a>
+Some links below are affiliate links — at no extra cost to you, we may earn a commission. We only recommend tools we've personally used. <a href="/affiliate-disclosure/">Learn more →</a>
 
 ---
 
@@ -172,8 +172,8 @@ If you're not sure which resource is right for your specific trip, drop me a lin
 Or check out our most popular guides:
 - [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
-- [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-foreigner/)
-- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-booking/)
+- [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 ---
 

@@ -1,0 +1,46 @@
+{
+  "hook": "Discover Yunnan's wonders!",
+  "narration": "In Yunnan, adventure awaits. See stunning rice terraces, explore ancient towns like Lijiang, and meet diverse ethnic minorities. What are you waiting for?",
+  "scenes": [
+    {
+      "time": "0-5s",
+      "description": "Aerial view of rice terraces",
+      "image_prompt": "Aerial view of terraced rice fields in Yunnan with misty mountains in the background"
+    },
+    {
+      "time": "5-10s",
+      "description": "People walking in the ancient town of Lijiang",
+      "image_prompt": "People strolling along cobblestone streets in Lijiang with traditional architecture"
+    },
+    {
+      "time": "10-15s",
+      "description": "Ethnic minorities performing",
+      "image_prompt": "Ethnic minority group performing traditional dance"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0-3s",
+      "text": "Yunnan Adventure"
+    },
+    {
+      "time": "3-6s",
+      "text": "Rice Terraces"
+    },
+    {
+      "time": "6-9s",
+      "text": "Ancient Towns"
+    },
+    {
+      "time": "9-12s",
+      "text": "Ethnic Minorities"
+    }
+  ],
+  "tags": [
+    "#yunnan",
+    "#travel",
+    "#riceTerraces",
+    "#lijiang",
+    "#ethnicMinorities"
+  ]
+}

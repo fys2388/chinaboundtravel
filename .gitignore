@@ -32,6 +32,7 @@ fix_current_garbled.py
 
 # GSC Service Account Key
 gsc-service-account-key.json
+config/service-account.json
 
 # Test files with API keys (do NOT commit)
 test_gemini_image.py

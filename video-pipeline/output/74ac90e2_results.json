@@ -1,0 +1,27 @@
+{
+  "video_id": "74ac90e2",
+  "topic_title": "Discover Shanghai: Best Hidden Gems and Local Experiences",
+  "topic_id": "test-001",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\74ac90e2_script.json"
+    },
+    "voiceover": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\temp\\74ac90e2_voiceover.mp3"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\74ac90e2.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "youtube": "https://www.youtube.com/watch?v=upload_pending",
+        "tiktok": "https://www.tiktok.com/@chinaboundtravel/video/upload_pending"
+      }
+    }
+  },
+  "success": true
+}

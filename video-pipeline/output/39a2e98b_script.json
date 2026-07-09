@@ -1,0 +1,68 @@
+{
+  "hook": "Discover China without a visa!",
+  "narration": "Hey there! I'm Joran. The 144 - hour visa - free transit in China is getting even better. New countries are added. Explore cities like Beijing, Shanghai, or Chengdu during your layover. No visa hassle. But hurry, the list is still being released. What are you waiting for?",
+  "scenes": [
+    {
+      "time": "0 - 5s",
+      "description": "A map of China with some major cities highlighted",
+      "image_prompt": "A map of China with Beijing, Shanghai, and Chengdu glowing"
+    },
+    {
+      "time": "5 - 10s",
+      "description": "Joran talking directly to the camera with a friendly smile",
+      "image_prompt": "Joran in front of a Chinese flag, smiling and waving"
+    },
+    {
+      "time": "10 - 15s",
+      "description": "Images of people exploring Chinese cities",
+      "image_prompt": "People walking on the Great Wall, in Shanghai Bund, and in Chengdu streets"
+    },
+    {
+      "time": "15 - 20s",
+      "description": "A document with the words '144 - hour visa - free transit' and some stamps",
+      "image_prompt": "A visa - like document with '144 - hour visa - free transit' written in Chinese and English and some official stamps"
+    },
+    {
+      "time": "20 - 25s",
+      "description": "Joran shrugging and looking curious about the new list",
+      "image_prompt": "Joran with a raised eyebrow and a shrug"
+    },
+    {
+      "time": "25 - 30s",
+      "description": "A globe spinning with a pointer on China",
+      "image_prompt": "A globe spinning with a red pointer on China"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0 - 3s",
+      "text": "144 - hour visa - free transit in China"
+    },
+    {
+      "time": "3 - 6s",
+      "text": "New countries added"
+    },
+    {
+      "time": "6 - 9s",
+      "text": "Explore major cities"
+    },
+    {
+      "time": "9 - 12s",
+      "text": "No visa needed"
+    },
+    {
+      "time": "12 - 15s",
+      "text": "Hurry, list still releasing"
+    },
+    {
+      "time": "15 - 18s",
+      "text": "What are you waiting for?"
+    }
+  ],
+  "tags": [
+    "#144hourvisafree",
+    "#chinatransitvisa",
+    "#visafreechina",
+    "#chinalayover"
+  ]
+}

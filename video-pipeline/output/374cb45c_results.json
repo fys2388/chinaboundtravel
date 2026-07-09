@@ -1,0 +1,26 @@
+{
+  "video_id": "374cb45c",
+  "topic_title": "Beijing Travel Guide: The Forbidden City and Beyond",
+  "topic_id": "test-buffer-01",
+  "steps": {
+    "script": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\374cb45c_script.json"
+    },
+    "voiceover": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\temp\\374cb45c_voiceover.mp3"
+    },
+    "video": {
+      "status": "success",
+      "path": "E:\\AI\\dulizhan\\travel-blog\\video-pipeline\\output\\374cb45c.mp4"
+    },
+    "upload": {
+      "status": "success",
+      "results": {
+        "buffer": ""
+      }
+    }
+  },
+  "success": true
+}

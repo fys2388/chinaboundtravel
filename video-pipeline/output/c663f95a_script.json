@@ -1,0 +1,84 @@
+{
+  "hook": "Ever dreamed of hugging a panda?",
+  "narration": "In Chengdu, your dream can come true. Visit the Giant Panda Reserve. See these gentle giants up close. Wander through bamboo forests. It's a wildlife adventure like no other. Are you ready to meet your panda pal?",
+  "scenes": [
+    {
+      "time": "0-5s",
+      "description": "A wide shot of the panda reserve with bamboo forests and a panda walking around",
+      "image_prompt": "Aerial view of a panda reserve with pandas in the bamboo"
+    },
+    {
+      "time": "5-10s",
+      "description": "Close - up of a panda eating bamboo",
+      "image_prompt": "Panda sitting and munching on bamboo"
+    },
+    {
+      "time": "10-15s",
+      "description": "Shot of a foreign traveler looking excited while watching pandas",
+      "image_prompt": "Happy foreign tourist observing pandas"
+    },
+    {
+      "time": "15-20s",
+      "description": "Another panda playing in a tree",
+      "image_prompt": "Panda climbing a tree"
+    },
+    {
+      "time": "20-25s",
+      "description": "A group of pandas lying around",
+      "image_prompt": "Group of pandas relaxing on the ground"
+    },
+    {
+      "time": "25-30s",
+      "description": "A sign at the reserve entrance",
+      "image_prompt": "Entrance sign of the panda reserve"
+    }
+  ],
+  "subtitles": [
+    {
+      "time": "0-3s",
+      "text": "Giant Panda Reserve in Chengdu"
+    },
+    {
+      "time": "3-6s",
+      "text": "Meet the pandas"
+    },
+    {
+      "time": "6-9s",
+      "text": "Bamboo forests"
+    },
+    {
+      "time": "9-12s",
+      "text": "Wildlife adventure"
+    },
+    {
+      "time": "12-15s",
+      "text": "Get close to pandas"
+    },
+    {
+      "time": "15-18s",
+      "text": "Playful pandas"
+    },
+    {
+      "time": "18-21s",
+      "text": "Relaxing pandas"
+    },
+    {
+      "time": "21-24s",
+      "text": "Your panda adventure awaits"
+    },
+    {
+      "time": "24-27s",
+      "text": "Are you ready?"
+    },
+    {
+      "time": "27-30s",
+      "text": "Come to Chengdu"
+    }
+  ],
+  "tags": [
+    "#ChengduPanda",
+    "#GiantPanda",
+    "#PandaReserve",
+    "#ChinaWildlife"
+  ]
+}
