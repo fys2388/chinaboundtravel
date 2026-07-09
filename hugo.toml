@@ -1,6 +1,6 @@
 baseURL = 'https://www.chinaboundtravel.com/'
 languageCode = 'en-us'
-title = 'ChinaBound Travel | China Travel Guide 2026'
+title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
 theme = 'PaperMod'
 defaultContentLanguage = 'en'
 enableInlineShortcodes = true
@@ -14,8 +14,8 @@ buildExpired = false
 
 [params]
   env = 'production'
-  title = 'ChinaBound Travel | China Travel Guide 2026'
-  description = 'Practical China travel guide for foreigners: visa, Alipay, WeChat Pay, eSIM, VPN, trains & city guides by an American expat in Chengdu.'
+  title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
+  description = 'Practical travel guide for foreigners visiting China. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. Written by an American married into a Chengdu family.'
   author = 'Joran'
   images = ["https://www.chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-stalls.jpg"]
 
@@ -86,34 +86,34 @@ buildExpired = false
   weight = 50
 
 [[menu.main]]
--  identifier = "resources"
--  name = "🧰 Resources"
--  url = "/resources/"
--  weight = 52
+  identifier = "resources"
+  name = "🧰 Resources"
+  url = "/resources/"
+  weight = 52
 
 [[menu.main]]
--  identifier = "visa"
--  name = "🛂 Visa Guide"
--  url = "/visa/"
--  weight = 53
+  identifier = "visa"
+  name = "🛂 Visa Guide"
+  url = "/visa/"
+  weight = 53
 
 [[menu.main]]
--  identifier = "payments"
--  name = "💳 Payment"
--  url = "/payments/"
--  weight = 54
+  identifier = "payments"
+  name = "💳 Payment"
+  url = "/payments/"
+  weight = 54
 
 [[menu.main]]
--  identifier = "internet"
--  name = "📡 Internet"
--  url = "/internet/"
--  weight = 56
-
-[[menu.main]]
--  identifier = "posts"
+  identifier = "posts"
   name = "📝 Blog"
   url = "/posts/"
   weight = 55
+
+[[menu.main]]
+  identifier = "internet"
+  name = "📡 Internet"
+  url = "/internet/"
+  weight = 56
 
 [[menu.main]]
   identifier = "contact"
