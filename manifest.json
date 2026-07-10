@@ -1,8 +1,8 @@
 {
-  "month_post_count": 10,
+  "month_post_count": 11,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-09 02:48:06",
-  "daily_social_publish_date": "2026-07-09",
+  "last_social_publish": "2026-07-10 02:51:16",
+  "daily_social_publish_date": "2026-07-10",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -55,6 +55,11 @@
       "topic": "travel safety",
       "geo_region": "US",
       "create_date": "2026-07-09"
+    },
+    {
+      "topic": "food recommendations",
+      "geo_region": "EU",
+      "create_date": "2026-07-10"
     }
   ],
   "keyword_convert_rate": {
