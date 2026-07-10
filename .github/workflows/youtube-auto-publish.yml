@@ -46,7 +46,14 @@ jobs:
           fi
           echo "DEBUG: DRY = '$DRY', SLUG = '$SLUG'"
           if [ -n "$SLUG" ]; then
-            python youtube_auto_upload.py --article "../content/posts/${SLUG}.md" $DRY
+            python youtube_auto_upload.py --article "../content/posts/${SLUG}.md" $DRY 2>&1 | tee /tmp/pipeline_output.log
           else
-            python youtube_auto_upload.py --latest $DRY
+            python youtube_auto_upload.py --latest $DRY 2>&1 | tee /tmp/pipeline_output.log
           fi
+      - name: Upload pipeline log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-log
+          path: /tmp/pipeline_output.log
+          retention-days: 7
