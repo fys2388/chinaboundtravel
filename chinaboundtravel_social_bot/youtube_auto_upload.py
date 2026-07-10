@@ -422,16 +422,11 @@ def create_video_moviepy(image_path, audio_path, output_path):
 
 def find_latest_article():
     """找到最新文章"""
-    print(f"[DEBUG] find_latest_article() called, CONTENT_DIR={CONTENT_DIR}")
-    print(f"[DEBUG] absolute CONTENT_DIR={os.path.abspath(CONTENT_DIR)}")
     posts_dir = Path(CONTENT_DIR)
-    print(f"[DEBUG] posts_dir.exists() = {posts_dir.exists()}")
     if not posts_dir.exists():
         print(f"[错误] 文章目录不存在: {os.path.abspath(CONTENT_DIR)}")
         return None
-    all_files = list(posts_dir.glob("*.md"))
-    print(f"[DEBUG] found {len(all_files)} .md files")
-    md_files = sorted(all_files, key=lambda f: f.stat().st_mtime, reverse=True)
+    md_files = sorted(posts_dir.glob("*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
     if not md_files:
         print(f"[错误] 未找到 .md 文件")
         return None
@@ -441,9 +436,7 @@ def find_latest_article():
 
 def process_article(article_path, dry_run=False):
     """完整处理文章: 解析 -> TTS -> 视频"""
-    print(f"[DEBUG] process_article() called, path={article_path}, dry_run={dry_run}")
     article_path = os.path.abspath(article_path)
-    print(f"[DEBUG] absolute path = {article_path}, exists = {os.path.exists(article_path)}")
     if not os.path.exists(article_path):
         print(f"[错误] 文章不存在: {article_path}")
         return None
@@ -455,10 +448,7 @@ def process_article(article_path, dry_run=False):
     with open(article_path, "r", encoding="utf-8") as f:
         raw = f.read()
 
-    print(f"[DEBUG] file read OK, size={len(raw)} bytes")
-
     meta, body = parse_frontmatter(raw)
-    print(f"[DEBUG] parse_frontmatter OK, meta keys={list(meta.keys())}, body len={len(body)}")
     title = meta.get("title", "Unknown Title")
     description = meta.get("description", "")
     cover = meta.get("cover", "") or meta.get("image", "") or meta.get("featured_image", "")
@@ -471,12 +461,8 @@ def process_article(article_path, dry_run=False):
     print(f"封面: {cover or '(无)'}")
     print(f"标签: {tags}")
 
-    print(f"[DEBUG] calling extract_sections()...")
     sections = extract_sections(body)
-    print(f"[DEBUG] extract_sections OK, got {len(sections)} sections")
-    print(f"[DEBUG] calling generate_narration()...")
     narration = generate_narration(title, description, sections)
-    print(f"[DEBUG] generate_narration OK")
     print(f"\n[旁白脚本] ({len(narration.split())} 词):\n{narration}\n")
 
     if dry_run:

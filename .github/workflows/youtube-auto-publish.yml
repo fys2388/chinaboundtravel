@@ -11,7 +11,7 @@ on:
       dry_run:
         description: "Dry run (generate video but don't upload)"
         required: false
-        default: "false"
+        default: false
         type: boolean
 
 jobs:
@@ -32,7 +32,6 @@ jobs:
           YOUTUBE_OAUTH_REFRESH_TOKEN: ${{ secrets.YOUTUBE_OAUTH_REFRESH_TOKEN }}
         working-directory: chinaboundtravel_social_bot
         run: |
-          echo "DEBUG: dry_run input = '${{ github.event.inputs.dry_run }}'"
           if [ -n "$YOUTUBE_CLIENT_SECRETS" ]; then
             printf '%s' "$YOUTUBE_CLIENT_SECRETS" > youtube_client_secrets.json
           fi
@@ -44,7 +43,6 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             DRY="--dry-run"
           fi
-          echo "DEBUG: DRY = '$DRY', SLUG = '$SLUG'"
           if [ -n "$SLUG" ]; then
             python youtube_auto_upload.py --article "../content/posts/${SLUG}.md" $DRY 2>&1 | tee /tmp/pipeline_output.log
           else
