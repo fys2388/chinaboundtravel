@@ -97,8 +97,8 @@ def refresh_access_token(client_id, client_secret, refresh_token):
         return resp.json().get("access_token")
     except requests.RequestException as e:
         print(f"[错误] 刷新 access_token 失败: {e}")
-        if resp.response is not None:
-            print(f"  HTTP {resp.response.status_code}: {resp.response.text[:200]}")
+        if hasattr(e, 'response') and e.response is not None:
+            print(f"  HTTP {e.response.status_code}: {e.response.text[:200]}")
         return None
 
 
