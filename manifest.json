@@ -1,8 +1,8 @@
 {
-  "month_post_count": 11,
+  "month_post_count": 12,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-10 02:51:16",
-  "daily_social_publish_date": "2026-07-10",
+  "last_social_publish": "2026-07-11 02:30:01",
+  "daily_social_publish_date": "2026-07-11",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -60,6 +60,11 @@
       "topic": "food recommendations",
       "geo_region": "EU",
       "create_date": "2026-07-10"
+    },
+    {
+      "topic": "accommodation tips",
+      "geo_region": "US",
+      "create_date": "2026-07-11"
     }
   ],
   "keyword_convert_rate": {
