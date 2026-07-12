@@ -1,8 +1,8 @@
 {
-  "month_post_count": 12,
+  "month_post_count": 13,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-11 02:30:01",
-  "daily_social_publish_date": "2026-07-11",
+  "last_social_publish": "2026-07-12 02:36:21",
+  "daily_social_publish_date": "2026-07-12",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -65,6 +65,11 @@
       "topic": "accommodation tips",
       "geo_region": "US",
       "create_date": "2026-07-11"
+    },
+    {
+      "topic": "transportation guide",
+      "geo_region": "EU",
+      "create_date": "2026-07-12"
     }
   ],
   "keyword_convert_rate": {
