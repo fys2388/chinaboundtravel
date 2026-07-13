@@ -16,7 +16,7 @@ on:
       dry_run:
         description: "Dry run without actually publishing"
         required: false
-        default: "true"
+        default: false
         type: boolean
   schedule:
     - cron: "0 9 * * *"  # Daily at 9:00 UTC
@@ -59,7 +59,7 @@ jobs:
           cd chinaboundtravel_social_bot
           PLATFORM="${{ github.event.inputs.platform || 'facebook,twitter,linkedin' }}"
           TYPE="${{ github.event.inputs.type || 'post' }}"
-          DRY_RUN="${{ github.event.inputs.dry_run || 'true' }}"
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
 
           FLAGS=""
           if [ "$DRY_RUN" = "true" ]; then

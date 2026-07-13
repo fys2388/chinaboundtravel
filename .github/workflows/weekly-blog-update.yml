@@ -146,11 +146,13 @@ jobs:
           echo "Deploy workflow triggered (may take 1-2 min to start)"
 
       - name: Run social media distribution
+        continue-on-error: true
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
           echo "=== Running social media distribution ==="
-          python chinaboundtravel_social_bot/social_publisher.py || echo "Social media distribution failed (continuing workflow)"
+          python chinaboundtravel_social_bot/social_publisher.py 2>&1 | tee /tmp/social_publisher_output.log
+          echo "Social media distribution step completed (check log above for any failures)"
 
       - name: Commit cover image updates
         run: |

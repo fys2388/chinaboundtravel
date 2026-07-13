@@ -535,11 +535,209 @@
       "resolved": false,
       "priority": "P0",
       "source": "主编终审"
+    },
+    {
+      "hash": "metadata_leak_in_body",
+      "type": "内容质量",
+      "message": "Frontmatter 元数据（Title/Description/Date/Tags）泄露到正文中，作为普通文本显示在文章开头",
+      "occurrences": 1,
+      "first_seen": "2026-07-08T00:00:00",
+      "last_seen": "2026-07-08T00:00:00",
+      "files": [
+        "2026-07-08-travel-safety-guide.md"
+      ],
+      "suggestion": "frontmatter 和正文之间不应有任何元数据文本块，正文应直接从 ## 标题开始",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "frontmatter 的 --- 分隔符之后，正文第一行必须是 ## 标题或直接开始段落",
+        "禁止在正文中重复 frontmatter 里的 title/description/date/tags",
+        "生成后检查 frontmatter 结束 --- 和第一个 ## 之间是否有非空行（排除空行）"
+      ]
+    },
+    {
+      "hash": "url_embedded_spaces",
+      "type": "链接问题",
+      "message": "文章内链接 URL 中嵌入了空格（如 '/2026 - 06 - 02 -'），导致链接无法正常跳转",
+      "occurrences": 4,
+      "first_seen": "2026-07-08T00:00:00",
+      "last_seen": "2026-07-08T00:00:00",
+      "files": [
+        "2026-07-08-travel-safety-guide.md"
+      ],
+      "suggestion": "所有 URL 必须去除空格，日期格式用连字符连接",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "生成内链 URL 时，日期部分使用 YYYY-MM-DD 格式（连字符无空格）",
+        "slug 部分使用小写+连字符，禁止空格",
+        "生成后正则检查所有 markdown 链接，URL 部分不应包含空格",
+        "使用站内已有文章的真实 slug 构建内链，而非手动拼接"
+      ]
+    },
+    {
+      "hash": "chinese_char_leak_round10",
+      "type": "内容质量",
+      "message": "英文文章中混入中文字符（如'繁琐'），与 garbled_characters 规则不同，这是 AI 生成时直接输出中文而非编码问题",
+      "occurrences": 1,
+      "first_seen": "2026-07-09T00:00:00",
+      "last_seen": "2026-07-09T00:00:00",
+      "files": [
+        "2026-07-09-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md"
+      ],
+      "suggestion": "强化生成 prompt 中的'纯英文'约束",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "AI 生成时在 system prompt 中强调：输出必须100%英文，禁止任何中文字符",
+        "中文概念必须翻译为英文（如 繁琐→involved/complex，美食→food/cuisine）",
+        "生成后用正则 [\\u4e00-\\u9fff] 检测并报告中文残留",
+        "在审核阶段将中文残留作为 P0 阻断项"
+      ]
+    },
+    {
+      "hash": "duplicate_h2_title_round10",
+      "type": "SEO问题",
+      "message": "文章正文第一个 ## 标题是文章 title 的完全重复，造成标题冗余（与 h1_duplicate_round8 类似但不同）",
+      "occurrences": 2,
+      "first_seen": "2026-07-09T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-09-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md"
+      ],
+      "suggestion": "正文第一个 ## 不应重复 frontmatter title，直接从 Introduction 或第一个实际内容章节开始",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "frontmatter 的 title 会由 Hugo 渲染为 H1，正文第一个 ## 不应再重复",
+        "正文第一个 ## 应该是 'Introduction' 或具体内容章节名",
+        "禁止在正文开头放 '## {article title}' 这种重复标题",
+        "生成后检查：第一个 ## 行的内容不应等于 frontmatter title"
+      ]
+    },
+    {
+      "hash": "canonicalurl_double_protocol",
+      "type": "SEO问题",
+      "message": "canonicalURL 字段出现双重 https 前缀（https://https://...），导致搜索引擎无法识别规范 URL",
+      "occurrences": 1,
+      "first_seen": "2026-07-10T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md"
+      ],
+      "suggestion": "canonicalURL 拼接时检查是否已包含协议前缀",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "生成 canonicalURL 时先检查是否已以 https:// 开头",
+        "拼接逻辑：if not url.startswith('http'): url = 'https://' + url",
+        "生成后正则检查 canonicalURL 是否包含 'https://https'",
+        "审核阶段将 canonicalURL 格式作为必检项"
+      ]
+    },
+    {
+      "hash": "template_sentence_repetition",
+      "type": "内容质量",
+      "message": "同一模板句式在文章多个章节中重复出现（如4个菜系章节都用了 'heavily influenced by local climate, geography, and culture'），阅读体验极差",
+      "occurrences": 1,
+      "first_seen": "2026-07-10T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md"
+      ],
+      "suggestion": "并列章节的过渡句和描述句必须差异化",
+      "resolved": true,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "并列章节（如介绍多个城市/菜系/地区）禁止使用相同或高度相似的描述句",
+        "每个并列章节的开头/过渡句必须包含该章节特有的关键词和特征",
+        "生成后检查：将全文分段对比，找出相似度>80%的相邻段落并标记",
+        "在 prompt 中明确要求：并列章节使用不同的切入角度和描述风格"
+      ]
+    },
+    {
+      "hash": "identical_ending_repetition",
+      "type": "内容质量",
+      "message": "多个章节以相同的结尾句式收尾（如4个菜系都以 'sure to satisfy your taste buds' 结束），模板痕迹严重",
+      "occurrences": 1,
+      "first_seen": "2026-07-10T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md"
+      ],
+      "suggestion": "每个章节的结尾句必须独特，使用与该章节主题相关的具体措辞",
+      "resolved": true,
+      "priority": "P1",
+      "source": "人工审校",
+      "prevention_rules": [
+        "并列章节的结尾句禁止使用相同的句式或短语",
+        "每个结尾句应包含该章节特有的关键词（如菜名、地名、风味特征）",
+        "避免使用万能结尾句（如'satisfy your taste buds','worth exploring'）",
+        "在 prompt 中给出正确示例和错误示例的对比"
+      ]
+    },
+    {
+      "hash": "near_duplicate_geo_articles",
+      "type": "内容质量",
+      "message": "同一主题（如 travel safety / food）生成 geo_targeting 变体（EU/US/AU），但内容高度相似，仅替换了目标受众称呼，造成站内近重复内容",
+      "occurrences": 2,
+      "first_seen": "2026-07-08T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-08-travel-safety-guide.md (EU)",
+        "2026-07-09-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md (US)",
+        "2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md (EU)",
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md (EU)"
+      ],
+      "suggestion": "同一主题的不同 geo 变体必须差异化内容，而非仅改称呼",
+      "resolved": false,
+      "priority": "P0",
+      "source": "人工审校",
+      "prevention_rules": [
+        "同一主题的不同 geo 变体应使用完全不同的文章结构和论述角度",
+        "EU 读者侧重：签证/申根对比、文化差异、短途旅行攻略",
+        "US 读者侧重：144小时过境、支付方式对比、美中差异",
+        "AU/NZ 读者侧重：南半球出发、时差、长途飞行建议",
+        "禁止仅通过替换 'European/American/Australian' 来生成变体",
+        "每个 geo 变体的段落结构、引用数据、实用tips 都应不同",
+        "间隔至少3天发布同主题的不同 geo 变体"
+      ]
+    },
+    {
+      "hash": "description_summary_identical",
+      "type": "内容质量",
+      "message": "文章的 description 和 summary 字段完全相同，浪费了两个字段的差异化 SEO 价值",
+      "occurrences": 4,
+      "first_seen": "2026-07-07T00:00:00",
+      "last_seen": "2026-07-10T00:00:00",
+      "files": [
+        "2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
+        "2026-07-08-travel-safety-guide.md",
+        "2026-07-09-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md"
+      ],
+      "suggestion": "description 用于搜索引擎展示（120-155字符），summary 用于列表页摘要（可更长），两者应有区别",
+      "resolved": false,
+      "priority": "P1",
+      "source": "人工审校",
+      "prevention_rules": [
+        "description: 120-155字符，面向搜索引擎，包含核心关键词和 CTA",
+        "summary: 1-2句话，面向读者，简述文章核心价值和独特视角",
+        "两者不应完全相同，至少在措辞和角度上有差异",
+        "生成后在审核中检查 description == summary 的情况"
+      ]
     }
   ],
-  "resolved_count": 7,
-  "total_errors": 16,
-  "last_updated": "2026-07-04T02:41:18.384419+00:00",
+  "resolved_count": 14,
+  "total_errors": 25,
+  "last_updated": "2026-07-13T00:00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

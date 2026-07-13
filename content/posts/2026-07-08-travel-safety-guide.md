@@ -24,14 +24,6 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-08-travel-safety-guide.jpg"
 ---
 
-Title: China Travel Safety: A Californian's Guide for European Adventurers
-
-Description: Embark on a worry-free journey to China with this in-depth travel safety guide. From visa requirements to avoiding common pitfalls, I'll share my 10+ years of experience in Chengdu.
-
-Date: 2026 - 08 - 15T12:30:00+08:00
-
-Tags: ChinaTravelSafety, ChengduTravel, EuropeToChina, ChinaVisa, ChinaTransportation
-
 ## Introduction
 I remember my first trip to China like it was yesterday. I was a wide-eyed Californian with a backpack full of dreams and a head full of stereotypes. Little did I know that this country would become my second home for over 10 years. As an international traveler from Europe planning a trip to China, you're probably filled with a mix of excitement and trepidation. Well, fear not! In this blog post, I'm going to share everything you need to know about travel safety in China, based on my own experiences.
 
@@ -128,9 +120,9 @@ Remember, China is a vast and diverse country with a lot to offer. From the pand
 And if you have any questions or need more advice, don't hesitate to leave a comment below. I'm always happy to help!
 
 Related links:
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta - army-history - discovery-and - insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar - mountains-complete - guide-to - chinas-most - spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot - guide-history - best-restaurants - and-cultural - significance/)
-- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea - culture-history - types-and - tea-ceremony - guide/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 
 ![A sunset view of the Great Wall, with the wall winding through the mountains and a warm orange glow](https://image.pollinations.ai/prompt/A%20sunset%20view%20of%20the%20Great%20Wall%2C%20with%20the%20wall%20winding%20through%20the%20mountains%20and%20a%20warm%20orange%20glow%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=35011&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)

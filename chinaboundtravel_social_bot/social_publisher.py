@@ -25,7 +25,39 @@ CATEGORY_MAP = [
     ("guilin", ["guilin", "li river", "yangshuo"]),
     ("yunnan", ["yunnan", "lijiang", "shangri-la", "dali", "kunming"]),
     ("sichuan", ["sichuan", "leshan", "mount emei", "jiuzhaigou"]),
+    ("food", ["food", "gastronomic", "cuisine", "eat", "dish", "restaurant", "street food", "dining", "cook"]),
+    ("accommodation", ["accommodation", "hotel", "hostel", "stay", "sleep", "lodging", "airbnb"]),
+    ("safety", ["safety", "safe", "scam", "crime", "security", "danger"]),
+    ("transport", ["transport", "train", "flight", "bus", "metro", "subway", "high-speed", "airport"]),
+    ("visa", ["visa", "passport", "entry", "transit"]),
+    ("payment", ["alipay", "wechat pay", "payment", "money", "currency", "exchange"]),
+    ("culture", ["culture", "etiquette", "custom", "tradition", "festival", "temple"]),
+    ("budget", ["budget", "cost", "price", "cheap", "expensive", "money saving"]),
 ]
+
+# 分类 -> 社媒 hashtag 组（根据文章分类动态选择）
+CATEGORY_HASHTAGS = {
+    "chengdu": "#Chengdu #SichuanFood #PandaLovers #ChinaTravel",
+    "beijing": "#Beijing #GreatWall #ForbiddenCity #ChinaTravel",
+    "greatwall": "#GreatWallOfChina #ChinaHistory #TravelChina #VisitChina",
+    "zhangjiajie": "#Zhangjiajie #AvatarMountains #HunanTravel #ChinaTravel",
+    "xian": "#Xian #TerracottaWarriors #AncientChina #ChinaTravel",
+    "shanghai": "#Shanghai #TheBund #ModernChina #ChinaTravel",
+    "hangzhou": "#Hangzhou #WestLake #ChineseGarden #ChinaTravel",
+    "guilin": "#Guilin #LiRiver #KarstLandscape #ChinaTravel",
+    "yunnan": "#Yunnan #Lijiang #RiceTerraces #ChinaTravel",
+    "sichuan": "#Sichuan #Hotpot #MountainTravel #ChinaTravel",
+    "food": "#ChineseFood #FoodieTravel #StreetFoodChina #ChinaTravel",
+    "accommodation": "#ChinaHotels #TravelTips #ChinaTravel #BudgetTravel",
+    "safety": "#TravelSafety #ChinaTravel #SafeTravel #TravelTips",
+    "transport": "#ChinaTrains #TravelChina #HighSpeedRail #ChinaTravel",
+    "visa": "#ChinaVisa #VisaFree #TravelTips #ChinaTravel",
+    "payment": "#Alipay #WeChatPay #ChinaTech #ChinaTravel",
+    "culture": "#ChineseCulture #CulturalTravel #ChinaTravel #DiscoverChina",
+    "budget": "#BudgetTravel #ChinaOnABudget #TravelTips #ChinaTravel",
+}
+
+DEFAULT_HASHTAGS = "#ChinaTravel #TravelChina #VisitChina #ChinaLife"
 
 # 配色方案：中国风
 COLOR_SCHEMES = [
@@ -70,6 +102,14 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
         "guilin": "Guilin karst mountains Li River landscape",
         "yunnan": "Yunnan rice terraces Lijiang ancient town",
         "sichuan": "Sichuan mountains panda bamboo forest",
+        "food": "Chinese food street market dim sum hotpot colorful dishes",
+        "accommodation": "China hotel room interior traditional courtyard boutique",
+        "safety": "China city street safe walking tourists crossing road",
+        "transport": "China high-speed train station modern bullet train",
+        "visa": "China passport visa stamp travel document airport",
+        "payment": "China mobile payment phone scanning QR code alipay wechat",
+        "culture": "Chinese temple traditional architecture red lanterns festival",
+        "budget": "China budget travel backpacker street market affordable",
     }
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
@@ -176,7 +216,6 @@ def get_article_info(md_path: Path) -> dict:
     body_text = content[fm_match.end():] if fm_match else content
     body_text = re.sub(r'[#>*_`\[\]\(\)]', '', body_text)
     body_text = re.sub(r'\s+', ' ', body_text).strip()
-    description = body_text[:300] if len(body_text) > 300 else body_text
 
     slug = frontmatter.get("slug", md_path.stem)
     canonical_url = frontmatter.get("canonicalURL", "")
@@ -188,12 +227,23 @@ def get_article_info(md_path: Path) -> dict:
     else:
         url = f"https://{SITE_DOMAIN}/posts/{slug}/"
     
+    # 优先使用 frontmatter 的 description/summary，其次截取正文
+    fm_desc = frontmatter.get("description", "") or frontmatter.get("summary", "")
+    if fm_desc and len(fm_desc) > 30:
+        description = fm_desc
+    else:
+        description = body_text[:300] if len(body_text) > 300 else body_text
+
     return {
         "title": frontmatter.get("title", md_path.stem.replace('-', ' ').title()),
         "description": description,
+        "summary": frontmatter.get("summary", ""),
         "slug": slug,
         "url": url,
         "content": content,
+        "geo": frontmatter.get("geo", ""),
+        "tags": frontmatter.get("tags", []),
+        "categories": frontmatter.get("categories", []),
     }
 
 
@@ -240,11 +290,14 @@ def extract_images_from_article(md_path: Path) -> list:
     return body_images + cover_images
 
 
-def generate_social_posts(article: dict, images: list) -> list:
+def generate_social_posts(article: dict, images: list, category: str = "general") -> list:
     """根据文章内容和配图生成多条不同的社媒帖子，适配 IG/Pinterest/X 不同风格"""
     title = article["title"]
     desc = article["description"]
     url = article["url"]
+
+    # 根据分类选择 hashtag
+    hashtags = CATEGORY_HASHTAGS.get(category, DEFAULT_HASHTAGS)
 
     posts = []
     used_images = set()
@@ -265,7 +318,7 @@ def generate_social_posts(article: dict, images: list) -> list:
     first_img = available_images[0]
     used_images.add(first_img["url"])
     posts.append({
-        "text": f"{title}\n\n{desc_snippet}\n\nRead the full guide: {url}\n\n#ChinaTravel #TravelChina #VisitChina #ChinaLife",
+        "text": f"{title}\n\n{desc_snippet}\n\nRead the full guide: {url}\n\n{hashtags}",
         "image": first_img["url"],
         "variant": "ig_main"
     })
@@ -280,7 +333,7 @@ def generate_social_posts(article: dict, images: list) -> list:
             else:
                 caption = f"More from {title[:50]}"
             posts.append({
-                "text": f"{caption}\n\nDiscover more in our latest guide: {url}\n\n#ChinaTravel #TravelTips #ChinaDestination",
+                "text": f"{caption}\n\nDiscover more in our latest guide: {url}\n\n{hashtags}",
                 "image": img["url"],
                 "variant": "pin_secondary"
             })
@@ -290,7 +343,7 @@ def generate_social_posts(article: dict, images: list) -> list:
     if len(posts) < 2 and available_images:
         first_img = available_images[0]
         posts.append({
-            "text": f"Travel inspiration: {desc[:120]}...\n\nFull article: {url}\n\n#ChinaTravel #TravelInspiration #Wanderlust",
+            "text": f"Travel inspiration: {desc[:120]}...\n\nFull article: {url}\n\n{hashtags}",
             "image": first_img["url"],
             "variant": "x_quote"
         })
@@ -503,7 +556,7 @@ def run():
     print(f"  提取到 {len(images)} 张图片: {', '.join([img['url'][-30:] for img in images])}")
 
     # 5. 生成多条不同内容的社媒帖子（当天最多2条，内容和配图不重复）
-    social_posts = generate_social_posts(latest_article, images)
+    social_posts = generate_social_posts(latest_article, images, category=category)
     print(f"  生成 {len(social_posts)} 条社媒帖子")
 
     results = []
