@@ -263,6 +263,16 @@
     margin-top: 0.5rem;
 }
 
+.card-cover-link {
+    display: block;
+    text-decoration: none;
+}
+
+.related-cover {
+    width: 100%;
+    min-height: 100px;
+}
+
 .read-more-link {
     font-size: 0.82rem;
     font-weight: 600;

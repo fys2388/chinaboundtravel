@@ -93,19 +93,44 @@
         </div>
     </div>
 
-    {{- /* ===== Related Posts (posts only) ===== */ -}}
+    {{- /* ===== Related Posts (posts only) — based on first shared tag ===== */ -}}
     {{- if eq .Type "posts" -}}
-    {{- $related := first 3 (where .Site.RegularPages "Type" "posts") -}}
+    {{- $currentSlug := .Slug -}}
+    {{- $related := slice -}}
+    {{- range first 1 .Params.tags -}}
+      {{- $tag := . -}}
+      {{- $candidates := where .Site.RegularPages "Type" "posts" -}}
+      {{- range $candidates -}}
+        {{- if and (ne .Slug $currentSlug) (in .Params.tags $tag) -}}
+          {{- $related = $related | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* Fallback: latest 3 posts if no tag match */ -}}
+    {{- if lt (len $related) 3 -}}
+      {{- $related = first 3 (after 1 (where .Site.RegularPages "Type" "posts")) -}}
+    {{- else -}}
+      {{- $related = first 3 $related -}}
+    {{- end -}}
     {{- if $related -}}
     <section class="related-posts">
         <h3>📌 More Travel Guides</h3>
         <div class="related-grid">
-            {{- range $related }}
+            {{- range $related -}}
             <a href="{{ .RelPermalink }}" class="related-card">
+                {{- with .Params.cover -}}
+                  {{- $coverImg := . -}}
+                  {{- if reflect.IsMap $coverImg -}}
+                    {{- $coverImg = $coverImg.image -}}
+                  {{- end -}}
+                  {{- if $coverImg -}}
+                  <div class="related-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:120px;border-radius:8px 8px 0 0;margin-bottom:0.5rem;"></div>
+                  {{- end -}}
+                {{- end -}}
                 <div class="related-meta">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</div>
                 <div class="related-title">{{ .Title }}</div>
             </a>
-            {{- end }}
+            {{- end -}}
         </div>
     </section>
     {{- end -}}

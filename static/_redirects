@@ -3,6 +3,15 @@ http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
 # 2) Date-prefixed post URLs -> slug-only URLs (social media links may contain date prefix)
+# --- July 2026 articles ---
+/posts/2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety/ /posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/ 301
+/posts/2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers/ /posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/ 301
+/posts/2026-07-11-accommodation-tips-guide/ /posts/accommodation-tips-guide/ 301
+/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ 301
+/posts/2026-07-09-navigating-china-with-confidence-a-californians-guide-to-travel-safety/ /posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/ 301
+/posts/2026-07-08-travel-safety-guide/ /posts/travel-safety-guide/ 301
+/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ 301
+/posts/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ 301
 /posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ 301
 /posts/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ /posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ 301
 /posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/ /posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/ 301
@@ -10,6 +19,8 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ /posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ 301
 /posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/ /posts/chinabound-travel-guide-2026-07-monthly-update/ 301
 /posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ /posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ 301
+
+# --- June 2026 articles ---
 /posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ 301
 /posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips/ /posts/xian-terracotta-army-history-discovery-and-insider-tips/ 301
 /posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ /posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ 301
@@ -18,6 +29,20 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ /posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ 301
 /posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/ /posts/ultimate-guide-to-china-visa-for-tourists/ 301
 
+# --- May 2026 articles (old filenames with date prefix accessed via external links) ---
+/posts/2026-05-29-paypal-alipay-wechat-pay-qr-code-support/ /posts/paypal-alipay-wechat-pay-qr-code-support/ 301
+/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/ /posts/chinese-food-delivery-meituan-eleme-guide/ 301
+/posts/2026-05-27-how-to-survive-chinese-train-station/ /posts/how-to-survive-chinese-train-station/ 301
+/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ /posts/is-china-safe-for-tourists-2026-honest-assessment/ 301
+/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/ /posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ 301
+/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ /posts/china-high-speed-rail-how-to-book-tickets/ 301
+/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/ /posts/shanghai-bund-french-concession-2-day-guide/ 301
+/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/ /posts/hangzhou-west-lake-tea-culture-g20-guide/ 301
+/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/ /posts/how-to-use-wechat-pay-as-a-foreigner/ 301
+/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ /posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ 301
+
 # 3) Orphaned social media posts -> nearest existing article
-/posts/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ 301
 /posts/2026-07-03-144-hour-visa-free-transit-how-to-use-it-and-which-cities-you-can-visit/ /posts/144-hour-visa-free-transit-guide/ 301
+
+# 4) Catch-all for any future date-prefixed URLs not yet listed
+/posts/2026-* /posts/:splat 301

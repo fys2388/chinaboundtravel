@@ -14,6 +14,15 @@
                     {{- range $latest }}
                     <article class="post-card">
                         <div class="card-content">
+                            {{- with .Params.cover -}}
+                              {{- $coverImg := . -}}
+                              {{- if reflect.IsMap $coverImg -}}
+                                {{- $coverImg = $coverImg.image -}}
+                              {{- end -}}
+                              {{- if $coverImg -}}
+                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              {{- end -}}
+                            {{- end -}}
                             <div class="card-meta">
                                 <span class="category-badge">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</span>
                                 <span>·</span>
@@ -40,6 +49,15 @@
             {{- range first 3 (after 3 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
                     <article class="post-card">
                         <div class="card-content">
+                            {{- with .Params.cover -}}
+                              {{- $coverImg := . -}}
+                              {{- if reflect.IsMap $coverImg -}}
+                                {{- $coverImg = $coverImg.image -}}
+                              {{- end -}}
+                              {{- if $coverImg -}}
+                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              {{- end -}}
+                            {{- end -}}
                             <div class="card-meta">
                                 {{- range first 1 .Params.categories -}}
                                 <span class="category-badge">{{ . }}</span>
@@ -74,6 +92,15 @@
                     {{- range first 3 (after 6 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
                     <article class="post-card">
                         <div class="card-content">
+                            {{- with .Params.cover -}}
+                              {{- $coverImg := . -}}
+                              {{- if reflect.IsMap $coverImg -}}
+                                {{- $coverImg = $coverImg.image -}}
+                              {{- end -}}
+                              {{- if $coverImg -}}
+                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              {{- end -}}
+                            {{- end -}}
                             <div class="card-meta">
                                 {{- range first 1 .Params.categories -}}
                                 <span class="category-badge">{{ . }}</span>
