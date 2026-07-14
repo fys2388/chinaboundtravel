@@ -21,7 +21,7 @@ buildExpired = false
 
   rss = true
 
-  sitemapExclude = ["_draft", "member-month", "member-year", "cancel", "success", "search", "static-package"]
+  sitemapExclude = ["_draft", "member-month", "member-year", "cancel", "success", "search", "static-package", "tags", "ebook"]
 
   [params.search]
     enable = true

@@ -5,11 +5,20 @@
 {{- range .Data.Pages -}}
 {{- $pagePath := .RelPermalink -}}
 {{- $shouldExclude := false -}}
+{{- /* Exclude paths from sitemapExclude config */ -}}
 {{- range $excludePaths -}}
 {{- $excludePath := . -}}
 {{- if or (strings.HasPrefix $pagePath (printf "/%s/" $excludePath)) (strings.HasPrefix $pagePath (printf "/%s" $excludePath)) -}}
 {{- $shouldExclude = true -}}
 {{- end -}}
+{{- end -}}
+{{- /* Exclude tag pages — they are low-value taxonomy pages that dilute crawl budget */ -}}
+{{- if strings.HasPrefix $pagePath "/tags/" -}}
+{{- $shouldExclude = true -}}
+{{- end -}}
+{{- /* Exclude date-prefixed post URLs (legacy duplicates) */ -}}
+{{- if and (strings.HasPrefix $pagePath "/posts/") (strings.Contains (path.Base $pagePath) "2026-") -}}
+{{- $shouldExclude = true -}}
 {{- end -}}
 {{- if and (not $shouldExclude) (not .Draft) -}}
 <url>
@@ -23,7 +32,7 @@
   {{- else if .IsPage }}
   <priority>0.8</priority>
   <changefreq>weekly</changefreq>
-  {{- else if or (strings.HasPrefix $pagePath "/posts/") (strings.HasPrefix $pagePath "/tags/") }}
+  {{- else if strings.HasPrefix $pagePath "/posts/" }}
   <priority>0.7</priority>
   <changefreq>weekly</changefreq>
   {{- else }}
