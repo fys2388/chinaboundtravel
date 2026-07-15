@@ -16,10 +16,6 @@
 {{- if strings.HasPrefix $pagePath "/tags/" -}}
 {{- $shouldExclude = true -}}
 {{- end -}}
-{{- /* Exclude date-prefixed post URLs (legacy duplicates) */ -}}
-{{- if and (strings.HasPrefix $pagePath "/posts/") (strings.Contains (path.Base $pagePath) "2026-") -}}
-{{- $shouldExclude = true -}}
-{{- end -}}
 {{- if and (not $shouldExclude) (not .Draft) -}}
 <url>
   <loc>{{- $baseURL }}{{- replace .RelPermalink "//" "/" | safeHTML -}}</loc>
