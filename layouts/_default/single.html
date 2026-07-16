@@ -97,7 +97,8 @@
     {{- if eq .Type "posts" -}}
     {{- $currentSlug := .Slug -}}
     {{- $related := slice -}}
-    {{- range first 1 .Params.tags -}}
+    {{- with .Params.tags -}}
+    {{- range first 1 . -}}
       {{- $tag := . -}}
       {{- $candidates := where $.Site.RegularPages "Type" "posts" -}}
       {{- range $candidates -}}
@@ -105,6 +106,7 @@
           {{- $related = $related | append . -}}
         {{- end -}}
       {{- end -}}
+    {{- end -}}
     {{- end -}}
     {{- /* Fallback: latest 3 posts if no tag match */ -}}
     {{- if lt (len $related) 3 -}}
