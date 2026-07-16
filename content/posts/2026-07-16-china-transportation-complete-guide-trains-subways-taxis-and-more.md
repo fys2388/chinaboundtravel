@@ -5,6 +5,13 @@ date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"
 slug = "china-transportation-complete-guide-trains-subways-taxis-and-more"
+aliases = [
+  "/posts/transportation-guide-guide/",
+  "/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/",
+  "/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+  "/posts/china-high-speed-rail-how-to-book-tickets/",
+  "/posts/how-to-survive-chinese-train-station/"
+]
 categories = ["Practical Travel Tips"]
 tags = ["china transportation", "high-speed train China", "china travel tips", "12306", "didi", "china subway", "china travel guide"]
 [cover]

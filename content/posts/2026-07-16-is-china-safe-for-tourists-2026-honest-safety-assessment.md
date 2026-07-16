@@ -5,6 +5,11 @@ date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"
 slug = "is-china-safe-for-tourists-2026-honest-safety-assessment"
+aliases = [
+  "/posts/travel-safety-guide/",
+  "/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/",
+  "/posts/is-china-safe-for-tourists-2026-honest-assessment/"
+]
 categories = ["Practical Travel Tips"]
 tags = ["china safety", "is china safe", "china travel safety", "china scams", "china travel tips", "safety guide China"]
 [cover]
