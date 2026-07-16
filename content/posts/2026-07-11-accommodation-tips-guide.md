@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options real tips from someone living in China since 2016."
-description: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options real tips from someone living in China since 2016."
+description: "China accommodation tips for 2026: best neighborhoods to stay, hotel recommendations, budget hostels vs boutique stays, and booking platforms. Real advice from an expat living in China since 2016."
 canonicalURL: "https://https://chinaboundtravel.com/posts/accommodation-tips-guide/"
 ShowToc: "true"
 TocOpen: "false"

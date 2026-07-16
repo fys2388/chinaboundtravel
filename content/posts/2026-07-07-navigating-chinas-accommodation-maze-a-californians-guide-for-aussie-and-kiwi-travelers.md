@@ -15,7 +15,7 @@ geo: "AU"
 draft: false
 audit_status: "pass2"
 summary: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
-description: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
+description: "Where to stay in China in 2026: best neighborhoods, hotel recommendations, and budget options for Aussie and Kiwi travelers. Practical tips from a US expat based in Chengdu."
 canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/"
 ShowToc: "true"
 TocOpen: "false"

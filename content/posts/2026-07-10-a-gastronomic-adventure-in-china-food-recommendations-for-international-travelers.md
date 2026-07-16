@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
-description: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
+description: "Must-try Chinese dishes and restaurant recommendations for international travelers in 2026. Authentic picks from a US expat with 10+ years eating across China's provinces."
 canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
 ShowToc: "true"
 TocOpen: "false"
