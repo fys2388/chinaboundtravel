@@ -1,0 +1,23 @@
+{{- /* Twitter Card */ -}}
+<meta name="twitter:card" content="{{ if .Params.cover }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ .Title }}">
+{{- with .Description }}
+<meta name="twitter:description" content="{{ . }}">
+{{- else if .IsPage }}
+<meta name="twitter:description" content="{{ .Summary | plainify | truncate 160 }}">
+{{- end }}
+{{- with .Params.cover }}
+  {{- $coverImg := . }}
+  {{- if reflect.IsMap $coverImg }}
+    {{- $coverImg = $coverImg.image }}
+  {{- end }}
+  {{- if $coverImg }}
+<meta name="twitter:image" content="{{ $coverImg | absURL }}">
+  {{- end }}
+{{- end }}
+{{- with site.Params.SocialParams }}
+  {{- with .twitter }}
+<meta name="twitter:site" content="@{{ . }}">
+  {{- end }}
+{{- end }}

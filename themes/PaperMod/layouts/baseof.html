@@ -22,10 +22,13 @@
 <body id="top">
 {{- end }}
     {{ partialCached "header.html" . .Page -}}
-    <main class="main">
+    <main class="main" role="main">
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+    {{- partial "cookie-consent.html" . -}}
+    {{- end }}
 </body>
 
 </html>
