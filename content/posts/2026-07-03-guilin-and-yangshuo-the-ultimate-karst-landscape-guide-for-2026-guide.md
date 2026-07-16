@@ -115,7 +115,7 @@ Guilin cuisine is distinct from the rest of Guangxi — heavier on rice noodles,
 | Shenzhen → Guilin | 3 hours | ¥230 (~€29) |
 | Chengdu → Guilin | 5.5 hours | ¥400 (~€50) |
 
-Book on 12306.cn or via Trip.com. For detailed instructions on navigating China's high-speed rail system — choosing seat classes, finding your platform, reading ticket types — see our [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/).
+Book on 12306.cn or via Trip.com. For detailed instructions on navigating China's high-speed rail system — choosing seat classes, finding your platform, reading ticket types — see our [China High-Speed Train Survival Guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/).
 
 **Guilin to Yangshuo:** Two practical options:
 - **Bus:** Guilin Railway Station → Yangshuo, 1.5 hours, ¥30 (~€4). Buses depart every 20 minutes from the station's bus terminal.

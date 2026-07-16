@@ -79,7 +79,7 @@ Prices updated from the official Zhangjiajie ticketing system. They change seaso
 
 **By plane:** Zhangjiajie Hehua Airport (DYG) has direct flights from Beijing, Shanghai, Chengdu, Guangzhou, and Xi'an. If you're coming from the US, you'll likely connect through one of these. We flew Chengdu → Zhangjiajie for about ¥600 (~$85) one way.
 
-**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option. For tips on booking train tickets in China, check out our [high-speed rail guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/).
+**By train:** The Zhangjiajie West Railway Station connects to Changsha (2.5 hours), and Changsha has bullet trains from most major Chinese cities. This is often the cheaper option. For tips on booking train tickets in China, check out our [high-speed rail guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/).
 
 **From airport to town:** The airport is only 5 km from the city center. A taxi costs about ¥20–30 (~$3–4). There's also a bus (¥4) but it only runs a few times per day.
 

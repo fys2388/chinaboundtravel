@@ -43,7 +43,7 @@ WeChat Pay is not just a payment app -- it is practically the economy in China. 
 - **Street food and night markets:** At the [street food stalls of Chengdu](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/), vendors do not carry change for large bills. Scanning a QR code for a 5 RMB skewer is the norm.
 - **Supermarkets and convenience stores:** Every 7-Eleven, FamilyMart, and local grocery store expects you to scan and pay in seconds.
 - **Temples and cultural sites:** Even temple donation boxes and entry fees at small village shrines now display WeChat Pay codes.
-- **High-speed trains:** When you are taking the [China high-speed rail](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) between cities, you can buy tickets through WeChat's built-in Mini Programs.
+- **High-speed trains:** When you are taking the [China high-speed rail](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) between cities, you can buy tickets through WeChat's built-in Mini Programs.
 
 The bottom line: if you only carry cash, you are missing out on convenience and sometimes even getting served. I once watched a tourist in a small village in Sichuan, not far from the [hotpot restaurants of Chengdu](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/), try to buy handmade crafts with cash. The seller had to borrow change from three neighboring stalls. Meanwhile, I scanned the QR code, paid in two seconds, and got a friendly smile -- maybe even a small discount for being "one of them."
 

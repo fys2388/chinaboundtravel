@@ -48,7 +48,7 @@ The high-speed rail network is the most practical way to travel between Yunnan's
 - **Dali → Lijiang**: 1.5 hours, ¥80 (~€10). Convenient and frequent.
 - **Kunming → Lijiang**: 3.5 hours direct, ¥220 (~€28). Alternatively, break the trip in Dali.
 
-If you haven't used China's high-speed rail system before, read our [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) for booking tips, seat classes, and what to expect.
+If you haven't used China's high-speed rail system before, read our [China High-Speed Train Survival Guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) for booking tips, seat classes, and what to expect.
 
 ### Local Transport
 
