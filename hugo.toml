@@ -4,6 +4,7 @@ title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Interne
 theme = 'PaperMod'
 defaultContentLanguage = 'en'
 enableInlineShortcodes = true
+disableHugoGeneratorInject = true
 
 buildDrafts = false
 buildFuture = false
@@ -18,7 +19,7 @@ ignoreFiles = ["/\\.archived/"]
   title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
   description = 'Practical travel guide for foreigners visiting China. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. Written by an American married into a Chengdu family.'
   author = 'Joran'
-  images = ["https://www.chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-stalls.jpg"]
+  images = ["/images/og-default.jpg"]
 
   rss = true
 

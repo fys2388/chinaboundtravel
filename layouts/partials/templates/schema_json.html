@@ -73,9 +73,15 @@
   "wordCount": {{ .WordCount }},
   {{- end }}
   "inLanguage": "{{- .Language.Lang | default "en-us" | safeJS -}}",
-  {{- if .Params.cover.image -}}
-  "image": "{{- .Params.cover.image | absURL | safeJS -}}",
-  {{- end -}}
+  {{- with .Params.cover }}
+    {{- $coverImg := . }}
+    {{- if reflect.IsMap $coverImg }}
+      {{- $coverImg = $coverImg.image }}
+    {{- end }}
+    {{- if $coverImg }}
+  "image": "{{- $coverImg | absURL | safeJS -}}",
+    {{- end }}
+  {{- end }}
   {{- if .PublishDate }}
   "datePublished": "{{- .PublishDate.Format "2006-01-02T15:04:05Z" | safeJS -}}",
   {{- end }}
