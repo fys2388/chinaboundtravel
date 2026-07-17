@@ -2,8 +2,8 @@
 <meta name="twitter:card" content="{{ if .Params.cover }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
 <meta name="twitter:title" content="{{ .Title }}">
-{{- with .Description }}
-<meta name="twitter:description" content="{{ . }}">
+{{- if .Description }}
+<meta name="twitter:description" content="{{ .Description }}">
 {{- else if .IsPage }}
 <meta name="twitter:description" content="{{ .Summary | plainify | truncate 160 }}">
 {{- end }}
