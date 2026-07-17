@@ -2,8 +2,8 @@
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ .Title }}">
-{{- with .Description }}
-<meta property="og:description" content="{{ . }}">
+{{- if .Description }}
+<meta property="og:description" content="{{ .Description }}">
 {{- else if .IsPage }}
 <meta property="og:description" content="{{ .Summary | plainify | truncate 160 }}">
 {{- end }}
