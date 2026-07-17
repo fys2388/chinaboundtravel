@@ -25,6 +25,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -37,13 +42,11 @@ jobs:
           hugo --gc --minify 2>&1
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: chinaboundtravel
-          directory: public
-          branch: main
+          command: pages deploy public --project-name=chinaboundtravel --branch=main
 
       - name: Post to Social Media via Worker
         run: |
