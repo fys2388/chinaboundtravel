@@ -92,3 +92,4 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"purge_everything":true}' \
             --fail --show-error --silent || echo "Cache purge skipped (CLOUDFLARE_ZONE_ID may not be set)"
+            echo "Done."
