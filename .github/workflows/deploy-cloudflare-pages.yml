@@ -44,6 +44,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.104.0"
           command: pages deploy public --project-name=chinaboundtravel
 
       - name: Post to Social Media via Worker
