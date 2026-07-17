@@ -39,14 +39,42 @@ jobs:
           hugo version
           hugo --gc --minify 2>&1
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: "3.104.0"
-          command: pages deploy public --project-name=chinaboundtravel --verbose
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Verify Cloudflare API Token
+        run: |
+          echo "=== Verifying CLOUDFLARE_API_TOKEN ==="
+          RESPONSE=$(curl -s -w "\n%{http_code}" "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}")
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "ERROR: API Token verification failed!"
+            exit 1
+          fi
+          echo "API Token is valid"
+
+      - name: Create deployment ZIP
+        run: |
+          cd public && zip -r ../deploy.zip . && cd ..
+
+      - name: Deploy to Cloudflare Pages via Direct Upload API
+        run: |
+          echo "=== Deploying to Cloudflare Pages ==="
+          DEPLOY_RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/chinaboundtravel/deployments" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -F "deployments[manifest]={\"manifest_entries\":[],\"branch\":\"main\"};type=application/json" \
+            -F "deployments[content]=@deploy.zip;type=application/zip")
+          HTTP_CODE=$(echo "$DEPLOY_RESPONSE" | tail -n1)
+          BODY=$(echo "$DEPLOY_RESPONSE" | sed '$d')
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "ERROR: Deployment failed!"
+            exit 1
+          fi
+          echo "Deployment successful!"
 
       - name: Post to Social Media via Worker
         run: |
