@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. booking tips, seat classes & rookie mistakes to avoid from on-the-ground experience in China."
 description: "China transportation: complete guide 2026. booking tips, seat classes & rookie mistakes to avoid from on-the-ground experience in China."
-canonicalURL: "https://https://chinaboundtravel.com/posts/navigating-chinas-transportation-maze-a-californians-guide/"
+canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-transportation-maze-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

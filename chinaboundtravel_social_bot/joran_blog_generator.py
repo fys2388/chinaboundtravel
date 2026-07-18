@@ -20,7 +20,7 @@ MANIFEST_PATH = BASE_DIR / "manifest.json"
 DRAFT_DIR = BASE_DIR / "content" / "_draft"
 POSTS_DIR = BASE_DIR / "content" / "posts"
 DRAFTS_DIR = BASE_DIR / "content" / "content" / "drafts"
-SITE_DOMAIN = "https://chinaboundtravel.com"
+SITE_DOMAIN = "chinaboundtravel.com"
 
 # ========== 封面图生成相关常量
 COVER_BASE = BASE_DIR / "static" / "img" / "china-dest"
