@@ -36,7 +36,6 @@ jobs:
           echo "Account ID: ${CF_ACCOUNT:0:6}...(${#CF_ACCOUNT} chars)"
           echo "Token prefix: ${CF_TOKEN:0:10}...(${#CF_TOKEN} chars)"
 
-          # Verify token validity
           echo ""
           echo "=== Verifying token ==="
           TOKEN_CHECK=$(curl -s "https://api.cloudflare.com/client/v4/user/tokens/verify" \
@@ -44,18 +43,35 @@ jobs:
           echo "$TOKEN_CHECK" | python3 -m json.tool 2>/dev/null || echo "$TOKEN_CHECK"
 
           echo ""
-          echo "=== Deploying to Cloudflare Pages ==="
+          echo "=== Preparing deployment ==="
+          PROJECT_NAME="chinaboundtravel"
+
+          # Generate manifest.json from public/ directory
           cd public
+          python3 -c "
+          import json, hashlib, os
+          manifest = {}
+          for root, dirs, files in os.walk('.'):
+              for f in files:
+                  fp = os.path.join(root, f).replace('\\\\', '/').lstrip('./')
+                  with open(os.path.join(root, f), 'rb') as fh:
+                      manifest[fp] = hashlib.sha256(fh.read()).hexdigest()
+          with open('../manifest.json', 'w') as out:
+              json.dump(manifest, out)
+          print(f'Manifest: {len(manifest)} files')
+          "
+
           zip -r ../site.zip . -q
           echo "Site zip size: $(du -h ../site.zip | cut -f1)"
           cd ..
 
-          PROJECT_NAME="chinaboundtravel"
-
-          echo "Uploading to: accounts/${CF_ACCOUNT}/pages/projects/${PROJECT_NAME}/deployments"
+          echo ""
+          echo "=== Deploying to Cloudflare Pages ==="
+          echo "Uploading to: accounts/${CF_ACCOUNT:0:6}.../pages/projects/${PROJECT_NAME}/deployments"
           RESPONSE=$(curl -s -w "\n%{http_code}" \
             -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/${PROJECT_NAME}/deployments" \
             -H "Authorization: Bearer ${CF_TOKEN}" \
+            -F "manifest=@manifest.json;type=application/json" \
             -F "site=@site.zip" \
             --max-time 300)
 
@@ -69,7 +85,6 @@ jobs:
             echo "✅ Deployment successful!"
           else
             echo "❌ Deployment failed with HTTP $HTTP_CODE"
-            # Try to decode error
             ERROR_MSG=$(echo "$BODY" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('errors',[{}])[0].get('message','unknown'))" 2>/dev/null || echo "")
             if [ -n "$ERROR_MSG" ]; then
               echo "Error detail: $ERROR_MSG"
