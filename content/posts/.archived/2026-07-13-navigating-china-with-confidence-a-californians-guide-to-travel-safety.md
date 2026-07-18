@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Is China safe for travelers in 2026? honest assessment, crime rates & common scams to avoid from a US expat based in Chengdu."
 description: "Is China safe for travelers in 2026? honest assessment, crime rates & common scams to avoid from a US expat based in Chengdu."
-canonicalURL: "https://https://chinaboundtravel.com/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/"
+canonicalURL: "https://chinaboundtravel.com/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

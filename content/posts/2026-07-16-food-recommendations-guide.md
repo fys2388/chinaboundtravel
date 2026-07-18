@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China food guide: top local snacks, where to find them & what to avoid. from on-the-ground experience in China, practical guide for foreign travelers."
 description: "China food guide: top local snacks, where to find them & what to avoid. from on-the-ground experience in China, practical guide for foreign travelers."
-canonicalURL: "https://https://chinaboundtravel.com/posts/food-recommendations-guide/"
+canonicalURL: "https://chinaboundtravel.com/posts/food-recommendations-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

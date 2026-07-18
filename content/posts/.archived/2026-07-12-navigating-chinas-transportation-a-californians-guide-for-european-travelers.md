@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate like a local, tested strategies from on-the-ground experience in China."
 description: "China transportation: complete guide 2026. how to navigate like a local, tested strategies from on-the-ground experience in China."
-canonicalURL: "https://https://chinaboundtravel.com/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/"
+canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
