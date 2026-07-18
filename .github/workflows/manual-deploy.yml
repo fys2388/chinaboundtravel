@@ -1,0 +1,80 @@
+name: Manual Deploy to Cloudflare Pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      - name: Build site
+        run: hugo --gc --minify
+
+      - name: Verify build output
+        run: |
+          echo "=== Build output ==="
+          ls -la public/ | head -20
+          echo ""
+          echo "=== Latest post ==="
+          ls -la public/posts/ | head -10
+
+      - name: Deploy to Cloudflare Pages via Direct Upload
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "=== Deploying to Cloudflare Pages ==="
+          cd public
+          zip -r ../site.zip . -q
+          cd ..
+
+          # Get project name
+          PROJECT_NAME="chinaboundtravel"
+
+          echo "Uploading site.zip to Cloudflare Pages..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/deployments" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/multipart/form-data" \
+            -F "site=@site.zip" \
+            --max-time 300)
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY" | python3 -m json.tool 2>/dev/null || echo "$BODY"
+
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ Deployment successful!"
+          else
+            echo "❌ Deployment failed with HTTP $HTTP_CODE"
+            exit 1
+          fi
+
+      - name: Purge CDN Cache
+        if: always()
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          ZONE_ID="${{ vars.CLOUDFLARE_ZONE_ID }}"
+          if [ -n "$ZONE_ID" ]; then
+            echo "=== Purging CDN cache ==="
+            curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/purge_cache" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -d '{"purge_everything":true}' | python3 -m json.tool 2>/dev/null || echo "Cache purge skipped"
+          else
+            echo "No ZONE_ID set, skipping cache purge"
+          fi
