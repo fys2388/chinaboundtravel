@@ -26,71 +26,16 @@ jobs:
           echo ""
           echo "=== Latest post ==="
           ls -la public/posts/ | head -10
-
-      - name: Deploy to Cloudflare Pages via Direct Upload
-        env:
-          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CF_ACCOUNT: ${{ vars.CLOUDFLARE_ACCOUNT_ID != '' && vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID || '032a874de4e89298d9f492590b08ecba' }}
-        run: |
-          echo "=== Verifying credentials ==="
-          echo "Account ID: ${CF_ACCOUNT:0:6}...(${#CF_ACCOUNT} chars)"
-          echo "Token prefix: ${CF_TOKEN:0:10}...(${#CF_TOKEN} chars)"
-
           echo ""
-          echo "=== Verifying token ==="
-          TOKEN_CHECK=$(curl -s "https://api.cloudflare.com/client/v4/user/tokens/verify" \
-            -H "Authorization: Bearer ${CF_TOKEN}")
-          echo "$TOKEN_CHECK" | python3 -m json.tool 2>/dev/null || echo "$TOKEN_CHECK"
+          TOTAL=$(find public -type f | wc -l)
+          echo "Total files in public/: $TOTAL"
 
-          echo ""
-          echo "=== Preparing deployment ==="
-          PROJECT_NAME="chinaboundtravel"
-
-          # Generate manifest.json from public/ directory
-          cd public
-          python3 -c "
-          import json, hashlib, os
-          manifest = {}
-          for root, dirs, files in os.walk('.'):
-              for f in files:
-                  fp = os.path.join(root, f).replace('\\\\', '/').lstrip('./')
-                  with open(os.path.join(root, f), 'rb') as fh:
-                      manifest[fp] = hashlib.sha256(fh.read()).hexdigest()
-          with open('../manifest.json', 'w') as out:
-              json.dump(manifest, out)
-          print(f'Manifest: {len(manifest)} files')
-          "
-
-          zip -r ../site.zip . -q
-          echo "Site zip size: $(du -h ../site.zip | cut -f1)"
-          cd ..
-
-          echo ""
-          echo "=== Deploying to Cloudflare Pages ==="
-          echo "Uploading to: accounts/${CF_ACCOUNT:0:6}.../pages/projects/${PROJECT_NAME}/deployments"
-          RESPONSE=$(curl -s -w "\n%{http_code}" \
-            -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/${PROJECT_NAME}/deployments" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -F "manifest=@manifest.json;type=application/json" \
-            -F "site=@site.zip" \
-            --max-time 300)
-
-          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
-          BODY=$(echo "$RESPONSE" | head -n -1)
-
-          echo "HTTP Status: $HTTP_CODE"
-          echo "Response: $BODY" | python3 -m json.tool 2>/dev/null || echo "$BODY"
-
-          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
-            echo "✅ Deployment successful!"
-          else
-            echo "❌ Deployment failed with HTTP $HTTP_CODE"
-            ERROR_MSG=$(echo "$BODY" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('errors',[{}])[0].get('message','unknown'))" 2>/dev/null || echo "")
-            if [ -n "$ERROR_MSG" ]; then
-              echo "Error detail: $ERROR_MSG"
-            fi
-            exit 1
-          fi
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID || '032a874de4e89298d9f492590b08ecba' }}
+          command: pages deploy public --project-name=chinaboundtravel
 
       - name: Purge CDN Cache
         if: always()
