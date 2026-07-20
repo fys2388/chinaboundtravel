@@ -17,6 +17,8 @@ jobs:
           extended: true
 
       - name: Build site
+        env:
+          HUGO_ENV: production
         run: hugo --gc --minify
 
       - name: Verify build output

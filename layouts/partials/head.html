@@ -1,19 +1,20 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{- $noIndexPaths := site.Params.sitemapExclude | default slice }}
-{{- $pagePath := .RelPermalink }}
-{{- $isNoIndexPath := false }}
-{{- range $noIndexPaths }}
-{{- $excludePath := . }}
-{{- if or (strings.HasPrefix $pagePath (printf "/%s/" $excludePath)) (strings.HasPrefix $pagePath (printf "/%s" $excludePath)) }}
-{{- $isNoIndexPath = true }}
-{{- end }}
-{{- end }}
-{{- if and (or hugo.IsProduction (eq site.Params.env "production")) (not .Params.robotsNoIndex) (not $isNoIndexPath) }}
-<meta name="robots" content="index, follow">
+{{- $noIndex := false }}
+{{- if .Params.robotsNoIndex }}
+  {{- $noIndex = true }}
 {{- else }}
-<meta name="robots" content="noindex, nofollow">
+  {{- $noIndexPaths := site.Params.sitemapExclude | default slice }}
+  {{- $pagePath := .RelPermalink }}
+  {{- range $noIndexPaths }}
+    {{- if or (strings.HasPrefix $pagePath (printf "/%s/" .)) (eq $pagePath (printf "/%s/" .)) }}
+      {{- $noIndex = true }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if not $noIndex }}
+<meta name="robots" content="index, follow">
 {{- end }}
 
 {{- /* Title */}}
