@@ -1,3 +1,4 @@
+# Sitemap optimized: tag pages excluded from sitemap via custom template
 baseURL = 'https://www.chinaboundtravel.com/'
 languageCode = 'en-us'
 title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
