@@ -28,7 +28,7 @@ weight: "1"
 
 ## Why Sichuan Hotpot Is More Than Just a Meal
 
-Hey there, fellow travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 10 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. If you're also a foodie planning a trip to Chengdu, don't miss our [Chinese street food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) -- it covers the night markets and street stalls that every first-timer should experience. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
+Hey there, fellow travelers! Are you ready to embark on a spicy adventure in the heart of China? Well, you've come to the right place! As an American who has spent over 5 years living in Chengdu, I've become somewhat of an expert on all things Sichuan, especially when it comes to the famous Sichuan hotpot. If you're also a foodie planning a trip to Chengdu, don't miss our [Chinese street food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) -- it covers the night markets and street stalls that every first-timer should experience. In this blog post, I'll be sharing with you the history, best restaurants, and cultural significance of this delicious dish. So, grab your chopsticks and get ready to drool!
 
 ![Chengdu street with Sichuan hotpot restaurant sign and steam rising from the entrance](/img/china-dest/chengdu/chengdu-hotpot-street.jpg)
 

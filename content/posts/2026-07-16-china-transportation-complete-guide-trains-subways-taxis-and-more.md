@@ -25,7 +25,7 @@ TocOpen = false
 
 {{< content-timestamp >}}
 
-I remember my first attempt to buy a train ticket in China. I stood at the 12306 website, staring at a wall of Chinese characters, completely lost. Ten years later, I book Chengdu-to-Beijing tickets in under 90 seconds while eating breakfast. China's transportation system is the most impressive in the world once you know how it works -- and in this guide, I will show you exactly how.
+I remember my first attempt to buy a train ticket in China. I stood at the 12306 website, staring at a wall of Chinese characters, completely lost. Five years later, I book Chengdu-to-Beijing tickets in under 90 seconds while eating breakfast. China's transportation system is the most impressive in the world once you know how it works -- and in this guide, I will show you exactly how.
 
 ---
 
@@ -213,7 +213,7 @@ For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunmin
 
 ## Final Tips Before You Go
 
-After a decade of living in China, here are the principles that matter most:
+After five years of living in China, here are the principles that matter most:
 
 1. **Set up WeChat Pay and Alipay before you arrive**. You will use them for subway gates, Didi, and train tickets. Our [WeChat Pay guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) covers the full setup.
 2. **Download offline maps**. Google Maps works in China with a VPN, but Baidu Maps has better transit routing. Download your destination city offline in both apps.

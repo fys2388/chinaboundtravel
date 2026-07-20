@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "The essential China food guide for European travelers — from Sichuan hotpot to Cantonese dim sum, real restaurant picks, ordering hacks, and what surprised a Californian the most about Chinese cuisine."
-description: "China food guide for European travelers: discover 8 regional cuisines, must-try dishes, real restaurant recommendations, ordering tips, and what surprised an expat most after 10+ years in China."
+description: "China food guide for European travelers: discover 8 regional cuisines, must-try dishes, real restaurant recommendations, ordering tips, and what surprised an expat most after 5 years in China."
 canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"
@@ -26,7 +26,7 @@ cover:
 
 ## A Gastronomic Adventure in China: A Foodie's Guide for European Travelers
 
-If you're flying from Europe to China, you're probably expecting great food — but most travelers have no idea just how *diverse* Chinese cuisine actually is. After 10+ years living in Chengdu (and being married to a local whose family treats every meal like a competitive sport), I've eaten my way across almost every province.
+If you're flying from Europe to China, you're probably expecting great food — but most travelers have no idea just how *diverse* Chinese cuisine actually is. After 5 years living in Chengdu (and being married to a local whose family treats every meal like a competitive sport), I've eaten my way across almost every province.
 
 **Here's the thing most Europeans don't realize:** "Chinese food" isn't one cuisine — it's eight major regional traditions, each radically different from the next. What you've eaten at your local takeaway back in London or Berlin barely scratches the surface.
 
@@ -204,7 +204,7 @@ One of the biggest fears European travelers have is ordering food without knowin
 
 ## Food Safety Tips for European Travelers
 
-You've probably heard horror stories. Here's the honest truth after a decade of eating everything in sight:
+You've probably heard horror stories. Here's the honest truth after five years of eating everything in sight:
 
 - **Street food is generally safe.** High turnover means fresh ingredients. If a stall has a long queue of locals, it's safe. If food has been sitting out, skip it.
 - **Drink bottled or boiled water.** Tap water in China is not potable. Every restaurant serves boiled water or tea for free.

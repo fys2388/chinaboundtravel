@@ -15,8 +15,8 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass2"
-summary: "China food guide: top local snacks, where to find them & what to avoid. by an American expat with 10 years in China, practical guide for foreign travelers."
-description: "China food guide: top local snacks, where to find them & what to avoid. by an American expat with 10 years in China, practical guide for foreign travelers."
+summary: "China food guide: top local snacks, where to find them & what to avoid. by an American expat with 5 years in China, practical guide for foreign travelers."
+description: "China food guide: top local snacks, where to find them & what to avoid. by an American expat with 5 years in China, practical guide for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/"
 ShowToc: "true"
 TocOpen: "false"

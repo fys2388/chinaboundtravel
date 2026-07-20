@@ -19,7 +19,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Beyond the crowded Badaling section lies the real Great Wall — a 2,000-year story of military strategy, human sacrifice, and cultural significance. Discover the hidden history most tourists never see."
-description: "Explore the Great Wall beyond the tourist trail. Uncover its military history, the stories of the laborers who built it, and the cultural myths that surround this iconic structure. Written by an American who's spent a decade in China."
+description: "Explore the Great Wall beyond the tourist trail. Uncover its military history, the stories of the laborers who built it, and the cultural myths that surround this iconic structure. Written by an American who's spent five years in China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -28,12 +28,12 @@ weight: "1"
 
 **The History and Culture of the Great Wall: Beyond the Tourist Trail**
 
-Hey there, fellow Californians! Joran here, your friendly neighborhood China expert with over 10 years of living in Chengdu under my belt. You might be thinking, "Joran, I've seen the pictures of the Great Wall. It's just a big wall, right?" Well, let me tell you, there's so much more to this iconic structure than meets the eye. In this blog post, I'm going to take you on a journey beyond the tourist trail and explore the rich history and culture of the Great Wall.
+Hey there, fellow Californians! Joran here, your friendly neighborhood China expert with over 5 years of living in Chengdu under my belt. You might be thinking, "Joran, I've seen the pictures of the Great Wall. It's just a big wall, right?" Well, let me tell you, there's so much more to this iconic structure than meets the eye. In this blog post, I'm going to take you on a journey beyond the tourist trail and explore the rich history and culture of the Great Wall.
 
 ## The Great Wall: A Wonder of the World
 Have you ever wondered what it would be like to walk in the footsteps of ancient soldiers? To stand on a wall that has withstood the test of time for over 2,000 years? The Great Wall of China is not just a wall; it's a living, breathing testament to the ingenuity and perseverance of the Chinese people.
 
-As an American who has spent a decade in China, I've had the privilege of visiting the Great Wall multiple times. Each time, I'm struck by something new — not just its sheer magnitude, but the layers of history embedded in every brick. From the watchtowers that once signaled enemy approaches with smoke and fire, to the laborers who spent their lives building it, the Wall is far more than a photo backdrop. It's a story of survival, strategy, and human sacrifice that most visitors never hear.
+As an American who has spent five years in China, I've had the privilege of visiting the Great Wall multiple times. Each time, I'm struck by something new — not just its sheer magnitude, but the layers of history embedded in every brick. From the watchtowers that once signaled enemy approaches with smoke and fire, to the laborers who spent their lives building it, the Wall is far more than a photo backdrop. It's a story of survival, strategy, and human sacrifice that most visitors never hear.
 
 But before we dive into the history and culture of the Great Wall, let's talk about some practicalities. If you're planning a trip to China, you'll need to apply for a visa. The process can be a bit daunting, but don't worry - I've got you covered. Check out my [China Visa Requirements](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) guide for all the information you need to know.
 

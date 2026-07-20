@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
 title = "Best Travel Insurance for China 2026 — Complete Buyer's Guide"
 description = "Compare the best travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."
 date = 2026-06-21
@@ -38,7 +38,7 @@ As someone who's been living abroad and traveling the world for over a decade, I
 
 Let me put it bluntly: **if you can't afford travel insurance, you can't afford to travel to China.**
 
-I know that sounds harsh. But after 10+ years of helping travelers, I've seen it all:
+I know that sounds harsh. But after 5 years of helping travelers, I've seen it all:
 
 - A tourist who fell off a bike in Beijing, got a concussion, and faced a $15,000 hospital bill
 - A traveler whose luggage was lost at Shanghai Pudong Airport for 5 days
@@ -198,7 +198,7 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 
 ## My Final Recommendation
 
-After 10+ years of travel and 2+ years of personal SafetyWing use, here's my advice:
+After 5 years of travel and 2+ years of personal SafetyWing use, here's my advice:
 
 - 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — best overall value.
 - 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/cpc/?cid=1234567" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.

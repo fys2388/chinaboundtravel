@@ -30,7 +30,7 @@ cover:
 
 ## Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park
 
-As an American who's lived in Chengdu for over 10 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong. (If you're heading to Chengdu before or after Zhangjiajie, don't miss the [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) -- it's the perfect way to refuel after days of hiking.)
+As an American who's lived in Chengdu for over 5 years and hiked most of China's famous mountains, I went into Zhangjiajie fully expecting another overhyped tourist trap. I was wrong. (If you're heading to Chengdu before or after Zhangjiajie, don't miss the [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) -- it's the perfect way to refuel after days of hiking.)
 
 Standing on the **Yuanjiajie viewing platform** at sunrise, watching those sandstone pillars punch through a sea of clouds like something straight out of a James Cameron movie, I actually got emotional. It's one of those places where photos genuinely don't do it justice — you have to feel the mist on your face and hear the wind funneling through the rock formations.
 

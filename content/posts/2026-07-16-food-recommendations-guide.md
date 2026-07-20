@@ -27,7 +27,7 @@ cover:
 ## Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers
 
 ### Introduction
-If you're planning a trip to China, especially to the vibrant city of Chengdu, get ready for a culinary journey like no other. As an American expat who has lived in Chengdu for over 10 years, I've had the privilege of exploring the city's diverse and delicious food scene. In this blog post, I'll share my top food recommendations, along with some cultural insights and practical tips to help you make the most of your dining experiences in Chengdu.
+If you're planning a trip to China, especially to the vibrant city of Chengdu, get ready for a culinary journey like no other. As an American expat who has lived in Chengdu for over 5 years, I've had the privilege of exploring the city's diverse and delicious food scene. In this blog post, I'll share my top food recommendations, along with some cultural insights and practical tips to help you make the most of your dining experiences in Chengdu.
 
 I remember my first trip to a local hotpot restaurant in Chengdu. I was a bit overwhelmed by the sight of the simmering pot of broth filled with spicy peppers and strange ingredients. But as I took my first bite of the tender beef and flavorful vegetables, I was hooked. That's when I realized that Chengdu food was something special.
 

@@ -1,6 +1,6 @@
 +++
 title = "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
-description = "An honest, experience-based safety guide for China in 2026. Covers real crime data, the scams that actually exist, food safety, transport safety, and emergency contacts from an expat who has lived in China for 10+ years."
+description = "An honest, experience-based safety guide for China in 2026. Covers real crime data, the scams that actually exist, food safety, transport safety, and emergency contacts from an expat who has lived in China for 5 years."
 date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"
@@ -23,7 +23,7 @@ TocOpen = false
 
 {{< content-timestamp >}}
 
-Let me give you the short answer first: **yes, China is one of the safest countries I have ever traveled in, and I have been to over 40 countries.** After living in Chengdu for more than a decade, I walk home at 2 AM without a second thought -- something I would never do in many Western cities.
+Let me give you the short answer first: **yes, China is one of the safest countries I have ever traveled in, and I have been to over 40 countries.** After living in Chengdu for more than five years, I walk home at 2 AM without a second thought -- something I would never do in many Western cities.
 
 But "safe" does not mean "nothing can go wrong." There are specific scams, health risks, and cultural landmines that catch foreigners off guard. This guide covers the real risks (not the fear-mongering) and the practical steps to handle them.
 
@@ -44,7 +44,7 @@ The biggest risks to tourists in China are not violent crime -- they are scams, 
 
 ## Scams That Actually Exist (And How to Avoid Them)
 
-Most "China scam" articles exaggerate wildly. In 10 years, I have encountered exactly three scams that are worth knowing about. Here they are, ranked by how likely you are to encounter them.
+Most "China scam" articles exaggerate wildly. In 5 years, I have encountered exactly three scams that are worth knowing about. Here they are, ranked by how likely you are to encounter them.
 
 ### 1. The Tea House Scam
 
@@ -72,7 +72,7 @@ Most "China scam" articles exaggerate wildly. In 10 years, I have encountered ex
 
 ### What About Other "Scams"?
 
-You may read about currency switching, baby milk powder scams, or other elaborate schemes. In a decade of living here, I have never encountered these, and neither has any expat I know. Focus on the three above and you will be fine.
+You may read about currency switching, baby milk powder scams, or other elaborate schemes. In five years of living here, I have never encountered these, and neither has any expat I know. Focus on the three above and you will be fine.
 
 ---
 
@@ -93,7 +93,7 @@ Chinese street food is one of the great joys of traveling here, and I eat it reg
 - **Peel fruit**. Buy whole fruits from markets and peel them yourself. Pre-cut fruit sitting in the open is risky.
 - **Trust your stomach**. If something looks or smells off, skip it. There is always another stall nearby.
 
-I have gotten food sick exactly once in 10 years, and it was from a hotel buffet, not street food. The bacterial adaptation most travelers experience in the first week is normal -- it usually passes in 2-3 days.
+I have gotten food sick exactly once in 5 years, and it was from a hotel buffet, not street food. The bacterial adaptation most travelers experience in the first week is normal -- it usually passes in 2-3 days.
 
 ### Medical Care
 

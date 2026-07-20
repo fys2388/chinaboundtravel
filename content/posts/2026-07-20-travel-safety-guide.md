@@ -28,7 +28,7 @@ cover:
 
 ## Introduction
 
-If you're gearing up for a journey to China, safety should rightfully占据首要位置 on your list of concerns. As an American who has called Chengdu home for over 10 years, I'm here to dish out the inside scoop on how to stay safe and have an unforgettable trip. In this blog post, I'll be sharing my personal experiences and practical tips to help you navigate China with ease.
+If you're gearing up for a journey to China, safety should rightfully占据首要位置 on your list of concerns. As an American who has called Chengdu home for over 5 years, I'm here to dish out the inside scoop on how to stay safe and have an unforgettable trip. In this blog post, I'll be sharing my personal experiences and practical tips to help you navigate China with ease.
 
 I vividly remember my first trip to China as if it were just yesterday. I was that wide-eyed tourist, brimming with excitement to explore a new country yet a tad nervous about the unknown. I had heard tales of pickpockets, scams, and language barriers, and I really wasn't sure what to anticipate. But the moment I stepped off the plane in Chengdu, I was welcomed with warmth and hospitality. The people were friendly, the food was mouth-watering, and the city was pulsating with energy.
 

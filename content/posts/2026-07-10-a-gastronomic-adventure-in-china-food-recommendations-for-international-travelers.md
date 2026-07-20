@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
-description: "Must-try Chinese dishes and restaurant recommendations for international travelers in 2026. Authentic picks from a US expat with 10+ years eating across China's provinces."
+description: "Must-try Chinese dishes and restaurant recommendations for international travelers in 2026. Authentic picks from a US expat with 5 years eating across China's provinces."
 canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
 ShowToc: "true"
 TocOpen: "false"
@@ -24,7 +24,7 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.jpg"
 ---
 
-If you're planning a trip to China, get ready for a culinary journey like no other! As an American expat who has lived in Chengdu for over 10 years, I've had the privilege of exploring the diverse and delicious world of Chinese cuisine. In this blog post, I'll share some of my favorite food recommendations, along with practical tips and cultural insights to enhance your dining experience.
+If you're planning a trip to China, get ready for a culinary journey like no other! As an American expat who has lived in Chengdu for over 5 years, I've had the privilege of exploring the diverse and delicious world of Chinese cuisine. In this blog post, I'll share some of my favorite food recommendations, along with practical tips and cultural insights to enhance your dining experience.
 
 ## Introduction
 
