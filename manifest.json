@@ -1,8 +1,8 @@
 {
-  "month_post_count": 18,
+  "month_post_count": 19,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-20 02:47:29",
-  "daily_social_publish_date": "2026-07-20",
+  "last_social_publish": "2026-07-21 02:30:50",
+  "daily_social_publish_date": "2026-07-21",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -95,6 +95,11 @@
       "topic": "travel safety",
       "geo_region": "AU",
       "create_date": "2026-07-20"
+    },
+    {
+      "topic": "cultural etiquette",
+      "geo_region": "US",
+      "create_date": "2026-07-21"
     }
   ],
   "keyword_convert_rate": {
