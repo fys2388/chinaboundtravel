@@ -1,8 +1,8 @@
 {
-  "month_post_count": 21,
+  "month_post_count": 22,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-23 02:33:12",
-  "daily_social_publish_date": "2026-07-23",
+  "last_social_publish": "2026-07-24 02:31:52",
+  "daily_social_publish_date": "2026-07-24",
   "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -110,6 +110,11 @@
       "topic": "food recommendations",
       "geo_region": "EU",
       "create_date": "2026-07-23"
+    },
+    {
+      "topic": "transportation guide",
+      "geo_region": "US",
+      "create_date": "2026-07-24"
     }
   ],
   "keyword_convert_rate": {
