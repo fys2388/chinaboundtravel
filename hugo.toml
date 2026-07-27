@@ -1,5 +1,5 @@
 # Sitemap optimized: tag pages excluded from sitemap via custom template
-baseURL = 'https://www.chinaboundtravel.com/'
+baseURL = 'https://chinaboundtravel.com/'
 languageCode = 'en-us'
 title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
 theme = 'PaperMod'
@@ -36,7 +36,7 @@ ignoreFiles = ["/\\.archived/"]
   [params.profileMode]
     enabled = true
     title = "Hi, I'm Joran"
-    subtitle = "A California native married into a Chengdu family. I've spent 6 years making every single travel mistake in China so you don't have to. Let's break down the digital wall together!"
+    subtitle = "A California native married into a Chengdu family. I've spent 5 years making every single travel mistake in China so you don't have to. Let's break down the digital wall together!"
     imageUrl = "images/joran-avatar.png"
     imageWidth = 120
     imageHeight = 120
@@ -62,6 +62,7 @@ ignoreFiles = ["/\\.archived/"]
   showMeta = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  ShowBreadCrumbs = true
   comments = true
 
 [[menu.main]]
@@ -148,6 +149,7 @@ ignoreFiles = ["/\\.archived/"]
 
 [params.analytics]
   google = { SiteVerificationTag = "", TrackingID = "G-GECBME3YVJ" }
+  googleSearchConsole = "google-site-verification=YOUR_VERIFICATION_CODE"
   bing = { SiteVerificationTag = "" }
 
 [params.affiliate]
@@ -156,8 +158,8 @@ ignoreFiles = ["/\\.archived/"]
   vpnNord = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   nordpass = "https://go.nordpass.io/off/?offer_id=488&aff_id=150687&url_id=9356"
   hotel = "https://www.hotellook.com/search?marker=730795"
-  klook = "https://klook.tpo.li/ppB4vZQ6"
-  klook_expire_date = "2026-07-10"
+  klook = "https://klook.tpo.li/vrPkmS2v"
+  klook_expire_date = "2027-07-24"
   safetywing = "https://safetywing.com/ambassador/refer/26548976"
   trip = "https://trip.tpo.li/trains?marker=730795"
   worldnomads = "https://www.worldnomads.com/affiliates/?aid=1234567"
