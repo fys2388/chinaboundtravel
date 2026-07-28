@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Where to stay in China China 2026. accommodation options for all types of travelers curated by a US-based China travel expert."
 description: "Where to stay in China China 2026. accommodation options for all types of travelers curated by a US-based China travel expert."
-canonicalURL: "https://chinaboundtravel.com/posts/accommodation-tips-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

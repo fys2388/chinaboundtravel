@@ -14,9 +14,9 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass4"
-summary: "Guilin and Yangshuo travel guide: Li River cruise options with prices, a 3-day itinerary, budget breakdown, best time to visit, local food picks, and insider tips from a 10-year China expat."
+summary: "Guilin and Yangshuo travel guide: Li River cruise options with prices, a 3-day itinerary, budget breakdown, best time to visit, local food picks, and insider tips from a 5-year China expat."
 description: "Plan your Guilin and Yangshuo trip with this complete 2026 guide — Li River bamboo raft vs cruise, 3-day itinerary with costs, where to stay and eat, and what most tourists miss about China's karst landscapes."
-canonicalURL: "https://chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -45,7 +45,7 @@ This is the choice that determines your whole day, and most people get it wrong 
 
 **My honest take:** The bamboo raft from Yangdi to Xingping is ten times the experience of the big cruise boat for less than half the price. You sit two feet above the water, close enough to touch the river. The raft pilot steers you past the exact karst formation printed on the back of the 20 RMB note — you can hold up the banknote and the landscape matches frame-for-frame. The big cruise boats carry 200+ passengers, the decks are crowded, and you're separated from the scenery by railings and glass. Go with the raft.
 
-> **Actionable tip:** Bamboo rafts for the Yangdi → Xingping route are limited and sell out fast, especially on weekends. Buy your ticket at the Yangdi pier the night before, or ask your hotel in Yangshuo to book it for you (they'll charge a small commission, usually ¥10-20). The 144-hour visa-free transit applies here — [check if your nationality qualifies](/posts/144-hour-visa-free-transit-guide/) before booking flights.
+> **Actionable tip:** Bamboo rafts for the Yangdi → Xingping route are limited and sell out fast, especially on weekends. Buy your ticket at the Yangdi pier the night before, or ask your hotel in Yangshuo to book it for you (they'll charge a small commission, usually ¥10-20). The [144-hour visa](/posts/144-hour-visa-free-transit-guide/)-free transit applies here — [check if your nationality qualifies](/posts/144-hour-visa-free-transit-guide/) before booking flights.
 
 ## Best Time to Visit
 
@@ -167,7 +167,7 @@ You could push this down to €120 by staying in Guilin city hostels (¥80/night
 
 **Is Guilin worth it if I only have 2 days?** Yes, but skip Guilin city and go straight to Yangshuo. Spend Day 1 on the Li River bamboo raft and Xingping, Day 2 on Yulong River cycling and Moon Hill. You'll see 90% of the highlights.
 
-**Guilin or Zhangjiajie — which should I pick?** Both are karst landscapes but completely different in character. Guilin/Yangshuo is about rivers, rice paddies, and gentle scenery you experience from water level. [Zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) is about towering sandstone pillars you experience from cliff-edge viewing platforms. If you have time, do both. If you must choose and prefer a more relaxed pace, Guilin/Yangshuo wins.
+**Guilin or [Zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) — which should I pick?** Both are karst landscapes but completely different in character. Guilin/Yangshuo is about rivers, rice paddies, and gentle scenery you experience from water level. [Zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) is about towering sandstone pillars you experience from cliff-edge viewing platforms. If you have time, do both. If you must choose and prefer a more relaxed pace, Guilin/Yangshuo wins.
 
 **Do I need to speak Chinese?** At major attractions and mid-range hotels, no — English signage is decent. At noodle shops, bus stations, and rural guesthouses, yes — download a translation app and save key addresses in Chinese characters on your phone.
 
@@ -183,3 +183,12 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [How to Use Alipay as a Foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) — Set up mobile payments before you arrive
 - [Chinese Street Food: A First-Timer's Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) — Essential for Yangshuo night markets
 - [A Gastronomic Adventure in China](/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/) — For understanding Guangxi cuisine in the broader context of China's eight culinary traditions
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

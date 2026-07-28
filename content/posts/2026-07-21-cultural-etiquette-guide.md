@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. essential guide based on 10 years of experience curated by a US-based China travel expert."
 description: "cultural etiquette for travelers visiting China. essential guide based on 10 years of experience curated by a US-based China travel expert."
-canonicalURL: "https://chinaboundtravel.com/posts/cultural-etiquette-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

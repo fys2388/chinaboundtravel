@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass4"
 summary: "Yunnan travel guide: 7-day itinerary with budget, Yuanyang rice terraces, Dali and Lijiang ancient towns, ethnic minority culture, and transport tips from a China expat."
 description: "A complete Yunnan travel guide with a 7-day itinerary — Kunming to Yuanyang rice terraces, Dali, Lijiang, and Jade Dragon Snow Mountain. Real prices, transport tips, and what most tourists miss."
-canonicalURL: "https://chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -158,7 +158,7 @@ Yunnan's food is distinctive — it uses fresh herbs, flowers, mushrooms, and ch
 
 **Actionable tip**: Skip the tourist restaurants in Dali and Lijiang old towns and head to Kunming's Zhuanxin Farmers' Market (篆新农贸市场). It's a real working market where locals buy fresh produce, mushrooms, and prepared food. A full meal here costs ¥15-25 (~€2-3). Try the smoked tofu rolls, steamed chicken with local herbs, and fresh flower juices.
 
-For a deeper dive into Chinese street food culture, see our [Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/).
+For a deeper dive into [Chinese street food](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) culture, see our [Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/).
 
 ## Yuanyang Rice Terraces: A Detailed Guide
 
@@ -224,6 +224,13 @@ For more on eating well in China without overspending, read our [Gastronomic Adv
 If you're planning a broader China trip, these guides pair well with Yunnan:
 
 - [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) — Xi'an is a natural starting or ending point for a Yunnan trip, with direct flights from Kunming.
-- [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) — Combine Yunnan's cultural landscapes with Zhangjiajie's dramatic sandstone pillars for a varied itinerary.
-- [Guilin and Yangshuo: The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/) — Guilin offers a completely different kind of mountain scenery in southern China.
+- [Zhangjiajie Avatar Mountains: Complete Guide](/posts/[zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) — Combine Yunnan's cultural landscapes with Zhangjiajie's dramatic sandstone pillars for a varied itinerary.
+- [[Guilin and Yangshuo](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/): The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/) — Guilin offers a completely different kind of mountain scenery in southern China.
 - [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) — Essential reading for navigating China's rail booking system.
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-tour >}}

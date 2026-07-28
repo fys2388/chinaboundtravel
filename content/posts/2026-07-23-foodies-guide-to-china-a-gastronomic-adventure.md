@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China food guide: authentic picks & hidden culinary gems. curated by a US-based China travel expert, practical guide for foreign travelers."
 description: "China food guide: authentic picks & hidden culinary gems. curated by a US-based China travel expert, practical guide for foreign travelers."
-canonicalURL: "https://chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

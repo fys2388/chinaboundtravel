@@ -191,3 +191,10 @@ Remember: **find your platform, know your carriage number, keep your passport ha
 ---
 
 *Last updated: May 2026 | Joran*
+
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

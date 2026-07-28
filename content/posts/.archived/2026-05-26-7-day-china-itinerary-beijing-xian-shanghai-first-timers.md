@@ -1,6 +1,6 @@
 ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 title: "7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026"
-description: "The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and pro tips from 10 years of running this route."
+description: "The ultimate 7-day China itinerary for first-timers. Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund  plus honest logistics, costs, and pro tips from 5 years of running this route."
 date: "2026-05-27"
 author: "Joran"
 tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide", "beijing", "xian", "shanghai"]
@@ -28,7 +28,7 @@ cover:
 
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)
 
-**By Joran | 10+ years navigating China as a foreigner**
+**By Joran | 5 years navigating China as a foreigner**
 
 I remember my first China trip. I spent three weeks planning, made every rookie mistake in the book, and still ended up missing the Terracotta Army because I ran out of time. Don't be that guy.
 
@@ -150,3 +150,12 @@ And when you're ready for round two: Western Sichuan, Yunnan, Tibet, or the Silk
 ---
 
 *Have a question about this itinerary? Drop it in the comments  I personally respond to every legitimate question within 48 hours.*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

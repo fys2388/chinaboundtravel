@@ -34,3 +34,9 @@ Stay tuned for more updates from the ground here in Chengdu!
 ---
 Originally posted on ChinaBound Travel Blog
 Sources: National Immigration Administration
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

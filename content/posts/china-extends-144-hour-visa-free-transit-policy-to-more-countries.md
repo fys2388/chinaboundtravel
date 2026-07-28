@@ -1,5 +1,5 @@
 ---
-title: China Extends 144-hour Visa-free Transit Policy to More Countries
+title: China Extends [144-hour Visa](/posts/144-hour-visa-free-transit-guide/)-free Transit Policy to More Countries
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -10,8 +10,7 @@ tags:
 - ChinaTransit
 - ChinaTravelPolicy
 categories:
-- China Essentials
-summary: 'Breaking news: China extends 144-hour visa-free transit policy to 15 more countries. What this means for international travelers planning trips to China in 2026.'
+- China Essent[144-hour visa](/posts/144-hour-visa-free-transit-guide/) 'Breaking news: China extends 144-hour visa-free transit policy to 15 more countries. What this means for in[144-hour visa](/posts/144-hour-visa-free-transit-guide/)ravelers planning trips to China in 2026.'
 description: "China extends its 144-hour visa-free transit to 15 more countries in 2026. Full breakdown of eligible nations, qualifying cities, entry requirements, and practical tips for travelers."
 ShowToc: true
 TocOpen: false
@@ -19,7 +18,7 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.jpg"
 ---
 
-## China Extends 144-hour Visa-free Transit Policy to More Countries
+## China Extends [144-hour Visa](/posts/144-hour-visa-free-transit-guide/)-free Transit Policy to More Countries
 
 Hey there, fellow travelers!
 
@@ -27,7 +26,7 @@ I'm Joran, your friendly California guy who married a local Chengdu girl and has
 
 ## What's New?
 
-The National Immigration Administration announced today that the 144-hour visa-free transit policy will be extended to citizens from an additional 15 countries, making it easier for international travelers to visit China without a visa.
+The National Immigrat[144-hour visa](/posts/144-hour-visa-free-transit-guide/)ation announced today that the 144-hour visa-free transit policy will be extended to citizens from an additional 15 countries, making it easier for international travelers to visit China without a visa.
 
 **Newly added countries**: While the official list hasn't been fully released yet, sources indicate it will include several countries from Southeast Asia, the Middle East, and Africa. This brings the total number of eligible countries to 68.
 
@@ -97,11 +96,11 @@ To qualify for the 144-hour visa-free transit, you must:
 
 ### For First-Time Visitors
 
-**Beijing**: Use your 6 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the Terracotta Army.
+**Beijing**: Use your 6 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the [[Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)](/posts/xian-terracotta-army-history-discovery-and-insider-tips/).
 
 **Shanghai**: Explore the Bund, French Concession, Yu Garden, and Shanghai Museum. Take a day trip to Suzhou or Hangzhou.
 
-**Chengdu**: Visit the Panda Base, explore Jinli Ancient Street, and try authentic Sichuan hotpot. Take a day trip to Leshan to see the Giant Buddha.
+**Chengdu**: Visit the Panda Base, explore Jinli Ancient Street, and try authentic [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/). Take a day trip to Leshan to see the Giant Buddha.
 
 ### For Business Travelers
 
@@ -128,7 +127,7 @@ Yes, as long as both ports are within the same transit zone.
 Officially, it's recommended but not always checked. However, it's a good idea to have one for peace of mind.
 
 ### Can I use this policy multiple times?
-Yes, there's no limit to how many times you can use the 144-hour transit, as long as you meet the requirements each time.
+Yes, there's no limit to how many times you can use the [[144-hour transit](/posts/144-hour-visa-free-transit-guide/)](/posts/144-hour-visa-free-transit-guide/), as long as you meet the requirements each time.
 
 ### What if I miss my onward flight?
 If you miss your flight due to circumstances beyond your control, contact the airport authorities immediately. You may need to apply for a visa or leave on the next available flight.
@@ -139,7 +138,7 @@ China is opening up more than ever, and these policy updates are a clear sign. W
 
 ### My Personal Experience
 
-When I first arrived in China, I had to jump through hoops just to get a tourist visa. Now, with policies like this, my friends from back home can come visit me without the hassle. Last year, my brother came for a 6-day visit using the 144-hour transit, and he loved it. We explored Chengdu, went to see the pandas, and even took a day trip to Leshan. It was the easiest trip he's ever had to China.
+When I first arrived in China, I had to jump through hoops just to get a tourist visa. Now, with policies like this, my friends from back home can co[144-hour transit](/posts/144-hour-visa-free-transit-guide/)out the hassle. Last year, [144-hour transit](/posts/144-hour-visa-free-transit-guide/)t](/posts/144-hour-visa-free-transit-guide/)for a 6-day visit using the 144-hour transit, and he loved it. We explored Chengdu, went to see the pandas, and even took a day trip to Leshan. It was the easiest trip he's ever had to China.
 
 ### What This Means for the Future
 
@@ -148,7 +147,7 @@ I believe this is just the beginning. China is becoming more welcoming to intern
 ### Further Reading
 
 - [7-Day China Itinerary: Beijing, Xi'an & Shanghai](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — The perfect trip to fit within (or extend beyond) a 144-hour transit
-- [Internet in China: eSIM & VPN Guide](posts/internet-connection-china-esim-vpn-guide/) — Get connected before you land
+- [Internet in China: [eSIM](/posts/internet-connection-china-esim-vpn-guide/) & VPN Guide](posts/internet-connection-china-[esim](/posts/internet-connection-china-esim-vpn-guide/)-[vpn](/posts/internet-connection-china-esim-vpn-guide/)-guide/) — Get connected before you land
 - [Is China Safe for Tourists in 2026?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — An honest safety assessment
 
 This is great news for anyone who wants to experience China's rich culture, delicious food, and amazing landscapes.
@@ -172,3 +171,14 @@ Originally posted on ChinaBound Travel Blog
 Sources: National Immigration Administration
 
 *Disclaimer: This article is for informational purposes only. Always check the latest requirements from official Chinese government sources before planning your trip.*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

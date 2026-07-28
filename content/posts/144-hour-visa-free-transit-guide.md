@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 title: 144-Hour Visa-Free Transit in China - The Complete 2026 Guide
 date: '2026-05-19T10:00:00+08:00'
 draft: false
@@ -151,3 +151,11 @@ And if you found this guide helpful? Share it with a friend who's planning a Chi
 ---
 
 *This site contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

@@ -185,3 +185,12 @@ China's high-speed rail is one of the world's great travel experiences. Clean, p
 ---
 
 *Last updated: May 2026 | Joran*
+
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

@@ -78,3 +78,7 @@ Just dont try to bring in dried squid. Trust me on that one.
 ---
 
 *Got questions? Drop them in the comments. Ill answer while eating mapo tofu and trying to explain to my mother-in-law why Im writing a blog instead of giving her grandkids.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}

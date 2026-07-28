@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass4"
 summary: "A practical 2026 setup guide for WeChat Pay for foreigners in China—covering linking cards, avoiding common pitfalls, and paying like a local."
 description: "Learn how to set up WeChat Pay as a foreigner in China in 2026. This step-by-step guide covers account creation, bank linking, identity verification, and common mistakes to avoid."
-canonicalURL: "https://chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -53,7 +53,7 @@ Here is the actual setup process, updated for 2026 policies on foreign users bin
 
 ### Step 1: Download WeChat Before You Leave
 
-Download the WeChat app from the **App Store** (iOS) or **Google Play** (Android). Important: if you are still in Europe, you may not need a VPN to download it, but you might need one to access certain features later, like some Mini Programs. Do not wait until you are in China to download the app -- some European app stores may redirect you to a limited version.
+Download the WeChat app from the **App Store** (iOS) or **Google Play** (Android). Important: if you are still in Europe, you may not need a [VPN](/posts/internet-connection-china-esim-vpn-guide/) to download it, but you might need one to access certain features later, like some Mini Programs. Do not wait until you are in China to download the app -- some European app stores may redirect you to a limited version.
 
 ### Step 2: Register Your WeChat Account
 
@@ -106,7 +106,7 @@ WeChat Pay uses real-time exchange rates for foreign card transactions, which ar
 
 ### 3. Waiting Until You Are in China to Register
 
-This one catches a lot of people off guard. WeChat registration in China typically requires a **Chinese phone number** for SMS verification. If you are already in China with only your European SIM, you may not be able to receive the verification code. Register your WeChat account and link your cards **before you leave Europe**. If you do need a Chinese SIM for data, you can buy a travel eSIM or SIM card at the airport, but account registration should be done beforehand.
+This one catches a lot of people off guard. WeChat registration in China typically requires a **Chinese phone number** for SMS verification. If you are already in China with only your European SIM, you may not be able to receive the verification code. Register your WeChat account and link your cards **before you leave Europe**. If you do need a Chinese SIM for data, you can buy a travel [eSIM](/posts/internet-connection-china-esim-vpn-guide/) or SIM card at the airport, but account registration should be done beforehand.
 
 ### 4. Forgetting to Switch to English
 
@@ -126,7 +126,7 @@ A few extra pointers specifically for travelers coming from Europe:
 
 3. **Download an offline translation tool.** WeChat has built-in translation, but for interactions with shopkeepers, taxi drivers, and restaurant staff, having Google Translate or a similar app downloaded for offline use is invaluable. Not every interaction will go through WeChat's messaging.
 
-4. **Set up Alipay as your backup.** Some merchants accept Alipay but not WeChat Pay, and vice versa. Having both gives you near-universal coverage. Our full guide on [setting up Alipay as a foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) covers the process step by step.
+4. **Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) as your backup.** Some merchants accept [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) but not WeChat Pay, and vice versa. Having both gives you near-universal coverage. Our full guide on [setting up Alipay as a foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) covers the process step by step.
 
 5. **Carry a small amount of cash as a last resort.** Even in 2026, there are occasional situations where digital payments fail -- network outages, dead phone battery, or a merchant whose QR code is not working. Having 200-300 RMB in small bills is a smart safety net.
 
@@ -161,3 +161,14 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 | Museum entry fee | 30-60 | 3.75-7.50 |
 | Mid-range restaurant meal | 50-120 | 6.25-15.00 |
 | High-speed train ticket (short route) | 75-300 | 9.40-37.50 |
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

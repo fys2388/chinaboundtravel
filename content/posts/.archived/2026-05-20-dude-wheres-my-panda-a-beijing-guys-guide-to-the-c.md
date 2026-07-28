@@ -58,3 +58,13 @@ So go. Take the flight. Wake up early. Don't try to hug one. And if you see a pa
 
 - [Is China Safe for Tourists in 2026?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — An honest safety assessment for foreign travelers
 - [How to Get Internet in China (eSIM & VPN Guide)](posts/internet-connection-china-esim-vpn-guide/) — Stay connected before you land
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

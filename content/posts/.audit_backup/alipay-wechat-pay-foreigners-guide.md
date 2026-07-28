@@ -142,3 +142,13 @@ Safe travels, and may your WeChat Pay always have enough balance. 💴
 ---
 
 *Disclaimer: Exchange rates and fees are subject to change. Always check with your bank for the latest information.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

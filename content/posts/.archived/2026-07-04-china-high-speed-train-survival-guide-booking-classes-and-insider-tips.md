@@ -159,3 +159,7 @@ And if you want to read more about my travels in China, check out these other ar
 ![A high-speed train speeding through the Chinese countryside with green fields and mountains in the background](https://picsum.photos/seed/22126/1024/768)
 
 ![Inside a high-speed train carriage with comfortable seats and a view of the landscape outside the window](https://picsum.photos/seed/27023/1024/768)
+
+{{< affiliate-flight >}}
+
+{{< affiliate-tour >}}

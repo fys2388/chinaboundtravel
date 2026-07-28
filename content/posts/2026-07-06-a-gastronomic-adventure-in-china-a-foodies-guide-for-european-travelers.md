@@ -14,9 +14,9 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass2"
-summary: "The essential China food guide for European travelers — from Sichuan hotpot to Cantonese dim sum, real restaurant picks, ordering hacks, and what surprised a Californian the most about Chinese cuisine."
+summary: "The essential China food guide for European travelers — from [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) to Cantonese dim sum, real restaurant picks, ordering hacks, and what surprised a Californian the most about Chinese cuisine."
 description: "China food guide for European travelers: discover 8 regional cuisines, must-try dishes, real restaurant recommendations, ordering tips, and what surprised an expat most after 5 years in China."
-canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -54,11 +54,11 @@ Before diving into regional cuisines, a few things that caught me off guard as a
 
 **Where to eat it:** Chengdu, Chongqing
 
-Sichuan cuisine is the one that will challenge — and change — you. The signature is *ma la* (numbing-spicy), created by combining chili peppers with Sichuan peppercorns.
+Sichuan cuisine is the one that will challenge — and change — you. The signature is *ma la* (numbing-spicy), creat[Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)g chili peppers with Sichuan peppercorns.
 
 **Must-try dishes:**
 
-- **Sichuan Hotpot (火锅)** — The iconic communal dining experience. A simmering pot of spicy broth in the center of the table, where you cook raw ingredients yourself. Budget: 60-120 RMB per person. For your first time, order half-spicy / half-tomato broth split pot. [Read our full Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) for restaurant picks.
+- **[Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) (火锅)** — The iconic communal dining experience. A simmering pot of spicy broth in the center of the table, where you cook raw ingredients yourself. Budget: 60-120 RMB per person. For your first time, order half-spicy / half-tomato broth split pot. [Read our full Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) for restaurant picks.
 
 - **Mapo Tofu (麻婆豆腐)** — Silky soft tofu in a fiery, savory sauce with minced pork. The best version I've had was at a tiny restaurant in Chengdu's old quarter — the kind of place with plastic stools and handwritten menus. Budget: 18-30 RMB.
 
@@ -218,7 +218,7 @@ If you're flying into China from Europe and want a food-focused trip, here's my 
 
 1. **Shanghai (Days 1-2)** — Start easy with xiaolongbao and sweet Shanghainese dishes. Visit the French Concession and Yu Garden food street.
 2. **Beijing (Days 3-4)** — Peking duck, zhajiangmian, and the imperial grandeur of northern Chinese cuisine.
-3. **Xi'an (Day 5)** — Muslim Quarter food street for lamb skewers, biang biang noodles, and roujiamo (Chinese hamburger). [See our Xi'an Terracotta Army Guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) for travel logistics.
+3. **Xi'an (Day 5)** — Muslim Quarter food street for lamb skewers, biang biang noodles, and roujiamo (Chinese hamburger). [See our Xi'an [[Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) Guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) for travel logistics.
 4. **Chengdu (Days 6-7)** — The grand finale. Sichuan hotpot, mapo tofu, and the best street food scene in China. End your trip with a food tour through Jinli or Kuanzhai Alley.
 
 > **Practical tip:** For intercity travel, the [high-speed rail](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) connects all these cities in comfort. Shanghai to Beijing in 4.5 hours, Beijing to Xi'an in 4 hours, Xi'an to Chengdu in 3.5 hours.
@@ -232,3 +232,14 @@ The best advice I can give? Be brave. Order the thing you can't identify. Eat at
 If you found this guide helpful, [check out our other China travel guides](/posts/) — and if you have a favorite dish from your own China trip, drop it in the comments. I'm always looking for my next meal.
 
 ![A spread of colorful Chinese dishes on a round table: Sichuan hotpot in the center, a plate of xiaolongbao, Peking duck with pancakes, and fresh vegetables. Warm lighting, convivial atmosphere.](https://image.pollinations.ai/prompt/A%20spread%20of%20colorful%20Chinese%20dishes%20on%20a%20round%20table%20in%20a%20restaurant%2C%20Sichuan%20hotpot%20in%20the%20center%2C%20a%20steamer%20basket%20of%20xiaolongbao%20soup%20dumplings%2C%20Peking%20duck%20with%20thin%20pancakes%2C%20and%20fresh%20stir-fried%20vegetables%2C%20warm%20lighting%2C%20convivial%20atmosphere%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=23226&negative=blurry%2Cdistorted%2Cdeformed%2Cugly%2Cwatermark%2Ctext&model=flux)
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

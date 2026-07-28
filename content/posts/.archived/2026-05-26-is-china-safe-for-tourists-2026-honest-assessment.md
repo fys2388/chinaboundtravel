@@ -30,7 +30,7 @@ cover:
 
 ## The Most Honest China Safety Analysis You'll Find
 
-**By Joran | 10+ years living in and traveling China**
+**By Joran | 5 years living in and traveling China**
 
 Every safety article about China falls into one of two traps: either it paints China as a dystopian hellhole where tourists get arrested for nothing, or it overcorrects into "actually it's super safe, nothing to worry about." The truth is more nuanced  and more useful.
 
@@ -120,3 +120,14 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 ---
 
 *Have a specific safety concern? Drop it in the comments  I respond to every legitimate question within 48 hours.*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

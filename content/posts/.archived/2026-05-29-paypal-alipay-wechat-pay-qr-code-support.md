@@ -14,7 +14,7 @@ description: "PayPal now supports Alipay and WeChat Pay QR codes. Learn what thi
 
 Okay, real talk. I almost spat out my coffee when I saw this headline: **PayPal now lets you pay via Alipay and WeChat Pay QR codes**.
 
-For context: I've been traveling back and forth to China for over a decade. Every single time, the payment situation for us foreigners has been... *painful*. You arrive with your fancy Western credit card, try to pay somewhere, and get hit with that awkward "sorry, we only accept WeChat or Alipay" look. And setting up those apps as a non-Chinese phone number? An absolute nightmare involving ID verification, bank linking, and at least three WeChat moments of existential crisis.
+For context: I've been traveling back and forth to China for over 5 years. Every single time, the payment situation for us foreigners has been... *painful*. You arrive with your fancy Western credit card, try to pay somewhere, and get hit with that awkward "sorry, we only accept WeChat or Alipay" look. And setting up those apps as a non-Chinese phone number? An absolute nightmare involving ID verification, bank linking, and at least three WeChat moments of existential crisis.
 
 So when PayPal announced they're now integrated with Alipay and WeChat Pay, I had to dig in and figure out if this is actually useful or just another headline that sounds better than it is. For the full breakdown of setting up the native apps, see our [Alipay & WeChat Pay guide for foreigners](posts/alipay-wechat-pay-foreigners-guide/).
 
@@ -144,3 +144,12 @@ One less thing to stress about. And that's always welcome. Before you land, make
 - [Chinese Food Delivery Apps (Meituan & Ele.me)](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) — PayPal won't work on food delivery apps; you'll still need native payment setup
 
  *Joran*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

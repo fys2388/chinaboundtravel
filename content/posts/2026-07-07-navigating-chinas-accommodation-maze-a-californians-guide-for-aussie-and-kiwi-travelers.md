@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Where to stay in China China 2026. best neighborhoods, hotel recommendations & budget options from a US expat based in Chengdu."
 description: "Where to stay in China in 2026: best neighborhoods, hotel recommendations, and budget options for Aussie and Kiwi travelers. Practical tips from a US expat based in Chengdu."
-canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -109,3 +109,9 @@ You can find deals and promotions by:
 
 ## Conclusion
 Finding the perfect accommodation in China can be a challenge, but with a little research and planning, you can find a place that meets your needs and budget. By following the tips and tricks outlined in this guide, you can ensure that your stay in China is comfortable, enjoyable, and memorable. So what are you waiting for? Start planning your trip to China today and get ready to experience the adventure of a lifetime! And don't forget to check out [this article](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) for a great 7-day itinerary for first-time China travelers.
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

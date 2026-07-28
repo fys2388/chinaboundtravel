@@ -1,6 +1,5 @@
 ---
-
-title: "'2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'"
+title: "2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)"
 author: Joran
 date: "2026-05-19T12:00:00+08:00"
 draft: false
@@ -13,7 +12,7 @@ tags:
   - ChinaTravel
 categories:
   - Guides
-summary: "Complete step-by-step guide for foreigners to use Alipay and WeChat Pay in China without a Chinese bank account. Learn how to bind foreign credit cards and pay like a local."
+summary: "Complete step-by-step guide for foreigners to use Alipay and WeChat Pay in China without a Chinese bank account. Learn how to bind foreign cards and pay like a local."
 description: "2026 complete guide to using Alipay and WeChat Pay in China without a Chinese bank account. Bind foreign cards, top up your wallet, and pay anywhere like a local."
 ShowToc: true
 TocOpen: false
@@ -21,21 +20,20 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.jpg"
 ---
 
-## 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners
+## 2026 Ultimate Guide to Using [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) & [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) for Foreigners
 
 ## Hey, Joran Here 👋
 
-Okay, real talk: the first time my wife (she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
+Okay, real talk: the first time my[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)(she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
 
 That was 2019. Today, I'm the guy who helps tourists at the Chengdu teahouse figure this stuff out—because let me tell you, paying as a foreigner in China without mobile payment is like trying to eat hot pot with a fork. Technically possible, but you're going to have a bad time and everyone around you will feel awkward.
 
-Good news: it got WAY easier in 2026. Let me walk you through exactly what to do. For a deeper dive specifically on WeChat Pay, check out our [WeChat Pay for foreigners guide](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/).
+Good news: it got WAY eas[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)6. Let me walk you through exactly what to do. For a deeper dive specifically on WeChat Pay, check out our [WeChat Pay for foreigners guide](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/).
 
 ## Why You Need Mobile Payment in China
 
 - **Convenience**: Street vendors, restaurants, taxis, and even small shops prefer mobile payments
-- **Safety**: No need to carry large amounts of cash
-- **Essential Services**: Many attractions, transportation, and [delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
+- **Safety**: No need to carry large amounts of ca[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)*Essential Services**: Many attractions, transportation, and [delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
 - **Discounts**: Exclusive offers and cashback for mobile payments
 
 ---
@@ -147,7 +145,7 @@ Alipay requires real-name verification to unlock full features:
 
 With this guide, you're ready to navigate China's cashless economy like a pro. Both Alipay and WeChat Pay have made significant improvements for foreign users in 2026, making it easier than ever to pay without a Chinese bank account.
 
-**Pro Tip**: Set up both apps before your trip to avoid airport stress! You'll also want to get your [internet connectivity sorted](posts/internet-connection-china-esim-vpn-guide/) before arrival, and consider [travel insurance](posts/best-travel-insurance-china/) in case anything goes wrong.
+**Pro Tip**: Set up both apps before your trip to avoid airport stress! You'll also want to get your [internet connectivity sorted](posts/internet-connection-china-[esim](/posts/internet-connection-china-[esim](/posts/internet-connection-china-esim-vpn-guide/)-[vpn](/posts/internet-connection-china-esim-vpn-guide/)-guide/)-vpn-guide/) before arrival, and consider [travel insurance](posts/best-travel-insurance-china/) in case anything goes wrong.
 
 ### Further Reading
 
@@ -161,3 +159,13 @@ Safe travels, and may your WeChat Pay always have enough balance. 💴
 ---
 
 *Disclaimer: Exchange rates and fees are subject to change. Always check with your bank for the latest information.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

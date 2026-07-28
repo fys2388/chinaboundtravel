@@ -211,3 +211,12 @@ Ready to start your China adventure? [Get your visa application started today](m
 ---
 
 *This article is for informational purposes only. Always check the latest requirements from official Chinese government sources.*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

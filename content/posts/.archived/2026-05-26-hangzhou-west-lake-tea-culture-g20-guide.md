@@ -166,3 +166,12 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 ---
 
 *Last updated: May 2026 | Joran*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

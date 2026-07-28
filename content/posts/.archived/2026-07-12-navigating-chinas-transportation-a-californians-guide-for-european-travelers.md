@@ -27,7 +27,7 @@ cover:
 ## Navigating China's Transportation: A Californian's Guide for European Travelers
 ## Introduction
 
-If you're planning a trip to China, one of the most crucial aspects to consider is transportation. As an American who has lived in Chengdu for over 10 years, I've had my fair share of adventures and misadventures on China's roads, rails, and skies. In this guide, I'll share my insights and experiences to help you navigate China's transportation system like a pro.
+If you're planning a trip to China, one of the most crucial aspects to consider is transportation. As an American who has lived in Chengdu for over 5 years, I've had my fair share of adventures and misadventures on China's roads, rails, and skies. In this guide, I'll share my insights and experiences to help you navigate China's transportation system like a pro.
 
 I remember my first trip to China. I was a wide-eyed tourist, excited to explore this new and mysterious country. I had done my research, read all the travel guides, and thought I was prepared. But nothing could have prepared me for the chaos and confusion of China's transportation system.
 
@@ -105,3 +105,13 @@ For more information on China travel, check out these articles:
 - [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
 - [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
 - [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

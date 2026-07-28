@@ -223,3 +223,12 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 ---
 
 *Last updated: May 2026 | Joran*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

@@ -25,7 +25,7 @@ cover:
 ---
 
 ## Navigating China with Confidence: A Californian's Guide to Travel Safety
-If you're planning a trip to China, you're in for an adventure of a lifetime! As an American expat who has called Chengdu home for over 10 years, I've had my fair share of experiences exploring this vast and fascinating country. In this blog post, I'll be sharing some of my top travel safety tips and insights to help you make the most of your journey.
+If you're planning a trip to China, you're in for an adventure of a lifetime! As an American expat who has called Chengdu home for over 5 years, I've had my fair share of experiences exploring this vast and fascinating country. In this blog post, I'll be sharing some of my top travel safety tips and insights to help you make the most of your journey.
 
 ## Introduction
 China is a country with a rich history, culture, and natural beauty. From the bustling streets of Beijing to the serene landscapes of Guilin, there's something for everyone to discover. However, like any destination, it's important to take some precautions to ensure your safety and well-being. In this blog post, I'll be sharing some of my personal experiences and tips for staying safe while traveling in China.
@@ -84,3 +84,11 @@ Traveling to China can be an amazing and rewarding experience, but it's importan
 ![A group of tourists exploring the Great Wall of China. The sun is shining, and the ancient wall is surrounded by a crowd of people.](https://image.pollinations.ai/prompt/A%20group%20of%20tourists%20exploring%20the%20Great%20Wall%20of%20China.%20The%20sun%20is%20shining%2C%20and%20the%20ancient%20wall%20is%20surrounded%20by%20a%20crowd%20of%20people.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=5528&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
 Remember, China is a vast和 diverse country, and there's something for everyone to discover. So, pack your bags, grab your camera, and get ready to explore this amazing country!
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

@@ -86,7 +86,7 @@ You may read about currency switching, baby milk powder scams, or other elaborat
 
 ### Street Food Safety
 
-Chinese street food is one of the great joys of traveling here, and I eat it regularly. Here is how to do it safely:
+[Chinese street food](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) is one of the great joys of traveling here, and I eat it regularly. Here is how to do it safely:
 
 - **Choose stalls with high turnover**. If locals are queuing, the food is fresh. Empty stalls mean food has been sitting around.
 - **Watch the cooking**. Food cooked at high heat (wok-fired noodles, skewers from a grill) is generally safe. Avoid raw or lightly cooked items at street stalls.
@@ -202,3 +202,13 @@ The real risks are mundane: scams targeting tourists in popular areas, food-rela
 Do not let fear-mongering blog posts or outdated stereotypes keep you from experiencing one of the most fascinating countries on earth. Come prepared, stay aware, and you will have an incredible -- and safe -- trip.
 
 If you found this guide helpful, check out our other practical resources: [China Transportation Guide 2026](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/), [WeChat Pay Setup for Foreigners](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), and [Best Travel Insurance for China](/posts/best-travel-insurance-china/).
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

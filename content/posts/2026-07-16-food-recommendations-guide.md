@@ -1,5 +1,5 @@
 ---
-title: "Food Recommendations Guide"
+title: "China Food Guide 2026: What to Eat, Where to Eat It, & What to Avoid"
 date: "2026-07-16T10:00:00+08:00"
 lastmod: "2026-07-16T10:00:00+08:00"
 author: "Joran"
@@ -7,16 +7,16 @@ slug: "food-recommendations-guide"
 tags:
   - ChinaTravel
   - TravelGuide
-  - China
+  - ChinaFood
   - USToChina
 categories:
   - China
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "China food guide: top local snacks, where to find them & what to avoid. from on-the-ground experience in China, practical guide for foreign travelers."
-description: "China food guide: top local snacks, where to find them & what to avoid. from on-the-ground experience in China, practical guide for foreign travelers."
-canonicalURL: "https://chinaboundtravel.com/posts/food-recommendations-guide/"
+summary: "China food guide 2026: From street food to fine dining, discover the best dishes, hidden gems, and cultural eating customs. Written by a California expat who's spent 5 years eating his way across China."
+description: "China food guide 2026: What foreigners should eat in China, where to find authentic local snacks, street food safety tips, and cultural dining etiquette from an American expat in Chengdu."
+canonicalURL: "https://www.chinaboundtravel.com/posts/food-recommendations-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -37,8 +37,7 @@ So, whether you're a seasoned foodie or just looking to try something new, this 
 
 ![A bustling street in Chengdu filled with food stalls and restaurants, people sitting at tables enjoying their meals, and the smell of spices and cooking wafting through the air](https://image.pollinations.ai/prompt/A%20bustling%20street%20in%20Chengdu%20filled%20with%20food%20stalls%20and%20restaurants%2C%20people%20sitting%20at%20tables%20enjoying%20their%20meals%2C%20and%20the%20smell%20of%20spices%20and%20cooking%20wafting%20through%20the%20air%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=17158&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
-### Sichuan Hotpot: The Heart of Chengdu Cuisine
-No visit to Chengdu would be complete without indulging in a meal of Sichuan hotpot. This iconic dish is a communal experience where you cook a variety of meats, vegetables, and noodles in a simmering pot of broth. The broth is usually flavored with Sichuan peppercorns, chili peppers, and other spices, giving it a numbing and spicy kick that is both addictive and delicious.
+### [Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/): The Heart of Ch[Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)No visit to Chengdu would be complete without indulging in a meal of [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/). This iconic dish is a communal experience where you cook a variety of meats, vegetables, and noodles in a simmering pot of broth. The broth is usually flavored with Sichuan peppercorns, chili peppers, and other spices, giving it a numbing and spicy kick that is both addictive and delicious.
 
 There are two main types of hotpot broth: spicy and non-spicy. The spicy broth is the most popular and is known for its intense heat and numbing sensation. The non-spicy broth is usually made with chicken or beef bones and is much milder in flavor. You can also choose to have a combination of both broths in a split pot.
 
@@ -46,7 +45,7 @@ When it comes to ordering hotpot, there are a few things to keep in mind. First,
 
 Another important aspect of hotpot is the dipping sauce. There are many different types of dipping sauces available, but the most common one is made with garlic, scallions, cilantro, and a spicy oil. You can also add other ingredients such as soy sauce, vinegar, or sesame oil to customize the flavor to your taste.
 
-Actionable tip: When eating hotpot, make sure to cook the meats and vegetables for the appropriate amount of time. Overcooking can make them tough and rubbery, while undercooking can be dangerous. Use a pair of chopsticks or a ladle to fish out the cooked ingredients and place them in your bowl.
+Actionable tip: When eating hotpot, make sure to cook the meats and vegetables for the appropriate amount of time. Overcooking can make them tough and rubbery, while undercooking can be dan[Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)pair of chopsticks or a ladle to fish out the cooked ingredients and place them in your bowl.
 
 In California, we have our fair share of spicy food, but Sichuan hotpot takes it to a whole new level. The combination of the numbing Sichuan peppercorns and the spicy chili peppers creates a flavor profile that is both unique and unforgettable. It's like a party in your mouth!
 
@@ -111,3 +110,7 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 [anchor text](https://chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 [anchor text](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
 [anchor text](https://chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/)
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}

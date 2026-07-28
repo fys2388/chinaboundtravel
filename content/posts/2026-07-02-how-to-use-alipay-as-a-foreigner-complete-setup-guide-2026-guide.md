@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Step-by-step Alipay setup guide for foreigners in China (2026). Link international cards, pay anywhere, and skip the tourist traps with practical tips from an expat."
 description: "Step-by-step guide to setting up Alipay as a foreigner in China (2026). How to link international cards, pay at restaurants, and avoid common setup mistakes."
-canonicalURL: "https://chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -101,8 +101,8 @@ Although cash is becoming less common in China, it's still a good idea to carry 
 ### Credit Cards
 Some businesses may accept international credit cards directly. However, this is not as common as using Alipay. Make sure your credit card has a chip and PIN for added security.
 
-### WeChat Pay
-WeChat Pay is another popular mobile payment method in China. If Alipay isn't working for some reason, you may be able to use WeChat Pay instead. The setup process for WeChat Pay is similar to Alipay.
+### [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) is another popular mobil[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)method in China. If Alipay isn't working for some reason, you may be able to use WeChat Pay instead. The setup process for WeChat Pay is similar to Alipay.
 
 ## Conclusion
 
@@ -119,3 +119,11 @@ If you want to learn more about China travel, check out these related articles:
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 
 ![A person sitting in a coffee shop in Chengdu, using their phone to pay with Alipay. The coffee shop has a cozy atmosphere with soft lighting and local art on the walls.](https://image.pollinations.ai/prompt/A%20person%20sitting%20in%20a%20coffee%20shop%20in%20Chengdu%2C%20using%20their%20phone%20to%20pay%20with%20Alipay.%20The%20coffee%20shop%20has%20a%20cozy%20atmosphere%20with%20soft%20lighting%20and%20local%20art%20on%20the%20walls.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=92308&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

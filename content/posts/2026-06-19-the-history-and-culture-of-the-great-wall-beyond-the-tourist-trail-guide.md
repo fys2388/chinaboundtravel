@@ -106,3 +106,11 @@ So what are you waiting for? Start planning your trip to the Great Wall today an
 ![Tourists taking photos on the Great Wall of China on a sunny day](https://picsum.photos/seed/999389/1024/768)
 
 And as always, if you have any questions or comments, feel free to leave them below. I'd love to hear from you!
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

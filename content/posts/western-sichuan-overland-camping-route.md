@@ -29,7 +29,7 @@ cover:
 
 Let me set the scene for you. It's 5:30 AM in Chengdu, and I'm standing in a parking lot next to my beat-up old SUV, staring at a mountain of camping gear. My wife, Xiao Li, is giving me "the look" - the one that says, "You're crazy, but I'll go with you because I love you." 
 
-Six years living in China, and I'd never ventured beyond the city limits of Chengdu. But when my friend Lao Wang showed me photos of the Tibetan Plateau, I knew I had to go. This wasn't just a road trip - this was going to be *the* adventure of a lifetime.
+Five years living in China, and I'd never ventured beyond the city limits of Chengdu. But when my friend Lao Wang showed me photos of the Tibetan Plateau, I knew I had to go. This wasn't just a road trip - this was going to be *the* adventure of a lifetime.
 
 ## Why Western Sichuan?
 
@@ -49,7 +49,7 @@ Let me save you some pain. I made every mistake in the book on my first trip, so
 - **Sunscreen & lip balm**: The UV at high altitude is no joke. I forgot lip balm once - never again. My lips cracked so bad I couldn't smile for a week.
 - **Tire repair kit**: You will hit rocks. You will get flats. Be prepared.
 - **Portable charger**: Power outlets are few and far between. Get something with at least 20,000 mAh. You'll also want to sort out your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) before heading into remote areas.
-- **Cash**: Most villages don't take Alipay. Bring plenty of RMB - ATMs are rare.
+- **Cash**: Most villages don't take [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/). Bring plenty of RMB - ATMs are rare.
 
 ### Pro Tip: Renting a Vehicle
 Unless you have a 4WD vehicle with high clearance, **rent something capable**. I drove my Honda CR-V first time - big mistake. The roads are rough. Go for a Toyota Prado, Land Rover, or something similar.
@@ -166,7 +166,7 @@ If you have time, detour to Leshan to see the giant Buddha. It's the largest sto
 
 ### Internet & Communication
 - **Cell service**: Most areas have 4G, but it's spotty
-- **VPN**: You'll need one for Google Maps and messaging apps. See our [eSIM & VPN guide](posts/internet-connection-china-esim-vpn-guide/) for recommendations that work in China.
+- **[VPN](/posts/internet-connection-china-esim-vpn-guide/)**: You'll need one for Google Maps and messaging apps. See our [[eSIM](/posts/internet-connection-china-esim-vpn-guide/) & VPN guide](posts/internet-connection-china-esim-vpn-guide/) for recommendations that work in China.
 
 ## Final Thoughts: Why This Trip Changed My Life
 
@@ -189,3 +189,13 @@ So what are you waiting for? Pack your bags, grab your passport, and let's go ex
 ---
 
 *Disclaimer: This post contains affiliate links. If you make a purchase through these links, I may earn a small commission at no extra cost to you. All recommendations are based on my personal experience.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

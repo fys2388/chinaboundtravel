@@ -160,3 +160,13 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
 - [The Great Wall: Beyond the Tourist Trail](/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
 - [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

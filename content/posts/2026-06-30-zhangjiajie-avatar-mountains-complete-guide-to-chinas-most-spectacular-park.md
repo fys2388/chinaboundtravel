@@ -189,13 +189,13 @@ Zhangjiajie's food is Hunan-style — spicy, sour, and deeply flavorful. A few m
 
 **2. The Bailong Elevator is a bottleneck.** Weekend morning lines can exceed 2 hours. Go before 7:30 AM, or take the Tianzi Mountain cable car up and ride the elevator down (much shorter lines going down).
 
-**3. Bring a power bank.** Your phone camera will be working overtime, and between that, the Alipay payments, and the DiDi (ride-hailing) app, your battery will be dead by noon.
+**3. Bring a power bank.** Your phone camera will be working overtime, and between that, the [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) payments, and the DiDi (ride-hailing) app, your battery will be dead by noon.
 
 **4. Wear proper hiking shoes.** I saw a woman in flip-flops trying to descend from Yuanjiajie. She was in tears 10 minutes later. The stone steps are uneven, often wet, and occasionally sheer drops. Trail runners or lightweight hiking shoes are ideal.
 
-**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/).
+**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)es-to-avoid-guide/).
 
-**6. Cash is still king in Zhangjiajie.** While Alipay and WeChat Pay are accepted everywhere in the city, some vendors near the park entrance and at the mountain top still prefer cash. Bring ¥200–300 in small bills.
+**6. Cash is still king in Zhangjiajie.** While Alipay and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) are accepted everywhere in the city, some vendors near the park entrance and at the mountain top still prefer cash. Bring ¥200–300 in small bills.
 
 **7. The "local guides" at the gate are hit or miss.** We hired one through our hotel for ¥300/day (~$42), and she was incredible — she knew exactly which trails to take to avoid tour groups. But the guys who approach you at the gate? Skip them. They'll try to upsell you on shopping stops.
 
@@ -220,9 +220,9 @@ You could do it for under $250 if you stay in budget hotels, skip Tianmen Mounta
 
 Between booking DiDi rides, translating menus, and sharing photos, you'll want data. The park has limited WiFi that's spotty at best.
 
-- **eSIM:** The easiest option for short trips. I buy mine from [Airalo](https://www.airalo.com/promo/38j3e4) — their China eSIM gives you 10GB for ~$15, works all over Hunan. [Check plans here →](https://www.airalo.com/promo/38j3e4)
+- **[eSIM](/posts/internet-connection-china-esim-vpn-guide/):** The easiest option for short trips. I buy mine from [Airalo][eSIM](/posts/internet-connection-china-esim-vpn-guide/)ps://www.airalo.com/promo/38j3e4) — their China eSIM gives you 10GB for ~$15, works all over Hunan. [Check plans here →](https://www.airalo.com/promo/38j3e4)
 - **Physical SIM:** Buy a China Unicom SIM at the airport. About ¥50 ($7) for a week of data
-- **VPN:** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. For a full breakdown of internet options in China, including eSIM and VPN recommendations, see our [internet guide for China](/posts/internet-connection-china-esim-vpn-guide/). [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
+- **[VPN](/posts/internet-connection-china-esim-vpn-guide/):** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. For a full breakdown of internet options in China, including eSIM and VPN recommendations, see our [internet guide for China](/posts/internet-connection-china-esim-vpn-guide/). [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
 
 ![Close-up of Zhangjiajie sandstone pillar formations with green vegetation](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.jpg)
 
@@ -262,7 +262,18 @@ And if you found this guide helpful, [bookmark it for your trip planning](/posts
 - [Guilin and Yangshuo: The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/)
 
 **Practical China guides:**
-- [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
+- [China High-Speed Train Survival Guide](/po[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)high-speed-train-survival-guide-booking-classes-and-insider-tips/)
 - [How to Use WeChat Pay as a Foreigner](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
 
 Questions about your Zhangjiajie trip? Drop a comment or DM me on Twitter — [@chinaboundtravel](https://twitter.com/chinaboundtravel).
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

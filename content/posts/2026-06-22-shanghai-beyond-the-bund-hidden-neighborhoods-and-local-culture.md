@@ -99,3 +99,14 @@ Shanghai is a very safe city. However, like any big city, there are some areas t
 Shanghai is a city that has something for everyone. Whether you're interested in exploring the hidden neighborhoods, experiencing the local culture, or just having a good time, there's no shortage of things to do. And with the practical information I've provided, you should be well-prepared to plan your trip. So, what are you waiting for? Book your trip to Shanghai today and start exploring this amazing city. And don't forget to add Chengdu to your itinerary if you have the time. Trust me, you won't be disappointed.
 
 For more China travel guides, explore our [7-Day China Itinerary](posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/), [Shanghai Bund French Concession Guide](posts/shanghai-bund-french-concession-2-day-guide/), and [Sichuan Hotpot Guide](posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

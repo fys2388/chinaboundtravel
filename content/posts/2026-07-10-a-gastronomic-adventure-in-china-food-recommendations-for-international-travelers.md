@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
 description: "Must-try Chinese dishes and restaurant recommendations for international travelers in 2026. Authentic picks from a US expat with 5 years eating across China's provinces."
-canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -113,3 +113,9 @@ If you want to learn more about China travel, be sure to check out these related
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 
 ![A group of friends sitting around a table in a Chinese restaurant, enjoying a meal of hotpot and other dishes. The restaurant is decorated with traditional Chinese artwork and decorations, and the atmosphere is lively and festive.](https://image.pollinations.ai/prompt/A%20group%20of%20friends%20sitting%20around%20a%20table%20in%20a%20Chinese%20restaurant%2C%20enjoying%20a%20meal%20of%20hotpot%20and%20other%20dishes.%20The%20restaurant%20is%20decorated%20with%20traditional%20Chinese%20artwork%20and%20decorations%2C%20and%20the%20atmosphere%20is%20lively%20and%20festive.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=88429&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-tour >}}

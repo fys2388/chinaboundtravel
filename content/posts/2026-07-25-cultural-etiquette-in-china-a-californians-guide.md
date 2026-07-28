@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
 description: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
-canonicalURL: "https://chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

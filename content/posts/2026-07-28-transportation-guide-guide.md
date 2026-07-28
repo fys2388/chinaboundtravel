@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. practical guide based on 200+ rides experience from a US expat based in Chengdu."
 description: "China transportation: complete guide 2026. practical guide based on 200+ rides experience from a US expat based in Chengdu."
-canonicalURL: "https://chinaboundtravel.com/posts/transportation-guide-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/transportation-guide-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

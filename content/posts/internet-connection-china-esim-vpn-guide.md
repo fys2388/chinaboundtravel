@@ -224,3 +224,13 @@ Now go forth and stay connected, my friend. And if this guide saved you from an 
 ---
 
 *Disclaimer: This post contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you. VPN usage in China should comply with local laws and regulations.*
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-insurance >}}
+
+{{< affiliate-esim >}}
+
+{{< affiliate-tour >}}

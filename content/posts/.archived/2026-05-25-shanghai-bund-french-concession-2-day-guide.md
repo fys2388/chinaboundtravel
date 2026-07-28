@@ -140,3 +140,10 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 ---
 
 *Last updated: May 2026 | Joran*
+
+
+{{< affiliate-hotel >}}
+
+{{< affiliate-flight >}}
+
+{{< affiliate-tour >}}
