@@ -160,10 +160,11 @@ ignoreFiles = ["/\\.archived/"]
   hotel = "https://www.hotellook.com/search?marker=730795"
   klook = "https://klook.tpo.li/vrPkmS2v"
   klook_expire_date = "2027-07-24"
-  safetywing = "https://safetywing.com/ambassador/refer/26548976"
+  safetywing = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
   trip = "https://trip.tpo.li/trains?marker=730795"
-  worldnomads = "https://www.worldnomads.com/affiliates/?aid=1234567"
-  allianz = "https://www.allianztravelinsurance.com/cpc/?cid=1234567"
+  flight = "https://aviasales.travelpayouts.com/search?marker=730795"
+  worldnomads = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
+  allianz = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
   partnerizeUserId = "10111425644"
 
 [params.ebook]
