@@ -799,11 +799,36 @@
         "部署工作流优先使用 on: push 触发，而非手动 gh workflow run",
         "GITHUB_TOKEN 需要 contents: write 和 actions: write 权限"
       ]
+    },
+    {
+      "hash": "human_portrait_in_images",
+      "type": "品牌风险",
+      "message": "AI生成的博文配图中出现正面人像/人物照片，与品牌定位不符",
+      "occurrences": 10,
+      "first_seen": "2026-07-24T00:00:00",
+      "last_seen": "2026-07-30T00:00:00",
+      "files": [
+        "多篇博文配图",
+        "social_publisher.py",
+        "joran_blog_generator.py"
+      ],
+      "suggestion": "彻底禁止所有AI图片生成中包含人物/人像/人脸，强化prompt和negative prompt，添加后处理黑名单过滤",
+      "resolved": true,
+      "priority": "P0",
+      "source": "品牌规范 2026-07-30",
+      "prevention_rules": [
+        "所有图片生成prompt必须使用 ZERO people/persons/faces/portraits/humans/crowd/man/woman/child 等绝对否定措辞",
+        "Pollinations.ai URL必须带 negative 参数：person,people,face,portrait,human,figure,crowd,selfie,group photo,tourists,traveler,backpacker",
+        "场景关键词中禁止使用暗示人物的描述（如tourists、backpacker、walking people），改用纯景物描述",
+        "正文图片占位符生成规则明确禁止人物描述",
+        "后处理阶段使用正则检测占位符中的人像关键词并自动清除",
+        "禁止任何形式的人像摄影、人物肖像、团体照片"
+      ]
     }
   ],
-  "resolved_count": 17,
-  "total_errors": 28,
-  "last_updated": "2026-07-30T00:00:00",
+  "resolved_count": 18,
+  "total_errors": 29,
+  "last_updated": "2026-07-30T12:00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

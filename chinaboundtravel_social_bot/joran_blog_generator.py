@@ -100,7 +100,7 @@ LOCATION_KEYWORDS = [
     ("great wall", "Great Wall of China winding through mountains"),
     ("visa", "travel visa document with Chinese flag background"),
     ("packing", "travel suitcase with China travel essentials checklist"),
-    ("safety", "safe travel in China with Chinese cityscape background"),
+    ("safety", "safe travel in China cityscape architecture landscape"),
     ("transportation", "China high-speed train, modern subway system"),
     ("accommodation", "Chinese boutique hotel room interior design"),
     ("food", "Chinese street food market, dumplings, noodles feast"),
@@ -118,16 +118,16 @@ def build_prompt(title, slug):
         if kw in title_lower:
             scene_desc = desc
             break
-    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, no people, no persons, no faces, no portraits, no human figures, empty scene, pure landscape architecture food objects only"
+    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, empty scene, pure landscape architecture food objects only, absolutely no human beings whatsoever"
 
 def try_pollinations(prompt, width=1200, height=630):
     """API #2: Pollinations.ai (free fallback) with negative prompt for better quality"""
     try:
         seed = abs(hash(prompt)) % 100000
         # Enhance prompt with quality modifiers
-        enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus, no people, no persons, no faces, no portraits, no human figures, empty scene"
+        enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, ZERO tourists, empty scene, pure landscape architecture food only"
         # Add negative prompt to avoid distortions and people
-        negative_prompt = "blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, bad anatomy, low quality, watermark, text, person, people, face, portrait, human, figure, crowd, man, woman, child, close-up face"
+        negative_prompt = "blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, bad anatomy, low quality, watermark, text, person, people, face, portrait, human, figure, crowd, man, woman, child, close-up face, selfie, photograph of person, group photo, smiling people, tourists, traveler, backpacker, person walking, person standing, person sitting, silhouette of person, anyone, somebody, human being"
         encoded = requests.utils.quote(enhanced_prompt)
         encoded_negative = requests.utils.quote(negative_prompt)
         url = f"https://image.pollinations.ai/prompt/{encoded}?width={width}&height={height}&nologo=true&seed={seed}&negative={encoded_negative}&model=flux"
@@ -957,6 +957,7 @@ Requirements for HIGH-QUALITY CONTENT:
    - One IN the MIDDLE of the article (around 40-60% mark)
    - One NEAR the conclusion (around 75-85% mark)
    - FORMAT: [Image:detailed description of the scene, including subject, setting, mood, lighting, camera angle]
+   - STRICT RULE: Image descriptions MUST NOT include any human beings, people, persons, faces, portraits, or any living creature. ONLY describe landscapes, architecture, food, objects, scenery - NO PEOPLE AT ALL.
 10. PRACTICAL VALUE: Provide EXTREMELY SPECIFIC tips, hidden gems, local secrets, and actionable advice:
     - Exact addresses or areas to visit (include neighborhood names, subway exits)
     - How much things cost (specific prices in local currency AND USD equivalent)
@@ -1018,6 +1019,7 @@ Requirements:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
    - Format: [Image:detailed description of the scene, including subject, setting, mood]
+   - STRICT RULE: Image descriptions MUST NOT include people, persons, faces, portraits, or any living creatures. ONLY landscapes, architecture, food, objects.
 5. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
    - IMPORTANT: NEVER start with geo-specific greetings like "Hey there, Aussie travelers!"
    - Your voice stays CONSISTENT regardless of audience
@@ -1043,6 +1045,7 @@ RULES:
    - One RIGHT AFTER the introduction (first paragraph)
    - One IN the MIDDLE of the article (around the halfway point)
 3. FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
+   - STRICT RULE: NEVER describe or include any human being, person, face, portrait, or living creature. Only landscapes, architecture, food, objects.
 4. DO NOT USE ![alt text](url) format - ONLY use [Image:xxx] format
 5. Do not change, delete, or rephrase ANY existing words.
 
@@ -1540,13 +1543,32 @@ class BlogGenerator:
         import re
         image_pattern = r'\[\s*Image\s*:\s*([^\]]+)\]'
         image_matches = re.findall(image_pattern, content, re.IGNORECASE)
+        
+        # 人像关键词黑名单 - 检测并清除placeholder中的人像描述
+        HUMAN_KEYWORDS = re.compile(
+            r'\b(people?|person|persons?|human|humans|face|faces|portrait|portraits|'
+            r'man|men|woman|women|child|children|baby|babies|tourists?|travelers?|'
+            r'backpacker|backpackers|group|crowd|couple|family|friends?|'
+            r'selfie|photo of person|photograph of person|silhouette|'
+            r'smiling|laughing|standing|walking|sitting|posing)\b',
+            re.IGNORECASE
+        )
+        
         for idx, placeholder in enumerate(image_matches):
-            print(f"  [ImageGen] Replacing placeholder {idx+1}: {placeholder[:50]}...")
-            img_url = generate_image_url(placeholder, "4:3")
+            cleaned_prompt = placeholder
+            if HUMAN_KEYWORDS.search(placeholder):
+                cleaned_prompt = HUMAN_KEYWORDS.sub('', placeholder)
+                cleaned_prompt = re.sub(r'\s+', ' ', cleaned_prompt).strip()
+                print(f"  [ImageGen] ⚠️ Removed human keywords from placeholder {idx+1}")
+                print(f"    Original: {placeholder[:60]}")
+                print(f"    Cleaned:  {cleaned_prompt[:60]}")
+            
+            print(f"  [ImageGen] Replacing placeholder {idx+1}: {cleaned_prompt[:50]}...")
+            img_url = generate_image_url(cleaned_prompt, "4:3")
             if img_url:
                 old_text = re.search(r'\[\s*Image\s*:\s*' + re.escape(placeholder) + r'\]', content, re.IGNORECASE)
                 if old_text:
-                    new_text = f"![{placeholder}]({img_url})"
+                    new_text = f"![{cleaned_prompt}]({img_url})"
                     content = content[:old_text.start()] + new_text + content[old_text.end():]
                     print(f"  [ImageGen] OK: {img_url[:80]}")
         

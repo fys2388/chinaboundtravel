@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ========== 配置 ==========
 BASE_DIR = Path(__file__).parent.parent
-WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev/publish"
+WORKER_URL = "https://buffer-worker.chinaboundtravel.com/publish"
 SITE_DOMAIN = "chinaboundtravel.com"
 COVER_BASE = "static/img/china-dest"
 POSTS_DIR = BASE_DIR / "content/posts"
@@ -92,31 +92,31 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
     # 构建场景描述
     title_lower = title.lower()
     scene_keywords = {
-        "chengdu": "Chengdu China cityscape pandas bamboo",
-        "beijing": "Beijing China Forbidden City Great Wall",
-        "greatwall": "Great Wall of China mountains scenic",
-        "zhangjiajie": "Zhangjiajie Avatar mountains sandstone pillars",
-        "xian": "Xian China Terracotta Army ancient city",
-        "shanghai": "Shanghai Bund skyline Oriental Pearl night",
+        "chengdu": "Chengdu China skyline pandas bamboo architecture",
+        "beijing": "Beijing China Forbidden City Great Wall architecture",
+        "greatwall": "Great Wall of China mountains scenic landscape",
+        "zhangjiajie": "Zhangjiajie Avatar mountains sandstone pillars landscape",
+        "xian": "Xian China Terracotta Army ancient city walls",
+        "shanghai": "Shanghai Bund skyline Oriental Pearl night architecture",
         "hangzhou": "Hangzhou West Lake pagoda garden traditional",
         "guilin": "Guilin karst mountains Li River landscape",
-        "yunnan": "Yunnan rice terraces Lijiang ancient town",
-        "sichuan": "Sichuan mountains panda bamboo forest",
+        "yunnan": "Yunnan rice terraces Lijiang ancient town scenery",
+        "sichuan": "Sichuan mountains panda bamboo forest nature",
         "food": "Chinese food street market dim sum hotpot colorful dishes",
         "accommodation": "China hotel room interior traditional courtyard boutique",
-        "safety": "China city street safe walking tourists crossing road",
+        "safety": "China city street safe architecture night landscape",
         "transport": "China high-speed train station modern bullet train",
         "visa": "China passport visa stamp travel document airport",
         "payment": "China mobile payment phone scanning QR code alipay wechat",
         "culture": "Chinese temple traditional architecture red lanterns festival",
-        "budget": "China budget travel backpacker street market affordable",
+        "budget": "China budget travel street market affordable goods",
     }
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
-    prompt = f"Professional travel photography of {scene_desc}, cinematic composition, golden hour lighting, vibrant colors, photorealistic, 4k quality, no text no watermark, no people, no persons, no faces, no portraits, no human figures, empty scene, pure landscape architecture food objects only"
+    prompt = f"Ultra-detailed professional travel photography of {scene_desc}, cinematic wide-angle composition, golden hour or blue hour lighting, dramatic shadows, vibrant natural colors, photorealistic, 8k resolution, sharp focus, depth of field, award-winning travel magazine quality, no text, no watermark, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever"
     seed = abs(hash(title)) % 1000000
-    image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux"
+    image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux&negative=person,people,face,portrait,human,figure,crowd,man,woman,child,close-up%20face,selfie,group%20photo,tourists,traveler,backpacker,human%20being"
 
     try:
         print(f"  [CoverGen] Downloading cover image via Pollinations.ai...")
@@ -314,39 +314,98 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
     clean_desc = re.sub(r'\s+', ' ', desc).strip()
     desc_snippet = clean_desc[:180] if len(clean_desc) > 180 else clean_desc
 
-    # 帖子 1: IG 风格主帖，用第一张实景图，注重视觉冲击与情绪共鸣
+    # 帖子 1: IG 风格主帖 - 高情绪价值，故事性强，引导保存和点击
     first_img = available_images[0]
     used_images.add(first_img["url"])
+    
+    hook_emojis = {
+        "food": "🍜", "travel": "✈️", "culture": "🏮", "nature": "🏔️", 
+        "city": "🌆", "budget": "💰", "safety": "🛡️", "visa": "🗺️",
+        "transport": "🚄", "accommodation": "🏨", "general": "✨"
+    }
+    
+    emoji = hook_emojis.get(category, "✨")
+    
+    ig_text = f"""{emoji} {title}
+
+{desc_snippet}
+
+👇 Why you NEED to read this:
+✅ Expert tips from 5 years living in China
+✅ Hidden gems most tourists miss
+✅ Step-by-step guides that actually work
+
+👉 Full article: {url}
+
+{hashtags}"""
+    
     posts.append({
-        "text": f"{title}\n\n{desc_snippet}\n\nRead the full guide: {url}\n\n{hashtags}",
+        "text": ig_text,
         "image": first_img["url"],
         "variant": "ig_main"
     })
 
-    # 帖子 2: Pinterest/X 风格补充帖，用第二张不同的图，注重信息密度与引导点击
+    # 帖子 2: Pinterest 风格 - 信息密度高，实用价值强，适合搜索
     for img in available_images[1:]:
         if img["url"] not in used_images:
             used_images.add(img["url"])
             alt_text = img.get("alt", "")
             if alt_text and len(alt_text) > 10:
-                caption = alt_text[:80]
+                caption = alt_text[:100]
             else:
-                caption = f"More from {title[:50]}"
+                caption = f"Ultimate Guide to {title[:60]}"
+            
+            pin_text = f"""{caption} | China Travel Guide
+
+📌 What you'll learn:
+• How to avoid tourist traps
+• Local secrets from a 5-year expat
+• Budget-friendly tips for travelers
+
+🔗 Full guide: {url}
+
+#ChinaTravel #TravelTips #TravelGuide #Wanderlust #China"""
+            
             posts.append({
-                "text": f"{caption}\n\nDiscover more in our latest guide: {url}\n\n{hashtags}",
+                "text": pin_text,
                 "image": img["url"],
                 "variant": "pin_secondary"
             })
             break
 
-    # 如果只有一张图，复制第一张但换文案（X 短平快风格）
-    if len(posts) < 2 and available_images:
-        first_img = available_images[0]
-        posts.append({
-            "text": f"Travel inspiration: {desc[:120]}...\n\nFull article: {url}\n\n{hashtags}",
-            "image": first_img["url"],
-            "variant": "x_quote"
-        })
+    # 帖子 3: X 风格 - 短平快，话题性强，引发互动
+    x_image = available_images[0] if len(available_images) == 1 else available_images[-1]
+    x_text = f"""{emoji} Just dropped: {title}
+
+I've lived in China for 5 years & here's what I WISH I knew before my first trip:
+
+{desc[:140]}...
+
+Full breakdown: {url}
+
+#ChinaTravel #Travel"""
+    
+    posts.append({
+        "text": x_text,
+        "image": x_image["url"],
+        "variant": "x_promo"
+    })
+
+    # 帖子 4: IG 故事风格 - 提问式，促进互动
+    stories_image = available_images[0]
+    stories_text = f"""Q: What's the BIGGEST mistake tourists make in China?
+
+A: Not using the 144-hour visa-free transit!
+
+Save this guide → {url}
+
+#ChinaTravel #TravelHacks"""
+    
+    posts.append({
+        "text": stories_text,
+        "image": stories_image["url"],
+        "variant": "ig_story"
+    })
 
     return posts[:2]
 
