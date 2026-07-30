@@ -33,6 +33,12 @@ jobs:
         run: |
           pip install requests beautifulsoup4 python-dotenv PyYAML tenacity Pillow
 
+      - name: Setup git config
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          echo "Git config set"
+
       - name: Reset stale daily counters (auto-fix stale state)
         run: |
           python -c "
@@ -49,13 +55,12 @@ jobs:
                   data['daily_social_publish_date'] = today
                   data['daily_social_publish_count'] = 0
                   print(f'[Auto-fix] Reset daily social count for {today}')
-              # Auto-reset monthly count if new month
+              # Auto-reset monthly count if new month (keep history_topics for cooldown)
               expected_reset = f'{month}-01'
               if data.get('last_reset_date', '') != expected_reset:
                   data['month_post_count'] = 0
                   data['last_reset_date'] = expected_reset
-                  data['history_topics'] = []
-                  print(f'[Auto-fix] Reset monthly count for {month}')
+                  print(f'[Auto-fix] Reset monthly count for {month} (preserving history for cooldown)')
               with open(manifest_path, 'w') as f:
                   json.dump(data, f, indent=2, ensure_ascii=False)
               print('Manifest state verified OK')
@@ -112,12 +117,12 @@ jobs:
         if: steps.auto-fix.outputs.fixed == 'true'
         run: hugo --gc --minify
 
-      - name: Commit and push generated posts
+      - name: Commit and push all changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # Add ALL content directories comprehensively
+          # Add ALL changed files comprehensively
           git add content/posts/ 2>/dev/null || true
           git add content/_draft/ 2>/dev/null || true
           git add manifest.json 2>/dev/null || true
@@ -126,16 +131,17 @@ jobs:
           git add layouts/shortcodes/*.html 2>/dev/null || true
           git add static/img/ 2>/dev/null || true
           
+          # Check if there are actual changes to commit
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            echo "Changes detected, committing..."
+            git status
             git commit -m "chore: auto publish Joran blog | $(date '+%Y-%m-%d')"
             git push
             echo "Changes pushed successfully"
           fi
 
-      # GITHUB_TOKEN push 不会触发其他 workflow 的 on:push（GitHub 安全限制）
-      # 所以需要显式触发 deploy-cloudflare-pages workflow
       - name: Trigger Cloudflare Pages deploy
         if: success()
         env:
@@ -153,21 +159,6 @@ jobs:
           echo "=== Running social media distribution ==="
           python chinaboundtravel_social_bot/social_publisher.py 2>&1 | tee /tmp/social_publisher_output.log
           echo "Social media distribution step completed (check log above for any failures)"
-
-      - name: Commit cover image updates
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add content/posts/ 2>/dev/null || true
-          git add static/img/ 2>/dev/null || true
-          git add manifest.json 2>/dev/null || true
-          
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "No cover/image changes to commit"
-          else
-            git commit -m "chore: update post covers for social media | $(date '+%Y-%m-%d')"
-            git push || echo "Push skipped"
-          fi
 
   failure-notification:
     runs-on: ubuntu-latest

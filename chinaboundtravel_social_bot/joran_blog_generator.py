@@ -368,24 +368,27 @@ def generate_seo_description(topic, title):
     
     return description
 
-# 选题库 - 主选题、备选选题、万能选题
+# 选题库 - 主选题、备选选题、万能选题（每个都唯一，不重复）
 TOPIC_LIBRARY = {
     "main": [
-        "transportation guide",
-        "cultural etiquette",
-        "travel safety",
-        "accommodation tips",
-        "food recommendations"
+        "china remote work guide",
+        "china photography guide",
+        "china family travel tips",
+        "chinese language survival phrases",
+        "china bargaining and shopping guide"
     ],
     "alternate": [
-        "off-the-beaten-path routes",
-        "visa and entry requirements",
-        "family travel tips"
+        "off-the-beaten-path routes in china",
+        "china business culture etiquette",
+        "china coffee shop culture",
+        "street food safety in china"
     ],
     "universal": [
-        "Essential Safety Tips for First-Time Travellers in China",
-        "Must-Try Traditional Chinese Food for Overseas Visitors",
-        "Basic Cultural Etiquette While Traveling Around China"
+        "Essential Money-Saving Tips for China Travel",
+        "How to Stay Connected in China Without Hassle",
+        "Understanding Chinese Hospitality: What to Expect",
+        "Navigating Chinese Markets Like a Pro",
+        "Quick Guide to Chinese Public Holidays"
     ]
 }
 
@@ -437,18 +440,92 @@ class ManifestManager:
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.data, f, indent=2)
     
+    # 选题分类映射 - 用于检测同类选题重复
+    TOPIC_CATEGORY_MAP = {
+        "transportation guide": "transportation",
+        "cultural etiquette": "cultural",
+        "travel safety": "safety",
+        "accommodation tips": "accommodation",
+        "food recommendations": "food",
+        "off-the-beaten-path routes": "travel",
+        "visa and entry requirements": "visa",
+        "family travel tips": "travel",
+    }
+    
+    # 每个分类的冷却期（天）
+    CATEGORY_COOLDOWN_DAYS = 21  # 同一category 21天内不能重复
+    
+    def _extract_category(self, topic):
+        """从选题名提取分类"""
+        topic_lower = topic.lower().strip()
+        if topic_lower in self.TOPIC_CATEGORY_MAP:
+            return self.TOPIC_CATEGORY_MAP[topic_lower]
+        
+        # 模糊匹配
+        for keyword, category in self.TOPIC_CATEGORY_MAP.items():
+            if keyword in topic_lower or topic_lower in keyword:
+                return category
+        
+        # 基于关键词分类
+        keyword_category = {
+            "transport": "transportation",
+            "train": "transportation",
+            "visa": "visa",
+            "entry": "visa",
+            "etiquette": "cultural",
+            "cultural": "cultural",
+            "custom": "cultural",
+            "safety": "safety",
+            "safe": "safety",
+            "accommodation": "accommodation",
+            "hotel": "accommodation",
+            "stay": "accommodation",
+            "food": "food",
+            "eat": "food",
+            "restaurant": "food",
+            "dining": "food",
+            "travel": "travel",
+            "tour": "travel",
+        }
+        
+        for keyword, category in keyword_category.items():
+            if keyword in topic_lower:
+                return category
+        
+        return "general"
+    
     def check_topic_repeat(self, topic, geo_region, days=30):
         cutoff_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
         for record in self.data["history_topics"]:
+            # 精确匹配：完全相同的topic + geo_region
             if record["topic"] == topic and record["geo_region"] == geo_region:
                 if record["create_date"] >= cutoff_date:
                     return True
         return False
     
+    def check_category_cooldown(self, topic, days=None):
+        """检查选题分类是否在冷却期内"""
+        if days is None:
+            days = self.CATEGORY_COOLDOWN_DAYS
+        
+        category = self._extract_category(topic)
+        if category == "general":
+            return False  # general分类不做冷却限制
+        
+        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+        for record in self.data["history_topics"]:
+            record_category = record.get("category", self._extract_category(record["topic"]))
+            if record_category == category and record["create_date"] >= cutoff_date:
+                print(f"[Manifest] Category '{category}' in cooldown until {cutoff_date}")
+                return True
+        return False
+    
     def add_topic(self, topic, geo_region):
+        category = self._extract_category(topic)
         self.data["history_topics"].append({
             "topic": topic,
             "geo_region": geo_region,
+            "category": category,
             "create_date": datetime.now(timezone.utc).strftime("%Y-%m-%d")
         })
         # 同步更新 topic_pool.json 的 status 为 used，防止重复选题
@@ -824,13 +901,13 @@ class AIEngine:
                 post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)  (tags: {tags})\n"
             post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
-        prompt = f"""Joran: California American who has lived in Chengdu for over 10 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
+        prompt = f"""Joran: California American who has lived in Chengdu for 5 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
 
 Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
 Audience: {region_context[geo_region]["audience_hint"]}
 
 IMPORTANT PERSONA RULES:
-- ALWAYS write as Joran (California native, 10+ years in Chengdu) - NEVER change your voice or greeting based on audience
+- ALWAYS write as Joran (California native, 5 years in Chengdu) - NEVER change your voice or greeting based on audience
 - NEVER start with "Hey there, [country] travelers!" or any geo-specific greeting
 - Use a universal, warm opening like "If you're planning a trip to..." or "Let me tell you about..." or start with a personal story
 - Geo-region affects ONLY practical details: mention {region_context[geo_region]["currency"]} for prices, note "{region_context[geo_region]["visa_note"]}" when discussing visas
@@ -859,35 +936,47 @@ User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 Requirements for HIGH-QUALITY CONTENT:
 1. TONE: Conversational, witty, authoritative - like chatting with a trusted friend who's been there and done it
 2. DEPTH: Provide EXTREMELY detailed, actionable insights - NO surface-level tips. Go DEEP into topics.
-3. PERSONAL ANECDOTES: Include MULTIPLE SPECIFIC stories from my 10+ years in China:
+3. PERSONAL ANECDOTES: Include MULTIPLE SPECIFIC stories from my 5 years in China:
    - Funny mishaps (getting lost, language barriers, cultural misunderstandings)
    - Street food adventures (specific stalls, weird foods tried)
    - Transportation stories (crazy taxi rides, subway experiences)
    - Personal connections (local friends, unexpected friendships)
-4. COMPARISONS: Mention California roots NATURALLY for humorous comparison (e.g., "In LA we have In-N-Out, but in Chengdu...")
-5. MOVIE REFERENCES: Include 2-3 funny movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven', Chinese bureaucracy like 'The Matrix')
-6. LENGTH: MINIMUM 2000 words - provide COMPREHENSIVE coverage with plenty of details
+   - Cultural immersion moments (learning to cook Sichuan food, celebrating Chinese holidays)
+4. COMPARISONS: Mention California roots NATURALLY for humorous comparison (e.g., "In LA we have In-N-Out, but in Chengdu...", "This is like Disneyland but with pandas and spicy noodles")
+5. MOVIE REFERENCES: Include 3-4 HILARIOUS movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven', Chinese bureaucracy like 'The Matrix', finding good street food like 'Indiana Jones searching for the Holy Grail')
+6. LENGTH: MINIMUM 2500 words - provide ULTRA-COMPREHENSIVE coverage with EXTREME DETAILS
 7. STRUCTURE: 
-   - Engaging introduction with a strong hook (story, surprising fact, or question)
-   - 5-7 DETAILED H2 sections (##) with SUBPOINTS and EXAMPLES
-   - Each section must have PRACTICAL takeaways/summary
-   - Memorable conclusion with call to action and personal reflection
-8. INTERNAL LINKS: Include at least 4 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 4+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
-9. IMAGE PLACEHOLDERS: MUST include EXACTLY 2 image placeholders:
+   - POWERFUL introduction with a STRONG hook (dramatic story, shocking fact, or provocative question)
+   - 6-8 EXTREMELY DETAILED H2 sections (##) with MULTIPLE SUBPOINTS and CONCRETE EXAMPLES
+   - Each section MUST have CLEAR PRACTICAL takeaways/summary box
+   - MEMORABLE conclusion with heartfelt call to action and personal reflection
+   - Include QUOTES from locals or fellow travelers for authenticity
+8. INTERNAL LINKS: Include at least 6 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 6+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
+9. IMAGE PLACEHOLDERS: MUST include EXACTLY 3 image placeholders:
    - One RIGHT AFTER the introduction
    - One IN the MIDDLE of the article (around 40-60% mark)
-   - FORMAT: [Image:detailed description of the scene, including subject, setting, mood]
-10. PRACTICAL VALUE: Provide SPECIFIC tips, hidden gems, local secrets, and actionable advice:
-    - Exact addresses or areas to visit
-    - How much things cost (specific prices)
-    - Best times to go
-    - What to avoid
-    - Step-by-step guides
-11. CULTURAL INSIGHTS: Explain the 'WHY' behind Chinese customs and behaviors - give historical/cultural context
+   - One NEAR the conclusion (around 75-85% mark)
+   - FORMAT: [Image:detailed description of the scene, including subject, setting, mood, lighting, camera angle]
+10. PRACTICAL VALUE: Provide EXTREMELY SPECIFIC tips, hidden gems, local secrets, and actionable advice:
+    - Exact addresses or areas to visit (include neighborhood names, subway exits)
+    - How much things cost (specific prices in local currency AND USD equivalent)
+    - Best times to go (specific hours, days, seasons)
+    - What to avoid (specific scams, tourist traps, dangerous areas)
+    - Step-by-step guides with screenshots or photo descriptions
+    - Local hacks (best way to order food, how to bargain, secret entrances)
+11. CULTURAL INSIGHTS: Explain the 'WHY' behind Chinese customs and behaviors - give DEEP historical/cultural context
+    - Include local legends or folklore
+    - Explain cultural significance of food, traditions, landmarks
+    - Compare/contrast with Western equivalents
 12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor, NOT the main dish
 13. NO sensitive topics: government, politics, religion, or controversial issues
-14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these naturally throughout
-15. AUTHORITY: Reference my 10+ years experience frequently but naturally
+14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these THOROUGHLY throughout
+15. AUTHORITY: Reference my 5 years experience FREQUENTLY but naturally
+16. READABILITY: Use SHORT paragraphs (2-4 sentences max), bullet points, bold text for emphasis
+17. EMOTIONAL CONNECTION: Make readers FEEL like they're there with you - use vivid sensory details (sights, sounds, smells, tastes)
+18. ACTIONABILITY: EVERY section must end with "YOU SHOULD..." or "HERE'S WHAT YOU DO..." advice
+19. UNIQUENESS: Find angles NO OTHER travel blog covers - go beyond the obvious tourist spots
+20. AUTHENTICITY: Write like a REAL person, not a corporate travel agency - use slang, admit mistakes, share vulnerabilities
 
 Output ONLY the article content with proper Markdown formatting."""
         
@@ -1089,7 +1178,13 @@ class BlogGenerator:
     
     def check_cooldown(self, topic, days=7):
         """检查选题是否在冷却期内（7天）"""
-        return self.manifest.check_topic_repeat(topic, "global", days)
+        # 检查精确选题冷却
+        if self.manifest.check_topic_repeat(topic, "global", days):
+            return True
+        # 检查分类冷却（21天）
+        if self.manifest.check_category_cooldown(topic):
+            return True
+        return False
 
     def load_topic_pool(self):
         """加载外部选题库 (config/topic_pool.json)"""
@@ -1104,7 +1199,7 @@ class BlogGenerator:
         return []
 
     def select_topic(self, attempt=1):
-        """选择选题 - 优先从外部选题库选择，只有选题库为空时才回退到内置选题库"""
+        """选择选题 - 三级降级策略防止重复"""
         geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
         if geo_convert_rates:
             regions = list(geo_convert_rates.keys())
@@ -1113,13 +1208,15 @@ class BlogGenerator:
         else:
             geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
-        # 优先从外部选题库选择（100%概率，不再回退到旧选题库）
+        # 优先从外部选题库选择
         topic_pool = self.load_topic_pool()
         if topic_pool:
+            # 尝试当前地域 + 冷却期外
             available_topics = [t for t in topic_pool 
                               if t.get("status") == "pending"
                               and t.get("geo") == geo_region
-                              and t.get("title") not in self.used_topics]
+                              and t.get("title") not in self.used_topics
+                              and not self.check_cooldown(t.get("title", ""))]
             
             if available_topics:
                 topic_data = random.choice(available_topics)
@@ -1127,10 +1224,11 @@ class BlogGenerator:
                 self.used_topics.add(topic)
                 return topic, geo_region
             
-            # 如果当前地域没有可用选题，尝试其他地域
+            # 尝试所有地域 + 冷却期外
             available_topics = [t for t in topic_pool 
                               if t.get("status") == "pending"
-                              and t.get("title") not in self.used_topics]
+                              and t.get("title") not in self.used_topics
+                              and not self.check_cooldown(t.get("title", ""))]
             
             if available_topics:
                 topic_data = random.choice(available_topics)
@@ -1139,7 +1237,7 @@ class BlogGenerator:
                 self.used_topics.add(topic)
                 return topic, geo_region
         
-        # 只有当外部选题库为空或所有选题都已使用时，才回退到内置选题库
+        # 内置选题库 - 三级降级策略
         if attempt == 1:
             topics = TOPIC_LIBRARY["main"]
         elif attempt == 2:
@@ -1147,15 +1245,75 @@ class BlogGenerator:
         else:
             topics = TOPIC_LIBRARY["universal"]
         
+        # Level 1: 完全冷却期外的选题
         available_topics = [t for t in topics if t not in self.used_topics and not self.check_cooldown(t)]
-        
         if available_topics:
             topic = random.choice(available_topics)
+            self.used_topics.add(topic)
+            return topic, geo_region
+        
+        # Level 2: 选择分类冷却期外的选题（跳过精确匹配，但类别不同）
+        recent_categories = self._get_recent_categories()
+        fresh_category_topics = [
+            t for t in topics 
+            if t not in self.used_topics
+            and self.manifest._extract_category(t) not in recent_categories
+        ]
+        if fresh_category_topics:
+            topic = random.choice(fresh_category_topics)
+            print(f"[Topic] Level 2: category-fresh topic: {topic}")
+            self.used_topics.add(topic)
+            return topic, geo_region
+        
+        # Level 3: 选择最久未使用的分类的选题
+        oldest_topic = self._pick_oldest_category_topic(topics)
+        if oldest_topic:
+            topic = oldest_topic
+            print(f"[Topic] Level 3: oldest-category topic: {topic}")
         else:
+            # 最终兜底（所有方法都失败）
             topic = random.choice(topics)
+            print(f"[Topic] Level 4: fallback topic (may repeat): {topic}")
         
         self.used_topics.add(topic)
         return topic, geo_region
+    
+    def _get_recent_categories(self):
+        """获取最近21天内生成过的选题分类"""
+        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=self.manifest.CATEGORY_COOLDOWN_DAYS)).strftime("%Y-%m-%d")
+        recent_cats = set()
+        for record in self.manifest.data["history_topics"]:
+            if record["create_date"] >= cutoff_date:
+                recent_cats.add(record.get("category", "general"))
+        return recent_cats
+    
+    def _pick_oldest_category_topic(self, topics):
+        """选择最久未生成的分类对应的选题"""
+        # 统计每个分类的最后使用时间
+        category_last_used = {}
+        for record in self.manifest.data["history_topics"]:
+            cat = record.get("category", "general")
+            date = record["create_date"]
+            if cat not in category_last_used or date < category_last_used[cat]:
+                category_last_used[cat] = date
+        
+        if not category_last_used:
+            return None
+        
+        # 找出最久未使用的分类
+        oldest_cat = min(category_last_used, key=category_last_used.get)
+        
+        # 从该分类中选一个未使用的选题
+        for t in topics:
+            if self.manifest._extract_category(t) == oldest_cat and t not in self.used_topics:
+                return t
+        
+        # 如果该分类没有未使用的选题，就用该分类的任何选题
+        for t in topics:
+            if self.manifest._extract_category(t) == oldest_cat:
+                return t
+        
+        return None
     
     def generate_slug(self, title):
         slug = re.sub(r'[^a-z0-9\s-]', '', title.lower())
@@ -1519,28 +1677,9 @@ class BlogGenerator:
             print(f"[Attempt {attempt}] Social media publishing failed: {e}")
             self.notifier.send_notification("⚠️ 社媒发布失败", f"文章《{title}》社媒发布时出错: {str(e)}")
         
-        # ========== 自动推送Git触发部署 ==========
-        try:
-            import subprocess
-            print(f"[Attempt {attempt}] Pushing to Git to trigger deployment...")
-            
-            subprocess.run(["git", "add", "."], cwd=BASE_DIR, check=True, capture_output=True)
-            subprocess.run(["git", "reset", "HEAD", ".env"], cwd=BASE_DIR, check=True, capture_output=True)
-            subprocess.run(["git", "reset", "HEAD", ".env.*"], cwd=BASE_DIR, check=True, capture_output=True)
-            
-            result = subprocess.run(["git", "diff", "--cached", "--name-only"], cwd=BASE_DIR, capture_output=True, text=True)
-            if not result.stdout.strip():
-                print(f"[Attempt {attempt}] No files to commit, skipping git push")
-            else:
-                commit_msg = f"feat: publish new post - {title}"
-                subprocess.run(["git", "commit", "-m", commit_msg], cwd=BASE_DIR, check=True, capture_output=True)
-                subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, check=True, capture_output=True)
-                
-                print(f"[Attempt {attempt}] Git push successful! Deployment triggered.")
-                self.notifier.send_notification("🚀 部署已触发", f"文章《{title}》已推送到GitHub，Cloudflare Pages自动部署中...")
-        except Exception as e:
-            print(f"[Attempt {attempt}] Git push failed: {e}")
-            self.notifier.send_notification("⚠️ Git推送失败", f"文章《{title}》Git推送失败，请手动部署: {str(e)}")
+        # ========== Git操作由GitHub Actions工作流处理 ==========
+        print(f"[Attempt {attempt}] Blog post ready for Git commit (handled by workflow)")
+        self.notifier.send_notification("📝 博文已生成，等待工作流提交", f"文章《{title}》已生成，将由GitHub Actions工作流负责提交和部署")
         
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
