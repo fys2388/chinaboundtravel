@@ -733,11 +733,77 @@
         "两者不应完全相同，至少在措辞和角度上有差异",
         "生成后在审核中检查 description == summary 的情况"
       ]
+    },
+    {
+      "hash": "cover_image_missing",
+      "type": "技术配置",
+      "message": "博文 frontmatter 中引用的封面图文件在磁盘上不存在（如 china-high-speed-rail-guide.jpg），Hugo 回退到默认图片导致多篇博文使用相同封面",
+      "occurrences": 3,
+      "first_seen": "2026-07-24T00:00:00",
+      "last_seen": "2026-07-28T00:00:00",
+      "files": [
+        "2026-07-24-transportation-guide-guide.md",
+        "2026-07-26-transportation-guide-guide.md",
+        "2026-07-28-transportation-guide-guide.md"
+      ],
+      "suggestion": "生成博文后必须确保封面图文件已下载到 static/img/china-dest/{category}/ 目录，文件名与 frontmatter 中的 cover.image 路径一致",
+      "resolved": true,
+      "priority": "P0",
+      "source": "故障排查 2026-07-30",
+      "prevention_rules": [
+        "博文生成后验证封面图文件是否存在于磁盘",
+        "使用 Pollinations.ai 生成封面图时使用确定性 seed，文件名必须与博文 slug 匹配",
+        "生成后运行检查脚本：验证所有博文引用的封面图文件是否存在",
+        "在 CI/CD 流程中添加封面图完整性检查步骤"
+      ]
+    },
+    {
+      "hash": "python_git_operations_failure",
+      "type": "技术配置",
+      "message": "Python 脚本内执行 git commit/push 操作，因 GitHub Actions 中未配置 git user.email/user.name 导致 exit status 128，博文生成工作流失败",
+      "occurrences": 5,
+      "first_seen": "2026-07-25T00:00:00",
+      "last_seen": "2026-07-30T00:00:00",
+      "files": [
+        "joran_blog_generator.py"
+      ],
+      "suggestion": "Python 脚本不应直接执行 git 操作，所有 git commit/push 由 GitHub Actions 工作流统一处理；工作流中必须先设置 git config 再执行 git 操作",
+      "resolved": true,
+      "priority": "P0",
+      "source": "故障排查 2026-07-30",
+      "prevention_rules": [
+        "禁止在 Python 脚本中执行 git add/commit/push 操作",
+        "所有 git 操作必须集中在 GitHub Actions 工作流的 YAML 步骤中",
+        "工作流开始时必须先执行 git config --local user.email 和 user.name",
+        "Python 脚本只负责生成内容文件，不负责版本控制",
+        "工作流中 git commit 步骤应检查 git diff 确保有变更才提交"
+      ]
+    },
+    {
+      "hash": "gh_cli_not_available",
+      "type": "技术配置",
+      "message": "工作流中使用 gh CLI (gh workflow run) 触发其他工作流，但 gh 可能未安装或 GITHUB_TOKEN 缺少 workflow 权限",
+      "occurrences": 2,
+      "first_seen": "2026-07-29T00:00:00",
+      "last_seen": "2026-07-30T00:00:00",
+      "files": [
+        "weekly-blog-update.yml"
+      ],
+      "suggestion": "gh workflow run 步骤设置 continue-on-error: true，并检查 gh 是否可用；部署工作流应通过 push 事件自动触发而非依赖 gh CLI",
+      "resolved": true,
+      "priority": "P1",
+      "source": "故障排查 2026-07-30",
+      "prevention_rules": [
+        "gh CLI 相关步骤必须设置 continue-on-error: true",
+        "检查 gh 是否可用：command -v gh &> /dev/null",
+        "部署工作流优先使用 on: push 触发，而非手动 gh workflow run",
+        "GITHUB_TOKEN 需要 contents: write 和 actions: write 权限"
+      ]
     }
   ],
-  "resolved_count": 14,
-  "total_errors": 25,
-  "last_updated": "2026-07-13T00:00:00",
+  "resolved_count": 17,
+  "total_errors": 28,
+  "last_updated": "2026-07-30T00:00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

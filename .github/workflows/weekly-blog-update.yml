@@ -144,12 +144,17 @@ jobs:
 
       - name: Trigger Cloudflare Pages deploy
         if: success()
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "=== Triggering Cloudflare Pages deploy workflow ==="
-          gh workflow run deploy-cloudflare-pages.yml --ref main
-          echo "Deploy workflow triggered (may take 1-2 min to start)"
+          if command -v gh &> /dev/null; then
+            gh workflow run deploy-cloudflare-pages.yml --ref main || echo "gh workflow run failed (non-critical, deploy also triggered by push)"
+          else
+            echo "gh CLI not available, skipping (deploy will be triggered automatically by push to main)"
+          fi
+          echo "Deploy trigger step completed"
 
       - name: Run social media distribution
         continue-on-error: true
