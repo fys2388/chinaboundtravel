@@ -115,7 +115,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
     prompt = f"Ultra-detailed professional travel photography of {scene_desc}, cinematic wide-angle composition, golden hour or blue hour lighting, dramatic shadows, vibrant natural colors, photorealistic, 8k resolution, sharp focus, depth of field, award-winning travel magazine quality, no text, no watermark, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever"
-    seed = abs(hash(title)) % 1000000
+    seed = abs(hash(f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}")) % 1000000
     image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux&negative=person,people,face,portrait,human,figure,crowd,man,woman,child,close-up%20face,selfie,group%20photo,tourists,traveler,backpacker,human%20being"
 
     try:

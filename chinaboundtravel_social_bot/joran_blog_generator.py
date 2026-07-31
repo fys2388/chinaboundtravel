@@ -120,10 +120,11 @@ def build_prompt(title, slug):
             break
     return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, empty scene, pure landscape architecture food objects only, absolutely no human beings whatsoever"
 
-def try_pollinations(prompt, width=1200, height=630):
+def try_pollinations(prompt, width=1200, height=630, seed=None):
     """API #2: Pollinations.ai (free fallback) with negative prompt for better quality"""
     try:
-        seed = abs(hash(prompt)) % 100000
+        if seed is None:
+            seed = abs(hash(f"{prompt}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-%f')}")) % 100000
         # Enhance prompt with quality modifiers
         enhanced_prompt = f"{prompt}, professional photography, high quality, natural lighting, realistic, well-composed, sharp focus, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, ZERO tourists, empty scene, pure landscape architecture food only"
         # Add negative prompt to avoid distortions and people
@@ -141,9 +142,12 @@ def try_pollinations(prompt, width=1200, height=630):
         print(f"  [{IMAGE_API_CONFIG['pollinations']['name']}] {type(e).__name__}: {str(e)[:80]}")
         return None
 
-def generate_image_url(prompt, size_str="16:9"):
+def generate_image_url(prompt, size_str="16:9", seed=None):
     """主入口：按优先级尝试所有可用 API，返回第一个成功的图片 URL"""
     print(f"\n[ImageGen] 开始生成 (prompt: {prompt[:60]}...)")
+    
+    if seed is None:
+        seed = abs(hash(f"{prompt}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-%f')}")) % 1000000
     
     size_map = {
         "16:9": {"w": 1792, "h": 1024},
@@ -160,9 +164,8 @@ def generate_image_url(prompt, size_str="16:9"):
         result = None
         try:
             if api_id == "pollinations":
-                result = try_pollinations(prompt, size_cfg["w"], size_cfg["h"])
+                result = try_pollinations(prompt, size_cfg["w"], size_cfg["h"], seed=seed)
             elif api_id == "picsum":
-                seed = abs(hash(prompt)) % 1000000
                 picsum_url = f"https://picsum.photos/seed/{seed}/{size_cfg['w']}/{size_cfg['h']}"
                 r = requests.get(picsum_url, timeout=30, proxies=PROXIES, verify=False, stream=True)
                 if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
@@ -177,13 +180,13 @@ def generate_image_url(prompt, size_str="16:9"):
             print(f"  ❌ [{cfg['name']}] 失败，尝试下一个...")
     
     print(f"\n  ⚠️ 所有 API 均失败，返回最终兜底图")
-    final_seed = abs(hash(prompt)) % 1000000
-    return f"https://picsum.photos/seed/{final_seed}/{size_cfg['w']}/{size_cfg['h']}"
+    return f"https://picsum.photos/seed/{seed}/{size_cfg['w']}/{size_cfg['h']}"
 
 def generate_cover_for_post(title, slug):
-    """生成博文封面图"""
+    """生成博文封面图 - 使用slug+日期作为seed确保唯一性"""
     prompt = build_prompt(title, slug)
-    return generate_image_url(prompt, "16:9")
+    unique_seed = abs(hash(f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}")) % 1000000
+    return generate_image_url(prompt, "16:9", seed=unique_seed)
 
 
 GEO_REGIONS = ["EU", "US", "AU"]
@@ -1202,7 +1205,7 @@ class BlogGenerator:
         return []
 
     def select_topic(self, attempt=1):
-        """选择选题 - 三级降级策略防止重复"""
+        """选择选题 - 优先使用topic_pool真实选题，杜绝通用名称"""
         geo_convert_rates = self.manifest.data.get("geo_convert_rate", {})
         if geo_convert_rates:
             regions = list(geo_convert_rates.keys())
@@ -1211,75 +1214,75 @@ class BlogGenerator:
         else:
             geo_region = random.choices(GEO_REGIONS, weights=GEO_WEIGHTS)[0]
         
-        # 优先从外部选题库选择
         topic_pool = self.load_topic_pool()
+        
+        # === 阶段1: 从topic_pool中挑选（所有pending选题都是真实唯一的好选题）===
         if topic_pool:
-            # 尝试当前地域 + 冷却期外
-            available_topics = [t for t in topic_pool 
-                              if t.get("status") == "pending"
-                              and t.get("geo") == geo_region
-                              and t.get("title") not in self.used_topics
-                              and not self.check_cooldown(t.get("title", ""))]
+            # 优先匹配当前地域 + pending + 未使用
+            candidates = [t for t in topic_pool 
+                         if t.get("status") == "pending"
+                         and t.get("geo") == geo_region
+                         and t.get("title") not in self.used_topics]
             
-            if available_topics:
-                topic_data = random.choice(available_topics)
-                topic = topic_data["title"]
-                self.used_topics.add(topic)
-                return topic, geo_region
+            # 如果没有匹配地域的，放宽到所有地域
+            if not candidates:
+                candidates = [t for t in topic_pool 
+                             if t.get("status") == "pending"
+                             and t.get("title") not in self.used_topics]
             
-            # 尝试所有地域 + 冷却期外
-            available_topics = [t for t in topic_pool 
-                              if t.get("status") == "pending"
-                              and t.get("title") not in self.used_topics
-                              and not self.check_cooldown(t.get("title", ""))]
-            
-            if available_topics:
-                topic_data = random.choice(available_topics)
-                topic = topic_data["title"]
-                geo_region = topic_data.get("geo", geo_region)
-                self.used_topics.add(topic)
-                return topic, geo_region
+            # 对candidates进行冷却期过滤
+            if candidates:
+                fresh_candidates = [t for t in candidates 
+                                   if not self.check_cooldown(t.get("title", ""))]
+                
+                if not fresh_candidates:
+                    # 所有candidates都在冷却期，清理过期的通用历史记录后重试
+                    self._clean_generic_history_topics()
+                    fresh_candidates = [t for t in candidates 
+                                       if not self.check_cooldown(t.get("title", ""))]
+                
+                if fresh_candidates:
+                    topic_data = random.choice(fresh_candidates)
+                    topic = topic_data["title"]
+                    geo_region = topic_data.get("geo", geo_region)
+                    self.used_topics.add(topic)
+                    print(f"[Topic] Selected from topic_pool: {topic[:60]} (geo={geo_region})")
+                    return topic, geo_region
         
-        # 内置选题库 - 三级降级策略
-        if attempt == 1:
-            topics = TOPIC_LIBRARY["main"]
-        elif attempt == 2:
-            topics = TOPIC_LIBRARY["alternate"]
-        else:
-            topics = TOPIC_LIBRARY["universal"]
+        # === 阶段2: 兜底 - 使用内置选题库，但添加日期随机化确保唯一性 ===
+        fallback_sets = [TOPIC_LIBRARY["main"], TOPIC_LIBRARY["alternate"], TOPIC_LIBRARY["universal"]]
+        topics = fallback_sets[min(attempt - 1, len(fallback_sets) - 1)]
         
-        # Level 1: 完全冷却期外的选题
-        available_topics = [t for t in topics if t not in self.used_topics and not self.check_cooldown(t)]
-        if available_topics:
-            topic = random.choice(available_topics)
+        available = [t for t in topics if t not in self.used_topics and not self.check_cooldown(t)]
+        if available:
+            topic = random.choice(available)
             self.used_topics.add(topic)
+            print(f"[Topic] Selected fallback: {topic}")
             return topic, geo_region
         
-        # Level 2: 选择分类冷却期外的选题（跳过精确匹配，但类别不同）
-        recent_categories = self._get_recent_categories()
-        fresh_category_topics = [
-            t for t in topics 
-            if t not in self.used_topics
-            and self.manifest._extract_category(t) not in recent_categories
+        # 终极兜底：生成一个带日期戳的唯一选题（确保永远不重复）
+        unique_topic = f"{random.choice(topics)} {datetime.now(timezone.utc).strftime('%Y%m%d')}"
+        self.used_topics.add(unique_topic)
+        print(f"[Topic] Selected unique fallback: {unique_topic}")
+        return unique_topic, geo_region
+    
+    def _clean_generic_history_topics(self):
+        """清理manifest中的通用选题记录（如transportation guide等），避免它们阻塞真实选题的冷却期"""
+        GENERIC_TOPIC_PATTERNS = [
+            "transportation guide", "food recommendations", "accommodation tips",
+            "travel safety", "cultural etiquette", "budget planning",
+            "off-the-beaten-path routes", "china family travel tips",
+            "chinese language survival phrases"
         ]
-        if fresh_category_topics:
-            topic = random.choice(fresh_category_topics)
-            print(f"[Topic] Level 2: category-fresh topic: {topic}")
-            self.used_topics.add(topic)
-            return topic, geo_region
+        history = self.manifest.data.get("history_topics", [])
+        original_count = len(history)
+        cleaned = [r for r in history if not any(p in r.get("topic", "").lower() for p in GENERIC_TOPIC_PATTERNS)]
         
-        # Level 3: 选择最久未使用的分类的选题
-        oldest_topic = self._pick_oldest_category_topic(topics)
-        if oldest_topic:
-            topic = oldest_topic
-            print(f"[Topic] Level 3: oldest-category topic: {topic}")
-        else:
-            # 最终兜底（所有方法都失败）
-            topic = random.choice(topics)
-            print(f"[Topic] Level 4: fallback topic (may repeat): {topic}")
-        
-        self.used_topics.add(topic)
-        return topic, geo_region
+        if len(cleaned) < original_count:
+            removed = original_count - len(cleaned)
+            print(f"[Manifest] Cleaned {removed} generic topic entries from history (polluted entries)")
+            self.manifest.data["history_topics"] = cleaned
+            self.manifest.save()
     
     def _get_recent_categories(self):
         """获取最近21天内生成过的选题分类"""
