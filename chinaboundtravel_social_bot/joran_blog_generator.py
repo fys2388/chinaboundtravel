@@ -1553,9 +1553,17 @@ class BlogGenerator:
             r'man|men|woman|women|child|children|baby|babies|tourists?|travelers?|'
             r'backpacker|backpackers|group|crowd|couple|family|friends?|'
             r'selfie|photo of person|photograph of person|silhouette|'
-            r'smiling|laughing|standing|walking|sitting|posing)\b',
+            r'smiling|laughing|standing|walking|sitting|posing|'
+            r'traveler|travel|visit|explore|discover)\b',
             re.IGNORECASE
         )
+        
+        # 按位置生成纯景物/建筑/美食prompt（彻底杜绝人像）
+        LANDSCAPE_PROMPTS = [
+            f"Ultra-detailed professional travel photography of China {category} landscape, cinematic wide-angle composition, golden hour lighting, dramatic shadows, vibrant natural colors, photorealistic, 8k resolution, sharp focus, depth of field, award-winning travel magazine quality, no text, no watermark, ZERO people, ZERO persons, ZERO faces, ZERO human beings, pure landscape architecture food objects scenery only",
+            f"China {category} scenic landscape panorama, professional travel photography, dramatic sky, beautiful natural scenery, traditional architecture, cinematic composition, high detail, photorealistic, 8k, no people, no persons, no faces, absolutely no human beings",
+            f"China {category} close-up detail shot, professional travel photography, intricate architectural details, local food specialties, artistic composition, warm lighting, vibrant colors, professional photography, no people, no human beings, pure objects landscape only",
+        ]
         
         for idx, placeholder in enumerate(image_matches):
             cleaned_prompt = placeholder
@@ -1566,12 +1574,14 @@ class BlogGenerator:
                 print(f"    Original: {placeholder[:60]}")
                 print(f"    Cleaned:  {cleaned_prompt[:60]}")
             
-            print(f"  [ImageGen] Replacing placeholder {idx+1}: {cleaned_prompt[:50]}...")
-            img_url = generate_image_url(cleaned_prompt, "4:3")
+            # 使用纯景物prompt生成图片（彻底覆盖AI描述中的人像问题）
+            landscape_prompt = LANDSCAPE_PROMPTS[min(idx, len(LANDSCAPE_PROMPTS) - 1)]
+            print(f"  [ImageGen] Generating image {idx+1} with pure landscape prompt (ZERO people)")
+            img_url = generate_image_url(landscape_prompt, "4:3")
             if img_url:
                 old_text = re.search(r'\[\s*Image\s*:\s*' + re.escape(placeholder) + r'\]', content, re.IGNORECASE)
                 if old_text:
-                    new_text = f"![{cleaned_prompt}]({img_url})"
+                    new_text = f"![{cleaned_prompt or landscape_prompt[:80]}]({img_url})"
                     content = content[:old_text.start()] + new_text + content[old_text.end():]
                     print(f"  [ImageGen] OK: {img_url[:80]}")
         
