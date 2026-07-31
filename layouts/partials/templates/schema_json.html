@@ -58,7 +58,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "{{- if .Section | eq "pricing" }}Product{{- else }}BlogPosting{{- end -}}",
+  "@type": "{{- if .Section | eq `pricing` }}Product{{- else }}BlogPosting{{- end -}}",
   "headline": "{{- .Title | plainify | safeJS -}}",
   "name": "{{- .Title | plainify | safeJS -}}",
   "description": "{{- with .Description | plainify }}{{- . | safeJS -}}{{- else }}{{- .Summary | plainify | safeJS -}}{{- end -}}",

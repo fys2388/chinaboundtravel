@@ -6,9 +6,10 @@
   {{- $noIndex = true }}
 {{- else }}
   {{- $noIndexPaths := site.Params.sitemapExclude | default slice }}
-  {{- $pagePath := .RelPermalink }}
+  {{- $pagePath := printf "%s" .RelPermalink }}
   {{- range $noIndexPaths }}
-    {{- if or (strings.HasPrefix $pagePath (printf "/%s/" .)) (eq $pagePath (printf "/%s/" .)) }}
+    {{- $pattern := printf "/%s/" . }}
+    {{- if or (strings.HasPrefix $pagePath $pattern) (eq $pagePath $pattern) }}
       {{- $noIndex = true }}
     {{- end }}
   {{- end }}
