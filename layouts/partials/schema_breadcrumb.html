@@ -1,0 +1,29 @@
+{{- /* BreadcrumbList JSON-LD */ -}}
+{{- if or (eq .Kind "page") (eq .Kind "section") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{- site.BaseURL | safeJS -}}"
+    }{{- with .Section -}},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{- humanize . | title | safeJS -}}",
+      "item": "{{- .Section | urlize | absURL -}}"
+    }{{- end }}{{- if eq .Kind "page" -}},
+    {
+      "@type": "ListItem",
+      "position": {{- if .Section }}3{{- else }}2{{- end -}},
+      "name": "{{- .Title | plainify | safeJS -}}"
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}
