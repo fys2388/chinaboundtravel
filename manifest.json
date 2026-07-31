@@ -1,8 +1,8 @@
 {
-  "month_post_count": 26,
+  "month_post_count": 27,
   "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-28 02:25:34",
-  "daily_social_publish_date": "2026-07-28",
+  "last_social_publish": "2026-07-31 02:38:38",
+  "daily_social_publish_date": "2026-07-31",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -35,6 +35,12 @@
       "topic": "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
       "geo_region": "EU",
       "create_date": "2026-07-05"
+    },
+    {
+      "topic": "china remote work guide",
+      "geo_region": "EU",
+      "category": "general",
+      "create_date": "2026-07-31"
     }
   ],
   "keyword_convert_rate": {
