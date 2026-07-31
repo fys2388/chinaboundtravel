@@ -806,29 +806,87 @@
       "message": "AI生成的博文配图中出现正面人像/人物照片，与品牌定位不符",
       "occurrences": 10,
       "first_seen": "2026-07-24T00:00:00",
-      "last_seen": "2026-07-30T00:00:00",
+      "last_seen": "2026-07-31T00:00:00",
       "files": [
         "多篇博文配图",
         "social_publisher.py",
         "joran_blog_generator.py"
       ],
-      "suggestion": "彻底禁止所有AI图片生成中包含人物/人像/人脸，强化prompt和negative prompt，添加后处理黑名单过滤",
+      "suggestion": "彻底用纯景物prompt替代AI图片描述，三重防御确保零人像",
       "resolved": true,
       "priority": "P0",
-      "source": "品牌规范 2026-07-30",
+      "source": "品牌规范 2026-07-31",
       "prevention_rules": [
+        "【核心策略】不再使用AI生成的图片描述作为image prompt，改为基于分类的纯景物prompt（LANDSCAPE_PROMPTS）",
+        "三级prompt策略：(1)广角全景 (2)中景全景 (3)特写细节，均基于博文分类生成",
         "所有图片生成prompt必须使用 ZERO people/persons/faces/portraits/humans/crowd/man/woman/child 等绝对否定措辞",
         "Pollinations.ai URL必须带 negative 参数：person,people,face,portrait,human,figure,crowd,selfie,group photo,tourists,traveler,backpacker",
         "场景关键词中禁止使用暗示人物的描述（如tourists、backpacker、walking people），改用纯景物描述",
+        "HUMAN_KEYWORDS黑名单：people,person,human,face,portrait,man,woman,child,tourists,travelers,backpacker,group,crowd,couple,family,selfie,smiling,walking,sitting,posing等",
+        "AI生成的图片描述仅用作alt text，实际图片完全由纯景物prompt生成",
         "正文图片占位符生成规则明确禁止人物描述",
-        "后处理阶段使用正则检测占位符中的人像关键词并自动清除",
-        "禁止任何形式的人像摄影、人物肖像、团体照片"
+        "后处理阶段使用正则检测占位符中的人像关键词并自动清除"
+      ]
+    },
+    {
+      "hash": "topic_duplication",
+      "type": "内容质量",
+      "message": "选题系统在外部选题库耗尽后回退到通用选题（如transportation guide），导致多篇博文使用相同选题，内容高度重复",
+      "occurrences": 3,
+      "first_seen": "2026-07-24T00:00:00",
+      "last_seen": "2026-07-28T00:00:00",
+      "files": [
+        "2026-07-24-transportation-guide-guide.md",
+        "2026-07-26-transportation-guide-guide.md",
+        "2026-07-28-transportation-guide-guide.md",
+        "joran_blog_generator.py",
+        "manifest.json"
+      ],
+      "suggestion": "重写选题选择逻辑：优先使用topic_pool真实选题，终极兜底使用带日期戳的唯一选题",
+      "resolved": true,
+      "priority": "P0",
+      "source": "故障排查 2026-07-31",
+      "prevention_rules": [
+        "【核心策略】select_topic优先从topic_pool中选择pending状态的真实唯一选题，而非通用选题",
+        "选题选择三阶段：(1)topic_pool匹配地域+pending (2)topic_pool全地域+pending (3)内置选题库带日期戳兜底",
+        "添加_clean_generic_history_topics方法：自动清理manifest中污染的通用选题记录（transportation guide, food recommendations等）",
+        "GENERIC_TOPIC_PATTERNS黑名单：transportation guide, food recommendations, accommodation tips, travel safety, cultural etiquette, budget planning等",
+        "通用选题记录会阻塞真实选题的冷却期判断，必须定期清理",
+        "终极兜底选题格式：{base_topic} {YYYYMMDD}，确保永远不重复",
+        "选题预检机制：每个选题必须通过topic_precheck验证是否以中国为落脚点",
+        "每日选题使用后立即标记到used_topics集合中，防止同日重复",
+        "冷却期机制：同一选题或同类选题在CATEGORY_COOLDOWN_DAYS内不可重复使用"
+      ]
+    },
+    {
+      "hash": "cover_image_uniqueness",
+      "type": "技术配置",
+      "message": "封面图seed仅基于标题生成，导致相同标题的博文（如3篇transportation guide）使用完全相同的seed，生成相同配图",
+      "occurrences": 3,
+      "first_seen": "2026-07-24T00:00:00",
+      "last_seen": "2026-07-28T00:00:00",
+      "files": [
+        "joran_blog_generator.py",
+        "social_publisher.py"
+      ],
+      "suggestion": "seed生成逻辑加入datetime时间戳，确保每次生成的seed唯一",
+      "resolved": true,
+      "priority": "P0",
+      "source": "故障排查 2026-07-31",
+      "prevention_rules": [
+        "【核心策略】所有图片seed必须基于 prompt/slug + datetime.now() 生成，确保每次调用唯一",
+        "try_pollinations函数支持seed参数传入，seed=None时自动生成唯一seed",
+        "generate_image_url的seed = abs(hash(f\"{prompt}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-%f')}\")) % 1000000",
+        "generate_cover_for_post的seed = abs(hash(f\"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}\")) % 1000000",
+        "social_publisher.py的generate_cover_image同样使用slug+datetime生成seed",
+        "Picsum兜底图也使用相同的唯一seed逻辑",
+        "禁用固定seed（如hash(title)），必须使用时间相关的动态seed"
       ]
     }
   ],
-  "resolved_count": 18,
-  "total_errors": 29,
-  "last_updated": "2026-07-30T12:00:00",
+  "resolved_count": 20,
+  "total_errors": 31,
+  "last_updated": "2026-07-31T00:00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
