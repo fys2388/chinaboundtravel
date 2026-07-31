@@ -3,7 +3,7 @@ title: "Cultural Etiquette Guide"
 date: "2026-07-22T10:00:00+08:00"
 lastmod: "2026-07-22T10:00:00+08:00"
 author: "Joran"
-slug: "cultural-etiquette-guide"
+slug: "cultural-etiquette-guide-aussie-kiwi"
 tags:
   - ChinaTravel
   - TravelGuide
@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
 description: "cultural etiquette for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
-canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide-aussie-kiwi/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg"
+  image: "https://chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide-aussie.jpg"
 ---
 
 ## Cultural Etiquette in China: A Californian's Guide for Aussie and Kiwi Travelers
@@ -42,7 +42,7 @@ Finally, let's talk about safety. China is generally a safe country to travel in
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Group of people sitting around a table enjoying a meal of hotpot in a restaurant in Chengdu, with smiles on their faces and chopsticks in hand.](https://image.pollinations.ai/prompt/Group%20of%20people%20sitting%20around%20a%20table%20enjoying%20a%20meal%20of%20hotpot%20in%20a%20restaurant%20in%20Chengdu%2C%20with%20smiles%20on%20their%20faces%20and%20chopsticks%20in%20hand.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=48843&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![Chengdu hotpot restaurant interior with traditional Sichuan cuisine dishes on the table, red lanterns and wooden decor](https://image.pollinations.ai/prompt/Chengdu%20hotpot%20restaurant%20interior%20with%20traditional%20Sichuan%20cuisine%20dishes%20on%20the%20table%2C%20red%20lanterns%20and%20wooden%20decor%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20empty%20scene%2C%20pure%20food%20and%20architecture%20only?width=1024&height=768&nologo=true&seed=84721&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux)
 
 ## Greetings and Body Language
 
@@ -106,7 +106,7 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Group of pandas playing in a bamboo forest at the Chengdu Panda Base, with a sign in Chinese and English reading "Welcome to the Chengdu Panda Base."](https://image.pollinations.ai/prompt/Group%20of%20pandas%20playing%20in%20a%20bamboo%20forest%20at%20the%20Chengdu%20Panda%20Base%2C%20with%20a%20sign%20in%20Chinese%20and%20English%20reading%20%22Welcome%20to%20the%20Chengdu%20Panda%20Base.%22%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=19162&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![Pandas in bamboo forest at Chengdu Panda Base](https://image.pollinations.ai/prompt/Pandas%20in%20bamboo%20forest%20at%20Chengdu%20Panda%20Base%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20empty%20scene%2C%20pure%20nature%20and%20animals%20only?width=1024&height=768&nologo=true&seed=53918&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux)
 
 ## Related Articles
 
