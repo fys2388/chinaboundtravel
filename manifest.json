@@ -1,8 +1,8 @@
 {
-  "month_post_count": 27,
-  "last_reset_date": "2026-07-01",
-  "last_social_publish": "2026-07-31 02:38:38",
-  "daily_social_publish_date": "2026-07-31",
+  "month_post_count": 1,
+  "last_reset_date": "2026-08-01",
+  "last_social_publish": "2026-08-01 02:38:02",
+  "daily_social_publish_date": "2026-08-01",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -41,6 +41,12 @@
       "geo_region": "EU",
       "category": "general",
       "create_date": "2026-07-31"
+    },
+    {
+      "topic": "china photography guide",
+      "geo_region": "AU",
+      "category": "general",
+      "create_date": "2026-08-01"
     }
   ],
   "keyword_convert_rate": {
