@@ -1,8 +1,8 @@
 {
-  "month_post_count": 1,
+  "month_post_count": 2,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-01 02:38:02",
-  "daily_social_publish_date": "2026-08-01",
+  "last_social_publish": "2026-08-02 02:36:06",
+  "daily_social_publish_date": "2026-08-02",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -47,6 +47,12 @@
       "geo_region": "AU",
       "category": "general",
       "create_date": "2026-08-01"
+    },
+    {
+      "topic": "chinese language survival phrases",
+      "geo_region": "EU",
+      "category": "general",
+      "create_date": "2026-08-02"
     }
   ],
   "keyword_convert_rate": {
