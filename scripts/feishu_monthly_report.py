@@ -40,6 +40,7 @@ except ImportError:
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
 THEME_SCHEMA_PATH = BLOG_ROOT / "layouts" / "partials" / "templates" / "schema_json.html"
+TEMPLATE_AFFILIATE_PATH = BLOG_ROOT / "layouts" / "partials" / "travel-promo.html"
 REPORTS_DIR = BLOG_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 LAST_MONTH_DATA_FILE = REPORTS_DIR / "last_month_data.json"
@@ -480,10 +481,16 @@ class FeishuMonthlyReporter:
             "posts_with_placeholder": 0,
             "category_distribution": {},
             "monthly_new_posts": 0,
+            "template_level_coverage": False,
+            "site_wide_affiliate": False,
         }
 
         if not POSTS_DIR.exists():
             return result
+
+        template_exists = THEME_SCHEMA_PATH.exists()
+        result["template_level_coverage"] = template_exists
+        result["site_wide_affiliate"] = TEMPLATE_AFFILIATE_PATH.exists()
 
         posts = list(POSTS_DIR.glob("*.md"))
         result["total_posts"] = len(posts)
@@ -491,47 +498,78 @@ class FeishuMonthlyReporter:
         period = self._get_report_period()
         report_month_start = datetime.strptime(period["report_start"], "%Y-%m-%d")
 
+        affiliate_patterns = [
+            r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook',
+            r'safetywing', r'airalo', r'hotellook', r'affiliatescn', r'nordpass',
+            r'worldnomads', r'allianz', r'affiliate-section', r'affiliate_key',
+            r'promo-widget', r'travel-promo', r'affiliate-disclosure'
+        ]
+
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
-                mtime = datetime.fromtimestamp(post.stat().st_mtime)
-                if mtime >= report_month_start:
+
+                post_date = None
+                fm_match = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
+                if fm_match:
+                    date_match = re.search(r"date:\s*['\"]?(\d{4}-\d{2}-\d{2})", fm_match.group(1))
+                    if date_match:
+                        try:
+                            post_date = datetime.strptime(date_match.group(1), "%Y-%m-%d")
+                        except ValueError:
+                            pass
+                if post_date and post_date >= report_month_start:
                     result["monthly_new_posts"] += 1
 
-                affiliate_patterns = [r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook\.com']
                 if any(re.search(p, content, re.IGNORECASE) for p in affiliate_patterns):
                     result["posts_with_affiliate"] += 1
 
-                years_patterns = re.findall(r'(\d+)\s*years?', content, re.IGNORECASE)
+                years_patterns = re.findall(r'(\d+)\s*years?\s+(?:in|of|living|staying|working|teaching|studying)', content, re.IGNORECASE)
                 unique_years = set([int(y) for y in years_patterns if y.isdigit()])
-                if len(unique_years) > 1:
+                has_decade = re.search(r'(?:decade|10\+?\s*years?)\s+(?:in|of)\s+China', content, re.IGNORECASE)
+                has_author_years = re.search(r'(?:I|We|My|Our|Joran)\s+have\s+(?:been\s+)?(?:living|staying|working|teaching|studying)?\s*(\d+)\s*years?\s+(?:in|of)', content, re.IGNORECASE)
+                if len(unique_years) > 1 or (has_decade and has_author_years):
                     result["posts_with_conflict"] += 1
 
-                front_matter_match = re.search(r'---\n(.*?)\n---', content, re.DOTALL)
-                has_schema = False
+                if template_exists:
+                    pass
+                else:
+                    fm_match2 = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
+                    if fm_match2:
+                        fm = fm_match2.group(1)
+                        if not re.search(r'article_schema|structured_data|schema', fm, re.IGNORECASE):
+                            result["posts_without_schema"] += 1
+
+                front_matter_match = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
                 if front_matter_match:
                     front_matter = front_matter_match.group(1)
-                    if re.search(r'article_schema|structured_data|schema', front_matter, re.IGNORECASE):
-                        has_schema = True
-                    categories_section = re.search(r'categories:\s*\n((?:\s*-\s*[^\n]+\n?)+)', front_matter)
+                    categories_section = re.search(r'categories:\s*\r?\n((?:\s*-\s*[^\r\n]+\r?\n?)+)', front_matter)
                     if categories_section:
                         cat_block = categories_section.group(1)
-                        cat_items = re.findall(r'-\s*([^\n-]+)', cat_block)
+                        cat_items = re.findall(r'^\s*-\s*(.+?)\s*$', cat_block, re.MULTILINE)
                         for cat in cat_items:
                             cat_clean = cat.strip()
-                            cat_clean = re.sub(r'\[.*?\]\(.*?\)', '', cat_clean)
-                            if len(cat_clean) > 40:
-                                cat_clean = cat_clean[:40]
-                            if cat_clean and not re.search(r'[\/\\]', cat_clean):
-                                result["category_distribution"][cat_clean] = result["category_distribution"].get(cat_clean, 0) + 1
-                if not has_schema:
-                    result["posts_without_schema"] += 1
+                            cat_clean = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', cat_clean)
+                            cat_clean = cat_clean.strip('- ')
+                            # 过滤损坏的分类条目
+                            if not cat_clean or len(cat_clean) > 50:
+                                continue
+                            if re.search(r'\[.*\]', cat_clean):
+                                continue
+                            if re.search(r'[\/\\]', cat_clean):
+                                continue
+                            if not re.match(r'^[\w\s\-]+$', cat_clean):
+                                continue
+                            result["category_distribution"][cat_clean] = result["category_distribution"].get(cat_clean, 0) + 1
 
                 if re.search(r'\[IMAGE\]|\[TODO\]|\[PLACEHOLDER\]', content, re.IGNORECASE):
                     result["posts_with_placeholder"] += 1
 
             except Exception:
                 pass
+
+        if template_exists:
+            result["posts_without_schema"] = 0
 
         return result
 
@@ -548,9 +586,13 @@ class FeishuMonthlyReporter:
         content_data = data.get("content_data", {})
         total_posts = content_data.get("total_posts", 0)
         posts_with_affiliate = content_data.get("posts_with_affiliate", 0)
+        site_wide_affiliate = content_data.get("site_wide_affiliate", False)
+        template_level_coverage = content_data.get("template_level_coverage", False)
         coverage = (posts_with_affiliate / max(total_posts, 1)) * 100 if total_posts > 0 else 0
-        if tp_revenue == 0 and coverage < 30:
+        if tp_revenue == 0 and coverage < 30 and not site_wide_affiliate:
             red_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路缺失")
+        elif tp_revenue == 0 and coverage < 30 and site_wide_affiliate:
+            yellow_risks.append("联盟佣金为0，但模板级CTA已覆盖全站，需优化转化率")
 
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
         if posts_with_conflict > 0:
@@ -571,7 +613,7 @@ class FeishuMonthlyReporter:
             yellow_risks.append("邮件订阅新增为零")
 
         posts_without_schema = content_data.get("posts_without_schema", 0)
-        if posts_without_schema > 5:
+        if not template_level_coverage and posts_without_schema > 5:
             yellow_risks.append(f"结构化数据缺失{posts_without_schema}篇")
 
         return {"red": red_risks, "yellow": yellow_risks}
@@ -679,9 +721,17 @@ class FeishuMonthlyReporter:
         content_data = data.get("content_data", {})
         total_posts = content_data.get("total_posts", 0)
         posts_with_affiliate = content_data.get("posts_with_affiliate", 0)
+        template_level_coverage = content_data.get("template_level_coverage", False)
+        site_wide_affiliate = content_data.get("site_wide_affiliate", False)
         coverage = round(posts_with_affiliate / max(total_posts, 1) * 100, 1) if total_posts > 0 else 0
+        if site_wide_affiliate:
+            coverage_display = f"{coverage}%（内容级 {posts_with_affiliate}/{total_posts}）+ 模板级全量覆盖"
+        else:
+            coverage_display = f"{coverage}%（{posts_with_affiliate}/{total_posts}）"
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
         posts_without_schema = content_data.get("posts_without_schema", 0)
+        if template_level_coverage:
+            posts_without_schema = 0
         posts_with_placeholder = content_data.get("posts_with_placeholder", 0)
         monthly_new_posts = content_data.get("monthly_new_posts", 0)
         content_goal = 20
@@ -726,6 +776,9 @@ class FeishuMonthlyReporter:
         tp_inits = data.get("tp_inits", 0)
         tp_searches = data.get("tp_searches", 0)
 
+        tp_ctr = f"{round(tp_clicks / tp_inits * 100, 1)}%" if tp_inits > 0 else "N/A"
+        tp_conversion_rate = f"{round(tp_bookings / tp_clicks * 100, 1)}%" if tp_clicks > 0 else "N/A"
+
         total_subscribers = data.get("total_subscribers", 0)
         monthly_new_subscribers = data.get("monthly_new_subscribers", 0)
 
@@ -747,9 +800,11 @@ class FeishuMonthlyReporter:
             plan_rows.append(f"| {item['task']} | {priority_icon} | {period} |")
 
         indexed_status = "🔴" if indexed_pages == 0 else "🟡" if indexed_pages < 10 else "✅"
-        coverage_status = "🔴" if coverage < 30 else "🟡" if coverage < 80 else "✅"
+        coverage_status = "🔴" if (coverage < 30 and not site_wide_affiliate) else "🟡" if coverage < 80 else "✅"
         conflict_status = "🔴" if posts_with_conflict > 0 else "✅"
-        schema_status = "🟡" if posts_without_schema > 0 else "✅"
+        schema_status = "🟡" if (posts_without_schema > 0 and not template_level_coverage) else "✅"
+        if template_level_coverage:
+            schema_status = "✅（模板自动注入）"
 
         conclusions = []
         if "📉" in users_change:
@@ -802,9 +857,9 @@ class FeishuMonthlyReporter:
 
 - **GSC 状态**：{gsc_status}｜预估可收录 {len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0} 页
 - **已索引页面**：{indexed_pages} 页
-- **联盟链接覆盖率**：{coverage}%（{posts_with_affiliate}/{total_posts}）{coverage_status}
+- **联盟链接覆盖率**：{coverage_display} {coverage_status}
 - **人设冲突**：{posts_with_conflict} 篇 {conflict_status}
-- **结构化数据**：缺失 {posts_without_schema} 篇 {schema_status}
+- **结构化数据**：{schema_status}
 - **占位符**：{posts_with_placeholder} 篇 ⚠️"""
 
         affiliate_section = f"""---
@@ -813,9 +868,9 @@ class FeishuMonthlyReporter:
 | 指标 | {month_label} | 转化率 |
 | :--- | :--- | :--- |
 | 链接展示量 | {tp_inits} 次 | - |
-| 点击量 | {tp_clicks} 次 | 点击率 {round(tp_clicks / max(tp_inits, 1) * 100, 1)}% |
+| 点击量 | {tp_clicks} 次 | 点击率 {tp_ctr} |
 | 搜索量 | {tp_searches} 次 | - |
-| 订单数 | {tp_bookings} 单 | 转化率 {round(tp_bookings / max(tp_clicks, 1) * 100, 1)}% |
+| 订单数 | {tp_bookings} 单 | 转化率 {tp_conversion_rate} |
 | **佣金收入** | **${tp_revenue:.2f}** | - |
 
 > 建议：优化高转化页面的联盟链接布局，增加机票/保险/eSIM 产品覆盖"""
@@ -839,9 +894,9 @@ class FeishuMonthlyReporter:
 ### 2. 质量报告
 | 检测项 | 结果 | 状态 |
 | :--- | :--- | :--- |
-| 联盟链接覆盖率 | {posts_with_affiliate}/{total_posts} = {coverage}% | {coverage_status} |
+| 联盟链接覆盖率 | {coverage_display} | {coverage_status} |
 | 人设一致性 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
-| 结构化数据 | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
+| 结构化数据 | {schema_status} | {schema_status} |
 | 断链/占位符 | {posts_with_placeholder} 篇异常 | {'⚠️' if posts_with_placeholder > 0 else '✅'} |
 
 ### 3. 文章分类分布

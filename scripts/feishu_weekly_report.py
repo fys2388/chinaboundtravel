@@ -39,6 +39,7 @@ except ImportError:
 
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
+THEME_SCHEMA_PATH = BLOG_ROOT / "layouts" / "partials" / "templates" / "schema_json.html"
 REPORTS_DIR = BLOG_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 LAST_WEEK_DATA_FILE = REPORTS_DIR / "last_week_data.json"
@@ -486,6 +487,12 @@ class FeishuWeeklyReporter:
         today = datetime.now()
         week_start = (today - timedelta(days=today.weekday() + 7))
 
+        affiliate_patterns = [
+            r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook',
+            r'safetywing', r'airalo', r'hotellook', r'affiliatescn', r'nordpass',
+            r'worldnomads', r'allianz', r'affiliate-section', r'affiliate_key'
+        ]
+
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
@@ -493,17 +500,17 @@ class FeishuWeeklyReporter:
                 if mtime >= week_start:
                     result["weekly_new_posts"] += 1
 
-                affiliate_patterns = [r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook\.com']
                 if any(re.search(p, content, re.IGNORECASE) for p in affiliate_patterns):
                     result["posts_with_affiliate"] += 1
 
                 years_patterns = re.findall(r'(\d+)\s*years?', content, re.IGNORECASE)
                 unique_years = set([int(y) for y in years_patterns if y.isdigit()])
-                if len(unique_years) > 1:
+                has_decade = re.search(r'decade\s+(?:in|of)\s+China|10\+?\s*years\s+(?:in|of)|ten\s+years\s+(?:in|of)', content, re.IGNORECASE)
+                if len(unique_years) > 1 or has_decade:
                     result["posts_with_conflict"] += 1
 
                 front_matter_match = re.search(r'---\n(.*?)\n---', content, re.DOTALL)
-                has_schema = False
+                has_schema = THEME_SCHEMA_PATH.exists()
                 if front_matter_match:
                     front_matter = front_matter_match.group(1)
                     if re.search(r'article_schema|structured_data|schema', front_matter, re.IGNORECASE):
