@@ -39,6 +39,7 @@ except ImportError:
 
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
+THEME_SCHEMA_PATH = BLOG_ROOT / "layouts" / "partials" / "templates" / "schema_json.html"
 REPORTS_DIR = BLOG_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 LAST_MONTH_DATA_FILE = REPORTS_DIR / "last_month_data.json"
@@ -193,27 +194,39 @@ class FeishuMonthlyReporter:
             print(f"   ⚠️ GA4 API 调用失败: {e}")
         return None
 
+    def _get_report_period(self):
+        today = datetime.now()
+        first_of_this_month = today.replace(day=1)
+        report_month_end = first_of_this_month - timedelta(days=1)
+        report_month_start = report_month_end.replace(day=1)
+        compare_month_end = report_month_start - timedelta(days=1)
+        compare_month_start = compare_month_end.replace(day=1)
+
+        return {
+            "report_start": report_month_start.strftime("%Y-%m-%d"),
+            "report_end": report_month_end.strftime("%Y-%m-%d"),
+            "report_label": report_month_start.strftime("%Y年%m月"),
+            "compare_start": compare_month_start.strftime("%Y-%m-%d"),
+            "compare_end": compare_month_end.strftime("%Y-%m-%d"),
+            "compare_label": compare_month_start.strftime("%Y年%m月"),
+        }
+
     def _fetch_monthly_ga4(self) -> dict:
-        """获取当月GA4数据并与上月对比"""
+        """获取上一个完整月的GA4数据并与前月对比"""
         headers = self._get_ga4_headers()
         if not headers:
             return None
 
-        today = datetime.now()
-        first_of_month = today.replace(day=1)
-        last_month_end = first_of_month - timedelta(days=1)
-        last_month_start = last_month_end.replace(day=1)
+        period = self._get_report_period()
+        cur_month_start = period["report_start"]
+        cur_month_end = period["report_end"]
+        prev_month_start = period["compare_start"]
+        prev_month_end = period["compare_end"]
+        month_label = period["report_label"]
+        prev_month_label = period["compare_label"]
 
-        cur_month_start = first_of_month.strftime("%Y-%m-%d")
-        cur_month_end = today.strftime("%Y-%m-%d")
-        prev_month_start = last_month_start.strftime("%Y-%m-%d")
-        prev_month_end = last_month_end.strftime("%Y-%m-%d")
-
-        month_label = today.strftime("%Y年%m月")
-        prev_month_label = last_month_start.strftime("%Y年%m月")
-
-        print(f"   🔍 获取 GA4 数据（本月: {cur_month_start} ~ {cur_month_end}）...")
-        print(f"   📊 对比月份: {prev_month_start} ~ {prev_month_end}")
+        print(f"   🔍 获取 GA4 数据（{month_label}: {cur_month_start} ~ {cur_month_end}）...")
+        print(f"   📊 对比月份 {prev_month_label}: {prev_month_start} ~ {prev_month_end}")
 
         def fetch_range(start, end, extra_metrics=None):
             metrics = [
@@ -342,7 +355,7 @@ class FeishuMonthlyReporter:
         }
 
     def _fetch_monthly_travelpayouts(self) -> dict:
-        """获取整月Travelpayouts数据"""
+        """获取上一个完整月的Travelpayouts数据"""
         if not TRAVELPAYOUTS_API_TOKEN:
             return None
 
@@ -350,10 +363,9 @@ class FeishuMonthlyReporter:
             url = "https://api.travelpayouts.com/statistics/v1/execute_query"
             headers = {"X-Access-Token": TRAVELPAYOUTS_API_TOKEN, "Content-Type": "application/json"}
 
-            today = datetime.now()
-            first_of_month = today.replace(day=1)
-            month_start = first_of_month
-            month_end = today
+            period = self._get_report_period()
+            month_start = datetime.strptime(period["report_start"], "%Y-%m-%d")
+            month_end = datetime.strptime(period["report_end"], "%Y-%m-%d")
 
             total_clicks = 0
             total_bookings = 0
@@ -444,9 +456,9 @@ class FeishuMonthlyReporter:
             resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params={"limit": 1}, timeout=15)
             total_subscribers = int(resp.headers.get("x-total-count", "0")) if resp.status_code == 200 else 0
 
-            today = datetime.now()
-            month_start = today.replace(day=1).strftime("%Y-%m-%d")
-            month_end = today.strftime("%Y-%m-%d")
+            period = self._get_report_period()
+            month_start = period["report_start"]
+            month_end = period["report_end"]
             resp_recent = requests.get(
                 f"https://connect.mailerlite.com/api/subscribers?filter[date_from]={month_start}&filter[date_to]={month_end}",
                 headers=headers, timeout=15
@@ -476,14 +488,14 @@ class FeishuMonthlyReporter:
         posts = list(POSTS_DIR.glob("*.md"))
         result["total_posts"] = len(posts)
 
-        today = datetime.now()
-        month_start = today.replace(day=1)
+        period = self._get_report_period()
+        report_month_start = datetime.strptime(period["report_start"], "%Y-%m-%d")
 
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
                 mtime = datetime.fromtimestamp(post.stat().st_mtime)
-                if mtime >= month_start:
+                if mtime >= report_month_start:
                     result["monthly_new_posts"] += 1
 
                 affiliate_patterns = [r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook\.com']
