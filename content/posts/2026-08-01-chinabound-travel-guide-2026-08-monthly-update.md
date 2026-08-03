@@ -10,7 +10,21 @@ ShowToc: true
 TocOpen: false
 weight: 1
 draft: false
+slug: "chinabound-travel-guide-2026-08-monthly-update"
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/"
 ---
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## ChinaBound Travel Guide Now at Version 2026.08
 
@@ -34,5 +48,17 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - AI trip planner template expansion for August travel
 
 ---
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 *Last updated: August 01, 2026*
