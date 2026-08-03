@@ -13,7 +13,8 @@ description: "Step-by-step guide to setting up WeChat Pay as a foreigner in Chin
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.jpg"
+canonicalURL: "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/"
 ---
 
 

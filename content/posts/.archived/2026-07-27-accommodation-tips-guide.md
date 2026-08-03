@@ -26,7 +26,7 @@ cover:
 
 ## Introduction
 
-If you're planning a trip to China, one of the most important aspects to consider is your accommodation. As an American who has lived in Chengdu for over 10 years, I've had my fair share of experiences with different types of accommodation in China. In this blog post, I'll share some of my tips and insights to help you find the perfect place to stay during your travels.
+If you're planning a trip to China, one of the most important aspects to consider is your accommodation. As an American who has lived in Chengdu for over 5 years, I've had my fair share of experiences with different types of accommodation in China. In this blog post, I'll share some of my tips and insights to help you find the perfect place to stay during your travels.
 
 Let me tell you about the time I first arrived in Chengdu. I was a wide-eyed tourist, not knowing what to expect. I had booked a hotel in the city center, thinking it would be convenient. Little did I know that the traffic in Chengdu could be a nightmare, and getting to and from my hotel was a hassle. That's when I realized the importance of choosing the right accommodation based on your travel plans and needs.
 
@@ -139,6 +139,17 @@ Don't leave your valuables out in the open. Use the hotel safe or a secure stora
 When walking around the city, be aware of your surroundings and avoid walking alone at night. If you feel unsafe, find a populated area or call the police.
 
 Actionable tip: Choose a safe neighborhood to stay in, lock your doors and windows, keep your valuables safe, and be aware of your surroundings.
+
+{{< affiliate-section >}}
+
+**Booking your stay in China?** Here are my top recommendations:
+
+- **Hotels in China**: [Compare hotel deals →]({{< param affiliate.hotel >}})
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 

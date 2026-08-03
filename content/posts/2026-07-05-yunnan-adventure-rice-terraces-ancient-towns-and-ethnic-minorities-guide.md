@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg"
 ---
 
 ## Introduction

@@ -14,14 +14,14 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "chinese language survival phrases for travelers visiting China. essential guide based on 10 years of experience real tips from someone living in China since 2016."
-description: "chinese language survival phrases for travelers visiting China. essential guide based on 10 years of experience real tips from someone living in China since 2016."
-canonicalURL: "https://chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/"
+summary: "chinese language survival phrases for travelers visiting China. essential guide based on 5 years of experience real tips from someone living in China since 2021."
+description: "chinese language survival phrases for travelers visiting China. essential guide based on 5 years of experience real tips from someone living in China since 2021."
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-guide.jpg"
 ---
 
 # Chinese Language Survival Phrases: A Hilarious and Practical Guide for American Travelers in China

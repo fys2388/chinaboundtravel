@@ -22,7 +22,8 @@ description: "7-day Western Sichuan overland camping route from Chengdu to Litan
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg"
+canonicalURL: "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/"
 ---
 
 ## Western Sichuan Overland Camping Route: My 7-Day Adventure Through China's Most Epic Wilderness

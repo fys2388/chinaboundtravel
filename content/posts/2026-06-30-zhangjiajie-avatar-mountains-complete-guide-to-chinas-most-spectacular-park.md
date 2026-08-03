@@ -25,7 +25,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
 ---
 
 ## Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park

@@ -37,10 +37,15 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/ /posts/hangzhou-west-lake-tea-culture-g20-guide/ 301
 /posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/ /posts/how-to-use-wechat-pay-as-a-foreigner/ 301
 /posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ /posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ 301
+# --- August 2026 articles ---
+/posts/2026-08-03-chinese-language-survival-phrases-guide/ /posts/chinese-language-survival-phrases-guide/ 301
+/posts/2026-08-02-chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/ /posts/chinese-language-survival-phrases-guide/ 301
+/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ /posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ 301
+/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
+/posts/2026-08-03-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
+
 # 3) Orphaned social media posts -> nearest existing article
 /posts/2026-07-03-144-hour-visa-free-transit-how-to-use-it-and-which-cities-you-can-visit/ /posts/144-hour-visa-free-transit-guide/ 301
-# 4) Catch-all for any future date-prefixed URLs not yet listed
-/posts/2026-* /posts/:splat 301
 # 5) Article aliases - redirect old slugs to current canonical URLs
 /posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
 /posts/china-high-speed-rail-how-to-book-tickets/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301

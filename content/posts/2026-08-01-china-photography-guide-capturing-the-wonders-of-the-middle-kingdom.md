@@ -14,14 +14,14 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-summary: "china photography for travelers visiting China. essential guide based on 10 years of experience real tips from someone living in China since 2016."
-description: "china photography for travelers visiting China. essential guide based on 10 years of experience real tips from someone living in China since 2016."
-canonicalURL: "https://chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/"
+summary: "china photography for travelers visiting China. essential guide based on 5 years of experience real tips from someone living in China since 2021."
+description: "china photography for travelers visiting China. essential guide based on 5 years of experience real tips from someone living in China since 2021."
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg"
 ---
 
 ## China Photography Guide: Capturing the Wonders of the Middle Kingdom
@@ -71,6 +71,18 @@ Once you've taken your photos, the next step is to edit them to enhance their qu
 - **Crop and Straighten:** Cropping and straightening your photos can help to improve their composition and make them look more professional. Use the crop tool to remove any unwanted elements from the edges of your photo, and use the straighten tool to make sure your photo is level.
 - **Adjust the Exposure and Contrast:** Adjusting the exposure and contrast of your photo can help to make it look more vibrant and engaging. Use the exposure tool to increase or decrease the overall brightness of your photo, and use the contrast tool to increase or decrease the difference between the light and dark areas of your photo.
 - **Enhance the Colors:** Enhancing the colors in your photo can help to make it look more vivid and appealing. Use the color balance tool to adjust the balance between the red, green, and blue channels in your photo, and use the saturation tool to increase or decrease the intensity of the colors.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 Photography in China is a rewarding and challenging experience. By following these tips and techniques, you can capture the beauty and diversity of China and create stunning photos that will last a lifetime. Remember to have fun, be creative, and enjoy the process!

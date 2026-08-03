@@ -14,19 +14,19 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass2"
-summary: "chinese language survival phrases for travelers visiting China. essential guide based on 10 years of experience from a US expat based in Chengdu."
-description: "chinese language survival phrases for travelers visiting China. essential guide based on 10 years of experience from a US expat based in Chengdu."
-canonicalURL: "https://chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/"
+summary: "chinese language survival phrases for travelers visiting China. essential guide based on 5 years of experience from a US expat based in Chengdu."
+description: "chinese language survival phrases for travelers visiting China. essential guide based on 5 years of experience from a US expat based in Chengdu."
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure.jpg"
 ---
 
 ## Chinese Language Survival Phrases: Your Ticket to a Smooth China Adventure
 ## Introduction
-Hey there, fellow globetrotters! If you're planning a trip to the land of pandas, spicy food, and ancient wonders, then you're in for a treat. As an American expat who's been living in Chengdu for the past 10+ years (yes, I've lost count of the exact number, but it's been a wild ride), I've had my fair share of adventures and misadventures in China. And let me tell you, one of the keys to having a great time here is being able to communicate with the locals. That's why I'm here to share some essential Chinese language survival phrases that will help you navigate your way through this amazing country.
+Hey there, fellow globetrotters! If you're planning a trip to the land of pandas, spicy food, and ancient wonders, then you're in for a treat. As an American expat who's been living in Chengdu for the past 5 years (yes, I've lost count of the exact number, but it's been a wild ride), I've had my fair share of adventures and misadventures in China. And let me tell you, one of the keys to having a great time here is being able to communicate with the locals. That's why I'm here to share some essential Chinese language survival phrases that will help you navigate your way through this amazing country.
 
 Now, I know what you're thinking. "But Joran, I don't have time to learn a whole new language!" Trust me, I get it. Learning a new language can be intimidating, especially when you're on a tight schedule. But the good news is, you don't need to be fluent in Chinese to get by. Just a few simple phrases can go a long way in making your trip more enjoyable and less stressful.
 
@@ -100,6 +100,18 @@ Finally, it's important to know some emergency phrases in case something goes wr
 - **Bao jing** (报警) - Call the police
 
 If you find yourself in an emergency situation, try to stay calm and use these phrases to get help. You can also ask for help from a local person or go to the nearest police station or hospital.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 Learning some basic Chinese language survival phrases can make a big difference in your travel experience in China. By being able to communicate with the locals, you'll be able to navigate your way around more easily, order food like a pro, and have a more enjoyable and memorable trip.

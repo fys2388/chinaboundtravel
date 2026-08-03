@@ -15,7 +15,8 @@ description: "eSIM vs local SIM vs VPN — the best ways to stay connected in Ch
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.jpg"
+canonicalURL: "https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/"
 ---
 
 ## How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN

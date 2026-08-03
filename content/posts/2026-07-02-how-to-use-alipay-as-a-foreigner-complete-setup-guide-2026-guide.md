@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg"
 ---
 
 ## Introduction

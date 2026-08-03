@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/transport/navigating-chinas-transportation-maze-a-californians-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/transport/navigating-chinas-transportation-maze-a-californians-guide.jpg"
 ---
 
 ## Navigating China's Transportation Maze: A Californian's Guide

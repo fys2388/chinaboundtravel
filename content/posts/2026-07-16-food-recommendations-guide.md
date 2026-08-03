@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg"
 ---
 
 ## Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers

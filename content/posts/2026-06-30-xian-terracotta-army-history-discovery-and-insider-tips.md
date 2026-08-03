@@ -23,7 +23,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.jpg"
 ---
 
 ## Xi'an Terracotta Army: History, Discovery, and Insider Tips

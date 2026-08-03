@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg"
 ---
 
 # WeChat Pay for Foreigners: Step-by-Step Setup and Common Mistakes to Avoid

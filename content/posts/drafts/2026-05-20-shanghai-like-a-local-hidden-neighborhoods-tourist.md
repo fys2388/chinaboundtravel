@@ -9,6 +9,7 @@ tags:
 categories:
 - guides
 author: Joran
+canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/"
 ---
 
 Alright, lets be real for a second. If youve ever Googled Shanghai travel guide, youve probably seen the same three things: The Bund at sunset (gorgeous, sure, but also packed with selfie sticks), Yu Garden (tour groups galore), and the Pearl Tower (which, lets be honest, looks like a giant alien spaceship landed on a popsicle). 

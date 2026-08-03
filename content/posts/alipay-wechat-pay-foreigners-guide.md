@@ -17,7 +17,7 @@ description: "2026 complete guide to using Alipay and WeChat Pay in China withou
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.jpg"
 canonicalURL: "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/"
 ---
 

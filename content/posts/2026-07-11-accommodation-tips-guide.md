@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/accommodation-tips-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/accommodation-tips-guide.jpg"
 ---
 
 # [China Accommodation](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/) Tips: A Californian's Guide for American Travelers

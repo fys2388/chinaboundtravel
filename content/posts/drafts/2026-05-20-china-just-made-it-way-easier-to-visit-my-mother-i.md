@@ -11,6 +11,7 @@ tags:
 categories:
 - guides
 author: Joran
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-just-made-it-way-easier-to-visit-my-mother-i/"
 ---
 
 Look, Ive been living in China for six years now. Im a California guy who somehow ended up married to a Chengdu woman, and let me tell younothing could have prepared me for the chaos, the food, or the sheer number of times Ive been asked Can you eat spicy?

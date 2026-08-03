@@ -22,7 +22,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg"
 ---
 
 # China Travel Safety 2026: The Ultimate Guide for Aussie and Kiwi Travelers
