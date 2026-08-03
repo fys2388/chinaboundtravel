@@ -40,6 +40,7 @@ except ImportError:
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
 THEME_SCHEMA_PATH = BLOG_ROOT / "layouts" / "partials" / "templates" / "schema_json.html"
+TEMPLATE_AFFILIATE_PATH = BLOG_ROOT / "layouts" / "partials" / "travel-promo.html"
 REPORTS_DIR = BLOG_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 LAST_WEEK_DATA_FILE = REPORTS_DIR / "last_week_data.json"
@@ -475,55 +476,88 @@ class FeishuWeeklyReporter:
             "posts_without_schema": 0,
             "posts_with_placeholder": 0,
             "category_distribution": {},
-            "weekly_new_posts": 0
+            "weekly_new_posts": 0,
+            "template_level_coverage": False,
+            "site_wide_affiliate": False,
         }
 
         if not POSTS_DIR.exists():
             return result
+
+        template_exists = THEME_SCHEMA_PATH.exists()
+        result["template_level_coverage"] = template_exists
+        result["site_wide_affiliate"] = TEMPLATE_AFFILIATE_PATH.exists()
 
         posts = list(POSTS_DIR.glob("*.md"))
         result["total_posts"] = len(posts)
 
         today = datetime.now()
         week_start = (today - timedelta(days=today.weekday() + 7))
+        week_end = week_start + timedelta(days=6)
 
         affiliate_patterns = [
             r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook',
             r'safetywing', r'airalo', r'hotellook', r'affiliatescn', r'nordpass',
-            r'worldnomads', r'allianz', r'affiliate-section', r'affiliate_key'
+            r'worldnomads', r'allianz', r'affiliate-section', r'affiliate_key',
+            r'promo-widget', r'travel-promo', r'affiliate-disclosure'
         ]
 
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
-                mtime = datetime.fromtimestamp(post.stat().st_mtime)
-                if mtime >= week_start:
+
+                post_date = None
+                fm_match = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
+                if fm_match:
+                    date_match = re.search(r"date:\s*['\"]?(\d{4}-\d{2}-\d{2})", fm_match.group(1))
+                    if date_match:
+                        try:
+                            post_date = datetime.strptime(date_match.group(1), "%Y-%m-%d")
+                        except ValueError:
+                            pass
+                if post_date and week_start <= post_date <= week_end:
                     result["weekly_new_posts"] += 1
 
                 if any(re.search(p, content, re.IGNORECASE) for p in affiliate_patterns):
                     result["posts_with_affiliate"] += 1
 
-                years_patterns = re.findall(r'(\d+)\s*years?', content, re.IGNORECASE)
+                years_patterns = re.findall(r'(\d+)\s*years?\s+(?:in|of|living|staying|working|teaching|studying)', content, re.IGNORECASE)
                 unique_years = set([int(y) for y in years_patterns if y.isdigit()])
-                has_decade = re.search(r'decade\s+(?:in|of)\s+China|10\+?\s*years\s+(?:in|of)|ten\s+years\s+(?:in|of)', content, re.IGNORECASE)
-                if len(unique_years) > 1 or has_decade:
+                has_decade = re.search(r'(?:decade|10\+?\s*years?)\s+(?:in|of)\s+China', content, re.IGNORECASE)
+                has_author_years = re.search(r'(?:I|We|My|Our|Joran)\s+have\s+(?:been\s+)?(?:living|staying|working|teaching|studying)?\s*(\d+)\s*years?\s+(?:in|of)', content, re.IGNORECASE)
+                if len(unique_years) > 1 or (has_decade and has_author_years):
                     result["posts_with_conflict"] += 1
 
-                front_matter_match = re.search(r'---\n(.*?)\n---', content, re.DOTALL)
-                has_schema = THEME_SCHEMA_PATH.exists()
+                if template_exists:
+                    pass
+                else:
+                    fm_match2 = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
+                    if fm_match2:
+                        fm = fm_match2.group(1)
+                        if not re.search(r'article_schema|structured_data|schema', fm, re.IGNORECASE):
+                            result["posts_without_schema"] += 1
+
+                front_matter_match = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
                 if front_matter_match:
                     front_matter = front_matter_match.group(1)
-                    if re.search(r'article_schema|structured_data|schema', front_matter, re.IGNORECASE):
-                        has_schema = True
-                    categories_section = re.search(r'categories:\s*\n((?:\s*-\s*.+\n?)+)', front_matter)
+                    categories_section = re.search(r'categories:\s*\r?\n((?:\s*-\s*[^\r\n]+\r?\n?)+)', front_matter)
                     if categories_section:
-                        cat_items = re.findall(r'-\s*([^\n]+)', categories_section.group(1))
+                        cat_block = categories_section.group(1)
+                        cat_items = re.findall(r'^\s*-\s*(.+?)\s*$', cat_block, re.MULTILINE)
                         for cat in cat_items:
                             cat_clean = cat.strip()
-                            if cat_clean:
-                                result["category_distribution"][cat_clean] = result["category_distribution"].get(cat_clean, 0) + 1
-                if not has_schema:
-                    result["posts_without_schema"] += 1
+                            cat_clean = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', cat_clean)
+                            cat_clean = cat_clean.strip('- ')
+                            # 过滤损坏的分类条目
+                            if not cat_clean or len(cat_clean) > 50:
+                                continue
+                            if re.search(r'\[.*\]', cat_clean):
+                                continue
+                            if re.search(r'[\/\\]', cat_clean):
+                                continue
+                            if not re.match(r'^[\w\s\-]+$', cat_clean):
+                                continue
+                            result["category_distribution"][cat_clean] = result["category_distribution"].get(cat_clean, 0) + 1
 
                 if re.search(r'\[IMAGE\]|\[TODO\]|\[PLACEHOLDER\]', content, re.IGNORECASE):
                     result["posts_with_placeholder"] += 1
@@ -547,8 +581,9 @@ class FeishuWeeklyReporter:
         content_data = data.get("content_data", {})
         total_posts = content_data.get("total_posts", 0)
         posts_with_affiliate = content_data.get("posts_with_affiliate", 0)
+        site_wide_affiliate = content_data.get("site_wide_affiliate", False)
         coverage = (posts_with_affiliate / max(total_posts, 1)) * 100 if total_posts > 0 else 0
-        if tp_revenue == 0 and coverage < 30:
+        if tp_revenue == 0 and coverage < 30 and not site_wide_affiliate:
             red_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路缺失 → 对应行动：全站联盟链接覆盖")
 
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
@@ -573,7 +608,8 @@ class FeishuWeeklyReporter:
             yellow_risks.append("邮件订阅新增为0，私域沉淀为零 → 对应行动：上线免费订阅诱饵")
 
         posts_without_schema = content_data.get("posts_without_schema", 0)
-        if posts_without_schema > 5:
+        template_level_coverage = content_data.get("template_level_coverage", False)
+        if posts_without_schema > 5 and not template_level_coverage:
             yellow_risks.append(f"结构化数据缺失{posts_without_schema}篇，影响SEO → 对应行动：批量补充Article Schema")
 
         return {"red": red_risks, "yellow": yellow_risks}
@@ -751,6 +787,12 @@ class FeishuWeeklyReporter:
         total_posts = content_data.get("total_posts", 0)
         posts_with_affiliate = content_data.get("posts_with_affiliate", 0)
         coverage = round(posts_with_affiliate / max(total_posts, 1) * 100, 1) if total_posts > 0 else 0
+        template_level_coverage = content_data.get("template_level_coverage", False)
+        site_wide_affiliate = content_data.get("site_wide_affiliate", False)
+        if site_wide_affiliate:
+            coverage_display = f"{coverage}%（内容级 {posts_with_affiliate}/{total_posts}）+ 模板级全量覆盖"
+        else:
+            coverage_display = f"{coverage}%（{posts_with_affiliate}/{total_posts}）"
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
         posts_without_schema = content_data.get("posts_without_schema", 0)
         posts_with_placeholder = content_data.get("posts_with_placeholder", 0)
@@ -827,9 +869,9 @@ class FeishuWeeklyReporter:
             plan_rows.append(f"| {item['task']} | {priority_icon} | {period} |")
 
         indexed_status = "🔴" if indexed_pages == 0 else "🟡" if indexed_pages < 10 else "✅"
-        coverage_status = "🔴" if coverage < 30 else "🟡" if coverage < 80 else "✅"
+        coverage_status = "🔴" if (coverage < 30 and not site_wide_affiliate) else "🟡" if coverage < 80 else "✅"
         conflict_status = "🔴" if posts_with_conflict > 0 else "✅"
-        schema_status = "🟡" if posts_without_schema > 0 else "✅"
+        schema_status = "🟡" if (posts_without_schema > 0 and not template_level_coverage) else "✅"
         placeholder_status = "⚠️" if posts_with_placeholder > 0 else "✅"
         content_rate_status = "✅" if content_rate >= 100 else "⚠️"
 
@@ -852,7 +894,7 @@ class FeishuWeeklyReporter:
         priority_actions = []
         if indexed_pages == 0:
             priority_actions.append("提交GSC索引")
-        if coverage < 30:
+        if coverage < 30 and not site_wide_affiliate:
             priority_actions.append("全站联盟链接覆盖")
         if posts_with_conflict > 0:
             priority_actions.append("统一人设文案")
@@ -878,7 +920,7 @@ class FeishuWeeklyReporter:
 | :--- | :--- | :--- | :--- | :--- |
 | Google 已索引页面 | {indexed_pages} 页 | 10 页 | {round(indexed_pages/10*100,0)}% | {indexed_status} |
 | 有效外链总数 | 0 条 | 5 条 | 0% | 🔴 |
-| 联盟链接覆盖率 | {coverage}% | 100% | {coverage}% | {coverage_status} |"""
+| 联盟链接覆盖率 | {coverage_display} | 100% | {coverage}% | {coverage_status} |"""
 
         channel_table = f"""---
 ## 🌐 流量深度分析
@@ -960,9 +1002,9 @@ class FeishuWeeklyReporter:
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
 | :--- | :--- | :--- | :--- |
-| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {posts_with_affiliate}/{total_posts} = {coverage}% | {coverage_status} |
+| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {coverage_display} | {coverage_status} |
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
-| 结构化数据 | Front Matter 含 article_schema 字段 | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
+| 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
 
 ### 3. 文章分类分布
@@ -977,9 +1019,9 @@ class FeishuWeeklyReporter:
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
 | :--- | :--- | :--- | :--- |
-| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {posts_with_affiliate}/{total_posts} = {coverage}% | {coverage_status} |
+| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {coverage_display} | {coverage_status} |
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
-| 结构化数据 | Front Matter 含 article_schema 字段 | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
+| 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
 
 ### 3. 文章分类分布
@@ -997,9 +1039,9 @@ class FeishuWeeklyReporter:
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
 | :--- | :--- | :--- | :--- |
-| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {posts_with_affiliate}/{total_posts} = {coverage}% | {coverage_status} |
+| 联盟链接覆盖率 | 含 Travelpayouts / Booking 等链接 | {coverage_display} | {coverage_status} |
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
-| 结构化数据 | Front Matter 含 article_schema 字段 | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
+| 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
 
 ### 3. 文章分类分布

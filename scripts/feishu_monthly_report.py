@@ -497,6 +497,7 @@ class FeishuMonthlyReporter:
 
         period = self._get_report_period()
         report_month_start = datetime.strptime(period["report_start"], "%Y-%m-%d")
+        report_month_end = datetime.strptime(period["report_end"], "%Y-%m-%d")
 
         affiliate_patterns = [
             r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook',
@@ -518,7 +519,7 @@ class FeishuMonthlyReporter:
                             post_date = datetime.strptime(date_match.group(1), "%Y-%m-%d")
                         except ValueError:
                             pass
-                if post_date and post_date >= report_month_start:
+                if post_date and report_month_start <= post_date <= report_month_end:
                     result["monthly_new_posts"] += 1
 
                 if any(re.search(p, content, re.IGNORECASE) for p in affiliate_patterns):
