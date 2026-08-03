@@ -41,6 +41,8 @@ CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
 THEME_SCHEMA_PATH = BLOG_ROOT / "layouts" / "partials" / "templates" / "schema_json.html"
 TEMPLATE_AFFILIATE_PATH = BLOG_ROOT / "layouts" / "partials" / "travel-promo.html"
+REDIRECTS_PATH = BLOG_ROOT / "static" / "_redirects"
+META_TAGS_PATH = BLOG_ROOT / "layouts" / "partials" / "head" / "meta.html"
 REPORTS_DIR = BLOG_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 LAST_WEEK_DATA_FILE = REPORTS_DIR / "last_week_data.json"
@@ -690,9 +692,15 @@ class FeishuWeeklyReporter:
             elif "外链" in task:
                 status = "🟡 进行中"
             elif "301" in task or "重定向" in task:
-                status = "❌ 未开始"
+                if REDIRECTS_PATH.exists():
+                    status = "✅ 已完成"
+                else:
+                    status = "❌ 未开始"
             elif "OG" in task or "社交标签" in task:
-                status = "❌ 未开始"
+                if META_TAGS_PATH.exists():
+                    status = "✅ 已完成"
+                else:
+                    status = "❌ 未开始"
             elif "文案" in task or "人设" in task:
                 status = "❌ 未开始"
             elif "结构化数据" in task or "Article" in task:
