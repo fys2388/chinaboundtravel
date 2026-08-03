@@ -68,6 +68,7 @@ CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
 GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
 GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
+GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
 
 # MailerLite 订阅配置
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
@@ -624,7 +625,7 @@ class FeishuDailyReporter:
     
     def _fetch_gsc(self) -> dict:
         """获取 Google Search Console 数据（昨日 + Top关键词 + CTR + 周同比 + 月同比）"""
-        if not GA4_SERVICE_ACCOUNT_JSON or not HAS_GOOGLE_AUTH:
+        if not GSC_SERVICE_ACCOUNT_JSON or not HAS_GOOGLE_AUTH:
             print("   ⚠️ GSC: 服务账号未配置")
             return None
         
@@ -643,7 +644,7 @@ class FeishuDailyReporter:
             
             print(f"   🔍 正在调用 GSC API ({yesterday})...")
             
-            service_account_info = self._load_service_account()
+            service_account_info = self._load_gsc_service_account()
             if not service_account_info:
                 return None
             
@@ -654,7 +655,7 @@ class FeishuDailyReporter:
             credentials.refresh(Request())
             
             service = build("searchconsole", "v1", credentials=credentials)
-            site_url = "https://chinaboundtravel.com"
+            site_url = "sc-domain:chinaboundtravel.com"
             
             def gsc_query(start, end, dimensions=None, row_limit=10):
                 """封装 GSC 查询"""
@@ -805,6 +806,36 @@ class FeishuDailyReporter:
             return None
         
         print(f"   ⚠️ 服务账号加载失败: 无法解析 JSON 或读取文件")
+        return None
+    
+    def _load_gsc_service_account(self) -> dict:
+        """加载 GSC 服务账号信息（独立于 GA4）"""
+        if not GSC_SERVICE_ACCOUNT_JSON:
+            return None
+        
+        sa_json = GSC_SERVICE_ACCOUNT_JSON
+        
+        try:
+            return json.loads(sa_json)
+        except (json.JSONDecodeError, TypeError):
+            pass
+        
+        try:
+            if "\\n" in sa_json and "BEGIN PRIVATE KEY" in sa_json:
+                fixed_json = sa_json.replace("\\n", "\n")
+                return json.loads(fixed_json)
+        except (json.JSONDecodeError, TypeError):
+            pass
+        
+        try:
+            sa_path = Path(sa_json)
+            if sa_path.exists() and sa_path.is_file():
+                with open(sa_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+        except Exception as e:
+            print(f"   ⚠️ GSC 服务账号加载失败: {e}")
+            return None
+        
         return None
     
     def _get_ga4_auth_headers(self) -> dict:

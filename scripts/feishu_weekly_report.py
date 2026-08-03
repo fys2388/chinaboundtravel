@@ -494,8 +494,8 @@ class FeishuWeeklyReporter:
         result["total_posts"] = len(posts)
 
         today = datetime.now()
-        week_start = (today - timedelta(days=today.weekday() + 7))
-        week_end = week_start + timedelta(days=6)
+        week_start = (today - timedelta(days=today.weekday() + 7)).date()
+        week_end = (week_start + timedelta(days=6))
 
         affiliate_patterns = [
             r'travelpayouts', r'booking\.com', r'agoda\.com', r'trip\.com', r'klook',
@@ -517,7 +517,7 @@ class FeishuWeeklyReporter:
                             post_date = datetime.strptime(date_match.group(1), "%Y-%m-%d")
                         except ValueError:
                             pass
-                if post_date and week_start <= post_date <= week_end:
+                if post_date and week_start <= post_date.date() <= week_end:
                     result["weekly_new_posts"] += 1
 
                 if any(re.search(p, content, re.IGNORECASE) for p in affiliate_patterns):
@@ -971,21 +971,12 @@ class FeishuWeeklyReporter:
 | 订单数 | {tp_bookings} 单 | - | 0% |
 | 佣金收入 | ${tp_revenue:.2f} | - | - |
 
-### 分产品转化明细
-| 产品类型 | 点击量 | 订单数 | 佣金 |
-| :--- | :--- | :--- | :--- |
-| 酒店预订 | 0 | 0 | $0.00 |
-| 机票 / 接送机 | 0 | 0 | $0.00 |
-| 旅行保险 / eSIM | 0 | 0 | $0.00 |
-| 当地一日游 | 0 | 0 | $0.00 |
-
-> 当前仅酒店类链接在部分文章中有覆盖，机票/保险/eSIM/当地游类产品全站未布局，为零转化核心原因
-
 ### 🩺 自动诊断结论
-🔴 **核心问题：供给侧缺失**
+🔴 **核心问题：供给侧缺失 + 追踪链路未验证**
 - 本地检测：全站 {total_posts} 篇文章，仅 {posts_with_affiliate} 篇含联盟链接，**覆盖率 {coverage}%**
 - 未启用 Travelpayouts Drive 自动推荐组件
-- 文章无固定转化区块与 CTA 引导，用户无下单入口"""
+- 文章无固定转化区块与 CTA 引导，用户无下单入口
+- 联盟链接展示量（inits）为 0，需确认 Tracking 脚本是否正确注入"""
 
         email_section = f"""---
 ## 📧 邮件订阅
