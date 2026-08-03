@@ -1,4 +1,17 @@
 {{- /* Twitter Card */ -}}
+{{- $twImage := "" }}
+{{- with .Params.cover }}
+  {{- $coverImg := . }}
+  {{- if reflect.IsMap $coverImg }}
+    {{- $coverImg = $coverImg.image }}
+  {{- end }}
+  {{- if $coverImg }}
+    {{- $twImage = $coverImg }}
+  {{- end }}
+{{- end }}
+{{- if not $twImage }}
+  {{- $twImage = "/images/twitter-default.jpg" }}
+{{- end }}
 <meta name="twitter:card" content="{{ if .Params.cover }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
 <meta name="twitter:title" content="{{ .Title }}">
@@ -7,15 +20,7 @@
 {{- else if .IsPage }}
 <meta name="twitter:description" content="{{ .Summary | plainify | truncate 160 }}">
 {{- end }}
-{{- with .Params.cover }}
-  {{- $coverImg := . }}
-  {{- if reflect.IsMap $coverImg }}
-    {{- $coverImg = $coverImg.image }}
-  {{- end }}
-  {{- if $coverImg }}
-<meta name="twitter:image" content="{{ $coverImg | absURL }}">
-  {{- end }}
-{{- end }}
+<meta name="twitter:image" content="{{ $twImage | absURL }}">
 {{- with site.Params.SocialParams }}
   {{- with .twitter }}
 <meta name="twitter:site" content="@{{ . }}">

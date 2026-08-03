@@ -1,4 +1,17 @@
 {{- /* Open Graph / Facebook */ -}}
+{{- $ogImage := "" }}
+{{- with .Params.cover }}
+  {{- $coverImg := . }}
+  {{- if reflect.IsMap $coverImg }}
+    {{- $coverImg = $coverImg.image }}
+  {{- end }}
+  {{- if $coverImg }}
+    {{- $ogImage = $coverImg }}
+  {{- end }}
+{{- end }}
+{{- if not $ogImage }}
+  {{- $ogImage = "/images/og-default.jpg" }}
+{{- end }}
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ .Title }}">
@@ -7,17 +20,9 @@
 {{- else if .IsPage }}
 <meta property="og:description" content="{{ .Summary | plainify | truncate 160 }}">
 {{- end }}
-{{- with .Params.cover }}
-  {{- $coverImg := . }}
-  {{- if reflect.IsMap $coverImg }}
-    {{- $coverImg = $coverImg.image }}
-  {{- end }}
-  {{- if $coverImg }}
-<meta property="og:image" content="{{ $coverImg | absURL }}">
+<meta property="og:image" content="{{ $ogImage | absURL }}">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
-  {{- end }}
-{{- end }}
 {{- if not .IsHome }}
 <meta property="og:site_name" content="{{ site.Title }}">
 {{- end }}

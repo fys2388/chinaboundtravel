@@ -170,3 +170,31 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 {{< affiliate-esim >}}
 
 {{< affiliate-tour >}}
+
+---
+
+## 🏨 Plan Your China Trip
+
+| Need | Solution | Link |
+|------|----------|------|
+| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
+| ✈️ Flights | Best deals on flights to China | {{< affiliate-flight >}} |
+| 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
+| 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
+| 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
+| 🔒 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
+
+---
+
+### 📌 Helpful Guides
+- 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
+- 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
+- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+
+---
+
+{{< affiliate-disclosure >}}
+

@@ -1,4 +1,4 @@
-<!-- Email Subscription Form -->
+<!-- Email Subscription Form with Lead Magnet -->
 <div class="subscribe-card">
     <div class="subscribe-header">
         <div class="subscribe-icon">
@@ -7,15 +7,18 @@
                 <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
         </div>
-        <h3 class="subscribe-heading">Stay Ahead of the Curve</h3>
-        <p class="subscribe-sub">China travel intel, straight to your inbox</p>
+        <h3 class="subscribe-heading">🎁 Get Your Free China Itinerary</h3>
+        <p class="subscribe-sub">7-Day China Travel Plan + Monthly Updates</p>
     </div>
 
-    <p class="subscribe-description">
-        Get the latest China visa rules, internet tips & travel guides delivered to your inbox.
-    </p>
+    <div class="subscribe-lead-magnet">
+        <div class="lm-icon">📋</div>
+        <div class="lm-content">
+            <strong>Free Bonus:</strong> Download my complete <strong>7-Day China Itinerary Template</strong> — routes, checklists, budget breakdowns, and insider tips.
+        </div>
+    </div>
 
-    <!-- Email Subscription Form with Validation -->
+    <!-- Email Subscription Form with Lead Magnet -->
     <form class="subscribe-form" action="https://assets.mailerlite.com/html/forms/188150796635866830/signup" method="post" target="_blank" id="emailSubscribeForm">
         <div class="subscribe-fields">
             <label for="subscribe-email" class="sr-only">Email address</label>
@@ -24,19 +27,16 @@
                 id="subscribe-email"
                 name="email" 
                 class="subscribe-input" 
-                placeholder="Enter your email address" 
+                placeholder="Enter your email to get started" 
                 required
                 autocomplete="email"
             >
             <button type="submit" class="subscribe-btn">
-                <span class="btn-text">Subscribe Now</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
+                <span class="btn-text">Send My Free Guide →</span>
             </button>
         </div>
         <p class="subscribe-privacy">
-            By subscribing, you agree to receive our monthly newsletter. No spam, ever.
+            Join 10,000+ travelers. No spam, ever. Unsubscribe anytime.
         </p>
     </form>
 
@@ -64,10 +64,32 @@
     </div>
 </div>
 
+<style>
+.subscribe-lead-magnet {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    margin: 12px 0;
+    background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+    border: 1px solid #fbbf24;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.subscribe-lead-magnet .lm-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+.subscribe-lead-magnet .lm-content strong {
+    color: #92400e;
+}
+</style>
+
 <script>
 document.getElementById('emailSubscribeForm')?.addEventListener('submit', function(e) {
     const btn = this.querySelector('.subscribe-btn');
     btn.disabled = true;
-    btn.querySelector('.btn-text').textContent = 'Subscribing...';
+    btn.querySelector('.btn-text').textContent = 'Sending Guide...';
 });
 </script>

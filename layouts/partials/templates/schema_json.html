@@ -55,6 +55,19 @@
 }
 </script>
 {{- if .IsPage }}
+{{- $schemaImage := "" }}
+{{- with .Params.cover }}
+  {{- $coverImg := . }}
+  {{- if reflect.IsMap $coverImg }}
+    {{- $coverImg = $coverImg.image }}
+  {{- end }}
+  {{- if $coverImg }}
+    {{- $schemaImage = $coverImg }}
+  {{- end }}
+{{- end }}
+{{- if not $schemaImage }}
+  {{- $schemaImage = "/images/og-default.jpg" }}
+{{- end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,15 +86,7 @@
   "wordCount": {{ .WordCount }},
   {{- end }}
   "inLanguage": "{{- .Language.Lang | default "en-us" | safeJS -}}",
-  {{- with .Params.cover }}
-    {{- $coverImg := . }}
-    {{- if reflect.IsMap $coverImg }}
-      {{- $coverImg = $coverImg.image }}
-    {{- end }}
-    {{- if $coverImg }}
-  "image": "{{- $coverImg | absURL | safeJS -}}",
-    {{- end }}
-  {{- end }}
+  "image": "{{- $schemaImage | absURL | safeJS -}}",
   {{- if .PublishDate }}
   "datePublished": "{{- .PublishDate.Format "2006-01-02T15:04:05Z" | safeJS -}}",
   {{- end }}
