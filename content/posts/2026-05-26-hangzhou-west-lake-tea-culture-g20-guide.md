@@ -122,7 +122,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 | **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |
 | **Airport** | Hangzhou Xiaoshan (HGH), Metro Line 1 connects |
 
-> **Book your train to Hangzhou on [Trip.com](https://trip.tpo.li/trains?marker=730795).**
+> **Book your train to Hangzhou on [Trip.com](https://www.trip.com/).**
 
 ---
 

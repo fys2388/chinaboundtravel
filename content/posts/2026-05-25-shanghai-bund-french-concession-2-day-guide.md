@@ -96,7 +96,7 @@ This is where locals eat. The area near the **Dashijie (Dashijie** Metro station
 
 If you have extra time, take Metro Line 17 to **Zhujiajiao**. This water town is 1,700 years old and 45 minutes from central Shanghai. Yes, it's touristy, but unlike most tourist traps, the food is actually good and cheap. The **Kezhi Garden** (Kezhi Garden) is peaceful.
 
-> **Book your train/trip in advance:** Trips to Zhujiajiao and around Shanghai can be booked on [Trip.com](https://trip.tpo.li/trains?marker=730795).
+> **Book your train/trip in advance:** Trips to Zhujiajiao and around Shanghai can be booked on [Trip.com](https://www.trip.com/).
 
 ---
 
