@@ -65,9 +65,12 @@
 
 ## 三、部署状态
 
-- 修复文件：`content/resources/_index.md`、`layouts/partials/pricing-table.html`
-- 待提交并推送至 GitHub `main` 分支
-- Cloudflare Pages 将自动部署
+- 修复文件：`content/resources/_index.md`、`layouts/partials/pricing-table.html`、`reports/affiliate_links_status_table.md`
+- 已提交并推送至 GitHub `main` 分支：`ecc0a52`
+- Cloudflare Pages 已自动部署完成
+- 线上验证：
+  - Pricing 页勾选退款协议后点击购买按钮，可正常打开 Stripe 结账页
+  - Resources 页 "Search China Flights" 已指向 Aviasales 联盟链接
 
 ---
 

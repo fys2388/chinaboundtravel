@@ -99,7 +99,7 @@ Search and compare flight prices across multiple airlines and booking platforms 
 - ✅ **No booking fees** — Get the best price without extra charges
 - ✅ **Free cancellation** — Flexible booking options
 
-[**Search China Flights →**](https://www.aviasales.com/?marker=730795)
+<a href="https://www.aviasales.com/?marker=730795" rel="nofollow sponsored" target="_blank"><strong>Search China Flights →</strong></a>
 
 ### Klook — Tours & Skip-the-Line Tickets
 
