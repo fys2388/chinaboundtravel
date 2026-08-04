@@ -78,7 +78,7 @@ For hotels in China, Booking.com consistently has the best selection and pricing
 - ✅ Real customer reviews from verified stays
 - ✅ English-language support 24/7
 
-<a href="https://www.hotellook.com/search?marker=730795" rel="nofollow sponsored" target="_blank"><strong>Search China Hotels →</strong></a>
+<a href="https://www.booking.com/index.html?aid=730795" rel="nofollow sponsored" target="_blank"><strong>Search China Hotels →</strong></a>
 
 ### Hostelworld — Budget Stays
 

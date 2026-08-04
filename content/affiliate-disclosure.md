@@ -20,7 +20,7 @@ Here are some of the affiliate programs we participate in:
 - **Airalo** - eSIM for international travel
 - **NordVPN** - VPN service for China and international travel
 - **NordPass** - Password manager
-- **Travelpayouts** - Hotel, flight, and train bookings (through HotelLook, Trip.com, Klook)
+- **Travelpayouts** - Hotel, flight, and train bookings (through Booking.com, Trip.com, Klook)
 - **Klook** - Travel activities and experiences
 
 ### Our Commitment to You

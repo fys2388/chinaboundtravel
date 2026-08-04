@@ -153,16 +153,16 @@ ignoreFiles = ["/\\.archived/"]
   bing = { SiteVerificationTag = "" }
 
 [params.affiliate]
-  esim = "https://www.airalo.com/promo/38j3e4"
+  esim = "https://www.airalo.com/"
   vpn = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   vpnNord = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
-  nordpass = "https://go.nordpass.io/off/?offer_id=488&aff_id=150687&url_id=9356"
-  hotel = "https://www.hotellook.com/search?marker=730795"
+  nordpass = "https://nordpass.com/"
+  hotel = "https://www.booking.com/index.html?aid=730795"
   klook = "https://klook.tpo.li/vrPkmS2v"
   klook_expire_date = "2027-07-24"
   safetywing = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
-  trip = "https://trip.tpo.li/trains?marker=730795"
-  flight = "https://aviasales.travelpayouts.com/search?marker=730795"
+  trip = "https://www.trip.com/"
+  flight = "https://www.aviasales.com/?marker=730795"
   worldnomads = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
   allianz = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
   partnerizeUserId = "10111425644"
