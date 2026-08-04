@@ -571,7 +571,10 @@
         var link = document.getElementById(id);
         if (link) {
             link.addEventListener('click', function(e) {
-                validateAndOpen(id, e);
+                e.preventDefault();
+                if (validateAndOpen(id, e)) {
+                    window.open(links[id], '_blank');
+                }
             });
         }
     });
