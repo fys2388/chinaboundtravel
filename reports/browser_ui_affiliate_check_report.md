@@ -23,6 +23,7 @@
 - 三个套餐（One-Time Buyout、Monthly、Annual Elite）正常显示
 - 订阅条款复选框与退款政策链接存在
 - Stripe 结账链接配置正确
+- ⚠️ **问题**：购买按钮默认被 JavaScript 禁用，必须勾选退款协议复选框才能点击；实际按钮视觉上没有明显禁用状态，导致用户点击无反应
 
 ### 3. 文章页面（张家界示例）
 - URL：https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/
@@ -80,6 +81,15 @@
 - **现象**：`scripts/check_affiliate_config.cjs` 中 URLS 数组仍包含已废弃的 Airalo promo、NordPass 跳转、Trip redirect、Aviasales travelpayouts URL
 - **修复**：更新脚本 URLS 数组，与当前 `hugo.toml` 保持一致
 
+#### 问题 4：定价页购买按钮点击无反应
+- **现象**：Pricing 页面三个购买按钮（Buy Now / Start for $1 / Get Instant Access）点击后无法进入 Stripe 结账页
+- **根因**：`layouts/partials/pricing-table.html` 底部脚本在页面加载后立即移除按钮的 `href` 属性，只有勾选退款协议复选框后才恢复；但按钮视觉样式保持彩色，用户无法识别已禁用
+- **修复**：
+  - 移除默认禁用逻辑，按钮始终保留 `href`
+  - 点击时检查复选框：未勾选则阻止跳转、高亮复选框并提示用户
+  - 勾选后正常跳转 Stripe 结账页
+- **本地验证**：未勾选时点击会聚焦复选框并提示；勾选后成功跳转到 `https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01`
+
 ---
 
 ## 三、部署状态
@@ -88,12 +98,13 @@
 - 相关 commits：
   - `49bc7ed` fix(affiliate): update Airalo promo link to main site and sync check script with hugo.toml
   - `42adece` fix(affiliate): replace outdated Trip.com redirect with main site URL
+  - `4393aff` fix(pricing): make checkout buttons clickable with refund-policy validation
 - Cloudflare Pages 将自动部署；部署完成后线上页面才会生效
 
 ---
 
 ## 四、后续建议
 
-1. **部署后复检**：Cloudflare Pages 部署完成后，重新访问 Resources 页面和张家界文章，确认 Airalo 链接已变为 `https://www.airalo.com/`
+1. **部署后复检**：Cloudflare Pages 部署完成后，重新访问 Pricing 页面，确认购买按钮可直接点击并进入 Stripe
 2. **Airalo HEAD 超时**：自动化脚本中对该域名使用 GET 或增加超时；当前浏览器验证已通过
 3. **联盟链接常态化监控**：建议每周运行 `check_affiliate_links.cjs` 扫描文章中的联盟链接
