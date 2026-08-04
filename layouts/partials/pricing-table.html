@@ -541,45 +541,39 @@
 
 <script>
 (function() {
-    function disableLink(id) {
-        var link = document.getElementById(id);
-        if (link) {
-            link.style.pointerEvents = 'none';
-            link.style.opacity = '0.5';
-            link.removeAttribute('href');
-        }
-    }
-    function enableLink(id, href) {
-        var link = document.getElementById(id);
-        if (link) {
-            link.style.pointerEvents = 'auto';
-            link.style.opacity = '1';
-            link.setAttribute('href', href);
-        }
-    }
-
     var links = {
         'btn-onetime': 'https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01',
         'btn-monthly': 'https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05',
         'btn-annual': 'https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03'
     };
 
-    disableLink('btn-onetime');
-    disableLink('btn-monthly');
-    disableLink('btn-annual');
+    function validateAndOpen(id, event) {
+        var map = {
+            'btn-onetime': 'cb-onetime',
+            'btn-monthly': 'cb-monthly',
+            'btn-annual': 'cb-annual'
+        };
+        var cb = document.getElementById(map[id]);
+        if (cb && !cb.checked) {
+            event.preventDefault();
+            cb.focus();
+            cb.parentElement.style.outline = '2px solid #FF6B35';
+            setTimeout(function() {
+                cb.parentElement.style.outline = '';
+            }, 1500);
+            alert('Please check the box to agree to the refund policy before proceeding to checkout.');
+            return false;
+        }
+        return true;
+    }
 
-    var cbOnetime = document.getElementById('cb-onetime');
-    var cbMonthly = document.getElementById('cb-monthly');
-    var cbAnnual = document.getElementById('cb-annual');
-
-    if (cbOnetime) cbOnetime.addEventListener('change', function() {
-        cbOnetime.checked ? enableLink('btn-onetime', links['btn-onetime']) : disableLink('btn-onetime');
-    });
-    if (cbMonthly) cbMonthly.addEventListener('change', function() {
-        cbMonthly.checked ? enableLink('btn-monthly', links['btn-monthly']) : disableLink('btn-monthly');
-    });
-    if (cbAnnual) cbAnnual.addEventListener('change', function() {
-        cbAnnual.checked ? enableLink('btn-annual', links['btn-annual']) : disableLink('btn-annual');
+    Object.keys(links).forEach(function(id) {
+        var link = document.getElementById(id);
+        if (link) {
+            link.addEventListener('click', function(e) {
+                validateAndOpen(id, e);
+            });
+        }
     });
 })();
 </script>
