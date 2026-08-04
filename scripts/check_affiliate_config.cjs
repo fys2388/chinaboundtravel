@@ -3,15 +3,15 @@ const http = require('http');
 const { URL } = require('url');
 
 const URLS = [
-  { name: 'esim (Airalo)', url: 'https://www.airalo.com/promo/38j3e4' },
+  { name: 'esim (Airalo)', url: 'https://www.airalo.com/' },
   { name: 'vpn (affiliatescn)', url: 'https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613' },
   { name: 'vpnNord (affiliatescn)', url: 'https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613' },
-  { name: 'nordpass', url: 'https://go.nordpass.io/off/?offer_id=488&aff_id=150687&url_id=9356' },
+  { name: 'nordpass', url: 'https://nordpass.com/' },
   { name: 'hotel (Booking.com)', url: 'https://www.booking.com/index.html?aid=730795' },
   { name: 'klook', url: 'https://klook.tpo.li/vrPkmS2v' },
   { name: 'safetywing', url: 'https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador' },
-  { name: 'trip (trains)', url: 'https://trip.tpo.li/trains?marker=730795' },
-  { name: 'flight (aviasales)', url: 'https://aviasales.travelpayouts.com/search?marker=730795' },
+  { name: 'trip (trains)', url: 'https://www.trip.com/' },
+  { name: 'flight (aviasales)', url: 'https://www.aviasales.com/?marker=730795' },
   { name: 'worldnomads', url: 'https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador' },
   { name: 'allianz', url: 'https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador' },
 ];

@@ -53,7 +53,7 @@ Don't wait until you're standing at the airport counter at 1 AM with no signal. 
 - ✅ Data plans from $5 for 1 week
 - ✅ Your physical SIM stays in your phone (no swap needed)
 
-<a href="https://www.airalo.com/promo/38j3e4" rel="nofollow sponsored" target="_blank"><strong>Get Airalo eSIM →</strong></a>
+<a href="https://www.airalo.com/" rel="nofollow sponsored" target="_blank"><strong>Get Airalo eSIM →</strong></a>
 
 ### VPN — Access Google, WhatsApp, Instagram
 

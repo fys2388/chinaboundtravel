@@ -220,7 +220,7 @@ You could do it for under $250 if you stay in budget hotels, skip Tianmen Mounta
 
 Between booking DiDi rides, translating menus, and sharing photos, you'll want data. The park has limited WiFi that's spotty at best.
 
-- **[eSIM](/posts/internet-connection-china-esim-vpn-guide/):** The easiest option for short trips. I buy mine from [Airalo][eSIM](/posts/internet-connection-china-esim-vpn-guide/)ps://www.airalo.com/promo/38j3e4) — their China eSIM gives you 10GB for ~$15, works all over Hunan. [Check plans here →](https://www.airalo.com/promo/38j3e4)
+- **[eSIM](/posts/internet-connection-china-esim-vpn-guide/):** The easiest option for short trips. I buy mine from [Airalo](https://www.airalo.com/) — their China eSIM gives you 10GB for ~$15, works all over Hunan. [Check plans here →](https://www.airalo.com/)
 - **Physical SIM:** Buy a China Unicom SIM at the airport. About ¥50 ($7) for a week of data
 - **[VPN](/posts/internet-connection-china-esim-vpn-guide/):** You'll need one to access Google, Instagram, and WhatsApp. I've been using [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) in China for years and it works reliably on mobile. Set it up **before** you arrive — you can't download it once you're inside the firewall. For a full breakdown of internet options in China, including eSIM and VPN recommendations, see our [internet guide for China](/posts/internet-connection-china-esim-vpn-guide/). [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
 
