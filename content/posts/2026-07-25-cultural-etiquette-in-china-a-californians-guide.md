@@ -14,20 +14,20 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
-description: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
+summary: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 5 years in China."
+description: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 5 years in China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-in-china-a-californians-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-in-china-a-californians-guide.jpg"
 ---
 
 ## Cultural Etiquette in China: A Californian's Guide
 ## Introduction
 
-If you're planning a trip to China, let me tell you, it's going to be an adventure of a lifetime. As an American who has lived in Chengdu for over 10 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. One of the most important things to keep in mind when traveling to China is cultural etiquette. It's not just about following the rules; it's about showing respect for the local culture and making a good impression. In this blog post, I'm going to share some of my insights and experiences with cultural etiquette in China, from greetings and body language to dining customs and gift-giving. So, let's dive in!
+If you're planning a trip to China, let me tell you, it's going to be an adventure of a lifetime. As an American who has lived in Chengdu for over 5 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. One of the most important things to keep in mind when traveling to China is cultural etiquette. It's not just about following the rules; it's about showing respect for the local culture and making a good impression. In this blog post, I'm going to share some of my insights and experiences with cultural etiquette in China, from greetings and body language to dining customs and gift-giving. So, let's dive in!
 
 ![A busy street in Beijing during a festival, with people wearing traditional Chinese clothing, lots of red decorations, and a bustling, festive mood.](https://image.pollinations.ai/prompt/A%20busy%20street%20in%20Beijing%20during%20a%20festival%2C%20with%20people%20wearing%20traditional%20Chinese%20clothing%2C%20lots%20of%20red%20decorations%2C%20and%20a%20bustling%2C%20festive%20mood.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=32951&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
@@ -70,6 +70,18 @@ Another important thing to keep in mind is the wrapping of the gift. In China, g
 When giving a gift, it's also important to present it in a respectful way. In China, it's polite to use both hands when giving a gift, and to say something like, "This is a small gift for you. I hope you like it."
 
 I remember once when I was invited to a Chinese friend's wedding. I brought a gift, but I didn't realize that it was supposed to be wrapped in red paper. When I presented the gift, my friend's family looked at me a bit strangely, and I realized later that I had made a mistake. But they were also really understanding and didn't hold it against me.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 

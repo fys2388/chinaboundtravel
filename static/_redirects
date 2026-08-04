@@ -1,8 +1,27 @@
 # 1) Non-www -> www redirect (keep first)
 http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
-# 2) Date-prefixed post URLs -> slug-only URLs (social media links may contain date prefix)
-# --- July 2026 articles ---
+
+# 2) Date-prefixed post URLs -> canonical slug URLs
+# --- August 2026 ---
+/posts/2026-08-03-chinese-language-survival-phrases-guide/ /posts/chinese-language-survival-phrases-guide/ 301
+/posts/2026-08-02-chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/ /posts/chinese-language-survival-phrases-guide/ 301
+/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ /posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ 301
+/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
+/posts/2026-08-03-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
+
+# --- July 2026 ---
+/posts/2026-07-27-accommodation-tips-guide/ /posts/accommodation-tips-guide/ 301
+/posts/2026-07-25-cultural-etiquette-in-china-a-californians-guide/ /posts/cultural-etiquette-in-china-a-californians-guide/ 301
+/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure/ /posts/foodies-guide-to-china-a-gastronomic-adventure/ 301
+/posts/2026-07-21-cultural-etiquette-guide/ /posts/cultural-etiquette-guide/ 301
+/posts/2026-07-22-cultural-etiquette-guide/ /posts/cultural-etiquette-guide/ 301
+/posts/2026-07-20-travel-safety-guide/ /posts/travel-safety-guide/ 301
+/posts/2026-07-18-navigating-chinas-transportation-maze-a-californians-guide/ /posts/navigating-chinas-transportation-maze-a-californians-guide/ 301
+/posts/2026-07-16-food-recommendations-guide/ /posts/food-recommendations-guide/ 301
+/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
+/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
+/posts/2026-07-14-transportation-guide-guide/ /posts/transportation-guide-guide/ 301
 /posts/2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety/ /posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/ 301
 /posts/2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers/ /posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/ 301
 /posts/2026-07-11-accommodation-tips-guide/ /posts/accommodation-tips-guide/ 301
@@ -18,7 +37,8 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ /posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ 301
 /posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/ /posts/chinabound-travel-guide-2026-07-monthly-update/ 301
 /posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ /posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/ 301
-# --- June 2026 articles ---
+
+# --- June 2026 ---
 /posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/ 301
 /posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips/ /posts/xian-terracotta-army-history-discovery-and-insider-tips/ 301
 /posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ /posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/ 301
@@ -26,7 +46,8 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide/ /posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/ 301
 /posts/2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ /posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ 301
 /posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/ /posts/ultimate-guide-to-china-visa-for-tourists/ 301
-# --- May 2026 articles (old filenames with date prefix accessed via external links) ---
+
+# --- May 2026 ---
 /posts/2026-05-29-paypal-alipay-wechat-pay-qr-code-support/ /posts/paypal-alipay-wechat-pay-qr-code-support/ 301
 /posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/ /posts/chinese-food-delivery-meituan-eleme-guide/ 301
 /posts/2026-05-27-how-to-survive-chinese-train-station/ /posts/how-to-survive-chinese-train-station/ 301
@@ -37,59 +58,6 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/ /posts/hangzhou-west-lake-tea-culture-g20-guide/ 301
 /posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/ /posts/how-to-use-wechat-pay-as-a-foreigner/ 301
 /posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ /posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ 301
-# --- August 2026 articles ---
-/posts/2026-08-03-chinese-language-survival-phrases-guide/ /posts/chinese-language-survival-phrases-guide/ 301
-/posts/2026-08-02-chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/ /posts/chinese-language-survival-phrases-guide/ 301
-/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ /posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ 301
-/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
-/posts/2026-08-03-chinabound-travel-guide-2026-08-monthly-update/ /posts/chinabound-travel-guide-2026-08-monthly-update/ 301
 
-# 3) Orphaned social media posts -> nearest existing article
+# 3) Orphaned social media posts -> canonical article
 /posts/2026-07-03-144-hour-visa-free-transit-how-to-use-it-and-which-cities-you-can-visit/ /posts/144-hour-visa-free-transit-guide/ 301
-# 5) Article aliases - redirect old slugs to current canonical URLs
-/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
-/posts/china-high-speed-rail-how-to-book-tickets/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
-/posts/how-to-survive-chinese-train-station/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
-/posts/144-hour-visa-free-transit-guide/  /posts/accommodation-tips-guide/  301
-/posts/xian-terracotta-army-history-discovery-and-insider-tips/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/navigating-chinas-transportation-maze-a-californians-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/cultural-etiquette-in-china-a-californians-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/travel-safety-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/transportation-guide-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/cultural-etiquette-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/transportation-guide-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/transportation-guide-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/accommodation-tips-guide/  /posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/  301
-/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/food-recommendations-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/western-sichuan-overland-camping-route/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/best-travel-insurance-china/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/internet-connection-china-esim-vpn-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/alipay-wechat-pay-foreigners-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/china-just-made-it-way-easier-to-visit-my-mother-i/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/foodies-guide-to-china-a-gastronomic-adventure/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/cultural-etiquette-guide/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/  /posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/  301
-/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/  /posts/alipay-wechat-pay-foreigners-guide/  301
-/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/  /posts/alipay-wechat-pay-foreigners-guide/  301
-/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/  /posts/alipay-wechat-pay-foreigners-guide/  301
-/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/  /posts/navigating-chinas-transportation-maze-a-californians-guide/  301
-/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/  /posts/food-recommendations-guide/  301
-/posts/chinese-tea-culture-guide-2026/  /posts/food-recommendations-guide/  301
-/posts/chinese-street-food-guide-2026/  /posts/food-recommendations-guide/  301
-/posts/cultural-etiquette-in-china-a-californians-guide/  /posts/chinese-social-etiquette-2026/  301
-/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment/  /posts/china-travel-safety-tips-2026/  301
-/posts/china-budget-travel-guide-2026/  /posts/china-hotel-guide-2026/  301
-/posts/accommodation-tips-guide/  /posts/china-hotel-guide-2026/  301

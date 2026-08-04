@@ -14,19 +14,19 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "cultural etiquette for travelers visiting China. essential guide based on 10 years of experience curated by a US-based China travel expert."
-description: "cultural etiquette for travelers visiting China. essential guide based on 10 years of experience curated by a US-based China travel expert."
+summary: "cultural etiquette for travelers visiting China. essential guide based on 5 years of experience curated by a US-based China travel expert."
+description: "cultural etiquette for travelers visiting China. essential guide based on 5 years of experience curated by a US-based China travel expert."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg"
 ---
 
 ## Cultural Etiquette in China: A Californian's Guide for American Travelers
 
-Hey there, fellow travelers! If you're planning a trip to China, get ready for an adventure like no other. As an American who has lived in Chengdu for over 10 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. In this blog post, I'll share some of my insights on Chinese cultural etiquette to help you navigate your way through this amazing country with ease and respect.
+Hey there, fellow travelers! If you're planning a trip to China, get ready for an adventure like no other. As an American who has lived in Chengdu for over 5 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. In this blog post, I'll share some of my insights on Chinese cultural etiquette to help you navigate your way through this amazing country with ease and respect.
 
 ![A busy street in China with people of different ages going about their daily lives, some shops with traditional Chinese architecture in the background, and a sense of energy and activity](https://image.pollinations.ai/prompt/A%20busy%20street%20in%20China%20with%20people%20of%20different%20ages%20going%20about%20their%20daily%20lives%2C%20some%20shops%20with%20traditional%20Chinese%20architecture%20in%20the%20background%2C%20and%20a%20sense%20of%20energy%20and%20activity%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=26258&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
@@ -61,6 +61,16 @@ In addition to these general cultural norms, there are also a few specific custo
 Another custom is the use of red envelopes during special occasions like Chinese New Year or weddings. Red envelopes contain money and are given as a祝福 (zhùfú - blessing). It's a very nice gesture, but make sure to follow the proper etiquette. For example, don't open the red envelope in front of the person who gave it to you.
 
 If you're invited to someone's home, it's polite to bring a small gift, such as a box of Chinese tea or some fruits. And when you enter the house, take off your shoes. This is a sign of respect for the homeowner.
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ### Conclusion
 China is an amazing country with a rich and fascinating culture. By being aware of and respecting the cultural etiquette, you'll not only have a more enjoyable trip but also build better relationships with the people you meet. So, whether you're exploring the ancient temples of Xi'an, hiking in the Zhangjiajie Avatar Mountains, or indulging in some delicious Sichuan hotpot, keep these cultural tips in mind. And remember, the key is to be open-minded, respectful, and willing to learn. Have a great trip!

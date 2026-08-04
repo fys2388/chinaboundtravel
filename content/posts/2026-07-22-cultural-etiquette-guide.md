@@ -21,12 +21,12 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide-aussie.jpg"
+  image: "https://image.pollinations.ai/prompt/Traditional%20Chinese%20tea%20ceremony%20setting%20in%20a%20peaceful%20Chengdu%20teahouse%2C%20bamboo%20chairs%2C%20porcelain%20tea%20set%2C%20warm%20natural%20lighting%2C%20no%20people%2C%20travel%20photography%20style%2C%20high%20quality%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=48291&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux"
 ---
 
 ## Cultural Etiquette in China: A Californian's Guide for Aussie and Kiwi Travelers
 
-If you're planning a trip to China, get ready for an adventure filled with rich culture, delicious food, and friendly people. As an American who has lived in Chengdu for over 10 years, I've had my fair share of cultural misunderstandings and hilarious mishaps. But fear not! I'm here to share my insights and help you navigate the ins and outs of Chinese cultural etiquette.
+If you're planning a trip to China, get ready for an adventure filled with rich culture, delicious food, and friendly people. As an American who has lived in Chengdu for over 5 years, I've had my fair share of cultural misunderstandings and hilarious mishaps. But fear not! I'm here to share my insights and help you navigate the ins and outs of Chinese cultural etiquette.
 
 Let's start with the basics: greetings. In China, it's common to shake hands when meeting someone for the first time. But be careful not to shake too firmly, as this can be seen as aggressive. Instead, opt for a gentle handshake and maintain eye contact. And if you're meeting an older person or someone of higher status, it's a good idea to bow slightly as a sign of respect.
 
@@ -108,9 +108,19 @@ In conclusion, traveling to China can be an amazing experience, but it's importa
 
 ![Pandas in bamboo forest at Chengdu Panda Base](https://image.pollinations.ai/prompt/Pandas%20in%20bamboo%20forest%20at%20Chengdu%20Panda%20Base%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20empty%20scene%2C%20pure%20nature%20and%20animals%20only?width=1024&height=768&nologo=true&seed=53918&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux)
 
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
+
 ## Related Articles
 
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
-- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)

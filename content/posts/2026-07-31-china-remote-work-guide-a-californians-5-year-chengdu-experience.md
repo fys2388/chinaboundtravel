@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "Complete Chengdu travel guide 2026. top attractions, transportation tips & where to stay curated by a US-based China travel expert."
 description: "Complete Chengdu travel guide 2026. top attractions, transportation tips & where to stay curated by a US-based China travel expert."
-canonicalURL: "https://chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg"
 ---
 
 ## China Remote Work Guide: A Californian's 5-Year Chengdu Experience
@@ -80,6 +80,18 @@ Guangzhou is the capital city of Guangdong province and is a major economic and 
 
 ### Shenzhen
 Shenzhen is a major city in Guangdong province and is known for its high-tech industry and innovative culture. It's also a great place to work remotely, with a growing number of co-working spaces and cafes that offer free Wi-Fi and other amenities.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 Working remotely in China can be a great experience, but it's important to be prepared for the challenges and cultural differences. By following the tips and advice in this guide, you can make your stay in China a success and enjoy all that this amazing country has to offer. So what are you waiting for? Start planning your trip to China today!

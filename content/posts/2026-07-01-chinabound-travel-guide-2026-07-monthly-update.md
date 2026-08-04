@@ -15,6 +15,18 @@ weight: 1
 draft: false
 ---
 
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
+
 ## ChinaBound Travel Guide Now at Version 2026.07
 
 Every month, the ChinaBound Travel Guide PDF gets a fresh update with the latest information travelers need.
@@ -37,6 +49,18 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - AI trip planner template expansion for August travel
 
 ---
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 *Last updated: July 16, 2026*
 

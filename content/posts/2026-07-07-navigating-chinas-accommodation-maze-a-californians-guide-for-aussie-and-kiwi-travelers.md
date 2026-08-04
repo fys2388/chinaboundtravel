@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.jpg"
 ---
 
 ## Navigating China's Accommodation Maze: A Californian's Guide for Aussie and Kiwi Travelers
@@ -106,6 +106,18 @@ You can find deals and promotions by:
 - Checking the hotel's website or social media pages for special offers.
 - Booking through a travel agency that offers exclusive deals and promotions.
 - Looking for last-minute deals and promotions.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 Finding the perfect accommodation in China can be a challenge, but with a little research and planning, you can find a place that meets your needs and budget. By following the tips and tricks outlined in this guide, you can ensure that your stay in China is comfortable, enjoyable, and memorable. So what are you waiting for? Start planning your trip to China today and get ready to experience the adventure of a lifetime! And don't forget to check out [this article](https://chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) for a great 7-day itinerary for first-time China travelers.

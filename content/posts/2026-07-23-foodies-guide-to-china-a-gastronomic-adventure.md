@@ -21,12 +21,12 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/food/foodies-guide-to-china-a-gastronomic-adventure.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/food/foodies-guide-to-china-a-gastronomic-adventure.jpg"
 ---
 
 ## Foodie's Guide to China: A Gastronomic Adventure
 ## Introduction
-If you're planning a trip to China, get ready for a culinary journey like no other! As an American expat who has lived in Chengdu for over 10 years, I've had the privilege of exploring the diverse and delicious world of Chinese cuisine. In this blog post, I'll share my top food recommendations, along with some cultural insights and practical tips to help you make the most of your foodie adventure in China.
+If you're planning a trip to China, get ready for a culinary journey like no other! As an American expat who has lived in Chengdu for over 5 years, I've had the privilege of exploring the diverse and delicious world of Chinese cuisine. In this blog post, I'll share my top food recommendations, along with some cultural insights and practical tips to help you make the most of your foodie adventure in China.
 
 ## The Magic of Chinese Cuisine
 Chinese cuisine is a rich tapestry of flavors, textures, and cooking techniques. From the spicy Sichuan dishes to the delicate Cantonese dim sum, each region has its own unique culinary identity. One of the things I love most about Chinese food is its emphasis on balance and harmony. The combination of sweet, sour, salty, bitter, and umami flavors creates a symphony of tastes that is both satisfying and addictive.
@@ -82,6 +82,18 @@ Here are some practical tips to help you make the most of your foodie adventure 
 - **Be respectful:** When dining in China, it's important to be respectful of the local customs and traditions.
 - **Stay hydrated:** China can be a hot and humid country, so it's important to stay hydrated by drinking plenty of water.
 - **Watch out for food allergies:** If you have any food allergies, it's important to be careful when dining in China. Make sure to ask the waiter or waitress if the food contains any ingredients that you are allergic to.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 China is a food lover's paradise, with a rich and diverse cuisine that is sure to satisfy even the most discerning palate. Whether you're a fan of spicy Sichuan dishes, delicate Cantonese dim sum, or savory Beijing dumplings, there is something for everyone to enjoy. So, the next time you're planning a trip to China, make sure to leave plenty of room in your itinerary for some delicious foodie adventures. And don't forget to share your experiences with me! I'd love to hear about your favorite Chinese dishes and your foodie adventures in China.

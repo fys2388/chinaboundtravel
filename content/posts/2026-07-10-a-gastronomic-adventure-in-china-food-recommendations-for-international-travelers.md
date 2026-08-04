@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.jpg"
 ---
 
 If you're planning a trip to China, get ready for a culinary journey like no other! As an American expat who has lived in Chengdu for over 5 years, I've had the privilege of exploring the diverse and delicious world of Chinese cuisine. In this blog post, I'll share some of my favorite food recommendations, along with practical tips and cultural insights to enhance your dining experience.
@@ -101,6 +101,18 @@ When dining at a fine dining restaurant in China, it's important to dress approp
 - **Be adventurous:** Chinese cuisine is known for its diversity and its use of a variety of ingredients, so don't be afraid to try something new. Some of the most delicious dishes in China are the ones that you might not expect.
 - **Watch your spice level:** Some Chinese dishes can be very spicy, so if you're not used to eating spicy food, it's a good idea to order dishes with a lower spice level. You can always ask the server to adjust the spice level of the dish if you need to.
 - **Use your hands:** In China, it's common to use your hands to eat certain types of food, such as dumplings and baozi. Just make sure to wash your hands before you eat.
+
+
+
+{{< affiliate-section >}}
+
+**Ready for your China adventure?** Here are my top recommendations:
+
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+
+{{< /affiliate-section >}}
 
 ## Conclusion
 

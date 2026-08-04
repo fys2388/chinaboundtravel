@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿+++
 title = "Best Travel Insurance for China 2026 — Complete Buyer's Guide"
 description = "Compare the best travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."
 date = 2026-06-21
@@ -96,7 +96,7 @@ Based on personal experience and extensive research, here's my comparison of the
 
 {{< ab-cta test_id="safetywing-cta" variant_a="Get SafetyWing Quote" variant_b="See Why I Recommend It" affiliate_key="safetywing" style="secondary" analytics_id="safetywing_main" >}}
 
-After personally using SafetyWing for 2+ years (and helping hundreds of readers pick plans over my decade in China), it's my top recommendation for most travelers to China. Here's why:
+After personally using SafetyWing for 2+ years (and helping hundreds of readers pick plans over my 5 years in China), it's my top recommendation for most travelers to China. Here's why:
 
 - ✅ **$250,000 emergency medical coverage**
 - ✅ **$56/month** — among the most affordable options
