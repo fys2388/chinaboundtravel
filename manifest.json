@@ -1,8 +1,8 @@
 {
-  "month_post_count": 3,
+  "month_post_count": 4,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-03 02:38:43",
-  "daily_social_publish_date": "2026-08-03",
+  "last_social_publish": "2026-08-05 02:17:12",
+  "daily_social_publish_date": "2026-08-05",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -59,6 +59,12 @@
       "geo_region": "US",
       "category": "general",
       "create_date": "2026-08-03"
+    },
+    {
+      "topic": "china family travel tips",
+      "geo_region": "EU",
+      "category": "travel",
+      "create_date": "2026-08-05"
     }
   ],
   "keyword_convert_rate": {
