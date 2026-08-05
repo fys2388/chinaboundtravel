@@ -1,0 +1,36 @@
+name: Daily Health Check
+
+on:
+  schedule:
+    # 每天北京时间 9:00 (UTC 1:00)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Run health check
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
+        run: python scripts/health_check.py
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-check-results
+          path: reports/health/
+          retention-days: 30

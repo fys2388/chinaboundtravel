@@ -1,0 +1,33 @@
+name: Environment Check
+
+on:
+  schedule:
+    # 每天北京时间 8:00 (UTC 0:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  env-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run environment check
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: python scripts/env_check.py
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-check-report
+          path: reports/env-check/
+          retention-days: 30

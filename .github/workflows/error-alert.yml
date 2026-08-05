@@ -1,0 +1,76 @@
+name: Error Alert
+
+on:
+  workflow_run:
+    workflows: ["Weekly Blog Update", "Social Media Distributor", "Content Rotation Distributor", "YouTube Auto Publish"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Send error alert to Feishu
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "interactive",
+              "card": {
+                "header": {
+                  "title": {
+                    "tag": "plain_text",
+                    "content": "⚠️ 工作流执行失败通知"
+                  },
+                  "template": "red"
+                },
+                "elements": [
+                  {
+                    "tag": "div",
+                    "text": {
+                      "tag": "lark_md",
+                      "content": "**工作流名称**: ${{ github.event.workflow_run.name }}\n**仓库**: ${{ github.repository }}\n**分支**: ${{ github.event.workflow_run.head_branch }}\n**触发者**: ${{ github.event.workflow_run.triggering_actor.login }}\n**失败时间**: '"$(date '+%Y-%m-%d %H:%M:%S')"'\n**运行ID**: ${{ github.event.workflow_run.id }}\n**查看日志**: [点击这里](https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }})"
+                    }
+                  },
+                  {
+                    "tag": "hr"
+                  },
+                  {
+                    "tag": "note",
+                    "elements": [
+                      {
+                        "tag": "plain_text",
+                        "content": "请检查日志并修复问题。系统将在5分钟后自动重试。"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }'
+
+      - name: Create issue for tracking
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `⚠️ [自动创建] ${{ github.event.workflow_run.name }} 执行失败`,
+              body: `## 工作流信息
+
+              - **工作流**: ${{ github.event.workflow_run.name }}
+              - **运行ID**: [${{ github.event.workflow_run.id }}](${{ github.event.workflow_run.html_url }})
+              - **分支**: ${{ github.event.workflow_run.head_branch }}
+              - **提交**: ${{ github.event.workflow_run.head_sha }}
+              - **失败时间**: ${{ github.event.workflow_run.created_at }}
+              - **触发者**: ${{ github.event.workflow_run.triggering_actor.login }}
+
+              ## 下一步
+
+              请检查日志并修复问题。该系统会自动重试。`
+            });
+            
+            console.log(`Created issue: ${issue.data.html_url}`);

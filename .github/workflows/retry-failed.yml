@@ -1,0 +1,37 @@
+name: Retry Failed Jobs
+
+on:
+  workflow_run:
+    workflows: ["Weekly Blog Update", "Social Media Distributor", "Content Rotation Distributor"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  check-and-retry:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Send failure notification
+        run: |
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "msg_type": "text",
+              "content": {
+                "text": "⚠️ 工作流执行失败，将自动重试\n\n工作流: ${{ github.event.workflow_run.name }}\n时间: '"$(date '+%Y-%m-%d %H:%M:%S')"'\n运行ID: ${{ github.event.workflow_run.id }}\n\n将在5分钟后自动重试..."
+              }
+            }'
+
+      - name: Wait before retry
+        run: sleep 300
+
+      - name: Retry workflow
+        if: success()
+        run: |
+          echo "Retrying workflow: ${{ github.event.workflow_run.name }}"
+          if command -v gh &> /dev/null; then
+            gh workflow run ${{ github.event.workflow_run.file_name }} --ref main
+          fi
