@@ -146,7 +146,9 @@ class FeishuDailyReporter:
         traffic_status = "🟢" if data.get("visitors", 0) > 0 else "⚪"
         content_status = "🟢" if data.get("total_content_issues", 0) == 0 else "🟡"
         affiliate_status = "🟢" if data.get("affiliate_revenue", 0) > 0 else "⚪"
-        search_status = "🟢" if data.get("gsc_errors", 0) == 0 else "🟡"
+        gsc_available = data.get("gsc_data_available", False)
+        gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
+        search_status = "🟢" if (gsc_has_data and data.get("gsc_errors", 0) == 0) else ("🟡" if gsc_available else "⚪")
         
         # ===== 1. 流量总览 =====
         # 格式化会话时长
@@ -178,11 +180,45 @@ class FeishuDailyReporter:
         country_str = "\n".join(country_lines)
         
         # ===== 2. 搜索表现 =====
+        gsc_available = data.get("gsc_data_available", False)
+        gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
+        if gsc_has_data:
+            gsc_impressions_str = f"{data.get('gsc_impressions', 0):,}"
+            gsc_clicks_str = f"{data.get('gsc_clicks', 0):,}"
+            gsc_ctr_str = f"{data.get('gsc_ctr', 0):.2f}%"
+            gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
+            gsc_errors_str = str(data.get('gsc_errors', 0))
+            gsc_week_trend = data.get('gsc_week_trend', 'N/A')
+            gsc_month_trend = data.get('gsc_month_trend', 'N/A')
+        elif gsc_available:
+            # 已连接但昨日无搜索数据
+            gsc_impressions_str = "暂无数据"
+            gsc_clicks_str = "暂无数据"
+            gsc_ctr_str = "暂无数据"
+            gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
+            gsc_errors_str = str(data.get('gsc_errors', 0))
+            gsc_week_trend = data.get('gsc_week_trend', 'N/A')
+            gsc_month_trend = data.get('gsc_month_trend', 'N/A')
+        else:
+            gsc_impressions_str = "未连接"
+            gsc_clicks_str = "未连接"
+            gsc_ctr_str = "未连接"
+            gsc_indexed_str = "未连接"
+            gsc_errors_str = "未连接"
+            gsc_week_trend = "未连接"
+            gsc_month_trend = "未连接"
+        
         # Top 搜索关键词
         top_keywords = data.get("top_keywords", [])
         kw_lines = ["暂无数据"]
-        if top_keywords:
+        if gsc_has_data and top_keywords:
             kw_lines = [f"{i}. {kw['keyword']} (曝光 {kw['impressions']}, 点击 {kw['clicks']}, CTR {kw['ctr']}%, 排名 {kw['position']})" for i, kw in enumerate(top_keywords[:5], 1)]
+        elif gsc_has_data and not top_keywords:
+            kw_lines = ["昨日无搜索关键词数据"]
+        elif gsc_available and not gsc_has_data:
+            kw_lines = ["GSC 已连接，昨日暂无搜索数据"]
+        elif not gsc_available:
+            kw_lines = ["GSC 数据未连接，请检查服务账号配置"]
         kw_str = "\n".join(kw_lines)
         
         # ===== 3. 内容质量巡检 =====
@@ -255,11 +291,11 @@ class FeishuDailyReporter:
 
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
-| 已收录页面 | {data.get('indexed_pages', 'N/A')} 页 | 索引错误 | {data.get('gsc_errors', 0)} 个 |
-| 搜索曝光 | {data.get('gsc_impressions', 0):,} 次 | 搜索点击 | {data.get('gsc_clicks', 0):,} 次 |
-| 点击率 CTR | {data.get('gsc_ctr', 0):.2f}% | | |
+| 已收录页面 | {gsc_indexed_str} 页 | 索引错误 | {gsc_errors_str} 个 |
+| 搜索曝光 | {gsc_impressions_str} 次 | 搜索点击 | {gsc_clicks_str} 次 |
+| 点击率 CTR | {gsc_ctr_str} | | |
 
-**📈 GSC 同比趋势**: 周同比 {data.get('gsc_week_trend', 'N/A')} ｜ 月同比 {data.get('gsc_month_trend', 'N/A')}"""
+**📈 GSC 同比趋势**: 周同比 {gsc_week_trend} ｜ 月同比 {gsc_month_trend}"""
                     }
                 },
                 # Top 关键词
@@ -486,11 +522,15 @@ class FeishuDailyReporter:
         
         # 3. GSC 搜索数据
         gsc_data = self._fetch_gsc()
-        if gsc_data:
+        if gsc_data and gsc_data.get("gsc_data_available"):
             data.update(gsc_data)
-            print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,} 次, 点击 {data['gsc_clicks']:,} 次")
+            if data.get("gsc_impressions", 0) > 0:
+                print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,} 次, 点击 {data['gsc_clicks']:,} 次")
+            else:
+                print(f"   ✅ GSC已连接，昨日暂无搜索数据")
+                data["data_status"].append("GSC已连接但昨日无搜索数据（新站正常现象）")
         else:
-            data["data_status"].append("GSC数据获取失败")
+            data["data_status"].append("GSC数据获取失败 - 请在 Google Search Console 中授权服务账号")
 
         # 4. 本地内容质量巡检
         content_issues = self._scan_content_quality()
@@ -525,7 +565,9 @@ class FeishuDailyReporter:
         gh_data = self._fetch_github_actions()
         if gh_data:
             data.update(gh_data)
-            print(f"   ✅ GitHub Actions: 博客生成 {'成功' if data.get('gh_blog_success') else '失败'}, 日报 {'成功' if data.get('gh_report_success') else '失败'}")
+            blog_status = '成功' if data.get('gh_blog_success') == True else ('失败' if data.get('gh_blog_success') == False else '未运行')
+            report_status = '成功' if data.get('gh_report_success') == True else ('失败' if data.get('gh_report_success') == False else '未运行')
+            print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
         
         # 7. 生成高优先级待办
         data["high_priority_todos"] = self._generate_todos(data)
@@ -656,7 +698,6 @@ class FeishuDailyReporter:
             
             service = build("searchconsole", "v1", credentials=credentials)
             site_url = "sc-domain:chinaboundtravel.com"
-            
             def gsc_query(start, end, dimensions=None, row_limit=10):
                 """封装 GSC 查询"""
                 request_body = {
@@ -757,6 +798,7 @@ class FeishuDailyReporter:
             print(f"   📊 GSC数据: 曝光 {yesterday_impressions:,}, 点击 {yesterday_clicks:,}, CTR {yesterday_ctr}%, 关键词 {len(top_keywords)} 个")
             
             return {
+                "gsc_data_available": True,
                 "indexed_pages": indexed_pages,
                 "gsc_impressions": yesterday_impressions,
                 "gsc_clicks": yesterday_clicks,
@@ -798,14 +840,17 @@ class FeishuDailyReporter:
         try:
             # 如果不是有效 JSON，尝试作为文件路径读取
             sa_path = Path(sa_json)
+            if not sa_path.is_absolute():
+                # 相对路径基于 BLOG_ROOT 解析
+                sa_path = BLOG_ROOT / sa_path
             if sa_path.exists() and sa_path.is_file():
                 with open(sa_path, "r", encoding="utf-8") as f:
                     return json.load(f)
         except Exception as e:
             print(f"   ⚠️ 服务账号加载失败: {e}")
             return None
-        
-        print(f"   ⚠️ 服务账号加载失败: 无法解析 JSON 或读取文件")
+
+        print(f"   ⚠️ 服务账号加载失败: 无法解析 JSON 或读取文件 (路径: {sa_json})")
         return None
     
     def _load_gsc_service_account(self) -> dict:
@@ -829,13 +874,17 @@ class FeishuDailyReporter:
         
         try:
             sa_path = Path(sa_json)
+            if not sa_path.is_absolute():
+                # 相对路径基于 BLOG_ROOT 解析
+                sa_path = BLOG_ROOT / sa_path
             if sa_path.exists() and sa_path.is_file():
                 with open(sa_path, "r", encoding="utf-8") as f:
                     return json.load(f)
         except Exception as e:
             print(f"   ⚠️ GSC 服务账号加载失败: {e}")
             return None
-        
+
+        print(f"   ⚠️ GSC 服务账号加载失败: 无法解析 JSON 或读取文件 (路径: {sa_json})")
         return None
     
     def _get_ga4_auth_headers(self) -> dict:
@@ -1142,10 +1191,13 @@ class FeishuDailyReporter:
             
             print(f"   🔍 正在调用 Travelpayouts API ({yesterday})...")
             response = requests.post(url, headers=headers, json=payload, timeout=30)
-            
+
             if response.status_code == 200:
                 result = response.json()
-                rows = result.get("results", [])
+                # Travelpayouts 可能返回 "results" 或 "data" 字段
+                rows = result.get("results", []) or result.get("data", [])
+                if not rows:
+                    print(f"   ℹ️ Travelpayouts API 返回空数据（昨日无活动），原始响应: {str(result)[:300]}")
                 
                 clicks = 0
                 bookings = 0
@@ -1266,35 +1318,42 @@ class FeishuDailyReporter:
             result = {}
             
             # 检查博客生成工作流
+            runs = []  # 预定义避免作用域问题
             try:
                 resp = requests.get(
                     base_url,
                     headers=headers,
-                    params={"per_page": 20},
+                    params={"per_page": 30},
                     timeout=15
                 )
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
-                    blog_runs = [r for r in runs if "hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")]
+                    # 只检查已完成的工作流（排除正在运行的）
+                    blog_runs = [r for r in runs if ("hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")) and r.get("status") == "completed"]
                     if blog_runs:
                         latest_blog = blog_runs[0]
                         result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
                         result["gh_blog_run_time"] = latest_blog.get("created_at", "")
                     else:
-                        result["gh_blog_success"] = None  # 无工作流运行
+                        result["gh_blog_success"] = None  # 无已完成的工作流
+                else:
+                    print(f"   ⚠️ GitHub API 响应 {resp.status_code}: {resp.text[:200]}")
             except Exception as e:
                 print(f"   ⚠️ GitHub 博客工作流查询失败: {e}")
                 result["gh_blog_success"] = None
-            
-            # 检查日报工作流
+
+            # 检查日报工作流（排除正在运行的当前实例）
             try:
-                report_runs = [r for r in runs if "daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()]
+                report_runs = [r for r in runs if ("daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()) and r.get("status") == "completed"]
                 if report_runs:
                     latest_report = report_runs[0]
                     result["gh_report_success"] = latest_report.get("conclusion") == "success"
+                    print(f"   📋 日报工作流最新完成: {latest_report.get('display_title', 'N/A')} -> {latest_report.get('conclusion', 'N/A')}")
                 else:
                     result["gh_report_success"] = None
-            except:
+                    print(f"   ⚠️ 未找到已完成的日报工作流（可能正在运行中）")
+            except Exception as e:
+                print(f"   ⚠️ GitHub 日报工作流查询失败: {e}")
                 result["gh_report_success"] = None
             
             return result if result else None
