@@ -29,9 +29,16 @@ CHECKS = [
     },
     {
         "name": "Buffer API",
-        "url": "https://api.buffer.com/1/account.json",
+        "url": "https://api.buffer.com",
+        "method": "POST",
         "expected_status": 200,
-        "headers": {"Authorization": f"Bearer {os.getenv('BUFFER_API_TOKEN', '')}"}
+        "headers_func": lambda: {
+            "Authorization": f"Bearer {os.getenv('BUFFER_API_TOKEN', '')}",
+            "Content-Type": "application/json"
+        },
+        "json_body": {
+            "query": "query { channels(input: {organizationId: \"6a17ddf5e051bed5895272f0\"}) { id service name } }"
+        }
     }
 ]
 
@@ -48,11 +55,50 @@ def load_env():
                         os.environ[key.strip()] = value.strip().strip('"').strip("'")
 
 
+def load_buffer_token():
+    """从 buffer_config.json 加载 Buffer API token（如果环境变量未配置）"""
+    if os.getenv("BUFFER_API_TOKEN"):
+        return
+
+    # 尝试从 buffer_config.json 加载
+    config_paths = [
+        BASE_DIR.parent / "chinaboundtravel_social_bot" / "buffer_config.json",
+        BASE_DIR / "buffer_config.json",
+    ]
+
+    for config_path in config_paths:
+        if config_path.exists():
+            try:
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+                # 优先用 account_b 的 token（Facebook/Twitter 账号）
+                token = config.get("accounts", {}).get("account_b", {}).get("access_token")
+                if not token:
+                    token = config.get("api", {}).get("access_token")
+                if token:
+                    os.environ["BUFFER_API_TOKEN"] = token
+                    print(f"  从 {config_path.name} 加载 Buffer token 成功")
+                    return
+            except Exception as e:
+                print(f"  ⚠️ 加载 buffer_config.json 失败: {e}")
+            break
+
+
 def check_url(check: dict) -> dict:
     """检查单个URL"""
     try:
-        headers = check.get("headers", {})
-        resp = requests.get(check["url"], headers=headers, timeout=10)
+        # 支持 headers_func（动态生成 headers，用于读取最新的环境变量）
+        if "headers_func" in check:
+            headers = check["headers_func"]()
+        else:
+            headers = check.get("headers", {})
+
+        method = check.get("method", "GET")
+        if method == "POST":
+            json_body = check.get("json_body")
+            resp = requests.post(check["url"], headers=headers, json=json_body, timeout=10)
+        else:
+            resp = requests.get(check["url"], headers=headers, timeout=10)
         return {
             "name": check["name"],
             "status": resp.status_code,
@@ -101,8 +147,9 @@ def send_feishu_notification(results: list):
 
 def main():
     print(f"[{datetime.now()}] 开始健康检查...")
-    
+
     load_env()
+    load_buffer_token()
     
     results = []
     for check in CHECKS:

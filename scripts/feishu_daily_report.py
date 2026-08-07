@@ -854,37 +854,45 @@ class FeishuDailyReporter:
         return None
     
     def _load_gsc_service_account(self) -> dict:
-        """加载 GSC 服务账号信息（独立于 GA4）"""
-        if not GSC_SERVICE_ACCOUNT_JSON:
-            return None
-        
-        sa_json = GSC_SERVICE_ACCOUNT_JSON
-        
-        try:
-            return json.loads(sa_json)
-        except (json.JSONDecodeError, TypeError):
-            pass
-        
-        try:
-            if "\\n" in sa_json and "BEGIN PRIVATE KEY" in sa_json:
-                fixed_json = sa_json.replace("\\n", "\n")
-                return json.loads(fixed_json)
-        except (json.JSONDecodeError, TypeError):
-            pass
-        
-        try:
-            sa_path = Path(sa_json)
-            if not sa_path.is_absolute():
-                # 相对路径基于 BLOG_ROOT 解析
-                sa_path = BLOG_ROOT / sa_path
-            if sa_path.exists() and sa_path.is_file():
-                with open(sa_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
-        except Exception as e:
-            print(f"   ⚠️ GSC 服务账号加载失败: {e}")
-            return None
+        """加载 GSC 服务账号信息（独立于 GA4）
+        如果 GSC_SERVICE_ACCOUNT_JSON 加载失败，回退到 GA4 服务账号（两者通常使用同一账号）
+        """
+        # 优先尝试 GSC 专用配置
+        if GSC_SERVICE_ACCOUNT_JSON:
+            sa_json = GSC_SERVICE_ACCOUNT_JSON
 
-        print(f"   ⚠️ GSC 服务账号加载失败: 无法解析 JSON 或读取文件 (路径: {sa_json})")
+            try:
+                return json.loads(sa_json)
+            except (json.JSONDecodeError, TypeError):
+                pass
+
+            try:
+                if "\\n" in sa_json and "BEGIN PRIVATE KEY" in sa_json:
+                    fixed_json = sa_json.replace("\\n", "\n")
+                    return json.loads(fixed_json)
+            except (json.JSONDecodeError, TypeError):
+                pass
+
+            try:
+                sa_path = Path(sa_json)
+                if not sa_path.is_absolute():
+                    sa_path = BLOG_ROOT / sa_path
+                if sa_path.exists() and sa_path.is_file():
+                    with open(sa_path, "r", encoding="utf-8") as f:
+                        return json.load(f)
+            except Exception as e:
+                print(f"   ⚠️ GSC 服务账号文件读取失败: {e}")
+
+            print(f"   ⚠️ GSC 服务账号加载失败，尝试回退到 GA4 服务账号...")
+
+        # Fallback: 使用 GA4 服务账号（本地两者用同一文件，GitHub Actions 中 GA4 可能已配置）
+        if GA4_SERVICE_ACCOUNT_JSON:
+            ga4_info = self._load_service_account()
+            if ga4_info:
+                print(f"   ✅ GSC 回退到 GA4 服务账号成功")
+                return ga4_info
+
+        print(f"   ⚠️ GSC: 服务账号未配置且 GA4 回退也失败")
         return None
     
     def _get_ga4_auth_headers(self) -> dict:
