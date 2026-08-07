@@ -4,6 +4,8 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
 # 2) Date-prefixed post URLs -> canonical slug URLs
 # --- August 2026 ---
+/posts/china-bargaining-and-shopping-guide-guide/ /posts/china-bargaining-and-shopping-guide/ 301
+/posts/2026-08-07-china-bargaining-and-shopping-guide-guide/ /posts/china-bargaining-and-shopping-guide/ 301
 /posts/2026-08-03-chinese-language-survival-phrases-guide/ /posts/chinese-language-survival-phrases-guide/ 301
 /posts/2026-08-02-chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/ /posts/chinese-language-survival-phrases-guide/ 301
 /posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ /posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ 301

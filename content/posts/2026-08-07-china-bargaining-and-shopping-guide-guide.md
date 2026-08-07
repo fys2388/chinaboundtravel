@@ -1,9 +1,9 @@
 ---
-title: "China Bargaining And Shopping Guide Guide"
+title: "China Bargaining and Shopping Guide"
 date: "2026-08-07T10:00:00+08:00"
 lastmod: "2026-08-07T10:00:00+08:00"
 author: "Joran"
-slug: "china-bargaining-and-shopping-guide-guide"
+slug: "china-bargaining-and-shopping-guide"
 tags:
   - ChinaTravel
   - TravelGuide
@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "china bargaining and shopping for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
 description: "china bargaining and shopping for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
-canonicalURL: "https://chinaboundtravel.com/posts/china-bargaining-and-shopping-guide-guide/"
+canonicalURL: "https://chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide-guide.jpg"
+  image: "https://chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
 ---
 
 Title: China Bargaining and Shopping Guide: A Hilarious and Practical Adventure
