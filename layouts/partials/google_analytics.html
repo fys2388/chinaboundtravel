@@ -1,10 +1,22 @@
 {{- if site.Params.analytics.google.TrackingID }}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}"></script>
+<!-- Google tag (gtag.js) - 空闲加载以降低主线程竞争，不影响数据采集 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', '{{ site.Params.analytics.google.TrackingID }}');
+  function loadGtag() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}';
+    document.head.appendChild(s);
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtag, { timeout: 3000 });
+  } else if (window.addEventListener) {
+    window.addEventListener('load', loadGtag);
+  } else {
+    loadGtag();
+  }
 </script>
 {{- end }}
