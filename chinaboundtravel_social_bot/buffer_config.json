@@ -4,25 +4,62 @@
     "access_token": "***REMOVED***",
     "organization_id": "6a20329943b37a7289e25b6d"
   },
-  "channels": {
-    "pinterest": {
-      "name": "Joranchinatravel",
-      "channel_id": "6a21bdbec687a22dd45ec2ae",
-      "enabled": true
+  "accounts": {
+    "account_a": {
+      "email": "1558835921@qq.com",
+      "access_token": "***REMOVED***",
+      "organization_id": "6a20329943b37a7289e25b6d",
+      "channels": {
+        "pinterest": {
+          "name": "Joranchinatravel",
+          "channel_id": "6a21bdbec687a22dd45ec2ae",
+          "enabled": true
+        },
+        "youtube": {
+          "name": "Joran Fan",
+          "channel_id": "6a48cfec5ab6d2f106a2b9fe",
+          "enabled": true
+        },
+        "tiktok": {
+          "name": "petshome001",
+          "channel_id": "6a48cf985ab6d2f106a2b8b8",
+          "enabled": true
+        }
+      }
     },
-    "youtube": {
-      "name": "Joran Fan",
-      "channel_id": "6a48cfec5ab6d2f106a2b9fe",
-      "enabled": true
-    },
-    "tiktok": {
-      "name": "petshome001",
-      "channel_id": "6a48cf985ab6d2f106a2b8b8",
-      "enabled": true
+    "account_b": {
+      "email": "fys2388@gmail.com",
+      "access_token": "***REMOVED***",
+      "organization_id": "6a17ddf5e051bed5895272f0",
+      "channels": {
+        "facebook": {
+          "name": "ChinaBound Travel",
+          "channel_id": "6a17e0c4c687a22dd4346d3c",
+          "enabled": true
+        },
+        "instagram": {
+          "name": "joranchinatravel",
+          "channel_id": "6a17e14dc687a22dd4346eb4",
+          "enabled": true
+        },
+        "twitter": {
+          "name": "fys2388",
+          "channel_id": "6a202882c687a22dd45735b6",
+          "enabled": true
+        }
+      }
     }
   },
+  "platform_account_map": {
+    "pinterest": "account_a",
+    "youtube": "account_a",
+    "tiktok": "account_a",
+    "facebook": "account_b",
+    "instagram": "account_b",
+    "twitter": "account_b"
+  },
   "default_schedule": {
-    "timezone": "America/New_York",
+    "timezone": "Asia/Shanghai",
     "best_times": ["09:00", "12:00", "15:00", "18:00"]
   },
   "post_templates": {
@@ -40,5 +77,12 @@
     "auto_publish": false,
     "dry_run": false,
     "logging": true
+  },
+  "pinterest_board_service_id": "719309440424840288",
+  "pinterest_board_name": "China Inbound Travel Guides",
+  "proxy": {
+    "enabled": false,
+    "url": "http://127.0.0.1:7890",
+    "note": "启动 VPN/代理后，将 enabled 设为 true 并修改 url 为你的代理地址"
   }
 }
