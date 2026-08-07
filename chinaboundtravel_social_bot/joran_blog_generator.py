@@ -1611,6 +1611,8 @@ class BlogGenerator:
         
         title = re.search(r'^#\s+(.+)', content, re.MULTILINE)
         title = title.group(1) if title else f"{topic.title()} Guide"
+        # 防重复词：若标题末尾出现相同单词两次（如 "Guide Guide"），仅保留一次
+        title = re.sub(r'\b(\w+)\s+\1$', r'\1', title.strip(), flags=re.IGNORECASE)
         
         DRAFT_DIR.mkdir(parents=True, exist_ok=True)
         draft_path = DRAFT_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
