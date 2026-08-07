@@ -1,8 +1,8 @@
 {
-  "month_post_count": 5,
+  "month_post_count": 6,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-06 02:24:44",
-  "daily_social_publish_date": "2026-08-06",
+  "last_social_publish": "2026-08-07 02:35:30",
+  "daily_social_publish_date": "2026-08-07",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -71,6 +71,12 @@
       "geo_region": "US",
       "category": "general",
       "create_date": "2026-08-06"
+    },
+    {
+      "topic": "china bargaining and shopping guide",
+      "geo_region": "EU",
+      "category": "general",
+      "create_date": "2026-08-07"
     }
   ],
   "keyword_convert_rate": {
