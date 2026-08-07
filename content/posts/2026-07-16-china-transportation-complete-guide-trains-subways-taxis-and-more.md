@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "China Transportation Guide 2026: Trains, Subways, Taxis & How to Get Around"
 description = "The complete guide to getting around China in 2026. High-speed train booking, class comparison with real prices, subway hacks, Didi rideshare tips, and station survival strategies from an expat who rides the rails weekly."
 date = 2026-07-16
@@ -77,12 +77,12 @@ I have ridden all three classes dozens of times. Here is my honest assessment:
 
 | Route | Train | Duration | 2nd Class | 1st Class | Business |
 |-------|-------|----------|-----------|-----------|----------|
-| Beijing -> Shanghai | G | 4h 30m | ¥553 (~$76) | ¥933 (~$128) | ¥1,748 (~$240) |
-| Beijing -> Xi'an | G | 4h 15m | ¥515 (~$71) | ¥823 (~$113) | ¥1,643 (~$226) |
-| Shanghai -> Hong Kong | G | 8h | ¥850 (~$117) | ¥1,360 (~$187) | ¥2,550 (~$350) |
-| Chengdu -> Chongqing | G | 1h 15m | ¥154 (~$21) | ¥246 (~$34) | ¥464 (~$64) |
-| Guangzhou -> Shenzhen | C | 30m | ¥75 (~$10) | ¥120 (~$17) | ¥225 (~$31) |
-| Xi'an -> Chengdu | D | 3h 30m | ¥263 (~$36) | ¥415 (~$57) | ¥788 (~$108) |
+| Beijing -> Shanghai | G | 4h 30m | 楼553 (~$76) | 楼933 (~$128) | 楼1,748 (~$240) |
+| Beijing -> Xi'an | G | 4h 15m | 楼515 (~$71) | 楼823 (~$113) | 楼1,643 (~$226) |
+| Shanghai -> Hong Kong | G | 8h | 楼850 (~$117) | 楼1,360 (~$187) | 楼2,550 (~$350) |
+| Chengdu -> Chongqing | G | 1h 15m | 楼154 (~$21) | 楼246 (~$34) | 楼464 (~$64) |
+| Guangzhou -> Shenzhen | C | 30m | 楼75 (~$10) | 楼120 (~$17) | 楼225 (~$31) |
+| Xi'an -> Chengdu | D | 3h 30m | 楼263 (~$36) | 楼415 (~$57) | 楼788 (~$108) |
 
 > **Note**: Fares fluctuate based on demand and time of day. Book 3-5 days in advance for the best prices. Prices shown are approximate -- check current rates on [Trip.com](https://www.trip.com) or 12306.
 
@@ -104,7 +104,7 @@ Chinese train stations are massive, and the first time can be overwhelming. Here
 2. **Security check**: All bags go through an X-ray scanner. You do not need to show your passport here -- you will scan it at the boarding gate.
 3. **Find your waiting hall**: Large screens display train numbers and corresponding waiting areas. Each train is assigned a specific gate, usually posted 20 minutes before departure.
 4. **Boarding**: Gates close 3-5 minutes before departure. Chinese passengers queue aggressively -- be ready to move when your gate opens.
-5. **Food in stations**: Expect KFC, McDonald's, and local noodle chains. Prices are 2-3x street prices but still reasonable (¥15-30 for a meal).
+5. **Food in stations**: Expect KFC, McDonald's, and local noodle chains. Prices are 2-3x street prices but still reasonable (楼15-30 for a meal).
 6. **Restrooms**: Western-style toilets are available in major stations but not always in smaller ones. Carry your own tissues -- toilet paper is not always stocked.
 
 ### What to Bring on the Train
@@ -135,7 +135,7 @@ Every major Chinese city has a metro system, and they are clean, cheap, and easy
 In 2026, you have three options:
 
 1. **Scan QR code at the gate** with [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) -- this is the most common method and works in every city
-2. **Transit card**: Buy a physical card at the station (¥20 deposit + balance). Works across most cities
+2. **Transit card**: Buy a physical card at the station (楼20 deposit + balance). Works across most cities
 3. **Apple Pay / Huawei Pay**: Supported in Beijing, Shanghai, Guangzhou, and Shenzhen
 
 ### Subway Tips That Save Time
@@ -165,13 +165,13 @@ In tier-2 and tier-3 cities where Didi coverage is spottier, street taxis are st
 - **Always insist on the meter**. If the driver refuses, get out and find another taxi
 - **Show the driver a screenshot of your destination in Chinese**. Even if you cannot speak Chinese, a map pin or address screenshot solves most communication problems
 - **Take a photo of the license plate** when you get in. This is your safeguard if anything goes wrong
-- **Expect to pay ¥10-15** for a short city ride, ¥30-50 for cross-town, and ¥80-150 from airport to city center
+- **Expect to pay 楼10-15** for a short city ride, 楼30-50 for cross-town, and 楼80-150 from airport to city center
 
 ---
 
 ## Buses: When to Use Them (And When to Skip Them)
 
-City buses in China are extremely cheap (¥1-3) but I rarely recommend them for tourists. They are crowded, stops are announced only in Chinese, and the route maps are hard to decipher. That said, in smaller cities without metro systems, buses may be your only public transport option.
+City buses in China are extremely cheap (楼1-3) but I rarely recommend them for tourists. They are crowded, stops are announced only in Chinese, and the route maps are hard to decipher. That said, in smaller cities without metro systems, buses may be your only public transport option.
 
 **Long-distance buses** are a different story. For routes not covered by high-speed rail (e.g., Chengdu to Jiuzhaigou), buses are the standard option. Book through your hotel or a travel app like Fliggy.
 
@@ -179,7 +179,7 @@ City buses in China are extremely cheap (¥1-3) but I rarely recommend them for 
 
 ## Bikes and E-Scooters: The Local Way
 
-Many Chinese cities have shared bike systems (Meituan Bikes, HelloBike) that you can unlock with a phone scan. A single ride costs about ¥1.50 ($0.20). E-scooters are also ubiquitous -- you will see them parked outside every subway station.
+Many Chinese cities have shared bike systems (Meituan Bikes, HelloBike) that you can unlock with a phone scan. A single ride costs about 楼1.50 ($0.20). E-scooters are also ubiquitous -- you will see them parked outside every subway station.
 
 For tourists, biking is great in cities with flat terrain and dedicated bike lanes (Chengdu, Hangzhou, Shanghai's riverfront). I would not recommend it in hilly cities like Chongqing or in heavy traffic areas.
 

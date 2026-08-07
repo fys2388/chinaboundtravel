@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
 description = "An honest, experience-based safety guide for China in 2026. Covers real crime data, the scams that actually exist, food safety, transport safety, and emergency contacts from an expat who has lived in China for 5 years."
 date = 2026-07-16
@@ -48,11 +48,11 @@ Most "China scam" articles exaggerate wildly. In 5 years, I have encountered exa
 
 ### 1. The Tea House Scam
 
-**How it works**: A friendly English-speaking local (often a young woman or a "student practicing English") approaches you in a tourist area and invites you to a traditional tea ceremony. At the end, you receive a bill for ¥2,000-5,000 ($275-690).
+**How it works**: A friendly English-speaking local (often a young woman or a "student practicing English") approaches you in a tourist area and invites you to a traditional tea ceremony. At the end, you receive a bill for 楼2,000-5,000 ($275-690).
 
 **Where**: Wangfujing (Beijing), Nanjing Road (Shanghai), Jinli Street (Chengdu), and around major tourist attractions.
 
-**How to avoid it**: If a stranger invites you anywhere, politely decline. A real tea experience costs ¥50-150 at a legitimate teahouse. If the bill seems unreasonable, refuse to pay and threaten to call the police (110) -- they will almost always back down.
+**How to avoid it**: If a stranger invites you anywhere, politely decline. A real tea experience costs 楼50-150 at a legitimate teahouse. If the bill seems unreasonable, refuse to pay and threaten to call the police (110) -- they will almost always back down.
 
 ### 2. The "Art Student" Painting Scam
 
@@ -68,7 +68,7 @@ Most "China scam" articles exaggerate wildly. In 5 years, I have encountered exa
 
 **Where**: Outside airport arrivals halls, major train stations.
 
-**How to avoid it**: Use [Didi](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) or the official taxi queue. If you do take a street taxi, insist on the meter. Take a photo of the license plate before getting in. Typical airport-to-city-center fares: ¥80-150 ($11-21).
+**How to avoid it**: Use [Didi](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) or the official taxi queue. If you do take a street taxi, insist on the meter. Take a photo of the license plate before getting in. Typical airport-to-city-center fares: 楼80-150 ($11-21).
 
 ### What About Other "Scams"?
 
@@ -80,7 +80,7 @@ You may read about currency switching, baby milk powder scams, or other elaborat
 
 ### Drinking Water
 
-**Do not drink tap water in China.** This is non-negotiable. Always drink bottled water (¥2-5 per bottle at convenience stores). Most hotels provide free bottled water in rooms. Boiling tap water is also safe if you have a kettle.
+**Do not drink tap water in China.** This is non-negotiable. Always drink bottled water (楼2-5 per bottle at convenience stores). Most hotels provide free bottled water in rooms. Boiling tap water is also safe if you have a kettle.
 
 **Ice in drinks**: In major cities and established restaurants, ice is made from filtered water and is generally safe. In rural areas or street stalls, ask for drinks without ice ("bu yao bing").
 
@@ -99,10 +99,10 @@ I have gotten food sick exactly once in 5 years, and it was from a hotel buffet,
 
 If you need medical attention in China:
 
-- **Private hospitals** ( Parkway, United Family, Jiahui ) have English-speaking staff and accept international insurance. Expect to pay ¥500-1,500 ($69-207) for a basic consultation.
-- **Public hospitals** are cheap (a consultation costs ¥20-50) but crowded, and English is limited. Bring a translation app.
+- **Private hospitals** ( Parkway, United Family, Jiahui ) have English-speaking staff and accept international insurance. Expect to pay 楼500-1,500 ($69-207) for a basic consultation.
+- **Public hospitals** are cheap (a consultation costs 楼20-50) but crowded, and English is limited. Bring a translation app.
 - **Pharmacies** are everywhere and most medications are available without a prescription. Staff usually speak basic English in major cities.
-- **Have [travel insurance](/posts/best-travel-insurance-china/)**. I learned this the hard way -- a bike accident in Chengdu cost me ¥3,000 ($414) out of pocket. Now I always carry [SafetyWing](/posts/best-travel-insurance-china/) coverage.
+- **Have [travel insurance](/posts/best-travel-insurance-china/)**. I learned this the hard way -- a bike accident in Chengdu cost me 楼3,000 ($414) out of pocket. Now I always carry [SafetyWing](/posts/best-travel-insurance-china/) coverage.
 
 ### Air Quality
 

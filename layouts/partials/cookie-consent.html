@@ -78,7 +78,7 @@
 .gdpr-text { flex: 1; }
 .gdpr-text h3 { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
 .gdpr-text p { font-size: 0.82rem; color: #555; line-height: 1.6; }
-.gdpr-text a { color: #FF6B35; text-decoration: underline; }
+.gdpr-text a { color: #C2410C; text-decoration: underline; }
 .gdpr-actions { display: flex; gap: 0.5rem; flex-shrink: 0; flex-wrap: wrap; align-items: flex-start; }
 .gdpr-btn {
     padding: 8px 16px;
@@ -91,7 +91,7 @@
     white-space: nowrap;
 }
 .gdpr-btn-accept {
-    background: #FF6B35;
+    background: #C2410C;
     color: #fff;
 }
 .gdpr-btn-accept:hover { background: #e55a25; }
@@ -156,7 +156,7 @@
     transition: 0.3s;
     border-radius: 50%;
 }
-.gdpr-switch input:checked + .gdpr-slider { background-color: #FF6B35; }
+.gdpr-switch input:checked + .gdpr-slider { background-color: #C2410C; }
 .gdpr-switch input:checked + .gdpr-slider:before { transform: translateX(18px); }
 .gdpr-switch input:disabled + .gdpr-slider { opacity: 0.6; cursor: not-allowed; }
 
@@ -271,7 +271,7 @@
         // Analytics: Google Analytics (if present)
         if (!consent.analytics) {
             // Disable GA cookies
-            window['ga-disable-G-CHINABOUND123'] = true;
+            window['ga-disable-{{ site.Params.analytics.google.TrackingID }}'] = true;
         }
         // Marketing: Adjust scripts that load marketing/tracking
         // (Stripe and affiliate links are always loaded as they are functional, not tracking)

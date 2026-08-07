@@ -74,14 +74,14 @@
                 width="{{ $cover.Width }}" height="{{ $cover.Height }}"
                 alt="{{ $alt }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-            <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
+            <img {{ if $.IsSingle }}fetchpriority="high"{{ end }} loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
         {{- end }}
     {{- else if $isExternal }}
         {{- /* External URL - render directly without absURL processing */}}
-        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
+        <img {{ if $.IsSingle }}fetchpriority="high"{{ end }} loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
     {{- else }}
         {{- /* For absolute urls and external links, no img processing here */}}
-        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
+        <img {{ if $.IsSingle }}fetchpriority="high"{{ end }} loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
     {{- end }}
 
     {{- if $addLink }}

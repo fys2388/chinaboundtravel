@@ -6,7 +6,7 @@
 /* ---------- Color Palette Overrides (2026优化版) ---------- */
 :root {
     /* 主色系统 - 天蓝色（旅行、信任、专业） */
-    --primary: #0ea5e9;
+    --primary: #0369a1;
     --primary-hover: #0284c7;
     --primary-light: #e0f2fe;
     
@@ -620,11 +620,11 @@ pre {
 }
 
 .es-price strong {
-    color: #FF6B35;
+    color: #C2410C;
 }
 
 .es-price a {
-    color: #FF6B35 !important;
+    color: #C2410C !important;
     font-weight: 600;
 }
 

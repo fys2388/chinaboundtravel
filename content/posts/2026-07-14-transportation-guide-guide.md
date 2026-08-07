@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/transport/transportation-guide-guide.jpg"
+  image: "https://chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.jpg"
 ---
 
 ## China Transportation Guide: Navigating the Middle Kingdom with Ease

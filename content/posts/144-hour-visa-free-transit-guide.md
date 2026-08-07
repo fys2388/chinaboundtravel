@@ -1,7 +1,8 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿---
 title: 144-Hour Visa-Free Transit in China - The Complete 2026 Guide
 date: '2026-05-19T10:00:00+08:00'
 draft: false
+canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
 weight: 1
 tags:
 - ChinaVisa
@@ -20,23 +21,23 @@ cover:
 
 ## 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
 
-## Hey, Joran Here 👋
+## Hey, Joran Here 馃憢
 
-Look, I'll be honest with you—I almost ruined my first China trip because I didn't understand this stupid 144-hour rule. I was flying from LA to Tokyo, saw a cheap layover in Shanghai, thought "why not?" without reading the fine print. Long story short: I ended up spending 6 hours at the immigration counter arguing my case while my connecting flight took off without me.
+Look, I'll be honest with you鈥擨 almost ruined my first China trip because I didn't understand this stupid 144-hour rule. I was flying from LA to Tokyo, saw a cheap layover in Shanghai, thought "why not?" without reading the fine print. Long story short: I ended up spending 6 hours at the immigration counter arguing my case while my connecting flight took off without me.
 
-That was 2019. These days, after marrying my wife (who grew up in Chengdu—she's the real expert here, I'm just the translator), I've helped dozens of fellow foreigners figure this out without the drama. So consider this my atonement for that disaster.
+That was 2019. These days, after marrying my wife (who grew up in Chengdu鈥攕he's the real expert here, I'm just the translator), I've helped dozens of fellow foreigners figure this out without the drama. So consider this my atonement for that disaster.
 
 *Last updated: May 2026 - Confirm current rules with your local Chinese embassy before travel*
 
 ## What Is the 144-Hour Visa-Free Transit?
 
-China offers a **144-hour (6-day) visa exemption** for travelers from [55+ eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed—if you're only staying in a designated zone for up to 6 days.
+China offers a **144-hour (6-day) visa exemption** for travelers from [55+ eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed鈥攊f you're only staying in a designated zone for up to 6 days.
 
 Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world. If you need a proper tourist visa instead, check out our [complete guide to China visas for tourists](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
 
 ## Which Cities and Ports Accept 144-Hour Transit?
 
-**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 144-hour visa-free transit policy to even more countries](posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
+**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever鈥攊n fact, China recently [extended the 144-hour visa-free transit policy to even more countries](posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
 
 ### Beijing/Tianjin/Hebei
 - **Beijing Capital Airport** (PEK/PKX)
@@ -81,7 +82,7 @@ If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & F
 ### Step 1: Before You Board
 When you check in for your flight to China, show your **onward ticket** to the airline staff. They'll verify you're eligible before letting you board.
 
-> ⚠️ **Pro tip**: Print your onward ticket confirmation. Immigration officers love paperwork.
+> 鈿狅笍 **Pro tip**: Print your onward ticket confirmation. Immigration officers love paperwork.
 
 ### Step 2: At Chinese Immigration
 1. Go to the **144-hour visa-free transit counter** (not the regular visa line)
@@ -96,7 +97,7 @@ The officer will stamp your passport with a **144-hour temporary entry permit**.
 ### Step 3: Enjoy Your City
 You're in! You now have 144 hours (from the stamp time, NOT flight time) to explore.
 
-> ⚠️ **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM six days later.
+> 鈿狅笍 **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM six days later.
 
 ### Step 4: Leave on Time
 Exit through any port in your permitted zone before the 144 hours expires.
@@ -111,7 +112,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 **Solution**: Stick to your zone. Shanghai = Shanghai + Suzhou + Hangzhou (some). Beijing = Beijing only. Check before you wander.
 
 ### Mistake #2: Calculating Time Wrong
-**Example**: You land Monday at 10 PM, get stamped at 10:30 PM. You think you have until Monday next week. Wrong—you have until Sunday at 10:30 AM.
+**Example**: You land Monday at 10 PM, get stamped at 10:30 PM. You think you have until Monday next week. Wrong鈥攜ou have until Sunday at 10:30 AM.
 
 **Solution**: Take a screenshot of your stamp time. Set an alarm for 12 hours before your deadline.
 
@@ -142,11 +143,11 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 ## Still Have Questions?
 
-Look, I get it—rules are rules, and China's immigration requirements have more details than my mother-in-law's grocery lists (love you, mom). But here's the thing: the 144-hour transit policy is genuinely one of the most traveler-friendly things China offers, and if you follow the rules, it works beautifully.
+Look, I get it鈥攔ules are rules, and China's immigration requirements have more details than my mother-in-law's grocery lists (love you, mom). But here's the thing: the 144-hour transit policy is genuinely one of the most traveler-friendly things China offers, and if you follow the rules, it works beautifully.
 
-Drop a comment below or [reach out via the contact form](/). I've helped hundreds of travelers navigate this successfully—yes, even that guy who was convinced his dog needed a visa.
+Drop a comment below or [reach out via the contact form](/). I've helped hundreds of travelers navigate this successfully鈥攜es, even that guy who was convinced his dog needed a visa.
 
-And if you found this guide helpful? Share it with a friend who's planning a China trip. Trust me, they'll thank you later—and so will I.
+And if you found this guide helpful? Share it with a friend who's planning a China trip. Trust me, they'll thank you later鈥攁nd so will I.
 
 ---
 

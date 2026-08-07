@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cultural Etiquette Guide"
 date: "2026-07-21T10:00:00+08:00"
 lastmod: "2026-07-21T10:00:00+08:00"
@@ -28,7 +28,7 @@ cover:
 
 Hey there, fellow travelers! If you're planning a trip to China, get ready for an adventure like no other. As an American who has lived in Chengdu for over 5 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. In this blog post, I'll share some of my insights on Chinese cultural etiquette to help you navigate your way through this amazing country with ease and respect.
 
-![A busy street in China with people of different ages going about their daily lives, some shops with traditional Chinese architecture in the background, and a sense of energy and activity](https://image.pollinations.ai/prompt/A%20busy%20street%20in%20China%20with%20people%20of%20different%20ages%20going%20about%20their%20daily%20lives%2C%20some%20shops%20with%20traditional%20Chinese%20architecture%20in%20the%20background%2C%20and%20a%20sense%20of%20energy%20and%20activity%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=26258&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![](img/china-dest/culture/cultural-etiquette-guide.jpg)
 
 Let me start by saying that China is a vast and diverse country with a rich history and culture that spans thousands of years. From the bustling cities of Beijing and Shanghai to the serene landscapes of Guilin and Zhangjiajie, there's something for everyone in China. However, with its unique customs and traditions, it's important to be aware of the cultural norms and expectations to avoid any misunderstandings or faux pas.
 
@@ -53,12 +53,12 @@ I still remember my first attempt at using chopsticks. It was like trying to pic
 
 When dining with a group, it's a great opportunity to try different dishes. Chinese cuisine is so diverse, and sharing food allows you to experience a wider range of flavors. And don't be shy about offering food to others. It's a friendly gesture that shows you're thinking about them.
 
-![A table filled with delicious Chinese dishes, people sitting around it, using chopsticks, and having a lively conversation](https://image.pollinations.ai/prompt/A%20table%20filled%20with%20delicious%20Chinese%20dishes%2C%20people%20sitting%20around%20it%2C%20using%20chopsticks%2C%20and%20having%20a%20lively%20conversation%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=52501&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![](img/china-dest/culture/cultural-etiquette-guide.jpg)
 
 ### Specific Customs and Traditions
 In addition to these general cultural norms, there are also a few specific customs and traditions that you may encounter in China. For example, when giving or receiving a gift, it's important to use both hands. This shows respect for the gift and the person giving or receiving it.
 
-Another custom is the use of red envelopes during special occasions like Chinese New Year or weddings. Red envelopes contain money and are given as a祝福 (zhùfú - blessing). It's a very nice gesture, but make sure to follow the proper etiquette. For example, don't open the red envelope in front of the person who gave it to you.
+Another custom is the use of red envelopes during special occasions like Chinese New Year or weddings. Red envelopes contain money and are given as a绁濈 (zh霉f煤 - blessing). It's a very nice gesture, but make sure to follow the proper etiquette. For example, don't open the red envelope in front of the person who gave it to you.
 
 If you're invited to someone's home, it's polite to bring a small gift, such as a box of Chinese tea or some fruits. And when you enter the house, take off your shoes. This is a sign of respect for the homeowner.
 
@@ -66,9 +66,9 @@ If you're invited to someone's home, it's polite to bring a small gift, such as 
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 

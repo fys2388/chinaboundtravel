@@ -2,6 +2,7 @@
 title: "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy"
 date: 2026-05-23T09:00:00+08:00
 draft: false
+canonicalURL: "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/"
 tags: ["ChinaTravel", "Hangzhou", "ChinaCityGuide", "ChinaFood", "ChinaDestinations", "hangzhou"]
 categories: ["China Travel Guide"]
 description: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
@@ -42,7 +43,7 @@ Hangzhou sits at the foot of the Qiantang River and has been a center of Chinese
 
 Today, it's famous for:
 - **West Lake ()**  UNESCO World Heritage, 2,000+ years of poetic inspiration
-- **Longjing Tea ()** — The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
+- **Longjing Tea ()** 鈥?The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
 - **G20 Summit 2016**  China spent $40 billion upgrading the city for the summit. The infrastructure is brand new.
 - **Alibaba**  HQ is here, which means the city is unusually tech-forward
 
@@ -116,7 +117,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 
 | Transport | Details |
 |-----------|---------|
-| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) — see our [high-speed rail guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) for booking tips |
+| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) 鈥?see our [high-speed rail guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) for booking tips |
 | **From Beijing** | G train, 4 hours |
 | **From Nanjing** | G train, 1 hour |
 | **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |
@@ -159,9 +160,9 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 
 ### Further Reading
 
-- [Shanghai Bund & French Concession 2-Day Guide](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) — Pair Hangzhou with a Shanghai visit
-- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Hangzhou is one of China's safest cities
-- [Chinese Tea Culture Guide](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) — Deep dive into the tradition behind Longjing and other famous teas
+- [Shanghai Bund & French Concession 2-Day Guide](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) 鈥?Pair Hangzhou with a Shanghai visit
+- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) 鈥?Hangzhou is one of China's safest cities
+- [Chinese Tea Culture Guide](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) 鈥?Deep dive into the tradition behind Longjing and other famous teas
 
 ---
 

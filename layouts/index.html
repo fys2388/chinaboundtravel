@@ -11,7 +11,7 @@
                 <h2 class="section-heading"><span class="section-emoji">🔥</span>Latest News &amp; Visa Updates</h2>
                 <div class="posts-list">
                     {{- $latest := where (where .Site.RegularPages "Type" "in" (slice "posts")) "Kind" "page" | first 3 -}}
-                    {{- range $latest }}
+                    {{- range $i, $page := $latest }}
                     <article class="post-card">
                         <div class="card-content">
                             {{- with .Params.cover -}}
@@ -20,7 +20,7 @@
                                 {{- $coverImg = $coverImg.image -}}
                               {{- end -}}
                               {{- if $coverImg -}}
-                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              <a href="{{ $page.RelPermalink }}" class="card-cover-link"><img class="card-cover" src="{{ $coverImg }}" alt="{{ $page.Title }}" width="600" height="160" style="width:100%;height:auto;aspect-ratio:600/160;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;display:block;" {{ if eq $i 0 }}fetchpriority="high"{{ else }}loading="lazy" decoding="async"{{ end }}></a>
                               {{- end -}}
                             {{- end -}}
                             <div class="card-meta">
@@ -46,7 +46,7 @@
     <section class="home-section-block">
         <h2 class="section-heading"><span class="section-emoji">✅</span>Must-Know Travel Tips</h2>
         <div class="posts-list">
-            {{- range first 3 (after 3 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
+            {{- range $i, $page := first 3 (after 3 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
                     <article class="post-card">
                         <div class="card-content">
                             {{- with .Params.cover -}}
@@ -55,7 +55,7 @@
                                 {{- $coverImg = $coverImg.image -}}
                               {{- end -}}
                               {{- if $coverImg -}}
-                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              <a href="{{ $page.RelPermalink }}" class="card-cover-link"><img class="card-cover" src="{{ $coverImg }}" alt="{{ $page.Title }}" width="600" height="160" style="width:100%;height:auto;aspect-ratio:600/160;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;display:block;" loading="lazy" decoding="async"></a>
                               {{- end -}}
                             {{- end -}}
                             <div class="card-meta">
@@ -89,7 +89,7 @@
             <section class="home-section-block">
                 <h2 class="section-heading"><span class="section-emoji">🏙️</span>China City Travel Guides</h2>
                 <div class="posts-list">
-                    {{- range first 3 (after 6 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
+                    {{- range $i, $page := first 3 (after 6 (where .Site.RegularPages "Type" "in" (slice "posts"))) }}
                     <article class="post-card">
                         <div class="card-content">
                             {{- with .Params.cover -}}
@@ -98,7 +98,7 @@
                                 {{- $coverImg = $coverImg.image -}}
                               {{- end -}}
                               {{- if $coverImg -}}
-                              <a href="{{ .RelPermalink }}" class="card-cover-link"><div class="card-cover" style="background-image:url('{{ $coverImg }}');background-size:cover;background-position:center;height:160px;border-radius:8px;margin-bottom:0.75rem;"></div></a>
+                              <a href="{{ $page.RelPermalink }}" class="card-cover-link"><img class="card-cover" src="{{ $coverImg }}" alt="{{ $page.Title }}" width="600" height="160" style="width:100%;height:auto;aspect-ratio:600/160;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;display:block;" loading="lazy" decoding="async"></a>
                               {{- end -}}
                             {{- end -}}
                             <div class="card-meta">

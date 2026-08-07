@@ -4,6 +4,7 @@ author: Joran
 slug: "paypal-alipay-wechat-pay-qr-code-support"
 date: 2026-05-29T09:00:00+08:00
 draft: false
+canonicalURL: "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/"
 tags: ["China Travel", "Payment", "Alipay", "WeChat Pay", "PayPal", "Tech"]
 categories: ["China Essentials"]
 summary: "PayPal quietly rolled out Alipay and WeChat Pay QR code support in 2026. Here's what it actually means for foreign tourists in China  and what it doesn't solve."
@@ -74,7 +75,7 @@ Here's exactly what you need to do before you land in China:
 Make sure you're running the latest version. This feature rolled out gradually, so an older version won't show the option.
 
 **Step 2: Link your card or bank**
-Go to Wallet → Link a card or bank. Standard stuff.
+Go to Wallet 鈫?Link a card or bank. Standard stuff.
 
 **Step 3: Try it**
 When you find a merchant in China that only takes Alipay/WeChat Pay, select PayPal at checkout, choose Alipay or WeChat Pay, and let PayPal generate the QR code.
@@ -136,12 +137,12 @@ A: Yes. Both are supported at launch.
 
 If you're a foreigner traveling to China in 2026 and you haven't tried this yet: it's real, it works, and it makes life significantly easier. Before your trip, make sure your PayPal app is updated and your card is linked.
 
-One less thing to stress about. And that's always welcome. Before you land, make sure you've also sorted your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) — PayPal needs an internet connection to work.
+One less thing to stress about. And that's always welcome. Before you land, make sure you've also sorted your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) 鈥?PayPal needs an internet connection to work.
 
 ### Further Reading
 
-- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — The complete setup guide for China's most popular payment app
-- [Chinese Food Delivery Apps (Meituan & Ele.me)](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) — PayPal won't work on food delivery apps; you'll still need native payment setup
+- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) 鈥?The complete setup guide for China's most popular payment app
+- [Chinese Food Delivery Apps (Meituan & Ele.me)](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) 鈥?PayPal won't work on food delivery apps; you'll still need native payment setup
 
  *Joran*
 

@@ -1,3 +1,10 @@
-/visa-guides /categories/china-essentials/ 301
-/payment-tips /tags/alipay/ 301
-/city-guides /cities/ 301
+# DEPRECATED — DO NOT EDIT
+#
+# 真正的 _redirects 文件在 static/_redirects (Hugo 部署会复制到 public/_redirects)
+# 本文件保留仅为向后兼容,不再被任何构建流程读取。
+# 2026-08-07 优化:统一为 static/_redirects 中的 301 目标 (/payments/、/visa/、/cities/)
+#
+# 历史保留(可删除):
+# /visa-guides /categories/china-essentials/ 301
+# /payment-tips /tags/alipay/ 301
+# /city-guides /cities/ 301

@@ -61,3 +61,8 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
 # 3) Orphaned social media posts -> canonical article
 /posts/2026-07-03-144-hour-visa-free-transit-how-to-use-it-and-which-cities-you-can-visit/ /posts/144-hour-visa-free-transit-guide/ 301
+
+# 4) Legacy top-level category URLs -> canonical (matches main menu)
+/visa-guides   /visa/      301
+/payment-tips  /payments/  301
+/city-guides   /cities/    301

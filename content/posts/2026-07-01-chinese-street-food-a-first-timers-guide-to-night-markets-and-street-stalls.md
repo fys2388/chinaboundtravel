@@ -1,4 +1,4 @@
----
+﻿---
 title: "Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls"
 date: "2026-07-01T10:00:00+08:00"
 lastmod: "2026-07-01T10:00:00+08:00"
@@ -30,7 +30,7 @@ Let me take you back to that fateful day when I first set foot in a Chinese nigh
 
 If you're planning a trip to China, exploring the street food is an absolute must. Chinese street food is not just about satisfying your taste buds; it's a portal to the local culture, traditions, and daily life. In this guide, I'll draw on my 5 years of experience living in Chengdu to give you an in-depth look at Chinese street food. Chengdu is also famous for its [tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) -- but today, we're focusing on the food. From the best night markets to the must-try dishes, I've got you covered.
 
-![Chengdu night market food stalls glowing with warm light at dusk](https://image.pollinations.ai/prompt/A%20vibrant%20night%20market%20in%20Chengdu%2C%20with%20rows%20of%20food%20stalls%2C%20people%20chatting%20animatedly%2C%20and%20a%20warm%2C%20inviting%20glow%20from%20the%20lights%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=12682&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![](img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
 
 ## The Allure of Chinese Street Food
 In California, we have our own share of street food gems, like the iconic In-N-Out burgers. But Chinese street food? It's in a league of its own. It's a culinary rollercoaster ride that offers a mind-boggling variety of flavors, textures, and cooking styles. Whether you're a fan of the [fiery Sichuan cuisine](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) or prefer the more delicate flavors of Cantonese street food, there's something to tantalize every palate.
@@ -53,7 +53,7 @@ In Shanghai, the Yuyuan Garden Night Market is very popular. Here, you can try l
 
 If you're in Beijing, the Wangfujing Snack Street is a great place to explore. It offers a wide range of Beijing-style street food, from the famous Peking duck wraps to sweet bean-cake. The atmosphere is lively, and you can often see street performers adding to the entertainment. Beijing is also home to the Great Wall -- if you're planning a visit, our [Great Wall guide](/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/) covers the hidden sections most tourists miss.
 
-![Shanghai night market crowds queuing at street food stalls](https://image.pollinations.ai/prompt/A%20crowded%20night%20market%20in%20Shanghai%2C%20with%20people%20queuing%20up%20at%20food%20stalls%2C%20the%20smell%20of%20delicious%20food%20wafting%20through%20the%20air%2C%20and%20a%20festive%20mood%20all%20around%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=33849&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![](img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
 
 ## Must-Try Chinese Street Food Dishes
 
@@ -97,9 +97,9 @@ Don't limit yourself to just one night market or street. China is a vast country
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 

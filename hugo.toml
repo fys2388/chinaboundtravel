@@ -149,6 +149,8 @@ ignoreFiles = ["/\\.archived/"]
 
 [params.analytics]
   google = { SiteVerificationTag = "", TrackingID = "G-GECBME3YVJ" }
+  # GSC 验证码: 在 https://search.google.com/search-console → 设置 → 验证所有权 → HTML 标签
+  # 将 content 值填入 SiteVerificationTag，例如: "abcdef1234567890"
   googleSearchConsole = "google-site-verification=YOUR_VERIFICATION_CODE"
   bing = { SiteVerificationTag = "" }
 
