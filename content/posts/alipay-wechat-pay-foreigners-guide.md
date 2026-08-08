@@ -21,11 +21,11 @@ cover:
 canonicalURL: "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/"
 ---
 
-## 2026 Ultimate Guide to Using [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) & [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) for Foreigners
+## 2026 Ultimate Guide to Using [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) & [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) for Foreigners
 
 ## Hey, Joran Here 👋
 
-Okay, real talk: the first time my[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)(she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
+Okay, real talk: the first time my[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)(she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
 
 That was 2019. Today, I'm the guy who helps tourists at the Chengdu teahouse figure this stuff out—because let me tell you, paying as a foreigner in China without mobile payment is like trying to eat hot pot with a fork. Technically possible, but you're going to have a bad time and everyone around you will feel awkward.
 
@@ -34,7 +34,7 @@ Good news: it got WAY eas[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-s
 ## Why You Need Mobile Payment in China
 
 - **Convenience**: Street vendors, restaurants, taxis, and even small shops prefer mobile payments
-- **Safety**: No need to carry large amounts of ca[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)*Essential Services**: Many attractions, transportation, and [delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
+- **Safety**: No need to carry large amounts of ca[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)*Essential Services**: Many attractions, transportation, and [delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) require Alipay or WeChat Pay
 - **Discounts**: Exclusive offers and cashback for mobile payments
 
 ---

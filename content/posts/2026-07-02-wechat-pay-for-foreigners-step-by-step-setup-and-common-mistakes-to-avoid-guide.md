@@ -126,7 +126,7 @@ A few extra pointers specifically for travelers coming from Europe:
 
 3. **Download an offline translation tool.** WeChat has built-in translation, but for interactions with shopkeepers, taxi drivers, and restaurant staff, having Google Translate or a similar app downloaded for offline use is invaluable. Not every interaction will go through WeChat's messaging.
 
-4. **Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) as your backup.** Some merchants accept [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) but not WeChat Pay, and vice versa. Having both gives you near-universal coverage. Our full guide on [setting up Alipay as a foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) covers the process step by step.
+4. **Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) as your backup.** Some merchants accept [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) but not WeChat Pay, and vice versa. Having both gives you near-universal coverage. Our full guide on [setting up Alipay as a foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) covers the process step by step.
 
 5. **Carry a small amount of cash as a last resort.** Even in 2026, there are occasional situations where digital payments fail -- network outages, dead phone battery, or a merchant whose QR code is not working. Having 200-300 RMB in small bills is a smart safety net.
 
@@ -144,7 +144,7 @@ Short answer: **both**, but in this order. Here is the comparison based on my ex
 | Setup difficulty | Moderate (Tour Card step) | Easy |
 | Best for | Social payments, Mini Programs, daily use | Online shopping, larger merchants |
 
-**My recommendation:** Set up WeChat Pay first because of Mini Programs — you can book high-speed train tickets, order food delivery, and access hundreds of services directly within WeChat. Then add Alipay as your backup for merchants that only accept Alipay (some small restaurants and certain online platforms). For the full Alipay setup walkthrough, see our [step-by-step Alipay guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/).
+**My recommendation:** Set up WeChat Pay first because of Mini Programs — you can book high-speed train tickets, order food delivery, and access hundreds of services directly within WeChat. Then add Alipay as your backup for merchants that only accept Alipay (some small restaurants and certain online platforms). For the full Alipay setup walkthrough, see our [step-by-step Alipay guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/).
 
 ## Conclusion
 

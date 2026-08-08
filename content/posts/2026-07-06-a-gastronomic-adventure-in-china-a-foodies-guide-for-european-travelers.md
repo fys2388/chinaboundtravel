@@ -46,7 +46,7 @@ Before diving into regional cuisines, a few things that caught me off guard as a
 
 4. **Portions are shared, not individual.** Almost everything is family-style. You'll order 3-4 dishes for two people. This is actually great — you get to try more.
 
-**Practical tip:** Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) before you arrive. Cash still works at street stalls, but mobile payment is universal at restaurants.
+**Practical tip:** Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) before you arrive. Cash still works at street stalls, but mobile payment is universal at restaurants.
 
 ## The Eight Cuisines You Need to Know
 

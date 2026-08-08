@@ -50,7 +50,7 @@ Let me save you some pain. I made every mistake in the book on my first trip, so
 - **Sunscreen & lip balm**: The UV at high altitude is no joke. I forgot lip balm once - never again. My lips cracked so bad I couldn't smile for a week.
 - **Tire repair kit**: You will hit rocks. You will get flats. Be prepared.
 - **Portable charger**: Power outlets are few and far between. Get something with at least 20,000 mAh. You'll also want to sort out your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) before heading into remote areas.
-- **Cash**: Most villages don't take [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/). Bring plenty of RMB - ATMs are rare.
+- **Cash**: Most villages don't take [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/). Bring plenty of RMB - ATMs are rare.
 
 ### Pro Tip: Renting a Vehicle
 Unless you have a 4WD vehicle with high clearance, **rent something capable**. I drove my Honda CR-V first time - big mistake. The roads are rough. Go for a Toyota Prado, Land Rover, or something similar.

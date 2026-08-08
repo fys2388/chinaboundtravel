@@ -39,7 +39,7 @@ jobs:
           git config --local user.name "GitHub Action"
           echo "Git config set"
 
-      - name: Reset stale daily counters (auto-fix stale state)
+      - name: Reset stale monthly counters (auto-fix stale state)
         run: |
           python -c "
           import json, os
@@ -48,14 +48,9 @@ jobs:
           if os.path.exists(manifest_path):
               with open(manifest_path, 'r') as f:
                   data = json.load(f)
-              today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
               month = datetime.now(timezone.utc).strftime('%Y-%m')
-              # Auto-reset daily social count if stale (not today)
-              if data.get('daily_social_publish_date') != today:
-                  data['daily_social_publish_date'] = today
-                  data['daily_social_publish_count'] = 0
-                  print(f'[Auto-fix] Reset daily social count for {today}')
-              # Auto-reset monthly count if new month (keep history_topics for cooldown)
+              # 仅跨月时重置月度计数；每日社媒计数由 social_publisher 自行跨天重置，
+              # 避免本步骤在当天重复触发时把计数清零，导致每日发布限额失效
               expected_reset = f'{month}-01'
               if data.get('last_reset_date', '') != expected_reset:
                   data['month_post_count'] = 0

@@ -4,6 +4,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -20,7 +21,14 @@ from modules.distributors import FacebookDistributor, TwitterDistributor, Linked
 BASE_DIR = Path(__file__).parent
 POSTS_DIR = Path(__file__).parent.parent / "content" / "posts"
 MANIFEST_PATH = BASE_DIR / "distribution_manifest.json"
-SITE_URL = "https://chinaboundtravel.com"
+SITE_URL = "https://www.chinaboundtravel.com"  # canonical 域名带 www，与站点主域名保持一致
+
+def smart_truncate(text, max_len=140):
+    """智能截断：文本超长才截断加省略号，避免短文本被误加 ..."""
+    text = re.sub(r'\s+', ' ', str(text or "")).strip()
+    if len(text) <= max_len:
+        return text
+    return text[:max_len - 3].rstrip(' ,;:.') + "..."
 
 PLATFORM_HASHTAGS = {
     "facebook": "#ChinaTravel #China #VisitChina #TravelTips #ChinaBoundTravel",
@@ -42,13 +50,12 @@ def get_latest_unpublished_posts(platform: str, limit: int = 1) -> list:
     
     posts = []
     for md_file in sorted(POSTS_DIR.glob("*.md"), reverse=True):
-        slug = md_file.stem
-        if slug in platform_published:
-            continue
-        
-        # Parse frontmatter
+        # 使用 frontmatter 的 slug 作为发布记录标识（文件名带日期前缀/旧命名不稳定）
         frontmatter = parse_frontmatter(md_file)
         if not frontmatter.get("title") or frontmatter.get("draft") == True:
+            continue
+        slug = frontmatter.get("slug") or md_file.stem
+        if slug in platform_published:
             continue
         
         # Skip monthly update posts (not suitable for social media)
@@ -65,7 +72,7 @@ def get_latest_unpublished_posts(platform: str, limit: int = 1) -> list:
             "categories": frontmatter.get("categories", []),
             "tags": frontmatter.get("tags", []),
             "date": str(frontmatter.get("date", "")),
-            "url": f"{SITE_URL}/posts/{frontmatter.get('slug', slug)}/"
+            "url": f"{SITE_URL}/posts/{slug}/"
         })
         
         if len(posts) >= limit:
@@ -134,9 +141,9 @@ def generate_social_text(post: dict, platform: str, content_type: str = "post") 
     
     if platform == "twitter":
         # Twitter: compact with URL
-        text = f"{title}\n\n{summary[:100]}...\n\n{url}\n{hashtags}"
+        text = f"{title}\n\n{smart_truncate(summary, 100)}\n\n{url}\n{hashtags}"
         if len(text) > max_len["twitter"]:
-            text = f"{title[:60]}...\n{url}\n{hashtags}"
+            text = f"{smart_truncate(title, 60)}\n{url}\n{hashtags}"
     elif platform == "facebook":
         # Facebook: engaging with emoji
         text = f"✈️ {title}\n\n{summary}\n\nRead the full guide: {url}\n\n{hashtags}"
@@ -145,7 +152,7 @@ def generate_social_text(post: dict, platform: str, content_type: str = "post") 
         text = f"New on ChinaBound Travel! 🇨🇳\n\n{title}\n\n{summary}\n\nRead the full guide: {url}\n\n{hashtags}"
     elif platform == "tiktok":
         # TikTok: short and punchy
-        text = f"{title}\n\n{summary[:150]}... Link in bio: {url}\n\n{hashtags}"
+        text = f"{title}\n\n{smart_truncate(summary, 150)} Link in bio: {url}\n\n{hashtags}"
     else:
         text = f"{title}\n\n{summary}\n\n{url}"
     
@@ -159,22 +166,34 @@ def generate_social_text(post: dict, platform: str, content_type: str = "post") 
     }
 
 def mark_as_published(platform: str, slug: str):
-    """标记文章已发布到指定平台"""
+    """标记文章已发布到指定平台（published[platform] = {slug: 时间戳} 字典，不再混入时间戳到数组）"""
     if MANIFEST_PATH.exists():
         with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
             manifest = json.load(f)
     else:
         manifest = {"published": {}}
     
-    if platform not in manifest["published"]:
-        manifest["published"][platform] = []
+    published_map = manifest.setdefault("published", {})
+    published = published_map.get(platform)
     
-    if slug not in manifest["published"][platform]:
-        manifest["published"][platform].append(slug)
-        manifest["published"][platform].append(datetime.now().isoformat())
+    # 兼容旧格式：旧版是 [slug, 时间, slug, 时间...] 列表，迁移为 {slug: 时间戳} 字典
+    if isinstance(published, list):
+        old_list = published
+        published = {}
+        for i in range(0, len(old_list), 2):
+            key = old_list[i]
+            ts = old_list[i + 1] if i + 1 < len(old_list) else ""
+            published[key] = ts if isinstance(ts, str) and len(ts) >= 10 else datetime.now().isoformat()
+        published_map[platform] = published
+    elif not isinstance(published, dict):
+        published = {}
+        published_map[platform] = published
+    
+    published[slug] = datetime.now().isoformat()
     
     with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2)
+
 
 def distribute(args):
     """主分发函数"""

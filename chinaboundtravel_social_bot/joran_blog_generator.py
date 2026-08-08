@@ -372,26 +372,43 @@ def generate_seo_description(topic, title):
     return description
 
 # 选题库 - 主选题、备选选题、万能选题（每个都唯一，不重复）
+# 选题库 - 主选题、备选选题、万能选题（搭配 30 天跨地域去重，保证主题不重复）
 TOPIC_LIBRARY = {
     "main": [
         "china remote work guide",
         "china photography guide",
         "china family travel tips",
         "chinese language survival phrases",
-        "china bargaining and shopping guide"
+        "china bargaining and shopping guide",
+        "china packing list guide",
+        "china travel insurance guide",
+        "china itinerary planning for first-timers",
+        "china winter travel guide",
+        "china summer travel guide"
     ],
     "alternate": [
         "off-the-beaten-path routes in china",
         "china business culture etiquette",
         "china coffee shop culture",
-        "street food safety in china"
+        "street food safety in china",
+        "chinese tea culture and teahouse guide",
+        "yangtze river cruise guide",
+        "china nightlife guide",
+        "kung fu and martial arts travel guide",
+        "china national parks guide",
+        "china solo travel safety guide"
     ],
     "universal": [
         "Essential Money-Saving Tips for China Travel",
         "How to Stay Connected in China Without Hassle",
         "Understanding Chinese Hospitality: What to Expect",
         "Navigating Chinese Markets Like a Pro",
-        "Quick Guide to Chinese Public Holidays"
+        "Quick Guide to Chinese Public Holidays",
+        "Smart Packing List for China Travel",
+        "How to Handle Jet Lag When Traveling to China",
+        "What to Eat in China: A Practical First-Timer Menu",
+        "How to Choose Your First City in China",
+        "China Travel Etiquette: Tipping, Queues, and Photos"
     ]
 }
 
@@ -498,14 +515,16 @@ class ManifestManager:
         return "general"
     
     def check_topic_repeat(self, topic, geo_region, days=30):
+        """跨地域去重：同一主题在 days 天内无论面向哪个地区均视为重复，杜绝同题多地区刷稿"""
         cutoff_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+        topic_lower = topic.strip().lower()
         for record in self.data["history_topics"]:
-            # 精确匹配：完全相同的topic + geo_region
-            if record["topic"] == topic and record["geo_region"] == geo_region:
-                if record["create_date"] >= cutoff_date:
+            record_topic = record.get("topic", "").strip().lower()
+            if record_topic == topic_lower:
+                if record.get("create_date", "") >= cutoff_date:
                     return True
         return False
-    
+
     def check_category_cooldown(self, topic, days=None):
         """检查选题分类是否在冷却期内"""
         if days is None:
@@ -1165,6 +1184,7 @@ class BlogGenerator:
         self.notifier = FeishuNotifier()
         self.max_retries = MAX_DAILY_RETRY
         self.used_topics = set()  # 记录本轮已尝试的选题
+        self._existing_slugs = self._collect_existing_slugs()  # 已存在 slug 集合，用于唯一性校验
         
         from scripts.error_handler import ErrorHandler
         self.error_handler = ErrorHandler(str(BASE_DIR))
@@ -1321,11 +1341,61 @@ class BlogGenerator:
         
         return None
     
-    def generate_slug(self, title):
+    def _collect_existing_slugs(self):
+        """收集已存在文章的 slug（frontmatter slug + 文件名 stem），用于新文章 slug 唯一性校验"""
+        existing = set()
+        posts_dir = BASE_DIR / "content" / "posts"
+        if not posts_dir.exists():
+            return existing
+        for f in posts_dir.glob("*.md"):
+            existing.add(f.stem)
+            try:
+                with open(f, "r", encoding="utf-8") as fh:
+                    head = fh.read(3000)
+                m = re.match(r'^---\s*\n(.*?)\nslug\s*:\s*["\']?([^"\'\n]+)', head, re.DOTALL)
+                if m:
+                    existing.add(m.group(2).strip().strip('"').strip("'"))
+            except Exception:
+                continue
+        return existing
+
+    def _strip_duplicate_tail_words(self, slug):
+        """清理 slug 末尾重复词：-guide-guide 直接去重；-guide-2026-guide 保留年份去重"""
+        parts = slug.split("-")
+        # 相邻重复：guide-guide -> guide
+        while len(parts) >= 2 and parts[-1] == parts[-2]:
+            parts.pop()
+        # 重复词夹在年份两侧：guide-2026-guide -> guide-2026
+        if len(parts) >= 3 and parts[-1] == parts[-3] and parts[-2].isdigit():
+            parts.pop()
+        return "-".join(parts)
+
+    def _ensure_unique_slug(self, slug, geo_region=""):
+        """slug 唯一性校验：与已存在文章冲突时追加地区或日期后缀"""
+        if slug not in self._existing_slugs:
+            self._existing_slugs.add(slug)
+            return slug
+        if geo_region:
+            candidate = f"{slug}-{geo_region.lower()}"
+            if candidate not in self._existing_slugs:
+                self._existing_slugs.add(candidate)
+                return candidate
+        candidate = f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d')}"
+        n = 2
+        while candidate in self._existing_slugs:
+            candidate = f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d')}-{n}"
+            n += 1
+        self._existing_slugs.add(candidate)
+        return candidate
+
+    def generate_slug(self, title, geo_region=""):
+        """生成 slug 并保证唯一：清理末尾重复词，冲突时追加地区/日期后缀"""
         slug = re.sub(r'[^a-z0-9\s-]', '', title.lower())
         slug = re.sub(r'[\s-]+', '-', slug).strip('-')
+        slug = self._strip_duplicate_tail_words(slug)
+        slug = self._ensure_unique_slug(slug, geo_region)
         return slug
-    
+
     def _record_audit_failure(self, error_hash, error_message, title):
         kb = self.error_handler.kb
         existing_pattern = None
@@ -1361,8 +1431,8 @@ class BlogGenerator:
         self.error_handler.save_knowledge_base()
         print(f"[Learning] Recorded audit failure: {error_hash} - {title}")
     
-    def create_frontmatter(self, title, geo_region, topic):
-        slug = self.generate_slug(title)
+    def create_frontmatter(self, title, geo_region, topic, slug=None):
+        slug = slug or self.generate_slug(title, geo_region)
         date = datetime.now(timezone.utc).strftime("%Y-%m-%dT10:00:00+08:00")
         
         tags = ["ChinaTravel", "TravelGuide", "China"]
@@ -1615,9 +1685,11 @@ class BlogGenerator:
         title = re.sub(r'\b(\w+)\s+\1$', r'\1', title.strip(), flags=re.IGNORECASE)
         
         DRAFT_DIR.mkdir(parents=True, exist_ok=True)
-        draft_path = DRAFT_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d')}-{self.generate_slug(title)}-attempt{attempt}.md"
+        # 提前计算唯一 slug，保证草稿文件名与 frontmatter/最终发布一致
+        post_slug = self.generate_slug(title, geo_region)
+        draft_path = DRAFT_DIR / f"{datetime.now(timezone.utc).strftime('%Y-%m-%d')}-{post_slug}-attempt{attempt}.md"
         
-        frontmatter = self.create_frontmatter(title, geo_region, topic)
+        frontmatter = self.create_frontmatter(title, geo_region, topic, slug=post_slug)
         self.write_markdown(frontmatter, content, draft_path)
         
         # 【降本版】SubEditor 只检查图片，缺图直接局部补图，永远不重写全文
@@ -1691,7 +1763,7 @@ class BlogGenerator:
                 
                 return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
-        post_slug = self.generate_slug(title)
+        # 复用上方计算好的 post_slug（与 frontmatter 保持一致）
         cover_url = self.move_to_posts(draft_path, title, post_slug)
         self.manifest.add_topic(topic, geo_region)
         self.manifest.increment_post_count()

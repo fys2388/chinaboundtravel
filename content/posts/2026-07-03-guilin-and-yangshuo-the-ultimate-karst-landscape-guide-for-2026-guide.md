@@ -3,7 +3,7 @@ title: "Guilin And Yangshuo: The Ultimate Karst Landscape Guide For 2026"
 date: "2026-07-03T10:00:00+08:00"
 lastmod: "2026-07-03T10:00:00+08:00"
 author: "Joran"
-slug: "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide"
+slug: "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026"
 tags:
   - ChinaTravel
   - TravelGuide
@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass4"
 summary: "Guilin and Yangshuo travel guide: Li River cruise options with prices, a 3-day itinerary, budget breakdown, best time to visit, local food picks, and insider tips from a 5-year China expat."
 description: "Plan your Guilin and Yangshuo trip with this complete 2026 guide — Li River bamboo raft vs cruise, 3-day itinerary with costs, where to stay and eat, and what most tourists miss about China's karst landscapes."
-canonicalURL: "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -76,7 +76,7 @@ This is the route I'd recommend to a friend. It covers the essential Guilin and 
 - **Mid-morning:** Arrive in **Xingping Ancient Town**. This is the village you see in the 20 RMB banknote photo. Walk up to the viewing platform (free, about 15 minutes from the river) for the panoramic shot. The town itself has narrow stone alleys and old Ming-era architecture — spend an hour wandering.
 - **Afternoon:** Rent an e-bike in Xingping (¥50/day, ~€6) or walk to the **Yulong River (遇龙河)** area. The road alongside the Yulong is flat, lined with bamboo, and passes through small farming villages. It's the most scenic cycling in all of China. No car traffic — only bikes and e-bikes allowed on the main path.
 - **Evening:** **Yangshuo West Street (西街)** for dinner. Yes, it's touristy. Yes, it's worth it for a first visit. The street food options are excellent and the energy is high. See the food section for what to order.
-- **Practical tip:** Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) before you arrive — most small vendors and e-bike rentals only accept mobile payment.
+- **Practical tip:** Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before you arrive — most small vendors and e-bike rentals only accept mobile payment.
 
 ### Day 3: Silver Cave → Moon Hill → Departure
 
@@ -180,7 +180,7 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 **Practical China guides you'll need:**
 - [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Check if your nationality qualifies before booking
 - [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) — How to book, find your platform, and choose the right class
-- [How to Use Alipay as a Foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) — Set up mobile payments before you arrive
+- [How to Use Alipay as a Foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) — Set up mobile payments before you arrive
 - [Chinese Street Food: A First-Timer's Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) — Essential for Yangshuo night markets
 - [A Gastronomic Adventure in China](/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/) — For understanding Guangxi cuisine in the broader context of China's eight culinary traditions
 

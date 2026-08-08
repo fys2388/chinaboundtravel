@@ -225,7 +225,7 @@ If you're planning a broader China trip, these guides pair well with Yunnan:
 
 - [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) — Xi'an is a natural starting or ending point for a Yunnan trip, with direct flights from Kunming.
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/[zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) — Combine Yunnan's cultural landscapes with Zhangjiajie's dramatic sandstone pillars for a varied itinerary.
-- [[Guilin and Yangshuo](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/): The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/) — Guilin offers a completely different kind of mountain scenery in southern China.
+- [[Guilin and Yangshuo](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/): The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/) — Guilin offers a completely different kind of mountain scenery in southern China.
 - [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) — Essential reading for navigating China's rail booking system.
 
 

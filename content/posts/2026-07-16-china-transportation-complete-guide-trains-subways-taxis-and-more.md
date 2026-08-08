@@ -1,4 +1,4 @@
-﻿+++
++++
 title = "China Transportation Guide 2026: Trains, Subways, Taxis & How to Get Around"
 description = "The complete guide to getting around China in 2026. High-speed train booking, class comparison with real prices, subway hacks, Didi rideshare tips, and station survival strategies from an expat who rides the rails weekly."
 date = 2026-07-16
@@ -92,7 +92,7 @@ There are really only two options worth considering:
 
 **Trip.com** (recommended for first-timers): Available in English, accepts international credit cards, and has a user-friendly interface. You will pay a small booking fee (usually $3-5), but the convenience is worth it. I used Trip.com exclusively for my first two years in China.
 
-**12306** (the official app): Free to use, no booking fees, and shows every available seat in real time. The app supports passport registration and has a passable English interface. The main challenge is payment -- you need [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) linked to your account.
+**12306** (the official app): Free to use, no booking fees, and shows every available seat in real time. The app supports passport registration and has a passable English interface. The main challenge is payment -- you need [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) linked to your account.
 
 **My recommendation**: Use Trip.com for your first booking to get comfortable with the system. Once you have [WeChat Pay set up](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), switch to the 12306 app -- it is faster, cheaper, and more reliable for last-minute bookings.
 
@@ -134,7 +134,7 @@ Every major Chinese city has a metro system, and they are clean, cheap, and easy
 
 In 2026, you have three options:
 
-1. **Scan QR code at the gate** with [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) -- this is the most common method and works in every city
+1. **Scan QR code at the gate** with [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) -- this is the most common method and works in every city
 2. **Transit card**: Buy a physical card at the station (楼20 deposit + balance). Works across most cities
 3. **Apple Pay / Huawei Pay**: Supported in Beijing, Shanghai, Guangzhou, and Shenzhen
 

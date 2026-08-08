@@ -1,9 +1,9 @@
 ---
-title: "Transportation Guide Guide"
+title: "Transportation Guide"
 date: "2026-07-14T10:00:00+08:00"
 lastmod: "2026-07-14T10:00:00+08:00"
 author: "Joran"
-slug: "transportation-guide-guide"
+slug: "transportation-guide"
 tags:
   - ChinaTravel
   - TravelGuide
@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate like a local, tested strategies curated by a US-based China travel expert."
 description: "China transportation: complete guide 2026. how to navigate like a local, tested strategies curated by a US-based China travel expert."
-canonicalURL: "https://chinaboundtravel.com/posts/transportation-guide-guide/"
+canonicalURL: "https://chinaboundtravel.com/posts/transportation-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

@@ -35,7 +35,7 @@ Every month, the ChinaBound Travel Guide PDF gets a fresh update with the latest
 
 1. **Latest Visa Policy Updates** - Mid-year visa policy review completed
 2. **Updated Crowd Forecasts** - Summer vacation peak - book accommodations early
-3. **Payment System Refresh** - [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) international card linking improvements
+3. **Payment System Refresh** - [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) international card linking improvements
 4. **Safety & Scam Alerts** - Typhoon season begins in southern China
 5. **Recommended Routes** - Qinghai Lake and Tibet summer tours
 

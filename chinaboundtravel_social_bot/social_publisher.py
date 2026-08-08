@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 BASE_DIR = Path(__file__).parent.parent
 WORKER_URL = "https://buffer-worker.chinaboundtravel.com/publish"
 SITE_DOMAIN = "chinaboundtravel.com"
+DAILY_SOCIAL_LIMIT = 5  # 每日社媒发布上限（与生成器 manifest 统一为 5，消除 2/5 不一致）
 COVER_BASE = "static/img/china-dest"
 POSTS_DIR = BASE_DIR / "content/posts"
 
@@ -290,6 +291,38 @@ def extract_images_from_article(md_path: Path) -> list:
     return body_images + cover_images
 
 
+def smart_truncate(text, max_len=140):
+    """智能截断：文本超长时才截断加省略号，避免短文本被误加 ..."""
+    text = re.sub(r'\s+', ' ', str(text or "")).strip()
+    if len(text) <= max_len:
+        return text
+    return text[:max_len - 3].rstrip(' ,;:.') + "..."
+
+def build_story_text(category, title, url, hashtags):
+    """按文章分类生成 IG 故事文案，不再硬编码单一话题（原 144-hour visa-free 与多数文章无关）"""
+    story_hooks = {
+        "food": ("What's the first meal you should try in China?", "Ask a local where they eat — that's where the real food is."),
+        "visa": ("Confused about China's visa rules?", "Here's what I wish someone told me before applying."),
+        "transport": ("Getting around China can feel confusing. Where do you start?", "Trains beat flights on most routes. Here's the honest breakdown."),
+        "accommodation": ("Picking where to stay in China?", "Location beats luxury every time. Here's why."),
+        "safety": ("Worried about staying safe in China?", "Most 'scary' travel stories are avoidable with a few simple habits."),
+        "budget": ("Think a China trip is expensive?", "You'd be surprised — here's what it actually costs."),
+        "culture": ("China has some unwritten rules. Ready?", "A few etiquette basics will change your whole trip."),
+        "payment": ("Cashless payments everywhere in China — help?", "Getting Alipay or WeChat Pay set up is easier than you think."),
+        "travel": ("Planning your first China trip?", "Here's what actually matters, from a 10-year resident."),
+        "city": ("Beijing, Shanghai or Chengdu — which first?", "Each city has its own vibe. Here's how to pick."),
+        "nature": ("Want to see China's wild side?", "These landscapes will change how you see the country."),
+        "general": ("Your first China trip — what's the biggest thing to know?", "After 10 years here, here's what I'd tell my younger self."),
+    }
+    question, answer = story_hooks.get(category, story_hooks["general"])
+    return f"""Q: {question}
+
+A: {answer}
+
+Save this guide → {url}
+
+{hashtags}"""
+
 def generate_social_posts(article: dict, images: list, category: str = "general") -> list:
     """根据文章内容和配图生成多条不同的社媒帖子，适配 IG/Pinterest/X 不同风格"""
     title = article["title"]
@@ -379,7 +412,7 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
 
 I've lived in China for 5 years & here's what I WISH I knew before my first trip:
 
-{desc[:140]}...
+{smart_truncate(desc, 140)}
 
 Full breakdown: {url}
 
@@ -393,13 +426,7 @@ Full breakdown: {url}
 
     # 帖子 4: IG 故事风格 - 提问式，促进互动
     stories_image = available_images[0]
-    stories_text = f"""Q: What's the BIGGEST mistake tourists make in China?
-
-A: Not using the 144-hour visa-free transit!
-
-Save this guide → {url}
-
-#ChinaTravel #TravelHacks"""
+    stories_text = build_story_text(category, title, url, hashtags)
     
     posts.append({
         "text": stories_text,
@@ -479,7 +506,7 @@ def update_manifest():
         json.dump(manifest, f, indent=2)
 
 
-def check_daily_social_limit(daily_limit=5):
+def check_daily_social_limit(daily_limit=DAILY_SOCIAL_LIMIT):
     """检查今日社媒发布是否已达上限，返回 (是否受限, 今日已发布数, 限额)"""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     manifest = get_manifest()
@@ -498,20 +525,22 @@ def check_daily_social_limit(daily_limit=5):
     if manifest["daily_social_publish_date"] != today:
         manifest["daily_social_publish_date"] = today
         manifest["daily_social_publish_count"] = 0
+        manifest["daily_social_publish_limit"] = daily_limit
         manifest_path = BASE_DIR / "manifest.json"
         with open(manifest_path, 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2)
         return False, 0, daily_limit
     
-    # 确保 limit 字段存在
-    if "daily_social_publish_limit" not in manifest:
+    # 以代码常量 daily_limit 为准，覆盖 manifest 历史残留值，避免限额漂移（曾出现"传 2 存 5"不一致）
+    if manifest.get("daily_social_publish_limit", daily_limit) != daily_limit:
         manifest["daily_social_publish_limit"] = daily_limit
-    
+        manifest_path = BASE_DIR / "manifest.json"
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2)
     current_count = manifest.get("daily_social_publish_count", 0)
-    limit = manifest.get("daily_social_publish_limit", daily_limit)
-    is_limited = current_count >= limit
+    is_limited = current_count >= daily_limit
     
-    return is_limited, current_count, limit
+    return is_limited, current_count, daily_limit
 
 
 def increment_daily_social_count():
@@ -525,7 +554,7 @@ def increment_daily_social_count():
         manifest["daily_social_publish_date"] = today
         manifest["daily_social_publish_count"] = 0
         if "daily_social_publish_limit" not in manifest:
-            manifest["daily_social_publish_limit"] = 5
+            manifest["daily_social_publish_limit"] = DAILY_SOCIAL_LIMIT
     
     manifest["daily_social_publish_count"] = manifest.get("daily_social_publish_count", 0) + 1
     with open(manifest_path, 'w', encoding='utf-8') as f:
@@ -591,8 +620,8 @@ def run():
 
     print(f"\nFound latest article: {latest_article['title']}")
 
-    # 【每日发布限额】检查今日是否已达社媒发布上限（每天最多2条）
-    is_limited, current_count, daily_limit = check_daily_social_limit(daily_limit=2)
+    # 【每日发布限额】检查今日是否已达社媒发布上限（每天最多5条）
+    is_limited, current_count, daily_limit = check_daily_social_limit()
     if is_limited:
         print(f"Daily social limit reached: {current_count}/{daily_limit}")
         print("Stopping for today to maintain social media exposure effectiveness.")
@@ -622,7 +651,7 @@ def run():
     for post_idx, post in enumerate(social_posts):
         print(f"\n--- 发布帖子 [{post_idx+1}/{len(social_posts)}] ({post['variant']}) ---")
         
-        is_limited_now, current_count_now, _ = check_daily_social_limit(daily_limit=2)
+        is_limited_now, current_count_now, _ = check_daily_social_limit()
         if is_limited_now:
             print(f"Daily social limit reached ({current_count_now}/{daily_limit})")
             break

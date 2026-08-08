@@ -65,7 +65,7 @@ The Terracotta Army is located about 35 kilometers east of Xi'an. The easiest wa
 ### Entrance Fees
 The entrance fee to the Terracotta Army is 120 yuan per person. The 120 yuan ticket covers all three pits (Pit 1, Pit 2, and Pit 3) as well as the Bronze Chariot exhibition hall. Tickets are slightly cheaper in the off-season (November–March) at around 120 yuan, while peak season pricing can reach 150 yuan. **Book online in advance** through the official WeChat mini-program or your hotel — during Chinese holidays, daily tickets can sell out.
 
-If you want a guided tour, English-speaking guides are available at the entrance for about 300-400 yuan for a 2-hour tour. Audio guides are also available for rent at 40 yuan. Make sure to bring some cash with you, as credit cards are not always accepted. For a smoother payment experience, consider setting up [Alipay and WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) before your trip — most vendors and even some ticket counters accept mobile payments now.
+If you want a guided tour, English-speaking guides are available at the entrance for about 300-400 yuan for a 2-hour tour. Audio guides are also available for rent at 40 yuan. Make sure to bring some cash with you, as credit cards are not always accepted. For a smoother payment experience, consider setting up [Alipay and WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before your trip — most vendors and even some ticket counters accept mobile payments now.
 
 ## The Three Pits: What to Expect and How to Prioritize
 

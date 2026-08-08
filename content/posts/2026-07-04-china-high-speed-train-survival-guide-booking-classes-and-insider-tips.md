@@ -51,7 +51,7 @@ However, there are a few things to keep in mind. Sometimes, the seat selection o
 
 The first step is to create an account. You'll need to provide some basic information like your name, passport number, and contact details. Once you have an account, you can start searching for trains. The website is very detailed, showing you the exact departure and arrival times, the stops along the way, and the availability of different classes.
 
-One of the great things about 12306 is that it has a wide range of payment options. You can use [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/), or even some international credit cards. And the seat selection is usually very accurate.
+One of the great things about 12306 is that it has a wide range of payment options. You can use [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/), or even some international credit cards. And the seat selection is usually very accurate.
 
 But the biggest challenge with 12306 is the language barrier. If you don't understand Chinese, it can be difficult to navigate the website. However, there are some browser extensions and apps that can help you translate the page.
 
