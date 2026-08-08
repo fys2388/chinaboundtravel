@@ -8,7 +8,7 @@ enableInlineShortcodes = true
 disableHugoGeneratorInject = true
 
 buildDrafts = false
-buildFuture = false
+buildFuture = true  # 支持提前写好并定时发布未来日期的文章（如明天的博文）
 buildExpired = false
 ignoreFiles = ["/\\.archived/"]
 
