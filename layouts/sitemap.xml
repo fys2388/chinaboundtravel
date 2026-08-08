@@ -1,10 +1,17 @@
-{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+﻿{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {{- $pages := .Site.RegularPages }}
 {{- $excludePaths := site.Params.sitemapExclude | default slice }}
+{{- $seen := dict }}
 {{- range $pages }}
   {{- $shouldExclude := false }}
   {{- $pagePath := printf "%s" .RelPermalink }}
+  {{- /* 去重：同一 URL 只输出一次，避免重复 slug 导致 sitemap 重复 */}}
+  {{- if index $seen $pagePath }}
+    {{- $shouldExclude = true }}
+  {{- else }}
+    {{- $seen = merge $seen (dict $pagePath true) }}
+  {{- end }}
   {{- range $excludePaths }}
     {{- $pattern := printf "/%s/" . }}
     {{- if or (strings.HasPrefix $pagePath $pattern) (eq $pagePath $pattern) }}

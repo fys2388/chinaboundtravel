@@ -1,5 +1,6 @@
 ---
 title: Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base
+slug: "dude-wheres-my-panda-a-beijing-guys-guide-to-the-c"
 date: '2026-06-02T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/"

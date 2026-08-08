@@ -1,5 +1,6 @@
 ---
 title: "Shanghai Bund & French Concession  2-Day Deep Dive"
+slug: "shanghai-bund-french-concession-2-day-guide"
 date: 2026-05-24T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/"

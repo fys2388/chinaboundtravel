@@ -1,5 +1,6 @@
 ---
 title: 'Ultimate Guide to China Visa for Tourists 2026'
+slug: "ultimate-guide-to-china-visa-for-tourists"
 date: 2026-06-02T10:00:00+08:00
 author: Joran
 tags: ["ChinaVisa", "TravelGuide", "ChinaTravel", "VisaApplication"]

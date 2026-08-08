@@ -1,5 +1,6 @@
 ---
 title: "The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)"
+slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/"

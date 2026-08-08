@@ -1,5 +1,6 @@
 ---
 title: How to Use WeChat Pay as a Foreigner
+slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran
 date: '2026-05-22T10:00:00+08:00'
 draft: false

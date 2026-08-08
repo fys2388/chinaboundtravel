@@ -1,5 +1,6 @@
 ---
 title: "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy"
+slug: "hangzhou-west-lake-tea-culture-g20-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/"
