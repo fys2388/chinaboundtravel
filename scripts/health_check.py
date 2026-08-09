@@ -6,6 +6,10 @@
 import os
 import sys
 import json
+
+# Windows ?????????? emoji ??? GBK ???
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -23,7 +27,7 @@ CHECKS = [
         "expected_status": 200
     },
     {
-        "name": "Google Analytics",
+        "name": "Google Analytics JS (CDN)",
         "url": "https://www.google-analytics.com/analytics.js",
         "expected_status": 200
     },
@@ -41,6 +45,50 @@ CHECKS = [
         }
     }
 ]
+
+
+def check_ga4_data_source() -> dict:
+    """验证 GA4 服务账号配置是否可真实查询（数据源检查，而非 CDN 连通性）"""
+    sa_json = os.getenv("GA4_SERVICE_ACCOUNT_JSON", "")
+    prop = os.getenv("GA4_PROPERTY_ID", "")
+    if not sa_json or not prop:
+        return {"name": "GA4 数据源", "status": "SKIP", "expected": 200, "passed": True,
+                "error": "GA4_SERVICE_ACCOUNT_JSON / GA4_PROPERTY_ID 未配置"}
+    try:
+        # 支持直接 JSON 内容或本地文件路径（相对路径基于博客根目录解析）
+        if not sa_json.strip().startswith("{"):
+            p = Path(sa_json)
+            if not p.is_absolute():
+                p = BASE_DIR.parent / p
+            if not p.exists():
+                return {"name": "GA4 数据源", "status": "SKIP", "expected": 200, "passed": True,
+                        "error": "服务账号文件不存在: " + sa_json}
+            sa_json = p.read_text(encoding="utf-8")
+        info = json.loads(sa_json)
+
+        from google.oauth2 import service_account
+        from google.auth.transport.requests import Request
+        creds = service_account.Credentials.from_service_account_info(
+            info, scopes=["https://www.googleapis.com/auth/analytics.readonly"])
+        creds.refresh(Request())
+
+        today = datetime.now().strftime("%Y-%m-%d")
+        resp = requests.post(
+            "https://analyticsdata.googleapis.com/v1beta/properties/" + prop + ":runReport",
+            headers={"Authorization": "Bearer " + creds.token, "Content-Type": "application/json"},
+            json={"dateRanges": [{"startDate": today, "endDate": today}],
+                  "metrics": [{"name": "activeUsers"}], "dimensions": []},
+            timeout=15)
+        if resp.status_code == 200:
+            return {"name": "GA4 数据源", "status": resp.status_code, "expected": 200, "passed": True, "error": None}
+        return {"name": "GA4 数据源", "status": resp.status_code, "expected": 200, "passed": False,
+                "error": resp.text[:100]}
+    except ImportError:
+        return {"name": "GA4 数据源", "status": "SKIP", "expected": 200, "passed": True,
+                "error": "google-auth 未安装"}
+    except Exception as e:
+        return {"name": "GA4 数据源", "status": None, "expected": 200, "passed": False, "error": str(e)[:100]}
+
 
 
 def load_env():
@@ -129,7 +177,12 @@ def send_feishu_notification(results: list):
     
     for r in results:
         icon = "✅" if r["passed"] else "❌"
-        line = f"{icon} **{r['name']}**: {r['status'] or 'ERROR'}"
+        if r.get("status") == "SKIP":
+            icon = "⚪"
+            line = f"{icon} **{r['name']}**: 未配置/跳过"
+        else:
+            icon = "✅" if r["passed"] else "❌"
+            line = f"{icon} **{r['name']}**: {r['status'] or 'ERROR'}"
         if r["error"]:
             line += f" - {r['error'][:50]}"
         lines.append(line)
@@ -152,6 +205,13 @@ def main():
     load_buffer_token()
     
     results = []
+    # GA4 数据源检查（验证服务账号可真实查询，而非仅 CDN 连通）
+    ga4_check = check_ga4_data_source()
+    results.append(ga4_check)
+    status_icon = "✅" if ga4_check["passed"] else "❌"
+    print(f"  {status_icon} {ga4_check['name']}: {ga4_check.get('status') or 'ERROR'}")
+
+
     for check in CHECKS:
         print(f"检查 {check['name']}...")
         result = check_url(check)

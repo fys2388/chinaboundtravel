@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 feishu_daily_report.py - ChinaBound Travel 飞书每日日报推送
 功能：流量、内容、联盟、运维四大核心板块数据推送
@@ -69,6 +69,8 @@ GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
 GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
+# GSC 站点配置：支持 sc-domain: 域属性或 https:// URL 前缀属性，逗号分隔多个候选
+GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
 # MailerLite 订阅配置
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
@@ -143,12 +145,49 @@ class FeishuDailyReporter:
         report_date = data.get("report_date", (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d"))
         
         # 状态图标
+        # 状态图标
         traffic_status = "🟢" if data.get("visitors", 0) > 0 else "⚪"
         content_status = "🟢" if data.get("total_content_issues", 0) == 0 else "🟡"
-        affiliate_status = "🟢" if data.get("affiliate_revenue", 0) > 0 else "⚪"
+        tp_available = data.get("tp_available", False)
+        nord_available = data.get("nord_available", False)
+        # 合计佣金只统计有真实数据的渠道，避免把"未接入"当 0 计入
+        total_aff_revenue = 0.0
+        total_aff_parts = []
+        if tp_available:
+            total_aff_revenue += float(data.get("tp_revenue", 0) or 0)
+            total_aff_parts.append("Travelpayouts")
+        if nord_available:
+            total_aff_revenue += float(data.get("nord_revenue", 0) or 0)
+            total_aff_parts.append("NordVPN")
+        affiliate_status = "🟢" if total_aff_revenue > 0 else ("🟡" if (tp_available or nord_available) else "⚪")
+        if tp_available:
+            tp_display = {"inits": f"{data.get('tp_inits', 0):,}", "searches": f"{data.get('tp_searches', 0):,}",
+                          "clicks": f"{data.get('tp_clicks', 0)}", "bookings": f"{data.get('tp_bookings', 0)}",
+                          "revenue": f"${data.get('tp_revenue', 0):.2f}"}
+        else:
+            tp_display = {"inits": "未配置", "searches": "未配置", "clicks": "未配置",
+                          "bookings": "未配置", "revenue": "未配置"}
+        if nord_available:
+            nord_display = {"clicks": f"{data.get('nord_clicks', 0)}", "conversions": f"{data.get('nord_conversions', 0)}",
+                            "revenue": f"${data.get('nord_revenue', 0):.2f}"}
+        else:
+            nord_display = {"clicks": "未接入", "conversions": "未接入", "revenue": "未接入"}
+        if total_aff_parts:
+            total_rev_str = f"${total_aff_revenue:.2f}（{' + '.join(total_aff_parts)}）"
+        else:
+            total_rev_str = "暂无数据（两个渠道均未接入）"
+
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
         search_status = "🟢" if (gsc_has_data and data.get("gsc_errors", 0) == 0) else ("🟡" if gsc_available else "⚪")
+        
+        # MailerLite 显示：认证失败/未配置时提示，避免把 API 错误当真实 0
+        if data.get("ml_available"):
+            ml_total_str = f"{data.get('ml_total_subscribers', 0):,} 人"
+            ml_new_str = f"{data.get('ml_new_subscribers', 0)} 人"
+        else:
+            ml_total_str = "未连接（API 认证失败）" if data.get("ml_error") else "未配置"
+            ml_new_str = "-"
         
         # ===== 1. 流量总览 =====
         # 格式化会话时长
@@ -178,6 +217,23 @@ class FeishuDailyReporter:
         if top_countries:
             country_lines = [f"{c['country']}: {c['users']} 人" for c in top_countries[:5]]
         country_str = "\n".join(country_lines)
+        # GA4 小流量隐私阈值提示：明细合计可能与总数不一致
+        consistency_notes = []
+        if top_channels and data.get("sessions"):
+            ch_s = sum(c.get("sessions", 0) for c in top_channels)
+            if ch_s != data.get("sessions"):
+                consistency_notes.append(f"渠道会话合计 {ch_s} ≠ 总会话 {data.get('sessions')}")
+        if top_channels and data.get("visitors"):
+            ch_u = sum(c.get("users", 0) for c in top_channels)
+            if ch_u != data.get("visitors"):
+                consistency_notes.append(f"渠道用户合计 {ch_u} ≠ 总访客 {data.get('visitors')}")
+        if top_pages and data.get("requests"):
+            pv = sum(p.get("views", 0) for p in top_pages)
+            if pv != data.get("requests"):
+                consistency_notes.append(f"Top页面浏览合计 {pv} ≠ 总浏览 {data.get('requests')}")
+        consistency_str = ""
+        if consistency_notes:
+            consistency_str = "\n\n⚠️ 一致性提示：" + "；".join(consistency_notes) + "\n（GA4 小流量隐私阈值/other 分组可能导致明细与总数不一致）"
         
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
@@ -262,7 +318,7 @@ class FeishuDailyReporter:
 | 互动率 | {data.get('engagement_rate', 0):.1f}% | 平均时长 | {dur_str} |
 
 **📈 同比趋势**
-- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}"""
+- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{consistency_str}"""
                     }
                 },
                 # Top 流量来源
@@ -291,7 +347,7 @@ class FeishuDailyReporter:
 
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
-| 已收录页面 | {gsc_indexed_str} 页 | 索引错误 | {gsc_errors_str} 个 |
+| Sitemap 数量 | {gsc_indexed_str} 个 | 索引错误 | {gsc_errors_str} 个 |
 | 搜索曝光 | {gsc_impressions_str} 次 | 搜索点击 | {gsc_clicks_str} 次 |
 | 点击率 CTR | {gsc_ctr_str} | | |
 
@@ -338,22 +394,22 @@ class FeishuDailyReporter:
 🏨 **Travelpayouts（酒店/机票/门票/租车/玩乐 — 统一渠道）**
 | 指标 | 数据 |
 | --- | --- |
-| 昨日展示 | {data.get('tp_inits', 0):,} 次 |
-| 昨日搜索 | {data.get('tp_searches', 0):,} 次 |
-| 昨日点击 | {data.get('tp_clicks', 0)} 次 |
-| 昨日订单 | {data.get('tp_bookings', 0)} 单 |
-| 昨日佣金 | ${data.get('tp_revenue', 0):.2f} |
+| 昨日展示 | {tp_display['inits']} 次 |
+| 昨日搜索 | {tp_display['searches']} 次 |
+| 昨日点击 | {tp_display['clicks']} 次 |
+| 昨日订单 | {tp_display['bookings']} 单 |
+| 昨日佣金 | {tp_display['revenue']} |
 
 🛡️ **NordVPN / NordPass（通过 AffiliatesCN）**
 | 指标 | 数据 |
 | --- | --- |
-| 昨日点击 | {data.get('nord_clicks', 0)} 次 |
-| 昨日转化 | {data.get('nord_conversions', 0)} 单 |
-| 昨日佣金 | ${data.get('nord_revenue', 0):.2f} |
+| 昨日点击 | {nord_display['clicks']} 次 |
+| 昨日转化 | {nord_display['conversions']} 单 |
+| 昨日佣金 | {nord_display['revenue']} |
 
 > Klook、Booking.com 链接均通过 Travelpayouts 追踪，佣金统一统计
 
-**合计昨日佣金**: ${data.get('tp_revenue', 0) + data.get('nord_revenue', 0):.2f}"""
+**合计昨日佣金**: {total_rev_str}"""
                     }
                 },
                 {"tag": "hr"},
@@ -367,8 +423,8 @@ class FeishuDailyReporter:
 
 | 指标 | 数据 |
 | --- | --- |
-| 总订阅人数 | {data.get('ml_total_subscribers', 'N/A')} 人 |
-| 昨日新增 | {data.get('ml_new_subscribers', 0)} 人 |"""
+| 总订阅人数 | {ml_total_str} |
+| 昨日新增 | {ml_new_str} |"""
                     }
                 },
                 {"tag": "hr"},
@@ -469,8 +525,10 @@ class FeishuDailyReporter:
             "tp_clicks": 0,
             "tp_bookings": 0,
             "tp_revenue": 0.0,
+            "tp_available": False,
             "tp_inits": 0,
             "tp_searches": 0,
+            "nord_available": False,
             "nord_clicks": 0,
             "nord_conversions": 0,
             "nord_revenue": 0.0,
@@ -479,6 +537,7 @@ class FeishuDailyReporter:
             # 订阅数据
             "ml_total_subscribers": 0,
             "ml_new_subscribers": 0,
+            "ml_available": False,
             # GitHub Actions 状态
             "gh_blog_success": None,
             "gh_report_success": None,
@@ -533,7 +592,7 @@ class FeishuDailyReporter:
             data["data_status"].append("GSC数据获取失败 - 请在 Google Search Console 中授权服务账号")
 
         # 4. 本地内容质量巡检
-        content_issues = self._scan_content_quality()
+        content_issues = self._scan_content_quality(data.get("report_date"))
         data.update(content_issues)
         print(f"   ✅ 内容巡检: {data['total_posts']} 篇, 占位符 {data['placeholder_articles']}, 空链接 {data['empty_links']}, Alt缺失 {data['missing_alt']}")
         
@@ -541,23 +600,32 @@ class FeishuDailyReporter:
         tp_data = self._fetch_travelpayouts()
         if tp_data:
             data.update(tp_data)
+            data["tp_available"] = True
             print(f"   ✅ Travelpayouts: 点击 {data['tp_clicks']}, 订单 {data['tp_bookings']}, ${data['tp_revenue']:.2f}")
         else:
-            data["data_status"].append("Travelpayouts联盟数据未配置")
+            data["tp_available"] = False
+            data["data_status"].append("Travelpayouts联盟数据未配置（需设置 TRAVELPAYOUTS_API_TOKEN）")
         
         # 5. NordVPN 数据
         nord_data = self._fetch_nordvpn()
         if nord_data:
             data.update(nord_data)
-            print(f"   ✅ NordVPN: {data['nord_clicks']} 点击, {data['nord_conversions']} 转化, ${data['nord_revenue']:.2f}")
+            data["nord_available"] = nord_data.get("nord_available", False)
+            if not data["nord_available"]:
+                data["data_status"].append("NordVPN: 需手动查看 Impact.com 后台")
         else:
+            data["nord_available"] = False
             data["data_status"].append("NordVPN: 需手动查看 Impact.com 后台")
         
         # 6. MailerLite 订阅数据
         ml_data = self._fetch_mailerlite()
         if ml_data:
             data.update(ml_data)
-            print(f"   ✅ MailerLite: 总订阅 {data.get('ml_total_subscribers', 'N/A')} 人, 昨日新增 {data.get('ml_new_subscribers', 0)} 人")
+            if data.get("ml_available"):
+                print(f"   ✅ MailerLite: 总订阅 {data.get('ml_total_subscribers', 'N/A')} 人, 昨日新增 {data.get('ml_new_subscribers', 0)} 人")
+            else:
+                print(f"   ⚠️ MailerLite: {data.get('ml_error', 'API 不可用')}")
+                data["data_status"].append(data.get("ml_error", "MailerLite API 不可用"))
         else:
             data["data_status"].append("MailerLite订阅数据未配置（需设置 MAILERLITE_API_TOKEN）")
         
@@ -675,14 +743,9 @@ class FeishuDailyReporter:
             from googleapiclient.discovery import build
             
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-            two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
-            three_days_ago = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
-            # 周同比：上周同天
-            last_week_start = (datetime.now() - timedelta(days=8)).strftime("%Y-%m-%d")
-            last_week_end = (datetime.now() - timedelta(days=8)).strftime("%Y-%m-%d")
-            # 月同比：上月同天
-            last_month_start = (datetime.now() - timedelta(days=32)).strftime("%Y-%m-%d")
-            last_month_end = (datetime.now() - timedelta(days=32)).strftime("%Y-%m-%d")
+            # 周同比：上周同日（D-7）；月同比：上月同日（D-30）
+            last_week_day = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+            last_month_day = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
             
             print(f"   🔍 正在调用 GSC API ({yesterday})...")
             
@@ -697,7 +760,28 @@ class FeishuDailyReporter:
             credentials.refresh(Request())
             
             service = build("searchconsole", "v1", credentials=credentials)
-            site_url = "sc-domain:chinaboundtravel.com"
+            # 站点候选：优先使用配置的 GSC_SITE_URL（.env/CI 环境变量），回退域属性；支持逗号分隔多候选
+            site_candidates = []
+            for s in str(GSC_SITE_URL or "").split(","):
+                s = s.strip()
+                if s and s not in site_candidates:
+                    site_candidates.append(s)
+            default_domain = "sc-domain:chinaboundtravel.com"
+            if default_domain not in site_candidates:
+                site_candidates.append(default_domain)
+            site_url = None
+            for candidate in site_candidates:
+                try:
+                    service.sites().get(siteUrl=candidate).execute()
+                    site_url = candidate
+                    print(f"   ✅ GSC 站点验证通过: {candidate}")
+                    break
+                except Exception:
+                    print(f"   ⚠️ GSC 站点不可用: {candidate}")
+            if not site_url:
+                print(f"   ❌ 所有 GSC 站点候选均不可用: {site_candidates}")
+                print(f"   ❌ 请确认服务账号 {service_account_info.get('client_email', '')} 已被添加为站点所有者")
+                return None
             def gsc_query(start, end, dimensions=None, row_limit=10):
                 """封装 GSC 查询"""
                 request_body = {
@@ -713,32 +797,23 @@ class FeishuDailyReporter:
                     siteUrl=site_url, body=request_body
                 ).execute()
             
-            # === 昨日总览 ===
-            response = gsc_query(three_days_ago, yesterday)
+            # === 昨日总览（单日精确查询） ===
+            yesterday_response = gsc_query(yesterday, yesterday)
             print(f"   ✅ GSC API 调用成功")
-            
+
             yesterday_impressions = 0
             yesterday_clicks = 0
             yesterday_ctr = 0.0
-            
-            if "rows" in response:
-                # 分离昨日数据（按日期拆分会太复杂，用3天总量/3近似）
-                # 改用精确的2天范围获取昨日
-                yesterday_response = gsc_query(yesterday, yesterday)
-                if "rows" in yesterday_response:
-                    yesterday_impressions = int(yesterday_response["rows"][0].get("impressions", 0)) if yesterday_response["rows"] else 0
-                    yesterday_clicks = int(yesterday_response["rows"][0].get("clicks", 0)) if yesterday_response["rows"] else 0
-                    yesterday_ctr = round(float(yesterday_response["rows"][0].get("ctr", 0)) * 100, 2) if yesterday_response["rows"] else 0.0
-                else:
-                    # 回退到3天总量
-                    for row in response["rows"]:
-                        yesterday_impressions += int(row.get("impressions", 0))
-                        yesterday_clicks += int(row.get("clicks", 0))
+
+            if "rows" in yesterday_response and yesterday_response["rows"]:
+                yesterday_impressions = int(yesterday_response["rows"][0].get("impressions", 0))
+                yesterday_clicks = int(yesterday_response["rows"][0].get("clicks", 0))
+                yesterday_ctr = round(float(yesterday_response["rows"][0].get("ctr", 0)) * 100, 2)
             
             # === 周同比 ===
             week_impressions = 0
             try:
-                week_resp = gsc_query(last_week_start, last_week_end)
+                week_resp = gsc_query(last_week_day, last_week_day)
                 if "rows" in week_resp:
                     week_impressions = int(week_resp["rows"][0].get("impressions", 0)) if week_resp["rows"] else 0
             except:
@@ -751,7 +826,7 @@ class FeishuDailyReporter:
             # === 月同比 ===
             month_impressions = 0
             try:
-                month_resp = gsc_query(last_month_start, last_month_end)
+                month_resp = gsc_query(last_month_day, last_month_day)
                 if "rows" in month_resp:
                     month_impressions = int(month_resp["rows"][0].get("impressions", 0)) if month_resp["rows"] else 0
             except:
@@ -937,11 +1012,9 @@ class FeishuDailyReporter:
         try:
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
-            seven_days_ago = (datetime.now() - timedelta(days=8)).strftime("%Y-%m-%d")
-            last_week_range = (datetime.now() - timedelta(days=8)).strftime("%Y-%m-%d")
-            last_week_end = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
-            last_month_range = (datetime.now() - timedelta(days=32)).strftime("%Y-%m-%d")
-            last_month_end = (datetime.now() - timedelta(days=1) - timedelta(days=30)).strftime("%Y-%m-%d")
+            # 周同比：上周同日（D-7）；月同比：上月同日（D-30）
+            last_week_day = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+            last_month_day = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
             
             print(f"   🔍 正在调用 GA4 API ({yesterday})...")
             
@@ -952,52 +1025,58 @@ class FeishuDailyReporter:
             print("   ✅ GA4 服务账号认证成功")
             
             # === 核心指标：昨日 vs 前日 ===
-            core_payload = {
-                "dateRanges": [
-                    {"startDate": yesterday, "endDate": yesterday},
-                    {"startDate": two_days_ago, "endDate": two_days_ago}
-                ],
-                "metrics": [
-                    {"name": "activeUsers"},
-                    {"name": "sessions"},
-                    {"name": "screenPageViews"},
-                    {"name": "engagementRate"},
-                    {"name": "averageSessionDuration"},
-                    {"name": "bounceRate"}
-                ],
-                "dimensions": []
-            }
-            
-            result = self._ga4_run_report(headers, core_payload)
-            if not result or "rows" not in result:
-                print(f"   ⚠️ GA4 核心指标返回空数据: {json.dumps(result, indent=2)[:500]}")
+            # 注意：GA4 Data API 多 dateRange 查询返回的行序不保证与请求顺序一致（实测为逆序），
+            # 若直接取 rows[0] 会把前日数据当成昨日。改为两次独立单日期查询，确保不错位。
+            core_metrics = [
+                {"name": "activeUsers"},
+                {"name": "sessions"},
+                {"name": "screenPageViews"},
+                {"name": "engagementRate"},
+                {"name": "averageSessionDuration"},
+                {"name": "bounceRate"}
+            ]
+
+            def query_day(day: str):
+                """单日期查询核心指标，返回 metricValues 列表或 None"""
+                payload = {
+                    "dateRanges": [{"startDate": day, "endDate": day}],
+                    "metrics": core_metrics,
+                    "dimensions": []
+                }
+                res = self._ga4_run_report(headers, payload)
+                if not res or "rows" not in res or not res["rows"]:
+                    return None
+                return res["rows"][0].get("metricValues", [])
+
+            yesterday_vals = query_day(yesterday)
+            if yesterday_vals is None:
+                print(f"   ⚠️ GA4 核心指标返回空数据（{yesterday}）")
                 return None
-            
-            print(f"   📤 GA4 返回行数: {len(result.get('rows', []))}")
-            print(f"   📤 GA4 返回数据: {json.dumps(result, indent=2)[:800]}")
-            rows = result.get("rows", [])
-            yesterday_users = int(rows[0].get("metricValues", [{}])[0].get("value", "0"))
-            yesterday_sessions = int(rows[0].get("metricValues", [{}])[1].get("value", "0"))
-            yesterday_pageviews = int(rows[0].get("metricValues", [{}])[2].get("value", "0"))
-            yesterday_engagement = self._parse_ga4_rate(rows[0].get("metricValues", [{}])[3].get("value", "0"))
-            yesterday_avg_duration = int(float(rows[0].get("metricValues", [{}])[4].get("value", "0")))
-            yesterday_bounce = self._parse_ga4_rate(rows[0].get("metricValues", [{}])[5].get("value", "0"))
-            
+
+            print(f"   📤 GA4 昨日({yesterday})指标: {[v.get('value') for v in yesterday_vals]}")
+            yesterday_users = int(yesterday_vals[0].get("value", "0"))
+            yesterday_sessions = int(yesterday_vals[1].get("value", "0"))
+            yesterday_pageviews = int(yesterday_vals[2].get("value", "0"))
+            yesterday_engagement = self._parse_ga4_rate(yesterday_vals[3].get("value", "0"))
+            yesterday_avg_duration = int(float(yesterday_vals[4].get("value", "0")))
+            yesterday_bounce = self._parse_ga4_rate(yesterday_vals[5].get("value", "0"))
+
+            two_days_ago_vals = query_day(two_days_ago)
             two_days_ago_users = 0
-            if len(rows) > 1:
-                two_days_ago_users = int(rows[1].get("metricValues", [{}])[0].get("value", "0"))
-            
+            if two_days_ago_vals:
+                two_days_ago_users = int(two_days_ago_vals[0].get("value", "0"))
+
             day_trend = "N/A"
             if two_days_ago_users > 0:
                 change = ((yesterday_users - two_days_ago_users) / two_days_ago_users) * 100
                 day_trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
-            
+
             print(f"   📊 GA4 核心数据: {yesterday_users} 访客, {yesterday_sessions} 会话, 跳出率 {yesterday_bounce}%")
             
-            # === 周同比（昨日 vs 上周同日） ===
+            # === 周同比（昨日 vs 上周同日 D-7） ===
             week_payload = {
                 "dateRanges": [
-                    {"startDate": last_week_range, "endDate": last_week_end}
+                    {"startDate": last_week_day, "endDate": last_week_day}
                 ],
                 "metrics": [{"name": "activeUsers"}],
                 "dimensions": []
@@ -1006,17 +1085,15 @@ class FeishuDailyReporter:
             week_users = 0
             if week_result and "rows" in week_result:
                 week_users = int(week_result["rows"][0].get("metricValues", [{}])[0].get("value", "0"))
-            # 周同比只需7天中对应日数据，简化为7天均值对比
-            week_avg = week_users // 7 if week_users > 0 else 0
             week_trend = "N/A"
-            if week_avg > 0:
-                w_change = ((yesterday_users - week_avg) / week_avg) * 100
+            if week_users > 0:
+                w_change = ((yesterday_users - week_users) / week_users) * 100
                 week_trend = f"+{w_change:.1f}%" if w_change >= 0 else f"{w_change:.1f}%"
             
-            # === 月同比（昨日 vs 30天前） ===
+            # === 月同比（昨日 vs 上月同日 D-30） ===
             month_payload = {
                 "dateRanges": [
-                    {"startDate": last_month_range, "endDate": last_month_end}
+                    {"startDate": last_month_day, "endDate": last_month_day}
                 ],
                 "metrics": [{"name": "activeUsers"}],
                 "dimensions": []
@@ -1025,10 +1102,9 @@ class FeishuDailyReporter:
             month_total = 0
             if month_result and "rows" in month_result:
                 month_total = int(month_result["rows"][0].get("metricValues", [{}])[0].get("value", "0"))
-            month_avg = month_total // 30 if month_total > 0 else 0
             month_trend = "N/A"
-            if month_avg > 0:
-                m_change = ((yesterday_users - month_avg) / month_avg) * 100
+            if month_total > 0:
+                m_change = ((yesterday_users - month_total) / month_total) * 100
                 month_trend = f"+{m_change:.1f}%" if m_change >= 0 else f"{m_change:.1f}%"
             
             # === 流量来源渠道 Top5 ===
@@ -1111,8 +1187,10 @@ class FeishuDailyReporter:
         except:
             return 0.0
     
-    def _scan_content_quality(self) -> dict:
-        """扫描本地内容质量"""
+    def _scan_content_quality(self, report_date: str = None) -> dict:
+        """扫描本地内容质量
+        report_date: 日报报告日期（昨日），用于统计"昨日新增"文章
+        """
         result = {
             "total_posts": 0,
             "new_posts": 0,
@@ -1129,19 +1207,22 @@ class FeishuDailyReporter:
         posts = list(POSTS_DIR.glob("*.md"))
         result["total_posts"] = len(posts)
         
-        today = datetime.now().date()
-        today_str = today.strftime("%Y-%m-%d")
-        
+        # 默认统计昨日新增；优先取 frontmatter date，其次文件名日期前缀
+        report_date = report_date or (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+
         for post in posts:
             try:
                 content = post.read_text(encoding='utf-8')
-                
-                # 检查是否今日新发（根据文件名日期前缀判断）
-                try:
-                    if post.name.startswith(today_str):
-                        result["new_posts"] += 1
-                except:
-                    pass
+
+                # 统计 report_date 当天新增的文章（frontmatter date 优先，文件名前缀兜底）
+                post_date = None
+                fm = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+                if fm:
+                    dm = re.search(r'^date:\s*["\']?([\d-]+)', fm.group(1), re.MULTILINE)
+                    if dm:
+                        post_date = dm.group(1)
+                if post_date == report_date or (not post_date and post.name.startswith(report_date)):
+                    result["new_posts"] += 1
                 
                 # 检查是否草稿
                 if "_draft" in post.name.lower() or post.name.startswith("draft"):
@@ -1244,12 +1325,10 @@ class FeishuDailyReporter:
     def _fetch_nordvpn(self) -> dict:
         """获取 NordVPN 联盟数据
         Impact.com 使用异步导出机制，无法在日报中实时获取数据。
-        返回 None 让日报显示"需手动查看 Impact.com 后台"。
+        返回带可用性标记的数据，让日报显示"未接入"而非误导性的 0。
         """
-        # Impact.com API 是异步导出模式，不适合日报实时调用
-        # 如果未来需要集成，可以通过 Partners API 的 Real-Time Report 实现
         print("   ℹ️ NordVPN/Impact.com: 需手动查看 Impact.com 后台获取数据")
-        return None
+        return {"nord_available": False}
     
     def _fetch_mailerlite(self) -> dict:
         """获取 MailerLite 订阅数据（总订阅数 + 昨日新增）"""
@@ -1275,8 +1354,15 @@ class FeishuDailyReporter:
                 if resp.status_code == 200:
                     data = resp.json()
                     total_subscribers = data.get("meta", {}).get("total", 0)
+                else:
+                    # 401=token失效/未授权，不能当作 0 人展示
+                    err = resp.text[:150]
+                    print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {err}")
+                    return {"ml_available": False,
+                            "ml_error": f"MailerLite API 认证失败（HTTP {resp.status_code}），请检查 MAILERLITE_API_TOKEN"}
             except Exception as e:
                 print(f"   ⚠️ MailerLite 总订阅获取失败: {e}")
+                return {"ml_available": False, "ml_error": f"MailerLite API 请求异常: {e}"}
             
             # 获取昨日新增订阅者（通过 group activity 或 subscribers 列表筛选）
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
@@ -1299,6 +1385,7 @@ class FeishuDailyReporter:
                 print(f"   ⚠️ MailerLite 昨日新增获取失败: {e}")
             
             return {
+                "ml_available": True,
                 "ml_total_subscribers": total_subscribers,
                 "ml_new_subscribers": new_subscribers
             }
@@ -1321,7 +1408,8 @@ class FeishuDailyReporter:
             }
             
             base_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/runs"
-            yesterday = (datetime.now() - timedelta(days=1)).isoformat()
+            # 只统计报告日（UTC 昨日）完成的工作流，避免把历史成功当成当日状态
+            report_day = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             
             result = {}
             
@@ -1337,7 +1425,7 @@ class FeishuDailyReporter:
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
                     # 只检查已完成的工作流（排除正在运行的）
-                    blog_runs = [r for r in runs if ("hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")) and r.get("status") == "completed"]
+                    blog_runs = [r for r in runs if ("hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")) and r.get("status") == "completed" and (r.get("created_at") or "").startswith(report_day)]
                     if blog_runs:
                         latest_blog = blog_runs[0]
                         result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
@@ -1352,7 +1440,7 @@ class FeishuDailyReporter:
 
             # 检查日报工作流（排除正在运行的当前实例）
             try:
-                report_runs = [r for r in runs if ("daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()) and r.get("status") == "completed"]
+                report_runs = [r for r in runs if ("daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()) and r.get("status") == "completed" and (r.get("created_at") or "").startswith(report_day)]
                 if report_runs:
                     latest_report = report_runs[0]
                     result["gh_report_success"] = latest_report.get("conclusion") == "success"
@@ -1382,7 +1470,7 @@ class FeishuDailyReporter:
             todos.append(f"处理 {data['empty_links']} 处空链接残留")
         
         if data.get("missing_alt", 0) > 0:
-            todos.append(f"补充 {data['missing_alt']} 篇图片 Alt 文本")
+            todos.append(f"补充 {data['missing_alt']} 处图片 Alt 文本")
         
         if data.get("gsc_errors", 0) > 0:
             todos.append(f"修复 GSC 索引错误 {data['gsc_errors']} 个")
