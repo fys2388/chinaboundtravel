@@ -276,11 +276,12 @@
       "hash": "sensitive_content_politics",
       "type": "风控",
       "message": "文章包含敏感词汇（politics, government, communist等）",
-      "occurrences": 1,
+      "occurrences": 2,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-06-22T05:00:00",
+      "last_seen": "2026-08-09T01:27:20.686064+00:00",
       "files": [
-        "The History and Culture of the Great Wall.md"
+        "The History and Culture of the Great Wall.md",
+        "Best China Itineraries for 10 Days: Three Routes Compared"
       ],
       "suggestion": "避免任何政治、政府相关的敏感内容，聚焦旅行主题",
       "resolved": false,
@@ -885,8 +886,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 31,
-  "last_updated": "2026-07-31T00:00:00",
+  "total_errors": 32,
+  "last_updated": "2026-08-09T01:27:20.686081+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
