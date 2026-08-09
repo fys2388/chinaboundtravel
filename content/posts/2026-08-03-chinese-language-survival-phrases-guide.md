@@ -1,5 +1,5 @@
 ---
-title: "Chinese Language Survival Phrases Guide"
+title: "Chinese Language Survival Phrases Guide 2026"
 date: "2026-08-03T10:00:00+08:00"
 lastmod: "2026-08-03T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Chinese language survival phrases for American travelers visiting China: 80+ essential Mandarin phrases with pinyin, pronunciation, and real-life context. Curated by a US expat who's lived in Chengdu since 2021, with funny anecdotes and practical advice."
-description: "Chinese language survival phrases for American travelers visiting China: 80+ essential Mandarin phrases with pinyin, pronunciation guides, and real-life context. Covers greetings, ordering food, asking for directions, getting help, shopping, and avoiding embarrassing mistakes. Written by a US expat with 5+ years living in Chengdu."
+description: "Essential Mandarin phrases for American travelers: greetings, ordering food, directions, shopping, and avoiding awkward mistakes."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/"
 ShowToc: "true"
 TocOpen: "false"

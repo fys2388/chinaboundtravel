@@ -1,12 +1,12 @@
 ---
-title: "Shanghai Bund & French Concession  2-Day Deep Dive"
+title: "Shanghai 48-Hour Guide: Bund & French Concession"
 slug: "shanghai-bund-french-concession-2-day-guide"
 date: 2026-05-24T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/"
 tags: ["ChinaTravel", "Shanghai", "ChinaCityGuide", "ChinaDestinations", "shanghai"]
 categories: ["China Travel Guide"]
-description: "Shanghai in 48 Hours: From the Neon-lit Bund to the Tree-Lined French Concession. No tourist traps, no fluff  just the stuff that actually matters."
+description: "Two days in Shanghai: the neon Bund, the tree-lined French Concession, and the spots locals actually go to. No tourist traps."
 author: "Joran"
 params:
   keywords:

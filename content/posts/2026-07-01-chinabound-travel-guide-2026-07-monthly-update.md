@@ -1,8 +1,8 @@
 ---
-title: "ChinaBound Travel Guide 2026.07 - Now Updated With Latest Visa Rules"
+title: "China Travel Guide: July 2026 Updates & Visa Rules"
 date: "2026-07-01T10:02:44+00:00"
 lastmod: "2026-07-01T10:02:44+00:00"
-description: "The July 2026 ChinaBound Travel Guide update — latest visa policy changes, summer crowd forecasts, payment system improvements, typhoon season alerts, and recommended Qinghai and Tibet routes."
+description: "July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes."
 summary: "Monthly update: the July 2026 edition covers all visa rule changes and safety recommendations."
 slug: "chinabound-travel-guide-2026-07-monthly-update"
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/"

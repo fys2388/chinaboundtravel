@@ -1,6 +1,5 @@
 ---
-title: 'Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s
-  Most Epic Wilderness'
+title: "Western Sichuan Overland Camping Route: 7 Days"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -18,7 +17,7 @@ categories:
 summary: A complete 7-day overland camping guide to Western Sichuan's most breathtaking
   landscapes. From Chengdu to Litang, discover hidden valleys, snow-capped peaks,
   and authentic Tibetan villages.
-description: "7-day Western Sichuan overland camping route from Chengdu to Litang. Discover hidden valleys, snow-capped peaks, Tibetan villages, and essential road trip tips for this epic adventure."
+description: "7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips."
 ShowToc: true
 TocOpen: false
 cover:

@@ -1,5 +1,5 @@
 ---
-title: "China Packing List 2026: What to Bring and What to Leave at Home"
+title: "China Packing List 2026: What to Bring"
 date: "2026-08-09T10:00:00+08:00"
 lastmod: "2026-08-09T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China Packing List 2026: What to Bring and What to Leave at Home for travelers visiting China. essential guide based on 10 years of experience from on-the-ground experience in China."
-description: "China Packing List 2026: What to Bring and What to Leave at Home for travelers visiting China. essential guide based on 10 years of experience from on-the-ground experience in China."
+description: "China packing list 2026: what to bring and what to leave at home, an essential checklist from 10 years on the ground."
 canonicalURL: "https://chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/"
 ShowToc: "true"
 TocOpen: "false"

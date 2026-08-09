@@ -1,5 +1,5 @@
 ---
-title: "China Bargaining and Shopping Guide"
+title: "China Bargaining Guide: How to Haggle & Shop"
 date: "2026-08-07T10:00:00+08:00"
 lastmod: "2026-08-07T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "china bargaining and shopping for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
-description: "china bargaining and shopping for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
+description: "How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, from a 10-year expat."
 canonicalURL: "https://chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -24,9 +24,9 @@ cover:
   image: "https://chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
 ---
 
-Title: China Bargaining and Shopping Guide: A Hilarious and Practical Adventure
+title: "China Bargaining Guide: How to Haggle & Shop"
 
-Description: Uncover the secrets of China's shopping scene with this in-depth guide. From bargaining like a pro to finding unique treasures, we've got you covered.
+description: "How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, from a 10-year expat."
 
 Summary: Dive into the world of China's shopping and bargaining with practical tips, cultural insights, and hilarious stories from an expat's perspective.
 

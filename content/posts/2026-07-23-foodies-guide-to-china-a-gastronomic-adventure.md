@@ -1,5 +1,5 @@
 ---
-title: "Foodie's Guide to China: A Gastronomic Adventure"
+title: "Foodie's Guide to China: Dishes You Must Try"
 date: "2026-07-23T10:00:00+08:00"
 lastmod: "2026-07-23T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China food guide: authentic picks & hidden culinary gems. curated by a US-based China travel expert, practical guide for foreign travelers."
-description: "China food guide: authentic picks & hidden culinary gems. curated by a US-based China travel expert, practical guide for foreign travelers."
+description: "China food guide: authentic picks and hidden culinary gems for foreign travelers, curated by a US-based China travel expert."
 canonicalURL: "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/"
 ShowToc: "true"
 TocOpen: "false"

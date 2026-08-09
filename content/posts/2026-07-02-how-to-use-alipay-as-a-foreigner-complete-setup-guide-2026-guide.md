@@ -1,5 +1,5 @@
 ---
-title: "How To Use Alipay As A Foreigner: Complete Setup Guide 2026"
+title: "How to Use Alipay as a Foreigner (2026)"
 date: "2026-07-02T10:00:00+08:00"
 lastmod: "2026-07-02T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "Step-by-step Alipay setup guide for foreigners in China (2026). Link international cards, pay anywhere, and skip the tourist traps with practical tips from an expat."
-description: "Step-by-step guide to setting up Alipay as a foreigner in China (2026). How to link international cards, pay at restaurants, and avoid common setup mistakes."
+description: "Set up Alipay as a foreigner in 2026: link international cards, pay at restaurants, and avoid common setup mistakes."
 canonicalURL: "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/"
 ShowToc: "true"
 TocOpen: "false"

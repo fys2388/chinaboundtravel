@@ -1,6 +1,6 @@
 ---
 
-title: "Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture"
+title: "Shanghai Beyond the Bund: Hidden Neighborhoods"
 cover:
   image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.jpg"
 date: "2026-06-22T10:00:00+08:00"
@@ -19,7 +19,7 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-description: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences. Travel guide by an American expat with 5 years in China."
+description: "Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences from a 5-year expat."
 canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/"
 ShowToc: "true"
 TocOpen: "false"

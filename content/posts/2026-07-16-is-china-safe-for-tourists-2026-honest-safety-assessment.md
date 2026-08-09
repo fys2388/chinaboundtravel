@@ -1,6 +1,6 @@
-﻿+++
-title = "Is China Safe for Tourists in 2026? An Honest Safety Assessment"
-description = "An honest, experience-based safety guide for China in 2026. Covers real crime data, the scams that actually exist, food safety, transport safety, and emergency contacts from an expat who has lived in China for 5 years."
++++
+title = "Is China Safe for Tourists in 2026? Honest Guide"
+description = "An honest China safety guide for 2026: real crime data, the scams that exist, food and transport safety, and emergency contacts."
 date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"

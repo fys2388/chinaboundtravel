@@ -1,8 +1,8 @@
 ---
-title: "ChinaBound Travel Guide 2026.08 - Now Updated With Latest Visa Rules"
+title: "China Travel Guide: August 2026 Update"
 date: 2026-08-01T08:29:34+00:00
 lastmod: 2026-08-01T08:29:34+00:00
-description: "ChinaBound Travel Guide August 2026 edition: complete monthly update with latest visa policy changes, August crowd forecasts, Alipay and WeChat Pay updates, new scam alerts, and seasonal travel recommendations for travelers visiting China."
+description: "August 2026 China travel updates: latest visa changes, crowd forecasts, payment updates, scam alerts, and seasonal picks."
 summary: "ChinaBound Travel Guide 2026.08 monthly update: all visa rule changes, crowd forecasts, payment system refresh, safety alerts, and recommended August routes for international travelers visiting China."
 tags: ["China Travel", "Visa Updates", "Travel Guide", "Monthly Update", "August 2026"]
 categories: ["China Essentials"]

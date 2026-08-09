@@ -1,5 +1,5 @@
 ---
-title: "Cultural Etiquette in China: A Californian's Guide"
+title: "Cultural Etiquette in China: A Traveler's Guide"
 date: "2026-07-25T10:00:00+08:00"
 lastmod: "2026-07-25T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 5 years in China."
-description: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 5 years in China."
+description: "China cultural etiquette for travelers: what to know before your trip, from an American expat with 5 years in China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"

@@ -1,5 +1,5 @@
 ---
-title: "A Gastronomic Adventure in China: Food Recommendations for International Travelers"
+title: "China Food Guide: Must-Try Dishes & Restaurants"
 date: "2026-07-10T10:00:00+08:00"
 lastmod: "2026-07-10T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
-description: "Must-try Chinese dishes and restaurant recommendations for international travelers in 2026. Authentic picks from a US expat with 5 years eating across China's provinces."
+description: "Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks from a 5-year expat."
 canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
 ShowToc: "true"
 TocOpen: "false"

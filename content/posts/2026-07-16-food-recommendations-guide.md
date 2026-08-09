@@ -1,5 +1,5 @@
 ---
-title: "China Food Guide 2026: What to Eat, Where to Eat It, & What to Avoid"
+title: "China Food Guide 2026: What to Eat & Where"
 date: "2026-07-16T10:00:00+08:00"
 lastmod: "2026-07-16T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China food guide 2026: From street food to fine dining, discover the best dishes, hidden gems, and cultural eating customs. Written by a California expat who's spent 5 years eating his way across China."
-description: "China food guide 2026: What foreigners should eat in China, where to find authentic local snacks, street food safety tips, and cultural dining etiquette from an American expat in Chengdu."
+description: "What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, from an expat in Chengdu."
 canonicalURL: "https://www.chinaboundtravel.com/posts/food-recommendations-guide/"
 ShowToc: "true"
 TocOpen: "false"

@@ -1,5 +1,5 @@
 ---
-title: "China Remote Work Guide: A Californian's 5-Year Adventure in Chengdu"
+title: "China Remote Work Guide: Life in Chengdu"
 date: "2026-08-06T10:00:00+08:00"
 lastmod: "2026-08-06T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Complete Chengdu travel guide 2026. best local food, 3-5 day itineraries & hidden gems from on-the-ground experience in China."
-description: "Complete Chengdu travel guide 2026. best local food, 3-5 day itineraries & hidden gems from on-the-ground experience in China."
+description: "Chengdu travel guide 2026: best local food, 3-5 day itineraries, and hidden gems from a Californian's 5 years in China."
 canonicalURL: "https://chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-adventure-in-chengdu/"
 ShowToc: "true"
 TocOpen: "false"

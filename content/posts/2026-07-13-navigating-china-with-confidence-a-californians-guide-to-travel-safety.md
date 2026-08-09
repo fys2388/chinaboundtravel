@@ -1,5 +1,5 @@
 ---
-title: "Navigating China with Confidence: A Californian's Guide to Travel Safety"
+title: "Is China Safe in 2026? Honest Guide"
 date: "2026-07-13T10:00:00+08:00"
 lastmod: "2026-07-13T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "Is China safe for travelers in 2026? honest assessment, crime rates & common scams to avoid from a US expat based in Chengdu."
-description: "Is China safe for travelers in 2026? honest assessment, crime rates & common scams to avoid from a US expat based in Chengdu."
+description: "Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, from a US expat."
 canonicalURL: "https://chinaboundtravel.com/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/"
 ShowToc: "true"
 TocOpen: "false"

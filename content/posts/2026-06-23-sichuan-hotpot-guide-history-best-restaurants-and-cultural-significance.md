@@ -1,5 +1,5 @@
 ---
-title: "Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance"
+title: "Sichuan Hotpot Guide: History & Best Restaurants"
 cover:
   image: "/img/china-dest/chengdu/sichuan-hotpot-cover.jpg"
 date: "2026-06-23T10:00:00+08:00"
@@ -19,7 +19,7 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-description: "Sichuan hotpot guide: history, best restaurants, cultural significance. Authentic recommendations from a US expat based in Chengdu."
+description: "Sichuan hotpot: its history, where locals eat, and how to order, with authentic picks from a US expat in Chengdu."
 canonicalURL: "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/"
 ShowToc: "true"
 TocOpen: "false"

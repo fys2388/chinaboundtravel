@@ -1,6 +1,6 @@
 +++
-title = "China Transportation Guide 2026: Trains, Subways, Taxis & How to Get Around"
-description = "The complete guide to getting around China in 2026. High-speed train booking, class comparison with real prices, subway hacks, Didi rideshare tips, and station survival strategies from an expat who rides the rails weekly."
+title = "China Transportation Guide: Trains, Subways & Taxis"
+description = "Getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival."
 date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"

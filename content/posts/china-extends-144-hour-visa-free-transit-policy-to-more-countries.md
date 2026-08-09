@@ -1,5 +1,5 @@
 ---
-title: China Extends [144-hour Visa](/posts/144-hour-visa-free-transit-guide/)-free Transit Policy to More Countries
+title: "China's 144-Hour Visa-Free Transit: 15 New Countries"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -11,7 +11,7 @@ tags:
 - ChinaTravelPolicy
 categories:
 - China Essent[144-hour visa](/posts/144-hour-visa-free-transit-guide/) 'Breaking news: China extends 144-hour visa-free transit policy to 15 more countries. What this means for in[144-hour visa](/posts/144-hour-visa-free-transit-guide/)ravelers planning trips to China in 2026.'
-description: "China extends its 144-hour visa-free transit to 15 more countries in 2026. Full breakdown of eligible nations, qualifying cities, entry requirements, and practical tips for travelers."
+description: "China extends 144-hour visa-free transit to 15 more countries in 2026: eligible nations, qualifying cities, and requirements."
 ShowToc: true
 TocOpen: false
 cover:

@@ -1,5 +1,5 @@
 ---
-title: "China Family Travel Tips: A Californian's Guide"
+title: "China Family Travel Tips: Guide & Mistakes to Avoid"
 date: "2026-08-05T10:00:00+08:00"
 lastmod: "2026-08-05T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "china family travel tips for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
-description: "china family travel tips for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
+description: "China family travel tips: practical advice, kid-friendly picks, and common mistakes to avoid, from a US-based travel expert."
 canonicalURL: "https://chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"

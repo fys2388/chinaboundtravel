@@ -1,6 +1,6 @@
 ---
 
-title: "Chinese Tea Culture: History, Types, and Tea Ceremony Guide"
+title: "Chinese Tea Culture: History, Types & Ceremony"
 cover:
   image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.jpg"
 date: "2026-06-22T10:00:00+08:00"
@@ -18,7 +18,7 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-description: "Discover Chinese tea culture: history, types of tea, tea ceremony traditions. Expert guide from an American expat living in Chengdu."
+description: "Discover Chinese tea culture: history, tea types, and ceremony traditions, from an American expat living in Chengdu."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/"
 ShowToc: "true"
 TocOpen: "false"

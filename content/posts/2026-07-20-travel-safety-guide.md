@@ -1,5 +1,5 @@
 ---
-title: "China Travel Safety 2026: The Ultimate Guide for Aussie and Kiwi Travelers"
+title: "China Travel Safety 2026: Guide for Travelers"
 date: "2026-07-20T10:00:00+08:00"
 lastmod: "2026-07-20T10:00:00+08:00"
 author: "Joran"
@@ -16,7 +16,7 @@ geo: "AU"
 draft: false
 audit_status: "pass2"
 summary: "Is China safe for travelers in 2026? An honest assessment from a Californian expat living in Chengdu for 5 years. Crime rates, common scams, and essential safety tips you won't find anywhere else."
-description: "China travel safety 2026: Is China safe for tourists? A comprehensive guide covering crime rates, common scams, transportation safety, food safety, and cultural tips from a 5-year expat in Chengdu."
+description: "Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips from a 5-year expat."
 canonicalURL: "https://www.chinaboundtravel.com/posts/travel-safety-guide/"
 ShowToc: "true"
 TocOpen: "false"

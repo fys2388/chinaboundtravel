@@ -1,5 +1,5 @@
 ---
-title: "Navigating China's Transportation: A Californian's Guide for European Travelers"
+title: "China Transportation Guide for European Travelers"
 date: "2026-07-12T10:00:00+08:00"
 lastmod: "2026-07-12T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate like a local, tested strategies from on-the-ground experience in China."
-description: "China transportation: complete guide 2026. how to navigate like a local, tested strategies from on-the-ground experience in China."
+description: "Navigate China's transportation like a local: trains, subways, taxis, and ride-hailing, with tested on-the-ground strategies."
 canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"

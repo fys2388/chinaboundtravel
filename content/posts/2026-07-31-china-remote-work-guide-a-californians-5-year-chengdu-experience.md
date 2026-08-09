@@ -1,5 +1,5 @@
 ---
-title: "China Remote Work Guide: A Californian's 5-Year Chengdu Experience"
+title: "China Remote Work Guide: 5 Years in Chengdu"
 date: "2026-07-31T10:00:00+08:00"
 lastmod: "2026-07-31T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China remote work guide 2026: a Californian expat's 5-year Chengdu experience. Covers visa requirements, transportation, cultural differences, and the best cities for digital nomads and remote workers in China."
-description: "China remote work guide for digital nomads and European remote workers. A Californian expat shares 5 years of firsthand Chengdu experience: visa options, transportation hacks, cultural adaptation tips, co-working scenes in Chengdu, Shanghai, Beijing, Guangzhou, and Shenzhen. Everything you need to work remotely from China with confidence."
+description: "Remote work from China: a Californian expat's 5 years in Chengdu, with visa options, transport hacks, and co-working scenes."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
 ShowToc: "true"
 TocOpen: "false"

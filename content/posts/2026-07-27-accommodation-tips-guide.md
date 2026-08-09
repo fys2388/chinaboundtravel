@@ -1,5 +1,5 @@
 ---
-title: "Accommodation Tips Guide"
+title: "Where to Stay in China: Complete 2026 Guide"
 date: "2026-07-27T10:00:00+08:00"
 lastmod: "2026-07-27T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "Where to stay in China 2026: complete accommodation options for all types of travelers, from budget hostels to luxury resorts. Expert tips curated by a US-based China travel expert with 10+ years of Chengdu living experience."
-description: "Where to stay in China 2026: complete accommodation guide covering hotels, hostels, guesthouses, serviced apartments, and homestays. Budget breakdowns, safety tips, and booking strategies from a US expat who has lived in Chengdu for over 10 years."
+description: "China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies."
 canonicalURL: "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/"
 ShowToc: "true"
 TocOpen: "false"

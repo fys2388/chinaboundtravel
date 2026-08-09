@@ -1,5 +1,5 @@
 ---
-title: "Transportation Guide"
+title: "China Transportation Guide: Trains, Subways & Taxis"
 date: "2026-07-14T10:00:00+08:00"
 lastmod: "2026-07-14T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate like a local, tested strategies curated by a US-based China travel expert."
-description: "China transportation: complete guide 2026. how to navigate like a local, tested strategies curated by a US-based China travel expert."
+description: "China transportation complete guide 2026: navigate like a local with tested strategies from a US-based China travel expert."
 canonicalURL: "https://chinaboundtravel.com/posts/transportation-guide/"
 ShowToc: "true"
 TocOpen: "false"

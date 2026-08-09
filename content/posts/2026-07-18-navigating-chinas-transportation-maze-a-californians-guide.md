@@ -1,5 +1,5 @@
 ---
-title: "Navigating China's Transportation Maze: A Californian's Guide"
+title: "China Transportation: Booking Tips & Seat Classes"
 date: "2026-07-18T10:00:00+08:00"
 lastmod: "2026-07-18T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. booking tips, seat classes & rookie mistakes to avoid from on-the-ground experience in China."
-description: "China transportation: complete guide 2026. booking tips, seat classes & rookie mistakes to avoid from on-the-ground experience in China."
+description: "Navigate China's transportation in 2026: booking tips, seat classes, and rookie mistakes to avoid, from the ground in China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/navigating-chinas-transportation-maze-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"

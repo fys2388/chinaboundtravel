@@ -1,5 +1,5 @@
 ---
-title: "How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)"
+title: "Internet in China: eSIM vs SIM vs VPN (2026)"
 author: Joran
 date: "2026-05-19T14:00:00+08:00"
 draft: false
@@ -11,7 +11,7 @@ tags:
 categories:
   - China Essentials
 summary: "Complete comparison of eSIM, local SIM, and VPN options for staying connected in China. Tested recommendations for 2026."
-description: "eSIM vs local SIM vs VPN — the best ways to stay connected in China in 2026. Tested and compared recommendations for internet access, bypassing the Great Firewall, and more."
+description: "Best ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall."
 ShowToc: true
 TocOpen: false
 cover:

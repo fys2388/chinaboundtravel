@@ -1,12 +1,12 @@
 ---
-title: "Hangzhou: West Lake, Tea Culture & the G20 Summit Legacy"
+title: "Hangzhou Travel Guide: West Lake & Tea Culture"
 slug: "hangzhou-west-lake-tea-culture-g20-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/"
 tags: ["ChinaTravel", "Hangzhou", "ChinaCityGuide", "ChinaFood", "ChinaDestinations", "hangzhou"]
 categories: ["China Travel Guide"]
-description: "Hangzhou is where China goes to relax. West Lake is beautiful, the tea is real, and the food will ruin you for all other cities. Here's what actually matters."
+description: "Where China goes to relax: Hangzhou's West Lake, real Longjing tea culture, and the food that will ruin you for other cities."
 author: "Joran"
 params:
   keywords:

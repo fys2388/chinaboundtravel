@@ -1,5 +1,5 @@
 ---
-title: "Cultural Etiquette Guide"
+title: "China Etiquette Guide for Aussie & Kiwi Travelers"
 date: "2026-07-22T10:00:00+08:00"
 lastmod: "2026-07-22T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "AU"
 draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
-description: "cultural etiquette for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
+description: "China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide-aussie-kiwi/"
 ShowToc: "true"
 TocOpen: "false"

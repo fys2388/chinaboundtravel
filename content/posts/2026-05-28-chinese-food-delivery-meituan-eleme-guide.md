@@ -1,12 +1,12 @@
 ---
-title: "The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)"
+title: "Chinese Food Delivery: Meituan & Ele.me Guide"
 slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/"
 tags: ["ChinaTravel", "ChinaFood", "ChinaAppGuide", "ChinaDailyLife", "ChinaTravelTips"]
 categories: ["China Travel Guide"]
-description: "I ordered delivery 47 times in my first month in Chengdu. Here's how to use Meituan and Ele.me as a foreigner  including what to actually order, how to pay, and why your delivery person will call you even though you can't understand them."
+description: "Order Chinese food delivery with Meituan or Ele.me as a foreigner: what to order, how to pay, and why the courier will call you."
 author: "Joran"
 params:
   keywords:

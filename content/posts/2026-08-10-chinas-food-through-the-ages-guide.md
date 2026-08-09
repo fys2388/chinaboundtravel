@@ -1,5 +1,5 @@
 ---
-title: "How Chinese Food Evolved Over 2 Million Years"
+title: "How Chinese Food Evolved: 2 Million Years of History"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"
 author: "Joran"
@@ -16,7 +16,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "A 2-million-year journey of Chinese food: from fire-roasted meat to roujiamo and tofu, and how to taste history today on your China trip."
-description: "From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste that history today on your China trip."
+description: "From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/"
 ShowToc: "true"
 TocOpen: "false"

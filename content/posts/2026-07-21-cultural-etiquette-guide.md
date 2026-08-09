@@ -1,5 +1,5 @@
-﻿---
-title: "Cultural Etiquette Guide"
+---
+title: "China Cultural Etiquette Guide: Dos and Don'ts"
 date: "2026-07-21T10:00:00+08:00"
 lastmod: "2026-07-21T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. essential guide based on 5 years of experience curated by a US-based China travel expert."
-description: "cultural etiquette for travelers visiting China. essential guide based on 5 years of experience curated by a US-based China travel expert."
+description: "Essential China cultural etiquette: dos and don'ts for travelers, common mistakes to avoid, and tips from a 5-year expat."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -28,7 +28,7 @@ cover:
 
 Hey there, fellow travelers! If you're planning a trip to China, get ready for an adventure like no other. As an American who has lived in Chengdu for over 5 years, I've had my fair share of cultural experiences, both hilarious and eye-opening. In this blog post, I'll share some of my insights on Chinese cultural etiquette to help you navigate your way through this amazing country with ease and respect.
 
-![](img/china-dest/culture/cultural-etiquette-guide.jpg)
+![Chinese cultural etiquette guide - handshake greeting between travelers and locals](img/china-dest/culture/cultural-etiquette-guide.jpg)
 
 Let me start by saying that China is a vast and diverse country with a rich history and culture that spans thousands of years. From the bustling cities of Beijing and Shanghai to the serene landscapes of Guilin and Zhangjiajie, there's something for everyone in China. However, with its unique customs and traditions, it's important to be aware of the cultural norms and expectations to avoid any misunderstandings or faux pas.
 
@@ -53,7 +53,7 @@ I still remember my first attempt at using chopsticks. It was like trying to pic
 
 When dining with a group, it's a great opportunity to try different dishes. Chinese cuisine is so diverse, and sharing food allows you to experience a wider range of flavors. And don't be shy about offering food to others. It's a friendly gesture that shows you're thinking about them.
 
-![](img/china-dest/culture/cultural-etiquette-guide.jpg)
+![Traditional Chinese customs and etiquette in everyday interactions](img/china-dest/culture/cultural-etiquette-guide.jpg)
 
 ### Specific Customs and Traditions
 In addition to these general cultural norms, there are also a few specific customs and traditions that you may encounter in China. For example, when giving or receiving a gift, it's important to use both hands. This shows respect for the gift and the person giving or receiving it.

@@ -1,5 +1,5 @@
 ---
-title: "China High - Speed Train Survival Guide: Booking, Classes, and Insider Tips"
+title: "China High-Speed Trains: Booking & Insider Tips"
 date: "2026-07-04T10:00:00+08:00"
 lastmod: "2026-07-04T10:00:00+08:00"
 author: "Joran"
@@ -15,7 +15,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "High-speed train guide for China: how to book tickets, choose between classes, find your platform, and save money with insider tips from a seasoned expat rider."
-description: "China High-Speed Train survival guide: booking classes (economy vs first vs business), finding your platform, and insider tips from an expat who rides the rails weekly."
+description: "China high-speed train survival guide: booking classes, finding your platform, and insider tips from an expat who rides weekly."
 canonicalURL: "https://chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/"
 ShowToc: "true"
 TocOpen: "false"

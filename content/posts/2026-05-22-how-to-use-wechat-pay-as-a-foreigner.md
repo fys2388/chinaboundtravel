@@ -1,5 +1,5 @@
 ---
-title: How to Use WeChat Pay as a Foreigner
+title: "How to Use WeChat Pay as a Foreigner (2026)"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran
 date: '2026-05-22T10:00:00+08:00'
@@ -10,7 +10,7 @@ tags:
 categories:
 - China Travel Guide
 summary: How to Use WeChat Pay as a Foreigner...
-description: "Step-by-step guide to setting up WeChat Pay as a foreigner in China in 2026. Link foreign credit cards, verify your identity, and pay like a local anywhere."
+description: "Step-by-step WeChat Pay setup for foreigners in 2026: link foreign cards, verify your identity, and pay like a local anywhere in China."
 ShowToc: true
 TocOpen: false
 cover:
