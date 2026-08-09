@@ -1,5 +1,5 @@
 ---
-title: "China's Food Through the Ages: The 2-Million-Year Journey to Your Hometown Dish"
+title: "How Chinese Food Evolved Over 2 Million Years"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"
 author: "Joran"
@@ -15,8 +15,8 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "A tasty 2-million-year tour of Chinese food history, from the first roasted meat over fire to today's eight great cuisines — and how every province's signature dish is a bite of its past."
-description: "Discover how Chinese food evolved over 2 million years: fire, clay pots, bronze banquets, chopsticks, roujiamo, tofu and more — plus where to taste history today on your China trip."
+summary: "A 2-million-year journey of Chinese food: from fire-roasted meat to roujiamo and tofu, and how to taste history today on your China trip."
+description: "From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste that history today on your China trip."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/"
 ShowToc: "true"
 TocOpen: "false"
