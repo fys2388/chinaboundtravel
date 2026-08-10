@@ -57,6 +57,7 @@ GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
 GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
+GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
 class FeishuWeeklyReporter:
 
@@ -158,6 +159,8 @@ class FeishuWeeklyReporter:
             pass
         try:
             sa_path = Path(sa_json_str)
+            if not sa_path.is_absolute():
+                sa_path = BLOG_ROOT / sa_path
             if sa_path.exists() and sa_path.is_file():
                 with open(sa_path, "r", encoding="utf-8") as f:
                     return json.load(f)
@@ -407,7 +410,7 @@ class FeishuWeeklyReporter:
             return None
 
     def _fetch_gsc_data(self) -> dict:
-        """获取GSC数据（带平滑降级）"""
+        """获取GSC数据（带平滑降级；未授权/失败明确 status，避免误报零收录）"""
         if not GSC_SERVICE_ACCOUNT_JSON or not HAS_GOOGLE_AUTH:
             return {"status": "unauthorized", "estimated_pages": len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0}
 
@@ -422,22 +425,50 @@ class FeishuWeeklyReporter:
             )
             credentials.refresh(Request())
 
-            url = "https://www.googleapis.com/webmasters/v3/sites/sc-domain:chinaboundtravel.com/searchAnalytics/query"
-            headers = {"Authorization": f"Bearer {credentials.token}", "Content-Type": "application/json"}
-            payload = {
-                "startDate": (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d"),
-                "endDate": datetime.now().strftime("%Y-%m-%d"),
-                "dimensions": ["page"],
-                "rowLimit": 1000
-            }
+            from googleapiclient.discovery import build
+            service = build("searchconsole", "v1", credentials=credentials)
 
-            response = requests.post(url, headers=headers, json=payload, timeout=30)
-            if response.status_code == 200:
-                result = response.json()
-                indexed_pages = len(result.get("rows", []))
-                return {"status": "authorized", "indexed_pages": indexed_pages, "errors": 0}
-            else:
-                print(f"   ⚠️ GSC API 响应 {response.status_code}: {response.text[:200]}")
+            # 站点候选：优先 GSC_SITE_URL 配置（逗号分隔多候选），回退域属性
+            site_candidates = []
+            for s in str(GSC_SITE_URL or "").split(","):
+                s = s.strip()
+                if s and s not in site_candidates:
+                    site_candidates.append(s)
+            default_domain = "sc-domain:chinaboundtravel.com"
+            if default_domain not in site_candidates:
+                site_candidates.append(default_domain)
+            site_url = None
+            for candidate in site_candidates:
+                try:
+                    service.sites().get(siteUrl=candidate).execute()
+                    site_url = candidate
+                    break
+                except Exception:
+                    continue
+            if not site_url:
+                return {"status": "unauthorized", "estimated_pages": len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0}
+
+            # 与 GA4 周报口径一致：上周一 ~ 上周日
+            today = datetime.now()
+            week_start = (today - timedelta(days=today.weekday() + 7)).strftime("%Y-%m-%d")
+            week_end = (today - timedelta(days=today.weekday() + 1)).strftime("%Y-%m-%d")
+            resp = service.searchanalytics().query(
+                siteUrl=site_url,
+                body={"startDate": week_start, "endDate": week_end,
+                      "dimensions": ["page"], "rowLimit": 1000, "dataState": "final"}
+            ).execute()
+            indexed_pages = len(resp.get("rows", []))
+
+            # sitemap 数量作为收录参考
+            sitemap_count = 0
+            try:
+                sm = service.sitemaps().list(siteUrl=site_url).execute()
+                sitemap_count = len(sm.get("sitemap", []))
+            except Exception:
+                pass
+
+            return {"status": "authorized", "indexed_pages": indexed_pages,
+                    "sitemap_count": sitemap_count, "errors": 0}
 
         except Exception as e:
             print(f"   ⚠️ GSC API 获取失败: {e}")
@@ -445,29 +476,40 @@ class FeishuWeeklyReporter:
         return {"status": "error", "estimated_pages": len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0}
 
     def _fetch_weekly_mailerlite(self) -> dict:
-        """获取MailerLite数据"""
+        """获取MailerLite数据（未配置/认证失败时明确标记，不伪装成 0）"""
         if not MAILERLITE_API_TOKEN:
-            return {"total_subscribers": 0, "weekly_new_subscribers": 0}
+            return {"ml_available": False, "ml_error": "MAILERLITE_API_TOKEN 未配置"}
 
         try:
             headers = {"Authorization": f"Bearer {MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
             resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params={"limit": 1}, timeout=15)
-            total_subscribers = int(resp.headers.get("x-total-count", "0")) if resp.status_code == 200 else 0
+            if resp.status_code != 200:
+                print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {resp.text[:150]}")
+                return {"ml_available": False, "ml_error": f"MailerLite API 认证失败（HTTP {resp.status_code}）"}
+            total_subscribers = int(resp.headers.get("x-total-count", "0"))
 
             today = datetime.now()
             week_start = (today - timedelta(days=today.weekday() + 7)).strftime("%Y-%m-%d")
             week_end = (today - timedelta(days=today.weekday() + 1)).strftime("%Y-%m-%d")
-            resp_recent = requests.get(
-                f"https://connect.mailerlite.com/api/subscribers?filter[date_from]={week_start}&filter[date_to]={week_end}",
-                headers=headers, timeout=15
-            )
-            weekly_new = len(resp_recent.json()) if resp_recent.status_code == 200 else 0
+            weekly_new = 0
+            try:
+                resp_recent = requests.get(
+                    "https://connect.mailerlite.com/api/subscribers",
+                    headers=headers, params={"limit": 100, "sort": "created_at:desc"}, timeout=15
+                )
+                if resp_recent.status_code == 200:
+                    for sub in resp_recent.json().get("data", []):
+                        created = sub.get("created_at", "")[:10]
+                        if week_start <= created <= week_end:
+                            weekly_new += 1
+            except Exception as e:
+                print(f"   ⚠️ MailerLite 周新增获取失败: {e}")
 
-            return {"total_subscribers": total_subscribers, "weekly_new_subscribers": weekly_new}
+            return {"ml_available": True, "total_subscribers": total_subscribers, "weekly_new_subscribers": weekly_new}
 
         except Exception as e:
             print(f"   ⚠️ MailerLite API 获取失败: {e}")
-            return {"total_subscribers": 0, "weekly_new_subscribers": 0}
+            return {"ml_available": False, "ml_error": f"MailerLite API 请求异常: {e}"}
 
     def _scan_content_quality(self) -> dict:
         """本地内容质量巡检引擎"""
@@ -575,9 +617,12 @@ class FeishuWeeklyReporter:
         yellow_risks = []
 
         gsc_data = data.get("gsc_data", {})
+        gsc_ok = gsc_data.get("status") == "authorized"
         indexed_pages = gsc_data.get("indexed_pages", 0)
-        if indexed_pages == 0:
+        if gsc_ok and indexed_pages == 0:
             red_risks.append("Google 零收录，自然搜索流量完全断流 → 对应行动：GSC验证域名 + 提交索引")
+        elif not gsc_ok:
+            yellow_risks.append("GSC 未授权/接口异常，收录数据缺失 → 对应行动：检查 GSC 服务账号授权")
 
         tp_revenue = data.get("tp_revenue", 0)
         content_data = data.get("content_data", {})
@@ -606,7 +651,7 @@ class FeishuWeeklyReporter:
 
         total_subscribers = data.get("total_subscribers", 0)
         weekly_new_subscribers = data.get("weekly_new_subscribers", 0)
-        if weekly_new_subscribers == 0:
+        if data.get("ml_available", False) and weekly_new_subscribers == 0:
             yellow_risks.append("邮件订阅新增为0，私域沉淀为零 → 对应行动：上线免费订阅诱饵")
 
         posts_without_schema = content_data.get("posts_without_schema", 0)
@@ -787,7 +832,8 @@ class FeishuWeeklyReporter:
         traffic_status = "✅" if week_users >= traffic_goal else "⚠️"
 
         gsc_data = data.get("gsc_data", {})
-        gsc_status = "⚠️ GSC 未授权" if gsc_data.get("status") != "authorized" else "已授权"
+        gsc_ok = gsc_data.get("status") == "authorized"
+        gsc_status = "⚠️ GSC 未授权" if not gsc_ok else "已授权"
         indexed_pages = gsc_data.get("indexed_pages", 0)
         estimated_pages = gsc_data.get("estimated_pages", len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0)
 
@@ -850,8 +896,18 @@ class FeishuWeeklyReporter:
         tp_inits = data.get("tp_inits", 0)
         tp_searches = data.get("tp_searches", 0)
 
+        ml_available = data.get("ml_available", False)
+        ml_error = data.get("ml_error", "")
         total_subscribers = data.get("total_subscribers", 0)
         weekly_new_subscribers = data.get("weekly_new_subscribers", 0)
+        if ml_available:
+            total_sub_str = f"{total_subscribers:,}"
+            weekly_new_str = f"{weekly_new_subscribers}"
+            ml_diag = "🟡 **诊断**：暂无 Lead Magnet 订阅诱饵，全站无明确转化入口"
+        else:
+            total_sub_str = f"未连接（{ml_error}）" if ml_error else "未配置"
+            weekly_new_str = "-"
+            ml_diag = "⚠️ **数据源**：MailerLite 未接入/认证失败，订阅数据缺失"
 
         cat_dist = content_data.get("category_distribution", {})
         cat_lines = []
@@ -876,7 +932,9 @@ class FeishuWeeklyReporter:
             period = item.get("period", "本周")
             plan_rows.append(f"| {item['task']} | {priority_icon} | {period} |")
 
-        indexed_status = "🔴" if indexed_pages == 0 else "🟡" if indexed_pages < 10 else "✅"
+        indexed_status = "🔴" if (gsc_ok and indexed_pages == 0) else "🟡" if (gsc_ok and indexed_pages < 10) else ("⚪" if not gsc_ok else "✅")
+        indexed_progress = f"{round(indexed_pages/10*100,0)}%" if gsc_ok else "-"
+        indexed_display = str(indexed_pages) if gsc_ok else "-"
         coverage_status = "🔴" if (coverage < 30 and not site_wide_affiliate) else "🟡" if coverage < 80 else "✅"
         conflict_status = "🔴" if posts_with_conflict > 0 else "✅"
         schema_status = "🟡" if (posts_without_schema > 0 and not template_level_coverage) else "✅"
@@ -889,9 +947,9 @@ class FeishuWeeklyReporter:
         elif "📈" in users_trend:
             conclusions.append("流量环比增长")
         
-        if indexed_pages == 0:
+        if gsc_ok and indexed_pages == 0:
             conclusions.append("冷启动基建无实质突破")
-        elif indexed_pages < 10:
+        elif gsc_ok and indexed_pages < 10:
             conclusions.append("冷启动基建缓慢推进")
         
         if content_rate > 200:
@@ -900,7 +958,7 @@ class FeishuWeeklyReporter:
             conclusions.append("内容产出达标")
         
         priority_actions = []
-        if indexed_pages == 0:
+        if gsc_ok and indexed_pages == 0:
             priority_actions.append("提交GSC索引")
         if coverage < 30 and not site_wide_affiliate:
             priority_actions.append("全站联盟链接覆盖")
@@ -926,7 +984,7 @@ class FeishuWeeklyReporter:
 ### 2. 冷启动基建指标
 | 指标 | 当前值 | 周目标 | 进度 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
-| Google 已索引页面 | {indexed_pages} 页 | 10 页 | {round(indexed_pages/10*100,0)}% | {indexed_status} |
+| GSC 曝光页面 | {indexed_display} 页 | 10 页 | {indexed_progress} | {indexed_status} |
 | 有效外链总数 | 0 条 | 5 条 | 0% | 🔴 |
 | 联盟链接覆盖率 | {coverage_display} | 100% | {coverage}% | {coverage_status} |"""
 
@@ -950,7 +1008,7 @@ class FeishuWeeklyReporter:
 
         seo_section = f"""### 3. 🔍 SEO 专项巡检
 - **GSC 状态**：{gsc_status}｜预估可收录页面 {estimated_pages} 页
-- **索引进度**：已提交 0 页 / 已索引 {indexed_pages} 页 / 索引错误 0 项
+- **索引进度**：已提交 0 页 / GSC 曝光页面 {indexed_display} 页 / 索引错误 0 项
 - **技术整改进度**：
   ✅ 首页 Organization 结构化数据
   {redirect_status} www → 裸域名 301 重定向
@@ -982,9 +1040,9 @@ class FeishuWeeklyReporter:
 ## 📧 邮件订阅
 | 指标 | 数据 | 周环比 |
 | :--- | :--- | :--- |
-| 总订阅人数 | {total_subscribers} | - |
-| 本周新增 | {weekly_new_subscribers} | - |
-🟡 **诊断**：暂无 Lead Magnet 订阅诱饵，全站无明确转化入口"""
+| 总订阅人数 | {total_sub_str} | - |
+| 本周新增 | {weekly_new_str} | - |
+{ml_diag}"""
 
         batch_warning = ""
         if content_rate > 200:

@@ -1,4 +1,4 @@
-name: Monthly Feishu Report
+﻿name: Monthly Feishu Report
 
 on:
   schedule:
@@ -39,7 +39,7 @@ jobs:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
           NORDVPN_API_KEY: ${{ secrets.NORDVPN_API_KEY }}
           NORDVPN_AFFILIATE_ID: ${{ secrets.NORDVPN_AFFILIATE_ID }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python scripts/feishu_monthly_report.py
 
