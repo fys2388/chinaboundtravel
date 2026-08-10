@@ -73,19 +73,20 @@ def extract_kr(data: dict, source: str) -> float:
 
 
 def _target_for(kr: dict, scope: str) -> float:
-    """按报表周期取 KR 目标：显式 targets 优先，缺省按月度目标推导"""
+    """按报表周期取 KR 目标：显式 targets 优先，缺省按月度目标推导（daily=月/30, weekly=月/4.3）"""
     base = float(kr.get("target", 0) or 0)
     targets = kr.get("targets") or {}
+    monthly = float(targets.get("monthly", base))
     if scope == "monthly":
-        return float(targets.get("monthly", base))
+        return monthly
     if scope == "quarterly":
-        return float(targets.get("quarterly", base * 3))
+        return float(targets.get("quarterly", monthly * 3))
     if scope == "yearly":
-        return float(targets.get("yearly", base * 12))
+        return float(targets.get("yearly", monthly * 12))
     if scope == "weekly":
-        return float(targets.get("weekly", round(base / 4.3)))
+        return float(targets.get("weekly", max(1, round(monthly / 4.3))))
     if scope == "daily":
-        return float(targets.get("daily", round(base / 30)))
+        return float(targets.get("daily", max(1, round(monthly / 30))))
     return base
 
 
@@ -111,18 +112,36 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
         start, end = quarter_range(year, q)
         title = f"🎯 {year}年Q{q} OKR 达成复盘（{start} ~ {end}）"
         period_desc = f"{year}年Q{q}"
+    elif scope == "weekly":
+        q = current_quarter(now)
+        krs = pick_quarter_krs(okr, q)
+        start, end = quarter_range(year, q)
+        title = f"🎯 本周 OKR 进度（Q{q} 目标折算）"
+        period_desc = f"{year}年Q{q}"
+    elif scope == "monthly":
+        q = current_quarter(now)
+        krs = pick_quarter_krs(okr, q)
+        start, end = quarter_range(year, q)
+        title = f"🎯 本月 OKR 进度（Q{q} 目标）"
+        period_desc = f"{year}年Q{q}"
     else:
         q = current_quarter(now)
         krs = pick_quarter_krs(okr, q)
         start, end = quarter_range(year, q)
-        title = f"🎯 Q{q} OKR 进度（{start} ~ {end}）"
+        title = f"🎯 今日 OKR 速览（Q{q} 目标折算）"
         period_desc = f"{year}年Q{q}"
 
-    # 按周期统一 KR 口径名称（季度/年度展示累计值，避免"月xxx"名称与累计口径混淆）
+    # 按周期统一 KR 口径名称（日/周/月/季/年对应各自数值口径，避免"月xxx"名称配其它周期数值）
+    period_names = {
+        "daily": "日", "weekly": "周", "monthly": "月", "quarterly": "季度", "yearly": "年度",
+    }
+    pname = period_names.get(scope, "月")
     scope_name_map = {
-        "月访问用户": "季度访问用户" if scope == "quarterly" else ("年度访问用户" if scope == "yearly" else "月访问用户"),
-        "月搜索曝光": "季度搜索曝光" if scope == "quarterly" else ("年度搜索曝光" if scope == "yearly" else "月搜索曝光"),
-        "月联盟佣金": "季度联盟佣金" if scope == "quarterly" else ("年度联盟佣金" if scope == "yearly" else "月联盟佣金"),
+        "月访问用户": f"{pname}访问用户",
+        "季度新增文章": f"{pname}新增文章",
+        "年度新增文章": f"{pname}新增文章",
+        "月搜索曝光": f"{pname}搜索曝光",
+        "月联盟佣金": f"{pname}联盟佣金",
     }
     rows = []
     for kr in krs:
