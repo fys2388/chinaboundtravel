@@ -37,10 +37,10 @@
         <h3>🛒 Travel Essentials for Your China Trip</h3>
         <p class="affiliate-intro">Save time &amp; money with Joran's personally tested recommendations:</p>
         <div class="affiliate-links">
-            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">📱 <strong>eSIM</strong> �?Stay online the moment you land</a>
-            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🔒 <strong>VPN</strong> �?Access your favorite sites in China</a>
-            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🏨 <strong>Hotels</strong> �?Book with free cancellation</a>
-            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🎫 <strong>Tours & Tickets</strong> �?Skip the line at top attractions</a>
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">📱 <strong>eSIM</strong> – Stay online the moment you land</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🔒 <strong>VPN</strong> – Access your favorite sites in China</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🏨 <strong>Hotels</strong> – Book with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">🎫 <strong>Tours & Tickets</strong> – Skip the line at top attractions</a>
         </div>
     </div>
 
@@ -93,7 +93,7 @@
         </div>
     </div>
 
-    {{- /* ===== Related Posts (posts only) �?based on first shared tag ===== */ -}}
+    {{- /* ===== Related Posts (posts only) — based on first shared tag ===== */ -}}
     {{- if eq .Type "posts" -}}
     {{- $currentSlug := .Slug -}}
     {{- $related := slice -}}
@@ -142,19 +142,19 @@
     <nav class="post-nav-links" aria-label="Post navigation">
         {{- with .PrevInSection -}}
         <a href="{{ .RelPermalink }}" class="prev-post">
-            <span class="nav-label">�?Previous</span>
+            <span class="nav-label">← Previous</span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">�?Previous</span><span class="nav-title">No more posts</span></span>
+        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">← Previous</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
         {{- with .NextInSection -}}
         <a href="{{ .RelPermalink }}" class="next-post">
-            <span class="nav-label">Next �?/span>
+            <span class="nav-label">Next →</span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next �?/span><span class="nav-title">No more posts</span></span>
+        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next →</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
     </nav>
     {{- end -}}

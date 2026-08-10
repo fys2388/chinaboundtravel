@@ -161,9 +161,9 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 
 ### Further Reading
 
-- [Shanghai Bund & French Concession 2-Day Guide](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) 鈥?Pair Hangzhou with a Shanghai visit
-- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) 鈥?Hangzhou is one of China's safest cities
-- [Chinese Tea Culture Guide](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) 鈥?Deep dive into the tradition behind Longjing and other famous teas
+- [Shanghai Bund & French Concession 2-Day Guide](posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/) — Pair Hangzhou with a Shanghai visit
+- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Hangzhou is one of China's safest cities
+- [Chinese Tea Culture Guide](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) — Deep dive into the tradition behind Longjing and other famous teas
 
 ---
 

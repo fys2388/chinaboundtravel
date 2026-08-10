@@ -137,12 +137,12 @@ A: Yes. Both are supported at launch.
 
 If you're a foreigner traveling to China in 2026 and you haven't tried this yet: it's real, it works, and it makes life significantly easier. Before your trip, make sure your PayPal app is updated and your card is linked.
 
-One less thing to stress about. And that's always welcome. Before you land, make sure you've also sorted your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) 鈥?PayPal needs an internet connection to work.
+One less thing to stress about. And that's always welcome. Before you land, make sure you've also sorted your [internet connectivity](posts/internet-connection-china-esim-vpn-guide/) — PayPal needs an internet connection to work.
 
 ### Further Reading
 
-- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) 鈥?The complete setup guide for China's most popular payment app
-- [Chinese Food Delivery Apps (Meituan & Ele.me)](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) 鈥?PayPal won't work on food delivery apps; you'll still need native payment setup
+- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — The complete setup guide for China's most popular payment app
+- [Chinese Food Delivery Apps (Meituan & Ele.me)](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/) — PayPal won't work on food delivery apps; you'll still need native payment setup
 
  *Joran*
 
