@@ -695,7 +695,9 @@ def run():
         if latest_article["slug"] not in processed_posts:
             processed_posts.append(latest_article["slug"])
         manifest["processed_social_posts"] = processed_posts[-30:]
-        update_manifest()
+        manifest["last_social_publish"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        with open(BASE_DIR / "manifest.json", 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2)
         send_feishu_notification(results)
 
     print(f"\n[{datetime.now(timezone.utc)}] 完成，共发布 {len(results)} 条社媒帖子")

@@ -22,7 +22,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://image.pollinations.ai/prompt/Ancient%20Chinese%20bronze%20cauldron%20with%20steaming%20food%20on%20a%20long%20banquet%20table%2C%20warm%20lantern%20light%2C%20traditional%20Chinese%20architecture%2C%20cinematic%20composition%2C%20professional%20food%20photography%2C%20photorealistic%2C%208k%2C%20no%20people%2C%20no%20text?width=1792&height=1024&nologo=true&seed=70101&model=flux"
+  image: "https://chinaboundtravel.com/img/china-dest/food/chinas-food-through-the-ages-guide.jpg"
 ---
 
 There is a video doing the rounds on Chinese social media that I cannot stop thinking about. It shows a map of China, and one by one, every province lights up red — each with the dish people from that province miss most when they are far from home. Sichuan gets hotpot. Shaanxi gets roujiamo. Hunan gets its fire-chili stir-fries. By the time the whole map glows, it is less a geography lesson than a love letter written in food.
