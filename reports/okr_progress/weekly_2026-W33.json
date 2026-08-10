@@ -1,0 +1,91 @@
+{
+  "report_type": "weekly",
+  "period": "2026-W33",
+  "generated_at": "2026-08-10 01:32:05",
+  "plan": [
+    {
+      "task": "Cloudflare 配置 www → 裸域名 301 永久重定向，统一 canonical",
+      "priority": "high",
+      "period": "3天内"
+    },
+    {
+      "task": "补全全站 OG / Twitter Card 社交预览标签，修复零分享预览问题",
+      "priority": "high",
+      "period": "3天内"
+    },
+    {
+      "task": "GSC 验证域名、提交 sitemap，手动请求 5 篇核心文章索引",
+      "priority": "high",
+      "period": "3天内",
+      "kr_id": "gsc",
+      "target": 300
+    },
+    {
+      "task": "全局批量修正 Joran 旅居年限文案，统一为 5 年标准表述",
+      "priority": "high",
+      "period": "3天内"
+    },
+    {
+      "task": "完成全站联盟链接覆盖，目标覆盖率 100%",
+      "priority": "high",
+      "period": "本周",
+      "kr_id": "revenue",
+      "target": 30
+    },
+    {
+      "task": "深度优化张家界、成都火锅 2 篇核心文章，扩充至 2000+ 字",
+      "priority": "high",
+      "period": "本周",
+      "kr_id": "content",
+      "target": 5
+    },
+    {
+      "task": "启用 Travelpayouts Drive 自动推荐组件",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "revenue",
+      "target": 30
+    },
+    {
+      "task": "发布 3 篇高转化长尾攻略（支付 / 签证 / 交通）",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "content",
+      "target": 5
+    },
+    {
+      "task": "Reddit / Quora 铺设 3 条问答外链，实现零突破",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "社媒标准化模板落地，每日稳定更新",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "上线免费订阅诱饵（7 天中国行程模板）",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "email",
+      "target": 10
+    },
+    {
+      "task": "全量检测内部断链与占位符",
+      "priority": "low",
+      "period": "本周"
+    },
+    {
+      "task": "文章页批量补充 Article 结构化数据",
+      "priority": "low",
+      "period": "本周"
+    }
+  ],
+  "krs": {
+    "traffic": 38.0,
+    "content": 0.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 0.0
+  }
+}
