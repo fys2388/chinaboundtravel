@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ========== 配置 ==========
 BASE_DIR = Path(__file__).parent.parent
-WORKER_URL = "https://buffer-worker.chinaboundtravel.com/publish"
+WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev/publish"
 SITE_DOMAIN = "chinaboundtravel.com"
 DAILY_SOCIAL_LIMIT = 5  # 每日社媒发布上限（与生成器 manifest 统一为 5，消除 2/5 不一致）
 COVER_BASE = "static/img/china-dest"
@@ -242,6 +242,7 @@ def get_article_info(md_path: Path) -> dict:
         "slug": slug,
         "url": url,
         "content": content,
+        "date": frontmatter.get("date", ""),
         "geo": frontmatter.get("geo", ""),
         "tags": frontmatter.get("tags", []),
         "categories": frontmatter.get("categories", []),
@@ -580,7 +581,12 @@ def send_feishu_notification(results: list):
         if success_platforms:
             summary_lines.append(f"   成功: {success_platforms}")
         elif not r.get("worker_success"):
-            summary_lines.append(f"   失败: {failed_platforms if failed_platforms else 'Worker调用失败'}")
+            err = ""
+            raw = r.get("raw_response") or {}
+            if isinstance(raw, dict):
+                err = raw.get("error", "") or raw.get("message", "") or ""
+            detail = f"Worker调用失败: {err}" if err else "Worker调用失败"
+            summary_lines.append(f"   失败: {failed_platforms if failed_platforms else detail}")
 
     content = "\n".join(summary_lines)
     payload = {
@@ -601,18 +607,20 @@ def run():
     last_publish = manifest.get("last_social_publish", "2020-01-01")
     print(f"上次发布时间: {last_publish}")
 
-    md_files = sorted(POSTS_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
-    
+    # CI 中所有文件 mtime 均为 checkout 时间，改用 frontmatter date 选最新文章，避免误选旧文
+    md_files = sorted(POSTS_DIR.glob("*.md"), key=lambda p: get_article_info(p).get("date", ""), reverse=True)
+
+    processed = set(get_manifest().get("processed_social_posts", []))
     latest_article = None
     for md_file in md_files:
-        mtime = datetime.fromtimestamp(md_file.stat().st_mtime)
-        mtime_str = mtime.strftime("%Y-%m-%d %H:%M:%S")
-        if mtime_str > last_publish:
-            article = get_article_info(md_file)
-            article["mtime"] = mtime_str
-            article["md_path"] = str(md_file)
-            latest_article = article
-            break
+        article = get_article_info(md_file)
+        if article["slug"] in processed:
+            continue
+        if not article.get("date"):
+            continue
+        latest_article = article
+        latest_article["md_path"] = str(md_file)
+        break
 
     if not latest_article:
         print("No new articles found to publish")
@@ -682,6 +690,11 @@ def run():
         print(f"  平台: success={result['success_platforms']} failed={result['failed_platforms']}")
 
     if results:
+        manifest = get_manifest()
+        processed_posts = manifest.setdefault("processed_social_posts", [])
+        if latest_article["slug"] not in processed_posts:
+            processed_posts.append(latest_article["slug"])
+        manifest["processed_social_posts"] = processed_posts[-30:]
         update_manifest()
         send_feishu_notification(results)
 

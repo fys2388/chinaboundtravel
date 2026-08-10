@@ -133,8 +133,22 @@ jobs:
             echo "Changes detected, committing..."
             git status
             git commit -m "chore: auto publish Joran blog | $(date '+%Y-%m-%d')"
-            git push
-            echo "Changes pushed successfully"
+            # 远端可能有并发提交，先 rebase 再 push，最多重试 3 次
+            PUSHED=""
+            for i in 1 2 3; do
+              git pull --rebase origin main 2>/dev/null || { git rebase --abort 2>/dev/null || git merge --abort 2>/dev/null || true; echo "Rebase attempt $i failed, retrying in 30s..."; sleep 30; continue; }
+              if git push 2>/dev/null; then
+                echo "Changes pushed successfully"
+                PUSHED="yes"
+                break
+              fi
+              echo "Push attempt $i failed, retrying in 30s..."
+              sleep 30
+            done
+            if [ -z "$PUSHED" ]; then
+              echo "::error::Failed to push changes after 3 attempts"
+              exit 1
+            fi
           fi
 
       - name: Trigger Cloudflare Pages deploy
