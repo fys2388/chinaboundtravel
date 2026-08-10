@@ -17,26 +17,26 @@ REQUIRED_VARS = [
     
     # AI服务（必须）
     ("DOUBAO_ARK_API_KEY", "豆包AI生成"),
-    ("DEEPSEEK_API_KEY", "DeepSeek辅助"),
     
     # 数据分析（必须）
     ("GA4_API_KEY", "Google Analytics"),
     ("GA4_PROPERTY_ID", "GA4属性ID"),
+    ("GA4_SERVICE_ACCOUNT_JSON", "GA4服务账号"),
     ("GSC_SERVICE_ACCOUNT_JSON", "Google Search Console"),
     
     # 营销（必须）
     ("TRAVELPAYOUTS_API_TOKEN", "联盟营销"),
     ("TRAVELPAYOUTS_MARKER", "联盟标记"),
     ("MAILERLITE_API_TOKEN", "邮件营销"),
-    
-    # 支付（必须）
-    ("STRIPE_SECRET_KEY", "Stripe支付"),
-    ("STRIPE_WEBHOOK_SECRET", "Stripe回调"),
-    ("RESEND_API_KEY", "邮件发送"),
 ]
 
 # 可选的环境变量
 OPTIONAL_VARS = [
+    # 未启用的服务（降级为可选，避免每日检查误报失败）
+    ("DEEPSEEK_API_KEY", "DeepSeek辅助(未启用)"),
+    ("STRIPE_SECRET_KEY", "Stripe支付(未启用)"),
+    ("STRIPE_WEBHOOK_SECRET", "Stripe回调(未启用)"),
+    ("RESEND_API_KEY", "邮件发送(未启用)"),
     ("BUFFER_API_TOKEN", "Buffer社媒管理"),
     ("FACEBOOK_PAGE_ID", "Facebook发布"),
     ("FACEBOOK_PAGE_ACCESS_TOKEN", "Facebook发布"),

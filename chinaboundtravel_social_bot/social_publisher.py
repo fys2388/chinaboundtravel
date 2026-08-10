@@ -571,7 +571,13 @@ def send_feishu_notification(results: list):
 
     summary_lines = []
     for r in results:
-        status_icon = "✅" if r.get("worker_success") else "❌"
+        # ??????????????????????
+        if r.get("queued"):
+            summary_lines.append(f"? {r['title']} ({r.get('variant', 'main')})")
+            summary_lines.append("   ?????????????????????")
+            continue
+
+        status_icon = "?" if r.get("worker_success") else "?"
         variant = r.get("variant", "main")
         summary_lines.append(f"{status_icon} {r['title']} ({variant})")
         
@@ -579,14 +585,14 @@ def send_feishu_notification(results: list):
         failed_platforms = r.get("failed_platforms", "")
         
         if success_platforms:
-            summary_lines.append(f"   成功: {success_platforms}")
+            summary_lines.append(f"   ??: {success_platforms}")
         elif not r.get("worker_success"):
             err = ""
             raw = r.get("raw_response") or {}
             if isinstance(raw, dict):
                 err = raw.get("error", "") or raw.get("message", "") or ""
-            detail = f"Worker调用失败: {err}" if err else "Worker调用失败"
-            summary_lines.append(f"   失败: {failed_platforms if failed_platforms else detail}")
+            detail = f"Worker????: {err}" if err else "Worker????"
+            summary_lines.append(f"   ??: {failed_platforms if failed_platforms else detail}")
 
     content = "\n".join(summary_lines)
     payload = {
@@ -670,6 +676,7 @@ def run():
         worker_resp = publish_to_worker(latest_article, post["image"], post["text"])
         success_platforms = []
         failed_platforms = []
+        queued = bool(worker_resp.get("queued"))
         if worker_resp.get("success"):
             platforms = worker_resp.get("platforms", {})
             success_platforms = platforms.get("success", [])
@@ -680,7 +687,8 @@ def run():
             "title": latest_article["title"],
             "variant": post["variant"],
             "image": post["image"],
-            "worker_success": worker_resp.get("success", False),
+            "worker_success": worker_resp.get("success", False) or queued,
+            "queued": queued,
             "success_platforms": ", ".join(success_platforms),
             "failed_platforms": ", ".join(failed_platforms) if failed_platforms else "",
             "raw_response": worker_resp
