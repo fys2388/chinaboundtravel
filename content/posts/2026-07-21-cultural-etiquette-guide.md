@@ -58,7 +58,7 @@ When dining with a group, it's a great opportunity to try different dishes. Chin
 ### Specific Customs and Traditions
 In addition to these general cultural norms, there are also a few specific customs and traditions that you may encounter in China. For example, when giving or receiving a gift, it's important to use both hands. This shows respect for the gift and the person giving or receiving it.
 
-Another custom is the use of red envelopes during special occasions like Chinese New Year or weddings. Red envelopes contain money and are given as a绁濈 (zh霉f煤 - blessing). It's a very nice gesture, but make sure to follow the proper etiquette. For example, don't open the red envelope in front of the person who gave it to you.
+Another custom is the use of red envelopes during special occasions like Chinese New Year or weddings. Red envelopes contain money and are given as a 祝福 (zhùfú - blessing). It's a very nice gesture, but make sure to follow the proper etiquette. For example, don't open the red envelope in front of the person who gave it to you.
 
 If you're invited to someone's home, it's polite to bring a small gift, such as a box of Chinese tea or some fruits. And when you enter the house, take off your shoes. This is a sign of respect for the homeowner.
 
@@ -66,9 +66,9 @@ If you're invited to someone's home, it's polite to bring a small gift, such as 
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 

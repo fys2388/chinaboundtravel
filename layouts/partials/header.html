@@ -31,7 +31,7 @@
                     width="{{ site.Params.label.iconHeight | default "30" }}">
                 {{ end }}
                 {{ end }}
-                <span>{{ site.Title }}</span>
+                <span class="site-title-text">{{ site.Title }}</span>
             </a>
         </div>
         
@@ -78,5 +78,27 @@
             </svg>
         </button>
         {{ end }}
+
+        {{/* 移动端汉堡按钮 */}}
+        <button id="nav-toggle" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
     </nav>
+
+    {{/* 移动端菜单切换脚本 */}}
+    <script>
+        (function () {
+            var btn = document.getElementById('nav-toggle');
+            var menu = document.getElementById('menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function () {
+                var open = menu.classList.toggle('mobile-open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        })();
+    </script>
 </header>

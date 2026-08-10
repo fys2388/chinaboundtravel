@@ -78,7 +78,7 @@ To tell time, you use the following numbers:
 
 It's also important to note that in Chinese, the number "four" (sì) is considered unlucky because it sounds like the word for "death." Therefore, you should avoid using this number when counting things or when giving gifts.
 
-## Directions and问路
+## Directions and Asking for Help
 
 Getting around in China can be a challenge, especially if you don't speak the language. That's why it's important to learn some basic directions and问路 phrases.
 

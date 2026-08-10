@@ -135,7 +135,7 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 
 - [China High-Speed Rail Booking Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) 鈥?Shanghai is a major hub on the CRH network
 - [7-Day China Itinerary: Beijing, Xi'an & Shanghai](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) 鈥?Shanghai is the final stop on this classic route
-- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) 鈥?Use it to visit Shanghai visa-free for up to 6 days
+- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) —Use it to visit Shanghai visa-free for up to 6 days
 
 **Next read:** If you're heading to Hangzhou after Shanghai, don't miss my [Hangzhou Guide](/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/)  West Lake is even better in person.
 

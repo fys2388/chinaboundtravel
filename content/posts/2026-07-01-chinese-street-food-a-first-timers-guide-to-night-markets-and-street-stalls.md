@@ -97,9 +97,9 @@ Don't limit yourself to just one night market or street. China is a vast country
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 

@@ -44,7 +44,7 @@ Hangzhou sits at the foot of the Qiantang River and has been a center of Chinese
 
 Today, it's famous for:
 - **West Lake ()**  UNESCO World Heritage, 2,000+ years of poetic inspiration
-- **Longjing Tea ()** 鈥?The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
+- **Longjing Tea (龙井茶)** —The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
 - **G20 Summit 2016**  China spent $40 billion upgrading the city for the summit. The infrastructure is brand new.
 - **Alibaba**  HQ is here, which means the city is unusually tech-forward
 
@@ -118,7 +118,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 
 | Transport | Details |
 |-----------|---------|
-| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) 鈥?see our [high-speed rail guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) for booking tips |
+| **From Shanghai** | G train, 45 min (Hourly, departs Shanghai Hongqiao) —see our [high-speed rail guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) for booking tips |
 | **From Beijing** | G train, 4 hours |
 | **From Nanjing** | G train, 1 hour |
 | **Local transport** | Metro (lines 1, 2, 4) + bike share + Didi |

@@ -41,7 +41,7 @@ Chengdu has a subtropical monsoon climate, which means it has four distinct seas
 - **Spring (March-May):** This is a great time to visit Chengdu for photography. The weather is mild, and the city is blooming with flowers. It's like a fairytale come to life. You can capture the cherry blossoms in People's Park, their delicate pink petals fluttering in the breeze. The magnolias in the Botanical Garden are also a sight to behold, with their large, creamy white flowers. And don't miss the azaleas in the Western Suburbs, which add a splash of color to the landscape. It's a photographer's paradise.
 - **Summer (June-August):** Summer in Chengdu can be hot and humid, but it also offers some great opportunities for photography. You can capture the鑽疯姳in the many ponds and lakes in the city. The lotus flowers are not only beautiful but also have a rich cultural significance in China. You can also try to capture the thunderstorms that roll in from the mountains. The dramatic skies and lightning strikes can make for some amazing photos. And let's not forget the festivals that take place during this time. The Dragon Boat Festival, for example, is a great opportunity to capture the colorful boats and the excited crowds.
 - **Fall (September-November):** Fall is another great time to visit Chengdu for photography. The weather is cool and dry, and the leaves on the trees start to change color. It's like a painting come to life. You can capture the golden leaves in the parks and gardens, creating a warm and inviting atmosphere. The temples and pagodas in Chengdu also look stunning against the backdrop of the changing leaves. And if you're lucky, you might even catch a glimpse of the autumn fog, which can add a touch of mystery to your photos.
-- **Winter (December-February):** Winter in Chengdu is relatively mild, but it can still get cold. However, this is a great time to capture the city's unique architecture. The ancient buildings look even more beautiful when dusted with a light layer of snow. You can also capture the people going about their daily lives in the cold weather, wearing thick coats and hats. And if you're feeling adventurous, you can head to the mountains near Chengdu and capture the闆櫙. Just make sure to bundle up!
+- **Winter (December-February):** Winter in Chengdu is relatively mild, but it can still get cold. However, this is a great time to capture the city's unique architecture. The ancient buildings look even more beautiful when dusted with a light layer of snow. You can also capture the people going about their daily lives in the cold weather, wearing thick coats and hats. And if you're feeling adventurous, you can head to the mountains near Chengdu and capture the 雪景. Just make sure to bundle up!
 
 ## Choosing the Right Camera Equipment
 When it comes to photography in China, having the right camera equipment can make a big difference. Here are some tips on choosing the right camera for your needs:
@@ -99,9 +99,9 @@ Once you've taken your photos, the next step is to edit them to enhance their qu
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 
@@ -130,26 +130,26 @@ And if you're interested in learning more about China travel, be sure to check o
 
 ---
 
-## 馃彣 Plan Your China Trip
+## 🏨 Plan Your China Trip
 
 | Need | Solution | Link |
 |------|----------|------|
-| 馃彣 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
+| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
 | 鉁堬笍 Flights | Best deals on flights to China | {{< affiliate-flight >}} |
-| 馃殫 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
-| 馃洝锔?Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
-| 馃摱 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
-| 馃敀 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
+| 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
+| 🛡锔?Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
+| 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
+| 🔒 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
 
 ---
 
-### 馃搶 Helpful Guides
-- 馃摉 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 馃泜 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
-- 馃挸 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
-- 馃摗 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
-- 馃敀 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 馃彞 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+### 📌 Helpful Guides
+- 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
+- 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
+- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

@@ -38,12 +38,12 @@ So, whether you're planning a solo trip, a romantic getaway, or a family vacatio
 ## Greetings and Basic Phrases
 First things first, let's start with some basic greetings and phrases that you'll need to know to communicate with the locals. Here are some of the most common phrases that you'll hear and use in China:
 
-- **Ni hao** (浣犲ソ) - Hello
-- **Xie xie** (璋㈣阿) - Thank you
-- **Bu yong xie** (涓嶅姘? - You're welcome
-- **Dui bu qi** (瀵逛笉璧? - Sorry
+- **Ni hao** (你好) - Hello
+- **Xie xie** (谢谢) - Thank you
+- **Bu yong xie** (不用谢) - You're welcome
+- **Dui bu qi** (对不起) - Sorry
 - **Qing** (璇? - Please
-- **Zai jian** (鍐嶈) - Goodbye
+- **Zai jian** (再见) - Goodbye
 
 These phrases are very easy to learn and pronounce, and they will come in handy in a variety of situations. For example, when you meet someone for the first time, you can greet them with "Ni hao." When someone helps you, you can say "Xie xie" to show your appreciation. And when you need to ask someone for something, you can use "Qing" to make your request more polite.
 
@@ -56,7 +56,7 @@ One of the most important things you'll need to know when traveling in China is 
 - **Qian mian** (鍓嶉潰) - In front
 - **Hou mian** (鍚庨潰) - Behind
 - **Zuo bian** (宸﹁竟) - On the left
-- **You bian** (鍙宠竟) - On the right
+- **You bian** (右边) - On the right
 - **Yao zou duo jiu** (瑕佽蛋澶氫箙) - How long does it take to walk?
 - **You mei you gong jiao** (鏈夋病鏈夊叕浜? - Is there a bus?
 - **You mei you dian ying yuan** (鏈夋病鏈夌數褰遍櫌) - Is there a cinema?
@@ -68,9 +68,9 @@ Another useful tip is to use a map or a navigation app on your phone. Many Chine
 ## Ordering Food
 One of the highlights of traveling in China is the food. From spicy Sichuan cuisine to delicate Cantonese dim sum, there's something for everyone to enjoy. But when it comes to ordering food in a restaurant, it can be a bit challenging if you don't speak Chinese. Here are some phrases that will help you order food like a pro:
 
-- **Wo yao** (鎴戣) - I want
-- **Ni men you shen me cai** (浣犱滑鏈変粈涔堣彍) - What do you have?
-- **Zhong jian cai** (涓棿鑿? - Medium spicy
+- **Wo yao** (我要) - I want
+- **Ni men you shen me cai** (你们有什么菜) - What do you have?
+- **Zhong jian cai** (中辣) - Medium spicy
 - **Lai yi ping pi jiu** (鏉ヤ竴鐡跺暏閰? - Bring me a bottle of beer
 - **Jie zhang** (缁撹处) - Bill, please
 
@@ -83,9 +83,9 @@ Shopping is another popular activity in China, and there are many great places t
 
 - **Duo shao qian** (澶氬皯閽? - How much is it?
 - **You mei you da zhe** (鏈夋病鏈夋墦鎶? - Is there a discount?
-- **Tai gui le** (澶吹浜? - It's too expensive
+- **Tai gui le** (太贵了) - It's too expensive
 - **Wo kao lu yi xia** (鎴戣€冭檻涓€涓? - I'll think about it
-- **Wo mai le** (鎴戜拱浜? - I'll take it
+- **Wo mai le** (我买浜? - I'll take it
 
 When shopping, it's important to be aware of the prices and to bargain if necessary. In some markets and shops, you may be able to get a better price by negotiating with the seller. But be careful not to be too aggressive or disrespectful.
 
@@ -95,10 +95,10 @@ Another thing to keep in mind is that many shops in China only accept cash or mo
 Finally, it's important to know some emergency phrases in case something goes wrong. Here are some phrases that you should memorize:
 
 - **Jiu ming** (鏁戝懡) - Help!
-- **Wo bei qiang le** (鎴戣鎶簡) - I've been robbed
-- **Wo shen ti bu shu fu** (鎴戣韩浣撲笉鑸掓湇) - I don't feel well
-- **Dian hua hao ma** (鐢佃瘽鍙风爜) - Phone number
-- **Bao jing** (鎶ヨ) - Call the police
+- **Wo bei qiang le** (我被抢了) - I've been robbed
+- **Wo shen ti bu shu fu** (我身体不舒服) - I don't feel well
+- **Dian hua hao ma** (电话号码) - Phone number
+- **Bao jing** (报警) - Call the police
 
 If you find yourself in an emergency situation, try to stay calm and use these phrases to get help. You can also ask for help from a local person or go to the nearest police station or hospital.
 
@@ -108,9 +108,9 @@ If you find yourself in an emergency situation, try to stay calm and use these p
 
 **Ready for your China adventure?** Here are my top recommendations:
 
-- **Book Flights**: [Search flights to China 鈫抅({{< param affiliate.flight >}})
-- **Travel Insurance**: [Get SafetyWing nomad insurance 鈫抅({{< param affiliate.safetywing >}})
-- **eSIM for China**: [Get Airalo eSIM 鈫抅({{< param affiliate.esim >}})
+- **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
+- **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
+- **eSIM for China**: [Get Airalo eSIM →]({{< param affiliate.esim >}})
 
 {{< /affiliate-section >}}
 
@@ -133,30 +133,30 @@ And a quick reminder: if you're traveling from the EU, don't forget to check whe
 
 I hope this article has been helpful to you. If you have any questions or comments, please feel free to leave them below. And if you're planning a more comprehensive trip itinerary, you'll definitely want to read [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) and [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) for your central China planning.
 
-Happy travels, and zh霉 n菒 l菤x铆ng y煤ku脿i (绁濅綘鏃呰鎰夊揩)!
+Happy travels, and zhù nǐ lǚxíng yúkuài (祝你旅途愉快)!
 
 ---
 
-## 馃彣 Plan Your China Trip
+## 🏨 Plan Your China Trip
 
 | Need | Solution | Link |
 |------|----------|------|
-| 馃彣 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
+| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
 | 鉁堬笍 Flights | Best deals on flights to China | {{< affiliate-flight >}} |
-| 馃殫 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
-| 馃洝锔?Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
-| 馃摱 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
-| 馃敀 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
+| 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
+| 🛡锔?Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
+| 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
+| 🔒 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
 
 ---
 
-### 馃搶 Helpful Guides
-- 馃摉 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 馃泜 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
-- 馃挸 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
-- 馃摗 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
-- 馃敀 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 馃彞 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+### 📌 Helpful Guides
+- 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
+- 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
+- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 
