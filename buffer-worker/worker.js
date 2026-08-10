@@ -659,6 +659,34 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
 }
 
 // ========== 构建平台特定输入 ==========
+// ========== X/Twitter text adapter (280-char limit) ==========
+function xCharCount(text) {
+  // X counts URLs as 23 chars (t.co rule)
+  const urlReplaced = (text || '').replace(/https?:\/\/\S+/g, 'U'.repeat(23));
+  let count = 0;
+  for (const ch of urlReplaced) {
+    // Non-ASCII chars (emoji etc.) count as 2 to stay under X's real count
+    count += ch.codePointAt(0) > 127 ? 2 : 1;
+  }
+  return count;
+}
+
+function buildTwitterText(text, postUrl) {
+  const maxChars = 280;
+  const url = (postUrl && postUrl.startsWith('http')) ? postUrl : '';
+  // Strip URLs from body so links are never truncated; append full URL at end
+  const body = (text || '').replace(/https?:\/\/\S+/g, '').replace(/[ \t]+/g, ' ').trim();
+  const urlPart = url ? `\n\n${url}` : '';
+  const bodyChars = [...body];
+  let candidate = body + urlPart;
+  // Shrink body char by char until X count fits (10-char safety margin)
+  while (bodyChars.length > 0 && xCharCount(candidate) > maxChars - 10) {
+    bodyChars.pop();
+    candidate = bodyChars.join('').trimEnd() + urlPart;
+  }
+  return candidate.trim();
+}
+
 function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
   let input;
 
@@ -677,6 +705,13 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
       text: cleanText,
       metadata: { instagram: { type: 'post', shouldShareToFeed: true } },
       assets: [{ image: { url: mediaUrl } }]
+    };
+  } else if (service === 'twitter') {
+    // X/Twitter 280-char limit: truncate by X counting rules (URL=23, emoji=2)
+    input = {
+      ...baseInput,
+      text: buildTwitterText(text, postUrl),
+      assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
     };
   } else if (service === 'pinterest') {
     const pinTitle = (text || '').slice(0, 100);
@@ -1293,3 +1328,5 @@ async function handleGA4Debug(env) {
     return jsonResponse({ ...debug, error: e.message, stack: e.stack });
   }
 }
+
+export { buildTwitterText, xCharCount };
