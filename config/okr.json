@@ -1,44 +1,39 @@
 {
   "year": 2026,
+  "launched": "2026-05-12",
+  "note": "站点 2026-05-12 上线，OKR 自该日起算；Q1(1-3月)未运营不设目标",
   "objective": "ChinaBound Travel 冷启动 → 稳定增长：跑通 流量-内容-SEO-变现-订阅 增长飞轮",
   "annual": {
-    "name": "2026 年度 OKR",
+    "name": "2026 年度 OKR（建站日 5/12 起算，约 7.6 个月）",
     "krs": [
-      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 500, "source": "ga4_users", "targets": {"monthly": 500, "quarterly": 1500, "yearly": 6000}},
-      {"id": "content", "name": "年度新增文章", "unit": "篇", "target": 60, "source": "content_new", "targets": {"monthly": 5, "quarterly": 15, "yearly": 60}},
-      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 1000, "source": "gsc_impressions", "targets": {"monthly": 1000, "quarterly": 3000, "yearly": 12000}},
-      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 100, "source": "tp_revenue", "targets": {"monthly": 100, "quarterly": 300, "yearly": 1200}},
+      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 400, "source": "ga4_users", "targets": {"monthly": 400, "quarterly": 1200, "yearly": 2000}},
+      {"id": "content", "name": "年度新增文章", "unit": "篇", "target": 60, "source": "content_new", "targets": {"monthly": 8, "quarterly": 24, "yearly": 60}},
+      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 1000, "source": "gsc_impressions", "targets": {"monthly": 1000, "quarterly": 3000, "yearly": 6000}},
+      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 50, "source": "tp_revenue", "targets": {"monthly": 50, "quarterly": 150, "yearly": 300}},
       {"id": "email", "name": "邮件订阅", "unit": "人", "target": 100, "source": "ml_total", "targets": {"monthly": 100, "quarterly": 100, "yearly": 100}}
     ]
   },
   "quarters": [
-    {"q": 1, "name": "Q1 基建冷启动", "krs": [
-      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 100, "source": "ga4_users", "targets": {"monthly": 100, "quarterly": 300, "yearly": 1200}},
-      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 7, "quarterly": 20, "yearly": 60}},
-      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 100, "source": "gsc_impressions", "targets": {"monthly": 100, "quarterly": 300, "yearly": 1200}},
-      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 10, "source": "tp_revenue", "targets": {"monthly": 10, "quarterly": 30, "yearly": 120}},
-      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 10, "source": "ml_total", "targets": {"monthly": 10, "quarterly": 10, "yearly": 40}}
+    {"q": 2, "name": "Q2 启动期（5/12-6/30，约50天）", "krs": [
+      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 70, "source": "ga4_users", "targets": {"monthly": 70, "quarterly": 105, "yearly": 1200}},
+      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 14, "quarterly": 20, "yearly": 60}},
+      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 120, "source": "gsc_impressions", "targets": {"monthly": 120, "quarterly": 180, "yearly": 1200}},
+      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 5, "source": "tp_revenue", "targets": {"monthly": 5, "quarterly": 8, "yearly": 120}},
+      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 5, "source": "ml_total", "targets": {"monthly": 5, "quarterly": 5, "yearly": 100}}
     ]},
-    {"q": 2, "name": "Q2 SEO 与内容基建", "krs": [
-      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 200, "source": "ga4_users", "targets": {"monthly": 200, "quarterly": 600, "yearly": 2400}},
+    {"q": 3, "name": "Q3 流量与内容基建（7-9月）", "krs": [
+      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 200, "source": "ga4_users", "targets": {"monthly": 200, "quarterly": 600, "yearly": 2000}},
       {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 7, "quarterly": 20, "yearly": 60}},
-      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 200, "source": "gsc_impressions", "targets": {"monthly": 200, "quarterly": 600, "yearly": 2400}},
-      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 20, "source": "tp_revenue", "targets": {"monthly": 20, "quarterly": 60, "yearly": 240}},
-      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 20, "source": "ml_total", "targets": {"monthly": 20, "quarterly": 20, "yearly": 40}}
+      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 400, "source": "gsc_impressions", "targets": {"monthly": 400, "quarterly": 1200, "yearly": 6000}},
+      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 10, "source": "tp_revenue", "targets": {"monthly": 10, "quarterly": 30, "yearly": 300}},
+      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 20, "source": "ml_total", "targets": {"monthly": 20, "quarterly": 20, "yearly": 100}}
     ]},
-    {"q": 3, "name": "Q3 流量与变现启动", "krs": [
-      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 300, "source": "ga4_users", "targets": {"monthly": 300, "quarterly": 900, "yearly": 3600}},
-      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 7, "quarterly": 20, "yearly": 60}},
-      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 300, "source": "gsc_impressions", "targets": {"monthly": 300, "quarterly": 900, "yearly": 3600}},
-      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 30, "source": "tp_revenue", "targets": {"monthly": 30, "quarterly": 90, "yearly": 360}},
-      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 30, "source": "ml_total", "targets": {"monthly": 30, "quarterly": 30, "yearly": 40}}
-    ]},
-    {"q": 4, "name": "Q4 增长冲刺", "krs": [
-      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 400, "source": "ga4_users", "targets": {"monthly": 400, "quarterly": 1200, "yearly": 4800}},
-      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 7, "quarterly": 20, "yearly": 60}},
-      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 500, "source": "gsc_impressions", "targets": {"monthly": 500, "quarterly": 1500, "yearly": 6000}},
-      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 60, "source": "tp_revenue", "targets": {"monthly": 60, "quarterly": 180, "yearly": 720}},
-      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 40, "source": "ml_total", "targets": {"monthly": 40, "quarterly": 40, "yearly": 40}}
+    {"q": 4, "name": "Q4 增长与变现冲刺（10-12月）", "krs": [
+      {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 400, "source": "ga4_users", "targets": {"monthly": 400, "quarterly": 1200, "yearly": 2000}},
+      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 8, "quarterly": 24, "yearly": 60}},
+      {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 1000, "source": "gsc_impressions", "targets": {"monthly": 1000, "quarterly": 3000, "yearly": 6000}},
+      {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 50, "source": "tp_revenue", "targets": {"monthly": 50, "quarterly": 150, "yearly": 300}},
+      {"id": "email", "name": "邮件订阅", "unit": "人", "target": 100, "source": "ml_total", "targets": {"monthly": 100, "quarterly": 100, "yearly": 100}}
     ]}
   ]
 }
