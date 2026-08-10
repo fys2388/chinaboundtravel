@@ -73,3 +73,9 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/ /posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/ 301
 /posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide/ /posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/ 301
 /posts/transportation-guide-guide/ /posts/transportation-guide/ 301
+
+# 3) Legacy missing pages -> canonical (2026-08-10 SEO audit)
+/disclosure/ /affiliate-disclosure/ 301
+/disclosure /affiliate-disclosure/ 301
+/tags/china-guide/ /tags/china/ 301
+/categories/china-guide/ /categories/china/ 301

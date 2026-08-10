@@ -22,7 +22,7 @@ params:
     - question: "Do I need a VPN for China?"
       answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/hangzhou/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/hangzhou/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.jpg"
 ---
 
 

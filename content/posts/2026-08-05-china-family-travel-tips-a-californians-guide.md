@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "china family travel tips for travelers visiting China. practical tips & common mistakes to avoid curated by a US-based China travel expert."
 description: "China family travel tips: practical advice, kid-friendly picks, and common mistakes to avoid, from a US-based travel expert."
-canonicalURL: "https://chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.jpg"
 ---
 
 ## China Family Travel Tips: A Californian's Guide

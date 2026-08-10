@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Chinese language survival phrases for European travelers visiting China: 80+ essential Mandarin phrases with pinyin, pronunciation, and practical context. Curated by a US expat with 5+ years living in Chengdu, includes real anecdotes and travel advice."
 description: "80+ essential Chinese phrases for travelers with pinyin and pronunciation: greetings, food, directions, emergencies, and shopping."
-canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

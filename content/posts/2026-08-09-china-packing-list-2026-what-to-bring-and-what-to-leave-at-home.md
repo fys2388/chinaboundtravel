@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "China Packing List 2026: What to Bring and What to Leave at Home for travelers visiting China. essential guide based on 10 years of experience from on-the-ground experience in China."
 description: "China packing list 2026: what to bring and what to leave at home, an essential checklist from 10 years on the ground."
-canonicalURL: "https://chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.jpg"
 ---
 
 ## China Packing List 2026: What to Bring and What to Leave at Home
@@ -39,7 +39,7 @@ I remember my first visa application as if it were a scene straight out of 'The 
 ### Keeping Copies of Important Documents
 Actionable tip: Keep a copy of all your important documents (passport, visa, travel itinerary) in a separate place from the originals. This can be an absolute lifesaver if something gets lost or stolen. I once had a scare when my wallet was snatched on a busy street in Shanghai. Luckily, I had copies of my passport and other important documents stashed away in my hotel safe. This way, you'll still have access to the information you need to prove your identity and travel plans.
 
-For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) and [144 - Hour Visa-Free Transit in China-The Complete 2026 Guide](https://chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
+For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) and [144 - Hour Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
 
 ## Clothing
 ### Adapting to China's Diverse Climate
@@ -52,13 +52,13 @@ In the summer, lightweight, breathable clothes are an absolute must. You'll be d
 ### Winter Wear in China
 In the winter, bring warm hats, scarves, and thick coats. The cold in China can be quite biting, especially in the northern regions. I remember my first winter in Chengdu, thinking I could get away with a light jacket. Big mistake! I quickly realized I needed to invest in some proper winter gear.
 
-Actionable tip: If you're traveling to areas like Zhangjiajie in the winter, consider bringing thermal underwear. It can keep you warm without adding too much bulk to your luggage. You can read more about Zhangjiajie in [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/).
+Actionable tip: If you're traveling to areas like Zhangjiajie in the winter, consider bringing thermal underwear. It can keep you warm without adding too much bulk to your luggage. You can read more about Zhangjiajie in [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/).
 
 ## Electronics
 ### Staying Connected
 When it comes to electronics, your smartphone is going to be your most important companion. However, make sure you have a plan for staying connected. You can either get a local SIM card or use an eSIM. I prefer using an eSIM as it's more convenient and doesn't require me to swap out physical cards.
 
-Actionable tip: Download useful apps before you arrive in China. Apps like WeChat are essential for communication and can also be used for mobile payments. Check out [How to Use WeChat Pay as a Foreigner](https://chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) for more details.
+Actionable tip: Download useful apps before you arrive in China. Apps like WeChat are essential for communication and can also be used for mobile payments. Check out [How to Use WeChat Pay as a Foreigner](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) for more details.
 
 ### Power Adaptors
 Don't forget to bring a power adaptor. China uses a different type of electrical outlet, and without the right adaptor, your electronics won't be able to charge. I once arrived in China without one and had to make a panicked trip to a local electronics store to buy one.
@@ -74,7 +74,7 @@ Be aware of cultural differences when it comes to personal items. For example, i
 
 ## Other Items to Consider
 ### Money and Payments
-China is a cash-less society to a large extent. Most places accept mobile payments like Alipay and WeChat Pay. However, it's still a good idea to have some cash on hand, especially in smaller towns or when dealing with street vendors. You can read more about using mobile payments in [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)](https://chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/).
+China is a cash-less society to a large extent. Most places accept mobile payments like Alipay and WeChat Pay. However, it's still a good idea to have some cash on hand, especially in smaller towns or when dealing with street vendors. You can read more about using mobile payments in [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/).
 
 Actionable tip: If you plan to use your credit card, make sure it's accepted in China. Some cards may not work, so it's a good idea to check with your bank before you travel.
 

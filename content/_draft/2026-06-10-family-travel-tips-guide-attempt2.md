@@ -16,7 +16,7 @@ draft: "true"
 audit_status: "pending"
 summary: "Complete family travel tips guide for travelers visiting China based on 10 years of experience."
 description: "Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years."
-canonicalURL: "https://chinaboundtravel.com/posts/family-travel-tips-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/family-travel-tips-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -92,6 +92,6 @@ Practical Takeaway: Stay alert and follow common sense safety rules. Don't be af
 
 Conclusion
 
-Well, there you have it, folks! My comprehensive guide to family travel in China. I hope these tips and stories have inspired you to plan your own adventure. Remember, traveling is like a great movie - full of unexpected twists and turns, but also full of amazing experiences. So, go ahead and book that trip to China. And if you have any questions, don't hesitate to reach out. I'm here to help you make the most of your family vacation. [Link to a page with more China travel resources](https://chinaboundtravel.com/posts/china - travel - resources/)
+Well, there you have it, folks! My comprehensive guide to family travel in China. I hope these tips and stories have inspired you to plan your own adventure. Remember, traveling is like a great movie - full of unexpected twists and turns, but also full of amazing experiences. So, go ahead and book that trip to China. And if you have any questions, don't hesitate to reach out. I'm here to help you make the most of your family vacation. [Link to a page with more China travel resources](https://www.chinaboundtravel.com/posts/china - travel - resources/)
 
 So, what are you waiting for? Pack your bags, grab your family, and get ready for the trip of a lifetime!

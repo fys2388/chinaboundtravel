@@ -16,7 +16,7 @@ draft: "true"
 audit_status: "pending"
 summary: "Complete food recommendations guide for travelers visiting China based on 10 years of experience."
 description: "Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years."
-canonicalURL: "https://chinaboundtravel.com/posts/a-gastronomic-adventure-in-chengdu-a-foodies-guide-for-european-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-chengdu-a-foodies-guide-for-european-travelers/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -30,7 +30,7 @@ Hey there, fellow European travelers! Are you ready to embark on a culinary jour
 [Image: A busy intersection in Chengdu with people walking by, colorful storefronts, and a sense of energy and activity.]
 
 ## Visa Requirements
-Before we dive into the world of Chengdu cuisine, let's talk about the elephant in the room: visa requirements. As a European traveler, you'll need to obtain a visa before entering China. The process can be a bit daunting, but don't worry, I've got you covered. Check out my detailed guide on [china visa requirements](https://chinaboundtravel.com/posts/china-visa-requirements/) for all the information you need to know. And if you have any questions, feel free to drop me a comment!
+Before we dive into the world of Chengdu cuisine, let's talk about the elephant in the room: visa requirements. As a European traveler, you'll need to obtain a visa before entering China. The process can be a bit daunting, but don't worry, I've got you covered. Check out my detailed guide on [china visa requirements](https://www.chinaboundtravel.com/posts/china-visa-requirements/) for all the information you need to know. And if you have any questions, feel free to drop me a comment!
 
 ## Best Time to Visit Chengdu
 Now that you've got your visa sorted, it's time to plan your trip. The best time to visit Chengdu is during the spring (March to May) and autumn (September to November). These seasons offer mild weather and fewer crowds, making it the perfect time to explore the city's outdoor attractions and enjoy its delicious food. However, if you don't mind the heat and humidity, summer (June to August) can also be a great time to visit, as it's the peak season for festivals and events. And if you're a fan of winter sports, winter (December to February) is the best time to hit the slopes in the nearby mountains.

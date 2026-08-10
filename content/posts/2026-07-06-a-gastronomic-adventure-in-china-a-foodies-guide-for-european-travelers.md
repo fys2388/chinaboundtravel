@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "The essential China food guide for European travelers — from [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) to Cantonese dim sum, real restaurant picks, ordering hacks, and what surprised a Californian the most about Chinese cuisine."
 description: "China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips."
-canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/food-recommendations-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

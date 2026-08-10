@@ -16,7 +16,7 @@ draft: "true"
 audit_status: "pending"
 summary: "Complete Basic Cultural Etiquette While Traveling Around China guide for travelers visiting China based on 10 years of experience."
 description: "Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years."
-canonicalURL: "https://chinaboundtravel.com/posts/basic-cultural-etiquette-while-traveling-around-china-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/basic-cultural-etiquette-while-traveling-around-china-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -60,7 +60,7 @@ But here’s the key: **Don’t get angry.** In California, we get passive-aggre
 
 And remember: **If you’re not willing to pay the final price, don’t start the game.** Once you shake hands (or nod), it’s a deal. I once haggled for a painting, agreed on a price, then realized I didn’t have enough cash. The artist chased me down the street. I felt like I was in a chase scene from *The French Connection*. Not fun.
 
-For more on surviving market chaos, check out my guide on [navigating Chinese street markets like a pro](https://chinaboundtravel.com/posts/street-market-survival-guide).
+For more on surviving market chaos, check out my guide on [navigating Chinese street markets like a pro](https://www.chinaboundtravel.com/posts/street-market-survival-guide).
 
 ![A crowded Chengdu hotpot restaurant with steam rising from bubbling pots and locals laughing over shared meals](https://example.com/chengdu-hotpot-restaurant.jpg)
 
@@ -78,4 +78,4 @@ Look, mates, China is not a place you “conquer.” It’s a place you *join*. 
 
 My ten years here have taught me one thing: **Cultural etiquette is not about being perfect. It’s about being present.** Smile, nod, slurp your noodles, and don’t flush the paper. If you do that, you’ll have a better time than I did in my first year—when I tried to order a “beef burger” and got a bowl of tripe soup instead.
 
-For more tips on blending in, check out my post on [how to eat hotpot without looking like a tourist](https://chinaboundtravel.com/posts/hotpot-etiquette-guide). And if you see me in Chengdu, say hi. I’ll be the guy with the tissue pack in one hand and a bowl of *dan dan mian* in the other. Just don’t point at me. I’m sensitive.
+For more tips on blending in, check out my post on [how to eat hotpot without looking like a tourist](https://www.chinaboundtravel.com/posts/hotpot-etiquette-guide). And if you see me in Chengdu, say hi. I’ll be the guy with the tissue pack in one hand and a bowl of *dan dan mian* in the other. Just don’t point at me. I’m sensitive.

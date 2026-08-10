@@ -38,7 +38,7 @@ If you haven't received the email yet, click the button below to download:
 
 <script>
 function redirectToEbook() {
-    window.location.href = 'https://chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
+    window.location.href = 'https://www.chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
 }
 </script>
 

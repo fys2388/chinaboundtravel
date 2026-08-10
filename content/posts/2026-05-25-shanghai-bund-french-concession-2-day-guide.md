@@ -20,7 +20,7 @@ params:
     - question: "How do I get around Chinese cities?"
       answer: "Subway systems in major cities are excellent. Taxis and ride-hailing apps (Didi) are cheap and convenient."
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
 ---
 
 

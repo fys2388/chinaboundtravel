@@ -17,7 +17,7 @@ author: Joran
 summary: "A Beijing local's hilarious guide to visiting the Chengdu Panda Base 鈥?how to get there, when to go, and what not to do with the pandas."
 description: "Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds."
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg"
 ---
 
 Okay, so you鈥檙e in Beijing. You鈥檝e done the Wall, you鈥檝e sweated through the Forbidden City, and you鈥檝e eaten enough Peking duck to make a cardiologist weep. Now you鈥檙e thinking, 鈥淚 came to China to see a panda, not a t-shirt with a panda on it.锟?I get it. My wife, Xiao Li, is from Chengdu, and for the first three years of our marriage, she would not let me near the Panda Base because she said I鈥檇 鈥渆mbarrass the family by trying to hug one.锟?

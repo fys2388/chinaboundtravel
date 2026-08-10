@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. what you need to know before your trip by an American expat with 5 years in China."
 description: "China cultural etiquette for travelers: what to know before your trip, from an American expat with 5 years in China."
-canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -85,4 +85,4 @@ I remember once when I was invited to a Chinese friend's wedding. I brought a gi
 
 ## Conclusion
 
-In conclusion, cultural etiquette is an important part of traveling to China. By following these simple tips and customs, you can show respect for the local culture and make a good impression. Remember, China is a vast and diverse country with a rich history and culture, so there's always something new to learn. So, go out there and have an adventure, but don't forget to be respectful and mindful of the local customs. And if you have any questions or need more advice, feel free to check out some of the other articles on chinaboundtravel.com, such as [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/) or [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/). Have a great trip!
+In conclusion, cultural etiquette is an important part of traveling to China. By following these simple tips and customs, you can show respect for the local culture and make a good impression. Remember, China is a vast and diverse country with a rich history and culture, so there's always something new to learn. So, go out there and have an adventure, but don't forget to be respectful and mindful of the local customs. And if you have any questions or need more advice, feel free to check out some of the other articles on chinaboundtravel.com, such as [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/) or [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/). Have a great trip!

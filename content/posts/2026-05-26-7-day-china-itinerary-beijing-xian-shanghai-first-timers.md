@@ -24,7 +24,7 @@ params:
     - question: "Should I get a VPN in China?"
       answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. {{< vpn-link \"NordVPN\" />}} consistently works. Once in China, you'll need the APK file or account already active - you can't download VPN apps inside China."
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg"
 ---
 
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)

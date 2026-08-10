@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "china bargaining and shopping for travelers visiting China. practical tips & common mistakes to avoid from on-the-ground experience in China."
 description: "china bargaining and shopping for travelers visiting China. practical tips & common mistakes to avoid from on-the-ground experience in China."
-canonicalURL: "https://chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
 ---
 
 # China Bargaining and Shopping Guide: A Hilarious and Practical Adventure

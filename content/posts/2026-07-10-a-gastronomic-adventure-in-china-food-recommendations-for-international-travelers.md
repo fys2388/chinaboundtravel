@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "China food guide: must-try local dishes & best restaurants. from on-the-ground experience in China, practical guide for foreign travelers."
 description: "Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks from a 5-year expat."
-canonicalURL: "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/food-recommendations-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -119,10 +119,10 @@ When dining at a fine dining restaurant in China, it's important to dress approp
 China is a country with a rich and diverse culinary culture, and there is something to suit every taste and budget. Whether you're a fan of spicy food, seafood, or vegetarian cuisine, you're sure to find something to love in China. So the next time you're planning a trip to China, make sure to add some of these food recommendations to your itinerary. And don't forget to be adventurous and try something new!
 
 If you want to learn more about China travel, be sure to check out these related articles on chinaboundtravel.com:
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
-- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 
 ![A group of friends sitting around a table in a Chinese restaurant, enjoying a meal of hotpot and other dishes. The restaurant is decorated with traditional Chinese artwork and decorations, and the atmosphere is lively and festive.](https://image.pollinations.ai/prompt/A%20group%20of%20friends%20sitting%20around%20a%20table%20in%20a%20Chinese%20restaurant%2C%20enjoying%20a%20meal%20of%20hotpot%20and%20other%20dishes.%20The%20restaurant%20is%20decorated%20with%20traditional%20Chinese%20artwork%20and%20decorations%2C%20and%20the%20atmosphere%20is%20lively%20and%20festive.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=88429&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 

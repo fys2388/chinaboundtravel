@@ -76,6 +76,6 @@ If you're invited to someone's home, it's polite to bring a small gift, such as 
 China is an amazing country with a rich and fascinating culture. By being aware of and respecting the cultural etiquette, you'll not only have a more enjoyable trip but also build better relationships with the people you meet. So, whether you're exploring the ancient temples of Xi'an, hiking in the Zhangjiajie Avatar Mountains, or indulging in some delicious Sichuan hotpot, keep these cultural tips in mind. And remember, the key is to be open-minded, respectful, and willing to learn. Have a great trip!
 
 For more information on China travel, check out these articles:
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)

@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass4"
 summary: "High-speed train guide for China: how to book tickets, choose between classes, find your platform, and save money with insider tips from a seasoned expat rider."
 description: "China high-speed train survival guide: booking classes, finding your platform, and insider tips from an expat who rides weekly."
-canonicalURL: "https://chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.jpg"
 ---
 
 # China High-Speed Train Survival Guide: Booking, Classes, and Insider Tips

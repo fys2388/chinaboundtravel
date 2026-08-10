@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "china bargaining and shopping for travelers visiting China. what you need to know before your trip by an American expat with 10 years in China."
 description: "How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, from a 10-year expat."
-canonicalURL: "https://chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
 ---
 
 title: "China Bargaining Guide: How to Haggle & Shop"
@@ -148,9 +148,9 @@ You should start planning your shopping adventure in China today! Whether you're
 
 Here's what you do: Research the areas you want to visit, set a budget, and practice your bargaining skills. And most importantly, have an open mind and a sense of adventure.
 
-[Internal Link 1: [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta - army-history - discovery-and - insider-tips/)]
-[Internal Link 2: [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar - mountains-complete - guide-to - chinas-most - spectacular-park/)]
-[Internal Link 3: [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot - guide-history - best-restaurants - and-cultural - significance/)]
-[Internal Link 4: [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea - culture-history - types-and - tea-ceremony - guide/)]
-[Internal Link 5: [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://chinaboundtravel.com/posts/shanghai-beyond - the-bund - hidden-neighborhoods - and-local - culture/)]
-[Internal Link 6: [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://chinaboundtravel.com/posts/the-history - and-culture - of-the - great-wall - beyond-the - tourist-trail - guide/)]
+[Internal Link 1: [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta - army-history - discovery-and - insider-tips/)]
+[Internal Link 2: [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar - mountains-complete - guide-to - chinas-most - spectacular-park/)]
+[Internal Link 3: [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot - guide-history - best-restaurants - and-cultural - significance/)]
+[Internal Link 4: [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea - culture-history - types-and - tea-ceremony - guide/)]
+[Internal Link 5: [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond - the-bund - hidden-neighborhoods - and-local - culture/)]
+[Internal Link 6: [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history - and-culture - of-the - great-wall - beyond-the - tourist-trail - guide/)]

@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg"
 ---
 
 ## Introduction
@@ -162,7 +162,7 @@ So, what are you waiting for? Start planning your trip to China today and experi
 ![Description of a traditional Chinese guesthouse with a courtyard and red lanterns](https://image.pollinations.ai/prompt/Description%20of%20a%20traditional%20Chinese%20guesthouse%20with%20a%20courtyard%20and%20red%20lanterns%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=29788&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
 Here are some related articles on chinaboundtravel.com that you might find interesting:
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
-- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)

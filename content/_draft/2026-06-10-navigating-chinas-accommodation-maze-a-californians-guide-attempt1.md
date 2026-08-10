@@ -16,7 +16,7 @@ draft: "true"
 audit_status: "pending"
 summary: "Complete accommodation tips guide for travelers visiting China based on 10 years of experience."
 description: "Everything you need to know about traveling to China. Practical tips from a California native living in Chengdu for over 10 years."
-canonicalURL: "https://chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/navigating-chinas-accommodation-maze-a-californians-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
@@ -32,7 +32,7 @@ I still remember my first trip to China like it was yesterday. I was a wide-eyed
 [Image: A bustling street in Chengdu with people going about their daily lives, colorful shopfronts, and a lively atmosphere.]
 
 ## Visa Requirements
-Before we dive into the world of accommodation, let's talk about the elephant in the room: visa requirements. As an American traveler, you will need to obtain a tourist visa to enter China. The process can be a bit daunting, but don't worry, I've got you covered. Check out my [China visa requirements](https://chinaboundtravel.com/posts/china-visa-requirements/) blog post for a detailed guide on how to apply for a visa and what documents you'll need.
+Before we dive into the world of accommodation, let's talk about the elephant in the room: visa requirements. As an American traveler, you will need to obtain a tourist visa to enter China. The process can be a bit daunting, but don't worry, I've got you covered. Check out my [China visa requirements](https://www.chinaboundtravel.com/posts/china-visa-requirements/) blog post for a detailed guide on how to apply for a visa and what documents you'll need.
 
 [Image: A group of travelers posing in front of the Forbidden City in Beijing, with the sun shining and a sense of excitement in the air.]
 

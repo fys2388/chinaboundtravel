@@ -9,7 +9,7 @@ summary: 'Complete guide to obtaining a China tourist visa in 2026. Everything y
 description: "China tourist visa in 2026: types, requirements, application steps, costs, and processing times for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.jpg"
 ---
 
 ## Ultimate Guide to China Visa for Tourists 2026

@@ -16,12 +16,12 @@ draft: false
 audit_status: "pass2"
 summary: "Complete Chengdu travel guide 2026. best local food, 3-5 day itineraries & hidden gems from on-the-ground experience in China."
 description: "Chengdu travel guide 2026: best local food, 3-5 day itineraries, and hidden gems from a Californian's 5 years in China."
-canonicalURL: "https://chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-adventure-in-chengdu/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-adventure-in-chengdu.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-adventure-in-chengdu.jpg"
 ---
 
 ## China Remote Work Guide: A Californian's 5-Year Adventure in Chengdu
@@ -107,9 +107,9 @@ So, what are you waiting for? Pack your bags, grab your laptop, and head to Chin
 
 ## Related Articles
 
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
-- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
-- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
-- [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/)
-- [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/)
+- [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
