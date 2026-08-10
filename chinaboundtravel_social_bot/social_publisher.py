@@ -571,13 +571,13 @@ def send_feishu_notification(results: list):
 
     summary_lines = []
     for r in results:
-        # ??????????????????????
+# 已入队：达到每日发布上限，明日自动发布
         if r.get("queued"):
-            summary_lines.append(f"? {r['title']} ({r.get('variant', 'main')})")
-            summary_lines.append("   ?????????????????????")
+            summary_lines.append(f"⏳ {r['title']} ({r.get('variant', 'main')})")
+            summary_lines.append("   已入队：达到每日上限，稿件已存入队列，明日自动发布")
             continue
 
-        status_icon = "?" if r.get("worker_success") else "?"
+        status_icon = "✅" if r.get("worker_success") else "❌"
         variant = r.get("variant", "main")
         summary_lines.append(f"{status_icon} {r['title']} ({variant})")
         
@@ -585,14 +585,14 @@ def send_feishu_notification(results: list):
         failed_platforms = r.get("failed_platforms", "")
         
         if success_platforms:
-            summary_lines.append(f"   ??: {success_platforms}")
+            summary_lines.append(f"   成功: {success_platforms}")
         elif not r.get("worker_success"):
             err = ""
             raw = r.get("raw_response") or {}
             if isinstance(raw, dict):
                 err = raw.get("error", "") or raw.get("message", "") or ""
-            detail = f"Worker????: {err}" if err else "Worker????"
-            summary_lines.append(f"   ??: {failed_platforms if failed_platforms else detail}")
+            detail = f"Worker调用失败: {err}" if err else "Worker调用失败"
+            summary_lines.append(f"   失败: {failed_platforms if failed_platforms else detail}")
 
     content = "\n".join(summary_lines)
     payload = {
@@ -601,7 +601,7 @@ def send_feishu_notification(results: list):
     }
 
     try:
-        # ?? UTF-8 ????? requests ?? \uXXXX ??????????
+        # 使用显式 UTF-8 编码发送（requests 默认会用 \uXXXX 转义导致乱码）
         data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         requests.post(webhook, data=data, headers={"Content-Type": "application/json"}, timeout=15)
     except:
