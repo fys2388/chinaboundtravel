@@ -601,7 +601,9 @@ def send_feishu_notification(results: list):
     }
 
     try:
-        requests.post(webhook, json=payload, timeout=15)
+        # ?? UTF-8 ????? requests ?? \uXXXX ??????????
+        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        requests.post(webhook, data=data, headers={"Content-Type": "application/json"}, timeout=15)
     except:
         pass
 
