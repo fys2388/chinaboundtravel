@@ -9,7 +9,7 @@
  * 5. 配额预警：剩余≤30%飞书通知
  * 
  * @author Joran - ChinaBoundTravel
- * @version 3.0.0
+ * @version 3.0.1
  */
 
 // ============ 配置常量 ============
@@ -57,7 +57,7 @@ const RETRY_CONFIG = {
 };
 
 // 图片域名白名单
-const ALLOWED_IMAGE_HOST = 'chinaboundtravel.com';
+const ALLOWED_IMAGE_HOST = 'chinaboundtravel.com'; // www 前缀与裸域名等价
 const ALLOWED_IMAGE_PATH = '/img/china-dest/';
 const ALLOWED_EXTERNAL_HOSTS = ['image.pollinations.ai', 'images.unsplash.com'];
 
@@ -77,7 +77,7 @@ export default {
       return jsonResponse({ 
         status: 'ok', 
         service: 'Buffer GraphQL Auto-Poster',
-        version: '3.0.0',
+        version: '3.0.1',
         timestamp: new Date().toISOString()
       });
     }
@@ -385,8 +385,9 @@ function validateImageUrl(url) {
       return { valid: true, url };
     }
 
-    // 检查域名
-    if (parsed.hostname !== ALLOWED_IMAGE_HOST) {
+    // 检查域名（www 与非 www 等价，统一按裸域名校验）
+    const normalizedHost = parsed.hostname.replace(/^www\./, '');
+    if (normalizedHost !== ALLOWED_IMAGE_HOST) {
       return { valid: false, message: `图片域名必须是 ${ALLOWED_IMAGE_HOST} 或允许的外部服务` };
     }
 
