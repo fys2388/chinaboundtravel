@@ -16,7 +16,7 @@ draft: false
 audit_status: "pass2"
 summary: "Complete Beijing travel guide 2026. itineraries, local food & cultural experiences from a US expat based in Chengdu, practical guide for foreign travelers."
 description: "Complete Beijing travel guide 2026. itineraries, local food & cultural experiences from a US expat based in Chengdu, practical guide for foreign travelers."
-canonicalURL: "https://chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/"
+canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"

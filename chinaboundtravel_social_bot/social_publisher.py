@@ -226,7 +226,7 @@ def get_article_info(md_path: Path) -> dict:
             canonical_url = f"https://{canonical_url}"
         url = canonical_url
     else:
-        url = f"https://{SITE_DOMAIN}/posts/{slug}/"
+        url = f"https://www.{SITE_DOMAIN}/posts/{slug}/"
     
     # 优先使用 frontmatter 的 description/summary，其次截取正文
     fm_desc = frontmatter.get("description", "") or frontmatter.get("summary", "")

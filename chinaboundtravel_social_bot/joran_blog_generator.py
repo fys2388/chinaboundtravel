@@ -798,7 +798,7 @@ class AIEngine:
         rules.append("INTERNAL LINK RULES:")
         rules.append("  - Use REAL article URLs for internal links")
         rules.append("  - NEVER use placeholder text like [link to a blog post about...]")
-        rules.append("  - Use absolute URLs: https://chinaboundtravel.com/posts/slug/")
+        rules.append("  - Use absolute URLs: https://www.chinaboundtravel.com/posts/slug/")
         rules.append("  - Include 3-5 related article links at the end of each article")
         
         rules.append("")
@@ -920,7 +920,7 @@ class AIEngine:
                 title = post.get("title", "")
                 slug = post.get("slug", "")
                 tags = ", ".join(post.get("tags", []))
-                post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)  (tags: {tags})\n"
+                post_index_section += f"- [{title}](https://www.chinaboundtravel.com/posts/{slug}/)  (tags: {tags})\n"
             post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
         prompt = f"""Joran: California American who has lived in Chengdu for 5 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
@@ -973,7 +973,7 @@ Requirements for HIGH-QUALITY CONTENT:
    - Each section MUST have CLEAR PRACTICAL takeaways/summary box
    - MEMORABLE conclusion with heartfelt call to action and personal reflection
    - Include QUOTES from locals or fellow travelers for authenticity
-8. INTERNAL LINKS: Include at least 6 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 6+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
+8. INTERNAL LINKS: Include at least 6 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 6+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://www.chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
 9. IMAGE PLACEHOLDERS: MUST include EXACTLY 3 image placeholders:
    - One RIGHT AFTER the introduction
    - One IN the MIDDLE of the article (around 40-60% mark)
@@ -1025,7 +1025,7 @@ Output ONLY the article content with proper Markdown formatting."""
                     continue
                 title = post.get("title", "")
                 slug = post.get("slug", "")
-                post_index_section += f"- [{title}](https://chinaboundtravel.com/posts/{slug}/)\n"
+                post_index_section += f"- [{title}](https://www.chinaboundtravel.com/posts/{slug}/)\n"
             post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
         # 【深度版】增强重写Prompt
@@ -1460,7 +1460,7 @@ class BlogGenerator:
             "audit_status": "pending",
             "summary": seo_summary,
             "description": seo_description,
-            "canonicalURL": f"https://{SITE_DOMAIN}/posts/{slug}/",
+            "canonicalURL": f"https://www.{SITE_DOMAIN}/posts/{slug}/",
             "ShowToc": "true",
             "TocOpen": "false",
             "weight": 1
@@ -1480,7 +1480,7 @@ class BlogGenerator:
         
         # 2. Internal link count
         internal_links = []
-        for match in re.finditer(r'\[([^\]]+)\]\((https?://chinaboundtravel\.com/posts/[^)]+)\)', content):
+        for match in re.finditer(r'\[([^\]]+)\]\((https?://(?:www\.)?chinaboundtravel\.com/posts/[^)]+)\)', content):
             link_url = match.group(2)
             link_text = match.group(1)
             internal_links.append({"text": link_text, "url": link_url})
