@@ -1,0 +1,104 @@
+/* ================================================
+   TOC (Table of Contents) Container Styling
+   ================================================ */
+
+.toc-container {
+    margin: 0 0 2rem 0;
+}
+
+.toc-container details.toc {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.toc-container details.toc summary {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3A6EA5;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.toc-container details.toc summary:hover {
+    background: #f0f5fa;
+}
+
+.toc-container details.toc summary::before {
+    content: "☰";
+    font-size: 1rem;
+    color: #3A6EA5;
+    flex-shrink: 0;
+}
+
+.toc-container details.toc[open] summary::before {
+    content: "✕";
+}
+
+.toc-container details.toc summary::after {
+    content: "";
+    flex: 1;
+}
+
+.toc-container .inner {
+    padding: 0.5rem 1.25rem 1rem 1.25rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.toc-container .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.toc-container .inner li {
+    margin: 0.3rem 0;
+    line-height: 1.5;
+}
+
+.toc-container .inner a {
+    color: #475569;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.2rem 0;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.toc-container .inner a:hover {
+    color: #3A6EA5;
+    text-decoration: none;
+}
+
+.toc-container .inner ul ul {
+    padding-left: 1.25rem;
+}
+
+.toc-container .inner ul ul a {
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .toc-container details.toc summary {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+    .toc-container .inner {
+        padding: 0.4rem 1rem 0.75rem 1rem;
+    }
+    .toc-container .inner a {
+        font-size: 0.82rem;
+    }
+}
