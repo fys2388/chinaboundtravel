@@ -130,7 +130,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
                     f.write(chunk)
             file_size_kb = image_path.stat().st_size / 1024
             print(f"  [CoverGen] Saved: {filename} ({file_size_kb:.0f} KB)")
-            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+            return f"https://www.{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
         else:
             print(f"  [CoverGen] Pollinations failed: HTTP {r.status_code}")
     except Exception as e:
@@ -149,7 +149,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
                     f.write(chunk)
             file_size_kb = image_path.stat().st_size / 1024
             print(f"  [CoverGen] Saved (Unsplash): {filename} ({file_size_kb:.0f} KB)")
-            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+            return f"https://www.{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
         else:
             print(f"  [CoverGen] Unsplash failed: HTTP {r.status_code}")
     except Exception as e:
@@ -167,7 +167,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
                     f.write(chunk)
             file_size_kb = image_path.stat().st_size / 1024
             print(f"  [CoverGen] Saved (Picsum): {filename} ({file_size_kb:.0f} KB)")
-            return f"https://{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+            return f"https://www.{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
     except Exception as e:
         print(f"  [CoverGen] Picsum error: {e}")
 
