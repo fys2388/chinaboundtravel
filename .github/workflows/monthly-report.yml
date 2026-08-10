@@ -8,6 +8,8 @@ on:
 jobs:
   monthly-report:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -43,6 +45,21 @@ jobs:
         run: |
           python scripts/feishu_monthly_report.py
 
+
+      - name: Commit OKR progress snapshot
+        if: always()
+        run: |
+          git config user.name "chinabound-bot"
+          git config user.email "bot@chinaboundtravel.com"
+          git add reports/okr_progress/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "无 OKR 快照变更"
+          else
+            git commit -m "chore: update OKR progress snapshot [skip ci]"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@v4

@@ -34,6 +34,10 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).parent.resolve()
 BLOG_ROOT = SCRIPT_DIR.parent
 
+# OKR 公共工具（进度看板 / 快照）
+sys.path.insert(0, str(SCRIPT_DIR))
+import okr_utils
+
 # 加载 .env 文件
 try:
     from dotenv import load_dotenv
@@ -304,6 +308,8 @@ class FeishuDailyReporter:
                 "template": "blue"
             },
             "elements": [
+                # === 0. OKR 进度速览 ===
+                ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}} if data.get("okr_section") else None),
                 # === 1. 流量总览（GA4） ===
                 {
                     "tag": "div",
@@ -469,6 +475,8 @@ class FeishuDailyReporter:
                 }
             ]
         }
+        # 过滤空板块（None 占位）
+        card["elements"] = [el for el in card["elements"] if el]
         
         return card
     
@@ -643,6 +651,9 @@ class FeishuDailyReporter:
         # 8. 统计总问题数和总佣金
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]
         data["affiliate_revenue"] = data.get("tp_revenue", 0) + data.get("nord_revenue", 0)
+
+        # 9. 当期 OKR 进度速览（季度目标）
+        data["okr_section"] = okr_utils.build_okr_section(data, "daily")
         
         return data
     
@@ -1488,6 +1499,10 @@ class FeishuDailyReporter:
         
         # 收集数据
         data = self.collect_data()
+
+        # 保存 OKR 快照（计划=今日待办，供日报复盘）
+        daily_plan = [{"task": t, "priority": "high", "period": "今日"} for t in data.get("high_priority_todos", [])]
+        okr_utils.save_snapshot("daily", okr_utils.period_key("daily"), daily_plan, data)
         
         # 构建卡片
         print("📝 构建飞书卡片...")

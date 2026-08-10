@@ -2,9 +2,9 @@
 <article class="post-single">
     <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
-        <h1 class="post-title entry-hint-parent">{{ .Title }}</div>
+        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
         {{- if .Description }}
-        <div class="post-description">{{ .Description }}</div>
+        <p class="post-description">{{ .Description }}</p>
         {{- end }}
         {{- if not (.Param "hideMeta") }}
         <div class="post-meta">

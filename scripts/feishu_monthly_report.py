@@ -30,6 +30,10 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).parent.resolve()
 BLOG_ROOT = SCRIPT_DIR.parent
 
+# OKR 公共工具（进度看板 / 上期复盘 / 快照）
+sys.path.insert(0, str(SCRIPT_DIR))
+import okr_utils
+
 try:
     from dotenv import load_dotenv
     dotenv_path = BLOG_ROOT / ".env"
@@ -668,18 +672,18 @@ class FeishuMonthlyReporter:
         plan = []
         if risks.get("red"):
             plan.extend([
-                {"task": "提交GSC索引，确保新页面收录", "priority": "high", "period": "3天内"},
-                {"task": "完成全站联盟链接覆盖", "priority": "high", "period": "本周"},
+                {"task": "提交GSC索引，确保新页面收录", "priority": "high", "period": "3天内", "kr_id": "gsc", "target": 300},
+                {"task": "完成全站联盟链接覆盖", "priority": "high", "period": "本周", "kr_id": "revenue", "target": 30},
                 {"task": "批量修正人设年限文案", "priority": "high", "period": "3天内"},
             ])
         if risks.get("yellow"):
             plan.extend([
                 {"task": "优化跳出率偏高的核心页面", "priority": "medium", "period": "本周"},
-                {"task": "上线邮件订阅诱饵", "priority": "medium", "period": "本周"},
+                {"task": "上线邮件订阅诱饵", "priority": "medium", "period": "本周", "kr_id": "email", "target": 10},
                 {"task": "补充文章结构化数据", "priority": "medium", "period": "本周"},
             ])
         plan.extend([
-            {"task": "发布5篇高转化长尾攻略", "priority": "medium", "period": "本月"},
+            {"task": "发布5篇高转化长尾攻略", "priority": "medium", "period": "本月", "kr_id": "content", "target": 5},
             {"task": "全量检测内部断链", "priority": "low", "period": "本周"},
         ])
         return plan
@@ -718,6 +722,13 @@ class FeishuMonthlyReporter:
         print("7️⃣ 生成下月计划...")
         next_month_plan = self._generate_next_month_plan(risks)
         data["next_month_plan"] = next_month_plan
+
+        print("8️⃣ 生成 OKR 进度与复盘...")
+        data["okr_section"] = okr_utils.build_okr_section(data, "monthly")
+        # 上月快照（YYYY-MM 上月）
+        prev_key = okr_utils.period_key("monthly", datetime.now().replace(day=1) - timedelta(days=1))
+        prev_snap = okr_utils.load_snapshot("monthly", prev_key)
+        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data)
 
         return data
 
@@ -960,6 +971,17 @@ class FeishuMonthlyReporter:
 ### 3. 文章分类分布
 """ + ("\n".join(cat_lines) if cat_lines else "- 暂无数据")
 
+        okr_section = data.get("okr_section", "")
+        okr_review = data.get("okr_review", [])
+        okr_review_rows = []
+        for item in okr_review:
+            okr_review_rows.append(f"| {item['task']} | {item['icon']} | {item['status']} | {item['period']} |")
+        okr_review_section = f"""---
+## ✅ 上月计划复盘（OKR 对齐）
+| 计划项 | 优先级 | 状态 | 周期 |
+| :--- | :--- | :--- | :--- |
+""" + "\n".join(okr_review_rows) + ("\n| - | - | - | - |" if not okr_review_rows else "")
+
         risks_section = f"""---
 ## ⚠️ 风险汇总
 
@@ -984,6 +1006,7 @@ class FeishuMonthlyReporter:
             },
             "elements": [
                 {"tag": "div", "text": {"tag": "lark_md", "content": core_table}},
+                ({"tag": "div", "text": {"tag": "lark_md", "content": okr_section}} if okr_section else None),
                 {"tag": "div", "text": {"tag": "lark_md", "content": channel_table}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": pages_table}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": seo_section}},
@@ -991,10 +1014,13 @@ class FeishuMonthlyReporter:
                 {"tag": "div", "text": {"tag": "lark_md", "content": email_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": content_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": risks_section}},
+                {"tag": "div", "text": {"tag": "lark_md", "content": okr_review_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": plan_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": "\n---\n💡 本月报由自动化脚本生成 | 每月1日 08:00 自动推送\n📐 数据口径：GA4 + Travelpayouts + MailerLite + 本地扫描"}}
             ]
         }
+        # 过滤空板块（None 占位）
+        card["elements"] = [el for el in card["elements"] if el]
 
         return card
 
@@ -1004,6 +1030,10 @@ class FeishuMonthlyReporter:
         print("=" * 60)
 
         data = self.collect_data()
+
+        # 保存 OKR 快照（供下期复盘，CI 中由 workflow 提交回 git）
+        okr_utils.save_snapshot("monthly", okr_utils.period_key("monthly"), data.get("next_month_plan", []), data)
+
         print("📝 构建飞书月报卡片...")
         card = self.build_monthly_card(data)
         print("📤 发送飞书消息...")

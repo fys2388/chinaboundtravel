@@ -1,12 +1,13 @@
-﻿name: Weekly Feishu Report
+﻿name: Quarterly Feishu Report
 
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    # 每季度首月1日北京时间08:00（UTC 0:00）
+    - cron: '0 0 1 1,4,7,10 *'
   workflow_dispatch:
 
 jobs:
-  weekly-report:
+  quarterly-report:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -26,25 +27,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests python-dotenv google-auth google-api-python-client
 
-      - name: Run Feishu Weekly Report
+      - name: Run Feishu Quarterly Report
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
           TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
           TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
-          TRAVELPAYOUTS_DRIVE_ID: ${{ secrets.TRAVELPAYOUTS_DRIVE_ID }}
-          GA4_API_KEY: ${{ secrets.GA4_API_KEY }}
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
           MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
-          NORDVPN_API_KEY: ${{ secrets.NORDVPN_API_KEY }}
-          NORDVPN_AFFILIATE_ID: ${{ secrets.NORDVPN_AFFILIATE_ID }}
-          GITHUB_TOKEN: ${{ github.token }}
         run: |
-          python scripts/feishu_weekly_report.py
-
+          python scripts/feishu_quarterly_report.py
 
       - name: Commit OKR progress snapshot
         if: always()
@@ -60,10 +55,11 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ github.token }}
+
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: weekly-report-data
+          name: quarterly-report-data
           path: reports/
-          retention-days: 30
+          retention-days: 90

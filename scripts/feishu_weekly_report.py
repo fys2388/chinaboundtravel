@@ -30,6 +30,10 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).parent.resolve()
 BLOG_ROOT = SCRIPT_DIR.parent
 
+# OKR 公共工具（进度看板 / 上期复盘 / 快照）
+sys.path.insert(0, str(SCRIPT_DIR))
+import okr_utils
+
 try:
     from dotenv import load_dotenv
     dotenv_path = BLOG_ROOT / ".env"
@@ -669,19 +673,19 @@ class FeishuWeeklyReporter:
             plan.extend([
                 {"task": "Cloudflare 配置 www → 裸域名 301 永久重定向，统一 canonical", "priority": "high", "period": "3天内"},
                 {"task": "补全全站 OG / Twitter Card 社交预览标签，修复零分享预览问题", "priority": "high", "period": "3天内"},
-                {"task": "GSC 验证域名、提交 sitemap，手动请求 5 篇核心文章索引", "priority": "high", "period": "3天内"},
+                {"task": "GSC 验证域名、提交 sitemap，手动请求 5 篇核心文章索引", "priority": "high", "period": "3天内", "kr_id": "gsc", "target": 300},
                 {"task": "全局批量修正 Joran 旅居年限文案，统一为 5 年标准表述", "priority": "high", "period": "3天内"},
-                {"task": "完成全站联盟链接覆盖，目标覆盖率 100%", "priority": "high", "period": "本周"},
-                {"task": "深度优化张家界、成都火锅 2 篇核心文章，扩充至 2000+ 字", "priority": "high", "period": "本周"}
+                {"task": "完成全站联盟链接覆盖，目标覆盖率 100%", "priority": "high", "period": "本周", "kr_id": "revenue", "target": 30},
+                {"task": "深度优化张家界、成都火锅 2 篇核心文章，扩充至 2000+ 字", "priority": "high", "period": "本周", "kr_id": "content", "target": 5}
             ])
 
         if risks.get("yellow"):
             plan.extend([
-                {"task": "启用 Travelpayouts Drive 自动推荐组件", "priority": "medium", "period": "本周"},
-                {"task": "发布 3 篇高转化长尾攻略（支付 / 签证 / 交通）", "priority": "medium", "period": "本周"},
+                {"task": "启用 Travelpayouts Drive 自动推荐组件", "priority": "medium", "period": "本周", "kr_id": "revenue", "target": 30},
+                {"task": "发布 3 篇高转化长尾攻略（支付 / 签证 / 交通）", "priority": "medium", "period": "本周", "kr_id": "content", "target": 5},
                 {"task": "Reddit / Quora 铺设 3 条问答外链，实现零突破", "priority": "medium", "period": "本周"},
                 {"task": "社媒标准化模板落地，每日稳定更新", "priority": "medium", "period": "本周"},
-                {"task": "上线免费订阅诱饵（7 天中国行程模板）", "priority": "medium", "period": "本周"}
+                {"task": "上线免费订阅诱饵（7 天中国行程模板）", "priority": "medium", "period": "本周", "kr_id": "email", "target": 10}
             ])
 
         plan.extend([
@@ -798,6 +802,12 @@ class FeishuWeeklyReporter:
         print("8️⃣ 复盘上周计划...")
         last_week_review = self._review_last_week_plan(data)
         data["last_week_review"] = last_week_review
+
+        print("9️⃣ 生成 OKR 进度与复盘...")
+        data["okr_section"] = okr_utils.build_okr_section(data, "weekly")
+        prev_key = okr_utils.period_key("weekly", datetime.now() - timedelta(days=7))
+        prev_snap = okr_utils.load_snapshot("weekly", prev_key)
+        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data)
 
         return data
 
@@ -919,11 +929,19 @@ class FeishuWeeklyReporter:
         red_risks = risks.get("red", [])
         yellow_risks = risks.get("yellow", [])
 
-        last_week_review = data.get("last_week_review", [])
-        review_rows = []
-        for item in last_week_review:
-            priority_icon = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(item["priority"], "⚪")
-            review_rows.append(f"| {item['task']} | {priority_icon} | {item['status']} | - |")
+        okr_review = data.get("okr_review", [])
+        if okr_review:
+            # OKR 快照复盘优先（跨期计划真实数据判定）
+            review_rows = [f"| {r['task']} | {r['icon']} | {r['status']} | {r['period']} |" for r in okr_review]
+            review_title = "✅ 上周计划复盘（OKR 对齐）"
+        else:
+            # 首次运行无快照，回退旧 PDCA 复盘
+            last_week_review = data.get("last_week_review", [])
+            review_rows = []
+            for item in last_week_review:
+                priority_icon = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(item["priority"], "⚪")
+                review_rows.append(f"| {item['task']} | {priority_icon} | {item['status']} | - |")
+            review_title = "✅ PDCA · 上周计划复盘（快照建立后自动切换 OKR 复盘）"
 
         next_week_plan = data.get("next_week_plan", [])
         plan_rows = []
@@ -1105,8 +1123,8 @@ class FeishuWeeklyReporter:
 """ + "\n".join(cat_lines)
 
         review_section = f"""---
-## ✅ PDCA · 上周计划复盘
-| 计划项 | 优先级 | 状态 | 备注 |
+## {review_title}
+| 计划项 | 优先级 | 状态 | 周期 |
 | :--- | :--- | :--- | :--- |
 """ + "\n".join(review_rows) + ("\n| - | - | - | - |" if not review_rows else "")
 
@@ -1162,6 +1180,7 @@ class FeishuWeeklyReporter:
             },
             "elements": [
                 {"tag": "div", "text": {"tag": "lark_md", "content": core_kpi_table}},
+                ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}} if data.get("okr_section") else None),
                 {"tag": "div", "text": {"tag": "lark_md", "content": channel_table}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": pages_table}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": seo_section}},
@@ -1175,6 +1194,8 @@ class FeishuWeeklyReporter:
                 {"tag": "div", "text": {"tag": "lark_md", "content": "\n---\n💡 本周报由自动化脚本生成 | 每周一早 08:00 自动推送\n📐 数据口径：流量数据来自 GA4，联盟数据来自 Travelpayouts，内容巡检为本地 Markdown 扫描结果，SEO 数据待 GSC 授权后补全。\n如数据异常，请核查 API 密钥与站点配置"}}
             ]
         }
+        # 过滤空板块（None 占位）
+        card["elements"] = [el for el in card["elements"] if el]
 
         return card
 
@@ -1185,6 +1206,10 @@ class FeishuWeeklyReporter:
         print("=" * 60)
 
         data = self.collect_data()
+
+        # 保存 OKR 快照（计划=下周计划，供下期复盘；CI 中由 workflow 提交回 git）
+        okr_utils.save_snapshot("weekly", okr_utils.period_key("weekly"), data.get("next_week_plan", []), data)
+
         print("📝 构建飞书卡片...")
         card = self.build_weekly_card(data)
         print("📤 发送飞书消息...")
