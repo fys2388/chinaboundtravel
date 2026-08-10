@@ -242,7 +242,7 @@ async function handlePublish(request, env, ctx) {
     }
 
     // ========== 内容去重检查 ==========
-    const contentKey = `${title}::${postUrl || ''}`;
+    const contentKey = `${title}::${postUrl || ''}::${body.custom_text ? body.custom_text.slice(0, 60) : 'default'}`;
     const contentHash = await sha256(contentKey);
     const dedupKey = `dedup:${contentHash}`;
     const alreadyPosted = await env.KV_STORE.get(dedupKey);
