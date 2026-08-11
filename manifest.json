@@ -1,9 +1,9 @@
 {
-  "month_post_count": 9,
+  "month_post_count": 10,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-10 08:23:34",
-  "daily_social_publish_date": "2026-08-10",
-  "daily_social_publish_count": 5,
+  "last_social_publish": "2026-08-11 01:30:13",
+  "daily_social_publish_date": "2026-08-11",
+  "daily_social_publish_count": 2,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -95,6 +95,12 @@
       "geo_region": "US",
       "category": "general",
       "create_date": "2026-08-10"
+    },
+    {
+      "topic": "Chinese Tea Culture: Where to Experience Authentic Teahouses",
+      "geo_region": "EU",
+      "category": "general",
+      "create_date": "2026-08-11"
     }
   ],
   "keyword_convert_rate": {
@@ -118,6 +124,7 @@
     "chinas-food-through-the-ages-guide",
     "shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide",
     "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home",
-    "china-bargaining-and-shopping-guide"
+    "china-bargaining-and-shopping-guide",
+    "chinese-tea-culture-where-to-experience-authentic-teahouses"
   ]
 }
