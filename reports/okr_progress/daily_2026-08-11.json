@@ -1,0 +1,13 @@
+{
+  "report_type": "daily",
+  "period": "2026-08-11",
+  "generated_at": "2026-08-11 03:03:00",
+  "plan": [],
+  "krs": {
+    "traffic": 6.0,
+    "content": 2.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 0.0
+  }
+}
