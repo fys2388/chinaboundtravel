@@ -32,6 +32,7 @@ BLOG_ROOT = SCRIPT_DIR.parent
 # OKR 公共工具
 sys.path.insert(0, str(SCRIPT_DIR))
 import okr_utils
+import report_advice
 
 try:
     from dotenv import load_dotenv
@@ -319,6 +320,9 @@ class FeishuYearlyReporter:
         if not plan:
             plan = [{"task": "持续内容与 SEO 增长，保持年度 OKR 滚动迭代", "priority": "medium", "period": "下一年"}]
         data["next_year_plan"] = plan
+
+        # 自动运营建议（基于真实数据精准生成）
+        data["advice_section"] = report_advice.advice_section(data, "yearly")
         return data
 
     # ---------- 卡片 ----------
@@ -376,6 +380,7 @@ class FeishuYearlyReporter:
                 {"tag": "div", "text": {"tag": "lark_md", "content": main}},
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}}
                  if data.get("okr_section") else None),
+                ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("advice_section", "")}} if data.get("advice_section") else None),
                 {"tag": "div", "text": {"tag": "lark_md", "content": review}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": plan}},
             ],

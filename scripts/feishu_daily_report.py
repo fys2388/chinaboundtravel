@@ -37,6 +37,7 @@ BLOG_ROOT = SCRIPT_DIR.parent
 # OKR 公共工具（进度看板 / 快照）
 sys.path.insert(0, str(SCRIPT_DIR))
 import okr_utils
+import report_advice
 
 # 加载 .env 文件
 try:
@@ -310,6 +311,7 @@ class FeishuDailyReporter:
             "elements": [
                 # === 0. OKR 进度速览 ===
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}} if data.get("okr_section") else None),
+                ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("advice_section", "")}} if data.get("advice_section") else None),
                 # === 1. 流量总览（GA4） ===
                 {
                     "tag": "div",
@@ -654,6 +656,9 @@ class FeishuDailyReporter:
 
         # 9. 当期 OKR 进度速览（季度目标）
         data["okr_section"] = okr_utils.build_okr_section(data, "daily")
+
+        # 10. 自动运营建议（基于真实数据精准生成）
+        data["advice_section"] = report_advice.advice_section(data, "daily")
         
         return data
     
