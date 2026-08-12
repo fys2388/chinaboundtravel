@@ -48,7 +48,7 @@ if not DEPS_OK:
 
 # -- 配置 -------------------------------------------------------------------
 load_dotenv()
-DEFAULT_API_KEY    = os.getenv("DEEPSEEK_API_KEY", "***REMOVED***")
+DEFAULT_API_KEY    = os.getenv("DEEPSEEK_API_KEY", "")
 DEFAULT_MODEL      = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
 DEFAULT_BASE_URL  = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
 MAILERLITE_API_KEY = os.getenv("MAILERLITE_API_KEY", "")

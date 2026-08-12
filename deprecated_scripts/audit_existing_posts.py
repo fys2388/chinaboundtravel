@@ -432,7 +432,7 @@ class PostAuditor:
 # ============================================================
 
 def resolve_api_key(provider: ModelProvider) -> str:
-    if provider == ModelProvider.DEEPSEEK: return os.environ.get("DEEPSEEK_API_KEY", "***REMOVED***")
+    if provider == ModelProvider.DEEPSEEK: return os.environ.get("DEEPSEEK_API_KEY", "")
     elif provider == ModelProvider.OPENAI: return os.environ.get("OPENAI_API_KEY", "")
     elif provider == ModelProvider.CLAUDE: return os.environ.get("ANTHROPIC_API_KEY", "")
     elif provider == ModelProvider.QWEN:    return os.environ.get("DASHSCOPE_API_KEY", "")

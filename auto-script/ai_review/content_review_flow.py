@@ -20,7 +20,7 @@ TAG_RULES = {
 }
 
 # 飞书 Webhook URL
-FEISHU_WEBHOOK_URL = "https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***"
+FEISHU_WEBHOOK_URL = os.getenv("FEISHU_WEBHOOK_URL", "")
 
 class ContentReviewFlow:
     def __init__(self):
@@ -150,6 +150,8 @@ class ContentReviewFlow:
         return str(archive_path)
     
     def send_feishu_alert(self, filepath, status, message):
+        if not FEISHU_WEBHOOK_URL:
+            return
         """发送飞书告警"""
         alert_message = {
             "msg_type": "interactive",

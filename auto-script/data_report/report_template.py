@@ -11,7 +11,7 @@ import os
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
-FEISHU_WEBHOOK_URL = "https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***"
+FEISHU_WEBHOOK_URL = os.getenv("FEISHU_WEBHOOK_URL", "")
 
 class DataReportGenerator:
     def __init__(self):
@@ -172,6 +172,9 @@ class DataReportGenerator:
         return json.dumps(report, ensure_ascii=False)
     
     def send_to_feishu(self, report_json: str) -> bool:
+        if not FEISHU_WEBHOOK_URL:
+            print("FEISHU_WEBHOOK_URL ????????")
+            return False
         """发送报告到飞书"""
         try:
             response = requests.post(

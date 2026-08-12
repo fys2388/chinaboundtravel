@@ -93,7 +93,7 @@ gh secret set FEISHU_WEBHOOK_URL
 ### 3. FEISHU_WEBHOOK_URL
 1. 打开飞书群聊 → **设置** → **群机器人**
 2. 添加自定义机器人
-3. 复制Webhook地址（格式：https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***）
+3. 复制Webhook地址（格式：https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***_FEISHU_WEBHOOK_ID）
 
 ### 4. DOUBAO_ARK_API_KEY
 1. 登录 https://console.volcengine.com/doubao

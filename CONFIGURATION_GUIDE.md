@@ -40,7 +40,7 @@
 
 **示例 Webhook**:
 ```
-https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***
+https://open.feishu.cn/open-apis/bot/v2/hook/***REMOVED***_FEISHU_WEBHOOK_ID
 ```
 
 ---
