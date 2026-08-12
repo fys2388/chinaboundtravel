@@ -165,8 +165,8 @@ ignoreFiles = ["/\\.archived/"]
   safetywing = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
   trip = "https://www.trip.com/"
   flight = "https://www.aviasales.com/?marker=730795"
-  worldnomads = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
-  allianz = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
+  worldnomads = "https://www.worldnomads.com/"
+  allianz = "https://www.allianztravelinsurance.com/"
   partnerizeUserId = "10111425644"
 
 [params.ebook]

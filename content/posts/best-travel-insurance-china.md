@@ -5,9 +5,12 @@ date = 2026-06-21
 lastmod = 2026-06-21
 categories = ["Practical Travel Tips"]
 tags = ["travel insurance", "china safety", "safetywing", "world nomads", "health insurance", "medical insurance China", "digital nomad insurance China"]
+featured = true
+ShowToc = true
+TocOpen = false
+
 [cover]
   image = "/images/hero-chengdu.jpg"
-featured = true
 +++
 
 {{< content-timestamp >}}
@@ -201,8 +204,8 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 After 5 years of travel and 2+ years of personal SafetyWing use, here's my advice:
 
 - 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — best overall value.
-- 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/cpc/?cid=1234567" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.
-- 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/affiliates/?aid=1234567" rel="nofollow sponsored" target="_blank">Choose World Nomads</a>.
+- 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.
+- 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/" rel="nofollow sponsored" target="_blank">Choose World Nomads</a>.
 
 **Whatever you do, don't travel to China without coverage.** The math is simple: one hospital visit can cost more than 5 years of travel insurance premiums.
 
@@ -228,11 +231,11 @@ Still have questions? Drop me a line by [Contacting Us](mailto:support@chinaboun
 
 ## You Might Also Like
 
-- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
-- [How to Use WeChat Pay as a Foreigner](posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — Step-by-step guide to mobile payments in China
-- [China High-Speed Rail Booking Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Book train tickets like a pro
-- [Ultimate China Visa Guide for Tourists](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough
-- [Is China Safe for Tourists?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — Honest safety assessment for 2026
+- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
+- [How to Use WeChat Pay as a Foreigner](/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) — Step-by-step guide to mobile payments in China
+- [China High-Speed Rail Booking Guide](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Book train tickets like a pro
+- [Ultimate China Visa Guide for Tourists](/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough
+- [Is China Safe for Tourists?](/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/) — Honest safety assessment for 2026
 
 
 {{< affiliate-flight >}}
