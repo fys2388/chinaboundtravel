@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-acae8a973429"
 title: "Foodie's Guide to China: Dishes You Must Try"
 date: "2026-07-23T10:00:00+08:00"
 lastmod: "2026-07-23T10:00:00+08:00"

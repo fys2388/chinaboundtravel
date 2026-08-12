@@ -1,4 +1,5 @@
 +++
+content_id = "cbt-d701fb08eb7b"
 title = "Best Travel Insurance for China 2026"
 description = "Compare the best travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."
 date = 2026-06-21

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-dfe3904705ea"
 title: "China Travel Safety 2026: Guide for Travelers"
 date: "2026-07-20T10:00:00+08:00"
 lastmod: "2026-07-20T10:00:00+08:00"

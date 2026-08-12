@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-b4ff4381a014"
 title: "144-Hour Visa-Free Transit in China (2026 Guide)"
 date: '2026-05-19T10:00:00+08:00'
 draft: false

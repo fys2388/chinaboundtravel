@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-07563e9b51cc"
 title: "How to Use Alipay & WeChat Pay in China (2026)"
 author: Joran
 date: "2026-05-19T12:00:00+08:00"

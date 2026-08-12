@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-34777b6c17c1"
 
 title: "Zhangjiajie Guide: Avatar Mountains & Itinerary"
 date: "2026-06-30T10:00:00+08:00"

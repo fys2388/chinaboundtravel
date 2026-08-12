@@ -1,7 +1,18 @@
 /**
  * Stripe Webhook Handler - PRODUCTION
  * POST /api/stripe-webhook
+ *
+ * P0-4 changes:
+ *  - Signature verification now uses local HMAC-SHA256 via WebCrypto
+ *    (previously called a non-existent Stripe endpoint which always failed).
+ *  - Idempotency: repeated deliveries of the same event are safe.
+ *    Layer 1: optional Cloudflare KV binding PROCESSED_EVENTS (feature-detected).
+ *    Layer 2: Resend `Idempotency-Key` derived from event.id (server-side dedup).
+ *  - Business logic unchanged: checkout.session.completed -> send ebook email.
  */
+
+const EBOK_URL_DEFAULT = 'https://www.chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
+const SIGNATURE_TOLERANCE_SECONDS = 300;
 
 export async function onRequestPost({ request, env }) {
   const corsHeaders = {
@@ -17,7 +28,7 @@ export async function onRequestPost({ request, env }) {
   try {
     const stripeWebhookSecret = env.STRIPE_WEBHOOK_SECRET;
     const resendApiKey = env.RESEND_API_KEY;
-    const ebookUrl = env.EBOOK_URL || 'https://www.chinaboundtravel.com/ebook/china-bound-travel-guide.pdf';
+    const ebookUrl = env.EBOOK_URL || EBOK_URL_DEFAULT;
 
     if (!stripeWebhookSecret || !resendApiKey) {
       return jsonResponse({ error: 'Missing environment variables' }, 500, corsHeaders);
@@ -26,38 +37,44 @@ export async function onRequestPost({ request, env }) {
     const signature = request.headers.get('stripe-signature');
     const body = await request.text();
 
-    let event;
-    try {
-      const response = await fetch('https://api.stripe.com/v1/webhook/signature/verify', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Bearer ${env.STRIPE_SECRET_KEY}`,
-        },
-        body: new URLSearchParams({
-          secret: stripeWebhookSecret,
-          payload: body,
-          signature,
-        }),
-      });
-
-      if (!response.ok) {
-        return jsonResponse({ error: 'Invalid webhook signature' }, 400, corsHeaders);
-      }
-
-      event = JSON.parse(body);
-    } catch (err) {
-      return jsonResponse({ error: err.message }, 400, corsHeaders);
+    // Verify signature locally with HMAC-SHA256 (Stripe webhook scheme: t=<ts>,v1=<hex>)
+    const valid = await verifyStripeSignature(body, signature, stripeWebhookSecret);
+    if (!valid) {
+      return jsonResponse({ error: 'Invalid webhook signature' }, 400, corsHeaders);
     }
 
-    if (event.type === 'checkout.session.completed') {
+    const event = JSON.parse(body);
+    const eventId = event.id || '';
+    const eventType = event.type || '';
+
+    // Idempotency layer 1: KV-based processed-event tracking (optional binding).
+    const kv = env.PROCESSED_EVENTS || null;
+    if (kv && eventId) {
+      const seen = await kv.get(`evt:${eventId}`).catch(() => null);
+      if (seen) {
+        return jsonResponse({ received: true, duplicate: true }, 200, corsHeaders);
+      }
+    }
+
+    if (eventType === 'checkout.session.completed') {
       const session = event.data.object;
       const customerEmail = session.customer_email;
       const plan = session.metadata?.plan || 'unknown';
 
       if (customerEmail) {
-        await sendEmail(customerEmail, plan, ebookUrl, resendApiKey);
+        // Idempotency layer 2: deterministic idempotency key -> Resend dedupes
+        // repeated sends of the same logical email even without KV.
+        await sendEmail(customerEmail, plan, ebookUrl, resendApiKey, eventId);
       }
+    }
+
+    // Mark processed only after the core action succeeded, so a failed send can retry.
+    if (kv && eventId) {
+      await kv.put(
+        `evt:${eventId}`,
+        JSON.stringify({ id: eventId, type: eventType, processed_at: new Date().toISOString() }),
+        { expirationTtl: 60 * 60 * 24 * 7 }
+      ).catch(() => {});
     }
 
     return jsonResponse({ received: true }, 200, corsHeaders);
@@ -68,7 +85,54 @@ export async function onRequestPost({ request, env }) {
   }
 }
 
-async function sendEmail(email, plan, ebookUrl, apiKey) {
+/**
+ * Verify a Stripe webhook signature using WebCrypto (HMAC-SHA256).
+ * Header format: t=<timestamp>,v1=<hex signature>
+ * Expected HMAC input: `${timestamp}.${payload}` keyed by the webhook secret.
+ */
+export async function verifyStripeSignature(payload, signatureHeader, secret) {
+  if (!signatureHeader) return false;
+  const parts = {};
+  for (const item of signatureHeader.split(',')) {
+    const [key, value] = item.split('=');
+    if (key && value) parts[key.trim()] = value.trim();
+  }
+  const timestamp = parts['t'];
+  const providedSignature = parts['v1'];
+  if (!timestamp || !providedSignature) return false;
+
+  // Replay protection: reject signatures older than the tolerance window.
+  const now = Math.floor(Date.now() / 1000);
+  if (Math.abs(now - parseInt(timestamp, 10)) > SIGNATURE_TOLERANCE_SECONDS) return false;
+
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    'raw',
+    encoder.encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+  const signatureBuffer = await crypto.subtle.sign(
+    'HMAC',
+    key,
+    encoder.encode(`${timestamp}.${payload}`)
+  );
+
+  const expected = [...new Uint8Array(signatureBuffer)].map((b) => b.toString(16).padStart(2, '0')).join('');
+  return constantTimeEqual(expected, providedSignature.toLowerCase());
+}
+
+function constantTimeEqual(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
+
+async function sendEmail(email, plan, ebookUrl, apiKey, eventId) {
   const subject = 'Your ChinaBound Travel Guide Download';
   const html = `
     <h1>Welcome to ChinaBound Travel!</h1>
@@ -81,12 +145,18 @@ async function sendEmail(email, plan, ebookUrl, apiKey) {
     <p>Best regards,<br>The ChinaBound Travel Team</p>
   `;
 
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${apiKey}`,
+  };
+  if (eventId) {
+    // Deterministic idempotency key: duplicate webhook deliveries cannot send the email twice.
+    headers['Idempotency-Key'] = `stripe-${eventId}`;
+  }
+
   await fetch('https://api.resend.com/emails', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
-    },
+    headers,
     body: JSON.stringify({
       from: 'ChinaBound Travel <hello@chinaboundtravel.com>',
       to: email,

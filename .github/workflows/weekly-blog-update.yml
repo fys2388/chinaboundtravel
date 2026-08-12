@@ -10,6 +10,12 @@ permissions:
   pages: write
   actions: write
 
+concurrency:
+  # Content generation writes to main and must NOT be cancelled by a newer run;
+  # overlapping runs are queued instead (cancel-in-progress: false).
+  group: joran-blog-generation
+  cancel-in-progress: false
+
 jobs:
   generate-blog:
     runs-on: ubuntu-latest
@@ -111,6 +117,11 @@ jobs:
       - name: Rebuild after auto-fix
         if: steps.auto-fix.outputs.fixed == 'true'
         run: hugo --gc --minify
+
+      - name: Enforce high-risk content human gate (P0-5)
+        run: |
+          echo "=== Enforcing risk gate (HIGH-risk content must NOT auto-publish) ==="
+          python scripts/check_risk_gate.py
 
       - name: Commit and push all changes
         run: |

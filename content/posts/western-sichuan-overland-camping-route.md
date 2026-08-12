@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-80f6c218ad94"
 title: "Western Sichuan Overland Camping Route: 7 Days"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'

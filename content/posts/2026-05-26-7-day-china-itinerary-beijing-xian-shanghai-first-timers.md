@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-c885da2cf5d9"
 title: "7-Day China Itinerary: Beijing, Xi'an & Shanghai"
 slug: "7-day-china-itinerary-beijing-xian-shanghai-first-timers"
 description: "First-timer 7-day China itinerary: Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund, with honest costs and pro tips."

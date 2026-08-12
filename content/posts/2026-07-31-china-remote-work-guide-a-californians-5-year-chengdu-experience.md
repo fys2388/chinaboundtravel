@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-92448be1e0ca"
 title: "China Remote Work Guide: 5 Years in Chengdu"
 date: "2026-07-31T10:00:00+08:00"
 lastmod: "2026-07-31T10:00:00+08:00"

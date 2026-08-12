@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-0953b5433c00"
 title: "China Cultural Etiquette Guide: Dos and Don'ts"
 date: "2026-07-21T10:00:00+08:00"
 lastmod: "2026-07-21T10:00:00+08:00"

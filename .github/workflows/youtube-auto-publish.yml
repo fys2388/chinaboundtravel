@@ -14,6 +14,10 @@ on:
         default: false
         type: boolean
 
+concurrency:
+  group: youtube-auto-publish
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest

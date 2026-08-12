@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-4e09fa4aa93d"
 title: "China High-Speed Trains: Booking & Insider Tips"
 date: "2026-07-04T10:00:00+08:00"
 lastmod: "2026-07-04T10:00:00+08:00"

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-067675763415"
 title: "How Chinese Food Evolved: 2 Million Years of History"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-575e18482ca0"
 title: China Just Made It WAY Easier to Visit (My Mother-in-Law is STOKED)
 date: '2026-06-02T10:00:00+08:00'
 draft: true

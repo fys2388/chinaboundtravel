@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-707a8899c0a7"
 title: "How to Use WeChat Pay as a Foreigner (2026)"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran

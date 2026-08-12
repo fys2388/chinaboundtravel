@@ -1,4 +1,5 @@
 +++
+content_id = "cbt-17c6738ffb32"
 title = "China Transportation Guide: Trains, Subways & Taxis"
 description = "Getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival."
 date = 2026-07-16

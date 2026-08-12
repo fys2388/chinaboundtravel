@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-302467d853db"
 title: "Shanghai 48-Hour Guide: Bund & French Concession"
 slug: "shanghai-bund-french-concession-2-day-guide"
 date: 2026-05-24T09:00:00+08:00

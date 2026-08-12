@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-277de627eb2d"
 title: "Hangzhou Travel Guide: West Lake & Tea Culture"
 slug: "hangzhou-west-lake-tea-culture-g20-guide"
 date: 2026-05-23T09:00:00+08:00

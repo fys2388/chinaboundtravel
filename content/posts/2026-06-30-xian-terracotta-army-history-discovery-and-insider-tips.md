@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-d7747b73c978"
 
 title: "Xi'an Terracotta Army: Tickets, Tips & History"
 date: "2026-06-30T10:00:00+08:00"

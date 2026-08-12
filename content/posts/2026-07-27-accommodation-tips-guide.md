@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-baa2f6fba2f0"
 title: "Where to Stay in China: Complete 2026 Guide"
 date: "2026-07-27T10:00:00+08:00"
 lastmod: "2026-07-27T10:00:00+08:00"

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-bf4ec5e57a07"
 title: "Guilin & Yangshuo: Complete 2026 Travel Guide"
 date: "2026-07-03T10:00:00+08:00"
 lastmod: "2026-07-03T10:00:00+08:00"

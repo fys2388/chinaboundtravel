@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-407090802298"
 title: Shanghai Like a Local  Hidden Neighborhoods Tourists Never Find
 date: '2026-06-02T10:00:00+08:00'
 draft: true

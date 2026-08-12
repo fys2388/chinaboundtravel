@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-5479873d6104"
 title: "China Food Guide: Must-Try Dishes & Restaurants"
 date: "2026-07-10T10:00:00+08:00"
 lastmod: "2026-07-10T10:00:00+08:00"

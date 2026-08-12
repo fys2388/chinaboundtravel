@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-23c31fe5b281"
 title: "Yunnan Travel Guide: Rice Terraces & Ancient Towns"
 date: "2026-07-05T10:00:00+08:00"
 lastmod: "2026-07-05T10:00:00+08:00"

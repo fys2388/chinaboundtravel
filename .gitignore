@@ -40,3 +40,7 @@ test_google_api.py
 
 # Wrangler temp files
 buffer-worker/.wrangler/tmp/
+
+# YouTube OAuth credentials (never commit)
+chinaboundtravel_social_bot/youtube_client_secrets.json
+chinaboundtravel_social_bot/youtube_refresh_token.txt

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-bfeaa5ca9007"
 title: "China Photography Guide: Best Spots & Tips"
 date: "2026-08-01T10:00:00+08:00"
 lastmod: "2026-08-01T10:00:00+08:00"

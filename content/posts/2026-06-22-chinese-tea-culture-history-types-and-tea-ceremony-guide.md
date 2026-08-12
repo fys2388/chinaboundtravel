@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-698862ce2129"
 
 title: "Chinese Tea Culture: History, Types & Ceremony"
 cover:

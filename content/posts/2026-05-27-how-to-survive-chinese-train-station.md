@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-6f28480baea0"
 title: "Chinese Train Stations: Survival Guide for Travelers"
 date: 2026-05-23T09:00:00+08:00
 draft: false

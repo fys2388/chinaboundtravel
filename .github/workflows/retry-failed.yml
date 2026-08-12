@@ -2,9 +2,13 @@ name: Retry Failed Jobs
 
 on:
   workflow_run:
-    workflows: ["Weekly Blog Update", "Social Media Distributor", "Content Rotation Distributor"]
+    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor"]
     types: [completed]
     branches: [main]
+
+concurrency:
+  group: retry-failed-jobs
+  cancel-in-progress: false
 
 jobs:
   check-and-retry:

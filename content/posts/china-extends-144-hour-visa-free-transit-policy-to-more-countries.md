@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-244822dc113b"
 title: "China's 144-Hour Visa-Free Transit: 15 New Countries"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'

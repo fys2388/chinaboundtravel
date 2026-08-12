@@ -198,11 +198,11 @@ GEO_WEIGHTS = [40, 35, 25]
 
 # 人设差异化结尾（轮换使用，避免重复）
 JORAN_ENDINGS = [
-    "from a US expat based in Chengdu",
-    "from on-the-ground experience in China",
-    "curated by a US-based China travel expert",
-    "real tips from someone living in China since 2016",
-    "by an American expat with 10 years in China"
+    "from the ChinaBound Travel editorial team",
+    "researched and verified by the ChinaBound Travel editors",
+    "curated by the ChinaBound Travel editorial desk",
+    "based on official sources and verified traveler guidance",
+    "compiled by the ChinaBound Travel editorial team in China"
 ]
 
 # 品类模板定义
@@ -414,14 +414,37 @@ TOPIC_LIBRARY = {
 
 AUTHOR_CFG = {
     "name": "Joran",
-    "identity": "American from California, long-term resident living in Chengdu over 10 years, movie buff",
-    "view": "first-person personal travel experience with humorous movie references",
-    "tone": "witty, humorous, conversational blogger writing style with movie analogies",
-    "forbid": ["randomly add Los Angeles/San Francisco without contextual demand", "shift to third-person narration", "fabricate travel cost data", "write extensively about overseas travel or movie plots"]
+    "role": "Editorial Persona for ChinaBound Travel - the site's editorial voice, NOT a fictional traveler",
+    "identity": "Editorial persona of ChinaBound Travel; a witty, well-informed China travel editor. No fabricated personal travel backstory.",
+    "view": "editorial first-person voice used ONLY for framing and guidance; NEVER invent personal travel experiences, hotel stays, visits, family stories, or conversations",
+    "tone": "witty, humorous, conversational editor voice with movie analogies",
+    "forbid": [
+        "fabricate personal travel experiences, hotel stays, or physical presence",
+        "invent family/partner experiences or conversations with locals",
+        "invent quotes from locals or travelers",
+        "fabricate travel cost data, prices, or statistics",
+        "claim an expat backstory in China",
+        "geo-specific greetings (e.g., 'Hey there, Aussie travelers!')",
+        "shift to third-person narration",
+        "write extensively about overseas travel or movie plots"
+    ]
 }
 
 MAX_DAILY_RETRY = 3
 FEISHU_WEBHOOK = os.getenv("FEISHU_WEBHOOK_URL")
+
+def load_governance_config():
+    """Load unified content governance rules (persona + risk levels) from config/content_governance.json."""
+    cfg_path = BASE_DIR / "config" / "content_governance.json"
+    try:
+        if cfg_path.exists():
+            with open(cfg_path, "r", encoding="utf-8-sig") as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"[WARN] Failed to load governance config: {e}")
+    return {"persona": {"rules": [], "forbidden_phrases": []}, "risk_levels": {}}
+
+GOVERNANCE_CONFIG = load_governance_config()
 
 class BlogAIClient:
     """统一的博客AI客户端 - 使用豆包API"""
@@ -807,7 +830,8 @@ class AIEngine:
         rules.append("  - Include AT LEAST 5 core topics with detailed sub-points")
         rules.append("  - Include AT LEAST 8 practical tips with specific details")
         rules.append("  - Include AT LEAST 2 deep analysis points (cultural background, history)")
-        rules.append("  - Include AT LEAST 2 personal stories/first-person experiences")
+        rules.append("  - Include AT LEAST 2 editorial framing moments (e.g., \"In this guide, I will walk you through...\")")
+        rules.append("  - NEVER invent personal travel experiences, hotel stays, visits, family stories, or conversations")
         rules.append("  - ALL data must be verifiable (prices, times, addresses)")
         rules.append("  - NO factual errors - verify all information")
         rules.append("  - description/summary must be UNIQUE per article (120-155 chars)")
@@ -818,19 +842,20 @@ class AIEngine:
         
         rules.append("")
         rules.append("ORIGINALITY RULES (CRITICAL):")
-        rules.append("  - Write from FIRST-PERSON perspective (as an American expat in Chengdu)")
+        rules.append("  - Write in EDITORIAL first-person as Joran (ChinaBound Travel editor) - NEVER as a traveler with personal experiences")
         rules.append("  - Provide UNIQUE insights not found elsewhere")
         rules.append("  - Use CONVERSATIONAL tone - avoid AI-generated robotic language")
-        rules.append("  - Include PERSONAL experiences (e.g., \"I remember my first trip...\")")
-        rules.append("  - Add SPECIFIC details (prices, bus numbers, opening hours)")
+        rules.append("  - NEVER claim personal experiences (e.g., \"I remember my first trip...\", \"I stayed at...\", \"My wife and I...\")")
+        rules.append("  - Editorial first-person is allowed only for framing (e.g., \"In this guide, I will cover...\")")
+        rules.append("  - Add SPECIFIC, verifiable details (prices, bus numbers, opening hours) attributed to sources")
         rules.append("  - Avoid generic descriptions - focus on unique aspects")
         rules.append("  - NO generic travel guide language - be specific and authentic")
         
         rules.append("")
         rules.append("WRITING STRUCTURE RULES:")
-        rules.append("  - INTRO: Start with personal story → explain topic importance → promise value")
-        rules.append("  - BODY: Each H2 section = Topic intro → Deep analysis → Practical tips → Personal story")
-        rules.append("  - CONCLUSION: Summarize key points → Reiterate value → CTA → Related links")
+        rules.append("  - INTRO: Start with a strong editorial hook (question, verified fact, or reader scenario) - NEVER a fabricated personal story")
+        rules.append("  - BODY: Each H2 section = Topic intro - Deep analysis - Practical tips - Verified example")
+        rules.append("  - CONCLUSION: Summarize key points - Reiterate value - CTA - Related links")
         rules.append("  - Use ACTIONABLE tips format: \"Actionable tip: [specific advice] - [why it works]\"")
         rules.append("  - Grab attention in 3 seconds with engaging opening")
         
@@ -851,6 +876,17 @@ class AIEngine:
         rules.append("  - Focus ONLY on travel, culture, food, transportation, and practical tips")
         rules.append("  - If discussing history, focus on ancient history (dynasty era) only")
         rules.append("  - Avoid any modern political or social commentary")
+        
+        rules.append("")
+        rules.append("JORAN EDITORIAL PERSONA RULES (MANDATORY):")
+        persona_rules = GOVERNANCE_CONFIG.get("persona", {}).get("rules", [])
+        if persona_rules:
+            for rule in persona_rules:
+                rules.append(f"  - {rule}")
+        else:
+            rules.append("  - Joran is an editorial persona of ChinaBound Travel, not a fictional traveler")
+            rules.append("  - NEVER fabricate personal travel experiences, hotel stays, visits, family stories, or conversations")
+        rules.append("  - NEVER use these fabricated first-person patterns: 'I stayed at', 'I visited', 'My wife and I', 'When I traveled to', 'I personally experienced', 'I booked', 'I tried'")
         
         return "\n".join(rules)
     
@@ -923,17 +959,19 @@ class AIEngine:
                 post_index_section += f"- [{title}](https://www.chinaboundtravel.com/posts/{slug}/)  (tags: {tags})\n"
             post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
-        prompt = f"""Joran: California American who has lived in Chengdu for 5 years. I'm a movie buff and travel blogger with a witty, conversational writing style.
+        prompt = f"""Joran is the EDITORIAL PERSONA of ChinaBound Travel (a China travel information platform). Joran is an editorial voice, NOT a fictional traveler. Never invent personal travel experiences, hotel stays, physical presence, family stories, or conversations.
 
-Write an IN-DEPTH, DETAILED, HUMOROUS FIRST-PERSON travel blog post about: {topic}
+Write an IN-DEPTH, DETAILED, HUMOROUS editorial travel guide in Joran's voice about: {topic}
 Audience: {region_context[geo_region]["audience_hint"]}
 
 IMPORTANT PERSONA RULES:
-- ALWAYS write as Joran (California native, 5 years in Chengdu) - NEVER change your voice or greeting based on audience
+- ALWAYS write as Joran (ChinaBound Travel editor) - NEVER change your voice or greeting based on audience
 - NEVER start with "Hey there, [country] travelers!" or any geo-specific greeting
-- Use a universal, warm opening like "If you're planning a trip to..." or "Let me tell you about..." or start with a personal story
+- Use a universal, warm editorial opening like "If you're planning a trip to..." or "China has changed a lot in recent years..."
+- NEVER use "I stayed at...", "I visited...", "My wife and I...", "When I traveled to...", "I booked...", "I tried..." or any fabricated first-person experience
+- Editorial first-person is allowed ONLY for framing (e.g., "In this guide, I will walk you through the visa steps")
 - Geo-region affects ONLY practical details: mention {region_context[geo_region]["currency"]} for prices, note "{region_context[geo_region]["visa_note"]}" when discussing visas
-- Your California personality stays CONSISTENT regardless of who's reading
+- Your editorial voice stays CONSISTENT regardless of who's reading
 
 SEO Keywords to include naturally: {', '.join(seo_keywords) if seo_keywords else 'China travel, Chengdu, travel tips'}
 
@@ -958,13 +996,8 @@ User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 Requirements for HIGH-QUALITY CONTENT:
 1. TONE: Conversational, witty, authoritative - like chatting with a trusted friend who's been there and done it
 2. DEPTH: Provide EXTREMELY detailed, actionable insights - NO surface-level tips. Go DEEP into topics.
-3. PERSONAL ANECDOTES: Include MULTIPLE SPECIFIC stories from my 5 years in China:
-   - Funny mishaps (getting lost, language barriers, cultural misunderstandings)
-   - Street food adventures (specific stalls, weird foods tried)
-   - Transportation stories (crazy taxi rides, subway experiences)
-   - Personal connections (local friends, unexpected friendships)
-   - Cultural immersion moments (learning to cook Sichuan food, celebrating Chinese holidays)
-4. COMPARISONS: Mention California roots NATURALLY for humorous comparison (e.g., "In LA we have In-N-Out, but in Chengdu...", "This is like Disneyland but with pandas and spicy noodles")
+3. VERIFIED CONTENT: NEVER invent personal stories, quotes, or experiences. Do not write "I remember...", "I stayed...", "my wife and I...", or any claimed personal history. Use editorial framing and reader scenarios instead (e.g., "If you are arriving at Shanghai Pudong for the first time...").
+4. HUMOR: Use witty, editorial humor and light cultural comparisons - never claim a personal backstory or physical presence in China
 5. MOVIE REFERENCES: Include 3-4 HILARIOUS movie analogies (e.g., comparing subway crowds to 'The Hunger Games', bargaining like 'Ocean's Eleven', Chinese bureaucracy like 'The Matrix', finding good street food like 'Indiana Jones searching for the Holy Grail')
 6. LENGTH: MINIMUM 2500 words - provide ULTRA-COMPREHENSIVE coverage with EXTREME DETAILS
 7. STRUCTURE: 
@@ -972,7 +1005,7 @@ Requirements for HIGH-QUALITY CONTENT:
    - 6-8 EXTREMELY DETAILED H2 sections (##) with MULTIPLE SUBPOINTS and CONCRETE EXAMPLES
    - Each section MUST have CLEAR PRACTICAL takeaways/summary box
    - MEMORABLE conclusion with heartfelt call to action and personal reflection
-   - Include QUOTES from locals or fellow travelers for authenticity
+   - NEVER invent quotes or testimonials from locals, travelers, or hotel staff - attribute statements to real, named sources or do not quote
 8. INTERNAL LINKS: Include at least 6 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list above - pick 6+ articles related to the topic and link to them with natural anchor text. Use format: [anchor text](https://www.chinaboundtravel.com/posts/slug/). NEVER invent URLs that are not in the article list.
 9. IMAGE PLACEHOLDERS: MUST include EXACTLY 3 image placeholders:
    - One RIGHT AFTER the introduction
@@ -1042,10 +1075,12 @@ Requirements:
    - One IN the MIDDLE of the article
    - Format: [Image:detailed description of the scene, including subject, setting, mood]
    - STRICT RULE: Image descriptions MUST NOT include people, persons, faces, portraits, or any living creatures. ONLY landscapes, architecture, food, objects.
-5. Keep Joran persona: California native, 10+ years in Chengdu, witty, movie references
+5. Keep Joran EDITORIAL persona: witty China travel editor with movie references
    - IMPORTANT: NEVER start with geo-specific greetings like "Hey there, Aussie travelers!"
+   - NEVER add fabricated personal experiences ("I stayed at...", "I visited...", "My wife and I...", "When I traveled to...", quotes from locals)
+   - Editorial first-person is allowed only for framing (e.g., "In this guide, I will cover...")
    - Your voice stays CONSISTENT regardless of audience
-6. Add more personal anecdotes and actionable tips
+6. Add more editorial insights, verified details, and actionable tips
 7. Original topic: {topic}
 8. Audience region: {region_context[geo_region]["origin"]} - use {region_context[geo_region]["currency"]} for prices
 9. MAIN FOCUS must be China travel
@@ -1172,6 +1207,17 @@ class ChiefEditor:
             if w in content_lower:
                 errors.append(f"【风控】正文含违规词汇:{w}")
                 error_types.append("sensitive")
+        
+        # 【Persona 治理】拦截虚构的第一人称个人经历（P0-1）
+        try:
+            from scripts.persona_guard import PersonaGuard
+            persona_violations = PersonaGuard().check(content)
+            if persona_violations:
+                for v in persona_violations[:5]:
+                    errors.append(f"【Persona治理】{v}")
+                error_types.append("persona")
+        except Exception as e:
+            print(f"[WARN] PersonaGuard unavailable: {e}")
         
         return len(errors) == 0, errors, error_types, word_count
 
@@ -1447,11 +1493,18 @@ class BlogGenerator:
         seo_description = generate_seo_description(topic, title)
         seo_summary = seo_description  # summary 也使用同一描述
         
+        # 稳定的 content_id（不依赖标题；与 scripts/content_id_audit.py 使用同一锚点算法）
+        content_id = "cbt-" + hashlib.sha256(f"https://www.{SITE_DOMAIN}/posts/{slug}/".encode("utf-8")).hexdigest()[:12]
+        # 风险分级（P0-5：HIGH 内容必须人工审核后才能发布）
+        risk_level = self._classify_risk(topic)
+        
         return {
             "title": title,
             "date": date,
             "lastmod": date,
             "author": "Joran",
+            "content_id": content_id,
+            "risk_level": risk_level,
             "slug": slug,
             "tags": tags,
             "categories": ["China"],
@@ -1465,6 +1518,16 @@ class BlogGenerator:
             "TocOpen": "false",
             "weight": 1
         }
+    
+    def _classify_risk(self, topic):
+        """按 config/content_governance.json 的关键词对选题进行风险分级（high/medium/low）。"""
+        risk_levels = GOVERNANCE_CONFIG.get("risk_levels", {})
+        topic_lower = (topic or "").lower()
+        for level in ("high", "medium", "low"):
+            keywords = risk_levels.get(level, {}).get("keywords", [])
+            if any(k.lower() in topic_lower for k in keywords):
+                return level
+        return GOVERNANCE_CONFIG.get("publish_flow", {}).get("missing_default", "medium")
     
     def validate_content_quality(self, content, title, topic):
         """Post-generation quality validation. Returns (passed, issues_list)."""
@@ -1591,6 +1654,22 @@ class BlogGenerator:
         
         with open(draft_path, "r", encoding="utf-8") as f:
             content = f.read()
+        
+        # 【P0-5 高风险内容人工闸门】risk_level=high 的文章不得自动发布，
+        # 转存草稿区并标记 pending_review，等待人工审核。
+        risk_match = re.search(r'risk_level:\s*"?([a-z]+)"?', content, re.IGNORECASE)
+        risk_level = risk_match.group(1).lower() if risk_match else "medium"
+        if risk_level == "high":
+            gated = content.replace('audit_status: "pending"', 'audit_status: "pending_review"')
+            if 'draft: false' in gated:
+                gated = gated.replace('draft: false', 'draft: "true"')
+            target = DRAFTS_DIR / draft_path.name
+            DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
+            with open(target, "w", encoding="utf-8") as f:
+                f.write(gated)
+            draft_path.unlink()
+            print(f"[Human Gate] HIGH-risk content held for review: {target.name}")
+            return None
         
         content = content.replace('draft: "true"', 'draft: false')
         content = content.replace('audit_status: "pending"', 'audit_status: "pass2"')
@@ -1752,12 +1831,14 @@ class BlogGenerator:
                     error_hash = {
                         "depth": "content_depth_insufficient",
                         "sensitive": "sensitive_content_politics",
-                        "topic": "topic_inappropriate"
+                        "topic": "topic_inappropriate",
+                        "persona": "fabricated_personal_experience"
                     }.get(et, "unknown_audit_error")
                     error_message = {
                         "depth": f"内容深度不足（{word_count}词，需至少700词）",
                         "sensitive": "正文含违规词汇",
-                        "topic": "选题方向不符合要求"
+                        "topic": "选题方向不符合要求",
+                        "persona": "正文含虚构的第一人称个人经历"
                     }.get(et, error_msg)
                     self._record_audit_failure(error_hash, error_message, title)
                 
@@ -1765,6 +1846,12 @@ class BlogGenerator:
         
         # 复用上方计算好的 post_slug（与 frontmatter 保持一致）
         cover_url = self.move_to_posts(draft_path, title, post_slug)
+        if cover_url is None:
+            # 高风险内容已转人工审核，不发布、不计入发布计数
+            self.notifier.send_notification("⏸️ 高风险内容进入人工审核", f"文章《{title}》风险等级为 high，已转存草稿区（pending_review），等待人工审核后手动发布。\n选题: {topic}")
+            print(f"[Human Gate] {title} blocked from auto publish (risk_level=high)")
+            return {"success": False, "reason": "high_risk_human_gate", "title": title, "draft_path": None, "same_topic": False}
+        
         self.manifest.add_topic(topic, geo_region)
         self.manifest.increment_post_count()
         self.manifest.save()

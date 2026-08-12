@@ -39,17 +39,47 @@
 
     {{- /* ===== Affiliate Recommendation Section ===== */ -}}
     <div class="affiliate-disclosure-notice"><small>Some links on this page are affiliate links. If you purchase through them, I earn a commission at no extra cost to you. I only recommend products I personally use and trust. <a href="/disclaimer/" style="text-decoration:underline;">Full disclosure</a>.</small></div>
-    <div class="article-affiliate">
+    <div class="article-affiliate" data-content-id="{{ .Params.content_id | default "" }}" data-channel="organic">
         <h3>ğŸ›’ Travel Essentials for Your China Trip</h3>
         <p class="affiliate-intro">Save time &amp; money with Joran's personally tested recommendations:</p>
         <div class="affiliate-links">
-            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">ğŸ“± <strong>eSIM</strong> â€?Stay online the moment you land</a>
-            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">ğŸ”’ <strong>VPN</strong> â€?Access your favorite sites in China</a>
-            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">ğŸ¨ <strong>Hotels</strong> â€?Book with free cancellation</a>
-            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored">ğŸ« <strong>Tours & Tickets</strong> â€?Skip the line at top attractions</a>
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">ğŸ“± <strong>eSIM</strong> â€?Stay online the moment you land</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">ğŸ”’ <strong>VPN</strong> â€?Access your favorite sites in China</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">ğŸ¨ <strong>Hotels</strong> â€?Book with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">ğŸ« <strong>Tours & Tickets</strong> â€?Skip the line at top attractions</a>
         </div>
     </div>
 
+
+    {{- /* ===== Affiliate Click Attribution (P0-7) ===== */ -}}
+    <script>
+    (function () {
+        var container = document.querySelector('.article-affiliate[data-content-id]');
+        if (!container) return;
+        var contentId = container.getAttribute('data-content-id') || '';
+        var channel = container.getAttribute('data-channel') || 'organic';
+        container.addEventListener('click', function (e) {
+            var link = e.target && e.target.closest ? e.target.closest('a.affiliate-link') : null;
+            if (!link) return;
+            var query = link.href.split('?')[1] || '';
+            var eventParams = {
+                content_id: contentId,
+                partner: link.getAttribute('data-affiliate-partner') || 'unknown',
+                placement: link.getAttribute('data-affiliate-placement') || 'article_cta',
+                channel: channel,
+                timestamp: new Date().toISOString(),
+                destination: link.href,
+                tracking_parameter: query
+            };
+            if (typeof gtag === 'function') {
+                gtag('event', 'affiliate_click', eventParams);
+            }
+            if (window.dataLayer) {
+                window.dataLayer.push(Object.assign({ event: 'affiliate_click' }, eventParams));
+            }
+        });
+    })();
+    </script>
     {{- /* ===== Email Subscribe Section (Article) ===== */ -}}
     {{- partial "email-subscribe.html" . -}}
 

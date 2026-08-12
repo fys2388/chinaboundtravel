@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-932a277b1899"
 title: "China Packing List 2026: What to Bring"
 date: "2026-08-09T10:00:00+08:00"
 lastmod: "2026-08-09T10:00:00+08:00"

@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-49088019c529"
 title: "China Family Travel Tips: Guide & Mistakes to Avoid"
 date: "2026-08-05T10:00:00+08:00"
 lastmod: "2026-08-05T10:00:00+08:00"

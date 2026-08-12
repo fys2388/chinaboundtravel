@@ -17,6 +17,10 @@ on:
         default: "false"
         type: boolean
 
+concurrency:
+  group: content-rotation
+  cancel-in-progress: false
+
 jobs:
   rotate:
     runs-on: ubuntu-latest

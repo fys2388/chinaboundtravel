@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-6a164e0e8077"
 title: "Chengdu Panda Base Guide: See the Pandas Like a Local"
 slug: "dude-wheres-my-panda-a-beijing-guys-guide-to-the-c"
 date: '2026-06-02T10:00:00+08:00'

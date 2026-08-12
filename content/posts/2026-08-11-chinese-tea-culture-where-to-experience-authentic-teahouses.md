@@ -1,4 +1,5 @@
 ﻿---
+content_id: "cbt-034b43ef5e3a"
 title: "Chinese Tea Culture: Where to Experience Authentic Teahouses"
 date: "2026-08-11T10:00:00+08:00"
 lastmod: "2026-08-11T10:00:00+08:00"

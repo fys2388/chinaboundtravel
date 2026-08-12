@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-74e8424894c4"
 title: "China Bargaining Guide: How to Haggle & Shop"
 date: "2026-08-07T10:00:00+08:00"
 lastmod: "2026-08-07T10:00:00+08:00"

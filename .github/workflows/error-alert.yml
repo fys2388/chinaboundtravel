@@ -2,7 +2,7 @@ name: Error Alert
 
 on:
   workflow_run:
-    workflows: ["Weekly Blog Update", "Social Media Distributor", "Content Rotation Distributor", "YouTube Auto Publish"]
+    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor", "YouTube Auto Publish", "Post-deploy Tasks", "Monthly Ebook Guide Update"]
     types: [completed]
     branches: [main]
 
@@ -41,7 +41,7 @@ jobs:
                     "elements": [
                       {
                         "tag": "plain_text",
-                        "content": "请检查日志并修复问题。系统将在5分钟后自动重试。"
+                        "content": "请检查日志并修复问题。可自动重试的工作流（博客生成/社媒分发/内容轮换）由 Retry Failed Jobs 自动重试；其余（Deploy/YouTube/Ebook/报告）请手动处理。"
                       }
                     ]
                   }
@@ -70,7 +70,7 @@ jobs:
 
               ## 下一步
 
-              请检查日志并修复问题。该系统会自动重试。`
+              请检查日志并修复问题。可自动重试的工作流（博客生成/社媒分发/内容轮换）由 Retry Failed Jobs 自动重试；其余请手动处理。`
             });
             
             console.log(`Created issue: ${issue.data.html_url}`);

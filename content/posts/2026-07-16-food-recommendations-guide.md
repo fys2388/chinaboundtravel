@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-0897b4c56074"
 title: "China Food Guide 2026: What to Eat & Where"
 date: "2026-07-16T10:00:00+08:00"
 lastmod: "2026-07-16T10:00:00+08:00"

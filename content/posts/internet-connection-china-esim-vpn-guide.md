@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-a349eee78670"
 title: "Internet in China: eSIM vs SIM vs VPN (2026)"
 author: Joran
 date: "2026-05-19T14:00:00+08:00"

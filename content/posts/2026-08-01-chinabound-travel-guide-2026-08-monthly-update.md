@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-80ac63165adb"
 title: "China Travel Guide: August 2026 Update"
 date: 2026-08-01T08:29:34+00:00
 lastmod: 2026-08-01T08:29:34+00:00
