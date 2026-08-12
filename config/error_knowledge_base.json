@@ -276,13 +276,14 @@
       "hash": "sensitive_content_politics",
       "type": "风控",
       "message": "文章包含敏感词汇（politics, government, communist等）",
-      "occurrences": 3,
+      "occurrences": 4,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-08-10T06:37:11.753833+00:00",
+      "last_seen": "2026-08-12T01:44:05.092502+00:00",
       "files": [
         "The History and Culture of the Great Wall.md",
         "Best China Itineraries for 10 Days: Three Routes Compared",
-        "China Travel Etiquette: Tipping, Photos, And Unwritten Rules Guide"
+        "China Travel Etiquette: Tipping, Photos, And Unwritten Rules Guide",
+        "China Business Travel Guide: Meetings, Dining, and Networking"
       ],
       "suggestion": "避免任何政治、政府相关的敏感内容，聚焦旅行主题",
       "resolved": false,
@@ -887,8 +888,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 33,
-  "last_updated": "2026-08-10T06:37:11.753850+00:00",
+  "total_errors": 34,
+  "last_updated": "2026-08-12T01:44:05.092521+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

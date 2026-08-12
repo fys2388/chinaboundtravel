@@ -590,10 +590,11 @@
         "jiuzhaigou national park"
       ],
       "priority": 4,
-      "status": "pending",
+      "status": "used",
       "source": "gsc",
       "created_at": "2026-08-09T00:00:00",
-      "depth": "deep"
+      "depth": "deep",
+      "used_at": "2026-08-12T01:48:18.337563+00:00"
     },
     {
       "id": "pool-011",
