@@ -7,7 +7,11 @@ class DoubaoArkClient:
     """豆包 Ark API 客户端"""
     
     def __init__(self):
-        self.api_key = os.getenv("DOUBAO_ARK_API_KEY", "***REMOVED***")
+        self.api_key = os.getenv("DOUBAO_ARK_API_KEY")
+        if not self.api_key:
+            raise RuntimeError(
+                "DOUBAO_ARK_API_KEY is required but not configured"
+            )
         self.url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
         self.default_model = "doubao-seed-character-251128"
         self._call_count = 0

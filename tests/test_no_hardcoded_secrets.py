@@ -16,6 +16,7 @@ PATTERNS = {
         rb"https://open\.feishu\.cn/open-apis/bot/v2/hook/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
     ),
     "deepseek_key": re.compile(rb"sk-[A-Za-z0-9]{20,}"),
+    "doubao_ark_key": re.compile(rb"ark-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"),
     "stripe_webhook_secret": re.compile(rb"whsec_[A-Za-z0-9]{12,}"),
     "stripe_key": re.compile(rb"(?:sk|rk)_(?:live|test)_[A-Za-z0-9]{12,}"),
     "google_api_key": re.compile(rb"AIza[0-9A-Za-z_-]{20,}"),
