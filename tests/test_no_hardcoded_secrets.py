@@ -21,6 +21,11 @@ PATTERNS = {
     "google_api_key": re.compile(rb"AIza[0-9A-Za-z_-]{20,}"),
     "resend_key": re.compile(rb"re_[A-Za-z0-9]{20,}"),
     "github_pat": re.compile(rb"gh[pousr]_[A-Za-z0-9]{20,}"),
+    "buffer_bearer_token": re.compile(rb"Bearer\s+[A-Za-z0-9_-]{40,}"),
+    "buffer_token_literal": re.compile(rb"(?:6PUb|n_O9|rbeS)[A-Za-z0-9_-]{20,}"),
+    "buffer_token_assignment": re.compile(
+        rb"['\"](?:BUFFER|buffer)[A-Za-z0-9_]*TOKEN[A-Za-z0-9_]*['\"]\s*[:=]\s*['\"][A-Za-z0-9_-]{40,}['\"]"
+    ),
 }
 
 EXCLUDE_PREFIX = ("node_modules/", "public/", "tests/", "resources/", "backup/", "archive/")

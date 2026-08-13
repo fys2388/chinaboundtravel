@@ -8,7 +8,7 @@ TEMPLATES = {
     "china_travel_essential": {
         "title": "{title} | China Travel Guide 2026",
         "description": """
-The complete guide to {topic} in China - written by a 10-year resident.
+The complete guide to {topic} in China - research-based practical travel information from the ChinaBound Travel editorial team.
 
 What's inside:
 - Step-by-step instructions

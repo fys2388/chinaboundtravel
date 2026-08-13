@@ -241,6 +241,7 @@ def get_article_info(md_path: Path) -> dict:
         "summary": frontmatter.get("summary", ""),
         "slug": slug,
         "url": url,
+        "content_id": frontmatter.get("content_id", ""),
         "content": content,
         "date": frontmatter.get("date", ""),
         "geo": frontmatter.get("geo", ""),
@@ -303,17 +304,17 @@ def build_story_text(category, title, url, hashtags):
     """按文章分类生成 IG 故事文案，不再硬编码单一话题（原 144-hour visa-free 与多数文章无关）"""
     story_hooks = {
         "food": ("What's the first meal you should try in China?", "Ask a local where they eat — that's where the real food is."),
-        "visa": ("Confused about China's visa rules?", "Here's what I wish someone told me before applying."),
+        "visa": ("Confused about China's visa rules?", "Here's what first-time applicants should know before applying."),
         "transport": ("Getting around China can feel confusing. Where do you start?", "Trains beat flights on most routes. Here's the honest breakdown."),
         "accommodation": ("Picking where to stay in China?", "Location beats luxury every time. Here's why."),
         "safety": ("Worried about staying safe in China?", "Most 'scary' travel stories are avoidable with a few simple habits."),
         "budget": ("Think a China trip is expensive?", "You'd be surprised — here's what it actually costs."),
         "culture": ("China has some unwritten rules. Ready?", "A few etiquette basics will change your whole trip."),
         "payment": ("Cashless payments everywhere in China — help?", "Getting Alipay or WeChat Pay set up is easier than you think."),
-        "travel": ("Planning your first China trip?", "Here's what actually matters, from a 10-year resident."),
+        "travel": ("Planning your first China trip?", "Here's what our editorial team says actually matters."),
         "city": ("Beijing, Shanghai or Chengdu — which first?", "Each city has its own vibe. Here's how to pick."),
         "nature": ("Want to see China's wild side?", "These landscapes will change how you see the country."),
-        "general": ("Your first China trip — what's the biggest thing to know?", "After 10 years here, here's what I'd tell my younger self."),
+        "general": ("Your first China trip — what's the biggest thing to know?", "Here are the essentials every first-time traveler should plan for."),
     }
     question, answer = story_hooks.get(category, story_hooks["general"])
     return f"""Q: {question}
@@ -365,7 +366,7 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
 {desc_snippet}
 
 👇 Why you NEED to read this:
-✅ Expert tips from 5 years living in China
+✅ Research-based China travel tips from our editorial team
 ✅ Hidden gems most tourists miss
 ✅ Step-by-step guides that actually work
 
@@ -393,7 +394,7 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
 
 📌 What you'll learn:
 • How to avoid tourist traps
-• Local secrets from a 5-year expat
+• Practical tips for international travelers
 • Budget-friendly tips for travelers
 
 🔗 Full guide: {url}
@@ -411,7 +412,7 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
     x_image = available_images[0] if len(available_images) == 1 else available_images[-1]
     x_text = f"""{emoji} Just dropped: {title}
 
-I've lived in China for 5 years & here's what I WISH I knew before my first trip:
+Planning your first trip to China? Here are the practical things international travelers should know before they arrive.
 
 {smart_truncate(desc, 140)}
 
@@ -471,14 +472,17 @@ def update_article_cover(md_path: Path, cover_url: str):
         f.write(content)
 
 
-def publish_to_worker(article: dict, cover_url: str, custom_text: str = None) -> dict:
+def publish_to_worker(article: dict, cover_url: str, custom_text: str = None, variant: str = "main") -> dict:
     """调用 Cloudflare Worker 发布到多平台"""
     payload = {
         "title": article["title"],
         "desc": custom_text or article["description"],
         "cover": cover_url,
         "url": article.get("url", ""),
-        "custom_text": custom_text
+        "custom_text": custom_text,
+        "content_id": article.get("content_id", ""),
+        "content_variant": variant,
+        "source_workflow": "social_publisher"
     }
 
     try:
@@ -675,7 +679,7 @@ def run():
         print(f"  配图: {post['image'][-40:]}")
         print(f"  内容: {post['text'][:100]}...")
 
-        worker_resp = publish_to_worker(latest_article, post["image"], post["text"])
+        worker_resp = publish_to_worker(latest_article, post["image"], post["text"], post.get("variant", "main"))
         success_platforms = []
         failed_platforms = []
         queued = bool(worker_resp.get("queued"))

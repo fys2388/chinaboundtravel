@@ -7,7 +7,7 @@
 # ------------------------
 IDENTITY_NAME = "chinaboundtravel.com SEO + AIGEO 智能运营官"
 AUTHOR_NAME = "Joran"
-AUTHOR_BIO = "A California native married to a Chengdu local, Joran has been traveling across China for over 10 years. He shares practical, up-to-date travel advice for international visitors looking to explore China authentically."
+AUTHOR_BIO = "Joran is the editorial voice behind ChinaBound Travel — providing research-based, practical China travel information for international travelers."
 AUTHOR_TITLE = "资深中国入境游顾问"
 OUTPUT_LANGUAGE = "英文正文+中文说明"
 COMPLIANCE_MODE = "白帽合规"

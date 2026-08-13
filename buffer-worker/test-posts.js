@@ -1,7 +1,7 @@
 const https = require('https');
 
-const BUFFER_TOKEN = '***REMOVED***';
-const PINTEREST_TOKEN = '***REMOVED***';
+const BUFFER_TOKEN = process.env.BUFFER_TOKEN || 'BUFFER_TEST_TOKEN';
+const PINTEREST_TOKEN = process.env.BUFFER_TOKEN_PINTEREST || process.env.BUFFER_TOKEN_PIN || 'BUFFER_TEST_TOKEN';
 
 function queryBuffer(query, variables, token) {
   return new Promise((resolve, reject) => {

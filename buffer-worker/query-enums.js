@@ -1,6 +1,6 @@
 const https = require('https');
 
-const BUFFER_TOKEN = '***REMOVED***';
+const BUFFER_TOKEN = process.env.BUFFER_TOKEN || 'BUFFER_TEST_TOKEN';
 
 function queryBuffer(query) {
   return new Promise((resolve, reject) => {

@@ -1,6 +1,7 @@
+import os
 import requests
 
-API_TOKEN = "***REMOVED***"
+API_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN", "BUFFER_TEST_TOKEN")
 headers = {"Authorization": f"Bearer {API_TOKEN}", "Content-Type": "application/json"}
 
 query = """

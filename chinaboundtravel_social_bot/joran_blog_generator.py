@@ -260,14 +260,14 @@ SEO_TEMPLATES = {
         "benefits_examples": [
             "booking tips, seat classes & rookie mistakes to avoid",
             "how to navigate like a local, tested strategies",
-            "practical guide based on 200+ rides experience"
+            "research-based guidance on common traveler questions"
         ]
     },
     "safety": {
         "template": "Is China safe for travelers in 2026? {highlights} {ending}.",
         "highlights_examples": [
             "honest assessment, crime rates & common scams to avoid",
-            "practical safety tips from someone who lives here",
+            "verified safety information from official sources",
             "what to know before you go, real talk on safety"
         ]
     },
@@ -275,7 +275,7 @@ SEO_TEMPLATES = {
         "template": "{topic} for travelers visiting China. {highlights} {ending}.",
         "highlights_examples": [
             "practical tips & common mistakes to avoid",
-            "essential guide based on 10 years of experience",
+            "research-based essential guide for travelers",
             "what you need to know before your trip"
         ]
     }
@@ -1027,7 +1027,7 @@ Requirements for HIGH-QUALITY CONTENT:
 12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor, NOT the main dish
 13. NO sensitive topics: government, politics, religion, or controversial issues
 14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these THOROUGHLY throughout
-15. AUTHORITY: Reference my 5 years experience FREQUENTLY but naturally
+15. AUTHORITY: Base practical advice on research, official sources, and editorial expertise; NEVER claim personal travel experience, residence, marriage, or family in China
 16. READABILITY: Use SHORT paragraphs (2-4 sentences max), bullet points, bold text for emphasis
 17. EMOTIONAL CONNECTION: Make readers FEEL like they're there with you - use vivid sensory details (sights, sounds, smells, tastes)
 18. ACTIONABILITY: EVERY section must end with "YOU SHOULD..." or "HERE'S WHAT YOU DO..." advice

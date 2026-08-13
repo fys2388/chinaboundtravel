@@ -63,6 +63,8 @@ const ALLOWED_EXTERNAL_HOSTS = ['image.pollinations.ai', 'images.unsplash.com'];
 
 // ============ 主处理函数 ============
 
+import { buildDedupKey, buildTrackRecord } from './dedup.mjs';
+
 export default {
   async fetch(request, env, ctx) {
     // CORS预检请求处理
@@ -230,7 +232,7 @@ export default {
 async function handlePublish(request, env, ctx) {
   try {
     const body = await request.json();
-    const { title, desc, cover, url: postUrl } = body;
+    const { title, desc, cover, url: postUrl, custom_text, content_id: contentId = '', content_variant: contentVariant = '', source_workflow: sourceWorkflow = '' } = body;
 
     // 参数校验
     if (!title || !desc) {
@@ -295,6 +297,7 @@ async function handlePublish(request, env, ctx) {
     const allResults = {
       success: [],
       failed: [],
+      skipped: [],
       details: []
     };
 
@@ -331,12 +334,14 @@ async function handlePublish(request, env, ctx) {
         accountConfig.channels,
         env,
         accountKey,
-        postUrl
+        postUrl,
+        { contentId, contentVariant, sourceWorkflow }
       );
 
       // 合并结果
       allResults.success.push(...results.success);
       allResults.failed.push(...results.failed);
+      allResults.skipped.push(...results.skipped);
       allResults.details.push(...results.details);
 
       // 更新账户限流计数
@@ -520,8 +525,9 @@ async function processRetryQueue(env) {
 }
 
 // ========== 发布到Buffer ==========
-async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey, postUrl) {
-  const results = { success: [], failed: [], details: [] };
+async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env, accountKey, postUrl, opts = {}) {
+  const results = { success: [], failed: [], skipped: [], details: [] };
+  const { contentId = '', contentVariant = '', sourceWorkflow = '' } = opts;
   const accountConfig = BUFFER_ACCOUNTS[accountKey] || {};
 
   const mutation = `
@@ -538,6 +544,16 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
   for (const channelId of channelIds) {
     const channelInfo = Object.values(channels).find(c => c.id === channelId);
     const service = channelInfo?.service || 'unknown';
+    const channelKey = Object.keys(channels).find(k => channels[k].id === channelId) || service;
+    const dedupKey = buildDedupKey({ contentId, account: accountKey, platform: channelKey, variant: contentVariant });
+    if (dedupKey) {
+      const alreadyPostedThisChannel = await env.KV_STORE.get(dedupKey);
+      if (alreadyPostedThisChannel) {
+        results.skipped.push(service);
+        results.details.push({ platform: service, skipped: true, reason: `content_id dedup (posted ${alreadyPostedThisChannel})` });
+        continue;
+      }
+    }
 
     // 计算发布时间：基于账户 scheduleOffset 和平台索引错开发布
     const now = new Date();
@@ -614,6 +630,19 @@ async function publishToBuffer(channelIds, text, mediaUrl, token, channels, env,
             dueAt: result.post?.dueAt
           });
           success = true;
+          if (success && dedupKey) {
+            const postedAtIso = new Date().toISOString();
+            await env.KV_STORE.put(dedupKey, postedAtIso, { expirationTtl: 30 * 24 * 60 * 60 });
+            const trackKey = dedupKey.replace('dedup:', 'track:');
+            await env.KV_STORE.put(trackKey, JSON.stringify(buildTrackRecord({
+              contentId,
+              platform: service,
+              account: accountKey,
+              scheduledAt: publishTime.toISOString(),
+              sourceWorkflow,
+              postUrl
+            })), { expirationTtl: 90 * 24 * 60 * 60 });
+          }
         } else if (result?.message) {
           throw new Error(result.message);
         }

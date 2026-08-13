@@ -49,7 +49,7 @@ QUORA_CONFIG = {
 }
 
 BUFFER_CONFIG = {
-    "access_token": os.getenv("BUFFER_ACCESS_TOKEN", "***REMOVED***"),
+    "access_token": os.getenv("BUFFER_ACCESS_TOKEN", ""),
     "base_url": "https://api.buffer.com/v1/graphql",
     "timezone": "America/New_York",
     "best_times": ["09:00", "12:00", "15:00", "18:00"]
@@ -102,7 +102,7 @@ For more detailed information, check out my complete guide: {url}
     }
 }
 
-AUTHOR_BIO = """I'm a travel writer and China enthusiast with over 10 years of experience exploring this amazing country. I've lived in Beijing, Shanghai, and Chengdu, and traveled to over 30 Chinese cities. Follow me for authentic travel tips and insights!"""
+AUTHOR_BIO = """Joran is the editorial voice behind ChinaBound Travel — providing research-based, practical China travel information for international travelers."""
 
 BLOG_URL = "https://chinaboundtravel.com"
 AUTHOR_NAME = "Joran"

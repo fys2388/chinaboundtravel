@@ -1,13 +1,13 @@
 {
   "api": {
     "base_url": "https://api.buffer.com",
-    "access_token": "***REMOVED***",
+    "access_token": "",
     "organization_id": "6a20329943b37a7289e25b6d"
   },
   "accounts": {
     "account_a": {
       "email": "1558835921@qq.com",
-      "access_token": "***REMOVED***",
+      "access_token": "",
       "organization_id": "6a20329943b37a7289e25b6d",
       "channels": {
         "pinterest": {
@@ -29,7 +29,7 @@
     },
     "account_b": {
       "email": "fys2388@gmail.com",
-      "access_token": "***REMOVED***",
+      "access_token": "",
       "organization_id": "6a17ddf5e051bed5895272f0",
       "channels": {
         "facebook": {
@@ -60,7 +60,12 @@
   },
   "default_schedule": {
     "timezone": "Asia/Shanghai",
-    "best_times": ["09:00", "12:00", "15:00", "18:00"]
+    "best_times": [
+      "09:00",
+      "12:00",
+      "15:00",
+      "18:00"
+    ]
   },
   "post_templates": {
     "default": {

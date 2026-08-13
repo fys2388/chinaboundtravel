@@ -144,6 +144,7 @@ def parse_article(md_path: Path) -> dict:
         "description": description,
         "slug": slug,
         "url": url,
+        "content_id": fm.get("content_id", ""),
         "body_text": body_clean,
         "images": images,
         "source_file": str(md_path),
@@ -344,7 +345,7 @@ def generate_social_copies(article: dict) -> list:
 # ============================================================
 
 
-def publish_to_buffer(article: dict, social_text: str, image_url: str) -> dict:
+def publish_to_buffer(article: dict, social_text: str, image_url: str, variant: str = "default") -> dict:
     """
     调用 Buffer Worker 发布一条社媒内容。
 
@@ -356,6 +357,9 @@ def publish_to_buffer(article: dict, social_text: str, image_url: str) -> dict:
         "cover": image_url,
         "url": article["url"],
         "custom_text": social_text,
+        "content_id": article.get("content_id", ""),
+        "content_variant": variant,
+        "source_workflow": "content_rotation",
     }
 
     try:
@@ -509,7 +513,7 @@ def run(count: int = 2, dry_run: bool = False):
                 continue
 
             try:
-                worker_resp = publish_to_buffer(article, copy["text"], cover_image)
+                worker_resp = publish_to_buffer(article, copy["text"], cover_image, copy.get("style", "default"))
 
                 if worker_resp.get("success"):
                     platforms = worker_resp.get("platforms", {})

@@ -1,7 +1,7 @@
 import requests
 import os
 
-API_TOKEN = "***REMOVED***"
+API_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN", "BUFFER_TEST_TOKEN")
 headers = {"Authorization": f"Bearer {API_TOKEN}", "Content-Type": "application/json"}
 
 print("=== Test 1: Upload File ===")
