@@ -37,7 +37,7 @@ ignoreFiles = ["/\\.archived/"]
     enabled = true
     title = "Hi, I'm Joran"
     subtitle = "A California native married into a Chengdu family. I've spent 5 years making every single travel mistake in China so you don't have to. Let's break down the digital wall together!"
-    imageUrl = "images/joran-avatar.png"
+    imageUrl = "images/joran-avatar.webp"
     imageWidth = 120
     imageHeight = 120
 

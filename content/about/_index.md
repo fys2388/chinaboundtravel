@@ -5,7 +5,10 @@ description = "The story of an American who fell in love with China (and a Chine
 
 <div class="about-hero">
     <div class="about-avatar-ring">
+        <picture>
+            <source srcset="/images/joran-avatar.webp" type="image/webp">
         <img src="/images/joran-avatar.png" alt="Joran  American in Chengdu" class="about-hero-photo" loading="eager">
+        </picture>
         <span class="about-avatar-badge" title="California → Chengdu"> → </span>
     </div>
     <h1 class="about-name">Joran</h1>
