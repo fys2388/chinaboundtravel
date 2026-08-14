@@ -97,3 +97,23 @@ def test_rendered_body_links_clean(built_site):
                 issues.append((rel, val, status))
     assert not issues, issues[:20]
 
+
+def test_china_extends_144h_markdown_structure_clean():
+    """V6-4 regression: the corrupted triple-nested link paragraph at
+    content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:143
+    must contain only well-formed markdown links (no dangling '](url)' artifacts)."""
+    from audit_internal_links import extract_md_links, find_malformed
+
+    fp = REPO_ROOT / "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md"
+    assert fp.exists()
+    lines = fp.read_text(encoding="utf-8").splitlines()
+
+    issues = []
+    for i, line in enumerate(lines, 1):
+        issues += [(i, kind, sn) for kind, sn in find_malformed(line)]
+    assert not issues, issues[:10]
+
+    # every link in the file must have a non-empty internal target
+    for i, line in enumerate(lines, 1):
+        for text, url, _ok in extract_md_links(line):
+            assert url.startswith("/posts/"), (i, text, url)

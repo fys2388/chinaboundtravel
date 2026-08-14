@@ -140,7 +140,7 @@ China is opening up more than ever, and these policy updates are a clear sign. W
 
 ### My Personal Experience
 
-When I first arrived in China, I had to jump through hoops just to get a tourist visa. Now, with policies like this, my friends from back home can co[144-hour transit](/posts/144-hour-visa-free-transit-guide/)out the hassle. Last year, [144-hour transit](/posts/144-hour-visa-free-transit-guide/)t](/posts/144-hour-visa-free-transit-guide/)for a 6-day visit using the 144-hour transit, and he loved it. We explored Chengdu, went to see the pandas, and even took a day trip to Leshan. It was the easiest trip he's ever had to China.
+When I first arrived in China, I had to jump through hoops just to get a tourist visa. Now, with policies like this, my friends from back home can cut out the hassle by using the [144-hour transit](/posts/144-hour-visa-free-transit-guide/). Last year, he came for a 6-day visit using the [144-hour transit](/posts/144-hour-visa-free-transit-guide/), and he loved it. We explored Chengdu, went to see the pandas, and even took a day trip to Leshan. It was the easiest trip he's ever had to China.
 
 ### What This Means for the Future
 

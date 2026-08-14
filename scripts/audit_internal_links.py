@@ -146,6 +146,9 @@ def find_malformed(text):
     # 'Internal Link N:' placeholder wrappers
     if re.search(r'\[Internal Link \d+:', text):
         issues.append(('internal-link-placeholder', text.strip()[:120]))
+    # stray '](url)' closure without an opening '[' after another link
+    for m in re.finditer(r'\]\([^)\n]*\)[^\[\n]*\]\([^)\n]*\)', text):
+        issues.append(('dangling-link-closure', m.group(0)[:120]))
     # double-bracket nested links like [[text](url)...](url)
     for m in re.finditer(r'\[\[[^\]]*\]\([^)]*\)', text):
         issues.append(('nested-double-link', m.group(0)[:120]))

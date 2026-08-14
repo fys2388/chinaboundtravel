@@ -88,7 +88,7 @@ Look, WeChat Pay isn't perfect. It's a walled garden that demands your passport,
 ### Further Reading
 
 - [PayPal Now Accepts Alipay & WeChat Pay QR Codes](/posts/paypal-alipay-wechat-pay-qr-code-support/) — A new option for foreigners who can't set up local payment apps
-- [Internet in China: [eSIM](/posts/internet-connection-china-esim-vpn-guide/) & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — You'll need connectivity to use WeChat Pay, so get this sorted first
+- [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — You'll need connectivity to use WeChat Pay, so get this sorted first
 - [Chinese Food Delivery Apps Guide](/posts/chinese-food-delivery-meituan-eleme-guide/) — Meituan and Ele.me both require WeChat Pay or Alipay
 
 > **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for the best rates. ({[esim](/posts/internet-connection-china-esim-vpn-guide/)ooking-link "Book Hotels" />}})

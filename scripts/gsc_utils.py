@@ -21,6 +21,10 @@ from pathlib import Path
 SCOPE_WEBMASTERS_READONLY = "https://www.googleapis.com/auth/webmasters.readonly"
 SCOPE_WEBMASTERS = "https://www.googleapis.com/auth/webmasters"
 DEFAULT_SCOPES = [SCOPE_WEBMASTERS_READONLY]
+# Indexing API (urlNotifications:publish) needs its own dedicated scope,
+# and the service account must also be enabled for the Indexing API in
+# the Google Cloud console. Inspect-only flows never need this scope.
+SCOPE_INDEXING = "https://www.googleapis.com/auth/indexing"
 
 BLOG_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_KEY_FILE = BLOG_ROOT / "gsc-service-account-key.json"
