@@ -361,8 +361,8 @@ def generate_seo_description(topic, title):
         else:
             break
     
-    while len(description) < 120:
-        # 添加额外信息
+    # 补充长度信息（最多补一次，且避免重复拼接同一短语）
+    if len(description) < 120 and "practical guide for foreign travelers" not in description.lower():
         extra = "practical guide for foreign travelers"
         if description.endswith("."):
             description = description[:-1] + ", " + extra + "."

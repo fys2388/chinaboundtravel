@@ -15,8 +15,8 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers. practical guide for foreign travelers"
-description: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers. practical guide for foreign travelers"
+summary: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers."
+description: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/"
 ShowToc: "true"
 TocOpen: "false"
