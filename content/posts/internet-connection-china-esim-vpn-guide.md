@@ -30,7 +30,7 @@ So there I am, standing in the Chengdu airport, staring at a captive Wi-Fi porta
 
 My wife found me eventually. She thought it was the funniest thing she'd ever seen.
 
-Six years later, I've tried every possible way to stay connected in China, and I'm here to give you the straight truth: there is no perfect solution, but there's definitely a right solution for your specific situation. Having internet is also essential for setting up [Alipay and WeChat Pay](posts/alipay-wechat-pay-foreigners-guide/) — you'll need data to complete verification. Let me save you the hours of research I went through.
+Six years later, I've tried every possible way to stay connected in China, and I'm here to give you the straight truth: there is no perfect solution, but there's definitely a right solution for your specific situation. Having internet is also essential for setting up [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) — you'll need data to complete verification. Let me save you the hours of research I went through.
 
 ## Understanding China's Internet Landscape
 
@@ -91,7 +91,7 @@ An eSIM (embedded SIM) is a digital SIM card that allows you to activate a mobil
 - **Best Coverage**: Full access to China's 4G/5G networks
 - **Cost-Effective**: Cheaper than international roaming
 - **Reliable**: Established network infrastructure
-- **Mobile Payment Ready**: Required for [Alipay/WeChat Pay](posts/alipay-wechat-pay-foreigners-guide/) verification
+- **Mobile Payment Ready**: Required for [Alipay/WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) verification
 
 ### Cons of Local SIM
 
@@ -211,13 +211,13 @@ Staying connected in China is easier than ever in 2026. The ideal solution combi
 
 **Pro Tip**: Always set up your VPN before arriving in China, and keep it running in the background for seamless access to your favorite apps!
 
-Look, I've been there—standing in a Chengdu street market wondering why Instagram isn't loading while everyone around me is happily scrolling through their feeds. Having connectivity also gives you access to essential travel tools like the [high-speed rail booking system](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/).
+Look, I've been there—standing in a Chengdu street market wondering why Instagram isn't loading while everyone around me is happily scrolling through their feeds. Having connectivity also gives you access to essential travel tools like the [high-speed rail booking system](/posts/china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](/posts/chinese-food-delivery-meituan-eleme-guide/).
 
 ### Further Reading
 
-- [Is China Safe for Tourists in 2026?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — A VPN is also a safety tool; this guide explains why
-- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) — Many travelers using the transit policy need to get online quickly
-- [Best Travel Insurance for China](posts/best-travel-insurance-china/) — You'll need internet to access your insurance app in an emergency
+- [Is China Safe for Tourists in 2026?](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — A VPN is also a safety tool; this guide explains why
+- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Many travelers using the transit policy need to get online quickly
+- [Best Travel Insurance for China](/posts/best-travel-insurance-china/) — You'll need internet to access your insurance app in an emergency
 
 The good news is, with a little preparation (which this guide gives you), you'll be fine. Set everything up before you land, test it at home, and then just enjoy the ride.
 

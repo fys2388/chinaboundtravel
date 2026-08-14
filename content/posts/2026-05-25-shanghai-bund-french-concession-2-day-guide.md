@@ -107,7 +107,7 @@ If you have extra time, take Metro Line 17 to **Zhujiajiao**. This water town is
 
 | Situation | Advice |
 |-----------|--------|
-| **Metro** | Get a **Shanghai Public Transportation Card** (any metro station). Literally saves 30 minutes of fumbling with tickets. Or just use Alipay/WeChat Pay — if you haven't set these up yet, our [Alipay & WeChat Pay guide for foreigners](posts/alipay-wechat-pay-foreigners-guide/) walks you through it. |
+| **Metro** | Get a **Shanghai Public Transportation Card** (any metro station). Literally saves 30 minutes of fumbling with tickets. Or just use Alipay/WeChat Pay — if you haven't set these up yet, our [Alipay & WeChat Pay guide for foreigners](/posts/alipay-wechat-pay-foreigners-guide/) walks you through it. |
 | **Language** | Almost zero English outside tourist areas. Save key phrases: “多少钱” (how much), “不要辣” (no spice), “谢谢” (thanks) |
 | **Best time to visit** | March-May, September-November. Summer is brutal (38C+ with humidity). Winter is cold but clear. |
 | **Accommodation** | Budget: **Lujiazui/Huangpu area**. Mid-range: **French Concession**. Luxury: **The Peninsula, Waldorf Astoria** |
@@ -130,15 +130,15 @@ If you have extra time, take Metro Line 17 to **Zhujiajiao**. This water town is
 
 ## Bottom Line
 
-Shanghai is the easiest city in China for foreigners. It's also one of the [safest cities for tourists](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — violent crime is extremely rare. The metro is world-class, payment is seamless with your phone, people are accustomed to tourists, and there's enough English signage to get around. The only real challenge is not spending all your money on xiaolongbao. If you want to dig deeper into Shanghai's local culture beyond the tourist trail, check out our guide to [Shanghai beyond the Bund](posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/).
+Shanghai is the easiest city in China for foreigners. It's also one of the [safest cities for tourists](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — violent crime is extremely rare. The metro is world-class, payment is seamless with your phone, people are accustomed to tourists, and there's enough English signage to get around. The only real challenge is not spending all your money on xiaolongbao. If you want to dig deeper into Shanghai's local culture beyond the tourist trail, check out our guide to [Shanghai beyond the Bund](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/).
 
 ### Further Reading
 
-- [China High-Speed Rail Booking Guide](posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) — Shanghai is a major hub on the CRH network
-- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — Shanghai is the final stop on this classic route
-- [144-Hour Visa-Free Transit Guide](posts/144-hour-visa-free-transit-guide/) —Use it to visit Shanghai visa-free for up to 6 days
+- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-how-to-book-tickets/) — Shanghai is a major hub on the CRH network
+- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — Shanghai is the final stop on this classic route
+- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) —Use it to visit Shanghai visa-free for up to 6 days
 
-**Next read:** If you're heading to Hangzhou after Shanghai, don't miss my [Hangzhou Guide](/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/)  West Lake is even better in person.
+**Next read:** If you're heading to Hangzhou after Shanghai, don't miss my [Hangzhou Guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/)  West Lake is even better in person.
 
 ---
 

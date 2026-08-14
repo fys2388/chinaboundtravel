@@ -1,26 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import subprocess
+import subprocess
 import time
 import json
 import os
-import httplib2
 from typing import List, Dict
 
 try:
     import google.auth
-    from google.auth import impersonated_credentials
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
 except ImportError:
     print("Installing required packages...")
     subprocess.run(["pip", "install", "google-api-python-client", "google-auth"], check=True)
     import google.auth
-    from google.auth import impersonated_credentials
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
 
+from gsc_utils import SCOPE_WEBMASTERS, get_site_url
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEY_FILE = os.path.join(PROJECT_ROOT, "gsc-service-account-key.json")
-SITE_URL = "https://chinaboundtravel.com"
+SITE_URL = get_site_url()
 SITEMAP_URL = f"https://www.chinaboundtravel.com/sitemap.xml"
 
 CORE_PAGES = [
@@ -102,17 +101,14 @@ def get_gsc_service():
         return None
     
     try:
+        from google.auth.transport.requests import Request
         credentials, _ = google.auth.load_credentials_from_file(
             KEY_FILE,
-            scopes=["https://www.googleapis.com/auth/webmasters"]
+            scopes=[SCOPE_WEBMASTERS]
         )
-        
-        # 使用httplib2显式处理HTTP请求
-        http = httplib2.Http(timeout=60)
-        credentials.refresh(http.request)
-        http = credentials.authorize(http)
-        
-        service = build("searchconsole", "v1", http=http, credentials=credentials)
+        credentials.refresh(Request())
+
+        service = build("searchconsole", "v1", credentials=credentials)
         print("GSC API连接成功")
         return service
     except Exception as e:

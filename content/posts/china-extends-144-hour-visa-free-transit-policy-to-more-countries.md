@@ -46,7 +46,7 @@ Let me tell you, this is a game-changer! I remember when I first moved here, thi
 
 ### Why This Matters for Travelers
 
-**1. Spontaneous trips are now possible**: You can book a flight to China with just 6 days notice and explore major cities without applying for a visa. For the full step-by-step walkthrough, see our [complete 144-hour visa-free transit guide](posts/144-hour-visa-free-transit-guide/).
+**1. Spontaneous trips are now possible**: You can book a flight to China with just 6 days notice and explore major cities without applying for a visa. For the full step-by-step walkthrough, see our [complete 144-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/).
 
 **2. More time to explore**: 144 hours (6 days) gives you enough time to see the highlights of a city like Beijing or Shanghai.
 
@@ -77,7 +77,7 @@ To qualify for the 144-hour visa-free transit, you must:
 - Valid passport
 - Confirmed flight/train tickets
 - Hotel reservation (recommended but not always required)
-- Travel insurance (highly recommended) — our [best travel insurance for China guide](posts/best-travel-insurance-china/) compares top providers
+- Travel insurance (highly recommended) — our [best travel insurance for China guide](/posts/best-travel-insurance-china/) compares top providers
 
 **Step 3: Arrive in China**
 - Go through immigration at your entry port
@@ -98,7 +98,7 @@ To qualify for the 144-hour visa-free transit, you must:
 
 ### For First-Time Visitors
 
-**Beijing**: Use your 6 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the [[Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)](/posts/xian-terracotta-army-history-discovery-and-insider-tips/).
+**Beijing**: Use your 6 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the [Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/).
 
 **Shanghai**: Explore the Bund, French Concession, Yu Garden, and Shanghai Museum. Take a day trip to Suzhou or Hangzhou.
 
@@ -129,7 +129,7 @@ Yes, as long as both ports are within the same transit zone.
 Officially, it's recommended but not always checked. However, it's a good idea to have one for peace of mind.
 
 ### Can I use this policy multiple times?
-Yes, there's no limit to how many times you can use the [[144-hour transit](/posts/144-hour-visa-free-transit-guide/)](/posts/144-hour-visa-free-transit-guide/), as long as you meet the requirements each time.
+Yes, there's no limit to how many times you can use the [144-hour transit](/posts/144-hour-visa-free-transit-guide/), as long as you meet the requirements each time.
 
 ### What if I miss my onward flight?
 If you miss your flight due to circumstances beyond your control, contact the airport authorities immediately. You may need to apply for a visa or leave on the next available flight.
@@ -144,13 +144,13 @@ When I first arrived in China, I had to jump through hoops just to get a tourist
 
 ### What This Means for the Future
 
-I believe this is just the beginning. China is becoming more welcoming to international travelers, and I expect to see even more relaxed visa policies in the coming years. If you need a full tourist visa instead of the transit policy, our [ultimate guide to China visas for tourists](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) covers everything.
+I believe this is just the beginning. China is becoming more welcoming to international travelers, and I expect to see even more relaxed visa policies in the coming years. If you need a full tourist visa instead of the transit policy, our [ultimate guide to China visas for tourists](/posts/ultimate-guide-to-china-visa-for-tourists/) covers everything.
 
 ### Further Reading
 
-- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — The perfect trip to fit within (or extend beyond) a 144-hour transit
-- [Internet in China: [eSIM](/posts/internet-connection-china-esim-vpn-guide/) & VPN Guide](posts/internet-connection-china-[esim](/posts/internet-connection-china-esim-vpn-guide/)-[vpn](/posts/internet-connection-china-esim-vpn-guide/)-guide/) — Get connected before you land
-- [Is China Safe for Tourists in 2026?](posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) — An honest safety assessment
+- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — The perfect trip to fit within (or extend beyond) a 144-hour transit
+- [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — Get connected before you land
+- [Is China Safe for Tourists in 2026?](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — An honest safety assessment
 
 This is great news for anyone who wants to experience China's rich culture, delicious food, and amazing landscapes.
 

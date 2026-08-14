@@ -76,11 +76,11 @@ In addition to Zhangjiajie, Jiuzhaigou, and Huangshan, China is home to many oth
 - **Wuyishan National Park:** This park is located in the northern part of Fujian province and is known for its beautiful mountains, tea plantations, and unique rock formations.
 
 ### Planning Your Trip
-When planning your trip to China's national parks, there are a few things that you need to keep in mind. First, make sure that you have the necessary visas and travel documents. You can find more information about visas and travel documents on the [China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) article on our website.
+When planning your trip to China's national parks, there are a few things that you need to keep in mind. First, make sure that you have the necessary visas and travel documents. You can find more information about visas and travel documents on the [China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) article on our website.
 
 Second, make sure that you have the appropriate clothing and gear for your trip. The weather in China's national parks can vary depending on the season and the location, so it's important topack accordingly. You may also want to consider bringing a camera, binoculars, and a map of the park.
 
-Third, make sure that you have a plan for getting to and from the park. Many of China's national parks are located in remote areas, so it's important to plan your transportation in advance. You can find more information about transportation options in China on the [China High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) article on our website.
+Third, make sure that you have a plan for getting to and from the park. Many of China's national parks are located in remote areas, so it's important to plan your transportation in advance. You can find more information about transportation options in China on the [China High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/) article on our website.
 
 Finally, make sure that you have a plan for staying safe while you're in the park. China's national parks are generally safe, but it's important to take precautions to avoid getting lost or injured. Make sure that you follow the park's rules and regulations, and stay on the designated trails. You may also want to consider bringing a first aid kit and a map of the park.
 

@@ -219,7 +219,7 @@ If you're flying into China from Europe and want a food-focused trip, here's my 
 
 1. **Shanghai (Days 1-2)** — Start easy with xiaolongbao and sweet Shanghainese dishes. Visit the French Concession and Yu Garden food street.
 2. **Beijing (Days 3-4)** — Peking duck, zhajiangmian, and the imperial grandeur of northern Chinese cuisine.
-3. **Xi'an (Day 5)** — Muslim Quarter food street for lamb skewers, biang biang noodles, and roujiamo (Chinese hamburger). [See our Xi'an [[Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) Guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) for travel logistics.
+3. **Xi'an (Day 5)** — Muslim Quarter food street for lamb skewers, biang biang noodles, and roujiamo (Chinese hamburger). [See our Xi'an [Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) Guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/) for travel logistics.
 4. **Chengdu (Days 6-7)** — The grand finale. Sichuan hotpot, mapo tofu, and the best street food scene in China. End your trip with a food tour through Jinli or Kuanzhai Alley.
 
 > **Practical tip:** For intercity travel, the [high-speed rail](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) connects all these cities in comfort. Shanghai to Beijing in 4.5 hours, Beijing to Xi'an in 4 hours, Xi'an to Chengdu in 3.5 hours.

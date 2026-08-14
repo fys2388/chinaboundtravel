@@ -108,9 +108,9 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 ![A group of people sitting around a table enjoying a meal of Sichuan hotpot, laughing and having a good time](https://image.pollinations.ai/prompt/A%20group%20of%20people%20sitting%20around%20a%20table%20enjoying%20a%20meal%20of%20Sichuan%20hotpot%2C%20laughing%20and%20having%20a%20good%20time%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=49503&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
 
 [anchor text](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
-[anchor text](https://www.chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-[anchor text](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
-[anchor text](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/)
+[anchor text](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+[anchor text](https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
+[anchor text](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/)
 
 {{< affiliate-flight >}}
 

@@ -36,9 +36,9 @@ Have you ever wondered what it would be like to walk in the footsteps of ancient
 
 As an American who has spent five years in China, I've had the privilege of visiting the Great Wall multiple times. Each time, I'm struck by something new — not just its sheer magnitude, but the layers of history embedded in every brick. From the watchtowers that once signaled enemy approaches with smoke and fire, to the laborers who spent their lives building it, the Wall is far more than a photo backdrop. It's a story of survival, strategy, and human sacrifice that most visitors never hear.
 
-But before we dive into the history and culture of the Great Wall, let's talk about some practicalities. If you're planning a trip to China, you'll need to apply for a visa. The process can be a bit daunting, but don't worry - I've got you covered. Check out my [China Visa Requirements](posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) guide for all the information you need to know.
+But before we dive into the history and culture of the Great Wall, let's talk about some practicalities. If you're planning a trip to China, you'll need to apply for a visa. The process can be a bit daunting, but don't worry - I've got you covered. Check out my [China Visa Requirements](/posts/ultimate-guide-to-china-visa-for-tourists/) guide for all the information you need to know.
 
-Once you've got your visa sorted, it's time to start planning your trip. Chengdu is a great place to start your journey, as it's well-connected to the rest of China by high-speed trains. And if you're a panda lover like me, you won't want to miss the opportunity to visit the [Chengdu Panda Base](posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/).
+Once you've got your visa sorted, it's time to start planning your trip. Chengdu is a great place to start your journey, as it's well-connected to the rest of China by high-speed trains. And if you're a panda lover like me, you won't want to miss the opportunity to visit the [Chengdu Panda Base](/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/).
 
 ![Great Wall of China winding through green mountains under a clear blue sky](https://picsum.photos/seed/56999/1024/768)
 
@@ -74,7 +74,7 @@ Another way to explore the wild Great Wall is to go on a hiking or camping trip.
 If you're looking for a more adventurous experience, you can also try rock climbing or rappelling on the Great Wall. There are some sections of the wall that are suitable for rock climbing, and there are also some companies that offer guided rock climbing and rappelling tours. This is a great way to challenge yourself and see the Great Wall from a different perspective.
 
 ## Transportation and Logistics
-Getting to the Great Wall can be a bit of a challenge, especially if you're not familiar with the local transportation system. The most convenient way to get to the Great Wall is by taking a high-speed train from Beijing to the nearby town of Badaling. The train takes about an hour and a half, and it's very comfortable and convenient. Our [China high-speed rail guide](/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) explains how to book tickets like a local.
+Getting to the Great Wall can be a bit of a challenge, especially if you're not familiar with the local transportation system. The most convenient way to get to the Great Wall is by taking a high-speed train from Beijing to the nearby town of Badaling. The train takes about an hour and a half, and it's very comfortable and convenient. Our [China high-speed rail guide](/posts/china-high-speed-rail-how-to-book-tickets/) explains how to book tickets like a local.
 
 Once you arrive in Badaling, you can take a bus or a taxi to the Great Wall. The bus is the cheapest option, but it can be a bit crowded and uncomfortable. The taxi is more expensive, but it's more convenient and it can take you directly to the entrance of the Great Wall.
 

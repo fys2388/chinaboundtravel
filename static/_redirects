@@ -89,3 +89,6 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/cultural-etiquette-in-china-a-californians-guide/ /posts/cultural-etiquette-guide/ 301
 /posts/navigating-chinas-transportation-maze-a-californians-guide/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
 /posts/china-remote-work-guide-a-californians-5-year-adventure-in-chengdu/ /posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/ 301
+
+# V6-3: legacy hero image -> existing Chengdu hero asset
+/images/hero-chengdu.jpg /img/china-dest/chengdu/chengdu-hotpot-street.jpg 301

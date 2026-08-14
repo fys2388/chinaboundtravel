@@ -29,7 +29,7 @@ China's visa policy has become significantly more traveler-friendly. Since July 
 
 ### Our Visa Guides
 
-- [Ultimate Guide to China Visas for Tourists](/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/)
+- [Ultimate Guide to China Visas for Tourists](/posts/ultimate-guide-to-china-visa-for-tourists/)
 - [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 
 ## FAQ

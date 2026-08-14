@@ -32,7 +32,7 @@ China is virtually a cashless society. Mobile payments — primarily **Alipay** 
 
 ### Our Payment Guides
 
-- [How to Use Alipay as a Foreigner: Complete Setup Guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)
+- [How to Use Alipay as a Foreigner: Complete Setup Guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 - [WeChat Pay for Foreigners: Step-by-Step Setup Guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
 
 ## FAQ

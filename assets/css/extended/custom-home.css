@@ -32,7 +32,7 @@
     z-index: -2;
     
     /* 默认背景图（成都/中国风景） */
-    background-image: url('/images/hero-chengdu.jpg');
+    background-image: url('/img/china-dest/chengdu/chengdu-hotpot-street.jpg');
     
     /* 备用渐变背景（图片加载失败时） */
     background-color: var(--primary-light);

@@ -80,7 +80,7 @@ China's high-speed rail system is like something out of *Star Trek*. The trains 
 
 **Cost**: A 2-hour high-speed rail ticket costs around ¥200-300 ($28-42 USD), which is cheaper than flying and way more scenic.
 
-**YOU SHOULD:** Download the [12306 app](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) or use Trip.com to book tickets. Avoid third-party agents that charge exorbitant fees.
+**YOU SHOULD:** Download the [12306 app](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/) or use Trip.com to book tickets. Avoid third-party agents that charge exorbitant fees.
 
 ### Subway Safety: Navigating the Underground Labyrinth
 
@@ -268,12 +268,12 @@ Is China perfect? No. Are there risks? Yes. But the same is true for any country
 ---
 
 **Further Reading:**
-- [Is China Safe for Tourists in 2026?](https://www.chinaboundtravel.com/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment/) — An honest assessment
+- [Is China Safe for Tourists in 2026?](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/) — An honest assessment
 - [Best Travel Insurance for China](https://www.chinaboundtravel.com/posts/best-travel-insurance-china/) — Protect yourself
-- [China Transportation Complete Guide](https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/) — Navigate like a pro
+- [China Transportation Complete Guide](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) — Navigate like a pro
 - [144-Hour Visa-Free Transit Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) — Australia and NZ passport holders qualify!
 - [Internet in China: eSIM & VPN Guide](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) — Stay connected
-- [Accommodation Tips for China](https://www.chinaboundtravel.com/posts/2026-07-11-accommodation-tips-guide/) — Find the perfect place to stay
+- [Accommodation Tips for China](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/) — Find the perfect place to stay
 
 ---
 

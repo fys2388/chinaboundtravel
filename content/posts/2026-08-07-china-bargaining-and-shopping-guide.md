@@ -149,9 +149,9 @@ You should start planning your shopping adventure in China today! Whether you're
 
 Here's what you do: Research the areas you want to visit, set a budget, and practice your bargaining skills. And most importantly, have an open mind and a sense of adventure.
 
-[Internal Link 1: [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta - army-history - discovery-and - insider-tips/)]
-[Internal Link 2: [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar - mountains-complete - guide-to - chinas-most - spectacular-park/)]
-[Internal Link 3: [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot - guide-history - best-restaurants - and-cultural - significance/)]
-[Internal Link 4: [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea - culture-history - types-and - tea-ceremony - guide/)]
-[Internal Link 5: [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond - the-bund - hidden-neighborhoods - and-local - culture/)]
-[Internal Link 6: [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history - and-culture - of-the - great-wall - beyond-the - tourist-trail - guide/)]
+- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
+- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/)
+- [The History and Culture of the Great Wall: Beyond the Tourist Trail Guide](/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)

@@ -55,6 +55,47 @@
 }
 </script>
 {{- if .IsPage }}
+{{- if .Type | eq "pricing" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "ChinaBound Travel Guide 2026",
+  "description": "ChinaBound Travel Pass plans: PDF guide plus visa alerts, routes, and scam-proof travel strategies. Three options to fit every budget.",
+  "image": "https://www.chinaboundtravel.com/images/og-default.jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "ChinaBound Travel"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "One-Time Buyout",
+      "price": "14.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
+    },
+    {
+      "@type": "Offer",
+      "name": "Monthly Radar (first month)",
+      "price": "1",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05"
+    },
+    {
+      "@type": "Offer",
+      "name": "Annual Elite Pass",
+      "price": "49.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"
+    }
+  ]
+}
+</script>
+{{- else }}
 {{- $schemaImage := "" }}
 {{- with .Params.cover }}
   {{- $coverImg := . }}
@@ -71,7 +112,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "{{- if .Section | eq `pricing` }}Product{{- else }}BlogPosting{{- end -}}",
+  "@type": "BlogPosting",
   "headline": "{{- .Title | plainify | safeJS -}}",
   "name": "{{- .Title | plainify | safeJS -}}",
   "description": "{{- with .Description | plainify }}{{- . | safeJS -}}{{- else }}{{- .Summary | plainify | safeJS -}}{{- end -}}",
@@ -82,9 +123,8 @@
     {{- range $i, $e := .Params.tags }}{{- if $i }}, {{ end }}"{{- $e | safeJS -}}"{{- end }}
     {{- end }}
   ],
-  {{- if not (.Section | eq "pricing") }}
+  {{- /* pricing pages use Product schema above */ -}}
   "wordCount": {{ .WordCount }},
-  {{- end }}
   "inLanguage": "{{- .Language.Lang | default "en-us" | safeJS -}}",
   "image": "{{- $schemaImage | absURL | safeJS -}}",
   {{- if .PublishDate }}
@@ -129,6 +169,7 @@
   }
 }
 </script>
+{{- end }}{{/* end non-pricing page schema */}}
 {{- end }}{{/* .IsPage end */}}
 {{- partial "schema_faq.html" . -}}
 {{- end }}

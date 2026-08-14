@@ -172,8 +172,8 @@ If you're not sure which resource is right for your specific trip, drop me a lin
 Or check out our most popular guides:
 - [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
-- [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-foreigner/)
-- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-booking/)
+- [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 ---
 

@@ -36,7 +36,7 @@ Everyone goes to the Bund to look at Pudongs skyline. Instead, walk along Suzhou
 
 - **Getting there**: If youre flying from Chengdu, youll land at CTU (Shuangliu). A flight to Shanghai (PVG or SHA) takes about 2.53 hours and costs roughly 8001400 RMB ($110195). From the airport, a Didi to these neighborhoods will be maybe 100150 RMB ($1421) depending on traffic. Or take the metroits cheaper and less stressful.
 - **Dont be afraid to get lost**: Shanghais alleys are a maze. Thats the point. Just bring your phone with a [VPN](/posts/internet-connection-china-esim-vpn-guide/) (remember, youll need one for Google Maps) and embrace the chaos.
-- **Cash is still king at street stalls**: [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/) works at most places, but old aunties selling dumplings might only take cash. Carry some 10 and 20 RMB notes.
+- **Cash is still king at street stalls**: [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) works at most places, but old aunties selling dumplings might only take cash. Carry some 10 and 20 RMB notes.
 
 So skip the Bund selfie and go find a hidden courtyard. Your Instagram feed will thank youand youll actually feel like youve seen the real Shanghai.
 

@@ -40,7 +40,7 @@ I remember my first visa application as if it were a scene straight out of 'The 
 ### Keeping Copies of Important Documents
 Actionable tip: Keep a copy of all your important documents (passport, visa, travel itinerary) in a separate place from the originals. This can be an absolute lifesaver if something gets lost or stolen. I once had a scare when my wallet was snatched on a busy street in Shanghai. Luckily, I had copies of my passport and other important documents stashed away in my hotel safe. This way, you'll still have access to the information you need to prove your identity and travel plans.
 
-For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) and [144 - Hour Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
+For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [144 - Hour Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
 
 ## Clothing
 ### Adapting to China's Diverse Climate
@@ -59,7 +59,7 @@ Actionable tip: If you're traveling to areas like Zhangjiajie in the winter, con
 ### Staying Connected
 When it comes to electronics, your smartphone is going to be your most important companion. However, make sure you have a plan for staying connected. You can either get a local SIM card or use an eSIM. I prefer using an eSIM as it's more convenient and doesn't require me to swap out physical cards.
 
-Actionable tip: Download useful apps before you arrive in China. Apps like WeChat are essential for communication and can also be used for mobile payments. Check out [How to Use WeChat Pay as a Foreigner](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/) for more details.
+Actionable tip: Download useful apps before you arrive in China. Apps like WeChat are essential for communication and can also be used for mobile payments. Check out [How to Use WeChat Pay as a Foreigner](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/) for more details.
 
 ### Power Adaptors
 Don't forget to bring a power adaptor. China uses a different type of electrical outlet, and without the right adaptor, your electronics won't be able to charge. I once arrived in China without one and had to make a panicked trip to a local electronics store to buy one.

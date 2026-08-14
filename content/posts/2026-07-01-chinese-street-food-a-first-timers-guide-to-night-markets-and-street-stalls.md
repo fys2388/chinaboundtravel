@@ -31,7 +31,7 @@ Let me take you back to that fateful day when I first set foot in a Chinese nigh
 
 If you're planning a trip to China, exploring the street food is an absolute must. Chinese street food is not just about satisfying your taste buds; it's a portal to the local culture, traditions, and daily life. In this guide, I'll draw on my 5 years of experience living in Chengdu to give you an in-depth look at Chinese street food. Chengdu is also famous for its [tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) -- but today, we're focusing on the food. From the best night markets to the must-try dishes, I've got you covered.
 
-![Chinese street food stall at a bustling night market with sizzling skewers and steaming woks](img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
+![Chinese street food stall at a bustling night market with sizzling skewers and steaming woks](/img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
 
 ## The Allure of Chinese Street Food
 In California, we have our own share of street food gems, like the iconic In-N-Out burgers. But Chinese street food? It's in a league of its own. It's a culinary rollercoaster ride that offers a mind-boggling variety of flavors, textures, and cooking styles. Whether you're a fan of the [fiery Sichuan cuisine](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) or prefer the more delicate flavors of Cantonese street food, there's something to tantalize every palate.
@@ -54,7 +54,7 @@ In Shanghai, the Yuyuan Garden Night Market is very popular. Here, you can try l
 
 If you're in Beijing, the Wangfujing Snack Street is a great place to explore. It offers a wide range of Beijing-style street food, from the famous Peking duck wraps to sweet bean-cake. The atmosphere is lively, and you can often see street performers adding to the entertainment. Beijing is also home to the Great Wall -- if you're planning a visit, our [Great Wall guide](/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/) covers the hidden sections most tourists miss.
 
-![Must-try Chinese street food dishes served at a night market stall](img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
+![Must-try Chinese street food dishes served at a night market stall](/img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
 
 ## Must-Try Chinese Street Food Dishes
 

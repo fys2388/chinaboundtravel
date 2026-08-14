@@ -194,7 +194,7 @@ Zhangjiajie's food is Hunan-style — spicy, sour, and deeply flavorful. A few m
 
 **4. Wear proper hiking shoes.** I saw a woman in flip-flops trying to descend from Yuanjiajie. She was in tears 10 minutes later. The stone steps are uneven, often wet, and occasionally sheer drops. Trail runners or lightweight hiking shoes are ideal.
 
-**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-[Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)es-to-avoid-guide/).
+**5. Download the official Zhangjiajie mini-program on WeChat.** It has real-time crowd density for each attraction, bus schedules, and you can buy tickets through it. If you don't have WeChat set up yet, [check my guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/).
 
 **6. Cash is still king in Zhangjiajie.** While Alipay and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) are accepted everywhere in the city, some vendors near the park entrance and at the mountain top still prefer cash. Bring ¥200–300 in small bills.
 
@@ -263,7 +263,7 @@ And if you found this guide helpful, [bookmark it for your trip planning](/posts
 - [Guilin and Yangshuo: The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 
 **Practical China guides:**
-- [China High-Speed Train Survival Guide](/po[WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)high-speed-train-survival-guide-booking-classes-and-insider-tips/)
+- [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
 - [How to Use WeChat Pay as a Foreigner](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
 
 Questions about your Zhangjiajie trip? Drop a comment or DM me on Twitter — [@chinaboundtravel](https://twitter.com/chinaboundtravel).

@@ -32,7 +32,7 @@ Let me take you back to my first fumbling attempts at photography in the heart o
 
 That was my first lesson in Chinese photography. It's not as easy as it looks. But over the years, I've learned a few things that have helped me to take better photos. In this guide, I'm going to share some of those tips with you. Whether you're a beginner or an experienced photographer, these tips will help you to capture the beauty and diversity of China.
 
-![Photographer capturing the wonders of China's landscapes with a camera](img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg)
+![Photographer capturing the wonders of China's landscapes with a camera](/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg)
 
 ## Best Time to Visit Chengdu for Photography
 
@@ -123,7 +123,7 @@ And finally - don't stress if you miss a shot. China rewards patience. That "onc
 
 By following these tips and techniques, you can capture the beauty and diversity of China and create stunning photos that will last a lifetime. Remember to have fun, be creative, and enjoy the process!
 
-![China photography guide - camera gear and golden hour landscape shots](img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg)
+![China photography guide - camera gear and golden hour landscape shots](/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg)
 
 If you're planning a photography-focused trip and want more detailed itineraries, golden hour calendars by city, and exact spot coordinates for all the locations I mentioned above, check out the [full ChinaBound Travel Guide 2026.08](/posts/chinabound-travel-guide-2026-08-monthly-update/) - it has a dedicated photography chapter with 20+ pages of maps, gear checklists, and time-specific shooting plans for each major destination.
 

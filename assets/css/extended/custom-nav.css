@@ -211,3 +211,24 @@ html,
 body {
     overflow-x: hidden;
 }
+
+/* ================================================
+   V6-3: minimum 44x44 CSS px touch targets (mobile)
+   ================================================ */
+#theme-toggle,
+.hamburger-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+@media (max-width: 768px) {
+    .menu a {
+        min-height: 44px;
+        padding: 12px 12px;
+    }
+}
