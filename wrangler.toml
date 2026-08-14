@@ -3,10 +3,11 @@ name = "chinaboundtravel"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "public"
 
-[vars]
-# Stripe Configuration
-STRIPE_SECRET_KEY = "REPLACE_WITH_YOUR_STRIPE_SECRET_KEY"
-STRIPE_WEBHOOK_SECRET = "REPLACE_WITH_YOUR_STRIPE_WEBHOOK_SECRET"
+# Sensitive variables (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, MAILERLITE_API_TOKEN)
+# are configured as encrypted secrets on Cloudflare Pages (Production).
+# DO NOT add real secret values or placeholder vars here.
 
-# MailerLite Configuration
-MAILERLITE_API_KEY = "REPLACE_WITH_YOUR_MAILERLITE_API_KEY"
+# Stripe webhook idempotency KV (Pages Functions binding)
+[[kv_namespaces]]
+binding = "PROCESSED_EVENTS"
+id = "14eafec3624b4afeb1e22e090a9716d3"

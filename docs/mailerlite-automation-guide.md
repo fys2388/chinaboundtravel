@@ -14,7 +14,7 @@
 2. 命名：`chinaboundtravel-automation`
 3. 复制 Key（格式：`eyJ0eXAi...`）
 4. 将 Key 填入 Cloudflare Pages Environment Variable：
-   - **Variable name**：`MAILERLITE_API_KEY`
+   - **Variable name**：`MAILERLITE_API_TOKEN`
    - **Value**：`eyJ0eXAi...`
 
 ### 1.2 创建订阅者字段（Custom Fields）
@@ -314,7 +314,7 @@ Action: MailerLite → Update subscriber
 ```javascript
 // functions/api/stripe-webhook.js
 const mailerlite = require('@mailerlite/mailerlite-nodejs')(
-  process.env.MAILERLITE_API_KEY
+  process.env.MAILERLITE_API_TOKEN
 );
 
 async function handlePurchase(session) {
