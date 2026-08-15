@@ -125,3 +125,16 @@ Both pages keep their URL, canonical, slug, content_id, affiliate, and UTM; they
 - Transportation expansion: PASS on content, PARTIAL on technical (canonical folding blocks live impact until a separate approved technical round).
 - Tests / Hugo / content_id / secret scan: PASS.
 - Next: monitor 28d via GROWTH-06 measurement loop → decide WECHAT index request + transportation unfold technical round → then next batch from TOP_10_CONTENT_PRIORITIES.
+
+## 12. Deployment Verification Results (post-push)
+
+- Git push: `ee55b3c..f954171` normal fast-forward, success.
+- GitHub Actions run: `31905012376` "Post-deploy Tasks" → **success** (all 8 steps ✓ incl. Build site, Deploy to Cloudflare Pages).
+- Cloudflare Pages Production deployment: **`8666f671-53fc-4be5-a645-54e3bf7eef8b`** (source commit `f954171`, deployed 2026-08-16).
+- origin/main after auto manifest sync: `4c075ad` (chore: sync social publish manifest — repo's automatic behavior); local main fast-forwarded to match.
+- Live checks:
+  - `https://www.chinaboundtravel.com/` → 200
+  - STRONG WeChat page → 200, new title/H1 live ("Can Foreigners Use WeChat Pay in China?")
+  - WEAK WeChat page → 200, new title/H1 live ("How to Set Up & Use WeChat Pay Step by Step (2026 Guide)") + Troubleshooting section present
+  - TRANSPORT page → 200 but serves the transportation guide's noindex refresh stub (pre-existing canonical/alias folding; content ready in repo — needs the approved technical round to go live)
+- No manual deploy, no DNS change, no secrets touched.
