@@ -74,8 +74,10 @@
 
 ## 8. Production Deployment Status
 
-- No manual Cloudflare deploy performed (per boundary).
-- `content/**` change should trigger `deploy-cloudflare-pages.yml` on push; deployment status recorded after push verification.
+- No manual Cloudflare deploy performed (per boundary). Deployment handled by GitHub Actions `deploy-cloudflare-pages.yml` (Post-deploy Tasks), auto-triggered by the push.
+- GitHub Actions run: `31903884831` — success (build, deploy, social manifest, CDN purge all OK).
+- Cloudflare Pages deployment ID: `a4c33bef-b90f-4986-88c2-568e4986978f` (Production, branch main, source `60f1c17`).
+- Production smoke checks: `/` 200; `chinaboundtravel.com` 301 → `https://www.chinaboundtravel.com/`; `robots.txt` 200; `sitemap.xml` 200 (71 URLs, includes 144-hour post); `/posts/144-hour-visa-free-transit-guide/` 200 with new title + meta description live.
 
 ## 9. Manual Review Items
 
