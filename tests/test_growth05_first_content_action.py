@@ -160,7 +160,14 @@ def test_growth05_scope_only_allowed_objects():
     # no layouts/hugo.toml/config changes since the experiment commit
     forbidden = [p for p in changed if p.startswith(("layouts/", "hugo.toml", "config/"))]
     assert not forbidden, forbidden
-    # no other published post changed since the experiment commit
-    posts_changed = [p for p in changed if p.startswith("content/posts/")
-                     and p != "content/posts/144-hour-visa-free-transit-guide.md"]
-    assert not posts_changed, posts_changed
+    # since the experiment commit, only the 144h page (GROWTH-05) and the 3
+    # GROWTH-07 objects (2 WeChat + 1 transport) may have changed
+    allowed = {
+        "content/posts/144-hour-visa-free-transit-guide.md",
+        "content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+        "content/posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
+        "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+    }
+    posts_changed = [p for p in changed if p.startswith("content/posts/")]
+    extra = set(posts_changed) - allowed
+    assert not extra, extra

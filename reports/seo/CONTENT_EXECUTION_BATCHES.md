@@ -10,7 +10,7 @@ Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new
 | 2 | cbt-dfe3904705ea | China Travel Safety 2026: Guide for Travelers | https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ | 85.0 | TECHNICAL_FIX | S |
 | 3 | cbt-95d9a1b95440 | China Travel Guide: July 2026 Updates & Visa Rules | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/ | 85.0 | TECHNICAL_FIX | S |
 | 4 | cbt-acae8a973429 | Foodie's Guide to China: Dishes You Must Try | https://www.chinaboundtravel.com/posts/food-recommendations-guide/ | 85.0 | TECHNICAL_FIX | S |
-| 5 | cbt-255af4ed003a | WeChat Pay for Foreigners: Setup Guide & Mistakes | https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ | 80.0 | INDEX_RECOVERY | S |
+| 5 | cbt-255af4ed003a | How to Set Up & Use WeChat Pay Step by Step (2026 Guide) | https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ | 80.0 | INDEX_RECOVERY | S |
 | 6 | cbt-4e09fa4aa93d | China High-Speed Trains: Booking & Insider Tips | https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ | 80.0 | INDEX_RECOVERY | S |
 | 7 | cbt-558f85f45e9a | Great Wall of China: History Beyond the Tourist Trail | https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ | 80.0 | INDEX_RECOVERY | S |
 | 8 | cbt-6f28480baea0 | Chinese Train Stations: Survival Guide for Travelers | https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/ | 80.0 | INDEX_RECOVERY | S |
@@ -28,7 +28,7 @@ Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new
 | 1 | cbt-b4ff4381a014 | China 144-Hour Visa-Free Transit (2026 Guide) | https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ | 72.75 | TITLE_META_UPDATE | S |
 | 2 | cbt-e464169c4991 | Chinese Food Delivery: Meituan & Ele.me Guide | https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ | 68.75 | TITLE_META_UPDATE | S |
 | 3 | cbt-244822dc113b | China's 144-Hour Visa-Free Transit: 15 New Countries | https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ | 68.25 | TITLE_META_UPDATE | S |
-| 4 | cbt-707a8899c0a7 | How to Use WeChat Pay as a Foreigner (2026) | https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ | 65.75 | TITLE_META_UPDATE | S |
+| 4 | cbt-707a8899c0a7 | Can Foreigners Use WeChat Pay in China? (2026 Guide) | https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ | 65.75 | TITLE_META_UPDATE | S |
 | 5 | cbt-80ac63165adb | China Travel Guide: August 2026 Update | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ | 55.75 | TITLE_META_UPDATE | S |
 | 6 | cbt-80f6c218ad94 | Western Sichuan Overland Camping Route: 7 Days | https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/ | 54.5 | INTERNAL_LINK | S |
 | 7 | cbt-bf4ec5e57a07 | Guilin & Yangshuo: Complete 2026 Travel Guide | https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/ | 51.5 | INTERNAL_LINK | S |
