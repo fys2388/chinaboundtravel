@@ -26,7 +26,7 @@
         (dict "slug" "chengdu"     "name" "Chengdu"     "emoji" "🐼" "desc" "Home of pandas & spice")
         (dict "slug" "xian"        "name" "Xi'an"       "emoji" "🏺" "desc" "Ancient heart of China")
         (dict "slug" "hangzhou"    "name" "Hangzhou"    "emoji" "🏞️" "desc" "West Lake & tea culture")
-        (dict "slug" "sichuan"     "name" "Western Sichuan" "emoji" "⛰️" "desc" "Overland camping & Tibetan Plateau")
+        (dict "slug" "sichuan" "link" "western-sichuan" "name" "Western Sichuan" "emoji" "⛰️" "desc" "Overland camping & Tibetan Plateau")
     -}}
 
     {{- range $city := $cityList }}
@@ -45,7 +45,7 @@
                     <h2 class="city-group-name">{{ $city.name }}</h2>
                     <p class="city-group-desc">{{ $city.desc }}</p>
                 </div>
-                <a href="/cities/{{ $slug }}/" class="city-group-link">City Guide →</a>
+                <a href="/cities/{{ $city.link | default $slug }}/" class="city-group-link">City Guide →</a>
             </div>
 
             {{- if $cityPosts }}

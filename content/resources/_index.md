@@ -110,7 +110,7 @@ If you want English-guided tours of the Great Wall, Terracotta Warriors, or Pand
 - ✅ Beijing airport transfers
 - ✅ Verified reviews from other travelers
 
-<a href="https://klook.tpo.li/ppB4vZQ6" rel="nofollow sponsored" target="_blank"><strong>Find China Tours on Klook →</strong></a>
+<a href="https://klook.tpo.li/vrPkmS2v" rel="nofollow sponsored" target="_blank"><strong>Find China Tours on Klook →</strong></a>
 
 ---
 
