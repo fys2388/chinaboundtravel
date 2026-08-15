@@ -2,7 +2,7 @@
 
 - Date: 2026-08-16
 - GSC property: https://www.chinaboundtravel.com/
-- GitHub main: `7f4c0b9` (P1-GROWTH-01) → new commit this round
+- GitHub main: `7f4c0b9` (P1-GROWTH-01) -> `aa25179` (this round, pushed fast-forward)
 
 ## 1. GSC access status
 
@@ -129,8 +129,9 @@
 
 ## 14. Production status
 
-- GitHub main: `7f4c0b9` (this round adds analysis-only files; a normal `git push` follows).
-- No production change: no article/URL/canonical/sitemap/robots/affiliate modification; no deploy triggered by this round's content.
+- GitHub main: `aa251794ff5f1c01d12a3ce332201765d340ece3`; `git push origin main` = fast-forward `7f4c0b9..aa25179` (PASS).
+- GitHub Actions `deploy-cloudflare-pages.yml` triggers only on content/static/layouts/themes/config/hugo.toml paths; this round changed only scripts/tests/reports, so no auto-deploy was triggered (expected for analysis-only work).
+- No production change: no article/URL/canonical/sitemap/robots/affiliate modification; no manual deploy.
 
 ## Final status
 
