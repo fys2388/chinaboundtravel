@@ -2,7 +2,7 @@
 
 - Date: 2026-08-16
 - Workdir: `E:\AI\dulizhan\travel-blog`
-- GitHub main baseline: `2e167b3`
+- GitHub main: `2e167b3` -> `58c317a` (this round, pushed fast-forward)
 - GSC property: https://www.chinaboundtravel.com/
 
 ## 1. Scoring model
@@ -87,13 +87,14 @@ Implementation: `scripts/content_opportunity_engine.py` (deterministic; two runs
 
 ## 13. Git commit
 
-- commit message: `feat: add content opportunity engine`
+- commit: `58c317a` `feat: add content opportunity engine` (fast-forward `2e167b3..58c317a`)
 - Scope: engine + tests + reports only (no article/front-matter/URL/canonical/affiliate changes).
-- Pushed as a normal fast-forward (no force).
+- Pushed as a normal fast-forward (no force); HEAD == origin/main == `58c317a` verified.
 
 ## 14. Production status
 
 - No Cloudflare deploy, no Buffer deploy, no Stripe/Resend change, no GSC indexing request, no sitemap/robots modification.
+- GitHub Actions deploy workflow (`deploy-cloudflare-pages.yml`) **not triggered** = expected: this round only touches `scripts/`, `tests/`, `reports/`, outside the workflow paths filter (`content|static|layouts|themes|config|hugo.toml`); production deployment unchanged.
 - Production code unchanged; this round is analysis + tooling only.
 
 ---
