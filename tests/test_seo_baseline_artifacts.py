@@ -14,16 +14,49 @@ SEO_DIR = REPO / "reports" / "seo"
 
 
 def test_opportunity_detector_runs_and_writes():
-    proc = subprocess.run(
-        [sys.executable, str(REPO / "scripts" / "seo_opportunity_detector.py")],
-        cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace",
-    )
-    assert proc.returncode == 0, proc.stderr[-2000:]
-    out = SEO_DIR / "seo_opportunities.md"
-    assert out.exists()
-    text = out.read_text(encoding="utf-8")
-    for section in ("A. High Impression + Low CTR", "B. Position 4-10", "C. Position 11-20", "D. High Impression + Zero Click", "E. Pages with Multiple Related Queries"):
-        assert section in text, section
+    # Hermetic run: mock CSVs in a temp dir, --no-reports so committed
+    # report files are never regenerated/overwritten by the test.
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        q = Path(d) / "q.csv"
+        p = Path(d) / "p.csv"
+        qp = Path(d) / "qp.csv"
+        with open(q, "w", newline="", encoding="utf-8") as f:
+            f.write("keys,clicks,impressions,ctr,position\n"
+                    "china visa,0,120,0.0,7.0\n")
+        with open(p, "w", newline="", encoding="utf-8") as f:
+            f.write("keys,clicks,impressions,ctr,position\n"
+                    "https://www.chinaboundtravel.com/posts/visa/,0,150,0.0,9.0\n")
+        with open(qp, "w", newline="", encoding="utf-8") as f:
+            f.write("keys,clicks,impressions,ctr,position\n"
+                    "china visa;https://www.chinaboundtravel.com/posts/visa/,0,10,0.0,12.0\n")
+        out = Path(d) / "opps.csv"
+        proc = subprocess.run(
+            [sys.executable, str(REPO / "scripts" / "seo_opportunity_detector.py"),
+             "--queries", str(q), "--pages", str(p), "--query-pages", str(qp),
+             "--output", str(out), "--min-impressions", "100", "--no-reports"],
+            cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace",
+        )
+        assert proc.returncode == 0, proc.stderr[-2000:]
+        assert out.exists()
+        with open(out, encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        assert rows, "csv empty"
+        types = {r["opportunity_type"] for r in rows}
+        assert "A_HIGH_IMP_LOW_CTR" in types
+        assert "D_HIGH_IMP_ZERO_CLICK" in types
+
+
+def test_committed_opportunity_reports_present():
+    for name, section in [
+        ("SEO_OPPORTUNITIES.md", "## Top 20 Query Opportunities"),
+        ("LOW_CTR_OPPORTUNITIES.md", "Position bands"),
+        ("PAGE_1_OPPORTUNITIES.md", "Position 4-20"),
+    ]:
+        fp = SEO_DIR / name
+        assert fp.exists(), name
+        text = fp.read_text(encoding="utf-8")
+        assert section in text, (name, section)
 
 
 def test_page_performance_csv_parseable():

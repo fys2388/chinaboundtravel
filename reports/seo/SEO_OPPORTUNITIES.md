@@ -1,0 +1,47 @@
+# SEO Opportunities
+
+Top 20 query opportunities (28-day window). ctr is a ratio (0.05 = 5%); page column is the dominant page for the query from query+page data.
+
+## Top 20 Query Opportunities
+
+| query | page | impressions | clicks | ctr | position | opportunity_type | recommended_action |
+|---|---|---|---|---|---|---|---|
+| china bound | https://www.chinaboundtravel.com/ | 8 | 0 | 0.0% | 7.25 | B_POSITION_4_10 | FAQ |
+| chinabound | https://www.chinaboundtravel.com/ | 5 | 0 | 0.0% | 19.2 | C_POSITION_11_20 | CONTENT_UPDATE |
+| china high speed rail ticket | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 4 | 0 | 0.0% | 14.5 | C_POSITION_11_20 | CONTENT_UPDATE |
+| china visa itinerary template | https://www.chinaboundtravel.com/7-day-china-itinerary/ | 3 | 0 | 0.0% | 9.33 | B_POSITION_4_10 | FAQ |
+| how to buy china high speed rail tickets | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 3 | 0 | 0.0% | 18.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| how to book china high speed rail | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 2 | 0 | 0.0% | 18.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| where to buy china high speed rail tickets | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 2 | 0 | 0.0% | 18.5 | C_POSITION_11_20 | CONTENT_UPDATE |
+| 144-hour validation program | https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ | 1 | 0 | 0.0% | 7.0 | B_POSITION_4_10 | FAQ |
+| ele me china | https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ | 1 | 0 | 0.0% | 7.0 | B_POSITION_4_10 | FAQ |
+| lijiang rice terraces | https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ | 1 | 0 | 0.0% | 14.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| china high speed rail booking | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 1 | 0 | 0.0% | 15.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| high speed train ticket | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 1 | 0 | 0.0% | 16.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| china fast train booking | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 1 | 0 | 0.0% | 17.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| china high speed train booking | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 1 | 0 | 0.0% | 17.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+| how to book high speed rail in china | https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ | 1 | 0 | 0.0% | 20.0 | C_POSITION_11_20 | CONTENT_UPDATE |
+
+## Top 20 Page Opportunities
+
+| page | query | impressions | clicks | ctr | position | opportunity_type | recommended_action |
+|---|---|---|---|---|---|---|---|
+| https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ |  | 159 | 0 | 0.0% | 19.55 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ |  | 159 | 0 | 0.0% | 19.55 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 138 | 0 | 0.0% | 30.14 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 138 | 0 | 0.0% | 30.14 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ |  | 107 | 0 | 0.0% | 22.33 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ |  | 107 | 0 | 0.0% | 22.33 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 107 | 0 | 0.0% | 74.05 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 107 | 0 | 0.0% | 74.05 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 55 | 0 | 0.0% | 38.47 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 32 | 0 | 0.0% | 78.07 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ |  | 29 | 0 | 0.0% | 65.03 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ |  | 27 | 0 | 0.0% | 54.95 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/cities/xian/ |  | 24 | 0 | 0.0% | 81.02 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/internet/ |  | 14 | 0 | 0.0% | 78.41 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/ |  | 13 | 0 | 0.0% | 39.08 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/accommodation-tips-guide/ |  | 11 | 0 | 0.0% | 65.19 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/cultural-etiquette-in-china-a-californians-guide/ |  | 6 | 0 | 0.0% | 77.7 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ |  | 5 | 0 | 0.0% | 44.75 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ |  | 3 | 0 | 0.0% | 76.0 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
