@@ -1,0 +1,945 @@
+[
+  {
+    "content_id": "cbt-b4ff4381a014",
+    "url": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+    "opportunity_score": 77,
+    "tier": "B",
+    "action": "TITLE_TEST",
+    "evidence": {
+      "impressions_28d": 107,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 74.05,
+      "query_count": 16,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "144 hour visa china",
+      "144 hour visa free transit",
+      "144 hours china visa",
+      "144 hours visa china",
+      "144-hour visa-free transit in china",
+      "china 144 hour transit visa",
+      "china 144 hour visa",
+      "china 144-hour visa-free transit",
+      "china transit visa",
+      "china visa transit",
+      "guangzhou transit visa",
+      "shenzhen 144 hour visa free guide",
+      "transit visa china",
+      "transit visa for china",
+      "transit visa in china",
+      "visa free transit meaning"
+    ],
+    "business_intent": "VISA",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-17c6738ffb32",
+    "url": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+    "opportunity_score": 75,
+    "tier": "B",
+    "action": "TITLE_TEST",
+    "evidence": {
+      "impressions_28d": 107,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 22.33,
+      "query_count": 2,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "china transportation guide",
+      "how to ride china's high-speed trains"
+    ],
+    "business_intent": "TRANSPORT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-e464169c4991",
+    "url": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "opportunity_score": 67,
+    "tier": "B",
+    "action": "TITLE_TEST",
+    "evidence": {
+      "impressions_28d": 159,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 19.55,
+      "query_count": 4,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "ele me china",
+      "eleme app",
+      "food delivery chengdu",
+      "meituan food delivery china"
+    ],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-244822dc113b",
+    "url": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+    "opportunity_score": 67,
+    "tier": "B",
+    "action": "COMMERCIAL_OPTIMIZATION",
+    "evidence": {
+      "impressions_28d": 87,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 41.87,
+      "query_count": 11,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "144 hour visa china",
+      "144 hour visa free transit",
+      "144 hours china visa",
+      "144 hours visa china",
+      "144-hour validation program",
+      "144-hour visa-free transit",
+      "china 144 hour transit visa",
+      "china 144 hour visa",
+      "china visa 144 hours",
+      "shenzhen 144 hour visa free guide",
+      "visa free transit in china"
+    ],
+    "business_intent": "VISA",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-707a8899c0a7",
+    "url": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+    "opportunity_score": 65,
+    "tier": "B",
+    "action": "COMMERCIAL_OPTIMIZATION",
+    "evidence": {
+      "impressions_28d": 83,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 62.45,
+      "query_count": 19,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "can foreigners set up wechat pay",
+      "can i use wechat outside of china",
+      "can you use wechat pay as a foreigner",
+      "foreigner using wechat pay in china",
+      "how to pay using wechat",
+      "how to pay with wechat",
+      "how to use we chat pay",
+      "how to use wechat pay as a foreigner",
+      "how to use wechat pay in canada",
+      "how to use wechat to pay",
+      "how to use wechat to pay in china",
+      "pay with wechat",
+      "setting up wechat pay for foreigners",
+      "wechat pay for foreigners",
+      "wechat pay for tourists",
+      "wechat pay international",
+      "wechat pay travel",
+      "wechat pay us",
+      "wechat payment foreigner"
+    ],
+    "business_intent": "PAYMENT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-d7747b73c978",
+    "url": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+    "opportunity_score": 60,
+    "tier": "B",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 1,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 5.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-80f6c218ad94",
+    "url": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+    "opportunity_score": 58,
+    "tier": "C",
+    "action": "FAQ_EXPANSION",
+    "evidence": {
+      "impressions_28d": 26,
+      "clicks_28d": 1,
+      "ctr_28d": 0.038462,
+      "avg_position": 19.31,
+      "query_count": 2,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "recommended campsites in sichuan",
+      "sichuan backpacking routes recommendations"
+    ],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-bfeaa5ca9007",
+    "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+    "opportunity_score": 57,
+    "tier": "C",
+    "action": "FAQ_EXPANSION",
+    "evidence": {
+      "impressions_28d": 51,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 20.88,
+      "query_count": 3,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "photography in china",
+      "sichuan photography tourism culture recommendation",
+      "top places for photography in china"
+    ],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-663ab3f3b0fa",
+    "url": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+    "opportunity_score": 56,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 2,
+      "clicks_28d": 1,
+      "ctr_28d": 0.5,
+      "avg_position": 16.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-80ac63165adb",
+    "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+    "opportunity_score": 55,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 52,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 11.4,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-baa2f6fba2f0",
+    "url": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+    "opportunity_score": 52,
+    "tier": "C",
+    "action": "INTERNAL_LINK",
+    "evidence": {
+      "impressions_28d": 17,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 48.06,
+      "query_count": 8,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "accommodation standards of chengdu china youth travel service",
+      "accommodation standards of chengdu tourism companies",
+      "accommodation standards of chengdu travel agencies",
+      "accommodation standards of sichuan international travel service",
+      "accommodation standards of sichuan travel agencies",
+      "comparison of accommodation conditions in chengdu",
+      "sichuan accommodation standards recommended",
+      "sichuan travel accommodation standards"
+    ],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-ae69cb9f84b0",
+    "url": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+    "opportunity_score": 52,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 1,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 64.0,
+      "query_count": 1,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "alipay for foreigners china 2026"
+    ],
+    "business_intent": "PAYMENT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-bf4ec5e57a07",
+    "url": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
+    "opportunity_score": 50,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 24,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 18.88,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-302467d853db",
+    "url": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+    "opportunity_score": 50,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 11,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 11.09,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-23c31fe5b281",
+    "url": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 40,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 20.7,
+      "query_count": 1,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "lijiang rice terraces"
+    ],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-34777b6c17c1",
+    "url": "https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 20,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 27.0,
+      "query_count": 1,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [
+      "zhangjiajie visitor guide"
+    ],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-cfd5d7b39f09",
+    "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 11,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 27.45,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-550a6e3e929c",
+    "url": "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 11,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 37.18,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-dfe3904705ea",
+    "url": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 7,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 42.14,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-c59607760fee",
+    "url": "https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 6,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 27.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-277de627eb2d",
+    "url": "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/",
+    "opportunity_score": 46,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 1,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 49.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-673e981fe6f2",
+    "url": "https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+    "opportunity_score": 44,
+    "tier": "C",
+    "action": "CONTENT_EXPANSION",
+    "evidence": {
+      "impressions_28d": 3,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 87.33,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-07563e9b51cc",
+    "url": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
+    "opportunity_score": 40,
+    "tier": "C",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "PAYMENT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-95d9a1b95440",
+    "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/",
+    "opportunity_score": 40,
+    "tier": "C",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "VISA",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-a349eee78670",
+    "url": "https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/",
+    "opportunity_score": 40,
+    "tier": "C",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "INTERNET",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-abb64a856c29",
+    "url": "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
+    "opportunity_score": 40,
+    "tier": "C",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "PAYMENT",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-73f33c49bc51",
+    "url": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+    "opportunity_score": 40,
+    "tier": "C",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "VISA",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-255af4ed003a",
+    "url": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+    "opportunity_score": 38,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 1,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 11.0,
+      "query_count": 0,
+      "indexed_status": "Alternate page with proper canonical tag"
+    },
+    "queries": [],
+    "business_intent": "PAYMENT",
+    "index_status": "Alternate page with proper canonical tag"
+  },
+  {
+    "content_id": "cbt-c885da2cf5d9",
+    "url": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-d701fb08eb7b",
+    "url": "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-49088019c529",
+    "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-932a277b1899",
+    "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-92448be1e0ca",
+    "url": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-698862ce2129",
+    "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-034b43ef5e3a",
+    "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-2b8c6981425b",
+    "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-6a164e0e8077",
+    "url": "https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-acae8a973429",
+    "url": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-bc3e1afe5dc0",
+    "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
+    "opportunity_score": 32,
+    "tier": "D",
+    "action": "MONITOR",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "INDEXED"
+  },
+  {
+    "content_id": "cbt-cc4549872c92",
+    "url": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
+    "opportunity_score": 20,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "NOT_INDEXED"
+  },
+  {
+    "content_id": "cbt-4e09fa4aa93d",
+    "url": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+    "opportunity_score": 20,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "Page with redirect"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "Page with redirect"
+  },
+  {
+    "content_id": "cbt-6f28480baea0",
+    "url": "https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/",
+    "opportunity_score": 20,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "NOT_INDEXED"
+  },
+  {
+    "content_id": "cbt-558f85f45e9a",
+    "url": "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/",
+    "opportunity_score": 20,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "Page with redirect"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "Page with redirect"
+  },
+  {
+    "content_id": "cbt-74e8424894c4",
+    "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+    "opportunity_score": 12,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "Alternate page with proper canonical tag"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "Alternate page with proper canonical tag"
+  },
+  {
+    "content_id": "cbt-575e18482ca0",
+    "url": "https://www.chinaboundtravel.com/posts/china-just-made-it-way-easier-to-visit-my-mother-i/",
+    "opportunity_score": 12,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "NOT_INDEXED"
+  },
+  {
+    "content_id": "cbt-0bb1cb1e308d",
+    "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
+    "opportunity_score": 12,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "NOT_INDEXED"
+  },
+  {
+    "content_id": "cbt-067675763415",
+    "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
+    "opportunity_score": 12,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "TRAVEL_GUIDE",
+    "index_status": "NOT_INDEXED"
+  },
+  {
+    "content_id": "cbt-407090802298",
+    "url": "https://www.chinaboundtravel.com/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/",
+    "opportunity_score": 12,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "NOT_INDEXED"
+    },
+    "queries": [],
+    "business_intent": "CITY",
+    "index_status": "NOT_INDEXED"
+  }
+]
