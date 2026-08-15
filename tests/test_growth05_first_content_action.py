@@ -57,11 +57,12 @@ def test_canonical_declarations_match_expected():
         assert _fm_value(text, "draft") != "true", fname
 
 
-def test_transportation_main_page_keeps_alias_for_old_slug():
-    """transportation-guide-guide is an alias of the canonical transportation guide."""
+def test_transportation_guide_keeps_old_alias_but_not_rail_url():
+    """transportation-guide-guide stays an alias, but the rail page URL is no longer consumed
+    (P1-GROWTH-07B: the rail page must render real content at its own canonical URL)."""
     text = _read("2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md")
     assert "/posts/transportation-guide-guide/" in text
-    assert "/posts/china-high-speed-rail-how-to-book-tickets/" in text
+    assert "/posts/china-high-speed-rail-how-to-book-tickets/" not in text
 
 
 def test_canonical_rendered_output_when_built():

@@ -1,31 +1,34 @@
-{{- /* Auto-detect FAQ sections and generate FAQPage JSON-LD */ -}}
+{{- /* FAQPage JSON-LD: emits only when a real, visible FAQ section exists in the page content.
+     Detection: an <h2> heading whose text starts with "FAQ".
+     Extraction: consecutive <h3>Question</h3><p>Answer</p> pairs after that heading,
+     stopping at the next <h2>. Emits nothing when no FAQ data is present. */ -}}
 {{- $content := .Content -}}
-{{- $hasFaq := in $content "## FAQ" -}}
-{{- if and .IsPage $hasFaq -}}
-{{- $faqContent := replaceRE `(?s).*?## FAQ\s*` "" $content -}}
-{{- $questions := findRE `(?s)<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>` $faqContent -}}
-{{- if gt (len $questions) 0 -}}
+{{- $hasFaqHeading := findRE `(?is)<h2[^>]*>\s*(?:<a[^>]*>)*\s*FAQ\b` $content -}}
+{{- if and .IsPage (gt (len $hasFaqHeading) 0) -}}
+{{- /* Keep everything from the first FAQ <h2> to the end of content */ -}}
+{{- $faqSection := replaceRE `(?is)^.*?(<h2[^>]*>\s*(?:<a[^>]*>)*\s*FAQ\b.*)$` `$1` $content -}}
+{{- /* Stop at the next <h2> after the FAQ heading */ -}}
+{{- $faqSection = replaceRE `(?is)(<h2[^>]*>\s*(?:<a[^>]*>)*\s*FAQ\b.*?)(<h2[^>]*>).*$` `$1` $faqSection -}}
+{{- $qaPairs := findRE `(?is)<h3[^>]*>.*?</h3>\s*<p>.*?</p>` $faqSection -}}
+{{- if gt (len $qaPairs) 0 -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {{- range $i, $q := $questions -}}
-    {{- $parts := findRE `<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>` $q -}}
-    {{- if gt (len $parts) 0 -}}
-    {{- $question := index (findRE `>(.*?)<` (index $parts 0)) 0 -}}
-    {{- $answer := index (findRE `<p>(.*?)</p>` (index $parts 0)) 0 -}}
-    {{- if $i }}, {{end -}}
+{{- range $i, $pair := $qaPairs -}}
+{{- $question := $pair | replaceRE `(?is)^<h3[^>]*>(.*?)</h3>.*$` `$1` | replaceRE `(?is)<a[^>]*>#</a>` `` | plainify | htmlUnescape | replaceRE `\s+` ` ` | safeJS -}}
+{{- $answer := $pair | replaceRE `(?is)^<h3[^>]*>.*?</h3>\s*<p>(.*?)</p>.*$` `$1` | plainify | htmlUnescape | replaceRE `\s+` ` ` | safeJS -}}
+{{- if and (gt (len $question) 0) (gt (len $answer) 0) -}}{{ if $i }},{{ end }}
     {
       "@type": "Question",
-      "name": {{ $question | plainify | safeJS }},
+      "name": "{{ $question }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $answer | plainify | safeJS }}
+        "text": "{{ $answer }}"
       }
-    }
-    {{- end -}}
-    {{- end -}}
+    }{{- end -}}
+{{- end -}}
   ]
 }
 </script>

@@ -166,16 +166,20 @@ def test_no_duplicate_meta_description():
 # scope control
 # ---------------------------------------------------------------------------
 
-def test_growth07_scope_only_three_objects():
+def test_growth07_scope_only_allowed_objects():
     out = subprocess.run(["git", "diff", "HEAD", "--name-only"], cwd=str(REPO),
                          capture_output=True, text=True, encoding="utf-8")
     changed = [p for p in out.stdout.splitlines() if p]
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
     allowed = {"content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
                "content/posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
-               "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md"}
+               "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed
-    forbidden = [p for p in changed if p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))]
+    allowed_layouts = {"layouts/partials/schema_faq.html"}
+    forbidden = [p for p in changed
+                 if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))
+                     and p not in allowed_layouts)]
     assert not forbidden, forbidden

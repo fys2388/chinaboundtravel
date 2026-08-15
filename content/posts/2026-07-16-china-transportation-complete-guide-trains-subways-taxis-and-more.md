@@ -10,7 +10,6 @@ aliases = [
   "/posts/transportation-guide-guide/",
   "/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/",
   "/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
-  "/posts/china-high-speed-rail-how-to-book-tickets/",
   "/posts/how-to-survive-chinese-train-station/"
 ]
 categories = ["Practical Travel Tips"]
