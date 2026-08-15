@@ -1,0 +1,10 @@
+{
+  "experiment_id": "GROWTH05-CTR-001",
+  "baseline_date": "2026-08-16",
+  "metrics": {
+    "impressions": 107,
+    "clicks": 0,
+    "ctr": 0.0,
+    "position": 74.04672897196262
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "experiment_id": "GROWTH05-CTR-001",
+  "content_id": "cbt-b4ff4381a014",
+  "url": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+  "start_date": "2026-08-16",
+  "baseline_date": "2026-08-16",
+  "observed_days": 0,
+  "minimum_observation_days": 28,
+  "data_source": "RAW",
+  "baseline": {
+    "impressions": 107,
+    "clicks": 0,
+    "ctr": 0.0,
+    "position": 74.04672897196262
+  },
+  "current": {
+    "impressions": 107,
+    "clicks": 0,
+    "ctr": 0.0,
+    "position": 74.04672897196262
+  },
+  "deltas": {
+    "impressions_delta": 0.0,
+    "impressions_pct": 0.0,
+    "clicks_delta": 0.0,
+    "clicks_pct": null,
+    "ctr_delta": 0.0,
+    "ctr_pct": null,
+    "position_delta": 0.0,
+    "position_pct": 0.0
+  },
+  "classification": "INSUFFICIENT_SAMPLE",
+  "low_sample_warning": true,
+  "measured_at": "2026-08-16T03:34:03+08:00"
+}

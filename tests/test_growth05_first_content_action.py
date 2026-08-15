@@ -131,37 +131,36 @@ def test_144h_identity_fields_unchanged():
 
 
 def test_144h_affiliate_and_utm_unchanged():
-    """Compare against HEAD: body + affiliate/UTM must be identical; only title/description lines changed."""
+    """Body + affiliate/UTM must stay byte-identical to the GROWTH-05 experiment commit (60f1c17)."""
     name = "144-hour-visa-free-transit-guide.md"
-    old = subprocess.run(["git", "show", "HEAD:" + str(POSTS.relative_to(REPO) / name).replace("\\", "/")],
+    rel = str(POSTS.relative_to(REPO) / name).replace("\\", "/")
+    old = subprocess.run(["git", "show", "60f1c17:" + rel],
                          cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace")
     assert old.returncode == 0, old.stderr
     old_text = old.stdout
     new_text = _read(name)
-    old_lines = set(old_text.splitlines())
-    new_lines = set(new_text.splitlines())
-    removed = old_lines - new_lines
-    added = new_lines - old_lines
-    # only the title line and description line may differ
-    assert len(removed) == 2, removed
-    assert len(added) == 2, added
-    for line in removed | added:
-        assert "title:" in line or "description:" in line, line
-    # affiliate/UTM tokens present in both versions unchanged
-    # affiliate/UTM-bearing lines must be byte-identical between versions
+    # front-matter title/description are the experiment's only allowed diffs vs pre-experiment HEAD
+    base = subprocess.run(["git", "show", "HEAD:" + rel],
+                          cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace")
+    assert base.returncode == 0, base.stderr
+    assert old_text == new_text, "post must not be modified since the GROWTH-05 experiment commit"
+    assert base.stdout == new_text, "post must stay at the committed GROWTH-05 state"
+    # affiliate/UTM-bearing body identical
     old_body = old_text.split("---", 2)[-1]
     new_body = new_text.split("---", 2)[-1]
     assert old_body == new_body, "body/affiliate/UTM content changed"
 
 
 def test_growth05_scope_only_allowed_objects():
-    """git diff (working tree) must touch only the 144-hour front matter this round."""
-    out = subprocess.run(["git", "diff", "HEAD", "--name-only"], cwd=str(REPO),
+    """Since the GROWTH-05 experiment commit, no layout/config and no other post may change."""
+    out = subprocess.run(["git", "diff", "60f1c17..HEAD", "--name-only"], cwd=str(REPO),
                          capture_output=True, text=True, encoding="utf-8", errors="replace")
     assert out.returncode == 0
     changed = [p for p in out.stdout.splitlines() if p]
-    content_changed = [p for p in changed if p.startswith("content/")]
-    assert content_changed == ["content/posts/144-hour-visa-free-transit-guide.md"], content_changed
-    # this round must not touch layouts, hugo.toml, config, or any other post
+    # no layouts/hugo.toml/config changes since the experiment commit
     forbidden = [p for p in changed if p.startswith(("layouts/", "hugo.toml", "config/"))]
     assert not forbidden, forbidden
+    # no other published post changed since the experiment commit
+    posts_changed = [p for p in changed if p.startswith("content/posts/")
+                     and p != "content/posts/144-hour-visa-free-transit-guide.md"]
+    assert not posts_changed, posts_changed
