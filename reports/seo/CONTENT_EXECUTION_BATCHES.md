@@ -25,7 +25,7 @@ Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new
 
 | rank | content_id | title | url | priority | action | effort |
 |---|---|---|---|---|---|---|
-| 1 | cbt-b4ff4381a014 | 144-Hour Visa-Free Transit in China (2026 Guide) | https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ | 72.75 | TITLE_META_UPDATE | S |
+| 1 | cbt-b4ff4381a014 | China 144-Hour Visa-Free Transit (2026 Guide) | https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ | 72.75 | TITLE_META_UPDATE | S |
 | 2 | cbt-e464169c4991 | Chinese Food Delivery: Meituan & Ele.me Guide | https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ | 68.75 | TITLE_META_UPDATE | S |
 | 3 | cbt-244822dc113b | China's 144-Hour Visa-Free Transit: 15 New Countries | https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ | 68.25 | TITLE_META_UPDATE | S |
 | 4 | cbt-707a8899c0a7 | How to Use WeChat Pay as a Foreigner (2026) | https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ | 65.75 | TITLE_META_UPDATE | S |

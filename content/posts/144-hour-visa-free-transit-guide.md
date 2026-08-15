@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-b4ff4381a014"
-title: "144-Hour Visa-Free Transit in China (2026 Guide)"
+title: "China 144-Hour Visa-Free Transit (2026 Guide)"
 date: '2026-05-19T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
@@ -13,7 +13,7 @@ tags:
 categories:
 - China Essentials
 author: Joran
-description: "Who qualifies for China's 144-hour visa-free transit in 2026? Eligible cities, required documents, and the border process, step by step."
+description: "China's 144-hour visa-free transit explained: who qualifies, eligible cities and ports, required documents, and the border process step by step."
 ShowToc: true
 TocOpen: false
 cover:
