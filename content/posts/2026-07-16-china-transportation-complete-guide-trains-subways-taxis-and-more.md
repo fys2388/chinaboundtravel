@@ -149,7 +149,7 @@ Every major Chinese city has a metro system, and they are clean, cheap, and easy
 In 2026, you have three options:
 
 1. **Scan QR code at the gate** with [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) or [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) -- this is the most common method and works in every city
-2. **Transit card**: Buy a physical card at the station (楼20 deposit + balance). Works across most cities
+2. **Transit card**: Buy a physical card at the station (楼20 deposit + balance). Works across most cities -- see the [China Transportation Card Guide](/posts/china-transportation-card-guide/) for a full comparison of cards, transit apps, and mobile payment
 3. **Apple Pay / Huawei Pay**: Supported in Beijing, Shanghai, Guangzhou, and Shenzhen
 
 ### Subway Tips That Save Time
@@ -158,6 +158,7 @@ In 2026, you have three options:
 - **Use the last car** for a slightly less crowded ride
 - **Stand on the right** on escalators -- this is strictly observed in most cities
 - **Download the city's metro app**: Beijing, Shanghai, and Guangzhou all have official English apps with real-time train positions and route planning
+- **Plan your payment method**: most gates accept QR code scanning -- for a city-by-city comparison of cards and apps, see the [China Transportation Card Guide](/posts/china-transportation-card-guide/)
 
 ---
 

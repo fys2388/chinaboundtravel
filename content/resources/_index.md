@@ -101,6 +101,12 @@ Search and compare flight prices across multiple airlines and booking platforms 
 
 <a href="https://www.aviasales.com/?marker=730795" rel="nofollow sponsored" target="_blank"><strong>Search China Flights →</strong></a>
 
+### China Transportation Cards — Metro & City Travel
+
+How to pay for subways and buses in China: physical metro IC cards, transit apps, and mobile QR payment, compared city by city.
+
+[**China Transportation Card Guide →**](/posts/china-transportation-card-guide/)
+
 ### Klook — Tours & Skip-the-Line Tickets
 
 If you want English-guided tours of the Great Wall, Terracotta Warriors, or Panda Base (and skip the 2-hour entry queues), Klook is the best platform:

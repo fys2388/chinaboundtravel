@@ -140,7 +140,9 @@ def test_affiliate_urls_unchanged():
 # 8-9: content_id / canonical unchanged (posts untouched)
 # ---------------------------------------------------------------------------
 # P1-GROWTH-15 authorized REV002 CTA experiment post
-REV002_AUTHORIZED = {"content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
+REV002_AUTHORIZED = {"content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+    # P1-GROWTH-18 authorized internal-link additions
+    "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md"}
 
 PILOT_POSTS = {
     "content/posts/western-sichuan-overland-camping-route.md",
@@ -169,7 +171,10 @@ def test_non_brand_content_untouched():
                "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
                "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
                # P1-GROWTH-15 authorized REV002 CTA experiment post
-               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
+               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+               # P1-GROWTH-18 authorized internal-link additions
+               "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+               "content/posts/china-transportation-card-guide.md"}
     assert set(changed) <= allowed, f"unexpected content changes: {changed}"
 
 

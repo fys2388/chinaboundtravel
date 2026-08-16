@@ -218,5 +218,8 @@ def test_brand03_scope_only_three_pilot_posts():
     # P1-GROWTH-12B authorizes the REV001 CTA post in addition to the 3 pilots
     allowed = set(PILOT_POSTS) | {"content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
                                    # P1-GROWTH-15 REV002 CTA experiment post
-                                   "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
+                                   "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+                                   # P1-GROWTH-18 internal-link additions
+                                   "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+                                   "content/posts/china-transportation-card-guide.md"}
     assert set(posts_changed) <= allowed, posts_changed
