@@ -174,13 +174,18 @@ def test_growth07_scope_only_allowed_objects():
     allowed = {"content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
                "content/posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
                "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
+               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+               # P1-GROWTH-12 authorized REV-001: 144h mid-content CTA
+               "content/posts/144-hour-visa-free-transit-guide.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed
     allowed_layouts = {"layouts/partials/schema_faq.html",
                       # P1-GROWTH-10A authorized site-wide Travelpayouts Drive install
-                      "layouts/partials/head.html"}
+                      "layouts/partials/head.html",
+                      # P1-GROWTH-12 authorized REV-001: mid-content CTA + click delegation
+                      "layouts/_default/single.html",
+                      "layouts/shortcodes/affiliate-mid-cta.html"}
     forbidden = [p for p in changed
                  if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))
                      and p not in allowed_layouts)]

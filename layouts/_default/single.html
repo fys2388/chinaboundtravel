@@ -58,9 +58,7 @@
         if (!container) return;
         var contentId = container.getAttribute('data-content-id') || '';
         var channel = container.getAttribute('data-channel') || 'organic';
-        container.addEventListener('click', function (e) {
-            var link = e.target && e.target.closest ? e.target.closest('a.affiliate-link') : null;
-            if (!link) return;
+        function send(link) {
             var query = link.href.split('?')[1] || '';
             var eventParams = {
                 content_id: contentId,
@@ -77,6 +75,16 @@
             if (window.dataLayer) {
                 window.dataLayer.push(Object.assign({ event: 'affiliate_click' }, eventParams));
             }
+        }
+        container.addEventListener('click', function (e) {
+            var link = e.target && e.target.closest ? e.target.closest('a.affiliate-link') : null;
+            if (link) send(link);
+        });
+        // mid-content CTA links (P1-GROWTH-12 REV-001): same affiliate_click event, only placement differs
+        document.addEventListener('click', function (e) {
+            var link = e.target && e.target.closest ? e.target.closest('a.affiliate-link[data-affiliate-placement]') : null;
+            if (!link || !link.closest || link.closest('.article-affiliate')) return;
+            send(link);
         });
     })();
     </script>

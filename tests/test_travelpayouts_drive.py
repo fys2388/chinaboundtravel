@@ -119,11 +119,13 @@ def test_single_html_still_template_driven():
 
 
 def test_no_content_or_affiliate_files_touched():
-    """This round may only touch layouts/partials/head.html + tests/reports."""
+    """No article other than the GROWTH-12 144h page may change; hugo.toml must stay intact."""
     proc = subprocess.run(["git", "status", "--short", "--", "content/"], cwd=str(REPO),
                           capture_output=True, text=True, encoding="utf-8")
     assert proc.returncode == 0
-    assert proc.stdout.strip() == "", f"content/ has unexpected changes:\n{proc.stdout}"
+    changed = [ln for ln in proc.stdout.splitlines() if ln.strip()]
+    allowed = "content/posts/144-hour-visa-free-transit-guide.md"
+    assert all(allowed in ln for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
     proc2 = subprocess.run(["git", "status", "--short", "--", "hugo.toml"], cwd=str(REPO),
                            capture_output=True, text=True, encoding="utf-8")
     assert proc2.stdout.strip() == "", "hugo.toml changed unexpectedly"

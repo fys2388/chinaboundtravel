@@ -1,4 +1,5 @@
 """P1-GROWTH-05: regression tests for the first content growth actions.
+import re
 
 Covers:
 - canonical conflict output correctness (ACTION A: verified, already correct in code)
@@ -132,7 +133,7 @@ def test_144h_identity_fields_unchanged():
 
 
 def test_144h_affiliate_and_utm_unchanged():
-    """Body + affiliate/UTM must stay byte-identical to the GROWTH-05 experiment commit (60f1c17)."""
+    """Since GROWTH-05, only the GROWTH-12 sanctioned mid-content CTA may have been added."""
     name = "144-hour-visa-free-transit-guide.md"
     rel = str(POSTS.relative_to(REPO) / name).replace("\\", "/")
     old = subprocess.run(["git", "show", "60f1c17:" + rel],
@@ -140,16 +141,17 @@ def test_144h_affiliate_and_utm_unchanged():
     assert old.returncode == 0, old.stderr
     old_text = old.stdout
     new_text = _read(name)
-    # front-matter title/description are the experiment's only allowed diffs vs pre-experiment HEAD
-    base = subprocess.run(["git", "show", "HEAD:" + rel],
-                          cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace")
-    assert base.returncode == 0, base.stderr
-    assert old_text == new_text, "post must not be modified since the GROWTH-05 experiment commit"
-    assert base.stdout == new_text, "post must stay at the committed GROWTH-05 state"
-    # affiliate/UTM-bearing body identical
     old_body = old_text.split("---", 2)[-1]
     new_body = new_text.split("---", 2)[-1]
-    assert old_body == new_body, "body/affiliate/UTM content changed"
+    # removing the GROWTH-12 CTA block must recover the GROWTH-05 body byte-for-byte
+    stripped = re.sub(r"\n\{\{< affiliate-mid-cta .*?\{\{< /affiliate-mid-cta >\}\}\n", "",
+                      new_body, count=1, flags=re.S)
+    assert stripped == old_body, "only the GROWTH-12 CTA block may differ"
+    assert "visa_cta_mid_content" in new_body
+    # body must not hardcode affiliate URLs/IDs (they come from hugo.toml at render time)
+    assert "aid=" not in new_body, "no hardcoded affiliate IDs in body"
+    assert "http" not in new_body[new_body.find("affiliate-mid-cta"):new_body.find("affiliate-mid-cta") + 400], \
+        "CTA must use the config-driven shortcode URL"
 
 
 def test_growth05_scope_only_allowed_objects():
@@ -162,7 +164,10 @@ def test_growth05_scope_only_allowed_objects():
     # except the sanctioned P1-GROWTH-07B FAQPage schema fix
     allowed_layouts = {"layouts/partials/schema_faq.html",
                       # P1-GROWTH-10A authorized site-wide Travelpayouts Drive install
-                      "layouts/partials/head.html"}
+                      "layouts/partials/head.html",
+                      # P1-GROWTH-12 authorized REV-001: mid-content CTA + click delegation
+                      "layouts/_default/single.html",
+                      "layouts/shortcodes/affiliate-mid-cta.html"}
     forbidden = [p for p in changed
                  if p.startswith(("layouts/", "hugo.toml", "config/"))
                  and p not in allowed_layouts]

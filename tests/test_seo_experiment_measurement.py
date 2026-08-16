@@ -1,4 +1,5 @@
 """P1-GROWTH-06: unit tests for the SEO experiment measurement loop.
+import re
 
 Covers: CTR/impression/click/position deltas, POSITIVE/NEUTRAL/NEGATIVE
 thresholds, INSUFFICIENT_SAMPLE guard, deterministic output, and the
@@ -162,14 +163,19 @@ def test_144h_experiment_protection_invariants():
     expected_url = SITE + "/posts/144-hour-visa-free-transit-guide/"
     assert row["url"].rstrip("/") == expected_url.rstrip("/")
     assert _fm_value(text, "canonicalURL") == expected_url
-    # body identical to HEAD => affiliate/UTM unchanged
+    # body preserved since HEAD; GROWTH-12 CTA block is the only sanctioned addition
     rel = "content/posts/144-hour-visa-free-transit-guide.md"
     old = subprocess.run(["git", "show", "HEAD:" + rel], cwd=str(REPO),
                          capture_output=True, text=True, encoding="utf-8")
     assert old.returncode == 0
     old_body = old.stdout.split("---", 2)[-1]
     new_body = text.split("---", 2)[-1]
-    assert old_body == new_body, "body/affiliate/UTM must be unchanged"
+    stripped = re.sub(r"\n\{\{< affiliate-mid-cta .*?\{\{< /affiliate-mid-cta >\}\}\n", "",
+                      new_body, count=1, flags=re.S)
+    assert stripped == old_body, "only the GROWTH-12 CTA block may differ"
+    assert "visa_cta_mid_content" in new_body, "GROWTH-12 CTA must be the only addition"
+    # body must not hardcode affiliate URLs/IDs (config-driven at render time)
+    assert "aid=" not in new_body, "no hardcoded affiliate IDs in body"
 
 
 def test_registry_schema_includes_revenue_fields():

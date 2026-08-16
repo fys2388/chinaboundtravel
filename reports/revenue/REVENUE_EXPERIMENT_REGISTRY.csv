@@ -1,0 +1,2 @@
+experiment_id,content_id,url,experiment_type,start_date,baseline_period,primary_metric,secondary_metrics,status,decision
+REV-001,cbt-b4ff4381a014,https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/,CTA_PLACEMENT,2026-08-16,2026-07-19..2026-08-15,affiliate_clicks_per_1000_pageviews,affiliate_click_rate;sessions;pageviews;gsc_impressions;gsc_clicks,RUNNING,PENDING
