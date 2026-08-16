@@ -66,7 +66,16 @@
 ## 6. Production Deployment
 
 - 本轮修改 `content/posts/*`，由现有 GitHub Actions → Cloudflare Pages 自动部署；不手动部署。
-- 部署后验证：3 页 HTTP 200、canonical 正常、content_id 不变、affiliate 不变、Drive script 每页 exactly 1。
+- GitHub Actions `deploy-cloudflare-pages.yml`：push 后自动触发并 **success**（run `31932112875`，含 Purge CDN Cache 与 Post-deploy Tasks）。
+- 部署后验证（线上 2026-08-16）：
+
+| Page | HTTP | canonical | Drive script | noindex |
+|---|---|---|---|---|
+| Western Sichuan | 200 | self ✓ | exactly 1 | false |
+| Guilin & Yangshuo | 200 | self ✓ | exactly 1 | false |
+| Sichuan Hotpot | 200 | self ✓ | exactly 1 | false |
+
+- 线上 title 确认：三页均正常渲染新 front matter（如 “Western Sichuan Overland Camping Route: 7 Days | ChinaBound Travel”）。
 
 ## 7. Observation Plan
 
