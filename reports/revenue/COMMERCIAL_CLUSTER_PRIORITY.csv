@@ -1,0 +1,4 @@
+cluster,intent,keywords_total,keywords_covered,impressions_28d,best_position,affiliate_partners,recommended_partners,affiliate_fit_ratio,demand_score,intent_score,authority_score,affiliate_score,gap_score,score,priority,status
+China Transportation,TRAIN,5,3,321,22.33,"Airalo,Aviasales,Booking,Klook,SafetyWing,Trip.com","Booking,Trip.com,Klook",1.0,20,30,9,15,3,77,A,READY
+China Payment,PAYMENT,4,2,85,11.0,"Airalo,Aviasales,Booking,Klook","Airalo,NordVPN",0.5,10,28,13,10,3,64,B,HOLD
+China Connectivity,INTERNET,4,2,0,0.0,"Airalo,Aviasales,Booking,Klook,SafetyWing","Airalo,NordVPN",0.5,0,26,0,10,3,39,C,HOLD
