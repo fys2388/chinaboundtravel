@@ -143,11 +143,13 @@ PILOT_POSTS = {
     "content/posts/western-sichuan-overland-camping-route.md",
     "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
     "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+    # P1-GROWTH-12B authorized REV001 CTA experiment post
+    "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
 }
 
 
 def test_posts_untouched():
-    """P1-BRAND-03 authorizes exactly 3 legacy persona pilot posts to change."""
+    """P1-BRAND-03 pilot posts + P1-GROWTH-12B REV001 CTA post may change; nothing else."""
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = {p for p in proc.stdout.splitlines() if p}
@@ -161,7 +163,8 @@ def test_non_brand_content_untouched():
     allowed = {"content/about/_index.md", "content/resources/_index.md",
                "content/posts/western-sichuan-overland-camping-route.md",
                "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
-               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"}
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md"}
     assert set(changed) <= allowed, f"unexpected content changes: {changed}"
 
 

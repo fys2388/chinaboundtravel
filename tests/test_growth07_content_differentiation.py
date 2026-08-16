@@ -180,7 +180,9 @@ def test_growth07_scope_only_allowed_objects():
                # P1-BRAND-03 authorized legacy persona pilot posts
                "content/posts/western-sichuan-overland-camping-route.md",
                "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
-               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"}
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+               # P1-GROWTH-12B authorized REV001 CTA experiment post
+               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed

@@ -130,7 +130,9 @@ def test_no_content_or_affiliate_files_touched():
                # P1-BRAND-03 authorized legacy persona pilot posts
                "content/posts/western-sichuan-overland-camping-route.md",
                "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
-               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md")
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+               # P1-GROWTH-12B authorized REV001 CTA experiment post
+               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md")
     assert all(any(a in ln for a in allowed) for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
     # hugo.toml: P1-BRAND-02 edits description/profileMode; affiliate section covered by brand tests
     old = subprocess.run(["git", "show", "HEAD:hugo.toml"], cwd=str(REPO),

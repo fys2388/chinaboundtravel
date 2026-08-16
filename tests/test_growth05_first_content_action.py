@@ -195,6 +195,8 @@ def test_growth05_scope_only_allowed_objects():
         "content/posts/western-sichuan-overland-camping-route.md",
         "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
         "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+        # P1-GROWTH-12B authorized REV001 CTA experiment post
+        "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
     }
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
     extra = set(posts_changed) - allowed

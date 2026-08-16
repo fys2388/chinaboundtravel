@@ -215,4 +215,6 @@ def test_brand03_scope_only_three_pilot_posts():
     assert out.returncode == 0
     changed = [p for p in out.stdout.splitlines() if p]
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
-    assert set(posts_changed) <= set(PILOT_POSTS), posts_changed
+    # P1-GROWTH-12B authorizes the REV001 CTA post in addition to the 3 pilots
+    allowed = set(PILOT_POSTS) | {"content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md"}
+    assert set(posts_changed) <= allowed, posts_changed

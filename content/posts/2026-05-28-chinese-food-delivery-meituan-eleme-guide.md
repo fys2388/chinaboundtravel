@@ -61,6 +61,10 @@ My routine: Open both apps, search the same restaurant, pick the cheaper one. Ta
 
 Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. For the best eSIM options, see our [internet connectivity guide for China](/posts/internet-connection-china-esim-vpn-guide/). Without a Chinese number, you can't receive the verification code to log in.
 
+{{< affiliate-mid-cta partner="esim" placement="food-delivery-mid-content" text="Compare eSIM Options" >}}
+**Setting up before you land saves time.** Both apps need a Chinese phone number for the verification code. Compare eSIM options with a Chinese number ahead of your trip so you can register as soon as you arrive.
+{{< /affiliate-mid-cta >}}
+
 ### Step 2: Address in Chinese
 
 This is the hard part. Your address needs to be in Chinese characters. Here's how:
