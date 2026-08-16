@@ -139,25 +139,40 @@ def test_affiliate_urls_unchanged():
 # ---------------------------------------------------------------------------
 # 8-9: content_id / canonical unchanged (posts untouched)
 # ---------------------------------------------------------------------------
+PILOT_POSTS = {
+    "content/posts/western-sichuan-overland-camping-route.md",
+    "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+    "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+}
+
+
 def test_posts_untouched():
+    """P1-BRAND-03 authorizes exactly 3 legacy persona pilot posts to change."""
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
-    assert proc.stdout.strip() == "", f"content/posts changed:\n{proc.stdout}"
+    changed = {p for p in proc.stdout.splitlines() if p}
+    assert changed <= PILOT_POSTS, f"unexpected posts changed:\n{changed}"
 
 
 def test_non_brand_content_untouched():
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = [p for p in proc.stdout.splitlines() if p]
-    allowed = {"content/about/_index.md", "content/resources/_index.md"}
+    allowed = {"content/about/_index.md", "content/resources/_index.md",
+               "content/posts/western-sichuan-overland-camping-route.md",
+               "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"}
     assert set(changed) <= allowed, f"unexpected content changes: {changed}"
 
 
 def test_canonical_unchanged():
-    # canonical lives in posts front matter; posts are untouched => canonical unchanged
-    proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
-                          cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
-    assert proc.stdout.strip() == ""
+    # P1-BRAND-03 pilot posts keep their canonical declarations vs HEAD
+    for rel in PILOT_POSTS:
+        old, new = git_show_head(rel), read(rel)
+        assert old
+        m_old = re.search(r"^canonicalURL:\s*['\"]([^'\"]+)", old, re.M)
+        m_new = re.search(r"^canonicalURL:\s*['\"]([^'\"]+)", new, re.M)
+        assert m_old and m_new and m_old.group(1) == m_new.group(1), rel
     # homepage/resources/about pages keep their identity fields
     about = read("content/about/_index.md")
     assert "hello@chinaboundtravel.com" in about

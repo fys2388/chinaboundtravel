@@ -176,7 +176,11 @@ def test_growth07_scope_only_allowed_objects():
                "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
                "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
                # P1-GROWTH-12 authorized REV-001: 144h mid-content CTA
-               "content/posts/144-hour-visa-free-transit-guide.md"}
+               "content/posts/144-hour-visa-free-transit-guide.md",
+               # P1-BRAND-03 authorized legacy persona pilot posts
+               "content/posts/western-sichuan-overland-camping-route.md",
+               "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed
