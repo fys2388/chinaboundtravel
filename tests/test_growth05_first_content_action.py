@@ -160,7 +160,9 @@ def test_growth05_scope_only_allowed_objects():
     changed = [p for p in out.stdout.splitlines() if p]
     # no layouts/hugo.toml/config changes since the experiment commit,
     # except the sanctioned P1-GROWTH-07B FAQPage schema fix
-    allowed_layouts = {"layouts/partials/schema_faq.html"}
+    allowed_layouts = {"layouts/partials/schema_faq.html",
+                      # P1-GROWTH-10A authorized site-wide Travelpayouts Drive install
+                      "layouts/partials/head.html"}
     forbidden = [p for p in changed
                  if p.startswith(("layouts/", "hugo.toml", "config/"))
                  and p not in allowed_layouts]

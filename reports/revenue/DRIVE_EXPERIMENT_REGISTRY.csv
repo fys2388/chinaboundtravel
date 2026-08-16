@@ -1,0 +1,2 @@
+experiment_id,start_date,baseline_period,post_period,status,primary_metric,secondary_metrics
+DRIVE-001,2026-08-16,2026-07-19..2026-08-15 (pre-drive 28d),2026-08-16.. (>=28d observation),RUNNING,affiliate_clicks_per_1000_sessions,affiliate_ctr;sessions;pageviews;gsc_clicks;gsc_impressions
