@@ -178,7 +178,9 @@ def test_growth07_scope_only_allowed_objects():
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed
-    allowed_layouts = {"layouts/partials/schema_faq.html"}
+    allowed_layouts = {"layouts/partials/schema_faq.html",
+                      # P1-GROWTH-10A authorized site-wide Travelpayouts Drive install
+                      "layouts/partials/head.html"}
     forbidden = [p for p in changed
                  if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))
                      and p not in allowed_layouts)]
