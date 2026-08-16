@@ -1,0 +1,6 @@
+experiment_id,experiment_type,page,content_id,start_date,observation_days,baseline_metric,current_metric,delta,delta_percent,sample_size,data_source,status
+DRIVE-001,SITE_WIDE_DRIVE,Site-wide Travelpayouts Drive,,2026-08-16,0,0.0,0.0,0.0,,0,CACHED,INSUFFICIENT_SAMPLE
+GROWTH05-CTR-001,CTR_TITLE_META,144-Hour Visa,cbt-b4ff4381a014,2026-08-16,0,0.0,0.0,0.0,,0,LIVE,INSUFFICIENT_SAMPLE
+GROWTH07B-TECH-001,TECHNICAL_INDEX_FIX,High-Speed Rail Booking,cbt-cc4549872c92,2026-08-16,0,0.0,0.0,0.0,,0,LIVE,INSUFFICIENT_SAMPLE
+GROWTH07C-INDEX-001,INDEX_RECOVERY,WeChat Pay Weak,cbt-255af4ed003a,2026-08-16,0,0.0,0.0,0.0,,0,LIVE,INSUFFICIENT_SAMPLE
+REV001,CTA_PLACEMENT,Chinese Food Delivery: Meituan & Ele.me Guide,cbt-e464169c4991,2026-08-16,0,0.0,0.0,0.0,,0,CACHED,INSUFFICIENT_SAMPLE
