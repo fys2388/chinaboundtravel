@@ -163,9 +163,10 @@ def test_144h_experiment_protection_invariants():
     expected_url = SITE + "/posts/144-hour-visa-free-transit-guide/"
     assert row["url"].rstrip("/") == expected_url.rstrip("/")
     assert _fm_value(text, "canonicalURL") == expected_url
-    # body preserved since HEAD; GROWTH-12 CTA block is the only sanctioned addition
+    # body preserved since the GROWTH-05 CTR experiment commit (60f1c17);
+    # GROWTH-12 CTA block is the only sanctioned addition
     rel = "content/posts/144-hour-visa-free-transit-guide.md"
-    old = subprocess.run(["git", "show", "HEAD:" + rel], cwd=str(REPO),
+    old = subprocess.run(["git", "show", "60f1c17:" + rel], cwd=str(REPO),
                          capture_output=True, text=True, encoding="utf-8")
     assert old.returncode == 0
     old_body = old.stdout.split("---", 2)[-1]
