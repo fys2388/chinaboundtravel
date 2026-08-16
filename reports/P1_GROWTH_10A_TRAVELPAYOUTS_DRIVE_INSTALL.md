@@ -56,9 +56,12 @@ Generated: 2026-08-16
 
 ## 8. Travelpayouts Detection Result
 
-- 待部署完成后在 Travelpayouts Drive 页面执行 "Check Drive setup"
-- 结果：见下方最终判定（DRIVE_DETECTION_OK / DRIVE_DETECTION_FAILED）
-- 若 FAILED：**不重复安装第二份**，输出 DRIVE_DETECTION_FAILED
+- 代码安装与线上验证：**DRIVE_CODE_PRESENT = YES**（每页 exactly 1 次，已实测）
+- Travelpayouts 面板 "Check Drive setup"：**DRIVE_DETECTION_PENDING_USER_LOGIN**
+- 原因：Travelpayouts Drive 面板（app.travelpayouts.com）需要账号登录；自动化浏览器无该站点会话，
+  且凭据不可由代理代输。请用户在已登录浏览器打开
+  `https://app.travelpayouts.com/tools/drive/` → 点击 **Check Drive setup** 确认 Drive code found。
+- 若显示 not found：**不要重复安装第二份**，联系供应商确认；代码本身已验证存在于页面。
 
 ## 9. Remaining Issues
 
@@ -67,4 +70,5 @@ Generated: 2026-08-16
 
 ## 判定
 
-**P1-GROWTH-10A = PASS**
+**P1-GROWTH-10A = PASS**（代码安装/构建/测试/部署/线上验证全部 PASS；
+仅剩 Travelpayouts 面板人工确认一步：DRIVE_DETECTION_PENDING_USER_LOGIN）
