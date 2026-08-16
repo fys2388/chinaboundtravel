@@ -15,7 +15,7 @@ Generated: 2026-08-16  |  ANALYSIS ONLY — no page created
 ## Verdict: CREATE_READY
 
 ## Evidence (cached)
-- alipay-related pages found: 3
+- alipay-related pages found: 4
 - indexed among them: 3
 - combined cached impressions: 1.0
 

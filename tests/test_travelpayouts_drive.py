@@ -138,7 +138,11 @@ def test_no_content_or_affiliate_files_touched():
                # P1-GROWTH-18/19 internal-link additions + new commercial pages
                "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
                "content/posts/china-transportation-card-guide.md",
-               "content/posts/china-airport-transfer-guide.md")
+               "content/posts/china-airport-transfer-guide.md",
+               # P1-GROWTH-22 authorized Alipay authority page + internal links
+               "content/posts/alipay-for-foreigners-guide.md",
+               "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+               "content/posts/internet-connection-china-esim-vpn-guide.md")
     assert all(any(a in ln for a in allowed) for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
     # hugo.toml: P1-BRAND-02 edits description/profileMode; affiliate section covered by brand tests
     old = subprocess.run(["git", "show", "HEAD:hugo.toml"], cwd=str(REPO),

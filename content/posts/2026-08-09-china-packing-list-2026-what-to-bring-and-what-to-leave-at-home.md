@@ -75,7 +75,7 @@ Be aware of cultural differences when it comes to personal items. For example, i
 
 ## Other Items to Consider
 ### Money and Payments
-China is a cash-less society to a large extent. Most places accept mobile payments like Alipay and WeChat Pay. However, it's still a good idea to have some cash on hand, especially in smaller towns or when dealing with street vendors. You can read more about using mobile payments in [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/).
+China is a cash-less society to a large extent. Most places accept mobile payments like Alipay and WeChat Pay. However, it's still a good idea to have some cash on hand, especially in smaller towns or when dealing with street vendors. You can read more about using mobile payments in [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/). For Alipay specifically, see our dedicated [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/).
 
 Actionable tip: If you plan to use your credit card, make sure it's accepted in China. Some cards may not work, so it's a good idea to check with your bank before you travel.
 

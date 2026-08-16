@@ -185,7 +185,11 @@ def test_growth07_scope_only_allowed_objects():
                "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
                # P1-GROWTH-18/19 authorized commercial cluster content + internal links
                "content/posts/china-transportation-card-guide.md",
-               "content/posts/china-airport-transfer-guide.md"}
+               "content/posts/china-airport-transfer-guide.md",
+               # P1-GROWTH-22 authorized Alipay authority page + internal links
+               "content/posts/alipay-for-foreigners-guide.md",
+               "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+               "content/posts/internet-connection-china-esim-vpn-guide.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed

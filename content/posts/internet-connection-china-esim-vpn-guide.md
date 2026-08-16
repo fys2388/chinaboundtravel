@@ -30,7 +30,7 @@ So there I am, standing in the Chengdu airport, staring at a captive Wi-Fi porta
 
 My wife found me eventually. She thought it was the funniest thing she'd ever seen.
 
-Six years later, I've tried every possible way to stay connected in China, and I'm here to give you the straight truth: there is no perfect solution, but there's definitely a right solution for your specific situation. Having internet is also essential for setting up [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) — you'll need data to complete verification. Let me save you the hours of research I went through.
+Six years later, I've tried every possible way to stay connected in China, and I'm here to give you the straight truth: there is no perfect solution, but there's definitely a right solution for your specific situation. Having internet is also essential for setting up [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) — you'll need data to complete verification. See our [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) for the full step-by-step setup. Let me save you the hours of research I went through.
 
 ## Understanding China's Internet Landscape
 

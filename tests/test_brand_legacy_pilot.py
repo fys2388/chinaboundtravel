@@ -221,5 +221,9 @@ def test_brand03_scope_only_three_pilot_posts():
                                    "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
                                    # P1-GROWTH-18 internal-link additions
                                    "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-                                   "content/posts/china-transportation-card-guide.md"}
+                                   "content/posts/china-transportation-card-guide.md",
+                                   # P1-GROWTH-22 authorized Alipay authority page + internal links
+                                   "content/posts/alipay-for-foreigners-guide.md",
+                                   "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+                                   "content/posts/internet-connection-china-esim-vpn-guide.md"}
     assert set(posts_changed) <= allowed, posts_changed

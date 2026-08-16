@@ -83,9 +83,13 @@ def test_alipay_decision_exists():
     assert verdict in ("CREATE_READY", "HOLD", "REJECT")
 
 
-def test_alipay_no_page_created():
-    # 21C explicitly does not create the page this round
-    assert not (REPO / "content/posts/alipay-for-foreigners-guide.md").exists()
+def test_alipay_page_created_in_22():
+    # 21C concluded CREATE_READY; P1-GROWTH-22A created the authority page
+    fp = REPO / "content/posts/alipay-for-foreigners-guide.md"
+    assert fp.exists()
+    text = fp.read_text(encoding="utf-8")
+    assert 'content_id: "cbt-0adceab18b53"' in text
+    assert 'canonicalURL: "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/"' in text
 
 
 def test_alipay_script_clean():
@@ -202,12 +206,31 @@ def test_no_extra_partner_keys():
 # overall guardrails
 # ---------------------------------------------------------------------------
 def test_no_new_cta_added_this_round():
-    # no content files changed this round (scripts/tests/reports only)
+    # P1-GROWTH-22 authorizes the Alipay authority page + payment-cluster
+    # internal links; no new CTA / tracking / partner may be added.
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     assert proc.returncode == 0
     changed = [p for p in proc.stdout.splitlines() if p]
-    assert not changed, changed
+    allowed = {
+        "content/posts/alipay-for-foreigners-guide.md",
+        "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "content/posts/china-transportation-card-guide.md",
+        "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+        "content/posts/internet-connection-china-esim-vpn-guide.md",
+        "content/resources/_index.md",
+    }
+    assert set(changed) <= allowed, changed
+    # no NEW CTA shortcode anywhere in content vs HEAD (existing REV002 CTA stays)
+    for rel in changed:
+        fp = REPO / rel
+        if not fp.exists():
+            continue
+        old = subprocess.run(["git", "show", "HEAD:" + rel], cwd=str(REPO),
+                             capture_output=True, text=True, encoding="utf-8", errors="replace")
+        old_cta = old.stdout.count("affiliate-mid-cta") if old.returncode == 0 else 0
+        new_cta = fp.read_text(encoding="utf-8", errors="replace").count("affiliate-mid-cta")
+        assert new_cta == old_cta, f"CTA count changed in {rel}: {old_cta} -> {new_cta}"
 
 # ---------------------------------------------------------------------------
 # additional coverage (P1-GROWTH-21 completeness)

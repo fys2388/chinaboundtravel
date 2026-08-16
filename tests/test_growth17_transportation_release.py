@@ -143,7 +143,7 @@ def test_content_ids_57():
     proc = subprocess.run(["python", "scripts/content_id_audit.py", "audit", "--strict"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     assert "RESULT: PASS" in proc.stdout
-    assert "With content_id: 59" in proc.stdout
+    assert "With content_id: 60" in proc.stdout
 
 
 def test_no_utms_added_in_post():

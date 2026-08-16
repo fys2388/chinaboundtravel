@@ -232,7 +232,7 @@ For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunmin
 
 After five years of living in China, here are the principles that matter most:
 
-1. **Set up WeChat Pay and Alipay before you arrive**. You will use them for subway gates, Didi, and train tickets. Our [WeChat Pay guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) covers the full setup.
+1. **Set up WeChat Pay and Alipay before you arrive**. You will use them for subway gates, Didi, and train tickets. Our [WeChat Pay guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) and [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) cover the full setup.
 2. **Download offline maps**. Google Maps works in China with a [VPN](/posts/internet-connection-china-esim-vpn-guide/), but Baidu Maps has better transit routing. Download your destination city offline in both apps.
 3. **Learn a few transport phrases**: "zhan tai" (platform), "che xiang" (carriage), "zuo wei" (seat). Station staff will appreciate the effort.
 4. **Always carry your passport**. You need it for train boarding, hotel check-in, and some subway security checks.

@@ -101,7 +101,7 @@ Both cities run large metro networks that accept physical transit cards and QR p
 4. **Top up when the balance runs low** -- machines and counters both offer top-ups.
 5. **Refund the deposit before you leave** -- most cities return the deposit when the card is returned; policies vary, so confirm at the station.
 
-If you prefer not to hold a card at all, skip this section and use QR payment via Alipay or WeChat Pay instead.
+If you prefer not to hold a card at all, skip this section and use QR payment via Alipay or WeChat Pay instead. New to Alipay? See our [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) for a step-by-step setup walkthrough.
 
 ## Which Option Is Best for Tourists?
 
@@ -147,7 +147,7 @@ Most cities require a small, refundable deposit when you buy the physical card. 
 
 ### Do I need a Chinese bank account to pay for transit?
 
-No. Alipay and WeChat Pay accept international cards for QR payment, and physical cards can be bought with cash or topped up at station machines.
+No. Alipay and WeChat Pay accept international cards for QR payment, and physical cards can be bought with cash or topped up at station machines. See our [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) for the full card-linking setup.
 
 ### What if my phone has no signal underground?
 

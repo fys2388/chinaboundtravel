@@ -131,6 +131,8 @@ China is a cashless society. Even street vendors and taxis take mobile payments.
 - ✅ Both work at 99% of vendors in China
 - 💡 Tip: Link your credit card in the app before your trip
 
+New to Alipay? See the [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) for a step-by-step setup walkthrough, common problems, and an Alipay vs WeChat Pay comparison.
+
 ### Wise (formerly TransferWise)
 
 For sending money to/from China, Wise offers mid-market exchange rates and lower fees than traditional banks. Essential for expats or long-stay travelers.

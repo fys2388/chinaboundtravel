@@ -201,6 +201,10 @@ def test_growth05_scope_only_allowed_objects():
         "content/posts/china-transportation-card-guide.md",
         "content/posts/china-airport-transfer-guide.md",
         "content/resources/_index.md",
+        # P1-GROWTH-22 authorized Alipay authority page + internal links
+        "content/posts/alipay-for-foreigners-guide.md",
+        "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+        "content/posts/internet-connection-china-esim-vpn-guide.md",
     }
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
     extra = set(posts_changed) - allowed
