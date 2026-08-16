@@ -176,6 +176,8 @@ def test_growth05_scope_only_allowed_objects():
                       "layouts/partials/travel-promo.html",
                       "layouts/shortcodes/affiliate-disclosure.html",
                       "layouts/partials/templates/schema_json.html",
+                      # P0 pricing checkout link fix (onetime/annual swap + monthly promo prefill)
+                      "layouts/partials/pricing-table.html",
                       "hugo.toml",
                       "config/content_governance.json"}
     forbidden = [p for p in changed

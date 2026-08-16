@@ -1,4 +1,4 @@
-﻿"""V6-3: Pricing page structured data regression tests.
+"""V6-3: Pricing page structured data regression tests.
 
 Ensures:
   - the pricing page emits Product + Offer JSON-LD (not BlogPosting)
@@ -64,7 +64,7 @@ def test_pricing_page_not_blog_posting():
 # (regression: onetime/annual Stripe links were swapped in production)
 # ---------------------------------------------------------------------------
 ONETIME_URL = "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"
-MONTHLY_URL = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_coupon=FIRSTMONTH1"
+MONTHLY_URL = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_promo_code=FIRSTMONTH1"
 ANNUAL_URL = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
 
 
