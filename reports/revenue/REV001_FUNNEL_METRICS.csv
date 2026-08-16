@@ -1,0 +1,2 @@
+experiment_id,content_id,url,primary_metric,affiliate_clicks,sessions,affiliate_clicks_per_1000_sessions,cta_impressions,cta_ctr,outbound_success,outbound_rate,revenue,status
+REV001,cbt-e464169c4991,https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/,affiliate_clicks_per_1000_sessions,0,162,0.0,0,0.0,0,0.0,NULL,INSUFFICIENT_SAMPLE

@@ -194,6 +194,63 @@ def write_comparison(rows, out=None):
     return out
 
 
+def calc_clicks_per_1000_sessions(clicks, sessions):
+    """REV001 primary metric: affiliate_clicks_per_1000_sessions."""
+    if clicks is None or sessions is None or sessions == 0:
+        return 0.0
+    return round(float(clicks) * 1000.0 / float(sessions), 4)
+
+
+def calc_cta_ctr(clicks, impressions):
+    """CTA CTR: affiliate clicks / CTA impressions (percent)."""
+    if clicks is None or impressions is None or impressions == 0:
+        return 0.0
+    return round(float(clicks) / float(impressions) * 100.0, 4)
+
+
+def calc_outbound_rate(successful_outbounds, clicks):
+    """Outbound rate: confirmed exits / affiliate clicks (percent)."""
+    if successful_outbounds is None or clicks is None or clicks == 0:
+        return 0.0
+    return round(float(successful_outbounds) / float(clicks) * 100.0, 4)
+
+
+def write_rev001_funnel_metrics(rows=None, out=None):
+    """Deterministic REV001 funnel measurement snapshot (P1-GROWTH-14A)."""
+    out = out or (REV / "REV001_FUNNEL_METRICS.csv")
+    if rows is None:
+        rev = load_rev001_baseline()
+        clicks = int(rev.get("affiliate_clicks") or 0)
+        sessions = int(rev.get("sessions") or 0)
+        impressions = 0  # CTA impressions not yet collected; no fabrication
+        outbound_success = 0  # outbound events not yet collected
+        rows = [{
+            "experiment_id": "REV001",
+            "content_id": rev.get("content_id", ""),
+            "url": rev.get("url", ""),
+            "primary_metric": "affiliate_clicks_per_1000_sessions",
+            "affiliate_clicks": clicks,
+            "sessions": sessions,
+            "affiliate_clicks_per_1000_sessions": calc_clicks_per_1000_sessions(clicks, sessions),
+            "cta_impressions": impressions,
+            "cta_ctr": calc_cta_ctr(clicks, impressions),
+            "outbound_success": outbound_success,
+            "outbound_rate": calc_outbound_rate(outbound_success, clicks),
+            "revenue": "NULL",
+            "status": sample_status(0, clicks),
+        }]
+    fieldnames = ["experiment_id", "content_id", "url", "primary_metric",
+                  "affiliate_clicks", "sessions", "affiliate_clicks_per_1000_sessions",
+                  "cta_impressions", "cta_ctr", "outbound_success", "outbound_rate",
+                  "revenue", "status"]
+    with out.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description="Unified revenue+SEO experiment review")
     ap.add_argument("--output", default=None, help="CSV output path")

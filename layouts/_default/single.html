@@ -88,6 +88,73 @@
         });
     })();
     </script>
+    {{- /* P1-GROWTH-14A affiliate funnel events: impression + outbound */ -}}
+    <script>
+    (function () {
+        // affiliate_impression fires once per (partner, placement) when the CTA
+        // becomes visible. affiliate_outbound confirms whether the click really
+        // left the site. affiliate_click (above) stays untouched for compatibility.
+        var fired = {};
+        function paramsFor(link) {
+            var container = link.closest ? link.closest('.article-affiliate[data-content-id]') : null;
+            var query = link.href.split('?')[1] || '';
+            return {
+                content_id: container ? container.getAttribute('data-content-id') || '' : '',
+                partner: link.getAttribute('data-affiliate-partner') || 'unknown',
+                placement: link.getAttribute('data-affiliate-placement') || 'article_cta',
+                channel: container ? container.getAttribute('data-channel') || 'organic' : 'organic',
+                timestamp: new Date().toISOString(),
+                destination: link.href,
+                tracking_parameter: query
+            };
+        }
+        function pushEvent(name, params) {
+            if (typeof gtag === 'function') { gtag('event', name, params); }
+            if (window.dataLayer) { window.dataLayer.push(Object.assign({ event: name }, params)); }
+        }
+        function observe(link) {
+            var key = (link.getAttribute('data-affiliate-partner') || 'unknown') + '|' + (link.getAttribute('data-affiliate-placement') || 'article_cta');
+            if (fired[key]) { return; }
+            fired[key] = true;
+            pushEvent('affiliate_impression', paramsFor(link));
+        }
+        function trackOutbound(link) {
+            var params = paramsFor(link);
+            var done = false;
+            function finish(success) {
+                if (done) { return; }
+                done = true;
+                params.outbound_success = success;
+                pushEvent('affiliate_outbound', params);
+            }
+            window.addEventListener('pagehide', function () { finish(true); });
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'hidden') { finish(true); }
+            });
+            setTimeout(function () { finish(false); }, 3000);
+        }
+        function collectLinks() {
+            return document.querySelectorAll('a.affiliate-link[data-affiliate-partner]');
+        }
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) { observe(entry.target); }
+                });
+            }, { rootMargin: '0px 0px -10% 0px' });
+            collectLinks().forEach(function (link) { io.observe(link); });
+            document.addEventListener('DOMContentLoaded', function () {
+                collectLinks().forEach(function (link) { io.observe(link); });
+            });
+        } else {
+            collectLinks().forEach(function (link) { observe(link); });
+        }
+        document.addEventListener('click', function (e) {
+            var link = e.target && e.target.closest ? e.target.closest('a.affiliate-link[data-affiliate-partner]') : null;
+            if (link) { trackOutbound(link); }
+        });
+    })();
+    </script>
     {{- /* ===== Email Subscribe Section (Article) ===== */ -}}
     {{- partial "email-subscribe.html" . -}}
 
