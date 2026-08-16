@@ -19,7 +19,7 @@ ignoreFiles = ["/\\.archived/"]
 [params]
   env = 'production'
   title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
-  description = 'Practical travel guide for foreigners visiting China. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. Written by an American married into a Chengdu family.'
+  description = 'Practical travel guide for foreigners visiting China. Visa updates, Alipay & WeChat Pay setup, eSIM & VPN, high-speed trains, and city guides. Brought to you by the ChinaBound Travel editorial team.'
   author = 'Joran'
   images = ["/images/og-default.jpg"]
 
@@ -37,7 +37,7 @@ ignoreFiles = ["/\\.archived/"]
   [params.profileMode]
     enabled = true
     title = "Hi, I'm Joran"
-    subtitle = "A California native married into a Chengdu family. I've spent 5 years making every single travel mistake in China so you don't have to. Let's break down the digital wall together!"
+    subtitle = "Research-based China travel guidance for international visitors — visas, payments, internet, transportation and cities, kept current for 2026."
     imageUrl = "images/joran-avatar.webp"
     imageWidth = 120
     imageHeight = 120

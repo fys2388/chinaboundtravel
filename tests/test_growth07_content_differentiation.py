@@ -185,7 +185,17 @@ def test_growth07_scope_only_allowed_objects():
                       "layouts/partials/head.html",
                       # P1-GROWTH-12 authorized REV-001: mid-content CTA + click delegation
                       "layouts/_default/single.html",
-                      "layouts/shortcodes/affiliate-mid-cta.html"}
+                      "layouts/shortcodes/affiliate-mid-cta.html",
+                      # P1-BRAND-02 authorized editorial persona migration (brand surfaces)
+                      "layouts/cities/single.html",
+                      "layouts/partials/affiliate-disclosure.html",
+                      "layouts/partials/home-banner.html",
+                      "layouts/partials/sidebar-author.html",
+                      "layouts/partials/travel-promo.html",
+                      "layouts/shortcodes/affiliate-disclosure.html",
+                      "layouts/partials/templates/schema_json.html",
+                      "hugo.toml",
+                      "config/content_governance.json"}
     forbidden = [p for p in changed
                  if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))
                      and p not in allowed_layouts)]

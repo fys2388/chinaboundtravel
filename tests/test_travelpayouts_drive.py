@@ -119,13 +119,22 @@ def test_single_html_still_template_driven():
 
 
 def test_no_content_or_affiliate_files_touched():
-    """No article other than the GROWTH-12 144h page may change; hugo.toml must stay intact."""
+    """Only sanctioned articles/brand pages may change; affiliate URLs stay intact (see brand tests)."""
     proc = subprocess.run(["git", "status", "--short", "--", "content/"], cwd=str(REPO),
                           capture_output=True, text=True, encoding="utf-8")
     assert proc.returncode == 0
     changed = [ln for ln in proc.stdout.splitlines() if ln.strip()]
-    allowed = "content/posts/144-hour-visa-free-transit-guide.md"
-    assert all(allowed in ln for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
-    proc2 = subprocess.run(["git", "status", "--short", "--", "hugo.toml"], cwd=str(REPO),
-                           capture_output=True, text=True, encoding="utf-8")
-    assert proc2.stdout.strip() == "", "hugo.toml changed unexpectedly"
+    allowed = ("content/posts/144-hour-visa-free-transit-guide.md",
+               "content/about/_index.md",
+               "content/resources/_index.md")
+    assert all(any(a in ln for a in allowed) for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
+    # hugo.toml: P1-BRAND-02 edits description/profileMode; affiliate section covered by brand tests
+    old = subprocess.run(["git", "show", "HEAD:hugo.toml"], cwd=str(REPO),
+                         capture_output=True, text=True, encoding="utf-8", errors="replace")
+    assert old.returncode == 0
+    new = (REPO / "hugo.toml").read_text(encoding="utf-8")
+    def aff(t):
+        i = t.find("[params.affiliate]")
+        j = t.find("\n[", i + 10)
+        return t[i:j if j > 0 else len(t)]
+    assert aff(old.stdout) == aff(new), "affiliate config must stay intact"

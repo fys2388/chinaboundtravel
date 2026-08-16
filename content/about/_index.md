@@ -1,52 +1,50 @@
 +++
-title = "About Joran"
-description = "The story of an American who fell in love with China (and a Chinese girl)"
+title = "About Joran & ChinaBound Travel"
+description = "Meet Joran, the editorial voice behind ChinaBound Travel — how we research, verify and keep China travel guides current for international visitors."
 +++
 
 <div class="about-hero">
     <div class="about-avatar-ring">
         <picture>
             <source srcset="/images/joran-avatar.webp" type="image/webp">
-        <img src="/images/joran-avatar.png" alt="Joran  American in Chengdu" class="about-hero-photo" loading="eager">
+        <img src="/images/joran-avatar.png" alt="Joran - Editorial Voice of ChinaBound Travel" class="about-hero-photo" loading="eager">
         </picture>
-        <span class="about-avatar-badge" title="California → Chengdu"> → </span>
+        <span class="about-avatar-badge">Editorial Voice</span>
     </div>
     <h1 class="about-name">Joran</h1>
-    <p class="about-title">American Expat &middot; Chengdu Husband &middot; China Travel Guy</p>
-    <p class="about-tagline">Helping foreigners travel China without the headaches since 2021</p>
+    <p class="about-title">Editorial Voice &middot; China Travel Guide</p>
+    <p class="about-tagline">Research-based China travel guidance for international visitors since 2021</p>
 </div>
 
-## Hey there, I'm Joran!
+## Meet Joran
 
-Greetings from Chengdu, China! 
+Joran is the editorial voice behind **ChinaBound Travel** — the persona that writes and curates the guides you read here. Think of it as the consistent, reliable voice of the brand: practical, current, and built on research rather than personal travel stories.
 
-I'm your average California guy who somehow ended up living in the heart of Sichuan province, married to the most amazing woman from Chengdu, and completely obsessed with all things China.
+## What ChinaBound Travel Does
 
-### How a SoCal Guy Ended Up in the Land of Spicy Hot Pot
+China is an incredible destination, but for international visitors the practical details can feel overwhelming: visas, mobile payments, staying online, getting around, and choosing where to go. ChinaBound Travel exists to remove that friction with clear, current guidance.
 
-Let me set the scene: It's 2021, I'm fresh out of college, and I've got this wild idea to teach English in China for "just one year." Fast forward to 2026, and here I amstill here, speaking (very broken) Mandarin, eating chili oil for breakfast, and married to a wonderful Sichuanese woman who still laughs at my terrible Chinese accent.
+- **Visa & Entry Rules** — Updated for 2026, because Chinese visa and transit rules change often.
+- **Payments & Internet** — How to actually use Alipay, WeChat Pay, eSIMs and VPNs as a foreign visitor.
+- **Transport & Cities** — Trains, flights, and city guides built around real traveler needs.
 
-### Why ChinaBound?
+## How We Research
 
-Let's be realtraveling in China as a foreigner can feel like trying to solve a Rubik's cube blindfolded sometimes.
+ChinaBound Travel follows an editorial research process:
 
-- **VPN struggles?** I've spent more hours troubleshooting VPNs than I care to admit.
-- **WeChat Pay confusion?** My first attempt to buy bubble tea ended with me holding up a line and sweating profusely.
-- **Visa nightmares?** Don't even get me started on my first visa application...
+- We check **official and current sources** (government pages, carrier and operator sites, official policy documents) before publishing.
+- We **cross-check** fast-changing information — visa rules, prices, opening hours — and date our updates.
+- We use **structured comparisons** so you can weigh options at a glance.
+- When details are uncertain or region-specific, we say so explicitly instead of guessing.
 
-I created ChinaBound to be the resource I wish I had when I first arrived. No fluff, no outdated information, just real advice from someone who's actually lived through the chaos.
+## How Recommendations Are Evaluated
 
-### What You'll Find Here
+Where we recommend a service or tool, it is because our editorial team has compared it for international travelers: availability, coverage, cost transparency, and whether it actually solves a common China travel problem. Affiliate links may be present — at no extra cost to you — and are always disclosed. See our [affiliate disclosure](/affiliate-disclosure/) for details.
 
-- **No B.S. Visa Guides**  Updated for 2026, because Chinese visa rules change faster than my wife's mood during mango season.
-- **Payment Hacks**  How to actually use Alipay/WeChat Pay without a Chinese bank account (yes, it's possible!).
-- **City Guides**  From Beijing's Forbidden City to Chengdu's street food stalls, I've got you covered.
-- **Cultural Survival Tips**  Like why you should never refuse a cup of tea, or why "la" () really means "prepare for your taste buds to explode."
+## Let's Connect
 
-### Let's Connect!
+Got questions? Drop us an email at **hello@chinaboundtravel.com**. Our editorial team reads every message and is glad to point you to the right guide.
 
-Got questions? Drop me an email at **hello@chinaboundtravel.com**. I promise I'll respond faster than you can say "nihao"!
-
-Cheers,  
-**Joran**  
-American expat, Sichuan husband, and your go-to China travel guy
+Cheers,
+**Joran**
+Editorial Voice, ChinaBound Travel
