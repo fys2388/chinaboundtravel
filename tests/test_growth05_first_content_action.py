@@ -197,6 +197,10 @@ def test_growth05_scope_only_allowed_objects():
         "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
         # P1-GROWTH-12B authorized REV001 CTA experiment post
         "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+        # P1-GROWTH-18/19 authorized commercial cluster content + internal links
+        "content/posts/china-transportation-card-guide.md",
+        "content/posts/china-airport-transfer-guide.md",
+        "content/resources/_index.md",
     }
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
     extra = set(posts_changed) - allowed

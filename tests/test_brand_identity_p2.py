@@ -141,8 +141,10 @@ def test_affiliate_urls_unchanged():
 # ---------------------------------------------------------------------------
 # P1-GROWTH-15 authorized REV002 CTA experiment post
 REV002_AUTHORIZED = {"content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
-    # P1-GROWTH-18 authorized internal-link additions
-    "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md"}
+    # P1-GROWTH-18/19 authorized internal-link additions
+    "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+    "content/posts/china-transportation-card-guide.md",
+    "content/posts/china-airport-transfer-guide.md"}
 
 PILOT_POSTS = {
     "content/posts/western-sichuan-overland-camping-route.md",

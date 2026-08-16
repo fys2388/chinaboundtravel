@@ -35,7 +35,7 @@ cover:
 
 ## The Quick Answer
 
-Booking China's high-speed rail (CRH) is straightforward once you know the two options: **Trip.com** (English interface, accepts foreign cards) and the official **12306** platform (no fee, Chinese only). You'll also need to understand ticket classes and how station verification works. If you've never navigated a Chinese station, read our [train station survival guide](/posts/how-to-survive-chinese-train-station/) first. Before taking trains, travelers may also need a local [transportation card](/posts/china-transportation-card-guide/) for metro and bus travel around the city.
+Booking China's high-speed rail (CRH) is straightforward once you know the two options: **Trip.com** (English interface, accepts foreign cards) and the official **12306** platform (no fee, Chinese only). You'll also need to understand ticket classes and how station verification works. If you've never navigated a Chinese station, read our [train station survival guide](/posts/how-to-survive-chinese-train-station/) first. Before taking trains, travelers may also need a local [transportation card](/posts/china-transportation-card-guide/) for metro and bus travel around the city. For arrival planning from the airport, see the [China Airport Transfer Guide](/posts/china-airport-transfer-guide/).
 
 ---
 
@@ -208,6 +208,7 @@ Yes — the physical passport matching the booking is required at station ID che
 
 - [How to Survive a Chinese Train Station](/posts/how-to-survive-chinese-train-station/) — Finding your platform without a breakdown
 - [Shanghai Bund & French Concession 2-Day Guide](/posts/shanghai-bund-french-concession-2-day-guide/) — Many great rail routes start or end here`n- [China Transportation Card Guide](/posts/china-transportation-card-guide/) — Metro cards, transit apps, and payment options for getting around the city
+- [China Airport Transfer Guide](/posts/china-airport-transfer-guide/) — Arrival planning: express trains, metro, taxis, and private transfers from Chinese airports
 
 ---
 

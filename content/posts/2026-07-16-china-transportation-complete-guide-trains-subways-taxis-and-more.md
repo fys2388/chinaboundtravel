@@ -142,7 +142,7 @@ After years of riding, here is what I always pack:
 
 ## Subways: The Easiest Way to Explore Cities
 
-Every major Chinese city has a metro system, and they are clean, cheap, and easy to use once you understand the basics.
+Arriving by plane first? Getting from the airport into town is covered in the [China Airport Transfer Guide](/posts/china-airport-transfer-guide/). Every major Chinese city has a metro system, and they are clean, cheap, and easy to use once you understand the basics.
 
 ### How to Pay for the Subway
 
@@ -163,6 +163,8 @@ In 2026, you have three options:
 ---
 
 ## Taxis and Didi: Getting Around Without the Subway
+
+Arriving by air? See the [China Airport Transfer Guide](/posts/china-airport-transfer-guide/) for express trains, metro, taxis, and private transfers from Beijing, Shanghai, and Guangzhou airports.
 
 ### Using Didi (China's Uber)
 

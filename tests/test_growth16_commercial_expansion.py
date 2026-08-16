@@ -121,9 +121,10 @@ def test_expansion_decision_card_now_keep():
     assert rows["China Transportation Card"]["action"] == "KEEP"
 
 
-def test_expansion_decision_airport_create():
+def test_expansion_decision_airport_now_keep():
+    # P1-GROWTH-19 created the airport page; decision engine now detects coverage -> KEEP
     rows = {r["topic"]: r for r in build_expansion_decision()}
-    assert rows["China Airport Transfer"]["action"] == "CREATE"
+    assert rows["China Airport Transfer"]["action"] == "KEEP"
 
 
 def test_expansion_decision_schema():

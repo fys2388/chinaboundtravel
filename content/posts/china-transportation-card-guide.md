@@ -116,6 +116,8 @@ For most first-time tourists, the practical combination is: **set up Alipay or W
 
 For the full picture on getting around China, see the [China Transportation Guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) and the [High-Speed Rail booking guide](/posts/china-high-speed-rail-how-to-book-tickets/).
 
+Before entering the city transportation network, most travelers arrive by air -- see the [China Airport Transfer Guide](/posts/china-airport-transfer-guide/) for the fastest ways from Beijing, Shanghai, and Guangzhou airports to the city center.
+
 ## Recommended Travel Tools
 
 This is an editorial comparison layer, not a single-provider endorsement. The tools below are ones the ChinaBound Travel editorial team regularly recommends to international travelers for trip planning.
