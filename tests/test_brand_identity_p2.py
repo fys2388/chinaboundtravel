@@ -139,6 +139,9 @@ def test_affiliate_urls_unchanged():
 # ---------------------------------------------------------------------------
 # 8-9: content_id / canonical unchanged (posts untouched)
 # ---------------------------------------------------------------------------
+# P1-GROWTH-15 authorized REV002 CTA experiment post
+REV002_AUTHORIZED = {"content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
+
 PILOT_POSTS = {
     "content/posts/western-sichuan-overland-camping-route.md",
     "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
@@ -153,7 +156,7 @@ def test_posts_untouched():
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = {p for p in proc.stdout.splitlines() if p}
-    assert changed <= PILOT_POSTS, f"unexpected posts changed:\n{changed}"
+    assert changed <= PILOT_POSTS | REV002_AUTHORIZED, f"unexpected posts changed:\n{changed}"
 
 
 def test_non_brand_content_untouched():
@@ -164,7 +167,9 @@ def test_non_brand_content_untouched():
                "content/posts/western-sichuan-overland-camping-route.md",
                "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
                "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
-               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md"}
+               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+               # P1-GROWTH-15 authorized REV002 CTA experiment post
+               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"}
     assert set(changed) <= allowed, f"unexpected content changes: {changed}"
 
 

@@ -1,0 +1,2 @@
+experiment_id,content_id,url,experiment_type,start_date,baseline_period,primary_metric,secondary_metrics,status,decision,minimum_observation_days
+REV002,cbt-17c6738ffb32,https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/,CTA_PLACEMENT,2026-08-16,2026-07-19..2026-08-15,affiliate_click_rate,affiliate_outbound_rate;affiliate_clicks_per_1000_sessions;gsc_impressions;gsc_clicks;position,RUNNING,PENDING,28

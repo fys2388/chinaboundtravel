@@ -96,6 +96,10 @@ There are really only two options worth considering:
 
 **My recommendation**: Use Trip.com for your first booking to get comfortable with the system. Once you have [WeChat Pay set up](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), switch to the 12306 app -- it is faster, cheaper, and more reliable for last-minute bookings.
 
+{{< affiliate-mid-cta partner="trip" placement="transportation-train-tickets-mid" text="Compare Train Tickets on Trip.com" >}}
+Booking your first train ticket? Trip.com works in English, accepts international cards, and shows live schedules for G, D, and C trains across China.
+{{< /affiliate-mid-cta >}}
+
 ### Station Survival Guide
 
 Chinese train stations are massive, and the first time can be overwhelming. Here is exactly what to do:
