@@ -1,7 +1,7 @@
 # P1-REPORT-01 — ChinaBound 2.0 Reporting Rebuild
 
 - Generated: 2026-08-17
-- HEAD: `247e686`
+- HEAD: `60fa428`（rebase 至 origin/main 4619aba 之上；本地基线 247e686）
 - Status: **PASS**
 
 ## 1. Reports rebuilt
@@ -85,7 +85,7 @@
 
 ## 9. Git
 
-- Commit：`chore: reconcile ChinaBound 2.0 reporting baselines`（已 push origin/main，无 force push）
+- Commit：`chore: reconcile ChinaBound 2.0 reporting baselines`（60fa428，已 push origin/main；先 rebase 集成远端 4 个 chore 提交，无 force push）
 - 仅包含本任务 reporting/code/doc 变更（scripts/、reports/、docs/AI_CONTEXT.md）
 
 ---
