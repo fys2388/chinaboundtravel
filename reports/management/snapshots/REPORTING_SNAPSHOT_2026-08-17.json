@@ -1,0 +1,1069 @@
+{
+  "as_of": "2026-08-17",
+  "domains": {
+    "affiliate_funnel": {
+      "kpis": [
+        {
+          "baseline": 277,
+          "calculation": "count rows in funnel inventory",
+          "data_source_type": "CACHED",
+          "meaning": "Affiliate CTA inventory rows",
+          "name": "cta_inventory_rows",
+          "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
+          "status": "OK",
+          "unit": "rows",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 277
+        },
+        {
+          "baseline": 45,
+          "calculation": "unique URLs in funnel inventory",
+          "data_source_type": "CACHED",
+          "meaning": "Pages with affiliate CTA coverage",
+          "name": "cta_inventory_pages",
+          "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
+          "status": "OK",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 45
+        },
+        {
+          "baseline": 0,
+          "calculation": "count affiliate_click events",
+          "data_source_type": "CACHED",
+          "meaning": "GA4 affiliate_click events, 28d window",
+          "name": "affiliate_clicks_28d",
+          "source": "reports/revenue/REVENUE_DASHBOARD.md (GA4_API 2026-08-17)",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "clicks",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": 0
+        },
+        {
+          "baseline": 0,
+          "calculation": "REV001 page only",
+          "data_source_type": "CACHED",
+          "meaning": "CTA impressions (REV001 scope)",
+          "name": "cta_impressions",
+          "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "impressions",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 0
+        },
+        {
+          "baseline": 0,
+          "calculation": "REV001 page only",
+          "data_source_type": "CACHED",
+          "meaning": "Affiliate outbound events (REV001 scope)",
+          "name": "outbound_success",
+          "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "events",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 0
+        },
+        {
+          "baseline": 0.0,
+          "calculation": "REV001 page only",
+          "data_source_type": "CACHED",
+          "meaning": "CTA click rate (REV001 scope)",
+          "name": "click_rate",
+          "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "%",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 0.0
+        },
+        {
+          "baseline": 0.0,
+          "calculation": "REV001 page only",
+          "data_source_type": "CACHED",
+          "meaning": "Outbound rate (REV001 scope)",
+          "name": "outbound_rate",
+          "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "%",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 0.0
+        },
+        {
+          "baseline": 0.0,
+          "calculation": "affiliate_clicks / sessions * 1000",
+          "data_source_type": "CACHED",
+          "meaning": "Affiliate clicks per 1000 sessions (sitewide)",
+          "name": "clicks_per_1000_sessions",
+          "source": "reports/revenue/REV001_FUNNEL_METRICS.csv + REVENUE_DASHBOARD.md",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "clicks/1000",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": 0.0
+        },
+        {
+          "baseline": null,
+          "calculation": "per-partner page and link counts",
+          "data_source_type": "CACHED",
+          "meaning": "Partner pages/link counts and status",
+          "name": "partner_breakdown",
+          "source": "reports/revenue/AFFILIATE_PARTNER_INVENTORY.csv",
+          "status": "OK",
+          "unit": "breakdown",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": [
+            {
+              "link_count": 42,
+              "pages_count": 32,
+              "partner": "Airalo",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 3,
+              "pages_count": 1,
+              "partner": "Allianz",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 43,
+              "pages_count": 35,
+              "partner": "Aviasales",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 45,
+              "pages_count": 35,
+              "partner": "Booking",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 49,
+              "pages_count": 40,
+              "partner": "Klook",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 0,
+              "pages_count": 0,
+              "partner": "NordPass",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 40,
+              "pages_count": 27,
+              "partner": "SafetyWing",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 5,
+              "pages_count": 5,
+              "partner": "Trip.com",
+              "status": "ACTIVE"
+            },
+            {
+              "link_count": 3,
+              "pages_count": 1,
+              "partner": "World Nomads",
+              "status": "ACTIVE"
+            }
+          ]
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\AFFILIATE_FUNNEL_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\AFFILIATE_PARTNER_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV001_FUNNEL_METRICS.csv"
+      ]
+    },
+    "brand": {
+      "kpis": [
+        {
+          "baseline": "11/13",
+          "calculation": "PASS count over 13 brand layers",
+          "data_source_type": "LOCAL",
+          "meaning": "Brand layers passing editorial persona audit",
+          "name": "editorial_persona_compliance",
+          "source": "reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md (2026-08-17)",
+          "status": "OK",
+          "unit": "layers",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "11/13"
+        },
+        {
+          "baseline": 25,
+          "calculation": "legacy phrase hit count",
+          "data_source_type": "LOCAL",
+          "meaning": "Posts still containing legacy persona phrases",
+          "name": "legacy_persona_remaining",
+          "source": "reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md (2026-08-17)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 25
+        },
+        {
+          "baseline": 0,
+          "calculation": "pilot articles migrated (Western Sichuan / Guilin / Hotpot)",
+          "data_source_type": "LOCAL",
+          "meaning": "Legacy persona migrations in 2026-08-16 pilot",
+          "name": "migrated_this_period",
+          "source": "reports/P1_BRAND_03_LEGACY_PILOT_REPORT.md",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 3
+        },
+        {
+          "baseline": "WAITING",
+          "calculation": "favicon.png replaced 2026-08-17; favicon.svg retained (no converter)",
+          "data_source_type": "LOCAL",
+          "meaning": "Brand logo / favicon asset migration status",
+          "name": "logo_favicon_status",
+          "source": "reports/P1_BRAND_04_LOGO_REPLACEMENT_READY.md + docs/AI_CONTEXT.md",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "LOGO_REPLACEMENT_READY"
+        },
+        {
+          "baseline": "WARN",
+          "calculation": "no forbidden/fictional claims; editorial present per layer",
+          "data_source_type": "LOCAL",
+          "meaning": "Core brand compliance status",
+          "name": "core_brand_compliance",
+          "source": "reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "WARN"
+        },
+        {
+          "baseline": "PRESENT",
+          "calculation": "static/images/joran-avatar.webp/.png present",
+          "data_source_type": "LOCAL",
+          "meaning": "Joran avatar assets status",
+          "name": "brand_asset_avatar",
+          "source": "docs/AI_CONTEXT.md (avatar webp + png)",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "PRESENT"
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_BRAND_IDENTITY_AUDIT.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_04_LOGO_REPLACEMENT_READY.md"
+      ]
+    },
+    "commercial_clusters": {
+      "clusters": [
+        {
+          "affiliate_fit_ratio": 1.0,
+          "affiliate_partners": "Airalo,Aviasales,Booking,Klook,SafetyWing,Trip.com",
+          "authority": "READY",
+          "best_position": 22.33,
+          "cluster": "China Transportation",
+          "commercial_pages": null,
+          "experiments": [
+            "REV002",
+            "REV003",
+            "REV004(candidate)"
+          ],
+          "impressions_28d": 321,
+          "indexed_pages": null,
+          "intent": "TRAIN",
+          "priority": "A",
+          "revenue": null,
+          "score": 77.0,
+          "status": "READY"
+        },
+        {
+          "affiliate_fit_ratio": 0.5,
+          "affiliate_partners": "Airalo,Aviasales,Booking,Klook",
+          "authority": "HOLD",
+          "best_position": 11.0,
+          "cluster": "China Payment",
+          "commercial_pages": null,
+          "experiments": [
+            "GROWTH07C-INDEX-001",
+            "Payment->eSIM(WAIT)"
+          ],
+          "impressions_28d": 85,
+          "indexed_pages": null,
+          "intent": "PAYMENT",
+          "priority": "B",
+          "revenue": null,
+          "score": 64.0,
+          "status": "HOLD"
+        },
+        {
+          "affiliate_fit_ratio": 0.5,
+          "affiliate_partners": "Airalo,Aviasales,Booking,Klook,SafetyWing",
+          "authority": "HOLD",
+          "best_position": 0.0,
+          "cluster": "China Connectivity",
+          "commercial_pages": null,
+          "experiments": [],
+          "impressions_28d": 0,
+          "indexed_pages": null,
+          "intent": "INTERNET",
+          "priority": "C",
+          "revenue": null,
+          "score": 39.0,
+          "status": "HOLD"
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\COMMERCIAL_CLUSTER_PRIORITY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\COMMERCIAL_CLUSTER_PROGRESS.md"
+      ]
+    },
+    "content_assets": {
+      "kpis": [
+        {
+          "baseline": 60,
+          "calculation": "count rows in inventory (60/60 content_id PASS)",
+          "data_source_type": "CACHED",
+          "meaning": "Published posts (current inventory)",
+          "name": "published_posts",
+          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv + content_id_audit",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 60
+        },
+        {
+          "baseline": "60/60",
+          "calculation": "posts with content_id / total posts",
+          "data_source_type": "CACHED",
+          "meaning": "Posts with unique content_id",
+          "name": "content_id_coverage",
+          "source": "content_id_audit.py audit --strict (2026-08-17)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 60
+        },
+        {
+          "baseline": null,
+          "calculation": "count published_date >= as_of - 30d",
+          "data_source_type": "CACHED",
+          "meaning": "Posts published in last 30 days",
+          "name": "new_pages_30d",
+          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (published_date)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-18..2026-08-17",
+          "value": 19
+        },
+        {
+          "baseline": null,
+          "calculation": "count posts with content change in period",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Pages updated this period",
+          "name": "updated_pages",
+          "source": "No updated_at field in inventory",
+          "status": "NOT_AVAILABLE",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "count indexed_status == INDEXED",
+          "data_source_type": "CACHED",
+          "meaning": "Inventory posts marked INDEXED",
+          "name": "indexed_posts",
+          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (indexed_status)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-17",
+          "value": 47
+        },
+        {
+          "baseline": {
+            "A": 0,
+            "B": 8,
+            "C": 24,
+            "D": 28
+          },
+          "calculation": "count by opportunity_tier",
+          "data_source_type": "CACHED",
+          "meaning": "Opportunity tier distribution A/B/C/D",
+          "name": "asset_tier_distribution",
+          "source": "reports/seo/content_opportunity_scores.csv",
+          "status": "OK",
+          "unit": "counts",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": {
+            "B": 8,
+            "C": 24,
+            "D": 28
+          }
+        },
+        {
+          "baseline": 51,
+          "calculation": "feed item count",
+          "data_source_type": "CACHED",
+          "meaning": "Content opportunity feed size",
+          "name": "opportunity_pipeline",
+          "source": "reports/seo/CONTENT_OPPORTUNITY_FEED.json",
+          "status": "OK",
+          "unit": "items",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 51
+        },
+        {
+          "baseline": 25,
+          "calculation": "posts matching legacy persona phrase list",
+          "data_source_type": "LOCAL",
+          "meaning": "Posts with legacy persona phrases remaining",
+          "name": "legacy_persona_pages",
+          "source": "reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md (brand_identity_audit --legacy 2026-08-17)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 25
+        },
+        {
+          "baseline": 0,
+          "calculation": "pilot articles migrated",
+          "data_source_type": "LOCAL",
+          "meaning": "Posts migrated to editorial persona (total)",
+          "name": "migrated_persona_pages",
+          "source": "reports/P1_BRAND_03_LEGACY_PILOT_REPORT.md (2026-08-16, 3 pilots)",
+          "status": "OK",
+          "unit": "posts",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 3
+        },
+        {
+          "baseline": 6,
+          "calculation": "rows in canonical conflict queue",
+          "data_source_type": "CACHED",
+          "meaning": "Canonical conflicts in queue (HIGH severity)",
+          "name": "canonical_conflicts",
+          "source": "reports/seo/CANONICAL_CONFLICT_QUEUE.md",
+          "status": "OK",
+          "unit": "urls",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 6
+        },
+        {
+          "baseline": null,
+          "calculation": "count duplicate_count > 1",
+          "data_source_type": "CACHED",
+          "meaning": "Inventory rows with duplicate_count > 1",
+          "name": "duplicate_risk_rows",
+          "source": "reports/seo/content_opportunity_scores.csv",
+          "status": "OK",
+          "unit": "rows",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": 14
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CONTENT_SEO_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\content_opportunity_scores.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CANONICAL_CONFLICT_QUEUE.md"
+      ]
+    },
+    "experiments": {
+      "experiments": [
+        {
+          "baseline": 0.0,
+          "content_id": "cbt-e464169c4991",
+          "current": 0.0,
+          "data_source_type": "CACHED",
+          "delta": 0.0,
+          "display_name": "REV001 Food Delivery + Airalo",
+          "experiment_id": "REV001",
+          "observation_days": 1,
+          "page": "Chinese Food Delivery: Meituan & Ele.me Guide",
+          "primary_metric": "0.0",
+          "sample": "0",
+          "sample_status": "INSUFFICIENT_SAMPLE",
+          "start_date": "2026-08-16",
+          "status": "RUNNING",
+          "type": "CTA_PLACEMENT"
+        },
+        {
+          "baseline": null,
+          "content_id": "cbt-17c6738ffb32",
+          "current": null,
+          "data_source_type": "CACHED",
+          "delta": null,
+          "display_name": "REV002 Transportation + Trip.com",
+          "experiment_id": "REV002",
+          "frozen": true,
+          "observation_days": null,
+          "page": "China Transportation Guide",
+          "primary_metric": "affiliate_click_rate",
+          "sample": null,
+          "start_date": "2026-08-16",
+          "status": "RUNNING",
+          "type": "CTA_PLACEMENT"
+        },
+        {
+          "baseline": null,
+          "content_id": "cbt-17c6738ffb32",
+          "current": null,
+          "data_source_type": "CACHED",
+          "delta": null,
+          "display_name": "REV003 CTA copy variant (Transportation)",
+          "experiment_id": "REV003",
+          "notes": "WAITING for REV002 review gate 2026-09-13; do not touch REV002 mid-cta",
+          "observation_days": null,
+          "page": "China Transportation Guide",
+          "primary_metric": "affiliate_click_rate",
+          "sample": null,
+          "start_date": "2026-08-16",
+          "status": "PENDING",
+          "type": "CTA_COPY"
+        },
+        {
+          "baseline": 0.0,
+          "content_id": null,
+          "current": 0.0,
+          "data_source_type": "CACHED",
+          "delta": 0.0,
+          "display_name": "DRIVE-001 site-wide Drive",
+          "experiment_id": "DRIVE-001",
+          "observation_days": 1,
+          "page": "Site-wide Travelpayouts Drive",
+          "primary_metric": "0.0",
+          "sample": "0",
+          "sample_status": "INSUFFICIENT_SAMPLE",
+          "start_date": "2026-08-16",
+          "status": "RUNNING",
+          "type": "SITE_WIDE_DRIVE"
+        },
+        {
+          "baseline": 0.0,
+          "content_id": "cbt-b4ff4381a014",
+          "current": 0.0,
+          "data_source_type": "LIVE",
+          "delta": 0.0,
+          "display_name": "GROWTH-05 144-Hour Visa CTR",
+          "experiment_id": "GROWTH05-CTR-001",
+          "observation_days": 0,
+          "page": "144-Hour Visa",
+          "primary_metric": "0.0",
+          "sample": "0",
+          "sample_status": "INSUFFICIENT_SAMPLE",
+          "start_date": "2026-08-16",
+          "status": "RUNNING",
+          "type": "CTR_TITLE_META"
+        },
+        {
+          "baseline": 0.0,
+          "content_id": "cbt-cc4549872c92",
+          "current": 0.0,
+          "data_source_type": "LIVE",
+          "delta": 0.0,
+          "display_name": "High-Speed Rail index recovery",
+          "experiment_id": "GROWTH07B-TECH-001",
+          "observation_days": 0,
+          "page": "High-Speed Rail Booking",
+          "primary_metric": "0.0",
+          "sample": "0",
+          "sample_status": "INSUFFICIENT_SAMPLE",
+          "start_date": "2026-08-16",
+          "status": "WAITING_RECRAWL",
+          "type": "TECHNICAL_INDEX_FIX"
+        },
+        {
+          "baseline": 0.0,
+          "content_id": "cbt-255af4ed003a",
+          "current": 0.0,
+          "data_source_type": "LIVE",
+          "delta": 0.0,
+          "display_name": "WeChat Pay index recovery",
+          "experiment_id": "GROWTH07C-INDEX-001",
+          "observation_days": 0,
+          "page": "WeChat Pay Weak",
+          "primary_metric": "0.0",
+          "sample": "0",
+          "sample_status": "INSUFFICIENT_SAMPLE",
+          "start_date": "2026-08-16",
+          "status": "WAITING_RECRAWL",
+          "type": "INDEX_RECOVERY"
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\EXPERIMENT_COMPARISON.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV002_EXPERIMENT_REGISTRY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV003_EXPERIMENT_REGISTRY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\DRIVE_EXPERIMENT_REGISTRY.csv"
+      ]
+    },
+    "operations": {
+      "kpis": [
+        {
+          "baseline": "PASS",
+          "calculation": "workflow schema and name contract tests green",
+          "data_source_type": "LOCAL",
+          "meaning": "Automation workflow health (YAML/name validation)",
+          "name": "automation_health",
+          "source": "tests/test_workflow_yaml.py + test_workflow_names.py (2026-08-17)",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "PASS"
+        },
+        {
+          "baseline": "PASS",
+          "calculation": "workflow definitions valid",
+          "data_source_type": "LOCAL",
+          "meaning": "Workflow health (CI/deploy workflows validated)",
+          "name": "workflow_health",
+          "source": "tests/test_workflow_yaml.py (2026-08-17)",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "PASS"
+        },
+        {
+          "baseline": null,
+          "calculation": "last recorded live 200/canonical/Drive checks",
+          "data_source_type": "CACHED",
+          "meaning": "Latest recorded production verification",
+          "name": "deployment_health",
+          "source": "reports/2.0_REPORTING_RECONCILIATION.md (GROWTH-05/07, BRAND-03 live checks)",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": "VERIFIED_2026-08-16"
+        },
+        {
+          "baseline": null,
+          "calculation": "backup freshness and rollback plan status",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Backup / rollback status",
+          "name": "backup_rollback",
+          "source": "No backup/rollback source artifact",
+          "status": "NOT_AVAILABLE",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": "PASS",
+          "calculation": "secret scan tests green; no new secret findings",
+          "data_source_type": "LOCAL",
+          "meaning": "Security / secret scan status",
+          "name": "security_scan",
+          "source": "tests/test_no_hardcoded_secrets.py + test_secret_name_contract.py (2026-08-17)",
+          "status": "OK",
+          "unit": "status",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-17",
+          "value": "PASS"
+        },
+        {
+          "baseline": null,
+          "calculation": "count plan entries",
+          "data_source_type": "LOCAL",
+          "meaning": "Active OKR weekly plan items",
+          "name": "okr_plan_items",
+          "source": "reports/okr_progress/weekly_2026-W34.json",
+          "status": "OK",
+          "unit": "items",
+          "update_frequency": "weekly",
+          "valid_period": "2026-W34",
+          "value": 13
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\okr_progress\\weekly_2026-W34.json"
+      ]
+    },
+    "revenue": {
+      "kpis": [
+        {
+          "baseline": null,
+          "calculation": "sum of confirmed affiliate earnings",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Affiliate revenue (never fabricated)",
+          "name": "revenue",
+          "source": "No affiliate revenue API / data source",
+          "status": "NOT_AVAILABLE",
+          "unit": "USD",
+          "update_frequency": "daily",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "count of confirmed conversions",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Affiliate orders / conversions",
+          "name": "orders_conversions",
+          "source": "No conversion API",
+          "status": "NOT_AVAILABLE",
+          "unit": "orders",
+          "update_frequency": "daily",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "sum of commission",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Affiliate commission earned",
+          "name": "commission",
+          "source": "No affiliate revenue API",
+          "status": "NOT_AVAILABLE",
+          "unit": "USD",
+          "update_frequency": "daily",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "revenue / pageviews * 1000",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Revenue per 1000 pageviews",
+          "name": "rpm",
+          "source": "Revenue unavailable",
+          "status": "NOT_AVAILABLE",
+          "unit": "USD",
+          "update_frequency": "daily",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "revenue / sessions * 1000",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Revenue per 1000 sessions",
+          "name": "revenue_per_1000_sessions",
+          "source": "Revenue unavailable",
+          "status": "NOT_AVAILABLE",
+          "unit": "USD",
+          "update_frequency": "daily",
+          "valid_period": null,
+          "value": null
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REVENUE_DASHBOARD.md"
+      ]
+    },
+    "seo_gsc": {
+      "kpis": [
+        {
+          "baseline": 0,
+          "calculation": "sum clicks from searchanalytics",
+          "data_source_type": "CACHED",
+          "meaning": "GSC clicks, 28d window (query-level baseline)",
+          "name": "gsc_clicks_28d",
+          "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
+          "status": "OK",
+          "unit": "clicks",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-13",
+          "value": 0
+        },
+        {
+          "baseline": 0,
+          "calculation": "sum impressions from searchanalytics",
+          "data_source_type": "CACHED",
+          "meaning": "GSC impressions, 28d window (query-level baseline)",
+          "name": "gsc_impressions_28d",
+          "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
+          "status": "OK",
+          "unit": "impressions",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-13",
+          "value": 234
+        },
+        {
+          "baseline": 0.0,
+          "calculation": "clicks / impressions * 100",
+          "data_source_type": "CACHED",
+          "meaning": "GSC CTR, 28d window",
+          "name": "gsc_ctr_28d",
+          "source": "reports/seo/SEO_BASELINE_2026-08.md",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "%",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-13",
+          "value": 0.0
+        },
+        {
+          "baseline": null,
+          "calculation": "average position from searchanalytics",
+          "data_source_type": "CACHED",
+          "meaning": "GSC average position, 28d window",
+          "name": "gsc_avg_position_28d",
+          "source": "reports/seo/SEO_BASELINE_2026-08.md",
+          "status": "OK",
+          "unit": "position",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-13",
+          "value": 56.5
+        },
+        {
+          "baseline": null,
+          "calculation": "GSC UI index count",
+          "data_source_type": "CACHED",
+          "meaning": "Pages indexed per GSC UI snapshot",
+          "name": "indexed_pages",
+          "source": "reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)",
+          "status": "OK",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 69
+        },
+        {
+          "baseline": null,
+          "calculation": "GSC UI index count",
+          "data_source_type": "CACHED",
+          "meaning": "Pages not indexed per GSC UI snapshot",
+          "name": "not_indexed_pages",
+          "source": "reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)",
+          "status": "OK",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 89
+        },
+        {
+          "baseline": null,
+          "calculation": "count of inspected URLs",
+          "data_source_type": "CACHED",
+          "meaning": "URLs inspected by URL Inspection API",
+          "name": "inspected_urls",
+          "source": "reports/seo/url_inspection_results.json (2026-08-16)",
+          "status": "OK",
+          "unit": "urls",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 98
+        },
+        {
+          "baseline": null,
+          "calculation": "count verdict == PASS",
+          "data_source_type": "CACHED",
+          "meaning": "URLs with verdict PASS",
+          "name": "inspection_pass",
+          "source": "reports/seo/url_inspection_results.json",
+          "status": "OK",
+          "unit": "urls",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-16",
+          "value": 49
+        },
+        {
+          "baseline": 3,
+          "calculation": "sum clicks_28d over inventory",
+          "data_source_type": "CACHED",
+          "meaning": "GSC page-level clicks, 28d window (inventory sum)",
+          "name": "page_level_clicks_28d",
+          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "clicks",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-15",
+          "value": 2
+        },
+        {
+          "baseline": 1168,
+          "calculation": "sum impressions_28d over inventory",
+          "data_source_type": "CACHED",
+          "meaning": "GSC page-level impressions, 28d window",
+          "name": "page_level_impressions_28d",
+          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
+          "status": "OK",
+          "unit": "impressions",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-19..2026-08-15",
+          "value": 1073
+        },
+        {
+          "baseline": null,
+          "calculation": "delta of indexed page set vs prior snapshot",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Pages newly indexed this period",
+          "name": "pages_newly_indexed",
+          "source": "Requires prior index snapshot (first unified run)",
+          "status": "NOT_AVAILABLE",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "delta of impressions/position vs prior snapshot",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Pages losing visibility this period",
+          "name": "pages_losing_visibility",
+          "source": "Requires prior GSC snapshot (first unified run)",
+          "status": "NOT_AVAILABLE",
+          "unit": "pages",
+          "update_frequency": "weekly",
+          "valid_period": null,
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "top 3 rows by opportunity_score",
+          "data_source_type": "CACHED",
+          "meaning": "Top content opportunities by score",
+          "name": "top_opportunities",
+          "source": "reports/seo/content_opportunity_scores.csv",
+          "status": "OK",
+          "unit": "list",
+          "update_frequency": "weekly",
+          "valid_period": "2026-07-19..2026-08-13",
+          "value": [
+            {
+              "content_id": "cbt-b4ff4381a014",
+              "score": 77.0,
+              "tier": "B",
+              "title": "China 144-Hour Visa-Free Transit (2026 Guide)"
+            },
+            {
+              "content_id": "cbt-52a577c1b2b8",
+              "score": 75.0,
+              "tier": "B",
+              "title": "China Transportation Guide for European Travelers"
+            },
+            {
+              "content_id": "cbt-de065751769e",
+              "score": 75.0,
+              "tier": "B",
+              "title": "China Transportation Guide: Trains, Subways & Taxis"
+            }
+          ]
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\SEO_BASELINE_2026-08.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\INDEX_COVERAGE_BASELINE.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CONTENT_SEO_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\url_inspection_results.json"
+      ]
+    },
+    "traffic": {
+      "kpis": [
+        {
+          "baseline": null,
+          "calculation": "sum of active users, 28d",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "GA4 unique users, 28d window",
+          "name": "users_28d",
+          "source": "GA4 user dimension not persisted in current artifacts",
+          "status": "NOT_AVAILABLE",
+          "unit": "users",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": null
+        },
+        {
+          "baseline": 162,
+          "calculation": "GA4 totalSessions, 28d window",
+          "data_source_type": "CACHED",
+          "meaning": "GA4 sessions, 28d window",
+          "name": "sessions_28d",
+          "source": "reports/revenue/REVENUE_DASHBOARD.md (GA4_API fetch 2026-08-17)",
+          "status": "OK",
+          "unit": "sessions",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": 166
+        },
+        {
+          "baseline": 365,
+          "calculation": "GA4 totalPageviews, 28d window",
+          "data_source_type": "CACHED",
+          "meaning": "GA4 pageviews, 28d window",
+          "name": "pageviews_28d",
+          "source": "reports/revenue/REVENUE_DASHBOARD.md (GA4_API fetch 2026-08-17)",
+          "status": "OK",
+          "unit": "pageviews",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": 374
+        },
+        {
+          "baseline": null,
+          "calculation": "engaged sessions / sessions",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "GA4 engagement rate, 28d window",
+          "name": "engagement_rate_28d",
+          "source": "Engagement dimension not persisted",
+          "status": "NOT_AVAILABLE",
+          "unit": "%",
+          "update_frequency": "daily",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "group by sessionDefaultChannelGroup",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Sessions by default channel group, 28d window",
+          "name": "source_channel_mix",
+          "source": "GA4 channel dimension not persisted",
+          "status": "NOT_AVAILABLE",
+          "unit": "breakdown",
+          "update_frequency": "weekly",
+          "valid_period": "2026-07-20..2026-08-16",
+          "value": null
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REVENUE_DASHBOARD.md"
+      ]
+    }
+  },
+  "generated_at": "2026-08-17",
+  "low_data_reasons": [
+    "affiliate_funnel.affiliate_clicks_28d: sample below guard",
+    "affiliate_funnel.click_rate: sample below guard",
+    "affiliate_funnel.clicks_per_1000_sessions: sample below guard",
+    "affiliate_funnel.cta_impressions: sample below guard",
+    "affiliate_funnel.outbound_rate: sample below guard",
+    "affiliate_funnel.outbound_success: sample below guard",
+    "revenue: no affiliate revenue API (REVENUE_NOT_AVAILABLE)",
+    "seo_gsc.gsc_ctr_28d: sample below guard",
+    "seo_gsc.page_level_clicks_28d: sample below guard"
+  ],
+  "low_data_warning": true,
+  "schema": "chinabound-2.0-kpi-snapshot",
+  "schema_version": "1.0"
+}

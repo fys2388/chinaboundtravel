@@ -68,14 +68,16 @@
 
 ## 7. Current task
 
-- P1-REPORT-01：ChinaBound 2.0 Reporting Rebuild — **PASS**（2026-08-17）
-  - REV001 报告冲突已修复（144h/Booking 旧定义已清除）
-  - 报告引擎已按 60-post inventory 重跑：brand legacy / SEO opportunity / revenue / commercial conversion
-  - 验证：pytest 595 passed（0 failed / 0 skipped）；content_id 60/60 PASS；`hugo --gc --minify` SUCCESS
-  - 提交：`chore: reconcile ChinaBound 2.0 reporting baselines`（已 push origin/main）
-- 下一任务：待用户指派（建议：GROWTH-22 线上验证，或按 `reports/seo/TOP_10_CONTENT_PRIORITIES.md` 执行下一批内容优化）
-
-## 8. Known architecture（架构速览）
+- P1-REPORT-02：ChinaBound 2.0 Unified Management Reporting — **PASS**（2026-08-17）
+  - 单一 KPI 源：`reports/management/REPORTING_SNAPSHOT.json`（scripts/reporting_kpi_engine.py）
+  - 五期报告共享同一数据模型：daily / weekly / monthly / quarterly / yearly（scripts/reporting_engine.py）
+  - 主仪表盘：`reports/CHINABOUND_TRAVEL_2_0_MASTER_DASHBOARD.md`；警报：`reports/management/ALERTS.md`
+  - 模型文档：REPORTING_DATA_DICTIONARY.md / REPORTING_KPI_DEFINITIONS.md / REPORTING_STATUS_MODEL.md
+  - 报告索引：`reports/REPORT_INDEX.md`（CURRENT / HISTORICAL / STALE / SUPERSEDED）
+  - 验证：pytest 615 passed（0 failed / 0 skipped）；content_id 60/60 PASS；`hugo --gc --minify` SUCCESS
+  - 提交：`feat: unify ChinaBound 2.0 management reporting`（已 push origin/main）
+- 前序：P1-REPORT-01（2026-08-17）— PASS
+- 下一任务：待用户指派（建议：GROWTH-22 线上验证，或执行 `reports/seo/TOP_10_CONTENT_PRIORITIES.md` 下一批内容优化）## 8. Known architecture（架构速览）
 
 - 渲染：`layouts/`（自定义）覆盖 `themes/PaperMod/`（勿改主题源）
 - 静态：`static/` 原样发布；`assets/` 走 Hugo 资源管道（`resources.Get`）
@@ -91,4 +93,6 @@
 - 单测：`python -m pytest tests/test_xxx.py -q`（禁止无授权全量跑）
 - content_id 审计：`python scripts/content_id_audit.py audit --strict`
 - 实验评审：`python scripts/revenue_experiment_review.py --as-of YYYY-MM-DD`
+- KPI 快照：`python scripts/reporting_kpi_engine.py --as-of YYYY-MM-DD`
+- 管理报告：`python scripts/reporting_engine.py --all --master --alerts --as-of YYYY-MM-DD`
 - 搜索：仅限任务相关目录；勿全仓扫描
