@@ -29,7 +29,7 @@
 
 | Candidate | Excluded | Reason |
 |---|---|---|
-| 144-Hour Visa (cbt-b4ff4381a014) | YES | GROWTH-05 CTR experiment RUNNING（REV-001 已占用，勿混淆） |
+| 144-Hour Visa (cbt-b4ff4381a014) | YES | GROWTH-05 CTR experiment RUNNING（REV001 已占用，勿混淆） |
 | WeChat Pay strong (cbt-707a8899c0a7) | YES | Index recovery RUNNING（GROWTH-07C / observation） |
 | High-Speed Rail / Transportation (cbt-52a577c1b2b8) | YES | Technical SEO / indexing observation + canonical cluster |
 | 144-Hour Visa 15 Countries (cbt-244822dc113b) | YES | 与 144h 主题簇重叠（CTR experiment 隔离风险）；summary 有既有 malformed markdown；首段含严重 legacy persona 声明；VISA 内容策略建议先做内容修复而非 CTA 实验 |
@@ -55,3 +55,4 @@
 ## Next
 
 - P1-GROWTH-12B：在该页面新增 1 个明确、自然的 mid-content affiliate CTA（placement=`food_cta_mid_content`），保持 URL/canonical/content_id/affiliate/UTM 不变。
+

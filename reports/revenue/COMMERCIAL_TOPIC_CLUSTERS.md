@@ -46,9 +46,9 @@ Scoring: Commercial Intent 30 + Search Demand 25 + Affiliate Fit 20 + Existing A
 | 5 | China Transportation | china train tickets | 58 | C | MONITOR | https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ |
 | 6 | China Connectivity | china esim | 54 | C | MONITOR | https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/ |
 | 7 | China Connectivity | china vpn | 54 | C | MONITOR | https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/ |
-| 8 | China Transportation | china airport transfer | 44 | C | CREATE | https://www.chinaboundtravel.com/posts/china-airport-transfer/ |
-| 9 | China Transportation | china railway app | 44 | C | CREATE | https://www.chinaboundtravel.com/posts/china-railway-app/ |
-| 10 | China Payment | china mobile payment | 42 | C | CREATE | https://www.chinaboundtravel.com/posts/china-mobile-payment/ |
+| 8 | China Transportation | china railway app | 44 | C | CREATE | https://www.chinaboundtravel.com/posts/china-railway-app/ |
+| 9 | China Transportation | china airport transfer | 42 | C | MONITOR | https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/ |
+| 10 | China Connectivity | china mobile data | 40 | C | CREATE | https://www.chinaboundtravel.com/posts/china-mobile-data/ |
 
 ## Rules
 

@@ -1,2 +1,2 @@
-experiment_id,content_id,url,baseline_start,baseline_end,sessions,pageviews,affiliate_clicks,affiliate_clicks_per_1000,gsc_impressions,gsc_clicks
-REV-001,cbt-b4ff4381a014,https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/,2026-07-19,2026-08-15,162,365,0,0.0,107,0
+content_id,url,baseline_start,baseline_end,sessions,pageviews,affiliate_clicks,affiliate_clicks_per_1000,gsc_impressions,gsc_clicks,gsc_position,revenue
+cbt-e464169c4991,https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/,2026-07-19,2026-08-15,162,365,0,0.0,159,0,19.55,NULL

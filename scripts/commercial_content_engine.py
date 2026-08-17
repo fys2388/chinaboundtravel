@@ -293,7 +293,7 @@ def write_content_revenue_gaps(seo_rows=None, funnel_rows=None, out: Path = None
         "",
         "Date: 2026-08-16  |  Status: ANALYSIS ONLY (no CTA changes)",
         "",
-        f"Baseline: 57 posts / {len(funnel_rows)} CTA rows / revenue NULL",
+        f"Baseline: {len(seo_rows)} pages / {len(funnel_rows)} CTA rows / revenue NULL",
         "",
         "## Pages with traffic + commercial intent but weak CTA alignment",
         "",
@@ -338,3 +338,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

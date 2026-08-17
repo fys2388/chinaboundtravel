@@ -1,14 +1,14 @@
 keyword_cluster,keyword,target_url,intent,affiliate_match,existing_pages,impressions_28d,best_position,score,priority,action
-China Transportation,china transportation card,https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/,TRAIN,"Trip.com,Booking,Klook",3,321,22.33,81,A,CTA_ALIGN
-China Payment,wechat pay foreign card,https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/,PAYMENT,"Airalo,NordVPN",4,84,11.0,75,B,CTA_ALIGN
-China Payment,alipay for foreigners,https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/,PAYMENT,"Airalo,NordVPN",3,1,11.0,68,B,CTA_ALIGN
+China Transportation,china transportation card,https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/,TRAIN,"Trip.com,Booking,Klook",4,321,22.33,81,A,CTA_ALIGN
+China Payment,wechat pay foreign card,https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/,PAYMENT,"Airalo,NordVPN",5,84,11.0,75,B,CTA_ALIGN
+China Payment,alipay for foreigners,https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/,PAYMENT,"Airalo,NordVPN",4,1,11.0,68,B,CTA_ALIGN
 China Transportation,china high speed rail booking,https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/,TRAIN,"Trip.com,Booking,Klook",2,0,0.0,58,C,MONITOR
 China Transportation,china train tickets,https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/,TRAIN,"Trip.com,Booking,Klook",2,0,0.0,58,C,MONITOR
 China Connectivity,china esim,https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/,INTERNET,"Airalo,NordVPN",1,0,0.0,54,C,MONITOR
 China Connectivity,china vpn,https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/,INTERNET,"Airalo,NordVPN",1,0,0.0,54,C,MONITOR
-China Transportation,china airport transfer,https://www.chinaboundtravel.com/posts/china-airport-transfer/,TRAIN,"Trip.com,Booking,Klook",0,0,0.0,44,C,CREATE
 China Transportation,china railway app,https://www.chinaboundtravel.com/posts/china-railway-app/,TRAIN,"Trip.com,Booking,Klook",0,0,0.0,44,C,CREATE
-China Payment,china mobile payment,https://www.chinaboundtravel.com/posts/china-mobile-payment/,PAYMENT,"Airalo,NordVPN",0,0,0.0,42,C,CREATE
-China Payment,china payment problems,https://www.chinaboundtravel.com/posts/china-payment-problems/,PAYMENT,"Airalo,NordVPN",0,0,0.0,42,C,CREATE
+China Transportation,china airport transfer,https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/,TRAIN,"Trip.com,Booking,Klook",1,0,0.0,42,C,MONITOR
 China Connectivity,china mobile data,https://www.chinaboundtravel.com/posts/china-mobile-data/,INTERNET,"Airalo,NordVPN",0,0,0.0,40,C,CREATE
 China Connectivity,google services china,https://www.chinaboundtravel.com/posts/google-services-china/,INTERNET,"Airalo,NordVPN",0,0,0.0,40,C,CREATE
+China Payment,china mobile payment,https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/,PAYMENT,"Airalo,NordVPN",2,0,0.0,40,C,MONITOR
+China Payment,china payment problems,https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/,PAYMENT,"Airalo,NordVPN",2,0,0.0,40,C,MONITOR

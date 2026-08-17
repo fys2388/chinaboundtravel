@@ -103,9 +103,14 @@ def _as_float(v):
         return None
 
 
-def build_comparison():
-    """Build the unified comparison rows (deterministic order)."""
-    today = date(2026, 8, 16)  # experiment cycle reference date
+def build_comparison(today=None):
+    """Build the unified comparison rows (deterministic order).
+
+    `today` is the experiment reference date; defaults to the runtime
+    date. Pass --as-of YYYY-MM-DD for reproducible snapshots.
+    """
+    if today is None:
+        today = date.today()
     rows = []
 
     # --- REV001 (CTA_PLACEMENT) ---
@@ -253,9 +258,11 @@ def write_rev001_funnel_metrics(rows=None, out=None):
 
 def main():
     ap = argparse.ArgumentParser(description="Unified revenue+SEO experiment review")
+    ap.add_argument("--as-of", default=None, help="Reference date YYYY-MM-DD (default: runtime date)")
     ap.add_argument("--output", default=None, help="CSV output path")
     args = ap.parse_args()
-    rows = build_comparison()
+    as_of = date.fromisoformat(args.as_of) if args.as_of else None
+    rows = build_comparison(today=as_of)
     out = write_comparison(rows, Path(args.output) if args.output else None)
     print(f"WROTE {out} ({len(rows)} experiments)")
     for r in rows:

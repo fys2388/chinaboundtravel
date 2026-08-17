@@ -1,61 +1,63 @@
-# GROWTH MASTER DASHBOARD£¨SEO + Revenue ÁªºÏ£©
+# GROWTH MASTER DASHBOARDï¼ˆSEO + Revenue è”åˆï¼‰
 
-- Generated: 2026-08-16
-- DATA_SOURCE: CACHED / LIVE£¨GSC comparison ±ê×¢ LIVE£»revenue ±ê×¢ CACHED£©
-- Revenue: NULL£¨REVENUE_NOT_AVAILABLE£©
+- Generated: 2026-08-17
+- DATA_SOURCE: CACHED / LIVEï¼ˆGSC comparison æ ‡æ³¨ LIVEï¼›revenue æ ‡æ³¨ CACHEDï¼‰
+- Revenue: NULLï¼ˆREVENUE_NOT_AVAILABLEï¼‰
+- Baseline: 60 published posts / 60 content_id
 
-## A. 144-Hour Visa£¨GROWTH05-CTR-001£©
+## A. 144-Hour Visaï¼ˆGROWTH05-CTR-001ï¼‰
 | Item | Value |
 |---|---|
-| SEO status | RUNNING£¨TITLE_META CTR experiment£© |
-| Index status | UNKNOWN£¨¿ìÕÕÎŞ inspection£»Ò³Ãæ³¤ÆÚÊÕÂ¼£© |
-| Traffic (GSC 28d) | impressions 107 ¡ú 131£»clicks 0£»CTR 0.0% |
-| Position | 74.05 ¡ú 46.02 |
-| Affiliate status | REV-001 ¾É¼ÇÂ¼ÒÑÇ¨ÒÆ£»144h Ò³Ãæ±£Áô GROWTH-12 ÒÑÉÏÏß CTA |
+| SEO status | RUNNINGï¼ˆTITLE_META CTR experimentï¼‰ |
+| Index status | UNKNOWNï¼ˆå¿«ç…§æ—  inspectionï¼›é¡µé¢é•¿æœŸæ”¶å½•ï¼‰ |
+| Traffic (GSC 28d) | impressions 107 â†’ 131ï¼›clicks 0ï¼›CTR 0.0% |
+| Position | 74.05 â†’ 46.02 |
+| Affiliate status | é¡µé¢ä¿ç•™æ—¢æœ‰ Booking CTAï¼›ä¸å†å½’å± REV001ï¼ˆREV001 å·²é‡å®šä¹‰ä¸º Food Delivery + Airaloï¼‰ |
 | Revenue status | NULL |
-| Experiment status | INSUFFICIENT_SAMPLE£¨clicks <20£© |
+| Experiment status | INSUFFICIENT_SAMPLEï¼ˆclicks <20ï¼‰ |
 
-## B. WeChat Pay Weak£¨GROWTH07C-INDEX-001£©
+## B. WeChat Pay Weakï¼ˆGROWTH07C-INDEX-001ï¼‰
 | Item | Value |
 |---|---|
-| SEO status | INDEX_RECOVERY REQUESTED£¨2026-07-28 Ç°¾É crawl£© |
-| Index status | WAITING_RECRAWL£¨Alternate page with proper canonical tag£© |
-| Traffic (GSC 28d) | impressions 1£»clicks 0 |
-| Affiliate status | ÎŞ±ä»¯£¨²îÒì»¯ÒÑÍê³É£¬²»ÔÙÖØĞ´£© |
+| SEO status | INDEX_RECOVERY REQUESTEDï¼ˆ2026-07-28 å‰æ—§ crawlï¼‰ |
+| Index status | WAITING_RECRAWLï¼ˆAlternate page with proper canonical tagï¼‰ |
+| Traffic (GSC 28d) | impressions 1ï¼›clicks 0 |
+| Affiliate status | æ— å˜åŒ–ï¼ˆå·®å¼‚åŒ–å·²å®Œæˆï¼Œä¸å†é‡å†™ï¼‰ |
 | Revenue status | NULL |
-| Experiment status | WAITING_RECRAWL£¨²»ÔÙ´Î Request Indexing£© |
+| Experiment status | WAITING_RECRAWLï¼ˆä¸å†æ¬¡ Request Indexingï¼‰ |
 
-## C. High-Speed Rail£¨GROWTH07B-TECH-001£©
+## C. High-Speed Railï¼ˆGROWTH07B-TECH-001ï¼‰
 | Item | Value |
 |---|---|
-| SEO status | ¼¼ÊõĞŞ¸´ÒÑÉÏÏß£¨200 / self canonical / indexable£© |
-| Index status | WAITING_RECRAWL£¨¾É crawl 2026-08-06 ÈÔÏÔÊ¾ noindex£© |
-| Traffic (GSC 28d) | impressions 138£»clicks 0 |
-| Position | 30.14 ¡ú 12.42£¨¾É URL Êı¾İ£© |
-| Affiliate status | ÎŞ±ä»¯ |
+| SEO status | æŠ€æœ¯ä¿®å¤å·²ä¸Šçº¿ï¼ˆ200 / self canonical / indexableï¼‰ |
+| Index status | WAITING_RECRAWLï¼ˆæ—§ crawl 2026-08-06 ä»æ˜¾ç¤º noindexï¼‰ |
+| Traffic (GSC 28d) | impressions 138ï¼›clicks 0 |
+| Position | 30.14 â†’ 12.42ï¼ˆæ—§ URL æ•°æ®ï¼‰ |
+| Affiliate status | æ— å˜åŒ– |
 | Revenue status | NULL |
 | Experiment status | WAITING_RECRAWL |
 
-## D. REV001 Food Delivery£¨CTA_PLACEMENT£©
+## D. REV001 Food Deliveryï¼ˆCTA_PLACEMENTï¼‰
 | Item | Value |
 |---|---|
-| SEO status | RUNNING£¨CTA ÒÑÉÏÏß£¬SEO ²»±äÁ¿±£³Ö£© |
-| Index status | INDEXED£¨canonical=self£© |
-| Traffic (GSC 28d) | impressions 159£»clicks 0£»position 19.55 |
-| Affiliate status | 1 ¸ö mid-content CTA£¨esim/Airalo£¬placement=food-delivery-mid-content£© |
+| content_id | cbt-e464169c4991 |
+| SEO status | RUNNINGï¼ˆCTA å·²ä¸Šçº¿ï¼ŒSEO ä¸å˜é‡ä¿æŒï¼‰ |
+| Index status | INDEXEDï¼ˆcanonical=selfï¼‰ |
+| Traffic (GSC 28d) | impressions 159ï¼›clicks 0ï¼›position 19.55 |
+| Affiliate status | 1 ä¸ª mid-content CTAï¼ˆAiraloï¼Œplacement=food-delivery-mid-contentï¼‰ |
 | Revenue status | NULL |
-| Experiment status | INSUFFICIENT_SAMPLE£¨0 Ìì£¬clicks 0£© |
+| Experiment status | INSUFFICIENT_SAMPLEï¼ˆstart 2026-08-16ï¼Œclicks 0ï¼‰ |
 
-## E. DRIVE-001£¨Site-wide Drive£©
+## E. DRIVE-001ï¼ˆSite-wide Driveï¼‰
 | Item | Value |
 |---|---|
-| SEO status | È«Õ¾ Drive script exactly 1/page£¨ÎŞ±ä»¯£© |
-| Index status | ²»ÊÊÓÃ£¨½Å±¾²ã£© |
-| Traffic (28d sitewide) | sessions 162£»pageviews 365 |
-| Affiliate status | ACTIVE£¬ÅäÖÃÎ´±ä |
+| SEO status | å…¨ç«™ Drive script exactly 1/pageï¼ˆæ— å˜åŒ–ï¼‰ |
+| Index status | ä¸é€‚ç”¨ï¼ˆè„šæœ¬å±‚ï¼‰ |
+| Traffic (28d sitewide) | sessions 162ï¼›pageviews 365 |
+| Affiliate status | ACTIVEï¼Œé…ç½®æœªå˜ |
 | Revenue status | NULL |
-| Experiment status | INSUFFICIENT_SAMPLE£¨0 Ìì£© |
+| Experiment status | INSUFFICIENT_SAMPLEï¼ˆ1 å¤©ï¼‰ |
 
-## ÁªºÏ½áÂÛ
-- ËùÓĞ revenue/SEO ÊµÑé¾ù´¦ÓÚ¹Û²ì´°¿ÚÄÚ£ºINSUFFICIENT_SAMPLE / WAITING_RECRAWL
-- ÎŞÈÎºÎÊµÑé¿ÉÅĞ¶¨³É°Ü£»²»ĞŞ¸ÄÈÎºÎÊµÑé¶ÔÏó
+## è”åˆç»“è®º
+- æ‰€æœ‰ revenue/SEO å®éªŒå‡å¤„äºè§‚å¯Ÿçª—å£å†…ï¼šINSUFFICIENT_SAMPLE / WAITING_RECRAWL
+- æ— ä»»ä½•å®éªŒå¯åˆ¤å®šæˆè´¥ï¼›ä¸ä¿®æ”¹ä»»ä½•å®éªŒå¯¹è±¡

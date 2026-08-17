@@ -1,11 +1,11 @@
 # TOP COMMERCIAL PAGES (DRIVE ON)
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 
 | # | content_id | title | impressions | clicks | aff clicks | partner | intent | Drive |
 |---|---|---|---|---|---|---|---|---|
 | 1 | cbt-b4ff4381a014 | China 144-Hour Visa-Free Transit (2026 Guide) | 107 | 0 | 0 | Aviasales, Booking, Klook, SafetyWing | VISA | ACTIVE |
-| 2 | cbt-52a577c1b2b8 | China Transportation Guide for European Travelers | 107 | 0 | 0 | Airalo, Aviasales, Booking, Klook, Safet | TRAIN | ACTIVE |
+| 2 | cbt-17c6738ffb32 | China Transportation Guide: Trains, Subways & Taxis | 107 | 0 | 0 | Airalo, Aviasales, Booking, Klook, Safet | TRAIN | ACTIVE |
 | 3 | cbt-244822dc113b | China's 144-Hour Visa-Free Transit: 15 New Countri | 87 | 0 | 0 | Airalo, Aviasales, Booking, Klook, Safet | VISA | ACTIVE |
 | 4 | cbt-707a8899c0a7 | Can Foreigners Use WeChat Pay in China? (2026 Guid | 83 | 0 | 0 | Airalo, Aviasales, Klook | PAYMENT | ACTIVE |
 | 5 | cbt-e464169c4991 | Chinese Food Delivery: Meituan & Ele.me Guide | 159 | 0 | 0 | Airalo, Aviasales, Booking, Klook | FOOD | ACTIVE |

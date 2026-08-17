@@ -2,7 +2,7 @@
 
 Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new content). MONITOR items stay queued until more data.
 
-## BATCH A - TECHNICAL (14)
+## BATCH A - TECHNICAL (17)
 
 | rank | content_id | title | url | priority | action | effort |
 |---|---|---|---|---|---|---|
@@ -11,15 +11,18 @@ Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new
 | 3 | cbt-95d9a1b95440 | China Travel Guide: July 2026 Updates & Visa Rules | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/ | 85.0 | TECHNICAL_FIX | S |
 | 4 | cbt-acae8a973429 | Foodie's Guide to China: Dishes You Must Try | https://www.chinaboundtravel.com/posts/food-recommendations-guide/ | 85.0 | TECHNICAL_FIX | S |
 | 5 | cbt-255af4ed003a | How to Set Up & Use WeChat Pay Step by Step (2026 Guide) | https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/ | 80.0 | INDEX_RECOVERY | S |
-| 6 | cbt-4e09fa4aa93d | China High-Speed Trains: Booking & Insider Tips | https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ | 80.0 | INDEX_RECOVERY | S |
-| 7 | cbt-558f85f45e9a | Great Wall of China: History Beyond the Tourist Trail | https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ | 80.0 | INDEX_RECOVERY | S |
-| 8 | cbt-6f28480baea0 | Chinese Train Stations: Survival Guide for Travelers | https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/ | 80.0 | INDEX_RECOVERY | S |
-| 9 | cbt-cc4549872c92 | How to Book China High-Speed Train Tickets (2026) | https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ | 80.0 | INDEX_RECOVERY | S |
-| 10 | cbt-0bb1cb1e308d | China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide | https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/ | 38.0 | INDEX_RECOVERY | S |
-| 11 | cbt-407090802298 | Shanghai Like a Local  Hidden Neighborhoods Tourists Never Find | https://www.chinaboundtravel.com/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/ | 38.0 | INDEX_RECOVERY | S |
-| 12 | cbt-067675763415 | How Chinese Food Evolved: 2 Million Years of History | https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/ | 37.0 | INDEX_RECOVERY | S |
+| 6 | cbt-02a3e0d6ed4f | China Airport Transfer Guide (2026): From Airports to City Centers | https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/ | 80.0 | INDEX_RECOVERY | S |
+| 7 | cbt-0adceab18b53 | Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) | https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/ | 80.0 | INDEX_RECOVERY | S |
+| 8 | cbt-55aef784e6aa | China Transportation Card Guide (2026): Metro Cards, Transit Apps & Payment Options for Foreign Travelers | https://www.chinaboundtravel.com/posts/china-transportation-card-guide/ | 80.0 | INDEX_RECOVERY | S |
+| 9 | cbt-4e09fa4aa93d | China High-Speed Trains: Booking & Insider Tips | https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ | 80.0 | INDEX_RECOVERY | S |
+| 10 | cbt-558f85f45e9a | Great Wall of China: History Beyond the Tourist Trail | https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/ | 80.0 | INDEX_RECOVERY | S |
+| 11 | cbt-6f28480baea0 | Chinese Train Stations: Survival Guide for Travelers | https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/ | 80.0 | INDEX_RECOVERY | S |
+| 12 | cbt-cc4549872c92 | How to Book China High-Speed Train Tickets (2026) | https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ | 80.0 | INDEX_RECOVERY | S |
 | 13 | cbt-575e18482ca0 | China Just Made It WAY Easier to Visit (My Mother-in-Law is STOKED) | https://www.chinaboundtravel.com/posts/china-just-made-it-way-easier-to-visit-my-mother-i/ | 37.0 | INDEX_RECOVERY | S |
 | 14 | cbt-74e8424894c4 | China Bargaining Guide: How to Haggle & Shop | https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/ | 37.0 | INDEX_RECOVERY | S |
+| 15 | cbt-0bb1cb1e308d | China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide | https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/ | 35.0 | INDEX_RECOVERY | S |
+| 16 | cbt-407090802298 | Shanghai Like a Local  Hidden Neighborhoods Tourists Never Find | https://www.chinaboundtravel.com/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/ | 35.0 | INDEX_RECOVERY | S |
+| 17 | cbt-067675763415 | How Chinese Food Evolved: 2 Million Years of History | https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/ | 34.0 | INDEX_RECOVERY | S |
 
 ## BATCH B - SEO CONTENT (18)
 

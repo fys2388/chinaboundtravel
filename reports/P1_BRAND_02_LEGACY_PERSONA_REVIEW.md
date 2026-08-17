@@ -1,8 +1,8 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 
-统计：content/posts 共 57 篇，命中 legacy persona 短语 28 篇。
+统计：content/posts 共 60 篇，命中 legacy persona 短语 25 篇。
 
 本轮**不修改** legacy 文章；统一标记 LEGACY_PERSONA_CONTENT，后续单独处理。
 
@@ -25,14 +25,14 @@
 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md | 0 | - |
 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md | 1 | American expat |
 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md | 1 | 5-year expat |
-| 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md | 1 | when I was in |
+| 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md | 0 | - |
 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md | 2 | American expat; I remember my first trip |
 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md | 0 | - |
 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md | 0 | - |
 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md | 2 | 5-year expat; American expat |
 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md | 0 | - |
 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md | 0 | - |
-| 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md | 1 | I've been to |
+| 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md | 0 | - |
 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md | 0 | - |
 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md | 0 | - |
 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md | 0 | - |
@@ -60,11 +60,14 @@
 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md | 0 | - |
 | 2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md | 1 | I moved to |
 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md | 1 | I remember my first trip |
+| alipay-for-foreigners-guide.md | 0 | - |
 | alipay-wechat-pay-foreigners-guide.md | 0 | - |
 | best-travel-insurance-china.md | 1 | Personally used |
+| china-airport-transfer-guide.md | 0 | - |
 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md | 0 | - |
+| china-transportation-card-guide.md | 0 | - |
 | internet-connection-china-esim-vpn-guide.md | 2 | My wife; my wife |
-| western-sichuan-overland-camping-route.md | 1 | My wife |
+| western-sichuan-overland-camping-route.md | 0 | - |
 
 ## 后续建议
 

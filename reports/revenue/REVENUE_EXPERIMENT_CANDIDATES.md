@@ -1,6 +1,6 @@
 # REVENUE EXPERIMENT CANDIDATES
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 
 | # | Experiment | Status | Notes |
 |---|---|---|---|

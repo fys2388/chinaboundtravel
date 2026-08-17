@@ -1,6 +1,6 @@
 # REV002 Review Readiness (P1-GROWTH-19F)
 
-Generated: 2026-08-16  |  Status: PREPARATION ONLY (no judgement)
+Generated: 2026-08-17  |  Status: PREPARATION ONLY (no judgement)
 
 ## Experiment
 - experiment_id: REV002
@@ -17,8 +17,8 @@ Generated: 2026-08-16  |  Status: PREPARATION ONLY (no judgement)
 - Secondary: affiliate_outbound_rate; affiliate_clicks_per_1000_sessions; CTA impressions
 
 ## Data availability
-- GA4 events: AVAILABLE
-- GSC snapshot: AVAILABLE (file: gsc_index_report.json)
+- GA4 events: NOT_AVAILABLE
+- GSC snapshot: NOT_AVAILABLE (file: none)
 
 ## Baseline snapshot (frozen at experiment start)
 - content_id: cbt-17c6738ffb32

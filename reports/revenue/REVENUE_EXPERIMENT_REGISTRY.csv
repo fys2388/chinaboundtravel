@@ -1,2 +1,3 @@
 experiment_id,content_id,url,experiment_type,start_date,baseline_period,primary_metric,secondary_metrics,status,decision,minimum_observation_days
-REV-001,cbt-e464169c4991,https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/,CTA_PLACEMENT,2026-08-16,2026-07-19..2026-08-15,affiliate_clicks_per_1000_pageviews,affiliate_click_rate;sessions;pageviews;gsc_impressions;gsc_clicks;position,RUNNING,PENDING,28
+REV001,cbt-e464169c4991,https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/,CTA_PLACEMENT,2026-08-16,2026-07-19..2026-08-15,affiliate_clicks_per_1000_pageviews,affiliate_click_rate;sessions;pageviews;gsc_impressions;gsc_clicks;position,RUNNING,PENDING,28
+

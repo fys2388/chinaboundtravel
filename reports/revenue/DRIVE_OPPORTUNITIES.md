@@ -1,6 +1,6 @@
 # DRIVE OPPORTUNITIES (DRIVE-001 RUNNING)
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 - Criteria: high commercial intent + sufficient traffic + currently monetizable.
 
 | page | content_id | sessions | intent | affiliate | drive | action |

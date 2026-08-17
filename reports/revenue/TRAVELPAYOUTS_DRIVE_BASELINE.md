@@ -6,7 +6,7 @@
 - drive_capacity: FULL
 - script_status: INSTALLED_ONCE_ALL_PAGES
 - baseline_period: 2026-07-19..2026-08-16 (pre-drive 28d)
-- generated: 2026-08-16
+- generated: 2026-08-17
 
 ## Observation rule
 - Drive 刚激活：观察 >= 28 天后再判定效果

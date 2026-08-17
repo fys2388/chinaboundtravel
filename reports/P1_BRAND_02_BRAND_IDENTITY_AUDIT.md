@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Brand Identity Audit
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 
 品牌层检查：Homepage / Resources / Author Block / About / Schema。
 

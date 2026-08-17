@@ -781,6 +781,60 @@
     "index_status": "INDEXED"
   },
   {
+    "content_id": "cbt-0adceab18b53",
+    "url": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
+    "opportunity_score": 30,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "UNKNOWN"
+    },
+    "queries": [],
+    "business_intent": "PAYMENT",
+    "index_status": "UNKNOWN"
+  },
+  {
+    "content_id": "cbt-02a3e0d6ed4f",
+    "url": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
+    "opportunity_score": 30,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "UNKNOWN"
+    },
+    "queries": [],
+    "business_intent": "TRANSPORT",
+    "index_status": "UNKNOWN"
+  },
+  {
+    "content_id": "cbt-55aef784e6aa",
+    "url": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+    "opportunity_score": 30,
+    "tier": "D",
+    "action": "INDEX_FIX",
+    "evidence": {
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "avg_position": 0.0,
+      "query_count": 0,
+      "indexed_status": "UNKNOWN"
+    },
+    "queries": [],
+    "business_intent": "VISA",
+    "index_status": "UNKNOWN"
+  },
+  {
     "content_id": "cbt-cc4549872c92",
     "url": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
     "opportunity_score": 20,

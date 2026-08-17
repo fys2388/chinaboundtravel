@@ -4,10 +4,10 @@ Aggregated from QUERY_INTENT_DISTRIBUTION + article inventory. LOW_DATA_WARNING:
 
 | cluster | queries | query impressions | articles | article impressions | indexed articles |
 |---|---|---|---|---|---|
-| VISA | 22 | 56 | 4 | 194 | 4 |
-| PAYMENT | 19 | 29 | 5 | 85 | 4 |
+| VISA | 22 | 56 | 5 | 194 | 4 |
+| PAYMENT | 19 | 29 | 6 | 85 | 4 |
 | INTERNET | 9 | 14 | 1 | 0 | 1 |
-| TRANSPORT | 27 | 59 | 8 | 322 | 4 |
+| TRANSPORT | 27 | 59 | 9 | 322 | 4 |
 | CITY | 15 | 19 | 13 | 95 | 11 |
 | TRAVEL_GUIDE | 7 | 10 | 26 | 377 | 23 |
 | OTHER | 21 | 47 | 0 | 0 | 0 |

@@ -1,6 +1,6 @@
 # REVENUE FUNNEL BASELINE
 
-- Generated: 2026-08-16
+- Generated: 2026-08-17
 
 | Stage | Value | Source |
 |---|---|---|

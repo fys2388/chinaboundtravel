@@ -2,7 +2,7 @@
 
 Date: 2026-08-16  |  Status: ANALYSIS ONLY (no CTA changes)
 
-Baseline: 57 posts / 277 CTA rows / revenue NULL
+Baseline: 60 pages / 277 CTA rows / revenue NULL
 
 ## Pages with traffic + commercial intent but weak CTA alignment
 

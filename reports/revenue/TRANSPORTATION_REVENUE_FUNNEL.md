@@ -1,6 +1,6 @@
 # Transportation Revenue Funnel (P1-GROWTH-20D)
 
-Generated: 2026-08-16  |  Deterministic map, no network
+Generated: 2026-08-17  |  Deterministic map, no network
 
 ## Funnel
 Traffic Entry -> Informational Page -> Commercial Intent -> Affiliate CTA -> Outbound -> Revenue

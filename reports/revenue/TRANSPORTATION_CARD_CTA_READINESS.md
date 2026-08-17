@@ -1,6 +1,6 @@
 # Transportation Card CTA Readiness (P1-GROWTH-20B)
 
-Generated: 2026-08-16  |  Candidate: cbt-55aef784e6aa
+Generated: 2026-08-17  |  Candidate: cbt-55aef784e6aa
 
 ## Score (100)
 | Dimension | Weight | Score |
@@ -8,9 +8,9 @@ Generated: 2026-08-16  |  Candidate: cbt-55aef784e6aa
 | GSC Demand | 25 | 2 |
 | Commercial Intent | 30 | 24 |
 | Affiliate Fit | 25 | 18 |
-| Index Status | 10 | 2 |
+| Index Status | 10 | 1 |
 | Risk | 10 | 6 |
-| **Total** | 100 | **52** |
+| **Total** | 100 | **51** |
 
 ## Verdict: REJECT
 

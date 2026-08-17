@@ -9,7 +9,7 @@
 
 | 页面 | 排除原因 |
 |---|---|
-| 144-Hour Visa (cbt-b4ff4381a014) | GROWTH-05 CTR experiment RUNNING（REV-001 已占用） |
+| 144-Hour Visa (cbt-b4ff4381a014) | GROWTH-05 CTR experiment RUNNING（REV001 已重定义为 Food Delivery，不再占用本页） |
 | WeChat Pay strong (cbt-707a8899c0a7) | Index recovery RUNNING |
 | High-Speed Rail / Transportation (cbt-52a577c1b2b8) | Technical SEO / indexing observation + canonical cluster |
 | 144-Hour Visa 15 Countries (cbt-244822dc113b) | 与 144h 主题簇重叠（隔离风险）；summary malformed 既有问题；legacy persona 严重，应先内容修复 |
