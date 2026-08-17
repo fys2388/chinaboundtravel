@@ -189,7 +189,11 @@ def test_growth07_scope_only_allowed_objects():
                # P1-GROWTH-22 authorized Alipay authority page + internal links
                "content/posts/alipay-for-foreigners-guide.md",
                "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
-               "content/posts/internet-connection-china-esim-vpn-guide.md"}
+               "content/posts/internet-connection-china-esim-vpn-guide.md",
+               # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
+               "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+               # P1-GROWTH-25 authorized TOP-page title/meta update
+               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed

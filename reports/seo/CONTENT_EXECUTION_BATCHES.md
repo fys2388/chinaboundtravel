@@ -32,7 +32,7 @@ Order is mandatory: A (technical) -> B (SEO content) -> C (commercial) -> D (new
 | 2 | cbt-e464169c4991 | Chinese Food Delivery: Meituan & Ele.me Guide | https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ | 68.75 | TITLE_META_UPDATE | S |
 | 3 | cbt-244822dc113b | China's 144-Hour Visa-Free Transit: 15 New Countries | https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ | 68.25 | TITLE_META_UPDATE | S |
 | 4 | cbt-707a8899c0a7 | Can Foreigners Use WeChat Pay in China? (2026 Guide) | https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ | 65.75 | TITLE_META_UPDATE | S |
-| 5 | cbt-80ac63165adb | China Travel Guide: August 2026 Update | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ | 55.75 | TITLE_META_UPDATE | S |
+| 5 | cbt-80ac63165adb | China Travel Guide: August 2026 Updates & Visa Rules | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ | 55.75 | TITLE_META_UPDATE | S |
 | 6 | cbt-80f6c218ad94 | Western Sichuan Overland Camping Route: 7 Days | https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/ | 54.5 | INTERNAL_LINK | S |
 | 7 | cbt-bf4ec5e57a07 | Guilin & Yangshuo: Complete 2026 Travel Guide | https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/ | 51.5 | INTERNAL_LINK | S |
 | 8 | cbt-302467d853db | Shanghai 48-Hour Guide: Bund & French Concession | https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/ | 51.5 | INTERNAL_LINK | S |

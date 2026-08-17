@@ -219,6 +219,10 @@ def test_no_new_cta_added_this_round():
         "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
         "content/posts/internet-connection-china-esim-vpn-guide.md",
         "content/resources/_index.md",
+        # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
+        "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+        # P1-GROWTH-25 authorized TOP-page title/meta update
+        "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
     }
     assert set(changed) <= allowed, changed
     # no NEW CTA shortcode anywhere in content vs HEAD (existing REV002 CTA stays)

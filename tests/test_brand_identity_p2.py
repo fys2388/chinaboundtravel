@@ -158,13 +158,18 @@ PILOT_POSTS = {
     "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
 }
 
+# P1-GROWTH-24 authorized TOP5 front-matter corruption fix
+GROWTH24_AUTHORIZED = {"content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md"}
+# P1-GROWTH-25 authorized TOP-page title/meta update
+GROWTH25_AUTHORIZED = {"content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
+
 
 def test_posts_untouched():
     """P1-BRAND-03 pilot posts + P1-GROWTH-12B REV001 CTA post may change; nothing else."""
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = {p for p in proc.stdout.splitlines() if p}
-    assert changed <= PILOT_POSTS | REV002_AUTHORIZED, f"unexpected posts changed:\n{changed}"
+    assert changed <= PILOT_POSTS | REV002_AUTHORIZED | GROWTH24_AUTHORIZED | GROWTH25_AUTHORIZED, f"unexpected posts changed:\n{changed}"
 
 
 def test_non_brand_content_untouched():
@@ -184,7 +189,11 @@ def test_non_brand_content_untouched():
                # P1-GROWTH-22 authorized Alipay authority page + internal links
                "content/posts/alipay-for-foreigners-guide.md",
                "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
-               "content/posts/internet-connection-china-esim-vpn-guide.md"}
+               "content/posts/internet-connection-china-esim-vpn-guide.md",
+               # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
+               "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+               # P1-GROWTH-25 authorized TOP-page title/meta update
+               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
     assert set(changed) <= allowed, f"unexpected content changes: {changed}"
 
 
