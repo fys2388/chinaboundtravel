@@ -50,6 +50,7 @@
     overflow-wrap: anywhere;
     word-break: break-word;
     line-height: 1.2;
+    min-width: 0;
 }
 
 .logo a:hover {
@@ -166,6 +167,10 @@
 
     .site-title-text {
         font-size: 0.95rem;
+        max-width: calc(100vw - 130px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .nav-links {
