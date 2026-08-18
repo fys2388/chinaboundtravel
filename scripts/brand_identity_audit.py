@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """P1-BRAND-02: ChinaBound Travel brand identity audit.
 
 Checks the 5 brand-layer surfaces:
@@ -47,6 +47,8 @@ BRAND_FILES = [
     ("layouts/partials/travel-promo.html", "author_block", "template"),
     ("content/about/_index.md", "about", "content"),
     ("layouts/partials/templates/schema_json.html", "schema", "template"),
+    ("content/pricing.md", "pricing", "content"),
+    ("layouts/partials/pricing-table.html", "pricing", "template"),
 ]
 
 # Rule-based fictional-experience claim patterns (brand layer, not full content governance)
@@ -58,6 +60,7 @@ FICTIONAL_PATTERNS = [
     r"my wife",
     r"years? (of )?living in (China|Chengdu)",
     r"years? of China travel experience",
+    r"\d+[- ]year expat",
     r"(first trip|my first trip)",
     r"I (lived|moved) (in|to)",
     r"I remember my",
