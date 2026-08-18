@@ -37,7 +37,7 @@
     
     /* 文本色 */
     --content: #1f2937;
-    --content-light: #64748b;
+    --content-light: #475569;
     --content-muted: #94a3b8;
     
     /* 代码块 */
@@ -680,7 +680,7 @@ pre {
 
 .subscribe-description {
     font-size: 0.95rem;
-    color: #64748b;
+    color: #475569;
     text-align: center;
     margin-bottom: 1.75rem;
     line-height: 1.6;
