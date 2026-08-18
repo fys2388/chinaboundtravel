@@ -43,10 +43,10 @@
         <h3>ğŸ›’ Travel Essentials for Your China Trip</h3>
         <p class="affiliate-intro">Save time &amp; money with our editorially reviewed recommendations:</p>
         <div class="affiliate-links">
-            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">ğŸ“± <strong>eSIM</strong> â€?Stay online the moment you land</a>
-            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">ğŸ”’ <strong>VPN</strong> â€?Access your favorite sites in China</a>
-            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">ğŸ¨ <strong>Hotels</strong> â€?Book with free cancellation</a>
-            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">ğŸ« <strong>Tours & Tickets</strong> â€?Skip the line at top attractions</a>
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">ğŸ“± <strong>eSIM</strong> ï¿½?Stay online the moment you land</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">ğŸ”’ <strong>VPN</strong> ï¿½?Access your favorite sites in China</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">ğŸ¨ <strong>Hotels</strong> ï¿½?Book with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">ğŸ« <strong>Tours & Tickets</strong> ï¿½?Skip the line at top attractions</a>
         </div>
     </div>
 
@@ -204,7 +204,7 @@
         </div>
     </div>
 
-    {{- /* ===== Related Posts (posts only) â€?based on first shared tag ===== */ -}}
+    {{- /* ===== Related Posts (posts only) ï¿½?based on first shared tag ===== */ -}}
     {{- if eq .Type "posts" -}}
     {{- $currentSlug := .Slug -}}
     {{- $related := slice -}}
@@ -253,19 +253,19 @@
     <nav class="post-nav-links" aria-label="Post navigation">
         {{- with .PrevInSection -}}
         <a href="{{ .RelPermalink }}" class="prev-post">
-            <span class="nav-label">â†?Previous</span>
+            <span class="nav-label">ï¿½?Previous</span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">â†?Previous</span><span class="nav-title">No more posts</span></span>
+        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">ï¿½?Previous</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
         {{- with .NextInSection -}}
         <a href="{{ .RelPermalink }}" class="next-post">
-            <span class="nav-label">Next â†?/span>
+            <span class="nav-label">Next ï¿½?/span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next â†?/span><span class="nav-title">No more posts</span></span>
+        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next ï¿½?/span><span class="nav-title">No more posts</span></span>
         {{- end -}}
     </nav>
     {{- end -}}
@@ -372,19 +372,19 @@
 }
 .share-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 .share-x { background: #e60023; }
-.share-facebook { background: #1877f2; }
+.share-facebook { background: #166fe5; }
 .share-pinterest { background: #e60023; }
 .share-telegram { background: #e60023; }
-.share-whatsapp { background: #25d366; }
+.share-whatsapp { background: #128c7e; }
 .share-reddit { background: #ff4500; }
 .share-linkedin { background: #0a66c2; }
 .share-email { background: #ea4335; }
 .share-copy { background: #666; }
 .share-x:hover { background: #c2001d; }
-.share-facebook:hover { background: #155db5; }
+.share-facebook:hover { background: #0d5bc1; }
 .share-pinterest:hover { background: #c2001d; }
 .share-telegram:hover { background: #c2001d; }
-.share-whatsapp:hover { background: #1da851; }
+.share-whatsapp:hover { background: #0a6e62; }
 .share-reddit:hover { background: #cc3700; }
 .share-linkedin:hover { background: #0853a0; }
 .share-email:hover { background: #c9302c; }
