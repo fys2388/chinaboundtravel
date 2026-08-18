@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 okr_utils.py - 统一 OKR 目标与进度复盘工具
 供 日报/周报/月报/季报/年报 调用，实现"计划-执行-复盘"闭环：
@@ -90,46 +90,24 @@ def _target_for(kr: dict, scope: str) -> float:
     return base
 
 
-def build_okr_section(data: dict, scope: str, report_date=None) -> str:
-    """生成 OKR 进度看板 markdown；scope: daily/weekly/monthly/quarterly/yearly
-    report_date: 季报/年报传入报告期最后一天，用于展示"上季度/上年度"达成情况；
-                 日报/周报/月报省略则展示当前季度 OKR 进度。
+def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
+    """生成当期 OKR 关键结果进度列表（供待办生成与复盘使用）。
+
+    返回 [{"name", "current", "target", "progress", "icon", "unit"}]；
+    数值口径与 build_okr_section 完全一致。
     """
     okr = load_okr()
     if not okr:
-        return ""
+        return []
     now = datetime.now()
-    year = okr.get("year", now.year)
     d = report_date or now
 
     if scope == "yearly":
         krs = okr.get("annual", {}).get("krs", [])
-        title = f"🎯 {d.year} 年度 OKR 达成复盘"
-        period_desc = f"{d.year}全年"
     elif scope == "quarterly":
-        q = current_quarter(d)
-        krs = pick_quarter_krs(okr, q)
-        start, end = quarter_range(year, q)
-        title = f"🎯 {year}年Q{q} OKR 达成复盘（{start} ~ {end}）"
-        period_desc = f"{year}年Q{q}"
-    elif scope == "weekly":
-        q = current_quarter(now)
-        krs = pick_quarter_krs(okr, q)
-        start, end = quarter_range(year, q)
-        title = f"🎯 本周 OKR 进度（Q{q} 目标折算）"
-        period_desc = f"{year}年Q{q}"
-    elif scope == "monthly":
-        q = current_quarter(now)
-        krs = pick_quarter_krs(okr, q)
-        start, end = quarter_range(year, q)
-        title = f"🎯 本月 OKR 进度（Q{q} 目标）"
-        period_desc = f"{year}年Q{q}"
+        krs = pick_quarter_krs(okr, current_quarter(d))
     else:
-        q = current_quarter(now)
-        krs = pick_quarter_krs(okr, q)
-        start, end = quarter_range(year, q)
-        title = f"🎯 今日 OKR 速览（Q{q} 目标折算）"
-        period_desc = f"{year}年Q{q}"
+        krs = pick_quarter_krs(okr, current_quarter(now))
 
     # 按周期统一 KR 口径名称（日/周/月/季/年对应各自数值口径，避免"月xxx"名称配其它周期数值）
     period_names = {
@@ -151,7 +129,54 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
         icon = "✅" if progress >= 100 else "🟡" if progress >= 50 else "🔴" if progress == 0 else "🟠"
         unit = kr.get("unit", "")
         name = scope_name_map.get(kr.get("name", ""), kr.get("name", kr.get("id", "")))
-        rows.append(f"| {name} | {current:g}{unit} | {target:g}{unit} | {progress}% | {icon} |")
+        rows.append({
+            "name": name,
+            "current": current,
+            "target": target,
+            "progress": progress,
+            "icon": icon,
+            "unit": unit,
+        })
+    return rows
+
+
+def build_okr_section(data: dict, scope: str, report_date=None) -> str:
+    """生成 OKR 进度看板 markdown；scope: daily/weekly/monthly/quarterly/yearly
+    report_date: 季报/年报传入报告期最后一天，用于展示"上季度/上年度"达成情况；
+                 日报/周报/月报省略则展示当前季度 OKR 进度。
+    """
+    okr = load_okr()
+    if not okr:
+        return ""
+    now = datetime.now()
+    year = okr.get("year", now.year)
+    d = report_date or now
+
+    if scope == "yearly":
+        title = f"🎯 {d.year} 年度 OKR 达成复盘"
+        period_desc = f"{d.year}全年"
+    elif scope == "quarterly":
+        q = current_quarter(d)
+        start, end = quarter_range(year, q)
+        title = f"🎯 {year}年Q{q} OKR 达成复盘（{start} ~ {end}）"
+        period_desc = f"{year}年Q{q}"
+    elif scope == "weekly":
+        q = current_quarter(now)
+        start, end = quarter_range(year, q)
+        title = f"🎯 本周 OKR 进度（Q{q} 目标折算）"
+        period_desc = f"{year}年Q{q}"
+    elif scope == "monthly":
+        q = current_quarter(now)
+        start, end = quarter_range(year, q)
+        title = f"🎯 本月 OKR 进度（Q{q} 目标）"
+        period_desc = f"{year}年Q{q}"
+    else:
+        q = current_quarter(now)
+        start, end = quarter_range(year, q)
+        title = f"🎯 今日 OKR 速览（Q{q} 目标折算）"
+        period_desc = f"{year}年Q{q}"
+
+    rows = build_okr_progress(data, scope, report_date)
     if not rows:
         return ""
     header = f"""---
@@ -159,7 +184,10 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
 | 关键结果 | 当前 | 目标 | 进度 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
 """
-    return header + "\n".join(rows)
+    return header + "\n".join(
+        f"| {r['name']} | {r['current']:g}{r['unit']} | {r['target']:g}{r['unit']} | {r['progress']}% | {r['icon']} |"
+        for r in rows
+    )
 
 
 def _plan_judge(item: dict, data: dict) -> str:

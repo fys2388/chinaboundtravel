@@ -5,6 +5,7 @@ feishu_daily_report.py - ChinaBound Travel 飞书每日日报推送
 版本：v2.0 - 完整版日报模板
 """
 
+import argparse
 import os
 import sys
 import re
@@ -83,6 +84,51 @@ MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
 # GitHub 配置
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO = "fys2388/chinaboundtravel"
+
+
+def generate_priority_tasks(okr_data, suggestions):
+    """根据 OKR 完成率和自动运营建议生成高优先级待办列表（P0: 告警-待办打通）。
+
+    okr_data: okr_utils.build_okr_progress 输出的关键结果列表
+        [{"name", "current", "target", "progress", "icon", "unit"}]
+    suggestions: report_advice.generate_advice 输出的建议列表
+        [{"icon", "title", "detail"}]
+
+    规则：
+      - OKR 完成率 < 50%   -> 自动进入待办，标注 🔴
+      - OKR 完成率 50%-80% -> 自动进入待办，标注 🟡
+      - 自动运营建议逐条映射为待办项（优先级图标 + 具体动作 + 对应指标）
+    返回去重后的待办列表；无异常时返回空列表（由调用方显示"所有正常"）。
+    """
+    tasks = []
+
+    # 1) OKR 完成率分级
+    for kr in okr_data or []:
+        progress = int(kr.get("progress", 0) or 0)
+        name = kr.get("name", "")
+        current = kr.get("current", 0)
+        target = kr.get("target", 0)
+        unit = kr.get("unit", "")
+        if progress < 50:
+            tasks.append(f"🔴 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），需重点推进")
+        elif progress < 80:
+            tasks.append(f"🟡 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），保持推进")
+
+    # 2) 自动运营建议 -> 待办
+    for s in suggestions or []:
+        icon = s.get("icon", "🟠")
+        title = s.get("title", "")
+        detail = s.get("detail", "")
+        tasks.append(f"{icon} {title}：{detail}")
+
+    # 3) 去重保序
+    seen, out = set(), []
+    for t in tasks:
+        if t not in seen:
+            seen.add(t)
+            out.append(t)
+    return out
+
 
 class FeishuDailyReporter:
     """飞书每日日报推送器"""
@@ -647,9 +693,7 @@ class FeishuDailyReporter:
             report_status = '成功' if data.get('gh_report_success') == True else ('失败' if data.get('gh_report_success') == False else '未运行')
             print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
         
-        # 7. 生成高优先级待办
-        data["high_priority_todos"] = self._generate_todos(data)
-        
+
         # 8. 统计总问题数和总佣金
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]
         data["affiliate_revenue"] = data.get("tp_revenue", 0) + data.get("nord_revenue", 0)
@@ -658,8 +702,20 @@ class FeishuDailyReporter:
         data["okr_section"] = okr_utils.build_okr_section(data, "daily")
 
         # 10. 自动运营建议（基于真实数据精准生成）
+        advice_items = report_advice.generate_advice(data, "daily")
         data["advice_section"] = report_advice.advice_section(data, "daily")
-        
+
+        # 7. 高优先级待办 = 内容巡检 + OKR 完成率 + 运营建议 三源打通（告警-待办闭环）
+        base_todos = self._generate_todos(data)
+        okr_progress = okr_utils.build_okr_progress(data, "daily")
+        merged_todos = base_todos + generate_priority_tasks(okr_progress, advice_items)
+        seen, todos = set(), []
+        for t in merged_todos:
+            if t not in seen:
+                seen.add(t)
+                todos.append(t)
+        data["high_priority_todos"] = todos[:8]
+
         return data
     
     def _fetch_cloudflare(self) -> dict:
@@ -1541,7 +1597,29 @@ class FeishuDailyReporter:
 
 def main():
     """主函数"""
+    parser = argparse.ArgumentParser(description="ChinaBound Travel 飞书每日日报推送")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="仅采集数据并打印日报卡片与待办，不发送飞书")
+    args = parser.parse_args()
+
     reporter = FeishuDailyReporter()
+
+    if args.dry_run:
+        print("=" * 60)
+        print("🧪 DRY RUN - 仅预览日报内容，不发送飞书")
+        print("=" * 60)
+        data = reporter.collect_data()
+        card = reporter.build_daily_card(data)
+        print(json.dumps(card, ensure_ascii=False, indent=2))
+        print("\n📌 高优先级待办：")
+        todos = data.get("high_priority_todos", [])
+        if todos:
+            for i, t in enumerate(todos, 1):
+                print(f"  {i}. {t}")
+        else:
+            print("  ✅ 所有正常，无待处理问题")
+        return 0
+
     success = reporter.run()
     return 0 if success else 1
 
