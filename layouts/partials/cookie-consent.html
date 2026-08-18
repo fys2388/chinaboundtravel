@@ -1,15 +1,14 @@
-<!-- GDPR Cookie Consent Banner -->
+<!-- GDPR Cookie Consent Banner v2 — compact bottom bar with delayed display -->
 <div id="gdpr-cookie-banner" class="gdpr-cookie-banner" role="dialog" aria-labelledby="gdpr-title" aria-modal="true" style="display:none;">
     <div class="gdpr-content">
-        <div class="gdpr-icon">🍪</div>
         <div class="gdpr-text">
-            <h3 id="gdpr-title">We value your privacy</h3>
-            <p>We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and personalize content. Some cookies are essential for the site to function properly. Optional analytics and marketing cookies require your explicit consent. <a href="/privacy-policy/" target="_blank" rel="noopener">View our Privacy Policy</a></p>
+            <strong id="gdpr-title">We value your privacy</strong>
+            <span>We use cookies to enhance your experience and analyze traffic. <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
         </div>
         <div class="gdpr-actions">
-            <button id="gdpr-accept-all" class="gdpr-btn gdpr-btn-accept">Accept All</button>
-            <button id="gdpr-accept-necessary" class="gdpr-btn gdpr-btn-necessary">Necessary Only</button>
-            <button id="gdpr-open-settings" class="gdpr-btn gdpr-btn-settings">Cookie Settings</button>
+            <button id="gdpr-accept-all" class="gdpr-btn gdpr-btn-accept">Accept</button>
+            <button id="gdpr-accept-necessary" class="gdpr-btn gdpr-btn-necessary">Necessary</button>
+            <button id="gdpr-open-settings" class="gdpr-btn gdpr-btn-settings" aria-label="Cookie settings">Settings</button>
         </div>
     </div>
     <!-- Cookie Settings Panel -->
@@ -53,37 +52,48 @@
 </div>
 
 <style>
-/* GDPR Cookie Banner */
+/* GDPR Cookie Banner v2 */
 .gdpr-cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-    background: #fff;
-    border-top: 2px solid #3A6EA5;
-    box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
-    padding: 1.25rem 1.5rem;
+    background: #1a1a2e;
+    color: #fff;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.15);
+    padding: 0.75rem 1rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    transform: translateY(0);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 1;
+}
+.gdpr-cookie-banner.gdpr-hidden {
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
 }
 .gdpr-cookie-banner * { box-sizing: border-box; margin: 0; padding: 0; }
 .gdpr-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     max-width: 1100px;
     margin: 0 auto;
 }
-.gdpr-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
-.gdpr-text { flex: 1; }
-.gdpr-text h3 { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
-.gdpr-text p { font-size: 0.82rem; color: #555; line-height: 1.6; }
-.gdpr-text a { color: #C2410C; text-decoration: underline; }
-.gdpr-actions { display: flex; gap: 0.5rem; flex-shrink: 0; flex-wrap: wrap; align-items: flex-start; }
+.gdpr-text { flex: 1; min-width: 0; }
+.gdpr-text strong { font-weight: 600; margin-right: 0.35rem; }
+.gdpr-text span { color: rgba(255,255,255,0.85); }
+.gdpr-text a { color: #7dd3fc; text-decoration: underline; }
+.gdpr-text a:hover { color: #bae6fd; }
+.gdpr-actions { display: flex; gap: 0.4rem; flex-shrink: 0; flex-wrap: nowrap; }
 .gdpr-btn {
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 6px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 600;
     cursor: pointer;
     border: none;
@@ -96,46 +106,49 @@
 }
 .gdpr-btn-accept:hover { background: #e55a25; }
 .gdpr-btn-necessary {
-    background: #fff;
-    color: #3A6EA5;
-    border: 1px solid #3A6EA5;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.5);
 }
-.gdpr-btn-necessary:hover { background: #f0f5fa; }
+.gdpr-btn-necessary:hover { background: rgba(255,255,255,0.1); }
 .gdpr-btn-settings {
-    background: #f0f0f0;
-    color: #555;
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    text-decoration: underline;
+    padding-left: 6px;
+    padding-right: 6px;
 }
-.gdpr-btn-settings:hover { background: #e0e0e0; }
+.gdpr-btn-settings:hover { color: #fff; }
 
 /* Settings Panel */
 .gdpr-settings-panel {
     max-width: 1100px;
-    margin: 1rem auto 0;
+    margin: 0.75rem auto 0;
     background: #f8fafc;
     border: 1px solid #e0e4e8;
     border-radius: 10px;
-    padding: 1.25rem;
+    padding: 1rem;
+    color: #1a1a2e;
 }
 .gdpr-settings-panel h4 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 .gdpr-setting-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 0;
+    padding: 0.6rem 0;
     border-bottom: 1px solid #e0e4e8;
 }
 .gdpr-setting-row:last-of-type { border-bottom: none; }
-.gdpr-setting-info strong { display: block; font-size: 0.88rem; color: #1a1a2e; margin-bottom: 0.2rem; }
-.gdpr-setting-info span { font-size: 0.78rem; color: #666; }
-.gdpr-settings-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+.gdpr-setting-info strong { display: block; font-size: 0.85rem; margin-bottom: 0.15rem; }
+.gdpr-setting-info span { font-size: 0.75rem; color: #666; }
+.gdpr-settings-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
 
 /* Toggle Switch */
-.gdpr-switch { position: relative; display: inline-block; width: 42px; height: 24px; }
+.gdpr-switch { position: relative; display: inline-block; width: 40px; height: 22px; }
 .gdpr-switch input { opacity: 0; width: 0; height: 0; }
 .gdpr-slider {
     position: absolute;
@@ -143,13 +156,13 @@
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: #ccc;
     transition: 0.3s;
-    border-radius: 24px;
+    border-radius: 22px;
 }
 .gdpr-slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     left: 3px;
     bottom: 3px;
     background-color: white;
@@ -160,8 +173,12 @@
 .gdpr-switch input:checked + .gdpr-slider:before { transform: translateX(18px); }
 .gdpr-switch input:disabled + .gdpr-slider { opacity: 0.6; cursor: not-allowed; }
 
-@media (max-width: 700px) {
-    .gdpr-content { flex-direction: column; }
+@media (max-width: 640px) {
+    .gdpr-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
     .gdpr-actions { width: 100%; }
     .gdpr-btn { flex: 1; text-align: center; }
 }
@@ -171,6 +188,7 @@
 (function() {
     var BANNER_ID = 'gdpr-cookie-banner';
     var STORAGE_KEY = 'cbt_gdpr_consent';
+    var DISPLAY_DELAY_MS = 3500; // delay banner to avoid first-screen disruption
 
     function getConsent() {
         try {
@@ -189,7 +207,11 @@
 
     function hideBanner() {
         var el = document.getElementById(BANNER_ID);
-        if (el) el.style.display = 'none';
+        if (el) el.classList.add('gdpr-hidden');
+        // fully remove after transition to avoid layout space
+        setTimeout(function() {
+            if (el) el.style.display = 'none';
+        }, 400);
     }
 
     function showSettings() {
@@ -206,8 +228,8 @@
     var consent = getConsent();
 
     if (!consent.decision) {
-        // First visit — show banner
-        showBanner();
+        // First visit — show banner after delay
+        setTimeout(showBanner, DISPLAY_DELAY_MS);
     } else {
         // Apply consent
         applyConsent(consent);
@@ -270,7 +292,6 @@
     function applyConsent(consent) {
         // Analytics: Google Analytics (if present)
         if (!consent.analytics) {
-            // Disable GA cookies
             window['ga-disable-{{ site.Params.analytics.google.TrackingID }}'] = true;
         }
         // Marketing: Adjust scripts that load marketing/tracking
