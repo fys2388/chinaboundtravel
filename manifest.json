@@ -1,7 +1,7 @@
 {
   "month_post_count": 11,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-18 03:49:30",
+  "last_social_publish": "2026-08-18 06:50:01",
   "daily_social_publish_date": "2026-08-18",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
@@ -127,7 +127,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "china-bargaining-and-shopping-guide",
     "chinese-tea-culture-where-to-experience-authentic-teahouses",
     "china-family-travel-tips-a-californians-guide",
     "chinese-language-survival-phrases-guide",
@@ -156,6 +155,7 @@
     "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
     "wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide",
     "chinas-food-through-the-ages-guide",
-    "shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide"
+    "shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide",
+    "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home"
   ]
 }
