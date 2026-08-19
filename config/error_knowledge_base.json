@@ -252,13 +252,14 @@
       "hash": "content_depth_insufficient",
       "type": "内容质量",
       "message": "文章内容深度不足（词数<700），缺少深度分析和实用信息",
-      "occurrences": 3,
+      "occurrences": 4,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-07-04T02:41:18.384411+00:00",
+      "last_seen": "2026-08-19T01:05:34.478146+00:00",
       "files": [
         "Yunnan Adventure: Rice Terraces.md",
         "China Transportation Guide.md",
-        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities"
+        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
+        "China Business Travel Guide: Meetings, Dining, and Networking"
       ],
       "suggestion": "确保文章至少700词，包含详细的实用信息和深度分析",
       "resolved": false,
@@ -276,9 +277,9 @@
       "hash": "sensitive_content_politics",
       "type": "风控",
       "message": "文章包含敏感词汇（politics, government, communist等）",
-      "occurrences": 4,
+      "occurrences": 5,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-08-12T01:44:05.092502+00:00",
+      "last_seen": "2026-08-19T01:05:34.480566+00:00",
       "files": [
         "The History and Culture of the Great Wall.md",
         "Best China Itineraries for 10 Days: Three Routes Compared",
@@ -888,8 +889,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 34,
-  "last_updated": "2026-08-12T01:44:05.092521+00:00",
+  "total_errors": 36,
+  "last_updated": "2026-08-19T01:05:34.480576+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
