@@ -103,3 +103,28 @@ feat(report): P1-REPORT-03R 飞书消费统一快照 + 2.0 告警模型上线
 ```
 
 Final: **P1-REPORT-03R = PASS** (local reporting path fixed; production activation requires push of the working tree).
+
+## 8. Production deployment verification (2026-08-19)
+
+Deployment executed in this session via `gh` CLI (logged in as `fys2388`); browser graphical control was unavailable in this session, so GitHub was verified with the authenticated CLI instead of the browser UI.
+
+| Step | Detail | Result |
+|---|---|---|
+| Pre-deploy local head | `02de656` (reporting changes uncommitted) | confirmed |
+| Pre-deploy origin/main | `387ed9e` (bot commits only, no 2.0 code) | confirmed via `gh run list` + fetch |
+| Commit | `9a4ca09 feat(report): P1-REPORT-03/03R 2.0 报表体系线上部署` (9 files, +560/-47) | pushed |
+| Rebase | local commit rebased onto `387ed9e` (non-fast-forward) | done |
+| Manual workflow run | `32254050848` (`workflow_dispatch`, ref main) | success |
+| Artifact | `report_2026-08-19.json` (4,644 B) | contains `reporting_snapshot` |
+| Revenue | `revenue_value: null`, `revenue_status: NOT_AVAILABLE` | PASS |
+| GSC | `gsc_label: CACHED`, 28d cache window 234 impressions / 0 clicks | PASS |
+| OKR: 0 new articles | `日新增文章 0篇/1篇 0% 🟢` (INFO, not RED) | PASS |
+| OKR: 0 commission | `日联盟佣金 0$ 🟡` (reference target, not RED) | PASS |
+| Advice | REV001/REV002 frozen-scope note + `不自动改标题` present | PASS |
+| data_status | `GSC已连接但昨日无搜索数据（新站正常现象）`; no false auth alert | PASS |
+| MailerLite | API reachable (`ml_available: true`), real 0 subscribers | PASS |
+| Actions post-step | OKR snapshot auto-committed as `7d2bc38 [skip ci]` | PASS |
+
+Full test suite: `626 passed in 33.22s` (local). Production artifact now renders from `REPORTING_SNAPSHOT.json` with the unified status model.
+
+Final: **P1-REPORT-03R = PASS** (reporting path fixed, deployed to `origin/main`, verified on a live workflow run).
