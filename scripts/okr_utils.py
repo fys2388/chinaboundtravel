@@ -72,6 +72,34 @@ def extract_kr(data: dict, source: str) -> float:
     return 0.0
 
 
+def _source_available(data: dict, source: str) -> bool:
+    """判断 KR 数据源是否真实可用（区分"真0"与"未连接/无数据"）。
+    优先使用报表提供的可用性标志（GSC/Travelpayouts/MailerLite），
+    缺失时回退到字段是否存在。"""
+    flag_map = {
+        "gsc_impressions": "gsc_data_available",
+        "tp_revenue": "tp_available",
+        "ml_total": "ml_available",
+    }
+    flag = data.get(flag_map[source]) if source in flag_map else None
+    if flag is not None:
+        return bool(flag)
+    for key in KR_ALIASES.get(source, []):
+        v = data.get(key)
+        if v not in (None, "", "N/A"):
+            return True
+    return False
+
+
+def _na_display(source: str) -> str:
+    """数据不可用时的展示值（NOT_AVAILABLE 语义，不显示 0）"""
+    return {
+        "gsc_impressions": "未连接",
+        "tp_revenue": "未接入",  # REVENUE_NOT_AVAILABLE，不显示 $0
+        "ml_total": "未连接",
+    }.get(source, "暂无数据")
+
+
 def _target_for(kr: dict, scope: str) -> float:
     """按报表周期取 KR 目标：显式 targets 优先，缺省按月度目标推导（daily=月/30, weekly=月/4.3）"""
     base = float(kr.get("target", 0) or 0)
@@ -123,12 +151,37 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
     }
     rows = []
     for kr in krs:
-        current = extract_kr(data, kr.get("source", ""))
+        source = kr.get("source", "")
+        available = _source_available(data, source)
         target = _target_for(kr, scope)
-        progress = min(round(current / target * 100), 100) if target > 0 else 0
-        icon = "✅" if progress >= 100 else "🟡" if progress >= 50 else "🔴" if progress == 0 else "🟠"
         unit = kr.get("unit", "")
         name = scope_name_map.get(kr.get("name", ""), kr.get("name", kr.get("id", "")))
+        if not available:
+            # 2.0: 数据源不可用 = NOT_AVAILABLE，不显示 0，不进入红灯
+            rows.append({
+                "name": name,
+                "current": None,
+                "target": target,
+                "progress": None,
+                "icon": "⚪",
+                "unit": unit,
+                "available": False,
+                "display": _na_display(source),
+            })
+            continue
+        current = extract_kr(data, source)
+        progress = min(round(current / target * 100), 100) if target > 0 else 0
+        # 2.0 状态语义：0 值不自动标红（内容生产 0 / 曝光 0 / 佣金 0 / 订阅 0 均为参考值）
+        if progress >= 100:
+            icon = "✅"
+        elif current == 0 and "新增文章" in name:
+            icon = "🟢"  # 今日无新发 = 正常节奏，非失败
+        elif current == 0:
+            icon = "🟡"  # 低样本 / 链路待验证，非失败
+        elif progress >= 50:
+            icon = "🟡"
+        else:
+            icon = "🟠"
         rows.append({
             "name": name,
             "current": current,
@@ -136,6 +189,7 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
             "progress": progress,
             "icon": icon,
             "unit": unit,
+            "available": True,
         })
     return rows
 
@@ -184,10 +238,12 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
 | 关键结果 | 当前 | 目标 | 进度 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
 """
-    return header + "\n".join(
-        f"| {r['name']} | {r['current']:g}{r['unit']} | {r['target']:g}{r['unit']} | {r['progress']}% | {r['icon']} |"
-        for r in rows
-    )
+    def _render_row(r):
+        if not r.get("available", True):
+            # NOT_AVAILABLE 行：展示原因，进度 "-"，状态 ⚪
+            return f"| {r['name']} | {r.get('display', '暂无数据')} | {r['target']:g}{r['unit']} | - | \u26AA |"
+        return f"| {r['name']} | {r['current']:g}{r['unit']} | {r['target']:g}{r['unit']} | {r['progress']}% | {r['icon']} |"
+    return header + "\n".join(_render_row(r) for r in rows)
 
 
 def _plan_judge(item: dict, data: dict) -> str:

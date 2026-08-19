@@ -641,13 +641,13 @@ class FeishuMonthlyReporter:
         template_level_coverage = content_data.get("template_level_coverage", False)
         coverage = (posts_with_affiliate / max(total_posts, 1)) * 100 if total_posts > 0 else 0
         if tp_revenue == 0 and coverage < 30 and not site_wide_affiliate:
-            red_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路缺失")
+            yellow_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路待验证（Revenue NOT_AVAILABLE，非故障）")
         elif tp_revenue == 0 and coverage < 30 and site_wide_affiliate:
             yellow_risks.append("联盟佣金为0，但模板级CTA已覆盖全站，需优化转化率")
 
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
         if posts_with_conflict > 0:
-            red_risks.append(f"检测到人设年限冲突（{posts_with_conflict}篇文章）")
+            yellow_risks.append(f"人设年限冲突（{posts_with_conflict}篇），需批量修正")
 
         month_users = data.get("month_users", 0)
         prev_users = data.get("prev_users", 0)
@@ -873,7 +873,7 @@ class FeishuMonthlyReporter:
 
         indexed_status = "🔴" if (gsc_ok and indexed_pages == 0) else "🟡" if (gsc_ok and indexed_pages < 10) else ("⚪" if not gsc_ok else "✅")
         indexed_display = str(indexed_pages) if gsc_ok else "-"
-        coverage_status = "🔴" if (coverage < 30 and not site_wide_affiliate) else "🟡" if coverage < 80 else "✅"
+        coverage_status = "🟡" if (coverage < 30 and not site_wide_affiliate) else "🟡" if coverage < 80 else "✅"
         conflict_status = "🔴" if posts_with_conflict > 0 else "✅"
         schema_status = "🟡" if (posts_without_schema > 0 and not template_level_coverage) else "✅"
         if template_level_coverage:

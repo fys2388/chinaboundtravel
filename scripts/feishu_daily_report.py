@@ -86,6 +86,50 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO = "fys2388/chinaboundtravel"
 
 
+SNAPSHOT_FILE = BLOG_ROOT / "reports" / "management" / "REPORTING_SNAPSHOT.json"
+
+
+def load_reporting_snapshot() -> dict:
+    """读取统一 2.0 KPI 快照（P1-REPORT-03R：飞书消费快照，不重复计算 KPI）。
+
+    返回快照中的缓存回退数据与状态标签；快照缺失/损坏返回 None。
+    """
+    try:
+        if not SNAPSHOT_FILE.exists():
+            print("   \u26a0\ufe0f REPORTING_SNAPSHOT.json 不存在，无法回退缓存窗口")
+            return None
+        snap = json.loads(SNAPSHOT_FILE.read_text(encoding="utf-8"))
+
+        def _find(domain, name):
+            for k in snap.get("domains", {}).get(domain, {}).get("kpis", []):
+                if k.get("name") == name:
+                    return k
+            return {}
+
+        gsc_imp = _find("seo_gsc", "gsc_impressions_28d")
+        gsc_clk = _find("seo_gsc", "gsc_clicks_28d")
+        rev = _find("revenue", "revenue")
+        traf_s = _find("traffic", "sessions_28d")
+        traf_p = _find("traffic", "pageviews_28d")
+        return {
+            "as_of": snap.get("as_of"),
+            "generated_at": snap.get("generated_at"),
+            "low_data_warning": snap.get("low_data_warning"),
+            "gsc_impressions_28d": gsc_imp.get("value"),
+            "gsc_clicks_28d": gsc_clk.get("value"),
+            "gsc_label": gsc_imp.get("data_source_type"),
+            "sessions_28d": traf_s.get("value"),
+            "pageviews_28d": traf_p.get("value"),
+            "revenue_value": rev.get("value"),
+            "revenue_status": rev.get("status") or "NOT_AVAILABLE",
+            "revenue_source": rev.get("data_source_type"),
+        }
+    except Exception as e:
+        print(f"   \u26a0\ufe0f REPORTING_SNAPSHOT.json 读取失败: {e}")
+        return None
+
+
+
 def generate_priority_tasks(okr_data, suggestions):
     """根据 OKR 完成率和自动运营建议生成高优先级待办列表（P0: 告警-待办打通）。
 
@@ -102,9 +146,14 @@ def generate_priority_tasks(okr_data, suggestions):
     """
     tasks = []
 
-    # 1) OKR 完成率分级
+    # 1) OKR 完成率分级（2.0：数据不可用/进度为 0 的固定配额不进入失败待办）
     for kr in okr_data or []:
-        progress = int(kr.get("progress", 0) or 0)
+        if not kr.get("available", True):
+            continue
+        progress = kr.get("progress")
+        if progress is None or int(progress or 0) == 0:
+            continue
+        progress = int(progress)
         name = kr.get("name", "")
         current = kr.get("current", 0)
         target = kr.get("target", 0)
@@ -223,10 +272,11 @@ class FeishuDailyReporter:
                             "revenue": f"${data.get('nord_revenue', 0):.2f}"}
         else:
             nord_display = {"clicks": "未接入", "conversions": "未接入", "revenue": "未接入"}
-        if total_aff_parts:
+        if total_aff_revenue > 0:
             total_rev_str = f"${total_aff_revenue:.2f}（{' + '.join(total_aff_parts)}）"
         else:
-            total_rev_str = "暂无数据（两个渠道均未接入）"
+            total_rev_str = "REVENUE_NOT_AVAILABLE（无结算佣金，不折算 $0）"
+        rev_status_line = "✅ 有真实结算佣金" if total_aff_revenue > 0 else "REVENUE_NOT_AVAILABLE（与快照口径一致，无结算佣金源，非故障）"
 
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
@@ -285,6 +335,9 @@ class FeishuDailyReporter:
         consistency_str = ""
         if consistency_notes:
             consistency_str = "\n\n⚠️ 一致性提示：" + "；".join(consistency_notes) + "\n（GA4 小流量隐私阈值/other 分组可能导致明细与总数不一致）"
+        # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障
+        if avg_dur > 600:
+            consistency_str += "\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，可能由 GA4 小流量/单会话长停留导致，建议以 28 天滚动口径为准"
         
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
@@ -298,22 +351,31 @@ class FeishuDailyReporter:
             gsc_week_trend = data.get('gsc_week_trend', 'N/A')
             gsc_month_trend = data.get('gsc_month_trend', 'N/A')
         elif gsc_available:
-            # 已连接但昨日无搜索数据
-            gsc_impressions_str = "暂无数据"
-            gsc_clicks_str = "暂无数据"
-            gsc_ctr_str = "暂无数据"
+            # 已连接但昨日无搜索数据 → NOT_AVAILABLE，保留快照缓存窗口
+            _snap = data.get("reporting_snapshot") or {}
+            _cached_imp = _snap.get("gsc_impressions_28d")
+            gsc_impressions_str = f"NOT_AVAILABLE（缓存 {_cached_imp:,.0f}）" if _cached_imp is not None else "NOT_AVAILABLE"
+            gsc_clicks_str = f"NOT_AVAILABLE（缓存 {_snap.get('gsc_clicks_28d') or 0:,.0f}）" if _cached_imp is not None else "NOT_AVAILABLE"
+            gsc_ctr_str = "NOT_AVAILABLE"
             gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
             gsc_errors_str = str(data.get('gsc_errors', 0))
             gsc_week_trend = data.get('gsc_week_trend', 'N/A')
             gsc_month_trend = data.get('gsc_month_trend', 'N/A')
         else:
-            gsc_impressions_str = "未连接"
-            gsc_clicks_str = "未连接"
-            gsc_ctr_str = "未连接"
-            gsc_indexed_str = "未连接"
-            gsc_errors_str = "未连接"
-            gsc_week_trend = "未连接"
-            gsc_month_trend = "未连接"
+            # 2.0: GSC 无昨日数据 → NOT_AVAILABLE，回退快照缓存窗口
+            _snap = data.get("reporting_snapshot") or {}
+            _cached_imp = _snap.get("gsc_impressions_28d")
+            if _cached_imp is not None:
+                gsc_impressions_str = f"NOT_AVAILABLE（缓存 {_cached_imp:,.0f}）"
+                gsc_clicks_str = f"NOT_AVAILABLE（缓存 {_snap.get('gsc_clicks_28d') or 0:,.0f}）"
+            else:
+                gsc_impressions_str = "NOT_AVAILABLE"
+                gsc_clicks_str = "NOT_AVAILABLE"
+            gsc_ctr_str = "NOT_AVAILABLE"
+            gsc_indexed_str = "NOT_AVAILABLE"
+            gsc_errors_str = "NOT_AVAILABLE"
+            gsc_week_trend = "NOT_AVAILABLE"
+            gsc_month_trend = "NOT_AVAILABLE"
         
         # Top 搜索关键词
         top_keywords = data.get("top_keywords", [])
@@ -325,7 +387,7 @@ class FeishuDailyReporter:
         elif gsc_available and not gsc_has_data:
             kw_lines = ["GSC 已连接，昨日暂无搜索数据"]
         elif not gsc_available:
-            kw_lines = ["GSC 数据未连接，请检查服务账号配置"]
+            kw_lines = ["GSC 昨日无数据（NOT_AVAILABLE），缓存窗口见上方；服务账号授权状态见数据源提醒"]
         kw_str = "\n".join(kw_lines)
         
         # ===== 3. 内容质量巡检 =====
@@ -339,6 +401,9 @@ class FeishuDailyReporter:
         gh_report = data.get("gh_report_success")
         blog_icon = "✅" if gh_blog == True else ("❌" if gh_blog == False else "⚪")
         report_icon = "✅" if gh_report == True else ("❌" if gh_report == False else "⚪")
+        ci_token_missing = not os.environ.get("GITHUB_TOKEN")
+        blog_state = "成功" if gh_blog == True else ("失败" if gh_blog == False else ("CI 状态未获取（本地预览）" if ci_token_missing else "未运行"))
+        report_state = "成功" if gh_report == True else ("失败" if gh_report == False else ("CI 状态未获取（本地预览）" if ci_token_missing else "未运行"))
         
         # 高优先级待办
         todos = data.get("high_priority_todos", [])
@@ -445,6 +510,8 @@ class FeishuDailyReporter:
                         "tag": "lark_md",
                         "content": f"""**💰 4. 联盟变现数据（{report_date}）** {affiliate_status}
 
+💰 **收入状态**: {rev_status_line}
+
 🏨 **Travelpayouts（酒店/机票/门票/租车/玩乐 — 统一渠道）**
 | 指标 | 数据 |
 | --- | --- |
@@ -492,8 +559,8 @@ class FeishuDailyReporter:
 
 | 工作流 | 状态 |
 | --- | --- |
-| 博客自动生成（Hugo） | {blog_icon} {'成功' if gh_blog == True else ('失败' if gh_blog == False else '未运行/未配置')} |
-| 日报自动推送（Feishu） | {report_icon} {'成功' if gh_report == True else ('失败' if gh_report == False else '未运行/未配置')} |
+| 博客自动生成（Hugo） | {blog_icon} {blog_state} |
+| 日报自动推送（Feishu） | {report_icon} {report_state} |
 
 🟢 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
                     }
@@ -562,6 +629,7 @@ class FeishuDailyReporter:
             "top_countries": [],
             # 搜索数据
             "indexed_pages": "N/A",
+            "gsc_data_available": False,
             "gsc_impressions": 0,
             "gsc_clicks": 0,
             "gsc_ctr": 0.0,
@@ -715,6 +783,9 @@ class FeishuDailyReporter:
                 seen.add(t)
                 todos.append(t)
         data["high_priority_todos"] = todos[:8]
+
+        # 2.0: 附加统一 KPI 快照（GSC/收入缓存回退与状态标签）
+        data["reporting_snapshot"] = load_reporting_snapshot()
 
         return data
     

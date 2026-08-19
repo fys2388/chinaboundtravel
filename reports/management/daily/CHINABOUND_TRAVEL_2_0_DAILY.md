@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-08-17 (Asia/Shanghai)
-- as_of: 2026-08-17
+- Generated: 2026-08-19 (Asia/Shanghai)
+- as_of: 2026-08-19
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -67,7 +67,7 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| cta_inventory_rows | 277 rows | CACHED | OK |
+| cta_inventory_rows | 278 rows | CACHED | OK |
 | cta_inventory_pages | 45 pages | CACHED | OK |
 | affiliate_clicks_28d | 0 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | cta_impressions | 0 impressions | CACHED | INSUFFICIENT_SAMPLE |
@@ -127,7 +127,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 
 | KPI | Value | Source type |
 |---|---|---|
-| editorial_persona_compliance | 11/13 layers | LOCAL |
+| editorial_persona_compliance | NULL | LOCAL |
 | legacy_persona_remaining | 25 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |

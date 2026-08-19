@@ -105,10 +105,10 @@ def generate_advice(data: dict, scope: str) -> list:
         ratio = organic / users * 100
         if ratio < 10:
             advice.append({"icon": "🔴", "title": f"自然搜索仅 {organic:g}/{users:g} 人（{ratio:.0f}%）",
-                           "detail": "搜索基本盘未起量：已收录页排名靠后，优化核心页标题/内容密度并加强内链，持续观察曝光"})
+                           "detail": "搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）"})
         elif ratio < 30:
             advice.append({"icon": "🟡", "title": f"自然搜索占比 {ratio:.0f}%",
-                           "detail": "搜索开始起量，继续补收录与内链，把有曝光无点击的页面标题改到 60 字符内"})
+                           "detail": "搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）"})
     elif users == 0:
         advice.append({"icon": "🔴", "title": "本期无流量",
                        "detail": "检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200"})
@@ -130,10 +130,10 @@ def generate_advice(data: dict, scope: str) -> list:
     # 4) 变现
     if tp_clicks > 0 and tp_orders == 0:
         advice.append({"icon": "🟡", "title": f"联盟 {tp_clicks:.0f} 次点击 / 0 转化",
-                       "detail": "链路已被触达：确认点击来自哪个联盟位，把高流量页联盟入口提到首屏下方，补充信任元素"})
+                       "detail": "链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"})
     elif tp_clicks == 0 and users >= 10:
         advice.append({"icon": "🟠", "title": "高流量但联盟零点击",
-                       "detail": "联盟入口不可见：在热门文章首屏下方加入 Travelpayouts Drive / 对比表"})
+                       "detail": "联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"})
 
     # 5) 订阅
     if email == 0:
@@ -151,7 +151,7 @@ def generate_advice(data: dict, scope: str) -> list:
     # 7) GSC 曝光为 0（新站单日波动正常，核心页通常已收录）
     if gsc == 0:
         advice.append({"icon": "🟠", "title": "今日无搜索曝光（新站正常波动）",
-                       "detail": "核心页已收录但排名未起量：优先优化核心页标题/首段/内链，持续提交新页 sitemap"})
+                       "detail": "核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）"})
 
     # 8) 趋势回落
     trend = str(data.get(f["trend"][0], "")) if f["trend"] else ""

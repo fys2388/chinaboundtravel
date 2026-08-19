@@ -636,11 +636,11 @@ class FeishuWeeklyReporter:
         site_wide_affiliate = content_data.get("site_wide_affiliate", False)
         coverage = (posts_with_affiliate / max(total_posts, 1)) * 100 if total_posts > 0 else 0
         if tp_revenue == 0 and coverage < 30 and not site_wide_affiliate:
-            red_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路缺失 → 对应行动：全站联盟链接覆盖")
+            yellow_risks.append("联盟佣金为0且链接覆盖率<30%，变现链路待验证（NEW：Revenue NOT_AVAILABLE，非故障）")
 
         posts_with_conflict = content_data.get("posts_with_conflict", 0)
         if posts_with_conflict > 0:
-            red_risks.append(f"检测到人设年限冲突（{posts_with_conflict}篇文章），内容可信度受损 → 对应行动：批量修正年限文案")
+            yellow_risks.append(f"人设年限冲突（{posts_with_conflict}篇），需批量修正 → 对应行动：按优先级迁移 legacy 文案")
 
         week_users = data.get("week_users", 0)
         if week_users < 100:
@@ -682,7 +682,7 @@ class FeishuWeeklyReporter:
 
         if risks.get("yellow"):
             plan.extend([
-                {"task": "启用 Travelpayouts Drive 自动推荐组件", "priority": "medium", "period": "本周", "kr_id": "revenue", "target": 30},
+                {"task": "评估 Travelpayouts Drive 对核心页面的覆盖价值（人工决策）", "priority": "medium", "period": "本月", "kr_id": "revenue"},
                 {"task": "发布 3 篇高转化长尾攻略（支付 / 签证 / 交通）", "priority": "medium", "period": "本周", "kr_id": "content", "target": 5},
                 {"task": "Reddit / Quora 铺设 3 条问答外链，实现零突破", "priority": "medium", "period": "本周"},
                 {"task": "社媒标准化模板落地，每日稳定更新", "priority": "medium", "period": "本周"},
@@ -1052,11 +1052,10 @@ class FeishuWeeklyReporter:
 | 佣金收入 | ${tp_revenue:.2f} | - | - |
 
 ### 🩺 自动诊断结论
-🔴 **核心问题：供给侧缺失 + 追踪链路未验证**
-- 本地检测：全站 {total_posts} 篇文章，仅 {posts_with_affiliate} 篇含联盟链接，**覆盖率 {coverage}%**
-- 未启用 Travelpayouts Drive 自动推荐组件
-- 文章无固定转化区块与 CTA 引导，用户无下单入口
-- 联盟链接展示量（inits）为 0，需确认 Tracking 脚本是否正确注入"""
+⚠️ **供给侧提示：变现链路待验证（Revenue NOT_AVAILABLE，非故障）**
+- 本地检测：全站 {total_posts} 篇文章，{posts_with_affiliate} 篇含联盟链接，覆盖率 {coverage}%
+- 联盟链接展示量（inits）为 0：新站正常，等待 GA4 事件收集足够样本
+- 追踪脚本状态需人工复核"""
 
         email_section = f"""---
 ## 📧 邮件订阅
@@ -1171,7 +1170,7 @@ class FeishuWeeklyReporter:
 | OG/Twitter Card标签 | ❌ 缺失 | {og_status} 已补全 | 修复社交分享预览，提升点击量 |
 | Article结构化数据 | 🟡 部分配置 | {article_schema_status} 已完善 | 增强搜索展示，提升CTR |
 | GSC索引提交 | ❌ 未授权 | {gsc_status} | 需手动完成域名验证 |
-| 人设年限统一 | 🔴 4篇冲突 | {'✅ 已修正' if posts_with_conflict == 0 else f'🟡 剩余{posts_with_conflict}篇'} | 内容可信度提升 |
+| 人设年限统一 | 🟡 {posts_with_conflict}篇冲突 | {'✅ 已修正' if posts_with_conflict == 0 else f'🟡 剩余{posts_with_conflict}篇'} | 内容可信度提升 |
 | 联盟链接覆盖 | 21.4% | {coverage}% | {'📈 提升' if coverage > 21.4 else '➡️ 持平'} |
 | 文章底部CTA区块 | ❌ 缺失 | 🟡 进行中 | 搭建转化入口 |"""
 
