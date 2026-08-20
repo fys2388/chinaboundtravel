@@ -44,3 +44,6 @@ buffer-worker/.wrangler/tmp/
 # YouTube OAuth credentials (never commit)
 chinaboundtravel_social_bot/youtube_client_secrets.json
 chinaboundtravel_social_bot/youtube_refresh_token.txt
+
+# Buffer API tokens (never commit)
+chinaboundtravel_social_bot/buffer_config.json

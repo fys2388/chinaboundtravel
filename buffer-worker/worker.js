@@ -20,7 +20,7 @@
  */
 const BUFFER_ACCOUNTS = {
   A: {
-    tokenKey: 'BUFFER_WORKER_URL',
+    tokenKey: 'BUFFER_API_TOKEN_A',
     name: 'Buffer-A',
     channels: {
       x: { id: '6a202882c687a22dd45735b6', name: 'fys2388', service: 'twitter' },
@@ -30,7 +30,7 @@ const BUFFER_ACCOUNTS = {
     scheduleOffset: 0 // EST 09:00/15:00
   },
   B: {
-    tokenKey: 'NEW_BUFFER_WORKER_URL',
+    tokenKey: 'BUFFER_API_TOKEN_B',
     name: 'Buffer-B',
     channels: {
       pinterest: { id: '6a21bdbec687a22dd45ec2ae', name: 'Joranchinatravel', service: 'pinterest' }
@@ -108,7 +108,7 @@ export default {
     }`;
     const results = {};
     // Buffer-A (FB/IG/Twitter)
-    const tokenA = env.BUFFER_WORKER_URL || '';
+    const tokenA = env.BUFFER_API_TOKEN_A || '';
     try {
       const resp = await fetch(BUFFER_API_URL, {
         method: 'POST',
@@ -121,7 +121,7 @@ export default {
       results['Buffer-A'] = await resp.json();
     } catch(e) { results['Buffer-A'] = { error: e.message }; }
     // Buffer-B (Pinterest)
-    const tokenB = env.NEW_BUFFER_WORKER_URL || '';
+    const tokenB = env.BUFFER_API_TOKEN_B || '';
     try {
       const resp = await fetch(BUFFER_API_URL, {
         method: 'POST',
@@ -138,7 +138,7 @@ export default {
 
   // 调试端点：查询 Pinterest boards
   if (url.pathname === '/debug-boards') {
-    const token = env.NEW_BUFFER_WORKER_URL || '';
+    const token = env.BUFFER_API_TOKEN_B || '';
     const queries = [
       { name: 'pinterest_channels', query: 'query { channels(input: { organizationId: "6a20329943b37a7289e25b6d" }) { id name service metadata { ... on PinterestMetadata { boards { id name serviceId url } } } } }' },
       { name: 'all_channels', query: 'query { channels(input: { organizationId: "6a20329943b37a7289e25b6d" }) { id name service } }' }

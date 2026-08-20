@@ -1,0 +1,97 @@
+name: Social Engine Daily (闭环)
+
+on:
+  schedule:
+    # 每日 UTC 00:30 / 12:30（北京时间 08:30 / 20:30），配合美东黄金时段
+    - cron: "30 0,12 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Publish date (YYYY-MM-DD), default today"
+        required: false
+        type: string
+      build_if_empty:
+        description: "Rebuild inventory if empty (true/false)"
+        required: false
+        default: "false"
+        type: string
+
+concurrency:
+  group: social-engine-daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+          cd buffer-worker && npm install --no-audit --no-fund 2>/dev/null || true
+
+      - name: Ensure inventory exists
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          if [ ! -s content/social/inventory.json ]; then
+            if [ "${{ github.event.inputs.build_if_empty || 'false' }}" = "true" ]; then
+              echo "资产库为空，重新生成..."
+              python scripts/social_content_agent.py build-inventory --top-n 20
+            else
+              echo "资产库为空且未要求重建，跳过"
+              exit 0
+            fi
+          else
+            echo "资产库已存在"
+          fi
+
+      - name: Generate schedule
+        run: |
+          python scripts/social_content_agent.py plan --date "${{ github.event.inputs.date || 'today' }}" 2>/dev/null || \
+          python scripts/social_content_agent.py plan
+
+      - name: Publish today's batch (Buffer Worker)
+        env:
+          # 完整发布端点（worker /publish 处理双账户分流）
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-auto-poster.fys2388.workers.dev/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-auto-poster.fys2388.workers.dev/publish' }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          TODAY="${{ github.event.inputs.date }}"
+          if [ -z "$TODAY" ]; then TODAY=$(date -u +%F); fi
+          echo "=== 发布 $TODAY 批次 ==="
+          python scripts/social_content_agent.py publish --auto --date "$TODAY" || echo "发布命令返回非零（部分失败）"
+
+      - name: Generate daily social report
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          python scripts/social_reports.py daily --print-block 2>/dev/null || echo "日报生成跳过"
+
+      - name: Commit inventory & reports back
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/social/inventory.json reports/social/ manifest.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore(social): sync inventory & reports [skip ci]"
+          git push || true
+
+      - name: Feishu notification
+        if: always()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            curl -s -X POST "$FEISHU_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d '{"msg_type":"text","content":{"text":"🔁 社媒引擎闭环执行完成"}}' || true
+          fi
