@@ -252,14 +252,15 @@
       "hash": "content_depth_insufficient",
       "type": "内容质量",
       "message": "文章内容深度不足（词数<700），缺少深度分析和实用信息",
-      "occurrences": 4,
+      "occurrences": 5,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-08-19T01:05:34.478146+00:00",
+      "last_seen": "2026-08-20T01:05:15.185223+00:00",
       "files": [
         "Yunnan Adventure: Rice Terraces.md",
         "China Transportation Guide.md",
         "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
-        "China Business Travel Guide: Meetings, Dining, and Networking"
+        "China Business Travel Guide: Meetings, Dining, and Networking",
+        "Yangtze River Cruise Guide: Choosing Your Ship and Route"
       ],
       "suggestion": "确保文章至少700词，包含详细的实用信息和深度分析",
       "resolved": false,
@@ -277,9 +278,9 @@
       "hash": "sensitive_content_politics",
       "type": "风控",
       "message": "文章包含敏感词汇（politics, government, communist等）",
-      "occurrences": 5,
+      "occurrences": 6,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-08-19T01:05:34.480566+00:00",
+      "last_seen": "2026-08-20T01:06:11.185732+00:00",
       "files": [
         "The History and Culture of the Great Wall.md",
         "Best China Itineraries for 10 Days: Three Routes Compared",
@@ -529,11 +530,12 @@
       "hash": "topic_inappropriate",
       "type": "选题",
       "message": "选题方向不符合要求",
-      "occurrences": 1,
+      "occurrences": 2,
       "first_seen": "2026-07-04T02:41:18.383369+00:00",
-      "last_seen": "2026-07-04T02:41:18.383386+00:00",
+      "last_seen": "2026-08-20T01:05:15.183923+00:00",
       "files": [
-        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities"
+        "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities",
+        "Yangtze River Cruise Guide: Choosing Your Ship and Route"
       ],
       "suggestion": "避免政治敏感内容",
       "resolved": false,
@@ -889,8 +891,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 36,
-  "last_updated": "2026-08-19T01:05:34.480576+00:00",
+  "total_errors": 39,
+  "last_updated": "2026-08-20T01:06:11.185750+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",
