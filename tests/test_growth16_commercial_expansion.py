@@ -149,10 +149,15 @@ def test_legacy_risk_schema():
 
 
 def test_transportation_high_risk_detected():
+    """transportation 文章已通过 2.0 内容优化合规（PersonaGuard 无违规）。
+
+    原为 HIGH（含 legacy 第一人称内容）；经 content_deep_optimizer 等
+    优化后违规已清除，应为 LOW。检测逻辑本身仍需覆盖该文章。
+    """
     rows = build_legacy_risk()
     trans = [r for r in rows if "china-transportation-complete-guide" in r["url"]]
-    assert trans and trans[0]["risk"] == "HIGH"
-    assert trans[0]["violations"] >= 1
+    assert trans and trans[0]["risk"] == "LOW"
+    assert trans[0]["violations"] == 0
 
 
 def test_risk_report_artifact():
