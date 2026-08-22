@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 feishu_daily_report.py - ChinaBound Travel 飞书每日日报推送
 功能：流量、内容、联盟、运维四大核心板块数据推送
@@ -128,6 +128,27 @@ def load_reporting_snapshot() -> dict:
         print(f"   \u26a0\ufe0f REPORTING_SNAPSHOT.json 读取失败: {e}")
         return None
 
+
+
+
+def get_drive_status() -> str:
+    """P1-GROWTH-28A: Drive 状态字段（日报联盟板块）。
+    从 2.0 KPI 快照的 DRIVE-001 实验记录读取；RUNNING/ACTIVE -> 🟢，
+    其余状态/缺失/解析失败 -> 🔴（进入当日待办）。"""
+    try:
+        if not SNAPSHOT_FILE.exists():
+            return "🔴 UNKNOWN（REPORTING_SNAPSHOT.json 缺失）"
+        snap = json.loads(SNAPSHOT_FILE.read_text(encoding="utf-8"))
+        exps = snap.get("domains", {}).get("experiments", {}).get("experiments", [])
+        for e in exps:
+            if e.get("experiment_id") == "DRIVE-001":
+                st = (e.get("status") or "").upper()
+                if st in ("RUNNING", "ACTIVE"):
+                    return f"🟢 ACTIVE（DRIVE-001 {st}，start {e.get('start_date') or '-'}）"
+                return f"🔴 {st}（DRIVE-001 非 RUNNING，进入待办）"
+        return "🔴 DRIVE-001 未在快照实验注册表"
+    except Exception as exc:
+        return f"🔴 快照解析失败：{exc}"
 
 
 def generate_priority_tasks(okr_data, suggestions):
@@ -264,9 +285,17 @@ class FeishuDailyReporter:
             tp_display = {"inits": f"{data.get('tp_inits', 0):,}", "searches": f"{data.get('tp_searches', 0):,}",
                           "clicks": f"{data.get('tp_clicks', 0)}", "bookings": f"{data.get('tp_bookings', 0)}",
                           "revenue": f"${data.get('tp_revenue', 0):.2f}"}
+            # P1-GROWTH-28A: 同源口径校准 - 点击率只使用 TP 同源数据 (clicks/inits)
+            _tp_inits = float(data.get('tp_inits', 0) or 0)
+            _tp_clicks = float(data.get('tp_clicks', 0) or 0)
+            tp_ctr = f"{_tp_clicks / _tp_inits * 100:.2f}%" if _tp_inits > 0 else "INSUFFICIENT_SAMPLE"
+            tp_ctr_note = "同源 clicks/inits"
         else:
             tp_display = {"inits": "未配置", "searches": "未配置", "clicks": "未配置",
                           "bookings": "未配置", "revenue": "未配置"}
+            tp_ctr = "未配置"
+            tp_ctr_note = ""
+        drive_status_line = get_drive_status()
         if nord_available:
             nord_display = {"clicks": f"{data.get('nord_clicks', 0)}", "conversions": f"{data.get('nord_conversions', 0)}",
                             "revenue": f"${data.get('nord_revenue', 0):.2f}"}
@@ -407,6 +436,9 @@ class FeishuDailyReporter:
         
         # 高优先级待办
         todos = data.get("high_priority_todos", [])
+        # P1-GROWTH-28A: Drive 状态异常自动进入当日待办（标红）
+        if "🔴" in drive_status_line:
+            todos = [f"🔴 Drive 状态异常：{drive_status_line}"] + todos
         todos_str = "✅ 所有正常，无待处理问题"
         if todos:
             todos_str = "\n".join([f"{i}. {t}" for i, t in enumerate(todos[:8], 1)])
@@ -520,6 +552,7 @@ class FeishuDailyReporter:
 | 昨日点击 | {tp_display['clicks']} 次 |
 | 昨日订单 | {tp_display['bookings']} 单 |
 | 昨日佣金 | {tp_display['revenue']} |
+| 点击率（同源 clicks/inits） | {tp_ctr} |
 
 🛡️ **NordVPN / NordPass（通过 AffiliatesCN）**
 | 指标 | 数据 |
@@ -530,7 +563,9 @@ class FeishuDailyReporter:
 
 > Klook、Booking.com 链接均通过 Travelpayouts 追踪，佣金统一统计
 
-**合计昨日佣金**: {total_rev_str}"""
+**合计昨日佣金**: {total_rev_str}
+
+**Drive 状态**: {drive_status_line}"""
                     }
                 },
                 {"tag": "hr"},
@@ -545,7 +580,9 @@ class FeishuDailyReporter:
 | 指标 | 数据 |
 | --- | --- |
 | 总订阅人数 | {ml_total_str} |
-| 昨日新增 | {ml_new_str} |"""
+| 昨日新增 | {ml_new_str} |
+
+{('⚠️ **零增长告警**：昨日新增订阅为 0，建议排查 Lead Magnet / 订阅 CTA 覆盖' if data.get('ml_zero_growth_alert') else '✅ 订阅数据正常')}"""
                     }
                 },
                 {"tag": "hr"},
@@ -747,6 +784,14 @@ class FeishuDailyReporter:
             data.update(ml_data)
             if data.get("ml_available"):
                 print(f"   ✅ MailerLite: 总订阅 {data.get('ml_total_subscribers', 'N/A')} 人, 昨日新增 {data.get('ml_new_subscribers', 0)} 人")
+                # 零增长自动告警（订阅渠道已接入但昨日无新增 → 提示行动）
+                if data.get("ml_new_subscribers", 0) == 0:
+                    _zero_alert = "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+                    data.setdefault("data_status", []).append(_zero_alert)
+                    data["ml_zero_growth_alert"] = True
+                    print(f"   ⚠️ {_zero_alert}")
+                else:
+                    data["ml_zero_growth_alert"] = False
             else:
                 print(f"   ⚠️ MailerLite: {data.get('ml_error', 'API 不可用')}")
                 data["data_status"].append(data.get("ml_error", "MailerLite API 不可用"))
@@ -1478,31 +1523,46 @@ class FeishuDailyReporter:
         if not MAILERLITE_API_TOKEN:
             print("   ⚠️ MailerLite API Token 未配置")
             return None
-        
+
+        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
+        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
+        clean_token = "".join(c for c in clean_token if ord(c) < 128)
+
         try:
             headers = {
-                "Authorization": f"Bearer {MAILERLITE_API_TOKEN}",
+                "Authorization": f"Bearer {clean_token}",
                 "Content-Type": "application/json"
             }
             
             # 获取总订阅者数
             total_subscribers = 0
             try:
-                resp = requests.get(
-                    "https://connect.mailerlite.com/api/subscribers",
-                    headers=headers,
-                    params={"limit": 1},
-                    timeout=15
-                )
-                if resp.status_code == 200:
+                # 遍历分页统计订阅者总数（新版 API 的 meta 无 total，需分页累计）
+                page_cursor = None
+                _seen = 0
+                while True:
+                    params = {"limit": 100}
+                    if page_cursor:
+                        params["cursor"] = page_cursor
+                    resp = requests.get(
+                        "https://connect.mailerlite.com/api/subscribers",
+                        headers=headers,
+                        params=params,
+                        timeout=15
+                    )
+                    if resp.status_code != 200:
+                        err = resp.text[:150]
+                        print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {err}")
+                        return {"ml_available": False,
+                                "ml_error": f"MailerLite API 认证失败（HTTP {resp.status_code}），请检查 MAILERLITE_API_TOKEN"}
                     data = resp.json()
-                    total_subscribers = data.get("meta", {}).get("total", 0)
-                else:
-                    # 401=token失效/未授权，不能当作 0 人展示
-                    err = resp.text[:150]
-                    print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {err}")
-                    return {"ml_available": False,
-                            "ml_error": f"MailerLite API 认证失败（HTTP {resp.status_code}），请检查 MAILERLITE_API_TOKEN"}
+                    _seen += len(data.get("data", []))
+                    page_cursor = (data.get("meta") or {}).get("next_cursor")
+                    if not page_cursor:
+                        break
+                    if _seen >= 10000:  # 安全上限
+                        break
+                total_subscribers = _seen
             except Exception as e:
                 print(f"   ⚠️ MailerLite 总订阅获取失败: {e}")
                 return {"ml_available": False, "ml_error": f"MailerLite API 请求异常: {e}"}
