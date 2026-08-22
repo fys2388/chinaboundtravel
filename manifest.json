@@ -1,7 +1,7 @@
 {
   "month_post_count": 11,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-21 01:09:06",
+  "last_social_publish": "2026-08-22 01:06:22",
   "daily_social_publish_date": "2026-08-22",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
@@ -127,7 +127,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "china-remote-work-guide-a-californians-5-year-chengdu-experience",
     "accommodation-tips-guide",
     "foodies-guide-to-china-a-gastronomic-adventure",
     "cultural-etiquette-guide-aussie-kiwi",
@@ -156,6 +155,7 @@
     "china-family-travel-tips-a-californians-guide",
     "chinese-language-survival-phrases-guide",
     "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
-    "china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide"
+    "china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide",
+    "chinabound-travel-guide-2026-08-monthly-update"
   ]
 }
