@@ -26,6 +26,8 @@ Thumbs.db
 
 # Build artifacts
 *.pdf
+# 但 Lead Magnet PDF 需部署到站点，保留 static/lead-magnet/ 下的 PDF
+!static/lead-magnet/*.pdf
 
 # Temporary scripts
 fix_current_garbled.py

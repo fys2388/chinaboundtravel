@@ -37,7 +37,7 @@ CHECKS = [
         "method": "POST",
         "expected_status": 200,
         "headers_func": lambda: {
-            "Authorization": f"Bearer {os.getenv('BUFFER_API_TOKEN', '')}",
+            "Authorization": f"Bearer {_clean_token(os.getenv('BUFFER_API_TOKEN', ''))}",
             "Content-Type": "application/json"
         },
         "json_body": {
@@ -103,6 +103,20 @@ def load_env():
                         os.environ[key.strip()] = value.strip().strip('"').strip("'")
 
 
+def _clean_token(token: str) -> str:
+    """清洗 API token：去除 BOM（\\ufeff）、空白和不可见字符。
+
+    修复 'latin-1' codec 错误：requests 发送 header 时用 latin-1 编码，
+    token 若含 BOM 或非 latin-1 字符会抛 UnicodeEncodeError。
+    """
+    if not token:
+        return ""
+    # 去除 BOM 和首尾空白
+    token = token.lstrip("\ufeff").strip()
+    # 仅保留可见 ASCII 字符（token 应为纯 ASCII）
+    return "".join(ch for ch in token if ord(ch) < 128)
+
+
 def load_buffer_token():
     """从 buffer_config.json 加载 Buffer API token（如果环境变量未配置）"""
     if os.getenv("BUFFER_API_TOKEN"):
@@ -124,7 +138,7 @@ def load_buffer_token():
                 if not token:
                     token = config.get("api", {}).get("access_token")
                 if token:
-                    os.environ["BUFFER_API_TOKEN"] = token
+                    os.environ["BUFFER_API_TOKEN"] = _clean_token(token)
                     print(f"  从 {config_path.name} 加载 Buffer token 成功")
                     return
             except Exception as e:
