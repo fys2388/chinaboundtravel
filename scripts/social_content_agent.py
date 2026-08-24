@@ -1,0 +1,955 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+social_content_agent.py - ChinaBound 社媒增长引擎核心 Agent
+=================================================================
+
+目标：把站内存量文章转化为可持续发布的社媒内容（内容资产库 → AI 拆解生成
+→ 双账户分发 → 数据回流），不依赖新文章也能每日更新。
+
+四大模块：
+  1. Inventory   : content/social/inventory.json 内容资产库（JSON 底层）
+  2. Generator   : 拆解 Top-N 高价值文章，每篇生成 5 条（5 种 type）素材，
+                   平台适配 + 品牌校验（brand_identity_audit，最多 3 轮重写）
+  3. Distributor : 打通双 Buffer Worker（Account-A 非 Pin / Account-B Pin），
+                   支持自动 / 半自动发布，发布结果回写 metrics
+  4. Feedback    : 日报社媒板块 / 周报社媒增长复盘 / 数据沉淀到资产库
+
+设计原则：
+  - 复用 scripts/social_backfill.py 的解析、UTM、品牌校验、Worker 调用逻辑
+  - 复用 scripts/logger.py、scripts/error_handler.py、飞书推送、错误降级
+  - 图片生成 / LLM 文案增强均为「预留接口」：配置了对应 key 才调用，
+    否则降级到确定性模板生成（保证离线可复现、测试全绿）
+
+用法（CLI）：
+  python scripts/social_content_agent.py build-inventory            # 批量生成素材入库
+  python scripts/social_content_agent.py list --platform ig         # 列出素材
+  python scripts/social_content_agent.py plan --date 2026-08-20     # 生成排期
+  python scripts/social_content_agent.py publish --auto             # 自动发布
+  python scripts/social_content_agent.py publish --manual           # 半自动（人工确认）
+  python scripts/social_content_agent.py backfill-metrics --file X.json  # 数据回流
+  python scripts/social_content_agent.py report daily|weekly        # 社媒日报/周报
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import sys
+import time
+from datetime import date, datetime, timedelta
+from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+BLOG_ROOT = SCRIPT_DIR.parent
+sys.path.insert(0, str(SCRIPT_DIR))
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BLOG_ROOT / ".env")
+except Exception:
+    pass
+
+import requests  # noqa: E402
+
+from brand_identity_audit import scan_text  # noqa: E402
+from logger import setup_logger, log_section, log_task  # noqa: E402
+from error_handler import ErrorHandler  # noqa: E402
+
+# 复用 social_backfill 的解析与工具函数（避免重复实现）
+from social_backfill import (  # noqa: E402
+    ACCOUNT_A_URL,
+    ACCOUNT_B_URL,
+    SITE_DOMAIN,
+    build_utm,
+    discover_articles,
+    parse_article,
+    load_ga4_pageviews,
+    truncate,
+)
+
+logger = setup_logger("social_agent", level="INFO", log_file="social_content_agent.log")
+
+# ============================================================
+# 路径 / 配置
+# ============================================================
+
+INVENTORY_DIR = BLOG_ROOT / "content" / "social"
+INVENTORY_FILE = INVENTORY_DIR / "inventory.json"
+REPORTS_DIR = BLOG_ROOT / "reports"
+SOCIAL_REPORTS_DIR = BLOG_ROOT / "reports" / "social"
+MANIFEST_MAIN = BLOG_ROOT / "manifest.json"
+
+SCHEMA_VERSION = 1
+TYPES = ("knowledge", "tip", "story", "visual", "conversion")
+PLATFORMS = ("ig", "pinterest", "x", "fb")
+
+# 每日排期：美东黄金时段 08:00 / 18:00 / 22:00（UTC 映射见 schedule_slots）
+US_EAST_OFFSET = 4  # EDT (夏令时)；非夏令时脚本内统一按 -4 处理并在文档说明
+
+DEFAULT_TOP_N = 20        # 首批拆解 Top20 篇
+ITEMS_PER_ARTICLE = 5     # 每篇 5 条（覆盖 5 种 type）
+REWRITE_ATTEMPTS = 3      # 品牌校验失败自动重写轮数
+COOLDOWN_DAYS = 7         # 同篇 7 天内不重复发布
+
+VALID_STATUS = ("待审核", "已排期", "已发布")
+VALUE_TYPES = ("knowledge", "tip", "story")   # 80% 价值型
+CONVERSION_TYPES = ("conversion",)            # 20% 转化型
+
+# 账户路由：非 Pin(ig/x/fb) -> Account-A；Pin -> Account-B
+def account_url(platform: str) -> str:
+    return ACCOUNT_A_URL if platform != "pinterest" else ACCOUNT_B_URL
+
+# ============================================================
+# Inventory 读写
+# ============================================================
+
+
+def empty_inventory() -> dict:
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "updated_at": datetime.now().isoformat(timespec="seconds"),
+        "items": [],
+    }
+
+
+def load_inventory(path: Path = INVENTORY_FILE) -> dict:
+    if not path.exists():
+        return empty_inventory()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict) or "items" not in data:
+            return empty_inventory()
+        return data
+    except (OSError, json.JSONDecodeError):
+        return empty_inventory()
+
+
+def save_inventory(data: dict, path: Path = INVENTORY_FILE) -> Path:
+    data["updated_at"] = datetime.now().isoformat(timespec="seconds")
+    data["schema_version"] = SCHEMA_VERSION
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    return path
+
+
+def next_item_id(data: dict) -> str:
+    n = len(data.get("items", [])) + 1
+    return f"soc-{n:06d}"
+
+
+def item_signature(item: dict) -> str:
+    """同篇同平台同类型的去重签名。"""
+    raw = "|".join([
+        item.get("source_article", ""),
+        item.get("platform", ""),
+        item.get("type", ""),
+    ])
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]
+
+
+def existing_signatures(data: dict) -> set:
+    return {it.get("_sig") for it in data.get("items", []) if it.get("_sig")}
+
+# ============================================================
+# 平台适配文案生成（确定性模板 + 可选 LLM 增强）
+# ============================================================
+
+
+def _type_hook(article: dict, ctype: str) -> str:
+    """基于文章标题 / 题材的 hook 开头（2.0 Editorial Voice）。"""
+    t = article.get("title", "").lower()
+    if ctype == "conversion":
+        return ("Save time and money on your next China trip — grab the step-by-step "
+                "guide before you book.")
+    if ctype == "visual":
+        if any(k in t for k in ("city", "beijing", "chengdu", "shanghai", "xian", "destination")):
+            return "China's most photogenic corners, captured for your next trip."
+        return "China visuals that belong on your travel moodboard."
+    if ctype == "story":
+        return "What first-time visitors learn about China, summed up in one practical story."
+    if ctype == "tip":
+        return "One China travel mistake to avoid — and how to fix it."
+    # knowledge
+    return "Research-based China travel facts international visitors should know."
+
+
+def _type_points(article: dict, ctype: str) -> list:
+    """按类型从标题/描述/heading 提炼要点。"""
+    points = []
+    desc = article.get("description") or ""
+    # knowledge / tip 用 heading 提炼价值点
+    if ctype in ("knowledge", "tip"):
+        for h in (article.get("headings") or [])[:3]:
+            points.append(truncate(h, 70))
+    # conversion 用标题/描述关键词
+    if ctype == "conversion":
+        points.append(truncate(article.get("title") or "", 70))
+    # story / visual 用描述
+    if ctype in ("story", "visual") and desc:
+        points.append(truncate(desc, 90))
+    return points
+
+
+def _platform_style(platform: str) -> dict:
+    """不同平台的文案长度与风格约束。"""
+    return {
+        "ig":        {"max_caption": 2000, "hashtags": ["#ChinaTravel", "#VisitChina", "#ChinaTrip"]},
+        "pinterest": {"max_caption": 1200, "hashtags": ["chinatravel", "chinatrip", "chinatips"]},
+        "x":         {"max_caption": 280,  "hashtags": ["#ChinaTravel"]},
+        "fb":        {"max_caption": 1500, "hashtags": ["#ChinaTravel"]},
+    }[platform]
+
+
+def _keyword_dense(article: dict) -> str:
+    """Pinterest 关键词密集描述（攻略实用型）。"""
+    kw = []
+    for tag in ["visa", "payment", "train", "packing", "food", "photo",
+                "safety", "etiquette", "insurance", "internet"]:
+        if tag in (article.get("title", "") + " " + (article.get("description") or "")).lower():
+            kw.append(tag)
+    dense = (article.get("description") or "")[:200].strip()
+    if kw:
+        dense += f" | Keywords: {', '.join(sorted(set(kw)))}"
+    return dense
+
+
+def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> str:
+    """按平台 + 类型渲染确定性文案。"""
+    style = _platform_style(platform)
+    hook = _type_hook(article, ctype)
+    points = _type_points(article, ctype)
+    title = truncate(article.get("title") or "", 90)
+
+    lines = []
+    if platform == "pinterest":
+        # 长文案 + 关键词密集，偏攻略实用型
+        lines.append(f"{title} | {hook}")
+        dense = _keyword_dense(article)
+        if dense:
+            lines.append("")
+            lines.append(dense)
+        lines.append("")
+        lines.append("📌 Save this for your China trip planning.")
+        lines.append("")
+        lines.append(f"Full guide: {utm_url}")
+    elif platform == "ig":
+        # 短文案 + 情绪价值，偏视觉种草
+        lines.append(hook)
+        if points:
+            lines.append("")
+            for p in points:
+                lines.append(f"· {p}")
+        lines.append("")
+        lines.append(f"Read the full guide: {utm_url}")
+        lines.append("")
+        lines.append(" ".join(style["hashtags"]))
+    elif platform == "x":
+        # 极短文案，观点型 / 避坑型
+        core = hook
+        if points:
+            core += f" {points[0]}"
+        core += f" → {utm_url}"
+        core = truncate(core, style["max_caption"] - 12)
+        core = f"{core} {style['hashtags'][0]}"
+        lines.append(core)
+    else:  # fb
+        # 中等长度，互动引导型
+        lines.append(hook)
+        if points:
+            lines.append("")
+            for p in points:
+                lines.append(f"• {p}")
+        lines.append("")
+        lines.append("What's your biggest China travel question? Drop it below. 👇")
+        lines.append("")
+        lines.append(f"Full guide: {utm_url}")
+    return "\n".join(lines)
+
+
+def _strip_flagged(text: str, flagged: list) -> str:
+    for phrase in flagged or []:
+        text = re.sub(re.escape(phrase), "", text, flags=re.IGNORECASE)
+    return re.sub(r"\s{2,}", " ", text).strip()
+
+
+def validate_copy(text: str):
+    res = scan_text(text)
+    ok = not res.get("forbidden") and not res.get("fictional")
+    return ok, res
+
+
+def generate_one(article: dict, ctype: str, platform: str, campaign: str) -> dict:
+    """生成单条合规文案（品牌校验，最多 3 轮重写）。"""
+    utm_url = build_utm(article["url"], platform, campaign)
+    last_res = None
+    final_text = None
+    for attempt in range(1, REWRITE_ATTEMPTS + 1):
+        if attempt == 1:
+            text = _render_caption(article, ctype, platform, utm_url)
+        else:
+            flagged = ((last_res.get("forbidden") or []) +
+                       (last_res.get("fictional") or []))
+            safe = dict(article)
+            safe["title"] = truncate(re.sub(r"[^A-Za-z0-9 ]", " ", article.get("title", "")), 60).strip() or "China Travel Guide"
+            safe["description"] = truncate(article.get("description") or "", 100)
+            safe["headings"] = []
+            text = _strip_flagged(_render_caption(safe, ctype, platform, utm_url), flagged)
+        ok, res = validate_copy(text)
+        if ok:
+            final_text = text
+            break
+        last_res = res
+    if final_text is None:
+        final_text = _render_caption(article, ctype, platform, utm_url)
+        ok = False
+    else:
+        ok = True
+    return {
+        "text": final_text,
+        "ok": ok,
+        "issues": (last_res.get("forbidden") or []) + (last_res.get("fictional") or []) if not ok else [],
+    }
+
+
+def build_image_prompt(article: dict, ctype: str, platform: str) -> str:
+    """配图生成提示词（预留接口，生成真实图片需接入 pollinations/其他）。"""
+    title = article.get("title") or "China travel"
+    style_map = {
+        "ig": "aesthetic, bright, travel photography style, vertical 4:5",
+        "pinterest": "clean, save-worthy flat-lay pin graphic, vertical 2:3, readable",
+        "x": "minimal, bold, single striking image, landscape",
+        "fb": "warm, shareable, lifestyle, landscape",
+    }
+    return (f"Professional {ctype} social graphic for '{title}'. "
+            f"Style: {style_map.get(platform, 'travel')}. "
+            "China landmarks and culture, no people, no text overlays, high quality, realistic.")
+
+
+# ============================================================
+# LLM / 图片增强（预留接口）
+# ============================================================
+
+
+def llm_enhance(article: dict, ctype: str, platform: str, base_text: str) -> str:
+    """可选 LLM 文案增强。仅当显式启用 SOCIAL_LLM_ENABLED 且配置了 key 才调用；
+    未启用、未配置或失败时返回 base_text（确定性降级）。"""
+    if not os.environ.get("SOCIAL_LLM_ENABLED", ""):
+        return base_text
+    key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("DOUBAO_ARK_API_KEY")
+    if not key:
+        return base_text
+    endpoint = os.environ.get("DEEPSEEK_ENDPOINT",
+                              "https://api.deepseek.com/chat/completions")
+    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+    try:
+        prompt = (
+            f"Rewrite this social caption for platform '{platform}' (type '{ctype}') "
+            "in the ChinaBound 2.0 editorial voice. IMPORTANT: never use first-person "
+            "personal travel experience ('I stayed', 'I visited', 'my wife', etc.). "
+            "Keep UTM link untouched. Return only the caption.\n\n"
+            f"Article title: {article.get('title')}\n"
+            f"Base caption:\n{base_text}"
+        )
+        resp = requests.post(
+            endpoint,
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            json={"model": model, "messages": [{"role": "user", "content": prompt}],
+                  "temperature": 0.7, "max_tokens": 400},
+            timeout=60,
+        )
+        resp.raise_for_status()
+        out = resp.json()["choices"][0]["message"]["content"].strip()
+        return out or base_text
+    except Exception as e:  # 错误降级
+        logger.warning("LLM enhance failed, fallback to template: %s", e)
+        return base_text
+
+
+def generate_image(item: dict, path: Path) -> str:
+    """预留图片生成接口。接入 pollinations 等后在此实现；当前返回空串（表示未生成）。
+    返回生成的本地/远程图片 URL，供发布时填充 cover。"""
+    if not os.environ.get("IMAGE_GEN_ENABLED", ""):
+        return ""
+    # --- 预留实现：把 image_prompt 传给 pollinations ---
+    # try:
+    #     resp = requests.get(f"https://image.pollinations.ai/prompt/{quote(item['image_prompt'])}?width=1024&nologo=true", timeout=120)
+    #     resp.raise_for_status()
+    #     out = path.with_suffix(".jpg")
+    #     out.write_bytes(resp.content)
+    #     return out.as_uri()
+    # except Exception:
+    #     return ""
+    return ""
+
+
+# ============================================================
+# 选文（Top-N 高价值）
+# ============================================================
+
+
+def select_top_articles(n: int) -> list:
+    """按 GA4 历史流量 + front matter 信号选 Top-N。复用 social_backfill 逻辑。"""
+    articles = discover_articles()
+    ga4_views = load_ga4_pageviews()
+    processed = set()
+    # 复用 social_backfill 的评分（但排除最近已分发）
+    from social_backfill import recently_distributed
+    candidates = [a for a in articles
+                  if a.get("cover") and not recently_distributed(a)]
+    if not candidates:
+        candidates = [a for a in articles if a.get("cover")]
+    ranked = sorted(
+        candidates,
+        key=lambda a: (min(ga4_views.get(a["slug"], 0), 50)
+                       + (25 if a["slug"] in {
+                            "144-hour-visa-free-transit-guide",
+                            "china-bargaining-and-shopping-guide",
+                            "chinese-tea-culture-where-to-experience-authentic-teahouses",
+                            "chinas-food-through-the-ages-guide",
+                            "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home",
+                            "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+                       } else 0)),
+        reverse=True,
+    )
+    return ranked[:n]
+
+# ============================================================
+# 批量生成 → 资产库
+# ============================================================
+
+
+def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
+                    inventory_path: Path = INVENTORY_FILE) -> dict:
+    """拆解 Top-N 文章，每篇生成 5 条（5 种 type）素材入库。
+
+    平台分配：为保证 4 平台都覆盖且每篇 5 种 type 齐备，对每篇内部按
+    type 顺序轮换平台，使整批整体均衡（约各占 25%）。
+    """
+    log_section(logger, "构建社媒内容资产库 build-inventory")
+    data = load_inventory(inventory_path)
+    sigs = existing_signatures(data)
+    if sigs and not force:
+        logger.info("资产库已有 %d 条，使用 --force 重新生成", len(sigs))
+        return data
+
+    articles = select_top_articles(top_n)
+    logger.info("选文 Top-%d: %s", len(articles),
+                ", ".join(a["slug"] for a in articles))
+
+    campaign = f"cbt_social_{date.today().strftime('%Y%m%d')}"
+    created = []
+    # 平台轮换：让 4 平台整体均衡
+    platform_cycle = ["ig", "pinterest", "x", "fb"]
+    for ai, article in enumerate(articles):
+        for ti, ctype in enumerate(TYPES):
+            platform = platform_cycle[(ai + ti) % len(platform_cycle)]
+            gen = generate_one(article, ctype, platform, campaign)
+            text = gen["text"]
+            # LLM 增强（可选）
+            text = llm_enhance(article, ctype, platform, text)
+            ok, res = validate_copy(text)
+            if not ok:
+                text = gen["text"]
+                ok = gen["ok"]
+                res_issues = gen["issues"]
+            else:
+                res_issues = []
+            item = {
+                "id": next_item_id(data),
+                "source_article": article["slug"],
+                "source_title": article["title"],
+                "platform": platform,
+                "type": ctype,
+                "caption": text,
+                "image_prompt": build_image_prompt(article, ctype, platform),
+                "image_url": "",
+                "utm_params": {
+                    "utm_source": platform,
+                    "utm_medium": "social",
+                    "utm_campaign": campaign,
+                },
+                "status": "待审核",
+                "publish_date": "",
+                "metrics": {"impressions": 0, "clicks": 0, "engagements": 0,
+                            "uv": 0, "platform": platform},
+            }
+            item["_sig"] = item_signature(item)
+            # 跳过已存在签名（幂等）
+            if item["_sig"] in sigs:
+                continue
+            data["items"].append(item)
+            sigs.add(item["_sig"])
+            created.append(item)
+
+    save_inventory(data, inventory_path)
+    logger.info("新增 %d 条素材，资产库共 %d 条", len(created), len(data["items"]))
+    return data
+
+# ============================================================
+# 查询 / 筛选
+# ============================================================
+
+
+def filter_items(data: dict, platform: str = None, ctype: str = None,
+                  status: str = None, source_article: str = None) -> list:
+    items = data.get("items", [])
+    if platform:
+        items = [i for i in items if i.get("platform") == platform]
+    if ctype:
+        items = [i for i in items if i.get("type") == ctype]
+    if status:
+        items = [i for i in items if i.get("status") == status]
+    if source_article:
+        items = [i for i in items if i.get("source_article") == source_article]
+    return items
+
+# ============================================================
+# 排期策略
+# ============================================================
+
+
+def schedule_slots_for_day(d: date) -> list:
+    """美东黄金时段 08:00 / 18:00 / 22:00 -> UTC 时间戳（EDT -4）。"""
+    slots_et = [8, 18, 22]
+    out = []
+    for et_hour in slots_et:
+        utc_hour = (et_hour + US_EAST_OFFSET) % 24
+        utc_date = d + timedelta(days=1) if (et_hour + US_EAST_OFFSET) >= 24 else d
+        out.append(f"{utc_date.isoformat()}T{utc_hour:02d}:00:00+00:00")
+    return out
+
+
+def build_schedule(data: dict, start_date: date = None) -> list:
+    """从待审核素材生成每日 3 条排期（80% 价值 + 20% 转化，同篇 7 天不重复）。
+
+    由于 7 天去重限制，同一篇文章在窗口内最多贡献 1 条。为满足
+    80% 价值 / 20% 转化，先为每篇文章预选「指定类型」：约 20% 的文章
+    贡献转化型（conversion），其余贡献价值型（knowledge/tip/story），
+    再按文章铺排，每天 3 条（美东 08/18/22）。
+
+    返回按日期分组排期项：{date, slots:[{item_id, platform, type, utc}]}
+    """
+    pending = filter_items(data, status="待审核")
+    by_article: dict[str, list] = {}
+    for it in pending:
+        by_article.setdefault(it["source_article"], []).append(it)
+
+    articles = sorted(by_article)
+    total = len(articles)
+    # 约 20% 文章贡献转化型：每 CONV_EVERY 篇选 1 篇转化
+    CONV_EVERY = 5
+    chosen: list[dict] = []
+    for idx, art in enumerate(articles):
+        items = by_article[art]
+        want_conv = (idx + 1) % CONV_EVERY == 0
+        conv_candidates = [i for i in items if i["type"] in CONVERSION_TYPES]
+        value_candidates = [i for i in items if i["type"] in VALUE_TYPES]
+        if want_conv and conv_candidates:
+            chosen.append(conv_candidates[0])
+        elif value_candidates:
+            chosen.append(value_candidates[0])
+        elif items:
+            chosen.append(items[0])
+
+    cursor = start_date or date.today()
+    schedule = []
+    day_items = {"date": cursor.isoformat(), "slots": []}
+    per_day = 0
+    seen_article_last: dict[str, date] = {}
+    for item in chosen:
+        article = item["source_article"]
+        # 同篇 7 天不重复（每篇已预选 1 条，此项为防御性检查）
+        if article in seen_article_last and \
+           (cursor - seen_article_last[article]).days < COOLDOWN_DAYS:
+            if day_items["slots"]:
+                schedule.append(day_items)
+            cursor = cursor + timedelta(days=1)
+            per_day = 0
+            day_items = {"date": cursor.isoformat(), "slots": []}
+        if per_day >= 3:
+            if day_items["slots"]:
+                schedule.append(day_items)
+            cursor = cursor + timedelta(days=1)
+            per_day = 0
+            day_items = {"date": cursor.isoformat(), "slots": []}
+        slots = schedule_slots_for_day(cursor)
+        day_items["slots"].append({
+            "item_id": item["id"],
+            "platform": item["platform"],
+            "type": item["type"],
+            "utc": slots[per_day],
+            "slot_et": [8, 18, 22][per_day],
+        })
+        seen_article_last[article] = cursor
+        per_day += 1
+    if day_items["slots"]:
+        schedule.append(day_items)
+    return schedule
+
+# ============================================================
+# 分发（双 Buffer Worker）
+# ============================================================
+
+
+def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
+    """向 Buffer Worker 发布单条素材。"""
+    payload = {
+        "title": item.get("source_title", ""),
+        "desc": item["caption"],
+        "cover": item.get("image_url", "") or "",
+        "url": "",  # UTM 已拼入 caption；这里留空由 worker 处理
+        "custom_text": item["caption"],
+        "content_id": "",
+        "content_variant": f"{item['platform']}_{item['type']}",
+        "source_workflow": "social_content_agent",
+    }
+    if dry_run:
+        return {"success": True, "dry_run": True, "endpoint": endpoint,
+                "detail": "dry-run 未发送"}
+    try:
+        resp = requests.post(endpoint, json=payload, timeout=90)
+        resp.raise_for_status()
+        data = resp.json()
+        platforms = (data.get("platforms") or {}).get("success", [])
+        return {"success": bool(data.get("success")), "endpoint": endpoint,
+                "platforms": platforms,
+                "error": data.get("message") or data.get("error", "")}
+    except requests.exceptions.Timeout:
+        return {"success": False, "endpoint": endpoint, "error": "Timeout after 90s"}
+    except requests.exceptions.HTTPError as e:
+        return {"success": False, "endpoint": endpoint, "error": f"HTTP {e.response.status_code}"}
+    except Exception as e:
+        return {"success": False, "endpoint": endpoint, "error": str(e)}
+
+
+def distribute_items(items: list, dry_run: bool = True,
+                     inventory_path: Path = INVENTORY_FILE) -> list:
+    """发布指定素材（自动/半自动共用），发布成功回写 status=已发布 + publish_date。"""
+    data = load_inventory(inventory_path)
+    by_id = {it["id"]: it for it in data["items"]}
+    results = []
+    for item in items:
+        endpoint = account_url(item["platform"])
+        res = publish_item(item, endpoint, dry_run=dry_run)
+        if not dry_run and res.get("success"):
+            rec = by_id.get(item["id"])
+            if rec:
+                rec["status"] = "已发布"
+                rec["publish_date"] = date.today().isoformat()
+        results.append({"item_id": item["id"], "platform": item["platform"],
+                        "type": item["type"], "source_article": item["source_article"],
+                        **res})
+        if not dry_run:
+            time.sleep(2)
+    if not dry_run:
+        save_inventory(data, inventory_path)
+    return results
+
+# ============================================================
+# 数据回流
+# ============================================================
+
+
+def backfill_metrics(metrics_file: Path,
+                     inventory_path: Path = INVENTORY_FILE) -> int:
+    """把外部指标 JSON 回填到资产库 metrics 字段。
+
+    metrics_file 格式：{"items": [{"item_id": "...", "impressions": N,
+      "clicks": N, "engagements": N, "uv": N}, ...]}
+    返回更新条数。
+    """
+    if not metrics_file.exists():
+        logger.warning("指标文件不存在: %s", metrics_file)
+        return 0
+    try:
+        mdata = json.loads(metrics_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        logger.error("解析指标文件失败: %s", e)
+        return 0
+    data = load_inventory(inventory_path)
+    by_id = {it["id"]: it for it in data["items"]}
+    updated = 0
+    for row in mdata.get("items", []):
+        rec = by_id.get(row.get("item_id"))
+        if not rec:
+            continue
+        metrics = rec.setdefault("metrics", {})
+        for k in ("impressions", "clicks", "engagements", "uv"):
+            if k in row:
+                metrics[k] = int(row.get(k, 0) or 0)
+        updated += 1
+    if updated:
+        save_inventory(data, inventory_path)
+    logger.info("数据回流完成，更新 %d 条", updated)
+    return updated
+
+# ============================================================
+# 日报 / 周报数据
+# ============================================================
+
+
+def summarize_daily(data: dict, d: date = None) -> dict:
+    """日报社媒数据板块：昨日发布数、各平台曝光/点击、引流 UV。"""
+    d = d or date.today() - timedelta(days=1)
+    ds = d.isoformat()
+    published = [i for i in data["items"]
+                 if i.get("status") == "已发布" and i.get("publish_date") == ds]
+    by_platform = {}
+    for p in PLATFORMS:
+        by_platform[p] = {"published": 0, "impressions": 0, "clicks": 0, "uv": 0}
+    for i in published:
+        p = i.get("platform")
+        m = i.get("metrics", {})
+        by_platform[p]["published"] += 1
+        by_platform[p]["impressions"] += m.get("impressions", 0)
+        by_platform[p]["clicks"] += m.get("clicks", 0)
+        by_platform[p]["uv"] += m.get("uv", 0)
+    return {
+        "date": ds,
+        "total_published": len(published),
+        "total_impressions": sum(x["impressions"] for x in by_platform.values()),
+        "total_clicks": sum(x["clicks"] for x in by_platform.values()),
+        "total_uv": sum(x["uv"] for x in by_platform.values()),
+        "by_platform": by_platform,
+    }
+
+
+def summarize_weekly(data: dict, end: date = None) -> dict:
+    """周报社媒增长复盘：总量、分平台、Top5/Bottom5、类型对比、下周建议。"""
+    end = end or date.today()
+    start = end - timedelta(days=6)
+    published = [i for i in data["items"]
+                 if i.get("status") == "已发布"
+                 and start.isoformat() <= i.get("publish_date", "") <= end.isoformat()]
+    by_platform = {p: {"published": 0, "impressions": 0, "clicks": 0, "uv": 0}
+                   for p in PLATFORMS}
+    by_type = {}
+    for i in published:
+        p, t = i.get("platform"), i.get("type")
+        m = i.get("metrics", {})
+        by_platform[p]["published"] += 1
+        by_platform[p]["impressions"] += m.get("impressions", 0)
+        by_platform[p]["clicks"] += m.get("clicks", 0)
+        by_platform[p]["uv"] += m.get("uv", 0)
+        bt = by_type.setdefault(t, {"count": 0, "impressions": 0, "clicks": 0})
+        bt["count"] += 1
+        bt["impressions"] += m.get("impressions", 0)
+        bt["clicks"] += m.get("clicks", 0)
+    # 表现分 = impressions 主 + clicks 加权
+    scored = []
+    for i in published:
+        m = i.get("metrics", {})
+        score = m.get("impressions", 0) + m.get("clicks", 0) * 3
+        scored.append({"id": i["id"], "source_article": i["source_article"],
+                       "platform": i["platform"], "type": i["type"], "score": score,
+                       **m})
+    scored.sort(key=lambda x: x["score"], reverse=True)
+    top5 = scored[:5]
+    bottom5 = scored[-5:] if len(scored) > 5 else scored
+    advice = []
+    for t, bt in sorted(by_type.items(), key=lambda x: -x[1]["impressions"]):
+        ctr = (bt["clicks"] / bt["impressions"] * 100) if bt["impressions"] else 0
+        advice.append(f"{t}: {bt['count']}条, 曝光{bt['impressions']}, CTR {ctr:.1f}%")
+    return {
+        "week_start": start.isoformat(),
+        "week_end": end.isoformat(),
+        "total_published": len(published),
+        "by_platform": by_platform,
+        "by_type": by_type,
+        "top5": top5,
+        "bottom5": bottom5,
+        "type_advice": advice,
+        "next_week_suggestion": "基于曝光/CTR 表现，优先复用高表现 type+platform 组合，减少低表现题材频次。",
+    }
+
+
+def build_report(which: str, data: dict = None, out: Path = None) -> dict:
+    data = data or load_inventory()
+    SOCIAL_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    if which == "daily":
+        payload = summarize_daily(data)
+        name = f"social_daily_{payload['date']}.json"
+    else:
+        payload = summarize_weekly(data)
+        name = f"social_weekly_{payload['week_end']}.json"
+    out = out or SOCIAL_REPORTS_DIR / name
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info("社媒%s报告已写入 %s", which, out)
+    return payload
+
+# ============================================================
+# 飞书通知（复用错误降级）
+# ============================================================
+
+
+def send_feishu(title: str, content: str) -> bool:
+    webhook = os.environ.get("FEISHU_WEBHOOK_URL", "")
+    if not webhook:
+        logger.info("未配置 FEISHU_WEBHOOK_URL，跳过飞书推送")
+        return False
+    try:
+        resp = requests.post(webhook, json={
+            "msg_type": "text",
+            "content": {"text": f"{title}\n{content}"},
+        }, timeout=15)
+        resp.raise_for_status()
+        return True
+    except Exception as e:
+        logger.warning("飞书推送失败: %s", e)
+        return False
+
+# ============================================================
+# CLI
+# ============================================================
+
+
+def _cmd_build(args) -> int:
+    data = build_inventory(top_n=args.top_n, force=args.force)
+    items = data["items"]
+    print(f"\n资产库: {INVENTORY_FILE}")
+    print(f"总素材: {len(items)} 条")
+    by_status = {}
+    by_platform = {}
+    for i in items:
+        by_status[i["status"]] = by_status.get(i["status"], 0) + 1
+        by_platform[i["platform"]] = by_platform.get(i["platform"], 0) + 1
+    print(f"状态: {by_status}")
+    print(f"平台: {by_platform}")
+    return 0
+
+
+def _cmd_list(args) -> int:
+    data = load_inventory()
+    items = filter_items(data, platform=args.platform, ctype=args.type,
+                         status=args.status, source_article=args.article)
+    print(f"筛选到 {len(items)} 条:")
+    for i in items[:args.limit]:
+        print(f"  [{i['id']}] {i['platform']:9s} {i['type']:10s} {i['status']:4s} "
+              f"{i['source_article'][:50]}")
+    return 0
+
+
+def _parse_date(arg: str):
+    """解析 CLI 日期参数：支持 today / yesterday / 明天 / 具体 YYYY-MM-DD。"""
+    if not arg:
+        return None
+    s = str(arg).strip().lower()
+    today = date.today()
+    if s in ("today", "今天", "今日"):
+        return today
+    if s in ("yesterday", "昨天"):
+        return today - timedelta(days=1)
+    if s in ("tomorrow", "明天"):
+        return today + timedelta(days=1)
+    return date.fromisoformat(arg)
+
+
+def _cmd_plan(args) -> int:
+    data = load_inventory()
+    start = _parse_date(args.date)
+    sched = build_schedule(data, start_date=start)
+    out = SOCIAL_REPORTS_DIR / f"social_schedule_{date.today().isoformat()}.json"
+    SOCIAL_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({"schedule": sched, "generated_at": datetime.now().isoformat()},
+                              ensure_ascii=False, indent=2), encoding="utf-8")
+    total = sum(len(d["slots"]) for d in sched)
+    print(f"排期计划已生成: {out}（{total} 条，{len(sched)} 天）")
+    for d in sched[:7]:
+        print(f"  {d['date']}: " + ", ".join(s["item_id"] for s in d["slots"]))
+    return 0
+
+
+def _cmd_publish(args) -> int:
+    data = load_inventory()
+    if args.date:
+        target_date = _parse_date(args.date)
+        sched = build_schedule(data, start_date=target_date)
+        target = [s for s in sched if s["date"] == target_date.isoformat()]
+        ids = [sl["item_id"] for d in target for sl in d["slots"]]
+        items = [i for i in data["items"] if i["id"] in ids]
+    elif args.item_ids:
+        ids = [x.strip() for x in args.item_ids.split(",")]
+        items = [i for i in data["items"] if i["id"] in ids]
+    else:
+        items = filter_items(data, status="待审核")[:3]
+
+    dry_run = not args.auto and not args.confirm
+    if not dry_run and not args.auto:
+        print("\n半自动模式：以下素材待发布，确认后逐个发送。")
+        for i, it in enumerate(items, 1):
+            print(f"  [{i}] {it['platform']:9s} {it['type']:10s} {it['source_article'][:45]}")
+        ans = input("确认发布以上 %d 条? [y/N] " % len(items)).strip().lower()
+        if ans not in ("y", "yes"):
+            print("已取消")
+            return 1
+
+    results = distribute_items(items, dry_run=dry_run)
+    for r in results:
+        mark = "✅" if r.get("success") else "❌"
+        detail = r.get("platforms") or r.get("error") or "queued"
+        print(f"  {mark} {r['item_id']} {r['platform']} -> {detail}")
+    ok = sum(1 for r in results if r.get("success"))
+    print(f"[SUMMARY] {ok}/{len(results)} 成功")
+    return 0 if ok == len(results) else 1
+
+
+def _cmd_backfill(args) -> int:
+    updated = backfill_metrics(Path(args.file))
+    print(f"已更新 {updated} 条素材的 metrics")
+    return 0
+
+
+def _cmd_report(args) -> int:
+    payload = build_report(args.which)
+    print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description="ChinaBound 社媒增长引擎")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("build-inventory", help="批量生成素材入库")
+    p.add_argument("--top-n", type=int, default=DEFAULT_TOP_N)
+    p.add_argument("--force", action="store_true", help="重新生成（覆盖已有签名）")
+    p.set_defaults(func=_cmd_build)
+
+    p = sub.add_parser("list", help="列出素材")
+    p.add_argument("--platform", choices=PLATFORMS)
+    p.add_argument("--type", dest="type", choices=TYPES)
+    p.add_argument("--status")
+    p.add_argument("--article")
+    p.add_argument("--limit", type=int, default=50)
+    p.set_defaults(func=_cmd_list)
+
+    p = sub.add_parser("plan", help="生成排期")
+    p.add_argument("--date")
+    p.set_defaults(func=_cmd_plan)
+
+    p = sub.add_parser("publish", help="发布（自动/半自动）")
+    p.add_argument("--auto", action="store_true", help="自动模式")
+    p.add_argument("--confirm", action="store_true", help="半自动模式（免交互，直接发布待审核）")
+    p.add_argument("--date")
+    p.add_argument("--item-ids")
+    p.set_defaults(func=_cmd_publish)
+
+    p = sub.add_parser("backfill-metrics", help="数据回流")
+    p.add_argument("--file", required=True)
+    p.set_defaults(func=_cmd_backfill)
+
+    p = sub.add_parser("report", help="社媒日报/周报")
+    p.add_argument("which", choices=["daily", "weekly"])
+    p.set_defaults(func=_cmd_report)
+
+    args = ap.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

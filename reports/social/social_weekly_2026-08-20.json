@@ -1,0 +1,36 @@
+{
+  "week_start": "2026-08-14",
+  "week_end": "2026-08-20",
+  "total_published": 0,
+  "by_platform": {
+    "ig": {
+      "published": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "pinterest": {
+      "published": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "x": {
+      "published": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "fb": {
+      "published": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    }
+  },
+  "by_type": {},
+  "top5": [],
+  "bottom5": [],
+  "type_advice": [],
+  "next_week_suggestion": "基于曝光/CTR 表现，优先复用高表现 type+platform 组合，减少低表现题材频次。"
+}
