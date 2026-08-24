@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 feishu_quarterly_report.py - ChinaBound Travel 飞书季度报推送
 功能：季度运营数据 + 年度 OKR 进度 + 上季度计划复盘 + 下季度计划
@@ -315,8 +315,11 @@ class FeishuQuarterlyReporter:
     def _fetch_quarterly_mailerlite(self) -> dict:
         if not MAILERLITE_API_TOKEN:
             return {"ml_available": False, "ml_error": "MAILERLITE_API_TOKEN 未配置"}
+        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
+        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
+        clean_token = "".join(c for c in clean_token if ord(c) < 128)
         try:
-            headers = {"Authorization": f"Bearer {MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
+            headers = {"Authorization": f"Bearer {clean_token}", "Content-Type": "application/json"}
             resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers,
                                 params={"limit": 1}, timeout=15)
             if resp.status_code != 200:

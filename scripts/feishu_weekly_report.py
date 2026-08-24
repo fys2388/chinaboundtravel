@@ -485,13 +485,35 @@ class FeishuWeeklyReporter:
         if not MAILERLITE_API_TOKEN:
             return {"ml_available": False, "ml_error": "MAILERLITE_API_TOKEN 未配置"}
 
+        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
+        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
+        clean_token = "".join(c for c in clean_token if ord(c) < 128)
+
         try:
-            headers = {"Authorization": f"Bearer {MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
+            headers = {"Authorization": f"Bearer {clean_token}", "Content-Type": "application/json"}
             resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params={"limit": 1}, timeout=15)
             if resp.status_code != 200:
                 print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {resp.text[:150]}")
                 return {"ml_available": False, "ml_error": f"MailerLite API 认证失败（HTTP {resp.status_code}）"}
-            total_subscribers = int(resp.headers.get("x-total-count", "0"))
+            # 分页统计订阅者总数（新版 API 的 x-total-count / meta.total 可能缺失）
+            total_subscribers = 0
+            _cursor = None
+            while True:
+                _params = {"limit": 100}
+                if _cursor:
+                    _params["cursor"] = _cursor
+                _r = requests.get("https://connect.mailerlite.com/api/subscribers",
+                                  headers=headers, params=_params, timeout=15)
+                if _r.status_code == 200:
+                    _d = _r.json()
+                    total_subscribers += len(_d.get("data", []))
+                    _cursor = (_d.get("meta") or {}).get("next_cursor")
+                    if not _cursor:
+                        break
+                    if total_subscribers >= 10000:
+                        break
+                else:
+                    break
 
             today = datetime.now()
             week_start = (today - timedelta(days=today.weekday() + 7)).strftime("%Y-%m-%d")
@@ -1040,6 +1062,23 @@ class FeishuWeeklyReporter:
 - **外链增长**：本周新增 0 条 / 累计 0 条
 - **关键词排名**：🔌 待接入 Ahrefs / GSC 关键词数据"""
 
+        # 分产品联盟转化统计（各品类 CTA 曝光面 + 点击率对比）
+        try:
+            from affiliate_product_stats import product_summary
+            _prod_rows = product_summary()
+            _prod_cn = {"flight": "机票", "insurance": "旅行保险", "esim": "eSIM",
+                        "hotel": "酒店", "tour": "一日游/门票"}
+            _prod_lines = ["| 品类 | 覆盖文章 | CTA数 | 点击 | CTR |",
+                           "| :--- | :--- | :--- | :--- | :--- |"]
+            for _r in _prod_rows:
+                _ctr = f"{_r['ctr_pct']:.2f}%" if _r.get('ctr_pct') else "-"
+                _clk = f"{_r['clicks']:,}" if _r.get('clicks') else "-"
+                _prod_lines.append(f"| {_prod_cn.get(_r['product'], _r['product'])} | "
+                                   f"{_r['posts']} | {_r['cta_count']} | {_clk} | {_ctr} |")
+            _product_stats_table = "\n".join(_prod_lines)
+        except Exception:
+            _product_stats_table = "（分产品统计暂不可用）"
+
         affiliate_section = f"""---
 ## 💸 联盟变现诊断
 
@@ -1050,6 +1089,9 @@ class FeishuWeeklyReporter:
 | 点击量 | {tp_clicks} 次 | - | 0% |
 | 订单数 | {tp_bookings} 单 | - | 0% |
 | 佣金收入 | ${tp_revenue:.2f} | - | - |
+
+### 📊 分产品转化对比
+{_product_stats_table}
 
 ### 🩺 自动诊断结论
 ⚠️ **供给侧提示：变现链路待验证（Revenue NOT_AVAILABLE，非故障）**
