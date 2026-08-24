@@ -8,7 +8,55 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ========== 配置 ==========
 BASE_DIR = Path(__file__).parent.parent
-WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev/publish"
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BASE_DIR / ".env")
+except ImportError:
+    pass
+
+# P1-GROWTH-28A: Worker 地址从 .env 读取，禁止硬编码旧地址。
+LEGACY_WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev"
+BUFFER_WORKER_URL = (os.getenv("BUFFER_WORKER_URL") or LEGACY_WORKER_URL).strip().rstrip("/")  # 主账户 IG/X/FB
+NEW_BUFFER_WORKER_URL = (os.getenv("NEW_BUFFER_WORKER_URL") or "").strip().rstrip("/")  # 长尾账户 Pinterest
+
+# 双账户路由（P1-GROWTH-28A）：
+#   ig_main / ig_story / x_promo -> BUFFER_WORKER_URL（主账户）
+#   pin_secondary -> NEW_BUFFER_WORKER_URL（Pinterest 长尾流量账户）
+MAIN_PLATFORMS = ["x", "facebook", "instagram"]
+PINTEREST_PLATFORMS = ["pinterest"]
+VARIANT_PLATFORMS = {
+    "ig_main": ["instagram"],
+    "ig_story": ["instagram"],
+    "x_promo": ["x"],
+    "pin_secondary": ["pinterest"],
+}
+
+try:
+    from zoneinfo import ZoneInfo
+    EST_TZ = ZoneInfo("America/New_York")
+except Exception:
+    EST_TZ = timezone(timedelta(hours=-5))
+
+# 黄金时段：20:00-22:00 EST（排期时间统一美东时间）
+GOLDEN_HOUR_START_EST, GOLDEN_HOUR_END_EST = 20, 22
+
+def now_est():
+    """当前时间统一转换为美东时间（发布/排期口径）。"""
+    return datetime.now(EST_TZ)
+
+def is_golden_hour_est(dt=None):
+    dt = dt or now_est()
+    return GOLDEN_HOUR_START_EST <= dt.hour < GOLDEN_HOUR_END_EST
+
+def worker_url_for_variant(variant):
+    """双账户路由：pin_secondary -> NEW_BUFFER_WORKER_URL；其余 -> BUFFER_WORKER_URL。"""
+    platforms = VARIANT_PLATFORMS.get(variant, MAIN_PLATFORMS)
+    if "pinterest" in platforms:
+        if not NEW_BUFFER_WORKER_URL:
+            print("[WARN] NEW_BUFFER_WORKER_URL 未配置，Pinterest 请求回退到 BUFFER_WORKER_URL（需配置 .env）")
+            return BUFFER_WORKER_URL + "/publish", platforms, True
+        return NEW_BUFFER_WORKER_URL + "/publish", platforms, False
+    return BUFFER_WORKER_URL + "/publish", platforms, False
 SITE_DOMAIN = "chinaboundtravel.com"
 DAILY_SOCIAL_LIMIT = 5  # 每日社媒发布上限（与生成器 manifest 统一为 5，消除 2/5 不一致）
 COVER_BASE = "static/img/china-dest"
@@ -474,6 +522,12 @@ def update_article_cover(md_path: Path, cover_url: str):
 
 def publish_to_worker(article: dict, cover_url: str, custom_text: str = None, variant: str = "main") -> dict:
     """调用 Cloudflare Worker 发布到多平台"""
+    # P1-GROWTH-28A: 双账户路由 - Pinterest 长尾账户走 NEW_BUFFER_WORKER_URL，其余走主账户
+    worker_url, platforms, fell_back = worker_url_for_variant(variant)
+    if fell_back:
+        print("[ROUTE] Pinterest 目标回退到主 Worker（NEW_BUFFER_WORKER_URL 未配置）")
+    else:
+        print(f"[ROUTE] variant={variant} -> {worker_url}")
     payload = {
         "title": article["title"],
         "desc": custom_text or article["description"],
@@ -484,9 +538,10 @@ def publish_to_worker(article: dict, cover_url: str, custom_text: str = None, va
         "content_variant": variant,
         "source_workflow": "social_publisher"
     }
+    payload["platforms"] = platforms
 
     try:
-        resp = requests.post(WORKER_URL, json=payload, timeout=90)
+        resp = requests.post(worker_url, json=payload, timeout=90)
         resp.raise_for_status()
         return resp.json()
     except Exception as e:
@@ -494,12 +549,32 @@ def publish_to_worker(article: dict, cover_url: str, custom_text: str = None, va
 
 
 def get_manifest():
+
     """读取发布清单"""
     manifest_path = BASE_DIR / "manifest.json"
     if manifest_path.exists():
         with open(manifest_path, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {"last_social_publish": "2020-01-01"}
+
+
+def check_worker_health(timeout: int = 10) -> list:
+    """P1-GROWTH-28A: 探测两个 Worker 的 /health 接口，异常返回列表（供自动告警）。"""
+    issues = []
+    for label, base in (("BUFFER_WORKER_URL", BUFFER_WORKER_URL),
+                        ("NEW_BUFFER_WORKER_URL", NEW_BUFFER_WORKER_URL)):
+        if not base:
+            issues.append(f"{label}: 未配置（.env 缺少该键）")
+            continue
+        try:
+            r = requests.get(base + "/health", timeout=timeout)
+            if r.status_code != 200:
+                issues.append(f"{label}: HTTP {r.status_code} ({base}/health)")
+            else:
+                print(f"[HEALTH] {label} OK ({base}/health)")
+        except Exception as e:
+            issues.append(f"{label}: {e} ({base}/health)")
+    return issues
 
 
 def update_manifest():
@@ -614,7 +689,11 @@ def send_feishu_notification(results: list):
 
 def run():
     """主流程：每次只处理一篇最新文章，生成多条不同内容的社媒帖子"""
-    print(f"[{datetime.now(timezone.utc)}] 开始扫描新文章...")
+    # P1-GROWTH-28A: 健康检查（探测两个 Worker 的 /health，异常自动告警）
+    health_issues = check_worker_health()
+    for issue in health_issues:
+        print(f"[HEALTH][WARN] {issue}")
+    print(f"[{datetime.now(timezone.utc)}] 开始扫描新文章... (EST {now_est().isoformat(timespec='seconds')}, 黄金时段 {GOLDEN_HOUR_START_EST}:00-{GOLDEN_HOUR_END_EST}:00 EST)")
     manifest = get_manifest()
     last_publish = manifest.get("last_social_publish", "2020-01-01")
     print(f"上次发布时间: {last_publish}")

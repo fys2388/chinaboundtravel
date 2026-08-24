@@ -31,7 +31,49 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 POSTS_DIR = BASE_DIR / "content" / "posts"
 MANIFEST_PATH = BASE_DIR / "manifest_rotator.json"
 
-BUFFER_WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev/publish"
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BASE_DIR / ".env")
+except ImportError:
+    pass
+
+# P1-GROWTH-28A: Worker 地址从 .env 读取，禁止硬编码旧地址。
+LEGACY_WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev"
+BUFFER_WORKER_URL = (os.getenv("BUFFER_WORKER_URL") or LEGACY_WORKER_URL).strip().rstrip("/")  # 主账户 FB/IG/X
+NEW_BUFFER_WORKER_URL = (os.getenv("NEW_BUFFER_WORKER_URL") or "").strip().rstrip("/")  # 长尾账户 Pinterest
+
+# 双账户路由（P1-GROWTH-28A）：主账户平台 -> BUFFER_WORKER_URL；Pinterest -> NEW_BUFFER_WORKER_URL
+MAIN_PLATFORMS = ["x", "facebook", "instagram"]
+PINTEREST_PLATFORMS = ["pinterest"]
+PLATFORM_BY_STYLE = {"informative": MAIN_PLATFORMS, "inspirational": PINTEREST_PLATFORMS}
+
+try:
+    from zoneinfo import ZoneInfo
+    EST_TZ = ZoneInfo("America/New_York")
+except Exception:
+    EST_TZ = timezone(timedelta(hours=-5))
+
+# 黄金时段：20:00-22:00 EST（排期时间统一美东时间）
+GOLDEN_HOUR_START_EST, GOLDEN_HOUR_END_EST = 20, 22
+
+def now_est():
+    """当前时间统一转换为美东时间（发布/排期口径）。"""
+    return datetime.now(EST_TZ)
+
+def is_golden_hour_est(dt=None):
+    dt = dt or now_est()
+    return GOLDEN_HOUR_START_EST <= dt.hour < GOLDEN_HOUR_END_EST
+
+def worker_url_for_platforms(platforms):
+    """双账户路由：仅 Pinterest -> NEW_BUFFER_WORKER_URL；其余 -> BUFFER_WORKER_URL。"""
+    wants_pin = bool(set(platforms) & set(PINTEREST_PLATFORMS))
+    wants_main = bool(set(platforms) & set(MAIN_PLATFORMS))
+    if wants_pin and not wants_main:
+        if not NEW_BUFFER_WORKER_URL:
+            print("[WARN] NEW_BUFFER_WORKER_URL 未配置，Pinterest 请求回退到 BUFFER_WORKER_URL（需配置 .env）")
+            return BUFFER_WORKER_URL + "/publish", True
+        return NEW_BUFFER_WORKER_URL + "/publish", False
+    return BUFFER_WORKER_URL + "/publish", False
 SITE_DOMAIN = "chinaboundtravel.com"
 
 # 7 天冷却期：同一篇文章不重复发到同一平台
@@ -344,6 +386,24 @@ def generate_social_copies(article: dict) -> list:
 # Buffer Worker 调用
 # ============================================================
 
+def check_worker_health(timeout: int = 10) -> list:
+    """P1-GROWTH-28A: 探测两个 Worker 的 /health 接口，异常返回列表（供自动告警）。"""
+    issues = []
+    for label, base in (("BUFFER_WORKER_URL", BUFFER_WORKER_URL),
+                        ("NEW_BUFFER_WORKER_URL", NEW_BUFFER_WORKER_URL)):
+        if not base:
+            issues.append(f"{label}: 未配置（.env 缺少该键）")
+            continue
+        try:
+            r = requests.get(base + "/health", timeout=timeout)
+            if r.status_code != 200:
+                issues.append(f"{label}: HTTP {r.status_code} ({base}/health)")
+            else:
+                print(f"[HEALTH] {label} OK ({base}/health)")
+        except Exception as e:
+            issues.append(f"{label}: {e} ({base}/health)")
+    return issues
+
 
 def publish_to_buffer(article: dict, social_text: str, image_url: str, variant: str = "default") -> dict:
     """
@@ -351,6 +411,13 @@ def publish_to_buffer(article: dict, social_text: str, image_url: str, variant: 
 
     返回 Worker 的 JSON 响应。
     """
+    # P1-GROWTH-28A: 双账户路由 - informative -> 主账户(FB/IG/X)；inspirational -> Pinterest 长尾账户
+    platforms = PLATFORM_BY_STYLE.get(variant, MAIN_PLATFORMS)
+    worker_url, fell_back = worker_url_for_platforms(platforms)
+    if fell_back:
+        print("[ROUTE] Pinterest 目标回退到主 Worker（NEW_BUFFER_WORKER_URL 未配置）")
+    else:
+        print(f"[ROUTE] style={variant} -> {worker_url}")
     payload = {
         "title": article["title"],
         "desc": social_text,
@@ -360,10 +427,11 @@ def publish_to_buffer(article: dict, social_text: str, image_url: str, variant: 
         "content_id": article.get("content_id", ""),
         "content_variant": variant,
         "source_workflow": "content_rotation",
+        "platforms": platforms,
     }
 
     try:
-        resp = requests.post(BUFFER_WORKER_URL, json=payload, timeout=90)
+        resp = requests.post(worker_url, json=payload, timeout=90)
         resp.raise_for_status()
         return resp.json()
     except requests.exceptions.Timeout:
@@ -422,8 +490,13 @@ def run(count: int = 2, dry_run: bool = False):
     """
     主流程：选取文章 -> 生成文案 -> 发布 -> 更新 manifest。
     """
+    # P1-GROWTH-28A: 健康检查（探测两个 Worker 的 /health，异常自动告警）
+    health_issues = check_worker_health()
+    if health_issues:
+        for issue in health_issues:
+            print(f"[HEALTH][WARN] {issue}")
     print(f"{'=' * 60}")
-    print(f"Content Rotator - {datetime.now(timezone.utc).isoformat()}")
+    print(f"Content Rotator - UTC {datetime.now(timezone.utc).isoformat()} / EST {now_est().isoformat(timespec='seconds')} (黄金时段 {GOLDEN_HOUR_START_EST}:00-{GOLDEN_HOUR_END_EST}:00 EST)")
     print(f"Mode: {'DRY RUN' if dry_run else 'LIVE'} | Count: {count}")
     print(f"{'=' * 60}")
 

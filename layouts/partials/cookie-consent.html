@@ -296,6 +296,12 @@
         }
         // Marketing: Adjust scripts that load marketing/tracking
         // (Stripe and affiliate links are always loaded as they are functional, not tracking)
+        // Marketing: notify gated marketing scripts (e.g. Travelpayouts Drive) to load now.
+        try {
+            window.dispatchEvent(new CustomEvent('cbt-gdpr-consent-change', {
+                detail: { marketing: !!consent.marketing, decision: consent.decision }
+            }));
+        } catch (e) { }
     }
 })();
 </script>

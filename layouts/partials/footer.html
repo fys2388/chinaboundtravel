@@ -59,6 +59,9 @@
 
 {{ partial "extend_footer.html" . }}
 
+{{/* P1-GROWTH-28A: site-wide GDPR cookie consent (marketing gate for Drive/analytics) */}}
+{{ partial "cookie-consent.html" . }}
+
 <script>
 // Menu scroll position
 let menu = document.getElementById('menu');

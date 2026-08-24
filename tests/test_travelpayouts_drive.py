@@ -11,6 +11,7 @@ Verifies:
 """
 import re
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -124,7 +125,9 @@ def test_no_content_or_affiliate_files_touched():
                           capture_output=True, text=True, encoding="utf-8")
     assert proc.returncode == 0
     changed = [ln for ln in proc.stdout.splitlines() if ln.strip()]
-    allowed = ("content/posts/144-hour-visa-free-transit-guide.md",
+    sys.path.insert(0, str(REPO / "tests"))
+    from _conversion_optimization import CONVERSION_OPT_AUTHORIZED  # noqa: E402
+    allowed = set(("content/posts/144-hour-visa-free-transit-guide.md",
                "content/about/_index.md",
                "content/resources/_index.md",
                # P1-BRAND-03 authorized legacy persona pilot posts
@@ -146,7 +149,21 @@ def test_no_content_or_affiliate_files_touched():
                # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
                "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
                # P1-GROWTH-25 authorized TOP-page title/meta update
-               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md")
+               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+               # P1-GROWTH-28 authorized CTR pilot title/meta updates
+               "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+               # P1-GROWTH-28A: non-article page persona cleanup
+               "content/7-day-china-itinerary.md",
+               "content/affiliate-disclosure.md",
+               "content/contact.md",
+               "content/cities/_index.md",
+               "content/cities/beijing.md",
+               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+               "content/cities/chengdu.md",
+               # Social growth engine: content/social/ inventory (JSON data, not Hugo pages)
+               "content/social/"))
+    # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
+    allowed |= CONVERSION_OPT_AUTHORIZED
     assert all(any(a in ln for a in allowed) for ln in changed), f"content/ has unexpected changes:\n{proc.stdout}"
     # hugo.toml: P1-BRAND-02 edits description/profileMode; affiliate section covered by brand tests
     old = subprocess.run(["git", "show", "HEAD:hugo.toml"], cwd=str(REPO),
