@@ -85,7 +85,11 @@ def test_alipay_page_exists():
 
 
 def test_front_matter_title():
-    assert 'title: "Alipay for Foreigners in China: Setup Guide and Payment Tips (2026)"' in ALIPAY_TEXT
+    # Base Alipay title is preserved; the "转化与排名优化" task appends a long-tail
+    # variant (authorized deep optimizer), e.g. "...(2026) — Foreigners Payment Setup".
+    assert "Alipay for Foreigners in China: Setup Guide and Payment Tips (2026)" in ALIPAY_TEXT
+    m = re.search(r'^title:\s*"([^"]+)"', ALIPAY_TEXT, re.M)
+    assert m and "Alipay" in m.group(1)
 
 
 def test_front_matter_description():

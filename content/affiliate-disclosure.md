@@ -10,7 +10,7 @@ This website is a participant in various affiliate advertising programs designed
 
 ### What Does This Mean for You?
 
-When you click on affiliate links on this website and make a purchase, I may earn a small commission at no extra cost to you. This helps support the ongoing operation of this site, including creating new content and covering hosting costs.
+When you click on affiliate links on this website and make a purchase, we may earn a small commission at no extra cost to you. This helps support the ongoing operation of this site, including creating new content and covering hosting costs.
 
 ### Affiliates We Work With
 
@@ -25,15 +25,15 @@ Here are some of the affiliate programs we participate in:
 
 ### Our Commitment to You
 
-- **Honesty First**: I only recommend products and services I personally use, trust, and believe will benefit my readers.
-- **Unbiased Reviews**: When reviewing products, I aim to provide balanced opinions including both pros and cons.
+- **Honesty First**: We only recommend products and services our editorial team has researched, trusts, and believes will benefit our readers.
+- **Unbiased Reviews**: When reviewing products, we aim to provide balanced opinions including both pros and cons.
 - **No Pressure**: You're always free to use or not use any affiliate links. The information on this site is provided for educational purposes first and foremost.
 
 ### FTC Compliance
 
 This disclosure complies with the Federal Trade Commission (FTC) guidelines regarding the use of endorsements and testimonials in advertising.
 
-If you have any questions about our affiliate relationships, feel free to contact me at hello@chinaboundtravel.com.
+If you have any questions about our affiliate relationships, feel free to contact us at hello@chinaboundtravel.com.
 
 ---
 

@@ -1,12 +1,13 @@
-﻿#!/usr/bin/env python3
-"""P1-BRAND-02: ChinaBound Travel brand identity audit.
+#!/usr/bin/env python3
+"""P1-BRAND-02 + P1-GROWTH-28A: ChinaBound Travel brand identity audit.
 
-Checks the 5 brand-layer surfaces:
-  1. Homepage        (layouts/index.html, layouts/partials/home-banner.html, hugo.toml profileMode)
-  2. Resources page  (content/resources/_index.md)
-  3. Author blocks   (sidebar-author.html, affiliate-intro in single/cities, affiliate-disclosure, travel-promo)
-  4. About page      (content/about/_index.md)
-  5. Schema author   (layouts/partials/templates/schema_json.html, hugo.toml author)
+Covers the full brand layer with no blind spots:
+  1. ALL HTML templates under layouts/ (homepage, author blocks, head/footer,
+     cookie consent, email subscribe, OG/schema templates, shortcodes)
+  2. ALL non-draft markdown pages under content/ (root pages, cities, resources,
+     about, pricing, etc.) - content/posts and draft folders are handled by
+     the separate legacy scan (--legacy), not the brand-layer scan
+  3. hugo.toml homepage/config layer
 
 Detects:
   - forbidden_persona_phrases  (from config/content_governance.json)
@@ -32,24 +33,41 @@ BLOG_ROOT = Path(__file__).resolve().parent.parent
 GOVERNANCE = BLOG_ROOT / "config" / "content_governance.json"
 REPORTS = BLOG_ROOT / "reports"
 
-BRAND_FILES = [
-    # (path, layer, kind)
-    ("layouts/index.html", "homepage", "template"),
-    ("layouts/partials/home-banner.html", "homepage", "template"),
-    ("hugo.toml", "homepage", "config"),
-    ("content/resources/_index.md", "resources", "content"),
-    ("layouts/partials/sidebar-author.html", "author_block", "template"),
-    ("layouts/partials/author.html", "author_block", "template"),
-    ("layouts/_default/single.html", "author_block", "template"),
-    ("layouts/cities/single.html", "author_block", "template"),
-    ("layouts/partials/affiliate-disclosure.html", "author_block", "template"),
-    ("layouts/shortcodes/affiliate-disclosure.html", "author_block", "template"),
-    ("layouts/partials/travel-promo.html", "author_block", "template"),
-    ("content/about/_index.md", "about", "content"),
-    ("layouts/partials/templates/schema_json.html", "schema", "template"),
-    ("content/pricing.md", "pricing", "content"),
-    ("layouts/partials/pricing-table.html", "pricing", "template"),
-]
+# Draft / internal folders that are not published pages (Hugo ignores them or
+# they are working files), so they are excluded from the brand-layer scan.
+NON_PAGE_DIRS = {"_draft", "drafts", ".archived", ".audit_backup"}
+
+
+def discover_brand_files() -> list[tuple[str, str, str]]:
+    """Programmatic brand-layer inventory: (rel_path, layer, kind).
+
+    - layouts/**/*.html: every template
+    - content/**/*.md outside content/posts and draft folders: every page
+    - hugo.toml: homepage config
+    """
+    rows: list[tuple[str, str, str]] = [("hugo.toml", "homepage", "config")]
+    for f in sorted((BLOG_ROOT / "layouts").rglob("*.html")):
+        rel = f.relative_to(BLOG_ROOT).as_posix()
+        layer = "homepage" if rel == "layouts/index.html" else "template"
+        rows.append((rel, layer, "template"))
+    for f in sorted((BLOG_ROOT / "content").rglob("*.md")):
+        parts = f.relative_to(BLOG_ROOT / "content").parts
+        if "posts" in parts:
+            continue
+        if any(x in parts for x in NON_PAGE_DIRS):
+            continue
+        rel = f.relative_to(BLOG_ROOT).as_posix()
+        if rel.startswith("content/resources"):
+            layer = "resources"
+        elif rel.startswith("content/about"):
+            layer = "about"
+        elif rel.startswith("content/cities"):
+            layer = "cities"
+        else:
+            layer = "content"
+        rows.append((rel, layer, "content"))
+    return rows
+
 
 # Rule-based fictional-experience claim patterns (brand layer, not full content governance)
 FICTIONAL_PATTERNS = [
@@ -57,11 +75,11 @@ FICTIONAL_PATTERNS = [
     r"American expat",
     r"American (living in|in) Chengdu",
     r"Chengdu (husband|wife)",
-    r"my wife",
+    r"\bmy wife\b",
     r"years? (of )?living in (China|Chengdu)",
     r"years? of China travel experience",
     r"\d+[- ]year expat",
-    r"(first trip|my first trip)",
+    r"\b(first trip|my first trip)\b",
     r"I (lived|moved) (in|to)",
     r"I remember my",
     r"tested daily",
@@ -98,7 +116,7 @@ def scan_text(text: str) -> dict:
 
 def scan_brand() -> list[dict]:
     rows = []
-    for rel, layer, kind in BRAND_FILES:
+    for rel, layer, kind in discover_brand_files():
         p = BLOG_ROOT / rel
         if not p.exists():
             rows.append({"path": rel, "layer": layer, "status": "MISSING",
@@ -124,16 +142,18 @@ def scan_brand() -> list[dict]:
 
 def write_brand_report(rows: list[dict], generated: str) -> Path:
     out = REPORTS / "P1_BRAND_02_BRAND_IDENTITY_AUDIT.md"
+    n_fail = sum(1 for r in rows if r["status"] == "FAIL")
+    n_missing = sum(1 for r in rows if r["status"] == "MISSING")
     lines = ["# P1-BRAND-02 — Brand Identity Audit", "",
              f"- Generated: {generated}", "",
-             "品牌层检查：Homepage / Resources / Author Block / About / Schema。", "",
+             "品牌层检查：全部 HTML 模板 + 全部非文章 markdown 页面 + hugo.toml（content/posts 由 --legacy 单独扫描）。", "",
              "| layer | file | status | forbidden | fictional | editorial |",
              "|---|---|---|---|---|---|"]
     for r in rows:
         lines.append(f"| {r['layer']} | {r['path']} | {r['status']} | "
                      f"{'; '.join(r['forbidden']) or '-'} | {'; '.join(r['fictional']) or '-'} | {r['editorial']} |")
     n_pass = sum(1 for r in rows if r["status"] == "PASS")
-    lines += ["", f"Summary: {n_pass}/{len(rows)} PASS (WARN = editorial language not yet present, no violations).",
+    lines += ["", f"Summary: {n_pass}/{len(rows)} PASS; {n_fail} FAIL; {n_missing} MISSING (WARN = editorial language not yet present, no violations).",
               "", "LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes."]
     out.write_text("\n".join(lines), encoding="utf-8")
     return out

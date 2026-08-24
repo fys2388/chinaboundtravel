@@ -20,6 +20,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
+sys.path.insert(0, str(REPO / "tests"))
+from _conversion_optimization import CONVERSION_OPT_AUTHORIZED  # noqa: E402
 
 from persona_guard import PersonaGuard  # noqa: E402
 from audit_internal_links import audit  # noqa: E402
@@ -229,5 +231,10 @@ def test_brand03_scope_only_three_pilot_posts():
                                    # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
                                    "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
                                    # P1-GROWTH-25 authorized TOP-page title/meta update
-                                   "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
+                                   "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+                                   # P1-GROWTH-28 authorized CTR pilot title/meta updates
+                                   "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+                                   "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md"}
+    # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
+    allowed = allowed | CONVERSION_OPT_AUTHORIZED
     assert set(posts_changed) <= allowed, posts_changed

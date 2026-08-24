@@ -63,4 +63,4 @@ These ancient alleyways are Beijing's soul. Nanluoguxiang is the famous one (and
 
 ---
 
-*Last updated: May 2026. Have a Beijing tip I missed? [Email me](mailto:hello@chinaboundtravel.com).*
+*Last updated: May 2026. Have a Beijing tip I missed? [Email us](mailto:hello@chinaboundtravel.com).*

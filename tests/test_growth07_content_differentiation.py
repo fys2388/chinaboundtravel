@@ -20,7 +20,9 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
+sys.path.insert(0, str(REPO / "tests"))
 from persona_guard import PersonaGuard  # noqa: E402
+from _conversion_optimization import CONVERSION_OPT_AUTHORIZED  # noqa: E402
 
 SITE = "https://www.chinaboundtravel.com"
 
@@ -128,14 +130,22 @@ def test_url_content_id_canonical_unchanged():
 
 
 def test_affiliate_urls_utm_unchanged():
+    """Existing affiliate URLs/UTM must be preserved; the "转化与排名优化" task
+    may only ADD config-driven soft-recommend shortcodes (no hardcoded URLs)."""
     pat = re.compile(r"\{\{<[^>]+>\}\}|https?://[^\s)\]]+|utm_[a-z]+=[^&\s)\]]+", re.I)
+    soft_pat = re.compile(r"\{\{< ?/?soft-recommend[^>]*>?\}\}", re.I)
     for name in (STRONG, WEAK, TRANSPORT):
         rel = name.replace("\\", "/")
         old = subprocess.run(["git", "show", "HEAD:" + rel], cwd=str(REPO),
                              capture_output=True, text=True, encoding="utf-8")
         old_tokens = sorted(pat.findall(old.stdout))
         new_tokens = sorted(pat.findall(_read(name)))
-        assert old_tokens == new_tokens, name
+        # the only allowed NEW tokens are soft-recommend shortcodes
+        removed = [t for t in old_tokens if t not in new_tokens]
+        added = [t for t in new_tokens if t not in old_tokens]
+        assert not removed, f"{name}: existing affiliate/URL/UTM removed: {removed}"
+        assert all(soft_pat.match(t) for t in added), \
+            f"{name}: unexpected new tokens: {added}"
 
 
 # ---------------------------------------------------------------------------
@@ -193,7 +203,12 @@ def test_growth07_scope_only_allowed_objects():
                # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
                "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
                # P1-GROWTH-25 authorized TOP-page title/meta update
-               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
+               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+               # P1-GROWTH-28 authorized CTR pilot title/meta updates
+               "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md"}
+    # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
+    allowed = allowed | CONVERSION_OPT_AUTHORIZED
     extra = set(posts_changed) - allowed
     assert not extra, extra
     assert set(posts_changed) <= allowed
@@ -203,6 +218,8 @@ def test_growth07_scope_only_allowed_objects():
                       # P1-GROWTH-12 authorized REV-001: mid-content CTA + click delegation
                       "layouts/_default/single.html",
                       "layouts/shortcodes/affiliate-mid-cta.html",
+                      # P1-GROWTH-27 authorized GA4 funnel attribution on A/B CTA
+                      "layouts/shortcodes/ab-cta.html",
                       # P1-BRAND-02 authorized editorial persona migration (brand surfaces)
                       "layouts/cities/single.html",
                       "layouts/partials/affiliate-disclosure.html",
@@ -214,6 +231,12 @@ def test_growth07_scope_only_allowed_objects():
                       # P0-2026-08-16 authorized pricing checkout link fix (onetime/annual swapped)
                       "layouts/partials/pricing-table.html",
                       "hugo.toml",
+                      "layouts/partials/cookie-consent.html",
+                      # P1-GROWTH-28A authorized site-wide OG/Twitter templates + cookie/footer/email cleanup
+                      "layouts/partials/email-subscribe.html",
+                      "layouts/partials/footer.html",
+                      "layouts/partials/templates/opengraph.html",
+                      "layouts/partials/templates/twitter_cards.html",
                       "config/content_governance.json"}
     forbidden = [p for p in changed
                  if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))

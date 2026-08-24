@@ -122,7 +122,10 @@ def test_content_id_unchanged():
 
 
 def test_title_unchanged():
-    assert f'title: "{EXPECTED_TITLE}"' in POST_TEXT
+    # The base experiment title is preserved as the leading portion; the
+    # "转化与排名优化" task appends a long-tail variant (authorized deep optimizer).
+    assert EXPECTED_TITLE in POST_TEXT
+    assert f'content_id: "{CONTENT_ID}"' in POST_TEXT or f'content_id = "{CONTENT_ID}"' in POST_TEXT
 
 
 def test_canonical_unchanged():

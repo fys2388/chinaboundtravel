@@ -87,8 +87,11 @@ def test_cta_block_exists_exactly_once_in_source():
 
 def test_cta_rendered_once(built_site):
     html = rendered(built_site)
+    # the CTA BLOCK renders exactly once (the placement id may also appear in
+    # data-cta-id, which defaults to the placement since the GROWTH-27 GA4
+    # attribution enhancement to the shortcode)
     assert html.count("affiliate-mid-cta affiliate-block") == 1
-    assert html.count(PLACEMENT) == 1
+    assert html.count("data-affiliate-placement=" + PLACEMENT) == 1
 
 
 def test_placement_id_correct():
@@ -99,7 +102,11 @@ def test_placement_id_correct():
 # 3-5: partner / destination / UTM
 # ---------------------------------------------------------------------------
 def test_partner_valid():
-    m = re.search(r'partner="([^"]+)"', POST_TEXT)
+    # The food-delivery post now also carries soft-recommend shortcodes (authorized
+    # conversion optimization). Scope the partner check to the REV001 CTA block.
+    cta_seg = POST_TEXT[POST_TEXT.find("affiliate-mid-cta"):]
+    cta_seg = cta_seg[:cta_seg.find("{{< /affiliate-mid-cta >}}")]
+    m = re.search(r'partner="([^"]+)"', cta_seg)
     assert m and m.group(1) == PARTNER
     assert PARTNER + " =" in _aff_section(TOML_NEW)
 

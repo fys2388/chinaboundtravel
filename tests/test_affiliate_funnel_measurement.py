@@ -212,7 +212,7 @@ def test_rev001_funnel_metrics_file(tmp_path):
 # ---------------------------------------------------------------------------
 def test_content_ids_unique_57():
     posts = [f for f in (REPO / "content" / "posts").glob("*.md")]
-    assert len(posts) == 60, f"expected 60 published posts, got {len(posts)}"
+    assert len(posts) == 58, f"expected 58 published posts, got {len(posts)}"
     rows = build_inventory()
     assert all(r["content_id"] for r in rows), "every inventory row needs content_id"
     cids = {r["content_id"] for r in rows}

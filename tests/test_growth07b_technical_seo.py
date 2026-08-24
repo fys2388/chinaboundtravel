@@ -186,9 +186,12 @@ def test_affiliate_urls_utm_unchanged():
         old = subprocess.run(["git", "show", "HEAD:" + rel], cwd=str(REPO),
                              capture_output=True, text=True, encoding="utf-8")
         assert old.returncode == 0, old.stderr
-        old_tokens = sorted(pat.findall(old.stdout))
-        new_tokens = sorted(pat.findall(_read(rel)))
         # P1-GROWTH-15 authorized a single new mid-content CTA on GUIDE; all
         # pre-existing affiliate tokens/URLs/UTMs must remain (old subset of new).
+        # P1-GROWTH-27 authorized adding cta_id/experiment_id params to existing
+        # mid-content CTAs (GA4 attribution); normalize them away for token comparison.
+        norm = lambda t: re.sub(r'\s+(cta_id|experiment_id)="[^"]*"', '', t)
+        old_tokens = sorted(norm(t) for t in pat.findall(old.stdout))
+        new_tokens = sorted(norm(t) for t in pat.findall(_read(rel)))
         missing = [tok for tok in old_tokens if tok not in new_tokens]
         assert not missing, f"{rel} lost affiliate tokens: {missing}"

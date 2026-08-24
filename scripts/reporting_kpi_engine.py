@@ -419,6 +419,12 @@ def build_affiliate() -> dict:
     rev1_row = rev1[0] if rev1 else {}
     clicks_28d = _reg_int(dash_text, r"affiliate_click events:\s*([0-9]+)")
     scope_note = "REV001 page only"
+    # P1-GROWTH-28A: same-source guards. Rates must only use REV001 funnel rows,
+    # never mix GA4 sitewide clicks as the guard for a REV001-scope value.
+    rev1_clicks = _int(rev1_row.get("affiliate_clicks")) or 0
+    rev1_impressions = _int(rev1_row.get("cta_impressions")) or 0
+    rev1_outbound = _int(rev1_row.get("outbound_success")) or 0
+    rev1_rate_sample = rev1_impressions or rev1_clicks
     kpis = [
         _kpi("cta_inventory_rows", "Affiliate CTA inventory rows", cta_rows, "rows",
              "CACHED", "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
@@ -435,28 +441,28 @@ def build_affiliate() -> dict:
              _int(rev1_row.get("cta_impressions")), "impressions", "CACHED",
              "reports/revenue/REV001_FUNNEL_METRICS.csv", scope_note,
              "daily", 0, "2026-08-17",
-             INSUFFICIENT_SAMPLE if (_int(rev1_row.get("cta_impressions")) or 0) < LOW_CLICK_THRESHOLD else "OK"),
+             INSUFFICIENT_SAMPLE if rev1_impressions < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("outbound_success", "Affiliate outbound events (REV001 scope)",
              _int(rev1_row.get("outbound_success")), "events", "CACHED",
              "reports/revenue/REV001_FUNNEL_METRICS.csv", scope_note,
              "daily", 0, "2026-08-17",
-             INSUFFICIENT_SAMPLE if (_int(rev1_row.get("outbound_success")) or 0) < LOW_CLICK_THRESHOLD else "OK"),
+             INSUFFICIENT_SAMPLE if rev1_outbound < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("click_rate", "CTA click rate (REV001 scope)",
              _num(rev1_row.get("cta_ctr")), "%", "CACHED",
-             "reports/revenue/REV001_FUNNEL_METRICS.csv", scope_note,
+             "reports/revenue/REV001_FUNNEL_METRICS.csv", "clicks / impressions, same source (REV001_FUNNEL_METRICS.csv)",
              "daily", 0.0, "2026-08-17",
-             INSUFFICIENT_SAMPLE if (clicks_28d or 0) < LOW_CLICK_THRESHOLD else "OK"),
+             INSUFFICIENT_SAMPLE if rev1_rate_sample < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("outbound_rate", "Outbound rate (REV001 scope)",
              _num(rev1_row.get("outbound_rate")), "%", "CACHED",
              "reports/revenue/REV001_FUNNEL_METRICS.csv", scope_note,
              "daily", 0.0, "2026-08-17",
-             INSUFFICIENT_SAMPLE if (_int(rev1_row.get("outbound_success")) or 0) < LOW_CLICK_THRESHOLD else "OK"),
+             INSUFFICIENT_SAMPLE if rev1_outbound < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("clicks_per_1000_sessions", "Affiliate clicks per 1000 sessions (sitewide)",
              _num(rev1_row.get("affiliate_clicks_per_1000_sessions")), "clicks/1000",
              "CACHED", "reports/revenue/REV001_FUNNEL_METRICS.csv + REVENUE_DASHBOARD.md",
              "affiliate_clicks / sessions * 1000", "daily", 0.0,
              "2026-07-20..2026-08-16",
-             INSUFFICIENT_SAMPLE if (clicks_28d or 0) < LOW_CLICK_THRESHOLD else "OK"),
+             INSUFFICIENT_SAMPLE if rev1_clicks < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("partner_breakdown", "Partner pages/link counts and status",
              partner_breakdown, "breakdown", "CACHED",
              "reports/revenue/AFFILIATE_PARTNER_INVENTORY.csv",

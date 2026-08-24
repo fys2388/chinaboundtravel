@@ -8,11 +8,11 @@ ShowToc: "false"
 
 ## Get in Touch
 
-Have a question about traveling in China that isn't covered in our guides? Want to collaborate on content, or discuss advertising opportunities? I'd love to hear from you.
+Have a question about traveling in China that isn't covered in our guides? Want to collaborate on content, or discuss advertising opportunities? We'd love to hear from you.
 
 **Email:** joran@chinaboundtravel.com
 
-### What I Can Help With
+### What We Can Help With
 
 - China travel itinerary planning advice
 - Visa and entry requirement questions
@@ -22,8 +22,8 @@ Have a question about traveling in China that isn't covered in our guides? Want 
 
 ### Response Time
 
-I do my best to respond within 24-48 hours. For urgent travel questions, leaving a comment on the relevant article is often the fastest way to get a response, as I check comments regularly.
+We do our best to respond within 24-48 hours. For urgent travel questions, leaving a comment on the relevant article is often the fastest way to get a response, as we check comments regularly.
 
 ### Collaboration
 
-If you're a fellow travel blogger, tourism board, or hospitality brand interested in working together, please reach out with specifics about your proposal. I'm always open to authentic partnerships that benefit my readers.
+If you're a fellow travel blogger, tourism board, or hospitality brand interested in working together, please reach out with specifics about your proposal. We're always open to authentic partnerships that benefit our readers.

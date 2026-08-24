@@ -15,11 +15,14 @@ Covers (pure/deterministic, no network, no LLM):
 import re
 import subprocess
 import json
+import sys
 from pathlib import Path
 
 import pytest
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO / "tests"))
+from _conversion_optimization import CONVERSION_OPT_AUTHORIZED  # noqa: E402
 
 BRAND_FILES = {
     "homepage": ["layouts/index.html", "layouts/partials/home-banner.html", "hugo.toml"],
@@ -162,6 +165,11 @@ PILOT_POSTS = {
 GROWTH24_AUTHORIZED = {"content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md"}
 # P1-GROWTH-25 authorized TOP-page title/meta update
 GROWTH25_AUTHORIZED = {"content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
+# P1-GROWTH-28 authorized CTR pilot title/meta updates
+GROWTH28_AUTHORIZED = {
+    "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+    "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+}
 
 
 def test_posts_untouched():
@@ -169,7 +177,9 @@ def test_posts_untouched():
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/posts/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = {p for p in proc.stdout.splitlines() if p}
-    assert changed <= PILOT_POSTS | REV002_AUTHORIZED | GROWTH24_AUTHORIZED | GROWTH25_AUTHORIZED, f"unexpected posts changed:\n{changed}"
+    allowed = (PILOT_POSTS | REV002_AUTHORIZED | GROWTH24_AUTHORIZED |
+               GROWTH25_AUTHORIZED | GROWTH28_AUTHORIZED | CONVERSION_OPT_AUTHORIZED)
+    assert changed <= allowed, f"unexpected posts changed:\n{changed - allowed}"
 
 
 def test_non_brand_content_untouched():
@@ -193,8 +203,20 @@ def test_non_brand_content_untouched():
                # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
                "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
                # P1-GROWTH-25 authorized TOP-page title/meta update
-               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md"}
-    assert set(changed) <= allowed, f"unexpected content changes: {changed}"
+               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+               # P1-GROWTH-28 authorized CTR pilot title/meta updates
+               "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+               # P1-GROWTH-28A: non-article page persona cleanup
+               "content/7-day-china-itinerary.md",
+               "content/affiliate-disclosure.md",
+               "content/contact.md",
+               "content/cities/_index.md",
+               "content/cities/beijing.md",
+               "content/cities/chengdu.md"}
+    # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
+    allowed |= CONVERSION_OPT_AUTHORIZED
+    assert set(changed) <= allowed, f"unexpected content changes: {set(changed) - allowed}"
 
 
 def test_canonical_unchanged():

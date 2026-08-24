@@ -1,0 +1,854 @@
+{
+  "generated_at": "2026-08-20T14:35:51",
+  "mode": "apply",
+  "updated": 60,
+  "ok": 0,
+  "category_distribution": {
+    "visa": 12,
+    "cities": 45,
+    "internet": 7,
+    "transport": 12,
+    "payment": 7,
+    "travel-tips": 10,
+    "food": 24
+  },
+  "rows": [
+    {
+      "file": "144-hour-visa-free-transit-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "visa",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-20-china-just-made-it-way-easier-to-visit-my-mother-i.md",
+      "status": "updated",
+      "old_categories": [
+        "guides"
+      ],
+      "new_categories": [
+        "visa",
+        "internet"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
+      "status": "updated",
+      "old_categories": [
+        "Destinations & Itineraries"
+      ],
+      "new_categories": [
+        "cities",
+        "transport"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 4,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "status": "updated",
+      "old_categories": [
+        "guides"
+      ],
+      "new_categories": [
+        "cities"
+      ],
+      "old_tags_count": 3,
+      "new_tags_count": 3,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "payment",
+        "visa"
+      ],
+      "old_tags_count": 2,
+      "new_tags_count": 2,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "cities",
+        "travel-tips"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 4,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
+      "status": "updated",
+      "old_categories": [
+        "China Itinerary"
+      ],
+      "new_categories": [
+        "cities",
+        "visa"
+      ],
+      "old_tags_count": 9,
+      "new_tags_count": 6,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 6,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "cities"
+      ],
+      "old_tags_count": 3,
+      "new_tags_count": 3,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-27-how-to-survive-chinese-train-station.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "transport",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "payment",
+        "internet"
+      ],
+      "old_tags_count": 6,
+      "new_tags_count": 6,
+      "changes": 1
+    },
+    {
+      "file": "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "visa",
+        "internet"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "visa"
+      ],
+      "old_tags_count": 6,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 7,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 8,
+      "new_tags_count": 8,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "payment"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 2
+    },
+    {
+      "file": "2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "payment",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "transport"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-14-transportation-guide-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+      "status": "updated",
+      "old_categories": [
+        "Practical Travel Tips"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 7,
+      "new_tags_count": 7,
+      "changes": 2
+    },
+    {
+      "file": "2026-07-16-food-recommendations-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
+      "status": "updated",
+      "old_categories": [
+        "Practical Travel Tips"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "internet"
+      ],
+      "old_tags_count": 6,
+      "new_tags_count": 6,
+      "changes": 2
+    },
+    {
+      "file": "2026-07-20-travel-safety-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "transport",
+        "food"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-21-cultural-etiquette-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-22-cultural-etiquette-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-27-accommodation-tips-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "visa",
+        "transport"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "visa",
+        "cities"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-03-chinese-language-survival-phrases-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-05-china-family-travel-tips-a-californians-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "visa"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-07-china-bargaining-and-shopping-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-10-chinas-food-through-the-ages-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food",
+        "internet"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "cities",
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China"
+      ],
+      "new_categories": [
+        "food"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "alipay-for-foreigners-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "payment",
+        "visa"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "alipay-wechat-pay-foreigners-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "Guides"
+      ],
+      "new_categories": [
+        "payment",
+        "cities"
+      ],
+      "old_tags_count": 6,
+      "new_tags_count": 6,
+      "changes": 1
+    },
+    {
+      "file": "best-travel-insurance-china.md",
+      "status": "updated",
+      "old_categories": [
+        "Practical Travel Tips"
+      ],
+      "new_categories": [
+        "travel-tips",
+        "visa"
+      ],
+      "old_tags_count": 7,
+      "new_tags_count": 7,
+      "changes": 2
+    },
+    {
+      "file": "china-airport-transfer-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "transport",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "visa",
+        "cities"
+      ],
+      "old_tags_count": 5,
+      "new_tags_count": 5,
+      "changes": 1
+    },
+    {
+      "file": "china-transportation-card-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Travel Guide"
+      ],
+      "new_categories": [
+        "payment",
+        "cities"
+      ],
+      "old_tags_count": 4,
+      "new_tags_count": 4,
+      "changes": 1
+    },
+    {
+      "file": "internet-connection-china-esim-vpn-guide.md",
+      "status": "updated",
+      "old_categories": [
+        "China Essentials"
+      ],
+      "new_categories": [
+        "internet",
+        "cities"
+      ],
+      "old_tags_count": 3,
+      "new_tags_count": 3,
+      "changes": 1
+    },
+    {
+      "file": "western-sichuan-overland-camping-route.md",
+      "status": "updated",
+      "old_categories": [
+        "Guides"
+      ],
+      "new_categories": [
+        "cities",
+        "internet"
+      ],
+      "old_tags_count": 8,
+      "new_tags_count": 8,
+      "changes": 2
+    }
+  ]
+}

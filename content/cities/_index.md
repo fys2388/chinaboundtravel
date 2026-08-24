@@ -20,7 +20,7 @@ date: 2026-06-09T10:00:00+08:00
 - Great Wall at Mutianyu (fewer crowds than Badaling)
 - Hutong alleyways around Nanluoguxiang
 
-**Joran's Real Tip:** "Skip the Wangfujing snack street. It's a tourist trap. Instead, hit Jingzun for Peking duck like a local."
+**Joran's Tip:** "Skip the Wangfujing snack street. It's a tourist trap. Instead, hit Jingzun for Peking duck like a local."
 
 **Getting Around:** Subway is king. Get a Beijing Transit Card or just use Alipay's transit QR.
 
@@ -36,7 +36,7 @@ date: 2026-06-09T10:00:00+08:00
 - Tianzifang for artsy alleyways and cafes
 - Shanghai Tower observation deck (2nd tallest building in the world)
 
-**Joran's Real Tip:** "Take the ferry across the Huangpu River at sunset. It's 2 RMB and beats any tourist cruise."
+**Joran's Tip:** "Take the ferry across the Huangpu River at sunset. It's 2 RMB and beats any tourist cruise."
 
 **Getting Around:** Metro covers everything. Didi (ride-hailing) is cheap and fast.
 
@@ -52,7 +52,7 @@ date: 2026-06-09T10:00:00+08:00
 - Muslim Quarter at night (lamb skewers + pomegranate juice)
 - Big Wild Goose Pagoda fountain show
 
-**Joran's Real Tip:** "The warriors are cool, but the Muslim Quarter is where the magic happens. Try the yangroupaomo (lamb bread soup) — it's a full meal and a half."
+**Joran's Tip:** "The warriors are cool, but the Muslim Quarter is where the magic happens. Try the yangroupaomo (lamb bread soup) — it's a full meal and a half."
 
 **Getting Around:** Metro is limited but growing. Taxis and Didi are cheap.
 
@@ -68,7 +68,7 @@ date: 2026-06-09T10:00:00+08:00
 - Jinli Ancient Street (touristy but pretty at night)
 - Sichuan Opera face-changing show
 
-**Joran's Real Tip:** "This is my home base. Ask me anything, especially about hot pot. Pro move: order 'wei la' (mildly spicy) unless you want to cry."
+**Joran's Tip:** "Chengdu is a hot-pot capital for good reason. Pro move: order 'wei la' (mildly spicy) unless you want to cry."
 
 **Getting Around:** Metro is excellent. Biking is popular too — Chengdu is flat.
 
@@ -84,7 +84,7 @@ date: 2026-06-09T10:00:00+08:00
 - Reed Flute Cave (a magical underground world)
 - Seven Star Park with Camel Mountain
 
-**Joran's Real Tip:** "Book your Li River cruise for early morning. The mist over the mountains is pure magic, and the crowds are thinner."
+**Joran's Tip:** "Book your Li River cruise for early morning. The mist over the mountains is pure magic, and the crowds are thinner."
 
 **Getting Around:** Buses connect everything. Rent an electric bike to explore the countryside.
 
@@ -101,7 +101,7 @@ date: 2026-06-09T10:00:00+08:00
 - Ten-Mile Gallery scenic cycling route
 - Impression Liu Sanjie (spectacular outdoor light show)
 
-**Joran's Real Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunch — you'll find the best beer fish in town."
+**Joran's Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunch — you'll find the best beer fish in town."
 
 **Getting Around:** Bicycle is king here. Rent one for ~20 RMB/day and explore.
 
@@ -117,4 +117,4 @@ date: 2026-06-09T10:00:00+08:00
 
 ---
 
-*Got a city you want covered? Drop me an email at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*
+*Got a city you want covered? Drop us an email at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*

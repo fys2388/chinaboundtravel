@@ -214,6 +214,61 @@ class GSCIndexSubmitter:
         self._save_report(report)
         return report
 
+    def submit_optimized_pages(self, urls=None, limit=None):
+        """批量提交本次深度优化的核心文章重新索引。
+
+        urls: 待提交 URL 列表；缺省时从 reports/content_deep_optimize_report.json
+              提取优化文章，并按 canonicalURL / slug 组装 URL。
+        """
+        if urls is None:
+            urls = self._optimized_page_urls()
+        if not urls:
+            return {"status": "no_urls", "submitted_count": 0, "urls": []}
+        if limit:
+            urls = urls[:limit]
+
+        credentials = self._publish_credentials()
+        if not credentials:
+            return {"status": "unauthorized", "submitted_count": 0, "urls": []}
+
+        results = []
+        submitted_count = 0
+        print(f"\nSubmitting optimized pages ({len(urls)})")
+        for url in urls:
+            print(f"  - {url}")
+            result = self._request_indexing(credentials, url)
+            results.append(result)
+            if result["status"] == "success":
+                submitted_count += 1
+            time.sleep(0.7)
+
+        report = {
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "site_url": self.site_url,
+            "status": "success",
+            "submitted_count": submitted_count,
+            "total_urls": len(urls),
+            "results": results,
+        }
+        self._save_report(report)
+        return report
+
+    def _optimized_page_urls(self):
+        """从优化报告构建待提交 URL 列表。"""
+        import json as _json
+        opt_report = BLOG_ROOT / "reports" / "content_deep_optimize_report.json"
+        base = self.site_url.rstrip("/")
+        urls = []
+        if opt_report.exists():
+            try:
+                data = _json.loads(opt_report.read_text(encoding="utf-8"))
+                for r in data.get("results", []):
+                    slug = r.get("file", "").replace(".md", "")
+                    urls.append(f"{base}/posts/{slug}/")
+            except Exception:
+                pass
+        return urls
+
     def submit_sitemap_pages(self, limit=20):
         print("\nSubmitting sitemap pages for indexing...")
         credentials = self._publish_credentials()
@@ -282,29 +337,33 @@ class GSCIndexSubmitter:
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser(description="ChinaBound GSC Index Submit")
+    ap.add_argument("--optimized", action="store_true",
+                    help="仅批量提交本次深度优化的核心文章")
+    ap.add_argument("--core", action="store_true", help="提交核心页面 + sitemap")
+    ap.add_argument("--all", action="store_true", help="全部执行")
+    args = ap.parse_args()
+
     print("=" * 60)
     print("  ChinaBound Travel - GSC Index Submit")
     print("=" * 60)
 
     submitter = GSCIndexSubmitter()
 
-    print("\nStep 1: submit core pages")
-    core_result = submitter.submit_core_pages()
+    if args.optimized or args.all or not (args.core or args.optimized):
+        print("\nStep: submit optimized pages (Top 深度优化文章)")
+        submitter.submit_optimized_pages()
 
-    if core_result["status"] == "success":
+    if args.core or args.all:
+        print("\nStep 1: submit core pages")
+        submitter.submit_core_pages()
         print("\nStep 2: submit sitemap pages")
         submitter.submit_sitemap_pages(limit=20)
 
     print("\n" + "=" * 60)
     print("  Index submit task finished")
     print("=" * 60)
-
-    if core_result["status"] == "success":
-        print(f"\nStats:")
-        print(f"  - Core pages submitted: {core_result['submitted_count']}/{core_result['total_core_pages']}")
-        print(f"  - Indexed pages: {core_result['indexed_count']}")
-    else:
-        print("\nFollow the manual setup guide above to finish GSC configuration.")
 
 
 if __name__ == "__main__":

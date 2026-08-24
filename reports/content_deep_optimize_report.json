@@ -1,0 +1,125 @@
+{
+  "mode": "apply",
+  "results": [
+    {
+      "file": "144-hour-visa-free-transit-guide.md",
+      "words_before": 1206,
+      "links_before": 5,
+      "status": "updated",
+      "changes": 3,
+      "words_after": 1556,
+      "reached_2000": false,
+      "links_after": 5,
+      "new_title": "China 144-Hour Visa-Free Transit (2026 Guide) — 2026 China Visa & 144-Hour Visa-Free Transit Explained",
+      "section_key": "visa"
+    },
+    {
+      "file": "2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
+      "words_before": 1136,
+      "links_before": 5,
+      "status": "updated",
+      "changes": 2,
+      "words_after": 1490,
+      "reached_2000": false,
+      "links_after": 5,
+      "new_title": "China Tourist Visa Guide: How to Apply in 2026 — 2026 China Visa & 144-Hour Visa-Free Transit Explained",
+      "section_key": "visa"
+    },
+    {
+      "file": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+      "words_before": 1428,
+      "links_before": 9,
+      "status": "updated",
+      "changes": 2,
+      "words_after": 1798,
+      "reached_2000": false,
+      "links_after": 9,
+      "new_title": "Can Foreigners Use WeChat Pay in China? (2026 Guide) — Foreigners Payment Setup",
+      "section_key": "payment"
+    },
+    {
+      "file": "alipay-for-foreigners-guide.md",
+      "words_before": 1156,
+      "links_before": 6,
+      "status": "updated",
+      "changes": 2,
+      "words_after": 1526,
+      "reached_2000": false,
+      "links_after": 6,
+      "new_title": "Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup",
+      "section_key": "payment"
+    },
+    {
+      "file": "2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "words_before": 1684,
+      "links_before": 12,
+      "status": "updated",
+      "changes": 2,
+      "words_after": 2046,
+      "reached_2000": true,
+      "links_after": 12,
+      "new_title": "How to Book China High-Speed Train Tickets (2026) — Booking & Logistics",
+      "section_key": "transport"
+    },
+    {
+      "file": "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+      "words_before": 2539,
+      "links_before": 13,
+      "status": "ok",
+      "changes": 0,
+      "words_after": 2539,
+      "reached_2000": true,
+      "links_after": 13,
+      "new_title": "China Transportation Guide: Trains, Subways & Taxis",
+      "section_key": "transport"
+    },
+    {
+      "file": "2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+      "words_before": 1799,
+      "links_before": 0,
+      "status": "updated",
+      "changes": 3,
+      "words_after": 2000,
+      "reached_2000": true,
+      "links_after": 3,
+      "new_title": "Is China Safe in 2026? Honest Guide — 2026 Safety Guide for International Travelers",
+      "section_key": "safety"
+    },
+    {
+      "file": "2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+      "words_before": 1951,
+      "links_before": 1,
+      "status": "updated",
+      "changes": 3,
+      "words_after": 2156,
+      "reached_2000": true,
+      "links_after": 3,
+      "new_title": "China Packing List 2026: What to Bring — 2026 Packing Essentials for International Travelers",
+      "section_key": "packing"
+    },
+    {
+      "file": "2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "words_before": 3507,
+      "links_before": 13,
+      "status": "ok",
+      "changes": 0,
+      "words_after": 3507,
+      "reached_2000": true,
+      "links_after": 13,
+      "new_title": "China Photography Guide: Best Spots & Tips",
+      "section_key": "visa"
+    },
+    {
+      "file": "internet-connection-china-esim-vpn-guide.md",
+      "words_before": 1410,
+      "links_before": 8,
+      "status": "updated",
+      "changes": 2,
+      "words_after": 1780,
+      "reached_2000": false,
+      "links_after": 8,
+      "new_title": "Internet in China: eSIM vs SIM vs VPN (2026) — Foreigners Payment Setup",
+      "section_key": "payment"
+    }
+  ]
+}

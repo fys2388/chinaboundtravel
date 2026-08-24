@@ -1,8 +1,8 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-08-17
+- Generated: 2026-08-22
 
-统计：content/posts 共 60 篇，命中 legacy persona 短语 25 篇。
+统计：content/posts 共 60 篇，命中 legacy persona 短语 28 篇。
 
 本轮**不修改** legacy 文章；统一标记 LEGACY_PERSONA_CONTENT，后续单独处理。
 
@@ -15,14 +15,14 @@
 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md | 0 | - |
 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md | 0 | - |
 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md | 0 | - |
-| 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md | 0 | - |
+| 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md | 1 | I personally respond |
 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md | 2 | Chengdu wife; I've been to |
 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md | 0 | - |
 | 2026-05-27-how-to-survive-chinese-train-station.md | 0 | - |
 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md | 0 | - |
 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md | 1 | I Tried |
 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md | 0 | - |
-| 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md | 0 | - |
+| 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md | 1 | I'd love to hear from you |
 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md | 1 | American expat |
 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md | 1 | 5-year expat |
 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md | 0 | - |
@@ -50,7 +50,7 @@
 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md | 1 | American expat |
 | 2026-07-27-accommodation-tips-guide.md | 0 | - |
 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md | 0 | - |
-| 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md | 0 | - |
+| 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md | 1 | Chengdu is my home |
 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md | 0 | - |
 | 2026-08-03-chinese-language-survival-phrases-guide.md | 0 | - |
 | 2026-08-05-china-family-travel-tips-a-californians-guide.md | 0 | - |
@@ -59,7 +59,7 @@
 | 2026-08-10-chinas-food-through-the-ages-guide.md | 1 | I have lived in |
 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md | 0 | - |
 | 2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md | 1 | I moved to |
-| 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md | 1 | I remember my first trip |
+| 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md | 2 | I remember my first trip; I'd love to hear from you |
 | alipay-for-foreigners-guide.md | 0 | - |
 | alipay-wechat-pay-foreigners-guide.md | 0 | - |
 | best-travel-insurance-china.md | 1 | Personally used |

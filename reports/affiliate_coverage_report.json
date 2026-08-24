@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-20T14:40:55",
+  "stats": {
+    "total_files": 60,
+    "modified_files": 31,
+    "already_covered": 29,
+    "error_files": [],
+    "theme_stats": {
+      "visa": 41,
+      "city": 57,
+      "transport": 49,
+      "food": 46,
+      "payments": 41
+    },
+    "product_stats": {
+      "flight": 55,
+      "insurance": 51,
+      "esim": 60,
+      "hotel": 57,
+      "tour": 60
+    }
+  },
+  "coverage": {
+    "coverage_rate": 100.0,
+    "covered_files": 60,
+    "total_files": 60
+  },
+  "affiliate_urls": {
+    "esim": "https://www.airalo.com/",
+    "vpn": "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613",
+    "vpnNord": "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613",
+    "nordpass": "https://nordpass.com/",
+    "hotel": "https://www.booking.com/index.html?aid=730795",
+    "klook": "https://klook.tpo.li/vrPkmS2v",
+    "klook_expire_date": "2027-07-24",
+    "safetywing": "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador",
+    "trip": "https://www.trip.com/",
+    "flight": "https://www.aviasales.com/?marker=730795",
+    "worldnomads": "https://www.worldnomads.com/",
+    "allianz": "https://www.allianztravelinsurance.com/",
+    "partnerizeUserId": "10111425644"
+  },
+  "themes": {
+    "visa": "签证/出行准备",
+    "city": "城市攻略",
+    "transport": "交通攻略",
+    "food": "美食/文化",
+    "payments": "支付/通讯"
+  }
+}

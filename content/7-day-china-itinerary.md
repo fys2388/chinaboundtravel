@@ -11,7 +11,7 @@ keywords: ["china itinerary", "china travel plan", "7 days china", "china visa",
 
 ## 🎁 Your Free China Travel Planning Toolkit
 
-Congratulations on taking the first step toward your China adventure! As a thank you for subscribing, I'm sending you my **complete 7-Day China Itinerary Template** — the exact framework I've used to help thousands of travelers plan their perfect trip.
+Congratulations on taking the first step toward your China adventure! As a thank you for subscribing, our team is sending you the **complete 7-Day China Itinerary Template** — the same framework we use to help thousands of travelers plan their perfect trip.
 
 ---
 
@@ -58,7 +58,7 @@ No problem! Check out these popular alternatives:
 
 ## 💬 Questions?
 
-I personally respond to every email. If you need help planning your specific China trip, drop me a line at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com) or DM me on [Twitter](https://twitter.com/chinaboundtravel).
+The editorial team responds to every email. If you need help planning your specific China trip, drop us a line at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com) or DM me on [Twitter](https://twitter.com/chinaboundtravel).
 
 Safe travels! 🐼
 

@@ -6,7 +6,7 @@ categories = ["Destinations & Itineraries"]
 tags = ["chengdu", "pandas", "sichuan", "hot pot", "southwest china"]
 +++
 
-Chengdu is my home. I've lived here for years, married into a Sichuan family, and eaten enough hot pot to legally qualify as a chili pepper. This city moves slower than Beijing or Shanghaiin the best way possible. People here prioritize good food, good tea, and good company. It's also the only place on Earth where you can hold a baby panda in the morning and eat noodles that'll make you cry in the afternoon.
+Chengdu is a city that moves at its own relaxed pace - slower than Beijing or Shanghaiin the best way possible. People here prioritize good food, good tea, and good company. It's also the only place on Earth where you can hold a baby panda in the morning and eat noodles that'll make you cry in the afternoon.
 
 ## Getting There & Around
 
@@ -77,4 +77,4 @@ Chengdu is UNESCO's first-ever City of Gastronomy. Here's where to start:
 
 ---
 
-*Last updated: May 2026. This is my cityhit me up at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com) for the latest spots.*
+*Last updated: May 2026. For the latest Chengdu spots, reach out to [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*

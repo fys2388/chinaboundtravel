@@ -1,0 +1,12 @@
+﻿partner,click_data_available,order_data_available,revenue_data_available,api_available,dashboard_manual_only,credentials_present,verified,notes
+Travelpayouts,UNKNOWN,UNKNOWN,UNKNOWN,YES (token configured),YES (dashboard),YES,NO,"Platform network; API token + marker + drive id present in .env, not verified by live call"
+Klook,UNKNOWN (partner) / YES (GA4),UNKNOWN,UNKNOWN,YES via Travelpayouts,YES (TP dashboard),YES (via TP token),NO,"Attribution via klook.tpo.li marker 730795; WAF 403 on bots, browser OK"
+Booking,UNKNOWN (partner) / YES (GA4),UNKNOWN,UNKNOWN,NO (no key configured),YES (Booking affiliate dashboard),NO,NO,aid=730795 intact; no API credential in repo
+Airalo,"NO (bare URL, no tracking)",NO,NO,NO,N/A (not integrated),NO,NO,Bare site URL https://www.airalo.com/ - no attribution possible
+Aviasales,UNKNOWN (partner) / YES (GA4),UNKNOWN,UNKNOWN,YES via Travelpayouts,YES (TP dashboard),YES (via TP token),NO,marker=730795 via Travelpayouts network
+SafetyWing,UNKNOWN (partner) / YES (GA4),UNKNOWN,UNKNOWN,NO,"YES (ambassador dashboard, manual)",NO,NO,referenceID=26548976 + utm; manual dashboard reporting only
+Trip.com,"NO (bare URL, no tracking)",NO,NO,NO,N/A (not integrated),NO,NO,REV002 partner but https://www.trip.com/ has no marker/aff param
+Allianz,"NO (bare URL, no tracking)",NO,NO,NO,N/A (not integrated),NO,NO,partnerizeUserId configured but not appended to URL
+World Nomads,"NO (bare URL, no tracking)",NO,NO,NO,N/A (not integrated),NO,NO,Bare URL; no program credential in repo
+NordVPN,UNKNOWN (partner) / YES (GA4),UNKNOWN,UNKNOWN,YES (API key configured),YES (affiliatescn dashboard),YES,NO,"NORDVPN_API_KEY + AFFILIATE_ID in .env, unverified"
+NordPass,NO (0 pages use link),NO,NO,NO,N/A,NO,NO,Configured in hugo.toml but used on no page
