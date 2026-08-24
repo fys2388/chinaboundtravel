@@ -10,8 +10,6 @@ tags:
   - TravelGuide
   - China
   - EuropeToChina
-categories:
-  - China
 geo: "EU"
 draft: false
 audit_status: "pass2"
@@ -23,15 +21,17 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.jpg"
+categories: ["travel-tips", "visa"]
 ---
-
 ## China Family Travel Tips: A Californian's Guide
+
+
+{{< soft-recommend partner="flight" topic="visa" placement="article_mid_1" text="Compare flights to China" >}}
+For international travelers comparing options, flight search platforms help you weigh routes and dates before you commit. It's a low-pressure way to see what's available.
+{{< /soft-recommend >}}
 ## Introduction
-Hey there, fellow globetrotters! I'm Joran, an American who's been soaking up the wonders of Chengdu for the past 10+ years. It's been quite a ride, filled with everything from getting hopelessly lost in the vibrant, bustling streets (which is somehow always an adventure in itself) to indulging in the mouthwatering delights of Sichuan cuisine that'll make your taste buds do a little happy dance. And now, I'm stoked to share my experiences and a whole bunch of tips with you!
 
-If you're planning a family trip to China, you've landed in the right spot. In this blog post, I'll be covering all the bases to ensure your journey is a total success. We'll dive into visa requirements, transportation options that'll get you around like a pro, the amazing world of Chinese food, and safety considerations. I'll also be sharing some of my personal favorite places to visit in China, along with some hidden gems that you might not stumble upon in the regular guidebooks. Think of this as your own personal roadmap to an unforgettable China adventure with your family.
-
-So, without further ado, let's get started!
+Planning a family trip to China? This guide covers everything you need to know for a successful journey with kids. We'll dive into visa requirements, family-friendly transportation options, navigating Chinese food with children, and safety considerations. You'll also find curated recommendations for places to visit in China, along with some hidden gems that you might not stumble upon in regular guidebooks. Think of this as your practical roadmap to an unforgettable China adventure with your family.
 
 ![A busy intersection in Chengdu with modern buildings, traffic, and colorful advertising signs](https://picsum.photos/seed/325585/1024/768)
 
@@ -73,6 +73,11 @@ If you're on a budget, you can also take the regular train. However, it can be a
 
 ## Food in China
 
+
+{{< soft-recommend partner="safetywing" topic="visa" placement="article_mid_2" text="Review travel insurance options" >}}
+Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
+{{< /soft-recommend >}}
+
 ### Chinese Cuisine
 One of the highlights of any trip to China is the food. Chinese cuisine is one of the most diverse and delicious in the world, with something to suit every taste and budget. From the spicy and flavorful Sichuan cuisine to the sweet and savory Cantonese cuisine, there's no shortage of amazing dishes to try.
 
@@ -111,3 +116,8 @@ To avoid these scams and rip-offs, it's important to be aware of your surroundin
 Beijing is the capital city of China and is one of the most popular tourist destinations in the country. Some of the must-visit attractions in Beijing include the Forbidden City, the Great Wall, the Summer Palace, and the Temple of Heaven.
 
 The Forbidden City is a former imperial palace that was built in the 15th century and is now a museum. It's one of the most famous landmarks in China and is a must-visit for anyone traveling to Beijing. The Great Wall is one of the seven wonders of the world and is a symbol of China's rich history and culture
+
+
+{{< soft-recommend partner="esim" topic="visa" placement="article_soft_3" text="See eSIM options" >}}
+Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
+{{< /soft-recommend >}}

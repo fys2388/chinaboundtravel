@@ -83,7 +83,7 @@ Located between Pit 1 and Pit 2, this hall houses two half-scale bronze chariots
 When visiting the Terracotta Army, it is important to bring some essential items with you. These include comfortable shoes, a hat, sunscreen, water, and a camera. You may also want to bring a snack or two, as there are limited food options available at the site.
 
 ### Guided Tours
-If you want to learn more about the history and culture of the Terracotta Army, I recommend taking a guided tour. There are several tour companies that offer guided tours of the site, and they can provide you with valuable insights and information that you won't find in your average travel guide.
+If you want to learn more about the history and culture of the Terracotta Army, consider taking a guided tour. Several tour companies offer guided tours of the site, and they can provide valuable insights and information that you won't find in your average travel guide.
 
 ### Photography Tips
 The Terracotta Army is a photographer's paradise, but there are some rules and regulations that you need to follow. Flash photography is not allowed inside the pits, as it can damage the delicate artifacts. However, you can take non-flash photos from the viewing platforms. Make sure to bring a good camera and plenty of memory cards, as there are many amazing photo opportunities at the site.

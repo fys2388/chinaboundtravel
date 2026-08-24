@@ -6,7 +6,6 @@ date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/"
 tags: ["ChinaTravel", "ChinaFood", "ChinaAppGuide", "ChinaDailyLife", "ChinaTravelTips"]
-categories: ["China Travel Guide"]
 description: "Order Chinese food delivery with Meituan or Ele.me as a foreigner: what to order, how to pay, and why the courier will call you."
 author: "Joran"
 params:
@@ -26,16 +25,20 @@ params:
       answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.jpg"
+categories: ["cities", "food"]
 ---
-
-
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
 
-## Hey, Joran Here 
 
-In my first month in Chengdu, I ordered food delivery 47 times. I counted. Not because I'm lazy (okay, partly because I'm lazy) but because I was too scared to order in restaurants. My Chinese was "nihao and thank you," and menus were walls of indecipherable characters.
+{{< soft-recommend partner="safetywing" topic="payments" placement="article_mid_1" text="Review travel insurance options" >}}
+Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
+{{< /soft-recommend >}}
 
-Meituan and Ele.me became my lifeline. Today, I order delivery like a local  and I want you to be able to do the same, even if your Chinese is worse than my martial arts (which, trust me, is saying something).
+## Why Food Delivery Matters for Travelers
+
+In their first month in Chengdu, many travelers order food delivery dozens of times. Not because they're lazy (okay, partly because they're lazy) but because they're too scared to order in restaurants. Their Chinese is "nihao and thank you," and menus are walls of indecipherable characters.
+
+Meituan and Ele.me become a lifeline. Today, anyone can order delivery like a local — this guide will help you do the same, even if your Chinese is limited.
 
 This guide works whether you're in Beijing, Shanghai, Chengdu, Hangzhou, or any city in China. The apps are the same, the experience is the same.
 
@@ -49,9 +52,9 @@ This guide works whether you're in Beijing, Shanghai, Chengdu, Hangzhou, or any 
 | **Ele.me ()** | Usually cheaper delivery fees | Less English, better promotions |
 | **Both** | Same restaurants, similar prices | Just use both and compare |
 
-My routine: Open both apps, search the same restaurant, pick the cheaper one. Takes 30 extra seconds, saves $2.
+A common routine: Open both apps, search the same restaurant, pick the cheaper one. Takes 30 extra seconds, saves $2.
 
-> **Joran's Tip:** Download both from the Chinese App Store or APK. If you can't access Chinese app stores, ask your hotel concierge to help you install one  they'll do it in 2 minutes.
+> **Editor's Tip:** Download both from the Chinese App Store or APK. If you can't access Chinese app stores, ask your hotel concierge to help you install one — they'll do it in 2 minutes.
 
 ---
 
@@ -80,7 +83,7 @@ Or: Ask your hotel concierge/reception to write your address in Chinese on a pie
 
 **Alipay and WeChat Pay are the only options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
 
-If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Another new option is [PayPal's integration with Alipay and WeChat Pay](/posts/paypal-alipay-wechat-pay-qr-code-support/), which lets you pay without setting up either app. Without these, you're stuck with cash-on-delivery at select restaurants.
+If you don't have Alipay or WeChat Pay set up yet, read our [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Another new option is [PayPal's integration with Alipay and WeChat Pay](/posts/paypal-alipay-wechat-pay-qr-code-support/), which lets you pay without setting up either app. Without these, you're stuck with cash-on-delivery at select restaurants.
 
 ---
 
@@ -93,7 +96,7 @@ If you don't have Alipay or WeChat Pay set up yet, read my [Alipay & WeChat Pay 
 3. Browse the recommendations or use filters (/distance, /rating, /sales volume)
 4. Tap a restaurant â?see menu
 
-> **Joran's Tip:** Sort by "" (highest sales volume) not "" (closest distance). A slightly further restaurant with 10,000+ monthly orders is more reliable than the closest one with 50 orders.
+> **Editor's Tip:** Sort by "" (highest sales volume) not "" (closest distance). A slightly further restaurant with 10,000+ monthly orders is more reliable than the closest one with 50 orders.
 
 ### Reading the Menu
 
@@ -165,7 +168,7 @@ Driver is heading to you. You can track them on the map in real-time.
 ### 5. The Call (Important!)
 **The delivery person WILL call you when they arrive.** This is normal. They can't find your building, or the gate is locked.
 
-> **Joran's Tip:** Have these phrases ready on your phone in Chinese:
+> **Editor's Tip:** Have these phrases ready on your phone in Chinese:
 > - "" (w zi mn ku) = I'm at the door
 > - "" (qng fng mn ku) = Please leave it at the door
 > - "" (w xi li) = I'm coming down
@@ -212,13 +215,13 @@ Collect your food. Check the bag  if something's wrong, you can request a refund
 | Packaging fee | Usually included in item price |
 | Tipping | **Not expected**  delivery workers are paid by the app, not tips |
 
-> **Joran's Tip:** Watch for discount promotions. Ele.me frequently offers "15" (first order minus 15 RMB) or "255" (spend 25, get 5 off). These stack with credit card rewards.
+> **Editor's Tip:** Watch for discount promotions. Ele.me frequently offers "15" (first order minus 15 RMB) or "255" (spend 25, get 5 off). These stack with credit card rewards.
 
 ---
 
 ## Bottom Line
 
-Food delivery in China is one of the great modern conveniences of daily life. The apps are fast, the food is good, the prices are cheap, and the system just works. It took me one bad experience (wrong noodles, refunded in 30 seconds) to trust the system.
+Food delivery in China is one of the great modern conveniences of daily life. The apps are fast, the food is good, the prices are cheap, and the system just works. It often takes just one bad experience (wrong noodles, refunded in 30 seconds) for travelers to trust the system.
 
 Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're ready to eat like an emperor from your couch. And if you're traveling between cities by rail, don't miss our [high-speed rail booking guide](/posts/china-high-speed-rail-how-to-book-tickets/) — train food is no match for delivery.
 
@@ -229,7 +232,7 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 ---
 
-*Last updated: May 2026 | Joran*
+*Last updated: May 2026 | ChinaBound Travel Editorial Team*
 
 
 {{< affiliate-hotel >}}

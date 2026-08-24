@@ -3,16 +3,11 @@ content_id: "cbt-407090802298"
 title: Shanghai Like a Local  Hidden Neighborhoods Tourists Never Find
 date: '2026-06-02T10:00:00+08:00'
 draft: true
-tags:
-  - China
-  - travel
-  - tips
-categories:
-- guides
 author: Joran
 canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-like-a-local-hidden-neighborhoods-tourist/"
+categories: ["cities"]
+tags: ["China", "Travel", "Tips"]
 ---
-
 Alright, lets be real for a second. If youve ever Googled Shanghai travel guide, youve probably seen the same three things: The Bund at sunset (gorgeous, sure, but also packed with selfie sticks), Yu Garden (tour groups galore), and the Pearl Tower (which, lets be honest, looks like a giant alien spaceship landed on a popsicle). 
 
 Ive been living in China for six years nowmarried to a Chengdu woman, so my taste buds are permanently set to spicyand Ive made enough trips to Shanghai to know the real city isnt in those guidebooks. Its in the alleys where aunties hang laundry above your head and uncles play mahjong at 10 a.m. like its their full-time job. So heres my guide to Shanghais hidden neighborhoods that tourists never find.
@@ -23,7 +18,7 @@ Youve probably heard of the French Concessionits famous for its leafy streets an
 
 ## Old Towns Lanes (Not the Tourist Trap)
 
-Everyone goes to Yu Garden and the surrounding bazaar. Its a zoocrowded, overpriced, and the only thing authentic is the fake Ming Dynasty vibe. Instead, walk 10 minutes north to the area around Dajing Road. Theres a maze of narrow lanes where you can still see old Shanghai row houses with wooden doors and stone thresholds. The locals sell homemade dumplings from their front windowstry the pork and cabbage ones for roughly 10 RMB ($1.40) for six. My wife (the Chengdu food snob) actually approved, which is like winning a Michelin star in our house.
+Everyone goes to Yu Garden and the surrounding bazaar. Its a zoocrowded, overpriced, and the only thing authentic is the fake Ming Dynasty vibe. Instead, walk 10 minutes north to the area around Dajing Road. Theres a maze of narrow lanes where you can still see old Shanghai row houses with wooden doors and stone thresholds. The locals sell homemade dumplings from their front windowstry the pork and cabbage ones for roughly 10 RMB ($1.40) for six. Even travelers who are picky about food approve of these dumplings, which is high praise indeed.
 
 ## The Hongqiao Neighborhood (No, Not the Airport)
 
@@ -31,7 +26,7 @@ Most people think of Hongqiao as just SHA airport or the train station. But the 
 
 ## The Suzhou Creek Backstreets
 
-Everyone goes to the Bund to look at Pudongs skyline. Instead, walk along Suzhou Creek, just north of the Bund. Theres a stretch near the Waibaidu Bridge where old warehouses have been turned into art studios and cozy cafes. Its quiet, mostly empty of tourists, and you can watch cargo boats putter by while sipping a surprisingly decent latte (around 25 RMB, $3.50). One time I saw a guy fishing off the bank with a bamboo polehe caught a tiny fish, looked at it, and threw it back. Pure Shanghai energy.
+Everyone goes to the Bund to look at Pudongs skyline. Instead, walk along Suzhou Creek, just north of the Bund. Theres a stretch near the Waibaidu Bridge where old warehouses have been turned into art studios and cozy cafes. Its quiet, mostly empty of tourists, and you can watch cargo boats putter by while sipping a surprisingly decent latte (around 25 RMB, $3.50). Locals often fish off the bank with bamboo poles — pure Shanghai energy.
 
 ## Final Tips
 

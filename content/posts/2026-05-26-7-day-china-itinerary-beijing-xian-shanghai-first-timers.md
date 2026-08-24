@@ -5,8 +5,6 @@ slug: "7-day-china-itinerary-beijing-xian-shanghai-first-timers"
 description: "First-timer 7-day China itinerary: Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund, with honest costs and pro tips."
 date: "2026-05-27"
 author: "Joran"
-tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide", "beijing", "xian", "shanghai"]
-categories: ["China Itinerary"]
 params:
   keywords: ["7 day china itinerary", "china first timer guide", "beijing xian shanghai route", "china travel plan", "china 7 days"]
   faq:
@@ -26,15 +24,21 @@ params:
       answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. {{< vpn-link \"NordVPN\" />}} consistently works. Once in China, you'll need the APK file or account already active - you can't download VPN apps inside China."
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg"
+categories: ["cities", "visa"]
+tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide"]
 ---
-
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)
 
-**By Joran | 5 years navigating China as a foreigner**
 
-I remember my first China trip. I spent three weeks planning, made every rookie mistake in the book, and still ended up missing the Terracotta Army because I ran out of time. Don't be that guy.
+{{< soft-recommend partner="safetywing" topic="city" placement="article_mid_1" text="Review travel insurance options" >}}
+Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
+{{< /soft-recommend >}}
 
-This 7-day itinerary is the exact route I've run with friends, family, and readers for years. It's tight, it's efficient, and it's designed to actually work  not some inflated 14-day itinerary that only backpacker blogs recommend.
+**ChinaBound Travel Editorial Team | Research-based China travel guides**
+
+Many first-time visitors to China spend weeks planning, make rookie mistakes, and still end up missing key attractions because they ran out of time. This itinerary is designed to help you avoid those pitfalls.
+
+This 7-day itinerary is a tested, efficient route covering three of China's most iconic cities. It's tight, it's practical, and it's designed to actually work — not some inflated 14-day itinerary that only suits long-term backpackers.
 
 **The core logic:** Fly into Beijing → Train to Xi'an → Fly to Shanghai. Three cities, seven days, zero regrets. Before you go, make sure you've sorted your [China visa](/posts/ultimate-guide-to-china-visa-for-tourists/) (or check if you qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/)).
 
@@ -147,11 +151,11 @@ China is not a one-trip country. The geography alone spans five climate zones. T
 
 And when you're ready for round two: Western Sichuan, Yunnan, Tibet, or the Silk Road. That's when China stops being a checkbox and starts being an obsession.
 
- **[View Pricing Plans](/pricing/)** for GPS waypoints, off-book tips, and direct access to my travel network in each city. Annual pass $49.99  less than one night in Beijing.
+ **[View Pricing Plans](/pricing/)** for GPS waypoints, off-book tips, and direct access to our editorial travel network in each city. Annual pass $49.99  less than one night in Beijing.
 
 ---
 
-*Have a question about this itinerary? Drop it in the comments  I personally respond to every legitimate question within 48 hours.*
+*Have a question about this itinerary? Reach out to our editorial team — we respond to every legitimate question within 48 hours.*
 
 
 {{< affiliate-hotel >}}
