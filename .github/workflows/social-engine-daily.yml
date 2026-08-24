@@ -24,6 +24,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -82,8 +84,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add content/social/inventory.json reports/social/ manifest.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore(social): sync inventory & reports [skip ci]"
-          git push || true
+          if git diff --staged --quiet; then
+            echo "无待提交变更"
+          else
+            git commit -m "chore(social): sync inventory & reports [skip ci]"
+          fi
+          # 远端可能有并发提交（如博客生成工作流），先 rebase 再 push，避免非快进失败
+          git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase 失败"; exit 1; }
+          git push
 
       - name: Feishu notification
         if: always()
