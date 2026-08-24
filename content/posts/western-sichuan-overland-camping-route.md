@@ -4,17 +4,6 @@ title: "Western Sichuan Overland Camping Route: 7 Days"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
-tags:
-- SichuanTravel
-- ChinaCamping
-- OverlandAdventure
-- WesternSichuan
-- ChinaRoadTrip
-- TibetanPlateau
-- ChinaTravel
-- sichuan
-categories:
-- Guides
 summary: A complete 7-day overland camping guide to Western Sichuan's most breathtaking
   landscapes. From Chengdu to Litang, discover hidden valleys, snow-capped peaks,
   and authentic Tibetan villages.
@@ -24,8 +13,9 @@ TocOpen: false
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg"
 canonicalURL: "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/"
+categories: ["travel", "camping"]
+tags: ["SichuanTravel", "ChinaCamping", "OverlandAdventure", "WesternSichuan", "ChinaRoadTrip", "TibetanPlateau", "ChinaTravel", "Sichuan"]
 ---
-
 ## Western Sichuan Overland Camping Route: 7 Days Through China's Most Epic Wilderness
 
 Western Sichuan (Chuan Xi) is a demanding overland route that rewards careful planning. The 7-day loop below starts in Chengdu, crosses the Tibetan Plateau, and links high passes, grassland campsites, and Yading's snow-capped peaks before returning to the city.
@@ -103,7 +93,7 @@ Ganzi (Gan Zi) is a small Tibetan town with a beautiful market. Grab some snacks
 ### Overnight: Litang
 Litang (Li Tang) is the highest county town in China at 4,014 meters. Stay at a guesthouse - camping here might be too cold for beginners.
 
-**Fun Fact**: Litang is the birthplace of the Dalai Lama. There's a small museum worth visiting.
+**Fun Fact**: Litang is the birthplace of the 7th Dalai Lama (born 1708). The town is also home to **Litang Monastery (Changqing Ke'er Si)**, a significant Gelugpa Tibetan Buddhist monastery founded in 1580 — worth a visit if you have time.
 
 ## Day 4: Litang to Daocheng (200km, ~5 hours)
 
