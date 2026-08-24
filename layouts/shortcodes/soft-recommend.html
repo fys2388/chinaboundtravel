@@ -1,0 +1,22 @@
+{{- /* Editorial soft-recommendation (no hard-sell). Usage:
+   {{< soft-recommend partner="esim" topic="internet" placement="mid" >}}
+     Editorial context sentence in 2.0 Editorial Voice.
+   {{< /soft-recommend >}}
+   Resolves the partner URL from hugo.toml [params.affiliate.<partner>].
+   Emits a single tracked affiliate CTA, disclosure-first, no fake urgency.
+*/ -}}
+{{- $partner := .Get "partner" | default "esim" -}}
+{{- $placement := .Get "placement" | default "article_mid_cta" -}}
+{{- $ctaId := .Get "cta_id" | default (printf "%s-%s" $placement $partner) -}}
+{{- $topic := .Get "topic" | default "" -}}
+{{- $text := .Get "text" | default "See current options" -}}
+{{- $url := index .Site.Params.affiliate $partner | default "#" -}}
+<div class="soft-recommend affiliate-block">
+    <p>{{ .Inner | markdownify }}</p>
+    <a href="{{ $url }}" class="affiliate-link" target="_blank" rel="nofollow sponsored"
+       data-affiliate-partner="{{ $partner }}" data-affiliate-placement="{{ $placement }}"
+       data-cta-id="{{ $ctaId }}" data-topic="{{ $topic }}">
+        {{ $text }} →
+    </a>
+    <p class="soft-recommend-disclosure"><small><em>Affiliate link - we may earn a small commission at no extra cost to you.</em></small></p>
+</div>
