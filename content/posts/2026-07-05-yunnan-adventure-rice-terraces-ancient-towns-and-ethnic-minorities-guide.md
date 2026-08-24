@@ -10,8 +10,6 @@ tags:
   - TravelGuide
   - China
   - EuropeToChina
-categories:
-  - China
 geo: "EU"
 draft: false
 audit_status: "pass4"
@@ -23,9 +21,15 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg"
----
+categories: ["transport", "cities"]
 
+---
 ## Introduction
+
+
+{{< soft-recommend partner="esim" topic="transport" placement="article_mid_1" text="See eSIM options" >}}
+Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
+{{< /soft-recommend >}}
 
 Stepping off the plane at Kunming Changshui Airport from Chengdu, the first thing you notice is the air — thin, dry, and noticeably cleaner than the Sichuan basin you just left behind. At 1,890 meters above sea level, Kunming sits nearly 1,200 meters higher than Chengdu, and your lungs feel it immediately. That altitude difference only gets more dramatic as you travel deeper into Yunnan: Lijiang sits at 2,400 meters, and the Yuanyang rice terraces climb to around 1,800 meters on mountain slopes that drop into valleys below.
 
@@ -53,7 +57,7 @@ If you haven't used China's high-speed rail system before, read our [China High-
 
 ### Local Transport
 
-- **Dali**: Rent an electric scooter for ¥50/day (~€6) — the best way to explore Erhai Lake's 130-kilometer coastal road. Gas scooters are also available for ¥80-100/day but require a Chinese license.
+- **Dali**: Rent an electric scooter for ¥50/day (~€6) — one of the popular way to explore Erhai Lake's 130-kilometer coastal road. Gas scooters are also available for ¥80-100/day but require a Chinese license.
 - **Lijiang**: Metered taxis start at ¥7 for the first 3 km. Most drivers use the meter without being asked, unlike in some Chinese cities.
 - **Yuanyang**: No high-speed rail reaches Yuanyang directly. From Kunming, take a bus to Mengzi (4-5 hours, ¥120-150) then transfer to a minivan to Yuanyang's Xinjie town (1.5 hours, ¥30). A shared car from Kunming costs ¥150-200 per person and takes 6-7 hours total.
 
@@ -120,15 +124,15 @@ This is the longest travel day of the trip. No direct high-speed rail reaches Yu
 - **Shared car/minivan**: ¥150-200 (~€19-25) per person, arranged through your hotel or on travel apps like Fliggy. Takes 6-7 hours with a rest stop.
 - **Bus route**: Lijiang → Kunming (3.5h by train) → Mengzi (bus, 4-5h) → Yuanyang Xinjie (minivan, 1.5h). This takes a full day and is only worth it if you want to stop in Kunming.
 
-Arrive in Xinjie town (Yuanyang's main accommodation hub) in the late afternoon. Head straight to Bada Viewing Platform (坝达观景台) for sunset. The terraces here face west and catch the last light of the day, turning the flooded paddies gold and orange. The view spans hundreds of layers of terraces carved into the valley.
+Arrive in Xinjie town (Yuanyang's main accommodation hub) in the late afternoon. Head straight to Bada Viewing Platform () for sunset. The terraces here face west and catch the last light of the day, turning the flooded paddies gold and orange. The view spans hundreds of layers of terraces carved into the valley.
 
 **Sleep**: Xinjie town. Guesthouses cost ¥80-200/night (~€10-25). Book in advance during peak season (December-March).
 
 ### Day 7: Yuanyang Sunrise → Return
 
-Wake up early for the Duoyishu (多依树) viewing platform sunrise. This is the main attraction in Yuanyang — the terraces face east and the rising sun reflects off the water-filled paddies, creating a layered mirror effect. You need to arrive by 6:30 AM in winter to secure a good viewing spot. Bring warm clothes; temperatures at dawn can drop to 5°C even in spring.
+Wake up early for the Duoyishu () viewing platform sunrise. This is the main attraction in Yuanyang — the terraces face east and the rising sun reflects off the water-filled paddies, creating a layered mirror effect. You need to arrive by 6:30 AM in winter to secure a good viewing spot. Bring warm clothes; temperatures at dawn can drop to 5°C even in spring.
 
-After the sunrise (around 7:30 AM), drive or take a local minivan (¥15) to Qingkou (箐口) viewing platform, which is walkable from Xinjie town. Qingkou is surrounded by a traditional Hani village, and the terraces here are set against dense forest. Entry is included in the main Yuanyang ticket.
+After the sunrise (around 7:30 AM), drive or take a local minivan (¥15) to Qingkou () viewing platform, which is walkable from Xinjie town. Qingkou is surrounded by a traditional Hani village, and the terraces here are set against dense forest. Entry is included in the main Yuanyang ticket.
 
 The Yuanyang Rice Terraces ticket costs ¥100 (~€13) and covers all three main viewing platforms (Duoyishu, Bada, Qingkou) for one day. Buy it at the main entrance gate on the road from Mengzi.
 
@@ -152,12 +156,12 @@ The Yuanyang rice terraces have their own micro-season: the paddies are flooded 
 Yunnan's food is distinctive — it uses fresh herbs, flowers, mushrooms, and chili in ways you won't find elsewhere in China. Here's what to try and what it costs:
 
 - **Cross-bridge rice noodles (Guoqiao Mixian)** — Kunming's signature dish: a bowl of hot broth arrives with raw ingredients on the side (chicken, pork, quail egg, vegetables) that you cook by sliding them into the boiling soup. ¥15-30 (~€2-4) at local restaurants, ¥50-80 (~€6-10) at tourist-oriented spots.
-- **Flower pastry (Xianhua Bing)** — Rose-petal filled shortbread, a popular Kunming souvenir. ¥5-10 per piece (~€0.60-1.25). Buy them at Juhua Xincun bakery — the original and best.
+- **Flower pastry (Xianhua Bing)** — Rose-petal filled shortbread, a popular Kunming souvenir. ¥5-10 per piece (~€0.60-1.25). Buy them at Juhua Xincun bakery — the original and a popular.
 - **Dali earthen pot fish (Shaguo Yu)** — Fresh fish from Erhai Lake cooked with local ham, tofu, and mushrooms in a clay pot. ¥50-80 (~€6-10) per pot, enough for two people.
 - **Lijiang cured rib hotpot (Lapaigu Huoguo)** — Salted ribs slow-cooked in a split pot. ¥60-100 (~€7.50-12.50) per person.
 - **Iron plate tofu (Tieban Doufu)** — Served at every night market in Yunnan, crispy on the outside, soft inside, topped with chili and cilantro. ¥5-10 (~€0.60-1.25).
 
-**Actionable tip**: Skip the tourist restaurants in Dali and Lijiang old towns and head to Kunming's Zhuanxin Farmers' Market (篆新农贸市场). It's a real working market where locals buy fresh produce, mushrooms, and prepared food. A full meal here costs ¥15-25 (~€2-3). Try the smoked tofu rolls, steamed chicken with local herbs, and fresh flower juices.
+**Actionable tip**: Skip the tourist restaurants in Dali and Lijiang old towns and head to Kunming's Zhuanxin Farmers' Market (). It's a real working market where locals buy fresh produce, mushrooms, and prepared food. A full meal here costs ¥15-25 (~€2-3). Try the smoked tofu rolls, steamed chicken with local herbs, and fresh flower juices.
 
 For a deeper dive into [Chinese street food](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) culture, see our [Chinese Street Food: A First-Timer's Guide to Night Markets and Street Stalls](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/).
 
@@ -167,14 +171,14 @@ The Yuanyang rice terraces were carved into the Ailao Mountains by the Hani peop
 
 **Three Main Viewing Platforms:**
 
-- **Duoyishu (多依树)** — The sunrise platform. Terraces face east at around 1,800 meters altitude. The sun rises behind the mountains and illuminates the flooded paddies layer by layer. Arrive by 6:30 AM (even earlier in peak season) to get a spot on the main viewing deck.
-- **Bada (坝达)** — The sunset platform. Faces west, offering the widest panorama of the terraced valley. Best visited between 5:00-6:30 PM depending on the season.
-- **Qingkou (箐口)** — An all-day platform within walking distance of Xinjie town. Less dramatic than the other two, but the surrounding Hani village and forest setting make it the most culturally immersive.
+- **Duoyishu ()** — The sunrise platform. Terraces face east at around 1,800 meters altitude. The sun rises behind the mountains and illuminates the flooded paddies layer by layer. Arrive by 6:30 AM (even earlier in peak season) to get a spot on the main viewing deck.
+- **Bada ()** — The sunset platform. Faces west, offering the widest panorama of the terraced valley. a popular visited between 5:00-6:30 PM depending on the season.
+- **Qingkou ()** — An all-day platform within walking distance of Xinjie town. Less dramatic than the other two, but the surrounding Hani village and forest setting make it the most culturally immersive.
 
 **Practical Details:**
 
 - **Ticket**: ¥100 (~€13), valid for one day, covers all three main viewing platforms.
-- **Best season**: November through April (flooded paddies = mirror reflections). December to February is peak photography season.
+- **a popular season**: November through April (flooded paddies = mirror reflections). December to February is peak photography season.
 - **Accommodation**: Xinjie town has guesthouses from ¥80-200/night (~€10-25). The closest options to Duoyishu are pricier (¥150-300) but save you the early morning drive.
 - **Getting around**: Hire a local driver for ¥200-300/day (~€25-38) to visit all three platforms. Shared minivans from Xinjie to individual platforms cost ¥15-30 per ride.
 
@@ -182,16 +186,16 @@ The Yuanyang rice terraces were carved into the Ailao Mountains by the Hani peop
 
 Yunnan's ethnic diversity isn't a museum exhibit — it's lived culture that you can see, taste, and participate in. Here are the three groups you're most likely to encounter on this route:
 
-**Bai (白族) — Dali region:**
-The Bai are the largest ethnic group in the Dali area. The most accessible cultural experience is the Three-Course Tea ceremony (三道茶), where a Bai host serves three rounds of tea representing life's stages: bitter (raw tea), sweet (with walnut and sugar), and aftertaste (with honey and cassia). The ceremony costs ¥30-50 (~€4-6) and is offered at several tea houses in Xizhou Ancient Town.
+**Bai () — Dali region:**
+The Bai are the largest ethnic group in the Dali area. The most accessible cultural experience is the Three-Course Tea ceremony (), where a Bai host serves three rounds of tea representing life's stages: bitter (raw tea), sweet (with walnut and sugar), and aftertaste (with honey and cassia). The ceremony costs ¥30-50 (~€4-6) and is offered at several tea houses in Xizhou Ancient Town.
 
-**Actionable tip**: Visit Zhoucheng village (周城), 23 km north of Dali, to try tie-dye (扎染) at a traditional workshop. You pick the pattern, the artisan folds and ties the fabric, and you dip it into indigo vats yourself. A DIY piece costs ¥50-100 (~€6-13) and takes about 1-2 hours. This is a genuinely hands-on experience, not a tourist show.
+**Actionable tip**: Visit Zhoucheng village (), 23 km north of Dali, to try tie-dye () at a traditional workshop. You pick the pattern, the artisan folds and ties the fabric, and you dip it into indigo vats yourself. A DIY piece costs ¥50-100 (~€6-13) and takes about 1-2 hours. This is a genuinely hands-on experience, not a tourist show.
 
-**Naxi (纳西族) — Lijiang region:**
+**Naxi () — Lijiang region:**
 The Naxi people are known for their Dongba script, one of the world's few still-used pictographic writing systems. The Dongba Culture Museum near Lijiang old town (¥30/~€4) displays manuscripts, ritual objects, and explanations of the Dongba religion. Naxi ancient music performances run nightly at several venues in the old town (¥80-150/~€10-19) — the most authentic are organized by the Dayan Naxi Ancient Music Association.
 
-**Hani (哈尼族) & Yi (彝族) — Yuanyang region:**
-The Hani built the Yuanyang terraces and still farm them today. You'll see Hani women in traditional indigo clothing working the fields, especially at Qingkou village. The Yi people inhabit the higher mountain areas around Yuanyang and are known for their embroidered garments and torch festivals. The fire pit (火塘) remains central to both groups' homes — if you're invited into someone's house, you'll sit around it for tea and conversation.
+**Hani () & Yi () — Yuanyang region:**
+The Hani built the Yuanyang terraces and still farm them today. You'll see Hani women in traditional indigo clothing working the fields, especially at Qingkou village. The Yi people inhabit the higher mountain areas around Yuanyang and are known for their embroidered garments and torch festivals. The fire pit () remains central to both groups' homes — if you're invited into someone's house, you'll sit around it for tea and conversation.
 
 ## Budget Estimate for 7 Days (Per Person)
 
@@ -212,9 +216,9 @@ For more on eating well in China without overspending, read our [Gastronomic Adv
 
 **The "ancient town maintenance fee" is gone.** Both Dali and Lijiang old towns used to charge a daily maintenance fee (¥30-80) to visitors. As of 2026, this fee has been abolished at both locations. Don't let anyone tell you otherwise — some taxi drivers and "tour guides" near the entrances still try to sell "entry tickets."
 
-**Lijiang's "Tea Horse Road" horse riding is mostly a tourist trap.** The horse riding experiences advertised along Lijiang's main roads charge ¥150-300 for a 30-minute ride on a paved path. The real Tea Horse Road (茶马古道) hiking route runs through Shaxi Ancient Town (沙溪古镇), 120 km from Lijiang. If you want an authentic experience, take a bus to Shaxi instead — the old caravan staging post has genuine Qing Dynasty architecture and no admission fee.
+**Lijiang's "Tea Horse Road" horse riding is mostly a tourist trap.** The horse riding experiences advertised along Lijiang's main roads charge ¥150-300 for a 30-minute ride on a paved path. The real Tea Horse Road () hiking route runs through Shaxi Ancient Town (), 120 km from Lijiang. If you want an authentic experience, take a bus to Shaxi instead — the old caravan staging post has genuine Qing Dynasty architecture and no admission fee.
 
-**Jade Dragon Snow Mountain tickets require advance booking.** The mountain's visitor capacity is capped daily. Buy your ticket at least 1-2 days ahead via the official WeChat mini-program ("玉龙雪山"). If you show up on the day without a reservation, you may be turned away — especially during Chinese holidays.
+**Jade Dragon Snow Mountain tickets require advance booking.** The mountain's visitor capacity is capped daily. Buy your ticket at least 1-2 days ahead via the official WeChat mini-program (""). If you show up on the day without a reservation, you may be turned away — especially during Chinese holidays.
 
 **Getting to Yuanyang takes effort.** There is no direct high-speed rail to Yuanyang. The most efficient route from Kunming is Kunming → Mengzi (high-speed rail, 2.5 hours, ¥74) → Xinjie town (minivan, 1.5-2 hours, ¥30-40). Total travel time is about 5-6 hours. Budget the entire day for this transfer.
 

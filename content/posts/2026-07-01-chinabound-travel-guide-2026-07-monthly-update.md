@@ -8,16 +8,13 @@ summary: "Monthly update: the July 2026 edition covers all visa rule changes and
 slug: "chinabound-travel-guide-2026-07-monthly-update"
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/"
 tags: ["China Travel Guide", "China Visa 2026", "China Travel Tips", "ChinaBound Update", "China Monthly Guide"]
-categories: ["China Essentials"]
 ShowToc: true
 TocOpen: false
 author: "Joran"
 weight: 1
 draft: false
+categories: ["travel-tips", "payment"]
 ---
-
-
-
 {{< affiliate-section >}}
 
 **Ready for your China adventure?** Here are my top recommendations:
@@ -30,6 +27,11 @@ draft: false
 
 ## ChinaBound Travel Guide Now at Version 2026.07
 
+
+{{< soft-recommend partner="esim" topic="payments" placement="article_mid_1" text="See eSIM options" >}}
+Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
+{{< /soft-recommend >}}
+
 Every month, the ChinaBound Travel Guide PDF gets a fresh update with the latest information travelers need.
 
 ### What's New in Version 2026.07
@@ -41,6 +43,11 @@ Every month, the ChinaBound Travel Guide PDF gets a fresh update with the latest
 5. **Recommended Routes** - Qinghai Lake and Tibet summer tours
 
 ### Get Your Copy
+
+
+{{< soft-recommend partner="flight" topic="payments" placement="article_mid_2" text="Compare flights to China" >}}
+For international travelers comparing options, flight search platforms help you weigh routes and dates before you commit. It's a low-pressure way to see what's available.
+{{< /soft-recommend >}}
 
 Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 

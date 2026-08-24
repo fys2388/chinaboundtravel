@@ -20,6 +20,7 @@ tags = ["China Safety", "Is China Safe", "China Travel Safety", "China Scams", "
 featured = true
 ShowToc = true
 TocOpen = false
+
 +++
 {{< content-timestamp >}}
 
@@ -52,7 +53,7 @@ Most "China scam" articles exaggerate wildly. Based on extensive traveler feedba
 
 **Where**: Wangfujing (Beijing), Nanjing Road (Shanghai), Jinli Street (Chengdu), and around major tourist attractions.
 
-**How to avoid it**: If a stranger invites you anywhere, politely decline. A real tea experience costs ¥50-150 at a legitimate teahouse. If the bill seems unreasonable, refuse to pay and threaten to call the police (110) -- they will almost always back down.
+**How to avoid it**: If a stranger invites you anywhere, politely decline. A real tea experience costs ¥50-150 at a legitimate teahouse. If the bill seems unreasonable, refuse to pay and threaten to call the police (110) -- they will almost often back down.
 
 ### 2. The "Art Student" Painting Scam
 
@@ -80,7 +81,7 @@ You may read about currency switching, baby milk powder scams, or other elaborat
 
 ### Drinking Water
 
-**Do not drink tap water in China.** This is non-negotiable. Always drink bottled water (¥2-5 per bottle at convenience stores). Most hotels provide free bottled water in rooms. Boiling tap water is also safe if you have a kettle.
+**Do not drink tap water in China.** This is non-negotiable. often drink bottled water (¥2-5 per bottle at convenience stores). Most hotels provide free bottled water in rooms. Boiling tap water is also safe if you have a kettle.
 
 **Ice in drinks**: In major cities and established restaurants, ice is made from filtered water and is generally safe. In rural areas or street stalls, ask for drinks without ice ("bu yao bing").
 
@@ -91,7 +92,7 @@ You may read about currency switching, baby milk powder scams, or other elaborat
 - **Choose stalls with high turnover**. If locals are queuing, the food is fresh. Empty stalls mean food has been sitting around.
 - **Watch the cooking**. Food cooked at high heat (wok-fired noodles, skewers from a grill) is generally safe. Avoid raw or lightly cooked items at street stalls.
 - **Peel fruit**. Buy whole fruits from markets and peel them yourself. Pre-cut fruit sitting in the open is risky.
-- **Trust your stomach**. If something looks or smells off, skip it. There is always another stall nearby.
+- **Trust your stomach**. If something looks or smells off, skip it. There is often another stall nearby.
 
 Many travelers report getting food sick exactly once during extended stays, and it's often from a hotel buffet, not street food. The bacterial adaptation most travelers experience in the first week is normal -- it usually passes in 2-3 days.
 
@@ -102,7 +103,7 @@ If you need medical attention in China:
 - **Private hospitals** ( Parkway, United Family, Jiahui ) have English-speaking staff and accept international insurance. Expect to pay ¥500-1,500 ($69-207) for a basic consultation.
 - **Public hospitals** are cheap (a consultation costs ¥20-50) but crowded, and English is limited. Bring a translation app.
 - **Pharmacies** are everywhere and most medications are available without a prescription. Staff usually speak basic English in major cities.
-- **Have [travel insurance](/posts/best-travel-insurance-china/)**. Many travelers learn this the hard way — a bike accident in Chengdu can cost ¥3,000 ($414) out of pocket. We always recommend carrying [SafetyWing](/posts/best-travel-insurance-china/) coverage.
+- **Have [travel insurance](/posts/best-travel-insurance-china/)**. Many travelers learn this the hard way — a bike accident in Chengdu can cost ¥3,000 ($414) out of pocket. We often recommend carrying [SafetyWing](/posts/best-travel-insurance-china/) coverage.
 
 ### Air Quality
 
@@ -183,7 +184,7 @@ This happens more often than you would think. If it happens to you:
 
 ## Solo Female Travel
 
-China is one of the best countries in the world for solo female travelers. Many female travelers have traveled extensively across China alone, and their consensus is clear: it feels safer than most Western cities.
+China is one of one of the popular countries in the world for solo female travelers. Many female travelers have traveled extensively across China alone, and their consensus is clear: it feels safer than most Western cities.
 
 That said, the standard precautions apply:
 

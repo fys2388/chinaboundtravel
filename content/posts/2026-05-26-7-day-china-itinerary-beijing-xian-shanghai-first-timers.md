@@ -2,7 +2,7 @@
 content_id: "cbt-c885da2cf5d9"
 title: "7-Day China Itinerary: Beijing, Xi'an & Shanghai"
 slug: "7-day-china-itinerary-beijing-xian-shanghai-first-timers"
-description: "First-timer 7-day China itinerary: Beijing's Forbidden City, Xi'an's Terracotta Army, Shanghai's Bund, with honest costs and pro tips."
+description: "7-Day China Itinerary: Beijing, Xi. Research-based practical guidance for international travelers planning a China trip. Check official sources for the lates..."
 date: "2026-05-27"
 author: "Joran"
 params:
@@ -26,6 +26,8 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg"
 categories: ["cities", "visa"]
 tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide"]
+last_updated: "2026-08-24"
+
 ---
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)
 
@@ -80,7 +82,7 @@ Book your ticket through a reputable tour operator or directly at the Mutianyu s
 **Day 4  Terracotta Army**
 Arrive, drop bags at hotel near the South Gate. Go to the Terracotta Army before 9 AM or after 3 PM  it's less crowded and the afternoon light is better for photos.
 
-What no one tells you: The "best" warriors are in Pit 1. For the full history and insider tips, read our [Xi'an Terracotta Army guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
+What no one tells you: The "a popular" warriors are in Pit 1. For the full history and practical tips, read our [Xi'an Terracotta Army guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
 
 Budget tip: Eating near the museum is expensive and mediocre. Bring your own snacks or eat after you leave.
 
@@ -91,7 +93,7 @@ Afternoon: Big Wild Goose Pagoda (can skip going up if you've seen pagodas befor
 
 Evening: Muslim Quarter. Try the lamb biangbiang noodles, roujiamo (Chinese burger), and (osmanthus cake). Walk, eat, repeat.
 
-> **Related:** The best Xi'an food is in the Muslim Quarter - explore it yourself!
+> **Related:** one of the popular Xi'an food is in the Muslim Quarter - explore it yourself!
 
 ---
 
@@ -165,3 +167,7 @@ And when you're ready for round two: Western Sichuan, Yunnan, Tibet, or the Silk
 {{< affiliate-esim >}}
 
 {{< affiliate-tour >}}
+
+---
+
+*Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*

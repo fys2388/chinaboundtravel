@@ -11,8 +11,6 @@ tags:
   - China
   - Foodie
   - Culture
-categories:
-  - China
 geo: "US"
 draft: false
 audit_status: "pass2"
@@ -24,13 +22,19 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/chinas-food-through-the-ages-guide.jpg"
+categories: ["food", "internet"]
+
 ---
+There is a video doing the rounds on Chinese social media that is hard to forget. It shows a map of China, and one by one, every province lights up red — each with the dish people from that province miss most when they are far from home. Sichuan gets hotpot. Shaanxi gets roujiamo. Hunan gets its fire-chili stir-fries. By the time the whole map glows, it is less a geography lesson than a love letter written in food.
 
-There is a video doing the rounds on Chinese social media that I cannot stop thinking about. It shows a map of China, and one by one, every province lights up red — each with the dish people from that province miss most when they are far from home. Sichuan gets hotpot. Shaanxi gets roujiamo. Hunan gets its fire-chili stir-fries. By the time the whole map glows, it is less a geography lesson than a love letter written in food.
-
-I have lived in Chengdu for over a decade, which means I have spent ten years doing "research" for exactly this kind of video. And watching it, I realized something: every one of those hometown dishes is a history book you can eat. Chinese food did not appear fully formed in some imperial kitchen — it took two million years of fire, famine, empires, and stubborn grandmothers to get to your table. Here is that journey, served course by course.
+What makes this video so compelling is that every one of those hometown dishes is a history book you can eat. Chinese food did not appear fully formed in some imperial kitchen — it took two million years of fire, famine, empires, and generations of home cooks to get to your table. Here is that journey, served course by course.
 
 ## The First Bite: Fire, Pots, and the Birth of Chinese Cooking
+
+
+{{< soft-recommend partner="klook" topic="food" placement="article_mid_1" text="Browse tours and tickets" >}}
+For first-time visitors, a structured day tour or skip-the-line ticket can simplify logistics at major attractions.
+{{< /soft-recommend >}}
 
 It starts, appropriately, with barbecue. Around two million years ago, early humans in what is now China figured out that fire makes food safer, softer, and — here is the part that has not changed since — way more delicious. Roasting was the original tasting menu.
 
@@ -47,6 +51,11 @@ The Shang dynasty was the celebrity-chef era. Du Kang invented (or at least got 
 Most important of all, this is when chopsticks began replacing knives and forks at the table. Think about that the next time you proudly handle a pair of kuaizi at a Chengdu hotpot: you are using the most successful utensil upgrade in human history.
 
 ## From Cold-Food Festivals to Roujiamo: Warring States to the Han
+
+
+{{< soft-recommend partner="esim" topic="food" placement="article_mid_2" text="See eSIM options" >}}
+Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
+{{< /soft-recommend >}}
 
 The Spring and Autumn period gave China the Cold Food Festival, when no fires were allowed and everyone ate cold snacks — basically the ancient version of "the kitchen is closed." Street food culture took off. The Warring States period introduced wheat in a big way, which gave us the *roujiamo*: braised pork stuffed into a crispy flatbread. Westerners like to call it "China's hamburger," which is unfair to the hamburger — the roujiamo is older, cheaper, and honestly better.
 
@@ -65,10 +74,15 @@ Here is the practical part: you do not need a time machine to eat this history. 
 
 ## The Dish That Waits for You
 
-Here is what that viral map video really got right: the dish you "miss most" is never just food. It is the kitchen you grew up in, the market you walked through, the person who first cooked for you. For my Chinese friends, the red map is nostalgia. For travelers, it is an invitation — every province is serving its own history, and somewhere on that glowing map is the dish that will become *your* hometown dish, even if you are 10,000 kilometers from home.
+Here is what that viral map video really got right: the dish you "miss most" is generally not recommended just food. It is the kitchen you grew up in, the market you walked through, the person who first cooked for you. For my Chinese friends, the red map is nostalgia. For travelers, it is an invitation — every province is serving its own history, and somewhere on that glowing map is the dish that will become *your* hometown dish, even if you are 10,000 kilometers from home.
 
 So when you visit China, eat like you are writing your own map. Start with the classics, wander into the small shops, and remember: you are not just having lunch. You are eating two million years of history — and it is delicious.
 
 ![A real Chengdu night market food street at dusk: a vendor grilling meat skewers over charcoal, simple food stalls with warm incandescent bulbs, locals waiting, documentary street photography](/img/china-dest/food/night-market-chengdu.jpg)
 
 ![A typical Chinese family dinner in an ordinary Chengdu apartment: home-cooked dishes on a round wooden table, family members eating with chopsticks, soft natural window light, documentary photography](/img/china-dest/food/family-dinner-chengdu.jpg)
+
+
+{{< soft-recommend partner="hotel" topic="food" placement="article_soft_3" text="Search accommodation" >}}
+Where you stay shapes a city trip. Comparing hotel options across platforms helps you find the location and budget that fit your route.
+{{< /soft-recommend >}}

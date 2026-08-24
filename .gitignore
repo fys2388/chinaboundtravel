@@ -13,6 +13,9 @@ node_modules/
 /static/generated_images/
 
 # Logs
+
+# Content trust fix backups (local rollback only, not committed)
+/reports/content_trust_fix/backup/
 *.log
 
 # Python

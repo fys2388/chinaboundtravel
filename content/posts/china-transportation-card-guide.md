@@ -6,7 +6,6 @@ slug: "china-transportation-card-guide"
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/"
 tags: ["ChinaTransportation", "ChinaMetro", "ChinaTravelTips", "TransportationCard"]
-categories: ["China Travel Guide"]
 description: "How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in Beijing, Shanghai, and beyond."
 author: "Joran"
 params:
@@ -33,8 +32,10 @@ cover:
   caption: "China's metro networks make city travel fast and affordable"
 ShowToc: true
 TocOpen: false
----
+categories: ["payment", "cities"]
+last_updated: "2026-08-24"
 
+---
 {{< content-timestamp >}}
 
 This guide explains how public transportation payment works in China in 2026, and compares the options available to foreign travelers: physical metro IC cards, transit apps, and mobile payment. Based on official transport information and current traveler guidance, ChinaBound Travel breaks down what each option costs, where it works, and which one makes sense for your trip.
@@ -42,6 +43,11 @@ This guide explains how public transportation payment works in China in 2026, an
 ---
 
 ## Do Foreign Travelers Need a Transportation Card in China?
+
+
+{{< soft-recommend partner="esim" topic="payments" placement="article_mid_1" text="See eSIM options" >}}
+Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
+{{< /soft-recommend >}}
 
 Short answer: **no, not strictly** -- but a transportation card can make city travel smoother.
 
@@ -55,7 +61,7 @@ The rest of this guide covers the three main options, city-by-city examples, and
 
 ## China Transportation Card Options Compared
 
-| Option | Best for | Deposit | Works offline | City coverage |
+| Option | a popular for | Deposit | Works offline | City coverage |
 |---|---|---|---|---|
 | **Metro IC card (physical)** | Multi-city trips, no-signal areas, frequent riders | Usually required, refundable | Yes | City and participating interconnect cities |
 | **Transit app (city official apps)** | Route planning plus payment | No | No | Single city or region |
@@ -94,6 +100,11 @@ Shanghai's transit system supports physical IC cards and QR payment. The Shangha
 Both cities run large metro networks that accept physical transit cards and QR payment. Shenzhen's network connects across the Pearl River Delta, making a physical card or reliable mobile payment worthwhile if you plan several city-to-city trips.
 
 ## How to Buy a Transportation Card
+
+
+{{< soft-recommend partner="safetywing" topic="payments" placement="article_mid_2" text="Review travel insurance options" >}}
+Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
+{{< /soft-recommend >}}
 
 1. **Find the station service counter or ticket machine** -- every major metro station has one.
 2. **Ask for a transit card** -- English service is available at major tourist stations in Beijing, Shanghai, Guangzhou, and Shenzhen.
@@ -139,7 +150,7 @@ This is an editorial comparison layer, not a single-provider endorsement. The to
 
 ### Can I use one card in multiple Chinese cities?
 
-Some physical IC cards join the national transit-card interconnect program, but coverage is not guaranteed on every line. Mobile QR payment works in nearly every city without a card.
+Some physical IC cards join the national transit-card interconnect program, but coverage is not generally on every line. Mobile QR payment works in nearly every city without a card.
 
 ### Is there a deposit for the metro card?
 
@@ -160,3 +171,13 @@ A transportation card is for local metro and bus travel inside a city. For inter
 ---
 
 *Last updated: August 2026 | ChinaBound Travel editorial team*
+
+
+
+{{< soft-recommend partner="flight" topic="payments" placement="article_soft_3" text="Compare flights to China" >}}
+For international travelers comparing options, flight search platforms help you weigh routes and dates before you commit. It's a low-pressure way to see what's available.
+{{< /soft-recommend >}}
+
+---
+
+*Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*

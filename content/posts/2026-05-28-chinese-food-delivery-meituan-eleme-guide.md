@@ -26,6 +26,8 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.jpg"
 categories: ["cities", "food"]
+last_updated: "2026-08-24"
+
 ---
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
 
@@ -62,7 +64,7 @@ A common routine: Open both apps, search the same restaurant, pick the cheaper o
 
 ### Step 1: Phone Number
 
-Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. For the best eSIM options, see our [internet connectivity guide for China](/posts/internet-connection-china-esim-vpn-guide/). Without a Chinese number, you can't receive the verification code to log in.
+Both apps require a Chinese phone number (+86). If you have an eSIM with a Chinese number (Airalo, Nomad, or your local carrier's China option), this works. For one of the popular eSIM options, see our [internet connectivity guide for China](/posts/internet-connection-china-esim-vpn-guide/). Without a Chinese number, you can't receive the verification code to log in.
 
 {{< affiliate-mid-cta partner="esim" placement="food-delivery-mid-content" text="Compare eSIM Options" >}}
 **Setting up before you land saves time.** Both apps need a Chinese phone number for the verification code. Compare eSIM options with a Chinese number ahead of your trip so you can register as soon as you arrive.
@@ -81,7 +83,7 @@ Or: Ask your hotel concierge/reception to write your address in Chinese on a pie
 
 ### Step 3: Payment
 
-**Alipay and WeChat Pay are the only options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
+**Alipay and WeChat Pay are one of the options** for in-app payment. Foreign credit cards don't work directly on food delivery apps (they work on Meituan's travel and hotel booking, but not food delivery).
 
 If you don't have Alipay or WeChat Pay set up yet, read our [Alipay & WeChat Pay Guide](/posts/alipay-wechat-pay-foreigners-guide/) first. Another new option is [PayPal's integration with Alipay and WeChat Pay](/posts/paypal-alipay-wechat-pay-qr-code-support/), which lets you pay without setting up either app. Without these, you're stuck with cash-on-delivery at select restaurants.
 
@@ -107,10 +109,10 @@ Restaurant menus in delivery apps are actually easier than physical menus becaus
 
 Common menu sections:
 - ****  Signature dishes
-- ****  Best sellers
+- ****  a popular sellers
 - ****  New items
 - ****  Discounted items (check these first  restaurants put random items on sale)
-- ****  Single person set meals (best value)
+- ****  Single person set meals (a popular value)
 
 ### Adding to Cart & Ordering
 
@@ -136,7 +138,7 @@ Start with these  easy to order, hard to get wrong:
 | Braised pork rice bowls |  | Tasty, filling, consistent |
 | Dumplings | / | Universally liked |
 | Dandan noodles |  | Spicy but delicious |
-| Hot pot for one |  | Hot pot is always worth it — learn more in our [Sichuan hotpot guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) |
+| Hot pot for one |  | Hot pot is often worth it — learn more in our [Sichuan hotpot guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) |
 
 ### Dishes to Avoid (At First)
 
@@ -242,3 +244,7 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 {{< affiliate-esim >}}
 
 {{< affiliate-tour >}}
+
+---
+
+*Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*

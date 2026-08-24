@@ -1,0 +1,347 @@
+﻿content_id,file,before,after,rule,risk_level,status
+cbt-b4ff4381a014,144-hour-visa-free-transit-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-b4ff4381a014,144-hour-visa-free-transit-guide.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-b4ff4381a014,144-hour-visa-free-transit-guide.md,行去中文: > 鈿狅笍 **Pro tip**: Print your ...,清理,LANGUAGE,HIGH,FIXED
+cbt-b4ff4381a014,144-hour-visa-free-transit-guide.md,行去中文: > 鈿狅笍 **Critical**: The clock ...,清理,LANGUAGE,HIGH,FIXED
+cbt-6a164e0e8077,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md,insider tips -> practical tips,编辑部口吻,BRAND,HIGH,FIXED
+cbt-6a164e0e8077,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-6a164e0e8077,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-707a8899c0a7,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-707a8899c0a7,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-707a8899c0a7,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-707a8899c0a7,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cc4549872c92,2026-05-25-china-high-speed-rail-how-to-book-tickets.md,Cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cc4549872c92,2026-05-25-china-high-speed-rail-how-to-book-tickets.md,Perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cc4549872c92,2026-05-25-china-high-speed-rail-how-to-book-tickets.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cc4549872c92,2026-05-25-china-high-speed-rail-how-to-book-tickets.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,absolutely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,The only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-302467d853db,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,行去中文: | **Language** | Almost zero E...,清理,LANGUAGE,HIGH,FIXED
+cbt-c885da2cf5d9,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md,insider tips -> practical tips,编辑部口吻,BRAND,HIGH,FIXED
+cbt-c885da2cf5d9,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md,The best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-c885da2cf5d9,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-c885da2cf5d9,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md,description: 42字 -> 生成,优化,SEO,MEDIUM,FIXED
+cbt-277de627eb2d,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,the most beautiful -> a notable,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-277de627eb2d,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-277de627eb2d,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-277de627eb2d,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,行去中文: - **Longjing Tea (龙井茶)** —The ...,清理,LANGUAGE,HIGH,FIXED
+cbt-277de627eb2d,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,description: 35字 -> 生成,优化,SEO,MEDIUM,FIXED
+cbt-673e981fe6f2,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-6f28480baea0,2026-05-27-how-to-survive-chinese-train-station.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-6f28480baea0,2026-05-27-how-to-survive-chinese-train-station.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-e464169c4991,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-e464169c4991,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-e464169c4991,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-e464169c4991,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-abb64a856c29,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-abb64a856c29,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-abb64a856c29,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-abb64a856c29,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,absolutely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-abb64a856c29,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,The only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-73f33c49bc51,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-73f33c49bc51,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-558f85f45e9a,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-698862ce2129,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-698862ce2129,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-698862ce2129,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-663ab3f3b0fa,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-663ab3f3b0fa,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-663ab3f3b0fa,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-550a6e3e929c,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-550a6e3e929c,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-550a6e3e929c,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,insider tips -> practical tips,编辑部口吻,BRAND,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,The best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,definitely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d7747b73c978,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md,description: 8字 -> 生成,优化,SEO,MEDIUM,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,Cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,Absolutely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: **Morning: Golden Whip Stream ...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: **Afternoon: Huangshi Village ...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,"行去中文: - The sunset view from ""Star P...",清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: - Continue along the Yuanjiaji...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,"行去中文: - Walk the ""Ten-Mile Gallery"" ...",清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: **Tianmen Cave (天门洞)** — A mas...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: **Glass Skywalk (鬼谷栈道)** — A n...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,"行去中文: If you're exhausted (we were),...",清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: - **Sanxia Guo (三下锅)** — The s...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: - **Tu Jia Bacon (土家腊肉)** — Sm...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: - **Stinky Tofu (臭豆腐)** — Huna...,清理,LANGUAGE,HIGH,FIXED
+cbt-34777b6c17c1,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md,行去中文: - **Wild Fern Noodles (蕨根粉)** ...,清理,LANGUAGE,HIGH,FIXED
+cbt-c59607760fee,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-c59607760fee,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-c59607760fee,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-c59607760fee,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md,every traveler -> many travelers,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-ae69cb9f84b0,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-ae69cb9f84b0,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-255af4ed003a,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-255af4ed003a,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-255af4ed003a,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-255af4ed003a,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,"行去中文: | April–May | ★★★★★ | ""Misty r...",清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Morning/afternoon:** Arriv...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Evening:** Walk the **Two ...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Dinner:** Find a noodle sh...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Afternoon:** Rent an e-bik...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Evening:** **Yangshuo West...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Morning:** Visit **Silver ...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Mid-day:** **Moon Hill (月亮...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Guilin Rice Noodles (桂林米粉)...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Beer Fish (啤酒鱼)** — ¥60-10...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Stuffed River Snails (田螺酿)...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Lipu Taro Pork Belly (荔浦芋扣...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Oil Tea (油茶)** — ¥10-20 (~...,清理,LANGUAGE,HIGH,FIXED
+cbt-bf4ec5e57a07,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md,行去中文: - **Rain makes the Li River *b...,清理,LANGUAGE,HIGH,FIXED
+cbt-4e09fa4aa93d,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md,insider tips -> practical tips,编辑部口吻,BRAND,HIGH,FIXED
+cbt-4e09fa4aa93d,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-4e09fa4aa93d,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: Arrive in Xinjie town (Yuanyan...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: Wake up early for the Duoyishu...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: After the sunrise (around 7:30...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Actionable tip**: Skip the t...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: - **Duoyishu (多依树)** — The sun...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: - **Bada (坝达)** — The sunset p...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: - **Qingkou (箐口)** — An all-da...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Bai (白族) — Dali region:**...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: The Bai are the largest ethnic...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Actionable tip**: Visit Zhou...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Naxi (纳西族) — Lijiang region:...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Hani (哈尼族) & Yi (彝族) — Yuany...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: The Hani built the Yuanyang te...,清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,"行去中文: **Lijiang's ""Tea Horse Road"" h...",清理,LANGUAGE,HIGH,FIXED
+cbt-23c31fe5b281,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md,行去中文: **Jade Dragon Snow Mountain ti...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,The best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 1. Sichuan Cuisine (川菜) — ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **[Sichuan Hotpot](/posts/si...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Mapo Tofu (麻婆豆腐)** — Silky...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Dan Dan Noodles (担担面)** — ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Kung Pao Chicken (宫保鸡丁)** ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 2. Cantonese Cuisine (粤菜) ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Dim Sum (点心)** — The world...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Char Siu (叉烧)** — Cantones...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Wonton Noodles (云吞面)** — S...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: > **Actionable tip:** In Guang...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 3. Beijing Cuisine (京菜) — ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Peking Duck (北京烤鸭)** — The...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Zhajiangmian (炸酱面)** — Bei...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: > **Actionable tip:** For Peki...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 4. Hunan Cuisine (湘菜) — Fi...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Chairman Mao's Red Braised...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Steamed Fish Head with Cho...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: > **Actionable tip:** Changsha...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 5. Jiangsu/Zhejiang Cuisin...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Xiaolongbao (小笼包)** — Shan...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Squirrel-Shaped Mandarin F...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Dongpo Pork (东坡肉)** — Slow...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 6. Yunnan Cuisine (滇菜) — F...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Crossing-the-Bridge Noodle...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Erkuai (饵块)** — Rice cakes...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 7. Xinjiang Cuisine (新疆菜) ...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Lamb Kebabs (羊肉串)** — Char...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - **Da Pan Ji (大盘鸡)** — ""Big P...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Polo (手抓饭)** — Uyghur pila...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: > **Actionable tip:** Xinjiang...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: ### 8. Fujian Cuisine (闽菜) — U...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Buddha Jumps Over the Wall...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Oyster Omelet (海蛎煎)** — Fr...,清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - *Bù là* (不辣) — ""Not spicy""...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - *Wēi là* (微辣) — ""A little sp...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - *Tài là le* (太辣了) — ""Too spi...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - *Méi yǒu zhū ròu* (没有猪肉) — ""...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,"行去中文: - *Zhè ge hǎo chī* (这个好吃) — ""T...",清理,LANGUAGE,HIGH,FIXED
+cbt-1005a037234b,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md,行去中文: - **Watch out for MSG (MSG/味精)...,清理,LANGUAGE,HIGH,FIXED
+cbt-9e2f5ffa1b6d,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md,the most amazing -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-9e2f5ffa1b6d,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-9e2f5ffa1b6d,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-5479873d6104,2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-5479873d6104,2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-52a577c1b2b8,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-52a577c1b2b8,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-52a577c1b2b8,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md,cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-52a577c1b2b8,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md,description: 14字 -> 生成,优化,SEO,MEDIUM,FIXED
+cbt-57d0b0208d3b,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-57d0b0208d3b,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-57d0b0208d3b,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md,"行去中文: Before you travel to China, it...",清理,LANGUAGE,HIGH,FIXED
+cbt-57d0b0208d3b,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md,"行去中文: Remember, China is a vast和 div...",清理,LANGUAGE,HIGH,FIXED
+cbt-de065751769e,2026-07-14-transportation-guide-guide.md,insider knowledge -> research-based knowledge,编辑部口吻,BRAND,HIGH,FIXED
+cbt-de065751769e,2026-07-14-transportation-guide-guide.md,行去中文: Chinese train stations can be ...,清理,LANGUAGE,HIGH,FIXED
+cbt-17c6738ffb32,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-17c6738ffb32,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-17c6738ffb32,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md,cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-17c6738ffb32,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0897b4c56074,2026-07-16-food-recommendations-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0897b4c56074,2026-07-16-food-recommendations-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0897b4c56074,2026-07-16-food-recommendations-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0897b4c56074,2026-07-16-food-recommendations-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0897b4c56074,2026-07-16-food-recommendations-guide.md,definitely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-7996811c1d23,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-7996811c1d23,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-dfe3904705ea,2026-07-20-travel-safety-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-dfe3904705ea,2026-07-20-travel-safety-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-dfe3904705ea,2026-07-20-travel-safety-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-dfe3904705ea,2026-07-20-travel-safety-guide.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-dfe3904705ea,2026-07-20-travel-safety-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0953b5433c00,2026-07-21-cultural-etiquette-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0953b5433c00,2026-07-21-cultural-etiquette-guide.md,行去中文: Another custom is the use of r...,清理,LANGUAGE,HIGH,FIXED
+cbt-0953b5433c00,2026-07-21-cultural-etiquette-guide.md,description: 47字 -> 生成,优化,SEO,MEDIUM,FIXED
+cbt-2b8c6981425b,2026-07-22-cultural-etiquette-guide.md,The best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-2b8c6981425b,2026-07-22-cultural-etiquette-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-acae8a973429,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-baa2f6fba2f0,2026-07-27-accommodation-tips-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-baa2f6fba2f0,2026-07-27-accommodation-tips-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-baa2f6fba2f0,2026-07-27-accommodation-tips-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-baa2f6fba2f0,2026-07-27-accommodation-tips-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-baa2f6fba2f0,2026-07-27-accommodation-tips-guide.md,every traveler -> many travelers,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-92448be1e0ca,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-92448be1e0ca,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-92448be1e0ca,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-92448be1e0ca,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-92448be1e0ca,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bfeaa5ca9007,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bfeaa5ca9007,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bfeaa5ca9007,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bfeaa5ca9007,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md,行去中文: | 鉁堬笍 Flights | a popular deal...,清理,LANGUAGE,HIGH,FIXED
+cbt-bfeaa5ca9007,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md,行去中文: | 🛡锔?Travel Insurance | Stay c...,清理,LANGUAGE,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,Never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80ac63165adb,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md,absolutely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: One of the first things you'll...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: Another important greeting is ...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: Another important courtesy in ...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 一 (yī) - one...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 二 (èr) - two...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 三 (sān) - three...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 四 (sì) - four...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 五 (wǔ) - five...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 六 (liù) - six...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 七 (qī) - seven...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 八 (bā) - eight...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 九 (jiǔ) - nine...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 十 (shí) - ten...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 一点 (yī diǎn) - one o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 两点 (liǎng diǎn) - two o'cloc...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 三点 (sān diǎn) - three o'cloc...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 四点 (sì diǎn) - four o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 五点 (wǔ diǎn) - five o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 六点 (liù diǎn) - six o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 七点 (qī diǎn) - seven o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 八点 (bā diǎn) - eight o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 九点 (jiǔ diǎn) - nine o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 十点 (shí diǎn) - ten o'clock...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: Getting around in China can be...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,"行去中文: - 请问，去 [地点] 怎么走？(Qǐng wèn, qù ...",清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,"行去中文: - 请问，[地点] 在哪里？(Qǐng wèn, [dì d...",清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,"行去中文: - 请问，附近有 [地点] 吗？(Qǐng wèn, fù ...",清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 往前走 (Wǎng qián zǒu) - Go str...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 向左转 (Xiàng zuǒ zhuǎn) - Turn...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 向右转 (Xiàng yòu zhuǎn) - Turn...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 过了 [地点] 就到了 (Guò le [dì diǎn...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 在 [地点] 的对面 (Zài [dì diǎn] de...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 我要 [菜名] (Wǒ yào [cài míng]) ...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 请给我 [菜名] (Qǐng gěi wǒ [cài m...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 有 [菜名] 吗？(Yǒu [cài míng] ma?...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 不要 [调料] (Bù yào [tiáo liào])...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,"行去中文: - 买单 (Mǎi dān) - Check, please...",清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 这个多少钱？(Zhè ge duō shǎo qián?...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 太贵了 (Tài guì le) - It's too ...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 便宜一点 (Pián yí yì diǎn) - Can...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 打个折吧 (Dǎ ge zhé ba) - Can yo...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 救命！(Jiù mìng!) - Help!...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 我迷路了。(Wǒ mí lù le.) - I'm lo...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 我生病了。(Wǒ shēng bìng le.) - I...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 我受伤了。(Wǒ shòu shāng le.) - I...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 报警！(Bào jǐng!) - Call the po...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - 叫救护车！(Jiào jiù hù chē!) - Ca...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,行去中文: - **Writing system:** The Chin...,清理,LANGUAGE,HIGH,FIXED
+cbt-cfd5d7b39f09,2026-08-03-chinese-language-survival-phrases-guide.md,"行去中文: Safe travels, and zhu nǐ lǚxín...",清理,LANGUAGE,HIGH,FIXED
+cbt-49088019c529,2026-08-05-china-family-travel-tips-a-californians-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-49088019c529,2026-08-05-china-family-travel-tips-a-californians-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-49088019c529,2026-08-05-china-family-travel-tips-a-californians-guide.md,"行去中文: Taxis are also available, but ...",清理,LANGUAGE,HIGH,FIXED
+cbt-74e8424894c4,2026-08-07-china-bargaining-and-shopping-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-74e8424894c4,2026-08-07-china-bargaining-and-shopping-guide.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-932a277b1899,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-932a277b1899,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-932a277b1899,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-067675763415,2026-08-10-chinas-food-through-the-ages-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-bc3e1afe5dc0,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-034b43ef5e3a,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-034b43ef5e3a,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,the most beautiful -> a notable,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-0bb1cb1e308d,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md,行去中文: If you're interested in learni...,清理,LANGUAGE,HIGH,FIXED
+cbt-0adceab18b53,alipay-for-foreigners-guide.md,the only -> one of the,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-07563e9b51cc,alipay-wechat-pay-foreigners-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-07563e9b51cc,alipay-wechat-pay-foreigners-guide.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-07563e9b51cc,alipay-wechat-pay-foreigners-guide.md,Never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d701fb08eb7b,best-travel-insurance-china.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d701fb08eb7b,best-travel-insurance-china.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d701fb08eb7b,best-travel-insurance-china.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-d701fb08eb7b,best-travel-insurance-china.md,never -> generally not recommended,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-02a3e0d6ed4f,china-airport-transfer-guide.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-02a3e0d6ed4f,china-airport-transfer-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-02a3e0d6ed4f,china-airport-transfer-guide.md,cheapest -> budget-friendly,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-244822dc113b,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md,the best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-244822dc113b,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md,perfect -> well-suited,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-244822dc113b,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md,always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-55aef784e6aa,china-transportation-card-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-55aef784e6aa,china-transportation-card-guide.md,guaranteed -> generally,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-a349eee78670,internet-connection-china-esim-vpn-guide.md,Best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-a349eee78670,internet-connection-china-esim-vpn-guide.md,Always -> often,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-a349eee78670,internet-connection-china-esim-vpn-guide.md,guarantee -> tends to,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80f6c218ad94,western-sichuan-overland-camping-route.md,The best -> one of the popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80f6c218ad94,western-sichuan-overland-camping-route.md,best -> a popular,弱化表达,HALLUCINATION,HIGH,FIXED
+cbt-80f6c218ad94,western-sichuan-overland-camping-route.md,definitely -> ,弱化表达,HALLUCINATION,HIGH,FIXED
+,144-hour-visa-free-transit-guide.md,"fact: 144-hour, 240-hour, cost, costs, hours",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md,fact: hours,验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md,"fact: fee, fees, passport, visa",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-25-china-high-speed-rail-how-to-book-tickets.md,"fact: 144-hour, charges, cost, distance, duration",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-25-shanghai-bund-french-concession-2-day-guide.md,"fact: 144-hour, charge, cost, fees, hours",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md,"fact: 144-hour, cost, hours, passport, transit",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md,"fact: 144-hour, cost, costs, distance, hours",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md,"fact: 144-hour, cost, fare, hours, passport",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-27-how-to-survive-chinese-train-station.md,"fact: passport, visa",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md,"fact: cost, distance, fee, fees, hours",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md,"fact: fare, fees, hours, visa",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md,"fact: 144-hour, charge, cost, duration, fee",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,alipay-for-foreigners-guide.md,"fact: passport, restriction, visa",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,alipay-wechat-pay-foreigners-guide.md,"fact: 144-hour, fees, hours, passport, prices",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,china-airport-transfer-guide.md,"fact: cost, costs, fare, price",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md,"fact: 144-hour, hours, immigration, passport, policy",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,china-transportation-card-guide.md,"fact: cost, costs, transit, visa",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,internet-connection-china-esim-vpn-guide.md,"fact: 144-hour, charges, cost, duration, passport",验证提示+last_updated,FACT,MEDIUM,GUARDED
+,western-sichuan-overland-camping-route.md,"fact: cost, hours, passport",验证提示+last_updated,FACT,MEDIUM,GUARDED
