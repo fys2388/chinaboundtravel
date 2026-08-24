@@ -12,26 +12,28 @@
 {{- if not $ogImage }}
   {{- $ogImage = "/images/og-default.jpg" }}
 {{- end }}
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+{{- /* P1-GROWTH-28A: 首页/分类页 -> website；文章页 -> article */ -}}
+{{- $ogType := "website" }}
+{{- if and .IsPage (not .IsHome) }}{{ $ogType = "article" }}{{ end }}
+<meta property="og:type" content="{{ $ogType }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ .Title }}">
-{{- if .Description }}
-<meta property="og:description" content="{{ .Description }}">
-{{- else if .IsPage }}
-<meta property="og:description" content="{{ .Summary | plainify | truncate 160 }}">
+{{- $ogDesc := .Description }}
+{{- if not $ogDesc }}
+  {{- if .Summary }}{{ $ogDesc = .Summary }}{{ end }}
 {{- end }}
+{{- if not $ogDesc }}{{ $ogDesc = site.Params.description }}{{ end }}
+<meta property="og:description" content="{{ $ogDesc | plainify | truncate 160 }}">
 <meta property="og:image" content="{{ $ogImage | absURL }}">
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="720">
-{{- if not .IsHome }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="{{ site.Title }}">
-{{- end }}
 {{- with site.Params.SocialParams }}
   {{- with .facebook }}
 <meta property="article:publisher" content="https://www.facebook.com/{{ . }}">
   {{- end }}
 {{- end }}
-{{- if .IsPage }}
+{{- if eq $ogType "article" }}
 <meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}">
   {{- with .Lastmod }}
 <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05-07:00" }}">

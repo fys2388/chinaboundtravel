@@ -1,4 +1,19 @@
-<!-- Email Subscription Form with Lead Magnet -->
+<!-- Email Subscription Form with Lead Magnet (API-backed, MailerLite delivery) -->
+{{- /* Determine lead magnet based on page type / content */ -}}
+{{- $isVisa := or (eq .Type "visa") (findRE "visa|transit|144-hour|entry|immigration|packing" (lower (printf "%s %s" .Title .RelPermalink))) -}}
+{{- $isVisa = or $isVisa (findRE "visa|policy|travel-tips" (lower (delimit (.Params.categories | default slice) " "))) -}}
+{{- $leadTitle := "China Visa-Free Entry Checklist" -}}
+{{- $leadSub := "Free PDF — visa-free entry essentials for your China trip" -}}
+{{- $leadDesc := "Download the research-based visa-free entry checklist: eligibility, documents, border tips." -}}
+{{- $lmIcon := "🛂" -}}
+{{- if not $isVisa -}}
+  {{- $leadTitle = "7-Day China Itinerary Template" -}}
+  {{- $leadSub = "Free PDF — routes, budget & insider tips" -}}
+  {{- $leadDesc = "Download the complete 7-Day China Itinerary Template with routes and budget breakdowns." -}}
+  {{- $lmIcon = "📋" -}}
+{{- end -}}
+{{- $magnetName := "visa-free-checklist" -}}
+{{- if not $isVisa -}}{{ $magnetName = "itinerary-template" }}{{- end -}}
 <div class="subscribe-card">
     <div class="subscribe-header">
         <div class="subscribe-icon">
@@ -7,89 +22,98 @@
                 <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
         </div>
-        <h3 class="subscribe-heading">🎁 Get Your Free China Itinerary</h3>
-        <p class="subscribe-sub">7-Day China Travel Plan + Monthly Updates</p>
+        <h3 class="subscribe-heading">🎁 Get Your Free {{ $leadTitle }}</h3>
+        <p class="subscribe-sub">{{ $leadSub }}</p>
     </div>
 
     <div class="subscribe-lead-magnet">
-        <div class="lm-icon">📋</div>
+        <div class="lm-icon">{{ $lmIcon }}</div>
         <div class="lm-content">
-            <strong>Free Bonus:</strong> Download my complete <strong>7-Day China Itinerary Template</strong> — routes, checklists, budget breakdowns, and insider tips.
+            <strong>Free Bonus:</strong> {{ $leadDesc }}
         </div>
     </div>
 
-    <!-- Email Subscription Form with Lead Magnet -->
-    <form class="subscribe-form" action="https://assets.mailerlite.com/html/forms/188150796635866830/signup" method="post" target="_blank" id="emailSubscribeForm">
+    <form class="subscribe-form" id="emailSubscribeForm" data-magnet="{{ $magnetName }}" data-source="{{ .Section }}">
         <div class="subscribe-fields">
             <label for="subscribe-email" class="sr-only">Email address</label>
-            <input 
-                type="email" 
+            <input
+                type="email"
                 id="subscribe-email"
-                name="email" 
-                class="subscribe-input" 
-                placeholder="Enter your email to get started" 
+                name="email"
+                class="subscribe-input"
+                placeholder="Enter your email to get started"
                 required
                 autocomplete="email"
             >
             <button type="submit" class="subscribe-btn">
-                <span class="btn-text">Send My Free Guide →</span>
+                <span class="btn-text">Send the Free Guide →</span>
             </button>
         </div>
-        <p class="subscribe-privacy">
-            Join 10,000+ travelers. No spam, ever. Unsubscribe anytime.
-        </p>
+        <p class="subscribe-msg subscribe-privacy" style="display:none"></p>
+        <p class="subscribe-privacy">Join 10,000+ travelers. No spam, ever. Unsubscribe anytime.</p>
     </form>
 
     <div class="subscribe-badges">
-        <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="16 10 10 16 8 14"></polyline>
-            </svg>
-            100% Free
-        </span>
-        <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            Monthly Updates
-        </span>
-        <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6L6 18M6 6l12 12"></path>
-            </svg>
-            Cancel Anytime
-        </span>
+        <span class="badge">✓ 100% Free</span>
+        <span class="badge">✓ Instant Download</span>
+        <span class="badge">✓ Cancel Anytime</span>
     </div>
 </div>
 
 <style>
 .subscribe-lead-magnet {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 14px;
-    margin: 12px 0;
-    background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
-    border: 1px solid #fbbf24;
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1.5;
+    display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px;
+    margin: 12px 0; background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+    border: 1px solid #fbbf24; border-radius: 8px; font-size: 14px; line-height: 1.5;
 }
-.subscribe-lead-magnet .lm-icon {
-    font-size: 24px;
-    flex-shrink: 0;
-}
-.subscribe-lead-magnet .lm-content strong {
-    color: #92400e;
-}
+.subscribe-lead-magnet .lm-icon { font-size: 24px; flex-shrink: 0; }
+.subscribe-lead-magnet .lm-content strong { color: #92400e; }
+.subscribe-msg { font-size: 13px; margin: 8px 0 0; }
+.subscribe-msg.ok { color: #15803d; }
+.subscribe-msg.err { color: #b91c1c; }
 </style>
 
 <script>
-document.getElementById('emailSubscribeForm')?.addEventListener('submit', function(e) {
-    const btn = this.querySelector('.subscribe-btn');
-    btn.disabled = true;
-    btn.querySelector('.btn-text').textContent = 'Sending Guide...';
-});
+(function () {
+    var form = document.getElementById('emailSubscribeForm');
+    if (!form) return;
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('.subscribe-btn');
+        var msg = form.querySelector('.subscribe-msg');
+        var email = form.querySelector('#subscribe-email').value.trim();
+        if (!email) return;
+        btn.disabled = true;
+        btn.querySelector('.btn-text').textContent = 'Sending Guide...';
+        msg.style.display = 'none';
+        try {
+            var resp = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    source: form.dataset.source || 'article',
+                    lead_magnet: form.dataset.magnet || 'visa-free-checklist'
+                })
+            });
+            var data = await resp.json();
+            msg.style.display = 'block';
+            if (resp.ok && data.success) {
+                msg.className = 'subscribe-msg ok';
+                msg.textContent = '✅ Check your inbox — your guide is on its way!';
+                form.querySelector('#subscribe-email').value = '';
+            } else {
+                msg.className = 'subscribe-msg err';
+                msg.textContent = (data && data.error) ? data.error : 'Something went wrong. Please try again.';
+            }
+        } catch (err) {
+            msg.style.display = 'block';
+            msg.className = 'subscribe-msg err';
+            msg.textContent = 'Network error. Please try again.';
+        } finally {
+            btn.disabled = false;
+            btn.querySelector('.btn-text').textContent = 'Send the Free Guide →';
+        }
+    });
+})();
 </script>

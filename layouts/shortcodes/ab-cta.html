@@ -15,7 +15,7 @@
 {{- $analytics_id := .Get "analytics_id" | default "cta_click" }}
 
 <span class="ab-cta" data-test-id="{{ $test_id }}" data-analytics="{{ $analytics_id }}" data-variant-a="{{ $variant_a }}" data-variant-b="{{ $variant_b }}">
-    <a href="{{ $url }}" target="_blank" rel="nofollow sponsored" class="ab-cta-btn ab-cta-{{ $style }}" data-variant="loading">
+    <a href="{{ $url }}" target="_blank" rel="nofollow sponsored" class="ab-cta-btn ab-cta-{{ $style }} affiliate-link" data-affiliate-partner="{{ $affiliate_key }}" data-affiliate-placement="{{ $test_id }}" data-cta-id="{{ $analytics_id }}" data-experiment-id="" data-variant="loading">
         <span class="ab-cta-text">{{ $variant_a }}</span>
         <span class="ab-cta-arrow">→</span>
     </a>

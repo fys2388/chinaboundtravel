@@ -1,13 +1,16 @@
 {{- /* Affiliate mid-content CTA (P1-GROWTH-12, REV-001). Single, tracked, disclosure-first. */ -}}
 {{- $partner := .Get "partner" | default "hotel" -}}
 {{- $placement := .Get "placement" | default "article_mid_cta" -}}
+{{- $ctaId := .Get "cta_id" | default $placement -}}
+{{- $experimentId := .Get "experiment_id" | default "" -}}
 {{- $text := .Get "text" | default "Compare available travel options" -}}
 {{- $key := .Get "key" | default $partner -}}
 {{- $url := index .Site.Params.affiliate $key | default "#" -}}
 <div class="affiliate-mid-cta affiliate-block">
     <p>{{ .Inner | markdownify }}</p>
     <a href="{{ $url }}" class="affiliate-link" target="_blank" rel="nofollow sponsored"
-       data-affiliate-partner="{{ $partner }}" data-affiliate-placement="{{ $placement }}">
+       data-affiliate-partner="{{ $partner }}" data-affiliate-placement="{{ $placement }}"
+       data-cta-id="{{ $ctaId }}" data-experiment-id="{{ $experimentId }}">
         {{ $text }} →
     </a>
     <p class="affiliate-mid-cta-disclosure"><small><em>Affiliate link - we may earn a small commission at no extra cost to you.</em></small></p>

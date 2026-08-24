@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-08-20T14:15:50",
+  "include_conversion": false,
+  "conversion_source": "",
+  "products": [
+    {
+      "product": "flight",
+      "posts": 43,
+      "cta_count": 54,
+      "clicks": 0,
+      "conversions": 0,
+      "ctr_pct": 0.0,
+      "conversion_cache": false,
+      "url": "https://www.aviasales.com/?marker=730795"
+    },
+    {
+      "product": "insurance",
+      "posts": 35,
+      "cta_count": 43,
+      "clicks": 0,
+      "conversions": 0,
+      "ctr_pct": 0.0,
+      "conversion_cache": false,
+      "url": "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
+    },
+    {
+      "product": "esim",
+      "posts": 37,
+      "cta_count": 44,
+      "clicks": 0,
+      "conversions": 0,
+      "ctr_pct": 0.0,
+      "conversion_cache": false,
+      "url": "https://www.airalo.com/"
+    },
+    {
+      "product": "hotel",
+      "posts": 41,
+      "cta_count": 51,
+      "clicks": 0,
+      "conversions": 0,
+      "ctr_pct": 0.0,
+      "conversion_cache": false,
+      "url": "https://www.booking.com/index.html?aid=730795"
+    },
+    {
+      "product": "tour",
+      "posts": 47,
+      "cta_count": 57,
+      "clicks": 0,
+      "conversions": 0,
+      "ctr_pct": 0.0,
+      "conversion_cache": false,
+      "url": "https://klook.tpo.li/vrPkmS2v"
+    }
+  ]
+}
