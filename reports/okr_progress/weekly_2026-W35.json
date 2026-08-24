@@ -1,0 +1,54 @@
+{
+  "report_type": "weekly",
+  "period": "2026-W35",
+  "generated_at": "2026-08-24 01:01:15",
+  "plan": [
+    {
+      "task": "评估 Travelpayouts Drive 对核心页面的覆盖价值（人工决策）",
+      "priority": "medium",
+      "period": "本月",
+      "kr_id": "revenue"
+    },
+    {
+      "task": "发布 3 篇高转化长尾攻略（支付 / 签证 / 交通）",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "content",
+      "target": 5
+    },
+    {
+      "task": "Reddit / Quora 铺设 3 条问答外链，实现零突破",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "社媒标准化模板落地，每日稳定更新",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "上线免费订阅诱饵（7 天中国行程模板）",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "email",
+      "target": 10
+    },
+    {
+      "task": "全量检测内部断链与占位符",
+      "priority": "low",
+      "period": "本周"
+    },
+    {
+      "task": "文章页批量补充 Article 结构化数据",
+      "priority": "low",
+      "period": "本周"
+    }
+  ],
+  "krs": {
+    "traffic": 97.0,
+    "content": 0.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 0.0
+  }
+}
