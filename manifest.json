@@ -1,7 +1,7 @@
 {
   "month_post_count": 11,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-24 16:21:38",
+  "last_social_publish": "2026-08-25 01:07:42",
   "daily_social_publish_date": "2026-08-25",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
@@ -127,7 +127,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "travel-safety-guide",
     "food-recommendations-guide",
     "transportation-guide",
     "navigating-china-with-confidence-a-californians-guide-to-travel-safety",
@@ -156,6 +155,7 @@
     "china-remote-work-guide-a-californians-5-year-chengdu-experience",
     "accommodation-tips-guide",
     "foodies-guide-to-china-a-gastronomic-adventure",
-    "chinese-tea-culture-where-to-experience-authentic-teahouses"
+    "chinese-tea-culture-where-to-experience-authentic-teahouses",
+    "cultural-etiquette-guide-aussie-kiwi"
   ]
 }
