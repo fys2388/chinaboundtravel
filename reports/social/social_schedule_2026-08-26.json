@@ -1,0 +1,180 @@
+{
+  "schedule": [
+    {
+      "date": "2026-08-26",
+      "slots": [
+        {
+          "item_id": "soc-000001",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-08-26T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000061",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-08-26T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000066",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-08-27T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "slots": [
+        {
+          "item_id": "soc-000026",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-08-27T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000040",
+          "platform": "fb",
+          "type": "conversion",
+          "utc": "2026-08-27T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000011",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-08-28T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "slots": [
+        {
+          "item_id": "soc-000046",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-08-28T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000016",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-08-28T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000006",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-08-29T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "slots": [
+        {
+          "item_id": "soc-000025",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-08-29T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000071",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-08-29T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000086",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-08-30T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "slots": [
+        {
+          "item_id": "soc-000041",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-08-30T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000056",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-08-30T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000035",
+          "platform": "x",
+          "type": "conversion",
+          "utc": "2026-08-31T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "slots": [
+        {
+          "item_id": "soc-000091",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-08-31T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000051",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-08-31T22:00:00+00:00",
+          "slot_et": 18
+        },
+        {
+          "item_id": "soc-000096",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-09-01T02:00:00+00:00",
+          "slot_et": 22
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "slots": [
+        {
+          "item_id": "soc-000081",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-09-01T12:00:00+00:00",
+          "slot_et": 8
+        },
+        {
+          "item_id": "soc-000080",
+          "platform": "fb",
+          "type": "conversion",
+          "utc": "2026-09-01T22:00:00+00:00",
+          "slot_et": 18
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-08-26T16:01:24.687324"
+}
