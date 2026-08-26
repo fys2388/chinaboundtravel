@@ -21,8 +21,19 @@
         "pinterest": "2026-08-25"
       },
       "distribute_count": 8
+    },
+    "china-high-speed-rail-how-to-book-tickets": {
+      "title": "How to Book China High-Speed Train Tickets (2026) — Booking & Logistics",
+      "last_distributed": "2026-08-26",
+      "platforms": {
+        "twitter": "2026-08-26",
+        "facebook": "2026-08-26",
+        "instagram": "2026-08-26",
+        "pinterest": "2026-08-26"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-08-25T10:39:26.428416+00:00",
-  "total_distributions": 12
+  "last_run": "2026-08-26T03:12:11.111820+00:00",
+  "total_distributions": 16
 }
