@@ -83,14 +83,17 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/social/inventory.json reports/social/ manifest.json 2>/dev/null || true
+          # 提交所有生成的产物（inventory / 排期 / 日报 / manifest），
+          # 避免遗漏导致 pull --rebase 报 unstaged changes
+          git add -A content/social reports/social manifest.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无待提交变更"
           else
             git commit -m "chore(social): sync inventory & reports [skip ci]"
           fi
-          # 远端可能有并发提交（如博客生成工作流），先 rebase 再 push，避免非快进失败
-          git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase 失败"; exit 1; }
+          # 远端可能有并发提交（如博客生成工作流），用 --autostash 自动暂存
+          # 未提交改动再 rebase，避免 "cannot pull with rebase" 失败
+          git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase 失败"; exit 1; }
           git push
 
       - name: Feishu notification

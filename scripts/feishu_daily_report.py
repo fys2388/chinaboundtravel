@@ -805,6 +805,11 @@ class FeishuDailyReporter:
             blog_status = '成功' if data.get('gh_blog_success') == True else ('失败' if data.get('gh_blog_success') == False else '未运行')
             report_status = '成功' if data.get('gh_report_success') == True else ('失败' if data.get('gh_report_success') == False else '未运行')
             print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
+            # 社媒分发失败 → 真实告警（不被日报状态吞掉）
+            if data.get("gh_social_success") is False:
+                _social_alert = "社媒分发工作流（Social Engine Daily）昨日失败，请检查 Buffer 排期与 Worker 日志"
+                data.setdefault("data_status", []).append(_social_alert)
+                print(f"   ⚠️ {_social_alert}")
         
 
         # 8. 统计总问题数和总佣金
@@ -1599,7 +1604,7 @@ class FeishuDailyReporter:
         return None
     
     def _fetch_github_actions(self) -> dict:
-        """获取 GitHub Actions 工作流运行状态（博客生成 + 日报推送）"""
+        """获取 GitHub Actions 工作流运行状态（博客生成 + 日报推送 + 社媒分发）"""
         if not GITHUB_TOKEN:
             print("   ⚠️ GitHub Token 未配置")
             return None
@@ -1613,37 +1618,61 @@ class FeishuDailyReporter:
             base_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/runs"
             # 只统计报告日（UTC 昨日）完成的工作流，避免把历史成功当成当日状态
             report_day = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            # 当前正在运行的 run（GitHub Actions 自动注入），排除自身避免误判
+            current_run_id = str(os.environ.get("GITHUB_RUN_ID", ""))
+            
+            # 按工作流文件路径精确匹配，避免 "Social Engine Daily" 等名称干扰日报状态
+            REPORT_WORKFLOW_PATHS = {".github/workflows/feishu-daily-report.yml"}
+            BLOG_WORKFLOW_PATHS = {".github/workflows/weekly-blog-update.yml"}
+            SOCIAL_WORKFLOW_PATHS = {
+                ".github/workflows/social-engine-daily.yml",
+                ".github/workflows/social_distributor.yml",
+            }
             
             result = {}
-            
-            # 检查博客生成工作流
             runs = []  # 预定义避免作用域问题
             try:
                 resp = requests.get(
                     base_url,
                     headers=headers,
-                    params={"per_page": 30},
+                    params={"per_page": 100},
                     timeout=15
                 )
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
-                    # 只检查已完成的工作流（排除正在运行的）
-                    blog_runs = [r for r in runs if ("hugo" in r.get("name", "").lower() or "blog" in r.get("name", "").lower() or "deploy" in r.get("name", "").lower() or "joran" in r.get("name", "").lower() or "博文" in r.get("name", "")) and r.get("status") == "completed" and (r.get("created_at") or "").startswith(report_day)]
-                    if blog_runs:
-                        latest_blog = blog_runs[0]
-                        result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
-                        result["gh_blog_run_time"] = latest_blog.get("created_at", "")
-                    else:
-                        result["gh_blog_success"] = None  # 无已完成的工作流
                 else:
                     print(f"   ⚠️ GitHub API 响应 {resp.status_code}: {resp.text[:200]}")
+            except Exception as e:
+                print(f"   ⚠️ GitHub API 查询失败: {e}")
+
+            def _completed_runs(paths):
+                """报告日内、已完成、排除当前 run、按创建时间倒序"""
+                return sorted(
+                    [r for r in runs
+                     if r.get("path") in paths
+                     and r.get("status") == "completed"
+                     and str(r.get("id")) != current_run_id
+                     and (r.get("created_at") or "").startswith(report_day)],
+                    key=lambda r: r.get("created_at") or "",
+                    reverse=True,
+                )
+            
+            # 检查博客生成工作流
+            try:
+                blog_runs = _completed_runs(BLOG_WORKFLOW_PATHS)
+                if blog_runs:
+                    latest_blog = blog_runs[0]
+                    result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
+                    result["gh_blog_run_time"] = latest_blog.get("created_at", "")
+                else:
+                    result["gh_blog_success"] = None  # 无已完成的工作流
             except Exception as e:
                 print(f"   ⚠️ GitHub 博客工作流查询失败: {e}")
                 result["gh_blog_success"] = None
 
-            # 检查日报工作流（排除正在运行的当前实例）
+            # 检查日报工作流（精确路径，排除正在运行的当前实例）
             try:
-                report_runs = [r for r in runs if ("daily" in r.get("name", "").lower() or "feishu" in r.get("name", "").lower() or "report" in r.get("name", "").lower()) and r.get("status") == "completed" and (r.get("created_at") or "").startswith(report_day)]
+                report_runs = _completed_runs(REPORT_WORKFLOW_PATHS)
                 if report_runs:
                     latest_report = report_runs[0]
                     result["gh_report_success"] = latest_report.get("conclusion") == "success"
@@ -1654,6 +1683,17 @@ class FeishuDailyReporter:
             except Exception as e:
                 print(f"   ⚠️ GitHub 日报工作流查询失败: {e}")
                 result["gh_report_success"] = None
+
+            # 社媒分发工作流：失败是真实事件，转为告警而非被日报状态吞掉
+            try:
+                social_runs = _completed_runs(SOCIAL_WORKFLOW_PATHS)
+                if social_runs:
+                    latest_social = social_runs[0]
+                    result["gh_social_success"] = latest_social.get("conclusion") == "success"
+                    if not result["gh_social_success"]:
+                        print(f"   ⚠️ 社媒分发工作流最近失败: {latest_social.get('display_title', 'N/A')} -> {latest_social.get('conclusion', 'N/A')}")
+            except Exception as e:
+                print(f"   ⚠️ GitHub 社媒工作流查询失败: {e}")
             
             return result if result else None
             

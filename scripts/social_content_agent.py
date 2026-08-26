@@ -468,7 +468,9 @@ def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
                 "type": ctype,
                 "caption": text,
                 "image_prompt": build_image_prompt(article, ctype, platform),
-                "image_url": "",
+                # 复用文章 front matter 的实景封面（绝对 URL），供 worker 发布时校验通过；
+                # generate_image 为预留接口，未启用时也以此兜底。
+                "image_url": article.get("cover", "") or "",
                 "utm_params": {
                     "utm_source": platform,
                     "utm_medium": "social",
@@ -592,6 +594,133 @@ def build_schedule(data: dict, start_date: date = None) -> list:
         schedule.append(day_items)
     return schedule
 
+
+# ============================================================
+# P1-GROWTH-29 社媒增长试点：Pinterest 2/天 + Instagram 1/天
+# ============================================================
+
+# 试点阶段仅启用 Pinterest + Instagram（禁止 FB / X 自动化）
+PILOT_PLATFORMS = ("pinterest", "ig")
+# 美东黄金时段 20:00-22:00；Pinterest 2 条，Instagram 1 条
+PILOT_ET_SLOTS = {
+    "pinterest": [(20, 0), (21, 0)],   # 2 条：20:00 / 21:00 ET
+    "ig": [(20, 30)],                  # 1 条：20:30 ET
+}
+
+
+def _content_id_map() -> dict:
+    """slug -> content_id（从文章 frontmatter 提取，确定性映射）。"""
+    mapping = {}
+    posts_dir = BLOG_ROOT / "content" / "posts"
+    for p in sorted(posts_dir.glob("*.md")):
+        text = p.read_text(encoding="utf-8", errors="replace")
+        fm_match = re.search(r"^---\s*\n(.*?)\n---\s*\n", text, re.DOTALL)
+        if not fm_match:
+            continue
+        fm = fm_match.group(1)
+        cid = re.search(r'^content_id\s*[=:]\s*["\']?([^"\'\n]+)', fm, re.MULTILINE)
+        slug = re.search(r'^slug\s*[=:]\s*["\']?([^"\'\n]+)', fm, re.MULTILINE)
+        key = (slug.group(1).strip().strip('"').strip("'") if slug else p.stem)
+        if cid:
+            mapping[key] = cid.group(1).strip().strip('"').strip("'")
+    return mapping
+
+
+def build_pilot_schedule(data: dict, start_date: date = None,
+                         days: int = 7) -> list[dict]:
+    """Pinterest 2/天 + Instagram 1/天，7 天同篇不重复，返回按天排期。
+
+    每条排期项包含 P1-GROWTH-29 统一字段：
+      social_content_id / content_id / platform / content_type /
+      source_article / scheduled_at_utc / scheduled_at_et / utm / status
+    """
+    start_date = start_date or date.today() + timedelta(days=1)
+    content_ids = _content_id_map()
+    pool = {
+        "pinterest": sorted(
+            (i for i in data["items"]
+             if i.get("platform") == "pinterest" and i.get("status") != "已发布"),
+            key=lambda i: i["id"]),
+        "ig": sorted(
+            (i for i in data["items"]
+             if i.get("platform") == "ig" and i.get("status") != "已发布"),
+            key=lambda i: i["id"]),
+    }
+    last_used: dict[str, dict[str, date]] = {}
+    schedule = []
+    for day_offset in range(days):
+        d = start_date + timedelta(days=day_offset)
+        day = {"date": d.isoformat(), "slots": []}
+        used_articles_today: set[str] = set()
+        for platform, et_times in PILOT_ET_SLOTS.items():
+            for idx, (et_hour, et_min) in enumerate(et_times):
+                candidate = None
+                for item in pool[platform]:
+                    art = item["source_article"]
+                    if art in used_articles_today:
+                        continue
+                    last = last_used.get(art, {}).get(platform)
+                    if last and (d - last).days < COOLDOWN_DAYS:
+                        continue
+                    candidate = item
+                    break
+                if candidate is None:
+                    continue  # 库存不足时当天少发一条，宁缺毋滥
+                art = candidate["source_article"]
+                used_articles_today.add(art)
+                last_used.setdefault(art, {})[platform] = d
+                utc_total = et_hour * 60 + et_min + US_EAST_OFFSET * 60
+                utc_date = d + timedelta(days=1) if utc_total >= 24 * 60 else d
+                utc_hour, utc_min = divmod(utc_total % (24 * 60), 60)
+                utc = f"{utc_date.isoformat()}T{utc_hour:02d}:{utc_min:02d}:00+00:00"
+                utm = dict(candidate.get("utm_params", {}))
+                utm["utm_content"] = f"pilot_{platform}_{idx + 1}"
+                day["slots"].append({
+                    "social_content_id": candidate["id"],
+                    "content_id": content_ids.get(art, "NOT_FOUND"),
+                    "platform": platform,
+                    "content_type": candidate.get("type", ""),
+                    "source_article": art,
+                    "source_title": candidate.get("source_title", ""),
+                    "url": candidate.get("url", ""),
+                    "caption": candidate.get("caption", ""),
+                    "scheduled_at_utc": utc,
+                    "scheduled_at_et": f"{et_hour:02d}:{et_min:02d} America/New_York",
+                    "utm": utm,
+                    "status": "PENDING_APPROVAL",
+                })
+        if day["slots"]:
+            schedule.append(day)
+    return schedule
+
+
+def _cmd_plan_pilot(args) -> int:
+    data = load_inventory()
+    start = _parse_date(args.start)
+    sched = build_pilot_schedule(data, start_date=start, days=args.days)
+    csv_path = SOCIAL_REPORTS_DIR / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv"
+    json_path = SOCIAL_REPORTS_DIR / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.json"
+    SOCIAL_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    import csv as _csv
+    fields = ["social_content_id", "content_id", "platform", "content_type",
+              "source_article", "source_title", "scheduled_at_utc",
+              "scheduled_at_et", "utm", "status"]
+    with open(csv_path, "w", newline="", encoding="utf-8-sig") as fh:
+        w = _csv.DictWriter(fh, fieldnames=fields)
+        w.writeheader()
+        for day in sched:
+            for slot in day["slots"]:
+                row = {k: slot.get(k, "") for k in fields}
+                row["utm"] = urlencode(slot.get("utm", {}))
+                w.writerow(row)
+    json_path.write_text(json.dumps(
+        {"schedule": sched, "generated_at": datetime.now().isoformat(timespec="seconds")},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    total = sum(len(d["slots"]) for d in sched)
+    print(f"试点排期已生成: {csv_path}（{total} 条，{len(sched)} 天，"
+          f"Pinterest 2/天 + Instagram 1/天，状态=PENDING_APPROVAL）")
+    return 0
+
 # ============================================================
 # 分发（双 Buffer Worker）
 # ============================================================
@@ -623,7 +752,14 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
     except requests.exceptions.Timeout:
         return {"success": False, "endpoint": endpoint, "error": "Timeout after 90s"}
     except requests.exceptions.HTTPError as e:
-        return {"success": False, "endpoint": endpoint, "error": f"HTTP {e.response.status_code}"}
+        # 保留响应体，便于定位 Buffer/Worker 的 400/500 具体原因
+        _body = ""
+        try:
+            _body = (e.response.text or "")[:300]
+        except Exception:
+            pass
+        return {"success": False, "endpoint": endpoint,
+                "error": f"HTTP {e.response.status_code}: {_body}"}
     except Exception as e:
         return {"success": False, "endpoint": endpoint, "error": str(e)}
 
@@ -931,6 +1067,11 @@ def main(argv=None) -> int:
     p = sub.add_parser("plan", help="生成排期")
     p.add_argument("--date")
     p.set_defaults(func=_cmd_plan)
+
+    p = sub.add_parser("plan-pilot", help="P1-GROWTH-29 社媒试点排期（Pinterest 2/天 + IG 1/天）")
+    p.add_argument("--start", default=None, help="开始日期 YYYY-MM-DD（默认明天）")
+    p.add_argument("--days", type=int, default=7, help="试点天数 7-14（默认 7，库存限制）")
+    p.set_defaults(func=_cmd_plan_pilot)
 
     p = sub.add_parser("publish", help="发布（自动/半自动）")
     p.add_argument("--auto", action="store_true", help="自动模式")
