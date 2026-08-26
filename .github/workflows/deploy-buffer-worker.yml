@@ -28,9 +28,13 @@ jobs:
             exit 1
           fi
 
-      - name: Deploy Worker (workers.dev)
+      - name: Deploy Worker (production env + workers.dev)
         working-directory: buffer-worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx -y wrangler@3 deploy
+        run: |
+          # 默认 env 更新 workers.dev 子域（兼容旧配置）
+          npx -y wrangler@3 deploy || echo "::warning::默认 env 部署失败"
+          # production env 更新自定义域 buffer-worker.chinaboundtravel.com
+          npx -y wrangler@3 deploy --env production || { echo "::error::production env 部署失败"; exit 1; }
