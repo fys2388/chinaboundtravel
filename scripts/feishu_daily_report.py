@@ -388,8 +388,9 @@ class FeishuDailyReporter:
             gsc_ctr_str = "NOT_AVAILABLE"
             gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
             gsc_errors_str = str(data.get('gsc_errors', 0))
-            gsc_week_trend = data.get('gsc_week_trend', 'N/A')
-            gsc_month_trend = data.get('gsc_month_trend', 'N/A')
+            # 口径统一：昨日无数据时不展示基于上周/上月单日的趋势，避免误导
+            gsc_week_trend = "NOT_AVAILABLE（无昨日数据）"
+            gsc_month_trend = "NOT_AVAILABLE（无昨日数据）"
         else:
             # 2.0: GSC 无昨日数据 → NOT_AVAILABLE，回退快照缓存窗口
             _snap = data.get("reporting_snapshot") or {}
