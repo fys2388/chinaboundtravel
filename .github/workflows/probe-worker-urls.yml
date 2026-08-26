@@ -1,0 +1,29 @@
+name: Probe Worker URLs (temp)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe both worker URLs
+        env:
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL }}
+        run: |
+          for u in "$BUFFER_WORKER_URL" "$NEW_BUFFER_WORKER_URL"; do
+            if [ -z "$u" ]; then
+              echo "URL: (EMPTY)"
+              continue
+            fi
+            host=$(echo "$u" | sed -E 's#^https?://([^/]+)/?.*#\1#')
+            echo "URL host: $host"
+            code=$(curl -sS -o /tmp/b.txt -w "%{http_code}" --max-time 20 "https://$host/health" || echo "000")
+            echo "  /health -> HTTP $code"
+            head -c 160 /tmp/b.txt 2>/dev/null; echo
+            code2=$(curl -sS -o /tmp/b2.txt -w "%{http_code}" --max-time 20 "https://$host/publish" || echo "000")
+            echo "  /publish -> HTTP $code2"
+            head -c 160 /tmp/b2.txt 2>/dev/null; echo
+          done
