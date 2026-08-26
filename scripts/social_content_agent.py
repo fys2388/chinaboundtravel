@@ -66,6 +66,7 @@ from social_backfill import (  # noqa: E402
     ACCOUNT_A_URL,
     ACCOUNT_B_URL,
     SITE_DOMAIN,
+    _extract_cover,
     build_utm,
     discover_articles,
     parse_article,
@@ -764,6 +765,27 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
         return {"success": False, "endpoint": endpoint, "error": str(e)}
 
 
+def _ensure_cover_url(item: dict) -> str:
+    """发布前自愈：为 image_url 为空的素材从文章 front matter 回填封面绝对 URL。
+
+    worker 对 cover 有强校验（白名单域名 + /img/china-dest/ 路径），
+    inventory 中历史条目 image_url 可能为空，直接复用 _extract_cover 提取。
+    """
+    slug = str(item.get("source_article") or "")
+    if not slug:
+        return ""
+    posts_dir = BLOG_ROOT / "content" / "posts"
+    if not posts_dir.is_dir():
+        return ""
+    for md in posts_dir.glob("*.md"):
+        if md.stem == slug:
+            try:
+                return parse_article(md).get("cover") or ""
+            except Exception:
+                return ""
+    return ""
+
+
 def distribute_items(items: list, dry_run: bool = True,
                      inventory_path: Path = INVENTORY_FILE) -> list:
     """发布指定素材（自动/半自动共用），发布成功回写 status=已发布 + publish_date。"""
@@ -772,6 +794,12 @@ def distribute_items(items: list, dry_run: bool = True,
     results = []
     for item in items:
         endpoint = account_url(item["platform"])
+        # 发布前自愈：image_url 为空时从文章 front matter 回填封面（worker 封面必填校验）
+        _cover = (item.get("image_url") or "").strip()
+        if not _cover:
+            _cover = _ensure_cover_url(item)
+            if _cover:
+                item["image_url"] = _cover
         res = publish_item(item, endpoint, dry_run=dry_run)
         if not dry_run and res.get("success"):
             rec = by_id.get(item["id"])
@@ -1003,6 +1031,7 @@ def _cmd_plan(args) -> int:
 
 def _cmd_publish(args) -> int:
     data = load_inventory()
+    target_date = None
     if args.date:
         target_date = _parse_date(args.date)
         sched = build_schedule(data, start_date=target_date)
@@ -1014,6 +1043,11 @@ def _cmd_publish(args) -> int:
         items = [i for i in data["items"] if i["id"] in ids]
     else:
         items = filter_items(data, status="待审核")[:3]
+
+    if not items:
+        day = target_date.isoformat() if target_date else date.today().isoformat()
+        print(f"[INFO] {day} 无待发布素材（今日无排期或素材未审核），跳过发布")
+        return 0
 
     dry_run = not args.auto and not args.confirm
     if not dry_run and not args.auto:
