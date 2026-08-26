@@ -38,6 +38,11 @@ name = "buffer-auto-poster-dev"
 name = "buffer-auto-poster"
 route = "https://buffer-worker.chinaboundtravel.com/*"
 
+# wrangler 多环境不继承顶层 kv_namespaces，需显式声明（限流/去重/重试队列依赖 KV）
+[[env.production.kv_namespaces]]
+binding = "KV_STORE"
+id = "a20785ef5e594755ba1d21850de25593"
+
 # ============ 日志配置 ============
 
 [observability]
