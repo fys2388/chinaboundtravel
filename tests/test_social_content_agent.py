@@ -213,6 +213,27 @@ def test_publish_item_posts_to_worker(monkeypatch):
     assert captured["payload"]["content_variant"] == "x_tip"
 
 
+def test_publish_item_worker_queued_is_success(monkeypatch):
+    """worker 单日限流（202 + queued:true）应视为成功交接，而非失败。"""
+    class FakeResp:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"success": False, "queued": True,
+                    "message": "今日已发布 3 篇，单日上限 3 篇。稿件已存入队列，明日自动发布。"}
+
+    def fake_post(url, json=None, timeout=None):
+        return FakeResp()
+
+    monkeypatch.setattr(sga.requests, "post", fake_post)
+    item = {"id": "soc-x", "source_article": "slug", "platform": "ig",
+            "type": "knowledge", "caption": "caption", "image_url": ""}
+    res = sga.publish_item(item, "https://worker.example/publish", dry_run=False)
+    assert res["success"] is True
+    assert res["queued"] is True
+
+
 # ============================================================
 # 5. Metrics backfill (data feedback)
 # ============================================================

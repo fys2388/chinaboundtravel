@@ -61,17 +61,48 @@ jobs:
           python scripts/social_content_agent.py plan --date "${{ github.event.inputs.date || 'today' }}" 2>/dev/null || \
           python scripts/social_content_agent.py plan
 
+      - name: Check Buffer Worker health
+        env:
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          # 发布前探测两个 Worker：404 "Worker not found" 或连接失败 = 未部署/不可用，
+          # 直接跳过发布并飞书告警，避免"静默 0 发布"。
+          fail=0
+          for url in "$BUFFER_WORKER_URL" "$NEW_BUFFER_WORKER_URL"; do
+            host="${url%%/publish*}"
+            code=$(curl -sS -o /tmp/worker_body.txt -w "%{http_code}" --max-time 20 "$host" || echo "000")
+            if [ "$code" = "000" ]; then
+              echo "::error::Buffer Worker 连接失败 (timeout): $host"
+              fail=1
+            elif [ "$code" = "404" ] && grep -qi "Worker not found" /tmp/worker_body.txt 2>/dev/null; then
+              echo "::error::Buffer Worker 未部署 (404 Worker not found): $host"
+              fail=1
+            else
+              echo "Buffer Worker 健康 (HTTP $code): $host"
+            fi
+          done
+          if [ "$fail" = "1" ]; then
+            if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+              curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+                -d '{"msg_type":"text","content":{"text":"🚨 社媒发布阻断：Buffer Worker 不可用（未部署/超时），今日跳过发布。请部署 buffer-worker 后手动重跑 Social Engine Daily。"}}' || true
+            fi
+            exit 1
+          fi
+
       - name: Publish today's batch (Buffer Worker)
         env:
           # 完整发布端点（worker /publish 处理双账户分流）
-          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-auto-poster.fys2388.workers.dev/publish' }}
-          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-auto-poster.fys2388.workers.dev/publish' }}
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
           TODAY="${{ github.event.inputs.date }}"
           if [ -z "$TODAY" ]; then TODAY=$(date -u +%F); fi
           echo "=== 发布 $TODAY 批次 ==="
-          python scripts/social_content_agent.py publish --auto --date "$TODAY" || echo "发布命令返回非零（部分失败）"
+          # 不再吞掉发布失败：0 发布或部分失败必须让 run 失败，触发 Error Alert/飞书告警
+          python scripts/social_content_agent.py publish --auto --date "$TODAY"
 
       - name: Generate daily social report
         env:

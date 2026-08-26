@@ -747,9 +747,12 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
         resp.raise_for_status()
         data = resp.json()
         platforms = (data.get("platforms") or {}).get("success", [])
-        return {"success": bool(data.get("success")), "endpoint": endpoint,
-                "platforms": platforms,
-                "error": data.get("message") or data.get("error", "")}
+        # worker 单日限流时返回 202 + queued:true（稿件已入重试队列，次日自动发布），
+        # 视为成功交接而非失败，避免限流日被误报为发布失败。
+        ok = bool(data.get("success")) or bool(data.get("queued"))
+        return {"success": ok, "queued": bool(data.get("queued")),
+                "endpoint": endpoint, "platforms": platforms,
+                "error": "" if ok else (data.get("message") or data.get("error", ""))}
     except requests.exceptions.Timeout:
         return {"success": False, "endpoint": endpoint, "error": "Timeout after 90s"}
     except requests.exceptions.HTTPError as e:
