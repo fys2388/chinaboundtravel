@@ -56,7 +56,7 @@ async function listPending(token) {
       posts(input: {
         organizationId: "${orgId}",
         sort: [{ field: dueAt, direction: asc }],
-        filter: { status: ["scheduled"] }
+        filter: { status: [scheduled] }
       }) {
         edges {
           node {
