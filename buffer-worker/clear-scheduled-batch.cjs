@@ -7,9 +7,10 @@ const TO_UTC = process.env.TO_UTC || '2026-08-29T00:00:00Z';
 const TOKENS = [
   process.env.BUFFER_API_TOKEN_A,
   process.env.BUFFER_API_TOKEN_B,
-].filter(Boolean);
+].map((s) => (s || '').trim()).filter(Boolean);
 
 function queryBuffer(token, query) {
+  const bearer = 'Bearer ' + token.trim();
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.buffer.com',
@@ -18,7 +19,7 @@ function queryBuffer(token, query) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token,
+        'Authorization': bearer,
       },
     };
     const req = https.request(options, (res) => {
