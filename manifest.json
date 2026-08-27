@@ -1,7 +1,7 @@
 {
   "month_post_count": 11,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-27 13:48:56",
+  "last_social_publish": "2026-08-27 14:41:55",
   "daily_social_publish_date": "2026-08-27",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
@@ -127,7 +127,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers",
     "navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
     "a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers",
     "china-transportation-card-guide",
@@ -156,6 +155,7 @@
     "cultural-etiquette-guide",
     "travel-safety-guide",
     "food-recommendations-guide",
-    "transportation-guide"
+    "transportation-guide",
+    "navigating-china-with-confidence-a-californians-guide-to-travel-safety"
   ]
 }
