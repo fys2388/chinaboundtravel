@@ -120,6 +120,9 @@ jobs:
           email = os.environ.get("CF_EMAIL", "")
           base = "https://api.cloudflare.com/client/v4/zones/" + zone + "/rulesets"
           print("cred lengths - token:", len(token), "gkey:", len(gkey), "email:", len(email))
+          print("token==gkey:", token == gkey)
+          print("gkey is-hex37:", len(gkey) == 37 and all(c in "0123456789abcdef" for c in gkey.lower()))
+          print("token prefix:", token[:5], "gkey prefix:", gkey[:5])
 
           def api(method, url, payload=None, auth="token"):
               req = urllib.request.Request(url, method=method)
