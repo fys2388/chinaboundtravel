@@ -42,35 +42,46 @@ function queryBuffer(token, query) {
 }
 
 async function listPending(token) {
-  const r = await queryBuffer(token, `query {
+  const orgR = await queryBuffer(token, `query {
     account {
       organizations {
-        channels {
-          id
-          name
-          service
-          posts(status: PENDING) {
-            id
-            text
-            dueAt
-          }
-        }
+        id
       }
     }
   }`);
+  const orgIds = orgR.data.account.organizations.map((org) => org.id);
   const out = [];
-  for (const org of r.data.account.organizations) {
-    for (const ch of org.channels) {
-      for (const post of ch.posts) {
+  for (const orgId of orgIds) {
+    const postsR = await queryBuffer(token, `query {
+      posts(input: {
+        organizationId: "${orgId}",
+        sort: [{ field: dueAt, direction: asc }],
+        filter: { status: ["scheduled"] }
+      }) {
+        edges {
+          node {
+            id
+            text
+            dueAt
+            channel {
+              id
+              name
+              service
+            }
+          }
+        }
+      }
+    }`);
+    for (const edge of postsR.data.posts.edges) {
+        const post = edge.node;
         out.push({
           postId: post.id,
-          channelId: ch.id,
-          channelName: ch.name,
-          service: ch.service,
+          channelId: post.channel.id,
+          channelName: post.channel.name,
+          service: post.channel.service,
           dueAt: post.dueAt,
           text: (post.text || '').slice(0, 80),
         });
-      }
     }
   }
   return out;
