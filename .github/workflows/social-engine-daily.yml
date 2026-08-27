@@ -72,7 +72,7 @@ jobs:
           fail=0
           for url in "$BUFFER_WORKER_URL" "$NEW_BUFFER_WORKER_URL"; do
             host="${url%%/publish*}"
-            code=$(curl -sS -o /tmp/worker_body.txt -w "%{http_code}" --max-time 20 "$host" || echo "000")
+            code=$(curl -sS -o /tmp/worker_body.txt -w "%{http_code}" --max-time 20 "$host/health" || echo "000")
             if [ "$code" = "000" ]; then
               echo "::error::Buffer Worker 连接失败 (timeout): $host"
               fail=1
