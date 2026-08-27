@@ -104,13 +104,13 @@ def generate_advice(data: dict, scope: str) -> list:
     if users > 0:
         ratio = organic / users * 100
         if ratio < 10:
-            advice.append({"icon": "🔴", "title": f"自然搜索仅 {organic:g}/{users:g} 人（{ratio:.0f}%）",
+            advice.append({"icon": "🟠", "title": f"自然搜索仅 {organic:g}/{users:g} 人（{ratio:.0f}%）",
                            "detail": "搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）"})
         elif ratio < 30:
             advice.append({"icon": "🟡", "title": f"自然搜索占比 {ratio:.0f}%",
                            "detail": "搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）"})
     elif users == 0:
-        advice.append({"icon": "🔴", "title": "本期无流量",
+        advice.append({"icon": "🟠", "title": "本期无流量",
                        "detail": "检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200"})
 
     # 2) 社媒流量质量

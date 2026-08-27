@@ -160,7 +160,7 @@ def generate_priority_tasks(okr_data, suggestions):
         [{"icon", "title", "detail"}]
 
     规则：
-      - OKR 完成率 < 50%   -> 自动进入待办，标注 🔴
+      - OKR 完成率 < 50%   -> 自动进入待办，标注 🟠（业务差距；🔴 只留给生产故障/收入断链等）
       - OKR 完成率 50%-80% -> 自动进入待办，标注 🟡
       - 自动运营建议逐条映射为待办项（优先级图标 + 具体动作 + 对应指标）
     返回去重后的待办列表；无异常时返回空列表（由调用方显示"所有正常"）。
@@ -180,7 +180,7 @@ def generate_priority_tasks(okr_data, suggestions):
         target = kr.get("target", 0)
         unit = kr.get("unit", "")
         if progress < 50:
-            tasks.append(f"🔴 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），需重点推进")
+            tasks.append(f"🟠 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），需重点推进")
         elif progress < 80:
             tasks.append(f"🟡 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），保持推进")
 
@@ -326,6 +326,11 @@ class FeishuDailyReporter:
             dur_str = f"{avg_dur // 60}分{avg_dur % 60}秒"
         else:
             dur_str = f"{avg_dur}秒"
+
+        # 低样本：访客 < 10 时环比百分比无统计意义，标注 INSUFFICIENT_SAMPLE
+        trend_note = ""
+        if (data.get("visitors") or 0) < 10:
+            trend_note = "\n（INSUFFICIENT_SAMPLE：访客 < 10，低样本，百分比仅参考）"
         
         # Top 流量页面
         top_pages = data.get("top_pages", [])
@@ -367,6 +372,9 @@ class FeishuDailyReporter:
         # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障
         if avg_dur > 600:
             consistency_str += "\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，可能由 GA4 小流量/单会话长停留导致，建议以 28 天滚动口径为准"
+        elif avg_dur == 0 and (data.get("sessions") or 0) > 0:
+            consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
+                                " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，以 28 天滚动口径为准")
         
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
@@ -470,7 +478,7 @@ class FeishuDailyReporter:
 | 互动率 | {data.get('engagement_rate', 0):.1f}% | 平均时长 | {dur_str} |
 
 **📈 同比趋势**
-- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{consistency_str}"""
+- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{trend_note}{consistency_str}"""
                     }
                 },
                 # Top 流量来源
