@@ -6,17 +6,14 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-XSS-Protection: 1; mode=block
   Access-Control-Allow-Origin: https://www.chinaboundtravel.com
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+  Cache-Control: public, s-maxage=3600
 
-# HTML pages: edge cache 1h (browsers revalidate) — Cloudflare Pages static HTML
-/*
-  Cache-Control: public, s-maxage=3600, max-age=0, must-revalidate
-
-# Cache static assets (overrides /*)
+# Cache static assets (more specific than /*)
 /static/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache images (overrides /*)
+# Cache images (more specific than /*)
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 /img/*
@@ -24,11 +21,11 @@
 /generated_images/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache CSS/JS with content hash (overrides /*)
+# Cache CSS/JS with content hash (more specific than /*)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache downloads / lead magnets (overrides /*)
+# Cache downloads / lead magnets (more specific than /*)
 /ebook/*
   Cache-Control: public, max-age=31536000, immutable
 /downloads/*
@@ -36,11 +33,11 @@
 /lead-magnet/*
   Cache-Control: public, max-age=31536000, immutable
 
-# XML sitemaps (overrides /*)
+# XML sitemaps (more specific than /*)
 /sitemap.xml
   Cache-Control: public, max-age=3600
 
-# RSS feed (overrides /*)
+# RSS feed (more specific than /*)
 /index.xml
   Cache-Control: public, max-age=3600
   Content-Type: application/rss+xml; charset=utf-8
