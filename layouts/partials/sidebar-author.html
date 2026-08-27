@@ -5,7 +5,7 @@
         <div class="author-avatar-ring">
             <picture>
                 <source srcset="/images/joran-avatar.webp" type="image/webp">
-            <img src="/images/joran-avatar.png" alt="Joran" class="author-avatar" loading="lazy">
+            <img src="/images/joran-avatar-512.png" alt="Joran" class="author-avatar" loading="lazy">
             </picture>
         </div>
     </div>
@@ -44,10 +44,8 @@
     </div>
 </div>
 
-{{- /* Newsletter (ConvertKit) */ -}}
-<div class="sidebar-card newsletter-sidebar">
-    {{- partial "email-subscribe.html" . -}}
-</div>
+{{- /* Newsletter (ConvertKit) — 已由页面正文区渲染，避免重复 id/脚本 */ -}}
+{{- /* partial "email-subscribe.html" . */ -}}
 
 {{- /* Ebook Upsell — Sidebar */ -}}
 <div class="sidebar-card ebook-sidebar-card">

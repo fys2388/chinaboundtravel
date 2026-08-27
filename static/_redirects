@@ -92,3 +92,18 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
 # V6-3: legacy hero image -> existing Chengdu hero asset
 /images/hero-chengdu.jpg /img/china-dest/chengdu/chengdu-hotpot-street.jpg 301
+
+# ===== P0 2026-08-27 audit: legacy soft-redirect stubs -> hard 301 =====
+/posts/how-to-survive-chinese-train-station/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
+/posts/is-china-safe-for-tourists-2026-honest-assessment/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
+/about/page/1/ /about/ 301
+
+# ===== P0 2026-08-27 audit: canonical-consolidation pages -> final canonical (align HTTP with declared canonical) =====
+/posts/transportation-guide/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
+/posts/foodies-guide-to-china-a-gastronomic-adventure/ /posts/food-recommendations-guide/ 301
+/posts/travel-safety-guide/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
+/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
+/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/ /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ 301
+/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/food-recommendations-guide/ 301
+/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/accommodation-tips-guide/ 301
+/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/food-recommendations-guide/ 301

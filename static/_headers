@@ -5,28 +5,42 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-XSS-Protection: 1; mode=block
+  Access-Control-Allow-Origin: https://www.chinaboundtravel.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
 
-# Cache static assets
+# HTML pages: edge cache 1h (browsers revalidate) — Cloudflare Pages static HTML
+/*
+  Cache-Control: public, s-maxage=3600, max-age=0, must-revalidate
+
+# Cache static assets (overrides /*)
 /static/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache images
+# Cache images (overrides /*)
 /images/*
   Cache-Control: public, max-age=31536000, immutable
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+/generated_images/*
+  Cache-Control: public, max-age=31536000, immutable
 
-# Cache CSS/JS with content hash
+# Cache CSS/JS with content hash (overrides /*)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML pages - short cache
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
+# Cache downloads / lead magnets (overrides /*)
+/ebook/*
+  Cache-Control: public, max-age=31536000, immutable
+/downloads/*
+  Cache-Control: public, max-age=31536000, immutable
+/lead-magnet/*
+  Cache-Control: public, max-age=31536000, immutable
 
-# XML sitemaps
+# XML sitemaps (overrides /*)
 /sitemap.xml
   Cache-Control: public, max-age=3600
 
-# RSS feed
+# RSS feed (overrides /*)
 /index.xml
   Cache-Control: public, max-age=3600
   Content-Type: application/rss+xml; charset=utf-8

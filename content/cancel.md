@@ -5,6 +5,8 @@ date: '2026-06-02T10:00:00+08:00'
 type: page
 hideMeta: true
 hideReadTime: true
+robotsNoIndex: true
+hiddenInRss: true
 ---
 
 # ⚠️ Payment Cancelled

@@ -59,8 +59,7 @@
 
 {{ partial "extend_footer.html" . }}
 
-{{/* P1-GROWTH-28A: site-wide GDPR cookie consent (marketing gate for Drive/analytics) */}}
-{{ partial "cookie-consent.html" . }}
+{{- /* P1-GROWTH-28A: GDPR cookie consent 由主题 baseof.html 统一包含一次，勿在此重复引入 */ -}}
 
 <script>
 // Menu scroll position

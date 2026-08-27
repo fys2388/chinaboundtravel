@@ -25,7 +25,7 @@ ignoreFiles = ["/\\.archived/"]
 
   rss = true
 
-  sitemapExclude = ["_draft", "member-month", "member-year", "cancel", "success", "search", "static-package", "tags", "ebook"]
+  sitemapExclude = ["_draft", "member-month", "member-year", "cancel", "success", "search", "static-package", "tags", "ebook", "posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment", "posts/2026-05-27-how-to-survive-chinese-train-station", "posts/transportation-guide", "posts/foodies-guide-to-china-a-gastronomic-adventure", "posts/travel-safety-guide", "posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety", "posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers", "posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers", "posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers", "posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers"]
 
   [params.search]
     enable = true
