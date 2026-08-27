@@ -12,6 +12,7 @@ on:
       - 'assets/**'
       - 'config/**'
       - 'hugo.toml'
+      - '.github/workflows/deploy-cloudflare-pages.yml'
   workflow_dispatch:
 
 concurrency:

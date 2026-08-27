@@ -1,4 +1,5 @@
 # Sitemap optimized: tag pages excluded from sitemap via custom template
+# Deploy note: hugo.toml is in deploy-trigger paths; keep it touched to force deploys.
 baseURL = 'https://www.chinaboundtravel.com/'
 languageCode = 'en-us'
 title = 'ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners'
