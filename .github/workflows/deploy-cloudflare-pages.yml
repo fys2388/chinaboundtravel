@@ -102,6 +102,11 @@ jobs:
                   print("purge skipped:", e2)
           PY
           echo "Done."
+        env:
+          CF_ZONE: ${{ vars.CLOUDFLARE_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_GLOBAL_KEY: ${{ secrets.CLOUDFLARE_GLOBAL_KEY }}
+          CF_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
 
       - name: Ensure HTML Edge Cache Rule (Cache Everything, TTL 1h)
         if: vars.CLOUDFLARE_ZONE_ID != ''
