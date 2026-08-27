@@ -75,11 +75,32 @@ jobs:
         if: vars.CLOUDFLARE_ZONE_ID != ''
         run: |
           echo "=== Purging Cloudflare CDN cache ==="
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ vars.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"purge_everything":true}' \
-            --fail --show-error --silent || echo "Cache purge skipped"
+          python3 - <<'PY'
+          import json, urllib.request, os
+          zone = os.environ["CF_ZONE"]
+          token = os.environ.get("CF_TOKEN", "")
+          gkey = os.environ.get("CF_GLOBAL_KEY", "")
+          email = os.environ.get("CF_EMAIL", "")
+          url = "https://api.cloudflare.com/client/v4/zones/" + zone + "/purge_cache"
+          def purge(auth):
+              req = urllib.request.Request(url, method="POST")
+              req.add_header("Content-Type", "application/json")
+              if auth == "token":
+                  req.add_header("Authorization", "Bearer " + token)
+              else:
+                  req.add_header("X-Auth-Email", email)
+                  req.add_header("X-Auth-Key", gkey)
+              with urllib.request.urlopen(req, data=b'{"purge_everything":true}', timeout=30) as r:
+                  return json.load(r)
+          try:
+              print("purge result:", purge("token").get("success"))
+          except Exception as e:
+              print("token purge failed:", e)
+              try:
+                  print("purge via global key:", purge("global").get("success"))
+              except Exception as e2:
+                  print("purge skipped:", e2)
+          PY
           echo "Done."
 
       - name: Ensure HTML Edge Cache Rule (Cache Everything, TTL 1h)
@@ -89,43 +110,64 @@ jobs:
           python3 - <<'PY'
           import json, urllib.request, os
           zone = os.environ["CF_ZONE"]
-          token = os.environ["CF_TOKEN"]
+          token = os.environ.get("CF_TOKEN", "")
+          gkey = os.environ.get("CF_GLOBAL_KEY", "")
+          email = os.environ.get("CF_EMAIL", "")
           base = "https://api.cloudflare.com/client/v4/zones/" + zone + "/rulesets"
 
-          def api(method, url, payload=None):
+          def api(method, url, payload=None, auth="token"):
               req = urllib.request.Request(url, method=method)
-              req.add_header("Authorization", "Bearer " + token)
+              if auth == "token":
+                  req.add_header("Authorization", "Bearer " + token)
+              else:
+                  req.add_header("X-Auth-Email", email)
+                  req.add_header("X-Auth-Key", gkey)
               req.add_header("Content-Type", "application/json")
               data = json.dumps(payload).encode("utf-8") if payload is not None else None
-              try:
-                  with urllib.request.urlopen(req, data=data, timeout=30) as r:
-                      return json.load(r)
-              except Exception as e:
-                  print("API error:", e)
-                  raise SystemExit(0)  # non-fatal: do not break deploys
+              with urllib.request.urlopen(req, data=data, timeout=30) as r:
+                  return json.load(r)
 
+          def auth_for_first_call():
+              # figure out which credential works for the zone (token preferred, fallback global key)
+              try:
+                  api("GET", base + "?phase=http_request_cache_settings", auth="token")
+                  return "token"
+              except Exception:
+                  try:
+                      api("GET", base + "?phase=http_request_cache_settings", auth="global")
+                      return "global"
+                  except Exception as e:
+                      print("API error (both credentials):", e)
+                      raise SystemExit(0)  # non-fatal: do not break deploys
+
+          auth = auth_for_first_call()
+          print("using auth:", "token" if auth == "token" else "global-key")
+          rs = api("GET", base + "?phase=http_request_cache_settings", auth=auth).get("result", [])
+          ruleset_id = None
+          existing = []
+          if rs:
+              ruleset_id = rs[0]["id"]
+              existing = rs[0].get("rules", [])
+          existing = [r for r in existing if r.get("description") != "cbt-html-edge-cache-1h (audit 2026-08-27)"]
           my_rule = {
               "expression": '(http.host eq "www.chinaboundtravel.com" and not starts_with(http.request.uri.path, "/api") and not http.request.uri.path contains ".")',
               "description": "cbt-html-edge-cache-1h (audit 2026-08-27)",
               "action": "cache",
               "action_parameters": {"cache": True, "edge_ttl": {"mode": "override_origin", "default": 3600}},
           }
-          rs = api("GET", base + "?phase=http_request_cache_settings").get("result", [])
-          ruleset_id = None
-          existing = []
-          if rs:
-              ruleset_id = rs[0]["id"]
-              existing = rs[0].get("rules", [])
-          existing = [r for r in existing if r.get("description") != my_rule["description"]]
           existing.append(my_rule)
           body = {"name": "cbt-html-edge-cache", "kind": "zone", "phase": "http_request_cache_settings", "rules": existing}
           if ruleset_id:
-              resp = api("PUT", base + "/" + ruleset_id, body)
+              resp = api("PUT", base + "/" + ruleset_id, body, auth=auth)
           else:
-              resp = api("POST", base + "/phases/http_request_cache_settings/entrypoint", body)
+              resp = api("POST", base + "/phases/http_request_cache_settings/entrypoint", body, auth=auth)
           print("cache rule ensured:", resp.get("success"))
+          if not resp.get("success"):
+              print("errors:", json.dumps(resp.get("errors", []))[:400])
           PY
           echo "Done."
         env:
           CF_ZONE: ${{ vars.CLOUDFLARE_ZONE_ID }}
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_GLOBAL_KEY: ${{ secrets.CLOUDFLARE_GLOBAL_KEY }}
+          CF_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
