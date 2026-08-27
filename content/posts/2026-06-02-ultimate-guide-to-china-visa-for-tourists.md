@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-73f33c49bc51"
-title: "China Tourist Visa Guide: How to Apply in 2026 — 2026 China Visa & 144-Hour Visa-Free Transit Explained"
+title: "China Tourist Visa Guide: How to Apply in 2026"
 slug: "ultimate-guide-to-china-visa-for-tourists"
 date: 2026-06-02T10:00:00+08:00
 author: Joran
@@ -9,7 +9,7 @@ summary: 'Complete guide to obtaining a China tourist visa in 2026. Everything y
 description: "China tourist visa in 2026: types, requirements, application steps, costs, and processing times for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp"
 categories: ["visa", "internet"]
 last_updated: "2026-08-24"
 
@@ -70,7 +70,7 @@ Gather all the necessary documents before submitting your application:
 - **Hotel reservation confirmation**: Must cover the entire duration of your stay
 - **Round-trip flight tickets**: Confirmed bookings
 - **Invitation letter** (if visiting friends/family): Notarized invitation from host in China
-- **Travel insurance** (recommended): Coverage for medical emergencies. Our [best travel insurance for China guide](/posts/best-travel-insurance-china/) compares the top providers.
+- **Travel insurance** (recommended): Coverage for medical emergencies. Our [top travel insurance for China guide](/posts/best-travel-insurance-china/) compares the top providers.
 
 ### Step 2: Submit Application
 
@@ -158,7 +158,7 @@ Yes, visa extensions are possible through local Public Security Bureau (PSB) off
 
 ### Is travel insurance required?
 
-While not mandatory for visa application, travel insurance is highly recommended. Some hotels and tour operators may require it. For a comprehensive comparison, check our [best travel insurance for China](/posts/best-travel-insurance-china/) guide.
+While not mandatory for visa application, travel insurance is highly recommended. Some hotels and tour operators may require it. For a comprehensive comparison, check our [top travel insurance for China](/posts/best-travel-insurance-china/) guide.
 
 ### Can I apply for a visa online?
 

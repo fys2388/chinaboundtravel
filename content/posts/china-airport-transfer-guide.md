@@ -6,7 +6,7 @@ slug: "china-airport-transfer-guide"
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/"
 tags: ["ChinaTransportation", "ChinaAirports", "ChinaTravelTips", "AirportTransfer"]
-description: "How to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared for Beijing, Shanghai, and Guangzhou."
+description: "How to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared for Beijing..."
 author: "Joran"
 params:
   keywords:

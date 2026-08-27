@@ -15,7 +15,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.webp"
 categories: ["food"]
 tags: ["ChinaTravel", "TravelGuide", "China", "EuropeToChina", "Chengdu"]
 

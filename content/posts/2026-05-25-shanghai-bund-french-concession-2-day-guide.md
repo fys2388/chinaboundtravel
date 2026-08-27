@@ -19,7 +19,7 @@ params:
     - question: "How do I get around Chinese cities?"
       answer: "Subway systems in major cities are excellent. Taxis and ride-hailing apps (Didi) are cheap and convenient."
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.webp"
 categories: ["cities", "travel-tips"]
 tags: ["ChinaTravel", "Shanghai", "ChinaCityGuide", "ChinaDestinations"]
 last_updated: "2026-08-24"
@@ -66,7 +66,7 @@ Skip the overpriced restaurants on the Bund waterfront. Walk inland to **Huangsh
 
 ### Afternoon: The French Concession (
 
-This is where Shanghai shows its softer side. The tree-lined streets, the old colonial villas, the hipster coffee shops coexist with traditional wet markets. It's genuinely one of the most pleasant urban walks I've done anywhere in the world.
+This is where Shanghai shows its softer side. The tree-lined streets, the old colonial villas, the hipster coffee shops coexist with traditional wet markets. It's genuinely one of the most pleasant urban walks anywhere in the world.
 
 **Key streets:**
 - **Huaihai Middle Road ()**  the main artery, mix of luxury shops and local stores

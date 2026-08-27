@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.webp"
 categories: ["travel-tips", "visa"]
 
 ---
@@ -39,7 +39,7 @@ Planning a family trip to China? This guide covers everything you need to know f
 ## China Visa Requirements
 
 ### Types of Visas
-First things first, let's talk about visa requirements. As an international traveler from Europe, you'll need to apply for a China tourist visa (L visa) before you jet off. The process can seem a bit like a maze at first, but don't worry, I'm here to be your guide through it all.
+First things first, let's talk about visa requirements. As an international traveler from Europe, you'll need to apply for a China tourist visa (L visa) before you jet off. The process can seem a bit like a maze at first, but don't worry - this guide walks you through it all.
 
 There are several types of China visas available, but the most common for tourists is the L visa. This bad boy allows you to stay in China for up to 90 days for tourism purposes. It's like a golden ticket to explore all the amazing things this country has to offer. If you plan to stay longer, you'll need to apply for a different type of visa. Maybe you'll fall in love with China so much that you'll want to extend your stay and soak up even more culture, food, and experiences.
 

@@ -24,7 +24,7 @@ params:
     - question: "Do I need a VPN for China?"
       answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp"
 categories: ["cities", "food"]
 last_updated: "2026-08-24"
 
@@ -40,7 +40,7 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 
 In their first month in Chengdu, many travelers order food delivery dozens of times. Not because they're lazy (okay, partly because they're lazy) but because they're too scared to order in restaurants. Their Chinese is "nihao and thank you," and menus are walls of indecipherable characters.
 
-Meituan and Ele.me become a lifeline. Today, anyone can order delivery like a local — this guide will help you do the same, even if your Chinese is limited.
+Meituan and Ele.me become a lifeline. Today, anyone can order delivery like a resident — this guide will help you do the same, even if your Chinese is limited.
 
 This guide works whether you're in Beijing, Shanghai, Chengdu, Hangzhou, or any city in China. The apps are the same, the experience is the same.
 

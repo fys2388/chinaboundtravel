@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-0bb1cb1e308d"
-title: "China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide"
+title: "China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond"
 date: "2026-08-12T10:00:00+08:00"
 lastmod: "2026-08-12T10:00:00+08:00"
 author: "Joran"
@@ -89,7 +89,7 @@ When planning your trip to China's national parks, there are a few things that y
 
 Second, make sure that you have the appropriate clothing and gear for your trip. The weather in China's national parks can vary depending on the season and the location, so it's important to pack accordingly. You may also want to consider bringing a camera, binoculars, and a map of the park.
 
-Third, make sure that you have a plan for getting to and from the park. Many of China's national parks are located in remote areas, so it's important to plan your transportation in advance. You can find more information about transportation options in China on the [China High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/) article on our website.
+Third, make sure that you have a plan for getting to and from the park. Many of China's national parks are located in remote areas, so it's important to plan your transportation in advance. You can find more information about transportation options in China on the [China High-Speed Rail: How to Book Tickets Like a Resident (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/) article on our website.
 
 Finally, make sure that you have a plan for staying safe while you're in the park. China's national parks are generally safe, but it's important to take precautions to avoid getting lost or injured. Make sure that you follow the park's rules and regulations, and stay on the designated trails. You may also want to consider bringing a first aid kit and a map of the park.
 

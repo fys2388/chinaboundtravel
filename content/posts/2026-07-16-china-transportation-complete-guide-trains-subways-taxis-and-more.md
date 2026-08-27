@@ -15,7 +15,7 @@ aliases = [
 categories = ["transport", "cities"]
 tags = ["China Transportation", "high-speed train China", "China Travel Tips", "12306", "Didi", "China Subway", "China Travel Guide"]
 [cover]
-  image = "/img/china-dest/transport/china-transportation-complete-guide.jpg"
+  image = "/img/china-dest/transport/china-transportation-complete-guide.webp"
   alt = "A sleek Fuxing high-speed train gliding through mountains in southern China"
   caption = "China's Fuxing high-speed trains connect over 2,200 stations across the country"
 featured = true

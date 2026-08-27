@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-bc3e1afe5dc0"
-title: "Shanghai Vs Beijing: Which Chinese City Should You Visit..."
+title: "Shanghai vs Beijing: Which Chinese City to Visit First"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"
 author: "Joran"

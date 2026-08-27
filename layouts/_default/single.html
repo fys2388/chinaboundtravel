@@ -237,16 +237,18 @@
         <div class="related-grid">
             {{- range $related -}}
             <a href="{{ .RelPermalink }}" class="related-card">
+                {{- $relTitle := .Title -}}
+                {{- $relCat := index (.Params.categories | default slice) 0 -}}
                 {{- with .Params.cover -}}
                   {{- $coverImg := . -}}
                   {{- if reflect.IsMap $coverImg -}}
                     {{- $coverImg = $coverImg.image -}}
                   {{- end -}}
                   {{- if $coverImg -}}
-                  <img class="related-cover" src="{{ $coverImg }}" alt="{{ .Title }}" width="400" height="120" style="width:100%;height:auto;aspect-ratio:400/120;object-fit:cover;border-radius:8px 8px 0 0;margin-bottom:0.5rem;display:block;" loading="lazy" decoding="async">
+                  <img class="related-cover" src="{{ $coverImg }}" alt="{{ $relTitle }}" width="400" height="120" style="width:100%;height:auto;aspect-ratio:400/120;object-fit:cover;border-radius:8px 8px 0 0;margin-bottom:0.5rem;display:block;" loading="lazy" decoding="async">
                   {{- end -}}
                 {{- end -}}
-                <div class="related-meta">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</div>
+                <div class="related-meta">{{ $relCat }}</div>
                 <div class="related-title">{{ .Title }}</div>
             </a>
             {{- end -}}

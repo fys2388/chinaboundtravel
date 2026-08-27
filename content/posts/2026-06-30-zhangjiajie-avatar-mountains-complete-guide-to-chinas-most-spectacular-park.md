@@ -24,7 +24,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp"
 categories: ["nature", "travel"]
 
 ---
@@ -36,7 +36,7 @@ Standing on the **Yuanjiajie viewing platform** at sunrise, watching those sands
 
 This guide is everything we wish we'd known before going. We've packed it with real ticket prices (updated for 2026), the exact 4-day route that worked for us, mistakes to avoid, and the unspoken rules that will save you time, money, and sanity.
 
-![Zhangjiajie Avatar Mountains towering sandstone pillars seen from aerial view](/img/china-dest/zhangjiajie/avatar-mountains-aerial.jpg)
+![Zhangjiajie Avatar Mountains towering sandstone pillars seen from aerial view](/img/china-dest/zhangjiajie/avatar-mountains-aerial.webp)
 
 ## Know Before You Go: Two Separate Parks (Not Three)
 
@@ -114,7 +114,7 @@ This is what you came for.
 **Morning: Bailong Elevator + Yuanjiajie**
 - Take the park bus to the Bailong Elevator — this thing shoots you 326 meters up the side of a cliff in under 2 minutes
 - From the top, walk 20 minutes to the **"Hallelujah Mountain" viewing platform** — this is the pillar that inspired the floating mountains in Avatar
-- **The secret:** Go before 8 AM. By 10 AM, you'll be elbow-to-elbow with hundreds of people. We arrived at 7:15 and had the platform to ourselves for 15 magical minutes
+- **The tip:** Go before 8 AM. By 10 AM, you'll be elbow-to-elbow with hundreds of people. We arrived at 7:15 and had the platform to ourselves for 15 magical minutes
 - Continue along the Yuanjiajie trail to the "First Bridge Under Heaven" (Tiānxià Dìyī Qiáo / ) — a natural stone bridge spanning two peaks
 
 **Afternoon: Tianzi Mountain**
@@ -143,7 +143,7 @@ If you have the energy, the **Grand Canyon Glass Bridge** is worth the trip. It'
 
 If you're exhausted (we were), spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park (Tǔjiā Fēngqíng Yuán / )**. If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo () before heading out.
 
-![Tianzi Mountain sunset with sea of clouds around Zhangjiajie sandstone pillars](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.jpg)
+![Tianzi Mountain sunset with sea of clouds around Zhangjiajie sandstone pillars](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.webp)
 
 ## Where to Stay
 
@@ -224,7 +224,7 @@ Between booking DiDi rides, translating menus, and sharing photos, you'll want d
 - **Physical SIM:** Buy a China Unicom SIM at the airport. About ¥50 ($7) for a week of data
 - **[VPN](/posts/internet-connection-china-esim-vpn-guide/):** You'll need one to access Google, Instagram, and WhatsApp. [NordVPN](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) works reliably on mobile in China. Set it up **before** you arrive — you can't download it once you're inside the firewall. For a full breakdown of internet options in China, including eSIM and VPN recommendations, see our [internet guide for China](/posts/internet-connection-china-esim-vpn-guide/). [Get NordVPN here →](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613)
 
-![Close-up of Zhangjiajie sandstone pillar formations with green vegetation](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.jpg)
+![Close-up of Zhangjiajie sandstone pillar formations with green vegetation](/img/china-dest/zhangjiajie/sandstone-pillars-closeup.webp)
 
 ## Getting Travel Insurance (Don't Skip This)
 
@@ -258,7 +258,7 @@ If you do one thing right on this trip, it's this: **wake up before dawn, get to
 And if you found this guide helpful, [bookmark it for your trip planning](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) and check out these related guides:
 
 **More destination guides:**
-- [Xi'an Terracotta Army: History, Discovery, and Insider Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
+- [Xi'an Terracotta Army: History, Discovery, and Practical Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
 - [Guilin and Yangshuo: The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 
 **Practical China guides:**

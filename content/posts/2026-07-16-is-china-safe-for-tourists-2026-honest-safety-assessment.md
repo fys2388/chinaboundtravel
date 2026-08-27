@@ -14,7 +14,7 @@ aliases = [
 categories = ["travel-tips", "internet"]
 tags = ["China Safety", "Is China Safe", "China Travel Safety", "China Scams", "China Travel Tips", "safety guide China"]
 [cover]
-  image = "/img/china-dest/general/china-travel-safety-guide.jpg"
+  image = "/img/china-dest/general/china-travel-safety-guide.webp"
   alt = "A well-lit pedestrian street in China at night, showing a safe and vibrant city atmosphere"
   caption = "Chinese cities are among the safest in the world for travelers -- but a few precautions go a long way"
 featured = true
@@ -202,7 +202,7 @@ The real risks are mundane: scams targeting tourists in popular areas, food-rela
 
 Do not let fear-mongering blog posts or outdated stereotypes keep you from experiencing one of the most fascinating countries on earth. Come prepared, stay aware, and you will have an incredible -- and safe -- trip.
 
-If you found this guide helpful, check out our other practical resources: [China Transportation Guide 2026](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/), [WeChat Pay Setup for Foreigners](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), and [Best Travel Insurance for China](/posts/best-travel-insurance-china/).
+If you found this guide helpful, check out our other practical resources: [China Transportation Guide 2026](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/), [WeChat Pay Setup for Foreigners](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), and [Top Travel Insurance for China](/posts/best-travel-insurance-china/).
 
 {{< affiliate-hotel >}}
 

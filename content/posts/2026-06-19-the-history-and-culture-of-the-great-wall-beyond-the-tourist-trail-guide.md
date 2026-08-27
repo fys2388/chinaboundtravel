@@ -3,7 +3,7 @@ content_id: "cbt-558f85f45e9a"
 
 title: "Great Wall of China: History Beyond the Tourist Trail"
 cover:
-  image: "https://picsum.photos/seed/657773/1792/1024"
+  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp"
 date: "2026-06-19T10:00:00+08:00"
 lastmod: "2026-06-19T10:00:00+08:00"
 author: "Joran"
@@ -68,7 +68,7 @@ Another way to explore the wild Great Wall is to go on a hiking or camping trip.
 If you're looking for a more adventurous experience, you can also try rock climbing or rappelling on the Great Wall. There are some sections of the wall that are suitable for rock climbing, and there are also some companies that offer guided rock climbing and rappelling tours. This is a great way to challenge yourself and see the Great Wall from a different perspective.
 
 ## Transportation and Logistics
-Getting to the Great Wall can be a bit of a challenge, especially if you're not familiar with the local transportation system. The most convenient way to get to the Great Wall is by taking a high-speed train from Beijing to the nearby town of Badaling. The train takes about an hour and a half, and it's very comfortable and convenient. Our [China high-speed rail guide](/posts/china-high-speed-rail-how-to-book-tickets/) explains how to book tickets like a local.
+Getting to the Great Wall can be a bit of a challenge, especially if you're not familiar with the local transportation system. The most convenient way to get to the Great Wall is by taking a high-speed train from Beijing to the nearby town of Badaling. The train takes about an hour and a half, and it's very comfortable and convenient. Our [China high-speed rail guide](/posts/china-high-speed-rail-how-to-book-tickets/) explains how to book tickets like a resident.
 
 Once you arrive in Badaling, you can take a bus or a taxi to the Great Wall. The bus is the budget-friendly option, but it can be a bit crowded and uncomfortable. The taxi is more expensive, but it's more convenient and it can take you directly to the entrance of the Great Wall.
 
@@ -131,7 +131,7 @@ And as often, if you have any questions or comments, feel free to reach out to o
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

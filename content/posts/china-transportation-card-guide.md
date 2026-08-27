@@ -1,12 +1,12 @@
 ---
 content_id: "cbt-55aef784e6aa"
-title: "China Transportation Card Guide (2026): Metro Cards, Transit Apps & Payment Options for Foreign Travelers"
+title: "China Transportation Card Guide (2026): Metro Cards & Transit Apps"
 date: 2026-08-16
 slug: "china-transportation-card-guide"
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/"
 tags: ["ChinaTransportation", "ChinaMetro", "ChinaTravelTips", "TransportationCard"]
-description: "How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in Beijing, Shanghai, and beyond."
+description: "How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in Beijing..."
 author: "Joran"
 params:
   keywords:

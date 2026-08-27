@@ -80,3 +80,51 @@ jobs:
             -d '{"purge_everything":true}' \
             --fail --show-error --silent || echo "Cache purge skipped"
           echo "Done."
+
+      - name: Ensure HTML Edge Cache Rule (Cache Everything, TTL 1h)
+        if: vars.CLOUDFLARE_ZONE_ID != ''
+        run: |
+          echo "=== Ensuring HTML cache rule (idempotent, preserves existing rules) ==="
+          python3 - <<'PY'
+import json, urllib.request, os
+zone = os.environ["CF_ZONE"]
+token = os.environ["CF_TOKEN"]
+base = "https://api.cloudflare.com/client/v4/zones/" + zone + "/rulesets"
+
+def api(method, url, payload=None):
+    req = urllib.request.Request(url, method=method)
+    req.add_header("Authorization", "Bearer " + token)
+    req.add_header("Content-Type", "application/json")
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    try:
+        with urllib.request.urlopen(req, data=data, timeout=30) as r:
+            return json.load(r)
+    except Exception as e:
+        print("API error:", e)
+        raise SystemExit(0)  # non-fatal: do not break deploys
+
+my_rule = {
+    "expression": '(http.host eq "www.chinaboundtravel.com" and not starts_with(http.request.uri.path, "/api") and not http.request.uri.path contains ".")',
+    "description": "cbt-html-edge-cache-1h (audit 2026-08-27)",
+    "action": "cache",
+    "action_parameters": {"cache": True, "edge_ttl": {"mode": "override_origin", "default": 3600}},
+}
+rs = api("GET", base + "?phase=http_request_cache_settings").get("result", [])
+ruleset_id = None
+existing = []
+if rs:
+    ruleset_id = rs[0]["id"]
+    existing = rs[0].get("rules", [])
+existing = [r for r in existing if r.get("description") != my_rule["description"]]
+existing.append(my_rule)
+body = {"name": "cbt-html-edge-cache", "kind": "zone", "phase": "http_request_cache_settings", "rules": existing}
+if ruleset_id:
+    resp = api("PUT", base + "/" + ruleset_id, body)
+else:
+    resp = api("POST", base + "/phases/http_request_cache_settings/entrypoint", body)
+print("cache rule ensured:", resp.get("success"))
+PY
+          echo "Done."
+        env:
+          CF_ZONE: ${{ vars.CLOUDFLARE_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

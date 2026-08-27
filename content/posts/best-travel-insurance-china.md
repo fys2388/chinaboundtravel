@@ -11,7 +11,7 @@ TocOpen = false
 categories = ["travel-tips", "visa"]
 tags = ["Travel Insurance", "China Safety", "Safetywing", "World Nomads", "Health Insurance", "medical insurance China", "digital nomad insurance China"]
 [cover]
-  image = "/img/china-dest/chengdu/chengdu-hotpot-street.jpg"
+  image = "/img/china-dest/chengdu/chengdu-hotpot-street.webp"
 
 +++
 {{< content-timestamp >}}

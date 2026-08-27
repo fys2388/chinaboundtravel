@@ -25,7 +25,7 @@ params:
     - question: "Are there areas of China off-limits to tourists?"
       answer: "Tibet requires a special permit and government-organized guide. Parts of Xinjiang near borders have restricted zones. Military areas are off-limits. Your hotel or travel agent will inform you of restrictions for your planned route."
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp"
 categories: ["travel-tips", "cities"]
 last_updated: "2026-08-24"
 
@@ -53,7 +53,7 @@ Travelers have reported being robbed once (2014), scammed a dozen times, having 
 | Political risk |  Negligible | Zero tourist-targeted incidents | Just don't be stupid |
 | Medical emergency |  Moderate | Language barrier, cost if uninsured | Travel insurance + hotel card |
 
-For a deep dive on choosing the right coverage, see our [best travel insurance for China guide](/posts/best-travel-insurance-china/).
+For a deep dive on choosing the right coverage, see our [top travel insurance for China guide](/posts/best-travel-insurance-china/).
 | Traffic/accident |  Significant | Pedestrian culture shock | Look BOTH ways, often |
 
 ---

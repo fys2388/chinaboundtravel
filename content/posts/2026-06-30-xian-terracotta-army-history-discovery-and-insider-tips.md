@@ -16,12 +16,12 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp"
 categories: ["history", "cities"]
 tags: ["ChinaTravel", "ChinaTravelGuide", "China", "EuropeToChina", "Xian"]
 
 ---
-## Xi'an Terracotta Army: History, Discovery, and Insider Tips
+## Xi'an Terracotta Army: History, Discovery, and Practical Tips
 
 ## Why the Terracotta Army Matters
 The Terracotta Army is one of the most significant archaeological discoveries of the 20th century and a must-see for any traveler visiting China. Located near the ancient capital of Xi'an, this underground army of life-sized warriors, horses, and chariots was buried with Emperor Qin Shi Huang in the 3rd century BC to protect him in the afterlife.
@@ -30,7 +30,7 @@ The importance of the Terracotta Army cannot be overstated. It is not just a col
 
 This guide covers the history and discovery of the Terracotta Army, practical tips for visiting, and unique insights that will help you make the most of your experience. Whether you're a history buff, a culture enthusiast, or just looking for an unforgettable travel experience, this guide is for you.
 
-![Rows of Terracotta Warriors lined up inside the underground excavation pit](/img/china-dest/xian/terracotta-warriors-rows.jpg)
+![Rows of Terracotta Warriors lined up inside the underground excavation pit](/img/china-dest/xian/terracotta-warriors-rows.webp)
 
 ## History of the Terracotta Army
 The story of the Terracotta Army begins with Emperor Qin Shi Huang, the first emperor of China. He came to power in 221 BC and unified the various warring states into a single empire. In addition to his political and military achievements, Qin Shi Huang was also obsessed with immortality. He believed that by building a massive underground army, he could ensure his eternal protection and dominance even in the afterlife.
@@ -48,7 +48,7 @@ The farmers reported their discovery to the local authorities, who in turn infor
 
 The discovery of the Terracotta Army was a major archaeological event that attracted international attention. It was the first time that such a large and well-preserved ancient army had been found, and it provided valuable insights into the history and culture of the Qin Dynasty. Since then, extensive research and excavation have been carried out, and the Terracotta Army has become one of the most popular tourist attractions in China.
 
-## Insider Tips for Visiting the Terracotta Army
+## Practical Tips for Visiting the Terracotta Army
 Now that you know a little bit about the history and discovery of the Terracotta Army, let's talk about some practical tips and advice for visiting this amazing site. Here are some practical tips that will help you make the most of your visit:
 
 ### Best Time to Visit
@@ -92,7 +92,7 @@ The Terracotta Army is a photographer's paradise, but there are some rules and r
 ### What to Avoid
 When visiting the Terracotta Army, there are some things that you should avoid. These include touching the artifacts, climbing on the walls or fences, and littering. You should also respect the privacy of the other visitors and the staff.
 
-![Close-up of a Terracotta Warrior face showing intricate facial features and details](/img/china-dest/xian/terracotta-warrior-face-closeup.jpg)
+![Close-up of a Terracotta Warrior face showing intricate facial features and details](/img/china-dest/xian/terracotta-warrior-face-closeup.webp)
 
 ## Cultural Insights
 The Terracotta Army is not just a collection of ancient sculptures; it is also a rich source of cultural and historical information. Here are some cultural insights that you can gain from visiting the Terracotta Army:
@@ -157,7 +157,7 @@ In conclusion, the Terracotta Army is an amazing site that should not be missed 
 
 So, what are you waiting for? Book your trip to Xi'an today and experience the wonder of the Terracotta Army for yourself. If you're eligible, the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) policy makes it easy to visit China without the hassle of a full visa application. And don't forget to take plenty of photos and share your experiences with your friends and family.
 
-![Panoramic view of the Terracotta Army with rows of warriors stretching into the distance](/img/china-dest/xian/terracotta-army-panoramic.jpg)
+![Panoramic view of the Terracotta Army with rows of warriors stretching into the distance](/img/china-dest/xian/terracotta-army-panoramic.webp)
 
 ## Related Links
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
@@ -195,7 +195,7 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

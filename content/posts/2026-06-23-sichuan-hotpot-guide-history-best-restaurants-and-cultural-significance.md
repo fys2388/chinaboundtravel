@@ -2,7 +2,7 @@
 content_id: "cbt-550a6e3e929c"
 title: "Sichuan Hotpot Guide: History & Best Restaurants"
 cover:
-  image: "/img/china-dest/chengdu/sichuan-hotpot-cover.jpg"
+  image: "/img/china-dest/chengdu/sichuan-hotpot-cover.webp"
 date: "2026-06-23T10:00:00+08:00"
 lastmod: "2026-06-23T10:00:00+08:00"
 author: "Joran"
@@ -23,7 +23,7 @@ tags: ["ChinaFood", "ChinaTravel", "Sichuan", "Chengdu", "AustraliaToChina"]
 
 Sichuan hotpot is one of China's most iconic dishes — a bubbling, numbing, spicy meal built around shared ingredients and strong flavors. If you're a foodie planning a trip to Chengdu, don't miss our [Chinese street food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) -- it covers the night markets and street stalls that every first-timer should experience. This guide covers the history, a popular restaurants, and cultural significance of the dish, based on current food guides and traveler reports.
 
-![Chengdu street with Sichuan hotpot restaurant sign and steam rising from the entrance](/img/china-dest/chengdu/chengdu-hotpot-street.jpg)
+![Chengdu street with Sichuan hotpot restaurant sign and steam rising from the entrance](/img/china-dest/chengdu/chengdu-hotpot-street.webp)
 
 ## History of Sichuan Hotpot
 
@@ -33,7 +33,7 @@ Over time, as the dish started to spread throughout the Sichuan province, it und
 
 Chili peppers, on the other hand, were a later addition to the Sichuan hotpot story. Introduced to China from South America in the 16th century, they quickly found their way into the local cuisine. The combination of Sichuan peppercorns and chili peppers is what creates the characteristic "ma la" flavor that is so beloved by locals and tourists alike. It's a flavor profile that is both intense and addictive, a well-suited balance of numbing and spicy that dances on the taste buds.
 
-![Sichuan peppercorns and chili peppers on a rustic wooden table](/img/china-dest/chengdu/sichuan-peppercorns-chili.jpg)
+![Sichuan peppercorns and chili peppers on a rustic wooden table](/img/china-dest/chengdu/sichuan-peppercorns-chili.webp)
 
 ## Cultural Significance of Sichuan Hotpot
 
@@ -91,7 +91,7 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

@@ -3,7 +3,7 @@ content_id: "cbt-663ab3f3b0fa"
 
 title: "Shanghai Beyond the Bund: Hidden Neighborhoods"
 cover:
-  image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.jpg"
+  image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp"
 date: "2026-06-22T10:00:00+08:00"
 lastmod: "2026-06-22T10:00:00+08:00"
 author: "Joran"
@@ -27,7 +27,7 @@ You might be thinking, "I'm not sure I can afford to travel to China. What are t
 
 But first, let's talk about another incredible Chinese destination. Chengdu, home to incredible [Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) and some of China's a popular [street food](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/). If you're planning a trip to China, we highly recommend adding Chengdu to your itinerary.
 
-![Nanjing Road busy intersection with pedestrians crossing and modern billboards](/img/china-dest/shanghai/nanjing-road-street.jpg)
+![Nanjing Road busy intersection with pedestrians crossing and modern billboards](/img/china-dest/shanghai/nanjing-road-street.webp)
 
 ## The Hidden Neighborhoods of Shanghai
 
@@ -42,7 +42,7 @@ Another great thing about the Former French Concession is the food. There are so
 
 Actionable tip: If you visit the Former French Concession on a weekend, be prepared for crowds. To avoid the rush, try to go on a weekday. Also, make sure to bring your camera to capture all the beautiful architecture.
 
-![Shanghai French Concession tree-lined street with European buildings and sidewalk cafes](/img/china-dest/shanghai/french-concession-street.jpg)
+![Shanghai French Concession tree-lined street with European buildings and sidewalk cafes](/img/china-dest/shanghai/french-concession-street.webp)
 
 ### Tianzifang
 Tianzifang is another hidden neighborhood in Shanghai that is full of character. It's a maze of narrow alleys and traditional Shanghai shikumen houses. This area has been transformed into a trendy neighborhood with art galleries, boutiques, and cafes.
@@ -126,7 +126,7 @@ For more China travel guides, explore our [7-Day China Itinerary](/posts/7-day-c
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-b4ff4381a014"
-title: "China 144-Hour Visa-Free Transit (2026 Guide) — 2026 China Visa & 144-Hour Visa-Free Transit Explained"
+title: "China 144-Hour Visa-Free Transit (2026 Guide)"
 date: '2026-05-19T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
@@ -15,7 +15,7 @@ description: "China 144-Hour Visa-Free Transit (2026 Guide). Practical, research
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
 last_updated: "2026-08-24"
 

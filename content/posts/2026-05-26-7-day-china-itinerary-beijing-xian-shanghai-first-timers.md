@@ -23,7 +23,7 @@ params:
     - question: "Should I get a VPN in China?"
       answer: "Yes, before you arrive. Gmail, Google, YouTube, Facebook, Instagram, and WhatsApp are all blocked. {{< vpn-link \"NordVPN\" />}} consistently works. Once in China, you'll need the APK file or account already active - you can't download VPN apps inside China."
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp"
 categories: ["cities", "visa"]
 tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide"]
 last_updated: "2026-08-24"
@@ -71,7 +71,7 @@ Evening: Houhai neighborhood. Sit by the lake, drink a Yanjing beer, listen to l
 
 Book your ticket through a reputable tour operator or directly at the Mutianyu section's official website. Avoid the aggressive "free rides" solicited outside subway stations.
 
- **Premium Detail:** The exact GPS waypoints for the Jinshanling wild Wall hike, the hidden Simatai section, and the off-radar Jiankou trek  plus my personal contact for a licensed guide who speaks English  are in the [Members Hub — View Pricing Plans](/pricing/). This info is worth more than the $49.99 annual pass.
+ **Premium Detail:** The exact GPS waypoints for the Jinshanling wild Wall hike, the hidden Simatai section, and the off-radar Jiankou trek  plus contact details for a licensed English-speaking guide  are in the [Members Hub — View Pricing Plans](/pricing/). This info is worth more than the $49.99 annual pass.
 
 ---
 
@@ -131,7 +131,7 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 
 ---
 
-## Gear I Actually Recommend for This Trip
+## Recommended Gear for This Trip
 
 | Item | Why | Where to Buy |
 |------|-----|-------------|

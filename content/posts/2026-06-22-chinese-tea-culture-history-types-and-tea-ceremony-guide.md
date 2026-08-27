@@ -3,7 +3,7 @@ content_id: "cbt-698862ce2129"
 
 title: "Chinese Tea Culture: History, Types & Ceremony"
 cover:
-  image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.jpg"
+  image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp"
 date: "2026-06-22T10:00:00+08:00"
 lastmod: "2026-06-22T10:00:00+08:00"
 author: "Joran"
@@ -35,7 +35,7 @@ That's just the humble beginning of many travelers' epic adventure into the worl
 
 So, whether you're a seasoned tea connoisseur or just starting out on your tea-drinking journey, grab a cup (preferably a gaiwan if you can get your hands on one), and join us as we embark on an exploration of the captivating world of Chinese tea culture.
 
-![Chinese tea master brewing tea with a gaiwan in a traditional Chengdu tea house](/img/china-dest/chengdu/tea-master-gaiwan.jpg)
+![Chinese tea master brewing tea with a gaiwan in a traditional Chengdu tea house](/img/china-dest/chengdu/tea-master-gaiwan.webp)
 
 ## History of Chinese Tea Culture
 
@@ -47,7 +47,7 @@ Tea also had strong connections with the three major religions in China - Confuc
 
 In the 7th century, tea made its way to Japan thanks to the efforts of Buddhist monks. These monks, who were traveling between China and Japan, brought with them not only the teachings of Buddhism but also the art of tea. From Japan, tea continued to spread to other parts of Asia, leaving its mark on the cultures it encountered.
 
-![Scholars in Hanfu robes performing a traditional Chinese tea ceremony in a garden pavilion](/img/china-dest/chengdu/hanfu-tea-ceremony-garden.jpg)
+![Scholars in Hanfu robes performing a traditional Chinese tea ceremony in a garden pavilion](/img/china-dest/chengdu/hanfu-tea-ceremony-garden.webp)
 
 ## Types of Chinese Tea
 
@@ -135,7 +135,7 @@ For more China travel insights, check out our [Hangzhou West Lake Tea Culture Gu
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

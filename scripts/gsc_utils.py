@@ -65,6 +65,10 @@ def load_service_account_info(env_name="GSC_SERVICE_ACCOUNT_JSON", key_file=DEFA
             return json.loads(raw)
         except ValueError:
             candidate = Path(raw)
+            # Resolve relative paths against the blog root so scripts work
+            # regardless of the current working directory.
+            if not candidate.is_absolute():
+                candidate = BLOG_ROOT / raw
             if candidate.is_file():
                 try:
                     return json.loads(candidate.read_text(encoding="utf-8"))
