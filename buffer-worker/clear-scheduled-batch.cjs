@@ -90,12 +90,12 @@ async function listPending(token) {
 async function deletePost(token, postId) {
   const r = await queryBuffer(token, `mutation {
     deletePost(input: {id: "${postId}"}) {
-      ... on PostActionSuccess { success }
-      ... on MutationError { message }
+      ... on DeletePostSuccess { id }
+      ... on VoidMutationError { message }
     }
   }`);
   const result = r.data.deletePost;
-  return result.success ? { ok: true } : { ok: false, error: result.message };
+  return result && result.id ? { ok: true } : { ok: false, error: (result && result.message) || 'unknown error' };
 }
 
 async function main() {
