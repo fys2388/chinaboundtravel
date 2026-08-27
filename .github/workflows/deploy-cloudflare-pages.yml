@@ -119,6 +119,7 @@ jobs:
           gkey = os.environ.get("CF_GLOBAL_KEY", "")
           email = os.environ.get("CF_EMAIL", "")
           base = "https://api.cloudflare.com/client/v4/zones/" + zone + "/rulesets"
+          print("cred lengths - token:", len(token), "gkey:", len(gkey), "email:", len(email))
 
           def api(method, url, payload=None, auth="token"):
               req = urllib.request.Request(url, method=method)
@@ -129,8 +130,16 @@ jobs:
                   req.add_header("X-Auth-Key", gkey)
               req.add_header("Content-Type", "application/json")
               data = json.dumps(payload).encode("utf-8") if payload is not None else None
-              with urllib.request.urlopen(req, data=data, timeout=30) as r:
-                  return json.load(r)
+              try:
+                  with urllib.request.urlopen(req, data=data, timeout=30) as r:
+                      return json.load(r)
+              except urllib.error.HTTPError as he:
+                  body = he.read().decode("utf-8", "replace")[:200]
+                  print("HTTP", he.code, "on", method, url.replace(zone, "ZONE"), "->", body)
+                  raise
+              except Exception as e:
+                  print("ERR on", method, url.replace(zone, "ZONE"), "->", str(e)[:200])
+                  raise
 
           def auth_for_first_call():
               # figure out which credential works for the zone (token preferred, fallback global key)
@@ -142,7 +151,7 @@ jobs:
                       api("GET", base + "?phase=http_request_cache_settings", auth="global")
                       return "global"
                   except Exception as e:
-                      print("API error (both credentials):", e)
+                      print("API error (both credentials):", str(e)[:200])
                       raise SystemExit(0)  # non-fatal: do not break deploys
 
           auth = auth_for_first_call()
