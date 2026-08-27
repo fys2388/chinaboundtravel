@@ -1,0 +1,23 @@
+name: Clear Scheduled Buffer Batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只列出匹配帖子，不删除"
+        type: boolean
+        default: true
+
+jobs:
+  clear:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clear scheduled batch
+        env:
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'false' && '0' || '1' }}
+        run: node buffer-worker/clear-scheduled-batch.cjs

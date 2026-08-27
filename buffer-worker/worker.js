@@ -44,7 +44,9 @@ const BUFFER_API_URL = 'https://api.buffer.com';
 
 // 限流配置
 const RATE_LIMIT = {
-  GLOBAL_DAILY_MAX: 3,       // 全局单日发布上限（每篇文章1条社媒，每天最多3篇）
+  // 单账户每日发布目标 3-5 条：上限取 5（一次 /publish = 该账户各平台各 1 条）
+  // 分时段（EST 早 8-10 / 午 12-14 / 晚 20-22）由调度侧控制，worker 只做总量兜底
+  GLOBAL_DAILY_MAX: 5,       // 单账户单日发布上限（5 条，策略区间 3-5）
   ACCOUNT_QUARTER_MAX: 70,   // 单账户15分钟上限(官方100的70%安全阈值)
   QUOTA_WARNING_THRESHOLD: 0.3 // 配额剩余30%触发预警
 };
@@ -703,7 +705,8 @@ function xCharCount(text) {
 
 function buildTwitterText(text, postUrl) {
   const maxChars = 280;
-  const url = (postUrl && postUrl.startsWith('http')) ? postUrl : '';
+  const extractedUrl = (text || '').match(/https?:\/\/\S+/);
+  const url = (postUrl && postUrl.startsWith('http')) ? postUrl : (extractedUrl ? extractedUrl[0] : '');
   // Strip URLs from body so links are never truncated; append full URL at end
   const body = (text || '').replace(/https?:\/\/\S+/g, '').replace(/[ \t]+/g, ' ').trim();
   const urlPart = url ? `\n\n${url}` : '';
@@ -729,7 +732,11 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
       assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
     };
   } else if (service === 'instagram') {
-    const cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
+    let cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
+    cleanText = cleanText
+      .replace(/^(Read the full guide|Full guide):\s*$/gm, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
     input = {
       ...baseInput,
       text: cleanText,
@@ -754,7 +761,7 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
     if (pinBoardServiceId) pinMeta.boardServiceId = pinBoardServiceId;
     input = {
       ...baseInput,
-      text: pinTitle,
+      text: (text || '').slice(0, 500),
       metadata: { pinterest: pinMeta },
       assets: [{ image: { url: mediaUrl } }]
     };

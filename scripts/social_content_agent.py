@@ -74,6 +74,9 @@ from social_backfill import (  # noqa: E402
     truncate,
 )
 
+# P1-OPS-04: 文案清理兜底（shortcode 剥离、描述去标题前缀、发布前校验）
+from social_text_utils import first_meaningful_desc, strip_shortcodes, validate_social_copy  # noqa: E402
+
 logger = setup_logger("social_agent", level="INFO", log_file="social_content_agent.log")
 
 # ============================================================
@@ -191,9 +194,9 @@ def _type_points(article: dict, ctype: str) -> list:
     # conversion 用标题/描述关键词
     if ctype == "conversion":
         points.append(truncate(article.get("title") or "", 70))
-    # story / visual 用描述
+    # story / visual 用描述（P1-OPS-04: 去标题前缀 + 句子边界，防泄漏/重复/残句）
     if ctype in ("story", "visual") and desc:
-        points.append(truncate(desc, 90))
+        points.append(truncate(first_meaningful_desc(desc, article.get("title", ""), 90), 90))
     return points
 
 
@@ -214,7 +217,8 @@ def _keyword_dense(article: dict) -> str:
                 "safety", "etiquette", "insurance", "internet"]:
         if tag in (article.get("title", "") + " " + (article.get("description") or "")).lower():
             kw.append(tag)
-    dense = (article.get("description") or "")[:200].strip()
+    # P1-OPS-04: 描述去标题前缀 + 句子边界，避免泄漏与重复
+    dense = first_meaningful_desc(article.get("description") or "", article.get("title", ""), 200)
     if kw:
         dense += f" | Keywords: {', '.join(sorted(set(kw)))}"
     return dense
@@ -729,11 +733,21 @@ def _cmd_plan_pilot(args) -> int:
 
 def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
     """向 Buffer Worker 发布单条素材。"""
+    caption = re.sub(r"\s*\|\s*Keywords:\s*[^\n]*", "", item.get("caption") or "")
+    item = {**item, "caption": caption}
+    post_url = _extract_post_url(item)
+    # P1-OPS-04: 发布前 lint —— 有致命问题（shortcode/空链接/人设/标题重复等）一律拒绝发布
+    problems = validate_social_copy(
+        caption, title=item.get("source_title", ""), url=post_url,
+    )
+    if problems:
+        return {"success": False, "dry_run": dry_run,
+                "error": "LINT_FAILED: " + "; ".join(problems), "lint": problems}
     payload = {
         "title": item.get("source_title", ""),
         "desc": item["caption"],
         "cover": item.get("image_url", "") or "",
-        "url": "",  # UTM 已拼入 caption；这里留空由 worker 处理
+        "url": post_url,  # 必须传给 worker，否则链接会被剥离或回退首页
         "custom_text": item["caption"],
         "content_id": "",
         "content_variant": f"{item['platform']}_{item['type']}",
@@ -766,6 +780,13 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
                 "error": f"HTTP {e.response.status_code}: {_body}"}
     except Exception as e:
         return {"success": False, "endpoint": endpoint, "error": str(e)}
+
+
+def _extract_post_url(item: dict) -> str:
+    """从 caption 提取文章链接，交给 Buffer Worker 作为 postUrl。"""
+    caption = item.get("caption") or ""
+    m = re.search(r"https?://[^\s]+", caption)
+    return m.group(0) if m else ""
 
 
 def _ensure_cover_url(item: dict) -> str:
