@@ -4,23 +4,23 @@
       "date": "2026-08-27",
       "slots": [
         {
-          "item_id": "soc-000002",
-          "platform": "pinterest",
-          "type": "tip",
+          "item_id": "soc-000003",
+          "platform": "x",
+          "type": "story",
           "utc": "2026-08-27T12:00:00+00:00",
           "slot_et": 8
         },
         {
-          "item_id": "soc-000062",
-          "platform": "pinterest",
-          "type": "tip",
+          "item_id": "soc-000063",
+          "platform": "x",
+          "type": "story",
           "utc": "2026-08-27T22:00:00+00:00",
           "slot_et": 18
         },
         {
-          "item_id": "soc-000067",
-          "platform": "x",
-          "type": "tip",
+          "item_id": "soc-000068",
+          "platform": "fb",
+          "type": "story",
           "utc": "2026-08-28T02:00:00+00:00",
           "slot_et": 22
         }
@@ -176,5 +176,5 @@
       ]
     }
   ],
-  "generated_at": "2026-08-27T12:25:56.491447"
+  "generated_at": "2026-08-27T22:29:20.520537"
 }
