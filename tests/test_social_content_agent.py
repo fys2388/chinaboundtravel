@@ -92,7 +92,12 @@ def test_inventory_covers_all_types(inventory):
 
 
 def test_inventory_default_status_is_pending(inventory):
-    assert all(i["status"] == "待审核" for i in inventory["items"])
+    """生命周期不变量：未发布条目为待审核；已发布条目带 publish_date（发布回写后成立）。"""
+    for i in inventory["items"]:
+        if i.get("publish_date"):
+            assert i["status"] == "已发布", f"{i['id']} 有 publish_date 但状态非已发布"
+        else:
+            assert i["status"] == "待审核", f"{i['id']} 未发布但状态非待审核"
 
 
 # ============================================================
