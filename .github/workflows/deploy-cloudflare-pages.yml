@@ -1,4 +1,4 @@
-name: Post-deploy Tasks
+﻿name: Post-deploy Tasks
 
 on:
   push:
@@ -47,6 +47,27 @@ jobs:
           ls -la public/ | head -20
           echo "=== Total files ==="
           find public -type f | wc -l
+
+      - name: Setup Python for post-build validation
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 2.0 Post-build Validation (content_id + brand_identity)
+        run: |
+          echo "=== [2.0] 安装验证依赖 ==="
+          pip install pyyaml --quiet 2>&1 | tail -n 3
+
+          echo "=== [2.0] 内容ID审计 (content_id_audit audit --strict) ==="
+          python scripts/content_id_audit.py audit --strict || {
+            echo "::error::内容ID审计失败，阻断部署"
+            exit 1
+          }
+
+          echo "=== [2.0] 品牌身份审计 (brand_identity_audit) ==="
+          python scripts/brand_identity_audit.py || echo "::warning::品牌审计发现问题（非阻断，已记录）"
+
+          echo "=== [2.0] 构建后验证完成 ==="
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

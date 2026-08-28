@@ -1,4 +1,4 @@
-name: Joran博文生成+双AI自动审核发布
+﻿name: Joran博文生成+双AI自动审核发布
 
 on:
   schedule:
@@ -122,6 +122,25 @@ jobs:
         run: |
           echo "=== Enforcing risk gate (HIGH-risk content must NOT auto-publish) ==="
           python scripts/check_risk_gate.py
+
+      - name: 2.0 Content Quality Gate (事实检查 + 品牌审计 + 质量验证 + ID审计)
+        run: |
+          echo "=== [2.0] 内容事实检查 (content_fact_guard) ==="
+          python scripts/content_fact_guard.py || echo "::warning::事实检查发现问题，已记录（非阻断）"
+
+          echo "=== [2.0] 品牌身份审计 (brand_identity_audit --legacy) ==="
+          python scripts/brand_identity_audit.py --legacy || echo "::warning::品牌审计发现旧人设表述，已记录（非阻断）"
+
+          echo "=== [2.0] 内容质量验证 (content_quality_validator) ==="
+          python scripts/content_quality_validator.py --json || echo "::warning::内容质量验证发现问题，已记录（非阻断）"
+
+          echo "=== [2.0] 内容ID审计 (content_id_audit audit --strict) ==="
+          python scripts/content_id_audit.py audit --strict || {
+            echo "::error::内容ID审计失败（存在缺失或重复的content_id），阻断提交"
+            exit 1
+          }
+
+          echo "=== [2.0] 内容质量门控完成 ==="
 
       - name: Commit and push all changes
         run: |
