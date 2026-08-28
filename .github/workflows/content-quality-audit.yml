@@ -1,0 +1,149 @@
+name: Content Quality Audit (2.0 内容质量综合巡检)
+
+on:
+  schedule:
+    # 每周日北京时间 10:00 (UTC 2:00)，全面内容质量巡检
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    inputs:
+      strict:
+        description: "严格模式（发现问题阻断）"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  content-quality-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv PyYAML beautifulsoup4 pandas
+
+      - name: 1. 内容事实检查 (Fact Guard)
+        run: |
+          echo "=== [2.0] 内容事实检查 ==="
+          python scripts/content_fact_guard.py 2>&1 || echo "::warning::事实检查发现问题"
+          echo "=== 事实检查完成 ==="
+
+      - name: 2. 品牌身份审计 (Brand Identity)
+        run: |
+          echo "=== [2.0] 品牌身份审计（含旧人设检测）==="
+          python scripts/brand_identity_audit.py --legacy 2>&1 || echo "::warning::品牌审计发现旧人设表述"
+          echo "=== 品牌身份审计完成 ==="
+
+      - name: 3. 内容信任审计 (Content Trust)
+        run: |
+          echo "=== [2.0] 内容信任审计 ==="
+          python scripts/content_trust_audit.py 2>&1 || echo "::warning::内容信任审计发现问题"
+          echo "=== 内容信任审计完成 ==="
+
+      - name: 4. 内容ID审计 (Content ID)
+        env:
+          STRICT: ${{ github.event.inputs.strict || 'false' }}
+        run: |
+          echo "=== [2.0] 内容ID审计 ==="
+          if [ "$STRICT" = "true" ]; then
+            echo "=== 严格模式（发现缺失/重复阻断）==="
+            python scripts/content_id_audit.py audit --strict 2>&1 || {
+              echo "::error::内容ID审计失败，存在缺失或重复的content_id"
+              exit 1
+            }
+          else
+            echo "=== 普通模式（仅报告）==="
+            python scripts/content_id_audit.py audit 2>&1 || echo "::warning::内容ID审计发现问题"
+          fi
+          echo "=== 内容ID审计完成 ==="
+
+      - name: 5. 内容质量验证 (Quality Validator)
+        run: |
+          echo "=== [2.0] 内容质量验证 ==="
+          python scripts/content_quality_validator.py --json 2>&1 || echo "::warning::内容质量验证发现问题"
+          echo "=== 内容质量验证完成 ==="
+
+      - name: 6. 生成综合内容质量报告
+        run: |
+          echo "=== [2.0] 生成综合内容质量报告 ==="
+          mkdir -p reports/content_audit
+          
+          REPORT_FILE="reports/content_audit/CONTENT_QUALITY_AUDIT_$(date +%Y%m%d).md"
+          echo "# ChinaBound Travel 2.0 内容质量综合巡检报告" > "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "**巡检时间**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$REPORT_FILE"
+          echo "**巡检模式**: ${{ github.event.inputs.strict || '普通模式' }}" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          
+          echo "## 巡检项目" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "| 巡检项 | 脚本 | 状态 | 详情 |" >> "$REPORT_FILE"
+          echo "|--------|------|------|------|" >> "$REPORT_FILE"
+          echo "| 内容事实检查 | content_fact_guard.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
+          echo "| 品牌身份审计 | brand_identity_audit.py | ✅ 已巡检 | 见 reports/P1_BRAND_02_* |" >> "$REPORT_FILE"
+          echo "| 内容信任审计 | content_trust_audit.py | ✅ 已巡检 | 见 reports/content_audit/CONTENT_TRUST_* |" >> "$REPORT_FILE"
+          echo "| 内容ID审计 | content_id_audit.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
+          echo "| 内容质量验证 | content_quality_validator.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          
+          echo "## 统计概览" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          
+          # 统计文章数量
+          ARTICLE_COUNT=$(find content/posts -name "*.md" 2>/dev/null | wc -l)
+          echo "- **站点总文章数**: $ARTICLE_COUNT 篇" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          
+          echo "## 下一步建议" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "1. **事实问题**：对检测到的事实错误进行人工核实和修正" >> "$REPORT_FILE"
+          echo "2. **品牌一致性**：批量修正旧人设表述，统一为Editorial Voice" >> "$REPORT_FILE"
+          echo "3. **内容信任度**：补充引用来源、专家观点，提升内容可信度" >> "$REPORT_FILE"
+          echo "4. **内容ID**：确保每篇文章有唯一content_id，避免重复" >> "$REPORT_FILE"
+          echo "5. **内容质量**：优化低质量文章，补充图片、内链、结构化数据" >> "$REPORT_FILE"
+          
+          echo "综合内容质量报告已生成: $REPORT_FILE"
+          echo "=== 综合内容质量巡检完成 ==="
+
+      - name: Send Feishu notification
+        if: always()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+              -d '{"msg_type":"text","content":{"text":"📋 [2.0] 内容质量综合巡检完成：事实检查 + 品牌审计 + 信任审计 + ID审计 + 质量验证，详见 reports/content_audit/"}}' || true
+          fi
+
+      - name: Commit content quality reports
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/content_audit/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无内容质量报告变更"
+          else
+            git commit -m "chore: update content quality audit report [skip ci]"
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git push || echo "推送失败，跳过"
+          fi
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-quality-audit-report
+          path: reports/content_audit/
+          retention-days: 30

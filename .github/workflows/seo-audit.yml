@@ -1,0 +1,133 @@
+name: SEO Audit (2.0 SEO综合审计)
+
+on:
+  schedule:
+    # 每周五北京时间 08:00 (UTC 0:00)，综合SEO审计
+    - cron: '0 0 * * 5'
+  workflow_dispatch:
+    inputs:
+      fix_meta:
+        description: "自动修复重复Meta描述"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  seo-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv PyYAML beautifulsoup4 pandas
+
+      - name: Build site for audit
+        run: |
+          echo "=== 构建站点用于SEO审计 ==="
+          hugo --gc --minify 2>&1 | tail -n 5
+          echo "=== 构建完成 ==="
+
+      - name: 1. OG/Twitter Card 标签审计
+        run: |
+          echo "=== [2.0] OG/Twitter Card 标签审计 ==="
+          python scripts/audit_og_tags.py --source public 2>&1 || echo "::warning::OG标签审计发现问题"
+          echo "=== OG标签审计完成 ==="
+
+      - name: 2. Meta描述审计
+        env:
+          FIX_META: ${{ github.event.inputs.fix_meta || 'false' }}
+        run: |
+          echo "=== [2.0] Meta描述审计 ==="
+          if [ "$FIX_META" = "true" ]; then
+            echo "=== 自动修复模式（dry-run预览）==="
+            python scripts/audit_meta_descriptions.py --fix --dry-run 2>&1 || echo "::warning::Meta描述修复发现问题"
+          else
+            echo "=== 仅审计模式 ==="
+            python scripts/audit_meta_descriptions.py --audit 2>&1 || echo "::warning::Meta描述审计发现问题"
+          fi
+          echo "=== Meta描述审计完成 ==="
+
+      - name: 3. 内链审计
+        run: |
+          echo "=== [2.0] 内链审计 ==="
+          python scripts/audit_internal_links.py 2>&1 || echo "::warning::内链审计发现问题"
+          echo "=== 内链审计完成 ==="
+
+      - name: 4. 生成综合SEO审计报告
+        run: |
+          echo "=== [2.0] 生成综合SEO审计报告 ==="
+          mkdir -p reports/seo
+          
+          # 汇总审计结果
+          REPORT_FILE="reports/seo/SEO_AUDIT_$(date +%Y%m%d).md"
+          echo "# ChinaBound Travel 2.0 SEO综合审计报告" > "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "**审计时间**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "## 审计项目" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "| 审计项 | 状态 | 详情 |" >> "$REPORT_FILE"
+          echo "|--------|------|------|" >> "$REPORT_FILE"
+          echo "| OG/Twitter Card | ✅ 已审计 | 见 reports/seo/OG_TAG_AUDIT.md |" >> "$REPORT_FILE"
+          echo "| Meta描述 | ✅ 已审计 | 见 reports/seo/META_DESCRIPTION_AUDIT.md |" >> "$REPORT_FILE"
+          echo "| 内链结构 | ✅ 已审计 | 见 reports/seo/INTERNAL_LINK_AUDIT.md |" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "## 下一步建议" >> "$REPORT_FILE"
+          echo "" >> "$REPORT_FILE"
+          echo "1. 修复OG标签缺失的页面" >> "$REPORT_FILE"
+          echo "2. 优化重复或过短的Meta描述" >> "$REPORT_FILE"
+          echo "3. 补充孤儿页面的内链" >> "$REPORT_FILE"
+          echo "4. 基于GSC数据识别SEO优化机会" >> "$REPORT_FILE"
+          
+          echo "综合报告已生成: $REPORT_FILE"
+          echo "=== 综合SEO审计完成 ==="
+
+      - name: Send Feishu notification
+        if: always()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+              -d '{"msg_type":"text","content":{"text":"✅ [2.0] SEO综合审计完成：OG标签 + Meta描述 + 内链结构，详见 reports/seo/"}}' || true
+          fi
+
+      - name: Commit SEO audit reports
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/seo/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无SEO审计报告变更"
+          else
+            git commit -m "chore: update SEO audit report [skip ci]"
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git push || echo "推送失败，跳过"
+          fi
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: reports/seo/
+          retention-days: 30

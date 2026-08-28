@@ -1,0 +1,188 @@
+name: SEO Opportunity Detector (2.0 SEO优化机会检测)
+
+on:
+  schedule:
+    # 每周一北京时间 14:00 (UTC 6:00)，基于上周GSC数据识别优化机会
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      min_impressions:
+        description: "最小展示量阈值"
+        required: false
+        default: "10"
+        type: string
+      max_position:
+        description: "最大排名阈值（4-20为优化重点）"
+        required: false
+        default: "20"
+        type: string
+
+jobs:
+  seo-opportunity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv PyYAML pandas google-auth google-api-python-client
+
+      - name: Export GSC data (if available)
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          echo "=== [2.0] 检查GSC数据 ==="
+          mkdir -p data/gsc
+          
+          # 检查是否有已导出的GSC数据
+          if [ -f data/gsc/queries.csv ] && [ -f data/gsc/pages.csv ]; then
+            echo "✅ 找到已导出的GSC数据"
+            ls -la data/gsc/
+          else
+            echo "⚠️ 未找到GSC导出数据，尝试从GSC API导出..."
+            # 尝试使用gsc_utils导出数据
+            python -c "
+          import sys
+          sys.path.insert(0, 'scripts')
+          try:
+              from gsc_utils import export_search_analytics
+              export_search_analytics(output_dir='data/gsc', days=28)
+              print('✅ GSC数据导出成功')
+          except Exception as e:
+              print(f'⚠️ GSC数据导出失败: {e}')
+              print('将使用已有数据或跳过')
+          " 2>&1 || echo "::warning::GSC数据导出失败，将使用已有数据"
+          fi
+
+      - name: Run SEO Opportunity Detector
+        env:
+          MIN_IMPRESSIONS: ${{ github.event.inputs.min_impressions || '10' }}
+          MAX_POSITION: ${{ github.event.inputs.max_position || '20' }}
+        run: |
+          echo "=== [2.0] SEO优化机会检测 ==="
+          echo "最小展示量: $MIN_IMPRESSIONS"
+          echo "最大排名: $MAX_POSITION"
+          
+          python scripts/seo_opportunity_detector.py \
+            --min-impressions "$MIN_IMPRESSIONS" \
+            --max-position "$MAX_POSITION" \
+            --low-ctr 0.02 \
+            --high-opportunity 50 2>&1 || echo "::warning::SEO机会检测发现问题"
+          
+          echo "=== SEO优化机会检测完成 ==="
+          
+          # 显示生成的报告
+          echo ""
+          echo "=== 生成的报告 ==="
+          ls -la reports/seo/ 2>/dev/null || echo "无报告文件"
+
+      - name: Generate optimization priority list
+        run: |
+          echo "=== [2.0] 生成优化优先级列表 ==="
+          mkdir -p reports/seo
+          
+          PRIORITY_FILE="reports/seo/OPTIMIZATION_PRIORITY_$(date +%Y%m%d).md"
+          echo "# ChinaBound Travel 2.0 SEO优化优先级列表" > "$PRIORITY_FILE"
+          echo "" >> "$PRIORITY_FILE"
+          echo "**生成时间**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$PRIORITY_FILE"
+          echo "" >> "$PRIORITY_FILE"
+          
+          # 如果有SEO机会CSV，提取Top 10
+          if [ -f reports/seo/seo_opportunities.csv ]; then
+            echo "## 🔴 高优先级优化页面（Top 10）" >> "$PRIORITY_FILE"
+            echo "" >> "$PRIORITY_FILE"
+            echo "| 排名 | 页面 | 展示量 | 点击量 | 平均排名 | CTR | 优化建议 |" >> "$PRIORITY_FILE"
+            echo "|------|------|--------|--------|----------|-----|----------|" >> "$PRIORITY_FILE"
+            
+            python -c "
+          import csv
+          try:
+              with open('reports/seo/seo_opportunities.csv', 'r') as f:
+                  reader = csv.DictReader(f)
+                  rows = list(reader)[:10]
+                  for i, row in enumerate(rows, 1):
+                      page = row.get('page', row.get('URL', 'N/A'))[:60]
+                      imp = row.get('impressions', row.get('Impressions', 'N/A'))
+                      clk = row.get('clicks', row.get('Clicks', 'N/A'))
+                      pos = row.get('position', row.get('Position', 'N/A'))
+                      ctr = row.get('ctr', row.get('CTR', 'N/A'))
+                      suggestion = '优化标题/Meta/内链'
+                      print(f'| {i} | {page} | {imp} | {clk} | {pos} | {ctr} | {suggestion} |')
+          except Exception as e:
+              print(f'| - | 数据解析失败: {e} | - | - | - | - | - |')
+          " >> "$PRIORITY_FILE" 2>&1
+          else
+            echo "⚠️ 未找到SEO机会数据文件" >> "$PRIORITY_FILE"
+          fi
+          
+          echo "" >> "$PRIORITY_FILE"
+          echo "## 📋 优化建议" >> "$PRIORITY_FILE"
+          echo "" >> "$PRIORITY_FILE"
+          echo "1. **高展示低CTR页面**：优化标题和Meta描述，提升点击率" >> "$PRIORITY_FILE"
+          echo "2. **排名4-20页面**：补充内容深度，增加内链，提升排名" >> "$PRIORITY_FILE"
+          echo "3. **零展示页面**：检查索引状态，提交GSC重新索引" >> "$PRIORITY_FILE"
+          echo "4. **高跳出率页面**：优化首屏内容，增加相关文章推荐" >> "$PRIORITY_FILE"
+          
+          echo "优化优先级列表已生成: $PRIORITY_FILE"
+
+      - name: Send Feishu notification with top opportunities
+        if: success()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            # 提取Top 3优化机会
+            TOP3=$(python -c "
+          import csv
+          try:
+              with open('reports/seo/seo_opportunities.csv', 'r') as f:
+                  reader = csv.DictReader(f)
+                  rows = list(reader)[:3]
+                  result = []
+                  for i, row in enumerate(rows, 1):
+                      page = row.get('page', row.get('URL', 'N/A'))[:40]
+                      imp = row.get('impressions', row.get('Impressions', 'N/A'))
+                      pos = row.get('position', row.get('Position', 'N/A'))
+                      result.append(f'{i}. {page} (展示:{imp}, 排名:{pos})')
+                  print('\n'.join(result))
+          except:
+              print('暂无数据')
+          " 2>/dev/null)
+          
+            curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"🎯 [2.0] SEO优化机会检测完成\n\nTop 3优化页面:\n$TOP3\n\n详见 reports/seo/OPTIMIZATION_PRIORITY_*.md\"}}" || true
+          fi
+
+      - name: Commit SEO opportunity reports
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/seo/ data/gsc/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无SEO机会报告变更"
+          else
+            git commit -m "chore: update SEO opportunity detection report [skip ci]"
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git push || echo "推送失败，跳过"
+          fi
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-opportunity-report
+          path: reports/seo/
+          retention-days: 30
