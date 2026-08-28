@@ -3,7 +3,7 @@ name: Social Engine Daily (闭环)
 on:
   schedule:
     # 每日 UTC 00:30 / 12:30（北京时间 08:30 / 20:30），配合美东黄金时段
-    - cron: "30 0,12 * * *"
+    - cron: "0 13,1 * * *"
   workflow_dispatch:
     inputs:
       date:

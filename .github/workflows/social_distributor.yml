@@ -19,7 +19,7 @@ on:
         default: false
         type: boolean
   schedule:
-    - cron: "0 9 * * *"  # Daily at 9:00 UTC
+    - cron: "0 17 * * *"  # Daily at 17:00 UTC (12:00 EST, lunch 活跃窗口)
 
 concurrency:
   group: social-distributor

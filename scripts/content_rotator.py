@@ -71,7 +71,8 @@ ACTIVE_WINDOWS_EST = [
     {"name": "lunch",   "start": 12, "end": 14},
     {"name": "prime",   "start": 20, "end": 22},
 ]
-# 单账户每日发布目标：3-5 条（3 个窗口 × 每窗口 1-2 条）
+# P2-SOCIAL-01: 单平台每日发布目标：3-5 条（3 个窗口 × 每窗口 1-2 条）
+# 注意：此常量目前为目标参考值，实际限制逻辑在 social_content_agent.py 和 social_backfill.py 中实现
 DAILY_POSTS_PER_ACCOUNT_MIN, DAILY_POSTS_PER_ACCOUNT_MAX = 3, 5
 
 def now_est():

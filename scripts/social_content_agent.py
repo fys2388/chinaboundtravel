@@ -101,6 +101,18 @@ ITEMS_PER_ARTICLE = 5     # 每篇 5 条（覆盖 5 种 type）
 REWRITE_ATTEMPTS = 3      # 品牌校验失败自动重写轮数
 COOLDOWN_DAYS = 7         # 同篇 7 天内不重复发布
 
+# P2-SOCIAL-01: 单平台每日发布上限 + 智能时间分布
+MAX_PER_PLATFORM_PER_DAY = 5  # 每个平台每天最多5条
+# 每个平台的发布时间窗口（美东时间 EST），均匀分布到3个活跃窗口：
+#   morning 08:00-10:00 / lunch 12:00-14:00 / prime 20:00-22:00
+# 各平台时间错开，避免同一时间集中发布
+PLATFORM_DAILY_SLOTS = {
+    "ig":        [(8, 0),  (12, 0),  (18, 0),  (20, 0),  (21, 0)],
+    "fb":        [(8, 30), (12, 30), (18, 30), (20, 30), (21, 30)],
+    "x":         [(9, 0),  (13, 0),  (19, 0),  (20, 0),  (22, 0)],
+    "pinterest": [(9, 30), (13, 30), (19, 30), (21, 0),  (22, 0)],
+}
+
 VALID_STATUS = ("待审核", "已排期", "已发布")
 VALUE_TYPES = ("knowledge", "tip", "story")   # 80% 价值型
 CONVERSION_TYPES = ("conversion",)            # 20% 转化型
@@ -532,6 +544,18 @@ def schedule_slots_for_day(d: date) -> list:
     return out
 
 
+def get_platform_slot_utc(d: date, platform: str, slot_index: int) -> str:
+    """获取指定平台、指定序号的发布时间（UTC 时间戳）。
+
+    P2-SOCIAL-01: 按平台智能分布到3个活跃窗口，各平台时间错开。
+    """
+    slots = PLATFORM_DAILY_SLOTS.get(platform, PLATFORM_DAILY_SLOTS["ig"])
+    et_hour, et_minute = slots[min(slot_index, len(slots) - 1)]
+    utc_hour = (et_hour + US_EAST_OFFSET) % 24
+    utc_date = d + timedelta(days=1) if (et_hour + US_EAST_OFFSET) >= 24 else d
+    return f"{utc_date.isoformat()}T{utc_hour:02d}:{et_minute:02d}:00+00:00"
+
+
 def build_schedule(data: dict, start_date: date = None) -> list:
     """从待审核素材生成每日 3 条排期（80% 价值 + 20% 转化，同篇 7 天不重复）。
 
@@ -567,7 +591,7 @@ def build_schedule(data: dict, start_date: date = None) -> list:
     cursor = start_date or date.today()
     schedule = []
     day_items = {"date": cursor.isoformat(), "slots": []}
-    per_day = 0
+    per_day_by_platform: dict[str, int] = {}  # P2-SOCIAL-01: 按平台计数
     seen_article_last: dict[str, date] = {}
     for item in chosen:
         article = item["source_article"]
@@ -577,24 +601,27 @@ def build_schedule(data: dict, start_date: date = None) -> list:
             if day_items["slots"]:
                 schedule.append(day_items)
             cursor = cursor + timedelta(days=1)
-            per_day = 0
+            per_day_by_platform: dict[str, int] = {}  # P2-SOCIAL-01: 按平台计数
             day_items = {"date": cursor.isoformat(), "slots": []}
         if per_day >= 3:
             if day_items["slots"]:
                 schedule.append(day_items)
             cursor = cursor + timedelta(days=1)
-            per_day = 0
+            per_day_by_platform: dict[str, int] = {}  # P2-SOCIAL-01: 按平台计数
             day_items = {"date": cursor.isoformat(), "slots": []}
-        slots = schedule_slots_for_day(cursor)
+        # P2-SOCIAL-01: 按平台智能分布到活跃窗口
+        platform_count = per_day_by_platform.get(platform, 0)
+        utc_time = get_platform_slot_utc(cursor, platform, platform_count)
+        slot_et = PLATFORM_DAILY_SLOTS.get(platform, PLATFORM_DAILY_SLOTS["ig"])[platform_count]
         day_items["slots"].append({
             "item_id": item["id"],
-            "platform": item["platform"],
+            "platform": platform,
             "type": item["type"],
-            "utc": slots[per_day],
-            "slot_et": [8, 18, 22][per_day],
+            "utc": utc_time,
+            "slot_et": f"{slot_et[0]:02d}:{slot_et[1]:02d}",
         })
         seen_article_last[article] = cursor
-        per_day += 1
+        per_day_by_platform[platform] = platform_count + 1
     if day_items["slots"]:
         schedule.append(day_items)
     return schedule
@@ -752,6 +779,8 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
         "content_id": "",
         "content_variant": f"{item['platform']}_{item['type']}",
         "source_workflow": "social_content_agent",
+        # 2026-08-28 修复：显式声明目标平台，防止 worker 广播到所有渠道
+        "platforms": [item["platform"]],
     }
     if dry_run:
         return {"success": True, "dry_run": True, "endpoint": endpoint,

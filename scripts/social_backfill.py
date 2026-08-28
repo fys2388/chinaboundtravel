@@ -79,7 +79,9 @@ ACCOUNT_B_URL = os.environ.get(
 
 COOLDOWN_DAYS = 14        # 同篇 14 天内不重复分发
 PLAN_DAYS = 7             # 排期窗口
-MAX_PER_DAY = 3           # 与 worker 全局单日上限一致
+# P2-SOCIAL-01: 单平台每日发布上限（与 social_content_agent.py 保持一致）
+MAX_PER_PLATFORM_PER_DAY = 5  # 每个平台每天最多5条
+MAX_PER_DAY = 3                # 保留旧常量用于兼容（实际按平台计数）
 REWRITE_ATTEMPTS = 3      # 品牌校验失败自动重写次数
 DEFAULT_COUNT = 5         # 默认补位文章数
 
@@ -497,20 +499,28 @@ def validate_copy(text: str):
 
 
 def build_plan(items: list, start_date: date = None) -> list:
-    """把待发布项铺到未来 PLAN_DAYS 天，每天最多 MAX_PER_DAY 条。"""
+    """把待发布项铺到未来 PLAN_DAYS 天，每个平台每天最多 MAX_PER_PLATFORM_PER_DAY 条。
+
+    P2-SOCIAL-01: 按平台计数，单平台每天最多5条，自动分布到不同日期。
+    """
     cursor = start_date or date.today()
     plan = []
-    day_offset, per_day = 0, 0
+    day_offset = 0
+    # P2-SOCIAL-01: 按平台计数
+    per_day_by_platform: dict[str, int] = {}
     for item in items:
-        if per_day >= MAX_PER_DAY:
+        platform = item.get("platform", "ig")
+        # P2-SOCIAL-01: 检查该平台今天是否已达上限
+        if per_day_by_platform.get(platform, 0) >= MAX_PER_PLATFORM_PER_DAY:
             day_offset += 1
-            per_day = 0
+            per_day_by_platform = {}
+        platform_count = per_day_by_platform.get(platform, 0)
         plan.append({
             "date": (cursor + timedelta(days=day_offset)).isoformat(),
-            "slot": per_day + 1,
+            "slot": platform_count + 1,
             **item,
         })
-        per_day += 1
+        per_day_by_platform[platform] = platform_count + 1
     return plan
 
 
