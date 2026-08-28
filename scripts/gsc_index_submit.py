@@ -153,17 +153,19 @@ class GSCIndexSubmitter:
         try:
             response = requests.post(URL_INSPECT_ENDPOINT, headers=headers, json=payload, timeout=30)
             if response.status_code == 200:
-                verdict = response.json().get("indexResult", {}).get("verdict", "unknown")
-                return {"url": url, "verdict": verdict, "status": "success"}
+                idx = response.json().get("inspectionResult", {}).get("indexStatusResult", {})
+                verdict = idx.get("verdict", "unknown")
+                state = idx.get("indexingState", "?")
+                return {"url": url, "verdict": verdict, "indexingState": state, "status": "success"}
             info = classify_api_error(response)
             return {"url": url, "verdict": f"error: {info['code']} - {info['message'][:160]}",
                     "status": "error"}
         except Exception as exc:
             return {"url": url, "verdict": f"exception: {exc}", "status": "error"}
 
-    def _request_indexing(self, credentials, url):
+    def _request_indexing(self, credentials, url, notify_type="URL_UPDATED"):
         headers = self._auth_headers(credentials)
-        payload = {"url": url, "type": "URL_UPDATED"}
+        payload = {"url": url, "type": notify_type}
         try:
             response = requests.post(INDEXING_ENDPOINT, headers=headers, json=payload, timeout=30)
             if response.status_code == 200:
@@ -172,6 +174,18 @@ class GSCIndexSubmitter:
             return {"url": url, "status": "error", "message": f"{info['code']}: {info['message'][:160]}"}
         except Exception as exc:
             return {"url": url, "status": "error", "message": str(exc)}
+
+    def _submit_url(self, inspect_creds, publish_creds, url):
+        """Inspect once, then request indexing.
+
+        Note: Indexing API v3 only accepts type=URL_UPDATED (URL_NOTIFIED is
+        rejected as invalid), so the notification type is fixed. The inspect
+        result is attached for reporting/indexed-state monitoring.
+        """
+        insp = self._inspect_url(inspect_creds, url)
+        result = self._request_indexing(publish_creds, url, "URL_UPDATED")
+        result["inspect"] = insp
+        return result
 
     # -- workflows -----------------------------------------------------------
 
@@ -182,25 +196,20 @@ class GSCIndexSubmitter:
             self._print_manual_guide()
             return {"status": "unauthorized", "indexed_count": 0, "submitted_count": 0, "urls": []}
 
+        inspect_credentials = self._inspect_credentials()
         results = []
         submitted_count = 0
+        indexed_count = 0
         print(f"\nSubmitting core pages ({len(CORE_PAGES)})")
         for url in CORE_PAGES:
             print(f"  - {url}")
-            result = self._request_indexing(credentials, url)
+            result = self._submit_url(inspect_credentials, credentials, url)
             results.append(result)
             if result["status"] == "success":
                 submitted_count += 1
-            time.sleep(1)
-
-        inspect_credentials = self._inspect_credentials()
-        indexed_count = 0
-        print("\nChecking index status...")
-        for url in CORE_PAGES:
-            result = self._inspect_url(inspect_credentials, url)
-            print(f"  - {url}: {result['verdict']}")
-            if result["verdict"] == "PASS":
+            if result.get("inspect", {}).get("verdict") == "PASS":
                 indexed_count += 1
+            time.sleep(1)
 
         report = {
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
@@ -280,22 +289,26 @@ class GSCIndexSubmitter:
             return {"status": "no_sitemap", "indexed_count": 0, "submitted_count": 0, "urls": []}
 
         urls_to_submit = urls[:limit]
+        inspect_credentials = self._inspect_credentials()
         results = []
         submitted_count = 0
+        indexed_count = 0
         print(f"\nSubmitting sitemap pages ({len(urls_to_submit)})")
         for url in urls_to_submit:
             print(f"  - {url}")
-            result = self._request_indexing(credentials, url)
+            result = self._submit_url(inspect_credentials, credentials, url)
             results.append(result)
             if result["status"] == "success":
                 submitted_count += 1
+            if result.get("inspect", {}).get("verdict") == "PASS":
+                indexed_count += 1
             time.sleep(0.5)
 
         report = {
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             "site_url": self.site_url,
             "status": "success",
-            "indexed_count": 0,
+            "indexed_count": indexed_count,
             "submitted_count": submitted_count,
             "total_sitemap_urls": len(urls),
             "submitted_urls": len(urls_to_submit),
