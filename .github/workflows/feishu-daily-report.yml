@@ -4,6 +4,8 @@ on:
   schedule:
     # 每日早9点（北京时间 = UTC+8，所以UTC时间是1点）
     - cron: '0 1 * * *'
+    # 备用触发：每日早10:30（北京时间 = UTC+8，所以UTC时间是2:30），防止第一次触发被GitHub延迟或跳过
+    - cron: '30 2 * * *'
   workflow_dispatch:  # 手动触发
 
 jobs:
