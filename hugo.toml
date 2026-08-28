@@ -179,3 +179,4 @@ ignoreFiles = ["/\\.archived/"]
   stripeOnetime = "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"
   stripeMonthly = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_promo_code=FIRSTMONTH1"
   stripeAnnual = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
+ 
