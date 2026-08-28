@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 social_backfill.py - ChinaBound 2.0 社媒补位脚本（P0-2）
@@ -49,6 +49,15 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 # 品牌审计规则复用（forbidden phrases + persona 模式）
 from brand_identity_audit import scan_text  # noqa: E402
+
+# P1-OPS-04: 社媒文案清理公共工具（shortcode 剥离、描述去标题前缀、句子边界截断、配图过滤）
+from social_text_utils import (  # noqa: E402
+    clean_social_text,
+    first_meaningful_desc,
+    image_rejection_reason,
+    strip_shortcodes,
+    validate_social_copy,
+)
 
 # ============================================================
 # 配置
@@ -110,12 +119,22 @@ def parse_frontmatter(content: str) -> dict:
 
 
 def _extract_cover(fm_text: str, content: str) -> str:
-    """提取封面：front matter cover.image 优先，正文实景图兜底。"""
+    """提取封面：front matter cover.image 优先，正文实景图兜底。
+
+    兼容 cover 块内 alt 在 image 之前/之后的多行写法：
+      cover:
+        alt: "..."
+        image: "https://..."
+    """
+    # 多行 cover 块：在 cover: 到下一个顶层键之间找 image:
     cover_match = re.search(
-        r'^\s*cover\s*:\s*\n\s*image\s*:\s*"?([^"\n]+)"?', fm_text, re.MULTILINE
+        r'^\s*cover\s*:\s*(?:\n(?!\S).*)*?\n\s*image\s*:\s*"?([^"\n]+)"?',
+        fm_text, re.MULTILINE
     )
     if not cover_match:
-        cover_match = re.search(r'^\s*cover\s*:\s*"?([^"\n]+)"?', fm_text, re.MULTILINE)
+        # 单行 cover: "url" 或 cover: image: "url"
+        cover_match = re.search(r'^\s*cover\s*:\s*(?:image\s*:\s*)?\'?"?([^"\'\n]+)"?\'?',
+                                fm_text, re.MULTILINE)
     if cover_match:
         url = cover_match.group(1).strip()
         if url and not url.startswith("http"):
@@ -123,10 +142,14 @@ def _extract_cover(fm_text: str, content: str) -> str:
         if url:
             return url
     for m in re.finditer(r"!\[([^\]]*)\]\(([^)]+)\)", content):
+        img_alt = m.group(1)
         img = m.group(2)
         if img and ("pollinations" in img or "unsplash" in img or SITE_DOMAIN in img):
             if not img.startswith("http"):
                 img = f"https://{SITE_DOMAIN}{img}"
+            # 发布规则：禁止人物/头像、禁止抽象图
+            if image_rejection_reason(alt=img_alt, url=img):
+                continue
             return img
     return ""
 
@@ -188,9 +211,11 @@ def parse_article(md_path: Path) -> dict:
     else:
         url = f"https://{SITE_DOMAIN}/posts/{slug}/"
 
-    body_clean = re.sub(r"[#>*_`\[\]\(\)]", "", body)
-    body_clean = re.sub(r"\s+", " ", body_clean).strip()
-    description = fm.get("description") or body_clean[:300]
+    # P1-OPS-04: 剥离 shortcode/HTML/markdown 符号，描述去标题前缀、句子边界截断
+    body_clean = clean_social_text(body)
+    description = first_meaningful_desc(
+        fm.get("description") or body_clean, fm.get("title", ""), 300,
+    )
 
     pub_date = None
     for key in ("date", "updated", "lastmod"):
@@ -379,8 +404,9 @@ def truncate(text: str, max_chars: int) -> str:
 
 
 def _safe_description(article: dict) -> str:
-    """防御性清洗：移除描述中残留的 forbidden phrases（复制前先净化）。"""
+    """防御性清洗：移除 shortcode、HTML 残留与 forbidden phrases（复制前先净化）。"""
     desc = article.get("description") or ""
+    desc = strip_shortcodes(desc)
     _, res = validate_copy(desc)
     for phrase in (res.get("forbidden") or []) + (res.get("fictional") or []):
         desc = re.sub(re.escape(phrase), "", desc, flags=re.IGNORECASE)
@@ -493,6 +519,13 @@ def worker_endpoint(variant: str) -> str:
 
 
 def publish_item(item: dict, dry_run: bool = True) -> dict:
+    # P1-OPS-04: 发布前 lint —— 有致命问题（shortcode/空链接/人设/标题重复等）一律拒绝发布
+    problems = validate_social_copy(
+        item.get("text", ""), title=item.get("title", ""), url=item.get("url", ""),
+    )
+    if problems:
+        return {"success": False, "dry_run": dry_run, "error": "LINT_FAILED: " + "; ".join(problems),
+                "lint": problems}
     payload = {
         "title": item["title"],
         "desc": item["text"],
@@ -502,6 +535,8 @@ def publish_item(item: dict, dry_run: bool = True) -> dict:
         "content_id": item.get("content_id", ""),
         "content_variant": item["variant"],
         "source_workflow": "social_backfill",
+        # 2026-08-28 修复：显式声明目标平台（ig->instagram 由 worker 归一化），防止广播
+        "platforms": [item["variant"]],
     }
     endpoint = worker_endpoint(item["variant"])
     if dry_run:

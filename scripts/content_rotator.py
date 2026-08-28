@@ -23,6 +23,17 @@ from pathlib import Path
 
 import requests
 
+# P1-OPS-04: 社媒文案清理/校验公共工具（shortcode 剥离、目的地提取、URL 保证、lint）
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from social_text_utils import (  # noqa: E402
+    clean_social_text,
+    ensure_article_url,
+    extract_destination,
+    first_meaningful_desc,
+    image_rejection_reason,
+    validate_social_copy,
+)
+
 # ============================================================
 # 配置
 # ============================================================
@@ -38,7 +49,7 @@ except ImportError:
     pass
 
 # P1-GROWTH-28A: Worker 地址从 .env 读取，禁止硬编码旧地址。
-LEGACY_WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev"
+LEGACY_WORKER_URL = "https://buffer-worker.chinaboundtravel.com"
 BUFFER_WORKER_URL = (os.getenv("BUFFER_WORKER_URL") or LEGACY_WORKER_URL).strip().rstrip("/")  # 主账户 FB/IG/X
 NEW_BUFFER_WORKER_URL = (os.getenv("NEW_BUFFER_WORKER_URL") or "").strip().rstrip("/")  # 长尾账户 Pinterest
 
@@ -53,16 +64,32 @@ try:
 except Exception:
     EST_TZ = timezone(timedelta(hours=-5))
 
-# 黄金时段：20:00-22:00 EST（排期时间统一美东时间）
-GOLDEN_HOUR_START_EST, GOLDEN_HOUR_END_EST = 20, 22
+# 活跃发布窗口（美东时间 EST，面向欧美受众）—— 分时段发布，避免集中轰炸：
+#   早通勤 08:00-10:00 / 午休 12:00-14:00 / 晚间黄金 20:00-22:00
+ACTIVE_WINDOWS_EST = [
+    {"name": "morning", "start": 8,  "end": 10},
+    {"name": "lunch",   "start": 12, "end": 14},
+    {"name": "prime",   "start": 20, "end": 22},
+]
+# 单账户每日发布目标：3-5 条（3 个窗口 × 每窗口 1-2 条）
+DAILY_POSTS_PER_ACCOUNT_MIN, DAILY_POSTS_PER_ACCOUNT_MAX = 3, 5
 
 def now_est():
     """当前时间统一转换为美东时间（发布/排期口径）。"""
     return datetime.now(EST_TZ)
 
-def is_golden_hour_est(dt=None):
+def active_window_est(dt=None):
+    """返回当前所处的活跃发布窗口名（morning/lunch/prime），不在窗口内返回 None。"""
     dt = dt or now_est()
-    return GOLDEN_HOUR_START_EST <= dt.hour < GOLDEN_HOUR_END_EST
+    for w in ACTIVE_WINDOWS_EST:
+        if w["start"] <= dt.hour < w["end"]:
+            return w["name"]
+    return None
+
+def is_golden_hour_est(dt=None):
+    """兼容旧接口：黄金时段 == prime 窗口（20:00-22:00 EST）。"""
+    dt = dt or now_est()
+    return 20 <= dt.hour < 22
 
 def worker_url_for_platforms(platforms):
     """双账户路由：仅 Pinterest -> NEW_BUFFER_WORKER_URL；其余 -> BUFFER_WORKER_URL。"""
@@ -142,12 +169,16 @@ def parse_article(md_path: Path) -> dict:
     else:
         url = f"https://{SITE_DOMAIN}/posts/{slug}/"
 
-    # 提取正文文本（去除 markdown 标记）
+    # 提取正文文本（去除 markdown 标记、Hugo shortcode、HTML）
     fm_match = re.match(r"^---\s*\n(.*?)\n---", content, re.DOTALL)
     body_text = content[fm_match.end():] if fm_match else content
-    body_clean = re.sub(r"[#>*_`\[\]\(\)]", "", body_text)
-    body_clean = re.sub(r"\s+", " ", body_clean).strip()
-    description = body_clean[:300] if len(body_clean) > 300 else body_clean
+    body_clean = clean_social_text(body_text)
+    # 优先使用 frontmatter description/summary（质量更高），否则从正文提取
+    fm_desc = fm.get("description", "") or fm.get("summary", "")
+    if fm_desc and len(fm_desc) > 30:
+        description = first_meaningful_desc(fm_desc, title, 300)
+    else:
+        description = first_meaningful_desc(body_clean, title, 300)
 
     # 提取图片 URL
     images = []
@@ -171,14 +202,18 @@ def parse_article(md_path: Path) -> dict:
                     cover_url = f"https://{SITE_DOMAIN}{cover_url}"
                 images.append(cover_url)
 
-    # 2. 正文中的图片
+    # 2. 正文中的图片（发布规则：禁止人物/头像、禁止抽象图 —— 不合规图片丢弃）
     body_content = content[fm_match.end():] if fm_match else content
     img_pattern = r"!\[([^\]]*)\]\(([^)]+)\)"
     for match in re.finditer(img_pattern, body_content):
+        img_alt = match.group(1)
         img_url = match.group(2)
         if img_url and ("pollinations" in img_url or "picsum" in img_url or SITE_DOMAIN in img_url):
             if not img_url.startswith("http"):
                 img_url = f"https://{SITE_DOMAIN}{img_url}"
+            if image_rejection_reason(alt=img_alt, url=img_url):
+                print(f"  [IMG-SKIP] 正文图 {img_url[-50:]} 含人物/抽象特征被过滤（{img_alt[:40]}）")
+                continue
             images.append(img_url)
 
     return {
@@ -347,20 +382,15 @@ def generate_social_copies(article: dict) -> list:
     """
     title = article["title"]
     description = article["description"]
-    url = article["url"]
+    url = ensure_article_url(article.get("url", ""), article.get("slug", ""), SITE_DOMAIN)
 
-    # 提取目的地关键词（从标题中提取大写开头的地名）
-    words = re.findall(r"\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)*\b", title)
-    destination_words = [
-        w for w in words
-        if w.lower() not in ("the", "a", "an", "and", "or", "in", "of", "for", "with", "to", "is", "your", "how", "guide", "from")
-    ]
-    destination = ", ".join(destination_words[:3]) if destination_words else "China"
+    # 目的地提取：白名单优先，绝不截取标题前几个大写词（修复 'Can Foreigners Use, Pay, China?' 语序错乱）
+    destination = extract_destination(title)
 
     copies = []
 
     # 风格 1: 信息型 — 适合 X/Facebook
-    desc_info = truncate_text(description, 150)
+    desc_info = first_meaningful_desc(description, title, 150)
     info_text = (
         f"{title}\n\n"
         f"{desc_info}\n\n"
@@ -370,7 +400,7 @@ def generate_social_copies(article: dict) -> list:
     copies.append({"style": "informative", "text": info_text})
 
     # 风格 2: 激发型 — 适合 Instagram/Pinterest
-    desc_inspire = truncate_text(description, 120)
+    desc_inspire = first_meaningful_desc(description, title, 120)
     inspire_text = (
         f"Dreaming of exploring {destination}?\n\n"
         f"{desc_inspire}\n\n"
@@ -422,7 +452,7 @@ def publish_to_buffer(article: dict, social_text: str, image_url: str, variant: 
         "title": article["title"],
         "desc": social_text,
         "cover": image_url,
-        "url": article["url"],
+        "url": ensure_article_url(article.get("url", ""), article.get("slug", ""), SITE_DOMAIN),
         "custom_text": social_text,
         "content_id": article.get("content_id", ""),
         "content_variant": variant,
@@ -495,8 +525,9 @@ def run(count: int = 2, dry_run: bool = False):
     if health_issues:
         for issue in health_issues:
             print(f"[HEALTH][WARN] {issue}")
+    windows_desc = " / ".join(f"{w['name']} {w['start']}:00-{w['end']}:00" for w in ACTIVE_WINDOWS_EST)
     print(f"{'=' * 60}")
-    print(f"Content Rotator - UTC {datetime.now(timezone.utc).isoformat()} / EST {now_est().isoformat(timespec='seconds')} (黄金时段 {GOLDEN_HOUR_START_EST}:00-{GOLDEN_HOUR_END_EST}:00 EST)")
+    print(f"Content Rotator - UTC {datetime.now(timezone.utc).isoformat()} / EST {now_est().isoformat(timespec='seconds')} (活跃窗口: {windows_desc} EST)")
     print(f"Mode: {'DRY RUN' if dry_run else 'LIVE'} | Count: {count}")
     print(f"{'=' * 60}")
 
@@ -566,8 +597,35 @@ def run(count: int = 2, dry_run: bool = False):
         copies = generate_social_copies(article)
         print(f"[COPY] 生成 {len(copies)} 种文案风格")
 
-        # 对每种文案调用 Buffer Worker
+        # 发布前 lint（P1-OPS-04）：有致命问题的文案一律拒绝发布
+        publishable = []
         for copy in copies:
+            problems = validate_social_copy(
+                copy["text"], title=title,
+                url=ensure_article_url(article.get("url", ""), slug, SITE_DOMAIN),
+            )
+            if problems:
+                print(f"  [LINT][{copy['style']}] 文案未通过校验，跳过发布:")
+                for p in problems:
+                    print(f"    - {p}")
+                all_results.append({
+                    "article_title": title,
+                    "slug": slug,
+                    "style": copy["style"],
+                    "success": False,
+                    "error": "LINT_FAILED: " + "; ".join(problems),
+                    "platforms_summary": "lint_failed",
+                    "image": images[0] if images else "",
+                })
+            else:
+                publishable.append(copy)
+        if not publishable:
+            print(f"  [SKIP] 该文章无任何通过校验的文案，跳过发布")
+            continue
+        print(f"[COPY] 通过 lint 的文案风格: {', '.join(c['style'] for c in publishable)}")
+
+        # 对每种文案调用 Buffer Worker
+        for copy in publishable:
             style = copy["style"]
             print(f"\n  [{style.upper()}] 发布中...")
             print(f"  文案: {copy['text'][:80]}...")

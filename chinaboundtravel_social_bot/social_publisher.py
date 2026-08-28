@@ -2,9 +2,21 @@ import os
 import json
 import requests
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+
+# P1-OPS-04: 社媒文案清理/校验公共工具（shortcode 剥离、描述去标题前缀、URL 保证、配图过滤）
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+from social_text_utils import (  # noqa: E402
+    clean_social_text,
+    ensure_article_url,
+    first_meaningful_desc,
+    image_rejection_reason,
+    is_acceptable_social_image,
+    validate_social_copy,
+)
 
 # ========== 配置 ==========
 BASE_DIR = Path(__file__).parent.parent
@@ -15,7 +27,7 @@ except ImportError:
     pass
 
 # P1-GROWTH-28A: Worker 地址从 .env 读取，禁止硬编码旧地址。
-LEGACY_WORKER_URL = "https://buffer-auto-poster.fys2388.workers.dev"
+LEGACY_WORKER_URL = "https://buffer-worker.chinaboundtravel.com"
 BUFFER_WORKER_URL = (os.getenv("BUFFER_WORKER_URL") or LEGACY_WORKER_URL).strip().rstrip("/")  # 主账户 IG/X/FB
 NEW_BUFFER_WORKER_URL = (os.getenv("NEW_BUFFER_WORKER_URL") or "").strip().rstrip("/")  # 长尾账户 Pinterest
 
@@ -163,7 +175,8 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
-    prompt = f"Ultra-detailed professional travel photography of {scene_desc}, cinematic wide-angle composition, golden hour or blue hour lighting, dramatic shadows, vibrant natural colors, photorealistic, 8k resolution, sharp focus, depth of field, award-winning travel magazine quality, no text, no watermark, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever"
+    # 发布规则（2026-08-28）：配图必须是真实写实的实景照片 —— 禁止人物/头像、禁止抽象图
+    prompt = f"Ultra-detailed professional travel photography of {scene_desc}, cinematic wide-angle composition, golden hour or blue hour lighting, dramatic shadows, vibrant natural colors, photorealistic, 8k resolution, sharp focus, depth of field, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever"
     seed = abs(hash(f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}")) % 1000000
     image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux&negative=person,people,face,portrait,human,figure,crowd,man,woman,child,close-up%20face,selfie,group%20photo,tourists,traveler,backpacker,human%20being"
 
@@ -263,8 +276,7 @@ def get_article_info(md_path: Path) -> dict:
                     frontmatter[key] = value
 
     body_text = content[fm_match.end():] if fm_match else content
-    body_text = re.sub(r'[#>*_`\[\]\(\)]', '', body_text)
-    body_text = re.sub(r'\s+', ' ', body_text).strip()
+    body_text = clean_social_text(body_text)
 
     slug = frontmatter.get("slug", md_path.stem)
     canonical_url = frontmatter.get("canonicalURL", "")
@@ -275,13 +287,16 @@ def get_article_info(md_path: Path) -> dict:
         url = canonical_url
     else:
         url = f"https://www.{SITE_DOMAIN}/posts/{slug}/"
+    url = ensure_article_url(url, slug, SITE_DOMAIN)
     
     # 优先使用 frontmatter 的 description/summary，其次截取正文
+    # P1-OPS-04: 一律剥离 shortcode/HTML 并去掉标题前缀，避免泄漏与视觉重复
     fm_desc = frontmatter.get("description", "") or frontmatter.get("summary", "")
+    title = frontmatter.get("title", md_path.stem.replace('-', ' ').title())
     if fm_desc and len(fm_desc) > 30:
-        description = fm_desc
+        description = first_meaningful_desc(fm_desc, title, 300)
     else:
-        description = body_text[:300] if len(body_text) > 300 else body_text
+        description = first_meaningful_desc(body_text, title, 300)
 
     return {
         "title": frontmatter.get("title", md_path.stem.replace('-', ' ').title()),
@@ -335,18 +350,16 @@ def extract_images_from_article(md_path: Path) -> list:
         if img_url and ('pollinations' in img_url or 'picsum' in img_url or SITE_DOMAIN in img_url):
             if not img_url.startswith('http'):
                 img_url = f"https://{SITE_DOMAIN}{img_url}"
+            # 发布规则：禁止人物/头像、禁止抽象图 —— 不合规的正文图直接丢弃
+            reason = image_rejection_reason(alt=alt_text, url=img_url)
+            if reason:
+                print(f"  [IMG-SKIP] 正文图 {img_url[-50:]} 因含{reason}特征被过滤（{alt_text[:40]}）")
+                continue
             body_images.append({"url": img_url, "type": "body", "alt": alt_text})
 
     # 正文实景图排前面，封面海报排后面（社媒优先用实景图）
     return body_images + cover_images
 
-
-def smart_truncate(text, max_len=140):
-    """智能截断：文本超长时才截断加省略号，避免短文本被误加 ..."""
-    text = re.sub(r'\s+', ' ', str(text or "")).strip()
-    if len(text) <= max_len:
-        return text
-    return text[:max_len - 3].rstrip(' ,;:.') + "..."
 
 def build_story_text(category, title, url, hashtags):
     """按文章分类生成 IG 故事文案，不再硬编码单一话题（原 144-hour visa-free 与多数文章无关）"""
@@ -377,7 +390,7 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
     """根据文章内容和配图生成多条不同的社媒帖子，适配 IG/Pinterest/X 不同风格"""
     title = article["title"]
     desc = article["description"]
-    url = article["url"]
+    url = ensure_article_url(article.get("url", ""), article.get("slug", ""), SITE_DOMAIN)
 
     # 根据分类选择 hashtag
     hashtags = CATEGORY_HASHTAGS.get(category, DEFAULT_HASHTAGS)
@@ -394,8 +407,9 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
     if not available_images:
         return posts
 
-    clean_desc = re.sub(r'\s+', ' ', desc).strip()
-    desc_snippet = clean_desc[:180] if len(clean_desc) > 180 else clean_desc
+    # P1-OPS-04: 描述去标题前缀、剥离 shortcode、句子边界截断（避免视觉重复与半句残文）
+    clean_desc = first_meaningful_desc(desc, title, 180)
+    desc_snippet = clean_desc
 
     # 帖子 1: IG 风格主帖 - 高情绪价值，故事性强，引导保存和点击
     first_img = available_images[0]
@@ -433,8 +447,11 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
         if img["url"] not in used_images:
             used_images.add(img["url"])
             alt_text = img.get("alt", "")
-            if alt_text and len(alt_text) > 10:
-                caption = alt_text[:100]
+            # P1-OPS-04: alt 若为图片生成提示词则弃用（曾泄漏为帖子正文），否则截取前 80 字符
+            if alt_text and len(alt_text) > 10 and not re.search(
+                    r"Ultra-detailed|no watermark|8k resolution|ZERO people|photorealistic|travel photography of|negative=",
+                    alt_text, re.IGNORECASE):
+                caption = alt_text[:80]
             else:
                 caption = f"Ultimate Guide to {title[:60]}"
             
@@ -458,11 +475,13 @@ def generate_social_posts(article: dict, images: list, category: str = "general"
 
     # 帖子 3: X 风格 - 短平快，话题性强，引发互动
     x_image = available_images[0] if len(available_images) == 1 else available_images[-1]
+    # P1-OPS-04: desc 用句子边界截断 + 去标题前缀
+    x_desc = first_meaningful_desc(desc, title, 140)
     x_text = f"""{emoji} Just dropped: {title}
 
 Planning your first trip to China? Here are the practical things international travelers should know before they arrive.
 
-{smart_truncate(desc, 140)}
+{x_desc}
 
 Full breakdown: {url}
 
@@ -754,6 +773,27 @@ def run():
         if is_limited_now:
             print(f"Daily social limit reached ({current_count_now}/{daily_limit})")
             break
+
+        # P1-OPS-04: 发布前 lint —— 有致命问题（shortcode/空链接/人设/标题重复等）一律拒绝发布
+        problems = validate_social_copy(
+            post["text"], title=latest_article.get("title", ""),
+            url=ensure_article_url(latest_article.get("url", ""), latest_article.get("slug", ""), SITE_DOMAIN),
+        )
+        if problems:
+            print(f"  [LINT][{post['variant']}] 文案未通过校验，跳过发布:")
+            for p in problems:
+                print(f"    - {p}")
+            results.append({
+                "title": latest_article["title"],
+                "variant": post["variant"],
+                "image": post["image"],
+                "worker_success": False,
+                "queued": False,
+                "success_platforms": "",
+                "failed_platforms": "lint_failed",
+                "raw_response": {"error": "LINT_FAILED: " + "; ".join(problems)},
+            })
+            continue
 
         print(f"  配图: {post['image'][-40:]}")
         print(f"  内容: {post['text'][:100]}...")
