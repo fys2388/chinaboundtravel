@@ -1,0 +1,113 @@
+name: Social Backfill (2.0 社媒补位)
+
+on:
+  schedule:
+    # 每周三、六北京时间 14:00 (UTC 6:00)，补位发布Top文章
+    - cron: '0 6 * * 3,6'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "补位文章数量"
+        required: false
+        default: "3"
+        type: string
+      publish:
+        description: "是否真实发布（false=预览）"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  social-backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv PyYAML Pillow
+
+      - name: Check Buffer Worker health
+        env:
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          echo "=== [2.0] 检查Buffer Worker健康状态 ==="
+          fail=0
+          for url in "$BUFFER_WORKER_URL" "$NEW_BUFFER_WORKER_URL"; do
+            host="${url%%/publish*}"
+            code=$(curl -sS -o /tmp/worker_body.txt -w "%{http_code}" --max-time 20 "$host/health" || echo "000")
+            if [ "$code" = "000" ]; then
+              echo "::error::Buffer Worker 连接失败 (timeout): $host"
+              fail=1
+            elif [ "$code" = "404" ] && grep -qi "Worker not found" /tmp/worker_body.txt 2>/dev/null; then
+              echo "::error::Buffer Worker 未部署 (404 Worker not found): $host"
+              fail=1
+            else
+              echo "Buffer Worker 健康 (HTTP $code): $host"
+            fi
+          done
+          if [ "$fail" = "1" ]; then
+            if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+              curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+                -d '{"msg_type":"text","content":{"text":"🚨 社媒补位发布阻断：Buffer Worker 不可用，请检查worker状态。"}}' || true
+            fi
+            exit 1
+          fi
+
+      - name: Run Social Backfill (dry-run by default)
+        env:
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '3' }}"
+          PUBLISH="${{ github.event.inputs.publish || 'false' }}"
+          
+          echo "=== [2.0] 社媒补位发布 ==="
+          echo "补位数量: $COUNT"
+          echo "真实发布: $PUBLISH"
+          
+          if [ "$PUBLISH" = "true" ]; then
+            python scripts/social_backfill.py --count "$COUNT" --publish
+          else
+            echo "=== 预览模式（dry-run）==="
+            python scripts/social_backfill.py --count "$COUNT" --dry-run
+          fi
+          
+          echo "=== [2.0] 社媒补位完成 ==="
+
+      - name: Commit backfill plan
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/social_backfill_plan_*.json 2>/dev/null || true
+          git add content/social/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无社媒补位计划变更"
+          else
+            git commit -m "chore: update social backfill plan [skip ci]"
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git push || echo "推送失败，跳过"
+          fi
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-backfill-report
+          path: reports/social_backfill_plan_*.json
+          retention-days: 30
