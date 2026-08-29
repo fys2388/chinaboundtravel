@@ -595,6 +595,7 @@ def build_schedule(data: dict, start_date: date = None) -> list:
     seen_article_last: dict[str, date] = {}
     for item in chosen:
         article = item["source_article"]
+        platform = item["platform"]
         # 同篇 7 天不重复（每篇已预选 1 条，此项为防御性检查）
         if article in seen_article_last and \
            (cursor - seen_article_last[article]).days < COOLDOWN_DAYS:
