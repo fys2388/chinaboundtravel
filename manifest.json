@@ -1,9 +1,9 @@
 {
   "month_post_count": 11,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-28 02:21:15",
-  "daily_social_publish_date": "2026-08-28",
-  "daily_social_publish_count": 0,
+  "last_social_publish": "2026-08-29 02:14:58",
+  "daily_social_publish_date": "2026-08-29",
+  "daily_social_publish_count": 1,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -127,7 +127,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026",
     "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
     "wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide",
     "chinas-food-through-the-ages-guide",
@@ -156,6 +155,7 @@
     "china-transportation-card-guide",
     "china-airport-transfer-guide",
     "alipay-for-foreigners-guide",
-    "a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers"
+    "a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers",
+    "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide"
   ]
 }
