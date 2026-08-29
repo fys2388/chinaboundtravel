@@ -46,7 +46,7 @@ const BUFFER_API_URL = 'https://api.buffer.com';
 const RATE_LIMIT = {
   // 单账户每日发布目标 3-5 条：上限取 5（一次 /publish = 该账户各平台各 1 条）
   // 分时段（EST 早 8-10 / 午 12-14 / 晚 20-22）由调度侧控制，worker 只做总量兜底
-  GLOBAL_DAILY_MAX: 5,       // 单账户单日发布上限（5 条，策略区间 3-5）
+  GLOBAL_DAILY_MAX: 20,      // 全局单日发布上限（单平台5条×4平台=20条，P2-SOCIAL-01优化）
   ACCOUNT_QUARTER_MAX: 70,   // 单账户15分钟上限(官方100的70%安全阈值)
   QUOTA_WARNING_THRESHOLD: 0.3 // 配额剩余30%触发预警
 };
@@ -236,6 +236,20 @@ async function handlePublish(request, env, ctx) {
     const body = await request.json();
     const { title, desc, cover, url: postUrl, custom_text, content_id: contentId = '', content_variant: contentVariant = '', source_workflow: sourceWorkflow = '' } = body;
 
+    // ========== 目标平台过滤（2026-08-28 修复） ==========
+    // 调用方通过 body.platforms 声明目标渠道（如 ["x","facebook","instagram"] / ["pinterest"]）。
+    // 之前忽略该参数会把一条内容广播到双账户的所有渠道，导致 Pinterest 模板/UTM 错发到 IG/X/FB。
+    // 归一化：ig->instagram, fb->facebook；未传 platforms 时回退到全部渠道（兼容旧调用）。
+    const normalizeKey = (s) => {
+      const k = String(s || '').toLowerCase().trim();
+      if (k === 'ig') return 'instagram';
+      if (k === 'fb') return 'facebook';
+      return k;
+    };
+    const requestedKeys = Array.isArray(body.platforms) && body.platforms.length > 0
+      ? new Set(body.platforms.map(normalizeKey))
+      : null;
+
     // 参数校验
     if (!title || !desc) {
       return jsonResponse({
@@ -303,12 +317,24 @@ async function handlePublish(request, env, ctx) {
       details: []
     };
 
-    // 遍历双Buffer账户进行发布
+    // 遍历双Buffer账户进行发布（仅发布到请求声明的目标平台）
     for (const [accountKey, accountConfig] of Object.entries(BUFFER_ACCOUNTS)) {
+      // 目标渠道过滤：按 body.platforms 只发布到声明的渠道；未声明则发布该账户全部渠道
+      let channelList = Object.entries(accountConfig.channels);
+      if (requestedKeys) {
+        channelList = channelList.filter(([key, ch]) =>
+          requestedKeys.has(normalizeKey(key)) || requestedKeys.has(normalizeKey(ch.service))
+        );
+      }
+      if (channelList.length === 0) {
+        continue; // 该账户没有请求的目标渠道，跳过
+      }
+      const channels = Object.fromEntries(channelList);
+
       // 账户级限流检查
       const accountQuota = await checkAccountQuota(env, accountKey);
       if (!accountQuota.allowed) {
-        allResults.failed.push(...Object.keys(accountConfig.channels));
+        allResults.failed.push(...Object.keys(channels));
         allResults.details.push({
           platform: accountConfig.name,
           error: `账户限流: ${accountQuota.message}`
@@ -319,7 +345,7 @@ async function handlePublish(request, env, ctx) {
       // 获取Token
       const token = env[accountConfig.tokenKey];
       if (!token) {
-        allResults.failed.push(...Object.keys(accountConfig.channels));
+        allResults.failed.push(...Object.keys(channels));
         allResults.details.push({
           platform: accountConfig.name,
           error: 'Token not configured'
@@ -327,13 +353,13 @@ async function handlePublish(request, env, ctx) {
         continue;
       }
 
-      // 发布到该账户的渠道
+      // 发布到该账户的目标渠道
       const results = await publishToBuffer(
-        Object.values(accountConfig.channels).map(c => c.id),
+        Object.values(channels).map(c => c.id),
         postText,
         mediaUrl,
         token,
-        accountConfig.channels,
+        channels,
         env,
         accountKey,
         postUrl,
