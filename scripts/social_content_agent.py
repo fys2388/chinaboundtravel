@@ -418,9 +418,9 @@ def select_top_articles(n: int) -> list:
     # 复用 social_backfill 的评分（但排除最近已分发）
     from social_backfill import recently_distributed
     candidates = [a for a in articles
-                  if a.get("cover") and not recently_distributed(a)]
+                  if (a.get("cover") or a.get("image")) and not recently_distributed(a)]
     if not candidates:
-        candidates = [a for a in articles if a.get("cover")]
+        candidates = [a for a in articles if a.get("cover") or a.get("image")]
     ranked = sorted(
         candidates,
         key=lambda a: (min(ga4_views.get(a["slug"], 0), 50)
@@ -487,7 +487,7 @@ def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
                 "image_prompt": build_image_prompt(article, ctype, platform),
                 # 复用文章 front matter 的实景封面（绝对 URL），供 worker 发布时校验通过；
                 # generate_image 为预留接口，未启用时也以此兜底。
-                "image_url": article.get("cover", "") or "",
+                "image_url": article.get("cover") or article.get("image", "") or "",
                 "utm_params": {
                     "utm_source": platform,
                     "utm_medium": "social",

@@ -143,6 +143,16 @@ def _extract_cover(fm_text: str, content: str) -> str:
             url = f"https://{SITE_DOMAIN}{url}"
         if url:
             return url
+    # 兼容单行 image: "url" 字段（部分文章 front matter 用 image 而非 cover）
+    if not cover_match:
+        image_match = re.search(r'^\s*image\s*:\s*\'?"?([^"\'\n]+)"?\'?',
+                                fm_text, re.MULTILINE)
+        if image_match:
+            url = image_match.group(1).strip()
+            if url and not url.startswith("http"):
+                url = f"https://{SITE_DOMAIN}{url}"
+            if url:
+                return url
     for m in re.finditer(r"!\[([^\]]*)\]\(([^)]+)\)", content):
         img_alt = m.group(1)
         img = m.group(2)
