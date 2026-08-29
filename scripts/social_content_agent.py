@@ -606,6 +606,14 @@ def build_schedule(data: dict, start_date: date = None) -> list:
             day_items = {"date": cursor.isoformat(), "slots": []}
         # P2-SOCIAL-01: 按平台智能分布到活跃窗口
         platform_count = per_day_by_platform.get(platform, 0)
+        # 检查该平台当天是否已达上限
+        if platform_count >= MAX_PER_PLATFORM_PER_DAY:
+            if day_items["slots"]:
+                schedule.append(day_items)
+            cursor = cursor + timedelta(days=1)
+            per_day_by_platform: dict[str, int] = {}
+            day_items = {"date": cursor.isoformat(), "slots": []}
+            platform_count = 0
         utc_time = get_platform_slot_utc(cursor, platform, platform_count)
         slot_et = PLATFORM_DAILY_SLOTS.get(platform, PLATFORM_DAILY_SLOTS["ig"])[platform_count]
         day_items["slots"].append({
