@@ -1,0 +1,95 @@
+{/*
+  SYN-003 高佣金产品CTA自动注入模板
+  集成ID: SYN-003
+  生成时间: 2026-08-31 01:50:39
+  功能: 根据文章关键词和分类自动注入最佳CTA
+*/}
+
+{{ $page := . }}
+{{ $content := .Content }}
+{{ $categories := .Params.categories | default slice }}
+{{ $tags := .Params.tags | default slice }}
+{{ $keywords := append $categories $tags }}
+
+{{/* 全局CTA规则 */}}
+{{ $max_ctas := 3 }}
+{{ $cta_count := 0 }}
+
+{{/* 产品CTA规则匹配 */}}
+
+{{/* esim CTA规则 */}}
+{{ if and (lt $cta_count $max_ctas) (or (in $keywords "esim") (in $categories "esim")) }}
+  <div class="synergy-cta synergy-cta-esim" data-product="esim" data-cta-type="product_card" data-position="article_bottom">
+    <a href="#esim-affiliate" class="synergy-cta-button" target="_blank" rel="nofollow sponsored">Stay connected in China — compare eSIM plans</a>
+  </div>
+  {{ $cta_count = add $cta_count 1 }}
+{{ end }}
+
+{{/* insurance CTA规则 */}}
+{{ if and (lt $cta_count $max_ctas) (or (in $keywords "travel insurance") (in $categories "insurance")) }}
+  <div class="synergy-cta synergy-cta-insurance" data-product="insurance" data-cta-type="product_card" data-position="article_bottom">
+    <a href="#insurance-affiliate" class="synergy-cta-button" target="_blank" rel="nofollow sponsored">Travel worry-free — get China travel insurance</a>
+  </div>
+  {{ $cta_count = add $cta_count 1 }}
+{{ end }}
+
+{{/* transfers CTA规则 */}}
+{{ if and (lt $cta_count $max_ctas) (or (in $keywords "airport transfer") (in $categories "transfers")) }}
+  <div class="synergy-cta synergy-cta-transfers" data-product="transfers" data-cta-type="product_card" data-position="article_bottom">
+    <a href="#transfers-affiliate" class="synergy-cta-button" target="_blank" rel="nofollow sponsored">Skip the taxi line — book your airport transfer</a>
+  </div>
+  {{ $cta_count = add $cta_count 1 }}
+{{ end }}
+
+{{/* car_rental CTA规则 */}}
+{{ if and (lt $cta_count $max_ctas) (or (in $keywords "car rental") (in $categories "car_rental")) }}
+  <div class="synergy-cta synergy-cta-car_rental" data-product="car_rental" data-cta-type="product_card" data-position="article_bottom">
+    <a href="#car_rental-affiliate" class="synergy-cta-button" target="_blank" rel="nofollow sponsored">Drive China your way — compare car rentals</a>
+  </div>
+  {{ $cta_count = add $cta_count 1 }}
+{{ end }}
+
+{{/* tours CTA规则 */}}
+{{ if and (lt $cta_count $max_ctas) (or (in $keywords "tours") (in $categories "tours")) }}
+  <div class="synergy-cta synergy-cta-tours" data-product="tours" data-cta-type="product_card" data-position="article_bottom">
+    <a href="#tours-affiliate" class="synergy-cta-button" target="_blank" rel="nofollow sponsored">Skip the line — book top China tours</a>
+  </div>
+  {{ $cta_count = add $cta_count 1 }}
+{{ end }}
+
+{{/* 默认CTA（文章底部） */}}
+{{ if lt $cta_count $max_ctas }}
+  <div class="synergy-cta synergy-cta-default" data-position="article_bottom">
+    <p class="synergy-cta-text">Planning your China trip? Check our trusted travel resources for the best deals on hotels, flights, and experiences.</p>
+    <a href="/resources/" class="synergy-cta-button">View Travel Resources</a>
+  </div>
+{{ end }}
+
+{{/* CTA样式 */}}
+<style>
+  .synergy-cta {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+  }
+  .synergy-cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  .synergy-cta-button:hover {
+    background-color: #1d4ed8;
+  }
+  .synergy-cta-text {
+    margin-bottom: 15px;
+    color: #475569;
+  }
+</style>

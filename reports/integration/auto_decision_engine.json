@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "engine_id": "AUTO_DECISION_ENGINE",
+  "last_updated": "2026-08-31T01:50:39.178987",
+  "decision_loop": "Observe → Learn → Decide → Act → Measure → Predict",
+  "decision_frequency": "weekly",
+  "latest_decision": {
+    "timestamp": "2026-08-31T01:47:55.431927",
+    "priority_decisions_count": 4,
+    "decision_confidence": 0.795,
+    "resource_allocation": {
+      "conversion_optimization": 0.35,
+      "user_retention": 0.25,
+      "seo_backlinks": 0.25,
+      "social_promotion": 0.15
+    }
+  },
+  "auto_execution_rules": {
+    "high_confidence_threshold": 0.8,
+    "medium_confidence_threshold": 0.6,
+    "auto_execute_high_confidence": true,
+    "require_approval_medium_confidence": true,
+    "require_approval_low_confidence": true,
+    "max_auto_actions_per_week": 10,
+    "safety_checks": [
+      "no_destructive_actions",
+      "no_seo_risk_changes",
+      "no_brand_voice_changes",
+      "no_affiliate_link_changes_without_review"
+    ]
+  },
+  "decision_categories": {
+    "content_optimization": {
+      "auto_execute": true,
+      "max_per_week": 3
+    },
+    "social_optimization": {
+      "auto_execute": true,
+      "max_per_week": 5
+    },
+    "conversion_optimization": {
+      "auto_execute": true,
+      "max_per_week": 2
+    },
+    "seo_optimization": {
+      "auto_execute": false,
+      "require_approval": true
+    },
+    "technical_changes": {
+      "auto_execute": false,
+      "require_approval": true
+    }
+  },
+  "execution_history": [],
+  "performance_metrics": {
+    "total_decisions": 2,
+    "auto_executed": 0,
+    "approval_required": 0,
+    "success_rate": 0,
+    "average_confidence": 0
+  }
+}

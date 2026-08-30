@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "integration_id": "SYN-001",
+  "last_updated": "2026-08-31T01:50:39.087561",
+  "queue_source": "reports/social/social_publish_plan.json",
+  "consumer_script": "scripts/social_priority_queue_consumer.py",
+  "integration_rules": {
+    "priority_order": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "max_posts_per_day_per_platform": 3,
+    "min_interval_minutes": 120,
+    "use_recommended_hook": true,
+    "use_recommended_cta": true,
+    "use_utm_tracking": true
+  },
+  "pending_posts_count": 20,
+  "high_priority_count": 8,
+  "platform_distribution": {
+    "pinterest": 5,
+    "x": 5,
+    "facebook": 5,
+    "instagram": 5
+  },
+  "workflow_integration": {
+    "trigger": "social_engine_daily.yml",
+    "step": "consume_priority_queue",
+    "command": "python scripts/social_priority_queue_consumer.py --consume-next",
+    "output": "social_publish_plan.json"
+  }
+}

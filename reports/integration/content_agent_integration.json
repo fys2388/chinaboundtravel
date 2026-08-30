@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "integration_id": "SYN-002",
+  "last_updated": "2026-08-31T01:50:39.129944",
+  "queue_source": "reports/content/content_plan_integration.json",
+  "integration_rules": {
+    "max_articles_per_week": 3,
+    "priority_order": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "min_article_length": 1500,
+    "recommended_article_length": 2000,
+    "keyword_density": "1-2%",
+    "include_internal_links": true,
+    "include_affiliate_ctas": true,
+    "include_schema_markup": true,
+    "brand_voice": "editorial",
+    "avoid_legacy_persona": true
+  },
+  "pending_articles_count": 8,
+  "high_priority_count": 4,
+  "content_templates": {
+    "how_to_guide": [
+      "Introduction",
+      "Prerequisites",
+      "Step-by-step guide",
+      "Tips and tricks",
+      "Conclusion",
+      "CTA"
+    ],
+    "complete_guide": [
+      "Introduction",
+      "Overview",
+      "Detailed sections",
+      "FAQ",
+      "Conclusion",
+      "CTA"
+    ],
+    "comparison": [
+      "Introduction",
+      "Comparison criteria",
+      "Detailed comparison",
+      "Recommendation",
+      "Conclusion",
+      "CTA"
+    ]
+  },
+  "workflow_integration": {
+    "trigger": "weekly_blog_update.yml",
+    "step": "consume_content_plan",
+    "command": "python scripts/content_generation_consumer.py --next",
+    "output": "content/posts/"
+  },
+  "quality_checks": [
+    "keyword_density_1_2_percent",
+    "min_length_1500_words",
+    "internal_links_included",
+    "affiliate_ctas_included",
+    "schema_markup_included",
+    "brand_voice_editorial",
+    "no_legacy_persona"
+  ]
+}

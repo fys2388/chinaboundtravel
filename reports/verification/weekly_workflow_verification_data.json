@@ -1,0 +1,136 @@
+{
+  "start_time": "2026-08-31T01:47:50.643618",
+  "end_time": "2026-08-31T01:47:56.046810",
+  "duration_seconds": 5.403192,
+  "overall_status": "PASS",
+  "passed_checks": 14,
+  "total_checks": 13,
+  "results": {
+    "agent_learning": {
+      "social_learning_closed_loop.py": {
+        "script": "social_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "nt\n\n  💡 识别成功模式: 1 个\n  🚀 生成优化建议: 2 条\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新发布策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_publish_strategy.json\n\n============================================================\n  生成Social Learning闭环报告\n============================================================\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_learning_report.md\n\n============================================================\n  Social Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条新记录)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (1个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项策略变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_publish_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_learning_report.md\n\n  🎯 闭环状态: 完整闭环已建立，持续进化中\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "content_learning_closed_loop.py": {
+        "script": "content_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "数据进行分析，使用默认策略\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新内容优化策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\content\\content_optimization_strategy.json\n\n============================================================\n  生成Content Learning闭环报告\n============================================================\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\content\\content_learning_report.md\n\n============================================================\n  Content Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条新记录)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (0个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项策略变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\content\\content_optimization_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\content\\content_learning_report.md\n\n  🎯 闭环状态: 完整闭环已建立，持续进化中\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "conversion_learning_closed_loop.py": {
+        "script": "conversion_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "==============================================\n\n  📊 分析 4 条转化记录...\n\n  🏆 最佳CTA类型: product_card\n  📍 最佳CTA位置: article_bottom\n  💰 最佳产品: tours\n  💡 成功模式: 2 个\n  🚀 优化建议: 3 条\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新转化优化策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\conversion_optimization_strategy.json\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\conversion_learning_report.md\n\n============================================================\n  Conversion Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (2个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\conversion_optimization_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\conversion_learning_report.md\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "seo_learning_closed_loop.py": {
+        "script": "seo_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "============\n  步骤3+4: Analyze + Learn - 分析并学习SEO成功模式\n============================================================\n\n  📊 分析 6 个关键词...\n\n  🏆 最佳关键词: what to eat in chengdu\n  📈 高潜力关键词: 6 个\n  🎯 快速提升机会: 5 个\n  💡 成功模式: 2 个\n  🚀 优化建议: 4 条\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新SEO优化策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\seo_optimization_strategy.json\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\seo_learning_report.md\n\n============================================================\n  SEO Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (2个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\seo_optimization_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\seo_learning_report.md\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "user_learning_closed_loop.py": {
+        "script": "user_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "=============\n  步骤3+4: Analyze + Learn - 分析并学习用户成功模式\n============================================================\n\n  📊 分析 5 个用户分层...\n\n  🏆 最佳用户分层: converter\n  💰 高价值分层: 1 个\n  📈 最佳留存: converter\n  💡 成功模式: 2 个\n  🚀 优化建议: 4 条\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新用户运营策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\user\\user_optimization_strategy.json\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\user\\user_learning_report.md\n\n============================================================\n  User Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (2个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\user\\user_optimization_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\user\\user_learning_report.md\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "revenue_learning_closed_loop.py": {
+        "script": "revenue_learning_closed_loop.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "=================================================\n\n  📊 分析 7 个产品...\n\n  🏆 最佳产品: hotels ($450.00)\n  💰 高佣金产品: esim (20.0%)\n  🤝 最佳合作伙伴: booking\n  📊 最佳渠道: organic_search\n  💡 成功模式: 2 个\n  🚀 优化建议: 4 条\n\n============================================================\n  步骤5+6: Decide + Act - 决策并更新收入优化策略\n============================================================\n\n  📊 策略变更: 0 项\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\revenue_optimization_strategy.json\n  ✅ 学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\revenue_learning_report.md\n\n============================================================\n  Revenue Learning 完整闭环运行完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Record: 记录完成 (0条)\n  ✅ Analyze: 分析完成\n  ✅ Learn: 学习完成 (2个模式)\n  ✅ Decide: 决策完成\n  ✅ Act: 行动完成 (0项变更)\n  ⏳ Measure: 等待下一轮效果测量\n\n  📄 策略文件: E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\revenue_optimization_strategy.json\n  📄 学习报告: E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\revenue_learning_report.md\n",
+        "stderr": "",
+        "duration_seconds": 0
+      }
+    },
+    "cross_agent": {
+      "script": "cross_agent_learning_orchestrator.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": ".0-20260831_014752\n  🔄 策略变更: 0 项\n  💡 学习洞察: 2 个\n\n============================================================\n  运行: SEO Learning\n============================================================\n  ✅ 状态: success\n  📋 策略版本: 2.0-20260831_014752\n  🔄 策略变更: 0 项\n  💡 学习洞察: 2 个\n\n============================================================\n  运行: User Learning\n============================================================\n  ✅ 状态: success\n  📋 策略版本: 2.0-20260831_014752\n  🔄 策略变更: 0 项\n  💡 学习洞察: 2 个\n\n============================================================\n  运行: Revenue Learning\n============================================================\n  ✅ 状态: success\n  📋 策略版本: 2.0-20260831_014752\n  🔄 策略变更: 0 项\n  💡 学习洞察: 2 个\n\n  ✅ 跨Agent学习报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\cross_agent\\cross_agent_learning_report.md\n\n============================================================\n  跨Agent协同学习完成\n============================================================\n\n  总Agent数: 6\n  成功: 6\n  失败: 0\n  跨Agent洞察: 4\n  全局建议: 3\n  协同机会: 4\n",
+      "stderr": "",
+      "duration_seconds": 0
+    },
+    "synergy_mechanisms": {
+      "SYN-001": {
+        "script": "synergy_content_social.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "nsit Guide... (发布:2026-09-01, 优先级:high)\n    5. [pinterest] China High-Speed Rail Complete Guide... (发布:2026-09-02, 优先级:high)\n\n============================================================\n  步骤4: 更新优先分发队列\n============================================================\n  ✅ 新增队列项: 0 条\n  📊 当前队列总数: 20 条\n  📄 队列文件: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\social_priority_queue.json\n\n============================================================\n  步骤5: 生成SYN-001协同报告\n============================================================\n  ✅ 协同报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn001_content_social_report.md\n\n============================================================\n  SYN-001 协同机制运行完成\n============================================================\n\n  ✅ 高表现内容识别: 5 篇\n  ✅ 优先分发队列生成: 20 条\n  ✅ 队列文件输出: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\social_priority_queue.json\n  ✅ 协同报告生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn001_content_social_report.md\n\n  🎯 协同状态: SYN-001机制已建立，等待Social Engine消费队列\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "SYN-002": {
+        "script": "synergy_seo_content.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "omplete Guide for 20... (关键词:china esim for tourists..., 潜力分:17.5)\n\n============================================================\n  步骤4: 更新内容生成队列\n============================================================\n  ✅ 高潜力关键词: 8 个\n  ✅ 内容生成计划: 8 篇\n  📊 预期流量提升: 615 次/月\n  📄 队列文件: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\content_generation_queue.json\n\n============================================================\n  步骤5: 生成SYN-002协同报告\n============================================================\n  ✅ 协同报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn002_seo_content_report.md\n\n============================================================\n  SYN-002 协同机制运行完成\n============================================================\n\n  ✅ 高潜力关键词识别: 8 个\n  ✅ 内容生成计划: 8 篇\n  ✅ 队列文件输出: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\content_generation_queue.json\n  ✅ 协同报告生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn002_seo_content_report.md\n\n  📊 预期流量提升: 615 次/月\n  🔑 关键词覆盖: 8 个\n\n  🎯 协同状态: SYN-002机制已建立，等待Content Agent消费队列生成文章\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "SYN-003": {
+        "script": "synergy_revenue_conversion.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "le_bottom', 'article_middle']\n\n============================================================\n  步骤4: 更新CTA优化配置\n============================================================\n  ✅ 高佣金产品: 5 个\n  ✅ 产品-CTA映射: 5 个\n  📊 预期CTR提升: 14.0%\n  💰 预期收入提升: 19.0%\n  📄 配置文件: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\high_commission_cta_config.json\n\n============================================================\n  步骤5: 生成SYN-003协同报告\n============================================================\n  ✅ 协同报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn003_revenue_conversion_report.md\n\n============================================================\n  SYN-003 协同机制运行完成\n============================================================\n\n  ✅ 高佣金产品识别: 5 个\n  ✅ 产品-CTA映射生成: 5 个\n  ✅ 配置文件输出: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\high_commission_cta_config.json\n  ✅ 协同报告生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn003_revenue_conversion_report.md\n\n  📊 预期CTR提升: 14.0%\n  💰 预期收入提升: 19.0%\n\n  🎯 协同状态: SYN-003机制已建立，等待内容模板/转化Agent消费配置\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "SYN-004": {
+        "script": "synergy_user_personalization.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": " 'button'], 个性化级别:basic\n\n============================================================\n  步骤4: 更新个性化推荐配置\n============================================================\n  ✅ 高价值用户分层: 5 个\n  ✅ 个性化推荐规则: 5 个\n  📊 预期LTV提升: 5.0%\n  💰 预期转化率提升: 20.0%\n  📄 配置文件: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\user_personalization_config.json\n\n============================================================\n  步骤5: 生成SYN-004协同报告\n============================================================\n  ✅ 协同报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn004_user_personalization_report.md\n\n============================================================\n  SYN-004 协同机制运行完成\n============================================================\n\n  ✅ 高价值用户分层识别: 5 个\n  ✅ 个性化推荐规则: 5 个\n  ✅ 配置文件输出: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\user_personalization_config.json\n  ✅ 协同报告生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn004_user_personalization_report.md\n\n  📊 预期LTV提升: 5.0%\n  💰 预期转化率提升: 20.0%\n\n  🎯 协同状态: SYN-004机制已建立，等待内容模板/转化Agent消费配置\n",
+        "stderr": "",
+        "duration_seconds": 0
+      }
+    },
+    "integration_measurement": {
+      "syn001_consumer": {
+        "script": "social_priority_queue_consumer.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "社媒发布计划\n============================================================\n  📋 待发布队列: 20 条\n  ✅ 生成发布计划: 20 条\n     高优先级: 8 条\n     中优先级: 12 条\n     覆盖平台: 4 个\n     覆盖天数: 7 天\n\n============================================================\n  步骤3: 更新发布计划\n============================================================\n  ✅ 发布计划已更新: 20 条\n  📄 发布计划文件: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_publish_plan.json\n\n============================================================\n  步骤4: 生成SYN-001集成报告\n============================================================\n  ✅ 集成报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn001_integration_report.md\n\n============================================================\n  SYN-001 集成完成\n============================================================\n\n  ✅ 待发布队列: 20 条\n  ✅ 生成发布计划: 20 条\n  ✅ 发布计划文件: E:\\AI\\dulizhan\\travel-blog\\reports\\social\\social_publish_plan.json\n  ✅ 集成报告: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn001_integration_report.md\n\n  🎯 集成状态: SYN-001优先分发队列已集成到Social Engine\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "syn003_integrator": {
+        "script": "cta_config_integrator.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "ext_link: 适用于 inline_recommendations, contextual_links\n    - banner: 适用于 high_traffic_pages, article_top\n\n============================================================\n  步骤4: 更新CTA注入配置\n============================================================\n  ✅ 产品CTA规则: 5 个\n  ✅ CTA模板: 4 个\n  📊 预期CTR提升: 14.0%\n  💰 预期收入提升: 19.0%\n  📄 配置文件: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\cta_injection_config.json\n\n============================================================\n  步骤5: 生成SYN-003集成报告\n============================================================\n  ✅ 集成报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn003_integration_report.md\n\n============================================================\n  SYN-003 集成完成\n============================================================\n\n  ✅ 产品CTA规则: 5 个\n  ✅ CTA模板: 4 个\n  ✅ CTA注入配置: E:\\AI\\dulizhan\\travel-blog\\reports\\conversion\\cta_injection_config.json\n  ✅ 集成报告: E:\\AI\\dulizhan\\travel-blog\\reports\\synergy\\syn003_integration_report.md\n\n  🎯 集成状态: SYN-003高佣金产品CTA配置已集成到内容模板\n",
+        "stderr": "",
+        "duration_seconds": 0
+      },
+      "measurement": {
+        "script": "synergy_execution_and_measurement.py",
+        "status": "success",
+        "returncode": 0,
+        "stdout": "=====================================================\n  优先级5: 集成SYN-004个性化推荐配置到网站\n============================================================\n  📋 个性化推荐规则: 5 个\n  ✅ 高价值分层: 0 个\n  📊 预期LTV提升: 5.0%\n  💰 预期转化率提升: 20.0%\n  📄 集成配置文件: E:\\AI\\dulizhan\\travel-blog\\reports\\user\\personalization_integration.json\n\n============================================================\n  优先级6: 建立4个协同机制效果测量体系\n============================================================\n  ✅ 测量报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\measurement\\synergy_measurement_report.md\n  ✅ 测量指标: 4个协同机制，20个测量指标\n  📊 整体效果评分: 67.1/100\n     SYN-001: 70.2/100\n     SYN-002: 67.0/100\n     SYN-003: 65.7/100\n     SYN-004: 65.5/100\n  📄 测量数据文件: E:\\AI\\dulizhan\\travel-blog\\reports\\measurement\\synergy_effectiveness.json\n\n============================================================\n  优先级3-6全部完成\n============================================================\n\n  ✅ 优先级3: 周度工作流验证 - pass\n  ✅ 优先级4: 内容计划集成 - 8篇文章\n  ✅ 优先级5: 个性化配置集成 - 5个分层\n  ✅ 优先级6: 效果测量体系 - 整体评分67.1/100\n",
+        "stderr": "",
+        "duration_seconds": 0
+      }
+    },
+    "autonomous_growth": {
+      "script": "autonomous_growth_loop.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "态: 4/4 成功\n\n============================================================\n  步骤5: 测量 (Measure)\n============================================================\n  ✅ 测量完成\n  📊 指标变化: 6 个指标\n  🎯 动作有效性: 4 个协同机制\n  ⭐ 闭环有效性评分: 100.0/100\n\n============================================================\n  优先级8: 预测分析 (Predict)\n============================================================\n  ✅ 预测分析完成\n  📈 30天流量预测: 130 访客/周 (基准)\n  💰 30天收入预测: $50/月 (基准)\n  🎯 增长场景: 保守60% / 基准30% / 乐观10%\n  ⚠️ 风险因素: 4 个\n  📊 预测置信度: 流量70% / 收入60% / 场景65%\n  ✅ 增长报告已生成: E:\\AI\\dulizhan\\travel-blog\\reports\\growth\\autonomous_growth_report.md\n\n============================================================\n  自主增长闭环完成\n============================================================\n\n  ✅ Observe: 观察完成\n  ✅ Learn: 学习完成 (3模式, 3洞察)\n  ✅ Decide: 决策完成 (4优先级决策, 置信度80%)\n  ✅ Act: 执行完成 (4自动化动作)\n  ✅ Measure: 测量完成 (闭环评分100/100)\n  ✅ Predict: 预测完成 (30/90/180天预测)\n\n  🎯 系统定位: 具备完整自主增长闭环的AI网站\n  📄 增长报告: E:\\AI\\dulizhan\\travel-blog\\reports\\growth\\autonomous_growth_report.md\n",
+      "stderr": "",
+      "duration_seconds": 0
+    }
+  }
+}
