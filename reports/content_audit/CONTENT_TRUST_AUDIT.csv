@@ -3,87 +3,90 @@ cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),HIGH,AI幻觉,144
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),HIGH,品牌风险,144-hour-visa-free-transit-guide.md:L32,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),HIGH,品牌风险,144-hour-visa-free-transit-guide.md:L127,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),HIGH,品牌风险,144-hour-visa-free-transit-guide.md:L127,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
-cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
+cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'immigration'：需核对最新官方信息并注明日期,no
+cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-b4ff4381a014,China 144-Hour Visa-Free Transit (2026 Guide),MEDIUM,事实风险,144-hour-visa-free-transit-guide.md:body,动态事实关键词 '240-hour'：需核对最新官方信息并注明日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,HIGH,AI幻觉,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L47,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,HIGH,AI幻觉,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L37,无来源数据: '80 RMB'；标注来源或移除,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,HIGH,AI幻觉,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L43,无来源数据: '55 RMB'；标注来源或移除,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,HIGH,品牌风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L5,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,HIGH,品牌风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L31,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
-cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L19,价格/时间/营业信息: '8:00 AM'；需注明更新日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L19,价格/时间/营业信息: '8:00 AM'；需注明更新日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L21,价格/时间/营业信息: '7:45 AM'；需注明更新日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,事实风险,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L27,价格/时间/营业信息: '7:30 AM'；需注明更新日期,no
 cbt-6a164e0e8077,Chengdu Panda Base Guide: See the Pandas Like a Local,MEDIUM,SEO问题,2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body,正文仅 0 个 H2 标题；建议增加小节以利 SEO,yes
+cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,AI幻觉,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L66,绝对化/无依据描述: 'Always'；补充来源或弱化语气,yes
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,AI幻觉,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L156,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,AI幻觉,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L50,无来源数据: '200 RMB'；标注来源或移除,no
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,品牌风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L92,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,品牌风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L110,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,品牌风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L126,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),HIGH,品牌风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L162,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-707a8899c0a7,Can Foreigners Use WeChat Pay in China? (2026 Guide),MEDIUM,事实风险,2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L23,"无来源数据: '42,'；标注来源或移除",no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L23,无来源数据: '000km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L23,无来源数据: '300km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L25,无来源数据: '800km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L38,无来源数据: '30 RMB'；标注来源或移除,no
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L65,无来源数据: '350 km'；标注来源或移除,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L63,无来源数据: '350 km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L65,无来源数据: '250 km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,AI幻觉,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L65,无来源数据: '160 km'；标注来源或移除,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,品牌风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L21,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,品牌风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L180,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,品牌风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L178,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),HIGH,品牌风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L182,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,事实风险,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,AI幻觉,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L37,无来源数据: '5km'；标注来源或移除,no
+cbt-cc4549872c92,How to Book China High-Speed Train Tickets (2026),MEDIUM,SEO问题,2026-05-25-china-high-speed-rail-how-to-book-tickets.md:frontmatter:description,description 过长(161字>160)；精简,yes
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,AI幻觉,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L63,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,AI幻觉,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L97,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,AI幻觉,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L33,无来源数据: '5km'；标注来源或移除,no
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,AI幻觉,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L105,无来源数据: '15 RMB'；标注来源或移除,no
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L17,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L47,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L58,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L56,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L117,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,HIGH,品牌风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L118,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
-cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-302467d853db,Shanghai 48-Hour Guide: Bund & French Concession,MEDIUM,事实风险,2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",HIGH,AI幻觉,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L26,无来源数据: '70km'；标注来源或移除,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",HIGH,AI幻觉,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L53,无来源数据: '14km'；标注来源或移除,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",HIGH,品牌风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L45,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",HIGH,品牌风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L85,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-c885da2cf5d9,"7-Day China Itinerary: Beijing, Xi",MEDIUM,事实风险,2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,AI幻觉,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L24,无来源数据: '40 billion'；标注来源或移除,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,AI幻觉,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L90,无来源数据: '1 yuan'；标注来源或移除,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,品牌风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L46,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
@@ -91,14 +94,14 @@ cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,品牌风�
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,品牌风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L63,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,品牌风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L98,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,HIGH,品牌风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L110,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-277de627eb2d,Hangzhou Travel Guide: West Lake & Tea Culture,MEDIUM,事实风险,2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L12,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L18,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L20,无来源数据: '800 RMB'；标注来源或移除,no
@@ -106,14 +109,14 @@ cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L23,无来源数据: '150 RMB'；标注来源或移除,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L24,无来源数据: '60 RMB'；标注来源或移除,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L20,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
-cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-673e981fe6f2,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L90,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L90,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L100,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
@@ -122,39 +125,39 @@ cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品�
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L112,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L112,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,HIGH,品牌风险,2026-05-27-how-to-survive-chinese-train-station.md:L112,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:L69,价格/时间/营业信息: '2:00pm'；需注明更新日期,no
 cbt-6f28480baea0,Chinese Train Stations: Survival Guide for Travelers,MEDIUM,事实风险,2026-05-27-how-to-survive-chinese-train-station.md:L69,价格/时间/营业信息: '2:00pm'；需注明更新日期,no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,AI幻觉,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L101,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,AI幻觉,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L73,"无来源数据: '10,'；标注来源或移除",no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,AI幻觉,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L185,无来源数据: '15 RMB'；标注来源或移除,no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L41,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L134,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L133,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L137,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L148,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L148,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L159,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L162,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,HIGH,品牌风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L170,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-e464169c4991,Chinese Food Delivery: Meituan & Ele.me Guide,MEDIUM,事实风险,2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,HIGH,品牌风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:L111,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,HIGH,品牌风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:L113,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
-cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
+cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-abb64a856c29,PayPal + Alipay + WeChat Pay: What It Means for You,MEDIUM,事实风险,2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,AI幻觉,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L58,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,AI幻觉,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L139,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -164,14 +167,14 @@ cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,品牌风�
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,品牌风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L128,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,品牌风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L140,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,HIGH,品牌风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L147,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
-cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
-cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
+cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-73f33c49bc51,China Tourist Visa Guide: How to Apply in 2026,MEDIUM,事实风险,2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,AI幻觉,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L85,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,AI幻觉,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L115,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,品牌风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L31,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
@@ -182,13 +185,13 @@ cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,品�
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,品牌风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L57,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,品牌风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L57,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,HIGH,品牌风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L59,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
+cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-558f85f45e9a,Great Wall of China: History Beyond the Tourist Trail,MEDIUM,事实风险,2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L40,价格/时间/营业信息: 'Mongols'；需注明更新日期,no
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",HIGH,AI幻觉,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L106,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",HIGH,AI幻觉,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L126,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -197,11 +200,11 @@ cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",HIGH,品牌风
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",HIGH,品牌风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L64,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",HIGH,品牌风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L104,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
-cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-698862ce2129,"Chinese Tea Culture: History, Types & Ceremony",MEDIUM,事实风险,2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L110,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,AI幻觉,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L24,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,AI幻觉,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L92,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -214,28 +217,28 @@ cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,品牌风�
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,品牌风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L48,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,品牌风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L52,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,HIGH,品牌风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L54,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-663ab3f3b0fa,Shanghai Beyond the Bund: Hidden Neighborhoods,MEDIUM,事实风险,2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,AI幻觉,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L42,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,AI幻觉,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L82,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L32,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L34,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L48,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L50,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L48,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L58,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,HIGH,品牌风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L62,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-550a6e3e929c,Sichuan Hotpot Guide: History & Best Restaurants,MEDIUM,事实风险,2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L66,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
 cbt-d7747b73c978,Xi,HIGH,AI幻觉,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L47,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-d7747b73c978,Xi,HIGH,AI幻觉,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L183,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -247,24 +250,23 @@ cbt-d7747b73c978,Xi,HIGH,AI幻觉,2026-06-30-xian-terracotta-army-history-discov
 cbt-d7747b73c978,Xi,HIGH,AI幻觉,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L55,无来源数据: '150 yuan'；标注来源或移除,no
 cbt-d7747b73c978,Xi,HIGH,品牌风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L40,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-d7747b73c978,Xi,HIGH,品牌风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L134,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-d7747b73c978,Xi,MEDIUM,事实风险,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
 cbt-d7747b73c978,Xi,MEDIUM,SEO问题,2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:frontmatter:title,标题过短(2字<20)；补充长尾关键词,yes
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L16,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L13,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L136,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L144,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L164,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L170,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L194,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L200,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L225,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L37,无来源数据: '8 km'；标注来源或移除,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L72,无来源数据: '5 km'；标注来源或移除,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,AI幻觉,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L82,无来源数据: '5 km'；标注来源或移除,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L80,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L134,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L161,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L192,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -272,19 +274,21 @@ cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风�
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L238,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L250,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,HIGH,品牌风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L254,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'ticket price'：需核对最新官方信息并注明日期,no
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'ticket price'：需核对最新官方信息并注明日期,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-34777b6c17c1,Zhangjiajie Guide: Avatar Mountains & Itinerary,MEDIUM,事实风险,2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
-cbt-95d9a1b95440,China Travel Guide: July 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-95d9a1b95440,China Travel Guide: July 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-95d9a1b95440,China Travel Guide: July 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-95d9a1b95440,China Travel Guide: July 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:L39,价格/时间/营业信息: 'Month'；需注明更新日期,no
 cbt-95d9a1b95440,China Travel Guide: July 2026 Updates & Visa Rules,MEDIUM,SEO问题,2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body,正文仅 1 个 H2 标题；建议增加小节以利 SEO,yes
+cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,AI幻觉,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L27,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,AI幻觉,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L31,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,AI幻觉,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L91,绝对化/无依据描述: 'never'；补充来源或弱化语气,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,AI幻觉,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L103,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L20,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L23,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -294,21 +298,21 @@ cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L47,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L76,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,HIGH,品牌风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L94,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,MEDIUM,事实风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,MEDIUM,事实风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
 cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,MEDIUM,事实风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
+cbt-c59607760fee,Chinese Street Food: Night Markets & What to Eat,MEDIUM,事实风险,2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),HIGH,AI幻觉,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L109,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),HIGH,AI幻觉,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L137,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),HIGH,品牌风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L105,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),HIGH,品牌风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L111,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
-cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-ae69cb9f84b0,How to Use Alipay as a Foreigner (2026),MEDIUM,事实风险,2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,AI幻觉,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L235,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,AI幻觉,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L33,无来源数据: '5 RMB'；标注来源或移除,no
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,AI幻觉,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L168,无来源数据: '300 RMB'；标注来源或移除,no
@@ -320,46 +324,48 @@ cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,�
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,品牌风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L135,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,品牌风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L135,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),HIGH,品牌风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L178,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
-cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'restriction'：需核对最新官方信息并注明日期,no
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'law'：需核对最新官方信息并注明日期,no
+cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-255af4ed003a,How to Set Up & Use WeChat Pay Step by Step (2026 Guide),MEDIUM,事实风险,2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L29,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L35,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L43,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L46,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L85,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L97,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L105,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L6,无来源数据: '20 RMB'；标注来源或移除,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L33,无来源数据: '20 RMB'；标注来源或移除,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L61,无来源数据: '20 RMB'；标注来源或移除,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L150,无来源数据: '20 RMB'；标注来源或移除,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,AI幻觉,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L152,无来源数据: '20 RMB'；标注来源或移除,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L124,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L122,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L154,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L156,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L160,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,HIGH,品牌风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L168,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-bf4ec5e57a07,Guilin & Yangshuo: Complete 2026 Travel Guide,MEDIUM,事实风险,2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,AI幻觉,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L35,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,AI幻觉,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L154,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,品牌风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L86,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,品牌风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L146,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,品牌风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L145,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,HIGH,品牌风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L155,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
+cbt-4e09fa4aa93d,China High-Speed Trains: Booking & Insider Tips,MEDIUM,事实风险,2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,AI幻觉,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L135,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,AI幻觉,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L36,无来源数据: '500 km'；标注来源或移除,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,AI幻觉,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L38,无来源数据: '800 km'；标注来源或移除,no
@@ -376,14 +382,14 @@ cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,品牌�
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,品牌风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L149,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,品牌风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L152,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,HIGH,品牌风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L158,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
+cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-23c31fe5b281,Yunnan Travel Guide: Rice Terraces & Ancient Towns,MEDIUM,事实风险,2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,AI幻觉,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L43,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,AI幻觉,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L45,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,AI幻觉,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L49,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -400,27 +406,27 @@ cbt-1005a037234b,China Food Guide for European Travelers,HIGH,品牌风险,2026-
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,品牌风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L182,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,品牌风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L186,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-1005a037234b,China Food Guide for European Travelers,HIGH,品牌风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L210,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-1005a037234b,China Food Guide for European Travelers,MEDIUM,事实风险,2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L69,价格/时间/营业信息: '9:30 AM'；需注明更新日期,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L39,无来源数据: '100 yuan'；标注来源或移除,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L39,无来源数据: '300 yuan'；标注来源或移除,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L42,无来源数据: '500 yuan'；标注来源或移除,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,品牌风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L36,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,品牌风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L36,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38,无来源数据: '100 yuan'；标注来源或移除,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38,无来源数据: '300 yuan'；标注来源或移除,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,AI幻觉,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L41,无来源数据: '500 yuan'；标注来源或移除,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,品牌风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L35,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,HIGH,品牌风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L35,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L39,价格/时间/营业信息: '100 yuan'；需注明更新日期,no
-cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L39,价格/时间/营业信息: '300 yuan'；需注明更新日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38,价格/时间/营业信息: '100 yuan'；需注明更新日期,no
+cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,事实风险,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38,价格/时间/营业信息: '300 yuan'；需注明更新日期,no
 cbt-9e2f5ffa1b6d,Where to Stay in China: Hotels & Budget Options,MEDIUM,SEO问题,2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body,内部链接仅 1 条；建议补充 3-5 条相关内链,yes
 cbt-5479873d6104,China Food Guide: Must-Try Dishes & Restaurants,HIGH,AI幻觉,2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md:L129,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-5479873d6104,China Food Guide: Must-Try Dishes & Restaurants,HIGH,品牌风险,2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md:L58,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -436,36 +442,36 @@ cbt-52a577c1b2b8,China Transportation Guide for European Travelers,HIGH,品牌�
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,HIGH,品牌风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L82,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,HIGH,品牌风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L89,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,HIGH,品牌风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L98,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
+cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,事实风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,事实风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,事实风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,事实风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,事实风险,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
 cbt-52a577c1b2b8,China Transportation Guide for European Travelers,MEDIUM,SEO问题,2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L18,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L67,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L17,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L66,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L71,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L74,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L74,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L77,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L89,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L93,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L73,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L73,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L76,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L88,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,HIGH,品牌风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L94,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-57d0b0208d3b,Is China Safe in 2026? Honest Guide,MEDIUM,事实风险,2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-14-transportation-guide-guide.md:L51,无来源数据: '350 km'；标注来源或移除,no
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",HIGH,品牌风险,2026-07-14-transportation-guide-guide.md:L31,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",HIGH,品牌风险,2026-07-14-transportation-guide-guide.md:L108,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
+cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-14-transportation-guide-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-14-transportation-guide-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-14-transportation-guide-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-14-transportation-guide-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-de065751769e,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,SEO问题,2026-07-14-transportation-guide-guide.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L18,"无来源数据: '46,'；标注来源或移除",no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L26,无来源数据: '900 km'；标注来源或移除,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L25,无来源数据: '900 km'；标注来源或移除,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L36,无来源数据: '350 km'；标注来源或移除,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L39,无来源数据: '250 km'；标注来源或移除,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L39,无来源数据: '200 km'；标注来源或移除,no
@@ -474,26 +480,26 @@ cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI�
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,AI幻觉,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L221,无来源数据: '300 km'；标注来源或移除,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,品牌风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L118,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",HIGH,品牌风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L200,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L44,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L107,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L125,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L66,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L92,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L107,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
+cbt-17c6738ffb32,"China Transportation Guide: Trains, Subways & Taxis",MEDIUM,事实风险,2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L43,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L106,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,AI幻觉,2026-07-16-food-recommendations-guide.md:L124,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L65,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L91,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,HIGH,品牌风险,2026-07-16-food-recommendations-guide.md:L106,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
-cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:L111,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
+cbt-0897b4c56074,China Food Guide 2026: What to Eat & Where,MEDIUM,事实风险,2026-07-16-food-recommendations-guide.md:L110,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L93,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L95,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L150,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
@@ -502,38 +508,38 @@ cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,AI幻觉,
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L29,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L33,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L60,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L130,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,HIGH,品牌风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L129,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
 cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
-cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'legal'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L190,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L252,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L34,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L34,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L34,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L34,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L36,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L36,"无来源数据: '100,'；标注来源或移除",no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L24,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L34,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L72,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L131,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L131,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L146,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L238,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
+cbt-7996811c1d23,Is China Safe for Tourists in 2026? Honest Guide,MEDIUM,事实风险,2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L189,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L251,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L33,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L33,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L33,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L35,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L35,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,AI幻觉,2026-07-20-travel-safety-guide.md:L35,"无来源数据: '100,'；标注来源或移除",no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L23,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L33,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L71,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L130,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L130,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L145,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,HIGH,品牌风险,2026-07-20-travel-safety-guide.md:L237,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
 cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,事实风险,2026-07-20-travel-safety-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-dfe3904705ea,China Travel Safety 2026: Guide for Travelers,MEDIUM,SEO问题,2026-07-20-travel-safety-guide.md:body,内部链接仅 1 条；建议补充 3-5 条相关内链,yes
 cbt-0953b5433c00,China Cultural Etiquette Guide: Dos and Don,HIGH,AI幻觉,2026-07-21-cultural-etiquette-guide.md:L86,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-0953b5433c00,China Cultural Etiquette Guide: Dos and Don,HIGH,品牌风险,2026-07-21-cultural-etiquette-guide.md:L80,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
@@ -546,11 +552,11 @@ cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,HIGH,品牌�
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,HIGH,品牌风险,2026-07-22-cultural-etiquette-guide.md:L86,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,HIGH,品牌风险,2026-07-22-cultural-etiquette-guide.md:L103,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,HIGH,品牌风险,2026-07-22-cultural-etiquette-guide.md:L117,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
+cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,事实风险,2026-07-22-cultural-etiquette-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-2b8c6981425b,China Etiquette Guide for Aussie & Kiwi Travelers,MEDIUM,SEO问题,2026-07-22-cultural-etiquette-guide.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
 cbt-acae8a973429,Foodie,HIGH,AI幻觉,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L113,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-acae8a973429,Foodie,HIGH,品牌风险,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L68,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
@@ -560,6 +566,9 @@ cbt-acae8a973429,Foodie,HIGH,品牌风险,2026-07-23-foodies-guide-to-china-a-ga
 cbt-acae8a973429,Foodie,MEDIUM,事实风险,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-acae8a973429,Foodie,MEDIUM,SEO问题,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:frontmatter:title,标题过短(6字<20)；补充长尾关键词,yes
 cbt-acae8a973429,Foodie,MEDIUM,SEO问题,2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,AI幻觉,2026-07-27-accommodation-tips-guide.md:L60,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,AI幻觉,2026-07-27-accommodation-tips-guide.md:L64,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,AI幻觉,2026-07-27-accommodation-tips-guide.md:L90,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,AI幻觉,2026-07-27-accommodation-tips-guide.md:L156,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,AI幻觉,2026-07-27-accommodation-tips-guide.md:L170,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,品牌风险,2026-07-27-accommodation-tips-guide.md:L32,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -568,30 +577,30 @@ cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,品牌风险,2
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,品牌风险,2026-07-27-accommodation-tips-guide.md:L64,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,品牌风险,2026-07-27-accommodation-tips-guide.md:L66,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,HIGH,品牌风险,2026-07-27-accommodation-tips-guide.md:L156,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
-cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L68,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-baa2f6fba2f0,Where to Stay in China: Complete 2026 Guide,MEDIUM,事实风险,2026-07-27-accommodation-tips-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L67,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L112,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L48,无来源数据: '350 km'；标注来源或移除,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L85,无来源数据: '17 million'；标注来源或移除,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L48,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L57,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L66,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L97,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L47,无来源数据: '350 km'；标注来源或移除,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,AI幻觉,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L84,无来源数据: '17 million'；标注来源或移除,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L47,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L56,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L65,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,HIGH,品牌风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L96,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-92448be1e0ca,China Remote Work Guide: Digital Nomad Essentials,MEDIUM,事实风险,2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,AI幻觉,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L27,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,AI幻觉,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L130,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,AI幻觉,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L75,无来源数据: '14km'；标注来源或移除,no
@@ -600,13 +609,13 @@ cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,品牌风险,20
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,品牌风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L79,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,HIGH,品牌风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L122,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
 cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
+cbt-bfeaa5ca9007,China Photography Guide: Best Spots & Tips,MEDIUM,事实风险,2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,AI幻觉,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L79,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,AI幻觉,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L132,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,品牌风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L49,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
@@ -615,14 +624,15 @@ cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,品�
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,品牌风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L81,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,品牌风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L81,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,HIGH,品牌风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L87,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
-cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
+cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-80ac63165adb,China Travel Guide: August 2026 Updates & Visa Rules,MEDIUM,事实风险,2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
+cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,AI幻觉,2026-08-03-chinese-language-survival-phrases-guide.md:L153,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,AI幻觉,2026-08-03-chinese-language-survival-phrases-guide.md:L181,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,AI幻觉,2026-08-03-chinese-language-survival-phrases-guide.md:L145,无来源数据: '3 billion'；标注来源或移除,no
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,AI幻觉,2026-08-03-chinese-language-survival-phrases-guide.md:L149,"无来源数据: '80,'；标注来源或移除",no
@@ -635,11 +645,11 @@ cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,品牌风险,
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,品牌风险,2026-08-03-chinese-language-survival-phrases-guide.md:L116,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,HIGH,品牌风险,2026-08-03-chinese-language-survival-phrases-guide.md:L154,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-cfd5d7b39f09,Chinese Language Survival Phrases Guide 2026,MEDIUM,事实风险,2026-08-03-chinese-language-survival-phrases-guide.md:L171,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:L59,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:L85,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -648,42 +658,42 @@ cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:L90,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:L92,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,HIGH,品牌风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:L93,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,事实风险,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,动态事实关键词 'fee'：需核对最新官方信息并注明日期,no
 cbt-49088019c529,China Family Travel Tips: Guide & Mistakes to Avoid,MEDIUM,SEO问题,2026-08-05-china-family-travel-tips-a-californians-guide.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,AI幻觉,2026-08-07-china-bargaining-and-shopping-guide.md:L155,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,AI幻觉,2026-08-07-china-bargaining-and-shopping-guide.md:L100,无来源数据: '1000 yuan'；标注来源或移除,no
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L31,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L55,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L65,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L68,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L83,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L98,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L102,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L102,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,AI幻觉,2026-08-07-china-bargaining-and-shopping-guide.md:L149,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,AI幻觉,2026-08-07-china-bargaining-and-shopping-guide.md:L94,无来源数据: '1000 yuan'；标注来源或移除,no
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L24,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L49,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L59,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L62,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L77,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L92,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L96,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,HIGH,品牌风险,2026-08-07-china-bargaining-and-shopping-guide.md:L96,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:L100,价格/时间/营业信息: '1000 yuan'；需注明更新日期,no
-cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:L102,价格/时间/营业信息: 'Money'；需注明更新日期,no
-cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L55,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L60,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L69,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:L94,价格/时间/营业信息: '1000 yuan'；需注明更新日期,no
+cbt-74e8424894c4,China Bargaining Guide: How to Haggle & Shop,MEDIUM,事实风险,2026-08-07-china-bargaining-and-shopping-guide.md:L96,价格/时间/营业信息: 'Money'；需注明更新日期,no
+cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L54,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L59,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-932a277b1899,China Packing List 2026: What to Bring,HIGH,品牌风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L68,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
 cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
-cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
 cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
-cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L23,价格/时间/营业信息: 'Sunset'；需注明更新日期,no
+cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body,动态事实关键词 'charge'：需核对最新官方信息并注明日期,no
+cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L22,价格/时间/营业信息: 'Sunset'；需注明更新日期,no
 cbt-932a277b1899,China Packing List 2026: What to Bring,MEDIUM,事实风险,2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L71,价格/时间/营业信息: 'Money'；需注明更新日期,no
 cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,HIGH,AI幻觉,2026-08-10-chinas-food-through-the-ages-guide.md:L62,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,HIGH,AI幻觉,2026-08-10-chinas-food-through-the-ages-guide.md:L30,"无来源数据: '20,'；标注来源或移除",no
@@ -696,23 +706,23 @@ cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,HIGH,品�
 cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,HIGH,品牌风险,2026-08-10-chinas-food-through-the-ages-guide.md:L70,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
 cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,HIGH,品牌风险,2026-08-10-chinas-food-through-the-ages-guide.md:L71,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-067675763415,How Chinese Food Evolved: 2 Million Years of History,MEDIUM,事实风险,2026-08-10-chinas-food-through-the-ages-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,AI幻觉,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L47,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L61,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L78,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,SEO问题,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,正文仅 1 个 H2 标题；建议增加小节以利 SEO,yes
-cbt-bc3e1afe5dc0,Shanghai Vs Beijing: Which Chinese City Should You Visit...,MEDIUM,SEO问题,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,AI幻觉,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L47,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L61,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L78,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,HIGH,品牌风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L94,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,事实风险,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,SEO问题,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,正文仅 1 个 H2 标题；建议增加小节以利 SEO,yes
+cbt-bc3e1afe5dc0,Shanghai vs Beijing: Which Chinese City to Visit First,MEDIUM,SEO问题,2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HIGH,AI幻觉,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:L129,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HIGH,品牌风险,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:L45,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HIGH,品牌风险,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:L89,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
@@ -722,38 +732,54 @@ cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HI
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HIGH,品牌风险,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:L133,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,HIGH,品牌风险,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:L133,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
 cbt-034b43ef5e3a,Chinese Tea Culture: Where to Experience Authentic Teahouses,MEDIUM,事实风险,2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",HIGH,AI幻觉,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L45,无来源数据: '8 km'；标注来源或移除,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",HIGH,品牌风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L75,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,SEO问题,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,正文仅 1 个 H2 标题；建议增加小节以利 SEO,yes
-cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide",MEDIUM,SEO问题,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,内部链接仅 1 条；建议补充 3-5 条相关内链,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,AI幻觉,alipay-for-foreigners-guide.md:L137,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,品牌风险,alipay-for-foreigners-guide.md:L29,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,品牌风险,alipay-for-foreigners-guide.md:L98,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,品牌风险,alipay-for-foreigners-guide.md:L100,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,品牌风险,alipay-for-foreigners-guide.md:L109,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,HIGH,品牌风险,alipay-for-foreigners-guide.md:L141,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'restriction'：需核对最新官方信息并注明日期,no
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026) — Foreigners Payment Setup,MEDIUM,SEO问题,alipay-for-foreigners-guide.md:frontmatter:title,标题过长(94字>65)；建议精简含核心关键词,yes
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",HIGH,AI幻觉,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L45,无来源数据: '8 km'；标注来源或移除,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",HIGH,品牌风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L75,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,事实风险,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,SEO问题,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,正文仅 1 个 H2 标题；建议增加小节以利 SEO,yes
+cbt-0bb1cb1e308d,"China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond",MEDIUM,SEO问题,2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body,内部链接仅 1 条；建议补充 3-5 条相关内链,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,AI幻觉,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,AI幻觉,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L15,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L34,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L80,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,第一人称/本地宣称: 'Insider'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",HIGH,品牌风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L102,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,事实风险,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,动态事实关键词 'open'：需核对最新官方信息并注明日期,no
+cbt-4721b4866f40,"China Business Travel Guide: Meetings, Dining, and Networking",MEDIUM,SEO问题,2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body,内部链接仅 0 条；建议补充 3-5 条相关内链,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,AI幻觉,alipay-for-foreigners-guide.md:L137,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,品牌风险,alipay-for-foreigners-guide.md:L29,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,品牌风险,alipay-for-foreigners-guide.md:L98,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,品牌风险,alipay-for-foreigners-guide.md:L100,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,品牌风险,alipay-for-foreigners-guide.md:L109,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),HIGH,品牌风险,alipay-for-foreigners-guide.md:L141,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),MEDIUM,事实风险,alipay-for-foreigners-guide.md:body,动态事实关键词 'restriction'：需核对最新官方信息并注明日期,no
+cbt-0adceab18b53,Alipay for Foreigners in China: Setup Guide and Payment Tips (2026),MEDIUM,SEO问题,alipay-for-foreigners-guide.md:frontmatter:title,标题过长(67字>65)；建议精简含核心关键词,yes
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),HIGH,AI幻觉,alipay-wechat-pay-foreigners-guide.md:L88,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),HIGH,AI幻觉,alipay-wechat-pay-foreigners-guide.md:L139,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),HIGH,AI幻觉,alipay-wechat-pay-foreigners-guide.md:L183,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),HIGH,品牌风险,alipay-wechat-pay-foreigners-guide.md:L47,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
-cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
 cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'fees'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
+cbt-07563e9b51cc,How to Use Alipay & WeChat Pay in China (2026),MEDIUM,事实风险,alipay-wechat-pay-foreigners-guide.md:body,动态事实关键词 'prices'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,AI幻觉,best-travel-insurance-china.md:L76,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,AI幻觉,best-travel-insurance-china.md:L125,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,AI幻觉,best-travel-insurance-china.md:L40,"无来源数据: '15,'；标注来源或移除",no
@@ -768,26 +794,27 @@ cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-tra
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L123,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L125,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L125,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L141,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
+cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L140,第一人称/本地宣称: 'My'；改用编辑部口吻,yes
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,HIGH,品牌风险,best-travel-insurance-china.md:L142,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
-cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-d701fb08eb7b,Best Travel Insurance for China 2026,MEDIUM,事实风险,best-travel-insurance-china.md:L148,价格/时间/营业信息: 'Monthly'；需注明更新日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,HIGH,AI幻觉,china-airport-transfer-guide.md:L94,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,HIGH,品牌风险,china-airport-transfer-guide.md:L125,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,HIGH,品牌风险,china-airport-transfer-guide.md:L144,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
-cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City...,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,HIGH,AI幻觉,china-airport-transfer-guide.md:L94,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,HIGH,品牌风险,china-airport-transfer-guide.md:L125,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,HIGH,品牌风险,china-airport-transfer-guide.md:L144,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'fare'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,事实风险,china-airport-transfer-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
+cbt-02a3e0d6ed4f,China Airport Transfer Guide (2026): From Airports to City Centers,MEDIUM,SEO问题,china-airport-transfer-guide.md:frontmatter:title,标题过长(66字>65)；建议精简含核心关键词,yes
 cbt-244822dc113b,China,HIGH,AI幻觉,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L64,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-244822dc113b,China,HIGH,AI幻觉,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L88,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-244822dc113b,China,HIGH,品牌风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L80,第一人称/本地宣称: 'insider'；改用编辑部口吻,yes
@@ -799,28 +826,29 @@ cbt-244822dc113b,China,HIGH,品牌风险,china-extends-144-hour-visa-free-transi
 cbt-244822dc113b,China,HIGH,品牌风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L117,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-244822dc113b,China,HIGH,品牌风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L117,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
 cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
-cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
-cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'immigration'：需核对最新官方信息并注明日期,no
 cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'immigration'：需核对最新官方信息并注明日期,no
+cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-244822dc113b,China,MEDIUM,事实风险,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body,动态事实关键词 'rules'：需核对最新官方信息并注明日期,no
 cbt-244822dc113b,China,MEDIUM,SEO问题,china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:frontmatter:title,标题过短(5字<20)；补充长尾关键词,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,AI幻觉,china-transportation-card-guide.md:L84,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L24,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L26,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L113,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L121,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L124,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",HIGH,品牌风险,china-transportation-card-guide.md:L128,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
-cbt-55aef784e6aa,"China Transportation Card Guide (2026): Metro Cards, Transit...",MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,AI幻觉,china-transportation-card-guide.md:L84,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L24,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L26,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L113,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L121,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L124,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,HIGH,品牌风险,china-transportation-card-guide.md:L128,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'costs'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'opens'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,事实风险,china-transportation-card-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
+cbt-55aef784e6aa,China Transportation Card Guide (2026): Metro Cards & Transit Apps,MEDIUM,SEO问题,china-transportation-card-guide.md:frontmatter:title,标题过长(66字>65)；建议精简含核心关键词,yes
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,AI幻觉,internet-connection-china-esim-vpn-guide.md:L210,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,AI幻觉,internet-connection-china-esim-vpn-guide.md:L250,绝对化/无依据描述: 'Best'；补充来源或弱化语气,yes
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,品牌风险,internet-connection-china-esim-vpn-guide.md:L3,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
@@ -831,14 +859,14 @@ cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,品牌风险,
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,品牌风险,internet-connection-china-esim-vpn-guide.md:L58,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,品牌风险,internet-connection-china-esim-vpn-guide.md:L59,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),HIGH,品牌风险,internet-connection-china-esim-vpn-guide.md:L67,第一人称/本地宣称: 'Local'；改用编辑部口吻,yes
-cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'charges'：需核对最新官方信息并注明日期,no
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'price'：需核对最新官方信息并注明日期,no
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
 cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 '144-hour'：需核对最新官方信息并注明日期,no
+cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'transit'：需核对最新官方信息并注明日期,no
+cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-a349eee78670,Internet in China: eSIM vs SIM vs VPN (2026),MEDIUM,事实风险,internet-connection-china-esim-vpn-guide.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L56,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L156,绝对化/无依据描述: 'best'；补充来源或弱化语气,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L31,"无来源数据: '20,'；标注来源或移除",no
@@ -847,17 +875,16 @@ cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,we
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L69,无来源数据: '180km'；标注来源或移除,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L84,无来源数据: '200km'；标注来源或移除,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,AI幻觉,western-sichuan-overland-camping-route.md:L107,无来源数据: '350km'；标注来源或移除,no
-cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L29,第一人称/本地宣称: 'I'；改用编辑部口吻,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L44,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L50,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L135,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L139,第一人称/本地宣称: 'local'；改用编辑部口吻,yes
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,HIGH,品牌风险,western-sichuan-overland-camping-route.md:L152,第一人称/本地宣称: 'my'；改用编辑部口吻,yes
-cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'visa'：需核对最新官方信息并注明日期,no
-cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
-cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
-cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期,no
+cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'passport'：需核对最新官方信息并注明日期,no
+cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'hours'：需核对最新官方信息并注明日期,no
+cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'cost'：需核对最新官方信息并注明日期,no
+cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:body,动态事实关键词 'policy'：需核对最新官方信息并注明日期,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:L29,价格/时间/营业信息: 'Sunscreen'；需注明更新日期,no
 cbt-80f6c218ad94,Western Sichuan Overland Camping Route: 7 Days,MEDIUM,事实风险,western-sichuan-overland-camping-route.md:L29,价格/时间/营业信息: 'Sunburn'；需注明更新日期,no
