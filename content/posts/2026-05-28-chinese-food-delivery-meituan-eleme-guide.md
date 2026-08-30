@@ -1,12 +1,12 @@
 ---
 content_id: "cbt-e464169c4991"
-title: "Chinese Food Delivery: Meituan & Ele.me Guide"
+title: "Chinese Food Delivery 2026: Meituan & Ele.me Guide for Foreigners"
 slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/"
 tags: ["ChinaTravel", "ChinaFood", "ChinaAppGuide", "ChinaDailyLife", "ChinaTravelTips"]
-description: "Order Chinese food delivery with Meituan or Ele.me as a foreigner: what to order, how to pay, and why the courier will call you."
+description: "Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, pro tips. Start ordering like a local today!"
 author: "Joran"
 params:
   keywords:

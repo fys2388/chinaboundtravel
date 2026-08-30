@@ -1,7 +1,7 @@
 +++
 content_id = "cbt-17c6738ffb32"
-title = "China Transportation Guide: Trains, Subways & Taxis"
-description = "Getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival."
+title = "China Transportation Guide 2026: Trains, Subways, Taxis & Didi for Travelers"
+description = "Complete guide to getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival for foreigners. Travel like a local!"
 date = 2026-07-16
 lastmod = 2026-07-16
 author = "Joran"

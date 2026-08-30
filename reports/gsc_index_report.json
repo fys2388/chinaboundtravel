@@ -1,12 +1,23 @@
 {
-  "timestamp": "2026-08-30 03:39:33",
+  "timestamp": "2026-08-30 23:34:16",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 13,
+  "indexed_count": 12,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
       "status": "success",
@@ -212,17 +223,6 @@
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
         "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
-        "verdict": "PASS",
         "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }

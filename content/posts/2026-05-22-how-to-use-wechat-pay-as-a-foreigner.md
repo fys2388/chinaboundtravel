@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-707a8899c0a7"
-title: "Can Foreigners Use WeChat Pay in China? (2026 Guide)"
+title: "Can Foreigners Use WeChat Pay in China 2026? Yes - Here's How (Step-by-Step)"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran
 date: '2026-05-22T10:00:00+08:00'
@@ -9,7 +9,7 @@ tags:
 - WeChatPay
 - ChinaTravelTips
 summary: "Can foreigners use WeChat Pay in China? Eligibility, supported cards, payment basics, and limitations explained for 2026."
-description: "Can foreigners use WeChat Pay in China in 2026? Yes — eligibility, supported cards, payment basics, and limitations, explained."
+description: "Can foreigners use WeChat Pay in China in 2026? Yes! Learn eligibility, supported international cards, step-by-step setup, and limitations. Start paying like a local today!"
 ShowToc: true
 TocOpen: false
 cover:

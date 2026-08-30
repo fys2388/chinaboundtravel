@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-b4ff4381a014"
-title: "China 144-Hour Visa-Free Transit (2026 Guide)"
+title: "China 144-Hour Visa-Free Transit 2026: Eligible Countries & How to Apply"
 date: '2026-05-19T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: "China 144-Hour Visa-Free Transit (2026 Guide). Practical, research-based guidance for international travelers planning a China trip in 2026."
+description: "China's 144-hour visa-free transit policy in 2026: eligible countries, participating cities, application process, and tips for making the most of your 6 days. Plan your visa-free China trip today!"
 ShowToc: true
 TocOpen: false
 cover:
