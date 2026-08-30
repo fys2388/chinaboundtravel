@@ -1,0 +1,23 @@
+{
+  "runs": [
+    {
+      "run_id": "SYN004_20260831_012916",
+      "timestamp": "2026-08-31T01:29:16.994858",
+      "segments_count": 5,
+      "rules_count": 5,
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN004_20260831_012929",
+      "timestamp": "2026-08-31T01:29:29.108990",
+      "segments_count": 5,
+      "rules_count": 5,
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "success"
+    }
+  ],
+  "version": "1.0"
+}

@@ -1,0 +1,360 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:29:29.107966",
+  "synergy_id": "SYN-004",
+  "high_value_segments": [
+    {
+      "segment": "converter",
+      "revenue_per_user": 16.666666666666668,
+      "users": 30,
+      "conversion_rate": 100.0
+    },
+    {
+      "segment": "new_user",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 0.5,
+      "retention_rate": 0,
+      "avg_session_duration": 0,
+      "source": "user_performance",
+      "priority": "medium"
+    },
+    {
+      "segment": "returning_user",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 2.0,
+      "retention_rate": 0,
+      "avg_session_duration": 0,
+      "source": "user_performance",
+      "priority": "medium"
+    },
+    {
+      "segment": "engaged_user",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 5.0,
+      "retention_rate": 0,
+      "avg_session_duration": 0,
+      "source": "user_performance",
+      "priority": "medium"
+    },
+    {
+      "segment": "subscriber",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 8.0,
+      "retention_rate": 0,
+      "avg_session_duration": 0,
+      "source": "user_performance",
+      "priority": "medium"
+    }
+  ],
+  "personalization_rules": [
+    {
+      "rule_id": "SYN004_converter",
+      "segment": "converter",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 100.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "visa-free transit",
+        "high-speed rail",
+        "payment guide",
+        "travel insurance",
+        "esim"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107871",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_new_user",
+      "segment": "new_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 0.5,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "china travel overview",
+        "first-timer guide",
+        "travel basics",
+        "visa guide",
+        "safety tips"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107883",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_returning_user",
+      "segment": "returning_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 2.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "new articles",
+        "updated guides",
+        "seasonal travel",
+        "event guides",
+        "travel news"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107888",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_engaged_user",
+      "segment": "engaged_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 5.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "city guides",
+        "attraction guides",
+        "transportation",
+        "accommodation",
+        "local experiences"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107892",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_subscriber",
+      "segment": "subscriber",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 8.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "travel guides",
+        "itinerary planning",
+        "cultural tips",
+        "food guides",
+        "photography"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107896",
+      "synergy_id": "SYN-004"
+    }
+  ],
+  "segment_content_mapping": [
+    {
+      "segment": "converter",
+      "content_types": [
+        "how_to_guide"
+      ],
+      "topics": [
+        "visa-free transit",
+        "high-speed rail",
+        "payment guide",
+        "travel insurance",
+        "esim"
+      ]
+    },
+    {
+      "segment": "new_user",
+      "content_types": [
+        "how_to_guide"
+      ],
+      "topics": [
+        "china travel overview",
+        "first-timer guide",
+        "travel basics",
+        "visa guide",
+        "safety tips"
+      ]
+    },
+    {
+      "segment": "returning_user",
+      "content_types": [
+        "how_to_guide"
+      ],
+      "topics": [
+        "new articles",
+        "updated guides",
+        "seasonal travel",
+        "event guides",
+        "travel news"
+      ]
+    },
+    {
+      "segment": "engaged_user",
+      "content_types": [
+        "how_to_guide"
+      ],
+      "topics": [
+        "city guides",
+        "attraction guides",
+        "transportation",
+        "accommodation",
+        "local experiences"
+      ]
+    },
+    {
+      "segment": "subscriber",
+      "content_types": [
+        "how_to_guide"
+      ],
+      "topics": [
+        "travel guides",
+        "itinerary planning",
+        "cultural tips",
+        "food guides",
+        "photography"
+      ]
+    }
+  ],
+  "segment_cta_mapping": [
+    {
+      "segment": "converter",
+      "cta_types": [
+        "product_card",
+        "button"
+      ],
+      "cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ]
+    },
+    {
+      "segment": "new_user",
+      "cta_types": [
+        "product_card",
+        "button"
+      ],
+      "cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ]
+    },
+    {
+      "segment": "returning_user",
+      "cta_types": [
+        "product_card",
+        "button"
+      ],
+      "cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ]
+    },
+    {
+      "segment": "engaged_user",
+      "cta_types": [
+        "product_card",
+        "button"
+      ],
+      "cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ]
+    },
+    {
+      "segment": "subscriber",
+      "cta_types": [
+        "product_card",
+        "button"
+      ],
+      "cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ]
+    }
+  ],
+  "stats": {
+    "total_segments_identified": 5,
+    "total_personalization_rules": 5,
+    "expected_ltv_boost": 0.05,
+    "expected_conversion_boost": 0.2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "run_id": "SYN002_20260831_012754",
+      "timestamp": "2026-08-31T01:27:54.267250",
+      "high_potential_count": 8,
+      "content_plan_count": 8,
+      "expected_traffic_boost": 615.0,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN002_20260831_012928",
+      "timestamp": "2026-08-31T01:29:28.867614",
+      "high_potential_count": 8,
+      "content_plan_count": 8,
+      "expected_traffic_boost": 615.0,
+      "status": "success"
+    }
+  ],
+  "version": "1.0"
+}
