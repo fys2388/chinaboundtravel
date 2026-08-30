@@ -1,0 +1,23 @@
+{
+  "runs": [
+    {
+      "run_id": "SYN003_20260831_012310",
+      "timestamp": "2026-08-31T01:23:10.660516",
+      "high_commission_count": 5,
+      "mapping_count": 5,
+      "expected_ctr_boost": 0.14,
+      "expected_revenue_boost": 0.19,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN003_20260831_012412",
+      "timestamp": "2026-08-31T01:24:12.794385",
+      "high_commission_count": 5,
+      "mapping_count": 5,
+      "expected_ctr_boost": 0.14,
+      "expected_revenue_boost": 0.19,
+      "status": "success"
+    }
+  ],
+  "version": "1.0"
+}
