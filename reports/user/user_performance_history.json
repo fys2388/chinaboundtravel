@@ -1,0 +1,101 @@
+{
+  "records": [
+    {
+      "segment": "new_user",
+      "date": "2026-08-31T01:16:08.786971",
+      "metrics": {
+        "users": 500,
+        "sessions": 520,
+        "page_views": 800,
+        "avg_duration": 45,
+        "bounce_rate": 75,
+        "return_rate": 15,
+        "conversion_rate": 0.5,
+        "revenue": 25.0
+      },
+      "calculated": {
+        "pages_per_session": 1.5384615384615385,
+        "revenue_per_user": 0.05,
+        "engagement_score": 0.21562499999999998
+      }
+    },
+    {
+      "segment": "returning_user",
+      "date": "2026-08-31T01:16:08.786990",
+      "metrics": {
+        "users": 200,
+        "sessions": 350,
+        "page_views": 700,
+        "avg_duration": 120,
+        "bounce_rate": 45,
+        "return_rate": 60,
+        "conversion_rate": 2.0,
+        "revenue": 80.0
+      },
+      "calculated": {
+        "pages_per_session": 2.0,
+        "revenue_per_user": 0.4,
+        "engagement_score": 1.7600000000000002
+      }
+    },
+    {
+      "segment": "engaged_user",
+      "date": "2026-08-31T01:16:08.786999",
+      "metrics": {
+        "users": 80,
+        "sessions": 200,
+        "page_views": 500,
+        "avg_duration": 240,
+        "bounce_rate": 25,
+        "return_rate": 85,
+        "conversion_rate": 5.0,
+        "revenue": 150.0
+      },
+      "calculated": {
+        "pages_per_session": 2.5,
+        "revenue_per_user": 1.875,
+        "engagement_score": 5.550000000000001
+      }
+    },
+    {
+      "segment": "subscriber",
+      "date": "2026-08-31T01:16:08.787007",
+      "metrics": {
+        "users": 50,
+        "sessions": 120,
+        "page_views": 300,
+        "avg_duration": 180,
+        "bounce_rate": 30,
+        "return_rate": 90,
+        "conversion_rate": 8.0,
+        "revenue": 200.0
+      },
+      "calculated": {
+        "pages_per_session": 2.5,
+        "revenue_per_user": 4.0,
+        "engagement_score": 3.9899999999999993
+      }
+    },
+    {
+      "segment": "converter",
+      "date": "2026-08-31T01:16:08.787017",
+      "metrics": {
+        "users": 30,
+        "sessions": 80,
+        "page_views": 200,
+        "avg_duration": 300,
+        "bounce_rate": 20,
+        "return_rate": 95,
+        "conversion_rate": 100.0,
+        "revenue": 500.0
+      },
+      "calculated": {
+        "pages_per_session": 2.5,
+        "revenue_per_user": 16.666666666666668,
+        "engagement_score": 7.8
+      }
+    }
+  ],
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:16:40.745233"
+}

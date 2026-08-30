@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:16:40.866705",
+  "coordination_rules": {
+    "priority_order": [
+      "revenue",
+      "conversion",
+      "user",
+      "content",
+      "seo",
+      "social"
+    ],
+    "conflict_resolution": "higher_priority_agent_wins",
+    "data_sharing": "all_agents_share_growth_memory",
+    "strategy_alignment": "weekly_cross_agent_review"
+  },
+  "agent_dependencies": {
+    "social": [
+      "content",
+      "seo"
+    ],
+    "content": [
+      "seo",
+      "user"
+    ],
+    "conversion": [
+      "content",
+      "user",
+      "revenue"
+    ],
+    "seo": [
+      "content"
+    ],
+    "user": [
+      "content",
+      "conversion"
+    ],
+    "revenue": [
+      "conversion",
+      "user"
+    ]
+  },
+  "synergy_opportunities": [
+    {
+      "id": "SYN-001",
+      "name": "高表现内容社媒分发",
+      "agents": [
+        "content",
+        "social"
+      ],
+      "description": "Content Agent识别的高表现文章，自动进入Social Agent的优先分发队列",
+      "expected_impact": "提升社媒内容质量和点击率",
+      "implementation_complexity": "medium",
+      "status": "identified"
+    },
+    {
+      "id": "SYN-002",
+      "name": "高潜力关键词内容生成",
+      "agents": [
+        "seo",
+        "content"
+      ],
+      "description": "SEO Agent识别的高潜力低难度关键词，自动触发Content Agent生成针对性内容",
+      "expected_impact": "提升自然搜索流量和关键词覆盖",
+      "implementation_complexity": "high",
+      "status": "identified"
+    },
+    {
+      "id": "SYN-003",
+      "name": "高佣金产品CTA优化",
+      "agents": [
+        "revenue",
+        "conversion"
+      ],
+      "description": "Revenue Agent识别的高佣金产品，自动使用Conversion Agent识别的最佳CTA类型和位置",
+      "expected_impact": "提升联盟收入和ROI",
+      "implementation_complexity": "medium",
+      "status": "identified"
+    },
+    {
+      "id": "SYN-004",
+      "name": "高价值用户个性化推荐",
+      "agents": [
+        "user",
+        "content",
+        "conversion"
+      ],
+      "description": "User Agent识别的高价值用户分层，自动触发Content和Conversion Agent的个性化内容和CTA推荐",
+      "expected_impact": "提升用户生命周期价值和转化率",
+      "implementation_complexity": "high",
+      "status": "identified"
+    }
+  ],
+  "active_initiatives": []
+}

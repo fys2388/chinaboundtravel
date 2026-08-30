@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "product": "hotels",
+      "date": "2026-08-31T01:16:08.860834",
+      "partner": "booking",
+      "channel": "organic_search",
+      "metrics": {
+        "impressions": 10000,
+        "clicks": 500,
+        "bookings": 15,
+        "revenue": 450.0,
+        "commission_rate": 0.04
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.03,
+        "revenue_per_click": 0.9,
+        "roi": 45.0
+      }
+    },
+    {
+      "product": "flights",
+      "date": "2026-08-31T01:16:08.860860",
+      "partner": "trip",
+      "channel": "social",
+      "metrics": {
+        "impressions": 8000,
+        "clicks": 320,
+        "bookings": 8,
+        "revenue": 320.0,
+        "commission_rate": 0.015
+      },
+      "calculated": {
+        "ctr": 0.04,
+        "conversion_rate": 0.025,
+        "revenue_per_click": 1.0,
+        "roi": 40.0
+      }
+    },
+    {
+      "product": "tours",
+      "date": "2026-08-31T01:16:08.860870",
+      "partner": "klook",
+      "channel": "email",
+      "metrics": {
+        "impressions": 5000,
+        "clicks": 250,
+        "bookings": 12,
+        "revenue": 360.0,
+        "commission_rate": 0.05
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.048,
+        "revenue_per_click": 1.44,
+        "roi": 72.0
+      }
+    },
+    {
+      "product": "esim",
+      "date": "2026-08-31T01:16:08.860881",
+      "partner": "airalo",
+      "channel": "social",
+      "metrics": {
+        "impressions": 6000,
+        "clicks": 300,
+        "bookings": 20,
+        "revenue": 200.0,
+        "commission_rate": 0.2
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.06666666666666667,
+        "revenue_per_click": 0.6666666666666666,
+        "roi": 33.333333333333336
+      }
+    },
+    {
+      "product": "insurance",
+      "date": "2026-08-31T01:16:08.860891",
+      "partner": "safetywing",
+      "channel": "organic_search",
+      "metrics": {
+        "impressions": 4000,
+        "clicks": 160,
+        "bookings": 6,
+        "revenue": 180.0,
+        "commission_rate": 0.1
+      },
+      "calculated": {
+        "ctr": 0.04,
+        "conversion_rate": 0.0375,
+        "revenue_per_click": 1.125,
+        "roi": 45.0
+      }
+    },
+    {
+      "product": "car_rental",
+      "date": "2026-08-31T01:16:08.860901",
+      "partner": "rentalcars",
+      "channel": "direct",
+      "metrics": {
+        "impressions": 3000,
+        "clicks": 120,
+        "bookings": 4,
+        "revenue": 120.0,
+        "commission_rate": 0.06
+      },
+      "calculated": {
+        "ctr": 0.04,
+        "conversion_rate": 0.03333333333333333,
+        "revenue_per_click": 1.0,
+        "roi": 40.0
+      }
+    },
+    {
+      "product": "transfers",
+      "date": "2026-08-31T01:16:08.860909",
+      "partner": "getyourguide",
+      "channel": "social",
+      "metrics": {
+        "impressions": 2000,
+        "clicks": 100,
+        "bookings": 5,
+        "revenue": 75.0,
+        "commission_rate": 0.08
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.05,
+        "revenue_per_click": 0.75,
+        "roi": 37.5
+      }
+    }
+  ],
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:16:40.842909"
+}

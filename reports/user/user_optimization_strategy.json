@@ -1,0 +1,81 @@
+{
+  "version": "2.0-20260831_011640",
+  "last_updated": "2026-08-31T01:16:40.745799",
+  "segmentation_rules": {
+    "new_user": "首次访问，无历史记录",
+    "returning_user": "7天内再次访问",
+    "engaged_user": "访问≥3次或停留≥3分钟",
+    "subscriber": "已订阅邮件",
+    "converter": "有联盟点击或转化"
+  },
+  "retention_rules": {
+    "welcome_email": "新用户24小时内发送欢迎邮件",
+    "drip_campaign": "7天邮件培育序列",
+    "re_engagement": "30天未活跃用户触发召回",
+    "personalization": "基于浏览历史推荐相关内容"
+  },
+  "best_segments": [
+    {
+      "segment": "converter",
+      "revenue_per_user": 16.666666666666668,
+      "users": 30,
+      "conversion_rate": 100.0
+    },
+    {
+      "segment": "subscriber",
+      "revenue_per_user": 4.0,
+      "users": 50,
+      "conversion_rate": 8.0
+    },
+    {
+      "segment": "engaged_user",
+      "revenue_per_user": 1.875,
+      "users": 80,
+      "conversion_rate": 5.0
+    },
+    {
+      "segment": "returning_user",
+      "revenue_per_user": 0.4,
+      "users": 200,
+      "conversion_rate": 2.0
+    },
+    {
+      "segment": "new_user",
+      "revenue_per_user": 0.05,
+      "users": 500,
+      "conversion_rate": 0.5
+    }
+  ],
+  "best_journey_paths": [],
+  "high_retention_pages": [],
+  "learning_insights": [
+    {
+      "pattern": "高价值用户特征",
+      "description": "'converter'用户价值最高，每用户收入 $16.67，转化率 100.0%",
+      "recommendation": "重点培育和转化更多用户进入'converter'分层",
+      "key_metrics": {
+        "高留存": ">80%",
+        "高互动": "停留>3分钟",
+        "高转化": ">5%"
+      }
+    },
+    {
+      "pattern": "高留存用户行为",
+      "description": "'converter'用户留存率最高，达到 95.0%，平均停留 300秒",
+      "recommendation": "分析该分层用户的浏览路径和内容偏好，复制到其他用户",
+      "key_metrics": {
+        "低跳出": "<20%",
+        "高回访": ">95%"
+      }
+    }
+  ],
+  "strategy_changes": [],
+  "high_value_segments": [
+    {
+      "segment": "converter",
+      "revenue_per_user": 16.666666666666668,
+      "users": 30,
+      "conversion_rate": 100.0
+    }
+  ]
+}
