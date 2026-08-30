@@ -57,7 +57,7 @@ except Exception as e:
     print("SITES_LIST_ERROR:", str(e)[:300])
 
 # 2) Raw Indexing API call for ONE url
-test_url = os.environ.get("PROBE_URL", "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/")
+test_url = os.environ.get("PROBE_URL", "") or "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/"
 payload = {"url": test_url, "type": "URL_UPDATED"}
 print("\nINDEXING_PUBLISH_CALL:", test_url)
 try:
