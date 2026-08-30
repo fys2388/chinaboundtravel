@@ -1,0 +1,314 @@
+{
+  "generated_at": "2026-08-31T00:06:53.912308",
+  "total_recommendations": 27,
+  "type_distribution": {
+    "infographic": 22,
+    "step_diagram": 3,
+    "video_script": 1,
+    "image_carousel": 1
+  },
+  "priority_distribution": {
+    "high": 14,
+    "medium": 5,
+    "low": 8
+  },
+  "recommendations": [
+    {
+      "id": "mm_content_chinese-food-deliver_0",
+      "content_id": "content_chinese-food-deliver",
+      "content_title": "Chinese Food Delivery 2026: Meituan & Ele.me Guide",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_chinese-food-deliver_1",
+      "content_id": "content_chinese-food-deliver",
+      "content_title": "Chinese Food Delivery 2026: Meituan & Ele.me Guide",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-transportation_0",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation Guide 2026: Trains, Subways, ",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-transportation_1",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation Guide 2026: Trains, Subways, ",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-transportation_2",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation Guide 2026: Trains, Subways, ",
+      "media_type": "step_diagram",
+      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
+      "purpose": "understanding",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "low"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_0",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144-Hour Visa-Free Transit 2026: Eligible Co",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_1",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144-Hour Visa-Free Transit 2026: Eligible Co",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_2",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144-Hour Visa-Free Transit 2026: Eligible Co",
+      "media_type": "step_diagram",
+      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
+      "purpose": "understanding",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "low"
+    },
+    {
+      "id": "mm_content_china-extends-144-ho_0",
+      "content_id": "content_china-extends-144-ho",
+      "content_title": "China 144-Hour Visa-Free Transit 2026: 15 New Coun",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-extends-144-ho_1",
+      "content_id": "content_china-extends-144-ho",
+      "content_title": "China 144-Hour Visa-Free Transit 2026: 15 New Coun",
+      "media_type": "step_diagram",
+      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
+      "purpose": "understanding",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "low"
+    },
+    {
+      "id": "mm_content_how-to-use-wechat-pa_0",
+      "content_id": "content_how-to-use-wechat-pa",
+      "content_title": "Can Foreigners Use WeChat Pay in China 2026? Yes -",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_how-to-use-wechat-pa_1",
+      "content_id": "content_how-to-use-wechat-pa",
+      "content_title": "Can Foreigners Use WeChat Pay in China 2026? Yes -",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_chinabound-travel-gu_0",
+      "content_id": "content_chinabound-travel-gu",
+      "content_title": "China Travel Guide: August 2026 Updates & Visa Rul",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-photography-gu_0",
+      "content_id": "content_china-photography-gu",
+      "content_title": "China Photography Guide: Best Spots & Tips",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_yunnan-adventure-ric_0",
+      "content_id": "content_yunnan-adventure-ric",
+      "content_title": "Yunnan Travel Guide: Rice Terraces & Ancient Towns",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_western-sichuan-over_0",
+      "content_id": "content_western-sichuan-over",
+      "content_title": "Western Sichuan Overland Camping Route: 7 Days",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_western-sichuan-over_1",
+      "content_id": "content_western-sichuan-over",
+      "content_title": "Western Sichuan Overland Camping Route: 7 Days",
+      "media_type": "video_script",
+      "description": "创建短视频脚本（60秒），展示行程亮点，用于YouTube Shorts/TikTok",
+      "purpose": "engagement + traffic",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "high"
+    },
+    {
+      "id": "mm_content_guilin-and-yangshuo-_0",
+      "content_id": "content_guilin-and-yangshuo-",
+      "content_title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_zhangjiajie-avatar-m_0",
+      "content_id": "content_zhangjiajie-avatar-m",
+      "content_title": "Zhangjiajie Guide: Avatar Mountains & Itinerary",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_accommodation-tips-g_0",
+      "content_id": "content_accommodation-tips-g",
+      "content_title": "Where to Stay in China: Complete 2026 Guide",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_chinese-language-sur_0",
+      "content_id": "content_chinese-language-sur",
+      "content_title": "Chinese Language Survival Phrases Guide 2026",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_shanghai-bund-french_0",
+      "content_id": "content_shanghai-bund-french",
+      "content_title": "Shanghai 48-Hour Guide: Bund & French Concession",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_sichuan-hotpot-guide_0",
+      "content_id": "content_sichuan-hotpot-guide",
+      "content_title": "Sichuan Hotpot Guide: History & Best Restaurants",
+      "media_type": "image_carousel",
+      "description": "创建Instagram轮播图（Carousel），每项一张图，提升互动",
+      "purpose": "social engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_is-china-safe-for-to_0",
+      "content_id": "content_is-china-safe-for-to",
+      "content_title": "Is China Safe for Tourists in 2026? Honest Guide",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_chinese-street-food-_0",
+      "content_id": "content_chinese-street-food-",
+      "content_title": "Chinese Street Food: Night Markets & What to Eat",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_2026-05-26-is-china-_0",
+      "content_id": "content_2026-05-26-is-china-",
+      "content_title": "Is China Safe for Tourists in 2026? Honest Guide",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_xian-terracotta-army_0",
+      "content_id": "content_xian-terracotta-army",
+      "content_title": "Xi",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    }
+  ]
+}
