@@ -1,0 +1,221 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:35:24.531170",
+  "integration_id": "SYN-003",
+  "global_cta_rules": {
+    "default_cta_type": "product_card",
+    "default_positions": [
+      "article_bottom",
+      "article_middle"
+    ],
+    "max_ctas_per_article": 3,
+    "min_interval_paragraphs": 3,
+    "use_utm_tracking": true,
+    "brand_voice": "editorial",
+    "avoid_legacy_persona": true,
+    "cta_style": {
+      "button_color": "#2563eb",
+      "button_text_color": "#ffffff",
+      "button_border_radius": "8px",
+      "button_padding": "12px 24px",
+      "card_background": "#f8fafc",
+      "card_border": "#e2e8f0",
+      "card_border_radius": "12px"
+    }
+  },
+  "product_cta_rules": [
+    {
+      "product": "esim",
+      "commission_rate": 0.2,
+      "priority": "medium",
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "cta_copy": "Stay connected in China — compare eSIM plans",
+      "expected_ctr_boost": 0.2,
+      "expected_revenue_boost": 0.25,
+      "article_categories": [
+        "china-essentials",
+        "travel-tips",
+        "technology"
+      ],
+      "keywords": [
+        "esim",
+        "sim card",
+        "mobile data",
+        "internet",
+        "connectivity"
+      ],
+      "affiliate_partner": "",
+      "status": "active"
+    },
+    {
+      "product": "insurance",
+      "commission_rate": 0.1,
+      "priority": "medium",
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "cta_copy": "Travel worry-free — get China travel insurance",
+      "expected_ctr_boost": 0.2,
+      "expected_revenue_boost": 0.25,
+      "article_categories": [
+        "china-essentials",
+        "travel-tips",
+        "safety"
+      ],
+      "keywords": [
+        "travel insurance",
+        "safety",
+        "protection",
+        "medical"
+      ],
+      "affiliate_partner": "",
+      "status": "active"
+    },
+    {
+      "product": "transfers",
+      "commission_rate": 0.08,
+      "priority": "medium",
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_positions": [
+        "article_bottom",
+        "article_middle"
+      ],
+      "cta_copy": "Skip the taxi line — book your airport transfer",
+      "expected_ctr_boost": 0.1,
+      "expected_revenue_boost": 0.15,
+      "article_categories": [
+        "transportation",
+        "china-essentials",
+        "city-guides"
+      ],
+      "keywords": [
+        "airport transfer",
+        "transportation",
+        "taxi",
+        "shuttle"
+      ],
+      "affiliate_partner": "",
+      "status": "active"
+    },
+    {
+      "product": "car_rental",
+      "commission_rate": 0.06,
+      "priority": "medium",
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_positions": [
+        "article_bottom",
+        "article_middle"
+      ],
+      "cta_copy": "Drive China your way — compare car rentals",
+      "expected_ctr_boost": 0.1,
+      "expected_revenue_boost": 0.15,
+      "article_categories": [
+        "transportation",
+        "travel-tips",
+        "road-trips"
+      ],
+      "keywords": [
+        "car rental",
+        "driving",
+        "road trip",
+        "vehicle"
+      ],
+      "affiliate_partner": "",
+      "status": "active"
+    },
+    {
+      "product": "tours",
+      "commission_rate": 0.05,
+      "priority": "medium",
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_positions": [
+        "article_bottom",
+        "article_middle"
+      ],
+      "cta_copy": "Skip the line — book top China tours",
+      "expected_ctr_boost": 0.1,
+      "expected_revenue_boost": 0.15,
+      "article_categories": [
+        "attractions",
+        "city-guides",
+        "experiences"
+      ],
+      "keywords": [
+        "tours",
+        "activities",
+        "attractions",
+        "excursions"
+      ],
+      "affiliate_partner": "",
+      "status": "active"
+    }
+  ],
+  "article_category_cta_rules": [],
+  "cta_templates": {
+    "button": {
+      "html": "<a href=\"{affiliate_link}\" class=\"cta-button\" target=\"_blank\" rel=\"nofollow sponsored\">{cta_text}</a>",
+      "css": ".cta-button { display: inline-block; padding: 12px 24px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background-color 0.2s; } .cta-button:hover { background-color: #1d4ed8; }",
+      "best_for": [
+        "high_intent_pages",
+        "article_bottom",
+        "product_reviews"
+      ]
+    },
+    "product_card": {
+      "html": "<div class=\"product-card\">\n    <div class=\"product-card-image\">\n        <img src=\"{image_url}\" alt=\"{product_name}\" loading=\"lazy\">\n    </div>\n    <div class=\"product-card-content\">\n        <h4>{product_name}</h4>\n        <p class=\"product-description\">{description}</p>\n        <div class=\"product-rating\">⭐⭐⭐⭐⭐ ({rating}/5)</div>\n        <a href=\"{affiliate_link}\" class=\"product-card-button\" target=\"_blank\" rel=\"nofollow sponsored\">{cta_text}</a>\n    </div>\n</div>",
+      "css": ".product-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin: 20px 0; } .product-card-image { text-align: center; margin-bottom: 15px; } .product-card-button { display: block; text-align: center; padding: 10px 20px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 15px; }",
+      "best_for": [
+        "product_recommendations",
+        "comparison_articles",
+        "buying_guides"
+      ]
+    },
+    "text_link": {
+      "html": "<a href=\"{affiliate_link}\" class=\"cta-text-link\" target=\"_blank\" rel=\"nofollow sponsored\">{cta_text}</a>",
+      "css": ".cta-text-link { color: #2563eb; text-decoration: underline; font-weight: 500; } .cta-text-link:hover { color: #1d4ed8; }",
+      "best_for": [
+        "inline_recommendations",
+        "contextual_links",
+        "resource_pages"
+      ]
+    },
+    "banner": {
+      "html": "<div class=\"cta-banner\">\n    <div class=\"cta-banner-content\">\n        <h3>{banner_title}</h3>\n        <p>{banner_description}</p>\n        <a href=\"{affiliate_link}\" class=\"cta-banner-button\" target=\"_blank\" rel=\"nofollow sponsored\">{cta_text}</a>\n    </div>\n</div>",
+      "css": ".cta-banner { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; padding: 30px; border-radius: 12px; margin: 25px 0; text-align: center; } .cta-banner-button { display: inline-block; padding: 12px 30px; background-color: #ffffff; color: #2563eb; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 15px; }",
+      "best_for": [
+        "high_traffic_pages",
+        "article_top",
+        "sidebar"
+      ]
+    }
+  },
+  "stats": {
+    "total_products_configured": 5,
+    "total_cta_templates": 4,
+    "expected_ctr_boost": 0.14,
+    "expected_revenue_boost": 0.19
+  }
+}
