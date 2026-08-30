@@ -2,7 +2,7 @@
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'  # P1-OPS-02A: weekly generation (Monday 00:00 UTC), not daily
   workflow_dispatch:
 
 permissions:

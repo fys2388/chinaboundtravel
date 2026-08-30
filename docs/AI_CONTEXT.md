@@ -24,12 +24,12 @@
 ## 2. Current branch / commit
 
 - 本地分支：`main`
-- 本地 HEAD：`247e686` — `fix: correct monthly promo prefill url parameter`（2026-08-17 实测）
-- 线上状态：部署由 Cloudflare Pages 触发；最新已记录的线上验证为 2026-08-16（GROWTH-05/07/BRAND-03）；勿在任务中自动 fetch/合并
+- 本地 HEAD：`698e64b` — `fix(encoding): convert GBK-encoded report + archived content files to UTF-8`（2026-08-30 实测）
+- 线上状态：部署由 Cloudflare Pages 触发；线上验证 2026-08-30（首页 200 / canonical / Drive 正常）；GSC 服务账号已提 Owner，索引提交 20/20 success；勿在任务中自动 fetch/合并
 
 ## 3. Content / Reporting baseline（2.0）
 
-- 发布文章：60 posts；content_id：60/60（`content_id_audit.py audit --strict` = PASS，2026-08-17）
+- 发布文章：59 posts；content_id：59/59（扫描复核，2026-08-30）
 - 单 inventory 源：`reports/seo/CONTENT_SEO_INVENTORY.csv`（60 行；`content_inventory.csv` 已废弃）
 - Revenue：NULL（REVENUE_NOT_AVAILABLE，无真实收入数据前不编造）
 - GA4（fetch 2026-08-17）：28d sitewide sessions 166 / pageviews 374 / affiliate_clicks 0
@@ -68,16 +68,13 @@
 
 ## 7. Current task
 
-- P1-REPORT-02：ChinaBound 2.0 Unified Management Reporting — **PASS**（2026-08-17）
-  - 单一 KPI 源：`reports/management/REPORTING_SNAPSHOT.json`（scripts/reporting_kpi_engine.py）
-  - 五期报告共享同一数据模型：daily / weekly / monthly / quarterly / yearly（scripts/reporting_engine.py）
-  - 主仪表盘：`reports/CHINABOUND_TRAVEL_2_0_MASTER_DASHBOARD.md`；警报：`reports/management/ALERTS.md`
-  - 模型文档：REPORTING_DATA_DICTIONARY.md / REPORTING_KPI_DEFINITIONS.md / REPORTING_STATUS_MODEL.md
-  - 报告索引：`reports/REPORT_INDEX.md`（CURRENT / HISTORICAL / STALE / SUPERSEDED）
-  - 验证：pytest 615 passed（0 failed / 0 skipped）；content_id 60/60 PASS；`hugo --gc --minify` SUCCESS
-  - 提交：`feat: unify ChinaBound 2.0 management reporting`（已 push origin/main）
-- 前序：P1-REPORT-01（2026-08-17）— PASS
-- 下一任务：待用户指派（建议：GROWTH-22 线上验证，或执行 `reports/seo/TOP_10_CONTENT_PRIORITIES.md` 下一批内容优化）## 8. Known architecture（架构速览）
+- 当前任务：2.0 工作流符合度修复（2026-08-30）
+  - P0-1：`REPORTING_SNAPSHOT.json` 中文乱码已修复（源 CSV 已转 UTF-8 后重生成，issue_types 中文正常，as_of 2026-08-26 保留）
+  - P0-2：weekly-blog-update cron 由每日 `0 0 * * *` 改每周 `0 0 * * 1`（落实 P1-OPS-02A）
+  - P0-3：GSC 服务账号提 Owner，gsc-index-submit 20/20 success
+  - 待办 P1：周/月/季/年 Feishu 报告改读 SNAPSHOT；新增 SNAPSHOT 每日自动刷新；补 `reports/2.0_REPORTING_RECONCILIATION.md`；social_distributor 收敛到 Buffer Worker
+- 前序：P1-REPORT-02 统一报告（PASS，2026-08-17，SNAPSHOT 单一 KPI 源）；P1-OPS-03 2.0 就绪审计（PARTIAL_READY）
+- 下一任务：待用户指派（建议：按上述 P1 待办推进，或 GROWTH-22 线上验证）## 8. Known architecture（架构速览）
 
 - 渲染：`layouts/`（自定义）覆盖 `themes/PaperMod/`（勿改主题源）
 - 静态：`static/` 原样发布；`assets/` 走 Hugo 资源管道（`resources.Get`）
