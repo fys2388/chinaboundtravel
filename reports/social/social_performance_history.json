@@ -1,0 +1,1206 @@
+{
+  "records": [
+    {
+      "post_id": "post_001",
+      "platform": "instagram",
+      "date": "2026-08-01 08:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 300,
+        "clicks": 6,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.03333333333333333
+      }
+    },
+    {
+      "post_id": "post_002",
+      "platform": "facebook",
+      "date": "2026-08-02 09:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 234,
+        "clicks": 7,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.029914529914529916,
+        "engagement_rate": 0.042735042735042736
+      }
+    },
+    {
+      "post_id": "post_003",
+      "platform": "pinterest",
+      "date": "2026-08-03 11:00:00",
+      "content": {
+        "hook": "Sample caption for story post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 616,
+        "clicks": 24,
+        "likes": 30,
+        "comments": 3,
+        "shares": 1,
+        "saves": 4,
+        "engagement": 38
+      },
+      "calculated": {
+        "ctr": 0.03896103896103896,
+        "engagement_rate": 0.06168831168831169
+      }
+    },
+    {
+      "post_id": "post_004",
+      "platform": "x",
+      "date": "2026-08-04 13:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 240,
+        "clicks": 12,
+        "likes": 14,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 17
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "engagement_rate": 0.07083333333333333
+      }
+    },
+    {
+      "post_id": "post_005",
+      "platform": "linkedin",
+      "date": "2026-08-05 14:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 108,
+        "clicks": 6,
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 3
+      },
+      "calculated": {
+        "ctr": 0.05555555555555555,
+        "engagement_rate": 0.027777777777777776
+      }
+    },
+    {
+      "post_id": "post_006",
+      "platform": "instagram",
+      "date": "2026-08-06 17:00:00",
+      "content": {
+        "hook": "Sample caption for list post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 700,
+        "clicks": 14,
+        "likes": 28,
+        "comments": 2,
+        "shares": 1,
+        "saves": 4,
+        "engagement": 35
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.05
+      }
+    },
+    {
+      "post_id": "post_007",
+      "platform": "facebook",
+      "date": "2026-08-07 18:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 330,
+        "clicks": 9,
+        "likes": 16,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 19
+      },
+      "calculated": {
+        "ctr": 0.02727272727272727,
+        "engagement_rate": 0.05757575757575758
+      }
+    },
+    {
+      "post_id": "post_008",
+      "platform": "pinterest",
+      "date": "2026-08-08 19:00:00",
+      "content": {
+        "hook": "Sample caption for question post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 1152,
+        "clicks": 46,
+        "likes": 69,
+        "comments": 6,
+        "shares": 3,
+        "saves": 10,
+        "engagement": 88
+      },
+      "calculated": {
+        "ctr": 0.03993055555555555,
+        "engagement_rate": 0.0763888888888889
+      }
+    },
+    {
+      "post_id": "post_009",
+      "platform": "x",
+      "date": "2026-08-09 21:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 312,
+        "clicks": 15,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.04807692307692308,
+        "engagement_rate": 0.03205128205128205
+      }
+    },
+    {
+      "post_id": "post_010",
+      "platform": "linkedin",
+      "date": "2026-08-10 22:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 273,
+        "clicks": 16,
+        "likes": 10,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 12
+      },
+      "calculated": {
+        "ctr": 0.05860805860805861,
+        "engagement_rate": 0.04395604395604396
+      }
+    },
+    {
+      "post_id": "post_011",
+      "platform": "instagram",
+      "date": "2026-08-11 08:00:00",
+      "content": {
+        "hook": "Sample caption for story post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 275,
+        "clicks": 5,
+        "likes": 13,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 15
+      },
+      "calculated": {
+        "ctr": 0.01818181818181818,
+        "engagement_rate": 0.05454545454545454
+      }
+    },
+    {
+      "post_id": "post_012",
+      "platform": "facebook",
+      "date": "2026-08-12 09:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 270,
+        "clicks": 8,
+        "likes": 16,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 19
+      },
+      "calculated": {
+        "ctr": 0.02962962962962963,
+        "engagement_rate": 0.07037037037037037
+      }
+    },
+    {
+      "post_id": "post_013",
+      "platform": "pinterest",
+      "date": "2026-08-13 11:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 448,
+        "clicks": 17,
+        "likes": 13,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 15
+      },
+      "calculated": {
+        "ctr": 0.03794642857142857,
+        "engagement_rate": 0.033482142857142856
+      }
+    },
+    {
+      "post_id": "post_014",
+      "platform": "x",
+      "date": "2026-08-14 13:00:00",
+      "content": {
+        "hook": "Sample caption for list post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 224,
+        "clicks": 11,
+        "likes": 8,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 9
+      },
+      "calculated": {
+        "ctr": 0.049107142857142856,
+        "engagement_rate": 0.04017857142857143
+      }
+    },
+    {
+      "post_id": "post_015",
+      "platform": "linkedin",
+      "date": "2026-08-15 14:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 135,
+        "clicks": 8,
+        "likes": 6,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 6
+      },
+      "calculated": {
+        "ctr": 0.05925925925925926,
+        "engagement_rate": 0.044444444444444446
+      }
+    },
+    {
+      "post_id": "post_016",
+      "platform": "instagram",
+      "date": "2026-08-16 17:00:00",
+      "content": {
+        "hook": "Sample caption for question post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 600,
+        "clicks": 12,
+        "likes": 36,
+        "comments": 3,
+        "shares": 1,
+        "saves": 5,
+        "engagement": 45
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.075
+      }
+    },
+    {
+      "post_id": "post_017",
+      "platform": "facebook",
+      "date": "2026-08-17 18:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 396,
+        "clicks": 11,
+        "likes": 11,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 13
+      },
+      "calculated": {
+        "ctr": 0.027777777777777776,
+        "engagement_rate": 0.03282828282828283
+      }
+    },
+    {
+      "post_id": "post_018",
+      "platform": "pinterest",
+      "date": "2026-08-18 19:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 1248,
+        "clicks": 49,
+        "likes": 49,
+        "comments": 4,
+        "shares": 2,
+        "saves": 7,
+        "engagement": 62
+      },
+      "calculated": {
+        "ctr": 0.03926282051282051,
+        "engagement_rate": 0.049679487179487176
+      }
+    },
+    {
+      "post_id": "post_019",
+      "platform": "x",
+      "date": "2026-08-19 21:00:00",
+      "content": {
+        "hook": "Sample caption for story post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 286,
+        "clicks": 14,
+        "likes": 14,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 17
+      },
+      "calculated": {
+        "ctr": 0.04895104895104895,
+        "engagement_rate": 0.05944055944055944
+      }
+    },
+    {
+      "post_id": "post_020",
+      "platform": "linkedin",
+      "date": "2026-08-20 22:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 315,
+        "clicks": 18,
+        "likes": 18,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 21
+      },
+      "calculated": {
+        "ctr": 0.05714285714285714,
+        "engagement_rate": 0.06666666666666667
+      }
+    },
+    {
+      "post_id": "post_021",
+      "platform": "instagram",
+      "date": "2026-08-21 08:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 200,
+        "clicks": 4,
+        "likes": 6,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 6
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.03
+      }
+    },
+    {
+      "post_id": "post_022",
+      "platform": "facebook",
+      "date": "2026-08-22 09:00:00",
+      "content": {
+        "hook": "Sample caption for list post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 252,
+        "clicks": 7,
+        "likes": 10,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 12
+      },
+      "calculated": {
+        "ctr": 0.027777777777777776,
+        "engagement_rate": 0.047619047619047616
+      }
+    },
+    {
+      "post_id": "post_023",
+      "platform": "pinterest",
+      "date": "2026-08-23 11:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 560,
+        "clicks": 22,
+        "likes": 28,
+        "comments": 2,
+        "shares": 1,
+        "saves": 4,
+        "engagement": 35
+      },
+      "calculated": {
+        "ctr": 0.039285714285714285,
+        "engagement_rate": 0.0625
+      }
+    },
+    {
+      "post_id": "post_024",
+      "platform": "x",
+      "date": "2026-08-24 13:00:00",
+      "content": {
+        "hook": "Sample caption for question post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 192,
+        "clicks": 9,
+        "likes": 11,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 13
+      },
+      "calculated": {
+        "ctr": 0.046875,
+        "engagement_rate": 0.06770833333333333
+      }
+    },
+    {
+      "post_id": "post_025",
+      "platform": "linkedin",
+      "date": "2026-08-25 14:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 162,
+        "clicks": 9,
+        "likes": 4,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 4
+      },
+      "calculated": {
+        "ctr": 0.05555555555555555,
+        "engagement_rate": 0.024691358024691357
+      }
+    },
+    {
+      "post_id": "post_026",
+      "platform": "instagram",
+      "date": "2026-08-26 17:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 650,
+        "clicks": 13,
+        "likes": 26,
+        "comments": 2,
+        "shares": 1,
+        "saves": 3,
+        "engagement": 32
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.04923076923076923
+      }
+    },
+    {
+      "post_id": "post_027",
+      "platform": "facebook",
+      "date": "2026-08-27 18:00:00",
+      "content": {
+        "hook": "Sample caption for story post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 363,
+        "clicks": 10,
+        "likes": 18,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 21
+      },
+      "calculated": {
+        "ctr": 0.027548209366391185,
+        "engagement_rate": 0.05785123966942149
+      }
+    },
+    {
+      "post_id": "post_028",
+      "platform": "pinterest",
+      "date": "2026-08-28 19:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 1440,
+        "clicks": 57,
+        "likes": 86,
+        "comments": 8,
+        "shares": 4,
+        "saves": 12,
+        "engagement": 110
+      },
+      "calculated": {
+        "ctr": 0.03958333333333333,
+        "engagement_rate": 0.0763888888888889
+      }
+    },
+    {
+      "post_id": "post_029",
+      "platform": "x",
+      "date": "2026-08-01 21:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 208,
+        "clicks": 10,
+        "likes": 6,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 6
+      },
+      "calculated": {
+        "ctr": 0.04807692307692308,
+        "engagement_rate": 0.028846153846153848
+      }
+    },
+    {
+      "post_id": "post_030",
+      "platform": "linkedin",
+      "date": "2026-08-02 22:00:00",
+      "content": {
+        "hook": "Sample caption for list post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 294,
+        "clicks": 17,
+        "likes": 11,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 13
+      },
+      "calculated": {
+        "ctr": 0.05782312925170068,
+        "engagement_rate": 0.04421768707482993
+      }
+    },
+    {
+      "post_id": "post_031",
+      "platform": "instagram",
+      "date": "2026-08-03 08:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 250,
+        "clicks": 5,
+        "likes": 12,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 14
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.056
+      }
+    },
+    {
+      "post_id": "post_032",
+      "platform": "facebook",
+      "date": "2026-08-04 09:00:00",
+      "content": {
+        "hook": "Sample caption for question post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 216,
+        "clicks": 6,
+        "likes": 12,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 14
+      },
+      "calculated": {
+        "ctr": 0.027777777777777776,
+        "engagement_rate": 0.06481481481481481
+      }
+    },
+    {
+      "post_id": "post_033",
+      "platform": "pinterest",
+      "date": "2026-08-05 11:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 672,
+        "clicks": 26,
+        "likes": 20,
+        "comments": 2,
+        "shares": 1,
+        "saves": 3,
+        "engagement": 26
+      },
+      "calculated": {
+        "ctr": 0.03869047619047619,
+        "engagement_rate": 0.03869047619047619
+      }
+    },
+    {
+      "post_id": "post_034",
+      "platform": "x",
+      "date": "2026-08-06 13:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 208,
+        "clicks": 10,
+        "likes": 8,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 9
+      },
+      "calculated": {
+        "ctr": 0.04807692307692308,
+        "engagement_rate": 0.04326923076923077
+      }
+    },
+    {
+      "post_id": "post_035",
+      "platform": "linkedin",
+      "date": "2026-08-07 14:00:00",
+      "content": {
+        "hook": "Sample caption for story post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 148,
+        "clicks": 8,
+        "likes": 7,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 8
+      },
+      "calculated": {
+        "ctr": 0.05405405405405406,
+        "engagement_rate": 0.05405405405405406
+      }
+    },
+    {
+      "post_id": "post_036",
+      "platform": "instagram",
+      "date": "2026-08-08 17:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 750,
+        "clicks": 15,
+        "likes": 45,
+        "comments": 4,
+        "shares": 2,
+        "saves": 6,
+        "engagement": 57
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.076
+      }
+    },
+    {
+      "post_id": "post_037",
+      "platform": "facebook",
+      "date": "2026-08-09 18:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 264,
+        "clicks": 7,
+        "likes": 7,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 8
+      },
+      "calculated": {
+        "ctr": 0.026515151515151516,
+        "engagement_rate": 0.030303030303030304
+      }
+    },
+    {
+      "post_id": "post_038",
+      "platform": "pinterest",
+      "date": "2026-08-10 19:00:00",
+      "content": {
+        "hook": "Sample caption for list post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 1344,
+        "clicks": 53,
+        "likes": 53,
+        "comments": 5,
+        "shares": 2,
+        "saves": 7,
+        "engagement": 67
+      },
+      "calculated": {
+        "ctr": 0.03943452380952381,
+        "engagement_rate": 0.04985119047619048
+      }
+    },
+    {
+      "post_id": "post_039",
+      "platform": "x",
+      "date": "2026-08-11 21:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 260,
+        "clicks": 13,
+        "likes": 13,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 15
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "engagement_rate": 0.057692307692307696
+      }
+    },
+    {
+      "post_id": "post_040",
+      "platform": "linkedin",
+      "date": "2026-08-12 22:00:00",
+      "content": {
+        "hook": "Sample caption for question post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 251,
+        "clicks": 15,
+        "likes": 15,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 18
+      },
+      "calculated": {
+        "ctr": 0.05976095617529881,
+        "engagement_rate": 0.07171314741035857
+      }
+    },
+    {
+      "post_id": "post_041",
+      "platform": "instagram",
+      "date": "2026-08-13 08:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 300,
+        "clicks": 6,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.03333333333333333
+      }
+    },
+    {
+      "post_id": "post_042",
+      "platform": "facebook",
+      "date": "2026-08-14 09:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 234,
+        "clicks": 7,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.029914529914529916,
+        "engagement_rate": 0.042735042735042736
+      }
+    },
+    {
+      "post_id": "post_043",
+      "platform": "pinterest",
+      "date": "2026-08-15 11:00:00",
+      "content": {
+        "hook": "Sample caption for story post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "story"
+      },
+      "metrics": {
+        "impressions": 616,
+        "clicks": 24,
+        "likes": 30,
+        "comments": 3,
+        "shares": 1,
+        "saves": 4,
+        "engagement": 38
+      },
+      "calculated": {
+        "ctr": 0.03896103896103896,
+        "engagement_rate": 0.06168831168831169
+      }
+    },
+    {
+      "post_id": "post_044",
+      "platform": "x",
+      "date": "2026-08-16 13:00:00",
+      "content": {
+        "hook": "Sample caption for visual post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "visual"
+      },
+      "metrics": {
+        "impressions": 240,
+        "clicks": 12,
+        "likes": 14,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 17
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "engagement_rate": 0.07083333333333333
+      }
+    },
+    {
+      "post_id": "post_045",
+      "platform": "linkedin",
+      "date": "2026-08-17 14:00:00",
+      "content": {
+        "hook": "Sample caption for conversion post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "conversion"
+      },
+      "metrics": {
+        "impressions": 108,
+        "clicks": 6,
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "engagement": 3
+      },
+      "calculated": {
+        "ctr": 0.05555555555555555,
+        "engagement_rate": 0.027777777777777776
+      }
+    },
+    {
+      "post_id": "post_046",
+      "platform": "instagram",
+      "date": "2026-08-18 17:00:00",
+      "content": {
+        "hook": "Sample caption for list post on instagram",
+        "cta": "",
+        "content_id": "",
+        "content_type": "list"
+      },
+      "metrics": {
+        "impressions": 700,
+        "clicks": 14,
+        "likes": 28,
+        "comments": 2,
+        "shares": 1,
+        "saves": 4,
+        "engagement": 35
+      },
+      "calculated": {
+        "ctr": 0.02,
+        "engagement_rate": 0.05
+      }
+    },
+    {
+      "post_id": "post_047",
+      "platform": "facebook",
+      "date": "2026-08-19 18:00:00",
+      "content": {
+        "hook": "Sample caption for guide post on facebook",
+        "cta": "",
+        "content_id": "",
+        "content_type": "guide"
+      },
+      "metrics": {
+        "impressions": 330,
+        "clicks": 9,
+        "likes": 16,
+        "comments": 1,
+        "shares": 0,
+        "saves": 2,
+        "engagement": 19
+      },
+      "calculated": {
+        "ctr": 0.02727272727272727,
+        "engagement_rate": 0.05757575757575758
+      }
+    },
+    {
+      "post_id": "post_048",
+      "platform": "pinterest",
+      "date": "2026-08-20 19:00:00",
+      "content": {
+        "hook": "Sample caption for question post on pinterest",
+        "cta": "",
+        "content_id": "",
+        "content_type": "question"
+      },
+      "metrics": {
+        "impressions": 1152,
+        "clicks": 46,
+        "likes": 69,
+        "comments": 6,
+        "shares": 3,
+        "saves": 10,
+        "engagement": 88
+      },
+      "calculated": {
+        "ctr": 0.03993055555555555,
+        "engagement_rate": 0.0763888888888889
+      }
+    },
+    {
+      "post_id": "post_049",
+      "platform": "x",
+      "date": "2026-08-21 21:00:00",
+      "content": {
+        "hook": "Sample caption for tip post on x",
+        "cta": "",
+        "content_id": "",
+        "content_type": "tip"
+      },
+      "metrics": {
+        "impressions": 312,
+        "clicks": 15,
+        "likes": 9,
+        "comments": 0,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 10
+      },
+      "calculated": {
+        "ctr": 0.04807692307692308,
+        "engagement_rate": 0.03205128205128205
+      }
+    },
+    {
+      "post_id": "post_050",
+      "platform": "linkedin",
+      "date": "2026-08-22 22:00:00",
+      "content": {
+        "hook": "Sample caption for warning post on linkedin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "warning"
+      },
+      "metrics": {
+        "impressions": 273,
+        "clicks": 16,
+        "likes": 10,
+        "comments": 1,
+        "shares": 0,
+        "saves": 1,
+        "engagement": 12
+      },
+      "calculated": {
+        "ctr": 0.05860805860805861,
+        "engagement_rate": 0.04395604395604396
+      }
+    }
+  ],
+  "last_updated": "2026-08-31T00:57:40.417524",
+  "version": "1.0"
+}

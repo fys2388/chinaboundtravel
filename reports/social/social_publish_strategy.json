@@ -1,0 +1,128 @@
+{
+  "version": "2.0-20260831_005740",
+  "last_updated": "2026-08-31T00:57:40.420433",
+  "platforms": {
+    "pinterest": {
+      "best_times": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "best_hooks": [
+        "question",
+        "guide",
+        "warning",
+        "list",
+        "sample"
+      ],
+      "best_ctas": [
+        "save for later",
+        "click to read"
+      ],
+      "content_types": [
+        "guide",
+        "tips",
+        "itinerary"
+      ],
+      "max_posts_per_day": 3
+    },
+    "instagram": {
+      "best_times": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "best_hooks": [
+        "question",
+        "guide",
+        "warning",
+        "list",
+        "sample"
+      ],
+      "best_ctas": [
+        "link in bio",
+        "swipe up"
+      ],
+      "content_types": [
+        "visual",
+        "lifestyle",
+        "tips"
+      ],
+      "max_posts_per_day": 2
+    },
+    "facebook": {
+      "best_times": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "best_hooks": [
+        "question",
+        "guide",
+        "warning",
+        "list",
+        "sample"
+      ],
+      "best_ctas": [
+        "read more",
+        "click here"
+      ],
+      "content_types": [
+        "guide",
+        "tips",
+        "news"
+      ],
+      "max_posts_per_day": 2
+    },
+    "x": {
+      "best_times": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "best_hooks": [
+        "question",
+        "guide",
+        "warning",
+        "list",
+        "sample"
+      ],
+      "best_ctas": [
+        "read thread",
+        "click link"
+      ],
+      "content_types": [
+        "tips",
+        "facts",
+        "thread"
+      ],
+      "max_posts_per_day": 3
+    }
+  },
+  "global_rules": {
+    "max_posts_per_day_per_platform": 3,
+    "min_interval_minutes": 120,
+    "use_utm_tracking": true,
+    "brand_voice": "editorial",
+    "avoid_legacy_persona": true
+  },
+  "learning_insights": [
+    {
+      "pattern": "高CTR帖子特征",
+      "description": "Top 20%帖子平均CTR 5.72%，比Bottom 20%高 3.74个百分点",
+      "common_hooks": [
+        "question",
+        "guide",
+        "warning",
+        "list",
+        "sample"
+      ],
+      "best_times": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ]
+    }
+  ],
+  "strategy_changes": []
+}

@@ -1,0 +1,31 @@
+{
+  "records": [],
+  "last_updated": "2026-08-31T00:55:54.715904",
+  "version": "1.0",
+  "latest": {
+    "generated_at": "2026-08-31T00:55:54.715847",
+    "top_content": [],
+    "top_social_posts": [],
+    "best_cta_types": [],
+    "best_publish_times": [],
+    "patterns": [],
+    "recommendations": [
+      {
+        "priority": "medium",
+        "type": "memory_continuous",
+        "title": "持续记录Growth Memory",
+        "description": "确保所有运营动作都记录到Growth Memory，形成完整的学习闭环",
+        "action": "每周运行growth_memory_updater.py --weekly"
+      }
+    ]
+  },
+  "history": [
+    {
+      "generated_at": "2026-08-31T00:55:54.715847",
+      "top_content_count": 0,
+      "top_social_count": 0,
+      "pattern_count": 0,
+      "recommendation_count": 1
+    }
+  ]
+}
