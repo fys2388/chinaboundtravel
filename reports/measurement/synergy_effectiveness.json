@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "measurement_time": "2026-08-31T01:37:15.426306",
+  "synergy_metrics": {
+    "SYN-001": {
+      "name": "高表现内容社媒分发",
+      "metrics": {
+        "content_quality_score": {
+          "description": "分发内容的平均质量分",
+          "target": 85,
+          "current": 85,
+          "unit": "分"
+        },
+        "social_ctr": {
+          "description": "社媒帖子平均点击率",
+          "target": 0.05,
+          "current": 0.036,
+          "unit": "%"
+        },
+        "social_engagement_rate": {
+          "description": "社媒互动率",
+          "target": 0.08,
+          "current": 0.05,
+          "unit": "%"
+        },
+        "traffic_from_social": {
+          "description": "社媒引流到网站的流量",
+          "target": 100,
+          "current": 50,
+          "unit": "次/周"
+        },
+        "priority_content_exposure": {
+          "description": "高优先级内容曝光占比",
+          "target": 0.6,
+          "current": 0.4,
+          "unit": "%"
+        }
+      },
+      "expected_improvement": "社媒CTR提升20-30%，高表现内容曝光增加50%"
+    },
+    "SYN-002": {
+      "name": "高潜力关键词内容生成",
+      "metrics": {
+        "keyword_coverage": {
+          "description": "高潜力关键词覆盖数",
+          "target": 10,
+          "current": 8,
+          "unit": "个"
+        },
+        "organic_traffic_growth": {
+          "description": "自然搜索流量增长",
+          "target": 0.3,
+          "current": 0.1,
+          "unit": "%"
+        },
+        "keyword_ranking_improvement": {
+          "description": "关键词排名提升",
+          "target": 10,
+          "current": 5,
+          "unit": "位"
+        },
+        "content_quality_score": {
+          "description": "生成内容质量分",
+          "target": 85,
+          "current": 80,
+          "unit": "分"
+        },
+        "indexation_rate": {
+          "description": "新内容收录率",
+          "target": 0.9,
+          "current": 0.7,
+          "unit": "%"
+        }
+      },
+      "expected_improvement": "月流量增加615次，关键词覆盖增加50%"
+    },
+    "SYN-003": {
+      "name": "高佣金产品CTA优化",
+      "metrics": {
+        "cta_ctr": {
+          "description": "CTA点击率",
+          "target": 0.06,
+          "current": 0.04,
+          "unit": "%"
+        },
+        "affiliate_conversion_rate": {
+          "description": "联盟转化率",
+          "target": 0.03,
+          "current": 0.02,
+          "unit": "%"
+        },
+        "revenue_per_visitor": {
+          "description": "每访客收入",
+          "target": 0.5,
+          "current": 0.3,
+          "unit": "$"
+        },
+        "high_commission_product_exposure": {
+          "description": "高佣金产品曝光占比",
+          "target": 0.5,
+          "current": 0.3,
+          "unit": "%"
+        },
+        "cta_placement_effectiveness": {
+          "description": "CTA位置有效性",
+          "target": 0.8,
+          "current": 0.6,
+          "unit": "%"
+        }
+      },
+      "expected_improvement": "CTR提升14%，收入提升19%"
+    },
+    "SYN-004": {
+      "name": "高价值用户个性化推荐",
+      "metrics": {
+        "user_ltv": {
+          "description": "用户生命周期价值",
+          "target": 5.0,
+          "current": 3.0,
+          "unit": "$"
+        },
+        "conversion_rate": {
+          "description": "转化率",
+          "target": 0.05,
+          "current": 0.03,
+          "unit": "%"
+        },
+        "retention_rate": {
+          "description": "用户留存率",
+          "target": 0.5,
+          "current": 0.35,
+          "unit": "%"
+        },
+        "personalization_coverage": {
+          "description": "个性化推荐覆盖率",
+          "target": 0.8,
+          "current": 0.4,
+          "unit": "%"
+        },
+        "user_satisfaction_score": {
+          "description": "用户满意度评分",
+          "target": 4.0,
+          "current": 3.5,
+          "unit": "分"
+        }
+      },
+      "expected_improvement": "LTV提升5%，转化率提升20%"
+    }
+  },
+  "overall_scores": {
+    "SYN-001": 70.23333333333332,
+    "SYN-002": 67.04575163398692,
+    "SYN-003": 65.66666666666666,
+    "SYN-004": 65.5
+  },
+  "average_score": 67.11143790849673,
+  "measurement_frequency": "weekly",
+  "data_sources": [
+    "GA4",
+    "GSC",
+    "Travelpayouts",
+    "MailerLite",
+    "local_scans"
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:37:15.425062",
+  "integration_id": "SYN-004",
+  "personalization_enabled": true,
+  "segment_rules": [
+    {
+      "rule_id": "SYN004_converter",
+      "segment": "converter",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 100.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "visa-free transit",
+        "high-speed rail",
+        "payment guide",
+        "travel insurance",
+        "esim"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107871",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_new_user",
+      "segment": "new_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 0.5,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "china travel overview",
+        "first-timer guide",
+        "travel basics",
+        "visa guide",
+        "safety tips"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107883",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_returning_user",
+      "segment": "returning_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 2.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "new articles",
+        "updated guides",
+        "seasonal travel",
+        "event guides",
+        "travel news"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107888",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_engaged_user",
+      "segment": "engaged_user",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 5.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "city guides",
+        "attraction guides",
+        "transportation",
+        "accommodation",
+        "local experiences"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107892",
+      "synergy_id": "SYN-004"
+    },
+    {
+      "rule_id": "SYN004_subscriber",
+      "segment": "subscriber",
+      "segment_priority": "medium",
+      "user_count": 0,
+      "ltv": 0,
+      "conversion_rate": 8.0,
+      "retention_rate": 0,
+      "recommended_content_types": [
+        "how_to_guide"
+      ],
+      "recommended_topics": [
+        "travel guides",
+        "itinerary planning",
+        "cultural tips",
+        "food guides",
+        "photography"
+      ],
+      "recommended_cta_types": [
+        "product_card",
+        "button"
+      ],
+      "recommended_cta_positions": [
+        "article_bottom",
+        "article_middle",
+        "sidebar"
+      ],
+      "personalization_level": "basic",
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "ready",
+      "created_at": "2026-08-31T01:29:29.107896",
+      "synergy_id": "SYN-004"
+    }
+  ],
+  "implementation": {
+    "method": "client_side_javascript",
+    "storage": "localStorage + cookies",
+    "tracking": "GA4 custom dimensions",
+    "content_recommendation": "based_on_segment + behavior",
+    "cta_personalization": "based_on_segment + conversion_probability"
+  },
+  "segment_detection": {
+    "new_user": "first_visit OR no_history",
+    "returning_user": "visited_before AND no_conversion",
+    "engaged_user": "session_duration > 120s OR pages > 3",
+    "subscriber": "email_subscribed = true",
+    "converter": "has_conversion = true"
+  },
+  "personalization_levels": {
+    "basic": "content_recommendation_only",
+    "medium": "content + cta_recommendation",
+    "high": "full_personalization (content + cta + layout)"
+  },
+  "privacy_compliance": {
+    "gdpr_compliant": true,
+    "cookie_consent_required": true,
+    "data_retention": "90_days",
+    "user_opt_out": true
+  },
+  "stats": {
+    "total_segments": 5,
+    "high_value_segments": 0,
+    "expected_ltv_boost": 0.05,
+    "expected_conversion_boost": 0.2
+  }
+}
