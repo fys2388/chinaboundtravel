@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-30",
+  "as_of": "2026-08-26",
   "domains": {
     "affiliate_funnel": {
       "kpis": [
@@ -335,7 +335,7 @@
     "content_assets": {
       "kpis": [
         {
-          "baseline": 59,
+          "baseline": 58,
           "calculation": "count posts in content/posts with valid content_id",
           "data_source_type": "CACHED",
           "meaning": "Published posts (current inventory)",
@@ -344,11 +344,11 @@
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-08-30",
-          "value": 59
+          "valid_period": "2026-08-26",
+          "value": 58
         },
         {
-          "baseline": "59/59",
+          "baseline": "58/58",
           "calculation": "posts with content_id / total posts",
           "data_source_type": "CACHED",
           "meaning": "Posts with unique content_id",
@@ -357,8 +357,8 @@
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-08-30",
-          "value": 59
+          "valid_period": "2026-08-26",
+          "value": 58
         },
         {
           "baseline": null,
@@ -370,8 +370,8 @@
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-07-31..2026-08-30",
-          "value": 14
+          "valid_period": "2026-07-27..2026-08-26",
+          "value": 15
         },
         {
           "baseline": null,
@@ -733,14 +733,14 @@
           "baseline": null,
           "calculation": "count funnel rows",
           "data_source_type": "LOCAL",
-          "meaning": "Growth funnel tracked social items (source retired; superseded by social-engine-daily)",
+          "meaning": "Growth funnel tracked social items",
           "name": "funnel_rows",
           "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "rows",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": 21
         },
         {
           "baseline": null,
@@ -1160,14 +1160,14 @@
           "baseline": null,
           "calculation": "count pilot schedule rows",
           "data_source_type": "LOCAL",
-          "meaning": "GROWTH-29 social pilot scheduled slots (retired; superseded by social-engine-daily)",
+          "meaning": "GROWTH-29 social pilot scheduled slots",
           "name": "pilot_slots",
           "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "slots",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": 21
         },
         {
           "baseline": null,
@@ -1176,11 +1176,11 @@
           "meaning": "GROWTH-29 pilot scheduling window (days)",
           "name": "pilot_days",
           "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "days",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": 7
         },
         {
           "baseline": null,
@@ -1189,11 +1189,11 @@
           "meaning": "Pinterest slots in pilot (2/day target)",
           "name": "pilot_pinterest_slots",
           "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "slots",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": 14
         },
         {
           "baseline": null,
@@ -1202,11 +1202,11 @@
           "meaning": "Instagram slots in pilot (1/day target)",
           "name": "pilot_ig_slots",
           "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "slots",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": 7
         },
         {
           "baseline": null,
@@ -1215,11 +1215,13 @@
           "meaning": "Pilot slots by approval status",
           "name": "pilot_statuses",
           "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "breakdown",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": null
+          "value": {
+            "PENDING_APPROVAL": 21
+          }
         },
         {
           "baseline": null,
@@ -1384,7 +1386,7 @@
       ]
     }
   },
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-08-26",
   "low_data_reasons": [
     "affiliate_funnel.affiliate_clicks_28d: sample below guard",
     "affiliate_funnel.click_rate: sample below guard",

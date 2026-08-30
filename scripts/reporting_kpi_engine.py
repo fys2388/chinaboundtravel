@@ -526,7 +526,11 @@ def build_affiliate() -> dict:
 # K. Social Growth (P1-GROWTH-29)
 # --------------------------------------------------------------------------
 def build_social_growth() -> dict:
-    pilot = _read_csv(REPORTS / "social" / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv")
+    pilot_path = REPORTS / "social" / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv"
+    # GROWTH-29 pilot retired (superseded by social-engine-daily). Missing source
+    # must degrade to NOT_AVAILABLE, never silent 0.
+    pilot_available = pilot_path.exists()
+    pilot = [] if not pilot_available else _read_csv(pilot_path)
     inventory = _read_json(Path(BASE) / "content" / "social" / "inventory.json") or {}
     items = inventory.get("items", [])
     by_platform = {}
@@ -538,26 +542,35 @@ def build_social_growth() -> dict:
         s = r.get("status", "unknown")
         pilot_statuses[s] = pilot_statuses.get(s, 0) + 1
     published = [i for i in items if i.get("status") == "已发布"]
-    pilot_days = len({r.get("scheduled_at_utc", "")[:10] for r in pilot})
+    pilot_days = len({r.get("scheduled_at_utc", "") for r in pilot})
+    if pilot_available:
+        _pilot_slots = len(pilot)
+        _pilot_days = pilot_days
+        _pilot_pinterest = sum(1 for r in pilot if r.get("platform") == "pinterest")
+        _pilot_ig = sum(1 for r in pilot if r.get("platform") == "ig")
+        _pilot_statuses = pilot_statuses
+    else:
+        _pilot_slots = _pilot_days = _pilot_pinterest = _pilot_ig = None
+        _pilot_statuses = None
     kpis = [
-        _kpi("pilot_slots", "GROWTH-29 social pilot scheduled slots", len(pilot),
-             "slots", "LOCAL",
+        _kpi("pilot_slots", "GROWTH-29 social pilot scheduled slots (retired; superseded by social-engine-daily)",
+             _pilot_slots, "slots", "LOCAL",
              "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
              "count pilot schedule rows", "daily", None, "2026-08-26"),
-        _kpi("pilot_days", "GROWTH-29 pilot scheduling window (days)", pilot_days,
+        _kpi("pilot_days", "GROWTH-29 pilot scheduling window (days)", _pilot_days,
              "days", "LOCAL",
              "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
              "unique dates in pilot schedule", "daily", None, "2026-08-26"),
         _kpi("pilot_pinterest_slots", "Pinterest slots in pilot (2/day target)",
-             sum(1 for r in pilot if r.get("platform") == "pinterest"), "slots",
+             _pilot_pinterest, "slots",
              "LOCAL", "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
              "count platform=pinterest rows", "daily", None, "2026-08-26"),
         _kpi("pilot_ig_slots", "Instagram slots in pilot (1/day target)",
-             sum(1 for r in pilot if r.get("platform") == "ig"), "slots",
+             _pilot_ig, "slots",
              "LOCAL", "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
              "count platform=ig rows", "daily", None, "2026-08-26"),
         _kpi("pilot_statuses", "Pilot slots by approval status",
-             pilot_statuses, "breakdown", "LOCAL",
+             _pilot_statuses, "breakdown", "LOCAL",
              "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
              "group by status", "daily", None, "2026-08-26"),
         _kpi("inventory_items", "Social asset inventory items",
@@ -651,12 +664,15 @@ def build_content_trust() -> dict:
 # M. Growth Funnel (Social -> Website -> Content -> CTA -> Affiliate -> Revenue)
 # --------------------------------------------------------------------------
 def build_growth_funnel() -> dict:
-    funnel = _read_csv(REPORTS / "social" / "P1_GROWTH_29_GROWTH_FUNNEL.csv")
+    funnel_path = REPORTS / "social" / "P1_GROWTH_29_GROWTH_FUNNEL.csv"
+    # Source retired (superseded by social-engine-daily): missing -> NOT_AVAILABLE, never silent 0.
+    funnel_available = funnel_path.exists()
+    funnel = [] if not funnel_available else _read_csv(funnel_path)
     revenue_values = [_num(r.get("revenue")) for r in funnel]
     revenue_ok = any(v is not None for v in revenue_values)
     kpis = [
-        _kpi("funnel_rows", "Growth funnel tracked social items", len(funnel),
-             "rows", "LOCAL",
+        _kpi("funnel_rows", "Growth funnel tracked social items (source retired; superseded by social-engine-daily)",
+             len(funnel) if funnel_available else None, "rows", "LOCAL",
              "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
              "count funnel rows", "daily", None, "2026-08-26"),
         _kpi("affiliate_clicks", "Affiliate clicks attributed to social",
