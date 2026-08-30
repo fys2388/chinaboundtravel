@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChinaBound Travel - 统一运营仪表盘</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header .subtitle { opacity: 0.9; font-size: 14px; }
+        .header .update-time { margin-top: 10px; font-size: 12px; opacity: 0.8; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .section-title { font-size: 18px; font-weight: 600; margin-bottom: 20px; color: #333; display: flex; align-items: center; gap: 10px; }
+        .section-title .icon { width: 24px; height: 24px; background: #667eea; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .metric-card { background: #f8f9fc; border-radius: 10px; padding: 16px; border-left: 4px solid #667eea; }
+        .metric-card .label { font-size: 12px; color: #888; margin-bottom: 6px; text-transform: uppercase; }
+        .metric-card .value { font-size: 24px; font-weight: 700; color: #333; }
+        .metric-card .trend { font-size: 12px; margin-top: 6px; }
+        .trend.up { color: #10b981; }
+        .trend.down { color: #ef4444; }
+        .trend.stable { color: #f59e0b; }
+        .maturity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+        .maturity-card { background: #f8f9fc; border-radius: 10px; padding: 16px; text-align: center; }
+        .maturity-card .name { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .maturity-card .level { font-size: 20px; font-weight: 700; color: #667eea; margin-bottom: 8px; }
+        .maturity-card .target { font-size: 11px; color: #888; margin-bottom: 10px; }
+        .progress-bar { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 3px; transition: width 0.3s; }
+        .progress-fill.complete { background: linear-gradient(90deg, #10b981, #059669); }
+        .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .status-badge.complete { background: #d1fae5; color: #065f46; }
+        .status-badge.progress { background: #fef3c7; color: #92400e; }
+        .status-badge.high { background: #fee2e2; color: #991b1b; }
+        .status-badge.medium { background: #fef3c7; color: #92400e; }
+        .status-badge.low { background: #dbeafe; color: #1e40af; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f8f9fc; font-weight: 600; font-size: 13px; color: #555; }
+        td { font-size: 14px; }
+        tr:hover { background: #f8f9fc; }
+        .funnel { display: flex; flex-direction: column; gap: 8px; }
+        .funnel-stage { display: flex; align-items: center; gap: 12px; }
+        .funnel-bar { height: 32px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 600; min-width: 100px; }
+        .funnel-label { font-size: 13px; min-width: 120px; }
+        .funnel-metric { font-size: 12px; color: #888; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } }
+        .footer { text-align: center; padding: 20px; color: #888; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 ChinaBound Travel 统一运营仪表盘</h1>
+        <div class="subtitle">7大AI Agent协同运营 · 数据驱动决策 · 持续进化优化</div>
+        <div class="update-time">最后更新: 2026-08-31 00:28:41 | 数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地扫描</div>
+    </div>
+
+    <div class="container">
+        <!-- 核心指标概览 -->
+        <div class="section">
+            <div class="section-title"><div class="icon">📊</div>核心指标概览</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="label">周访客数</div>
+                    <div class="value">待接入</div>
+                    <div class="trend stable">趋势: stable</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">周联盟点击</div>
+                    <div class="value">待接入</div>
+                    <div class="trend stable">趋势: stable</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">文章总数</div>
+                    <div class="value">59</div>
+                    <div class="trend stable">平均质量分: 66.24697336561744</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">社媒总展示</div>
+                    <div class="value">21,411</div>
+                    <div class="trend stable">互动率: 5.58%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">已索引页面</div>
+                    <div class="value">53</div>
+                    <div class="trend stable">覆盖率: 89.8%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">CTA覆盖率</div>
+                    <div class="value">88.3%</div>
+                    <div class="trend stable">瓶颈: 3个</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">用户分层</div>
+                    <div class="value">5个</div>
+                    <div class="trend stable">新访客: 70.0%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">FAQ知识库</div>
+                    <div class="value">12条</div>
+                    <div class="trend stable">留存策略: 8个</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent成熟度 -->
+        <div class="section">
+            <div class="section-title"><div class="icon">🤖</div>7大AI Agent成熟度</div>
+            <div class="maturity-grid">
+                
+                <div class="maturity-card">
+                    <div class="name">SEO优化</div>
+                    <div class="level">L2</div>
+                    <div class="target">目标: L3</div>
+                    <div class="progress-bar"><div class="progress-fill " style="width: 67%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge progress">进行中</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">自我学习</div>
+                    <div class="level">L1</div>
+                    <div class="target">目标: L2</div>
+                    <div class="progress-bar"><div class="progress-fill " style="width: 50%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge progress">进行中</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">数据分析</div>
+                    <div class="level">L3</div>
+                    <div class="target">目标: L3</div>
+                    <div class="progress-bar"><div class="progress-fill complete" style="width: 100%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge complete">已达标</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">转化优化</div>
+                    <div class="level">L3</div>
+                    <div class="target">目标: L3</div>
+                    <div class="progress-bar"><div class="progress-fill complete" style="width: 100%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge complete">已达标</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">内容生产</div>
+                    <div class="level">L4</div>
+                    <div class="target">目标: L4</div>
+                    <div class="progress-bar"><div class="progress-fill complete" style="width: 100%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge complete">已达标</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">社媒运营</div>
+                    <div class="level">L3</div>
+                    <div class="target">目标: L3</div>
+                    <div class="progress-bar"><div class="progress-fill complete" style="width: 100%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge complete">已达标</span></div>
+                </div>
+                
+                <div class="maturity-card">
+                    <div class="name">用户运营</div>
+                    <div class="level">L2</div>
+                    <div class="target">目标: L2</div>
+                    <div class="progress-bar"><div class="progress-fill complete" style="width: 100%"></div></div>
+                    <div style="margin-top: 8px;"><span class="status-badge complete">已达标</span></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="two-column">
+            <!-- 用户旅程漏斗 -->
+            <div class="section">
+                <div class="section-title"><div class="icon">🛤️</div>用户旅程漏斗分析</div>
+                <div class="funnel">
+                    <div class="funnel-stage">
+                        <div class="funnel-label">认知阶段</div>
+                        <div class="funnel-bar" style="width: 100%;">100%</div>
+                        <div class="funnel-metric">流失45% | 首屏优化</div>
+                    </div>
+                    <div class="funnel-stage">
+                        <div class="funnel-label">兴趣阶段</div>
+                        <div class="funnel-bar" style="width: 55%;">55%</div>
+                        <div class="funnel-metric">流失35% | 内容深度</div>
+                    </div>
+                    <div class="funnel-stage">
+                        <div class="funnel-label">考虑阶段</div>
+                        <div class="funnel-bar" style="width: 35%;">35%</div>
+                        <div class="funnel-metric">流失25% | 实用工具</div>
+                    </div>
+                    <div class="funnel-stage">
+                        <div class="funnel-label">转化阶段</div>
+                        <div class="funnel-bar" style="width: 15%;">15%</div>
+                        <div class="funnel-metric">流失60% | CTA优化</div>
+                    </div>
+                    <div class="funnel-stage">
+                        <div class="funnel-label">留存阶段</div>
+                        <div class="funnel-bar" style="width: 10%;">10%</div>
+                        <div class="funnel-metric">流失50% | 邮件序列</div>
+                    </div>
+                    <div class="funnel-stage">
+                        <div class="funnel-label">倡导阶段</div>
+                        <div class="funnel-bar" style="width: 5%; background: linear-gradient(90deg, #10b981, #059669);">5%</div>
+                        <div class="funnel-metric">忠诚用户 | 推荐计划</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 社媒平台表现 -->
+            <div class="section">
+                <div class="section-title"><div class="icon">📱</div>社媒平台表现</div>
+                <table>
+                    <thead>
+                        <tr><th>平台</th><th>展示</th><th>点击</th><th>CTR</th><th>互动率</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pinterest</td><td>9,248</td><td>364</td><td>3.94%</td><td>5.87%</td></tr>
+                        <tr><td>Instagram</td><td>4,725</td><td>94</td><td>1.99%</td><td>5.07%</td></tr>
+                        <tr><td>Facebook</td><td>2,889</td><td>81</td><td>2.80%</td><td>5.04%</td></tr>
+                        <tr><td>X (Twitter)</td><td>2,482</td><td>121</td><td>4.88%</td><td>5.03%</td></tr>
+                        <tr><td>LinkedIn</td><td>2,067</td><td>119</td><td>5.76%</td><td>4.49%</td></tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 16px; padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 13px;">
+                    💡 <strong>洞察:</strong> Pinterest贡献46.7%点击，LinkedIn CTR最高(5.76%)，Instagram CTR偏低需优化
+                </div>
+            </div>
+        </div>
+
+        <!-- 优化行动计划 -->
+        <div class="section">
+            <div class="section-title"><div class="icon">🚀</div>优化行动计划（按优先级排序）</div>
+            <table>
+                <thead>
+                    <tr><th>优先级</th><th>类别</th><th>行动项</th><th>预期影响</th><th>实施难度</th></tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><span class="status-badge high">HIGH</span></td>
+                        <td>转化</td>
+                        <td>优化CTA位置和文案，提升考虑→转化阶段转化率</td>
+                        <td>高</td>
+                        <td>中</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge high">HIGH</span></td>
+                        <td>留存</td>
+                        <td>建立邮件订阅序列，提升留存阶段回访率</td>
+                        <td>高</td>
+                        <td>中</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge high">HIGH</span></td>
+                        <td>认知</td>
+                        <td>优化首页首屏内容，降低认知阶段跳出率</td>
+                        <td>高</td>
+                        <td>低</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge medium">MEDIUM</span></td>
+                        <td>内容</td>
+                        <td>优化17篇高优先级文章，提升内容质量分</td>
+                        <td>中</td>
+                        <td>高</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge medium">MEDIUM</span></td>
+                        <td>社媒</td>
+                        <td>增加Pinterest发布频率，利用高CTR优势</td>
+                        <td>中</td>
+                        <td>低</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge medium">MEDIUM</span></td>
+                        <td>SEO</td>
+                        <td>提交更多页面到GSC，提升索引量</td>
+                        <td>中</td>
+                        <td>低</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge low">LOW</span></td>
+                        <td>用户</td>
+                        <td>完善FAQ知识库，提升智能客服能力</td>
+                        <td>低</td>
+                        <td>中</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="status-badge low">LOW</span></td>
+                        <td>数据</td>
+                        <td>接入真实GA4/GSC API数据，替换样本数据</td>
+                        <td>低</td>
+                        <td>高</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Agent协同机制 -->
+        <div class="section">
+            <div class="section-title"><div class="icon">🔗</div>Agent协同工作流</div>
+            <div style="background: #f8f9fc; border-radius: 10px; padding: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                        <div style="font-size: 24px;">🔍</div>
+                        <div style="font-size: 12px; font-weight: 600; margin-top: 4px;">SEO Agent</div>
+                        <div style="font-size: 10px; color: #888;">发现搜索机会</div>
+                    </div>
+                    <div style="font-size: 20px; color: #667eea;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                        <div style="font-size: 24px;">📝</div>
+                        <div style="font-size: 12px; font-weight: 600; margin-top: 4px;">内容 Agent</div>
+                        <div style="font-size: 10px; color: #888;">生成高质量文章</div>
+                    </div>
+                    <div style="font-size: 20px; color: #667eea;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                        <div style="font-size: 24px;">📱</div>
+                        <div style="font-size: 12px; font-weight: 600; margin-top: 4px;">社媒 Agent</div>
+                        <div style="font-size: 10px; color: #888;">多平台分发推广</div>
+                    </div>
+                    <div style="font-size: 20px; color: #667eea;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                        <div style="font-size: 24px;">👥</div>
+                        <div style="font-size: 12px; font-weight: 600; margin-top: 4px;">用户 Agent</div>
+                        <div style="font-size: 10px; color: #888;">分析行为反馈</div>
+                    </div>
+                    <div style="font-size: 20px; color: #667eea;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                        <div style="font-size: 24px;">🧠</div>
+                        <div style="font-size: 12px; font-weight: 600; margin-top: 4px;">自我学习</div>
+                        <div style="font-size: 10px; color: #888;">优化策略迭代</div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 13px; color: #555;">
+                    <strong>数据闭环:</strong> 收入Agent + 转化Agent持续监控效果，数据反馈到自我学习引擎，实现持续优化
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>ChinaBound Travel 统一运营仪表盘 | 由7大AI Agent协同生成 | 2026-08-31 00:28:41</p>
+        <p style="margin-top: 8px;">数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地内容扫描</p>
+    </div>
+</body>
+</html>

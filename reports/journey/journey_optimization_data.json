@@ -1,0 +1,230 @@
+{
+  "awareness": {
+    "stage": "认知阶段",
+    "bounce_rate": "45%",
+    "issues_found": 2,
+    "issues": [
+      {
+        "type": "加载速度优化",
+        "severity": "medium",
+        "detail": "响应时间577ms，建议优化至300ms以下（图片压缩、CDN缓存、懒加载）"
+      },
+      {
+        "type": "移动端体验",
+        "severity": "medium",
+        "detail": "移动端用户占37.6%，需确保首屏在移动端清晰展示价值主张和CTA"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "title": "优化首页首屏价值主张",
+        "description": "在首屏明确展示：'ChinaBound Travel - 你的中国旅行指南，提供真实、实用的旅行攻略和工具'",
+        "expected_impact": "降低跳出率15-25%",
+        "implementation": "修改首页banner文案，添加清晰的副标题和价值描述",
+        "effort": "low"
+      },
+      {
+        "priority": "high",
+        "title": "首屏添加明确CTA按钮",
+        "description": "添加2个CTA按钮：'开始规划行程'（主按钮）和'浏览热门攻略'（次按钮）",
+        "expected_impact": "提升点击率20-30%",
+        "implementation": "在首页banner下方添加CTA按钮组，链接到热门文章和行程规划页面",
+        "effort": "low"
+      },
+      {
+        "priority": "medium",
+        "title": "优化网站加载速度",
+        "description": "图片压缩、启用Cloudflare缓存、图片懒加载、最小化CSS/JS",
+        "expected_impact": "降低跳出率10-15%，提升SEO排名",
+        "implementation": "配置Cloudflare Cache Rule，压缩所有图片，启用懒加载",
+        "effort": "medium"
+      },
+      {
+        "priority": "medium",
+        "title": "移动端首屏优化",
+        "description": "确保移动端首屏在3秒内加载完成，价值主张和CTA在首屏可见",
+        "expected_impact": "提升移动端转化率15-20%",
+        "implementation": "响应式设计优化，移动端专用CTA布局",
+        "effort": "medium"
+      },
+      {
+        "priority": "low",
+        "title": "添加社会证明元素",
+        "description": "在首屏添加用户评价、阅读量、订阅人数等社会证明",
+        "expected_impact": "提升信任度10-15%",
+        "implementation": "添加用户评价轮播、统计数据展示",
+        "effort": "medium"
+      }
+    ],
+    "expected_improvement": "降低跳出率15-25%，提升页面浏览深度20-30%"
+  },
+  "conversion": {
+    "stage": "转化阶段",
+    "bounce_rate": "60%",
+    "cta_coverage": "64.4%",
+    "total_articles": 59,
+    "articles_with_cta": 38,
+    "issues_found": 4,
+    "issues": [
+      {
+        "type": "CTA覆盖率不足",
+        "severity": "high",
+        "detail": "仅64.4%的文章包含联盟链接或CTA，目标100%"
+      },
+      {
+        "type": "CTA位置优化",
+        "severity": "high",
+        "detail": "CTA应出现在文章中部（用户阅读高峰）和底部（决策点），而非仅在顶部"
+      },
+      {
+        "type": "信任信号缺失",
+        "severity": "medium",
+        "detail": "联盟链接附近缺少价格保证、免费取消、用户评价等信任信号"
+      },
+      {
+        "type": "转化流程复杂",
+        "severity": "medium",
+        "detail": "用户从点击到预订需多次跳转，建议在新标签页打开，保留原页面"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "title": "CTA位置优化 - 文章中部插入",
+        "description": "在每篇文章的中部（约50%位置）插入相关的联盟推荐区块，包含酒店/交通/门票推荐",
+        "expected_impact": "提升联盟点击率30-50%",
+        "implementation": "创建文章中部CTA模板，自动根据文章主题推荐相关产品",
+        "effort": "medium"
+      },
+      {
+        "priority": "high",
+        "title": "优化CTA文案 - 从'预订'到'查看价格'",
+        "description": "使用'查看今日最低价'、'比较酒店价格'等低压力文案，替代'立即预订'",
+        "expected_impact": "提升CTA点击率20-30%",
+        "implementation": "批量修改文章底部CTA文案，A/B测试不同文案效果",
+        "effort": "low"
+      },
+      {
+        "priority": "high",
+        "title": "添加信任信号 - 价格保证和免费取消",
+        "description": "在联盟链接附近添加'免费取消'、'价格匹配保证'、'1000+评价'等信任信号",
+        "expected_impact": "提升转化率15-25%",
+        "implementation": "创建信任信号组件，在所有联盟推荐区块显示",
+        "effort": "medium"
+      },
+      {
+        "priority": "medium",
+        "title": "创建产品对比表格",
+        "description": "在热门文章中添加酒店/交通/门票对比表格，包含价格、评分、特色、链接",
+        "expected_impact": "提升决策效率和转化率20-30%",
+        "implementation": "创建产品对比表格模板，为Top10文章手动添加",
+        "effort": "high"
+      },
+      {
+        "priority": "medium",
+        "title": "退出意图弹窗 - 最后机会优惠",
+        "description": "当用户试图离开页面时，显示'获取中国旅行省钱指南'弹窗，收集邮件并推荐优惠",
+        "expected_impact": "挽回5-10%的流失用户，增加邮件订阅",
+        "implementation": "添加退出意图弹窗脚本，配置MailerLite集成",
+        "effort": "medium"
+      },
+      {
+        "priority": "low",
+        "title": "优化联盟链接打开方式",
+        "description": "所有联盟链接在新标签页打开，保留用户在原页面，降低流失",
+        "expected_impact": "降低跳出率5-10%",
+        "implementation": "批量修改所有联盟链接，添加target='_blank'",
+        "effort": "low"
+      }
+    ],
+    "expected_improvement": "提升联盟点击率30-50%，提升转化率15-25%"
+  },
+  "retention": {
+    "stage": "留存阶段",
+    "bounce_rate": "50%",
+    "current_subscribers": 1,
+    "issues_found": 4,
+    "issues": [
+      {
+        "type": "邮件订阅率低",
+        "severity": "high",
+        "detail": "总订阅仅1人，订阅CTA覆盖不足，缺少Lead Magnet"
+      },
+      {
+        "type": "回访激励缺失",
+        "severity": "high",
+        "detail": "没有邮件序列、推送通知、会员内容等回访激励机制"
+      },
+      {
+        "type": "个性化推荐不足",
+        "severity": "medium",
+        "detail": "文章底部相关推荐基于标签，未基于用户行为个性化"
+      },
+      {
+        "type": "社区互动缺失",
+        "severity": "medium",
+        "detail": "没有评论区、论坛、社媒群组等用户互动渠道"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "title": "创建7天邮件欢迎序列",
+        "description": "新订阅者收到7封邮件：Day1欢迎+资源包、Day2行程规划、Day3交通指南、Day4美食推荐、Day5签证须知、Day6省钱技巧、Day7高级攻略+联盟推荐",
+        "expected_impact": "提升回访率30-50%，提升联盟收入20-30%",
+        "implementation": "在MailerLite中创建自动化邮件序列，编写7封邮件内容",
+        "effort": "high"
+      },
+      {
+        "priority": "high",
+        "title": "优化Lead Magnet - 中国旅行省钱指南",
+        "description": "创建'中国旅行省钱指南PDF'（包含10个省钱技巧、5个免费资源、3个优惠码），在所有文章底部和侧边栏推广",
+        "expected_impact": "提升邮件订阅率200-300%",
+        "implementation": "创建PDF内容，设计美观封面，配置MailerLite自动发送",
+        "effort": "medium"
+      },
+      {
+        "priority": "high",
+        "title": "文章底部订阅CTA优化",
+        "description": "在每篇文章底部添加订阅区块：'获取中国旅行每周攻略 + 独家省钱技巧'，包含输入框和订阅按钮",
+        "expected_impact": "提升订阅率50-100%",
+        "implementation": "创建文章底部订阅模板，批量添加到所有文章",
+        "effort": "medium"
+      },
+      {
+        "priority": "medium",
+        "title": "创建会员专属内容区",
+        "description": "为订阅者提供专属内容：高级行程模板、独家优惠码、直播问答、提前访问新文章",
+        "expected_impact": "提升订阅价值感和留存率20-30%",
+        "implementation": "创建会员页面，配置内容访问权限",
+        "effort": "high"
+      },
+      {
+        "priority": "medium",
+        "title": "推送通知 - 新文章提醒",
+        "description": "启用浏览器推送通知，新文章发布时自动推送给订阅用户",
+        "expected_impact": "提升回访率15-25%",
+        "implementation": "集成OneSignal或类似推送服务，配置自动推送",
+        "effort": "medium"
+      },
+      {
+        "priority": "medium",
+        "title": "个性化相关文章推荐",
+        "description": "基于用户阅读历史和热门文章，优化文章底部相关推荐算法",
+        "expected_impact": "提升页面浏览深度20-30%",
+        "implementation": "优化Hugo相关文章模板，基于标签和分类加权",
+        "effort": "medium"
+      },
+      {
+        "priority": "low",
+        "title": "添加评论区和社交分享",
+        "description": "集成Giscus或Disqus评论系统，添加社媒分享按钮，促进用户互动",
+        "expected_impact": "提升用户参与度和回访率10-15%",
+        "implementation": "集成评论系统，添加分享按钮",
+        "effort": "low"
+      }
+    ],
+    "expected_improvement": "提升回访率30-50%，邮件订阅增长200-300%"
+  }
+}
