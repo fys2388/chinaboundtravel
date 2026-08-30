@@ -1,9 +1,9 @@
 {
   "month_post_count": 12,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-30 03:37:11",
+  "last_social_publish": "2026-08-30 03:38:13",
   "daily_social_publish_date": "2026-08-30",
-  "daily_social_publish_count": 2,
+  "daily_social_publish_count": 4,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -133,7 +133,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home",
     "china-bargaining-and-shopping-guide",
     "chinabound-travel-guide-2026-07-monthly-update",
     "china-family-travel-tips-a-californians-guide",
@@ -162,6 +161,7 @@
     "china-high-speed-train-survival-guide-booking-classes-and-insider-tips",
     "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026",
     "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
-    "china-business-travel-guide-meetings-dining-and-networking"
+    "china-business-travel-guide-meetings-dining-and-networking",
+    "shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide"
   ]
 }
