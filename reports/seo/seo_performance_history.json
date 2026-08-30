@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "keyword": "china travel guide 2026",
+      "date": "2026-08-31T01:10:15.354830",
+      "metrics": {
+        "impressions": 5000,
+        "clicks": 150,
+        "ctr": 0.03,
+        "position": 8.5,
+        "search_volume": 2000,
+        "difficulty": 60
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 150.0,
+        "priority_score": 0.9411764705882353
+      }
+    },
+    {
+      "keyword": "144 hour visa free transit china",
+      "date": "2026-08-31T01:10:15.354855",
+      "metrics": {
+        "impressions": 3000,
+        "clicks": 120,
+        "ctr": 0.04,
+        "position": 5.2,
+        "search_volume": 1500,
+        "difficulty": 35
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 120.0,
+        "priority_score": 1.8749999999999998
+      }
+    },
+    {
+      "keyword": "best hotels in beijing",
+      "date": "2026-08-31T01:10:15.354881",
+      "metrics": {
+        "impressions": 8000,
+        "clicks": 200,
+        "ctr": 0.025,
+        "position": 12.3,
+        "search_volume": 5000,
+        "difficulty": 75
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 200.0,
+        "priority_score": 1.0162601626016259
+      }
+    },
+    {
+      "keyword": "china high speed rail guide",
+      "date": "2026-08-31T01:10:15.354892",
+      "metrics": {
+        "impressions": 2000,
+        "clicks": 80,
+        "ctr": 0.04,
+        "position": 6.8,
+        "search_volume": 1000,
+        "difficulty": 40
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 80.0,
+        "priority_score": 0.8823529411764706
+      }
+    },
+    {
+      "keyword": "what to eat in chengdu",
+      "date": "2026-08-31T01:10:15.354905",
+      "metrics": {
+        "impressions": 4000,
+        "clicks": 180,
+        "ctr": 0.045,
+        "position": 4.5,
+        "search_volume": 3000,
+        "difficulty": 50
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 180.0,
+        "priority_score": 3.333333333333333
+      }
+    },
+    {
+      "keyword": "china travel insurance for foreigners",
+      "date": "2026-08-31T01:10:15.354916",
+      "metrics": {
+        "impressions": 1500,
+        "clicks": 60,
+        "ctr": 0.04,
+        "position": 7.2,
+        "search_volume": 800,
+        "difficulty": 30
+      },
+      "pages": [],
+      "calculated": {
+        "traffic_potential": 60.0,
+        "priority_score": 0.7777777777777778
+      }
+    }
+  ],
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:10:15.354927"
+}

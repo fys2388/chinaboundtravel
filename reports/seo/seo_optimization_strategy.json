@@ -1,0 +1,116 @@
+{
+  "version": "2.0-20260831_011015",
+  "last_updated": "2026-08-31T01:10:15.355805",
+  "keyword_rules": {
+    "target_difficulty": "low_medium",
+    "min_search_volume": 100,
+    "max_keyword_density": 2.5,
+    "min_keyword_density": 0.5,
+    "long_tail_priority": true
+  },
+  "on_page_rules": {
+    "title_length": "50-60",
+    "meta_description_length": "150-160",
+    "heading_structure": "H1-H2-H3",
+    "internal_links_min": 3,
+    "external_links_min": 1,
+    "image_alt_required": true,
+    "schema_required": true,
+    "url_friendly": true
+  },
+  "best_keywords": [
+    {
+      "keyword": "what to eat in chengdu",
+      "ctr": 0.045,
+      "position": 4.5,
+      "impressions": 4000
+    },
+    {
+      "keyword": "144 hour visa free transit china",
+      "ctr": 0.04,
+      "position": 5.2,
+      "impressions": 3000
+    },
+    {
+      "keyword": "china high speed rail guide",
+      "ctr": 0.04,
+      "position": 6.8,
+      "impressions": 2000
+    },
+    {
+      "keyword": "china travel insurance for foreigners",
+      "ctr": 0.04,
+      "position": 7.2,
+      "impressions": 1500
+    },
+    {
+      "keyword": "china travel guide 2026",
+      "ctr": 0.03,
+      "position": 8.5,
+      "impressions": 5000
+    },
+    {
+      "keyword": "best hotels in beijing",
+      "ctr": 0.025,
+      "position": 12.3,
+      "impressions": 8000
+    }
+  ],
+  "best_pages": [],
+  "high_priority_keywords": [
+    {
+      "keyword": "best hotels in beijing",
+      "traffic_potential": 200.0,
+      "position": 12.3
+    },
+    {
+      "keyword": "what to eat in chengdu",
+      "traffic_potential": 180.0,
+      "position": 4.5
+    },
+    {
+      "keyword": "china travel guide 2026",
+      "traffic_potential": 150.0,
+      "position": 8.5
+    },
+    {
+      "keyword": "144 hour visa free transit china",
+      "traffic_potential": 120.0,
+      "position": 5.2
+    },
+    {
+      "keyword": "china high speed rail guide",
+      "traffic_potential": 80.0,
+      "position": 6.8
+    }
+  ],
+  "learning_insights": [
+    {
+      "pattern": "高CTR关键词特征",
+      "description": "'what to eat in chengdu'CTR最高，达到 4.5%，排名 4.5",
+      "recommendation": "分析该关键词的标题和描述模式，复制到其他关键词"
+    },
+    {
+      "pattern": "快速提升机会关键词",
+      "description": "发现 5 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+      "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
+      "keywords": [
+        "china travel guide 2026",
+        "144 hour visa free transit china",
+        "china high speed rail guide",
+        "what to eat in chengdu",
+        "china travel insurance for foreigners"
+      ]
+    }
+  ],
+  "strategy_changes": [
+    {
+      "field": "best_keywords",
+      "reason": "基于GSC数据分析，更新最佳关键词排名"
+    },
+    {
+      "field": "high_priority_keywords",
+      "reason": "基于流量潜力分析，更新高优先级关键词"
+    }
+  ]
+}

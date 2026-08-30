@@ -1,0 +1,122 @@
+{
+  "version": "2.0-20260831_011015",
+  "last_updated": "2026-08-31T01:10:15.283991",
+  "cta_rules": {
+    "positions": [
+      "article_middle",
+      "article_bottom",
+      "sidebar"
+    ],
+    "types": [
+      "text_link",
+      "button",
+      "banner",
+      "product_card"
+    ],
+    "best_practices": {
+      "button_text": "Check prices",
+      "min_ctas_per_article": 2,
+      "max_ctas_per_article": 4,
+      "use_urgency": true,
+      "use_social_proof": true
+    }
+  },
+  "product_rules": {
+    "priority_products": [
+      "hotels",
+      "flights",
+      "trains",
+      "esim",
+      "insurance",
+      "tours"
+    ],
+    "best_matching": {
+      "city_guide": [
+        "hotels",
+        "tours",
+        "transfers"
+      ],
+      "transport_guide": [
+        "flights",
+        "trains",
+        "car_rental"
+      ],
+      "travel_tips": [
+        "esim",
+        "insurance",
+        "visa"
+      ],
+      "itinerary": [
+        "hotels",
+        "tours",
+        "flights"
+      ]
+    }
+  },
+  "best_cta_types": [
+    {
+      "type": "product_card",
+      "revenue_per_click": 1.7777777777777777,
+      "ctr": 0.075,
+      "conversion_rate": 0.08888888888888889
+    },
+    {
+      "type": "button",
+      "revenue_per_click": 0.9,
+      "ctr": 0.05,
+      "conversion_rate": 0.04
+    },
+    {
+      "type": "text_link",
+      "revenue_per_click": 0.75,
+      "ctr": 0.05,
+      "conversion_rate": 0.075
+    },
+    {
+      "type": "banner",
+      "revenue_per_click": 0.4,
+      "ctr": 0.025,
+      "conversion_rate": 0.03333333333333333
+    }
+  ],
+  "best_cta_positions": [
+    {
+      "position": "article_bottom",
+      "ctr": 0.059375,
+      "conversion_rate": 0.06315789473684211
+    },
+    {
+      "position": "article_middle",
+      "ctr": 0.05,
+      "conversion_rate": 0.075
+    },
+    {
+      "position": "sidebar",
+      "ctr": 0.025,
+      "conversion_rate": 0.03333333333333333
+    }
+  ],
+  "high_conversion_pages": [],
+  "learning_insights": [
+    {
+      "pattern": "高转化CTA类型",
+      "description": "product_card类型CTA表现最好，每次点击收入 $1.78，CTR 7.5%",
+      "recommendation": "优先使用product_card类型CTA"
+    },
+    {
+      "pattern": "高转化CTA位置",
+      "description": "article_bottom位置CTR最高，达到 5.9%",
+      "recommendation": "确保每篇文章在article_bottom都有CTA"
+    }
+  ],
+  "strategy_changes": [
+    {
+      "field": "best_cta_types",
+      "reason": "基于转化数据分析，更新最佳CTA类型排名"
+    },
+    {
+      "field": "best_cta_positions",
+      "reason": "基于转化数据分析，更新最佳CTA位置排名"
+    }
+  ]
+}

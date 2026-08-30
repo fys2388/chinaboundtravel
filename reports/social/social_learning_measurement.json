@@ -1,0 +1,63 @@
+{
+  "measurements": [
+    {
+      "measurement_id": "measure_20260831_010704",
+      "date": "2026-08-31T01:07:04.435960",
+      "overall_metrics": {
+        "count": 50,
+        "total_impressions": 21411,
+        "total_clicks": 779,
+        "total_engagement": 1194,
+        "avg_ctr": 0.03638316753070851,
+        "avg_engagement_rate": 0.055765727896875436,
+        "platforms": {
+          "instagram": {
+            "count": 10,
+            "impressions": 4725,
+            "clicks": 94,
+            "engagement": 259,
+            "ctr": 0.019894179894179895,
+            "engagement_rate": 0.054814814814814816
+          },
+          "facebook": {
+            "count": 10,
+            "impressions": 2889,
+            "clicks": 81,
+            "engagement": 145,
+            "ctr": 0.028037383177570093,
+            "engagement_rate": 0.05019037729318103
+          },
+          "pinterest": {
+            "count": 10,
+            "impressions": 9248,
+            "clicks": 364,
+            "engagement": 567,
+            "ctr": 0.0393598615916955,
+            "engagement_rate": 0.061310553633217996
+          },
+          "x": {
+            "count": 10,
+            "impressions": 2482,
+            "clicks": 121,
+            "engagement": 123,
+            "ctr": 0.048751007252215955,
+            "engagement_rate": 0.04955680902497985
+          },
+          "linkedin": {
+            "count": 10,
+            "impressions": 2067,
+            "clicks": 119,
+            "engagement": 100,
+            "ctr": 0.05757135945815191,
+            "engagement_rate": 0.04837929366231253
+          }
+        }
+      },
+      "strategy_changes_count": 0,
+      "data_points": 50,
+      "conclusion": "策略效果良好：CTR或互动率超过3%，Social Learning闭环基本有效"
+    }
+  ],
+  "last_updated": "2026-08-31T01:07:04.435968",
+  "version": "1.0"
+}

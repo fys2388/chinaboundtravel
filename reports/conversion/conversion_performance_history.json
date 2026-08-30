@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "conversion_id": "sample_0",
+      "date": "2026-08-31T01:10:15.282686",
+      "cta": {
+        "type": "button",
+        "position": "article_bottom",
+        "copy": "",
+        "product": "hotels",
+        "partner": "booking"
+      },
+      "metrics": {
+        "impressions": 1000,
+        "clicks": 50,
+        "conversions": 2,
+        "revenue": 45.0
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.04,
+        "revenue_per_click": 0.9
+      }
+    },
+    {
+      "conversion_id": "sample_1",
+      "date": "2026-08-31T01:10:15.282722",
+      "cta": {
+        "type": "text_link",
+        "position": "article_middle",
+        "copy": "",
+        "product": "esim",
+        "partner": "airalo"
+      },
+      "metrics": {
+        "impressions": 800,
+        "clicks": 40,
+        "conversions": 3,
+        "revenue": 30.0
+      },
+      "calculated": {
+        "ctr": 0.05,
+        "conversion_rate": 0.075,
+        "revenue_per_click": 0.75
+      }
+    },
+    {
+      "conversion_id": "sample_2",
+      "date": "2026-08-31T01:10:15.282736",
+      "cta": {
+        "type": "banner",
+        "position": "sidebar",
+        "copy": "",
+        "product": "insurance",
+        "partner": "safetywing"
+      },
+      "metrics": {
+        "impressions": 1200,
+        "clicks": 30,
+        "conversions": 1,
+        "revenue": 12.0
+      },
+      "calculated": {
+        "ctr": 0.025,
+        "conversion_rate": 0.03333333333333333,
+        "revenue_per_click": 0.4
+      }
+    },
+    {
+      "conversion_id": "sample_3",
+      "date": "2026-08-31T01:10:15.282748",
+      "cta": {
+        "type": "product_card",
+        "position": "article_bottom",
+        "copy": "",
+        "product": "tours",
+        "partner": "klook"
+      },
+      "metrics": {
+        "impressions": 600,
+        "clicks": 45,
+        "conversions": 4,
+        "revenue": 80.0
+      },
+      "calculated": {
+        "ctr": 0.075,
+        "conversion_rate": 0.08888888888888889,
+        "revenue_per_click": 1.7777777777777777
+      }
+    }
+  ],
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:10:15.282763"
+}

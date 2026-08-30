@@ -1,0 +1,25 @@
+{
+  "version": "2.0-20260831_011015",
+  "last_updated": "2026-08-31T01:10:15.212062",
+  "content_rules": {
+    "min_word_count": 1500,
+    "target_word_count": 2000,
+    "keyword_density_min": 0.5,
+    "keyword_density_max": 2.5,
+    "internal_links_min": 3,
+    "external_links_min": 1,
+    "cta_required": true,
+    "schema_required": true,
+    "image_alt_required": true
+  },
+  "best_practices": {
+    "title_length": "50-60字符",
+    "meta_description_length": "150-160字符",
+    "heading_structure": "H1-H2-H3层级清晰",
+    "paragraph_length": "每段不超过4行",
+    "cta_position": "文章中部和底部"
+  },
+  "high_priority_articles": [],
+  "learning_insights": [],
+  "strategy_changes": []
+}

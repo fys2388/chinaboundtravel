@@ -1,0 +1,178 @@
+[
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "file": "",
+    "current_title": "",
+    "current_meta": "",
+    "priority": "medium",
+    "priority_score": 3.18,
+    "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 3 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "file": "",
+    "current_title": "",
+    "current_meta": "",
+    "priority": "medium",
+    "priority_score": 3.18,
+    "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
+    "estimated_impact": "优化CTR至2%可增加约 3 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+    "file": "144-hour-visa-free-transit-guide.md",
+    "current_title": "China 144-Hour Visa-Free Transit 2026: Eligible Countries & How to Apply",
+    "current_meta": "China's 144-hour visa-free transit policy in 2026: eligible countries, participating cities, application process, and tips for making the most of your 6 days. Plan your visa-free China trip today!",
+    "priority": "medium",
+    "priority_score": 2.14,
+    "suggestion": "Title过长（72字符），建议精简至50-60字符; Meta描述过长（196字符），建议精简至150-160字符",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+    "file": "",
+    "current_title": "",
+    "current_meta": "",
+    "priority": "medium",
+    "priority_score": 2.14,
+    "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+    "file": "",
+    "current_title": "",
+    "current_meta": "",
+    "priority": "medium",
+    "priority_score": 2.14,
+    "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
+    "title": "China Travel Guide: July 2026 Updates & Visa Rules",
+    "issues": [
+      "内容不足（303词）",
+      "内链不足（1条）"
+    ],
+    "priority": "medium",
+    "priority_score": 26.97,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等; 增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+    "title": "Is China Safe for Tourists in 2026? Honest Guide",
+    "issues": [
+      "内容不足（938词）"
+    ],
+    "priority": "medium",
+    "priority_score": 10.62,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
+    "title": "Where to Stay in China: Hotels & Budget Options",
+    "issues": [
+      "内链不足（1条）"
+    ],
+    "priority": "medium",
+    "priority_score": 10.0,
+    "suggestion": "增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
+    "title": "China Food Guide: Must-Try Dishes & Restaurants",
+    "issues": [
+      "缺少内链"
+    ],
+    "priority": "medium",
+    "priority_score": 10.0,
+    "suggestion": "增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
+    "title": "China Transportation Guide for European Travelers",
+    "issues": [
+      "缺少内链"
+    ],
+    "priority": "medium",
+    "priority_score": 10.0,
+    "suggestion": "增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 2.5,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 1.15,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 0.55,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 0.25,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 0.22,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  }
+]

@@ -77,7 +77,21 @@ from social_backfill import (  # noqa: E402
 # P1-OPS-04: 文案清理兜底（shortcode 剥离、描述去标题前缀、发布前校验）
 from social_text_utils import first_meaningful_desc, strip_shortcodes, validate_social_copy  # noqa: E402
 
+# P1-AI-OPS-02: Social Learning闭环 - 加载学习策略（最佳时间/Hook/CTA）
+try:
+    from social_strategy_loader import SocialStrategyLoader
+    _strategy_loader = SocialStrategyLoader()
+    _strategy_available = True
+except Exception as _e:
+    _strategy_loader = None
+    _strategy_available = False
+
 logger = setup_logger("social_agent", level="INFO", log_file="social_content_agent.log")
+
+if _strategy_available:
+    logger.info("Social Strategy Loader 已加载，版本: %s", _strategy_loader.get_strategy_version())
+else:
+    logger.warning("Social Strategy Loader 未加载，使用默认策略")
 
 # ============================================================
 # 路径 / 配置
@@ -92,6 +106,50 @@ MANIFEST_MAIN = BLOG_ROOT / "manifest.json"
 SCHEMA_VERSION = 1
 TYPES = ("knowledge", "tip", "story", "visual", "conversion")
 PLATFORMS = ("ig", "pinterest", "x", "fb")
+
+# P1-AI-OPS-02: Social Learning闭环 - 策略指导函数
+def get_strategy_guidance(platform: str) -> dict:
+    """获取特定平台的策略指导（基于Social Learning闭环学习结果）"""
+    if not _strategy_available or _strategy_loader is None:
+        return {}
+    try:
+        platform_map = {"ig": "instagram", "pinterest": "pinterest", "x": "x", "fb": "facebook"}
+        actual_platform = platform_map.get(platform, platform)
+        return _strategy_loader.generate_content_guidance(actual_platform)
+    except Exception as e:
+        logger.warning("获取策略指导失败: %s", e)
+        return {}
+
+
+def get_best_publish_times(platform: str) -> list:
+    """获取特定平台的最佳发布时间"""
+    if not _strategy_available or _strategy_loader is None:
+        return []
+    try:
+        platform_map = {"ig": "instagram", "pinterest": "pinterest", "x": "x", "fb": "facebook"}
+        actual_platform = platform_map.get(platform, platform)
+        return _strategy_loader.get_best_times(actual_platform)
+    except Exception as e:
+        logger.warning("获取最佳发布时间失败: %s", e)
+        return []
+
+
+def apply_strategy_to_caption(caption: str, platform: str, content_type: str) -> str:
+    """将学习策略应用到文案生成（添加推荐Hook/CTA提示）"""
+    if not _strategy_available:
+        return caption
+    try:
+        guidance = get_strategy_guidance(platform)
+        if guidance and guidance.get("recommended_hooks"):
+            # 在日志中记录使用的策略
+            logger.debug("应用策略到 %s 文案: Hook=%s, CTA=%s",
+                        platform,
+                        guidance.get("recommended_hooks", [])[:2],
+                        guidance.get("recommended_ctas", [])[:2])
+    except Exception as e:
+        logger.debug("应用策略到文案失败: %s", e)
+    return caption
+
 
 # 每日排期：美东黄金时段 08:00 / 18:00 / 22:00（UTC 映射见 schedule_slots）
 US_EAST_OFFSET = 4  # EDT (夏令时)；非夏令时脚本内统一按 -4 处理并在文档说明
@@ -573,12 +631,18 @@ def build_schedule(data: dict, start_date: date = None) -> list:
 
     articles = sorted(by_article)
     total = len(articles)
-    # 约 20% 文章贡献转化型：每 CONV_EVERY 篇选 1 篇转化
+    # 约 20% 文章贡献转化型：每 CONV_EVERY 篇选 1 篇转化。
+    # 注意：conversion 素材只存在于部分文章；若按排序位置硬选（idx % CONV_EVERY），
+    # 命中位置可能恰好无 conversion 素材，导致整体 0% 转化（2026-08-30 线上 80/20 断裂）。
+    # 改为从「有 conversion 待审核素材的文章」池中每 CONV_EVERY 篇取 1 篇，保证比例稳定。
     CONV_EVERY = 5
+    conv_articles = [a for a in articles
+                     if any(i["type"] in CONVERSION_TYPES for i in by_article[a])]
+    conv_pool = set(conv_articles[::CONV_EVERY])
     chosen: list[dict] = []
     for idx, art in enumerate(articles):
         items = by_article[art]
-        want_conv = (idx + 1) % CONV_EVERY == 0
+        want_conv = art in conv_pool
         conv_candidates = [i for i in items if i["type"] in CONVERSION_TYPES]
         value_candidates = [i for i in items if i["type"] in VALUE_TYPES]
         if want_conv and conv_candidates:

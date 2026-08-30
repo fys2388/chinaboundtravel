@@ -1,7 +1,7 @@
 # P1-GROWTH-28A — 全站 OG / Twitter Card 标签巡检
 
-- Generated: 2026-08-29
-- Pages audited: 258
+- Generated: 2026-08-30
+- Pages audited: 260
 - Pages with missing/invalid tags: 0
 
 全部页面 PASS：og:title/description/image/url/type + twitter:card/title/description/image + 1200×630 尺寸声明完整。
