@@ -1,9 +1,9 @@
 # REV002 Final Review (P1-GROWTH-20A)
 
-Generated: 2026-08-29  |  Gate: 2026-09-13
+Generated: 2026-08-30  |  Gate: 2026-09-13
 
 ## Status: WAITING_REVIEW_GATE
-- review date 2026-08-29 < gate 2026-09-13
+- review date 2026-08-30 < gate 2026-09-13
 - No judgement is allowed before the gate.
 - Sample guard remains: affiliate_clicks < 20 -> INSUFFICIENT_SAMPLE.
 

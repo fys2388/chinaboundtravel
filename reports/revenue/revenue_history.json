@@ -1,0 +1,53 @@
+{
+  "snapshots": [
+    {
+      "period_start": "2026-08-02",
+      "period_end": "2026-08-30",
+      "days": 28,
+      "impressions": 0,
+      "clicks": 0,
+      "inits": 0,
+      "searches": 0,
+      "bookings": 0,
+      "revenue": 0.0,
+      "click_through_rate": 0.0,
+      "init_rate": 0.0,
+      "booking_rate": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "revenue_per_booking": 0.0,
+      "avg_order_value": 0.0,
+      "data_source": "api",
+      "data_quality": "warning",
+      "notes": [
+        "API HTTP 400"
+      ]
+    },
+    {
+      "period_start": "2026-08-02",
+      "period_end": "2026-08-30",
+      "days": 28,
+      "impressions": 0,
+      "clicks": 99,
+      "inits": 0,
+      "searches": 0,
+      "bookings": 0,
+      "revenue": 0.0,
+      "click_through_rate": 0.0,
+      "init_rate": 0.0,
+      "booking_rate": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "revenue_per_booking": 0.0,
+      "avg_order_value": 0.0,
+      "data_source": "api",
+      "data_quality": "good",
+      "notes": [
+        "有点击但无预订（新站正常，需关注转化）",
+        "有点击但inits=0（可能是追踪问题）"
+      ]
+    }
+  ],
+  "total_snapshots": 2,
+  "last_updated": "2026-08-30T23:54:17.911082"
+}
