@@ -309,7 +309,9 @@ class FeishuDailyReporter:
 
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
-        search_status = "🟢" if (gsc_has_data and data.get("gsc_errors", 0) == 0) else ("🟡" if gsc_available else "⚪")
+        # 索引错误为真实 int 且 ==0 才算 🟢；未检测(None)不算；GSC 未授权用 🔴
+        search_status = ("🟢" if (gsc_has_data and isinstance(data.get("gsc_errors"), int)
+                          and data["gsc_errors"] == 0) else ("🟡" if gsc_available else "🔴"))
         
         # MailerLite 显示：认证失败/未配置时提示，避免把 API 错误当真实 0
         if data.get("ml_available"):
@@ -379,39 +381,38 @@ class FeishuDailyReporter:
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
+        # 缓存口径：28 天快照窗口独立成行，绝不冒充"昨日"（真实性修复）
+        _snap = data.get("reporting_snapshot") or {}
+        _cached_imp = _snap.get("gsc_impressions_28d")
+        gsc_cache_imp_str = f"{_cached_imp:,.0f} 次" if _cached_imp is not None else "—"
+        gsc_cache_clk_str = f"{(_snap.get('gsc_clicks_28d') or 0):,.0f} 次" if _cached_imp is not None else "—"
         if gsc_has_data:
-            gsc_impressions_str = f"{data.get('gsc_impressions', 0):,}"
-            gsc_clicks_str = f"{data.get('gsc_clicks', 0):,}"
+            gsc_auth_str = "✅ 已连接"
+            gsc_impressions_str = f"{data.get('gsc_impressions', 0):,} 次"
+            gsc_clicks_str = f"{data.get('gsc_clicks', 0):,} 次"
             gsc_ctr_str = f"{data.get('gsc_ctr', 0):.2f}%"
-            gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
-            gsc_errors_str = str(data.get('gsc_errors', 0))
+            gsc_indexed_str = f"{data.get('indexed_pages', 'N/A')} 个"
+            gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
             gsc_week_trend = data.get('gsc_week_trend', 'N/A')
             gsc_month_trend = data.get('gsc_month_trend', 'N/A')
         elif gsc_available:
-            # 已连接但昨日无搜索数据 → NOT_AVAILABLE，保留快照缓存窗口
-            _snap = data.get("reporting_snapshot") or {}
-            _cached_imp = _snap.get("gsc_impressions_28d")
-            gsc_impressions_str = f"NOT_AVAILABLE（缓存 {_cached_imp:,.0f}）" if _cached_imp is not None else "NOT_AVAILABLE"
-            gsc_clicks_str = f"NOT_AVAILABLE（缓存 {_snap.get('gsc_clicks_28d') or 0:,.0f}）" if _cached_imp is not None else "NOT_AVAILABLE"
+            # 已连接但昨日无数据：昨日列显示 NOT_AVAILABLE，缓存独立成行
+            gsc_auth_str = "✅ 已连接"
+            gsc_impressions_str = "NOT_AVAILABLE"
+            gsc_clicks_str = "NOT_AVAILABLE"
             gsc_ctr_str = "NOT_AVAILABLE"
-            gsc_indexed_str = str(data.get('indexed_pages', 'N/A'))
-            gsc_errors_str = str(data.get('gsc_errors', 0))
-            # 口径统一：昨日无数据时不展示基于上周/上月单日的趋势，避免误导
+            gsc_indexed_str = f"{data.get('indexed_pages', 'N/A')} 个"
+            gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
             gsc_week_trend = "NOT_AVAILABLE（无昨日数据）"
             gsc_month_trend = "NOT_AVAILABLE（无昨日数据）"
         else:
-            # 2.0: GSC 无昨日数据 → NOT_AVAILABLE，回退快照缓存窗口
-            _snap = data.get("reporting_snapshot") or {}
-            _cached_imp = _snap.get("gsc_impressions_28d")
-            if _cached_imp is not None:
-                gsc_impressions_str = f"NOT_AVAILABLE（缓存 {_cached_imp:,.0f}）"
-                gsc_clicks_str = f"NOT_AVAILABLE（缓存 {_snap.get('gsc_clicks_28d') or 0:,.0f}）"
-            else:
-                gsc_impressions_str = "NOT_AVAILABLE"
-                gsc_clicks_str = "NOT_AVAILABLE"
-            gsc_ctr_str = "NOT_AVAILABLE"
-            gsc_indexed_str = "NOT_AVAILABLE"
-            gsc_errors_str = "NOT_AVAILABLE"
+            # GSC 未授权/取数失败：明确标注，不回退为缓存冒充昨日
+            gsc_auth_str = "⚠️ 未授权（服务账号无站点访问权）"
+            gsc_impressions_str = "未授权"
+            gsc_clicks_str = "未授权"
+            gsc_ctr_str = "未授权"
+            gsc_indexed_str = "未授权"
+            gsc_errors_str = "未授权"
             gsc_week_trend = "NOT_AVAILABLE"
             gsc_month_trend = "NOT_AVAILABLE"
         
@@ -425,7 +426,7 @@ class FeishuDailyReporter:
         elif gsc_available and not gsc_has_data:
             kw_lines = ["GSC 已连接，昨日暂无搜索数据"]
         elif not gsc_available:
-            kw_lines = ["GSC 昨日无数据（NOT_AVAILABLE），缓存窗口见上方；服务账号授权状态见数据源提醒"]
+            kw_lines = ["GSC 未授权：服务账号无站点访问权，无法取数。请到 Search Console 将服务账号添加为站点所有者"]
         kw_str = "\n".join(kw_lines)
         
         # ===== 3. 内容质量巡检 =====
@@ -503,13 +504,14 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**🔍 2. 搜索表现（Google Search Console | {report_date}）** {search_status}
+                        "content": f"""**🔍 2. 搜索表现（Google Search Console | {report_date}）** {search_status} {gsc_auth_str}
 
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
-| Sitemap 数量 | {gsc_indexed_str} 个 | 索引错误 | {gsc_errors_str} 个 |
-| 搜索曝光 | {gsc_impressions_str} 次 | 搜索点击 | {gsc_clicks_str} 次 |
-| 点击率 CTR | {gsc_ctr_str} | | |
+| 授权状态 | {gsc_auth_str} | Sitemap 数量 | {gsc_indexed_str} |
+| 昨日搜索曝光 | {gsc_impressions_str} | 昨日搜索点击 | {gsc_clicks_str} |
+| 28天缓存窗口 | {gsc_cache_imp_str} | 缓存点击 | {gsc_cache_clk_str} |
+| 索引错误 | {gsc_errors_str} | 点击率 CTR | {gsc_ctr_str} |
 
 **📈 GSC 同比趋势**: 周同比 {gsc_week_trend} ｜ 月同比 {gsc_month_trend}"""
                     }
@@ -757,7 +759,7 @@ class FeishuDailyReporter:
                 print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,} 次, 点击 {data['gsc_clicks']:,} 次")
             else:
                 print(f"   ✅ GSC已连接，昨日暂无搜索数据")
-                data["data_status"].append("GSC已连接但昨日无搜索数据（新站正常现象）")
+                data["data_status"].append("GSC已连接，昨日搜索曝光 0（新站可能未起量，持续观察；非授权问题）")
         else:
             data["data_status"].append("GSC数据获取失败 - 请在 Google Search Console 中授权服务账号")
 
@@ -1060,17 +1062,22 @@ class FeishuDailyReporter:
             except Exception as e:
                 print(f"   ⚠️ GSC 关键词查询失败: {e}")
             
-            # === 获取 sitemap 信息 ===
+            # === 获取 sitemap 信息 + 真实索引错误数（sitemaps API 提供 errors 字段）===
             indexed_pages = "N/A"
+            gsc_errors = None  # None=未检测；真实错误数来自 sitemaps API
             try:
                 sitemaps = service.sitemaps().list(siteUrl=site_url).execute()
                 if sitemaps.get("sitemap"):
                     indexed_pages = len(sitemaps["sitemap"])
+                    _err_sum = 0
+                    for _s in sitemaps["sitemap"]:
+                        try:
+                            _err_sum += int(_s.get("errors") or 0)
+                        except (TypeError, ValueError):
+                            pass
+                    gsc_errors = _err_sum
             except Exception:
                 pass
-            
-            # GSC 错误数（简化为0，详细错误需 urlInspection API）
-            gsc_errors = 0
             
             print(f"   📊 GSC数据: 曝光 {yesterday_impressions:,}, 点击 {yesterday_clicks:,}, CTR {yesterday_ctr}%, 关键词 {len(top_keywords)} 个")
             
