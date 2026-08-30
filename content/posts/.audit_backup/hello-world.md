@@ -26,4 +26,4 @@ Check out these popular guides:
 2. [How to Use Alipay in China](/)
 3. [Best VPN for China](/)
 
-Happy travels! 🌏�?
+Happy travels! 馃審锟?

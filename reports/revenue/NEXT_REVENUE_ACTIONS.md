@@ -1,20 +1,20 @@
-# NEXT REVENUE ACTIONS£¨¹Û²ì¾ö²ß£¬²»×Ô¶¯Ö´ÐÐ£©
+# NEXT REVENUE ACTIONSï¼ˆè§‚å¯Ÿå†³ç­–ï¼Œä¸è‡ªåŠ¨æ‰§è¡Œï¼‰
 
 - Generated: 2026-08-16
 
 | Experiment | Recommended Action | Rationale | Earliest Review |
 |---|---|---|---|
-| REV001 (Food Delivery CTA) | KEEP_RUNNING / DO_NOT_CHANGE | ¹Û²ì 0 Ìì£¬affiliate_clicks=0£»28 ÌìÄÚ½ûÖ¹µ÷Õû CTA | 2026-09-13 |
-| DRIVE-001 | KEEP_RUNNING / DO_NOT_CHANGE | ¹Û²ì 0 Ìì£»Drive ÅäÖÃ±£³ÖÎÈ¶¨ | 2026-09-13 |
-| GROWTH05-CTR-001 (144h) | MEASURE_MORE | clicks=0£»position ÒÑ´Ó 74¡ú46 ¸ÄÉÆµ«ÎÞµã»÷Ñù±¾ | 2026-09-13 |
-| GROWTH07C-INDEX-001 (WeChat Weak) | KEEP_RUNNING£¨µÈ´ý recrawl£© | ²îÒì»¯ÒÑÉÏÏß£¬µÈ´ý Google recrawl£»²»ÔÙ´ÎÇëÇó indexing | ÏÂ´Î URL Inspection |
-| GROWTH07B-TECH-001 (Rail) | KEEP_RUNNING£¨µÈ´ý recrawl£© | ¼¼ÊõÐÞ¸´ÒÑÉÏÏß£¬µÈ´ý recrawl Çå³ý noindex ¾É crawl | ÏÂ´Î URL Inspection |
+| REV001 (Food Delivery CTA) | KEEP_RUNNING / DO_NOT_CHANGE | è§‚å¯Ÿ 0 å¤©ï¼Œaffiliate_clicks=0ï¼›28 å¤©å†…ç¦æ­¢è°ƒæ•´ CTA | 2026-09-13 |
+| DRIVE-001 | KEEP_RUNNING / DO_NOT_CHANGE | è§‚å¯Ÿ 0 å¤©ï¼›Drive é…ç½®ä¿æŒç¨³å®š | 2026-09-13 |
+| GROWTH05-CTR-001 (144h) | MEASURE_MORE | clicks=0ï¼›position å·²ä»Ž 74â†’46 æ”¹å–„ä½†æ— ç‚¹å‡»æ ·æœ¬ | 2026-09-13 |
+| GROWTH07C-INDEX-001 (WeChat Weak) | KEEP_RUNNINGï¼ˆç­‰å¾… recrawlï¼‰ | å·®å¼‚åŒ–å·²ä¸Šçº¿ï¼Œç­‰å¾… Google recrawlï¼›ä¸å†æ¬¡è¯·æ±‚ indexing | ä¸‹æ¬¡ URL Inspection |
+| GROWTH07B-TECH-001 (Rail) | KEEP_RUNNINGï¼ˆç­‰å¾… recrawlï¼‰ | æŠ€æœ¯ä¿®å¤å·²ä¸Šçº¿ï¼Œç­‰å¾… recrawl æ¸…é™¤ noindex æ—§ crawl | ä¸‹æ¬¡ URL Inspection |
 
-## ¹æÔò
+## è§„åˆ™
 - SAMPLE SUFFICIENT = observation >= 28d AND clicks >= 20
-- Î´´ïãÐÖµ ¡ú Ò»ÂÉ MEASURE_MORE / KEEP_RUNNING
-- ´ïãÐÖµºó£ºPOSITIVE ¡ú SCALE_WINNER£»NEUTRAL ¡ú KEEP_RUNNING£»NEGATIVE ¡ú END_EXPERIMENT / RETEST
-- ±¾ÂÖ²»Ö´ÐÐÈÎºÎ¶¯×÷£»ÏÂÒ»´Î×Ô¶¯²âÁ¿ÔÚ 2026-09-13£¨REV001/DRIVE-001 Âú 28 Ìì£©
+- æœªè¾¾é˜ˆå€¼ â†’ ä¸€å¾‹ MEASURE_MORE / KEEP_RUNNING
+- è¾¾é˜ˆå€¼åŽï¼šPOSITIVE â†’ SCALE_WINNERï¼›NEUTRAL â†’ KEEP_RUNNINGï¼›NEGATIVE â†’ END_EXPERIMENT / RETEST
+- æœ¬è½®ä¸æ‰§è¡Œä»»ä½•åŠ¨ä½œï¼›ä¸‹ä¸€æ¬¡è‡ªåŠ¨æµ‹é‡åœ¨ 2026-09-13ï¼ˆREV001/DRIVE-001 æ»¡ 28 å¤©ï¼‰
 
 ## Revenue API
-- REVENUE_NOT_AVAILABLE£º¼ÌÐøÔÊÐí revenue=NULL£¬½ûÖ¹Î±Ôì¶©µ¥/Ó¶½ð
+- REVENUE_NOT_AVAILABLEï¼šç»§ç»­å…è®¸ revenue=NULLï¼Œç¦æ­¢ä¼ªé€ è®¢å•/ä½£é‡‘
