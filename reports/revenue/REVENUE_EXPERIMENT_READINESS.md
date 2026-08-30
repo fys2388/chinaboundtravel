@@ -1,6 +1,6 @@
 # REVENUE EXPERIMENT READINESS
 
-- Generated: 2026-08-16
+- Generated: 2026-08-28
 
 ## Affiliate click tracking
 - Event: `affiliate_click`

@@ -55,6 +55,14 @@
 - GROWTH07B / GROWTH07C WAITING_RECRAWL
 - No fresh GSC pull since 2026-08-16
 
+## Growth Control Plane (P1-GROWTH-30)
+
+- Canonical content count: **58**（58 posts vs 60 inventory rows；2 行为草稿历史变体，不计入发布内容）
+- Trust decision model: 294 AUTO_FIX / 89 SAFE_NORMALIZE / 479 FACT_CHECK_REQUIRED / 0 NO_CHANGE
+- Unified queue: reports/management/GROWTH_PRIORITY_QUEUE.csv
+- Next 7 days: reports/management/NEXT_7_DAY_GROWTH_QUEUE.csv
+- Social metrics readiness: **PARTIAL**（缺 website_sessions / engaged_sessions / affiliate_clicks / revenue）
+
 ## Alerts
 
 # ChinaBound Travel 2.0 — Management Alerts

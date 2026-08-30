@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-57d0b0208d3b"
-title: "Is China Safe in 2026? Honest Guide — 2026 Safety Guide for International Travelers"
+title: "Is China Safe in 2026? Honest Guide"
 date: "2026-07-13T10:00:00+08:00"
 lastmod: "2026-07-13T10:00:00+08:00"
 author: "Joran"
@@ -12,7 +12,6 @@ tags:
   - USToChina
 geo: "US"
 draft: false
-audit_status: "pass2"
 summary: "Is China safe for travelers in 2026? Research-based assessment, crime rates & common scams to avoid, from our editorial team."
 description: "Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editorial team."
 canonicalURL: "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/"

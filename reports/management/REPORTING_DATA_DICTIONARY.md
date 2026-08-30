@@ -38,8 +38,8 @@ Fields per metric: name | meaning | source | data source type | calculation | up
 
 | name | meaning | source | type | calculation | frequency | baseline | valid period |
 |---|---|---|---|---|---|---|---|
-| published_posts | published posts | reports/seo/CONTENT_SEO_INVENTORY.csv + content_id_audit | CACHED | count rows (60/60 content_id PASS) | daily | 60 | 2026-08-17 |
-| content_id_coverage | posts with unique content_id | content_id_audit --strict | CACHED | posts with content_id / total | daily | 60/60 | 2026-08-17 |
+| published_posts | published posts | content_id_audit --strict (content/posts scan) | CACHED | count posts with valid content_id | daily | 58 | rolling |
+| content_id_coverage | posts with unique content_id | content_id_audit --strict | CACHED | posts with content_id / total | daily | 58/58 | rolling |
 | new_pages_30d | posts published in last 30 days | inventory published_date | CACHED | count published_date >= as_of - 30d | daily | NULL | rolling |
 | updated_pages | pages updated this period | no updated_at field | NOT_AVAILABLE | count content changes | weekly | NULL | NULL |
 | indexed_posts | inventory posts INDEXED | inventory indexed_status | CACHED | count INDEXED | daily | NULL | 2026-08-17 |

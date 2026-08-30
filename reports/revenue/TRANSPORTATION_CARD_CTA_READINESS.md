@@ -1,6 +1,6 @@
 # Transportation Card CTA Readiness (P1-GROWTH-20B)
 
-Generated: 2026-08-25  |  Candidate: cbt-55aef784e6aa
+Generated: 2026-08-29  |  Candidate: cbt-55aef784e6aa
 
 ## Score (100)
 | Dimension | Weight | Score |

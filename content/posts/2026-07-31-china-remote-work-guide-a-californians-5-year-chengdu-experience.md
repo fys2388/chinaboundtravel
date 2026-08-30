@@ -12,7 +12,6 @@ tags:
   - EuropeToChina
 geo: "EU"
 draft: false
-audit_status: "pass2"
 summary: "China remote work guide 2026: essential tips for digital nomads and remote workers. Covers visa requirements, transportation, cultural differences, and the best cities for remote work in China."
 description: "Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by our editorial team."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
@@ -127,7 +126,7 @@ So what are you waiting for? Start planning your China remote work adventure tod
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

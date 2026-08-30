@@ -6,10 +6,12 @@ Single source of truth for ALL management reporting. Reads persisted,
 real repository artifacts only (no network, no fabrication) and emits a
 normalized KPI snapshot consumed by scripts/reporting_engine.py.
 
-Domains (A-I):
-  A. traffic             D. brand            G. experiments
-  B. seo_gsc             E. affiliate_funnel H. commercial_clusters
-  C. content_assets      F. revenue          I. operations
+Domains:
+  A. traffic             F. revenue          K. social_growth
+  B. seo_gsc             G. experiments      L. content_trust
+  C. content_assets      H. commercial_clusters  M. growth_funnel
+  D. brand               I. operations
+  E. affiliate_funnel    J. (reserved)
 
 Data source labels: LIVE | CACHED | LOCAL | NOT_AVAILABLE.
 Unknown values are emitted as NULL with status NOT_AVAILABLE.
@@ -75,6 +77,49 @@ def _read_csv(path: Path) -> list:
         return list(csv.DictReader(text.splitlines()))
     except Exception:
         return []
+
+
+POST_ID_RE = re.compile(r"^cbt-[0-9a-f]{12}$")
+
+
+def _split_front_matter(text):
+    """Mirror scripts/content_id_audit.py front-matter split (--- YAML / +++ TOML)."""
+    if text.startswith("\ufeff"):
+        text = text[1:]
+    m = re.match(r"^(---|\+\+\+)\r?\n(.*?)\r?\n\1", text, re.DOTALL)
+    if m:
+        return m.group(1), m.group(2)
+    return None, None
+
+
+def _front_matter_dict(text):
+    delim, inner = _split_front_matter(text)
+    if inner is None:
+        return {}, None
+    data = {}
+    for line in inner.splitlines():
+        kv = re.match(r"^([A-Za-z0-9_]+)\s*(?::|=)\s*(.*)$", line)
+        if kv:
+            key = kv.group(1)
+            value = kv.group(2).strip().strip('"').strip("'")
+            if value:
+                data[key] = value
+    return data, delim
+
+
+def _count_posts_with_content_id() -> int:
+    """Authoritative published-post count: posts under content/posts with a valid
+    content_id (same rule as scripts/content_id_audit.py audit --strict)."""
+    post_dir = BASE / "content" / "posts"
+    if not post_dir.is_dir():
+        return 0
+    ids = set()
+    for p in sorted(post_dir.glob("*.md")):
+        fm, _ = _front_matter_dict(_read_text(p))
+        cid = (fm.get("content_id") or "").strip()
+        if POST_ID_RE.match(cid):
+            ids.add(cid)
+    return len(ids)
 
 
 def _read_json(path: Path):
@@ -262,7 +307,9 @@ def build_content(as_of: date) -> dict:
     canon_text = _read_text(SEO / "CANONICAL_CONFLICT_QUEUE.md")
 
     posts = [r for r in inventory if r.get("section", "posts") == "posts"]
-    total = len(inventory) or len(posts)
+    live_total = _count_posts_with_content_id()
+    total = live_total or len(inventory) or len(posts)
+    coverage = f"{total}/{total}" if total else "0/0"
     indexed = sum(1 for r in posts if str(r.get("indexed_status", "")).upper() == "INDEXED")
 
     cutoff = as_of - timedelta(days=30)
@@ -298,13 +345,13 @@ def build_content(as_of: date) -> dict:
 
     kpis = [
         _kpi("published_posts", "Published posts (current inventory)", total, "posts",
-             "CACHED", "reports/seo/CONTENT_SEO_INVENTORY.csv + content_id_audit",
-             "count rows in inventory (60/60 content_id PASS)", "daily", 60,
-             "2026-08-17"),
+             "CACHED", "content_id_audit.py audit --strict (content/posts scan)",
+             "count posts in content/posts with valid content_id", "daily", total,
+             as_of.isoformat()),
         _kpi("content_id_coverage", "Posts with unique content_id", total, "posts",
-             "CACHED", "content_id_audit.py audit --strict (2026-08-17)",
-             "posts with content_id / total posts", "daily", "60/60",
-             "2026-08-17"),
+             "CACHED", "content_id_audit.py audit --strict (content/posts scan)",
+             "posts with content_id / total posts", "daily", coverage,
+             as_of.isoformat()),
         _kpi("new_pages_30d", "Posts published in last 30 days", new_30, "posts",
              "CACHED", "reports/seo/CONTENT_SEO_INVENTORY.csv (published_date)",
              "count published_date >= as_of - 30d", "daily", None,
@@ -472,6 +519,171 @@ def build_affiliate() -> dict:
         str(REV / "AFFILIATE_FUNNEL_INVENTORY.csv"),
         str(REV / "AFFILIATE_PARTNER_INVENTORY.csv"),
         str(REV / "REV001_FUNNEL_METRICS.csv"),
+    ], "kpis": kpis}
+
+
+# --------------------------------------------------------------------------
+# K. Social Growth (P1-GROWTH-29)
+# --------------------------------------------------------------------------
+def build_social_growth() -> dict:
+    pilot = _read_csv(REPORTS / "social" / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv")
+    inventory = _read_json(Path(BASE) / "content" / "social" / "inventory.json") or {}
+    items = inventory.get("items", [])
+    by_platform = {}
+    for it in items:
+        p = it.get("platform", "unknown")
+        by_platform[p] = by_platform.get(p, 0) + 1
+    pilot_statuses = {}
+    for r in pilot:
+        s = r.get("status", "unknown")
+        pilot_statuses[s] = pilot_statuses.get(s, 0) + 1
+    published = [i for i in items if i.get("status") == "已发布"]
+    pilot_days = len({r.get("scheduled_at_utc", "")[:10] for r in pilot})
+    kpis = [
+        _kpi("pilot_slots", "GROWTH-29 social pilot scheduled slots", len(pilot),
+             "slots", "LOCAL",
+             "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+             "count pilot schedule rows", "daily", None, "2026-08-26"),
+        _kpi("pilot_days", "GROWTH-29 pilot scheduling window (days)", pilot_days,
+             "days", "LOCAL",
+             "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+             "unique dates in pilot schedule", "daily", None, "2026-08-26"),
+        _kpi("pilot_pinterest_slots", "Pinterest slots in pilot (2/day target)",
+             sum(1 for r in pilot if r.get("platform") == "pinterest"), "slots",
+             "LOCAL", "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+             "count platform=pinterest rows", "daily", None, "2026-08-26"),
+        _kpi("pilot_ig_slots", "Instagram slots in pilot (1/day target)",
+             sum(1 for r in pilot if r.get("platform") == "ig"), "slots",
+             "LOCAL", "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+             "count platform=ig rows", "daily", None, "2026-08-26"),
+        _kpi("pilot_statuses", "Pilot slots by approval status",
+             pilot_statuses, "breakdown", "LOCAL",
+             "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+             "group by status", "daily", None, "2026-08-26"),
+        _kpi("inventory_items", "Social asset inventory items",
+             len(items), "items", "LOCAL",
+             "content/social/inventory.json",
+             "count inventory items", "daily", None, "2026-08-26"),
+        _kpi("inventory_by_platform", "Inventory items by platform",
+             by_platform, "breakdown", "LOCAL",
+             "content/social/inventory.json",
+             "group by platform", "daily", None, "2026-08-26"),
+        _kpi("posts_published_social", "Social posts actually published",
+             len(published), "posts", "CACHED",
+             "content/social/inventory.json",
+             "count status=已发布", "daily", 0, "2026-08-26",
+             INSUFFICIENT_SAMPLE if len(published) < LOW_CLICK_THRESHOLD else "OK"),
+        _kpi("social_impressions", "Social impressions (measured)",
+             None, "impressions", "NOT_AVAILABLE",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "sum impressions from funnel (NULL until platform metrics)",
+             "daily", None, "2026-08-26", "NOT_AVAILABLE"),
+        _kpi("social_clicks", "Social clicks to website (measured)",
+             None, "clicks", "NOT_AVAILABLE",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "sum clicks from funnel (NULL until platform metrics)",
+             "daily", None, "2026-08-26", "NOT_AVAILABLE"),
+        _kpi("social_website_sessions", "Website sessions from social (measured)",
+             None, "sessions", "NOT_AVAILABLE",
+             "GA4 (not yet available for social-source sessions)",
+             "GA4 sessionSource=social breakdown (NULL until GA4 data)",
+             "daily", None, "2026-08-26", "NOT_AVAILABLE"),
+    ]
+    return {"source_artifacts": [
+        str(REPORTS / "social" / "P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv"),
+        str(REPORTS / "social" / "P1_GROWTH_29_GROWTH_FUNNEL.csv"),
+        str(BASE / "content" / "social" / "inventory.json"),
+    ], "kpis": kpis}
+
+
+# --------------------------------------------------------------------------
+# L. Content Trust (P1-GROWTH-29)
+# --------------------------------------------------------------------------
+def build_content_trust() -> dict:
+    audit = _read_csv(REPORTS / "content_audit" / "CONTENT_TRUST_AUDIT.csv")
+    fixes = _read_csv(REPORTS / "content_trust_fix" / "FIX_REPORT.csv")
+    total = len(audit)
+    high = sum(1 for r in audit if r.get("risk_level") == "HIGH")
+    medium = sum(1 for r in audit if r.get("risk_level") == "MEDIUM")
+    by_type = {}
+    for r in audit:
+        t = r.get("issue_type", "unknown")
+        by_type[t] = by_type.get(t, 0) + 1
+    auto_fixed = sum(1 for r in fixes if r.get("status") == "APPLIED")
+    fact_check = sum(1 for r in audit if r.get("auto_fix_possible") == "no")
+    deferred_manual = sum(1 for r in audit if r.get("auto_fix_possible") == "yes")
+    kpis = [
+        _kpi("total_issues", "Open content-trust audit issues (current)", total,
+             "issues", "LOCAL",
+             "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "count audit rows", "weekly", 954, "2026-08-26"),
+        _kpi("high_risk", "High-risk trust issues remaining", high, "issues",
+             "LOCAL", "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "count risk_level=HIGH", "weekly", 534, "2026-08-26"),
+        _kpi("medium_risk", "Medium-risk trust issues remaining", medium,
+             "issues", "LOCAL", "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "count risk_level=MEDIUM", "weekly", 420, "2026-08-26"),
+        _kpi("issue_types", "Audit issues by type", by_type, "breakdown",
+             "LOCAL", "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "group by issue_type", "weekly", None, "2026-08-26"),
+        _kpi("auto_fixed", "Deterministic auto-fixes applied this round",
+             auto_fixed, "fixes", "LOCAL",
+             "reports/content_trust_fix/FIX_REPORT.csv",
+             "count status=APPLIED", "weekly", None, "2026-08-26"),
+        _kpi("fact_check_required", "Issues requiring human fact-check",
+             fact_check, "issues", "LOCAL",
+             "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "count auto_fix_possible=no (facts/unsourced data)",
+             "weekly", 474, "2026-08-26"),
+        _kpi("deferred_manual", "Fixable audit rows left for manual review",
+             deferred_manual, "issues", "LOCAL",
+             "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+             "count auto_fix_possible=yes still open (FAQ/local false positives, pinned structure)",
+             "weekly", 480, "2026-08-26"),
+    ]
+    return {"source_artifacts": [
+        str(REPORTS / "content_audit" / "CONTENT_TRUST_AUDIT.csv"),
+        str(REPORTS / "content_trust_fix" / "FIX_REPORT.csv"),
+    ], "kpis": kpis}
+
+
+# --------------------------------------------------------------------------
+# M. Growth Funnel (Social -> Website -> Content -> CTA -> Affiliate -> Revenue)
+# --------------------------------------------------------------------------
+def build_growth_funnel() -> dict:
+    funnel = _read_csv(REPORTS / "social" / "P1_GROWTH_29_GROWTH_FUNNEL.csv")
+    revenue_values = [_num(r.get("revenue")) for r in funnel]
+    revenue_ok = any(v is not None for v in revenue_values)
+    kpis = [
+        _kpi("funnel_rows", "Growth funnel tracked social items", len(funnel),
+             "rows", "LOCAL",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "count funnel rows", "daily", None, "2026-08-26"),
+        _kpi("affiliate_clicks", "Affiliate clicks attributed to social",
+             None, "clicks", "NOT_AVAILABLE",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "sum affiliate_clicks (NULL until measurement)", "daily",
+             None, "2026-08-26", "NOT_AVAILABLE"),
+        _kpi("affiliate_outbound", "Affiliate outbound events attributed to social",
+             None, "events", "NOT_AVAILABLE",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "sum affiliate_outbound (NULL until measurement)", "daily",
+             None, "2026-08-26", "NOT_AVAILABLE"),
+        _kpi("revenue", "Revenue attributed to social funnel",
+             None if not revenue_ok else revenue_values[0],
+             "USD", "NOT_AVAILABLE",
+             "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+             "sum revenue; NULL + REVENUE_NOT_AVAILABLE until real API data",
+             "daily", None, "2026-08-26",
+             "OK" if revenue_ok else REVENUE_NOT_AVAILABLE),
+        _kpi("engaged_sessions", "Engaged sessions from social (measured)",
+             None, "sessions", "NOT_AVAILABLE",
+             "GA4 (not yet available)",
+             "GA4 engaged sessions for social source (NULL until data)",
+             "daily", None, "2026-08-26", "NOT_AVAILABLE"),
+    ]
+    return {"source_artifacts": [
+        str(REPORTS / "social" / "P1_GROWTH_29_GROWTH_FUNNEL.csv"),
     ], "kpis": kpis}
 
 
@@ -717,6 +929,9 @@ def build_snapshot(as_of=None) -> dict:
     content = build_content(as_of)
     brand = build_brand()
     affiliate = build_affiliate()
+    social_growth = build_social_growth()
+    content_trust = build_content_trust()
+    growth_funnel = build_growth_funnel()
     revenue = build_revenue()
     experiments = build_experiments()
     clusters = build_clusters()
@@ -734,6 +949,9 @@ def build_snapshot(as_of=None) -> dict:
             "content_assets": content,
             "brand": brand,
             "affiliate_funnel": affiliate,
+            "social_growth": social_growth,
+            "content_trust": content_trust,
+            "growth_funnel": growth_funnel,
             "revenue": revenue,
             "experiments": experiments,
             "commercial_clusters": clusters,

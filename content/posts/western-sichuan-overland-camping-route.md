@@ -26,9 +26,9 @@ The itinerary is built for drivers and campers who want the full experience with
 
 ## Why Western Sichuan?
 
-Western Sichuan (Chuan Xi) is China's a popular-kept secret. While tourists flock to Lijiang and [Zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/), the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
+Western Sichuan (Chuan Xi) is one of China's lesser-known regions. While tourists flock to Lijiang and [Zhangjiajie](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/), the real magic happens here - snow-capped peaks that pierce the sky, turquoise lakes that look like they belong on another planet, and Tibetan villages where time seems to stand still.
 
-But let's be real - this isn't a trip for the faint of heart. You're going to drive on roads that make rollercoasters look tame. You're going to camp at altitudes where breathing feels like running a marathon. And yes, you might get a little (okay, a lot) carsick.
+This isn't a trip for the faint of heart. You're going to drive on roads that make rollercoasters look tame. You're going to camp at altitudes where breathing feels like running a marathon. And yes, you might get a little (okay, a lot) carsick.
 
 It's demanding, but travelers consistently say the payoff is worth it.
 
@@ -37,7 +37,7 @@ It's demanding, but travelers consistently say the payoff is worth it.
 This checklist condenses the most common first-trip mistakes so you don't have to learn them the hard way.
 
 ### The Essentials (Don't Leave Home Without These)
-- **Altitude sickness meds**: I cannot stress this enough. We're talking 3,000-4,500 meters here. Get Diamox (acetazolamide) from your doctor *before* you go.
+- **Altitude sickness meds**: This is essential. The route sits at 3,000-4,500 meters, so get Diamox (acetazolamide) from your doctor *before* you go.
 - **Warm layers**: Even in summer, nights drop below freezing. Bring a down jacket, thermal underwear, and wool socks.
 - **Sunscreen & lip balm**: The UV at high altitude is no joke. Sunburn and cracked lips are the most common complaints from first-time high-altitude campers.
 - **Tire repair kit**: You will hit rocks. You will get flats. Be prepared.
@@ -56,7 +56,7 @@ Book through {{< klook-link "Klook Car Rentals" />}} - they have great deals on 
 Start early - like, *really* early. Leave at 6 AM to beat the traffic out of Chengdu. The first half of the drive is highway, so you can make good time.
 
 ### Lunch Stop: Luding
-Grab lunch in Luding, famous for the Luding Bridge (Luding Bridge) from the Long March. Try the local specialty: *dan dan mian* (dan dan noodles) at a tiny street stall. A bowl at one of the small stalls here rivals anything you'll find in Chengdu.
+Grab lunch in Luding, famous for the Luding Bridge from the Long March. Try the local specialty: *dan dan mian* (dan dan noodles) at a tiny street stall. A bowl at one of the small stalls here rivals anything you'll find in Chengdu.
 
 ### Afternoon: Entering the Mountains
 Once you pass Luding, the road starts climbing. This is where the fun begins. The views get better and better as you gain altitude. Keep an eye out for waterfalls and herds of yaks.
@@ -141,7 +141,7 @@ Batang (Ba Tang) is a great place for lunch. Try *zongzi* (sticky rice dumplings
 You'll be tired, but you'll also be on cloud nine. The drive back is mostly downhill, so you can relax and reflect on what you've just experienced.
 
 ### Final Stop: Leshan Giant Buddha
-If you have time, detour to Leshan to see the giant Buddha. It's the largest stone Buddha in the world and  worth a visit.
+If you have time, detour to Leshan to see the giant Buddha. It's the largest stone Buddha in the world and worth a visit.
 
 ## Essential Tips for Western Sichuan Camping
 
@@ -169,7 +169,7 @@ This isn't just a road trip — it's a journey into the heart of China's wild we
 
 ### Further Reading
 
-- [Best Travel Insurance for China](/posts/best-travel-insurance-china/) — Essential for high-altitude adventure travel; World Nomads covers trekking above 5,000m
+- [Top Travel Insurance for China](/posts/best-travel-insurance-china/) — Essential for high-altitude adventure travel; World Nomads covers trekking above 5,000m
 - [Is China Safe for Tourists in 2026?](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — Western Sichuan is safe but remote; know the risks
 - [China High-Speed Rail Guide](/posts/china-high-speed-rail-how-to-book-tickets/) — Get to Chengdu by rail from Beijing or Shanghai to start your road trip
 

@@ -7,7 +7,7 @@ description = "Meet Joran, the editorial voice behind ChinaBound Travel — how 
     <div class="about-avatar-ring">
         <picture>
             <source srcset="/images/joran-avatar.webp" type="image/webp">
-        <img src="/images/joran-avatar-512.png" alt="Joran - Editorial Voice of ChinaBound Travel" class="about-hero-photo" loading="eager">
+        <img src="/images/joran-avatar.png" alt="Joran - Editorial Voice of ChinaBound Travel" class="about-hero-photo" loading="eager">
         </picture>
         <span class="about-avatar-badge">Editorial Voice</span>
     </div>

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-08-30 02:12:14",
-  "site_url": "https://chinaboundtravel.com/",
+  "timestamp": "2026-08-30 10:53:15",
+  "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 0,
+  "indexed_count": 13,
   "submitted_count": 0,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
@@ -13,8 +13,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -23,8 +24,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -33,8 +35,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -43,8 +46,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -53,8 +57,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -63,8 +68,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -73,8 +79,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -83,8 +90,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -93,8 +101,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -103,8 +112,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -113,8 +123,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -123,8 +134,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -133,8 +145,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide-aussie-kiwi/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -143,8 +156,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
       }
     },
     {
@@ -153,8 +167,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -163,8 +178,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -173,8 +189,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -183,8 +200,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -193,8 +211,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     },
     {
@@ -203,8 +222,9 @@
       "message": "PROPERTY_PERMISSION: Permission denied. Failed to verify the URL ownership.",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
-        "verdict": "error: PROPERTY_PERMISSION - You do not own this site, or the inspected URL is not part of this property.",
-        "status": "error"
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
       }
     }
   ]

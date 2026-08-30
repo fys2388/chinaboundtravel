@@ -21,7 +21,7 @@ tags: ["ChinaFood", "ChinaTravel", "Sichuan", "Chengdu", "AustraliaToChina"]
 ---
 ## Why Sichuan Hotpot Is More Than Just a Meal
 
-Sichuan hotpot is one of China's most iconic dishes — a bubbling, numbing, spicy meal built around shared ingredients and strong flavors. If you're a foodie planning a trip to Chengdu, don't miss our [Chinese street food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) -- it covers the night markets and street stalls that every first-timer should experience. This guide covers the history, a popular restaurants, and cultural significance of the dish, based on current food guides and traveler reports.
+Sichuan hotpot is one of China's most iconic dishes — a bubbling, numbing, spicy meal built around shared ingredients and strong flavors. If you're a foodie planning a trip to Chengdu, don't miss our [Chinese street food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) -- it covers the night markets and street stalls that every first-timer should experience. This guide covers the history, popular restaurants, and cultural significance of the dish, based on current food guides and traveler reports.
 
 ![Chengdu street with Sichuan hotpot restaurant sign and steam rising from the entrance](/img/china-dest/chengdu/chengdu-hotpot-street.webp)
 
@@ -45,11 +45,11 @@ Another aspect of its cultural significance lies in the variety of ingredients. 
 
 ## Best Restaurants for Sichuan Hotpot
 
-Now, let's talk about one of the popular-known restaurants for Sichuan hotpot. A consistently popular chain is "Hai Di Lao." It has gained popularity not only in Sichuan but also around the world. What sets Hai Di Lao apart is its excellent service. From the moment you enter the restaurant, you are greeted with warm smiles and attentive staff. They will help you choose the right ingredients, adjust the spiciness of the broth, and even offer you free snacks and drinks while you wait for your food.
+Two well-known restaurants stand out for Sichuan hotpot. A consistently popular chain is "Hai Di Lao." It has gained popularity not only in Sichuan but also around the world. What sets Hai Di Lao apart is its excellent service. From the moment you enter the restaurant, you are greeted with warm smiles and attentive staff. They will help you choose the right ingredients, adjust the spiciness of the broth, and even offer you free snacks and drinks while you wait for your food.
 
 Another great option is "Liu Yi Shou." This restaurant is known for its traditional Sichuan hotpot flavors. The broth here is rich and flavorful, with just the right amount of "ma la" kick. They also offer a wide selection of fresh ingredients, ensuring that every bite is a delicious experience.
 
-If you're looking for a more local experience, check out some of the smaller, hole-in-the-wall restaurants in the old parts of Chengdu. These places often serve the most traditional hotpot, and they are usually much more affordable. Just be prepared for a bit of chaos and a language barrier — regulars say it's worth it for the taste. If you're new to navigating China as a foreigner, our guide to [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) will help you handle payments at these local spots.
+If you're looking for a more local experience, check out some of the smaller, hole-in-the-wall restaurants in the old parts of Chengdu. These places often serve traditional hotpot, and they are usually much more affordable. Just be prepared for a bit of chaos and a language barrier. If you're new to navigating China as a foreigner, our guide to [Alipay and WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) will help you handle payments at these local spots.
 
 ## Tips for Enjoying Sichuan Hotpot
 
@@ -77,7 +77,7 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 | Need | Solution | Link |
 |------|----------|------|
 | 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
+| ✈️ Flights | Popular deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

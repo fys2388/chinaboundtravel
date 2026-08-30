@@ -36,7 +36,9 @@ name = "buffer-auto-poster-dev"
 
 [env.production]
 name = "buffer-auto-poster"
-route = "https://buffer-worker.chinaboundtravel.com/*"
+routes = [
+  { pattern = "buffer-worker.chinaboundtravel.com", custom_domain = true }
+]
 
 # wrangler 多环境不继承顶层 kv_namespaces，需显式声明（限流/去重/重试队列依赖 KV）
 [[env.production.kv_namespaces]]

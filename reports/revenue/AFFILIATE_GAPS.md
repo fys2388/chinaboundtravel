@@ -1,6 +1,6 @@
 # AFFILIATE GAPS
 
-- Generated: 2026-08-16
+- Generated: 2026-08-28
 
 Detection rules:
 - A: high commercial intent + no affiliate
@@ -11,12 +11,15 @@ Detection rules:
 
 | content_id | url | type | detail |
 |---|---|---|---|
+| cbt-0adceab18b53 | https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/ | A_HIGH_INTENT_NO_AFFILIATE | intent=PAYMENT, impressions=0 |
 | cbt-c885da2cf5d9 | https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=4 |
 | cbt-07563e9b51cc | https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=6 |
 | cbt-d701fb08eb7b | https://www.chinaboundtravel.com/posts/best-travel-insurance-china/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=6 |
+| cbt-02a3e0d6ed4f | https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=4 |
 | cbt-cc4549872c92 | https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=5 |
 | cbt-4e09fa4aa93d | https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=3 |
 | cbt-92448be1e0ca | https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=6 |
+| cbt-55aef784e6aa | https://www.chinaboundtravel.com/posts/china-transportation-card-guide/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=4 |
 | cbt-95d9a1b95440 | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=3 |
 | cbt-698862ce2129 | https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=6 |
 | cbt-6a164e0e8077 | https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/ | B_AFFILIATE_LOW_VISIBILITY | impressions=0, partners=5 |

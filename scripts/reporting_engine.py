@@ -515,7 +515,7 @@ def render_weekly(snapshot: dict) -> str:
 
     out.append("## 10. Completed work")
     out.append("")
-    out.append("- P1-REPORT-01: reporting baselines reconciled (60 posts, REV001 corrected, dashboards rebuilt)")
+    out.append("- P1-REPORT-01: reporting baselines reconciled (58 posts, REV001 corrected, dashboards rebuilt)")
     out.append("- P1-BRAND-04: favicon.png replaced (LOGO_REPLACEMENT_READY)")
     out.append("- Engine re-runs on 60-post inventory: brand legacy, SEO opportunity/priority, revenue, commercial conversion")
     out.append("")
@@ -634,7 +634,7 @@ def render_quarterly(snapshot: dict) -> str:
 
     out.append("## 1. Executive quarterly review")
     out.append("")
-    out.append("Q3-2026 so far: site rebuilt around 60 posts, editorial persona 2.0 enforced, "
+    out.append("Q3-2026 so far: site rebuilt around 58 posts, editorial persona 2.0 enforced, "
                "monetization moved from zero to three running experiments (REV001/REV002/DRIVE-001). "
                "Revenue remains NULL (no API).")
     out.append("")
@@ -694,7 +694,7 @@ def render_quarterly(snapshot: dict) -> str:
 
     out.append("## 11. Major wins")
     out.append("")
-    out.append("- 60 posts / 60 content_id with zero drift (audit PASS)")
+    out.append("- 58 posts / 58 content_id with zero drift (audit PASS)")
     out.append("- Canonical content_id drift (transportation) reconciled")
     out.append("- First monetization experiments live on high-intent pages")
     out.append("")
@@ -811,7 +811,7 @@ def render_yearly(snapshot: dict) -> str:
 
     out.append("## 13. Biggest wins")
     out.append("")
-    out.append("- 60/60 content_id integrity; single inventory source")
+    out.append("- 58/58 content_id integrity; single inventory source")
     out.append("- First revenue experiments + Drive activation")
     out.append("- Editorial persona compliance enforced at brand layer")
     out.append("")
@@ -859,7 +859,7 @@ def render_yearly(snapshot: dict) -> str:
     out.append("### Value classification")
     out.append("")
     out.append("- Traffic growth: INSUFFICIENT_SAMPLE (baseline only, 166 sessions / 374 pageviews 28d)")
-    out.append("- Content asset value: 60 posts, 51-item opportunity pipeline, 0 fabricated metrics")
+    out.append("- Content asset value: 58 posts, 51-item opportunity pipeline, 0 fabricated metrics")
     out.append("- Commercial value: 277 CTA rows / 45 pages, Drive ACTIVE, revenue NULL")
     out.append("- Operational maturity: automated engines + guarded reporting; backup/rollback NOT_AVAILABLE")
     out.append("")

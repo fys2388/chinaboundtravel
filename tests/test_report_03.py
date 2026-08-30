@@ -113,7 +113,7 @@ def test_no_kpi_contradictions_across_reports(tmp_path):
         for p2, texts2 in written.items():
             if p1 >= p2:
                 continue
-            assert ("60 posts" in texts1) == ("60 posts" in texts2), f"{p1} vs {p2} content count mismatch"
+            assert ("58 posts" in texts1) == ("58 posts" in texts2), f"{p1} vs {p2} content count mismatch"
             assert ("REVENUE_NOT_AVAILABLE" in texts1) == ("REVENUE_NOT_AVAILABLE" in texts2), \
                 f"{p1} vs {p2} revenue status mismatch"
 

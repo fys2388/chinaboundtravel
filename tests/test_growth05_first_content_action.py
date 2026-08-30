@@ -194,6 +194,13 @@ def test_growth05_scope_only_allowed_objects():
                       "layouts/shortcodes/affiliate-mid-cta.html",
                       # P1-CONVERSION-OPT authorized affiliate soft-recommend shortcode
                       "layouts/shortcodes/soft-recommend.html",
+                      # P1-CONVERSION-OPT authorized email subscribe + OG meta + CTA optimizations
+                      "layouts/partials/email-subscribe.html",
+                      "layouts/partials/templates/opengraph.html",
+                      "layouts/partials/templates/twitter_cards.html",
+                      "layouts/shortcodes/ab-cta.html",
+                      # P1-SOCIAL authorized footer social/consent gating
+                      "layouts/partials/footer.html",
                       # P1-BRAND-02 authorized editorial persona migration (brand surfaces)
                       "layouts/cities/single.html",
                       "layouts/partials/affiliate-disclosure.html",

@@ -28,7 +28,7 @@ categories: ["language", "travel"]
 
 ## Introduction
 
-For many American travelers, arriving in China for the first time can feel like stepping into a foreign movie where everyone is speaking a different language and you're one of the one without subtitles. The excitement of wandering through ancient streets, savoring delicious dumplings, and connecting with locals can quickly be tempered by the realization that communication is a real challenge. That's why learning some Chinese language survival phrases is one of the most valuable things you can do before your trip.
+For many American travelers, arriving in China for the first time can feel like stepping into a foreign movie where everyone is speaking a different language and you're one of the few without subtitles. The excitement of wandering through ancient streets, savoring delicious dumplings, and connecting with locals can quickly be tempered by the realization that communication is a real challenge. That's why learning some Chinese language survival phrases is one of the most valuable things you can do before your trip.
 
 You might be thinking, "I'm just going on a short trip to China. Do I really need to learn Chinese?" The answer is: it can make a world of difference. Not only will it help you communicate with locals, but it will also make your travel experience more enjoyable and authentic. And who knows, you might even impress a few people along the way.
 
@@ -149,15 +149,15 @@ Learning a new language can be challenging, but with a little practice and dedic
 ## Cultural Insights into the Chinese Language and Culture
 
 The Chinese language and culture are rich and complex, and there are many things that you can learn and appreciate about them. Here are some cultural insights into the Chinese language and culture that you should know:
-- **Language:** The Chinese language is one of the oldest and most complex languages in the world. It has a rich history and culture, and it is spoken by over 1.3 billion people around the world. One thing that surprises most Westerners is that Mandarin is just one of several hundred Chinese languages and dialects - Cantonese, Shanghainese, and Sichuanese are mutually unintelligible with Mandarin, even though they share the same written characters. When someone says "Chinese," they almost often mean Mandarin (Putonghua), which is the official language taught in schools and used by the government.
+- **Language:** The Chinese language is one of the oldest and most complex languages in the world. It has a rich history and culture, and it is spoken by over 1.3 billion people around the world. One thing that surprises most Westerners is that Mandarin is just one of several hundred Chinese languages and dialects - Cantonese, Shanghainese, and Sichuanese are mutually unintelligible with Mandarin, even though they share the same written characters. When someone says "Chinese," they usually mean Mandarin (Putonghua), which is the official language taught in schools and used by the government.
 - **Writing system:** The Chinese writing system is unique and beautiful. It uses characters to represent words and ideas, and it has a long history of development and evolution. There are over 80,000 characters in existence, though a well-educated native speaker only needs to know about 5,000-6,000 to read a newspaper comfortably. You don't need to learn any characters to travel in China, but recognizing a few basics like the character for "entrance" () vs "exit" () can save you from accidentally walking into the wrong place at a train station.
-- **Culture:** Chinese culture is rich and diverse, and it has a long history dating back over 5,000 years. One important concept to understand is **face** (miànzi) - the idea of social standing, respect, and dignity. The golden rule for avoiding miscommunication: generally not recommended argue with or correct a Chinese person in public, even if they're clearly wrong. Making someone "lose face" in front of others creates resentment and ruins relationships. If you need to raise a complaint or correct a mistake, do it privately, politely, and with plenty of grace. Another cultural quirk: Chinese people love to ask personal questions ("How much do you earn?" "Are you married?" "Why don't you have kids yet?") that would be considered outrageously rude in the US. They're not being nosy or invasive - this is genuinely how Chinese people show interest and care. A friendly laugh and a vague answer ("Enough to travel!" "One day!") is the well-suited response.
+- **Culture:** Chinese culture is rich and diverse, and it has a long history dating back over 5,000 years. One important concept to understand is **face** (miànzi) - the idea of social standing, respect, and dignity. The golden rule for avoiding miscommunication: don't argue with or correct a Chinese person in public, even if they're clearly wrong. Making someone "lose face" in front of others creates resentment and ruins relationships. If you need to raise a complaint or correct a mistake, do it privately, politely, and with plenty of grace. Another cultural quirk: Chinese people often ask personal questions ("How much do you earn?" "Are you married?" "Why don't you have kids yet?") that would be considered outrageously rude in the US. They're not being nosy or invasive - this is genuinely how Chinese people show interest and care. A friendly laugh and a vague answer ("Enough to travel!" "One day!") is the best response.
 
 ## Conclusion: You Don't Need Fluency to Have an Amazing Trip
 
 One final thought that every first-time traveler to China should hear: **you don't need to speak a word of Mandarin to have a wonderful time**. Many travelers make it through two weeks with nothing more than xiè xiè (thank you) and a translator app, and they leave with a million incredible stories.
 
-But here's the thing — learning even 20-30 survival phrases doesn't just make the trip smoother. It changes how people interact with you. The hotpot waitress who goes out of her way to recommend one of the popular dishes because you greeted her in Chinese. The taxi driver who teaches you his favorite local slang. The old man at the tea house who sits down with you for 45 minutes trying to have a conversation using a mix of translation app, gestures, and a shared love of tea.
+But here's the thing — learning even 20-30 survival phrases doesn't just make the trip smoother. It changes how people interact with you. A vendor may recommend a popular dish because you greeted them in Chinese. A taxi driver might share local slang. An older traveler at a tea house might sit down with you for a conversation built from a translation app, gestures, and a shared love of tea.
 
 Those moments are the heart of travel. They're the stories you tell your friends for years. And they all start with one brave attempt to say a few words in the local language.
 
@@ -179,7 +179,7 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 | Need | Solution | Link |
 |------|----------|------|
 | 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
+| ✈️ Flights | Popular deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
@@ -193,7 +193,7 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Brand Identity Audit
 
-- Generated: 2026-08-25
+- Generated: 2026-08-29
 
 品牌层检查：全部 HTML 模板 + 全部非文章 markdown 页面 + hugo.toml（content/posts 由 --legacy 单独扫描）。
 
@@ -101,7 +101,6 @@
 | content | content/guides/_index.md | WARN | - | - | False |
 | content | content/internet/_index.md | WARN | - | - | False |
 | content | content/member-month/_index.md | WARN | - | - | False |
-| content | content/member-month/test-wrong-tag.md | WARN | - | - | False |
 | content | content/member-year/_index.md | WARN | - | - | False |
 | content | content/payments/_index.md | WARN | - | - | False |
 | content | content/pricing.md | WARN | - | - | False |
@@ -114,6 +113,6 @@
 | content | content/terms-of-service.md | WARN | - | - | False |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 16/107 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 16/106 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.

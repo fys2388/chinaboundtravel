@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-17",
+  "as_of": "2026-08-26",
   "domains": {
     "affiliate_funnel": {
       "kpis": [
@@ -14,7 +14,7 @@
           "unit": "rows",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
-          "value": 277
+          "value": 278
         },
         {
           "baseline": 45,
@@ -70,7 +70,7 @@
         },
         {
           "baseline": 0.0,
-          "calculation": "REV001 page only",
+          "calculation": "clicks / impressions, same source (REV001_FUNNEL_METRICS.csv)",
           "data_source_type": "CACHED",
           "meaning": "CTA click rate (REV001 scope)",
           "name": "click_rate",
@@ -191,11 +191,11 @@
           "meaning": "Brand layers passing editorial persona audit",
           "name": "editorial_persona_compliance",
           "source": "reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md (2026-08-17)",
-          "status": "OK",
+          "status": "NOT_AVAILABLE",
           "unit": "layers",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
-          "value": "11/13"
+          "value": null
         },
         {
           "baseline": 25,
@@ -208,7 +208,7 @@
           "unit": "posts",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
-          "value": 25
+          "value": 0
         },
         {
           "baseline": 0,
@@ -335,30 +335,30 @@
     "content_assets": {
       "kpis": [
         {
-          "baseline": 60,
-          "calculation": "count rows in inventory (60/60 content_id PASS)",
+          "baseline": 58,
+          "calculation": "count posts in content/posts with valid content_id",
           "data_source_type": "CACHED",
           "meaning": "Published posts (current inventory)",
           "name": "published_posts",
-          "source": "reports/seo/CONTENT_SEO_INVENTORY.csv + content_id_audit",
+          "source": "content_id_audit.py audit --strict (content/posts scan)",
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-08-17",
-          "value": 60
+          "valid_period": "2026-08-26",
+          "value": 58
         },
         {
-          "baseline": "60/60",
+          "baseline": "58/58",
           "calculation": "posts with content_id / total posts",
           "data_source_type": "CACHED",
           "meaning": "Posts with unique content_id",
           "name": "content_id_coverage",
-          "source": "content_id_audit.py audit --strict (2026-08-17)",
+          "source": "content_id_audit.py audit --strict (content/posts scan)",
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-08-17",
-          "value": 60
+          "valid_period": "2026-08-26",
+          "value": 58
         },
         {
           "baseline": null,
@@ -370,8 +370,8 @@
           "status": "OK",
           "unit": "posts",
           "update_frequency": "daily",
-          "valid_period": "2026-07-18..2026-08-17",
-          "value": 19
+          "valid_period": "2026-07-27..2026-08-26",
+          "value": 15
         },
         {
           "baseline": null,
@@ -445,7 +445,7 @@
           "unit": "posts",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
-          "value": 25
+          "value": 0
         },
         {
           "baseline": 0,
@@ -492,6 +492,110 @@
         "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\content_opportunity_scores.csv",
         "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
         "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CANONICAL_CONFLICT_QUEUE.md"
+      ]
+    },
+    "content_trust": {
+      "kpis": [
+        {
+          "baseline": 954,
+          "calculation": "count audit rows",
+          "data_source_type": "LOCAL",
+          "meaning": "Open content-trust audit issues (current)",
+          "name": "total_issues",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "issues",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 862
+        },
+        {
+          "baseline": 534,
+          "calculation": "count risk_level=HIGH",
+          "data_source_type": "LOCAL",
+          "meaning": "High-risk trust issues remaining",
+          "name": "high_risk",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "issues",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 456
+        },
+        {
+          "baseline": 420,
+          "calculation": "count risk_level=MEDIUM",
+          "data_source_type": "LOCAL",
+          "meaning": "Medium-risk trust issues remaining",
+          "name": "medium_risk",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "issues",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 406
+        },
+        {
+          "baseline": null,
+          "calculation": "group by issue_type",
+          "data_source_type": "LOCAL",
+          "meaning": "Audit issues by type",
+          "name": "issue_types",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "breakdown",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": {
+            "AI幻觉": 171,
+            "SEO问题": 19,
+            "事实风险": 387,
+            "品牌风险": 285
+          }
+        },
+        {
+          "baseline": null,
+          "calculation": "count status=APPLIED",
+          "data_source_type": "LOCAL",
+          "meaning": "Deterministic auto-fixes applied this round",
+          "name": "auto_fixed",
+          "source": "reports/content_trust_fix/FIX_REPORT.csv",
+          "status": "OK",
+          "unit": "fixes",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 101
+        },
+        {
+          "baseline": 474,
+          "calculation": "count auto_fix_possible=no (facts/unsourced data)",
+          "data_source_type": "LOCAL",
+          "meaning": "Issues requiring human fact-check",
+          "name": "fact_check_required",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "issues",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 479
+        },
+        {
+          "baseline": 480,
+          "calculation": "count auto_fix_possible=yes still open (FAQ/local false positives, pinned structure)",
+          "data_source_type": "LOCAL",
+          "meaning": "Fixable audit rows left for manual review",
+          "name": "deferred_manual",
+          "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
+          "status": "OK",
+          "unit": "issues",
+          "update_frequency": "weekly",
+          "valid_period": "2026-08-26",
+          "value": 383
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\content_audit\\CONTENT_TRUST_AUDIT.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\content_trust_fix\\FIX_REPORT.csv"
       ]
     },
     "experiments": {
@@ -621,6 +725,78 @@
         "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV002_EXPERIMENT_REGISTRY.csv",
         "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV003_EXPERIMENT_REGISTRY.csv",
         "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\DRIVE_EXPERIMENT_REGISTRY.csv"
+      ]
+    },
+    "growth_funnel": {
+      "kpis": [
+        {
+          "baseline": null,
+          "calculation": "count funnel rows",
+          "data_source_type": "LOCAL",
+          "meaning": "Growth funnel tracked social items",
+          "name": "funnel_rows",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "OK",
+          "unit": "rows",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 21
+        },
+        {
+          "baseline": null,
+          "calculation": "sum affiliate_clicks (NULL until measurement)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Affiliate clicks attributed to social",
+          "name": "affiliate_clicks",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "NOT_AVAILABLE",
+          "unit": "clicks",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "sum affiliate_outbound (NULL until measurement)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Affiliate outbound events attributed to social",
+          "name": "affiliate_outbound",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "NOT_AVAILABLE",
+          "unit": "events",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "sum revenue; NULL + REVENUE_NOT_AVAILABLE until real API data",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Revenue attributed to social funnel",
+          "name": "revenue",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "REVENUE_NOT_AVAILABLE",
+          "unit": "USD",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "GA4 engaged sessions for social source (NULL until data)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Engaged sessions from social (measured)",
+          "name": "engaged_sessions",
+          "source": "GA4 (not yet available)",
+          "status": "NOT_AVAILABLE",
+          "unit": "sessions",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_GROWTH_FUNNEL.csv"
       ]
     },
     "operations": {
@@ -978,6 +1154,165 @@
         "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\url_inspection_results.json"
       ]
     },
+    "social_growth": {
+      "kpis": [
+        {
+          "baseline": null,
+          "calculation": "count pilot schedule rows",
+          "data_source_type": "LOCAL",
+          "meaning": "GROWTH-29 social pilot scheduled slots",
+          "name": "pilot_slots",
+          "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+          "status": "OK",
+          "unit": "slots",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 21
+        },
+        {
+          "baseline": null,
+          "calculation": "unique dates in pilot schedule",
+          "data_source_type": "LOCAL",
+          "meaning": "GROWTH-29 pilot scheduling window (days)",
+          "name": "pilot_days",
+          "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+          "status": "OK",
+          "unit": "days",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 7
+        },
+        {
+          "baseline": null,
+          "calculation": "count platform=pinterest rows",
+          "data_source_type": "LOCAL",
+          "meaning": "Pinterest slots in pilot (2/day target)",
+          "name": "pilot_pinterest_slots",
+          "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+          "status": "OK",
+          "unit": "slots",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 14
+        },
+        {
+          "baseline": null,
+          "calculation": "count platform=ig rows",
+          "data_source_type": "LOCAL",
+          "meaning": "Instagram slots in pilot (1/day target)",
+          "name": "pilot_ig_slots",
+          "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+          "status": "OK",
+          "unit": "slots",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 7
+        },
+        {
+          "baseline": null,
+          "calculation": "group by status",
+          "data_source_type": "LOCAL",
+          "meaning": "Pilot slots by approval status",
+          "name": "pilot_statuses",
+          "source": "reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+          "status": "OK",
+          "unit": "breakdown",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": {
+            "PENDING_APPROVAL": 21
+          }
+        },
+        {
+          "baseline": null,
+          "calculation": "count inventory items",
+          "data_source_type": "LOCAL",
+          "meaning": "Social asset inventory items",
+          "name": "inventory_items",
+          "source": "content/social/inventory.json",
+          "status": "OK",
+          "unit": "items",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 100
+        },
+        {
+          "baseline": null,
+          "calculation": "group by platform",
+          "data_source_type": "LOCAL",
+          "meaning": "Inventory items by platform",
+          "name": "inventory_by_platform",
+          "source": "content/social/inventory.json",
+          "status": "OK",
+          "unit": "breakdown",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": {
+            "fb": 25,
+            "ig": 25,
+            "pinterest": 25,
+            "x": 25
+          }
+        },
+        {
+          "baseline": 0,
+          "calculation": "count status=已发布",
+          "data_source_type": "CACHED",
+          "meaning": "Social posts actually published",
+          "name": "posts_published_social",
+          "source": "content/social/inventory.json",
+          "status": "INSUFFICIENT_SAMPLE",
+          "unit": "posts",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": 0
+        },
+        {
+          "baseline": null,
+          "calculation": "sum impressions from funnel (NULL until platform metrics)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Social impressions (measured)",
+          "name": "social_impressions",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "NOT_AVAILABLE",
+          "unit": "impressions",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "sum clicks from funnel (NULL until platform metrics)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Social clicks to website (measured)",
+          "name": "social_clicks",
+          "source": "reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
+          "status": "NOT_AVAILABLE",
+          "unit": "clicks",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        },
+        {
+          "baseline": null,
+          "calculation": "GA4 sessionSource=social breakdown (NULL until GA4 data)",
+          "data_source_type": "NOT_AVAILABLE",
+          "meaning": "Website sessions from social (measured)",
+          "name": "social_website_sessions",
+          "source": "GA4 (not yet available for social-source sessions)",
+          "status": "NOT_AVAILABLE",
+          "unit": "sessions",
+          "update_frequency": "daily",
+          "valid_period": "2026-08-26",
+          "value": null
+        }
+      ],
+      "source_artifacts": [
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_GROWTH_FUNNEL.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\content\\social\\inventory.json"
+      ]
+    },
     "traffic": {
       "kpis": [
         {
@@ -1051,7 +1386,7 @@
       ]
     }
   },
-  "generated_at": "2026-08-17",
+  "generated_at": "2026-08-26",
   "low_data_reasons": [
     "affiliate_funnel.affiliate_clicks_28d: sample below guard",
     "affiliate_funnel.click_rate: sample below guard",

@@ -1,6 +1,6 @@
 # TOP AFFILIATE OPPORTUNITIES
 
-- Generated: 2026-08-16
+- Generated: 2026-08-28
 - GA4 data source: GA4_API(28d, per-page)
 
 - Rule: high SEO impressions + high affiliate intent + existing placement + low current clicks.
@@ -12,7 +12,7 @@
 | 3 | https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ | cbt-b4ff4381a014 | Aviasales, Booking, Klook, SafetyWing | 107.0 | 0 | NULL | impressions=107.0, intent=VISA | CTA_TEST |
 | 4 | https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ | cbt-244822dc113b | Airalo, Aviasales, Booking, Klook, SafetyWing | 87.0 | 0 | NULL | impressions=87.0, intent=VISA | MONITOR |
 | 5 | https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ | cbt-707a8899c0a7 | Airalo, Aviasales, Klook | 83.0 | 0 | NULL | impressions=83.0, intent=PAYMENT | MONITOR |
-| 6 | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ | cbt-80ac63165adb | Airalo, Aviasales, Booking, Klook, NordVPN, SafetyWing | 52.0 | 0 | NULL | impressions=52.0, intent=GENERAL | MONITOR |
+| 6 | https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ | cbt-80ac63165adb | Airalo, Aviasales, Booking, Klook, NordVPN, SafetyWing | 52.0 | 0 | NULL | impressions=52.0, intent=VISA | MONITOR |
 | 7 | https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ | cbt-bfeaa5ca9007 | Airalo, Aviasales, Booking, Klook, NordVPN, SafetyWing | 51.0 | 0 | NULL | impressions=51.0, intent=GENERAL | MONITOR |
 | 8 | https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ | cbt-23c31fe5b281 | Aviasales, Booking, Klook | 40.0 | 0 | NULL | impressions=40.0, intent=CITY | MONITOR |
 | 9 | https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/ | cbt-80f6c218ad94 | Airalo, Aviasales, Booking, Klook, SafetyWing | 26.0 | 0 | NULL | impressions=26.0, intent=CITY | MONITOR |

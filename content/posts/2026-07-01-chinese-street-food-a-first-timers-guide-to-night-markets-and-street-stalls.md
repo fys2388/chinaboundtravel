@@ -28,7 +28,7 @@ For international travelers comparing options, flight search platforms help you 
 {{< /soft-recommend >}}
 For many first-time visitors, stepping into a Chinese night market feels like entering an entirely new world. The air hits you like a spicy, flavorful wave — the thick aroma of various spices fills your nostrils, the sounds of vendors passionately shouting their wares echo in your ears, and the sight of colorful lights twinkling everywhere is like something straight out of a fairytale movie. It's an adventure that stays with you long after the trip ends.
 
-If you're planning a trip to China, exploring the street food is an absolute must. Chinese street food is not just about satisfying your taste buds; it's a portal to the local culture, traditions, and daily life. In this guide, we draw on extensive research and local insights to give you an in-depth look at Chinese street food. Chengdu is also famous for its [tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) — but today, we're focusing on the food. From one of the popular night markets to the must-try dishes, we've got you covered.
+If you're planning a trip to China, exploring the street food is a must. Chinese street food is not just about satisfying your taste buds; it's a portal to the local culture, traditions, and daily life. In this guide, we draw on extensive research and local insights to give you an in-depth look at Chinese street food. Chengdu is also famous for its [tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) — but today, we're focusing on the food. From the best night markets to the must-try dishes, we've got you covered.
 
 ![Chinese street food stall at a bustling night market with sizzling skewers and steaming woks](/img/china-dest/general/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.jpg)
 
@@ -94,7 +94,7 @@ When it comes to street food, hygiene is often a concern. To be on the safe side
 In China, most street food vendors accept mobile payment methods like [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) and [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/). It's a good idea to have these apps installed on your phone and linked to your bank account or a prepaid card. However, it's also a good idea to carry some cash with you, just in case.
 
 ### Exploring Different Areas
-Don't limit yourself to just one night market or street. China is a vast country with a rich culinary heritage, and each region has its own unique street food. So, make sure to explore different areas and try as many different dishes as possible. You might discover a new favorite that you generally not recommended knew existed.
+Don't limit yourself to just one night market or street. China is a vast country with a rich culinary heritage, and each region has its own unique street food. So, make sure to explore different areas and try as many different dishes as possible. You might discover a new favorite that you never knew existed.
 
 
 

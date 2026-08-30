@@ -144,15 +144,23 @@ def test_image_prompt_present(article):
 # ============================================================
 
 
-def test_build_schedule_three_per_day(inventory):
+def test_build_schedule_respects_daily_cap(inventory):
+    """排期每天总量不超过 平台数×MAX_PER_PLATFORM_PER_DAY（与 worker GLOBAL_DAILY_MAX=20 对齐）。"""
+    sched = sga.build_schedule(inventory, start_date=date(2026, 8, 21))
+    cap = 4 * sga.MAX_PER_PLATFORM_PER_DAY
+    for day in sched[:3]:
+        assert len(day["slots"]) <= cap
+
+
+def test_schedule_platform_cap_per_day(inventory):
+    """每个平台每天不超过 MAX_PER_PLATFORM_PER_DAY。"""
     sched = sga.build_schedule(inventory, start_date=date(2026, 8, 21))
     for day in sched[:3]:
-        assert len(day["slots"]) <= 3
-
-
-def test_schedule_has_three_slots_per_day(inventory):
-    sched = sga.build_schedule(inventory, start_date=date(2026, 8, 21))
-    assert len(sched[0]["slots"]) == 3
+        counts: dict[str, int] = {}
+        for sl in day["slots"]:
+            counts[sl["platform"]] = counts.get(sl["platform"], 0) + 1
+        for platform, n in counts.items():
+            assert n <= sga.MAX_PER_PLATFORM_PER_DAY
 
 
 def test_schedule_ratio_80_20(inventory):
@@ -237,6 +245,29 @@ def test_publish_item_worker_queued_is_success(monkeypatch):
     res = sga.publish_item(item, "https://worker.example/publish", dry_run=False)
     assert res["success"] is True
     assert res["queued"] is True
+
+
+def test_publish_item_worker_duplicate_is_skipped_success(monkeypatch):
+    """worker 内容去重（200 + success:false + error:'Duplicate content'）应视为成功跳过，
+    避免重复内容把整个发布 run 标红。"""
+    class FakeResp:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"success": False,
+                    "error": "Duplicate content",
+                    "message": "相同内容已在 2026-08-29T02:37:33.142Z 发布过，跳过重复。"}
+
+    def fake_post(url, json=None, timeout=None):
+        return FakeResp()
+
+    monkeypatch.setattr(sga.requests, "post", fake_post)
+    item = {"id": "soc-x", "source_article": "slug", "platform": "pinterest",
+            "type": "knowledge", "caption": "caption", "image_url": ""}
+    res = sga.publish_item(item, "https://worker.example/publish", dry_run=False)
+    assert res["success"] is True
+    assert res["skipped"] is True
 
 
 # ============================================================

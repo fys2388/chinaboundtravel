@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — YEARLY REPORT
 
-- Generated: 2026-08-17 (Asia/Shanghai)
-- as_of: 2026-08-17
+- Generated: 2026-08-26 (Asia/Shanghai)
+- as_of: 2026-08-26
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -11,7 +11,7 @@
 
 ## Executive status
 
-- Published posts: 60 posts
+- Published posts: 58 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
 - GSC clicks 28d: 0 clicks | Impressions: 234 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)
@@ -63,14 +63,14 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type |
 |---|---|---|
-| published_posts | 60 posts | CACHED |
-| content_id_coverage | 60 posts | CACHED |
-| new_pages_30d | 19 posts | CACHED |
+| published_posts | 58 posts | CACHED |
+| content_id_coverage | 58 posts | CACHED |
+| new_pages_30d | 15 posts | CACHED |
 | updated_pages | NULL | NOT_AVAILABLE |
 | indexed_posts | 47 posts | CACHED |
 | asset_tier_distribution | {'B': 8, 'C': 24, 'D': 28} | CACHED |
 | opportunity_pipeline | 51 items | CACHED |
-| legacy_persona_pages | 25 posts | LOCAL |
+| legacy_persona_pages | 0 posts | LOCAL |
 | migrated_persona_pages | 3 posts | LOCAL |
 | canonical_conflicts | 6 urls | CACHED |
 | duplicate_risk_rows | 14 rows | CACHED |
@@ -81,8 +81,8 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type |
 |---|---|---|
-| editorial_persona_compliance | 11/13 layers | LOCAL |
-| legacy_persona_remaining | 25 posts | LOCAL |
+| editorial_persona_compliance | NULL | LOCAL |
+| legacy_persona_remaining | 0 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |
 | core_brand_compliance | WARN | LOCAL |
@@ -94,7 +94,7 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| cta_inventory_rows | 277 rows | CACHED | OK |
+| cta_inventory_rows | 278 rows | CACHED | OK |
 | cta_inventory_pages | 45 pages | CACHED | OK |
 | affiliate_clicks_28d | 0 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | cta_impressions | 0 impressions | CACHED | INSUFFICIENT_SAMPLE |
@@ -170,7 +170,7 @@ Guard: observation < 28d or clicks < 20 => INSUFFICIENT_SAMPLE. No WIN/LOSE decl
 
 ## 13. Biggest wins
 
-- 60/60 content_id integrity; single inventory source
+- 58/58 content_id integrity; single inventory source
 - First revenue experiments + Drive activation
 - Editorial persona compliance enforced at brand layer
 
@@ -210,11 +210,18 @@ Differentiated editorial persona (Joran) + structured commercial clusters (Trans
 ### Value classification
 
 - Traffic growth: INSUFFICIENT_SAMPLE (baseline only, 166 sessions / 374 pageviews 28d)
-- Content asset value: 60 posts, 51-item opportunity pipeline, 0 fabricated metrics
+- Content asset value: 58 posts, 51-item opportunity pipeline, 0 fabricated metrics
 - Commercial value: 277 CTA rows / 45 pages, Drive ACTIVE, revenue NULL
 - Operational maturity: automated engines + guarded reporting; backup/rollback NOT_AVAILABLE
 
 ### Period comparison (YoY)
 
-All metrics: **INSUFFICIENT_SAMPLE** — no prior unified snapshot exists yet. Comparisons become available once a second snapshot is generated.
+| Metric | Current | Previous | Delta | Delta % | Status |
+|---|---|---|---|---|---|
+| traffic.sessions_28d | 166 | 166 | 0.0 | 0.0 | OK |
+| traffic.pageviews_28d | 374 | 374 | 0.0 | 0.0 | OK |
+| seo_gsc.gsc_clicks_28d | 0 | 0 | 0.0 | NULL | OK |
+| seo_gsc.gsc_impressions_28d | 234 | 234 | 0.0 | 0.0 | OK |
+| affiliate_funnel.affiliate_clicks_28d | 0 | 0 | 0.0 | NULL | OK |
+| revenue.revenue | None | None | NULL | NULL | INSUFFICIENT_SAMPLE |
 

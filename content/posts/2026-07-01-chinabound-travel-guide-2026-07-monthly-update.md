@@ -17,7 +17,7 @@ categories: ["travel-tips", "payment"]
 ---
 {{< affiliate-section >}}
 
-**Ready for your China adventure?** Here are my top recommendations:
+**Ready for your China adventure?** Here are our top recommendations:
 
 - **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
 - **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})
@@ -62,7 +62,7 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 
 {{< affiliate-section >}}
 
-**Ready for your China adventure?** Here are my top recommendations:
+**Ready for your China adventure?** Here are our top recommendations:
 
 - **Book Flights**: [Search flights to China →]({{< param affiliate.flight >}})
 - **Travel Insurance**: [Get SafetyWing nomad insurance →]({{< param affiliate.safetywing >}})

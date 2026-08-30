@@ -69,7 +69,7 @@ Keep at least 200 RMB in your wallet for taxis, street stalls, and emergencies. 
 
 Sometimes WeChat Pay shows a red banner: "Your account has been temporarily restricted." This is usually WeChat's security system flagging unusual activity — logging in from a new phone, a large payment, or use in a different city. The fix is identity verification: open **Me > Pay > Security** and follow the prompts. You'll likely need to upload a photo of your passport again, so keep a passport photo saved on your phone to re-verify quickly.
 
-**Scam warning:** generally not recommended share your payment QR code publicly. Scammers in tourist areas sometimes print fake QR codes over real ones. often check the merchant's name before confirming a payment — if the displayed name doesn't match the shop you're in, cancel the transaction.
+**Scam warning:** Don't share your payment QR code publicly. Scammers in tourist areas sometimes print fake QR codes over real ones. Always check the merchant's name before confirming a payment — if the displayed name doesn't match the shop you're in, cancel the transaction.
 
 Set a payment password that's different from your login password and don't share it with anyone.
 
@@ -126,7 +126,7 @@ Only at merchants that accept it, typically Chinese-facing businesses in countri
 - [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — You'll need connectivity to use WeChat Pay, so get this sorted first
 - [Chinese Food Delivery Apps Guide](/posts/chinese-food-delivery-meituan-eleme-guide/) — Meituan and Ele.me both require WeChat Pay or Alipay
 
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({[esim](/posts/internet-connection-china-esim-vpn-guide/)ooking-link "Book Hotels" />}})
+> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({{< booking-link "Book Hotels" />}})
 
 
 {{< affiliate-esim >}}

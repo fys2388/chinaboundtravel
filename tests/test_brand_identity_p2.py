@@ -186,34 +186,39 @@ def test_non_brand_content_untouched():
     proc = subprocess.run(["git", "diff", "HEAD", "--name-only", "--", "content/"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     changed = [p for p in proc.stdout.splitlines() if p]
-    allowed = {"content/about/_index.md", "content/resources/_index.md",
-               "content/posts/western-sichuan-overland-camping-route.md",
-               "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
-               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
-               "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
-               # P1-GROWTH-15 authorized REV002 CTA experiment post
-               "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
-               # P1-GROWTH-18 authorized internal-link additions
-               "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-               "content/posts/china-transportation-card-guide.md",
-               # P1-GROWTH-22 authorized Alipay authority page + internal links
-               "content/posts/alipay-for-foreigners-guide.md",
-               "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
-               "content/posts/internet-connection-china-esim-vpn-guide.md",
-               # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
-               "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-               # P1-GROWTH-25 authorized TOP-page title/meta update
-               "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
-               # P1-GROWTH-28 authorized CTR pilot title/meta updates
-               "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-               # P1-GROWTH-28A: non-article page persona cleanup
-               "content/7-day-china-itinerary.md",
-               "content/affiliate-disclosure.md",
-               "content/contact.md",
-               "content/cities/_index.md",
-               "content/cities/beijing.md",
-               "content/cities/chengdu.md"}
+    allowed = {
+        "content/about/_index.md",
+        "content/resources/_index.md",
+        # Social Engine 闭环自动维护的资产库（P1-SOCIAL / GROWTH-29 授权）
+        "content/social/inventory.json",
+        "content/posts/western-sichuan-overland-camping-route.md",
+        "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+        "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+        "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+        # P1-GROWTH-15 authorized REV002 CTA experiment post
+        "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        # P1-GROWTH-18 authorized internal-link additions
+        "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "content/posts/china-transportation-card-guide.md",
+        # P1-GROWTH-22 authorized Alipay authority page + internal links
+        "content/posts/alipay-for-foreigners-guide.md",
+        "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+        "content/posts/internet-connection-china-esim-vpn-guide.md",
+        # P1-GROWTH-24 authorized TOP5 front-matter corruption fix
+        "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+        # P1-GROWTH-25 authorized TOP-page title/meta update
+        "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+        # P1-GROWTH-28 authorized CTR pilot title/meta updates
+        "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+        "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        # P1-GROWTH-28A: non-article page persona cleanup
+        "content/7-day-china-itinerary.md",
+        "content/affiliate-disclosure.md",
+        "content/contact.md",
+        "content/cities/_index.md",
+        "content/cities/beijing.md",
+        "content/cities/chengdu.md",
+    }
     # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
     allowed |= CONVERSION_OPT_AUTHORIZED
     assert set(changed) <= allowed, f"unexpected content changes: {set(changed) - allowed}"

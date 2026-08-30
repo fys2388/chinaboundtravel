@@ -52,7 +52,7 @@ Let's break down the actual benefits:
 
 ###  What Works Well
 
-**No Chinese bank account needed.** This is the big one. Previously, using Alipay or WeChat Pay as a foreigner required a linked Chinese bank card (which you can only get with a Chinese phone number and ID). Now you can pay like a local using just your existing PayPal account.
+**No Chinese bank account needed.** This is the big one. Previously, using Alipay or WeChat Pay as a foreigner required a linked Chinese bank card (which you can only get with a Chinese phone number and ID). Now you can pay like a resident using just your existing PayPal account.
 
 **Direct currency conversion.** PayPal handles the CNY-to-USD (or EUR, GBP, etc.) conversion at transparent exchange rates. No more guessing what the merchant is actually charging you.
 
@@ -115,7 +115,7 @@ Look, travelers have been through it all:
 
 This PayPal development doesn't solve every single payment problem in China. But for the average foreign tourist visiting major cities? **This is the biggest quality-of-life improvement in years.**
 
-You no longer need a Chinese phone number, a Chinese bank account, or a Chinese ID to pay like a local. That's huge.
+You no longer need a Chinese phone number, a Chinese bank account, or a Chinese ID to pay like a resident. That's huge.
 
 Is it well-suited? No. But it's a serious step forward, and if you're planning a trip to China in 2026, you should  know about it.
 

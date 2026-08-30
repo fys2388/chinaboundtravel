@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-932a277b1899"
-title: "China Packing List 2026: What to Bring — 2026 Packing Essentials for International Travelers"
+title: "China Packing List 2026: What to Bring"
 date: "2026-08-09T10:00:00+08:00"
 lastmod: "2026-08-09T10:00:00+08:00"
 author: "Joran"
@@ -12,7 +12,6 @@ tags:
   - USToChina
 geo: "US"
 draft: false
-audit_status: "pass2"
 summary: "China Packing List 2026: What to Bring and What to Leave at Home for travelers visiting China. essential guide based on extensive research and on-the-ground traveler feedback in China."
 description: "China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/"

@@ -244,6 +244,17 @@ def test_no_new_cta_added_this_round():
         # P1-GROWTH-28 authorized CTR pilot title/meta updates
         "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
         "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        # P1-GROWTH-31 authorized content trust auto-fix pilot
+        "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+        "content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+        "content/posts/western-sichuan-overland-camping-route.md",
+        "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+        "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+        "content/posts/2026-07-27-accommodation-tips-guide.md",
+        "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+        "content/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
+        "content/posts/2026-08-03-chinese-language-survival-phrases-guide.md",
+        "content/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
         # P1-GROWTH-28A: non-article page persona cleanup
         "content/7-day-china-itinerary.md",
         "content/affiliate-disclosure.md",
@@ -251,6 +262,10 @@ def test_no_new_cta_added_this_round():
         "content/cities/_index.md",
         "content/cities/beijing.md",
         "content/cities/chengdu.md",
+        # 社媒引擎资产库（Social Engine 闭环自动维护，image_url 回填等）
+        "content/social/inventory.json",
+        # P1-GROWTH-30R authorized avatar PNG fallback restoration
+        "content/about/_index.md",
     }
     # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
     allowed = allowed | CONVERSION_OPT_AUTHORIZED

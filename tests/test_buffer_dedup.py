@@ -11,6 +11,7 @@ The dedup helper is a pure ESM module (buffer-worker/dedup.mjs) shared by the
 Cloudflare Worker and these tests. No network and no real Buffer API involved.
 """
 import subprocess
+import os
 from pathlib import Path
 
 WORKER_DIR = Path(__file__).resolve().parent.parent / "buffer-worker"
@@ -22,9 +23,10 @@ def _node(expr: str) -> str:
         f'import {{ buildDedupKey, isDuplicate, buildTrackRecord }} from "{DEDUP_MODULE}";\n'
         + expr
     )
+    env = {k: v for k, v in os.environ.items() if k != "NODE_OPTIONS"}
     res = subprocess.run(
         ["node", "--input-type=module", "-e", code],
-        capture_output=True, text=True, timeout=30,
+        capture_output=True, text=True, timeout=30, env=env,
     )
     assert res.returncode == 0, f"node failed: {res.stderr}"
     return res.stdout.strip()

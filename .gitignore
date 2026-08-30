@@ -1,4 +1,4 @@
-.vercel
+﻿.vercel
 public/
 node_modules/
 
@@ -29,7 +29,7 @@ Thumbs.db
 
 # Build artifacts
 *.pdf
-# 但 Lead Magnet PDF 需部署到站点，保留 static/lead-magnet/ 下的 PDF
+# 浣?Lead Magnet PDF 闇€閮ㄧ讲鍒扮珯鐐癸紝淇濈暀 static/lead-magnet/ 涓嬬殑 PDF
 !static/lead-magnet/*.pdf
 
 # Temporary scripts
@@ -52,3 +52,9 @@ chinaboundtravel_social_bot/youtube_refresh_token.txt
 
 # Buffer API tokens (never commit)
 chinaboundtravel_social_bot/buffer_config.json
+
+# Windows device artifact + local diagnostic screenshots (not project files)
+NUL
+run_workflow_menu.png
+screenshot5.png
+screenshot6.png

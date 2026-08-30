@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const WORKER_URL = 'https://buffer-auto-poster.fys2388.workers.dev/ga4-report';
+const WORKER_URL = 'https://buffer-worker.chinaboundtravel.com/ga4-report';
 const OUTPUT = 'e:\\AI\\dulizhan\\travel-blog\\reports\\ga4_weekly_report.md';
 
 function fmtDuration(seconds) {

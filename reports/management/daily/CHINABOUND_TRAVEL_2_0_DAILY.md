@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-08-19 (Asia/Shanghai)
-- as_of: 2026-08-19
+- Generated: 2026-08-27 (Asia/Shanghai)
+- as_of: 2026-08-27
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -11,7 +11,7 @@
 
 ## Executive status
 
-- Published posts: 60 posts
+- Published posts: 58 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
 - GSC clicks 28d: 0 clicks | Impressions: 234 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)
@@ -128,7 +128,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 | KPI | Value | Source type |
 |---|---|---|
 | editorial_persona_compliance | NULL | LOCAL |
-| legacy_persona_remaining | 25 posts | LOCAL |
+| legacy_persona_remaining | 0 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |
 | core_brand_compliance | WARN | LOCAL |

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChinaBound Social Growth Funnel",
+  "description": "Canonical persisted model for social-to-revenue funnel rows. Values are never fabricated; unavailable metrics are null with data_source=NOT_AVAILABLE.",
+  "type": "object",
+  "required": [
+    "social_content_id",
+    "content_id",
+    "platform",
+    "post_type",
+    "published_at",
+    "impressions",
+    "clicks",
+    "data_source",
+    "snapshot_date"
+  ],
+  "properties": {
+    "social_content_id": {
+      "type": "string",
+      "pattern": "^soc-[0-9]{6}$"
+    },
+    "content_id": {
+      "type": "string",
+      "pattern": "^cbt-[0-9a-f]{12}$"
+    },
+    "platform": {
+      "enum": ["ig", "pinterest", "x", "fb"]
+    },
+    "post_type": {
+      "enum": ["knowledge", "tip", "story", "visual", "conversion"]
+    },
+    "published_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "impressions": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "clicks": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "website_sessions": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "engaged_sessions": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "affiliate_clicks": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "revenue": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "data_source": {
+      "enum": [
+        "SOCIAL_PLATFORM_API",
+        "GA4",
+        "AFFILIATE_API",
+        "MANUAL",
+        "NOT_AVAILABLE"
+      ]
+    },
+    "snapshot_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "additionalProperties": false
+}

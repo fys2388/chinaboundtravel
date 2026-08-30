@@ -53,11 +53,20 @@ def clean_social_text(text: str) -> str:
 
 def trim_leading_title(text: str, title: str) -> str:
     """若文本以标题开头（常见于 description 直接取自正文第一段），
-    去掉标题前缀，避免 title+desc 拼接时视觉重复。"""
+    去掉标题前缀，避免 title+desc 拼接时视觉重复。
+    兼容标题在 clean 后丢失括号/标点的情况（如 '(2026 Guide)' -> '2026 Guide'）。"""
     if not text or not title:
         return text
     t = title.strip()
-    candidates = [t, t.rstrip(".:!? "), t.replace("—", "-")]
+    t_no_paren = re.sub(r"[()\[\]]", "", t)
+    candidates = [
+        t,
+        t_no_paren,
+        t.rstrip(".:!? "),
+        t_no_paren.rstrip(".:!? "),
+        t.replace("—", "-"),
+        t_no_paren.replace("—", "-"),
+    ]
     for c in candidates:
         if c and len(c) >= 8 and text.startswith(c):
             text = text[len(c):].lstrip(" .:—,，。")

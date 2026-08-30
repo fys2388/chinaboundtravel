@@ -66,7 +66,7 @@ This is the section our editorial team updates most frequently because payment a
 
 Every month, our editorial team collects scam reports from readers and expat communities across China to keep the safety section current. Here are the two patterns that spiked in July:
 
-**The "closed attraction" scam at major sites:** We're seeing this one at the Forbidden City, Terracotta Army, and Zhangjiajie. Here's how it works: you're walking toward the official ticket entrance when a friendly local approaches you and says the attraction is "closed today for government business" - but don't worry, they can take you to a "secret back entrance" or a nearby lesser-known site for a small transport fee. In reality, the site is completely open, and they're driving you to an overpriced tourist trap or a factory shop where they earn commission. **Rule #1:** generally not recommended trust anyone who approaches you outside a major tourist site saying it's closed. Verify at the official ticket window or on the official WeChat mini-program first.
+**The "closed attraction" scam at major sites:** We're seeing this one at the Forbidden City, Terracotta Army, and Zhangjiajie. Here's how it works: you're walking toward the official ticket entrance when a friendly local approaches you and says the attraction is "closed today for government business" - but don't worry, they can take you to a "back entrance" or a nearby lesser-known site for a small transport fee. In reality, the site is completely open, and they're driving you to an overpriced tourist trap or a factory shop where they earn commission. **Rule #1:** generally not recommended trust anyone who approaches you outside a major tourist site saying it's closed. Verify at the official ticket window or on the official WeChat mini-program first.
 
 **Fake Didi / unlicensed taxi drivers at airports and train stations:** This has often been a problem, but our team received 17 reports in July alone - mostly at Shanghai Pudong, Beijing Capital, and Guangzhou Baiyun airports. The scammers wear fake uniforms, hold up signs with your name on them (they're reading luggage tags or pickup boards), and charge 3-5x the regular fare. often book Didi through the official app, and confirm the driver's name, license plate, and car model match before getting in. If you haven't pre-arranged transport, the official taxi queue at the airport is often safer than following someone who approaches you.
 
@@ -88,7 +88,7 @@ Every month, our editorial team hosts a live Q&A session for ChinaBound readers 
 
 **Q: Can I use Google Translate in China, or do I need to download a Chinese app?**
 
-A: Google Translate does NOT work in mainland China (no Google services do - not even Maps or Gmail). The two a popular translation apps that work without a VPN are Baidu Translate and DeepL's mobile app (download the offline Chinese language pack before you leave). If you have an iPhone, the built-in Apple Translate also works offline for Chinese. Our editorial team has a full breakdown of the [best apps for China travel](/posts/internet-connection-china-esim-vpn-guide/) in the internet connectivity guide - including which ones work without VPN and which ones  require it.
+A: Google Translate does NOT work in mainland China (no Google services do - not even Maps or Gmail). The two a popular translation apps that work without a VPN are Baidu Translate and DeepL's mobile app (download the offline Chinese language pack before you leave). If you have an iPhone, the built-in Apple Translate also works offline for Chinese. Our editorial team has a full breakdown of the [top apps for China travel](/posts/internet-connection-china-esim-vpn-guide/) in the internet connectivity guide - including which ones work without VPN and which ones  require it.
 
 **Q: How bad is the internet censorship for remote workers? Do I really need a VPN?**
 
@@ -142,7 +142,7 @@ If you have topics you'd like to see covered in a future update, reply to any of
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

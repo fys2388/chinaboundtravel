@@ -39,7 +39,7 @@ body = {
     "url": "https://chinaboundtravel.com/posts/chengdu-panda-adventure-guide/"
 }
 
-resp = requests.post('https://buffer-auto-poster.fys2388.workers.dev/publish', json=body, timeout=90)
+resp = requests.post('https://buffer-worker.chinaboundtravel.com/publish', json=body, timeout=90)
 print(f'Status: {resp.status_code}')
 import json
 print(json.dumps(resp.json(), indent=2, ensure_ascii=False))

@@ -36,7 +36,7 @@ This guide covers the decisions that actually matter: which Li River option to p
 
 This is the choice that determines your whole day, and most people get it wrong by defaulting to the big cruise boat. Here's the full breakdown:
 
-| Option | Duration | Price | a popular For |
+| Option | Duration | Price | Best For |
 |--------|----------|-------|----------|
 | 4-star cruise ship (Guilin → Yangshuo) | 4 hours | ¥210/person (~€26) | Most travelers, first-timers |
 | 3-star cruise ship (Guilin → Yangshuo) | 4 hours | ¥170/person (~€21) | Budget-conscious travelers |
@@ -54,11 +54,11 @@ Visitors who return in different seasons report a staggering difference. Here's 
 | Months | Rating | Why |
 |--------|--------|-----|
 | April–May | ★★★★★ | "Misty rain on the Li River" () — the classic Chinese painting aesthetic. Peaks disappear into clouds. The most photographed season, and rightfully so |
-| September–October | ★★★★ | Clear skies, comfortable temperatures (20-28°C), water levels stable after summer rains. Second-a popular overall |
+| September–October | ★★★★ | Clear skies, comfortable temperatures (20-28°C), water levels stable after summer rains. Second-best overall |
 | June–August | ★★★ | Hot (33-36°C), humid, crowded with domestic tourists. Upside: you can swim in the Yulong River and go tubing |
 | November–March | ★★ | Cold (5-12°C), grey, many raft operations suspend service. Hotels are half price though, and you'll have viewpoints to yourself |
 
-**Bottom line:** April and May are peak beauty. September and October are one of the popular balance of weather, crowds, and cost. Avoid Chinese National Day holiday (October 1-7) at all costs — hotel prices triple and every viewpoint is wall-to-wall people.
+**Bottom line:** April and May are peak beauty. September and October offer the best balance of weather, crowds, and cost. Avoid Chinese National Day holiday (October 1-7) at all costs — hotel prices triple and every viewpoint is wall-to-wall people.
 
 ## 3-Day Itinerary
 
@@ -92,7 +92,7 @@ Guilin cuisine is distinct from the rest of Guangxi — heavier on rice noodles,
 
 - **Guilin Rice Noodles ()** — ¥5-10 (~€0.60-1.25). The single must-eat dish. Thin round rice noodles served in a clear broth with braised meat, peanuts, pickled green beans, and chili oil. The proper way: add your own chili and vinegar at the table, mix well, eat fast (noodles get soggy if you wait). This is primarily a breakfast food — go where the locals queue, not where the tour bus parks.
 
-- **Beer Fish ()** — ¥60-100 (~€7.50-12.50). Yangshuo's signature dish. Fresh river fish (usually Li River carp or tilapia) braised in a wok with beer, tomatoes, garlic, and chili. The sauce is rich and slightly sweet. a popular versions are at the smaller restaurants on West Street's side alleys, not the big names with English menus. Serves 2 people.
+- **Beer Fish ()** — ¥60-100 (~€7.50-12.50). Yangshuo's signature dish. Fresh river fish (usually Li River carp or tilapia) braised in a wok with beer, tomatoes, garlic, and chili. The sauce is rich and slightly sweet. The best versions are at the smaller restaurants on West Street's side alleys, not the big names with English menus. Serves 2 people.
 
 - **Stuffed River Snails ()** — ¥15-25 (~€2-3). A Guangxi specialty: snail meat is removed from the shell, mixed with minced pork and herbs, stuffed back in, and braised. The flavor is earthy and savory. Available at most Yangshuo night market stalls.
 
@@ -100,13 +100,13 @@ Guilin cuisine is distinct from the rest of Guangxi — heavier on rice noodles,
 
 - **Oil Tea ()** — ¥10-20 (~€1.25-2.50). A Guilin-specific drink you won't find elsewhere. Tea leaves are pan-fried with ginger, garlic, and roasted peanuts, then pounded and brewed into a thick, savory broth. It tastes like nothing you've had before — slightly bitter, nutty, and warming. Locals drink it daily. Available at traditional tea houses in Guilin's old town, not at tourist cafes.
 
-> **Breakfast strategy:** Skip your hotel breakfast. Walk to any noodle shop with a line of locals between 6:30-8:00 AM. A bowl of Guilin rice noodles costs ¥6-8 and takes 5 minutes. Follow it with a cup of oil tea at the shop next door. That's your a popular ¥15 (~€1.90) spent all day.
+> **Breakfast strategy:** Skip your hotel breakfast. Walk to any noodle shop with a line of locals between 6:30-8:00 AM. A bowl of Guilin rice noodles costs ¥6-8 and takes 5 minutes. Follow it with a cup of oil tea at the shop next door. That's a well-spent ¥15 (~€1.90) for the whole day.
 
 > **Actionable tip:** For the full street food experience, visit the Yangshuo night market behind West Street after 8 PM. Grilled skewers, steamed buns, mango sticky rice, and fresh-squeezed sugarcane juice (¥5/cup, ~€0.60). For more on navigating Chinese night markets as a foreigner, see our [Chinese Street Food guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/). And if you're exploring Chinese regional cuisine, the [Gastronomic Food Guide](/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/) covers eight culinary traditions across the country.
 
 ## How to Get There
 
-**High-speed train** is one of the popular option for most travelers:
+**High-speed train** is the best option for most travelers:
 
 | Route | Duration | Price |
 |-------|----------|-------|
@@ -121,7 +121,7 @@ Book on 12306.cn or via Trip.com. For detailed instructions on navigating China'
 - **Bus:** Guilin Railway Station → Yangshuo, 1.5 hours, ¥30 (~€4). Buses depart every 20 minutes from the station's bus terminal.
 - **Li River cruise:** The 4-hour boat from Guilin to Yangshuo doubles as transport and sightseeing. ¥170-210 depending on boat class. This is the option most tour groups take.
 
-**Getting around Yangshuo:** Rent an electric scooter (e-bike) for ¥50/day (~€6). This is the single a popular transport decision you can make. The karst countryside roads are flat, scenic, and e-bikes let you cover the distance between Xingping, the Yulong River, and Moon Hill in a single day without exhaustion. Most hotels and guesthouses rent them — no license required, just leave your passport as deposit.
+**Getting around Yangshuo:** Rent an electric scooter (e-bike) for ¥50/day (~€6). This is the single best transport decision you can make. The karst countryside roads are flat, scenic, and e-bikes let you cover the distance between Xingping, the Yulong River, and Moon Hill in a single day without exhaustion. Most hotels and guesthouses rent them — no license required, just leave your passport as deposit.
 
 ## Where to Stay
 

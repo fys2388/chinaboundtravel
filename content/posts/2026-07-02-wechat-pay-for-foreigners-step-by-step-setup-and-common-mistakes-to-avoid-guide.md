@@ -197,7 +197,7 @@ No. Visitors can use the Tour Card feature to link a foreign Visa or Mastercard.
 
 ### What is the WeChat Pay Tour Card?
 
-The Tour Card is WeChat's feature for foreign visitors without a Chinese bank account, letting them link an international Visa or Mastercard and pay like a local.
+The Tour Card is WeChat's feature for foreign visitors without a Chinese bank account, letting them link an international Visa or Mastercard and pay like a resident.
 
 ### Why is my foreign card being declined?
 
@@ -213,7 +213,7 @@ Yes — and it is recommended. Registration with an international phone number w
 
 ## Conclusion
 
-WeChat Pay transforms your travel experience in China from a constant scramble for cash and correct change into something seamless. The setup takes maybe 30 minutes if you do it from home, and the payoff is enormous -- from scanning your way through [street food markets](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) in Chengdu to paying for your [high-speed train](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) to [Shanghai](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/). Register before you go, activate the Tour Card, make a small test payment, and you are ready to pay like a local.
+WeChat Pay transforms your travel experience in China from a constant scramble for cash and correct change into something seamless. The setup takes maybe 30 minutes if you do it from home, and the payoff is enormous -- from scanning your way through [street food markets](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) in Chengdu to paying for your [high-speed train](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) to [Shanghai](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/). Register before you go, activate the Tour Card, make a small test payment, and you are ready to pay like a resident.
 
 ### WeChat Pay Spending Quick Reference
 
@@ -259,7 +259,7 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
-- 🏥 [Best Travel Insurance for China](/posts/best-travel-insurance-china/)
+- 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---
 

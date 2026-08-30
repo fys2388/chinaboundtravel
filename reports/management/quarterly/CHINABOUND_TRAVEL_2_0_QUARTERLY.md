@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — QUARTERLY REPORT
 
-- Generated: 2026-08-17 (Asia/Shanghai)
-- as_of: 2026-08-17
+- Generated: 2026-08-26 (Asia/Shanghai)
+- as_of: 2026-08-26
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -11,7 +11,7 @@
 
 ## Executive status
 
-- Published posts: 60 posts
+- Published posts: 58 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
 - GSC clicks 28d: 0 clicks | Impressions: 234 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)
@@ -21,7 +21,7 @@
 
 ## 1. Executive quarterly review
 
-Q3-2026 so far: site rebuilt around 60 posts, editorial persona 2.0 enforced, monetization moved from zero to three running experiments (REV001/REV002/DRIVE-001). Revenue remains NULL (no API).
+Q3-2026 so far: site rebuilt around 58 posts, editorial persona 2.0 enforced, monetization moved from zero to three running experiments (REV001/REV002/DRIVE-001). Revenue remains NULL (no API).
 
 ## 2. Traffic growth
 
@@ -65,14 +65,14 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type |
 |---|---|---|
-| published_posts | 60 posts | CACHED |
-| content_id_coverage | 60 posts | CACHED |
-| new_pages_30d | 19 posts | CACHED |
+| published_posts | 58 posts | CACHED |
+| content_id_coverage | 58 posts | CACHED |
+| new_pages_30d | 15 posts | CACHED |
 | updated_pages | NULL | NOT_AVAILABLE |
 | indexed_posts | 47 posts | CACHED |
 | asset_tier_distribution | {'B': 8, 'C': 24, 'D': 28} | CACHED |
 | opportunity_pipeline | 51 items | CACHED |
-| legacy_persona_pages | 25 posts | LOCAL |
+| legacy_persona_pages | 0 posts | LOCAL |
 | migrated_persona_pages | 3 posts | LOCAL |
 | canonical_conflicts | 6 urls | CACHED |
 | duplicate_risk_rows | 14 rows | CACHED |
@@ -85,8 +85,8 @@ Brand 2.0 roll-out: editorial persona audit 11/13 PASS, 3 pilot migrations compl
 
 | KPI | Value | Source type |
 |---|---|---|
-| editorial_persona_compliance | 11/13 layers | LOCAL |
-| legacy_persona_remaining | 25 posts | LOCAL |
+| editorial_persona_compliance | NULL | LOCAL |
+| legacy_persona_remaining | 0 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |
 | core_brand_compliance | WARN | LOCAL |
@@ -98,7 +98,7 @@ Brand 2.0 roll-out: editorial persona audit 11/13 PASS, 3 pilot migrations compl
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| cta_inventory_rows | 277 rows | CACHED | OK |
+| cta_inventory_rows | 278 rows | CACHED | OK |
 | cta_inventory_pages | 45 pages | CACHED | OK |
 | affiliate_clicks_28d | 0 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | cta_impressions | 0 impressions | CACHED | INSUFFICIENT_SAMPLE |
@@ -159,7 +159,7 @@ Guard: observation < 28d or clicks < 20 => INSUFFICIENT_SAMPLE. No WIN/LOSE decl
 
 ## 11. Major wins
 
-- 60 posts / 60 content_id with zero drift (audit PASS)
+- 58 posts / 58 content_id with zero drift (audit PASS)
 - Canonical content_id drift (transportation) reconciled
 - First monetization experiments live on high-intent pages
 
@@ -200,5 +200,12 @@ Guard: observation < 28d or clicks < 20 => INSUFFICIENT_SAMPLE. No WIN/LOSE decl
 
 ### Period comparison (QoQ / YoY)
 
-All metrics: **INSUFFICIENT_SAMPLE** — no prior unified snapshot exists yet. Comparisons become available once a second snapshot is generated.
+| Metric | Current | Previous | Delta | Delta % | Status |
+|---|---|---|---|---|---|
+| traffic.sessions_28d | 166 | 166 | 0.0 | 0.0 | OK |
+| traffic.pageviews_28d | 374 | 374 | 0.0 | 0.0 | OK |
+| seo_gsc.gsc_clicks_28d | 0 | 0 | 0.0 | NULL | OK |
+| seo_gsc.gsc_impressions_28d | 234 | 234 | 0.0 | 0.0 | OK |
+| affiliate_funnel.affiliate_clicks_28d | 0 | 0 | 0.0 | NULL | OK |
+| revenue.revenue | None | None | NULL | NULL | INSUFFICIENT_SAMPLE |
 

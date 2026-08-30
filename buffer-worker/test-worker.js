@@ -1,6 +1,6 @@
 const https = require('https');
 
-const WORKER_URL = 'https://buffer-auto-poster.fys2388.workers.dev';
+const WORKER_URL = 'https://buffer-worker.chinaboundtravel.com';
 
 function postToWorker(body) {
   return new Promise((resolve, reject) => {

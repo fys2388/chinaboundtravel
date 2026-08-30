@@ -2,7 +2,7 @@
 
 Covers (deterministic, no network):
 - snapshot builds from real repo artifacts
-- 60-post / 60-content_id baseline
+- 58-post / 58-content_id baseline
 - NULL revenue (never fabricated)
 - low-data guard (INSUFFICIENT_SAMPLE)
 - experiment states (REV001/REV002/REV003/DRIVE-001/GROWTH-05/recoveries)
@@ -31,14 +31,15 @@ def test_snapshot_schema():
     assert snap["as_of"] == "2026-08-17"
     assert set(snap["domains"]) == {
         "traffic", "seo_gsc", "content_assets", "brand", "affiliate_funnel",
-        "revenue", "experiments", "commercial_clusters", "operations"}
+        "revenue", "experiments", "commercial_clusters", "operations",
+        "social_growth", "content_trust", "growth_funnel"}
 
 
-def test_60_content_baseline():
+def test_current_content_baseline():
     snap = rke.build_snapshot(AS_OF)
     cmap = {k["name"]: k for k in snap["domains"]["content_assets"]["kpis"]}
-    assert cmap["published_posts"]["value"] == 60
-    assert cmap["content_id_coverage"]["value"] == 60
+    assert cmap["published_posts"]["value"] == 58
+    assert cmap["content_id_coverage"]["value"] == 58
 
 
 def test_revenue_null():

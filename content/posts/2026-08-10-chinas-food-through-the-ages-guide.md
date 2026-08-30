@@ -40,7 +40,7 @@ It starts, appropriately, with barbecue. Around two million years ago, early hum
 
 Then came the clay pot, around 20,000 years ago. This was the real game changer: once you could boil, stew, and steam, the number of things you could eat exploded. Spoons and knives appeared. And about 10,000 years ago, after the last ice age (the geologists call it the Younger Dryas, I call it "the great snack shortage"), people started planting the five grains and raising livestock. Shared meals and dining etiquette were born.
 
-Movie reference moment: in *2001: A Space Odyssey*, a bone thrown into the air becomes a spaceship. In China, the equivalent is a clay pot thrown into a history of steam — it becomes the hotpot in my neighborhood. Evolution at its tastiest.
+Movie reference moment: in *2001: A Space Odyssey*, a bone thrown into the air becomes a spaceship. In China, the equivalent is a clay pot thrown into a history of steam — it becomes the hotpot in the neighborhood. Evolution at its tastiest.
 
 ## Bronze Cauldrons and Ritual Banquets: Xia, Shang, and the Rules of the Table
 

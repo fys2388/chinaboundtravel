@@ -870,7 +870,8 @@ class AIEngine:
         
         rules.append("")
         rules.append("SENSITIVE CONTENT RULES (MANDATORY):")
-        rules.append("  - NEVER mention politics, government, communist, or any political topics")
+        rules.append("  - NEVER mention communist party, Tiananmen, Taiwan independence, Falun Gong, or any political controversies")
+        rules.append("  - References to official government sources (visa/policy/official announcements) are ALLOWED and preferred as factual citations")
         rules.append("  - NEVER mention Tiananmen, Taiwan independence, or Falun Gong")
         rules.append("  - NEVER discuss controversial topics or sensitive historical events")
         rules.append("  - Focus ONLY on travel, culture, food, transportation, and practical tips")
@@ -1025,7 +1026,8 @@ Requirements for HIGH-QUALITY CONTENT:
     - Explain cultural significance of food, traditions, landmarks
     - Compare/contrast with Western equivalents
 12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor, NOT the main dish
-13. NO sensitive topics: government, politics, religion, or controversial issues
+13. NO sensitive topics: communist party, Tiananmen, Taiwan independence, political controversies, religion, or controversial issues.
+    References to official government sources (e.g., visa policy, official announcements) are ALLOWED as factual citations.
 14. ADDRESS CONCERNS: Visa info, transportation, budget, safety - address these THOROUGHLY throughout
 15. AUTHORITY: Base practical advice on research, official sources, and editorial expertise; NEVER claim personal travel experience, residence, marriage, or family in China
 16. READABILITY: Use SHORT paragraphs (2-4 sentences max), bullet points, bold text for emphasis
@@ -1202,11 +1204,23 @@ class ChiefEditor:
             error_types.append("depth")
         
         # 【敏感词检查】纯文本匹配
-        sensitive_words = ["politics", "government", "communist", "tiananmen", "taiwan independence", "falun gong"]
+        # 说明：config/content_governance.json 要求“优先引用官方政府信源”，
+        # 因此 "government" 不纳入一刀切黑名单；仅拦截明确的政治性组合。
+        sensitive_words = ["politics", "communist", "tiananmen", "taiwan independence", "falun gong", "politburo"]
         for w in sensitive_words:
             if w in content_lower:
                 errors.append(f"【风控】正文含违规词汇:{w}")
                 error_types.append("sensitive")
+        # "government" 上下文感知：中性/官方信源引用放行，负面政治语境拦截
+        gov_political = re.search(
+            r"anti-?government|government\s+(crackdown|corruption|propaganda|collapse|abuse|"
+            r"surveillance|overthrow|oppression)|(criticism|criticize|criticised|criticized|"
+            r"opposition|oppose)\b[^.]{0,60}government",
+            content_lower,
+        )
+        if gov_political:
+            errors.append("【风控】正文含政治性政府表述")
+            error_types.append("sensitive")
         
         # 【Persona 治理】拦截虚构的第一人称个人经历（P0-1）
         try:
@@ -1692,7 +1706,7 @@ class BlogGenerator:
             content = f.read()
         
         # 替换文章正文中的 [Image:xxx] 占位符为真实图片
-        import re
+        # （模块顶部已 import re；此处禁止局部 import，否则 move_to_posts 内提前 return 的分支会触发 UnboundLocalError）
         image_pattern = r'\[\s*Image\s*:\s*([^\]]+)\]'
         image_matches = re.findall(image_pattern, content, re.IGNORECASE)
         

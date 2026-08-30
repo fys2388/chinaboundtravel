@@ -4,7 +4,7 @@ description: "Download your free 7-day China itinerary template. Includes Beijin
 date: 2026-08-03
 layout: "single"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp"
   alt: "China travel itinerary planning"
 keywords: ["china itinerary", "china travel plan", "7 days china", "china visa", "china guide"]
 ---

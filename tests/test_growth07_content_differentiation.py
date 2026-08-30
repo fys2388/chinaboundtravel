@@ -206,7 +206,18 @@ def test_growth07_scope_only_allowed_objects():
                "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
                # P1-GROWTH-28 authorized CTR pilot title/meta updates
                "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md"}
+               "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+               # P1-GROWTH-31 authorized content trust auto-fix pilot
+               "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+               "content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+               "content/posts/western-sichuan-overland-camping-route.md",
+               "content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+               "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+               "content/posts/2026-07-27-accommodation-tips-guide.md",
+               "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+               "content/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
+               "content/posts/2026-08-03-chinese-language-survival-phrases-guide.md",
+               "content/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md"}
     # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
     allowed = allowed | CONVERSION_OPT_AUTHORIZED
     extra = set(posts_changed) - allowed
@@ -237,7 +248,9 @@ def test_growth07_scope_only_allowed_objects():
                       "layouts/partials/footer.html",
                       "layouts/partials/templates/opengraph.html",
                       "layouts/partials/templates/twitter_cards.html",
-                      "config/content_governance.json"}
+                      "config/content_governance.json",
+                      # P1-GROWTH-30R authorized redirect-chain closure (direct-to-final 301)
+                      "static/_redirects"}
     forbidden = [p for p in changed
                  if (p.startswith(("layouts/", "hugo.toml", "config/", "static/_redirects"))
                      and p not in allowed_layouts)]
