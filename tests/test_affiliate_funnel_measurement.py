@@ -8,6 +8,7 @@ Covers (deterministic, no network):
 - SEO invariants (content_id 57/57, Drive script exactly 1, affiliate URLs)
 """
 import csv
+import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -116,15 +117,27 @@ def test_scan_post_mid_cta():
 # Revenue provider abstraction
 # ---------------------------------------------------------------------------
 def test_revenue_status_not_available():
-    assert REVENUE_STATUS == "REVENUE_NOT_AVAILABLE"
+    # 无 TRAVELPAYOUTS_API_TOKEN → REVENUE_NOT_AVAILABLE；有凭据 → AVAILABLE（P1-GROWTH-14A）
+    if not os.environ.get("TRAVELPAYOUTS_API_TOKEN", "").strip():
+        assert REVENUE_STATUS == "REVENUE_NOT_AVAILABLE"
+    else:
+        assert REVENUE_STATUS == "AVAILABLE"
     assert REVENUE_STATUS in KNOWN_STATUSES
 
 
 def test_provider_never_fabricates_revenue():
     p = get_active_provider()
-    assert p.get_revenue() is None
-    assert p.get_affiliate_clicks() is None
-    assert p.status == "REVENUE_NOT_AVAILABLE"
+    # 无凭据 → 永不虚构（None）；有凭据 → 只返回真实数值或 None（API 失败），绝不虚构
+    if not os.environ.get("TRAVELPAYOUTS_API_TOKEN", "").strip():
+        assert p.get_revenue() is None
+        assert p.get_affiliate_clicks() is None
+        assert p.status == "REVENUE_NOT_AVAILABLE"
+    else:
+        rev = p.get_revenue()
+        assert rev is None or rev >= 0
+        clicks = p.get_affiliate_clicks()
+        assert clicks is None or clicks >= 0
+        assert p.status in KNOWN_STATUSES
 
 
 def test_provider_interface_validates_days():

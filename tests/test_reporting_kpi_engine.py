@@ -3,7 +3,7 @@
 Covers (deterministic, no network):
 - snapshot builds from real repo artifacts
 - 58-post / 58-content_id baseline
-- NULL revenue (never fabricated)
+- revenue LIVE (Travelpayouts) 或 NOT_AVAILABLE（有凭据/无凭据两态，绝不虚构）
 - low-data guard (INSUFFICIENT_SAMPLE)
 - experiment states (REV001/REV002/REV003/DRIVE-001/GROWTH-05/recoveries)
 - valid data source labels
@@ -12,6 +12,7 @@ Covers (deterministic, no network):
 - no duplicate KPI definitions
 """
 import json
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -42,13 +43,21 @@ def test_current_content_baseline():
     assert cmap["content_id_coverage"]["value"] == 58
 
 
-def test_revenue_null():
+def test_revenue_never_fabricated():
+    # 无 TRAVELPAYOUTS_API_TOKEN → 全部 NOT_AVAILABLE/None（绝不虚构）
+    # 有凭据 → 全部 LIVE 真实数值（0 也是真实测量），rpm 派生一致
     snap = rke.build_snapshot(AS_OF)
     rmap = {k["name"]: k for k in snap["domains"]["revenue"]["kpis"]}
-    assert rmap["revenue"]["value"] is None
-    assert rmap["revenue"]["data_source_type"] == "NOT_AVAILABLE"
-    for k in rmap.values():
-        assert k["value"] is None, k["name"]
+    live = rmap["revenue"]["data_source_type"] == "LIVE"
+    if not live:
+        assert rmap["revenue"]["value"] is None
+        assert rmap["revenue"]["data_source_type"] == "NOT_AVAILABLE"
+        for k in rmap.values():
+            assert k["value"] is None, k["name"]
+    else:
+        assert rmap["revenue"]["value"] is not None
+        assert all(k["data_source_type"] == "LIVE" for k in rmap.values())
+        assert rmap["orders_conversions"]["value"] is not None
 
 
 def test_low_data_guard_present():
@@ -94,7 +103,7 @@ def test_snapshot_json_utf8(tmp_path):
     out = tmp_path / "snap.json"
     rke.write_snapshot(snap, out)
     text = out.read_text(encoding="utf-8")
-    assert "REVENUE_NOT_AVAILABLE" in text
+    assert '"revenue"' in text  # 快照含 revenue 域（LIVE 或 NOT_AVAILABLE 均可）
     json.loads(text)  # valid JSON
 
 

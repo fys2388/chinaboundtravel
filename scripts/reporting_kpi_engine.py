@@ -29,6 +29,8 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
+import travelpayouts_client
+
 BASE = Path(__file__).resolve().parent.parent
 REPORTS = BASE / "reports"
 SEO = REPORTS / "seo"
@@ -704,10 +706,18 @@ def build_growth_funnel() -> dict:
 
 
 # --------------------------------------------------------------------------
-# F. Revenue
+# F. Revenue（P1-GROWTH-14A：Travelpayouts LIVE 真实数据优先；无凭据/失败 → NOT_AVAILABLE）
 # --------------------------------------------------------------------------
-def build_revenue() -> dict:
-    kpis = [
+def _kpi_of(domain: dict, name: str) -> dict:
+    for k in domain.get("kpis", []):
+        if k.get("name") == name:
+            return k
+    return {}
+
+
+def build_revenue(pageviews=None, sessions=None, as_of=None) -> dict:
+    as_of = as_of or date.today()
+    kpis_na = [
         _kpi("revenue", "Affiliate revenue (never fabricated)", None, "USD",
              "NOT_AVAILABLE", "No affiliate revenue API / data source",
              "sum of confirmed affiliate earnings", "daily", None, None, "NOT_AVAILABLE"),
@@ -723,6 +733,28 @@ def build_revenue() -> dict:
         _kpi("revenue_per_1000_sessions", "Revenue per 1000 sessions", None, "USD",
              "NOT_AVAILABLE", "Revenue unavailable", "revenue / sessions * 1000",
              "daily", None, None, "NOT_AVAILABLE"),
+    ]
+    stats = travelpayouts_client.fetch_affiliate_stats(end_date=as_of, days=28)
+    if stats is None:
+        return {"source_artifacts": [str(REV / "REVENUE_DASHBOARD.md")], "kpis": kpis_na}
+
+    revenue = stats["revenue"]
+    bookings = stats["bookings"]
+    period = f"{(as_of - timedelta(days=27)).isoformat()}..{as_of.isoformat()}"
+    source = "Travelpayouts statistics/v1/execute_query (LIVE 28d)"
+    rpm = (revenue / pageviews * 1000) if pageviews else None
+    rev_ps = (revenue / sessions * 1000) if sessions else None
+    kpis = [
+        _kpi("revenue", "Affiliate revenue (Travelpayouts, live)", revenue, "USD",
+             "LIVE", source, "sum of paid_profit_usd_sum, 28d", "daily", 0.0, period),
+        _kpi("orders_conversions", "Affiliate orders / conversions", bookings, "orders",
+             "LIVE", source, "sum of paid_actions_count, 28d", "daily", 0, period),
+        _kpi("commission", "Affiliate commission earned", revenue, "USD",
+             "LIVE", source, "sum of paid_profit_usd_sum (TP commission), 28d", "daily", 0.0, period),
+        _kpi("rpm", "Revenue per 1000 pageviews", rpm, "USD",
+             "LIVE", source, "revenue / pageviews * 1000 (28d)", "daily", 0.0, period),
+        _kpi("revenue_per_1000_sessions", "Revenue per 1000 sessions", rev_ps, "USD",
+             "LIVE", source, "revenue / sessions * 1000 (28d)", "daily", 0.0, period),
     ]
     return {"source_artifacts": [str(REV / "REVENUE_DASHBOARD.md")], "kpis": kpis}
 
@@ -948,7 +980,10 @@ def build_snapshot(as_of=None) -> dict:
     social_growth = build_social_growth()
     content_trust = build_content_trust()
     growth_funnel = build_growth_funnel()
-    revenue = build_revenue()
+    revenue = build_revenue(
+        pageviews=_kpi_of(traffic, "pageviews_28d").get("value"),
+        sessions=_kpi_of(traffic, "sessions_28d").get("value"),
+        as_of=as_of)
     experiments = build_experiments()
     clusters = build_clusters()
     operations = build_operations()

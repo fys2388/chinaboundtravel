@@ -44,6 +44,8 @@ from affiliate_gap_detector import (PARTNER_DEFS, SITE_PREFIX, commercial_rankin
                                     load_articles, load_gsc_page_data, scan_article,
                                     tracking_schema_check)  # noqa: E402
 
+import revenue_provider  # noqa: E402
+
 GA4_PROPERTY_ID = "541752321"
 GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 DRIVE_ACTIVE_DATE = date(2026, 8, 16)
@@ -280,6 +282,10 @@ def write_all(data: dict, output_dir: Path = REPORTS_REVENUE):
     pageviews_total = sum(v["pageviews"] for v in ga4.values()) if ga4 else 0
     aff = data["ga4_affiliate"]
     aff_total = sum(aff.values()) if aff is not None else None
+    # P1-GROWTH-14A：真实 Travelpayouts 收入（无凭据/失败 → None，绝不虚构）
+    _rev_provider = revenue_provider.get_active_provider()
+    _rev = _rev_provider.get_revenue(28)
+    _rev_display = f"${_rev:.2f}" if _rev is not None else "NULL"
     db = ["# REVENUE DASHBOARD", "",
           f"- Generated: {data['generated']}",
           f"- DRIVE_ACTIVE_DATE: {DRIVE_ACTIVE_DATE.isoformat()}",
@@ -287,13 +293,13 @@ def write_all(data: dict, output_dir: Path = REPORTS_REVENUE):
           f"- GA4 source: {ga4_src}",
           f"- 28d sessions: {sessions_total} | pageviews: {pageviews_total}",
           f"- 28d affiliate_click events: {aff_total if aff_total is not None else 'NOT_AVAILABLE'}",
-          f"- Revenue: NULL (REVENUE_NOT_AVAILABLE - no affiliate revenue API)",
+          f"- Revenue: {_rev_display} (source: {_rev_provider.provider_name}, 28d)",
           f"- affiliate clicks / 1000 sessions: {per1000(aff_total or 0, sessions_total)}",
           "", "| Period | State | Sessions | Pageviews | Affiliate clicks | Per 1000 sessions | Revenue |",
           "|---|---|---|---|---|---|---|",
           f"| Pre-drive 28d | PRE_DRIVE | {sessions_total} | {pageviews_total} | {aff_total or 0} | "
-          f"{per1000(aff_total or 0, sessions_total)} | NULL |",
-          f"| Post-drive (0-{max(0, data['days_since_active'])}d) | {data['drive_state']} | - | - | - | - | NULL |",
+          f"{per1000(aff_total or 0, sessions_total)} | {_rev_display} |",
+          f"| Post-drive (0-{max(0, data['days_since_active'])}d) | {data['drive_state']} | - | - | - | - | {_rev_display} |",
           "",
           "## Classification",
           "- PRE_DRIVE: before 2026-08-16",

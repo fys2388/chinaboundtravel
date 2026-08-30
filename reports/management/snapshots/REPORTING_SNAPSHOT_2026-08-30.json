@@ -887,69 +887,69 @@
     "revenue": {
       "kpis": [
         {
-          "baseline": null,
-          "calculation": "sum of confirmed affiliate earnings",
-          "data_source_type": "NOT_AVAILABLE",
-          "meaning": "Affiliate revenue (never fabricated)",
+          "baseline": 0.0,
+          "calculation": "sum of paid_profit_usd_sum, 28d",
+          "data_source_type": "LIVE",
+          "meaning": "Affiliate revenue (Travelpayouts, live)",
           "name": "revenue",
-          "source": "No affiliate revenue API / data source",
-          "status": "NOT_AVAILABLE",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-03..2026-08-30",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "count of confirmed conversions",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0,
+          "calculation": "sum of paid_actions_count, 28d",
+          "data_source_type": "LIVE",
           "meaning": "Affiliate orders / conversions",
           "name": "orders_conversions",
-          "source": "No conversion API",
-          "status": "NOT_AVAILABLE",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
+          "status": "OK",
           "unit": "orders",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-03..2026-08-30",
+          "value": 0
         },
         {
-          "baseline": null,
-          "calculation": "sum of commission",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "sum of paid_profit_usd_sum (TP commission), 28d",
+          "data_source_type": "LIVE",
           "meaning": "Affiliate commission earned",
           "name": "commission",
-          "source": "No affiliate revenue API",
-          "status": "NOT_AVAILABLE",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-03..2026-08-30",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "revenue / pageviews * 1000",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "revenue / pageviews * 1000 (28d)",
+          "data_source_type": "LIVE",
           "meaning": "Revenue per 1000 pageviews",
           "name": "rpm",
-          "source": "Revenue unavailable",
-          "status": "NOT_AVAILABLE",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-03..2026-08-30",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "revenue / sessions * 1000",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "revenue / sessions * 1000 (28d)",
+          "data_source_type": "LIVE",
           "meaning": "Revenue per 1000 sessions",
           "name": "revenue_per_1000_sessions",
-          "source": "Revenue unavailable",
-          "status": "NOT_AVAILABLE",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-03..2026-08-30",
+          "value": 0.0
         }
       ],
       "source_artifacts": [
@@ -1392,7 +1392,6 @@
     "affiliate_funnel.cta_impressions: sample below guard",
     "affiliate_funnel.outbound_rate: sample below guard",
     "affiliate_funnel.outbound_success: sample below guard",
-    "revenue: no affiliate revenue API (REVENUE_NOT_AVAILABLE)",
     "seo_gsc.gsc_ctr_28d: sample below guard",
     "seo_gsc.page_level_clicks_28d: sample below guard"
   ],
