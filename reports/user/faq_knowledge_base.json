@@ -1,0 +1,262 @@
+{
+  "built_at": "2026-08-31T00:18:21.825202",
+  "total_faqs": 12,
+  "categories": {
+    "visa": 1,
+    "payment": 1,
+    "safety": 1,
+    "transport": 1,
+    "insurance": 1,
+    "planning": 1,
+    "internet": 1,
+    "packing": 1,
+    "budget": 1,
+    "language": 1,
+    "food": 1,
+    "health": 1
+  },
+  "popular_faqs": [
+    "faq_012",
+    "faq_011",
+    "faq_010",
+    "faq_009",
+    "faq_008"
+  ],
+  "needs_update": [],
+  "faq_items": [
+    {
+      "id": "faq_001",
+      "question": "Do I need a visa to visit China?",
+      "answer": "It depends on your nationality. Many countries qualify for visa-free transit (24/72/144 hours) or visa-free entry for up to 30 days. Check our complete visa guide for your specific situation.",
+      "category": "visa",
+      "keywords": [
+        "visa",
+        "entry",
+        "passport",
+        "requirement"
+      ],
+      "view_count": 100,
+      "helpful_count": 20,
+      "not_helpful_count": 2,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-0/"
+      ]
+    },
+    {
+      "id": "faq_002",
+      "question": "How do I pay for things in China?",
+      "answer": "Mobile payment (Alipay and WeChat Pay) is ubiquitous. Foreigners can now link international cards to Alipay. Cash is accepted but less common. Credit cards work at major hotels but not small shops.",
+      "category": "payment",
+      "keywords": [
+        "payment",
+        "alipay",
+        "wechat",
+        "cash",
+        "credit card"
+      ],
+      "view_count": 115,
+      "helpful_count": 27,
+      "not_helpful_count": 5,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-1/"
+      ]
+    },
+    {
+      "id": "faq_003",
+      "question": "Is China safe for tourists?",
+      "answer": "China is generally very safe for tourists. Violent crime is rare. Take normal precautions against pickpockets in crowded areas. Be aware of scams near tourist attractions. Our safety guide has detailed tips.",
+      "category": "safety",
+      "keywords": [
+        "safety",
+        "crime",
+        "scam",
+        "security"
+      ],
+      "view_count": 130,
+      "helpful_count": 34,
+      "not_helpful_count": 8,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-2/"
+      ]
+    },
+    {
+      "id": "faq_004",
+      "question": "How do I book train tickets in China?",
+      "answer": "You can book through official app (12306), third-party platforms like Trip.com, or at train stations. High-speed trains sell out, book 1-2 weeks in advance. Passport is required for pickup and boarding.",
+      "category": "transport",
+      "keywords": [
+        "train",
+        "ticket",
+        "booking",
+        "high-speed rail"
+      ],
+      "view_count": 145,
+      "helpful_count": 41,
+      "not_helpful_count": 11,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-3/"
+      ]
+    },
+    {
+      "id": "faq_005",
+      "question": "Do I need travel insurance for China?",
+      "answer": "Yes, travel insurance is highly recommended. Medical costs can be high for foreigners. Look for coverage that includes medical evacuation, trip cancellation, and adventure activities if applicable.",
+      "category": "insurance",
+      "keywords": [
+        "insurance",
+        "medical",
+        "coverage",
+        "safety"
+      ],
+      "view_count": 160,
+      "helpful_count": 48,
+      "not_helpful_count": 14,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-4/"
+      ]
+    },
+    {
+      "id": "faq_006",
+      "question": "What's the best time to visit China?",
+      "answer": "Spring (April-May) and autumn (September-October) are generally best with comfortable weather. Summer is hot and crowded. Winter is cold but less crowded and cheaper. Regional variations apply.",
+      "category": "planning",
+      "keywords": [
+        "best time",
+        "weather",
+        "season",
+        "when to visit"
+      ],
+      "view_count": 175,
+      "helpful_count": 55,
+      "not_helpful_count": 2,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-0/"
+      ]
+    },
+    {
+      "id": "faq_007",
+      "question": "Can I use Google in China?",
+      "answer": "Google services (Gmail, Maps, Drive) are blocked in mainland China. You'll need a VPN for access. Alternatively, use Baidu Maps for navigation and local email providers. Hong Kong and Macau have unrestricted access.",
+      "category": "internet",
+      "keywords": [
+        "google",
+        "vpn",
+        "internet",
+        "blocked",
+        "access"
+      ],
+      "view_count": 190,
+      "helpful_count": 62,
+      "not_helpful_count": 5,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-1/"
+      ]
+    },
+    {
+      "id": "faq_008",
+      "question": "What should I pack for China?",
+      "answer": "Essentials include: passport and copies, power adapter (Type A/C/I), comfortable walking shoes, VPN, portable charger, medications, travel insurance documents, and a reusable water bottle. Layers are recommended for variable weather.",
+      "category": "packing",
+      "keywords": [
+        "packing",
+        "what to bring",
+        "essentials",
+        "list"
+      ],
+      "view_count": 205,
+      "helpful_count": 69,
+      "not_helpful_count": 8,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-2/"
+      ]
+    },
+    {
+      "id": "faq_009",
+      "question": "How much does a trip to China cost?",
+      "answer": "Budget travelers: $50-80/day (hostels, street food, public transport). Mid-range: $100-200/day (3-4 star hotels, restaurants, taxis). Luxury: $300+/day. International flights are the biggest expense.",
+      "category": "budget",
+      "keywords": [
+        "cost",
+        "budget",
+        "price",
+        "expensive",
+        "how much"
+      ],
+      "view_count": 220,
+      "helpful_count": 76,
+      "not_helpful_count": 11,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-3/"
+      ]
+    },
+    {
+      "id": "faq_010",
+      "question": "Do I need to know Chinese to travel?",
+      "answer": "No, you don't need to know Chinese. English is spoken at major hotels, airports, and tourist attractions. Download translation apps (Google Translate works offline, Pleco is excellent). Learning basic phrases is appreciated and helpful.",
+      "category": "language",
+      "keywords": [
+        "chinese",
+        "language",
+        "english",
+        "communication",
+        "phrase"
+      ],
+      "view_count": 235,
+      "helpful_count": 83,
+      "not_helpful_count": 14,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-4/"
+      ]
+    },
+    {
+      "id": "faq_011",
+      "question": "What's the food like in China?",
+      "answer": "Chinese cuisine is incredibly diverse with 8 major regional cuisines. Street food is a highlight. Spiciness varies (Sichuan is very spicy). Vegetarian options exist but may be limited outside major cities. Try local specialties in each region.",
+      "category": "food",
+      "keywords": [
+        "food",
+        "cuisine",
+        "eating",
+        "restaurant",
+        "street food"
+      ],
+      "view_count": 250,
+      "helpful_count": 90,
+      "not_helpful_count": 2,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-0/"
+      ]
+    },
+    {
+      "id": "faq_012",
+      "question": "Can I drink tap water in China?",
+      "answer": "No, do not drink tap water in mainland China. Drink bottled water (widely available and cheap) or boiled water. Many hotels provide electric kettles. Avoid ice in drinks unless you know it's made from filtered water.",
+      "category": "health",
+      "keywords": [
+        "water",
+        "drink",
+        "tap",
+        "health",
+        "safety"
+      ],
+      "view_count": 265,
+      "helpful_count": 97,
+      "not_helpful_count": 5,
+      "last_updated": "2026-08-01",
+      "related_articles": [
+        "/posts/related-article-1/"
+      ]
+    }
+  ]
+}

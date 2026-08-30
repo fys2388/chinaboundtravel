@@ -1,0 +1,179 @@
+{
+  "analyzed_at": "2026-08-31T00:18:21.811073",
+  "total_segments": 5,
+  "segments": [
+    {
+      "segment": "new_visitor",
+      "description": "新访客",
+      "percentage": 70.0,
+      "avg_session_duration": 64.5,
+      "avg_pages_per_session": 4.414285714285715,
+      "bounce_rate": 0.12857142857142856,
+      "conversion_rate": 0.07142857142857142,
+      "top_pages": [
+        "/posts/china-travel-guide-2026/",
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/china-high-speed-rail-guide/",
+        "/posts/alipay-wechat-pay-foreigners-guide/",
+        "/posts/china-photography-guide/"
+      ],
+      "top_interests": [
+        "transport",
+        "food",
+        "photography",
+        "itinerary",
+        "payment"
+      ],
+      "key_characteristics": [
+        "首次访问网站",
+        "对品牌不熟悉",
+        "需要快速建立信任",
+        "跳出率较高"
+      ],
+      "recommended_strategy": "提供高质量入门内容，优化首次体验，引导邮件订阅",
+      "content_recommendations": [
+        "中国旅行入门指南",
+        "首次来中国必看",
+        "旅行准备清单"
+      ]
+    },
+    {
+      "segment": "casual_browser",
+      "description": "随意浏览者",
+      "percentage": 6.0,
+      "avg_session_duration": 110.5,
+      "avg_pages_per_session": 1.5,
+      "bounce_rate": 0.5,
+      "conversion_rate": 0.0,
+      "top_pages": [
+        "/",
+        "/posts/china-travel-guide-2026/",
+        "/posts/china-packing-list/",
+        "/posts/best-china-travel-insurance/"
+      ],
+      "top_interests": [
+        "food",
+        "photography",
+        "transport",
+        "packing",
+        "itinerary"
+      ],
+      "key_characteristics": [
+        "快速浏览信息",
+        "停留时间短",
+        "未深度参与",
+        "可能在对比多个网站"
+      ],
+      "recommended_strategy": "提供有价值的快速信息，增加视觉吸引力，引导深度阅读",
+      "content_recommendations": [
+        "快速旅行贴士",
+        "信息图和清单",
+        "热门目的地推荐"
+      ]
+    },
+    {
+      "segment": "planning_traveler",
+      "description": "计划旅行者",
+      "percentage": 8.0,
+      "avg_session_duration": 124.0,
+      "avg_pages_per_session": 5.0,
+      "bounce_rate": 0.0,
+      "conversion_rate": 0.125,
+      "top_pages": [
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/china-travel-guide-2026/",
+        "/posts/china-high-speed-rail-guide/",
+        "/posts/alipay-wechat-pay-foreigners-guide/",
+        "/"
+      ],
+      "top_interests": [
+        "transport",
+        "food",
+        "photography",
+        "itinerary",
+        "payment"
+      ],
+      "key_characteristics": [
+        " actively planning a trip",
+        "研究签证和行程",
+        "高商业价值",
+        "需要实用工具和预订链接"
+      ],
+      "recommended_strategy": "提供详细行程模板，推荐联盟产品（酒店/机票/保险），引导转化",
+      "content_recommendations": [
+        "完整行程模板",
+        "签证申请指南",
+        "预订工具和优惠"
+      ]
+    },
+    {
+      "segment": "high_intent",
+      "description": "高意向用户",
+      "percentage": 11.0,
+      "avg_session_duration": 76.0909090909091,
+      "avg_pages_per_session": 3.4545454545454546,
+      "bounce_rate": 0.45454545454545453,
+      "conversion_rate": 0.6363636363636364,
+      "top_pages": [
+        "/",
+        "/posts/china-travel-guide-2026/",
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/china-high-speed-rail-guide/",
+        "/posts/best-china-travel-insurance/"
+      ],
+      "top_interests": [
+        "visa",
+        "transport",
+        "insurance",
+        "payment",
+        "safety"
+      ],
+      "key_characteristics": [
+        "接近转化决策",
+        "研究具体产品",
+        "需要信任和保障",
+        "对价格和评价敏感"
+      ],
+      "recommended_strategy": "优化转化路径，提供用户评价和保障，限时优惠，简化预订流程",
+      "content_recommendations": [
+        "产品对比评测",
+        "用户真实评价",
+        "限时优惠和折扣"
+      ]
+    },
+    {
+      "segment": "converter",
+      "description": "转化用户",
+      "percentage": 7.000000000000001,
+      "avg_session_duration": 75.0,
+      "avg_pages_per_session": 4.857142857142857,
+      "bounce_rate": 0.14285714285714285,
+      "conversion_rate": 1.0,
+      "top_pages": [
+        "/",
+        "/posts/china-travel-guide-2026/",
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/china-high-speed-rail-guide/",
+        "/posts/alipay-wechat-pay-foreigners-guide/"
+      ],
+      "top_interests": [
+        "visa",
+        "transport",
+        "payment",
+        "insurance"
+      ],
+      "key_characteristics": [
+        "已完成联盟点击/预订",
+        "高价值用户",
+        "可能复购",
+        "品牌认可度高"
+      ],
+      "recommended_strategy": "提供后续服务和支持，引导复购，鼓励分享和推荐，建立忠诚度",
+      "content_recommendations": [
+        "旅行后续指南",
+        "目的地深度内容",
+        "会员专属优惠"
+      ]
+    }
+  ]
+}

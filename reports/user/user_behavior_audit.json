@@ -1,0 +1,92 @@
+{
+  "analyzed_at": "2026-08-31T00:18:21.810250",
+  "behavior_analysis": {
+    "total_sessions": 100,
+    "new_visitors": 70,
+    "returning_visitors": 30,
+    "new_visitor_percentage": 70.0,
+    "avg_session_duration": 79.5,
+    "avg_pages_per_session": 4.42,
+    "bounce_rate": 0.13,
+    "conversion_rate": 0.07,
+    "top_pages": [
+      [
+        "/posts/china-travel-guide-2026/",
+        92
+      ],
+      [
+        "/posts/144-hour-visa-free-transit-guide/",
+        79
+      ],
+      [
+        "/posts/china-high-speed-rail-guide/",
+        65
+      ],
+      [
+        "/posts/alipay-wechat-pay-foreigners-guide/",
+        52
+      ],
+      [
+        "/posts/china-photography-guide/",
+        40
+      ],
+      [
+        "/",
+        38
+      ],
+      [
+        "/posts/chinese-street-food-guide/",
+        28
+      ],
+      [
+        "/posts/7-day-china-itinerary/",
+        16
+      ],
+      [
+        "/posts/best-china-travel-insurance/",
+        4
+      ],
+      [
+        "/resources/",
+        4
+      ]
+    ],
+    "source_distribution": {
+      "organic_search": 20,
+      "direct": 20,
+      "organic_social": 20,
+      "referral": 20,
+      "email": 20
+    },
+    "device_distribution": {
+      "desktop": 34,
+      "mobile": 33,
+      "tablet": 33
+    },
+    "country_distribution": {
+      "United States": 10,
+      "United Kingdom": 10,
+      "Canada": 10,
+      "Australia": 10,
+      "Germany": 10,
+      "France": 10,
+      "Japan": 10,
+      "Singapore": 10,
+      "Brazil": 10,
+      "India": 10
+    },
+    "interest_distribution": {
+      "visa": 10,
+      "transport": 20,
+      "food": 20,
+      "photography": 20,
+      "itinerary": 20,
+      "payment": 20,
+      "insurance": 20,
+      "culture": 20,
+      "safety": 20,
+      "packing": 20
+    }
+  },
+  "recommendations": []
+}

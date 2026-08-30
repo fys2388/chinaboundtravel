@@ -1,0 +1,84 @@
+{
+  "analyzed_at": "2026-08-31T00:18:21.826082",
+  "feedback_analysis": {
+    "total_feedback": 10,
+    "type_distribution": {
+      "praise": 3,
+      "question": 2,
+      "complaint": 3,
+      "suggestion": 2
+    },
+    "sentiment_distribution": {
+      "positive": 3,
+      "neutral": 4,
+      "negative": 3
+    },
+    "category_distribution": {
+      "content": 4,
+      "transport": 1,
+      "technical": 2,
+      "visa": 1,
+      "general": 1,
+      "content_accuracy": 1
+    },
+    "priority_distribution": {
+      "low": 3,
+      "medium": 3,
+      "high": 4
+    },
+    "high_priority_count": 4,
+    "response_rate": 50.0
+  },
+  "high_priority_feedback": [
+    {
+      "id": "fb_003",
+      "feedback_type": "complaint",
+      "content": "The page loaded slowly on my phone.",
+      "sentiment": "negative",
+      "category": "technical",
+      "priority": "high",
+      "status": "new",
+      "created_at": "2026-08-29",
+      "response": ""
+    },
+    {
+      "id": "fb_006",
+      "feedback_type": "complaint",
+      "content": "The booking link didn't work for me.",
+      "sentiment": "negative",
+      "category": "technical",
+      "priority": "high",
+      "status": "processing",
+      "created_at": "2026-08-26",
+      "response": ""
+    },
+    {
+      "id": "fb_007",
+      "feedback_type": "question",
+      "content": "What's the best way to get a tourist visa for US citizens?",
+      "sentiment": "neutral",
+      "category": "visa",
+      "priority": "high",
+      "status": "processing",
+      "created_at": "2026-08-25",
+      "response": ""
+    },
+    {
+      "id": "fb_009",
+      "feedback_type": "complaint",
+      "content": "The article mentioned a museum that doesn't exist in Jiuzhaigou.",
+      "sentiment": "negative",
+      "category": "content_accuracy",
+      "priority": "high",
+      "status": "processing",
+      "created_at": "2026-08-23",
+      "response": ""
+    }
+  ],
+  "recommendations": [
+    "优先处理4个高优先级反馈",
+    "反馈回复率偏低（50.0%），建立快速响应机制",
+    "存在内容准确性反馈，需要加强内容审核和事实核查",
+    "存在技术问题反馈，需要优化网站性能和用户体验"
+  ]
+}

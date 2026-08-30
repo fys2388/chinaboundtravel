@@ -1,0 +1,145 @@
+{
+  "analyzed_at": "2026-08-31T00:18:21.811812",
+  "total_stages": 6,
+  "journey_stages": [
+    {
+      "stage": "awareness",
+      "description": "认知阶段 - 用户首次发现网站",
+      "user_percentage": 100.0,
+      "avg_duration": "首次访问",
+      "key_behaviors": [
+        "通过搜索/社媒发现网站",
+        "浏览首页或热门文章",
+        "判断网站是否可信"
+      ],
+      "drop_off_rate": 45.0,
+      "pain_points": [
+        "首屏内容不吸引人",
+        "加载速度慢",
+        "缺乏信任信号"
+      ],
+      "optimization_opportunities": [
+        "优化首页首屏内容",
+        "提升网站加载速度",
+        "增加用户评价和信任信号"
+      ]
+    },
+    {
+      "stage": "interest",
+      "description": "兴趣阶段 - 用户开始浏览内容",
+      "user_percentage": 55.0,
+      "avg_duration": "1-3分钟",
+      "key_behaviors": [
+        "浏览1-2篇文章",
+        "查看热门目的地",
+        "关注特定主题"
+      ],
+      "drop_off_rate": 35.0,
+      "pain_points": [
+        "内容不够深入",
+        "找不到相关内容",
+        "内链引导不足"
+      ],
+      "optimization_opportunities": [
+        "优化文章内链结构",
+        "增加相关文章推荐",
+        "创建主题集群内容"
+      ]
+    },
+    {
+      "stage": "consideration",
+      "description": "考虑阶段 - 用户深度研究旅行计划",
+      "user_percentage": 35.0,
+      "avg_duration": "3-10分钟",
+      "key_behaviors": [
+        "阅读多篇深度攻略",
+        "查看签证和行程信息",
+        "比较不同方案"
+      ],
+      "drop_off_rate": 25.0,
+      "pain_points": [
+        "信息不够全面",
+        "缺少实用工具",
+        "联盟产品推荐不明显"
+      ],
+      "optimization_opportunities": [
+        "提供完整行程模板",
+        "增加实用工具和资源",
+        "优化联盟推荐区块"
+      ]
+    },
+    {
+      "stage": "conversion",
+      "description": "转化阶段 - 用户完成联盟点击/预订",
+      "user_percentage": 15.0,
+      "avg_duration": "即时转化",
+      "key_behaviors": [
+        "点击联盟链接",
+        "完成酒店/机票预订",
+        "购买保险/eSIM"
+      ],
+      "drop_off_rate": 60.0,
+      "pain_points": [
+        "CTA不明显",
+        "跳转流程复杂",
+        "缺乏信任和保障"
+      ],
+      "optimization_opportunities": [
+        "优化CTA位置和文案",
+        "简化预订流程",
+        "增加用户评价和保障"
+      ]
+    },
+    {
+      "stage": "retention",
+      "description": "留存阶段 - 用户回访和持续参与",
+      "user_percentage": 10.0,
+      "avg_duration": "持续参与",
+      "key_behaviors": [
+        "回访网站",
+        "订阅邮件",
+        "关注社媒",
+        "分享内容"
+      ],
+      "drop_off_rate": 50.0,
+      "pain_points": [
+        "缺乏回访激励",
+        "邮件内容不吸引人",
+        "社媒互动不足"
+      ],
+      "optimization_opportunities": [
+        "建立邮件订阅序列",
+        "提供会员专属内容",
+        "增加社媒互动和活动"
+      ]
+    },
+    {
+      "stage": "advocacy",
+      "description": "倡导阶段 - 用户成为品牌倡导者",
+      "user_percentage": 5.0,
+      "avg_duration": "长期忠诚",
+      "key_behaviors": [
+        "推荐给朋友",
+        "发布旅行体验",
+        "持续复购",
+        "参与社区"
+      ],
+      "drop_off_rate": 0.0,
+      "pain_points": [
+        "缺乏推荐激励",
+        "社区氛围不足",
+        "忠诚度计划缺失"
+      ],
+      "optimization_opportunities": [
+        "建立推荐奖励计划",
+        "创建用户社区",
+        "设计忠诚度计划"
+      ]
+    }
+  ],
+  "key_bottlenecks": [
+    "conversion",
+    "retention",
+    "awareness"
+  ]
+}

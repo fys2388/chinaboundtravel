@@ -1,0 +1,104 @@
+{
+  "built_at": "2026-08-31T00:18:21.827245",
+  "total_strategies": 8,
+  "recommended_implementation_order": [
+    "ret_005",
+    "ret_008",
+    "ret_001",
+    "ret_002",
+    "ret_004",
+    "ret_007",
+    "ret_003",
+    "ret_006"
+  ],
+  "retention_strategies": [
+    {
+      "id": "ret_001",
+      "strategy_name": "新访客欢迎邮件序列",
+      "description": "新订阅用户发送3封欢迎邮件：第1天欢迎+热门内容，第3天旅行准备清单，第7天深度攻略+联盟推荐",
+      "target_segment": "new_visitor",
+      "channel": "email",
+      "trigger_condition": "用户首次订阅邮件",
+      "expected_impact": "提升回访率20-30%，增加首次转化机会",
+      "implementation_complexity": "medium",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_002",
+      "strategy_name": "深度阅读者内容推荐",
+      "description": "基于用户阅读历史，每周发送个性化内容推荐邮件，包含相关文章和旅行灵感",
+      "target_segment": "deep_reader",
+      "channel": "email",
+      "trigger_condition": "用户阅读≥3篇文章或停留≥5分钟",
+      "expected_impact": "提升回访率15-25%，增加页面浏览深度",
+      "implementation_complexity": "medium",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_003",
+      "strategy_name": "计划旅行者转化序列",
+      "description": "识别计划旅行的用户，发送行程模板、签证指南、预订优惠和实用工具，引导联盟转化",
+      "target_segment": "planning_traveler",
+      "channel": "email",
+      "trigger_condition": "用户浏览签证/行程/预订相关页面",
+      "expected_impact": "提升转化率30-50%，增加联盟收入",
+      "implementation_complexity": "high",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_004",
+      "strategy_name": "社媒互动和社区建设",
+      "description": "在Instagram/Facebook/Pinterest建立活跃社区，定期发布旅行灵感、用户故事、问答互动，引导用户回访网站",
+      "target_segment": "all_users",
+      "channel": "social",
+      "trigger_condition": "持续运营",
+      "expected_impact": "提升品牌认知和回访率，增加社媒引流",
+      "implementation_complexity": "medium",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_005",
+      "strategy_name": "网站内相关内容推荐",
+      "description": "在文章页底部和侧边栏增加智能相关内容推荐，基于用户当前阅读内容推荐相关文章，增加页面浏览深度和停留时间",
+      "target_segment": "all_users",
+      "channel": "onsite",
+      "trigger_condition": "用户阅读文章时",
+      "expected_impact": "提升页面浏览深度20-40%，降低跳出率",
+      "implementation_complexity": "low",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_006",
+      "strategy_name": "转化用户后续服务",
+      "description": "对已完成联盟转化的用户，发送旅行后续指南、目的地深度内容、会员专属优惠，引导复购和推荐",
+      "target_segment": "converter",
+      "channel": "email",
+      "trigger_condition": "用户完成联盟点击/预订",
+      "expected_impact": "提升复购率20-30%，增加用户终身价值",
+      "implementation_complexity": "high",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_007",
+      "strategy_name": "流失用户召回",
+      "description": "对30天未回访的用户，发送召回邮件，包含最新热门内容、限时优惠、旅行灵感，重新激活用户",
+      "target_segment": "churned_user",
+      "channel": "email",
+      "trigger_condition": "用户30天未访问网站",
+      "expected_impact": "召回5-15%流失用户，提升整体留存率",
+      "implementation_complexity": "medium",
+      "status": "proposed"
+    },
+    {
+      "id": "ret_008",
+      "strategy_name": "用户反馈快速响应机制",
+      "description": "建立用户反馈收集和快速响应机制，24小时内回复高优先级反馈，将负面反馈转化为改进机会，提升用户满意度和忠诚度",
+      "target_segment": "all_users",
+      "channel": "onsite",
+      "trigger_condition": "用户提交反馈",
+      "expected_impact": "提升用户满意度30-50%，减少负面口碑",
+      "implementation_complexity": "low",
+      "status": "proposed"
+    }
+  ]
+}
