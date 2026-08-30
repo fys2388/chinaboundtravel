@@ -89,12 +89,51 @@ def classify_api_error(response_or_exc):
     return describe_error(response_or_exc)
 
 
+# Candidates tried in order when resolving the Search Console property the
+# service account can access: www URL-prefix property first, then the domain
+# property.  Mirrors feishu_daily_report.py so submission uses a property the
+# credentials actually own (fixes PROPERTY_PERMISSION when only one is added).
+GSC_SITE_CANDIDATES = [
+    "https://www.chinaboundtravel.com/",
+    "sc-domain:chinaboundtravel.com",
+]
+
+
 class GSCIndexSubmitter:
     """Inspect and request indexing without making any site changes."""
 
     def __init__(self, site_url=None):
-        self.site_url = normalize_site_url(site_url) if site_url is not None else get_site_url()
         self._service_account_info = None
+        configured = normalize_site_url(site_url) if site_url is not None else get_site_url()
+        self.site_url = self._resolve_site_url(configured)
+
+    def _resolve_site_url(self, configured):
+        """Return the first Search Console property the service account can access.
+
+        Prefer the configured property, then try fallback candidates,
+        verifying with sites().get() so inspection / indexing API calls use a
+        property the service account is actually authorized for.
+        """
+        candidates = [configured]
+        for c in GSC_SITE_CANDIDATES:
+            if c not in candidates:
+                candidates.append(c)
+        creds = self._inspect_credentials()
+        if creds is None:
+            return configured
+        try:
+            from googleapiclient.discovery import build
+            svc = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
+            for cand in candidates:
+                try:
+                    svc.sites().get(siteUrl=cand).execute()
+                    print(f"[gsc] resolved accessible property: {cand}")
+                    return normalize_site_url(cand)
+                except Exception:
+                    print(f"[gsc] property unavailable for service account: {cand}")
+        except Exception as exc:
+            print(f"[gsc] site resolution failed, using configured: {configured} ({exc})")
+        return configured
 
     # -- credentials (unified via gsc_utils) ---------------------------------
 

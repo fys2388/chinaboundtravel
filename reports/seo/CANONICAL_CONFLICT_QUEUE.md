@@ -1,3 +1,12 @@
+> **STATUS 2026-08-30: RESOLVED.** Live re-verification of all 6 URLs:
+> 5 are now 301-redirected to their canonical via static/_redirects
+> (a-gastronomic-adventure... / navigating-china-with-confidence... /
+> transportation-guide-guide / transportation-guide / travel-safety-guide),
+> and 1 (chinabound-travel-guide-2026-07-monthly-update) serves 200 with the
+> correct www canonicalURL in front matter.  No duplicate slugs, no canonical
+> pointing to a non-live URL (53/58 posts declare canonicalURL). All 64 sitemap
+> URLs return 200. Queue below is retained as historical record.
+
 # Canonical Conflict Queue
 
 Candidates detected via URL Inspection API (google_canonical != user_canonical). No changes made.
