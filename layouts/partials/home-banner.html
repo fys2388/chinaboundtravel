@@ -4,16 +4,26 @@
         <div class="banner-content">
             <p class="banner-kicker">🇨🇳 Your Trusted China Travel Guide</p>
             <h1 class="banner-headline">Travel China <span class="highlight">Easily</span></h1>
-            <p class="banner-sub">Practical Guide for Foreigners · Visa, Internet, Payment &amp; City Tips</p>
+            <p class="banner-sub">Your complete guide to traveling China — visa-free entry, local transport, best hotels, and insider tips from our editorial team</p>
             <p class="banner-author">Edited by <strong>Joran</strong> · Editorial Voice of ChinaBound Travel</p>
             <div class="banner-cta">
-                <a href="/search/" class="banner-btn-primary">🔍 Start Searching</a>
-                <a href="/categories/" class="banner-btn-secondary">📂 Browse Topics</a>
+                <a href="/search/" class="banner-btn-primary">🗺️ Plan Your China Trip</a>
+                <a href="/categories/" class="banner-btn-secondary">📖 Read Popular Guides</a>
+            </div>
+            <div class="banner-social-proof">
+                <span class="proof-item">✓ 59+ Expert Guides</span>
+                <span class="proof-item">✓ Editorially Reviewed</span>
+                <span class="proof-item">✓ Updated Weekly</span>
             </div>
         </div>
         <div class="banner-visual">
             <div class="banner-illustration">
                 <span style="font-size:6rem">🏔️</span>
+            </div>
+            <div class="banner-social-proof">
+                <span class="proof-item">✓ 59+ Expert Guides</span>
+                <span class="proof-item">✓ Editorially Reviewed</span>
+                <span class="proof-item">✓ Updated Weekly</span>
             </div>
         </div>
     </div>
@@ -147,4 +157,20 @@
         display: none;
     }
 }
+
+.banner-social-proof {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+.proof-item {
+    font-size: 0.82rem;
+    color: #555;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .banner-social-proof { justify-content: center; }
+}
+
 </style>

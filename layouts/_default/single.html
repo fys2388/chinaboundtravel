@@ -41,17 +41,18 @@
     <div class="affiliate-disclosure-notice"><small>Some links on this page are affiliate links. If you purchase through them, I earn a commission at no extra cost to you. We only recommend products our editorial team has reviewed. <a href="/disclaimer/" style="text-decoration:underline;">Full disclosure</a>.</small></div>
     <div class="article-affiliate" data-content-id="{{ .Params.content_id | default "" }}" data-channel="organic">
         <h3>🛒 Travel Essentials for Your China Trip</h3>
-        <p class="affiliate-intro">Save time &amp; money with our editorially reviewed recommendations:</p>
+        <p class="affiliate-intro">Save time &amp; money with our editorially reviewed recommendations — compare prices and book with confidence:</p>
         <div class="affiliate-links">
-            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">📱 <strong>eSIM</strong> �?Stay online the moment you land</a>
-            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">🔒 <strong>VPN</strong> �?Access your favorite sites in China</a>
-            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">🏨 <strong>Hotels</strong> �?Book with free cancellation</a>
-            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">🎫 <strong>Tours & Tickets</strong> �?Skip the line at top attractions</a>
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">📱 <strong>eSIM</strong> �?Compare plans &amp; stay online instantly</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">🔒 <strong>VPN</strong> �?View deals &amp; access your favorite sites</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">🏨 <strong>Hotels</strong> �?Check today's best rates with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">🎫 <strong>Tours & Tickets</strong> �?Compare prices &amp; skip the line</a>
         </div>
+        <p class="affiliate-trust-badges"><span class="trust-badge">✓ Best Price Guarantee</span> <span class="trust-badge">✓ Free Cancellation</span> <span class="trust-badge">✓ 24/7 Support</span></p>
     </div>
 
 
-    {{- /* ===== Affiliate Click Attribution (P0-7) ===== */ -}}
+    {- /* ===== Affiliate Click Attribution (P0-7) ===== */ -}}
     <script>
     (function () {
         var container = document.querySelector('.article-affiliate[data-content-id]');
@@ -442,6 +443,10 @@
     text-decoration: none !important;
 }
 .article-affiliate .affiliate-link:hover { background: #2d5a8a; color: white; transform: translateY(-1px); }
+
+.affiliate-trust-badges { margin-top: 12px; padding-top: 12px; border-top: 1px solid #c5d5e8; }
+.trust-badge { display: inline-block; background: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; color: #3A6EA5; font-weight: 600; margin-right: 6px; margin-bottom: 4px; border: 1px solid #c5d5e8; }
+
 
 @media (max-width: 768px) {
     .post-nav-links { grid-template-columns: 1fr; }
