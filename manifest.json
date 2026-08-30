@@ -1,9 +1,9 @@
 {
   "month_post_count": 12,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-30 03:50:03",
+  "last_social_publish": "2026-08-30 04:13:24",
   "daily_social_publish_date": "2026-08-30",
-  "daily_social_publish_count": 4,
+  "daily_social_publish_count": 5,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -133,7 +133,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "chinabound-travel-guide-2026-07-monthly-update",
     "china-family-travel-tips-a-californians-guide",
     "chinese-language-survival-phrases-guide",
     "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
@@ -162,6 +161,7 @@
     "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
     "china-business-travel-guide-meetings-dining-and-networking",
     "shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide",
-    "chinas-food-through-the-ages-guide"
+    "chinas-food-through-the-ages-guide",
+    "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home"
   ]
 }
