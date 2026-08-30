@@ -1,0 +1,127 @@
+{
+  "analyzed_at": "2026-08-31T00:12:48.156685",
+  "total_best_times": 0,
+  "best_times": [],
+  "industry_benchmarks": {
+    "instagram": {
+      "best_times": [
+        "09:00",
+        "11:00",
+        "14:00",
+        "18:00",
+        "21:00"
+      ],
+      "best_days": [
+        "monday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday"
+      ],
+      "ideal_caption_length": 125,
+      "hashtag_count": 5,
+      "content_types": [
+        "carousel",
+        "reel",
+        "image",
+        "story"
+      ],
+      "engagement_rate_benchmark": 0.03,
+      "description": "视觉为主，重视觉冲击力和故事性"
+    },
+    "facebook": {
+      "best_times": [
+        "09:00",
+        "13:00",
+        "15:00",
+        "19:00"
+      ],
+      "best_days": [
+        "monday",
+        "wednesday",
+        "thursday",
+        "friday"
+      ],
+      "ideal_caption_length": 80,
+      "hashtag_count": 2,
+      "content_types": [
+        "image",
+        "video",
+        "link",
+        "carousel"
+      ],
+      "engagement_rate_benchmark": 0.02,
+      "description": "社区互动为主，重视频分享和讨论"
+    },
+    "pinterest": {
+      "best_times": [
+        "20:00",
+        "21:00",
+        "22:00",
+        "14:00"
+      ],
+      "best_days": [
+        "friday",
+        "saturday",
+        "sunday"
+      ],
+      "ideal_caption_length": 200,
+      "hashtag_count": 3,
+      "content_types": [
+        "pin",
+        "board",
+        "story",
+        "video"
+      ],
+      "engagement_rate_benchmark": 0.05,
+      "description": "搜索和发现为主，重信息图和长尾关键词"
+    },
+    "x": {
+      "best_times": [
+        "08:00",
+        "12:00",
+        "17:00",
+        "20:00"
+      ],
+      "best_days": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday"
+      ],
+      "ideal_caption_length": 280,
+      "hashtag_count": 2,
+      "content_types": [
+        "tweet",
+        "thread",
+        "image",
+        "video"
+      ],
+      "engagement_rate_benchmark": 0.015,
+      "description": "实时信息为主，重简洁和话题性"
+    },
+    "linkedin": {
+      "best_times": [
+        "09:00",
+        "10:00",
+        "12:00",
+        "17:00"
+      ],
+      "best_days": [
+        "tuesday",
+        "wednesday",
+        "thursday"
+      ],
+      "ideal_caption_length": 150,
+      "hashtag_count": 3,
+      "content_types": [
+        "article",
+        "image",
+        "video",
+        "document"
+      ],
+      "engagement_rate_benchmark": 0.025,
+      "description": "专业内容为主，重深度和价值"
+    }
+  }
+}

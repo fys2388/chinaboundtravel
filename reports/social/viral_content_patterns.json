@@ -1,0 +1,223 @@
+{
+  "analyzed_at": "2026-08-31T00:12:48.157621",
+  "total_patterns": 8,
+  "viral_patterns": [
+    {
+      "id": "viral_question",
+      "pattern_name": "Question Content Pattern",
+      "description": "高表现的question类型内容，平均互动率7.2%",
+      "content_type": "question",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.07200234555604741,
+      "sample_size": 6,
+      "key_elements": [
+        "问答型标题",
+        "完整指南型标题"
+      ],
+      "headline_templates": [
+        "Alipay vs WeChat Pay: Which Should Foreigners Use?",
+        "{location} Street Food: A First-Timer's Guide",
+        "Guilin Karst Landscape: Some Places Don't Look Real"
+      ],
+      "recommended_usage": "⭐ 高表现模式，建议每周发布2-3条question类型内容",
+      "confidence": 60
+    },
+    {
+      "id": "viral_visual",
+      "pattern_name": "Visual Content Pattern",
+      "description": "高表现的visual类型内容，平均互动率7.2%",
+      "content_type": "visual",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.07184876543209877,
+      "sample_size": 6,
+      "key_elements": [
+        "完整指南型标题",
+        "列表型标题",
+        "疑问型标题"
+      ],
+      "headline_templates": [
+        "Guilin Karst Landscape: Some Places Don't Look Real",
+        "{number} Things Tourists Should Know Before Visiting {location}",
+        "What to Pack for {location}: Ultimate Packing List"
+      ],
+      "recommended_usage": "⭐ 高表现模式，建议每周发布2-3条visual类型内容",
+      "confidence": 60
+    },
+    {
+      "id": "viral_story",
+      "pattern_name": "Story Content Pattern",
+      "description": "高表现的story类型内容，平均互动率5.8%",
+      "content_type": "story",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.05821132184768549,
+      "sample_size": 6,
+      "key_elements": [
+        "问答型标题",
+        "疑问型标题",
+        "完整指南型标题",
+        "技巧型标题",
+        "列表型标题"
+      ],
+      "headline_templates": [
+        "Why {location} Feels Different? Not Just Pandas",
+        "{location} Travel Tips #{number}: High-Speed Rail Guide",
+        "{location} Photography: Best Spots for Stunning Photos"
+      ],
+      "recommended_usage": "⭐ 高表现模式，建议每周发布2-3条story类型内容",
+      "confidence": 60
+    },
+    {
+      "id": "viral_guide",
+      "pattern_name": "Guide Content Pattern",
+      "description": "高表现的guide类型内容，平均互动率5.6%",
+      "content_type": "guide",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.055964711214711214,
+      "sample_size": 6,
+      "key_elements": [
+        "完整指南型标题",
+        "问答型标题",
+        "疑问型标题"
+      ],
+      "headline_templates": [
+        "{number}-Hour Visa-Free Transit: Complete Guide",
+        "Planning {location} Trip? Here's Your Complete Checklist",
+        "Why {location} Feels Different? Not Just Pandas"
+      ],
+      "recommended_usage": "⭐ 高表现模式，建议每周发布2-3条guide类型内容",
+      "confidence": 60
+    },
+    {
+      "id": "viral_list",
+      "pattern_name": "List Content Pattern",
+      "description": "高表现的list类型内容，平均互动率4.7%",
+      "content_type": "list",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.046977749433106585,
+      "sample_size": 6,
+      "key_elements": [
+        "完整指南型标题"
+      ],
+      "headline_templates": [
+        "{location} Street Food: A First-Timer's Guide",
+        "Guilin Karst Landscape: Some Places Don't Look Real",
+        "{number} Things Tourists Should Know Before Visiting {location}"
+      ],
+      "recommended_usage": "✅ 良好表现，建议每周发布1-2条list类型内容",
+      "confidence": 60
+    },
+    {
+      "id": "viral_warning",
+      "pattern_name": "Warning Content Pattern",
+      "description": "高表现的warning类型内容，平均互动率4.5%",
+      "content_type": "warning",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.045080237223094365,
+      "sample_size": 7,
+      "key_elements": [
+        "完整指南型标题",
+        "列表型标题",
+        "疑问型标题",
+        "问答型标题"
+      ],
+      "headline_templates": [
+        "{number} Things Tourists Should Know Before Visiting {location}",
+        "What to Pack for {location}: Ultimate Packing List",
+        "Alipay vs WeChat Pay: Which Should Foreigners Use?"
+      ],
+      "recommended_usage": "✅ 良好表现，建议每周发布1-2条warning类型内容",
+      "confidence": 70
+    },
+    {
+      "id": "viral_tip",
+      "pattern_name": "Tip Content Pattern",
+      "description": "高表现的tip类型内容，平均互动率3.2%",
+      "content_type": "tip",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.03242562111609731,
+      "sample_size": 7,
+      "key_elements": [
+        "完整指南型标题",
+        "技巧型标题",
+        "列表型标题"
+      ],
+      "headline_templates": [
+        "{location} Travel Tips #{number}: High-Speed Rail Guide",
+        "{location} Photography: Best Spots for Stunning Photos",
+        "{number}-Hour Visa-Free Transit: Complete Guide"
+      ],
+      "recommended_usage": "✅ 良好表现，建议每周发布1-2条tip类型内容",
+      "confidence": 70
+    },
+    {
+      "id": "viral_conversion",
+      "pattern_name": "Conversion Content Pattern",
+      "description": "高表现的conversion类型内容，平均互动率3.0%",
+      "content_type": "conversion",
+      "platforms": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "pinterest",
+        "x"
+      ],
+      "avg_engagement_rate": 0.02969781376031376,
+      "sample_size": 6,
+      "key_elements": [
+        "完整指南型标题",
+        "问答型标题",
+        "疑问型标题",
+        "技巧型标题"
+      ],
+      "headline_templates": [
+        "Planning {location} Trip? Here's Your Complete Checklist",
+        "Why {location} Feels Different? Not Just Pandas",
+        "{location} Travel Tips #{number}: High-Speed Rail Guide"
+      ],
+      "recommended_usage": "📊 一般表现，可适当减少conversion类型内容发布频率",
+      "confidence": 60
+    }
+  ]
+}

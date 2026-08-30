@@ -1,0 +1,722 @@
+{
+  "analyzed_at": "2026-08-31T00:12:48.150580",
+  "total_posts": 50,
+  "platforms_analyzed": 5,
+  "platform_performances": {
+    "instagram": {
+      "platform": "instagram",
+      "total_posts": 10,
+      "total_impressions": 4725,
+      "total_clicks": 94,
+      "total_engagement": 259,
+      "avg_engagement_rate": 0.05074428904428905,
+      "avg_ctr": 0.019818181818181818,
+      "best_content_types": [
+        "visual",
+        "question",
+        "guide"
+      ],
+      "best_publishing_times": [
+        "17:00",
+        "08:00"
+      ],
+      "growth_trend": "stable",
+      "recommendations": [
+        "互动率高于基准，继续保持，可尝试增加发布频率",
+        "优先使用高互动内容类型：visual, question, guide",
+        "最佳发布时间：17:00, 08:00"
+      ]
+    },
+    "facebook": {
+      "platform": "facebook",
+      "total_posts": 10,
+      "total_impressions": 2889,
+      "total_clicks": 81,
+      "total_engagement": 145,
+      "avg_engagement_rate": 0.0504408386226568,
+      "avg_ctr": 0.028140083821902,
+      "best_content_types": [
+        "visual",
+        "question",
+        "story"
+      ],
+      "best_publishing_times": [
+        "18:00",
+        "09:00"
+      ],
+      "growth_trend": "stable",
+      "recommendations": [
+        "互动率高于基准，继续保持，可尝试增加发布频率",
+        "优先使用高互动内容类型：visual, question, story",
+        "最佳发布时间：18:00, 09:00"
+      ]
+    },
+    "pinterest": {
+      "platform": "pinterest",
+      "total_posts": 10,
+      "total_impressions": 9248,
+      "total_clicks": 364,
+      "total_engagement": 567,
+      "avg_engagement_rate": 0.058674658674658674,
+      "avg_ctr": 0.03919864857364857,
+      "best_content_types": [
+        "question",
+        "visual",
+        "guide"
+      ],
+      "best_publishing_times": [
+        "19:00",
+        "11:00"
+      ],
+      "growth_trend": "stable",
+      "recommendations": [
+        "优先使用高互动内容类型：question, visual, guide",
+        "最佳发布时间：19:00, 11:00"
+      ]
+    },
+    "x": {
+      "platform": "x",
+      "total_posts": 10,
+      "total_impressions": 2482,
+      "total_clicks": 121,
+      "total_engagement": 123,
+      "avg_engagement_rate": 0.05029043872793872,
+      "avg_ctr": 0.048724088411588415,
+      "best_content_types": [
+        "visual",
+        "question",
+        "story"
+      ],
+      "best_publishing_times": [
+        "21:00",
+        "13:00"
+      ],
+      "growth_trend": "stable",
+      "recommendations": [
+        "互动率高于基准，继续保持，可尝试增加发布频率",
+        "优先使用高互动内容类型：visual, question, story",
+        "最佳发布时间：21:00, 13:00"
+      ]
+    },
+    "linkedin": {
+      "platform": "linkedin",
+      "total_posts": 10,
+      "total_impressions": 2067,
+      "total_clicks": 119,
+      "total_engagement": 100,
+      "avg_engagement_rate": 0.04492550011426885,
+      "avg_ctr": 0.05719230397659538,
+      "best_content_types": [
+        "question",
+        "visual",
+        "story"
+      ],
+      "best_publishing_times": [
+        "22:00",
+        "14:00"
+      ],
+      "growth_trend": "stable",
+      "recommendations": [
+        "互动率高于基准，继续保持，可尝试增加发布频率",
+        "优先使用高互动内容类型：question, visual, story",
+        "最佳发布时间：22:00, 14:00"
+      ]
+    }
+  },
+  "top_performing_posts": [
+    {
+      "id": "post_008",
+      "platform": "pinterest",
+      "content_type": "question",
+      "title": "Alipay vs WeChat Pay: Which Should Foreigners Use?",
+      "caption": "Sample caption for question post on pinterest",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-7/",
+      "utm_source": "pinterest",
+      "publish_time": "2026-08-08 19:00:00",
+      "status": "published",
+      "impressions": 1152,
+      "reach": 921,
+      "clicks": 46,
+      "likes": 69,
+      "comments": 6,
+      "shares": 3,
+      "saves": 10,
+      "engagement_rate": 0.0763888888888889,
+      "click_through_rate": 0.03993055555555555,
+      "conversion_rate": 0.46,
+      "revenue": 2.3000000000000003,
+      "quality_score": 95.0,
+      "viral_score": 25.0,
+      "issues": [
+        "文案过短（45字符，理想200）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_028",
+      "platform": "pinterest",
+      "content_type": "visual",
+      "title": "Alipay vs WeChat Pay: Which Should Foreigners Use?",
+      "caption": "Sample caption for visual post on pinterest",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-27/",
+      "utm_source": "pinterest",
+      "publish_time": "2026-08-28 19:00:00",
+      "status": "published",
+      "impressions": 1440,
+      "reach": 1152,
+      "clicks": 57,
+      "likes": 86,
+      "comments": 8,
+      "shares": 4,
+      "saves": 12,
+      "engagement_rate": 0.0763888888888889,
+      "click_through_rate": 0.03958333333333333,
+      "conversion_rate": 0.5700000000000001,
+      "revenue": 2.85,
+      "quality_score": 95.0,
+      "viral_score": 25.0,
+      "issues": [
+        "文案过短（43字符，理想200）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_048",
+      "platform": "pinterest",
+      "content_type": "question",
+      "title": "Alipay vs WeChat Pay: Which Should Foreigners Use?",
+      "caption": "Sample caption for question post on pinterest",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-47/",
+      "utm_source": "pinterest",
+      "publish_time": "2026-08-20 19:00:00",
+      "status": "published",
+      "impressions": 1152,
+      "reach": 921,
+      "clicks": 46,
+      "likes": 69,
+      "comments": 6,
+      "shares": 3,
+      "saves": 10,
+      "engagement_rate": 0.0763888888888889,
+      "click_through_rate": 0.03993055555555555,
+      "conversion_rate": 0.46,
+      "revenue": 2.3000000000000003,
+      "quality_score": 95.0,
+      "viral_score": 25.0,
+      "issues": [
+        "文案过短（45字符，理想200）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_036",
+      "platform": "instagram",
+      "content_type": "visual",
+      "title": "China Street Food: A First-Timer's Guide",
+      "caption": "Sample caption for visual post on instagram",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-35/",
+      "utm_source": "instagram",
+      "publish_time": "2026-08-08 17:00:00",
+      "status": "published",
+      "impressions": 750,
+      "reach": 600,
+      "clicks": 15,
+      "likes": 45,
+      "comments": 4,
+      "shares": 2,
+      "saves": 6,
+      "engagement_rate": 0.076,
+      "click_through_rate": 0.02,
+      "conversion_rate": 0.15,
+      "revenue": 0.75,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（43字符，理想125）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_016",
+      "platform": "instagram",
+      "content_type": "question",
+      "title": "China Street Food: A First-Timer's Guide",
+      "caption": "Sample caption for question post on instagram",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-15/",
+      "utm_source": "instagram",
+      "publish_time": "2026-08-16 17:00:00",
+      "status": "published",
+      "impressions": 600,
+      "reach": 480,
+      "clicks": 12,
+      "likes": 36,
+      "comments": 3,
+      "shares": 1,
+      "saves": 5,
+      "engagement_rate": 0.075,
+      "click_through_rate": 0.02,
+      "conversion_rate": 0.12,
+      "revenue": 0.6000000000000001,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（45字符，理想125）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_040",
+      "platform": "linkedin",
+      "content_type": "question",
+      "title": "What to Pack for China: Ultimate Packing List",
+      "caption": "Sample caption for question post on linkedin",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-39/",
+      "utm_source": "linkedin",
+      "publish_time": "2026-08-12 22:00:00",
+      "status": "published",
+      "impressions": 251,
+      "reach": 200,
+      "clicks": 15,
+      "likes": 15,
+      "comments": 1,
+      "shares": 0,
+      "saves": 2,
+      "engagement_rate": 0.07171314741035857,
+      "click_through_rate": 0.05976095617529881,
+      "conversion_rate": 0.15,
+      "revenue": 0.75,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（44字符，理想150）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_004",
+      "platform": "x",
+      "content_type": "visual",
+      "title": "Guilin Karst Landscape: Some Places Don't Look Real",
+      "caption": "Sample caption for visual post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-3/",
+      "utm_source": "x",
+      "publish_time": "2026-08-04 13:00:00",
+      "status": "published",
+      "impressions": 240,
+      "reach": 192,
+      "clicks": 12,
+      "likes": 14,
+      "comments": 1,
+      "shares": 0,
+      "saves": 2,
+      "engagement_rate": 0.07083333333333333,
+      "click_through_rate": 0.05,
+      "conversion_rate": 0.12,
+      "revenue": 0.6000000000000001,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（35字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_044",
+      "platform": "x",
+      "content_type": "visual",
+      "title": "Guilin Karst Landscape: Some Places Don't Look Real",
+      "caption": "Sample caption for visual post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-43/",
+      "utm_source": "x",
+      "publish_time": "2026-08-16 13:00:00",
+      "status": "published",
+      "impressions": 240,
+      "reach": 192,
+      "clicks": 12,
+      "likes": 14,
+      "comments": 1,
+      "shares": 0,
+      "saves": 2,
+      "engagement_rate": 0.07083333333333333,
+      "click_through_rate": 0.05,
+      "conversion_rate": 0.12,
+      "revenue": 0.6000000000000001,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（35字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_012",
+      "platform": "facebook",
+      "content_type": "visual",
+      "title": "5 Things Tourists Should Know Before Visiting China",
+      "caption": "Sample caption for visual post on facebook",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-11/",
+      "utm_source": "facebook",
+      "publish_time": "2026-08-12 09:00:00",
+      "status": "published",
+      "impressions": 270,
+      "reach": 216,
+      "clicks": 8,
+      "likes": 16,
+      "comments": 1,
+      "shares": 0,
+      "saves": 2,
+      "engagement_rate": 0.07037037037037037,
+      "click_through_rate": 0.02962962962962963,
+      "conversion_rate": 0.08,
+      "revenue": 0.4,
+      "quality_score": 100,
+      "viral_score": 40.0,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "post_024",
+      "platform": "x",
+      "content_type": "question",
+      "title": "Guilin Karst Landscape: Some Places Don't Look Real",
+      "caption": "Sample caption for question post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-23/",
+      "utm_source": "x",
+      "publish_time": "2026-08-24 13:00:00",
+      "status": "published",
+      "impressions": 192,
+      "reach": 153,
+      "clicks": 9,
+      "likes": 11,
+      "comments": 1,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.06770833333333333,
+      "click_through_rate": 0.046875,
+      "conversion_rate": 0.09,
+      "revenue": 0.45,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（37字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    }
+  ],
+  "worst_performing_posts": [
+    {
+      "id": "post_025",
+      "platform": "linkedin",
+      "content_type": "tip",
+      "title": "Planning China Trip? Here's Your Complete Checklist",
+      "caption": "Sample caption for tip post on linkedin",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-24/",
+      "utm_source": "linkedin",
+      "publish_time": "2026-08-25 14:00:00",
+      "status": "published",
+      "impressions": 162,
+      "reach": 129,
+      "clicks": 9,
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "engagement_rate": 0.024691358024691357,
+      "click_through_rate": 0.05555555555555555,
+      "conversion_rate": 0.09,
+      "revenue": 0.45,
+      "quality_score": 85.0,
+      "viral_score": 0.0,
+      "issues": [
+        "文案过短（39字符，理想150）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_005",
+      "platform": "linkedin",
+      "content_type": "conversion",
+      "title": "Planning China Trip? Here's Your Complete Checklist",
+      "caption": "Sample caption for conversion post on linkedin",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-4/",
+      "utm_source": "linkedin",
+      "publish_time": "2026-08-05 14:00:00",
+      "status": "published",
+      "impressions": 108,
+      "reach": 86,
+      "clicks": 6,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "engagement_rate": 0.027777777777777776,
+      "click_through_rate": 0.05555555555555555,
+      "conversion_rate": 0.06,
+      "revenue": 0.30000000000000004,
+      "quality_score": 85.0,
+      "viral_score": 0.0,
+      "issues": [
+        "文案过短（46字符，理想150）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_045",
+      "platform": "linkedin",
+      "content_type": "conversion",
+      "title": "Planning China Trip? Here's Your Complete Checklist",
+      "caption": "Sample caption for conversion post on linkedin",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-44/",
+      "utm_source": "linkedin",
+      "publish_time": "2026-08-17 14:00:00",
+      "status": "published",
+      "impressions": 108,
+      "reach": 86,
+      "clicks": 6,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "engagement_rate": 0.027777777777777776,
+      "click_through_rate": 0.05555555555555555,
+      "conversion_rate": 0.06,
+      "revenue": 0.30000000000000004,
+      "quality_score": 85.0,
+      "viral_score": 0.0,
+      "issues": [
+        "文案过短（46字符，理想150）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_029",
+      "platform": "x",
+      "content_type": "conversion",
+      "title": "China Photography: Best Spots for Stunning Photos",
+      "caption": "Sample caption for conversion post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-28/",
+      "utm_source": "x",
+      "publish_time": "2026-08-01 21:00:00",
+      "status": "published",
+      "impressions": 208,
+      "reach": 166,
+      "clicks": 10,
+      "likes": 6,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "engagement_rate": 0.028846153846153848,
+      "click_through_rate": 0.04807692307692308,
+      "conversion_rate": 0.1,
+      "revenue": 0.5,
+      "quality_score": 95.0,
+      "viral_score": 25.0,
+      "issues": [
+        "文案过短（39字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_021",
+      "platform": "instagram",
+      "content_type": "conversion",
+      "title": "China Travel Tips #018: High-Speed Rail Guide",
+      "caption": "Sample caption for conversion post on instagram",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-20/",
+      "utm_source": "instagram",
+      "publish_time": "2026-08-21 08:00:00",
+      "status": "published",
+      "impressions": 200,
+      "reach": 160,
+      "clicks": 4,
+      "likes": 6,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "engagement_rate": 0.03,
+      "click_through_rate": 0.02,
+      "conversion_rate": 0.04,
+      "revenue": 0.2,
+      "quality_score": 85.0,
+      "viral_score": 0.0,
+      "issues": [
+        "文案过短（47字符，理想125）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_037",
+      "platform": "facebook",
+      "content_type": "conversion",
+      "title": "144-Hour Visa-Free Transit: Complete Guide",
+      "caption": "Sample caption for conversion post on facebook",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-36/",
+      "utm_source": "facebook",
+      "publish_time": "2026-08-09 18:00:00",
+      "status": "published",
+      "impressions": 264,
+      "reach": 211,
+      "clicks": 7,
+      "likes": 7,
+      "comments": 0,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.030303030303030304,
+      "click_through_rate": 0.026515151515151516,
+      "conversion_rate": 0.07,
+      "revenue": 0.35000000000000003,
+      "quality_score": 100,
+      "viral_score": 25.0,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "post_009",
+      "platform": "x",
+      "content_type": "tip",
+      "title": "China Photography: Best Spots for Stunning Photos",
+      "caption": "Sample caption for tip post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-8/",
+      "utm_source": "x",
+      "publish_time": "2026-08-09 21:00:00",
+      "status": "published",
+      "impressions": 312,
+      "reach": 249,
+      "clicks": 15,
+      "likes": 9,
+      "comments": 0,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.03205128205128205,
+      "click_through_rate": 0.04807692307692308,
+      "conversion_rate": 0.15,
+      "revenue": 0.75,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（32字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_049",
+      "platform": "x",
+      "content_type": "tip",
+      "title": "China Photography: Best Spots for Stunning Photos",
+      "caption": "Sample caption for tip post on x",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-48/",
+      "utm_source": "x",
+      "publish_time": "2026-08-21 21:00:00",
+      "status": "published",
+      "impressions": 312,
+      "reach": 249,
+      "clicks": 15,
+      "likes": 9,
+      "comments": 0,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.03205128205128205,
+      "click_through_rate": 0.04807692307692308,
+      "conversion_rate": 0.15,
+      "revenue": 0.75,
+      "quality_score": 95.0,
+      "viral_score": 40.0,
+      "issues": [
+        "文案过短（32字符，理想280）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_017",
+      "platform": "facebook",
+      "content_type": "tip",
+      "title": "144-Hour Visa-Free Transit: Complete Guide",
+      "caption": "Sample caption for tip post on facebook",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-16/",
+      "utm_source": "facebook",
+      "publish_time": "2026-08-17 18:00:00",
+      "status": "published",
+      "impressions": 396,
+      "reach": 316,
+      "clicks": 11,
+      "likes": 11,
+      "comments": 1,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.03282828282828283,
+      "click_through_rate": 0.027777777777777776,
+      "conversion_rate": 0.11,
+      "revenue": 0.55,
+      "quality_score": 95.0,
+      "viral_score": 25.0,
+      "issues": [
+        "文案过短（39字符，理想80）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    },
+    {
+      "id": "post_001",
+      "platform": "instagram",
+      "content_type": "tip",
+      "title": "China Travel Tips #018: High-Speed Rail Guide",
+      "caption": "Sample caption for tip post on instagram",
+      "article_url": "https://www.chinaboundtravel.com/posts/sample-article-0/",
+      "utm_source": "instagram",
+      "publish_time": "2026-08-01 08:00:00",
+      "status": "published",
+      "impressions": 300,
+      "reach": 240,
+      "clicks": 6,
+      "likes": 9,
+      "comments": 0,
+      "shares": 0,
+      "saves": 1,
+      "engagement_rate": 0.03333333333333333,
+      "click_through_rate": 0.02,
+      "conversion_rate": 0.06,
+      "revenue": 0.30000000000000004,
+      "quality_score": 85.0,
+      "viral_score": 0.0,
+      "issues": [
+        "文案过短（40字符，理想125）"
+      ],
+      "recommendations": [
+        "增加文案长度，提供更多价值信息"
+      ]
+    }
+  ]
+}

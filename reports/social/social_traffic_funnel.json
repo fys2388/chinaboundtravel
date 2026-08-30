@@ -1,0 +1,81 @@
+{
+  "analyzed_at": "2026-08-31T00:12:48.158441",
+  "funnel": {
+    "impressions": 21411,
+    "engagement": 1194,
+    "clicks": 779,
+    "estimated_website_visits": 623,
+    "estimated_conversions": 12,
+    "revenue": 38.95,
+    "rates": {
+      "engagement_rate": 0.055765727896875436,
+      "click_through_rate": 0.03638316753070851,
+      "visit_rate": 0.7997432605905006,
+      "conversion_rate": 0.019261637239165328,
+      "revenue_per_click": 0.05,
+      "revenue_per_impression": 0.0018191583765354259
+    },
+    "by_platform": {
+      "instagram": {
+        "impressions": 4725,
+        "engagement": 259,
+        "clicks": 94,
+        "revenue": 4.7,
+        "ctr": 0.019894179894179895,
+        "engagement_rate": 0.054814814814814816,
+        "revenue_per_click": 0.05,
+        "contribution_to_clicks": 0.12066752246469833,
+        "contribution_to_revenue": 0.12066752246469832
+      },
+      "facebook": {
+        "impressions": 2889,
+        "engagement": 145,
+        "clicks": 81,
+        "revenue": 4.050000000000001,
+        "ctr": 0.028037383177570093,
+        "engagement_rate": 0.05019037729318103,
+        "revenue_per_click": 0.05000000000000001,
+        "contribution_to_clicks": 0.10397946084724005,
+        "contribution_to_revenue": 0.10397946084724007
+      },
+      "pinterest": {
+        "impressions": 9248,
+        "engagement": 567,
+        "clicks": 364,
+        "revenue": 18.200000000000003,
+        "ctr": 0.0393598615916955,
+        "engagement_rate": 0.061310553633217996,
+        "revenue_per_click": 0.05000000000000001,
+        "contribution_to_clicks": 0.4672657252888318,
+        "contribution_to_revenue": 0.46726572528883187
+      },
+      "x": {
+        "impressions": 2482,
+        "engagement": 123,
+        "clicks": 121,
+        "revenue": 6.050000000000001,
+        "ctr": 0.048751007252215955,
+        "engagement_rate": 0.04955680902497985,
+        "revenue_per_click": 0.05,
+        "contribution_to_clicks": 0.15532734274711169,
+        "contribution_to_revenue": 0.15532734274711169
+      },
+      "linkedin": {
+        "impressions": 2067,
+        "engagement": 100,
+        "clicks": 119,
+        "revenue": 5.95,
+        "ctr": 0.05757135945815191,
+        "engagement_rate": 0.04837929366231253,
+        "revenue_per_click": 0.05,
+        "contribution_to_clicks": 0.1527599486521181,
+        "contribution_to_revenue": 0.1527599486521181
+      }
+    }
+  },
+  "bottleneck_analysis": [
+    "优化落地页首屏内容，与社媒文案保持一致",
+    "在文章中增加联盟推荐区块和CTA按钮",
+    "增加用户评价和信任信号，提升转化率"
+  ]
+}
