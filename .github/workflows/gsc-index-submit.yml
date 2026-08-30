@@ -56,7 +56,7 @@ jobs:
             all)
               python scripts/gsc_index_submit.py --all
               ;;
-          esch
+          esac
           
           echo "=== [2.0] GSC索引提交完成 ==="
 

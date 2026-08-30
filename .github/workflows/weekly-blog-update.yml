@@ -148,13 +148,9 @@ jobs:
           git config --local user.name "GitHub Action"
           
           # Add ALL changed files comprehensively
-          git add content/posts/ 2>/dev/null || true
-          git add content/_draft/ 2>/dev/null || true
-          git add manifest.json 2>/dev/null || true
-          git add config/topic_pool.json 2>/dev/null || true
-          git add config/error_knowledge_base.json 2>/dev/null || true
-          git add layouts/shortcodes/*.html 2>/dev/null || true
-          git add static/img/ 2>/dev/null || true
+          # CI checkout 是干净的：收集全部生成产物（文章、草稿、配置、审计报告等）
+          git add -A 2>/dev/null || true
+          git add content/ manifest.json config/ layouts/ static/ reports/ 2>/dev/null || true
           
           # Check if there are actual changes to commit
           if git diff --quiet && git diff --staged --quiet; then
@@ -165,11 +161,12 @@ jobs:
             git commit -m "chore: auto publish Joran blog | $(date '+%Y-%m-%d')"
             # 远端可能有并发提交，先 rebase 再 push，最多重试 5 次
             # 2.0优化：增加重试次数到5次，间隔60秒，rebase失败后尝试merge
+            # 3.0修复：rebase 使用 --autostash，未提交文件不再阻塞；禁止 reset --hard 防丢提交
             PUSHED=""
             for i in 1 2 3 4 5; do
               echo "=== Push attempt $i/5 ==="
               # 先尝试rebase
-              if git pull --rebase origin main 2>&1; then
+              if git pull --rebase --autostash origin main 2>&1; then
                 echo "Rebase successful"
               else
                 echo "Rebase failed, aborting and trying merge..."
@@ -179,12 +176,9 @@ jobs:
                 if git pull --no-rebase origin main 2>&1; then
                   echo "Merge successful"
                 else
-                  echo "Merge also failed, resetting to remote..."
+                  echo "Merge also failed, keeping local commit for manual review..."
                   git merge --abort 2>/dev/null || true
-                  git reset --hard origin/main 2>/dev/null || true
-                  echo "Reset to origin/main, will retry"
-                  sleep 60
-                  continue
+                  exit 1
                 fi
               fi
               # 尝试push
@@ -198,8 +192,8 @@ jobs:
             done
             if [ -z "$PUSHED" ]; then
               echo "::error::Failed to push changes after 5 attempts"
-              echo "::warning::This may be due to concurrent commits. Please check and retry manually."
-              echo "Continuing without push (deploy may need manual trigger)"
+              echo "::warning::This may be due to concurrent commits. Local commit was kept, please check and retry manually."
+              exit 1
             fi
           fi
 
