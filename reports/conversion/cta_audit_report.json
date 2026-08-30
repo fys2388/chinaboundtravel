@@ -1,0 +1,859 @@
+{
+  "audited_at": "2026-08-30T23:59:59.926783",
+  "total_ctas": 30,
+  "pages_with_cta": 9,
+  "total_issues": 90,
+  "type_distribution": {
+    "param": 30
+  },
+  "position_distribution": {
+    "article_mid": 30
+  },
+  "common_issues": {
+    "CTA文本过短或缺失": 30,
+    "未指定合作伙伴": 30,
+    "CTA缺少目标URL": 30
+  },
+  "cta_records": [
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_0",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_1",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_2",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_3",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_4",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinabound-travel-guide-2026-07-monthly-update_5",
+      "page": "/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update/",
+      "page_title": "China Travel Guide: July 2026 Updates & Visa Rules",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls_0",
+      "page": "/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "page_title": "Chinese Street Food: Night Markets & What to Eat",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls_1",
+      "page": "/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "page_title": "Chinese Street Food: Night Markets & What to Eat",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls_2",
+      "page": "/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "page_title": "Chinese Street Food: Night Markets & What to Eat",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers_0",
+      "page": "/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/",
+      "page_title": "Where to Stay in China: Hotels & Budget Options",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers_1",
+      "page": "/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/",
+      "page_title": "Where to Stay in China: Hotels & Budget Options",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers_2",
+      "page": "/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/",
+      "page_title": "Where to Stay in China: Hotels & Budget Options",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers_0",
+      "page": "/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "page_title": "China Food Guide: Must-Try Dishes & Restaurants",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers_1",
+      "page": "/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "page_title": "China Food Guide: Must-Try Dishes & Restaurants",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers_2",
+      "page": "/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "page_title": "China Food Guide: Must-Try Dishes & Restaurants",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-21-cultural-etiquette-guide_0",
+      "page": "/posts/2026-07-21-cultural-etiquette-guide/",
+      "page_title": "China Cultural Etiquette Guide: Dos and Don'ts",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-21-cultural-etiquette-guide_1",
+      "page": "/posts/2026-07-21-cultural-etiquette-guide/",
+      "page_title": "China Cultural Etiquette Guide: Dos and Don'ts",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-21-cultural-etiquette-guide_2",
+      "page": "/posts/2026-07-21-cultural-etiquette-guide/",
+      "page_title": "China Cultural Etiquette Guide: Dos and Don'ts",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-22-cultural-etiquette-guide_0",
+      "page": "/posts/2026-07-22-cultural-etiquette-guide/",
+      "page_title": "China Etiquette Guide for Aussie & Kiwi Travelers",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-22-cultural-etiquette-guide_1",
+      "page": "/posts/2026-07-22-cultural-etiquette-guide/",
+      "page_title": "China Etiquette Guide for Aussie & Kiwi Travelers",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-22-cultural-etiquette-guide_2",
+      "page": "/posts/2026-07-22-cultural-etiquette-guide/",
+      "page_title": "China Etiquette Guide for Aussie & Kiwi Travelers",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-23-foodies-guide-to-china-a-gastronomic-adventure_0",
+      "page": "/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure/",
+      "page_title": "Foodie's Guide to China: Dishes You Must Try",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-23-foodies-guide-to-china-a-gastronomic-adventure_1",
+      "page": "/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure/",
+      "page_title": "Foodie's Guide to China: Dishes You Must Try",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-23-foodies-guide-to-china-a-gastronomic-adventure_2",
+      "page": "/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure/",
+      "page_title": "Foodie's Guide to China: Dishes You Must Try",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience_0",
+      "page": "/posts/2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "page_title": "China Remote Work Guide: Digital Nomad Essentials",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience_1",
+      "page": "/posts/2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "page_title": "China Remote Work Guide: Digital Nomad Essentials",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience_2",
+      "page": "/posts/2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "page_title": "China Remote Work Guide: Digital Nomad Essentials",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom_0",
+      "page": "/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "page_title": "China Photography Guide: Best Spots & Tips",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom_1",
+      "page": "/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "page_title": "China Photography Guide: Best Spots & Tips",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    },
+    {
+      "id": "cta_2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom_2",
+      "page": "/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "page_title": "China Photography Guide: Best Spots & Tips",
+      "cta_type": "param",
+      "position": "article_mid",
+      "partner": "unknown",
+      "text": "",
+      "url": "",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "revenue": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "quality_score": 55.0,
+      "issues": [
+        "CTA文本过短或缺失",
+        "未指定合作伙伴",
+        "CTA缺少目标URL"
+      ],
+      "recommendations": [
+        "优化CTA文案，包含行动号召和价值主张",
+        "明确指定联盟合作伙伴",
+        "确保CTA有正确的跳转链接"
+      ]
+    }
+  ]
+}
