@@ -19,6 +19,8 @@ import base64
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import reporting_snapshot_reader
+
 try:
     from google.oauth2 import service_account
     from google.auth.transport.requests import Request
@@ -287,10 +289,21 @@ class FeishuYearlyReporter:
     def collect_data(self) -> dict:
         print("📊 收集年报数据...")
         data = {}
-        ga4 = self._fetch_yearly_ga4()
-        if ga4:
-            data.update(ga4)
-        data.update(self._fetch_gsc_data())
+        # 2.0 统一口径（P1-REPORT-03R）：SNAPSHOT 优先，命中则 GA4/GSC 采用统一快照，不再直连
+        _snap_ga4 = reporting_snapshot_reader.snapshot_traffic("year")
+        if _snap_ga4 is not None:
+            print("   📦 2.0 统一快照命中：GA4/GSC 采用 SNAPSHOT 口径（as_of=%s）" % _snap_ga4.get("snapshot_as_of"))
+            data.update(_snap_ga4)
+            _snap_gsc = reporting_snapshot_reader.snapshot_gsc()
+            if _snap_gsc is not None:
+                data.update(_snap_gsc)
+            else:
+                data.update(self._fetch_gsc_data())
+        else:
+            ga4 = self._fetch_yearly_ga4()
+            if ga4:
+                data.update(ga4)
+            data.update(self._fetch_gsc_data())
         tp = self._fetch_yearly_travelpayouts()
         if tp:
             data.update(tp)

@@ -20,6 +20,8 @@ import base64
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import reporting_snapshot_reader
+
 try:
     from google.oauth2 import service_account
     from google.auth.transport.requests import Request
@@ -697,19 +699,27 @@ class FeishuMonthlyReporter:
         print("📊 收集月报数据...")
         data = {}
 
-        print("1️⃣ 获取 GA4 月度数据...")
-        ga4_data = self._fetch_monthly_ga4()
-        if ga4_data:
-            data.update(ga4_data)
+        # 2.0 统一口径（P1-REPORT-03R）：SNAPSHOT 优先，命中则 GA4/GSC 采用统一快照，不再直连
+        _snap_ga4 = reporting_snapshot_reader.snapshot_traffic("month")
+        if _snap_ga4 is not None:
+            print("   📦 2.0 统一快照命中：GA4/GSC 采用 SNAPSHOT 口径（as_of=%s）" % _snap_ga4.get("snapshot_as_of"))
+            data.update(_snap_ga4)
+            _snap_gsc = reporting_snapshot_reader.snapshot_gsc()
+            data["gsc_data"] = _snap_gsc if _snap_gsc is not None else self._fetch_gsc_data()
+        else:
+            print("1️⃣ 获取 GA4 月度数据...")
+            ga4_data = self._fetch_monthly_ga4()
+            if ga4_data:
+                data.update(ga4_data)
+
+            print("3️⃣ 获取 GSC 数据...")
+            gsc_data = self._fetch_gsc_data()
+            data["gsc_data"] = gsc_data
 
         print("2️⃣ 获取 Travelpayouts 月度数据...")
         tp_data = self._fetch_monthly_travelpayouts()
         if tp_data:
             data.update(tp_data)
-
-        print("3️⃣ 获取 GSC 数据...")
-        gsc_data = self._fetch_gsc_data()
-        data["gsc_data"] = gsc_data
 
         print("4️⃣ 获取 MailerLite 月度数据...")
         ml_data = self._fetch_monthly_mailerlite()
@@ -741,6 +751,7 @@ class FeishuMonthlyReporter:
         return data
 
     def build_monthly_card(self, data: dict) -> dict:
+        _caliber = reporting_snapshot_reader.caliber_label(data)
         today = datetime.now()
         month_label = data.get("month_label", today.strftime("%Y年%m月"))
         prev_month_label = data.get("prev_month_label", "")
@@ -1025,7 +1036,7 @@ class FeishuMonthlyReporter:
                 {"tag": "div", "text": {"tag": "lark_md", "content": risks_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": okr_review_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": plan_section}},
-                {"tag": "div", "text": {"tag": "lark_md", "content": "\n---\n💡 本月报由自动化脚本生成 | 每月1日 08:00 自动推送\n📐 数据口径：GA4 + Travelpayouts + MailerLite + 本地扫描"}}
+                {"tag": "div", "text": {"tag": "lark_md", "content": f"\n---\n💡 本月报由自动化脚本生成 | 每月1日 08:00 自动推送\n📐 数据口径：{_caliber} + Travelpayouts + MailerLite + 本地扫描"}}
             ]
         }
         # 过滤空板块（None 占位）

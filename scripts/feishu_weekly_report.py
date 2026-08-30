@@ -20,6 +20,8 @@ import base64
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import reporting_snapshot_reader
+
 try:
     from google.oauth2 import service_account
     from google.auth.transport.requests import Request
@@ -791,19 +793,27 @@ class FeishuWeeklyReporter:
         print("📊 收集周报数据...")
         data = {}
 
-        print("1️⃣ 获取 GA4 数据...")
-        ga4_data = self._fetch_weekly_ga4()
-        if ga4_data:
-            data.update(ga4_data)
+        # 2.0 统一口径（P1-REPORT-03R）：SNAPSHOT 优先，命中则 GA4/GSC 采用统一快照，不再直连
+        _snap_ga4 = reporting_snapshot_reader.snapshot_traffic("week")
+        if _snap_ga4 is not None:
+            print("   📦 2.0 统一快照命中：GA4/GSC 采用 SNAPSHOT 口径（as_of=%s）" % _snap_ga4.get("snapshot_as_of"))
+            data.update(_snap_ga4)
+            _snap_gsc = reporting_snapshot_reader.snapshot_gsc()
+            data["gsc_data"] = _snap_gsc if _snap_gsc is not None else self._fetch_gsc_data()
+        else:
+            print("1️⃣ 获取 GA4 数据...")
+            ga4_data = self._fetch_weekly_ga4()
+            if ga4_data:
+                data.update(ga4_data)
+
+            print("3️⃣ 获取 GSC 数据...")
+            gsc_data = self._fetch_gsc_data()
+            data["gsc_data"] = gsc_data
 
         print("2️⃣ 获取 Travelpayouts 数据...")
         tp_data = self._fetch_weekly_travelpayouts()
         if tp_data:
             data.update(tp_data)
-
-        print("3️⃣ 获取 GSC 数据...")
-        gsc_data = self._fetch_gsc_data()
-        data["gsc_data"] = gsc_data
 
         print("4️⃣ 获取 MailerLite 数据...")
         ml_data = self._fetch_weekly_mailerlite()
@@ -839,6 +849,8 @@ class FeishuWeeklyReporter:
 
     def build_weekly_card(self, data: dict) -> dict:
         """构建飞书周报卡片（工业级模板）"""
+
+        _caliber = reporting_snapshot_reader.caliber_label(data)
         today = datetime.now()
         week_num = today.isocalendar()[1]
         prev_week_num = week_num - 1
@@ -1237,7 +1249,7 @@ class FeishuWeeklyReporter:
                 {"tag": "div", "text": {"tag": "lark_md", "content": risks_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": plan_section}},
                 {"tag": "div", "text": {"tag": "lark_md", "content": improvement_section}},
-                {"tag": "div", "text": {"tag": "lark_md", "content": "\n---\n💡 本周报由自动化脚本生成 | 每周一早 08:00 自动推送\n📐 数据口径：流量数据来自 GA4，联盟数据来自 Travelpayouts，内容巡检为本地 Markdown 扫描结果，SEO 数据待 GSC 授权后补全。\n如数据异常，请核查 API 密钥与站点配置"}}
+                {"tag": "div", "text": {"tag": "lark_md", "content": f"\n---\n💡 本周报由自动化脚本生成 | 每周一早 08:00 自动推送\n📐 数据口径：{_caliber}，联盟数据来自 Travelpayouts，内容巡检为本地扫描结果。\n如数据异常，请核查 API 密钥与站点配置"}}
             ]
         }
         # 过滤空板块（None 占位）
