@@ -1,0 +1,207 @@
+{
+  "validation_time": "2026-08-31T09:03:59.041471",
+  "overall_score": 0.0,
+  "is_effective": false,
+  "comparison": {
+    "comparison_time": "2026-08-31T09:03:59.037003",
+    "baseline_date": "2026-08-31",
+    "current_date": "2026-08-31",
+    "categories": {
+      "content": {
+        "metrics": {
+          "articles_with_affiliate_links": {
+            "baseline": 4,
+            "current": 4,
+            "delta": 0,
+            "delta_pct": 0.0,
+            "trend": "unchanged"
+          },
+          "avg_word_count": {
+            "baseline": 1928,
+            "current": 1928,
+            "delta": 0,
+            "delta_pct": 0.0,
+            "trend": "unchanged"
+          },
+          "articles_with_internal_links": {
+            "baseline": 10,
+            "current": 10,
+            "delta": 0,
+            "delta_pct": 0.0,
+            "trend": "unchanged"
+          },
+          "articles_this_week": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_articles": {
+            "baseline": 59,
+            "current": 59,
+            "delta": 0,
+            "delta_pct": 0.0,
+            "trend": "unchanged"
+          }
+        },
+        "improved": 0,
+        "declined": 0,
+        "unchanged": 5
+      },
+      "social": {
+        "metrics": {
+          "avg_engagement_rate": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_likes": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_comments": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_shares": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_clicks": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_posts": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_impressions": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          }
+        },
+        "improved": 0,
+        "declined": 0,
+        "unchanged": 7
+      },
+      "seo": {
+        "metrics": {
+          "average_position": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "indexed_pages": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "sitemap_pages": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "index_errors": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "impressions": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "clicks": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "ctr": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          }
+        },
+        "improved": 0,
+        "declined": 0,
+        "unchanged": 7
+      }
+    },
+    "summary": {
+      "total_metrics": 19,
+      "improved": 0,
+      "declined": 0,
+      "unchanged": 19,
+      "overall_score": 0.0
+    }
+  },
+  "effectiveness": {
+    "validation_time": "2026-08-31T09:03:59.037364",
+    "overall_score": 0.0,
+    "is_effective": false,
+    "effective_strategies": [],
+    "ineffective_strategies": [
+      {
+        "category": "content",
+        "improve_rate": 0.0,
+        "improved": 0,
+        "declined": 0,
+        "total": 5
+      },
+      {
+        "category": "social",
+        "improve_rate": 0.0,
+        "improved": 0,
+        "declined": 0,
+        "total": 7
+      },
+      {
+        "category": "seo",
+        "improve_rate": 0.0,
+        "improved": 0,
+        "declined": 0,
+        "total": 7
+      }
+    ],
+    "needs_more_data": [],
+    "recommendations": [
+      "学习策略效果不佳，需要重新评估策略方向",
+      "低效策略需要优化: content, social, seo"
+    ]
+  }
+}

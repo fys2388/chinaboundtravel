@@ -1,7 +1,17 @@
 {
-  "last_updated": "2026-08-31T09:02:34.482756",
-  "data_source": "real_data_pull_engine",
-  "records": [
+  "source": "content_analytics",
+  "pull_time": "2026-08-31T09:02:33.874384",
+  "data_date": "2026-08-31",
+  "is_real_data": true,
+  "is_fresh": true,
+  "metrics": {
+    "total_articles": 59,
+    "articles_this_week": 0,
+    "avg_word_count": 1928,
+    "articles_with_affiliate_links": 4,
+    "articles_with_internal_links": 10
+  },
+  "top_articles": [
     {
       "title": "144 Hour Visa Free Transit Guide",
       "slug": "144-hour-visa-free-transit-guide",
@@ -72,5 +82,7 @@
       "has_affiliate_links": false,
       "has_internal_links": true
     }
-  ]
+  ],
+  "raw_source": "local_content_scan + ga4_daily",
+  "replaced_empty_records": true
 }

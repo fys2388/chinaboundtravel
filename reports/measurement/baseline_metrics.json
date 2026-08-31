@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-31T09:03:58.963163",
+  "date": "2026-08-31",
+  "traffic": {},
+  "content": {
+    "total_articles": 59,
+    "articles_this_week": 0,
+    "avg_word_count": 1928,
+    "articles_with_affiliate_links": 4,
+    "articles_with_internal_links": 10
+  },
+  "social": {
+    "total_posts": 0,
+    "total_impressions": 0,
+    "total_clicks": 0,
+    "total_likes": 0,
+    "total_comments": 0,
+    "total_shares": 0,
+    "avg_engagement_rate": 0
+  },
+  "conversion": {},
+  "revenue": {},
+  "seo": {
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": 0,
+    "average_position": 0,
+    "indexed_pages": 0,
+    "sitemap_pages": 0,
+    "index_errors": 0
+  }
+}

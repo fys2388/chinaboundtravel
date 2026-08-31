@@ -1,0 +1,22 @@
+{
+  "source": "gsc",
+  "pull_time": "2026-08-31T09:02:33.832930",
+  "data_date": null,
+  "is_real_data": true,
+  "is_fresh": false,
+  "metrics": {
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": 0,
+    "average_position": 0,
+    "indexed_pages": 0,
+    "sitemap_pages": 0,
+    "index_errors": 0
+  },
+  "raw_source": "E:\\AI\\dulizhan\\travel-blog\\reports\\gsc_index_report.json",
+  "freshness_info": {
+    "fresh": false,
+    "reason": "No date field",
+    "age_days": 999
+  }
+}

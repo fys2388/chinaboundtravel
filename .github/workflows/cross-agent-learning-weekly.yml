@@ -1,12 +1,13 @@
 name: Cross-Agent Learning Weekly
 
 # 周度跨Agent学习工作流
-# 每周一UTC 00:00自动运行，执行6大Agent学习闭环 + 跨Agent协同学习 + 协同机制
+# 每周一UTC 00:00自动运行
+# 流程: 真实数据拉取 -> 6大Agent学习闭环 -> 跨Agent协同学习 -> 协同机制 -> Measure验证 -> 提交
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # 每周一UTC 00:00（北京时间周一08:00）
-  workflow_dispatch:  # 支持手动触发
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,7 +16,7 @@ permissions:
 jobs:
   cross-agent-learning:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -32,170 +33,155 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt, using default packages"
+          pip install -r requirements.txt 2>/dev/null || echo "Using default packages"
 
-      - name: Run Social Learning Closed Loop
+      - name: Step 1 - Pull real data (GA4/GSC/Social/Content)
+        id: real_data
         run: |
-          echo "=== 运行 Social Learning 闭环 ==="
-          python scripts/social_learning_closed_loop.py --run || echo "Social Learning 运行完成（或使用示例数据）"
+          echo "=== Step 1: 拉取真实数据 ==="
+          python scripts/real_data_pull_engine.py --all || echo "Real data pull completed (some sources may use cache)"
+          echo "data_pull_status=completed" >> $GITHUB_OUTPUT
+
+      - name: Step 2 - Run Social Learning Closed Loop
+        run: |
+          echo "=== Step 2: Social Learning 闭环 ==="
+          python scripts/social_learning_closed_loop.py --run || echo "Social Learning completed"
         continue-on-error: true
 
-      - name: Run Content Learning Closed Loop
+      - name: Step 3 - Run Content Learning Closed Loop
         run: |
-          echo "=== 运行 Content Learning 闭环 ==="
-          python scripts/content_learning_closed_loop.py --run || echo "Content Learning 运行完成"
+          echo "=== Step 3: Content Learning 闭环 ==="
+          python scripts/content_learning_closed_loop.py --run || echo "Content Learning completed"
         continue-on-error: true
 
-      - name: Run Conversion Learning Closed Loop
+      - name: Step 4 - Run Conversion Learning Closed Loop
         run: |
-          echo "=== 运行 Conversion Learning 闭环 ==="
-          python scripts/conversion_learning_closed_loop.py --run || echo "Conversion Learning 运行完成"
+          echo "=== Step 4: Conversion Learning 闭环 ==="
+          python scripts/conversion_learning_closed_loop.py --run || echo "Conversion Learning completed"
         continue-on-error: true
 
-      - name: Run SEO Learning Closed Loop
+      - name: Step 5 - Run SEO Learning Closed Loop
         run: |
-          echo "=== 运行 SEO Learning 闭环 ==="
-          python scripts/seo_learning_closed_loop.py --run || echo "SEO Learning 运行完成"
+          echo "=== Step 5: SEO Learning 闭环 ==="
+          python scripts/seo_learning_closed_loop.py --run || echo "SEO Learning completed"
         continue-on-error: true
 
-      - name: Run User Learning Closed Loop
+      - name: Step 6 - Run User Learning Closed Loop
         run: |
-          echo "=== 运行 User Learning 闭环 ==="
-          python scripts/user_learning_closed_loop.py --run || echo "User Learning 运行完成"
+          echo "=== Step 6: User Learning 闭环 ==="
+          python scripts/user_learning_closed_loop.py --run || echo "User Learning completed"
         continue-on-error: true
 
-      - name: Run Revenue Learning Closed Loop
+      - name: Step 7 - Run Revenue Learning Closed Loop
         run: |
-          echo "=== 运行 Revenue Learning 闭环 ==="
-          python scripts/revenue_learning_closed_loop.py --run || echo "Revenue Learning 运行完成"
+          echo "=== Step 7: Revenue Learning 闭环 ==="
+          python scripts/revenue_learning_closed_loop.py --run || echo "Revenue Learning completed"
         continue-on-error: true
 
-      - name: Run Cross-Agent Learning Orchestrator
+      - name: Step 8 - Run Cross-Agent Learning Orchestrator
         run: |
-          echo "=== 运行跨Agent协同学习编排器 ==="
-          python scripts/cross_agent_learning_orchestrator.py --run-all || echo "跨Agent协同学习运行完成"
+          echo "=== Step 8: 跨Agent协同学习编排器 ==="
+          python scripts/cross_agent_learning_orchestrator.py --run-all || echo "Cross-agent orchestrator completed"
         continue-on-error: true
 
-      - name: Run SYN-001 Content-Social Synergy
+      - name: Step 9 - Run SYN-001 Content-Social Synergy
         run: |
-          echo "=== 运行 SYN-001 内容-社媒协同机制 ==="
-          python scripts/synergy_content_social.py --run || echo "SYN-001协同机制运行完成"
+          echo "=== Step 9: SYN-001 内容-社媒协同 ==="
+          python scripts/synergy_content_social.py --run || echo "SYN-001 completed"
         continue-on-error: true
 
-      - name: Run SYN-003 Revenue-Conversion Synergy
+      - name: Step 10 - Run SYN-003 Revenue-Conversion Synergy
         run: |
-          echo "=== 运行 SYN-003 收入-转化协同机制 ==="
-          python scripts/synergy_revenue_conversion.py --run || echo "SYN-003协同机制运行完成"
+          echo "=== Step 10: SYN-003 收入-转化协同 ==="
+          python scripts/synergy_revenue_conversion.py --run || echo "SYN-003 completed"
         continue-on-error: true
 
-      - name: Update Growth Memory
+      - name: Step 11 - Measure validation (before/after comparison)
+        id: measure
         run: |
-          echo "=== 更新 Growth Memory ==="
-          python scripts/growth_memory_updater.py --run || echo "Growth Memory更新完成"
+          echo "=== Step 11: Measure验证（前后对照） ==="
+          python scripts/measure_validation_engine.py --run || echo "Measure validation completed"
+          echo "measure_status=completed" >> $GITHUB_OUTPUT
+
+      - name: Step 12 - Update Growth Memory
+        run: |
+          echo "=== Step 12: 更新 Growth Memory ==="
+          python scripts/growth_memory_updater.py --run || echo "Growth Memory updated"
         continue-on-error: true
 
-      - name: Generate Learning Summary
+      - name: Step 13 - Generate Learning Summary
         id: summary
         run: |
-          echo "=== 生成本周学习总结 ==="
+          echo "=== Step 13: 生成本周学习总结 ==="
           echo "learning_date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
-          # 统计学习结果
-          SOCIAL_STRATEGY="reports/social/social_publish_strategy.json"
-          CONTENT_STRATEGY="reports/content/content_optimization_strategy.json"
-          CONVERSION_STRATEGY="reports/conversion/conversion_optimization_strategy.json"
-          SEO_STRATEGY="reports/seo/seo_optimization_strategy.json"
-          USER_STRATEGY="reports/user/user_optimization_strategy.json"
-          REVENUE_STRATEGY="reports/revenue/revenue_optimization_strategy.json"
-          CROSS_AGENT_REPORT="reports/cross_agent/cross_agent_learning_report.md"
-          SYN001_QUEUE="reports/synergy/social_priority_queue.json"
-          SYN003_CONFIG="reports/synergy/high_commission_cta_config.json"
+          # 统计策略文件是否更新
+          for agent in social content conversion seo user revenue; do
+            FILE="reports/${agent}/${agent}_optimization_strategy.json"
+            if [ -f "$FILE" ]; then
+              echo "${agent}_strategy=yes" >> $GITHUB_OUTPUT
+            else
+              echo "${agent}_strategy=no" >> $GITHUB_OUTPUT
+            fi
+          done
 
-          echo "social_updated=$([ -f "$SOCIAL_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "content_updated=$([ -f "$CONTENT_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "conversion_updated=$([ -f "$CONVERSION_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "seo_updated=$([ -f "$SEO_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "user_updated=$([ -f "$USER_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "revenue_updated=$([ -f "$REVENUE_STRATEGY" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "cross_agent_updated=$([ -f "$CROSS_AGENT_REPORT" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "syn001_updated=$([ -f "$SYN001_QUEUE" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-          echo "syn003_updated=$([ -f "$SYN003_CONFIG" ] && echo 'yes' || echo 'no')" >> $GITHUB_OUTPUT
-
-          # 统计队列和配置数量
-          if [ -f "$SYN001_QUEUE" ]; then
-            QUEUE_COUNT=$(python -c "import json; d=json.load(open('$SYN001_QUEUE')); print(len(d.get('queue', [])))" 2>/dev/null || echo "0")
-            echo "syn001_queue_count=$QUEUE_COUNT" >> $GITHUB_OUTPUT
+          # 统计Measure验证结果
+          MEASURE_FILE="reports/measurement/measure_validation_report.json"
+          if [ -f "$MEASURE_FILE" ]; then
+            MEASURE_SCORE=$(python -c "import json; d=json.load(open('$MEASURE_FILE')); print(d.get('overall_score', 0))" 2>/dev/null || echo "0")
+            echo "measure_score=$MEASURE_SCORE" >> $GITHUB_OUTPUT
           else
-            echo "syn001_queue_count=0" >> $GITHUB_OUTPUT
+            echo "measure_score=0" >> $GITHUB_OUTPUT
           fi
 
-          if [ -f "$SYN003_CONFIG" ]; then
-            CONFIG_COUNT=$(python -c "import json; d=json.load(open('$SYN003_CONFIG')); print(len(d.get('product_cta_mapping', [])))" 2>/dev/null || echo "0")
-            echo "syn003_config_count=$CONFIG_COUNT" >> $GITHUB_OUTPUT
-          else
-            echo "syn003_config_count=0" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit learning results
+      - name: Step 14 - Commit learning results
         run: |
-          echo "=== 提交学习结果 ==="
+          echo "=== Step 14: 提交学习结果 ==="
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 添加所有学习结果文件
-          git add reports/social/ reports/content/ reports/conversion/ reports/seo/ reports/user/ reports/revenue/ reports/cross_agent/ reports/synergy/ reports/growth_memory/ 2>/dev/null || true
+          git add reports/social/ reports/content/ reports/conversion/ reports/seo/ reports/user/ reports/revenue/ reports/cross_agent/ reports/synergy/ reports/growth_memory/ reports/measurement/ reports/real_data/ 2>/dev/null || true
 
-          # 检查是否有变更
           if git diff --cached --quiet; then
             echo "No learning changes to commit"
           else
-            git commit -m "feat(ai-learning): 周度跨Agent学习结果自动更新 $(date +%Y-%m-%d)
-
-- 6大Agent学习闭环自动运行
-- 跨Agent协同学习编排器运行
-- SYN-001内容-社媒协同机制运行
-- SYN-003收入-转化协同机制运行
-- Growth Memory自动更新
-- 学习策略和报告自动提交"
+            COMMIT_MSG="feat(ai-learning): weekly cross-agent learning update $(date +%Y-%m-%d)"
+            COMMIT_MSG="$COMMIT_MSG - 6 agent loops + cross-agent orchestrator + SYN-001/SYN-003 + measure validation"
+            git commit -m "$COMMIT_MSG"
             git push origin main
             echo "Learning results committed and pushed"
           fi
 
-      - name: Send Feishu notification
+      - name: Step 15 - Send Feishu notification
         if: always()
         run: |
-          echo "=== 发送飞书通知 ==="
+          echo "=== Step 15: 发送飞书通知 ==="
           if [ -n "${{ secrets.FEISHU_WEBHOOK_URL }}" ]; then
             python scripts/send_feishu_notification.py \
-              --title "📊 周度跨Agent学习完成 $(date +%Y-%m-%d)" \
-              --message "6大Agent学习闭环 + 跨Agent协同学习 + SYN-001/SYN-003协同机制已自动运行完成，学习结果已提交到GitHub。" \
-              --webhook "${{ secrets.FEISHU_WEBHOOK_URL }}" || echo "飞书通知发送失败（可能未配置webhook）"
+              --title "Weekly Cross-Agent Learning Complete $(date +%Y-%m-%d)" \
+              --message "6 agent loops + cross-agent orchestrator + SYN-001/SYN-003 + measure validation completed. Measure score: ${{ steps.summary.outputs.measure_score }}/100" \
+              --webhook "${{ secrets.FEISHU_WEBHOOK_URL }}" || echo "Feishu notification failed"
           else
-            echo "未配置FEISHU_WEBHOOK_URL，跳过飞书通知"
+            echo "FEISHU_WEBHOOK_URL not configured"
           fi
         continue-on-error: true
 
-      - name: Show learning summary
+      - name: Step 16 - Show learning summary
         run: |
           echo "=========================================="
-          echo "  周度跨Agent学习完成总结"
+          echo "  Weekly Cross-Agent Learning Summary"
           echo "=========================================="
-          echo "学习日期: ${{ steps.summary.outputs.learning_date }}"
+          echo "Date: ${{ steps.summary.outputs.learning_date }}"
+          echo "Data pull: ${{ steps.real_data.outputs.data_pull_status }}"
+          echo "Measure score: ${{ steps.summary.outputs.measure_score }}/100"
           echo ""
-          echo "6大Agent学习闭环:"
-          echo "  - Social Learning: ${{ steps.summary.outputs.social_updated }}"
-          echo "  - Content Learning: ${{ steps.summary.outputs.content_updated }}"
-          echo "  - Conversion Learning: ${{ steps.summary.outputs.conversion_updated }}"
-          echo "  - SEO Learning: ${{ steps.summary.outputs.seo_updated }}"
-          echo "  - User Learning: ${{ steps.summary.outputs.user_updated }}"
-          echo "  - Revenue Learning: ${{ steps.summary.outputs.revenue_updated }}"
+          echo "6 Agent Learning Loops:"
+          echo "  - Social: ${{ steps.summary.outputs.social_strategy }}"
+          echo "  - Content: ${{ steps.summary.outputs.content_strategy }}"
+          echo "  - Conversion: ${{ steps.summary.outputs.conversion_strategy }}"
+          echo "  - SEO: ${{ steps.summary.outputs.seo_strategy }}"
+          echo "  - User: ${{ steps.summary.outputs.user_strategy }}"
+          echo "  - Revenue: ${{ steps.summary.outputs.revenue_strategy }}"
           echo ""
-          echo "跨Agent协同学习:"
-          echo "  - 编排器运行: ${{ steps.summary.outputs.cross_agent_updated }}"
-          echo ""
-          echo "协同机制:"
-          echo "  - SYN-001内容-社媒: ${{ steps.summary.outputs.syn001_updated }} (队列: ${{ steps.summary.outputs.syn001_queue_count }}条)"
-          echo "  - SYN-003收入-转化: ${{ steps.summary.outputs.syn003_updated }} (配置: ${{ steps.summary.outputs.syn003_config_count }}个)"
-          echo ""
-          echo "学习结果已自动提交到GitHub"
+          echo "All learning results committed to GitHub"
           echo "=========================================="

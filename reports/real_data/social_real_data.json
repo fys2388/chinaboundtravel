@@ -1,0 +1,25 @@
+{
+  "source": "buffer_social",
+  "pull_time": "2026-08-31T09:02:33.854699",
+  "data_date": "2026-08-31T01:50:39.087561",
+  "is_real_data": true,
+  "is_fresh": true,
+  "metrics": {
+    "total_posts": 0,
+    "total_impressions": 0,
+    "total_clicks": 0,
+    "total_likes": 0,
+    "total_comments": 0,
+    "total_shares": 0,
+    "avg_engagement_rate": 0
+  },
+  "posts": [],
+  "raw_source": "E:\\AI\\dulizhan\\travel-blog\\reports\\integration\\social_engine_integration.json",
+  "replaced_sample_data": true,
+  "freshness_info": {
+    "fresh": true,
+    "reason": "Fresh",
+    "age_days": 0,
+    "data_date": "2026-08-31"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "validation_time": "2026-08-31T09:02:34.483795",
+  "overall_status": "PARTIAL",
+  "sources": {
+    "ga4": {
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "raw_source": null,
+      "status": "FAIL"
+    },
+    "gsc": {
+      "is_real_data": true,
+      "is_fresh": false,
+      "data_date": null,
+      "raw_source": "E:\\AI\\dulizhan\\travel-blog\\reports\\gsc_index_report.json",
+      "status": "WARN"
+    },
+    "social": {
+      "is_real_data": true,
+      "is_fresh": true,
+      "data_date": "2026-08-31T01:50:39.087561",
+      "raw_source": "E:\\AI\\dulizhan\\travel-blog\\reports\\integration\\social_engine_integration.json",
+      "status": "PASS"
+    },
+    "content": {
+      "is_real_data": true,
+      "is_fresh": true,
+      "data_date": "2026-08-31",
+      "raw_source": "local_content_scan + ga4_daily",
+      "status": "PASS"
+    }
+  },
+  "summary": {
+    "total_sources": 4,
+    "real_data_count": 3,
+    "fresh_data_count": 2,
+    "issues": [
+      "ga4: 数据不是真实数据（可能是Sample/模拟/空数据）",
+      "gsc: 数据不新鲜（超过2天）"
+    ]
+  }
+}
