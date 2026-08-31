@@ -59,9 +59,12 @@ import requests  # noqa: E402
 # P0: Social media image validation + optimization
 try:
     from social_image_validator import validate_image
+    from social_image_optimizer import optimize_image
     IMAGE_VALIDATOR_AVAILABLE = True
+    IMAGE_OPTIMIZER_AVAILABLE = True
 except ImportError:
     IMAGE_VALIDATOR_AVAILABLE = False
+    IMAGE_OPTIMIZER_AVAILABLE = False
 
 
 from brand_identity_audit import scan_text  # noqa: E402
@@ -108,6 +111,7 @@ INVENTORY_DIR = BLOG_ROOT / "content" / "social"
 INVENTORY_FILE = INVENTORY_DIR / "inventory.json"
 REPORTS_DIR = BLOG_ROOT / "reports"
 SOCIAL_REPORTS_DIR = BLOG_ROOT / "reports" / "social"
+SOCIAL_IMG_OUTPUT_DIR = str(BLOG_ROOT / "static" / "img" / "china-dest" / "social")
 MANIFEST_MAIN = BLOG_ROOT / "manifest.json"
 
 SCHEMA_VERSION = 1
@@ -962,6 +966,29 @@ def distribute_items(items: list, dry_run: bool = True,
                 item["image_validation"] = {"passed": False, "issues": _img_issues}
             else:
                 item["image_validation"] = {"passed": True, "issues": []}
+        # P1: 图片自动优化 — 验证发现宽高比/分辨率问题时，自动裁剪为平台适配版本
+        _optimized = False
+        if IMAGE_OPTIMIZER_AVAILABLE and item.get("image_url") and _img_issues:
+            _fixable = any(("wrong_aspect_ratio" in i or "low_resolution" in i) for i in _img_issues)
+            if _fixable:
+                try:
+                    import os as _os
+                    _os.makedirs(SOCIAL_IMG_OUTPUT_DIR, exist_ok=True)
+                    _opt = optimize_image(item["image_url"], item["platform"], SOCIAL_IMG_OUTPUT_DIR)
+                    if _opt.get("success") and _opt.get("output_path"):
+                        _out_path = _opt["output_path"]
+                        # 转换本地路径为网站URL: static/img/china-dest/social/xxx.jpg -> /img/china-dest/social/xxx.jpg
+                        _rel = _out_path.replace(str(BLOG_ROOT / "static"), "").replace("\\", "/")
+                        _opt_url = f"https://www.{SITE_DOMAIN}{_rel}"
+                        logger.info("图片自动优化 %s [%s]: %dx%d -> %s",
+                            item.get("id","?"), item["platform"], _opt["width"], _opt["height"], _opt_url)
+                        item["image_url"] = _opt_url
+                        item["image_optimized"] = True
+                        _optimized = True
+                        _img_issues = [i for i in _img_issues if "wrong_aspect_ratio" not in i and "low_resolution" not in i]
+                except Exception as _e:
+                    logger.warning("图片自动优化失败 %s: %s", item.get("id","?"), _e)
+
         res = publish_item(item, endpoint, dry_run=dry_run)
         if not dry_run and res.get("success"):
             rec = by_id.get(item["id"])
