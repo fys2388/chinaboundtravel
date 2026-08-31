@@ -10,7 +10,7 @@
         "KLOOK_API_SECRET"
       ],
       "message": "Missing: KLOOK_API_KEY, KLOOK_API_SECRET",
-      "fetched_at": "2026-08-31T06:52:24.042958"
+      "fetched_at": "2026-08-31T07:25:37.431017"
     },
     "airalo": {
       "status": "NO_CREDENTIALS",
@@ -20,7 +20,7 @@
         "AIRALO_CLIENT_SECRET"
       ],
       "message": "Missing: AIRALO_CLIENT_ID, AIRALO_CLIENT_SECRET",
-      "fetched_at": "2026-08-31T06:52:24.042964"
+      "fetched_at": "2026-08-31T07:25:37.431028"
     },
     "safetywing": {
       "status": "NO_CREDENTIALS",
@@ -29,7 +29,7 @@
         "SAFETYWING_API_KEY"
       ],
       "message": "Missing: SAFETYWING_API_KEY",
-      "fetched_at": "2026-08-31T06:52:24.042968"
+      "fetched_at": "2026-08-31T07:25:37.431034"
     },
     "trip": {
       "status": "NO_CREDENTIALS",
@@ -39,7 +39,7 @@
         "TRIP_APP_SECRET"
       ],
       "message": "Missing: TRIP_APP_ID, TRIP_APP_SECRET",
-      "fetched_at": "2026-08-31T06:52:24.042974"
+      "fetched_at": "2026-08-31T07:25:37.431042"
     },
     "cj": {
       "status": "NO_CREDENTIALS",
@@ -48,7 +48,7 @@
         "CJ_API_TOKEN"
       ],
       "message": "Missing: CJ_API_TOKEN",
-      "fetched_at": "2026-08-31T06:52:24.042977"
+      "fetched_at": "2026-08-31T07:25:37.431047"
     }
   },
   "summary": {
@@ -56,5 +56,5 @@
     "connected": 0,
     "total_revenue": 0
   },
-  "fetched_at": "2026-08-31T06:52:24.042992"
+  "fetched_at": "2026-08-31T07:25:37.431062"
 }
