@@ -18,6 +18,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
+    env:
+      # GA4
+      GA4_API_KEY: ${{ secrets.GA4_API_KEY }}
+      GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+      GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+      # GSC
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+      # Travelpayouts
+      TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+      TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
+      TRAVELPAYOUTS_DRIVE_ID: ${{ secrets.TRAVELPAYOUTS_DRIVE_ID }}
+      # MailerLite
+      MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+      # Buffer
+      BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL }}
+      NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL }}
+      BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+      BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
+      # Cloudflare
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+      # Feishu
+      FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+      FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
