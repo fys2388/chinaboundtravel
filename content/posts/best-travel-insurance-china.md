@@ -221,7 +221,7 @@ After 5 years of travel research and 2+ years of aggregated traveler feedback on
 
 {{< brand-logos >}}
 
-Still have questions? Drop us a line by [Contacting Us](mailto:support@chinaboundtravel.com). We've helped hundreds of travelers find the right coverage.
+Still have questions? Drop us a line by [Contacting Us](mailto:joran@chinaboundtravel.com). We've helped hundreds of travelers find the right coverage.
 
 *Safe travels! — ChinaBound Travel Editorial Team*
 

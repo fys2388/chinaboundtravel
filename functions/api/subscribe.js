@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MailerLite Subscribe + Lead Magnet Delivery API
  * POST /api/subscribe  { email, source?, lead_magnet?: "visa-free-checklist" }
  *
@@ -19,7 +19,7 @@
 
 const LEAD_MAGNET_DEFAULT =
   'https://www.chinaboundtravel.com/lead-magnet/china-visa-free-entry-checklist.pdf';
-const FROM_DEFAULT = 'ChinaBound Travel <hello@chinaboundtravel.com>';
+const FROM_DEFAULT = 'ChinaBound Travel <joran@chinaboundtravel.com>';
 const GROUP_NAME_DEFAULT = 'Lead Magnet: Visa-Free Checklist';
 
 function jsonResponse(body, status = 200, corsHeaders = {}) {

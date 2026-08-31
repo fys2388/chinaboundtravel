@@ -15,7 +15,7 @@ Due to the irrevertible nature of digital services and instant-download content,
 
 Once the subscription pass is activated or any digital asset is downloaded, the computing resources and service are deemed fully delivered.
 
-We understand that mistakes can happen. If you accidentally purchase the wrong product or experience technical issues preventing access, please contact **support@chinaboundtravel.com** within 24 hours of purchase for assistance.
+We understand that mistakes can happen. If you accidentally purchase the wrong product or experience technical issues preventing access, please contact **joran@chinaboundtravel.com** within 24 hours of purchase for assistance.
 
 ---
 
@@ -23,7 +23,7 @@ We understand that mistakes can happen. If you accidentally purchase the wrong p
 
 * **Monthly plans** renew on the same date each month. Cancel anytime via the link in your account email.
 * **Annual plans** renew once per year at the then-current rate. We'll send a reminder 7 days before renewal.
-* To cancel before renewal, email **support@chinaboundtravel.com** with your order number.
+* To cancel before renewal, email **joran@chinaboundtravel.com** with your order number.
 
 ---
 

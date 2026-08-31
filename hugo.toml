@@ -130,7 +130,7 @@ ignoreFiles = ["/\\.archived/"]
 
 [[menu.main]]
   identifier = "about"
-  name = "✍️ About Me"
+  name = "About"
   url = "/about/"
   weight = 70
 

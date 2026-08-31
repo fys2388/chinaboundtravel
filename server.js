@@ -1,4 +1,4 @@
-require('dotenv').config();
+﻿require('dotenv').config();
 
 const express = require('express');
 const Stripe = require('stripe');
@@ -37,7 +37,7 @@ app.post('/api/stripe-webhook', async (req, res) => {
       if (customerEmail && process.env.RESEND_API_KEY) {
         try {
           const emailResponse = await resend.emails.send({
-            from: 'Joran @ ChinaBound Travel <hello@chinaboundtravel.com>',
+            from: 'Joran @ ChinaBound Travel <joran@chinaboundtravel.com>',
             to: customerEmail,
             subject: `Welcome to ChinaBound Travel! Your ${plan} Access is Ready`,
             html: `
@@ -59,7 +59,7 @@ app.post('/api/stripe-webhook', async (req, res) => {
                     <h3 style="margin-top: 0;">📥 Download Your Travel Guide</h3>
                     <a href="${process.env.PDF_BASE_URL || 'https://chinaboundtravel.com/ebook/china-bound-travel-guide.pdf'}" style="display: inline-block; background: #667eea; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600;">Get Instant Access →</a>
                   </div>
-                  <p>If you have any questions, reply to this email or contact us at hello@chinaboundtravel.com.</p>
+                  <p>If you have any questions, reply to this email or contact us at joran@chinaboundtravel.com.</p>
                   <p>Happy travels!</p>
                   <p style="font-weight: 600;">— Joran</p>
                 </div>

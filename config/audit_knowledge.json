@@ -1,4 +1,4 @@
-{
+﻿{
   "audit_date": "2026-07-04",
   "overall_score": 64,
   "summary": "定位有潜力，但当前更像快速搭起来的内容+付费产品站，还没到专业旅行媒体或高转化旅行指南品牌的成熟度",
@@ -187,7 +187,7 @@
         "configured": true
       },
       "email": {
-        "address": "hello@chinaboundtravel.com",
+        "address": "joran@chinaboundtravel.com",
         "configured": true
       }
     },

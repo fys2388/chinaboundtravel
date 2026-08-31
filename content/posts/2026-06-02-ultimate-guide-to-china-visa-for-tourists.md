@@ -214,7 +214,7 @@ If rejected, you can reapply after addressing the reasons for rejection. Common 
 
 ---
 
-Ready to start your China adventure? [Get your visa application started today](mailto:support@chinaboundtravel.com). Once your visa is sorted, our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the well-suited first trip to plan.
+Ready to start your China adventure? [Get your visa application started today](mailto:joran@chinaboundtravel.com). Once your visa is sorted, our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the well-suited first trip to plan.
 
 ---
 

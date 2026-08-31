@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Stripe Webhook Handler - PRODUCTION
  * POST /api/stripe-webhook
  *
@@ -158,7 +158,7 @@ async function sendEmail(email, plan, ebookUrl, apiKey, eventId) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      from: 'ChinaBound Travel <hello@chinaboundtravel.com>',
+      from: 'ChinaBound Travel <joran@chinaboundtravel.com>',
       to: email,
       subject,
       html,
