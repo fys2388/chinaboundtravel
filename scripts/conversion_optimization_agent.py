@@ -20,6 +20,13 @@ import json
 import csv
 import math
 from datetime import datetime, timedelta
+
+# P1-AI-OPS-03: Consume conversion optimization strategy from Learning Closed Loop
+try:
+    from strategy_consumer import StrategyConsumer
+    _STRATEGY_CONSUMER = None
+except Exception:
+    _STRATEGY_CONSUMER = None
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -175,6 +182,13 @@ class ConversionOptimizationAgent:
         self.experiment_results: List[ExperimentResult] = []
         self.decisions: List[OptimizationDecision] = []
         self._load_data()
+        # P1-AI-OPS-03: Load conversion optimization strategy
+        self.strategy = None
+        if _STRATEGY_CONSUMER is not None:
+            try:
+                self.strategy = _STRATEGY_CONSUMER("reports/conversion/conversion_optimization_strategy.json", "conversion")
+            except Exception as _e:
+                print(f"  ⚠️ Conversion Strategy load skipped: {_e}")
 
     def _load_data(self):
         """加载所有数据"""
@@ -538,6 +552,25 @@ class ConversionOptimizationAgent:
             print(f"     类型: {rec['type']}")
             print(f"     假设: {rec['hypothesis'][:80]}...")
             print(f"     预期影响: {rec['expected_impact']}")
+
+        # P1-AI-OPS-03: Strategy-informed test recommendations
+        if getattr(self, "strategy", None) and self.strategy.available:
+            cta_rules = self.strategy.get("cta_rules", {})
+            best_ctas = self.strategy.get_priority_list("best_ctas")
+            high_conversion_pages = self.strategy.get_priority_list("high_conversion_pages")
+            if best_ctas or cta_rules:
+                recommendations.append({
+                    "priority": "medium",
+                    "type": "strategy_driven",
+                    "page": "site-wide",
+                    "title": "策略驱动：CTA优化测试（基于Learning闭环）",
+                    "hypothesis": f"应用Learning闭环推荐的CTA策略（{', '.join(best_ctas[:3]) if best_ctas else 'cta_rules'}），可提升转化率",
+                    "variant_a": {"text": "当前CTA", "type": "control"},
+                    "variant_b": {"text": f"策略推荐CTA: {', '.join(best_ctas[:2]) if best_ctas else 'optimized CTA'}", "type": "treatment"},
+                    "strategy_version": self.strategy.version,
+                })
+            print(f"  📋 策略已消费: version={self.strategy.version}, best_ctas={len(best_ctas)}")
+
 
         return recommendations
 

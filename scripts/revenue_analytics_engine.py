@@ -19,6 +19,13 @@ import sys
 import json
 import csv
 from datetime import datetime, timedelta
+
+# P1-AI-OPS-03: Consume revenue optimization strategy from Learning Closed Loop
+try:
+    from strategy_consumer import StrategyConsumer
+    _STRATEGY_CONSUMER = None
+except Exception:
+    _STRATEGY_CONSUMER = None
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -140,6 +147,15 @@ class RevenueAnalyticsEngine:
         self.product_metrics: List[ProductMetrics] = []
         self.channel_metrics: List[ChannelMetrics] = []
         self._load_history()
+
+
+        # P1-AI-OPS-03: Load revenue optimization strategy
+        self.strategy = None
+        if _STRATEGY_CONSUMER is not None:
+            try:
+                self.strategy = _STRATEGY_CONSUMER("reports/revenue/revenue_optimization_strategy.json", "revenue")
+            except Exception as _e:
+                print(f"  ⚠️ Strategy load skipped: {_e}")
 
     def _load_history(self):
         """加载历史数据"""
@@ -497,6 +513,34 @@ class RevenueAnalyticsEngine:
 
         if not self.current_metrics:
             print("  ⚠️ 请先调用fetch_revenue_data()")
+        # P1-AI-OPS-03: Strategy-informed recommendations
+        if getattr(self, "strategy", None) and self.strategy.available:
+            best_products = self.strategy.get_priority_list("best_products")
+            high_commission = self.strategy.get_priority_list("high_commission_products")
+            best_channels = self.strategy.get_priority_list("best_channels")
+            if best_products:
+                recommendations.append({
+                    "priority": "medium",
+                    "category": "strategy",
+                    "title": f"策略驱动：优先推广高转化产品（{', '.join(best_products[:3])}）",
+                    "description": f"基于Learning闭环分析，以下产品历史表现最优：{', '.join(best_products[:5])}。建议在内容和社媒中优先推荐。",
+                    "expected_impact": "提升产品匹配度和转化率",
+                    "actions": [f"在新文章中优先推荐: {p}" for p in best_products[:3]],
+                    "strategy_version": self.strategy.version,
+                })
+            if high_commission:
+                recommendations.append({
+                    "priority": "medium",
+                    "category": "strategy",
+                    "title": f"策略驱动：高佣金产品聚焦（{', '.join(high_commission[:3])}）",
+                    "description": f"以下产品佣金率最高，适合作为重点推广对象：{', '.join(high_commission[:5])}",
+                    "expected_impact": "单次预订佣金收入提升",
+                    "actions": [f"增加高佣金产品曝光: {p}" for p in high_commission[:2]],
+                    "strategy_version": self.strategy.version,
+                })
+            print(f"  📋 策略已消费: version={self.strategy.version}, best_products={len(best_products)}, high_commission={len(high_commission)}")
+
+
             return recommendations
 
         m = self.current_metrics

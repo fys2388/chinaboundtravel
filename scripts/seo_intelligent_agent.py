@@ -29,6 +29,13 @@ import sys
 import csv
 from collections import defaultdict
 from datetime import datetime, timedelta
+
+# P1-AI-OPS-03: Consume SEO optimization strategy from Learning Closed Loop
+try:
+    from strategy_consumer import StrategyConsumer
+    _STRATEGY_CONSUMER = None
+except Exception:
+    _STRATEGY_CONSUMER = None
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -930,6 +937,13 @@ class SEOAutoOptimizer:
         self.opportunities = opportunities
         self.analysis = analysis
         self.optimization_results = []
+        # P1-AI-OPS-03: Load SEO optimization strategy
+        self.strategy = None
+        if _STRATEGY_CONSUMER is not None:
+            try:
+                self.strategy = _STRATEGY_CONSUMER("reports/seo/seo_optimization_strategy.json", "seo")
+            except Exception as _e:
+                print(f"  ⚠️ SEO Strategy load skipped: {_e}")
 
     def generate_optimization_suggestions(self, dry_run: bool = True) -> List[Dict]:
         """生成优化建议"""
@@ -959,6 +973,24 @@ class SEOAutoOptimizer:
             suggestion = self._generate_internal_link_suggestion(opp)
             if suggestion:
                 suggestions.append(suggestion)
+
+        # P1-AI-OPS-03: Sort suggestions by strategy priority (high_priority_keywords first)
+        if getattr(self, "strategy", None) and self.strategy.available:
+            high_priority = self.strategy.get_priority_list("high_priority_keywords")
+            best_keywords = self.strategy.get_priority_list("best_keywords")
+            all_priority = list(dict.fromkeys(high_priority + best_keywords))
+            if all_priority and suggestions:
+                def _seo_priority_score(s: Dict) -> int:
+                    target = str(s.get("target", "")).lower()
+                    suggestion = str(s.get("suggestion", "")).lower()
+                    combined = target + " " + suggestion
+                    for i, kw in enumerate(all_priority):
+                        if kw in combined:
+                            return i
+                    return 999
+                suggestions.sort(key=_seo_priority_score)
+                matched = sum(1 for s in suggestions if _seo_priority_score(s) < 999)
+                print(f"  📋 策略已消费: version={self.strategy.version}, 优先关键词={len(all_priority)}, 匹配建议={matched}/{len(suggestions)}")
 
         self.optimization_results = suggestions
 
