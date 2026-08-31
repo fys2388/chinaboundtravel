@@ -21,6 +21,7 @@ from typing import Dict, List, Any
 from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 from real_data_bridge import get_seo_records
+from strategy_change_logger import make_change, STRATEGY_VERSION
 
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -39,6 +40,7 @@ class SEOLearningClosedLoop:
     def __init__(self):
         self.performance_history = self._load_json(PERFORMANCE_HISTORY, {"records": [], "version": "1.0"})
         self.current_strategy = self._load_json(STRATEGY_FILE, self._default_strategy())
+        self._using_sample_data = False  # Data quality gate: True when sample/fallback data is used
 
     def _load_json(self, path: Path, default: Dict) -> Dict:
         if path.exists():
@@ -161,6 +163,7 @@ class SEOLearningClosedLoop:
         # 如果没有真实数据，添加示例记录
         if not new_records and not self.performance_history["records"]:
             print("  📝 暂无真实GSC数据，使用示例数据演示闭环")
+            self._using_sample_data = True  # Data quality gate: sample data cannot update strategy
             sample_keywords = [
                 {"keyword": "china travel guide 2026", "impressions": 5000, "clicks": 150, "ctr": 0.03, "position": 8.5, "search_volume": 2000, "difficulty": 60},
                 {"keyword": "144 hour visa free transit china", "impressions": 3000, "clicks": 120, "ctr": 0.04, "position": 5.2, "search_volume": 1500, "difficulty": 35},
@@ -262,6 +265,10 @@ class SEOLearningClosedLoop:
 
     def decide_and_update_strategy(self, insights: Dict) -> Dict:
         """步骤5+6: Decide + Act"""
+        # Data quality gate: SAMPLE/NOT_AVAILABLE data must NOT update strategy
+        if getattr(self, "_using_sample_data", False):
+            print("  ⚠️ 数据质量门控: 检测到SAMPLE/回退数据，策略更新已拦截（仅LIVE/CACHED可更新策略）")
+            return self.current_strategy
         print("\n" + "=" * 60)
         print("  步骤5+6: Decide + Act - 决策并更新SEO优化策略")
         print("=" * 60)
@@ -285,6 +292,12 @@ class SEOLearningClosedLoop:
                 print(f"  ✅ 更新高优先级关键词: {len(new_priority)} 个")
 
         self.current_strategy["learning_insights"] = insights.get("success_patterns", [])
+        # Enrich change records with audit metadata (version/timestamp/evidence)
+        _now = datetime.now().isoformat()
+        for _ch in strategy_changes:
+            _ch.setdefault("version", STRATEGY_VERSION)
+            _ch.setdefault("timestamp", _now)
+            _ch.setdefault("evidence", "based on performance data analysis")
         self.current_strategy["strategy_changes"] = strategy_changes
         self.current_strategy["last_updated"] = datetime.now().isoformat()
         self.current_strategy["version"] = f"2.0-{datetime.now().strftime('%Y%m%d_%H%M%S')}"

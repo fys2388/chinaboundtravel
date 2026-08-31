@@ -135,20 +135,35 @@ def get_best_publish_times(platform: str) -> list:
 
 
 def apply_strategy_to_caption(caption: str, platform: str, content_type: str) -> str:
-    """将学习策略应用到文案生成（添加推荐Hook/CTA提示）"""
+    """将学习策略应用到文案生成（真正注入推荐Hook/CTA，去重+失败安全）"""
     if not _strategy_available:
         return caption
     try:
         guidance = get_strategy_guidance(platform)
-        if guidance and guidance.get("recommended_hooks"):
-            # 在日志中记录使用的策略
-            logger.debug("应用策略到 %s 文案: Hook=%s, CTA=%s",
-                        platform,
-                        guidance.get("recommended_hooks", [])[:2],
-                        guidance.get("recommended_ctas", [])[:2])
+        if not guidance:
+            return caption
+        hooks = guidance.get("recommended_hooks", []) or []
+        ctas = guidance.get("recommended_ctas", []) or []
+        applied = []
+        result = caption
+        if hooks:
+            best_hook = str(hooks[0]).strip()
+            if best_hook and best_hook.lower() not in result.lower():
+                result = "\U0001f525 " + best_hook + "\n\n" + result
+                applied.append("hook=" + best_hook)
+        if ctas:
+            best_cta = str(ctas[0]).strip()
+            if best_cta and best_cta.lower() not in result.lower():
+                result = result + "\n\n\U0001f449 " + best_cta
+                applied.append("cta=" + best_cta)
+        if applied:
+            logger.info("策略已应用到 %s 文案: %s (version=%s)",
+                        platform, ", ".join(applied),
+                        guidance.get("strategy_version", "unknown"))
+        return result
     except Exception as e:
-        logger.debug("应用策略到文案失败: %s", e)
-    return caption
+        logger.warning("应用策略到文案失败，返回原文案: %s", e)
+        return caption
 
 
 # 每日排期：美东黄金时段 08:00 / 18:00 / 22:00（UTC 映射见 schedule_slots）

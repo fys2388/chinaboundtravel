@@ -30,6 +30,7 @@ from typing import Dict, List, Any, Optional
 from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 from real_data_bridge import get_social_records
+from strategy_change_logger import make_change, STRATEGY_VERSION
 
 
 # 项目根目录
@@ -418,6 +419,12 @@ class SocialLearningClosedLoop:
 
         # 3. 更新学习洞察
         self.current_strategy["learning_insights"] = insights.get("success_patterns", [])
+        # Enrich change records with audit metadata (version/timestamp/evidence)
+        _now = datetime.now().isoformat()
+        for _ch in strategy_changes:
+            _ch.setdefault("version", STRATEGY_VERSION)
+            _ch.setdefault("timestamp", _now)
+            _ch.setdefault("evidence", "based on performance data analysis")
         self.current_strategy["strategy_changes"] = strategy_changes
         self.current_strategy["last_updated"] = datetime.now().isoformat()
         self.current_strategy["version"] = f"2.0-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
