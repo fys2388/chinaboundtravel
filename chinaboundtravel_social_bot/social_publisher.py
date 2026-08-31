@@ -675,6 +675,11 @@ def send_feishu_notification(results: list):
             summary_lines.append("   已入队：达到每日上限，稿件已存入队列，明日自动发布")
             continue
 
+        if r.get("skipped"):
+            summary_lines.append(f"⏭️ {r['title']} ({r.get('variant', 'main')})")
+            summary_lines.append("   跳过：重复内容（30 天内已发布，去重窗口生效）")
+            continue
+
         status_icon = "✅" if r.get("worker_success") else "❌"
         variant = r.get("variant", "main")
         summary_lines.append(f"{status_icon} {r['title']} ({variant})")
@@ -802,6 +807,9 @@ def run():
         success_platforms = []
         failed_platforms = []
         queued = bool(worker_resp.get("queued"))
+        # 内容去重命中 = 预期跳过（30 天内已发布过），不是失败（与 social_content_agent 口径一致）
+        dup = ("Duplicate content" in str(worker_resp.get("error") or "")
+               or "Duplicate content" in str(worker_resp.get("message") or ""))
         if worker_resp.get("success"):
             platforms = worker_resp.get("platforms", {})
             success_platforms = platforms.get("success", [])
@@ -812,8 +820,9 @@ def run():
             "title": latest_article["title"],
             "variant": post["variant"],
             "image": post["image"],
-            "worker_success": worker_resp.get("success", False) or queued,
+            "worker_success": worker_resp.get("success", False) or queued or dup,
             "queued": queued,
+            "skipped": dup,
             "success_platforms": ", ".join(success_platforms),
             "failed_platforms": ", ".join(failed_platforms) if failed_platforms else "",
             "raw_response": worker_resp
