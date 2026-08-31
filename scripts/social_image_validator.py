@@ -80,6 +80,43 @@ def get_image_dimensions(image_path: str) -> tuple:
         return (0, 0)
 
 
+
+def detect_solid_color_placeholder(image_path: str, std_threshold: float = 18.0) -> dict:
+    """
+    Detect solid-color placeholder images (e.g., pure green background with text only).
+    Uses pixel standard deviation across a 32x32 downsampled thumbnail.
+    Real photos have high std; solid color placeholders have very low std.
+    Returns: dict with is_placeholder (bool), pixel_std (float), unique_colors (int)
+    """
+    result = {"is_placeholder": False, "pixel_std": 0.0, "unique_colors": 0}
+    if not PIL_AVAILABLE:
+        return result
+    try:
+        with Image.open(image_path) as img:
+            img = img.convert("RGB")
+            thumb = img.resize((32, 32), Image.LANCZOS)
+            pixels = list(thumb.getdata())
+            n = len(pixels)
+            if n == 0:
+                return result
+            r_vals = [p[0] for p in pixels]
+            g_vals = [p[1] for p in pixels]
+            b_vals = [p[2] for p in pixels]
+            r_mean = sum(r_vals) / n
+            g_mean = sum(g_vals) / n
+            b_mean = sum(b_vals) / n
+            r_var = sum((v - r_mean) ** 2 for v in r_vals) / n
+            g_var = sum((v - g_mean) ** 2 for v in g_vals) / n
+            b_var = sum((v - b_mean) ** 2 for v in b_vals) / n
+            avg_std = (r_var ** 0.5 + g_var ** 0.5 + b_var ** 0.5) / 3
+            result["pixel_std"] = round(avg_std, 1)
+            result["unique_colors"] = len(set(pixels))
+            if avg_std < std_threshold and result["unique_colors"] < 50:
+                result["is_placeholder"] = True
+    except Exception:
+        pass
+    return result
+
 def is_blocked_ai_domain(url: str) -> bool:
     """Check if image URL is from a blocked AI image domain."""
     if not url or not url.startswith("http"):
@@ -192,6 +229,17 @@ def validate_image(image_source: str, platform: str, local_dir: str = None) -> d
                     result["issues"].append(f"file_too_large:{size_mb:.1f}MB")
                 if size_mb < 0.02:  # < 20KB likely placeholder
                     result["issues"].append(f"suspiciously_small:{size_mb*1024:.0f}KB")
+            except Exception:
+                pass
+
+            # 8. Check solid color placeholder (P1: 纯绿色占位图检测)
+            try:
+                sc = detect_solid_color_placeholder(local_path)
+                if sc["is_placeholder"]:
+                    result["issues"].append(
+                        f"solid_color_placeholder:std={sc['pixel_std']},colors={sc['unique_colors']}"
+                    )
+                    result["pixel_std"] = sc["pixel_std"]
             except Exception:
                 pass
         else:
