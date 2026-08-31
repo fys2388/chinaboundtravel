@@ -1,4 +1,4 @@
----
+﻿---
 title: "China City Travel Guides"
 description: "Explore China's greatest cities with insider tips from Joran"
 date: 2026-06-09T10:00:00+08:00
@@ -117,4 +117,4 @@ date: 2026-06-09T10:00:00+08:00
 
 ---
 
-*Got a city you want covered? Drop us an email at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*
+*Got a city you want covered? Drop us an email at [joran@chinaboundtravel.com](mailto:joran@chinaboundtravel.com).*

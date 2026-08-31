@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Shanghai Travel Guide 2026"
 description = "Navigate Shanghai like a local: The Bund, skyscrapers, food, and hidden neighborhoods"
 date = 2026-05-23
@@ -63,4 +63,4 @@ Tree-lined streets, Art Deco architecture, and some of Shanghai's best cafes and
 
 ---
 
-*Last updated: May 2026. Got a Shanghai secret spot? [Let me know](mailto:hello@chinaboundtravel.com).*
+*Last updated: May 2026. Got a Shanghai secret spot? [Let me know](mailto:joran@chinaboundtravel.com).*

@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Disclaimer"
 date = 2026-05-19T10:00:00+08:00
 draft = false
@@ -42,7 +42,7 @@ In no event will ChinaBound Travel be liable for any loss or damage including wi
 
 ## 5. Accuracy of Information
 
-We aim to provide accurate and useful information, but errors may occur. If you notice any inaccuracies, please contact us at hello@chinaboundtravel.com.
+We aim to provide accurate and useful information, but errors may occur. If you notice any inaccuracies, please contact us at joran@chinaboundtravel.com.
 
 ## 6. Changes to This Disclaimer
 
@@ -51,4 +51,4 @@ We may update this Disclaimer periodically. Changes will be posted on this page 
 ## 7. Contact Us
 
 If you have questions about this Disclaimer, contact us at:
-hello@chinaboundtravel.com
+joran@chinaboundtravel.com

@@ -5,10 +5,7 @@ description = "Meet Joran, the editorial voice behind ChinaBound Travel — how 
 
 <div class="about-hero">
     <div class="about-avatar-ring">
-        <picture>
-            <source srcset="/images/joran-avatar.webp" type="image/webp">
-        <img src="/images/joran-avatar.png" alt="Joran - Editorial Voice of ChinaBound Travel" class="about-hero-photo" loading="eager">
-        </picture>
+        <img src="/images/favicon/favicon.svg" alt="ChinaBound Travel Logo" class="about-hero-photo" loading="eager">
         <span class="about-avatar-badge">Editorial Voice</span>
     </div>
     <h1 class="about-name">Joran</h1>
@@ -43,7 +40,7 @@ Where we recommend a service or tool, it is because our editorial team has compa
 
 ## Let's Connect
 
-Got questions? Drop us an email at **hello@chinaboundtravel.com**. Our editorial team reads every message and is glad to point you to the right guide.
+Got questions? Drop us an email at **joran@chinaboundtravel.com**. Our editorial team reads every message and is glad to point you to the right guide.
 
 Cheers,
 **Joran**

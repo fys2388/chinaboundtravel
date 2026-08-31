@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Chengdu Travel Guide 2026"
 description = "Chengdu travel guide: pandas, hot pot, tea houses, and the relaxed capital of Sichuan"
 date = 2026-05-23
@@ -77,4 +77,4 @@ Chengdu is UNESCO's first-ever City of Gastronomy. Here's where to start:
 
 ---
 
-*Last updated: May 2026. For the latest Chengdu spots, reach out to [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*
+*Last updated: May 2026. For the latest Chengdu spots, reach out to [joran@chinaboundtravel.com](mailto:joran@chinaboundtravel.com).*

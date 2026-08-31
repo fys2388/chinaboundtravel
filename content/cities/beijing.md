@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Beijing Travel Guide 2026"
 description = "Everything you need to know about visiting Beijing: Great Wall, Forbidden City, hutongs, and local food"
 date = 2026-05-23
@@ -63,4 +63,4 @@ These ancient alleyways are Beijing's soul. Nanluoguxiang is the famous one (and
 
 ---
 
-*Last updated: May 2026. Have a Beijing tip I missed? [Email us](mailto:hello@chinaboundtravel.com).*
+*Last updated: May 2026. Have a Beijing tip I missed? [Email us](mailto:joran@chinaboundtravel.com).*

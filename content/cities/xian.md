@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "Xi'an Travel Guide 2026"
 description = "Discover ancient Xi'an: Terracotta Warriors, Muslim Quarter food, and the city wall"
 date = 2026-05-23
@@ -64,4 +64,4 @@ Tang Dynasty Buddhist pagoda with a massive fountain show in the evening (free, 
 
 ---
 
-*Last updated: May 2026. Xi'an food recommendations welcome at [hello@chinaboundtravel.com](mailto:hello@chinaboundtravel.com).*
+*Last updated: May 2026. Xi'an food recommendations welcome at [joran@chinaboundtravel.com](mailto:joran@chinaboundtravel.com).*

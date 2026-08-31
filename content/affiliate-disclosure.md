@@ -1,4 +1,4 @@
----
+﻿---
 title: "Affiliate Disclosure"
 date: 2026-06-21
 draft: false
@@ -33,7 +33,7 @@ Here are some of the affiliate programs we participate in:
 
 This disclosure complies with the Federal Trade Commission (FTC) guidelines regarding the use of endorsements and testimonials in advertising.
 
-If you have any questions about our affiliate relationships, feel free to contact us at hello@chinaboundtravel.com.
+If you have any questions about our affiliate relationships, feel free to contact us at joran@chinaboundtravel.com.
 
 ---
 

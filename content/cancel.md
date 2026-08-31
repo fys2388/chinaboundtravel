@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Payment Cancelled'
 description: 'Your payment was cancelled. You can try again or contact us for help.'
 date: '2026-06-02T10:00:00+08:00'
@@ -24,7 +24,7 @@ No worries! Your payment was not processed.
 If you had issues during checkout:
 - Try a different payment method
 - Check your card details
-- Contact us at hello@chinaboundtravel.com
+- Contact us at joran@chinaboundtravel.com
 
 <script>
 function goBack() {

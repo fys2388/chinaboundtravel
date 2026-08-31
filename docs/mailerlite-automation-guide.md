@@ -1,4 +1,4 @@
-# MailerLite 自动化配置指南
+﻿# MailerLite 自动化配置指南
 # chinaboundtravel.com 邮件营销与内容交付系统
 
 > **操作主体**：需由账户拥有人在 MailerLite Dashboard 中手动执行以下所有步骤。
@@ -207,7 +207,7 @@ Cancel here: {{ subscriber.cancel_url }}
 | 设置项 | 值 |
 |--------|-----|
 | **From Name** | Joran @ ChinaBound |
-| **From Email** | hello@chinaboundtravel.com |
+| **From Email** | joran@chinaboundtravel.com |
 | **Reply-To** | support@chinaboundtravel.com |
 
 ### 3.2 品牌视觉风格
@@ -217,7 +217,7 @@ Cancel here: {{ subscriber.cancel_url }}
 - **Logo**：https://chinaboundtravel.com/images/joran-avatar.png
 - **Footer**：
   ```
-  ChinaBound Travel · hello@chinaboundtravel.com
+  ChinaBound Travel · joran@chinaboundtravel.com
   成都，中国 · chinaboundtravel.com
 
   You received this email because you purchased a ChinaBound Travel subscription.

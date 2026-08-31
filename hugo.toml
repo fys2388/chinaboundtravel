@@ -40,7 +40,7 @@ ignoreFiles = ["/\\.archived/"]
     enabled = true
     title = "Hi, I'm Joran"
     subtitle = "Research-based China travel guidance for international visitors — visas, payments, internet, transportation and cities, kept current for 2026."
-    imageUrl = "images/joran-avatar.webp"
+    imageUrl = "images/favicon/favicon.svg"
     imageWidth = 120
     imageHeight = 120
 
@@ -59,7 +59,7 @@ ignoreFiles = ["/\\.archived/"]
     url = "https://youtube.com/@chinaboundtravel"
   [[params.socialIcons]]
     name = "Email"
-    url = "mailto:hello@chinaboundtravel.com"
+    url = "mailto:joran@chinaboundtravel.com"
 
   mainMenu = "main"
   showMeta = true
