@@ -1746,6 +1746,10 @@ class BlogGenerator:
             f"China {category} close-up detail shot, professional travel photography, intricate architectural details, local food specialties, artistic composition, warm lighting, vibrant colors, professional photography, no people, no human beings, pure objects landscape only",
         ]
         
+        # P0: 正文图下载到本地CDN（不再依赖远程pollinations.ai/picsum URL）
+        body_img_dir = BASE_DIR / "static" / "img" / "china-dest" / "body"
+        body_img_dir.mkdir(parents=True, exist_ok=True)
+
         for idx, placeholder in enumerate(image_matches):
             cleaned_prompt = placeholder
             if HUMAN_KEYWORDS.search(placeholder):
@@ -1760,11 +1764,29 @@ class BlogGenerator:
             print(f"  [ImageGen] Generating image {idx+1} with pure landscape prompt (ZERO people)")
             img_url = generate_image_url(landscape_prompt, "4:3")
             if img_url:
+                # P0: 下载远程图片到本地CDN，使用本地URL（失败时兜底远程URL）
+                local_img_url = img_url
+                body_filename = f"{slug}-body{idx+1}.jpg"
+                body_path = body_img_dir / body_filename
+                try:
+                    r = requests.get(img_url, timeout=60, stream=True)
+                    if r.status_code == 200 and "image" in r.headers.get("content-type", "").lower():
+                        with open(body_path, "wb") as f:
+                            for chunk in r.iter_content(chunk_size=8192):
+                                f.write(chunk)
+                        size_kb = body_path.stat().st_size / 1024
+                        local_img_url = f"https://www.{SITE_DOMAIN}/img/china-dest/body/{body_filename}"
+                        print(f"  [ImageGen] Downloaded to local: {body_filename} ({size_kb:.0f} KB)")
+                    else:
+                        print(f"  [ImageGen] Download failed (HTTP {r.status_code}), using remote URL")
+                except Exception as e:
+                    print(f"  [ImageGen] Download error: {e}, using remote URL")
+
                 old_text = re.search(r'\[\s*Image\s*:\s*' + re.escape(placeholder) + r'\]', content, re.IGNORECASE)
                 if old_text:
-                    new_text = f"![{cleaned_prompt or landscape_prompt[:80]}]({img_url})"
+                    new_text = f"![{cleaned_prompt or landscape_prompt[:80]}]({local_img_url})"
                     content = content[:old_text.start()] + new_text + content[old_text.end():]
-                    print(f"  [ImageGen] OK: {img_url[:80]}")
+                    print(f"  [ImageGen] OK: {local_img_url[:80]}")
         
         with open(post_path, "w", encoding="utf-8") as f:
             f.write(content)
