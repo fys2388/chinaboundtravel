@@ -1,7 +1,7 @@
 {
   "month_post_count": 13,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-31 02:59:51",
+  "last_social_publish": "2026-08-31 03:00:49",
   "daily_social_publish_date": "2026-08-31",
   "daily_social_publish_count": 4,
   "daily_social_publish_limit": 5,
@@ -139,7 +139,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide",
     "chinabound-travel-guide-2026-08-monthly-update",
     "china-remote-work-guide-a-californians-5-year-chengdu-experience",
     "accommodation-tips-guide",
@@ -168,6 +167,7 @@
     "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home",
     "china-bargaining-and-shopping-guide",
     "china-family-travel-tips-a-californians-guide",
-    "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide"
+    "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide",
+    "chinese-language-survival-phrases-guide"
   ]
 }
