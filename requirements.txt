@@ -1,0 +1,5 @@
+# Python dependencies for chinaboundtravel automation workflows
+requests
+python-dotenv
+google-api-python-client
+reportlab
