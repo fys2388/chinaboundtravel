@@ -351,24 +351,34 @@ def generate_seo_description(topic, title):
     # 清理多余空格
     description = re.sub(r'\s+', ' ', description).strip()
     
-    # 确保字符长度在 120-155 之间
-    while len(description) > 155 and len(description) > 0:
-        # 找到最后一个逗号或介词，尝试截断
-        if ", " in description:
-            description = description.rsplit(", ", 1)[0]
-        elif " & " in description:
-            description = description.rsplit(" & ", 1)[0]
-        else:
-            break
-    
-    # 补充长度信息（最多补一次，且避免重复拼接同一短语）
-    if len(description) < 120 and "practical guide for foreign travelers" not in description.lower():
-        extra = "practical guide for foreign travelers"
-        if description.endswith("."):
-            description = description[:-1] + ", " + extra + "."
-        else:
-            description = description + ". " + extra
-    
+    # 确保字符长度在 120-155 之间（语义完整：不切断单词/短语，补足时保持语法正确）
+    description = re.sub(r'\s+', ' ', description).strip()
+    # 过长：优先按句子边界截到 <=155；无合适句点时按完整短语截断
+    while len(description) > 155:
+        cut = description.rfind(". ", 0, 153)
+        if cut > 60:
+            description = description[:cut + 1]
+            continue
+        cut = description.rfind(", ", 0, 153)
+        if cut > 60:
+            description = description[:cut]
+            continue
+        description = description[:152].rsplit(' ', 1)[0].rstrip(',. ') + "."
+    # 过短：补足到 >=120（短语完整、首字母大写）
+    if len(description) < 120:
+        extras = [
+            "Practical guide for foreign travelers visiting China.",
+            "Research-based, editor-verified tips for a smooth China trip.",
+        ]
+        for extra in extras:
+            if len(description) + len(extra) + 2 > 155:
+                continue
+            description = description.rstrip().rstrip('.') + ". " + extra
+            if len(description) >= 120:
+                break
+    # 终极兜底：仍超长则按词截断到 <=155
+    if len(description) > 155:
+        description = description[:152].rsplit(' ', 1)[0].rstrip(',. ') + "."
     return description
 
 # 选题库 - 主选题、备选选题、万能选题（每个都唯一，不重复）
@@ -1858,6 +1868,26 @@ class BlogGenerator:
                 
                 return {"success": False, "reason": "chief_editor_failed", "title": title, "draft_path": draft_path, "same_topic": False}
         
+        # ===== 2.1 内容质量强门控：把 validate_content_quality（1500词/4H2/3内链/2图）接入发布路径 =====
+        q_passed, q_issues = self.validate_content_quality(content, title, topic)
+        q_fix = 0
+        while not q_passed and q_fix < 2:
+            q_fix += 1
+            self.notifier.send_notification("📝 内容质量未达标，启动AI扩写", f"文章《{title}》质量门控未过({q_fix}/2)\n\n{'; '.join(q_issues[:3])}")
+            try:
+                content = self.ai_engine.rewrite_post(content, topic, geo_region)
+                self.write_markdown(frontmatter, content, draft_path)
+                q_passed, q_issues = self.validate_content_quality(content, title, topic)
+            except Exception as e:
+                print(f"[Attempt {attempt}] 质量扩写失败: {e}")
+                break
+        if not q_passed:
+            error_msg = "\n".join(q_issues)
+            self.notifier.send_notification("❌ 内容质量门控未通过", f"第{attempt}次尝试: 文章《{title}》\n\n{error_msg}\n\n废弃旧选题，换新选题重试")
+            self._record_audit_failure("content_quality_failed", error_msg, title)
+            print(f"[Attempt {attempt}] Content quality gate failed: {q_issues}")
+            return {"success": False, "reason": "content_quality_failed", "title": title, "draft_path": draft_path, "same_topic": False}
+
         # 复用上方计算好的 post_slug（与 frontmatter 保持一致）
         cover_url = self.move_to_posts(draft_path, title, post_slug)
         if cover_url is None:
@@ -1877,17 +1907,10 @@ class BlogGenerator:
         print(f"[Attempt {attempt}] Post published successfully: {canonical_url}")
         print(f"  Cover: {cover_url}")
         
-        # ========== 触发社媒发布 ==========
-        try:
-            from social_publisher import run as run_social_publish
-            print(f"[Attempt {attempt}] Triggering social media publishing...")
-            run_social_publish()
-            print(f"[Attempt {attempt}] Social media publishing completed")
-        except Exception as e:
-            print(f"[Attempt {attempt}] Social media publishing failed: {e}")
-            self.notifier.send_notification("⚠️ 社媒发布失败", f"文章《{title}》社媒发布时出错: {str(e)}")
-        
         # ========== Git操作由GitHub Actions工作流处理 ==========
+        # 社媒分发不再在生成器内部触发（消除与工作流"Run social media distribution"
+        # 步骤的双调用冗余，避免同一轮两次选中文章导致重复分发/去重误报）。
+        # 分发统一由 weekly-blog-update.yml 独立步骤执行。
         print(f"[Attempt {attempt}] Blog post ready for Git commit (handled by workflow)")
         self.notifier.send_notification("📝 博文已生成，等待工作流提交", f"文章《{title}》已生成，将由GitHub Actions工作流负责提交和部署")
         

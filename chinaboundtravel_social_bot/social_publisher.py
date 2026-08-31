@@ -836,7 +836,10 @@ def run():
         processed_posts = manifest.setdefault("processed_social_posts", [])
         if latest_article["slug"] not in processed_posts:
             processed_posts.append(latest_article["slug"])
-        manifest["processed_social_posts"] = processed_posts[-30:]
+        # 保留完整已处理历史（不再滑动裁剪 30 条），
+        # 防止旧文章掉出窗口后被反复选中，造成重复分发/去重误报。
+        # 站点文章约 60-100 篇，完整列表开销可忽略。
+        manifest["processed_social_posts"] = processed_posts
         manifest["last_social_publish"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         with open(BASE_DIR / "manifest.json", 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2)
