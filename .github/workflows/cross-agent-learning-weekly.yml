@@ -163,7 +163,17 @@ jobs:
             COMMIT_MSG="feat(ai-learning): weekly cross-agent learning update $(date +%Y-%m-%d)"
             COMMIT_MSG="$COMMIT_MSG - 6 agent loops + cross-agent orchestrator + SYN-001/SYN-003 + measure validation"
             git commit -m "$COMMIT_MSG"
-            git push origin main
+            # Push with retry to handle transient ref-lock contention
+            for i in 1 2 3 4 5; do
+              if git push origin main; then
+                echo "push ok (attempt $i)"
+                break
+              fi
+              echo "push failed (attempt $i), rebase and retry in $((i * 15))s..."
+              sleep $((i * 15))
+              git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; }
+            done
+            git ls-remote --exit-code origin main >/dev/null 2>&1 || { echo "::error::push 失败"; exit 1; }
             echo "Learning results committed and pushed"
           fi
 

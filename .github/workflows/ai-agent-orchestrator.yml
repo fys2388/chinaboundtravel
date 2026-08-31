@@ -153,8 +153,18 @@ jobs:
             - 更新Growth Memory学习记忆
             - 数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地扫描"
 
-            git push origin main
-            echo "=== 结果已提交并推送 ==="
+            # Push with retry to handle transient ref-lock contention
+            for i in 1 2 3 4 5; do
+              if git push origin main; then
+                echo "push ok (attempt $i)"
+                break
+              fi
+              echo "push failed (attempt $i), rebase and retry in $((i * 15))s..."
+              sleep $((i * 15))
+              git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; }
+            done
+            git ls-remote --exit-code origin main >/dev/null 2>&1 || { echo "::error::push 失败"; exit 1; }
+            echo "=== 结果已提交并推送 ===" 
           fi
 
       - name: Send Feishu Notification
@@ -165,29 +175,15 @@ jobs:
         run: |
           echo "=== 发送飞书通知 ==="
           if [ -n "$FEISHU_WEBHOOK_URL" ]; then
-            python -c "
-            import requests, json, hmac, hashlib, base64, time
-            webhook = '$FEISHU_WEBHOOK_URL'
-            secret = '$FEISHU_SECRET'
-            timestamp = str(int(time.time()))
-            string_to_sign = f'{timestamp}\n{secret}'
-            hmac_code = hmac.new(string_to_sign.encode('utf-8'), digestmod=hashlib.sha256).digest()
-            sign = base64.b64encode(hmac_code).decode('utf-8')
+            STATUS="${{ job.status }}"
+            python scripts/send_feishu_notification.py \
+              --text "AI Agent编排器周度运行完成
+              状态: ${STATUS}
+              时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
 
-            status = '${{ job.status }}'
-            status_icon = '✅' if status == 'success' else '❌'
+              包含: 7大Agent运行 + 统一仪表盘 + Growth Memory更新
 
-            payload = {
-                'timestamp': timestamp,
-                'sign': sign,
-                'msg_type': 'text',
-                'content': {
-                    'text': f'{status_icon} AI Agent编排器周度运行完成\n\n状态: {status}\n时间: $(date -u \"+%Y-%m-%d %H:%M:%S UTC\")\n\n包含: 7大Agent运行 + 统一仪表盘 + Growth Memory更新\n\n查看报告: reports/orchestration/latest_unified_report.md'
-                }
-            }
-            requests.post(webhook, json=payload)
-            print('飞书通知已发送')
-            "
+              查看报告: reports/orchestration/latest_unified_report.md"
           else
             echo "FEISHU_WEBHOOK_URL未配置，跳过通知"
           fi
