@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-08-31T04:13:03.747792",
+  "analyzed_at": "2026-08-31T06:25:02.226431",
   "total_patterns": 8,
   "viral_patterns": [
     {
@@ -8,10 +8,10 @@
       "description": "高表现的question类型内容，平均互动率7.2%",
       "content_type": "question",
       "platforms": [
-        "pinterest",
         "linkedin",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.07200234555604741,
@@ -35,9 +35,9 @@
       "content_type": "visual",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.07184876543209877,
@@ -61,10 +61,10 @@
       "description": "高表现的story类型内容，平均互动率5.8%",
       "content_type": "story",
       "platforms": [
-        "pinterest",
         "linkedin",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.05821132184768548,
@@ -91,9 +91,9 @@
       "content_type": "guide",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.055964711214711214,
@@ -118,9 +118,9 @@
       "content_type": "list",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.04697774943310657,
@@ -143,9 +143,9 @@
       "content_type": "warning",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.045080237223094365,
@@ -171,9 +171,9 @@
       "content_type": "tip",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.03242562111609731,
@@ -198,9 +198,9 @@
       "content_type": "conversion",
       "platforms": [
         "linkedin",
-        "pinterest",
         "x",
         "facebook",
+        "pinterest",
         "instagram"
       ],
       "avg_engagement_rate": 0.029697813760313763,

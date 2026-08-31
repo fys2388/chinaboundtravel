@@ -1,11 +1,11 @@
 {
-  "audited_at": "2026-08-31T04:13:03.675559",
+  "audited_at": "2026-08-31T06:25:02.159286",
   "total_content": 60,
-  "average_score": 66.0595238095238,
-  "average_word_count": 1814,
+  "average_score": 66.13095238095238,
+  "average_word_count": 1813,
   "status_distribution": {
-    "good": 32,
-    "average": 26,
+    "good": 33,
+    "average": 25,
     "excellent": 2
   },
   "dimension_averages": {
@@ -13,7 +13,7 @@
     "structure": 68.08333333333333,
     "seo": 52.166666666666664,
     "readability": 83.58333333333333,
-    "multimedia": 49.0,
+    "multimedia": 49.5,
     "engagement": 56.333333333333336,
     "freshness": 82.75
   },
@@ -919,19 +919,19 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-20-travel-safety-guide.md",
       "publish_date": "2026-07-20",
       "last_updated": "2026-07-20",
-      "word_count": 2283,
+      "word_count": 2231,
       "reading_time": 11,
       "quality_scores": {
         "depth": 80,
         "structure": 75,
         "seo": 30,
         "readability": 85,
-        "multimedia": 30,
+        "multimedia": 60,
         "engagement": 60,
         "freshness": 75
       },
-      "overall_score": 62.142857142857146,
-      "quality_status": "average",
+      "overall_score": 66.42857142857143,
+      "quality_status": "good",
       "impressions_28d": 0,
       "clicks_28d": 0,
       "ctr_28d": 0.0,
@@ -943,27 +943,24 @@
       "internal_link_count": 1,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
-      "has_images": false,
-      "image_count": 0,
+      "has_images": true,
+      "image_count": 2,
       "has_video": false,
       "issues": [
         "缺少FAQ区块",
         "长文章缺少目录导航",
         "内链不足（仅1条）",
-        "页面未被Google索引",
-        "文章无图片"
+        "页面未被Google索引"
       ],
       "recommendations": [
         "添加3-5个常见问题及答案，提升SEO和用户体验",
         "添加目录（TOC），方便用户快速导航",
         "增加3-5条相关文章内链，提升用户停留和SEO",
-        "提交GSC索引请求，检查是否有索引错误",
-        "添加2-3张高质量相关图片，提升视觉体验和SEO"
+        "提交GSC索引请求，检查是否有索引错误"
       ],
-      "optimization_priority": "medium",
-      "estimated_impact": "中 - 预计可提升流量和用户体验",
+      "optimization_priority": "low",
+      "estimated_impact": "低 - 小幅优化，影响有限",
       "multimodal_recommendations": [
-        "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
         "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流"
       ]
     },
