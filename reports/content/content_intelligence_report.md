@@ -1,6 +1,6 @@
 # ChinaBound Travel 内容智能优化报告
 
-**生成时间**: 2026-08-31 01:04:51
+**生成时间**: 2026-08-31 04:13:03
 **引擎版本**: v1.0
 **成熟度目标**: L3 → L4
 
@@ -10,11 +10,11 @@
 
 | 指标 | 数值 |
 |------|------|
-| 文章总数 | 59 |
-| 平均质量分 | 66.2/100 |
-| 平均字数 | 1810 |
+| 文章总数 | 60 |
+| 平均质量分 | 66.1/100 |
+| 平均字数 | 1814 |
 | 高优先级优化 | 17篇 |
-| 中优先级优化 | 19篇 |
+| 中优先级优化 | 21篇 |
 | 选题推荐 | 10个 |
 | 多模态内容建议 | 27个 |
 
@@ -26,9 +26,9 @@
 
 | 质量等级 | 文章数 | 占比 |
 |----------|--------|------|
-| excellent | 2 | 3.4% |
-| good | 33 | 55.9% |
-| average | 24 | 40.7% |
+| excellent | 2 | 3.3% |
+| good | 32 | 53.3% |
+| average | 26 | 43.3% |
 | poor | 0 | 0.0% |
 
 ### 各维度平均分
@@ -37,11 +37,11 @@
 |------|--------|------|
 | 内容深度 | 70.5/100 | |
 | 互动性 | 56.3/100 | |
-| 内容新鲜度 | 82.6/100 | |
-| 多媒体丰富度 | 49.8/100 | |
-| 可读性 | 83.7/100 | |
-| SEO优化 | 52.5/100 | |
-| 结构完整性 | 68.2/100 | |
+| 内容新鲜度 | 82.8/100 | |
+| 多媒体丰富度 | 49.0/100 | |
+| 可读性 | 83.6/100 | |
+| SEO优化 | 52.2/100 | |
+| 结构完整性 | 68.1/100 | |
 
 ---
 
@@ -49,16 +49,16 @@
 
 | 排名 | 文章 | 质量分 | 展示量 | 点击量 | 排名 | 主要问题 |
 |------|------|--------|--------|--------|------|----------|
-| 1 | China 144-Hour Visa-Free Transit 2026: E | 64 | 107 | 0 | 74 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 2 | Can Foreigners Use WeChat Pay in China 2 | 69 | 83 | 0 | 62 | 长文章缺少目录导航; 搜索排名靠后（第62位） |
-| 3 | Chinese Food Delivery 2026: Meituan & El | 65 | 159 | 0 | 20 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 4 | Great Wall of China: History Beyond the  | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 5 | How to Set Up & Use WeChat Pay Step by S | 69 | 1 | 0 | 11 | 长文章缺少目录导航; 页面未被Google索引 |
-| 6 | China Food Guide for European Travelers | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 7 | Where to Stay in China: Hotels & Budget  | 62 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 8 | China Food Guide: Must-Try Dishes & Rest | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 1 | Alipay for Foreigners in China: Setup Gu | 62 | 0 | 0 | 0 | 内容深度一般（<1500词）; 页面未被Google索引 |
+| 2 | How Chinese Food Evolved: 2 Million Year | 58 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
+| 3 | China Travel Guide: August 2026 Updates  | 77 | 52 | 0 | 11 | 长文章缺少目录导航; 高展示低CTR（52次展示，CTR 0.0%） |
+| 4 | Chinese Food Delivery 2026: Meituan & El | 65 | 159 | 0 | 20 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 5 | China Photography Guide: Best Spots & Ti | 71 | 51 | 0 | 21 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 6 | Foodie | 61 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 7 | Is China Safe in 2026? Honest Guide | 62 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
+| 8 | China 144-Hour Visa-Free Transit 2026: E | 64 | 107 | 0 | 74 | 缺少FAQ区块; 长文章缺少目录导航 |
 | 9 | China Transportation Guide for European  | 59 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
-| 10 | Is China Safe in 2026? Honest Guide | 62 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
+| 10 | Where to Stay in China: Hotels & Budget  | 62 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
 
 ---
 
@@ -140,5 +140,5 @@
 
 ---
 
-*报告由内容智能优化Agent自动生成 | 2026-08-31 01:04:51*
+*报告由内容智能优化Agent自动生成 | 2026-08-31 04:13:03*
 *引擎版本: v1.0 | 成熟度目标: L3 → L4*

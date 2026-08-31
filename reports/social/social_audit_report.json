@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-08-31T01:04:52.066046",
+  "analyzed_at": "2026-08-31T04:13:03.743645",
   "total_posts": 50,
   "platforms_analyzed": 5,
   "platform_performances": {
@@ -10,7 +10,7 @@
       "total_clicks": 94,
       "total_engagement": 259,
       "avg_engagement_rate": 0.05074428904428905,
-      "avg_ctr": 0.019818181818181818,
+      "avg_ctr": 0.019818181818181815,
       "best_content_types": [
         "visual",
         "question",
@@ -57,8 +57,8 @@
       "total_impressions": 9248,
       "total_clicks": 364,
       "total_engagement": 567,
-      "avg_engagement_rate": 0.058674658674658674,
-      "avg_ctr": 0.03919864857364857,
+      "avg_engagement_rate": 0.05867465867465867,
+      "avg_ctr": 0.039198648573648576,
       "best_content_types": [
         "question",
         "visual",

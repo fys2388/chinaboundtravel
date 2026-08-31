@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-08-31T01:04:52.072367",
+  "analyzed_at": "2026-08-31T04:13:03.747792",
   "total_patterns": 8,
   "viral_patterns": [
     {
@@ -8,10 +8,10 @@
       "description": "高表现的question类型内容，平均互动率7.2%",
       "content_type": "question",
       "platforms": [
-        "facebook",
         "pinterest",
-        "x",
         "linkedin",
+        "x",
+        "facebook",
         "instagram"
       ],
       "avg_engagement_rate": 0.07200234555604741,
@@ -34,10 +34,10 @@
       "description": "高表现的visual类型内容，平均互动率7.2%",
       "content_type": "visual",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
       "avg_engagement_rate": 0.07184876543209877,
@@ -61,13 +61,13 @@
       "description": "高表现的story类型内容，平均互动率5.8%",
       "content_type": "story",
       "platforms": [
-        "facebook",
         "pinterest",
-        "x",
         "linkedin",
+        "x",
+        "facebook",
         "instagram"
       ],
-      "avg_engagement_rate": 0.05821132184768549,
+      "avg_engagement_rate": 0.05821132184768548,
       "sample_size": 6,
       "key_elements": [
         "问答型标题",
@@ -90,10 +90,10 @@
       "description": "高表现的guide类型内容，平均互动率5.6%",
       "content_type": "guide",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
       "avg_engagement_rate": 0.055964711214711214,
@@ -117,13 +117,13 @@
       "description": "高表现的list类型内容，平均互动率4.7%",
       "content_type": "list",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
-      "avg_engagement_rate": 0.046977749433106585,
+      "avg_engagement_rate": 0.04697774943310657,
       "sample_size": 6,
       "key_elements": [
         "完整指南型标题"
@@ -142,10 +142,10 @@
       "description": "高表现的warning类型内容，平均互动率4.5%",
       "content_type": "warning",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
       "avg_engagement_rate": 0.045080237223094365,
@@ -170,10 +170,10 @@
       "description": "高表现的tip类型内容，平均互动率3.2%",
       "content_type": "tip",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
       "avg_engagement_rate": 0.03242562111609731,
@@ -197,13 +197,13 @@
       "description": "高表现的conversion类型内容，平均互动率3.0%",
       "content_type": "conversion",
       "platforms": [
-        "facebook",
+        "linkedin",
         "pinterest",
         "x",
-        "linkedin",
+        "facebook",
         "instagram"
       ],
-      "avg_engagement_rate": 0.02969781376031376,
+      "avg_engagement_rate": 0.029697813760313763,
       "sample_size": 6,
       "key_elements": [
         "完整指南型标题",
