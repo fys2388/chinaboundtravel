@@ -5,8 +5,8 @@ description = "Meet Joran, the editorial voice behind ChinaBound Travel — how 
 
 <div class="about-hero">
     <div class="about-avatar-ring">
-        <img src="/images/favicon/favicon.svg" alt="ChinaBound Travel Logo" class="about-hero-photo" loading="eager">
-        <span class="about-avatar-badge">Editorial Voice</span>
+        <img src="/images/logo-avatar.svg" alt="ChinaBound Travel Logo" class="about-hero-photo" loading="eager">
+        <span class="about-avatar-badge">✓</span>
     </div>
     <h1 class="about-name">Joran</h1>
     <p class="about-title">Editorial Voice &middot; China Travel Guide</p>
