@@ -40,6 +40,19 @@ GOVERNANCE = BLOG_ROOT / "config" / "content_governance.json"
 
 # 发布门槛
 PASS_THRESHOLD = 90
+# P0: External AI image domain blocklist (must not appear in cover/body images)
+BLOCKED_IMAGE_DOMAINS = [
+    "pollinations.ai",
+    "image.pollinations.ai",
+    "lexica.art",
+    "midjourney",
+    "dalle",
+    "stablediffusion",
+    "craiyon.com",
+    "bing.com/images/create",
+]
+# Allowed local image domain (cover images should be on this domain)
+LOCAL_IMAGE_DOMAIN = "chinaboundtravel.com"
 
 
 def load_forbidden() -> list:
@@ -105,6 +118,9 @@ def validate_article(path: Path) -> dict:
         "language_issues": [],
         "fact_issues": [],
         "seo_issues": [],
+        "media_issues": [],
+        "cover_ok": False,
+        "cover_image": "",
         "scores": {},
         "trust_score": 0,
         "passed": False,
@@ -159,15 +175,54 @@ def validate_article(path: Path) -> dict:
     result["seo_issues"] = seo_issues
     seo_score = max(0, 100 - len(seo_issues) * 20)
 
+    # ---- 媒体/封面 (P0) ----
+    media_issues = []
+    cover_ok = False
+    cover_image = ""
+    fm_lines = (fm or "").split("\n")
+    in_cover = False
+    for line in fm_lines:
+        stripped = line.strip()
+        if stripped.startswith("cover:"):
+            in_cover = True
+            continue
+        if in_cover and stripped.startswith("image:"):
+            cover_image = stripped.split(":", 1)[1].strip().strip('"').strip("'")
+            cover_ok = True
+            in_cover = False
+            break
+        if in_cover and stripped and not stripped.startswith(" "):
+            in_cover = False
+    if not cover_ok:
+        media_issues.append("missing_cover")
+    if cover_image:
+        is_blocked = any(d in cover_image.lower() for d in BLOCKED_IMAGE_DOMAINS)
+        is_local = LOCAL_IMAGE_DOMAIN in cover_image.lower()
+        if is_blocked:
+            media_issues.append("blocked_ai_image_domain:" + cover_image[:60])
+        elif not is_local and cover_image.startswith("http"):
+            media_issues.append("external_image_domain:" + cover_image[:60])
+    body_images = re.findall(r'!\[.*?\]\((.*?)\)', body)
+    body_images += re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', body)
+    for img_url in body_images:
+        if any(d in img_url.lower() for d in BLOCKED_IMAGE_DOMAINS):
+            media_issues.append("body_blocked_ai_image:" + img_url[:60])
+    result["media_issues"] = media_issues
+    result["cover_ok"] = cover_ok
+    result["cover_image"] = cover_image
+    media_score = max(0, 100 - len(media_issues) * 25)
+
+
     # ---- 综合评分 ----
     result["scores"] = {
         "brand": brand_score,
         "fact": fact_score,
         "language": language_score,
         "seo": seo_score,
+        "media": media_score,
     }
-    trust = (brand_score * 0.4 + fact_score * 0.25 +
-             language_score * 0.15 + seo_score * 0.2)
+    trust = (brand_score * 0.35 + fact_score * 0.2 +
+             language_score * 0.1 + seo_score * 0.15 + media_score * 0.2)
     result["trust_score"] = round(trust, 1)
     result["passed"] = trust >= PASS_THRESHOLD
     return result
@@ -212,6 +267,8 @@ def main() -> int:
                 print(f"       fact: {r['fact_issues'][:3]}")
             if r["seo_issues"]:
                 print(f"       seo: {r['seo_issues'][:3]}")
+            if r.get("media_issues"):
+                print(f"       media: {r['media_issues'][:3]}")
     return 0 if len(passed) == len(results) else 1
 
 

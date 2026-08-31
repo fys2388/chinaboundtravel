@@ -79,8 +79,19 @@ def split_fm(text: str):
 
 
 def read_fm_scalar(fm: str, key: str) -> str:
-    m = re.search(rf'^{key}\s*[=:]\s*["\']?([^"\'\n#]+)', fm, re.MULTILINE)
-    return m.group(1).strip().strip('"').strip("'") if m else ""
+    """Parse front matter scalar value. Handles quoted strings with apostrophes."""
+    m = re.search(rf'^{key}\s*[=:]\s*(.+)$', fm, re.MULTILINE)
+    if not m:
+        return ""
+    val = m.group(1).strip()
+    if val.startswith('"'):
+        end = val.find('"', 1)
+        return val[1:end] if end > 0 else val[1:].rstrip('"')
+    if val.startswith("'"):
+        end = val.find("'", 1)
+        return val[1:end] if end > 0 else val[1:].rstrip("'")
+    val = re.sub(r'\s+#.*$', '', val)
+    return val.strip()
 
 
 def read_fm_array(fm: str, key: str) -> list:
