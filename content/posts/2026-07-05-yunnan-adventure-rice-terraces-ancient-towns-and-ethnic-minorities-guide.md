@@ -37,7 +37,7 @@ Yunnan is unlike anywhere else in China. Twenty-five of the country's 56 recogni
 
 This guide covers a practical 7-day itinerary from Kunming through Dali and Lijiang to the Yuanyang rice terraces, with real prices, transport details, and the tips that most first-time visitors wish they knew beforehand.
 
-![Aerial view of terraced rice fields in Yuanyang, with misty mountains in the background and farmers working in the fields](https://image.pollinations.ai/prompt/Aerial%20view%20of%20terraced%20rice%20fields%20in%20Yuanyang%2C%20with%20misty%20mountains%20in%20the%20background%20and%20farmers%20working%20in%20the%20fields%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=46011&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![Aerial view of terraced rice fields in Yuanyang, with misty mountains in the background and farmers working in the fields](/img/china-dest/body/external_c70447c77eee.jpg)
 
 ## How to Get There & Around
 
@@ -138,7 +138,7 @@ The Yuanyang Rice Terraces ticket costs ¥100 (~€13) and covers all three main
 
 Afternoon: Begin your return journey to Kunming (6-7 hours by shared car). If you're flying out the next morning, consider spending one more night in Kunming near the airport.
 
-![Close-up of a Hani woman working in the rice terraces, wearing traditional clothing and carrying a basket](https://image.pollinations.ai/prompt/Close-up%20of%20a%20Hani%20woman%20working%20in%20the%20rice%20terraces%2C%20wearing%20traditional%20clothing%20and%20carrying%20a%20basket%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=29868&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![Close-up of a Hani woman working in the rice terraces, wearing traditional clothing and carrying a basket](/img/china-dest/body/external_cf207985ef57.jpg)
 
 ## Best Time to Visit Yunnan
 

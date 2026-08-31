@@ -166,9 +166,9 @@ And if you want to read more about traveling in China, check out these other art
 - [Xi'an Terracotta Army: History, Discovery, and Practical Tips](/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
 
-![A high-speed train speeding through the Chinese countryside with green fields and mountains in the background](https://picsum.photos/seed/22126/1024/768)
+![A high-speed train speeding through the Chinese countryside with green fields and mountains in the background](/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg)
 
-![Inside a high-speed train carriage with comfortable seats and a view of the landscape outside the window](https://picsum.photos/seed/27023/1024/768)
+![Inside a high-speed train carriage with comfortable seats and a view of the landscape outside the window](/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg)
 
 {{< affiliate-flight >}}
 

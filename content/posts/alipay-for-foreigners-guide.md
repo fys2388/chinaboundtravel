@@ -8,6 +8,8 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guid
 tags: ["ChinaTravel", "ChinaPayment", "Alipay", "ChinaTravelTips"]
 description: "How foreigners can use Alipay in China in 2026: step-by-step setup, international card linking, common problems, and Alipay vs WeChat Pay compared."
 author: "Joran"
+cover:
+  image: "/img/china-dest/general/alipay-for-foreigners-guide.jpg"
 params:
   keywords:
     - "alipay for foreigners china"
@@ -31,6 +33,8 @@ ShowToc: true
 TocOpen: false
 categories: ["payment", "visa"]
 last_updated: "2026-08-24"
+cover:
+  image: "/img/china-dest/general/alipay-for-foreigners-guide.jpg"
 
 ---
 {{< content-timestamp >}}

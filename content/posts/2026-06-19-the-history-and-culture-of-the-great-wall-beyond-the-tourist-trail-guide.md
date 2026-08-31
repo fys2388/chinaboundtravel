@@ -34,7 +34,7 @@ But before we dive into the history and culture of the Great Wall, let's talk ab
 
 Once you've got your visa sorted, it's time to start planning your trip. Beijing is the most common starting point for Great Wall visits, as it's well-connected to the rest of China by high-speed trains. And if you're a panda lover, consider adding Chengdu to your itinerary — the [Chengdu Panda Base](/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/) is a memorable detour.
 
-![Great Wall of China winding through green mountains under a clear blue sky](https://picsum.photos/seed/56999/1024/768)
+![Great Wall of China winding through green mountains under a clear blue sky](/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg)
 
 ## The History of the Great Wall
 The history of the Great Wall is a fascinating one, spanning over two millennia. It all began in the 7th century BC, when various states in China started building walls to protect themselves from each other and from foreign invaders. These walls were made of earth, wood, and stone, and were often only a few meters high.
@@ -98,7 +98,7 @@ In conclusion, the Great Wall of China is a truly remarkable and unforgettable d
 
 So what are you waiting for? Start planning your trip to the Great Wall today and embark on a journey of discovery and adventure. And don't forget to check out our other articles for more tips and information on traveling in China.
 
-![Tourists taking photos on the Great Wall of China on a sunny day](https://picsum.photos/seed/999389/1024/768)
+![Tourists taking photos on the Great Wall of China on a sunny day](/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.jpg)
 
 And as often, if you have any questions or comments, feel free to reach out to our editorial team.
 

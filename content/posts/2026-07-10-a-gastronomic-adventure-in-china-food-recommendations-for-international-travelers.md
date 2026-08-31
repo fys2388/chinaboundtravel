@@ -49,7 +49,7 @@ Another famous dish of Sichuan cuisine is mapo tofu. Mapo tofu is a spicy dish m
 
 If you're a fan of spicy food, we highly recommend trying some of the other Sichuan dishes, such as kung pao chicken, twice-cooked pork, and spicy chicken. These dishes are all made with a variety of spices and seasonings, and they showcase the bold, complex flavors that make Sichuan cuisine so beloved.
 
-![A pot of simmering Sichuan hotpot with a variety of ingredients, including meats, vegetables, and noodles. The hotpot is surrounded by bowls of dipping sauces and chopsticks.](https://image.pollinations.ai/prompt/A%20pot%20of%20simmering%20Sichuan%20hotpot%20with%20a%20variety%20of%20ingredients%2C%20including%20meats%2C%20vegetables%2C%20and%20noodles.%20The%20hotpot%20is%20surrounded%20by%20bowls%20of%20dipping%20sauces%20and%20chopsticks.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=53518&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A pot of simmering Sichuan hotpot with a variety of ingredients, including meats, vegetables, and noodles. The hotpot is surrounded by bowls of dipping sauces and chopsticks.](/img/china-dest/body/external_a452351ee189.jpg)
 
 ## Cantonese Cuisine
 
@@ -94,7 +94,7 @@ Some of the most popular street food items in China include baozi (steamed buns)
 
 When eating street food in China, it's important to be careful about the hygiene and safety of the food. Make sure to choose vendors that are clean and have a good reputation, and avoid eating food that looks or smells bad.
 
-![A street food market in China with a variety of vendors selling different types of food. The market is bustling with activity, and the air is filled with the aroma of spices and herbs.](https://image.pollinations.ai/prompt/A%20street%20food%20market%20in%20China%20with%20a%20variety%20of%20vendors%20selling%20different%20types%20of%20food.%20The%20market%20is%20bustling%20with%20activity%2C%20and%20the%20air%20is%20filled%20with%20the%20aroma%20of%20spices%20and%20herbs.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=95508&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A street food market in China with a variety of vendors selling different types of food. The market is bustling with activity, and the air is filled with the aroma of spices and herbs.](/img/china-dest/body/external_2cc85088da34.jpg)
 
 ## Fine Dining
 
@@ -134,7 +134,7 @@ If you want to learn more about China travel, be sure to check out these related
 - [Sichuan Hotpot Guide: History, Top Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 
-![A group of friends sitting around a table in a Chinese restaurant, enjoying a meal of hotpot and other dishes. The restaurant is decorated with traditional Chinese artwork and decorations, and the atmosphere is lively and festive.](https://image.pollinations.ai/prompt/A%20group%20of%20friends%20sitting%20around%20a%20table%20in%20a%20Chinese%20restaurant%2C%20enjoying%20a%20meal%20of%20hotpot%20and%20other%20dishes.%20The%20restaurant%20is%20decorated%20with%20traditional%20Chinese%20artwork%20and%20decorations%2C%20and%20the%20atmosphere%20is%20lively%20and%20festive.%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=88429&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A group of friends sitting around a table in a Chinese restaurant, enjoying a meal of hotpot and other dishes. The restaurant is decorated with traditional Chinese artwork and decorations, and the atmosphere is lively and festive.](/img/china-dest/body/external_c4f087646526.jpg)
 
 {{< affiliate-hotel >}}
 

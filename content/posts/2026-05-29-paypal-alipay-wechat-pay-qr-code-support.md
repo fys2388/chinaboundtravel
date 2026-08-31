@@ -11,6 +11,8 @@ summary: "PayPal quietly rolled out Alipay and WeChat Pay QR code support in 202
 description: "PayPal now supports Alipay and WeChat Pay QR codes. What this means for foreign travelers in China and how to use it."
 categories: ["payment", "internet"]
 last_updated: "2026-08-24"
+cover:
+  image: "/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg"
 
 ---
 ## Dude, What Just Happened?

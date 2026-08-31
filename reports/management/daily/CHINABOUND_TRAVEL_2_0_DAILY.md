@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-08-31 (Asia/Shanghai)
-- as_of: 2026-08-31
+- Generated: 2026-09-01 (Asia/Shanghai)
+- as_of: 2026-09-01
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -11,7 +11,7 @@
 
 ## Executive status
 
-- Published posts: 59 posts
+- Published posts: 60 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
 - GSC clicks 28d: 0 clicks | Impressions: 234 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)

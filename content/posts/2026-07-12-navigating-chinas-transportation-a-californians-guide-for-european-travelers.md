@@ -35,7 +35,7 @@ From the moment you arrive at the airport, you'll encounter a transportation eco
 
 This guide covers everything from arriving in China to navigating subways, buses, trains, and domestic flights. By the end, you'll have all the information you need to plan your trip and navigate China's transportation system with ease.
 
-![A chaotic street intersection in Beijing with cars, buses, and people bustling around, the air filled with honks and the chatter of a busy city, and a sense of energy](https://image.pollinations.ai/prompt/A%20chaotic%20street%20intersection%20in%20Beijing%20with%20cars%2C%20buses%2C%20and%20people%20bustling%20around%2C%20the%20air%20filled%20with%20honks%20and%20the%20chatter%20of%20a%20busy%20city%2C%20and%20a%20sense%20of%20energy%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=10697&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A chaotic street intersection in Beijing with cars, buses, and people bustling around, the air filled with honks and the chatter of a busy city, and a sense of energy](/img/china-dest/body/external_0dd31ff8e732.jpg)
 
 ## Getting to China
 
@@ -45,7 +45,7 @@ When booking your flight, it's important to consider the time of year you're tra
 
 Once you've booked your flight, you'll need to apply for a visa. China offers several types of visas for tourists, including single-entry and multiple-entry visas. The type of visa you need depends on your travel plans and the length of your stay. You can apply for a visa at the Chinese embassy or consulate in your home country.
 
-![A busy airport terminal with people from all over the world, suitcases, and signs in Chinese and English](https://image.pollinations.ai/prompt/A%20busy%20airport%20terminal%20with%20people%20from%20all%20over%20the%20world%2C%20suitcases%2C%20and%20signs%20in%20Chinese%20and%20English%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=45149&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A busy airport terminal with people from all over the world, suitcases, and signs in Chinese and English](/img/china-dest/body/external_cb6f56a82159.jpg)
 
 ## Getting Around in China
 
@@ -95,7 +95,7 @@ China is a relatively inexpensive country to travel in, but the cost of living c
 
 China is a vast and beautiful country with a rich culture and history. By following the tips and tricks in this guide, you can navigate China's transportation system like a pro and have a safe and enjoyable trip. Remember to be aware of your surroundings, keep your valuables safe, follow the local customs and laws, and budget for your trip. With a little planning and preparation, you can have the trip of a lifetime in China.
 
-![A group of tourists taking a selfie in front of the Great Wall of China, with the sun shining and the wind blowing](https://image.pollinations.ai/prompt/A%20group%20of%20tourists%20taking%20a%20selfie%20in%20front%20of%20the%20Great%20Wall%20of%20China%2C%20with%20the%20sun%20shining%20and%20the%20wind%20blowing%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20no%20people%2C%20no%20persons%2C%20no%20faces%2C%20no%20portraits%2C%20no%20human%20figures%2C%20empty%20scene?width=1024&height=768&nologo=true&seed=32552&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face&model=flux)
+![A group of tourists taking a selfie in front of the Great Wall of China, with the sun shining and the wind blowing](/img/china-dest/body/external_c200c61fad7c.jpg)
 
 For more information on China travel, check out these articles:
 - [Xi'an Terracotta Army: History, Discovery, and Practical Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)

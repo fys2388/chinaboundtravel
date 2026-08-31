@@ -14,6 +14,9 @@ author: "Joran"
 weight: 1
 draft: false
 categories: ["travel-tips", "payment"]
+cover:
+  image: "/img/china-dest/general/chinabound-travel-guide-2026-07.jpg"
+
 ---
 {{< affiliate-section >}}
 

@@ -34,7 +34,7 @@ For international travelers comparing options, flight search platforms help you 
 
 Planning a family trip to China? This guide covers everything you need to know for a successful journey with kids. We'll dive into visa requirements, family-friendly transportation options, navigating Chinese food with children, and safety considerations. You'll also find curated recommendations for places to visit in China, along with some hidden gems that you might not stumble upon in regular guidebooks. Think of this as your practical roadmap to an unforgettable China adventure with your family.
 
-![A busy intersection in Chengdu with modern buildings, traffic, and colorful advertising signs](https://picsum.photos/seed/325585/1024/768)
+![A busy intersection in Chengdu with modern buildings, traffic, and colorful advertising signs](/img/china-dest/general/china-family-travel-tips.jpg)
 
 ## China Visa Requirements
 
@@ -56,7 +56,7 @@ Once you've submitted your application and documents, you'll need to schedule an
 ### Visa Fees
 The visa fee for a China tourist visa can vary depending on your nationality and the type of visa you're applying for. It's a small price to pay for the amazing experiences you'll have in China. Make sure to check the official website of the Chinese embassy or consulate in your country for the most up-to-date information on visa fees.
 
-![A traditional Chinese garden with a serene pond, colorful flowers, and a pagoda in the background](https://picsum.photos/seed/517043/1024/768)
+![A traditional Chinese garden with a serene pond, colorful flowers, and a pagoda in the background](/img/china-dest/general/china-family-travel-tips.jpg)
 
 ## Transportation in China
 

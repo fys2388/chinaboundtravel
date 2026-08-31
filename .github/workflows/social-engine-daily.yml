@@ -126,6 +126,13 @@ jobs:
           # 不再吞掉发布失败：0 发布或部分失败必须让 run 失败，触发 Error Alert/飞书告警
           python scripts/social_content_agent.py publish --auto --date "$TODAY"
 
+      - name: Pull social analytics (Buffer API)
+        env:
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_ACCESS_TOKEN_2 }}
+        run: |
+          python scripts/social_analytics_pull.py --days 7 || echo "analytics pull skipped (no token or API error)"
+
       - name: Generate daily social report
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}

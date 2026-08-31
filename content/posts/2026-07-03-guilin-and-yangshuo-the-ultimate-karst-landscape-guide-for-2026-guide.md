@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://image.pollinations.ai/prompt/Guilin%20Yangshuo%20karst%20landscape%20photography%2C%20Li%20River%20with%20bamboo%20rafts%2C%20dramatic%20limestone%20peaks%2C%20misty%20morning%20atmosphere%2C%20professional%20travel%20photography%2C%20National%20Geographic%20style%2C%20golden%20hour%20lighting%2C%20ultra-realistic%2C%20sharp%20details%2C%20beautiful%20composition%2C%20no%20people%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1792&height=1024&nologo=true&seed=51276&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux"
+  image: "/img/china-dest/body/external_024a9f14060d.jpg"
 categories: ["cities", "transport"]
 
 ---
@@ -30,7 +30,7 @@ The flight from Chengdu to Guilin takes about 90 minutes. The karst landscape is
 
 This guide covers the decisions that actually matter: which Li River option to pick (and what each one costs), when to go, a realistic 3-day itinerary with budget breakdowns, where to eat, where to sleep, and the things tour operators won't tell you.
 
-![Li River cruise view with Guilin karst mountains reflected in water](https://image.pollinations.ai/prompt/Li%20River%20cruise%20view%2C%20Guilin%20karst%20mountains%20reflected%20in%20water%2C%20traditional%20fishing%20boats%20with%20cormorants%2C%20peaceful%20river%20landscape%2C%20professional%20photography%2C%20natural%20lighting%2C%20realistic%2C%20high%20detail%2C%20no%20people%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=21500&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![Li River cruise view with Guilin karst mountains reflected in water](/img/china-dest/body/external_37bff9f2ee0e.jpg)
 
 ## Li River Cruise: Your Core Decision
 
@@ -84,7 +84,7 @@ This route covers the essential Guilin and Yangshuo highlights without overpacki
 - **Mid-day:** **Moon Hill ()** — a limestone peak with a natural arch near the summit that looks like a full moon. The hike up takes about 20-30 minutes on stone steps. Entry is free if you approach from the trail side (some guides will try to sell you a ¥15 "ticket" — the hill itself has no gate). The view from the top encompasses the entire Yangshuo karst plain.
 - **Afternoon:** Return to Yangshuo, pick up your luggage, and depart. High-speed train from Yangshuo Railway Station connects to Guangzhou (2.5 hours) and most major southern Chinese cities.
 
-![Yangshuo Moon Hill karst peak with unique circular hole](https://image.pollinations.ai/prompt/Yangshuo%20Moon%20Hill%20karst%20peak%2C%20unique%20circular%20hole%20in%20mountain%2C%20green%20rice%20terraces%20in%20foreground%2C%20Chinese%20countryside%20landscape%2C%20professional%20travel%20photography%2C%20natural%20colors%2C%20realistic%2C%20beautiful%20scenery%2C%20no%20people%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=28270&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text&model=flux)
+![Yangshuo Moon Hill karst peak with unique circular hole](/img/china-dest/body/external_171ad89e37f6.jpg)
 
 ## What to Eat (With Prices)
 

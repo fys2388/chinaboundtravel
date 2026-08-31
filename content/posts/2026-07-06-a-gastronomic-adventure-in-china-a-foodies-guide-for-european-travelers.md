@@ -32,7 +32,7 @@ If you're flying from Europe to China, you're probably expecting great food — 
 
 This guide covers the regional cuisines every food-loving European traveler should try, with specific dish recommendations, what to order first, how much to budget, and tips that will save you from the common mistakes many first-time visitors make.
 
-![A bustling food street in Chengdu at dusk, with red lanterns glowing above street food stalls. Steam rises from bamboo baskets, and locals gather around small tables with plates of colorful Sichuan dishes.](https://image.pollinations.ai/prompt/A%20bustling%20food%20street%20in%20Chengdu%20at%20dusk%2C%20with%20red%20lanterns%20glowing%20above%20street%20food%20stalls%2C%20steam%20rising%20from%20bamboo%20baskets%2C%20locals%20gathered%20around%20small%20tables%20with%20plates%20of%20colorful%20Sichuan%20dishes%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=54572&negative=blurry%2Cdistorted%2Cdeformed%2Cugly%2Cwatermark%2Ctext&model=flux)
+![A bustling food street in Chengdu at dusk, with red lanterns glowing above street food stalls. Steam rises from bamboo baskets, and locals gather around small tables with plates of colorful Sichuan dishes.](/img/china-dest/body/external_bdf2bf2c611c.jpg)
 
 ## What Surprises Most First-Time Visitors
 
@@ -231,7 +231,7 @@ one of the popular advice we can give? Be brave. Order the thing you can't ident
 
 If you found this guide helpful, [check out our other China travel guides](/posts/) — and if you have a favorite dish from your own China trip, drop it in the comments. Our editorial team is often looking for the next great dish to feature.
 
-![A spread of colorful Chinese dishes on a round table: Sichuan hotpot in the center, a plate of xiaolongbao, Peking duck with pancakes, and fresh vegetables. Warm lighting, convivial atmosphere.](https://image.pollinations.ai/prompt/A%20spread%20of%20colorful%20Chinese%20dishes%20on%20a%20round%20table%20in%20a%20restaurant%2C%20Sichuan%20hotpot%20in%20the%20center%2C%20a%20steamer%20basket%20of%20xiaolongbao%20soup%20dumplings%2C%20Peking%20duck%20with%20thin%20pancakes%2C%20and%20fresh%20stir-fried%20vegetables%2C%20warm%20lighting%2C%20convivial%20atmosphere%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=23226&negative=blurry%2Cdistorted%2Cdeformed%2Cugly%2Cwatermark%2Ctext&model=flux)
+![A spread of colorful Chinese dishes on a round table: Sichuan hotpot in the center, a plate of xiaolongbao, Peking duck with pancakes, and fresh vegetables. Warm lighting, convivial atmosphere.](/img/china-dest/body/external_b84ee96f8383.jpg)
 
 
 {{< affiliate-hotel >}}

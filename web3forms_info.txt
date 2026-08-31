@@ -1,0 +1,16 @@
+Create Your First Form
+Give your form a name to get started. You can change settings later.
+Form Name
+
+Give your form a name to identify it easily.
+
+Website URL
+
+The page or website where you'll add this form. For testing type localhost.
+
+Back
+Create Form
+
+Your unique form access key will be created in the next step.
+
+Logged in as fys2388@gmail.com. Not you? Logout

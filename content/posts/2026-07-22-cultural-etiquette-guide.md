@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://image.pollinations.ai/prompt/Traditional%20Chinese%20tea%20ceremony%20setting%20in%20a%20peaceful%20Chengdu%20teahouse%2C%20bamboo%20chairs%2C%20porcelain%20tea%20set%2C%20warm%20natural%20lighting%2C%20no%20people%2C%20travel%20photography%20style%2C%20high%20quality%2C%20realistic%2C%20well-composed%2C%20sharp%20focus?width=1024&height=768&nologo=true&seed=48291&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux"
+  image: "/img/china-dest/body/external_d27b4dce5c2a.jpg"
 categories: ["culture", "travel"]
 
 ---
@@ -47,7 +47,7 @@ Finally, let's talk about safety. China is generally a safe country to travel in
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Chengdu hotpot restaurant interior with traditional Sichuan cuisine dishes on the table, red lanterns and wooden decor](https://image.pollinations.ai/prompt/Chengdu%20hotpot%20restaurant%20interior%20with%20traditional%20Sichuan%20cuisine%20dishes%20on%20the%20table%2C%20red%20lanterns%20and%20wooden%20decor%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20empty%20scene%2C%20pure%20food%20and%20architecture%20only?width=1024&height=768&nologo=true&seed=84721&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux)
+![Chengdu hotpot restaurant interior with traditional Sichuan cuisine dishes on the table, red lanterns and wooden decor](/img/china-dest/culture/chinese-tea-culture-ceremony.webp)
 
 ## Greetings and Body Language
 
@@ -116,7 +116,7 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Pandas in bamboo forest at Chengdu Panda Base](https://image.pollinations.ai/prompt/Pandas%20in%20bamboo%20forest%20at%20Chengdu%20Panda%20Base%2C%20professional%20photography%2C%20high%20quality%2C%20natural%20lighting%2C%20realistic%2C%20well-composed%2C%20sharp%20focus%2C%20empty%20scene%2C%20pure%20nature%20and%20animals%20only?width=1024&height=768&nologo=true&seed=53918&negative=blurry%2C%20distorted%2C%20deformed%2C%20ugly%2C%20disfigured%2C%20malformed%2C%20extra%20limbs%2C%20bad%20anatomy%2C%20low%20quality%2C%20watermark%2C%20text%2C%20person%2C%20people%2C%20face%2C%20portrait%2C%20human%2C%20figure%2C%20crowd%2C%20man%2C%20woman%2C%20child%2C%20close-up%20face%2C%20traveler%2C%20tourist%2C%20backpacker&model=flux)
+![Pandas in bamboo forest at Chengdu Panda Base](/img/china-dest/culture/chinese-tea-culture-ceremony.webp)
 
 {{< affiliate-section >}}
 
