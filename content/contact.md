@@ -13,7 +13,7 @@ Have a question about traveling in China that isn't covered in our guides? Want 
 Fill out the form below and we'll get back to you as soon as possible.
 
 <div class="contact-form-container">
-  <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <div class="form-group">
       <label for="name">Your Name <span class="required">*</span></label>
       <input type="text" id="name" name="name" required placeholder="John Smith" autocomplete="name">
@@ -28,13 +28,13 @@ Fill out the form below and we'll get back to you as soon as possible.
       <label for="subject">Subject <span class="required">*</span></label>
       <select id="subject" name="subject" required>
         <option value="">-- Select a topic --</option>
-        <option value="travel-question">China Travel Question</option>
-        <option value="visa-question">Visa / Entry Requirements</option>
-        <option value="payment-question">Payment (Alipay/WeChat Pay)</option>
-        <option value="collaboration">Collaboration / Partnership</option>
-        <option value="advertising">Advertising Inquiry</option>
-        <option value="feedback">Feedback / Correction</option>
-        <option value="other">Other</option>
+        <option value="China Travel Question">China Travel Question</option>
+        <option value="Visa / Entry Requirements">Visa / Entry Requirements</option>
+        <option value="Payment (Alipay/WeChat Pay)">Payment (Alipay/WeChat Pay)</option>
+        <option value="Collaboration / Partnership">Collaboration / Partnership</option>
+        <option value="Advertising Inquiry">Advertising Inquiry</option>
+        <option value="Feedback / Correction">Feedback / Correction</option>
+        <option value="Other">Other</option>
       </select>
     </div>
 
@@ -48,9 +48,11 @@ Fill out the form below and we'll get back to you as soon as possible.
       <label for="consent">I agree to have my name and email stored for the purpose of responding to my inquiry.</label>
     </div>
 
-    <input type="hidden" name="_subject" value="New contact form submission from ChinaBound Travel">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="_honey" style="display:none">
+    <!-- Web3Forms Configuration -->
+    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+    <input type="hidden" name="from_name" value="ChinaBound Travel Contact Form">
+    <input type="hidden" name="replyto" value="">
+    <input type="checkbox" name="botcheck" style="display:none">
 
     <button type="submit" class="btn btn-primary">Send Message</button>
   </form>
@@ -209,6 +211,15 @@ If you're a fellow travel blogger, tourism board, or hospitality brand intereste
 
   if (!form) return;
 
+  // Auto-set replyto from email field
+  const emailInput = document.getElementById('email');
+  const replytoInput = form.querySelector('input[name="replyto"]');
+  if (emailInput && replytoInput) {
+    emailInput.addEventListener('input', function() {
+      replytoInput.value = this.value;
+    });
+  }
+
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
@@ -227,12 +238,14 @@ If you're a fellow travel blogger, tourism board, or hospitality brand intereste
         }
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         form.style.display = 'none';
         successDiv.style.display = 'block';
         errorDiv.style.display = 'none';
       } else {
-        throw new Error('Form submission failed');
+        throw new Error(result.message || 'Form submission failed');
       }
     } catch (err) {
       console.error('Form error:', err);
