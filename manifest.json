@@ -1,9 +1,9 @@
 {
-  "month_post_count": 12,
+  "month_post_count": 13,
   "last_reset_date": "2026-08-01",
-  "last_social_publish": "2026-08-31 01:44:52",
+  "last_social_publish": "2026-08-31 02:59:51",
   "daily_social_publish_date": "2026-08-31",
-  "daily_social_publish_count": 2,
+  "daily_social_publish_count": 4,
   "daily_social_publish_limit": 5,
   "history_topics": [
     {
@@ -113,6 +113,12 @@
       "geo_region": "EU",
       "category": "food",
       "create_date": "2026-08-30"
+    },
+    {
+      "topic": "China Travel Etiquette: Tipping, Photos, and Unwritten Rules",
+      "geo_region": "US",
+      "category": "cultural",
+      "create_date": "2026-08-31"
     }
   ],
   "keyword_convert_rate": {
@@ -133,7 +139,6 @@
     "AU": 0.1
   },
   "processed_social_posts": [
-    "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
     "china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide",
     "chinabound-travel-guide-2026-08-monthly-update",
     "china-remote-work-guide-a-californians-5-year-chengdu-experience",
@@ -162,6 +167,7 @@
     "chinas-food-through-the-ages-guide",
     "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home",
     "china-bargaining-and-shopping-guide",
-    "china-family-travel-tips-a-californians-guide"
+    "china-family-travel-tips-a-californians-guide",
+    "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide"
   ]
 }
