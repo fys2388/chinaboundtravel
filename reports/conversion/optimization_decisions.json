@@ -199,8 +199,48 @@
       "status": "proposed",
       "deployed_at": null,
       "actual_impact": null
+    },
+    {
+      "id": "dec_cta_20260831_070439",
+      "timestamp": "2026-08-31T07:04:39.115753",
+      "test_id": null,
+      "decision_type": "iterate",
+      "description": "批量优化30个低质量CTA（质量分<60）",
+      "rationale": "审计发现30个CTA质量分低于60，主要问题包括文案过短、缺少行动号召、合作伙伴未指定等",
+      "expected_impact": "CTR整体提升15-30%",
+      "confidence": 0.75,
+      "actions": [
+        "优先优化高流量页面的低质量CTA",
+        "统一CTA文案模板（行动号召+价值主张）",
+        "确保所有CTA有正确的合作伙伴和跳转链接",
+        "在文章中部增加第二个CTA",
+        "优化后监控CTR变化"
+      ],
+      "status": "proposed",
+      "deployed_at": null,
+      "actual_impact": null
+    },
+    {
+      "id": "dec_funnel_20260831_070439",
+      "timestamp": "2026-08-31T07:04:39.115765",
+      "test_id": null,
+      "decision_type": "iterate",
+      "description": "优化转化漏斗：点击→初始化→预订全链路",
+      "rationale": "收入分析引擎发现99次点击但0次初始化和0预订，转化漏斗存在断裂",
+      "expected_impact": "修复后转化率提升至1-3%",
+      "confidence": 0.8,
+      "actions": [
+        "验证Travelpayouts Drive脚本在所有页面正确加载",
+        "检查联盟链接跳转是否正常工作",
+        "在GA4中配置联盟点击事件追踪",
+        "对比Travelpayouts后台数据与API数据",
+        "优化高点击页面的CTA位置和文案"
+      ],
+      "status": "proposed",
+      "deployed_at": null,
+      "actual_impact": null
     }
   ],
-  "total_count": 10,
-  "last_updated": "2026-08-31T06:25:01.991283"
+  "total_count": 12,
+  "last_updated": "2026-08-31T07:04:39.116269"
 }
