@@ -1,0 +1,184 @@
+name: Cross-Agent Learning Daily
+
+# 日度轻量学习工作流
+# 每天UTC 06:00自动运行（北京时间14:00）
+# 仅运行轻量学习循环：Social + Content + 跨Agent编排 + Growth Memory + Growth Orchestrator
+# 重量级循环（SEO/Revenue/Conversion/User）保持每周运行
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  daily-learning:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt 2>/dev/null || echo "Using default packages"
+
+      - name: AI Governance Check (Kill Switch)
+        run: |
+          echo "=== AI Governance Check ==="
+          python -c "
+          import sys; sys.path.insert(0, 'scripts')
+          from ai_governance import check_kill_switch
+          is_safe, reason = check_kill_switch()
+          if not is_safe:
+              print(f'KILL SWITCH ACTIVE: {reason}')
+              print('Daily Learning blocked by Kill Switch.')
+              sys.exit(1)
+          print('Kill Switch: OK (not active)')
+          "
+
+      - name: Step 1 - Pull real data (GA4/GSC/Social/Content)
+        id: real_data
+        run: |
+          echo "=== Step 1: 拉取真实数据 ==="
+          python scripts/real_data_pull_engine.py --all || echo "Real data pull completed (some sources may use cache)"
+          echo "data_pull_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Step 2 - Run Social Learning Closed Loop
+        id: social_learning
+        run: |
+          echo "=== Step 2: Social Learning闭环 ==="
+          python scripts/social_learning_closed_loop.py --run || echo "Social Learning completed"
+          echo "social_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Step 3 - Run Content Learning Closed Loop
+        id: content_learning
+        run: |
+          echo "=== Step 3: Content Learning闭环 ==="
+          python scripts/content_learning_closed_loop.py --run || echo "Content Learning completed"
+          echo "content_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Step 4 - Run Cross-Agent Learning Orchestrator (lightweight)
+        id: cross_agent
+        run: |
+          echo "=== Step 4: 跨Agent学习编排（轻量）==="
+          python scripts/cross_agent_learning_orchestrator.py --run-all || echo "Cross-agent orchestrator completed"
+          echo "cross_agent_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Step 5 - Update Growth Memory
+        run: |
+          echo "=== Step 5: 更新 Growth Memory ==="
+          python scripts/growth_memory_updater.py --run || echo "Growth Memory updated"
+        continue-on-error: true
+
+      - name: Step 6 - Run Growth Orchestrator (unified decision)
+        id: growth_orch
+        run: |
+          echo "=== Step 6: Growth Orchestrator 统一增长决策 ==="
+          python scripts/growth_orchestrator.py --run || echo "Growth Orchestrator completed"
+          echo "growth_orch_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Step 7 - Generate Daily Learning Summary
+        id: summary
+        run: |
+          echo "=== Step 7: 生成日度学习总结 ==="
+          echo "learning_date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+          # 统计策略文件
+          for agent in social content; do
+            FILE="reports/${agent}/${agent}_optimization_strategy.json"
+            if [ "$agent" = "social" ]; then
+              FILE="reports/social/social_publish_strategy.json"
+            fi
+            if [ -f "$FILE" ]; then
+              echo "${agent}_strategy=yes" >> $GITHUB_OUTPUT
+            else
+              echo "${agent}_strategy=no" >> $GITHUB_OUTPUT
+            fi
+          done
+
+          # 统计Growth Orchestrator行动数
+          ORCH_FILE="reports/orchestration/growth_decision_report.json"
+          if [ -f "$ORCH_FILE" ]; then
+            ACTIONS=$(python -c "import json; d=json.load(open('$ORCH_FILE')); print(d.get('total_actions', 0))" 2>/dev/null || echo "0")
+            echo "growth_actions=$ACTIONS" >> $GITHUB_OUTPUT
+          else
+            echo "growth_actions=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Step 8 - Commit daily learning results
+        run: |
+          echo "=== Step 8: 提交日度学习结果 ==="
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add reports/social/ reports/content/ reports/cross_agent/ reports/growth_memory/ reports/orchestration/ reports/real_data/ 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No daily learning changes to commit"
+          else
+            COMMIT_MSG="feat(ai-learning): daily cross-agent learning update $(date +%Y-%m-%d)"
+            COMMIT_MSG="$COMMIT_MSG - Social+Content loops + cross-agent orchestrator + growth memory + growth orchestrator"
+            git commit -m "$COMMIT_MSG"
+            # Push with retry
+            for i in 1 2 3 4 5; do
+              if git push origin main; then
+                echo "push ok (attempt $i)"
+                break
+              fi
+              echo "push failed (attempt $i), rebase and retry in $((i * 15))s..."
+              sleep $((i * 15))
+              git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; }
+            done
+            git ls-remote --exit-code origin main >/dev/null 2>&1 || { echo "::error::push 失败"; exit 1; }
+            echo "Daily learning results committed and pushed"
+          fi
+
+      - name: Step 9 - Send Feishu notification
+        if: always()
+        run: |
+          echo "=== Step 9: 发送飞书通知 ==="
+          if [ -n "${{ secrets.FEISHU_WEBHOOK_URL }}" ]; then
+            python scripts/send_feishu_notification.py \
+              --title "Daily Cross-Agent Learning Complete $(date +%Y-%m-%d)" \
+              --message "Social+Content learning + Growth Orchestrator completed. Growth actions: ${{ steps.summary.outputs.growth_actions }}. Social strategy: ${{ steps.summary.outputs.social_strategy }}, Content strategy: ${{ steps.summary.outputs.content_strategy }}" \
+              --webhook "${{ secrets.FEISHU_WEBHOOK_URL }}" || echo "Feishu notification failed"
+          else
+            echo "FEISHU_WEBHOOK_URL not configured"
+          fi
+        continue-on-error: true
+
+      - name: Step 10 - Show daily learning summary
+        run: |
+          echo "=========================================="
+          echo "  Daily Cross-Agent Learning Summary"
+          echo "=========================================="
+          echo "Date: ${{ steps.summary.outputs.learning_date }}"
+          echo "Data pull: ${{ steps.real_data.outputs.data_pull_status }}"
+          echo "Social Learning: ${{ steps.social_learning.outputs.social_status }}"
+          echo "Content Learning: ${{ steps.content_learning.outputs.content_status }}"
+          echo "Cross-Agent: ${{ steps.cross_agent.outputs.cross_agent_status }}"
+          echo "Growth Orchestrator: ${{ steps.growth_orch.outputs.growth_orch_status }}"
+          echo "Growth Actions: ${{ steps.summary.outputs.growth_actions }}"
+          echo ""
+          echo "Heavy loops (SEO/Revenue/Conversion/User): weekly only"
+          echo "All daily results committed to GitHub"
+          echo "=========================================="

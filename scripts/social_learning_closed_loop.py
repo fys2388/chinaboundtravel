@@ -30,7 +30,7 @@ from typing import Dict, List, Any, Optional
 from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 from real_data_bridge import get_social_records
-from strategy_change_logger import make_change, STRATEGY_VERSION
+from strategy_change_logger import make_change, STRATEGY_VERSION, save_rollback
 
 
 # 项目根目录
@@ -430,6 +430,12 @@ class SocialLearningClosedLoop:
         self.current_strategy["version"] = f"2.0-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
         # 保存策略
+        # P1-AI-OPS-03: Save rollback snapshot before strategy update
+        try:
+            save_rollback(self.current_strategy, str(SOCIAL_STRATEGY_FILE), "social", self.current_strategy.get("strategy_changes", []))
+        except Exception as _rb_e:
+            print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
+
         with open(SOCIAL_STRATEGY_FILE, "w", encoding="utf-8") as f:
             json.dump(self.current_strategy, f, ensure_ascii=False, indent=2)
 

@@ -1,0 +1,31 @@
+{
+  "log_version": "1.0",
+  "last_updated": "2026-08-31T15:23:56.416425",
+  "total_entries": 1,
+  "entries": [
+    {
+      "rollback_id": "20260831_152356_test_domain",
+      "timestamp": "2026-08-31T15:23:56.416158",
+      "domain": "test_domain",
+      "strategy_file": "reports/test/test_strategy.json",
+      "pre_change_version": "2.0-test",
+      "pre_change_last_updated": "2026-08-31",
+      "snapshot": {
+        "version": "2.0-test",
+        "last_updated": "2026-08-31",
+        "best_keywords": [
+          "test1",
+          "test2"
+        ]
+      },
+      "changes_applied": [
+        {
+          "field": "test",
+          "old": "a",
+          "new": "b"
+        }
+      ],
+      "changes_count": 1
+    }
+  ]
+}

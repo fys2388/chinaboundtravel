@@ -21,7 +21,7 @@ from typing import Dict, List, Any
 from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 from real_data_bridge import get_revenue_records
-from strategy_change_logger import make_change, STRATEGY_VERSION
+from strategy_change_logger import make_change, STRATEGY_VERSION, save_rollback
 
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -339,6 +339,12 @@ class RevenueLearningClosedLoop:
         self.current_strategy["strategy_changes"] = strategy_changes
         self.current_strategy["last_updated"] = datetime.now().isoformat()
         self.current_strategy["version"] = f"2.0-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+
+                # P1-AI-OPS-03: Save rollback snapshot before strategy update
+        try:
+            save_rollback(self.current_strategy, str(STRATEGY_FILE), "revenue", self.current_strategy.get("strategy_changes", []))
+        except Exception as _rb_e:
+            print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
 
         self._save_json(STRATEGY_FILE, self.current_strategy)
         print(f"\n  📊 策略变更: {len(strategy_changes)} 项")
