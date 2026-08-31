@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-08-31T07:04:39.345207",
+  "analyzed_at": "2026-08-31T07:13:33.360249",
   "total_patterns": 8,
   "viral_patterns": [
     {
@@ -9,10 +9,10 @@
       "content_type": "question",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.07200234555604741,
       "sample_size": 6,
@@ -35,10 +35,10 @@
       "content_type": "visual",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.07184876543209877,
       "sample_size": 6,
@@ -62,10 +62,10 @@
       "content_type": "story",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.05821132184768548,
       "sample_size": 6,
@@ -91,10 +91,10 @@
       "content_type": "guide",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.055964711214711214,
       "sample_size": 6,
@@ -118,10 +118,10 @@
       "content_type": "list",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.04697774943310657,
       "sample_size": 6,
@@ -143,10 +143,10 @@
       "content_type": "warning",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.045080237223094365,
       "sample_size": 7,
@@ -171,10 +171,10 @@
       "content_type": "tip",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.03242562111609731,
       "sample_size": 7,
@@ -198,10 +198,10 @@
       "content_type": "conversion",
       "platforms": [
         "linkedin",
-        "pinterest",
         "instagram",
-        "facebook",
-        "x"
+        "pinterest",
+        "x",
+        "facebook"
       ],
       "avg_engagement_rate": 0.029697813760313763,
       "sample_size": 6,

@@ -1,9 +1,9 @@
 {
   "records": [],
-  "last_updated": "2026-08-31T07:04:39.526586",
+  "last_updated": "2026-08-31T07:13:33.558374",
   "version": "1.0",
   "latest": {
-    "generated_at": "2026-08-31T07:04:39.526572",
+    "generated_at": "2026-08-31T07:13:33.558358",
     "top_content": [],
     "top_social_posts": [],
     "best_cta_types": [],
@@ -43,6 +43,13 @@
     },
     {
       "generated_at": "2026-08-31T07:04:39.526572",
+      "top_content_count": 0,
+      "top_social_count": 0,
+      "pattern_count": 0,
+      "recommendation_count": 1
+    },
+    {
+      "generated_at": "2026-08-31T07:13:33.558358",
       "top_content_count": 0,
       "top_social_count": 0,
       "pattern_count": 0,
