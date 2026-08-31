@@ -25,6 +25,7 @@ import sys
 import json
 import re
 from datetime import datetime, timedelta
+from data_quality_gate import should_block_strategy_update  # P1-AI-OPS-04
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from collections import defaultdict
@@ -435,6 +436,12 @@ class SocialLearningClosedLoop:
             save_rollback(self.current_strategy, str(SOCIAL_STRATEGY_FILE), "social", self.current_strategy.get("strategy_changes", []))
         except Exception as _rb_e:
             print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
+
+        # P1-AI-OPS-04: Data Quality Gate
+        _dq_records = self.performance_history.get("records", []) if isinstance(self.performance_history, dict) else (self.performance_history if isinstance(self.performance_history, list) else [])
+        if should_block_strategy_update(_dq_records, "social"):
+            print("  \u26a0\ufe0f 策略更新已跳过：数据质量不足")
+            return self.current_strategy
 
         with open(SOCIAL_STRATEGY_FILE, "w", encoding="utf-8") as f:
             json.dump(self.current_strategy, f, ensure_ascii=False, indent=2)

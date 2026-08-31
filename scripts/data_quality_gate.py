@@ -81,3 +81,90 @@ def strategy_update_allowed(records: List[Dict[str, Any]], logger=None) -> bool:
     else:
         print(f"  ⚠️ {msg}")
     return False
+
+
+# ============================================================================
+# P1-AI-OPS-04: Extended Data Quality Gate (freshness + unified check)
+# ============================================================================
+
+DATA_SOURCE_LOCAL = "LOCAL"
+DEFAULT_CACHE_MAX_HOURS = 24
+DEFAULT_LOCAL_MAX_HOURS = 72
+
+
+def mark_local(records):
+    """Mark records as LOCAL data (from local file scan, not external API)."""
+    from datetime import datetime
+    for r in records:
+        r["data_source"] = DATA_SOURCE_LOCAL
+        if "data_timestamp" not in r:
+            r["data_timestamp"] = datetime.now().isoformat()
+    return records
+
+
+def is_cache_fresh(record, max_hours=DEFAULT_CACHE_MAX_HOURS):
+    """Check if a CACHED/LOCAL record is fresh enough (within max_hours)."""
+    from datetime import datetime, timedelta
+    ts_str = record.get("data_timestamp") or record.get("timestamp") or record.get("fetched_at")
+    if not ts_str:
+        return False
+    try:
+        ts = datetime.fromisoformat(str(ts_str).replace("Z", "+00:00"))
+        if ts.tzinfo is not None:
+            ts = ts.replace(tzinfo=None)
+        return (datetime.now() - ts) <= timedelta(hours=max_hours)
+    except (ValueError, TypeError):
+        return False
+
+
+def check_data_quality(records, domain="unknown", cache_max_hours=DEFAULT_CACHE_MAX_HOURS, local_max_hours=DEFAULT_LOCAL_MAX_HOURS):
+    """Unified data quality check for learning loops. Returns detailed report."""
+    from datetime import datetime
+    result = {
+        "domain": domain,
+        "checked_at": datetime.now().isoformat(),
+        "total_records": len(records) if records else 0,
+        "passed": False,
+        "blocked": True,
+        "sources": {},
+        "stale_count": 0,
+        "reasons": [],
+        "summary": "",
+    }
+    if not records:
+        result["reasons"].append("EMPTY: no data records")
+        result["summary"] = "BLOCKED: empty data"
+        return result
+    for r in records:
+        src = get_data_source(r)
+        result["sources"][src] = result["sources"].get(src, 0) + 1
+    blocked_sources = set(result["sources"].keys()) & BLOCKED_SOURCES
+    if blocked_sources:
+        result["reasons"].append("BLOCKED_SOURCE: detected " + str(blocked_sources))
+    stale = 0
+    for r in records:
+        src = get_data_source(r)
+        if src == DATA_SOURCE_CACHED and not is_cache_fresh(r, cache_max_hours):
+            stale += 1
+        elif src == DATA_SOURCE_LOCAL and not is_cache_fresh(r, local_max_hours):
+            stale += 1
+    result["stale_count"] = stale
+    if stale > 0:
+        result["reasons"].append("STALE_CACHE: " + str(stale) + " records exceed freshness threshold")
+    if not blocked_sources and stale == 0:
+        result["passed"] = True
+        result["blocked"] = False
+        result["summary"] = "PASSED: " + str(result["sources"]) + " (" + str(len(records)) + " records)"
+    else:
+        result["summary"] = "BLOCKED: " + "; ".join(result["reasons"])
+    return result
+
+
+def should_block_strategy_update(records, domain="unknown", cache_max_hours=DEFAULT_CACHE_MAX_HOURS, print_report=True):
+    """Convenience: returns True if strategy update SHOULD BE BLOCKED."""
+    report = check_data_quality(records, domain, cache_max_hours)
+    if print_report:
+        print("  [DQG][" + domain + "] " + report["summary"])
+        for reason in report["reasons"]:
+            print("    - " + reason)
+    return report["blocked"]

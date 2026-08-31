@@ -16,6 +16,7 @@ import os
 import sys
 import json
 from datetime import datetime
+from data_quality_gate import should_block_strategy_update  # P1-AI-OPS-04
 from pathlib import Path
 from typing import Dict, List, Any
 from collections import defaultdict
@@ -345,6 +346,12 @@ class RevenueLearningClosedLoop:
             save_rollback(self.current_strategy, str(STRATEGY_FILE), "revenue", self.current_strategy.get("strategy_changes", []))
         except Exception as _rb_e:
             print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
+
+        # P1-AI-OPS-04: Data Quality Gate
+        _dq_records = self.performance_history.get("records", []) if isinstance(self.performance_history, dict) else (self.performance_history if isinstance(self.performance_history, list) else [])
+        if should_block_strategy_update(_dq_records, "revenue"):
+            print("  \u26a0\ufe0f 策略更新已跳过：数据质量不足")
+            return self.current_strategy
 
         self._save_json(STRATEGY_FILE, self.current_strategy)
         print(f"\n  📊 策略变更: {len(strategy_changes)} 项")
