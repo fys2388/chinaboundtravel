@@ -12,6 +12,7 @@ POSTS_DIR = Path("content/posts")
 BLOCKED_IMAGE_DOMAINS = [
     "pollinations.ai", "image.pollinations.ai", "lexica.art",
     "midjourney", "dalle", "stablediffusion", "craiyon.com",
+    "shturl.cc", "hflb9",
 ]
 LOCAL_IMAGE_DOMAIN = "chinaboundtravel.com"
 
@@ -41,28 +42,49 @@ def get_new_or_modified_posts():
 
 
 def check_cover(post_path):
-    """Check cover of a single article. Returns dict with issues."""
+    """Check cover of a single article. Returns dict with issues.
+    Supports both YAML (---) and TOML (+++) front matter formats."""
     text = post_path.read_text(encoding="utf-8", errors="replace")
-    fm_match = re.match(r"^---\s*\n(.*?)\n---", text, re.DOTALL)
     issues = []
     cover_ok = False
     cover_image = ""
+
+    # Detect front matter format: YAML (---) or TOML (+++)
+    fm_match = re.match(r"^---\s*\n(.*?)\n---", text, re.DOTALL)
+    is_toml = False
+    if not fm_match:
+        fm_match = re.match(r"^\+\+\+\s*\n(.*?)\n\+\+\+", text, re.DOTALL)
+        is_toml = True
 
     if fm_match:
         fm = fm_match.group(1)
         in_cover = False
         for line in fm.split("\n"):
             stripped = line.strip()
-            if stripped.startswith("cover:"):
-                in_cover = True
-                continue
-            if in_cover and stripped.startswith("image:"):
-                raw = stripped.split(":", 1)[1].strip()
-                cover_image = raw.strip('"').strip("'")
-                cover_ok = True
-                break
-            if in_cover and stripped and not stripped.startswith(" "):
-                in_cover = False
+            if is_toml:
+                # TOML format: [cover] section, then image = "..."
+                if stripped == "[cover]":
+                    in_cover = True
+                    continue
+                if in_cover and stripped.startswith("image") and "=" in stripped:
+                    raw = stripped.split("=", 1)[1].strip()
+                    cover_image = raw.strip('"').strip("'")
+                    cover_ok = True
+                    break
+                if in_cover and stripped.startswith("["):
+                    in_cover = False
+            else:
+                # YAML format: cover: then image: "..."
+                if stripped.startswith("cover:"):
+                    in_cover = True
+                    continue
+                if in_cover and stripped.startswith("image:"):
+                    raw = stripped.split(":", 1)[1].strip()
+                    cover_image = raw.strip('"').strip("'")
+                    cover_ok = True
+                    break
+                if in_cover and stripped and not stripped.startswith(" "):
+                    in_cover = False
 
     if not cover_ok:
         issues.append("missing_cover")

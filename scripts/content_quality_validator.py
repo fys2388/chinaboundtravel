@@ -50,6 +50,8 @@ BLOCKED_IMAGE_DOMAINS = [
     "stablediffusion",
     "craiyon.com",
     "bing.com/images/create",
+    "shturl.cc",
+    "hflb9",
 ]
 # Allowed local image domain (cover images should be on this domain)
 LOCAL_IMAGE_DOMAIN = "chinaboundtravel.com"
@@ -253,7 +255,11 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.file:
-        results = [validate_article(POSTS_DIR / args.file)]
+        # Support both bare filename ("xxx.md") and full path ("content/posts/xxx.md")
+        file_path = Path(args.file)
+        if not file_path.is_absolute() and "content" not in file_path.parts:
+            file_path = POSTS_DIR / file_path
+        results = [validate_article(file_path)]
     else:
         results = validate_all()
 
