@@ -359,7 +359,11 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         lines.append("What's your biggest China travel question? Drop it below. 👇")
         lines.append("")
         lines.append(f"Full guide: {utm_url}")
-    return "\n".join(lines)
+    caption = "\n".join(lines)
+    # Apply learned strategy (Hook/CTA injection) — skip X due to strict char limits
+    if platform != "x":
+        caption = apply_strategy_to_caption(caption, platform, ctype)
+    return caption
 
 
 def _strip_flagged(text: str, flagged: list) -> str:
