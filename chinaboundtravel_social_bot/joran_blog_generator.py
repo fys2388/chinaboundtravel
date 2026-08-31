@@ -364,21 +364,29 @@ def generate_seo_description(topic, title):
             description = description[:cut]
             continue
         description = description[:152].rsplit(' ', 1)[0].rstrip(',. ') + "."
-    # 过短：补足到 >=120（短语完整、首字母大写）
+    # 过短：补足到 >=120（按剩余预算挑选合适长度的短语，保证最终 120-155）
     if len(description) < 120:
-        extras = [
-            "Practical guide for foreign travelers visiting China.",
-            "Research-based, editor-verified tips for a smooth China trip.",
-        ]
-        for extra in extras:
-            if len(description) + len(extra) + 2 > 155:
-                continue
-            description = description.rstrip().rstrip('.') + ". " + extra
-            if len(description) >= 120:
-                break
+        budget = 155 - len(description) - 2
+        if budget > 0:
+            for extra in (
+                "Practical guide for foreign travelers visiting China.",
+                "Research-based, editor-verified tips for a smooth China trip.",
+                "Essential China travel advice from the editorial desk.",
+                "Trusted China travel tips for a smoother trip.",
+                "Travel smarter.",
+            ):
+                if len(extra) <= budget:
+                    description = description.rstrip().rstrip('.') + ". " + extra
+                    break
     # 终极兜底：仍超长则按词截断到 <=155
     if len(description) > 155:
         description = description[:152].rsplit(' ', 1)[0].rstrip(',. ') + "."
+    # 首字母大写（SERP 显示规范）：括号前缀（如 "[Updated 2026]"）后首个字母大写，否则开头首字母大写
+    m = re.match(r'^(\[[^\]]*\]\s*)([a-z])', description)
+    if m:
+        description = description[:m.start(2)] + m.group(2).upper() + description[m.end(2):]
+    elif description and description[0].islower():
+        description = description[0].upper() + description[1:]
     return description
 
 # 选题库 - 主选题、备选选题、万能选题（每个都唯一，不重复）
