@@ -1,5 +1,5 @@
 +++
-title = "Western Sichuan Travel Guide 2026: Jiuzhaigou, Siguniang Mountain & Tibetan Plateau"
+title = "Western Sichuan 2026: Jiuzhaigou & Siguniang"
 description = "Complete Western Sichuan (Chuanxi) travel guide for 2026: Jiuzhaigou Valley, Huanglong, Siguniang Mountain, Kangding, Danba Tibetan villages, altitude sickness tips, best routes, where to stay, 3-7 day itineraries, and everything international travelers need to know."
 date = 2026-06-09
 lastmod = 2026-08-31

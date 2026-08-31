@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.webp"
 categories: ["shopping", "travel"]
 
 ---

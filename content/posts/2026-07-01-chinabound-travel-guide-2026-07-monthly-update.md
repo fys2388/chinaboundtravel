@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-95d9a1b95440"
-title: "China Travel Guide: July 2026 Updates & Visa Rules"
+title: "China Travel Guide: July 2026 Updates"
 date: "2026-07-01T10:02:44+00:00"
 lastmod: "2026-07-01T10:02:44+00:00"
 description: "July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes."

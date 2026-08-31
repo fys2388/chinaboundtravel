@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-707a8899c0a7"
-title: "Can Foreigners Use WeChat Pay in China 2026? Yes - Here's How (Step-by-Step)"
+title: "Can Foreigners Use WeChat Pay in China 2026?"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran
 date: '2026-05-22T10:00:00+08:00'

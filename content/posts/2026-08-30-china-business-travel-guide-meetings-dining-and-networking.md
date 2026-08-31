@@ -1,5 +1,5 @@
 ---
-title: "China Business Travel Guide: Meetings, Dining, and Networking"
+title: "China Business Travel: Meetings & Dining"
 date: "2026-08-30T10:00:00+08:00"
 lastmod: "2026-08-30T10:00:00+08:00"
 author: "Joran"
@@ -23,7 +23,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
 ---
 
 ## China Business Travel Guide: Meetings, Dining, and Networking

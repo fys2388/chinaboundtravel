@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-abb64a856c29"
-title: "PayPal + Alipay + WeChat Pay: What It Means for You"
+title: "PayPal, Alipay & WeChat Pay: What It Means"
 author: Joran
 slug: "paypal-alipay-wechat-pay-qr-code-support"
 date: 2026-05-29T09:00:00+08:00

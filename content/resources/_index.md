@@ -1,5 +1,5 @@
 +++
-title = "China Travel Resources 2026 - Trusted Tools & Services"
+title = "China Travel Resources 2026: Tools & Services"
 description = "Editorially reviewed China travel resources: insurance, eSIM, VPN, hotels, trains, and more — compared for international travelers."
 date = 2026-06-21
 layout = "single"

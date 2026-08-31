@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-e464169c4991"
-title: "Chinese Food Delivery 2026: Meituan & Ele.me Guide for Foreigners"
+title: "Chinese Food Delivery 2026: Meituan & Ele.me"
 slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false

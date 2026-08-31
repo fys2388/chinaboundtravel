@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-bc3e1afe5dc0"
-title: "Shanghai vs Beijing: Which Chinese City to Visit First"
+title: "Shanghai vs Beijing: Which to Visit First"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"
 author: "Joran"
@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/beijing/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.webp"
 categories: ["cities", "travel"]
 
 ---

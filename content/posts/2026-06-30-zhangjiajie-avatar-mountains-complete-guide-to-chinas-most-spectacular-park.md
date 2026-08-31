@@ -1,7 +1,7 @@
 ---
 content_id: "cbt-34777b6c17c1"
 
-title: "Zhangjiajie Guide: Avatar Mountains & Itinerary"
+title: "Zhangjiajie Guide: Avatar Mountains"
 date: "2026-06-30T10:00:00+08:00"
 lastmod: "2026-06-30T10:00:00+08:00"
 author: "Joran"

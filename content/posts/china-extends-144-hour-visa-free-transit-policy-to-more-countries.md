@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-244822dc113b"
-title: "China 144-Hour Visa-Free Transit 2026: 15 New Countries Added (Full List)"
+title: "144-Hour Visa-Free Transit: New Countries"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false

@@ -1,5 +1,6 @@
 ﻿---
 title: "Affiliate Disclosure"
+description: "How ChinaBound Travel makes money: our affiliate partners, FTC compliance, and our honesty-first commitment to readers."
 date: 2026-06-21
 draft: false
 ---

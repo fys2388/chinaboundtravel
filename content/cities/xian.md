@@ -1,5 +1,5 @@
 +++
-title = "Xi'an Travel Guide 2026: Terracotta Warriors, City Wall & Muslim Quarter"
+title = "Xi'an 2026: Terracotta Army & Muslim Quarter"
 description = "Complete Xi'an travel guide for 2026: Terracotta Warriors, ancient city wall cycling, Muslim Quarter food, Shaanxi History Museum, Big Wild Goose Pagoda, where to stay, 2-4 day itineraries, and everything international travelers need to know."
 date = 2026-05-23
 lastmod = 2026-08-31

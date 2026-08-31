@@ -19,7 +19,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.webp"
 categories: ["travel-tips", "cities"]
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: "China Visa Guide - Visa-Free Transit, Tourist Visas & Entry Requirements"
+title: "China Visa Guide: Visa-Free & 144-Hour Transit"
 date: "2026-07-08T10:00:00+08:00"
 description: "Complete guide to China visas for tourists: 15-day visa-free entry, 144-hour transit visa, L visa application, and requirements by nationality."
 slug: "visa"

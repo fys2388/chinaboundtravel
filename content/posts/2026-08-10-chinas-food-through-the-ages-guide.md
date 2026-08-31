@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-067675763415"
-title: "How Chinese Food Evolved: 2 Million Years of History"
+title: "How Chinese Food Evolved: 2 Million Years"
 date: "2026-08-10T10:00:00+08:00"
 lastmod: "2026-08-10T10:00:00+08:00"
 author: "Joran"
@@ -21,7 +21,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/food/chinas-food-through-the-ages-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/food/chinas-food-through-the-ages-guide.webp"
 categories: ["food", "internet"]
 
 ---

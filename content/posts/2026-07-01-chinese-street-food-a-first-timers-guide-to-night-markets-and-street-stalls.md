@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-c59607760fee"
-title: "Chinese Street Food: Night Markets & What to Eat"
+title: "Chinese Street Food: Night Markets Guide"
 date: "2026-07-01T10:00:00+08:00"
 lastmod: "2026-07-01T10:00:00+08:00"
 author: "Joran"

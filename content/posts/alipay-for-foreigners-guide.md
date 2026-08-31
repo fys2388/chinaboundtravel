@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-0adceab18b53"
-title: "Alipay for Foreigners in China: Setup Guide and Payment Tips (2026)"
+title: "Alipay in China: Setup & Payment Tips (2026)"
 date: 2026-08-16
 slug: "alipay-for-foreigners-guide"
 draft: false

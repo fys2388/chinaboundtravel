@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-cc4549872c92"
-title: "How to Book China High-Speed Train Tickets (2026)"
+title: "China High-Speed Train Tickets: How to Book"
 date: 2026-05-25T10:00:00+08:00
 slug: "china-high-speed-rail-how-to-book-tickets"
 draft: false

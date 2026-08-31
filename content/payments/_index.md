@@ -1,5 +1,5 @@
 ---
-title: "Payments in China - Alipay vs WeChat Pay Guide"
+title: "Payments in China: Alipay vs WeChat Pay"
 date: "2026-07-08T10:00:00+08:00"
 description: "How to set up Alipay and WeChat Pay as a foreigner: step-by-step guides, comparison, and tips for cashless travel in China."
 slug: "payments"

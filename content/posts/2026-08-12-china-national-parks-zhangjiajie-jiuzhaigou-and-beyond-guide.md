@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-0bb1cb1e308d"
-title: "China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond"
+title: "China National Parks: Zhangjiajie & Jiuzhaigou"
 date: "2026-08-12T10:00:00+08:00"
 lastmod: "2026-08-12T10:00:00+08:00"
 author: "Joran"
@@ -20,7 +20,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp"
 categories: ["nature", "travel"]
 
 ---

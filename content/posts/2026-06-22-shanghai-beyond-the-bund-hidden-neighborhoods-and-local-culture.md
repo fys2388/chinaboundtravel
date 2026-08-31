@@ -1,7 +1,7 @@
 ---
 content_id: "cbt-663ab3f3b0fa"
 
-title: "Shanghai Beyond the Bund: Hidden Neighborhoods"
+title: "Shanghai Beyond the Bund: Local Spots"
 cover:
   image: "/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp"
 date: "2026-06-22T10:00:00+08:00"

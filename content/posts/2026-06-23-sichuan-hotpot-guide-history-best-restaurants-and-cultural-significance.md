@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-550a6e3e929c"
-title: "Sichuan Hotpot Guide: History & Best Restaurants"
+title: "Sichuan Hotpot: History & Best Restaurants"
 cover:
   image: "/img/china-dest/chengdu/sichuan-hotpot-cover.webp"
 date: "2026-06-23T10:00:00+08:00"

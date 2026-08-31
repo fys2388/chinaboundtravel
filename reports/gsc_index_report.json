@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-30 23:34:16",
+  "timestamp": "2026-09-01 00:52:32",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
   "indexed_count": 12,
@@ -7,6 +7,17 @@
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
       "status": "success",
@@ -212,17 +223,6 @@
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
         "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-        "verdict": "NEUTRAL",
         "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }

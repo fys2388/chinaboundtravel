@@ -1,5 +1,5 @@
 ---
-title: "Internet in China - eSIM, VPN & Connectivity Guide"
+title: "Internet in China: eSIM & VPN Guide"
 date: "2026-07-08T10:00:00+08:00"
 description: "Complete guide to staying connected in China: eSIM vs VPN comparison, recommended providers, and how to access blocked apps."
 slug: "internet"

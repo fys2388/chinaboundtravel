@@ -1,5 +1,5 @@
 +++
-title = "Guilin Travel Guide 2026: Li River Karst Mountains & Yangshuo"
+title = "Guilin 2026: Li River & Yangshuo"
 description = "Complete Guilin travel guide for 2026: Li River cruises, karst mountains, Elephant Trunk Hill, Reed Flute Cave, Yangshuo day trips, Longsheng rice terraces, where to stay, 2-4 day itineraries, and everything international travelers need to know."
 date = 2026-06-21
 lastmod = 2026-08-31

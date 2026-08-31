@@ -1,5 +1,5 @@
 +++
-title = "Beijing Travel Guide 2026: Great Wall, Forbidden City & Local Tips"
+title = "Beijing 2026: Great Wall & Forbidden City"
 description = "Complete Beijing travel guide for 2026: Great Wall sections, Forbidden City tickets, hutong exploration, local food, where to stay, and 3-5 day itineraries. Everything international travelers need to know."
 date = 2026-05-23
 lastmod = 2026-08-31

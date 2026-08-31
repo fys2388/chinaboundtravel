@@ -1,7 +1,7 @@
 ---
 content_id: "cbt-698862ce2129"
 
-title: "Chinese Tea Culture: History, Types & Ceremony"
+title: "Chinese Tea Culture: History & Types"
 cover:
   image: "/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp"
 date: "2026-06-22T10:00:00+08:00"

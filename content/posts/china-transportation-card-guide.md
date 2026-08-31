@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-55aef784e6aa"
-title: "China Transportation Card Guide (2026): Metro Cards & Transit Apps"
+title: "China Transportation Card Guide (2026)"
 date: 2026-08-16
 slug: "china-transportation-card-guide"
 draft: false

@@ -1,7 +1,7 @@
 ---
 content_id: "cbt-558f85f45e9a"
 
-title: "Great Wall of China: History Beyond the Tourist Trail"
+title: "Great Wall of China: History & Hidden Secrets"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp"
 date: "2026-06-19T10:00:00+08:00"

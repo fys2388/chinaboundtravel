@@ -1,5 +1,5 @@
 ---
-title: "China Travel Etiquette: Tipping, Photos, And Unwritten Rules Guide"
+title: "China Travel Etiquette: Tipping & Photos"
 date: "2026-08-31T10:00:00+08:00"
 lastmod: "2026-08-31T11:50:36+08:00"
 author: "Joran"
@@ -23,7 +23,7 @@ tags:
 categories:
   - China
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp"
 ---
 
 ## Why China Etiquette Matters More Than You Think

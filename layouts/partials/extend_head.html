@@ -7,11 +7,6 @@
 <meta name="bingbot" content="index, follow">
 <meta name="msnbot" content="index, follow">
 
-{{- /* Meta description fallback */ -}}
-{{- if not .Description -}}
-<meta name="description" content="{{ .Site.Params.description }}">
-{{- end -}}
-
 {{- /* Canonical URL */ -}}
 <link rel="canonical" href="{{ .Permalink }}">
 
@@ -21,10 +16,6 @@
 
 {{- /* Preconnect hints for performance */ -}}
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
-<link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
-
-{{- /* Cloudflare Web Analytics */ -}}
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "chinaboundtravel"}'></script>
 
 {{- /* WebSite Structured Data (with SearchAction) */ -}}
 <script type="application/ld+json">

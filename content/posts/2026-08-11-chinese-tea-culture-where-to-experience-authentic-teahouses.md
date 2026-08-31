@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-034b43ef5e3a"
-title: "Chinese Tea Culture: Where to Experience Authentic Teahouses"
+title: "Chinese Tea Culture: Authentic Teahouses"
 date: "2026-08-11T10:00:00+08:00"
 lastmod: "2026-08-11T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/culture/chinese-tea-culture-where-to-experience-authentic-teahouses.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/culture/chinese-tea-culture-where-to-experience-authentic-teahouses.webp"
 
 ---
 ## Chinese Tea Culture: Where to Experience Authentic Teahouses

@@ -1,5 +1,6 @@
 ---
 title: Search
+description: "Search ChinaBound Travel for China visa guides, Alipay & WeChat Pay setup, eSIM, trains and city guides."
 layout: search
 summary: search
 placeholder: Search for visa, payment, trains, or pandas...

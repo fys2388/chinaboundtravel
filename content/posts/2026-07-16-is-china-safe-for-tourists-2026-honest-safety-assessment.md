@@ -1,6 +1,6 @@
 +++
 content_id = "cbt-7996811c1d23"
-title = "Is China Safe for Tourists in 2026? Honest Guide"
+title = "Is China Safe for Tourists in 2026?"
 description = "An honest China safety guide for 2026: real crime data, the scams that exist, food and transport safety, and emergency contacts."
 date = 2026-07-16
 lastmod = 2026-07-16

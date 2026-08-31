@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-02a3e0d6ed4f"
-title: "China Airport Transfer Guide (2026): From Airports to City Centers"
+title: "China Airport Transfer Guide (2026)"
 date: 2026-08-16
 slug: "china-airport-transfer-guide"
 draft: false

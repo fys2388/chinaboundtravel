@@ -1,5 +1,5 @@
 ﻿---
-title: "Free 7-Day China Itinerary Template (2026 Updated)"
+title: "Free 7-Day China Itinerary Template (2026)"
 description: "Download your free 7-day China itinerary template. Includes Beijing, Xi'an, Shanghai routes, visa tips, payment setup, and insider recommendations."
 date: 2026-08-03
 layout: "single"
