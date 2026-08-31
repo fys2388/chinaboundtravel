@@ -21,6 +21,13 @@ import csv
 import re
 import math
 from datetime import datetime, timedelta
+
+# P1-AI-OPS-03: Consume content optimization strategy from Learning Closed Loop
+try:
+    from strategy_consumer import StrategyConsumer
+    _STRATEGY_CONSUMER = None
+except Exception:
+    _STRATEGY_CONSUMER = None
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -169,6 +176,13 @@ class ContentIntelligenceAgent:
         self.topic_recommendations: List[TopicRecommendation] = []
         self.multimodal_recommendations: List[MultimodalRecommendation] = []
         self._load_gsc_data()
+        # P1-AI-OPS-03: Load content optimization strategy
+        self.strategy = None
+        if _STRATEGY_CONSUMER is not None:
+            try:
+                self.strategy = _STRATEGY_CONSUMER("reports/content/content_optimization_strategy.json", "content")
+            except Exception as _e:
+                print(f"  ⚠️ content Strategy load skipped: {_e}")
 
     def _load_gsc_data(self) -> Dict[str, Any]:
         """加载GSC数据"""
@@ -773,6 +787,20 @@ class ContentIntelligenceAgent:
             }, f, ensure_ascii=False, indent=2)
 
         print(f"\n  ✅ 选题推荐已保存: {TOPIC_RECOMMENDATIONS_FILE}")
+
+        # P1-AI-OPS-03: Sort by strategy priority
+        if getattr(self, "strategy", None) and self.strategy.available:
+            priorities = self.strategy.get_priority_list("high_priority_topics")
+            if priorities and recommendations:
+                def _priority_score(item):
+                    val = str(item.get("topic", item.get("title", item.get("topic", "")))).lower()
+                    for i, p in enumerate(priorities):
+                        if p in val:
+                            return i
+                    return 999
+                recommendations.sort(key=_priority_score)
+                matched = sum(1 for r in recommendations if _priority_score(r) < 999)
+                print(f"  📋 策略已消费: version={self.strategy.version}, 优先项={len(priorities)}, 匹配={matched}/{len(recommendations)}")
 
         return recommendations
 

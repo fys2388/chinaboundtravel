@@ -21,6 +21,13 @@ import csv
 import re
 import math
 from datetime import datetime, timedelta
+
+# P1-AI-OPS-03: Consume user optimization strategy from Learning Closed Loop
+try:
+    from strategy_consumer import StrategyConsumer
+    _STRATEGY_CONSUMER = None
+except Exception:
+    _STRATEGY_CONSUMER = None
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -171,6 +178,13 @@ class UserIntelligenceAgent:
         self.feedback_items: List[FeedbackItem] = []
         self.retention_strategies: List[RetentionStrategy] = []
         self._generate_sample_data()
+        # P1-AI-OPS-03: Load user optimization strategy
+        self.strategy = None
+        if _STRATEGY_CONSUMER is not None:
+            try:
+                self.strategy = _STRATEGY_CONSUMER("reports/user/user_optimization_strategy.json", "user")
+            except Exception as _e:
+                print(f"  ⚠️ User Strategy load skipped: {_e}")
 
     def _generate_sample_data(self):
         """生成模拟用户数据用于演示"""
@@ -937,6 +951,14 @@ class UserIntelligenceAgent:
             }, f, ensure_ascii=False, indent=2)
 
         print(f"\n  ✅ 留存策略已保存: {RETENTION_STRATEGY_FILE}")
+
+        # P1-AI-OPS-03: Strategy-informed retention strategies
+        if getattr(self, "strategy", None) and self.strategy.available:
+            high_intent = self.strategy.get_priority_list("high_intent_segments")
+            best_retention = self.strategy.get_priority_list("best_retention_strategies")
+            if high_intent or best_retention:
+                print(f"  📋 策略已消费: version={self.strategy.version}, high_intent={len(high_intent)}, best_retention={len(best_retention)}")
+
 
         return strategies
 
