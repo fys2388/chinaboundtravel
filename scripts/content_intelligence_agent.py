@@ -46,29 +46,19 @@ def split_frontmatter(text: str):
 
 
 def read_fm_value(fm: str, key: str) -> str:
-    """从Front Matter中读取值"""
-    if not fm:
+    """Parse front matter scalar value. Handles quoted strings with apostrophes."""
+    m = re.search(rf'^{key}\s*[=:]\s*(.+)$', fm, re.MULTILINE)
+    if not m:
         return ""
-    m = re.search(rf'^{key}\s*[=:]\s*["\']?([^"\'\n#]+)', fm, re.MULTILINE)
-    return m.group(1).strip().strip('"').strip("'") if m else ""
-
-
-# 项目根目录
-PROJECT_ROOT = Path(__file__).parent.parent
-REPORTS_DIR = PROJECT_ROOT / "reports"
-CONTENT_DIR = REPORTS_DIR / "content"
-CONTENT_DIR.mkdir(parents=True, exist_ok=True)
-
-# 数据文件
-CONTENT_AUDIT_FILE = CONTENT_DIR / "content_audit_report.json"
-CONTENT_OPTIMIZATION_FILE = CONTENT_DIR / "content_optimization_plan.json"
-MULTIMODAL_PLAN_FILE = CONTENT_DIR / "multimodal_content_plan.json"
-TOPIC_RECOMMENDATIONS_FILE = CONTENT_DIR / "topic_recommendations.json"
-CONTENT_REPORT_FILE = CONTENT_DIR / "content_intelligence_report.md"
-
-# 内容目录
-POSTS_DIR = PROJECT_ROOT / "content" / "posts"
-
+    val = m.group(1).strip()
+    if val.startswith('"'):
+        end = val.find('"', 1)
+        return val[1:end] if end > 0 else val[1:].rstrip('"')
+    if val.startswith("\'"):
+        end = val.find("\'", 1)
+        return val[1:end] if end > 0 else val[1:].rstrip("\'")
+    val = re.sub(r'\s+#.*$', '', val)
+    return val.strip()
 
 class ContentQualityDimension(Enum):
     """内容质量维度"""
