@@ -1,6 +1,6 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-08-31 06:18:10
+**验证时间**: 2026-08-31 06:52:24
 **基线日期**: 2026-08-31
 **当前日期**: 2026-08-31
 **整体评分**: 21.1/100
@@ -26,35 +26,35 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| total_articles | 59 | 60 | +1.00 | +1.7% | 📈 improved |
-| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| avg_word_count | 1928 | 1930 | +2.00 | +0.1% | 📈 improved |
-| articles_with_affiliate_links | 4 | 35 | +31.00 | +775.0% | 📈 improved |
 | articles_with_internal_links | 10 | 48 | +38.00 | +380.0% | 📈 improved |
+| total_articles | 59 | 60 | +1.00 | +1.7% | 📈 improved |
+| articles_with_affiliate_links | 4 | 35 | +31.00 | +775.0% | 📈 improved |
+| avg_word_count | 1928 | 1930 | +2.00 | +0.1% | 📈 improved |
+| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_posts | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_posts | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | average_position | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | ctr | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 
 ---
@@ -97,4 +97,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-08-31 06:18:10*
+*生成时间: 2026-08-31 06:52:24*
