@@ -7,7 +7,61 @@
 <meta name="bingbot" content="index, follow">
 <meta name="msnbot" content="index, follow">
 
+{{- /* Meta description fallback */ -}}
+{{- if not .Description -}}
+<meta name="description" content="{{ .Site.Params.description }}">
+{{- end -}}
+
+{{- /* Canonical URL */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Twitter Card fallback */ -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@chinaboundtravel">
+
 {{- /* Preconnect hints for performance */ -}}
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
+
+{{- /* Cloudflare Web Analytics */ -}}
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "chinaboundtravel"}'></script>
+
+{{- /* WebSite Structured Data (with SearchAction) */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ChinaBound Travel",
+  "url": "https://www.chinaboundtravel.com/",
+  "description": "{{ .Site.Params.description }}",
+  "inLanguage": "en",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.chinaboundtravel.com/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{{- /* Organization Structured Data */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ChinaBound Travel",
+  "url": "https://www.chinaboundtravel.com/",
+  "logo": "https://www.chinaboundtravel.com/images/og-default.jpg",
+  "description": "{{ .Site.Params.description }}",
+  "founder": {
+    "@type": "Person",
+    "name": "Joran"
+  },
+  "sameAs": [
+    "https://twitter.com/chinaboundtravel",
+    "https://pinterest.com/chinaboundtravel",
+    "https://youtube.com/@chinaboundtravel"
+  ]
+}
+</script>
 
 {{- /* Head custom content area end */ -}}

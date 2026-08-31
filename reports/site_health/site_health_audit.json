@@ -1,0 +1,294 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-08-31T16:57:16.151783",
+  "site_url": "https://www.chinaboundtravel.com",
+  "summary": {
+    "total_findings": 27,
+    "by_severity": {
+      "HIGH": 18,
+      "MEDIUM": 7,
+      "LOW": 2
+    },
+    "by_module": {
+      "security": 6,
+      "seo": 6,
+      "content": 12,
+      "ux": 2,
+      "ia": 1
+    },
+    "auto_fixable": 14,
+    "manual_required": 13
+  },
+  "findings": [
+    {
+      "module": "security",
+      "severity": "HIGH",
+      "title": "CSP 未允许 Sentry 错误追踪",
+      "description": "Content-Security-Policy 中未包含 sentry.io，可能导致 Sentry 错误追踪 被拦截",
+      "location": "CSP: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https:/...",
+      "recommendation": "在 CSP 的 connect-src 和/或 script-src 中添加 sentry.io",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.603742"
+    },
+    {
+      "module": "security",
+      "severity": "HIGH",
+      "title": "CSP 未允许 Sentry 错误追踪（自定义域名）",
+      "description": "Content-Security-Policy 中未包含 sentry.avs.io，可能导致 Sentry 错误追踪（自定义域名） 被拦截",
+      "location": "CSP: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https:/...",
+      "recommendation": "在 CSP 的 connect-src 和/或 script-src 中添加 sentry.avs.io",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.603764"
+    },
+    {
+      "module": "security",
+      "severity": "HIGH",
+      "title": "CSP 未允许 Google AdSense",
+      "description": "Content-Security-Policy 中未包含 googlesyndication.com，可能导致 Google AdSense 被拦截",
+      "location": "CSP: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https:/...",
+      "recommendation": "在 CSP 的 connect-src 和/或 script-src 中添加 googlesyndication.com",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.603777"
+    },
+    {
+      "module": "security",
+      "severity": "HIGH",
+      "title": "CSP 未允许 Cloudflare Analytics",
+      "description": "Content-Security-Policy 中未包含 cloudflareinsights.com，可能导致 Cloudflare Analytics 被拦截",
+      "location": "CSP: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app; style-src 'self' 'unsafe-inline' https:/...",
+      "recommendation": "在 CSP 的 connect-src 和/或 script-src 中添加 cloudflareinsights.com",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.603797"
+    },
+    {
+      "module": "security",
+      "severity": "HIGH",
+      "title": "缺少分析工具: Cloudflare Analytics",
+      "description": "网站未配置 Cloudflare Analytics（Cloudflare Web Analytics）",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 Cloudflare Analytics 脚本到网站头部",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.604074"
+    },
+    {
+      "module": "security",
+      "severity": "MEDIUM",
+      "title": "缺少分析工具: Sentry",
+      "description": "网站未配置 Sentry（Sentry 错误追踪）",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 Sentry 脚本到网站头部",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:11.604115"
+    },
+    {
+      "module": "seo",
+      "severity": "MEDIUM",
+      "title": "缺少结构化数据: WebSite",
+      "description": "网站未包含 WebSite 结构化数据（网站搜索功能），错失富摘要机会",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "在页面中添加 WebSite JSON-LD 结构化数据",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:13.693663"
+    },
+    {
+      "module": "seo",
+      "severity": "HIGH",
+      "title": "缺少结构化数据: BreadcrumbList",
+      "description": "网站未包含 BreadcrumbList 结构化数据（面包屑导航），错失富摘要机会",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "在页面中添加 BreadcrumbList JSON-LD 结构化数据",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:13.693680"
+    },
+    {
+      "module": "seo",
+      "severity": "MEDIUM",
+      "title": "博客列表页标题泛化",
+      "description": "博客列表页标题为 'Posts | ChinaBound Travel'，缺少关键词，应改为描述性标题如 'China Travel Guides & Tips | ChinaBound Travel'",
+      "location": "https://www.chinaboundtravel.com/posts/",
+      "recommendation": "优化博客列表页标题，包含核心关键词",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:14.029780"
+    },
+    {
+      "module": "seo",
+      "severity": "MEDIUM",
+      "title": "缺少 Meta 标签: meta description",
+      "description": "首页缺少 meta description 标签",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 meta description 标签",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:14.030091"
+    },
+    {
+      "module": "seo",
+      "severity": "MEDIUM",
+      "title": "缺少 Meta 标签: Twitter card",
+      "description": "首页缺少 Twitter card 标签",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 Twitter card 标签",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:14.030745"
+    },
+    {
+      "module": "seo",
+      "severity": "MEDIUM",
+      "title": "缺少 Meta 标签: canonical",
+      "description": "首页缺少 canonical 标签",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 canonical 标签",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:14.030895"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: beijing",
+      "description": "城市指南 'beijing' 仅 503 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\beijing.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.032156"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: chengdu",
+      "description": "城市指南 'chengdu' 仅 594 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\chengdu.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.032712"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: guilin",
+      "description": "城市指南 'guilin' 仅 656 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\guilin.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.033179"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: hangzhou",
+      "description": "城市指南 'hangzhou' 仅 307 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\hangzhou.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.033640"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: shanghai",
+      "description": "城市指南 'shanghai' 仅 514 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\shanghai.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.034339"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: western-sichuan",
+      "description": "城市指南 'western-sichuan' 仅 359 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\western-sichuan.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.034981"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: xian",
+      "description": "城市指南 'xian' 仅 479 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\xian.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.035631"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市指南字数不足: yangshuo",
+      "description": "城市指南 'yangshuo' 仅 771 词，建议至少 1500-2000 词",
+      "location": "content\\cities\\yangshuo.md",
+      "recommendation": "扩写城市指南，添加景点推荐、行程规划、实用信息、FAQ",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.036329"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市页缺少配图: beijing",
+      "description": "城市页 'beijing' 仅有 0 张内容图片，旅游网站应至少 3-5 张实际景点照片",
+      "location": "https://www.chinaboundtravel.com/cities/beijing/",
+      "recommendation": "添加 3-5 张高质量的城市景点照片",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.471814"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市页缺少配图: shanghai",
+      "description": "城市页 'shanghai' 仅有 0 张内容图片，旅游网站应至少 3-5 张实际景点照片",
+      "location": "https://www.chinaboundtravel.com/cities/shanghai/",
+      "recommendation": "添加 3-5 张高质量的城市景点照片",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:14.872370"
+    },
+    {
+      "module": "content",
+      "severity": "HIGH",
+      "title": "城市页缺少配图: chengdu",
+      "description": "城市页 'chengdu' 仅有 0 张内容图片，旅游网站应至少 3-5 张实际景点照片",
+      "location": "https://www.chinaboundtravel.com/cities/chengdu/",
+      "recommendation": "添加 3-5 张高质量的城市景点照片",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:15.263771"
+    },
+    {
+      "module": "content",
+      "severity": "MEDIUM",
+      "title": "内容重叠: 博客 vs 城市页",
+      "description": "发现 10 组内容重叠，可能造成关键词内部竞争",
+      "location": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c↔beijing, 2026-05-25-shanghai-bund-french-concession-2-day-guide↔shanghai, 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers↔shanghai, 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide↔hangzhou, 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture↔shanghai",
+      "recommendation": "明确区分博客和城市页的定位，或合并重复内容，设置 canonical",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:15.280080"
+    },
+    {
+      "module": "ux",
+      "severity": "LOW",
+      "title": "页脚暴露技术栈",
+      "description": "页脚显示 'Powered by Hugo & PaperMod'，商业网站应移除或自定义",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "移除页脚的 Hugo/PaperMod 署名，改为自定义版权信息",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:15.281638"
+    },
+    {
+      "module": "ux",
+      "severity": "HIGH",
+      "title": "缺少 viewport meta 标签",
+      "description": "网站缺少 viewport meta 标签，移动端适配会出问题",
+      "location": "https://www.chinaboundtravel.com",
+      "recommendation": "添加 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+      "auto_fixable": true,
+      "found_at": "2026-08-31T16:57:15.282094"
+    },
+    {
+      "module": "ia",
+      "severity": "LOW",
+      "title": "内容分类过多",
+      "description": "内容目录有 15 个分类，建议精简合并",
+      "location": "content",
+      "recommendation": "合并相关分类，减少用户认知负担",
+      "auto_fixable": false,
+      "found_at": "2026-08-31T16:57:15.283018"
+    }
+  ]
+}

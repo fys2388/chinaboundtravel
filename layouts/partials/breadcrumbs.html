@@ -1,4 +1,18 @@
 {{- if (.Param "ShowBreadCrumbs") -}}
+{{- /* BreadcrumbList Structured Data */ -}}
+{{- $ancestors := .Ancestors.Reverse -}}
+{{- $breadcrumbItems := slice -}}
+{{- range $i, $bc := $ancestors -}}
+    {{- $breadcrumbItems = $breadcrumbItems | append (dict "@type" "ListItem" "position" (add $i 1) "name" $bc.Title "item" $bc.Permalink) -}}
+{{- end -}}
+{{- $breadcrumbItems = $breadcrumbItems | append (dict "@type" "ListItem" "position" (add (len $ancestors) 1) "name" .Title) -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": {{ $breadcrumbItems | jsonify }}
+}
+</script>
 <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
     {{- $ancestors := .Ancestors.Reverse -}}
     {{- range $i, $bc := $ancestors }}

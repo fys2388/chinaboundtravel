@@ -69,64 +69,61 @@ ignoreFiles = ["/\\.archived/"]
   comments = true
 
 [[menu.main]]
-  identifier = "search"
-  name = "🔍 Search"
-  url = "/search/"
-  weight = 10
-
-[[menu.main]]
   identifier = "home"
   name = "🏡 Home"
   url = "/"
-  weight = 20
-
-[[menu.main]]
-  identifier = "pricing"
-  name = "💰 Pricing"
-  url = "/pricing/"
-  weight = 40
+  weight = 10
 
 [[menu.main]]
   identifier = "cities"
   name = "🏙️ City Travel"
   url = "/cities/"
-  weight = 50
+  weight = 20
 
 [[menu.main]]
-  identifier = "resources"
-  name = "🧰 Resources"
+  identifier = "essentials"
+  name = "🧳 Essentials"
   url = "/resources/"
-  weight = 52
+  weight = 30
 
 [[menu.main]]
   identifier = "visa"
-  name = "🛂 Visa Guide"
+  name = "🛂 Visa"
   url = "/visa/"
-  weight = 53
+  weight = 31
+  parent = "essentials"
 
 [[menu.main]]
   identifier = "payments"
   name = "💳 Payment"
   url = "/payments/"
-  weight = 54
-
-[[menu.main]]
-  identifier = "posts"
-  name = "📝 Blog"
-  url = "/posts/"
-  weight = 55
+  weight = 32
+  parent = "essentials"
 
 [[menu.main]]
   identifier = "internet"
   name = "📡 Internet"
   url = "/internet/"
-  weight = 56
+  weight = 33
+  parent = "essentials"
 
 [[menu.main]]
-  identifier = "contact"
-  name = "✉️ Contact"
-  url = "/contact/"
-  weight = 68
+  identifier = "posts"
+  name = "📝 Blog"
+  url = "/posts/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "resources"
+  name = "🧰 Resources"
+  url = "/resources/"
+  weight = 50
+
+[[menu.main]]
+  identifier = "pricing"
+  name = "💰 Pricing"
+  url = "/pricing/"
+  weight = 60
 
 [[menu.main]]
   identifier = "about"
