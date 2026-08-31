@@ -56,6 +56,13 @@ except Exception:
     pass
 
 import requests  # noqa: E402
+# P0: Social media image validation + optimization
+try:
+    from social_image_validator import validate_image
+    IMAGE_VALIDATOR_AVAILABLE = True
+except ImportError:
+    IMAGE_VALIDATOR_AVAILABLE = False
+
 
 from brand_identity_audit import scan_text  # noqa: E402
 from logger import setup_logger, log_section, log_task  # noqa: E402
@@ -943,6 +950,18 @@ def distribute_items(items: list, dry_run: bool = True,
             _cover = _ensure_cover_url(item)
             if _cover:
                 item["image_url"] = _cover
+        # P0: 发布前图片质量验证（宽高比/分辨率/AI图域）
+        _img_issues = []
+        if IMAGE_VALIDATOR_AVAILABLE and item.get("image_url"):
+            _ivr = validate_image(item["image_url"], item["platform"])
+            if not _ivr["passed"]:
+                _img_issues = _ivr["issues"]
+                logger.warning("图片验证未通过 %s [%s]: %s",
+                    item.get("id","?"), item["platform"], "; ".join(_img_issues))
+                # 非阻断：记录问题并继续发布（P1 后切换为严格阻断+自动优化）
+                item["image_validation"] = {"passed": False, "issues": _img_issues}
+            else:
+                item["image_validation"] = {"passed": True, "issues": []}
         res = publish_item(item, endpoint, dry_run=dry_run)
         if not dry_run and res.get("success"):
             rec = by_id.get(item["id"])
@@ -951,6 +970,7 @@ def distribute_items(items: list, dry_run: bool = True,
                 rec["publish_date"] = date.today().isoformat()
         results.append({"item_id": item["id"], "platform": item["platform"],
                         "type": item["type"], "source_article": item["source_article"],
+                        "image_issues": _img_issues,
                         **res})
         if not dry_run:
             time.sleep(2)

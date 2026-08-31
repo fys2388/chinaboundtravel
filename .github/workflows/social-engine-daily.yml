@@ -107,6 +107,12 @@ jobs:
             exit 1
           fi
 
+      - name: P0-2 Image Quality Gate (社媒图片验证)
+        run: |
+          echo "=== [P0-2] 发布前图片质量验证 ==="
+          python scripts/social_image_prepublish_check.py || echo "::warning::图片验证发现问题（非阻断，P1后切换严格模式）"
+          echo "=== 图片验证完成 ==="
+
       - name: Publish today's batch (Buffer Worker)
         env:
           # 完整发布端点（worker /publish 处理双账户分流）
