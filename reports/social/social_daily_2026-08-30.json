@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-30",
+  "total_published": 34,
+  "total_impressions": 0,
+  "total_clicks": 0,
+  "total_uv": 0,
+  "by_platform": {
+    "ig": {
+      "published": 8,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "pinterest": {
+      "published": 8,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "x": {
+      "published": 10,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "fb": {
+      "published": 8,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    }
+  }
+}

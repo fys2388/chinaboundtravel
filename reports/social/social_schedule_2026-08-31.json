@@ -1,0 +1,155 @@
+{
+  "schedule": [
+    {
+      "date": "2026-08-31",
+      "slots": [
+        {
+          "item_id": "soc-000002",
+          "platform": "pinterest",
+          "type": "tip",
+          "utc": "2026-08-31T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000045",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-08-31T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000048",
+          "platform": "fb",
+          "type": "story",
+          "utc": "2026-08-31T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000033",
+          "platform": "ig",
+          "type": "story",
+          "utc": "2026-08-31T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000012",
+          "platform": "fb",
+          "type": "tip",
+          "utc": "2026-08-31T16:30:00+00:00",
+          "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000018",
+          "platform": "pinterest",
+          "type": "story",
+          "utc": "2026-08-31T17:30:00+00:00",
+          "slot_et": "13:30"
+        },
+        {
+          "item_id": "soc-000007",
+          "platform": "x",
+          "type": "tip",
+          "utc": "2026-08-31T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000023",
+          "platform": "x",
+          "type": "story",
+          "utc": "2026-08-31T17:00:00+00:00",
+          "slot_et": "13:00"
+        },
+        {
+          "item_id": "soc-000055",
+          "platform": "x",
+          "type": "conversion",
+          "utc": "2026-08-31T23:00:00+00:00",
+          "slot_et": "19:00"
+        },
+        {
+          "item_id": "soc-000092",
+          "platform": "fb",
+          "type": "tip",
+          "utc": "2026-08-31T22:30:00+00:00",
+          "slot_et": "18:30"
+        },
+        {
+          "item_id": "soc-000068",
+          "platform": "fb",
+          "type": "story",
+          "utc": "2026-09-01T00:30:00+00:00",
+          "slot_et": "20:30"
+        },
+        {
+          "item_id": "soc-000028",
+          "platform": "fb",
+          "type": "story",
+          "utc": "2026-09-01T01:30:00+00:00",
+          "slot_et": "21:30"
+        },
+        {
+          "item_id": "soc-000037",
+          "platform": "ig",
+          "type": "tip",
+          "utc": "2026-08-31T22:00:00+00:00",
+          "slot_et": "18:00"
+        },
+        {
+          "item_id": "soc-000098",
+          "platform": "pinterest",
+          "type": "story",
+          "utc": "2026-08-31T23:30:00+00:00",
+          "slot_et": "19:30"
+        },
+        {
+          "item_id": "soc-000071",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-09-01T00:00:00+00:00",
+          "slot_et": "20:00"
+        },
+        {
+          "item_id": "soc-000077",
+          "platform": "ig",
+          "type": "tip",
+          "utc": "2026-09-01T00:00:00+00:00",
+          "slot_et": "20:00"
+        },
+        {
+          "item_id": "soc-000065",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-09-01T01:00:00+00:00",
+          "slot_et": "21:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "slots": [
+        {
+          "item_id": "soc-000057",
+          "platform": "ig",
+          "type": "tip",
+          "utc": "2026-09-01T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000082",
+          "platform": "pinterest",
+          "type": "tip",
+          "utc": "2026-09-01T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000086",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-09-01T17:30:00+00:00",
+          "slot_et": "13:30"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-08-31T06:51:57.757294"
+}
