@@ -49,4 +49,14 @@ jobs:
             git commit -m "chore: refresh 2.0 KPI snapshot $(date +%Y-%m-%d) [skip ci]"
           fi
           git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase 失败"; exit 1; }
-          git push
+          # Push with retry to handle transient ref-lock contention (concurrent workflows)
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push ok (attempt $i)"
+              break
+            fi
+            echo "push failed (attempt $i), rebase and retry in $((i * 15))s..."
+            sleep $((i * 15))
+            git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; }
+          done
+          git ls-remote --exit-code origin main >/dev/null 2>&1 || { echo "::error::push 失败"; exit 1; }
