@@ -28,6 +28,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from collections import defaultdict
+sys.path.insert(0, str(Path(__file__).parent))
+from real_data_bridge import get_social_records
+
 
 # 项目根目录
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -131,6 +134,39 @@ class SocialLearningClosedLoop:
         print("=" * 60)
 
         new_records = []
+
+        # 从 real_data 读取真实社媒数据（优先）
+        try:
+            real_records = get_social_records()
+            existing_ids = {r.get("post_id") for r in self.performance_history["records"]}
+            added = 0
+            for record in real_records:
+                if record.get("post_id") not in existing_ids:
+                    # 直接使用 bridge 的完整记录（含 metrics + calculated）
+                    social_record = dict(record)
+                    if "content" not in social_record:
+                        social_record["content"] = {
+                            "hook": record.get("text", "")[:100],
+                            "cta": "",
+                            "content_id": "",
+                            "content_type": "post"
+                        }
+                    if "metadata" not in social_record:
+                        social_record["metadata"] = record.get("metadata", {})
+                    # 确保 metrics 有所有需要的字段
+                    m = social_record.setdefault("metrics", {})
+                    for key in ["impressions", "clicks", "likes", "comments", "shares", "engagement", "engagement_rate"]:
+                        m.setdefault(key, 0)
+                    # 确保 calculated 有所有需要的字段
+                    c = social_record.setdefault("calculated", {})
+                    for key in ["ctr", "engagement_rate", "engagement_per_impression", "engagement"]:
+                        c.setdefault(key, 0)
+                    self.performance_history["records"].append(social_record)
+                    new_records.append(social_record)
+                    added += 1
+            print(f"  📥 从 real_data 加载: {added} 条帖子 (共 {len(real_records)} 条可用)")
+        except Exception as e:
+            print(f"  ⚠️ real_data 加载失败: {e}")
 
         # 从社媒报告文件中提取数据
         social_report_files = list(SOCIAL_DIR.glob("*report*.json")) + list(SOCIAL_DIR.glob("*performance*.json"))

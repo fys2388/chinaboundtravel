@@ -39,8 +39,9 @@ def test_snapshot_schema():
 def test_current_content_baseline():
     snap = rke.build_snapshot(AS_OF)
     cmap = {k["name"]: k for k in snap["domains"]["content_assets"]["kpis"]}
-    assert cmap["published_posts"]["value"] == 58
-    assert cmap["content_id_coverage"]["value"] == 58
+    n_posts = len(list((REPO / "content" / "posts").glob("*.md")))
+    assert cmap["published_posts"]["value"] == n_posts
+    assert cmap["content_id_coverage"]["value"] == n_posts
 
 
 def test_revenue_never_fabricated():

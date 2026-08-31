@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-31T01:03:52.943024",
+  "priority_weights": {
+    "high_impression_low_ctr": 10,
+    "position_4_10": 8,
+    "position_11_20": 6,
+    "content_quality": 5,
+    "zero_click": 7,
+    "technical_issue": 9
+  },
+  "title_optimization": {
+    "ideal_length": "50-60 chars",
+    "include_year": true,
+    "include_target_audience": true,
+    "include_action_verb": true,
+    "power_words": [
+      "Complete",
+      "Ultimate",
+      "Essential",
+      "Step-by-Step",
+      "2026",
+      "Guide",
+      "Tips",
+      "Best"
+    ]
+  },
+  "meta_description": {
+    "ideal_length": "150-160 chars",
+    "include_cta": true,
+    "include_keyword": true,
+    "include_benefit": true
+  },
+  "content_optimization": {
+    "min_word_count": 1000,
+    "include_faq": true,
+    "include_internal_links": true,
+    "min_internal_links": 3,
+    "include_examples": true
+  },
+  "ab_testing": {
+    "enabled": false,
+    "min_sample_size": 100,
+    "confidence_threshold": 0.95
+  },
+  "learning_rules": {
+    "auto_extract_patterns": true,
+    "min_pattern_occurrences": 3,
+    "pattern_success_threshold": 0.7,
+    "auto_avoid_failures": true
+  },
+  "total_optimizations_analyzed": 5
+}

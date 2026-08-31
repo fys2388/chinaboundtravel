@@ -1,7 +1,7 @@
 # ChinaBound Travel SEO Learning 闭环报告
 
-**生成时间**: 2026-08-31 01:10:15
-**策略版本**: 2.0-20260831_011015
+**生成时间**: 2026-08-31 10:57:16
+**策略版本**: 2.0-20260831_105716
 
 ---
 
@@ -16,12 +16,16 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 关键词 | CTR | 排名 | 展示量 |
 |--------|-----|------|--------|
-| what to eat in chengdu | 4.5% | 4.5 | 4000 |
-| 144 hour visa free transit china | 4.0% | 5.2 | 3000 |
-| china high speed rail guide | 4.0% | 6.8 | 2000 |
-| china travel insurance for foreigners | 4.0% | 7.2 | 1500 |
-| china travel guide 2026 | 3.0% | 8.5 | 5000 |
-| best hotels in beijing | 2.5% | 12.3 | 8000 |
+| https://www.chinaboundtravel.com/posts/s | 33.0% | 13.7 | 3 |
+| https://www.chinaboundtravel.com/7-day-c | 5.0% | 21.1 | 20 |
+| https://www.chinaboundtravel.com/posts/2 | 5.0% | 10.6 | 20 |
+| https://www.chinaboundtravel.com/posts/w | 2.0% | 19.1 | 53 |
+| https://www.chinaboundtravel.com/posts/c | 1.0% | 20.8 | 75 |
+| 144 china visa | 0.0% | 80.5 | 2 |
+| 144 group visa | 0.0% | 87.0 | 1 |
+| 144 hour transit visa china | 0.0% | 46.3 | 3 |
+| 144 hour visa | 0.0% | 87.0 | 1 |
+| 144 hour visa beijing | 0.0% | 41.0 | 1 |
 
 ---
 
@@ -29,12 +33,16 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 关键词 | 流量潜力 | 当前排名 |
 |--------|----------|----------|
-| best hotels in beijing | 200 | 12.3 |
-| what to eat in chengdu | 180 | 4.5 |
-| china travel guide 2026 | 150 | 8.5 |
-| 144 hour visa free transit china | 120 | 5.2 |
-| china high speed rail guide | 80 | 6.8 |
-| china travel insurance for foreigners | 60 | 7.2 |
+| https://www.chinaboundtravel.com/posts/2 | 2 | 8.3 |
+| https://www.chinaboundtravel.com/cities/ | 1 | 4.0 |
+| https://www.chinaboundtravel.com/cancel/ | 0 | 7.0 |
+| https://www.chinaboundtravel.com/cities/ | 0 | 9.0 |
+| https://www.chinaboundtravel.com/posts/ | 0 | 9.8 |
+| 144 china visa | 0 | 80.5 |
+| 144 group visa | 0 | 87.0 |
+| 144 hour transit visa china | 0 | 46.3 |
+| 144 hour visa | 0 | 87.0 |
+| 144 hour visa beijing | 0 | 41.0 |
 
 ---
 
@@ -42,19 +50,23 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 关键词 | 难度 | 搜索量 | 当前排名 |
 |--------|------|--------|----------|
-| china travel insurance for foreigners | 30 | 800 | 7.2 |
-| 144 hour visa free transit china | 35 | 1500 | 5.2 |
-| china high speed rail guide | 40 | 1000 | 6.8 |
-| what to eat in chengdu | 50 | 3000 | 4.5 |
-| china travel guide 2026 | 60 | 2000 | 8.5 |
-| best hotels in beijing | 75 | 5000 | 12.3 |
+| 144 china visa | 0 | 0 | 80.5 |
+| 144 group visa | 0 | 0 | 87.0 |
+| 144 hour transit visa china | 0 | 0 | 46.3 |
+| 144 hour visa | 0 | 0 | 87.0 |
+| 144 hour visa beijing | 0 | 0 | 41.0 |
+| 144 hour visa china | 0 | 0 | 51.1 |
+| 144 hour visa china cost | 0 | 0 | 79.0 |
+| 144 hour visa china from hong kong | 0 | 0 | 56.0 |
+| 144 hour visa free | 0 | 0 | 83.5 |
+| 144 hour visa free china | 0 | 0 | 69.7 |
 
 ---
 
 ## 💡 学习洞察
 
 ### 1. 高CTR关键词特征
-'what to eat in chengdu'CTR最高，达到 4.5%，排名 4.5
+'https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/'CTR最高，达到 33.0%，排名 13.7
 
 **建议:** 分析该关键词的标题和描述模式，复制到其他关键词
 
@@ -63,7 +75,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 **建议:** 优先优化这些关键词的页面，提升内链和内容质量
 
-**关键词:** china travel guide 2026, 144 hour visa free transit china, china high speed rail guide, what to eat in chengdu, china travel insurance for foreigners
+**关键词:** https://www.chinaboundtravel.com/cancel/, https://www.chinaboundtravel.com/cities/guilin/, https://www.chinaboundtravel.com/cities/yangshuo/, https://www.chinaboundtravel.com/posts/, https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/
 
 ---
 

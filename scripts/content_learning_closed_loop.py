@@ -30,6 +30,9 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 from collections import defaultdict
 
+sys.path.insert(0, str(Path(__file__).parent))
+from real_data_bridge import get_content_records, normalize_content_record
+
 # 项目根目录
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -102,6 +105,20 @@ class ContentLearningClosedLoop:
         print("=" * 60)
 
         new_records = []
+
+        # 从 real_data 读取真实内容数据（优先）
+        try:
+            real_records = get_content_records()
+            existing_slugs = {r.get("slug", r.get("title", "")) for r in self.performance_history["records"]}
+            added = 0
+            for record in real_records:
+                if record.get("slug") not in existing_slugs:
+                    self.performance_history["records"].append(record)
+                    new_records.append(record)
+                    added += 1
+            print(f"  📥 从 real_data 加载: {added} 篇文章 (共 {len(real_records)} 篇可用)")
+        except Exception as e:
+            print(f"  ⚠️ real_data 加载失败: {e}")
 
         # 从内容审计报告提取数据
         content_audit_file = REPORTS_DIR / "content" / "content_audit_report.json"
@@ -182,7 +199,7 @@ class ContentLearningClosedLoop:
             "recommendations": []
         }
 
-        records = self.performance_history["records"]
+        records = [normalize_content_record(r) for r in self.performance_history["records"]]
         if not records:
             print("  ⚠️ 没有足够的历史数据进行分析，使用默认策略")
             return insights
@@ -303,7 +320,7 @@ class ContentLearningClosedLoop:
         # 更新高优先级文章列表
         if insights.get("low_performance_articles"):
             old_priority = self.current_strategy.get("high_priority_articles", [])
-            new_priority = [{"content_id": a["content_id"], "title": a["title"][:60], "quality_score": a["metrics"]["quality_score"], "reason": "质量分低于平均水平"} for a in insights["low_performance_articles"][:10]]
+            new_priority = [{"content_id": a.get("content_id", a.get("slug", a.get("title", ""))), "title": a.get("title", "")[:60], "quality_score": a.get("metrics", {}).get("quality_score", 0), "reason": "质量分低于平均水平"} for a in insights.get("low_performance_articles", [])[:10]]
             if old_priority != new_priority:
                 self.current_strategy["high_priority_articles"] = new_priority
                 strategy_changes.append({

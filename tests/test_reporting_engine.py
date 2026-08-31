@@ -3,7 +3,7 @@
 Covers (deterministic, no network):
 - all five period reports generated from one snapshot
 - DoD / WoW / MoM / QoQ / YoY markers (INSUFFICIENT_SAMPLE on first run)
-- consistent 58-content baseline across every report
+- consistent content baseline (dynamic count) across every report
 - NULL revenue everywhere
 - low-data warning present
 - UTF-8 output
@@ -55,9 +55,10 @@ def test_all_periods_generated(tmp_path):
 
 def test_consistent_content_count(tmp_path):
     snapshot, written = _generate_all(tmp_path)
+    n_posts = len(list((REPO / "content" / "posts").glob("*.md")))
     for p in written.values():
         text = p.read_text(encoding="utf-8")
-        assert "- Published posts: 58 posts" in text
+        assert f"- Published posts: {n_posts} posts" in text
 
 
 def test_revenue_null_everywhere(tmp_path):

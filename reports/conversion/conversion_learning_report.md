@@ -1,7 +1,7 @@
 # ChinaBound Travel Conversion Learning 闭环报告
 
-**生成时间**: 2026-08-31 01:10:15
-**策略版本**: 2.0-20260831_011015
+**生成时间**: 2026-08-31 10:57:16
+**策略版本**: 2.0-20260831_105716
 
 ---
 
@@ -16,10 +16,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 类型 | CTR | 转化率 | 每次点击收入 |
 |------|-----|--------|-------------|
-| product_card | 7.5% | 8.9% | $1.78 |
-| button | 5.0% | 4.0% | $0.90 |
-| text_link | 5.0% | 7.5% | $0.75 |
-| banner | 2.5% | 3.3% | $0.40 |
+| site_overall | 0.0% | 0.0% | $0.00 |
 
 ---
 
@@ -27,9 +24,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 位置 | CTR | 转化率 |
 |------|-----|--------|
-| article_bottom | 5.9% | 6.3% |
-| article_middle | 5.0% | 7.5% |
-| sidebar | 2.5% | 3.3% |
+|  | 0.0% | 0.0% |
 
 ---
 
@@ -37,24 +32,21 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 产品 | 收入 | 转化数 |
 |------|------|--------|
-| tours | $80.00 | 4 |
-| hotels | $45.00 | 2 |
-| esim | $30.00 | 3 |
-| insurance | $12.00 | 1 |
+| unknown | $0.00 | 0 |
 
 ---
 
 ## 💡 学习洞察
 
 ### 1. 高转化CTA类型
-product_card类型CTA表现最好，每次点击收入 $1.78，CTR 7.5%
+site_overall类型CTA表现最好，每次点击收入 $0.00，CTR 0.0%
 
-**建议:** 优先使用product_card类型CTA
+**建议:** 优先使用site_overall类型CTA
 
 ### 2. 高转化CTA位置
-article_bottom位置CTR最高，达到 5.9%
+位置CTR最高，达到 0.0%
 
-**建议:** 确保每篇文章在article_bottom都有CTA
+**建议:** 确保每篇文章在都有CTA
 
 ---
 

@@ -1,24 +1,31 @@
 {
-  "booking": {
-    "conversions": 45,
-    "revenue": 2340,
-    "top_destinations": ["Chengdu", "Beijing", "Shanghai"],
-    "top_categories": ["accommodation", "tour packages"]
+  "_warning": "此文件原包含模拟数据，已按真实数据原则清理。所有联盟收入数据必须通过 API 获取，禁止使用模拟数据。",
+  "_status": "REVENUE_NOT_AVAILABLE",
+  "_cleaned_at": "2026-08-31T11:00:00",
+  "_note": "真实收入数据来源: reports/real_data/partnerize_real_data.json (Partnerize API), Travelpayouts API",
+  "data_sources": {
+    "travelpayouts": {
+      "status": "CONNECTED",
+      "api": "https://api.travelpayouts.com/",
+      "has_real_data": true
+    },
+    "partnerize": {
+      "status": "API_CONNECTED_NO_CAMPAIGNS",
+      "api": "https://api.partnerize.com/v3/brand/campaigns",
+      "has_real_data": false,
+      "note": "API 凭证有效，但账户下未配置 campaign。登录 Partnerize 后台加入 campaign 后即可获取数据。"
+    },
+    "nordvpn": {
+      "status": "NO_DIRECT_API",
+      "note": "NordVPN 联盟通过 Impact.com 管理，需 Impact API 凭证 (Account SID + Auth Token)"
+    },
+    "other_partners": {
+      "status": "NO_API_CREDENTIALS",
+      "partners": ["klook", "booking", "airalo", "aviasales", "safetywing", "trip.com", "allianz", "world_nomads"],
+      "note": "这些 Partner 暂无 API 凭证，需逐个登录联盟平台申请 API 访问权限"
+    }
   },
-  "agoda": {
-    "conversions": 32,
-    "revenue": 1890,
-    "top_destinations": ["Chengdu", "Guangzhou", "Hangzhou"],
-    "top_categories": ["budget hotels", "family accommodation"]
-  },
-  "tripadvisor": {
-    "conversions": 15,
-    "revenue": 890,
-    "top_destinations": ["Chengdu", "Xi'an", "Guilin"],
-    "top_categories": ["attractions", "restaurants"]
-  },
-  "top_converting_categories": ["Chengdu accommodation", "China tour packages", "budget hotels", "family travel", "panda tours"],
-  "total_conversions": 92,
-  "total_revenue": 5120,
-  "updated_at": "2026-06-06T16:00:00"
+  "total_conversions": null,
+  "total_revenue": null,
+  "revenue_note": "REVENUE_NOT_AVAILABLE - 无真实收入数据时必须为 null，禁止填写 $0 或模拟数值"
 }

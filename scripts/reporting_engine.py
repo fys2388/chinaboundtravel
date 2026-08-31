@@ -877,8 +877,12 @@ def derive_alerts(snapshot: dict) -> dict:
     green = []
 
     rev = _kmap(snapshot, "revenue").get("revenue")
-    if rev is not None and rev.get("value") is not None:
-        red.append("Revenue anomaly detected (revenue reported unexpectedly)")
+    rev_val = (rev or {}).get("value")
+    orders = _kmap(snapshot, "revenue").get("orders_conversions", {}).get("value")
+    # 2.0: revenue 已 LIVE 接入后，0 收入（无订单无佣金）是正常状态，绝不误报 RED。
+    # 仅当「有佣金却 0 订单」这种同源矛盾才判定为异常。
+    if rev_val is not None and float(rev_val or 0) > 0 and not orders:
+        red.append("Revenue anomaly detected (commission >0 but 0 orders)")
     # experiment failures
     for e in _exp_table(snapshot):
         if e.get("status") in ("LOSE", "FAILED", "NEGATIVE"):

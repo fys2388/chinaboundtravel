@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_011015",
-  "last_updated": "2026-08-31T01:10:15.355805",
+  "version": "2.0-20260831_105716",
+  "last_updated": "2026-08-31T10:57:16.735075",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -20,74 +20,98 @@
   },
   "best_keywords": [
     {
-      "keyword": "what to eat in chengdu",
-      "ctr": 0.045,
-      "position": 4.5,
-      "impressions": 4000
+      "keyword": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "ctr": 0.33,
+      "position": 13.7,
+      "impressions": 3
     },
     {
-      "keyword": "144 hour visa free transit china",
-      "ctr": 0.04,
-      "position": 5.2,
-      "impressions": 3000
+      "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+      "ctr": 0.05,
+      "position": 21.1,
+      "impressions": 20
     },
     {
-      "keyword": "china high speed rail guide",
-      "ctr": 0.04,
-      "position": 6.8,
-      "impressions": 2000
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
+      "ctr": 0.05,
+      "position": 10.6,
+      "impressions": 20
     },
     {
-      "keyword": "china travel insurance for foreigners",
-      "ctr": 0.04,
-      "position": 7.2,
-      "impressions": 1500
+      "keyword": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+      "ctr": 0.02,
+      "position": 19.1,
+      "impressions": 53
     },
     {
-      "keyword": "china travel guide 2026",
-      "ctr": 0.03,
-      "position": 8.5,
-      "impressions": 5000
+      "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
+      "ctr": 0.01,
+      "position": 20.8,
+      "impressions": 75
     },
     {
-      "keyword": "best hotels in beijing",
-      "ctr": 0.025,
-      "position": 12.3,
-      "impressions": 8000
+      "keyword": "144 china visa",
+      "ctr": 0,
+      "position": 80.5,
+      "impressions": 2
+    },
+    {
+      "keyword": "144 group visa",
+      "ctr": 0,
+      "position": 87,
+      "impressions": 1
+    },
+    {
+      "keyword": "144 hour transit visa china",
+      "ctr": 0,
+      "position": 46.3,
+      "impressions": 3
+    },
+    {
+      "keyword": "144 hour visa",
+      "ctr": 0,
+      "position": 87,
+      "impressions": 1
+    },
+    {
+      "keyword": "144 hour visa beijing",
+      "ctr": 0,
+      "position": 41,
+      "impressions": 1
     }
   ],
   "best_pages": [],
   "high_priority_keywords": [
     {
-      "keyword": "best hotels in beijing",
-      "traffic_potential": 200.0,
-      "position": 12.3
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
+      "traffic_potential": 1.5299999999999994,
+      "position": 8.3
     },
     {
-      "keyword": "what to eat in chengdu",
-      "traffic_potential": 180.0,
-      "position": 4.5
+      "keyword": "https://www.chinaboundtravel.com/cities/yangshuo/",
+      "traffic_potential": 1.2,
+      "position": 4
     },
     {
-      "keyword": "china travel guide 2026",
-      "traffic_potential": 150.0,
-      "position": 8.5
+      "keyword": "https://www.chinaboundtravel.com/cancel/",
+      "traffic_potential": 0.3,
+      "position": 7
     },
     {
-      "keyword": "144 hour visa free transit china",
-      "traffic_potential": 120.0,
-      "position": 5.2
+      "keyword": "https://www.chinaboundtravel.com/cities/guilin/",
+      "traffic_potential": 0.1,
+      "position": 9
     },
     {
-      "keyword": "china high speed rail guide",
-      "traffic_potential": 80.0,
-      "position": 6.8
+      "keyword": "https://www.chinaboundtravel.com/posts/",
+      "traffic_potential": 0.07999999999999971,
+      "position": 9.8
     }
   ],
   "learning_insights": [
     {
       "pattern": "高CTR关键词特征",
-      "description": "'what to eat in chengdu'CTR最高，达到 4.5%，排名 4.5",
+      "description": "'https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/'CTR最高，达到 33.0%，排名 13.7",
       "recommendation": "分析该关键词的标题和描述模式，复制到其他关键词"
     },
     {
@@ -95,22 +119,13 @@
       "description": "发现 5 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
       "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
       "keywords": [
-        "china travel guide 2026",
-        "144 hour visa free transit china",
-        "china high speed rail guide",
-        "what to eat in chengdu",
-        "china travel insurance for foreigners"
+        "https://www.chinaboundtravel.com/cancel/",
+        "https://www.chinaboundtravel.com/cities/guilin/",
+        "https://www.chinaboundtravel.com/cities/yangshuo/",
+        "https://www.chinaboundtravel.com/posts/",
+        "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/"
       ]
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "best_keywords",
-      "reason": "基于GSC数据分析，更新最佳关键词排名"
-    },
-    {
-      "field": "high_priority_keywords",
-      "reason": "基于流量潜力分析，更新高优先级关键词"
-    }
-  ]
+  "strategy_changes": []
 }

@@ -9,6 +9,7 @@ Covers 2.0 alert model correctness:
 - Deterministic rendering from snapshot
 """
 import json
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -63,14 +64,22 @@ def test_no_false_red_for_zero_new_articles():
 
 
 def test_zero_revenue_never_converted_to_zero_dollar():
-    """Revenue NULL must remain NULL, never displayed as $0."""
+    """Revenue 必须保持真实口径：无凭据→NULL/NOT_AVAILABLE；有凭据→LIVE 真实值（含 0）。
+    绝不允许把未接入的 NULL 伪造成 $0。"""
     snap = rke.build_snapshot(AS_OF)
     rmap = {k["name"]: k for k in snap["domains"]["revenue"]["kpis"]}
-    assert rmap["revenue"]["value"] is None
-    assert rmap["revenue"]["data_source_type"] == "NOT_AVAILABLE"
-    assert rmap["revenue"]["status"] in ("REVENUE_NOT_AVAILABLE", "NOT_AVAILABLE")
-    for k in rmap.values():
-        assert k["value"] is None, f"{k['name']} should be NULL"
+    rev = rmap["revenue"]
+    if os.getenv("TRAVELPAYOUTS_API_TOKEN"):
+        # 有凭据：revenue 域 LIVE，0 是真实返回，不允许把 NULL 当 $0（LIVE 0 是真实值）
+        assert rev["data_source_type"] == "LIVE"
+        assert isinstance(rev["value"], (int, float))
+    else:
+        # 无凭据：必须保持 NULL / NOT_AVAILABLE，绝不显示 $0
+        assert rev["value"] is None
+        assert rev["data_source_type"] == "NOT_AVAILABLE"
+        assert rev["status"] in ("REVENUE_NOT_AVAILABLE", "NOT_AVAILABLE")
+        for k in rmap.values():
+            assert k["value"] is None, f"{k['name']} should be NULL"
 
 
 def test_gsc_zero_yesterday_not_red():
@@ -109,11 +118,13 @@ def test_no_kpi_contradictions_across_reports(tmp_path):
         written[period] = out.read_text(encoding="utf-8")
 
     # content count must be identical across all reports
+    n_posts = len(list((REPO / "content" / "posts").glob("*.md")))
+    count_marker = f"{n_posts} posts"
     for p1, texts1 in written.items():
         for p2, texts2 in written.items():
             if p1 >= p2:
                 continue
-            assert ("58 posts" in texts1) == ("58 posts" in texts2), f"{p1} vs {p2} content count mismatch"
+            assert (count_marker in texts1) == (count_marker in texts2), f"{p1} vs {p2} content count mismatch"
             assert ("REVENUE_NOT_AVAILABLE" in texts1) == ("REVENUE_NOT_AVAILABLE" in texts2), \
                 f"{p1} vs {p2} revenue status mismatch"
 

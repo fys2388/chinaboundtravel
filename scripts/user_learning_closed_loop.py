@@ -19,6 +19,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any
 from collections import defaultdict
+sys.path.insert(0, str(Path(__file__).parent))
+from real_data_bridge import get_user_records
+
 
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -84,6 +87,35 @@ class UserLearningClosedLoop:
         new_records = []
 
         # 从GA4用户报告提取数据
+        # 从 real_data 读取真实数据（优先）
+        try:
+            real_records = get_user_records()
+            existing_ids = set()
+            for r in self.performance_history.get("records", []):
+                rid = r.get("post_id") or r.get("keyword") or r.get("page") or r.get("segment") or r.get("type") or r.get("title") or str(r)
+                existing_ids.add(rid)
+            added = 0
+            for record in real_records:
+                rid = record.get("post_id") or record.get("keyword") or record.get("page") or record.get("segment") or record.get("type") or record.get("title") or str(record)
+                if rid not in existing_ids:
+                    
+                    # 补全所有可能需要的字段（兼容 analyze 方法的硬编码字段）
+                    for _key, _default in {
+                        "type": "overall", "segment": "", "date": "",
+                        "page": "", "title": ""
+                    }.items():
+                        record.setdefault(_key, _default)
+                    record.setdefault("metrics", {})
+                    record.setdefault("metadata", {})
+                    record.setdefault("calculated", {})
+                    self.performance_history.setdefault("records", []).append(record)
+                    new_records.append(record)
+                    added += 1
+            print(f"  📥 从 real_data 加载: {added} 条记录 (共 {len(real_records)} 条可用)")
+        except Exception as e:
+            print(f"  ⚠️ real_data 加载失败: {e}")
+
+
         user_report = REPORTS_DIR / "user" / "user_analytics_report.json"
         if user_report.exists():
             try:
@@ -163,6 +195,22 @@ class UserLearningClosedLoop:
             return insights
 
         print(f"\n  📊 分析 {len(records)} 个用户分层...")
+
+        # 数据规范化：补全所有硬编码字段
+        for _r in records:
+            _r.setdefault("segment", _r.get("type", _r.get("channel", "unknown")))
+            _r.setdefault("metrics", {})
+            _r.setdefault("calculated", {})
+            for _mk in ["users", "sessions", "page_views", "avg_duration", "bounce_rate", "return_rate", "conversion_rate", "revenue"]:
+                _r["metrics"].setdefault(_mk, 0)
+            # 从 GA4 数据映射
+            if _r["metrics"]["users"] == 0:
+                _r["metrics"]["users"] = _r["metrics"].get("activeUsers", 0)
+            if _r["metrics"]["page_views"] == 0:
+                _r["metrics"]["page_views"] = _r["metrics"].get("screenPageViews", 0)
+            for _ck in ["revenue_per_user", "pages_per_session", "engagement_score"]:
+                _r["calculated"].setdefault(_ck, 0)
+
 
         # 按用户价值排序
         sorted_by_value = sorted(records, key=lambda x: x["calculated"]["revenue_per_user"], reverse=True)

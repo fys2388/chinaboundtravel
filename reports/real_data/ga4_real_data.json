@@ -1,9 +1,29 @@
 {
-  "source": "ga4",
-  "pull_time": "2026-08-31T09:02:33.824804",
-  "data_date": null,
-  "is_real_data": false,
-  "is_fresh": false,
-  "metrics": {},
-  "raw_source": null
+  "source": "ga4_api",
+  "pull_time": "2026-08-31T10:38:40.583370",
+  "data_date": "2026-08-30",
+  "is_real_data": true,
+  "is_fresh": true,
+  "metrics": {
+    "activeUsers": 225,
+    "sessions": 265,
+    "screenPageViews": 578,
+    "engagedSessions": 67,
+    "bounceRate": 0.7471698113207547,
+    "averageSessionDuration": 159.92623198490563,
+    "engagementRate": 0.2528301886792453,
+    "newUsers": 223
+  },
+  "daily": [],
+  "top_pages": [],
+  "traffic_sources": [],
+  "raw_source": "GA4 Data API v1beta",
+  "status": "OK",
+  "error": null,
+  "freshness_info": {
+    "fresh": true,
+    "reason": "Fresh",
+    "age_days": 1,
+    "data_date": "2026-08-30"
+  }
 }

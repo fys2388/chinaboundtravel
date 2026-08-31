@@ -26,6 +26,33 @@
       "expected_ctr_boost": 0.14,
       "expected_revenue_boost": 0.19,
       "status": "success"
+    },
+    {
+      "run_id": "SYN003_20260831_013929",
+      "timestamp": "2026-08-31T01:39:29.220376",
+      "high_commission_count": 5,
+      "mapping_count": 5,
+      "expected_ctr_boost": 0.14,
+      "expected_revenue_boost": 0.19,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN003_20260831_014753",
+      "timestamp": "2026-08-31T01:47:53.464790",
+      "high_commission_count": 5,
+      "mapping_count": 5,
+      "expected_ctr_boost": 0.14,
+      "expected_revenue_boost": 0.19,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN003_20260831_014755",
+      "timestamp": "2026-08-31T01:47:55.586199",
+      "high_commission_count": 5,
+      "mapping_count": 5,
+      "expected_ctr_boost": 0.14,
+      "expected_revenue_boost": 0.19,
+      "status": "success"
     }
   ],
   "version": "1.0"

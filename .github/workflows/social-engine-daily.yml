@@ -40,6 +40,22 @@ jobs:
           pip install requests python-dotenv
           cd buffer-worker && npm install --no-audit --no-fund 2>/dev/null || true
 
+
+      - name: AI Governance Check (Kill Switch)
+        run: |
+          echo "=== AI Governance Check ==="
+          python -c "
+          import sys; sys.path.insert(0, 'scripts')
+          from ai_governance import check_kill_switch
+          is_safe, reason = check_kill_switch(subsystem='social_publishing')
+          if not is_safe:
+              print(f'KILL SWITCH ACTIVE: {reason}')
+              print('Social publishing blocked by Kill Switch.')
+              sys.exit(1)
+          print('Kill Switch: OK (not active)')
+          "
+
+
       - name: Ensure inventory exists
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}

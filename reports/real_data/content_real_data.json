@@ -1,6 +1,6 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-08-31T09:02:33.874384",
+  "pull_time": "2026-08-31T10:38:49.691374",
   "data_date": "2026-08-31",
   "is_real_data": true,
   "is_fresh": true,
@@ -8,81 +8,100 @@
     "total_articles": 59,
     "articles_this_week": 0,
     "avg_word_count": 1928,
-    "articles_with_affiliate_links": 4,
-    "articles_with_internal_links": 10
+    "articles_with_affiliate_links": 35,
+    "articles_with_internal_links": 48
   },
   "top_articles": [
     {
-      "title": "144 Hour Visa Free Transit Guide",
       "slug": "144-hour-visa-free-transit-guide",
       "word_count": 1579,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 20 Dude Wheres My Panda A Beijing Guys Guide To The C",
       "slug": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c",
       "word_count": 1109,
-      "has_affiliate_links": false,
+      "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 22 How To Use Wechat Pay As A Foreigner",
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
       "word_count": 1816,
-      "has_affiliate_links": false,
+      "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 25 China High Speed Rail How To Book Tickets",
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
       "word_count": 2161,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 25 Shanghai Bund French Concession 2 Day Guide",
       "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
       "word_count": 1389,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 26 7 Day China Itinerary Beijing Xian Shanghai First Timers",
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
       "word_count": 1688,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 26 Hangzhou West Lake Tea Culture G20 Guide",
       "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
       "word_count": 1457,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 26 Is China Safe For Tourists 2026 Honest Assessment",
       "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
       "word_count": 1385,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 27 How To Survive Chinese Train Station",
       "slug": "2026-05-27-how-to-survive-chinese-train-station",
       "word_count": 1544,
+      "has_affiliate_links": true,
+      "has_internal_links": true
+    },
+    {
+      "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
+      "word_count": 1713,
+      "has_affiliate_links": true,
+      "has_internal_links": true
+    },
+    {
+      "slug": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support",
+      "word_count": 1453,
+      "has_affiliate_links": true,
+      "has_internal_links": true
+    },
+    {
+      "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
+      "word_count": 1601,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
-      "title": "2026 05 28 Chinese Food Delivery Meituan Eleme Guide",
-      "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1713,
+      "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
+      "word_count": 2621,
+      "has_affiliate_links": false,
+      "has_internal_links": true
+    },
+    {
+      "slug": "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide",
+      "word_count": 2162,
+      "has_affiliate_links": false,
+      "has_internal_links": true
+    },
+    {
+      "slug": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "word_count": 1677,
       "has_affiliate_links": false,
       "has_internal_links": true
     }
   ],
-  "raw_source": "local_content_scan + ga4_daily",
-  "replaced_empty_records": true
+  "raw_source": "local_content_scan"
 }

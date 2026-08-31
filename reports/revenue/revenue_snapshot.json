@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T04:13:03.421580",
+  "generated_at": "2026-08-31T01:04:51.659906",
   "period": {
     "start": "2026-08-03",
     "end": "2026-08-31",
@@ -10,7 +10,7 @@
     "period_end": "2026-08-31",
     "days": 28,
     "impressions": 0,
-    "clicks": 0,
+    "clicks": 99,
     "inits": 0,
     "searches": 0,
     "bookings": 0,
@@ -23,84 +23,85 @@
     "revenue_per_booking": 0.0,
     "avg_order_value": 0.0,
     "data_source": "api",
-    "data_quality": "warning",
+    "data_quality": "good",
     "notes": [
-      "API返回None"
+      "有点击但无预订（新站正常，需关注转化）",
+      "有点击但inits=0（可能是追踪问题）"
     ]
   },
   "products": [
     {
       "product_type": "hotel",
-      "clicks": 0,
+      "clicks": 39,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 40.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     },
     {
       "product_type": "flight",
-      "clicks": 0,
+      "clicks": 24,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 25.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     },
     {
       "product_type": "insurance",
-      "clicks": 0,
+      "clicks": 4,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 5.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     },
     {
       "product_type": "esim",
-      "clicks": 0,
+      "clicks": 4,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 5.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     },
     {
       "product_type": "tour",
-      "clicks": 0,
+      "clicks": 14,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 15.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     },
     {
       "product_type": "transfer",
-      "clicks": 0,
+      "clicks": 9,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
       "revenue_per_click": 0.0,
       "share_of_clicks": 10.0,
       "share_of_revenue": 0.0,
-      "trend": "new"
+      "trend": "stable"
     }
   ],
   "channels": [
     {
       "channel_name": "指南文章 (Guide Posts)",
       "channel_type": "article",
-      "clicks": 0,
+      "clicks": 49,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -112,7 +113,7 @@
     {
       "channel_name": "资源页面 (Resources)",
       "channel_type": "page",
-      "clicks": 0,
+      "clicks": 19,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -124,7 +125,7 @@
     {
       "channel_name": "城市页面 (City Pages)",
       "channel_type": "page",
-      "clicks": 0,
+      "clicks": 14,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -136,7 +137,7 @@
     {
       "channel_name": "首页 (Homepage)",
       "channel_type": "page",
-      "clicks": 0,
+      "clicks": 9,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -148,7 +149,7 @@
     {
       "channel_name": "其他页面 (Other)",
       "channel_type": "page",
-      "clicks": 0,
+      "clicks": 4,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -158,5 +159,5 @@
       "top_pages": []
     }
   ],
-  "recommendations_count": 2
+  "recommendations_count": 4
 }

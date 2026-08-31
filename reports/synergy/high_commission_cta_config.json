@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-08-31T01:29:29.010731",
+  "last_updated": "2026-08-31T01:47:55.584827",
   "synergy_id": "SYN-003",
   "high_commission_products": [
     {
@@ -93,7 +93,7 @@
       "expected_ctr_boost": 0.2,
       "expected_revenue_boost": 0.25,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.010640",
+      "created_at": "2026-08-31T01:47:55.584680",
       "synergy_id": "SYN-003"
     },
     {
@@ -116,7 +116,7 @@
       "expected_ctr_boost": 0.2,
       "expected_revenue_boost": 0.25,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.010652",
+      "created_at": "2026-08-31T01:47:55.584695",
       "synergy_id": "SYN-003"
     },
     {
@@ -138,7 +138,7 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.010658",
+      "created_at": "2026-08-31T01:47:55.584705",
       "synergy_id": "SYN-003"
     },
     {
@@ -160,7 +160,7 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.010661",
+      "created_at": "2026-08-31T01:47:55.584711",
       "synergy_id": "SYN-003"
     },
     {
@@ -182,7 +182,7 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.010664",
+      "created_at": "2026-08-31T01:47:55.584714",
       "synergy_id": "SYN-003"
     }
   ],

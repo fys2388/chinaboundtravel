@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_011015",
-  "last_updated": "2026-08-31T01:10:15.212062",
+  "version": "2.0-20260831_105716",
+  "last_updated": "2026-08-31T10:57:16.540026",
   "content_rules": {
     "min_word_count": 1500,
     "target_word_count": 2000,
@@ -19,7 +19,78 @@
     "paragraph_length": "每段不超过4行",
     "cta_position": "文章中部和底部"
   },
-  "high_priority_articles": [],
-  "learning_insights": [],
+  "high_priority_articles": [
+    {
+      "content_id": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "title": "2026 05 26 7 Day China Itinerary Beijing Xian Shanghai First",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
+      "title": "2026 05 26 Hangzhou West Lake Tea Culture G20 Guide",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
+      "title": "2026 05 26 Is China Safe For Tourists 2026 Honest Assessment",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-05-27-how-to-survive-chinese-train-station",
+      "title": "2026 05 27 How To Survive Chinese Train Station",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
+      "title": "2026 05 28 Chinese Food Delivery Meituan Eleme Guide",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support",
+      "title": "2026 05 29 Paypal Alipay Wechat Pay Qr Code Support",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
+      "title": "2026 06 02 Ultimate Guide To China Visa For Tourists",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
+      "title": "2026 06 19 The History And Culture Of The Great Wall Beyond ",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide",
+      "title": "2026 06 22 Chinese Tea Culture History Types And Tea Ceremon",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    },
+    {
+      "content_id": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "title": "2026 06 22 Shanghai Beyond The Bund Hidden Neighborhoods And",
+      "quality_score": 0,
+      "reason": "质量分低于平均水平"
+    }
+  ],
+  "learning_insights": [
+    {
+      "pattern": "高质量文章特征",
+      "description": "Top 20%高质量文章平均字数 1501，平均内链 1.0，平均CTA 0.7",
+      "recommendations": [
+        "目标字数: 1501字以上",
+        "内链数量: 至少 1 个",
+        "CTA数量: 至少 1 个"
+      ]
+    }
+  ],
   "strategy_changes": []
 }

@@ -223,8 +223,10 @@ def test_lead_magnet_pdf_generated(tmp_path):
 # ============================================================
 
 
-def test_optimized_page_urls_from_report():
+def test_optimized_page_urls_from_report(monkeypatch):
     import gsc_index_submit as gis
+    # 同 test_site_url_normalized：无凭据路径，避免开发机真实 GSC 凭据把 example.com 解析成正式站点
+    monkeypatch.setattr(gis.GSCIndexSubmitter, "_inspect_credentials", lambda self: None)
     s = gis.GSCIndexSubmitter(site_url="https://example.com")
     urls = s._optimized_page_urls()
     assert isinstance(urls, list)

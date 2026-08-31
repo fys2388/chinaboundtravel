@@ -19,6 +19,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any
 from collections import defaultdict
+sys.path.insert(0, str(Path(__file__).parent))
+from real_data_bridge import get_revenue_records
+
 
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -84,6 +87,35 @@ class RevenueLearningClosedLoop:
         print("=" * 60)
 
         new_records = []
+        # 从 real_data 读取真实数据（优先）
+        try:
+            real_records = get_revenue_records()
+            existing_ids = set()
+            for r in self.performance_history.get("records", []):
+                rid = r.get("post_id") or r.get("keyword") or r.get("page") or r.get("segment") or r.get("type") or r.get("title") or str(r)
+                existing_ids.add(rid)
+            added = 0
+            for record in real_records:
+                rid = record.get("post_id") or record.get("keyword") or record.get("page") or record.get("segment") or record.get("type") or record.get("title") or str(record)
+                if rid not in existing_ids:
+                    
+                    # 补全所有可能需要的字段（兼容 analyze 方法的硬编码字段）
+                    for _key, _default in {
+                        "type": "overall", "partner": "", "date": "",
+                        "product": "", "category": ""
+                    }.items():
+                        record.setdefault(_key, _default)
+                    record.setdefault("metrics", {})
+                    record.setdefault("metadata", {})
+                    record.setdefault("calculated", {})
+                    self.performance_history.setdefault("records", []).append(record)
+                    new_records.append(record)
+                    added += 1
+            print(f"  📥 从 real_data 加载: {added} 条记录 (共 {len(real_records)} 条可用)")
+        except Exception as e:
+            print(f"  ⚠️ real_data 加载失败: {e}")
+
+
 
         # 从Travelpayouts报告提取数据
         revenue_report = REPORTS_DIR / "revenue" / "revenue_analytics_report.json"
@@ -170,6 +202,22 @@ class RevenueLearningClosedLoop:
             return insights
 
         print(f"\n  📊 分析 {len(records)} 个产品...")
+
+        # 数据规范化：补全所有硬编码字段
+        for _r in records:
+            _r.setdefault("product", _r.get("type", _r.get("partner", "unknown")))
+            _r.setdefault("partner", _r.get("partner", "unknown"))
+            _r.setdefault("channel", _r.get("channel", "unknown"))
+            _r.setdefault("metrics", {})
+            _r.setdefault("calculated", {})
+            for _mk in ["impressions", "clicks", "bookings", "revenue", "commission_rate"]:
+                _r["metrics"].setdefault(_mk, 0)
+            # 从 revenue_snapshot 映射
+            if _r["metrics"]["bookings"] == 0:
+                _r["metrics"]["bookings"] = _r["metrics"].get("conversions", 0)
+            for _ck in ["ctr", "conversion_rate", "revenue_per_click", "roi"]:
+                _r["calculated"].setdefault(_ck, 0)
+
 
         # 按收入排序
         sorted_by_revenue = sorted(records, key=lambda x: x["metrics"]["revenue"], reverse=True)

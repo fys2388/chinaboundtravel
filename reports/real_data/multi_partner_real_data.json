@@ -1,0 +1,60 @@
+{
+  "status": "NO_CONNECTED_PARTNERS",
+  "is_real_data": false,
+  "partners": {
+    "klook": {
+      "status": "NO_CREDENTIALS",
+      "is_real_data": false,
+      "missing_keys": [
+        "KLOOK_API_KEY",
+        "KLOOK_API_SECRET"
+      ],
+      "message": "Missing: KLOOK_API_KEY, KLOOK_API_SECRET",
+      "fetched_at": "2026-08-31T11:22:47.391192"
+    },
+    "airalo": {
+      "status": "NO_CREDENTIALS",
+      "is_real_data": false,
+      "missing_keys": [
+        "AIRALO_CLIENT_ID",
+        "AIRALO_CLIENT_SECRET"
+      ],
+      "message": "Missing: AIRALO_CLIENT_ID, AIRALO_CLIENT_SECRET",
+      "fetched_at": "2026-08-31T11:22:47.391259"
+    },
+    "safetywing": {
+      "status": "NO_CREDENTIALS",
+      "is_real_data": false,
+      "missing_keys": [
+        "SAFETYWING_API_KEY"
+      ],
+      "message": "Missing: SAFETYWING_API_KEY",
+      "fetched_at": "2026-08-31T11:22:47.391290"
+    },
+    "trip": {
+      "status": "NO_CREDENTIALS",
+      "is_real_data": false,
+      "missing_keys": [
+        "TRIP_APP_ID",
+        "TRIP_APP_SECRET"
+      ],
+      "message": "Missing: TRIP_APP_ID, TRIP_APP_SECRET",
+      "fetched_at": "2026-08-31T11:22:47.391318"
+    },
+    "cj": {
+      "status": "NO_CREDENTIALS",
+      "is_real_data": false,
+      "missing_keys": [
+        "CJ_API_TOKEN"
+      ],
+      "message": "Missing: CJ_API_TOKEN",
+      "fetched_at": "2026-08-31T11:22:47.391345"
+    }
+  },
+  "summary": {
+    "total_partners": 5,
+    "connected": 0,
+    "total_revenue": 0
+  },
+  "fetched_at": "2026-08-31T11:22:47.391398"
+}

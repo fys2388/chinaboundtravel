@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_011015",
-  "last_updated": "2026-08-31T01:10:15.283991",
+  "version": "2.0-20260831_105716",
+  "last_updated": "2026-08-31T10:57:16.625356",
   "cta_rules": {
     "positions": [
       "article_middle",
@@ -55,58 +55,30 @@
   },
   "best_cta_types": [
     {
-      "type": "product_card",
-      "revenue_per_click": 1.7777777777777777,
-      "ctr": 0.075,
-      "conversion_rate": 0.08888888888888889
-    },
-    {
-      "type": "button",
-      "revenue_per_click": 0.9,
-      "ctr": 0.05,
-      "conversion_rate": 0.04
-    },
-    {
-      "type": "text_link",
-      "revenue_per_click": 0.75,
-      "ctr": 0.05,
-      "conversion_rate": 0.075
-    },
-    {
-      "type": "banner",
-      "revenue_per_click": 0.4,
-      "ctr": 0.025,
-      "conversion_rate": 0.03333333333333333
+      "type": "site_overall",
+      "revenue_per_click": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0
     }
   ],
   "best_cta_positions": [
     {
-      "position": "article_bottom",
-      "ctr": 0.059375,
-      "conversion_rate": 0.06315789473684211
-    },
-    {
-      "position": "article_middle",
-      "ctr": 0.05,
-      "conversion_rate": 0.075
-    },
-    {
-      "position": "sidebar",
-      "ctr": 0.025,
-      "conversion_rate": 0.03333333333333333
+      "position": "",
+      "ctr": 0.0,
+      "conversion_rate": 0.0
     }
   ],
   "high_conversion_pages": [],
   "learning_insights": [
     {
       "pattern": "高转化CTA类型",
-      "description": "product_card类型CTA表现最好，每次点击收入 $1.78，CTR 7.5%",
-      "recommendation": "优先使用product_card类型CTA"
+      "description": "site_overall类型CTA表现最好，每次点击收入 $0.00，CTR 0.0%",
+      "recommendation": "优先使用site_overall类型CTA"
     },
     {
       "pattern": "高转化CTA位置",
-      "description": "article_bottom位置CTR最高，达到 5.9%",
-      "recommendation": "确保每篇文章在article_bottom都有CTA"
+      "description": "位置CTR最高，达到 0.0%",
+      "recommendation": "确保每篇文章在都有CTA"
     }
   ],
   "strategy_changes": [

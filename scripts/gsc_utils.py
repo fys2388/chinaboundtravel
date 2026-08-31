@@ -87,16 +87,23 @@ def build_credentials(service_account_info=None, scopes=None):
     """Create google.oauth2 service-account credentials for the webmasters API.
 
     Returns None when the required libraries or the key are unavailable.
+    Automatically refreshes the token so credentials are valid immediately.
     """
     scopes = scopes or DEFAULT_SCOPES
     try:
         from google.oauth2 import service_account
+        from google.auth.transport.requests import Request
         info = service_account_info if service_account_info is not None else load_service_account_info()
         if not info:
             return None
         credentials = service_account.Credentials.from_service_account_info(
             info, scopes=scopes
         )
+        # Auto-refresh token so credentials are valid (fixes valid=False/token=None)
+        try:
+            credentials.refresh(Request())
+        except Exception:
+            pass  # Caller can retry; credentials object is still returned
         return credentials
     except Exception:
         return None

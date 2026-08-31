@@ -1,0 +1,15 @@
+{
+  "status": "NO_CAMPAIGNS",
+  "is_real_data": true,
+  "user_id": "10111425644",
+  "campaigns": [],
+  "conversions": [],
+  "summary": {
+    "total_campaigns": 0,
+    "total_conversions": 0,
+    "total_revenue": 0,
+    "total_commission": 0
+  },
+  "message": "API connected. No campaigns configured yet.",
+  "fetched_at": "2026-08-31T11:20:20.483369"
+}

@@ -34,8 +34,6 @@ The good news is that China is generally a very safe destination for internation
 
 This guide covers the essential safety information you need for a smooth and enjoyable trip to China, based on official crime statistics, local regulations, and aggregated feedback from thousands of international travelers.
 
-[Image: Golden hour view of Chengdu Tianfu Airport terminal exterior, modern architecture with glass facade, warm sunlight reflecting off surfaces, no people, empty scene, cinematic composition]
-
 ## Is China Actually Safe for Tourists? The Real Numbers
 
 Let's cut through the noise and talk facts. Based on extensive research of official crime statistics, local regulations, and aggregated feedback from thousands of international travelers, here's the truth:
@@ -105,7 +103,7 @@ This is where most tourists get into trouble. Here's the deal:
 
 **YOU SHOULD:** Use Didi (China's version of Uber) whenever possible. It's cheap, safe, and the fare is displayed upfront—no surprises. If you must take a taxi, ask your hotel to call one for you or use the taxi stand at the airport/train station.
 
-[Image: Modern Chinese high-speed train arriving at station platform, sleek silver exterior, clean tracks, golden hour lighting, no people, cinematic wide-angle shot]
+![Chinese high-speed train arriving at a station platform in China](/img/china-dest/transport/china-high-speed-rail-guide.jpg)
 
 ## Food Safety: Don't Let Your Stomach Ruin Your Trip
 
@@ -234,7 +232,7 @@ In Chinese culture, gift-giving is a way to show respect. If someone gives you a
 
 **YOU SHOULD:** generally not recommended publicly criticize someone, avoid loud arguments, and often save one of the popular seats for elders.
 
-[Image: Traditional Chinese tea ceremony setup, beautifully arranged tea set on wooden table, soft natural lighting, elegant minimalist composition, no people, cinematic quality]
+![Traditional Chinese tea ceremony setup in a Chengdu teahouse](/img/china-dest/culture/teahouse-tea-chat-chengdu.jpg)
 
 ## Top 10 Safety Tips for China Travel
 

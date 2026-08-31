@@ -35,6 +35,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt 2>/dev/null || echo "Using default packages"
 
+
+      - name: AI Governance Check (Kill Switch)
+        run: |
+          echo "=== AI Governance Check ==="
+          python -c "
+          import sys; sys.path.insert(0, 'scripts')
+          from ai_governance import check_kill_switch
+          is_safe, reason = check_kill_switch()
+          if not is_safe:
+              print(f'KILL SWITCH ACTIVE: {reason}')
+              print('Cross-Agent Learning blocked by Kill Switch.')
+              sys.exit(1)
+          print('Kill Switch: OK (not active)')
+          "
+
       - name: Step 1 - Pull real data (GA4/GSC/Social/Content)
         id: real_data
         run: |

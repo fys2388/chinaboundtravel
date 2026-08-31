@@ -1,0 +1,158 @@
+{
+  "records": [
+    {
+      "id": "opt_cd7becf13de2",
+      "timestamp": "2026-08-30T23:40:45.205101",
+      "type": "title_meta",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "description": "优化Chinese Food Delivery页面Title和Meta描述，加入2026、for Foreigners、Step-by-step",
+      "before_metrics": {
+        "impressions_28d": 159,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 19.6
+      },
+      "after_metrics": {
+        "impressions_28d": 159,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 19.6,
+        "title_optimized": true
+      },
+      "effectiveness": "unknown",
+      "roi_score": 50,
+      "learnings": [],
+      "tags": [
+        "title_meta",
+        "high_impression",
+        "low_ctr",
+        "food_delivery"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "opt_9a1286332405",
+      "timestamp": "2026-08-30T23:40:45.206690",
+      "type": "title_meta",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "description": "优化China Transportation Guide页面Title和Meta描述，加入2026、Didi、for Travelers",
+      "before_metrics": {
+        "impressions_28d": 107,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 22.3
+      },
+      "after_metrics": {
+        "impressions_28d": 107,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 22.3,
+        "title_optimized": true
+      },
+      "effectiveness": "unknown",
+      "roi_score": 50,
+      "learnings": [],
+      "tags": [
+        "title_meta",
+        "high_impression",
+        "low_ctr",
+        "transportation"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "opt_8ba87ce667a4",
+      "timestamp": "2026-08-30T23:40:45.208297",
+      "type": "title_meta",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "description": "优化144-Hour Visa-Free Transit页面Title和Meta描述，加入Eligible Countries & How to Apply",
+      "before_metrics": {
+        "impressions_28d": 107,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 74.0
+      },
+      "after_metrics": {
+        "impressions_28d": 107,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 74.0,
+        "title_optimized": true
+      },
+      "effectiveness": "unknown",
+      "roi_score": 50,
+      "learnings": [],
+      "tags": [
+        "title_meta",
+        "high_impression",
+        "low_ctr",
+        "visa"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "opt_001fc0c663d7",
+      "timestamp": "2026-08-30T23:40:45.209303",
+      "type": "title_meta",
+      "target": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "description": "优化15 New Countries Visa-Free页面Title和Meta描述，加入2026、Full List、行动号召",
+      "before_metrics": {
+        "impressions_28d": 87,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 41.9
+      },
+      "after_metrics": {
+        "impressions_28d": 87,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 41.9,
+        "title_optimized": true
+      },
+      "effectiveness": "unknown",
+      "roi_score": 50,
+      "learnings": [],
+      "tags": [
+        "title_meta",
+        "high_impression",
+        "low_ctr",
+        "visa",
+        "news"
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "opt_32c004a0b1e0",
+      "timestamp": "2026-08-30T23:40:45.210164",
+      "type": "title_meta",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+      "description": "优化WeChat Pay for Foreigners页面Title和Meta描述，加入2026、Step-by-Step、行动号召",
+      "before_metrics": {
+        "impressions_28d": 83,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 62.4
+      },
+      "after_metrics": {
+        "impressions_28d": 83,
+        "clicks_28d": 0,
+        "ctr_28d": 0.0,
+        "position_28d": 62.4,
+        "title_optimized": true
+      },
+      "effectiveness": "unknown",
+      "roi_score": 50,
+      "learnings": [],
+      "tags": [
+        "title_meta",
+        "high_impression",
+        "low_ctr",
+        "payment",
+        "wechat_pay"
+      ],
+      "status": "completed"
+    }
+  ],
+  "total_count": 5,
+  "last_updated": "2026-08-31T01:03:52.943204"
+}

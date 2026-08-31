@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_011640",
-  "last_updated": "2026-08-31T01:16:40.843565",
+  "version": "2.0-20260831_105716",
+  "last_updated": "2026-08-31T10:57:16.918774",
   "product_rules": {
     "priority_products": [
       "hotels",
@@ -25,114 +25,73 @@
   },
   "best_products": [
     {
-      "product": "hotels",
-      "revenue": 450.0,
-      "clicks": 500,
-      "conversion_rate": 0.03,
-      "commission_rate": 0.04
+      "product": "",
+      "revenue": 0,
+      "clicks": 0,
+      "conversion_rate": 0,
+      "commission_rate": 0
     },
     {
-      "product": "tours",
-      "revenue": 360.0,
-      "clicks": 250,
-      "conversion_rate": 0.048,
-      "commission_rate": 0.05
-    },
-    {
-      "product": "flights",
-      "revenue": 320.0,
-      "clicks": 320,
-      "conversion_rate": 0.025,
-      "commission_rate": 0.015
-    },
-    {
-      "product": "esim",
-      "revenue": 200.0,
-      "clicks": 300,
-      "conversion_rate": 0.06666666666666667,
-      "commission_rate": 0.2
-    },
-    {
-      "product": "insurance",
-      "revenue": 180.0,
-      "clicks": 160,
-      "conversion_rate": 0.0375,
-      "commission_rate": 0.1
+      "product": "",
+      "revenue": 0,
+      "clicks": 0,
+      "conversion_rate": 0,
+      "commission_rate": 0
     }
   ],
   "best_partners": [],
   "best_channels": [
     {
-      "channel": "organic_search",
-      "revenue": 630.0,
-      "clicks": 660,
-      "ctr": 0.047142857142857146
-    },
-    {
-      "channel": "social",
-      "revenue": 595.0,
-      "clicks": 720,
-      "ctr": 0.045
-    },
-    {
-      "channel": "email",
-      "revenue": 360.0,
-      "clicks": 250,
-      "ctr": 0.05
-    },
-    {
-      "channel": "direct",
-      "revenue": 120.0,
-      "clicks": 120,
-      "ctr": 0.04
+      "channel": "unknown",
+      "revenue": 0.0,
+      "clicks": 0,
+      "ctr": 0.0
     }
   ],
   "high_commission_products": [
     {
-      "product": "esim",
-      "commission_rate": 0.2,
-      "revenue": 200.0
+      "product": "",
+      "commission_rate": 0,
+      "revenue": 0
     },
     {
-      "product": "insurance",
-      "commission_rate": 0.1,
-      "revenue": 180.0
-    },
-    {
-      "product": "transfers",
-      "commission_rate": 0.08,
-      "revenue": 75.0
-    },
-    {
-      "product": "car_rental",
-      "commission_rate": 0.06,
-      "revenue": 120.0
-    },
-    {
-      "product": "tours",
-      "commission_rate": 0.05,
-      "revenue": 360.0
+      "product": "",
+      "commission_rate": 0,
+      "revenue": 0
     }
   ],
   "learning_insights": [
     {
       "pattern": "高收入产品特征",
-      "description": "'hotels'产品收入最高，达到 $450.00，转化率 3.0%",
-      "recommendation": "增加'hotels'产品的曝光和推荐位置",
+      "description": "''产品收入最高，达到 $0.00，转化率 0.0%",
+      "recommendation": "增加''产品的曝光和推荐位置",
       "key_metrics": {
-        "高转化": ">3.0%",
-        "高点击": ">500次"
+        "高转化": ">0.0%",
+        "高点击": ">0次"
       }
     },
     {
       "pattern": "高佣金产品机会",
-      "description": "'esim'佣金率最高，达到 20.0%，但当前收入 $200.00",
-      "recommendation": "重点推广高佣金'esim'产品，提升流量和转化",
+      "description": "''佣金率最高，达到 0.0%，但当前收入 $0.00",
+      "recommendation": "重点推广高佣金''产品，提升流量和转化",
       "key_metrics": {
-        "高佣金": ">20.0%",
+        "高佣金": ">0.0%",
         "增长潜力": "大"
       }
     }
   ],
-  "strategy_changes": []
+  "strategy_changes": [
+    {
+      "field": "best_products",
+      "reason": "基于收入分析，更新最佳产品排名"
+    },
+    {
+      "field": "high_commission_products",
+      "reason": "基于佣金率分析，更新高佣金产品列表"
+    },
+    {
+      "field": "best_channels",
+      "reason": "基于渠道收入分析，更新最佳渠道排名"
+    }
+  ]
 }

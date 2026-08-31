@@ -1,108 +1,806 @@
 {
   "records": [
     {
-      "keyword": "china travel guide 2026",
-      "date": "2026-08-31T01:10:15.354830",
+      "type": "query",
+      "keyword": "144 china visa",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 5000,
-        "clicks": 150,
-        "ctr": 0.03,
-        "position": 8.5,
-        "search_volume": 2000,
-        "difficulty": 60
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 80.5
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 150.0,
-        "priority_score": 0.9411764705882353
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
     },
     {
-      "keyword": "144 hour visa free transit china",
-      "date": "2026-08-31T01:10:15.354855",
+      "type": "query",
+      "keyword": "144 group visa",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 3000,
-        "clicks": 120,
-        "ctr": 0.04,
-        "position": 5.2,
-        "search_volume": 1500,
-        "difficulty": 35
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 87
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 120.0,
-        "priority_score": 1.8749999999999998
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
     },
     {
-      "keyword": "best hotels in beijing",
-      "date": "2026-08-31T01:10:15.354881",
+      "type": "query",
+      "keyword": "144 hour transit visa china",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 8000,
-        "clicks": 200,
-        "ctr": 0.025,
-        "position": 12.3,
-        "search_volume": 5000,
-        "difficulty": 75
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 46.3
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 200.0,
-        "priority_score": 1.0162601626016259
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
     },
     {
-      "keyword": "china high speed rail guide",
-      "date": "2026-08-31T01:10:15.354892",
+      "type": "query",
+      "keyword": "144 hour visa",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 2000,
-        "clicks": 80,
-        "ctr": 0.04,
-        "position": 6.8,
-        "search_volume": 1000,
-        "difficulty": 40
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 87
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 80.0,
-        "priority_score": 0.8823529411764706
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
     },
     {
-      "keyword": "what to eat in chengdu",
-      "date": "2026-08-31T01:10:15.354905",
+      "type": "query",
+      "keyword": "144 hour visa beijing",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 4000,
-        "clicks": 180,
-        "ctr": 0.045,
-        "position": 4.5,
-        "search_volume": 3000,
-        "difficulty": 50
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 41
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 180.0,
-        "priority_score": 3.333333333333333
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
     },
     {
-      "keyword": "china travel insurance for foreigners",
-      "date": "2026-08-31T01:10:15.354916",
+      "type": "query",
+      "keyword": "144 hour visa china",
+      "date": "2026-08-28",
       "metrics": {
-        "impressions": 1500,
-        "clicks": 60,
-        "ctr": 0.04,
-        "position": 7.2,
-        "search_volume": 800,
-        "difficulty": 30
+        "impressions": 9,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 51.1
       },
-      "pages": [],
+      "metadata": {
+        "search_type": "web"
+      },
       "calculated": {
-        "traffic_potential": 60.0,
-        "priority_score": 0.7777777777777778
-      }
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa china cost",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 79
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa china from hong kong",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 56
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa free",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 83.5
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa free china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 69.7
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa free transit",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 9,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 67.3
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hour visa free transit in china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 66
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hours china visa",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 55
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hours china visa free",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 43
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hours visa china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 11,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 72.7
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hours visa free china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 58
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hrs visa free china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 79
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 transit visa china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 64
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 visa",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 68
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 visa free china",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 65.8
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+      "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 20,
+        "clicks": 1,
+        "ctr": 0.05,
+        "position": 21.1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 20,
+        "clicks": 1,
+        "ctr": 0.05,
+        "position": 10.6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
+      "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 75,
+        "clicks": 1,
+        "ctr": 0.01,
+        "position": 20.8
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "page": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 3,
+        "clicks": 1,
+        "ctr": 0.33,
+        "position": 13.7
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+      "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 53,
+        "clicks": 1,
+        "ctr": 0.02,
+        "position": 19.1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/",
+      "page": "https://www.chinaboundtravel.com/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 30,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 22.1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cancel/",
+      "page": "https://www.chinaboundtravel.com/cancel/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 7
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.3,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/categories/china-itinerary/",
+      "page": "https://www.chinaboundtravel.com/categories/china-itinerary/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 92
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/guilin/",
+      "page": "https://www.chinaboundtravel.com/cities/guilin/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 9
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.1,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/hangzhou/",
+      "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 22.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/xian/",
+      "page": "https://www.chinaboundtravel.com/cities/xian/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 34,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 70.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/yangshuo/",
+      "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 4
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 1.2,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/contact/",
+      "page": "https://www.chinaboundtravel.com/contact/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 14.2
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/content/",
+      "page": "https://www.chinaboundtravel.com/content/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 39.1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/disclaimer/",
+      "page": "https://www.chinaboundtravel.com/disclaimer/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 30.6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/ebook/",
+      "page": "https://www.chinaboundtravel.com/ebook/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 22
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/internet/",
+      "page": "https://www.chinaboundtravel.com/internet/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 76,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 75.2
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/",
+      "page": "https://www.chinaboundtravel.com/posts/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 9.8
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.07999999999999971,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 536,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 72.9
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
+      "date": "2026-08-28",
+      "metrics": {
+        "impressions": 9,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 8.3
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 1.5299999999999994,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-08-31T01:10:15.354927"
+  "last_updated": "2026-08-31T10:57:16.733622"
 }

@@ -229,8 +229,10 @@ def test_growth05_scope_only_allowed_objects():
                       "layouts/shortcodes/travel-faq.html",
                       "hugo.toml",
                       # auto-updated error knowledge base (weekly blog workflow)
-                      "config/error_knowledge_base.json",
-                      "config/content_governance.json"}
+                          "config/error_knowledge_base.json",
+                          "config/content_governance.json",
+                          # Joran 自动选题池（8caac0b 起随博客生成自动更新）
+                          "config/topic_pool.json"}
     forbidden = [p for p in changed
                  if p.startswith(("layouts/", "hugo.toml", "config/"))
                  and p not in allowed_layouts]
@@ -272,5 +274,14 @@ def test_growth05_scope_only_allowed_objects():
     except ImportError:
         pass
     posts_changed = [p for p in changed if p.startswith("content/posts/")]
-    extra = set(posts_changed) - allowed
+    # GROWTH-05 约束的是「实验基线 60f1c17 时已存在的正式文章」不被越权修改；
+    # 非正式目录（.archived/.audit_backup/drafts）与之后新增的路径（Joran 自动发布等）
+    # 不属于实验对象，排除在外。
+    NON_PAGE_DIRS = (".archived/", ".audit_backup/", "_draft", "drafts/", ".audit/")
+    baseline_posts = subprocess.run(
+        ["git", "ls-tree", "-r", "--name-only", "60f1c17", "content/posts"],
+        cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace").stdout.splitlines()
+    baseline_set = set(baseline_posts)
+    extra = {p for p in set(posts_changed) - allowed
+             if p in baseline_set and not any(d in p for d in NON_PAGE_DIRS)}
     assert not extra, extra

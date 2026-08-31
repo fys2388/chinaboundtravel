@@ -17,6 +17,33 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "success"
+    },
+    {
+      "run_id": "SYN004_20260831_013929",
+      "timestamp": "2026-08-31T01:39:29.435248",
+      "segments_count": 5,
+      "rules_count": 5,
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN004_20260831_014753",
+      "timestamp": "2026-08-31T01:47:53.694174",
+      "segments_count": 5,
+      "rules_count": 5,
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN004_20260831_014755",
+      "timestamp": "2026-08-31T01:47:55.750067",
+      "segments_count": 5,
+      "rules_count": 5,
+      "expected_ltv_boost": 0.05,
+      "expected_conversion_boost": 0.2,
+      "status": "success"
     }
   ],
   "version": "1.0"

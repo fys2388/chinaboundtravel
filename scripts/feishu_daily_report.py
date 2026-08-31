@@ -281,13 +281,20 @@ class FeishuDailyReporter:
             total_aff_revenue += float(data.get("nord_revenue", 0) or 0)
             total_aff_parts.append("NordVPN")
         affiliate_status = "🟢" if total_aff_revenue > 0 else ("🟡" if (tp_available or nord_available) else "⚪")
+        tp_quality_note = ""
         if tp_available:
-            tp_display = {"inits": f"{data.get('tp_inits', 0):,}", "searches": f"{data.get('tp_searches', 0):,}",
+            _tp_inits = float(data.get('tp_inits', 0) or 0)
+            _tp_clicks = float(data.get('tp_clicks', 0) or 0)
+            # 口径标注：TP inits=initiations（触达），非"展示"；触达未全量上报时避免被误读为 0 展示
+            inits_display = (f"{_tp_inits:,.0f}" if (_tp_inits > 0 or _tp_clicks == 0)
+                             else "未上报（点击>0，勿读作0展示）")
+            if _tp_inits == 0 and _tp_clicks > 0:
+                tp_quality_note = ("\n> 口径说明：TP 触达(initiations)维度未全量上报，点击为同源有效数据；"
+                                   "「未上报」≠ 0 展示")
+            tp_display = {"inits": inits_display, "searches": f"{data.get('tp_searches', 0):,}",
                           "clicks": f"{data.get('tp_clicks', 0)}", "bookings": f"{data.get('tp_bookings', 0)}",
                           "revenue": f"${data.get('tp_revenue', 0):.2f}"}
             # P1-GROWTH-28A: 同源口径校准 - 点击率只使用 TP 同源数据 (clicks/inits)
-            _tp_inits = float(data.get('tp_inits', 0) or 0)
-            _tp_clicks = float(data.get('tp_clicks', 0) or 0)
             tp_ctr = f"{_tp_clicks / _tp_inits * 100:.2f}%" if _tp_inits > 0 else "INSUFFICIENT_SAMPLE"
             tp_ctr_note = "同源 clicks/inits"
         else:
@@ -303,9 +310,17 @@ class FeishuDailyReporter:
             nord_display = {"clicks": "未接入", "conversions": "未接入", "revenue": "未接入"}
         if total_aff_revenue > 0:
             total_rev_str = f"${total_aff_revenue:.2f}（{' + '.join(total_aff_parts)}）"
+        elif tp_available or nord_available:
+            # TP/Nord 已接入但昨日无结算订单：显示真实 0，不再用 REVENUE_NOT_AVAILABLE 掩盖
+            total_rev_str = f"$0.00（{' + '.join(total_aff_parts) or '已接入渠道'}，已接入无结算订单）"
         else:
-            total_rev_str = "REVENUE_NOT_AVAILABLE（无结算佣金，不折算 $0）"
-        rev_status_line = "✅ 有真实结算佣金" if total_aff_revenue > 0 else "REVENUE_NOT_AVAILABLE（与快照口径一致，无结算佣金源，非故障）"
+            total_rev_str = "REVENUE_NOT_AVAILABLE（无接入渠道）"
+        if total_aff_revenue > 0:
+            rev_status_line = "✅ 有真实结算佣金"
+        elif tp_available or nord_available:
+            rev_status_line = "🟡 渠道已接入（LIVE），昨日无结算订单（非故障）"
+        else:
+            rev_status_line = "REVENUE_NOT_AVAILABLE（无接入渠道，与快照口径一致，非故障）"
 
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
@@ -558,12 +573,13 @@ class FeishuDailyReporter:
 🏨 **Travelpayouts（酒店/机票/门票/租车/玩乐 — 统一渠道）**
 | 指标 | 数据 |
 | --- | --- |
-| 昨日展示 | {tp_display['inits']} 次 |
+| 昨日触达(TP inits) | {tp_display['inits']} 次 |
 | 昨日搜索 | {tp_display['searches']} 次 |
 | 昨日点击 | {tp_display['clicks']} 次 |
 | 昨日订单 | {tp_display['bookings']} 单 |
 | 昨日佣金 | {tp_display['revenue']} |
 | 点击率（同源 clicks/inits） | {tp_ctr} |
+{tp_quality_note}
 
 🛡️ **NordVPN / NordPass（通过 AffiliatesCN）**
 | 指标 | 数据 |
@@ -1437,8 +1453,8 @@ class FeishuDailyReporter:
                 if "_draft" in post.name.lower() or post.name.startswith("draft"):
                     result["pending_posts"] += 1
                 
-                # 检查占位符
-                if re.search(r'#TP_[A-Z_]+#|#VPN_[A-Z_]+#|PLACEHOLDER', content, re.IGNORECASE):
+                # 检查占位符（含 Joran 图片占位符 [Image: ...] 格式）
+                if re.search(r'#TP_[A-Z_]+#|#VPN_[A-Z_]+#|PLACEHOLDER|\[\s*Image\s*:', content, re.IGNORECASE):
                     result["placeholder_articles"] += 1
                 
                 # 检查空链接

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-08-31T01:37:15.425062",
+  "last_updated": "2026-08-31T01:47:55.252002",
   "integration_id": "SYN-004",
   "personalization_enabled": true,
   "segment_rules": [
@@ -35,7 +35,7 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.107871",
+      "created_at": "2026-08-31T01:47:53.690777",
       "synergy_id": "SYN-004"
     },
     {
@@ -69,7 +69,7 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.107883",
+      "created_at": "2026-08-31T01:47:53.690794",
       "synergy_id": "SYN-004"
     },
     {
@@ -103,7 +103,7 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.107888",
+      "created_at": "2026-08-31T01:47:53.690801",
       "synergy_id": "SYN-004"
     },
     {
@@ -137,7 +137,7 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.107892",
+      "created_at": "2026-08-31T01:47:53.690806",
       "synergy_id": "SYN-004"
     },
     {
@@ -171,7 +171,7 @@
       "expected_ltv_boost": 0.05,
       "expected_conversion_boost": 0.2,
       "status": "ready",
-      "created_at": "2026-08-31T01:29:29.107896",
+      "created_at": "2026-08-31T01:47:53.690811",
       "synergy_id": "SYN-004"
     }
   ],

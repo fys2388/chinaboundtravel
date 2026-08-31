@@ -37,6 +37,14 @@ ORCHESTRATION_DIR.mkdir(parents=True, exist_ok=True)
 # 添加scripts目录到路径
 sys.path.insert(0, str(SCRIPTS_DIR))
 
+# AI Governance: Kill Switch + L0-L3 Permission Boundaries
+try:
+    from ai_governance import check_kill_switch, get_agent_permission_level, check_permission
+    GOVERNANCE_AVAILABLE = True
+except ImportError:
+    GOVERNANCE_AVAILABLE = False
+    print("  ⚠️ ai_governance module not found, running without governance checks")
+
 # 7大Agent定义
 AGENTS = {
     "seo": {
@@ -136,6 +144,9 @@ class AgentOrchestrator:
         print(f"\n{'=' * 60}")
         print(f"  运行: {agent_config['name']} ({agent_id})")
         print(f"  成熟度: {agent_config['maturity']}")
+        if GOVERNANCE_AVAILABLE:
+            plevel = get_agent_permission_level(agent_id)
+            print(f"  权限级别: {plevel}")
         print(f"  描述: {agent_config['description']}")
         print(f"{'=' * 60}")
 
@@ -169,6 +180,7 @@ class AgentOrchestrator:
                 "agent": agent_id,
                 "name": agent_config["name"],
                 "maturity": agent_config["maturity"],
+                "permission_level": get_agent_permission_level(agent_id) if GOVERNANCE_AVAILABLE else "unknown",
                 "duration_seconds": duration,
                 "return_code": result.returncode,
                 "stdout": result.stdout[-2000:] if result.stdout else "",  # 只保留最后2000字符
@@ -216,6 +228,18 @@ class AgentOrchestrator:
         if agents is None:
             agents = RUN_ORDER
 
+        # === AI Governance: Kill Switch Check ===
+        if GOVERNANCE_AVAILABLE:
+            is_safe, reason = check_kill_switch()
+            if not is_safe:
+                print("\n" + "=" * 60)
+                print("  KILL SWITCH ACTIVE - AI Agent 运行被阻止")
+                print("=" * 60)
+                print(f"  原因: {reason}")
+                print("  如需恢复运行，请在 config/ai_governance.json 中禁用 kill_switch")
+                return {"success": False, "error": "kill_switch_active", "reason": reason}
+            print("  ✅ Kill Switch: 未激活，运行允许")
+
         self.start_time = datetime.now()
 
         print("\n" + "=" * 60)
@@ -225,6 +249,13 @@ class AgentOrchestrator:
         print(f"  运行Agent数: {len(agents)}")
         print(f"  Agent列表: {', '.join(agents)}")
         print(f"  真实数据: {'是' if self.use_real_data else '否（样本数据）'}")
+
+        if GOVERNANCE_AVAILABLE:
+            print(f"\n  权限分级 (L0-L3):")
+            for aid in agents:
+                if aid in AGENTS:
+                    plevel = get_agent_permission_level(aid)
+                    print(f"    {aid:15s}: {plevel}")
 
         # 依次运行每个Agent
         for agent_id in agents:

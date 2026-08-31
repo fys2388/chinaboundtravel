@@ -15,6 +15,30 @@
       "content_plan_count": 8,
       "expected_traffic_boost": 615.0,
       "status": "success"
+    },
+    {
+      "run_id": "SYN002_20260831_013929",
+      "timestamp": "2026-08-31T01:39:29.667136",
+      "high_potential_count": 8,
+      "content_plan_count": 8,
+      "expected_traffic_boost": 615.0,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN002_20260831_014753",
+      "timestamp": "2026-08-31T01:47:53.237682",
+      "high_potential_count": 8,
+      "content_plan_count": 8,
+      "expected_traffic_boost": 615.0,
+      "status": "success"
+    },
+    {
+      "run_id": "SYN002_20260831_014755",
+      "timestamp": "2026-08-31T01:47:55.885458",
+      "high_potential_count": 8,
+      "content_plan_count": 8,
+      "expected_traffic_boost": 615.0,
+      "status": "success"
     }
   ],
   "version": "1.0"

@@ -31,7 +31,10 @@ FAKE_SA = {
 }
 
 
-def test_site_url_normalized():
+def test_site_url_normalized(monkeypatch):
+    # 模拟无凭据环境：_resolve_site_url 走纯归一化逻辑，不因开发机 .env 中的真实 GSC 凭据
+    # 把域名解析成可访问 property，保证测试确定性
+    monkeypatch.setattr(gis.GSCIndexSubmitter, "_inspect_credentials", lambda self: None)
     s = gis.GSCIndexSubmitter(site_url="https://www.chinaboundtravel.com")
     assert s.site_url == "https://www.chinaboundtravel.com/"
     s2 = gis.GSCIndexSubmitter(site_url="chinaboundtravel.com")

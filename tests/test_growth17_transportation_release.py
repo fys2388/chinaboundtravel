@@ -138,12 +138,14 @@ def test_ga4_schema_unchanged():
     assert "gtag('event', 'affiliate_click', eventParams)" in SINGLE
 
 
-def test_content_ids_57():
+def test_content_ids_audit_consistent():
     import subprocess
     proc = subprocess.run(["python", "scripts/content_id_audit.py", "audit", "--strict"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     assert "RESULT: PASS" in proc.stdout
-    assert "With content_id: 58" in proc.stdout
+    m = re.search(r"Posts scanned\s*:\s*(\d+)", proc.stdout)
+    assert m, f"cannot parse audit output: {proc.stdout}"
+    assert f"With content_id: {m.group(1)}" in proc.stdout
 
 
 def test_no_utms_added_in_post():

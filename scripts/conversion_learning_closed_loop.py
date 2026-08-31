@@ -19,6 +19,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any
 from collections import defaultdict
+sys.path.insert(0, str(Path(__file__).parent))
+from real_data_bridge import get_conversion_records
+
 
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -89,6 +92,35 @@ class ConversionLearningClosedLoop:
         print("=" * 60)
 
         new_records = []
+        # 从 real_data 读取真实数据（优先）
+        try:
+            real_records = get_conversion_records()
+            existing_ids = set()
+            for r in self.performance_history.get("records", []):
+                rid = r.get("post_id") or r.get("keyword") or r.get("page") or r.get("segment") or r.get("type") or r.get("title") or str(r)
+                existing_ids.add(rid)
+            added = 0
+            for record in real_records:
+                rid = record.get("post_id") or record.get("keyword") or record.get("page") or record.get("segment") or record.get("type") or record.get("title") or str(record)
+                if rid not in existing_ids:
+                    
+                    # 补全所有可能需要的字段（兼容 analyze 方法的硬编码字段）
+                    for _key, _default in {
+                        "type": "site_overall", "date": "",
+                        "cta_type": "", "cta_position": "", "page": ""
+                    }.items():
+                        record.setdefault(_key, _default)
+                    record.setdefault("metrics", {})
+                    record.setdefault("metadata", {})
+                    record.setdefault("calculated", {})
+                    self.performance_history.setdefault("records", []).append(record)
+                    new_records.append(record)
+                    added += 1
+            print(f"  📥 从 real_data 加载: {added} 条记录 (共 {len(real_records)} 条可用)")
+        except Exception as e:
+            print(f"  ⚠️ real_data 加载失败: {e}")
+
+
 
         # 从联盟报告提取数据
         affiliate_report = REPORTS_DIR / "revenue" / "revenue_analytics_report.json"
@@ -173,6 +205,21 @@ class ConversionLearningClosedLoop:
             return insights
 
         print(f"\n  📊 分析 {len(records)} 条转化记录...")
+
+        # 数据规范化：补全所有硬编码字段
+        for _r in records:
+            _r.setdefault("cta", {})
+            _r.setdefault("metrics", {})
+            _r.setdefault("calculated", {})
+            _r["cta"].setdefault("type", _r.get("type", "unknown"))
+            _r["cta"].setdefault("position", _r.get("page", "unknown"))
+            _r["cta"].setdefault("product", _r.get("product", "unknown"))
+            _r["cta"].setdefault("partner", _r.get("partner", "unknown"))
+            for _mk in ["impressions", "clicks", "conversions", "revenue"]:
+                _r["metrics"].setdefault(_mk, 0)
+            for _ck in ["ctr", "conversion_rate", "revenue_per_click"]:
+                _r["calculated"].setdefault(_ck, 0)
+
 
         # 按CTA类型统计
         type_stats = defaultdict(lambda: {"count": 0, "impressions": 0, "clicks": 0, "conversions": 0, "revenue": 0.0})

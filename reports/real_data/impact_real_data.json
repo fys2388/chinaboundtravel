@@ -1,0 +1,8 @@
+{
+  "status": "NO_CREDENTIALS",
+  "is_real_data": false,
+  "actions": [],
+  "clicks": [],
+  "message": "Impact API credentials not configured",
+  "fetched_at": "2026-08-31T11:22:46.949345"
+}

@@ -52,6 +52,24 @@ jobs:
           git config --global user.email "ai-agent@chinaboundtravel.com"
           git config --global pull.rebase false
 
+      - name: AI Governance Check (Kill Switch + Permissions)
+        run: |
+          echo "=== AI Governance Check ==="
+          python scripts/ai_governance.py --status
+          echo ""
+          echo "=== Kill Switch Verification ==="
+          python -c "
+          import sys; sys.path.insert(0, 'scripts')
+          from ai_governance import check_kill_switch
+          is_safe, reason = check_kill_switch()
+          if not is_safe:
+              print(f'KILL SWITCH ACTIVE: {reason}')
+              print('AI Agent execution blocked by Kill Switch.')
+              sys.exit(1)
+          print('Kill Switch: OK (not active)')
+          print('Permission boundaries: L0-L3 enforced via ai_governance module')
+          "
+
       - name: Run 7 Agents Orchestrator
         env:
           # GA4
