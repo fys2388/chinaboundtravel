@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_105716",
-  "last_updated": "2026-08-31T10:57:16.918774",
+  "version": "2.0-20260831_061810",
+  "last_updated": "2026-08-31T06:18:10.447761",
   "product_rules": {
     "priority_products": [
       "hotels",
@@ -80,18 +80,5 @@
       }
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "best_products",
-      "reason": "基于收入分析，更新最佳产品排名"
-    },
-    {
-      "field": "high_commission_products",
-      "reason": "基于佣金率分析，更新高佣金产品列表"
-    },
-    {
-      "field": "best_channels",
-      "reason": "基于渠道收入分析，更新最佳渠道排名"
-    }
-  ]
+  "strategy_changes": []
 }

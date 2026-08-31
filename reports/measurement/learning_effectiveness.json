@@ -1,16 +1,16 @@
 {
-  "validation_time": "2026-08-31T09:03:59.037364",
-  "overall_score": 0.0,
+  "validation_time": "2026-08-31T06:18:10.630297",
+  "overall_score": 21.1,
   "is_effective": false,
-  "effective_strategies": [],
-  "ineffective_strategies": [
+  "effective_strategies": [
     {
       "category": "content",
-      "improve_rate": 0.0,
-      "improved": 0,
-      "declined": 0,
+      "improve_rate": 80.0,
+      "improved": 4,
       "total": 5
-    },
+    }
+  ],
+  "ineffective_strategies": [
     {
       "category": "social",
       "improve_rate": 0.0,
@@ -29,6 +29,6 @@
   "needs_more_data": [],
   "recommendations": [
     "学习策略效果不佳，需要重新评估策略方向",
-    "低效策略需要优化: content, social, seo"
+    "低效策略需要优化: social, seo"
   ]
 }

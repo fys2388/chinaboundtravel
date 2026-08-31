@@ -1,195 +1,80 @@
 {
   "version": "1.0",
-  "last_updated": "2026-08-31T01:47:55.584827",
+  "last_updated": "2026-08-31T06:18:10.572096",
   "synergy_id": "SYN-003",
   "high_commission_products": [
     {
-      "product": "esim",
-      "commission_rate": 0.2,
-      "revenue": 200.0
+      "product": "",
+      "commission_rate": 0,
+      "revenue": 0
     },
     {
-      "product": "insurance",
-      "commission_rate": 0.1,
-      "revenue": 180.0
-    },
-    {
-      "product": "transfers",
-      "commission_rate": 0.08,
-      "revenue": 75.0
-    },
-    {
-      "product": "car_rental",
-      "commission_rate": 0.06,
-      "revenue": 120.0
-    },
-    {
-      "product": "tours",
-      "commission_rate": 0.05,
-      "revenue": 360.0
+      "product": "",
+      "commission_rate": 0,
+      "revenue": 0
     }
   ],
   "best_cta_types": [
     {
-      "type": "product_card",
-      "revenue_per_click": 1.7777777777777777,
-      "ctr": 0.075,
-      "conversion_rate": 0.08888888888888889
-    },
-    {
-      "type": "button",
-      "revenue_per_click": 0.9,
-      "ctr": 0.05,
-      "conversion_rate": 0.04
-    },
-    {
-      "type": "text_link",
-      "revenue_per_click": 0.75,
-      "ctr": 0.05,
-      "conversion_rate": 0.075
-    },
-    {
-      "type": "banner",
-      "revenue_per_click": 0.4,
-      "ctr": 0.025,
-      "conversion_rate": 0.03333333333333333
+      "type": "site_overall",
+      "revenue_per_click": 0.0,
+      "ctr": 0.0,
+      "conversion_rate": 0.0
     }
   ],
   "best_cta_positions": [
     {
-      "position": "article_bottom",
-      "ctr": 0.059375,
-      "conversion_rate": 0.06315789473684211
-    },
-    {
-      "position": "article_middle",
-      "ctr": 0.05,
-      "conversion_rate": 0.075
-    },
-    {
-      "position": "sidebar",
-      "ctr": 0.025,
-      "conversion_rate": 0.03333333333333333
+      "position": "",
+      "ctr": 0.0,
+      "conversion_rate": 0.0
     }
   ],
   "product_cta_mapping": [
     {
-      "mapping_id": "SYN003_esim",
-      "product": "esim",
-      "commission_rate": 0.2,
-      "current_revenue": 200.0,
+      "mapping_id": "SYN003_",
+      "product": "",
+      "commission_rate": 0,
+      "current_revenue": 0,
       "partner": "",
       "priority": "medium",
       "recommended_cta_types": [
-        "product_card",
-        "button"
+        "site_overall"
       ],
       "recommended_positions": [
-        "article_bottom",
-        "article_middle",
-        "sidebar"
+        ""
       ],
-      "cta_copy": "Stay connected in China — compare eSIM plans",
-      "expected_ctr_boost": 0.2,
-      "expected_revenue_boost": 0.25,
-      "status": "ready",
-      "created_at": "2026-08-31T01:47:55.584680",
-      "synergy_id": "SYN-003"
-    },
-    {
-      "mapping_id": "SYN003_insurance",
-      "product": "insurance",
-      "commission_rate": 0.1,
-      "current_revenue": 180.0,
-      "partner": "",
-      "priority": "medium",
-      "recommended_cta_types": [
-        "product_card",
-        "button"
-      ],
-      "recommended_positions": [
-        "article_bottom",
-        "article_middle",
-        "sidebar"
-      ],
-      "cta_copy": "Travel worry-free — get China travel insurance",
-      "expected_ctr_boost": 0.2,
-      "expected_revenue_boost": 0.25,
-      "status": "ready",
-      "created_at": "2026-08-31T01:47:55.584695",
-      "synergy_id": "SYN-003"
-    },
-    {
-      "mapping_id": "SYN003_transfers",
-      "product": "transfers",
-      "commission_rate": 0.08,
-      "current_revenue": 75.0,
-      "partner": "",
-      "priority": "medium",
-      "recommended_cta_types": [
-        "product_card",
-        "button"
-      ],
-      "recommended_positions": [
-        "article_bottom",
-        "article_middle"
-      ],
-      "cta_copy": "Skip the taxi line — book your airport transfer",
+      "cta_copy": "Check prices and book now",
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-08-31T01:47:55.584705",
+      "created_at": "2026-08-31T06:18:10.572061",
       "synergy_id": "SYN-003"
     },
     {
-      "mapping_id": "SYN003_car_rental",
-      "product": "car_rental",
-      "commission_rate": 0.06,
-      "current_revenue": 120.0,
+      "mapping_id": "SYN003_",
+      "product": "",
+      "commission_rate": 0,
+      "current_revenue": 0,
       "partner": "",
       "priority": "medium",
       "recommended_cta_types": [
-        "product_card",
-        "button"
+        "site_overall"
       ],
       "recommended_positions": [
-        "article_bottom",
-        "article_middle"
+        ""
       ],
-      "cta_copy": "Drive China your way — compare car rentals",
+      "cta_copy": "Check prices and book now",
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-08-31T01:47:55.584711",
-      "synergy_id": "SYN-003"
-    },
-    {
-      "mapping_id": "SYN003_tours",
-      "product": "tours",
-      "commission_rate": 0.05,
-      "current_revenue": 360.0,
-      "partner": "",
-      "priority": "medium",
-      "recommended_cta_types": [
-        "product_card",
-        "button"
-      ],
-      "recommended_positions": [
-        "article_bottom",
-        "article_middle"
-      ],
-      "cta_copy": "Skip the line — book top China tours",
-      "expected_ctr_boost": 0.1,
-      "expected_revenue_boost": 0.15,
-      "status": "ready",
-      "created_at": "2026-08-31T01:47:55.584714",
+      "created_at": "2026-08-31T06:18:10.572070",
       "synergy_id": "SYN-003"
     }
   ],
   "stats": {
-    "total_products_optimized": 5,
-    "total_cta_configs": 24,
-    "expected_ctr_boost": 0.14,
-    "expected_revenue_boost": 0.19
+    "total_products_optimized": 2,
+    "total_cta_configs": 2,
+    "expected_ctr_boost": 0.1,
+    "expected_revenue_boost": 0.15
   }
 }

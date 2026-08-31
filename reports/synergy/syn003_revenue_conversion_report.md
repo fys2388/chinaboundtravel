@@ -1,6 +1,6 @@
 # SYN-003 收入-转化协同机制报告
 
-**生成时间**: 2026-08-31 01:47:55
+**生成时间**: 2026-08-31 06:18:10
 **协同ID**: SYN-003
 **机制**: 高佣金产品自动使用最佳CTA类型和位置
 
@@ -10,12 +10,12 @@
 
 | 指标 | 数值 |
 |------|------|
-| 识别高佣金产品 | 5 个 |
-| 生成产品-CTA映射 | 5 个 |
+| 识别高佣金产品 | 2 个 |
+| 生成产品-CTA映射 | 2 个 |
 | 高优先级产品 | 0 个 |
-| 中优先级产品 | 5 个 |
-| 预期CTR提升 | 14.0% |
-| 预期收入提升 | 19.0% |
+| 中优先级产品 | 2 个 |
+| 预期CTR提升 | 10.0% |
+| 预期收入提升 | 15.0% |
 
 ---
 
@@ -23,11 +23,8 @@
 
 | 排名 | 产品 | 佣金率 | 当前收入 | 合作伙伴 | 优先级 |
 |------|------|--------|----------|----------|--------|
-| 1 | esim | 20.0% | $200.00 |  |  |
-| 2 | insurance | 10.0% | $180.00 |  |  |
-| 3 | transfers | 8.0% | $75.00 |  |  |
-| 4 | car_rental | 6.0% | $120.00 |  |  |
-| 5 | tours | 5.0% | $360.00 |  |  |
+| 1 |  | 0.0% | $0.00 |  |  |
+| 2 |  | 0.0% | $0.00 |  |  |
 
 ---
 
@@ -35,11 +32,8 @@
 
 | 产品 | 推荐CTA类型 | 推荐位置 | CTA文案 | 预期CTR提升 |
 |------|------------|----------|---------|------------|
-| esim | product_card, button | article_bottom, article_middle | Stay connected in China — comp... | +20% |
-| insurance | product_card, button | article_bottom, article_middle | Travel worry-free — get China ... | +20% |
-| transfers | product_card, button | article_bottom, article_middle | Skip the taxi line — book your... | +10% |
-| car_rental | product_card, button | article_bottom, article_middle | Drive China your way — compare... | +10% |
-| tours | product_card, button | article_bottom, article_middle | Skip the line — book top China... | +10% |
+|  | site_overall |  | Check prices and book now... | +10% |
+|  | site_overall |  | Check prices and book now... | +10% |
 
 ---
 
@@ -85,4 +79,4 @@ Revenue Agent识别高佣金产品
 ---
 
 *报告由SYN-003收入-转化协同机制自动生成*
-*生成时间: 2026-08-31 01:47:55*
+*生成时间: 2026-08-31 06:18:10*

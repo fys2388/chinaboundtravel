@@ -1,30 +1,30 @@
 {
-  "validation_time": "2026-08-31T10:38:49.707895",
-  "overall_status": "PASS",
+  "validation_time": "2026-08-31T06:18:09.743769",
+  "overall_status": "FAIL",
   "sources": {
     "ga4": {
-      "is_real_data": true,
-      "is_fresh": true,
-      "data_date": "2026-08-30",
-      "status": "OK",
-      "error": null,
-      "validation_status": "PASS"
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NOT_CONFIGURED",
+      "error": "GA4_PROPERTY_ID not set in .env or GitHub Secrets",
+      "validation_status": "FAIL"
     },
     "gsc": {
-      "is_real_data": true,
-      "is_fresh": true,
-      "data_date": "2026-08-28",
-      "status": "OK",
-      "error": null,
-      "validation_status": "PASS"
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NOT_CONFIGURED",
+      "error": "GSC_SERVICE_ACCOUNT_JSON not configured",
+      "validation_status": "FAIL"
     },
     "social": {
-      "is_real_data": true,
-      "is_fresh": true,
-      "data_date": "2026-08-31",
-      "status": "OK",
-      "error": null,
-      "validation_status": "PASS"
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NOT_CONFIGURED",
+      "error": "BUFFER_API_TOKEN_A/B not configured",
+      "validation_status": "FAIL"
     },
     "content": {
       "is_real_data": true,
@@ -33,12 +33,43 @@
       "status": "UNKNOWN",
       "error": null,
       "validation_status": "PASS"
+    },
+    "partnerize": {
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NO_CREDENTIALS",
+      "error": null,
+      "validation_status": "FAIL"
+    },
+    "impact": {
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NO_CREDENTIALS",
+      "error": null,
+      "validation_status": "FAIL"
+    },
+    "multi_partner": {
+      "is_real_data": false,
+      "is_fresh": false,
+      "data_date": null,
+      "status": "NO_CONNECTED_PARTNERS",
+      "error": null,
+      "validation_status": "FAIL"
     }
   },
   "summary": {
     "total_sources": 4,
-    "real_data_count": 4,
-    "fresh_data_count": 4,
-    "issues": []
+    "real_data_count": 1,
+    "fresh_data_count": 1,
+    "issues": [
+      "ga4: NOT_CONFIGURED - GA4_PROPERTY_ID not set in .env or GitHub Secrets",
+      "gsc: NOT_CONFIGURED - GSC_SERVICE_ACCOUNT_JSON not configured",
+      "social: NOT_CONFIGURED - BUFFER_API_TOKEN_A/B not configured",
+      "partnerize: NO_CREDENTIALS - not real data",
+      "impact: NO_CREDENTIALS - not real data",
+      "multi_partner: NO_CONNECTED_PARTNERS - not real data"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_105716",
-  "last_updated": "2026-08-31T10:57:16.625356",
+  "version": "2.0-20260831_061810",
+  "last_updated": "2026-08-31T06:18:10.314344",
   "cta_rules": {
     "positions": [
       "article_middle",
@@ -81,14 +81,5 @@
       "recommendation": "确保每篇文章在都有CTA"
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "best_cta_types",
-      "reason": "基于转化数据分析，更新最佳CTA类型排名"
-    },
-    {
-      "field": "best_cta_positions",
-      "reason": "基于转化数据分析，更新最佳CTA位置排名"
-    }
-  ]
+  "strategy_changes": []
 }

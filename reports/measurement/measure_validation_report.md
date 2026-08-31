@@ -1,9 +1,9 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-08-31 09:03:59
+**验证时间**: 2026-08-31 06:18:10
 **基线日期**: 2026-08-31
 **当前日期**: 2026-08-31
-**整体评分**: 0.0/100
+**整体评分**: 21.1/100
 **学习有效**: ❌ 否
 
 ---
@@ -14,7 +14,7 @@
 
 | 类别 | 改善指标 | 下降指标 | 不变指标 | 改善率 |
 |------|---------|---------|---------|--------|
-| CONTENT | 0 | 0 | 5 | 0.0% |
+| CONTENT | 4 | 0 | 1 | 80.0% |
 | SOCIAL | 0 | 0 | 7 | 0.0% |
 | SEO | 0 | 0 | 7 | 0.0% |
 
@@ -26,48 +26,47 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| articles_with_affiliate_links | 4 | 4 | +0.00 | +0.0% | ➖ unchanged |
-| avg_word_count | 1928 | 1928 | +0.00 | +0.0% | ➖ unchanged |
-| articles_with_internal_links | 10 | 10 | +0.00 | +0.0% | ➖ unchanged |
+| total_articles | 59 | 60 | +1.00 | +1.7% | 📈 improved |
 | articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_articles | 59 | 59 | +0.00 | +0.0% | ➖ unchanged |
+| avg_word_count | 1928 | 1930 | +2.00 | +0.1% | 📈 improved |
+| articles_with_affiliate_links | 4 | 35 | +31.00 | +775.0% | 📈 improved |
+| articles_with_internal_links | 10 | 48 | +38.00 | +380.0% | 📈 improved |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_posts | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_posts | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| average_position | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| average_position | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | ctr | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 
 ---
 
 ## ✅ 有效策略
 
-暂无显著有效策略
+- **CONTENT**: 改善率 80.0% (4/5 指标改善)
 
 ---
 
 ## ❌ 低效策略（需要优化）
 
-- **CONTENT**: 改善率 0.0% (0改善 / 0下降 / 5总计)
 - **SOCIAL**: 改善率 0.0% (0改善 / 0下降 / 7总计)
 - **SEO**: 改善率 0.0% (0改善 / 0下降 / 7总计)
 
@@ -76,7 +75,7 @@
 ## 💡 建议和下一步
 
 1. 学习策略效果不佳，需要重新评估策略方向
-2. 低效策略需要优化: content, social, seo
+2. 低效策略需要优化: social, seo
 
 ---
 
@@ -98,4 +97,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-08-31 09:03:59*
+*生成时间: 2026-08-31 06:18:10*
