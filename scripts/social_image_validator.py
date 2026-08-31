@@ -121,6 +121,7 @@ def validate_image(image_source: str, platform: str, local_dir: str = None) -> d
         "height": 0,
         "aspect_ratio": "",
         "is_remote": False,
+        "dimensions_checked": True,
     }
 
     # 1. Check existence
@@ -158,7 +159,13 @@ def validate_image(image_source: str, platform: str, local_dir: str = None) -> d
             result["issues"].append(f"download_failed:{str(e)[:40]}")
             return result
 
-    if os.path.exists(local_path):
+    # For remote URLs without local_dir, skip dimension check (only domain validation)
+    is_remote_no_download = result["is_remote"] and local_path == image_source
+
+    if is_remote_no_download:
+        # Remote URL: only domain validation was done above; dimensions not checked
+        result["dimensions_checked"] = False
+    elif os.path.exists(local_path):
         w, h = get_image_dimensions(local_path)
         result["width"] = w
         result["height"] = h
@@ -189,7 +196,7 @@ def validate_image(image_source: str, platform: str, local_dir: str = None) -> d
                 pass
         else:
             result["issues"].append("unreadable_image")
-    else:
+    elif not is_remote_no_download:
         result["issues"].append("file_not_found")
 
     # Clean up downloaded temp file
