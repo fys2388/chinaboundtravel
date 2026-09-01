@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """收集运营看板所需的全部真实数据，输出 dashboard_data.json"""
 import json, sys, os, time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -42,7 +42,7 @@ def parse_cron_freq(cron_expr):
     return "定时"
 
 
-data = {"generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "site": {}, "workflows": [], "agents": {}, "experiments": [], "metrics": {}, "data_sources": []}
+data = {"generated_at": (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S"), "site": {}, "workflows": [], "agents": {}, "experiments": [], "metrics": {}, "data_sources": []}
 
 # 1. 网站状态
 try:
