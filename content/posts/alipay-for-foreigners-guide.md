@@ -33,8 +33,6 @@ ShowToc: true
 TocOpen: false
 categories: ["payment", "visa"]
 last_updated: "2026-08-24"
-cover:
-  image: "/img/china-dest/general/alipay-for-foreigners-guide.jpg"
 
 ---
 {{< content-timestamp >}}

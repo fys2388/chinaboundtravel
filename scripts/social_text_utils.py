@@ -287,7 +287,7 @@ PROMPT_HINT_RE = re.compile(
     re.IGNORECASE,
 )
 LEGACY_PERSONA_RE = re.compile(
-    r"(Hey,?\s+[A-Z][a-z]+(?:\s+Here)?|you're in [A-Z]|Like a Local\b|I'll be honest with you)",
+    r"(\bHey,?\s+[A-Z][a-z]+(?:\s+Here)?\b|you're in [A-Z]|Like a Local\b|I'll be honest with you)",
     re.IGNORECASE,
 )
 # frontmatter/YAML 键值残留（正文里出现 'title: "..."' / 'description: "..."' 等）
