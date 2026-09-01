@@ -1,0 +1,435 @@
+{
+  "generated_at": "2026-09-01 14:46:23",
+  "site": {
+    "url": "chinaboundtravel.com",
+    "status": 200,
+    "up": true,
+    "response_ms": 515,
+    "server": "cloudflare"
+  },
+  "workflows": [
+    {
+      "file": "affiliate-gap-audit.yml",
+      "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
+      "id": "affiliate-gap-audit",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "ai-agent-orchestrator.yml",
+      "name": "AI Agent Orchestrator - 7 Agents Weekly Run",
+      "id": "ai-agent-orchestrator",
+      "last_status": "success",
+      "last_run": "2026-08-31T07:13:15Z",
+      "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "clear-buffer-batch.yml",
+      "name": "Clear Scheduled Buffer Batch",
+      "id": "clear-buffer-batch",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "content-quality-audit.yml",
+      "name": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "id": "content-quality-audit",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "content-rotation.yml",
+      "name": "Content Rotation Distributor",
+      "id": "content-rotation",
+      "last_status": "success",
+      "last_run": "2026-08-31T19:45:09Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "cross-agent-learning-daily.yml",
+      "name": "Cross-Agent Learning Daily",
+      "id": "cross-agent-learning-daily",
+      "last_status": "success",
+      "last_run": "2026-09-01T03:56:35Z",
+      "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "cross-agent-learning-weekly.yml",
+      "name": "Cross-Agent Learning Weekly",
+      "id": "cross-agent-learning-weekly",
+      "last_status": "success",
+      "last_run": "2026-08-31T06:52:01Z",
+      "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "deploy-buffer-worker.yml",
+      "name": "Deploy Buffer Worker",
+      "id": "deploy-buffer-worker",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "deploy-cloudflare-pages.yml",
+      "name": "deploy-cloudflare-pages",
+      "id": "deploy-cloudflare-pages",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "env-check.yml",
+      "name": "Environment Check",
+      "id": "env-check",
+      "last_status": "success",
+      "last_run": "2026-09-01T02:07:46Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "error-alert.yml",
+      "name": "Error Alert",
+      "id": "error-alert",
+      "last_status": "skipped",
+      "last_run": "2026-08-31T21:51:25Z",
+      "last_event": "workflow_run"
+    },
+    {
+      "file": "feishu-daily-report.yml",
+      "name": "feishu-daily-report",
+      "id": "feishu-daily-report",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "gsc-index-submit.yml",
+      "name": "GSC Index Submit (2.0)",
+      "id": "gsc-index-submit",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "health-check.yml",
+      "name": "Daily Health Check",
+      "id": "health-check",
+      "last_status": "success",
+      "last_run": "2026-09-01T06:01:14Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "manual-deploy.yml",
+      "name": "Manual Deploy to Cloudflare Pages",
+      "id": "manual-deploy",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "monthly-ebook-update.yml",
+      "name": "Monthly Ebook Guide Update",
+      "id": "monthly-ebook-update",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "monthly-report.yml",
+      "name": "monthly-report",
+      "id": "monthly-report",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "purge-cache.yml",
+      "name": "Purge Cloudflare Cache",
+      "id": "purge-cache",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "quarterly-report.yml",
+      "name": "quarterly-report",
+      "id": "quarterly-report",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "retry-failed.yml",
+      "name": "Retry Failed Jobs",
+      "id": "retry-failed",
+      "last_status": "skipped",
+      "last_run": "2026-08-31T21:51:25Z",
+      "last_event": "workflow_run"
+    },
+    {
+      "file": "seo-audit.yml",
+      "name": "SEO Audit (2.0 SEO综合审计)",
+      "id": "seo-audit",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "seo-opportunity.yml",
+      "name": "SEO Opportunity Detector (2.0 SEO优化机会检测)",
+      "id": "seo-opportunity",
+      "last_status": "success",
+      "last_run": "2026-08-31T12:56:06Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "snapshot-daily-refresh.yml",
+      "name": "Snapshot Daily Refresh (2.0 KPI)",
+      "id": "snapshot-daily-refresh",
+      "last_status": "success",
+      "last_run": "2026-09-01T05:24:38Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "social-backfill.yml",
+      "name": "Social Backfill (2.0 社媒补位)",
+      "id": "social-backfill",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "social-engine-daily.yml",
+      "name": "Social Engine Daily (闭环)",
+      "id": "social-engine-daily",
+      "last_status": "success",
+      "last_run": "2026-09-01T06:09:56Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "social_distributor.yml",
+      "name": "Social Media Distributor",
+      "id": "social_distributor",
+      "last_status": "success",
+      "last_run": "2026-08-31T21:51:05Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "weekly-blog-update.yml",
+      "name": "weekly-blog-update",
+      "id": "weekly-blog-update",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "weekly-report.yml",
+      "name": "weekly-report",
+      "id": "weekly-report",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "yearly-report.yml",
+      "name": "yearly-report",
+      "id": "yearly-report",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "youtube-auto-publish.yml",
+      "name": "YouTube Auto Publish",
+      "id": "youtube-auto-publish",
+      "last_status": "success",
+      "last_run": "2026-08-31T09:12:51Z",
+      "last_event": "schedule"
+    }
+  ],
+  "agents": {
+    "checked_at": "2026-09-01 14:46",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-08-31 07:13:33",
+      "success": 7,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-08-31",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-08-31",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-08-31",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-08-31",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-01",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-01",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-08-31",
+        "max_age_days": 8
+      }
+    ],
+    "healthy_count": 7,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "experiments": [
+    {
+      "id": "REV001",
+      "name": "REV001 Food Delivery + Airalo",
+      "status": "RUNNING",
+      "days": 1,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "Chinese Food Delivery: Meituan & Ele.me ",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "REV002",
+      "name": "REV002 Transportation + Trip.com",
+      "status": "RUNNING",
+      "days": null,
+      "sample": null,
+      "page": "China Transportation Guide",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "REV003",
+      "name": "REV003 CTA copy variant (Transportation)",
+      "status": "PENDING",
+      "days": null,
+      "sample": null,
+      "page": "China Transportation Guide",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "DRIVE-001",
+      "name": "DRIVE-001 site-wide Drive",
+      "status": "RUNNING",
+      "days": 1,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "Site-wide Travelpayouts Drive",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "GROWTH05-CTR-001",
+      "name": "GROWTH-05 144-Hour Visa CTR",
+      "status": "RUNNING",
+      "days": 0,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "144-Hour Visa",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "GROWTH07B-TECH-001",
+      "name": "High-Speed Rail index recovery",
+      "status": "WAITING_RECRAWL",
+      "days": 0,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "High-Speed Rail Booking",
+      "start": "2026-08-16"
+    },
+    {
+      "id": "GROWTH07C-INDEX-001",
+      "name": "WeChat Pay index recovery",
+      "status": "WAITING_RECRAWL",
+      "days": 0,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "WeChat Pay Weak",
+      "start": "2026-08-16"
+    }
+  ],
+  "metrics": {
+    "ga4": {
+      "status": "OK",
+      "visitors": 0,
+      "sessions": 0,
+      "pageviews": 0,
+      "date": ""
+    },
+    "gsc": {
+      "status": "OK",
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0
+    },
+    "mailerlite": {
+      "total": 0,
+      "new": 0
+    }
+  },
+  "data_sources": [
+    {
+      "name": "GA4",
+      "configured": true,
+      "status": "OK"
+    },
+    {
+      "name": "GSC",
+      "configured": true,
+      "status": "OK"
+    },
+    {
+      "name": "Travelpayouts",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "NordVPN",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "MailerLite",
+      "configured": true,
+      "status": "configured"
+    },
+    {
+      "name": "Buffer",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "Cloudflare",
+      "configured": true,
+      "status": "ok"
+    }
+  ],
+  "kill_switch": {
+    "active": false,
+    "reason": "OK"
+  }
+}
