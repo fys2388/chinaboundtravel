@@ -1,7 +1,7 @@
 # 数据真实性和新鲜度验证报告
 
-**验证时间**: 2026-09-01 10:41:23
-**整体状态**: PARTIAL
+**验证时间**: 2026-09-01 14:55:16
+**整体状态**: PASS
 
 ---
 
@@ -11,7 +11,7 @@
 |--------|---------|--------|---------|---------|---------|
 | GA4 | ✅ | ✅ | 2026-08-31 | OK | PASS |
 | GSC | ✅ | ✅ | 2026-08-29 | OK | PASS |
-| SOCIAL | ❌ | ❌ | None | PARTIAL_ERROR | FAIL |
+| SOCIAL | ✅ | ✅ | 2026-09-01 | OK | PASS |
 | CONTENT | ✅ | ✅ | 2026-09-01 | UNKNOWN | PASS |
 | PARTNERIZE | ❌ | ❌ | None | NO_CREDENTIALS | FAIL |
 | IMPACT | ❌ | ❌ | None | NO_CREDENTIALS | FAIL |
@@ -21,18 +21,17 @@
 
 ## 统计
 
-- 真实数据源: 3/4
-- 新鲜数据源: 3/4
-- 问题数: 4
+- 真实数据源: 4/4
+- 新鲜数据源: 4/4
+- 问题数: 3
 
 ---
 
 ## 问题清单
 
-1. social: PARTIAL_ERROR - Account A: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256); Account B: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
-2. partnerize: NO_CREDENTIALS - not real data
-3. impact: NO_CREDENTIALS - not real data
-4. multi_partner: NO_CONNECTED_PARTNERS - not real data
+1. partnerize: NO_CREDENTIALS - not real data
+2. impact: NO_CREDENTIALS - not real data
+3. multi_partner: NO_CONNECTED_PARTNERS - not real data
 
 ---
 
@@ -45,4 +44,4 @@
 ---
 
 *报告由真实数据拉取引擎 v2.1 自动生成*
-*生成时间: 2026-09-01 10:41:23*
+*生成时间: 2026-09-01 14:55:16*

@@ -1,6 +1,6 @@
 {
-  "validation_time": "2026-09-01T10:41:23.889725",
-  "overall_status": "PARTIAL",
+  "validation_time": "2026-09-01T14:55:16.348242",
+  "overall_status": "PASS",
   "sources": {
     "ga4": {
       "is_real_data": true,
@@ -19,12 +19,12 @@
       "validation_status": "PASS"
     },
     "social": {
-      "is_real_data": false,
-      "is_fresh": false,
-      "data_date": null,
-      "status": "PARTIAL_ERROR",
-      "error": "Account A: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256); Account B: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256)",
-      "validation_status": "FAIL"
+      "is_real_data": true,
+      "is_fresh": true,
+      "data_date": "2026-09-01",
+      "status": "OK",
+      "error": null,
+      "validation_status": "PASS"
     },
     "content": {
       "is_real_data": true,
@@ -61,10 +61,9 @@
   },
   "summary": {
     "total_sources": 4,
-    "real_data_count": 3,
-    "fresh_data_count": 3,
+    "real_data_count": 4,
+    "fresh_data_count": 4,
     "issues": [
-      "social: PARTIAL_ERROR - Account A: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256); Account B: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256)",
       "partnerize: NO_CREDENTIALS - not real data",
       "impact: NO_CREDENTIALS - not real data",
       "multi_partner: NO_CONNECTED_PARTNERS - not real data"
