@@ -222,8 +222,27 @@ export default {
   async scheduled(event, env, ctx) {
     console.log(`[Cron] Triggered at ${new Date(event.scheduledTime).toISOString()}`);
     
-    // 每日EST08:00处理重试队列
+    // 处理重试队列
     await processRetryQueue(env);
+    
+    // 触发 Ops Dashboard 刷新（GitHub Actions schedule 不稳定，用 Worker Cron 兜底）
+    if (env.GITHUB_TOKEN && env.DASHBOARD_WORKFLOW_ID) {
+      try {
+        const repo = env.GITHUB_REPO || 'fys2388/chinaboundtravel';
+        const resp = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${env.DASHBOARD_WORKFLOW_ID}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
+            'Content-Type': 'application/json',
+            'User-Agent': 'buffer-worker-cron'
+          },
+          body: JSON.stringify({ ref: 'main' })
+        });
+        console.log(`[Dashboard] Trigger result: ${resp.status}`);
+      } catch (e) {
+        console.error(`[Dashboard] Trigger failed: ${e.message}`);
+      }
+    }
     
     return new Response('Cron executed');
   }
