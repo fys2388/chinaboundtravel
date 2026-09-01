@@ -39,6 +39,7 @@ BLOG_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
 import okr_utils
 import report_advice
+from agent_health_monitor import check_health as check_agent_health, format_feishu_block as format_agent_health
 
 # 加载 .env 文件
 try:
@@ -453,6 +454,7 @@ class FeishuDailyReporter:
         # ===== 6. 自动化运维状态 =====
         gh_blog = data.get("gh_blog_success")
         gh_report = data.get("gh_report_success")
+        agent_health_block = format_agent_health(data["agent_health"]) if data.get("agent_health") else "🤖 AI Agent 健康: ⚠️ 监控不可用"
         blog_icon = "✅" if gh_blog == True else ("❌" if gh_blog == False else "⚪")
         report_icon = "✅" if gh_report == True else ("❌" if gh_report == False else "⚪")
         ci_token_missing = not os.environ.get("GITHUB_TOKEN")
@@ -629,6 +631,8 @@ class FeishuDailyReporter:
 | --- | --- |
 | 博客自动生成（Hugo） | {blog_icon} {blog_state} |
 | 日报自动推送（Feishu） | {report_icon} {report_state} |
+
+{agent_health_block}
 
 🟢 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
                     }
@@ -895,6 +899,14 @@ class FeishuDailyReporter:
                 data.setdefault("data_status", []).append(_social_alert)
                 print(f"   ⚠️ {_social_alert}")
         
+
+        # 7.5 AI Agent 健康监控
+        try:
+            data["agent_health"] = check_agent_health()
+            print(f"   ✅ Agent健康: {data['agent_health']['overall']} ({data['agent_health']['healthy_count']}/7正常)")
+        except Exception as e:
+            print(f"   ⚠️ Agent健康监控失败: {e}")
+            data["agent_health"] = None
 
         # 8. 统计总问题数和总佣金
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]
