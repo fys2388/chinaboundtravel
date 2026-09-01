@@ -162,7 +162,7 @@ def _get_ga4_access_token() -> Optional[str]:
         return None
 
 
-def pull_ga4_data(days: int = 28) -> Dict:
+def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
     """直接调用 GA4 Data API 拉取真实流量数据"""
     print("\n" + "=" * 60)
     print("  拉取GA4真实数据（API直连）")
@@ -188,7 +188,7 @@ def pull_ga4_data(days: int = 28) -> Dict:
         result["status"] = "NOT_CONFIGURED"
         result["error"] = "GA4_PROPERTY_ID not set in .env or GitHub Secrets"
         print("  GA4_PROPERTY_ID 未配置，跳过 API 调用")
-        _save_json(GA4_REAL_DATA, result)
+        if save: _save_json(GA4_REAL_DATA, result)
         return result
 
     token = _get_ga4_access_token()
@@ -196,7 +196,7 @@ def pull_ga4_data(days: int = 28) -> Dict:
         result["status"] = "AUTH_FAILED"
         result["error"] = "Failed to obtain GA4 access token from service account"
         print("  GA4 access token 获取失败")
-        _save_json(GA4_REAL_DATA, result)
+        if save: _save_json(GA4_REAL_DATA, result)
         return result
 
     end_date = date.today() - timedelta(days=1)  # GA4 数据延迟1天
@@ -228,7 +228,7 @@ def pull_ga4_data(days: int = 28) -> Dict:
             result["status"] = "API_ERROR"
             result["error"] = f"HTTP {resp.status_code}: {resp.text[:500]}"
             print(f"  GA4 API 错误: HTTP {resp.status_code}")
-            _save_json(GA4_REAL_DATA, result)
+            if save: _save_json(GA4_REAL_DATA, result)
             return result
 
         data = resp.json()
@@ -329,7 +329,7 @@ def pull_ga4_data(days: int = 28) -> Dict:
         except Exception as e:
             print(f"  GA4 traffic sources 跳过: {e}")
 
-    _save_json(GA4_REAL_DATA, result)
+    if save: _save_json(GA4_REAL_DATA, result)
     return result
 
 
@@ -337,7 +337,7 @@ def pull_ga4_data(days: int = 28) -> Dict:
 # GSC 数据拉取（Search Console API 直连）
 # ============================================================
 
-def pull_gsc_data(days: int = 28) -> Dict:
+def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
     """直接调用 Search Console REST API 拉取真实搜索数据。
 
     使用 requests 直接调用 REST API，绕过 googleapiclient 的超时问题。
@@ -367,7 +367,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
         result["status"] = "IMPORT_ERROR"
         result["error"] = str(e)
         print(f"  gsc_utils 导入失败: {e}")
-        _save_json(GSC_REAL_DATA, result)
+        if save: _save_json(GSC_REAL_DATA, result)
         return result
 
     info = load_service_account_info()
@@ -375,7 +375,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
         result["status"] = "NOT_CONFIGURED"
         result["error"] = "GSC_SERVICE_ACCOUNT_JSON not configured"
         print("  GSC service account 未配置")
-        _save_json(GSC_REAL_DATA, result)
+        if save: _save_json(GSC_REAL_DATA, result)
         return result
 
     creds = build_credentials(info)
@@ -383,7 +383,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
         result["status"] = "AUTH_FAILED"
         result["error"] = "Failed to build/refresh GSC credentials"
         print("  GSC credentials 构建或refresh失败")
-        _save_json(GSC_REAL_DATA, result)
+        if save: _save_json(GSC_REAL_DATA, result)
         return result
 
     site_url = normalize_site_url(get_site_url())
@@ -400,7 +400,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
             result["status"] = "SITE_ACCESS_ERROR"
             result["error"] = f"sites.list HTTP {verify_resp.status_code}: {verify_resp.text[:300]}"
             print(f"  GSC sites.list 错误: HTTP {verify_resp.status_code}")
-            _save_json(GSC_REAL_DATA, result)
+            if save: _save_json(GSC_REAL_DATA, result)
             return result
 
         sites_data = verify_resp.json()
@@ -421,7 +421,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
             )
             print(f"  GSC 站点访问被拒绝: {site_url}")
             print(f"  可访问站点: {accessible_list}")
-            _save_json(GSC_REAL_DATA, result)
+            if save: _save_json(GSC_REAL_DATA, result)
             return result
 
         print(f"  GSC 站点访问确认: {site_url} (共 {len(accessible_sites)} 个可访问站点)")
@@ -429,7 +429,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
         result["status"] = "VERIFY_ERROR"
         result["error"] = str(e)
         print(f"  GSC 站点验证异常: {e}")
-        _save_json(GSC_REAL_DATA, result)
+        if save: _save_json(GSC_REAL_DATA, result)
         return result
 
     # GSC 数据延迟约3天
@@ -456,7 +456,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
             result["status"] = "API_ERROR"
             result["error"] = f"HTTP {resp.status_code}: {resp.text[:500]}"
             print(f"  GSC API 错误: HTTP {resp.status_code}")
-            _save_json(GSC_REAL_DATA, result)
+            if save: _save_json(GSC_REAL_DATA, result)
             return result
 
         data = resp.json()
@@ -497,7 +497,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
         result["status"] = "API_EXCEPTION"
         result["error"] = str(e)
         print(f"  GSC API 异常: {e}")
-        _save_json(GSC_REAL_DATA, result)
+        if save: _save_json(GSC_REAL_DATA, result)
         return result
 
     # 2. Top Pages (按 page 维度)
@@ -534,7 +534,7 @@ def pull_gsc_data(days: int = 28) -> Dict:
     except Exception:
         pass
 
-    _save_json(GSC_REAL_DATA, result)
+    if save: _save_json(GSC_REAL_DATA, result)
     return result
 
 

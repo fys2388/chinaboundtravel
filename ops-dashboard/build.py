@@ -54,7 +54,7 @@ for cat, wfs in sorted(categories.items()):
         run_time = w.get("last_run", "")[:10] if w.get("last_run") else "-"
         wf_items += f'''<div class="wf-item" title="{w["name"]} — {lbl}">
           <span class="wf-dot" style="background:{c};box-shadow:0 0 6px {c}66"></span>
-          <span class="wf-name">{w["name"][:38]}</span>
+          <span class="wf-name">{w["name"][:30]}</span><span class="wf-freq">{w.get("frequency","手动")}</span>
           <span class="wf-time">{run_time}</span>
         </div>'''
     wf_cats_html += f'''<div class="wf-cat">
@@ -89,8 +89,8 @@ for ds in data["data_sources"]:
       <span>{ds["name"]}</span>
     </div>'''
 
-ga4 = data["metrics"].get("ga4", {})
-gsc = data["metrics"].get("gsc", {})
+ga4 = data["metrics"].get("ga4_daily", data["metrics"].get("ga4", {}))
+gsc = data["metrics"].get("gsc_daily", data["metrics"].get("gsc", {}))
 content = data["metrics"].get("content", {})
 
 site = data["site"]
@@ -222,6 +222,7 @@ body {{
 .wf-dot {{ width:7px; height:7px; border-radius:50%; flex-shrink:0; }}
 .wf-name {{ color:var(--text2); flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
 .wf-time {{ color:var(--text4); font-size:10px; font-variant-numeric:tabular-nums; }}
+.wf-freq {{ font-size:9px; color:var(--accent); background:rgba(0,212,255,0.1); padding:1px 5px; border-radius:3px; margin-left:4px; flex-shrink:0; }}
 
 /* Agent 卡片 */
 .agent-grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px; }}
@@ -311,12 +312,12 @@ body {{
   <!-- KPI -->
   <div class="kpi-grid">
     <div class="kpi k1">
-      <div class="kpi-label">访客 · 28天累计</div>
+      <div class="kpi-label">访客 · 昨日</div>
       <div class="kpi-value">{ga4.get("visitors","-")}</div>
       <div class="kpi-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览 · {ga4.get("date","")}</div>
     </div>
     <div class="kpi k2">
-      <div class="kpi-label">GSC 曝光 · 28天</div>
+      <div class="kpi-label">GSC 曝光 · 昨日</div>
       <div class="kpi-value">{gsc.get("impressions","-")}</div>
       <div class="kpi-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}% · {gsc.get("date","")}</div>
     </div>
