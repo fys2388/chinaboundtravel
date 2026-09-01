@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 18:18:08",
+  "generated_at": "2026-09-01 20:54:01",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 219,
+    "response_ms": 231,
     "server": "cloudflare"
   },
   "workflows": [
@@ -59,8 +59,8 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-01T03:56:35Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-01T10:41:06Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-01T07:31:06Z",
+      "last_run": "2026-09-01T12:45:54Z",
       "last_event": "workflow_run"
     },
     {
@@ -148,9 +148,9 @@
       "name": "Monthly Ebook Guide Update",
       "id": "monthly-ebook-update",
       "frequency": "每月",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "failure",
+      "last_run": "2026-09-01T11:29:03Z",
+      "last_event": "schedule"
     },
     {
       "file": "monthly-report.yml",
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-daily",
       "frequency": "每时",
       "last_status": "",
-      "last_run": "2026-09-01T10:17:57Z",
+      "last_run": "2026-09-01T12:53:49Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -211,9 +211,9 @@
       "name": "SEO Opportunity Detector (2.0 SEO优化机会检测)",
       "id": "seo-opportunity",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-08-31T12:56:06Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "snapshot-daily-refresh.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 10:18",
+    "checked_at": "2026-09-01 12:54",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -413,9 +413,9 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 223,
-      "sessions": 273,
-      "pageviews": 624,
+      "visitors": 226,
+      "sessions": 276,
+      "pageviews": 633,
       "date": "2026-08-31"
     },
     "gsc_28d": {
