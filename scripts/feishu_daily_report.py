@@ -561,12 +561,16 @@ class FeishuDailyReporter:
                 },
                 {"tag": "hr"},
                 
-                # === 4. 联盟变现数据 ===
+                # === 4. 实验与阻塞 ===
+                ({"tag": "div", "text": {"tag": "lark_md", "content": self._build_experiments_block(data)}} if data.get("reporting_snapshot") else None),
+                {"tag": "hr"},
+
+                # === 5. 联盟变现数据 ===
                 {
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**💰 4. 联盟变现数据（{report_date}）** {affiliate_status}
+                        "content": f"""**💰 5. 联盟变现数据（{report_date}）** {affiliate_status}
 
 💰 **收入状态**: {rev_status_line}
 
@@ -602,7 +606,7 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**📧 5. 邮件订阅（MailerLite）**
+                        "content": f"""**📧 6. 邮件订阅（MailerLite）**
 
 | 指标 | 数据 |
 | --- | --- |
@@ -619,7 +623,7 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**⚙️ 6. 自动化运维状态**
+                        "content": f"""**⚙️ 7. 自动化运维状态**
 
 | 工作流 | 状态 |
 | --- | --- |
@@ -636,7 +640,7 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**📌 今日高优先级待办**
+                        "content": f"""**📌 8. 今日高优先级待办**
 
 {todos_str}"""
                     }
@@ -659,6 +663,59 @@ class FeishuDailyReporter:
         
         return card
     
+    def _build_experiments_block(self, data: dict) -> str:
+        """构建实验与阻塞板块（2.0 G域 + 关键blocker）"""
+        # 直接读原始快照（load_reporting_snapshot 返回扁平化结构，不含experiments列表）
+        try:
+            raw = json.loads(SNAPSHOT_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return ""
+        domains = raw.get("domains", {})
+        exp_domain = domains.get("experiments", {})
+        experiments = exp_domain.get("experiments", []) if isinstance(exp_domain, dict) else []
+        if not experiments:
+            return ""
+        running = [e for e in experiments if e.get("status") == "RUNNING"]
+        waiting = [e for e in experiments if e.get("status") == "WAITING_RECRAWL"]
+        pending = [e for e in experiments if e.get("status") == "PENDING"]
+        lines = [f"**🧪 4. 实验与阻塞** | 在跑 {len(running)} | 待重爬 {len(waiting)} | 待启动 {len(pending)}", ""]
+        lines.append("| ID | 实验名称 | 状态 | 观察 | 样本 |")
+        lines.append("| --- | --- | --- | --- | --- |")
+        icon_map = {"RUNNING": "🔄", "WAITING_RECRAWL": "⏳", "PENDING": "📋", "WIN": "✅", "LOSE": "❌"}
+        for e in experiments[:6]:
+            eid = e.get("experiment_id", "?")
+            name = (e.get("display_name") or eid)[:28]
+            st = e.get("status", "?")
+            icon = icon_map.get(st, "❓")
+            days = e.get("observation_days")
+            days_str = f"{days}d" if days is not None else "-"
+            samp = e.get("sample_status", "-")
+            samp_short = "不足" if samp == "INSUFFICIENT_SAMPLE" else (samp or "-")[:8]
+            lines.append(f"| {eid} | {name} | {icon} {st} | {days_str} | {samp_short} |")
+        blockers = []
+        if waiting:
+            blockers.append(f"⏳ 等待重爬: {', '.join(e.get('experiment_id','') for e in waiting)}")
+        ca_kpis = (domains.get("content_assets", {}) or {}).get("kpis", [])
+        for k in ca_kpis:
+            if k.get("name") == "canonical_conflicts":
+                val = k.get("value")
+                if isinstance(val, (int, float)) and val > 0:
+                    blockers.append(f"⚠️ canonical冲突: {int(val)} 处 HIGH")
+                elif isinstance(val, str) and val not in ("0", "NULL", "None", ""):
+                    blockers.append(f"⚠️ canonical冲突: {val}")
+        ops_kpis = (domains.get("operations", {}) or {}).get("kpis", [])
+        for k in ops_kpis:
+            if k.get("name") == "backup_rollback" and (k.get("value") is None or k.get("status") == "NOT_AVAILABLE"):
+                blockers.append("🗄️ 备份回滚: 未配置")
+        if blockers:
+            lines.append("")
+            lines.append("**🚧 关键阻塞**")
+            for b in blockers:
+                lines.append(f"- {b}")
+        lines.append("")
+        lines.append("> 评审gate: REV001/REV002/DRIVE-001 观察期至 2026-09-13，样本不足前不做判定")
+        return "\n".join(lines)
+
     def _build_status_message(self, data: dict) -> str:
         """构建数据状态提示信息"""
         status_list = data.get("data_status", [])
