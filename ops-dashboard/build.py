@@ -44,13 +44,13 @@ for a in data["agents"].get("agents", []):
 # Workflow 分类
 wf_cats_html = ""
 for cat, wfs in sorted(categories.items()):
-    ok = sum(1 for w in wfs if w["last_status"] == "success")
-    fail = sum(1 for w in wfs if w["last_status"] == "failure")
+    ok = sum(1 for w in wfs if w.get("last_status") == "success")
+    fail = sum(1 for w in wfs if w.get("last_status") == "failure")
     cat_color = "#22c55e" if fail == 0 else "#ef4444"
     wf_items = ""
     for w in wfs:
-        c = status_color.get(w["last_status"], "#374151")
-        lbl = status_label.get(w["last_status"], w["last_status"])
+        c = status_color.get(w.get("last_status", "unknown"), "#374151")
+        lbl = status_label.get(w.get("last_status", "unknown"), w.get("last_status", "unknown"))
         run_time = w.get("last_run", "")[:10] if w.get("last_run") else "-"
         wf_items += f'''<div class="wf-item" title="{w["name"]} — {lbl}">
           <span class="wf-dot" style="background:{c};box-shadow:0 0 6px {c}66"></span>
@@ -102,8 +102,8 @@ kill_color = "#ef4444" if kill_active else "#22c55e"
 
 # 统计
 total_wf = len(data["workflows"])
-ok_wf = sum(1 for w in data["workflows"] if w["last_status"] == "success")
-fail_wf = sum(1 for w in data["workflows"] if w["last_status"] == "failure")
+ok_wf = sum(1 for w in data["workflows"] if w.get("last_status") == "success")
+fail_wf = sum(1 for w in data["workflows"] if w.get("last_status") == "failure")
 running_exp = sum(1 for e in data["experiments"] if e["status"] == "RUNNING")
 waiting_exp = sum(1 for e in data["experiments"] if e["status"] == "WAITING_RECRAWL")
 pending_exp = sum(1 for e in data["experiments"] if e["status"] == "PENDING")
