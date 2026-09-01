@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 15:29:13",
+  "generated_at": "2026-09-01 10:01:13",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 535,
+    "response_ms": 382,
     "server": "cloudflare"
   },
   "workflows": [
@@ -22,9 +22,9 @@
       "name": "AI Agent Orchestrator - 7 Agents Weekly Run",
       "id": "ai-agent-orchestrator",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-08-31T07:13:15Z",
-      "last_event": "workflow_dispatch"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "clear-buffer-batch.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-01T07:20:52Z",
+      "last_run": "2026-09-01T07:31:06Z",
       "last_event": "workflow_run"
     },
     {
@@ -121,9 +121,9 @@
       "name": "GSC Index Submit (2.0)",
       "id": "gsc-index-submit",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-01T07:35:49Z",
+      "last_event": "schedule"
     },
     {
       "file": "health-check.yml",
@@ -166,9 +166,9 @@
       "name": "Ops Dashboard Hourly Refresh",
       "id": "ops-dashboard-daily",
       "frequency": "每时",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "",
+      "last_run": "2026-09-01T10:01:01Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 15:29",
+    "checked_at": "2026-09-01 10:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -302,25 +302,25 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
@@ -338,7 +338,7 @@
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       }
     ],
