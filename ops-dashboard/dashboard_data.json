@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 10:10:28",
+  "generated_at": "2026-09-01 10:10:54",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 139,
+    "response_ms": 122,
     "server": "cloudflare"
   },
   "workflows": [
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-daily",
       "frequency": "每时",
       "last_status": "",
-      "last_run": "2026-09-01T10:10:17Z",
+      "last_run": "2026-09-01T10:10:39Z",
       "last_event": "workflow_dispatch"
     },
     {
