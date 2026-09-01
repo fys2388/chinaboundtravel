@@ -2,7 +2,7 @@ name: Ops Dashboard Hourly Refresh
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时整点运行 (UTC)
+    - cron: '3 * * * *'
   workflow_dispatch:
 
 concurrency:
