@@ -308,7 +308,7 @@ body {{
       </div>
       <div class="update-time">
         数据更新 <strong>{data["generated_at"]}</strong><br>
-        每小时自动同步
+        每日9:00-次日2:00整点更新
       </div>
     </div>
   </div>
