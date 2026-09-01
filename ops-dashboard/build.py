@@ -91,7 +91,7 @@ for ds in data["data_sources"]:
 
 ga4 = data["metrics"].get("ga4", {})
 gsc = data["metrics"].get("gsc", {})
-ml = data["metrics"].get("mailerlite", {})
+content = data["metrics"].get("content", {})
 
 site = data["site"]
 site_color = "#22c55e" if site.get("up") else "#ef4444"
@@ -313,17 +313,17 @@ body {{
     <div class="kpi k1">
       <div class="kpi-label">访客 · 昨日</div>
       <div class="kpi-value">{ga4.get("visitors","-")}</div>
-      <div class="kpi-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览</div>
+      <div class="kpi-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览 · {ga4.get("date","")}</div>
     </div>
     <div class="kpi k2">
-      <div class="kpi-label">GSC 曝光 · 28天</div>
+      <div class="kpi-label">GSC 曝光</div>
       <div class="kpi-value">{gsc.get("impressions","-")}</div>
-      <div class="kpi-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}%</div>
+      <div class="kpi-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}% · {gsc.get("date","")}</div>
     </div>
     <div class="kpi k3">
-      <div class="kpi-label">订阅用户</div>
-      <div class="kpi-value">{ml.get("total","-")}</div>
-      <div class="kpi-sub">昨日新增 {ml.get("new",0)}</div>
+      <div class="kpi-label">已发布文章</div>
+      <div class="kpi-value">{content.get("total_articles","-")}</div>
+      <div class="kpi-sub">{content.get("with_affiliate",0)} 篇含联盟链接 · 平均 {content.get("avg_word_count",0)} 字</div>
     </div>
     <div class="kpi k4">
       <div class="kpi-label">实验在跑</div>

@@ -88,26 +88,54 @@ except Exception as e:
     data["experiments"] = []
 
 # 5. 关键指标
-# GA4
+# GA4 — data lives under metrics sub-object
 try:
     ga4 = json.loads((ROOT / "reports/real_data/ga4_real_data.json").read_text(encoding="utf-8"))
-    data["metrics"]["ga4"] = {"status": ga4.get("status", "unknown"), "visitors": ga4.get("visitors", 0), "sessions": ga4.get("sessions", 0), "pageviews": ga4.get("pageviews", 0), "date": ga4.get("date", "")}
-except:
-    data["metrics"]["ga4"] = {"status": "not_found"}
+    m = ga4.get("metrics", {})
+    data["metrics"]["ga4"] = {
+        "status": ga4.get("status", "unknown"),
+        "visitors": m.get("activeUsers", 0),
+        "sessions": m.get("sessions", 0),
+        "pageviews": m.get("screenPageViews", 0),
+        "new_users": m.get("newUsers", 0),
+        "bounce_rate": round(m.get("bounceRate", 0) * 100, 1),
+        "avg_duration": round(m.get("averageSessionDuration", 0)),
+        "date": ga4.get("data_date", ""),
+        "fresh": ga4.get("is_fresh", False)
+    }
+except Exception as e:
+    data["metrics"]["ga4"] = {"status": f"error: {e}", "visitors": 0, "sessions": 0, "pageviews": 0}
 
-# GSC
+# GSC — data lives under metrics sub-object
 try:
     gsc = json.loads((ROOT / "reports/real_data/gsc_real_data.json").read_text(encoding="utf-8"))
-    data["metrics"]["gsc"] = {"status": gsc.get("status", "unknown"), "impressions": gsc.get("impressions", 0), "clicks": gsc.get("clicks", 0), "ctr": gsc.get("ctr", 0)}
-except:
-    data["metrics"]["gsc"] = {"status": "not_found"}
+    m = gsc.get("metrics", {})
+    data["metrics"]["gsc"] = {
+        "status": gsc.get("status", "unknown"),
+        "impressions": m.get("impressions", 0),
+        "clicks": m.get("clicks", 0),
+        "ctr": round(m.get("ctr", 0) * 100, 2),
+        "avg_position": round(m.get("average_position", 0), 1),
+        "date": gsc.get("data_date", ""),
+        "fresh": gsc.get("is_fresh", False)
+    }
+except Exception as e:
+    data["metrics"]["gsc"] = {"status": f"error: {e}", "impressions": 0, "clicks": 0, "ctr": 0}
 
-# 订阅
+# 内容资产（替代 MailerLite，后者无本地数据文件）
 try:
-    ml = json.loads((ROOT / "reports/real_data/mailerlite_data.json").read_text(encoding="utf-8"))
-    data["metrics"]["mailerlite"] = {"total": ml.get("total_subscribers", 0), "new": ml.get("new_subscribers", 0)}
-except:
-    data["metrics"]["mailerlite"] = {"total": 0, "new": 0}
+    content = json.loads((ROOT / "reports/real_data/content_real_data.json").read_text(encoding="utf-8"))
+    m = content.get("metrics", {})
+    data["metrics"]["content"] = {
+        "total_articles": m.get("total_articles", 0),
+        "articles_this_week": m.get("articles_this_week", 0),
+        "avg_word_count": m.get("avg_word_count", 0),
+        "with_affiliate": m.get("articles_with_affiliate_links", 0),
+        "with_internal": m.get("articles_with_internal_links", 0),
+        "date": content.get("data_date", "")
+    }
+except Exception as e:
+    data["metrics"]["content"] = {"total_articles": 0, "with_affiliate": 0}
 
 # 6. 数据源状态（基于 .env 中实际变量名）
 def _has(*keys):
@@ -118,7 +146,7 @@ data["data_sources"] = [
     {"name": "GSC", "configured": _has("GSC_SERVICE_ACCOUNT_JSON"), "status": data["metrics"]["gsc"].get("status", "unknown")},
     {"name": "Travelpayouts", "configured": _has("TRAVELPAYOUTS_API_TOKEN"), "status": "ok"},
     {"name": "NordVPN", "configured": _has("NORDVPN_API_KEY", "NORDVPN_AFFILIATE_ID"), "status": "ok"},
-    {"name": "MailerLite", "configured": _has("MAILERLITE_API_TOKEN"), "status": "ok" if data["metrics"]["mailerlite"].get("total", 0) > 0 else "configured"},
+    {"name": "MailerLite", "configured": _has("MAILERLITE_API_TOKEN"), "status": "configured"},
     {"name": "Buffer", "configured": _has("BUFFER_API_TOKEN_A", "BUFFER_API_TOKEN_B", "BUFFER_ACCESS_TOKEN"), "status": "ok"},
     {"name": "Cloudflare", "configured": _has("CLOUDFLARE_API_TOKEN"), "status": "ok"},
 ]

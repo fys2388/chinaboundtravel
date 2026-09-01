@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 14:46:23",
+  "generated_at": "2026-09-01 15:13:26",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 515,
+    "response_ms": 408,
     "server": "cloudflare"
   },
   "workflows": [
@@ -45,7 +45,7 @@
       "name": "Content Rotation Distributor",
       "id": "content-rotation",
       "last_status": "success",
-      "last_run": "2026-08-31T19:45:09Z",
+      "last_run": "2026-09-01T07:01:01Z",
       "last_event": "schedule"
     },
     {
@@ -93,7 +93,7 @@
       "name": "Error Alert",
       "id": "error-alert",
       "last_status": "skipped",
-      "last_run": "2026-08-31T21:51:25Z",
+      "last_run": "2026-09-01T07:01:45Z",
       "last_event": "workflow_run"
     },
     {
@@ -145,6 +145,14 @@
       "last_event": ""
     },
     {
+      "file": "ops-dashboard-daily.yml",
+      "name": "Ops Dashboard Hourly Refresh",
+      "id": "ops-dashboard-daily",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
       "file": "purge-cache.yml",
       "name": "Purge Cloudflare Cache",
       "id": "purge-cache",
@@ -165,7 +173,7 @@
       "name": "Retry Failed Jobs",
       "id": "retry-failed",
       "last_status": "skipped",
-      "last_run": "2026-08-31T21:51:25Z",
+      "last_run": "2026-09-01T07:01:45Z",
       "last_event": "workflow_run"
     },
     {
@@ -250,7 +258,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 14:46",
+    "checked_at": "2026-09-01 15:13",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -375,20 +383,31 @@
   "metrics": {
     "ga4": {
       "status": "OK",
-      "visitors": 0,
-      "sessions": 0,
-      "pageviews": 0,
-      "date": ""
+      "visitors": 223,
+      "sessions": 273,
+      "pageviews": 624,
+      "new_users": 221,
+      "bounce_rate": 74.0,
+      "avg_duration": 178,
+      "date": "2026-08-31",
+      "fresh": true
     },
     "gsc": {
       "status": "OK",
-      "impressions": 0,
+      "impressions": 525,
       "clicks": 0,
-      "ctr": 0
+      "ctr": 0.0,
+      "avg_position": 66.2,
+      "date": "2026-08-29",
+      "fresh": true
     },
-    "mailerlite": {
-      "total": 0,
-      "new": 0
+    "content": {
+      "total_articles": 60,
+      "articles_this_week": 0,
+      "avg_word_count": 1929,
+      "with_affiliate": 35,
+      "with_internal": 48,
+      "date": "2026-09-01"
     }
   },
   "data_sources": [
