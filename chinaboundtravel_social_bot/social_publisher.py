@@ -541,6 +541,11 @@ def update_article_cover(md_path: Path, cover_url: str):
 
 def publish_to_worker(article: dict, cover_url: str, custom_text: str = None, variant: str = "main") -> dict:
     """调用 Cloudflare Worker 发布到多平台"""
+    # Buffer API 不支持 .webp 格式，自动转换为 .jpg（网站同时保留两种格式）
+    if cover_url and cover_url.lower().endswith(".webp"):
+        original_cover = cover_url
+        cover_url = cover_url[:-5] + ".jpg"
+        print(f"[CoverFix] .webp -> .jpg: {original_cover[-40:]} -> {cover_url[-40:]}")
     # P1-GROWTH-28A: 双账户路由 - Pinterest 长尾账户走 NEW_BUFFER_WORKER_URL，其余走主账户
     worker_url, platforms, fell_back = worker_url_for_variant(variant)
     if fell_back:
