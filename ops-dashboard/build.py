@@ -311,12 +311,12 @@ body {{
   <!-- KPI -->
   <div class="kpi-grid">
     <div class="kpi k1">
-      <div class="kpi-label">访客 · 昨日</div>
+      <div class="kpi-label">访客 · 28天累计</div>
       <div class="kpi-value">{ga4.get("visitors","-")}</div>
       <div class="kpi-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览 · {ga4.get("date","")}</div>
     </div>
     <div class="kpi k2">
-      <div class="kpi-label">GSC 曝光</div>
+      <div class="kpi-label">GSC 曝光 · 28天</div>
       <div class="kpi-value">{gsc.get("impressions","-")}</div>
       <div class="kpi-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}% · {gsc.get("date","")}</div>
     </div>
