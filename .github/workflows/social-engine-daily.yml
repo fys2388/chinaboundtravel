@@ -37,7 +37,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-dotenv
+          pip install requests python-dotenv pillow
           cd buffer-worker && npm install --no-audit --no-fund 2>/dev/null || true
 
 
