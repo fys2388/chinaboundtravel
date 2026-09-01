@@ -19,7 +19,7 @@ filepath = os.path.join(posts_dir, filename)
 title = f"ChinaBound Travel Guide {version} - Now Updated With Latest Visa Rules"
 
 markdown_content = f"""---
-content_id: "cbt-ebook-{version.replace(".", "")}"
+content_id: "cbt-{version.replace(".", "")}{{:04d}}".format(hash(version) % 10000)
 title: "{title}"
 date: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
 lastmod: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
