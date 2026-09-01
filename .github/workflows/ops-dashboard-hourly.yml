@@ -1,0 +1,72 @@
+name: Ops Dashboard Refresh
+
+on:
+  schedule:
+    - cron: '0 1-18 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ops-dashboard-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-dashboard:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv google-auth
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Collect dashboard data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+          MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          NORDVPN_API_KEY: ${{ secrets.NORDVPN_API_KEY }}
+        run: |
+          python ops-dashboard/collect_data.py
+
+      - name: Build dashboard HTML
+        run: |
+          python ops-dashboard/build.py
+
+      - name: Push and trigger deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p static/ops-dashboard
+          cp ops-dashboard/index.html static/ops-dashboard/index.html
+          git add static/ops-dashboard/index.html ops-dashboard/dashboard_data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(ops): auto-refresh dashboard $(date -u '+%Y-%m-%d %H:%M')"
+            git push origin main
+            echo "Dashboard updated and pushed"
+            sleep 2
+            gh workflow run "Post-deploy Tasks" || echo "Deploy trigger failed (non-fatal)"
+            echo "Deploy workflow triggered"
+          fi
