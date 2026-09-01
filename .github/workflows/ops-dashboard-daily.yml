@@ -1,8 +1,8 @@
-name: Ops Dashboard Daily Refresh
+name: Ops Dashboard Hourly Refresh
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 每天 UTC 08:00 = 北京 16:00
+    - cron: '0 * * * *'  # 每小时整点运行 (UTC)
   workflow_dispatch:
 
 concurrency:
@@ -58,7 +58,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore(ops): auto-refresh dashboard $(date -u '+%Y-%m-%d')"
+            git commit -m "chore(ops): auto-refresh dashboard $(date -u '+%Y-%m-%d %H:%M')"
             git push origin main
             echo "Dashboard updated and pushed"
           fi
