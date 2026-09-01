@@ -580,8 +580,8 @@ def pull_social_data(days: int = 28) -> Dict:
         "error": None,
     }
 
-    token_a = os.environ.get("BUFFER_API_TOKEN_A", "").strip()
-    token_b = os.environ.get("BUFFER_API_TOKEN_B", "").strip()
+    token_a = os.environ.get("BUFFER_API_TOKEN_A", "").strip().lstrip("\ufeff")
+    token_b = os.environ.get("BUFFER_API_TOKEN_B", "").strip().lstrip("\ufeff")
 
     if not token_a and not token_b:
         result["status"] = "NOT_CONFIGURED"
