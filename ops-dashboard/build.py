@@ -46,6 +46,7 @@ wf_cats_html = ""
 for cat, wfs in sorted(categories.items()):
     ok = sum(1 for w in wfs if w.get("last_status") == "success")
     fail = sum(1 for w in wfs if w.get("last_status") == "failure")
+    noruns = sum(1 for w in wfs if w.get("last_status") in ("no_runs", "unknown"))
     cat_color = "#22c55e" if fail == 0 else "#ef4444"
     wf_items = ""
     for w in wfs:
@@ -54,13 +55,13 @@ for cat, wfs in sorted(categories.items()):
         run_time = w.get("last_run", "")[:10] if w.get("last_run") else "-"
         wf_items += f'''<div class="wf-item" title="{w["name"]} — {lbl}">
           <span class="wf-dot" style="background:{c};box-shadow:0 0 6px {c}66"></span>
-          <span class="wf-name">{w["name"][:30]}</span><span class="wf-freq">{w.get("frequency","手动")}</span>
+          <span class="wf-name">{w["name"][:50]}</span><span class="wf-freq">{w.get("frequency","手动")}</span>
           <span class="wf-time">{run_time}</span>
         </div>'''
     wf_cats_html += f'''<div class="wf-cat">
       <div class="wf-cat-header">
         <span class="wf-cat-title">{cat}</span>
-        <span class="wf-cat-count" style="color:{cat_color}">{ok}/{len(wfs)} 正常{f' · {fail} 失败' if fail else ''}</span>
+        <span class="wf-cat-count" style="color:{cat_color}">{ok}成功{f' · {fail}失败' if fail else ''}{f' · {noruns}未运行' if noruns else ''}</span>
       </div>
       <div class="wf-list">{wf_items}</div>
     </div>'''
@@ -104,6 +105,9 @@ kill_color = "#ef4444" if kill_active else "#22c55e"
 total_wf = len(data["workflows"])
 ok_wf = sum(1 for w in data["workflows"] if w.get("last_status") == "success")
 fail_wf = sum(1 for w in data["workflows"] if w.get("last_status") == "failure")
+noruns_wf = sum(1 for w in data["workflows"] if w.get("last_status") in ("no_runs", "unknown"))
+skipped_wf = sum(1 for w in data["workflows"] if w.get("last_status") == "skipped")
+active_wf = ok_wf + fail_wf  # only count workflows that have actually run
 running_exp = sum(1 for e in data["experiments"] if e["status"] == "RUNNING")
 waiting_exp = sum(1 for e in data["experiments"] if e["status"] == "WAITING_RECRAWL")
 pending_exp = sum(1 for e in data["experiments"] if e["status"] == "PENDING")
@@ -332,9 +336,9 @@ body {{
       <div class="kpi-sub">{waiting_exp} 待重爬 · {pending_exp} 待启动</div>
     </div>
     <div class="kpi k5">
-      <div class="kpi-label">Workflow 正常率</div>
-      <div class="kpi-value">{round(ok_wf/total_wf*100) if total_wf else 0}%</div>
-      <div class="kpi-sub">{ok_wf}/{total_wf} 成功{f' · {fail_wf} 失败' if fail_wf else ''}</div>
+      <div class="kpi-label">Workflow 成功率</div>
+      <div class="kpi-value">{round(ok_wf/active_wf*100) if active_wf else 0}%</div>
+      <div class="kpi-sub">{ok_wf}成功 · {fail_wf}失败 · {noruns_wf}未运行</div>
     </div>
   </div>
 
@@ -346,7 +350,7 @@ body {{
         <div class="section-head">
           <span class="section-num">01</span>
           <span class="section-title">自动化节点闭环</span>
-          <span class="section-meta">{total_wf} workflows · {ok_wf} 正常{f' · {fail_wf} 异常' if fail_wf else ''}</span>
+          <span class="section-meta">{total_wf} workflows · {ok_wf}成功 · {fail_wf}失败 · {noruns_wf}未运行{f' · {skipped_wf}跳过' if skipped_wf else ''}</span>
         </div>
         {wf_cats_html}
       </div>

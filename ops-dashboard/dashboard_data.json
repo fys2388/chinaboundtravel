@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 20:54:01",
+  "generated_at": "2026-09-01 21:15:47",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 231,
+    "response_ms": 4116,
     "server": "cloudflare"
   },
   "workflows": [
@@ -166,7 +166,7 @@
       "name": "Ops Dashboard Hourly Refresh",
       "id": "ops-dashboard-daily",
       "frequency": "每时",
-      "last_status": "",
+      "last_status": "success",
       "last_run": "2026-09-01T12:53:49Z",
       "last_event": "workflow_dispatch"
     },
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 12:54",
+    "checked_at": "2026-09-01 21:15",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -308,7 +308,7 @@
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-01",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       },
       {
@@ -320,7 +320,7 @@
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-01",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       },
       {
@@ -338,7 +338,7 @@
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-01",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       }
     ],
