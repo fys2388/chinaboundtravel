@@ -1,17 +1,15 @@
-name: Feishu Daily Report
+﻿name: Feishu Daily Report
 
 on:
   schedule:
-    # 主触发：北京时间 09:00 (UTC 01:00)
-    - cron: '0 1 * * *'
-    # 备用触发1：北京时间 09:30 (UTC 01:30)
-    - cron: '30 1 * * *'
-    # 备用触发2：北京时间 10:00 (UTC 02:00)
-    - cron: '0 2 * * *'
-    # 备用触发3：北京时间 10:30 (UTC 02:30)
-    - cron: '30 2 * * *'
-    # 额外备用：北京时间 11:00 (UTC 03:00)
-    - cron: '0 3 * * *'
+    # 主推送：北京时间 08:30 (UTC 00:30)
+    - cron: '30 0 * * *'
+    # 自动重试1：北京时间 08:40 (UTC 00:40)
+    - cron: '40 0 * * *'
+    # 自动重试2：北京时间 08:50 (UTC 00:50)
+    - cron: '50 0 * * *'
+    # 兜底保障：北京时间 08:55 (UTC 00:55) — 确保09:00前送达
+    - cron: '55 0 * * *'
   workflow_dispatch:  # 手动触发
 
 jobs:
@@ -50,6 +48,8 @@ jobs:
           fi
 
       - name: Run Feishu Daily Report
+        id: send_report
+        continue-on-error: true
         if: steps.check-duplicate.outputs.report_exists == 'false'
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
@@ -70,8 +70,21 @@ jobs:
         run: |
           python scripts/feishu_daily_report.py
 
+      - name: Failure Auto-Diagnosis
+        if: steps.send_report.outcome == 'failure'
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          echo "=== 日报发送失败，自动诊断 ==="
+          echo "FEISHU_WEBHOOK_URL: ${FEISHU_WEBHOOK_URL:+configured}"
+          echo "GA4_PROPERTY_ID: ${GA4_PROPERTY_ID:+configured}"
+          echo "GSC_SITE_URL: ${GSC_SITE_URL:+configured}"
+          curl -s -o /dev/null -w "feishu_webhook_http: %{http_code}\n" "${FEISHU_WEBHOOK_URL}" || echo "feishu_webhook: unreachable"
+          echo "=== 诊断完成，08:40/08:50/08:55 将自动重试补发 ==="
       - name: Commit OKR progress snapshot
-        if: always()
+        if: steps.send_report.outcome == 'success'
         run: |
           git config user.name "chinabound-bot"
           git config user.email "bot@chinaboundtravel.com"
