@@ -867,10 +867,14 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
     if problems:
         return {"success": False, "dry_run": dry_run,
                 "error": "LINT_FAILED: " + "; ".join(problems), "lint": problems}
+    # Buffer API 不支持 .webp 格式，自动转换为 .jpg（网站同时保留两种格式）
+    cover_url = item.get("image_url", "") or ""
+    if cover_url and cover_url.lower().endswith(".webp"):
+        cover_url = cover_url[:-5] + ".jpg"
     payload = {
         "title": item.get("source_title", ""),
         "desc": item["caption"],
-        "cover": item.get("image_url", "") or "",
+        "cover": cover_url,
         "url": post_url,  # 必须传给 worker，否则链接会被剥离或回退首页
         "custom_text": item["caption"],
         "content_id": "",
