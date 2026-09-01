@@ -1,0 +1,26 @@
+{
+  "report_type": "monthly",
+  "period": "2026-09",
+  "generated_at": "2026-09-01 04:29:45",
+  "plan": [
+    {
+      "task": "发布5篇高转化长尾攻略",
+      "priority": "medium",
+      "period": "本月",
+      "kr_id": "content",
+      "target": 5
+    },
+    {
+      "task": "全量检测内部断链",
+      "priority": "low",
+      "period": "本周"
+    }
+  ],
+  "krs": {
+    "traffic": 0.0,
+    "content": 0.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 0.0
+  }
+}
