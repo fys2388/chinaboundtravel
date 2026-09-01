@@ -90,7 +90,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add manifest.json
-          git diff --cached --quiet && echo "no manifest changes to commit" || (git commit -m "chore: sync social publish manifest" && git push origin main)
+          git diff --cached --quiet && echo "no manifest changes to commit" || {
+            git commit -m "chore: sync social publish manifest" && {
+              git pull --rebase origin main || echo "rebase had conflicts"
+              git push origin main || echo "manifest push failed (non-fatal)"
+            }
+          }
 
       - name: Purge Cloudflare CDN Cache
         if: vars.CLOUDFLARE_ZONE_ID != ''
