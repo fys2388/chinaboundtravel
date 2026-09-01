@@ -52,7 +52,9 @@ jobs:
         run: |
           python ops-dashboard/build.py
 
-      - name: Copy to static and deploy
+      - name: Push updated dashboard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p static/ops-dashboard
           cp ops-dashboard/index.html static/ops-dashboard/index.html
@@ -63,4 +65,7 @@ jobs:
             git commit -m "chore(ops): auto-refresh dashboard $(date -u '+%Y-%m-%d %H:%M')"
             git push origin main
             echo "Dashboard updated and pushed"
+            # GITHUB_TOKEN pushes do not trigger other workflows, manually trigger deploy
+            gh workflow run "Post-deploy Tasks"
+            echo "Deploy workflow triggered"
           fi
