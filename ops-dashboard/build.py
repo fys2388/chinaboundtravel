@@ -113,6 +113,17 @@ waiting_exp = sum(1 for e in data["experiments"] if e["status"] == "WAITING_RECR
 pending_exp = sum(1 for e in data["experiments"] if e["status"] == "PENDING")
 healthy_agents = data["agents"].get("healthy_count", 0)
 
+# Format update time to hour precision (cron runs at exact hours)
+_update_raw = data.get("generated_at", "")
+try:
+    from datetime import datetime as _dt
+    _parsed = _dt.strptime(_update_raw, "%Y-%m-%d %H:%M:%S")
+    update_hour = _parsed.strftime("%H:00")
+    update_date = _parsed.strftime("%Y-%m-%d")
+except Exception:
+    update_hour = _update_raw
+    update_date = ""
+
 html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -307,8 +318,8 @@ body {{
         Kill Switch {"已激活" if kill_active else "未激活"}
       </div>
       <div class="update-time">
-        数据更新 <strong>{data["generated_at"]}</strong><br>
-        每日9:00-次日2:00整点更新
+        更新于 <strong>{update_hour}</strong> 整点<br>
+        {update_date} · 每日9:00-次日2:00
       </div>
     </div>
   </div>
