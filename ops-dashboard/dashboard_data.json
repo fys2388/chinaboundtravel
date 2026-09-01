@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02 01:00:44",
+  "generated_at": "2026-09-02 02:00:43",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 409,
+    "response_ms": 313,
     "server": "cloudflare"
   },
   "workflows": [
@@ -49,9 +49,9 @@
       "name": "Content Rotation Distributor",
       "id": "content-rotation",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-01T17:30:40Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-daily.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-01T15:52:57Z",
+      "last_run": "2026-09-01T17:31:21Z",
       "last_event": "workflow_run"
     },
     {
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-01T17:00:28Z",
+      "last_run": "2026-09-01T18:00:28Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -193,9 +193,9 @@
       "name": "Retry Failed Jobs",
       "id": "retry-failed",
       "frequency": "手动",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "skipped",
+      "last_run": "2026-09-01T17:31:21Z",
+      "last_event": "workflow_run"
     },
     {
       "file": "seo-audit.yml",
@@ -238,9 +238,9 @@
       "name": "Social Engine Daily (闭环)",
       "id": "social-engine-daily",
       "frequency": "每日",
-      "last_status": "failure",
-      "last_run": "2026-09-01T16:13:30Z",
-      "last_event": "workflow_dispatch"
+      "last_status": "success",
+      "last_run": "2026-09-01T17:16:00Z",
+      "last_event": "schedule"
     },
     {
       "file": "social_distributor.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 17:00",
+    "checked_at": "2026-09-01 18:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
