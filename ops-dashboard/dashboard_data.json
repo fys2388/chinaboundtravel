@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01 23:57:20",
+  "generated_at": "2026-09-02 00:42:16",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 172,
+    "response_ms": 203,
     "server": "cloudflare"
   },
   "workflows": [
@@ -121,9 +121,9 @@
       "name": "GSC Index Submit (2.0)",
       "id": "gsc-index-submit",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-01T07:35:49Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "health-check.yml",
@@ -165,9 +165,9 @@
       "file": "ops-dashboard-hourly.yml",
       "name": "Ops Dashboard Refresh",
       "id": "ops-dashboard-hourly",
-      "frequency": "每日",
+      "frequency": "每10分钟",
       "last_status": "",
-      "last_run": "2026-09-01T15:57:04Z",
+      "last_run": "2026-09-01T16:42:04Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -238,9 +238,9 @@
       "name": "Social Engine Daily (闭环)",
       "id": "social-engine-daily",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "failure",
+      "last_run": "2026-09-01T16:13:30Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "social_distributor.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-01 15:57",
+    "checked_at": "2026-09-01 16:42",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
