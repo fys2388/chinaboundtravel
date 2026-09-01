@@ -1,4 +1,5 @@
 ---
+content_id: "cbt-ebook-791dad99518a"
 title: "ChinaBound Travel Guide 2026.09 - Now Updated With Latest Visa Rules"
 date: 2026-09-01T13:19:41+00:00
 lastmod: 2026-09-01T13:19:41+00:00
