@@ -1,14 +1,29 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-08-31T07:36:39.652500",
-  "data_date": null,
-  "is_real_data": false,
-  "is_fresh": false,
-  "metrics": {},
+  "pull_time": "2026-09-01T03:56:52.300812",
+  "data_date": "2026-08-31",
+  "is_real_data": true,
+  "is_fresh": true,
+  "metrics": {
+    "activeUsers": 223,
+    "sessions": 273,
+    "screenPageViews": 624,
+    "engagedSessions": 71,
+    "bounceRate": 0.73992673992674,
+    "averageSessionDuration": 178.1862067912088,
+    "engagementRate": 0.2600732600732601,
+    "newUsers": 221
+  },
   "daily": [],
   "top_pages": [],
   "traffic_sources": [],
   "raw_source": "GA4 Data API v1beta",
-  "status": "NOT_CONFIGURED",
-  "error": "GA4_PROPERTY_ID not set in .env or GitHub Secrets"
+  "status": "OK",
+  "error": null,
+  "freshness_info": {
+    "fresh": true,
+    "reason": "Fresh",
+    "age_days": 1,
+    "data_date": "2026-08-31"
+  }
 }

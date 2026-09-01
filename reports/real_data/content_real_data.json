@@ -1,56 +1,56 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-08-31T07:36:39.654672",
-  "data_date": "2026-08-31",
+  "pull_time": "2026-09-01T03:56:54.430833",
+  "data_date": "2026-09-01",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 60,
     "articles_this_week": 0,
-    "avg_word_count": 1930,
+    "avg_word_count": 1929,
     "articles_with_affiliate_links": 35,
     "articles_with_internal_links": 48
   },
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 1579,
+      "word_count": 1576,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c",
-      "word_count": 1109,
+      "word_count": 1107,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1816,
+      "word_count": 1811,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2161,
+      "word_count": 2160,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
-      "word_count": 1389,
+      "word_count": 1388,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 1688,
+      "word_count": 1687,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
-      "word_count": 1457,
+      "word_count": 1456,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1713,
+      "word_count": 1710,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -80,19 +80,19 @@
     },
     {
       "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
-      "word_count": 1601,
+      "word_count": 1599,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
-      "word_count": 2621,
+      "word_count": 2620,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide",
-      "word_count": 2162,
+      "word_count": 2161,
       "has_affiliate_links": false,
       "has_internal_links": true
     },

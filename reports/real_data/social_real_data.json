@@ -1,6 +1,6 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-08-31T07:36:39.654068",
+  "pull_time": "2026-09-01T03:56:54.303900",
   "data_date": null,
   "is_real_data": false,
   "is_fresh": false,
@@ -15,6 +15,6 @@
   "posts": [],
   "by_platform": {},
   "raw_source": "Buffer GraphQL API",
-  "status": "NOT_CONFIGURED",
-  "error": "BUFFER_API_TOKEN_A/B not configured"
+  "status": "PARTIAL_ERROR",
+  "error": "Account A: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256); Account B: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256)"
 }
