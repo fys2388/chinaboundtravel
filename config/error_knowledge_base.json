@@ -942,6 +942,17 @@
       "error_message": "usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:39.8587814Z 🪵  Logs were written to \"/home/runner/.config/.wrangler/logs/wrangler-2026-09-02_01-34-38_788.log\"\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:39.8826366Z ##[warning]默认 env 部署失败\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:40.8056702Z \ndeploy\tDeploy Work",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260902_020144",
+      "timestamp": "2026-09-02T02:01:44.630204",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "33581595142",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "on/3.11.16/x64/lib\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-02T02:01:05.2272011Z ##[endgroup]\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-02T02:01:05.2530818Z ✅ index.html generated: 28630 bytes\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-02T02:01:05.2531899Z    Workflow categories: ['SEO与索引', 'AI Agent', '内容与社媒', '日报与通知', '构建与部署', '其他']\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-02T02:01:05.2532708Z    Agents: 7/7 healthy\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-02T02:01:0",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
