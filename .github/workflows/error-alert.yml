@@ -2,77 +2,83 @@ name: Error Alert
 
 on:
   workflow_run:
-    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor", "YouTube Auto Publish", "Post-deploy Tasks", "Monthly Ebook Guide Update"]
+    workflows:
+      - "Affiliate Gap Audit (2.0 联盟链接缺口审计)"
+      - "AI Agent Orchestrator - 7 Agents Weekly Run"
+      - "Clear Scheduled Buffer Batch"
+      - "Content Quality Audit (2.0 内容质量综合巡检)"
+      - "Content Rotation Distributor"
+      - "Cross-Agent Learning Daily"
+      - "Cross-Agent Learning Weekly"
+      - "Daily Health Check"
+      - "Deploy Buffer Worker"
+      - "Environment Check"
+      - "Feishu Daily Report"
+      - "GSC Index Submit (2.0)"
+      - "Joran博文生成+双AI自动审核发布"
+      - "Manual Deploy to Cloudflare Pages"
+      - "Monthly Ebook Guide Update"
+      - "Monthly Feishu Report"
+      - "Ops Dashboard Refresh"
+      - "Post-deploy Tasks"
+      - "Purge Cloudflare Cache"
+      - "Quarterly Feishu Report"
+      - "SEO Audit (2.0 SEO综合审计)"
+      - "SEO Opportunity Detector (2.0 SEO优化机会检测)"
+      - "Snapshot Daily Refresh (2.0 KPI)"
+      - "Social Backfill (2.0 社媒补位)"
+      - "Social Engine Daily (闭环)"
+      - "Social Media Distributor"
+      - "Weekly Feishu Report"
+      - "Yearly Feishu Report"
+      - "YouTube Auto Publish"
     types: [completed]
     branches: [main]
 
 jobs:
-  alert:
+  auto-route:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      contents: write
+      actions: write
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - name: Send error alert to Feishu
-        run: |
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "msg_type": "interactive",
-              "card": {
-                "header": {
-                  "title": {
-                    "tag": "plain_text",
-                    "content": "⚠️ 工作流执行失败通知"
-                  },
-                  "template": "red"
-                },
-                "elements": [
-                  {
-                    "tag": "div",
-                    "text": {
-                      "tag": "lark_md",
-                      "content": "**工作流名称**: ${{ github.event.workflow_run.name }}\n**仓库**: ${{ github.repository }}\n**分支**: ${{ github.event.workflow_run.head_branch }}\n**触发者**: ${{ github.event.workflow_run.triggering_actor.login }}\n**失败时间**: '"$(date '+%Y-%m-%d %H:%M:%S')"'\n**运行ID**: ${{ github.event.workflow_run.id }}\n**查看日志**: [点击这里](https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }})"
-                    }
-                  },
-                  {
-                    "tag": "hr"
-                  },
-                  {
-                    "tag": "note",
-                    "elements": [
-                      {
-                        "tag": "plain_text",
-                        "content": "请检查日志并修复问题。可自动重试的工作流（博客生成/社媒分发/内容轮换）由 Retry Failed Jobs 自动重试；其余（Deploy/YouTube/Ebook/报告）请手动处理。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }'
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Create issue for tracking
-        if: success()
-        uses: actions/github-script@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const issue = await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `⚠️ [自动创建] ${{ github.event.workflow_run.name }} 执行失败`,
-              body: `## 工作流信息
+          python-version: '3.12'
 
-              - **工作流**: ${{ github.event.workflow_run.name }}
-              - **运行ID**: [${{ github.event.workflow_run.id }}](${{ github.event.workflow_run.html_url }})
-              - **分支**: ${{ github.event.workflow_run.head_branch }}
-              - **提交**: ${{ github.event.workflow_run.head_sha }}
-              - **失败时间**: ${{ github.event.workflow_run.created_at }}
-              - **触发者**: ${{ github.event.workflow_run.triggering_actor.login }}
+      - name: Install dependencies
+        run: pip install requests
 
-              ## 下一步
+      - name: Install gh CLI
+        run: |
+          type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update && sudo apt install gh -y
 
-              请检查日志并修复问题。可自动重试的工作流（博客生成/社媒分发/内容轮换）由 Retry Failed Jobs 自动重试；其余请手动处理。`
-            });
-            
-            console.log(`Created issue: ${issue.data.html_url}`);
+      - name: Auto Error Router - 分类/修复/告警/重试
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          echo "=== 失败工作流自动处理 ==="
+          echo "工作流: ${{ github.event.workflow_run.name }}"
+          echo "运行ID: ${{ github.event.workflow_run.id }}"
+          echo ""
+          python scripts/auto_error_router.py "${{ github.event.workflow_run.name }}" "${{ github.event.workflow_run.id }}"
+
+      - name: Commit knowledge base updates
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/error_knowledge_base.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "docs(error): auto-record failure by error-router [skip ci]"
+          git push https://github.com/${{ github.repository }}.git main || echo "Push skipped (no changes or conflict)"

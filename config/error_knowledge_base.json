@@ -919,5 +919,29 @@
       "技术性能下滑：外部图片加载增加性能损耗，LCP约2.5s",
       "合规风险增加：AI图片版权风险、标签合规问题"
     ]
-  }
+  },
+  "errors": [
+    {
+      "id": "err_20260902_095559",
+      "timestamp": "2026-09-02T09:55:59.880172",
+      "workflow_name": "Deploy Buffer Worker",
+      "run_id": "33579924220",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "r]Process completed with exit code 1.\ndeploy\tPost Checkout repository\t﻿2026-09-02T01:34:41.3785904Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/\ndeploy\tPost Checkout repository\t2026-09-02T01:34:41.3786950Z Post job cleanup.\nde",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "err_20260902_095752",
+      "timestamp": "2026-09-02T09:57:52.615165",
+      "workflow_name": "Deploy Buffer Worker",
+      "run_id": "33579924220",
+      "category": "authentication_error",
+      "category_name": "未知错误",
+      "error_message": "usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:39.8587814Z 🪵  Logs were written to \"/home/runner/.config/.wrangler/logs/wrangler-2026-09-02_01-34-38_788.log\"\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:39.8826366Z ##[warning]默认 env 部署失败\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T01:34:40.8056702Z \ndeploy\tDeploy Work",
+      "status": "pending",
+      "attempts": 0
+    }
+  ]
 }
