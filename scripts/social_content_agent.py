@@ -568,29 +568,42 @@ def _gen_via_ark(prompt: str, out_path: Path) -> bool:
 
 
 def _gen_via_pollinations(prompt: str, out_path: Path, platform: str) -> bool:
-    """兜底：pollinations flux 文生图（免费可用），下载后本地托管（消除外部 URL 依赖）。"""
-    try:
-        w, h = 1024, 1024
-        if platform == "ig":
-            w, h = 1024, 1280   # 4:5
-        elif platform == "pinterest":
-            w, h = 1024, 1536   # 2:3
-        elif platform in ("x", "fb"):
-            w, h = 1536, 864    # 16:9
-        negative = ("blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, "
-                    "bad anatomy, low quality, watermark, text, words, letters, logo, person, "
-                    "people, face, portrait, human, figure, crowd, man, woman, child")
-        url = (f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}"
-               f"?width={w}&height={h}&nologo=true&model=flux&negative={requests.utils.quote(negative)}")
-        r = requests.get(url, timeout=90)
-        r.raise_for_status()
-        if "image" not in r.headers.get("content-type", "").lower():
+    """兜底：pollinations flux 文生图（免费可用），下载后本地托管（消除外部 URL 依赖）。
+
+    免费匿名额度约 1 张/分钟 → 内置 429 退避重试（45s/90s/120s），
+    按额度自动节流，避免批量生成被限流打爆而丢图。
+    """
+    w, h = 1024, 1024
+    if platform == "ig":
+        w, h = 1024, 1280   # 4:5
+    elif platform == "pinterest":
+        w, h = 1024, 1536   # 2:3
+    elif platform in ("x", "fb"):
+        w, h = 1536, 864    # 16:9
+    negative = ("blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, "
+                "bad anatomy, low quality, watermark, text, words, letters, logo, person, "
+                "people, face, portrait, human, figure, crowd, man, woman, child")
+    url = (f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}"
+           f"?width={w}&height={h}&nologo=true&model=flux&token=anonymous"
+           f"&negative={requests.utils.quote(negative)}")
+    for attempt in range(4):
+        try:
+            r = requests.get(url, timeout=120)
+            if r.status_code == 429:
+                wait = (45, 90, 120, 180)[attempt]
+                logger.warning("pollinations 429 限流，等待 %ss 重试 (%d/3)...", wait, attempt + 1)
+                time.sleep(wait)
+                continue
+            r.raise_for_status()
+            if "image" not in r.headers.get("content-type", "").lower():
+                return False
+            out_path.write_bytes(r.content)
+            return out_path.stat().st_size > 1000
+        except Exception as e:
+            logger.warning("pollinations 文生图失败: %s", str(e)[:120])
             return False
-        out_path.write_bytes(r.content)
-        return out_path.stat().st_size > 1000
-    except Exception as e:
-        logger.warning("pollinations 文生图失败: %s", str(e)[:120])
-        return False
+    logger.warning("pollinations 多次限流仍失败，跳过该图")
+    return False
 
 
 def generate_image(item: dict, path: Path) -> str:
