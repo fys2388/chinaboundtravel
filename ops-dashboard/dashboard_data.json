@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 00:30:41",
+  "generated_at": "2026-09-03 01:00:37",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 644,
+    "response_ms": 286,
     "server": "cloudflare"
   },
   "workflows": [
@@ -58,9 +58,9 @@
       "name": "Cross-Agent Learning Daily",
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-02T10:06:44Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T16:29:11Z",
+      "last_run": "2026-09-02T16:30:59Z",
       "last_event": "workflow_run"
     },
     {
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-02T16:30:25Z",
+      "last_run": "2026-09-02T17:00:25Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 16:30",
+    "checked_at": "2026-09-02 17:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
