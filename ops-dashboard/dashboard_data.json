@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02 17:31:05",
+  "generated_at": "2026-09-02 18:01:23",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 178,
+    "response_ms": 512,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T09:01:34Z",
+      "last_run": "2026-09-02T09:31:22Z",
       "last_event": "workflow_run"
     },
     {
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-02T09:30:51Z",
+      "last_run": "2026-09-02T10:01:02Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -220,9 +220,9 @@
       "name": "Snapshot Daily Refresh (2.0 KPI)",
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-02T04:52:02Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "social-backfill.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 09:31",
+    "checked_at": "2026-09-02 10:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
