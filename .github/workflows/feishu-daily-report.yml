@@ -1,4 +1,4 @@
-﻿name: Feishu Daily Report
+name: Feishu Daily Report
 
 on:
   schedule:

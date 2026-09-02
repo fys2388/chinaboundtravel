@@ -225,22 +225,46 @@ export default {
     // 处理重试队列
     await processRetryQueue(env);
     
-    // 触发 Ops Dashboard 刷新（GitHub Actions schedule 不稳定，用 Worker Cron 兜底）
-    if (env.GITHUB_TOKEN && env.DASHBOARD_WORKFLOW_ID) {
-      try {
-        const repo = env.GITHUB_REPO || 'fys2388/chinaboundtravel';
-        const resp = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${env.DASHBOARD_WORKFLOW_ID}/dispatches`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
-            'Content-Type': 'application/json',
-            'User-Agent': 'buffer-worker-cron'
-          },
-          body: JSON.stringify({ ref: 'main' })
-        });
-        console.log(`[Dashboard] Trigger result: ${resp.status}`);
-      } catch (e) {
-        console.error(`[Dashboard] Trigger failed: ${e.message}`);
+    // 判断触发类型：UTC 00:30 = 日报，其余整点 = 看板
+    const triggerMinute = new Date(event.scheduledTime).getUTCMinutes();
+    const triggerHour = new Date(event.scheduledTime).getUTCHours();
+    const repo = env.GITHUB_REPO || 'fys2388/chinaboundtravel';
+    
+    if (env.GITHUB_TOKEN) {
+      // UTC 00:30 = 北京时间 08:30 触发飞书日报
+      if (triggerHour === 0 && triggerMinute === 30 && env.DAILY_REPORT_WORKFLOW_ID) {
+        try {
+          const resp = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${env.DAILY_REPORT_WORKFLOW_ID}/dispatches`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
+              'Content-Type': 'application/json',
+              'User-Agent': 'buffer-worker-cron'
+            },
+            body: JSON.stringify({ ref: 'main' })
+          });
+          console.log(`[DailyReport] Trigger result: ${resp.status}`);
+        } catch (e) {
+          console.error(`[DailyReport] Trigger failed: ${e.message}`);
+        }
+      }
+      
+      // UTC 1-18 整点 = 北京时间 9:00-次日2:00 触发热核看板
+      if (triggerMinute === 0 && triggerHour >= 1 && triggerHour <= 18 && env.DASHBOARD_WORKFLOW_ID) {
+        try {
+          const resp = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${env.DASHBOARD_WORKFLOW_ID}/dispatches`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
+              'Content-Type': 'application/json',
+              'User-Agent': 'buffer-worker-cron'
+            },
+            body: JSON.stringify({ ref: 'main' })
+          });
+          console.log(`[Dashboard] Trigger result: ${resp.status}`);
+        } catch (e) {
+          console.error(`[Dashboard] Trigger failed: ${e.message}`);
+        }
       }
     }
     
