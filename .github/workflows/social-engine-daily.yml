@@ -107,6 +107,16 @@ jobs:
             exit 1
           fi
 
+      - name: Generate unique post images (真实文生图，消除配图重复)
+        env:
+          IMAGE_GEN_ENABLED: "1"
+          DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
+          ARK_IMAGE_MODEL: ${{ vars.ARK_IMAGE_MODEL || '' }}
+        run: |
+          echo "=== 为资产库素材生成独立配图（后端：Ark Seedream → pollinations）==="
+          python scripts/social_content_agent.py gen-images --limit 12 || \
+            echo "::warning::文生图未完成（限流/服务不可用），沿用文章封面继续发布"
+
       - name: P0-2 Image Quality Gate (社媒图片验证)
         run: |
           echo "=== [P0-2] 发布前图片质量验证 ==="
@@ -145,11 +155,18 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # 提交所有生成的产物（inventory / 排期 / 日报 / manifest），
           # 避免遗漏导致 pull --rebase 报 unstaged changes
-          git add -A content/social reports/social manifest.json 2>/dev/null || true
+          git add -A content/social reports/social manifest.json static/img/china-dest/social 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无待提交变更"
           else
-            git commit -m "chore(social): sync inventory & reports [skip ci]"
+            # 若含新生成配图（static/img/china-dest/social），用不带 [skip ci] 的提交触发 Cloudflare Pages 部署上线；
+            # 否则普通 [skip ci] 提交（避免无谓重建）
+            if git diff --staged --name-only | grep -q '^static/img/china-dest/social/'; then
+              git commit -m "feat(social): generate unique post images (trigger deploy)"
+              echo "::notice::新配图已提交，触发 Cloudflare Pages 部署；图片上线后下一轮自动发布"
+            else
+              git commit -m "chore(social): sync inventory & reports [skip ci]"
+            fi
           fi
           # 远端可能有并发提交（如博客生成工作流），用 --autostash 自动暂存
           # 未提交改动再 rebase，避免 "cannot pull with rebase" 失败

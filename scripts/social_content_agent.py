@@ -422,18 +422,71 @@ def generate_one(article: dict, ctype: str, platform: str, campaign: str) -> dic
     }
 
 
+# 主题关键词 → 场景描述（让每篇文章的配图提示词唯一、主题匹配）
+_IMAGE_SCENE_KEYWORDS = [
+    ("visa", "Chinese visa passport and travel documents"),
+    ("144-hour", "modern Chinese airport and Beijing skyline, visa-free transit"),
+    ("panda", "giant panda in Chengdu bamboo forest"),
+    ("hotpot", "Sichuan hotpot bubbling with chili oil, fresh ingredients"),
+    ("tea", "Chinese tea ceremony, porcelain teaware, green tea"),
+    ("great wall", "Great Wall of China winding over green mountains"),
+    ("terracotta", "Terracotta Warriors army in Xian museum"),
+    ("west lake", "Hangzhou West Lake with pagoda at sunrise"),
+    ("guilin", "Guilin karst mountains and Li River in mist"),
+    ("zhangjiajie", "Zhangjiajie sandstone pillars in clouds"),
+    ("high-speed", "Chinese high-speed train in a modern station"),
+    ("subway", "modern Chinese metro station"),
+    ("food", "Chinese street food: dumplings, noodles, night market"),
+    ("packing", "packed travel suitcase with China travel essentials"),
+    ("bargain", "colorful Chinese shopping street market"),
+    ("remote", "laptop on a cafe table with a Chinese city view"),
+    ("photography", "camera on a tripod overlooking a Chinese landscape"),
+    ("alipay", "smartphone showing mobile payment at a shop"),
+    ("wechat", "smartphone QR-code payment at a street vendor"),
+    ("insurance", "travel insurance documents and luggage"),
+    ("itinerary", "China travel map with landmarks and compass"),
+    ("language", "Chinese calligraphy and a phrasebook"),
+    ("transport", "Chinese train ticket and platform"),
+    ("etiquette", "traditional Chinese architecture with red lanterns"),
+    ("shanghai", "Shanghai Bund skyline at night"),
+    ("beijing", "Forbidden City and Beijing landmarks"),
+    ("xian", "Xian city wall and drum tower"),
+    ("chengdu", "Chengdu teahouse street scene"),
+    ("yunnan", "Yunnan rice terraces and ancient towns"),
+    ("accommodation", "cozy Chinese boutique hotel room"),
+]
+
+def _image_scene(article: dict) -> str:
+    """按文章标题/slug 命中主题关键词，返回差异化场景描述。"""
+    hay = f"{(article.get('title') or '').lower()} {(article.get('slug') or '').lower()}"
+    for kw, scene in _IMAGE_SCENE_KEYWORDS:
+        if kw in hay:
+            return scene
+    return "iconic China travel scene, landmarks and culture"
+
 def build_image_prompt(article: dict, ctype: str, platform: str) -> str:
-    """配图生成提示词（预留接口，生成真实图片需接入 pollinations/其他）。"""
+    """配图生成提示词：文章主题 × 平台比例 × 内容类型三因素差异化（保证每条帖子提示词唯一）。"""
     title = article.get("title") or "China travel"
-    style_map = {
-        "ig": "aesthetic, bright, travel photography style, vertical 4:5",
-        "pinterest": "clean, save-worthy flat-lay pin graphic, vertical 2:3, readable",
-        "x": "minimal, bold, single striking image, landscape",
-        "fb": "warm, shareable, lifestyle, landscape",
+    desc = (article.get("description") or "").strip()
+    scene = _image_scene(article)
+    ratio_map = {
+        "ig": "vertical 4:5",
+        "pinterest": "vertical 2:3",
+        "x": "wide landscape 16:9",
+        "fb": "landscape 16:9",
     }
-    return (f"Professional {ctype} social graphic for '{title}'. "
-            f"Style: {style_map.get(platform, 'travel')}. "
-            "China landmarks and culture, no people, no text overlays, high quality, realistic.")
+    ctype_angle = {
+        "knowledge": "educational",
+        "tip": "clean and practical",
+        "story": "evocative storytelling",
+        "visual": "striking instagram-worthy",
+        "conversion": "inviting click-worthy",
+    }
+    desc_extra = f" Key elements: {desc[:140]}." if desc else ""
+    return (f"Professional {ctype} social graphic for '{title}' (platform {platform}). "
+            f"Scene: {scene}. Style: {ratio_map.get(platform, 'travel')}, "
+            f"{ctype_angle.get(ctype, 'high quality')}, bright natural light, photorealistic, vibrant. "
+            f"No people, no faces, no text, no words, no watermark, no logo.{desc_extra}")
 
 
 # ============================================================
@@ -476,21 +529,100 @@ def llm_enhance(article: dict, ctype: str, platform: str, base_text: str) -> str
         return base_text
 
 
+def _site_img_url(rel_path: str) -> str:
+    """static 下相对路径 -> 站点绝对 URL（满足 worker 白名单 chinaboundtravel.com/img/china-dest/）。"""
+    rel = str(rel_path).replace("\\", "/")
+    marker = "/static/"
+    if marker in rel:
+        rel = rel.split(marker, 1)[1]
+    elif rel.startswith("static/"):
+        rel = rel[len("static/"):]
+    return f"https://www.{SITE_DOMAIN}/{rel}"
+
+
+def _gen_via_ark(prompt: str, out_path: Path) -> bool:
+    """首选：豆包 Ark Seedream 文生图（需 ARK_IMAGE_MODEL 配置且账号已开通该模型）。"""
+    key = os.environ.get("DOUBAO_ARK_API_KEY", "")
+    model = os.environ.get("ARK_IMAGE_MODEL", "")
+    if not key or not model:
+        return False
+    try:
+        resp = requests.post(
+            "https://ark.cn-beijing.volces.com/api/v3/images/generations",
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            json={"model": model, "prompt": prompt, "size": "1024x1024",
+                  "response_format": "url"},
+            timeout=90,
+        )
+        resp.raise_for_status()
+        url = (resp.json().get("data") or [{}])[0].get("url", "")
+        if not url:
+            return False
+        img = requests.get(url, timeout=90)
+        img.raise_for_status()
+        out_path.write_bytes(img.content)
+        return out_path.stat().st_size > 1000
+    except Exception as e:
+        logger.warning("Ark 文生图失败（降级 pollinations）: %s", str(e)[:120])
+        return False
+
+
+def _gen_via_pollinations(prompt: str, out_path: Path, platform: str) -> bool:
+    """兜底：pollinations flux 文生图（免费可用），下载后本地托管（消除外部 URL 依赖）。"""
+    try:
+        w, h = 1024, 1024
+        if platform == "ig":
+            w, h = 1024, 1280   # 4:5
+        elif platform == "pinterest":
+            w, h = 1024, 1536   # 2:3
+        elif platform in ("x", "fb"):
+            w, h = 1536, 864    # 16:9
+        negative = ("blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, "
+                    "bad anatomy, low quality, watermark, text, words, letters, logo, person, "
+                    "people, face, portrait, human, figure, crowd, man, woman, child")
+        url = (f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}"
+               f"?width={w}&height={h}&nologo=true&model=flux&negative={requests.utils.quote(negative)}")
+        r = requests.get(url, timeout=90)
+        r.raise_for_status()
+        if "image" not in r.headers.get("content-type", "").lower():
+            return False
+        out_path.write_bytes(r.content)
+        return out_path.stat().st_size > 1000
+    except Exception as e:
+        logger.warning("pollinations 文生图失败: %s", str(e)[:120])
+        return False
+
+
 def generate_image(item: dict, path: Path) -> str:
-    """预留图片生成接口。接入 pollinations 等后在此实现；当前返回空串（表示未生成）。
-    返回生成的本地/远程图片 URL，供发布时填充 cover。"""
+    """真实文生图：为单条帖子生成独立配图并本地托管到 static/img/china-dest/social/。
+
+    后端链：Ark Seedream（首选，需 ARK_IMAGE_MODEL）→ pollinations flux（兜底）→ 空串。
+    返回站点绝对 URL；未生成返回 ""（调用方回退文章封面）。需 IMAGE_GEN_ENABLED=1。
+    文件名含 slug/platform/type/prompt 摘要 → 同文同平台同类型也互不重复。
+    """
     if not os.environ.get("IMAGE_GEN_ENABLED", ""):
         return ""
-    # --- 预留实现：把 image_prompt 传给 pollinations ---
-    # try:
-    #     resp = requests.get(f"https://image.pollinations.ai/prompt/{quote(item['image_prompt'])}?width=1024&nologo=true", timeout=120)
-    #     resp.raise_for_status()
-    #     out = path.with_suffix(".jpg")
-    #     out.write_bytes(resp.content)
-    #     return out.as_uri()
-    # except Exception:
-    #     return ""
-    return ""
+    prompt = (item.get("image_prompt") or "").strip()
+    if not prompt:
+        prompt = build_image_prompt(
+            {"title": item.get("source_title", ""), "slug": item.get("source_article", ""),
+             "description": item.get("source_description", "")},
+            item.get("type", "knowledge"), item.get("platform", "ig"))
+    slug = re.sub(r"[^a-z0-9]+", "-", str(item.get("source_article") or "post").lower()).strip("-")[:40]
+    digest = hashlib.sha1(f"{slug}|{item.get('platform')}|{item.get('type')}|{prompt}".encode("utf-8")).hexdigest()[:8]
+    out_dir = BLOG_ROOT / "static" / "img" / "china-dest" / "social"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{slug}-{item.get('platform')}-{item.get('type')}-{digest}.jpg"
+    if out_path.exists() and out_path.stat().st_size > 1000:
+        return _site_img_url(str(out_path))
+    if not (_gen_via_ark(prompt, out_path)
+            or _gen_via_pollinations(prompt, out_path, item.get("platform", "ig"))):
+        try:
+            out_path.unlink()
+        except Exception:
+            pass
+        return ""
+    return _site_img_url(str(out_path))
 
 
 # ============================================================
@@ -586,6 +718,16 @@ def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
                 "metrics": {"impressions": 0, "clicks": 0, "engagements": 0,
                             "uv": 0, "platform": platform},
             }
+            # 真实文生图：IMAGE_GEN_ENABLED=1 时为该帖子生成独立配图（否则回退文章封面）
+            try:
+                _gen_url = generate_image(item, None)
+            except Exception as _e:
+                logger.warning("generate_image 异常 %s: %s", item.get("id", "?"), _e)
+                _gen_url = ""
+            if _gen_url:
+                item["image_url"] = _gen_url
+                item["image_generated"] = True
+
             item["_sig"] = item_signature(item)
             # 跳过已存在签名（幂等）
             if item["_sig"] in sigs:
@@ -944,6 +1086,16 @@ def _ensure_cover_url(item: dict) -> str:
     return ""
 
 
+def _image_live(url: str) -> bool:
+    """HEAD 检查图片 URL 是否已上线（HTTP 200）。任何异常视为未上线（宁可推迟不可发失效图）。"""
+    if not url:
+        return True
+    try:
+        return requests.head(url, timeout=15, allow_redirects=True).status_code == 200
+    except Exception:
+        return False
+
+
 def distribute_items(items: list, dry_run: bool = True,
                      inventory_path: Path = INVENTORY_FILE) -> list:
     """发布指定素材（自动/半自动共用），发布成功回写 status=已发布 + publish_date。"""
@@ -958,6 +1110,14 @@ def distribute_items(items: list, dry_run: bool = True,
             _cover = _ensure_cover_url(item)
             if _cover:
                 item["image_url"] = _cover
+        # 发布前 URL 存活检查：文生图需先经静态资源 push 触发 Cloudflare Pages 部署上线；
+        # 未上线则本轮跳过（保留待审核，下一轮自动补发），避免 worker 发布失效图。
+        if _cover and not dry_run and not _image_live(_cover):
+            logger.warning("配图未上线，本轮跳过发布 [%s]: %s", item.get("id", "?"), _cover)
+            results.append({"item_id": item["id"], "platform": item["platform"],
+                            "type": item["type"], "source_article": item["source_article"],
+                            "success": True, "deferred": True, "error": "image_not_live_yet"})
+            continue
         # P0: 发布前图片质量验证（宽高比/分辨率/AI图域）
         _img_issues = []
         if IMAGE_VALIDATOR_AVAILABLE and item.get("image_url"):
@@ -1223,6 +1383,41 @@ def _cmd_plan(args) -> int:
     return 0
 
 
+def _cmd_gen_images(args) -> int:
+    """为资产库素材批量生成独立配图（真实文生图）。幂等：已生成且未 --force 的跳过。"""
+    data = load_inventory()
+    items = data["items"]
+    targets = []
+    for it in items:
+        if it.get("image_generated") and not args.force:
+            continue
+        if it.get("image_url") and it.get("status") == "已发布" and not args.force:
+            # 已发布素材默认不重写（避免改已上线配图），--force 可强制
+            continue
+        targets.append(it)
+    if args.limit and args.limit > 0:
+        targets = targets[: args.limit]
+    ok = 0
+    for it in targets:
+        try:
+            _gen_url = generate_image(it, None)
+        except Exception as _e:
+            logger.warning("generate_image 异常 %s: %s", it.get("id", "?"), _e)
+            _gen_url = ""
+        if _gen_url:
+            it["image_url"] = _gen_url
+            it["image_generated"] = True
+            it.pop("image_optimized", None)
+            ok += 1
+            print(f"  OK [{it['id']}] {it['platform']} {it['type']} -> {_gen_url}")
+        else:
+            print(f"  SKIP [{it['id']}] {it['platform']} 生成失败，保留原封面")
+        time.sleep(1)
+    save_inventory(data)
+    print(f"\n[SUMMARY] 生成独立配图 {ok}/{len(targets)} 条")
+    return 0
+
+
 def _cmd_publish(args) -> int:
     data = load_inventory()
     target_date = None
@@ -1296,6 +1491,11 @@ def main(argv=None) -> int:
     p = sub.add_parser("plan", help="生成排期")
     p.add_argument("--date")
     p.set_defaults(func=_cmd_plan)
+
+    p = sub.add_parser("gen-images", help="为资产库素材批量生成独立配图（真实文生图）")
+    p.add_argument("--limit", type=int, default=0, help="最多生成 N 条（0=全部）")
+    p.add_argument("--force", action="store_true", help="强制重生成（含已生成/已发布）")
+    p.set_defaults(func=_cmd_gen_images)
 
     p = sub.add_parser("plan-pilot", help="P1-GROWTH-29 社媒试点排期（Pinterest 2/天 + IG 1/天）")
     p.add_argument("--start", default=None, help="开始日期 YYYY-MM-DD（默认明天）")
