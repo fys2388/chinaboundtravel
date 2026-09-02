@@ -52,6 +52,6 @@ jobs:
             echo "Authenticating with API Token"
           fi
           # 默认 env 更新 workers.dev 子域（兼容旧配置）
-          npx -y wrangler@3 deploy || echo "::warning::默认 env 部署失败"
+          npx -y wrangler@4 deploy || echo "::warning::默认 env 部署失败"
           # production env 更新自定义域 buffer-worker.chinaboundtravel.com
-          npx -y wrangler@3 deploy --env production || { echo "::error::production env 部署失败"; exit 1; }
+          npx -y wrangler@4 deploy --env production || { echo "::error::production env 部署失败"; exit 1; }
