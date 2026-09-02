@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02 18:01:23",
+  "generated_at": "2026-09-02 18:31:08",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 512,
+    "response_ms": 125,
     "server": "cloudflare"
   },
   "workflows": [
@@ -58,9 +58,9 @@
       "name": "Cross-Agent Learning Daily",
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-02T10:06:44Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T09:31:22Z",
+      "last_run": "2026-09-02T10:07:10Z",
       "last_event": "workflow_run"
     },
     {
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-02T10:01:02Z",
+      "last_run": "2026-09-02T10:30:53Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 10:01",
+    "checked_at": "2026-09-02 10:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -413,21 +413,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 226,
-      "sessions": 276,
-      "pageviews": 633,
-      "date": "2026-08-31"
+      "visitors": 230,
+      "sessions": 282,
+      "pageviews": 606,
+      "date": "2026-09-01"
     },
     "gsc_28d": {
-      "impressions": 525,
+      "impressions": 542,
       "clicks": 0,
-      "date": "2026-08-29"
+      "date": "2026-08-30"
     },
     "content": {
       "total_articles": 61,
       "with_affiliate": 35,
       "avg_word_count": 1901,
-      "date": "2026-09-01"
+      "date": "2026-09-02"
     },
     "ga4_daily": {
       "visitors": 14,
