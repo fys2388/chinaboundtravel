@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02 19:01:11",
+  "generated_at": "2026-09-02 19:31:04",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 239,
+    "response_ms": 93,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T10:31:24Z",
+      "last_run": "2026-09-02T11:01:29Z",
       "last_event": "workflow_run"
     },
     {
@@ -112,9 +112,9 @@
       "name": "Feishu Daily Report",
       "id": "feishu-daily-report",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-02T05:13:53Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "gsc-index-submit.yml",
@@ -167,7 +167,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-02T11:00:55Z",
+      "last_run": "2026-09-02T11:30:52Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 11:01",
+    "checked_at": "2026-09-02 11:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
