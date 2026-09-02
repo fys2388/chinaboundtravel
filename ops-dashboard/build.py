@@ -38,7 +38,7 @@ for a in data["agents"].get("agents", []):
         <span class="agent-name">{a["name"]}</span>
       </div>
       <div class="agent-status" style="color:{color}">{st}</div>
-      <div class="agent-meta">最后运行 {a["last_run"]} · 周期 {a["max_age_days"]}d</div>
+      <div class="agent-meta">最后运行 {str(a.get("last_run","")).replace("T"," ")[:16]} · 周期 {a["max_age_days"]}d</div>
     </div>'''
 
 # Workflow 分类
@@ -52,7 +52,7 @@ for cat, wfs in sorted(categories.items()):
     for w in wfs:
         c = status_color.get(w.get("last_status", "unknown"), "#374151")
         lbl = status_label.get(w.get("last_status", "unknown"), w.get("last_status", "unknown"))
-        run_time = w.get("last_run", "")[:10] if w.get("last_run") else "-"
+        run_time = w.get("last_run", "").replace("T", " ")[:16] if w.get("last_run") else "-"
         wf_items += f'''<div class="wf-item" title="{w["name"]} — {lbl}">
           <span class="wf-dot" style="background:{c};box-shadow:0 0 6px {c}66"></span>
           <span class="wf-name">{w["name"][:50]}</span><span class="wf-freq">{w.get("frequency","手动")}</span>
