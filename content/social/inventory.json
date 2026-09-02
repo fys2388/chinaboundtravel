@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-02T05:36:39",
+  "updated_at": "2026-09-02T17:05:45",
   "items": [
     {
       "id": "soc-000001",
@@ -1498,8 +1498,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-02",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2148,8 +2148,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-02",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2278,8 +2278,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-02",
       "metrics": {
         "impressions": 0,
         "clicks": 0,

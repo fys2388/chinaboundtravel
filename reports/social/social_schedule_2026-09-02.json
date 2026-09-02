@@ -4,35 +4,28 @@
       "date": "2026-09-02",
       "slots": [
         {
-          "item_id": "soc-000064",
-          "platform": "fb",
-          "type": "visual",
-          "utc": "2026-09-02T12:30:00+00:00",
-          "slot_et": "08:30"
+          "item_id": "soc-000058",
+          "platform": "pinterest",
+          "type": "story",
+          "utc": "2026-09-02T13:30:00+00:00",
+          "slot_et": "09:30"
         },
         {
-          "item_id": "soc-000057",
-          "platform": "ig",
-          "type": "tip",
-          "utc": "2026-09-02T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
-        {
-          "item_id": "soc-000085",
-          "platform": "ig",
-          "type": "conversion",
-          "utc": "2026-09-02T16:00:00+00:00",
-          "slot_et": "12:00"
-        },
-        {
-          "item_id": "soc-000087",
+          "item_id": "soc-000083",
           "platform": "x",
-          "type": "tip",
+          "type": "story",
           "utc": "2026-09-02T13:00:00+00:00",
           "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000088",
+          "platform": "fb",
+          "type": "story",
+          "utc": "2026-09-02T12:30:00+00:00",
+          "slot_et": "08:30"
         }
       ]
     }
   ],
-  "generated_at": "2026-09-02T05:36:22.413243"
+  "generated_at": "2026-09-02T17:05:30.528470"
 }
