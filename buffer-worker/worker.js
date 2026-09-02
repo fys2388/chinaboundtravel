@@ -802,9 +802,10 @@ function buildPlatformInput(service, text, mediaUrl, baseInput, env, postUrl) {
       assets: mediaUrl ? [{ image: { url: mediaUrl } }] : []
     };
   } else if (service === 'instagram') {
-    let cleanText = (text || '').replace(/https?:\/\/[^\s]+/g, '').slice(0, 2200);
-    cleanText = cleanText
-      .replace(/^(Read the full guide|Full guide):\s*$/gm, '')
+    // P0-2 fix: keep URL and CTA line in IG caption. Old logic stripped all
+    // URLs (replace(/https?:\/\/[^\s]+/g, '')) and then removed the leftover
+    // "Read the full guide:" line, which is why IG posts showed 4/4 no link.
+    let cleanText = (text || '').slice(0, 2200)
       .replace(/\n{3,}/g, '\n\n')
       .trim();
     input = {

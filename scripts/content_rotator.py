@@ -375,6 +375,7 @@ def generate_social_copies(article: dict) -> list:
     """
     为一篇文章生成 2 种风格的社媒文案。
 
+    P1修复：所有链接统一加 UTM 参数，与 social_content_agent 新链路对齐。
     返回:
         [
             {"style": "informative", "text": "..."},
@@ -383,29 +384,36 @@ def generate_social_copies(article: dict) -> list:
     """
     title = article["title"]
     description = article["description"]
-    url = ensure_article_url(article.get("url", ""), article.get("slug", ""), SITE_DOMAIN)
+    base_url = ensure_article_url(article.get("url", ""), article.get("slug", ""), SITE_DOMAIN)
+    campaign = f"cbt_social_{datetime.now().strftime('%Y%m%d')}"
+
+    def _utm(platform, variant):
+        sep = "&" if "?" in base_url else "?"
+        return f"{base_url}{sep}utm_source={platform}&utm_medium=social&utm_campaign={campaign}&utm_content=rotator_{variant}"
 
     # 目的地提取：白名单优先，绝不截取标题前几个大写词（修复 'Can Foreigners Use, Pay, China?' 语序错乱）
     destination = extract_destination(title)
 
     copies = []
 
-    # 风格 1: 信息型 — 适合 X/Facebook
+    # 风格 1: 信息型 — 适合 X/Facebook（带 UTM）
     desc_info = first_meaningful_desc(description, title, 150)
+    url_fb = _utm("fb", "informative")
     info_text = (
         f"{title}\n\n"
         f"{desc_info}\n\n"
-        f"Read more: {url}\n\n"
+        f"Full guide: {url_fb}\n\n"
         f"#ChinaTravel #TravelChina"
     )
     copies.append({"style": "informative", "text": info_text})
 
-    # 风格 2: 激发型 — 适合 Instagram/Pinterest
+    # 风格 2: 激发型 — 适合 Instagram/Pinterest（带 UTM）
     desc_inspire = first_meaningful_desc(description, title, 120)
+    url_ig = _utm("ig", "inspirational")
     inspire_text = (
         f"Dreaming of exploring {destination}?\n\n"
         f"{desc_inspire}\n\n"
-        f"Your ultimate guide is here: {url}\n\n"
+        f"Read the full guide: {url_ig}\n\n"
         f"#ChinaBucketList #TravelGoals #VisitChina"
     )
     copies.append({"style": "inspirational", "text": inspire_text})

@@ -86,6 +86,13 @@ def truncate_at_sentence(text: str, max_chars: int) -> str:
         cut = window[: ends[-1]].rstrip()
         if len(cut) >= max_chars * 0.4:
             return cut
+    # 窗口内无句子边界：向后扩展到下一个句子边界，避免单词边界截断产生残句
+    rest = text[max_chars:]
+    m = re.search(r"[.!?](?:\s+|$)", rest)
+    if m:
+        cut = (text[: max_chars] + rest[: m.end()]).rstrip()
+        if len(cut) <= max_chars * 2:
+            return cut
     cut = window.rsplit(" ", 1)[0]
     return cut if cut else window
 

@@ -261,22 +261,48 @@ def existing_signatures(data: dict) -> set:
 # ============================================================
 
 
-def _type_hook(article: dict, ctype: str) -> str:
-    """基于文章标题 / 题材的 hook 开头（2.0 Editorial Voice）。"""
-    t = article.get("title", "").lower()
+def _article_keywords(article: dict) -> list:
+    """从文章标题/描述提取主题关键词，用于生成文章相关的 hook。"""
+    hay = f"{article.get('title','')} {article.get('description','')}".lower()
+    kws = []
+    for kw in ["visa","144-hour","panda","hotpot","tea","great wall","terracotta",
+               "west lake","guilin","zhangjiajie","high-speed","subway","food","packing",
+               "bargain","remote","photography","alipay","wechat","insurance","itinerary",
+               "language","transport","etiquette","shanghai","beijing","xian","chengdu",
+               "yunnan","accommodation","safety","internet","payment","train"]:
+        if kw in hay:
+            kws.append(kw)
+    return kws[:3]
+
+
+def _article_hook(article: dict, ctype: str) -> str:
+    """基于文章内容生成 hook（P1修复：替代按类型硬编码的无关通用句）。"""
+    title = article.get("title", "China Travel").strip()
+    kws = _article_keywords(article)
+    kw_str = kws[0].replace("-", " ").title() if kws else "China travel"
     if ctype == "conversion":
-        return ("Save time and money on your next China trip — grab the step-by-step "
-                "guide before you book.")
+        return f"Everything you need to know about {kw_str} — in one practical guide."
     if ctype == "visual":
-        if any(k in t for k in ("city", "beijing", "chengdu", "shanghai", "xian", "destination")):
-            return "China's most photogenic corners, captured for your next trip."
-        return "China visuals that belong on your travel moodboard."
+        return f"Visual guide to {kw_str}: what to see and capture."
     if ctype == "story":
-        return "What first-time visitors learn about China, summed up in one practical story."
+        return f"What travelers discover about {kw_str} — practical lessons from the ground."
     if ctype == "tip":
-        return "One China travel mistake to avoid — and how to fix it."
-    # knowledge
-    return "Research-based China travel facts international visitors should know."
+        return f"Essential {kw_str} tips most first-time visitors miss."
+    return f"Research-backed facts about {kw_str} every traveler should know."
+
+
+def _type_hook(article: dict, ctype: str, platform: str = "") -> str:
+    """基于文章标题 / 题材 / 平台的 hook 开头（2.0 Editorial Voice）。
+    P1修复：增加平台差异化前缀，避免四平台同句重复。"""
+    base = _article_hook(article, ctype)
+    # 平台差异化前缀（X 极短不加前缀，其余平台加风格化引导）
+    prefixes = {
+        "ig": "",
+        "pinterest": "",
+        "fb": "💡 ",
+        "x": "",
+    }
+    return prefixes.get(platform, "") + base
 
 
 def _type_points(article: dict, ctype: str) -> list:
@@ -286,13 +312,14 @@ def _type_points(article: dict, ctype: str) -> list:
     # knowledge / tip 用 heading 提炼价值点
     if ctype in ("knowledge", "tip"):
         for h in (article.get("headings") or [])[:3]:
-            points.append(truncate(h, 70))
+            points.append(h.strip() if h and h.strip() else truncate(h, 70))
     # conversion 用标题/描述关键词
     if ctype == "conversion":
-        points.append(truncate(article.get("title") or "", 70))
+        points.append(truncate(article.get("title") or "", 100))
     # story / visual 用描述（P1-OPS-04: 去标题前缀 + 句子边界，防泄漏/重复/残句）
+    # P1修复：first_meaningful_desc 已做句子边界截断，不再额外硬truncate避免残句
     if ctype in ("story", "visual") and desc:
-        points.append(truncate(first_meaningful_desc(desc, article.get("title", ""), 90), 90))
+        points.append(first_meaningful_desc(desc, article.get("title", ""), 90))
     return points
 
 
@@ -323,14 +350,15 @@ def _keyword_dense(article: dict) -> str:
 def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> str:
     """按平台 + 类型渲染确定性文案。"""
     style = _platform_style(platform)
-    hook = _type_hook(article, ctype)
+    hook = _type_hook(article, ctype, platform)
     points = _type_points(article, ctype)
     title = truncate(article.get("title") or "", 90)
 
     lines = []
     if platform == "pinterest":
-        # 长文案 + 关键词密集，偏攻略实用型
-        lines.append(f"{title} | {hook}")
+        # 长文案 + 关键词密集，偏攻略实用型 — hook 基于文章标题/关键词（P1修复：去除无关通用句）
+        pin_hook = _article_hook(article, ctype)
+        lines.append(f"{title} | {pin_hook}")
         dense = _keyword_dense(article)
         if dense:
             lines.append("")
@@ -355,9 +383,11 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         core = hook
         if points:
             core += f" {points[0]}"
-        core += f" → {utm_url}"
-        core = truncate(core, style["max_caption"] - 12)
-        core = f"{core} {style['hashtags'][0]}"
+        url_part = f" → {utm_url}"
+        hashtag = f" {style['hashtags'][0]}"
+        reserve = len(url_part) + len(hashtag)
+        core = truncate(core, max(1, style["max_caption"] - reserve))
+        core = f"{core}{url_part}{hashtag}"
         lines.append(core)
     else:  # fb
         # 中等长度，互动引导型
