@@ -964,6 +964,17 @@
       "error_message": "oduction env + workers.dev)\t2026-09-02T02:05:41.9253184Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:05:41.9253208Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:05:41.9263179Z Getting User settings...\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:05:42.0740832Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:05:42.0764691Z ^[[31m✘ ^[[41;31m[^[[41;97mERROR^[[41;31m]^[[0m ^[[1mA request to the Cloudflare API (/acco",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260902_020800",
+      "timestamp": "2026-09-02T02:08:00.858794",
+      "workflow_name": "Deploy Buffer Worker",
+      "run_id": "33582015130",
+      "category": "authentication_error",
+      "category_name": "未知错误",
+      "error_message": " workers.dev)\t2026-09-02T02:07:27.1901618Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1901873Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1921942Z Please ensure it has the correct permissions for this operation.\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1931512Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1932062Z Getting User settings...\ndeploy\tDeploy Worker (production env + w",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
