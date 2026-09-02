@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-09-02 09:00:43",
+  "generated_at": "2026-09-02 09:33:18",
   "site": {
     "url": "chinaboundtravel.com",
-    "status": 200,
-    "up": true,
-    "response_ms": 185,
-    "server": "cloudflare"
+    "status": 0,
+    "up": false,
+    "response_ms": 0,
+    "server": "unreachable",
+    "error": "No module named 'requests'"
   },
   "workflows": [
     {
@@ -77,7 +78,7 @@
       "id": "deploy-buffer-worker",
       "frequency": "手动",
       "last_status": "failure",
-      "last_run": "2026-09-01T16:45:54Z",
+      "last_run": "2026-09-02T01:24:24Z",
       "last_event": "push"
     },
     {
@@ -94,9 +95,9 @@
       "name": "Environment Check",
       "id": "env-check",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-02T01:30:28Z",
+      "last_event": "schedule"
     },
     {
       "file": "error-alert.yml",
@@ -109,12 +110,12 @@
     },
     {
       "file": "feishu-daily-report.yml",
-      "name": "feishu-daily-report",
+      "name": "Feishu Daily Report",
       "id": "feishu-daily-report",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-02T01:24:25Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -166,7 +167,7 @@
       "name": "Ops Dashboard Refresh",
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
-      "last_status": "",
+      "last_status": "success",
       "last_run": "2026-09-02T01:00:28Z",
       "last_event": "workflow_dispatch"
     },
@@ -289,7 +290,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 01:00",
+    "checked_at": "2026-09-02 09:33",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -302,31 +303,31 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-01",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-01",
         "max_age_days": 2
       },
       {
@@ -338,7 +339,7 @@
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-08-31",
         "max_age_days": 8
       }
     ],
@@ -430,57 +431,54 @@
       "date": "2026-09-01"
     },
     "ga4_daily": {
-      "visitors": 13,
-      "sessions": 20,
-      "pageviews": 33,
-      "new_users": 11,
-      "bounce_rate": 100,
-      "date": "2026-09-01",
-      "status": "OK"
+      "visitors": 0,
+      "sessions": 0,
+      "pageviews": 0,
+      "status": "error:No module named 'requests'",
+      "date": ""
     },
     "gsc_daily": {
-      "impressions": 25,
+      "impressions": 0,
       "clicks": 0,
-      "ctr": 0.0,
-      "avg_position": 78.0,
-      "date": "2026-08-30",
-      "status": "OK"
+      "ctr": 0,
+      "status": "error:name 'pull_gsc_data' is not defined",
+      "date": ""
     }
   },
   "data_sources": [
     {
       "name": "GA4",
-      "configured": true,
-      "status": "OK"
+      "configured": false,
+      "status": "error:No module named 'requests'"
     },
     {
       "name": "GSC",
-      "configured": true,
-      "status": "OK"
+      "configured": false,
+      "status": "error:name 'pull_gsc_data' is not defined"
     },
     {
       "name": "Travelpayouts",
-      "configured": true,
+      "configured": false,
       "status": "ok"
     },
     {
       "name": "NordVPN",
-      "configured": true,
+      "configured": false,
       "status": "ok"
     },
     {
       "name": "MailerLite",
-      "configured": true,
+      "configured": false,
       "status": "configured"
     },
     {
       "name": "Buffer",
-      "configured": true,
+      "configured": false,
       "status": "ok"
     },
     {
       "name": "Cloudflare",
-      "configured": true,
+      "configured": false,
       "status": "ok"
     }
   ],

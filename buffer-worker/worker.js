@@ -249,8 +249,9 @@ export default {
         }
       }
       
-      // UTC 1-18 整点 = 北京时间 9:00-次日2:00 触发热核看板
-      if (triggerMinute === 0 && triggerHour >= 1 && triggerHour <= 18 && env.DASHBOARD_WORKFLOW_ID) {
+      // UTC 1-18 每30分钟 = 北京时间 9:00-次日2:00 每30分钟触发热核看板
+      // 排除 UTC 18:30（北京时间 2:30，超出范围）
+      if ((triggerMinute === 0 || triggerMinute === 30) && triggerHour >= 1 && triggerHour <= 18 && !(triggerHour === 18 && triggerMinute === 30) && env.DASHBOARD_WORKFLOW_ID) {
         try {
           const resp = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${env.DASHBOARD_WORKFLOW_ID}/dispatches`, {
             method: 'POST',
