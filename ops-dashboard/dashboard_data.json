@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 18:00:39",
+  "generated_at": "2026-09-03 18:30:40",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 244,
+    "response_ms": 186,
     "server": "cloudflare"
   },
   "workflows": [
@@ -58,9 +58,9 @@
       "name": "Cross-Agent Learning Daily",
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-03T10:17:39Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-03T09:30:53Z",
+      "last_run": "2026-09-03T10:18:05Z",
       "last_event": "workflow_run"
     },
     {
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-03T10:00:24Z",
+      "last_run": "2026-09-03T10:30:24Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -298,7 +298,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-03 10:00",
+    "checked_at": "2026-09-03 10:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -422,21 +422,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 230,
-      "sessions": 282,
-      "pageviews": 606,
-      "date": "2026-09-01"
+      "visitors": 233,
+      "sessions": 293,
+      "pageviews": 694,
+      "date": "2026-09-02"
     },
     "gsc_28d": {
-      "impressions": 542,
+      "impressions": 553,
       "clicks": 0,
-      "date": "2026-08-30"
+      "date": "2026-08-31"
     },
     "content": {
       "total_articles": 61,
       "with_affiliate": 35,
-      "avg_word_count": 1901,
-      "date": "2026-09-02"
+      "avg_word_count": 1900,
+      "date": "2026-09-03"
     },
     "ga4_daily": {
       "visitors": 12,
