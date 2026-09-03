@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 13:30:39",
+  "generated_at": "2026-09-03 14:00:36",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 167,
+    "response_ms": 88,
     "server": "cloudflare"
   },
   "workflows": [
@@ -13,9 +13,9 @@
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-03T05:32:39Z",
+      "last_event": "schedule"
     },
     {
       "file": "ai-agent-orchestrator.yml",
@@ -94,9 +94,9 @@
       "name": "Environment Check",
       "id": "env-check",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-03T01:34:27Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "error-alert.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-03T05:28:54Z",
+      "last_run": "2026-09-03T05:36:39Z",
       "last_event": "workflow_run"
     },
     {
@@ -176,8 +176,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-03T05:30:25Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-03T06:00:24Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -247,9 +247,9 @@
       "name": "Social Engine Daily (闭环)",
       "id": "social-engine-daily",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-03T05:36:07Z",
+      "last_event": "schedule"
     },
     {
       "file": "social_distributor.yml",
@@ -298,7 +298,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-03 05:30",
+    "checked_at": "2026-09-03 06:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
