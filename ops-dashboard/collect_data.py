@@ -151,24 +151,44 @@ except:
 # 5b. GA4/GSC 单日数据（日报口径，save=False 不覆盖28天文件）
 try:
     from real_data_pull_engine import pull_ga4_data, pull_gsc_data
-    ga4_daily = pull_ga4_data(days=1, save=False)
+    ga4_daily = pull_ga4_data(days=7, save=False)
     if ga4_daily.get("is_real_data") and ga4_daily.get("metrics"):
         m = ga4_daily["metrics"]
-        data["metrics"]["ga4_daily"] = {"visitors": m.get("activeUsers", 0), "sessions": m.get("sessions", 0), "pageviews": m.get("screenPageViews", 0), "new_users": m.get("newUsers", 0), "bounce_rate": round(m.get("bounceRate", 0) * 100, 1), "date": ga4_daily.get("data_date", ""), "status": "OK"}
+        # 最近一天数据（用于KPI显示）
+        latest = ga4_daily.get("daily", [])[-1] if ga4_daily.get("daily") else {}
+        data["metrics"]["ga4_daily"] = {
+            "visitors": latest.get("activeUsers", m.get("activeUsers", 0)),
+            "sessions": latest.get("sessions", m.get("sessions", 0)),
+            "pageviews": latest.get("pageviews", m.get("screenPageViews", 0)),
+            "new_users": m.get("newUsers", 0),
+            "bounce_rate": round(m.get("bounceRate", 0) * 100, 1),
+            "date": latest.get("date", ga4_daily.get("data_date", "")),
+            "status": "OK",
+            "daily": ga4_daily.get("daily", []),
+        }
     else:
-        data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": ga4_daily.get("status", "failed"), "date": ""}
+        data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": ga4_daily.get("status", "failed"), "date": "", "daily": []}
 except Exception as e:
-    data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": "error:" + str(e)[:50], "date": ""}
+    data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": "error:" + str(e)[:50], "date": "", "daily": []}
 
 try:
-    gsc_daily = pull_gsc_data(days=1, save=False)
+    gsc_daily = pull_gsc_data(days=7, save=False)
     if gsc_daily.get("is_real_data") and gsc_daily.get("metrics"):
         m = gsc_daily["metrics"]
-        data["metrics"]["gsc_daily"] = {"impressions": m.get("impressions", 0), "clicks": m.get("clicks", 0), "ctr": round(m.get("ctr", 0), 2), "avg_position": m.get("average_position", 0), "date": gsc_daily.get("data_date", ""), "status": "OK"}
+        latest = gsc_daily.get("daily", [])[-1] if gsc_daily.get("daily") else {}
+        data["metrics"]["gsc_daily"] = {
+            "impressions": latest.get("impressions", m.get("impressions", 0)),
+            "clicks": latest.get("clicks", m.get("clicks", 0)),
+            "ctr": latest.get("ctr", round(m.get("ctr", 0), 2)),
+            "avg_position": latest.get("position", m.get("average_position", 0)),
+            "date": latest.get("date", gsc_daily.get("data_date", "")),
+            "status": "OK",
+            "daily": gsc_daily.get("daily", []),
+        }
     else:
-        data["metrics"]["gsc_daily"] = {"impressions": 0, "clicks": 0, "ctr": 0, "status": gsc_daily.get("status", "failed"), "date": ""}
+        data["metrics"]["gsc_daily"] = {"impressions": 0, "clicks": 0, "ctr": 0, "status": gsc_daily.get("status", "failed"), "date": "", "daily": []}
 except Exception as e:
-    data["metrics"]["gsc_daily"] = {"impressions": 0, "clicks": 0, "ctr": 0, "status": "error:" + str(e)[:50], "date": ""}
+    data["metrics"]["gsc_daily"] = {"impressions": 0, "clicks": 0, "ctr": 0, "status": "error:" + str(e)[:50], "date": "", "daily": []}
 
 # 6. 数据源状态
 def _has(*keys):

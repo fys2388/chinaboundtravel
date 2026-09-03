@@ -94,6 +94,11 @@ ga4 = data["metrics"].get("ga4_daily", data["metrics"].get("ga4", {}))
 gsc = data["metrics"].get("gsc_daily", data["metrics"].get("gsc", {}))
 content = data["metrics"].get("content", {})
 
+# 7天趋势数据（JSON for ECharts）
+import json as _json
+ga4_daily_json = _json.dumps(ga4.get("daily", []), ensure_ascii=False)
+gsc_daily_json = _json.dumps(gsc.get("daily", []), ensure_ascii=False)
+
 site = data["site"]
 site_color = "#22c55e" if site.get("up") else "#ef4444"
 overall = data["agents"].get("overall", "未知")
@@ -130,6 +135,7 @@ html = f'''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChinaBound Travel · 运营监控中心</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 <style>
 :root {{
   --bg:#070b14; --panel:#0d1320; --panel2:#111827; --border:#1e293b; --border2:#263548;
@@ -202,6 +208,22 @@ body {{
 .kpi-label {{ font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.6px; font-weight:600; margin-bottom:8px; }}
 .kpi-value {{ font-size:28px; font-weight:800; color:#f8fafc; line-height:1.1; font-variant-numeric:tabular-nums; }}
 .kpi-sub {{ font-size:11px; color:var(--text3); margin-top:6px; }}
+
+/* 趋势图卡片 */
+.kpi-trend-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }}
+@media(max-width:900px) {{ .kpi-trend-grid {{ grid-template-columns:1fr; }} }}
+.kpi-trend {{
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:14px 16px 10px; position:relative; overflow:hidden;
+}}
+.kpi-trend::before {{ content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }}
+.kpi-trend.t1::before {{ background:var(--accent); }}
+.kpi-trend.t2::before {{ background:var(--blue); }}
+.kpi-trend-head {{ display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }}
+.kpi-trend-label {{ font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.6px; font-weight:600; }}
+.kpi-trend-value {{ font-size:24px; font-weight:800; color:#f8fafc; font-variant-numeric:tabular-nums; }}
+.kpi-trend-sub {{ font-size:11px; color:var(--text3); }}
+.kpi-chart {{ width:100%; height:110px; }}
 
 /* 区块 */
 .section {{ margin-bottom:24px; }}
@@ -324,18 +346,28 @@ body {{
     </div>
   </div>
 
+  <!-- KPI 趋势图 -->
+  <div class="kpi-trend-grid">
+    <div class="kpi-trend t1">
+      <div class="kpi-trend-head">
+        <span class="kpi-trend-label">访客 · 近7天</span>
+        <span class="kpi-trend-value">{ga4.get("visitors","-")}</span>
+        <span class="kpi-trend-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览 · 最新 {ga4.get("date","")}</span>
+      </div>
+      <div id="ga4-chart" class="kpi-chart"></div>
+    </div>
+    <div class="kpi-trend t2">
+      <div class="kpi-trend-head">
+        <span class="kpi-trend-label">GSC 曝光 · 近7天</span>
+        <span class="kpi-trend-value">{gsc.get("impressions","-")}</span>
+        <span class="kpi-trend-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}% · 最新 {gsc.get("date","")}</span>
+      </div>
+      <div id="gsc-chart" class="kpi-chart"></div>
+    </div>
+  </div>
+
   <!-- KPI -->
   <div class="kpi-grid">
-    <div class="kpi k1">
-      <div class="kpi-label">访客 · 昨日</div>
-      <div class="kpi-value">{ga4.get("visitors","-")}</div>
-      <div class="kpi-sub">{ga4.get("sessions",0)} 会话 · {ga4.get("pageviews",0)} 浏览 · {ga4.get("date","")}</div>
-    </div>
-    <div class="kpi k2">
-      <div class="kpi-label">GSC 曝光 · 昨日</div>
-      <div class="kpi-value">{gsc.get("impressions","-")}</div>
-      <div class="kpi-sub">{gsc.get("clicks",0)} 点击 · CTR {gsc.get("ctr",0)}% · {gsc.get("date","")}</div>
-    </div>
     <div class="kpi k3">
       <div class="kpi-label">已发布文章</div>
       <div class="kpi-value">{content.get("total_articles","-")}</div>
@@ -408,9 +440,125 @@ body {{
   </div>
 
   <div class="footer">
-    ChinaBound Travel Ops Dashboard · 数据来源 <span>GitHub Actions · GA4 · GSC · 本地报告</span> · 生成于 {data["generated_at"]} · 每小时自动刷新
+    ChinaBound Travel Ops Dashboard · 数据来源 <span>GitHub Actions · GA4 · GSC · 本地报告</span> · 生成于 {data["generated_at"]} · 每30分钟自动刷新
   </div>
 </div>
+<script>
+(function() {{
+  try {{
+    var ga4Data = {ga4_daily_json};
+    var gscData = {gsc_daily_json};
+
+    function fmtDate(d) {{
+      if (!d) return '';
+      return d.substring(5); // MM-DD
+    }}
+
+    // GA4 访客趋势
+    var ga4Chart = echarts.init(document.getElementById('ga4-chart'));
+    ga4Chart.setOption({{
+      backgroundColor: 'transparent',
+      grid: {{ left: 30, right: 10, top: 10, bottom: 20 }},
+      tooltip: {{
+        trigger: 'axis',
+        backgroundColor: 'rgba(13,19,32,0.95)',
+        borderColor: '#1e293b',
+        textStyle: {{ color: '#e2e8f0', fontSize: 11 }},
+        formatter: function(params) {{
+          var p = params[0];
+          var d = ga4Data[p.dataIndex] || {{}};
+          return p.axisValue + '<br/>访客: ' + (d.activeUsers || 0) +
+                 '<br/>会话: ' + (d.sessions || 0) +
+                 '<br/>浏览: ' + (d.pageviews || 0);
+        }}
+      }},
+      xAxis: {{
+        type: 'category',
+        data: ga4Data.map(function(d) {{ return fmtDate(d.date); }}),
+        axisLine: {{ lineStyle: {{ color: '#1e293b' }} }},
+        axisLabel: {{ color: '#64748b', fontSize: 10 }},
+        axisTick: {{ show: false }}
+      }},
+      yAxis: {{
+        type: 'value',
+        splitLine: {{ lineStyle: {{ color: '#1e293b', type: 'dashed' }} }},
+        axisLabel: {{ color: '#64748b', fontSize: 10 }}
+      }},
+      series: [{{
+        name: '访客',
+        type: 'line',
+        data: ga4Data.map(function(d) {{ return d.activeUsers || 0; }}),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: {{ color: '#00d4ff', width: 2 }},
+        itemStyle: {{ color: '#00d4ff' }},
+        areaStyle: {{
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {{ offset: 0, color: 'rgba(0,212,255,0.25)' }},
+            {{ offset: 1, color: 'rgba(0,212,255,0.02)' }}
+          ])
+        }}
+      }}]
+    }});
+
+    // GSC 曝光趋势
+    var gscChart = echarts.init(document.getElementById('gsc-chart'));
+    gscChart.setOption({{
+      backgroundColor: 'transparent',
+      grid: {{ left: 30, right: 10, top: 10, bottom: 20 }},
+      tooltip: {{
+        trigger: 'axis',
+        backgroundColor: 'rgba(13,19,32,0.95)',
+        borderColor: '#1e293b',
+        textStyle: {{ color: '#e2e8f0', fontSize: 11 }},
+        formatter: function(params) {{
+          var p = params[0];
+          var d = gscData[p.dataIndex] || {{}};
+          return p.axisValue + '<br/>曝光: ' + (d.impressions || 0) +
+                 '<br/>点击: ' + (d.clicks || 0) +
+                 '<br/>CTR: ' + (d.ctr || 0) + '%';
+        }}
+      }},
+      xAxis: {{
+        type: 'category',
+        data: gscData.map(function(d) {{ return fmtDate(d.date); }}),
+        axisLine: {{ lineStyle: {{ color: '#1e293b' }} }},
+        axisLabel: {{ color: '#64748b', fontSize: 10 }},
+        axisTick: {{ show: false }}
+      }},
+      yAxis: {{
+        type: 'value',
+        splitLine: {{ lineStyle: {{ color: '#1e293b', type: 'dashed' }} }},
+        axisLabel: {{ color: '#64748b', fontSize: 10 }}
+      }},
+      series: [{{
+        name: '曝光',
+        type: 'line',
+        data: gscData.map(function(d) {{ return d.impressions || 0; }}),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: {{ color: '#3b82f6', width: 2 }},
+        itemStyle: {{ color: '#3b82f6' }},
+        areaStyle: {{
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {{ offset: 0, color: 'rgba(59,130,246,0.25)' }},
+            {{ offset: 1, color: 'rgba(59,130,246,0.02)' }}
+          ])
+        }}
+      }}]
+    }});
+
+    window.addEventListener('resize', function() {{
+      ga4Chart.resize();
+      gscChart.resize();
+    }});
+  }} catch(e) {{
+    console.error('Chart init failed:', e);
+  }}
+}})();
+</script>
 </body>
 </html>'''
 

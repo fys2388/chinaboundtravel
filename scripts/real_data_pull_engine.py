@@ -269,19 +269,28 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
                 "dateRanges": [{"startDate": week_start.isoformat(), "endDate": end_date.isoformat()}],
                 "dimensions": [{"name": "date"}],
                 "metrics": [{"name": "sessions"}, {"name": "activeUsers"}, {"name": "screenPageViews"}],
-                "orderBys": [{"field": {"fieldName": "date"}, "sortOrder": "ASCENDING"}],
             }
             resp = requests.post(url, headers=headers, json=body_daily, timeout=30)
             if resp.status_code == 200:
                 for row in resp.json().get("rows", []):
                     dims = row.get("dimensionValues", [])
                     vals = row.get("metricValues", [])
+                    raw_date = dims[0].get("value", "") if dims else ""
+                    # GA4 returns YYYYMMDD, convert to YYYY-MM-DD
+                    if len(raw_date) == 8 and raw_date.isdigit():
+                        fmt_date = f"{raw_date[:4]}-{raw_date[4:6]}-{raw_date[6:8]}"
+                    else:
+                        fmt_date = raw_date
                     result["daily"].append({
-                        "date": dims[0].get("value", "") if dims else "",
+                        "date": fmt_date,
                         "sessions": int(vals[0].get("value", 0)) if len(vals) > 0 else 0,
                         "activeUsers": int(vals[1].get("value", 0)) if len(vals) > 1 else 0,
                         "pageviews": int(vals[2].get("value", 0)) if len(vals) > 2 else 0,
                     })
+                result["daily"].sort(key=lambda x: x["date"])
+                print(f"  GA4 daily trend: {len(result['daily'])} 天")
+            else:
+                print(f"  GA4 daily trend API 返回 {resp.status_code}: {resp.text[:200]}")
         except Exception as e:
             print(f"  GA4 daily trend 跳过: {e}")
 
@@ -353,6 +362,7 @@ def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
         "is_real_data": False,
         "is_fresh": False,
         "metrics": {},
+        "daily": [],
         "top_queries": [],
         "top_pages": [],
         "raw_source": "Google Search Console REST API v3",
@@ -521,6 +531,33 @@ def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
                 })
     except Exception as e:
         print(f"  GSC top pages 跳过: {e}")
+
+    # 2b. 每日趋势（按 date 维度，最近7天）
+    try:
+        daily_end = end_date
+        daily_start = daily_end - timedelta(days=6)
+        daily_body = {
+            "startDate": daily_start.isoformat(),
+            "endDate": daily_end.isoformat(),
+            "searchType": "web",
+            "dimensions": ["date"],
+            "rowLimit": 30,
+        }
+        resp = requests.post(api_url, headers=headers, json=daily_body, timeout=60)
+        if resp.status_code == 200:
+            for row in resp.json().get("rows", []):
+                keys = row.get("keys", [])
+                result["daily"].append({
+                    "date": keys[0] if keys else "",
+                    "impressions": row.get("impressions", 0),
+                    "clicks": row.get("clicks", 0),
+                    "ctr": round(row.get("ctr", 0), 2),
+                    "position": round(row.get("position", 0), 1),
+                })
+            result["daily"].sort(key=lambda x: x["date"])
+            print(f"  GSC daily trend: {len(result['daily'])} 天")
+    except Exception as e:
+        print(f"  GSC daily trend 跳过: {e}")
 
     # 3. Sitemap 状态
     try:
