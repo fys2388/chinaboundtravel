@@ -264,9 +264,10 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
     # 2. 每日趋势（近7天）
     if result["is_real_data"]:
         try:
-            week_start = end_date - timedelta(days=6)
+            daily_end = date.today()  # 含今日实时数据
+            week_start = daily_end - timedelta(days=6)
             body_daily = {
-                "dateRanges": [{"startDate": week_start.isoformat(), "endDate": end_date.isoformat()}],
+                "dateRanges": [{"startDate": week_start.isoformat(), "endDate": daily_end.isoformat()}],
                 "dimensions": [{"name": "date"}],
                 "metrics": [{"name": "sessions"}, {"name": "activeUsers"}, {"name": "screenPageViews"}],
             }
