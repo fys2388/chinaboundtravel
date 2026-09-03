@@ -975,6 +975,17 @@
       "error_message": " workers.dev)\t2026-09-02T02:07:27.1901618Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1901873Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1921942Z Please ensure it has the correct permissions for this operation.\ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1931512Z \ndeploy\tDeploy Worker (production env + workers.dev)\t2026-09-02T02:07:27.1932062Z Getting User settings...\ndeploy\tDeploy Worker (production env + w",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260903_053136",
+      "timestamp": "2026-09-03T05:31:36.923155",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "33719130766",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "on/3.11.16/x64/lib\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3211943Z ##[endgroup]\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3586951Z ✅ index.html generated: 34983 bytes\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3588731Z    Workflow categories: ['SEO与索引', 'AI Agent', '内容与社媒', '日报与通知', '构建与部署', '其他']\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3589451Z    Agents: 7/7 healthy\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:1",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
