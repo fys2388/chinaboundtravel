@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 14:30:36",
+  "generated_at": "2026-09-03 15:00:35",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 167,
+    "response_ms": 145,
     "server": "cloudflare"
   },
   "workflows": [
@@ -49,9 +49,9 @@
       "name": "Content Rotation Distributor",
       "id": "content-rotation",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-03T06:41:34Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-daily.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-03T06:00:49Z",
+      "last_run": "2026-09-03T06:42:58Z",
       "last_event": "workflow_run"
     },
     {
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-03T06:30:24Z",
+      "last_run": "2026-09-03T07:00:24Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -202,9 +202,9 @@
       "name": "Retry Failed Jobs",
       "id": "retry-failed",
       "frequency": "手动",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "skipped",
+      "last_run": "2026-09-03T06:42:58Z",
+      "last_event": "workflow_run"
     },
     {
       "file": "seo-audit.yml",
@@ -298,7 +298,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-03 06:30",
+    "checked_at": "2026-09-03 07:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
