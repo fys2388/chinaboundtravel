@@ -15,8 +15,8 @@ categories:
 geo: "EU"
 draft: false
 audit_status: "pass2"
-summary: "Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China. what you need to know before your trip from on-the-ground experience in China."
-description: "Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China. what you need to know before your trip from on-the-ground..."
+summary: "Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience."
+description: "Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience."
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/"
 ShowToc: "true"
 TocOpen: "false"

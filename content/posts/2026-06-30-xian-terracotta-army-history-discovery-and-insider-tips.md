@@ -10,7 +10,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "Xi'an Terracotta Army visitor guide: 2026 ticket prices, transport from Xi'an, photography rules, and what most tourists miss."
-description: "Xi. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details."
+description: "Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details."
 canonicalURL: "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/"
 ShowToc: "true"
 TocOpen: "false"

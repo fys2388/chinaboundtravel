@@ -2,7 +2,7 @@
 content_id: "cbt-c885da2cf5d9"
 title: "7-Day China Itinerary: Beijing, Xi'an, Shanghai"
 slug: "7-day-china-itinerary-beijing-xian-shanghai-first-timers"
-description: "7-Day China Itinerary: Beijing, Xi. Research-based practical guidance for international travelers planning a China trip. Check official sources for the lates..."
+description: "7-Day China Itinerary: Beijing, Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the lates..."
 date: "2026-05-27"
 author: "Joran"
 params:
