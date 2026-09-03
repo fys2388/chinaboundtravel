@@ -1,17 +1,68 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-02T10:07:00.175376",
-  "data_date": "2026-08-30",
+  "pull_time": "2026-09-03T10:17:55.892881",
+  "data_date": "2026-08-31",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 542,
+    "impressions": 553,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 66.4,
+    "average_position": 66.6,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
   },
+  "daily": [
+    {
+      "date": "2026-08-25",
+      "impressions": 85,
+      "clicks": 1,
+      "ctr": 0.01,
+      "position": 64.1
+    },
+    {
+      "date": "2026-08-26",
+      "impressions": 95,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 68.4
+    },
+    {
+      "date": "2026-08-27",
+      "impressions": 97,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 65.7
+    },
+    {
+      "date": "2026-08-28",
+      "impressions": 123,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 68.7
+    },
+    {
+      "date": "2026-08-29",
+      "impressions": 180,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 68.3
+    },
+    {
+      "date": "2026-08-30",
+      "impressions": 147,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 65.0
+    },
+    {
+      "date": "2026-08-31",
+      "impressions": 84,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 64.3
+    }
+  ],
   "top_queries": [
     {
       "query": "144 china visa",
@@ -127,10 +178,10 @@
     },
     {
       "query": "144 hours visa china",
-      "impressions": 11,
+      "impressions": 9,
       "clicks": 0,
       "ctr": 0,
-      "position": 72.7
+      "position": 71.9
     },
     {
       "query": "144 hours visa free china",
@@ -164,10 +215,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 20,
+      "impressions": 17,
       "clicks": 1,
-      "ctr": 0.05,
-      "position": 10.8
+      "ctr": 0.06,
+      "position": 9.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -185,10 +236,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 54,
+      "impressions": 52,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 19.2
+      "position": 19.0
     },
     {
       "page": "https://www.chinaboundtravel.com/",
@@ -227,10 +278,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/xian/",
-      "impressions": 31,
+      "impressions": 29,
       "clicks": 0,
       "ctr": 0,
-      "position": 70.1
+      "position": 68.6
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
@@ -248,24 +299,24 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/content/",
-      "impressions": 7,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 37.9
+      "position": 42.2
     },
     {
       "page": "https://www.chinaboundtravel.com/disclaimer/",
-      "impressions": 7,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 30.6
+      "position": 36
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 104,
+      "impressions": 108,
       "clicks": 0,
       "ctr": 0,
-      "position": 76.0
+      "position": 76.1
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/",
@@ -276,17 +327,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 665,
+      "impressions": 693,
       "clicks": 0,
       "ctr": 0,
       "position": 72.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-      "impressions": 9,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 14.8
+      "position": 15.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -303,6 +354,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-08-30"
+    "data_date": "2026-08-31"
   }
 }

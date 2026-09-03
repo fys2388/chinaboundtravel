@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260902_100701",
-  "last_updated": "2026-09-02T10:07:01.662929",
+  "version": "2.0-20260903_101757",
+  "last_updated": "2026-09-03T10:17:57.767192",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -13,7 +13,7 @@
         "warning",
         "guide",
         "list",
-        "question"
+        "conversion"
       ],
       "best_ctas": [
         "save for later",
@@ -37,7 +37,7 @@
         "warning",
         "guide",
         "list",
-        "question"
+        "conversion"
       ],
       "best_ctas": [
         "link in bio",
@@ -61,7 +61,7 @@
         "warning",
         "guide",
         "list",
-        "question"
+        "conversion"
       ],
       "best_ctas": [
         "read more",
@@ -85,7 +85,7 @@
         "warning",
         "guide",
         "list",
-        "question"
+        "conversion"
       ],
       "best_ctas": [
         "read thread",
@@ -109,13 +109,13 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 5.30%，比Bottom 20%高 5.30个百分点",
+      "description": "Top 20%帖子平均CTR 5.18%，比Bottom 20%高 5.18个百分点",
       "common_hooks": [
         "linkedin",
         "warning",
         "guide",
         "list",
-        "question"
+        "conversion"
       ],
       "best_times": [
         "22:00",
