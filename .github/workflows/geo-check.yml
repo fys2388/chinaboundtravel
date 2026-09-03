@@ -1,0 +1,79 @@
+name: GEO Check
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+      - 'static/**'
+      - 'layouts/**'
+      - 'scripts/geo_check.py'
+      - '.github/workflows/geo-check.yml'
+  schedule:
+    # 每日 UTC 06:00 = 北京时间 14:00，巡检 AI 爬虫可达性
+    - cron: '0 6 * * *'
+
+concurrency:
+  group: geo-check
+  cancel-in-progress: false
+
+jobs:
+  geo-check:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run GEO crawl check
+        id: geo
+        continue-on-error: true
+        run: |
+          pip install requests --quiet
+          python scripts/geo_check.py
+
+      - name: Alert to Feishu if GEO blocked
+        if: always()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          python - <<'PY'
+          import json, os, sys, urllib.request
+
+          try:
+              p = json.load(open('reports/geo_crawl_status.json', encoding='utf-8'))
+          except Exception as e:
+              print('cannot read geo report:', e)
+              sys.exit(0)
+
+          if p.get('geo_ready'):
+              print('GEO OK: all reachable crawlers return 200, training bots blocked.')
+              sys.exit(0)
+
+          fails = p.get('failures', [])
+          text = (
+              'GEO 告警：以下 AI 爬虫可达性未达标（HTTP != 200）: '
+              + ', '.join(fails)
+              + '。\n请到 Cloudflare 控制台 -> Security -> AI Crawl Control：'
+              '放行 Search/Agent 类爬虫（OAI-SearchBot / PerplexityBot / Claude-SearchBot / ChatGPT-User），'
+              '并关闭 Managed robots.txt（否则本站自定义 robots.txt 不生效）。'
+          )
+          webhook = os.environ.get('FEISHU_WEBHOOK_URL', '')
+          if webhook:
+              body = json.dumps({'msg_type': 'text', 'content': {'text': text}}).encode('utf-8')
+              req = urllib.request.Request(
+                  webhook, data=body, headers={'Content-Type': 'application/json'}
+              )
+              try:
+                  urllib.request.urlopen(req, timeout=15)
+                  print('feishu alert sent')
+              except Exception as e:
+                  print('feishu alert failed:', e)
+          print(text)
+          PY
