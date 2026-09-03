@@ -87,8 +87,18 @@
         "pinterest": "2026-09-03"
       },
       "distribute_count": 4
+    },
+    "chinese-food-delivery-meituan-eleme-guide": {
+      "title": "Chinese Food Delivery 2026: Meituan & Ele.me",
+      "last_distributed": "2026-09-03",
+      "platforms": {
+        "facebook": "2026-09-03",
+        "instagram": "2026-09-03",
+        "pinterest": "2026-09-03"
+      },
+      "distribute_count": 3
     }
   },
-  "last_run": "2026-09-03T06:42:46.799821+00:00",
-  "total_distributions": 36
+  "last_run": "2026-09-03T17:24:34.125222+00:00",
+  "total_distributions": 39
 }
