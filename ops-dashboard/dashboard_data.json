@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 03:28:17",
+  "generated_at": "2026-09-03 09:00:38",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 347,
+    "response_ms": 234,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T18:01:05Z",
+      "last_run": "2026-09-03T00:30:58Z",
       "last_event": "workflow_run"
     },
     {
@@ -112,9 +112,9 @@
       "name": "Feishu Daily Report",
       "id": "feishu-daily-report",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-03T00:30:24Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -167,8 +167,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-02T19:28:04Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-03T01:00:24Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -194,7 +194,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-02T17:31:54Z",
+      "last_run": "2026-09-02T19:40:46Z",
       "last_event": "workflow_run"
     },
     {
@@ -229,9 +229,9 @@
       "name": "Social Backfill (2.0 社媒补位)",
       "id": "social-backfill",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-02T20:52:55Z",
+      "last_event": "schedule"
     },
     {
       "file": "social-engine-daily.yml",
@@ -247,9 +247,9 @@
       "name": "Social Media Distributor",
       "id": "social_distributor",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-02T19:40:26Z",
+      "last_event": "schedule"
     },
     {
       "file": "weekly-blog-update.yml",
@@ -289,7 +289,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-02 19:28",
+    "checked_at": "2026-09-03 01:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -302,43 +302,43 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 2
       },
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-02",
+        "last_run": "2026-09-03",
         "max_age_days": 8
       }
     ],
@@ -430,20 +430,20 @@
       "date": "2026-09-02"
     },
     "ga4_daily": {
-      "visitors": 14,
-      "sessions": 21,
-      "pageviews": 42,
-      "new_users": 13,
-      "bounce_rate": 57.1,
-      "date": "2026-09-01",
+      "visitors": 5,
+      "sessions": 13,
+      "pageviews": 87,
+      "new_users": 3,
+      "bounce_rate": 100,
+      "date": "2026-09-02",
       "status": "OK"
     },
     "gsc_daily": {
-      "impressions": 25,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0.0,
-      "avg_position": 78.0,
-      "date": "2026-08-30",
+      "avg_position": 73.6,
+      "date": "2026-08-31",
       "status": "OK"
     }
   },
