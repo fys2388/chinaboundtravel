@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-09-03T10:52:51",
+  "base_url": "https://www.chinaboundtravel.com",
+  "check_path": "/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+  "results": {
+    "Googlebot": {
+      "http_status": 200,
+      "expect_reachable": true,
+      "ok": true
+    },
+    "OAI-SearchBot": {
+      "http_status": 200,
+      "expect_reachable": true,
+      "ok": true
+    },
+    "PerplexityBot": {
+      "http_status": 200,
+      "expect_reachable": true,
+      "ok": true
+    },
+    "Claude-SearchBot": {
+      "http_status": 200,
+      "expect_reachable": true,
+      "ok": true
+    },
+    "GPTBot": {
+      "http_status": 403,
+      "expect_reachable": false,
+      "ok": true
+    },
+    "ClaudeBot": {
+      "http_status": 403,
+      "expect_reachable": false,
+      "ok": true
+    },
+    "CCBot": {
+      "http_status": 403,
+      "expect_reachable": false,
+      "ok": true
+    },
+    "Bytespider": {
+      "http_status": 403,
+      "expect_reachable": false,
+      "ok": true
+    }
+  },
+  "failures": [],
+  "geo_ready": true
+}
