@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03 16:00:37",
+  "generated_at": "2026-09-03 16:30:37",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 293,
+    "response_ms": 235,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-03T07:30:55Z",
+      "last_run": "2026-09-03T08:00:55Z",
       "last_event": "workflow_run"
     },
     {
@@ -121,9 +121,9 @@
       "name": "GEO Check",
       "id": "geo-check",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-03T03:41:27Z",
-      "last_event": "push"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "gsc-index-submit.yml",
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-03T08:00:24Z",
+      "last_run": "2026-09-03T08:30:25Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -298,7 +298,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-03 08:00",
+    "checked_at": "2026-09-03 08:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -440,7 +440,7 @@
     },
     "ga4_daily": {
       "visitors": 10,
-      "sessions": 14,
+      "sessions": 15,
       "pageviews": 29,
       "new_users": 80,
       "bounce_rate": 66.4,
@@ -485,7 +485,7 @@
         },
         {
           "date": "2026-09-03",
-          "sessions": 14,
+          "sessions": 15,
           "activeUsers": 10,
           "pageviews": 29
         }
