@@ -16,8 +16,8 @@ params:
   faq:
     - question: "Is China safe for foreign tourists?"
       answer: "Yes, China is very safe for tourists. Violent crime is rare, and cities are generally safe day and night."
-    - question: "What's the best time to visit China?"
-      answer: "Spring (April-May) and autumn (September-October) offer the best weather, with mild temperatures and fewer crowds."
+    - question: "What's a top choice time to visit China?"
+      answer: "Spring (April-May) and autumn (September-October) offer a top choice weather, with mild temperatures and fewer crowds."
     - question: "Do I need a VPN for China?"
       answer: "Yes, most Western apps and websites are blocked. An eSIM with VPN service is recommended for reliable internet access."
 cover:
@@ -167,7 +167,6 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 ---
 
 *Last updated: May 2026 | ChinaBound Travel Editorial Team*
-
 
 {{< affiliate-hotel >}}
 

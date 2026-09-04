@@ -17,7 +17,7 @@ I'm Joran, your friendly California guy who married a local Chengdu girl and has
 What's New?
 The National Immigration Administration announced today that the 144-hour visa-free transit policy will be extended to citizens from an additional 15 countries, making it easier for international travelers to visit China.
 
-My Take as a Local Expat:
+My Take For travelers Expat:
 Let me tell you, this is a game-changer! I remember when I first moved here, things were so much more complicated. Now with these new policies, traveling to China is becoming easier than ever.
 
 Tips for Foreign Travelers:

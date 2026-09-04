@@ -11,7 +11,7 @@ keywords: ["china itinerary", "china travel plan", "7 days china", "china visa",
 
 ## 🎁 Your Free China Travel Planning Toolkit
 
-Congratulations on taking the first step toward your China adventure! As a thank you for subscribing, our team is sending you the **complete 7-Day China Itinerary Template** — the same framework we use to help thousands of travelers plan their perfect trip.
+Congratulations on taking the first step toward your China adventure! As a thank you for subscribing, our team is sending you the **complete 7-Day China Itinerary Template** — the same framework we use to help thousands of travelers plan their excellent trip.
 
 ---
 
@@ -52,7 +52,7 @@ No problem! Check out these popular alternatives:
 - 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup Guide](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📶 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
-- 🏨 [Best Hotels in China (By City)](/resources/#hotels-accommodation)
+- 🏨 [Top-rated Hotels in China (By City)](/resources/#hotels-accommodation)
 
 ---
 

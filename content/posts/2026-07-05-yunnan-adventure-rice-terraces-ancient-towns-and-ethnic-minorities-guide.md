@@ -26,7 +26,6 @@ categories: ["transport", "cities"]
 ---
 ## Introduction
 
-
 {{< soft-recommend partner="esim" topic="transport" placement="article_mid_1" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
@@ -140,7 +139,7 @@ Afternoon: Begin your return journey to Kunming (6-7 hours by shared car). If yo
 
 ![Close-up of a Hani woman working in the rice terraces, wearing traditional clothing and carrying a basket](/img/china-dest/body/external_cf207985ef57.jpg)
 
-## Best Time to Visit Yunnan
+## Top-rated Time to Visit Yunnan
 
 | Month | Rating | Why |
 |-------|--------|-----|
@@ -232,7 +231,6 @@ If you're planning a broader China trip, these guides pair well with Yunnan:
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) — Combine Yunnan's cultural landscapes with Zhangjiajie's dramatic sandstone pillars for a varied itinerary.
 - [Guilin and Yangshuo : The Ultimate Karst Landscape Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/) — Guilin offers a completely different kind of mountain scenery in southern China.
 - [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) — Essential reading for navigating China's rail booking system.
-
 
 {{< affiliate-hotel >}}
 

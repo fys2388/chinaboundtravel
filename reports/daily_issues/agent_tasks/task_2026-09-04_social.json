@@ -2,7 +2,7 @@
   "agent": "social",
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-04_social",
-  "created_at": "2026-09-04T09:40:17.887330",
+  "created_at": "2026-09-04T13:51:48.534744",
   "target_date": "2026-09-04",
   "issue_count": 1,
   "severity_summary": {
@@ -15,12 +15,12 @@
     {
       "id": "issue_001",
       "type": "social_zero_engagement",
-      "description": "社媒已发布39条但曝光为0，可能是Buffer API数据未接通",
+      "description": "社媒已发布3条但曝光为0，可能是Buffer API数据未接通",
       "severity": "medium",
       "agent": "social",
       "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-09-01.json",
-      "detected_at": "2026-09-04T09:40:17.881717",
+      "source_file": "social_daily_2026-09-03.json",
+      "detected_at": "2026-09-04T13:51:48.527976",
       "status": "new",
       "assigned": true,
       "assigned_to": "social"
@@ -29,12 +29,12 @@
   "priority_issue": {
     "id": "issue_001",
     "type": "social_zero_engagement",
-    "description": "社媒已发布39条但曝光为0，可能是Buffer API数据未接通",
+    "description": "社媒已发布3条但曝光为0，可能是Buffer API数据未接通",
     "severity": "medium",
     "agent": "social",
     "action": "analyze_and_optimize",
-    "source_file": "social_daily_2026-09-01.json",
-    "detected_at": "2026-09-04T09:40:17.881717",
+    "source_file": "social_daily_2026-09-03.json",
+    "detected_at": "2026-09-04T13:51:48.527976",
     "status": "new",
     "assigned": true,
     "assigned_to": "social"

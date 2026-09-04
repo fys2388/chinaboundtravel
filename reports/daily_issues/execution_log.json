@@ -1,0 +1,27 @@
+{
+  "executed_at": "2026-09-04T14:01:31.932536",
+  "target_date": "2026-09-04",
+  "dry_run": false,
+  "agents": {
+    "content": {
+      "total": 41,
+      "fixed": 348,
+      "failed": 0,
+      "skipped": 57,
+      "files_modified": 93
+    },
+    "seo": {
+      "total": 34,
+      "fixed": 34,
+      "failed": 0,
+      "skipped": 117,
+      "files_modified": 33
+    }
+  },
+  "summary": {
+    "total": 75,
+    "fixed": 382,
+    "failed": 0,
+    "skipped": 174
+  }
+}

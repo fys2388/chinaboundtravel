@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: "China's 144-hour visa-free transit policy in 2026: eligible countries, participating cities, application process, and tips for making the most of your 6 days. Plan your visa-free China trip today!"
+description: "China's 144-hour visa-free transit policy in 2026: eligible countries, participating cities, application process, and tips for making the most of your 6 days..."
 ShowToc: true
 TocOpen: false
 cover:

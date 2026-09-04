@@ -28,7 +28,7 @@ date: 2026-06-09T10:00:00+08:00
 
 ## Shanghai   The Future City
 
-**Vibe:** Blade Runner with better soup dumplings. Skyscrapers, colonial architecture, and the best metro system in China.
+**Vibe:** Blade Runner with better soup dumplings. Skyscrapers, colonial architecture, and a top choice metro system in China.
 
 **Don't Miss:**
 - The Bund at night (neon reflections on the river)
@@ -60,7 +60,7 @@ date: 2026-06-09T10:00:00+08:00
 
 ## Chengdu   Home of Pandas and Spice
 
-**Vibe:** Laid-back, spicy, and unapologetically fun. Tea houses, mahjong parks, and the best food in China (fight me).
+**Vibe:** Laid-back, spicy, and unapologetically fun. Tea houses, mahjong parks, and a top choice food in China (fight me).
 
 **Don't Miss:**
 - Chengdu Panda Base (go before 8 AM when they're active)
@@ -101,7 +101,7 @@ date: 2026-06-09T10:00:00+08:00
 - Ten-Mile Gallery scenic cycling route
 - Impression Liu Sanjie (spectacular outdoor light show)
 
-**Joran's Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunch — you'll find the best beer fish in town."
+**Joran's Tip:** "Rent a bike and cycle along the Yulong River. Stop at the little villages for lunch — you'll find a top choice beer fish in town."
 
 **Getting Around:** Bicycle is king here. Rent one for ~20 RMB/day and explore.
 

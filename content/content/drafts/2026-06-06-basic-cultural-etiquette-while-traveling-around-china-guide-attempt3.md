@@ -32,7 +32,7 @@ Think of this as your cultural survival guide, narrated by a guy who once tried 
 
 ## The Art of the Nod and the Smile (And When to Use Your Inside Voice)
 
-First thing you’ll notice: Chinese people are loud. Not aggressive loud—just *enthusiastic* loud. A conversation in a Beijing hutong sounds like a scene from *The Godfather* where everyone’s trying to out-scream each other, but it’s actually just two friends arguing about where to get the best dumplings. Coming from California, where “outdoor voice” is a thing we teach toddlers, this was a shock. I once sat in a Sichuan restaurant and genuinely thought a couple was breaking up. Nope. They were just ordering the spicy chicken.
+First thing you’ll notice: Chinese people are loud. Not aggressive loud—just *enthusiastic* loud. A conversation in a Beijing hutong sounds like a scene from *The Godfather* where everyone’s trying to out-scream each other, but it’s actually just two friends arguing about where to get a top choice dumplings. Coming from California, where “outdoor voice” is a thing we teach toddlers, this was a shock. I once sat in a Sichuan restaurant and genuinely thought a couple was breaking up. Nope. They were just ordering the spicy chicken.
 
 So, rule one: **Volume is not aggression.** If you’re in a market and someone shouts “*Ni yao shenme?*” (What do you want?), they’re not mad. They’re just excited you exist. Respond with a smile and a nod. That’s the universal “I’m a friendly foreigner, please don’t charge me the tourist tax” signal.
 
@@ -46,7 +46,7 @@ Let’s talk about the elephant in the room: chopsticks. You’re an Aussie or K
 
 Also, **don’t use your chopsticks to spear food.** That’s for forks, which are for barbarians. And don’t pass food from your chopsticks to someone else’s—that’s a funeral ritual too. Just place it on their plate. Simple.
 
-Now, slurping. In the West, slurping is rude. In China, **slurping noodles is a compliment to the chef.** It means you’re enjoying the food so much you can’t wait to cool it down. My first time eating *dan dan mian* in Chengdu, I slurped like a vacuum cleaner. The old man at the next table gave me a thumbs up. I felt like a god. Then I tried to slurp soup. Big mistake. Soup slurping is not a thing. It’s just messy. Learn the difference, or you’ll be that person.
+Now, slurping. In the West, slurping is rude. In China, **slurping noodles is a compliment to the chef.** It means you’re enjoying the food so much you can’t wait to cool it down. My first time eating *dan dan mian* in Chengdu, I slurped like a vacuum cleaner. The old man at the next table gave me a thumbs up. I felt like a god. Then Travelers often find to slurp soup. Big mistake. Soup slurping is not a thing. It’s just messy. Learn the difference, or you’ll be that person.
 
 And while we’re on soup: **the bowl goes to your mouth.** In the West, we bring the spoon to our face. In China, you pick up the bowl and drink it like a cup of tea. I know it feels wrong, like you’re about to spill on your shirt. But trust me—it’s the most efficient way to get that last drop of broth. I’ve seen 80-year-old grandmas do it with the grace of a ballet dancer. You can too.
 
@@ -76,6 +76,6 @@ Also, **squat toilets are not the enemy.** They’re just... a workout. If you�
 
 Look, mates, China is not a place you “conquer.” It’s a place you *join*. You’ll mess up. You’ll stick your chopsticks in the rice. You’ll point at someone. You’ll forget to carry tissues. But that’s okay. The locals have seen it all. They’ll laugh, you’ll laugh, and you’ll probably make a friend.
 
-My ten years here have taught me one thing: **Cultural etiquette is not about being perfect. It’s about being present.** Smile, nod, slurp your noodles, and don’t flush the paper. If you do that, you’ll have a better time than I did in my first year—when I tried to order a “beef burger” and got a bowl of tripe soup instead.
+My ten years here have taught me one thing: **Cultural etiquette is not about being excellent. It’s about being present.** Smile, nod, slurp your noodles, and don’t flush the paper. If you do that, you’ll have a better time than I did in my first year—when Travelers often find to order a “beef burger” and got a bowl of tripe soup instead.
 
 For more tips on blending in, check out my post on [how to eat hotpot without looking like a tourist](https://www.chinaboundtravel.com/posts/hotpot-etiquette-guide). And if you see me in Chengdu, say hi. I’ll be the guy with the tissue pack in one hand and a bowl of *dan dan mian* in the other. Just don’t point at me. I’m sensitive.

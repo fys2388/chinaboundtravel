@@ -10,15 +10,15 @@ cover = { image = "/img/china-dest/guilin/guilin-and-yangshuo-the-ultimate-karst
 
 Guilin is where China's most iconic scenery comes to life. The karst mountains rising from the Li River have inspired poets and painters for centuries—and once you see them in person, you'll understand why. This is not just a travel destination; it's a living postcard.
 
-The phrase "Guilin's scenery is the best under heaven" (桂林山水甲天下) has been used for over 800 years, and it still holds true. From the mist-shrouded peaks of the Li River to the emerald rice terraces of Longsheng, from the ancient villages of Yangshuo to the otherworldly caves beneath the city, Guilin offers some of the most spectacular natural scenery on Earth.
+The phrase "Guilin's scenery is a top choice under heaven" (桂林山水甲天下) has been used for over 800 years, and it still holds true. From the mist-shrouded peaks of the Li River to the emerald rice terraces of Longsheng, from the ancient villages of Yangshuo to the otherworldly caves beneath the city, Guilin offers some of the most spectacular natural scenery on Earth.
 
 ![Guilin and Yangshuo karst landscape](/img/china-dest/guilin/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.jpg)
 
-## Best Time to Visit Guilin
+## Top-rated Time to Visit Guilin
 
 Guilin has a subtropical monsoon climate with mild winters and hot, humid summers:
 
-- **September to November (Autumn):** **Best time.** Cool weather (15-25°C/59-77°F), clear skies, and the Longsheng rice terraces turn golden in October. Less rain than summer.
+- **September to November (Autumn):** **Top-rated time.** Cool weather (15-25°C/59-77°F), clear skies, and the Longsheng rice terraces turn golden in October. Less rain than summer.
 - **March to May (Spring):** Good time. Mild temperatures (15-25°C/59-77°F), blooming flowers, and misty mountains. April and May can be rainy.
 - **June to August (Summer):** Hot (28-35°C/82-95°F) and humid with frequent rain. The landscape is lush and green, and the Li River water levels are high. Thunderstorms are common.
 - **December to February (Winter):** Cold (5-12°C/41-54°F) and damp, but less crowded. Misty mountains have a mystical, ink-painting feel. Hotel prices are lowest.
@@ -48,7 +48,7 @@ Guilin is connected to the national high-speed rail network:
 - **Buses:** Cheap (¥1-2) and cover most areas, but can be crowded and slow.
 - **Taxis/Didi:** Affordable. A typical cross-city ride costs ¥20-40.
 - **Electric bikes:** Great for exploring the surrounding areas and villages. Rent for ¥30-50 per day.
-- **Bicycles:** Perfect for Yangshuo and the countryside. Rent for ¥10-20 per day.
+- **Bicycles:** Excellent for Yangshuo and the countryside. Rent for ¥10-20 per day.
 
 ### Li River Cruise
 
@@ -57,8 +57,8 @@ The most popular way to see Guilin's scenery. A 4-hour cruise from Guilin to Yan
 - **Tickets:** ¥215-360 depending on class (economy, deluxe, luxury). Book in advance, especially in peak season.
 - **Departure:** Zhujiang Pier (竹江码头) or Mopanshan Pier (磨盘山码头), 30-40 minutes from downtown.
 - **Duration:** 4-5 hours, arrives in Yangshuo around 2-3 PM.
-- **Best time:** Early morning for misty views, or late afternoon for golden light.
-- **Pro tip:** Sit on the open-air upper deck for the best views. Bring sunscreen and a hat.
+- **Top-rated time:** Early morning for misty views, or late afternoon for golden light.
+- **Pro tip:** Sit on the open-air upper deck for a top choice views. Bring sunscreen and a hat.
 
 ## Must-See Sights
 
@@ -71,7 +71,7 @@ The star attraction. The Li River winds 83km from Guilin to Yangshuo through the
   - **Bamboo raft:** Smaller, more intimate rafts (actually motorized PVC boats) from Yangshuo to Xingping. ¥120-200 per person.
   - **Hiking:** The Li River hiking trail from Yangdi to Xingping (15km, 4-5 hours) is one of China's most scenic hikes.
   - **Cycling:** Follow the river from Guilin to Yangshuo, stopping at villages and viewpoints.
-- **Best viewpoints:**
+- **Top-rated viewpoints:**
   - **Xingping (兴坪):** The most famous section—this is the scenery on the ¥20 banknote.
   - **Huangbu (黄布):** "Yellow Cloth" reflection, where the mountains mirror perfectly in the still water.
   - **Mural Hill (画山):** A 400m cliff with natural patterns that look like nine horses.
@@ -133,7 +133,7 @@ A scenic waterway system connecting the Li River, Taohua River, and four lakes (
 
 - **Tickets:** ¥185 (night cruise), ¥90 (day cruise).
 - **Duration:** 90 minutes.
-- **When to go:** Night cruise (7:30-9:30 PM) for the best lighting and atmosphere.
+- **When to go:** Night cruise (7:30-9:30 PM) for a top choice lighting and atmosphere.
 - **Pro tip:** You can also walk along the lakes for free. The Sun and Moon Twin Pagodas (日月双塔) at Shan Lake are especially beautiful at night.
 
 ## Day Trips from Guilin
@@ -161,7 +161,7 @@ A 2-hour drive from Guilin. The terraces are carved into the mountainside by the
   - **Ping'an Village (平安寨):** The most developed area, with the famous "Seven Stars Around the Moon" and "Nine Dragons and Five Tigers" viewpoints.
   - **Jinkeng Village (金坑):** Less developed, more authentic, with the "Thousand Layers to the Sky" viewpoint. Cable car available (¥110 round trip).
   - **Huangluo Yao Village (黄洛瑶寨):** Known for the women with extremely long hair (average 1.5m).
-- **Best time:** Mid-June (water-filled terraces, green), early October (golden harvest), or winter (snow-covered, rare but beautiful).
+- **Top-rated time:** Mid-June (water-filled terraces, green), early October (golden harvest), or winter (snow-covered, rare but beautiful).
 - **Stay:** Spend a night in a traditional wooden guesthouse in one of the villages. ¥100-200/night.
 
 ### Xingping Ancient Town (兴坪古镇)
@@ -207,19 +207,19 @@ Guilin has its own unique cuisine, different from the spicy Sichuan or Cantonese
 ## Where to Stay
 
 ### Downtown Guilin (秀峰区/象山区)
-- **Best for:** First-time visitors, convenience, city attractions.
+- **Top-rated for:** First-time visitors, convenience, city attractions.
 - **Price range:** ¥250-1000/night.
 - **Pros:** Close to Elephant Trunk Hill, Two Rivers and Four Lakes, restaurants, and shopping. Good transport links.
 - **Cons:** City center can be noisy. Less scenic than Yangshuo.
 
 ### Along the Li River (七星区)
-- **Best for:** Scenery, relaxation, riverside views.
+- **Top-rated for:** Scenery, relaxation, riverside views.
 - **Price range:** ¥400-1500/night.
 - **Pros:** Beautiful river views, close to Seven Star Park, quieter.
 - **Cons:** Farther from the main dining and shopping areas.
 
 ### Yangshuo (阳朔县)
-- **Best for:** Nature, cycling, countryside, longer stays.
+- **Top-rated for:** Nature, cycling, countryside, longer stays.
 - **Price range:** ¥150-1000/night.
 - **Pros:** The best scenery in the region, great for cycling and hiking, relaxed atmosphere.
 - **Cons:** 1-1.5 hours from Guilin city. West Street can be noisy at night.
@@ -328,14 +328,14 @@ Most nationalities need a visa to visit China. However, citizens of 55+ countrie
 
 ### Should I stay in Guilin or Yangshuo?
 - **Stay in Guilin** if: You want easy access to city attractions (Reed Flute Cave, Elephant Trunk Hill), good transport links, and more restaurant/shopping options.
-- **Stay in Yangshuo** if: You want the best scenery, love cycling/hiking, prefer a relaxed countryside atmosphere, and plan to spend most of your time outdoors.
-- **Best of both:** Spend 1-2 nights in Guilin, then 2-3 nights in Yangshuo.
+- **Stay in Yangshuo** if: You want a top choice scenery, love cycling/hiking, prefer a relaxed countryside atmosphere, and plan to spend most of your time outdoors.
+- **Top-rated of both:** Spend 1-2 nights in Guilin, then 2-3 nights in Yangshuo.
 
 ### Is the Li River cruise worth it?
 Yes, absolutely. The Li River cruise is the classic Guilin experience and one of the most scenic boat rides in the world. The 4-5 hour cruise from Guilin to Yangshuo takes you through the most spectacular karst landscape. If you're short on time or budget, you can also do a shorter bamboo raft ride from Yangshuo to Xingping, which covers the most famous section.
 
-### What's the best way to see the Longsheng Rice Terraces?
-- **Best time:** Mid-June (water-filled, green) or early October (golden harvest).
+### What's a top choice way to see the Longsheng Rice Terraces?
+- **Top-rated time:** Mid-June (water-filled, green) or early October (golden harvest).
 - **How to get there:** Bus from Guilin (¥30, 2.5 hours) or private car (¥300-400 round trip).
 - **How long:** A day trip is possible (leave early, return late), but spending a night in a village guesthouse is more relaxing and allows for sunrise/sunset views.
 - **Which village:** Ping'an is more developed and easier; Jinkeng is more authentic and has a cable car.

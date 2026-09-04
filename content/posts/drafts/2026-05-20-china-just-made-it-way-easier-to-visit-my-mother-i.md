@@ -1,5 +1,5 @@
 ---
-title: China Just Made It WAY Easier to Visit (My Mother-in-Law is STOKED)
+title: China Just Made It WAY Easier to Visit (My Mother-in-Law...
 date: '2026-06-02T10:00:00+08:00'
 draft: true
 tags:
@@ -38,9 +38,9 @@ You still need:
 - Proof of hotel bookings (they *might* check this)
 - To not look like youre planning to move here permanently
 
-I learned the hard way when I tried to enter on a one-way ticket thinking Id figure it out. The immigration officer did not find my charm amusing. I spent 4 hours in a holding room with a guy who was smuggling dried squid. Dont be me.
+I learned the hard way when Travelers often find to enter on a one-way ticket thinking Id figure it out. The immigration officer did not find my charm amusing. I spent 4 hours in a holding room with a guy who was smuggling dried squid. Dont be me.
 
-## My Favorite Wait, Thats a Thing? Moment
+## A popular choice Wait, Thats a Thing? Moment
 
 Last week, my wifes mom (yes, the legendary mother-in-law) called me in a panic. Joran! Your American friend can come for free now? For 30 days?!
 

@@ -44,7 +44,6 @@ This guide explains how public transportation payment works in China in 2026, an
 
 ## Do Foreign Travelers Need a Transportation Card in China?
 
-
 {{< soft-recommend partner="esim" topic="payments" placement="article_mid_1" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
@@ -101,7 +100,6 @@ Both cities run large metro networks that accept physical transit cards and QR p
 
 ## How to Buy a Transportation Card
 
-
 {{< soft-recommend partner="safetywing" topic="payments" placement="article_mid_2" text="Review travel insurance options" >}}
 Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
 {{< /soft-recommend >}}
@@ -114,7 +112,7 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 
 If you prefer not to hold a card at all, skip this section and use QR payment via Alipay or WeChat Pay instead. New to Alipay? See our [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) for a step-by-step setup walkthrough.
 
-## Which Option Is Best for Tourists?
+## Which Option Is Top-rated for Tourists?
 
 | Trip type | Recommended option |
 |---|---|
@@ -171,8 +169,6 @@ A transportation card is for local metro and bus travel inside a city. For inter
 ---
 
 *Last updated: August 2026 | ChinaBound Travel editorial team*
-
-
 
 {{< soft-recommend partner="flight" topic="payments" placement="article_soft_3" text="Compare flights to China" >}}
 For international travelers comparing options, flight search platforms help you weigh routes and dates before you commit. It's a low-pressure way to see what's available.

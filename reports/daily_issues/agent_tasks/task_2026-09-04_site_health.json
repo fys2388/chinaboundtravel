@@ -1,0 +1,59 @@
+{
+  "agent": "site_health",
+  "agent_name": "site_health",
+  "task_id": "task_2026-09-04_site_health",
+  "created_at": "2026-09-04T13:51:48.534755",
+  "target_date": "2026-09-04",
+  "issue_count": 2,
+  "severity_summary": {
+    "critical": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "issue_001",
+      "type": "site_unreachable",
+      "description": "网站无法访问（可能是本地网络误报，需核实线上状态）",
+      "severity": "critical",
+      "agent": "site_health",
+      "action": "verify_and_alert",
+      "source_file": "site_health_issues_2026-09-04.json",
+      "detected_at": "2026-09-04T13:51:48.534483",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "site_health"
+    },
+    {
+      "id": "issue_001",
+      "type": "ssl_check_failed",
+      "description": "SSL检查失败: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>（可能是本地网络误报，需核实线上状态）",
+      "severity": "high",
+      "agent": "site_health",
+      "action": "verify_and_alert",
+      "source_file": "site_health_issues_2026-09-04.json",
+      "detected_at": "2026-09-04T13:51:48.534606",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "site_health"
+    }
+  ],
+  "priority_issue": {
+    "id": "issue_001",
+    "type": "site_unreachable",
+    "description": "网站无法访问（可能是本地网络误报，需核实线上状态）",
+    "severity": "critical",
+    "agent": "site_health",
+    "action": "verify_and_alert",
+    "source_file": "site_health_issues_2026-09-04.json",
+    "detected_at": "2026-09-04T13:51:48.534483",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "site_health"
+  },
+  "expected_actions": [
+    "verify_and_alert"
+  ],
+  "status": "pending"
+}

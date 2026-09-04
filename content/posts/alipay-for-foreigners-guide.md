@@ -43,7 +43,6 @@ This guide explains how foreigners can use Alipay in China in 2026. Based on cur
 
 ## Can Foreigners Use Alipay in China?
 
-
 {{< soft-recommend partner="esim" topic="payments" placement="article_mid_1" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
@@ -123,7 +122,6 @@ Yes, in most regions. Card eligibility can change, so check in the app before yo
 
 ### Does Alipay work for subway payments?
 
-
 {{< soft-recommend partner="safetywing" topic="payments" placement="article_mid_2" text="Review travel insurance options" >}}
 Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
 {{< /soft-recommend >}}
@@ -180,7 +178,7 @@ Keep a physical card and some cash as backups in case the app or network is unav
 
 ---
 
-### Where Mobile Payment Works Best
+### Where Mobile Payment Works Top-rated
 
 Mobile payment is widely accepted across restaurants, shops, and transport in China's cities. Smaller vendors and street markets may rely on QR-based payment, so having a working app covers most daily needs. For services that require in-person verification or special setup, a local contact or your accommodation can often help.
 
@@ -189,8 +187,6 @@ Mobile payment is widely accepted across restaurants, shops, and transport in Ch
 ### Keeping Transactions Traceable
 
 Using the official app gives you a clear transaction history, which helps with budgeting and any disputes. Check statements periodically, set transaction alerts if available, and keep receipts for larger purchases. If something looks unfamiliar, contact the service's support promptly.
-
-
 
 {{< soft-recommend partner="flight" topic="payments" placement="article_soft_3" text="Compare flights to China" >}}
 For international travelers comparing options, flight search platforms help you weigh routes and dates before you commit. It's a low-pressure way to see what's available.

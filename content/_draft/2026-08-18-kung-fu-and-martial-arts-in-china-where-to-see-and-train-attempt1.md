@@ -17,7 +17,7 @@ geo: "EU"
 draft: "true"
 audit_status: "pending"
 summary: "China Kung Fu and Martial Arts in China: Where to See and Train: complete guide 2026. research-based guidance on common traveler questions curated by the ChinaBound Travel editorial desk."
-description: "China Kung Fu and Martial Arts in China: Where to See and Train: complete guide 2026. research-based guidance on common traveler questions curated by the ChinaBound Travel editorial desk."
+description: "China Kung Fu and Martial Arts in China: Where to See and Train: complete guide 2026. research-based guidance on common traveler questions curated by the Chi..."
 canonicalURL: "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/"
 ShowToc: "true"
 TocOpen: "false"
@@ -26,7 +26,7 @@ weight: "1"
 
 ## Kung Fu and Martial Arts in China: Where to See and Train
 ## Introduction
-If you're a European traveler with a passion for martial arts, China is the ultimate destination. The land of Kung Fu offers a rich tapestry of traditions, ancient temples, and world-class training facilities. In this guide, I'll take you on a journey through the best places to witness the magic of Kung Fu and even get a chance to train like a master.
+If you're a European traveler with a passion for martial arts, China is the ultimate destination. The land of Kung Fu offers a rich tapestry of traditions, ancient temples, and world-class training facilities. In this guide, I'll take you on a journey through a top choice places to witness the magic of Kung Fu and even get a chance to train like a master.
 
 [Image:Ancient Shaolin Temple with a large square in front, surrounded by green mountains, under a clear blue sky, with traditional Chinese architecture and no people in sight]
 

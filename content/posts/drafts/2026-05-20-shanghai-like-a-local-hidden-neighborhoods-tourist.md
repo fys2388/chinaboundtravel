@@ -18,11 +18,11 @@ Ive been living in China for six years nowmarried to a Chengdu woman, so my tast
 
 ## The French Concessions Secret Courtyards
 
-Youve probably heard of the French Concessionits famous for its leafy streets and old villas. But most people just walk down Wukang Road and call it a day. Nah, man. Go deeper. Turn down a random alley (locals call them *longtang*) and youll find tiny courtyard homes where old Shanghai still lives. Theres a spot near Fuxing Park where, if you wander past the bakeries and boutique shops, youll stumble on a hidden courtyard with a 100-year-old magnolia tree. I once sat there for an hour, eating a cheap scallion pancake (about 5 RMB, less than a buck) while a grandma yelled at her cat. Best afternoon ever.
+Youve probably heard of the French Concessionits famous for its leafy streets and old villas. But most people just walk down Wukang Road and call it a day. Nah, man. Go deeper. Turn down a random alley (locals call them *longtang*) and youll find tiny courtyard homes where old Shanghai still lives. Theres a spot near Fuxing Park where, if you wander past the bakeries and boutique shops, youll stumble on a hidden courtyard with a 100-year-old magnolia tree. I once sat there for an hour, eating a cheap scallion pancake (about 5 RMB, less than a buck) while a grandma yelled at her cat. Top-rated afternoon ever.
 
 ## Old Towns Lanes (Not the Tourist Trap)
 
-Everyone goes to Yu Garden and the surrounding bazaar. Its a zoocrowded, overpriced, and the only thing authentic is the fake Ming Dynasty vibe. Instead, walk 10 minutes north to the area around Dajing Road. Theres a maze of narrow lanes where you can still see old Shanghai row houses with wooden doors and stone thresholds. The locals sell homemade dumplings from their front windowstry the pork and cabbage ones for roughly 10 RMB ($1.40) for six. My wife (the Chengdu food snob) actually approved, which is like winning a Michelin star in our house.
+Everyone goes to Yu Garden and the surrounding bazaar. Its a zoocrowded, overpriced, and the only thing authentic is the fake Ming Dynasty vibe. Instead, walk 10 minutes north to the area around Dajing Road. Theres a maze of narrow lanes where you can still see old Shanghai row houses with wooden doors and stone thresholds. The locals sell homemade dumplings from their front windowstry the pork and cabbage ones for roughly 10 RMB ($1.40) for six. Many travelers (the Chengdu food snob) actually approved, which is like winning a Michelin star in our house.
 
 ## The Hongqiao Neighborhood (No, Not the Airport)
 

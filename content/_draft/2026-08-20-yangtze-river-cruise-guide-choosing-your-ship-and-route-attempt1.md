@@ -17,7 +17,7 @@ geo: "AU"
 draft: "true"
 audit_status: "pending"
 summary: "Yangtze River Cruise: Choosing Your Ship and Route for travelers visiting China. what you need to know before your trip researched and verified by the ChinaBound Travel editors."
-description: "Yangtze River Cruise: Choosing Your Ship and Route for travelers visiting China. what you need to know before your trip researched and verified by the ChinaBound Travel editors."
+description: "Yangtze River Cruise: Choosing Your Ship and Route for travelers visiting China. what you need to know before your trip researched and verified by the ChinaB..."
 canonicalURL: "https://www.chinaboundtravel.com/posts/yangtze-river-cruise-guide-choosing-your-ship-and-route/"
 ShowToc: "true"
 TocOpen: "false"
@@ -26,7 +26,7 @@ weight: "1"
 
 ## Yangtze River Cruise Guide: Choosing Your Ship and Route
 ## Introduction
-Ahoy, fellow travelers! If you're like me, you've probably daydreamed about cruising down the Yangtze River, taking in the sights and sounds of one of the world's most iconic waterways. Well, the good news is, it's not just a dream anymore! With a little planning and research, you can turn your Yangtze River cruise fantasy into a reality. In this guide, I'll walk you through everything you need to know to choose the perfect ship and route for your adventure.
+Ahoy, fellow travelers! If you're like me, you've probably daydreamed about cruising down the Yangtze River, taking in the sights and sounds of one of the world's most iconic waterways. Well, the good news is, it's not just a dream anymore! With a little planning and research, you can turn your Yangtze River cruise fantasy into a reality. In this guide, I'll walk you through everything you need to know to choose the excellent ship and route for your adventure.
 [Image: Aerial view of the Yangtze River with a cruise ship sailing on it, taken from a helicopter. The river is surrounded by lush green mountains and there are some small villages visible on the banks. The sky is blue and the sun is shining brightly.]
 
 ## Choosing Your Ship

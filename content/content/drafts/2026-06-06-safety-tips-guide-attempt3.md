@@ -1,5 +1,5 @@
 ---
-title: "Safety Tips Guide"
+title: "Safety Tips Guide | China Travel Guide"
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

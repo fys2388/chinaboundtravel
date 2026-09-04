@@ -11,7 +11,7 @@ summary = "Complete step-by-step guide for foreigners to use Alipay and WeChat P
 
 ## Hey, Joran Here 👋
 
-Okay, real talk: the first time my wife (she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
+Okay, real talk: the first time Many travelers (she's from Chengdu, married 6 years now) tried to show me how to use Alipay, I almost threw my phone into the nearest river out of pure frustration. I'd been living in California my whole life, and suddenly I'm standing in a Chengdu wet market trying to figure out why this QR code isn't accepting my American credit card while an elderly woman scans my confused face with genuine pity.
 
 That was 2019. Today, I'm the guy who helps tourists at the Chengdu teahouse figure this stuff out—because let me tell you, paying as a foreigner in China without mobile payment is like trying to eat hot pot with a fork. Technically possible, but you're going to have a bad time and everyone around you will feel awkward.
 
@@ -106,7 +106,7 @@ Alipay requires real-name verification to unlock full features:
 - Check exchange rates in the app before transactions
 - Be aware of conversion fees (usually 0.3-1%)
 
-### Security Best Practices
+### Security Top-rated Practices
 
 - Never share your payment password
 - Enable fingerprint or face ID authentication

@@ -1,5 +1,5 @@
 ﻿---
-title: Refund Policy
+title: Refund Policy | China Travel Guide
 description: Chinaboundtravel strict no-refund policy for digital products.
 date: '2026-06-02T10:00:00+08:00'
 type: page

@@ -1,5 +1,5 @@
 ---
-title: "China Visa Guide"
+title: "China Visa Guide - Complete Guide"
 date: 2026-06-09T10:00:00+08:00
 description: "Complete visa information for traveling to China. Visa-free transit, tourist visa application, and everything you need to know."
 cover:

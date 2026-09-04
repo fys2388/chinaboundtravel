@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-04T04:45:57.146527+00:00",
+  "timestamp": "2026-09-04T06:01:46.061619+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -9,62 +9,6 @@
       "message": "网站无法访问",
       "auto_fixable": false,
       "agent": "site_health"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\posts\\2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
-      "message": "Persona违规: My favorite",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\_draft\\2026-06-10-family-travel-tips-guide-attempt2.md",
-      "message": "Persona违规: My favorite",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\_draft\\2026-06-18-chinese-tea-culture-history-types-and-tea-ceremony-guide-attempt1.md",
-      "message": "Persona违规: My favorite",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\_draft\\2026-08-10-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt1.md",
-      "message": "Persona违规: I tried",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\posts\\.archived\\2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-      "message": "Persona违规: I tried",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\posts\\.archived\\2026-07-11-accommodation-tips-guide.md",
-      "message": "Persona违规: My favorite",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "persona_violation",
-      "severity": "high",
-      "file": "content\\posts\\.archived\\2026-08-08-china-bargaining-and-shopping-guide.md",
-      "message": "Persona违规: My favorite",
-      "auto_fixable": false,
-      "agent": "content"
     },
     {
       "type": "content_placeholder",
@@ -101,94 +45,6 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content\\7-day-china-itinerary.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\beijing.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\chengdu.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\guilin.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\hangzhou.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\shanghai.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\western-sichuan.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\xian.md",
-      "message": "AI禁用词: best in China",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\xian.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\cities\\yangshuo.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\internet\\_index.md",
-      "message": "AI禁用词: best in China",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
       "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
@@ -213,14 +69,6 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content\\posts\\2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
       "file": "content\\posts\\2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
@@ -235,110 +83,6 @@
       "agent": "content"
     },
     {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-06-10-navigating-china-a-transportation-guide-for-american-travelers-attempt1.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-06-10-navigating-chinas-accommodation-maze-a-californians-guide-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-06-12-a-gastronomic-adventure-in-chengdu-a-foodies-guide-for-european-travelers-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-09-best-china-itineraries-for-10-days-three-routes-compared-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-12-china-business-travel-guide-meetings-dining-and-networking-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-20-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt2.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-20-yangtze-river-cruise-guide-choosing-your-ship-and-route-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-23-china-solo-travel-guide-safety-hostels-and-making-friends-attempt2.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\_draft\\2026-08-27-best-china-itineraries-for-10-days-three-routes-compared-attempt1.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\posts\\.archived\\2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\posts\\.archived\\2026-07-11-accommodation-tips-guide.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\posts\\.archived\\2026-07-27-accommodation-tips-guide.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content\\categories\\internet\\_index.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content"
-    },
-    {
       "type": "ssl_check_failed",
       "severity": "medium",
       "file": "https://www.chinaboundtravel.com",
@@ -347,26 +91,10 @@
       "agent": "site_health"
     },
     {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\contact.md",
-      "message": "Meta description过长(167字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content\\success.md",
       "message": "Title过短(19字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\terms-of-service.md",
-      "message": "Title过短(16字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
@@ -403,22 +131,6 @@
       "agent": "seo"
     },
     {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\member-month\\_index.md",
-      "message": "Title过短(12字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\member-year\\_index.md",
-      "message": "Title过短(11字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "meta_description_too_short",
       "severity": "low",
       "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
@@ -427,26 +139,10 @@
       "agent": "seo"
     },
     {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\posts\\2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-      "message": "Meta description过长(172字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "meta_description_too_short",
       "severity": "low",
       "file": "content\\posts\\2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
       "message": "Meta description过短(34字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\posts\\2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
-      "message": "Meta description过长(175字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
@@ -475,98 +171,10 @@
       "agent": "seo"
     },
     {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
-      "message": "Title过长(68字符): ChinaBound Travel Guide 2026.09 - Now Up...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\posts\\china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-      "message": "Meta description过长(185字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\static-package\\_index.md",
-      "message": "Title过短(14字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-06-06-the-great-chinese-visa-adventure-a-comedy-of-errors-stamps-and-noodle-based-bribery-attempt2.md",
-      "message": "Title过长(86字符): The Great Chinese Visa Adventure: A Come...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content\\_draft\\2026-06-10-navigating-chinas-accommodation-maze-a-californians-guide-attempt1.md",
       "message": "Title过短(16字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-07-04-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-attempt1.md",
-      "message": "Title过长(69字符): Yunnan Adventure: Rice Terraces, Ancient...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-10-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt1.md",
-      "message": "Title过长(66字符): China Travel Etiquette: Tipping, Photos,...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-16-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide-attempt1.md",
-      "message": "Meta description过长(181字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-18-kung-fu-and-martial-arts-in-china-where-to-see-and-train-attempt1.md",
-      "message": "Meta description过长(187字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-20-best-china-itineraries-for-10-days-three-routes-compared-attempt3.md",
-      "message": "Meta description过长(190字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-20-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt2.md",
-      "message": "Title过长(66字符): China Travel Etiquette: Tipping, Photos,...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-20-yangtze-river-cruise-guide-choosing-your-ship-and-route-attempt1.md",
-      "message": "Meta description过长(177字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
@@ -583,38 +191,6 @@
       "severity": "low",
       "file": "content\\_draft\\2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "message": "Meta description过短(67字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-26-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt1.md",
-      "message": "Title过长(66字符): China Travel Etiquette: Tipping, Photos,...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\_draft\\2026-08-27-best-china-itineraries-for-10-days-three-routes-compared-attempt1.md",
-      "message": "Meta description过长(190字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\posts\\.archived\\2026-07-08-travel-safety-guide.md",
-      "message": "Title过短(19字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\categories\\visa\\_index.md",
-      "message": "Title过短(16字符)",
       "auto_fixable": false,
       "agent": "seo"
     }

@@ -1,5 +1,5 @@
 ---
-title: Terms of Service
+title: Terms of Service | China Travel Guide
 description: Terms of Service for ChinaBound Travel - your use of our website, content, and services.
 date: '2026-08-31T10:00:00+08:00'
 lastmod: '2026-08-31T10:00:00+08:00'

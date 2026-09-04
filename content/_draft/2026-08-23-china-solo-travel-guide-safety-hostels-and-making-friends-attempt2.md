@@ -74,7 +74,7 @@ Hostels are a great option for solo travelers in China, as they offer a budget-f
 ### Use hostel booking websites
 There are many hostel booking websites available, such as Hostelworld and Booking.com, that allow you to search for hostels in China and read reviews from other travelers. These websites can be a valuable resource for finding hostels that meet your needs and budget.
 
-When using hostel booking websites, make sure to read the reviews carefully. Look for hostels that have good reviews for safety, cleanliness, and location. You can also filter your search results by price, amenities, and other factors to find the perfect hostel for you.
+When using hostel booking websites, make sure to read the reviews carefully. Look for hostels that have good reviews for safety, cleanliness, and location. You can also filter your search results by price, amenities, and other factors to find the excellent hostel for you.
 
 Some hostel booking websites also offer exclusive deals and discounts for their members. So, it's worth signing up for an account to take advantage of these offers.
 

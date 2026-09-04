@@ -1,5 +1,5 @@
 ---
-title: "Safety in Chengdu: A California Boy's 10-Year Take on China's Wild West"
+title: "Safety in Chengdu: A California Boy's 10-Year Take on Chi..."
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"
@@ -34,7 +34,7 @@ Let's start with the most immediate threat to your life: traffic. I'm not being 
 
 Here's the rule: **Never assume a vehicle will stop.** Not the bus, not the taxi, not the guy hauling a cart of bamboo shoots. Make eye contact. If you can't make eye contact, assume they haven't seen you. I've seen Chinese grandmothers step into six lanes of traffic like they're walking through a park, and the cars just flow around them like water around a stone. Don't try that. You're not a grandmother. You're a tourist with a backpack and a confused expression.
 
-Also: **sidewalks are for parking, not walking.** In Chengdu, cars, scooters, and even the occasional motorbike will use the sidewalk as a shortcut. I was walking to my favorite *mala tang* spot last week and had to dodge a guy on a scooter carrying a live chicken. True story. Keep your head on a swivel.
+Also: **sidewalks are for parking, not walking.** In Chengdu, cars, scooters, and even the occasional motorbike will use the sidewalk as a shortcut. I was walking to A popular choice *mala tang* spot last week and had to dodge a guy on a scooter carrying a live chicken. True story. Keep your head on a swivel.
 
 And for the love of all that is holy, **look both ways before crossing a one-way street.** I'm serious. Chinese drivers sometimes go the wrong way on one-way streets, especially at night. It's not malicious—it's just... creative navigation.
 

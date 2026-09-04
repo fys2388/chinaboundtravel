@@ -27,7 +27,7 @@ weight: "1"
 
 Let me tell you about my first business trip to China. I was a nervous wreck. I had been living in Chengdu for a few years, but this was my first time representing my company in a big meeting. I remember walking into the conference room, feeling like a fish out of water. The room was filled with Chinese businesspeople, all dressed in suits and speaking in rapid-fire Mandarin. I sat down at the table, feeling like I was about to be eaten alive.
 
-But then, something amazing happened. One of the Chinese businessmen looked at me and smiled. He reached out his hand and introduced himself in perfect English. "Welcome to China," he said. "I'm looking forward to working with you."
+But then, something amazing happened. One of the Chinese businessmen looked at me and smiled. He reached out his hand and introduced himself in excellent English. "Welcome to China," he said. "I'm looking forward to working with you."
 
 That simple act of kindness changed everything. Suddenly, I felt at ease. I realized that these were just normal people, just like me. They were there to do business, just like me. And over the next few days, I had some of the most productive and enjoyable meetings of my career.
 
@@ -210,7 +210,7 @@ And if you have any questions or comments, please feel free to leave them below.
 ## Related Articles
 - [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
 - [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
-- [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+- [Sichuan Hotpot Guide: History, Top-rated Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 - [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/)
 - [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)

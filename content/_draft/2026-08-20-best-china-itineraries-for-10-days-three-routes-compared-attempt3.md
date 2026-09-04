@@ -1,5 +1,5 @@
 ---
-title: "Best China Itineraries for 10 Days: Three Routes Compared"
+title: "Top-rated China Itineraries for 10 Days: Three Routes Compared"
 date: "2026-08-20T10:00:00+08:00"
 lastmod: "2026-08-20T10:00:00+08:00"
 author: "Joran"
@@ -16,15 +16,15 @@ categories:
 geo: "AU"
 draft: "true"
 audit_status: "pending"
-summary: "Best China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers researched and verified by the ChinaBound Travel editors."
-description: "Best China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers researched and verified by the ChinaBound Travel editors."
+summary: "Top-rated China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers researched and verified by the ChinaBound Travel editors."
+description: "Top-rated China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers researched and veri..."
 canonicalURL: "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/"
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 ---
 
-## Best China Itineraries for 10 Days: Three Routes Compared
+## Top-rated China Itineraries for 10 Days: Three Routes Compared
 ## Introduction
 China, a land of contrasts and wonders, offers a plethora of experiences for travelers. If you're planning a 10-day trip from Australia or New Zealand, you're in for a treat. In this guide, I'll compare three amazing routes that will take you through some of China's most iconic cities and landscapes.
 

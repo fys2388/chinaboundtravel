@@ -120,7 +120,7 @@ There are many different types of tea ceremony in China, each with its own uniqu
 
 ### Where to Drink Tea in Chengdu
 
-If you're looking to experience Chinese tea culture in Chengdu, there are many great places to go. Here are some of my favorite places to drink tea in Chengdu:
+If you're looking to experience Chinese tea culture in Chengdu, there are many great places to go. Here are some of A popular choice places to drink tea in Chengdu:
 
 - **The People's Park:** The People's Park is a large public park in the center of Chengdu, and it is a popular place for locals and tourists to go for a stroll, a picnic, or a cup of tea. There are many tea houses and cafes in the park, and you can enjoy a cup of tea while taking in the beautiful scenery.
 - **The Jinli Ancient Street:** The Jinli Ancient Street is a historic street in the center of Chengdu, and it is a popular place for tourists to go to experience traditional Chinese culture. There are many tea houses and cafes on the street, and you can enjoy a cup of tea while browsing the shops and restaurants.

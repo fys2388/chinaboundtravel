@@ -36,7 +36,7 @@ This guide covers the decisions that actually matter: which Li River option to p
 
 This is the choice that determines your whole day, and most people get it wrong by defaulting to the big cruise boat. Here's the full breakdown:
 
-| Option | Duration | Price | Best For |
+| Option | Duration | Price | Top-rated For |
 |--------|----------|-------|----------|
 | 4-star cruise ship (Guilin → Yangshuo) | 4 hours | ¥210/person (~€26) | Most travelers, first-timers |
 | 3-star cruise ship (Guilin → Yangshuo) | 4 hours | ¥170/person (~€21) | Budget-conscious travelers |
@@ -47,7 +47,7 @@ This is the choice that determines your whole day, and most people get it wrong 
 
 > **Actionable tip:** Bamboo rafts for the Yangdi → Xingping route are limited and sell out fast, especially on weekends. Buy your ticket at the Yangdi pier the night before, or ask your hotel in Yangshuo to book it for you (they'll charge a small commission, usually ¥10-20). The [144-hour visa](/posts/144-hour-visa-free-transit-guide/)-free transit applies here — [check if your nationality qualifies](/posts/144-hour-visa-free-transit-guide/) before booking flights.
 
-## Best Time to Visit
+## Top-rated Time to Visit
 
 Visitors who return in different seasons report a staggering difference. Here's the monthly breakdown:
 
@@ -58,7 +58,7 @@ Visitors who return in different seasons report a staggering difference. Here's 
 | June–August | ★★★ | Hot (33-36°C), humid, crowded with domestic tourists. Upside: you can swim in the Yulong River and go tubing |
 | November–March | ★★ | Cold (5-12°C), grey, many raft operations suspend service. Hotels are half price though, and you'll have viewpoints to yourself |
 
-**Bottom line:** April and May are peak beauty. September and October offer the best balance of weather, crowds, and cost. Avoid Chinese National Day holiday (October 1-7) at all costs — hotel prices triple and every viewpoint is wall-to-wall people.
+**Bottom line:** April and May are peak beauty. September and October offer a top choice balance of weather, crowds, and cost. Avoid Chinese National Day holiday (October 1-7) at all costs — hotel prices triple and every viewpoint is wall-to-wall people.
 
 ## 3-Day Itinerary
 
@@ -106,7 +106,7 @@ Guilin cuisine is distinct from the rest of Guangxi — heavier on rice noodles,
 
 ## How to Get There
 
-**High-speed train** is the best option for most travelers:
+**High-speed train** is a top choice option for most travelers:
 
 | Route | Duration | Price |
 |-------|----------|-------|
@@ -183,7 +183,6 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [How to Use Alipay as a Foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) — Set up mobile payments before you arrive
 - [Chinese Street Food: A First-Timer's Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) — Essential for Yangshuo night markets
 - [A Gastronomic Adventure in China](/posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/) — For understanding Guangxi cuisine in the broader context of China's eight culinary traditions
-
 
 {{< affiliate-hotel >}}
 

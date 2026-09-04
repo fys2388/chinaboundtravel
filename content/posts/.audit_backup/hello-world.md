@@ -24,6 +24,6 @@ Check out these popular guides:
 
 1. [China Visa for US Citizens](/)
 2. [How to Use Alipay in China](/)
-3. [Best VPN for China](/)
+3. [Top-rated VPN for China](/)
 
 Happy travels! 馃審锟?

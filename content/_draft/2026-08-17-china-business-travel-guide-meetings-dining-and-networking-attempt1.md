@@ -85,7 +85,7 @@ Another important thing to keep in mind is to be adventurous with your food choi
 
 When dining in China, it's also important to be aware of the cultural significance of certain foods and dishes. For example, in China, fish is considered a lucky food, so it's often served at special occasions. And in some parts of China, it's considered polite to leave a little bit of food on your plate to show that you've had enough.
 
-And if you want to learn more about Chinese cuisine and dining culture, check out this article on Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance.
+And if you want to learn more about Chinese cuisine and dining culture, check out this article on Sichuan Hotpot Guide: History, Top-rated Restaurants, and Cultural Significance.
 
 ## Networking
 

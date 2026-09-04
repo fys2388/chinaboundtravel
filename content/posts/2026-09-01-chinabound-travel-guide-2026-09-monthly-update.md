@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-2d817f5f6f1b"
-title: "ChinaBound Travel Guide 2026.09 - Now Updated With Latest Visa Rules"
+title: "ChinaBound Travel Guide 2026.09 - Now Updated With Latest..."
 date: 2026-09-01T13:19:41+00:00
 lastmod: 2026-09-01T13:19:41+00:00
 description: "The September 2026 edition of the ChinaBound Travel Guide is here - updated with this month's visa policy changes."

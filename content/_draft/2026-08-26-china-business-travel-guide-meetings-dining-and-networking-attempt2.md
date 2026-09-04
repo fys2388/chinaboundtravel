@@ -75,7 +75,7 @@ Before the meeting, do your research on the Chinese company or organization you'
 
 ### Chinese Cuisine: A Gastronomic Adventure
 
-China is renowned for its diverse and delicious cuisine. From the spicy and flavorful Sichuan cuisine to the delicate and refined Cantonese dishes, there's something to suit every palate. One of the most iconic Chinese dishes is hot pot. Sichuan hot pot, in particular, is famous for its numbing and spicy flavor. You can find a great guide to Sichuan hot pot, including history, best restaurants, and cultural significance, in [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
+China is renowned for its diverse and delicious cuisine. From the spicy and flavorful Sichuan cuisine to the delicate and refined Cantonese dishes, there's something to suit every palate. One of the most iconic Chinese dishes is hot pot. Sichuan hot pot, in particular, is famous for its numbing and spicy flavor. You can find a great guide to Sichuan hot pot, including history, best restaurants, and cultural significance, in [Sichuan Hotpot Guide: History, Top-rated Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
 
 When dining in China, there are some cultural norms to follow. For example, it's polite to use chopsticks correctly. If you're not used to using chopsticks, don't worry, most restaurants will provide forks and spoons as well. Also, it's common to share dishes in a group setting, so be ready to try a variety of foods.
 

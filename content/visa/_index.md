@@ -18,7 +18,7 @@ China's visa policy has become significantly more traveler-friendly. Since July 
 
 ### Visa Types at a Glance
 
-| Visa Type | Duration | Best For | Application |
+| Visa Type | Duration | Top-rated For | Application |
 |---|---|---|---|
 | **15-day Visa-Free** | 15 days | Short trips, tourism | None required |
 | **144-hour Transit** | 6 days | layovers, brief visits | Automatic at entry |

@@ -51,7 +51,7 @@ The discovery of the Terracotta Army was a major archaeological event that attra
 ## Practical Tips for Visiting the Terracotta Army
 Now that you know a little bit about the history and discovery of the Terracotta Army, let's talk about some practical tips and advice for visiting this amazing site. Here are some practical tips that will help you make the most of your visit:
 
-### Best Time to Visit
+### Top-rated Time to Visit
 one of the popular time to visit the Terracotta Army is during the off-peak season, which is from November to March. During this time, the crowds are smaller, and the weather is cooler. However, if you prefer warmer weather, you can visit during the spring or autumn. Just be prepared for larger crowds and higher temperatures.
 
 ### How to Get There

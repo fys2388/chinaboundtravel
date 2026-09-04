@@ -35,5 +35,5 @@ If you're a fan of spicy food, then Sichuan cuisine is for you. This region is k
 But Sichuan cuisine isn't just about spicy food. It also includes a variety of noodles, dumplings, and soups. One of my personal favorites is Dan Dan Noodles, a spicy and flavorful noodle dish made with a spicy sauce, minced meat, and vegetables. And if you're looking for something a little lighter, try the Clear Noodles in Chili Sauce, a refreshing and spicy noodle dish made with clear noodles, chili oil, and vegetables.
 
 ### Practical Takeaways
-- **Best Places to Try Sichuan Cuisine:** In Chengdu, head to Jinli Ancient Street or Kuanzhai Alleys for a variety of street food options. For a more upscale dining experience, try Jingzun, a high-end restaurant that specializes in Sichuan cuisine.
+- **Top-rated Places to Try Sichuan Cuisine:** In Chengdu, head to Jinli Ancient Street or Kuanzhai Alleys for a variety of street food options. For a more upscale dining experience, try Jingzun, a high-end restaurant that specializes in Sichuan cuisine.
 -

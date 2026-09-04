@@ -1,5 +1,5 @@
 ---
-title: "The Great Chinese Visa Adventure: A Comedy of Errors, Stamps, and Noodle-Based Bribery"
+title: "The Great Chinese Visa Adventure: A Comedy of Errors, Sta..."
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"

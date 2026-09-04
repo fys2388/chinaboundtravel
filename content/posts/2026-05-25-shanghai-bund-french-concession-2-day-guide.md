@@ -27,7 +27,6 @@ last_updated: "2026-08-24"
 ---
 ## Shanghai Bund & French Concession 2-Day Deep Dive
 
-
 {{< soft-recommend partner="esim" topic="city" placement="article_mid_1" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
@@ -77,7 +76,7 @@ This is where Shanghai shows its softer side. The tree-lined streets, the old co
 
 Return to the Bund as the sun goes down. The light show on the buildings starts at 7pm (8pm in winter). Find a spot near the **Waitan SOHO**  less crowded, same view.
 
-> **Editor's Tip:** For one of the best views of the Shanghai skyline, cross the river to the **Pudong side** (Metro Line 2 to Lujiazui). Stand on the **Lujiazui waterfront** (near the Mercedes-Benz Arena) and look back at the Bund.
+> **Editor's Tip:** For one of a top choice views of the Shanghai skyline, cross the river to the **Pudong side** (Metro Line 2 to Lujiazui). Stand on the **Lujiazui waterfront** (near the Mercedes-Benz Arena) and look back at the Bund.
 
 ---
 
@@ -114,7 +113,7 @@ If you have extra time, take Metro Line 17 to **Zhujiajiao**. This water town is
 |-----------|--------|
 | **Metro** | Get a **Shanghai Public Transportation Card** (any metro station). Literally saves 30 minutes of fumbling with tickets. Or just use Alipay/WeChat Pay — if you haven't set these up yet, our [Alipay & WeChat Pay guide for foreigners](/posts/alipay-wechat-pay-foreigners-guide/) walks you through it. |
 | **Language** | Almost zero English outside tourist areas. Save key phrases: “” (how much), “” (no spice), “” (thanks) |
-| **Best time to visit** | March-May, September-November. Summer is brutal (38C+ with humidity). Winter is cold but clear. |
+| **Top-rated time to visit** | March-May, September-November. Summer is brutal (38C+ with humidity). Winter is cold but clear. |
 | **Accommodation** | Budget: **Lujiazui/Huangpu area**. Mid-range: **French Concession**. Luxury: **The Peninsula, Waldorf Astoria** |
 | **ATM fees** | Use your home bank's ATM network (like Charles Schwab for Americans). Domestic Chinese ATMs charge 10-15 RMB per withdrawal for foreign cards. |
 
@@ -148,7 +147,6 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 ---
 
 *Last updated: May 2026 | ChinaBound Travel Editorial Team*
-
 
 {{< affiliate-hotel >}}
 

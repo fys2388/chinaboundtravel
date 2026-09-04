@@ -40,7 +40,7 @@ Once you have your visa, it's time to book your flight. Now, I know what you're 
 
 One way to save money on your flight is to book your flight in advance. The earlier you book your flight, the more likely you are to get a good deal. Another way to save money on your flight is to be flexible with your travel dates. If you're willing to travel during the off-season, you can often find cheaper flights.
 
-Finally, make sure you compare prices from different airlines. Don't just book the first flight you find. Take the time to shop around and compare prices from different airlines to make sure you're getting the best deal.
+Finally, make sure you compare prices from different airlines. Don't just book the first flight you find. Take the time to shop around and compare prices from different airlines to make sure you're getting a top choice deal.
 
 [Image: A crowded airport terminal with people waiting in line for check-in. The atmosphere is bustling and chaotic.]
 
@@ -50,7 +50,7 @@ Once you've arrived in China, it's time to start exploring. But how are you goin
 ### Buses
 Buses are one of the most popular and affordable ways to get around China. They're available in most cities and towns, and they can take you to just about anywhere you want to go under the sun.
 
-One of the advantages of taking the bus is that it's often the cheapest way to get around. However, buses can also be crowded and uncomfortable, especially during peak travel times.
+One of the advantages of taking the bus is that it's often the most affordable way to get around. However, buses can also be crowded and uncomfortable, especially during peak travel times.
 
 If you're planning to take the bus, make sure you buy your ticket in advance. You can usually buy bus tickets at the bus station or online. Also, make sure you bring a book or something to entertain yourself, as bus rides can be long and boring.
 

@@ -1,5 +1,5 @@
 ---
-title: "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethnic Minorities"
+title: "Yunnan Adventure: Rice Terraces, Ancient Towns, and Ethni..."
 date: "2026-07-04T10:00:00+08:00"
 lastmod: "2026-07-04T10:00:00+08:00"
 author: "Joran"

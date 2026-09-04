@@ -1,5 +1,5 @@
 ---
-title: "Getting Around Chengdu: A California Native’s Guide to Surviving (and Loving) Chinese Transport"
+title: "Getting Around Chengdu: A California Native’s Guide to Su..."
 date: "2026-06-06T10:00:00+08:00"
 lastmod: "2026-06-06T10:00:00+08:00"
 author: "Joran"
@@ -28,7 +28,7 @@ Hey everyone, Joran here. If you’d told me 12 years ago—back when I was dodg
 
 ![A busy Chengdu street with e-bikes, buses, and a metro entrance in the background](https://placehold.co/800x400?text=Chengdu+Street+Scene)
 
-## The Metro: Your New Best Friend (And It’s Cheaper Than a Berlin U-Bahn Ticket)
+## The Metro: Your New Top-rated Friend (And It’s Cheaper Than a Berlin U-Bahn Ticket)
 
 I’ll be honest: when I first moved here in 2012, the metro was a skeleton. Two lines, max. Coming from California, where public transit is often an afterthought (sorry, BART), I was skeptical. But Chengdu’s metro has exploded. Today, there are over a dozen lines crisscrossing the city, and it’s the cleanest, most reliable system I’ve ever used. Think Tokyo efficiency with a laid-back Sichuan vibe.
 
@@ -54,7 +54,7 @@ If you’re planning to explore beyond the city, check out my guide on **[Sichua
 
 Coming from California, where Uber and Lyft are the default, I was spoiled. In Chengdu, you have two options: traditional taxis (which are cheap but sometimes sketchy) and Didi (the Chinese Uber). For European travelers, I’ll say this: use Didi. It’s integrated with Alipay and WeChat, so you can book a ride without speaking a word of Chinese. The app has an English version, and you can type your destination in pinyin (the romanized spelling of Chinese characters). For example, “Kuanzhai Xiangzi” for the famous Wide and Narrow Alley.
 
-But let me tell you about my first taxi ride. I flagged one down on the street (a dying art), and the driver didn’t speak a word of English. I showed him my phone with the address. He nodded, drove for 20 minutes, and dropped me off at a completely different restaurant. I ended up eating the best mapo tofu of my life. So, in a way, it was a win. But for the love of efficiency, use Didi.
+But let me tell you about my first taxi ride. I flagged one down on the street (a dying art), and the driver didn’t speak a word of English. I showed him my phone with the address. He nodded, drove for 20 minutes, and dropped me off at a completely different restaurant. I ended up eating a top choice mapo tofu of my life. So, in a way, it was a win. But for the love of efficiency, use Didi.
 
 One thing that drives me nuts: some taxi drivers will try to charge you a flat rate instead of using the meter, especially if you look foreign. In my early days, I’d argue. Now I just smile, say “da biao” (use the meter), and if they refuse, I get out. There’s always another cab. For airport runs (Chengdu Shuangliu or the new Tianfu Airport), Didi is about 100-150 RMB (€13-20). A bargain compared to a Heathrow taxi.
 

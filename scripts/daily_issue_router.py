@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Daily Issue Router - 日报运营问题→Agent任务自动分配机制
 
@@ -74,6 +74,67 @@ ISSUE_ROUTES = {
         "severity": "medium",
         "description": "搜索点击率偏低，需优化标题和描述",
         "action": "optimize_metadata",
+    },
+    # Site Health 巡检问题
+    "ai_forbidden_word": {
+        "agent": "content",
+        "severity": "medium",
+        "description": "AI禁用词检测（Best/Cheapest/Guaranteed等），需保守改写",
+        "action": "safe_normalize",
+    },
+    "persona_violation": {
+        "agent": "content",
+        "severity": "high",
+        "description": "Persona违规（I lived in China/My wife/As a local等），需清理编辑视角",
+        "action": "persona_cleanup",
+    },
+    "content_placeholder": {
+        "agent": "content",
+        "severity": "high",
+        "description": "内容占位符残留（Review needed/TODO等），需补全或移除",
+        "action": "fix_placeholder",
+    },
+    "image_missing_alt": {
+        "agent": "content",
+        "severity": "medium",
+        "description": "图片缺少alt属性，需补充描述性文本",
+        "action": "add_alt_text",
+    },
+    "title_too_short": {
+        "agent": "seo",
+        "severity": "medium",
+        "description": "Title过短（<20字符），需扩展关键词",
+        "action": "optimize_title",
+    },
+    "title_too_long": {
+        "agent": "seo",
+        "severity": "medium",
+        "description": "Title过长（>65字符），需精简",
+        "action": "optimize_title",
+    },
+    "meta_description_too_long": {
+        "agent": "seo",
+        "severity": "low",
+        "description": "Meta Description过长（>165字符），需精简",
+        "action": "optimize_meta",
+    },
+    "meta_description_too_short": {
+        "agent": "seo",
+        "severity": "low",
+        "description": "Meta Description过短（<70字符），需扩展",
+        "action": "optimize_meta",
+    },
+    "site_unreachable": {
+        "agent": "site_health",
+        "severity": "critical",
+        "description": "网站无法访问（可能是本地网络误报），需核实线上状态",
+        "action": "verify_and_alert",
+    },
+    "ssl_check_failed": {
+        "agent": "site_health",
+        "severity": "high",
+        "description": "SSL证书检查失败（可能是本地网络误报），需核实线上状态",
+        "action": "verify_and_alert",
     },
     "index_errors": {
         "agent": "seo",
@@ -247,6 +308,9 @@ class DailyIssueRouter:
         # 5. 扫描用户/流量报告
         issues.extend(self._scan_user_reports())
 
+        # 6. 扫描Site Health巡检报告
+        issues.extend(self._scan_site_health_reports())
+
         self.issues = issues
         return issues
 
@@ -408,6 +472,38 @@ class DailyIssueRouter:
                     pass
 
         return issues
+
+    def _scan_site_health_reports(self) -> list:
+        """扫描Site Health巡检报告，提取未自动修复的问题"""
+        issues = []
+        sh_dir = ISSUES_DIR
+        sh_files = sorted(sh_dir.glob("site_health_issues_*.json"), reverse=True)
+        if not sh_files:
+            return issues
+        latest = sh_files[0]
+        try:
+            data = json.loads(latest.read_text(encoding="utf-8"))
+            sh_issues = data.get("issues", [])
+            for item in sh_issues:
+                issue_type = item.get("type", "unknown")
+                severity = item.get("severity", "medium")
+                message = item.get("message", "")
+                file_ref = item.get("file", "")
+                auto_fixable = item.get("auto_fixable", False)
+                if item.get("status") == "fixed":
+                    continue
+                if issue_type in ("site_unreachable", "ssl_check_failed"):
+                    message = message + "（可能是本地网络误报，需核实线上状态）"
+                issues.append(self._create_issue(
+                    issue_type,
+                    message,
+                    source_file=str(latest.name),
+                ))
+            print("  [Site Health] 从 " + latest.name + " 提取 " + str(len(issues)) + " 个问题")
+        except (json.JSONDecodeError, KeyError) as e:
+            print("  [Site Health] 解析失败: " + str(e))
+        return issues
+
 
     def _create_issue(self, issue_type: str, description: str, source_file: str = "") -> dict:
         """创建问题对象"""

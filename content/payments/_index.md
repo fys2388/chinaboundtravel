@@ -23,12 +23,12 @@ China is virtually a cashless society. Mobile payments — primarily **Alipay** 
 | Foreign card support | Yes (international version) | Limited |
 | Setup difficulty | Easy | Moderate |
 | Market share | ~54% | ~40% |
-| Best for | Shopping, travel bookings | Social payments, small vendors |
+| Top-rated for | Shopping, travel bookings | Social payments, small vendors |
 | Tourist mode | TourPass feature | Requires Chinese bank card |
 | Acceptance | Universal | Universal |
 | Mini-programs | Extensive | Extensive |
 
-**Recommendation for tourists:** Start with **Alipay** — it has the best foreigner-friendly setup and accepts international credit cards directly via TourPass.
+**Recommendation for tourists:** Start with **Alipay** — it has a top choice foreigner-friendly setup and accepts international credit cards directly via TourPass.
 
 ### Our Payment Guides
 
