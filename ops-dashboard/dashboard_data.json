@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04 23:00:32",
+  "generated_at": "2026-09-04 23:30:34",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 265,
+    "response_ms": 116,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-04T14:50:55Z",
+      "last_run": "2026-09-04T15:03:36Z",
       "last_event": "workflow_run"
     },
     {
@@ -122,8 +122,8 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-04T10:36:07Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-04T15:02:27Z",
+      "last_event": "push"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-04T15:00:21Z",
+      "last_run": "2026-09-04T15:30:21Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-04 15:00",
+    "checked_at": "2026-09-04 15:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -463,28 +463,14 @@
       "date": "2026-09-04"
     },
     "ga4_daily": {
-      "source": "ga4_api",
-      "pull_time": "2026-09-03T10:17:53.989735",
-      "data_date": "2026-09-02",
-      "is_real_data": true,
-      "is_fresh": true,
-      "metrics": {
-        "activeUsers": 233,
-        "sessions": 293,
-        "screenPageViews": 694,
-        "engagedSessions": 89,
-        "bounceRate": 0.6962457337883959,
-        "averageSessionDuration": 203.8710572662116,
-        "engagementRate": 0.3037542662116041,
-        "newUsers": 231
-      },
+      "visitors": 10,
+      "sessions": 15,
+      "pageviews": 37,
+      "new_users": 83,
+      "bounce_rate": 70.4,
+      "date": "2026-09-04",
+      "status": "OK",
       "daily": [
-        {
-          "date": "2026-08-28",
-          "sessions": 13,
-          "activeUsers": 13,
-          "pageviews": 13
-        },
         {
           "date": "2026-08-29",
           "sessions": 15,
@@ -517,45 +503,26 @@
         },
         {
           "date": "2026-09-03",
-          "sessions": 18,
+          "sessions": 19,
           "activeUsers": 12,
-          "pageviews": 35
+          "pageviews": 45
+        },
+        {
+          "date": "2026-09-04",
+          "sessions": 15,
+          "activeUsers": 10,
+          "pageviews": 37
         }
-      ],
-      "top_pages": [],
-      "traffic_sources": [],
-      "raw_source": "GA4 Data API v1beta",
-      "status": "OK",
-      "error": null,
-      "freshness_info": {
-        "fresh": true,
-        "reason": "Fresh",
-        "age_days": 1,
-        "data_date": "2026-09-02"
-      }
+      ]
     },
     "gsc_daily": {
-      "source": "gsc_api",
-      "pull_time": "2026-09-03T10:17:55.892881",
-      "data_date": "2026-08-31",
-      "is_real_data": true,
-      "is_fresh": true,
-      "metrics": {
-        "impressions": 553,
-        "clicks": 0,
-        "ctr": 0.0,
-        "average_position": 66.6,
-        "sitemap_count": 1,
-        "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
-      },
+      "impressions": 35,
+      "clicks": 1,
+      "ctr": 0.03,
+      "avg_position": 51.9,
+      "date": "2026-09-01",
+      "status": "OK",
       "daily": [
-        {
-          "date": "2026-08-25",
-          "impressions": 85,
-          "clicks": 1,
-          "ctr": 0.01,
-          "position": 64.1
-        },
         {
           "date": "2026-08-26",
           "impressions": 95,
@@ -597,301 +564,15 @@
           "clicks": 0,
           "ctr": 0,
           "position": 64.3
+        },
+        {
+          "date": "2026-09-01",
+          "impressions": 35,
+          "clicks": 1,
+          "ctr": 0.03,
+          "position": 51.9
         }
-      ],
-      "top_queries": [
-        {
-          "query": "144 china visa",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 80.5
-        },
-        {
-          "query": "144 group visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 87
-        },
-        {
-          "query": "144 hour china visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 83
-        },
-        {
-          "query": "144 hour transit visa china",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 46.3
-        },
-        {
-          "query": "144 hour visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 87
-        },
-        {
-          "query": "144 hour visa beijing",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 41
-        },
-        {
-          "query": "144 hour visa china",
-          "impressions": 9,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 51.1
-        },
-        {
-          "query": "144 hour visa china cost",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 79
-        },
-        {
-          "query": "144 hour visa china from hong kong",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 56
-        },
-        {
-          "query": "144 hour visa free",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 83.5
-        },
-        {
-          "query": "144 hour visa free china",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 69.7
-        },
-        {
-          "query": "144 hour visa free transit",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64.9
-        },
-        {
-          "query": "144 hour visa free transit in china",
-          "impressions": 6,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 66
-        },
-        {
-          "query": "144 hour visa shanghai",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 85
-        },
-        {
-          "query": "144 hours china visa",
-          "impressions": 7,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 66.7
-        },
-        {
-          "query": "144 hours china visa free",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 43
-        },
-        {
-          "query": "144 hours visa china",
-          "impressions": 9,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 71.9
-        },
-        {
-          "query": "144 hours visa free china",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 58
-        },
-        {
-          "query": "144 hrs visa free china",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 79
-        },
-        {
-          "query": "144 transit visa china",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64
-        }
-      ],
-      "top_pages": [
-        {
-          "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-          "impressions": 23,
-          "clicks": 1,
-          "ctr": 0.04,
-          "position": 26.7
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-          "impressions": 17,
-          "clicks": 1,
-          "ctr": 0.06,
-          "position": 9.6
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-          "impressions": 75,
-          "clicks": 1,
-          "ctr": 0.01,
-          "position": 20.8
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
-          "impressions": 4,
-          "clicks": 1,
-          "ctr": 0.25,
-          "position": 24.8
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-          "impressions": 52,
-          "clicks": 1,
-          "ctr": 0.02,
-          "position": 19.0
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/",
-          "impressions": 31,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 23.1
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cancel/",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 7
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/categories/china-itinerary/",
-          "impressions": 6,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 92
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/guilin/",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 9
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
-          "impressions": 4,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 22.5
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/xian/",
-          "impressions": 29,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 68.6
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/contact/",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/content/",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 42.2
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/disclaimer/",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 36
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/internet/",
-          "impressions": 108,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 76.1
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/",
-          "impressions": 4,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 13
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-          "impressions": 693,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 72.7
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 15.9
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-          "impressions": 5,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 3.6
-        }
-      ],
-      "raw_source": "Google Search Console REST API v3",
-      "status": "OK",
-      "error": null,
-      "freshness_info": {
-        "fresh": true,
-        "reason": "Fresh",
-        "age_days": 3,
-        "data_date": "2026-08-31"
-      }
+      ]
     }
   },
   "data_sources": [
@@ -940,9 +621,7 @@
     "auto_fixed": 0,
     "pending": 0,
     "timestamp": "2026-09-04T06:01:46.061619+00:00",
-    "checks": 16,
-    "resolved": 24,
-    "assigned": 24
+    "checks": 16
   },
   "agent_execution": {
     "date": "2026-09-04",
