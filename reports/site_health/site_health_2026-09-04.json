@@ -1,17 +1,25 @@
 {
-  "timestamp": "2026-09-04T04:43:48.352137+00:00",
+  "timestamp": "2026-09-04T04:45:57.146527+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 75,
-    "critical": 0,
+    "total_issues": 77,
+    "critical": 1,
     "high": 7,
-    "medium": 34,
+    "medium": 35,
     "low": 34,
     "auto_fixed": 0,
-    "need_manual": 75
+    "need_manual": 77
   },
   "issues": [
+    {
+      "type": "site_unreachable",
+      "severity": "critical",
+      "file": "https://www.chinaboundtravel.com",
+      "message": "网站无法访问",
+      "auto_fixable": false,
+      "agent": "site_health"
+    },
     {
       "type": "persona_violation",
       "severity": "high",
@@ -339,6 +347,14 @@
       "message": "AI禁用词: perfect",
       "auto_fixable": false,
       "agent": "content"
+    },
+    {
+      "type": "ssl_check_failed",
+      "severity": "medium",
+      "file": "https://www.chinaboundtravel.com",
+      "message": "SSL检查失败: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>",
+      "auto_fixable": false,
+      "agent": "site_health"
     },
     {
       "type": "meta_description_too_long",

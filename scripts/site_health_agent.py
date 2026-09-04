@@ -22,6 +22,9 @@ import os
 import re
 import json
 import glob
+import ssl
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -491,6 +494,215 @@ def check_title_meta_length():
     return issues
 
 
+# 网络请求配置
+NETWORK_TIMEOUT = 10  # 秒
+SITE_BASE_URL = "https://www.chinaboundtravel.com"
+CHECK_PAGES = ["/", "/pricing/", "/contact/", "/posts/ultimate-guide-to-china-visa-for-tourists/"]
+
+
+def _fetch_url(url):
+    """获取URL响应，返回(response, html_content)或(None, None)"""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "SiteHealthBot/1.0"})
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(req, timeout=NETWORK_TIMEOUT, context=ctx) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+            return resp, html
+    except Exception as e:
+        return None, None
+
+
+def check_security_headers():
+    """检查安全头完整性"""
+    issues = []
+    REQUIRED_HEADERS = {
+        "Strict-Transport-Security": "HSTS",
+        "X-Content-Type-Options": "MIME类型嗅探防护",
+        "X-Frame-Options": "点击劫持防护",
+        "Content-Security-Policy": "CSP策略",
+        "Referrer-Policy": "引荐信息控制",
+        "Permissions-Policy": "权限策略",
+    }
+    
+    resp, _ = _fetch_url(SITE_BASE_URL + "/")
+    if resp is None:
+        issues.append({
+            "type": "site_unreachable",
+            "severity": "critical",
+            "file": SITE_BASE_URL,
+            "message": "网站无法访问",
+            "auto_fixable": False,
+            "agent": "site_health"
+        })
+        return issues
+    
+    headers = {k.lower(): v for k, v in resp.headers.items()}
+    for header, desc in REQUIRED_HEADERS.items():
+        if header.lower() not in headers:
+            issues.append({
+                "type": "security_header_missing",
+                "severity": "medium",
+                "file": SITE_BASE_URL,
+                "message": f"缺少安全头: {header} ({desc})",
+                "auto_fixable": False,
+                "agent": "site_health"
+            })
+    
+    return issues
+
+
+def check_mixed_content():
+    """检查混合内容：HTTPS页面中加载HTTP资源"""
+    issues = []
+    HTTP_RESOURCE_PATTERNS = [
+        re.compile(r'src="http://[^"]+"', re.IGNORECASE),
+        re.compile(r'href="http://[^"]+"', re.IGNORECASE),
+        re.compile(r'url\(http://[^)]+\)', re.IGNORECASE),
+    ]
+    
+    for page_path in CHECK_PAGES[:2]:  # 只检查首页和定价页
+        resp, html = _fetch_url(SITE_BASE_URL + page_path)
+        if html is None:
+            continue
+        
+        for pattern in HTTP_RESOURCE_PATTERNS:
+            matches = pattern.findall(html)
+            if matches:
+                # 排除允许的HTTP链接（如外部引用）
+                for match in matches[:3]:  # 只报告前3个
+                    issues.append({
+                        "type": "mixed_content",
+                        "severity": "medium",
+                        "file": page_path,
+                        "message": f"混合内容: {match[:60]}",
+                        "auto_fixable": False,
+                        "agent": "site_health"
+                    })
+                break
+    
+    return issues
+
+
+def check_og_tags():
+    """检查OG/Twitter标签完整性"""
+    issues = []
+    REQUIRED_OG = ["og:title", "og:description", "og:image", "og:url", "og:type"]
+    REQUIRED_TWITTER = ["twitter:card", "twitter:title", "twitter:description", "twitter:image"]
+    
+    for page_path in CHECK_PAGES[:3]:
+        resp, html = _fetch_url(SITE_BASE_URL + page_path)
+        if html is None:
+            continue
+        
+        # 检查OG标签
+        for og_tag in REQUIRED_OG:
+            pattern = re.compile(r"property=[\"']" + re.escape(og_tag) + r"[\"']]", re.IGNORECASE)
+            if not pattern.search(html):
+                issues.append({
+                    "type": "og_tag_missing",
+                    "severity": "low",
+                    "file": page_path,
+                    "message": f"缺少OG标签: {og_tag}",
+                    "auto_fixable": False,
+                    "agent": "seo"
+                })
+        
+        # 检查Twitter标签
+        for tw_tag in REQUIRED_TWITTER:
+            pattern = re.compile(r"name=[\"']" + re.escape(tw_tag) + r"[\"']]", re.IGNORECASE)
+            if not pattern.search(html):
+                issues.append({
+                    "type": "twitter_tag_missing",
+                    "severity": "low",
+                    "file": page_path,
+                    "message": f"缺少Twitter标签: {tw_tag}",
+                    "auto_fixable": False,
+                    "agent": "seo"
+                })
+    
+    return issues
+
+
+def check_ssl_certificate():
+    """检查SSL证书有效期"""
+    issues = []
+    try:
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(SITE_BASE_URL, timeout=NETWORK_TIMEOUT, context=ctx) as resp:
+            cert = resp.peer_certificate()
+            if cert:
+                import datetime as dt
+                not_after = dt.datetime.strptime(cert["notAfter"], "%b %d %H:%M:%S %Y %Z")
+                days_left = (not_after - dt.datetime.utcnow()).days
+                if days_left < 30:
+                    issues.append({
+                        "type": "ssl_expiring_soon",
+                        "severity": "high",
+                        "file": SITE_BASE_URL,
+                        "message": f"SSL证书将在{days_left}天后过期",
+                        "auto_fixable": False,
+                        "agent": "site_health"
+                    })
+                elif days_left < 90:
+                    issues.append({
+                        "type": "ssl_expiring_warning",
+                        "severity": "medium",
+                        "file": SITE_BASE_URL,
+                        "message": f"SSL证书将在{days_left}天后过期",
+                        "auto_fixable": False,
+                        "agent": "site_health"
+                    })
+    except Exception as e:
+        issues.append({
+            "type": "ssl_check_failed",
+            "severity": "medium",
+            "file": SITE_BASE_URL,
+            "message": f"SSL检查失败: {str(e)[:50]}",
+            "auto_fixable": False,
+            "agent": "site_health"
+        })
+    
+    return issues
+
+
+def check_structured_data():
+    """检查结构化数据缺失"""
+    issues = []
+    
+    for page_path in CHECK_PAGES:
+        resp, html = _fetch_url(SITE_BASE_URL + page_path)
+        if html is None:
+            continue
+        
+        # 检查JSON-LD
+        has_json_ld = "application/ld+json" in html
+        
+        # 文章页应该有Article schema
+        if "/posts/" in page_path or "/cities/" in page_path:
+            if not has_json_ld or "Article" not in html:
+                issues.append({
+                    "type": "article_schema_missing",
+                    "severity": "medium",
+                    "file": page_path,
+                    "message": "文章页缺少Article结构化数据",
+                    "auto_fixable": False,
+                    "agent": "seo"
+                })
+        
+        # 所有页面应该有Organization schema
+        if not has_json_ld or "Organization" not in html:
+            issues.append({
+                "type": "organization_schema_missing",
+                "severity": "low",
+                "file": page_path,
+                "message": "缺少Organization结构化数据",
+                "auto_fixable": False,
+                "agent": "seo"
+            })
+    
+    return issues
+
+
 def auto_fix_issue(issue):
     """自动修复问题（L2权限）"""
     if not issue.get("auto_fixable"):
@@ -563,70 +775,118 @@ def run_health_check(auto_fix=True):
     all_issues = []
     
     # 1. Sitemap健康检查
-    print("\n[1/11] 检查Sitemap健康...")
+    print("\n[1/16] 检查Sitemap健康...")
     issues = check_sitemap_health()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 2. Meta/Robots检查
-    print("\n[2/11] 检查Meta/Robots配置...")
+    print("\n[2/16] 检查Meta/Robots配置...")
     issues = check_meta_robots()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 3. 文件编码检查
-    print("\n[3/11] 检查文件编码和乱码...")
+    print("\n[3/16] 检查文件编码和乱码...")
     issues = check_file_encoding()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 4. 内容占位符检查
-    print("\n[4/11] 检查内容占位符...")
+    print("\n[4/16] 检查内容占位符...")
     issues = check_content_placeholders()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 5. 工作流配置一致性
-    print("\n[5/11] 检查工作流配置一致性...")
+    print("\n[5/16] 检查工作流配置一致性...")
     issues = check_workflow_env_consistency()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 6. 空链接检查
-    print("\n[6/11] 检查空链接...")
+    print("\n[6/16] 检查空链接...")
     issues = check_empty_links()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 7. 图片alt检查
-    print("\n[7/11] 检查图片alt属性...")
+    print("\n[7/16] 检查图片alt属性...")
     issues = check_image_alt()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 8. 草稿泄露检查
-    print("\n[8/11] 检查草稿泄露...")
+    print("\n[8/16] 检查草稿泄露...")
     issues = check_draft_leak()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 9. Persona违规检查
-    print("\n[9/11] 检查Persona违规...")
+    print("\n[9/16] 检查Persona违规...")
     issues = check_persona_violation()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 10. AI禁用词检查
-    print("\n[10/11] 检查AI禁用词...")
+    print("\n[10/16] 检查AI禁用词...")
     issues = check_ai_forbidden_words()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 11. Title/Meta长度检查
-    print("\n[11/11] 检查Title/Meta长度...")
+    print("\n[11/16] 检查Title/Meta长度...")
     issues = check_title_meta_length()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
+    
+    # 以下为网络检查（需要联网，较慢）
+    print("\n--- 网络检查（需要联网）---")
+    
+    # 12. 安全头检查
+    print("\n[12/16] 检查安全头...")
+    try:
+        issues = check_security_headers()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ 安全头检查失败: {e}")
+    
+    # 13. 混合内容检查
+    print("\n[13/16] 检查混合内容...")
+    try:
+        issues = check_mixed_content()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ 混合内容检查失败: {e}")
+    
+    # 14. OG/Twitter标签检查
+    print("\n[14/16] 检查OG/Twitter标签...")
+    try:
+        issues = check_og_tags()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ OG标签检查失败: {e}")
+    
+    # 15. SSL证书检查
+    print("\n[15/16] 检查SSL证书...")
+    try:
+        issues = check_ssl_certificate()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ SSL检查失败: {e}")
+    
+    # 16. 结构化数据检查
+    print("\n[16/16] 检查结构化数据...")
+    try:
+        issues = check_structured_data()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ 结构化数据检查失败: {e}")
     
     # 按严重程度排序
     severity_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
