@@ -64,8 +64,35 @@ def buffer_api_request(token: str, query: str, variables: dict = None) -> Option
         return None
 
 
+def get_organization_id(token: str) -> str:
+    """Get organization ID for the current user."""
+    query = """
+    query GetMe {
+      me {
+        id
+        name
+        organizations {
+          id
+          name
+        }
+      }
+    }
+    """
+    data = buffer_api_request(token, query)
+    if data and "me" in data:
+        orgs = data["me"].get("organizations", [])
+        if orgs:
+            return orgs[0].get("id")
+    return None
+
+
 def get_channels(token: str) -> list:
     """Get connected social media channels."""
+    org_id = get_organization_id(token)
+    if not org_id:
+        print("  Warning: Could not get organization ID")
+        return []
+    
     query = """
     query GetChannels($input: ChannelsInput!) {
       channels(input: $input) {
@@ -78,7 +105,7 @@ def get_channels(token: str) -> list:
     """
     variables = {
         "input": {
-            "limit": 100
+            "organizationId": org_id
         }
     }
     data = buffer_api_request(token, query, variables)
