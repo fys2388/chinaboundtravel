@@ -138,46 +138,7 @@ def get_channels(token: str) -> list:
 def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     """Get published posts for a channel with analytics (Buffer API v2)."""
     since = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    
-    # Introspect Post type to find correct fields
-    intro_query = """
-    query IntrospectPost {
-      __type(name: "Post") {
-        fields {
-          name
-          type {
-            name
-            kind
-          }
-        }
-      }
-    }
-    """
-    intro_data = buffer_api_request(token, intro_query)
-    if intro_data and "__type" in intro_data and intro_data["__type"]:
-        fields = intro_data["__type"].get("fields", [])
-        field_names = [f["name"] for f in fields]
-        print(f"  Post fields: {field_names[:20]}")
-    
-    # First introspect PostMetric type
-    metric_intro = """
-    query IntrospectPostMetric {
-      __type(name: "PostMetric") {
-        fields {
-          name
-          type {
-            name
-            kind
-          }
-        }
-      }
-    }
-    """
-    metric_data = buffer_api_request(token, metric_intro)
-    if metric_data and "__type" in metric_data and metric_data["__type"]:
-        metric_fields = metric_data["__type"].get("fields", [])
-        metric_field_names = [f["name"] for f in metric_fields]
-        print(f"  PostMetric fields: {metric_field_names}")
+    org_id = get_organization_id(token)
     
     query = """
     query GetPosts($input: PostsInput!) {
@@ -198,7 +159,6 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
       }
     }
     """
-    org_id = get_organization_id(token)
     variables = {
         "input": {
             "organizationId": org_id,
