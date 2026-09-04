@@ -136,13 +136,13 @@ def get_channels(token: str) -> list:
 
 
 def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
-    """Get published updates for a channel with analytics."""
+    """Get published posts for a channel with analytics (Buffer API v2)."""
     since = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
     query = """
-    query GetPublishedUpdates($input: UpdatesInput!) {
-      updates(input: $input) {
+    query GetPosts($input: PostsInput!) {
+      posts(input: $input) {
         total
-        updates {
+        posts {
           id
           text
           service
@@ -153,14 +153,8 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
             likes
             comments
             shares
-            retweets
-            favorites
             impressions
             engagements
-          }
-          media {
-            photo
-            thumbnail
           }
         }
       }
@@ -175,8 +169,8 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
         }
     }
     data = buffer_api_request(token, query, variables)
-    if data and "updates" in data:
-        return data["updates"].get("updates", [])
+    if data and "posts" in data:
+        return data["posts"].get("posts", [])
     return []
 
 
