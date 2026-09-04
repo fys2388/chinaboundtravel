@@ -1,7 +1,7 @@
 {
   "version": "2.1",
   "description": "ChinaBound Travel AI Governance - Kill Switch + L0-L3 Permission Boundaries. Single source of truth loaded by all AI agents and workflows.",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-04",
   "kill_switch": {
     "global_enabled": false,
     "reason": "",
@@ -27,6 +27,10 @@
       "affiliate_changes": {
         "enabled": false,
         "reason": ""
+      },
+      "site_health_auto_fix": {
+        "enabled": false,
+        "reason": ""
       }
     }
   },
@@ -34,242 +38,91 @@
     "L0": {
       "label": "Read Only",
       "description": "只能分析、报告、读取数据。不得修改任何生产内容、配置或发布任何内容。",
-      "allowed_actions": [
-        "read",
-        "analyze",
-        "report",
-        "audit",
-        "validate"
-      ],
-      "denied_actions": [
-        "write_content",
-        "publish",
-        "modify_config",
-        "delete",
-        "execute_changes"
-      ]
+      "allowed_actions": ["read", "analyze", "report", "audit", "validate"],
+      "denied_actions": ["write_content", "publish", "modify_config", "delete", "execute_changes"]
     },
     "L1": {
       "label": "Safe Automation",
       "description": "可以执行安全的自动化操作：报表生成、排期、去重、格式规范化、Persona清理、元数据修复。不得修改事实内容或发布到外部平台。",
-      "allowed_actions": [
-        "read",
-        "analyze",
-        "report",
-        "audit",
-        "validate",
-        "format_normalize",
-        "persona_cleanup",
-        "deduplicate",
-        "schedule",
-        "generate_report",
-        "fix_metadata"
-      ],
-      "denied_actions": [
-        "modify_facts",
-        "publish_external",
-        "modify_affiliate",
-        "delete_content",
-        "change_strategy"
-      ]
+      "allowed_actions": ["read", "analyze", "report", "audit", "validate", "format_normalize", "persona_cleanup", "deduplicate", "schedule", "generate_report", "fix_metadata"],
+      "denied_actions": ["modify_facts", "publish_external", "modify_affiliate", "delete_content", "change_strategy"]
     },
     "L2": {
       "label": "Controlled Optimization",
-      "description": "可以执行有约束的优化：Social Hook调整、发布时间优化、SEO Title优化、CTA Copy优化。必须有样本数据支撑、有规则约束、可回滚。不得修改高风险事实。",
-      "allowed_actions": [
-        "read",
-        "analyze",
-        "report",
-        "audit",
-        "validate",
-        "format_normalize",
-        "persona_cleanup",
-        "deduplicate",
-        "schedule",
-        "generate_report",
-        "fix_metadata",
-        "optimize_social_hook",
-        "optimize_publish_time",
-        "optimize_seo_title",
-        "optimize_cta_copy",
-        "ab_test_setup"
-      ],
-      "denied_actions": [
-        "modify_facts",
-        "modify_visa_policy",
-        "modify_legal",
-        "modify_financial",
-        "modify_partner_terms",
-        "delete_content",
-        "publish_external_without_review"
-      ],
-      "requirements": [
-        "minimum_sample_size",
-        "rule_bounded",
-        "rollback_capable"
-      ]
+      "description": "可以执行有约束的优化：Social Hook调整、发布时间优化、SEO Title优化、CTA Copy优化、Site Health低风险修复。必须有样本数据支撑、有规则约束、可回滚。不得修改高风险事实。",
+      "allowed_actions": ["read", "analyze", "report", "audit", "validate", "format_normalize", "persona_cleanup", "deduplicate", "schedule", "generate_report", "fix_metadata", "optimize_social_hook", "optimize_publish_time", "optimize_seo_title", "optimize_cta_copy", "ab_test_setup", "site_health_auto_fix", "add_noindex", "sitemap_exclude", "fix_encoding", "clean_placeholders"],
+      "denied_actions": ["modify_facts", "modify_visa_policy", "modify_legal", "modify_financial", "modify_partner_terms", "delete_content", "publish_external_without_review", "change_url_structure"],
+      "requirements": ["minimum_sample_size", "rule_bounded", "rollback_capable"]
     },
     "L3": {
       "label": "High Risk - Policy Gate Required",
-      "description": "高风险操作：签证/法律/政策/财务/Partner合作条件变更。必须经过 FACT_CHECK_REQUIRED / POLICY_GATE，人工审核后才能执行。AI 不得自动执行。",
-      "allowed_actions": [
-        "read",
-        "analyze",
-        "report",
-        "audit",
-        "validate",
-        "flag_for_review"
-      ],
-      "denied_actions": [
-        "auto_modify_visa",
-        "auto_modify_policy",
-        "auto_modify_legal",
-        "auto_modify_financial",
-        "auto_modify_partner_terms",
-        "auto_publish_high_risk"
-      ],
-      "requirements": [
-        "human_review",
-        "fact_verification",
-        "policy_gate",
-        "source_evidence"
-      ]
+      "description": "高风险操作：签证/法律/政策/财务/Partner合作条件变更。必须经过FACT_CHECK_REQUIRED / POLICY_GATE，人工审核后才能执行。AI不得自动执行。",
+      "allowed_actions": ["read", "analyze", "report", "audit", "validate", "flag_for_review"],
+      "denied_actions": ["auto_modify_visa", "auto_modify_policy", "auto_modify_legal", "auto_modify_financial", "auto_modify_partner_terms", "auto_publish_high_risk"],
+      "requirements": ["human_review", "fact_verification", "policy_gate", "source_evidence"]
     }
   },
   "agent_permissions": {
+    "site_health": {
+      "permission_level": "L2",
+      "name": "网站健康巡检Agent",
+      "allowed": ["site_health_auto_fix", "add_noindex", "sitemap_exclude", "fix_encoding", "clean_placeholders", "audit", "validate", "generate_report"],
+      "denied": ["modify_facts", "change_url_structure", "delete_content", "modify_visa_policy"],
+      "notes": "横向巡检Agent，负责sitemap健康、meta/robots配置、文件编码、占位符检测、配置一致性。低风险修复可自动执行，高风险问题生成任务分配给对应Agent。"
+    },
     "seo": {
       "permission_level": "L2",
       "name": "SEO智能优化Agent",
-      "allowed": [
-        "optimize_seo_title",
-        "optimize_meta_description",
-        "keyword_analysis",
-        "opportunity_identification"
-      ],
-      "denied": [
-        "modify_facts",
-        "modify_visa_policy",
-        "auto_publish"
-      ],
+      "allowed": ["optimize_seo_title", "optimize_meta_description", "keyword_analysis", "opportunity_identification"],
+      "denied": ["modify_facts", "modify_visa_policy", "auto_publish"],
       "notes": "SEO Title优化需有GSC数据支撑（Position 5-30, CTR偏低），低样本下仅建议不执行"
     },
     "self_learning": {
       "permission_level": "L0",
       "name": "自我学习引擎",
-      "allowed": [
-        "read",
-        "analyze",
-        "report",
-        "pattern_extraction"
-      ],
-      "denied": [
-        "write_content",
-        "publish",
-        "modify_config",
-        "execute_changes"
-      ],
+      "allowed": ["read", "analyze", "report", "pattern_extraction"],
+      "denied": ["write_content", "publish", "modify_config", "execute_changes"],
       "notes": "学习引擎只读，产出策略建议后由对应权限级别的Agent执行"
     },
     "revenue": {
       "permission_level": "L1",
       "name": "收入分析引擎",
-      "allowed": [
-        "read",
-        "analyze",
-        "report",
-        "audit",
-        "generate_report"
-      ],
-      "denied": [
-        "modify_affiliate_links",
-        "modify_partner_terms",
-        "auto_publish"
-      ],
+      "allowed": ["read", "analyze", "report", "audit", "generate_report"],
+      "denied": ["modify_affiliate_links", "modify_partner_terms", "auto_publish"],
       "notes": "收入分析只读，Affiliate链接变更需L2+人工审核"
     },
     "conversion": {
       "permission_level": "L2",
       "name": "转化优化Agent",
-      "allowed": [
-        "optimize_cta_copy",
-        "ab_test_setup",
-        "funnel_analysis"
-      ],
-      "denied": [
-        "modify_facts",
-        "modify_affiliate_links_without_review",
-        "auto_publish"
-      ],
+      "allowed": ["optimize_cta_copy", "ab_test_setup", "funnel_analysis"],
+      "denied": ["modify_facts", "modify_affiliate_links_without_review", "auto_publish"],
       "notes": "CTA优化需<20 clicks或<28 days时标记INSUFFICIENT_SAMPLE，不得自动开实验"
     },
     "content": {
-      "permission_level": "L1",
+      "permission_level": "L2",
       "name": "内容智能优化Agent",
-      "allowed": [
-        "format_normalize",
-        "persona_cleanup",
-        "quality_audit",
-        "topic_recommendation"
-      ],
-      "denied": [
-        "modify_facts",
-        "auto_publish_high_risk",
-        "modify_visa_policy"
-      ],
+      "allowed": ["format_normalize", "persona_cleanup", "quality_audit", "topic_recommendation", "clean_placeholders", "fix_metadata"],
+      "denied": ["modify_facts", "auto_publish_high_risk", "modify_visa_policy"],
       "notes": "内容优化仅限格式和Persona清理，事实修改需FACT_CHECK_REQUIRED"
     },
     "social": {
       "permission_level": "L2",
       "name": "社媒智能优化Agent",
-      "allowed": [
-        "optimize_social_hook",
-        "optimize_publish_time",
-        "content_adaptation",
-        "schedule"
-      ],
-      "denied": [
-        "modify_facts",
-        "auto_publish_without_brand_guard",
-        "publish_high_risk"
-      ],
+      "allowed": ["optimize_social_hook", "optimize_publish_time", "content_adaptation", "schedule"],
+      "denied": ["modify_facts", "auto_publish_without_brand_guard", "publish_high_risk"],
       "notes": "社媒发布前必须经过Brand Validation，高风险内容不得自动发布"
     },
     "user": {
       "permission_level": "L1",
       "name": "用户智能运营Agent",
-      "allowed": [
-        "read",
-        "analyze",
-        "report",
-        "segmentation",
-        "journey_analysis"
-      ],
-      "denied": [
-        "send_emails",
-        "modify_user_data",
-        "auto_publish"
-      ],
+      "allowed": ["read", "analyze", "report", "segmentation", "journey_analysis"],
+      "denied": ["send_emails", "modify_user_data", "auto_publish"],
       "notes": "用户分析只读，邮件发送需人工审核"
     }
   },
   "policy_gate": {
-    "high_risk_categories": [
-      "visa",
-      "immigration",
-      "law",
-      "regulation",
-      "financial",
-      "pricing",
-      "partner_terms",
-      "safety",
-      "insurance"
-    ],
-    "required_evidence": [
-      "official_source_url",
-      "verification_date",
-      "source_type",
-      "confidence_level"
-    ],
+    "high_risk_categories": ["visa", "immigration", "law", "regulation", "financial", "pricing", "partner_terms", "safety", "insurance"],
+    "required_evidence": ["official_source_url", "verification_date", "source_type", "confidence_level"],
     "auto_reject_without_evidence": true,
     "human_review_required": true
   },
@@ -278,5 +131,13 @@
     "require_backup_before_l2_changes": true,
     "max_rollback_history": 50,
     "auto_rollback_on_validation_failure": true
+  },
+  "auto_fix_rules": {
+    "site_health": {
+      "max_auto_fixes_per_run": 20,
+      "require_commit": true,
+      "auto_fix_categories": ["add_noindex", "sitemap_exclude", "fix_encoding", "clean_placeholders", "fix_env_var_name"],
+      "manual_review_categories": ["content_modification", "url_structure_change", "large_scale_delete"]
+    }
   }
 }

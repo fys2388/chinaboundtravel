@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-04T04:32:15.178320+00:00",
+  "agent": "site_health",
+  "permission_level": "L2",
+  "summary": {
+    "total_issues": 2,
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "auto_fixed": 0,
+    "need_manual": 2
+  },
+  "issues": [
+    {
+      "type": "content_placeholder",
+      "severity": "medium",
+      "file": "content\\contact.md",
+      "message": "发现占位符/状态标记: placeholder",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "medium",
+      "file": "content\\search.md",
+      "message": "发现占位符/状态标记: placeholder",
+      "auto_fixable": false,
+      "agent": "content"
+    }
+  ]
+}
