@@ -65,24 +65,49 @@ def buffer_api_request(token: str, query: str, variables: dict = None) -> Option
 
 
 def get_organization_id(token: str) -> str:
-    """Get organization ID for the current user."""
+    """Get organization ID for the current user via introspection."""
+    # First try organizations query
     query = """
-    query GetMe {
-      me {
+    query GetOrganizations {
+      organizations {
         id
         name
-        organizations {
-          id
-          name
-        }
       }
     }
     """
     data = buffer_api_request(token, query)
-    if data and "me" in data:
-        orgs = data["me"].get("organizations", [])
+    if data and "organizations" in data:
+        orgs = data["organizations"]
         if orgs:
             return orgs[0].get("id")
+    
+    # Try introspection to find available queries
+    intro_query = """
+    query IntrospectQuery {
+      __schema {
+        queryType {
+          fields {
+            name
+            type {
+              name
+              kind
+            }
+          }
+        }
+      }
+    }
+    """
+    data = buffer_api_request(token, intro_query)
+    if data and "__schema" in data:
+        fields = data["__schema"]["queryType"]["fields"]
+        field_names = [f["name"] for f in fields]
+        print(f"  Available query fields: {field_names[:20]}")
+        
+        # Try to find organization-related field
+        for field in fields:
+            if "org" in field["name"].lower():
+                print(f"  Found org field: {field['name']}")
+    
     return None
 
 
