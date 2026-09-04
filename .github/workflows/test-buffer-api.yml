@@ -1,4 +1,4 @@
-name: Test Buffer API Connection
+﻿name: Test Buffer API Connection
 on:
   workflow_dispatch:
     inputs:
@@ -21,8 +21,8 @@ jobs:
 
       - name: Validate Buffer API Tokens
         env:
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
-          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_ACCESS_TOKEN_2 }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_API_TOKEN_B }}
         run: |
           echo "=== Buffer API Token 验证 ==="
           echo "BUFFER_ACCESS_TOKEN 长度: ${#BUFFER_ACCESS_TOKEN}"
@@ -44,8 +44,8 @@ jobs:
 
       - name: Pull Social Analytics (Test)
         env:
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
-          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_ACCESS_TOKEN_2 }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_API_TOKEN_B }}
         run: |
           echo "=== 拉取社媒分析数据 (测试) ==="
           python scripts/social_analytics_pull.py --days ${{ github.event.inputs.days }} --dry-run || echo "拉取失败"
