@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Social Analytics Pull Engine
 Pulls published post metrics from Buffer API and updates metrics files.
@@ -67,20 +67,21 @@ def buffer_api_request(token: str, query: str, variables: dict = None) -> Option
 def get_channels(token: str) -> list:
     """Get connected social media channels."""
     query = """
-    query GetChannels {
-      channels {
+    query GetChannels($input: ChannelsInput!) {
+      channels(input: $input) {
         id
         service
         serviceId
         name
-        stats {
-          followers
-          following
-        }
       }
     }
     """
-    data = buffer_api_request(token, query)
+    variables = {
+        "input": {
+            "limit": 100
+        }
+    }
+    data = buffer_api_request(token, query, variables)
     if data and "channels" in data:
         return data["channels"]
     return []
