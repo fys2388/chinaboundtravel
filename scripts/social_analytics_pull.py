@@ -138,23 +138,40 @@ def get_channels(token: str) -> list:
 def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     """Get published posts for a channel with analytics (Buffer API v2)."""
     since = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    
+    # Introspect PostsResults type to find correct fields
+    intro_query = """
+    query IntrospectPostsResults {
+      __type(name: "PostsResults") {
+        fields {
+          name
+          type {
+            name
+            kind
+            ofType {
+              name
+              kind
+            }
+          }
+        }
+      }
+    }
+    """
+    intro_data = buffer_api_request(token, intro_query)
+    if intro_data and "__type" in intro_data and intro_data["__type"]:
+        fields = intro_data["__type"].get("fields", [])
+        field_names = [f["name"] for f in fields]
+        print(f"  PostsResults fields: {field_names}")
+    
     query = """
     query GetPosts($input: PostsInput!) {
       posts(input: $input) {
-        total
-        posts {
-          id
-          text
-          service
-          createdAt
-          stats {
-            reach
-            clicks
-            likes
-            comments
-            shares
-            impressions
-            engagements
+        edges {
+          node {
+            id
+            text
+            service
+            createdAt
           }
         }
       }
@@ -170,7 +187,15 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     }
     data = buffer_api_request(token, query, variables)
     if data and "posts" in data:
-        return data["posts"].get("posts", [])
+        # Try edges/node format first
+        if "edges" in data["posts"]:
+            return [edge.get("node", {}) for edge in data["posts"]["edges"]]
+        # Fallback to direct posts array
+        if "posts" in data["posts"]:
+            return data["posts"]["posts"]
+        # If it's already an array
+        if isinstance(data["posts"], list):
+            return data["posts"]
     return []
 
 
