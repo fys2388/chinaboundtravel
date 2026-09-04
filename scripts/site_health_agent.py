@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Site Health Agent - ChinaBound Travel 2.1
 横向网站健康巡检 + 低风险自动修复 (L2权限)
@@ -244,6 +244,253 @@ def check_workflow_env_consistency():
     return issues
 
 
+def check_empty_links():
+    """检查空链接：href="#"、href=""、javascript:void(0)"""
+    issues = []
+    EMPTY_LINK_PATTERNS = [
+        re.compile(r"href\s*=\s*[\"']#[\"']"),
+        re.compile(r"href\s*=\s*[\"']{2}"),
+        re.compile(r"href\s*=\s*[\"']javascript:void\(0\)[\"']", re.IGNORECASE),
+    ]
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+            body = content[front_matter_match.end():] if front_matter_match else content
+            
+            for pattern in EMPTY_LINK_PATTERNS:
+                if pattern.search(body):
+                    issues.append({
+                        "type": "empty_link",
+                        "severity": "medium",
+                        "file": rel_path,
+                        "message": "发现空链接（href=#或空href）",
+                        "auto_fixable": False,
+                        "agent": "content"
+                    })
+                    break
+        except Exception:
+            pass
+    return issues
+
+
+def check_image_alt():
+    """检查图片缺alt属性"""
+    issues = []
+    IMG_NO_ALT = re.compile(r'!\[[^\]]*\]\([^)]+\)|<img(?![^>]*alt=)[^>]*>', re.IGNORECASE)
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+            body = content[front_matter_match.end():] if front_matter_match else content
+            
+            # 检查Markdown图片 ![]() - alt为空
+            md_images = re.findall(r'!\[([^\]]*)\]\(([^)]+)\)', body)
+            for alt_text, img_url in md_images:
+                if not alt_text.strip():
+                    issues.append({
+                        "type": "image_missing_alt",
+                        "severity": "medium",
+                        "file": rel_path,
+                        "message": f"图片缺alt: {img_url[:50]}",
+                        "auto_fixable": False,
+                        "agent": "content"
+                    })
+            
+            # 检查HTML img标签无alt
+            html_imgs = re.findall(r'<img(?![^>]*alt=)[^>]*>', body, re.IGNORECASE)
+            for img in html_imgs:
+                issues.append({
+                    "type": "image_missing_alt",
+                    "severity": "medium",
+                    "file": rel_path,
+                    "message": "HTML img标签缺alt属性",
+                    "auto_fixable": False,
+                    "agent": "content"
+                })
+        except Exception:
+            pass
+    return issues
+
+
+def check_draft_leak():
+    """检查草稿泄露：draft:true但内容已发布"""
+    issues = []
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+            if not front_matter_match:
+                continue
+            front_matter = front_matter_match.group(1)
+            
+            if re.search(r'draft\s*:\s*true', front_matter, re.IGNORECASE):
+                issues.append({
+                    "type": "draft_leak",
+                    "severity": "high",
+                    "file": rel_path,
+                    "message": "draft:true的文章可能已发布到线上",
+                    "auto_fixable": False,
+                    "agent": "content"
+                })
+        except Exception:
+            pass
+    return issues
+
+
+def check_persona_violation():
+    """检查Persona违规：禁止使用第一人称经历表述"""
+    issues = []
+    PERSONA_FORBIDDEN = [
+        re.compile(r'I lived in China for', re.IGNORECASE),
+        re.compile(r'My wife', re.IGNORECASE),
+        re.compile(r'I personally tested', re.IGNORECASE),
+        re.compile(r'I stayed at', re.IGNORECASE),
+        re.compile(r'As a local', re.IGNORECASE),
+        re.compile(r'My favorite', re.IGNORECASE),
+        re.compile(r'China insider', re.IGNORECASE),
+        re.compile(r'I tried', re.IGNORECASE),
+    ]
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+            body = content[front_matter_match.end():] if front_matter_match else content
+            
+            for pattern in PERSONA_FORBIDDEN:
+                matches = pattern.findall(body)
+                if matches:
+                    issues.append({
+                        "type": "persona_violation",
+                        "severity": "high",
+                        "file": rel_path,
+                        "message": f"Persona违规: {pattern.pattern[:40]}",
+                        "auto_fixable": False,
+                        "agent": "content"
+                    })
+                    break
+        except Exception:
+            pass
+    return issues
+
+
+def check_ai_forbidden_words():
+    """检查AI禁用词：Best/Cheapest/Guaranteed/#1/Secret"""
+    issues = []
+    AI_FORBIDDEN = [
+        (re.compile(r'\bbest in China\b', re.IGNORECASE), "best in China"),
+        (re.compile(r'\bcheapest\b', re.IGNORECASE), "cheapest"),
+        (re.compile(r'\bguaranteed\b', re.IGNORECASE), "guaranteed"),
+        (re.compile(r'#1\b', re.IGNORECASE), "#1"),
+        (re.compile(r'\bsecret place\b', re.IGNORECASE), "secret place"),
+        (re.compile(r'\bperfect\b', re.IGNORECASE), "perfect"),
+    ]
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+            body = content[front_matter_match.end():] if front_matter_match else content
+            
+            for pattern, word in AI_FORBIDDEN:
+                if pattern.search(body):
+                    issues.append({
+                        "type": "ai_forbidden_word",
+                        "severity": "medium",
+                        "file": rel_path,
+                        "message": f"AI禁用词: {word}",
+                        "auto_fixable": False,
+                        "agent": "content"
+                    })
+        except Exception:
+            pass
+    return issues
+
+
+def check_title_meta_length():
+    """检查Title和Meta description长度"""
+    issues = []
+    
+    for md_file in CONTENT_DIR.rglob("*.md"):
+        rel_path = str(md_file.relative_to(ROOT))
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+            continue
+        try:
+            content = md_file.read_text(encoding="utf-8", errors="replace")
+            front_matter_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+            if not front_matter_match:
+                continue
+            front_matter = front_matter_match.group(1)
+            
+            # Title长度检查
+            title_match = re.search(r"title\s*:\s*[\"']?([^\"'\n]+)", front_matter)
+            if title_match:
+                title = title_match.group(1).strip()
+                if len(title) > 65:
+                    issues.append({
+                        "type": "title_too_long",
+                        "severity": "low",
+                        "file": rel_path,
+                        "message": f"Title过长({len(title)}字符): {title[:40]}...",
+                        "auto_fixable": False,
+                        "agent": "seo"
+                    })
+                elif len(title) < 20:
+                    issues.append({
+                        "type": "title_too_short",
+                        "severity": "low",
+                        "file": rel_path,
+                        "message": f"Title过短({len(title)}字符)",
+                        "auto_fixable": False,
+                        "agent": "seo"
+                    })
+            
+            # Meta description长度检查
+            desc_match = re.search(r"description\s*:\s*[\"']?([^\"'\n]+)", front_matter)
+            if desc_match:
+                desc = desc_match.group(1).strip()
+                if len(desc) > 165:
+                    issues.append({
+                        "type": "meta_description_too_long",
+                        "severity": "low",
+                        "file": rel_path,
+                        "message": f"Meta description过长({len(desc)}字符)",
+                        "auto_fixable": False,
+                        "agent": "seo"
+                    })
+                elif len(desc) < 70:
+                    issues.append({
+                        "type": "meta_description_too_short",
+                        "severity": "low",
+                        "file": rel_path,
+                        "message": f"Meta description过短({len(desc)}字符)",
+                        "auto_fixable": False,
+                        "agent": "seo"
+                    })
+        except Exception:
+            pass
+    return issues
+
+
 def auto_fix_issue(issue):
     """自动修复问题（L2权限）"""
     if not issue.get("auto_fixable"):
@@ -316,32 +563,68 @@ def run_health_check(auto_fix=True):
     all_issues = []
     
     # 1. Sitemap健康检查
-    print("\n[1/5] 检查Sitemap健康...")
+    print("\n[1/11] 检查Sitemap健康...")
     issues = check_sitemap_health()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 2. Meta/Robots检查
-    print("\n[2/5] 检查Meta/Robots配置...")
+    print("\n[2/11] 检查Meta/Robots配置...")
     issues = check_meta_robots()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 3. 文件编码检查
-    print("\n[3/5] 检查文件编码和乱码...")
+    print("\n[3/11] 检查文件编码和乱码...")
     issues = check_file_encoding()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 4. 内容占位符检查
-    print("\n[4/5] 检查内容占位符...")
+    print("\n[4/11] 检查内容占位符...")
     issues = check_content_placeholders()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
     # 5. 工作流配置一致性
-    print("\n[5/5] 检查工作流配置一致性...")
+    print("\n[5/11] 检查工作流配置一致性...")
     issues = check_workflow_env_consistency()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 6. 空链接检查
+    print("\n[6/11] 检查空链接...")
+    issues = check_empty_links()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 7. 图片alt检查
+    print("\n[7/11] 检查图片alt属性...")
+    issues = check_image_alt()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 8. 草稿泄露检查
+    print("\n[8/11] 检查草稿泄露...")
+    issues = check_draft_leak()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 9. Persona违规检查
+    print("\n[9/11] 检查Persona违规...")
+    issues = check_persona_violation()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 10. AI禁用词检查
+    print("\n[10/11] 检查AI禁用词...")
+    issues = check_ai_forbidden_words()
+    print(f"  发现 {len(issues)} 个问题")
+    all_issues.extend(issues)
+    
+    # 11. Title/Meta长度检查
+    print("\n[11/11] 检查Title/Meta长度...")
+    issues = check_title_meta_length()
     print(f"  发现 {len(issues)} 个问题")
     all_issues.extend(issues)
     
