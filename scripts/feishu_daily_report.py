@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 feishu_daily_report.py - ChinaBound Travel 飞书每日日报推送
 功能：流量、内容、联盟、运维四大核心板块数据推送
@@ -634,6 +634,8 @@ class FeishuDailyReporter:
 
 {agent_health_block}
 
+🩺 Site Health巡检: {_format_site_health(data.get('site_health'))}
+
 🟢 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
                     }
                 },
@@ -719,6 +721,20 @@ class FeishuDailyReporter:
         lines.append("")
         lines.append("> 评审gate: REV001/REV002/DRIVE-001 观察期至 2026-09-13，样本不足前不做判定")
         return "\n".join(lines)
+
+    @staticmethod
+    def _format_site_health(sh: dict | None) -> str:
+        if not sh:
+            return "⚪ 无巡检数据"
+        total = sh.get("total_issues", 0)
+        fixed = sh.get("auto_fixed", 0)
+        pending = sh.get("need_manual", 0)
+        high = sh.get("high", 0)
+        critical = sh.get("critical", 0)
+        if total == 0:
+            return "✅ 0问题"
+        status = "🔴" if critical > 0 else ("🟠" if high > 0 else "🟡")
+        return f"{status} {total}问题 | 自动修复{fixed} | 待人工{pending}"
 
     def _build_status_message(self, data: dict) -> str:
         """构建数据状态提示信息"""
@@ -903,10 +919,26 @@ class FeishuDailyReporter:
         # 7.5 AI Agent 健康监控
         try:
             data["agent_health"] = check_agent_health()
-            print(f"   ✅ Agent健康: {data['agent_health']['overall']} ({data['agent_health']['healthy_count']}/7正常)")
+            print(f"   ✅ Agent健康: {data['agent_health']['overall']} ({data['agent_health']['healthy_count']}/8正常)")
         except Exception as e:
             print(f"   ⚠️ Agent健康监控失败: {e}")
             data["agent_health"] = None
+
+        # 7.6 Site Health 巡检结果
+        try:
+            import glob as _glob
+            sh_files = sorted(_glob.glob(str(ROOT / "reports" / "site_health" / "site_health_*.json")))
+            if sh_files:
+                with open(sh_files[-1], encoding="utf-8") as f:
+                    sh_report = json.load(f)
+                data["site_health"] = sh_report["summary"]
+                sh = sh_report["summary"]
+                print(f"   SiteHealth: {sh['total_issues']} issues, auto-fixed {sh['auto_fixed']}, pending {sh['need_manual']}")
+            else:
+                data["site_health"] = None
+        except Exception as e:
+            print(f"   SiteHealth read failed: {e}")
+            data["site_health"] = None
 
         # 8. 统计总问题数和总佣金
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]

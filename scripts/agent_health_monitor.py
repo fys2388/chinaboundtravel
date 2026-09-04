@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 AI Agent 健康监控器
-检查 7 大 Agent + 6 学习闭环 + 跨Agent编排 的运行状态，输出健康摘要。
+检查 8 大 Agent + 7 学习闭环 + 跨Agent编排 的运行状态，输出健康摘要。
 被 feishu_daily_report.py 运维板块调用，也可独立运行。
 """
 import json
@@ -22,6 +22,7 @@ AGENTS = {
     "内容智能优化": ("content", 2),
     "社媒智能优化": ("social", 2),
     "用户智能运营": ("user", 8),
+    "网站健康巡检": ("site_health", 1),
 }
 
 CLOSED_LOOPS = {
@@ -31,6 +32,7 @@ CLOSED_LOOPS = {
     "转化闭环": "conversion_learning_closed_loop",
     "收入闭环": "revenue_learning_closed_loop",
     "用户闭环": "user_learning_closed_loop",
+    "健康巡检闭环": "site_health_closed_loop",
 }
 
 
