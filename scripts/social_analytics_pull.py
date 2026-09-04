@@ -159,6 +159,26 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
         field_names = [f["name"] for f in fields]
         print(f"  Post fields: {field_names[:20]}")
     
+    # First introspect PostMetric type
+    metric_intro = """
+    query IntrospectPostMetric {
+      __type(name: "PostMetric") {
+        fields {
+          name
+          type {
+            name
+            kind
+          }
+        }
+      }
+    }
+    """
+    metric_data = buffer_api_request(token, metric_intro)
+    if metric_data and "__type" in metric_data and metric_data["__type"]:
+        metric_fields = metric_data["__type"].get("fields", [])
+        metric_field_names = [f["name"] for f in metric_fields]
+        print(f"  PostMetric fields: {metric_field_names}")
+    
     query = """
     query GetPosts($input: PostsInput!) {
       posts(input: $input) {
@@ -169,11 +189,6 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
             channelService
             sentAt
             metrics {
-              reach
-              clicks
-              likes
-              comments
-              shares
               impressions
               engagements
             }
