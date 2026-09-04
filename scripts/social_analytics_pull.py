@@ -139,19 +139,15 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     """Get published posts for a channel with analytics (Buffer API v2)."""
     since = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
     
-    # Introspect PostsResults type to find correct fields
+    # Introspect Post type to find correct fields
     intro_query = """
-    query IntrospectPostsResults {
-      __type(name: "PostsResults") {
+    query IntrospectPost {
+      __type(name: "Post") {
         fields {
           name
           type {
             name
             kind
-            ofType {
-              name
-              kind
-            }
           }
         }
       }
@@ -161,7 +157,7 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     if intro_data and "__type" in intro_data and intro_data["__type"]:
         fields = intro_data["__type"].get("fields", [])
         field_names = [f["name"] for f in fields]
-        print(f"  PostsResults fields: {field_names}")
+        print(f"  Post fields: {field_names[:20]}")
     
     query = """
     query GetPosts($input: PostsInput!) {
@@ -170,7 +166,6 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
           node {
             id
             text
-            service
             createdAt
           }
         }
