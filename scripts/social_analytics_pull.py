@@ -152,11 +152,28 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
     token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "")
     token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "")
 
-    # Also check common alternative env var names
-    if not token_a:
-        token_a = os.environ.get("BUFFER_WORKER_URL", "")
-    if not token_b:
-        token_b = os.environ.get("NEW_BUFFER_WORKER_URL", "")
+    # IMPORTANT: Do NOT fall back to BUFFER_WORKER_URL - that is a publish endpoint URL,
+    # not a Buffer API access token. Using it causes auth failures and all-zero metrics.
+    # If tokens are not configured, report clearly instead of silently using wrong credentials.
+
+    def _is_valid_token_format(token: str) -> bool:
+        """Basic validation: Buffer API tokens are alphanumeric strings, not URLs."""
+        if not token:
+            return False
+        # Reject URLs, paths, or anything that looks like an endpoint
+        if token.startswith("http://") or token.startswith("https://"):
+            return False
+        if "/" in token or len(token) < 10:
+            return False
+        return True
+
+    if token_a and not _is_valid_token_format(token_a):
+        print(f"  WARNING: BUFFER_ACCESS_TOKEN looks invalid (not a valid API token format). "
+              f"Did you accidentally set BUFFER_WORKER_URL?")
+        token_a = ""
+    if token_b and not _is_valid_token_format(token_b):
+        print(f"  WARNING: BUFFER_ACCESS_TOKEN_2 looks invalid (not a valid API token format).")
+        token_b = ""
 
     all_metrics = {
         "timestamp": datetime.utcnow().isoformat(),
@@ -305,11 +322,17 @@ def main():
 
     if args.validate:
         print("\nValidating Buffer API tokens...")
-        token_a = os.environ.get("BUFFER_ACCESS_TOKEN", os.environ.get("BUFFER_WORKER_URL", ""))
-        token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", os.environ.get("NEW_BUFFER_WORKER_URL", ""))
-        valid_a = validate_buffer_token(token_a, "account_a")
-        valid_b = validate_buffer_token(token_b, "account_b")
+        token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "")
+        token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "")
+        # Do NOT fall back to BUFFER_WORKER_URL - that's a publish endpoint, not an API token
+        valid_a = validate_buffer_token(token_a, "account_a") if token_a else (print("  [account_a] BUFFER_ACCESS_TOKEN not set") or False)
+        valid_b = validate_buffer_token(token_b, "account_b") if token_b else (print("  [account_b] BUFFER_ACCESS_TOKEN_2 not set") or False)
         print(f"\nResult: account_a={'VALID' if valid_a else 'MISSING/INVALID'}, account_b={'VALID' if valid_b else 'MISSING/INVALID'}")
+        if not (valid_a or valid_b):
+            print("\n  💡 To fix: Add Buffer API access tokens to GitHub Secrets:")
+            print("     - BUFFER_ACCESS_TOKEN (account A: Facebook + Instagram + X)")
+            print("     - BUFFER_ACCESS_TOKEN_2 (account B: Pinterest)")
+            print("  ⚠️  Do NOT use BUFFER_WORKER_URL - that is a publish endpoint, not an API token")
         return 0 if (valid_a or valid_b) else 1
 
     print(f"\nPulling last {args.days} days of analytics...")
