@@ -189,8 +189,9 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
             channelService
             sentAt
             metrics {
-              impressions
-              engagements
+              name
+              value
+              unit
             }
           }
         }
