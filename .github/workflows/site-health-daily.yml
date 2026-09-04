@@ -1,8 +1,9 @@
-name: Site Health Daily Check
+﻿name: Site Health Daily Check
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 每天 UTC 02:00 (北京时间 10:00)
+    - cron: '0 0 * * *'  # 北京时间早8:00 (UTC 00:00)
+    - cron: '0 12 * * *'  # 北京时间晚8:00 (UTC 12:00)
   workflow_dispatch:
     inputs:
       no_fix:
