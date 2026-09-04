@@ -3183,8 +3183,72 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6a99ad4c18474247f756cfa1",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring China?\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a foreigner\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-e",
+      "published_at": "2026-09-04T06:24:31.329Z",
+      "date": "2026-09-04",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring China?\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a fo",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6a9916e0b513357a056b237f",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring China?\n\nChinese train stations are bigger than airports, and more confusing\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm",
+      "published_at": "2026-09-03T19:42:46.781Z",
+      "date": "2026-09-03",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring China?\n\nChinese train stations are bigger than airports, and more confusing\n\nR",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-09-03T10:17:57.763329",
+  "last_updated": "2026-09-04T10:06:29.379832",
   "version": "1.0"
 }
