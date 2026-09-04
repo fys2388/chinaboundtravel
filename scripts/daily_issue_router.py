@@ -605,6 +605,56 @@ class DailyIssueRouter:
 
         print(f"✅ Agent任务文件已保存到: {tasks_dir}")
 
+        # 回写分配状态到原始问题文件（site_health_issues等）
+        self._writeback_assigned_status()
+
+    def _writeback_assigned_status(self):
+        """把已分配状态回写到原始问题来源文件，确保看板显示正确"""
+        try:
+            # 按来源文件分组
+            by_source = {}
+            for issue in self.issues:
+                src = issue.get("source_file", "")
+                if src and src.startswith("site_health_issues_"):
+                    by_source.setdefault(src, []).append(issue)
+
+            for src_file, src_issues in by_source.items():
+                src_path = ISSUES_DIR / src_file
+                if not src_path.exists():
+                    continue
+                try:
+                    data = json.loads(src_path.read_text(encoding="utf-8"))
+                    # 建立 type -> assigned issue 映射
+                    assigned_map = {}
+                    for ai in src_issues:
+                        if ai.get("assigned"):
+                            assigned_map[ai["type"]] = ai
+
+                    updated = 0
+                    for orig in data.get("issues", []):
+                        if orig["type"] in assigned_map and not orig.get("assigned"):
+                            ai = assigned_map[orig["type"]]
+                            orig["assigned"] = True
+                            orig["assigned_to"] = ai.get("assigned_to", ai.get("agent", ""))
+                            orig["assigned_at"] = datetime.now().isoformat()
+                            orig["status"] = "assigned"
+                            updated += 1
+
+                    # 更新汇总
+                    if "pending" in data:
+                        data["pending"] = sum(
+                            1 for i in data.get("issues", [])
+                            if i.get("status") in ("new", "", None) or not i.get("assigned")
+                        )
+
+                    src_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+                    if updated > 0:
+                        print(f"  ↩️ 回写 {src_file}: {updated} 个问题标记为已分配")
+                except Exception as e:
+                    print(f"  ⚠️ 回写 {src_file} 失败: {e}")
+        except Exception as e:
+            print(f"  ⚠️ 回写分配状态失败: {e}")
+
     def generate_summary(self) -> str:
         """生成分配摘要（用于飞书通知）"""
         lines = []

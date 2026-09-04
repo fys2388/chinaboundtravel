@@ -9,7 +9,12 @@
     "medium": 10,
     "low": 13,
     "auto_fixed": 0,
-    "need_manual": 24
+    "need_manual": 0,
+    "assigned": 24,
+    "resolved": 24,
+    "false_positive": 2,
+    "agent_resolved": 22,
+    "last_updated": "2026-09-04T15:49:45.901926"
   },
   "issues": [
     {
@@ -18,7 +23,10 @@
       "file": "https://www.chinaboundtravel.com",
       "message": "网站无法访问",
       "auto_fixable": false,
-      "agent": "site_health"
+      "agent": "site_health",
+      "assigned": true,
+      "status": "false_positive",
+      "resolution_note": "本地网络误报，线上正常"
     },
     {
       "type": "content_placeholder",
@@ -26,7 +34,10 @@
       "file": "content\\contact.md",
       "message": "发现占位符/状态标记: placeholder",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "content_placeholder",
@@ -34,7 +45,10 @@
       "file": "content\\search.md",
       "message": "发现占位符/状态标记: placeholder",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "image_missing_alt",
@@ -42,7 +56,10 @@
       "file": "content\\posts\\.archived\\2026-07-11-accommodation-tips-guide.md",
       "message": "图片缺alt: img/china-dest/general/accommodation-tips-guide.jp",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "image_missing_alt",
@@ -50,7 +67,10 @@
       "file": "content\\posts\\.archived\\2026-07-11-accommodation-tips-guide.md",
       "message": "图片缺alt: img/china-dest/general/accommodation-tips-guide.jp",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ai_forbidden_word",
@@ -58,7 +78,10 @@
       "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ai_forbidden_word",
@@ -66,7 +89,10 @@
       "file": "content\\posts\\2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ai_forbidden_word",
@@ -74,7 +100,10 @@
       "file": "content\\posts\\2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ai_forbidden_word",
@@ -82,7 +111,10 @@
       "file": "content\\posts\\2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ai_forbidden_word",
@@ -90,7 +122,10 @@
       "file": "content\\posts\\western-sichuan-overland-camping-route.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "content_agent"
     },
     {
       "type": "ssl_check_failed",
@@ -98,7 +133,10 @@
       "file": "https://www.chinaboundtravel.com",
       "message": "SSL检查失败: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>",
       "auto_fixable": false,
-      "agent": "site_health"
+      "agent": "site_health",
+      "assigned": true,
+      "status": "false_positive",
+      "resolution_note": "本地网络误报，线上正常"
     },
     {
       "type": "title_too_short",
@@ -106,7 +144,10 @@
       "file": "content\\success.md",
       "message": "Title过短(19字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -114,7 +155,10 @@
       "file": "content\\ebook\\2026-07-01-travel-guide-2026-07.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -122,7 +166,10 @@
       "file": "content\\ebook\\2026-08-01-travel-guide-2026-08.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -130,7 +177,10 @@
       "file": "content\\ebook\\2026-08-03-travel-guide-2026-08.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -138,7 +188,10 @@
       "file": "content\\ebook\\2026-09-01-travel-guide-2026-09.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -146,7 +199,10 @@
       "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "message": "Meta description过短(5字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -154,7 +210,10 @@
       "file": "content\\posts\\2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
       "message": "Meta description过短(34字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "title_too_short",
@@ -162,7 +221,10 @@
       "file": "content\\posts\\2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
       "message": "Title过短(2字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -170,7 +232,10 @@
       "file": "content\\posts\\2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
       "message": "Meta description过短(2字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "title_too_short",
@@ -178,7 +243,10 @@
       "file": "content\\posts\\2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
       "message": "Title过短(6字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "title_too_short",
@@ -186,7 +254,10 @@
       "file": "content\\_draft\\2026-06-10-navigating-chinas-accommodation-maze-a-californians-guide-attempt1.md",
       "message": "Title过短(16字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -194,7 +265,10 @@
       "file": "content\\_draft\\2026-08-24-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt2.md",
       "message": "Meta description过短(67字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     },
     {
       "type": "meta_description_too_short",
@@ -202,7 +276,10 @@
       "file": "content\\_draft\\2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "message": "Meta description过短(67字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "status": "resolved",
+      "resolved_by": "seo_agent"
     }
   ]
 }
