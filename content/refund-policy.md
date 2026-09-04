@@ -1,4 +1,4 @@
----
+﻿---
 title: Refund Policy
 description: Chinaboundtravel strict no-refund policy for digital products.
 date: '2026-06-02T10:00:00+08:00'
@@ -7,6 +7,8 @@ layout: single
 hideMeta: true
 hideReadTime: true
 robots: noindex
+_build:
+  list: false
 ---
 
 # Refund Policy
