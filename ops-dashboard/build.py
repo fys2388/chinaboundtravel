@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """生成运营看板 index.html — 精致深色监控中心风格"""
 import json
 from pathlib import Path
@@ -27,6 +27,30 @@ status_label = {"success": "成功", "failure": "失败", "cancelled": "取消",
 exp_color = {"RUNNING": "#3b82f6", "WAITING_RECRAWL": "#f59e0b", "PENDING": "#6b7280", "WIN": "#22c55e", "LOSE": "#ef4444"}
 
 # Agent 卡片
+# Site Health 数据
+sh = data.get("site_health", {})
+sh_total = sh.get("total", 0)
+sh_critical = sh.get("critical", 0)
+sh_high = sh.get("high", 0)
+sh_medium = sh.get("medium", 0)
+sh_low = sh.get("low", 0)
+sh_fixed = sh.get("auto_fixed", 0)
+sh_pending = sh.get("pending", 0)
+sh_time = (sh.get("timestamp", "") or "")[:16].replace("T", " ")
+if sh_total == 0:
+    sh_status_color = "#22c55e"
+    sh_status_text = "全站健康"
+elif sh_critical > 0:
+    sh_status_color = "#ef4444"
+    sh_status_text = "严重问题"
+elif sh_high > 0:
+    sh_status_color = "#f59e0b"
+    sh_status_text = "高优先级"
+else:
+    sh_status_color = "#eab308"
+    sh_status_text = "待优化"
+
+
 agents_html = ""
 for a in data["agents"].get("agents", []):
     st = a["status"]
@@ -404,6 +428,25 @@ body {{
       <div class="section">
         <div class="section-head">
           <span class="section-num">02</span>
+          <span class="section-title">🩺 Site Health 网站健康巡检</span>
+          <span class="section-meta">16项检查 · 每日2次</span>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0;">
+          <div class="kpi"><div class="kpi-label">状态</div><div class="kpi-value" style="font-size:14px;color:{sh_status_color}">{sh_status_text}</div></div>
+          <div class="kpi"><div class="kpi-label">总问题</div><div class="kpi-value">{sh_total}</div></div>
+          <div class="kpi"><div class="kpi-label">Critical</div><div class="kpi-value" style="color:#ef4444">{sh_critical}</div></div>
+          <div class="kpi"><div class="kpi-label">High</div><div class="kpi-value" style="color:#f59e0b">{sh_high}</div></div>
+          <div class="kpi"><div class="kpi-label">Medium</div><div class="kpi-value" style="color:#eab308">{sh_medium}</div></div>
+          <div class="kpi"><div class="kpi-label">Low</div><div class="kpi-value" style="color:#94a3b8">{sh_low}</div></div>
+          <div class="kpi"><div class="kpi-label">自动修复</div><div class="kpi-value" style="color:#22c55e">{sh_fixed}</div></div>
+          <div class="kpi"><div class="kpi-label">待处理</div><div class="kpi-value" style="color:#667eea">{sh_pending}</div></div>
+        </div>
+        <div style="font-size:10px;color:#64748b;margin-top:8px;">巡检: {sh_time}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">03</span>
           <span class="section-title">AI Agent 工作状态</span>
           <span class="section-meta">跨Agent学习: {data["agents"].get("cross_agent_learning","?")}</span>
         </div>

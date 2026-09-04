@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 ChinaBound Travel - 统一运营仪表盘生成器
 Unified Operations Dashboard Generator
@@ -77,6 +77,21 @@ class DashboardGenerator:
             "user_audit": REPORTS_DIR / "user" / "user_behavior_audit.json",
             "conversion_audit": REPORTS_DIR / "conversion" / "cta_audit_report.json",
         }
+
+        # 加载最新的Site Health报告
+        import glob as _glob
+        sh_files = sorted(_glob.glob(str(REPORTS_DIR / "site_health" / "site_health_*.json")))
+        if sh_files:
+            try:
+                with open(sh_files[-1], encoding="utf-8") as f:
+                    loaded_data["site_health"] = json.load(f)
+                print(f"  ✅ site_health: 已加载最新报告")
+            except Exception as e:
+                print(f"  ⚠️ site_health: 加载失败 - {e}")
+                loaded_data["site_health"] = {"exists": False}
+        else:
+            print(f"  ❌ site_health: 报告不存在")
+            loaded_data["site_health"] = {"exists": False}
 
         for name, path in json_data_files.items():
             if path.exists():
@@ -169,6 +184,44 @@ class DashboardGenerator:
 
         return metrics
 
+    def _render_site_health(self):
+        """渲染Site Health巡检结果"""
+        sh = self.data.get("site_health", {})
+        if not sh or not sh.get("summary"):
+            return '<div style="color: #999; text-align: center; padding: 20px;">暂无巡检数据</div>'
+        s = sh["summary"]
+        total = s.get("total_issues", 0)
+        critical = s.get("critical", 0)
+        high = s.get("high", 0)
+        medium = s.get("medium", 0)
+        low = s.get("low", 0)
+        fixed = s.get("auto_fixed", 0)
+        pending = s.get("need_manual", 0)
+        if total == 0:
+            status_color = "#10b981"
+            status_text = "全站健康"
+        elif critical > 0:
+            status_color = "#ef4444"
+            status_text = "严重问题"
+        elif high > 0:
+            status_color = "#f59e0b"
+            status_text = "高优先级"
+        else:
+            status_color = "#667eea"
+            status_text = "待优化"
+        html = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:12px;">'
+        html += f'<div class="metric-card" style="border-left-color:{status_color};"><div class="label">巡检状态</div><div class="value" style="font-size:14px;">{status_text}</div></div>'
+        html += f'<div class="metric-card"><div class="label">总问题</div><div class="value">{total}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#ef4444;"><div class="label">Critical</div><div class="value" style="color:#ef4444;">{critical}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#f59e0b;"><div class="label">High</div><div class="value" style="color:#f59e0b;">{high}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#eab308;"><div class="label">Medium</div><div class="value" style="color:#ca8a04;">{medium}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#94a3b8;"><div class="label">Low</div><div class="value" style="color:#64748b;">{low}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#10b981;"><div class="label">自动修复</div><div class="value" style="color:#10b981;">{fixed}</div></div>'
+        html += f'<div class="metric-card" style="border-left-color:#667eea;"><div class="label">待处理</div><div class="value" style="color:#667eea;">{pending}</div></div>'
+        html += '</div>'
+        html += f'<div style="font-size:11px;color:#888;">巡检: {sh.get("timestamp","N/A")[:19]} | 16项检查 | 每日2次</div>'
+        return html
+
     def generate_html_dashboard(self, output_path: Path = None) -> Path:
         """生成HTML仪表盘"""
         print("\n" + "=" * 60)
@@ -260,7 +313,7 @@ class DashboardGenerator:
 <body>
     <div class="header">
         <h1>🎯 ChinaBound Travel 统一运营仪表盘</h1>
-        <div class="subtitle">7大AI Agent协同运营 · 数据驱动决策 · 持续进化优化</div>
+        <div class="subtitle">8大AI Agent协同运营 · 数据驱动决策 · 持续进化优化</div>
         <div class="update-time">最后更新: {self.generated_at.strftime('%Y-%m-%d %H:%M:%S')} | 数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地扫描</div>
     </div>
 
@@ -312,9 +365,15 @@ class DashboardGenerator:
             </div>
         </div>
 
+        <!-- Site Health 巡检 -->
+        <div class="section">
+            <div class="section-title"><div class="icon">🩺</div>Site Health 网站健康巡检</div>
+            {self._render_site_health()}
+        </div>
+
         <!-- Agent成熟度 -->
         <div class="section">
-            <div class="section-title"><div class="icon">🤖</div>7大AI Agent成熟度</div>
+            <div class="section-title"><div class="icon">🤖</div>8大AI Agent成熟度</div>
             <div class="maturity-grid">
                 {''.join(f'''
                 <div class="maturity-card">
@@ -451,7 +510,7 @@ class DashboardGenerator:
     </div>
 
     <div class="footer">
-        <p>ChinaBound Travel 统一运营仪表盘 | 由7大AI Agent协同生成 | {self.generated_at.strftime('%Y-%m-%d %H:%M:%S')}</p>
+        <p>ChinaBound Travel 统一运营仪表盘 | 由8大AI Agent协同生成 | {self.generated_at.strftime('%Y-%m-%d %H:%M:%S')}</p>
         <p style="margin-top: 8px;">数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地内容扫描</p>
     </div>
 </body>

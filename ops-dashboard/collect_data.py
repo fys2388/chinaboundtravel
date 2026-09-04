@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """收集运营看板所需的全部真实数据，输出 dashboard_data.json"""
 import json, sys, os, time
 from datetime import datetime, timedelta, timezone
@@ -147,6 +147,31 @@ try:
     data["metrics"]["content"] = {"total_articles": m.get("total_articles", 0), "with_affiliate": m.get("articles_with_affiliate_links", 0), "avg_word_count": m.get("avg_word_count", 0), "date": content.get("data_date", "")}
 except:
     data["metrics"]["content"] = {"total_articles": 0, "with_affiliate": 0}
+
+# Site Health 巡检数据
+try:
+    import glob as _glob
+    sh_files = sorted([f for f in _glob.glob(str(ROOT / "reports" / "site_health" / "site_health_*.json")) if "audit" not in f])
+    if sh_files:
+        sh = json.loads(open(sh_files[-1], encoding="utf-8").read())
+        s = sh.get("summary", {})
+        data["site_health"] = {
+            "total": s.get("total_issues", 0),
+            "critical": s.get("critical", 0),
+            "high": s.get("high", 0),
+            "medium": s.get("medium", 0),
+            "low": s.get("low", 0),
+            "auto_fixed": s.get("auto_fixed", 0),
+            "pending": s.get("need_manual", 0),
+            "timestamp": sh.get("timestamp", ""),
+            "checks": 16
+        }
+        print("  site_health: " + str(s.get("total_issues", 0)) + " issues loaded")
+    else:
+        data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "timestamp": "", "checks": 16}
+except Exception as e:
+    print("  site_health load failed: " + str(e))
+    data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "timestamp": "", "checks": 16}
 
 # 5b. GA4/GSC 单日数据（日报口径，save=False 不覆盖28天文件）
 try:
