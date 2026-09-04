@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04 11:30:41",
+  "generated_at": "2026-09-04 12:00:42",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 205,
+    "response_ms": 143,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-04T03:00:54Z",
+      "last_run": "2026-09-04T03:37:17Z",
       "last_event": "workflow_run"
     },
     {
@@ -121,9 +121,9 @@
       "name": "GEO Check",
       "id": "geo-check",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-04T03:33:57Z",
+      "last_event": "push"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-04T03:30:24Z",
+      "last_run": "2026-09-04T04:00:24Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -256,9 +256,9 @@
       "name": "Social Media Distributor",
       "id": "social_distributor",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-03T19:41:48Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "test-buffer-api.yml",
@@ -307,7 +307,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-04 03:30",
+    "checked_at": "2026-09-04 04:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
