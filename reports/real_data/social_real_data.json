@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-03T10:17:57.021978",
-  "data_date": "2026-09-03",
+  "pull_time": "2026-09-04T10:06:28.609631",
+  "data_date": "2026-09-04",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "total_posts": 20,
-    "total_impressions": 22,
+    "total_posts": 10,
+    "total_impressions": 0,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,11 +14,11 @@
   },
   "posts": [
     {
-      "id": "6a9916d7ff804fd557905935",
-      "text": "Chinese Train Stations: Survival Guide for Travelers\n\nChinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown\n\nFull guide: \n\n#ChinaTr",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-03T08:42:46.672Z",
+      "id": "6a99ad4c18474247f756cfa1",
+      "text": "Dreaming of exploring China?\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a foreigner\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-e",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-04T06:24:31.329Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
@@ -28,129 +28,17 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6a99075ea36f7995ef27554e",
-      "text": "China visuals that belong on your travel moodboard.\n\n· Plan the perfect Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips\n\nRead the full guide: htt",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-03T07:36:40.055Z",
+      "id": "6a9916e0b513357a056b237f",
+      "text": "Dreaming of exploring China?\n\nChinese train stations are bigger than airports, and more confusing\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-03T19:42:46.781Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
       "shares": 0,
       "clicks": 0,
       "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a990757e157b73498ac8882",
-      "text": "China visuals that belong on your travel moodboard. China tourist visa in 2026: types, requirements, application steps, costs, and processing → #ChinaTravel",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-03T07:36:31.505Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a985d74daa2e9bf15cb85d1",
-      "text": "Is China Safe for Tourists in 2026? Honest Guide\n\nAn honest China safety assessment for 2026: crime rates, tourist scams, food safety, healthcare access, and emergency contacts\n\nFull guide: https://ch",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-02T23:31:55.070Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a985d71f4b73e9c3c104203",
-      "text": "Is China Safe for Tourists in 2026? Honest Guide\n\nAn honest China safety assessment for 2026: crime rates, tourist scams, food safety, healthcare access, and emergency contacts\n\nFull guide: \n\n#ChinaTr",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-02T19:31:33.274Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a98576223e2f2a10079d432",
-      "text": "What first-time visitors learn about China, summed up in one practical story. Xi. Research-based practical guidance for international travelers planning a China trip → #ChinaTravel",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-02T19:05:47.525Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a97c4a73a15d22a0a07302c",
-      "text": "Hangzhou Travel Guide: West Lake & Tea\n\nCulture. Research-based practical guidance for international travelers planning a China trip. Check official sources f\n\nRead more: \n\n#ChinaTravel #TravelChina",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-02T12:39:56.509Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a97c4a6201adc8544655d12",
-      "text": "Hangzhou Travel Guide: West Lake & Tea\n\nCulture. Research-based practical guidance for international travelers planning a China trip. Check official sources f\n\nRead more: https://www.chinaboundtravel.",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-09-02T10:39:50.082Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a97c4a5201adc8544655cee",
-      "text": "Hangzhou Travel Guide: West Lake & Tea\n\nCulture. Research-based practical guidance for international travelers planning a China trip. Check official sources f\n\nRead more: \n\n#ChinaTravel #TravelChina\n\n",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-02T08:39:46.955Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 9,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a97b5e5ef5558a3e0c8f453",
-      "text": "One China travel mistake to avoid — and how to fix it. Zhangjiajie Avatar Mountains: Complete Guide to China's Most → #ChinaTravel",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-02T07:36:46.303Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 13,
       "engagement_rate": 0.0
     },
     {
@@ -264,55 +152,9 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6a966c5af1f1a63f2da9c91a",
-      "text": "7-Day China Itinerary: Beijing, Xi'an & Shanghai | China's most photogenic corners, captured for your next trip.\n\n7-Day China Itinerary: Beijing, Xi. Research-based practical guidance for internationa",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-01T19:10:47.114Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9524c21170285f81967f7a",
-      "text": "How to Use Alipay as a Foreigner (2026) | What first-time visitors learn about China, summed up in one practical story.\n\nSet up Alipay as a foreigner in 2026: link international cards, pay at restaura",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-08-31T19:53:03.101Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "twitter": {
-      "posts": 6,
-      "impressions": 22,
-      "clicks": 0,
-      "likes": 0
-    },
-    "instagram": {
-      "posts": 3,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
-    "facebook": {
-      "posts": 1,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
     "pinterest": {
       "posts": 10,
       "impressions": 0,
@@ -327,6 +169,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-03"
+    "data_date": "2026-09-04"
   }
 }

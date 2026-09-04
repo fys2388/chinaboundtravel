@@ -1,28 +1,28 @@
 # 🚀 Growth Orchestrator — 统一增长决策报告
 
-**生成时间**: 2026-09-03T10:17:58.173542
+**生成时间**: 2026-09-04T10:06:29.746245
 **Orchestrator 版本**: 1.0
 
 ## 📊 数据源状态
 
 | 域 | 策略文件 | Agent报告 | 策略版本 |
 |---|---|---|---|
-| seo | ✅ | ❌ | 2.0-20260903_101757 |
-| revenue | ✅ | ✅ | 2.0-20260903_101757 |
-| conversion | ✅ | ✅ | 2.0-20260903_101757 |
-| content | ✅ | ✅ | 2.0-20260903_101757 |
-| social | ✅ | ✅ | 2.0-20260903_101757 |
-| user | ✅ | ✅ | 2.0-20260903_101757 |
+| seo | ✅ | ❌ | 2.0-20260904_100629 |
+| revenue | ✅ | ✅ | 2.0-20260904_100629 |
+| conversion | ✅ | ✅ | 2.0-20260904_100629 |
+| content | ✅ | ✅ | 2.0-20260904_100629 |
+| social | ✅ | ✅ | 2.0-20260904_100629 |
+| user | ✅ | ✅ | 2.0-20260904_100629 |
 
 ## 🎯 统一优先级行动（共 11 项，Top 15）
 
 | 排名 | 域 | 优先级分 | 行动 | 来源 |
 |---|---|---|---|---|
 | 1 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day | seo_strategy.high_priority_keywords |
-| 2 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shang | seo_strategy.high_priority_keywords |
-| 3 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'tr | seo_strategy.high_priority_keywords |
-| 4 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cancel/', 'traffic_pot | seo_strategy.high_priority_keywords |
-| 5 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/guilin/', 'traf | seo_strategy.high_priority_keywords |
+| 2 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangz | seo_strategy.high_priority_keywords |
+| 3 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shang | seo_strategy.high_priority_keywords |
+| 4 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'tr | seo_strategy.high_priority_keywords |
+| 5 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cancel/', 'traffic_pot | seo_strategy.high_priority_keywords |
 | 6 | conversion | 0.72 | CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar'] | conversion_strategy.cta_rules |
 | 7 | conversion | 0.72 | CTA优化: types = ['text_link', 'button', 'banner', 'product_card'] | conversion_strategy.cta_rules |
 | 8 | conversion | 0.72 | CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article':  | conversion_strategy.cta_rules |
@@ -46,4 +46,4 @@
 5. 策略变更前自动保存回滚快照（rollback mechanism）
 
 ---
-*本报告由 Growth Orchestrator v1.0 自动生成 | 2026-09-03T10:17:58.173542*
+*本报告由 Growth Orchestrator v1.0 自动生成 | 2026-09-04T10:06:29.746245*

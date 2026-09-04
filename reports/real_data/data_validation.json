@@ -1,11 +1,11 @@
 {
-  "validation_time": "2026-09-03T10:17:57.490710",
+  "validation_time": "2026-09-04T10:06:29.119137",
   "overall_status": "PASS",
   "sources": {
     "ga4": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-02",
+      "data_date": "2026-09-03",
       "status": "OK",
       "error": null,
       "validation_status": "PASS"
@@ -13,7 +13,7 @@
     "gsc": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-08-31",
+      "data_date": "2026-09-01",
       "status": "OK",
       "error": null,
       "validation_status": "PASS"
@@ -21,7 +21,7 @@
     "social": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-03",
+      "data_date": "2026-09-04",
       "status": "OK",
       "error": null,
       "validation_status": "PASS"
@@ -29,7 +29,7 @@
     "content": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-03",
+      "data_date": "2026-09-04",
       "status": "UNKNOWN",
       "error": null,
       "validation_status": "PASS"

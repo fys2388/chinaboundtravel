@@ -1,7 +1,7 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-03T10:17:57.478945",
-  "data_date": "2026-09-03",
+  "pull_time": "2026-09-04T10:06:29.107870",
+  "data_date": "2026-09-04",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -14,7 +14,7 @@
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 1576,
+      "word_count": 1570,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -26,7 +26,7 @@
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1811,
+      "word_count": 1808,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -38,19 +38,19 @@
     },
     {
       "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
-      "word_count": 1388,
+      "word_count": 1389,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 1687,
+      "word_count": 1689,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
-      "word_count": 1456,
+      "word_count": 1458,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -62,13 +62,13 @@
     },
     {
       "slug": "2026-05-27-how-to-survive-chinese-train-station",
-      "word_count": 1544,
+      "word_count": 1546,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1710,
+      "word_count": 1709,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
