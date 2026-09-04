@@ -1,0 +1,74 @@
+{
+  "agent": "seo",
+  "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+  "task_id": "task_2026-09-04_seo_audit_followup",
+  "created_at": "2026-09-04T23:59:31.183419",
+  "target_date": "2026-09-04",
+  "issue_count": 3,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "issue_001",
+      "type": "title_too_long",
+      "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
+      "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
+      "priority": "P1",
+      "detected_at": "2026-09-04T23:59:31.183419",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_002",
+      "type": "title_too_long",
+      "description": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "file": "content\\posts\\2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
+      "priority": "P1",
+      "detected_at": "2026-09-04T23:59:31.183419",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_003",
+      "type": "title_too_long",
+      "description": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "file": "content\\posts\\2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
+      "priority": "P1",
+      "detected_at": "2026-09-04T23:59:31.183419",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    }
+  ],
+  "priority_issue": {
+    "type": "title_too_long",
+    "description": "月度更新标题80字符（含省略号），需压缩至≤46字符",
+    "severity": "medium",
+    "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md"
+  },
+  "expected_actions": [
+    "optimize_title"
+  ],
+  "status": "pending"
+}

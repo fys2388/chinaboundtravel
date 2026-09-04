@@ -258,7 +258,7 @@ def check_empty_links():
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -288,7 +288,7 @@ def check_image_alt():
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -330,7 +330,7 @@ def check_draft_leak():
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -369,7 +369,7 @@ def check_persona_violation():
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -407,7 +407,7 @@ def check_ai_forbidden_words():
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -429,13 +429,17 @@ def check_ai_forbidden_words():
     return issues
 
 
+# PaperMod 渲染标题 = front matter title + " | ChinaBound Travel"（站点后缀）
+TITLE_SUFFIX = " | ChinaBound Travel"
+
+
 def check_title_meta_length():
     """检查Title和Meta description长度"""
     issues = []
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
-        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts']):
+        if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
@@ -448,12 +452,13 @@ def check_title_meta_length():
             title_match = re.search(r"title\s*:\s*[\"']?([^\"'\n]+)", front_matter)
             if title_match:
                 title = title_match.group(1).strip()
-                if len(title) > 65:
+                rendered_len = len(title) + len(TITLE_SUFFIX)
+                if rendered_len > 65:
                     issues.append({
                         "type": "title_too_long",
                         "severity": "low",
                         "file": rel_path,
-                        "message": f"Title过长({len(title)}字符): {title[:40]}...",
+                        "message": f"Title渲染后过长({rendered_len}字符, front matter {len(title)}+后缀{len(TITLE_SUFFIX)}): {title[:40]}...",
                         "auto_fixable": False,
                         "agent": "seo"
                     })

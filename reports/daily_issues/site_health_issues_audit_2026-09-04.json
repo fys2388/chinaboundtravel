@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-09-04T23:59:31.183419",
+  "source": "深度测评 P1/P2 跟进",
+  "audit_report": "chinaboundtravel-深度测评-2026-09-04.md",
+  "total": 4,
+  "critical": 0,
+  "high": 0,
+  "medium": 3,
+  "low": 1,
+  "pending": 4,
+  "issues": [
+    {
+      "type": "title_too_long",
+      "severity": "medium",
+      "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
+      "message": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
+      "auto_fixable": true,
+      "agent": "seo",
+      "assigned": false,
+      "status": "new",
+      "source": "深度测评 2026-09-04",
+      "priority": "P1",
+      "suggested_title": "ChinaBound Travel Guide 2026.09 Update"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "medium",
+      "file": "content\\posts\\2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "message": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
+      "auto_fixable": true,
+      "agent": "seo",
+      "assigned": false,
+      "status": "new",
+      "source": "深度测评 2026-09-04",
+      "priority": "P1",
+      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "medium",
+      "file": "content\\posts\\2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+      "message": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
+      "auto_fixable": true,
+      "agent": "seo",
+      "assigned": false,
+      "status": "new",
+      "source": "深度测评 2026-09-04",
+      "priority": "P1",
+      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture"
+    },
+    {
+      "type": "workflow_missing_guard",
+      "severity": "low",
+      "file": ".github\\workflows\\monthly-ebook-update.yml",
+      "message": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
+      "auto_fixable": false,
+      "agent": "ops",
+      "assigned": false,
+      "status": "new",
+      "source": "深度测评 2026-09-04",
+      "priority": "P2"
+    }
+  ]
+}
