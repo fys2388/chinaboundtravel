@@ -166,15 +166,26 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
           node {
             id
             text
-            createdAt
+            channelService
+            sentAt
+            metrics {
+              reach
+              clicks
+              likes
+              comments
+              shares
+              impressions
+              engagements
+            }
           }
         }
       }
     }
     """
+    org_id = get_organization_id(token)
     variables = {
         "input": {
-            "channelId": channel_id,
+            "organizationId": org_id,
             "status": "sent",
             "since": since,
             "limit": 100,
