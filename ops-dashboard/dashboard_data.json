@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04 12:00:42",
+  "generated_at": "2026-09-04 12:30:36",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 143,
+    "response_ms": 273,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-04T03:37:17Z",
+      "last_run": "2026-09-04T04:01:01Z",
       "last_event": "workflow_run"
     },
     {
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-04T04:00:24Z",
+      "last_run": "2026-09-04T04:30:24Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -202,9 +202,9 @@
       "name": "Retry Failed Jobs",
       "id": "retry-failed",
       "frequency": "手动",
-      "last_status": "skipped",
-      "last_run": "2026-09-03T19:42:12Z",
-      "last_event": "workflow_run"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "seo-audit.yml",
@@ -307,7 +307,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-04 04:00",
+    "checked_at": "2026-09-04 04:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -449,7 +449,7 @@
     },
     "ga4_daily": {
       "visitors": 4,
-      "sessions": 4,
+      "sessions": 5,
       "pageviews": 4,
       "new_users": 83,
       "bounce_rate": 73.6,
@@ -494,7 +494,7 @@
         },
         {
           "date": "2026-09-04",
-          "sessions": 4,
+          "sessions": 5,
           "activeUsers": 4,
           "pageviews": 4
         }
