@@ -51,18 +51,36 @@ else:
     sh_status_text = "待优化"
 
 
+# Agent执行数据映射
+agent_exec_map = {}
+exec_data = data.get("agent_execution", {}).get("agents", {})
+name_to_key = {
+    "内容智能优化": "content",
+    "SEO智能优化": "seo",
+    "社媒智能优化": "social",
+    "收入分析引擎": "revenue",
+    "转化优化Agent": "conversion",
+    "用户智能运营": "user",
+    "自我学习引擎": "self_learning",
+    "网站健康巡检": "site_health",
+}
+
+
 agents_html = ""
 for a in data["agents"].get("agents", []):
     st = a["status"]
     color = "#22c55e" if "正常" in st else ("#f59e0b" if "过期" in st else "#ef4444")
     dot_class = "dot-live" if "正常" in st else "dot-warn"
+    agent_key = name_to_key.get(a["name"], "")
+    fix_count = exec_data.get(agent_key, {}).get("fixed", 0)
+    fix_badge = " 今日修复" + str(fix_count) + "处" if fix_count > 0 else ""
     agents_html += f'''<div class="agent-card">
       <div class="agent-top">
         <span class="agent-dot {dot_class}" style="background:{color}"></span>
         <span class="agent-name">{a["name"]}</span>
       </div>
       <div class="agent-status" style="color:{color}">{st}</div>
-      <div class="agent-meta">最后运行 {str(a.get("last_run","")).replace("T"," ")[:16]} · 周期 {a["max_age_days"]}d</div>
+      <div class="agent-meta">最后运行 {str(a.get("last_run","")).replace("T"," ")[:16]} · 周期 {a["max_age_days"]}d{fix_badge}</div>
     </div>'''
 
 # Workflow 分类

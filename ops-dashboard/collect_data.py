@@ -173,6 +173,25 @@ except Exception as e:
     print("  site_health load failed: " + str(e))
     data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "timestamp": "", "checks": 16}
 
+# Agent执行日志（今日修复数量）
+try:
+    exec_log_file = ROOT / "reports" / "daily_issues" / "execution_log.json"
+    if exec_log_file.exists():
+        exec_log = json.loads(exec_log_file.read_text(encoding="utf-8"))
+        data["agent_execution"] = {
+            "date": exec_log.get("target_date", ""),
+            "total_fixed": exec_log.get("summary", {}).get("fixed", 0),
+            "total_issues": exec_log.get("summary", {}).get("total", 0),
+            "agents": exec_log.get("agents", {})
+        }
+        print("  agent_execution: " + str(exec_log.get("summary", {}).get("fixed", 0)) + " fixes today")
+    else:
+        data["agent_execution"] = {"date": "", "total_fixed": 0, "total_issues": 0, "agents": {}}
+except Exception as e:
+    print("  agent_execution load failed: " + str(e))
+    data["agent_execution"] = {"date": "", "total_fixed": 0, "total_issues": 0, "agents": {}}
+
+
 # 5b. GA4/GSC 单日数据（日报口径，save=False 不覆盖28天文件）
 try:
     from real_data_pull_engine import pull_ga4_data, pull_gsc_data
