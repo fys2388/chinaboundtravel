@@ -158,6 +158,8 @@ try:
 
         RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
         resolved_count = 0
+        today_fixed = 0
+        today_str = datetime.now().strftime("%Y-%m-%d")
         unresolved_critical = unresolved_high = unresolved_medium = unresolved_low = 0
         pending_unassigned = 0
 
@@ -167,6 +169,9 @@ try:
             assigned = issue.get("assigned", False)
             if status in RESOLVED_STATUSES:
                 resolved_count += 1
+                resolved_at = issue.get("resolved_at", "") or ""
+                if today_str in resolved_at:
+                    today_fixed += 1
             else:
                 if severity == "critical": unresolved_critical += 1
                 elif severity == "high": unresolved_high += 1
@@ -181,13 +186,13 @@ try:
             "high": unresolved_high,
             "medium": unresolved_medium,
             "low": unresolved_low,
-            "auto_fixed": resolved_count,
+            "auto_fixed": today_fixed,
             "pending": pending_unassigned,
             "resolved": resolved_count,
             "timestamp": sh.get("timestamp", ""),
             "checks": 16
         }
-        print(f"  site_health: 未解决={unresolved_total}, 已解决={resolved_count}, 待分配={pending_unassigned}")
+        print(f"  site_health: 未解决={unresolved_total}, 今日新修复={today_fixed}, 累计已解决={resolved_count}")
     else:
         data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "resolved": 0, "timestamp": "", "checks": 16}
 except Exception as e:

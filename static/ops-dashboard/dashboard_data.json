@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05 18:58:40",
+  "generated_at": "2026-09-05 19:53:09",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 0,
@@ -215,7 +215,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-05 18:58",
+    "checked_at": "2026-09-05 19:53",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -252,13 +252,13 @@
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-04",
+        "last_run": "2026-09-05",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-04",
+        "last_run": "2026-09-05",
         "max_age_days": 2
       },
       {
@@ -345,45 +345,39 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 242,
-      "sessions": 310,
-      "pageviews": 737,
-      "date": "2026-09-03"
+      "visitors": 252,
+      "sessions": 327,
+      "pageviews": 778,
+      "date": "2026-09-04"
     },
     "gsc_28d": {
-      "impressions": 574,
+      "impressions": 580,
       "clicks": 0,
-      "date": "2026-09-01"
+      "date": "2026-09-02"
     },
     "content": {
       "total_articles": 61,
       "with_affiliate": 35,
       "avg_word_count": 1900,
-      "date": "2026-09-04"
+      "date": "2026-09-05"
     },
     "ga4_daily": {
       "source": "ga4_api",
-      "pull_time": "2026-09-04T10:06:25.954939",
-      "data_date": "2026-09-03",
+      "pull_time": "2026-09-05T09:35:49.772451",
+      "data_date": "2026-09-04",
       "is_real_data": true,
       "is_fresh": true,
       "metrics": {
-        "activeUsers": 242,
-        "sessions": 310,
-        "screenPageViews": 737,
-        "engagedSessions": 91,
-        "bounceRate": 0.7064516129032258,
-        "averageSessionDuration": 207.43216076129033,
-        "engagementRate": 0.29354838709677417,
-        "newUsers": 241
+        "activeUsers": 252,
+        "sessions": 327,
+        "screenPageViews": 778,
+        "engagedSessions": 96,
+        "bounceRate": 0.7064220183486238,
+        "averageSessionDuration": 211.3295594434251,
+        "engagementRate": 0.29357798165137616,
+        "newUsers": 251
       },
       "daily": [
-        {
-          "date": "2026-08-29",
-          "sessions": 15,
-          "activeUsers": 15,
-          "pageviews": 17
-        },
         {
           "date": "2026-08-30",
           "sessions": 15,
@@ -416,9 +410,15 @@
         },
         {
           "date": "2026-09-04",
-          "sessions": 10,
-          "activeUsers": 5,
-          "pageviews": 25
+          "sessions": 23,
+          "activeUsers": 17,
+          "pageviews": 53
+        },
+        {
+          "date": "2026-09-05",
+          "sessions": 8,
+          "activeUsers": 6,
+          "pageviews": 6
         }
       ],
       "top_pages": [],
@@ -430,31 +430,24 @@
         "fresh": true,
         "reason": "Fresh",
         "age_days": 1,
-        "data_date": "2026-09-03"
+        "data_date": "2026-09-04"
       }
     },
     "gsc_daily": {
       "source": "gsc_api",
-      "pull_time": "2026-09-04T10:06:27.691291",
-      "data_date": "2026-09-01",
+      "pull_time": "2026-09-05T09:35:51.098818",
+      "data_date": "2026-09-02",
       "is_real_data": true,
       "is_fresh": true,
       "metrics": {
-        "impressions": 574,
+        "impressions": 580,
         "clicks": 0,
         "ctr": 0.0,
-        "average_position": 67.0,
+        "average_position": 67.2,
         "sitemap_count": 1,
         "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
       },
       "daily": [
-        {
-          "date": "2026-08-26",
-          "impressions": 95,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 68.4
-        },
         {
           "date": "2026-08-27",
           "impressions": 97,
@@ -496,6 +489,13 @@
           "clicks": 1,
           "ctr": 0.03,
           "position": 51.9
+        },
+        {
+          "date": "2026-09-02",
+          "impressions": 26,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 35.0
         }
       ],
       "top_queries": [
@@ -512,6 +512,13 @@
           "clicks": 0,
           "ctr": 0,
           "position": 87
+        },
+        {
+          "query": "144 hour",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 64
         },
         {
           "query": "144 hour china visa",
@@ -543,10 +550,10 @@
         },
         {
           "query": "144 hour visa china",
-          "impressions": 9,
+          "impressions": 11,
           "clicks": 0,
           "ctr": 0,
-          "position": 51.1
+          "position": 54.5
         },
         {
           "query": "144 hour visa china cost",
@@ -631,29 +638,22 @@
           "clicks": 0,
           "ctr": 0,
           "position": 79
-        },
-        {
-          "query": "144 transit visa china",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64
         }
       ],
       "top_pages": [
         {
           "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-          "impressions": 53,
+          "impressions": 52,
           "clicks": 2,
           "ctr": 0.04,
-          "position": 18.9
+          "position": 18.8
         },
         {
           "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
           "impressions": 22,
           "clicks": 1,
           "ctr": 0.05,
-          "position": 27.2
+          "position": 24
         },
         {
           "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
@@ -671,10 +671,10 @@
         },
         {
           "page": "https://www.chinaboundtravel.com/",
-          "impressions": 32,
+          "impressions": 33,
           "clicks": 0,
           "ctr": 0,
-          "position": 24.7
+          "position": 26.2
         },
         {
           "page": "https://www.chinaboundtravel.com/cancel/",
@@ -699,10 +699,10 @@
         },
         {
           "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
-          "impressions": 4,
+          "impressions": 2,
           "clicks": 0,
           "ctr": 0,
-          "position": 22.5
+          "position": 28.5
         },
         {
           "page": "https://www.chinaboundtravel.com/cities/xian/",
@@ -755,10 +755,10 @@
         },
         {
           "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-          "impressions": 702,
+          "impressions": 707,
           "clicks": 0,
           "ctr": 0,
-          "position": 72.7
+          "position": 72.3
         },
         {
           "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -789,7 +789,7 @@
         "fresh": true,
         "reason": "Fresh",
         "age_days": 3,
-        "data_date": "2026-09-01"
+        "data_date": "2026-09-02"
       }
     }
   },
@@ -836,10 +836,10 @@
     "high": 0,
     "medium": 0,
     "low": 0,
-    "auto_fixed": 24,
+    "auto_fixed": 0,
     "pending": 0,
     "resolved": 24,
-    "timestamp": "2026-09-04T06:01:46.061619+00:00",
+    "timestamp": "2026-09-05T11:52:14.559893+00:00",
     "checks": 16
   },
   "agent_execution": {

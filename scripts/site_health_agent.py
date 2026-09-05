@@ -55,6 +55,36 @@ def ensure_dirs():
     ISSUES_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def load_resolved_issues():
+    """加载历史报告中已解决的问题（用于继承状态，避免重复报告）"""
+    resolved = {}
+    RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
+    try:
+        reports = sorted(REPORTS_DIR.glob("site_health_*.json"))
+        if not reports:
+            return resolved
+        # 读取最近3份报告，合并已解决问题
+        for report_file in reports[-3:]:
+            try:
+                report = json.loads(report_file.read_text(encoding="utf-8"))
+                for issue in report.get("issues", []):
+                    status = (issue.get("status") or "").lower()
+                    if status in RESOLVED_STATUSES:
+                        # 用 type+page+message 作为唯一键
+                        key = f"{issue.get('type','')}|{issue.get('page','')}|{issue.get('message','')[:50]}"
+                        resolved[key] = {
+                            "status": status,
+                            "resolved_by": issue.get("resolved_by", "historical"),
+                            "resolution_note": issue.get("resolution_note", "历史已解决"),
+                            "resolved_at": issue.get("resolved_at", report.get("timestamp", "")),
+                        }
+            except Exception:
+                continue
+    except Exception:
+        pass
+    return resolved
+
+
 def check_sitemap_health():
     """检查sitemap健康：noindex页、重复canonical页"""
     issues = []
@@ -897,6 +927,21 @@ def run_health_check(auto_fix=True):
     severity_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
     all_issues.sort(key=lambda x: severity_order.get(x["severity"], 99))
     
+    # 继承历史已解决状态（避免重复报告已解决的问题）
+    resolved_history = load_resolved_issues()
+    inherited_count = 0
+    for issue in all_issues:
+        key = f"{issue.get('type','')}|{issue.get('page','')}|{issue.get('message','')[:50]}"
+        if key in resolved_history and not issue.get("status"):
+            hist = resolved_history[key]
+            issue["status"] = hist["status"]
+            issue["resolved_by"] = hist["resolved_by"]
+            issue["resolution_note"] = hist["resolution_note"]
+            issue["resolved_at"] = hist["resolved_at"]
+            inherited_count += 1
+    if inherited_count > 0:
+        print(f"\n  [状态继承] {inherited_count} 个问题继承历史已解决状态，不计入未解决")
+    
     # 自动修复
     fixed_issues = []
     if auto_fix:
@@ -912,19 +957,25 @@ def run_health_check(auto_fix=True):
                 status = "✅" if success else "❌"
                 print(f"  {status} [{issue['severity']}] {issue['type']}: {message}")
     
-    # 生成报告
+    # 生成报告（只统计未解决问题）
+    RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
+    unresolved = [i for i in all_issues if (i.get("status") or "").lower() not in RESOLVED_STATUSES]
+    resolved_count = len(all_issues) - len(unresolved)
+    
     report = {
         "timestamp": timestamp,
         "agent": "site_health",
         "permission_level": "L2",
         "summary": {
-            "total_issues": len(all_issues),
-            "critical": len([i for i in all_issues if i["severity"] == "critical"]),
-            "high": len([i for i in all_issues if i["severity"] == "high"]),
-            "medium": len([i for i in all_issues if i["severity"] == "medium"]),
-            "low": len([i for i in all_issues if i["severity"] == "low"]),
+            "total_issues": len(unresolved),
+            "critical": len([i for i in unresolved if i["severity"] == "critical"]),
+            "high": len([i for i in unresolved if i["severity"] == "high"]),
+            "medium": len([i for i in unresolved if i["severity"] == "medium"]),
+            "low": len([i for i in unresolved if i["severity"] == "low"]),
             "auto_fixed": len([i for i in fixed_issues if i.get("fix_status") == "fixed"]),
-            "need_manual": len([i for i in all_issues if not i.get("auto_fixable") or i.get("fix_status") == "failed"])
+            "need_manual": len([i for i in unresolved if not i.get("auto_fixable") or i.get("fix_status") == "failed"]),
+            "resolved": resolved_count,
+            "inherited_resolved": inherited_count
         },
         "issues": all_issues
     }
@@ -934,8 +985,8 @@ def run_health_check(auto_fix=True):
     report_file.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n报告已保存: {report_file.relative_to(ROOT)}")
     
-    # 输出未修复问题到daily_issues格式（供router分配）
-    unresolved = [i for i in all_issues if not i.get("auto_fixable") or i.get("fix_status") == "failed"]
+    # 输出未修复问题到daily_issues格式（供router分配，排除已解决的）
+    unresolved = [i for i in unresolved if not i.get("auto_fixable") or i.get("fix_status") == "failed"]
     if unresolved:
         issues_file = ISSUES_DIR / f"site_health_issues_{datetime.now().strftime('%Y-%m-%d')}.json"
         issues_file.write_text(json.dumps({
@@ -949,12 +1000,12 @@ def run_health_check(auto_fix=True):
     print("\n" + "=" * 60)
     print("检查总结")
     print("=" * 60)
-    print(f"  总问题数: {len(all_issues)}")
+    print(f"  未解决问题: {len(unresolved)} (历史已解决: {resolved_count})")
     print(f"  Critical: {report['summary']['critical']}")
     print(f"  High: {report['summary']['high']}")
     print(f"  Medium: {report['summary']['medium']}")
     print(f"  Low: {report['summary']['low']}")
-    print(f"  已自动修复: {report['summary']['auto_fixed']}")
+    print(f"  本次自动修复: {report['summary']['auto_fixed']}")
     print(f"  需人工处理: {report['summary']['need_manual']}")
     
     return report
