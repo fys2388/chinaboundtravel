@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260904_100629",
-  "last_updated": "2026-09-04T10:06:29.383648",
+  "version": "2.0-20260905_093552",
+  "last_updated": "2026-09-05T09:35:52.643908",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -109,7 +109,7 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 5.18%，比Bottom 20%高 5.18个百分点",
+      "description": "Top 20%帖子平均CTR 5.12%，比Bottom 20%高 5.12个百分点",
       "common_hooks": [
         "linkedin",
         "warning",

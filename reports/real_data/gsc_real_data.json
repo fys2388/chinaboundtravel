@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-04T10:06:27.691291",
-  "data_date": "2026-09-01",
+  "pull_time": "2026-09-05T09:35:51.098818",
+  "data_date": "2026-09-02",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 574,
+    "impressions": 580,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 67.0,
+    "average_position": 67.2,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
   },
   "daily": [
-    {
-      "date": "2026-08-26",
-      "impressions": 95,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 68.4
-    },
     {
       "date": "2026-08-27",
       "impressions": 97,
@@ -61,6 +54,13 @@
       "clicks": 1,
       "ctr": 0.03,
       "position": 51.9
+    },
+    {
+      "date": "2026-09-02",
+      "impressions": 26,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 35.0
     }
   ],
   "top_queries": [
@@ -77,6 +77,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 87
+    },
+    {
+      "query": "144 hour",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "144 hour china visa",
@@ -108,10 +115,10 @@
     },
     {
       "query": "144 hour visa china",
-      "impressions": 9,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0,
-      "position": 51.1
+      "position": 54.5
     },
     {
       "query": "144 hour visa china cost",
@@ -196,29 +203,22 @@
       "clicks": 0,
       "ctr": 0,
       "position": 79
-    },
-    {
-      "query": "144 transit visa china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 64
     }
   ],
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 53,
+      "impressions": 52,
       "clicks": 2,
       "ctr": 0.04,
-      "position": 18.9
+      "position": 18.8
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
       "impressions": 22,
       "clicks": 1,
       "ctr": 0.05,
-      "position": 27.2
+      "position": 24
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
@@ -236,10 +236,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 32,
+      "impressions": 33,
       "clicks": 0,
       "ctr": 0,
-      "position": 24.7
+      "position": 26.2
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -264,10 +264,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
-      "impressions": 4,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 22.5
+      "position": 28.5
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/xian/",
@@ -320,10 +320,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 702,
+      "impressions": 707,
       "clicks": 0,
       "ctr": 0,
-      "position": 72.7
+      "position": 72.3
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -354,6 +354,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-01"
+    "data_date": "2026-09-02"
   }
 }

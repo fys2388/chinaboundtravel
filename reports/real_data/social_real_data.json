@@ -1,18 +1,46 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-04T10:06:28.609631",
-  "data_date": "2026-09-04",
+  "pull_time": "2026-09-05T09:35:52.043381",
+  "data_date": "2026-09-05",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 10,
-    "total_impressions": 0,
+    "total_impressions": 20,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6a9afd27c513903fea2bb54e",
+      "text": "Dreaming of exploring China?\n\nChina tourist visa in 2026: types, requirements, application steps, costs, and processing times for foreign travelers\n\nRead the full guide: https://www.chinaboundtravel.c",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-05T06:17:31.380Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9a695d82940622ebb707a8",
+      "text": "Dreaming of exploring China?\n\nPayPal now supports Alipay and WeChat Pay QR codes. What this means for foreign travelers in China and how to use it\n\nRead the full guide: https://www.chinaboundtravel.co",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-04T19:47:02.511Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6a99ad4c18474247f756cfa1",
       "text": "Dreaming of exploring China?\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a foreigner\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-e",
@@ -94,7 +122,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 7,
       "engagement_rate": 0.0
     },
     {
@@ -108,7 +136,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 7,
       "engagement_rate": 0.0
     },
     {
@@ -122,42 +150,14 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a966c649ffb57a8b98a5bb4",
-      "text": "Chinese Train Stations: Survival Guide for Travelers | Save time and money on your next China trip — grab the step-by-step guide before you book.\n\nChinese train stations are bigger than airports, and ",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-01T19:10:46.738Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a966c5dd351db8f326bb4ca",
-      "text": "Hangzhou Travel Guide: West Lake & Tea Culture | What first-time visitors learn about China, summed up in one practical story.\n\nResearch-based practical guidance for international travelers planning a",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-01T19:10:47.707Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
+      "impressions": 6,
       "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "pinterest": {
       "posts": 10,
-      "impressions": 0,
+      "impressions": 20,
       "clicks": 0,
       "likes": 0
     }
@@ -169,6 +169,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-04"
+    "data_date": "2026-09-05"
   }
 }
