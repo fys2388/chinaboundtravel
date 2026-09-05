@@ -3247,8 +3247,72 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6a9afd27c513903fea2bb54e",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring China?\n\nChina tourist visa in 2026: types, requirements, application steps, costs, and processing times for foreign travelers\n\nRead the full guide: https://www.chinaboundtravel.c",
+      "published_at": "2026-09-05T06:17:31.380Z",
+      "date": "2026-09-05",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring China?\n\nChina tourist visa in 2026: types, requirements, application steps, co",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6a9a695d82940622ebb707a8",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring China?\n\nPayPal now supports Alipay and WeChat Pay QR codes. What this means for foreign travelers in China and how to use it\n\nRead the full guide: https://www.chinaboundtravel.co",
+      "published_at": "2026-09-04T19:47:02.511Z",
+      "date": "2026-09-04",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring China?\n\nPayPal now supports Alipay and WeChat Pay QR codes. What this means fo",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-09-04T10:06:29.379832",
+  "last_updated": "2026-09-05T09:35:52.639970",
   "version": "1.0"
 }
