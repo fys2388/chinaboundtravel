@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-05 13:00:36",
+  "generated_at": "2026-09-05 13:18:39",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 284,
+    "response_ms": 281,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-05T04:58:09Z",
+      "last_run": "2026-09-05T05:16:52Z",
       "last_event": "workflow_run"
     },
     {
@@ -113,7 +113,7 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-05T04:57:43Z",
+      "last_run": "2026-09-05T05:02:35Z",
       "last_event": "schedule"
     },
     {
@@ -139,9 +139,9 @@
       "name": "Daily Health Check",
       "id": "health-check",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-05T05:16:35Z",
+      "last_event": "schedule"
     },
     {
       "file": "manual-deploy.yml",
@@ -176,8 +176,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-05T05:00:21Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-05T05:18:26Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -265,9 +265,9 @@
       "name": "Social Media Distributor",
       "id": "social_distributor",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-04T19:22:31Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "test-buffer-api.yml",
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-05 05:00",
+    "checked_at": "2026-09-05 05:18",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -467,7 +467,7 @@
       "sessions": 3,
       "pageviews": 2,
       "new_users": 86,
-      "bounce_rate": 73.3,
+      "bounce_rate": 67.4,
       "date": "2026-09-05",
       "status": "OK",
       "daily": [
@@ -505,7 +505,7 @@
           "date": "2026-09-04",
           "sessions": 23,
           "activeUsers": 17,
-          "pageviews": 49
+          "pageviews": 53
         },
         {
           "date": "2026-09-05",
