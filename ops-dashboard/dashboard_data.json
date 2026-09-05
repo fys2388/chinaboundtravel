@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-05 17:30:36",
+  "generated_at": "2026-09-05 18:00:30",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 234,
+    "response_ms": 138,
     "server": "cloudflare"
   },
   "workflows": [
@@ -58,9 +58,9 @@
       "name": "Cross-Agent Learning Daily",
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-05T09:35:38Z",
+      "last_event": "schedule"
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-05T09:14:00Z",
+      "last_run": "2026-09-05T09:35:59Z",
       "last_event": "workflow_run"
     },
     {
@@ -121,9 +121,9 @@
       "name": "GEO Check",
       "id": "geo-check",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-05T09:57:26Z",
+      "last_event": "schedule"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-05T09:30:21Z",
+      "last_run": "2026-09-05T10:00:21Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-05 09:30",
+    "checked_at": "2026-09-05 10:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -446,21 +446,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 242,
-      "sessions": 310,
-      "pageviews": 737,
-      "date": "2026-09-03"
+      "visitors": 252,
+      "sessions": 327,
+      "pageviews": 778,
+      "date": "2026-09-04"
     },
     "gsc_28d": {
-      "impressions": 574,
+      "impressions": 580,
       "clicks": 0,
-      "date": "2026-09-01"
+      "date": "2026-09-02"
     },
     "content": {
       "total_articles": 61,
       "with_affiliate": 35,
       "avg_word_count": 1900,
-      "date": "2026-09-04"
+      "date": "2026-09-05"
     },
     "ga4_daily": {
       "visitors": 6,
