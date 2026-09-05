@@ -119,8 +119,19 @@
         "pinterest": "2026-09-04"
       },
       "distribute_count": 4
+    },
+    "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide": {
+      "title": "Great Wall of China: History & Hidden Secrets",
+      "last_distributed": "2026-09-05",
+      "platforms": {
+        "twitter": "2026-09-05",
+        "facebook": "2026-09-05",
+        "instagram": "2026-09-05",
+        "pinterest": "2026-09-05"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-09-04T17:17:33.833006+00:00",
-  "total_distributions": 47
+  "last_run": "2026-09-05T06:32:46.136355+00:00",
+  "total_distributions": 51
 }
