@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-06 01:30:36",
+  "generated_at": "2026-09-06 01:57:59",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 226,
+    "response_ms": 295,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-05T17:00:52Z",
+      "last_run": "2026-09-05T17:30:54Z",
       "last_event": "workflow_run"
     },
     {
@@ -121,9 +121,9 @@
       "name": "GEO Check",
       "id": "geo-check",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-05T11:53:39Z",
-      "last_event": "push"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "gsc-index-submit.yml",
@@ -176,8 +176,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-05T17:30:21Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-05T17:57:45Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-05 17:30",
+    "checked_at": "2026-09-05 17:58",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
