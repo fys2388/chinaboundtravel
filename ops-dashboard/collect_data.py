@@ -148,30 +148,51 @@ try:
 except:
     data["metrics"]["content"] = {"total_articles": 0, "with_affiliate": 0}
 
-# Site Health 巡检数据
+# Site Health 巡检数据（只统计未解决问题）
 try:
     import glob as _glob
     sh_files = sorted([f for f in _glob.glob(str(ROOT / "reports" / "site_health" / "site_health_*.json")) if "audit" not in f])
     if sh_files:
         sh = json.loads(open(sh_files[-1], encoding="utf-8").read())
-        s = sh.get("summary", {})
+        issues = sh.get("issues", [])
+
+        RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
+        resolved_count = 0
+        unresolved_critical = unresolved_high = unresolved_medium = unresolved_low = 0
+        pending_unassigned = 0
+
+        for issue in issues:
+            status = (issue.get("status") or "").lower()
+            severity = (issue.get("severity") or "").lower()
+            assigned = issue.get("assigned", False)
+            if status in RESOLVED_STATUSES:
+                resolved_count += 1
+            else:
+                if severity == "critical": unresolved_critical += 1
+                elif severity == "high": unresolved_high += 1
+                elif severity == "medium": unresolved_medium += 1
+                elif severity == "low": unresolved_low += 1
+                if not assigned: pending_unassigned += 1
+
+        unresolved_total = unresolved_critical + unresolved_high + unresolved_medium + unresolved_low
         data["site_health"] = {
-            "total": s.get("total_issues", 0),
-            "critical": s.get("critical", 0),
-            "high": s.get("high", 0),
-            "medium": s.get("medium", 0),
-            "low": s.get("low", 0),
-            "auto_fixed": s.get("auto_fixed", 0),
-            "pending": s.get("need_manual", 0),
+            "total": unresolved_total,
+            "critical": unresolved_critical,
+            "high": unresolved_high,
+            "medium": unresolved_medium,
+            "low": unresolved_low,
+            "auto_fixed": resolved_count,
+            "pending": pending_unassigned,
+            "resolved": resolved_count,
             "timestamp": sh.get("timestamp", ""),
             "checks": 16
         }
-        print("  site_health: " + str(s.get("total_issues", 0)) + " issues loaded")
+        print(f"  site_health: 未解决={unresolved_total}, 已解决={resolved_count}, 待分配={pending_unassigned}")
     else:
-        data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "timestamp": "", "checks": 16}
+        data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "resolved": 0, "timestamp": "", "checks": 16}
 except Exception as e:
     print("  site_health load failed: " + str(e))
-    data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "timestamp": "", "checks": 16}
+    data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "resolved": 0, "timestamp": "", "checks": 16}
 
 # Agent执行日志（今日修复数量）
 try:
