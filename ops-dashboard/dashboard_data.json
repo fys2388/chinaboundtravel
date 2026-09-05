@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-05 12:30:35",
+  "generated_at": "2026-09-05 13:00:36",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 169,
+    "response_ms": 284,
     "server": "cloudflare"
   },
   "workflows": [
@@ -49,9 +49,9 @@
       "name": "Content Rotation Distributor",
       "id": "content-rotation",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-04T17:16:55Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "cross-agent-learning-daily.yml",
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-05T04:00:47Z",
+      "last_run": "2026-09-05T04:58:09Z",
       "last_event": "workflow_run"
     },
     {
@@ -113,8 +113,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-05T00:30:21Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-05T04:57:43Z",
+      "last_event": "schedule"
     },
     {
       "file": "geo-check.yml",
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-05T04:30:21Z",
+      "last_run": "2026-09-05T05:00:21Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -238,9 +238,9 @@
       "name": "Snapshot Daily Refresh (2.0 KPI)",
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-05T04:45:46Z",
+      "last_event": "schedule"
     },
     {
       "file": "social-backfill.yml",
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-05 04:30",
+    "checked_at": "2026-09-05 05:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
