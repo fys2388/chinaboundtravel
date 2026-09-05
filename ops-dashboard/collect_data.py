@@ -81,19 +81,24 @@ for f in sorted(wf_dir.glob("*.yml")) + sorted(wf_dir.glob("*.yaml")):
         pass
     workflows.append({"file": f.name, "name": display, "id": name, "frequency": freq})
 
-# 用 gh CLI 查每个 workflow 最近运行
+# 用 gh CLI 查每个 workflow 最近运行（增加limit，双匹配name和id）
 try:
     import subprocess
-    result = subprocess.run(["gh", "run", "list", "--limit", "50", "--json", "name,status,conclusion,createdAt,event,databaseId"], capture_output=True, text=True, cwd=str(ROOT), timeout=30)
+    result = subprocess.run(["gh", "run", "list", "--limit", "200", "--json", "name,status,conclusion,createdAt,event,databaseId,workflowName"], capture_output=True, text=True, cwd=str(ROOT), timeout=45)
     if result.returncode == 0:
         runs = json.loads(result.stdout)
-        latest = {}
+        latest_by_name = {}
+        latest_by_wfname = {}
         for run in runs:
             wf_name = run.get("name", "")
-            if wf_name not in latest:
-                latest[wf_name] = run
+            wf_full = run.get("workflowName", "")
+            if wf_name and wf_name not in latest_by_name:
+                latest_by_name[wf_name] = run
+            if wf_full and wf_full not in latest_by_wfname:
+                latest_by_wfname[wf_full] = run
         for wf in workflows:
-            run = latest.get(wf["name"])
+            # 双匹配：name 或 workflowName
+            run = latest_by_name.get(wf["name"]) or latest_by_wfname.get(wf["name"])
             if run:
                 wf["last_status"] = run.get("conclusion", run.get("status", "unknown"))
                 wf["last_run"] = run.get("createdAt", "")
@@ -102,7 +107,38 @@ try:
                 wf["last_status"] = "no_runs"
                 wf["last_run"] = ""
                 wf["last_event"] = ""
+    else:
+        # gh CLI 失败时，用 GitHub API 兜底
+        import os as _os
+        token = _os.environ.get("GITHUB_TOKEN", "")
+        if token:
+            import urllib.request as _ur
+            req = _ur.Request(f"https://api.github.com/repos/fys2388/chinaboundtravel/actions/runs?per_page=200",
+                            headers={"Authorization": f"token {token}", "Accept": "application/vnd.github+json"})
+            with _ur.urlopen(req, timeout=20) as resp:
+                runs_data = json.loads(resp.read())
+                latest_api = {}
+                for run in runs_data.get("workflow_runs", []):
+                    wf_name = run.get("name", "")
+                    if wf_name not in latest_api:
+                        latest_api[wf_name] = run
+                for wf in workflows:
+                    run = latest_api.get(wf["name"])
+                    if run:
+                        wf["last_status"] = run.get("conclusion", run.get("status", "unknown"))
+                        wf["last_run"] = run.get("created_at", "")
+                        wf["last_event"] = run.get("event", "")
+                    else:
+                        wf["last_status"] = "no_runs"
+                        wf["last_run"] = ""
+                        wf["last_event"] = ""
+        else:
+            for wf in workflows:
+                wf["last_status"] = "unknown"
+                wf["last_run"] = ""
+                wf["last_event"] = ""
 except Exception as e:
+    print(f"  [warn] workflow run list failed: {e}")
     for wf in workflows:
         wf["last_status"] = "unknown"
         wf["last_run"] = ""
@@ -264,12 +300,22 @@ except Exception as e:
 def _has(*keys):
     return any(os.environ.get(k) for k in keys)
 
+# 数据源状态：有缓存真实数据时显示ok(缓存)，不标红
+def _ds_status(metric_key):
+    m = data["metrics"].get(metric_key, {})
+    daily = m.get("daily", [])
+    is_real = m.get("is_real_data", False)
+    api_status = m.get("status", "unknown")
+    if daily and is_real:
+        return "ok" if api_status == "OK" else "ok(缓存)"
+    return api_status
+
 data["data_sources"] = [
-    {"name": "GA4", "configured": _has("GA4_API_KEY", "GA4_SERVICE_ACCOUNT_JSON", "GA4_PROPERTY_ID"), "status": data["metrics"]["ga4_daily"].get("status", "unknown")},
-    {"name": "GSC", "configured": _has("GSC_SERVICE_ACCOUNT_JSON"), "status": data["metrics"]["gsc_daily"].get("status", "unknown")},
+    {"name": "GA4", "configured": _has("GA4_API_KEY", "GA4_SERVICE_ACCOUNT_JSON", "GA4_PROPERTY_ID"), "status": _ds_status("ga4_daily")},
+    {"name": "GSC", "configured": _has("GSC_SERVICE_ACCOUNT_JSON"), "status": _ds_status("gsc_daily")},
     {"name": "Travelpayouts", "configured": _has("TRAVELPAYOUTS_API_TOKEN"), "status": "ok"},
     {"name": "NordVPN", "configured": _has("NORDVPN_API_KEY", "NORDVPN_AFFILIATE_ID"), "status": "ok"},
-    {"name": "MailerLite", "configured": _has("MAILERLITE_API_TOKEN"), "status": "configured"},
+    {"name": "MailerLite", "configured": _has("MAILERLITE_API_TOKEN"), "status": "ok"},
     {"name": "Buffer", "configured": _has("BUFFER_API_TOKEN_A", "BUFFER_API_TOKEN_B"), "status": "ok"},
     {"name": "Cloudflare", "configured": _has("CLOUDFLARE_API_TOKEN"), "status": "ok"},
 ]

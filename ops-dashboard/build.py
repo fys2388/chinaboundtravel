@@ -159,6 +159,7 @@ running_exp = sum(1 for e in data["experiments"] if e["status"] == "RUNNING")
 waiting_exp = sum(1 for e in data["experiments"] if e["status"] == "WAITING_RECRAWL")
 pending_exp = sum(1 for e in data["experiments"] if e["status"] == "PENDING")
 healthy_agents = data["agents"].get("healthy_count", 0)
+total_agents = len(data["agents"].get("agents", [])) or 7
 
 # Format update time to hour precision (cron runs at exact hours)
 _update_raw = data.get("generated_at", "")
@@ -375,7 +376,7 @@ body {{
       </div>
       <div class="pill pill-blue">
         <span class="dot live" style="background:{overall_color}"></span>
-        AI Agent {overall} ({healthy_agents}/7)
+        AI Agent {overall} ({healthy_agents}/{total_agents})
       </div>
       <div class="pill {'pill-red' if kill_active else 'pill-green'}">
         <span class="dot" style="background:{kill_color}"></span>
@@ -421,7 +422,7 @@ body {{
       <div class="kpi-sub">{waiting_exp} 待重爬 · {pending_exp} 待启动</div>
     </div>
     <div class="kpi k5">
-      <div class="kpi-label">Workflow 成功率</div>
+      <div class="kpi-label">运行成功率</div>
       <div class="kpi-value">{round(ok_wf/active_wf*100) if active_wf else 0}%</div>
       <div class="kpi-sub">{ok_wf}成功 · {fail_wf}失败 · {noruns_wf}未运行</div>
     </div>
@@ -626,5 +627,5 @@ body {{
 (ROOT / "index.html").write_text(html, encoding="utf-8")
 print(f"✅ index.html generated: {len(html)} bytes")
 print(f"   Workflow categories: {list(categories.keys())}")
-print(f"   Agents: {healthy_agents}/7 healthy")
+print(f"   Agents: {healthy_agents}/{total_agents} healthy")
 print(f"   Experiments: {len(data['experiments'])}")
