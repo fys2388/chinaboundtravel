@@ -304,7 +304,9 @@ async function handlePublish(request, env, ctx) {
     }
 
     // ========== 内容去重检查 ==========
-    const contentKey = `${title}::${postUrl || ''}::${body.custom_text ? body.custom_text.slice(0, 60) : 'default'}`;
+    // 去重键含 content_variant：不同平台/内容类型组合独立计数，
+    // 且新结构 hash 绕开历史 30 天/无 TTL 旧记录（存量素材 7 天复活周期可重新发布）
+    const contentKey = `${title}::${postUrl || ''}::${body.custom_text ? body.custom_text.slice(0, 60) : 'default'}::${contentVariant || ''}`;
     const contentHash = await sha256(contentKey);
     const dedupKey = `dedup:${contentHash}`;
     const alreadyPosted = await env.KV_STORE.get(dedupKey);
@@ -424,7 +426,7 @@ async function handlePublish(request, env, ctx) {
     if (allResults.success.length > 0) {
       await incrementDailyPublishCount(env);
       await env.KV_STORE.put(dedupKey, new Date().toISOString(), {
-        expirationTtl: 30 * 24 * 60 * 60
+        expirationTtl: 7 * 24 * 60 * 60  // 7 天去重窗口，匹配存量素材复活周期
       });
     }
 
