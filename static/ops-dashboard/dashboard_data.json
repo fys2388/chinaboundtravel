@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-06 14:30:50",
+  "generated_at": "2026-09-06 15:00:53",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 304,
+    "response_ms": 829,
     "server": "cloudflare"
   },
   "workflows": [
@@ -40,9 +40,9 @@
       "name": "Content Quality Audit (2.0 内容质量综合巡检)",
       "id": "content-quality-audit",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-06T06:45:55Z",
+      "last_event": "schedule"
     },
     {
       "file": "content-rotation.yml",
@@ -50,7 +50,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-05T16:24:16Z",
+      "last_run": "2026-09-06T06:41:03Z",
       "last_event": "schedule"
     },
     {
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-06T06:01:09Z",
+      "last_run": "2026-09-06T06:46:25Z",
       "last_event": "workflow_run"
     },
     {
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-06T06:30:40Z",
+      "last_run": "2026-09-06T07:00:40Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -203,7 +203,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-05T18:56:21Z",
+      "last_run": "2026-09-06T06:41:41Z",
       "last_event": "workflow_run"
     },
     {
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-06 06:30",
+    "checked_at": "2026-09-06 07:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
