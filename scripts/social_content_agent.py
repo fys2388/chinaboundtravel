@@ -184,9 +184,11 @@ DEFAULT_TOP_N = 20        # 首批拆解 Top20 篇
 ITEMS_PER_ARTICLE = 5     # 每篇 5 条（覆盖 5 种 type）
 REWRITE_ATTEMPTS = 3      # 品牌校验失败自动重写轮数
 COOLDOWN_DAYS = 7         # 同篇 7 天内不重复发布
+REUSE_COOLDOWN_DAYS = 7    # 已发布素材 7 天后复活重新排期（存量循环：无新文章也每天有内容发）
 
 # P2-SOCIAL-01: 单平台每日发布上限 + 智能时间分布
 MAX_PER_PLATFORM_PER_DAY = 5  # 每个平台每天最多5条
+DAILY_SOCIAL_LIMIT = 5     # 每日社媒发布总量上限（与 manifest / social_publisher 统一为 5）
 # 每个平台的发布时间窗口（美东时间 EST），均匀分布到3个活跃窗口：
 #   morning 08:00-10:00 / lunch 12:00-14:00 / prime 20:00-22:00
 # 各平台时间错开，避免同一时间集中发布
@@ -704,27 +706,10 @@ def select_top_articles(n: int) -> list:
 # ============================================================
 
 
-def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
-                    inventory_path: Path = INVENTORY_FILE) -> dict:
-    """拆解 Top-N 文章，每篇生成 5 条（5 种 type）素材入库。
-
-    平台分配：为保证 4 平台都覆盖且每篇 5 种 type 齐备，对每篇内部按
-    type 顺序轮换平台，使整批整体均衡（约各占 25%）。
-    """
-    log_section(logger, "构建社媒内容资产库 build-inventory")
-    data = load_inventory(inventory_path)
-    sigs = existing_signatures(data)
-    if sigs and not force:
-        logger.info("资产库已有 %d 条，使用 --force 重新生成", len(sigs))
-        return data
-
-    articles = select_top_articles(top_n)
-    logger.info("选文 Top-%d: %s", len(articles),
-                ", ".join(a["slug"] for a in articles))
-
+def _generate_for_articles(data: dict, articles: list, sigs: set) -> list:
+    """为给定文章列表生成素材并追加到 data（共用生成逻辑）。返回新增素材列表。"""
     campaign = f"cbt_social_{date.today().strftime('%Y%m%d')}"
     created = []
-    # 平台轮换：让 4 平台整体均衡
     platform_cycle = ["ig", "pinterest", "x", "fb"]
     for ai, article in enumerate(articles):
         for ti, ctype in enumerate(TYPES):
@@ -778,9 +763,47 @@ def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
             data["items"].append(item)
             sigs.add(item["_sig"])
             created.append(item)
+    return created
 
+
+def build_inventory(top_n: int = DEFAULT_TOP_N, force: bool = False,
+                    inventory_path: Path = INVENTORY_FILE) -> dict:
+    """拆解 Top-N 文章，每篇生成 5 条（5 种 type）素材入库。
+
+    平台分配：为保证 4 平台都覆盖且每篇 5 种 type 齐备，对每篇内部按
+    type 顺序轮换平台，使整批整体均衡（约各占 25%）。
+
+    增量模式（默认）：资产库已有内容时，自动补充「未入库的新文章」素材，
+    已入库文章不重复生成；--force 则全量重建。
+    """
+    log_section(logger, "构建社媒内容资产库 build-inventory")
+    data = load_inventory(inventory_path)
+    sigs = existing_signatures(data)
+
+    if force or not data.get("items"):
+        # 全量重建：覆盖所有入选文章
+        articles = select_top_articles(top_n)
+        logger.info("全量重建，选文 Top-%d: %s", len(articles),
+                    ", ".join(a["slug"] for a in articles))
+        created = _generate_for_articles(data, articles, sigs)
+        save_inventory(data, inventory_path)
+        logger.info("新增 %d 条素材，资产库共 %d 条", len(created), len(data["items"]))
+        return data
+
+    # 增量模式：只补充未入库的新文章
+    existing_articles = {i.get("source_article") for i in data.get("items", [])}
+    articles = select_top_articles(max(top_n * 2, 30))
+    new_articles = [a for a in articles if a["slug"] not in existing_articles]
+    if not new_articles:
+        logger.info("资产库已有 %d 条，无新文章需要入库（%d 篇已覆盖）",
+                    len(sigs), len(existing_articles))
+        return data
+
+    logger.info("增量补充 %d 篇新文章素材: %s", len(new_articles),
+                ", ".join(a["slug"] for a in new_articles))
+    created = _generate_for_articles(data, new_articles, sigs)
     save_inventory(data, inventory_path)
-    logger.info("新增 %d 条素材，资产库共 %d 条", len(created), len(data["items"]))
+    logger.info("增量新增 %d 条素材，资产库共 %d 条", len(created), len(data["items"]))
     return data
 
 # ============================================================
@@ -885,8 +908,15 @@ def build_schedule(data: dict, start_date: date = None) -> list:
             day_items = {"date": cursor.isoformat(), "slots": []}
         # P2-SOCIAL-01: 按平台智能分布到活跃窗口
         platform_count = per_day_by_platform.get(platform, 0)
+        # 每日总量上限（与 manifest daily_social_publish_limit 统一），达到后顺延到次日
+        if len(day_items["slots"]) >= DAILY_SOCIAL_LIMIT:
+            schedule.append(day_items)
+            cursor = cursor + timedelta(days=1)
+            per_day_by_platform = {}
+            day_items = {"date": cursor.isoformat(), "slots": []}
+            platform_count = 0
         # 检查该平台当天是否已达上限
-        if platform_count >= MAX_PER_PLATFORM_PER_DAY:
+        elif platform_count >= MAX_PER_PLATFORM_PER_DAY:
             if day_items["slots"]:
                 schedule.append(day_items)
             cursor = cursor + timedelta(days=1)
@@ -1411,8 +1441,65 @@ def _parse_date(arg: str):
     return date.fromisoformat(arg)
 
 
+def recycle_expired_items(data: dict, cooldown_days: int = REUSE_COOLDOWN_DAYS) -> int:
+    """素材轮换复活：已发布超过冷却期的素材重新生成文案，回到待审核池。
+
+    网站不会每天新增文章，但社媒每天需要发布内容。
+    存量素材发布满一轮后，超过冷却期的自动复活（重新生成 caption 避免内容重复），
+    保证"待审核"池始终有素材可排期，实现存量循环发布。
+    """
+    today = date.today()
+    recycled = 0
+    items = data.get("items", [])
+    for it in items:
+        if it.get("status") != "已发布":
+            continue
+        pub = it.get("publish_date") or ""
+        try:
+            pub_dt = date.fromisoformat(pub)
+        except Exception:
+            continue
+        if (today - pub_dt).days < cooldown_days:
+            continue
+        # 重新生成文案（模板生成，不依赖 LLM）
+        article = {
+            "slug": it.get("source_article", ""),
+            "title": it.get("source_title", ""),
+            "url": f"https://www.{SITE_DOMAIN}/{it.get('source_article', '')}/",
+            "description": "",
+            "cover": it.get("image_url", ""),
+        }
+        campaign = f"cbt_social_{today.strftime('%Y%m%d')}"
+        try:
+            gen = generate_one(article, it.get("type", "knowledge"),
+                               it.get("platform", "x"), campaign)
+            text = gen["text"]
+            text = llm_enhance(article, it.get("type", "knowledge"),
+                               it.get("platform", "x"), text)
+            ok, res = validate_copy(text)
+            if not ok:
+                text = gen["text"]
+        except Exception as _e:
+            logger.warning("素材复活重生成失败 %s: %s", it.get("id", "?"), _e)
+            continue
+        it["caption"] = text
+        it["status"] = "待审核"
+        it["publish_date"] = ""
+        it["recycled_at"] = today.isoformat()
+        it["recycle_count"] = it.get("recycle_count", 0) + 1
+        recycled += 1
+    if recycled:
+        save_inventory(data)
+    return recycled
+
+
 def _cmd_plan(args) -> int:
     data = load_inventory()
+    # 先复活过期素材，保证待审核池不空（存量循环）
+    recycled = recycle_expired_items(data)
+    if recycled:
+        logger.info("素材轮换复活 %d 条（已发布超 %d 天，重新生成文案回到待审核池）",
+                    recycled, REUSE_COOLDOWN_DAYS)
     start = _parse_date(args.date)
     sched = build_schedule(data, start_date=start)
     out = SOCIAL_REPORTS_DIR / f"social_schedule_{date.today().isoformat()}.json"
