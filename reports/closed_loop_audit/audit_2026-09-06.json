@@ -1,41 +1,43 @@
 {
   "audit_date": "2026-09-06",
-  "audited_at": "2026-09-06T09:57:10.693275",
+  "audited_at": "2026-09-06T10:27:55.710219",
   "score": {
-    "total_score": 57.5,
+    "total_score": 47.5,
     "max_score": 100,
-    "percentage": 57.5,
+    "percentage": 47.5,
     "stage_scores": {
-      "detection": 20,
+      "detection": 10.0,
       "assignment": 0,
       "execution": 12.5,
       "writeback": 20,
       "dashboard": 5.0
     },
-    "grade": "C"
+    "grade": "D"
   },
   "audits": [
     {
       "stage": "detection",
-      "status": "pass",
-      "issues": [],
+      "status": "warn",
+      "issues": [
+        "site_health 检测到0个问题（可能检测未运行）"
+      ],
       "details": {
-        "site_health_total": 37,
+        "site_health_total": 0,
         "site_health_file": "site_health_2026-09-06.json",
-        "daily_issues_count": 37
+        "daily_issues_count": 15
       }
     },
     {
       "stage": "assignment",
       "status": "fail",
       "issues": [
-        "37/37 个问题未分配",
+        "15/15 个问题未分配",
         "没有生成任何 Agent 任务文件"
       ],
       "details": {
-        "total": 37,
+        "total": 15,
         "assigned": 0,
-        "unassigned": 37,
+        "unassigned": 15,
         "assignment_rate": "0.0%",
         "agent_tasks": 0
       }
@@ -53,7 +55,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "need_manual": 37,
+        "need_manual": 0,
         "resolved": 17,
         "execution_log_exists": true,
         "total_executions": 8
@@ -63,20 +65,21 @@
       "stage": "dashboard",
       "status": "warn",
       "issues": [
-        "看板 pending(0) 与实际(37) 不一致"
+        "看板 pending(37) 与实际(0) 不一致"
       ],
       "details": {
-        "dashboard_pending": 0,
-        "actual_pending": 37,
+        "dashboard_pending": 37,
+        "actual_pending": 0,
         "ga4_daily_days": 7,
         "gsc_daily_days": 7
       }
     }
   ],
   "all_issues": [
-    "[assignment] 37/37 个问题未分配",
+    "[detection] site_health 检测到0个问题（可能检测未运行）",
+    "[assignment] 15/15 个问题未分配",
     "[assignment] 没有生成任何 Agent 任务文件",
     "[execution] 没有 Agent 任务文件",
-    "[dashboard] 看板 pending(0) 与实际(37) 不一致"
+    "[dashboard] 看板 pending(37) 与实际(0) 不一致"
   ]
 }
