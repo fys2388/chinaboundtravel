@@ -1,4 +1,4 @@
-﻿name: Site Health Daily Check
+name: Site Health Daily Check (Full Closed Loop)
 
 on:
   schedule:
@@ -25,6 +25,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests python-dotenv google-auth google-auth-httplib2
+
       - name: Check Kill Switch
         id: kill_switch
         run: |
@@ -39,7 +44,7 @@ jobs:
               print('KILL_SWITCH_ENABLED=false')
           "
 
-      - name: Run Site Health Check
+      - name: [1/6] Run Site Health Check (检测)
         id: health_check
         run: |
           if [ "${{ github.event.inputs.no_fix }}" == "true" ]; then
@@ -48,33 +53,60 @@ jobs:
             python scripts/site_health_agent.py
           fi
 
-      - name: Route Unresolved Issues
+      - name: [2/6] Route Issues to Agents (分配)
         if: success()
         run: |
           ISSUES_FILE="reports/daily_issues/site_health_issues_$(date +%Y-%m-%d).json"
           if [ -f "$ISSUES_FILE" ]; then
-            echo "Found unresolved issues, routing to agents..."
+            echo "Found issues, routing to agents..."
             python scripts/daily_issue_router.py --source site_health || true
           else
-            echo "No unresolved issues from Site Health Agent"
+            echo "No issues file found"
           fi
 
-      - name: Commit Auto-Fixes
+      - name: [3/6] Execute Agent Tasks (执行)
+        if: success()
+        run: |
+          echo "Executing pending agent tasks..."
+          python scripts/agent_task_executor.py || true
+
+      - name: [4/6] Closed Loop Audit (审计)
+        if: success()
+        id: audit
+        run: |
+          echo "Running closed loop audit..."
+          python scripts/closed_loop_audit.py --date $(date +%Y-%m-%d) || true
+          echo "Audit complete"
+
+      - name: [5/6] Regenerate Dashboard (看板更新)
+        if: success()
+        run: |
+          echo "Regenerating ops dashboard..."
+          python ops-dashboard/collect_data.py || true
+          python ops-dashboard/build.py || true
+          cp ops-dashboard/index.html static/ops-dashboard/index.html
+          cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
+          echo "Dashboard regenerated"
+
+      - name: [6/6] Commit & Push (提交)
         if: success()
         run: |
           git config --local user.email "ai-agent@chinaboundtravel.com"
-          git config --local user.name "Site Health Agent"
+          git config --local user.name "Closed Loop Agent"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "fix(site-health): auto-fix by Site Health Agent [skip ci]"
+            git commit -m "fix(closed-loop): auto detect→assign→execute→audit by Site Health Agent [skip ci]"
             git push
           fi
 
-      - name: Upload Report
+      - name: Upload Reports
         uses: actions/upload-artifact@v4
         with:
-          name: site-health-report
-          path: reports/site_health/
+          name: closed-loop-reports
+          path: |
+            reports/site_health/
+            reports/daily_issues/
+            reports/closed_loop_audit/
           retention-days: 30

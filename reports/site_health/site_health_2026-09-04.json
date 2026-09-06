@@ -14,7 +14,8 @@
     "resolved": 24,
     "false_positive": 2,
     "agent_resolved": 22,
-    "last_updated": "2026-09-04T15:49:45.901926"
+    "last_updated": "2026-09-04T16:04:00.688549",
+    "in_progress": 0
   },
   "issues": [
     {
@@ -26,7 +27,8 @@
       "agent": "site_health",
       "assigned": true,
       "status": "false_positive",
-      "resolution_note": "本地网络误报，线上正常"
+      "resolution_note": "线上HTTP 200正常，本地代理导致验证失败",
+      "resolved_by": "site_health_agent"
     },
     {
       "type": "content_placeholder",
@@ -136,7 +138,8 @@
       "agent": "site_health",
       "assigned": true,
       "status": "false_positive",
-      "resolution_note": "本地网络误报，线上正常"
+      "resolution_note": "本地网络连接拒绝，非线上SSL问题",
+      "resolved_by": "site_health_agent"
     },
     {
       "type": "title_too_short",

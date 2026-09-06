@@ -55,5 +55,12 @@
   "expected_actions": [
     "verify_and_alert"
   ],
-  "status": "pending"
+  "status": "partial",
+  "updated_at": "2026-09-04T16:03:46.751040",
+  "execution": {
+    "resolved_count": 1,
+    "failed_count": 1,
+    "completed_at": null,
+    "note": "resolved=1, need_manual=0, failed=1"
+  }
 }

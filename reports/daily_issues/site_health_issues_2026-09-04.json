@@ -14,7 +14,10 @@
       "assigned_at": "2026-09-04T15:48:14.145450",
       "status": "false_positive",
       "resolved_note": "本地网络误报，线上网站正常（HTTP 200）",
-      "resolved_at": "2026-09-04T15:48:14.145536"
+      "resolved_at": "2026-09-04T16:04:00.680362",
+      "resolved_by": "site_health_agent",
+      "resolution_note": "线上HTTP 200正常，本地代理导致验证失败",
+      "updated_at": "2026-09-04T16:04:00.680339"
     },
     {
       "type": "content_placeholder",
@@ -154,7 +157,10 @@
       "assigned_at": "2026-09-04T15:48:14.145500",
       "status": "false_positive",
       "resolved_note": "本地网络误报，线上网站正常（HTTP 200）",
-      "resolved_at": "2026-09-04T15:48:14.145539"
+      "resolved_at": "2026-09-04T16:03:46.741641",
+      "resolved_by": "site_health_agent",
+      "resolution_note": "本地网络连接拒绝，非线上SSL问题",
+      "updated_at": "2026-09-04T16:03:46.741616"
     },
     {
       "type": "title_too_short",

@@ -23,5 +23,41 @@
     "fixed": 382,
     "failed": 0,
     "skipped": 174
-  }
+  },
+  "executions": [
+    {
+      "task_id": "task_2026-09-04_site_health",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-09-04T16:03:42.652310"
+    },
+    {
+      "task_id": "task_2026-09-04_site_health",
+      "status": "partial",
+      "resolved": 1,
+      "failed": 1,
+      "note": "resolved=1, need_manual=0, failed=1",
+      "executed_at": "2026-09-04T16:03:46.757279"
+    },
+    {
+      "task_id": "task_2026-09-04_social",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-09-04T16:03:46.764644"
+    },
+    {
+      "task_id": "task_2026-09-04_social",
+      "status": "completed",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=1, failed=0",
+      "executed_at": "2026-09-04T16:03:46.791231"
+    }
+  ],
+  "last_run": "2026-09-04T16:03:46.791241",
+  "total_executions": 4
 }

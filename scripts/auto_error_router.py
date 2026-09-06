@@ -13,6 +13,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from error_handler import ErrorHandler
+from status_writeback import writeback_workflow
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "fys2388/chinaboundtravel")
 FEISHU_WEBHOOK = os.environ.get("FEISHU_WEBHOOK_URL", "")
@@ -256,6 +257,33 @@ def main():
 
     print("\n[5/5] Result:")
     print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    # [6/6] 回写修复状态到 workflow_fix_log
+    fix_status = "unknown"
+    fix_note = ""
+    if result.get("fixed"):
+        fix_status = "fixed"
+        fix_note = f"自动修复成功(category={category})"
+        if result.get("retried"):
+            fix_note += ", 已自动重试"
+    elif result.get("retried"):
+        fix_status = "retried"
+        fix_note = f"已自动重试(category={category})"
+    elif result.get("issue_url"):
+        fix_status = "needs_manual"
+        fix_note = f"已创建Issue: {result['issue_url']}"
+    else:
+        fix_status = "alerted"
+        fix_note = f"已发送飞书告警(category={category})"
+
+    writeback_workflow(
+        workflow_name=workflow_name,
+        status=fix_status,
+        fixed_by=f"auto_error_router:{route['agent']}",
+        fix_note=fix_note,
+    )
+    print(f"  [writeback] {workflow_name} -> {fix_status}")
+
     print("\n=== Auto Error Router complete ===")
 
 

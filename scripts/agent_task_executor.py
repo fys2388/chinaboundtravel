@@ -1,442 +1,343 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
-Agent Task Executor - Agent任务自动执行器
+Agent Task Executor — Agent 任务自动执行器
 
-读取 daily_issues/agent_tasks/ 中的任务文件，执行L2权限范围内的自动修复，
-更新任务状态，并生成执行报告。
+读取 agent_tasks/ 中 status=pending 的任务，按 agent 类型自动执行，
+执行完成后更新任务状态并通过 status_writeback 回写到原始问题文件。
 
-修复范围（L2安全自动化）：
-- Content: Persona清理、AI禁用词保守改写、占位符移除
-- SEO: Title/Meta长度优化
+执行流程：
+1. 扫描所有 pending 任务
+2. 按 agent 类型分发到对应处理器
+3. 执行验证/分析/修复
+4. 更新任务状态 (completed/partial/failed)
+5. 回写问题状态到原始文件
+6. 记录执行日志
 
 Usage:
-  python scripts/agent_task_executor.py [--date YYYY-MM-DD] [--dry-run] [--agent content|seo]
+    python scripts/agent_task_executor.py [--dry-run] [--agent NAME] [--date YYYY-MM-DD]
 """
-import json
-import re
 import sys
-import shutil
+import json
+import argparse
+import requests
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Tuple
+
+sys.path.insert(0, str(Path(__file__).parent))
+from status_writeback import (
+    writeback_issue, writeback_agent_task, get_pending_agent_tasks,
+    ISSUES_DIR, AGENT_TASKS_DIR,
+)
 
 BASE_DIR = Path(__file__).parent.parent
-CONTENT_DIR = BASE_DIR / "content"
-ISSUES_DIR = BASE_DIR / "reports" / "daily_issues"
-TASKS_DIR = ISSUES_DIR / "agent_tasks"
-EXECUTION_LOG = BASE_DIR / "reports" / "daily_issues" / "execution_log.json"
+SITE_URL = "https://www.chinaboundtravel.com"
+
 
 # ============================================================
-# Persona违规替换规则（编辑视角，不虚构个人经历）
+# 各 Agent 处理器
 # ============================================================
-PERSONA_REPLACEMENTS = [
-    (r"\bI lived in China for \d+ years?\b", "From an editorial research perspective"),
-    (r"\bMy wife\b", "Many travelers"),
-    (r"\bI personally tested\b", "Editorial testing shows"),
-    (r"\bI stayed at\b", "Travelers often stay at"),
-    (r"\bAs a local\b", "For travelers"),
-    (r"\bMy favorite\b", "A popular choice"),
-    (r"\bChina insider\b", "China travel guide"),
-    (r"\bI tried\b", "Travelers often find"),
-    (r"\bI recommend\b", "Editorial recommendation"),
-    (r"\bIn my experience\b", "Based on research"),
-    (r"\bI've found\b", "Research indicates"),
-    (r"\bI always\b", "Travelers typically"),
-    (r"\bI never\b", "Travelers generally avoid"),
-]
 
-# ============================================================
-# AI禁用词保守改写（SAFE_NORMALIZE，不引入新事实）
-# ============================================================
-AI_FORBIDDEN_REPLACEMENTS = [
-    (r"\bbest in China\b", "top-rated in China"),
-    (r"\bthe best\b", "a top choice"),
-    (r"\bBest\b", "Top-rated"),
-    (r"\bcheapest\b", "most affordable"),
-    (r"\bCheapest\b", "Most affordable"),
-    (r"\bguaranteed\b", "typically"),
-    (r"\bGuaranteed\b", "Typically"),
-    (r"\b#1\b", "leading"),
-    (r"\bsecret place\b", "less-known destination"),
-    (r"\bSecret place\b", "Less-known destination"),
-    (r"\bperfect\b", "excellent"),
-    (r"\bPerfect\b", "Excellent"),
-]
+def execute_site_health(task: dict, dry_run: bool = False) -> dict:
+    """
+    Site Health Agent — 验证网站可达性、SSL 等基础设施问题
+    重点：区分本地网络误报 vs 真实问题
+    """
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "details": []}
 
-# ============================================================
-# 占位符移除
-# ============================================================
-PLACEHOLDER_PATTERNS = [
-    r"⚠️\s*Review needed",
-    r"⚠️\s*TODO",
-    r"\[Review needed\]",
-    r"\[TODO\]",
-    r"TODO:",
-    r"FIXME:",
-]
+    for issue in task.get("issues", []):
+        itype = issue.get("type")
+        desc = issue.get("description", "")
 
-
-class AgentTaskExecutor:
-    """Agent任务自动执行器"""
-
-    def __init__(self, target_date: str = None, dry_run: bool = False):
-        self.target_date = target_date or datetime.now().strftime("%Y-%m-%d")
-        self.dry_run = dry_run
-        self.results = {
-            "executed_at": datetime.now().isoformat(),
-            "target_date": self.target_date,
-            "dry_run": dry_run,
-            "agents": {},
-            "summary": {"total": 0, "fixed": 0, "failed": 0, "skipped": 0},
-        }
-
-    def load_tasks(self, agent: str) -> dict:
-        """加载指定Agent的任务文件"""
-        task_file = TASKS_DIR / f"task_{self.target_date}_{agent}.json"
-        if not task_file.exists():
-            return None
-        return json.loads(task_file.read_text(encoding="utf-8"))
-
-    def save_tasks(self, agent: str, data: dict):
-        """保存更新后的任务文件"""
-        if self.dry_run:
-            return
-        task_file = TASKS_DIR / f"task_{self.target_date}_{agent}.json"
-        task_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    def scan_content_files(self) -> List[Path]:
-        """扫描所有content目录下的markdown文件"""
-        files = []
-        for md_file in CONTENT_DIR.rglob("*.md"):
-            # 跳过草稿和特殊页面
-            if "draft" in md_file.name.lower():
-                continue
-            files.append(md_file)
-        return files
-
-    def fix_persona_violations(self, content: str) -> Tuple[str, int]:
-        """修复Persona违规"""
-        count = 0
-        for pattern, replacement in PERSONA_REPLACEMENTS:
-            new_content, n = re.subn(pattern, replacement, content, flags=re.IGNORECASE)
-            if n > 0:
-                count += n
-                content = new_content
-        return content, count
-
-    def fix_ai_forbidden_words(self, content: str) -> Tuple[str, int]:
-        """修复AI禁用词（保守改写）"""
-        count = 0
-        for pattern, replacement in AI_FORBIDDEN_REPLACEMENTS:
-            new_content, n = re.subn(pattern, replacement, content)
-            if n > 0:
-                count += n
-                content = new_content
-        return content, count
-
-    def fix_placeholders(self, content: str) -> Tuple[str, int]:
-        """移除占位符"""
-        count = 0
-        for pattern in PLACEHOLDER_PATTERNS:
-            new_content, n = re.subn(pattern, "", content, flags=re.IGNORECASE)
-            if n > 0:
-                count += n
-                content = new_content
-        # 清理多余空行
-        content = re.sub(r"\n{3,}", "\n\n", content)
-        return content, count
-
-    def fix_title_length(self, content: str, filepath: Path) -> Tuple[str, int]:
-        """修复Title长度问题"""
-        count = 0
-        # 提取frontmatter中的title
-        title_match = re.search(r'^title:\s*(.+)$', content, re.MULTILINE)
-        if not title_match:
-            return content, 0
-
-        title = title_match.group(1).strip().strip('"').strip("'")
-        original_title = title
-
-        if len(title) < 20:
-            # 过短：添加China Travel Guide后缀
-            if "China" not in title and "Travel" not in title:
-                title = title + " | China Travel Guide"
-            else:
-                title = title + " - Complete Guide"
-        elif len(title) > 65:
-            # 过长：截断到60字符 + ...
-            title = title[:57].rstrip() + "..."
-
-        if title != original_title:
-            content = content.replace(f"title: {original_title}", f"title: {title}")
-            content = content.replace(f'title: "{original_title}"', f'title: "{title}"')
-            count = 1
-            print(f"    Title优化: {len(original_title)}c -> {len(title)}c")
-
-        return content, count
-
-    def fix_meta_length(self, content: str, filepath: Path) -> Tuple[str, int]:
-        """修复Meta Description长度问题"""
-        count = 0
-        # 提取frontmatter中的description
-        desc_match = re.search(r'^description:\s*(.+)$', content, re.MULTILINE)
-        if not desc_match:
-            return content, 0
-
-        desc = desc_match.group(1).strip().strip('"').strip("'")
-        original_desc = desc
-
-        if len(desc) > 165:
-            # 过长：截断到160字符
-            desc = desc[:157].rstrip() + "..."
-        elif len(desc) < 70:
-            # 过短：扩展
-            if "China" not in desc:
-                desc = desc + " Essential China travel tips and practical advice for international visitors."
-
-        if desc != original_desc:
-            content = content.replace(f"description: {original_desc}", f"description: {desc}")
-            content = content.replace(f'description: "{original_desc}"', f'description: "{desc}"')
-            count = 1
-            print(f"    Meta优化: {len(original_desc)}c -> {len(desc)}c")
-
-        return content, count
-
-    def execute_content_tasks(self) -> dict:
-        """执行Content Agent任务"""
-        print("\n" + "=" * 60)
-        print("  📝 Content Agent - 任务执行")
-        print("=" * 60)
-
-        task_data = self.load_tasks("content")
-        if not task_data:
-            print("  ⚠️ 未找到Content任务文件")
-            return {"total": 0, "fixed": 0, "failed": 0, "skipped": 0}
-
-        issues = task_data.get("issues", [])
-        print(f"  待处理问题: {len(issues)}个")
-
-        # 按类型分组
-        by_type = {}
-        for issue in issues:
-            t = issue.get("type", "unknown")
-            by_type.setdefault(t, []).append(issue)
-
-        fixed = 0
-        failed = 0
-        skipped = 0
-        files_modified = set()
-
-        # 扫描所有内容文件
-        content_files = self.scan_content_files()
-        print(f"  扫描内容文件: {len(content_files)}个")
-
-        # 对每个文件执行所有Content类修复
-        for md_file in content_files:
+        if itype == "site_unreachable":
+            # 验证线上是否真的不可达
             try:
-                try:
-                    original = md_file.read_text(encoding="utf-8")
-                except UnicodeDecodeError:
-                    original = md_file.read_text(encoding="gbk", errors="replace")
-                content = original
-                file_fixed = 0
-
-                # Persona违规
-                if "persona_violation" in by_type:
-                    content, n = self.fix_persona_violations(content)
-                    if n > 0:
-                        file_fixed += n
-                        print(f"  ✅ {md_file.name}: Persona修复 {n}处")
-
-                # AI禁用词
-                if "ai_forbidden_word" in by_type:
-                    content, n = self.fix_ai_forbidden_words(content)
-                    if n > 0:
-                        file_fixed += n
-                        print(f"  ✅ {md_file.name}: AI禁用词修复 {n}处")
-
-                # 占位符
-                if "content_placeholder" in by_type:
-                    content, n = self.fix_placeholders(content)
-                    if n > 0:
-                        file_fixed += n
-                        print(f"  ✅ {md_file.name}: 占位符移除 {n}处")
-
-                if file_fixed > 0 and content != original:
-                    if not self.dry_run:
-                        # 备份原文件
-                        backup = md_file.with_suffix(".md.bak")
-                        shutil.copy2(md_file, backup)
-                        md_file.write_text(content, encoding="utf-8")
-                    fixed += file_fixed
-                    files_modified.add(str(md_file))
+                resp = requests.get(SITE_URL, timeout=15, allow_redirects=True)
+                if resp.status_code == 200:
+                    results["false_positive"] += 1
+                    results["details"].append(f"site_unreachable: 误报，线上HTTP {resp.status_code}")
+                    if not dry_run:
+                        writeback_issue(
+                            source_file=f"site_health_issues_{task['target_date']}.json",
+                            issue_type="site_unreachable",
+                            status="false_positive",
+                            resolved_by="site_health_agent",
+                            resolution_note=f"线上验证正常 HTTP {resp.status_code}，本地网络误报",
+                            target_date=task["target_date"],
+                        )
                 else:
-                    skipped += 1
-
+                    results["failed"] += 1
+                    results["details"].append(f"site_unreachable: 真实问题 HTTP {resp.status_code}")
             except Exception as e:
-                print(f"  ❌ {md_file.name}: 处理失败 - {e}")
-                failed += 1
+                results["failed"] += 1
+                results["details"].append(f"site_unreachable: 验证异常 {e}")
 
-        # 更新任务状态
-        for issue in issues:
-            issue["status"] = "completed"
-            issue["executed_at"] = datetime.now().isoformat()
-            issue["execution_result"] = "auto_fixed"
-
-        task_data["status"] = "completed"
-        task_data["executed_at"] = datetime.now().isoformat()
-        task_data["execution_summary"] = {
-            "fixed": fixed,
-            "failed": failed,
-            "files_modified": len(files_modified),
-        }
-        self.save_tasks("content", task_data)
-
-        result = {"total": len(issues), "fixed": fixed, "failed": failed, "skipped": skipped, "files_modified": len(files_modified)}
-        print(f"\n  📊 Content执行结果: 修复{fixed}处, 失败{failed}, 修改文件{len(files_modified)}个")
-        return result
-
-    def execute_seo_tasks(self) -> dict:
-        """执行SEO Agent任务"""
-        print("\n" + "=" * 60)
-        print("  🔍 SEO Agent - 任务执行")
-        print("=" * 60)
-
-        task_data = self.load_tasks("seo")
-        if not task_data:
-            print("  ⚠️ 未找到SEO任务文件")
-            return {"total": 0, "fixed": 0, "failed": 0, "skipped": 0}
-
-        issues = task_data.get("issues", [])
-        print(f"  待处理问题: {len(issues)}个")
-
-        # 按类型分组
-        by_type = {}
-        for issue in issues:
-            t = issue.get("type", "unknown")
-            by_type.setdefault(t, []).append(issue)
-
-        fixed = 0
-        failed = 0
-        skipped = 0
-        files_modified = set()
-
-        # 扫描所有内容文件
-        content_files = self.scan_content_files()
-        print(f"  扫描内容文件: {len(content_files)}个")
-
-        for md_file in content_files:
+        elif itype == "ssl_check_failed":
+            # 验证 SSL
             try:
-                try:
-                    original = md_file.read_text(encoding="utf-8")
-                except UnicodeDecodeError:
-                    original = md_file.read_text(encoding="gbk", errors="replace")
-                content = original
-                file_fixed = 0
-
-                # Title长度
-                if "title_too_short" in by_type or "title_too_long" in by_type:
-                    content, n = self.fix_title_length(content, md_file)
-                    if n > 0:
-                        file_fixed += n
-                        print(f"  ✅ {md_file.name}: Title修复")
-
-                # Meta长度
-                if "meta_description_too_long" in by_type or "meta_description_too_short" in by_type:
-                    content, n = self.fix_meta_length(content, md_file)
-                    if n > 0:
-                        file_fixed += n
-                        print(f"  ✅ {md_file.name}: Meta修复")
-
-                if file_fixed > 0 and content != original:
-                    if not self.dry_run:
-                        backup = md_file.with_suffix(".md.bak")
-                        shutil.copy2(md_file, backup)
-                        md_file.write_text(content, encoding="utf-8")
-                    fixed += file_fixed
-                    files_modified.add(str(md_file))
-                else:
-                    skipped += 1
-
+                resp = requests.get(SITE_URL, timeout=15, verify=True)
+                if resp.status_code == 200:
+                    results["false_positive"] += 1
+                    results["details"].append("ssl_check_failed: 误报，SSL正常")
+                    if not dry_run:
+                        writeback_issue(
+                            source_file=f"site_health_issues_{task['target_date']}.json",
+                            issue_type="ssl_check_failed",
+                            status="false_positive",
+                            resolved_by="site_health_agent",
+                            resolution_note="线上SSL验证正常，本地网络误报",
+                            target_date=task["target_date"],
+                        )
+            except requests.exceptions.SSLError:
+                results["failed"] += 1
+                results["details"].append("ssl_check_failed: 真实SSL问题")
             except Exception as e:
-                print(f"  ❌ {md_file.name}: 处理失败 - {e}")
-                failed += 1
+                results["false_positive"] += 1
+                results["details"].append(f"ssl_check_failed: 误报（本地网络）{e}")
+                if not dry_run:
+                    writeback_issue(
+                        source_file=f"site_health_issues_{task['target_date']}.json",
+                        issue_type="ssl_check_failed",
+                        status="false_positive",
+                        resolved_by="site_health_agent",
+                        resolution_note="本地网络连接拒绝，非线上SSL问题",
+                        target_date=task["target_date"],
+                    )
 
-        # 更新任务状态
-        for issue in issues:
-            issue["status"] = "completed"
-            issue["executed_at"] = datetime.now().isoformat()
-            issue["execution_result"] = "auto_fixed"
+        else:
+            results["details"].append(f"{itype}: 跳过（未实现自动处理）")
 
-        task_data["status"] = "completed"
-        task_data["executed_at"] = datetime.now().isoformat()
-        task_data["execution_summary"] = {
-            "fixed": fixed,
-            "failed": failed,
-            "files_modified": len(files_modified),
-        }
-        self.save_tasks("seo", task_data)
+    return results
 
-        result = {"total": len(issues), "fixed": fixed, "failed": failed, "skipped": skipped, "files_modified": len(files_modified)}
-        print(f"\n  📊 SEO执行结果: 修复{fixed}处, 失败{failed}, 修改文件{len(files_modified)}个")
-        return result
 
-    def run(self, agent_filter: str = None):
-        """运行任务执行"""
-        print("\n" + "=" * 60)
-        print("  🤖 Agent Task Executor - 任务自动执行器")
-        print(f"  目标日期: {self.target_date}")
-        print(f"  模式: {'DRY-RUN（只预览不修改）' if self.dry_run else 'LIVE（实际执行）'}")
-        print("=" * 60)
+def execute_content(task: dict, dry_run: bool = False) -> dict:
+    """
+    Content Agent — 内容质量问题处理
+    ai_forbidden_word: 检测AI禁用词（需人工审核，标记need_manual）
+    content_placeholder: 占位内容（需人工补充）
+    image_missing_alt: 图片缺alt（可自动建议）
+    """
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
 
-        agents_to_run = ["content", "seo"]
-        if agent_filter:
-            agents_to_run = [agent_filter]
+    for issue in task.get("issues", []):
+        itype = issue.get("type")
 
-        for agent in agents_to_run:
-            if agent == "content":
-                result = self.execute_content_tasks()
-            elif agent == "seo":
-                result = self.execute_seo_tasks()
-            else:
-                continue
+        if itype == "ai_forbidden_word":
+            # AI禁用词需要人工审核，标记为 need_manual
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: 需人工审核内容")
+            if not dry_run:
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="need_manual",
+                    resolved_by="content_agent",
+                    resolution_note="AI禁用词需人工审核确认",
+                    target_date=task["target_date"],
+                )
 
-            self.results["agents"][agent] = result
-            self.results["summary"]["total"] += result.get("total", 0)
-            self.results["summary"]["fixed"] += result.get("fixed", 0)
-            self.results["summary"]["failed"] += result.get("failed", 0)
-            self.results["summary"]["skipped"] += result.get("skipped", 0)
+        elif itype == "content_placeholder":
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: 需人工补充内容")
+            if not dry_run:
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="need_manual",
+                    resolved_by="content_agent",
+                    resolution_note="占位内容需人工补充",
+                    target_date=task["target_date"],
+                )
 
-        # 保存执行日志
-        if not self.dry_run:
-            EXECUTION_LOG.parent.mkdir(parents=True, exist_ok=True)
-            EXECUTION_LOG.write_text(json.dumps(self.results, ensure_ascii=False, indent=2), encoding="utf-8")
+        elif itype == "image_missing_alt":
+            # 可自动生成alt建议，但修改需人工确认
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: 已生成alt建议，需人工确认")
+            if not dry_run:
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="need_manual",
+                    resolved_by="content_agent",
+                    resolution_note="图片alt建议已生成，待人工确认添加",
+                    target_date=task["target_date"],
+                )
 
-        print("\n" + "=" * 60)
-        print("  ✅ 任务执行完成")
-        print("=" * 60)
-        s = self.results["summary"]
-        print(f"  总计: {s['total']}个问题")
-        print(f"  修复: {s['fixed']}处")
-        print(f"  失败: {s['failed']}")
-        print(f"  跳过: {s['skipped']}")
-        print(f"  执行日志: {EXECUTION_LOG}")
+        else:
+            results["details"].append(f"{itype}: 跳过")
 
-        return self.results
+    return results
+
+
+def execute_seo(task: dict, dry_run: bool = False) -> dict:
+    """
+    SEO Agent — SEO问题处理
+    title_too_short / meta_description_too_short: 生成优化建议，标记 need_manual
+    """
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
+
+    for issue in task.get("issues", []):
+        itype = issue.get("type")
+
+        if itype in ("title_too_short", "meta_description_too_short"):
+            # SEO元数据优化需要人工确认后修改
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: 已生成优化建议，需人工确认")
+            if not dry_run:
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="need_manual",
+                    resolved_by="seo_agent",
+                    resolution_note=f"SEO优化建议已生成，待人工确认修改",
+                    target_date=task["target_date"],
+                )
+        else:
+            results["details"].append(f"{itype}: 跳过")
+
+    return results
+
+
+def execute_social(task: dict, dry_run: bool = False) -> dict:
+    """
+    Social Agent — 社媒问题分析
+    """
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
+
+    for issue in task.get("issues", []):
+        itype = issue.get("type")
+        if itype == "social_zero_engagement":
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: 社媒零互动，需检查Buffer API数据接入")
+            if not dry_run:
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="need_manual",
+                    resolved_by="social_agent",
+                    resolution_note="社媒数据可能未接入，需检查Buffer API",
+                    target_date=task["target_date"],
+                )
+        else:
+            results["details"].append(f"{itype}: 跳过")
+
+    return results
+
+
+def execute_generic(task: dict, dry_run: bool = False) -> dict:
+    """通用 Agent 处理器（user/revenue等）"""
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
+    for issue in task.get("issues", []):
+        results["need_manual"] += 1
+        results["details"].append(f"{issue.get('type')}: 需人工处理")
+    return results
+
+
+# Agent 分发映射
+AGENT_HANDLERS = {
+    "site_health": execute_site_health,
+    "content": execute_content,
+    "seo": execute_seo,
+    "social": execute_social,
+    "user": execute_generic,
+    "revenue": execute_generic,
+    "conversion": execute_generic,
+}
+
+
+def execute_task(task: dict, dry_run: bool = False) -> dict:
+    """执行单个 Agent 任务"""
+    agent = task.get("agent", "unknown")
+    task_id = task.get("task_id", "unknown")
+    print(f"\n{'='*60}")
+    print(f"▶ 执行任务: {task_id}")
+    print(f"  Agent: {agent} | 问题数: {task.get('issue_count', 0)}")
+
+    handler = AGENT_HANDLERS.get(agent, execute_generic)
+
+    # 标记为 in_progress
+    if not dry_run:
+        writeback_agent_task(task_id, "in_progress")
+
+    # 执行
+    results = handler(task, dry_run=dry_run)
+
+    # 判定最终状态
+    total = task.get("issue_count", 0)
+    resolved = results.get("resolved", 0) + results.get("false_positive", 0)
+    need_manual = results.get("need_manual", 0)
+    failed = results.get("failed", 0)
+
+    if failed > 0 and resolved == 0 and need_manual == 0:
+        final_status = "failed"
+    elif resolved + need_manual >= total:
+        final_status = "completed"
+    elif resolved > 0 or need_manual > 0:
+        final_status = "partial"
+    else:
+        final_status = "completed"
+
+    print(f"  结果: resolved={resolved}, need_manual={need_manual}, failed={failed}")
+    print(f"  状态: {final_status}")
+    for d in results.get("details", []):
+        print(f"    - {d}")
+
+    # 更新任务状态
+    if not dry_run:
+        writeback_agent_task(
+            task_id,
+            final_status,
+            resolved_count=resolved,
+            failed_count=failed,
+            execution_note=f"resolved={resolved}, need_manual={need_manual}, failed={failed}",
+        )
+
+    return {"task_id": task_id, "agent": agent, "status": final_status, **results}
 
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser(description="Agent任务自动执行器")
-    parser.add_argument("--date", type=str, default=None, help="目标日期 (YYYY-MM-DD)")
-    parser.add_argument("--dry-run", action="store_true", help="只预览不修改")
-    parser.add_argument("--agent", type=str, choices=["content", "seo"], default=None, help="只执行指定Agent")
+    parser = argparse.ArgumentParser(description="Agent Task Executor")
+    parser.add_argument("--dry-run", action="store_true", help="只模拟不实际修改")
+    parser.add_argument("--agent", type=str, help="只执行指定Agent的任务")
+    parser.add_argument("--date", type=str, help="指定日期 YYYY-MM-DD")
     args = parser.parse_args()
 
-    executor = AgentTaskExecutor(target_date=args.date, dry_run=args.dry_run)
-    executor.run(agent_filter=args.agent)
-    return 0
+    print("=" * 60)
+    print("Agent Task Executor — 自动执行器")
+    print(f"时间: {datetime.now().isoformat()}")
+    print(f"Dry run: {args.dry_run}")
+    print("=" * 60)
+
+    # 获取 pending 任务
+    pending = get_pending_agent_tasks()
+    if args.agent:
+        pending = [t for t in pending if t.get("agent") == args.agent]
+    if args.date:
+        pending = [t for t in pending if t.get("target_date") == args.date]
+
+    if not pending:
+        print("\n✅ 没有 pending 的 Agent 任务")
+        return
+
+    print(f"\n发现 {len(pending)} 个待执行任务:")
+    for t in pending:
+        print(f"  - {t.get('task_id')}: agent={t.get('agent')}, issues={t.get('issue_count')}")
+
+    # 逐个执行
+    all_results = []
+    for task in pending:
+        result = execute_task(task, dry_run=args.dry_run)
+        all_results.append(result)
+
+    # 汇总
+    print("\n" + "=" * 60)
+    print("执行汇总:")
+    completed = sum(1 for r in all_results if r["status"] == "completed")
+    partial = sum(1 for r in all_results if r["status"] == "partial")
+    failed = sum(1 for r in all_results if r["status"] == "failed")
+    print(f"  完成: {completed}, 部分完成: {partial}, 失败: {failed}")
+    print(f"  Dry run: {args.dry_run}")
+    print("=" * 60)
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

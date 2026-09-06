@@ -59,7 +59,8 @@ jobs:
         run: |
           mkdir -p static/ops-dashboard
           cp ops-dashboard/index.html static/ops-dashboard/index.html
-          git add static/ops-dashboard/index.html ops-dashboard/dashboard_data.json
+          cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
+          git add static/ops-dashboard/index.html static/ops-dashboard/dashboard_data.json ops-dashboard/dashboard_data.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
