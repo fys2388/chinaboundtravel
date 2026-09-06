@@ -3311,8 +3311,72 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6a9c424f18e142b3863360d6",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring China?\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtrave",
+      "published_at": "2026-09-06T05:25:01.569Z",
+      "date": "2026-09-06",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring China?\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditi",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6a9bb7879ca05109bed0c3ea",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring Great Wall?\n\nExplore the Great Wall beyond the tourist trail: its military history, the laborers who built it, and the myths around\n\nRead the full guide: https://www.chinaboundtr",
+      "published_at": "2026-09-05T19:32:46.153Z",
+      "date": "2026-09-05",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Dreaming of exploring Great Wall?\n\nExplore the Great Wall beyond the tourist trail: its military his",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-09-05T09:35:52.639970",
+  "last_updated": "2026-09-06T09:50:30.864805",
   "version": "1.0"
 }

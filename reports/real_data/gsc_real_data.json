@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-05T09:35:51.098818",
-  "data_date": "2026-09-02",
+  "pull_time": "2026-09-06T09:50:29.000661",
+  "data_date": "2026-09-03",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 580,
+    "impressions": 588,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 67.2,
+    "average_position": 67.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
   },
   "daily": [
-    {
-      "date": "2026-08-27",
-      "impressions": 97,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 65.7
-    },
     {
       "date": "2026-08-28",
       "impressions": 123,
@@ -61,6 +54,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 35.0
+    },
+    {
+      "date": "2026-09-03",
+      "impressions": 31,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 43.7
     }
   ],
   "top_queries": [
@@ -208,23 +208,23 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 52,
+      "impressions": 49,
       "clicks": 2,
       "ctr": 0.04,
-      "position": 18.8
+      "position": 18.5
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 22,
+      "impressions": 21,
       "clicks": 1,
       "ctr": 0.05,
-      "position": 24
+      "position": 24.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 16,
+      "impressions": 15,
       "clicks": 1,
-      "ctr": 0.06,
+      "ctr": 0.07,
       "position": 9.6
     },
     {
@@ -236,10 +236,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 33,
+      "impressions": 31,
       "clicks": 0,
       "ctr": 0,
-      "position": 26.2
+      "position": 34.7
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -261,13 +261,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 28.5
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/xian/",
@@ -320,7 +313,7 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 707,
+      "impressions": 705,
       "clicks": 0,
       "ctr": 0,
       "position": 72.3
@@ -345,6 +338,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 3.5
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 87.8
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -354,6 +354,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-02"
+    "data_date": "2026-09-03"
   }
 }

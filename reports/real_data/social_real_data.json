@@ -1,18 +1,46 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-05T09:35:52.043381",
-  "data_date": "2026-09-05",
+  "pull_time": "2026-09-06T09:50:29.813574",
+  "data_date": "2026-09-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 10,
-    "total_impressions": 20,
+    "total_impressions": 7,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6a9c424f18e142b3863360d6",
+      "text": "Dreaming of exploring China?\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtrave",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T05:25:01.569Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9bb7879ca05109bed0c3ea",
+      "text": "Dreaming of exploring Great Wall?\n\nExplore the Great Wall beyond the tourist trail: its military history, the laborers who built it, and the myths around\n\nRead the full guide: https://www.chinaboundtr",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-05T19:32:46.153Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6a9afd27c513903fea2bb54e",
       "text": "Dreaming of exploring China?\n\nChina tourist visa in 2026: types, requirements, application steps, costs, and processing times for foreign travelers\n\nRead the full guide: https://www.chinaboundtravel.c",
@@ -124,40 +152,12 @@
       "clicks": 0,
       "impressions": 7,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6a96784a9ffb57a8b98b34ea",
-      "text": "Dreaming of exploring China?\n\n7-Day China Itinerary: Beijing, Xi. Research-based practical guidance for international travelers planning a China\n\nYour ultimate guide is here: https://chinaboundtravel.",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-01T20:01:46.378Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 7,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a966c7336807ba17ea5385b",
-      "text": "Sichuan Hotpot Guide: History & Best Restaurants | What first-time visitors learn about China, summed up in one practical story.\n\nSichuan hotpot: its history, where locals eat, and how to order, with ",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-01T19:11:05.464Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 6,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "pinterest": {
       "posts": 10,
-      "impressions": 20,
+      "impressions": 7,
       "clicks": 0,
       "likes": 0
     }
@@ -169,6 +169,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-05"
+    "data_date": "2026-09-06"
   }
 }
