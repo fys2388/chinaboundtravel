@@ -1070,6 +1070,22 @@ def _cmd_plan_pilot(args) -> int:
 # ============================================================
 
 
+_CTA_NO_LINK_RE = re.compile(
+    r"((?:Read more|Full article|Full breakdown|Your ultimate guide is here|Full guide|Save this guide|click here)\s*[:：]?\s*)$",
+    re.IGNORECASE,
+)
+
+
+def _fix_cta_link(text: str, url: str) -> str:
+    """裸 CTA 占位符后自动补文章链接（发布前自愈，避免 EMPTY_CTA_LINK 拦截）。"""
+    if not url:
+        return text
+    m = _CTA_NO_LINK_RE.search(text or "")
+    if m:
+        return text[:m.start()] + m.group(1).rstrip() + " " + url
+    return text
+
+
 def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
     """向 Buffer Worker 发布单条素材。"""
     caption = re.sub(r"\s*\|\s*Keywords:\s*[^\n]*", "", item.get("caption") or "")
@@ -1080,8 +1096,18 @@ def publish_item(item: dict, endpoint: str, dry_run: bool = True) -> dict:
         caption, title=item.get("source_title", ""), url=post_url,
     )
     if problems:
-        return {"success": False, "dry_run": dry_run,
-                "error": "LINT_FAILED: " + "; ".join(problems), "lint": problems}
+        # 自愈：裸 CTA 占位符后无链接 → 自动补文章链接后复验
+        if any("EMPTY_CTA_LINK" in p for p in problems):
+            _fixed = _fix_cta_link(caption, post_url)
+            if _fixed and _fixed != caption:
+                caption = _fixed
+                item = {**item, "caption": caption}
+                problems = validate_social_copy(
+                    caption, title=item.get("source_title", ""), url=post_url,
+                )
+        if problems:
+            return {"success": False, "dry_run": dry_run,
+                    "error": "LINT_FAILED: " + "; ".join(problems), "lint": problems}
     # Buffer API 不支持 .webp 格式，自动转换为 .jpg（网站同时保留两种格式）
     cover_url = item.get("image_url", "") or ""
     if cover_url and cover_url.lower().endswith(".webp"):
@@ -1482,6 +1508,11 @@ def recycle_expired_items(data: dict, cooldown_days: int = REUSE_COOLDOWN_DAYS) 
         except Exception as _e:
             logger.warning("素材复活重生成失败 %s: %s", it.get("id", "?"), _e)
             continue
+        # 发布前自愈：裸 CTA 占位符补链接（避免复活素材被 LINT 拦截）
+        _post_url = f"https://www.{SITE_DOMAIN}/{it.get('source_article', '')}/"
+        _fixed_txt = _fix_cta_link(text, _post_url)
+        if _fixed_txt and _fixed_txt != text:
+            text = _fixed_txt
         it["caption"] = text
         it["status"] = "待审核"
         it["publish_date"] = ""
