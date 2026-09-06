@@ -1521,6 +1521,29 @@ def recycle_expired_items(data: dict, cooldown_days: int = REUSE_COOLDOWN_DAYS) 
         recycled += 1
     if recycled:
         save_inventory(data)
+
+    # === 兜底：待审核池枯竭时强制复活最近已发布素材（防止静默 0 发布）===
+    MIN_PENDING_ITEMS = 12
+    pending_now = sum(1 for x in items if x.get("status") == "待审核")
+    if pending_now < MIN_PENDING_ITEMS:
+        published = [x for x in items if x.get("status") == "已发布"]
+        published.sort(key=lambda x: x.get("publish_date", ""), reverse=True)
+        emergency_need = MIN_PENDING_ITEMS - pending_now
+        emergency_count = 0
+        for it in published:
+            if emergency_count >= emergency_need:
+                break
+            it["status"] = "待审核"
+            it["publish_date"] = ""
+            it["recycled_at"] = today.isoformat()
+            it["recycle_count"] = it.get("recycle_count", 0) + 1
+            recycled += 1
+            emergency_count += 1
+        if emergency_count:
+            logger.warning("🚨 待审核池枯竭（%d<%d），紧急复活 %d 条最近已发布素材（兜底机制）",
+                           pending_now, MIN_PENDING_ITEMS, emergency_count)
+            save_inventory(data)
+
     return recycled
 
 
@@ -1541,6 +1564,10 @@ def _cmd_plan(args) -> int:
     print(f"排期计划已生成: {out}（{total} 条，{len(sched)} 天）")
     for d in sched[:7]:
         print(f"  {d['date']}: " + ", ".join(s["item_id"] for s in d["slots"]))
+    if total == 0:
+        logger.error("🚨 排期生成 0 条！待审核池可能枯竭，触发告警（9/4-9/5 断更根因）")
+        print("::error::排期生成 0 条，待审核池枯竭，请检查 inventory 状态")
+        return 1
     return 0
 
 
@@ -1596,8 +1623,10 @@ def _cmd_publish(args) -> int:
 
     if not items:
         day = target_date.isoformat() if target_date else date.today().isoformat()
+        logger.error("🚨 %s 无待发布素材（0 发布），触发告警（9/4-9/5 断更根因）", day)
+        print(f"::error::{day} 无待发布素材（0 发布），今日排期为空或素材未审核")
         print(f"[INFO] {day} 无待发布素材（今日无排期或素材未审核），跳过发布")
-        return 0
+        return 1
 
     dry_run = not args.auto and not args.confirm
     if not dry_run and not args.auto:
