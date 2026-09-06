@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-06",
+  "experiments": [
+    {
+      "id": "REV001",
+      "name": "Food Delivery + Airalo CTA",
+      "description": "外卖页流量卡CTA位置测试",
+      "page_pattern": "/posts/.*food.*|/posts/.*meal.*|/posts/.*restaurant.*",
+      "type": "CTA_PLACEMENT",
+      "variants": [
+        {"id": "control", "name": "原CTA位置", "traffic": 50},
+        {"id": "variant_a", "name": "CTA移至首屏", "traffic": 50}
+      ],
+      "goal_event": "affiliate_click",
+      "status": "PLANNED",
+      "start_date": null,
+      "end_date": null,
+      "min_sample": 1000,
+      "notes": "流量不足时保持PLANNED，达到日均50访客后启动"
+    },
+    {
+      "id": "REV002",
+      "name": "Transportation + Trip.com",
+      "description": "交通页Trip.com联盟CTA测试",
+      "page_pattern": "/posts/.*transport.*|/posts/.*train.*|/posts/.*flight.*",
+      "type": "CTA_PLACEMENT",
+      "variants": [
+        {"id": "control", "name": "无Trip.com CTA", "traffic": 50},
+        {"id": "variant_a", "name": "添加Trip.com CTA", "traffic": 50}
+      ],
+      "goal_event": "affiliate_click",
+      "status": "PLANNED",
+      "start_date": null,
+      "end_date": null,
+      "min_sample": 1000,
+      "notes": "等待REV001完成后启动"
+    },
+    {
+      "id": "REV003",
+      "name": "CTA Copy Variant",
+      "description": "交通页行动号召文案测试",
+      "page_pattern": "/posts/.*transport.*",
+      "type": "CTA_COPY",
+      "variants": [
+        {"id": "control", "name": "Book Now", "traffic": 34},
+        {"id": "variant_a", "name": "Compare Prices", "traffic": 33},
+        {"id": "variant_b", "name": "Find Deals", "traffic": 33}
+      ],
+      "goal_event": "cta_click",
+      "status": "PLANNED",
+      "start_date": null,
+      "end_date": null,
+      "min_sample": 1500,
+      "notes": "三变体测试，需要更大样本量"
+    },
+    {
+      "id": "GROWTH05-CTR-001",
+      "name": "144-Hour Visa CTR",
+      "description": "144小时免签页标题点击率优化",
+      "page_pattern": "/posts/144-hour-visa.*|/visa/.*",
+      "type": "CTR_TITLE_META",
+      "variants": [
+        {"id": "control", "name": "原标题", "traffic": 50},
+        {"id": "variant_a", "name": "优化标题(含2026)", "traffic": 50}
+      ],
+      "goal_event": "page_view",
+      "status": "PLANNED",
+      "start_date": null,
+      "end_date": null,
+      "min_sample": 2000,
+      "notes": "SEO标题测试需通过GSC数据评估，非前端A/B"
+    },
+    {
+      "id": "DRIVE-001",
+      "name": "Site-wide Travelpayouts Drive",
+      "description": "全站Travelpayouts推广横幅",
+      "page_pattern": ".*",
+      "type": "SITE_WIDE_BANNER",
+      "variants": [
+        {"id": "control", "name": "无横幅", "traffic": 50},
+        {"id": "variant_a", "name": "顶部横幅", "traffic": 50}
+      ],
+      "goal_event": "banner_click",
+      "status": "PLANNED",
+      "start_date": null,
+      "end_date": null,
+      "min_sample": 5000,
+      "notes": "全站测试需要最大样本量"
+    },
+    {
+      "id": "GROWTH07B-TECH-001",
+      "name": "High-Speed Rail Index Recovery",
+      "description": "高铁页Google索引恢复",
+      "page_pattern": "/posts/.*high-speed.*|/posts/.*rail.*",
+      "type": "TECHNICAL_INDEX_FIX",
+      "variants": [],
+      "goal_event": "gsc_impression",
+      "status": "WAITING_RECRAWL",
+      "start_date": "2026-08-16",
+      "end_date": null,
+      "min_sample": 0,
+      "notes": "已提交sitemap，等待Google重新抓取索引"
+    },
+    {
+      "id": "GROWTH07C-INDEX-001",
+      "name": "WeChat Pay Index Recovery",
+      "description": "微信支付页Google索引恢复",
+      "page_pattern": "/posts/.*wechat.*|/posts/.*payment.*",
+      "type": "INDEX_RECOVERY",
+      "variants": [],
+      "goal_event": "gsc_impression",
+      "status": "WAITING_RECRAWL",
+      "start_date": "2026-08-16",
+      "end_date": null,
+      "min_sample": 0,
+      "notes": "已提交sitemap，等待Google重新抓取索引"
+    }
+  ]
+}

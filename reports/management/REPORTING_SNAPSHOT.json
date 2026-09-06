@@ -614,8 +614,9 @@
           "sample": "0",
           "sample_status": "INSUFFICIENT_SAMPLE",
           "start_date": "2026-08-16",
-          "status": "RUNNING",
-          "type": "CTA_PLACEMENT"
+          "status": "PLANNED",
+          "type": "CTA_PLACEMENT",
+          "notes": " | 状态修正: 无真实A/B测试框架运行，标记为规划中(2026-09-06)"
         },
         {
           "baseline": null,
@@ -631,8 +632,9 @@
           "primary_metric": "affiliate_click_rate",
           "sample": null,
           "start_date": "2026-08-16",
-          "status": "RUNNING",
-          "type": "CTA_PLACEMENT"
+          "status": "PLANNED",
+          "type": "CTA_PLACEMENT",
+          "notes": " | 状态修正: 无真实A/B测试框架运行，标记为规划中(2026-09-06)"
         },
         {
           "baseline": null,
@@ -642,13 +644,13 @@
           "delta": null,
           "display_name": "REV003 CTA copy variant (Transportation)",
           "experiment_id": "REV003",
-          "notes": "WAITING for REV002 review gate 2026-09-13; do not touch REV002 mid-cta",
+          "notes": "WAITING for REV002 review gate 2026-09-13; do not touch REV002 mid-cta | 状态修正: 无真实A/B测试框架运行，标记为规划中(2026-09-06)",
           "observation_days": null,
           "page": "China Transportation Guide",
           "primary_metric": "affiliate_click_rate",
           "sample": null,
           "start_date": "2026-08-16",
-          "status": "PENDING",
+          "status": "PLANNED",
           "type": "CTA_COPY"
         },
         {
@@ -665,8 +667,9 @@
           "sample": "0",
           "sample_status": "INSUFFICIENT_SAMPLE",
           "start_date": "2026-08-16",
-          "status": "RUNNING",
-          "type": "SITE_WIDE_DRIVE"
+          "status": "PLANNED",
+          "type": "SITE_WIDE_DRIVE",
+          "notes": " | 状态修正: 无真实A/B测试框架运行，标记为规划中(2026-09-06)"
         },
         {
           "baseline": 0.0,
@@ -682,8 +685,9 @@
           "sample": "0",
           "sample_status": "INSUFFICIENT_SAMPLE",
           "start_date": "2026-08-16",
-          "status": "RUNNING",
-          "type": "CTR_TITLE_META"
+          "status": "PLANNED",
+          "type": "CTR_TITLE_META",
+          "notes": " | 状态修正: 无真实A/B测试框架运行，标记为规划中(2026-09-06)"
         },
         {
           "baseline": 0.0,

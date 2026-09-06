@@ -153,11 +153,31 @@ try:
 except Exception as e:
     data["agents"] = {"error": str(e), "overall": "unknown", "agents": []}
 
-# 4. 实验状态
+# 4. 实验状态 — 优先从真实配置 static/experiments.json 读取
 try:
-    snap = json.loads((ROOT / "reports/management/REPORTING_SNAPSHOT.json").read_text(encoding="utf-8"))
-    exps = snap.get("domains", {}).get("experiments", {}).get("experiments", [])
-    data["experiments"] = [{"id": e.get("experiment_id"), "name": e.get("display_name"), "status": e.get("status"), "days": e.get("observation_days"), "sample": e.get("sample_status"), "page": e.get("page", "")[:40], "start": e.get("start_date")} for e in exps]
+    exp_config_path = ROOT / "static" / "experiments.json"
+    if exp_config_path.exists():
+        exp_cfg = json.loads(exp_config_path.read_text(encoding="utf-8"))
+        exps = exp_cfg.get("experiments", [])
+        data["experiments"] = [
+            {
+                "id": e.get("id"),
+                "name": e.get("name"),
+                "status": e.get("status"),
+                "type": e.get("type", ""),
+                "days": e.get("observation_days"),
+                "sample": "PLANNED" if e.get("status") == "PLANNED" else e.get("sample_status", "INSUFFICIENT_SAMPLE"),
+                "page": e.get("page", "")[:40],
+                "start": e.get("start_date"),
+                "variants": len(e.get("variants", [])),
+                "min_sample": e.get("min_sample", 0),
+            }
+            for e in exps
+        ]
+    else:
+        snap = json.loads((ROOT / "reports/management/REPORTING_SNAPSHOT.json").read_text(encoding="utf-8"))
+        exps = snap.get("domains", {}).get("experiments", {}).get("experiments", [])
+        data["experiments"] = [{"id": e.get("experiment_id"), "name": e.get("display_name"), "status": e.get("status"), "days": e.get("observation_days"), "sample": e.get("sample_status"), "page": e.get("page", "")[:40], "start": e.get("start_date")} for e in exps]
 except Exception as e:
     data["experiments"] = []
 
