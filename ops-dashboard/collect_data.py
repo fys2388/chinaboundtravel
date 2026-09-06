@@ -274,14 +274,64 @@ except Exception as e:
     data["agent_execution"] = {"date": "", "total_fixed": 0, "total_issues": 0, "agents": {}}
 
 
-# 5b. GA4/GSC 单日数据（日报口径，save=False 不覆盖28天文件）
+
+# 多时间范围汇总计算
+def _calc_ranges(daily, metrics_map):
+    """从 daily 数组计算多个时间范围的汇总
+    metrics_map: {"visitors": "activeUsers", "sessions": "sessions", "pageviews": "pageviews"}
+    """
+    from datetime import datetime, timedelta
+    if not daily:
+        return {}
+    today = datetime.now().date()
+    ranges = {}
+    range_defs = {
+        "today": 1,
+        "yesterday": 2,
+        "7d": 7,
+        "30d": 30,
+        "90d": 90,
+    }
+    # 按日期排序
+    sorted_daily = sorted(daily, key=lambda x: x.get("date", ""))
+    for name, days in range_defs.items():
+        subset = sorted_daily[-days:] if name != "yesterday" else sorted_daily[-2:-1]
+        summary = {}
+        for key, field in metrics_map.items():
+            summary[key] = sum(int(d.get(field, 0) or 0) for d in subset)
+        summary["date_range"] = f"{subset[0].get('date','')} ~ {subset[-1].get('date','')}" if subset else ""
+        summary["days"] = len(subset)
+        ranges[name] = summary
+    # 上个月（自然月）
+    try:
+        first_of_this_month = today.replace(day=1)
+        last_month_end = first_of_this_month - timedelta(days=1)
+        last_month_start = last_month_end.replace(day=1)
+        lm_subset = [d for d in sorted_daily if last_month_start.strftime("%Y-%m-%d") <= d.get("date","") <= last_month_end.strftime("%Y-%m-%d")]
+        lm_summary = {}
+        for key, field in metrics_map.items():
+            lm_summary[key] = sum(int(d.get(field, 0) or 0) for d in lm_subset)
+        lm_summary["date_range"] = f"{last_month_start.strftime('%Y-%m-%d')} ~ {last_month_end.strftime('%Y-%m-%d')}"
+        lm_summary["days"] = len(lm_subset)
+        ranges["last_month"] = lm_summary
+    except:
+        pass
+    return ranges
+
+# 5b. GA4/GSC 单日数据（拉取90天，计算多时间范围）（日报口径，save=False 不覆盖28天文件）
 try:
     from real_data_pull_engine import pull_ga4_data, pull_gsc_data
-    ga4_daily = pull_ga4_data(days=7, save=False)
+    ga4_daily = pull_ga4_data(days=90, save=False)
     if ga4_daily.get("is_real_data") and ga4_daily.get("metrics"):
         m = ga4_daily["metrics"]
         # 最近一天数据（用于KPI显示）
         latest = ga4_daily.get("daily", [])[-1] if ga4_daily.get("daily") else {}
+        # 多时间范围汇总
+        ga4_ranges = _calc_ranges(ga4_daily.get("daily", []), {
+            "visitors": "activeUsers",
+            "sessions": "sessions",
+            "pageviews": "pageviews",
+        })
         data["metrics"]["ga4_daily"] = {
             "visitors": latest.get("activeUsers", m.get("activeUsers", 0)),
             "sessions": latest.get("sessions", m.get("sessions", 0)),
@@ -291,6 +341,7 @@ try:
             "date": latest.get("date", ga4_daily.get("data_date", "")),
             "status": "OK",
             "daily": ga4_daily.get("daily", []),
+            "ranges": ga4_ranges,
         }
     else:
         data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": ga4_daily.get("status", "failed"), "date": "", "daily": []}
@@ -298,10 +349,15 @@ except Exception as e:
     data["metrics"]["ga4_daily"] = {"visitors": 0, "sessions": 0, "pageviews": 0, "status": "error:" + str(e)[:50], "date": "", "daily": []}
 
 try:
-    gsc_daily = pull_gsc_data(days=7, save=False)
+    gsc_daily = pull_gsc_data(days=90, save=False)
     if gsc_daily.get("is_real_data") and gsc_daily.get("metrics"):
         m = gsc_daily["metrics"]
         latest = gsc_daily.get("daily", [])[-1] if gsc_daily.get("daily") else {}
+        # 多时间范围汇总
+        gsc_ranges = _calc_ranges(gsc_daily.get("daily", []), {
+            "impressions": "impressions",
+            "clicks": "clicks",
+        })
         data["metrics"]["gsc_daily"] = {
             "impressions": latest.get("impressions", m.get("impressions", 0)),
             "clicks": latest.get("clicks", m.get("clicks", 0)),
@@ -310,6 +366,7 @@ try:
             "date": latest.get("date", gsc_daily.get("data_date", "")),
             "status": "OK",
             "daily": gsc_daily.get("daily", []),
+            "ranges": gsc_ranges,
         }
     else:
         data["metrics"]["gsc_daily"] = {"impressions": 0, "clicks": 0, "ctr": 0, "status": gsc_daily.get("status", "failed"), "date": "", "daily": []}

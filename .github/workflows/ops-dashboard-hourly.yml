@@ -53,6 +53,10 @@ jobs:
         run: |
           python ops-dashboard/build.py
 
+      - name: Inject time range selector
+        run: |
+          python ops-dashboard/inject_range_selector.py
+
       - name: Push and trigger deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
