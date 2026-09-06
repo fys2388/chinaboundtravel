@@ -127,6 +127,7 @@ jobs:
           echo "=== 图片验证完成 ==="
 
       - name: Publish today's batch (Buffer Worker)
+        id: publish
         env:
           # 完整发布端点（worker /publish 处理双账户分流）
           BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
@@ -136,8 +137,15 @@ jobs:
           TODAY="${{ github.event.inputs.date }}"
           if [ -z "$TODAY" ]; then TODAY=$(date -u +%F); fi
           echo "=== 发布 $TODAY 批次 ==="
-          # 不再吞掉发布失败：0 发布或部分失败必须让 run 失败，触发 Error Alert/飞书告警
+          # 保存真实退出码，但不中断后续 Commit（保证发布状态回写，避免重复排期/重复发布）；
+          # 最终由 "Fail if publish had failures" 步骤按退出码标红 run 触发告警
+          set +e
           python scripts/social_content_agent.py publish --auto --date "$TODAY"
+          publish_exit=$?
+          set -e
+          echo "publish_exit=$publish_exit" >> "$GITHUB_OUTPUT"
+          echo "::notice::发布退出码=$publish_exit（状态将继续回写）"
+          exit 0
 
       - name: Pull social analytics (Buffer API)
         env:
@@ -153,6 +161,7 @@ jobs:
           python scripts/social_reports.py daily --print-block 2>/dev/null || echo "日报生成跳过"
 
       - name: Commit inventory & reports back
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -175,6 +184,12 @@ jobs:
           # 未提交改动再 rebase，避免 "cannot pull with rebase" 失败
           git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase 失败"; exit 1; }
           git push
+
+      - name: Fail if publish had failures
+        if: steps.publish.outputs.publish_exit != '0'
+        run: |
+          echo "::error::社媒发布存在失败项（退出码 ${{ steps.publish.outputs.publish_exit }}），详见上方发布日志"
+          exit 1
 
       - name: Feishu notification
         if: always()
