@@ -234,16 +234,16 @@ body {
     <div class="kpi-trend t1">
       <div class="kpi-trend-head">
         <span class="kpi-trend-label" id="ga4-label">访客 · 过去7天</span>
-        <span class="kpi-trend-value">id="ga4-value">13</span>
-        <span class="kpi-trend-sub">id="ga4-sub">17 会话 · 14 浏览 · 最新 2026-09-06</span>
+        <span class="kpi-trend-value" id="ga4-value">13</span>
+        <span class="kpi-trend-sub" id="ga4-sub">17 会话 · 14 浏览 · 最新 2026-09-06</span>
       </div>
       <div id="ga4-chart" class="kpi-chart"></div>
     </div>
     <div class="kpi-trend t2">
       <div class="kpi-trend-head">
         <span class="kpi-trend-label" id="gsc-label">GSC 曝光 · 过去7天</span>
-        <span class="kpi-trend-value">id="gsc-value">381</span>
-        <span class="kpi-trend-sub">id="gsc-sub">0 点击 · CTR 0% · 最新 2026-08-17</span>
+        <span class="kpi-trend-value" id="gsc-value">381</span>
+        <span class="kpi-trend-sub" id="gsc-sub">0 点击 · CTR 0% · 最新 2026-08-17</span>
       </div>
       <div id="gsc-chart" class="kpi-chart"></div>
     </div>
@@ -834,6 +834,9 @@ body {
       switchRange(this.dataset.range);
     });
   });
+
+  // 默认显示过去7天
+  setTimeout(function() { switchRange('7d'); }, 100);
 })();
 </script>
 

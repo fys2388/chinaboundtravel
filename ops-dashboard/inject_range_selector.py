@@ -67,23 +67,29 @@ def inject_range_selector():
         '<span class="kpi-trend-label" id="gsc-label">GSC 曝光 · 过去7天</span>'
     )
 
-    # 给值和子标题添加 id（需要用正则匹配，因为值是动态的）
-    # GA4 value: <span class="kpi-trend-value">数字</span> (第一个)
-    # GSC value: 第二个
-    ga4_value_match = re.search(r'(<div class="kpi-trend t1">.*?<span class="kpi-trend-value">)([^<]+)(</span>)', html, re.DOTALL)
-    if ga4_value_match:
-        html = html[:ga4_value_match.start(2)] + 'id="ga4-value">' + ga4_value_match.group(2) + html[ga4_value_match.end(2):]
-    gsc_value_match = re.search(r'(<div class="kpi-trend t2">.*?<span class="kpi-trend-value">)([^<]+)(</span>)', html, re.DOTALL)
-    if gsc_value_match:
-        html = html[:gsc_value_match.start(2)] + 'id="gsc-value">' + gsc_value_match.group(2) + html[gsc_value_match.end(2):]
-
-    # 给 sub 添加 id
-    ga4_sub_match = re.search(r'(<div class="kpi-trend t1">.*?<span class="kpi-trend-sub">)([^<]+)(</span>)', html, re.DOTALL)
-    if ga4_sub_match:
-        html = html[:ga4_sub_match.start(2)] + 'id="ga4-sub">' + ga4_sub_match.group(2) + html[ga4_sub_match.end(2):]
-    gsc_sub_match = re.search(r'(<div class="kpi-trend t2">.*?<span class="kpi-trend-sub">)([^<]+)(</span>)', html, re.DOTALL)
-    if gsc_sub_match:
-        html = html[:gsc_sub_match.start(2)] + 'id="gsc-sub">' + gsc_sub_match.group(2) + html[gsc_sub_match.end(2):]
+    # 给值和子标题添加 id（用 t1/t2 div 区分 GA4/GSC）
+    # GA4 (t1)
+    html = re.sub(
+        r'(<div class="kpi-trend t1">.*?<span class="kpi-trend-value")>',
+        r'\1 id="ga4-value">',
+        html, count=1, flags=re.DOTALL
+    )
+    html = re.sub(
+        r'(<div class="kpi-trend t1">.*?<span class="kpi-trend-sub")>',
+        r'\1 id="ga4-sub">',
+        html, count=1, flags=re.DOTALL
+    )
+    # GSC (t2)
+    html = re.sub(
+        r'(<div class="kpi-trend t2">.*?<span class="kpi-trend-value")>',
+        r'\1 id="gsc-value">',
+        html, count=1, flags=re.DOTALL
+    )
+    html = re.sub(
+        r'(<div class="kpi-trend t2">.*?<span class="kpi-trend-sub")>',
+        r'\1 id="gsc-sub">',
+        html, count=1, flags=re.DOTALL
+    )
 
     # 3. 注入 JS 代码（在 </body> 之前）
     ranges_json = json.dumps(ranges_data, ensure_ascii=False)
@@ -162,6 +168,9 @@ def inject_range_selector():
       switchRange(this.dataset.range);
     }});
   }});
+
+  // 默认显示过去7天
+  setTimeout(function() {{ switchRange('7d'); }}, 100);
 }})();
 </script>
 '''
