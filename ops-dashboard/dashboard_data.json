@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-06 19:27:48",
+  "generated_at": "2026-09-06 19:30:09",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 2367,
+    "response_ms": 376,
     "server": "cloudflare"
   },
   "workflows": [
@@ -122,7 +122,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-06T11:04:44Z",
+      "last_run": "2026-09-06T11:29:38Z",
       "last_event": "push"
     },
     {
@@ -175,8 +175,8 @@
       "name": "Ops Dashboard Refresh",
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-06T11:11:37Z",
+      "last_status": "",
+      "last_run": "2026-09-06T11:29:56Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-06 19:27",
+    "checked_at": "2026-09-06 11:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -329,25 +329,25 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-04",
+        "last_run": "2026-09-06",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-06",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-01",
+        "last_run": "2026-09-06",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-06",
         "max_age_days": 8
       },
       {
@@ -365,7 +365,7 @@
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-08-31",
+        "last_run": "2026-09-06",
         "max_age_days": 8
       },
       {
