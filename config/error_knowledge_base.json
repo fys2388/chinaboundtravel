@@ -997,6 +997,17 @@
       "error_message": "26-09-06T00:39:29.7507787Z \nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:39:29.7507979Z   Validation complete (non-blocking mode)\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:39:29.7711569Z === 图片验证完成 ===\nrun\tPublish today's batch (Buffer Worker)\t﻿2026-09-06T00:39:29.7746779Z ##[group]Run TODAY=\"\"\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:39:29.7747105Z ^[[36;1mTODAY=\"\"^[[0m\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:39:29.7747399Z ^[[36;1mif [ -z \"$TODAY\" ",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260906_005753",
+      "timestamp": "2026-09-06T00:57:53.687495",
+      "workflow_name": "Social Engine Daily (闭环)",
+      "run_id": "34002597499",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "sults: 30/30 passed, 0 failed\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5450709Z \nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5450949Z   Validation complete (non-blocking mode)\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5607912Z === 图片验证完成 ===\nrun\tPublish today's batch (Buffer Worker)\t﻿2026-09-06T00:57:07.5633156Z ##[group]Run TODAY=\"\"\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:57:07.5633472Z ^[[36;1mTODAY=\"\"^[[0m\nrun\tPublish today's batch (",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
