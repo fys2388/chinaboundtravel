@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-0bb1cb1e308d"
-title: "China National Parks: Zhangjiajie & Jiuzhaigou"
+title: "China National Parks: Zhangjiajie &"
 date: "2026-08-12T10:00:00+08:00"
 lastmod: "2026-08-12T10:00:00+08:00"
 author: "Joran"

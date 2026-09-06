@@ -1,88 +1,8 @@
 {
-  "timestamp": "2026-09-06T09:57:08.881831+00:00",
+  "timestamp": "2026-09-06T10:22:25.790367+00:00",
   "source": "site_health_agent",
   "issues": [
     {
-      "type": "ssl_check_failed",
-      "severity": "medium",
-      "file": "https://www.chinaboundtravel.com",
-      "message": "SSL检查失败: HTTP Error 403: Forbidden",
-      "auto_fixable": false,
-      "agent": "site_health"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/visa/_index.md",
-      "message": "Title渲染后过长(66字符, front matter 46+后缀20): China Visa Guide: Visa-Free & 144-Hour T...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "message": "Title渲染后过长(71字符, front matter 51+后缀20): China 144-Hour Visa-Free Transit 2026: H...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
-      "message": "Title渲染后过长(67字符, front matter 47+后缀20): Where to Stay in China: Hotels & Budget ...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
-      "message": "Title渲染后过长(66字符, front matter 46+后缀20): China National Parks: Zhangjiajie & Jiuz...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-      "message": "Title渲染后过长(68字符, front matter 48+后缀20): Is China Safe for Tourists in 2026? Hone...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
-      "message": "Title渲染后过长(67字符, front matter 47+后缀20): China Food Guide: Must-Try Dishes & Rest...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-14-transportation-guide-guide.md",
-      "message": "Title渲染后过长(71字符, front matter 51+后缀20): China Transportation Guide: Trains, Subw...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
-      "message": "Title渲染后过长(69字符, front matter 49+后缀20): China Transportation Guide for European ...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-05-27-how-to-survive-chinese-train-station.md",
-      "message": "Title渲染后过长(72字符, front matter 52+后缀20): Chinese Train Stations: Survival Guide f...",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "og_tag_missing",
       "severity": "low",
       "file": "/",
@@ -119,38 +39,6 @@
       "severity": "low",
       "file": "/",
       "message": "缺少OG标签: og:type",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/",
-      "message": "缺少Twitter标签: twitter:card",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/",
-      "message": "缺少Twitter标签: twitter:title",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/",
-      "message": "缺少Twitter标签: twitter:description",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/",
-      "message": "缺少Twitter标签: twitter:image",
       "auto_fixable": false,
       "agent": "seo"
     },
@@ -195,38 +83,6 @@
       "agent": "seo"
     },
     {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/pricing/",
-      "message": "缺少Twitter标签: twitter:card",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/pricing/",
-      "message": "缺少Twitter标签: twitter:title",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/pricing/",
-      "message": "缺少Twitter标签: twitter:description",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/pricing/",
-      "message": "缺少Twitter标签: twitter:image",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
       "type": "og_tag_missing",
       "severity": "low",
       "file": "/contact/",
@@ -263,38 +119,6 @@
       "severity": "low",
       "file": "/contact/",
       "message": "缺少OG标签: og:type",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/contact/",
-      "message": "缺少Twitter标签: twitter:card",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/contact/",
-      "message": "缺少Twitter标签: twitter:title",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/contact/",
-      "message": "缺少Twitter标签: twitter:description",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "twitter_tag_missing",
-      "severity": "low",
-      "file": "/contact/",
-      "message": "缺少Twitter标签: twitter:image",
       "auto_fixable": false,
       "agent": "seo"
     }

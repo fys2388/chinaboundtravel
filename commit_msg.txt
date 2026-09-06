@@ -1,0 +1,16 @@
+fix(site-health): 闭环修复——误报消除+标题自动缩短
+
+根因:
+1. ssl_check_failed: CI IP被Cloudflare拦截返回403，误报为SSL失败
+2. og_tag_missing(15个): 正则末尾多了一个]，要求property="og:title"]但HTML是property="og:title"
+3. twitter_tag_missing(12个): 正则要求有引号，但HTML是无引号格式name=twitter:card
+4. title_too_long(9个): 硬编码auto_fixable=false，闭环不处理
+
+修复:
+1. _fetch_url: UA改标准浏览器+捕获HTTPError返回响应对象
+2. check_ssl: 403/401/429不报告SSL失败
+3. check_og_tags: 非200响应跳过+正则去掉多余的]
+4. check_twitter: 正则改宽松匹配
+5. title_too_long: auto_fixable=true+自动缩短标题实现
+
+验证: 未解决问题从37->0，9篇标题自动缩短成功

@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-de065751769e"
-title: "China Transportation Guide: Trains, Subways & Taxis"
+title: "China Transportation Guide: Trains, Subways"
 date: "2026-07-14T10:00:00+08:00"
 lastmod: "2026-07-14T10:00:00+08:00"
 author: "Joran"

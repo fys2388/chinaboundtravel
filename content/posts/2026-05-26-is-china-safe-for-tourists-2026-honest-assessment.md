@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-673e981fe6f2"
-title: "Is China Safe for Tourists in 2026? Honest Guide"
+title: "Is China Safe for Tourists in 2026? Honest"
 description: "An honest China safety assessment for 2026: crime rates, tourist scams, food safety, healthcare access, and emergency contacts."
 date: "2026-05-27"
 author: "Joran"

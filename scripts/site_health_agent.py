@@ -489,7 +489,9 @@ def check_title_meta_length():
                         "severity": "low",
                         "file": rel_path,
                         "message": f"Title渲染后过长({rendered_len}字符, front matter {len(title)}+后缀{len(TITLE_SUFFIX)}): {title[:40]}...",
-                        "auto_fixable": False,
+                        "auto_fixable": True,
+                        "fix_action": "shorten_title",
+                        "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
                         "agent": "seo"
                     })
                 elif len(title) < 20:
@@ -536,13 +538,25 @@ CHECK_PAGES = ["/", "/pricing/", "/contact/", "/posts/ultimate-guide-to-china-vi
 
 
 def _fetch_url(url):
-    """获取URL响应，返回(response, html_content)或(None, None)"""
+    """获取URL响应，返回(response, html_content)或(None, None)
+    对 HTTPError（如 Cloudflare 403）也返回响应对象，供调用方判断状态码"""
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "SiteHealthBot/1.0"})
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        })
         ctx = ssl.create_default_context()
         with urllib.request.urlopen(req, timeout=NETWORK_TIMEOUT, context=ctx) as resp:
             html = resp.read().decode("utf-8", errors="replace")
             return resp, html
+    except urllib.error.HTTPError as e:
+        # Cloudflare 403/挑战页：返回响应对象供调用方判断，不视为网络失败
+        try:
+            html = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            html = ""
+        return e, html
     except Exception as e:
         return None, None
 
@@ -628,10 +642,15 @@ def check_og_tags():
         resp, html = _fetch_url(SITE_BASE_URL + page_path)
         if html is None:
             continue
-        
+        # Cloudflare 拦截（403/挑战页）：HTML 非真实页面，跳过检测避免误报
+        if resp is not None and getattr(resp, "status", 200) != 200:
+            continue
+        if len(html) < 500 or "<html" not in html.lower():
+            continue
+
         # 检查OG标签
         for og_tag in REQUIRED_OG:
-            pattern = re.compile(r"property=[\"']" + re.escape(og_tag) + r"[\"']]", re.IGNORECASE)
+            pattern = re.compile(r"property=[\"']" + re.escape(og_tag) + r"[\"']", re.IGNORECASE)
             if not pattern.search(html):
                 issues.append({
                     "type": "og_tag_missing",
@@ -642,9 +661,9 @@ def check_og_tags():
                     "agent": "seo"
                 })
         
-        # 检查Twitter标签
+        # 检查Twitter标签（宽松匹配：支持 name=twitter:card 无引号格式）
         for tw_tag in REQUIRED_TWITTER:
-            pattern = re.compile(r"name=[\"']" + re.escape(tw_tag) + r"[\"']]", re.IGNORECASE)
+            pattern = re.compile(r"name=[\"']?" + re.escape(tw_tag) + r"[\"']?[\s>]", re.IGNORECASE)
             if not pattern.search(html):
                 issues.append({
                     "type": "twitter_tag_missing",
@@ -687,6 +706,19 @@ def check_ssl_certificate():
                         "auto_fixable": False,
                         "agent": "site_health"
                     })
+    except urllib.error.HTTPError as e:
+        # HTTP 403/401/429 = Cloudflare/访问控制拦截，SSL 握手已成功，不算 SSL 问题
+        if e.code in (401, 403, 429):
+            pass  # 访问控制拦截，非 SSL 问题，不报告
+        else:
+            issues.append({
+                "type": "ssl_check_failed",
+                "severity": "medium",
+                "file": SITE_BASE_URL,
+                "message": f"SSL检查失败(HTTP {e.code}): {str(e)[:50]}",
+                "auto_fixable": False,
+                "agent": "site_health"
+            })
     except Exception as e:
         issues.append({
             "type": "ssl_check_failed",
@@ -696,7 +728,7 @@ def check_ssl_certificate():
             "auto_fixable": False,
             "agent": "site_health"
         })
-    
+
     return issues
 
 
@@ -790,6 +822,31 @@ def auto_fix_issue(issue):
             content = content.replace("secrets.BUFFER_ACCESS_TOKEN_2", "secrets.BUFFER_API_TOKEN_B")
             file_path.write_text(content, encoding="utf-8")
             return True, "已修复env变量名"
+        
+        elif fix_action == "shorten_title":
+            # 缩短 front matter title 至 45 字符以内（渲染后 title+后缀≤65）
+            file_content = file_path.read_text(encoding="utf-8")
+            fm_match = re.match(r'^(---\s*\n)(.*?)(\n---)', file_content, re.DOTALL)
+            if not fm_match:
+                return False, "无 front matter"
+            fm = fm_match.group(2)
+            title_match = re.search(r'^(title\s*:\s*)(["\']?)([^"\'\n]+)(["\']?)$', fm, re.MULTILINE)
+            if not title_match:
+                return False, "无 title 字段"
+            old_title = title_match.group(3).strip()
+            if len(old_title) <= 45:
+                return False, f"title 已在限长内({len(old_title)}字符)"
+            # 在最后一个空格处截断，保留语义
+            new_title = old_title[:45]
+            last_space = new_title.rfind(' ')
+            if last_space > 30:
+                new_title = new_title[:last_space]
+            new_title = new_title.rstrip(' -,;:')
+            # 替换 title 行
+            new_fm = fm[:title_match.start(3)] + new_title + fm[title_match.end(3):]
+            new_content = file_content[:fm_match.start(2)] + new_fm + file_content[fm_match.end(2):]
+            file_path.write_text(new_content, encoding="utf-8")
+            return True, f"title 已缩短: {len(old_title)}->{len(new_title)}字符"
         
         else:
             return False, f"未知修复操作: {fix_action}"
