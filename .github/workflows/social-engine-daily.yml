@@ -109,13 +109,15 @@ jobs:
           fi
 
       - name: Generate unique post images (真实文生图，消除配图重复)
+        # 5 分钟硬超时：文生图限流/挂起时绝不阻塞当日发布（超时后沿用封面继续）
+        timeout-minutes: 5
         env:
           IMAGE_GEN_ENABLED: "1"
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
           ARK_IMAGE_MODEL: ${{ vars.ARK_IMAGE_MODEL || '' }}
         run: |
           echo "=== 为资产库素材生成独立配图（后端：Ark Seedream → pollinations）==="
-          python scripts/social_content_agent.py gen-images --limit 12 || \
+          python scripts/social_content_agent.py gen-images --limit 5 || \
             echo "::warning::文生图未完成（限流/服务不可用），沿用文章封面继续发布"
 
       - name: P0-2 Image Quality Gate (社媒图片验证)
