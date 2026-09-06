@@ -58,9 +58,9 @@
       "name": "Cross-Agent Learning Daily",
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-05T09:35:38Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "cross-agent-learning-weekly.yml",
@@ -329,7 +329,7 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-04",
+        "last_run": "2026-09-05",
         "max_age_days": 8
       },
       {
@@ -463,21 +463,13 @@
       "date": "2026-09-05"
     },
     "ga4_daily": {
-      "source": "ga4_api",
-      "pull_time": "2026-09-05T09:35:49.772451",
-      "data_date": "2026-09-04",
-      "is_real_data": true,
-      "is_fresh": true,
-      "metrics": {
-        "activeUsers": 252,
-        "sessions": 327,
-        "screenPageViews": 778,
-        "engagedSessions": 96,
-        "bounceRate": 0.7064220183486238,
-        "averageSessionDuration": 211.3295594434251,
-        "engagementRate": 0.29357798165137616,
-        "newUsers": 251
-      },
+      "visitors": 9,
+      "sessions": 14,
+      "pageviews": 14,
+      "new_users": 86,
+      "bounce_rate": 67.4,
+      "date": "2026-09-05",
+      "status": "OK",
       "daily": [
         {
           "date": "2026-08-30",
@@ -517,37 +509,19 @@
         },
         {
           "date": "2026-09-05",
-          "sessions": 8,
-          "activeUsers": 6,
-          "pageviews": 6
+          "sessions": 14,
+          "activeUsers": 9,
+          "pageviews": 14
         }
-      ],
-      "top_pages": [],
-      "traffic_sources": [],
-      "raw_source": "GA4 Data API v1beta",
-      "status": "OK",
-      "error": null,
-      "freshness_info": {
-        "fresh": true,
-        "reason": "Fresh",
-        "age_days": 1,
-        "data_date": "2026-09-04"
-      }
+      ]
     },
     "gsc_daily": {
-      "source": "gsc_api",
-      "pull_time": "2026-09-05T09:35:51.098818",
-      "data_date": "2026-09-02",
-      "is_real_data": true,
-      "is_fresh": true,
-      "metrics": {
-        "impressions": 580,
-        "clicks": 0,
-        "ctr": 0.0,
-        "average_position": 67.2,
-        "sitemap_count": 1,
-        "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
-      },
+      "impressions": 26,
+      "clicks": 0,
+      "ctr": 0,
+      "avg_position": 35.0,
+      "date": "2026-09-02",
+      "status": "OK",
       "daily": [
         {
           "date": "2026-08-27",
@@ -598,300 +572,7 @@
           "ctr": 0,
           "position": 35.0
         }
-      ],
-      "top_queries": [
-        {
-          "query": "144 china visa",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 80.5
-        },
-        {
-          "query": "144 group visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 87
-        },
-        {
-          "query": "144 hour",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64
-        },
-        {
-          "query": "144 hour china visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 83
-        },
-        {
-          "query": "144 hour transit visa china",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 46.3
-        },
-        {
-          "query": "144 hour visa",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 87
-        },
-        {
-          "query": "144 hour visa beijing",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 41
-        },
-        {
-          "query": "144 hour visa china",
-          "impressions": 11,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 54.5
-        },
-        {
-          "query": "144 hour visa china cost",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 79
-        },
-        {
-          "query": "144 hour visa china from hong kong",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 56
-        },
-        {
-          "query": "144 hour visa free",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 83.5
-        },
-        {
-          "query": "144 hour visa free china",
-          "impressions": 4,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 67.2
-        },
-        {
-          "query": "144 hour visa free transit",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64.9
-        },
-        {
-          "query": "144 hour visa free transit in china",
-          "impressions": 7,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 65.3
-        },
-        {
-          "query": "144 hour visa shanghai",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 85
-        },
-        {
-          "query": "144 hours china visa",
-          "impressions": 7,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 66.7
-        },
-        {
-          "query": "144 hours china visa free",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 43
-        },
-        {
-          "query": "144 hours visa china",
-          "impressions": 9,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 71.9
-        },
-        {
-          "query": "144 hours visa free china",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 64.7
-        },
-        {
-          "query": "144 hrs visa free china",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 79
-        }
-      ],
-      "top_pages": [
-        {
-          "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-          "impressions": 52,
-          "clicks": 2,
-          "ctr": 0.04,
-          "position": 18.8
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-          "impressions": 22,
-          "clicks": 1,
-          "ctr": 0.05,
-          "position": 24
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-          "impressions": 16,
-          "clicks": 1,
-          "ctr": 0.06,
-          "position": 9.6
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-          "impressions": 75,
-          "clicks": 1,
-          "ctr": 0.01,
-          "position": 20.8
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/",
-          "impressions": 33,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 26.2
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cancel/",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 7
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/categories/china-itinerary/",
-          "impressions": 6,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 92
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/guilin/",
-          "impressions": 1,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 9
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/hangzhou/",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 28.5
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/xian/",
-          "impressions": 29,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 68.6
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
-          "impressions": 2,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/contact/",
-          "impressions": 3,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/content/",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 42.2
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/disclaimer/",
-          "impressions": 8,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 36
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/internet/",
-          "impressions": 109,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 75.8
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/",
-          "impressions": 4,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 13
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-          "impressions": 707,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 72.3
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-          "impressions": 9,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 14.9
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-          "impressions": 5,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 3.6
-        },
-        {
-          "page": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
-          "impressions": 4,
-          "clicks": 0,
-          "ctr": 0,
-          "position": 3.5
-        }
-      ],
-      "raw_source": "Google Search Console REST API v3",
-      "status": "OK",
-      "error": null,
-      "freshness_info": {
-        "fresh": true,
-        "reason": "Fresh",
-        "age_days": 3,
-        "data_date": "2026-09-02"
-      }
+      ]
     }
   },
   "data_sources": [
