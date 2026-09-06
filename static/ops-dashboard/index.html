@@ -655,8 +655,8 @@ body {
     }
 
     // GA4 访客趋势
-    var ga4Chart = echarts.init(document.getElementById('ga4-chart'));
-    ga4Chart.setOption({
+    window.ga4Chart = echarts.init(document.getElementById('ga4-chart'));
+    window.ga4Chart.setOption({
       backgroundColor: 'transparent',
       grid: { left: 30, right: 10, top: 10, bottom: 20 },
       tooltip: {
@@ -703,8 +703,8 @@ body {
     });
 
     // GSC 曝光趋势
-    var gscChart = echarts.init(document.getElementById('gsc-chart'));
-    gscChart.setOption({
+    window.gscChart = echarts.init(document.getElementById('gsc-chart'));
+    window.gscChart.setOption({
       backgroundColor: 'transparent',
       grid: { left: 30, right: 10, top: 10, bottom: 20 },
       tooltip: {
@@ -751,8 +751,8 @@ body {
     });
 
     window.addEventListener('resize', function() {
-      ga4Chart.resize();
-      gscChart.resize();
+      window.ga4Chart.resize();
+      window.gscChart.resize();
     });
   } catch(e) {
     console.error('Chart init failed:', e);
