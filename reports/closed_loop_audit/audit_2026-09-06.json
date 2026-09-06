@@ -1,18 +1,18 @@
 {
   "audit_date": "2026-09-06",
-  "audited_at": "2026-09-06T10:27:55.710219",
+  "audited_at": "2026-09-06T14:49:11.326109",
   "score": {
-    "total_score": 47.5,
+    "total_score": 52.5,
     "max_score": 100,
-    "percentage": 47.5,
+    "percentage": 52.5,
     "stage_scores": {
       "detection": 10.0,
       "assignment": 0,
       "execution": 12.5,
       "writeback": 20,
-      "dashboard": 5.0
+      "dashboard": 10
     },
-    "grade": "D"
+    "grade": "C"
   },
   "audits": [
     {
@@ -63,15 +63,13 @@
     },
     {
       "stage": "dashboard",
-      "status": "warn",
-      "issues": [
-        "看板 pending(37) 与实际(0) 不一致"
-      ],
+      "status": "pass",
+      "issues": [],
       "details": {
-        "dashboard_pending": 37,
+        "dashboard_pending": 0,
         "actual_pending": 0,
-        "ga4_daily_days": 7,
-        "gsc_daily_days": 7
+        "ga4_daily_days": 75,
+        "gsc_daily_days": 30
       }
     }
   ],
@@ -79,7 +77,6 @@
     "[detection] site_health 检测到0个问题（可能检测未运行）",
     "[assignment] 15/15 个问题未分配",
     "[assignment] 没有生成任何 Agent 任务文件",
-    "[execution] 没有 Agent 任务文件",
-    "[dashboard] 看板 pending(37) 与实际(0) 不一致"
+    "[execution] 没有 Agent 任务文件"
   ]
 }
