@@ -986,6 +986,17 @@
       "error_message": "on/3.11.16/x64/lib\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3211943Z ##[endgroup]\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3586951Z ✅ index.html generated: 34983 bytes\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3588731Z    Workflow categories: ['SEO与索引', 'AI Agent', '内容与社媒', '日报与通知', '构建与部署', '其他']\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:12.3589451Z    Agents: 7/7 healthy\nrefresh-dashboard\tBuild dashboard HTML\t2026-09-03T05:31:1",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260906_004020",
+      "timestamp": "2026-09-06T00:40:20.977575",
+      "workflow_name": "Social Engine Daily (闭环)",
+      "run_id": "34001719960",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "26-09-06T00:39:29.7507787Z \nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:39:29.7507979Z   Validation complete (non-blocking mode)\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:39:29.7711569Z === 图片验证完成 ===\nrun\tPublish today's batch (Buffer Worker)\t﻿2026-09-06T00:39:29.7746779Z ##[group]Run TODAY=\"\"\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:39:29.7747105Z ^[[36;1mTODAY=\"\"^[[0m\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:39:29.7747399Z ^[[36;1mif [ -z \"$TODAY\" ",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
