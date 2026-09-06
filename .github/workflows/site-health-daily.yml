@@ -1,5 +1,8 @@
 name: Site Health Daily Check (Full Closed Loop)
 
+permissions:
+  contents: write  # 允许 github-actions[bot] 提交并推送修复结果
+
 on:
   schedule:
     - cron: '0 0 * * *'  # 北京时间早8:00 (UTC 00:00)
@@ -98,7 +101,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "fix(closed-loop): auto detect→assign→execute→audit by Site Health Agent [skip ci]"
-            git push
+            git push origin main
           fi
 
       - name: Upload Reports
