@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-06 19:00:52",
+  "generated_at": "2026-09-06 19:11:51",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 207,
+    "response_ms": 304,
     "server": "cloudflare"
   },
   "workflows": [
@@ -104,7 +104,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-06T10:31:07Z",
+      "last_run": "2026-09-06T11:05:34Z",
       "last_event": "workflow_run"
     },
     {
@@ -122,7 +122,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-06T10:27:13Z",
+      "last_run": "2026-09-06T11:04:44Z",
       "last_event": "push"
     },
     {
@@ -176,7 +176,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-06T11:00:40Z",
+      "last_run": "2026-09-06T11:11:37Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -316,7 +316,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-06 11:00",
+    "checked_at": "2026-09-06 11:11",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -382,66 +382,87 @@
   "experiments": [
     {
       "id": "REV001",
-      "name": "REV001 Food Delivery + Airalo",
-      "status": "RUNNING",
-      "days": 1,
-      "sample": "INSUFFICIENT_SAMPLE",
-      "page": "Chinese Food Delivery: Meituan & Ele.me ",
-      "start": "2026-08-16"
+      "name": "Food Delivery + Airalo CTA",
+      "status": "PLANNED",
+      "type": "CTA_PLACEMENT",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 1000
     },
     {
       "id": "REV002",
-      "name": "REV002 Transportation + Trip.com",
-      "status": "RUNNING",
+      "name": "Transportation + Trip.com",
+      "status": "PLANNED",
+      "type": "CTA_PLACEMENT",
       "days": null,
-      "sample": null,
-      "page": "China Transportation Guide",
-      "start": "2026-08-16"
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 1000
     },
     {
       "id": "REV003",
-      "name": "REV003 CTA copy variant (Transportation)",
-      "status": "PENDING",
+      "name": "CTA Copy Variant",
+      "status": "PLANNED",
+      "type": "CTA_COPY",
       "days": null,
-      "sample": null,
-      "page": "China Transportation Guide",
-      "start": "2026-08-16"
-    },
-    {
-      "id": "DRIVE-001",
-      "name": "DRIVE-001 site-wide Drive",
-      "status": "RUNNING",
-      "days": 1,
-      "sample": "INSUFFICIENT_SAMPLE",
-      "page": "Site-wide Travelpayouts Drive",
-      "start": "2026-08-16"
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 3,
+      "min_sample": 1500
     },
     {
       "id": "GROWTH05-CTR-001",
-      "name": "GROWTH-05 144-Hour Visa CTR",
-      "status": "RUNNING",
-      "days": 0,
-      "sample": "INSUFFICIENT_SAMPLE",
-      "page": "144-Hour Visa",
-      "start": "2026-08-16"
+      "name": "144-Hour Visa CTR",
+      "status": "PLANNED",
+      "type": "CTR_TITLE_META",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 2000
+    },
+    {
+      "id": "DRIVE-001",
+      "name": "Site-wide Travelpayouts Drive",
+      "status": "PLANNED",
+      "type": "SITE_WIDE_BANNER",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 5000
     },
     {
       "id": "GROWTH07B-TECH-001",
-      "name": "High-Speed Rail index recovery",
+      "name": "High-Speed Rail Index Recovery",
       "status": "WAITING_RECRAWL",
-      "days": 0,
+      "type": "TECHNICAL_INDEX_FIX",
+      "days": null,
       "sample": "INSUFFICIENT_SAMPLE",
-      "page": "High-Speed Rail Booking",
-      "start": "2026-08-16"
+      "page": "",
+      "start": "2026-08-16",
+      "variants": 0,
+      "min_sample": 0
     },
     {
       "id": "GROWTH07C-INDEX-001",
-      "name": "WeChat Pay index recovery",
+      "name": "WeChat Pay Index Recovery",
       "status": "WAITING_RECRAWL",
-      "days": 0,
+      "type": "INDEX_RECOVERY",
+      "days": null,
       "sample": "INSUFFICIENT_SAMPLE",
-      "page": "WeChat Pay Weak",
-      "start": "2026-08-16"
+      "page": "",
+      "start": "2026-08-16",
+      "variants": 0,
+      "min_sample": 0
     }
   ],
   "metrics": {
@@ -463,8 +484,8 @@
       "date": "2026-09-06"
     },
     "ga4_daily": {
-      "visitors": 12,
-      "sessions": 16,
+      "visitors": 13,
+      "sessions": 17,
       "pageviews": 14,
       "new_users": 80,
       "bounce_rate": 64.2,
@@ -509,8 +530,8 @@
         },
         {
           "date": "2026-09-06",
-          "sessions": 16,
-          "activeUsers": 12,
+          "sessions": 17,
+          "activeUsers": 13,
           "pageviews": 14
         }
       ]
