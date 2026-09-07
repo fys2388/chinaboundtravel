@@ -38,19 +38,58 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 REVENUE_DIR = PROJECT_ROOT / "reports" / "revenue_data"
 REVENUE_DIR.mkdir(parents=True, exist_ok=True)
 ENV_FILE = PROJECT_ROOT / ".env.revenue"
+MAIN_ENV_FILE = PROJECT_ROOT / ".env"
 
 
-def load_env() -> Dict[str, str]:
-    """加载环境变量配置"""
+def _read_env_file(filepath: Path) -> Dict[str, str]:
+    """读取 .env 文件"""
     env = {}
-    if ENV_FILE.exists():
-        with open(ENV_FILE, "r", encoding="utf-8") as f:
+    if filepath.exists():
+        with open(filepath, "r", encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     key, value = line.split("=", 1)
                     env[key.strip()] = value.strip().strip('"').strip("'")
-    # 同时从系统环境变量读取
+    return env
+
+
+def load_env() -> Dict[str, str]:
+    """加载环境变量配置（P2-FIX: 同时读取 .env 和 .env.revenue，自动映射字段名）"""
+    env = {}
+
+    # 1. 先读取主 .env 文件（优先级低）
+    env.update(_read_env_file(MAIN_ENV_FILE))
+
+    # 2. 再读取 .env.revenue（优先级高，覆盖主 .env）
+    env.update(_read_env_file(ENV_FILE))
+
+    # 3. 字段名映射（兼容主 .env 的命名）
+    field_mapping = {
+        "CLOUDFLARE_API_TOKEN": "CF_API_TOKEN",
+        "CLOUDFLARE_ZONE_ID": "CF_ZONE_ID",
+    }
+    for old_key, new_key in field_mapping.items():
+        if old_key in env and new_key not in env:
+            env[new_key] = env[old_key]
+
+    # 4. GA4_CREDENTIALS_JSON 处理：如果是文件名，读取文件内容
+    ga4_creds = env.get("GA4_CREDENTIALS_JSON", "")
+    ga4_sa_file = env.get("GA4_SERVICE_ACCOUNT_JSON", "")
+    if not ga4_creds and ga4_sa_file:
+        # 从 GA4_SERVICE_ACCOUNT_JSON 文件名读取
+        sa_path = PROJECT_ROOT / ga4_sa_file
+        if sa_path.exists():
+            with open(sa_path, "r", encoding="utf-8") as f:
+                env["GA4_CREDENTIALS_JSON"] = f.read()
+    elif ga4_creds and not ga4_creds.startswith("{"):
+        # GA4_CREDENTIALS_JSON 是文件名，读取文件内容
+        sa_path = PROJECT_ROOT / ga4_creds
+        if sa_path.exists():
+            with open(sa_path, "r", encoding="utf-8") as f:
+                env["GA4_CREDENTIALS_JSON"] = f.read()
+
+    # 5. 同时从系统环境变量读取（优先级最高）
     for key in ["GA4_PROPERTY_ID", "GA4_CREDENTIALS_JSON", "STRIPE_SECRET_KEY",
                 "TRAVELPAYOUTS_API_TOKEN", "TRAVELPAYOUTS_MARKER",
                 "CF_API_TOKEN", "CF_ZONE_ID"]:
