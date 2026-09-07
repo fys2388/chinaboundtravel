@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChinaBound Travel · 统一运营中心</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+:root {
+  --bg:#070b14; --panel:#0d1320; --panel2:#111827; --border:#1e293b; --border2:#263548;
+  --text:#e2e8f0; --text2:#94a3b8; --text3:#64748b; --text4:#475569;
+  --accent:#00d4ff; --accent-dim:#00d4ff22;
+  --green:#22c55e; --yellow:#f59e0b; --red:#ef4444; --blue:#3b82f6; --purple:#a78bfa; --orange:#f97316;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:13px; line-height:1.55; min-height:100vh;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,212,255,0.06), transparent), linear-gradient(180deg, #070b14 0%, #0a0f1c 100%);
+}
+.container { max-width:1440px; margin:0 auto; padding:16px 24px 40px; }
+
+/* Header */
+.header { display:flex; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
+.brand { display:flex; align-items:center; gap:12px; }
+.brand-logo {
+  width:40px; height:40px; border-radius:10px;
+  background:linear-gradient(135deg, var(--accent), #0099cc);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:18px; color:#000;
+  box-shadow:0 0 20px rgba(0,212,255,0.3);
+}
+.brand-text h1 { font-size:18px; font-weight:700; color:#f1f5f9; }
+.brand-text p { font-size:11px; color:var(--text3); margin-top:2px; }
+.header-right { margin-left:auto; display:flex; gap:10px; align-items:center; }
+.pill {
+  display:inline-flex; align-items:center; gap:7px;
+  padding:6px 14px; border-radius:8px; font-size:12px; font-weight:600;
+  background:var(--panel); border:1px solid var(--border);
+}
+.pill .dot { width:7px; height:7px; border-radius:50%; }
+.pill .dot.live { animation:blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+.pill-green { color:var(--green); border-color:rgba(34,197,94,0.25); background:rgba(34,197,94,0.06); }
+.pill-blue { color:var(--accent); border-color:rgba(0,212,255,0.25); background:rgba(0,212,255,0.06); }
+.pill-yellow { color:var(--yellow); border-color:rgba(245,158,11,0.25); background:rgba(245,158,11,0.06); }
+.pill-red { color:var(--red); border-color:rgba(239,68,68,0.25); background:rgba(239,68,68,0.06); }
+
+/* Tabs */
+.tabs { display:flex; gap:4px; margin-bottom:20px; background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:4px; overflow-x:auto; }
+.tab {
+  flex:1; min-width:100px; text-align:center; padding:10px 16px; border-radius:7px;
+  font-size:13px; font-weight:600; color:var(--text3); cursor:pointer; transition:all 0.2s;
+  white-space:nowrap; border:none; background:transparent;
+}
+.tab:hover { color:var(--text2); background:var(--panel2); }
+.tab.active { color:#000; background:linear-gradient(135deg, var(--accent), #0099cc); box-shadow:0 2px 10px rgba(0,212,255,0.3); }
+.tab .tab-icon { margin-right:6px; }
+
+/* Tab Content */
+.tab-content { display:none; }
+.tab-content.active { display:block; animation:fadeIn 0.3s; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+/* KPI Grid */
+.kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:20px; }
+@media(max-width:1100px) { .kpi-grid { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:700px) { .kpi-grid { grid-template-columns:repeat(2,1fr); } }
+.kpi {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:16px 18px; position:relative; overflow:hidden; transition:border-color 0.2s;
+}
+.kpi:hover { border-color:var(--border2); }
+.kpi::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }
+.kpi.k1::before { background:var(--accent); }
+.kpi.k2::before { background:var(--blue); }
+.kpi.k3::before { background:var(--purple); }
+.kpi.k4::before { background:var(--yellow); }
+.kpi.k5::before { background:var(--green); }
+.kpi-label { font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.6px; font-weight:600; margin-bottom:8px; }
+.kpi-value { font-size:28px; font-weight:800; color:#f8fafc; line-height:1.1; font-variant-numeric:tabular-nums; }
+.kpi-sub { font-size:11px; color:var(--text3); margin-top:6px; }
+
+/* Section */
+.section { margin-bottom:20px; }
+.section-head { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.section-num {
+  width:24px; height:24px; border-radius:6px; background:var(--accent-dim);
+  color:var(--accent); display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700;
+}
+.section-title { font-size:14px; font-weight:700; color:#f1f5f9; }
+.section-meta { font-size:11px; color:var(--text3); margin-left:auto; }
+
+/* Cards */
+.card { background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:18px; }
+.card-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.card-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media(max-width:900px) { .card-grid-2, .card-grid-3 { grid-template-columns:1fr; } }
+
+/* Agent Table */
+.agent-table { width:100%; border-collapse:collapse; }
+.agent-table th { text-align:left; padding:10px 12px; font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid var(--border); font-weight:600; }
+.agent-table td { padding:12px; border-bottom:1px solid var(--border); font-size:13px; }
+.agent-table tr:last-child td { border-bottom:none; }
+.agent-table tr:hover { background:var(--panel2); }
+.agent-name { display:flex; align-items:center; gap:10px; font-weight:600; }
+.agent-icon { font-size:18px; }
+.agent-score { font-size:18px; font-weight:800; font-variant-numeric:tabular-nums; }
+.grade-badge { display:inline-block; padding:3px 10px; border-radius:6px; font-size:11px; font-weight:700; }
+.grade-S { background:rgba(34,197,94,0.15); color:var(--green); }
+.grade-A { background:rgba(0,212,255,0.15); color:var(--accent); }
+.grade-B { background:rgba(245,158,11,0.15); color:var(--yellow); }
+.grade-C { background:rgba(249,115,22,0.15); color:var(--orange); }
+.grade-D { background:rgba(239,68,68,0.15); color:var(--red); }
+.reward-pos { color:var(--green); font-weight:600; }
+.reward-neg { color:var(--red); font-weight:600; }
+.reward-zero { color:var(--text3); }
+
+/* Health Status */
+.health-item { display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); }
+.health-item:last-child { border-bottom:none; }
+.health-icon { font-size:20px; width:32px; text-align:center; }
+.health-info { flex:1; }
+.health-name { font-weight:600; font-size:13px; }
+.health-desc { font-size:11px; color:var(--text3); margin-top:2px; }
+.health-status { text-align:right; }
+.health-score { font-size:16px; font-weight:800; }
+.health-label { font-size:10px; color:var(--text3); text-transform:uppercase; }
+
+/* Progress Bar */
+.progress-bar { width:100%; height:6px; background:var(--border); border-radius:3px; overflow:hidden; margin-top:6px; }
+.progress-fill { height:100%; border-radius:3px; transition:width 0.5s; }
+
+/* Chart Container */
+.chart-box { width:100%; height:300px; }
+.chart-box-sm { width:100%; height:250px; }
+
+/* Growth Agent Card */
+.growth-card {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:16px; transition:border-color 0.2s;
+}
+.growth-card:hover { border-color:var(--border2); }
+.growth-header { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.growth-avatar {
+  width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  font-size:20px; background:var(--panel2); border:1px solid var(--border);
+}
+.growth-name { font-weight:700; font-size:14px; }
+.growth-level { font-size:11px; color:var(--accent); font-weight:600; }
+.growth-stats { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px; }
+.growth-stat { text-align:center; padding:8px; background:var(--panel2); border-radius:6px; }
+.growth-stat-val { font-size:16px; font-weight:800; }
+.growth-stat-label { font-size:10px; color:var(--text3); margin-top:2px; }
+.growth-skills { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+.skill-tag { padding:2px 8px; border-radius:4px; font-size:10px; background:var(--accent-dim); color:var(--accent); font-weight:600; }
+
+/* Loading */
+.loading { text-align:center; padding:40px; color:var(--text3); }
+.loading-spinner { display:inline-block; width:24px; height:24px; border:2px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:10px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.error-msg { text-align:center; padding:30px; color:var(--red); background:rgba(239,68,68,0.05); border-radius:10px; border:1px solid rgba(239,68,68,0.2); }
+
+/* Footer */
+.footer { text-align:center; padding:20px 0; color:var(--text4); font-size:11px; border-top:1px solid var(--border); margin-top:30px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <div class="brand-logo">C</div>
+      <div class="brand-text">
+        <h1>ChinaBound Travel · 统一运营中心</h1>
+        <p>看板 · 监控 · 考核 · 成长 — 一站式数字员工管理平台</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="pill pill-green"><span class="dot live" style="background:var(--green)"></span> 系统正常</div>
+      <div class="pill pill-blue" id="updateTime">数据加载中...</div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('overview')"><span class="tab-icon">📊</span>总览看板</button>
+    <button class="tab" onclick="switchTab('kpi')"><span class="tab-icon">🎯</span>Agent KPI考核</button>
+    <button class="tab" onclick="switchTab('growth')"><span class="tab-icon">🚀</span>数字员工成长</button>
+    <button class="tab" onclick="switchTab('health')"><span class="tab-icon">🩺</span>运营健康监控</button>
+    <button class="tab" onclick="switchTab('revenue')"><span class="tab-icon">💰</span>营收数据</button>
+  </div>
+
+  <!-- Tab: Overview -->
+  <div id="tab-overview" class="tab-content active">
+    <div class="kpi-grid">
+      <div class="kpi k1">
+        <div class="kpi-label">KPI 平均分</div>
+        <div class="kpi-value" id="ov-kpi-score">--</div>
+        <div class="kpi-sub">7大Agent · 营收导向</div>
+      </div>
+      <div class="kpi k2">
+        <div class="kpi-label">网站健康度</div>
+        <div class="kpi-value" id="ov-health">--</div>
+        <div class="kpi-sub">API+内容+性能</div>
+      </div>
+      <div class="kpi k3">
+        <div class="kpi-label">内容覆盖率</div>
+        <div class="kpi-value" id="ov-coverage">--</div>
+        <div class="kpi-sub">字段+WebP+质量</div>
+      </div>
+      <div class="kpi k4">
+        <div class="kpi-label">数字员工</div>
+        <div class="kpi-value" id="ov-agents">7</div>
+        <div class="kpi-sub">在职 · 持续进化</div>
+      </div>
+      <div class="kpi k5">
+        <div class="kpi-label">数据源</div>
+        <div class="kpi-value" id="ov-datasources">3/4</div>
+        <div class="kpi-sub">GA4+Travelpayouts+CF</div>
+      </div>
+    </div>
+
+    <div class="card-grid-2">
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <span class="section-title">Agent 得分分布</span>
+        </div>
+        <div id="overview-chart-1" class="chart-box-sm"></div>
+      </div>
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <span class="section-title">等级分布</span>
+        </div>
+        <div id="overview-chart-2" class="chart-box-sm"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <span class="section-title">快速状态</span>
+        <span class="section-meta">实时监控</span>
+      </div>
+      <div class="card-grid-3">
+        <div class="health-item">
+          <div class="health-icon">🔌</div>
+          <div class="health-info">
+            <div class="health-name">API 健康</div>
+            <div class="health-desc">订阅+结账+搜索</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--yellow)">⚠️</div>
+            <div class="health-label">Stripe待修复</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">📧</div>
+          <div class="health-info">
+            <div class="health-name">订阅系统</div>
+            <div class="health-desc">MailerLite集成</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">✅</div>
+            <div class="health-label">正常运行</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">📝</div>
+          <div class="health-info">
+            <div class="health-name">内容质量</div>
+            <div class="health-desc">61篇文章</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">100%</div>
+            <div class="health-label">全部通过</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: KPI -->
+  <div id="tab-kpi" class="tab-content">
+    <div class="kpi-grid">
+      <div class="kpi k1">
+        <div class="kpi-label">考核周期</div>
+        <div class="kpi-value" id="kpi-period" style="font-size:20px;">2026-09</div>
+        <div class="kpi-sub">每月1日自动运行</div>
+      </div>
+      <div class="kpi k2">
+        <div class="kpi-label">北极星指标</div>
+        <div class="kpi-value" style="font-size:16px;">营收增长</div>
+        <div class="kpi-sub">Revenue Growth</div>
+      </div>
+      <div class="kpi k3">
+        <div class="kpi-label">平均分</div>
+        <div class="kpi-value" id="kpi-avg">--</div>
+        <div class="kpi-sub">7大Agent</div>
+      </div>
+      <div class="kpi k4">
+        <div class="kpi-label">合格数</div>
+        <div class="kpi-value" id="kpi-pass">--</div>
+        <div class="kpi-sub">B级及以上</div>
+      </div>
+      <div class="kpi k5">
+        <div class="kpi-label">权重分配</div>
+        <div class="kpi-value" style="font-size:14px;">50/30/20</div>
+        <div class="kpi-sub">营收/过程/质量</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-head">
+        <span class="section-num">🎯</span>
+        <span class="section-title">Agent 得分总览</span>
+        <span class="section-meta">REVENUE-ORIENTED · 营收导向</span>
+      </div>
+      <div id="kpi-table-container">
+        <div class="loading"><div class="loading-spinner"></div>加载 KPI 数据中...</div>
+      </div>
+    </div>
+
+    <div class="card-grid-2" style="margin-top:14px;">
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">📈</span>
+          <span class="section-title">Agent 得分对比</span>
+        </div>
+        <div id="kpi-chart-bar" class="chart-box"></div>
+      </div>
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">🏆</span>
+          <span class="section-title">等级分布</span>
+        </div>
+        <div id="kpi-chart-pie" class="chart-box"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="section-head">
+        <span class="section-num">⚖️</span>
+        <span class="section-title">奖惩规则</span>
+        <span class="section-meta">工具机器人也是人，有奖有罚</span>
+      </div>
+      <div class="card-grid-3" style="gap:10px;">
+        <div style="padding:14px; background:rgba(34,197,94,0.06); border:1px solid rgba(34,197,94,0.2); border-radius:8px;">
+          <div style="font-size:20px; font-weight:800; color:var(--green);">S · 卓越</div>
+          <div style="font-size:11px; color:var(--text3); margin:4px 0;">90分以上</div>
+          <div style="font-size:12px; color:var(--green); font-weight:600;">+20%绩效</div>
+          <div style="font-size:11px; color:var(--text3); margin-top:4px;">全公司表彰 · 最佳实践沉淀</div>
+        </div>
+        <div style="padding:14px; background:rgba(0,212,255,0.06); border:1px solid rgba(0,212,255,0.2); border-radius:8px;">
+          <div style="font-size:20px; font-weight:800; color:var(--accent);">A · 优秀</div>
+          <div style="font-size:11px; color:var(--text3); margin:4px 0;">80-89分</div>
+          <div style="font-size:12px; color:var(--accent); font-weight:600;">+10%绩效</div>
+          <div style="font-size:11px; color:var(--text3); margin-top:4px;">保持 · 分享经验</div>
+        </div>
+        <div style="padding:14px; background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.2); border-radius:8px;">
+          <div style="font-size:20px; font-weight:800; color:var(--yellow);">B · 合格</div>
+          <div style="font-size:11px; color:var(--text3); margin:4px 0;">70-79分</div>
+          <div style="font-size:12px; color:var(--yellow); font-weight:600;">0%</div>
+          <div style="font-size:11px; color:var(--text3); margin-top:4px;">维持 · 关注薄弱项</div>
+        </div>
+        <div style="padding:14px; background:rgba(249,115,22,0.06); border:1px solid rgba(249,115,22,0.2); border-radius:8px;">
+          <div style="font-size:20px; font-weight:800; color:var(--orange);">C · 待改进</div>
+          <div style="font-size:11px; color:var(--text3); margin:4px 0;">60-69分</div>
+          <div style="font-size:12px; color:var(--orange); font-weight:600;">-10%绩效</div>
+          <div style="font-size:11px; color:var(--text3); margin-top:4px;">黄牌警告 · 1月内复查</div>
+        </div>
+        <div style="padding:14px; background:rgba(239,68,68,0.06); border:1px solid rgba(239,68,68,0.2); border-radius:8px;">
+          <div style="font-size:20px; font-weight:800; color:var(--red);">D · 不合格</div>
+          <div style="font-size:11px; color:var(--text3); margin:4px 0;">60分以下</div>
+          <div style="font-size:12px; color:var(--red); font-weight:600;">-30%绩效</div>
+          <div style="font-size:11px; color:var(--text3); margin-top:4px;">红牌 · 连续2月D级→流程重构</div>
+        </div>
+        <div style="padding:14px; background:var(--panel2); border:1px solid var(--border); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:24px;">🎓</div>
+            <div style="font-size:12px; color:var(--text2); font-weight:600; margin-top:4px;">毕业条件</div>
+            <div style="font-size:10px; color:var(--text3); margin-top:4px;">收益≥$5000 · 能力≥85<br>3技能≥60 · 带过1新人<br>连续2月KPI≥B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Growth -->
+  <div id="tab-growth" class="tab-content">
+    <div class="kpi-grid">
+      <div class="kpi k1">
+        <div class="kpi-label">数字员工总数</div>
+        <div class="kpi-value">7</div>
+        <div class="kpi-sub">在职 · 持续进化</div>
+      </div>
+      <div class="kpi k2">
+        <div class="kpi-label">平均能力值</div>
+        <div class="kpi-value" id="growth-avg-ability">--</div>
+        <div class="kpi-sub">0-100分</div>
+      </div>
+      <div class="kpi k3">
+        <div class="kpi-label">累计收益</div>
+        <div class="kpi-value" id="growth-total-revenue">--</div>
+        <div class="kpi-sub">集团投资回报</div>
+      </div>
+      <div class="kpi k4">
+        <div class="kpi-label">已毕业</div>
+        <div class="kpi-value">0</div>
+        <div class="kpi-sub">晋升为新公司老板</div>
+      </div>
+      <div class="kpi k5">
+        <div class="kpi-label">成长等级</div>
+        <div class="kpi-value" style="font-size:16px;">4级体系</div>
+        <div class="kpi-sub">学徒→熟手→专家→老板</div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <span class="section-num">🚀</span>
+      <span class="section-title">数字员工成长档案</span>
+      <span class="section-meta">持续学习 · 赋能进化 · 毕业创业</span>
+    </div>
+    <div id="growth-cards" class="card-grid-3" style="gap:14px;">
+      <div class="loading"><div class="loading-spinner"></div>加载成长数据中...</div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="section-head">
+        <span class="section-num">📈</span>
+        <span class="section-title">能力值对比</span>
+      </div>
+      <div id="growth-chart" class="chart-box"></div>
+    </div>
+  </div>
+
+  <!-- Tab: Health -->
+  <div id="tab-health" class="tab-content">
+    <div class="kpi-grid">
+      <div class="kpi k1">
+        <div class="kpi-label">API 健康</div>
+        <div class="kpi-value" style="font-size:20px;">⚠️</div>
+        <div class="kpi-sub">Stripe待修复</div>
+      </div>
+      <div class="kpi k2">
+        <div class="kpi-label">订阅系统</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">正常运行</div>
+      </div>
+      <div class="kpi k3">
+        <div class="kpi-label">联系表单</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">Web3Forms集成</div>
+      </div>
+      <div class="kpi k4">
+        <div class="kpi-label">性能监控</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">TTFB优秀</div>
+      </div>
+      <div class="kpi k5">
+        <div class="kpi-label">内容质量</div>
+        <div class="kpi-value">100%</div>
+        <div class="kpi-sub">61篇全部通过</div>
+      </div>
+    </div>
+
+    <div class="card-grid-2">
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">🔌</span>
+          <span class="section-title">API 健康检查</span>
+          <span class="section-meta">3个端点</span>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">📧</div>
+          <div class="health-info">
+            <div class="health-name">/api/subscribe</div>
+            <div class="health-desc">邮件订阅 · 6个测试用例</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">4/6</div>
+            <div class="health-label">通过</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">💳</div>
+          <div class="health-info">
+            <div class="health-name">/api/checkout</div>
+            <div class="health-desc">Stripe支付 · 密钥待修复</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--red)">401</div>
+            <div class="health-label">密钥错误</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">🔍</div>
+          <div class="health-info">
+            <div class="health-name">/api/search</div>
+            <div class="health-desc">Fuse.js搜索</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">✅</div>
+            <div class="health-label">正常</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">⚡</span>
+          <span class="section-title">性能监控</span>
+          <span class="section-meta">5个关键页面</span>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">🏠</div>
+          <div class="health-info">
+            <div class="health-name">首页</div>
+            <div class="health-desc">TTFB: 1242ms · 39.8KB</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">优秀</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">ℹ️</div>
+          <div class="health-info">
+            <div class="health-name">关于我们</div>
+            <div class="health-desc">TTFB: 921ms · 21.8KB</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">优秀</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">📞</div>
+          <div class="health-info">
+            <div class="health-name">联系我们</div>
+            <div class="health-desc">TTFB: 496ms · 57.0KB</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--green)">优秀</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">🔒</div>
+          <div class="health-info">
+            <div class="health-name">安全响应头</div>
+            <div class="health-desc">缺失4个安全头</div>
+          </div>
+          <div class="health-status">
+            <div class="health-score" style="color:var(--yellow)">⚠️</div>
+            <div class="health-label">待配置</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="section-head">
+        <span class="section-num">📝</span>
+        <span class="section-title">内容质量与覆盖率</span>
+        <span class="section-meta">61篇文章 · 5项检查全通过</span>
+      </div>
+      <div class="card-grid-3">
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">last_updated 覆盖率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">canonical_url 覆盖率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">WebP 转化率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">mojibake 合格率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">content_id 覆盖率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--text2);">description 覆盖率</span>
+            <span style="font-size:12px; font-weight:700; color:var(--green);">100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--green);"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Revenue -->
+  <div id="tab-revenue" class="tab-content">
+    <div class="kpi-grid">
+      <div class="kpi k1">
+        <div class="kpi-label">GA4 数据源</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">已配置 · Property 541752321</div>
+      </div>
+      <div class="kpi k2">
+        <div class="kpi-label">Travelpayouts</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">已配置 · 联盟佣金</div>
+      </div>
+      <div class="kpi k3">
+        <div class="kpi-label">Cloudflare</div>
+        <div class="kpi-value" style="font-size:20px;">✅</div>
+        <div class="kpi-sub">已配置 · 流量分析</div>
+      </div>
+      <div class="kpi k4">
+        <div class="kpi-label">Stripe</div>
+        <div class="kpi-value" style="font-size:20px;">⚠️</div>
+        <div class="kpi-sub">密钥错误 · 待修复</div>
+      </div>
+      <div class="kpi k5">
+        <div class="kpi-label">数据源配置率</div>
+        <div class="kpi-value">75%</div>
+        <div class="kpi-sub">3/4 已配置</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-head">
+        <span class="section-num">💰</span>
+        <span class="section-title">营收数据接入状态</span>
+        <span class="section-meta">revenue_data_collector.py · 四源统一收集</span>
+      </div>
+      <div style="padding:20px; text-align:center;">
+        <div style="font-size:48px; margin-bottom:16px;">📊</div>
+        <div style="font-size:16px; font-weight:700; color:var(--text2); margin-bottom:8px;">营收数据框架已搭建完成</div>
+        <div style="font-size:13px; color:var(--text3); max-width:600px; margin:0 auto; line-height:1.8;">
+          GA4 / Travelpayouts / Cloudflare 三个数据源已配置并可采集。<br>
+          Stripe 数据源因 API Key 配置错误暂时不可用，修复后自动恢复。<br>
+          运行 <code style="background:var(--panel2); padding:2px 8px; border-radius:4px; color:var(--accent);">python scripts/revenue_data_collector.py</code> 即可采集真实营收数据。
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid-2" style="margin-top:14px;">
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">📈</span>
+          <span class="section-title">营收因果链</span>
+        </div>
+        <div style="padding:10px 0;">
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid var(--border);">
+            <span style="font-size:18px;">🔍</span>
+            <span style="flex:1; font-size:12px; color:var(--text2);">SEO排名↑ / 索引覆盖率↑</span>
+            <span style="color:var(--text3);">→</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid var(--border);">
+            <span style="font-size:18px;">👀</span>
+            <span style="flex:1; font-size:12px; color:var(--text2);">自然流量↑</span>
+            <span style="color:var(--text3);">→</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid var(--border);">
+            <span style="font-size:18px;">🖱️</span>
+            <span style="flex:1; font-size:12px; color:var(--text2);">联盟链接点击↑</span>
+            <span style="color:var(--text3);">→</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid var(--border);">
+            <span style="font-size:18px;">🛒</span>
+            <span style="flex:1; font-size:12px; color:var(--text2);">转化率↑ / eBook销售↑</span>
+            <span style="color:var(--text3);">→</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 0;">
+            <span style="font-size:18px;">💰</span>
+            <span style="flex:1; font-size:13px; font-weight:700; color:var(--green);">营收增长 ↑</span>
+            <span style="color:var(--green);">🎯</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-head">
+          <span class="section-num">🎯</span>
+          <span class="section-title">KPI 北极星指标</span>
+        </div>
+        <div style="text-align:center; padding:20px 0;">
+          <div style="font-size:14px; color:var(--text3); margin-bottom:8px;">所有 Agent 的 KPI 必须指向</div>
+          <div style="font-size:32px; font-weight:800; background:linear-gradient(135deg, var(--accent), var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:12px;">营收增长</div>
+          <div style="font-size:12px; color:var(--text3);">Revenue Growth</div>
+          <div style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+            <div style="padding:12px; background:var(--panel2); border-radius:8px;">
+              <div style="font-size:20px; font-weight:800; color:var(--accent);">50%</div>
+              <div style="font-size:10px; color:var(--text3); margin-top:2px;">营收直接指标</div>
+            </div>
+            <div style="padding:12px; background:var(--panel2); border-radius:8px;">
+              <div style="font-size:20px; font-weight:800; color:var(--blue);">30%</div>
+              <div style="font-size:10px; color:var(--text3); margin-top:2px;">营收驱动过程</div>
+            </div>
+            <div style="padding:12px; background:var(--panel2); border-radius:8px;">
+              <div style="font-size:20px; font-weight:800; color:var(--yellow);">20%</div>
+              <div style="font-size:10px; color:var(--text3); margin-top:2px;">质量合规底线</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    ChinaBound Travel · 统一运营中心 v2.0 | 看板·监控·考核·成长 一站式平台 | 数据更新: <span id="footerTime">--</span>
+  </div>
+
+</div>
+
+<script>
+// Tab switching
+function switchTab(tabName) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tabName).classList.add('active');
+  event.target.classList.add('active');
+  // Resize charts when tab becomes visible
+  setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, 100);
+}
+
+// Global data
+let kpiData = null;
+let growthData = null;
+
+// Load KPI data
+async function loadKPIData() {
+  try {
+    const resp = await fetch('/ops/agent_kpi_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    kpiData = await resp.json();
+    renderKPITable();
+    renderKPICharts();
+    renderOverview();
+    updateTime();
+  } catch(e) {
+    document.getElementById('kpi-table-container').innerHTML =
+      '<div class="error-msg">加载 KPI 数据失败: ' + e.message + '<br><br>请先运行 agent_kpi_auditor.py 生成数据</div>';
+  }
+}
+
+// Load Growth data
+async function loadGrowthData() {
+  try {
+    const resp = await fetch('/ops/agent_growth_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    growthData = await resp.json();
+    renderGrowthCards();
+    renderGrowthChart();
+  } catch(e) {
+    document.getElementById('growth-cards').innerHTML =
+      '<div class="error-msg" style="grid-column:1/-1;">加载成长数据失败: ' + e.message + '<br><br>请先运行 agent_growth_engine.py 生成数据</div>';
+  }
+}
+
+// Render KPI Table
+function renderKPITable() {
+  if (!kpiData || !kpiData.agents) return;
+  const agents = kpiData.agents;
+  const avg = kpiData.average_score || (agents.reduce((s,a) => s + a.score, 0) / agents.length);
+  const passCount = agents.filter(a => a.score >= 70).length;
+
+  document.getElementById('kpi-avg').textContent = avg.toFixed(1);
+  document.getElementById('kpi-pass').textContent = passCount + '/' + agents.length;
+  if (kpiData.period) document.getElementById('kpi-period').textContent = kpiData.period;
+
+  let html = '<table class="agent-table"><thead><tr><th>Agent</th><th>得分</th><th>等级</th><th>奖惩</th><th>行动</th></tr></thead><tbody>';
+  agents.forEach(a => {
+    const grade = a.grade || gradeFromScore(a.score);
+    const reward = a.reward || rewardFromGrade(grade);
+    html += '<tr>';
+    html += '<td><div class="agent-name"><span class="agent-icon">' + (a.icon || '🤖') + '</span>';
+    html += '<div><div>' + (a.name || a.agent || 'Unknown') + '</div>';
+    if (a.revenue_chain) html += '<div style="font-size:10px; color:var(--text3); margin-top:2px; max-width:400px;">' + a.revenue_chain.substring(0, 80) + '...</div>';
+    html += '</div></div></td>';
+    html += '<td><span class="agent-score" style="color:' + gradeColor(grade) + '">' + a.score.toFixed(1) + '</span></td>';
+    html += '<td><span class="grade-badge grade-' + grade + '">' + grade + '</span></td>';
+    html += '<td><span class="' + (reward.startsWith('+') ? 'reward-pos' : reward.startsWith('-') ? 'reward-neg' : 'reward-zero') + '">' + reward + '</span></td>';
+    html += '<td style="font-size:11px; color:var(--text3);">' + (a.action || '--') + '</td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('kpi-table-container').innerHTML = html;
+}
+
+function gradeFromScore(score) {
+  if (score >= 90) return 'S';
+  if (score >= 80) return 'A';
+  if (score >= 70) return 'B';
+  if (score >= 60) return 'C';
+  return 'D';
+}
+function rewardFromGrade(grade) {
+  return {S:'+20%绩效', A:'+10%绩效', B:'0%', C:'-10%绩效', D:'-30%绩效'}[grade] || '0%';
+}
+function gradeColor(grade) {
+  return {S:'#22c55e', A:'#00d4ff', B:'#f59e0b', C:'#f97316', D:'#ef4444'}[grade] || '#94a3b8';
+}
+
+// Render KPI Charts
+let kpiBarChart, kpiPieChart, overviewChart1, overviewChart2;
+function renderKPICharts() {
+  if (!kpiData || !kpiData.agents) return;
+  const agents = kpiData.agents;
+
+  // Bar chart
+  const barEl = document.getElementById('kpi-chart-bar');
+  if (barEl) {
+    if (kpiBarChart) kpiBarChart.dispose();
+    kpiBarChart = echarts.init(barEl);
+    kpiBarChart.setOption({
+      backgroundColor: 'transparent',
+      grid: { left: 60, right: 20, top: 20, bottom: 60 },
+      xAxis: { type: 'category', data: agents.map(a => (a.name||a.agent||'').substring(0,6)), axisLabel: { color: '#94a3b8', fontSize: 10, rotate: 30 }, axisLine: { lineStyle: { color: '#1e293b' } } },
+      yAxis: { type: 'value', max: 100, axisLabel: { color: '#94a3b8' }, splitLine: { lineStyle: { color: '#1e293b' } } },
+      series: [{
+        type: 'bar', data: agents.map(a => ({ value: a.score, itemStyle: { color: gradeColor(a.grade||gradeFromScore(a.score)), borderRadius: [4,4,0,0] } })),
+        barWidth: '50%', label: { show: true, position: 'top', color: '#e2e8f0', fontSize: 11, fontWeight: 'bold', formatter: '{c}' }
+      }]
+    });
+  }
+
+  // Pie chart
+  const pieEl = document.getElementById('kpi-chart-pie');
+  if (pieEl) {
+    if (kpiPieChart) kpiPieChart.dispose();
+    kpiPieChart = echarts.init(pieEl);
+    const gradeCounts = {S:0, A:0, B:0, C:0, D:0};
+    agents.forEach(a => { const g = a.grade || gradeFromScore(a.score); gradeCounts[g]++; });
+    const pieData = Object.entries(gradeCounts).filter(([k,v]) => v > 0).map(([k,v]) => ({ name: k + '级', value: v, itemStyle: { color: gradeColor(k) } }));
+    kpiPieChart.setOption({
+      backgroundColor: 'transparent',
+      tooltip: { trigger: 'item' },
+      legend: { bottom: 0, textStyle: { color: '#94a3b8' } },
+      series: [{ type: 'pie', radius: ['40%', '70%'], center: ['50%', '45%'], data: pieData, label: { color: '#e2e8f0', formatter: '{b}: {c}人' }, itemStyle: { borderColor: '#0d1320', borderWidth: 2 } }]
+    });
+  }
+}
+
+// Render Overview
+function renderOverview() {
+  if (!kpiData || !kpiData.agents) return;
+  const agents = kpiData.agents;
+  const avg = kpiData.average_score || (agents.reduce((s,a) => s + a.score, 0) / agents.length);
+  document.getElementById('ov-kpi-score').textContent = avg.toFixed(1);
+  document.getElementById('ov-health').textContent = '75%';
+  document.getElementById('ov-coverage').textContent = '100%';
+
+  // Overview chart 1 - same as KPI bar
+  const el1 = document.getElementById('overview-chart-1');
+  if (el1) {
+    if (overviewChart1) overviewChart1.dispose();
+    overviewChart1 = echarts.init(el1);
+    overviewChart1.setOption({
+      backgroundColor: 'transparent',
+      grid: { left: 50, right: 15, top: 15, bottom: 50 },
+      xAxis: { type: 'category', data: agents.map(a => (a.name||a.agent||'').substring(0,6)), axisLabel: { color: '#94a3b8', fontSize: 9, rotate: 30 }, axisLine: { lineStyle: { color: '#1e293b' } } },
+      yAxis: { type: 'value', max: 100, axisLabel: { color: '#94a3b8', fontSize: 10 }, splitLine: { lineStyle: { color: '#1e293b' } } },
+      series: [{ type: 'bar', data: agents.map(a => ({ value: a.score, itemStyle: { color: gradeColor(a.grade||gradeFromScore(a.score)), borderRadius: [3,3,0,0] } })), barWidth: '55%' }]
+    });
+  }
+
+  // Overview chart 2 - grade distribution
+  const el2 = document.getElementById('overview-chart-2');
+  if (el2) {
+    if (overviewChart2) overviewChart2.dispose();
+    overviewChart2 = echarts.init(el2);
+    const gradeCounts = {S:0, A:0, B:0, C:0, D:0};
+    agents.forEach(a => { const g = a.grade || gradeFromScore(a.score); gradeCounts[g]++; });
+    overviewChart2.setOption({
+      backgroundColor: 'transparent',
+      tooltip: { trigger: 'item' },
+      legend: { bottom: 0, textStyle: { color: '#94a3b8', fontSize: 10 } },
+      series: [{ type: 'pie', radius: ['35%', '65%'], center: ['50%', '42%'], data: Object.entries(gradeCounts).filter(([k,v]) => v > 0).map(([k,v]) => ({ name: k+'级', value: v, itemStyle: { color: gradeColor(k) } })), label: { color: '#e2e8f0', fontSize: 10, formatter: '{b}:{c}' }, itemStyle: { borderColor: '#0d1320', borderWidth: 2 } }]
+    });
+  }
+}
+
+// Render Growth Cards
+function renderGrowthCards() {
+  if (!growthData) return;
+  const agents = growthData.agents || growthData.employees || [];
+  if (!agents.length) {
+    document.getElementById('growth-cards').innerHTML = '<div class="error-msg" style="grid-column:1/-1;">暂无成长数据</div>';
+    return;
+  }
+
+  let totalRevenue = 0, totalAbility = 0;
+  let html = '';
+  agents.forEach(a => {
+    const ability = a.ability || a.ability_score || 70;
+    const revenue = a.revenue || a.total_revenue || 0;
+    totalAbility += ability;
+    totalRevenue += revenue;
+    const level = a.level || a.growth_level || '熟手';
+    const skills = a.skills || [];
+    html += '<div class="growth-card">';
+    html += '<div class="growth-header">';
+    html += '<div class="growth-avatar">' + (a.icon || '🤖') + '</div>';
+    html += '<div><div class="growth-name">' + (a.name || a.agent || 'Unknown') + '</div>';
+    html += '<div class="growth-level">' + level + ' · Lv.' + (a.level_num || 2) + '</div></div></div>';
+    html += '<div class="growth-stats">';
+    html += '<div class="growth-stat"><div class="growth-stat-val" style="color:var(--accent);">' + ability + '</div><div class="growth-stat-label">能力值</div></div>';
+    html += '<div class="growth-stat"><div class="growth-stat-val" style="color:var(--green);">$' + (revenue >= 1000 ? (revenue/1000).toFixed(1)+'k' : revenue) + '</div><div class="growth-stat-label">累计收益</div></div>';
+    html += '<div class="growth-stat"><div class="growth-stat-val" style="color:var(--yellow);">' + (a.experience || a.exp || 0) + '</div><div class="growth-stat-label">经验值</div></div>';
+    html += '<div class="growth-stat"><div class="growth-stat-val" style="color:var(--purple);">' + (skills.length || 0) + '</div><div class="growth-stat-label">技能数</div></div>';
+    html += '</div>';
+    if (skills.length) {
+      html += '<div class="growth-skills">';
+      skills.slice(0, 4).forEach(s => html += '<span class="skill-tag">' + (s.name || s) + '</span>');
+      html += '</div>';
+    }
+    html += '<div style="margin-top:10px;"><div style="display:flex; justify-content:space-between; font-size:10px; color:var(--text3); margin-bottom:3px;"><span>成长进度</span><span>' + (a.growth_progress || Math.round(ability/100*100)) + '%</span></div>';
+    html += '<div class="progress-bar"><div class="progress-fill" style="width:' + (a.growth_progress || ability) + '%; background:linear-gradient(90deg, var(--accent), var(--green));"></div></div></div>';
+    html += '</div>';
+  });
+  document.getElementById('growth-cards').innerHTML = html;
+  document.getElementById('growth-avg-ability').textContent = (totalAbility / agents.length).toFixed(0);
+  document.getElementById('growth-total-revenue').textContent = '$' + (totalRevenue >= 1000 ? (totalRevenue/1000).toFixed(1) + 'k' : totalRevenue);
+}
+
+// Render Growth Chart
+let growthChart;
+function renderGrowthChart() {
+  if (!growthData) return;
+  const agents = growthData.agents || growthData.employees || [];
+  if (!agents.length) return;
+  const el = document.getElementById('growth-chart');
+  if (!el) return;
+  if (growthChart) growthChart.dispose();
+  growthChart = echarts.init(el);
+  growthChart.setOption({
+    backgroundColor: 'transparent',
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['能力值', '收益($)'], textStyle: { color: '#94a3b8' }, top: 0 },
+    grid: { left: 50, right: 50, top: 40, bottom: 50 },
+    xAxis: { type: 'category', data: agents.map(a => (a.name||a.agent||'').substring(0,8)), axisLabel: { color: '#94a3b8', fontSize: 10, rotate: 20 }, axisLine: { lineStyle: { color: '#1e293b' } } },
+    yAxis: [
+      { type: 'value', name: '能力', axisLabel: { color: '#94a3b8' }, splitLine: { lineStyle: { color: '#1e293b' } } },
+      { type: 'value', name: '收益$', axisLabel: { color: '#94a3b8' }, splitLine: { show: false } }
+    ],
+    series: [
+      { name: '能力值', type: 'bar', data: agents.map(a => a.ability || a.ability_score || 70), itemStyle: { color: '#00d4ff', borderRadius: [4,4,0,0] }, barWidth: '35%' },
+      { name: '收益($)', type: 'line', yAxisIndex: 1, data: agents.map(a => a.revenue || a.total_revenue || 0), itemStyle: { color: '#22c55e' }, lineStyle: { width: 2 }, symbol: 'circle', symbolSize: 8 }
+    ]
+  });
+}
+
+function updateTime() {
+  const now = new Date();
+  const timeStr = now.toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  document.getElementById('updateTime').textContent = '更新: ' + timeStr;
+  document.getElementById('footerTime').textContent = timeStr;
+}
+
+// Window resize
+window.addEventListener('resize', () => {
+  [kpiBarChart, kpiPieChart, overviewChart1, overviewChart2, growthChart].forEach(c => { if (c) c.resize(); });
+});
+
+// Init
+loadKPIData();
+loadGrowthData();
+</script>
+</body>
+</html>

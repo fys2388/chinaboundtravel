@@ -218,7 +218,7 @@ const GRADE_COLORS = { S:'#22c55e', A:'#00d4ff', B:'#f59e0b', C:'#f97316', D:'#e
 
 async function loadKPI() {
   try {
-    const resp = await fetch('agent_kpi_data.json?t=' + Date.now());
+    const resp = await fetch('/ops/agent_kpi_data.json?t=' + Date.now());
     const data = await resp.json();
     renderKPI(data);
   } catch(e) {
