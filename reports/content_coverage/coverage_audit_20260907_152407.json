@@ -1,0 +1,52 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T15:24:07.355961",
+  "post_fields": {
+    "total_posts": 61,
+    "last_updated": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 90.0,
+      "missing": [],
+      "passed": true
+    },
+    "description": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 95.0,
+      "missing": [],
+      "passed": true
+    },
+    "canonical_url": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 100.0,
+      "missing": [],
+      "passed": true
+    },
+    "content_id": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 100.0,
+      "missing": [],
+      "passed": true
+    }
+  },
+  "image_formats": {
+    "total": 542,
+    "webp": 271,
+    "jpg": 271,
+    "png": 0,
+    "webp_rate": 100.0,
+    "jpg_with_webp": 271,
+    "jpg_without_webp": 0,
+    "threshold": 80.0,
+    "passed": true,
+    "top_jpg_candidates": []
+  },
+  "summary": {
+    "all_passed": true,
+    "checks_passed": 5,
+    "checks_total": 5
+  }
+}

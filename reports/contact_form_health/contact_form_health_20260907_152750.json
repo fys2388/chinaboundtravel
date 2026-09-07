@@ -1,0 +1,100 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T15:27:50.751725",
+  "base_url": "https://www.chinaboundtravel.com",
+  "page_checks": [
+    {
+      "page": "/contact/",
+      "status_code": 200,
+      "has_form": true,
+      "fields_found": {
+        "name": false,
+        "email": false,
+        "message": false
+      },
+      "missing_fields": [
+        "name",
+        "email",
+        "message"
+      ],
+      "anti_spam": [
+        "spam"
+      ],
+      "has_web3forms": true,
+      "passed": false
+    },
+    {
+      "page": "/about/",
+      "status_code": 200,
+      "has_form": false,
+      "fields_found": {
+        "name": false,
+        "email": false,
+        "message": false
+      },
+      "missing_fields": [
+        "name",
+        "email",
+        "message"
+      ],
+      "anti_spam": [],
+      "has_web3forms": false,
+      "passed": false
+    },
+    {
+      "page": "/",
+      "status_code": 200,
+      "has_form": true,
+      "fields_found": {
+        "name": false,
+        "email": false,
+        "message": false
+      },
+      "missing_fields": [
+        "name",
+        "email",
+        "message"
+      ],
+      "anti_spam": [
+        "spam"
+      ],
+      "has_web3forms": false,
+      "passed": false
+    }
+  ],
+  "form_tests": [
+    {
+      "test": "contact_form_structure",
+      "forms_found": 2,
+      "form_info": [
+        {
+          "action": null,
+          "method": "GET"
+        },
+        {
+          "action": null,
+          "method": "GET"
+        }
+      ],
+      "passed": true,
+      "description": "联系页面应包含至少一个表单"
+    },
+    {
+      "test": "contact_form_submit_button",
+      "has_submit": true,
+      "passed": true,
+      "description": "表单应包含提交按钮"
+    }
+  ],
+  "web3forms": {
+    "configured": false,
+    "connected": false,
+    "error": "WEB3FORMS_ACCESS_KEY 未配置（从网站表单中提取或在 Web3Forms 后台获取）"
+  },
+  "summary": {
+    "total": 5,
+    "passed": 2,
+    "failed": 3,
+    "all_passed": false
+  }
+}

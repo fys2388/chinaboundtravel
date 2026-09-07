@@ -148,10 +148,22 @@ def audit_image_formats() -> Dict:
     jpg = list(IMG_DIR.rglob("*.jpg")) + list(IMG_DIR.rglob("*.jpeg"))
     png = list(IMG_DIR.rglob("*.png"))
     total = len(webp) + len(jpg) + len(png)
-    webp_rate = round(len(webp) / total * 100, 1) if total else 0
 
-    # 列出最大的 JPG 文件（优化候选）
-    jpg_with_size = [(f.name, f.stat().st_size) for f in jpg]
+    # P1-FIX: WebP 转化率 = 有 WebP 版本的 JPG 比例（而非 WebP 数量占比）
+    # 网站通常同时保留 JPG 和 WebP，用 <picture> 标签让浏览器选择
+    jpg_with_webp = 0
+    jpg_without_webp = []
+    for j in jpg:
+        w = j.with_suffix('.webp')
+        if w.exists() and w.stat().st_size > 0:
+            jpg_with_webp += 1
+        else:
+            jpg_without_webp.append(j)
+
+    webp_rate = round(jpg_with_webp / len(jpg) * 100, 1) if jpg else 0
+
+    # 列出最大的、没有 WebP 版本的 JPG 文件（优化候选）
+    jpg_with_size = [(f.name, f.stat().st_size) for f in jpg_without_webp]
     jpg_with_size.sort(key=lambda x: x[1], reverse=True)
 
     return {
@@ -160,6 +172,8 @@ def audit_image_formats() -> Dict:
         "jpg": len(jpg),
         "png": len(png),
         "webp_rate": webp_rate,
+        "jpg_with_webp": jpg_with_webp,
+        "jpg_without_webp": len(jpg_without_webp),
         "threshold": THRESHOLDS["webp_conversion"],
         "passed": webp_rate >= THRESHOLDS["webp_conversion"],
         "top_jpg_candidates": [{"name": n, "size_kb": round(s / 1024, 1)} for n, s in jpg_with_size[:10]],

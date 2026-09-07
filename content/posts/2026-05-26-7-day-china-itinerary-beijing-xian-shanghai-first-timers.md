@@ -27,6 +27,7 @@ cover:
 categories: ["cities", "visa"]
 tags: ["ChinaItinerary", "Beijing", "Xian", "Shanghai", "ChinaFirstTimer", "ChinaTravelGuide"]
 last_updated: "2026-08-24"
+canonicalURL: "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/"
 
 ---
 ## The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)

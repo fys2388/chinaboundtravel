@@ -1,0 +1,106 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T15:27:16.638376",
+  "base_url": "https://www.chinaboundtravel.com",
+  "api_tests": [
+    {
+      "name": "subscribe_valid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "有效邮箱应返回 200 + 成功消息",
+      "severity": "critical",
+      "passed": false,
+      "status_code": 200,
+      "response_time_ms": 2777,
+      "error": "响应缺少字段: message"
+    },
+    {
+      "name": "subscribe_invalid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效邮箱格式应返回 400",
+      "severity": "high",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 1886,
+      "error": null
+    },
+    {
+      "name": "subscribe_missing_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "缺失 email 字段应返回 400",
+      "severity": "high",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 574,
+      "error": null
+    },
+    {
+      "name": "subscribe_invalid_json",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效 JSON 应返回 400",
+      "severity": "medium",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 751,
+      "error": null
+    },
+    {
+      "name": "subscribe_empty_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "空邮箱应返回 400",
+      "severity": "medium",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 1801,
+      "error": null
+    },
+    {
+      "name": "subscribe_cors_preflight",
+      "endpoint": "/api/subscribe",
+      "method": "OPTIONS",
+      "description": "CORS 预检应返回 200 + CORS 头",
+      "severity": "medium",
+      "passed": false,
+      "status_code": 204,
+      "response_time_ms": 934,
+      "error": "期望状态码 200，实际 204",
+      "response_body": ""
+    }
+  ],
+  "page_checks": [
+    {
+      "page": "/",
+      "status_code": 200,
+      "has_subscribe_form": true,
+      "passed": true
+    },
+    {
+      "page": "/blog/",
+      "status_code": 404,
+      "has_subscribe_form": false,
+      "passed": false
+    },
+    {
+      "page": "/about/",
+      "status_code": 200,
+      "has_subscribe_form": true,
+      "passed": true
+    }
+  ],
+  "mailerlite": {
+    "configured": false,
+    "connected": false,
+    "subscriber_count": null,
+    "error": "MAILERLITE_API_TOKEN 未配置"
+  },
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 2,
+    "all_passed": false
+  }
+}

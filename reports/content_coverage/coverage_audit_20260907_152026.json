@@ -1,0 +1,91 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T15:20:26.237584",
+  "post_fields": {
+    "total_posts": 61,
+    "last_updated": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 90.0,
+      "missing": [],
+      "passed": true
+    },
+    "description": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 95.0,
+      "missing": [],
+      "passed": true
+    },
+    "canonical_url": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 100.0,
+      "missing": [],
+      "passed": true
+    },
+    "content_id": {
+      "count": 61,
+      "coverage": 100.0,
+      "threshold": 100.0,
+      "missing": [],
+      "passed": true
+    }
+  },
+  "image_formats": {
+    "total": 542,
+    "webp": 271,
+    "jpg": 271,
+    "png": 0,
+    "webp_rate": 50.0,
+    "threshold": 80.0,
+    "passed": false,
+    "top_jpg_candidates": [
+      {
+        "name": "french-concession-street.jpg",
+        "size_kb": 484.4
+      },
+      {
+        "name": "terracotta-army-panoramic.jpg",
+        "size_kb": 452.1
+      },
+      {
+        "name": "sandstone-pillars-closeup.jpg",
+        "size_kb": 441.0
+      },
+      {
+        "name": "nanjing-road-street.jpg",
+        "size_kb": 384.3
+      },
+      {
+        "name": "china-travel-safety-guide.jpg",
+        "size_kb": 359.0
+      },
+      {
+        "name": "china-transportation-complete-guide.jpg",
+        "size_kb": 350.0
+      },
+      {
+        "name": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg",
+        "size_kb": 348.3
+      },
+      {
+        "name": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.jpg",
+        "size_kb": 346.1
+      },
+      {
+        "name": "terracotta-warriors-rows.jpg",
+        "size_kb": 342.3
+      },
+      {
+        "name": "avatar-mountains-aerial.jpg",
+        "size_kb": 338.0
+      }
+    ]
+  },
+  "summary": {
+    "all_passed": false,
+    "checks_passed": 4,
+    "checks_total": 5
+  }
+}

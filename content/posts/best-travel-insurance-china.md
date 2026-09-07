@@ -13,6 +13,7 @@ categories = ["travel-tips", "visa"]
 tags = ["Travel Insurance", "China Safety", "Safetywing", "World Nomads", "Health Insurance", "medical insurance China", "digital nomad insurance China"]
 [cover]
   image = "/img/china-dest/chengdu/chengdu-hotpot-street.webp"
+canonicalURL: "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/"
 
 +++
 {{< content-timestamp >}}

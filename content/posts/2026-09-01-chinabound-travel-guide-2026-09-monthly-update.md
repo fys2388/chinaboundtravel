@@ -1,6 +1,4 @@
 ---
-
-
 content_id: "cbt-2d817f5f6f1b"
 
 
@@ -35,13 +33,9 @@ weight: 1
 
 draft: false
 last_updated: "2026-09-01"
+canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/"
 
 ---
-
-
-
-
-
 ## ChinaBound Travel Guide Now at Version 2026.09
 
 

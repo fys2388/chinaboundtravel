@@ -22,6 +22,7 @@ tags = ["China Transportation", "high-speed train China", "China Travel Tips", "
 featured = true
 ShowToc = true
 TocOpen = false
+canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
 
 +++
 {{< content-timestamp >}}

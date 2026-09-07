@@ -1,0 +1,248 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T15:28:13.045934",
+  "base_url": "https://www.chinaboundtravel.com",
+  "page_performance": [
+    {
+      "path": "/",
+      "name": "首页",
+      "priority": "critical",
+      "url": "https://www.chinaboundtravel.com/",
+      "status_code": 200,
+      "ttfb_ms": 1242,
+      "total_time_ms": 1242,
+      "content_size_kb": 39.8,
+      "passed": true,
+      "error": null,
+      "headers": {
+        "Date": "Mon, 07 Sep 2026 07:27:59 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2F4vK9JtUddZyLqM0CbCIiGMteXV2GCpoP95vu9eiNXyPNP9RHMLWAc9mdFiBan%2F8k3quspXBmpUqBuIRS6uKH44xHz7PMN4OjLO5bf6Jd%2FBKRIHOF%2F6IKyzgrkCD7%2BetaJs9bI30WdxrZAw%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Access-Control-Allow-Origin": "https://www.chinaboundtravel.com",
+        "Cache-Control": "public, max-age=14400, s-maxage=3600",
+        "x-frame-options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com https://*.googlesyndication.com https://*.googleusercontent.com https://pagead2.googlesyndication.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com https://sentry.io https://*.sentry.io https://sentry.avs.io https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://api.web3forms.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com https://*.googlesyndication.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; upgrade-insecure-requests",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "vary": "accept-encoding",
+        "Server": "cloudflare",
+        "Age": "10",
+        "cf-cache-status": "HIT",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a373fe7f7a0f3f74-SIN",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "path": "/blog/",
+      "name": "博客列表",
+      "priority": "high",
+      "url": "https://www.chinaboundtravel.com/blog/",
+      "status_code": 404,
+      "ttfb_ms": 2016,
+      "total_time_ms": 2016,
+      "content_size_kb": 18.5,
+      "passed": false,
+      "error": null,
+      "headers": {
+        "Date": "Mon, 07 Sep 2026 07:28:01 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ACoTHdxyXcWyjWFUXqBLwWuxlPAz9X6W%2Fcn220CwoNogsFzozHKwWpK0C9QY7rJyjBZzR6UBybJ1%2BQXiB7S4RiTNTrxAbbzTpK4ZGvS4%2Fu2O54BDAh697xon06SglcHhgX3Bj2QyZtqYpds%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Access-Control-Allow-Origin": "https://www.chinaboundtravel.com",
+        "Cache-Control": "max-age=14400",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com https://*.googlesyndication.com https://*.googleusercontent.com https://pagead2.googlesyndication.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com https://sentry.io https://*.sentry.io https://sentry.avs.io https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://api.web3forms.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com https://*.googlesyndication.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; upgrade-insecure-requests",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "vary": "accept-encoding",
+        "Server": "cloudflare",
+        "Age": "45",
+        "cf-cache-status": "HIT",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a373fe8ace5372da-SIN",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "path": "/about/",
+      "name": "关于我们",
+      "priority": "medium",
+      "url": "https://www.chinaboundtravel.com/about/",
+      "status_code": 200,
+      "ttfb_ms": 921,
+      "total_time_ms": 921,
+      "content_size_kb": 21.8,
+      "passed": true,
+      "error": null,
+      "headers": {
+        "Date": "Mon, 07 Sep 2026 07:28:03 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tBrv3QQo7qdex%2FZLi%2Fa032%2Fw2QQoM6%2Bjhi%2B9LaHZAwFw3JdrB3Gvk6%2B7E%2BX6Je9heWFr1mxiXkCIiM6G8w0H24K11THp9MkH5aiOUm5pVqTUaPd%2BkJnMzOZxMgmbVsxBGgMT1w3QKvcwBCc%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Access-Control-Allow-Origin": "https://www.chinaboundtravel.com",
+        "Cache-Control": "public, max-age=14400, s-maxage=3600",
+        "x-frame-options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com https://*.googlesyndication.com https://*.googleusercontent.com https://pagead2.googlesyndication.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com https://sentry.io https://*.sentry.io https://sentry.avs.io https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://api.web3forms.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com https://*.googlesyndication.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; upgrade-insecure-requests",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "vary": "accept-encoding",
+        "Server": "cloudflare",
+        "Age": "45",
+        "cf-cache-status": "HIT",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a373fe929b5bff8b-SIN",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "path": "/contact/",
+      "name": "联系我们",
+      "priority": "high",
+      "url": "https://www.chinaboundtravel.com/contact/",
+      "status_code": 200,
+      "ttfb_ms": 496,
+      "total_time_ms": 496,
+      "content_size_kb": 57.0,
+      "passed": true,
+      "error": null,
+      "headers": {
+        "Date": "Mon, 07 Sep 2026 07:28:03 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XN1zpWStszk8aN3Xm3xs5BhKdaQpQiHNFBJBbYVcwXw3nB22fPxiOpETTC8SRxZFz9T%2F%2Fbc7%2FJhiCpWoGvHFyVgbmK2WMc7y8Gku1YrEDIijYihYQwbRZYXb4O%2BHbVUg1WvPTYxIwntT1s4%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Access-Control-Allow-Origin": "https://www.chinaboundtravel.com",
+        "Cache-Control": "public, max-age=14400, s-maxage=3600",
+        "x-frame-options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com https://*.googlesyndication.com https://*.googleusercontent.com https://pagead2.googlesyndication.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com https://sentry.io https://*.sentry.io https://sentry.avs.io https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://api.web3forms.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com https://*.googlesyndication.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; upgrade-insecure-requests",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "vary": "accept-encoding",
+        "Server": "cloudflare",
+        "Age": "16",
+        "cf-cache-status": "HIT",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a373fe963826fde8-SIN",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "path": "/posts/china-travel-guide/",
+      "name": "热门文章",
+      "priority": "high",
+      "url": "https://www.chinaboundtravel.com/posts/china-travel-guide/",
+      "status_code": 404,
+      "ttfb_ms": 3340,
+      "total_time_ms": 3340,
+      "content_size_kb": 18.5,
+      "passed": false,
+      "error": null,
+      "headers": {
+        "Date": "Mon, 07 Sep 2026 07:28:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SNc8M2qL%2F9krBSfDw0%2BcP9j2urQnnDInAYSEF2W2aJGo4QtJoscj6vk7p5SfErWz8LqMHBIQgi491tCa5%2B%2Blptrz1meHpbvypCDz%2Bsularruaza1YPm6CMN3uIpzQSNLUjEBra2ScY0Nd1E%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Access-Control-Allow-Origin": "https://www.chinaboundtravel.com",
+        "Cache-Control": "max-age=14400",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com https://giscus.app https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://emrldtp.com; img-src 'self' data: https://www.google-analytics.com https://emrldtp.com https://*.googlesyndication.com https://*.googleusercontent.com https://pagead2.googlesyndication.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://api.github.com https://emrldtp.com https://sentry.io https://*.sentry.io https://sentry.avs.io https://pagead2.googlesyndication.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://api.web3forms.com; frame-src https://giscus.app https://www.youtube.com https://player.vimeo.com https://emrldtp.com https://*.googlesyndication.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; upgrade-insecure-requests",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "vary": "accept-encoding",
+        "Server": "cloudflare",
+        "cf-cache-status": "MISS",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a373fea87da2f8d2-SIN",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    }
+  ],
+  "api_performance": [
+    {
+      "path": "/api/subscribe",
+      "method": "POST",
+      "name": "订阅API",
+      "body": {
+        "email": "perf-test@example.com"
+      },
+      "url": "https://www.chinaboundtravel.com/api/subscribe",
+      "status_code": 200,
+      "response_time_ms": 1620,
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "/api/checkout",
+      "method": "POST",
+      "name": "结账API",
+      "body": {
+        "plan": "monthly"
+      },
+      "url": "https://www.chinaboundtravel.com/api/checkout",
+      "status_code": 401,
+      "response_time_ms": 592,
+      "passed": true,
+      "error": null
+    }
+  ],
+  "security_headers": {
+    "found": {},
+    "missing": [
+      "X-Content-Type-Options",
+      "X-Frame-Options",
+      "Content-Security-Policy",
+      "Referrer-Policy"
+    ],
+    "passed": false
+  },
+  "performance_headers": {
+    "found": {
+      "Content-Encoding": "gzip",
+      "Cache-Control": "public, max-age=14400, s-maxage=3600"
+    },
+    "missing": [
+      "ETag",
+      "Last-Modified"
+    ]
+  },
+  "image_performance": {
+    "total_images": 0,
+    "webp_images": 0,
+    "jpg_images": 0,
+    "large_images": [],
+    "avg_size_kb": 0,
+    "passed": true
+  },
+  "summary": {
+    "total": 8,
+    "passed": 6,
+    "failed": 2,
+    "all_passed": false
+  }
+}

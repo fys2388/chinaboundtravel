@@ -21,6 +21,7 @@ tags = ["China Safety", "Is China Safe", "China Travel Safety", "China Scams", "
 featured = true
 ShowToc = true
 TocOpen = false
+canonicalURL: "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/"
 
 +++
 {{< content-timestamp >}}
