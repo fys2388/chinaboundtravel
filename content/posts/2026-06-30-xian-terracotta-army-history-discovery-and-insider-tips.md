@@ -19,6 +19,7 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp"
 categories: ["history", "cities"]
 tags: ["ChinaTravel", "ChinaTravelGuide", "China", "EuropeToChina", "Xian"]
+last_updated: "2026-06-30"
 
 ---
 ## Xi'an Terracotta Army: History, Discovery, and Practical Tips

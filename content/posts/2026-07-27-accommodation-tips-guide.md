@@ -23,6 +23,7 @@ cover:
   alt: "China travel guide"
   image: "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg"
 categories: ["travel-tips", "cities"]
+last_updated: "2026-07-27"
 
 ---
 ## Introduction

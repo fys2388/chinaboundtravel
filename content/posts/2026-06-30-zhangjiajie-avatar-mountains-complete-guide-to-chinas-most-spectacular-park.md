@@ -26,6 +26,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp"
 categories: ["nature", "travel"]
+last_updated: "2026-06-30"
 
 ---
 ## Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park

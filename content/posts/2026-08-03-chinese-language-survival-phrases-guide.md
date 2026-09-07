@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-guide.jpg"
 categories: ["language", "travel"]
+last_updated: "2026-08-03"
 
 ---
 # Chinese Language Survival Phrases: A Practical Guide for American Travelers in China

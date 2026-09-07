@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg"
 categories: ["transport", "cities"]
+last_updated: "2026-07-12"
 
 ---
 ## Navigating China's Transportation: A Complete Guide for European Travelers

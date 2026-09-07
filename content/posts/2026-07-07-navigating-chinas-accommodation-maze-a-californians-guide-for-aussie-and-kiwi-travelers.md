@@ -21,6 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.jpg"
 categories: ["travel-tips", "cities"]
+last_updated: "2026-07-07"
 
 ---
 ## Navigating China's Accommodation Maze: A Californian's Guide for Aussie and Kiwi Travelers

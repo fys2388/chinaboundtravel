@@ -21,6 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg"
 categories: ["visa", "transport"]
+last_updated: "2026-07-31"
 
 ---
 # China Remote Work Guide: Digital Nomad Essentials

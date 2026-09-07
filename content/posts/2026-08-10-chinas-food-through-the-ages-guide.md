@@ -23,6 +23,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/chinas-food-through-the-ages-guide.webp"
 categories: ["food", "internet"]
+last_updated: "2026-08-10"
 
 ---
 There is a video doing the rounds on Chinese social media that is hard to forget. It shows a map of China, and one by one, every province lights up red — each with the dish people from that province miss most when they are far from home. Sichuan gets hotpot. Shaanxi gets roujiamo. Hunan gets its fire-chili stir-fries. By the time the whole map glows, it is less a geography lesson than a love letter written in food.

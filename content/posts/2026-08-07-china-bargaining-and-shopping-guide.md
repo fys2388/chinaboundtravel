@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.webp"
 categories: ["shopping", "travel"]
+last_updated: "2026-08-07"
 
 ---
 ## Introduction

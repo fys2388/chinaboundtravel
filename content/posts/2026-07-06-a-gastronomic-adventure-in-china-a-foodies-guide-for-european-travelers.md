@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.jpg"
 categories: ["food", "cities"]
+last_updated: "2026-07-06"
 
 ---
 ## A Gastronomic Adventure in China: A Foodie's Guide for European Travelers

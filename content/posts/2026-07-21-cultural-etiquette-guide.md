@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg"
 categories: ["travel-tips", "cities"]
+last_updated: "2026-07-21"
 
 ---
 ## Cultural Etiquette in China: Essential Dos and Don'ts for Travelers

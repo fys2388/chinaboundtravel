@@ -16,6 +16,7 @@ draft: false
 categories: ["travel-tips", "payment"]
 cover:
   image: "/img/china-dest/general/chinabound-travel-guide-2026-07.jpg"
+last_updated: "2026-07-01"
 
 ---
 {{< affiliate-section >}}

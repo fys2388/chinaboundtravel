@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/beijing/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.webp"
 categories: ["cities", "travel"]
+last_updated: "2026-08-10"
 
 ---
 ## Shanghai vs Beijing: Which Chinese City Should You Visit First?

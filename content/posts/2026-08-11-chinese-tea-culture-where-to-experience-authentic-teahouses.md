@@ -23,6 +23,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/culture/chinese-tea-culture-where-to-experience-authentic-teahouses.webp"
+last_updated: "2026-08-11"
 
 ---
 ## Chinese Tea Culture: Where to Experience Authentic Teahouses

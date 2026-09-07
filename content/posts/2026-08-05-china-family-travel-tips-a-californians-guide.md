@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.webp"
 categories: ["travel-tips", "visa"]
+last_updated: "2026-08-05"
 
 ---
 ## China Family Travel Tips: A Californian's Guide

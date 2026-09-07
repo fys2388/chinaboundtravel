@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "/img/china-dest/body/external_024a9f14060d.jpg"
 categories: ["cities", "transport"]
+last_updated: "2026-07-03"
 
 ---
 ## Guilin and Yangshuo: The Ultimate Karst Landscape Guide for 2026

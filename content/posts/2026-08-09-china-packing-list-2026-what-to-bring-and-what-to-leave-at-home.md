@@ -21,6 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.webp"
 categories: ["travel-tips", "cities"]
+last_updated: "2026-08-09"
 
 ---
 ## China Packing List 2026: What to Bring and What to Leave at Home

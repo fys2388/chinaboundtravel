@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg"
 categories: ["payment", "cities"]
+last_updated: "2026-07-02"
 
 ---
 # How to Set Up & Use WeChat Pay Step by Step (2026)

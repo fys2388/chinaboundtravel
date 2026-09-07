@@ -75,7 +75,7 @@ This is the hard part. Your address needs to be in Chinese characters. Here's ho
 
 1. Open your map app (Amap/ or Apple Maps)
 2. Search for your hotel or apartment
-3. Tap "Share" â?copy the address in Chinese
+3. Tap "Share" �copy the address in Chinese
 4. Paste it into Meituan/Ele.me's address field
 
 Or: Ask your hotel concierge/reception to write your address in Chinese on a piece of paper. Take a photo. Show it to delivery people when they call.
@@ -95,7 +95,7 @@ If you don't have Alipay or WeChat Pay set up yet, read our [Alipay & WeChat Pay
 1. Open the app  location should auto-detect
 2. Search for food type or specific restaurant
 3. Browse the recommendations or use filters (/distance, /rating, /sales volume)
-4. Tap a restaurant â?see menu
+4. Tap a restaurant �see menu
 
 > **Editor's Tip:** Sort by "" (highest sales volume) not "" (closest distance). A slightly further restaurant with 10,000+ monthly orders is more reliable than the closest one with 50 orders.
 
@@ -115,7 +115,7 @@ Common menu sections:
 
 ### Adding to Cart & Ordering
 
-1. Tap items â?add to cart ()
+1. Tap items �add to cart ()
 2. Adjust quantity if needed
 3. Check out ()
 4. Verify delivery address

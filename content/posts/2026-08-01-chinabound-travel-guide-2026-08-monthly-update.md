@@ -16,6 +16,7 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-20
 categories: ["visa", "cities"]
 cover:
   image: "/img/china-dest/general/chinabound-travel-guide-2026-08.jpg"
+last_updated: "2026-08-01"
 
 ---
 # ChinaBound Travel Guide 2026.08 - Now Updated With Latest Visa Rules

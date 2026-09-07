@@ -180,10 +180,10 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
 | Shanghai → Hangzhou | 45 min | well-suited first CRH trip — see our [Hangzhou guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/) |
-| Shanghai â?Suzhou | 25 min | Ancient water town vibes |
-| Beijing â?Tianjin | 30 min | budget-friendly G train (~$8) |
-| Chengdu â?Chongqing | 1 hr | Mountain city double feature |
-| Beijing â?Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
+| Shanghai �Suzhou | 25 min | Ancient water town vibes |
+| Beijing �Tianjin | 30 min | budget-friendly G train (~$8) |
+| Chengdu �Chongqing | 1 hr | Mountain city double feature |
+| Beijing �Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
 
 ---
 

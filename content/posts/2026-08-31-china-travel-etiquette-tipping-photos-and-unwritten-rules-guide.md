@@ -24,6 +24,8 @@ categories:
   - China
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp"
+last_updated: "2026-08-31"
+
 ---
 
 ## Why China Etiquette Matters More Than You Think

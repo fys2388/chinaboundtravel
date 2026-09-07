@@ -18,6 +18,7 @@ TocOpen: "false"
 weight: "1"
 categories: ["cities", "visa"]
 tags: ["ChinaTravel", "ChinaTravelGuide", "China", "Shanghai", "AustraliaToChina"]
+last_updated: "2026-06-22"
 
 ---
 ## What Makes Shanghai's Hidden Neighborhoods Special

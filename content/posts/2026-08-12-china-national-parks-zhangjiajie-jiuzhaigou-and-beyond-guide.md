@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp"
 categories: ["nature", "travel"]
+last_updated: "2026-08-12"
 
 ---
 ## China National Parks: Zhangjiajie, Jiuzhaigou, and Beyond

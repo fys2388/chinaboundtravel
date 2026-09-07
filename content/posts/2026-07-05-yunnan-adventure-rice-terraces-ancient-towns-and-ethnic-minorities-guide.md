@@ -22,6 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg"
 categories: ["transport", "cities"]
+last_updated: "2026-07-05"
 
 ---
 ## Introduction

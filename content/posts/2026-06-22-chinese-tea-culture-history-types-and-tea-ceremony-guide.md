@@ -23,6 +23,7 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 categories: ["culture", "travel"]
+last_updated: "2026-06-22"
 
 ---
 ## How a Single Cup of Tea Changed Everything

@@ -19,6 +19,7 @@ TocOpen: "false"
 weight: "1"
 categories: ["history", "travel"]
 tags: ["ChinaTravel", "ChinaTravelGuide", "China", "USToChina", "Beijing"]
+last_updated: "2026-06-19"
 
 ---
 **The History and Culture of the Great Wall: Beyond the Tourist Trail**

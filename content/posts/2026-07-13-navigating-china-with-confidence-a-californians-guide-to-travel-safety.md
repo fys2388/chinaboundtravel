@@ -21,6 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg"
 categories: ["safety", "travel"]
+last_updated: "2026-07-13"
 
 ---
 ## Navigating China with Confidence: A Californian's Guide to Travel Safety
