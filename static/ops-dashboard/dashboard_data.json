@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07 19:31:26",
+  "generated_at": "2026-09-07 19:46:26",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 169,
+    "response_ms": 181,
     "server": "cloudflare"
   },
   "workflows": [
@@ -95,7 +95,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-07T11:02:04Z",
+      "last_run": "2026-09-07T11:31:43Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -113,7 +113,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T11:02:10Z",
+      "last_run": "2026-09-07T11:31:47Z",
       "last_event": "workflow_run"
     },
     {
@@ -131,8 +131,8 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T10:23:24Z",
-      "last_event": "push"
+      "last_run": "2026-09-07T11:35:49Z",
+      "last_event": "schedule"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -185,8 +185,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-07T11:31:13Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-07T11:46:10Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -325,7 +325,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 11:31",
+    "checked_at": "2026-09-07 11:46",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -493,9 +493,9 @@
       "date": "2026-09-07"
     },
     "ga4_daily": {
-      "visitors": 7,
-      "sessions": 14,
-      "pageviews": 28,
+      "visitors": 9,
+      "sessions": 16,
+      "pageviews": 30,
       "new_users": 517,
       "bounce_rate": 65.4,
       "date": "2026-09-07",
@@ -953,16 +953,16 @@
         },
         {
           "date": "2026-09-07",
-          "sessions": 14,
-          "activeUsers": 7,
-          "pageviews": 28
+          "sessions": 16,
+          "activeUsers": 9,
+          "pageviews": 30
         }
       ],
       "ranges": {
         "today": {
-          "visitors": 7,
-          "sessions": 14,
-          "pageviews": 28,
+          "visitors": 9,
+          "sessions": 16,
+          "pageviews": 30,
           "date_range": "2026-09-07 ~ 2026-09-07",
           "days": 1
         },
@@ -974,23 +974,23 @@
           "days": 1
         },
         "7d": {
-          "visitors": 81,
-          "sessions": 128,
-          "pageviews": 316,
+          "visitors": 83,
+          "sessions": 130,
+          "pageviews": 318,
           "date_range": "2026-09-01 ~ 2026-09-07",
           "days": 7
         },
         "30d": {
-          "visitors": 314,
-          "sessions": 381,
-          "pageviews": 862,
+          "visitors": 316,
+          "sessions": 383,
+          "pageviews": 864,
           "date_range": "2026-08-08 ~ 2026-09-07",
           "days": 30
         },
         "90d": {
-          "visitors": 605,
-          "sessions": 738,
-          "pageviews": 1978,
+          "visitors": 607,
+          "sessions": 740,
+          "pageviews": 1980,
           "date_range": "2026-06-16 ~ 2026-09-07",
           "days": 76
         },
