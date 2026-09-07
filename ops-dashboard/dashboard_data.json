@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08 02:01:31",
+  "generated_at": "2026-09-08 04:43:14",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 201,
+    "response_ms": 313,
     "server": "cloudflare"
   },
   "workflows": [
@@ -59,7 +59,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T06:49:46Z",
+      "last_run": "2026-09-07T18:30:31Z",
       "last_event": "schedule"
     },
     {
@@ -95,7 +95,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-07T17:31:45Z",
+      "last_run": "2026-09-07T18:01:48Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -113,7 +113,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T17:32:16Z",
+      "last_run": "2026-09-07T20:26:17Z",
       "last_event": "workflow_run"
     },
     {
@@ -185,8 +185,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-07T18:01:20Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-07T20:43:02Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -212,7 +212,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T06:50:34Z",
+      "last_run": "2026-09-07T20:26:17Z",
       "last_event": "workflow_run"
     },
     {
@@ -266,7 +266,7 @@
       "id": "social-engine-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T05:53:32Z",
+      "last_run": "2026-09-07T18:11:15Z",
       "last_event": "schedule"
     },
     {
@@ -275,7 +275,7 @@
       "id": "social_distributor",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-06T18:59:28Z",
+      "last_run": "2026-09-07T20:25:57Z",
       "last_event": "schedule"
     },
     {
@@ -325,7 +325,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 18:01",
+    "checked_at": "2026-09-07 20:43",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -495,7 +495,7 @@
     "ga4_daily": {
       "visitors": 10,
       "sessions": 18,
-      "pageviews": 36,
+      "pageviews": 38,
       "new_users": 517,
       "bounce_rate": 65.4,
       "date": "2026-09-07",
@@ -955,14 +955,14 @@
           "date": "2026-09-07",
           "sessions": 18,
           "activeUsers": 10,
-          "pageviews": 36
+          "pageviews": 38
         }
       ],
       "ranges": {
         "today": {
           "visitors": 10,
           "sessions": 18,
-          "pageviews": 36,
+          "pageviews": 38,
           "date_range": "2026-09-07 ~ 2026-09-07",
           "days": 1
         },
@@ -976,21 +976,21 @@
         "7d": {
           "visitors": 84,
           "sessions": 132,
-          "pageviews": 324,
+          "pageviews": 326,
           "date_range": "2026-09-01 ~ 2026-09-07",
           "days": 7
         },
         "30d": {
           "visitors": 317,
           "sessions": 385,
-          "pageviews": 870,
+          "pageviews": 872,
           "date_range": "2026-08-08 ~ 2026-09-07",
           "days": 30
         },
         "90d": {
           "visitors": 608,
           "sessions": 742,
-          "pageviews": 1986,
+          "pageviews": 1988,
           "date_range": "2026-06-16 ~ 2026-09-07",
           "days": 76
         },
