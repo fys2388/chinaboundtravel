@@ -1019,6 +1019,17 @@
       "error_message": "oy\tCheckout repository\t2026-09-07T07:29:48.0743912Z 'af7c545f060c03eba6e240862f2b90c939f3355a'\npost-deploy\tSetup Hugo\t﻿2026-09-07T07:29:48.0939255Z ##[group]Run peaceiris/actions-hugo@v3\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0939688Z with:\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0939986Z   hugo-version: 0.147.0\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0940292Z   extended: true\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0940607Z ##[endgroup]\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.16",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260907_080213",
+      "timestamp": "2026-09-07T08:02:13.016074",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "34098382774",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "2026-09-07T08:01:42.9537601Z ##[endgroup]\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9760619Z ✅ 时间范围选择器已注入 index.html\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9761305Z    GA4 ranges: N/A\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9761920Z    GSC ranges: N/A\nrefresh-dashboard\tPush and trigger deploy\t﻿2026-09-07T08:01:42.9819237Z ##[group]Run mkdir -p static/ops-dashboard\nrefresh-dashboard\tPush and trigger deploy\t2026-09-07T08:01:",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
