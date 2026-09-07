@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChinaBound Travel · 运营监控中心</title>
+<script src="/js/echarts.min.js"></script>
+<style>
+:root {
+  --bg:#070b14; --panel:#0d1320; --panel2:#111827; --border:#1e293b; --border2:#263548;
+  --text:#e2e8f0; --text2:#94a3b8; --text3:#64748b; --text4:#475569;
+  --accent:#00d4ff; --accent-dim:#00d4ff22;
+  --green:#22c55e; --yellow:#f59e0b; --red:#ef4444; --blue:#3b82f6; --purple:#a78bfa;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:13px; line-height:1.55;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,212,255,0.06), transparent),
+    linear-gradient(180deg, #070b14 0%, #0a0f1c 100%);
+  min-height:100vh;
+}
+.container { max-width:1440px; margin:0 auto; padding:20px 24px 40px; }
+
+/* 顶部细条 */
+.top-line { height:2px; background:linear-gradient(90deg, transparent, var(--accent), transparent); opacity:0.6; margin-bottom:20px; }
+
+/* Header */
+.header { display:flex; align-items:center; gap:20px; margin-bottom:24px; flex-wrap:wrap; }
+.brand { display:flex; align-items:center; gap:12px; }
+.brand-logo {
+  width:38px; height:38px; border-radius:10px;
+  background:linear-gradient(135deg, var(--accent), #0099cc);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:16px; color:#000; letter-spacing:-1px;
+  box-shadow:0 0 20px rgba(0,212,255,0.3);
+}
+.brand-text h1 { font-size:17px; font-weight:700; color:#f1f5f9; letter-spacing:0.3px; }
+.brand-text p { font-size:11px; color:var(--text3); margin-top:1px; }
+
+.header-pills { display:flex; gap:10px; flex-wrap:wrap; margin-left:auto; }
+.pill {
+  display:inline-flex; align-items:center; gap:7px;
+  padding:6px 14px; border-radius:8px; font-size:12px; font-weight:600;
+  background:var(--panel); border:1px solid var(--border);
+}
+.pill .dot { width:7px; height:7px; border-radius:50%; }
+.pill .dot.live { animation:blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+.pill-green { color:var(--green); border-color:rgba(34,197,94,0.25); background:rgba(34,197,94,0.06); }
+.pill-blue { color:var(--accent); border-color:rgba(0,212,255,0.25); background:rgba(0,212,255,0.06); }
+.pill-yellow { color:var(--yellow); border-color:rgba(245,158,11,0.25); background:rgba(245,158,11,0.06); }
+.pill-red { color:var(--red); border-color:rgba(239,68,68,0.25); background:rgba(239,68,68,0.06); }
+
+.update-time { font-size:11px; color:var(--text3); text-align:right; }
+.update-time strong { color:var(--text2); font-weight:600; }
+
+/* KPI 网格 */
+.kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:24px; }
+@media(max-width:1100px) { .kpi-grid { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:700px) { .kpi-grid { grid-template-columns:repeat(2,1fr); } }
+.kpi {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:16px 18px; position:relative; overflow:hidden;
+  transition:border-color 0.2s, transform 0.15s;
+}
+.kpi:hover { border-color:var(--border2); transform:translateY(-1px); }
+.kpi::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }
+.kpi.k1::before { background:var(--accent); }
+.kpi.k2::before { background:var(--blue); }
+.kpi.k3::before { background:var(--purple); }
+.kpi.k4::before { background:var(--yellow); }
+.kpi.k5::before { background:var(--green); }
+.kpi-label { font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.6px; font-weight:600; margin-bottom:8px; }
+.kpi-value { font-size:28px; font-weight:800; color:#f8fafc; line-height:1.1; font-variant-numeric:tabular-nums; }
+.kpi-sub { font-size:11px; color:var(--text3); margin-top:6px; }
+
+/* 趋势图卡片 */
+.kpi-trend-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+@media(max-width:900px) { .kpi-trend-grid { grid-template-columns:1fr; } }
+.kpi-trend {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:14px 16px 10px; position:relative; overflow:hidden;
+}
+.kpi-trend::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }
+.kpi-trend.t1::before { background:var(--accent); }
+.kpi-trend.t2::before { background:var(--blue); }
+.kpi-trend-head { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+.kpi-trend-label { font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:0.6px; font-weight:600; }
+.kpi-trend-value { font-size:24px; font-weight:800; color:#f8fafc; font-variant-numeric:tabular-nums; }
+.kpi-trend-sub { font-size:11px; color:var(--text3); }
+.kpi-chart { width:100%; height:110px; }
+
+/* 区块 */
+.section { margin-bottom:24px; }
+.section-head { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.section-num {
+  width:22px; height:22px; border-radius:6px;
+  background:var(--accent-dim); color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700;
+}
+.section-title { font-size:14px; font-weight:700; color:#f1f5f9; letter-spacing:0.3px; }
+.section-meta { font-size:11px; color:var(--text3); margin-left:auto; }
+
+/* 两列 */
+.two-col { display:grid; grid-template-columns:1.15fr 1fr; gap:24px; }
+@media(max-width:1000px) { .two-col { grid-template-columns:1fr; } }
+
+/* Workflow 分类 */
+.wf-cat {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:14px 16px; margin-bottom:10px;
+}
+.wf-cat-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.wf-cat-title { font-size:12px; font-weight:700; color:var(--text2); letter-spacing:0.3px; }
+.wf-cat-count { font-size:11px; font-weight:600; }
+.wf-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:2px; }
+.wf-item {
+  display:flex; align-items:center; gap:8px; padding:5px 8px;
+  font-size:11.5px; border-radius:5px; cursor:default;
+  transition:background 0.15s;
+}
+.wf-item:hover { background:var(--panel2); }
+.wf-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+.wf-name { color:var(--text2); flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.wf-time { color:var(--text4); font-size:10px; font-variant-numeric:tabular-nums; }
+.wf-freq { font-size:9px; color:var(--accent); background:rgba(0,212,255,0.1); padding:1px 5px; border-radius:3px; margin-left:4px; flex-shrink:0; }
+
+/* Agent 卡片 */
+.agent-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px; }
+.agent-card {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:12px 14px; transition:border-color 0.2s;
+}
+.agent-card:hover { border-color:var(--border2); }
+.agent-top { display:flex; align-items:center; gap:7px; margin-bottom:6px; }
+.agent-dot { width:7px; height:7px; border-radius:50%; }
+.agent-dot.dot-live { animation:blink 2.5s infinite; }
+.agent-name { font-size:12px; font-weight:700; color:#e2e8f0; }
+.agent-status { font-size:11px; font-weight:600; margin-bottom:4px; }
+.agent-meta { font-size:10px; color:var(--text3); }
+
+/* 闭环标签 */
+.loop-bar { display:flex; gap:6px; flex-wrap:wrap; margin-top:14px; }
+.loop-tag {
+  padding:4px 10px; border-radius:6px; font-size:10.5px; font-weight:600;
+  background:var(--panel2); color:var(--text2); border:1px solid var(--border);
+}
+.loop-tag.active { color:var(--accent); border-color:rgba(0,212,255,0.3); background:rgba(0,212,255,0.06); }
+
+/* 实验 */
+.exp-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; }
+.exp-card {
+  background:var(--panel); border:1px solid var(--border); border-radius:10px;
+  padding:12px 14px; transition:border-color 0.2s;
+}
+.exp-card:hover { border-color:var(--border2); }
+.exp-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+.exp-id { font-size:11px; font-weight:800; color:var(--accent); letter-spacing:0.5px; }
+.exp-badge { font-size:9.5px; font-weight:700; padding:2px 7px; border-radius:4px; text-transform:uppercase; letter-spacing:0.5px; }
+.exp-name { font-size:12px; color:var(--text); margin-bottom:6px; line-height:1.4; }
+.exp-meta { font-size:10px; color:var(--text3); }
+
+/* 数据源 */
+.ds-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:8px; }
+.ds-item {
+  display:flex; align-items:center; gap:8px;
+  background:var(--panel); border:1px solid var(--border); border-radius:8px;
+  padding:9px 12px; font-size:12px; font-weight:600; color:var(--text2);
+}
+.ds-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+
+/* 底部 */
+.footer {
+  text-align:center; font-size:11px; color:var(--text4);
+  padding:24px 0 8px; border-top:1px solid var(--border); margin-top:32px;
+}
+.footer span { color:var(--text3); }
+</style>
+</head>
+<body>
+<div class="top-line"></div>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <div class="brand-logo">CB</div>
+      <div class="brand-text">
+        <h1>ChinaBound Travel · 运营监控中心</h1>
+        <p>chinaboundtravel.com · 自动化节点 & AI Agent 实时状态</p>
+      </div>
+    </div>
+    <div class="header-pills">
+      <div class="pill pill-green">
+        <span class="dot live" style="background:#22c55e"></span>
+        网站 200 · 202ms
+      </div>
+      <div class="pill pill-blue">
+        <span class="dot live" style="background:#22c55e"></span>
+        AI Agent ✅ 健康 (8/8)
+      </div>
+      <div class="pill pill-green">
+        <span class="dot" style="background:#22c55e"></span>
+        Kill Switch 未激活
+      </div>
+      <div class="update-time">
+        更新于 <strong>17:01</strong><br>
+        2026-09-07 · 每30分钟 · 每日9:00-次日2:00
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- 时间范围选择器 -->
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+    <span style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.6px;font-weight:600;">时间范围</span>
+    <div id="range-selector" style="display:flex;gap:4px;flex-wrap:wrap;">
+      <button class="range-btn" data-range="today" style="padding:4px 10px;font-size:11px;border:1px solid var(--border2);background:transparent;color:var(--text3);border-radius:6px;cursor:pointer;">今天</button>
+      <button class="range-btn" data-range="yesterday" style="padding:4px 10px;font-size:11px;border:1px solid var(--border2);background:transparent;color:var(--text3);border-radius:6px;cursor:pointer;">昨日</button>
+      <button class="range-btn active" data-range="7d" style="padding:4px 10px;font-size:11px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:6px;cursor:pointer;">过去7天</button>
+      <button class="range-btn" data-range="30d" style="padding:4px 10px;font-size:11px;border:1px solid var(--border2);background:transparent;color:var(--text3);border-radius:6px;cursor:pointer;">过去30天</button>
+      <button class="range-btn" data-range="last_month" style="padding:4px 10px;font-size:11px;border:1px solid var(--border2);background:transparent;color:var(--text3);border-radius:6px;cursor:pointer;">上个月</button>
+      <button class="range-btn" data-range="90d" style="padding:4px 10px;font-size:11px;border:1px solid var(--border2);background:transparent;color:var(--text3);border-radius:6px;cursor:pointer;">过去90天</button>
+    </div>
+  </div>
+
+  <!-- KPI 趋势图 -->
+  <div class="kpi-trend-grid">
+    <div class="kpi-trend t1">
+      <div class="kpi-trend-head">
+        <span class="kpi-trend-label" id="ga4-label">访客 · 过去7天</span>
+        <span class="kpi-trend-value" id="ga4-value">3</span>
+        <span class="kpi-trend-sub" id="ga4-sub">9 会话 · 8 浏览 · 最新 2026-09-07</span>
+      </div>
+      <div id="ga4-chart" class="kpi-chart"></div>
+    </div>
+    <div class="kpi-trend t2">
+      <div class="kpi-trend-head">
+        <span class="kpi-trend-label" id="gsc-label">GSC 曝光 · 过去7天</span>
+        <span class="kpi-trend-value" id="gsc-value">381</span>
+        <span class="kpi-trend-sub" id="gsc-sub">0 点击 · CTR 0% · 最新 2026-08-17</span>
+      </div>
+      <div id="gsc-chart" class="kpi-chart"></div>
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpi-grid">
+    <div class="kpi k3">
+      <div class="kpi-label">已发布文章</div>
+      <div class="kpi-value">61</div>
+      <div class="kpi-sub">35 篇含联盟链接 · 平均 1902 字</div>
+    </div>
+    <div class="kpi k4">
+      <div class="kpi-label">实验在跑</div>
+      <div class="kpi-value">0</div>
+      <div class="kpi-sub">2 待重爬 · 0 待启动</div>
+    </div>
+    <div class="kpi k5">
+      <div class="kpi-label">运行成功率</div>
+      <div class="kpi-value">100%</div>
+      <div class="kpi-sub">12成功 · 0失败 · 20未运行</div>
+    </div>
+  </div>
+
+  <!-- 主体 -->
+  <div class="two-col">
+    <!-- 左列 -->
+    <div>
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <span class="section-title">自动化节点闭环</span>
+          <span class="section-meta">35 workflows · 12成功 · 0失败 · 20未运行 · 2跳过</span>
+        </div>
+        <div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">AI Agent</span>
+        <span class="wf-cat-count" style="color:#22c55e">2成功</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="AI Agent Orchestrator - 7 Agents Weekly Run — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">AI Agent Orchestrator - 7 Agents Weekly Run</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-07 03:20</span>
+        </div><div class="wf-item" title="Cross-Agent Learning Weekly — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Cross-Agent Learning Weekly</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-07 03:37</span>
+        </div></div>
+    </div><div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">SEO与索引</span>
+        <span class="wf-cat-count" style="color:#22c55e">0成功 · 5未运行</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="Affiliate Gap Audit (2.0 联盟链接缺口审计) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Affiliate Gap Audit (2.0 联盟链接缺口审计)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Agent KPI Monthly Audit (营收导向考核) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Agent KPI Monthly Audit (营收导向考核)</span><span class="wf-freq">每月</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="GSC Index Submit (2.0) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">GSC Index Submit (2.0)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="SEO Audit (2.0 SEO综合审计) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">SEO Audit (2.0 SEO综合审计)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="SEO Opportunity Detector (2.0 SEO优化机会检测) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">SEO Opportunity Detector (2.0 SEO优化机会检测)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div></div>
+    </div><div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">其他</span>
+        <span class="wf-cat-count" style="color:#22c55e">3成功 · 2未运行</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="Error Alert — 跳过">
+          <span class="wf-dot" style="background:#6b7280;box-shadow:0 0 6px #6b728066"></span>
+          <span class="wf-name">Error Alert</span><span class="wf-freq">手动</span>
+          <span class="wf-time">2026-09-07 08:37</span>
+        </div><div class="wf-item" title="GEO Check — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">GEO Check</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 08:36</span>
+        </div><div class="wf-item" title="Monthly Ebook Guide Update — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Monthly Ebook Guide Update</span><span class="wf-freq">每月</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Ops Dashboard Refresh — ">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Ops Dashboard Refresh</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 09:01</span>
+        </div><div class="wf-item" title="Purge Cloudflare Cache — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Purge Cloudflare Cache</span><span class="wf-freq">手动</span>
+          <span class="wf-time">2026-09-06 11:39</span>
+        </div><div class="wf-item" title="Retry Failed Jobs — 跳过">
+          <span class="wf-dot" style="background:#6b7280;box-shadow:0 0 6px #6b728066"></span>
+          <span class="wf-name">Retry Failed Jobs</span><span class="wf-freq">手动</span>
+          <span class="wf-time">2026-09-07 06:50</span>
+        </div><div class="wf-item" title="weekly-blog-update — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">weekly-blog-update</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="YouTube Auto Publish — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">YouTube Auto Publish</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-07 07:47</span>
+        </div></div>
+    </div><div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">内容与社媒</span>
+        <span class="wf-cat-count" style="color:#22c55e">2成功 · 5未运行</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="Clear Scheduled Buffer Batch — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Clear Scheduled Buffer Batch</span><span class="wf-freq">手动</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Content Quality Audit (2.0 内容质量综合巡检) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Content Quality Audit (2.0 内容质量综合巡检)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Content Rotation Distributor — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Content Rotation Distributor</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 06:49</span>
+        </div><div class="wf-item" title="Deploy Buffer Worker — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Deploy Buffer Worker</span><span class="wf-freq">手动</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Social Backfill (2.0 社媒补位) — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Social Backfill (2.0 社媒补位)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Social Media Distributor — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Social Media Distributor</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-06 18:59</span>
+        </div><div class="wf-item" title="test-buffer-api — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">test-buffer-api</span><span class="wf-freq">手动</span>
+          <span class="wf-time">-</span>
+        </div></div>
+    </div><div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">日报与通知</span>
+        <span class="wf-cat-count" style="color:#22c55e">4成功 · 6未运行</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="Cross-Agent Learning Daily — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Cross-Agent Learning Daily</span><span class="wf-freq">每日</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Feishu Daily Report — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Feishu Daily Report</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 05:25</span>
+        </div><div class="wf-item" title="Daily Health Check — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Daily Health Check</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 05:41</span>
+        </div><div class="wf-item" title="monthly-report — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">monthly-report</span><span class="wf-freq">每月</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="quarterly-report — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">quarterly-report</span><span class="wf-freq">每季</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Site Health Daily Check (Full Closed Loop) — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Site Health Daily Check (Full Closed Loop)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-07 01:56</span>
+        </div><div class="wf-item" title="Snapshot Daily Refresh (2.0 KPI) — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Snapshot Daily Refresh (2.0 KPI)</span><span class="wf-freq">每周</span>
+          <span class="wf-time">2026-09-07 04:59</span>
+        </div><div class="wf-item" title="social-engine-daily — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">social-engine-daily</span><span class="wf-freq">每日</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="weekly-report — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">weekly-report</span><span class="wf-freq">每周</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="yearly-report — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">yearly-report</span><span class="wf-freq">每年</span>
+          <span class="wf-time">-</span>
+        </div></div>
+    </div><div class="wf-cat">
+      <div class="wf-cat-header">
+        <span class="wf-cat-title">构建与部署</span>
+        <span class="wf-cat-count" style="color:#22c55e">1成功 · 2未运行</span>
+      </div>
+      <div class="wf-list"><div class="wf-item" title="deploy-cloudflare-pages — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">deploy-cloudflare-pages</span><span class="wf-freq">手动</span>
+          <span class="wf-time">-</span>
+        </div><div class="wf-item" title="Environment Check — 成功">
+          <span class="wf-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e66"></span>
+          <span class="wf-name">Environment Check</span><span class="wf-freq">每日</span>
+          <span class="wf-time">2026-09-07 01:22</span>
+        </div><div class="wf-item" title="Manual Deploy to Cloudflare Pages — 未运行">
+          <span class="wf-dot" style="background:#374151;box-shadow:0 0 6px #37415166"></span>
+          <span class="wf-name">Manual Deploy to Cloudflare Pages</span><span class="wf-freq">手动</span>
+          <span class="wf-time">-</span>
+        </div></div>
+    </div>
+      </div>
+    </div>
+
+    <!-- 右列 -->
+    <div>
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <span class="section-title">🩺 Site Health 网站健康巡检</span>
+          <span class="section-meta">16项检查 · 每日2次</span>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0;">
+          <div class="kpi"><div class="kpi-label">状态</div><div class="kpi-value" style="font-size:14px;color:#22c55e">全站健康</div></div>
+          <div class="kpi"><div class="kpi-label">总问题</div><div class="kpi-value">0</div></div>
+          <div class="kpi"><div class="kpi-label">Critical</div><div class="kpi-value" style="color:#ef4444">0</div></div>
+          <div class="kpi"><div class="kpi-label">High</div><div class="kpi-value" style="color:#f59e0b">0</div></div>
+          <div class="kpi"><div class="kpi-label">Medium</div><div class="kpi-value" style="color:#eab308">0</div></div>
+          <div class="kpi"><div class="kpi-label">Low</div><div class="kpi-value" style="color:#94a3b8">0</div></div>
+          <div class="kpi"><div class="kpi-label">自动修复</div><div class="kpi-value" style="color:#22c55e">0</div></div>
+          <div class="kpi"><div class="kpi-label">待处理</div><div class="kpi-value" style="color:#667eea">0</div></div>
+        </div>
+        <div style="font-size:10px;color:#64748b;margin-top:8px;">巡检: 2026-09-07 01:56</div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <span class="section-title">AI Agent 工作状态</span>
+          <span class="section-meta">跨Agent学习: ✅ 正常</span>
+        </div>
+        <div class="agent-grid"><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">SEO智能优化</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 8d 今日修复34处</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">自我学习引擎</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 8d</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">收入分析引擎</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 8d</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">转化优化Agent</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 8d</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">内容智能优化</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 2d 今日修复348处</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">社媒智能优化</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 2d</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">用户智能运营</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 8d</div>
+    </div><div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:#22c55e"></span>
+        <span class="agent-name">网站健康巡检</span>
+      </div>
+      <div class="agent-status" style="color:#22c55e">✅ 正常</div>
+      <div class="agent-meta">最后运行 2026-09-07 · 周期 1d</div>
+    </div></div>
+        <div class="loop-bar">
+          <span class="loop-tag active">SEO闭环</span>
+          <span class="loop-tag active">内容闭环</span>
+          <span class="loop-tag active">社媒闭环</span>
+          <span class="loop-tag active">转化闭环</span>
+          <span class="loop-tag">收入闭环</span>
+          <span class="loop-tag active">用户闭环</span>
+          <span class="loop-tag active">跨Agent学习</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <span class="section-title">实验监控</span>
+          <span class="section-meta">评审 Gate · 2026-09-13</span>
+        </div>
+        <div class="exp-grid"><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">REV001</span>
+        <span class="exp-badge" style="background:#6b72801a;color:#6b7280;border:1px solid #6b728040">PLANNED</span>
+      </div>
+      <div class="exp-name">Food Delivery + Airalo CTA</div>
+      <div class="exp-meta">观察 - · 样本 PLANNED</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">REV002</span>
+        <span class="exp-badge" style="background:#6b72801a;color:#6b7280;border:1px solid #6b728040">PLANNED</span>
+      </div>
+      <div class="exp-name">Transportation + Trip.com</div>
+      <div class="exp-meta">观察 - · 样本 PLANNED</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">REV003</span>
+        <span class="exp-badge" style="background:#6b72801a;color:#6b7280;border:1px solid #6b728040">PLANNED</span>
+      </div>
+      <div class="exp-name">CTA Copy Variant</div>
+      <div class="exp-meta">观察 - · 样本 PLANNED</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">GROWTH05-CTR-001</span>
+        <span class="exp-badge" style="background:#6b72801a;color:#6b7280;border:1px solid #6b728040">PLANNED</span>
+      </div>
+      <div class="exp-name">144-Hour Visa CTR</div>
+      <div class="exp-meta">观察 - · 样本 PLANNED</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">DRIVE-001</span>
+        <span class="exp-badge" style="background:#6b72801a;color:#6b7280;border:1px solid #6b728040">PLANNED</span>
+      </div>
+      <div class="exp-name">Site-wide Travelpayouts Drive</div>
+      <div class="exp-meta">观察 - · 样本 PLANNED</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">GROWTH07B-TECH-001</span>
+        <span class="exp-badge" style="background:#f59e0b1a;color:#f59e0b;border:1px solid #f59e0b40">WAITING_RECRAWL</span>
+      </div>
+      <div class="exp-name">High-Speed Rail Index Recovery</div>
+      <div class="exp-meta">观察 - · 样本 INSUFFICIENT_SAMPLE</div>
+    </div><div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-id">GROWTH07C-INDEX-001</span>
+        <span class="exp-badge" style="background:#f59e0b1a;color:#f59e0b;border:1px solid #f59e0b40">WAITING_RECRAWL</span>
+      </div>
+      <div class="exp-name">WeChat Pay Index Recovery</div>
+      <div class="exp-meta">观察 - · 样本 INSUFFICIENT_SAMPLE</div>
+    </div></div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <span class="section-title">数据源健康</span>
+          <span class="section-meta">7/7 已配置</span>
+        </div>
+        <div class="ds-grid"><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>GA4</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>GSC</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>Travelpayouts</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>NordVPN</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>MailerLite</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>Buffer</span>
+    </div><div class="ds-item">
+      <span class="ds-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e88"></span>
+      <span>Cloudflare</span>
+    </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    ChinaBound Travel Ops Dashboard · 数据来源 <span>GitHub Actions · GA4 · GSC · 本地报告</span> · 生成于 2026-09-07 17:01:32 · 每30分钟自动刷新
+  </div>
+</div>
+<script>
+(function() {
+  try {
+    var ga4Data = [{"date": "2026-06-16", "sessions": 7, "activeUsers": 3, "pageviews": 41}, {"date": "2026-06-17", "sessions": 14, "activeUsers": 9, "pageviews": 38}, {"date": "2026-06-18", "sessions": 12, "activeUsers": 11, "pageviews": 23}, {"date": "2026-06-19", "sessions": 20, "activeUsers": 15, "pageviews": 91}, {"date": "2026-06-20", "sessions": 11, "activeUsers": 10, "pageviews": 27}, {"date": "2026-06-21", "sessions": 7, "activeUsers": 2, "pageviews": 207}, {"date": "2026-06-22", "sessions": 7, "activeUsers": 6, "pageviews": 25}, {"date": "2026-06-23", "sessions": 4, "activeUsers": 2, "pageviews": 11}, {"date": "2026-06-24", "sessions": 2, "activeUsers": 2, "pageviews": 8}, {"date": "2026-06-25", "sessions": 2, "activeUsers": 2, "pageviews": 4}, {"date": "2026-06-26", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-06-29", "sessions": 4, "activeUsers": 4, "pageviews": 6}, {"date": "2026-06-30", "sessions": 26, "activeUsers": 18, "pageviews": 68}, {"date": "2026-07-01", "sessions": 17, "activeUsers": 11, "pageviews": 67}, {"date": "2026-07-02", "sessions": 16, "activeUsers": 15, "pageviews": 90}, {"date": "2026-07-03", "sessions": 5, "activeUsers": 2, "pageviews": 18}, {"date": "2026-07-04", "sessions": 4, "activeUsers": 3, "pageviews": 11}, {"date": "2026-07-06", "sessions": 14, "activeUsers": 12, "pageviews": 49}, {"date": "2026-07-07", "sessions": 6, "activeUsers": 4, "pageviews": 7}, {"date": "2026-07-08", "sessions": 3, "activeUsers": 1, "pageviews": 4}, {"date": "2026-07-09", "sessions": 1, "activeUsers": 1, "pageviews": 2}, {"date": "2026-07-10", "sessions": 11, "activeUsers": 11, "pageviews": 11}, {"date": "2026-07-13", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-07-14", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-15", "sessions": 3, "activeUsers": 3, "pageviews": 4}, {"date": "2026-07-16", "sessions": 14, "activeUsers": 14, "pageviews": 21}, {"date": "2026-07-17", "sessions": 15, "activeUsers": 15, "pageviews": 17}, {"date": "2026-07-18", "sessions": 11, "activeUsers": 11, "pageviews": 13}, {"date": "2026-07-20", "sessions": 12, "activeUsers": 10, "pageviews": 15}, {"date": "2026-07-22", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-23", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-07-24", "sessions": 9, "activeUsers": 8, "pageviews": 10}, {"date": "2026-07-25", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-26", "sessions": 1, "activeUsers": 1, "pageviews": 1}, {"date": "2026-07-27", "sessions": 12, "activeUsers": 9, "pageviews": 49}, {"date": "2026-07-28", "sessions": 3, "activeUsers": 2, "pageviews": 11}, {"date": "2026-07-29", "sessions": 4, "activeUsers": 2, "pageviews": 8}, {"date": "2026-07-30", "sessions": 10, "activeUsers": 9, "pageviews": 10}, {"date": "2026-07-31", "sessions": 4, "activeUsers": 2, "pageviews": 11}, {"date": "2026-08-01", "sessions": 1, "activeUsers": 1, "pageviews": 1}, {"date": "2026-08-02", "sessions": 6, "activeUsers": 6, "pageviews": 6}, {"date": "2026-08-03", "sessions": 20, "activeUsers": 19, "pageviews": 29}, {"date": "2026-08-04", "sessions": 15, "activeUsers": 11, "pageviews": 69}, {"date": "2026-08-05", "sessions": 1, "activeUsers": 1, "pageviews": 4}, {"date": "2026-08-06", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-08-07", "sessions": 6, "activeUsers": 6, "pageviews": 12}, {"date": "2026-08-08", "sessions": 6, "activeUsers": 4, "pageviews": 25}, {"date": "2026-08-09", "sessions": 1, "activeUsers": 1, "pageviews": 5}, {"date": "2026-08-10", "sessions": 7, "activeUsers": 6, "pageviews": 29}, {"date": "2026-08-11", "sessions": 13, "activeUsers": 12, "pageviews": 13}, {"date": "2026-08-12", "sessions": 10, "activeUsers": 10, "pageviews": 20}, {"date": "2026-08-13", "sessions": 7, "activeUsers": 7, "pageviews": 14}, {"date": "2026-08-14", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-08-15", "sessions": 1, "activeUsers": 1, "pageviews": 10}, {"date": "2026-08-16", "sessions": 5, "activeUsers": 3, "pageviews": 12}, {"date": "2026-08-17", "sessions": 1, "activeUsers": 1, "pageviews": 2}, {"date": "2026-08-18", "sessions": 6, "activeUsers": 4, "pageviews": 67}, {"date": "2026-08-19", "sessions": 7, "activeUsers": 7, "pageviews": 7}, {"date": "2026-08-20", "sessions": 38, "activeUsers": 38, "pageviews": 38}, {"date": "2026-08-21", "sessions": 24, "activeUsers": 24, "pageviews": 24}, {"date": "2026-08-22", "sessions": 24, "activeUsers": 24, "pageviews": 32}, {"date": "2026-08-24", "sessions": 10, "activeUsers": 7, "pageviews": 97}, {"date": "2026-08-25", "sessions": 8, "activeUsers": 8, "pageviews": 10}, {"date": "2026-08-26", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-08-27", "sessions": 7, "activeUsers": 7, "pageviews": 7}, {"date": "2026-08-28", "sessions": 13, "activeUsers": 13, "pageviews": 13}, {"date": "2026-08-29", "sessions": 15, "activeUsers": 15, "pageviews": 17}, {"date": "2026-08-30", "sessions": 15, "activeUsers": 14, "pageviews": 17}, {"date": "2026-08-31", "sessions": 30, "activeUsers": 22, "pageviews": 82}, {"date": "2026-09-01", "sessions": 21, "activeUsers": 14, "pageviews": 42}, {"date": "2026-09-02", "sessions": 13, "activeUsers": 5, "pageviews": 92}, {"date": "2026-09-03", "sessions": 19, "activeUsers": 12, "pageviews": 45}, {"date": "2026-09-04", "sessions": 23, "activeUsers": 17, "pageviews": 53}, {"date": "2026-09-05", "sessions": 14, "activeUsers": 9, "pageviews": 18}, {"date": "2026-09-06", "sessions": 24, "activeUsers": 17, "pageviews": 38}, {"date": "2026-09-07", "sessions": 9, "activeUsers": 3, "pageviews": 8}];
+    var gscData = [{"date": "2026-07-19", "impressions": 18, "clicks": 0, "ctr": 0, "position": 46.9}, {"date": "2026-07-20", "impressions": 23, "clicks": 0, "ctr": 0, "position": 59.2}, {"date": "2026-07-21", "impressions": 23, "clicks": 0, "ctr": 0, "position": 33.0}, {"date": "2026-07-22", "impressions": 12, "clicks": 0, "ctr": 0, "position": 26.6}, {"date": "2026-07-23", "impressions": 30, "clicks": 0, "ctr": 0, "position": 33.7}, {"date": "2026-07-24", "impressions": 15, "clicks": 0, "ctr": 0, "position": 21.7}, {"date": "2026-07-25", "impressions": 21, "clicks": 0, "ctr": 0, "position": 29.1}, {"date": "2026-07-26", "impressions": 22, "clicks": 0, "ctr": 0, "position": 30.9}, {"date": "2026-07-27", "impressions": 26, "clicks": 0, "ctr": 0, "position": 35.7}, {"date": "2026-07-28", "impressions": 20, "clicks": 0, "ctr": 0, "position": 41.3}, {"date": "2026-07-29", "impressions": 20, "clicks": 0, "ctr": 0, "position": 42.1}, {"date": "2026-07-30", "impressions": 7, "clicks": 0, "ctr": 0, "position": 48}, {"date": "2026-07-31", "impressions": 9, "clicks": 0, "ctr": 0, "position": 51.6}, {"date": "2026-08-01", "impressions": 5, "clicks": 0, "ctr": 0, "position": 35}, {"date": "2026-08-02", "impressions": 23, "clicks": 0, "ctr": 0, "position": 49.7}, {"date": "2026-08-03", "impressions": 20, "clicks": 0, "ctr": 0, "position": 36.5}, {"date": "2026-08-04", "impressions": 5, "clicks": 1, "ctr": 0.2, "position": 11}, {"date": "2026-08-05", "impressions": 32, "clicks": 0, "ctr": 0, "position": 29.0}, {"date": "2026-08-06", "impressions": 53, "clicks": 0, "ctr": 0, "position": 20.8}, {"date": "2026-08-07", "impressions": 12, "clicks": 0, "ctr": 0, "position": 12.6}, {"date": "2026-08-08", "impressions": 11, "clicks": 0, "ctr": 0, "position": 28.1}, {"date": "2026-08-09", "impressions": 11, "clicks": 0, "ctr": 0, "position": 46}, {"date": "2026-08-10", "impressions": 152, "clicks": 0, "ctr": 0, "position": 29.7}, {"date": "2026-08-11", "impressions": 117, "clicks": 1, "ctr": 0.01, "position": 24.8}, {"date": "2026-08-12", "impressions": 212, "clicks": 1, "ctr": 0.0, "position": 41.3}, {"date": "2026-08-13", "impressions": 230, "clicks": 0, "ctr": 0, "position": 37.3}, {"date": "2026-08-14", "impressions": 251, "clicks": 0, "ctr": 0, "position": 32.7}, {"date": "2026-08-15", "impressions": 99, "clicks": 0, "ctr": 0, "position": 55.8}, {"date": "2026-08-16", "impressions": 144, "clicks": 0, "ctr": 0, "position": 50.9}, {"date": "2026-08-17", "impressions": 381, "clicks": 0, "ctr": 0, "position": 34.4}];
+
+    function fmtDate(d) {
+      if (!d) return '';
+      return d.substring(5); // MM-DD
+    }
+
+    // GA4 访客趋势
+    window.ga4Chart = echarts.init(document.getElementById('ga4-chart'));
+    window.ga4Chart.setOption({
+      backgroundColor: 'transparent',
+      grid: { left: 30, right: 10, top: 10, bottom: 20 },
+      tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(13,19,32,0.95)',
+        borderColor: '#1e293b',
+        textStyle: { color: '#e2e8f0', fontSize: 11 },
+        formatter: function(params) {
+          var p = params[0];
+          var d = ga4Data[p.dataIndex] || {};
+          return p.axisValue + '<br/>访客: ' + (d.activeUsers || 0) +
+                 '<br/>会话: ' + (d.sessions || 0) +
+                 '<br/>浏览: ' + (d.pageviews || 0);
+        }
+      },
+      xAxis: {
+        type: 'category',
+        data: ga4Data.map(function(d) { return fmtDate(d.date); }),
+        axisLine: { lineStyle: { color: '#1e293b' } },
+        axisLabel: { color: '#64748b', fontSize: 10 },
+        axisTick: { show: false }
+      },
+      yAxis: {
+        type: 'value',
+        splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } },
+        axisLabel: { color: '#64748b', fontSize: 10 }
+      },
+      series: [{
+        name: '访客',
+        type: 'line',
+        data: ga4Data.map(function(d) { return d.activeUsers || 0; }),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: { color: '#00d4ff', width: 2 },
+        itemStyle: { color: '#00d4ff' },
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: 'rgba(0,212,255,0.25)' },
+            { offset: 1, color: 'rgba(0,212,255,0.02)' }
+          ])
+        }
+      }]
+    });
+
+    // GSC 曝光趋势
+    window.gscChart = echarts.init(document.getElementById('gsc-chart'));
+    window.gscChart.setOption({
+      backgroundColor: 'transparent',
+      grid: { left: 30, right: 10, top: 10, bottom: 20 },
+      tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(13,19,32,0.95)',
+        borderColor: '#1e293b',
+        textStyle: { color: '#e2e8f0', fontSize: 11 },
+        formatter: function(params) {
+          var p = params[0];
+          var d = gscData[p.dataIndex] || {};
+          return p.axisValue + '<br/>曝光: ' + (d.impressions || 0) +
+                 '<br/>点击: ' + (d.clicks || 0) +
+                 '<br/>CTR: ' + (d.ctr || 0) + '%';
+        }
+      },
+      xAxis: {
+        type: 'category',
+        data: gscData.map(function(d) { return fmtDate(d.date); }),
+        axisLine: { lineStyle: { color: '#1e293b' } },
+        axisLabel: { color: '#64748b', fontSize: 10 },
+        axisTick: { show: false }
+      },
+      yAxis: {
+        type: 'value',
+        splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } },
+        axisLabel: { color: '#64748b', fontSize: 10 }
+      },
+      series: [{
+        name: '曝光',
+        type: 'line',
+        data: gscData.map(function(d) { return d.impressions || 0; }),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: { color: '#3b82f6', width: 2 },
+        itemStyle: { color: '#3b82f6' },
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: 'rgba(59,130,246,0.25)' },
+            { offset: 1, color: 'rgba(59,130,246,0.02)' }
+          ])
+        }
+      }]
+    });
+
+    window.addEventListener('resize', function() {
+      window.ga4Chart.resize();
+      window.gscChart.resize();
+    });
+  } catch(e) {
+    console.error('Chart init failed:', e);
+  }
+})();
+</script>
+
+<script>
+(function() {
+  var rangesData = {"ga4": {"today": {"visitors": 3, "sessions": 9, "pageviews": 8, "date_range": "2026-09-07 ~ 2026-09-07", "days": 1}, "yesterday": {"visitors": 17, "sessions": 24, "pageviews": 38, "date_range": "2026-09-06 ~ 2026-09-06", "days": 1}, "7d": {"visitors": 77, "sessions": 123, "pageviews": 296, "date_range": "2026-09-01 ~ 2026-09-07", "days": 7}, "30d": {"visitors": 310, "sessions": 376, "pageviews": 842, "date_range": "2026-08-08 ~ 2026-09-07", "days": 30}, "90d": {"visitors": 601, "sessions": 733, "pageviews": 1958, "date_range": "2026-06-16 ~ 2026-09-07", "days": 76}, "last_month": {"visitors": 279, "sessions": 304, "pageviews": 669, "date_range": "2026-08-01 ~ 2026-08-31", "days": 30}}, "gsc": {"today": {"impressions": 381, "clicks": 0, "date_range": "2026-08-17 ~ 2026-08-17", "days": 1}, "yesterday": {"impressions": 144, "clicks": 0, "date_range": "2026-08-16 ~ 2026-08-16", "days": 1}, "7d": {"impressions": 1434, "clicks": 2, "date_range": "2026-08-11 ~ 2026-08-17", "days": 7}, "30d": {"impressions": 2004, "clicks": 3, "date_range": "2026-07-19 ~ 2026-08-17", "days": 30}, "90d": {"impressions": 2004, "clicks": 3, "date_range": "2026-07-19 ~ 2026-08-17", "days": 30}, "last_month": {"impressions": 1758, "clicks": 3, "date_range": "2026-08-01 ~ 2026-08-31", "days": 17}}, "ga4_daily": [{"date": "2026-06-16", "sessions": 7, "activeUsers": 3, "pageviews": 41}, {"date": "2026-06-17", "sessions": 14, "activeUsers": 9, "pageviews": 38}, {"date": "2026-06-18", "sessions": 12, "activeUsers": 11, "pageviews": 23}, {"date": "2026-06-19", "sessions": 20, "activeUsers": 15, "pageviews": 91}, {"date": "2026-06-20", "sessions": 11, "activeUsers": 10, "pageviews": 27}, {"date": "2026-06-21", "sessions": 7, "activeUsers": 2, "pageviews": 207}, {"date": "2026-06-22", "sessions": 7, "activeUsers": 6, "pageviews": 25}, {"date": "2026-06-23", "sessions": 4, "activeUsers": 2, "pageviews": 11}, {"date": "2026-06-24", "sessions": 2, "activeUsers": 2, "pageviews": 8}, {"date": "2026-06-25", "sessions": 2, "activeUsers": 2, "pageviews": 4}, {"date": "2026-06-26", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-06-29", "sessions": 4, "activeUsers": 4, "pageviews": 6}, {"date": "2026-06-30", "sessions": 26, "activeUsers": 18, "pageviews": 68}, {"date": "2026-07-01", "sessions": 17, "activeUsers": 11, "pageviews": 67}, {"date": "2026-07-02", "sessions": 16, "activeUsers": 15, "pageviews": 90}, {"date": "2026-07-03", "sessions": 5, "activeUsers": 2, "pageviews": 18}, {"date": "2026-07-04", "sessions": 4, "activeUsers": 3, "pageviews": 11}, {"date": "2026-07-06", "sessions": 14, "activeUsers": 12, "pageviews": 49}, {"date": "2026-07-07", "sessions": 6, "activeUsers": 4, "pageviews": 7}, {"date": "2026-07-08", "sessions": 3, "activeUsers": 1, "pageviews": 4}, {"date": "2026-07-09", "sessions": 1, "activeUsers": 1, "pageviews": 2}, {"date": "2026-07-10", "sessions": 11, "activeUsers": 11, "pageviews": 11}, {"date": "2026-07-13", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-07-14", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-15", "sessions": 3, "activeUsers": 3, "pageviews": 4}, {"date": "2026-07-16", "sessions": 14, "activeUsers": 14, "pageviews": 21}, {"date": "2026-07-17", "sessions": 15, "activeUsers": 15, "pageviews": 17}, {"date": "2026-07-18", "sessions": 11, "activeUsers": 11, "pageviews": 13}, {"date": "2026-07-20", "sessions": 12, "activeUsers": 10, "pageviews": 15}, {"date": "2026-07-22", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-23", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-07-24", "sessions": 9, "activeUsers": 8, "pageviews": 10}, {"date": "2026-07-25", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-07-26", "sessions": 1, "activeUsers": 1, "pageviews": 1}, {"date": "2026-07-27", "sessions": 12, "activeUsers": 9, "pageviews": 49}, {"date": "2026-07-28", "sessions": 3, "activeUsers": 2, "pageviews": 11}, {"date": "2026-07-29", "sessions": 4, "activeUsers": 2, "pageviews": 8}, {"date": "2026-07-30", "sessions": 10, "activeUsers": 9, "pageviews": 10}, {"date": "2026-07-31", "sessions": 4, "activeUsers": 2, "pageviews": 11}, {"date": "2026-08-01", "sessions": 1, "activeUsers": 1, "pageviews": 1}, {"date": "2026-08-02", "sessions": 6, "activeUsers": 6, "pageviews": 6}, {"date": "2026-08-03", "sessions": 20, "activeUsers": 19, "pageviews": 29}, {"date": "2026-08-04", "sessions": 15, "activeUsers": 11, "pageviews": 69}, {"date": "2026-08-05", "sessions": 1, "activeUsers": 1, "pageviews": 4}, {"date": "2026-08-06", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-08-07", "sessions": 6, "activeUsers": 6, "pageviews": 12}, {"date": "2026-08-08", "sessions": 6, "activeUsers": 4, "pageviews": 25}, {"date": "2026-08-09", "sessions": 1, "activeUsers": 1, "pageviews": 5}, {"date": "2026-08-10", "sessions": 7, "activeUsers": 6, "pageviews": 29}, {"date": "2026-08-11", "sessions": 13, "activeUsers": 12, "pageviews": 13}, {"date": "2026-08-12", "sessions": 10, "activeUsers": 10, "pageviews": 20}, {"date": "2026-08-13", "sessions": 7, "activeUsers": 7, "pageviews": 14}, {"date": "2026-08-14", "sessions": 2, "activeUsers": 2, "pageviews": 2}, {"date": "2026-08-15", "sessions": 1, "activeUsers": 1, "pageviews": 10}, {"date": "2026-08-16", "sessions": 5, "activeUsers": 3, "pageviews": 12}, {"date": "2026-08-17", "sessions": 1, "activeUsers": 1, "pageviews": 2}, {"date": "2026-08-18", "sessions": 6, "activeUsers": 4, "pageviews": 67}, {"date": "2026-08-19", "sessions": 7, "activeUsers": 7, "pageviews": 7}, {"date": "2026-08-20", "sessions": 38, "activeUsers": 38, "pageviews": 38}, {"date": "2026-08-21", "sessions": 24, "activeUsers": 24, "pageviews": 24}, {"date": "2026-08-22", "sessions": 24, "activeUsers": 24, "pageviews": 32}, {"date": "2026-08-24", "sessions": 10, "activeUsers": 7, "pageviews": 97}, {"date": "2026-08-25", "sessions": 8, "activeUsers": 8, "pageviews": 10}, {"date": "2026-08-26", "sessions": 3, "activeUsers": 3, "pageviews": 3}, {"date": "2026-08-27", "sessions": 7, "activeUsers": 7, "pageviews": 7}, {"date": "2026-08-28", "sessions": 13, "activeUsers": 13, "pageviews": 13}, {"date": "2026-08-29", "sessions": 15, "activeUsers": 15, "pageviews": 17}, {"date": "2026-08-30", "sessions": 15, "activeUsers": 14, "pageviews": 17}, {"date": "2026-08-31", "sessions": 30, "activeUsers": 22, "pageviews": 82}, {"date": "2026-09-01", "sessions": 21, "activeUsers": 14, "pageviews": 42}, {"date": "2026-09-02", "sessions": 13, "activeUsers": 5, "pageviews": 92}, {"date": "2026-09-03", "sessions": 19, "activeUsers": 12, "pageviews": 45}, {"date": "2026-09-04", "sessions": 23, "activeUsers": 17, "pageviews": 53}, {"date": "2026-09-05", "sessions": 14, "activeUsers": 9, "pageviews": 18}, {"date": "2026-09-06", "sessions": 24, "activeUsers": 17, "pageviews": 38}, {"date": "2026-09-07", "sessions": 9, "activeUsers": 3, "pageviews": 8}], "gsc_daily": [{"date": "2026-07-19", "impressions": 18, "clicks": 0, "ctr": 0, "position": 46.9}, {"date": "2026-07-20", "impressions": 23, "clicks": 0, "ctr": 0, "position": 59.2}, {"date": "2026-07-21", "impressions": 23, "clicks": 0, "ctr": 0, "position": 33.0}, {"date": "2026-07-22", "impressions": 12, "clicks": 0, "ctr": 0, "position": 26.6}, {"date": "2026-07-23", "impressions": 30, "clicks": 0, "ctr": 0, "position": 33.7}, {"date": "2026-07-24", "impressions": 15, "clicks": 0, "ctr": 0, "position": 21.7}, {"date": "2026-07-25", "impressions": 21, "clicks": 0, "ctr": 0, "position": 29.1}, {"date": "2026-07-26", "impressions": 22, "clicks": 0, "ctr": 0, "position": 30.9}, {"date": "2026-07-27", "impressions": 26, "clicks": 0, "ctr": 0, "position": 35.7}, {"date": "2026-07-28", "impressions": 20, "clicks": 0, "ctr": 0, "position": 41.3}, {"date": "2026-07-29", "impressions": 20, "clicks": 0, "ctr": 0, "position": 42.1}, {"date": "2026-07-30", "impressions": 7, "clicks": 0, "ctr": 0, "position": 48}, {"date": "2026-07-31", "impressions": 9, "clicks": 0, "ctr": 0, "position": 51.6}, {"date": "2026-08-01", "impressions": 5, "clicks": 0, "ctr": 0, "position": 35}, {"date": "2026-08-02", "impressions": 23, "clicks": 0, "ctr": 0, "position": 49.7}, {"date": "2026-08-03", "impressions": 20, "clicks": 0, "ctr": 0, "position": 36.5}, {"date": "2026-08-04", "impressions": 5, "clicks": 1, "ctr": 0.2, "position": 11}, {"date": "2026-08-05", "impressions": 32, "clicks": 0, "ctr": 0, "position": 29.0}, {"date": "2026-08-06", "impressions": 53, "clicks": 0, "ctr": 0, "position": 20.8}, {"date": "2026-08-07", "impressions": 12, "clicks": 0, "ctr": 0, "position": 12.6}, {"date": "2026-08-08", "impressions": 11, "clicks": 0, "ctr": 0, "position": 28.1}, {"date": "2026-08-09", "impressions": 11, "clicks": 0, "ctr": 0, "position": 46}, {"date": "2026-08-10", "impressions": 152, "clicks": 0, "ctr": 0, "position": 29.7}, {"date": "2026-08-11", "impressions": 117, "clicks": 1, "ctr": 0.01, "position": 24.8}, {"date": "2026-08-12", "impressions": 212, "clicks": 1, "ctr": 0.0, "position": 41.3}, {"date": "2026-08-13", "impressions": 230, "clicks": 0, "ctr": 0, "position": 37.3}, {"date": "2026-08-14", "impressions": 251, "clicks": 0, "ctr": 0, "position": 32.7}, {"date": "2026-08-15", "impressions": 99, "clicks": 0, "ctr": 0, "position": 55.8}, {"date": "2026-08-16", "impressions": 144, "clicks": 0, "ctr": 0, "position": 50.9}, {"date": "2026-08-17", "impressions": 381, "clicks": 0, "ctr": 0, "position": 34.4}]};
+  var ga4Ranges = rangesData.ga4 || {};
+  var gscRanges = rangesData.gsc || {};
+  var ga4Daily = rangesData.ga4_daily || [];
+  var gscDaily = rangesData.gsc_daily || [];
+
+  var rangeLabels = {
+    today: "今天", yesterday: "昨日", "7d": "过去7天",
+    "30d": "过去30天", last_month: "上个月", "90d": "过去90天"
+  };
+  var rangeDays = { today: 1, yesterday: 1, "7d": 7, "30d": 30, last_month: 30, "90d": 90 };
+
+  function switchRange(range) {
+    // 更新按钮状态
+    document.querySelectorAll('.range-btn').forEach(function(btn) {
+      if (btn.dataset.range === range) {
+        btn.style.borderColor = 'var(--accent)';
+        btn.style.background = 'var(--accent)';
+        btn.style.color = '#fff';
+      } else {
+        btn.style.borderColor = 'var(--border2)';
+        btn.style.background = 'transparent';
+        btn.style.color = 'var(--text3)';
+      }
+    });
+
+    // 更新 GA4 指标
+    var g = ga4Ranges[range] || {};
+    var ga4Label = document.getElementById('ga4-label');
+    var ga4Value = document.getElementById('ga4-value');
+    var ga4Sub = document.getElementById('ga4-sub');
+    if (ga4Label) ga4Label.textContent = '访客 · ' + (rangeLabels[range] || range);
+    if (ga4Value) ga4Value.textContent = g.visitors || 0;
+    if (ga4Sub) ga4Sub.textContent = (g.sessions || 0) + ' 会话 · ' + (g.pageviews || 0) + ' 浏览 · ' + (g.date_range || '');
+
+    // 更新 GSC 指标
+    var s = gscRanges[range] || {};
+    var gscLabel = document.getElementById('gsc-label');
+    var gscValue = document.getElementById('gsc-value');
+    var gscSub = document.getElementById('gsc-sub');
+    if (gscLabel) gscLabel.textContent = 'GSC 曝光 · ' + (rangeLabels[range] || range);
+    if (gscValue) gscValue.textContent = s.impressions || 0;
+    var ctr = s.clicks && s.impressions ? (s.clicks / s.impressions * 100).toFixed(1) : 0;
+    if (gscSub) gscSub.textContent = (s.clicks || 0) + ' 点击 · CTR ' + ctr + '% · ' + (s.date_range || '');
+
+    // 更新趋势图（如果 echarts 实例存在）
+    if (window.ga4Chart && ga4Daily.length) {
+      var days = rangeDays[range] || 7;
+      var slice = ga4Daily.slice(-days);
+      if (range === 'yesterday') slice = ga4Daily.slice(-2, -1);
+      window.ga4Chart.setOption({
+        xAxis: { data: slice.map(function(d) { return d.date; }) },
+        series: [{ data: slice.map(function(d) { return d.activeUsers || 0; }) }]
+      });
+    }
+    if (window.gscChart && gscDaily.length) {
+      var days = rangeDays[range] || 7;
+      var slice = gscDaily.slice(-days);
+      if (range === 'yesterday') slice = gscDaily.slice(-2, -1);
+      window.gscChart.setOption({
+        xAxis: { data: slice.map(function(d) { return d.date; }) },
+        series: [{ data: slice.map(function(d) { return d.impressions || 0; }) }]
+      });
+    }
+  }
+
+  // 绑定按钮事件
+  document.querySelectorAll('.range-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchRange(this.dataset.range);
+    });
+  });
+
+  // 默认显示过去7天
+  setTimeout(function() { switchRange('7d'); }, 100);
+})();
+</script>
+
+</body>
+</html>
