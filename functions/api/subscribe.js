@@ -97,10 +97,11 @@ export async function onRequestPost({ request, env }) {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
-  // P0-FIX: 单独捕获 JSON 解析错误，返回 400 而非 500
+  // P0-FIX v2: 先读 text 再手动 JSON.parse，确保解析错误100%被捕获
   let body;
   try {
-    body = await request.json();
+    const rawText = await request.text();
+    body = JSON.parse(rawText);
   } catch (jsonErr) {
     return jsonResponse({ error: 'Invalid JSON body', success: false }, 400, corsHeaders);
   }
