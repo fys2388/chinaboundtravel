@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07 20:31:26",
+  "generated_at": "2026-09-07 21:01:48",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 192,
+    "response_ms": 282,
     "server": "cloudflare"
   },
   "workflows": [
@@ -95,7 +95,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-07T12:02:08Z",
+      "last_run": "2026-09-07T12:31:43Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -113,7 +113,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T12:02:13Z",
+      "last_run": "2026-09-07T12:31:48Z",
       "last_event": "workflow_run"
     },
     {
@@ -185,7 +185,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-07T12:31:15Z",
+      "last_run": "2026-09-07T13:01:30Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -325,7 +325,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 12:31",
+    "checked_at": "2026-09-07 13:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -495,7 +495,7 @@
     "ga4_daily": {
       "visitors": 9,
       "sessions": 16,
-      "pageviews": 30,
+      "pageviews": 31,
       "new_users": 517,
       "bounce_rate": 65.4,
       "date": "2026-09-07",
@@ -955,14 +955,14 @@
           "date": "2026-09-07",
           "sessions": 16,
           "activeUsers": 9,
-          "pageviews": 30
+          "pageviews": 31
         }
       ],
       "ranges": {
         "today": {
           "visitors": 9,
           "sessions": 16,
-          "pageviews": 30,
+          "pageviews": 31,
           "date_range": "2026-09-07 ~ 2026-09-07",
           "days": 1
         },
@@ -976,21 +976,21 @@
         "7d": {
           "visitors": 83,
           "sessions": 130,
-          "pageviews": 318,
+          "pageviews": 319,
           "date_range": "2026-09-01 ~ 2026-09-07",
           "days": 7
         },
         "30d": {
           "visitors": 316,
           "sessions": 383,
-          "pageviews": 864,
+          "pageviews": 865,
           "date_range": "2026-08-08 ~ 2026-09-07",
           "days": 30
         },
         "90d": {
           "visitors": 607,
           "sessions": 740,
-          "pageviews": 1980,
+          "pageviews": 1981,
           "date_range": "2026-06-16 ~ 2026-09-07",
           "days": 76
         },
