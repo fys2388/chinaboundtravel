@@ -107,3 +107,11 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/food-recommendations-guide/ 301
 /posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/accommodation-tips-guide/ 301
 /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/food-recommendations-guide/ 301
+
+# ===== 统一运营中心：旧路径重定向到 /ops/ops-center =====
+/ops/              /ops/ops-center  301
+/ops/index         /ops/ops-center  301
+/ops/agent-kpi     /ops/ops-center  301
+/ops/agent-growth  /ops/ops-center  301
+/ops-dashboard     /ops/ops-center  301
+/ops-dashboard/    /ops/ops-center  301
