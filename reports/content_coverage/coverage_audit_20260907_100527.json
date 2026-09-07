@@ -1,0 +1,130 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-07T10:05:27.120310",
+  "post_fields": {
+    "total_posts": 61,
+    "last_updated": {
+      "count": 19,
+      "coverage": 31.1,
+      "threshold": 90.0,
+      "missing": [
+        "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md",
+        "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
+        "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+        "2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+        "2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+        "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
+        "2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
+        "2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
+        "2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
+        "2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+        "2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md",
+        "2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        "2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
+        "2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
+        "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
+        "2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
+        "2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+        "2026-07-14-transportation-guide-guide.md",
+        "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md"
+      ],
+      "passed": false
+    },
+    "description": {
+      "count": 57,
+      "coverage": 93.4,
+      "threshold": 95.0,
+      "missing": [
+        "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
+        "2026-07-22-cultural-etiquette-guide.md",
+        "best-travel-insurance-china.md"
+      ],
+      "passed": false
+    },
+    "canonical_url": {
+      "count": 54,
+      "coverage": 88.5,
+      "threshold": 100.0,
+      "missing": [
+        "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
+        "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+        "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
+        "2026-07-22-cultural-etiquette-guide.md",
+        "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
+        "best-travel-insurance-china.md"
+      ],
+      "passed": false
+    },
+    "content_id": {
+      "count": 57,
+      "coverage": 93.4,
+      "threshold": 100.0,
+      "missing": [
+        "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
+        "2026-07-22-cultural-etiquette-guide.md",
+        "best-travel-insurance-china.md"
+      ],
+      "passed": false
+    }
+  },
+  "image_formats": {
+    "total": 312,
+    "webp": 46,
+    "jpg": 266,
+    "png": 0,
+    "webp_rate": 14.7,
+    "threshold": 80.0,
+    "passed": false,
+    "top_jpg_candidates": [
+      {
+        "name": "french-concession-street.jpg",
+        "size_kb": 484.4
+      },
+      {
+        "name": "terracotta-army-panoramic.jpg",
+        "size_kb": 452.1
+      },
+      {
+        "name": "sandstone-pillars-closeup.jpg",
+        "size_kb": 441.0
+      },
+      {
+        "name": "nanjing-road-street.jpg",
+        "size_kb": 384.3
+      },
+      {
+        "name": "china-travel-safety-guide.jpg",
+        "size_kb": 359.0
+      },
+      {
+        "name": "china-transportation-complete-guide.jpg",
+        "size_kb": 350.0
+      },
+      {
+        "name": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.jpg",
+        "size_kb": 348.3
+      },
+      {
+        "name": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.jpg",
+        "size_kb": 346.1
+      },
+      {
+        "name": "terracotta-warriors-rows.jpg",
+        "size_kb": 342.3
+      },
+      {
+        "name": "avatar-mountains-aerial.jpg",
+        "size_kb": 338.0
+      }
+    ]
+  },
+  "summary": {
+    "all_passed": false,
+    "checks_passed": 0,
+    "checks_total": 5
+  }
+}

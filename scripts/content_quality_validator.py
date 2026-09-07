@@ -70,6 +70,31 @@ def load_forbidden() -> list:
 FORBIDDEN = load_forbidden()
 CJK_RE = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf]")
 
+# P0-FIX: Mojibake (乱码) 检测 — 字节级别，最可靠
+# 典型 mojibake 字节序列（UTF-8 字符被误读为 Latin-1/CP1252 后再编码为 UTF-8）
+MOJIBAKE_BYTE_PATTERNS = [
+    b'\xc3\xa2', b'\xc3\xa9', b'\xc3\xa8', b'\xc3\xa0', b'\xc3\xae', b'\xc3\xaf',
+    b'\xc3\xb4', b'\xc3\xb9', b'\xc3\xbb', b'\xc3\xbc', b'\xc3\xa7', b'\xc3\x80',
+    b'\xc3\x89', b'\xc3\x88', b'\xc3\x8a', b'\xc3\x8b', b'\xc3\x8c', b'\xc3\x8d',
+    b'\xc3\x8e', b'\xc3\x8f', b'\xc3\x92', b'\xc3\x93', b'\xc3\x94', b'\xc3\x99',
+    b'\xc3\x9a', b'\xc3\x9b', b'\xc3\x9c', b'\xc3\x87',  # 元音变音双重编码
+    b'\xc3\xaf\xc2\xbf\xc2\xbd',  # U+FFFD 替换字符的双重编码
+    b'\xc3\xa2\xc2\x80',  # em dash/en dash 双重编码前缀
+    b'\xc3\xa2\xc2\x80\xc2\x99',  # 右单引号双重编码
+    b'\xc3\xa2\xc2\x80\xc2\x9c',  # 左双引号双重编码
+    b'\xc3\xa2\xc2\x80\xc2\x9d',  # 右双引号双重编码
+    b'\xc3\xa2\xc2\x80\xc2\x94',  # em dash 双重编码
+    b'\xc3\xa2\xc2\x80\xc2\x93',  # en dash 双重编码
+]
+
+def detect_mojibake(raw: bytes) -> list:
+    """P0-FIX: 字节级别检测 mojibake，返回发现的模式列表（十六进制）"""
+    found = []
+    for pat in MOJIBAKE_BYTE_PATTERNS:
+        if pat in raw:
+            found.append(pat.hex())
+    return found
+
 # 品牌违规模式（第一人称虚构体验）
 BRAND_PATTERNS = [
     r"\bI (stayed|visited|booked|tried|ate at|flew to|arrived in)\b",
@@ -118,7 +143,13 @@ def read_fm_value(fm: str, key: str) -> str:
 def validate_article(path: Path) -> dict:
     """验证单篇文章，返回结构化结果。"""
     raw = path.read_bytes()
-    text = raw.decode("utf-8", errors="replace")
+    # P0-FIX: 严格编码检测 — 先用 strict 尝试，失败则记录编码问题并 fallback
+    encoding_errors = []
+    try:
+        text = raw.decode("utf-8", errors="strict")
+    except UnicodeDecodeError as e:
+        encoding_errors.append(f"UnicodeDecodeError: {e}")
+        text = raw.decode("utf-8", errors="replace")
     fm, body, delim = split_frontmatter(text)
     result = {
         "file": path.name,
@@ -128,6 +159,8 @@ def validate_article(path: Path) -> dict:
         "canonical_ok": True,
         "brand_issues": [],
         "language_issues": [],
+        "mojibake_issues": [],
+        "encoding_errors": encoding_errors,
         "fact_issues": [],
         "seo_issues": [],
         "media_issues": [],
@@ -156,6 +189,18 @@ def validate_article(path: Path) -> dict:
     cjk = CJK_RE.findall(body)
     result["language_issues"] = cjk[:10]
     language_score = 100 if not cjk else max(0, 100 - len(cjk) * 20)
+
+    # P0-FIX: Mojibake (乱码) 检测 — 字节级别，在 decode 之前检查原始字节
+    mojibake_hits = detect_mojibake(raw)
+    result["mojibake_issues"] = mojibake_hits
+    if mojibake_hits:
+        # 乱码是 P0 问题，每处扣 30 分，最低 0 分
+        mojibake_score = max(0, 100 - len(set(mojibake_hits)) * 30)
+    else:
+        mojibake_score = 100
+    # 编码错误（文件本身不是合法 UTF-8）也是 P0
+    if encoding_errors:
+        mojibake_score = min(mojibake_score, 20)
 
     # ---- 事实 ----
     fact_hits = set(FACT_RE.findall(body.lower()))
@@ -226,17 +271,21 @@ def validate_article(path: Path) -> dict:
 
 
     # ---- 综合评分 ----
+    # P0-FIX: 加入 mojibake (乱码) 评分，权重 20%（与 media 同级）
     result["scores"] = {
         "brand": brand_score,
         "fact": fact_score,
         "language": language_score,
+        "mojibake": mojibake_score,
         "seo": seo_score,
         "media": media_score,
     }
-    trust = (brand_score * 0.35 + fact_score * 0.2 +
-             language_score * 0.1 + seo_score * 0.15 + media_score * 0.2)
+    trust = (brand_score * 0.25 + fact_score * 0.15 +
+             language_score * 0.05 + mojibake_score * 0.20 +
+             seo_score * 0.15 + media_score * 0.20)
     result["trust_score"] = round(trust, 1)
-    result["passed"] = trust >= PASS_THRESHOLD
+    # P0-FIX: 有乱码或编码错误时，无论总分多少都标记为不通过
+    result["passed"] = trust >= PASS_THRESHOLD and not result["mojibake_issues"] and not encoding_errors
     return result
 
 
@@ -273,14 +322,19 @@ def main() -> int:
     print(f"  通过: {len(passed)}/{len(results)}")
     for r in results:
         mark = "✅" if r["passed"] else "❌"
+        mojibake_flag = " [MOJIBAKE]" if r.get("mojibake_issues") else ""
         print(f"  {mark} {r['file'][:45]:47s} trust={r['trust_score']:6.1f} "
               f"brand={r['scores']['brand']} fact={r['scores']['fact']} "
-              f"lang={r['scores']['language']} seo={r['scores']['seo']}")
+              f"mojibake={r['scores']['mojibake']} seo={r['scores']['seo']}{mojibake_flag}")
         if not r["passed"] and not args.file:
             if r["brand_issues"]:
                 print(f"       brand: {r['brand_issues'][:3]}")
             if r["fact_issues"]:
                 print(f"       fact: {r['fact_issues'][:3]}")
+            if r.get("mojibake_issues"):
+                print(f"       mojibake(P0): {r['mojibake_issues'][:5]}")
+            if r.get("encoding_errors"):
+                print(f"       encoding(P0): {r['encoding_errors'][:2]}")
             if r["seo_issues"]:
                 print(f"       seo: {r['seo_issues'][:3]}")
             if r.get("media_issues"):

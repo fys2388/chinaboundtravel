@@ -1,0 +1,121 @@
+name: Agent KPI Monthly Audit (营收导向考核)
+
+on:
+  schedule:
+    # 每月1日北京时间 10:00 (UTC 2:00) 自动运行月度考核
+    - cron: '0 2 1 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "考核月份 (YYYY-MM，默认当前月)"
+        required: false
+        default: ""
+        type: string
+      notify:
+        description: "是否发送飞书通知"
+        required: false
+        default: "true"
+        type: boolean
+
+jobs:
+  agent-kpi-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Agent KPI Audit (营收导向)
+        id: kpi_audit
+        run: |
+          MONTH="${{ github.event.inputs.month || '' }}"
+          if [ -n "$MONTH" ]; then
+            python scripts/agent_kpi_auditor.py --month "$MONTH"
+          else
+            python scripts/agent_kpi_auditor.py
+          fi
+          KPI_EXIT=$?
+          echo "kpi_exit=$KPI_EXIT" >> $GITHUB_OUTPUT
+
+          # 读取考核结果摘要
+          if [ -f ops-dashboard/agent_kpi_data.json ]; then
+            echo "=== KPI 考核结果摘要 ==="
+            python -c "
+          import json
+          with open('ops-dashboard/agent_kpi_data.json') as f:
+              d = json.load(f)
+          print(f'考核月份: {d[\"month\"]}')
+          print(f'团队平均分: {d[\"avg_score\"]}/100')
+          print()
+          for a in d['agents']:
+              icon = {'S':'🏆','A':'🥇','B':'✅','C':'⚠️','D':'❌'}.get(a['grade'],'?')
+              print(f'{icon} {a[\"emoji\"]} {a[\"name\"]}: {a[\"score\"]}/100 [{a[\"grade\"]}] {a[\"bonus\"]}')
+          d_agents = [a for a in d['agents'] if a['grade']=='D']
+          if d_agents:
+              print()
+              print(f'⚠️  存在 D 级 Agent: {[a[\"name\"] for a in d_agents]}')
+              print('   连续2月D级将触发流程重构问责')
+          "
+          fi
+
+      - name: Update KPI Dashboard
+        run: |
+          # 将 KPI 监控页面和数据复制到 static 目录供线上访问
+          mkdir -p static/ops-dashboard
+          cp ops-dashboard/agent-kpi.html static/ops-dashboard/agent-kpi.html
+          cp ops-dashboard/agent_kpi_data.json static/ops-dashboard/agent_kpi_data.json
+          echo "KPI 监控页面已更新到 static/ops-dashboard/"
+
+      - name: Send Feishu Notification
+        if: ${{ github.event.inputs.notify != 'false' }}
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            KPI_EXIT="${{ steps.kpi_audit.outputs.kpi_exit }}"
+            if [ "$KPI_EXIT" = "1" ]; then
+              MSG="❌ [Agent KPI 月度考核] 存在 D 级 Agent，请立即关注并制定改进计划。详见 ops-dashboard/agent-kpi.html"
+            else
+              MSG="✅ [Agent KPI 月度考核] 全部 Agent 考核完成，无 D 级。详见 ops-dashboard/agent-kpi.html"
+            fi
+            curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"$MSG\"}}" || true
+          fi
+
+      - name: Commit KPI Results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ops-dashboard/agent_kpi_data.json ops-dashboard/agent-kpi.html static/ops-dashboard/ 2>/dev/null || true
+          git add reports/agent_kpi/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无 KPI 结果变更"
+          else
+            git commit -m "chore: update agent KPI monthly audit results [skip ci]"
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git push || echo "推送失败，跳过"
+          fi
+
+      - name: Upload KPI Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-kpi-report
+          path: |
+            reports/agent_kpi/
+            ops-dashboard/agent_kpi_data.json
+          retention-days: 90

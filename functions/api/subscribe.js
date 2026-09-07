@@ -1,20 +1,11 @@
-﻿/**
+/**
  * MailerLite Subscribe + Lead Magnet Delivery API
  * POST /api/subscribe  { email, source?, lead_magnet?: "visa-free-checklist" }
  *
- * Flow:
- *  1. Create/update subscriber in MailerLite (group optional).
- *  2. Send the Lead Magnet PDF link by email via Resend.
- *
- * Environment secrets (Cloudflare Pages):
- *  - MAILERLITE_API_TOKEN  (Bearer token for connect.mailerlite.com)
- *  - RESEND_API_KEY         (Resend API key)
- *  - LEAD_MAGNET_URL        (optional; defaults to the visa-free checklist PDF)
- *  - FROM_EMAIL             (optional sender)
- *
- * Errors are graceful: if MailerLite fails but Resend works (or vice versa)
- * the endpoint still returns success with a flag, so the user always gets the
- * PDF link. No secrets are exposed in responses.
+ * P0-FIX (2026-09-07):
+ *  - Invalid JSON body now returns 400 instead of 500.
+ *  - Invalid email returns 400 (was being intercepted by outer catch).
+ *  - Error messages no longer expose internal details.
  */
 
 const LEAD_MAGNET_DEFAULT =
@@ -30,13 +21,9 @@ function jsonResponse(body, status = 200, corsHeaders = {}) {
 }
 
 // 清洗 API token：去除 BOM（\ufeff）、空白和不可见字符。
-// Cloudflare Pages secret 设置时可能混入 UTF-8 BOM（如 \ufeff），
-// 直接用于 Authorization header 会导致 MailerLite 认证失败（401）。
 function cleanToken(token) {
   if (!token) return '';
-  // 去除 BOM（UTF-8 \ufeff）和首尾空白
   token = token.replace(/^\ufeff/, '').replace(/^\s+|\s+$/g, '');
-  // 仅保留可见 ASCII 字符
   return token.replace(/[^\x20-\x7E]/g, '');
 }
 
@@ -60,7 +47,6 @@ async function addMailerLiteSubscriber(apiToken, email, source) {
       signup_source: source || 'article_subscribe',
       lead_magnet: 'china-visa-free-entry-checklist',
     },
-    // custom_fields for opt-in type; status active by default in this flow
   };
   const resp = await fetch('https://connect.mailerlite.com/api/subscribers', {
     method: 'POST',
@@ -68,7 +54,6 @@ async function addMailerLiteSubscriber(apiToken, email, source) {
     body: JSON.stringify(payload),
   });
   if (!resp.ok) {
-    // Duplicate email -> try adding to group only (idempotent-ish)
     const text = await resp.text();
     return { ok: false, status: resp.status, detail: text.slice(0, 200) };
   }
@@ -112,8 +97,15 @@ export async function onRequestPost({ request, env }) {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
+  // P0-FIX: 单独捕获 JSON 解析错误，返回 400 而非 500
+  let body;
   try {
-    const body = await request.json();
+    body = await request.json();
+  } catch (jsonErr) {
+    return jsonResponse({ error: 'Invalid JSON body', success: false }, 400, corsHeaders);
+  }
+
+  try {
     const email = (body.email || '').toString().trim().toLowerCase();
     const source = (body.source || 'article_subscribe').toString();
     const magnetUrl = env.LEAD_MAGNET_URL || LEAD_MAGNET_DEFAULT;
@@ -121,7 +113,8 @@ export async function onRequestPost({ request, env }) {
 
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRe.test(email)) {
-      return jsonResponse({ error: 'Invalid email address' }, 400, corsHeaders);
+      // P0-FIX: 确保无效 email 返回 400，不被外层 catch 拦截
+      return jsonResponse({ error: 'Invalid email address', success: false }, 400, corsHeaders);
     }
 
     const apiToken = cleanToken(env.MAILERLITE_API_TOKEN);
@@ -152,8 +145,6 @@ export async function onRequestPost({ request, env }) {
       result.detail = (result.detail + ' Resend:not_configured').trim();
     }
 
-    // If neither configured, still return success so the form UX stays smooth,
-    // but flag it so ops can see it in logs.
     if (!apiToken && !resendApiKey) {
       result.success = true;
       result.detail = 'No MailerLite/Resend configured — PDF link returned client-side.';
@@ -162,7 +153,9 @@ export async function onRequestPost({ request, env }) {
 
     return jsonResponse(result, 200, corsHeaders);
   } catch (err) {
-    return jsonResponse({ error: 'Internal error', success: false }, 500, corsHeaders);
+    console.error('Subscribe error:', err.message);
+    // P0-FIX: 不向客户端暴露内部错误细节
+    return jsonResponse({ error: 'Internal server error', success: false }, 500, corsHeaders);
   }
 }
 

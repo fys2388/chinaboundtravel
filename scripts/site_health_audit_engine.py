@@ -516,13 +516,16 @@ class SiteHealthAuditor:
         if posts_dir.exists():
             post_files = list(posts_dir.glob("*.md"))[:5]  # 检查前5篇
             ai_patterns = [
-                (r"It\'s like', '电影比喻模式化"),
-                (r"in conclusion', '模板化结尾"),
-                (r"it is important to note', 'AI套话"),
-                (r"navigate the complexities', 'AI套话"),
-                (r"delve into', 'AI套话"),
-                (r"tapestry', 'AI套话"),
-                (r"testament to', 'AI套话"),
+                (r"It's like", '电影比喻模式化'),
+                (r"in conclusion", '模板化结尾'),
+                (r"it is important to note", 'AI套话'),
+                (r"navigate the complexities", 'AI套话'),
+                (r"delve into", 'AI套话'),
+                (r"tapestry", 'AI套话'),
+                (r"testament to", 'AI套话'),
+                (r"a myriad of", 'AI套话'),
+                (r"in today's fast-paced", 'AI套话'),
+                (r"unlock the potential", 'AI套话'),
             ]
             for post_file in post_files:
                 try:

@@ -1,0 +1,329 @@
+{
+  "content_001": {
+    "capability": 91.0,
+    "revenue": 5600.0,
+    "exp": 3400,
+    "level": "senior",
+    "skills": {
+      "content": 40,
+      "seo": 25,
+      "social": 25,
+      "revenue": 30,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 20
+    },
+    "mentored_count": 1,
+    "kpi_history": [
+      {
+        "month": "2026-07",
+        "grade": "B",
+        "score": 75
+      },
+      {
+        "month": "2026-08",
+        "grade": "A",
+        "score": 82
+      },
+      {
+        "month": "2026-09",
+        "grade": "A",
+        "score": 85
+      }
+    ],
+    "tasks_completed": 5,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "content_001",
+    "name": "Content Agent",
+    "name_cn": "内容 Agent",
+    "emoji": "📝",
+    "role": "内容创作总监",
+    "primary_skill": "content",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522844",
+    "growth_log": [
+      {
+        "timestamp": "2026-09-07T10:23:47.541711",
+        "action": "learn_skill",
+        "detail": "content: 10→40 (+30级)",
+        "exp_gain": 300
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541751",
+        "action": "learn_skill",
+        "detail": "seo: 10→25 (+15级)",
+        "exp_gain": 150
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541767",
+        "action": "learn_skill",
+        "detail": "data_analysis: 10→20 (+10级)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541791",
+        "action": "complete_task",
+        "detail": "撰写10篇深度旅游攻略 (难度:hard, 收益:$800.00)",
+        "exp_gain": 200
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541807",
+        "action": "complete_task",
+        "detail": "优化20篇文章SEO (难度:normal, 收益:$500.00)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541821",
+        "action": "complete_task",
+        "detail": "创建eBook内容 (难度:expert, 收益:$1200.00)",
+        "exp_gain": 400
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541833",
+        "action": "complete_task",
+        "detail": "联盟链接内容优化 (难度:normal, 收益:$600.00)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541856",
+        "action": "level_up",
+        "detail": "实习生 → 正式员工",
+        "exp_gain": 500
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.541903",
+        "action": "mentor",
+        "detail": "指导新人 content_GROUP_008",
+        "exp_gain": 300
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.543359",
+        "action": "complete_task",
+        "detail": "打造爆款内容矩阵 (难度:expert, 收益:$2500.00)",
+        "exp_gain": 400
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.543386",
+        "action": "learn_skill",
+        "detail": "revenue: 10→30 (+20级)",
+        "exp_gain": 200
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.543402",
+        "action": "learn_skill",
+        "detail": "social: 10→25 (+15级)",
+        "exp_gain": 150
+      },
+      {
+        "timestamp": "2026-09-07T10:23:47.543421",
+        "action": "level_up",
+        "detail": "正式员工 → 骨干",
+        "exp_gain": 500
+      }
+    ]
+  },
+  "seo_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "seo_001",
+    "name": "SEO Agent",
+    "name_cn": "SEO Agent",
+    "emoji": "🔍",
+    "role": "SEO优化总监",
+    "primary_skill": "seo",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522870",
+    "growth_log": []
+  },
+  "social_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "social_001",
+    "name": "Social Agent",
+    "name_cn": "社媒 Agent",
+    "emoji": "📱",
+    "role": "社交媒体总监",
+    "primary_skill": "social",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522874",
+    "growth_log": []
+  },
+  "revenue_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "revenue_001",
+    "name": "Revenue Agent",
+    "name_cn": "营收 Agent",
+    "emoji": "💰",
+    "role": "商业化总监",
+    "primary_skill": "revenue",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522877",
+    "growth_log": []
+  },
+  "user_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "user_001",
+    "name": "User Agent",
+    "name_cn": "用户增长 Agent",
+    "emoji": "👥",
+    "role": "用户增长总监",
+    "primary_skill": "user_growth",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522879",
+    "growth_log": []
+  },
+  "ops_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "ops_001",
+    "name": "Ops Agent",
+    "name_cn": "运维 Agent",
+    "emoji": "⚙️",
+    "role": "技术运维总监",
+    "primary_skill": "ops",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522882",
+    "growth_log": []
+  },
+  "data_001": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "data_001",
+    "name": "Data Agent",
+    "name_cn": "数据 Agent",
+    "emoji": "📊",
+    "role": "数据分析总监",
+    "primary_skill": "data_analysis",
+    "mentor": null,
+    "join_date": "2026-09-07T10:23:47.522884",
+    "growth_log": []
+  },
+  "content_GROUP_008": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 10,
+      "social": 10,
+      "revenue": 10,
+      "user_growth": 10,
+      "ops": 10,
+      "data_analysis": 10
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "content_GROUP_008",
+    "name": "内容 Agent",
+    "name_cn": "内容 Agent",
+    "emoji": "📝",
+    "role": "内容创作实习生",
+    "primary_skill": "content",
+    "mentor": "content_001",
+    "join_date": "2026-09-07T10:23:47.541893",
+    "growth_log": []
+  }
+}

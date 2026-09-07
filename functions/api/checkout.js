@@ -1,11 +1,16 @@
 /**
  * Stripe Checkout Session API - PRODUCTION
  * POST /api/checkout { plan: "monthly" | "annual" | "onetime" }
+ *
+ * P0-FIX (2026-09-07):
+ *  - Invalid JSON body now returns 400 instead of 500.
+ *  - Invalid plan returns 400 (already correct).
+ *  - Error messages no longer expose internal JSON parse details.
  */
 
 export async function onRequestPost({ request, env }) {
   const origin = request.headers.get('Origin') || request.headers.get('origin');
-  
+
   const corsHeaders = {
     'Access-Control-Allow-Origin': origin || 'https://www.chinaboundtravel.com',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -18,7 +23,14 @@ export async function onRequestPost({ request, env }) {
   }
 
   try {
-    const { plan } = await request.json();
+    // P0-FIX: 单独捕获 JSON 解析错误，返回 400 而非 500
+    let body;
+    try {
+      body = await request.json();
+    } catch (jsonErr) {
+      return jsonResponse({ error: 'Invalid JSON body' }, 400, corsHeaders);
+    }
+    const { plan } = body;
 
     const PLANS = {
       monthly: { priceId: 'price_1TbjHO9rCn6b9ZnBDg6wfaLJ', mode: 'subscription', coupon: 'FIRSTMONTH1' },
@@ -42,7 +54,7 @@ export async function onRequestPost({ request, env }) {
     let successUrlEncoded = encodeURIComponent(successUrl + '?session_id={CHECKOUT_SESSION_ID}');
     let cancelUrlEncoded = encodeURIComponent(cancelUrl);
     let formData = `mode=${planConfig.mode}&success_url=${successUrlEncoded}&cancel_url=${cancelUrlEncoded}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&billing_address_collection=auto`;
-    
+
     if (planConfig.coupon) {
       formData += `&discounts[0][coupon]=${planConfig.coupon}`;
     }
@@ -66,7 +78,8 @@ export async function onRequestPost({ request, env }) {
 
   } catch (err) {
     console.error('Checkout error:', err.message);
-    return jsonResponse({ error: err.message }, 500, corsHeaders);
+    // P0-FIX: 不向客户端暴露内部错误细节
+    return jsonResponse({ error: 'Internal server error' }, 500, corsHeaders);
   }
 }
 

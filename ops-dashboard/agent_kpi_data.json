@@ -1,0 +1,84 @@
+{
+  "month": "2026-09",
+  "updated_at": "2026-09-07T10:10:11.860380",
+  "avg_score": 66.3,
+  "agents": [
+    {
+      "id": "revenue",
+      "name": "营收 Agent",
+      "emoji": "💰",
+      "score": 66.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "直接负责：联盟链接优化 → 点击率↑ → 转化率↑ → 佣金营收↑；eBook定价/促销 → 销售额↑"
+    },
+    {
+      "id": "content",
+      "name": "内容 Agent",
+      "emoji": "📝",
+      "score": 69.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑"
+    },
+    {
+      "id": "seo",
+      "name": "SEO Agent",
+      "emoji": "🔍",
+      "score": 66.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "搜索排名↑/索引覆盖率↑ → 自然流量↑ → 联盟点击↑ → 营收↑"
+    },
+    {
+      "id": "social",
+      "name": "社媒 Agent",
+      "emoji": "📱",
+      "score": 66.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "社媒内容→品牌曝光↑/推荐流量↑ → 直接访问↑ → 联盟点击/eBook购买↑"
+    },
+    {
+      "id": "user",
+      "name": "用户增长 Agent",
+      "emoji": "👥",
+      "score": 66.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "邮件列表↑/转化率↑ → eBook销售↑/复购↑/联盟推荐↑ → 营收↑"
+    },
+    {
+      "id": "ops",
+      "name": "运维 Agent",
+      "emoji": "⚙️",
+      "score": 65.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "网站可用性↑/性能↑ → 用户体验↑/留存↑ → 长期营收↑/SEO排名↑(Core Web Vitals)"
+    },
+    {
+      "id": "data",
+      "name": "数据 Agent",
+      "emoji": "📊",
+      "score": 66.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "revenue_chain": "数据准确性↑/洞察及时性↑ → 决策质量↑ → 各Agent优化效率↑ → 间接营收↑"
+    }
+  ]
+}

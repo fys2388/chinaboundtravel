@@ -1,0 +1,29 @@
+{
+  "group_name": "数字员工创业孵化集团",
+  "group_name_en": "Digital Employee Incubation Group",
+  "founder": "Joran (人类创始人)",
+  "founded_at": "2026-09-07T10:23:47.523503",
+  "total_invested": 0.0,
+  "total_graduates": 0,
+  "companies": {
+    "GROUP": {
+      "name": "集团总部",
+      "type": "headquarters",
+      "ceo": "Joran (人类创始人)",
+      "investment": 0,
+      "founded_at": "2026-09-07T10:23:47.523508",
+      "employees": [
+        "content_001",
+        "seo_001",
+        "social_001",
+        "revenue_001",
+        "user_001",
+        "ops_001",
+        "data_001",
+        "content_GROUP_008"
+      ],
+      "status": "active",
+      "children": []
+    }
+  }
+}

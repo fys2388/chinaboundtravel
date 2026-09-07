@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       strict:
-        description: "严格模式（发现问题阻断）"
+        description: "严格模式（发现P0问题阻断部署）"
         required: false
-        default: "false"
+        default: "true"
         type: boolean
 
 jobs:
@@ -33,86 +33,163 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests python-dotenv PyYAML beautifulsoup4 pandas
 
+      # P0-FIX: 关键检查失败必须 exit 1，禁止 || echo warning
       - name: 1. 内容事实检查 (Fact Guard)
+        id: fact_guard
         run: |
           echo "=== [2.0] 内容事实检查 ==="
-          python scripts/content_fact_guard.py 2>&1 || echo "::warning::事实检查发现问题"
-          echo "=== 事实检查完成 ==="
+          python scripts/content_fact_guard.py 2>&1
+          FACT_EXIT=$?
+          echo "fact_guard_exit=$FACT_EXIT" >> $GITHUB_OUTPUT
+          if [ $FACT_EXIT -ne 0 ]; then
+            echo "::error::内容事实检查发现问题，exit code=$FACT_EXIT"
+            exit 1
+          fi
+          echo "=== 事实检查通过 ==="
 
       - name: 2. 品牌身份审计 (Brand Identity)
+        id: brand_audit
         run: |
           echo "=== [2.0] 品牌身份审计（含旧人设检测）==="
-          python scripts/brand_identity_audit.py --legacy 2>&1 || echo "::warning::品牌审计发现旧人设表述"
-          echo "=== 品牌身份审计完成 ==="
+          python scripts/brand_identity_audit.py --legacy 2>&1
+          BRAND_EXIT=$?
+          echo "brand_audit_exit=$BRAND_EXIT" >> $GITHUB_OUTPUT
+          if [ $BRAND_EXIT -ne 0 ]; then
+            echo "::error::品牌审计发现旧人设表述，exit code=$BRAND_EXIT"
+            exit 1
+          fi
+          echo "=== 品牌身份审计通过 ==="
 
       - name: 3. 内容信任审计 (Content Trust)
+        id: trust_audit
         run: |
           echo "=== [2.0] 内容信任审计 ==="
-          python scripts/content_trust_audit.py 2>&1 || echo "::warning::内容信任审计发现问题"
+          python scripts/content_trust_audit.py 2>&1
+          TRUST_EXIT=$?
+          echo "trust_audit_exit=$TRUST_EXIT" >> $GITHUB_OUTPUT
+          if [ $TRUST_EXIT -ne 0 ]; then
+            echo "::warning::内容信任审计发现问题，exit code=$TRUST_EXIT（非阻断）"
+          fi
           echo "=== 内容信任审计完成 ==="
 
       - name: 4. 内容ID审计 (Content ID)
-        env:
-          STRICT: ${{ github.event.inputs.strict || 'false' }}
+        id: content_id
         run: |
           echo "=== [2.0] 内容ID审计 ==="
-          if [ "$STRICT" = "true" ]; then
-            echo "=== 严格模式（发现缺失/重复阻断）==="
-            python scripts/content_id_audit.py audit --strict 2>&1 || {
-              echo "::error::内容ID审计失败，存在缺失或重复的content_id"
-              exit 1
-            }
-          else
-            echo "=== 普通模式（仅报告）==="
-            python scripts/content_id_audit.py audit 2>&1 || echo "::warning::内容ID审计发现问题"
+          python scripts/content_id_audit.py audit --strict 2>&1
+          ID_EXIT=$?
+          echo "content_id_exit=$ID_EXIT" >> $GITHUB_OUTPUT
+          if [ $ID_EXIT -ne 0 ]; then
+            echo "::error::内容ID审计失败，存在缺失或重复的content_id"
+            exit 1
           fi
-          echo "=== 内容ID审计完成 ==="
+          echo "=== 内容ID审计通过 ==="
 
-      - name: 5. 内容质量验证 (Quality Validator)
+      # P0-FIX: 内容质量验证（含 mojibake 检测）失败必须阻断
+      - name: 5. 内容质量验证 (Quality Validator - P0 Mojibake Check)
+        id: quality_validator
         run: |
-          echo "=== [2.0] 内容质量验证 ==="
-          python scripts/content_quality_validator.py --json 2>&1 || echo "::warning::内容质量验证发现问题"
-          echo "=== 内容质量验证完成 ==="
+          echo "=== [2.0] 内容质量验证（含P0乱码检测）==="
+          python scripts/content_quality_validator.py --json > validator_output.json 2>&1
+          VALIDATOR_EXIT=$?
+          echo "validator_exit=$VALIDATOR_EXIT" >> $GITHUB_OUTPUT
 
-      - name: 6. 生成综合内容质量报告
+          # 解析结果，统计 P0 问题
+          MOJIBAKE_COUNT=$(python -c "
+          import json
+          with open('validator_output.json') as f:
+              d = json.load(f)
+          mojibake = [r for r in d['results'] if r.get('mojibake_issues')]
+          encoding_err = [r for r in d['results'] if r.get('encoding_errors')]
+          print(f'mojibake_files={len(mojibake)}')
+          print(f'encoding_error_files={len(encoding_err)}')
+          print(f'passed={d[\"passed_count\"]}/{d[\"total\"]}')
+          for r in mojibake[:5]:
+              print(f'  MOJIBAKE: {r[\"file\"]}: {r[\"mojibake_issues\"][:3]}')
+          ")
+          echo "$MOJIBAKE_COUNT"
+
+          if [ $VALIDATOR_EXIT -ne 0 ]; then
+            echo "::error::内容质量验证失败，存在不通过的文章（含P0乱码/编码问题）"
+            echo "::error::请修复上述 mojibake/encoding 问题后重新运行"
+            exit 1
+          fi
+          echo "=== 内容质量验证通过 ==="
+
+      - name: 6. 生成综合内容质量报告 (真实数据)
+        id: report_gen
         run: |
-          echo "=== [2.0] 生成综合内容质量报告 ==="
+          echo "=== [2.0] 生成综合内容质量报告（真实数据）==="
           mkdir -p reports/content_audit
-          
+
           REPORT_FILE="reports/content_audit/CONTENT_QUALITY_AUDIT_$(date +%Y%m%d).md"
           echo "# ChinaBound Travel 2.0 内容质量综合巡检报告" > "$REPORT_FILE"
           echo "" >> "$REPORT_FILE"
           echo "**巡检时间**: $(date '+%Y-%m-%d %H:%M:%S')" >> "$REPORT_FILE"
-          echo "**巡检模式**: ${{ github.event.inputs.strict || '普通模式' }}" >> "$REPORT_FILE"
+          echo "**巡检模式**: ${{ github.event.inputs.strict || '严格模式' }}" >> "$REPORT_FILE"
           echo "" >> "$REPORT_FILE"
-          
-          echo "## 巡检项目" >> "$REPORT_FILE"
+
+          # P0-FIX: 从 validator_output.json 读取真实结果，禁止硬编码
+          if [ -f validator_output.json ]; then
+            python -c "
+          import json
+          with open('validator_output.json') as f:
+              d = json.load(f)
+          print('## 统计概览')
+          print()
+          print(f'- **站点总文章数**: {d[\"total\"]} 篇')
+          print(f'- **通过验证**: {d[\"passed_count\"]} 篇')
+          print(f'- **未通过**: {d[\"total\"] - d[\"passed_count\"]} 篇')
+          mojibake = [r for r in d['results'] if r.get('mojibake_issues')]
+          encoding_err = [r for r in d['results'] if r.get('encoding_errors')]
+          print(f'- **P0 乱码文件**: {len(mojibake)} 篇')
+          print(f'- **编码错误文件**: {len(encoding_err)} 篇')
+          print()
+          if mojibake:
+              print('### P0 乱码文件清单')
+              print()
+              for r in mojibake:
+                  print(f'- **{r[\"file\"]}**: score={r[\"scores\"][\"mojibake\"]}, patterns={r[\"mojibake_issues\"][:5]}')
+              print()
+          # 各维度平均分
+          scores = d['results']
+          avg_brand = sum(r['scores']['brand'] for r in scores) / len(scores)
+          avg_fact = sum(r['scores']['fact'] for r in scores) / len(scores)
+          avg_mojibake = sum(r['scores']['mojibake'] for r in scores) / len(scores)
+          avg_seo = sum(r['scores']['seo'] for r in scores) / len(scores)
+          avg_media = sum(r['scores']['media'] for r in scores) / len(scores)
+          print('### 各维度平均分')
+          print()
+          print(f'| 维度 | 平均分 |')
+          print(f'|------|--------|')
+          print(f'| 品牌合规 | {avg_brand:.1f} |')
+          print(f'| 事实守卫 | {avg_fact:.1f} |')
+          print(f'| 乱码检测(P0) | {avg_mojibake:.1f} |')
+          print(f'| SEO 完整 | {avg_seo:.1f} |')
+          print(f'| 媒体合规 | {avg_media:.1f} |')
+          " >> "$REPORT_FILE"
+          fi
+
           echo "" >> "$REPORT_FILE"
-          echo "| 巡检项 | 脚本 | 状态 | 详情 |" >> "$REPORT_FILE"
-          echo "|--------|------|------|------|" >> "$REPORT_FILE"
-          echo "| 内容事实检查 | content_fact_guard.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
-          echo "| 品牌身份审计 | brand_identity_audit.py | ✅ 已巡检 | 见 reports/P1_BRAND_02_* |" >> "$REPORT_FILE"
-          echo "| 内容信任审计 | content_trust_audit.py | ✅ 已巡检 | 见 reports/content_audit/CONTENT_TRUST_* |" >> "$REPORT_FILE"
-          echo "| 内容ID审计 | content_id_audit.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
-          echo "| 内容质量验证 | content_quality_validator.py | ✅ 已巡检 | 见 reports/content_audit/ |" >> "$REPORT_FILE"
+          echo "## 巡检项目执行状态" >> "$REPORT_FILE"
           echo "" >> "$REPORT_FILE"
-          
-          echo "## 统计概览" >> "$REPORT_FILE"
+          echo "| 巡检项 | 脚本 | 退出码 | 状态 |" >> "$REPORT_FILE"
+          echo "|--------|------|--------|------|" >> "$REPORT_FILE"
+          echo "| 内容事实检查 | content_fact_guard.py | ${{ steps.fact_guard.outputs.fact_guard_exit }} | ${{ steps.fact_guard.outputs.fact_guard_exit == 0 && '✅ 通过' || '❌ 失败' }} |" >> "$REPORT_FILE"
+          echo "| 品牌身份审计 | brand_identity_audit.py | ${{ steps.brand_audit.outputs.brand_audit_exit }} | ${{ steps.brand_audit.outputs.brand_audit_exit == 0 && '✅ 通过' || '❌ 失败' }} |" >> "$REPORT_FILE"
+          echo "| 内容信任审计 | content_trust_audit.py | ${{ steps.trust_audit.outputs.trust_audit_exit }} | ${{ steps.trust_audit.outputs.trust_audit_exit == 0 && '✅ 通过' || '⚠️ 告警' }} |" >> "$REPORT_FILE"
+          echo "| 内容ID审计 | content_id_audit.py | ${{ steps.content_id.outputs.content_id_exit }} | ${{ steps.content_id.outputs.content_id_exit == 0 && '✅ 通过' || '❌ 失败' }} |" >> "$REPORT_FILE"
+          echo "| 内容质量验证(P0乱码) | content_quality_validator.py | ${{ steps.quality_validator.outputs.validator_exit }} | ${{ steps.quality_validator.outputs.validator_exit == 0 && '✅ 通过' || '❌ 失败' }} |" >> "$REPORT_FILE"
           echo "" >> "$REPORT_FILE"
-          
-          # 统计文章数量
-          ARTICLE_COUNT=$(find content/posts -name "*.md" 2>/dev/null | wc -l)
-          echo "- **站点总文章数**: $ARTICLE_COUNT 篇" >> "$REPORT_FILE"
-          echo "" >> "$REPORT_FILE"
-          
+
           echo "## 下一步建议" >> "$REPORT_FILE"
           echo "" >> "$REPORT_FILE"
-          echo "1. **事实问题**：对检测到的事实错误进行人工核实和修正" >> "$REPORT_FILE"
-          echo "2. **品牌一致性**：批量修正旧人设表述，统一为Editorial Voice" >> "$REPORT_FILE"
-          echo "3. **内容信任度**：补充引用来源、专家观点，提升内容可信度" >> "$REPORT_FILE"
-          echo "4. **内容ID**：确保每篇文章有唯一content_id，避免重复" >> "$REPORT_FILE"
+          echo "1. **P0 乱码修复**：对检测到的 mojibake 文件进行编码修复（UTF-8 双重编码回退）" >> "$REPORT_FILE"
+          echo "2. **事实问题**：对检测到的事实错误进行人工核实和修正" >> "$REPORT_FILE"
+          echo "3. **品牌一致性**：批量修正旧人设表述，统一为Editorial Voice" >> "$REPORT_FILE"
+          echo "4. **内容信任度**：补充引用来源、专家观点，提升内容可信度" >> "$REPORT_FILE"
           echo "5. **内容质量**：优化低质量文章，补充图片、内链、结构化数据" >> "$REPORT_FILE"
-          
+
           echo "综合内容质量报告已生成: $REPORT_FILE"
           echo "=== 综合内容质量巡检完成 ==="
 
@@ -122,8 +199,14 @@ jobs:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
           if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            STATUS="${{ job.status }}"
+            if [ "$STATUS" = "success" ]; then
+              MSG="✅ [2.0] 内容质量综合巡检通过：事实检查 + 品牌审计 + 信任审计 + ID审计 + P0乱码检测全部通过"
+            else
+              MSG="❌ [2.0] 内容质量综合巡检失败：存在P0问题（乱码/品牌/事实/ID），请立即修复，详见 reports/content_audit/"
+            fi
             curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
-              -d '{"msg_type":"text","content":{"text":"📋 [2.0] 内容质量综合巡检完成：事实检查 + 品牌审计 + 信任审计 + ID审计 + 质量验证，详见 reports/content_audit/"}}' || true
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"$MSG\"}}" || true
           fi
 
       - name: Commit content quality reports
