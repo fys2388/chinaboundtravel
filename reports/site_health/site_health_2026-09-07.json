@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-09-07T01:56:43.051643+00:00",
+  "timestamp": "2026-09-07T17:06:18.592766+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 0,
+    "total_issues": 1,
     "critical": 0,
     "high": 0,
     "medium": 0,
-    "low": 0,
-    "auto_fixed": 0,
+    "low": 1,
+    "auto_fixed": 1,
     "need_manual": 0,
     "resolved": 17,
     "inherited_resolved": 17
@@ -169,6 +169,18 @@
       "resolved_by": "seo_agent",
       "resolution_note": "历史已解决",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "message": "Title渲染后过长(69字符, front matter 49+后缀20): China Etiquette Guide for Aussie & Kiwi ...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 49->39字符"
     },
     {
       "type": "title_too_short",

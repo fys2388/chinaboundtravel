@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-2b8c6981425b"
-title: "China Etiquette Guide for Aussie & Kiwi Travelers"
+title: "China Etiquette Guide for Aussie & Kiwi"
 date: "2026-07-22T10:00:00+08:00"
 lastmod: "2026-07-22T10:00:00+08:00"
 last_updated: "2026-07-22"

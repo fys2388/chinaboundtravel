@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-07",
-  "audited_at": "2026-09-07T01:56:44.374216",
+  "audited_at": "2026-09-07T17:06:20.802769",
   "score": {
     "total_score": 42.5,
     "max_score": 100,
@@ -19,11 +19,10 @@
       "stage": "detection",
       "status": "fail",
       "issues": [
-        "site_health 检测到0个问题（可能检测未运行）",
         "缺少 site_health_issues_2026-09-07.json"
       ],
       "details": {
-        "site_health_total": 0,
+        "site_health_total": 1,
         "site_health_file": "site_health_2026-09-07.json"
       }
     },
@@ -61,13 +60,12 @@
       "details": {
         "dashboard_pending": 0,
         "actual_pending": 0,
-        "ga4_daily_days": 75,
+        "ga4_daily_days": 76,
         "gsc_daily_days": 30
       }
     }
   ],
   "all_issues": [
-    "[detection] site_health 检测到0个问题（可能检测未运行）",
     "[detection] 缺少 site_health_issues_2026-09-07.json",
     "[assignment] 缺少问题文件，无法审计分配",
     "[execution] 没有 Agent 任务文件"
