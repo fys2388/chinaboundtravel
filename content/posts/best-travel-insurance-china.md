@@ -1,4 +1,4 @@
-+++
+﻿+++
 content_id = "cbt-d701fb08eb7b"
 title = "Top-rated Travel Insurance for China 2026"
 description = "Compare a top choice travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."
@@ -13,7 +13,7 @@ categories = ["travel-tips", "visa"]
 tags = ["Travel Insurance", "China Safety", "Safetywing", "World Nomads", "Health Insurance", "medical insurance China", "digital nomad insurance China"]
 [cover]
   image = "/img/china-dest/chengdu/chengdu-hotpot-street.webp"
-canonicalURL: "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/"
+canonicalURL = "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/"
 
 +++
 {{< content-timestamp >}}

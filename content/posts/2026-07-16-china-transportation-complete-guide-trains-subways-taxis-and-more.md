@@ -1,4 +1,4 @@
-+++
+﻿+++
 content_id = "cbt-17c6738ffb32"
 title = "China Transportation 2026: Trains & Didi"
 description = "Complete guide to getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival for foreigners. Travel like a local!"
@@ -22,7 +22,7 @@ tags = ["China Transportation", "high-speed train China", "China Travel Tips", "
 featured = true
 ShowToc = true
 TocOpen = false
-canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
+canonicalURL = "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
 
 +++
 {{< content-timestamp >}}

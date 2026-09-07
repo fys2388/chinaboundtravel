@@ -1,4 +1,4 @@
-+++
+﻿+++
 content_id = "cbt-7996811c1d23"
 title = "Is China Safe for Tourists in 2026?"
 description = "An honest China safety guide for 2026: real crime data, the scams that exist, food and transport safety, and emergency contacts."
@@ -21,7 +21,7 @@ tags = ["China Safety", "Is China Safe", "China Travel Safety", "China Scams", "
 featured = true
 ShowToc = true
 TocOpen = false
-canonicalURL: "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/"
+canonicalURL = "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/"
 
 +++
 {{< content-timestamp >}}
