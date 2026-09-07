@@ -136,6 +136,8 @@ body {
 .wf-failed { background:var(--red); }
 .wf-skipped { background:var(--yellow); }
 .wf-no_runs { background:var(--text4); }
+.wf-scheduled { background:var(--blue); }
+.wf-manual { background:var(--text3); }
 .wf-name { flex:1; color:var(--text2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .wf-time { font-size:9px; color:var(--text4); }
 .experiment-item { padding:10px 0; border-bottom:1px solid var(--border); }
@@ -592,7 +594,9 @@ function renderOverview() {
   let wfHtml = '';
   wfs.slice().sort((a,b) => (b.last_run||'').localeCompare(a.last_run||'')).forEach(w => {
     const statusClass = 'wf-' + (w.last_status || 'no_runs');
-    const time = w.last_run ? w.last_run.substring(0,10) : '未运行';
+    let time = w.last_run ? w.last_run.substring(0,10) : '未运行';
+    if (w.last_status === 'scheduled') time = '按周期调度';
+    if (w.last_status === 'manual') time = '手动触发';
     wfHtml += `<div class="workflow-item"><span class="wf-status ${statusClass}"></span><span class="wf-name" title="${w.name}">${w.name}</span><span class="wf-time">${time}</span></div>`;
   });
   document.getElementById('ov-workflows').innerHTML = wfHtml;
@@ -812,7 +816,9 @@ function renderOps() {
   let wfHtml = '';
   wfs.slice().sort((a,b) => (b.last_run||'').localeCompare(a.last_run||'')).forEach(w => {
     const statusClass = 'wf-' + (w.last_status || 'no_runs');
-    const time = w.last_run ? w.last_run.substring(0,16).replace('T',' ') : '未运行';
+    let time = w.last_run ? w.last_run.substring(0,16).replace('T',' ') : '未运行';
+    if (w.last_status === 'scheduled') time = '按周期调度';
+    if (w.last_status === 'manual') time = '手动触发';
     const freq = w.frequency || '';
     wfHtml += `<div class="workflow-item" title="${w.name}"><span class="wf-status ${statusClass}"></span><span class="wf-name">${w.name}</span><span class="wf-time">${freq} · ${time}</span></div>`;
   });

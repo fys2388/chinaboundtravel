@@ -58,9 +58,9 @@ workflows = []
 for f in sorted(wf_dir.glob("*.yml")) + sorted(wf_dir.glob("*.yaml")):
     name = f.stem
     try:
-        content = f.read_text(encoding="utf-8")
+        content = f.read_text(encoding="utf-8-sig")  # 自动去除BOM
         for line in content.splitlines():
-            if line.startswith("name:"):
+            if line.lstrip("\ufeff").startswith("name:"):
                 display = line.split("name:", 1)[1].strip().strip("'\"")
                 break
         else:
@@ -81,14 +81,20 @@ for f in sorted(wf_dir.glob("*.yml")) + sorted(wf_dir.glob("*.yaml")):
         pass
     workflows.append({"file": f.name, "name": display, "id": name, "frequency": freq})
 
-# 用 gh CLI 查每个 workflow 最近运行（增加limit，双匹配name和id）
+# 用 gh CLI 查每个 workflow 最近运行（limit 500，多维度匹配）
+def _norm(s):
+    """规范化字符串用于模糊匹配：去空格/括号/连字符/标点，转小写"""
+    import re
+    return re.sub(r'[\s_\-()（）【】\[\].,，。:：+]', '', s).lower()
+
 try:
     import subprocess
-    result = subprocess.run(["gh", "run", "list", "--limit", "200", "--json", "name,status,conclusion,createdAt,event,databaseId,workflowName"], capture_output=True, text=True, cwd=str(ROOT), timeout=45)
+    result = subprocess.run(["gh", "run", "list", "--limit", "500", "--json", "name,status,conclusion,createdAt,event,databaseId,workflowName"], capture_output=True, text=True, cwd=str(ROOT), timeout=60)
     if result.returncode == 0:
         runs = json.loads(result.stdout)
         latest_by_name = {}
         latest_by_wfname = {}
+        latest_by_norm = {}
         for run in runs:
             wf_name = run.get("name", "")
             wf_full = run.get("workflowName", "")
@@ -96,17 +102,36 @@ try:
                 latest_by_name[wf_name] = run
             if wf_full and wf_full not in latest_by_wfname:
                 latest_by_wfname[wf_full] = run
+            for key in [wf_name, wf_full]:
+                if key:
+                    n = _norm(key)
+                    if n and n not in latest_by_norm:
+                        latest_by_norm[n] = run
         for wf in workflows:
-            # 双匹配：name 或 workflowName
+            # 精确匹配：name 或 workflowName
             run = latest_by_name.get(wf["name"]) or latest_by_wfname.get(wf["name"])
+            # 模糊匹配：规范化后的 display name 或 文件名
+            if not run:
+                run = latest_by_norm.get(_norm(wf["name"])) or latest_by_norm.get(_norm(wf["id"]))
             if run:
                 wf["last_status"] = run.get("conclusion", run.get("status", "unknown"))
                 wf["last_run"] = run.get("createdAt", "")
                 wf["last_event"] = run.get("event", "")
             else:
-                wf["last_status"] = "no_runs"
-                wf["last_run"] = ""
-                wf["last_event"] = ""
+                # 手动触发型显示"手动"
+                if wf.get("frequency") == "手动":
+                    wf["last_status"] = "manual"
+                    wf["last_run"] = ""
+                    wf["last_event"] = "manual"
+                # 按周/月/季/年调度的，运行记录可能超出查询范围，显示"按周期调度"
+                elif wf.get("frequency") in ["每周", "每月", "每季", "每年"]:
+                    wf["last_status"] = "scheduled"
+                    wf["last_run"] = ""
+                    wf["last_event"] = "scheduled"
+                else:
+                    wf["last_status"] = "no_runs"
+                    wf["last_run"] = ""
+                    wf["last_event"] = ""
     else:
         # gh CLI 失败时，用 GitHub API 兜底
         import os as _os

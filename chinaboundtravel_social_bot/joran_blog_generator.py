@@ -1057,10 +1057,10 @@ Requirements for HIGH-QUALITY CONTENT:
 Output ONLY the article content with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【深度内容】max_tokens=3500，确保足够深度（生成2000+词文章）
-        return self.client.chat(messages, max_tokens=3500)
+        # 【深度内容】max_tokens=5500，确保足够深度（生成2000+词文章）
+        return self.client.chat(messages, max_tokens=5500)
     
-    def rewrite_post(self, content, topic, geo_region):
+    def rewrite_post(self, content, topic, geo_region, quality_issues=None):
         # Geo-region affects content details, not persona voice
         region_context = {
             "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 144-hour visa-free transit in China"},
@@ -1081,15 +1081,21 @@ Output ONLY the article content with proper Markdown formatting."""
                 post_index_section += f"- [{title}](https://www.chinaboundtravel.com/posts/{slug}/)\n"
             post_index_section += "\n===== END ARTICLE INDEX =====\n\n"
         
+        # 构建质量修复提醒
+        if quality_issues:
+            quality_fix_note = "You MUST fix these specific issues: " + "; ".join(quality_issues[:5]) + ". Pay special attention to word count (2000+), H2 count (5-7), and internal links (4+)."
+        else:
+            quality_fix_note = "Ensure 2000+ words, 5-7 H2 sections, 4+ internal links."
+
         # 【深度版】增强重写Prompt
         prompt = f"""Rewrite and ENHANCE this blog post to be more in-depth and engaging.
 
 {content}
 
 Requirements:
-1. Add proper H2 headings (##) for main sections if missing
-2. Expand content to minimum 1000 words with detailed insights
-3. Add at least 3 internal links to OTHER ARTICLES on chinaboundtravel.com. Use the EXISTING SITE ARTICLES list below for valid URLs. NEVER invent URLs.
+1. Add 5-7 proper H2 headings (##) for main sections - each section must have detailed sub-points
+2. Expand content to minimum 2000 words with EXTREMELY detailed insights, practical tips, and deep analysis
+3. Add at least 4 internal links to OTHER ARTICLES on chinaboundtravel.com (2-3 in body + 3-5 at end). Use the EXISTING SITE ARTICLES list below for valid URLs. NEVER invent URLs.
 4. Add EXACTLY 2 image placeholders:
    - One AFTER the introduction
    - One IN the MIDDLE of the article
@@ -1104,13 +1110,14 @@ Requirements:
 7. Original topic: {topic}
 8. Audience region: {region_context[geo_region]["origin"]} - use {region_context[geo_region]["currency"]} for prices
 9. MAIN FOCUS must be China travel
+10. CRITICAL QUALITY FIXES: {quality_fix_note}
 
 {post_index_section}
 Output ONLY the rewritten article with proper Markdown formatting."""
         
         messages = [{"role": "user", "content": prompt}]
-        # 【深度重写】max_tokens=2500，确保足够深度
-        return self.client.chat(messages, max_tokens=2500)
+        # 【深度重写】max_tokens=5000，确保足够深度（扩写到2000+词）
+        return self.client.chat(messages, max_tokens=5000)
     
     def add_image_placeholders(self, article_md):
         """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
@@ -1903,9 +1910,11 @@ class BlogGenerator:
         q_fix = 0
         while not q_passed and q_fix < 2:
             q_fix += 1
-            self.notifier.send_notification("📝 内容质量未达标，启动AI扩写", f"文章《{title}》质量门控未过({q_fix}/2)\n\n{'; '.join(q_issues[:3])}")
+            issue_summary = "; ".join(q_issues[:5])
+            self.notifier.send_notification("📝 内容质量未达标，启动AI扩写", f"文章《{title}》质量门控未过({q_fix}/2)\n\n{issue_summary}")
             try:
-                content = self.ai_engine.rewrite_post(content, topic, geo_region)
+                # 把具体失败原因传给重写，让AI针对性修复
+                content = self.ai_engine.rewrite_post(content, topic, geo_region, quality_issues=q_issues)
                 self.write_markdown(frontmatter, content, draft_path)
                 q_passed, q_issues = self.validate_content_quality(content, title, topic)
             except Exception as e:
