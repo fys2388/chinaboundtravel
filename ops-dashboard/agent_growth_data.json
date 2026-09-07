@@ -1,276 +1,254 @@
-{
-  "updated_at": "2026-09-07T10:23:47.552016",
-  "group": {
-    "name": "数字员工创业孵化集团",
-    "total_employees": 8,
-    "total_companies": 1,
-    "total_invested": 0.0,
-    "total_graduates": 0
-  },
-  "employees": [
-    {
-      "id": "content_001",
-      "name": "内容 Agent",
-      "emoji": "📝",
-      "role": "内容创作总监",
-      "level": "senior",
-      "level_name": "骨干",
-      "capability": 91.0,
-      "revenue": 5600.0,
-      "exp": 3400,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 40,
-        "seo": 25,
-        "social": 25,
-        "revenue": 30,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 20
-      },
-      "mentored_count": 1,
-      "tasks_completed": 5
-    },
-    {
-      "id": "seo_001",
-      "name": "SEO Agent",
-      "emoji": "🔍",
-      "role": "SEO优化总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "social_001",
-      "name": "社媒 Agent",
-      "emoji": "📱",
-      "role": "社交媒体总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "revenue_001",
-      "name": "营收 Agent",
-      "emoji": "💰",
-      "role": "商业化总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "user_001",
-      "name": "用户增长 Agent",
-      "emoji": "👥",
-      "role": "用户增长总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "ops_001",
-      "name": "运维 Agent",
-      "emoji": "⚙️",
-      "role": "技术运维总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "data_001",
-      "name": "数据 Agent",
-      "emoji": "📊",
-      "role": "数据分析总监",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "content_GROUP_008",
-      "name": "内容 Agent",
-      "emoji": "📝",
-      "role": "内容创作实习生",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 10,
-        "social": 10,
-        "revenue": 10,
-        "user_growth": 10,
-        "ops": 10,
-        "data_analysis": 10
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
-    }
-  ],
-  "companies": {
-    "GROUP": {
-      "name": "集团总部",
-      "type": "headquarters",
-      "ceo": "Joran (人类创始人)",
-      "investment": 0,
-      "founded_at": "2026-09-07T10:23:47.523508",
-      "employees": [
-        "content_001",
-        "seo_001",
-        "social_001",
-        "revenue_001",
-        "user_001",
-        "ops_001",
-        "data_001",
-        "content_GROUP_008"
-      ],
-      "status": "active",
-      "children": []
-    }
-  },
-  "graduation_requirements": {
-    "revenue_threshold": 5000.0,
-    "capability_threshold": 85.0,
-    "min_skills_above_60": 3,
-    "min_mentored": 1,
-    "min_consecutive_kpi_b": 2,
-    "group_investment": 1000.0,
-    "breakeven_months": 6
-  },
-  "levels": {
-    "intern": {
-      "name": "实习生",
-      "name_en": "Intern",
-      "min_capability": 0,
-      "min_revenue": 0,
-      "min_exp": 0,
-      "salary_multiplier": 0.5,
-      "color": "#94a3b8",
-      "description": "初始阶段，学习基础技能，在导师指导下完成任务"
-    },
-    "employee": {
-      "name": "正式员工",
-      "name_en": "Employee",
-      "min_capability": 60,
-      "min_revenue": 500,
-      "min_exp": 500,
-      "salary_multiplier": 1.0,
-      "color": "#3b82f6",
-      "description": "能独立负责业务线，稳定产出，开始积累营收贡献"
-    },
-    "senior": {
-      "name": "骨干",
-      "name_en": "Senior",
-      "min_capability": 75,
-      "min_revenue": 2000,
-      "min_exp": 2000,
-      "salary_multiplier": 1.5,
-      "color": "#a78bfa",
-      "description": "业务专家，能带新人，优化流程，是团队核心力量"
-    },
-    "graduate": {
-      "name": "毕业",
-      "name_en": "Graduate",
-      "min_capability": 85,
-      "min_revenue": 5000,
-      "min_exp": 5000,
-      "salary_multiplier": 2.0,
-      "color": "#22c55e",
-      "description": "达到毕业标准，可创立子公司，成为子公司CEO"
-    }
-  }
+﻿{
+    "updated_at":  "2026-09-07T10:23:47.552016",
+    "group":  {
+                  "name":  "数字员工创业孵化集团",
+                  "total_employees":  8,
+                  "total_companies":  1,
+                  "total_invested":  0.0,
+                  "total_graduates":  0
+              },
+    "employees":  [
+                      {
+                          "id":  "content_001",
+                          "name":  "内容 Agent",
+                          "emoji":  "📝",
+                          "role":  "内容创作总监",
+                          "level":  "senior",
+                          "level_name":  "骨干",
+                          "capability":  91.0,
+                          "revenue":  5600.0,
+                          "exp":  3400,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  40,
+                                         "seo":  25,
+                                         "social":  25,
+                                         "revenue":  30,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  20
+                                     },
+                          "mentored_count":  1,
+                          "tasks_completed":  5
+                      },
+                      {
+                          "id":  "seo_001",
+                          "name":  "SEO Agent",
+                          "emoji":  "🔍",
+                          "role":  "SEO优化总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      },
+                      {
+                          "id":  "social_001",
+                          "name":  "社媒 Agent",
+                          "emoji":  "📱",
+                          "role":  "社交媒体总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      },
+                      {
+                          "id":  "revenue_001",
+                          "name":  "营收 Agent",
+                          "emoji":  "💰",
+                          "role":  "商业化总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      },
+                      {
+                          "id":  "user_001",
+                          "name":  "用户增长 Agent",
+                          "emoji":  "👥",
+                          "role":  "用户增长总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      },
+                      {
+                          "id":  "ops_001",
+                          "name":  "运维 Agent",
+                          "emoji":  "⚙️",
+                          "role":  "技术运维总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      },
+                      {
+                          "id":  "data_001",
+                          "name":  "数据 Agent",
+                          "emoji":  "📊",
+                          "role":  "数据分析总监",
+                          "level":  "intern",
+                          "level_name":  "实习生",
+                          "capability":  50.0,
+                          "revenue":  0.0,
+                          "exp":  0,
+                          "company_id":  "GROUP",
+                          "graduated":  false,
+                          "skills":  {
+                                         "content":  10,
+                                         "seo":  10,
+                                         "social":  10,
+                                         "revenue":  10,
+                                         "user_growth":  10,
+                                         "ops":  10,
+                                         "data_analysis":  10
+                                     },
+                          "mentored_count":  0,
+                          "tasks_completed":  0
+                      }
+                  ],
+    "companies":  {
+                      "GROUP":  {
+                                    "name":  "集团总部",
+                                    "type":  "headquarters",
+                                    "ceo":  "Joran (人类创始人)",
+                                    "investment":  0,
+                                    "founded_at":  "2026-09-07T10:23:47.523508",
+                                    "employees":  [
+                                                      "content_001",
+                                                      "seo_001",
+                                                      "social_001",
+                                                      "revenue_001",
+                                                      "user_001",
+                                                      "ops_001",
+                                                      "data_001",
+                                                      "content_GROUP_008"
+                                                  ],
+                                    "status":  "active",
+                                    "children":  [
+
+                                                 ]
+                                }
+                  },
+    "graduation_requirements":  {
+                                    "revenue_threshold":  5000.0,
+                                    "capability_threshold":  85.0,
+                                    "min_skills_above_60":  3,
+                                    "min_mentored":  1,
+                                    "min_consecutive_kpi_b":  2,
+                                    "group_investment":  1000.0,
+                                    "breakeven_months":  6
+                                },
+    "levels":  {
+                   "intern":  {
+                                  "name":  "实习生",
+                                  "name_en":  "Intern",
+                                  "min_capability":  0,
+                                  "min_revenue":  0,
+                                  "min_exp":  0,
+                                  "salary_multiplier":  0.5,
+                                  "color":  "#94a3b8",
+                                  "description":  "初始阶段，学习基础技能，在导师指导下完成任务"
+                              },
+                   "employee":  {
+                                    "name":  "正式员工",
+                                    "name_en":  "Employee",
+                                    "min_capability":  60,
+                                    "min_revenue":  500,
+                                    "min_exp":  500,
+                                    "salary_multiplier":  1.0,
+                                    "color":  "#3b82f6",
+                                    "description":  "能独立负责业务线，稳定产出，开始积累营收贡献"
+                                },
+                   "senior":  {
+                                  "name":  "骨干",
+                                  "name_en":  "Senior",
+                                  "min_capability":  75,
+                                  "min_revenue":  2000,
+                                  "min_exp":  2000,
+                                  "salary_multiplier":  1.5,
+                                  "color":  "#a78bfa",
+                                  "description":  "业务专家，能带新人，优化流程，是团队核心力量"
+                              },
+                   "graduate":  {
+                                    "name":  "毕业",
+                                    "name_en":  "Graduate",
+                                    "min_capability":  85,
+                                    "min_revenue":  5000,
+                                    "min_exp":  5000,
+                                    "salary_multiplier":  2.0,
+                                    "color":  "#22c55e",
+                                    "description":  "达到毕业标准，可创立子公司，成为子公司CEO"
+                                }
+               }
 }

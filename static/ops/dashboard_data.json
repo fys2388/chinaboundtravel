@@ -1,0 +1,1339 @@
+{
+  "generated_at": "2026-09-07 16:31:30",
+  "site": {
+    "url": "chinaboundtravel.com",
+    "status": 200,
+    "up": true,
+    "response_ms": 324,
+    "server": "cloudflare"
+  },
+  "workflows": [
+    {
+      "file": "affiliate-gap-audit.yml",
+      "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
+      "id": "affiliate-gap-audit",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "agent-kpi-monthly.yml",
+      "name": "Agent KPI Monthly Audit (营收导向考核)",
+      "id": "agent-kpi-monthly",
+      "frequency": "每月",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "ai-agent-orchestrator.yml",
+      "name": "AI Agent Orchestrator - 7 Agents Weekly Run",
+      "id": "ai-agent-orchestrator",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-07T03:20:56Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "clear-buffer-batch.yml",
+      "name": "Clear Scheduled Buffer Batch",
+      "id": "clear-buffer-batch",
+      "frequency": "手动",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "content-quality-audit.yml",
+      "name": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "id": "content-quality-audit",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "content-rotation.yml",
+      "name": "Content Rotation Distributor",
+      "id": "content-rotation",
+      "frequency": "每日",
+      "last_status": "success",
+      "last_run": "2026-09-07T06:49:46Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "cross-agent-learning-daily.yml",
+      "name": "Cross-Agent Learning Daily",
+      "id": "cross-agent-learning-daily",
+      "frequency": "每日",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "cross-agent-learning-weekly.yml",
+      "name": "Cross-Agent Learning Weekly",
+      "id": "cross-agent-learning-weekly",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-07T03:37:15Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "deploy-buffer-worker.yml",
+      "name": "Deploy Buffer Worker",
+      "id": "deploy-buffer-worker",
+      "frequency": "手动",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "deploy-cloudflare-pages.yml",
+      "name": "deploy-cloudflare-pages",
+      "id": "deploy-cloudflare-pages",
+      "frequency": "手动",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "env-check.yml",
+      "name": "Environment Check",
+      "id": "env-check",
+      "frequency": "每日",
+      "last_status": "success",
+      "last_run": "2026-09-07T01:22:09Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "error-alert.yml",
+      "name": "Error Alert",
+      "id": "error-alert",
+      "frequency": "手动",
+      "last_status": "skipped",
+      "last_run": "2026-09-07T08:22:42Z",
+      "last_event": "workflow_run"
+    },
+    {
+      "file": "feishu-daily-report.yml",
+      "name": "Feishu Daily Report",
+      "id": "feishu-daily-report",
+      "frequency": "每日",
+      "last_status": "success",
+      "last_run": "2026-09-07T05:25:52Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "geo-check.yml",
+      "name": "GEO Check",
+      "id": "geo-check",
+      "frequency": "每日",
+      "last_status": "success",
+      "last_run": "2026-09-07T08:21:44Z",
+      "last_event": "push"
+    },
+    {
+      "file": "gsc-index-submit.yml",
+      "name": "GSC Index Submit (2.0)",
+      "id": "gsc-index-submit",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "health-check.yml",
+      "name": "Daily Health Check",
+      "id": "health-check",
+      "frequency": "每日",
+      "last_status": "success",
+      "last_run": "2026-09-07T05:41:40Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "manual-deploy.yml",
+      "name": "Manual Deploy to Cloudflare Pages",
+      "id": "manual-deploy",
+      "frequency": "手动",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "monthly-ebook-update.yml",
+      "name": "Monthly Ebook Guide Update",
+      "id": "monthly-ebook-update",
+      "frequency": "每月",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "monthly-report.yml",
+      "name": "monthly-report",
+      "id": "monthly-report",
+      "frequency": "每月",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "ops-dashboard-hourly.yml",
+      "name": "Ops Dashboard Refresh",
+      "id": "ops-dashboard-hourly",
+      "frequency": "每日",
+      "last_status": "",
+      "last_run": "2026-09-07T08:31:13Z",
+      "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "purge-cache.yml",
+      "name": "Purge Cloudflare Cache",
+      "id": "purge-cache",
+      "frequency": "手动",
+      "last_status": "success",
+      "last_run": "2026-09-06T11:39:57Z",
+      "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "quarterly-report.yml",
+      "name": "quarterly-report",
+      "id": "quarterly-report",
+      "frequency": "每季",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "retry-failed.yml",
+      "name": "Retry Failed Jobs",
+      "id": "retry-failed",
+      "frequency": "手动",
+      "last_status": "skipped",
+      "last_run": "2026-09-07T06:50:34Z",
+      "last_event": "workflow_run"
+    },
+    {
+      "file": "seo-audit.yml",
+      "name": "SEO Audit (2.0 SEO综合审计)",
+      "id": "seo-audit",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "seo-opportunity.yml",
+      "name": "SEO Opportunity Detector (2.0 SEO优化机会检测)",
+      "id": "seo-opportunity",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "site-health-daily.yml",
+      "name": "Site Health Daily Check (Full Closed Loop)",
+      "id": "site-health-daily",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-07T01:56:33Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "snapshot-daily-refresh.yml",
+      "name": "Snapshot Daily Refresh (2.0 KPI)",
+      "id": "snapshot-daily-refresh",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-07T04:59:41Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "social-backfill.yml",
+      "name": "Social Backfill (2.0 社媒补位)",
+      "id": "social-backfill",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "social-engine-daily.yml",
+      "name": "social-engine-daily",
+      "id": "social-engine-daily",
+      "frequency": "每日",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "social_distributor.yml",
+      "name": "Social Media Distributor",
+      "id": "social_distributor",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-06T18:59:28Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "test-buffer-api.yml",
+      "name": "test-buffer-api",
+      "id": "test-buffer-api",
+      "frequency": "手动",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "weekly-blog-update.yml",
+      "name": "weekly-blog-update",
+      "id": "weekly-blog-update",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "weekly-report.yml",
+      "name": "weekly-report",
+      "id": "weekly-report",
+      "frequency": "每周",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "yearly-report.yml",
+      "name": "yearly-report",
+      "id": "yearly-report",
+      "frequency": "每年",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
+    },
+    {
+      "file": "youtube-auto-publish.yml",
+      "name": "YouTube Auto Publish",
+      "id": "youtube-auto-publish",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-07T07:47:15Z",
+      "last_event": "schedule"
+    }
+  ],
+  "agents": {
+    "checked_at": "2026-09-07 08:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-09-07 03:21:18",
+      "success": 6,
+      "failed": 1,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-09-07",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "experiments": [
+    {
+      "id": "REV001",
+      "name": "Food Delivery + Airalo CTA",
+      "status": "PLANNED",
+      "type": "CTA_PLACEMENT",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 1000
+    },
+    {
+      "id": "REV002",
+      "name": "Transportation + Trip.com",
+      "status": "PLANNED",
+      "type": "CTA_PLACEMENT",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 1000
+    },
+    {
+      "id": "REV003",
+      "name": "CTA Copy Variant",
+      "status": "PLANNED",
+      "type": "CTA_COPY",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 3,
+      "min_sample": 1500
+    },
+    {
+      "id": "GROWTH05-CTR-001",
+      "name": "144-Hour Visa CTR",
+      "status": "PLANNED",
+      "type": "CTR_TITLE_META",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 2000
+    },
+    {
+      "id": "DRIVE-001",
+      "name": "Site-wide Travelpayouts Drive",
+      "status": "PLANNED",
+      "type": "SITE_WIDE_BANNER",
+      "days": null,
+      "sample": "PLANNED",
+      "page": "",
+      "start": null,
+      "variants": 2,
+      "min_sample": 5000
+    },
+    {
+      "id": "GROWTH07B-TECH-001",
+      "name": "High-Speed Rail Index Recovery",
+      "status": "WAITING_RECRAWL",
+      "type": "TECHNICAL_INDEX_FIX",
+      "days": null,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "",
+      "start": "2026-08-16",
+      "variants": 0,
+      "min_sample": 0
+    },
+    {
+      "id": "GROWTH07C-INDEX-001",
+      "name": "WeChat Pay Index Recovery",
+      "status": "WAITING_RECRAWL",
+      "type": "INDEX_RECOVERY",
+      "days": null,
+      "sample": "INSUFFICIENT_SAMPLE",
+      "page": "",
+      "start": "2026-08-16",
+      "variants": 0,
+      "min_sample": 0
+    }
+  ],
+  "metrics": {
+    "ga4_28d": {
+      "visitors": 270,
+      "sessions": 356,
+      "pageviews": 793,
+      "date": "2026-09-06"
+    },
+    "gsc_28d": {
+      "impressions": 599,
+      "clicks": 0,
+      "date": "2026-09-04"
+    },
+    "content": {
+      "total_articles": 61,
+      "with_affiliate": 35,
+      "avg_word_count": 1902,
+      "date": "2026-09-07"
+    },
+    "ga4_daily": {
+      "visitors": 2,
+      "sessions": 5,
+      "pageviews": 6,
+      "new_users": 517,
+      "bounce_rate": 65.4,
+      "date": "2026-09-07",
+      "status": "OK",
+      "daily": [
+        {
+          "date": "2026-06-16",
+          "sessions": 7,
+          "activeUsers": 3,
+          "pageviews": 41
+        },
+        {
+          "date": "2026-06-17",
+          "sessions": 14,
+          "activeUsers": 9,
+          "pageviews": 38
+        },
+        {
+          "date": "2026-06-18",
+          "sessions": 12,
+          "activeUsers": 11,
+          "pageviews": 23
+        },
+        {
+          "date": "2026-06-19",
+          "sessions": 20,
+          "activeUsers": 15,
+          "pageviews": 91
+        },
+        {
+          "date": "2026-06-20",
+          "sessions": 11,
+          "activeUsers": 10,
+          "pageviews": 27
+        },
+        {
+          "date": "2026-06-21",
+          "sessions": 7,
+          "activeUsers": 2,
+          "pageviews": 207
+        },
+        {
+          "date": "2026-06-22",
+          "sessions": 7,
+          "activeUsers": 6,
+          "pageviews": 25
+        },
+        {
+          "date": "2026-06-23",
+          "sessions": 4,
+          "activeUsers": 2,
+          "pageviews": 11
+        },
+        {
+          "date": "2026-06-24",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 8
+        },
+        {
+          "date": "2026-06-25",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 4
+        },
+        {
+          "date": "2026-06-26",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-06-29",
+          "sessions": 4,
+          "activeUsers": 4,
+          "pageviews": 6
+        },
+        {
+          "date": "2026-06-30",
+          "sessions": 26,
+          "activeUsers": 18,
+          "pageviews": 68
+        },
+        {
+          "date": "2026-07-01",
+          "sessions": 17,
+          "activeUsers": 11,
+          "pageviews": 67
+        },
+        {
+          "date": "2026-07-02",
+          "sessions": 16,
+          "activeUsers": 15,
+          "pageviews": 90
+        },
+        {
+          "date": "2026-07-03",
+          "sessions": 5,
+          "activeUsers": 2,
+          "pageviews": 18
+        },
+        {
+          "date": "2026-07-04",
+          "sessions": 4,
+          "activeUsers": 3,
+          "pageviews": 11
+        },
+        {
+          "date": "2026-07-06",
+          "sessions": 14,
+          "activeUsers": 12,
+          "pageviews": 49
+        },
+        {
+          "date": "2026-07-07",
+          "sessions": 6,
+          "activeUsers": 4,
+          "pageviews": 7
+        },
+        {
+          "date": "2026-07-08",
+          "sessions": 3,
+          "activeUsers": 1,
+          "pageviews": 4
+        },
+        {
+          "date": "2026-07-09",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-07-10",
+          "sessions": 11,
+          "activeUsers": 11,
+          "pageviews": 11
+        },
+        {
+          "date": "2026-07-13",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-07-14",
+          "sessions": 3,
+          "activeUsers": 3,
+          "pageviews": 3
+        },
+        {
+          "date": "2026-07-15",
+          "sessions": 3,
+          "activeUsers": 3,
+          "pageviews": 4
+        },
+        {
+          "date": "2026-07-16",
+          "sessions": 14,
+          "activeUsers": 14,
+          "pageviews": 21
+        },
+        {
+          "date": "2026-07-17",
+          "sessions": 15,
+          "activeUsers": 15,
+          "pageviews": 17
+        },
+        {
+          "date": "2026-07-18",
+          "sessions": 11,
+          "activeUsers": 11,
+          "pageviews": 13
+        },
+        {
+          "date": "2026-07-20",
+          "sessions": 12,
+          "activeUsers": 10,
+          "pageviews": 15
+        },
+        {
+          "date": "2026-07-22",
+          "sessions": 3,
+          "activeUsers": 3,
+          "pageviews": 3
+        },
+        {
+          "date": "2026-07-23",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-07-24",
+          "sessions": 9,
+          "activeUsers": 8,
+          "pageviews": 10
+        },
+        {
+          "date": "2026-07-25",
+          "sessions": 3,
+          "activeUsers": 3,
+          "pageviews": 3
+        },
+        {
+          "date": "2026-07-26",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 1
+        },
+        {
+          "date": "2026-07-27",
+          "sessions": 12,
+          "activeUsers": 9,
+          "pageviews": 49
+        },
+        {
+          "date": "2026-07-28",
+          "sessions": 3,
+          "activeUsers": 2,
+          "pageviews": 11
+        },
+        {
+          "date": "2026-07-29",
+          "sessions": 4,
+          "activeUsers": 2,
+          "pageviews": 8
+        },
+        {
+          "date": "2026-07-30",
+          "sessions": 10,
+          "activeUsers": 9,
+          "pageviews": 10
+        },
+        {
+          "date": "2026-07-31",
+          "sessions": 4,
+          "activeUsers": 2,
+          "pageviews": 11
+        },
+        {
+          "date": "2026-08-01",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 1
+        },
+        {
+          "date": "2026-08-02",
+          "sessions": 6,
+          "activeUsers": 6,
+          "pageviews": 6
+        },
+        {
+          "date": "2026-08-03",
+          "sessions": 20,
+          "activeUsers": 19,
+          "pageviews": 29
+        },
+        {
+          "date": "2026-08-04",
+          "sessions": 15,
+          "activeUsers": 11,
+          "pageviews": 69
+        },
+        {
+          "date": "2026-08-05",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 4
+        },
+        {
+          "date": "2026-08-06",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-08-07",
+          "sessions": 6,
+          "activeUsers": 6,
+          "pageviews": 12
+        },
+        {
+          "date": "2026-08-08",
+          "sessions": 6,
+          "activeUsers": 4,
+          "pageviews": 25
+        },
+        {
+          "date": "2026-08-09",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 5
+        },
+        {
+          "date": "2026-08-10",
+          "sessions": 7,
+          "activeUsers": 6,
+          "pageviews": 29
+        },
+        {
+          "date": "2026-08-11",
+          "sessions": 13,
+          "activeUsers": 12,
+          "pageviews": 13
+        },
+        {
+          "date": "2026-08-12",
+          "sessions": 10,
+          "activeUsers": 10,
+          "pageviews": 20
+        },
+        {
+          "date": "2026-08-13",
+          "sessions": 7,
+          "activeUsers": 7,
+          "pageviews": 14
+        },
+        {
+          "date": "2026-08-14",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-08-15",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 10
+        },
+        {
+          "date": "2026-08-16",
+          "sessions": 5,
+          "activeUsers": 3,
+          "pageviews": 12
+        },
+        {
+          "date": "2026-08-17",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 2
+        },
+        {
+          "date": "2026-08-18",
+          "sessions": 6,
+          "activeUsers": 4,
+          "pageviews": 67
+        },
+        {
+          "date": "2026-08-19",
+          "sessions": 7,
+          "activeUsers": 7,
+          "pageviews": 7
+        },
+        {
+          "date": "2026-08-20",
+          "sessions": 38,
+          "activeUsers": 38,
+          "pageviews": 38
+        },
+        {
+          "date": "2026-08-21",
+          "sessions": 24,
+          "activeUsers": 24,
+          "pageviews": 24
+        },
+        {
+          "date": "2026-08-22",
+          "sessions": 24,
+          "activeUsers": 24,
+          "pageviews": 32
+        },
+        {
+          "date": "2026-08-24",
+          "sessions": 10,
+          "activeUsers": 7,
+          "pageviews": 97
+        },
+        {
+          "date": "2026-08-25",
+          "sessions": 8,
+          "activeUsers": 8,
+          "pageviews": 10
+        },
+        {
+          "date": "2026-08-26",
+          "sessions": 3,
+          "activeUsers": 3,
+          "pageviews": 3
+        },
+        {
+          "date": "2026-08-27",
+          "sessions": 7,
+          "activeUsers": 7,
+          "pageviews": 7
+        },
+        {
+          "date": "2026-08-28",
+          "sessions": 13,
+          "activeUsers": 13,
+          "pageviews": 13
+        },
+        {
+          "date": "2026-08-29",
+          "sessions": 15,
+          "activeUsers": 15,
+          "pageviews": 17
+        },
+        {
+          "date": "2026-08-30",
+          "sessions": 15,
+          "activeUsers": 14,
+          "pageviews": 17
+        },
+        {
+          "date": "2026-08-31",
+          "sessions": 30,
+          "activeUsers": 22,
+          "pageviews": 82
+        },
+        {
+          "date": "2026-09-01",
+          "sessions": 21,
+          "activeUsers": 14,
+          "pageviews": 42
+        },
+        {
+          "date": "2026-09-02",
+          "sessions": 13,
+          "activeUsers": 5,
+          "pageviews": 92
+        },
+        {
+          "date": "2026-09-03",
+          "sessions": 19,
+          "activeUsers": 12,
+          "pageviews": 45
+        },
+        {
+          "date": "2026-09-04",
+          "sessions": 23,
+          "activeUsers": 17,
+          "pageviews": 53
+        },
+        {
+          "date": "2026-09-05",
+          "sessions": 14,
+          "activeUsers": 9,
+          "pageviews": 18
+        },
+        {
+          "date": "2026-09-06",
+          "sessions": 24,
+          "activeUsers": 17,
+          "pageviews": 38
+        },
+        {
+          "date": "2026-09-07",
+          "sessions": 5,
+          "activeUsers": 2,
+          "pageviews": 6
+        }
+      ],
+      "ranges": {
+        "today": {
+          "visitors": 2,
+          "sessions": 5,
+          "pageviews": 6,
+          "date_range": "2026-09-07 ~ 2026-09-07",
+          "days": 1
+        },
+        "yesterday": {
+          "visitors": 17,
+          "sessions": 24,
+          "pageviews": 38,
+          "date_range": "2026-09-06 ~ 2026-09-06",
+          "days": 1
+        },
+        "7d": {
+          "visitors": 76,
+          "sessions": 119,
+          "pageviews": 294,
+          "date_range": "2026-09-01 ~ 2026-09-07",
+          "days": 7
+        },
+        "30d": {
+          "visitors": 309,
+          "sessions": 372,
+          "pageviews": 840,
+          "date_range": "2026-08-08 ~ 2026-09-07",
+          "days": 30
+        },
+        "90d": {
+          "visitors": 600,
+          "sessions": 729,
+          "pageviews": 1956,
+          "date_range": "2026-06-16 ~ 2026-09-07",
+          "days": 76
+        },
+        "last_month": {
+          "visitors": 279,
+          "sessions": 304,
+          "pageviews": 669,
+          "date_range": "2026-08-01 ~ 2026-08-31",
+          "days": 30
+        }
+      }
+    },
+    "gsc_daily": {
+      "impressions": 381,
+      "clicks": 0,
+      "ctr": 0,
+      "avg_position": 34.4,
+      "date": "2026-08-17",
+      "status": "OK",
+      "daily": [
+        {
+          "date": "2026-07-19",
+          "impressions": 18,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 46.9
+        },
+        {
+          "date": "2026-07-20",
+          "impressions": 23,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 59.2
+        },
+        {
+          "date": "2026-07-21",
+          "impressions": 23,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 33.0
+        },
+        {
+          "date": "2026-07-22",
+          "impressions": 12,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 26.6
+        },
+        {
+          "date": "2026-07-23",
+          "impressions": 30,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 33.7
+        },
+        {
+          "date": "2026-07-24",
+          "impressions": 15,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 21.7
+        },
+        {
+          "date": "2026-07-25",
+          "impressions": 21,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 29.1
+        },
+        {
+          "date": "2026-07-26",
+          "impressions": 22,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 30.9
+        },
+        {
+          "date": "2026-07-27",
+          "impressions": 26,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 35.7
+        },
+        {
+          "date": "2026-07-28",
+          "impressions": 20,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 41.3
+        },
+        {
+          "date": "2026-07-29",
+          "impressions": 20,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 42.1
+        },
+        {
+          "date": "2026-07-30",
+          "impressions": 7,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 48
+        },
+        {
+          "date": "2026-07-31",
+          "impressions": 9,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 51.6
+        },
+        {
+          "date": "2026-08-01",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 35
+        },
+        {
+          "date": "2026-08-02",
+          "impressions": 23,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 49.7
+        },
+        {
+          "date": "2026-08-03",
+          "impressions": 20,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 36.5
+        },
+        {
+          "date": "2026-08-04",
+          "impressions": 5,
+          "clicks": 1,
+          "ctr": 0.2,
+          "position": 11
+        },
+        {
+          "date": "2026-08-05",
+          "impressions": 32,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 29.0
+        },
+        {
+          "date": "2026-08-06",
+          "impressions": 53,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 20.8
+        },
+        {
+          "date": "2026-08-07",
+          "impressions": 12,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 12.6
+        },
+        {
+          "date": "2026-08-08",
+          "impressions": 11,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 28.1
+        },
+        {
+          "date": "2026-08-09",
+          "impressions": 11,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 46
+        },
+        {
+          "date": "2026-08-10",
+          "impressions": 152,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 29.7
+        },
+        {
+          "date": "2026-08-11",
+          "impressions": 117,
+          "clicks": 1,
+          "ctr": 0.01,
+          "position": 24.8
+        },
+        {
+          "date": "2026-08-12",
+          "impressions": 212,
+          "clicks": 1,
+          "ctr": 0.0,
+          "position": 41.3
+        },
+        {
+          "date": "2026-08-13",
+          "impressions": 230,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 37.3
+        },
+        {
+          "date": "2026-08-14",
+          "impressions": 251,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 32.7
+        },
+        {
+          "date": "2026-08-15",
+          "impressions": 99,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 55.8
+        },
+        {
+          "date": "2026-08-16",
+          "impressions": 144,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 50.9
+        },
+        {
+          "date": "2026-08-17",
+          "impressions": 381,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 34.4
+        }
+      ],
+      "ranges": {
+        "today": {
+          "impressions": 381,
+          "clicks": 0,
+          "date_range": "2026-08-17 ~ 2026-08-17",
+          "days": 1
+        },
+        "yesterday": {
+          "impressions": 144,
+          "clicks": 0,
+          "date_range": "2026-08-16 ~ 2026-08-16",
+          "days": 1
+        },
+        "7d": {
+          "impressions": 1434,
+          "clicks": 2,
+          "date_range": "2026-08-11 ~ 2026-08-17",
+          "days": 7
+        },
+        "30d": {
+          "impressions": 2004,
+          "clicks": 3,
+          "date_range": "2026-07-19 ~ 2026-08-17",
+          "days": 30
+        },
+        "90d": {
+          "impressions": 2004,
+          "clicks": 3,
+          "date_range": "2026-07-19 ~ 2026-08-17",
+          "days": 30
+        },
+        "last_month": {
+          "impressions": 1758,
+          "clicks": 3,
+          "date_range": "2026-08-01 ~ 2026-08-31",
+          "days": 17
+        }
+      }
+    }
+  },
+  "data_sources": [
+    {
+      "name": "GA4",
+      "configured": true,
+      "status": "OK"
+    },
+    {
+      "name": "GSC",
+      "configured": true,
+      "status": "OK"
+    },
+    {
+      "name": "Travelpayouts",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "NordVPN",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "MailerLite",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "Buffer",
+      "configured": true,
+      "status": "ok"
+    },
+    {
+      "name": "Cloudflare",
+      "configured": true,
+      "status": "ok"
+    }
+  ],
+  "site_health": {
+    "total": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "auto_fixed": 0,
+    "pending": 0,
+    "resolved": 17,
+    "timestamp": "2026-09-07T01:56:43.051643+00:00",
+    "checks": 16
+  },
+  "agent_execution": {
+    "date": "2026-09-04",
+    "total_fixed": 382,
+    "total_issues": 75,
+    "agents": {
+      "content": {
+        "total": 41,
+        "fixed": 348,
+        "failed": 0,
+        "skipped": 57,
+        "files_modified": 93
+      },
+      "seo": {
+        "total": 34,
+        "fixed": 34,
+        "failed": 0,
+        "skipped": 117,
+        "files_modified": 33
+      }
+    }
+  },
+  "kill_switch": {
+    "active": false,
+    "reason": "OK"
+  }
+}
