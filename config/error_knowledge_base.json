@@ -1008,6 +1008,17 @@
       "error_message": "sults: 30/30 passed, 0 failed\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5450709Z \nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5450949Z   Validation complete (non-blocking mode)\nrun\tP0-2 Image Quality Gate (社媒图片验证)\t2026-09-06T00:57:07.5607912Z === 图片验证完成 ===\nrun\tPublish today's batch (Buffer Worker)\t﻿2026-09-06T00:57:07.5633156Z ##[group]Run TODAY=\"\"\nrun\tPublish today's batch (Buffer Worker)\t2026-09-06T00:57:07.5633472Z ^[[36;1mTODAY=\"\"^[[0m\nrun\tPublish today's batch (",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260907_073021",
+      "timestamp": "2026-09-07T07:30:21.031593",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "34095732239",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "oy\tCheckout repository\t2026-09-07T07:29:48.0743912Z 'af7c545f060c03eba6e240862f2b90c939f3355a'\npost-deploy\tSetup Hugo\t﻿2026-09-07T07:29:48.0939255Z ##[group]Run peaceiris/actions-hugo@v3\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0939688Z with:\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0939986Z   hugo-version: 0.147.0\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0940292Z   extended: true\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.0940607Z ##[endgroup]\npost-deploy\tSetup Hugo\t2026-09-07T07:29:48.16",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
