@@ -1,6 +1,6 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-07T03:37:32.690408",
+  "pull_time": "2026-09-07T10:56:38.479326",
   "data_date": "2026-09-07",
   "is_real_data": true,
   "is_fresh": true,
@@ -44,7 +44,7 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 1689,
+      "word_count": 1691,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -56,7 +56,7 @@
     },
     {
       "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
-      "word_count": 1384,
+      "word_count": 1386,
       "has_affiliate_links": false,
       "has_internal_links": true
     },

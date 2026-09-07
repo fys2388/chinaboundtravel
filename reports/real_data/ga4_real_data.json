@@ -1,18 +1,18 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-07T03:37:30.266608",
+  "pull_time": "2026-09-07T10:56:34.657726",
   "data_date": "2026-09-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 270,
-    "sessions": 356,
-    "screenPageViews": 793,
-    "engagedSessions": 97,
-    "bounceRate": 0.7275280898876404,
-    "averageSessionDuration": 204.0412768258427,
-    "engagementRate": 0.27247191011235955,
-    "newUsers": 268
+    "activeUsers": 272,
+    "sessions": 358,
+    "screenPageViews": 804,
+    "engagedSessions": 102,
+    "bounceRate": 0.7150837988826816,
+    "averageSessionDuration": 201.10788716480448,
+    "engagementRate": 0.2849162011173184,
+    "newUsers": 270
   },
   "daily": [
     {
@@ -167,15 +167,15 @@
     },
     {
       "date": "2026-09-06",
-      "sessions": 22,
-      "activeUsers": 15,
-      "pageviews": 27
+      "sessions": 24,
+      "activeUsers": 17,
+      "pageviews": 38
     },
     {
       "date": "2026-09-07",
-      "sessions": 3,
-      "activeUsers": 2,
-      "pageviews": 3
+      "sessions": 14,
+      "activeUsers": 7,
+      "pageviews": 23
     }
   ],
   "top_pages": [],
