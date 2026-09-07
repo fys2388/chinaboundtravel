@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
-  "updated_at": "2026-09-07T10:10:11.860380",
-  "avg_score": 66.3,
+  "updated_at": "2026-09-07T11:31:11.090678",
+  "avg_score": 66.9,
   "agents": [
     {
       "id": "revenue",
@@ -18,11 +18,11 @@
       "id": "content",
       "name": "内容 Agent",
       "emoji": "📝",
-      "score": 69.0,
-      "grade": "C",
-      "grade_label": "待改进",
-      "bonus": "-10%绩效",
-      "color": "#e67e22",
+      "score": 75.0,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
       "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑"
     },
     {
@@ -51,7 +51,7 @@
       "id": "user",
       "name": "用户增长 Agent",
       "emoji": "👥",
-      "score": 66.0,
+      "score": 66.5,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",
@@ -62,7 +62,7 @@
       "id": "ops",
       "name": "运维 Agent",
       "emoji": "⚙️",
-      "score": 65.0,
+      "score": 63.0,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",

@@ -51,20 +51,30 @@ THRESHOLDS = {
 
 
 def read_frontmatter(path: Path) -> Dict[str, str]:
-    """读取文章 front matter，返回字段字典"""
+    """读取文章 front matter，同时支持 TOML(+++) 和 YAML(---) 格式"""
     try:
         raw = path.read_bytes()
         text = raw.decode("utf-8", errors="replace")
     except Exception:
         return {}
 
-    # 提取 front matter
     fm = {}
-    match = re.match(r'^---\s*\n(.*?)\n---\s*\n', text, re.DOTALL)
-    if not match:
+    # P1-FIX: 同时支持 TOML(+++) 和 YAML(---) 两种 front matter 格式
+    fm_text = None
+    if text.startswith("+++"):
+        # TOML 格式
+        match = re.match(r'^\+\+\+\s*\n(.*?)\n\+\+\+\s*\n', text, re.DOTALL)
+        if match:
+            fm_text = match.group(1)
+    else:
+        # YAML 格式
+        match = re.match(r'^---\s*\n(.*?)\n---\s*\n', text, re.DOTALL)
+        if match:
+            fm_text = match.group(1)
+
+    if not fm_text:
         return fm
 
-    fm_text = match.group(1)
     for line in fm_text.split("\n"):
         line = line.strip()
         if not line or line.startswith("#"):

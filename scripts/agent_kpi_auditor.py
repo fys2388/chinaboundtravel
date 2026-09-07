@@ -36,6 +36,14 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any
 
+# P2: 营收数据收集器集成（有凭证时自动使用真实数据）
+try:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from revenue_data_collector import RevenueDataCollector
+    REVENUE_COLLECTOR_AVAILABLE = True
+except ImportError:
+    REVENUE_COLLECTOR_AVAILABLE = False
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -428,6 +436,27 @@ def run_audit(month: str = None) -> Dict:
     print(f"  监控台数据已更新: {dashboard_path}")
 
     return report
+
+
+
+# ============================================================
+# P2: 真实营收数据集成
+# ============================================================
+def load_real_revenue_data() -> Dict[str, Any]:
+    """尝试从 revenue_data_collector 获取真实营收数据。
+    如果未配置凭证或获取失败，返回空字典，KPI 使用默认基础分。
+    """
+    if not REVENUE_COLLECTOR_AVAILABLE:
+        return {}
+    try:
+        collector = RevenueDataCollector()
+        data = collector.collect_all()
+        if data and data.get("status") == "success":
+            print("  📊 已接入真实营收数据驱动 KPI")
+            return data.get("data", {})
+    except Exception as e:
+        print(f"  ⚠️  营收数据获取失败（使用默认分）: {e}")
+    return {}
 
 
 def main():

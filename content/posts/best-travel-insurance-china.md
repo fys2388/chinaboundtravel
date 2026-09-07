@@ -4,6 +4,7 @@ title = "Top-rated Travel Insurance for China 2026"
 description = "Compare a top choice travel insurance for China: SafetyWing vs World Nomads vs Allianz. After 2+ years of personal use, here's what actually matters."
 date = 2026-06-21
 lastmod = 2026-06-21
+last_updated = "2026-06-21"
 featured = true
 ShowToc = true
 TocOpen = false

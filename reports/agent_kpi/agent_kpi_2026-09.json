@@ -1,16 +1,16 @@
 {
   "kpi_version": "1.0",
-  "audit_time": "2026-09-07T10:10:11.859278",
+  "audit_time": "2026-09-07T11:31:11.088863",
   "month": "2026-09",
   "north_star": "revenue_growth",
   "summary": {
     "agent_count": 7,
-    "avg_score": 66.3,
+    "avg_score": 66.9,
     "grade_distribution": {
       "S": 0,
       "A": 0,
-      "B": 0,
-      "C": 7,
+      "B": 1,
+      "C": 6,
       "D": 0
     }
   },
@@ -102,12 +102,12 @@
       "name_cn": "内容 Agent",
       "emoji": "📝",
       "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑",
-      "score": 69.0,
-      "grade": "C",
-      "grade_label": "待改进",
-      "bonus": "-10%绩效",
-      "color": "#e67e22",
-      "action": "黄牌警告，制定改进计划，1月内复查",
+      "score": 75.0,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
+      "action": "维持，关注薄弱项",
       "kpi_results": [
         {
           "id": "organic_traffic",
@@ -171,9 +171,9 @@
           "target": "100%",
           "type": "quality",
           "source": "content_quality_validator(P0)",
-          "score": 40.0,
+          "score": 100.0,
           "status": "measured",
-          "actual": 60.0
+          "actual": 100.0
         },
         {
           "id": "fact_accuracy",
@@ -378,7 +378,7 @@
       "name_cn": "用户增长 Agent",
       "emoji": "👥",
       "revenue_chain": "邮件列表↑/转化率↑ → eBook销售↑/复购↑/联盟推荐↑ → 营收↑",
-      "score": 66.0,
+      "score": 66.5,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",
@@ -447,9 +447,9 @@
           "target": "≥99%",
           "type": "quality",
           "source": "api_health_audit",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 55.0,
+          "status": "measured",
+          "actual": 75.0
         },
         {
           "id": "gdpr_compliance",
@@ -470,7 +470,7 @@
       "name_cn": "运维 Agent",
       "emoji": "⚙️",
       "revenue_chain": "网站可用性↑/性能↑ → 用户体验↑/留存↑ → 长期营收↑/SEO排名↑(Core Web Vitals)",
-      "score": 65.0,
+      "score": 63.0,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",
@@ -528,9 +528,9 @@
           "target": "≥99%",
           "type": "process",
           "source": "api_health_audit",
-          "score": 70.0,
-          "status": "no_data",
-          "actual": null
+          "score": 50.0,
+          "status": "measured",
+          "actual": 75.0
         },
         {
           "id": "security_headers",

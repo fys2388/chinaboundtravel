@@ -4,6 +4,7 @@ title = "China Transportation 2026: Trains & Didi"
 description = "Complete guide to getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival for foreigners. Travel like a local!"
 date = 2026-07-16
 lastmod = 2026-07-16
+last_updated = "2026-07-16"
 author = "Joran"
 slug = "china-transportation-complete-guide-trains-subways-taxis-and-more"
 aliases = [

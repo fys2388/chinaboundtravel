@@ -4,6 +4,7 @@ title = "Is China Safe for Tourists in 2026?"
 description = "An honest China safety guide for 2026: real crime data, the scams that exist, food and transport safety, and emergency contacts."
 date = 2026-07-16
 lastmod = 2026-07-16
+last_updated = "2026-07-16"
 author = "Joran"
 slug = "is-china-safe-for-tourists-2026-honest-safety-assessment"
 aliases = [

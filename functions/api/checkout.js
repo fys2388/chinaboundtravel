@@ -87,3 +87,16 @@ export async function onRequestPost({ request, env }) {
 function jsonResponse(body, status, headers) {
   return new Response(JSON.stringify(body), { status, headers });
 }
+
+// P0-FIX: 处理 CORS OPTIONS 预检请求
+export async function onRequestOptions({ request }) {
+  const origin = request.headers.get('Origin') || request.headers.get('origin');
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': origin || 'https://www.chinaboundtravel.com',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Origin',
+    },
+  });
+}

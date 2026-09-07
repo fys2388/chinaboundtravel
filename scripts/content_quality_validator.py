@@ -73,11 +73,8 @@ CJK_RE = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf]")
 # P0-FIX: Mojibake (乱码) 检测 — 字节级别，最可靠
 # 典型 mojibake 字节序列（UTF-8 字符被误读为 Latin-1/CP1252 后再编码为 UTF-8）
 MOJIBAKE_BYTE_PATTERNS = [
-    b'\xc3\xa2', b'\xc3\xa9', b'\xc3\xa8', b'\xc3\xa0', b'\xc3\xae', b'\xc3\xaf',
-    b'\xc3\xb4', b'\xc3\xb9', b'\xc3\xbb', b'\xc3\xbc', b'\xc3\xa7', b'\xc3\x80',
-    b'\xc3\x89', b'\xc3\x88', b'\xc3\x8a', b'\xc3\x8b', b'\xc3\x8c', b'\xc3\x8d',
-    b'\xc3\x8e', b'\xc3\x8f', b'\xc3\x92', b'\xc3\x93', b'\xc3\x94', b'\xc3\x99',
-    b'\xc3\x9a', b'\xc3\x9b', b'\xc3\x9c', b'\xc3\x87',  # 元音变音双重编码
+    # P0-FIX v2: 只检测真正的双重编码序列（0xC3 后跟 0xC2），
+    # 不误报正常的拼音/法语音符（à/é/è/ù 等的 UTF-8 编码 0xC3 0xA0-0xBF）
     b'\xc3\xaf\xc2\xbf\xc2\xbd',  # U+FFFD 替换字符的双重编码
     b'\xc3\xa2\xc2\x80',  # em dash/en dash 双重编码前缀
     b'\xc3\xa2\xc2\x80\xc2\x99',  # 右单引号双重编码
@@ -85,6 +82,9 @@ MOJIBAKE_BYTE_PATTERNS = [
     b'\xc3\xa2\xc2\x80\xc2\x9d',  # 右双引号双重编码
     b'\xc3\xa2\xc2\x80\xc2\x94',  # em dash 双重编码
     b'\xc3\xa2\xc2\x80\xc2\x93',  # en dash 双重编码
+    b'\xc3\xa2\xc2\x86',  # 箭头 → 双重编码
+    b'\xc3\xa2\xc2\x86\xc2\x92',  # 箭头 → 完整双重编码
+    b'\xc3\x83\xc2',  # 三重编码特征（0xC3 0x83 0xC2）
 ]
 
 def detect_mojibake(raw: bytes) -> list:
