@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-31T07:13:33.030689",
+  "generated_at": "2026-09-07T03:21:18.273728",
   "period": {
-    "start": "2026-08-03",
-    "end": "2026-08-31",
+    "start": "2026-08-10",
+    "end": "2026-09-07",
     "days": 28
   },
   "metrics": {
-    "period_start": "2026-08-03",
-    "period_end": "2026-08-31",
+    "period_start": "2026-08-10",
+    "period_end": "2026-09-07",
     "days": 28,
     "impressions": 0,
-    "clicks": 99,
+    "clicks": 91,
     "inits": 0,
     "searches": 0,
     "bookings": 0,
@@ -32,7 +32,7 @@
   "products": [
     {
       "product_type": "hotel",
-      "clicks": 39,
+      "clicks": 36,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -43,7 +43,7 @@
     },
     {
       "product_type": "flight",
-      "clicks": 24,
+      "clicks": 22,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -76,7 +76,7 @@
     },
     {
       "product_type": "tour",
-      "clicks": 14,
+      "clicks": 13,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -101,7 +101,7 @@
     {
       "channel_name": "指南文章 (Guide Posts)",
       "channel_type": "article",
-      "clicks": 49,
+      "clicks": 45,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -113,7 +113,7 @@
     {
       "channel_name": "资源页面 (Resources)",
       "channel_type": "page",
-      "clicks": 19,
+      "clicks": 18,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -125,7 +125,7 @@
     {
       "channel_name": "城市页面 (City Pages)",
       "channel_type": "page",
-      "clicks": 14,
+      "clicks": 13,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
