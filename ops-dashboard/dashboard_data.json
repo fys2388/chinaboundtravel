@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07 11:30:54",
+  "generated_at": "2026-09-07 12:01:02",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 101,
+    "response_ms": 285,
     "server": "cloudflare"
   },
   "workflows": [
@@ -76,9 +76,9 @@
       "name": "Cross-Agent Learning Weekly",
       "id": "cross-agent-learning-weekly",
       "frequency": "每周",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "success",
+      "last_run": "2026-09-07T03:37:15Z",
+      "last_event": "schedule"
     },
     {
       "file": "deploy-buffer-worker.yml",
@@ -113,7 +113,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T03:21:28Z",
+      "last_run": "2026-09-07T03:37:40Z",
       "last_event": "workflow_run"
     },
     {
@@ -131,7 +131,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T03:00:05Z",
+      "last_run": "2026-09-07T03:34:01Z",
       "last_event": "push"
     },
     {
@@ -185,7 +185,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-07T03:30:42Z",
+      "last_run": "2026-09-07T04:00:47Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -247,9 +247,9 @@
       "name": "Snapshot Daily Refresh (2.0 KPI)",
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-06T04:55:29Z",
-      "last_event": "schedule"
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "social-backfill.yml",
@@ -325,7 +325,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 03:30",
+    "checked_at": "2026-09-07 04:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -476,28 +476,28 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 257,
-      "sessions": 335,
-      "pageviews": 771,
-      "date": "2026-09-05"
+      "visitors": 270,
+      "sessions": 356,
+      "pageviews": 793,
+      "date": "2026-09-06"
     },
     "gsc_28d": {
-      "impressions": 588,
+      "impressions": 599,
       "clicks": 0,
-      "date": "2026-09-03"
+      "date": "2026-09-04"
     },
     "content": {
       "total_articles": 61,
       "with_affiliate": 35,
-      "avg_word_count": 1900,
-      "date": "2026-09-06"
+      "avg_word_count": 1902,
+      "date": "2026-09-07"
     },
     "ga4_daily": {
       "visitors": 2,
       "sessions": 3,
       "pageviews": 3,
-      "new_users": 515,
-      "bounce_rate": 65.9,
+      "new_users": 517,
+      "bounce_rate": 65.4,
       "date": "2026-09-07",
       "status": "OK",
       "daily": [
@@ -947,9 +947,9 @@
         },
         {
           "date": "2026-09-06",
-          "sessions": 22,
-          "activeUsers": 15,
-          "pageviews": 27
+          "sessions": 24,
+          "activeUsers": 17,
+          "pageviews": 38
         },
         {
           "date": "2026-09-07",
@@ -967,30 +967,30 @@
           "days": 1
         },
         "yesterday": {
-          "visitors": 15,
-          "sessions": 22,
-          "pageviews": 27,
+          "visitors": 17,
+          "sessions": 24,
+          "pageviews": 38,
           "date_range": "2026-09-06 ~ 2026-09-06",
           "days": 1
         },
         "7d": {
-          "visitors": 74,
-          "sessions": 115,
-          "pageviews": 280,
+          "visitors": 76,
+          "sessions": 117,
+          "pageviews": 291,
           "date_range": "2026-09-01 ~ 2026-09-07",
           "days": 7
         },
         "30d": {
-          "visitors": 307,
-          "sessions": 368,
-          "pageviews": 826,
+          "visitors": 309,
+          "sessions": 370,
+          "pageviews": 837,
           "date_range": "2026-08-08 ~ 2026-09-07",
           "days": 30
         },
         "90d": {
-          "visitors": 598,
-          "sessions": 725,
-          "pageviews": 1942,
+          "visitors": 600,
+          "sessions": 727,
+          "pageviews": 1953,
           "date_range": "2026-06-16 ~ 2026-09-07",
           "days": 76
         },
