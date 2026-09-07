@@ -1,20 +1,134 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-06T09:50:27.702732",
-  "data_date": "2026-09-05",
+  "pull_time": "2026-09-07T03:37:30.266608",
+  "data_date": "2026-09-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 257,
-    "sessions": 335,
-    "screenPageViews": 771,
-    "engagedSessions": 98,
-    "bounceRate": 0.7074626865671642,
-    "averageSessionDuration": 206.76950251641793,
-    "engagementRate": 0.29253731343283584,
-    "newUsers": 255
+    "activeUsers": 270,
+    "sessions": 356,
+    "screenPageViews": 793,
+    "engagedSessions": 97,
+    "bounceRate": 0.7275280898876404,
+    "averageSessionDuration": 204.0412768258427,
+    "engagementRate": 0.27247191011235955,
+    "newUsers": 268
   },
   "daily": [
+    {
+      "date": "2026-08-11",
+      "sessions": 13,
+      "activeUsers": 12,
+      "pageviews": 13
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 10,
+      "activeUsers": 10,
+      "pageviews": 20
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 7,
+      "activeUsers": 7,
+      "pageviews": 14
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 2,
+      "activeUsers": 2,
+      "pageviews": 2
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 1,
+      "activeUsers": 1,
+      "pageviews": 10
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 5,
+      "activeUsers": 3,
+      "pageviews": 12
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 1,
+      "activeUsers": 1,
+      "pageviews": 2
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 6,
+      "activeUsers": 4,
+      "pageviews": 67
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 7,
+      "activeUsers": 7,
+      "pageviews": 7
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 38,
+      "activeUsers": 38,
+      "pageviews": 38
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 24,
+      "activeUsers": 24,
+      "pageviews": 24
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 24,
+      "activeUsers": 24,
+      "pageviews": 32
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 10,
+      "activeUsers": 7,
+      "pageviews": 97
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 8,
+      "activeUsers": 8,
+      "pageviews": 10
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 3,
+      "activeUsers": 3,
+      "pageviews": 3
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 7,
+      "activeUsers": 7,
+      "pageviews": 7
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 13,
+      "activeUsers": 13,
+      "pageviews": 13
+    },
+    {
+      "date": "2026-08-29",
+      "sessions": 15,
+      "activeUsers": 15,
+      "pageviews": 17
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 15,
+      "activeUsers": 14,
+      "pageviews": 17
+    },
     {
       "date": "2026-08-31",
       "sessions": 30,
@@ -53,9 +167,15 @@
     },
     {
       "date": "2026-09-06",
-      "sessions": 15,
-      "activeUsers": 12,
-      "pageviews": 13
+      "sessions": 22,
+      "activeUsers": 15,
+      "pageviews": 27
+    },
+    {
+      "date": "2026-09-07",
+      "sessions": 3,
+      "activeUsers": 2,
+      "pageviews": 3
     }
   ],
   "top_pages": [],
@@ -67,6 +187,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-05"
+    "data_date": "2026-09-06"
   }
 }

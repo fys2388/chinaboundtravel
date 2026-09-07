@@ -1,7 +1,7 @@
 # ChinaBound Travel SEO Learning 闭环报告
 
-**生成时间**: 2026-08-31 06:52:24
-**策略版本**: 2.0-20260831_065224
+**生成时间**: 2026-09-07 03:37:33
+**策略版本**: 2.0-20260907_033733
 
 ---
 
@@ -33,6 +33,8 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 关键词 | 流量潜力 | 当前排名 |
 |--------|----------|----------|
+| https://www.chinaboundtravel.com/posts/2 | 3 | 3.6 |
+| https://www.chinaboundtravel.com/posts/2 | 3 | 3.5 |
 | https://www.chinaboundtravel.com/posts/2 | 2 | 8.3 |
 | https://www.chinaboundtravel.com/cities/ | 1 | 4.0 |
 | https://www.chinaboundtravel.com/cancel/ | 0 | 7.0 |
@@ -41,8 +43,6 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 | 144 china visa | 0 | 80.5 |
 | 144 group visa | 0 | 87.0 |
 | 144 hour transit visa china | 0 | 46.3 |
-| 144 hour visa | 0 | 87.0 |
-| 144 hour visa beijing | 0 | 41.0 |
 
 ---
 

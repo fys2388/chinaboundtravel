@@ -1,34 +1,33 @@
 {
-  "validation_time": "2026-08-31T06:52:24.730465",
-  "overall_score": 21.1,
+  "validation_time": "2026-09-07T03:37:33.657123",
+  "overall_score": 53.6,
   "is_effective": false,
   "effective_strategies": [
     {
+      "category": "traffic",
+      "improve_rate": 100.0,
+      "improved": 8,
+      "total": 8
+    },
+    {
       "category": "content",
-      "improve_rate": 80.0,
-      "improved": 4,
+      "improve_rate": 60.0,
+      "improved": 3,
       "total": 5
     }
   ],
   "ineffective_strategies": [
     {
       "category": "social",
-      "improve_rate": 0.0,
-      "improved": 0,
-      "declined": 0,
-      "total": 7
-    },
-    {
-      "category": "seo",
-      "improve_rate": 0.0,
-      "improved": 0,
+      "improve_rate": 14.3,
+      "improved": 1,
       "declined": 0,
       "total": 7
     }
   ],
   "needs_more_data": [],
   "recommendations": [
-    "学习策略效果不佳，需要重新评估策略方向",
-    "低效策略需要优化: social, seo"
+    "学习策略部分有效，需要优化低效策略",
+    "低效策略需要优化: social"
   ]
 }

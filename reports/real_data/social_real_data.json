@@ -1,18 +1,102 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-06T09:50:29.813574",
-  "data_date": "2026-09-06",
+  "pull_time": "2026-09-07T03:37:32.177625",
+  "data_date": "2026-09-07",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 10,
-    "total_impressions": 7,
+    "total_impressions": 0,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6a9cbc4341e2718ea37256e4",
+      "text": "🔥 linkedin\n\nHow to Use Alipay & WeChat Pay in China 2026 | Research-backed facts about Alipay every traveler should know.\n\nUse Alipay and WeChat Pay in China without a bank account: bind foreign cards",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T14:05:18.092Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9cbbb2534afc9129e87b7b",
+      "text": "🔥 linkedin\n\nChina Food Guide for European Travelers | Everything you need to know about Food — in one practical guide.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, r",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T14:02:46.055Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9cb65085ccb3a22c0d7602",
+      "text": "🔥 linkedin\n\nChina Food Guide for European Travelers | Everything you need to know about Food — in one practical guide.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, r",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T13:39:45.932Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9cb649fba008bcd555104b",
+      "text": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest Guide | Essential China travel tips most first-time visitors miss.\n\nIs China Safe for Tourists in 2026? Honest Guide\n\n📌 Save this for your China ",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T13:39:46.181Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9cb49f85ccb3a22c0d574c",
+      "text": "🔥 linkedin\n\nChina Food Guide for European Travelers | Research-backed facts about Food every traveler should know.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, resta",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T13:32:46.374Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9cb49cfba008bcd554f959",
+      "text": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for Travelers | Research-backed facts about Train every traveler should know.\n\nChinese Train Stations: Survival Guide for Travelers\n\n📌 Save this for ",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-06T13:32:31.398Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6a9c424f18e142b3863360d6",
       "text": "Dreaming of exploring China?\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtrave",
@@ -68,96 +152,12 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6a99ad4c18474247f756cfa1",
-      "text": "Dreaming of exploring China?\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a foreigner\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-e",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-04T06:24:31.329Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9916e0b513357a056b237f",
-      "text": "Dreaming of exploring China?\n\nChinese train stations are bigger than airports, and more confusing\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-03T19:42:46.781Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a985d7b23e2f2a1007a4e4d",
-      "text": "Dreaming of exploring China?\n\nAn honest China safety assessment for 2026: crime rates, tourist scams, food safety, healthcare access, and emergency\n\nRead the full guide: https://chinaboundtravel.com/p",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-03T06:31:46.674Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a98575d23e2f2a10079d37c",
-      "text": "China Tourist Visa Guide: How to Apply in 2026 | What first-time visitors learn about China, summed up in one practical story.\n\nChina tourist visa in 2026: types, requirements, application steps, cost",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-03T06:05:46.161Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a97c4ae3a15d22a0a073084",
-      "text": "Dreaming of exploring Hangzhou?\n\nCulture. Research-based practical guidance for international travelers planning a China trip. Check official sources f\n\nYour ultimate guide is here: https://www.chinab",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-02T19:39:46.490Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a96f9794fc5f8750f717213",
-      "text": "China Bargaining Guide: How to Haggle & Shop | China visuals that belong on your travel moodboard.\n\nHow to bargain and shop in China: market etiquette, haggling phrases, and what to know before your t",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-02T05:12:47.932Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 7,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "pinterest": {
       "posts": 10,
-      "impressions": 7,
+      "impressions": 0,
       "clicks": 0,
       "likes": 0
     }
@@ -169,6 +169,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-06"
+    "data_date": "2026-09-07"
   }
 }

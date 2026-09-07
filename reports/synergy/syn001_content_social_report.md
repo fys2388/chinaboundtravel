@@ -1,6 +1,6 @@
 # SYN-001 内容-社媒协同机制报告
 
-**生成时间**: 2026-08-31 06:52:24
+**生成时间**: 2026-09-07 03:37:33
 **协同ID**: SYN-001
 **机制**: 高表现内容自动进入社媒优先分发队列
 
@@ -39,16 +39,16 @@
 
 | 排名 | 平台 | 文章标题 | 发布时间 | 优先级 | 推荐Hook |
 |------|------|---------|----------|--------|----------|
-| 1 | pinterest | 2026 06 19 The History And Culture Of Th | 2026-09-01 | high | question |
-| 2 | x | 2026 06 19 The History And Culture Of Th | 2026-09-01 | high | question |
-| 3 | facebook | 2026 06 19 The History And Culture Of Th | 2026-09-01 | high | question |
-| 4 | instagram | 2026 06 19 The History And Culture Of Th | 2026-09-01 | high | question |
-| 5 | pinterest | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-01 | high | question |
-| 6 | x | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-01 | high | question |
-| 7 | facebook | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-01 | high | question |
-| 8 | instagram | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-01 | high | question |
-| 9 | pinterest | 2026 06 22 Chinese Tea Culture History T | 2026-09-02 | high | question |
-| 10 | x | 2026 06 22 Chinese Tea Culture History T | 2026-09-02 | high | question |
+| 1 | pinterest | 2026 06 19 The History And Culture Of Th | 2026-09-08 | high | linkedin |
+| 2 | x | 2026 06 19 The History And Culture Of Th | 2026-09-08 | high | linkedin |
+| 3 | facebook | 2026 06 19 The History And Culture Of Th | 2026-09-08 | high | linkedin |
+| 4 | instagram | 2026 06 19 The History And Culture Of Th | 2026-09-08 | high | linkedin |
+| 5 | pinterest | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-08 | high | linkedin |
+| 6 | x | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-08 | high | linkedin |
+| 7 | facebook | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-08 | high | linkedin |
+| 8 | instagram | 2026 05 26 7 Day China Itinerary Beijing | 2026-09-08 | high | linkedin |
+| 9 | pinterest | 2026 06 22 Chinese Tea Culture History T | 2026-09-09 | high | linkedin |
+| 10 | x | 2026 06 22 Chinese Tea Culture History T | 2026-09-09 | high | linkedin |
 
 ---
 
@@ -92,4 +92,4 @@ Social Engine优先消费队列项
 ---
 
 *报告由SYN-001内容-社媒协同机制自动生成*
-*生成时间: 2026-08-31 06:52:24*
+*生成时间: 2026-09-07 03:37:33*

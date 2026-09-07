@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260831_065224",
-  "last_updated": "2026-08-31T06:52:24.552875",
+  "version": "2.0-20260907_033733",
+  "last_updated": "2026-09-07T03:37:33.380189",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -83,6 +83,16 @@
   "best_pages": [],
   "high_priority_keywords": [
     {
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "traffic_potential": 3.2,
+      "position": 3.6
+    },
+    {
+      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
+      "traffic_potential": 2.6,
+      "position": 3.5
+    },
+    {
       "keyword": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
       "traffic_potential": 1.5299999999999994,
       "position": 8.3
@@ -96,16 +106,6 @@
       "keyword": "https://www.chinaboundtravel.com/cancel/",
       "traffic_potential": 0.3,
       "position": 7
-    },
-    {
-      "keyword": "https://www.chinaboundtravel.com/cities/guilin/",
-      "traffic_potential": 0.1,
-      "position": 9
-    },
-    {
-      "keyword": "https://www.chinaboundtravel.com/posts/",
-      "traffic_potential": 0.07999999999999971,
-      "position": 9.8
     }
   ],
   "learning_insights": [

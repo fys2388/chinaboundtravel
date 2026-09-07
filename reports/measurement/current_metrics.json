@@ -1,16 +1,25 @@
 {
-  "timestamp": "2026-08-31T06:52:24.729976",
-  "date": "2026-08-31",
-  "traffic": {},
+  "timestamp": "2026-09-07T03:37:33.656117",
+  "date": "2026-09-07",
+  "traffic": {
+    "activeUsers": 270,
+    "sessions": 356,
+    "screenPageViews": 793,
+    "engagedSessions": 97,
+    "bounceRate": 0.7275280898876404,
+    "averageSessionDuration": 204.0412768258427,
+    "engagementRate": 0.27247191011235955,
+    "newUsers": 268
+  },
   "content": {
-    "total_articles": 60,
+    "total_articles": 61,
     "articles_this_week": 0,
-    "avg_word_count": 1930,
+    "avg_word_count": 1902,
     "articles_with_affiliate_links": 35,
     "articles_with_internal_links": 48
   },
   "social": {
-    "total_posts": 0,
+    "total_posts": 10,
     "total_impressions": 0,
     "total_clicks": 0,
     "total_likes": 0,
@@ -19,5 +28,12 @@
   },
   "conversion": {},
   "revenue": {},
-  "seo": {}
+  "seo": {
+    "impressions": 599,
+    "clicks": 0,
+    "ctr": 0.0,
+    "average_position": 68.1,
+    "sitemap_count": 1,
+    "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
+  }
 }
