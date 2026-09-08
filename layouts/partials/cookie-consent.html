@@ -189,6 +189,7 @@
     var BANNER_ID = 'gdpr-cookie-banner';
     var STORAGE_KEY = 'cbt_gdpr_consent';
     var DISPLAY_DELAY_MS = 3500; // delay banner to avoid first-screen disruption
+    var GA_ID = '{{ site.Params.analytics.google.TrackingID }}';
 
     function getConsent() {
         try {
@@ -224,6 +225,33 @@
         if (panel) panel.style.display = 'none';
     }
 
+    function applyConsent(consent) {
+        // --- GA4 Consent Mode v2 update ---
+        // Signal gtag to update storage permissions in real time.
+        // Works even if gtag.js is still async-loading (dataLayer queue).
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'ad_storage': consent.marketing ? 'granted' : 'denied',
+                'ad_user_data': consent.marketing ? 'granted' : 'denied',
+                'ad_personalization': consent.marketing ? 'granted' : 'denied',
+                'analytics_storage': consent.analytics ? 'granted' : 'denied'
+            });
+        }
+        // --- Legacy fallback: ga-disable flag (belt-and-suspenders) ---
+        var disableKey = 'ga-disable-' + GA_ID;
+        if (!consent.analytics) {
+            window[disableKey] = true;
+        } else {
+            delete window[disableKey];
+        }
+        // Marketing: notify gated marketing scripts (e.g. Travelpayouts Drive) to load now.
+        try {
+            window.dispatchEvent(new CustomEvent('cbt-gdpr-consent-change', {
+                detail: { marketing: !!consent.marketing, decision: consent.decision }
+            }));
+        } catch (e) { }
+    }
+
     // Load saved consent
     var consent = getConsent();
 
@@ -231,7 +259,7 @@
         // First visit — show banner after delay
         setTimeout(showBanner, DISPLAY_DELAY_MS);
     } else {
-        // Apply consent
+        // Returning visitor — apply saved consent immediately
         applyConsent(consent);
     }
 
@@ -287,21 +315,6 @@
         btnCloseSettings.addEventListener('click', function() {
             hideSettings();
         });
-    }
-
-    function applyConsent(consent) {
-        // Analytics: Google Analytics (if present)
-        if (!consent.analytics) {
-            window['ga-disable-{{ site.Params.analytics.google.TrackingID }}'] = true;
-        }
-        // Marketing: Adjust scripts that load marketing/tracking
-        // (Stripe and affiliate links are always loaded as they are functional, not tracking)
-        // Marketing: notify gated marketing scripts (e.g. Travelpayouts Drive) to load now.
-        try {
-            window.dispatchEvent(new CustomEvent('cbt-gdpr-consent-change', {
-                detail: { marketing: !!consent.marketing, decision: consent.decision }
-            }));
-        } catch (e) { }
     }
 })();
 </script>
