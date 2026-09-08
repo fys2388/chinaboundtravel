@@ -59,6 +59,9 @@ jobs:
       - name: Ensure inventory exists (增量补充新文章)
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # 短链接服务：社媒分享链接使用短链接（保留 UTM 参数）
+          SHORT_LINK_WORKER_URL: ${{ secrets.SHORT_LINK_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com' }}
+          SHORT_LINK_API_KEY: ${{ secrets.SHORT_LINK_API_KEY }}
         run: |
           if [ ! -s content/social/inventory.json ]; then
             if [ "${{ github.event.inputs.build_if_empty || 'false' }}" = "true" ]; then
