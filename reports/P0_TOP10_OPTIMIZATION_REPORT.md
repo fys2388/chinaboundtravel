@@ -1,4 +1,4 @@
-# P0-4: Top 10 Growth Pages Optimization Report
+﻿# P0-4: Top 10 Growth Pages Optimization Report
 
 **Date:** 2026-09-08
 **Task:** Optimize Top 10 Growth Pages for CTR, rankings, and conversions
@@ -306,9 +306,22 @@ Each of the 10 pages received all 5 required optimizations:
 ## Build & Deployment
 
 - **Hugo build:** PASS — `hugo v0.147.0`, 441 pages, 0 errors, 31473ms
-- **Git commit:** (see commit hash below)
-- **Git push:** (see deployment status below)
-- **Online 200 verification:** (pending deployment)
+- **Git commit hash:** `bdf8b3e` (after rebase with origin/main)
+- **Git push:** SUCCESS — `bf8f7a5..bdf8b3e main -> main`
+- **Online 200 verification:** ALL 10 PAGES PASS (verified 2026-09-08)
+
+| # | Page | HTTP Status |
+|---|------|-------------|
+| 1 | /posts/china-high-speed-rail-how-to-book-tickets/ | 200 |
+| 2 | /posts/144-hour-visa-free-transit-guide/ | 200 |
+| 3 | /posts/how-to-use-wechat-pay-as-a-foreigner/ | 200 |
+| 4 | /posts/is-china-safe-for-tourists-2026-honest-assessment/ | 200 |
+| 5 | /posts/china-business-travel-guide-meetings-dining-and-networking/ | 200 |
+| 6 | /posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ | 200 |
+| 7 | /posts/paypal-alipay-wechat-pay-qr-code-support/ | 200 |
+| 8 | /posts/ultimate-guide-to-china-visa-for-tourists/ | 200 |
+| 9 | /posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/ | 200 |
+| 10 | /posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/ | 200 |
 
 ---
 
