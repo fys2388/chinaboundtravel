@@ -152,7 +152,6 @@ export async function onRequestPost({ request, env }) {
       subscriber_created: false,
       lead_magnet: magnet.mlField,
       detail: '',
-      _v: '20260908-debug3',
     };
 
     // 1) MailerLite subscriber
