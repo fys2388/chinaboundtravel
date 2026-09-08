@@ -31,7 +31,7 @@ If you're planning a trip to China, one of the most crucial aspects to consider 
 
 ![A busy train station in China with people rushing around, suitcases in hand, and signs in Chinese and English](/img/china-dest/body/external_ce5fa7375985.jpg)
 
-Let me start by saying that China's transportation network is both extensive and efficient, but it can also be a bit overwhelming at first. From high-speed trains that whisk you across the country in a matter of hours to bustling subways that carry millions of people every day, there are plenty of options to choose from. However, with a little planning and some research-based knowledge, you'll be able to get around with ease and make the most of your time in China.
+China's transportation network is both extensive and efficient, but it can also be a bit overwhelming at first. From high-speed trains that whisk you across the country in a matter of hours to bustling subways that carry millions of people every day, there are plenty of options to choose from. However, with a little planning and some research-based knowledge, you'll be able to get around with ease and make the most of your time in China.
 
 ## The Anatomy of a Chinese Train Station
 
@@ -110,12 +110,6 @@ Navigating China's transportation system can be a challenge, but with a little p
 
 If you're interested in learning more about China's transportation system or planning a trip to China, be sure to check out our other articles on chinaboundtravel.com. We have a wealth of information and resources to help you make the most of your travel experience in China. For example, you might want to read our article on [Xi'an Terracotta Army: History, Discovery, and Practical Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/) to learn more about one of China's most famous attractions, or our article on [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) to discover one of China's most beautiful natural wonders.
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}

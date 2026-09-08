@@ -37,7 +37,7 @@ keywords:
 
 ## Introduction
 
-Let me take you back to 2019. A friend of mine from France wanted to visit me in Chengdu. I told her about the pandas, the hotpot, the teahouses. She got excited — until she realized she needed to apply for a Chinese visa. The paperwork, the embassy visit, the two-week wait, the $60 fee. She bailed. "Maybe next year," she said.
+In 2019, a traveler from France wanted to visit Chengdu. She'd heard about the pandas, the hotpot, the teahouses. She grew excited — until she realized she needed to apply for a Chinese visa. The paperwork, the embassy visit, the two-week wait, the $60 fee. She bailed. "Maybe next year," she said.
 
 Next year never came — for her, or for millions of other travelers who looked at China's visa process and thought, "Eh, I'll go to Thailand instead."
 
@@ -45,7 +45,7 @@ Well, things have changed. Dramatically.
 
 Since late 2023, China has been on a visa-free expansion spree that would make even the most seasoned travel blogger's head spin. What started as a trial for a handful of European countries has snowballed into one of the most generous visa-free policies in the world. As of 2026, citizens of over 40 countries can simply book a flight, pack their bags, and show up in China — no visa application, no embassy visit, no paperwork beyond their passport.
 
-If you've been putting off a China trip because of the visa hassle, this is your sign. In this guide, I'll break down everything you need to know about China's visa-free entry policies in 2026: which countries qualify, how long you can stay, what the rules are, and how to breeze through border control like a pro.
+If you've been putting off a China trip because of the visa hassle, this is your sign. This guide breaks down everything you need to know about China's visa-free entry policies in 2026: which countries qualify, how long you can stay, what the rules are, and how to breeze through border control like a pro.
 
 {{< soft-recommend partner="safetywing" topic="visa" placement="article_mid_1" text="Review travel insurance options" >}}
 Visa-free or not, travel insurance is non-negotiable for China. Medical bills can run into thousands of dollars, and SafetyWing offers straightforward coverage for international travelers.
@@ -226,7 +226,7 @@ They may ask you questions:
 - "Where will you stay?" → Have your hotel address ready
 - "Do you have a return ticket?" → Show your confirmation
 
-**Pro tip:** Keep your answers short and factual. This isn't the time to joke about how you're coming to China to learn kung fu and become a movie star (yes, I've tried).
+**Pro tip:** Keep your answers short and factual. This isn't the time to joke about coming to China to learn kung fu and become a movie star — border officers do not appreciate jokes.
 
 ### Step 4: Get Your Stamp
 
@@ -289,7 +289,7 @@ Store them in your email and on your phone. Border officers may ask to see any o
 
 ### 3. Get Travel Insurance
 
-I know, I sound like a broken record. But China's medical costs are real, and if you're visa-free, you don't have a visa application process that forces you to think about insurance. {{< safetywing-link >}}SafetyWing{{< /safetywing-link >}} is one of the most popular options for travelers — affordable, easy to sign up for, and covers medical emergencies in China.
+This point cannot be overstated. China's medical costs are real, and if you're visa-free, you don't have a visa application process that forces you to think about insurance. {{< safetywing-link >}}SafetyWing{{< /safetywing-link >}} is one of the most popular options for travelers — affordable, easy to sign up for, and covers medical emergencies in China.
 
 ### 4. Set Up Your Payment Apps Before You Arrive
 
@@ -363,9 +363,7 @@ Safe travels, and welcome to China.
 |------|----------|------|
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
 | ✈️ Flights | Find deals on flights to China | {{< affiliate-flight >}} |
-| 🎟️ Tours & Activities | Book experiences on Klook | {{< affiliate-tour >}} |
 
 ---
 

@@ -24,6 +24,11 @@ cover:
 categories: ["transport", "cities"]
 last_updated: "2026-07-04"
 
+
+{{< affiliate-esim >}}
+
+{{< affiliate-insurance >}}
+
 ---
 # China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips
 
@@ -118,7 +123,7 @@ Based on extensive research and traveler feedback, here is an honest take on the
 | Xi'an → Chengdu (¥263) | ¥415 (~€52) | ¥788 (~€99) |
 
 ## How to Actually Find Your Platform
-Okay, so you've bought your ticket and you're at the train station. Now comes the challenge of finding your platform.
+Once you've bought your ticket and you're at the train station, the next challenge is finding your platform.
 
 First, look at your ticket or confirmation. It will say something like "5" (Platform 5) and "08" (Carriage 08). Once you've found the platform number, head towards the appropriate platform.
 
@@ -170,10 +175,6 @@ And if you want to read more about traveling in China, check out these other art
 ![A high-speed train speeding through the Chinese countryside with green fields and mountains in the background](/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg)
 
 ![Inside a high-speed train carriage with comfortable seats and a view of the landscape outside the window](/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.jpg)
-
-{{< affiliate-flight >}}
-
-{{< affiliate-tour >}}
 
 
 {{< soft-recommend partner="safetywing" topic="transport" placement="article_soft_3" text="Review travel insurance options" >}}

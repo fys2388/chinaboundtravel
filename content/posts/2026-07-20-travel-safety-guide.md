@@ -108,7 +108,7 @@ This is where most tourists get into trouble. Here's the deal:
 
 ## Food Safety: Don't Let Your Stomach Ruin Your Trip
 
-Let's be real—one of one of the popular parts of traveling to China is the food. But it's also where most travelers get into trouble. Digestive discomfort is one of the most common issues reported by international travelers, so here's what you need to know:
+One of one of the popular parts of traveling to China is the food. But it's also where most travelers get into trouble. Digestive discomfort is one of the most common issues reported by international travelers, so here's what you need to know:
 
 ### Street Food: The Good, the Bad, and the Ugly
 
@@ -137,7 +137,7 @@ When it comes to restaurants, bigger isn't often better. Here's our recommended 
 3. **Ask locals**: "Zhe ge hao chi ma?" (Is this good?) is your a popular friend
 4. **Start small**: Order one dish first, see how your stomach feels
 
-**YOU SHOULD:** often carry antacids and Imodium with you. Trust me—you'll thank me later.
+**YOU SHOULD:** often carry antacids and Imodium with you. You'll thank yourself later.
 
 ## Common Scams: How to Spot Them Before They Spot You
 
@@ -270,15 +270,11 @@ Is China well-suited? No. Are there risks? Yes. But the same is true for any cou
 
 ---
 
-Originally posted on ChinaBound Travel Blog  
+Originally posted on ChinaBound Travel Blog
 *Disclaimer: This article is for informational purposes only. often check the latest requirements from official Chinese government sources before planning your trip.*
-
-{{< affiliate-hotel >}}
 
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}

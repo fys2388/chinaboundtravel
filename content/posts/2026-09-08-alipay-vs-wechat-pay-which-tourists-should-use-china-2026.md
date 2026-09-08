@@ -38,13 +38,13 @@ keywords:
 
 ## Introduction
 
-Let me set the scene. You land at Chengdu Shuangliu, jet-lagged out of your mind, and the first thing you want is a steaming bowl of dan dan noodles from the hole-in-the-wall joint across the street. You pull out your credit card. The vendor shakes his head. You pull out cash. He squints at the twenty-dollar bill like it's a prop from a sci-fi movie. Then he points to a QR code taped to the wall.
+Imagine landing at Chengdu Shuangliu, jet-lagged out of your mind, and the first thing you want is a steaming bowl of dan dan noodles from the hole-in-the-wall joint across the street. You pull out your credit card. The vendor shakes his head. You pull out cash. He squints at the twenty-dollar bill like it's a prop from a sci-fi movie. Then he points to a QR code taped to the wall.
 
 Welcome to China, where cash is about as useful as a VHS rewinder.
 
-After five years living in Chengdu, I've watched this cashless revolution swallow everything — from street food stalls to luxury malls, from taxi drivers to temple donation boxes. Two apps dominate this landscape: **Alipay** and **WeChat Pay**. Together they process over 90% of China's mobile payments, and if you're visiting, you're going to need at least one of them.
+Over the past five years, this cashless revolution has swallowed everything — from street food stalls to luxury malls, from taxi drivers to temple donation boxes. Two apps dominate this landscape: **Alipay** and **WeChat Pay**. Together they process over 90% of China's mobile payments, and if you're visiting, you're going to need at least one of them.
 
-But which one? That's the question every tourist asks me, and honestly, it's the wrong question. The real question is: which one fits *your* travel style? In this guide, I'll break down both apps from a foreigner's perspective — the good, the bad, and the "why is this in Chinese only?" — so you can make an informed decision before you land.
+But which one? This is the question every tourist asks, and it's the wrong question. The real question is: which one fits *your* travel style? This guide breaks down both apps from a foreigner's perspective — the good, the bad, and the "why is this in Chinese only?" — so you can make an informed decision before you land.
 
 {{< soft-recommend partner="esim" topic="payment" placement="article_mid_1" text="See eSIM options" >}}
 Before you even think about payments, you'll need internet in China. An eSIM lets you connect the moment you land, which is essential for setting up and using any payment app.
@@ -62,7 +62,7 @@ Here's what that means for you as a tourist:
 - **High-speed train stations** have ticket machines that only accept Alipay or WeChat Pay
 - **Even some museums and temples** prefer QR code donations
 
-I once watched a confused German tourist try to pay for a ¥5 bottle of water with a €50 note at a convenience store. The cashier literally laughed. Don't be that guy.
+Travelers report seeing confused visitors try to pay for a ¥5 bottle of water with a €50 note at a convenience store. The cashier literally laughs. Don't be that traveler.
 
 ## Alipay: The Financial Super-App
 
@@ -70,7 +70,7 @@ I once watched a confused German tourist try to pay for a ¥5 bottle of water wi
 
 Alipay is operated by Ant Group (formerly Ant Financial), an affiliate of Alibaba. Think of it as China's answer to PayPal, but on steroids. What started as a payment escrow service for Alibaba's e-commerce platform has grown into a full-blown financial ecosystem.
 
-For a Californian like me, the closest analogy is if Venmo, PayPal, your bank's mobile app, and a stock trading platform had a baby — and that baby grew up to be a billionaire.
+For international visitors, the closest analogy is if Venmo, PayPal, your bank's mobile app, and a stock trading platform had a baby — and that baby grew up to be a billionaire.
 
 ### Pros of Alipay for Foreigners
 
@@ -125,7 +125,7 @@ The Tour Card has spending limits. As of 2026, the standard limit is around ¥5,
 
 WeChat Pay is the payment arm of WeChat (Weixin), operated by Tencent. If Alipay is a financial super-app, WeChat Pay is a payment system bolted onto the most dominant social media platform in China. WeChat has over 1.3 billion monthly active users, and virtually every one of them has WeChat Pay enabled.
 
-To extend my California analogy: imagine if Facebook Messenger, WhatsApp, Instagram, and Apple Pay all merged into one app. That's WeChat.
+To extend this analogy: imagine if Facebook Messenger, WhatsApp, Instagram, and Apple Pay all merged into one app. That's WeChat.
 
 ### Pros of WeChat Pay for Foreigners
 
@@ -163,7 +163,7 @@ While WeChat Pay now supports international cards, the setup process isn't as sm
 
 **2. English Support Is Inconsistent**
 
-WeChat's English interface is decent for the chat features, but the payment and wallet sections often have untranslated menus. I've had friends stare at a Chinese-only error message for 20 minutes trying to figure out why their card wouldn't bind.
+WeChat's English interface is decent for the chat features, but the payment and wallet sections often have untranslated menus. Travelers have reported staring at a Chinese-only error message for 20 minutes trying to figure out why their card wouldn't bind.
 
 **3. Account Verification Can Be Strict**
 
@@ -171,7 +171,7 @@ WeChat has been cracking down on accounts that don't have a Chinese phone number
 
 **4. Customer Service Is Almost Entirely Chinese**
 
-This is where WeChat Pay really falls short for foreigners. There is no dedicated English support line for payment issues. If your account gets frozen, you're essentially navigating a Chinese-only support system with Google Translate. I've seen this ruin more than one vacation.
+This is where WeChat Pay really falls short for foreigners. There is no dedicated English support line for payment issues. If your account gets frozen, you're essentially navigating a Chinese-only support system with Google Translate. This has ruined more than one vacation.
 
 **5. Less Focus on Financial Services**
 
@@ -196,7 +196,7 @@ Let's put these two apps side by side across the categories that matter most to 
 
 ## Scenario-Based Recommendations
 
-Now for the practical part. Based on your travel style, here's what I recommend:
+Now for the practical part. Based on your travel style, here's what our editorial team recommends:
 
 ### Solo Traveler (Backpacker / Budget)
 
@@ -234,7 +234,7 @@ If you're staying a while, you'll want both. WeChat Pay becomes your daily drive
 
 Here's why having both is the smart move:
 
-1. **Redundancy**: If one app has an issue (account freeze, card decline, server problem), the other is your backup. I've had Alipay go down during a major system update — WeChat Pay saved my dinner that night.
+1. **Redundancy**: If one app has an issue (account freeze, card decline, server problem), the other is your backup. Alipay has gone down during major system updates — having WeChat Pay as a backup saves the evening.
 
 2. **Merchant Edge Cases**: While 95% of merchants take both, there are still holdouts. Some small shops in rural areas only have WeChat Pay. Some online services only accept Alipay.
 
@@ -266,7 +266,7 @@ For detailed step-by-step setup, check out our [complete Alipay setup guide for 
 
 **1. Don't Wait Until You Arrive**
 
-Set up your payment apps before you land. Airport Wi-Fi can be unreliable, and you'll need to pay for a taxi or train immediately. I've seen tourists stuck at the airport because they couldn't set up Alipay without internet, and they couldn't get internet without paying with Alipay. Classic chicken-and-egg.
+Set up your payment apps before you land. Airport Wi-Fi can be unreliable, and you'll need to pay for a taxi or train immediately. Tourists have been stuck at the airport because they couldn't set up Alipay without internet, and they couldn't get internet without paying with Alipay. Classic chicken-and-egg.
 
 **2. Don't Rely on a Single Card**
 
@@ -316,11 +316,11 @@ Both Alipay and WeChat Pay use bank-level encryption and are regulated by the Pe
 
 ## Conclusion
 
-So, Alipay or WeChat Pay? After five years in Chengdu, my honest answer is: **start with Alipay, add WeChat Pay if you're staying more than a week.**
+So, Alipay or WeChat Pay? Based on extensive research and traveler feedback, the answer is: **start with Alipay, add WeChat Pay if you're staying more than a week.**
 
-Alipay is the more tourist-friendly option — easier setup, better English support, more reliable customer service. It's the app I recommend to every first-time visitor. But WeChat Pay is the app you'll want once you start meeting people, splitting bills, and exploring the mini-program ecosystem.
+Alipay is the more tourist-friendly option — easier setup, better English support, more reliable customer service. It's the app our editorial team recommends to every first-time visitor. But WeChat Pay is the app you'll want once you start meeting people, splitting bills, and exploring the mini-program ecosystem.
 
-Think of it like the *Godfather* trilogy — you can enjoy the first one on its own, but to get the full experience, you need all three. Okay, bad analogy. We'll just say both apps have their place, and having both makes your China trip significantly smoother.
+Both apps have their place, and having both makes your China trip significantly smoother.
 
 Before you go, make sure you've got your [internet and eSIM situation sorted](/posts/internet-connection-china-esim-vpn-guide/) — none of these payment apps work without data. And if you're planning to travel by train, our [China high-speed train guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) walks you through booking tickets with both payment apps.
 
@@ -334,9 +334,6 @@ Safe travels, and may your QR codes always scan on the first try.
 |------|----------|------|
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | Find deals on flights to China | {{< affiliate-flight >}} |
-| 🎟️ Tours & Activities | Book experiences on Klook | {{< affiliate-tour >}} |
 
 ---
 

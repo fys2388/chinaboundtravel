@@ -29,7 +29,7 @@ last_updated: "2026-07-06"
 
 If you're flying from Europe to China, you're probably expecting great food — but most travelers have no idea just how *diverse* Chinese cuisine actually is. Based on extensive research and aggregated feedback from travelers who've eaten their way across almost every province, this guide covers the full spectrum of Chinese regional cuisine.
 
-**Here's the thing most Europeans don't realize:** "Chinese food" isn't one cuisine — it's eight major regional traditions, each radically different from the next. What you've eaten at your local takeaway back in London or Berlin barely scratches the surface.
+**What many European travelers don't realize:** "Chinese food" isn't one cuisine — it's eight major regional traditions, each radically different from the next. What you've eaten at your local takeaway back in London or Berlin barely scratches the surface.
 
 This guide covers the regional cuisines every food-loving European traveler should try, with specific dish recommendations, what to order first, how much to budget, and tips that will save you from the common mistakes many first-time visitors make.
 
@@ -235,10 +235,6 @@ If you found this guide helpful, [check out our other China travel guides](/post
 ![A spread of colorful Chinese dishes on a round table: Sichuan hotpot in the center, a plate of xiaolongbao, Peking duck with pancakes, and fresh vegetables. Warm lighting, convivial atmosphere.](/img/china-dest/body/external_b84ee96f8383.jpg)
 
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
@@ -251,8 +247,6 @@ If you found this guide helpful, [check out our other China travel guides](/post
 
 | Need | Solution | Link |
 |------|----------|------|
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

@@ -43,7 +43,7 @@ This guide is for people who want to actually *understand* Shanghai, not just co
 
 ### Morning: The Bund at Sunrise (Yes, Do This)
 
-Here's the thing nobody tells you: the Bund is  packed at night. Every influencer in China is there taking photos with the skyline. But sunrise? Literally 50 people. The light hits those Art Deco buildings on the Puxi side and turns everything gold. It's actually spiritual.
+What many guides don't mention: the Bund is  packed at night. Every influencer in China is there taking photos with the skyline. But sunrise? Literally 50 people. The light hits those Art Deco buildings on the Puxi side and turns everything gold. It's actually spiritual.
 
 > **Editor's Tip:** Take the **Shanghai Metro Line 2** to **Nanjing East Road** (Exit 1). Walk north along the river to the Lujiazui side — this direction is less crowded and gives you one of the popular view angles. Don't bother with the ferris wheel unless you enjoy paying $30 to take blurry photos through dirty glass.
 

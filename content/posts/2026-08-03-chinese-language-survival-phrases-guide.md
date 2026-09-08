@@ -158,7 +158,7 @@ The Chinese language and culture are rich and complex, and there are many things
 
 One final thought that every first-time traveler to China should hear: **you don't need to speak a word of Mandarin to have a wonderful time**. Many travelers make it through two weeks with nothing more than xiè xiè (thank you) and a translator app, and they leave with a million incredible stories.
 
-But here's the thing — learning even 20-30 survival phrases doesn't just make the trip smoother. It changes how people interact with you. A vendor may recommend a popular dish because you greeted them in Chinese. A taxi driver might share local slang. An older traveler at a tea house might sit down with you for a conversation built from a translation app, gestures, and a shared love of tea.
+However — learning even 20-30 survival phrases doesn't just make the trip smoother. It changes how people interact with you. A vendor may recommend a popular dish because you greeted them in Chinese. A taxi driver might share local slang. An older traveler at a tea house might sit down with you for a conversation built from a translation app, gestures, and a shared love of tea.
 
 Those moments are the heart of travel. They're the stories you tell your friends for years. And they all start with one brave attempt to say a few words in the local language.
 
@@ -179,9 +179,7 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 
 | Need | Solution | Link |
 |------|----------|------|
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
 | ✈️ Flights | Popular deals on flights to China | {{< affiliate-flight >}} |
-| 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
 | 🔒 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |
