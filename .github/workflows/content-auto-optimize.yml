@@ -1,0 +1,103 @@
+name: Content Auto-Optimization Loop
+
+on:
+  schedule:
+    # Every Monday at 02:00 UTC (10:00 Beijing time)
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry-run mode (analyze only, no file changes)'
+        type: boolean
+        default: false
+      max_pages:
+        description: 'Max pages to optimize (safety limit: 1-2)'
+        type: number
+        default: 2
+
+concurrency:
+  group: content-auto-optimize
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install google-auth google-auth-httplib2 pandas pyyaml
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      - name: Write GSC service account key
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "$GSC_SERVICE_ACCOUNT_JSON" > gsc-service-account-key.json
+          echo "GSC_SITE_URL=https://www.chinaboundtravel.com/" >> .env
+          echo "GSC_SERVICE_ACCOUNT_JSON=gsc-service-account-key.json" >> .env
+
+      - name: Run content auto-optimizer
+        id: optimizer
+        env:
+          GSC_SITE_URL: https://www.chinaboundtravel.com/
+          GSC_SERVICE_ACCOUNT_JSON: gsc-service-account-key.json
+        run: |
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+          MAX_PAGES="${{ github.event.inputs.max_pages || 2 }}"
+          echo "Running with: $DRY_RUN_FLAG --max-pages $MAX_PAGES"
+          python scripts/content_auto_optimizer.py $DRY_RUN_FLAG --max-pages "$MAX_PAGES"
+
+      - name: Hugo build validation
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          HUGO_ENV: production
+        run: |
+          echo "=== Hugo build validation ==="
+          hugo --gc --minify
+          echo "Build exit code: $?"
+
+      - name: Commit and push changes
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/posts/ reports/content-optimization-log.json reports/learning-library.json
+          # Also add any generated report
+          git add reports/content-optimization-results-*.md 2>/dev/null || true
+          git diff --cached --quiet && echo "No changes to commit" || {
+            git commit -m "auto: content optimization loop $(date +%Y-%m-%d)"
+            git pull --rebase origin main || echo "rebase had conflicts"
+            git push origin main || echo "push failed"
+          }
+
+      - name: Upload optimization report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-optimization-report
+          path: |
+            reports/content-optimization-results-*.md
+            reports/content-optimization-log.json
+          retention-days: 30

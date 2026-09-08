@@ -1,0 +1,118 @@
+{{- /*
+  Affiliate CTA Shortcode — Closed Loop 3 A/B Testing Component
+
+  Usage:
+    {{< affiliate-cta partner="esim" text="Get eSIM for China" variant="button" >}}
+    {{< affiliate-cta partner="hotel" text="Book Your Stay" variant="card" utm_content="ab_test_v1" >}}
+    {{< affiliate-cta partner="safetywing" variant="inline" >}}
+
+  Parameters:
+    partner     — hugo.toml [params.affiliate] key (esim, vpn, hotel, klook, safetywing, trip, flight)
+    text        — CTA link text (default: partner-specific default)
+    variant     — button | card | inline | text (default: button)
+    utm_content — UTM content identifier for A/B test tracking
+
+  Resolves partner URL from .Site.Params.affiliate and appends UTM params.
+  Tracks clicks via data attributes for GA4 affiliate_click event.
+*/ -}}
+{{- $partner := .Get "partner" | default "esim" -}}
+{{- $variant := .Get "variant" | default "button" -}}
+{{- $utmContent := .Get "utm_content" | default "" -}}
+{{- $url := index .Site.Params.affiliate $partner | default "#" -}}
+
+{{- /* Default CTA text per partner */ -}}
+{{- $defaultText := dict
+  "esim" "Get eSIM for China"
+  "vpn" "Get VPN for China"
+  "hotel" "Book Your Hotel"
+  "klook" "Book Tours & Activities"
+  "safetywing" "Get Travel Insurance"
+  "trip" "Book on Trip.com"
+  "flight" "Search Flights to China"
+-}}
+{{- $text := .Get "text" | default (index $defaultText $partner | default "Learn More") -}}
+
+{{- /* Append UTM params if url is valid */ -}}
+{{- if and (ne $url "#") (ne $utmContent "") -}}
+  {{- $separator := cond (in $url "?") "&" "?" -}}
+  {{- $url = printf "%s%signore_referrer&utm_source=blog&utm_medium=cta&utm_campaign=ab_test&utm_content=%s" $url $separator $utmContent -}}
+{{- end -}}
+
+{{- /* CTA ID for analytics */ -}}
+{{- $ctaId := printf "cta-%s-%s" $partner $variant -}}
+
+{{- if eq $variant "card" -}}
+<div class="affiliate-cta-card" data-cta-id="{{ $ctaId }}" data-affiliate-partner="{{ $partner }}" data-variant="card">
+  <div class="affiliate-cta-card-inner">
+    <div class="affiliate-cta-card-text">
+      <strong>{{ $text }}</strong>
+      <span class="affiliate-cta-card-sub">Recommended by Joran</span>
+    </div>
+    <a href="{{ $url }}" class="affiliate-cta-card-btn affiliate-link" target="_blank" rel="nofollow sponsored"
+       data-affiliate-partner="{{ $partner }}" data-cta-id="{{ $ctaId }}" data-utm-content="{{ $utmContent }}">
+      Visit →
+    </a>
+  </div>
+  <p class="affiliate-cta-disclosure"><small><em>Affiliate link — we may earn a commission at no extra cost to you.</em></small></p>
+</div>
+
+{{- else if eq $variant "inline" -}}
+<a href="{{ $url }}" class="affiliate-cta-inline affiliate-link" target="_blank" rel="nofollow sponsored"
+   data-affiliate-partner="{{ $partner }}" data-cta-id="{{ $ctaId }}" data-variant="inline" data-utm-content="{{ $utmContent }}">
+  {{- $text -}}
+</a>
+
+{{- else if eq $variant "text" -}}
+<span class="affiliate-cta-text" data-cta-id="{{ $ctaId }}" data-affiliate-partner="{{ $partner }}" data-variant="text">
+  <a href="{{ $url }}" class="affiliate-link" target="_blank" rel="nofollow sponsored"
+     data-affiliate-partner="{{ $partner }}" data-cta-id="{{ $ctaId }}" data-utm-content="{{ $utmContent }}">
+    {{- $text -}}
+  </a>
+</span>
+
+{{- else -}}
+{{- /* button (default) */ -}}
+<div class="affiliate-cta-button-wrap" data-cta-id="{{ $ctaId }}" data-affiliate-partner="{{ $partner }}" data-variant="button">
+  <a href="{{ $url }}" class="affiliate-cta-btn affiliate-link" target="_blank" rel="nofollow sponsored"
+     data-affiliate-partner="{{ $partner }}" data-cta-id="{{ $ctaId }}" data-utm-content="{{ $utmContent }}">
+    <span class="affiliate-cta-btn-text">{{ $text }}</span>
+    <span class="affiliate-cta-btn-arrow">→</span>
+  </a>
+  <p class="affiliate-cta-disclosure"><small><em>Affiliate link — we may earn a commission at no extra cost to you.</em></small></p>
+</div>
+{{- end -}}
+
+<style>
+.affiliate-cta-button-wrap { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.25rem; margin: 1rem 0; }
+.affiliate-cta-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.4rem; border-radius: 8px;
+  background: linear-gradient(135deg, #FF6B35 0%, #e85a2a 100%);
+  color: #fff !important; font-weight: 700; font-size: 0.95rem;
+  text-decoration: none !important; box-shadow: 0 3px 12px rgba(255,107,53,0.3);
+  transition: all 0.2s ease;
+}
+.affiliate-cta-btn:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(255,107,53,0.4); }
+.affiliate-cta-btn-arrow { transition: transform 0.2s ease; }
+.affiliate-cta-btn:hover .affiliate-cta-btn-arrow { transform: translateX(3px); }
+
+.affiliate-cta-card {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;
+  padding: 1rem 1.25rem; margin: 1.25rem 0;
+}
+.affiliate-cta-card-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.affiliate-cta-card-text { display: flex; flex-direction: column; }
+.affiliate-cta-card-text strong { color: #1e293b; font-size: 1rem; }
+.affiliate-cta-card-sub { color: #64748b; font-size: 0.8rem; }
+.affiliate-cta-card-btn {
+  display: inline-block; padding: 0.55rem 1.1rem; border-radius: 6px;
+  background: #FF6B35; color: #fff !important; font-weight: 600; font-size: 0.85rem;
+  text-decoration: none !important; transition: background 0.2s;
+}
+.affiliate-cta-card-btn:hover { background: #e85a2a; }
+
+.affiliate-cta-inline { color: #FF6B35; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.affiliate-cta-inline:hover { color: #e85a2a; }
+
+.affiliate-cta-disclosure { margin: 0.25rem 0 0; color: #94a3b8; }
+</style>
