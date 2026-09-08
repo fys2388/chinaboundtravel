@@ -1030,6 +1030,17 @@
       "error_message": "2026-09-07T08:01:42.9537601Z ##[endgroup]\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9760619Z ✅ 时间范围选择器已注入 index.html\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9761305Z    GA4 ranges: N/A\nrefresh-dashboard\tInject time range selector\t2026-09-07T08:01:42.9761920Z    GSC ranges: N/A\nrefresh-dashboard\tPush and trigger deploy\t﻿2026-09-07T08:01:42.9819237Z ##[group]Run mkdir -p static/ops-dashboard\nrefresh-dashboard\tPush and trigger deploy\t2026-09-07T08:01:",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260908_053745",
+      "timestamp": "2026-09-08T05:37:45.285746",
+      "workflow_name": "Daily Health Check",
+      "run_id": "34191303652",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": ".2 pycparser-3.0 python-dotenv-1.2.3 requests-2.34.2 urllib3-2.7.0\nhealth-check\tRun health check\t﻿2026-09-08T05:37:09.7355256Z ##[group]Run python scripts/health_check.py\nhealth-check\tRun health check\t2026-09-08T05:37:09.7355684Z ^[[36;1mpython scripts/health_check.py^[[0m\nhealth-check\tRun health check\t2026-09-08T05:37:09.7398699Z shell: /usr/bin/bash -e {0}\nhealth-check\tRun health check\t2026-09-08T05:37:09.7399008Z env:\nhealth-check\tRun health check\t2026-09-08T05:37:09.7399306Z   pythonLocation",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
