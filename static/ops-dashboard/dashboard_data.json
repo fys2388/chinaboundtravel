@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08 18:31:10",
+  "generated_at": "2026-09-08 18:44:58",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 161,
+    "response_ms": 342,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,8 +113,8 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-08T10:14:09Z",
-      "last_event": "push"
+      "last_run": "2026-09-08T10:31:31Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "email-growth-loop.yml",
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-08T10:14:59Z",
+      "last_run": "2026-09-08T10:31:37Z",
       "last_event": "workflow_run"
     },
     {
@@ -158,8 +158,8 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-08T10:14:09Z",
-      "last_event": "push"
+      "last_run": "2026-09-08T10:35:02Z",
+      "last_event": "schedule"
     },
     {
       "file": "gsc-index-submit.yml",
@@ -212,8 +212,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-08T10:30:58Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-08T10:44:42Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-08 10:31",
+    "checked_at": "2026-09-08 10:45",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
