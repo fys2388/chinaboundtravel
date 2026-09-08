@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08 18:01:09",
+  "generated_at": "2026-09-08 18:31:10",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 147,
+    "response_ms": 161,
     "server": "cloudflare"
   },
   "workflows": [
@@ -12,6 +12,15 @@
       "file": "affiliate-gap-audit.yml",
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
+      "frequency": "每周",
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
+    },
+    {
+      "file": "affiliate-optimize.yml",
+      "name": "Affiliate CTA Optimization (Closed Loop 3)",
+      "id": "affiliate-optimize",
       "frequency": "每周",
       "last_status": "scheduled",
       "last_run": "",
@@ -45,6 +54,15 @@
       "last_event": "manual"
     },
     {
+      "file": "content-auto-optimize.yml",
+      "name": "Content Auto-Optimization Loop",
+      "id": "content-auto-optimize",
+      "frequency": "每周",
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
+    },
+    {
       "file": "content-quality-audit.yml",
       "name": "Content Quality Audit (2.0 内容质量综合巡检)",
       "id": "content-quality-audit",
@@ -68,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T10:56:19Z",
+      "last_run": "2026-09-08T10:13:23Z",
       "last_event": "schedule"
     },
     {
@@ -95,8 +113,17 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-08T09:31:27Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-08T10:14:09Z",
+      "last_event": "push"
+    },
+    {
+      "file": "email-growth-loop.yml",
+      "name": "Email Growth Loop (Closed Loop 4)",
+      "id": "email-growth-loop",
+      "frequency": "每周",
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "env-check.yml",
@@ -113,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-08T09:31:32Z",
+      "last_run": "2026-09-08T10:14:59Z",
       "last_event": "workflow_run"
     },
     {
@@ -131,7 +158,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-08T08:06:32Z",
+      "last_run": "2026-09-08T10:14:09Z",
       "last_event": "push"
     },
     {
@@ -185,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-08T10:00:58Z",
+      "last_run": "2026-09-08T10:30:58Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -219,6 +246,15 @@
       "file": "seo-audit.yml",
       "name": "SEO Audit (2.0 SEO综合审计)",
       "id": "seo-audit",
+      "frequency": "每周",
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
+    },
+    {
+      "file": "seo-growth-loop.yml",
+      "name": "SEO Growth Auto-Loop",
+      "id": "seo-growth-loop",
       "frequency": "每周",
       "last_status": "scheduled",
       "last_run": "",
@@ -325,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-08 10:01",
+    "checked_at": "2026-09-08 10:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -476,21 +512,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 272,
-      "sessions": 358,
-      "pageviews": 804,
-      "date": "2026-09-06"
+      "visitors": 281,
+      "sessions": 376,
+      "pageviews": 838,
+      "date": "2026-09-07"
     },
     "gsc_28d": {
-      "impressions": 599,
+      "impressions": 609,
       "clicks": 0,
-      "date": "2026-09-04"
+      "date": "2026-09-05"
     },
     "content": {
-      "total_articles": 61,
-      "with_affiliate": 35,
-      "avg_word_count": 1902,
-      "date": "2026-09-07"
+      "total_articles": 63,
+      "with_affiliate": 36,
+      "avg_word_count": 1977,
+      "date": "2026-09-08"
     },
     "ga4_daily": {
       "visitors": 4,
