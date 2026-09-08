@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-08T05:49:37",
+  "updated_at": "2026-09-08T17:15:51",
   "items": [
     {
       "id": "soc-000001",
@@ -100,8 +100,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -968,8 +968,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1220,8 +1220,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1360,8 +1360,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3950,7 +3950,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nIs China Safe in 2026? Honest Guide | Research-backed facts about Tea every traveler should know.\n\nIs China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Is China Safe in 2026? Honest Guide' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-pinterest-knowledge-1d39d313.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -3965,7 +3965,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "3f38f78b84e1"
+      "_sig": "3f38f78b84e1",
+      "image_generated": true
     },
     {
       "id": "soc-000147",
@@ -3975,7 +3976,7 @@
       "type": "tip",
       "caption": "Essential Tea tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Is China Safe in 2026? Honest Guide' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-x-tip-e9e8f389.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -3990,7 +3991,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "10228d79a1cd"
+      "_sig": "10228d79a1cd",
+      "image_generated": true
     },
     {
       "id": "soc-000148",
@@ -4000,7 +4002,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about Tea — practical lessons from the ground.\n\n• Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'Is China Safe in 2026? Honest Guide' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-fb-story-6fcdc1e9.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4015,7 +4017,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "dfd068c92ed0"
+      "_sig": "dfd068c92ed0",
+      "image_generated": true
     },
     {
       "id": "soc-000149",
@@ -4025,7 +4028,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Tea: what to see and capture.\n\n· Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how\n\nRead the full guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Is China Safe in 2026? Honest Guide' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-ig-visual-3cbe2412.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -4040,7 +4043,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "3f1e64113bb9"
+      "_sig": "3f1e64113bb9",
+      "image_generated": true
     },
     {
       "id": "soc-000150",
@@ -4050,7 +4054,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nIs China Safe in 2026? Honest Guide | Everything you need to know about Tea — in one practical guide.\n\nIs China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Is China Safe in 2026? Honest Guide' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-pinterest-conversion-ebbc1a5a.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -4065,7 +4069,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "c1273f3b0981"
+      "_sig": "c1273f3b0981",
+      "image_generated": true
     },
     {
       "id": "soc-000151",
@@ -6691,6 +6696,381 @@
         "platform": "pinterest"
       },
       "_sig": "c5c8e60d41d0"
+    },
+    {
+      "id": "soc-000256",
+      "source_article": "china-transportation-card-guide",
+      "source_title": "China Transportation Card Guide (2026)",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Transport every traveler should know.\n\n· Do Foreign Travelers Need a Transportation Card in China?\n· China Transportation Card Options Compared\n· 1. Metro IC Cards Physical Transit Cards\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-card-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional knowledge social graphic for 'China Transportation Card Guide (2026)' (platform ig). Scene: Chinese train ticket and platform. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in B.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-subway-guide.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "17db4a642ef4"
+    },
+    {
+      "id": "soc-000257",
+      "source_article": "china-transportation-card-guide",
+      "source_title": "China Transportation Card Guide (2026)",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\nChina Transportation Card Guide (2026) | Essential Transport tips most first-time visitors miss.\n\nHow transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in Beijing | Keywords: payment\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-card-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional tip social graphic for 'China Transportation Card Guide (2026)' (platform pinterest). Scene: Chinese train ticket and platform. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in B.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-subway-guide.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "327e452de70e"
+    },
+    {
+      "id": "soc-000258",
+      "source_article": "china-transportation-card-guide",
+      "source_title": "China Transportation Card Guide (2026)",
+      "platform": "x",
+      "type": "story",
+      "caption": "What travelers discover about Transport — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/china-transportation-card-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional story social graphic for 'China Transportation Card Guide (2026)' (platform x). Scene: Chinese train ticket and platform. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in B.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-subway-guide.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "1eb0a4097af9"
+    },
+    {
+      "id": "soc-000259",
+      "source_article": "china-transportation-card-guide",
+      "source_title": "China Transportation Card Guide (2026)",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Transport: what to see and capture.\n\n• How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-card-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional visual social graphic for 'China Transportation Card Guide (2026)' (platform fb). Scene: Chinese train ticket and platform. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in B.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-subway-guide.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "c7499bf61023"
+    },
+    {
+      "id": "soc-000260",
+      "source_article": "china-transportation-card-guide",
+      "source_title": "China Transportation Card Guide (2026)",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Transport — in one practical guide.\n\n· China Transportation Card Guide (2026)\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-card-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional conversion social graphic for 'China Transportation Card Guide (2026)' (platform ig). Scene: Chinese train ticket and platform. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How transportation cards work in China in 2026: metro IC cards, transit apps, and mobile payment options compared for foreign travelers in B.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-subway-guide.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "d4e4650e05bd"
+    },
+    {
+      "id": "soc-000261",
+      "source_article": "internet-connection-china-esim-vpn-guide",
+      "source_title": "Internet in China: eSIM vs SIM vs VPN (2026)",
+      "platform": "pinterest",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nInternet in China: eSIM vs SIM vs VPN (2026) | Research-backed facts about Internet every traveler should know.\n\nTop-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall | Keywords: internet\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional knowledge social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "c2864527fc65"
+    },
+    {
+      "id": "soc-000262",
+      "source_article": "internet-connection-china-esim-vpn-guide",
+      "source_title": "Internet in China: eSIM vs SIM vs VPN (2026)",
+      "platform": "x",
+      "type": "tip",
+      "caption": "Essential Internet tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional tip social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "a03544e78b71"
+    },
+    {
+      "id": "soc-000263",
+      "source_article": "internet-connection-china-esim-vpn-guide",
+      "source_title": "Internet in China: eSIM vs SIM vs VPN (2026)",
+      "platform": "fb",
+      "type": "story",
+      "caption": "🔥 linkedin\n\n💡 What travelers discover about Internet — practical lessons from the ground.\n\n• Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional story social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "b24b0e641ef7"
+    },
+    {
+      "id": "soc-000264",
+      "source_article": "internet-connection-china-esim-vpn-guide",
+      "source_title": "Internet in China: eSIM vs SIM vs VPN (2026)",
+      "platform": "ig",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\nVisual guide to Internet: what to see and capture.\n\n· Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and\n\nRead the full guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional visual social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "6d8fb93f0992"
+    },
+    {
+      "id": "soc-000265",
+      "source_article": "internet-connection-china-esim-vpn-guide",
+      "source_title": "Internet in China: eSIM vs SIM vs VPN (2026)",
+      "platform": "pinterest",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nInternet in China: eSIM vs SIM vs VPN (2026) | Everything you need to know about Internet — in one practical guide.\n\nTop-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall | Keywords: internet\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional conversion social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "4d183b6e9a20"
+    },
+    {
+      "id": "soc-000266",
+      "source_article": "western-sichuan-overland-camping-route",
+      "source_title": "Western Sichuan Overland Camping: 7-Day Route",
+      "platform": "x",
+      "type": "knowledge",
+      "caption": "Research-backed facts about Chengdu every traveler should know. → https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional knowledge social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "5b6aa250197b"
+    },
+    {
+      "id": "soc-000267",
+      "source_article": "western-sichuan-overland-camping-route",
+      "source_title": "Western Sichuan Overland Camping: 7-Day Route",
+      "platform": "fb",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\n💡 Essential Chengdu tips most first-time visitors miss.\n\n• Western Sichuan Overland Camping Route: 7 Days Through China's Most Epic Wilderness\n• Why Western Sichuan?\n• Pre-Trip Prep: What You Really Need to Pack\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional tip social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "0caee7d9355f"
+    },
+    {
+      "id": "soc-000268",
+      "source_article": "western-sichuan-overland-camping-route",
+      "source_title": "Western Sichuan Overland Camping: 7-Day Route",
+      "platform": "ig",
+      "type": "story",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Chengdu — practical lessons from the ground.\n\n· 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow\n\nRead the full guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional story social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "16ddcd2f4f76"
+    },
+    {
+      "id": "soc-000269",
+      "source_article": "western-sichuan-overland-camping-route",
+      "source_title": "Western Sichuan Overland Camping: 7-Day Route",
+      "platform": "pinterest",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\nWestern Sichuan Overland Camping: 7-Day Route | Visual guide to Chengdu: what to see and capture.\n\n7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional visual social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "4fba829a9c7a"
+    },
+    {
+      "id": "soc-000270",
+      "source_article": "western-sichuan-overland-camping-route",
+      "source_title": "Western Sichuan Overland Camping: 7-Day Route",
+      "platform": "x",
+      "type": "conversion",
+      "caption": "Everything you need to know about Chengdu — in one practical guide. → https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional conversion social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "c33a61aa19cb"
     }
   ]
 }
