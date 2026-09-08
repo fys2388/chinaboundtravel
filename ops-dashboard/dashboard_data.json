@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08 04:43:14",
+  "generated_at": "2026-09-08 09:01:25",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 313,
+    "response_ms": 264,
     "server": "cloudflare"
   },
   "workflows": [
@@ -95,7 +95,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-07T18:01:48Z",
+      "last_run": "2026-09-07T20:43:32Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -113,7 +113,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T20:26:17Z",
+      "last_run": "2026-09-08T00:31:32Z",
       "last_event": "workflow_run"
     },
     {
@@ -122,8 +122,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T05:25:52Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-08T00:31:05Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "geo-check.yml",
@@ -185,8 +185,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-07T20:43:02Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-08T01:01:12Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -325,7 +325,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 20:43",
+    "checked_at": "2026-09-08 01:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -338,49 +338,49 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 2
       },
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 8
       },
       {
         "name": "网站健康巡检",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-08",
         "max_age_days": 1
       }
     ],
@@ -493,12 +493,12 @@
       "date": "2026-09-07"
     },
     "ga4_daily": {
-      "visitors": 10,
-      "sessions": 18,
-      "pageviews": 38,
-      "new_users": 517,
-      "bounce_rate": 65.4,
-      "date": "2026-09-07",
+      "visitors": 2,
+      "sessions": 2,
+      "pageviews": 2,
+      "new_users": 524,
+      "bounce_rate": 66.0,
+      "date": "2026-09-08",
       "status": "OK",
       "daily": [
         {
@@ -955,44 +955,50 @@
           "date": "2026-09-07",
           "sessions": 18,
           "activeUsers": 10,
-          "pageviews": 38
+          "pageviews": 41
+        },
+        {
+          "date": "2026-09-08",
+          "sessions": 2,
+          "activeUsers": 2,
+          "pageviews": 2
         }
       ],
       "ranges": {
         "today": {
-          "visitors": 10,
-          "sessions": 18,
-          "pageviews": 38,
-          "date_range": "2026-09-07 ~ 2026-09-07",
+          "visitors": 2,
+          "sessions": 2,
+          "pageviews": 2,
+          "date_range": "2026-09-08 ~ 2026-09-08",
           "days": 1
         },
         "yesterday": {
-          "visitors": 17,
-          "sessions": 24,
-          "pageviews": 38,
-          "date_range": "2026-09-06 ~ 2026-09-06",
+          "visitors": 10,
+          "sessions": 18,
+          "pageviews": 41,
+          "date_range": "2026-09-07 ~ 2026-09-07",
           "days": 1
         },
         "7d": {
-          "visitors": 84,
-          "sessions": 132,
-          "pageviews": 326,
-          "date_range": "2026-09-01 ~ 2026-09-07",
+          "visitors": 72,
+          "sessions": 113,
+          "pageviews": 289,
+          "date_range": "2026-09-02 ~ 2026-09-08",
           "days": 7
         },
         "30d": {
-          "visitors": 317,
-          "sessions": 385,
-          "pageviews": 872,
-          "date_range": "2026-08-08 ~ 2026-09-07",
+          "visitors": 315,
+          "sessions": 381,
+          "pageviews": 852,
+          "date_range": "2026-08-09 ~ 2026-09-08",
           "days": 30
         },
         "90d": {
-          "visitors": 608,
-          "sessions": 742,
-          "pageviews": 1988,
-          "date_range": "2026-06-16 ~ 2026-09-07",
-          "days": 76
+          "visitors": 610,
+          "sessions": 744,
+          "pageviews": 1993,
+          "date_range": "2026-06-16 ~ 2026-09-08",
+          "days": 77
         },
         "last_month": {
           "visitors": 279,
