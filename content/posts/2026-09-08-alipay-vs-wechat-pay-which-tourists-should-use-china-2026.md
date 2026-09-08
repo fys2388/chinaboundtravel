@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-a1b2c3d4e5f6"
-title: "Alipay vs WeChat Pay: Which Payment App Should Tourists Use in China? (2026 Comparison)"
+title: "Alipay vs WeChat Pay: Which Payment App"
 date: "2026-09-08T10:00:00+08:00"
 lastmod: "2026-09-08T10:00:00+08:00"
 author: "Joran"
