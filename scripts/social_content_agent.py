@@ -118,6 +118,11 @@ SCHEMA_VERSION = 1
 TYPES = ("knowledge", "tip", "story", "visual", "conversion")
 PLATFORMS = ("ig", "pinterest", "x", "fb")
 
+# 短链接服务配置（Cloudflare Worker + KV）
+SHORT_LINK_WORKER_URL = os.environ.get("SHORT_LINK_WORKER_URL", "https://buffer-worker.chinaboundtravel.com")
+SHORT_LINK_API_KEY = os.environ.get("SHORT_LINK_API_KEY", "")
+SHORT_LINK_ENABLED = bool(SHORT_LINK_API_KEY and SHORT_LINK_WORKER_URL)
+
 # P1-AI-OPS-02: Social Learning闭环 - 策略指导函数
 def get_strategy_guidance(platform: str) -> dict:
     """获取特定平台的策略指导（基于Social Learning闭环学习结果）"""
@@ -421,9 +426,39 @@ def validate_copy(text: str):
     return ok, res
 
 
+def generate_short_url(long_url: str) -> str:
+    """调用 Cloudflare Worker 创建短链接，失败回退到长链接。"""
+    if not SHORT_LINK_ENABLED:
+        return long_url
+    try:
+        import urllib.request
+        import json
+        payload = json.dumps({"url": long_url}).encode("utf-8")
+        req = urllib.request.Request(
+            f"{SHORT_LINK_WORKER_URL}/api/shorten",
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": SHORT_LINK_API_KEY,
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            short_url = result.get("short_url", "")
+            if short_url:
+                logger.info("短链接生成: %s -> %s", long_url[:60], short_url)
+                return short_url
+    except Exception as e:
+        logger.warning("短链接生成失败，回退长链接: %s", e)
+    return long_url
+
+
 def generate_one(article: dict, ctype: str, platform: str, campaign: str) -> dict:
     """生成单条合规文案（品牌校验，最多 3 轮重写）。"""
     utm_url = build_utm(article["url"], platform, campaign)
+    # 使用短链接（社媒分享更美观，保留 UTM 参数用于追踪）
+    utm_url = generate_short_url(utm_url)
     last_res = None
     final_text = None
     for attempt in range(1, REWRITE_ATTEMPTS + 1):

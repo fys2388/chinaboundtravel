@@ -86,6 +86,16 @@ export default {
       });
     }
 
+    // 短链接跳转端点（/s/:code）
+    if (url.pathname.startsWith('/s/') && request.method === 'GET') {
+      return await handleShortLinkRedirect(url, env);
+    }
+
+    // 创建短链接端点（/api/shorten）
+    if (url.pathname === '/api/shorten' && request.method === 'POST') {
+      return await handleCreateShortLink(request, env);
+    }
+
     // 查询渠道端点（调试用）
     if (url.pathname === '/channels') {
       return await handleQueryChannels(env);
@@ -1445,3 +1455,133 @@ async function handleGA4Debug(env) {
 }
 
 export { buildTwitterText, xCharCount };
+
+
+// ============ 短链接功能 ============
+
+/**
+ * 短链接跳转：从 KV 查找长 URL 并 302 跳转
+ */
+async function handleShortLinkRedirect(url, env) {
+  const code = url.pathname.replace('/s/', '').split('/')[0];
+  if (!code || code.length < 3) {
+    return new Response('Short link not found', { status: 404 });
+  }
+
+  const kvKey = `short:${code}`;
+  let longUrl = null;
+
+  try {
+    longUrl = await env.KV_STORE.get(kvKey);
+  } catch (e) {
+    console.error('KV read error:', e.message);
+  }
+
+  if (!longUrl) {
+    return new Response('Short link not found', {
+      status: 404,
+      headers: { 'Content-Type': 'text/plain' }
+    });
+  }
+
+  // 记录点击计数（异步，不阻塞跳转）
+  try {
+    const countKey = `short:${code}:clicks`;
+    const current = parseInt(await env.KV_STORE.get(countKey) || '0', 10);
+    await env.KV_STORE.put(countKey, String(current + 1));
+  } catch (e) {
+    // 计数失败不影响跳转
+  }
+
+  return Response.redirect(longUrl, 302);
+}
+
+/**
+ * 创建短链接：生成长 URL → 短代码映射，存入 KV
+ */
+async function handleCreateShortLink(request, env) {
+  // 简单认证：检查 x-api-key header
+  const apiKey = request.headers.get('x-api-key') || '';
+  const expectedKey = env.SHORT_LINK_API_KEY || '';
+  if (expectedKey && apiKey !== expectedKey) {
+    return jsonResponse({ error: 'Unauthorized' }, 401);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch (e) {
+    return jsonResponse({ error: 'Invalid JSON body' }, 400);
+  }
+
+  const longUrl = body.url || body.long_url || '';
+  if (!longUrl || !longUrl.startsWith('http')) {
+    return jsonResponse({ error: 'Valid URL required' }, 400);
+  }
+
+  // 自定义短代码（可选）
+  let customCode = body.code || body.custom_code || '';
+
+  // 生成短代码
+  let code;
+  if (customCode) {
+    code = customCode.toLowerCase().replace(/[^a-z0-9-]/g, '').substring(0, 16);
+    if (code.length < 3) {
+      return jsonResponse({ error: 'Custom code too short (min 3 chars)' }, 400);
+    }
+  } else {
+    // 自动生成：基于 URL 哈希 + 随机后缀
+    code = generateShortCode(longUrl);
+  }
+
+  const kvKey = `short:${code}`;
+
+  // 检查是否已存在
+  try {
+    const existing = await env.KV_STORE.get(kvKey);
+    if (existing && existing !== longUrl) {
+      // 已存在但指向不同 URL，生成新代码
+      code = generateShortCode(longUrl + Date.now());
+    }
+  } catch (e) {
+    console.error('KV check error:', e.message);
+  }
+
+  // 存入 KV
+  try {
+    await env.KV_STORE.put(`short:${code}`, longUrl);
+    await env.KV_STORE.put(`short:${code}:clicks`, '0');
+  } catch (e) {
+    return jsonResponse({ error: 'Failed to store short link: ' + e.message }, 500);
+  }
+
+  const shortUrl = `https://buffer-worker.chinaboundtravel.com/s/${code}`;
+
+  return jsonResponse({
+    short_url: shortUrl,
+    code: code,
+    long_url: longUrl,
+    clicks: 0
+  });
+}
+
+/**
+ * 生成短代码：基于 URL 哈希的 6 字符编码
+ */
+function generateShortCode(url) {
+  // 简单哈希：FNV-1a
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < url.length; i++) {
+    hash ^= url.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  // 转换为 base36（6 字符）
+  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let code = '';
+  let h = Math.abs(hash);
+  for (let i = 0; i < 6; i++) {
+    code += chars[h % chars.length];
+    h = Math.floor(h / chars.length);
+  }
+  return code;
+}
