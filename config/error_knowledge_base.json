@@ -1041,6 +1041,28 @@
       "error_message": ".2 pycparser-3.0 python-dotenv-1.2.3 requests-2.34.2 urllib3-2.7.0\nhealth-check\tRun health check\t﻿2026-09-08T05:37:09.7355256Z ##[group]Run python scripts/health_check.py\nhealth-check\tRun health check\t2026-09-08T05:37:09.7355684Z ^[[36;1mpython scripts/health_check.py^[[0m\nhealth-check\tRun health check\t2026-09-08T05:37:09.7398699Z shell: /usr/bin/bash -e {0}\nhealth-check\tRun health check\t2026-09-08T05:37:09.7399008Z env:\nhealth-check\tRun health check\t2026-09-08T05:37:09.7399306Z   pythonLocation",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260908_073634",
+      "timestamp": "2026-09-08T07:36:34.317938",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "34200134895",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "09-08T07:36:07.7396141Z '49c02f23ab3785af78b6bb9942a0b7ed6643ad77'\npost-deploy\tSetup Hugo\t﻿2026-09-08T07:36:07.7614846Z ##[group]Run peaceiris/actions-hugo@v3\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615174Z with:\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615389Z   hugo-version: 0.147.0\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615618Z   extended: true\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615841Z ##[endgroup]\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.8387679Z Hugo version: 0.147.0",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "err_20260908_073634",
+      "timestamp": "2026-09-08T07:36:34.319211",
+      "workflow_name": "auto_router",
+      "run_id": "cli",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "09-08T07:36:07.7396141Z '49c02f23ab3785af78b6bb9942a0b7ed6643ad77'\npost-deploy\tSetup Hugo\t﻿2026-09-08T07:36:07.7614846Z ##[group]Run peaceiris/actions-hugo@v3\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615174Z with:\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615389Z   hugo-version: 0.147.0\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615618Z   extended: true\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615841Z ##[endgroup]\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.8387679Z Hugo version: 0.147.0",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
