@@ -436,11 +436,16 @@ async function handlePublish(request, env, ctx) {
       content: `文章: ${title}\n成功: ${allResults.success.join(', ') || '无'}\n失败: ${allResults.failed.join(', ') || '无'}`
     });
 
+    const publishError = allResults.success.length === 0
+      ? (allResults.details.map(d => d.platform + ': ' + (d.error || 'unknown')).slice(0, 3).join('; ') || 'all platforms failed')
+      : null;
+
     return jsonResponse({
       success: allResults.success.length > 0,
       title,
       platforms: allResults,
-      dailyCount: dailyCount + 1
+      dailyCount: dailyCount + 1,
+      ...(publishError ? { error: publishError } : {})
     });
 
   } catch (error) {

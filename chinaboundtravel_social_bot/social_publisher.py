@@ -699,6 +699,17 @@ def send_feishu_notification(results: list):
             raw = r.get("raw_response") or {}
             if isinstance(raw, dict):
                 err = raw.get("error", "") or raw.get("message", "") or ""
+                if not err:
+                    platforms = raw.get("platforms") or {}
+                    details = platforms.get("details") or []
+                    detail_msgs = []
+                    for d in details:
+                        if isinstance(d, dict) and d.get("error"):
+                            detail_msgs.append(f"{d.get('platform','?')}: {d['error'][:80]}")
+                    if detail_msgs:
+                        err = "; ".join(detail_msgs)
+                    elif platforms.get("failed"):
+                        err = f"平台失败: {', '.join(platforms['failed'])}（Buffer渠道可能已断开）"
             detail = f"Worker调用失败: {err}" if err else "Worker调用失败"
             summary_lines.append(f"   失败: {failed_platforms if failed_platforms else detail}")
 
