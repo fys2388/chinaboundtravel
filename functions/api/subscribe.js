@@ -107,7 +107,8 @@ async function sendLeadMagnetEmail(resendApiKey, email, magnet, from) {
   });
   if (!resp.ok) {
     const text = await resp.text();
-    return { ok: false, status: resp.status, detail: text.slice(0, 200) };
+    const ct = resp.headers.get('content-type') || '';
+    return { ok: false, status: resp.status, detail: text.slice(0, 300), contentType: ct };
   }
   return { ok: true, status: resp.status };
 }
@@ -166,7 +167,7 @@ export async function onRequestPost({ request, env }) {
     if (resendApiKey) {
       const em = await sendLeadMagnetEmail(resendApiKey, email, magnet, from);
       if (em.ok) result.delivered_pdf = true;
-      else result.detail = (result.detail + ` Resend:${em.status}${em.detail ? ':' + em.detail : ''}`).trim();
+      else result.detail = (result.detail + ` Resend:${em.status}:ct=${em.contentType || 'none'}:len=${em.detail ? em.detail.length : 0}:body=[${(em.detail || '').slice(0, 200)}]`).trim();
     } else {
       result.detail = (result.detail + ' Resend:not_configured').trim();
     }
