@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-07T18:14:42",
+  "updated_at": "2026-09-08T05:49:37",
   "items": [
     {
       "id": "soc-000001",
@@ -64,7 +64,7 @@
       "source_title": "China 144-Hour Visa-Free Transit (2026 Guide)",
       "platform": "x",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story. Practical, research-based guidance for international travelers planning a China trip in → #ChinaTravel",
+      "caption": "What travelers discover about Visa — practical lessons from the ground. → https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China 144-Hour Visa-Free Transit (2026 Guide)'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/144-hour-visa-free-transit-guide-x-story-0392add0.jpg",
       "utm_params": {
@@ -73,7 +73,7 @@
         "utm_campaign": "cbt_social_20260830"
       },
       "status": "已发布",
-      "publish_date": "2026-09-01",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -82,7 +82,9 @@
         "platform": "x"
       },
       "_sig": "5db3b0bd28b3",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000004",
@@ -90,7 +92,7 @@
       "source_title": "China 144-Hour Visa-Free Transit (2026 Guide)",
       "platform": "fb",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n• China's 144-hour visa-free transit policy in 2026: eligible countries, participating cities, application process, and tips for making the most of your 6 days\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/",
       "image_prompt": "Professional visual social graphic for 'China 144-Hour Visa-Free Transit (2026 Guide)'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/144-hour-visa-free-transit-guide-fb-visual-e63b2ba4.jpg",
       "utm_params": {
@@ -98,8 +100,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -108,7 +110,9 @@
         "platform": "fb"
       },
       "_sig": "0b6bd095055b",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000005",
@@ -200,7 +204,7 @@
       "source_title": "China Photography Guide: Best Spots & Tips",
       "platform": "fb",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n• China photography guide: gear, lighting, composition, and the best photo locations across 12 destinations, researched and verified by our editorial team\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 What travelers discover about Photography — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
       "image_prompt": "Professional story social graphic for 'China Photography Guide: Best Spots & Tips'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-fb-story-bfd767cb.jpg",
       "utm_params": {
@@ -208,8 +212,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -218,7 +222,9 @@
         "platform": "fb"
       },
       "_sig": "d721ededb3d0",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000009",
@@ -226,7 +232,7 @@
       "source_title": "China Photography Guide: Best Spots & Tips",
       "platform": "ig",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n· China photography guide: gear, lighting, composition, and the best photo locations across 12 destinations, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nVisual guide to Photography: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China Photography Guide: Best Spots & Tips'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-ig-visual-235ffc17.jpg",
       "utm_params": {
@@ -234,8 +240,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -244,7 +250,9 @@
         "platform": "ig"
       },
       "_sig": "df864ceedf38",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000010",
@@ -336,7 +344,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "ig",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n· How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Bargain — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'China Bargaining Guide: How to Haggle & Shop'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-ig-story-099c9d20.jpg",
       "utm_params": {
@@ -344,8 +352,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -354,7 +362,9 @@
         "platform": "ig"
       },
       "_sig": "0e238d3f402f",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000014",
@@ -362,7 +372,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "China Bargaining Guide: How to Haggle & Shop | China visuals that belong on your travel moodboard.\n\nHow to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our editorial team | Keywords: etiquette\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChina Bargaining Guide: How to Haggle & Shop | Visual guide to Bargain: what to see and capture.\n\nChina Bargaining Guide: How to Haggle & Shop\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'China Bargaining Guide: How to Haggle & Shop'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-pinterest-visual-3003adab.jpg",
       "utm_params": {
@@ -370,8 +380,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -380,7 +390,9 @@
         "platform": "pinterest"
       },
       "_sig": "f3ec0c6c7b19",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000015",
@@ -500,7 +512,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "x",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard. China packing list 2026: what to bring and what to leave at home, an essential checklist → #ChinaTravel",
+      "caption": "Visual guide to Packing: what to see and capture. → https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Packing List 2026: What to Bring'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-x-visual-df7270d7.jpg",
       "utm_params": {
@@ -508,8 +520,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -518,7 +530,9 @@
         "platform": "x"
       },
       "_sig": "d9d7ffc3b51c",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000020",
@@ -526,7 +540,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "fb",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book.\n\n• China Packing List 2026: What to Bring\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Everything you need to know about Packing — in one practical guide.\n\n• China Packing List 2026: What to Bring\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
       "image_prompt": "Professional conversion social graphic for 'China Packing List 2026: What to Bring'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-fb-conversion-6a186784.jpg",
       "utm_params": {
@@ -534,8 +548,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -544,7 +558,9 @@
         "platform": "fb"
       },
       "_sig": "20c320dfc9e2",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000021",
@@ -636,7 +652,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years of History",
       "platform": "fb",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n• From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/",
       "image_prompt": "Professional visual social graphic for 'How Chinese Food Evolved: 2 Million Years of History'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-fb-visual-97f06a67.jpg",
       "utm_params": {
@@ -644,8 +660,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -654,7 +670,9 @@
         "platform": "fb"
       },
       "_sig": "7f7e3409c3a2",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000025",
@@ -662,7 +680,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years of History",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book.\n\n· How Chinese Food Evolved: 2 Million Years\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Food — in one practical guide.\n\n· How Chinese Food Evolved: 2 Million Years of History\n\nRead the full guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'How Chinese Food Evolved: 2 Million Years of History'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-ig-conversion-3f8d3e6f.jpg",
       "utm_params": {
@@ -670,8 +688,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -680,7 +698,9 @@
         "platform": "ig"
       },
       "_sig": "ce194a65b516",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000026",
@@ -772,7 +792,7 @@
       "source_title": "Chinese Tea Culture: Where to Experience Authentic Teahouses",
       "platform": "ig",
       "type": "visual",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n· Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nVisual guide to Tea: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chinese Tea Culture: Where to Experience Authentic Teahouses'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--ig-visual-775e1c13.jpg",
       "utm_params": {
@@ -780,8 +800,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -790,7 +810,9 @@
         "platform": "ig"
       },
       "_sig": "ff0705f7666e",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000030",
@@ -798,7 +820,7 @@
       "source_title": "Chinese Tea Culture: Where to Experience Authentic Teahouses",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "Chinese Tea Culture: Where to Experience Authentic Teahouses | Save time and money on your next China trip — grab the step-by-step guide before you book.\n\nfor travelers visiting China. what you need to know before your trip from on-the-ground\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChinese Tea Culture: Where to Experience Authentic Teahouses | Everything you need to know about Tea — in one practical guide.\n\nChinese Tea Culture: Where to Experience Authentic Teahouses\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Chinese Tea Culture: Where to Experience Authentic Teahouses'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--pinterest-conversion-247f79af.jpg",
       "utm_params": {
@@ -806,8 +828,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -816,7 +838,9 @@
         "platform": "pinterest"
       },
       "_sig": "bf629076dcfd",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000031",
@@ -908,7 +932,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "7-Day China Itinerary: Beijing, Xi'an & Shanghai | China's most photogenic corners, captured for your next trip.\n\n7-Day China Itinerary: Beijing, Xi. Research-based practical guidance for international travelers planning a China trip. Check official sources for the lates\n\n📌 Save this for your China trip planning.\n\nFull guide: https://chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai | Visual guide to Itinerary: what to see and capture.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/7-day-china-itinerary-beijing-xian-shang-pinterest-visual-193f6f88.jpg",
       "utm_params": {
@@ -917,7 +941,7 @@
         "utm_campaign": "cbt_social_20260830"
       },
       "status": "已发布",
-      "publish_date": "2026-09-01",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -926,7 +950,9 @@
         "platform": "pinterest"
       },
       "_sig": "81e36fe4c9e7",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000035",
@@ -934,7 +960,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai",
       "platform": "x",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book. 7-Day China Itinerary: Beijing, Xi'an & Shanghai → #ChinaTravel",
+      "caption": "Everything you need to know about Itinerary — in one practical guide. → https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/7-day-china-itinerary-beijing-xian-shang-x-conversion-7579cf99.jpg",
       "utm_params": {
@@ -942,8 +968,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -952,7 +978,9 @@
         "platform": "x"
       },
       "_sig": "bd065679fb90",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000036",
@@ -1016,7 +1044,7 @@
       "source_title": "Hangzhou Travel Guide: West Lake & Tea Culture",
       "platform": "pinterest",
       "type": "story",
-      "caption": "Hangzhou Travel Guide: West Lake & Tea Culture | What first-time visitors learn about China, summed up in one practical story.\n\nResearch-based practical guidance for international travelers planning a China trip. Check official sources f\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nHangzhou Travel Guide: West Lake & Tea Culture | What travelers discover about Tea — practical lessons from the ground.\n\nHangzhou Travel Guide: West Lake & Tea Culture\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/hangzhou-west-lake-tea-culture-g20-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'Hangzhou Travel Guide: West Lake & Tea Culture'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/hangzhou-west-lake-tea-culture-g20-guide-pinterest-story-6882340e.jpg",
       "utm_params": {
@@ -1024,8 +1052,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1034,7 +1062,9 @@
         "platform": "pinterest"
       },
       "_sig": "4762b40e7f24",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000039",
@@ -1042,7 +1072,7 @@
       "source_title": "Hangzhou Travel Guide: West Lake & Tea Culture",
       "platform": "x",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard. Research-based practical guidance for international travelers planning a China trip → #ChinaTravel",
+      "caption": "Visual guide to Tea: what to see and capture. → https://www.chinaboundtravel.com/hangzhou-west-lake-tea-culture-g20-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'Hangzhou Travel Guide: West Lake & Tea Culture'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/hangzhou-west-lake-tea-culture-g20-guide-x-visual-602cf6d7.jpg",
       "utm_params": {
@@ -1050,8 +1080,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1060,7 +1090,9 @@
         "platform": "x"
       },
       "_sig": "d6842550f554",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000040",
@@ -1152,7 +1184,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story. An honest China safety assessment for 2026: crime rates, tourist scams, food safety, → #ChinaTravel",
+      "caption": "What travelers discover about China travel — practical lessons from the ground. → https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Is China Safe for Tourists in 2026? Honest Guide'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-26-is-china-safe-for-tourists-20-x-story-37933323.jpg",
       "utm_params": {
@@ -1161,7 +1193,7 @@
         "utm_campaign": "cbt_social_20260830"
       },
       "status": "已发布",
-      "publish_date": "2026-09-01",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1170,7 +1202,9 @@
         "platform": "x"
       },
       "_sig": "d14c4bcfefd7",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000044",
@@ -1178,7 +1212,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n• An honest China safety assessment for 2026: crime rates, tourist scams, food safety, healthcare access, and emergency contacts\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
       "image_prompt": "Professional visual social graphic for 'Is China Safe for Tourists in 2026? Honest Guide'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-26-is-china-safe-for-tourists-20-fb-visual-5859989f.jpg",
       "utm_params": {
@@ -1186,8 +1220,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1196,7 +1230,9 @@
         "platform": "fb"
       },
       "_sig": "a45ed0b3163c",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000045",
@@ -1316,7 +1352,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for Travelers",
       "platform": "ig",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n· Chinese train stations are bigger than airports, and more confusing\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nVisual guide to Train: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chinese Train Stations: Survival Guide for Travelers'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--ig-visual-a5a87549.jpg",
       "utm_params": {
@@ -1324,8 +1360,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1334,7 +1370,9 @@
         "platform": "ig"
       },
       "_sig": "13a4f09d9bee",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000050",
@@ -1342,7 +1380,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for Travelers",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "Chinese Train Stations: Survival Guide for Travelers | Save time and money on your next China trip — grab the step-by-step guide before you book.\n\nChinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for Travelers | Everything you need to know about Train — in one practical guide.\n\nChinese Train Stations: Survival Guide for Travelers | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Chinese Train Stations: Survival Guide for Travelers'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--pinterest-conversion-5e4adc0f.jpg",
       "utm_params": {
@@ -1351,7 +1389,7 @@
         "utm_campaign": "cbt_social_20260830"
       },
       "status": "已发布",
-      "publish_date": "2026-09-01",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1360,7 +1398,9 @@
         "platform": "pinterest"
       },
       "_sig": "4d683b9d4724",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000051",
@@ -1424,7 +1464,7 @@
       "source_title": "Chinese Food Delivery: Meituan & Ele.me Guide",
       "platform": "ig",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n· Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-food-delivery-meituan-eleme-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'Chinese Food Delivery: Meituan & Ele.me Guide'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-food-delivery-meituan-eleme-guid-ig-story-17bb300a.jpg",
       "utm_params": {
@@ -1432,8 +1472,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1442,7 +1482,9 @@
         "platform": "ig"
       },
       "_sig": "aafb63619e9d",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000054",
@@ -1450,7 +1492,7 @@
       "source_title": "Chinese Food Delivery: Meituan & Ele.me Guide",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "Chinese Food Delivery: Meituan & Ele.me Guide | China visuals that belong on your travel moodboard.\n\nOrder Chinese food delivery with Meituan or Ele.me as a foreigner: what to order, how to pay, and why the courier will call you | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChinese Food Delivery: Meituan & Ele.me Guide | Visual guide to Food: what to see and capture.\n\nChinese Food Delivery: Meituan & Ele.me Guide | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-food-delivery-meituan-eleme-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'Chinese Food Delivery: Meituan & Ele.me Guide'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-food-delivery-meituan-eleme-guid-pinterest-visual-d22e9d63.jpg",
       "utm_params": {
@@ -1458,8 +1500,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1468,7 +1510,9 @@
         "platform": "pinterest"
       },
       "_sig": "9f9035cafdfa",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000055",
@@ -1610,7 +1654,7 @@
       "source_title": "China Tourist Visa Guide: How to Apply in 2026",
       "platform": "fb",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book.\n\n• China Tourist Visa Guide: Apply in 2026\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Everything you need to know about Visa — in one practical guide.\n\n• China Tourist Visa Guide: How to Apply in 2026\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/ultimate-guide-to-china-visa-for-tourists/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/ultimate-guide-to-china-visa-for-tourists/",
       "image_prompt": "Professional conversion social graphic for 'China Tourist Visa Guide: How to Apply in 2026'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/ultimate-guide-to-china-visa-for-tourist-fb-conversion-6ba03858.jpg",
       "utm_params": {
@@ -1618,8 +1662,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1628,7 +1672,9 @@
         "platform": "fb"
       },
       "_sig": "542a6a85f4d8",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000061",
@@ -1664,7 +1710,7 @@
       "source_title": "Great Wall of China: History Beyond the Tourist Trail",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Great Wall of China: History Beyond the Tourist Trail | One China travel mistake to avoid — and how to fix it.\n\nExplore the Great Wall beyond the tourist trail: its military history, the laborers who built it, and the myths around it\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nGreat Wall of China: History Beyond the Tourist Trail | Essential Great Wall tips most first-time visitors miss.\n\nGreat Wall of China: History Beyond the Tourist Trail\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'Great Wall of China: History Beyond the Tourist Trail'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/the-history-and-culture-of-the-great-wal-pinterest-tip-3045c63b.jpg",
       "utm_params": {
@@ -1672,8 +1718,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1682,7 +1728,9 @@
         "platform": "pinterest"
       },
       "_sig": "b9cc8d5f4509",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000063",
@@ -1690,7 +1738,7 @@
       "source_title": "Great Wall of China: History Beyond the Tourist Trail",
       "platform": "x",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story. Explore the Great Wall beyond the tourist trail: its military history, the laborers who → #ChinaTravel",
+      "caption": "What travelers discover about Great Wall — practical lessons from the ground. → https://www.chinaboundtravel.com/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Great Wall of China: History Beyond the Tourist Trail'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/the-history-and-culture-of-the-great-wal-x-story-f462256e.jpg",
       "utm_params": {
@@ -1698,8 +1746,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1708,7 +1756,9 @@
         "platform": "x"
       },
       "_sig": "787cccdf718b",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000064",
@@ -1854,7 +1904,7 @@
       "source_title": "Chinese Tea Culture: History, Types & Ceremony",
       "platform": "ig",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard.\n\n· Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nVisual guide to Tea: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chinese Tea Culture: History, Types & Ceremony'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-ig-visual-db1665d5.jpg",
       "utm_params": {
@@ -1862,8 +1912,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1872,7 +1922,9 @@
         "platform": "ig"
       },
       "_sig": "54981bad6742",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000070",
@@ -1880,7 +1932,7 @@
       "source_title": "Chinese Tea Culture: History, Types & Ceremony",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "Chinese Tea Culture: History, Types & Ceremony | Save time and money on your next China trip — grab the step-by-step guide before you book.\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChinese Tea Culture: History, Types & Ceremony | Everything you need to know about Tea — in one practical guide.\n\nChinese Tea Culture: History, Types & Ceremony\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Chinese Tea Culture: History, Types & Ceremony'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-pinterest-conversion-e879cab1.jpg",
       "utm_params": {
@@ -1888,8 +1940,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1898,7 +1950,9 @@
         "platform": "pinterest"
       },
       "_sig": "3e63bc5ca2ed",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000071",
@@ -1934,7 +1988,7 @@
       "source_title": "Shanghai Beyond the Bund: Hidden Neighborhoods",
       "platform": "fb",
       "type": "tip",
-      "caption": "One China travel mistake to avoid — and how to fix it.\n\n• What Makes Shanghai's Hidden Neighborhoods Special\n• The Hidden Neighborhoods of Shanghai\n• Local Culture in Shanghai\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Essential Shanghai tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
       "image_prompt": "Professional tip social graphic for 'Shanghai Beyond the Bund: Hidden Neighborhoods'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-fb-tip-62d6f212.jpg",
       "utm_params": {
@@ -1942,8 +1996,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1952,7 +2006,9 @@
         "platform": "fb"
       },
       "_sig": "19c2f80afa39",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000073",
@@ -1960,7 +2016,7 @@
       "source_title": "Shanghai Beyond the Bund: Hidden Neighborhoods",
       "platform": "ig",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n· Explore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Shanghai — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'Shanghai Beyond the Bund: Hidden Neighborhoods'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-ig-story-41195557.jpg",
       "utm_params": {
@@ -1968,8 +2024,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1978,7 +2034,9 @@
         "platform": "ig"
       },
       "_sig": "84f6de336523",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000074",
@@ -1986,7 +2044,7 @@
       "source_title": "Shanghai Beyond the Bund: Hidden Neighborhoods",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "Shanghai Beyond the Bund: Hidden Neighborhoods | China's most photogenic corners, captured for your next trip.\n\nExplore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nShanghai Beyond the Bund: Hidden Neighborhoods | Visual guide to Shanghai: what to see and capture.\n\nShanghai Beyond the Bund: Hidden Neighborhoods\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'Shanghai Beyond the Bund: Hidden Neighborhoods'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-pinterest-visual-d92b677d.jpg",
       "utm_params": {
@@ -1994,8 +2052,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2004,7 +2062,9 @@
         "platform": "pinterest"
       },
       "_sig": "66926c733a81",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000075",
@@ -2096,7 +2156,7 @@
       "source_title": "Sichuan Hotpot Guide: History & Best Restaurants",
       "platform": "pinterest",
       "type": "story",
-      "caption": "Sichuan Hotpot Guide: History & Best Restaurants | What first-time visitors learn about China, summed up in one practical story.\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nSichuan Hotpot Guide: History & Best Restaurants | What travelers discover about Hotpot — practical lessons from the ground.\n\nSichuan Hotpot Guide: History & Best Restaurants\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'Sichuan Hotpot Guide: History & Best Restaurants'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-pinterest-story-fcd5f9d9.jpg",
       "utm_params": {
@@ -2104,8 +2164,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2114,7 +2174,9 @@
         "platform": "pinterest"
       },
       "_sig": "aa0f1e29edad",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000079",
@@ -2122,7 +2184,7 @@
       "source_title": "Sichuan Hotpot Guide: History & Best Restaurants",
       "platform": "x",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard. Sichuan hotpot: its history, where locals eat, and how to order, with current picks for → #ChinaTravel",
+      "caption": "Visual guide to Hotpot: what to see and capture. → https://www.chinaboundtravel.com/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'Sichuan Hotpot Guide: History & Best Restaurants'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-x-visual-83ced826.jpg",
       "utm_params": {
@@ -2130,8 +2192,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2140,7 +2202,9 @@
         "platform": "x"
       },
       "_sig": "ce1c32ba1828",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000080",
@@ -2148,7 +2212,7 @@
       "source_title": "Sichuan Hotpot Guide: History & Best Restaurants",
       "platform": "fb",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book.\n\n• Sichuan Hotpot: History & Best Restaurants\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Everything you need to know about Hotpot — in one practical guide.\n\n• Sichuan Hotpot Guide: History & Best Restaurants\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
       "image_prompt": "Professional conversion social graphic for 'Sichuan Hotpot Guide: History & Best Restaurants'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-fb-conversion-7a99b846.jpg",
       "utm_params": {
@@ -2156,8 +2220,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2166,7 +2230,9 @@
         "platform": "fb"
       },
       "_sig": "69ad718df57c",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000081",
@@ -2202,7 +2268,7 @@
       "source_title": "Xi'an Terracotta Army: Tickets, Tips & History",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Xi'an Terracotta Army: Tickets, Tips & History | One China travel mistake to avoid — and how to fix it.\n\nXi. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nXi'an Terracotta Army: Tickets, Tips & History | Essential Terracotta tips most first-time visitors miss.\n\nXi'an Terracotta Army: Tickets, Tips & History\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'Xi'an Terracotta Army: Tickets, Tips & History'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-pinterest-tip-ffc8b7f6.jpg",
       "utm_params": {
@@ -2210,8 +2276,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2220,7 +2286,9 @@
         "platform": "pinterest"
       },
       "_sig": "25dfa66c23f3",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000083",
@@ -2306,7 +2374,7 @@
       "source_title": "Zhangjiajie Guide: Avatar Mountains & Itinerary",
       "platform": "pinterest",
       "type": "knowledge",
-      "caption": "Zhangjiajie Guide: Avatar Mountains & Itinerary | Research-based China travel facts international visitors should know.\n\nPlan the perfect Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nZhangjiajie Guide: Avatar Mountains & Itinerary | Research-backed facts about Zhangjiajie every traveler should know.\n\nZhangjiajie Guide: Avatar Mountains & Itinerary\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Zhangjiajie Guide: Avatar Mountains & Itinerary'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/zhangjiajie-avatar-mountains-complete-gu-pinterest-knowledge-b78dd913.jpg",
       "utm_params": {
@@ -2314,8 +2382,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2324,7 +2392,9 @@
         "platform": "pinterest"
       },
       "_sig": "e1d67e917f43",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000087",
@@ -2494,7 +2564,7 @@
       "source_title": "Chinese Street Food: Night Markets & What to Eat",
       "platform": "ig",
       "type": "story",
-      "caption": "What first-time visitors learn about China, summed up in one practical story.\n\n· China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial team\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'Chinese Street Food: Night Markets & What to Eat'. Style: aesthetic, bright, travel photography style, vertical 4:5. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-ig-story-32f7e084.jpg",
       "utm_params": {
@@ -2502,8 +2572,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2512,7 +2582,9 @@
         "platform": "ig"
       },
       "_sig": "33dcade231a0",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000094",
@@ -2520,7 +2592,7 @@
       "source_title": "Chinese Street Food: Night Markets & What to Eat",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "Chinese Street Food: Night Markets & What to Eat | China visuals that belong on your travel moodboard.\n\nChina street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial team | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=pinterest_v1",
+      "caption": "🔥 linkedin\n\nChinese Street Food: Night Markets & What to Eat | Visual guide to Food: what to see and capture.\n\nChinese Street Food: Night Markets & What to Eat | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'Chinese Street Food: Night Markets & What to Eat'. Style: clean, save-worthy flat-lay pin graphic, vertical 2:3, readable. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-pinterest-visual-8258c66f.jpg",
       "utm_params": {
@@ -2528,8 +2600,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2538,7 +2610,9 @@
         "platform": "pinterest"
       },
       "_sig": "72c2c557df1a",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000095",
@@ -2658,7 +2732,7 @@
       "source_title": "How to Use Alipay as a Foreigner (2026)",
       "platform": "x",
       "type": "visual",
-      "caption": "China visuals that belong on your travel moodboard. Set up Alipay as a foreigner in 2026: link international cards, pay at restaurants, and → #ChinaTravel",
+      "caption": "Visual guide to Alipay: what to see and capture. → https://www.chinaboundtravel.com/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'How to Use Alipay as a Foreigner (2026)'. Style: minimal, bold, single striking image, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-x-visual-d69fc721.jpg",
       "utm_params": {
@@ -2666,8 +2740,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2676,7 +2750,9 @@
         "platform": "x"
       },
       "_sig": "bba0c3daf4de",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000100",
@@ -2684,7 +2760,7 @@
       "source_title": "How to Use Alipay as a Foreigner (2026)",
       "platform": "fb",
       "type": "conversion",
-      "caption": "Save time and money on your next China trip — grab the step-by-step guide before you book.\n\n• How to Use Alipay as a Foreigner (2026)\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260830&utm_content=fb_v1",
+      "caption": "🔥 linkedin\n\n💡 Everything you need to know about Alipay — in one practical guide.\n\n• How to Use Alipay as a Foreigner (2026)\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
       "image_prompt": "Professional conversion social graphic for 'How to Use Alipay as a Foreigner (2026)'. Style: warm, shareable, lifestyle, landscape. China landmarks and culture, no people, no text overlays, high quality, realistic.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-fb-conversion-df2d60af.jpg",
       "utm_params": {
@@ -2692,8 +2768,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2702,7 +2778,9 @@
         "platform": "fb"
       },
       "_sig": "10059c88e2a1",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000101",
@@ -3742,7 +3820,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nResearch-backed facts about Transport every traveler should know.\n\n· Navigating China's Transportation: A Complete Guide for European Travelers\n· Getting to China\n· Getting Around in China\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'China Transportation Guide for European Travelers' (platform ig). Scene: Chinese train ticket and platform. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-ig-knowledge-b82393bc.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -3757,7 +3835,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "d97b361357ba"
+      "_sig": "d97b361357ba",
+      "image_generated": true
     },
     {
       "id": "soc-000142",
@@ -3767,7 +3846,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nChina Transportation Guide for European Travelers | Essential Transport tips most first-time visitors miss.\n\nResearch-based practical guidance for international travelers planning a China trip. Check official source\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'China Transportation Guide for European Travelers' (platform pinterest). Scene: Chinese train ticket and platform. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-pinterest-tip-4df7fbce.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -3782,7 +3861,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "24b96ac90f55"
+      "_sig": "24b96ac90f55",
+      "image_generated": true
     },
     {
       "id": "soc-000143",
@@ -3792,7 +3872,7 @@
       "type": "story",
       "caption": "What travelers discover about Transport — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Transportation Guide for European Travelers' (platform x). Scene: Chinese train ticket and platform. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-x-story-89c38844.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -3807,7 +3887,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "d4794f016b3d"
+      "_sig": "d4794f016b3d",
+      "image_generated": true
     },
     {
       "id": "soc-000144",
@@ -3817,7 +3898,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\n💡 Visual guide to Transport: what to see and capture.\n\n• Research-based practical guidance for international travelers planning a China trip\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'China Transportation Guide for European Travelers' (platform fb). Scene: Chinese train ticket and platform. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-fb-visual-1a48cf3b.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -3832,7 +3913,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "e28aa715f3cc"
+      "_sig": "e28aa715f3cc",
+      "image_generated": true
     },
     {
       "id": "soc-000145",
@@ -3842,7 +3924,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nEverything you need to know about Transport — in one practical guide.\n\n· China Transportation Guide for European Travelers\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Transportation Guide for European Travelers' (platform ig). Scene: Chinese train ticket and platform. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-ig-conversion-b01aa93f.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -3857,7 +3939,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "59bac6a7ca0a"
+      "_sig": "59bac6a7ca0a",
+      "image_generated": true
     },
     {
       "id": "soc-000146",
@@ -4698,8 +4781,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260906"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6358,6 +6441,256 @@
         "platform": "ig"
       },
       "_sig": "6b9d60752ab0"
+    },
+    {
+      "id": "soc-000246",
+      "source_article": "alipay-vs-wechat-pay-which-tourists-should-use-china-2026",
+      "source_title": "Alipay vs WeChat Pay: Which Payment App",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Alipay every traveler should know.\n\n· The Cashless Reality in China\n· Alipay: The Financial Super-App\n· Pros of Alipay for Foreigners\n\nRead the full guide: https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional knowledge social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "653bbd752a17"
+    },
+    {
+      "id": "soc-000247",
+      "source_article": "alipay-vs-wechat-pay-which-tourists-should-use-china-2026",
+      "source_title": "Alipay vs WeChat Pay: Which Payment App",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\nAlipay vs WeChat Pay: Which Payment App | Essential Alipay tips most first-time visitors miss.\n\nAlipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for your trip | Keywords: payment\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional tip social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform pinterest). Scene: smartphone showing mobile payment at a shop. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "a3a84ca0a854"
+    },
+    {
+      "id": "soc-000248",
+      "source_article": "alipay-vs-wechat-pay-which-tourists-should-use-china-2026",
+      "source_title": "Alipay vs WeChat Pay: Which Payment App",
+      "platform": "x",
+      "type": "story",
+      "caption": "What travelers discover about Alipay — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional story social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform x). Scene: smartphone showing mobile payment at a shop. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "51922e4194ba"
+    },
+    {
+      "id": "soc-000249",
+      "source_article": "alipay-vs-wechat-pay-which-tourists-should-use-china-2026",
+      "source_title": "Alipay vs WeChat Pay: Which Payment App",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\n• Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards,\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional visual social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "d6a1947775fd"
+    },
+    {
+      "id": "soc-000250",
+      "source_article": "alipay-vs-wechat-pay-which-tourists-should-use-china-2026",
+      "source_title": "Alipay vs WeChat Pay: Which Payment App",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Alipay — in one practical guide.\n\n· Alipay vs WeChat Pay: Which Payment App\n\nRead the full guide: https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional conversion social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "f5035537ba24"
+    },
+    {
+      "id": "soc-000251",
+      "source_article": "china-visa-free-entry-2026-complete-guide-countries-rules-tips",
+      "source_title": "China Visa-Free Entry 2026: Complete Guide",
+      "platform": "pinterest",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nChina Visa-Free Entry 2026: Complete Guide | Research-backed facts about Visa every traveler should know.\n\nChina visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist visa | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional knowledge social graphic for 'China Visa-Free Entry 2026: Complete Guide' (platform pinterest). Scene: Chinese visa passport and travel documents. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist vis.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "fc265768be1c"
+    },
+    {
+      "id": "soc-000252",
+      "source_article": "china-visa-free-entry-2026-complete-guide-countries-rules-tips",
+      "source_title": "China Visa-Free Entry 2026: Complete Guide",
+      "platform": "x",
+      "type": "tip",
+      "caption": "Essential Visa tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional tip social graphic for 'China Visa-Free Entry 2026: Complete Guide' (platform x). Scene: Chinese visa passport and travel documents. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist vis.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "1ad369870b53"
+    },
+    {
+      "id": "soc-000253",
+      "source_article": "china-visa-free-entry-2026-complete-guide-countries-rules-tips",
+      "source_title": "China Visa-Free Entry 2026: Complete Guide",
+      "platform": "fb",
+      "type": "story",
+      "caption": "🔥 linkedin\n\n💡 What travelers discover about Visa — practical lessons from the ground.\n\n• China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions,\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional story social graphic for 'China Visa-Free Entry 2026: Complete Guide' (platform fb). Scene: Chinese visa passport and travel documents. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist vis.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "b8c3cf7b720c"
+    },
+    {
+      "id": "soc-000254",
+      "source_article": "china-visa-free-entry-2026-complete-guide-countries-rules-tips",
+      "source_title": "China Visa-Free Entry 2026: Complete Guide",
+      "platform": "ig",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\nVisual guide to Visa: what to see and capture.\n\n· China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional visual social graphic for 'China Visa-Free Entry 2026: Complete Guide' (platform ig). Scene: Chinese visa passport and travel documents. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist vis.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "074c06dbe495"
+    },
+    {
+      "id": "soc-000255",
+      "source_article": "china-visa-free-entry-2026-complete-guide-countries-rules-tips",
+      "source_title": "China Visa-Free Entry 2026: Complete Guide",
+      "platform": "pinterest",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nChina Visa-Free Entry 2026: Complete Guide | Everything you need to know about Visa — in one practical guide.\n\nChina visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist visa | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260908&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional conversion social graphic for 'China Visa-Free Entry 2026: Complete Guide' (platform pinterest). Scene: Chinese visa passport and travel documents. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist vis.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260908"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "c5c8e60d41d0"
     }
   ]
 }
