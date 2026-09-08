@@ -1,17 +1,35 @@
 /**
  * MailerLite Subscribe + Lead Magnet Delivery API
- * POST /api/subscribe  { email, source?, lead_magnet?: "visa-free-checklist" }
+ * POST /api/subscribe  { email, source?, lead_magnet?: "visa-free-checklist" | "itinerary-template" }
  *
  * P0-FIX (2026-09-07):
  *  - Invalid JSON body now returns 400 instead of 500.
  *  - Invalid email returns 400 (was being intercepted by outer catch).
  *  - Error messages no longer expose internal details.
+ *
+ * 2026-09-08: Added itinerary-template lead magnet routing.
  */
 
-const LEAD_MAGNET_DEFAULT =
-  'https://www.chinaboundtravel.com/lead-magnet/china-visa-free-entry-checklist.pdf';
+const LEAD_MAGNETS = {
+  'visa-free-checklist': {
+    url: 'https://www.chinaboundtravel.com/lead-magnet/china-visa-free-entry-checklist.pdf',
+    mlField: 'china-visa-free-entry-checklist',
+    group: 'Lead Magnet: Visa-Free Checklist',
+    subject: 'Your China Visa-Free Entry Checklist',
+    buttonText: 'Download the China Visa-Free Entry Checklist',
+    intro: "Thanks for subscribing! Here's your free guide:",
+  },
+  'itinerary-template': {
+    url: 'https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf',
+    mlField: '7-day-china-itinerary',
+    group: 'Lead Magnet: 7-Day Itinerary',
+    subject: 'Your Free 7-Day China Itinerary Template',
+    buttonText: 'Download the 7-Day China Itinerary Template',
+    intro: "Thanks for subscribing! Here's your free 7-day China itinerary template:",
+  },
+};
+const DEFAULT_MAGNET = 'visa-free-checklist';
 const FROM_DEFAULT = 'ChinaBound Travel <joran@chinaboundtravel.com>';
-const GROUP_NAME_DEFAULT = 'Lead Magnet: Visa-Free Checklist';
 
 function jsonResponse(body, status = 200, corsHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -36,7 +54,12 @@ function cors(origin) {
   };
 }
 
-async function addMailerLiteSubscriber(apiToken, email, source) {
+function resolveMagnet(leadMagnetParam) {
+  const key = (leadMagnetParam || '').toString().trim();
+  return LEAD_MAGNETS[key] || LEAD_MAGNETS[DEFAULT_MAGNET];
+}
+
+async function addMailerLiteSubscriber(apiToken, email, source, magnet) {
   const headers = {
     Authorization: `Bearer ${apiToken}`,
     'Content-Type': 'application/json',
@@ -45,7 +68,7 @@ async function addMailerLiteSubscriber(apiToken, email, source) {
     email,
     fields: {
       signup_source: source || 'article_subscribe',
-      lead_magnet: 'china-visa-free-entry-checklist',
+      lead_magnet: magnet.mlField,
     },
   };
   const resp = await fetch('https://connect.mailerlite.com/api/subscribers', {
@@ -60,16 +83,16 @@ async function addMailerLiteSubscriber(apiToken, email, source) {
   return { ok: true, status: resp.status };
 }
 
-async function sendLeadMagnetEmail(resendApiKey, email, magnetUrl, from) {
+async function sendLeadMagnetEmail(resendApiKey, email, magnet, from) {
   const payload = {
     from,
     to: [email],
-    subject: 'Your China Visa-Free Entry Checklist',
+    subject: magnet.subject,
     html: `
       <p>Hi there,</p>
-      <p>Thanks for subscribing! Here's your free guide:</p>
-      <p><a href="${magnetUrl}" style="display:inline-block;padding:12px 22px;background:#0f2b46;color:#fff;text-decoration:none;border-radius:6px;">Download the China Visa-Free Entry Checklist</a></p>
-      <p>If the button doesn't work, copy this link:<br><code>${magnetUrl}</code></p>
+      <p>${magnet.intro}</p>
+      <p><a href="${magnet.url}" style="display:inline-block;padding:12px 22px;background:#0f2b46;color:#fff;text-decoration:none;border-radius:6px;">${magnet.buttonText}</a></p>
+      <p>If the button doesn't work, copy this link:<br><code>${magnet.url}</code></p>
       <p>We'll also send occasional China travel updates — no spam, unsubscribe anytime.</p>
       <p>— The ChinaBound Travel editorial team</p>
     `,
@@ -109,7 +132,8 @@ export async function onRequestPost({ request, env }) {
   try {
     const email = (body.email || '').toString().trim().toLowerCase();
     const source = (body.source || 'article_subscribe').toString();
-    const magnetUrl = env.LEAD_MAGNET_URL || LEAD_MAGNET_DEFAULT;
+    const magnet = resolveMagnet(body.lead_magnet);
+    const magnetUrl = env.LEAD_MAGNET_URL || magnet.url;
     const from = env.FROM_EMAIL || FROM_DEFAULT;
 
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -125,12 +149,13 @@ export async function onRequestPost({ request, env }) {
       success: true,
       delivered_pdf: false,
       subscriber_created: false,
+      lead_magnet: magnet.mlField,
       detail: '',
     };
 
     // 1) MailerLite subscriber
     if (apiToken) {
-      const ml = await addMailerLiteSubscriber(apiToken, email, source);
+      const ml = await addMailerLiteSubscriber(apiToken, email, source, magnet);
       if (ml.ok) result.subscriber_created = true;
       else result.detail = (result.detail + ` MailerLite:${ml.status}`).trim();
     } else {
@@ -139,7 +164,7 @@ export async function onRequestPost({ request, env }) {
 
     // 2) Send PDF via Resend
     if (resendApiKey) {
-      const em = await sendLeadMagnetEmail(resendApiKey, email, magnetUrl, from);
+      const em = await sendLeadMagnetEmail(resendApiKey, email, magnet, from);
       if (em.ok) result.delivered_pdf = true;
       else result.detail = (result.detail + ` Resend:${em.status}`).trim();
     } else {

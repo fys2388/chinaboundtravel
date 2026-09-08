@@ -121,6 +121,8 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 
 ## Quick-Reference Cost Table
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Download This Itinerary as PDF →" >}}
+
 | Item | Budget | Mid-Range | Comfort |
 |------|--------|-----------|---------|
 | Hotel/night (dbl) | $25-40 | $60-120 | $200+ |

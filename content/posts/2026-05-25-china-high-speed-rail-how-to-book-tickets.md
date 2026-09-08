@@ -177,6 +177,8 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 ## Recommended Routes (Beginners Start Here)
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Building Your China Route? Grab the Free 7-Day Itinerary →" >}}
+
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
 | Shanghai → Hangzhou | 45 min | well-suited first CRH trip — see our [Hangzhou guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/) |

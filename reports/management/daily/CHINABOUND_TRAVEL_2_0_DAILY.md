@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-09-07 (Asia/Shanghai)
-- as_of: 2026-09-07
+- Generated: 2026-09-08 (Asia/Shanghai)
+- as_of: 2026-09-08
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -78,15 +78,7 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 ### Revenue
 
-Revenue: **NULL** (REVENUE_NOT_AVAILABLE) — no affiliate revenue API; nothing fabricated.
-
-| KPI | Value | Source type |
-|---|---|---|
-| revenue | NULL | NOT_AVAILABLE |
-| orders_conversions | NULL | NOT_AVAILABLE |
-| commission | NULL | NOT_AVAILABLE |
-| rpm | NULL | NOT_AVAILABLE |
-| revenue_per_1000_sessions | NULL | NOT_AVAILABLE |
+Revenue: see snapshot.
 
 ## 5. Experiment events
 
@@ -136,7 +128,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 
 ## 8. Alerts / anomalies
 
-- LOW_DATA_WARNING: 9 low-data reasons (see ALERTS.md)
+- LOW_DATA_WARNING: 8 low-data reasons (see ALERTS.md)
 - Anomalies: none beyond expected low-sample state
 - Blockers: canonical conflicts (6 HIGH), WAITING_RECRAWL x2, no revenue API, no fresh GSC pull since 2026-08-16
 

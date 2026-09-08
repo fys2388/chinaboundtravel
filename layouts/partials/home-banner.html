@@ -17,14 +17,18 @@
             </div>
         </div>
         <div class="banner-visual">
-            <div class="banner-illustration">
-                <span style="font-size:6rem">🏔️</span>
-            </div>
-            <div class="banner-social-proof">
-                <span class="proof-item">✓ 59+ Expert Guides</span>
-                <span class="proof-item">✓ Editorially Reviewed</span>
-                <span class="proof-item">✓ Updated Weekly</span>
-            </div>
+            <svg class="banner-illustration-svg" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="China travel illustration">
+                <circle cx="160" cy="140" r="120" fill="#e8f0f8" opacity="0.6"/>
+                <path d="M60 200 L120 120 L160 160 L210 90 L260 200 Z" fill="#3A6EA5" opacity="0.15"/>
+                <path d="M80 200 L130 140 L170 175 L220 110 L250 200 Z" fill="#3A6EA5" opacity="0.25"/>
+                <path d="M100 200 L145 155 L180 185 L225 130 L245 200 Z" fill="#3A6EA5" opacity="0.4"/>
+                <circle cx="230" cy="70" r="22" fill="#F5A623" opacity="0.8"/>
+                <path d="M160 60 L160 45 M160 60 L175 60 M160 60 L145 60 M160 60 L160 75" stroke="#3A6EA5" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="160" cy="60" r="5" fill="#3A6EA5"/>
+                <path d="M70 210 Q160 195 250 210" stroke="#3A6EA5" stroke-width="2" stroke-dasharray="6 4" fill="none" opacity="0.5"/>
+                <circle cx="70" cy="210" r="4" fill="#3A6EA5"/>
+                <circle cx="250" cy="210" r="4" fill="#E74C3C"/>
+            </svg>
         </div>
     </div>
 </section>
@@ -35,6 +39,7 @@
     border-bottom: 1px solid #e0e4e8;
     padding: 3.5rem 0 3rem;
     margin-bottom: 2.5rem;
+    width: 100%;
 }
 
 .banner-inner {
@@ -45,6 +50,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.banner-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .banner-kicker {
@@ -73,6 +83,7 @@
     color: #555;
     margin: 0 0 0.5rem 0;
     font-weight: 400;
+    max-width: 520px;
 }
 
 .banner-author {
@@ -132,11 +143,27 @@
 
 .banner-visual {
     flex-shrink: 0;
+    width: 320px;
+    max-width: 40%;
 }
 
-.banner-illustration {
-    font-size: 5rem;
-    line-height: 1;
+.banner-illustration-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-social-proof {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.proof-item {
+    font-size: 0.82rem;
+    color: #555;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -150,7 +177,14 @@
     .banner-headline {
         font-size: 2rem;
     }
+    .banner-sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
     .banner-cta {
+        justify-content: center;
+    }
+    .banner-social-proof {
         justify-content: center;
     }
     .banner-visual {
@@ -158,19 +192,12 @@
     }
 }
 
-.banner-social-proof {
-    margin-top: 1.25rem;
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
+@media (max-width: 480px) {
+    .banner-headline {
+        font-size: 1.6rem;
+    }
+    .banner-sub {
+        font-size: 0.95rem;
+    }
 }
-.proof-item {
-    font-size: 0.82rem;
-    color: #555;
-    font-weight: 500;
-}
-@media (max-width: 768px) {
-    .banner-social-proof { justify-content: center; }
-}
-
 </style>

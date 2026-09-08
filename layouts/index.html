@@ -1,7 +1,5 @@
 {{- define "main" -}}
-{{- partial "home-banner.html" . -}}
-
-<main class="main list" id="main">
+<div class="main list" id="main">
     <div class="home-layout">
         <!-- Main Content -->
         <div class="home-content">
@@ -129,7 +127,7 @@
             {{- partial "sidebar-author.html" . -}}
         </aside>
     </div>
-</main>
+</div>
 {{- end -}}
 
 {{- /* Also define index to use same layout */ -}}

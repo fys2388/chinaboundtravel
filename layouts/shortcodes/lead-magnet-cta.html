@@ -1,0 +1,113 @@
+{{- /*
+  lead-magnet-cta shortcode
+  Usage: {{< lead-magnet-cta magnet="itinerary-template" text="Custom button text" >}}
+  Renders a compact, high-conversion subscribe box with inline form.
+*/ -}}
+{{- $magnet := .Get "magnet" | default "itinerary-template" -}}
+{{- $btnText := .Get "text" | default "Get My Free Guide →" -}}
+{{- $isItinerary := eq $magnet "itinerary-template" -}}
+{{- $title := cond $isItinerary "7-Day China Itinerary Template" "China Visa-Free Entry Checklist" -}}
+{{- $sub := cond $isItinerary "Free PDF — routes, budget & insider tips" "Free PDF — visa-free entry essentials" -}}
+{{- $icon := cond $isItinerary "📋" "🛂" -}}
+<div class="lm-cta-box" data-magnet="{{ $magnet }}">
+  <div class="lm-cta-header">
+    <span class="lm-cta-icon">{{ $icon }}</span>
+    <div class="lm-cta-titles">
+      <h3 class="lm-cta-title">Free: {{ $title }}</h3>
+      <p class="lm-cta-sub">{{ $sub }}</p>
+    </div>
+  </div>
+  <form class="lm-cta-form" data-magnet="{{ $magnet }}" data-source="{{ .Page.Section | default "page" }}">
+    <div class="lm-cta-fields">
+      <label for="lm-cta-email-{{ $magnet }}" class="sr-only">Email address</label>
+      <input type="email" id="lm-cta-email-{{ $magnet }}" name="email" class="lm-cta-input"
+             placeholder="Enter your email for instant access" required autocomplete="email">
+      <button type="submit" class="lm-cta-btn">
+        <span class="lm-cta-btn-text">{{ $btnText }}</span>
+      </button>
+    </div>
+    <p class="lm-cta-msg" style="display:none"></p>
+    <p class="lm-cta-privacy">🔒 Instant download · No spam · Unsubscribe anytime</p>
+  </form>
+</div>
+
+<style>
+.lm-cta-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #3A6EA5;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 24px 0;
+}
+.lm-cta-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.lm-cta-icon { font-size: 32px; flex-shrink: 0; }
+.lm-cta-title { margin: 0; font-size: 18px; color: #0f2b46; font-weight: 700; }
+.lm-cta-sub { margin: 2px 0 0; font-size: 13px; color: #5a6b7b; }
+.lm-cta-fields { display: flex; gap: 10px; flex-wrap: wrap; }
+.lm-cta-input {
+  flex: 1; min-width: 200px; padding: 11px 14px;
+  border: 1px solid #cbd5e1; border-radius: 6px;
+  font-size: 14px; color: #1e293b; background: #fff;
+}
+.lm-cta-input:focus { outline: none; border-color: #3A6EA5; box-shadow: 0 0 0 3px rgba(58,110,165,0.15); }
+.lm-cta-btn {
+  padding: 11px 22px; background: #0f2b46; color: #fff;
+  border: none; border-radius: 6px; font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.lm-cta-btn:hover { background: #1a3f5f; }
+.lm-cta-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.lm-cta-msg { font-size: 13px; margin: 8px 0 0; }
+.lm-cta-msg.ok { color: #15803d; }
+.lm-cta-msg.err { color: #b91c1c; }
+.lm-cta-privacy { font-size: 12px; color: #6b7280; margin: 8px 0 0; }
+</style>
+
+<script>
+(function () {
+  document.querySelectorAll('.lm-cta-form').forEach(function (form) {
+    if (form.dataset.bound) return;
+    form.dataset.bound = '1';
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('.lm-cta-btn');
+      var msg = form.querySelector('.lm-cta-msg');
+      var input = form.querySelector('.lm-cta-input');
+      var email = input.value.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.querySelector('.lm-cta-btn-text').textContent = 'Sending...';
+      msg.style.display = 'none';
+      try {
+        var resp = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            source: form.dataset.source || 'article',
+            lead_magnet: form.dataset.magnet || 'itinerary-template'
+          })
+        });
+        var data = await resp.json();
+        msg.style.display = 'block';
+        if (resp.ok && data.success) {
+          msg.className = 'lm-cta-msg ok';
+          msg.textContent = '✅ Check your inbox — your guide is on its way!';
+          input.value = '';
+        } else {
+          msg.className = 'lm-cta-msg err';
+          msg.textContent = (data && data.error) ? data.error : 'Something went wrong. Please try again.';
+        }
+      } catch (err) {
+        msg.style.display = 'block';
+        msg.className = 'lm-cta-msg err';
+        msg.textContent = 'Network error. Please try again.';
+      } finally {
+        btn.disabled = false;
+        btn.querySelector('.lm-cta-btn-text').textContent = '{{ $btnText }}';
+      }
+    });
+  });
+})();
+</script>

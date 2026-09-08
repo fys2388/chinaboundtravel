@@ -59,6 +59,8 @@ Available for citizens of 53 countries visiting select Chinese cities without a 
 
 ## Step-by-Step Application Process
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Grab the Free 7-Day Itinerary →" >}}
+
 ### Step 1: Prepare Required Documents
 
 Gather all the necessary documents before submitting your application:

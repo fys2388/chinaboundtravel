@@ -58,6 +58,8 @@ Alipay is not one of the option -- WeChat Pay offers similar coverage -- but Ali
 
 ## What You Need Before Setting Up Alipay
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
 Before you start, gather four things:
 
 1. **Passport** -- the exact name on the passport must match the name you enter
