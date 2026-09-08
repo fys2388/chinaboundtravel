@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-07T10:56:36.491458",
-  "data_date": "2026-09-04",
+  "pull_time": "2026-09-08T10:13:43.414043",
+  "data_date": "2026-09-05",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 599,
+    "impressions": 609,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 68.1,
+    "average_position": 68.3,
     "sitemap_count": 1,
-    "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
+    "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-08",
-      "impressions": 11,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 28.1
-    },
     {
       "date": "2026-08-09",
       "impressions": 11,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 31.2
+    },
+    {
+      "date": "2026-09-05",
+      "impressions": 36,
+      "clicks": 2,
+      "ctr": 0.06,
+      "position": 35.2
     }
   ],
   "top_queries": [
@@ -262,10 +262,10 @@
     },
     {
       "query": "144 hour visa china",
-      "impressions": 11,
+      "impressions": 9,
       "clicks": 0,
       "ctr": 0,
-      "position": 54.5
+      "position": 53.2
     },
     {
       "query": "144 hour visa china cost",
@@ -354,25 +354,32 @@
   ],
   "top_pages": [
     {
-      "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 49,
+      "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+      "impressions": 22,
       "clicks": 2,
-      "ctr": 0.04,
-      "position": 18.5
+      "ctr": 0.09,
+      "position": 23.9
     },
     {
-      "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 21,
-      "clicks": 1,
-      "ctr": 0.05,
-      "position": 24.7
+      "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+      "impressions": 50,
+      "clicks": 2,
+      "ctr": 0.04,
+      "position": 18.3
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 13,
+      "impressions": 11,
       "clicks": 1,
-      "ctr": 0.08,
-      "position": 9.5
+      "ctr": 0.09,
+      "position": 9.4
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "impressions": 23,
+      "clicks": 1,
+      "ctr": 0.04,
+      "position": 73.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -383,10 +390,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 30,
+      "impressions": 31,
       "clicks": 0,
       "ctr": 0,
-      "position": 36.6
+      "position": 40.6
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -460,10 +467,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 709,
+      "impressions": 717,
       "clicks": 0,
       "ctr": 0,
-      "position": 71.9
+      "position": 71.3
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -485,13 +492,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 3.5
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
-      "impressions": 5,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 87.8
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-04"
+    "data_date": "2026-09-05"
   }
 }
