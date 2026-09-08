@@ -133,6 +133,8 @@ jobs:
           BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
           NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          # 启用配图复用：发布时检查已生成的独立配图，避免全部回退文章封面导致重复
+          IMAGE_GEN_ENABLED: "1"
         run: |
           TODAY="${{ github.event.inputs.date }}"
           if [ -z "$TODAY" ]; then TODAY=$(date -u +%F); fi
