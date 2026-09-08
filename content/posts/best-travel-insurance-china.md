@@ -244,10 +244,6 @@ Still have questions? Drop us a line by [Contacting Us](mailto:joran@chinaboundt
 - [Ultimate China Visa Guide for Tourists](/posts/ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough
 - [Is China Safe for Tourists?](/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/) — Honest safety assessment for 2026
 
-{{< affiliate-flight >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}

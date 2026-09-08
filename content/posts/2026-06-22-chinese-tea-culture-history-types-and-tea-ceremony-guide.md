@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-698862ce2129"
 
 title: "Chinese Tea Culture: History & Types"
@@ -111,18 +111,12 @@ In conclusion, Chinese tea culture is a rich and fascinating world waiting to be
 For more China travel insights, check out our [Hangzhou West Lake Tea Culture Guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/), [Shanghai Beyond the Bund](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/), and [Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/).
 
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-insurance >}}
-
 ---
 
 ## 🏨 Plan Your China Trip
 
 | Need | Solution | Link |
 |------|----------|------|
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

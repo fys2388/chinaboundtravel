@@ -204,15 +204,15 @@ If rejected, you can reapply after addressing the reasons for rejection. Common 
 
 ## Final Checklist
 
-✅ Passport with 6+ months validity  
-✅ Completed application form  
-✅ Recent passport photo  
-✅ Confirmed flight tickets  
-✅ Hotel reservations  
-✅ Detailed itinerary  
-✅ Visa fee  
-✅ Travel insurance (recommended)  
-✅ Copies of all documents  
+✅ Passport with 6+ months validity
+✅ Completed application form
+✅ Recent passport photo
+✅ Confirmed flight tickets
+✅ Hotel reservations
+✅ Detailed itinerary
+✅ Visa fee
+✅ Travel insurance (recommended)
+✅ Copies of all documents
 
 ---
 
@@ -223,13 +223,12 @@ Ready to start your China adventure? [Get your visa application started today](m
 *This article is for informational purposes only. often check the latest requirements from official Chinese government sources.*
 
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
-{{< affiliate-tour >}}
+
+{{< affiliate-esim >}}
 
 ---
 

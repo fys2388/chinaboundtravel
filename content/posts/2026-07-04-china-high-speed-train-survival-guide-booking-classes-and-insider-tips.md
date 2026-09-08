@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-4e09fa4aa93d"
 title: "China High-Speed Trains: Booking & Tips"
 date: "2026-07-04T10:00:00+08:00"
@@ -23,14 +23,12 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.webp"
 categories: ["transport", "cities"]
 last_updated: "2026-07-04"
-
+---
+# China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips
 
 {{< affiliate-esim >}}
 
 {{< affiliate-insurance >}}
-
----
-# China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips
 
 ## Introduction
 

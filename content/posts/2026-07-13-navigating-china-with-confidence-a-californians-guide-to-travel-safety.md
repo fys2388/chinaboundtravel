@@ -90,13 +90,12 @@ Traveling to China can be an amazing and rewarding experience, but it's importan
 
 Remember, China is a vast diverse country, and there's something for everyone to discover. So, pack your bags, grab your camera, and get ready to explore this amazing country!
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
-{{< affiliate-tour >}}
+
+{{< affiliate-esim >}}
 
 Related: [Where to Stay in China: Hotels & Budget Options](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 

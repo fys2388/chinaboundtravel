@@ -114,7 +114,6 @@ When dining at a fine dining restaurant in China, it's important to dress approp
 - **Use your hands:** In China, it's common to use your hands to eat certain types of food, such as dumplings and baozi. Just make sure to wash your hands before you eat.
 
 
-
 {{< affiliate-section >}}
 
 **Ready for your China adventure?** Here are our editorial team's top recommendations:
@@ -137,8 +136,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 ![A group of friends sitting around a table in a Chinese restaurant, enjoying a meal of hotpot and other dishes. The restaurant is decorated with traditional Chinese artwork and decorations, and the atmosphere is lively and festive.](/img/china-dest/body/external_c4f087646526.jpg)
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-tour >}}
+
+{{< affiliate-esim >}}

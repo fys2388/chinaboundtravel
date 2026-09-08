@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-1005a037234b"
 title: "China Food Guide for European Travelers"
 date: "2026-07-06T10:00:00+08:00"
@@ -234,12 +234,6 @@ If you found this guide helpful, [check out our other China travel guides](/post
 
 ![A spread of colorful Chinese dishes on a round table: Sichuan hotpot in the center, a plate of xiaolongbao, Peking duck with pancakes, and fresh vegetables. Warm lighting, convivial atmosphere.](/img/china-dest/body/external_b84ee96f8383.jpg)
 
-
-{{< affiliate-insurance >}}
-
-{{< affiliate-esim >}}
-
-{{< affiliate-tour >}}
 
 ---
 

@@ -169,7 +169,6 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 | Need | Solution | Link |
 |------|----------|------|
 | 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | Popular deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

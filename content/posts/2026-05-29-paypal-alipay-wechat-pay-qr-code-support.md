@@ -156,13 +156,10 @@ One less thing to stress about. And that's often welcome. Before you land, make 
  *ChinaBound Travel Editorial Team*
 
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
 {{< affiliate-esim >}}
 
-{{< affiliate-tour >}}
+
+{{< affiliate-insurance >}}
 
 ---
 

@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-255af4ed003a"
 title: "WeChat Pay Setup Guide for Foreigners (2026)"
 date: "2026-07-02T10:00:00+08:00"
@@ -229,25 +229,12 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 | High-speed train ticket (short route) | 75-300 | 9.40-37.50 |
 
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
-{{< affiliate-insurance >}}
-
-{{< affiliate-esim >}}
-
-{{< affiliate-tour >}}
-
 ---
 
 ## 🏨 Plan Your China Trip
 
 | Need | Solution | Link |
 |------|----------|------|
-| 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
-| 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |
 | 🔒 VPN for China | Unblock Google, WhatsApp & more | [NordVPN Special Deal](https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613) |

@@ -206,12 +206,8 @@ Do not let fear-mongering blog posts or outdated stereotypes keep you from exper
 
 If you found this guide helpful, check out our other practical resources: [China Transportation Guide 2026](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/), [WeChat Pay Setup for Foreigners](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/), and [Top Travel Insurance for China](/posts/best-travel-insurance-china/).
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}

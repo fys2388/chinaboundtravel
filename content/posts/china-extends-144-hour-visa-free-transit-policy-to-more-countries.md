@@ -169,21 +169,17 @@ Stay tuned for more updates from the ground here in Chengdu!
 
 ---
 
-Originally posted on ChinaBound Travel Blog  
+Originally posted on ChinaBound Travel Blog
 Sources: National Immigration Administration
 
 *Disclaimer: This article is for informational purposes only. often check the latest requirements from official Chinese government sources before planning your trip.*
 
-
-{{< affiliate-hotel >}}
 
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}
 
 ---
 

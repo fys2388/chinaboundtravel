@@ -125,15 +125,11 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 *Have a specific safety concern? Drop it in the comments  our editorial team responds to every legitimate question within 48 hours.*
 
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}
 
 ---
 

@@ -103,12 +103,6 @@ For more information on China travel, check out these articles:
 - [Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park](https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
 - [Sichuan Hotpot Guide: History, Top Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
 
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}

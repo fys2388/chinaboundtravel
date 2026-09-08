@@ -198,11 +198,10 @@ Remember: **find your platform, know your carriage number, keep your passport ha
 
 *Last updated: May 2026 | ChinaBound Travel Editorial Team*
 
-{{< affiliate-flight >}}
-
 {{< affiliate-esim >}}
 
-{{< affiliate-tour >}}
+
+{{< affiliate-insurance >}}
 
 ---
 

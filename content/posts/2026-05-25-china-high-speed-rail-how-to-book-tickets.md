@@ -222,13 +222,9 @@ Yes — the physical passport matching the booking is required at station ID che
 *Last updated: May 2026 | ChinaBound Travel editorial team*
 
 
-{{< affiliate-flight >}}
-
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
-
-{{< affiliate-tour >}}
 
 ---
 

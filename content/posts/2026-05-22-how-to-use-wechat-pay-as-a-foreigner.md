@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-707a8899c0a7"
 title: "Can Foreigners Use WeChat Pay in China 2026?"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
@@ -13,7 +13,7 @@ description: "Can foreigners use WeChat Pay in China in 2026? Yes! Learn eligibi
 ShowToc: true
 TocOpen: false
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp"
+ image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp"
 canonicalURL: "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/"
 categories: ["payment", "visa"]
 last_updated: "2026-08-24"
@@ -35,7 +35,6 @@ WeChat Pay is a digital wallet tied to your WeChat account. For foreigners, the 
 
 **The smoothest path: a Chinese bank account.** For longer stays, open an account at a major bank — ICBC, Bank of China, or China Merchants Bank — with your passport and visa, then link the debit card to WeChat Pay. If you're only visiting for a short trip, the Tour Card route is usually enough; accept the fees and keep moving.
 
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({{< booking-link "Book Hotels" />}})
 
 ## Payment Basics: How Scanning and Paying Works
 
@@ -46,7 +45,6 @@ Once WeChat Pay is active, you'll see QR codes everywhere — street vendor cart
 
 Keep your phone's screen brightness high so codes scan quickly.
 
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({{< booking-link "Book Hotels" />}})
 
 If the merchant prefers to scan your code, they'll point at their phone — that's the cue to open **Pay** and show your QR code. It's faster for them and equally safe for you.
 
@@ -68,7 +66,6 @@ Sometimes WeChat Pay shows a red banner: "Your account has been temporarily rest
 
 Set a payment password that's different from your login password and don't share it with anyone.
 
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({{< booking-link "Book Hotels" />}})
 
 > **Note:** WeChat Pay isn't just for payments — it's also used to split bills, send red envelopes during Chinese New Year, pay utility bills, and more. Set up a payment password that's different from your login password.
 
@@ -78,7 +75,6 @@ WeChat Pay works in some places outside China — such as Japan, Thailand, and S
 
 The same account pays for meals, [high-speed rail tickets](/posts/china-high-speed-rail-how-to-book-tickets/), and shopping. It also lets you send money to other WeChat users, which is useful for splitting bills with friends. Many travelers run [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) alongside WeChat Pay, since some merchants accept only one of the two.
 
-> **Pro Tip:** For booking high-speed rail tickets, English tour guides, or skip-the-line tickets at the Chengdu Panda Base, use {{< klook-link "Klook" />}} to lock in your slots early!
 
 ## The Bottom Line
 
@@ -116,16 +112,12 @@ Only at merchants that accept it, typically Chinese-facing businesses in countri
 - [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — You'll need connectivity to use WeChat Pay, so get this sorted first
 - [Chinese Food Delivery Apps Guide](/posts/chinese-food-delivery-meituan-eleme-guide/) — Meituan and Ele.me both require WeChat Pay or Alipay
 
-> **Stay Smart:** Looking for comfortable accommodation with great reviews? Book through our partner for one of the popular rates. ({{< booking-link "Book Hotels" />}})
 
 {{< affiliate-esim >}}
 
-{{< affiliate-flight >}}
 
-{{< affiliate-esim >}}
 
-{{< affiliate-tour >}}
-
+{{< affiliate-insurance >}}
 ---
 
 ### Setting Up Mobile Payment

@@ -105,7 +105,7 @@ You're in! You now have 144 hours (from the stamp time, NOT flight time) to expl
 
 >  **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM six days later.
 
-{{< affiliate-mid-cta partner="hotel" placement="visa_cta_mid_content" text="Compare Hotel Options" >}}
+{{< affiliate-mid-cta partner="esim" placement="visa_cta_mid_content" text="Compare eSIM Options" >}}
 **Planning your transit stopover?** Your 144-hour window is short. Compare well-located hotel options ahead of time so you can start exploring the moment you clear immigration.
 {{< /affiliate-mid-cta >}}
 
@@ -161,13 +161,12 @@ For more China entry guidance, explore our [complete guide to China visas for to
 
 *This site contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you.*
 
-{{< affiliate-hotel >}}
-
 {{< affiliate-flight >}}
 
 {{< affiliate-insurance >}}
 
-{{< affiliate-tour >}}
+
+{{< affiliate-esim >}}
 
 ---
 

@@ -129,7 +129,6 @@ This is an editorial comparison layer, not a single-provider endorsement. The se
 | Need | Option |
 |---|---|
 | Airport transfer | {{< affiliate-link key="klook" text="Klook" />}} -- pre-booked transfers and tours |
-| Hotels | {{< affiliate-link key="hotel" text="Booking.com" />}} -- free cancellation on most properties |
 | Train connection | {{< affiliate-link key="trip" text="Trip.com" />}} -- English interface, international payment |
 | Mobile data | {{< affiliate-link key="esim" text="Airalo eSIM" />}} -- internet on arrival |
 

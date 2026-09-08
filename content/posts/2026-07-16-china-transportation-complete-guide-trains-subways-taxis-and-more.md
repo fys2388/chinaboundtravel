@@ -110,7 +110,6 @@ Booking your first train ticket? Trip.com works in English, accepts internationa
 #### Recommended Booking Options for Foreign Travelers
 
 
-
 | Option | a popular for | Notes |
 
 |---|---|---|
@@ -122,9 +121,7 @@ Booking your first train ticket? Trip.com works in English, accepts internationa
 | **C. Klook** | Travel packages and activities | Handy for bundled experiences and tours |
 
 
-
 This is a comparison layer, not a single-provider endorsement -- pick the option that fits your trip.
-
 
 
 ### Station Survival Guide
@@ -248,6 +245,9 @@ For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunmin
 | Cross-country (> 1,500 km) | Domestic flight | High-speed train | Flight saves 4-6 hours |
 | Remote areas (no rail) | Bus / Charter car | Long-distance bus | No alternative |
 
+
+{{< affiliate-esim >}}
+
 ---
 
 ## Final Tips Before You Go
@@ -261,9 +261,3 @@ After five years of living in China, here are the principles that matter most:
 5. **Book popular routes early**. Beijing-Shanghai and Chengdu-Chongqing sell out during holidays. During Chinese New Year and National Day (October 1-7), tickets can sell out within minutes of release.
 
 China's transportation system is genuinely world-class. Once you get past the initial learning curve, you will find it faster, cheaper, and more reliable than almost anything back home. The key is knowing which option to use and how to pay for it -- and now you do.
-
-{{< affiliate-hotel >}}
-
-{{< affiliate-flight >}}
-
-{{< affiliate-tour >}}

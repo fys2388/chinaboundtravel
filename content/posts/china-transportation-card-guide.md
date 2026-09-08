@@ -138,7 +138,6 @@ This is an editorial comparison layer, not a single-provider endorsement. The to
 | Train tickets | {{< affiliate-link key="trip" text="Trip.com" />}} -- English interface, international payment |
 | Attraction tickets | {{< affiliate-link key="klook" text="Klook" />}} -- tours and skip-the-line tickets |
 | Mobile data | {{< affiliate-link key="esim" text="Airalo eSIM" />}} -- internet on arrival |
-| Hotels | {{< affiliate-link key="hotel" text="Booking.com" />}} -- free cancellation on most properties |
 
 {{< /affiliate-section >}}
 
