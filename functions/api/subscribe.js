@@ -166,7 +166,7 @@ export async function onRequestPost({ request, env }) {
     if (resendApiKey) {
       const em = await sendLeadMagnetEmail(resendApiKey, email, magnet, from);
       if (em.ok) result.delivered_pdf = true;
-      else result.detail = (result.detail + ` Resend:${em.status}`).trim();
+      else result.detail = (result.detail + ` Resend:${em.status}${em.detail ? ':' + em.detail : ''}`).trim();
     } else {
       result.detail = (result.detail + ' Resend:not_configured').trim();
     }
