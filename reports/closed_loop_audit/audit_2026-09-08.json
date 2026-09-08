@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-08",
-  "audited_at": "2026-09-08T02:07:44.476050",
+  "audited_at": "2026-09-08T15:52:27.682350",
   "score": {
     "total_score": 57.5,
     "max_score": 100,
@@ -20,7 +20,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 5,
+        "site_health_total": 3,
         "site_health_file": "site_health_2026-09-08.json",
         "daily_issues_count": 3
       }
@@ -54,7 +54,7 @@
       "issues": [],
       "details": {
         "need_manual": 3,
-        "resolved": 18,
+        "resolved": 16,
         "execution_log_exists": true,
         "total_executions": 8
       }
@@ -63,10 +63,10 @@
       "stage": "dashboard",
       "status": "warn",
       "issues": [
-        "看板 pending(1) 与实际(3) 不一致"
+        "看板 pending(5) 与实际(3) 不一致"
       ],
       "details": {
-        "dashboard_pending": 1,
+        "dashboard_pending": 5,
         "actual_pending": 3,
         "ga4_daily_days": 77,
         "gsc_daily_days": 30
@@ -77,6 +77,6 @@
     "[assignment] 3/3 个问题未分配",
     "[assignment] 没有生成任何 Agent 任务文件",
     "[execution] 没有 Agent 任务文件",
-    "[dashboard] 看板 pending(1) 与实际(3) 不一致"
+    "[dashboard] 看板 pending(5) 与实际(3) 不一致"
   ]
 }

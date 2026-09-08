@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-08T02:07:42.390759+00:00",
+  "timestamp": "2026-09-08T15:52:25.044775+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 5,
+    "total_issues": 3,
     "critical": 0,
     "high": 0,
     "medium": 2,
-    "low": 3,
-    "auto_fixed": 2,
+    "low": 1,
+    "auto_fixed": 0,
     "need_manual": 3,
-    "resolved": 18,
-    "inherited_resolved": 18
+    "resolved": 16,
+    "inherited_resolved": 16
   },
   "issues": [
     {
@@ -195,42 +195,6 @@
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
-      "message": "Title渲染后过长(107字符, front matter 87+后缀20): Alipay vs WeChat Pay: Which Payment App ...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 87->39字符"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "message": "Meta description过短(5字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-      "message": "Title渲染后过长(101字符, front matter 81+后缀20): China Visa-Free Entry 2026: Complete Gui...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 81->42字符"
-    },
-    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
@@ -247,18 +211,6 @@
       "severity": "low",
       "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
       "message": "Meta description过短(2字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-      "message": "Meta description过短(34字符)",
       "auto_fixable": false,
       "agent": "seo",
       "status": "resolved",
