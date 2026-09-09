@@ -1074,6 +1074,17 @@
       "error_message": "ycparser-3.0 python-dotenv-1.2.3 requests-2.34.2 urllib3-2.7.0\nhealth-check\tRun health check\t﻿2026-09-09T05:43:42.2722776Z ##[group]Run python scripts/health_check.py\nhealth-check\tRun health check\t2026-09-09T05:43:42.2723271Z ^[[36;1mpython scripts/health_check.py^[[0m\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766075Z shell: /usr/bin/bash -e ***0***\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766455Z env:\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766823Z   pythonLocation",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260909_150225",
+      "timestamp": "2026-09-09T15:02:25.840537",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "34367479317",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "2026-09-09T15:01:59.3024029Z ##[endgroup]\nrefresh-dashboard\tInject time range selector\t2026-09-09T15:01:59.3391103Z ✅ 时间范围选择器已注入 index.html\nrefresh-dashboard\tInject time range selector\t2026-09-09T15:01:59.3391766Z    GA4 ranges: N/A\nrefresh-dashboard\tInject time range selector\t2026-09-09T15:01:59.3392231Z    GSC ranges: N/A\nrefresh-dashboard\tPush and trigger deploy\t﻿2026-09-09T15:01:59.3467876Z ##[group]Run mkdir -p static/ops-dashboard\nrefresh-dashboard\tPush and trigger deploy\t2026-09-09T15:01:",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
