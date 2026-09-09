@@ -32,17 +32,9 @@ CHECKS = [
         "expected_status": 200
     },
     {
-        "name": "Buffer API",
-        "url": "https://api.buffer.com",
-        "method": "POST",
-        "expected_status": 200,
-        "headers_func": lambda: {
-            "Authorization": f"Bearer {_clean_token(os.getenv('BUFFER_API_TOKEN', ''))}",
-            "Content-Type": "application/json"
-        },
-        "json_body": {
-            "query": "query { channels(input: {organizationId: \"6a17ddf5e051bed5895272f0\"}) { id service name } }"
-        }
+        "name": "Buffer Worker (社媒发布链路)",
+        "url": "https://buffer-worker.chinaboundtravel.com/health",
+        "expected_status": 200
     }
 ]
 
