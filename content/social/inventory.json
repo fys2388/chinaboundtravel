@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-09T05:53:36",
+  "updated_at": "2026-09-09T17:09:06",
   "items": [
     {
       "id": "soc-000001",
@@ -324,8 +324,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260830"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-09",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4224,7 +4224,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\n💡 Research-backed facts about Tea every traveler should know.\n\n• Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers\n• Dan Dan Noodles: A Simple yet Delicious Dish\n• Mapo Tofu: A Spicy and Savory Delight\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional knowledge social graphic for 'China Food Guide 2026: What to Eat & Where' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-fb-knowledge-269be5f0.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4239,7 +4239,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "489a338541d3"
+      "_sig": "489a338541d3",
+      "image_generated": true
     },
     {
       "id": "soc-000157",
@@ -4249,7 +4250,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Tea tips most first-time visitors miss.\n\n· Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers\n· Dan Dan Noodles: A Simple yet Delicious Dish\n· Mapo Tofu: A Spicy and Savory Delight\n\nRead the full guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'China Food Guide 2026: What to Eat & Where' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-ig-tip-fe43b201.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -4264,7 +4265,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "9d4d6c1b1b7e"
+      "_sig": "9d4d6c1b1b7e",
+      "image_generated": true
     },
     {
       "id": "soc-000158",
@@ -4274,7 +4276,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nChina Food Guide 2026: What to Eat & Where | What travelers discover about Tea — practical lessons from the ground.\n\nWhat foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editorial team | Keywords: etiquette, food, safety\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'China Food Guide 2026: What to Eat & Where' (platform pinterest). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-pinterest-story-00012ff3.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -4289,7 +4291,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "cfb1dbd65966"
+      "_sig": "cfb1dbd65966",
+      "image_generated": true
     },
     {
       "id": "soc-000159",
@@ -4299,7 +4302,7 @@
       "type": "visual",
       "caption": "Visual guide to Tea: what to see and capture. What foreigners should eat in China: authentic local snacks, street → https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Food Guide 2026: What to Eat & Where' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-x-visual-bfcce554.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -4314,7 +4317,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "c92e89e9cbb0"
+      "_sig": "c92e89e9cbb0",
+      "image_generated": true
     },
     {
       "id": "soc-000160",
@@ -4324,7 +4328,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\n💡 Everything you need to know about Tea — in one practical guide.\n\n• China Food Guide 2026: What to Eat & Where\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional conversion social graphic for 'China Food Guide 2026: What to Eat & Where' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-fb-conversion-f64153f3.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4339,7 +4343,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "a00f35d4befe"
+      "_sig": "a00f35d4befe",
+      "image_generated": true
     },
     {
       "id": "soc-000161",
@@ -5605,8 +5610,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260906"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-09",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
