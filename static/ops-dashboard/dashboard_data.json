@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10 02:01:21",
+  "generated_at": "2026-09-10 02:47:39",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 340,
+    "response_ms": 270,
     "server": "cloudflare"
   },
   "workflows": [
@@ -40,9 +40,9 @@
       "name": "AI Agent Orchestrator - 7 Agents Weekly Run",
       "id": "ai-agent-orchestrator",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-07T03:20:56Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "clear-buffer-batch.yml",
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-09T17:31:31Z",
+      "last_run": "2026-09-09T18:01:53Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-09T17:31:37Z",
+      "last_run": "2026-09-09T18:02:00Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,8 +212,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-09T18:00:58Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-09T18:47:27Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-09 18:01",
+    "checked_at": "2026-09-09 18:47",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
