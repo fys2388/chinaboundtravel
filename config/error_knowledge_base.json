@@ -1063,6 +1063,17 @@
       "error_message": "09-08T07:36:07.7396141Z '49c02f23ab3785af78b6bb9942a0b7ed6643ad77'\npost-deploy\tSetup Hugo\t﻿2026-09-08T07:36:07.7614846Z ##[group]Run peaceiris/actions-hugo@v3\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615174Z with:\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615389Z   hugo-version: 0.147.0\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615618Z   extended: true\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.7615841Z ##[endgroup]\npost-deploy\tSetup Hugo\t2026-09-08T07:36:07.8387679Z Hugo version: 0.147.0",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260909_054409",
+      "timestamp": "2026-09-09T05:44:09.818443",
+      "workflow_name": "Daily Health Check",
+      "run_id": "34316037136",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "ycparser-3.0 python-dotenv-1.2.3 requests-2.34.2 urllib3-2.7.0\nhealth-check\tRun health check\t﻿2026-09-09T05:43:42.2722776Z ##[group]Run python scripts/health_check.py\nhealth-check\tRun health check\t2026-09-09T05:43:42.2723271Z ^[[36;1mpython scripts/health_check.py^[[0m\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766075Z shell: /usr/bin/bash -e ***0***\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766455Z env:\nhealth-check\tRun health check\t2026-09-09T05:43:42.2766823Z   pythonLocation",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
