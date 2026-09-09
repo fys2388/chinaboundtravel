@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-08T10:13:43.414043",
-  "data_date": "2026-09-05",
+  "pull_time": "2026-09-09T10:17:58.148556",
+  "data_date": "2026-09-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 609,
+    "impressions": 620,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 68.3,
+    "average_position": 68.4,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-09",
-      "impressions": 11,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 46
-    },
     {
       "date": "2026-08-10",
       "impressions": 152,
@@ -208,6 +201,13 @@
       "clicks": 2,
       "ctr": 0.06,
       "position": 35.2
+    },
+    {
+      "date": "2026-09-06",
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 32.6
     }
   ],
   "top_queries": [
@@ -262,10 +262,10 @@
     },
     {
       "query": "144 hour visa china",
-      "impressions": 9,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 53.2
+      "position": 54.1
     },
     {
       "query": "144 hour visa china cost",
@@ -283,10 +283,10 @@
     },
     {
       "query": "144 hour visa free",
-      "impressions": 2,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 83.5
+      "position": 79.5
     },
     {
       "query": "144 hour visa free china",
@@ -362,10 +362,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 50,
+      "impressions": 51,
       "clicks": 2,
       "ctr": 0.04,
-      "position": 18.3
+      "position": 18.1
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
@@ -376,10 +376,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 23,
+      "impressions": 31,
       "clicks": 1,
-      "ctr": 0.04,
-      "position": 73.7
+      "ctr": 0.03,
+      "position": 71.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -390,10 +390,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 31,
+      "impressions": 32,
       "clicks": 0,
       "ctr": 0,
-      "position": 40.6
+      "position": 41.6
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -453,10 +453,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 110,
+      "impressions": 112,
       "clicks": 0,
       "ctr": 0,
-      "position": 75.7
+      "position": 75.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/",
@@ -467,17 +467,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 717,
+      "impressions": 725,
       "clicks": 0,
       "ctr": 0,
-      "position": 71.3
+      "position": 70.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-      "impressions": 9,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 14.9
+      "position": 15.4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-05"
+    "data_date": "2026-09-06"
   }
 }

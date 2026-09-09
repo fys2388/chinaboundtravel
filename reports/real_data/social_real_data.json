@@ -1,18 +1,60 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-08T10:13:44.237298",
-  "data_date": "2026-09-08",
+  "pull_time": "2026-09-09T10:17:58.857006",
+  "data_date": "2026-09-09",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 3,
+    "total_impressions": 1,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6aa0f45a7b66b49ec6f78526",
+      "text": "Research-backed facts about Bargain every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_so",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-09T07:53:46.419Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9faf421900c10a4f0e9763",
+      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
+      "platform": "instagram",
+      "channel_name": "joranchinatravel",
+      "published_at": "2026-09-08T12:46:41.375Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6a9faf41bfce41cfe2ffdb40",
+      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-08T10:50:13.532Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6a9faf407eee3ace70b78ccb",
       "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: \n\n#Chin",
@@ -112,11 +154,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6a9f02dd9891646af76a3a3e",
-      "text": "Sichuan Hotpot: History & Best Restaurants\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\nFull guide: \n\n#ChinaTravel #TravelChina\n\nhttps:",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-07T20:31:02.452Z",
+      "id": "6a9faf49bfce41cfe2ffdbf6",
+      "text": "Dreaming of exploring Xi'an?\n\nXi'an. Research-based practical guidance for international travelers planning a China trip\n\nRead the full guide: https://www.chinaboundtravel.com/posts/xian-terracotta-ar",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-08T19:46:49.144Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
@@ -126,11 +168,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6a9eff10b2413a8770605a64",
-      "text": "🔥 linkedin\n\nVisual guide to Alipay: what to see and capture.\n\n· Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up\n\nRead the full guide: https://www.chinaboundtravel",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-07T20:14:55.384Z",
+      "id": "6a9fa1ecd5e66665b2c3b5f5",
+      "text": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for Travelers | Everything you need to know about Train — in one practical guide.\n\nChinese Train Stations: Survival Guide for Travelers\n\n📌 Save this ",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-08T18:49:46.394Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
@@ -140,17 +182,17 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6a9eff088378b901f91db5e1",
-      "text": "Visual guide to Tea: what to see and capture. Must-try Chinese dishes and restaurant recommendations for → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-07T20:14:46.478Z",
+      "id": "6a9fa1e5d5e66665b2c3b5a2",
+      "text": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai | Visual guide to Itinerary: what to see and capture.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai\n\n📌 Save this for your China trip pl",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-08T18:49:31.956Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 0,
       "engagement_rate": 0.0
     },
     {
@@ -250,54 +292,12 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9cb65085ccb3a22c0d7602",
-      "text": "🔥 linkedin\n\nChina Food Guide for European Travelers | Everything you need to know about Food — in one practical guide.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, r",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-06T13:39:45.932Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9cb649fba008bcd555104b",
-      "text": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest Guide | Essential China travel tips most first-time visitors miss.\n\nIs China Safe for Tourists in 2026? Honest Guide\n\n📌 Save this for your China ",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-06T13:39:46.181Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9cb49f85ccb3a22c0d574c",
-      "text": "🔥 linkedin\n\nChina Food Guide for European Travelers | Research-backed facts about Food every traveler should know.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, resta",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-06T13:32:46.374Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "twitter": {
-      "posts": 4,
-      "impressions": 3,
+      "posts": 3,
+      "impressions": 1,
       "clicks": 0,
       "likes": 0
     },
@@ -308,7 +308,7 @@
       "likes": 0
     },
     "facebook": {
-      "posts": 3,
+      "posts": 4,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -327,6 +327,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-08"
+    "data_date": "2026-09-09"
   }
 }

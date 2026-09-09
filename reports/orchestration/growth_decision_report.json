@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-09-08T10:13:45.409352",
+  "run_time": "2026-09-09T10:17:59.979879",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.227917",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.754887",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -43,9 +43,9 @@
         },
         {
           "keyword": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-          "ctr": 0.04,
-          "position": 73.7,
-          "impressions": 23
+          "ctr": 0.03,
+          "position": 71.2,
+          "impressions": 31
         },
         {
           "keyword": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
@@ -136,14 +136,14 @@
           "field": "best_keywords",
           "reason": "基于GSC数据分析，更新最佳关键词排名",
           "version": "2.1",
-          "timestamp": "2026-09-08T10:13:45.220417",
+          "timestamp": "2026-09-09T10:17:59.744828",
           "evidence": "based on performance data analysis"
         }
       ]
     },
     "revenue": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.303463",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.854085",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -226,8 +226,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.184821",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.700372",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -311,8 +311,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.151299",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.657292",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -407,8 +407,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.108712",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.600263",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -421,7 +421,7 @@
             "conversion",
             "warning",
             "guide",
-            "sample"
+            "visual"
           ],
           "best_ctas": [
             "save for later",
@@ -445,7 +445,7 @@
             "conversion",
             "warning",
             "guide",
-            "sample"
+            "visual"
           ],
           "best_ctas": [
             "link in bio",
@@ -469,7 +469,7 @@
             "conversion",
             "warning",
             "guide",
-            "sample"
+            "visual"
           ],
           "best_ctas": [
             "read more",
@@ -493,7 +493,7 @@
             "conversion",
             "warning",
             "guide",
-            "sample"
+            "visual"
           ],
           "best_ctas": [
             "read thread",
@@ -517,13 +517,13 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 4.95%，比Bottom 20%高 4.95个百分点",
+          "description": "Top 20%帖子平均CTR 4.87%，比Bottom 20%高 4.87个百分点",
           "common_hooks": [
             "linkedin",
             "conversion",
             "warning",
             "guide",
-            "sample"
+            "visual"
           ],
           "best_times": [
             "22:00",
@@ -535,8 +535,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20260908_101345",
-      "last_updated": "2026-09-08T10:13:45.261678",
+      "version": "2.0-20260909_101759",
+      "last_updated": "2026-09-09T10:17:59.797461",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -608,77 +608,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 1.5299999999999994, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'traffic_potential': 1.2, 'position': 4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cancel/', 'traffic_potential': 0.3, 'position': 7}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260908_101345"
+      "strategy_version": "2.0-20260909_101759"
     }
   ],
   "domain_summary": {
