@@ -62,7 +62,7 @@ jobs:
           ISSUES_FILE="reports/daily_issues/site_health_issues_$(date +%Y-%m-%d).json"
           if [ -f "$ISSUES_FILE" ]; then
             echo "Found issues, routing to agents..."
-            python scripts/daily_issue_router.py --source site_health || true
+            python scripts/daily_issue_router.py
           else
             echo "No issues file found"
           fi
