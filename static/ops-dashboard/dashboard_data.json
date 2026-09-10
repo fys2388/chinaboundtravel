@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10 16:00:43",
+  "generated_at": "2026-09-10 16:30:44",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 165,
+    "response_ms": 282,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-10T07:31:00Z",
+      "last_run": "2026-09-10T08:01:16Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-10T07:31:06Z",
+      "last_run": "2026-09-10T08:01:22Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-10T08:00:28Z",
+      "last_run": "2026-09-10T08:30:31Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-10 08:00",
+    "checked_at": "2026-09-10 08:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
