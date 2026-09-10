@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10 13:40:10",
+  "generated_at": "2026-09-10 14:00:50",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 197,
+    "response_ms": 350,
     "server": "cloudflare"
   },
   "workflows": [
@@ -13,9 +13,9 @@
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
       "frequency": "每周",
-      "last_status": "scheduled",
-      "last_run": "",
-      "last_event": "scheduled"
+      "last_status": "success",
+      "last_run": "2026-09-10T05:41:45Z",
+      "last_event": "schedule"
     },
     {
       "file": "affiliate-optimize.yml",
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-10T05:31:00Z",
+      "last_run": "2026-09-10T05:40:31Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-10T05:38:48Z",
+      "last_run": "2026-09-10T05:48:47Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,8 +212,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-10T05:39:53Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-10T06:00:33Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -302,7 +302,7 @@
       "id": "social-engine-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-09T17:05:36Z",
+      "last_run": "2026-09-10T05:45:01Z",
       "last_event": "schedule"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-10 05:40",
+    "checked_at": "2026-09-10 06:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
