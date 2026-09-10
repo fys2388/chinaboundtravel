@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10 17:30:50",
+  "generated_at": "2026-09-10 18:00:52",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 164,
+    "response_ms": 268,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-10T09:01:11Z",
+      "last_run": "2026-09-10T09:31:09Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-10T09:01:16Z",
+      "last_run": "2026-09-10T09:31:15Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-10T09:30:36Z",
+      "last_run": "2026-09-10T10:00:32Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -220,9 +220,9 @@
       "name": "Purge Cloudflare Cache",
       "id": "purge-cache",
       "frequency": "手动",
-      "last_status": "success",
-      "last_run": "2026-09-07T10:23:31Z",
-      "last_event": "workflow_dispatch"
+      "last_status": "manual",
+      "last_run": "",
+      "last_event": "manual"
     },
     {
       "file": "quarterly-report.yml",
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-10 09:31",
+    "checked_at": "2026-09-10 10:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -530,7 +530,7 @@
     },
     "ga4_daily": {
       "visitors": 11,
-      "sessions": 14,
+      "sessions": 15,
       "pageviews": 13,
       "new_users": 535,
       "bounce_rate": 65.3,
@@ -1007,7 +1007,7 @@
         },
         {
           "date": "2026-09-10",
-          "sessions": 14,
+          "sessions": 15,
           "activeUsers": 11,
           "pageviews": 13
         }
@@ -1015,7 +1015,7 @@
       "ranges": {
         "today": {
           "visitors": 11,
-          "sessions": 14,
+          "sessions": 15,
           "pageviews": 13,
           "date_range": "2026-09-10 ~ 2026-09-10",
           "days": 1
@@ -1029,21 +1029,21 @@
         },
         "7d": {
           "visitors": 77,
-          "sessions": 119,
+          "sessions": 120,
           "pageviews": 214,
           "date_range": "2026-09-04 ~ 2026-09-10",
           "days": 7
         },
         "30d": {
           "visitors": 330,
-          "sessions": 411,
+          "sessions": 412,
           "pageviews": 880,
           "date_range": "2026-08-11 ~ 2026-09-10",
           "days": 30
         },
         "90d": {
           "visitors": 632,
-          "sessions": 782,
+          "sessions": 783,
           "pageviews": 2055,
           "date_range": "2026-06-16 ~ 2026-09-10",
           "days": 79
