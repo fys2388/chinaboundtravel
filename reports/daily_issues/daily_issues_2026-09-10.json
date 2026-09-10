@@ -1,23 +1,10 @@
 {
   "router_version": "1.0",
-  "generated_at": "2026-09-10T02:34:57.556825",
+  "generated_at": "2026-09-10T15:43:19.157752",
   "target_date": "2026-09-10",
-  "total_issues": 5,
-  "total_assignments": 3,
+  "total_issues": 4,
+  "total_assignments": 2,
   "issues": [
-    {
-      "id": "issue_001",
-      "type": "social_zero_engagement",
-      "description": "社媒已发布9条但曝光为0，可能是Buffer API数据未接通",
-      "severity": "medium",
-      "agent": "social",
-      "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-09-08.json",
-      "detected_at": "2026-09-10T02:34:57.553939",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "social"
-    },
     {
       "id": "issue_001",
       "type": "title_too_long",
@@ -26,7 +13,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-10T02:34:57.556770",
+      "detected_at": "2026-09-10T15:43:19.157705",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -39,7 +26,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-10T02:34:57.556778",
+      "detected_at": "2026-09-10T15:43:19.157713",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -52,7 +39,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-10T02:34:57.556781",
+      "detected_at": "2026-09-10T15:43:19.157717",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -65,7 +52,7 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-10T02:34:57.556784",
+      "detected_at": "2026-09-10T15:43:19.157720",
       "status": "new",
       "assigned": true,
       "assigned_to": "ops"
@@ -76,7 +63,7 @@
       "agent": "seo",
       "agent_name": "SEO Intelligent Agent (SEO智能优化)",
       "task_id": "task_2026-09-10_seo",
-      "created_at": "2026-09-10T02:34:57.556811",
+      "created_at": "2026-09-10T15:43:19.157734",
       "target_date": "2026-09-10",
       "issue_count": 3,
       "severity_summary": {
@@ -94,7 +81,7 @@
           "agent": "seo",
           "action": "optimize_title",
           "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-10T02:34:57.556770",
+          "detected_at": "2026-09-10T15:43:19.157705",
           "status": "new",
           "assigned": true,
           "assigned_to": "seo"
@@ -107,7 +94,7 @@
           "agent": "seo",
           "action": "optimize_title",
           "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-10T02:34:57.556778",
+          "detected_at": "2026-09-10T15:43:19.157713",
           "status": "new",
           "assigned": true,
           "assigned_to": "seo"
@@ -120,7 +107,7 @@
           "agent": "seo",
           "action": "optimize_title",
           "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-10T02:34:57.556781",
+          "detected_at": "2026-09-10T15:43:19.157717",
           "status": "new",
           "assigned": true,
           "assigned_to": "seo"
@@ -134,7 +121,7 @@
         "agent": "seo",
         "action": "optimize_title",
         "source_file": "site_health_issues_audit_2026-09-04.json",
-        "detected_at": "2026-09-10T02:34:57.556770",
+        "detected_at": "2026-09-10T15:43:19.157705",
         "status": "new",
         "assigned": true,
         "assigned_to": "seo"
@@ -145,56 +132,10 @@
       "status": "pending"
     },
     {
-      "agent": "social",
-      "agent_name": "Social Intelligence Agent (社媒智能优化)",
-      "task_id": "task_2026-09-10_social",
-      "created_at": "2026-09-10T02:34:57.556800",
-      "target_date": "2026-09-10",
-      "issue_count": 1,
-      "severity_summary": {
-        "critical": 0,
-        "high": 0,
-        "medium": 1,
-        "low": 0
-      },
-      "issues": [
-        {
-          "id": "issue_001",
-          "type": "social_zero_engagement",
-          "description": "社媒已发布9条但曝光为0，可能是Buffer API数据未接通",
-          "severity": "medium",
-          "agent": "social",
-          "action": "analyze_and_optimize",
-          "source_file": "social_daily_2026-09-08.json",
-          "detected_at": "2026-09-10T02:34:57.553939",
-          "status": "new",
-          "assigned": true,
-          "assigned_to": "social"
-        }
-      ],
-      "priority_issue": {
-        "id": "issue_001",
-        "type": "social_zero_engagement",
-        "description": "社媒已发布9条但曝光为0，可能是Buffer API数据未接通",
-        "severity": "medium",
-        "agent": "social",
-        "action": "analyze_and_optimize",
-        "source_file": "social_daily_2026-09-08.json",
-        "detected_at": "2026-09-10T02:34:57.553939",
-        "status": "new",
-        "assigned": true,
-        "assigned_to": "social"
-      },
-      "expected_actions": [
-        "analyze_and_optimize"
-      ],
-      "status": "pending"
-    },
-    {
       "agent": "ops",
       "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
       "task_id": "task_2026-09-10_ops",
-      "created_at": "2026-09-10T02:34:57.556818",
+      "created_at": "2026-09-10T15:43:19.157744",
       "target_date": "2026-09-10",
       "issue_count": 1,
       "severity_summary": {
@@ -212,7 +153,7 @@
           "agent": "ops",
           "action": "diagnose_and_fix",
           "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-10T02:34:57.556784",
+          "detected_at": "2026-09-10T15:43:19.157720",
           "status": "new",
           "assigned": true,
           "assigned_to": "ops"
@@ -226,7 +167,7 @@
         "agent": "ops",
         "action": "diagnose_and_fix",
         "source_file": "site_health_issues_audit_2026-09-04.json",
-        "detected_at": "2026-09-10T02:34:57.556784",
+        "detected_at": "2026-09-10T15:43:19.157720",
         "status": "new",
         "assigned": true,
         "assigned_to": "ops"
