@@ -178,7 +178,7 @@ def execute_seo(task: dict, dry_run: bool = False) -> dict:
     for issue in task.get("issues", []):
         itype = issue.get("type")
 
-        if itype in ("title_too_short", "meta_description_too_short"):
+        if itype in ("title_too_short", "title_too_long", "meta_description_too_short", "meta_description_too_long"):
             # SEO元数据优化需要人工确认后修改
             results["need_manual"] += 1
             results["details"].append(f"{itype}: 已生成优化建议，需人工确认")
