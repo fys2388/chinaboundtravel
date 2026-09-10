@@ -1,0 +1,79 @@
+{
+  "audit_date": "2026-09-10",
+  "audited_at": "2026-09-10T02:10:03.243895",
+  "score": {
+    "total_score": 62.5,
+    "max_score": 100,
+    "percentage": 62.5,
+    "stage_scores": {
+      "detection": 20,
+      "assignment": 0,
+      "execution": 12.5,
+      "writeback": 20,
+      "dashboard": 10
+    },
+    "grade": "C"
+  },
+  "audits": [
+    {
+      "stage": "detection",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "site_health_total": 3,
+        "site_health_file": "site_health_2026-09-10.json",
+        "daily_issues_count": 3
+      }
+    },
+    {
+      "stage": "assignment",
+      "status": "fail",
+      "issues": [
+        "3/3 个问题未分配",
+        "没有生成任何 Agent 任务文件"
+      ],
+      "details": {
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "assignment_rate": "0.0%",
+        "agent_tasks": 0
+      }
+    },
+    {
+      "stage": "execution",
+      "status": "warn",
+      "issues": [
+        "没有 Agent 任务文件"
+      ],
+      "details": {}
+    },
+    {
+      "stage": "writeback",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "need_manual": 3,
+        "resolved": 16,
+        "execution_log_exists": true,
+        "total_executions": 8
+      }
+    },
+    {
+      "stage": "dashboard",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "dashboard_pending": 3,
+        "actual_pending": 3,
+        "ga4_daily_days": 79,
+        "gsc_daily_days": 30
+      }
+    }
+  ],
+  "all_issues": [
+    "[assignment] 3/3 个问题未分配",
+    "[assignment] 没有生成任何 Agent 任务文件",
+    "[execution] 没有 Agent 任务文件"
+  ]
+}
