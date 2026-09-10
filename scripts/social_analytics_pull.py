@@ -199,8 +199,8 @@ def validate_buffer_token(token: str, label: str = "unknown") -> bool:
 
 def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
     """Pull analytics from all Buffer accounts and compile metrics."""
-    token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "")
-    token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "")
+    token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "") or os.environ.get("BUFFER_API_TOKEN_A", "") or os.environ.get("BUFFER_API_TOKEN", "")
+    token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "") or os.environ.get("BUFFER_API_TOKEN_B", "")
 
     # IMPORTANT: Do NOT fall back to BUFFER_WORKER_URL - that is a publish endpoint URL,
     # not a Buffer API access token. Using it causes auth failures and all-zero metrics.
@@ -372,8 +372,8 @@ def main():
 
     if args.validate:
         print("\nValidating Buffer API tokens...")
-        token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "")
-        token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "")
+        token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "") or os.environ.get("BUFFER_API_TOKEN_A", "") or os.environ.get("BUFFER_API_TOKEN", "")
+        token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "") or os.environ.get("BUFFER_API_TOKEN_B", "")
         # Do NOT fall back to BUFFER_WORKER_URL - that's a publish endpoint, not an API token
         valid_a = validate_buffer_token(token_a, "account_a") if token_a else (print("  [account_a] BUFFER_ACCESS_TOKEN not set") or False)
         valid_b = validate_buffer_token(token_b, "account_b") if token_b else (print("  [account_b] BUFFER_ACCESS_TOKEN_2 not set") or False)
