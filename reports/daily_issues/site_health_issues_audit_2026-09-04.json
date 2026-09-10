@@ -7,7 +7,7 @@
   "high": 0,
   "medium": 3,
   "low": 1,
-  "pending": 4,
+  "pending": 0,
   "issues": [
     {
       "type": "title_too_long",
@@ -16,11 +16,13 @@
       "message": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
       "auto_fixable": true,
       "agent": "seo",
-      "assigned": false,
-      "status": "new",
+      "assigned": true,
+      "status": "assigned",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
-      "suggested_title": "ChinaBound Travel Guide 2026.09 Update"
+      "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-10T02:34:57.557554"
     },
     {
       "type": "title_too_long",
@@ -29,11 +31,13 @@
       "message": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
       "auto_fixable": true,
       "agent": "seo",
-      "assigned": false,
-      "status": "new",
+      "assigned": true,
+      "status": "assigned",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
-      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom"
+      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-10T02:34:57.557559"
     },
     {
       "type": "title_too_long",
@@ -42,11 +46,13 @@
       "message": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
       "auto_fixable": true,
       "agent": "seo",
-      "assigned": false,
-      "status": "new",
+      "assigned": true,
+      "status": "assigned",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
-      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture"
+      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-10T02:34:57.557561"
     },
     {
       "type": "workflow_missing_guard",
@@ -55,10 +61,12 @@
       "message": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
       "auto_fixable": false,
       "agent": "ops",
-      "assigned": false,
-      "status": "new",
+      "assigned": true,
+      "status": "assigned",
       "source": "深度测评 2026-09-04",
-      "priority": "P2"
+      "priority": "P2",
+      "assigned_to": "ops",
+      "assigned_at": "2026-09-10T02:34:57.557562"
     }
   ]
 }
