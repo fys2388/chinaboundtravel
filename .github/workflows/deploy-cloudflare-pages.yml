@@ -11,7 +11,11 @@ on:
       - 'themes/**'
       - 'assets/**'
       - 'config/**'
+      - 'functions/**'
       - 'hugo.toml'
+      - 'wrangler.toml'
+      - '_headers'
+      - '_redirects'
       - '.github/workflows/deploy-cloudflare-pages.yml'
   workflow_dispatch:
 
