@@ -354,9 +354,14 @@ def download_image(url, output_path):
 
 def generate_cover_image(topic, output_path):
     """使用 Pollinations.ai 生成封面"""
-    prompt = f"travel photography of {topic}, no people, no faces, no portraits, cinematic, high quality, 4k"
+    prompt = f"travel photography of {topic}, natural lighting, realistic photo, high quality, 4k, landscape only"
     encoded = urllib.parse.quote(prompt)
-    url = f"{POLLINATIONS_BASE}/{encoded}?width=1280&height=720&nologo=true"
+    negative = ("person,people,face,portrait,human,figure,crowd,man,woman,child,selfie,group photo,"
+                "tourists,traveler,backpacker,silhouette,night market,food stall,red lantern,lantern,"
+                "cinematic,moody,dark,atmospheric,dramatic lighting,illustration,painting,digital art,"
+                "concept art,AI art,stylized,artistic,blurry,distorted,deformed,watermark,text")
+    encoded_negative = urllib.parse.quote(negative)
+    url = f"{POLLINATIONS_BASE}/{encoded}?width=1280&height=720&nologo=true&negative={encoded_negative}&model=flux"
     print(f"[图片] 正在生成 AI 封面 (主题: {topic})...")
     return download_image(url, output_path)
 

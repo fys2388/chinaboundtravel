@@ -649,7 +649,10 @@ def _gen_via_pollinations(prompt: str, out_path: Path, platform: str) -> bool:
         w, h = 1536, 864    # 16:9
     negative = ("blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, "
                 "bad anatomy, low quality, watermark, text, words, letters, logo, person, "
-                "people, face, portrait, human, figure, crowd, man, woman, child")
+                "people, face, portrait, human, figure, crowd, man, woman, child, "
+                "night market, food stall, red lantern, lantern, cinematic, moody, dark, "
+                "atmospheric, dramatic lighting, illustration, painting, digital art, "
+                "concept art, AI art, stylized, artistic")
     url = (f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}"
            f"?width={w}&height={h}&nologo=true&model=flux&token=anonymous"
            f"&negative={requests.utils.quote(negative)}")
