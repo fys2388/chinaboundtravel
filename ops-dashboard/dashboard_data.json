@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10 18:00:52",
+  "generated_at": "2026-09-10 18:30:56",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 268,
+    "response_ms": 225,
     "server": "cloudflare"
   },
   "workflows": [
@@ -86,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-09T10:17:43Z",
+      "last_run": "2026-09-10T10:11:25Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-10T09:31:09Z",
+      "last_run": "2026-09-10T10:01:10Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-10T09:31:15Z",
+      "last_run": "2026-09-10T10:11:52Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-10T10:00:32Z",
+      "last_run": "2026-09-10T10:30:34Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-10 10:01",
+    "checked_at": "2026-09-10 10:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -512,21 +512,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 275,
-      "sessions": 376,
-      "pageviews": 844,
-      "date": "2026-09-08"
+      "visitors": 268,
+      "sessions": 374,
+      "pageviews": 834,
+      "date": "2026-09-09"
     },
     "gsc_28d": {
-      "impressions": 620,
+      "impressions": 612,
       "clicks": 0,
-      "date": "2026-09-06"
+      "date": "2026-09-07"
     },
     "content": {
       "total_articles": 63,
       "with_affiliate": 36,
       "avg_word_count": 1977,
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     },
     "ga4_daily": {
       "visitors": 11,
