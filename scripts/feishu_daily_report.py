@@ -634,7 +634,7 @@ class FeishuDailyReporter:
 
 {agent_health_block}
 
-🩺 Site Health巡检: {_format_site_health(data.get('site_health'))}
+🩺 Site Health巡检: {self._format_site_health(data.get('site_health'))}
 
 🟢 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
                     }
@@ -927,7 +927,7 @@ class FeishuDailyReporter:
         # 7.6 Site Health 巡检结果
         try:
             import glob as _glob
-            sh_files = sorted(_glob.glob(str(ROOT / "reports" / "site_health" / "site_health_*.json")))
+            sh_files = sorted(_glob.glob(str(BLOG_ROOT / "reports" / "site_health" / "site_health_*.json")))
             if sh_files:
                 with open(sh_files[-1], encoding="utf-8") as f:
                     sh_report = json.load(f)
