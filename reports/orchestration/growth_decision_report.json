@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-09-10T10:11:45.573459",
+  "run_time": "2026-09-11T10:08:39.299445",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.413140",
+      "version": "2.0-20260911_100839",
+      "last_updated": "2026-09-11T10:08:39.076553",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -50,8 +50,8 @@
         {
           "keyword": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
           "ctr": 0.02,
-          "position": 68.9,
-          "impressions": 43
+          "position": 70.4,
+          "impressions": 52
         },
         {
           "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -136,14 +136,14 @@
           "field": "best_keywords",
           "reason": "基于GSC数据分析，更新最佳关键词排名",
           "version": "2.1",
-          "timestamp": "2026-09-10T10:11:45.404994",
+          "timestamp": "2026-09-11T10:08:39.065175",
           "evidence": "based on performance data analysis"
         }
       ]
     },
     "revenue": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.483264",
+      "version": "2.0-20260911_100839",
+      "last_updated": "2026-09-11T10:08:39.173626",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -226,8 +226,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.373210",
+      "version": "2.0-20260911_100839",
+      "last_updated": "2026-09-11T10:08:39.022127",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -311,8 +311,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.341724",
+      "version": "2.0-20260911_100838",
+      "last_updated": "2026-09-11T10:08:38.979969",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -407,8 +407,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.302323",
+      "version": "2.0-20260911_100838",
+      "last_updated": "2026-09-11T10:08:38.924569",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -535,8 +535,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20260910_101145",
-      "last_updated": "2026-09-10T10:11:45.443803",
+      "version": "2.0-20260911_100839",
+      "last_updated": "2026-09-11T10:08:39.118691",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -608,77 +608,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 1.5299999999999994, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'traffic_potential': 1.2, 'position': 4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cancel/', 'traffic_potential': 0.3, 'position': 7}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260910_101145"
+      "strategy_version": "2.0-20260911_100839"
     }
   ],
   "domain_summary": {
