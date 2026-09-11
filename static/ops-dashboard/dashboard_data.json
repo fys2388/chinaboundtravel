@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-11 05:05:00",
+  "generated_at": "2026-09-11 09:00:52",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 83,
+    "response_ms": 238,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-10T18:10:27Z",
+      "last_run": "2026-09-10T21:05:23Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-10T19:30:27Z",
+      "last_run": "2026-09-11T00:31:12Z",
       "last_event": "workflow_run"
     },
     {
@@ -149,8 +149,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-10T05:25:45Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-11T00:30:37Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "geo-check.yml",
@@ -212,8 +212,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-10T21:04:48Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-11T01:00:32Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-10 21:05",
+    "checked_at": "2026-09-11 01:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -374,49 +374,49 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 2
       },
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "网站健康巡检",
         "status": "✅ 正常",
-        "last_run": "2026-09-10",
+        "last_run": "2026-09-11",
         "max_age_days": 1
       }
     ],
@@ -532,8 +532,8 @@
       "visitors": 11,
       "sessions": 16,
       "pageviews": 15,
-      "new_users": 535,
-      "bounce_rate": 65.3,
+      "new_users": 544,
+      "bounce_rate": 66.0,
       "date": "2026-09-10",
       "status": "OK",
       "daily": [
