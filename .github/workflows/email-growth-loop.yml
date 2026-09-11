@@ -1,9 +1,9 @@
-name: Email Growth Loop (Closed Loop 4)
+﻿name: Email Growth Loop (Closed Loop 4)
 
 on:
   schedule:
     # Every Thursday at 02:00 UTC (10:00 Beijing time)
-    - cron: '0 2 * * 4'
+    - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

@@ -1,9 +1,9 @@
-name: Affiliate CTA Optimization (Closed Loop 3)
+﻿name: Affiliate CTA Optimization (Closed Loop 3)
 
 on:
   schedule:
     # Every Wednesday at 02:00 UTC (10:00 Beijing time)
-    - cron: '0 2 * * 3'
+    - cron: '0 4 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Travel Etiquette: Tipping & Photos"
 date: "2026-08-31T10:00:00+08:00"
 lastmod: "2026-08-31T11:50:36+08:00"
@@ -42,7 +42,6 @@ In public, queues matter, and personal space is smaller than in the West. Keep y
 
 Gifts also have their own set of rules. Use two hands when giving or receiving, don't refuse immediately, and red envelopes are only for special occasions like Lunar New Year. By following these etiquette tips, you'll not only have a more enjoyable trip but also show respect for the rich Chinese culture.
 
-[Image:A bustling Chinese city street at golden hour, shop signs glowing, no people visible]
 
 ## Tipping in China: What Most Travelers Get Wrong
 
@@ -88,7 +87,6 @@ Also, keep in mind that tipping is not customary in China, except in some upscal
 
 So, if you're planning a trip to China, brush up on your dining etiquette and get ready for a delicious and respectful experience! Check out our [7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) for more travel tips.
 
-[Image:A dim sum spread on a round turntable table, steam rising, restaurant interior, no people]
 
 ## Greetings and Gift-Giving: The Unwritten Rules
 
@@ -126,4 +124,13 @@ China is a land of rich traditions and customs, and navigating its social norms 
 
 By following these simple etiquette tips, you'll be well on your way to having a memorable and respectful trip to China. And if you want to learn more about Chinese culture and travel, be sure to check out our other guides and subscribe to our newsletter for the latest updates. Safe travels!
 
-[Image:A traditional Chinese courtyard gate with red lanterns at dusk, no people]
+
+---
+
+## Related Reading
+
+- [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+- [China Packing List 2026: What to Bring](https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/)
+- [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+- [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
+- [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)

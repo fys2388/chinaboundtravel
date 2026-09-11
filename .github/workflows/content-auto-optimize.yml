@@ -1,9 +1,9 @@
-name: Content Auto-Optimization Loop
+﻿name: Content Auto-Optimization Loop
 
 on:
   schedule:
     # Every Monday at 02:00 UTC (10:00 Beijing time)
-    - cron: '0 2 * * 1'
+    - cron: '0 2 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

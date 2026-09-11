@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Affiliate CTA A/B Tester — Closed Loop 3 (P2)
@@ -58,8 +58,8 @@ GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 
 # Thresholds
 LOW_CTR_THRESHOLD = 0.005          # 0.5%
-MIN_IMPRESSIONS_FOR_JUDGMENT = 200 # need >200 impressions to judge
-ZERO_CLICK_IMPRESSION_THRESHOLD = 100  # >100 impressions but 0 clicks = flag
+MIN_IMPRESSIONS_FOR_JUDGMENT = 50  # lowered from 200 for low-traffic stage
+ZERO_CLICK_IMPRESSION_THRESHOLD = 30   # lowered from 100 for low-traffic stage
 DEFAULT_MAX_ADJUSTMENTS = 10
 DEFAULT_LOOKBACK_DAYS = 28
 

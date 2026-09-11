@@ -1,9 +1,9 @@
-name: SEO Growth Auto-Loop
+﻿name: SEO Growth Auto-Loop
 
 on:
   schedule:
     # Every Tuesday at 02:00 UTC (10:00 Beijing time)
-    - cron: '0 2 * * 2'
+    - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
