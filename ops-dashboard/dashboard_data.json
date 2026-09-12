@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-12 17:31:52",
+  "generated_at": "2026-09-12 18:01:27",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 230,
+    "response_ms": 229,
     "server": "cloudflare"
   },
   "workflows": [
@@ -86,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-11T10:08:21Z",
+      "last_run": "2026-09-12T09:43:23Z",
       "last_event": "schedule"
     },
     {
@@ -112,8 +112,8 @@
       "name": "Post-deploy Tasks",
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
-      "last_status": "",
-      "last_run": "2026-09-12T09:31:35Z",
+      "last_status": "success",
+      "last_run": "2026-09-12T09:32:08Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-12T09:31:40Z",
+      "last_run": "2026-09-12T09:43:46Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,8 +212,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-12T09:31:35Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-12T10:01:10Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-12 09:32",
+    "checked_at": "2026-09-12 10:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -512,21 +512,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 276,
+      "visitors": 274,
       "sessions": 386,
       "pageviews": 839,
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "gsc_28d": {
-      "impressions": 616,
+      "impressions": 600,
       "clicks": 0,
-      "date": "2026-09-08"
+      "date": "2026-09-09"
     },
     "content": {
       "total_articles": 63,
       "with_affiliate": 36,
       "avg_word_count": 1978,
-      "date": "2026-09-11"
+      "date": "2026-09-12"
     },
     "ga4_daily": {
       "visitors": 1,
