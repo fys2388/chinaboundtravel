@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-12T05:36:05",
+  "updated_at": "2026-09-12T16:11:47",
   "items": [
     {
       "id": "soc-000001",
@@ -171,8 +171,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -684,7 +684,7 @@
       "type": "tip",
       "caption": "Essential Panda tips most first-time visitors miss. Further Reading → https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform x). Scene: giant panda in Chengdu bamboo forest. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-x-tip-59740f31.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -699,7 +699,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "1f6d7ee22ea4"
+      "_sig": "1f6d7ee22ea4",
+      "image_generated": true
     },
     {
       "id": "soc-000028",
@@ -709,7 +710,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about Panda — practical lessons from the ground.\n\n• Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport,\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform fb). Scene: giant panda in Chengdu bamboo forest. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-fb-story-e2432372.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -724,7 +725,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "b82046432e4a"
+      "_sig": "b82046432e4a",
+      "image_generated": true
     },
     {
       "id": "soc-000029",
@@ -734,7 +736,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Panda: what to see and capture.\n\n· Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform ig). Scene: giant panda in Chengdu bamboo forest. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-ig-visual-f509ef61.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -749,7 +751,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "321e7e32e5c8"
+      "_sig": "321e7e32e5c8",
+      "image_generated": true
     },
     {
       "id": "soc-000030",
@@ -759,7 +762,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nChengdu Panda Base: See Pandas Like a Local | Everything you need to know about Panda — in one practical guide.\n\nVisit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform pinterest). Scene: giant panda in Chengdu bamboo forest. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-pinterest-conversion-29c79b86.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -774,7 +777,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "cd3ebd211d2b"
+      "_sig": "cd3ebd211d2b",
+      "image_generated": true
     },
     {
       "id": "soc-000031",
@@ -784,7 +788,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Zhangjiajie every traveler should know. → https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'Zhangjiajie Guide: Avatar Mountains' (platform x). Scene: Zhangjiajie sandstone pillars in clouds. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/zhangjiajie-avatar-mountains-complete-gu-x-knowledge-2d29adb6.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -799,7 +803,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "5be391bdae1e"
+      "_sig": "5be391bdae1e",
+      "image_generated": true
     },
     {
       "id": "soc-000032",
@@ -2615,8 +2620,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
