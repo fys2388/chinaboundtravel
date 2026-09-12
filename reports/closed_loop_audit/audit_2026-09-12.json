@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-12",
-  "audited_at": "2026-09-12T02:11:54.073215",
+  "audited_at": "2026-09-12T14:52:42.325439",
   "score": {
     "total_score": 70.0,
     "max_score": 100,
@@ -61,7 +61,7 @@
         "need_manual": 19,
         "resolved": 16,
         "execution_log_exists": true,
-        "total_executions": 34
+        "total_executions": 40
       }
     },
     {
@@ -73,7 +73,7 @@
       "details": {
         "dashboard_pending": 3,
         "actual_pending": 19,
-        "ga4_daily_days": 80,
+        "ga4_daily_days": 81,
         "gsc_daily_days": 30
       }
     }
