@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-12 20:31:13",
+  "generated_at": "2026-09-12 21:01:27",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 154,
+    "response_ms": 173,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-12T12:01:40Z",
+      "last_run": "2026-09-12T12:31:28Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-12T12:01:44Z",
+      "last_run": "2026-09-12T12:31:33Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-12T12:31:00Z",
+      "last_run": "2026-09-12T13:01:11Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-12 12:31",
+    "checked_at": "2026-09-12 13:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -529,12 +529,12 @@
       "date": "2026-09-12"
     },
     "ga4_daily": {
-      "visitors": 1,
-      "sessions": 2,
-      "pageviews": 2,
+      "visitors": 0,
+      "sessions": 1,
+      "pageviews": 1,
       "new_users": 548,
       "bounce_rate": 64.7,
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "status": "OK",
       "daily": [
         {
@@ -1016,43 +1016,49 @@
           "sessions": 2,
           "activeUsers": 1,
           "pageviews": 2
+        },
+        {
+          "date": "2026-09-12",
+          "sessions": 1,
+          "activeUsers": 0,
+          "pageviews": 1
         }
       ],
       "ranges": {
         "today": {
+          "visitors": 0,
+          "sessions": 1,
+          "pageviews": 1,
+          "date_range": "2026-09-12 ~ 2026-09-12",
+          "days": 1
+        },
+        "yesterday": {
           "visitors": 1,
           "sessions": 2,
           "pageviews": 2,
           "date_range": "2026-09-11 ~ 2026-09-11",
           "days": 1
         },
-        "yesterday": {
-          "visitors": 15,
-          "sessions": 19,
-          "pageviews": 19,
-          "date_range": "2026-09-10 ~ 2026-09-10",
-          "days": 1
-        },
         "7d": {
-          "visitors": 65,
-          "sessions": 103,
-          "pageviews": 169,
-          "date_range": "2026-09-05 ~ 2026-09-11",
+          "visitors": 56,
+          "sessions": 90,
+          "pageviews": 152,
+          "date_range": "2026-09-06 ~ 2026-09-12",
           "days": 7
         },
         "30d": {
-          "visitors": 323,
-          "sessions": 405,
-          "pageviews": 875,
-          "date_range": "2026-08-12 ~ 2026-09-11",
+          "visitors": 313,
+          "sessions": 396,
+          "pageviews": 856,
+          "date_range": "2026-08-13 ~ 2026-09-12",
           "days": 30
         },
         "90d": {
           "visitors": 637,
-          "sessions": 789,
-          "pageviews": 2063,
-          "date_range": "2026-06-16 ~ 2026-09-11",
-          "days": 80
+          "sessions": 790,
+          "pageviews": 2064,
+          "date_range": "2026-06-16 ~ 2026-09-12",
+          "days": 81
         },
         "last_month": {
           "visitors": 279,
