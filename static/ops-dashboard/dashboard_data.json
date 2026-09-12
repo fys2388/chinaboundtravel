@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-12 14:31:19",
+  "generated_at": "2026-09-12 15:01:23",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 213,
+    "response_ms": 181,
     "server": "cloudflare"
   },
   "workflows": [
@@ -58,9 +58,9 @@
       "name": "Content Auto-Optimization Loop",
       "id": "content-auto-optimize",
       "frequency": "每日",
-      "last_status": "no_runs",
-      "last_run": "",
-      "last_event": ""
+      "last_status": "failure",
+      "last_run": "2026-09-12T06:34:59Z",
+      "last_event": "schedule"
     },
     {
       "file": "content-quality-audit.yml",
@@ -77,7 +77,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-11T17:25:48Z",
+      "last_run": "2026-09-12T06:42:55Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-12T06:01:39Z",
+      "last_run": "2026-09-12T06:31:36Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-12T06:01:45Z",
+      "last_run": "2026-09-12T06:43:10Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-12T06:31:00Z",
+      "last_run": "2026-09-12T07:01:09Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -239,7 +239,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-11T19:31:18Z",
+      "last_run": "2026-09-12T06:43:10Z",
       "last_event": "workflow_run"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-12 06:31",
+    "checked_at": "2026-09-12 07:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
