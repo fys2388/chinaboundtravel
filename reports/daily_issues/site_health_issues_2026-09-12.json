@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-09-12T02:11:51.864063+00:00",
+  "source": "site_health_agent",
+  "issues": [
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/free-itinerary.md",
+      "message": "Meta description过短(62字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    }
+  ]
+}
