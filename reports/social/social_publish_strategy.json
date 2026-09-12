@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260911_100838",
-  "last_updated": "2026-09-11T10:08:38.924569",
+  "version": "2.0-20260912_094340",
+  "last_updated": "2026-09-12T09:43:40.029407",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -10,10 +10,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "warning",
         "guide",
         "conversion",
-        "visual"
+        "visual",
+        "list"
       ],
       "best_ctas": [
         "save for later",
@@ -34,10 +34,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "warning",
         "guide",
         "conversion",
-        "visual"
+        "visual",
+        "list"
       ],
       "best_ctas": [
         "link in bio",
@@ -58,10 +58,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "warning",
         "guide",
         "conversion",
-        "visual"
+        "visual",
+        "list"
       ],
       "best_ctas": [
         "read more",
@@ -82,10 +82,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "warning",
         "guide",
         "conversion",
-        "visual"
+        "visual",
+        "list"
       ],
       "best_ctas": [
         "read thread",
@@ -109,13 +109,13 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 4.84%，比Bottom 20%高 4.84个百分点",
+      "description": "Top 20%帖子平均CTR 4.78%，比Bottom 20%高 4.78个百分点",
       "common_hooks": [
         "linkedin",
-        "warning",
         "guide",
         "conversion",
-        "visual"
+        "visual",
+        "list"
       ],
       "best_times": [
         "22:00",

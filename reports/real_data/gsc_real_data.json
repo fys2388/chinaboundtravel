@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-11T10:08:36.918469",
-  "data_date": "2026-09-08",
+  "pull_time": "2026-09-12T09:43:38.282070",
+  "data_date": "2026-09-09",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 616,
+    "impressions": 600,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 69.1,
+    "average_position": 69.6,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-12",
-      "impressions": 212,
-      "clicks": 1,
-      "ctr": 0.0,
-      "position": 41.3
-    },
     {
       "date": "2026-08-13",
       "impressions": 230,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 41.1
+    },
+    {
+      "date": "2026-09-09",
+      "impressions": 48,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 44.9
     }
   ],
   "top_queries": [
@@ -265,7 +265,7 @@
       "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 63.1
+      "position": 66.4
     },
     {
       "query": "144 hour visa china cost",
@@ -297,10 +297,10 @@
     },
     {
       "query": "144 hour visa free transit",
-      "impressions": 9,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
-      "position": 64.9
+      "position": 69.5
     },
     {
       "query": "144 hour visa free transit in china",
@@ -355,45 +355,38 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 23,
+      "impressions": 24,
       "clicks": 2,
-      "ctr": 0.09,
-      "position": 23.2
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 11,
-      "clicks": 1,
-      "ctr": 0.09,
-      "position": 9.4
+      "ctr": 0.08,
+      "position": 22.5
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 52,
+      "impressions": 62,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 70.4
+      "position": 71.5
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-      "impressions": 64,
+      "impressions": 58,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 20.9
+      "position": 20.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 46,
+      "impressions": 41,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 17.9
+      "position": 17.5
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 32,
+      "impressions": 33,
       "clicks": 0,
       "ctr": 0,
-      "position": 46.8
+      "position": 46.7
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -418,10 +411,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/xian/",
-      "impressions": 28,
+      "impressions": 26,
       "clicks": 0,
       "ctr": 0,
-      "position": 68.8
+      "position": 68
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
@@ -467,17 +460,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 735,
+      "impressions": 726,
       "clicks": 0,
       "ctr": 0,
-      "position": 69.8
+      "position": 68.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-      "impressions": 8,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 15.4
+      "position": 16.4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -492,6 +485,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 3.5
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 87.8
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-08"
+    "data_date": "2026-09-09"
   }
 }

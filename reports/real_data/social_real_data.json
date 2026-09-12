@@ -1,18 +1,60 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-11T10:08:37.778486",
-  "data_date": "2026-09-11",
+  "pull_time": "2026-09-12T09:43:39.266936",
+  "data_date": "2026-09-12",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 9,
+    "total_impressions": 6,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6aa4e4c266c59e2484a8f8f7",
+      "text": "What travelers discover about Accommodation — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_cam",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-12T07:36:16.341Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6aa4e4bf66c59e2484a8f8cf",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Tea: what to see and capture.\n\n• Must-try Chinese dishes and restaurant recommendations for international travelers, with\n\nWhat's your biggest China travel question? Drop",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-12T07:36:04.040Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6aa433f8d416f0601bfa8fd3",
+      "text": "What travelers discover about Tea — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cb",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-11T19:02:41.630Z",
+      "status": "sent",
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6aa39610b6d24fd028ae427b",
       "text": "🔥 linkedin\n\nResearch-backed facts about Accommodation every traveler should know.\n\n· Location, Location, Location\n· Types of Accommodation\n· Serviced Apartments\n\nRead the full guide: https://www.china",
@@ -112,25 +154,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6aa0f45a7b66b49ec6f78526",
-      "text": "Research-backed facts about Bargain every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_so",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-09T07:53:46.419Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 2,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9faf421900c10a4f0e9763",
-      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-08T12:46:41.375Z",
+      "id": "6aa433fcc38efd44b0755751",
+      "text": "🔥 linkedin\n\nWhere to Stay in China: Complete 2026 Guide | Essential Accommodation tips most first-time visitors miss.\n\nChina accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-12T06:02:02.459Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
@@ -140,17 +168,17 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6a9faf41bfce41cfe2ffdb40",
-      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-09-08T10:50:13.532Z",
+      "id": "6aa3960c74b1f1d0ccd34ddb",
+      "text": "🔥 linkedin\n\nChina Food Guide: Must-Try Dishes & | Essential Tea tips most first-time visitors miss.\n\nMust-try Chinese dishes and restaurant recommendations for international travelers, with authentic ",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-11T18:48:05.010Z",
       "status": "sent",
       "likes": 0,
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 0,
       "engagement_rate": 0.0
     },
     {
@@ -264,52 +292,24 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9e52313533dee3ad17f06a",
-      "text": "🔥 linkedin\n\nChina Food Guide: Must-Try Dishes & Restaurants | What travelers discover about Tea — practical lessons from the ground.\n\nMust-try Chinese dishes and restaurant recommendations for interna",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-07T18:57:16.264Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6a9e522231362a58e5caf6db",
-      "text": "🔥 linkedin\n\nChina 144-Hour Visa-Free Transit (2026 Guide) | Essential Visa tips most first-time visitors miss.\n\nChina 144-Hour Visa-Free Transit (2026 Guide)\n\n📌 Save this for your China trip planning.",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-07T18:57:01.429Z",
-      "status": "sent",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "instagram": {
-      "posts": 5,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
     "twitter": {
-      "posts": 3,
-      "impressions": 6,
+      "posts": 4,
+      "impressions": 4,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
       "posts": 2,
-      "impressions": 3,
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0
+    },
+    "instagram": {
+      "posts": 4,
+      "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
@@ -327,6 +327,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-11"
+    "data_date": "2026-09-12"
   }
 }

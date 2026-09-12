@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-09-11 10:08:38
+**生成时间**: 2026-09-12 09:43:40
 **闭环版本**: 2.0
-**策略版本**: 2.0-20260911_100838
+**策略版本**: 2.0-20260912_094340
 
 ---
 
@@ -20,7 +20,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 154 |
+| 历史帖子总数 | 159 |
 | 本轮新增记录 | 0 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
@@ -31,15 +31,15 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ## 📱 平台表现
 
 ### 🟡 facebook
-- 帖子数: 23
+- 帖子数: 24
 - 总展示: 2889
 - 总点击: 81
-- 平均CTR: 1.22%
-- 平均互动率: 2.19%
+- 平均CTR: 1.17%
+- 平均互动率: 2.10%
 - 表现评级: average
 
 ### 🔴 twitter
-- 帖子数: 20
+- 帖子数: 22
 - 总展示: 8
 - 总点击: 0
 - 平均CTR: 0.00%
@@ -55,11 +55,11 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 56
+- 帖子数: 58
 - 总展示: 9248
 - 总点击: 364
-- 平均CTR: 0.70%
-- 平均互动率: 1.05%
+- 平均CTR: 0.68%
+- 平均互动率: 1.01%
 - 表现评级: needs_improvement
 
 ### 🟢 x
@@ -85,10 +85,10 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ### 最佳Hook关键词
 
 1. **linkedin** - 平均CTR: 5.72% (出现10次)
-2. **warning** - 平均CTR: 5.11% (出现4次)
-3. **guide** - 平均CTR: 4.95% (出现3次)
-4. **conversion** - 平均CTR: 4.93% (出现4次)
-5. **visual** - 平均CTR: 4.92% (出现4次)
+2. **guide** - 平均CTR: 4.95% (出现3次)
+3. **conversion** - 平均CTR: 4.93% (出现4次)
+4. **visual** - 平均CTR: 4.92% (出现4次)
+5. **list** - 平均CTR: 4.88% (出现3次)
 
 
 ### 最佳发布时间
@@ -125,4 +125,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-09-11 10:08:38*
+*生成时间: 2026-09-12 09:43:40*
