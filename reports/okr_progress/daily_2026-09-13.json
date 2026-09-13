@@ -1,10 +1,10 @@
 {
   "report_type": "daily",
   "period": "2026-09-13",
-  "generated_at": "2026-09-13 00:31:29",
+  "generated_at": "2026-09-13 05:09:08",
   "plan": [
     {
-      "task": "🟠 日访问用户：当前 1人 / 目标 7人（14%），需重点推进",
+      "task": "🟠 日访问用户：当前 2人 / 目标 7人（29%），需重点推进",
       "priority": "high",
       "period": "今日"
     },
@@ -15,7 +15,7 @@
     }
   ],
   "krs": {
-    "traffic": 1.0,
+    "traffic": 2.0,
     "content": 0.0,
     "gsc": 0.0,
     "revenue": 0.0,
