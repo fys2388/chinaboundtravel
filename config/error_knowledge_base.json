@@ -1118,6 +1118,17 @@
       "error_message": "content quality reports\t2026-09-13T07:05:21.9852136Z Created autostash: 67f1e8e\ncontent-quality-audit\tCommit content quality reports\t2026-09-13T07:05:21.9855063Z Current branch main is up to date.\ncontent-quality-audit\tCommit content quality reports\t2026-09-13T07:05:22.0081220Z Applied autostash.\ncontent-quality-audit\tCommit content quality reports\t2026-09-13T07:05:23.1514737Z To https://github.com/fys2388/chinaboundtravel\ncontent-quality-audit\tCommit content quality reports\t2026-09-13T07:05:23.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260913_073142",
+      "timestamp": "2026-09-13T07:31:42.604018",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "34745370937",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "y\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9620738Z ^[[36;1m  --base-url http://127.0.0.1:8765 \\^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9621056Z ^[[36;1m  --max-pages 12 \\^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9621869Z ^[[36;1m  --strict^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9692573Z shell: /usr/bin/bash -e {0}\npost-deploy\t2.0 Pre-deploy Quality G",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
