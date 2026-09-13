@@ -2,7 +2,7 @@
   "agent": "seo",
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-13_seo",
-  "created_at": "2026-09-13T02:08:44.050565",
+  "created_at": "2026-09-13T11:25:26.235896",
   "target_date": "2026-09-13",
   "issue_count": 3,
   "severity_summary": {
@@ -20,7 +20,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T02:08:44.050525",
+      "detected_at": "2026-09-13T11:25:26.235723",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -33,7 +33,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T02:08:44.050533",
+      "detected_at": "2026-09-13T11:25:26.235750",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -46,7 +46,7 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T02:08:44.050537",
+      "detected_at": "2026-09-13T11:25:26.235759",
       "status": "new",
       "assigned": true,
       "assigned_to": "seo"
@@ -60,7 +60,7 @@
     "agent": "seo",
     "action": "optimize_title",
     "source_file": "site_health_issues_audit_2026-09-04.json",
-    "detected_at": "2026-09-13T02:08:44.050525",
+    "detected_at": "2026-09-13T11:25:26.235723",
     "status": "new",
     "assigned": true,
     "assigned_to": "seo"
@@ -68,12 +68,5 @@
   "expected_actions": [
     "optimize_title"
   ],
-  "status": "completed",
-  "updated_at": "2026-09-13T02:08:44.215501",
-  "execution": {
-    "resolved_count": 0,
-    "failed_count": 0,
-    "completed_at": "2026-09-13T02:08:44.215507",
-    "note": "resolved=0, need_manual=3, failed=0"
-  }
+  "status": "pending"
 }

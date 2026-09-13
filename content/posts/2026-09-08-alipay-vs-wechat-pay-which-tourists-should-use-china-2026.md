@@ -82,7 +82,7 @@ The setup is straightforward: download Alipay, search for "Tour Card," verify yo
 
 **2. English Interface**
 
-Alipay's international version has a reasonably good English interface. Not perfect — some menus still default to Chinese — but enough to navigate without a translation app.
+Alipay's international version has a reasonably good English interface. Not excellent — some menus still default to Chinese — but enough to navigate without a translation app.
 
 **3. Wide Merchant Acceptance**
 

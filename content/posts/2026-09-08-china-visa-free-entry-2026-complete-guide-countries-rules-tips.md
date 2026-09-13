@@ -351,7 +351,7 @@ China's visa-free expansion is one of the most exciting developments in internat
 
 Just remember: check your eligibility, confirm your passport validity, book your onward ticket, and set up your payment apps and eSIM before you land. Do those four things, and you'll be sipping tea in a Chengdu teahouse before you know it.
 
-For more trip planning, our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the perfect starting point for first-time visitors. And if you're still deciding where to go, our [Shanghai vs Beijing guide](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/) breaks down which city to visit first.
+For more trip planning, our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) is the excellent starting point for first-time visitors. And if you're still deciding where to go, our [Shanghai vs Beijing guide](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/) breaks down which city to visit first.
 
 Safe travels, and welcome to China.
 

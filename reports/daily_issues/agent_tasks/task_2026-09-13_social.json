@@ -2,7 +2,7 @@
   "agent": "social",
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-13_social",
-  "created_at": "2026-09-13T02:08:44.050555",
+  "created_at": "2026-09-13T11:25:26.235866",
   "target_date": "2026-09-13",
   "issue_count": 1,
   "severity_summary": {
@@ -20,7 +20,7 @@
       "agent": "social",
       "action": "analyze_and_optimize",
       "source_file": "social_daily_2026-09-11.json",
-      "detected_at": "2026-09-13T02:08:44.047216",
+      "detected_at": "2026-09-13T11:25:26.199803",
       "status": "new",
       "assigned": true,
       "assigned_to": "social"
@@ -34,7 +34,7 @@
     "agent": "social",
     "action": "analyze_and_optimize",
     "source_file": "social_daily_2026-09-11.json",
-    "detected_at": "2026-09-13T02:08:44.047216",
+    "detected_at": "2026-09-13T11:25:26.199803",
     "status": "new",
     "assigned": true,
     "assigned_to": "social"
@@ -42,12 +42,5 @@
   "expected_actions": [
     "analyze_and_optimize"
   ],
-  "status": "completed",
-  "updated_at": "2026-09-13T02:08:44.210691",
-  "execution": {
-    "resolved_count": 0,
-    "failed_count": 0,
-    "completed_at": "2026-09-13T02:08:44.210696",
-    "note": "resolved=0, need_manual=1, failed=0"
-  }
+  "status": "pending"
 }

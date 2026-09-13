@@ -27,6 +27,26 @@ jobs:
       - name: Generate monthly ebook update
         run: python chinaboundtravel_social_bot/scripts/monthly_ebook_update.py
 
+      - name: Guard: truncate long titles
+        run: |
+          python -c "
+          import glob, re
+          fixed = 0
+          for f in glob.glob('content/posts/*.md'):
+              with open(f, 'r', encoding='utf-8') as fh:
+                  text = fh.read()
+              m = re.search(r'^title:\s*[\"\']?(.+?)[\"\']?\s*$', text, re.M)
+              if m and len(m.group(1)) > 55:
+                  old = m.group(1)
+                  new = old[:52].rstrip() + '...'
+                  text = text.replace(m.group(0), 'title: \"' + new + '\"', 1)
+                  with open(f, 'w', encoding='utf-8') as fh:
+                      fh.write(text)
+                  fixed += 1
+                  print('  Fixed:', f, '->', len(new), 'chars')
+          print('Titles fixed:', fixed)
+          "
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:

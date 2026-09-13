@@ -33,6 +33,7 @@ import json
 import os
 import re
 import subprocess
+import shutil
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -68,7 +69,7 @@ SITE_URL = get_site_url()
 MAX_AUTO_OPTIMIZE_PER_WEEK = 2  # user-adjusted: max 1-2 pages/week
 MIN_IMPRESSIONS_FOR_CTR_CHECK = 10
 RANK_DROP_THRESHOLD = 5.0
-HUGO_BIN = r"C:\Users\神魂之人\bin\hugo.exe"
+HUGO_BIN = shutil.which("hugo") or r"C:\Users\神魂之人\bin\hugo.exe"  # portable: CI finds hugo in PATH
 
 # Files that track state across runs
 OPTIMIZATION_LOG = REPORTS_DIR / "content-optimization-log.json"

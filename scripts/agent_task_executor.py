@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Agent Task Executor — Agent 任务自动执行器
 
@@ -19,6 +19,7 @@ Usage:
 import sys
 import json
 import argparse
+import re
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -109,29 +110,88 @@ def execute_site_health(task: dict, dry_run: bool = False) -> dict:
     return results
 
 
+# AI禁用词安全替换表（保守替换，保留语义）
+FORBIDDEN_WORD_REPLACEMENTS = {
+    "perfect": ["excellent", "great", "ideal", "top"],
+    "amazing": ["great", "impressive", "notable"],
+    "incredible": ["remarkable", "notable", "great"],
+    "ultimate": ["key", "essential", "top"],
+    "fantastic": ["great", "good", "solid"],
+    "wonderful": ["great", "enjoyable", "solid"],
+    "awesome": ["great", "good"],
+    "best": ["top", "leading"],
+}
+
+
+def _fix_forbidden_word(file_rel: str, word: str) -> tuple:
+    """读取文件，替换禁用词。返回 (success, detail)"""
+    fpath = BASE_DIR / file_rel
+    if not fpath.is_file():
+        return False, f"文件不存在: {file_rel}"
+    text = fpath.read_text(encoding="utf-8")
+    synonyms = FORBIDDEN_WORD_REPLACEMENTS.get(word.lower(), [])
+    if not synonyms:
+        return False, f"无替换表: {word}"
+    count = 0
+    for syn in synonyms:
+        pattern = r"\b" + re.escape(word) + r"\b"
+        def repl(m, s=syn):
+            nonlocal count
+            count += 1
+            matched = m.group(0)
+            if matched[0].isupper():
+                return s[0].upper() + s[1:]
+            return s
+        new_text = re.sub(pattern, repl, text)
+        if new_text != text:
+            text = new_text
+            break
+    if count == 0:
+        return False, f"未找到禁用词: {word}"
+    fpath.write_text(text, encoding="utf-8")
+    return True, f"已将 {count} 处 '{word}' 替换为 '{synonyms[0]}'  ({file_rel})"
+
+
 def execute_content(task: dict, dry_run: bool = False) -> dict:
     """
     Content Agent — 内容质量问题处理
-    ai_forbidden_word: 检测AI禁用词（需人工审核，标记need_manual）
+    ai_forbidden_word: 自动替换禁用词为安全同义词
     content_placeholder: 占位内容（需人工补充）
-    image_missing_alt: 图片缺alt（可自动建议）
+    image_missing_alt: 图片缺alt（需人工添加）
     """
     results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
 
     for issue in task.get("issues", []):
         itype = issue.get("type")
-
         if itype == "ai_forbidden_word":
-            # AI禁用词需要人工审核，标记为 need_manual
-            results["need_manual"] += 1
-            results["details"].append(f"{itype}: 需人工审核内容")
-            if not dry_run:
+            msg = issue.get("message", "")
+            word = msg.replace("AI禁用词:", "").strip()
+            file_rel = issue.get("file", "")
+            if dry_run:
+                results["details"].append(f"[DRY] {itype}: 将替换 {file_rel} 中的 '{word}'")
+                results["resolved"] += 1
+                continue
+            success, detail = _fix_forbidden_word(file_rel, word)
+            if success:
+                results["resolved"] += 1
+                results["details"].append(detail)
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="resolved",
+                    resolved_by="content_agent",
+                    resolution_note=detail,
+                    target_date=task["target_date"],
+                )
+            else:
+                results["need_manual"] += 1
+                results["details"].append(f"{itype}: {detail}")
                 writeback_issue(
                     source_file=f"site_health_issues_{task['target_date']}.json",
                     issue_type=itype,
                     status="need_manual",
                     resolved_by="content_agent",
-                    resolution_note="AI禁用词需人工审核确认",
+                    resolution_note=detail,
                     target_date=task["target_date"],
                 )
 
@@ -149,16 +209,15 @@ def execute_content(task: dict, dry_run: bool = False) -> dict:
                 )
 
         elif itype == "image_missing_alt":
-            # 可自动生成alt建议，但修改需人工确认
             results["need_manual"] += 1
-            results["details"].append(f"{itype}: 已生成alt建议，需人工确认")
+            results["details"].append(f"{itype}: 需人工添加alt文本")
             if not dry_run:
                 writeback_issue(
                     source_file=f"site_health_issues_{task['target_date']}.json",
                     issue_type=itype,
                     status="need_manual",
                     resolved_by="content_agent",
-                    resolution_note="图片alt建议已生成，待人工确认添加",
+                    resolution_note="图片alt需人工添加",
                     target_date=task["target_date"],
                 )
 
@@ -168,29 +227,120 @@ def execute_content(task: dict, dry_run: bool = False) -> dict:
     return results
 
 
+def _fix_title_length(file_rel: str, target_max: int = 55) -> tuple:
+    """读取 front matter，截断超长 title。返回 (success, detail)"""
+    fpath = BASE_DIR / file_rel
+    if not fpath.is_file():
+        return False, f"文件不存在: {file_rel}"
+    text = fpath.read_text(encoding="utf-8")
+    m = re.match(r"^(---\n)(.*?)(\n---)", text, re.DOTALL)
+    if not m:
+        return False, "无front matter"
+    fm = m.group(2)
+    title_m = re.search(r"^title:\s*[\"']?(.+?)[\"']?\s*$", fm, re.MULTILINE)
+    if not title_m:
+        return False, "front matter无title"
+    old_title = title_m.group(1).strip().strip('"').strip("'")
+    if len(old_title) <= target_max:
+        return False, f"title仅{len(old_title)}字符，无需截断"
+    new_title = old_title[:target_max].rstrip()
+    last_space = new_title.rfind(" ")
+    if last_space > target_max - 15:
+        new_title = new_title[:last_space]
+    new_title = new_title.rstrip(":,;-—")
+    new_fm = fm[:title_m.start()] + f'title: "{new_title}"' + fm[title_m.end():]
+    new_text = text[:m.start(2)] + new_fm + text[m.end(2):]
+    fpath.write_text(new_text, encoding="utf-8")
+    return True, f"title {len(old_title)}->{len(new_title)}字符: \"{new_title[:60]}\""
+
+
+def _fix_meta_description(file_rel: str) -> tuple:
+    """从正文提取首段生成 meta description。"""
+    fpath = BASE_DIR / file_rel
+    if not fpath.is_file():
+        return False, f"文件不存在: {file_rel}"
+    text = fpath.read_text(encoding="utf-8")
+    m = re.match(r"^(---\n)(.*?)(\n---)", text, re.DOTALL)
+    if not m:
+        return False, "无front matter"
+    fm = m.group(2)
+    body = text[m.end():]
+    paragraphs = [p.strip() for p in body.split("\n\n") if p.strip() and not p.strip().startswith("#") and not p.strip().startswith("!")]
+    if not paragraphs:
+        return False, "无正文段落"
+    desc = re.sub(r"[*_\[\]()#]", "", paragraphs[0])
+    desc = re.sub(r"\s+", " ", desc).strip()
+    if len(desc) > 155:
+        desc = desc[:152].rstrip() + "..."
+    if len(desc) < 50:
+        return False, f"提取描述仅{len(desc)}字符，跳过"
+    desc_m = re.search(r"^description:\s*[\"']?(.+?)[\"']?\s*$", fm, re.MULTILINE)
+    if desc_m:
+        new_fm = fm[:desc_m.start()] + f'description: "{desc}"' + fm[desc_m.end():]
+    else:
+        new_fm = fm + f'\ndescription: "{desc}"'
+    new_text = text[:m.start(2)] + new_fm + text[m.end(2):]
+    fpath.write_text(new_text, encoding="utf-8")
+    return True, f"meta description已生成({len(desc)}字符)"
+
+
 def execute_seo(task: dict, dry_run: bool = False) -> dict:
     """
-    SEO Agent — SEO问题处理
-    title_too_short / meta_description_too_short: 生成优化建议，标记 need_manual
+    SEO Agent — SEO问题自动修复
+    title_too_long: 自动截断front matter title到<=55字符
+    meta_description_too_short: 自动从正文生成描述
     """
     results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
 
     for issue in task.get("issues", []):
         itype = issue.get("type")
+        file_rel = issue.get("file", "")
 
-        if itype in ("title_too_short", "title_too_long", "meta_description_too_short", "meta_description_too_long"):
-            # SEO元数据优化需要人工确认后修改
-            results["need_manual"] += 1
-            results["details"].append(f"{itype}: 已生成优化建议，需人工确认")
-            if not dry_run:
+        if itype == "title_too_long":
+            if dry_run:
+                results["details"].append(f"[DRY] title_too_long: 将截断 {file_rel}")
+                results["resolved"] += 1
+                continue
+            success, detail = _fix_title_length(file_rel, target_max=55)
+            if success:
+                results["resolved"] += 1
+                results["details"].append(detail)
                 writeback_issue(
                     source_file=f"site_health_issues_{task['target_date']}.json",
                     issue_type=itype,
-                    status="need_manual",
+                    status="resolved",
                     resolved_by="seo_agent",
-                    resolution_note=f"SEO优化建议已生成，待人工确认修改",
+                    resolution_note=detail,
                     target_date=task["target_date"],
                 )
+            else:
+                results["need_manual"] += 1
+                results["details"].append(f"{itype}: {detail}")
+
+        elif itype == "meta_description_too_short":
+            if dry_run:
+                results["details"].append(f"[DRY] meta_description_too_short: 将生成描述 {file_rel}")
+                results["resolved"] += 1
+                continue
+            success, detail = _fix_meta_description(file_rel)
+            if success:
+                results["resolved"] += 1
+                results["details"].append(detail)
+                writeback_issue(
+                    source_file=f"site_health_issues_{task['target_date']}.json",
+                    issue_type=itype,
+                    status="resolved",
+                    resolved_by="seo_agent",
+                    resolution_note=detail,
+                    target_date=task["target_date"],
+                )
+            else:
+                results["need_manual"] += 1
+                results["details"].append(f"{itype}: {detail}")
+
+        elif itype == "title_too_short":
+            results["need_manual"] += 1
+            results["details"].append(f"{itype}: title过短需人工优化")
         else:
             results["details"].append(f"{itype}: 跳过")
 

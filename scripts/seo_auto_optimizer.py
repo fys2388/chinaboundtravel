@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 ChinaBound Travel - SEO Growth Auto-Loop (Loop 2)
 
@@ -75,7 +75,7 @@ MAX_TITLE_OPTIMIZATIONS_PER_WEEK = 10
 CTR_LOW_THRESHOLD = 0.01  # 1%
 RANK_DROP_THRESHOLD = 5.0
 MIN_IMPRESSIONS_FOR_CTR = 5
-HUGO_BIN = r"C:\Users\神魂之人\bin\hugo.exe"
+HUGO_BIN = shutil.which("hugo") or r"C:\Users\神魂之人\bin\hugo.exe"  # portable: CI finds hugo in PATH
 
 SEO_GROWTH_LOG = REPORTS_DIR / "seo-growth-log.json"
 LEARNING_LIBRARY = REPORTS_DIR / "learning-library.json"
