@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-13 18:31:14",
+  "generated_at": "2026-09-13 19:01:11",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 161,
+    "response_ms": 98,
     "server": "cloudflare"
   },
   "workflows": [
@@ -86,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-12T09:43:23Z",
+      "last_run": "2026-09-13T10:44:38Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "failure",
-      "last_run": "2026-09-13T08:31:28Z",
+      "last_run": "2026-09-13T10:31:31Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -139,8 +139,8 @@
       "name": "Error Alert",
       "id": "error-alert",
       "frequency": "手动",
-      "last_status": "success",
-      "last_run": "2026-09-13T10:01:38Z",
+      "last_status": "skipped",
+      "last_run": "2026-09-13T10:44:59Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-13T10:31:02Z",
+      "last_run": "2026-09-13T11:00:59Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -370,7 +370,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-13 10:31",
+    "checked_at": "2026-09-13 11:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -521,21 +521,21 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 274,
-      "sessions": 386,
-      "pageviews": 839,
-      "date": "2026-09-11"
+      "visitors": 275,
+      "sessions": 387,
+      "pageviews": 831,
+      "date": "2026-09-12"
     },
     "gsc_28d": {
-      "impressions": 600,
+      "impressions": 592,
       "clicks": 0,
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     },
     "content": {
       "total_articles": 63,
       "with_affiliate": 36,
-      "avg_word_count": 1978,
-      "date": "2026-09-12"
+      "avg_word_count": 2031,
+      "date": "2026-09-13"
     },
     "ga4_daily": {
       "visitors": 9,
@@ -1394,7 +1394,7 @@
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-09-13T10:31:14.643955+00:00",
+    "generated_at": "2026-09-13T11:01:11.899064+00:00",
     "total": 0,
     "P0": 0,
     "P1": 0,
