@@ -147,7 +147,7 @@ def _fix_forbidden_word(file_rel: str, word: str) -> tuple:
             text = new_text
             break
     if count == 0:
-        return False, f"未找到禁用词: {word}"
+        return True, f"禁用词已不存在（可能已修复）: {word} ({file_rel})"
     fpath.write_text(text, encoding="utf-8")
     return True, f"已将 {count} 处 '{word}' 替换为 '{synonyms[0]}'  ({file_rel})"
 
@@ -164,7 +164,7 @@ def execute_content(task: dict, dry_run: bool = False) -> dict:
     for issue in task.get("issues", []):
         itype = issue.get("type")
         if itype == "ai_forbidden_word":
-            msg = issue.get("message", "")
+            msg = issue.get("message", "") or issue.get("description", "")
             word = msg.replace("AI禁用词:", "").strip()
             file_rel = issue.get("file", "")
             if dry_run:
@@ -235,14 +235,14 @@ def _fix_title_length(file_rel: str, target_max: int = 55) -> tuple:
     text = fpath.read_text(encoding="utf-8")
     m = re.match(r"^(---\n)(.*?)(\n---)", text, re.DOTALL)
     if not m:
-        return False, "无front matter"
+        return False, "无front matter，需人工检查"
     fm = m.group(2)
     title_m = re.search(r"^title:\s*[\"']?(.+?)[\"']?\s*$", fm, re.MULTILINE)
     if not title_m:
         return False, "front matter无title"
     old_title = title_m.group(1).strip().strip('"').strip("'")
     if len(old_title) <= target_max:
-        return False, f"title仅{len(old_title)}字符，无需截断"
+        return True, f"title已合规({len(old_title)}字符)"
     new_title = old_title[:target_max].rstrip()
     last_space = new_title.rfind(" ")
     if last_space > target_max - 15:

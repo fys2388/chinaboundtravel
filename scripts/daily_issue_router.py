@@ -477,31 +477,40 @@ class DailyIssueRouter:
         """扫描Site Health巡检报告，提取未自动修复的问题"""
         issues = []
         sh_dir = ISSUES_DIR
-        sh_files = sorted(sh_dir.glob("site_health_issues_*.json"), reverse=True)
-        if not sh_files:
-            return issues
-        latest = sh_files[0]
-        try:
-            data = json.loads(latest.read_text(encoding="utf-8"))
-            sh_issues = data.get("issues", [])
-            for item in sh_issues:
-                issue_type = item.get("type", "unknown")
-                severity = item.get("severity", "medium")
-                message = item.get("message", "")
-                file_ref = item.get("file", "")
-                auto_fixable = item.get("auto_fixable", False)
-                if item.get("status") == "fixed":
-                    continue
-                if issue_type in ("site_unreachable", "ssl_check_failed"):
-                    message = message + "（可能是本地网络误报，需核实线上状态）"
-                issues.append(self._create_issue(
-                    issue_type,
-                    message,
-                    source_file=str(latest.name),
-                ))
-            print("  [Site Health] 从 " + latest.name + " 提取 " + str(len(issues)) + " 个问题")
-        except (json.JSONDecodeError, KeyError) as e:
-            print("  [Site Health] 解析失败: " + str(e))
+
+        # 优先读取今天的检测文件，再读取audit followup文件
+        target_file = sh_dir / f"site_health_issues_{self.target_date}.json"
+        files_to_scan = []
+        if target_file.exists():
+            files_to_scan.append(target_file)
+        audit_files = sorted(sh_dir.glob("site_health_issues_audit_*.json"), reverse=True)
+        files_to_scan.extend(audit_files[:2])
+
+        for latest in files_to_scan:
+            try:
+                data = json.loads(latest.read_text(encoding="utf-8"))
+                sh_issues = data.get("issues", [])
+                for item in sh_issues:
+                    issue_type = item.get("type", "unknown")
+                    message = item.get("message", "")
+                    file_ref = item.get("file", "")
+                    if item.get("status") == "fixed":
+                        continue
+                    if issue_type in ("site_unreachable", "ssl_check_failed"):
+                        message = message + "（可能是本地网络误报，需核实线上状态）"
+                    issue = self._create_issue(
+                        issue_type,
+                        message,
+                        source_file=str(latest.name),
+                    )
+                    if file_ref:
+                        issue["file"] = file_ref
+                    if item.get("suggested_title"):
+                        issue["suggested_title"] = item["suggested_title"]
+                    issues.append(issue)
+                print("  [Site Health] 从 " + latest.name + " 提取 " + str(len(sh_issues)) + " 个问题")
+            except (json.JSONDecodeError, KeyError) as e:
+                print("  [Site Health] 解析 " + latest.name + " 失败: " + str(e))
         return issues
 
 

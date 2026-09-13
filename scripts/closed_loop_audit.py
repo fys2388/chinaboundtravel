@@ -197,9 +197,13 @@ def audit_dashboard(target_date: str) -> dict:
     sh_dash = dash.get("site_health", {})
     pending_dash = sh_dash.get("pending", -1)
 
-    # 对比原始数据
-    sh_file = SITE_HEALTH_DIR / f"site_health_{target_date}.json"
-    if sh_file.exists():
+    # 对比原始数据 — 使用与看板相同的口径：今日未分配问题数
+    issues_file = ISSUES_DIR / f"site_health_issues_{target_date}.json"
+    if issues_file.exists():
+        issues_data = json.loads(issues_file.read_text(encoding="utf-8"))
+        all_issues = issues_data.get("issues", [])
+        pending_actual = sum(1 for i in all_issues if not i.get("assigned") and i.get("status") != "fixed")
+    elif sh_file.exists():
         sh = json.loads(sh_file.read_text(encoding="utf-8"))
         pending_actual = sh.get("summary", {}).get("need_manual", -1)
         result["details"]["dashboard_pending"] = pending_dash

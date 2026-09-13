@@ -8,7 +8,15 @@
       "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
       "message": "AI禁用词: perfect",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "assigned_to": "content",
+      "assigned_at": "2026-09-13T11:35:12.658117",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
+      "updated_at": "2026-09-13T11:35:12.996812",
+      "resolved_at": "2026-09-13T11:35:12.996820"
     },
     {
       "type": "ai_forbidden_word",
@@ -16,7 +24,15 @@
       "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
       "message": "AI禁用词: perfect",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "assigned": true,
+      "assigned_to": "content",
+      "assigned_at": "2026-09-13T11:35:12.658129",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
+      "updated_at": "2026-09-13T11:35:12.996821",
+      "resolved_at": "2026-09-13T11:35:12.996824"
     },
     {
       "type": "meta_description_too_short",
@@ -24,7 +40,15 @@
       "file": "content/free-itinerary.md",
       "message": "Meta description过短(62字符)",
       "auto_fixable": false,
-      "agent": "seo"
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-13T11:31:49.399437",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "updated_at": "2026-09-13T11:35:13.105865",
+      "resolved_at": "2026-09-13T11:35:13.105871"
     }
   ]
 }

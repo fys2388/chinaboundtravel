@@ -2,14 +2,14 @@
   "agent": "seo",
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-13_seo",
-  "created_at": "2026-09-13T11:25:26.235896",
+  "created_at": "2026-09-13T11:35:12.656202",
   "target_date": "2026-09-13",
-  "issue_count": 3,
+  "issue_count": 4,
   "severity_summary": {
     "critical": 0,
     "high": 0,
     "medium": 3,
-    "low": 0
+    "low": 1
   },
   "issues": [
     {
@@ -20,9 +20,11 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:25:26.235723",
+      "detected_at": "2026-09-13T11:35:12.656120",
       "status": "new",
       "assigned": true,
+      "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
+      "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
       "assigned_to": "seo"
     },
     {
@@ -33,9 +35,11 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:25:26.235750",
+      "detected_at": "2026-09-13T11:35:12.656128",
       "status": "new",
       "assigned": true,
+      "file": "content\\posts\\2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
       "assigned_to": "seo"
     },
     {
@@ -46,9 +50,25 @@
       "agent": "seo",
       "action": "optimize_title",
       "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:25:26.235759",
+      "detected_at": "2026-09-13T11:35:12.656131",
       "status": "new",
       "assigned": true,
+      "file": "content\\posts\\2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_001",
+      "type": "meta_description_too_short",
+      "description": "Meta description过短(62字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-09-13.json",
+      "detected_at": "2026-09-13T11:35:12.654919",
+      "status": "new",
+      "assigned": true,
+      "file": "content/free-itinerary.md",
       "assigned_to": "seo"
     }
   ],
@@ -60,13 +80,23 @@
     "agent": "seo",
     "action": "optimize_title",
     "source_file": "site_health_issues_audit_2026-09-04.json",
-    "detected_at": "2026-09-13T11:25:26.235723",
+    "detected_at": "2026-09-13T11:35:12.656120",
     "status": "new",
     "assigned": true,
+    "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
+    "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
     "assigned_to": "seo"
   },
   "expected_actions": [
-    "optimize_title"
+    "optimize_title",
+    "optimize_meta"
   ],
-  "status": "pending"
+  "status": "completed",
+  "updated_at": "2026-09-13T11:35:13.123407",
+  "execution": {
+    "resolved_count": 3,
+    "failed_count": 0,
+    "completed_at": "2026-09-13T11:35:13.123415",
+    "note": "resolved=3, need_manual=1, failed=0"
+  }
 }
