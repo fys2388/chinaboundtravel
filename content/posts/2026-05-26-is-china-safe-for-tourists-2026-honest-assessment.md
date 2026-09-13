@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-673e981fe6f2"
 title: "Is China Safe for Tourists in 2026? Honest Assessment"
 description: "Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safety tips for travelers."
@@ -162,8 +162,8 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 
 ## Related Reading
 
-- [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking/)
-- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
-- [2026 Ultimate Guide to Using  P0  &  P1  for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
+- [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
+- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)

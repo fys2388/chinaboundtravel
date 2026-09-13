@@ -9,7 +9,7 @@ tags: ["ChinaTravel", "ChinaPayment", "Alipay", "ChinaTravelTips"]
 description: "How foreigners can use Alipay in China in 2026: step-by-step setup, international card linking, common problems, and Alipay vs WeChat Pay compared."
 author: "Joran"
 cover:
-  image: "/img/china-dest/general/alipay-for-foreigners-guide.jpg"
+  image: "/img/china-dest/general/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.webp"
 params:
   keywords:
     - "alipay for foreigners china"
@@ -33,6 +33,22 @@ ShowToc: true
 TocOpen: false
 categories: ["payment", "visa"]
 last_updated: "2026-08-24"
+fact_checked: "2026-09-13"
+reviewed_by: "ChinaBound Travel Editorial Team"
+reviewed_at: "2026-09-13"
+sources:
+  - title: "Alipay Global"
+    publisher: "Alipay"
+    url: "https://global.alipay.com/"
+    accessed: "2026-09-13"
+  - title: "People's Bank of China payment system information"
+    publisher: "People's Bank of China"
+    url: "https://www.pbc.gov.cn/en/3688006/index.html"
+    accessed: "2026-09-13"
+  - title: "WeChat Pay official site"
+    publisher: "Tencent"
+    url: "https://pay.weixin.qq.com/"
+    accessed: "2026-09-13"
 
 ---
 {{< content-timestamp >}}

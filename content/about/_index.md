@@ -8,7 +8,7 @@ description = "Meet Joran, the editorial voice behind ChinaBound Travel — how 
         <img src="/images/logo-avatar.svg" alt="ChinaBound Travel Logo" class="about-hero-photo" loading="eager">
         <span class="about-avatar-badge">✓</span>
     </div>
-    <h1 class="about-name">Joran</h1>
+    <h2 class="about-name">Joran</h2>
     <p class="about-title">Editorial Voice &middot; China Travel Guide</p>
     <p class="about-tagline">Research-based China travel guidance for international visitors since 2021</p>
 </div>

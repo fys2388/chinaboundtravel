@@ -67,8 +67,8 @@ jobs:
 
       - name: 3. 内链审计
         run: |
-          echo "=== [2.0] 内链审计 ==="
-          python scripts/audit_internal_links.py 2>&1 || echo "::warning::内链审计发现问题"
+          echo "=== [2.0] 内链审计（严格模式，404/畸形链接阻断） ==="
+          python scripts/audit_internal_links.py --audit --strict 2>&1
           echo "=== 内链审计完成 ==="
 
       - name: 4. 生成综合SEO审计报告

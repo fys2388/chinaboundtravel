@@ -1,0 +1,22 @@
+{{- with .Params.sources -}}
+<section class="article-sources" aria-labelledby="article-sources-title">
+    <h2 id="article-sources-title">Sources and Editorial Review</h2>
+    <div class="article-sources-meta">
+        {{- with $.Params.reviewed_by -}}
+        <span>Reviewed by <strong>{{ . }}</strong></span>
+        {{- end -}}
+        {{- with $.Params.fact_checked -}}
+        <span>Fact-checked <time datetime="{{ . }}">{{ . }}</time></span>
+        {{- end -}}
+    </div>
+    <ul class="article-sources-list">
+        {{- range . -}}
+        <li>
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title | default .url }}</a>
+            {{- with .publisher }} <span class="article-source-publisher">{{ . }}</span>{{ end -}}
+            {{- with .accessed }} <span class="article-source-date">Accessed {{ . }}</span>{{ end -}}
+        </li>
+        {{- end -}}
+    </ul>
+</section>
+{{- end -}}

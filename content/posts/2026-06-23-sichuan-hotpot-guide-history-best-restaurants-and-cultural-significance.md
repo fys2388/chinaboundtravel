@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 content_id: "cbt-550a6e3e929c"
@@ -184,8 +184,8 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 
 ## Related Reading
 
-- [Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers](https://www.chinaboundtravel.com/posts/2026-07-16-food-recommendations-guide/)
+- [Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [How Chinese Food Evolved: 2 Million Years](https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/)
-- [A Gastronomic Adventure in China: A Foodie's Guide for European Travelers](https://www.chinaboundtravel.com/posts/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/)
-- [How a Single Cup of Tea Changed Everything](https://www.chinaboundtravel.com/posts/2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide/)
+- [A Gastronomic Adventure in China: A Foodie's Guide for European Travelers](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
+- [How a Single Cup of Tea Changed Everything](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 - [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)

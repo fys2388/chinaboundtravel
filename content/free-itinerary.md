@@ -8,6 +8,8 @@ categories: ["travel-tips", "itinerary"]
 tags: ["ChinaItinerary", "FreeDownload", "Beijing", "Xian", "Shanghai", "ChinaTravelGuide"]
 keywords: ["free china itinerary", "7 day china itinerary template", "china travel plan pdf", "beijing xian shanghai route", "china trip planner"]
 canonicalURL: "https://www.chinaboundtravel.com/free-itinerary/"
+aliases:
+  - "/7-day-china-itinerary/"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp"
   alt: "Free 7-Day China Itinerary Template — Beijing, Xi'an, Shanghai"

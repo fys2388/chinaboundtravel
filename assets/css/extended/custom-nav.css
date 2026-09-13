@@ -133,6 +133,18 @@
     line-height: 1;
 }
 
+#theme-toggle {
+    color: #3A6EA5 !important;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+}
+
+#theme-toggle:hover {
+    background: #e8f0f8;
+    border-color: #c5d5e8;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .header-nav {
@@ -140,7 +152,7 @@
     }
 
     .hamburger-btn {
-        display: block;
+        display: inline-flex;
     }
 
     .menu {
@@ -224,11 +236,17 @@ body {
 .hamburger-btn {
     min-width: 44px;
     min-height: 44px;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding-left: 12px;
     padding-right: 12px;
+}
+
+@media (min-width: 769px) {
+    #nav-toggle,
+    .hamburger-btn {
+        display: none !important;
+    }
 }
 
 @media (max-width: 768px) {

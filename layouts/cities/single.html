@@ -16,11 +16,14 @@
     {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
     {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
-    {{- if .Content }}
+    {{- $articleContent := .Content -}}
+    {{- $articleContent = replaceRE `(?i)<h1(\s[^>]*)?>` `<h2$1>` $articleContent -}}
+    {{- $articleContent = replaceRE `(?i)</h1>` `</h2>` $articleContent -}}
+    {{- if $articleContent }}
     <div class="post-content md-content">
         {{- if not (.Param "disableAnchoredHeadings") }}
-        {{- partial "anchored_headings.html" .Content -}}
-        {{- else }}{{ .Content }}{{ end }}
+        {{- partial "anchored_headings.html" $articleContent -}}
+        {{- else }}{{ $articleContent }}{{ end }}
     </div>
     {{- end }}
 
@@ -67,6 +70,9 @@
         </div>
     </section>
     {{- end -}}
+
+    {{- /* ===== Sources and Editorial Review ===== */ -}}
+    {{- partial "article-sources.html" . -}}
 
     {{- /* ===== Social Share Buttons ===== */ -}}
     <div class="share-buttons">
@@ -230,18 +236,18 @@
 .share-pinterest { background: #e60023; }
 .share-telegram { background: #e60023; }
 .share-whatsapp { background: #075e54; }
-.share-reddit { background: #ff4500; }
+.share-reddit { background: #b33800; }
 .share-linkedin { background: #0a66c2; }
-.share-email { background: #ea4335; }
+.share-email { background: #b3261e; }
 .share-copy { background: #666; }
 .share-x:hover { background: #c2001d; }
 .share-facebook:hover { background: #0d5bc1; }
 .share-pinterest:hover { background: #c2001d; }
 .share-telegram:hover { background: #c2001d; }
 .share-whatsapp:hover { background: #054c44; }
-.share-reddit:hover { background: #cc3700; }
+.share-reddit:hover { background: #962f00; }
 .share-linkedin:hover { background: #0853a0; }
-.share-email:hover { background: #c9302c; }
+.share-email:hover { background: #921f19; }
 .share-copy:hover { background: #444; }
 @media (max-width: 640px) {
     .share-btn { width: 70px; height: 70px; }

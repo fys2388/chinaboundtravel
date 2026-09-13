@@ -1,4 +1,4 @@
-﻿+++
++++
 content_id = "cbt-7996811c1d23"
 title = "Is China Safe for Tourists in 2026?"
 description = "An honest China safety guide for 2026: real crime data, the scams that exist, food and transport safety, and emergency contacts."
@@ -218,6 +218,6 @@ If you found this guide helpful, check out our other practical resources: [China
 
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Travel Safety 2026: Guide for Travelers](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
-- [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/)
-- [A Gastronomic Adventure in China: A Foodie's Guide for European Travelers](https://www.chinaboundtravel.com/posts/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/)
+- [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [A Gastronomic Adventure in China: A Foodie's Guide for European Travelers](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)

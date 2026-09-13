@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-1005a037234b"
 title: "China Food Guide for European Travelers"
 date: "2026-07-06T10:00:00+08:00"
@@ -265,7 +265,7 @@ If you found this guide helpful, [check out our other China travel guides](/post
 ## Related Reading
 
 - [Foodie's Guide to China: Dishes You Must Try](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
-- [Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers](https://www.chinaboundtravel.com/posts/2026-07-16-food-recommendations-guide/)
+- [Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Food Guide: Must-Try Dishes &](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Travel Safety 2026: Guide for Travelers](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)

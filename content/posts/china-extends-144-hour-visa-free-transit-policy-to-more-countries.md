@@ -189,8 +189,8 @@ Sources: National Immigration Administration
 
 ## Related Reading
 
-- [Shanghai 48-Hour: Bund & French Concession](https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/)
-- [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
-- [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
-- [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
+- [Shanghai 48-Hour: Bund & French Concession](/posts/shanghai-bund-french-concession-2-day-guide/)
+- [Chengdu Panda Base: See Pandas Like a Local](/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Hangzhou Travel Guide: West Lake & Tea](/posts/hangzhou-west-lake-tea-culture-g20-guide/)
+- [Chinese Food Delivery 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+- [Internet in China: eSIM vs SIM vs VPN (2026)](/posts/internet-connection-china-esim-vpn-guide/)

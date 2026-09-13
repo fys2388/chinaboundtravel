@@ -21,7 +21,7 @@ TocOpen: false
 categories: ["transport", "cities"]
 last_updated: "2026-08-24"
 cover:
-  image: "/img/china-dest/transport/china-airport-transfer-guide.jpg"
+  image: "/img/china-dest/transport/china-transportation-complete-guide.webp"
 
 ---
 {{< content-timestamp >}}

@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env python3
 """生成运营看板 index.html — 精致深色监控中心风格"""
 import json
+import html as html_lib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -39,7 +40,7 @@ sh_pending = sh.get("pending", 0)
 sh_time = (sh.get("timestamp", "") or "")[:16].replace("T", " ")
 if sh_total == 0:
     sh_status_color = "#22c55e"
-    sh_status_text = "全站健康"
+    sh_status_text = "自身检查无问题"
 elif sh_critical > 0:
     sh_status_color = "#ef4444"
     sh_status_text = "严重问题"
@@ -49,6 +50,87 @@ elif sh_high > 0:
 else:
     sh_status_color = "#eab308"
     sh_status_text = "待优化"
+
+# 统一质量门禁数据
+quality = data.get("quality", {})
+quality_available = quality.get("available", False)
+quality_total = quality.get("total", 0)
+quality_p0 = quality.get("P0", 0)
+quality_p1 = quality.get("P1", 0)
+quality_p2 = quality.get("P2", 0)
+quality_time = (quality.get("generated_at", "") or "")[:16].replace("T", " ")
+quality_sources = quality.get("sources", {})
+quality_source_labels = {
+    "predeploy": "构建前",
+    "site": "线上语义",
+    "visual": "浏览器视觉",
+    "seo": "SEO内链",
+    "site_health": "Site Health",
+}
+quality_available_sources = [
+    key
+    for key in quality_source_labels
+    if quality_sources.get(key, {}).get("available")
+]
+quality_available_source_count = len(quality_available_sources)
+quality_missing_sources = [
+    label
+    for key, label in quality_source_labels.items()
+    if key not in quality_available_sources
+]
+if not quality_available:
+    quality_status_color = "#ef4444"
+    quality_status_text = "未接入"
+elif quality_p0 > 0:
+    quality_status_color = "#ef4444"
+    quality_status_text = "阻断发布"
+elif quality_p1 > 0:
+    quality_status_color = "#f59e0b"
+    quality_status_text = "需整改"
+elif quality_p2 > 0:
+    quality_status_color = "#eab308"
+    quality_status_text = "有优化项"
+elif quality_available_source_count < len(quality_source_labels):
+    quality_status_color = "#f59e0b"
+    quality_status_text = "数据不完整"
+else:
+    quality_status_color = "#22c55e"
+    quality_status_text = "质量门禁通过"
+
+quality_issues_html = ""
+for issue in quality.get("issues", []):
+    severity = issue.get("severity", "P2")
+    severity_color = {"P0": "#ef4444", "P1": "#f59e0b", "P2": "#eab308"}.get(
+        severity, "#94a3b8"
+    )
+    page = html_lib.escape(str(issue.get("page", ""))[:120])
+    title = html_lib.escape(str(issue.get("title", issue.get("type", "")))[:160])
+    evidence = html_lib.escape(str(issue.get("evidence", ""))[:180])
+    owner = html_lib.escape(str(issue.get("owner", ""))[:40])
+    quality_issues_html += f'''<div class="quality-issue">
+      <span class="quality-sev" style="color:{severity_color};border-color:{severity_color}66">{severity}</span>
+      <div class="quality-body">
+        <div class="quality-title">{title}</div>
+        <div class="quality-evidence">{evidence}</div>
+        <div class="quality-meta">{page} · owner: {owner}</div>
+      </div>
+    </div>'''
+if not quality_issues_html:
+    if not quality_available:
+        quality_issues_html = (
+            '<div class="quality-empty quality-empty-alert">'
+            '统一质量报告尚未生成，无法判断全站健康状态</div>'
+        )
+    elif quality_available_source_count < len(quality_source_labels):
+        quality_issues_html = (
+            '<div class="quality-empty quality-empty-alert">'
+            f'当前已接入 {quality_available_source_count}/5 个数据源，'
+            '尚无已发现的问题；数据不完整，不能据此判定全站通过</div>'
+        )
+    else:
+        quality_issues_html = (
+            '<div class="quality-empty">当前没有未解决的质量问题</div>'
+        )
 
 
 # Agent执行数据映射
@@ -348,6 +430,27 @@ body {{
 }}
 .ds-dot {{ width:8px; height:8px; border-radius:50%; flex-shrink:0; }}
 
+/* Quality gate */
+.quality-issue {{
+  display:flex; gap:10px; padding:10px 12px; margin-top:8px;
+  background:var(--panel); border:1px solid var(--border); border-radius:8px;
+}}
+.quality-sev {{
+  flex:0 0 30px; height:22px; display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid; border-radius:5px; font-size:10px; font-weight:800;
+}}
+.quality-body {{ min-width:0; flex:1; }}
+.quality-title {{ color:#e2e8f0; font-size:11.5px; font-weight:700; overflow-wrap:anywhere; }}
+.quality-evidence {{ color:var(--text2); font-size:10.5px; margin-top:2px; overflow-wrap:anywhere; }}
+.quality-meta {{ color:var(--text4); font-size:9.5px; margin-top:4px; overflow-wrap:anywhere; }}
+.quality-empty {{
+  margin-top:10px; padding:12px; border-radius:8px; background:rgba(34,197,94,0.06);
+  border:1px solid rgba(34,197,94,0.2); color:var(--green); font-size:11px;
+}}
+.quality-empty-alert {{
+  color:var(--red); background:rgba(239,68,68,0.06); border-color:rgba(239,68,68,0.2);
+}}
+
 /* 底部 */
 .footer {{
   text-align:center; font-size:11px; color:var(--text4);
@@ -447,20 +550,21 @@ body {{
       <div class="section">
         <div class="section-head">
           <span class="section-num">02</span>
-          <span class="section-title">🩺 Site Health 网站健康巡检</span>
-          <span class="section-meta">16项检查 · 每日2次</span>
+          <span class="section-title">全站质量门禁</span>
+          <span class="section-meta">构建前 + 线上语义 + 浏览器视觉 + SEO + Site Health</span>
         </div>
         <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0;">
-          <div class="kpi"><div class="kpi-label">状态</div><div class="kpi-value" style="font-size:14px;color:{sh_status_color}">{sh_status_text}</div></div>
-          <div class="kpi"><div class="kpi-label">总问题</div><div class="kpi-value">{sh_total}</div></div>
-          <div class="kpi"><div class="kpi-label">Critical</div><div class="kpi-value" style="color:#ef4444">{sh_critical}</div></div>
-          <div class="kpi"><div class="kpi-label">High</div><div class="kpi-value" style="color:#f59e0b">{sh_high}</div></div>
-          <div class="kpi"><div class="kpi-label">Medium</div><div class="kpi-value" style="color:#eab308">{sh_medium}</div></div>
-          <div class="kpi"><div class="kpi-label">Low</div><div class="kpi-value" style="color:#94a3b8">{sh_low}</div></div>
+          <div class="kpi"><div class="kpi-label">门禁状态</div><div class="kpi-value" style="font-size:14px;color:{quality_status_color}">{quality_status_text}</div></div>
+          <div class="kpi"><div class="kpi-label">总问题</div><div class="kpi-value">{quality_total}</div></div>
+          <div class="kpi"><div class="kpi-label">P0 阻断</div><div class="kpi-value" style="color:#ef4444">{quality_p0}</div></div>
+          <div class="kpi"><div class="kpi-label">P1 高优先</div><div class="kpi-value" style="color:#f59e0b">{quality_p1}</div></div>
+          <div class="kpi"><div class="kpi-label">P2 优化</div><div class="kpi-value" style="color:#eab308">{quality_p2}</div></div>
+          <div class="kpi"><div class="kpi-label">数据源</div><div class="kpi-value" style="font-size:14px">{quality_available_source_count}/5</div></div>
+          <div class="kpi"><div class="kpi-label">Site Health</div><div class="kpi-value" style="font-size:14px;color:{sh_status_color}">{sh_status_text}</div></div>
           <div class="kpi"><div class="kpi-label">自动修复</div><div class="kpi-value" style="color:#22c55e">{sh_fixed}</div></div>
-          <div class="kpi"><div class="kpi-label">待处理</div><div class="kpi-value" style="color:#667eea">{sh_pending}</div></div>
         </div>
-        <div style="font-size:10px;color:#64748b;margin-top:8px;">巡检: {sh_time}</div>
+        <div style="font-size:10px;color:#64748b;margin-top:8px;">统一质量报告: {quality_time or "缺失"} · Site Health: {sh_time or "无记录"}{f' · 缺失数据源: {html_lib.escape("、".join(quality_missing_sources))}' if quality_missing_sources else ''}</div>
+        <div style="margin-top:10px;">{quality_issues_html}</div>
       </div>
 
       <div class="section">
@@ -625,7 +729,9 @@ body {{
 </html>'''
 
 (ROOT / "index.html").write_text(html, encoding="utf-8")
-print(f"✅ index.html generated: {len(html)} bytes")
+(ROOT / "ops-center.html").write_text(html, encoding="utf-8")
+print(f"[OK] index.html generated: {len(html)} bytes")
+print(f"[OK] ops-center.html generated: {len(html)} bytes")
 print(f"   Workflow categories: {list(categories.keys())}")
 print(f"   Agents: {healthy_agents}/{total_agents} healthy")
 print(f"   Experiments: {len(data['experiments'])}")

@@ -56,7 +56,10 @@
     {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
     {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
-    {{- if .Content }}
+    {{- $articleContent := .Content -}}
+    {{- $articleContent = replaceRE `(?i)<h1(\s[^>]*)?>` `<h2$1>` $articleContent -}}
+    {{- $articleContent = replaceRE `(?i)</h1>` `</h2>` $articleContent -}}
+    {{- if $articleContent }}
     <div class="post-content md-content">
         {{/* ===== Table of Contents (TOC) ===== */}}
         {{- if and (eq .Type "posts") (.Param "ShowToc") -}}
@@ -65,8 +68,8 @@
         </div>
         {{- end -}}
         {{- if not (.Param "disableAnchoredHeadings") }}
-        {{- partial "anchored_headings.html" .Content -}}
-        {{- else }}{{ .Content }}{{ end }}
+        {{- partial "anchored_headings.html" $articleContent -}}
+        {{- else }}{{ $articleContent }}{{ end }}
     </div>
     {{- end }}
 
@@ -77,18 +80,18 @@
     <div class="affiliate-disclosure-notice"><small>Some links on this page are affiliate links. If you purchase through them, I earn a commission at no extra cost to you. We only recommend products our editorial team has reviewed. <a href="/disclaimer/" style="text-decoration:underline;">Full disclosure</a>.</small></div>
     <div class="article-affiliate" data-content-id="{{ .Params.content_id | default "" }}" data-channel="organic">
         <h3>🛒 Travel Essentials for Your China Trip</h3>
-        <p class="affiliate-intro">Save time &amp; money with our editorially reviewed recommendations — compare prices and book with confidence:</p>
+        <p class="affiliate-intro">Save time &amp; money with our editorially reviewed recommendations - compare prices and book with confidence:</p>
         <div class="affiliate-links">
-            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">📱 <strong>eSIM</strong> �?Compare plans &amp; stay online instantly</a>
-            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">🔒 <strong>VPN</strong> �?View deals &amp; access your favorite sites</a>
-            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">🏨 <strong>Hotels</strong> �?Check today's best rates with free cancellation</a>
-            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">🎫 <strong>Tours & Tickets</strong> �?Compare prices &amp; skip the line</a>
+            <a href="{{ .Site.Params.affiliate.esim }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="esim" data-affiliate-placement="article_cta">📱 <strong>eSIM</strong> - Compare plans &amp; stay online instantly</a>
+            <a href="{{ .Site.Params.affiliate.vpn }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="vpn" data-affiliate-placement="article_cta">🔒 <strong>VPN</strong> - View deals &amp; access your favorite sites</a>
+            <a href="{{ .Site.Params.affiliate.hotel }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="hotel" data-affiliate-placement="article_cta">🏨 <strong>Hotels</strong> - Check today's best rates with free cancellation</a>
+            <a href="{{ .Site.Params.affiliate.klook }}" class="affiliate-link" target="_blank" rel="nofollow sponsored" data-affiliate-partner="klook" data-affiliate-placement="article_cta">🎫 <strong>Tours &amp; Tickets</strong> - Compare prices &amp; skip the line</a>
         </div>
         <p class="affiliate-trust-badges"><span class="trust-badge">✓ Best Price Guarantee</span> <span class="trust-badge">✓ Free Cancellation</span> <span class="trust-badge">✓ 24/7 Support</span></p>
     </div>
 
 
-    {- /* ===== Affiliate Click Attribution (P0-7) ===== */ -}}
+    {{- /* ===== Affiliate Click Attribution (P0-7) ===== */ -}}
     <script>
     (function () {
         var container = document.querySelector('.article-affiliate[data-content-id]');
@@ -204,6 +207,9 @@
     {{- /* ===== Travel Promo Section ===== */ -}}
     {{- partial "travel-promo.html" . -}}
 
+    {{- /* ===== Sources and Editorial Review ===== */ -}}
+    {{- partial "article-sources.html" . -}}
+
     {{- /* ===== Social Share Buttons ===== */ -}}
     <div class="share-buttons">
         <span class="share-label">Share this guide:</span>
@@ -247,7 +253,7 @@
         </div>
     </div>
 
-    {{- /* ===== Related Posts (posts only) �?based on first shared tag ===== */ -}}
+    {{- /* ===== Related Posts (posts only) - based on first shared tag ===== */ -}}
     {{- if eq .Type "posts" -}}
     {{- $currentSlug := .Slug -}}
     {{- $related := slice -}}
@@ -298,19 +304,19 @@
     <nav class="post-nav-links" aria-label="Post navigation">
         {{- with .PrevInSection -}}
         <a href="{{ .RelPermalink }}" class="prev-post">
-            <span class="nav-label">�?Previous</span>
+            <span class="nav-label">&larr; Previous</span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">�?Previous</span><span class="nav-title">No more posts</span></span>
+        <span class="prev-post" style="opacity:0.35;cursor:default;pointer-events:none"><span class="nav-label">&larr; Previous</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
         {{- with .NextInSection -}}
         <a href="{{ .RelPermalink }}" class="next-post">
-            <span class="nav-label">Next �?/span>
+            <span class="nav-label">Next &rarr;</span>
             <span class="nav-title">{{ .Title }}</span>
         </a>
         {{- else -}}
-        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next �?/span><span class="nav-title">No more posts</span></span>
+        <span class="next-post" style="opacity:0.35;cursor:default;text-align:right;pointer-events:none"><span class="nav-label">Next &rarr;</span><span class="nav-title">No more posts</span></span>
         {{- end -}}
     </nav>
     {{- end -}}
@@ -421,18 +427,18 @@
 .share-pinterest { background: #e60023; }
 .share-telegram { background: #e60023; }
 .share-whatsapp { background: #075e54; }
-.share-reddit { background: #ff4500; }
+.share-reddit { background: #b33800; }
 .share-linkedin { background: #0a66c2; }
-.share-email { background: #ea4335; }
+.share-email { background: #b3261e; }
 .share-copy { background: #666; }
 .share-x:hover { background: #c2001d; }
 .share-facebook:hover { background: #0d5bc1; }
 .share-pinterest:hover { background: #c2001d; }
 .share-telegram:hover { background: #c2001d; }
 .share-whatsapp:hover { background: #054c44; }
-.share-reddit:hover { background: #cc3700; }
+.share-reddit:hover { background: #962f00; }
 .share-linkedin:hover { background: #0853a0; }
-.share-email:hover { background: #c9302c; }
+.share-email:hover { background: #921f19; }
 .share-copy:hover { background: #444; }
 @media (max-width: 640px) {
     .share-btn { width: 70px; height: 70px; }

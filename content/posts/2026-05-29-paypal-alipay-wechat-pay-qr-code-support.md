@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-abb64a856c29"
 title: "PayPal Supports Alipay & WeChat Pay QR Codes: 2026 Guide"
 author: Joran
@@ -164,8 +164,8 @@ One less thing to stress about. And that's often welcome. Before you land, make 
 
 ## Related Reading
 
-- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
-- [Introduction](https://www.chinaboundtravel.com/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide/)
-- [2026 Ultimate Guide to Using  P0  &  P1  for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
+- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [Introduction](https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+- [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)

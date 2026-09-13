@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-13 11:35:47",
+  "generated_at": "2026-09-13 15:27:35",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 1142,
+    "response_ms": 1036,
     "server": "cloudflare"
   },
   "workflows": [
@@ -13,9 +13,9 @@
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-10T05:41:45Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "affiliate-optimize.yml",
@@ -58,8 +58,8 @@
       "name": "Content Auto-Optimization Loop",
       "id": "content-auto-optimize",
       "frequency": "每日",
-      "last_status": "failure",
-      "last_run": "2026-09-12T06:34:59Z",
+      "last_status": "success",
+      "last_run": "2026-09-13T06:50:31Z",
       "last_event": "schedule"
     },
     {
@@ -67,9 +67,9 @@
       "name": "Content Quality Audit (2.0 内容质量综合巡检)",
       "id": "content-quality-audit",
       "frequency": "每周",
-      "last_status": "scheduled",
-      "last_run": "",
-      "last_event": "scheduled"
+      "last_status": "failure",
+      "last_run": "2026-09-13T07:04:57Z",
+      "last_event": "schedule"
     },
     {
       "file": "content-rotation.yml",
@@ -77,7 +77,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-12T16:39:17Z",
+      "last_run": "2026-09-13T07:00:13Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-13T03:31:29Z",
+      "last_run": "2026-09-13T07:01:36Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -139,8 +139,8 @@
       "name": "Error Alert",
       "id": "error-alert",
       "frequency": "手动",
-      "last_status": "skipped",
-      "last_run": "2026-09-13T03:31:35Z",
+      "last_status": "success",
+      "last_run": "2026-09-13T07:05:30Z",
       "last_event": "workflow_run"
     },
     {
@@ -149,8 +149,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-13T00:31:05Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-13T05:29:07Z",
+      "last_event": "schedule"
     },
     {
       "file": "geo-check.yml",
@@ -158,7 +158,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-13T03:26:09Z",
+      "last_run": "2026-09-13T03:48:10Z",
       "last_event": "push"
     },
     {
@@ -176,7 +176,7 @@
       "id": "health-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-12T05:24:54Z",
+      "last_run": "2026-09-13T05:40:16Z",
       "last_event": "schedule"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-13T03:30:56Z",
+      "last_run": "2026-09-13T07:01:06Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -223,6 +223,15 @@
       "last_status": "manual",
       "last_run": "",
       "last_event": "manual"
+    },
+    {
+      "file": "quality-monitor.yml",
+      "name": "Quality Monitor (6-hour)",
+      "id": "quality-monitor",
+      "frequency": "每日",
+      "last_status": "no_runs",
+      "last_run": "",
+      "last_event": ""
     },
     {
       "file": "quarterly-report.yml",
@@ -239,7 +248,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-12T19:06:38Z",
+      "last_run": "2026-09-13T07:00:30Z",
       "last_event": "workflow_run"
     },
     {
@@ -284,7 +293,7 @@
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-12T04:49:34Z",
+      "last_run": "2026-09-13T05:06:08Z",
       "last_event": "schedule"
     },
     {
@@ -302,7 +311,7 @@
       "id": "social-engine-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-12T16:08:18Z",
+      "last_run": "2026-09-13T05:52:03Z",
       "last_event": "schedule"
     },
     {
@@ -361,7 +370,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-13 11:35",
+    "checked_at": "2026-09-13 15:27",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -374,7 +383,7 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-11",
+        "last_run": "2026-09-13",
         "max_age_days": 8
       },
       {
@@ -386,7 +395,7 @@
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-13",
         "max_age_days": 8
       },
       {
@@ -530,11 +539,11 @@
     },
     "ga4_daily": {
       "visitors": 1,
-      "sessions": 2,
-      "pageviews": 2,
+      "sessions": 3,
+      "pageviews": 3,
       "new_users": 549,
       "bounce_rate": 64.8,
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "status": "OK",
       "daily": [
         {
@@ -1020,45 +1029,51 @@
         {
           "date": "2026-09-12",
           "sessions": 2,
-          "activeUsers": 1,
+          "activeUsers": 2,
           "pageviews": 2
+        },
+        {
+          "date": "2026-09-13",
+          "sessions": 3,
+          "activeUsers": 1,
+          "pageviews": 3
         }
       ],
       "ranges": {
         "today": {
           "visitors": 1,
+          "sessions": 3,
+          "pageviews": 3,
+          "date_range": "2026-09-13 ~ 2026-09-13",
+          "days": 1
+        },
+        "yesterday": {
+          "visitors": 2,
           "sessions": 2,
           "pageviews": 2,
           "date_range": "2026-09-12 ~ 2026-09-12",
           "days": 1
         },
-        "yesterday": {
-          "visitors": 1,
-          "sessions": 2,
-          "pageviews": 2,
-          "date_range": "2026-09-11 ~ 2026-09-11",
-          "days": 1
-        },
         "7d": {
-          "visitors": 57,
-          "sessions": 91,
-          "pageviews": 153,
-          "date_range": "2026-09-06 ~ 2026-09-12",
+          "visitors": 42,
+          "sessions": 70,
+          "pageviews": 118,
+          "date_range": "2026-09-07 ~ 2026-09-13",
           "days": 7
         },
         "30d": {
-          "visitors": 314,
-          "sessions": 397,
-          "pageviews": 857,
-          "date_range": "2026-08-13 ~ 2026-09-12",
+          "visitors": 309,
+          "sessions": 393,
+          "pageviews": 846,
+          "date_range": "2026-08-14 ~ 2026-09-13",
           "days": 30
         },
         "90d": {
-          "visitors": 638,
-          "sessions": 791,
-          "pageviews": 2065,
-          "date_range": "2026-06-16 ~ 2026-09-12",
-          "days": 81
+          "visitors": 640,
+          "sessions": 794,
+          "pageviews": 2068,
+          "date_range": "2026-06-16 ~ 2026-09-13",
+          "days": 82
         },
         "last_month": {
           "visitors": 279,
@@ -1376,6 +1391,50 @@
     "resolved": 19,
     "timestamp": "2026-09-13T02:08:42.600320+00:00",
     "checks": 16
+  },
+  "quality": {
+    "available": true,
+    "generated_at": "2026-09-13T07:14:58.785577+00:00",
+    "total": 0,
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "by_source": {},
+    "by_owner": {},
+    "sources": {
+      "predeploy": {
+        "available": true,
+        "generated_at": "2026-09-13T07:14:55.597443+00:00",
+        "issues": 0,
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "site": {
+        "available": false,
+        "issues": 0
+      },
+      "visual": {
+        "available": false,
+        "issues": 0
+      },
+      "seo": {
+        "available": true,
+        "issues": 0,
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "site_health": {
+        "available": true,
+        "generated_at": "2026-09-13T02:08:42.600320+00:00",
+        "issues": 0,
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      }
+    },
+    "issues": []
   },
   "agent_execution": {
     "date": "2026-09-04",

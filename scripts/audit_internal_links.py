@@ -274,6 +274,9 @@ if __name__ == '__main__':
             json.dump(result, fh, ensure_ascii=False, indent=2)
         print()
         print('wrote', os.path.relpath(out, REPO))
+        if '--strict' in sys.argv and (result['broken'] or result['malformed']):
+            print(f"strict mode failed: broken={result['broken']} malformed={result['malformed']}")
+            raise SystemExit(1)
     else:
         print(__doc__)
 

@@ -12,7 +12,7 @@ tags:
   - China
   - AustraliaToChina
 geo: "AU"
-draft: false
+draft: true
 _build:
   list: false
 audit_status: "pass2"
@@ -49,7 +49,7 @@ Finally, let's talk about safety. China is generally a safe country to travel in
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Chengdu hotpot restaurant interior with traditional Sichuan cuisine dishes on the table, red lanterns and wooden decor](/img/china-dest/culture/chinese-tea-culture-ceremony.webp)
+![Tea ceremony in a traditional Chengdu teahouse with a clay teapot and cups](/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp)
 
 ## Greetings and Body Language
 
@@ -117,7 +117,7 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 In conclusion, traveling to China can be an amazing experience, but it's important to be aware of the cultural etiquette and customs. By following these tips, you'll be able to have a safe and enjoyable trip while also showing respect for the local culture. So what are you waiting for? Book your trip to China today and start exploring this amazing country!
 
-![Pandas in bamboo forest at Chengdu Panda Base](/img/china-dest/culture/chinese-tea-culture-ceremony.webp)
+![Pandas in a bamboo forest at Chengdu Panda Base](/img/china-dest/chengdu/chengdu-panda-adventure-guide.webp)
 
 {{< affiliate-section >}}
 

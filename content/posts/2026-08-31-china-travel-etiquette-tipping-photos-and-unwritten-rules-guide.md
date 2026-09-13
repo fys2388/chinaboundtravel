@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China Travel Etiquette: Tipping & Photos"
 date: "2026-08-31T10:00:00+08:00"
 lastmod: "2026-08-31T11:50:36+08:00"
@@ -67,7 +67,7 @@ Respect 'no photo' signs. They are there for a reason.
 
 For practical travel photos, look for unique angles and compositions. Capture the beautiful landscapes, ancient architecture, and vibrant city scenes. But always keep in mind the proper etiquette.
 
-Remember, in China, showing respect through your photography is key. So, go out and take great pictures, but do it with courtesy. If you want to learn more about other aspects of traveling in China, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) and [China Extends 144-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
+Remember, in China, showing respect through your photography is key. So, go out and take great pictures, but do it with courtesy. If you want to learn more about other aspects of traveling in China, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [China Extends 144-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
 
 ## Dining Etiquette: Chopsticks, Toasts, and the Table
 
@@ -85,7 +85,7 @@ To be a gracious guest, remember to use two hands when giving or receiving somet
 
 Also, keep in mind that tipping is not customary in China, except in some upscale places that may add a service charge. And when it comes to photography, ask permission before taking pictures of people.
 
-So, if you're planning a trip to China, brush up on your dining etiquette and get ready for a delicious and respectful experience! Check out our [7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/) for more travel tips.
+So, if you're planning a trip to China, brush up on your dining etiquette and get ready for a delicious and respectful experience! Check out our [7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026](https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) for more travel tips.
 
 
 ## Greetings and Gift-Giving: The Unwritten Rules
@@ -98,7 +98,7 @@ If you're invited to someone's home, it's polite to bring a small gift such as f
 
 When it comes to tipping, it's not customary in China. While some upscale hotels and restaurants may add a 10-15% service charge to the bill, there's no need to leave an additional tip. Instead, show your appreciation with a smile or a simple "xie xie."
 
-Remember, these are just a few of the many customs and traditions in China. By following these tips, you'll be sure to make a good impression and have a memorable trip. For more information on traveling in China, check out our other articles like [Is China Safe for Tourists in 2026? An Honest Safety Assessment](https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/) and [China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/).
+Remember, these are just a few of the many customs and traditions in China. By following these tips, you'll be sure to make a good impression and have a memorable trip. For more information on traveling in China, check out our other articles like [Is China Safe for Tourists in 2026? An Honest Safety Assessment](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/) and [China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/).
 
 ## Public Behavior: Queues, Noise, and Personal Space
 
@@ -110,7 +110,7 @@ Personal space is also something to be aware of. In China, the concept of person
 
 On public transport, be polite and give up your seat to the elderly, disabled, or pregnant women. It's a kind gesture that is highly appreciated. And don't forget to read the room. Observe the behavior of the locals and follow their lead. For example, if everyone is quiet on a train, it's a good idea to keep your conversation to a minimum.
 
-When it comes to photography, remember to ask permission before taking pictures of strangers or children. And avoid photographing military or government sites, as well as some religious venues. If you're interested in learning more about Chinese food delivery, check out [The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)](https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/).
+When it comes to photography, remember to ask permission before taking pictures of strangers or children. And avoid photographing military or government sites, as well as some religious venues. If you're interested in learning more about Chinese food delivery, check out [The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/).
 
 ## Putting It All Together: Your Etiquette Cheat Sheet
 

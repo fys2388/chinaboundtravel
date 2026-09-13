@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China Business Travel: Meetings, Dining & Etiquette 2026"
 date: "2026-08-30T10:00:00+08:00"
 lastmod: "2026-08-30T10:00:00+08:00"
@@ -25,6 +25,8 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
 last_updated: "2026-08-30"
+aliases:
+  - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 
 ---
 
@@ -149,8 +151,8 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 
 ## Related Reading
 
-- [2026 Ultimate Guide to Using  P0  &  P1  for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
+- [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
-- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
-- [The Most Honest China Safety Analysis You'll Find](https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/)
+- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [The Most Honest China Safety Analysis You'll Find](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)

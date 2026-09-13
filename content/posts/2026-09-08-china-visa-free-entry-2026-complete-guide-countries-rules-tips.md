@@ -21,9 +21,25 @@ ShowToc: "true"
 TocOpen: "false"
 weight: "1"
 cover:
-  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg"
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp"
 categories: ["visa", "travel"]
 last_updated: "2026-09-08"
+fact_checked: "2026-09-13"
+reviewed_by: "ChinaBound Travel Editorial Team"
+reviewed_at: "2026-09-13"
+sources:
+  - title: "National Immigration Administration of China"
+    publisher: "National Immigration Administration"
+    url: "https://en.nia.gov.cn/"
+    accessed: "2026-09-13"
+  - title: "Ministry of Foreign Affairs of China"
+    publisher: "Ministry of Foreign Affairs"
+    url: "https://www.mfa.gov.cn/eng/"
+    accessed: "2026-09-13"
+  - title: "China's visa-free policies and entry updates"
+    publisher: "The State Council of China"
+    url: "https://english.www.gov.cn/"
+    accessed: "2026-09-13"
 keywords:
   - china visa free 2026
   - china visa free countries

@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-b4ff4381a014"
 title: "China 144-Hour Visa-Free Transit 2026: Complete Guide"
 date: '2026-05-19T10:00:00+08:00'
@@ -18,6 +18,22 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
 last_updated: "2026-08-24"
+fact_checked: "2026-09-13"
+reviewed_by: "ChinaBound Travel Editorial Team"
+reviewed_at: "2026-09-13"
+sources:
+  - title: "National Immigration Administration of China"
+    publisher: "National Immigration Administration"
+    url: "https://en.nia.gov.cn/"
+    accessed: "2026-09-13"
+  - title: "Ministry of Foreign Affairs of China"
+    publisher: "Ministry of Foreign Affairs"
+    url: "https://www.mfa.gov.cn/eng/"
+    accessed: "2026-09-13"
+  - title: "China's visa-free and transit policies"
+    publisher: "The State Council of China"
+    url: "https://english.www.gov.cn/"
+    accessed: "2026-09-13"
 
 ---
 ## 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
@@ -237,7 +253,7 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 ## Related Reading
 
 - [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
-- [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/)
+- [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/)
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)

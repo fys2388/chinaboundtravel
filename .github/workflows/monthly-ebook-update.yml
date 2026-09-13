@@ -27,7 +27,7 @@ jobs:
       - name: Generate monthly ebook update
         run: python chinaboundtravel_social_bot/scripts/monthly_ebook_update.py
 
-      - name: Guard: truncate long titles
+      - name: "Guard: truncate long titles"
         run: |
           python -c "
           import glob, re

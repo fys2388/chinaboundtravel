@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-cc4549872c92"
 title: "China High-Speed Rail Tickets: How to Book in 2026"
 date: 2026-05-25T10:00:00+08:00
@@ -182,10 +182,10 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 | Route | Duration | Why It's Great |
 |-------|----------|---------------|
 | Shanghai → Hangzhou | 45 min | well-suited first CRH trip — see our [Hangzhou guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/) |
-| Shanghai �Suzhou | 25 min | Ancient water town vibes |
-| Beijing �Tianjin | 30 min | budget-friendly G train (~$8) |
-| Chengdu �Chongqing | 1 hr | Mountain city double feature |
-| Beijing �Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
+| Shanghai - Suzhou | 25 min | Ancient water town vibes |
+| Beijing - Tianjin | 30 min | budget-friendly G train (~$8) |
+| Chengdu - Chongqing | 1 hr | Mountain city double feature |
+| Beijing - Xi'an (G) | 4.5 hrs | Faster than flying, incredible overnight option |
 
 ---
 
@@ -288,7 +288,7 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 ## Related Reading
 
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
-- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
-- [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking/)
+- [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/)
+- [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
 - [Western Sichuan Overland Camping: 7-Day Route](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)

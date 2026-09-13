@@ -33,6 +33,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Merge quality reports
+        run: |
+          python scripts/merge_quality_issues.py
+
       - name: Collect dashboard data
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,6 +83,5 @@ jobs:
             gh workflow run "Post-deploy Tasks" || echo "Deploy trigger failed (non-fatal)"
             echo "Deploy workflow triggered"
           fi
-
 
 

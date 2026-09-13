@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-13",
-  "audited_at": "2026-09-13T11:36:54.878781",
+  "audited_at": "2026-09-13T15:27:21.887246",
   "score": {
     "total_score": 100,
     "max_score": 100,
@@ -67,7 +67,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "ga4_daily_days": 81,
+        "ga4_daily_days": 82,
         "gsc_daily_days": 30
       }
     }

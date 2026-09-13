@@ -33,6 +33,9 @@ weight: 1
 
 draft: false
 last_updated: "2026-09-01"
+slug: "chinabound-travel-guide-2026-09-monthly-update"
+aliases:
+  - "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/"
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/"
 
 ---

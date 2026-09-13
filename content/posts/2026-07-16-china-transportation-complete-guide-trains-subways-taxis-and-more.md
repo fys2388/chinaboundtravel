@@ -1,4 +1,4 @@
-﻿+++
++++
 content_id = "cbt-17c6738ffb32"
 title = "China Transportation 2026: Trains & Didi"
 description = "Complete guide to getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival for foreigners. Travel like a local!"
@@ -267,7 +267,7 @@ China's transportation system is genuinely world-class. Once you get past the in
 ## Related Reading
 
 - [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
-- [China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips](https://www.chinaboundtravel.com/posts/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
+- [China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips](https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
-- [The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
+- [The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)](https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/)

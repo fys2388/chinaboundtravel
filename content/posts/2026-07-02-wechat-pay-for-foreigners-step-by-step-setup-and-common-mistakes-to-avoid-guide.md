@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-255af4ed003a"
 title: "WeChat Pay Setup Guide for Foreigners (2026)"
 date: "2026-07-02T10:00:00+08:00"
@@ -260,5 +260,5 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - [Alipay vs WeChat Pay: Which Payment App](https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/)
 - [Alipay in China: Setup & Payment Tips (2026)](https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/)
 - [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
-- [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)

@@ -15,7 +15,7 @@ slug: "chinabound-travel-guide-2026-08-monthly-update"
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/"
 categories: ["visa", "cities"]
 cover:
-  image: "/img/china-dest/general/chinabound-travel-guide-2026-08.jpg"
+  image: "/img/china-dest/general/china-travel-safety-guide.webp"
 last_updated: "2026-08-01"
 
 ---

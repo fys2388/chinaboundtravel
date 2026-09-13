@@ -89,7 +89,23 @@ def _norm(s):
 
 try:
     import subprocess
-    result = subprocess.run(["gh", "run", "list", "--limit", "500", "--json", "name,status,conclusion,createdAt,event,databaseId,workflowName"], capture_output=True, text=True, cwd=str(ROOT), timeout=60)
+    result = subprocess.run(
+        [
+            "gh",
+            "run",
+            "list",
+            "--limit",
+            "500",
+            "--json",
+            "name,status,conclusion,createdAt,event,databaseId,workflowName",
+        ],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        cwd=str(ROOT),
+        timeout=60,
+    )
     if result.returncode == 0:
         runs = json.loads(result.stdout)
         latest_by_name = {}
@@ -280,6 +296,62 @@ except Exception as e:
     print("  site_health load failed: " + str(e))
     data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "resolved": 0, "timestamp": "", "checks": 16}
 
+# Unified quality gate data (predeploy + online semantic + visual + SEO + site health)
+try:
+    quality_file = ROOT / "reports" / "quality" / "quality_issues.json"
+    if quality_file.exists():
+        quality = json.loads(quality_file.read_text(encoding="utf-8"))
+        summary = quality.get("summary", {})
+        data["quality"] = {
+            "available": True,
+            "generated_at": quality.get("generated_at", ""),
+            "total": summary.get("total", 0),
+            "P0": summary.get("P0", 0),
+            "P1": summary.get("P1", 0),
+            "P2": summary.get("P2", 0),
+            "by_source": summary.get("by_source", {}),
+            "by_owner": summary.get("by_owner", {}),
+            "sources": quality.get("sources", {}),
+            "issues": quality.get("issues", [])[:50],
+        }
+        print(
+            "  quality: total={total}, P0={P0}, P1={P1}, P2={P2}".format(
+                total=data["quality"]["total"],
+                P0=data["quality"]["P0"],
+                P1=data["quality"]["P1"],
+                P2=data["quality"]["P2"],
+            )
+        )
+    else:
+        data["quality"] = {
+            "available": False,
+            "generated_at": "",
+            "total": 0,
+            "P0": 0,
+            "P1": 0,
+            "P2": 0,
+            "by_source": {},
+            "by_owner": {},
+            "sources": {},
+            "issues": [],
+        }
+        print("  quality: unified report missing")
+except Exception as e:
+    print("  quality load failed: " + str(e))
+    data["quality"] = {
+        "available": False,
+        "generated_at": "",
+        "total": 0,
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "by_source": {},
+        "by_owner": {},
+        "sources": {},
+        "issues": [],
+        "error": str(e)[:160],
+    }
+
 # Agent执行日志（今日修复数量）
 try:
     exec_log_file = ROOT / "reports" / "daily_issues" / "execution_log.json"
@@ -433,7 +505,17 @@ except:
 # 输出
 out = ROOT / "ops-dashboard" / "dashboard_data.json"
 out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-print("✅ Data collected:", len(workflows), "workflows,", len(data["experiments"]), "experiments, agents=", data["agents"].get("overall", "?"))
+overall_status = str(data["agents"].get("overall", "?")).encode(
+    "ascii", "backslashreplace"
+).decode("ascii")
+print(
+    "[OK] Data collected:",
+    len(workflows),
+    "workflows,",
+    len(data["experiments"]),
+    "experiments, agents=",
+    overall_status,
+)
 print("   Site:", data["site"].get("status"), str(data["site"].get("response_ms")) + "ms")
 print("   GA4 daily:", data["metrics"]["ga4_daily"].get("visitors"), "visitors, status=", data["metrics"]["ga4_daily"].get("status"))
 print("   GSC daily:", data["metrics"]["gsc_daily"].get("impressions"), "impressions, status=", data["metrics"]["gsc_daily"].get("status"))

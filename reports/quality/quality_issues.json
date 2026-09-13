@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-09-13T07:14:58.785577+00:00",
+  "summary": {
+    "total": 0,
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "by_source": {},
+    "by_owner": {}
+  },
+  "sources": {
+    "predeploy": {
+      "available": true,
+      "generated_at": "2026-09-13T07:14:55.597443+00:00",
+      "issues": 0,
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    "site": {
+      "available": false,
+      "issues": 0
+    },
+    "visual": {
+      "available": false,
+      "issues": 0
+    },
+    "seo": {
+      "available": true,
+      "issues": 0,
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    "site_health": {
+      "available": true,
+      "generated_at": "2026-09-13T02:08:42.600320+00:00",
+      "issues": 0,
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    }
+  },
+  "issues": []
+}
