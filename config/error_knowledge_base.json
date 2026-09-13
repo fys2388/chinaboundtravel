@@ -1129,6 +1129,17 @@
       "error_message": "y\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9620738Z ^[[36;1m  --base-url http://127.0.0.1:8765 \\^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9621056Z ^[[36;1m  --max-pages 12 \\^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9621869Z ^[[36;1m  --strict^[[0m\npost-deploy\t2.0 Pre-deploy Quality Gate (P0/P1 blocker)\t2026-09-13T07:30:27.9692573Z shell: /usr/bin/bash -e {0}\npost-deploy\t2.0 Pre-deploy Quality G",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260913_100153",
+      "timestamp": "2026-09-13T10:01:53.332513",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "34750756357",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": " ##[endgroup]\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5150997Z ✅ 时间范围选择器已注入 index.html\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5151548Z    GA4 ranges: N/A\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5152166Z    GSC ranges: N/A\nrefresh-dashboard\tPush and trigger deploy\t﻿2026-09-13T10:01:32.5217770Z ##[group]Run mkdir -p static/ops-dashboard\nrefresh-dashboard\tPush and trigger deploy\t2026-09-13T10:01:32.5218377Z ^[[36;1mmkdir -p",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
