@@ -1,0 +1,24 @@
+{
+  "report_type": "daily",
+  "period": "2026-09-13",
+  "generated_at": "2026-09-13 00:31:29",
+  "plan": [
+    {
+      "task": "🟠 日访问用户：当前 1人 / 目标 7人（14%），需重点推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 今日无搜索曝光（新站正常波动）：核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 1.0,
+    "content": 0.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 3.0
+  }
+}
