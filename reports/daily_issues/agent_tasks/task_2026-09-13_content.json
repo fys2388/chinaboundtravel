@@ -2,68 +2,68 @@
   "agent": "content",
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-13_content",
-  "created_at": "2026-09-13T11:35:12.656195",
+  "created_at": "2026-09-13T15:29:53.752725",
   "target_date": "2026-09-13",
   "issue_count": 2,
   "severity_summary": {
     "critical": 0,
-    "high": 0,
-    "medium": 2,
+    "high": 2,
+    "medium": 0,
     "low": 0
   },
   "issues": [
     {
       "id": "issue_001",
-      "type": "ai_forbidden_word",
-      "description": "AI禁用词: perfect",
-      "severity": "medium",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: placeholder",
+      "severity": "high",
       "agent": "content",
-      "action": "safe_normalize",
+      "action": "fix_placeholder",
       "source_file": "site_health_issues_2026-09-13.json",
-      "detected_at": "2026-09-13T11:35:12.654902",
+      "detected_at": "2026-09-13T15:29:53.752577",
       "status": "new",
       "assigned": true,
-      "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
+      "file": "content/search.md",
       "assigned_to": "content"
     },
     {
       "id": "issue_001",
-      "type": "ai_forbidden_word",
-      "description": "AI禁用词: perfect",
-      "severity": "medium",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: placeholder",
+      "severity": "high",
       "agent": "content",
-      "action": "safe_normalize",
+      "action": "fix_placeholder",
       "source_file": "site_health_issues_2026-09-13.json",
-      "detected_at": "2026-09-13T11:35:12.654914",
+      "detected_at": "2026-09-13T15:29:53.752585",
       "status": "new",
       "assigned": true,
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+      "file": "content/contact.md",
       "assigned_to": "content"
     }
   ],
   "priority_issue": {
     "id": "issue_001",
-    "type": "ai_forbidden_word",
-    "description": "AI禁用词: perfect",
-    "severity": "medium",
+    "type": "content_placeholder",
+    "description": "发现模板占位符: placeholder",
+    "severity": "high",
     "agent": "content",
-    "action": "safe_normalize",
+    "action": "fix_placeholder",
     "source_file": "site_health_issues_2026-09-13.json",
-    "detected_at": "2026-09-13T11:35:12.654902",
+    "detected_at": "2026-09-13T15:29:53.752577",
     "status": "new",
     "assigned": true,
-    "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
+    "file": "content/search.md",
     "assigned_to": "content"
   },
   "expected_actions": [
-    "safe_normalize"
+    "fix_placeholder"
   ],
   "status": "completed",
-  "updated_at": "2026-09-13T11:35:13.018061",
+  "updated_at": "2026-09-13T15:29:53.955052",
   "execution": {
-    "resolved_count": 2,
+    "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-09-13T11:35:13.018070",
-    "note": "resolved=2, need_manual=0, failed=0"
+    "completed_at": "2026-09-13T15:29:53.955055",
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }

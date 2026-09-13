@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: "China's 144-hour visa-free transit in 2026: eligible countries, cities, rules, and step-by-step entry guide for foreign travelers."
+description: "{{< soft-recommend partner="esim" topic="visa" placement="articlemid1" text="See eSIM options" >}} Keeping your phone connected in China is easier with..."
 ShowToc: true
 TocOpen: false
 cover:

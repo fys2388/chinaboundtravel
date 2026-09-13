@@ -1,5 +1,5 @@
 ---
-title: "China Business Travel: Meetings, Dining & Etiquette 2026"
+title: "China Business Travel: Meetings, Dining &"
 date: "2026-08-30T10:00:00+08:00"
 lastmod: "2026-08-30T10:00:00+08:00"
 author: "Joran"

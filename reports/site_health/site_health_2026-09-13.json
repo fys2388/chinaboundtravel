@@ -1,56 +1,52 @@
 {
-  "timestamp": "2026-09-13T02:08:42.600320+00:00",
+  "timestamp": "2026-09-13T15:29:51.870281+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 3,
+    "total_issues": 15,
     "critical": 0,
-    "high": 0,
-    "medium": 2,
-    "low": 1,
-    "auto_fixed": 0,
-    "need_manual": 5,
-    "resolved": 19,
-    "inherited_resolved": 16,
+    "high": 3,
+    "medium": 0,
+    "low": 12,
+    "auto_fixed": 8,
+    "need_manual": 20,
+    "resolved": 16,
+    "inherited_resolved": 14,
     "in_progress": 0,
-    "last_updated": "2026-09-13T11:35:13.164662"
+    "last_updated": "2026-09-13T15:29:53.954693"
   },
   "issues": [
     {
       "type": "content_placeholder",
-      "severity": "medium",
+      "severity": "high",
       "file": "content/search.md",
-      "message": "发现占位符/状态标记: placeholder",
+      "message": "发现模板占位符: placeholder",
       "auto_fixable": false,
       "agent": "content",
-      "status": "resolved",
+      "status": "need_manual",
+      "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+      "resolution_note": "占位内容需人工补充"
     },
     {
       "type": "content_placeholder",
-      "severity": "medium",
+      "severity": "high",
       "file": "content/contact.md",
-      "message": "发现占位符/状态标记: placeholder",
+      "message": "发现模板占位符: placeholder",
       "auto_fixable": false,
       "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
+      "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)"
+      "resolution_note": "占位内容需人工补充"
+    },
+    {
+      "type": "draft_leak",
+      "severity": "high",
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "message": "draft:true的文章可能已发布到线上",
+      "auto_fixable": false,
+      "agent": "content"
     },
     {
       "type": "ai_forbidden_word",
@@ -62,8 +58,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -75,20 +70,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "assigned": true,
-      "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)"
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -100,8 +82,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -113,8 +94,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -126,8 +106,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -139,20 +118,7 @@
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/free-itinerary.md",
-      "message": "Meta description过短(62字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "assigned": true,
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)"
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "title_too_short",
@@ -219,6 +185,98 @@
       "assigned": true
     },
     {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "message": "Title渲染后过长(77字符, front matter 57+后缀20): Shanghai Beyond the Bund: Hidden Neighbo...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 57->32字符"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "message": "Meta description过长(166字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "message": "Meta description过短(5字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "assigned": true,
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "message": "Title渲染后过长(74字符, front matter 54+后缀20): Travel To China Requirements 2026: Augus...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 54->41字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
+      "message": "Title渲染后过长(76字符, front matter 56+后缀20): Can Foreigners Use WeChat Pay in China? ...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 56->44字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
+      "message": "Title渲染后过长(79字符, front matter 59+后缀20): How to Use Alipay as a Foreigner: Comple...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 59->42字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
+      "message": "Title渲染后过长(73字符, front matter 53+后缀20): Is China Safe for Tourists in 2026? Hone...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 53->42字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+      "message": "Title渲染后过长(73字符, front matter 53+后缀20): Things To Do In Yunnan: Rice Terraces & ...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 53->39字符"
+    },
+    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
@@ -244,6 +302,38 @@
       "assigned": true
     },
     {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
+      "message": "Meta description过短(51字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "assigned": true,
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md",
+      "message": "Title渲染后过长(76字符, front matter 56+后缀20): China Business Travel: Meetings, Dining ...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 56->41字符"
+    },
+    {
+      "type": "title_too_short",
+      "severity": "low",
+      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "message": "Title过短(17字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
@@ -254,6 +344,18 @@
       "resolved_by": "seo_agent",
       "resolution_note": "历史已解决",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
+      "message": "Title渲染后过长(76字符, front matter 56+后缀20): PayPal Supports Alipay & WeChat Pay QR C...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 56->38字符"
     }
   ]
 }

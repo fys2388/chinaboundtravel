@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-abb64a856c29"
-title: "PayPal Supports Alipay & WeChat Pay QR Codes: 2026 Guide"
+title: "PayPal Supports Alipay & WeChat Pay QR"
 author: Joran
 slug: "paypal-alipay-wechat-pay-qr-code-support"
 date: 2026-05-29T09:00:00+08:00

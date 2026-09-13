@@ -2,7 +2,7 @@
 content_id: "cbt-c885da2cf5d9"
 title: "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026"
 slug: "7-day-china-itinerary-beijing-xian-shanghai-first-timers"
-description: "7-day China itinerary for first-timers: Beijing, Xi'an, and Shanghai. Day-by-day plan, costs, transport tips, and booking advice for 2026."
+description: "{{< soft-recommend partner="safetywing" topic="city" placement="articlemid1" text="Review travel insurance options" >}} Travel insurance is one of the p..."
 date: "2026-05-27"
 author: "Joran"
 params:

@@ -2,7 +2,7 @@
   "agent": "social",
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-13_social",
-  "created_at": "2026-09-13T11:35:12.656184",
+  "created_at": "2026-09-13T15:29:53.752718",
   "target_date": "2026-09-13",
   "issue_count": 1,
   "severity_summary": {
@@ -19,8 +19,8 @@
       "severity": "medium",
       "agent": "social",
       "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-09-11.json",
-      "detected_at": "2026-09-13T11:35:12.648668",
+      "source_file": "social_daily_2026-09-12.json",
+      "detected_at": "2026-09-13T15:29:53.749916",
       "status": "new",
       "assigned": true,
       "assigned_to": "social"
@@ -33,8 +33,8 @@
     "severity": "medium",
     "agent": "social",
     "action": "analyze_and_optimize",
-    "source_file": "social_daily_2026-09-11.json",
-    "detected_at": "2026-09-13T11:35:12.648668",
+    "source_file": "social_daily_2026-09-12.json",
+    "detected_at": "2026-09-13T15:29:53.749916",
     "status": "new",
     "assigned": true,
     "assigned_to": "social"
@@ -43,11 +43,11 @@
     "analyze_and_optimize"
   ],
   "status": "completed",
-  "updated_at": "2026-09-13T11:35:13.172135",
+  "updated_at": "2026-09-13T15:29:53.946972",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-09-13T11:35:13.172143",
+    "completed_at": "2026-09-13T15:29:53.946975",
     "note": "resolved=0, need_manual=1, failed=0"
   }
 }

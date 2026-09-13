@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-23c31fe5b281"
-title: "Things To Do In Yunnan: Rice Terraces & Ancient Towns"
+title: "Things To Do In Yunnan: Rice Terraces &"
 date: "2026-07-05T10:00:00+08:00"
 lastmod: "2026-07-05T10:00:00+08:00"
 author: "Joran"
