@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-08-30"
+last_updated: "2026-09-13"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 
@@ -156,3 +156,15 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 - [Can Foreigners Use WeChat Pay in China?](https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/)
 - [The Most Honest China Safety Analysis You'll Find](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+## FAQ
+
+### What should I know about traveling to china for business?
+
+This guide covers the essentials you need before your trip. Policies and practical details are updated for 2026, but always double-check official sources.
+
+### Is traveling to china for business safe for tourists?
+
+Yes. China is generally very safe for tourists. Exercise normal precautions and keep your belongings secure, especially in crowded areas.

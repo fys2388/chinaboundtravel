@@ -149,3 +149,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Western Sichuan Overland Camping: 7-Day Route](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)

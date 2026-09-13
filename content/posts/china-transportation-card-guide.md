@@ -186,3 +186,5 @@ For international travelers comparing options, flight search platforms help you 
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
+
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)

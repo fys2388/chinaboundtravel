@@ -151,3 +151,5 @@ If you want to learn more about China travel, be sure to check out these related
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [Chinese Street Food: Night Markets Guide](https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)

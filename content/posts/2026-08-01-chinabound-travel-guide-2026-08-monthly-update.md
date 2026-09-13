@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-80ac63165adb"
-title: "China Travel Guide: August 2026 Updates"
+title: "Travel To China Requirements 2026: August 2026 Updates"
 date: 2026-08-01T08:29:34+00:00
 lastmod: 2026-08-01T08:29:34+00:00
 description: "August 2026 China travel updates: latest visa changes, crowd forecasts, payment updates, scam alerts, and seasonal picks."
@@ -16,7 +16,7 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-20
 categories: ["visa", "cities"]
 cover:
   image: "/img/china-dest/general/china-travel-safety-guide.webp"
-last_updated: "2026-08-01"
+last_updated: "2026-09-13"
 
 ---
 # ChinaBound Travel Guide 2026.08 - Now Updated With Latest Visa Rules
@@ -162,3 +162,5 @@ If you have topics you'd like to see covered in a future update, reply to any of
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
+
+- [China Travel Guide: July 2026 Updates](/posts/chinabound-travel-guide-2026-07-monthly-update/)

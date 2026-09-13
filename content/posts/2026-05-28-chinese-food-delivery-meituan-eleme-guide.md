@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-e464169c4991"
-title: "Chinese Food Delivery 2026: Meituan & Ele.me"
+title: "Ele.Me China: Meituan & Ele.me"
 slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
@@ -26,7 +26,7 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp"
 categories: ["cities", "food"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 
 ---
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
@@ -252,3 +252,5 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)

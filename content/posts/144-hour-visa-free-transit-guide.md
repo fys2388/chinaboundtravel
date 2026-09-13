@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-b4ff4381a014"
-title: "China 144-Hour Visa-Free Transit 2026: Complete Guide"
+title: "China 144 Hour Transit Visa: Complete Guide"
 date: '2026-05-19T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
@@ -17,7 +17,7 @@ TocOpen: false
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 fact_checked: "2026-09-13"
 reviewed_by: "ChinaBound Travel Editorial Team"
 reviewed_at: "2026-09-13"
@@ -257,3 +257,15 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+## FAQ
+
+### Is china 144 hour transit visa still valid in 2026?
+
+Yes, this policy is current for 2026. However, eligibility criteria and participating ports are updated periodically — always verify with official immigration sources before travel.
+
+### What documents do I need for china 144 hour transit visa?
+
+You'll need a valid passport (6+ months remaining), a confirmed onward ticket to a third country, and any supporting documents requested by immigration officers.

@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-244822dc113b"
-title: "144-Hour Visa-Free Transit: New Countries"
+title: "144-Hour Validation Program: New Countries"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -17,7 +17,7 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.webp"
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/"
 categories: ["visa", "cities"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 
 ---
 ## China Extends 144-Hour Visa-Free Transit Policy to More Countries

@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-cc4549872c92"
-title: "China High-Speed Rail Tickets: How to Book in 2026"
+title: "How To Ride China'S High-Speed Trains: How to Book in 2026"
 date: 2026-05-25T10:00:00+08:00
 slug: "china-high-speed-rail-how-to-book-tickets"
 draft: false
@@ -28,7 +28,7 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp"
 categories: ["transport", "cities"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 
 ---
 ## China's High-Speed Rail: How to Book Tickets Like a Resident

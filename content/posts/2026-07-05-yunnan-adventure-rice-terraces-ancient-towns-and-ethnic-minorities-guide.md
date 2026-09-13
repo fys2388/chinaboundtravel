@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-23c31fe5b281"
-title: "Yunnan Travel: Rice Terraces & Ancient Towns"
+title: "Things To Do In Yunnan: Rice Terraces & Ancient Towns"
 date: "2026-07-05T10:00:00+08:00"
 lastmod: "2026-07-05T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg"
 categories: ["transport", "cities"]
-last_updated: "2026-07-05"
+last_updated: "2026-09-13"
 
 ---
 ## Introduction
