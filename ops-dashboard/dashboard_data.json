@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-13 14:31:11",
+  "generated_at": "2026-09-13 15:01:20",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 96,
+    "response_ms": 263,
     "server": "cloudflare"
   },
   "workflows": [
@@ -13,9 +13,9 @@
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-10T05:41:45Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "affiliate-optimize.yml",
@@ -58,8 +58,8 @@
       "name": "Content Auto-Optimization Loop",
       "id": "content-auto-optimize",
       "frequency": "每日",
-      "last_status": "failure",
-      "last_run": "2026-09-12T06:34:59Z",
+      "last_status": "success",
+      "last_run": "2026-09-13T06:50:31Z",
       "last_event": "schedule"
     },
     {
@@ -77,7 +77,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-12T16:39:17Z",
+      "last_run": "2026-09-13T07:00:13Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-13T06:01:41Z",
+      "last_run": "2026-09-13T06:31:27Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -140,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-13T06:01:46Z",
+      "last_run": "2026-09-13T07:00:30Z",
       "last_event": "workflow_run"
     },
     {
@@ -212,7 +212,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-13T06:31:01Z",
+      "last_run": "2026-09-13T07:01:06Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -239,7 +239,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-12T19:06:38Z",
+      "last_run": "2026-09-13T07:00:30Z",
       "last_event": "workflow_run"
     },
     {
@@ -361,7 +361,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-13 06:31",
+    "checked_at": "2026-09-13 07:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
