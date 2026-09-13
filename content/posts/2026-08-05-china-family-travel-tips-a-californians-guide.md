@@ -123,3 +123,13 @@ The Forbidden City is a former imperial palace that was built in the 15th centur
 {{< soft-recommend partner="esim" topic="visa" placement="article_soft_3" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
+
+---
+
+## Related Reading
+
+- [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+- [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
+- [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+- [Where to Stay in China: Hotels & Budget](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
+- [China Packing List 2026: What to Bring](https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/)

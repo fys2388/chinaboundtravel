@@ -347,3 +347,13 @@ Safe travels, and may your QR codes always scan on the first try.
 ---
 
 {{< affiliate-disclosure >}}
+
+---
+
+## Related Reading
+
+- [Alipay in China: Setup & Payment Tips (2026)](https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/)
+- [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
+- [Chinese Street Food: Night Markets Guide](https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+- [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
+- [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)

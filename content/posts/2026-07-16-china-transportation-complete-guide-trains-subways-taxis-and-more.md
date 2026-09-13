@@ -261,3 +261,13 @@ After five years of living in China, here are the principles that matter most:
 5. **Book popular routes early**. Beijing-Shanghai and Chengdu-Chongqing sell out during holidays. During Chinese New Year and National Day (October 1-7), tickets can sell out within minutes of release.
 
 China's transportation system is genuinely world-class. Once you get past the initial learning curve, you will find it faster, cheaper, and more reliable than almost anything back home. The key is knowing which option to use and how to pay for it -- and now you do.
+
+---
+
+## Related Reading
+
+- [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [China High-Speed Train Survival Guide: Booking, Classes, and Practical Tips](https://www.chinaboundtravel.com/posts/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips/)
+- [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
+- [The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/)

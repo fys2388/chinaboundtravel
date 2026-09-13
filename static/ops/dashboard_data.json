@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07 18:21:17",
+  "generated_at": "2026-09-11 10:30:52",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 408,
+    "response_ms": 243,
     "server": "cloudflare"
   },
   "workflows": [
@@ -13,9 +13,18 @@
       "name": "Affiliate Gap Audit (2.0 联盟链接缺口审计)",
       "id": "affiliate-gap-audit",
       "frequency": "每周",
-      "last_status": "scheduled",
-      "last_run": "",
-      "last_event": "scheduled"
+      "last_status": "success",
+      "last_run": "2026-09-10T05:41:45Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "affiliate-optimize.yml",
+      "name": "Affiliate CTA Optimization (Closed Loop 3)",
+      "id": "affiliate-optimize",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-09T07:03:34Z",
+      "last_event": "schedule"
     },
     {
       "file": "agent-kpi-monthly.yml",
@@ -31,9 +40,9 @@
       "name": "AI Agent Orchestrator - 7 Agents Weekly Run",
       "id": "ai-agent-orchestrator",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-07T03:20:56Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "clear-buffer-batch.yml",
@@ -45,13 +54,22 @@
       "last_event": "manual"
     },
     {
+      "file": "content-auto-optimize.yml",
+      "name": "Content Auto-Optimization Loop",
+      "id": "content-auto-optimize",
+      "frequency": "每周",
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
+    },
+    {
       "file": "content-quality-audit.yml",
       "name": "Content Quality Audit (2.0 内容质量综合巡检)",
       "id": "content-quality-audit",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-06T06:45:55Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "content-rotation.yml",
@@ -59,7 +77,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T06:49:46Z",
+      "last_run": "2026-09-10T17:24:17Z",
       "last_event": "schedule"
     },
     {
@@ -68,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-06T09:50:12Z",
+      "last_run": "2026-09-10T10:11:25Z",
       "last_event": "schedule"
     },
     {
@@ -76,9 +94,9 @@
       "name": "Cross-Agent Learning Weekly",
       "id": "cross-agent-learning-weekly",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-07T03:37:15Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "deploy-buffer-worker.yml",
@@ -86,7 +104,7 @@
       "id": "deploy-buffer-worker",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-06T00:55:08Z",
+      "last_run": "2026-09-08T06:38:47Z",
       "last_event": "push"
     },
     {
@@ -95,8 +113,17 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-07T10:04:11Z",
+      "last_run": "2026-09-11T02:01:20Z",
       "last_event": "workflow_dispatch"
+    },
+    {
+      "file": "email-growth-loop.yml",
+      "name": "Email Growth Loop (Closed Loop 4)",
+      "id": "email-growth-loop",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-10T07:11:38Z",
+      "last_event": "schedule"
     },
     {
       "file": "env-check.yml",
@@ -104,7 +131,7 @@
       "id": "env-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T01:22:09Z",
+      "last_run": "2026-09-11T01:33:02Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +140,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T10:06:18Z",
+      "last_run": "2026-09-11T02:01:25Z",
       "last_event": "workflow_run"
     },
     {
@@ -122,8 +149,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T05:25:52Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-11T00:30:37Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "geo-check.yml",
@@ -131,17 +158,17 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T10:00:54Z",
-      "last_event": "push"
+      "last_run": "2026-09-10T10:37:28Z",
+      "last_event": "schedule"
     },
     {
       "file": "gsc-index-submit.yml",
       "name": "GSC Index Submit (2.0)",
       "id": "gsc-index-submit",
       "frequency": "每周",
-      "last_status": "scheduled",
-      "last_run": "",
-      "last_event": "scheduled"
+      "last_status": "success",
+      "last_run": "2026-09-08T07:07:36Z",
+      "last_event": "schedule"
     },
     {
       "file": "health-check.yml",
@@ -149,7 +176,7 @@
       "id": "health-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T05:41:40Z",
+      "last_run": "2026-09-10T05:37:10Z",
       "last_event": "schedule"
     },
     {
@@ -184,8 +211,8 @@
       "name": "Ops Dashboard Refresh",
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
-      "last_status": "success",
-      "last_run": "2026-09-07T10:01:20Z",
+      "last_status": "",
+      "last_run": "2026-09-11T02:30:31Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -193,9 +220,9 @@
       "name": "Purge Cloudflare Cache",
       "id": "purge-cache",
       "frequency": "手动",
-      "last_status": "success",
-      "last_run": "2026-09-07T10:06:04Z",
-      "last_event": "workflow_dispatch"
+      "last_status": "manual",
+      "last_run": "",
+      "last_event": "manual"
     },
     {
       "file": "quarterly-report.yml",
@@ -212,13 +239,22 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-07T06:50:34Z",
+      "last_run": "2026-09-10T19:30:27Z",
       "last_event": "workflow_run"
     },
     {
       "file": "seo-audit.yml",
       "name": "SEO Audit (2.0 SEO综合审计)",
       "id": "seo-audit",
+      "frequency": "每周",
+      "last_status": "success",
+      "last_run": "2026-09-11T01:38:30Z",
+      "last_event": "schedule"
+    },
+    {
+      "file": "seo-growth-loop.yml",
+      "name": "SEO Growth Auto-Loop",
+      "id": "seo-growth-loop",
       "frequency": "每周",
       "last_status": "scheduled",
       "last_run": "",
@@ -239,7 +275,7 @@
       "id": "site-health-daily",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-07T01:56:33Z",
+      "last_run": "2026-09-11T02:06:20Z",
       "last_event": "schedule"
     },
     {
@@ -248,7 +284,7 @@
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-07T04:59:41Z",
+      "last_run": "2026-09-10T05:00:17Z",
       "last_event": "schedule"
     },
     {
@@ -257,7 +293,7 @@
       "id": "social-backfill",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-05T20:11:19Z",
+      "last_run": "2026-09-09T20:47:17Z",
       "last_event": "schedule"
     },
     {
@@ -266,7 +302,7 @@
       "id": "social-engine-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-07T05:53:32Z",
+      "last_run": "2026-09-10T16:56:46Z",
       "last_event": "schedule"
     },
     {
@@ -275,7 +311,7 @@
       "id": "social_distributor",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-09-06T18:59:28Z",
+      "last_run": "2026-09-10T19:30:09Z",
       "last_event": "schedule"
     },
     {
@@ -292,18 +328,18 @@
       "name": "Joran博文生成+双AI自动审核发布",
       "id": "weekly-blog-update",
       "frequency": "每周",
-      "last_status": "failure",
-      "last_run": "2026-09-07T02:20:53Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "weekly-report.yml",
       "name": "Weekly Feishu Report",
       "id": "weekly-report",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-07T03:34:13Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     },
     {
       "file": "yearly-report.yml",
@@ -319,13 +355,13 @@
       "name": "YouTube Auto Publish",
       "id": "youtube-auto-publish",
       "frequency": "每周",
-      "last_status": "success",
-      "last_run": "2026-09-07T07:47:15Z",
-      "last_event": "schedule"
+      "last_status": "scheduled",
+      "last_run": "",
+      "last_event": "scheduled"
     }
   ],
   "agents": {
-    "checked_at": "2026-09-07 18:21",
+    "checked_at": "2026-09-11 02:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -338,49 +374,49 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 2
       },
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 8
       },
       {
         "name": "网站健康巡检",
         "status": "✅ 正常",
-        "last_run": "2026-09-07",
+        "last_run": "2026-09-11",
         "max_age_days": 1
       }
     ],
@@ -476,29 +512,29 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 270,
-      "sessions": 356,
-      "pageviews": 793,
-      "date": "2026-09-06"
+      "visitors": 268,
+      "sessions": 374,
+      "pageviews": 834,
+      "date": "2026-09-09"
     },
     "gsc_28d": {
-      "impressions": 599,
+      "impressions": 612,
       "clicks": 0,
-      "date": "2026-09-04"
-    },
-    "content": {
-      "total_articles": 61,
-      "with_affiliate": 35,
-      "avg_word_count": 1902,
       "date": "2026-09-07"
     },
+    "content": {
+      "total_articles": 63,
+      "with_affiliate": 36,
+      "avg_word_count": 1977,
+      "date": "2026-09-10"
+    },
     "ga4_daily": {
-      "visitors": 7,
-      "sessions": 12,
-      "pageviews": 17,
-      "new_users": 517,
-      "bounce_rate": 65.4,
-      "date": "2026-09-07",
+      "visitors": 1,
+      "sessions": 1,
+      "pageviews": 0,
+      "new_users": 544,
+      "bounce_rate": 66.0,
+      "date": "2026-09-11",
       "status": "OK",
       "daily": [
         {
@@ -953,46 +989,70 @@
         },
         {
           "date": "2026-09-07",
+          "sessions": 24,
+          "activeUsers": 15,
+          "pageviews": 63
+        },
+        {
+          "date": "2026-09-08",
           "sessions": 12,
-          "activeUsers": 7,
-          "pageviews": 17
+          "activeUsers": 5,
+          "pageviews": 19
+        },
+        {
+          "date": "2026-09-09",
+          "sessions": 8,
+          "activeUsers": 3,
+          "pageviews": 10
+        },
+        {
+          "date": "2026-09-10",
+          "sessions": 16,
+          "activeUsers": 11,
+          "pageviews": 15
+        },
+        {
+          "date": "2026-09-11",
+          "sessions": 1,
+          "activeUsers": 1,
+          "pageviews": 0
         }
       ],
       "ranges": {
         "today": {
-          "visitors": 7,
-          "sessions": 12,
-          "pageviews": 17,
-          "date_range": "2026-09-07 ~ 2026-09-07",
+          "visitors": 1,
+          "sessions": 1,
+          "pageviews": 0,
+          "date_range": "2026-09-11 ~ 2026-09-11",
           "days": 1
         },
         "yesterday": {
-          "visitors": 17,
-          "sessions": 24,
-          "pageviews": 38,
-          "date_range": "2026-09-06 ~ 2026-09-06",
+          "visitors": 11,
+          "sessions": 16,
+          "pageviews": 15,
+          "date_range": "2026-09-10 ~ 2026-09-10",
           "days": 1
         },
         "7d": {
-          "visitors": 81,
-          "sessions": 126,
-          "pageviews": 305,
-          "date_range": "2026-09-01 ~ 2026-09-07",
+          "visitors": 61,
+          "sessions": 99,
+          "pageviews": 163,
+          "date_range": "2026-09-05 ~ 2026-09-11",
           "days": 7
         },
         "30d": {
-          "visitors": 314,
-          "sessions": 379,
-          "pageviews": 851,
-          "date_range": "2026-08-08 ~ 2026-09-07",
+          "visitors": 319,
+          "sessions": 401,
+          "pageviews": 869,
+          "date_range": "2026-08-12 ~ 2026-09-11",
           "days": 30
         },
         "90d": {
-          "visitors": 605,
-          "sessions": 736,
-          "pageviews": 1967,
-          "date_range": "2026-06-16 ~ 2026-09-07",
-          "days": 76
+          "visitors": 633,
+          "sessions": 785,
+          "pageviews": 2057,
+          "date_range": "2026-06-16 ~ 2026-09-11",
+          "days": 80
         },
         "last_month": {
           "visitors": 279,
@@ -1300,15 +1360,15 @@
     }
   ],
   "site_health": {
-    "total": 0,
+    "total": 3,
     "critical": 0,
     "high": 0,
-    "medium": 0,
-    "low": 0,
+    "medium": 2,
+    "low": 1,
     "auto_fixed": 0,
-    "pending": 0,
-    "resolved": 17,
-    "timestamp": "2026-09-07T01:56:43.051643+00:00",
+    "pending": 3,
+    "resolved": 16,
+    "timestamp": "2026-09-11T02:06:36.362977+00:00",
     "checks": 16
   },
   "agent_execution": {

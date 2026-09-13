@@ -82,3 +82,13 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 {{< affiliate-insurance >}}
 
 {{< affiliate-tour >}}
+
+---
+
+## Related Reading
+
+- [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
+- [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
+- [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
+- [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+- [China Packing List 2026: What to Bring](https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/)

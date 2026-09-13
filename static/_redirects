@@ -1,4 +1,4 @@
-# 1) Non-www -> www redirect (keep first)
+﻿# 1) Non-www -> www redirect (keep first)
 http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
@@ -108,10 +108,11 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/accommodation-tips-guide/ 301
 /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/food-recommendations-guide/ 301
 
-# ===== 统一运营中心：旧路径重定向到 /ops/ops-center =====
-/ops/              /ops/ops-center  301
-/ops/index         /ops/ops-center  301
-/ops/agent-kpi     /ops/ops-center  301
-/ops/agent-growth  /ops/ops-center  301
-/ops-dashboard     /ops/ops-center  301
-/ops-dashboard/    /ops/ops-center  301
+# ===== 统一运营中心：旧路径重定向到新版 /ops-dashboard/ =====
+# 2026-09-13: 反转方向——新版仪表盘在 /ops-dashboard/（每30分钟自动刷新数据），
+# 旧版 /ops/ops-center 自 2026-09-07 后停止更新，全部 301 到新版。
+/ops/ops-center    /ops-dashboard/  301
+/ops/              /ops-dashboard/  301
+/ops/index         /ops-dashboard/  301
+/ops/agent-kpi     /ops-dashboard/  301
+/ops/agent-growth  /ops-dashboard/  301

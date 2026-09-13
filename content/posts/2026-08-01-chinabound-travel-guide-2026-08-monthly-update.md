@@ -152,5 +152,13 @@ If you have topics you'd like to see covered in a future update, reply to any of
 *Last updated: August 01, 2026*
 
 {{< affiliate-disclosure >}}
- 
- 
+
+---
+
+## Related Reading
+
+- [ChinaBound Travel Guide 2026.09 Update](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/)
+- [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
+- [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
+- [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
+- [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)

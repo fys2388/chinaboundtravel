@@ -87,3 +87,13 @@ So when you visit China, eat like you are writing your own map. Start with the c
 {{< soft-recommend partner="hotel" topic="food" placement="article_soft_3" text="Search accommodation" >}}
 Where you stay shapes a city trip. Comparing hotel options across platforms helps you find the location and budget that fit your route.
 {{< /soft-recommend >}}
+
+---
+
+## Related Reading
+
+- [Chinese Street Food: Night Markets Guide](https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+- [China Food Guide: Must-Try Dishes &](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
+- [Foodie's Guide to China: Dishes You Must Try](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
+- [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+- [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)

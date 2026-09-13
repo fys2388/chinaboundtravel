@@ -1,8 +1,10 @@
 {{- if site.Params.analytics.google.TrackingID }}
-<!-- Google tag (gtag.js) - standard async load with Consent Mode v2 -->
+<!-- Google tag (gtag.js) - standard async load with Consent Mode v2 + graceful failure -->
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){
+    try { dataLayer.push(arguments); } catch(e) { /* silent: dataLayer unavailable */ }
+  }
 
   // Consent Mode v2 - default denied until user chooses (GDPR compliant).
   // For returning visitors with saved consent, we read it inline here so
@@ -27,11 +29,14 @@
     }
   } catch (e) { /* ignore */ }
 
-  gtag('consent', 'default', defaultConsent);
-  gtag('js', new Date());
-  gtag('config', '{{ site.Params.analytics.google.TrackingID }}', {
-    'send_page_view': true
-  });
+  try {
+    gtag('consent', 'default', defaultConsent);
+    gtag('js', new Date());
+    gtag('config', '{{ site.Params.analytics.google.TrackingID }}', {
+      'send_page_view': true
+    });
+  } catch (e) { /* silent: GA init failure, analytics disabled for this session */ }
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}"
+  onerror="this.onerror=null;"></script>
 {{- end }}

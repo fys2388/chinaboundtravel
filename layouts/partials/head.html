@@ -9,7 +9,19 @@
 {{- end }}
 
 {{- /* Title */}}
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ if .Title }}{{ .Title }} | ChinaBound Travel{{ end }}{{ end }}</title>
+{{- $titleSuffix := " | ChinaBound Travel" -}}
+{{- if .IsHome -}}
+<title>{{ site.Title }}</title>
+{{- else if .Title -}}
+  {{- $titleWithSuffix := printf "%s%s" .Title $titleSuffix -}}
+  {{- if le (len $titleWithSuffix) 60 -}}
+<title>{{ $titleWithSuffix }}</title>
+  {{- else if le (len .Title) 60 -}}
+<title>{{ .Title }}</title>
+  {{- else -}}
+<title>{{ substr .Title 0 60 }}</title>
+  {{- end -}}
+{{- end -}}
 
 {{- /* Meta */}}
 {{- if .IsHome }}

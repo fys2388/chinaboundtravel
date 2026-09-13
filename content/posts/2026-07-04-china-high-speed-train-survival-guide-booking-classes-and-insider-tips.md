@@ -178,3 +178,13 @@ And if you want to read more about traveling in China, check out these other art
 {{< soft-recommend partner="safetywing" topic="transport" placement="article_soft_3" text="Review travel insurance options" >}}
 Travel insurance is one of the practical pieces of preparation that gives peace of mind before a China trip — worth reviewing alongside your visa and itinerary.
 {{< /soft-recommend >}}
+
+---
+
+## Related Reading
+
+- [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [China Bargaining Guide: How to Haggle & Shop](https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/)
+- [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
