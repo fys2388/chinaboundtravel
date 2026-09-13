@@ -1,0 +1,85 @@
+{
+  "audit_date": "2026-09-13",
+  "audited_at": "2026-09-13T02:08:44.289052",
+  "score": {
+    "total_score": 70.0,
+    "max_score": 100,
+    "percentage": 70.0,
+    "stage_scores": {
+      "detection": 20,
+      "assignment": 0,
+      "execution": 25,
+      "writeback": 20,
+      "dashboard": 5.0
+    },
+    "grade": "B"
+  },
+  "audits": [
+    {
+      "stage": "detection",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "site_health_total": 3,
+        "site_health_file": "site_health_2026-09-13.json",
+        "daily_issues_count": 3
+      }
+    },
+    {
+      "stage": "assignment",
+      "status": "fail",
+      "issues": [
+        "3/3 个问题未分配"
+      ],
+      "details": {
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "assignment_rate": "0.0%",
+        "agent_tasks": 3
+      }
+    },
+    {
+      "stage": "execution",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "total_tasks": 3,
+        "completed": 3,
+        "pending": 0,
+        "failed": 0,
+        "partial": 0,
+        "total_issues": 5,
+        "resolved_issues": 5
+      }
+    },
+    {
+      "stage": "writeback",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "need_manual": 19,
+        "resolved": 16,
+        "execution_log_exists": true,
+        "total_executions": 46
+      }
+    },
+    {
+      "stage": "dashboard",
+      "status": "warn",
+      "issues": [
+        "看板 pending(3) 与实际(19) 不一致"
+      ],
+      "details": {
+        "dashboard_pending": 3,
+        "actual_pending": 19,
+        "ga4_daily_days": 81,
+        "gsc_daily_days": 30
+      }
+    }
+  ],
+  "all_issues": [
+    "[assignment] 3/3 个问题未分配",
+    "[dashboard] 看板 pending(3) 与实际(19) 不一致"
+  ]
+}

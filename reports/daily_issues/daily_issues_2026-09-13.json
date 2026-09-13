@@ -1,0 +1,240 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-09-13T02:08:44.050579",
+  "target_date": "2026-09-13",
+  "total_issues": 5,
+  "total_assignments": 3,
+  "issues": [
+    {
+      "id": "issue_001",
+      "type": "social_zero_engagement",
+      "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+      "severity": "medium",
+      "agent": "social",
+      "action": "analyze_and_optimize",
+      "source_file": "social_daily_2026-09-11.json",
+      "detected_at": "2026-09-13T02:08:44.047216",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "social"
+    },
+    {
+      "id": "issue_001",
+      "type": "title_too_long",
+      "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "detected_at": "2026-09-13T02:08:44.050525",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_001",
+      "type": "title_too_long",
+      "description": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "detected_at": "2026-09-13T02:08:44.050533",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_001",
+      "type": "title_too_long",
+      "description": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "detected_at": "2026-09-13T02:08:44.050537",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_001",
+      "type": "workflow_missing_guard",
+      "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_audit_2026-09-04.json",
+      "detected_at": "2026-09-13T02:08:44.050540",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops"
+    }
+  ],
+  "assignments": [
+    {
+      "agent": "seo",
+      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+      "task_id": "task_2026-09-13_seo",
+      "created_at": "2026-09-13T02:08:44.050565",
+      "target_date": "2026-09-13",
+      "issue_count": 3,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_001",
+          "type": "title_too_long",
+          "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_audit_2026-09-04.json",
+          "detected_at": "2026-09-13T02:08:44.050525",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_001",
+          "type": "title_too_long",
+          "description": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_audit_2026-09-04.json",
+          "detected_at": "2026-09-13T02:08:44.050533",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_001",
+          "type": "title_too_long",
+          "description": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_audit_2026-09-04.json",
+          "detected_at": "2026-09-13T02:08:44.050537",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "seo"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_001",
+        "type": "title_too_long",
+        "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
+        "severity": "medium",
+        "agent": "seo",
+        "action": "optimize_title",
+        "source_file": "site_health_issues_audit_2026-09-04.json",
+        "detected_at": "2026-09-13T02:08:44.050525",
+        "status": "new",
+        "assigned": true,
+        "assigned_to": "seo"
+      },
+      "expected_actions": [
+        "optimize_title"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "social",
+      "agent_name": "Social Intelligence Agent (社媒智能优化)",
+      "task_id": "task_2026-09-13_social",
+      "created_at": "2026-09-13T02:08:44.050555",
+      "target_date": "2026-09-13",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_001",
+          "type": "social_zero_engagement",
+          "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+          "severity": "medium",
+          "agent": "social",
+          "action": "analyze_and_optimize",
+          "source_file": "social_daily_2026-09-11.json",
+          "detected_at": "2026-09-13T02:08:44.047216",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "social"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_001",
+        "type": "social_zero_engagement",
+        "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+        "severity": "medium",
+        "agent": "social",
+        "action": "analyze_and_optimize",
+        "source_file": "social_daily_2026-09-11.json",
+        "detected_at": "2026-09-13T02:08:44.047216",
+        "status": "new",
+        "assigned": true,
+        "assigned_to": "social"
+      },
+      "expected_actions": [
+        "analyze_and_optimize"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "ops",
+      "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
+      "task_id": "task_2026-09-13_ops",
+      "created_at": "2026-09-13T02:08:44.050572",
+      "target_date": "2026-09-13",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_001",
+          "type": "workflow_missing_guard",
+          "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
+          "severity": "high",
+          "agent": "ops",
+          "action": "diagnose_and_fix",
+          "source_file": "site_health_issues_audit_2026-09-04.json",
+          "detected_at": "2026-09-13T02:08:44.050540",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "ops"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_001",
+        "type": "workflow_missing_guard",
+        "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
+        "severity": "high",
+        "agent": "ops",
+        "action": "diagnose_and_fix",
+        "source_file": "site_health_issues_audit_2026-09-04.json",
+        "detected_at": "2026-09-13T02:08:44.050540",
+        "status": "new",
+        "assigned": true,
+        "assigned_to": "ops"
+      },
+      "expected_actions": [
+        "diagnose_and_fix"
+      ],
+      "status": "pending"
+    }
+  ]
+}
