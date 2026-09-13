@@ -17,7 +17,7 @@ TocOpen: false
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 
 ---
 ## 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
@@ -241,3 +241,17 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+## FAQ
+
+### Do I need a visa for China?
+
+It depends on your nationality. Citizens of many countries can enter China visa-free for up to 15 or 30 days under the current unilateral visa-free policy. For longer stays, a tourist visa (L-type) is required.
+
+### How long does it take to get a Chinese visa?
+
+Standard processing takes 4-7 business days. Same-day and 2-3 day express services are available at most consulates for an additional fee.
+
+### Can I extend my visa while in China?
+
+Yes, you can apply for an extension at the local Exit-Entry Administration Bureau. It's recommended to apply at least 7 days before your current visa expires.

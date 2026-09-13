@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-244822dc113b"
-title: "144-Hour Visa-Free Transit: New Countries"
+title: "144-Hour Visa-Free Transit 2026: New Countries"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -17,7 +17,7 @@ cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.webp"
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/"
 categories: ["visa", "cities"]
-last_updated: "2026-08-24"
+last_updated: "2026-09-13"
 
 ---
 ## China Extends 144-Hour Visa-Free Transit Policy to More Countries
@@ -194,3 +194,17 @@ Sources: National Immigration Administration
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
+
+## FAQ
+
+### Do I need a visa for China?
+
+It depends on your nationality. Citizens of many countries can enter China visa-free for up to 15 or 30 days under the current unilateral visa-free policy. For longer stays, a tourist visa (L-type) is required.
+
+### How long does it take to get a Chinese visa?
+
+Standard processing takes 4-7 business days. Same-day and 2-3 day express services are available at most consulates for an additional fee.
+
+### Can I extend my visa while in China?
+
+Yes, you can apply for an extension at the local Exit-Entry Administration Bureau. It's recommended to apply at least 7 days before your current visa expires.
