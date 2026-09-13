@@ -55,7 +55,7 @@ Before diving into regional cuisines, a few things that consistently catch first
 
 **Where to eat it:** Chengdu, Chongqing
 
-Sichuan cuisine is the one that will challenge — and change — you. The signature is *ma la* (numbing-spicy), creat[Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)g chili peppers with Sichuan peppercorns.
+Sichuan cuisine is the one that will challenge — and change — you. The signature is *ma la* (numbing-spicy), creating bold chili pepper flavors with Sichuan peppercorns. [Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
 
 **Must-try dishes:**
 

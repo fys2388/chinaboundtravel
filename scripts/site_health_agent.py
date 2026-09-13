@@ -46,6 +46,17 @@ PLACEHOLDER_PATTERNS = [
     re.compile(r'placeholder', re.IGNORECASE),
     re.compile(r'待完善', re.IGNORECASE),
     re.compile(r'Lorem ipsum', re.IGNORECASE),
+    # Template placeholders like P1, P2, P3 in headings or inline text
+    re.compile(r'\bP[1-4]\s*[:：]\s*[A-Z]'),
+    re.compile(r'\bChP[1-4]\b'),
+]
+
+# Garbled text patterns (separate severity)
+GARBLED_PATTERNS = [
+    # Mid-word broken inline link: letter + [text](url) + letter (e.g. "dan[hotpot](url)pair")
+    re.compile(r'[a-z]\[[^\]]{5,}\]\([^)]+\)[a-z]'),
+    # Duplicate consecutive words (excluding proper nouns like "Dan Dan")
+    re.compile(r'\b(of|the|and|to|in|a|is|that|for|with|on)\s+\1\b', re.IGNORECASE),
 ]
 
 
@@ -242,9 +253,26 @@ def check_content_placeholders():
                 if matches:
                     issues.append({
                         "type": "content_placeholder",
-                        "severity": "medium",
+                        "severity": "high",
                         "file": rel_path,
-                        "message": f"发现占位符/状态标记: {matches[0]}",
+                        "message": f"发现模板占位符: {matches[0]}",
+                        "auto_fixable": False,
+                        "agent": "content"
+                    })
+                    break
+
+            # Check for garbled text patterns
+            for gpattern in GARBLED_PATTERNS:
+                gmatches = gpattern.findall(body)
+                if gmatches:
+                    # Get context
+                    gmatches2 = list(gpattern.finditer(body))
+                    ctx = body[max(0, gmatches2[0].start()-20):gmatches2[0].end()+20].replace('\n', ' ')
+                    issues.append({
+                        "type": "garbled_text",
+                        "severity": "high",
+                        "file": rel_path,
+                        "message": f"疑似乱码/文本损坏: ...{ctx}...",
                         "auto_fixable": False,
                         "agent": "content"
                     })
