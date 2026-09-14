@@ -1,5 +1,5 @@
 ---
-title: "China Business Travel: Meetings, Dining &"
+title: "Traveling To China For Business: Meetings, Dining &"
 date: "2026-08-30T10:00:00+08:00"
 lastmod: "2026-08-30T10:00:00+08:00"
 author: "Joran"
@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-09-13"
+last_updated: "2026-09-14"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 

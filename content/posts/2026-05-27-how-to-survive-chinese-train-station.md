@@ -216,3 +216,5 @@ Remember: **find your platform, know your carriage number, keep your passport ha
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Western Sichuan Overland Camping: 7-Day Route](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
