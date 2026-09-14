@@ -81,6 +81,29 @@ jobs:
             --max-pages 12 \
             --strict
 
+      - name: Upload quality gate reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-deploy-quality-reports
+          path: reports/quality/
+          retention-days: 30
+
+      - name: Publish quality data for ops dashboard
+        if: always()
+        run: |
+          python scripts/merge_quality_issues.py
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/quality/quality_issues.json reports/quality/quality_history.json
+          if git diff --cached --quiet; then
+            echo "No quality dashboard changes"
+            exit 0
+          fi
+          git commit -m "chore(quality): publish post-deploy quality gate [skip ci]"
+          git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase failed"; exit 0; }
+          git push origin main || echo "quality report push failed (non-fatal)"
+
       - name: 2.0 Post-build Validation (content_id + brand_identity)
         run: |
           echo "=== [2.0] 安装验证依赖 ==="

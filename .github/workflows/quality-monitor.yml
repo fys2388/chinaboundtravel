@@ -50,6 +50,11 @@ jobs:
         run: |
           python scripts/merge_quality_issues.py
 
+      - name: Dispatch quality issues to Agents
+        run: |
+          python scripts/dispatch_quality_issues.py || true
+          python scripts/agent_task_executor.py --date "$(date -u +%F)" || true
+
       - name: Evaluate release risk
         id: evaluate
         continue-on-error: true
@@ -119,7 +124,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/quality/
+          git add reports/quality/ reports/daily_issues/
           if git diff --cached --quiet; then
             echo "No quality report changes"
             exit 0

@@ -8,20 +8,33 @@ Usage:
   python scripts/social_analytics_pull.py [--days 7] [--dry-run]
 
 Environment variables (set in GitHub Secrets or .env):
-  BUFFER_ACCESS_TOKEN - Buffer API access token (account A: FB+IG+X)
-  BUFFER_ACCESS_TOKEN_2 - Buffer API access token (account B: Pinterest)
+  BUFFER_API_TOKEN_A - shared token for Buffer account A (FB+IG+X)
+  BUFFER_API_TOKEN_B - shared token for Buffer account B (Pinterest)
+
+Legacy BUFFER_ACCESS_TOKEN / BUFFER_ACCESS_TOKEN_2 aliases are also accepted.
 """
-import os
 import sys
 import json
 import urllib.request
 import urllib.error
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta, date, timezone
 from pathlib import Path
 from typing import Optional
 
 # Add scripts dir to path
 sys.path.insert(0, str(Path(__file__).parent))
+
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+except Exception:
+    pass
+
+from buffer_credentials import (  # noqa: E402
+    resolve_buffer_token,
+    resolve_buffer_token_with_source,
+)
 
 METRICS_DIR = Path("reports/measurement")
 METRICS_DIR.mkdir(parents=True, exist_ok=True)
@@ -137,7 +150,9 @@ def get_channels(token: str) -> list:
 
 def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     """Get published posts for a channel with analytics (Buffer API v2)."""
-    since = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime(
+        "%Y-%m-%dT%H:%M:%S"
+    )
     org_id = get_organization_id(token)
     
     query = """
@@ -149,6 +164,7 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
             text
             channelService
             sentAt
+            createdAt
             metrics {
               name
               value
@@ -162,16 +178,23 @@ def get_published_updates(token: str, channel_id: str, days: int = 7) -> list:
     variables = {
         "input": {
             "organizationId": org_id,
-            "status": "sent",
-            "since": since,
-            "limit": 100,
+            "filter": {
+                "status": ["sent"],
+                "channelIds": [channel_id],
+            },
+            "sort": [{"field": "dueAt", "direction": "desc"}],
         }
     }
     data = buffer_api_request(token, query, variables)
     if data and "posts" in data:
         # Try edges/node format first
         if "edges" in data["posts"]:
-            return [edge.get("node", {}) for edge in data["posts"]["edges"]]
+            posts = [edge.get("node", {}) for edge in data["posts"]["edges"]]
+            return [
+                post
+                for post in posts
+                if (post.get("sentAt") or post.get("createdAt") or "") >= since
+            ]
         # Fallback to direct posts array
         if "posts" in data["posts"]:
             return data["posts"]["posts"]
@@ -199,34 +222,11 @@ def validate_buffer_token(token: str, label: str = "unknown") -> bool:
 
 def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
     """Pull analytics from all Buffer accounts and compile metrics."""
-    token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "") or os.environ.get("BUFFER_API_TOKEN_A", "") or os.environ.get("BUFFER_API_TOKEN", "")
-    token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "") or os.environ.get("BUFFER_API_TOKEN_B", "")
-
-    # IMPORTANT: Do NOT fall back to BUFFER_WORKER_URL - that is a publish endpoint URL,
-    # not a Buffer API access token. Using it causes auth failures and all-zero metrics.
-    # If tokens are not configured, report clearly instead of silently using wrong credentials.
-
-    def _is_valid_token_format(token: str) -> bool:
-        """Basic validation: Buffer API tokens are alphanumeric strings, not URLs."""
-        if not token:
-            return False
-        # Reject URLs, paths, or anything that looks like an endpoint
-        if token.startswith("http://") or token.startswith("https://"):
-            return False
-        if "/" in token or len(token) < 10:
-            return False
-        return True
-
-    if token_a and not _is_valid_token_format(token_a):
-        print(f"  WARNING: BUFFER_ACCESS_TOKEN looks invalid (not a valid API token format). "
-              f"Did you accidentally set BUFFER_WORKER_URL?")
-        token_a = ""
-    if token_b and not _is_valid_token_format(token_b):
-        print(f"  WARNING: BUFFER_ACCESS_TOKEN_2 looks invalid (not a valid API token format).")
-        token_b = ""
+    token_a = resolve_buffer_token("A")
+    token_b = resolve_buffer_token("B")
 
     all_metrics = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "date": date.today().isoformat(),
         "days_covered": days,
         "accounts": {},
@@ -238,10 +238,16 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
         },
         "totals": {"posts": 0, "impressions": 0, "clicks": 0, "likes": 0, "comments": 0, "shares": 0},
         "posts": [],
+        "metrics_available_count": 0,
+        "impression_metric_count": 0,
+        "status": "unknown",
+        "data_source": "unavailable",
     }
 
     tokens = [("account_a", token_a), ("account_b", token_b)]
     has_valid_token = False
+    posts_with_stats = 0
+    posts_with_impression_metrics = 0
 
     for label, token in tokens:
         if not token:
@@ -273,7 +279,18 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
 
             ch_metrics = {"posts": 0, "impressions": 0, "clicks": 0, "likes": 0, "comments": 0, "shares": 0}
             for update in updates:
-                stats = update.get("stats", {})
+                stats = dict(update.get("stats", {}) or {})
+                for metric in update.get("metrics", []) or []:
+                    metric_name = str(metric.get("name", "")).lower()
+                    if metric_name:
+                        stats[metric_name] = metric.get("value", 0) or 0
+                if stats:
+                    posts_with_stats += 1
+                if any(
+                    key in stats
+                    for key in ("impressions", "impression", "reach", "views")
+                ):
+                    posts_with_impression_metrics += 1
                 impressions = stats.get("impressions", stats.get("reach", 0)) or 0
                 clicks = stats.get("clicks", 0) or 0
                 likes = stats.get("likes", stats.get("favorites", 0)) or 0
@@ -291,7 +308,7 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
                     "id": update.get("id"),
                     "platform": platform,
                     "text": (update.get("text", "") or "")[:200],
-                    "created_at": update.get("createdAt"),
+                    "created_at": update.get("sentAt") or update.get("createdAt"),
                     "impressions": impressions,
                     "clicks": clicks,
                     "likes": likes,
@@ -318,8 +335,32 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
 
     if not has_valid_token:
         print("\n  WARNING: No valid Buffer tokens found. Analytics will remain at 0.")
-        print("  Set BUFFER_ACCESS_TOKEN and BUFFER_ACCESS_TOKEN_2 environment variables.")
+        print("  Set BUFFER_API_TOKEN_A and BUFFER_API_TOKEN_B environment variables.")
         all_metrics["warning"] = "No valid Buffer API tokens configured"
+        all_metrics["status"] = "unavailable"
+    elif all_metrics["totals"]["posts"] > 0 and posts_with_stats == 0:
+        all_metrics["status"] = "metrics_unavailable"
+        all_metrics["warning"] = (
+            "Buffer returned published posts but no analytics metric fields; "
+            "check API permissions/plan or metric availability"
+        )
+        print("\n  WARNING: Buffer posts have no usable analytics metrics.")
+    elif (
+        all_metrics["totals"]["posts"] > 0
+        and posts_with_impression_metrics == 0
+    ):
+        all_metrics["status"] = "impression_metric_unavailable"
+        all_metrics["warning"] = (
+            "Buffer returned metrics but no impression/reach/view field; "
+            "zero impressions cannot be verified"
+        )
+        print("\n  WARNING: Buffer posts have no impression metrics.")
+    else:
+        all_metrics["status"] = "ok"
+        all_metrics["data_source"] = "buffer_api"
+
+    all_metrics["metrics_available_count"] = posts_with_stats
+    all_metrics["impression_metric_count"] = posts_with_impression_metrics
 
     # Save detailed analytics
     detail_path = SOCIAL_DATA_DIR / f"analytics_{date.today().isoformat()}.json"
@@ -336,7 +377,7 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
     else:
         current = {"timestamp": "", "date": "", "traffic": {}, "content": {}, "social": {}, "conversion": {}, "revenue": {}, "seo": {}}
 
-    current["timestamp"] = datetime.utcnow().isoformat()
+    current["timestamp"] = datetime.now(timezone.utc).isoformat()
     current["date"] = date.today().isoformat()
     current["social"] = {
         "total_posts": all_metrics["totals"]["posts"],
@@ -346,8 +387,9 @@ def pull_analytics(days: int = 7, dry_run: bool = False) -> dict:
         "total_comments": all_metrics["totals"]["comments"],
         "total_shares": all_metrics["totals"]["shares"],
         "by_platform": all_metrics["by_platform"],
-        "last_updated": datetime.utcnow().isoformat(),
-        "data_source": "buffer_api" if has_valid_token else "unavailable",
+        "last_updated": datetime.now(timezone.utc).isoformat(),
+        "data_source": all_metrics["data_source"],
+        "status": all_metrics["status"],
     }
 
     if not dry_run:
@@ -372,17 +414,24 @@ def main():
 
     if args.validate:
         print("\nValidating Buffer API tokens...")
-        token_a = os.environ.get("BUFFER_ACCESS_TOKEN", "") or os.environ.get("BUFFER_API_TOKEN_A", "") or os.environ.get("BUFFER_API_TOKEN", "")
-        token_b = os.environ.get("BUFFER_ACCESS_TOKEN_2", "") or os.environ.get("BUFFER_API_TOKEN_B", "")
-        # Do NOT fall back to BUFFER_WORKER_URL - that's a publish endpoint, not an API token
-        valid_a = validate_buffer_token(token_a, "account_a") if token_a else (print("  [account_a] BUFFER_ACCESS_TOKEN not set") or False)
-        valid_b = validate_buffer_token(token_b, "account_b") if token_b else (print("  [account_b] BUFFER_ACCESS_TOKEN_2 not set") or False)
+        token_a, source_a = resolve_buffer_token_with_source("A")
+        token_b, source_b = resolve_buffer_token_with_source("B")
+        if source_a:
+            print(f"  [account_a] Using shared credential {source_a}")
+        else:
+            print("  [account_a] Shared credential not configured")
+        if source_b:
+            print(f"  [account_b] Using shared credential {source_b}")
+        else:
+            print("  [account_b] Shared credential not configured")
+        valid_a = validate_buffer_token(token_a, "account_a") if token_a else False
+        valid_b = validate_buffer_token(token_b, "account_b") if token_b else False
         print(f"\nResult: account_a={'VALID' if valid_a else 'MISSING/INVALID'}, account_b={'VALID' if valid_b else 'MISSING/INVALID'}")
         if not (valid_a or valid_b):
-            print("\n  💡 To fix: Add Buffer API access tokens to GitHub Secrets:")
-            print("     - BUFFER_ACCESS_TOKEN (account A: Facebook + Instagram + X)")
-            print("     - BUFFER_ACCESS_TOKEN_2 (account B: Pinterest)")
-            print("  ⚠️  Do NOT use BUFFER_WORKER_URL - that is a publish endpoint, not an API token")
+            print("\n  To fix: Add Buffer API access tokens to GitHub Secrets:")
+            print("     - BUFFER_API_TOKEN_A (account A: Facebook + Instagram + X)")
+            print("     - BUFFER_API_TOKEN_B (account B: Pinterest)")
+            print("  The same account token is shared by publishing and analytics.")
         return 0 if (valid_a or valid_b) else 1
 
     print(f"\nPulling last {args.days} days of analytics...")

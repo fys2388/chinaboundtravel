@@ -49,7 +49,10 @@ QUORA_CONFIG = {
 }
 
 BUFFER_CONFIG = {
-    "access_token": os.getenv("BUFFER_ACCESS_TOKEN", ""),
+    "access_token": (
+        os.getenv("BUFFER_API_TOKEN_A", "")
+        or os.getenv("BUFFER_ACCESS_TOKEN", "")
+    ),
     "base_url": "https://api.buffer.com/v1/graphql",
     "timezone": "America/New_York",
     "best_times": ["09:00", "12:00", "15:00", "18:00"]

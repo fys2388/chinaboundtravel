@@ -28,15 +28,23 @@ class ErrorHandler:
             json.dump(self.kb, f, indent=2, ensure_ascii=False)
     
     def classify_error(self, error_message: str) -> str:
+        msg_lower = error_message.lower()
         if "failed to unmarshal YAML" in error_message or "yaml: unmarshal errors" in error_message:
             return "yaml_parsing"
         elif "template for shortcode" in error_message and "not found" in error_message:
             return "shortcode_missing"
         elif "cannot unmarshal !!str" in error_message and "into map[string]interface" in error_message:
             return "encoding_corruption"
-        elif "timeout" in error_message.lower():
+        elif re.search(
+            r"timed out|timeout after|exceeded.*timeout|exit code 124",
+            msg_lower,
+        ):
             return "build_timeout"
-        elif "failed to push" in error_message or "git push" in error_message.lower():
+        elif re.search(
+            r"failed to push|remote rejected|non-fast-forward|fetch first|"
+            r"protected branch|push declined",
+            msg_lower,
+        ):
             return "git_push_failed"
         else:
             return "unknown"
@@ -51,6 +59,19 @@ class ErrorHandler:
             "encoding_corruption": "编码损坏",
             "build_timeout": "构建超时",
             "git_push_failed": "Git推送失败",
+            "content_quality_p0": "内容质量P0",
+            "mojibake_detected": "P0乱码",
+            "fact_guard_failed": "事实检查失败",
+            "brand_violation": "品牌审计失败",
+            "content_id_error": "内容ID审计失败",
+            "content_audit_script_error": "内容巡检脚本异常",
+            "visual_quality_failed": "视觉质量门禁失败",
+            "predeploy_quality_failed": "部署前质量门禁失败",
+            "permission_denied": "权限不足",
+            "authentication_error": "认证失败",
+            "dependency_missing": "依赖缺失",
+            "module_not_found": "Python模块缺失",
+            "network_error": "网络错误",
             "unknown": "未知错误"
         }
         

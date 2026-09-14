@@ -61,6 +61,7 @@ quality_p2 = quality.get("P2", 0)
 quality_time = (quality.get("generated_at", "") or "")[:16].replace("T", " ")
 quality_sources = quality.get("sources", {})
 quality_source_labels = {
+    "content": "内容质量",
     "predeploy": "构建前",
     "site": "线上语义",
     "visual": "浏览器视觉",
@@ -124,7 +125,7 @@ if not quality_issues_html:
     elif quality_available_source_count < len(quality_source_labels):
         quality_issues_html = (
             '<div class="quality-empty quality-empty-alert">'
-            f'当前已接入 {quality_available_source_count}/5 个数据源，'
+            f'当前已接入 {quality_available_source_count}/{len(quality_source_labels)} 个数据源，'
             '尚无已发现的问题；数据不完整，不能据此判定全站通过</div>'
         )
     else:
@@ -145,24 +146,75 @@ name_to_key = {
     "用户智能运营": "user",
     "自我学习引擎": "self_learning",
     "网站健康巡检": "site_health",
+    "页面/视觉/响应式": "frontend",
+    "部署/配置/权限": "ops",
 }
 
 
 agents_html = ""
+rendered_agent_keys = set()
 for a in data["agents"].get("agents", []):
     st = a["status"]
     color = "#22c55e" if "正常" in st else ("#f59e0b" if "过期" in st else "#ef4444")
     dot_class = "dot-live" if "正常" in st else "dot-warn"
     agent_key = name_to_key.get(a["name"], "")
-    fix_count = exec_data.get(agent_key, {}).get("fixed", 0)
-    fix_badge = " 今日修复" + str(fix_count) + "处" if fix_count > 0 else ""
+    if agent_key:
+        rendered_agent_keys.add(agent_key)
+    agent_exec = exec_data.get(agent_key, {})
+    total_count = agent_exec.get("total", 0)
+    fix_count = agent_exec.get("fixed", 0)
+    manual_count = agent_exec.get("manual_review", 0)
+    failed_count = agent_exec.get("failed", 0)
+    exec_parts = []
+    if total_count > 0:
+        exec_parts.append(f"今日任务 {total_count}")
+    if fix_count > 0:
+        exec_parts.append(f"已修复 {fix_count}")
+    if manual_count > 0:
+        exec_parts.append(f"待人工 {manual_count}")
+    if failed_count > 0:
+        exec_parts.append(f"失败 {failed_count}")
+    exec_badge = " · " + " · ".join(exec_parts) if exec_parts else ""
     agents_html += f'''<div class="agent-card">
       <div class="agent-top">
         <span class="agent-dot {dot_class}" style="background:{color}"></span>
         <span class="agent-name">{a["name"]}</span>
       </div>
       <div class="agent-status" style="color:{color}">{st}</div>
-      <div class="agent-meta">最后运行 {str(a.get("last_run","")).replace("T"," ")[:16]} · 周期 {a["max_age_days"]}d{fix_badge}</div>
+      <div class="agent-meta">最后运行 {str(a.get("last_run","")).replace("T"," ")[:16]} · 周期 {a["max_age_days"]}d{exec_badge}</div>
+    </div>'''
+
+# Task-only agents such as Frontend/Ops do not emit heartbeat reports. Surface
+# their execution counts whenever they have work so dispatch is not invisible.
+task_agent_names = {
+    "frontend": "Frontend Agent (页面/视觉/响应式)",
+    "ops": "Ops Agent (部署/配置/权限)",
+}
+for agent_key, agent_exec in exec_data.items():
+    if agent_key in rendered_agent_keys or agent_key not in task_agent_names:
+        continue
+    total_count = agent_exec.get("total", 0)
+    fix_count = agent_exec.get("fixed", 0)
+    manual_count = agent_exec.get("manual_review", 0)
+    failed_count = agent_exec.get("failed", 0)
+    if total_count == 0 and manual_count == 0 and failed_count == 0:
+        continue
+    color = "#22c55e" if failed_count == 0 else "#ef4444"
+    exec_parts = [f"今日任务 {total_count}"]
+    if fix_count > 0:
+        exec_parts.append(f"已修复 {fix_count}")
+    if manual_count > 0:
+        exec_parts.append(f"待人工 {manual_count}")
+    if failed_count > 0:
+        exec_parts.append(f"失败 {failed_count}")
+    last_run = str(agent_exec.get("last_run", "")).replace("T", " ")[:16] or "尚未执行"
+    agents_html += f'''<div class="agent-card">
+      <div class="agent-top">
+        <span class="agent-dot dot-live" style="background:{color}"></span>
+        <span class="agent-name">{task_agent_names[agent_key]}</span>
+      </div>
+      <div class="agent-status" style="color:{color}">任务型 Agent</div>
+      <div class="agent-meta">最后任务 {last_run} · {" · ".join(exec_parts)}</div>
     </div>'''
 
 # Workflow 分类
@@ -551,7 +603,7 @@ body {{
         <div class="section-head">
           <span class="section-num">02</span>
           <span class="section-title">全站质量门禁</span>
-          <span class="section-meta">构建前 + 线上语义 + 浏览器视觉 + SEO + Site Health</span>
+          <span class="section-meta">内容质量 + 构建前 + 线上语义 + 浏览器视觉 + SEO + Site Health</span>
         </div>
         <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0;">
           <div class="kpi"><div class="kpi-label">门禁状态</div><div class="kpi-value" style="font-size:14px;color:{quality_status_color}">{quality_status_text}</div></div>
@@ -559,7 +611,7 @@ body {{
           <div class="kpi"><div class="kpi-label">P0 阻断</div><div class="kpi-value" style="color:#ef4444">{quality_p0}</div></div>
           <div class="kpi"><div class="kpi-label">P1 高优先</div><div class="kpi-value" style="color:#f59e0b">{quality_p1}</div></div>
           <div class="kpi"><div class="kpi-label">P2 优化</div><div class="kpi-value" style="color:#eab308">{quality_p2}</div></div>
-          <div class="kpi"><div class="kpi-label">数据源</div><div class="kpi-value" style="font-size:14px">{quality_available_source_count}/5</div></div>
+          <div class="kpi"><div class="kpi-label">数据源</div><div class="kpi-value" style="font-size:14px">{quality_available_source_count}/{len(quality_source_labels)}</div></div>
           <div class="kpi"><div class="kpi-label">Site Health</div><div class="kpi-value" style="font-size:14px;color:{sh_status_color}">{sh_status_text}</div></div>
           <div class="kpi"><div class="kpi-label">自动修复</div><div class="kpi-value" style="color:#22c55e">{sh_fixed}</div></div>
         </div>

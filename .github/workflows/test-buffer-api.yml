@@ -21,22 +21,22 @@ jobs:
 
       - name: Validate Buffer API Tokens
         env:
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_API_TOKEN_A }}
-          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_API_TOKEN_B }}
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
         run: |
           echo "=== Buffer API Token 验证 ==="
-          echo "BUFFER_ACCESS_TOKEN 长度: ${#BUFFER_ACCESS_TOKEN}"
-          echo "BUFFER_ACCESS_TOKEN_2 长度: ${#BUFFER_ACCESS_TOKEN_2}"
+          echo "BUFFER_API_TOKEN_A 长度: ${#BUFFER_API_TOKEN_A}"
+          echo "BUFFER_API_TOKEN_B 长度: ${#BUFFER_API_TOKEN_B}"
           echo ""
-          if [ -z "$BUFFER_ACCESS_TOKEN" ]; then
-            echo "❌ BUFFER_ACCESS_TOKEN 未配置"
+          if [ -z "$BUFFER_API_TOKEN_A" ]; then
+            echo "❌ BUFFER_API_TOKEN_A 未配置"
           else
-            echo "✅ BUFFER_ACCESS_TOKEN 已配置 (长度: ${#BUFFER_ACCESS_TOKEN})"
+            echo "✅ BUFFER_API_TOKEN_A 已配置 (长度: ${#BUFFER_API_TOKEN_A})"
           fi
-          if [ -z "$BUFFER_ACCESS_TOKEN_2" ]; then
-            echo "❌ BUFFER_ACCESS_TOKEN_2 未配置"
+          if [ -z "$BUFFER_API_TOKEN_B" ]; then
+            echo "❌ BUFFER_API_TOKEN_B 未配置"
           else
-            echo "✅ BUFFER_ACCESS_TOKEN_2 已配置 (长度: ${#BUFFER_ACCESS_TOKEN_2})"
+            echo "✅ BUFFER_API_TOKEN_B 已配置 (长度: ${#BUFFER_API_TOKEN_B})"
           fi
           echo ""
           echo "=== 运行 social_analytics_pull.py --validate ==="
@@ -44,8 +44,8 @@ jobs:
 
       - name: Pull Social Analytics (Test)
         env:
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_API_TOKEN_A }}
-          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_API_TOKEN_B }}
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
         run: |
           echo "=== 拉取社媒分析数据 (测试) ==="
           python scripts/social_analytics_pull.py --days ${{ github.event.inputs.days }} --dry-run || echo "拉取失败"

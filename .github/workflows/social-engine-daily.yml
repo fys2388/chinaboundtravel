@@ -154,8 +154,9 @@ jobs:
 
       - name: Pull social analytics (Buffer API)
         env:
-          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_API_TOKEN_A }}
-          BUFFER_ACCESS_TOKEN_2: ${{ secrets.BUFFER_API_TOKEN_B }}
+          # Same per-account credentials used by the publishing worker.
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
         run: |
           python scripts/social_analytics_pull.py --days 7 || echo "analytics pull skipped (no token or API error)"
 

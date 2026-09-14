@@ -74,11 +74,15 @@ jobs:
           echo ""
           python scripts/auto_error_router.py "${{ github.event.workflow_run.name }}" "${{ github.event.workflow_run.id }}"
 
+      - name: Execute assigned Agent tasks
+        run: |
+          python scripts/agent_task_executor.py --date "$(date -u +%F)" || true
+
       - name: Commit knowledge base updates
         if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/error_knowledge_base.json 2>/dev/null || true
+          git add config/error_knowledge_base.json reports/daily_issues/ 2>/dev/null || true
           git diff --cached --quiet || git commit -m "docs(error): auto-record failure by error-router [skip ci]"
           git push https://github.com/${{ github.repository }}.git main || echo "Push skipped (no changes or conflict)"

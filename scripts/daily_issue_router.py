@@ -21,12 +21,14 @@ import os
 import sys
 import json
 import re
+import hashlib
 from datetime import datetime, date
 from pathlib import Path
 from typing import Optional
 
 # Add scripts dir to path
 sys.path.insert(0, str(Path(__file__).parent))
+from agent_task_queue import enqueue_issues
 
 BASE_DIR = Path(__file__).parent.parent
 REPORTS_DIR = BASE_DIR / "reports"
@@ -193,6 +195,12 @@ ISSUE_ROUTES = {
         "action": "expand_content",
     },
     # 社媒
+    "social_analytics_unavailable": {
+        "agent": "ops",
+        "severity": "high",
+        "description": "社媒分析数据不可用，需修复Buffer Token、权限或指标拉取链路",
+        "action": "restore_social_analytics",
+    },
     "social_zero_engagement": {
         "agent": "social",
         "severity": "medium",
@@ -260,6 +268,7 @@ AGENT_NAMES = {
     "content": "Content Intelligence Agent (内容智能优化)",
     "social": "Social Intelligence Agent (社媒智能优化)",
     "ops": "Growth Orchestrator / Ops (增长编排/运维)",
+    "frontend": "Frontend Agent (页面/视觉/响应式)",
     "conversion": "Conversion Optimization Agent (转化优化Agent)",
 }
 
@@ -277,6 +286,26 @@ SEVERITY_EMOJI = {
     "medium": "🟡",
     "low": "🟢",
 }
+
+
+def classify_social_metrics(data: dict) -> Optional[str]:
+    """Return the social issue implied by a daily report without guessing.
+
+    Zero impressions are only an engagement problem when analytics provenance
+    is explicitly available. Legacy or unavailable snapshots route to Ops.
+    """
+    published = int(data.get("total_published", 0) or 0)
+    if published <= 0:
+        return None
+    if str(data.get("analytics_status", "unavailable")).lower() != "ok":
+        return "social_analytics_unavailable"
+    impressions = int(data.get("total_impressions", 0) or 0)
+    clicks = int(data.get("total_clicks", 0) or 0)
+    if impressions <= 0:
+        return "social_zero_engagement"
+    if clicks <= 0:
+        return "social_no_traffic"
+    return None
 
 
 class DailyIssueRouter:
@@ -325,20 +354,25 @@ class DailyIssueRouter:
             latest = daily_files[0]
             try:
                 data = json.loads(latest.read_text(encoding="utf-8"))
-                total_clicks = data.get("total_clicks", 0)
-                total_impressions = data.get("total_impressions", 0)
-                total_uv = data.get("total_uv", 0)
-
-                if total_impressions == 0 and data.get("total_published", 0) > 0:
+                issue_type = classify_social_metrics(data)
+                published = int(data.get("total_published", 0) or 0)
+                if issue_type == "social_analytics_unavailable":
+                    reason = data.get("analytics_reason") or "Buffer分析数据未接通"
                     issues.append(self._create_issue(
-                        "social_zero_engagement",
-                        f"社媒已发布{data.get('total_published', 0)}条但曝光为0，可能是Buffer API数据未接通",
+                        issue_type,
+                        f"社媒已发布{published}条，但分析指标不可用，不能据此判定零互动（{reason}）",
                         source_file=str(latest.name),
                     ))
-                if total_clicks == 0 and total_impressions > 0:
+                elif issue_type == "social_zero_engagement":
                     issues.append(self._create_issue(
-                        "social_no_traffic",
-                        f"社媒曝光{total_impressions}但点击为0，需检查帖子链接和CTA",
+                        issue_type,
+                        f"分析数据可用，社媒已发布{published}条但曝光为0，需检查发布与指标归属",
+                        source_file=str(latest.name),
+                    ))
+                elif issue_type == "social_no_traffic":
+                    issues.append(self._create_issue(
+                        issue_type,
+                        f"社媒曝光{data.get('total_impressions', 0)}但点击为0，需检查帖子链接和CTA",
                         source_file=str(latest.name),
                     ))
             except (json.JSONDecodeError, KeyError):
@@ -486,15 +520,17 @@ class DailyIssueRouter:
         audit_files = sorted(sh_dir.glob("site_health_issues_audit_*.json"), reverse=True)
         files_to_scan.extend(audit_files[:2])
 
+        resolved_statuses = {"resolved", "fixed", "false_positive", "closed"}
         for latest in files_to_scan:
             try:
                 data = json.loads(latest.read_text(encoding="utf-8"))
                 sh_issues = data.get("issues", [])
+                before_count = len(issues)
                 for item in sh_issues:
                     issue_type = item.get("type", "unknown")
                     message = item.get("message", "")
                     file_ref = item.get("file", "")
-                    if item.get("status") == "fixed":
+                    if str(item.get("status", "")).lower() in resolved_statuses:
                         continue
                     if issue_type in ("site_unreachable", "ssl_check_failed"):
                         message = message + "（可能是本地网络误报，需核实线上状态）"
@@ -508,7 +544,15 @@ class DailyIssueRouter:
                     if item.get("suggested_title"):
                         issue["suggested_title"] = item["suggested_title"]
                     issues.append(issue)
-                print("  [Site Health] 从 " + latest.name + " 提取 " + str(len(sh_issues)) + " 个问题")
+                print(
+                    "  [Site Health] 从 "
+                    + latest.name
+                    + " 提取 "
+                    + str(len(issues) - before_count)
+                    + " 个开放问题（共 "
+                    + str(len(sh_issues))
+                    + " 条记录）"
+                )
             except (json.JSONDecodeError, KeyError) as e:
                 print("  [Site Health] 解析 " + latest.name + " 失败: " + str(e))
         return issues
@@ -517,8 +561,12 @@ class DailyIssueRouter:
     def _create_issue(self, issue_type: str, description: str, source_file: str = "") -> dict:
         """创建问题对象"""
         route = ISSUE_ROUTES.get(issue_type, ISSUE_ROUTES.get("workflow_failure"))
+        seed = f"{issue_type}|{description}|{source_file}"
+        issue_id = "issue_" + hashlib.sha1(
+            seed.encode("utf-8")
+        ).hexdigest()[:12]
         return {
-            "id": f"issue_{len(self.issues) + 1:03d}",
+            "id": issue_id,
             "type": issue_type,
             "description": description,
             "severity": route.get("severity", "medium"),
@@ -605,14 +653,20 @@ class DailyIssueRouter:
         output_file.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"✅ 分配结果已保存: {output_file}")
 
-        # 为每个 Agent 保存独立任务文件
-        tasks_dir = ISSUES_DIR / "agent_tasks"
-        tasks_dir.mkdir(exist_ok=True)
-        for task in self.assignments:
-            task_file = tasks_dir / f"{task['task_id']}.json"
-            task_file.write_text(json.dumps(task, ensure_ascii=False, indent=2), encoding="utf-8")
+        # Pass one complete snapshot so cross-agent cleanup cannot clear
+        # sibling tasks created by the same router run.
+        all_issues = [
+            issue
+            for task in self.assignments
+            for issue in task.get("issues", [])
+        ]
+        enqueue_issues(
+            all_issues,
+            task_source="daily_issue_router",
+            target_date=self.target_date,
+        )
 
-        print(f"✅ Agent任务文件已保存到: {tasks_dir}")
+        print(f"✅ Agent任务文件已合并到: {ISSUES_DIR / 'agent_tasks'}")
 
         # 回写分配状态到原始问题文件（site_health_issues等）
         self._writeback_assigned_status()
@@ -722,6 +776,13 @@ class DailyIssueRouter:
 
 def main():
     import argparse
+
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(errors="replace")
+            except (OSError, ValueError):
+                pass
 
     parser = argparse.ArgumentParser(description="日报运营问题→Agent任务自动分配")
     parser.add_argument("--dry-run", action="store_true", help="只扫描不保存")

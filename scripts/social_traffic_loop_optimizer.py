@@ -251,13 +251,22 @@ class SocialTrafficLoopOptimizer:
 
         # 识别问题
         if funnel["social_impressions"] == 0:
-            analysis["issues"].append({
-                "severity": "critical",
-                "issue": "社媒曝光数据为0",
-                "cause": "Buffer API数据未接通（BUFFER_ACCESS_TOKEN未配置或无效）",
-                "impact": "无法追踪社媒表现，无法验证引流效果",
-                "fix": "在GitHub Secrets中配置有效的Buffer API access token",
-            })
+            if str(social_metrics.get("status", "")).lower() == "ok":
+                analysis["issues"].append({
+                    "severity": "high",
+                    "issue": "社媒曝光数据为0",
+                    "cause": "Buffer分析数据已验证，但当前统计周期内没有可验证曝光",
+                    "impact": "无法评估社媒内容表现和引流效果",
+                    "fix": "检查帖子是否已成功发布、平台指标是否延迟更新，并优化发布时间与内容选题",
+                })
+            else:
+                analysis["issues"].append({
+                    "severity": "critical",
+                    "issue": "社媒曝光数据不可用",
+                    "cause": "Buffer分析数据未接通或指标不可验证",
+                    "impact": "无法判断社媒是零曝光还是数据缺失",
+                    "fix": "检查共享的BUFFER_API_TOKEN_A/B、API权限和指标拉取日志",
+                })
         elif funnel["social_clicks"] == 0:
             analysis["issues"].append({
                 "severity": "high",
@@ -345,16 +354,26 @@ class SocialTrafficLoopOptimizer:
         """基于数据生成优化建议"""
         recs = []
 
-        # 建议1：Buffer API数据接通
+        # 建议1：区分数据不可用与真实零曝光
         if funnel["social_impressions"] == 0:
-            recs.append({
-                "priority": "P0",
-                "category": "data_infrastructure",
-                "title": "接通Buffer API数据",
-                "description": "当前社媒曝光/点击数据全部为0，无法评估引流效果。需在GitHub Secrets中配置有效的BUFFER_ACCESS_TOKEN和BUFFER_ACCESS_TOKEN_2。",
-                "expected_impact": "能够追踪每条帖子的真实表现，识别高点击率内容类型",
-                "effort": "低（5分钟配置）",
-            })
+            if str(social_metrics.get("status", "")).lower() == "ok":
+                recs.append({
+                    "priority": "P1",
+                    "category": "social_engagement",
+                    "title": "修复已发布内容的零曝光问题",
+                    "description": "Buffer分析数据已接通且指标可验证，当前周期曝光为0。优先检查发布状态、平台指标延迟、内容质量和发布时间。",
+                    "expected_impact": "恢复社媒曝光并为点击率优化提供有效样本",
+                    "effort": "中（需检查发布状态并调整内容）",
+                })
+            else:
+                recs.append({
+                    "priority": "P0",
+                    "category": "data_infrastructure",
+                    "title": "恢复Buffer分析数据",
+                    "description": "Buffer分析数据缺少可验证指标。检查共享的BUFFER_API_TOKEN_A/B、API权限和指标拉取日志。",
+                    "expected_impact": "能够区分真实零曝光与数据缺失，并追踪帖子表现",
+                    "effort": "低（检查共享Token与API权限）",
+                })
 
         # 建议2：UTM参数标准化
         recs.append({

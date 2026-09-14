@@ -228,21 +228,3 @@ jobs:
           python chinaboundtravel_social_bot/social_publisher.py 2>&1 | tee /tmp/social_publisher_output.log
           echo "Social media distribution step completed (check log above for any failures)"
 
-  failure-notification:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    needs: [generate-blog]
-    if: failure()
-    steps:
-      - name: Send failure notification to Feishu
-        run: |
-          echo "工作流执行失败，发送飞书通知..."
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "msg_type": "text",
-              "content": {
-                "text": "❌ 博文生成工作流执行失败\n仓库: chinaboundtravel\n工作流: Joran博文生成+双AI自动审核发布\n时间: '"$(date '+%Y-%m-%d %H:%M:%S')"'\n请检查 GitHub Actions 日志。"
-              }
-            }' || echo "飞书通知发送失败，跳过"
-

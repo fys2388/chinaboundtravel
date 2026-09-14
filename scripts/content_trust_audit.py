@@ -30,6 +30,8 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+from content_seo_policy import TITLE_HARD_MAX, TITLE_MIN, is_title_too_long
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -219,10 +221,10 @@ def audit_article(path: Path) -> tuple:
             break
 
     # ---- E. SEO 问题 ----
-    if len(title) > 65:
-        add("SEO问题", "frontmatter:title", f"标题过长({len(title)}字>65)；建议精简含核心关键词", True)
-    if len(title) < 20:
-        add("SEO问题", "frontmatter:title", f"标题过短({len(title)}字<20)；补充长尾关键词", True)
+    if is_title_too_long(title):
+        add("SEO问题", "frontmatter:title", f"标题过长({len(title)}字>{TITLE_HARD_MAX})；建议精简含核心关键词", True)
+    if len(title) < TITLE_MIN:
+        add("SEO问题", "frontmatter:title", f"标题过短({len(title)}字<{TITLE_MIN})；补充长尾关键词", True)
     if not desc:
         add("SEO问题", "frontmatter:description", "缺少 meta description；补充 120-160 字符描述", True)
     elif len(desc) > 160:

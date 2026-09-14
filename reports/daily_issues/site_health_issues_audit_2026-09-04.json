@@ -17,12 +17,16 @@
       "auto_fixable": true,
       "agent": "seo",
       "assigned": true,
-      "status": "assigned",
+      "status": "resolved",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
       "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
       "assigned_to": "seo",
-      "assigned_at": "2026-09-10T02:34:57.557554"
+      "assigned_at": "2026-09-10T02:34:57.557554",
+      "resolved_by": "seo_agent",
+      "resolution_note": "title已合规(38字符)",
+      "updated_at": "2026-09-13T20:28:09.237834",
+      "resolved_at": "2026-09-13T20:28:09.237834"
     },
     {
       "type": "title_too_long",
@@ -32,12 +36,16 @@
       "auto_fixable": true,
       "agent": "seo",
       "assigned": true,
-      "status": "assigned",
+      "status": "resolved",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
       "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
       "assigned_to": "seo",
-      "assigned_at": "2026-09-10T02:34:57.557559"
+      "assigned_at": "2026-09-10T02:34:57.557559",
+      "resolved_by": "seo_agent",
+      "resolution_note": "title已合规(41字符)",
+      "updated_at": "2026-09-13T20:28:09.187515",
+      "resolved_at": "2026-09-13T20:28:09.187515"
     },
     {
       "type": "title_too_long",
@@ -47,12 +55,16 @@
       "auto_fixable": true,
       "agent": "seo",
       "assigned": true,
-      "status": "assigned",
+      "status": "resolved",
       "source": "深度测评 2026-09-04",
       "priority": "P1",
       "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
       "assigned_to": "seo",
-      "assigned_at": "2026-09-10T02:34:57.557561"
+      "assigned_at": "2026-09-10T02:34:57.557561",
+      "resolved_by": "seo_agent",
+      "resolution_note": "title已合规(42字符)",
+      "updated_at": "2026-09-13T20:28:09.159044",
+      "resolved_at": "2026-09-13T20:28:09.159044"
     },
     {
       "type": "workflow_missing_guard",
@@ -62,11 +74,15 @@
       "auto_fixable": false,
       "agent": "ops",
       "assigned": true,
-      "status": "assigned",
+      "status": "resolved",
       "source": "深度测评 2026-09-04",
       "priority": "P2",
       "assigned_to": "ops",
-      "assigned_at": "2026-09-10T02:34:57.557562"
+      "assigned_at": "2026-09-10T02:34:57.557562",
+      "resolved_by": "ops_agent",
+      "resolution_note": "标题长度 guard 已存在: .github/workflows/monthly-ebook-update.yml",
+      "updated_at": "2026-09-13T20:28:50.080612",
+      "resolved_at": "2026-09-13T20:28:50.080612"
     }
   ]
 }

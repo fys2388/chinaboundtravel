@@ -21,16 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Send failure notification
-        run: |
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "msg_type": "text",
-              "content": {
-                "text": "⚠️ 工作流执行失败，将自动重试\n\n工作流: ${{ github.event.workflow_run.name }}\n时间: '"$(date '+%Y-%m-%d %H:%M:%S')"'\n运行ID: ${{ github.event.workflow_run.id }}\n\n将在5分钟后自动重试..."
-              }
-            }'
+      # 分类、责任人和修复指引统一由 Error Alert 发送，避免同一失败重复告警。
 
       - name: Wait before retry
         run: sleep 300

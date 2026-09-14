@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-73f33c49bc51"
 title: "China Tourist Visa Guide: How to Apply in 2026"
 slug: "ultimate-guide-to-china-visa-for-tourists"

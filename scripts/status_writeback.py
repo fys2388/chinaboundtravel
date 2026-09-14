@@ -46,6 +46,8 @@ def writeback_issue(
     resolved_by: Optional[str] = None,
     resolution_note: Optional[str] = None,
     target_date: Optional[str] = None,
+    issue_id: Optional[str] = None,
+    page: Optional[str] = None,
 ) -> bool:
     """
     回写单个问题的状态到 site_health_issues 文件。
@@ -64,13 +66,27 @@ def writeback_issue(
     if not target_date:
         target_date = datetime.now().strftime("%Y-%m-%d")
 
+    def matches(issue: dict) -> bool:
+        if issue_id and str(issue.get("id", "")) == str(issue_id):
+            return True
+        if issue.get("type") != issue_type:
+            return False
+        if page:
+            normalized_page = str(page).replace("\\", "/")
+            candidates = {
+                str(issue.get("file", "")).replace("\\", "/"),
+                str(issue.get("page", "")).replace("\\", "/"),
+            }
+            return normalized_page in candidates
+        return True
+
     # 1. 回写到 daily_issues/site_health_issues_*.json
     issues_file = ISSUES_DIR / source_file
     updated = False
     if issues_file.exists():
         data = _load_json(issues_file)
         for issue in data.get("issues", []):
-            if issue.get("type") == issue_type:
+            if matches(issue):
                 issue["status"] = status
                 issue["assigned"] = status in ("assigned", "in_progress", "resolved", "false_positive")
                 if resolved_by:
@@ -89,7 +105,7 @@ def writeback_issue(
     if sh_file.exists():
         sh = _load_json(sh_file)
         for issue in sh.get("issues", []):
-            if issue.get("type") == issue_type:
+            if matches(issue):
                 issue["status"] = status
                 issue["assigned"] = True
                 if resolved_by:
@@ -123,6 +139,8 @@ def writeback_agent_task(
     resolved_count: int = 0,
     failed_count: int = 0,
     execution_note: Optional[str] = None,
+    execution_log: Optional[Path] = None,
+    tasks_dir: Optional[Path] = None,
 ) -> bool:
     """
     回写 Agent 任务的执行状态。
@@ -137,7 +155,7 @@ def writeback_agent_task(
     Returns:
         True if updated
     """
-    task_file = AGENT_TASKS_DIR / f"{task_id}.json"
+    task_file = (tasks_dir or AGENT_TASKS_DIR) / f"{task_id}.json"
     if not task_file.exists():
         return False
 
@@ -153,7 +171,15 @@ def writeback_agent_task(
     _save_json(task_file, task)
 
     # 记录执行日志
-    _log_execution(task_id, status, resolved_count, failed_count, execution_note)
+    _log_execution(
+        task_id,
+        status,
+        resolved_count,
+        failed_count,
+        execution_note,
+        execution_log=execution_log,
+        tasks_dir=tasks_dir,
+    )
     return True
 
 
@@ -188,22 +214,163 @@ def writeback_workflow(
     return True
 
 
-def _log_execution(task_id: str, status: str, resolved: int, failed: int, note: Optional[str]):
+def _log_execution(
+    task_id: str,
+    status: str,
+    resolved: int,
+    failed: int,
+    note: Optional[str],
+    execution_log: Optional[Path] = None,
+    tasks_dir: Optional[Path] = None,
+):
     """记录执行日志"""
-    log = _load_json(EXECUTION_LOG)
+    log_path = execution_log or EXECUTION_LOG
+    log = _load_json(log_path)
     if "executions" not in log:
         log["executions"] = []
-    log["executions"].append({
+    entry = {
         "task_id": task_id,
         "status": status,
         "resolved": resolved,
         "failed": failed,
         "note": note,
         "executed_at": datetime.now().isoformat(),
-    })
+    }
+    log["executions"].append(entry)
     log["last_run"] = datetime.now().isoformat()
     log["total_executions"] = log.get("total_executions", 0) + 1
-    _save_json(EXECUTION_LOG, log)
+
+    # Keep the legacy summary fields for existing consumers, but rebuild them
+    # from real task executions. A "partial" task is work handed to a human,
+    # not a completed fix.
+    task_date = task_id.split("_", 2)[1] if task_id.startswith("task_") else ""
+    dated_agents: dict = {}
+    latest_by_task: dict[str, dict] = {}
+    for item in log["executions"]:
+        item_date = (
+            str(item.get("task_id", "")).split("_", 2)[1]
+            if str(item.get("task_id", "")).startswith("task_")
+            else ""
+        )
+        if item_date != task_date:
+            continue
+        latest_by_task[str(item.get("task_id", ""))] = item
+
+    for item in latest_by_task.values():
+        item_agent = str(item.get("task_id", "")).rsplit("_", 1)[-1]
+        agent_stats = dated_agents.setdefault(
+            item_agent,
+            {
+                "total": 0,
+                "fixed": 0,
+                "failed": 0,
+                "manual_review": 0,
+                "in_progress": 0,
+                "last_run": "",
+            },
+        )
+        executed_at = str(item.get("executed_at", "") or "")
+        if executed_at > str(agent_stats.get("last_run", "")):
+            agent_stats["last_run"] = executed_at
+        # Only terminal entries are counted so each task is not double-counted
+        # when it briefly passes through in_progress.
+        if item.get("status") == "in_progress":
+            agent_stats["in_progress"] = agent_stats.get("in_progress", 0) + 1
+        else:
+            agent_stats["total"] = agent_stats.get("total", 0) + 1
+            if item.get("status") == "completed":
+                agent_stats["fixed"] = agent_stats.get("fixed", 0) + int(
+                    item.get("resolved", 0) or 0
+                )
+            elif item.get("status") == "failed":
+                agent_stats["failed"] = agent_stats.get("failed", 0) + 1
+            elif item.get("status") == "partial":
+                agent_stats["manual_review"] = agent_stats.get("manual_review", 0) + 1
+
+    reconcile_agents_with_tasks(
+        dated_agents,
+        task_date,
+        tasks_dir or AGENT_TASKS_DIR,
+    )
+    log["target_date"] = task_date or log.get("target_date", "")
+    log["agents"] = dated_agents
+    log["summary"] = {
+        "total": sum(v.get("total", 0) for v in dated_agents.values()),
+        "fixed": sum(v.get("fixed", 0) for v in dated_agents.values()),
+        "failed": sum(v.get("failed", 0) for v in dated_agents.values()),
+        "manual_review": sum(
+            v.get("manual_review", 0) for v in dated_agents.values()
+        ),
+        "in_progress": sum(
+            v.get("in_progress", 0) for v in dated_agents.values()
+        ),
+    }
+    _save_json(log_path, log)
+
+
+def reconcile_agents_with_tasks(
+    dated_agents: dict,
+    target_date: str,
+    tasks_dir: Path,
+):
+    """Prefer current task files over stale terminal log entries.
+
+    A task can be reopened under another agent or cleared by the router after
+    the original execution. The dashboard must reflect the current task file,
+    not the last historical execution for that agent.
+    """
+    if not target_date:
+        return
+    for task_file in tasks_dir.glob(f"task_{target_date}_*.json"):
+        task = _load_json(task_file)
+        agent = str(task.get("agent", "") or "")
+        if not agent:
+            continue
+        status = str(task.get("status", "") or "")
+        execution = task.get("execution") or {}
+        resolved = int(execution.get("resolved_count", 0) or 0)
+        failed_count = int(execution.get("failed_count", 0) or 0)
+        issue_count = int(task.get("issue_count", 0) or 0)
+
+        if status == "completed" and issue_count == 0 and resolved == 0:
+            dated_agents.pop(agent, None)
+            continue
+
+        stats = dated_agents.setdefault(
+            agent,
+            {
+                "total": 0,
+                "fixed": 0,
+                "failed": 0,
+                "manual_review": 0,
+                "in_progress": 0,
+                "last_run": "",
+            },
+        )
+        stats["total"] = max(int(stats.get("total", 0) or 0), 1)
+        stats["last_run"] = max(
+            str(stats.get("last_run", "") or ""),
+            str(task.get("updated_at", "") or ""),
+        )
+        if status in ("pending", "in_progress"):
+            stats["in_progress"] = max(
+                int(stats.get("in_progress", 0) or 0), 1
+            )
+        elif status == "partial":
+            stats["manual_review"] = max(
+                int(stats.get("manual_review", 0) or 0), 1
+            )
+            stats["in_progress"] = 0
+        elif status == "failed":
+            stats["failed"] = max(
+                int(stats.get("failed", 0) or 0), max(failed_count, 1)
+            )
+            stats["in_progress"] = 0
+        elif status == "completed":
+            stats["fixed"] = max(int(stats.get("fixed", 0) or 0), resolved)
+            stats["manual_review"] = 0
+            stats["failed"] = 0
+            stats["in_progress"] = 0
 
 
 def get_pending_issues(target_date: Optional[str] = None) -> list:

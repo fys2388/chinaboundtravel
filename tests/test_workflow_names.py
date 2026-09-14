@@ -71,3 +71,15 @@ def test_monitored_names_exist_in_repo():
     name_set = set(names.values())
     for m in monitored:
         assert m in name_set, f"monitored name {m!r} matches no workflow"
+
+
+def test_failure_notification_has_one_owner():
+    """Classified failure alerts must only come from Error Alert."""
+    retry = _load_workflow(WF_DIR / "retry-failed.yml")
+    retry_steps = retry["jobs"]["check-and-retry"]["steps"]
+    assert not any(
+        step.get("name") == "Send failure notification" for step in retry_steps
+    )
+
+    weekly = _load_workflow(WF_DIR / "weekly-blog-update.yml")
+    assert "failure-notification" not in weekly["jobs"]

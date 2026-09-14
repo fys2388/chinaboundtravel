@@ -14,6 +14,11 @@ try:
 except ImportError:
     pass
 
+try:
+    from buffer_credentials import configured_buffer_accounts
+except ImportError:
+    configured_buffer_accounts = lambda: []
+
 
 def parse_cron_freq(cron_expr):
     """解析 cron 表达式，返回中文频率描述"""
@@ -296,7 +301,7 @@ except Exception as e:
     print("  site_health load failed: " + str(e))
     data["site_health"] = {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "auto_fixed": 0, "pending": 0, "resolved": 0, "timestamp": "", "checks": 16}
 
-# Unified quality gate data (predeploy + online semantic + visual + SEO + site health)
+# Unified quality gate data (content + predeploy + online semantic + visual + SEO + site health)
 try:
     quality_file = ROOT / "reports" / "quality" / "quality_issues.json"
     if quality_file.exists():
@@ -357,18 +362,68 @@ try:
     exec_log_file = ROOT / "reports" / "daily_issues" / "execution_log.json"
     if exec_log_file.exists():
         exec_log = json.loads(exec_log_file.read_text(encoding="utf-8"))
-        data["agent_execution"] = {
-            "date": exec_log.get("target_date", ""),
-            "total_fixed": exec_log.get("summary", {}).get("fixed", 0),
-            "total_issues": exec_log.get("summary", {}).get("total", 0),
-            "agents": exec_log.get("agents", {})
+        agents = exec_log.get("agents", {})
+        exec_date = exec_log.get("target_date", "")
+        today = datetime.now().strftime("%Y-%m-%d")
+        is_today = exec_date == today
+        from status_writeback import reconcile_agents_with_tasks
+
+        reconcile_agents_with_tasks(
+            agents,
+            exec_date,
+            ROOT / "reports" / "daily_issues" / "agent_tasks",
+        )
+        summary = {
+            "total": sum(int(v.get("total", 0) or 0) for v in agents.values()),
+            "fixed": sum(int(v.get("fixed", 0) or 0) for v in agents.values()),
+            "failed": sum(int(v.get("failed", 0) or 0) for v in agents.values()),
+            "manual_review": sum(
+                int(v.get("manual_review", 0) or 0) for v in agents.values()
+            ),
+            "in_progress": sum(
+                int(v.get("in_progress", 0) or 0) for v in agents.values()
+            ),
         }
-        print("  agent_execution: " + str(exec_log.get("summary", {}).get("fixed", 0)) + " fixes today")
+        data["agent_execution"] = {
+            "date": exec_date,
+            "is_today": is_today,
+            "total_fixed": summary.get("fixed", 0) if is_today else 0,
+            "total_issues": summary.get("total", 0) if is_today else 0,
+            "manual_review": summary.get("manual_review", 0) if is_today else 0,
+            "failed": summary.get("failed", 0) if is_today else 0,
+            "in_progress": summary.get("in_progress", 0) if is_today else 0,
+            "agents": agents if is_today else {},
+        }
+        print(
+            "  agent_execution: "
+            + str(summary.get("fixed", 0))
+            + " fixes, "
+            + str(summary.get("manual_review", 0))
+            + " manual, "
+            + str(summary.get("failed", 0))
+            + " failed"
+        )
     else:
-        data["agent_execution"] = {"date": "", "total_fixed": 0, "total_issues": 0, "agents": {}}
+        data["agent_execution"] = {
+            "date": "",
+            "total_fixed": 0,
+            "total_issues": 0,
+            "manual_review": 0,
+            "failed": 0,
+            "in_progress": 0,
+            "agents": {},
+        }
 except Exception as e:
     print("  agent_execution load failed: " + str(e))
-    data["agent_execution"] = {"date": "", "total_fixed": 0, "total_issues": 0, "agents": {}}
+    data["agent_execution"] = {
+        "date": "",
+        "total_fixed": 0,
+        "total_issues": 0,
+        "manual_review": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "agents": {},
+    }
 
 
 
@@ -490,7 +545,7 @@ data["data_sources"] = [
     {"name": "Travelpayouts", "configured": _has("TRAVELPAYOUTS_API_TOKEN"), "status": "ok"},
     {"name": "NordVPN", "configured": _has("NORDVPN_API_KEY", "NORDVPN_AFFILIATE_ID"), "status": "ok"},
     {"name": "MailerLite", "configured": _has("MAILERLITE_API_TOKEN"), "status": "ok"},
-    {"name": "Buffer", "configured": _has("BUFFER_API_TOKEN_A", "BUFFER_API_TOKEN_B"), "status": "ok"},
+    {"name": "Buffer", "configured": bool(configured_buffer_accounts()), "status": "ok"},
     {"name": "Cloudflare", "configured": _has("CLOUDFLARE_API_TOKEN"), "status": "ok"},
 ]
 

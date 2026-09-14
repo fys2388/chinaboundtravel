@@ -29,5 +29,9 @@
       "clicks": 0,
       "uv": 0
     }
-  }
+  },
+  "analytics_status": "unavailable",
+  "analytics_source": "unavailable",
+  "analytics_reason": "No Buffer analytics snapshot with verified metric fields",
+  "analytics_post_count": 0
 }

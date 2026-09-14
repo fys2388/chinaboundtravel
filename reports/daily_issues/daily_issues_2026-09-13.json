@@ -1,288 +1,30 @@
 {
   "router_version": "1.0",
-  "generated_at": "2026-09-13T11:35:12.656217",
+  "generated_at": "2026-09-13T20:47:42.599503",
   "target_date": "2026-09-13",
-  "total_issues": 8,
-  "total_assignments": 4,
+  "total_issues": 1,
+  "total_assignments": 1,
   "issues": [
     {
-      "id": "issue_001",
+      "id": "issue_50957e469231",
       "type": "social_zero_engagement",
-      "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+      "description": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
       "severity": "medium",
       "agent": "social",
       "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-09-11.json",
-      "detected_at": "2026-09-13T11:35:12.648668",
+      "source_file": "social_daily_2026-09-13.json",
+      "detected_at": "2026-09-13T20:47:42.594504",
       "status": "new",
       "assigned": true,
       "assigned_to": "social"
-    },
-    {
-      "id": "issue_001",
-      "type": "ai_forbidden_word",
-      "description": "AI禁用词: perfect",
-      "severity": "medium",
-      "agent": "content",
-      "action": "safe_normalize",
-      "source_file": "site_health_issues_2026-09-13.json",
-      "detected_at": "2026-09-13T11:35:12.654902",
-      "status": "new",
-      "assigned": true,
-      "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
-      "assigned_to": "content"
-    },
-    {
-      "id": "issue_001",
-      "type": "ai_forbidden_word",
-      "description": "AI禁用词: perfect",
-      "severity": "medium",
-      "agent": "content",
-      "action": "safe_normalize",
-      "source_file": "site_health_issues_2026-09-13.json",
-      "detected_at": "2026-09-13T11:35:12.654914",
-      "status": "new",
-      "assigned": true,
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-      "assigned_to": "content"
-    },
-    {
-      "id": "issue_001",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(62字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-13.json",
-      "detected_at": "2026-09-13T11:35:12.654919",
-      "status": "new",
-      "assigned": true,
-      "file": "content/free-itinerary.md",
-      "assigned_to": "seo"
-    },
-    {
-      "id": "issue_001",
-      "type": "title_too_long",
-      "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "optimize_title",
-      "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:35:12.656120",
-      "status": "new",
-      "assigned": true,
-      "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
-      "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
-      "assigned_to": "seo"
-    },
-    {
-      "id": "issue_001",
-      "type": "title_too_long",
-      "description": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "optimize_title",
-      "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:35:12.656128",
-      "status": "new",
-      "assigned": true,
-      "file": "content\\posts\\2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-      "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
-      "assigned_to": "seo"
-    },
-    {
-      "id": "issue_001",
-      "type": "title_too_long",
-      "description": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "optimize_title",
-      "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:35:12.656131",
-      "status": "new",
-      "assigned": true,
-      "file": "content\\posts\\2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
-      "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
-      "assigned_to": "seo"
-    },
-    {
-      "id": "issue_001",
-      "type": "workflow_missing_guard",
-      "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
-      "severity": "high",
-      "agent": "ops",
-      "action": "diagnose_and_fix",
-      "source_file": "site_health_issues_audit_2026-09-04.json",
-      "detected_at": "2026-09-13T11:35:12.656134",
-      "status": "new",
-      "assigned": true,
-      "file": ".github\\workflows\\monthly-ebook-update.yml",
-      "assigned_to": "ops"
     }
   ],
   "assignments": [
     {
-      "agent": "seo",
-      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
-      "task_id": "task_2026-09-13_seo",
-      "created_at": "2026-09-13T11:35:12.656202",
-      "target_date": "2026-09-13",
-      "issue_count": 4,
-      "severity_summary": {
-        "critical": 0,
-        "high": 0,
-        "medium": 3,
-        "low": 1
-      },
-      "issues": [
-        {
-          "id": "issue_001",
-          "type": "title_too_long",
-          "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
-          "severity": "medium",
-          "agent": "seo",
-          "action": "optimize_title",
-          "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-13T11:35:12.656120",
-          "status": "new",
-          "assigned": true,
-          "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
-          "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_001",
-          "type": "title_too_long",
-          "description": "Title过长(67字符): China Photography Guide: Capturing the Wonders of the Middle Kingdom - ChinaBound Travel。建议压缩至≤46字符",
-          "severity": "medium",
-          "agent": "seo",
-          "action": "optimize_title",
-          "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-13T11:35:12.656128",
-          "status": "new",
-          "assigned": true,
-          "file": "content\\posts\\2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-          "suggested_title": "China Photography Guide: Capturing the Middle Kingdom",
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_001",
-          "type": "title_too_long",
-          "description": "Title过长(67字符): Sichuan Hotpot Guide: History, Best Restaurants and Cultural Significance - ChinaBound Travel。建议压缩至≤46字符",
-          "severity": "medium",
-          "agent": "seo",
-          "action": "optimize_title",
-          "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-13T11:35:12.656131",
-          "status": "new",
-          "assigned": true,
-          "file": "content\\posts\\2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
-          "suggested_title": "Sichuan Hotpot Guide: History, Restaurants & Culture",
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_001",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(62字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-13.json",
-          "detected_at": "2026-09-13T11:35:12.654919",
-          "status": "new",
-          "assigned": true,
-          "file": "content/free-itinerary.md",
-          "assigned_to": "seo"
-        }
-      ],
-      "priority_issue": {
-        "id": "issue_001",
-        "type": "title_too_long",
-        "description": "Title过长(80字符): ChinaBound Travel Guide 2026.09 - Now Updated With Latest... - ChinaBound Travel。front matter title 61字符+站点后缀，含省略号。建议压缩至≤46字符（渲染≤66）",
-        "severity": "medium",
-        "agent": "seo",
-        "action": "optimize_title",
-        "source_file": "site_health_issues_audit_2026-09-04.json",
-        "detected_at": "2026-09-13T11:35:12.656120",
-        "status": "new",
-        "assigned": true,
-        "file": "content\\posts\\2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
-        "suggested_title": "ChinaBound Travel Guide 2026.09 Update",
-        "assigned_to": "seo"
-      },
-      "expected_actions": [
-        "optimize_title",
-        "optimize_meta"
-      ],
-      "status": "pending"
-    },
-    {
-      "agent": "content",
-      "agent_name": "Content Intelligence Agent (内容智能优化)",
-      "task_id": "task_2026-09-13_content",
-      "created_at": "2026-09-13T11:35:12.656195",
-      "target_date": "2026-09-13",
-      "issue_count": 2,
-      "severity_summary": {
-        "critical": 0,
-        "high": 0,
-        "medium": 2,
-        "low": 0
-      },
-      "issues": [
-        {
-          "id": "issue_001",
-          "type": "ai_forbidden_word",
-          "description": "AI禁用词: perfect",
-          "severity": "medium",
-          "agent": "content",
-          "action": "safe_normalize",
-          "source_file": "site_health_issues_2026-09-13.json",
-          "detected_at": "2026-09-13T11:35:12.654902",
-          "status": "new",
-          "assigned": true,
-          "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
-          "assigned_to": "content"
-        },
-        {
-          "id": "issue_001",
-          "type": "ai_forbidden_word",
-          "description": "AI禁用词: perfect",
-          "severity": "medium",
-          "agent": "content",
-          "action": "safe_normalize",
-          "source_file": "site_health_issues_2026-09-13.json",
-          "detected_at": "2026-09-13T11:35:12.654914",
-          "status": "new",
-          "assigned": true,
-          "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-          "assigned_to": "content"
-        }
-      ],
-      "priority_issue": {
-        "id": "issue_001",
-        "type": "ai_forbidden_word",
-        "description": "AI禁用词: perfect",
-        "severity": "medium",
-        "agent": "content",
-        "action": "safe_normalize",
-        "source_file": "site_health_issues_2026-09-13.json",
-        "detected_at": "2026-09-13T11:35:12.654902",
-        "status": "new",
-        "assigned": true,
-        "file": "content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
-        "assigned_to": "content"
-      },
-      "expected_actions": [
-        "safe_normalize"
-      ],
-      "status": "pending"
-    },
-    {
       "agent": "social",
       "agent_name": "Social Intelligence Agent (社媒智能优化)",
       "task_id": "task_2026-09-13_social",
-      "created_at": "2026-09-13T11:35:12.656184",
+      "created_at": "2026-09-13T20:47:42.599503",
       "target_date": "2026-09-13",
       "issue_count": 1,
       "severity_summary": {
@@ -293,82 +35,34 @@
       },
       "issues": [
         {
-          "id": "issue_001",
+          "id": "issue_50957e469231",
           "type": "social_zero_engagement",
-          "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+          "description": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
           "severity": "medium",
           "agent": "social",
           "action": "analyze_and_optimize",
-          "source_file": "social_daily_2026-09-11.json",
-          "detected_at": "2026-09-13T11:35:12.648668",
+          "source_file": "social_daily_2026-09-13.json",
+          "detected_at": "2026-09-13T20:47:42.594504",
           "status": "new",
           "assigned": true,
           "assigned_to": "social"
         }
       ],
       "priority_issue": {
-        "id": "issue_001",
+        "id": "issue_50957e469231",
         "type": "social_zero_engagement",
-        "description": "社媒已发布4条但曝光为0，可能是Buffer API数据未接通",
+        "description": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
         "severity": "medium",
         "agent": "social",
         "action": "analyze_and_optimize",
-        "source_file": "social_daily_2026-09-11.json",
-        "detected_at": "2026-09-13T11:35:12.648668",
+        "source_file": "social_daily_2026-09-13.json",
+        "detected_at": "2026-09-13T20:47:42.594504",
         "status": "new",
         "assigned": true,
         "assigned_to": "social"
       },
       "expected_actions": [
         "analyze_and_optimize"
-      ],
-      "status": "pending"
-    },
-    {
-      "agent": "ops",
-      "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
-      "task_id": "task_2026-09-13_ops",
-      "created_at": "2026-09-13T11:35:12.656207",
-      "target_date": "2026-09-13",
-      "issue_count": 1,
-      "severity_summary": {
-        "critical": 0,
-        "high": 1,
-        "medium": 0,
-        "low": 0
-      },
-      "issues": [
-        {
-          "id": "issue_001",
-          "type": "workflow_missing_guard",
-          "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
-          "severity": "high",
-          "agent": "ops",
-          "action": "diagnose_and_fix",
-          "source_file": "site_health_issues_audit_2026-09-04.json",
-          "detected_at": "2026-09-13T11:35:12.656134",
-          "status": "new",
-          "assigned": true,
-          "file": ".github\\workflows\\monthly-ebook-update.yml",
-          "assigned_to": "ops"
-        }
-      ],
-      "priority_issue": {
-        "id": "issue_001",
-        "type": "workflow_missing_guard",
-        "description": "月度更新工作流生成文章标题无长度校验（本次80字符标题即因此产生）。建议加 title≤46字符门禁，超限截断或告警",
-        "severity": "high",
-        "agent": "ops",
-        "action": "diagnose_and_fix",
-        "source_file": "site_health_issues_audit_2026-09-04.json",
-        "detected_at": "2026-09-13T11:35:12.656134",
-        "status": "new",
-        "assigned": true,
-        "file": ".github\\workflows\\monthly-ebook-update.yml",
-        "assigned_to": "ops"
-      },
-      "expected_actions": [
-        "diagnose_and_fix"
       ],
       "status": "pending"
     }

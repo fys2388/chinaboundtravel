@@ -22,6 +22,7 @@ node_modules/
 __pycache__/
 *.pyc
 *.pyo
+.pytest_tmp/
 
 # OS files
 .DS_Store
@@ -29,6 +30,7 @@ Thumbs.db
 
 # Build artifacts
 *.pdf
+reports/quality/screenshots/
 # 浣?Lead Magnet PDF 闇€閮ㄧ讲鍒扮珯鐐癸紝淇濈暀 static/lead-magnet/ 涓嬬殑 PDF
 !static/lead-magnet/*.pdf
 

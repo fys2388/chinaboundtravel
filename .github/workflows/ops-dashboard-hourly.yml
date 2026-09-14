@@ -36,6 +36,8 @@ jobs:
       - name: Merge quality reports
         run: |
           python scripts/merge_quality_issues.py
+          python scripts/dispatch_quality_issues.py || true
+          python scripts/agent_task_executor.py --date "$(date -u +%F)" || true
 
       - name: Collect dashboard data
         env:
@@ -72,7 +74,7 @@ jobs:
           mkdir -p static/ops
           cp ops-dashboard/index.html static/ops/ops-center.html
           cp ops-dashboard/dashboard_data.json static/ops/dashboard_data.json
-          git add static/ops-dashboard/index.html static/ops-dashboard/dashboard_data.json ops-dashboard/dashboard_data.json static/ops/ops-center.html static/ops/dashboard_data.json
+          git add static/ops-dashboard/index.html static/ops-dashboard/dashboard_data.json ops-dashboard/dashboard_data.json static/ops/ops-center.html static/ops/dashboard_data.json reports/daily_issues/agent_tasks reports/daily_issues/execution_log.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
@@ -83,5 +85,4 @@ jobs:
             gh workflow run "Post-deploy Tasks" || echo "Deploy trigger failed (non-fatal)"
             echo "Deploy workflow triggered"
           fi
-
 

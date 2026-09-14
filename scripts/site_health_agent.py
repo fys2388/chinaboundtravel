@@ -28,6 +28,14 @@ import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
+from content_seo_policy import (
+    TITLE_HARD_MAX,
+    TITLE_MIN,
+    TITLE_SUFFIX,
+    is_title_too_long,
+    truncate_title,
+)
+
 # 项目根目录
 ROOT = Path(__file__).parent.parent
 CONTENT_DIR = ROOT / "content"
@@ -487,10 +495,6 @@ def check_ai_forbidden_words():
     return issues
 
 
-# PaperMod 渲染标题 = front matter title + " | ChinaBound Travel"（站点后缀）
-TITLE_SUFFIX = " | ChinaBound Travel"
-
-
 def check_title_meta_length():
     """检查Title和Meta description长度"""
     issues = []
@@ -510,24 +514,27 @@ def check_title_meta_length():
             title_match = re.search(r"title\s*:\s*[\"']?([^\"'\n]+)", front_matter)
             if title_match:
                 title = title_match.group(1).strip()
-                rendered_len = len(title) + len(TITLE_SUFFIX)
-                if rendered_len > 65:
+                if is_title_too_long(title):
                     issues.append({
                         "type": "title_too_long",
                         "severity": "low",
                         "file": rel_path,
-                        "message": f"Title渲染后过长({rendered_len}字符, front matter {len(title)}+后缀{len(TITLE_SUFFIX)}): {title[:40]}...",
+                        "message": f"Title过长({len(title)}字符，模板上限{TITLE_HARD_MAX}): {title[:40]}...",
                         "auto_fixable": True,
                         "fix_action": "shorten_title",
-                        "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
+                        "fix_hint": (
+                            f"缩短 front matter title 至 {TITLE_HARD_MAX} 字符以内；"
+                            f"若需保留“{TITLE_SUFFIX.strip()}”后缀，建议控制在前 "
+                            f"{TITLE_HARD_MAX - len(TITLE_SUFFIX)} 字符内"
+                        ),
                         "agent": "seo"
                     })
-                elif len(title) < 20:
+                elif len(title) < TITLE_MIN:
                     issues.append({
                         "type": "title_too_short",
                         "severity": "low",
                         "file": rel_path,
-                        "message": f"Title过短({len(title)}字符)",
+                        "message": f"Title过短({len(title)}字符<{TITLE_MIN})",
                         "auto_fixable": False,
                         "agent": "seo"
                     })
@@ -852,7 +859,7 @@ def auto_fix_issue(issue):
             return True, "已修复env变量名"
         
         elif fix_action == "shorten_title":
-            # 缩短 front matter title 至 45 字符以内（渲染后 title+后缀≤65）
+            # Match the actual Hugo template hard limit.
             file_content = file_path.read_text(encoding="utf-8")
             fm_match = re.match(r'^(---\s*\n)(.*?)(\n---)', file_content, re.DOTALL)
             if not fm_match:
@@ -862,14 +869,9 @@ def auto_fix_issue(issue):
             if not title_match:
                 return False, "无 title 字段"
             old_title = title_match.group(3).strip()
-            if len(old_title) <= 45:
+            if not is_title_too_long(old_title):
                 return False, f"title 已在限长内({len(old_title)}字符)"
-            # 在最后一个空格处截断，保留语义
-            new_title = old_title[:45]
-            last_space = new_title.rfind(' ')
-            if last_space > 30:
-                new_title = new_title[:last_space]
-            new_title = new_title.rstrip(' -,;:')
+            new_title = truncate_title(old_title)
             # 替换 title 行
             new_fm = fm[:title_match.start(3)] + new_title + fm[title_match.end(3):]
             new_content = file_content[:fm_match.start(2)] + new_fm + file_content[fm_match.end(2):]

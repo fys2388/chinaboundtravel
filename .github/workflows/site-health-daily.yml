@@ -71,6 +71,11 @@ jobs:
             echo "No issues file found"
           fi
 
+      - name: (2.5/6) Dispatch quality issues to Agents (质量任务派单)
+        if: success()
+        run: |
+          python scripts/dispatch_quality_issues.py || true
+
       - name: (3/6) Execute Agent Tasks (执行)
         if: success()
         run: |

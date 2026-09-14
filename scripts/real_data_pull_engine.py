@@ -47,6 +47,8 @@ REAL_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(SCRIPTS_DIR))
 
+from buffer_credentials import resolve_buffer_token_with_source  # noqa: E402
+
 # 输出文件
 GA4_REAL_DATA = REAL_DATA_DIR / "ga4_real_data.json"
 GSC_REAL_DATA = REAL_DATA_DIR / "gsc_real_data.json"
@@ -618,15 +620,20 @@ def pull_social_data(days: int = 28) -> Dict:
         "error": None,
     }
 
-    token_a = os.environ.get("BUFFER_API_TOKEN_A", "").strip().lstrip("\ufeff")
-    token_b = os.environ.get("BUFFER_API_TOKEN_B", "").strip().lstrip("\ufeff")
+    token_a, source_a = resolve_buffer_token_with_source("A")
+    token_b, source_b = resolve_buffer_token_with_source("B")
 
     if not token_a and not token_b:
         result["status"] = "NOT_CONFIGURED"
         result["error"] = "BUFFER_API_TOKEN_A/B not configured"
-        print("  Buffer API tokens 未配置")
+        print("  共享 Buffer API tokens 未配置")
         _save_json(SOCIAL_REAL_DATA, result)
         return result
+
+    if source_a:
+        print(f"  Account A credential source: {source_a}")
+    if source_b:
+        print(f"  Account B credential source: {source_b}")
 
     # Buffer GraphQL: 查询已发布帖子
     # Buffer API Post.metrics 是 PostMetric 数组: [{name, value, type, unit, description}]
@@ -698,6 +705,10 @@ def pull_social_data(days: int = 28) -> Dict:
                     mname = (m.get("name") or "").lower()
                     mval = m.get("value", 0) or 0
                     stats[mname] = mval
+                impression_metric = any(
+                    name in stats
+                    for name in ("impressions", "impression", "reach", "views")
+                )
                 channel = node.get("channel") or {}
                 post = {
                     "id": node.get("id", ""),
@@ -706,6 +717,8 @@ def pull_social_data(days: int = 28) -> Dict:
                     "channel_name": channel.get("name", ""),
                     "published_at": node.get("sentAt") or node.get("dueAt") or node.get("createdAt", ""),
                     "status": node.get("status", ""),
+                    "metrics_available": bool(metrics_array),
+                    "has_impression_metric": impression_metric,
                     "likes": int(stats.get("likes", stats.get("like", 0)) or 0),
                     "comments": int(stats.get("comments", stats.get("comment", 0)) or 0),
                     "shares": int(stats.get("shares", stats.get("share", stats.get("retweets", 0))) or 0),
@@ -726,7 +739,15 @@ def pull_social_data(days: int = 28) -> Dict:
         if not recent_posts:
             recent_posts = all_posts[:20]  # 如果时间过滤后为空，取最近20条
 
+        metrics_available_count = sum(
+            1 for post in recent_posts if post.get("metrics_available")
+        )
+        impression_metric_count = sum(
+            1 for post in recent_posts if post.get("has_impression_metric")
+        )
         result["posts"] = recent_posts[:30]
+        result["metrics_available_count"] = metrics_available_count
+        result["impression_metric_count"] = impression_metric_count
         result["metrics"]["total_posts"] = len(recent_posts)
         result["metrics"]["total_impressions"] = sum(p["impressions"] for p in recent_posts)
         result["metrics"]["total_clicks"] = sum(p["clicks"] for p in recent_posts)
@@ -746,13 +767,36 @@ def pull_social_data(days: int = 28) -> Dict:
             by_platform[plat]["likes"] += p["likes"]
         result["by_platform"] = by_platform
 
-        result["is_real_data"] = True
-        result["data_date"] = datetime.now().strftime("%Y-%m-%d")
-        freshness = _check_freshness(result["data_date"])
-        result["is_fresh"] = freshness["fresh"]
-        result["freshness_info"] = freshness
-        result["status"] = "OK"
-        print(f"  Buffer API 成功: {len(recent_posts)} 条帖子, {result['metrics']['total_impressions']} impressions, {result['metrics']['total_clicks']} clicks")
+        if metrics_available_count == 0:
+            result["status"] = "METRICS_UNAVAILABLE"
+            result["is_real_data"] = False
+            result["is_fresh"] = False
+            result["error"] = (
+                "Buffer returned posts but no analytics metric fields; "
+                "check API permissions/plan or metric availability"
+            )
+            print(
+                "  Buffer API: posts returned but analytics metrics are unavailable"
+            )
+        elif impression_metric_count == 0:
+            result["status"] = "IMPRESSION_METRIC_UNAVAILABLE"
+            result["is_real_data"] = False
+            result["is_fresh"] = False
+            result["error"] = (
+                "Buffer returned metrics but no impression/reach/view field; "
+                "zero impressions cannot be verified"
+            )
+            print(
+                "  Buffer API: posts returned but impression metrics are unavailable"
+            )
+        else:
+            result["is_real_data"] = True
+            result["data_date"] = datetime.now().strftime("%Y-%m-%d")
+            freshness = _check_freshness(result["data_date"])
+            result["is_fresh"] = freshness["fresh"]
+            result["freshness_info"] = freshness
+            result["status"] = "OK"
+            print(f"  Buffer API 成功: {len(recent_posts)} 条帖子, {result['metrics']['total_impressions']} impressions, {result['metrics']['total_clicks']} clicks")
     else:
         result["status"] = "NO_DATA" if not api_errors else "PARTIAL_ERROR"
         result["error"] = "; ".join(api_errors) if api_errors else "No published posts found"
@@ -1269,7 +1313,7 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
 
 - **GA4 NOT_CONFIGURED**: 在 .env 或 GitHub Secrets 中设置 GA4_PROPERTY_ID，并确保 service account 已添加为 GA4 媒体资源的查看者
 - **GSC SITE_ACCESS_DENIED**: 在 Google Search Console > Settings > Users and permissions 中添加 service account 邮箱（角色：Full 或 Restricted）
-- **Social NOT_CONFIGURED**: 在 .env 或 GitHub Secrets 中设置 BUFFER_API_TOKEN_A 和 BUFFER_API_TOKEN_B
+- **Social NOT_CONFIGURED**: 在 .env 或 GitHub Secrets 中设置共享的 BUFFER_API_TOKEN_A 和 BUFFER_API_TOKEN_B
 
 ---
 

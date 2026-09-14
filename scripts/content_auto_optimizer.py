@@ -33,6 +33,8 @@ import json
 import os
 import re
 import subprocess
+
+from content_seo_policy import TITLE_HARD_MAX
 import shutil
 import sys
 from datetime import datetime, timedelta
@@ -392,8 +394,7 @@ def optimize_title(post, target_keywords=None):
             new_title = f"{parts[0].strip()} 2026: {parts[1].strip()}"
         else:
             new_title = f"{old_title} (2026 Guide)"
-        # Keep under 65 chars
-        if len(new_title) > 65:
+        if len(new_title) > TITLE_HARD_MAX:
             new_title = old_title
         return new_title
 

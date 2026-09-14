@@ -31,7 +31,7 @@ P1-CONTENT-TRUST-FIX-01：把 1128 个风险点自动修复为可信内容。
 
   D. SEO (38) - 自动优化
      description 缺失/过短 -> 基于标题生成 120-160 字符描述
-     标题超长 -> 截断到 <=65（保留关键词）
+     标题超长 -> 截断到 <=60（保留关键词）
 
   E. 事实风险 (379) - 不修改事实
      交由 content_fact_guard.py 处理（加验证提示 + last_updated）
@@ -57,6 +57,8 @@ import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
+
+from content_seo_policy import TITLE_HARD_MAX
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -141,7 +143,7 @@ HALLUC_REPLACEMENTS = [
 ]
 
 # ---- D. SEO ----
-MAX_TITLE_LEN = 70  # 与 validator 阈值对齐；低于此长度的 title 是合法的
+MAX_TITLE_LEN = TITLE_HARD_MAX  # 与 Hugo title 模板硬上限和 validator 对齐
 MIN_DESC_LEN = 50
 
 

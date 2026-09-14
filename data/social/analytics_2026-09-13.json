@@ -1,0 +1,581 @@
+{
+  "timestamp": "2026-09-13T12:46:53.647627",
+  "date": "2026-09-13",
+  "days_covered": 7,
+  "accounts": {
+    "account_a": {
+      "channels": [
+        {
+          "service": "twitter",
+          "name": "fys2388",
+          "followers": 0,
+          "posts": 10,
+          "impressions": 18,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        },
+        {
+          "service": "instagram",
+          "name": "joranchinatravel",
+          "followers": 0,
+          "posts": 10,
+          "impressions": 0,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        },
+        {
+          "service": "facebook",
+          "name": "ChinaBound Travel",
+          "followers": 0,
+          "posts": 10,
+          "impressions": 12,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        }
+      ],
+      "posts": 30,
+      "impressions": 30,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    "account_b": {
+      "channels": [
+        {
+          "service": "youtube",
+          "name": "Joran Fan",
+          "followers": 0,
+          "posts": 0,
+          "impressions": 0,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        },
+        {
+          "service": "tiktok",
+          "name": "petshome001",
+          "followers": 0,
+          "posts": 0,
+          "impressions": 0,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        },
+        {
+          "service": "pinterest",
+          "name": "Joranchinatravel",
+          "followers": 0,
+          "posts": 10,
+          "impressions": 16,
+          "clicks": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0
+        }
+      ],
+      "posts": 10,
+      "impressions": 16,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  "by_platform": {
+    "instagram": {
+      "posts": 10,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    "facebook": {
+      "posts": 10,
+      "impressions": 12,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    "twitter": {
+      "posts": 10,
+      "impressions": 18,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    "pinterest": {
+      "posts": 10,
+      "impressions": 16,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  "totals": {
+    "posts": 40,
+    "impressions": 46,
+    "clicks": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0
+  },
+  "posts": [
+    {
+      "id": "6aa579bbf7b1958d5cd075b0",
+      "platform": "twitter",
+      "text": "Essential Tea tips most first-time visitors miss. The Art of Bargaining in China → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=soc",
+      "created_at": "2026-09-12T18:11:46.526Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa4e4c266c59e2484a8f8f7",
+      "platform": "twitter",
+      "text": "What travelers discover about Accommodation — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_cam",
+      "created_at": "2026-09-12T07:36:16.341Z",
+      "impressions": 1,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa433f8d416f0601bfa8fd3",
+      "platform": "twitter",
+      "text": "What travelers discover about Tea — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cb",
+      "created_at": "2026-09-11T19:02:41.630Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa244ae90f5f899b4fce33b",
+      "platform": "twitter",
+      "text": "Research-backed facts about Tea every traveler should know. Visa and Documents → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?u",
+      "created_at": "2026-09-10T07:48:46.442Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa192adc74d93f7c812d30e",
+      "platform": "twitter",
+      "text": "Research-backed facts about China travel every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/?utm_source=x&utm",
+      "created_at": "2026-09-09T19:09:17.185Z",
+      "impressions": 4,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa0f45a7b66b49ec6f78526",
+      "platform": "twitter",
+      "text": "Research-backed facts about Bargain every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_so",
+      "created_at": "2026-09-09T07:53:46.419Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faf407eee3ace70b78ccb",
+      "platform": "twitter",
+      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: \n\n#Chin",
+      "created_at": "2026-09-08T08:46:57.565Z",
+      "impressions": 3,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faae3e16bc9fa22fd77b4",
+      "platform": "twitter",
+      "text": "Everything you need to know about Itinerary — in one practical guide. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium",
+      "created_at": "2026-09-08T08:28:01.904Z",
+      "impressions": 4,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9f02dd9891646af76a3a3e",
+      "platform": "twitter",
+      "text": "Sichuan Hotpot: History & Best Restaurants\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\nFull guide: \n\n#ChinaTravel #TravelChina\n\nhttps:",
+      "created_at": "2026-09-07T20:31:02.452Z",
+      "impressions": 1,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9eff088378b901f91db5e1",
+      "platform": "twitter",
+      "text": "Visual guide to Tea: what to see and capture. Must-try Chinese dishes and restaurant recommendations for → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x",
+      "created_at": "2026-09-07T20:14:46.478Z",
+      "impressions": 3,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa63ad0eba7bc56778dd7b9",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nResearch-backed facts about Visa every traveler should know.\n\n· China Extends 144-Hour Visa-Free Transit Policy to More Countries\n· Editorial Take on This Policy Update\n· Why This Matters ",
+      "created_at": "2026-09-13T07:55:37.032Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa39610b6d24fd028ae427b",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nResearch-backed facts about Accommodation every traveler should know.\n\n· Location, Location, Location\n· Types of Accommodation\n· Serviced Apartments\n\nRead the full guide: https://www.china",
+      "created_at": "2026-09-11T07:48:23.459Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa2e23950cd366acc1dd6c4",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nEverything you need to know about Accommodation — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/posts/accomm",
+      "created_at": "2026-09-10T19:03:41.853Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa2e22e9e8fa1c84521164b",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nResearch-backed facts about Tea every traveler should know.\n\n· Sichuan Cuisine\n· Cantonese Cuisine\n· Beijing Cuisine\n\nRead the full guide: https://www.chinaboundtravel.com/posts/food-recom",
+      "created_at": "2026-09-10T19:03:34.664Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa244b20f1041b511f44c64",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nEverything you need to know about Tea — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/posts/food-recommendations-gui",
+      "created_at": "2026-09-10T07:48:54.412Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faf421900c10a4f0e9763",
+      "platform": "instagram",
+      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
+      "created_at": "2026-09-08T12:46:41.375Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faaf11a2650f2ba5b49c7",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nVisual guide to Train: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=ig&utm_medium=social&utm_",
+      "created_at": "2026-09-08T08:28:09.604Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9f02dfb2413a877060aa1c",
+      "platform": "instagram",
+      "text": "Sichuan Hotpot: History & Best Restaurants\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\nFull guide: https://www.chinaboundtravel.com/po",
+      "created_at": "2026-09-08T00:31:11.210Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9eff10b2413a8770605a64",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nVisual guide to Alipay: what to see and capture.\n\n· Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up\n\nRead the full guide: https://www.chinaboundtravel",
+      "created_at": "2026-09-07T20:14:55.384Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9e5ea3ffe4128b1f9d7797",
+      "platform": "instagram",
+      "text": "Shanghai Beyond the Bund: Local Spots\n\nExplore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences, researched and verified by our editorial team\n\nFull guide: http",
+      "created_at": "2026-09-07T12:50:23.793Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa63acc7da3ee968d0d75bc",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 What travelers discover about Tea — practical lessons from the ground.\n\n• How to bargain and shop in China: market etiquette, haggling phrases, and what to know\n\nWhat's your biggest Chin",
+      "created_at": "2026-09-13T07:55:33.553Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa579bfef23d0656ae99e0c",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Accommodation: what to see and capture.\n\n• China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget\n\nWhat's your biggest China travel ques",
+      "created_at": "2026-09-12T18:11:48.747Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa4e4bf66c59e2484a8f8cf",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Tea: what to see and capture.\n\n• Must-try Chinese dishes and restaurant recommendations for international travelers, with\n\nWhat's your biggest China travel question? Drop",
+      "created_at": "2026-09-12T07:36:04.040Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa192a9c618f205abe896b7",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 Essential Bargain tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-bargaining-and-shop",
+      "created_at": "2026-09-09T19:09:04.581Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faf41bfce41cfe2ffdb40",
+      "platform": "facebook",
+      "text": "Xi'an Terracotta Army: Tickets & History\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\nFull guide: https:/",
+      "created_at": "2026-09-08T10:50:13.532Z",
+      "impressions": 1,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faaead5e66665b2c464db",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe",
+      "created_at": "2026-09-08T08:28:04.827Z",
+      "impressions": 3,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faaddf8ad418825202419",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide",
+      "created_at": "2026-09-08T08:27:51.104Z",
+      "impressions": 6,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9f02de1d17e4bff020f04c",
+      "platform": "facebook",
+      "text": "Sichuan Hotpot: History & Best Restaurants\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\nFull guide: https://www.chinaboundtravel.com/po",
+      "created_at": "2026-09-07T22:31:04.551Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9e5ea23533dee3ad191df6",
+      "platform": "facebook",
+      "text": "Shanghai Beyond the Bund: Local Spots\n\nExplore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences, researched and verified by our editorial team\n\nFull guide: http",
+      "created_at": "2026-09-07T10:50:20.181Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9e522e3533dee3ad17f019",
+      "platform": "facebook",
+      "text": "🔥 linkedin\n\n💡 What travelers discover about Train — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-0",
+      "created_at": "2026-09-07T07:57:19.904Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa433fcc38efd44b0755751",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nWhere to Stay in China: Complete 2026 Guide | Essential Accommodation tips most first-time visitors miss.\n\nChina accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with",
+      "created_at": "2026-09-12T06:02:02.459Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa3960c74b1f1d0ccd34ddb",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nChina Food Guide: Must-Try Dishes & | Essential Tea tips most first-time visitors miss.\n\nMust-try Chinese dishes and restaurant recommendations for international travelers, with authentic ",
+      "created_at": "2026-09-11T18:48:05.010Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa244aa7b01d9b492fed413",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nChina Bargaining Guide: How to Haggle & Shop | Research-backed facts about Tea every traveler should know.\n\nHow to bargain and shop in China: market etiquette, haggling phrases, and what t",
+      "created_at": "2026-09-10T18:48:31.477Z",
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6aa0f45d3bd0dd9ef326044d",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nHow to Use Alipay & WeChat Pay in China 2026 | Everything you need to know about Alipay — in one practical guide.\n\nUse Alipay and WeChat Pay in China without a bank account: bind foreign c",
+      "created_at": "2026-09-09T18:53:46.680Z",
+      "impressions": 3,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9faf49bfce41cfe2ffdbf6",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring Xi'an?\n\nXi'an. Research-based practical guidance for international travelers planning a China trip\n\nRead the full guide: https://www.chinaboundtravel.com/posts/xian-terracotta-ar",
+      "created_at": "2026-09-08T19:46:49.144Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9fa1ecd5e66665b2c3b5f5",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for Travelers | Everything you need to know about Train — in one practical guide.\n\nChinese Train Stations: Survival Guide for Travelers\n\n📌 Save this ",
+      "created_at": "2026-09-08T18:49:46.394Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9fa1e5d5e66665b2c3b5a2",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai | Visual guide to Itinerary: what to see and capture.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai\n\n📌 Save this for your China trip pl",
+      "created_at": "2026-09-08T18:49:31.956Z",
+      "impressions": 3,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9f02e6407fc47851b17189",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring Sichuan?\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\nRead the full guide: https://www.chinaboundtravel.com/posts",
+      "created_at": "2026-09-08T07:31:16.180Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9eff0cb2413a8770605a00",
+      "platform": "pinterest",
+      "text": "🔥 linkedin\n\nWhere to Stay in China: Complete 2026 Guide | What travelers discover about Accommodation — practical lessons from the ground.\n\nChina accommodation guide 2026: hotels, hostels, guesthouses",
+      "created_at": "2026-09-08T07:14:46.223Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "id": "6a9e5eaa496c1a7167321489",
+      "platform": "pinterest",
+      "text": "Dreaming of exploring Shanghai?\n\nExplore Shanghai beyond the Bund: hidden neighborhoods, local culture, and authentic experiences, researched and\n\nRead the full guide: https://www.chinaboundtravel.com",
+      "created_at": "2026-09-07T19:50:31.289Z",
+      "impressions": 2,
+      "clicks": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  ],
+  "metrics_available_count": 39,
+  "impression_metric_count": 39,
+  "status": "ok",
+  "data_source": "buffer_api"
+}

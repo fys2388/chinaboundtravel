@@ -1338,6 +1338,12 @@ def backfill_metrics(metrics_file: Path,
         for k in ("impressions", "clicks", "engagements", "uv"):
             if k in row:
                 metrics[k] = int(row.get(k, 0) or 0)
+        metrics["source"] = (
+            mdata.get("data_source")
+            or mdata.get("source")
+            or f"metrics_file:{metrics_file.name}"
+        )
+        metrics["analytics_verified"] = True
         updated += 1
     if updated:
         save_inventory(data, inventory_path)
@@ -1365,6 +1371,17 @@ def summarize_daily(data: dict, d: date = None) -> dict:
         by_platform[p]["impressions"] += m.get("impressions", 0)
         by_platform[p]["clicks"] += m.get("clicks", 0)
         by_platform[p]["uv"] += m.get("uv", 0)
+    measured = [
+        item
+        for item in published
+        if item.get("metrics", {}).get("source")
+        or item.get("metrics", {}).get("analytics_verified")
+    ]
+    analytics_status = (
+        "ok"
+        if published and len(measured) == len(published)
+        else "unavailable"
+    )
     return {
         "date": ds,
         "total_published": len(published),
@@ -1372,6 +1389,13 @@ def summarize_daily(data: dict, d: date = None) -> dict:
         "total_clicks": sum(x["clicks"] for x in by_platform.values()),
         "total_uv": sum(x["uv"] for x in by_platform.values()),
         "by_platform": by_platform,
+        "analytics_status": analytics_status,
+        "analytics_source": "inventory_metrics" if analytics_status == "ok" else "unavailable",
+        "analytics_reason": (
+            ""
+            if analytics_status == "ok"
+            else "Published items do not have verified analytics metrics"
+        ),
     }
 
 

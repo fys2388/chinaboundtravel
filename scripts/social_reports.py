@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -51,6 +52,17 @@ PLATFORM_CN = {"ig": "Instagram", "pinterest": "Pinterest",
                "x": "X/Twitter", "fb": "Facebook"}
 TYPE_CN = {"knowledge": "知识", "tip": "避坑/技巧", "story": "故事",
            "visual": "视觉", "conversion": "转化"}
+ANALYTICS_DIR = BLOG_ROOT / "data" / "social"
+REAL_SOCIAL_DATA = BLOG_ROOT / "reports" / "real_data" / "social_real_data.json"
+PLATFORM_ALIASES = {
+    "ig": "ig",
+    "instagram": "ig",
+    "fb": "fb",
+    "facebook": "fb",
+    "x": "x",
+    "twitter": "x",
+    "pinterest": "pinterest",
+}
 
 
 def _fmt(n) -> str:
@@ -73,9 +85,127 @@ def _ctr(imp, clk) -> str:
 # ============================================================
 
 
+def _date_prefix(value) -> str:
+    match = re.search(r"(\d{4})[-/](\d{1,2})[-/](\d{1,2})", str(value or ""))
+    if not match:
+        return ""
+    year, month, day = match.groups()
+    return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
+
+
+def _metric_value(post: dict, name: str) -> int:
+    stats = post.get("stats") if isinstance(post.get("stats"), dict) else {}
+    metrics = post.get("metrics") if isinstance(post.get("metrics"), dict) else {}
+    value = post.get(name, stats.get(name, metrics.get(name, 0)))
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _load_analytics_snapshot():
+    candidates = sorted(
+        ANALYTICS_DIR.glob("analytics_*.json"),
+        key=lambda path: path.stat().st_mtime,
+        reverse=True,
+    )
+    candidates.append(REAL_SOCIAL_DATA)
+    for path in candidates:
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        status = str(payload.get("status", "")).lower()
+        if status not in {"ok", "success"}:
+            continue
+        count = payload.get("metrics_available_count")
+        impression_count = payload.get("impression_metric_count")
+        if count is None and isinstance(payload.get("posts"), list):
+            flags = [
+                post.get("metrics_available")
+                for post in payload["posts"]
+                if isinstance(post, dict)
+            ]
+            count = sum(1 for flag in flags if flag is True) if flags else 0
+            impression_flags = [
+                post.get("has_impression_metric")
+                for post in payload["posts"]
+                if isinstance(post, dict)
+            ]
+            if any(flag is not None for flag in impression_flags):
+                impression_count = sum(
+                    1 for flag in impression_flags if flag is True
+                )
+        if int(count or 0) <= 0 or int(impression_count or 0) <= 0:
+            continue
+        return payload
+    return None
+
+
+def _augment_with_analytics(summary: dict, target_date: date) -> dict:
+    snapshot = _load_analytics_snapshot()
+    if not snapshot:
+        summary["analytics_status"] = "unavailable"
+        summary["analytics_source"] = "unavailable"
+        summary["analytics_reason"] = (
+            "No Buffer analytics snapshot with verified metric fields"
+        )
+        summary["analytics_post_count"] = 0
+        return summary
+
+    for platform in PLATFORMS:
+        summary["by_platform"][platform]["impressions"] = 0
+        summary["by_platform"][platform]["clicks"] = 0
+        summary["by_platform"][platform]["uv"] = 0
+
+    matched_posts = 0
+    target = target_date.isoformat()
+    for post in snapshot.get("posts", []):
+        if not isinstance(post, dict):
+            continue
+        published_at = (
+            post.get("created_at")
+            or post.get("published_at")
+            or post.get("sentAt")
+            or post.get("dueAt")
+        )
+        if _date_prefix(published_at) != target:
+            continue
+        platform = PLATFORM_ALIASES.get(
+            str(post.get("platform", "")).lower()
+        )
+        if platform not in summary["by_platform"]:
+            continue
+        summary["by_platform"][platform]["impressions"] += _metric_value(
+            post, "impressions"
+        )
+        summary["by_platform"][platform]["clicks"] += _metric_value(post, "clicks")
+        matched_posts += 1
+
+    summary["total_impressions"] = sum(
+        item["impressions"] for item in summary["by_platform"].values()
+    )
+    summary["total_clicks"] = sum(
+        item["clicks"] for item in summary["by_platform"].values()
+    )
+    summary["total_uv"] = sum(
+        item["uv"] for item in summary["by_platform"].values()
+    )
+    summary["analytics_status"] = "ok"
+    summary["analytics_source"] = (
+        snapshot.get("data_source") or snapshot.get("source") or "buffer_api"
+    )
+    summary["analytics_reason"] = ""
+    summary["analytics_post_count"] = matched_posts
+    return summary
+
+
 def social_daily_summary(d: date = None) -> dict:
     data = load_inventory()
-    return summarize_daily(data, d)
+    target_date = d or date.today() - timedelta(days=1)
+    return _augment_with_analytics(summarize_daily(data, target_date), target_date)
 
 
 def social_weekly_summary(end: date = None) -> dict:
@@ -98,6 +228,8 @@ def social_daily_block(summary: dict) -> list:
         d = bp.get(p, {})
         lines.append(f"· {PLATFORM_CN[p]}: 发布 {d['published']} | "
                      f"曝光 {_fmt(d['impressions'])} | 点击 {_fmt(d['clicks'])} | UV {_fmt(d['uv'])}")
+    if summary.get("analytics_status") != "ok":
+        lines.append("· 分析数据不可用：当前曝光/点击不是可验证的真实值")
     return [{"tag": "div", "text": {"tag": "lark_md", "content": "\n".join(lines)}}]
 
 

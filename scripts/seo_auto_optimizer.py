@@ -33,6 +33,8 @@ import shutil
 import subprocess
 import sys
 from datetime import datetime, timedelta
+
+from content_seo_policy import TITLE_HARD_MAX
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
@@ -241,13 +243,13 @@ def optimize_title_with_keyword(post, target_keyword):
         parts = title.split(":", 1)
         # Check if keyword fits naturally
         new_title = f"{target_keyword.title()}: {parts[1].strip()}"
-        if len(new_title) <= 65:
+        if len(new_title) <= TITLE_HARD_MAX:
             return new_title, True
 
     # Strategy: append keyword in parentheses
     if len(title) < 50:
         new_title = f"{title} ({target_keyword.title()})"
-        if len(new_title) <= 65:
+        if len(new_title) <= TITLE_HARD_MAX:
             return new_title, True
 
     return title, False

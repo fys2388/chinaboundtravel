@@ -29,9 +29,28 @@ from status_writeback import (
     writeback_issue, writeback_agent_task, get_pending_agent_tasks,
     ISSUES_DIR, AGENT_TASKS_DIR,
 )
+from content_seo_policy import TITLE_HARD_MAX, truncate_title
 
 BASE_DIR = Path(__file__).parent.parent
 SITE_URL = "https://www.chinaboundtravel.com"
+
+
+def _writeback_issue(task: dict, issue: dict, status: str, resolved_by: str, note: str) -> bool:
+    """Write an issue result back to its actual source file and page."""
+    source_file = (
+        issue.get("source_file")
+        or f"site_health_issues_{task.get('target_date', '')}.json"
+    )
+    return writeback_issue(
+        source_file=source_file,
+        issue_type=issue.get("type", "unknown"),
+        status=status,
+        resolved_by=resolved_by,
+        resolution_note=note,
+        target_date=task.get("target_date"),
+        issue_id=issue.get("id"),
+        page=issue.get("page") or issue.get("file") or None,
+    )
 
 
 # ============================================================
@@ -57,13 +76,12 @@ def execute_site_health(task: dict, dry_run: bool = False) -> dict:
                     results["false_positive"] += 1
                     results["details"].append(f"site_unreachable: 误报，线上HTTP {resp.status_code}")
                     if not dry_run:
-                        writeback_issue(
-                            source_file=f"site_health_issues_{task['target_date']}.json",
-                            issue_type="site_unreachable",
-                            status="false_positive",
-                            resolved_by="site_health_agent",
-                            resolution_note=f"线上验证正常 HTTP {resp.status_code}，本地网络误报",
-                            target_date=task["target_date"],
+                        _writeback_issue(
+                            task,
+                            issue,
+                            "false_positive",
+                            "site_health_agent",
+                            f"线上验证正常 HTTP {resp.status_code}，本地网络误报",
                         )
                 else:
                     results["failed"] += 1
@@ -80,13 +98,12 @@ def execute_site_health(task: dict, dry_run: bool = False) -> dict:
                     results["false_positive"] += 1
                     results["details"].append("ssl_check_failed: 误报，SSL正常")
                     if not dry_run:
-                        writeback_issue(
-                            source_file=f"site_health_issues_{task['target_date']}.json",
-                            issue_type="ssl_check_failed",
-                            status="false_positive",
-                            resolved_by="site_health_agent",
-                            resolution_note="线上SSL验证正常，本地网络误报",
-                            target_date=task["target_date"],
+                        _writeback_issue(
+                            task,
+                            issue,
+                            "false_positive",
+                            "site_health_agent",
+                            "线上SSL验证正常，本地网络误报",
                         )
             except requests.exceptions.SSLError:
                 results["failed"] += 1
@@ -95,13 +112,12 @@ def execute_site_health(task: dict, dry_run: bool = False) -> dict:
                 results["false_positive"] += 1
                 results["details"].append(f"ssl_check_failed: 误报（本地网络）{e}")
                 if not dry_run:
-                    writeback_issue(
-                        source_file=f"site_health_issues_{task['target_date']}.json",
-                        issue_type="ssl_check_failed",
-                        status="false_positive",
-                        resolved_by="site_health_agent",
-                        resolution_note="本地网络连接拒绝，非线上SSL问题",
-                        target_date=task["target_date"],
+                    _writeback_issue(
+                        task,
+                        issue,
+                        "false_positive",
+                        "site_health_agent",
+                        "本地网络连接拒绝，非线上SSL问题",
                     )
 
         else:
@@ -175,51 +191,70 @@ def execute_content(task: dict, dry_run: bool = False) -> dict:
             if success:
                 results["resolved"] += 1
                 results["details"].append(detail)
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="resolved",
-                    resolved_by="content_agent",
-                    resolution_note=detail,
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "resolved",
+                    "content_agent",
+                    detail,
                 )
             else:
                 results["need_manual"] += 1
                 results["details"].append(f"{itype}: {detail}")
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="need_manual",
-                    resolved_by="content_agent",
-                    resolution_note=detail,
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "content_agent",
+                    detail,
                 )
 
         elif itype == "content_placeholder":
             results["need_manual"] += 1
             results["details"].append(f"{itype}: 需人工补充内容")
             if not dry_run:
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="need_manual",
-                    resolved_by="content_agent",
-                    resolution_note="占位内容需人工补充",
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "content_agent",
+                    "占位内容需人工补充",
                 )
 
         elif itype == "image_missing_alt":
             results["need_manual"] += 1
             results["details"].append(f"{itype}: 需人工添加alt文本")
             if not dry_run:
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="need_manual",
-                    resolved_by="content_agent",
-                    resolution_note="图片alt需人工添加",
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "content_agent",
+                    "图片alt需人工添加",
                 )
+
+        elif itype in {
+            "mojibake",
+            "mojibake_detected",
+            "encoding_error",
+            "invalid_frontmatter",
+            "missing_content_id",
+            "content_id_error",
+            "brand_violation",
+            "fact_guard_failed",
+            "unverified_fact",
+            "media_compliance",
+            "content_quality_p0",
+            "content_audit_script_error",
+            "content_quality_validator_failed",
+            "content_content_id_failed",
+            "content_fact_guard_failed",
+            "content_brand_audit_failed",
+        }:
+            results["need_manual"] += 1
+            page = issue.get("page") or issue.get("file") or "unknown"
+            action = issue.get("recommended_action", "Review and remediate.")
+            results["details"].append(f"{itype}: {page} - {action}")
 
         else:
             results["details"].append(f"{itype}: 跳过")
@@ -227,7 +262,7 @@ def execute_content(task: dict, dry_run: bool = False) -> dict:
     return results
 
 
-def _fix_title_length(file_rel: str, target_max: int = 55) -> tuple:
+def _fix_title_length(file_rel: str, target_max: int = TITLE_HARD_MAX) -> tuple:
     """读取 front matter，截断超长 title。返回 (success, detail)"""
     fpath = BASE_DIR / file_rel
     if not fpath.is_file():
@@ -243,11 +278,7 @@ def _fix_title_length(file_rel: str, target_max: int = 55) -> tuple:
     old_title = title_m.group(1).strip().strip('"').strip("'")
     if len(old_title) <= target_max:
         return True, f"title已合规({len(old_title)}字符)"
-    new_title = old_title[:target_max].rstrip()
-    last_space = new_title.rfind(" ")
-    if last_space > target_max - 15:
-        new_title = new_title[:last_space]
-    new_title = new_title.rstrip(":,;-—")
+    new_title = truncate_title(old_title, target_max)
     new_fm = fm[:title_m.start()] + f'title: "{new_title}"' + fm[title_m.end():]
     new_text = text[:m.start(2)] + new_fm + text[m.end(2):]
     fpath.write_text(new_text, encoding="utf-8")
@@ -287,7 +318,7 @@ def _fix_meta_description(file_rel: str) -> tuple:
 def execute_seo(task: dict, dry_run: bool = False) -> dict:
     """
     SEO Agent — SEO问题自动修复
-    title_too_long: 自动截断front matter title到<=55字符
+    title_too_long: 自动截断front matter title到<=60字符
     meta_description_too_short: 自动从正文生成描述
     """
     results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
@@ -301,17 +332,16 @@ def execute_seo(task: dict, dry_run: bool = False) -> dict:
                 results["details"].append(f"[DRY] title_too_long: 将截断 {file_rel}")
                 results["resolved"] += 1
                 continue
-            success, detail = _fix_title_length(file_rel, target_max=55)
+            success, detail = _fix_title_length(file_rel, target_max=TITLE_HARD_MAX)
             if success:
                 results["resolved"] += 1
                 results["details"].append(detail)
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="resolved",
-                    resolved_by="seo_agent",
-                    resolution_note=detail,
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "resolved",
+                    "seo_agent",
+                    detail,
                 )
             else:
                 results["need_manual"] += 1
@@ -326,13 +356,12 @@ def execute_seo(task: dict, dry_run: bool = False) -> dict:
             if success:
                 results["resolved"] += 1
                 results["details"].append(detail)
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="resolved",
-                    resolved_by="seo_agent",
-                    resolution_note=detail,
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "resolved",
+                    "seo_agent",
+                    detail,
                 )
             else:
                 results["need_manual"] += 1
@@ -359,13 +388,12 @@ def execute_social(task: dict, dry_run: bool = False) -> dict:
             results["need_manual"] += 1
             results["details"].append(f"{itype}: 社媒零互动，需检查Buffer API数据接入")
             if not dry_run:
-                writeback_issue(
-                    source_file=f"site_health_issues_{task['target_date']}.json",
-                    issue_type=itype,
-                    status="need_manual",
-                    resolved_by="social_agent",
-                    resolution_note="社媒数据可能未接入，需检查Buffer API",
-                    target_date=task["target_date"],
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "social_agent",
+                    "社媒数据可能未接入，需检查Buffer API",
                 )
         else:
             results["details"].append(f"{itype}: 跳过")
@@ -378,7 +406,82 @@ def execute_generic(task: dict, dry_run: bool = False) -> dict:
     results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
     for issue in task.get("issues", []):
         results["need_manual"] += 1
-        results["details"].append(f"{issue.get('type')}: 需人工处理")
+        page = issue.get("page") or issue.get("file") or "unknown"
+        action = issue.get("recommended_action", "需人工处理")
+        results["details"].append(f"{issue.get('type')}: {page} - {action}")
+    return results
+
+
+def execute_frontend(task: dict, dry_run: bool = False) -> dict:
+    """Frontend Agent — visual/predeploy issues require a verification and fix task."""
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
+    for issue in task.get("issues", []):
+        results["need_manual"] += 1
+        page = issue.get("page") or issue.get("file") or "unknown"
+        action = issue.get("recommended_action", "检查视觉审计证据并修复对应页面/视口。")
+        results["details"].append(
+            f"{issue.get('type')}: {page} - {action}"
+        )
+    return results
+
+
+def execute_ops(task: dict, dry_run: bool = False) -> dict:
+    """Ops Agent — deployment, permission and configuration failures."""
+    results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
+    for issue in task.get("issues", []):
+        page = issue.get("page") or issue.get("file") or "unknown"
+        action = issue.get("recommended_action", "检查权限、配置和部署日志。")
+        if issue.get("type") == "social_analytics_unavailable":
+            detail = (
+                "检查 BUFFER_API_TOKEN_A/B、Buffer analytics 权限/API 套餐，"
+                "确认返回帖子含可验证 metrics 后重跑社媒日报"
+            )
+            results["need_manual"] += 1
+            results["details"].append(detail)
+            if not dry_run:
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "ops_agent",
+                    detail,
+                )
+            continue
+        if issue.get("type") == "workflow_missing_guard":
+            workflow_file = BASE_DIR / str(issue.get("file", "")).replace("\\", "/")
+            if workflow_file.is_file():
+                workflow_text = workflow_file.read_text(
+                    encoding="utf-8", errors="replace"
+                ).lower()
+                if "guard: truncate long titles" in workflow_text:
+                    detail = f"标题长度 guard 已存在: {page}"
+                    results["resolved"] += 1
+                    results["details"].append(detail)
+                    if not dry_run:
+                        _writeback_issue(
+                            task,
+                            issue,
+                            "resolved",
+                            "ops_agent",
+                            detail,
+                        )
+                    continue
+            detail = f"{issue.get('type')}: {page} - {action}"
+            results["need_manual"] += 1
+            results["details"].append(detail)
+            if not dry_run:
+                _writeback_issue(
+                    task,
+                    issue,
+                    "need_manual",
+                    "ops_agent",
+                    detail,
+                )
+            continue
+
+        results["need_manual"] += 1
+        detail = f"{issue.get('type')}: {page} - {action}"
+        results["details"].append(detail)
     return results
 
 
@@ -388,6 +491,8 @@ AGENT_HANDLERS = {
     "content": execute_content,
     "seo": execute_seo,
     "social": execute_social,
+    "frontend": execute_frontend,
+    "ops": execute_ops,
     "user": execute_generic,
     "revenue": execute_generic,
     "conversion": execute_generic,
@@ -419,8 +524,10 @@ def execute_task(task: dict, dry_run: bool = False) -> dict:
 
     if failed > 0 and resolved == 0 and need_manual == 0:
         final_status = "failed"
-    elif resolved + need_manual >= total:
+    elif resolved >= total:
         final_status = "completed"
+    elif resolved + need_manual >= total:
+        final_status = "partial"
     elif resolved > 0 or need_manual > 0:
         final_status = "partial"
     else:
@@ -445,10 +552,18 @@ def execute_task(task: dict, dry_run: bool = False) -> dict:
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(errors="replace")
+            except (OSError, ValueError):
+                pass
+
     parser = argparse.ArgumentParser(description="Agent Task Executor")
     parser.add_argument("--dry-run", action="store_true", help="只模拟不实际修改")
     parser.add_argument("--agent", type=str, help="只执行指定Agent的任务")
     parser.add_argument("--date", type=str, help="指定日期 YYYY-MM-DD")
+    parser.add_argument("--task-id", type=str, help="强制重跑指定任务ID")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -457,12 +572,19 @@ def main():
     print(f"Dry run: {args.dry_run}")
     print("=" * 60)
 
-    # 获取 pending 任务
-    pending = get_pending_agent_tasks()
-    if args.agent:
-        pending = [t for t in pending if t.get("agent") == args.agent]
-    if args.date:
-        pending = [t for t in pending if t.get("target_date") == args.date]
+    # 获取任务：默认只扫描 pending，--task-id 可显式重跑已完成/待人工任务。
+    if args.task_id:
+        task_file = AGENT_TASKS_DIR / f"{args.task_id}.json"
+        if not task_file.exists():
+            print(f"\n❌ 任务不存在: {args.task_id}")
+            return
+        pending = [json.loads(task_file.read_text(encoding="utf-8"))]
+    else:
+        pending = get_pending_agent_tasks()
+        if args.agent:
+            pending = [t for t in pending if t.get("agent") == args.agent]
+        if args.date:
+            pending = [t for t in pending if t.get("target_date") == args.date]
 
     if not pending:
         print("\n✅ 没有 pending 的 Agent 任务")

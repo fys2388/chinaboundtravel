@@ -31,6 +31,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from content_seo_policy import is_title_too_long
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -170,9 +172,28 @@ def validate_article(path: Path) -> dict:
         "trust_score": 0,
         "passed": False,
     }
+
+    # P0 乱码检测必须独立于 front matter 校验，避免坏文件提前返回时漏检。
+    mojibake_hits = detect_mojibake(raw)
+    result["mojibake_issues"] = mojibake_hits
+    mojibake_score = (
+        max(0, 100 - len(set(mojibake_hits)) * 30)
+        if mojibake_hits
+        else 100
+    )
+    if encoding_errors:
+        mojibake_score = min(mojibake_score, 20)
+
     if fm is None:
         result["passed"] = False
-        result["scores"] = {"brand": 0, "fact": 0, "language": 0, "seo": 0}
+        result["scores"] = {
+            "brand": 0,
+            "fact": 0,
+            "language": 0,
+            "mojibake": mojibake_score,
+            "seo": 0,
+            "media": 0,
+        }
         return result
 
     # ---- 品牌 ----
@@ -189,18 +210,6 @@ def validate_article(path: Path) -> dict:
     cjk = CJK_RE.findall(body)
     result["language_issues"] = cjk[:10]
     language_score = 100 if not cjk else max(0, 100 - len(cjk) * 20)
-
-    # P0-FIX: Mojibake (乱码) 检测 — 字节级别，在 decode 之前检查原始字节
-    mojibake_hits = detect_mojibake(raw)
-    result["mojibake_issues"] = mojibake_hits
-    if mojibake_hits:
-        # 乱码是 P0 问题，每处扣 30 分，最低 0 分
-        mojibake_score = max(0, 100 - len(set(mojibake_hits)) * 30)
-    else:
-        mojibake_score = 100
-    # 编码错误（文件本身不是合法 UTF-8）也是 P0
-    if encoding_errors:
-        mojibake_score = min(mojibake_score, 20)
 
     # ---- 事实 ----
     fact_hits = set(FACT_RE.findall(body.lower()))
@@ -220,7 +229,7 @@ def validate_article(path: Path) -> dict:
     desc = read_fm_value(fm, "description")
     if not title:
         seo_issues.append("missing_title")
-    elif len(title) > 70:
+    elif is_title_too_long(title):
         seo_issues.append("title_too_long")
     if not desc:
         seo_issues.append("missing_description")
@@ -312,11 +321,14 @@ def main() -> int:
     else:
         results = validate_all()
 
-    passed = [r for r in results if r["trust_score"] >= args.threshold]
+    passed = [
+        r for r in results
+        if r["passed"] and r["trust_score"] >= args.threshold
+    ]
     if args.json:
         print(json.dumps({"results": results, "passed_count": len(passed),
                           "total": len(results)}, ensure_ascii=False, indent=2))
-        return 0
+        return 0 if len(passed) == len(results) else 1
 
     print(f"Content Trust Validator（门槛 {args.threshold}）")
     print(f"  通过: {len(passed)}/{len(results)}")
