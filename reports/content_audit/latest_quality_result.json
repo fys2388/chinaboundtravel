@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "generated_at": "2026-09-14T07:48:19.626064",
+  "run_id": "34819529828",
+  "failed_steps": [],
+  "blocking_failures": [],
+  "checks": [
+    {
+      "id": "fact_guard",
+      "name": "内容事实检查",
+      "script": "content_fact_guard.py",
+      "exit_code": 0,
+      "blocking": true,
+      "agent": "content"
+    },
+    {
+      "id": "brand_audit",
+      "name": "品牌身份审计",
+      "script": "brand_identity_audit.py",
+      "exit_code": 0,
+      "blocking": true,
+      "agent": "content"
+    },
+    {
+      "id": "trust_audit",
+      "name": "内容信任审计",
+      "script": "content_trust_audit.py",
+      "exit_code": 0,
+      "blocking": false,
+      "agent": "content"
+    },
+    {
+      "id": "content_id",
+      "name": "内容ID审计",
+      "script": "content_id_audit.py",
+      "exit_code": 0,
+      "blocking": true,
+      "agent": "content"
+    },
+    {
+      "id": "quality_validator",
+      "name": "内容质量验证(P0乱码)",
+      "script": "content_quality_validator.py",
+      "exit_code": 0,
+      "blocking": true,
+      "agent": "content"
+    }
+  ],
+  "content": {
+    "total": 63,
+    "passed_count": 63,
+    "mojibake_files": [],
+    "encoding_error_files": [],
+    "validator_parse_error": null
+  },
+  "owner": "content"
+}
