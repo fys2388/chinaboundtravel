@@ -1,0 +1,760 @@
+{
+  "generated_at": "2026-09-13T20:54:25.966547+00:00",
+  "base_url": "https://www.chinaboundtravel.com/",
+  "summary": {
+    "pages": 10,
+    "viewports": 2,
+    "issues": 58,
+    "P0": 8,
+    "P1": 40,
+    "P2": 10
+  },
+  "pages": {
+    "https://www.chinaboundtravel.com/#desktop": {
+      "status": 200,
+      "console_errors": 2,
+      "failed_requests": 2,
+      "analytics_ids": [
+        "G-GECBME3YVJ",
+        "G-P6BH500VBK"
+      ]
+    },
+    "https://www.chinaboundtravel.com/pricing/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/#desktop": {
+      "status": 200,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/#desktop": {
+      "status": 404,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ",
+        "G-P6BH500VBK"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/#desktop": {
+      "status": 200,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#desktop": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/#mobile": {
+      "status": 200,
+      "console_errors": 2,
+      "failed_requests": 2,
+      "analytics_ids": [
+        "G-GECBME3YVJ",
+        "G-P6BH500VBK"
+      ]
+    },
+    "https://www.chinaboundtravel.com/pricing/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/#mobile": {
+      "status": 200,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/#mobile": {
+      "status": 404,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ",
+        "G-P6BH500VBK"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/#mobile": {
+      "status": 200,
+      "console_errors": 1,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    },
+    "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#mobile": {
+      "status": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "analytics_ids": [
+        "G-GECBME3YVJ"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "bf7f99eb3510b52a",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/",
+      "viewport": "desktop",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg, https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "15de256b2db9d141",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/",
+      "viewport": "mobile",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg, https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "f8c20fdfb7ec8bbb",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/alipay-for-foreigners-guide.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "9db2885b929de897",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/alipay-for-foreigners-guide.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "f6ac46c9a61be189",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "desktop",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "ccded16229e9ab6e",
+      "severity": "P0",
+      "source": "visual",
+      "type": "broken_image",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "mobile",
+      "evidence": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "recommended_action": "Restore the image or update its URL."
+    },
+    {
+      "id": "326872141ba1fc68",
+      "severity": "P0",
+      "source": "visual",
+      "type": "page_status",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "HTTP 404",
+      "recommended_action": "Restore the page before deployment."
+    },
+    {
+      "id": "a605ff4f3142312e",
+      "severity": "P0",
+      "source": "visual",
+      "type": "page_status",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "mobile",
+      "evidence": "HTTP 404",
+      "recommended_action": "Restore the page before deployment."
+    },
+    {
+      "id": "02118938e1272dcf",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "f6109760ea1991be",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "11f1dea80c14cd86",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "fd41da045f5f4a7d",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "f8306ec23a91e48f",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/accommodation-tips-guide/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "1062aeba05fb9266",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "d096f2b39d3338f3",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "9ccfb0f359e46f91",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "319e5430d9b6cd0f",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "4672b3a725f7b28e",
+      "severity": "P1",
+      "source": "visual",
+      "type": "desktop_hamburger_visible",
+      "page": "/pricing/",
+      "viewport": "desktop",
+      "evidence": "#nav-toggle, #nav-toggle",
+      "recommended_action": "Hide the mobile navigation toggle at desktop breakpoints."
+    },
+    {
+      "id": "f6d46521c5ab92a8",
+      "severity": "P1",
+      "source": "visual",
+      "type": "same_origin_request_failed",
+      "page": "/",
+      "viewport": "desktop",
+      "evidence": "https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-P6BH500VBK&gtm=45g92e6992v9253095165za204zd9253095165xf4&_p=1789332828439&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1863632051.1789332829&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=14&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=US-WA&_gsid=-pFSLh7XvwyKeFQTy8-GfyYDH7AVvFZAow&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120912439&sid=1789332828&sct=1&seg=0&dl=https%3A%2F%2Fwww.chinaboundtravel.com%2F&dt=ChinaBound%20Travel%20%7C%20China%20Travel%20Guide%202026%20%E2%80%94%20Visa%2C%20Payment%20%26%20Internet%20for%20Foreigners&en=page_view&_fv=1&_ss=1&_ee=1&gap.gtb=1&tfd=618: net::ERR_ABORTED | https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-GECBME3YVJ&gtm=45g92e6992v9253095165za204zd9253095165xf4&_p=1789332828439&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1863632051.1789332829&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=14&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=US-WA&_gsid=z8dYHXWVe9AoubRBbPf6XsnRCstHKdaWqA&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~120912439&sid=1789332828&sct=1&seg=0&dl=https%3A%2F%2Fwww.chinaboundtravel.com%2F&dt=ChinaBound%20Travel%20%7C%20China%20Travel%20Guide%202026%20%E2%80%94%20Visa%2C%20Payment%20%26%20Internet%20for%20Foreigners&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=612: net::ERR_ABORTED",
+      "recommended_action": "Restore the missing same-origin resource."
+    },
+    {
+      "id": "1f588f7c057a3ac7",
+      "severity": "P1",
+      "source": "visual",
+      "type": "same_origin_request_failed",
+      "page": "/",
+      "viewport": "mobile",
+      "evidence": "https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-P6BH500VBK&gtm=45g92e6992v9253095165za204zd9253095165&_p=1789332849085&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1409762331.1789332849&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=390x844&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=US-WA&_gsid=cGSwmwTzuWX328NW4fX01j-y0OWj0MLkBA&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153&sid=1789332849&sct=1&seg=0&dl=https%3A%2F%2Fwww.chinaboundtravel.com%2F&dt=ChinaBound%20Travel%20%7C%20China%20Travel%20Guide%202026%20%E2%80%94%20Visa%2C%20Payment%20%26%20Internet%20for%20Foreigners&en=page_view&_fv=1&_ss=1&_ee=1&gap.gtb=1&tfd=324: net::ERR_ABORTED | https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-GECBME3YVJ&gtm=45g92e6992v9253095165za204zd9253095165&_p=1789332849085&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1409762331.1789332849&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=390x844&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=US-WA&_gsid=ErLvmKTXHKudlSLEn-R2slOmTpyLe0FzEA&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153&sid=1789332849&sct=1&seg=0&dl=https%3A%2F%2Fwww.chinaboundtravel.com%2F&dt=ChinaBound%20Travel%20%7C%20China%20Travel%20Guide%202026%20%E2%80%94%20Visa%2C%20Payment%20%26%20Internet%20for%20Foreigners&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=318: net::ERR_ABORTED",
+      "recommended_action": "Restore the missing same-origin resource."
+    },
+    {
+      "id": "686d66edf70af4f1",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "b1967df402754194",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "2e4239397094b71f",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "dac9c1e9245856ed",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "f605a6d92e9f370e",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "d1534c83fc050275",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "4c1ef09150349767",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "4841d2023fff6a17",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "cecfcf1a9df6102d",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "8a6ae94cd9c8e649",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "8fa9593dae7515d9",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "a5d6149420d525e9",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "cc6acce4b6f462f4",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/accommodation-tips-guide/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "fa7a060f1533bf86",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/accommodation-tips-guide/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "a5ad895f995006cf",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/accommodation-tips-guide/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "99b9c1a0a169b4f1",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/accommodation-tips-guide/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "e627b7e16ebce7db",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "6bf1c7b5d89733a6",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "7a10db36f4bcc281",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "15436f80bc5fb895",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "09ea35bfb54d4994",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "f1ef1e5fdb8da172",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "150b136cc3bc2346",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "b283c8228f621291",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "ae3df8c40982f822",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "af350caf7b86e6cf",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "bd50b5ae2d1cbcfd",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "Reddit ratio=3.44",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "81d4eb3006d0ca72",
+      "severity": "P1",
+      "source": "visual",
+      "type": "share_button_contrast",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "Email ratio=3.92",
+      "recommended_action": "Use a darker background or adjust label color to reach WCAG AA."
+    },
+    {
+      "id": "9aa06a7461d8d315",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/",
+      "viewport": "desktop",
+      "evidence": "Failed to load resource: the server responded with a status of 404 () | Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "bf5cd4496c0eb143",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/",
+      "viewport": "mobile",
+      "evidence": "Failed to load resource: the server responded with a status of 404 () | Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "579d5be84c9e7118",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "desktop",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "cb75e9736265fad9",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "viewport": "mobile",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "f5d0ee433123933a",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "desktop",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "638f8aeb1e87a61f",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "viewport": "mobile",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "066209f6dbcc8991",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "de1da20ae5ad97da",
+      "severity": "P2",
+      "source": "visual",
+      "type": "console_error",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "mobile",
+      "evidence": "Failed to load resource: the server responded with a status of 404 ()",
+      "recommended_action": "Remove avoidable browser console errors."
+    },
+    {
+      "id": "4e9434ed866f1cd1",
+      "severity": "P2",
+      "source": "visual",
+      "type": "multiple_ga_measurement_ids",
+      "page": "/",
+      "viewport": "desktop",
+      "evidence": "network GA IDs: G-GECBME3YVJ, G-P6BH500VBK; requests: https://www.googletagmanager.com/gtag/js?id=G-GECBME3YVJ | https://www.googletagmanager.com/gtag/js?id=G-GECBME3YVJ&gtg_health=1 | https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-GECBME3YVJ&gtm=45g92e6992v9253095165za204zd9253095165xf4&_p=1789332828439&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1863632051.1789332829&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=14&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253D | https://www.chinaboundtravel.com/vo5w/ga/g/c?v=2&tid=G-P6BH500VBK&gtm=45g92e6992v9253095165za204zd9253095165xf4&_p=1789332828439&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dYzg1YT.dNzQzZD&_uip=%3A%3A&are=1&cid=1863632051.1789332829&fp=1&frm=0&ngs=1&pscdl=noapi&rcb=14&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253D",
+      "recommended_action": "Keep one GA4 measurement ID per page and remove the duplicate edge, WordPress, or third-party tag injection."
+    },
+    {
+      "id": "4b5ab5ba32b4b593",
+      "severity": "P2",
+      "source": "visual",
+      "type": "multiple_ga_measurement_ids",
+      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "viewport": "desktop",
+      "evidence": "network GA IDs: G-GECBME3YVJ, G-P6BH500VBK; requests: https://www.googletagmanager.com/gtag/js?id=G-GECBME3YVJ | https://www.google-analytics.com/g/collect?v=2&tid=G-GECBME3YVJ&gtm=45je6992v9253095165za200zd9253095165&_p=1789332834198&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&are=1&cid=662626756.1789332835&frm=0&ngs=1&pscdl=denied&rcb=17&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CH | https://www.google-analytics.com/g/collect?v=2&tid=G-P6BH500VBK&gtm=45je6992v9253095165za200zd9253095165&_p=1789332834198&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&are=1&cid=662626756.1789332835&frm=0&ngs=1&pscdl=denied&rcb=17&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CH",
+      "recommended_action": "Keep one GA4 measurement ID per page and remove the duplicate edge, WordPress, or third-party tag injection."
+    }
+  ]
+}

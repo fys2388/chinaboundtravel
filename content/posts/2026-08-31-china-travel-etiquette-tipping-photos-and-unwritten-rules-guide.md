@@ -134,3 +134,5 @@ By following these simple etiquette tips, you'll be well on your way to having a
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)

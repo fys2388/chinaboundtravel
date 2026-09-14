@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-ae69cb9f84b0"
-title: "How to Use Alipay as a Foreigner: Complete Setup Guide 2026"
+title: "How to Use Alipay as a Foreigner: Complete"
 date: "2026-07-02T10:00:00+08:00"
 lastmod: "2026-07-02T10:00:00+08:00"
 author: "Joran"

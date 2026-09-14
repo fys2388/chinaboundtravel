@@ -188,3 +188,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [China Bargaining Guide: How to Haggle & Shop](https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/)
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
+
+- [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)

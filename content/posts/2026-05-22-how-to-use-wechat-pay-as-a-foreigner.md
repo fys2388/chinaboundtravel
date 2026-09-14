@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-707a8899c0a7"
-title: "Can Foreigners Use WeChat Pay in China? 2026 Setup Guide"
+title: "Can Foreigners Use WeChat Pay in China? 2026"
 slug: "how-to-use-wechat-pay-as-a-foreigner"
 author: Joran
 date: '2026-05-22T10:00:00+08:00'
@@ -175,3 +175,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [Introduction](https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
 - [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)

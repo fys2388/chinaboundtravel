@@ -17,9 +17,9 @@
   "expected_actions": [],
   "status": "completed",
   "execution": {
-    "resolved_count": 2,
+    "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-09-13T11:35:13.018070",
-    "note": "resolved=2, need_manual=0, failed=0"
+    "completed_at": "2026-09-13T15:29:53.955055",
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }

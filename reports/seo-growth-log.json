@@ -1,0 +1,250 @@
+{
+  "optimizations": [
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "'China 144-Hour Visa-Free Transit 2026: Complete Guide' -> 'China 144 Hour Transit Visa: Complete Guide' (keyword: china 144 hour transit visa)",
+      "timestamp": "2026-09-13T08:07:34.070583"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/",
+      "detail": "'China High-Speed Rail Tickets: How to Book in 2026' -> 'How To Ride China'S High-Speed Trains: How to Book in 2026' (keyword: how to ride china's high-speed trains)",
+      "timestamp": "2026-09-13T08:07:34.786791"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Yunnan Travel: Rice Terraces & Ancient Towns' -> 'Things To Do In Yunnan: Rice Terraces & Ancient Towns' (keyword: things to do in yunnan)",
+      "timestamp": "2026-09-13T08:07:35.503447"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'China Travel Guide: August 2026 Updates' -> 'Travel To China Requirements 2026: August 2026 Updates' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-09-13T08:07:36.210936"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "detail": "'144-Hour Visa-Free Transit: New Countries' -> '144-Hour Validation Program: New Countries' (keyword: 144-hour validation program)",
+      "timestamp": "2026-09-13T08:07:36.930240"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "detail": "'Chinese Food Delivery 2026: Meituan & Ele.me' -> 'Ele.Me China: Meituan & Ele.me' (keyword: ele.me china)",
+      "timestamp": "2026-09-13T08:07:37.649382"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> chinabound-travel-guide-2026-07-monthly-update",
+      "detail": "score=8",
+      "timestamp": "2026-09-13T08:07:38.413312"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> chinabound-travel-guide-2026-07-monthly-update",
+      "detail": "score=8",
+      "timestamp": "2026-09-13T08:07:39.129478"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> chinabound-travel-guide-2026-07-monthly-update",
+      "detail": "score=4",
+      "timestamp": "2026-09-13T08:07:39.992097"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-chinas-transportation-a-californians-guide-for-european-travelers -> transportation-guide",
+      "detail": "score=3",
+      "timestamp": "2026-09-13T08:07:40.712001"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> transportation-guide",
+      "detail": "score=3",
+      "timestamp": "2026-09-13T08:07:41.443205"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> transportation-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:42.160711"
+    },
+    {
+      "type": "internal_link",
+      "target": "cultural-etiquette-guide-aussie-kiwi -> cultural-etiquette-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:42.869721"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-business-travel-guide-meetings-dining-and-networking -> cultural-etiquette-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:43.617008"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> cultural-etiquette-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:44.333634"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> cultural-etiquette-guide-aussie-kiwi",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:45.043586"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> cultural-etiquette-guide-aussie-kiwi",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:45.785791"
+    },
+    {
+      "type": "internal_link",
+      "target": "paypal-alipay-wechat-pay-qr-code-support -> cultural-etiquette-guide-aussie-kiwi",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:46.626633"
+    },
+    {
+      "type": "internal_link",
+      "target": "a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=4",
+      "timestamp": "2026-09-13T08:07:47.346218"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:48.060766"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:48.775311"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> china-family-travel-tips-a-californians-guide",
+      "detail": "score=3",
+      "timestamp": "2026-09-13T08:07:49.492737"
+    },
+    {
+      "type": "internal_link",
+      "target": "paypal-alipay-wechat-pay-qr-code-support -> china-family-travel-tips-a-californians-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:50.204621"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-train-survival-guide-booking-classes-and-insider-tips -> china-family-travel-tips-a-californians-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:50.923435"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-food-delivery-meituan-eleme-guide -> chinas-food-through-the-ages-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:51.686358"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> chinas-food-through-the-ages-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-13T08:07:52.398806"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "FAQ for 'traveling to china for business'",
+      "timestamp": "2026-09-13T08:07:53.122615"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "FAQ for 'china 144 hour transit visa'",
+      "timestamp": "2026-09-13T08:07:53.837543"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/travel-safety-guide/",
+      "detail": "FAQ for 'how safe is china,travel & destinations,210,26,informational,0.0,/resources'",
+      "timestamp": "2026-09-13T08:07:54.565661"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "detail": "FAQ for 'how to get around china tariffs'",
+      "timestamp": "2026-09-13T08:07:55.293466"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "detail": "FAQ for 'how to take train in china'",
+      "timestamp": "2026-09-13T08:07:56.027469"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:56.593707"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:56.940503"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:57.380194"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:57.692086"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:58.129561"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:58.425878"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:58.877195"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:59.208662"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:59.520621"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-13T08:07:59.856442"
+    }
+  ]
+}
