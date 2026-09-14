@@ -62,23 +62,11 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements-quality.txt
 
-      - name: Install Playwright Chromium
-        run: python -m playwright install --with-deps chromium
-
       - name: 2.0 Pre-deploy Quality Gate (P0/P1 blocker)
         run: |
           echo "=== [2.0] 构建前质量门禁 ==="
           python scripts/predeploy_quality_gate.py --site-dir public --fail-on P1
-
-          echo "=== [2.0] 启动本地静态站点并运行浏览器检查 ==="
-          python -m http.server 8765 --directory public >/tmp/cbt-quality-http.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
-          sleep 2
-
-          python scripts/site_visual_audit.py \
-            --base-url http://127.0.0.1:8765 \
-            --max-pages 12 || echo "visual audit issues (non-blocking)" 
+          echo "=== [2.0] 视觉审计跳过（Playwright在CI上超时，由quality-monitor workflow异步检查）==="
 
       - name: Upload quality gate reports
         if: always()
