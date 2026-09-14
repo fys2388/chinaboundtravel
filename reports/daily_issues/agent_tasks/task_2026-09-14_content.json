@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-14_content",
   "created_at": "2026-09-14T00:37:54.766760+00:00",
-  "updated_at": "2026-09-14T01:31:28.942938",
+  "updated_at": "2026-09-14T02:01:26.516091",
   "target_date": "2026-09-14",
   "issue_count": 3,
   "severity_summary": {
@@ -34,7 +34,7 @@
       "detected_at": "2026-09-14T00:37:54.766652+00:00"
     },
     {
-      "id": "site_health-637c6f0f25bf250d",
+      "id": "site_health-35f2c9a4a89b27b4",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -51,10 +51,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T01:31:28.431388+00:00"
+      "detected_at": "2026-09-14T02:01:26.214975+00:00"
     },
     {
-      "id": "site_health-357df6f69f81bc3d",
+      "id": "site_health-671740173d3f372f",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T01:31:28.431385+00:00"
+      "detected_at": "2026-09-14T02:01:26.214971+00:00"
     }
   ],
   "priority_issue": {
