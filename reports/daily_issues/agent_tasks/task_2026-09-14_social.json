@@ -3,7 +3,7 @@
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-14_social",
   "created_at": "2026-09-14T02:26:41.993203+00:00",
-  "updated_at": "2026-09-14T02:26:42.280995",
+  "updated_at": "2026-09-14T17:30:01.654619",
   "target_date": "2026-09-14",
   "issue_count": 1,
   "severity_summary": {
@@ -14,13 +14,13 @@
   },
   "issues": [
     {
-      "id": "issue_50957e469231",
+      "id": "issue_2ef42211d156",
       "type": "social_zero_engagement",
-      "title": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
-      "description": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
+      "title": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+      "description": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
       "page": "",
       "file": "",
-      "evidence": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
+      "evidence": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
       "recommended_action": "Review the issue and apply the documented remediation.",
       "severity": "medium",
       "agent": "social",
@@ -31,17 +31,17 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "social",
-      "detected_at": "2026-09-14T02:26:41.979655"
+      "detected_at": "2026-09-14T17:30:01.182911"
     }
   ],
   "priority_issue": {
-    "id": "issue_50957e469231",
+    "id": "issue_2ef42211d156",
     "type": "social_zero_engagement",
-    "title": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
-    "description": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
+    "title": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+    "description": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
     "page": "",
     "file": "",
-    "evidence": "分析数据可用，社媒已发布2条但曝光为0，需检查发布与指标归属",
+    "evidence": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
     "recommended_action": "Review the issue and apply the documented remediation.",
     "severity": "medium",
     "agent": "social",
@@ -52,7 +52,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "social",
-    "detected_at": "2026-09-14T02:26:41.979655"
+    "detected_at": "2026-09-14T17:30:01.182911"
   },
   "expected_actions": [
     "analyze_and_optimize"

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-14T02:26:39.861522+00:00",
+  "timestamp": "2026-09-14T17:29:57.546228+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 10,
+    "total_issues": 8,
     "critical": 0,
     "high": 3,
     "medium": 0,
-    "low": 7,
+    "low": 5,
     "auto_fixed": 0,
-    "need_manual": 17,
+    "need_manual": 19,
     "resolved": 13,
-    "inherited_resolved": 11,
+    "inherited_resolved": 13,
     "in_progress": 0,
-    "last_updated": "2026-09-14T02:26:42.280673"
+    "last_updated": "2026-09-14T17:30:01.654297"
   },
   "issues": [
     {
@@ -192,9 +192,9 @@
       "auto_fixable": false,
       "agent": "seo",
       "status": "resolved",
-      "assigned": true,
       "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(154字符)"
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-14T02:26:39.861522+00:00"
     },
     {
       "type": "title_too_short",
@@ -224,9 +224,9 @@
       "auto_fixable": false,
       "agent": "seo",
       "status": "resolved",
-      "assigned": true,
       "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)"
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-14T02:26:39.861522+00:00"
     },
     {
       "type": "title_too_short",

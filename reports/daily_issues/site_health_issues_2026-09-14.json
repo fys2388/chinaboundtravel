@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14T02:26:39.861522+00:00",
+  "timestamp": "2026-09-14T17:29:57.546228+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -11,11 +11,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-09-14T02:26:41.993559",
+      "assigned_at": "2026-09-14T17:30:01.199576",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-14T07:48:21.274435"
+      "updated_at": "2026-09-14T17:30:01.638963"
     },
     {
       "type": "content_placeholder",
@@ -26,11 +26,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-09-14T02:26:41.993563",
+      "assigned_at": "2026-09-14T17:30:01.199579",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-14T07:48:21.272571"
+      "updated_at": "2026-09-14T17:30:01.637752"
     },
     {
       "type": "draft_leak",
@@ -41,7 +41,7 @@
       "agent": "content",
       "assigned": true,
       "assigned_to": "ops",
-      "assigned_at": "2026-09-14T02:26:41.993564",
+      "assigned_at": "2026-09-14T17:30:01.199581",
       "status": "assigned"
     },
     {
@@ -53,7 +53,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993565",
+      "assigned_at": "2026-09-14T17:30:01.199582",
       "status": "assigned"
     },
     {
@@ -65,24 +65,8 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993566",
+      "assigned_at": "2026-09-14T17:30:01.199583",
       "status": "assigned"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "message": "Meta description过短(27字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993567",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(154字符)",
-      "updated_at": "2026-09-14T07:48:21.247974",
-      "resolved_at": "2026-09-14T07:48:21.247981"
     },
     {
       "type": "title_too_short",
@@ -93,24 +77,8 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993568",
+      "assigned_at": "2026-09-14T17:30:01.199585",
       "status": "assigned"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-      "message": "Meta description过短(27字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993569",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "updated_at": "2026-09-14T07:48:21.249271",
-      "resolved_at": "2026-09-14T07:48:21.249277"
     },
     {
       "type": "title_too_short",
@@ -121,7 +89,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993569",
+      "assigned_at": "2026-09-14T17:30:01.199586",
       "status": "assigned"
     },
     {
@@ -133,7 +101,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-14T02:26:41.993570",
+      "assigned_at": "2026-09-14T17:30:01.199587",
       "status": "assigned"
     }
   ]

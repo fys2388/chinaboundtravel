@@ -3,14 +3,14 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-14_seo",
   "created_at": "2026-09-14T01:01:26.991011+00:00",
-  "updated_at": "2026-09-14T17:01:29.306037",
+  "updated_at": "2026-09-14T17:30:01.623038",
   "target_date": "2026-09-14",
-  "issue_count": 429,
+  "issue_count": 427,
   "severity_summary": {
     "critical": 149,
     "high": 83,
     "medium": 194,
-    "low": 3
+    "low": 1
   },
   "issues": [
     {
@@ -8434,7 +8434,7 @@
       "detected_at": "2026-09-14T02:26:41.982592"
     },
     {
-      "id": "site_health-7035f4912edc077c",
+      "id": "site_health-5937f40e21c4f3b9",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -8451,7 +8451,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-14T17:01:28.933373+00:00"
+      "detected_at": "2026-09-14T17:30:01.254350+00:00"
     },
     {
       "id": "issue_9c9c28f42ec6",
@@ -8514,7 +8514,7 @@
       "detected_at": "2026-09-14T02:26:41.982570"
     },
     {
-      "id": "site_health-539c49c7610975be",
+      "id": "site_health-28430a9e4d8187",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
@@ -8531,47 +8531,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-14T17:01:28.933378+00:00"
-    },
-    {
-      "id": "issue_4a23d3a09287",
-      "type": "meta_description_too_short",
-      "title": "Meta description过短(27字符)",
-      "description": "Meta description过短(27字符)",
-      "page": "content/posts/144-hour-visa-free-transit-guide.md",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "evidence": "Meta description过短(27字符)",
-      "recommended_action": "Review the issue and apply the documented remediation.",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source": "daily_issue_router",
-      "source_file": "site_health_issues_2026-09-14.json",
-      "task_source": "daily_issue_router",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-09-14T02:26:41.982576"
-    },
-    {
-      "id": "issue_4a23d3a09287",
-      "type": "meta_description_too_short",
-      "title": "Meta description过短(27字符)",
-      "description": "Meta description过短(27字符)",
-      "page": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-      "file": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-      "evidence": "Meta description过短(27字符)",
-      "recommended_action": "Review the issue and apply the documented remediation.",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source": "daily_issue_router",
-      "source_file": "site_health_issues_2026-09-14.json",
-      "task_source": "daily_issue_router",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-09-14T02:26:41.982588"
+      "detected_at": "2026-09-14T17:30:01.254354+00:00"
     },
     {
       "id": "issue_f1d8da8d6591",
@@ -8621,9 +8581,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 2,
+    "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=2, need_manual=5, failed=0"
+    "note": "resolved=0, need_manual=5, failed=0"
   }
 }
