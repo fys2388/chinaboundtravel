@@ -1,7 +1,7 @@
 {
   "report_type": "weekly",
   "period": "2026-W38",
-  "generated_at": "2026-09-14 08:41:57",
+  "generated_at": "2026-09-14 08:54:41",
   "plan": [
     {
       "task": "评估 Travelpayouts Drive 对核心页面的覆盖价值（人工决策）",
@@ -45,7 +45,7 @@
     }
   ],
   "krs": {
-    "traffic": 0.0,
+    "traffic": 43.0,
     "content": 0.0,
     "gsc": 0.0,
     "revenue": 0.0,
