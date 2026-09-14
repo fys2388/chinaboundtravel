@@ -1,7 +1,7 @@
 {
-  "validation_time": "2026-09-07T03:37:33.657123",
-  "overall_score": 53.6,
-  "is_effective": false,
+  "validation_time": "2026-09-14T04:01:47.786705",
+  "overall_score": 64.3,
+  "is_effective": true,
   "effective_strategies": [
     {
       "category": "traffic",
@@ -11,23 +11,14 @@
     },
     {
       "category": "content",
-      "improve_rate": 60.0,
-      "improved": 3,
+      "improve_rate": 80.0,
+      "improved": 4,
       "total": 5
     }
   ],
-  "ineffective_strategies": [
-    {
-      "category": "social",
-      "improve_rate": 14.3,
-      "improved": 1,
-      "declined": 0,
-      "total": 7
-    }
-  ],
+  "ineffective_strategies": [],
   "needs_more_data": [],
   "recommendations": [
-    "学习策略部分有效，需要优化低效策略",
-    "低效策略需要优化: social"
+    "学习策略整体有效，继续当前方向"
   ]
 }

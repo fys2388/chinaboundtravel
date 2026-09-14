@@ -4815,8 +4815,72 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6aa6d63566679b076f2f8766",
+      "platform": "twitter",
+      "text": "Research-backed facts about Food every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_2",
+      "published_at": "2026-09-13T18:58:31.265Z",
+      "date": "2026-09-13",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "fys2388",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Research-backed facts about Food every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundt",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6aa6d63166679b076f2f86fd",
+      "platform": "instagram",
+      "text": "🔥 linkedin\n\nEverything you need to know about Visa — in one practical guide.\n\n· China 144 Hour Transit Visa: Complete Guide\n\nRead the full guide: https://www.chinaboundtravel.com/posts/144-hour-visa-f",
+      "published_at": "2026-09-13T18:58:40.391Z",
+      "date": "2026-09-13",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "🔥 linkedin\n\nEverything you need to know about Visa — in one practical guide.\n\n· China 144 Hour Trans",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-09-13T10:44:53.174031",
+  "last_updated": "2026-09-14T04:01:47.488955",
   "version": "1.0"
 }
