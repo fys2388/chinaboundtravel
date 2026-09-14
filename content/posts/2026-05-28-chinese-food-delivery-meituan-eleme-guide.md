@@ -26,7 +26,7 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp"
 categories: ["cities", "food"]
-last_updated: "2026-09-13"
+last_updated: "2026-09-14"
 
 ---
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)

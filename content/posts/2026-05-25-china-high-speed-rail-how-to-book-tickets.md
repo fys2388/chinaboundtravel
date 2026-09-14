@@ -292,3 +292,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
 - [Western Sichuan Overland Camping: 7-Day Route](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)

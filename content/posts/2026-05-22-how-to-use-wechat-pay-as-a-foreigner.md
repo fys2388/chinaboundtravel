@@ -177,3 +177,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)

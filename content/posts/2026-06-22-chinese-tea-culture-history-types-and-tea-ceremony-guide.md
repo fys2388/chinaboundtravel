@@ -145,3 +145,5 @@ For more China travel insights, check out our [Hangzhou West Lake Tea Culture Gu
 - [Why Sichuan Hotpot Is More Than Just a Meal](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
