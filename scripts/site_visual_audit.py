@@ -111,6 +111,18 @@ def sitemap_pages(base_url: str, max_pages: int, timeout: int) -> list[str]:
     except Exception:
         urls = []
 
+    if local_request:
+        local_urls = []
+        for url in urls:
+            parsed = urlparse(url)
+            if parsed.scheme not in {"http", "https"}:
+                continue
+            path_and_query = parsed.path or "/"
+            if parsed.query:
+                path_and_query += f"?{parsed.query}"
+            local_urls.append(urljoin(base_url, path_and_query))
+        urls = sorted(set(local_urls))
+
     selected: list[str] = []
     for url in preferred:
         if url not in selected:
@@ -159,6 +171,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
     page_errors: list[str] = []
     failed_requests: list[str] = []
     analytics_ids: set[str] = set()
+    configured_analytics_ids: set[str] = set()
     analytics_requests: list[str] = []
     origin = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
 
@@ -178,6 +191,8 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
         if not ids:
             return
         analytics_ids.update(ids)
+        if "googletagmanager.com/gtag/js" in request.url:
+            configured_analytics_ids.update(ids)
         if len(analytics_requests) < 5:
             analytics_requests.append(request.url[:300])
 
@@ -203,7 +218,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
         )
 
     metrics = page.evaluate(
-        """
+        r"""
         () => {
           const visible = (el) => {
             if (!el) return false;
@@ -237,16 +252,36 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
               color: getComputedStyle(el).color,
               background: effectiveBackground(el)
             }));
+          const configuredAnalyticsIds = new Set();
+          for (const script of document.scripts) {
+            const source = script.src || '';
+            if (source.includes('googletagmanager.com/gtag/js')) {
+              try {
+                const value = new URL(source).searchParams.get('id');
+                if (value) configuredAnalyticsIds.add(value.toUpperCase());
+              } catch (e) {}
+            }
+            if (!script.src && script.textContent) {
+              const matches = script.textContent.matchAll(
+                /gtag\(\s*['"]config['"]\s*,\s*['"](G-[A-Z0-9]{4,})['"]/gi
+              );
+              for (const match of matches) {
+                configuredAnalyticsIds.add(match[1].toUpperCase());
+              }
+            }
+          }
           return {
             width: window.innerWidth,
             scrollWidth: document.documentElement.scrollWidth,
             hamburgers,
             brokenImages,
-            shareContrast
+            shareContrast,
+            configuredAnalyticsIds: [...configuredAnalyticsIds]
           };
         }
         """
     )
+    configured_analytics_ids.update(metrics["configuredAnalyticsIds"])
 
     if metrics["scrollWidth"] > metrics["width"] + 1:
         issues.append(
@@ -284,7 +319,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
             )
         )
 
-    if viewport_name == "desktop" and len(analytics_ids) > 1:
+    if viewport_name == "desktop" and len(configured_analytics_ids) > 1:
         issues.append(
             make_issue(
                 "P2",
@@ -292,7 +327,8 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
                 urlparse(url).path or "/",
                 viewport_name,
                 (
-                    f"network GA IDs: {', '.join(sorted(analytics_ids))}; "
+                    f"configured GA IDs: {', '.join(sorted(configured_analytics_ids))}; "
+                    f"observed network GA IDs: {', '.join(sorted(analytics_ids))}; "
                     f"requests: {' | '.join(analytics_requests)}"
                 ),
                 (
@@ -355,6 +391,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
         "console_errors": len(console_errors),
         "failed_requests": len(failed_requests),
         "analytics_ids": sorted(analytics_ids),
+        "configured_analytics_ids": sorted(configured_analytics_ids),
     }
 
 
@@ -409,6 +446,19 @@ def main() -> int:
                     },
                     ignore_https_errors=True,
                 )
+                # Intercept live-domain requests and serve from local base URL
+                base_origin = args.base_url.rstrip("/")
+                async def _intercept(route):
+                    req = route.request
+                    req_url = req.url
+                    # Rewrite live domain to local base
+                    if "chinaboundtravel.com" in req_url:
+                        path_part = req_url.split("chinaboundtravel.com", 1)[1]
+                        local_url = base_origin + path_part
+                        await route.continue_(url=local_url)
+                    else:
+                        await route.continue_()
+                context.route("**/*", _intercept)
                 for url in pages:
                     page = context.new_page()
                     try:
