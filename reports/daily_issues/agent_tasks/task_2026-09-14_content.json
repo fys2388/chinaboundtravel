@@ -3,12 +3,12 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-14_content",
   "created_at": "2026-09-14T00:37:54.766760+00:00",
-  "updated_at": "2026-09-14T07:31:29.191855",
+  "updated_at": "2026-09-14T07:35:53.441757",
   "target_date": "2026-09-14",
-  "issue_count": 5,
+  "issue_count": 6,
   "severity_summary": {
     "critical": 0,
-    "high": 5,
+    "high": 6,
     "medium": 0,
     "low": 0
   },
@@ -32,6 +32,26 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-09-14T00:37:54.766652+00:00"
+    },
+    {
+      "id": "workflow-34818547742-yaml_parsing",
+      "type": "yaml_parsing",
+      "title": "Post-deploy Tasks 失败：YAML 解析失败",
+      "description": "post-deploy / Build site",
+      "page": "Post-deploy Tasks",
+      "file": "Post-deploy Tasks",
+      "evidence": "Error: error building site: process: readAndProcessContent: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:3:1\": failed to unmarshal YAML: yaml: line 3: did not find expected key\n##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T07:35:52.145940+00:00"
     },
     {
       "id": "issue_a47bc117b9d1",

@@ -13,6 +13,13 @@
       "fixed_by": "auto_error_router:ops",
       "fix_note": "已发送飞书告警(category=git_push_failed)",
       "fixed_at": "2026-09-14T04:02:36.951581"
+    },
+    {
+      "workflow": "Post-deploy Tasks",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:content",
+      "fix_note": "已发送飞书告警(category=yaml_parsing)",
+      "fixed_at": "2026-09-14T07:35:53.150636"
     }
   ]
 }

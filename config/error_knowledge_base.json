@@ -1173,6 +1173,28 @@
       "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\nerror: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260914_073552",
+      "timestamp": "2026-09-14T07:35:52.143536",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "34818547742",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "Error: error building site: process: readAndProcessContent: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:3:1\": failed to unmarshal YAML: yaml: line 3: did not find expected key\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "err_20260914_073552",
+      "timestamp": "2026-09-14T07:35:52.144611",
+      "workflow_name": "auto_router",
+      "run_id": "cli",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "post-deploy\tBuild site\t﻿2026-09-14T07:35:25.0841210Z ##[group]Run echo \"=== Hugo version ===\"\npost-deploy\tBuild site\t2026-09-14T07:35:25.0841568Z ^[[36;1mecho \"=== Hugo version ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T07:35:25.0841807Z ^[[36;1mhugo version^[[0m\npost-deploy\tBuild site\t2026-09-14T07:35:25.0842012Z ^[[36;1mecho \"=== Building site ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T07:35:25.0842249Z ^[[36;1mhugo --gc --minify 2>&1^[[0m\npost-deploy\tBuild site\t2026-09-14T07:35:25.0842481Z ",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
