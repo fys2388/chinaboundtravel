@@ -1162,6 +1162,17 @@
       "error_message": "post-deploy\tBuild site\t﻿2026-09-14T00:37:28.8415084Z ##[group]Run echo \"=== Hugo version ===\"\npost-deploy\tBuild site\t2026-09-14T00:37:28.8415511Z ^[[36;1mecho \"=== Hugo version ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8415812Z ^[[36;1mhugo version^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416056Z ^[[36;1mecho \"=== Building site ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416347Z ^[[36;1mhugo --gc --minify 2>&1^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416642Z ",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260914_040235",
+      "timestamp": "2026-09-14T04:02:35.418681",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "34804545053",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\nerror: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }

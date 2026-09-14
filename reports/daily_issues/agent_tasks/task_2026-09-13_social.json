@@ -3,7 +3,7 @@
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-13_social",
   "created_at": "2026-09-13T11:35:12.656184",
-  "updated_at": "2026-09-13T20:47:42.602568+08:00",
+  "updated_at": "2026-09-14T02:26:42.248786",
   "target_date": "2026-09-13",
   "issue_count": 1,
   "severity_summary": {
@@ -57,11 +57,11 @@
   "expected_actions": [
     "analyze_and_optimize"
   ],
-  "status": "pending",
+  "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "awaiting execution"
+    "note": "resolved=0, need_manual=1, failed=0"
   }
 }

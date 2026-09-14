@@ -3,12 +3,12 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-14_content",
   "created_at": "2026-09-14T00:37:54.766760+00:00",
-  "updated_at": "2026-09-14T00:37:55.822620",
+  "updated_at": "2026-09-14T07:31:29.191855",
   "target_date": "2026-09-14",
-  "issue_count": 1,
+  "issue_count": 5,
   "severity_summary": {
     "critical": 0,
-    "high": 1,
+    "high": 5,
     "medium": 0,
     "low": 0
   },
@@ -32,6 +32,86 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-09-14T00:37:54.766652+00:00"
+    },
+    {
+      "id": "issue_a47bc117b9d1",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/contact.md",
+      "file": "content/contact.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T02:26:41.982563"
+    },
+    {
+      "id": "site_health-67387b71714fc41f",
+      "type": "draft_leak",
+      "title": "draft_leak",
+      "description": "draft_leak",
+      "page": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "evidence": "draft:true的文章可能已发布到线上",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T07:31:28.676028+00:00"
+    },
+    {
+      "id": "issue_a47bc117b9d1",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/search.md",
+      "file": "content/search.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T02:26:41.982555"
+    },
+    {
+      "id": "site_health-aac98b84d50f378",
+      "type": "content_placeholder",
+      "title": "content_placeholder",
+      "description": "content_placeholder",
+      "page": "content/search.md",
+      "file": "content/search.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "占位内容需人工补充",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T07:31:28.676023+00:00"
     }
   ],
   "priority_issue": {
@@ -55,13 +135,14 @@
     "detected_at": "2026-09-14T00:37:54.766652+00:00"
   },
   "expected_actions": [
+    "fix_placeholder",
     "manual_review"
   ],
-  "status": "completed",
+  "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-09-14T00:37:55.822624",
-    "note": "resolved=0, need_manual=0, failed=0"
+    "completed_at": null,
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }

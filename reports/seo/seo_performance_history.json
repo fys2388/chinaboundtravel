@@ -919,8 +919,27 @@
         "is_optimization_candidate": false
       },
       "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "date": "2026-09-11",
+      "metrics": {
+        "impressions": 71,
+        "clicks": 1,
+        "ctr": 0.01,
+        "position": 73.1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-09-07T03:37:33.369592"
+  "last_updated": "2026-09-14T04:01:47.584503"
 }

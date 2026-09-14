@@ -1,76 +1,39 @@
 {
-  "timestamp": "2026-09-13T12:47:14.662592",
-  "date": "2026-09-13",
+  "timestamp": "2026-09-14T04:01:47.786007",
+  "date": "2026-09-14",
   "traffic": {
-    "activeUsers": 270,
-    "sessions": 356,
-    "screenPageViews": 793,
-    "engagedSessions": 97,
-    "bounceRate": 0.7275280898876404,
-    "averageSessionDuration": 204.0412768258427,
-    "engagementRate": 0.27247191011235955,
-    "newUsers": 268
+    "activeUsers": 281,
+    "sessions": 395,
+    "screenPageViews": 836,
+    "engagedSessions": 109,
+    "bounceRate": 0.7240506329113924,
+    "averageSessionDuration": 210.4576924607595,
+    "engagementRate": 0.2759493670886076,
+    "newUsers": 281
   },
   "content": {
-    "total_articles": 61,
+    "total_articles": 63,
     "articles_this_week": 0,
-    "avg_word_count": 1902,
-    "articles_with_affiliate_links": 35,
-    "articles_with_internal_links": 48
+    "avg_word_count": 2030,
+    "articles_with_affiliate_links": 36,
+    "articles_with_internal_links": 56
   },
   "social": {
-    "total_posts": 40,
-    "total_impressions": 46,
-    "total_clicks": 0,
+    "total_posts": 20,
+    "total_impressions": 22,
+    "total_clicks": 1,
     "total_likes": 0,
     "total_comments": 0,
-    "total_shares": 0,
-    "by_platform": {
-      "instagram": {
-        "posts": 10,
-        "impressions": 0,
-        "clicks": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      "facebook": {
-        "posts": 10,
-        "impressions": 12,
-        "clicks": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      "twitter": {
-        "posts": 10,
-        "impressions": 18,
-        "clicks": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      "pinterest": {
-        "posts": 10,
-        "impressions": 16,
-        "clicks": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      }
-    },
-    "last_updated": "2026-09-13T12:47:14.662592",
-    "data_source": "buffer_api",
-    "status": "ok"
+    "total_shares": 0
   },
   "conversion": {},
   "revenue": {},
   "seo": {
-    "impressions": 599,
+    "impressions": 585,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 68.1,
+    "average_position": 69.6,
     "sitemap_count": 1,
-    "sitemap_last_submitted": "2026-07-16T01:49:23.793Z"
+    "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   }
 }

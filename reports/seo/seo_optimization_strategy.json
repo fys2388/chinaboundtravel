@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260907_033733",
-  "last_updated": "2026-09-07T03:37:33.380189",
+  "version": "2.0-20260914_040147",
+  "last_updated": "2026-09-14T04:01:47.594059",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -50,6 +50,12 @@
       "impressions": 75
     },
     {
+      "keyword": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "ctr": 0.01,
+      "position": 73.1,
+      "impressions": 71
+    },
+    {
       "keyword": "144 china visa",
       "ctr": 0,
       "position": 80.5,
@@ -71,12 +77,6 @@
       "keyword": "144 hour visa",
       "ctr": 0,
       "position": 87,
-      "impressions": 1
-    },
-    {
-      "keyword": "144 hour visa beijing",
-      "ctr": 0,
-      "position": 41,
       "impressions": 1
     }
   ],

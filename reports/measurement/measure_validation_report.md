@@ -1,10 +1,10 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-09-07 03:37:33
+**验证时间**: 2026-09-14 04:01:47
 **基线日期**: 2026-08-31
-**当前日期**: 2026-09-07
-**整体评分**: 53.6/100
-**学习有效**: ❌ 否
+**当前日期**: 2026-09-14
+**整体评分**: 64.3/100
+**学习有效**: ✅ 是
 
 ---
 
@@ -15,8 +15,8 @@
 | 类别 | 改善指标 | 下降指标 | 不变指标 | 改善率 |
 |------|---------|---------|---------|--------|
 | TRAFFIC | 8 | 0 | 0 | 100.0% |
-| CONTENT | 3 | 1 | 1 | 60.0% |
-| SOCIAL | 1 | 0 | 6 | 14.3% |
+| CONTENT | 4 | 0 | 1 | 80.0% |
+| SOCIAL | 3 | 0 | 4 | 42.9% |
 | SEO | 3 | 0 | 5 | 37.5% |
 
 ---
@@ -27,49 +27,49 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| sessions | 0 | 356 | +356.00 | +0.0% | 📈 improved |
-| bounceRate | 0 | 0.7275280898876404 | +0.73 | +0.0% | 📈 improved |
-| engagedSessions | 0 | 97 | +97.00 | +0.0% | 📈 improved |
-| screenPageViews | 0 | 793 | +793.00 | +0.0% | 📈 improved |
-| engagementRate | 0 | 0.27247191011235955 | +0.27 | +0.0% | 📈 improved |
-| activeUsers | 0 | 270 | +270.00 | +0.0% | 📈 improved |
-| averageSessionDuration | 0 | 204.0412768258427 | +204.04 | +0.0% | 📈 improved |
-| newUsers | 0 | 268 | +268.00 | +0.0% | 📈 improved |
+| newUsers | 0 | 281 | +281.00 | +0.0% | 📈 improved |
+| activeUsers | 0 | 281 | +281.00 | +0.0% | 📈 improved |
+| bounceRate | 0 | 0.7240506329113924 | +0.72 | +0.0% | 📈 improved |
+| averageSessionDuration | 0 | 210.4576924607595 | +210.46 | +0.0% | 📈 improved |
+| engagementRate | 0 | 0.2759493670886076 | +0.28 | +0.0% | 📈 improved |
+| screenPageViews | 0 | 836 | +836.00 | +0.0% | 📈 improved |
+| engagedSessions | 0 | 109 | +109.00 | +0.0% | 📈 improved |
+| sessions | 0 | 395 | +395.00 | +0.0% | 📈 improved |
 
 ### CONTENT
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
+| articles_with_internal_links | 10 | 56 | +46.00 | +460.0% | 📈 improved |
 | articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_articles | 59 | 61 | +2.00 | +3.4% | 📈 improved |
-| articles_with_affiliate_links | 4 | 35 | +31.00 | +775.0% | 📈 improved |
-| avg_word_count | 1928 | 1902 | -26.00 | -1.4% | 📉 declined |
-| articles_with_internal_links | 10 | 48 | +38.00 | +380.0% | 📈 improved |
+| articles_with_affiliate_links | 4 | 36 | +32.00 | +800.0% | 📈 improved |
+| total_articles | 59 | 63 | +4.00 | +6.8% | 📈 improved |
+| avg_word_count | 1928 | 2030 | +102.00 | +5.3% | 📈 improved |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_posts | 0 | 10 | +10.00 | +0.0% | 📈 improved |
+| total_impressions | 0 | 22 | +22.00 | +0.0% | 📈 improved |
+| total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
+| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_clicks | 0 | 1 | +1.00 | +0.0% | 📈 improved |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| impressions | 0 | 599 | +599.00 | +0.0% | 📈 improved |
-| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| average_position | 0 | 68.1 | +68.10 | +0.0% | 📈 improved |
-| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
+| average_position | 0 | 69.6 | +69.60 | +0.0% | 📈 improved |
 | index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | sitemap_count | 0 | 1 | +1.00 | +0.0% | 📈 improved |
 | indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| impressions | 0 | 585 | +585.00 | +0.0% | 📈 improved |
+| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
 
 
 ---
@@ -77,20 +77,19 @@
 ## ✅ 有效策略
 
 - **TRAFFIC**: 改善率 100.0% (8/8 指标改善)
-- **CONTENT**: 改善率 60.0% (3/5 指标改善)
+- **CONTENT**: 改善率 80.0% (4/5 指标改善)
 
 ---
 
 ## ❌ 低效策略（需要优化）
 
-- **SOCIAL**: 改善率 14.3% (1改善 / 0下降 / 7总计)
+暂无显著低效策略
 
 ---
 
 ## 💡 建议和下一步
 
-1. 学习策略部分有效，需要优化低效策略
-2. 低效策略需要优化: social
+1. 学习策略整体有效，继续当前方向
 
 ---
 
@@ -112,4 +111,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-09-07 03:37:33*
+*生成时间: 2026-09-14 04:01:47*
