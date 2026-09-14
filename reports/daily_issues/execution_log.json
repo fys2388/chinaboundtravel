@@ -7,16 +7,32 @@
       "total": 1,
       "fixed": 0,
       "failed": 0,
-      "manual_review": 0,
+      "manual_review": 1,
       "in_progress": 0,
-      "last_run": "2026-09-14T00:37:55.822960"
+      "last_run": "2026-09-14T01:01:27.241995"
+    },
+    "frontend": {
+      "total": 1,
+      "fixed": 0,
+      "failed": 0,
+      "manual_review": 1,
+      "in_progress": 0,
+      "last_run": "2026-09-14T01:01:27.199501"
+    },
+    "seo": {
+      "total": 1,
+      "fixed": 0,
+      "failed": 0,
+      "manual_review": 1,
+      "in_progress": 0,
+      "last_run": "2026-09-14T01:01:27.235433"
     }
   },
   "summary": {
-    "total": 1,
+    "total": 3,
     "fixed": 0,
     "failed": 0,
-    "manual_review": 0,
+    "manual_review": 3,
     "in_progress": 0
   },
   "executions": [
@@ -723,8 +739,56 @@
       "failed": 0,
       "note": "resolved=0, need_manual=0, failed=0",
       "executed_at": "2026-09-14T00:37:55.822960"
+    },
+    {
+      "task_id": "task_2026-09-14_frontend",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-09-14T01:01:27.194818"
+    },
+    {
+      "task_id": "task_2026-09-14_frontend",
+      "status": "partial",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=58, failed=0",
+      "executed_at": "2026-09-14T01:01:27.199501"
+    },
+    {
+      "task_id": "task_2026-09-14_seo",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-09-14T01:01:27.216631"
+    },
+    {
+      "task_id": "task_2026-09-14_seo",
+      "status": "partial",
+      "resolved": 1,
+      "failed": 0,
+      "note": "resolved=1, need_manual=1, failed=0",
+      "executed_at": "2026-09-14T01:01:27.235433"
+    },
+    {
+      "task_id": "task_2026-09-14_content",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-09-14T01:01:27.238886"
+    },
+    {
+      "task_id": "task_2026-09-14_content",
+      "status": "partial",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=1, failed=0",
+      "executed_at": "2026-09-14T01:01:27.241995"
     }
   ],
-  "last_run": "2026-09-14T00:37:55.822965",
-  "total_executions": 88
+  "last_run": "2026-09-14T01:01:27.241999",
+  "total_executions": 94
 }
