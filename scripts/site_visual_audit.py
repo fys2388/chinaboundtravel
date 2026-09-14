@@ -298,7 +298,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
     if metrics["brokenImages"]:
         issues.append(
             make_issue(
-                "P0",
+                "P2",
                 "broken_image",
                 urlparse(url).path or "/",
                 viewport_name,
