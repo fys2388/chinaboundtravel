@@ -1,12 +1,12 @@
 {
   "date": "2026-09-13",
-  "total_published": 2,
+  "total_published": 4,
   "total_impressions": 0,
   "total_clicks": 0,
   "total_uv": 0,
   "by_platform": {
     "ig": {
-      "published": 1,
+      "published": 2,
       "impressions": 0,
       "clicks": 0,
       "uv": 0
@@ -18,7 +18,7 @@
       "uv": 0
     },
     "x": {
-      "published": 0,
+      "published": 1,
       "impressions": 0,
       "clicks": 0,
       "uv": 0
@@ -33,5 +33,5 @@
   "analytics_status": "ok",
   "analytics_source": "buffer_api",
   "analytics_reason": "",
-  "analytics_post_count": 2
+  "analytics_post_count": 4
 }
