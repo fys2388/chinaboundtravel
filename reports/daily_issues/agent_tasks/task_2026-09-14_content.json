@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-14_content",
   "created_at": "2026-09-14T00:37:54.766760+00:00",
-  "updated_at": "2026-09-14T04:31:31.068930",
+  "updated_at": "2026-09-14T05:01:34.033774",
   "target_date": "2026-09-14",
   "issue_count": 5,
   "severity_summary": {
@@ -54,7 +54,7 @@
       "detected_at": "2026-09-14T02:26:41.982563"
     },
     {
-      "id": "site_health-7e6b80752579318a",
+      "id": "site_health-67fab6dc855f2f2c",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T04:31:30.864056+00:00"
+      "detected_at": "2026-09-14T05:01:33.833001+00:00"
     },
     {
       "id": "issue_a47bc117b9d1",
@@ -94,7 +94,7 @@
       "detected_at": "2026-09-14T02:26:41.982555"
     },
     {
-      "id": "site_health-69e97c48f47cd092",
+      "id": "site_health-49fd4709d98ffdd6",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -111,7 +111,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T04:31:30.864051+00:00"
+      "detected_at": "2026-09-14T05:01:33.832997+00:00"
     }
   ],
   "priority_issue": {
