@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: "{{< soft-recommend partner="esim" topic="visa" placement="articlemid1" text="See eSIM options" >}} Keeping your phone connected in China is easier with..."
+description: '{{< soft-recommend partner="esim" topic="visa" placement="articlemid1" text="See eSIM options" >}} Keeping your phone connected in China is easier with...'
 ShowToc: true
 TocOpen: false
 cover:
