@@ -1,18 +1,66 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-14T04:01:46.305256",
+  "pull_time": "2026-09-14T11:09:07.688451",
   "data_date": "2026-09-14",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 22,
-    "total_clicks": 1,
+    "total_impressions": 21,
+    "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6aa7a10c5a4fa0b06698e676",
+      "text": "Zhangjiajie Guide: Avatar Mountains\n\nPlan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips\n\nFull guide: \n\n#ChinaTravel #TravelChina\n",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-14T09:24:02.827Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6aa78dd995d6303fe833a8d3",
+      "text": "Everything you need to know about Food — in one practical guide. China Food Guide for European Travelers → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-14T08:02:16.297Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6aa78dd5ea4032c014a0fdb3",
+      "text": "🔥 linkedin\n\nResearch-backed facts about Visa every traveler should know.\n\n· 144-Hour Visa-Free Transit in China: The Complete 2026 Guide\n· Why This Guide Matters\n· Which Cities and Ports Accept 144-Ho",
+      "platform": "instagram",
+      "channel_name": "joranchinatravel",
+      "published_at": "2026-09-14T08:02:23.288Z",
+      "status": "sent",
+      "metrics_available": false,
+      "has_impression_metric": false,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6aa6d63566679b076f2f8766",
       "text": "Research-backed facts about Food every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_2",
@@ -123,54 +171,6 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 1,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6aa4e4bf66c59e2484a8f8cf",
-      "text": "🔥 linkedin\n\n💡 Visual guide to Tea: what to see and capture.\n\n• Must-try Chinese dishes and restaurant recommendations for international travelers, with\n\nWhat's your biggest China travel question? Drop",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-09-12T07:36:04.040Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 1,
-      "impressions": 2,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6aa433f8d416f0601bfa8fd3",
-      "text": "What travelers discover about Tea — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=x&utm_medium=social&utm_campaign=cb",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-11T19:02:41.630Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6aa39610b6d24fd028ae427b",
-      "text": "🔥 linkedin\n\nResearch-backed facts about Accommodation every traveler should know.\n\n· Location, Location, Location\n· Types of Accommodation\n· Serviced Apartments\n\nRead the full guide: https://www.china",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-11T07:48:23.459Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
       "engagement_rate": 0.0
     },
     {
@@ -330,13 +330,13 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "twitter": {
-      "posts": 4,
+      "posts": 5,
       "impressions": 1,
       "clicks": 0,
       "likes": 0
@@ -348,14 +348,14 @@
       "likes": 0
     },
     "facebook": {
-      "posts": 3,
-      "impressions": 5,
-      "clicks": 1,
+      "posts": 2,
+      "impressions": 3,
+      "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 16,
+      "impressions": 17,
       "clicks": 0,
       "likes": 0
     }
@@ -363,8 +363,8 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 19,
-  "impression_metric_count": 19,
+  "metrics_available_count": 18,
+  "impression_metric_count": 18,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",

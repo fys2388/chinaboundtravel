@@ -1,6 +1,6 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-14T04:01:44.328436",
+  "pull_time": "2026-09-14T11:09:05.590830",
   "data_date": "2026-09-13",
   "is_real_data": true,
   "is_fresh": true,
@@ -175,7 +175,7 @@
       "date": "2026-09-14",
       "sessions": 3,
       "activeUsers": 3,
-      "pageviews": 3
+      "pageviews": 4
     }
   ],
   "top_pages": [],
