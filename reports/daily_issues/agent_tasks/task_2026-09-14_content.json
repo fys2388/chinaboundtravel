@@ -1,0 +1,67 @@
+{
+  "agent": "content",
+  "agent_name": "Content Intelligence Agent (内容智能优化)",
+  "task_id": "task_2026-09-14_content",
+  "created_at": "2026-09-14T00:37:54.766760+00:00",
+  "updated_at": "2026-09-14T00:37:55.822620",
+  "target_date": "2026-09-14",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "workflow-34793278903-yaml_parsing",
+      "type": "yaml_parsing",
+      "title": "Post-deploy Tasks 失败：YAML 解析失败",
+      "description": "post-deploy / Build site",
+      "page": "Post-deploy Tasks",
+      "file": "Post-deploy Tasks",
+      "evidence": "Error: error building site: process: readAndProcessContent: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/144-hour-visa-free-transit-guide.md:12:1\": failed to unmarshal YAML: yaml: line 12: did not find expected key\n##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T00:37:54.766652+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "workflow-34793278903-yaml_parsing",
+    "type": "yaml_parsing",
+    "title": "Post-deploy Tasks 失败：YAML 解析失败",
+    "description": "post-deploy / Build site",
+    "page": "Post-deploy Tasks",
+    "file": "Post-deploy Tasks",
+    "evidence": "Error: error building site: process: readAndProcessContent: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/144-hour-visa-free-transit-guide.md:12:1\": failed to unmarshal YAML: yaml: line 12: did not find expected key\n##[error]Process completed with exit code 1.",
+    "recommended_action": "请查看日志详情，人工分析根因。",
+    "severity": "high",
+    "agent": "content",
+    "action": "manual_review",
+    "source": "workflow_failure",
+    "source_file": "",
+    "task_source": "workflow_failure",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "content",
+    "detected_at": "2026-09-14T00:37:54.766652+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "completed",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": "2026-09-14T00:37:55.822624",
+    "note": "resolved=0, need_manual=0, failed=0"
+  }
+}

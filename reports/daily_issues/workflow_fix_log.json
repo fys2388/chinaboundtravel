@@ -1,0 +1,11 @@
+{
+  "fixes": [
+    {
+      "workflow": "Post-deploy Tasks",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:content",
+      "fix_note": "已发送飞书告警(category=yaml_parsing)",
+      "fixed_at": "2026-09-14T00:37:55.659667"
+    }
+  ]
+}

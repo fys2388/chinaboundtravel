@@ -1140,6 +1140,28 @@
       "error_message": " ##[endgroup]\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5150997Z ✅ 时间范围选择器已注入 index.html\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5151548Z    GA4 ranges: N/A\nrefresh-dashboard\tInject time range selector\t2026-09-13T10:01:32.5152166Z    GSC ranges: N/A\nrefresh-dashboard\tPush and trigger deploy\t﻿2026-09-13T10:01:32.5217770Z ##[group]Run mkdir -p static/ops-dashboard\nrefresh-dashboard\tPush and trigger deploy\t2026-09-13T10:01:32.5218377Z ^[[36;1mmkdir -p",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260914_003754",
+      "timestamp": "2026-09-14T00:37:54.612377",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "34793278903",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "Error: error building site: process: readAndProcessContent: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/144-hour-visa-free-transit-guide.md:12:1\": failed to unmarshal YAML: yaml: line 12: did not find expected key\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "err_20260914_003754",
+      "timestamp": "2026-09-14T00:37:54.613689",
+      "workflow_name": "auto_router",
+      "run_id": "cli",
+      "category": "yaml_parsing",
+      "category_name": "YAML解析错误",
+      "error_message": "post-deploy\tBuild site\t﻿2026-09-14T00:37:28.8415084Z ##[group]Run echo \"=== Hugo version ===\"\npost-deploy\tBuild site\t2026-09-14T00:37:28.8415511Z ^[[36;1mecho \"=== Hugo version ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8415812Z ^[[36;1mhugo version^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416056Z ^[[36;1mecho \"=== Building site ===\"^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416347Z ^[[36;1mhugo --gc --minify 2>&1^[[0m\npost-deploy\tBuild site\t2026-09-14T00:37:28.8416642Z ",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
