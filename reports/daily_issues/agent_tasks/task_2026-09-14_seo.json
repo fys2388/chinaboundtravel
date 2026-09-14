@@ -3,13 +3,13 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-14_seo",
   "created_at": "2026-09-14T01:01:26.991011+00:00",
-  "updated_at": "2026-09-14T02:26:42.263639",
+  "updated_at": "2026-09-14T02:31:20.744656",
   "target_date": "2026-09-14",
-  "issue_count": 430,
+  "issue_count": 429,
   "severity_summary": {
     "critical": 149,
     "high": 83,
-    "medium": 195,
+    "medium": 194,
     "low": 3
   },
   "issues": [
@@ -8434,27 +8434,7 @@
       "detected_at": "2026-09-14T02:26:41.982592"
     },
     {
-      "id": "site_health-2e8dae0db3b38bab",
-      "type": "title_too_short",
-      "title": "title_too_short",
-      "description": "title_too_short",
-      "page": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "evidence": "Title过短(17字符)",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-09-14T02:26:42.036349+00:00"
-    },
-    {
-      "id": "site_health-3bd2dd05db1c9e8e",
+      "id": "site_health-e4f511659934baf",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -8471,27 +8451,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-14T02:26:42.036341+00:00"
-    },
-    {
-      "id": "site_health-563cf4ed681e6ccf",
-      "type": "title_too_long",
-      "title": "title_too_long",
-      "description": "title_too_long",
-      "page": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "evidence": "Title渲染后过长(77字符, front matter 57+后缀20): Shanghai Beyond the Bund: Hidden Neighbo...",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-09-14T02:26:42.036346+00:00"
+      "detected_at": "2026-09-14T02:31:20.629197+00:00"
     },
     {
       "id": "issue_9c9c28f42ec6",
@@ -8552,6 +8512,26 @@
       "assigned": true,
       "assigned_to": "seo",
       "detected_at": "2026-09-14T02:26:41.982570"
+    },
+    {
+      "id": "site_health-3a62c153d31b824d",
+      "type": "title_too_short",
+      "title": "title_too_short",
+      "description": "title_too_short",
+      "page": "content/success.md",
+      "file": "content/success.md",
+      "evidence": "Title过短(19字符<20)",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-14T02:31:20.629201+00:00"
     },
     {
       "id": "issue_4a23d3a09287",
@@ -8641,9 +8621,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 3,
+    "resolved_count": 2,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=3, need_manual=5, failed=0"
+    "note": "resolved=2, need_manual=5, failed=0"
   }
 }
