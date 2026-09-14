@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-13T15:29:51.870281+00:00",
+  "timestamp": "2026-09-14T02:26:39.861522+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 15,
+    "total_issues": 10,
     "critical": 0,
     "high": 3,
     "medium": 0,
-    "low": 12,
-    "auto_fixed": 8,
-    "need_manual": 20,
-    "resolved": 16,
-    "inherited_resolved": 14,
+    "low": 7,
+    "auto_fixed": 0,
+    "need_manual": 17,
+    "resolved": 13,
+    "inherited_resolved": 11,
     "in_progress": 0,
-    "last_updated": "2026-09-14T02:26:42.248425"
+    "last_updated": "2026-09-14T02:26:42.280673"
   },
   "issues": [
     {
@@ -124,13 +124,9 @@
       "type": "title_too_short",
       "severity": "low",
       "file": "content/success.md",
-      "message": "Title过短(19字符)",
+      "message": "Title过短(19字符<20)",
       "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+      "agent": "seo"
     },
     {
       "type": "meta_description_too_short",
@@ -142,8 +138,7 @@
       "status": "resolved",
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "meta_description_too_short",
@@ -155,8 +150,7 @@
       "status": "resolved",
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "meta_description_too_short",
@@ -168,8 +162,7 @@
       "status": "resolved",
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "meta_description_too_short",
@@ -181,20 +174,7 @@
       "status": "resolved",
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "message": "Title渲染后过长(77字符, front matter 57+后缀20): Shanghai Beyond the Bund: Hidden Neighbo...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 57->32字符"
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "meta_description_too_long",
@@ -208,85 +188,21 @@
       "type": "meta_description_too_short",
       "severity": "low",
       "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "message": "Meta description过短(5字符)",
+      "message": "Meta description过短(27字符)",
       "auto_fixable": false,
       "agent": "seo",
       "status": "resolved",
       "assigned": true,
       "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
-      "message": "Title渲染后过长(74字符, front matter 54+后缀20): Travel To China Requirements 2026: Augus...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 54->41字符"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
-      "message": "Title渲染后过长(76字符, front matter 56+后缀20): Can Foreigners Use WeChat Pay in China? ...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 56->44字符"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
-      "message": "Title渲染后过长(79字符, front matter 59+后缀20): How to Use Alipay as a Foreigner: Comple...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 59->42字符"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
-      "message": "Title渲染后过长(73字符, front matter 53+后缀20): Is China Safe for Tourists in 2026? Hone...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 53->42字符"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-      "message": "Title渲染后过长(73字符, front matter 53+后缀20): Things To Do In Yunnan: Rice Terraces & ...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 53->39字符"
+      "resolution_note": "meta description已生成(154字符)"
     },
     {
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
-      "message": "Title过短(2字符)",
+      "message": "Title过短(2字符<20)",
       "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+      "agent": "seo"
     },
     {
       "type": "meta_description_too_short",
@@ -298,14 +214,13 @@
       "status": "resolved",
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00",
-      "assigned": true
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "meta_description_too_short",
       "severity": "low",
       "file": "content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
-      "message": "Meta description过短(51字符)",
+      "message": "Meta description过短(27字符)",
       "auto_fixable": false,
       "agent": "seo",
       "status": "resolved",
@@ -314,22 +229,10 @@
       "resolution_note": "meta description已生成(155字符)"
     },
     {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md",
-      "message": "Title渲染后过长(76字符, front matter 56+后缀20): China Business Travel: Meetings, Dining ...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 56->41字符"
-    },
-    {
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "message": "Title过短(17字符)",
+      "message": "Title过短(17字符<20)",
       "auto_fixable": false,
       "agent": "seo"
     },
@@ -337,25 +240,9 @@
       "type": "title_too_short",
       "severity": "low",
       "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
-      "message": "Title过短(6字符)",
+      "message": "Title过短(6字符<20)",
       "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "历史已解决",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
-      "message": "Title渲染后过长(76字符, front matter 56+后缀20): PayPal Supports Alipay & WeChat Pay QR C...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 45 字符以内（渲染后≤65）",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 56->38字符"
+      "agent": "seo"
     }
   ]
 }

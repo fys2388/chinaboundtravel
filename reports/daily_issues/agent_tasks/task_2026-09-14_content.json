@@ -3,12 +3,12 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-14_content",
   "created_at": "2026-09-14T00:37:54.766760+00:00",
-  "updated_at": "2026-09-14T02:01:26.516091",
+  "updated_at": "2026-09-14T02:26:42.275357",
   "target_date": "2026-09-14",
-  "issue_count": 3,
+  "issue_count": 5,
   "severity_summary": {
     "critical": 0,
-    "high": 3,
+    "high": 5,
     "medium": 0,
     "low": 0
   },
@@ -34,7 +34,27 @@
       "detected_at": "2026-09-14T00:37:54.766652+00:00"
     },
     {
-      "id": "site_health-35f2c9a4a89b27b4",
+      "id": "issue_a47bc117b9d1",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/contact.md",
+      "file": "content/contact.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T02:26:41.982563"
+    },
+    {
+      "id": "site_health-4d1d5dbd9de1c642",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -51,10 +71,30 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T02:01:26.214975+00:00"
+      "detected_at": "2026-09-14T02:26:42.035508+00:00"
     },
     {
-      "id": "site_health-671740173d3f372f",
+      "id": "issue_a47bc117b9d1",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/search.md",
+      "file": "content/search.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-14T02:26:41.982555"
+    },
+    {
+      "id": "site_health-12e9390f2b68373e",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -71,7 +111,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-14T02:01:26.214971+00:00"
+      "detected_at": "2026-09-14T02:26:42.035503+00:00"
     }
   ],
   "priority_issue": {
@@ -95,6 +135,7 @@
     "detected_at": "2026-09-14T00:37:54.766652+00:00"
   },
   "expected_actions": [
+    "fix_placeholder",
     "manual_review"
   ],
   "status": "partial",
@@ -102,6 +143,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }

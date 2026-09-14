@@ -1,0 +1,67 @@
+{
+  "agent": "ops",
+  "agent_name": "Ops Agent (部署/配置/权限)",
+  "task_id": "task_2026-09-14_ops",
+  "created_at": "2026-09-14T02:26:41.993362+00:00",
+  "updated_at": "2026-09-14T02:26:42.286356",
+  "target_date": "2026-09-14",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "issue_c5b0887126ea",
+      "type": "draft_leak",
+      "title": "draft:true的文章可能已发布到线上",
+      "description": "draft:true的文章可能已发布到线上",
+      "page": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "evidence": "draft:true的文章可能已发布到线上",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-09-14T02:26:41.982567"
+    }
+  ],
+  "priority_issue": {
+    "id": "issue_c5b0887126ea",
+    "type": "draft_leak",
+    "title": "draft:true的文章可能已发布到线上",
+    "description": "draft:true的文章可能已发布到线上",
+    "page": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+    "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+    "evidence": "draft:true的文章可能已发布到线上",
+    "recommended_action": "Review the issue and apply the documented remediation.",
+    "severity": "high",
+    "agent": "ops",
+    "action": "diagnose_and_fix",
+    "source": "daily_issue_router",
+    "source_file": "site_health_issues_2026-09-14.json",
+    "task_source": "daily_issue_router",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "ops",
+    "detected_at": "2026-09-14T02:26:41.982567"
+  },
+  "expected_actions": [
+    "diagnose_and_fix"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
