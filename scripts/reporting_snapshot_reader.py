@@ -48,6 +48,10 @@ def snapshot_traffic(prefix):
     snap = _load()
     if not snap or snap.get("sessions_28d") is None:
         return None
+    # Week: snapshot only has 28-day aggregates, not weekly data.
+    # Return None so report falls through to direct GA4 API call.
+    if prefix == "week":
+        return None
     d = {
         f"{prefix}_users": snap.get("users_28d") or 0,
         f"{prefix}_sessions": snap.get("sessions_28d") or 0,
