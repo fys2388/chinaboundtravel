@@ -16,7 +16,7 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-20
 categories: ["visa", "cities"]
 cover:
   image: "/img/china-dest/general/china-travel-safety-guide.webp"
-last_updated: "2026-09-14"
+last_updated: "2026-09-15"
 
 ---
 # ChinaBound Travel Guide 2026.08 - Now Updated With Latest Visa Rules
@@ -164,3 +164,5 @@ If you have topics you'd like to see covered in a future update, reply to any of
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
 
 - [China Travel Guide: July 2026 Updates](/posts/chinabound-travel-guide-2026-07-monthly-update/)
+
+- [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)

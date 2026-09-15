@@ -154,6 +154,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?

@@ -119,6 +119,8 @@ For more information on China travel, check out these articles:
 
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
 
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

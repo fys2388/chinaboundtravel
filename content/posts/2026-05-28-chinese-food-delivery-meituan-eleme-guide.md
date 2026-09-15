@@ -26,7 +26,7 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp"
 categories: ["cities", "food"]
-last_updated: "2026-09-14"
+last_updated: "2026-09-15"
 
 ---
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
@@ -254,3 +254,5 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
+
+- [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)

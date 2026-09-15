@@ -294,3 +294,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)

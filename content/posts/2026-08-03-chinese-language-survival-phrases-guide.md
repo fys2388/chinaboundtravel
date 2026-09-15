@@ -207,3 +207,5 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 - [China National Parks: Zhangjiajie &](https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/)
 - [China Photography Guide: Top Spots & Tips](https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 - [China Bargaining Guide: How to Haggle & Shop](https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)

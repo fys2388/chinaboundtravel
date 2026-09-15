@@ -285,3 +285,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)

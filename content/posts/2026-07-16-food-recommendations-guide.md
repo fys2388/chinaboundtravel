@@ -147,3 +147,5 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 - [China Food Guide: Must-Try Dishes &](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [How Chinese Food Evolved: 2 Million Years](https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/)
 - [Why Sichuan Hotpot Is More Than Just a Meal](https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)

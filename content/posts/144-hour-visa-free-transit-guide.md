@@ -262,6 +262,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

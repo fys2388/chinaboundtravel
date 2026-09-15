@@ -121,3 +121,5 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 
 - [China Travel Guide: July 2026 Updates](/posts/chinabound-travel-guide-2026-07-monthly-update/)
+
+- [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
