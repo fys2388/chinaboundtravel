@@ -3,65 +3,65 @@
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-15_social",
   "created_at": "2026-09-15T02:31:24.547455+00:00",
-  "updated_at": "2026-09-15T02:31:24.832553",
+  "updated_at": "2026-09-15T16:06:25.515400",
   "target_date": "2026-09-15",
   "issue_count": 1,
   "severity_summary": {
     "critical": 0,
-    "high": 0,
-    "medium": 1,
+    "high": 1,
+    "medium": 0,
     "low": 0
   },
   "issues": [
     {
-      "id": "issue_2ef42211d156",
-      "type": "social_zero_engagement",
-      "title": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
-      "description": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+      "id": "issue_f8dc6414ad18",
+      "type": "social_no_traffic",
+      "title": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
       "page": "",
       "file": "",
-      "evidence": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+      "evidence": "社媒曝光1但点击为0，需检查帖子链接和CTA",
       "recommended_action": "Review the issue and apply the documented remediation.",
-      "severity": "medium",
+      "severity": "high",
       "agent": "social",
-      "action": "analyze_and_optimize",
+      "action": "audit_links_and_cta",
       "source": "daily_issue_router",
-      "source_file": "social_daily_2026-09-13.json",
+      "source_file": "social_daily_2026-09-14.json",
       "task_source": "daily_issue_router",
       "status": "new",
       "assigned": true,
       "assigned_to": "social",
-      "detected_at": "2026-09-15T02:31:24.529717"
+      "detected_at": "2026-09-15T16:06:25.124102"
     }
   ],
   "priority_issue": {
-    "id": "issue_2ef42211d156",
-    "type": "social_zero_engagement",
-    "title": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
-    "description": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+    "id": "issue_f8dc6414ad18",
+    "type": "social_no_traffic",
+    "title": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+    "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
     "page": "",
     "file": "",
-    "evidence": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+    "evidence": "社媒曝光1但点击为0，需检查帖子链接和CTA",
     "recommended_action": "Review the issue and apply the documented remediation.",
-    "severity": "medium",
+    "severity": "high",
     "agent": "social",
-    "action": "analyze_and_optimize",
+    "action": "audit_links_and_cta",
     "source": "daily_issue_router",
-    "source_file": "social_daily_2026-09-13.json",
+    "source_file": "social_daily_2026-09-14.json",
     "task_source": "daily_issue_router",
     "status": "new",
     "assigned": true,
     "assigned_to": "social",
-    "detected_at": "2026-09-15T02:31:24.529717"
+    "detected_at": "2026-09-15T16:06:25.124102"
   },
   "expected_actions": [
-    "analyze_and_optimize"
+    "audit_links_and_cta"
   ],
-  "status": "partial",
+  "status": "completed",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "completed_at": "2026-09-15T16:06:25.515405",
+    "note": "resolved=0, need_manual=0, failed=0"
   }
 }
