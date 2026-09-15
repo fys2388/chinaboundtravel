@@ -29,6 +29,36 @@
         "position": 66.9
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "actions": [
+        "title: 'China 144 Hour Transit Visa: Complete Guide' -> 'China 144 Hour Transit Visa 2026: Complete Guide'"
+      ],
+      "timestamp": "2026-09-15T06:49:57.958698",
+      "metrics_before": {
+        "impressions": 810,
+        "clicks": 0,
+        "position": 68.6
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "title: '144-Hour Validation Program: New Countries' -> '144-Hour Validation Program 2026: New Countries'",
+        "faq section added",
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-09-15T06:49:58.962115",
+      "metrics_before": {
+        "impressions": 432,
+        "clicks": 0,
+        "position": 66.9
+      },
+      "result": "pending"
     }
   ]
 }
