@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-08 07:11:35",
+  "timestamp": "2026-09-15 07:34:06",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 11,
+  "indexed_count": 10,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
@@ -30,11 +30,11 @@
       }
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+      "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
       "status": "success",
       "message": "indexing request submitted",
       "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+        "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
         "verdict": "NEUTRAL",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "status": "success"
@@ -145,8 +145,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "status": "success"
       }
     },
