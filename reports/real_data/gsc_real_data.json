@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-15T10:37:25.555886",
-  "data_date": "2026-09-12",
+  "pull_time": "2026-09-16T10:26:05.030033",
+  "data_date": "2026-09-13",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 564,
+    "impressions": 542,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 70.1,
+    "average_position": 70.3,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-16",
-      "impressions": 144,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 50.9
-    },
     {
       "date": "2026-08-17",
       "impressions": 381,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 26.7
+    },
+    {
+      "date": "2026-09-13",
+      "impressions": 25,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 39.7
     }
   ],
   "top_queries": [
@@ -234,10 +234,10 @@
     },
     {
       "query": "144 hour china visa",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 83
+      "position": 81.5
     },
     {
       "query": "144 hour transit visa china",
@@ -248,17 +248,17 @@
     },
     {
       "query": "144 hour visa",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 87
+      "position": 73
     },
     {
       "query": "144 hour visa china",
-      "impressions": 6,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 72.2
+      "position": 64.5
     },
     {
       "query": "144 hour visa china cost",
@@ -331,13 +331,6 @@
       "position": 82.5
     },
     {
-      "query": "144 hrs visa free china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 79
-    },
-    {
       "query": "144 transit visa china",
       "impressions": 1,
       "clicks": 0,
@@ -350,6 +343,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 64
+    },
+    {
+      "query": "144 visa free china",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 77.6
     }
   ],
   "top_pages": [
@@ -362,23 +362,23 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 74,
+      "impressions": 78,
       "clicks": 1,
       "ctr": 0.01,
-      "position": 73.7
+      "position": 73.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-      "impressions": 50,
+      "impressions": 44,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 21.7
+      "position": 20.0
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-      "impressions": 32,
+      "impressions": 28,
       "clicks": 1,
-      "ctr": 0.03,
+      "ctr": 0.04,
       "position": 16.4
     },
     {
@@ -411,10 +411,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/xian/",
-      "impressions": 5,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 72
+      "position": 71
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
@@ -446,7 +446,7 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 121,
+      "impressions": 122,
       "clicks": 0,
       "ctr": 0,
       "position": 75.8
@@ -460,10 +460,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 654,
+      "impressions": 631,
       "clicks": 0,
       "ctr": 0,
-      "position": 67.0
+      "position": 66.3
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -474,10 +474,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "impressions": 5,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 3.6
+      "position": 4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-12"
+    "data_date": "2026-09-13"
   }
 }
