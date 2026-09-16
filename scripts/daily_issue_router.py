@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Daily Issue Router - 日报运营问题→Agent任务自动分配机制
 
@@ -495,13 +495,21 @@ class DailyIssueRouter:
                 try:
                     data = json.loads(f.read_text(encoding="utf-8"))
                     if isinstance(data, dict):
-                        bounce_rate = data.get("bounce_rate", 0)
-                        if isinstance(bounce_rate, (int, float)) and bounce_rate > 0.8:
-                            issues.append(self._create_issue(
-                                "bounce_rate",
-                                f"跳出率{bounce_rate:.1%}偏高（>80%）",
-                                source_file=f.name,
-                            ))
+                        # 口径不统一：user_behavior_audit.json 把 bounce_rate 嵌在
+                        # behavior_analysis 下且存小数(0.13)；部分 learning 产物存百分数(75)。
+                        # 同时兼容两种结构，并统一归一化为小数后再判断。
+                        raw_bounce = data.get("bounce_rate")
+                        if raw_bounce is None and isinstance(data.get("behavior_analysis"), dict):
+                            raw_bounce = data["behavior_analysis"].get("bounce_rate")
+                        if isinstance(raw_bounce, (int, float)):
+                            raw_bounce = float(raw_bounce)
+                            bounce_rate = raw_bounce / 100.0 if raw_bounce > 1.5 else raw_bounce
+                            if bounce_rate > 0.8:
+                                issues.append(self._create_issue(
+                                    "bounce_rate",
+                                    f"跳出率{bounce_rate:.1%}偏高（>80%）",
+                                    source_file=f.name,
+                                ))
                 except (json.JSONDecodeError, KeyError):
                     pass
 

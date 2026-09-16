@@ -10,7 +10,11 @@ sys.stdout.reconfigure(encoding="utf-8")
 # 各报表周期 → 数据字段别名（data.get 多别名兜底）
 SCOPE_FIELDS = {
     "daily": {
-        "users": ["visitors"], "bounce": ["bounce_rate"], "duration": ["avg_duration"],
+        # daily 用 7 日滚动口径（D-7..D-1）：单日样本常只有 1-15 会话，跳出率天天 >80% 属噪声。
+        # 流量总览表的单日值仍原样展示，这里只改告警判定的取数口径。
+        "users": ["visitors"], "bounce": ["bounce_rate_7d", "bounce_rate"],
+        "duration": ["avg_session_duration_7d", "avg_duration", "avg_session_duration"],
+        "bounce_sessions": ["sessions_7d", "sessions"],
         "gsc": ["gsc_impressions"], "tp_clicks": ["tp_clicks"], "tp_orders": ["tp_bookings"],
         "revenue": ["tp_revenue"], "email": ["ml_total_subscribers", "total_subscribers"],
         "new_content": ["new_posts"], "total_content": ["total_posts"],
@@ -18,6 +22,7 @@ SCOPE_FIELDS = {
     },
     "weekly": {
         "users": ["week_users"], "bounce": ["week_bounce"], "duration": ["week_avg_duration"],
+        "bounce_sessions": ["sessions", "week_users"],
         "gsc": ["gsc_impressions"], "tp_clicks": ["tp_clicks"], "tp_orders": ["tp_bookings"],
         "revenue": ["week_revenue", "tp_revenue"], "email": ["total_subscribers", "ml_total_subscribers"],
         "new_content": ["weekly_new_posts", "new_posts"], "total_content": ["total_posts"],
@@ -25,6 +30,7 @@ SCOPE_FIELDS = {
     },
     "monthly": {
         "users": ["month_users"], "bounce": ["month_bounce"], "duration": ["month_avg_duration"],
+        "bounce_sessions": ["sessions", "month_users"],
         "gsc": ["gsc_impressions"], "tp_clicks": ["tp_clicks"], "tp_orders": ["tp_bookings"],
         "revenue": ["month_revenue", "tp_revenue"], "email": ["total_subscribers", "ml_total_subscribers"],
         "new_content": ["monthly_new_posts", "new_posts"], "total_content": ["total_posts"],
@@ -32,6 +38,7 @@ SCOPE_FIELDS = {
     },
     "quarterly": {
         "users": ["quarter_users"], "bounce": ["quarter_bounce"], "duration": ["quarter_avg_duration"],
+        "bounce_sessions": ["sessions", "quarter_users"],
         "gsc": ["gsc_impressions"], "tp_clicks": ["tp_clicks"], "tp_orders": ["tp_bookings"],
         "revenue": ["quarter_revenue", "tp_revenue"], "email": ["ml_total_subscribers", "total_subscribers"],
         "new_content": ["quarter_new_posts", "new_posts"], "total_content": ["total_posts"],
@@ -39,6 +46,7 @@ SCOPE_FIELDS = {
     },
     "yearly": {
         "users": ["year_users"], "bounce": ["year_bounce"], "duration": ["year_avg_duration"],
+        "bounce_sessions": ["sessions", "year_users"],
         "gsc": ["gsc_impressions"], "tp_clicks": ["tp_clicks"], "tp_orders": ["tp_bookings"],
         "revenue": ["year_revenue", "tp_revenue"], "email": ["ml_total_subscribers", "total_subscribers"],
         "new_content": ["year_new_posts", "new_posts"], "total_content": ["total_posts"],
@@ -120,11 +128,16 @@ def generate_advice(data: dict, scope: str) -> list:
                        "detail": "落地页承接差：帖子标题/首图需与页面首屏对齐，文首加目录+核心结论，文末加订阅CTA"})
 
     # 3) 跳出率/时长
-    if users >= 5 and bounce > 80:
-        advice.append({"icon": "🟡", "title": f"跳出率 {bounce:.0f}% 偏高",
+    # daily：用 7 日滚动口径 + 最低会话门槛（30 会话），避免 1-15 访客的单日噪声天天告警；
+    # 其余周期本身已是聚合窗口，沿用原口径（users >= 5）。
+    sample = _get(data, f["bounce_sessions"]) if scope == "daily" else users
+    min_sample = 30 if scope == "daily" else 5
+    window = "（7日滚动）" if scope == "daily" else ""
+    if sample >= min_sample and bounce > 80:
+        advice.append({"icon": "🟡", "title": f"跳出率{window} {bounce:.0f}% 偏高",
                        "detail": "首屏未抓住用户：检查页面加载速度、首屏内容与访客预期匹配度"})
-    if users >= 5 and duration > 0 and duration < 30:
-        advice.append({"icon": "🟡", "title": f"平均时长 {duration:.0f} 秒",
+    if sample >= min_sample and duration > 0 and duration < 30:
+        advice.append({"icon": "🟡", "title": f"平均时长{window} {duration:.0f} 秒",
                        "detail": "内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"})
 
     # 4) 变现

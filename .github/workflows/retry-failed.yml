@@ -2,7 +2,7 @@ name: Retry Failed Jobs
 
 on:
   workflow_run:
-    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor"]
+    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor", "Feishu Daily Report"]
     types: [completed]
     branches: [main]
 

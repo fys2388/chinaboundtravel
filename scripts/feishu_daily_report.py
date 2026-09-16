@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 feishu_daily_report.py - ChinaBound Travel 飞书每日日报推送
 功能：流量、内容、联盟、运维四大核心板块数据推送
@@ -19,7 +19,7 @@ import requests
 import hashlib
 import hmac
 import base64
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # GA4服务账号认证依赖
@@ -349,6 +349,16 @@ class FeishuDailyReporter:
         trend_note = ""
         if (data.get("visitors") or 0) < 10:
             trend_note = "\n（INSUFFICIENT_SAMPLE：访客 < 10，低样本，百分比仅参考）"
+
+        # 7 日滚动口径行：低样本站点单日跳出率天天 >80% 属噪声，
+        # 跳出率/时长告警改用此口径（见 report_advice.generate_advice）
+        roll_line = ""
+        if (data.get("sessions_7d") or 0) > 0 or (data.get("bounce_rate_7d") or 0) > 0:
+            roll_line = (
+                f"\n- 7日滚动: 跳出率 {data.get('bounce_rate_7d', 0):.1f}% ｜ 互动率 "
+                f"{data.get('engagement_rate_7d', 0):.1f}% ｜ 会话 {data.get('sessions_7d', 0):,} 次"
+                f"（单日值仅作展示，跳出率/时长告警以滚动口径为准）"
+            )
         
         # Top 流量页面
         top_pages = data.get("top_pages", [])
@@ -496,7 +506,7 @@ class FeishuDailyReporter:
 | 互动率 | {data.get('engagement_rate', 0):.1f}% | 平均时长 | {dur_str} |
 
 **📈 同比趋势**
-- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{trend_note}{consistency_str}"""
+- 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{trend_note}{roll_line}{consistency_str}"""
                     }
                 },
                 # Top 流量来源
@@ -765,6 +775,12 @@ class FeishuDailyReporter:
             "bounce_rate": 0.0,
             "avg_session_duration": 0,
             "engagement_rate": 0.0,
+            # 7 日滚动口径（D-7..D-1）：低样本单日值噪声大，跳出率/时长告警以滚动口径为准
+            "bounce_rate_7d": 0.0,
+            "engagement_rate_7d": 0.0,
+            "avg_session_duration_7d": 0,
+            "sessions_7d": 0,
+            "visitors_7d": 0,
             "top_pages": [],
             "top_channels": [],
             "top_countries": [],
@@ -1398,6 +1414,22 @@ class FeishuDailyReporter:
                 day_trend = f"+{change:.1f}%" if change >= 0 else f"{change:.1f}%"
 
             print(f"   📊 GA4 核心数据: {yesterday_users} 访客, {yesterday_sessions} 会话, 跳出率 {yesterday_bounce}%")
+
+            # === 7 日滚动口径（D-7..D-1）===
+            # 单日样本常只有 1-15 会话，跳出率天天 >80% 属噪声。
+            # report_advice.generate_advice 的跳出率/时长告警改用此滚动口径 + 最低会话门槛；
+            # 单日值仍原样展示在流量总览里，不做隐藏。
+            roll_start = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+            roll_result = self._ga4_run_report(headers, {
+                "dateRanges": [{"startDate": roll_start, "endDate": yesterday}],
+                "metrics": core_metrics,
+                "dimensions": []
+            })
+            roll_vals = roll_result.get("rows", [{}])[0].get("metricValues") if (roll_result and roll_result.get("rows")) else None
+            if roll_vals:
+                print(f"   📤 GA4 7日滚动({roll_start}~{yesterday}): {[v.get('value') for v in roll_vals]}")
+            else:
+                print("   ⚠️ GA4 7日滚动口径返回空数据，告警回退到单日值")
             
             # === 周同比（昨日 vs 上周同日 D-7） ===
             week_payload = {
@@ -1494,6 +1526,13 @@ class FeishuDailyReporter:
                 "bounce_rate": yesterday_bounce,
                 "avg_session_duration": yesterday_avg_duration,
                 "engagement_rate": yesterday_engagement,
+                # 7 日滚动口径；core_metrics 顺序: activeUsers, sessions, screenPageViews,
+                # engagementRate, averageSessionDuration, bounceRate
+                "bounce_rate_7d": self._parse_ga4_rate(roll_vals[5].get("value", "0")) if roll_vals else yesterday_bounce,
+                "engagement_rate_7d": self._parse_ga4_rate(roll_vals[3].get("value", "0")) if roll_vals else yesterday_engagement,
+                "avg_session_duration_7d": int(float(roll_vals[4].get("value", "0"))) if roll_vals else yesterday_avg_duration,
+                "sessions_7d": int(roll_vals[1].get("value", "0")) if roll_vals else yesterday_sessions,
+                "visitors_7d": int(roll_vals[0].get("value", "0")) if roll_vals else yesterday_users,
                 "top_channels": top_channels,
                 "top_countries": top_countries,
                 "top_pages": top_pages
@@ -1891,7 +1930,11 @@ class FeishuDailyReporter:
         reports_dir = BLOG_ROOT / "reports" / "feishu_daily"
         reports_dir.mkdir(parents=True, exist_ok=True)
         
-        report_path = reports_dir / f"report_{datetime.now().strftime('%Y-%m-%d')}.json"
+        # 文件名必须与 feishu-daily-report.yml 的 check-duplicate 步骤对齐（daily_${TODAY}.json），
+        # 否则去重闸门永远读不到文件，重复触发会重复推送飞书。
+        # 用 UTC 与 workflow 的 TODAY=$(date -u +%Y-%m-%d) 保持同一口径。
+        utc_today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        report_path = reports_dir / f"daily_{utc_today}.json"
         
         with open(report_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
