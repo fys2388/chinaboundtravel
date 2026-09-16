@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-e464169c4991"
-title: "Ele.Me China: Meituan & Ele.me"
+title: "Ele.Me China 2026: Meituan & Ele.me"
 slug: "chinese-food-delivery-meituan-eleme-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
@@ -26,7 +26,7 @@ params:
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp"
 categories: ["cities", "food"]
-last_updated: "2026-09-15"
+last_updated: "2026-09-16"
 
 ---
 ## The Foreigner's Guide to Chinese Food Delivery (Meituan & Ele.me)
@@ -256,3 +256,17 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+## FAQ
+
+### Is this guide up to date for 2026?
+
+Yes, this guide was reviewed and updated for 2026. Policies and prices can change, so always double-check with official sources before your trip.
+
+### Do I need travel insurance for China?
+
+Travel insurance is highly recommended. Medical costs can be high for foreigners, and trip cancellation coverage provides peace of mind.
+
+### What's the best time of year to visit?
+
+Spring (April-May) and autumn (September-October) offer the most comfortable weather across most of China. Summer is hot and rainy in many regions; winter is cold but less crowded.

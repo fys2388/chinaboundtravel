@@ -47,6 +47,30 @@
         "position": 66.9
       },
       "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "action": "first_paragraph_intent_flagged",
+      "date": "2026-09-16T06:54:13.710648",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 433,
+        "clicks": 0,
+        "position": 66.9
+      },
+      "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "action": "title: 'Ele.Me China: Meituan & Ele.me' -> 'Ele.Me China 2026: Meituan & Ele.me', faq section added",
+      "date": "2026-09-16T06:54:14.658564",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 330,
+        "clicks": 0,
+        "position": 17.6
+      },
+      "metrics_after": {}
     }
   ]
 }
