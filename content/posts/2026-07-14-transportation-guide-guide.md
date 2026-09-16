@@ -123,3 +123,5 @@ If you're interested in learning more about China's transportation system or pla
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [China Packing List 2026: What to Bring](https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/)
 - [Yunnan Travel: Rice Terraces & Ancient Towns](https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)

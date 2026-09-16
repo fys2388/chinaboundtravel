@@ -129,3 +129,5 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)

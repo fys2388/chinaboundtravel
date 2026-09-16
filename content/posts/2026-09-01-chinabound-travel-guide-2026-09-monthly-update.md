@@ -123,3 +123,5 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - [China Travel Guide: July 2026 Updates](/posts/chinabound-travel-guide-2026-07-monthly-update/)
 
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

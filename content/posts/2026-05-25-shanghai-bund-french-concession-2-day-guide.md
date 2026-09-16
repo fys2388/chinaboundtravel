@@ -169,3 +169,5 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

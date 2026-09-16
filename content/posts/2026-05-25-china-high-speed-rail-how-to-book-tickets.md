@@ -296,3 +296,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

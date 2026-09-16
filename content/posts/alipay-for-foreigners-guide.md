@@ -223,3 +223,5 @@ For international travelers comparing options, flight search platforms help you 
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
 - [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
+
+- [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)

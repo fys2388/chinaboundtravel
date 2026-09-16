@@ -264,6 +264,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
 
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

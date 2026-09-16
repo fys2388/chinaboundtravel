@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-09-15"
+last_updated: "2026-09-16"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 

@@ -156,3 +156,5 @@ Here are some related articles on chinaboundtravel.com that you might enjoy:
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [Foodie's Guide to China: Dishes You Must Try](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
+- [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)

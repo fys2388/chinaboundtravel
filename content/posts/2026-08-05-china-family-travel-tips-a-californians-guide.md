@@ -133,3 +133,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Where to Stay in China: Hotels & Budget](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [China Packing List 2026: What to Bring](https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/)
+
+- [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)

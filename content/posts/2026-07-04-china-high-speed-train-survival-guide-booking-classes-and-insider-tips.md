@@ -190,3 +190,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
 
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
+
+- [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)

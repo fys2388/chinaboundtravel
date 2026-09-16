@@ -135,3 +135,5 @@ Avoid sharing passport details or verification codes with third parties.
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 - [China Travel Safety 2026: Guide for Travelers](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 - [China Photography Guide: Top Spots & Tips](https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
