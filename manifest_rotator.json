@@ -218,8 +218,19 @@
         "pinterest": "2026-09-15"
       },
       "distribute_count": 4
+    },
+    "wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide": {
+      "title": "WeChat Pay Setup Guide for Foreigners (2026)",
+      "last_distributed": "2026-09-16",
+      "platforms": {
+        "twitter": "2026-09-16",
+        "facebook": "2026-09-16",
+        "instagram": "2026-09-16",
+        "pinterest": "2026-09-16"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-09-15T17:50:54.294628+00:00",
-  "total_distributions": 83
+  "last_run": "2026-09-16T07:01:22.752073+00:00",
+  "total_distributions": 87
 }
