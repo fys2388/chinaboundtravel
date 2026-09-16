@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """生成运营看板 index.html — 精致深色监控中心风格"""
 import json
 import html as html_lib
@@ -781,9 +781,11 @@ body {{
 </html>'''
 
 (ROOT / "index.html").write_text(html, encoding="utf-8")
-(ROOT / "ops-center.html").write_text(html, encoding="utf-8")
+# 注意：这里刻意不写 ops-center.html。ops-center.html 是手工维护的「统一运营中心」
+# （看板/监控/考核/成长/营收/KPI 全量版），2026-09-13 的 3a92c477 曾把生成版覆盖上去，
+# 导致该中心自那日起每 30 分钟被刷成精简监控页。ops-center.html 由 ops-dashboard-hourly.yml
+# 从本目录原样同步到 static/ops/，不要让生成器改写它。
 print(f"[OK] index.html generated: {len(html)} bytes")
-print(f"[OK] ops-center.html generated: {len(html)} bytes")
 print(f"   Workflow categories: {list(categories.keys())}")
 print(f"   Agents: {healthy_agents}/{total_agents} healthy")
 print(f"   Experiments: {len(data['experiments'])}")

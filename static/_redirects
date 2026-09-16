@@ -1,4 +1,4 @@
-﻿# 1) Non-www -> www redirect (keep first)
+# 1) Non-www -> www redirect (keep first)
 http://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 
@@ -108,11 +108,15 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/accommodation-tips-guide/ 301
 /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/food-recommendations-guide/ 301
 
-# ===== 统一运营中心：旧路径重定向到新版 /ops-dashboard/ =====
-# 2026-09-13: 反转方向——新版仪表盘在 /ops-dashboard/（每30分钟自动刷新数据），
-# 旧版 /ops/ops-center 自 2026-09-07 后停止更新，全部 301 到新版。
-/ops/ops-center    /ops-dashboard/  301
-/ops/              /ops-dashboard/  301
-/ops/index         /ops-dashboard/  301
-/ops/agent-kpi     /ops-dashboard/  301
-/ops/agent-growth  /ops-dashboard/  301
+# ===== 统一运营中心（2026-09-16 修正方向）=====
+# /ops/ops-center.html = 手工维护的「统一运营中心」（看板/监控/考核/成长/营收/KPI 全量版）
+# /ops-dashboard/      = ops-dashboard/build.py 生成的精简监控页
+# 09-13 曾把方向配成「/ops/ → /ops-dashboard/」，但 /ops-dashboard/ 才是内容更少的那一版，
+# 结果是两个入口都只看到精简页。现在统一指向 /ops/ops-center.html。
+# 顺序要求：更具体的规则在前；/ops/ 是精确匹配，不影响 /ops/*.json 的数据请求。
+/ops-dashboard/    /ops/ops-center.html  301
+/ops/ops-center    /ops/ops-center.html  301
+/ops/index         /ops/ops-center.html  301
+/ops/agent-kpi     /ops/ops-center.html  301
+/ops/agent-growth  /ops/ops-center.html  301
+/ops/              /ops/ops-center.html  301

@@ -1,4 +1,4 @@
-﻿name: Ops Dashboard Refresh
+name: Ops Dashboard Refresh
 
 on:
   schedule:
@@ -70,11 +70,18 @@ jobs:
           mkdir -p static/ops-dashboard
           cp ops-dashboard/index.html static/ops-dashboard/index.html
           cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
-          # 同步旧版 /ops/ 目录（2026-09-13: 双保险，_redirects 已将旧路径301到新版）
-          mkdir -p static/ops
-          cp ops-dashboard/index.html static/ops/ops-center.html
+          # 同步 /ops/ 目录：
+          #   ops-center.html 是手工维护的「统一运营中心」（看板/监控/考核/成长/营收/KPI 全量版），
+          #   必须从本目录原样同步，绝不能用 build.py 的生成版覆盖它。
+          #   2026-09-13 的 3a92c477 曾在这里 cp index.html 覆盖 ops-center.html，
+          #   之后每 30 分钟刷新一次 = 统一中心被持续刷回精简监控页。
+          #   js/echarts.min.js 是统一中心的图表依赖（HTML 里写死 ./js/echarts.min.js），
+          #   此前从未发布到 /ops/，导致恢复后所有图表 404。
+          mkdir -p static/ops static/ops/js
+          cp ops-dashboard/ops-center.html static/ops/ops-center.html
           cp ops-dashboard/dashboard_data.json static/ops/dashboard_data.json
-          git add static/ops-dashboard/index.html static/ops-dashboard/dashboard_data.json ops-dashboard/dashboard_data.json static/ops/ops-center.html static/ops/dashboard_data.json reports/daily_issues/agent_tasks reports/daily_issues/execution_log.json
+          cp ops-dashboard/js/echarts.min.js static/ops/js/echarts.min.js
+          git add static/ops-dashboard/index.html static/ops-dashboard/dashboard_data.json ops-dashboard/dashboard_data.json static/ops/ops-center.html static/ops/dashboard_data.json static/ops/js/echarts.min.js reports/daily_issues/agent_tasks reports/daily_issues/execution_log.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
