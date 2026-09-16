@@ -1,0 +1,67 @@
+{
+  "agent": "social",
+  "agent_name": "Social Intelligence Agent (社媒智能优化)",
+  "task_id": "task_2026-09-16_social",
+  "created_at": "2026-09-16T02:25:36.044009+00:00",
+  "updated_at": "2026-09-16T02:25:36.261229",
+  "target_date": "2026-09-16",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "issue_f8dc6414ad18",
+      "type": "social_no_traffic",
+      "title": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "page": "",
+      "file": "",
+      "evidence": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source": "daily_issue_router",
+      "source_file": "social_daily_2026-09-14.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "social",
+      "detected_at": "2026-09-16T02:25:36.028831"
+    }
+  ],
+  "priority_issue": {
+    "id": "issue_f8dc6414ad18",
+    "type": "social_no_traffic",
+    "title": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+    "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+    "page": "",
+    "file": "",
+    "evidence": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+    "recommended_action": "Review the issue and apply the documented remediation.",
+    "severity": "high",
+    "agent": "social",
+    "action": "audit_links_and_cta",
+    "source": "daily_issue_router",
+    "source_file": "social_daily_2026-09-14.json",
+    "task_source": "daily_issue_router",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "social",
+    "detected_at": "2026-09-16T02:25:36.028831"
+  },
+  "expected_actions": [
+    "audit_links_and_cta"
+  ],
+  "status": "completed",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": "2026-09-16T02:25:36.261234",
+    "note": "resolved=0, need_manual=0, failed=0"
+  }
+}

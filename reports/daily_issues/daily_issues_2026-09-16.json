@@ -1,0 +1,397 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-09-16T02:25:36.032510",
+  "target_date": "2026-09-16",
+  "total_issues": 9,
+  "total_assignments": 4,
+  "issues": [
+    {
+      "id": "issue_f8dc6414ad18",
+      "type": "social_no_traffic",
+      "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-09-14.json",
+      "detected_at": "2026-09-16T02:25:36.028831",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "social"
+    },
+    {
+      "id": "issue_6d8067cb95cf",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: placeholder",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032372",
+      "status": "new",
+      "assigned": true,
+      "file": "content/search.md",
+      "assigned_to": "content"
+    },
+    {
+      "id": "issue_6d8067cb95cf",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: placeholder",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032383",
+      "status": "new",
+      "assigned": true,
+      "file": "content/contact.md",
+      "assigned_to": "content"
+    },
+    {
+      "id": "issue_675b954ac4ec",
+      "type": "draft_leak",
+      "description": "draft:true的文章可能已发布到线上",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032387",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "assigned_to": "ops"
+    },
+    {
+      "id": "issue_6bfcf96ec82c",
+      "type": "title_too_short",
+      "description": "Title过短(19字符<20)",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032391",
+      "status": "new",
+      "assigned": true,
+      "file": "content/success.md",
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_f9ec2a06d856",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(166字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032394",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_6c7662e8ae47",
+      "type": "title_too_short",
+      "description": "Title过短(2字符<20)",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032397",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_13f04bdb8b65",
+      "type": "title_too_short",
+      "description": "Title过短(17字符<20)",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032403",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_3e290ac9bd72",
+      "type": "title_too_short",
+      "description": "Title过短(6字符<20)",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "detected_at": "2026-09-16T02:25:36.032410",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+      "assigned_to": "seo"
+    }
+  ],
+  "assignments": [
+    {
+      "agent": "seo",
+      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+      "task_id": "task_2026-09-16_seo",
+      "created_at": "2026-09-16T02:25:36.032499",
+      "target_date": "2026-09-16",
+      "issue_count": 5,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 4,
+        "low": 1
+      },
+      "issues": [
+        {
+          "id": "issue_6bfcf96ec82c",
+          "type": "title_too_short",
+          "description": "Title过短(19字符<20)",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032391",
+          "status": "new",
+          "assigned": true,
+          "file": "content/success.md",
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_6c7662e8ae47",
+          "type": "title_too_short",
+          "description": "Title过短(2字符<20)",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032397",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_13f04bdb8b65",
+          "type": "title_too_short",
+          "description": "Title过短(17字符<20)",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032403",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_3e290ac9bd72",
+          "type": "title_too_short",
+          "description": "Title过短(6字符<20)",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032410",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+          "assigned_to": "seo"
+        },
+        {
+          "id": "issue_f9ec2a06d856",
+          "type": "meta_description_too_long",
+          "description": "Meta description过长(166字符)",
+          "severity": "low",
+          "agent": "seo",
+          "action": "optimize_meta",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032394",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+          "assigned_to": "seo"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_6bfcf96ec82c",
+        "type": "title_too_short",
+        "description": "Title过短(19字符<20)",
+        "severity": "medium",
+        "agent": "seo",
+        "action": "optimize_title",
+        "source_file": "site_health_issues_2026-09-16.json",
+        "detected_at": "2026-09-16T02:25:36.032391",
+        "status": "new",
+        "assigned": true,
+        "file": "content/success.md",
+        "assigned_to": "seo"
+      },
+      "expected_actions": [
+        "optimize_meta",
+        "optimize_title"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "content",
+      "agent_name": "Content Intelligence Agent (内容智能优化)",
+      "task_id": "task_2026-09-16_content",
+      "created_at": "2026-09-16T02:25:36.032491",
+      "target_date": "2026-09-16",
+      "issue_count": 2,
+      "severity_summary": {
+        "critical": 0,
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_6d8067cb95cf",
+          "type": "content_placeholder",
+          "description": "发现模板占位符: placeholder",
+          "severity": "high",
+          "agent": "content",
+          "action": "fix_placeholder",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032372",
+          "status": "new",
+          "assigned": true,
+          "file": "content/search.md",
+          "assigned_to": "content"
+        },
+        {
+          "id": "issue_6d8067cb95cf",
+          "type": "content_placeholder",
+          "description": "发现模板占位符: placeholder",
+          "severity": "high",
+          "agent": "content",
+          "action": "fix_placeholder",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032383",
+          "status": "new",
+          "assigned": true,
+          "file": "content/contact.md",
+          "assigned_to": "content"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_6d8067cb95cf",
+        "type": "content_placeholder",
+        "description": "发现模板占位符: placeholder",
+        "severity": "high",
+        "agent": "content",
+        "action": "fix_placeholder",
+        "source_file": "site_health_issues_2026-09-16.json",
+        "detected_at": "2026-09-16T02:25:36.032372",
+        "status": "new",
+        "assigned": true,
+        "file": "content/search.md",
+        "assigned_to": "content"
+      },
+      "expected_actions": [
+        "fix_placeholder"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "social",
+      "agent_name": "Social Intelligence Agent (社媒智能优化)",
+      "task_id": "task_2026-09-16_social",
+      "created_at": "2026-09-16T02:25:36.032483",
+      "target_date": "2026-09-16",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_f8dc6414ad18",
+          "type": "social_no_traffic",
+          "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+          "severity": "high",
+          "agent": "social",
+          "action": "audit_links_and_cta",
+          "source_file": "social_daily_2026-09-14.json",
+          "detected_at": "2026-09-16T02:25:36.028831",
+          "status": "new",
+          "assigned": true,
+          "assigned_to": "social"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_f8dc6414ad18",
+        "type": "social_no_traffic",
+        "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+        "severity": "high",
+        "agent": "social",
+        "action": "audit_links_and_cta",
+        "source_file": "social_daily_2026-09-14.json",
+        "detected_at": "2026-09-16T02:25:36.028831",
+        "status": "new",
+        "assigned": true,
+        "assigned_to": "social"
+      },
+      "expected_actions": [
+        "audit_links_and_cta"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "ops",
+      "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
+      "task_id": "task_2026-09-16_ops",
+      "created_at": "2026-09-16T02:25:36.032496",
+      "target_date": "2026-09-16",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_675b954ac4ec",
+          "type": "draft_leak",
+          "description": "draft:true的文章可能已发布到线上",
+          "severity": "high",
+          "agent": "ops",
+          "action": "diagnose_and_fix",
+          "source_file": "site_health_issues_2026-09-16.json",
+          "detected_at": "2026-09-16T02:25:36.032387",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+          "assigned_to": "ops"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_675b954ac4ec",
+        "type": "draft_leak",
+        "description": "draft:true的文章可能已发布到线上",
+        "severity": "high",
+        "agent": "ops",
+        "action": "diagnose_and_fix",
+        "source_file": "site_health_issues_2026-09-16.json",
+        "detected_at": "2026-09-16T02:25:36.032387",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+        "assigned_to": "ops"
+      },
+      "expected_actions": [
+        "diagnose_and_fix"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -3,14 +3,14 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-16_seo",
   "created_at": "2026-09-16T01:01:49.625430+00:00",
-  "updated_at": "2026-09-16T02:01:44.408810",
+  "updated_at": "2026-09-16T02:25:36.278392",
   "target_date": "2026-09-16",
-  "issue_count": 422,
+  "issue_count": 427,
   "severity_summary": {
     "critical": 149,
     "high": 83,
-    "medium": 190,
-    "low": 0
+    "medium": 194,
+    "low": 1
   },
   "issues": [
     {
@@ -8414,7 +8414,27 @@
       "detected_at": "2026-09-16T01:01:49.624863+00:00"
     },
     {
-      "id": "site_health-741bd6f1404750f",
+      "id": "issue_13f04bdb8b65",
+      "type": "title_too_short",
+      "title": "Title过短(17字符<20)",
+      "description": "Title过短(17字符<20)",
+      "page": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "evidence": "Title过短(17字符<20)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-16T02:25:36.032403"
+    },
+    {
+      "id": "site_health-1cce1b8aca777406",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -8431,10 +8451,70 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-16T02:01:43.590896+00:00"
+      "detected_at": "2026-09-16T02:25:36.095549+00:00"
     },
     {
-      "id": "site_health-74239e36457c94f9",
+      "id": "issue_6c7662e8ae47",
+      "type": "title_too_short",
+      "title": "Title过短(2字符<20)",
+      "description": "Title过短(2字符<20)",
+      "page": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+      "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+      "evidence": "Title过短(2字符<20)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-16T02:25:36.032397"
+    },
+    {
+      "id": "issue_3e290ac9bd72",
+      "type": "title_too_short",
+      "title": "Title过短(6字符<20)",
+      "description": "Title过短(6字符<20)",
+      "page": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+      "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+      "evidence": "Title过短(6字符<20)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-16T02:25:36.032410"
+    },
+    {
+      "id": "issue_6bfcf96ec82c",
+      "type": "title_too_short",
+      "title": "Title过短(19字符<20)",
+      "description": "Title过短(19字符<20)",
+      "page": "content/success.md",
+      "file": "content/success.md",
+      "evidence": "Title过短(19字符<20)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-16T02:25:36.032391"
+    },
+    {
+      "id": "site_health-7b07e5f915e1cc11",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
@@ -8451,7 +8531,27 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-16T02:01:43.590904+00:00"
+      "detected_at": "2026-09-16T02:25:36.095554+00:00"
+    },
+    {
+      "id": "issue_f9ec2a06d856",
+      "type": "meta_description_too_long",
+      "title": "Meta description过长(166字符)",
+      "description": "Meta description过长(166字符)",
+      "page": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "evidence": "Meta description过长(166字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-16T02:25:36.032394"
     }
   ],
   "priority_issue": {
@@ -8475,13 +8575,15 @@
     "detected_at": "2026-09-16T01:01:49.622924+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "optimize_meta",
+    "optimize_title"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=5, failed=0"
   }
 }

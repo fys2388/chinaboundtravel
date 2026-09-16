@@ -3,12 +3,12 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-09-16_content",
   "created_at": "2026-09-16T01:01:49.633426+00:00",
-  "updated_at": "2026-09-16T02:01:44.387423",
+  "updated_at": "2026-09-16T02:25:36.251718",
   "target_date": "2026-09-16",
-  "issue_count": 8,
+  "issue_count": 10,
   "severity_summary": {
     "critical": 0,
-    "high": 7,
+    "high": 9,
     "medium": 1,
     "low": 0
   },
@@ -114,7 +114,27 @@
       "detected_at": "2026-09-16T01:01:49.623279+00:00"
     },
     {
-      "id": "site_health-52cef4a65e864c7d",
+      "id": "issue_6d8067cb95cf",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/contact.md",
+      "file": "content/contact.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-16T02:25:36.032383"
+    },
+    {
+      "id": "site_health-bcabb40ed1cfbf0",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +151,30 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-16T02:01:43.589106+00:00"
+      "detected_at": "2026-09-16T02:25:36.094649+00:00"
     },
     {
-      "id": "site_health-9d622b3c1b34250",
+      "id": "issue_6d8067cb95cf",
+      "type": "content_placeholder",
+      "title": "发现模板占位符: placeholder",
+      "description": "发现模板占位符: placeholder",
+      "page": "content/search.md",
+      "file": "content/search.md",
+      "evidence": "发现模板占位符: placeholder",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-16T02:25:36.032372"
+    },
+    {
+      "id": "site_health-dbca0785b9b8bdf",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -151,7 +191,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-09-16T02:01:43.589098+00:00"
+      "detected_at": "2026-09-16T02:25:36.094644+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -195,6 +235,7 @@
     "detected_at": "2026-09-16T01:01:49.623258+00:00"
   },
   "expected_actions": [
+    "fix_placeholder",
     "manual_review"
   ],
   "status": "partial",
@@ -202,6 +243,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=6, failed=0"
+    "note": "resolved=0, need_manual=8, failed=0"
   }
 }
