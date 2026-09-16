@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-15T17:39:37",
+  "updated_at": "2026-09-16T05:53:54",
   "items": [
     {
       "id": "soc-000001",
@@ -1719,7 +1719,7 @@
       "type": "tip",
       "caption": "Essential Transport tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Transportation Guide for European' (platform x). Scene: Chinese train ticket and platform. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Travelers. Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-x-tip-d3b0d33b.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -1734,7 +1734,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "6bc2bf39c4f4"
+      "_sig": "6bc2bf39c4f4",
+      "image_generated": true
     },
     {
       "id": "soc-000068",
@@ -1744,7 +1745,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about Transport — practical lessons from the ground.\n\n• Travelers. Research-based practical guidance for international travelers planning a China trip\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'China Transportation Guide for European' (platform fb). Scene: Chinese train ticket and platform. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Travelers. Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-fb-story-fd6321ba.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -1759,7 +1760,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "d14c6b6aafd6"
+      "_sig": "d14c6b6aafd6",
+      "image_generated": true
     },
     {
       "id": "soc-000069",
@@ -1769,7 +1771,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Transport: what to see and capture.\n\n· Travelers. Research-based practical guidance for international travelers planning a China trip\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China Transportation Guide for European' (platform ig). Scene: Chinese train ticket and platform. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Travelers. Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-ig-visual-132d60ee.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -1784,7 +1786,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "782f8746f405"
+      "_sig": "782f8746f405",
+      "image_generated": true
     },
     {
       "id": "soc-000070",
@@ -1794,7 +1797,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nChina Transportation Guide for European | Everything you need to know about Transport — in one practical guide.\n\nTravelers. Research-based practical guidance for international travelers planning a China trip. Check official source\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'China Transportation Guide for European' (platform pinterest). Scene: Chinese train ticket and platform. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Travelers. Research-based practical guidance for international travelers planning a China trip. Check official source.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-chinas-transportation-a-calif-pinterest-conversion-abeb1a62.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -1809,7 +1812,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "c00f010aba76"
+      "_sig": "c00f010aba76",
+      "image_generated": true
     },
     {
       "id": "soc-000071",
@@ -1819,7 +1823,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Tea every traveler should know. → https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'Is China Safe in 2026? Honest Guide' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-x-knowledge-4a9d43b3.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -1834,7 +1838,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "a6dc0871efd8"
+      "_sig": "a6dc0871efd8",
+      "image_generated": true
     },
     {
       "id": "soc-000072",
@@ -5875,8 +5880,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5935,6 +5940,131 @@
         "platform": "ig"
       },
       "_sig": "528946edea6a"
+    },
+    {
+      "id": "soc-000236",
+      "source_article": "7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Itinerary every traveler should know.\n\n· The Honest 7-Day China Itinerary No Fluff, No Gatekeeping\n· Day-by-Day Breakdown\n· Days 1-3: Beijing Imperial China at Its Peak\n\nRead the full guide: https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260916&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional knowledge social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform ig). Scene: China travel map with landmarks and compass. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260916"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "b1f8abda789e"
+    },
+    {
+      "id": "soc-000237",
+      "source_article": "7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 | Essential Itinerary tips most first-time visitors miss.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260916&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional tip social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform pinterest). Scene: China travel map with landmarks and compass. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260916"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "5edeb5895480"
+    },
+    {
+      "id": "soc-000238",
+      "source_article": "7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "platform": "x",
+      "type": "story",
+      "caption": "What travelers discover about Itinerary — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260916&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional story social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform x). Scene: China travel map with landmarks and compass. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260916"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "db00d17a2c9f"
+    },
+    {
+      "id": "soc-000239",
+      "source_article": "7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Itinerary: what to see and capture.\n\n• 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260916&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional visual social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform fb). Scene: China travel map with landmarks and compass. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260916"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "b420a0f3ad9c"
+    },
+    {
+      "id": "soc-000240",
+      "source_article": "7-day-china-itinerary-beijing-xian-shanghai-first-timers",
+      "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Itinerary — in one practical guide.\n\n· 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nRead the full guide: https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260916&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional conversion social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform ig). Scene: China travel map with landmarks and compass. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260916"
+      },
+      "status": "已发布",
+      "publish_date": "2026-09-16",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "b27f158ce87b"
     }
   ]
 }
