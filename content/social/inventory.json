@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-16T05:53:54",
+  "updated_at": "2026-09-16T17:37:54",
   "items": [
     {
       "id": "soc-000001",
@@ -1924,7 +1924,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Tea — in one practical guide. → https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'Is China Safe in 2026? Honest Guide' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-x-conversion-6da08bb8.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -1939,7 +1939,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "f37b77ba0e26"
+      "_sig": "f37b77ba0e26",
+      "image_generated": true
     },
     {
       "id": "soc-000076",
@@ -1949,7 +1950,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\n💡 Research-backed facts about Tea every traveler should know.\n\n• China Transportation Guide: Navigating the Middle Kingdom with Ease\n• The Anatomy of a Chinese Train Station\n• Buying Train Tickets in China\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional knowledge social graphic for 'China Transportation Guide: Trains, Subways' (platform fb). Scene: modern Chinese metro station. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China transportation complete guide 2026: navigate with tested strategies from our editorial team.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/transportation-guide-fb-knowledge-0578b5c5.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -1964,7 +1965,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "3ce5bae00e70"
+      "_sig": "3ce5bae00e70",
+      "image_generated": true
     },
     {
       "id": "soc-000077",
@@ -5905,8 +5907,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5955,8 +5957,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
