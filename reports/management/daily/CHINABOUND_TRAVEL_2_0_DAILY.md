@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-09-14 (Asia/Shanghai)
-- as_of: 2026-09-14
+- Generated: 2026-09-16 (Asia/Shanghai)
+- as_of: 2026-09-16
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
