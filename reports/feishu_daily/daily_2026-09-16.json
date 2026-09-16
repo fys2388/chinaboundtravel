@@ -1,0 +1,183 @@
+{
+  "date": "2026-09-16",
+  "site_up": true,
+  "response_time": 172.518,
+  "visitors": 5,
+  "sessions": 5,
+  "requests": 5,
+  "visitors_trend": "-28.6%",
+  "week_trend": "+66.7%",
+  "month_trend": "+400.0%",
+  "bounce_rate": 100.0,
+  "avg_session_duration": 10,
+  "engagement_rate": 0.0,
+  "bounce_rate_7d": 53.6,
+  "engagement_rate_7d": 46.4,
+  "avg_session_duration_7d": 174,
+  "sessions_7d": 56,
+  "visitors_7d": 37,
+  "top_pages": [
+    {
+      "path": "/",
+      "views": 2
+    },
+    {
+      "path": "/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "views": 2
+    },
+    {
+      "path": "/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Cross-network",
+      "users": 2,
+      "sessions": 2
+    },
+    {
+      "channel": "Direct",
+      "users": 2,
+      "sessions": 2
+    },
+    {
+      "channel": "Organic Social",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 5
+    }
+  ],
+  "indexed_pages": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 0,
+  "gsc_clicks": 0,
+  "gsc_ctr": 0.0,
+  "gsc_errors": 0,
+  "gsc_week_trend": "-100.0%",
+  "gsc_month_trend": "-100.0%",
+  "top_keywords": [],
+  "total_posts": 63,
+  "new_posts": 0,
+  "pending_posts": 0,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 4,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 3,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": null,
+  "high_priority_todos": [
+    "🟡 日访问用户：当前 5人 / 目标 7人（71%），保持推进",
+    "🟡 联盟 4 次点击 / 0 转化：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估",
+    "🟠 自然搜索仅 0/5 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+    "🟠 今日无搜索曝光（新站正常波动）：核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）"
+  ],
+  "data_status": [
+    "GSC已连接，昨日搜索曝光 0（新站可能未起量，持续观察；非授权问题）",
+    "NordVPN: 需手动查看 Impact.com 后台",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-09-15",
+  "ml_zero_growth_alert": true,
+  "gh_social_success": true,
+  "agent_health": {
+    "checked_at": "2026-09-16 05:03",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-09-14 03:47:58",
+      "success": 6,
+      "failed": 1,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-09-16",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "okr_section": "---\n## 🎯 今日 OKR 速览（Q3 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 5人 | 7人 | 71% | 🟡 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟢 |\n| 日搜索曝光 | 0次 | 13次 | 0% | 🟡 |\n| 日联盟佣金 | 0$ | 1$ | 0% | 🟡 |\n| 邮件订阅 | 3人 | 1人 | 100% | ✅ |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **联盟 4 次点击 / 0 转化**：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估\n- 🟠 **自然搜索仅 0/5 人（0%）**：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）\n- 🟠 **今日无搜索曝光（新站正常波动）**：核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）",
+  "reporting_snapshot": {
+    "as_of": "2026-09-16",
+    "generated_at": "2026-09-16",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 234,
+    "gsc_clicks_28d": 0,
+    "gsc_label": "CACHED",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  }
+}
