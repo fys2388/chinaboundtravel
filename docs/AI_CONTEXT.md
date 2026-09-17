@@ -24,8 +24,12 @@
 ## 2. Current branch / commit
 
 - 本地分支：`main`
-- 本地 HEAD：`698e64b` — `fix(encoding): convert GBK-encoded report + archived content files to UTF-8`（2026-08-30 实测）
-- 线上状态：部署由 Cloudflare Pages 触发；线上验证 2026-08-30（首页 200 / canonical / Drive 正常）；GSC 服务账号已提 Owner，索引提交 20/20 success；勿在任务中自动 fetch/合并
+- 本地 HEAD：`4f4be36b` — `fix(ops): 消除 /ops-dashboard/ 重定向死循环`（2026-09-16 实测）
+- **接手第一件事：`git pull --rebase`。** 本仓库有多个机器人每 30 分钟向 main 提交，本地历史随时落后数百个提交；
+  要看线上真实代码用 `git show origin/main:<path>`，不要相信本地 checkout 里的旧内容。
+- 线上状态：push main → `deploy-cloudflare-pages.yml`（workflow 名 "Post-deploy Tasks"）→ Hugo 构建 →
+  Cloudflare Pages，约 1-2 分钟生效。线上验证 2026-09-16：`/ops-dashboard/` 301 → `/ops/ops-center` 200。
+- 工作区纪律见 `AGENTS.md`（高危命令闸门）；看板专题见 `docs/OPS_DASHBOARD_HANDOVER.md`。
 
 ## 3. Content / Reporting baseline（2.0）
 
@@ -68,7 +72,11 @@
 
 ## 7. Current task
 
-- 当前任务：2.0 工作流符合度修复（2026-08-30）
+- **2026-09-16（最新）**：运营看板回退事故已修复并上线——`/ops-dashboard/` 现落地手工维护的
+  「统一运营中心 v3.0」（966 行），根因与两个必须记住的坑见 `docs/OPS_DASHBOARD_HANDOVER.md`。
+  日报链路 4 项修复已提交（7 日滚动口径 / 去重闸门对齐 / 失败门 / 告警死别名）。
+  未做的待办集中列在该交接文档的「遗留待办」。
+- 历史任务：2.0 工作流符合度修复（2026-08-30）
   - P0-1：`REPORTING_SNAPSHOT.json` 中文乱码已修复（源 CSV 已转 UTF-8 后重生成，issue_types 中文正常，as_of 2026-08-26 保留）
   - P0-2：weekly-blog-update cron 由每日 `0 0 * * *` 改每周 `0 0 * * 1`（落实 P1-OPS-02A）
   - P0-3：GSC 服务账号提 Owner，gsc-index-submit 20/20 success
@@ -93,3 +101,53 @@
 - KPI 快照：`python scripts/reporting_kpi_engine.py --as-of YYYY-MM-DD`
 - 管理报告：`python scripts/reporting_engine.py --all --master --alerts --as-of YYYY-MM-DD`
 - 搜索：仅限任务相关目录；勿全仓扫描
+
+## 10. 运营看板（`/ops-dashboard/` · `/ops/ops-center`）
+
+- **`ops-dashboard/ops-center.html` 是手工维护文件，任何自动化都不得写入它。**
+  09-13 的 `3a92c477` 曾让 `build.py` 写它，导致每 30 分钟把统一运营中心刷成精简监控页。
+  现已修复：build.py 只写 `index.html`，hourly workflow 只 `cp` 源目录 → static。
+- **`static/_redirects` 绝不能加 `/ops/ops-center` 这条规则。** Cloudflare 会把
+  `/ops/ops-center.html` 308 到 `/ops/ops-center`，两条规则首尾相接成死循环（浏览器报超过 5 次重定向）。
+  规则目标写无扩展名 `/ops/ops-center`；规则必须精确匹配（不带 `*`），否则 `/ops/*.json` 数据请求被吞。
+- 统一中心依赖 4 个绝对路径：`/ops/dashboard_data.json`、`/ops/agent_kpi_data.json`、
+  `/ops/agent_growth_data.json`、`./js/echarts.min.js`。echarts 源文件只在 `ops-dashboard/js/`，
+  必须 `cp` 到 `static/ops/js/`，否则所有图表 404。
+- 详细留档、恢复/丢失对照、遗留待办：`docs/OPS_DASHBOARD_HANDOVER.md`
+
+## 11. 自动化并发纪律（本仓库特有）
+
+- main 上有 8 个提交身份：`fys2388`、`GitHub Action`、`github-actions[bot]`、`AI Agent Orchestrator`、
+  `Closed Loop Agent`、`chinabound-bot`、`Joran`、`SenseNova Agent`。
+- `ops-dashboard-hourly.yml`（cron `*/30 1-18 * * *` UTC，即北京时间 09:00-02:00）与
+  `site-health-daily.yml` **都会写同一批 static 文件并都跑 build.py**。
+- 因此 **push 被拒是正常的**（2026-09-16 一小时内被拒 2 次）。流程固定为：
+  改动 → 本地验证 → commit（pathspec 限定）→ `git pull --rebase` → push。
+  冲突高发文件：`static/ops/ops-center.html`、`ops-dashboard/ops-center.html`、`static/**/index.html`。
+- `site-health-daily.yml` 第 108 行是 `git add -A`（全量），会把工作区任何残留文件一起提交；
+  `ops-dashboard-hourly.yml` 用白名单。提交前 `git status` 必须干净。
+- `continue-on-error: true` 会吞掉 step 失败（job conclusion 仍为 success），
+  `retry-failed.yml` 按 `conclusion == 'failure'` 触发因而永不重跑。
+  关键 step 后须加门：`if: steps.x.outcome == 'failure'` + `run: exit 1`。
+- 敏感文件不可读/不可提交：`.env`、`config/service-account.json`、`gsc-service-account-key.json`。
+
+## 12. 环境陷阱（Windows / PowerShell，本项目实测）
+
+- PowerShell `>` 重定向产生 **UTF-16**（带 BOM）。`git show ... > file` 写出的 JSON/HTML 会损坏，
+  之后 `json.load` 报 `UnicodeDecodeError`。用 Python `subprocess.run(...).stdout` 写 bytes。
+- pwsh `-c` 内联 Python：引号会被 PowerShell 拆坏，SyntaxError 信息还显示成乱码。
+  **超过一行的 Python 一律写成 .py 文件再运行。**
+- `Get-Content` / `ConvertFrom-Json` 对中文 UTF-8 会乱码。用
+  `[IO.File]::ReadAllText(path, [Text.Encoding]::UTF8)` 或 python。
+- `git commit -m ... -- <path>` 的 pathspec **看不见 untracked 文件**；新文件要先 `git add`。
+- `git diff` 的 `CRLF will be replaced by LF` 警告无害。
+- `web_search` 工具在本环境不可用（缺 API key）；用 `web_fetch` 直接打 GitHub API（仓库是公开的）。
+
+## 13. 已知测试失败（预先存在，勿当作自己的回归，勿用 stash/reset 掩盖）
+
+- `tests/test_report_03.py::test_zero_revenue_never_converted_to_zero_dollar` — Travelpayouts `ProxyError`，环境性
+- `tests/test_growth05_first_content_action.py::test_growth05_scope_only_allowed_objects` —
+  用 `git diff 60f1c17..HEAD` 对固定基线比对，会扫到他人提交的文件
+- `::test_144h_title_and_description_updated` — 标题现为 `China 144 Hour Transit Visa: Complete Guide`，
+  测试断言 startswith `China 144-Hour Visa-Free Transit (2026 Guide)`
+- 以上均涉及 `content/`（Protected Area），修复需单独授权
