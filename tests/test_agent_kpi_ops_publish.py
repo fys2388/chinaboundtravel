@@ -46,6 +46,7 @@ def test_workflow_publishes_kpi_and_growth_to_static_ops():
 
     text = workflow.read_text(encoding="utf-8")
     assert "mkdir -p static/ops" in text, "workflow must create static/ops"
+    assert "python scripts/agent_growth_engine.py --demo" in text, "workflow must generate Growth data"
     assert "cp ops-dashboard/agent_kpi_data.json static/ops/agent_kpi_data.json" in text, "workflow must publish KPI JSON"
     assert "cp ops-dashboard/agent_growth_data.json static/ops/agent_growth_data.json" in text, "workflow must publish Growth JSON"
     assert "KPI and Growth static/ops JSON validation PASS" in text, "workflow must validate published JSON"

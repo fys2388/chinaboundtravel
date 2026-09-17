@@ -79,6 +79,10 @@ jobs:
           cp ops-dashboard/agent_kpi_data.json static/ops-dashboard/agent_kpi_data.json
           echo "KPI 监控页面已更新到 static/ops-dashboard/"
 
+      - name: Generate Agent Growth Data
+        run: |
+          python scripts/agent_growth_engine.py --demo
+
       - name: Publish Agent KPI and Growth Data to static/ops
         run: |
           test -f ops-dashboard/agent_kpi_data.json
@@ -139,6 +143,7 @@ jobs:
           git add ops-dashboard/agent_kpi_data.json ops-dashboard/agent-kpi.html static/ops-dashboard/ 2>/dev/null || true
           git add ops-dashboard/agent_growth_data.json static/ops/agent_kpi_data.json static/ops/agent_growth_data.json 2>/dev/null || true
           git add reports/agent_kpi/ 2>/dev/null || true
+          git add reports/agent_growth/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无 KPI 结果变更"
           else
@@ -155,6 +160,8 @@ jobs:
           path: |
             reports/agent_kpi/
             ops-dashboard/agent_kpi_data.json
+            reports/agent_growth/
+            ops-dashboard/agent_growth_data.json
             static/ops/agent_kpi_data.json
             static/ops/agent_growth_data.json
           retention-days: 90
