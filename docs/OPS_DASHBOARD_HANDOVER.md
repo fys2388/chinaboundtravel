@@ -76,6 +76,31 @@ Cloudflare 对**真实 `.html` 文件**启用无扩展名规范化：
    同时发布到 `static/ops/`，并通过 workflow 校验保证 source/target 一致、JSON 可解析、
    `updated_at` / `month` / `group` / `employees` 等关键字段存在。
    手动触发记录见 GitHub Actions run `35231157737`，结果 `success`。
+
+   线上闭环验证（2026-09-17 22:34 北京时间实测，非仅看 Git）：
+   - `https://www.chinaboundtravel.com/ops/agent_kpi_data.json` → 200，2558 字节，
+     `month=2026-09`、`updated_at=2026-09-17T14:04:45.153291`，与
+     `ops-dashboard/agent_kpi_data.json` 逐字节一致；
+   - `https://www.chinaboundtravel.com/ops/agent_growth_data.json` → 200，9443 字节，
+     `updated_at=2026-09-17T14:04:45.311625`，与源文件逐字节一致；
+   - 消费方路径核对：`static/ops/ops-center.html:527-528`、
+     `static/ops-dashboard/agent-kpi.html:221`、`ops-dashboard/agent-growth.html:212`
+     全部 `fetch('/ops/agent_*.json')`，与发布路径一致，无悬空引用。
+
+   Growth 生产链路已确认（`GROWTH_SOURCE = scripts/agent_growth_engine.py`，
+   `GROWTH_AUTO_REFRESH = PASS`）：workflow 调
+   `python scripts/agent_growth_engine.py --refresh-from-reports --month <月>`，
+   只从 `reports/agent_kpi/`、`reports/agent_growth/` 读已落盘考核结果，
+   不模拟、不推算、不从 KPI 数据反推；断言校验 `refresh_mode == reports_only`
+   且非模拟说明存在，否则 workflow 直接失败。
+
+   **时间戳是 UTC，不是北京时间**：GitHub runner 生成 `updated_at` 用 UTC 无时区字符串，
+   `14:04` 对应 09-17 22:04 北京时间。比对新鲜度时必须加 8 小时，
+   否则会误判「还是 14:04 没更新」。
+
+   `static/ops-dashboard/agent_kpi_data.json` 仍在发布但**无任何消费方**
+   （该目录的 HTML 也 `fetch` `/ops/` 而非同目录 JSON），属历史遗留冗余副本。
+   按 P1-OPS-01 要求暂不删除，删除需单独授权。
    后续如果再次发现陈旧数据，优先检查：
    1) workflow 是否真的运行到 publish step；
    2) `ops-dashboard/*` 源 JSON 是否被重新生成；
