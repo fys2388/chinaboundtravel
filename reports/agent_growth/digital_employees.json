@@ -1,19 +1,19 @@
 {
   "content_001": {
-    "capability": 91.0,
-    "revenue": 5600.0,
-    "exp": 3400,
-    "level": "senior",
+    "capability": 100,
+    "revenue": 11200.0,
+    "exp": 6300,
+    "level": "graduate",
     "skills": {
-      "content": 40,
-      "seo": 25,
-      "social": 25,
-      "revenue": 30,
+      "content": 70,
+      "seo": 40,
+      "social": 40,
+      "revenue": 50,
       "user_growth": 10,
       "ops": 10,
-      "data_analysis": 20
+      "data_analysis": 30
     },
-    "mentored_count": 1,
+    "mentored_count": 2,
     "kpi_history": [
       {
         "month": "2026-07",
@@ -31,7 +31,7 @@
         "score": 85
       }
     ],
-    "tasks_completed": 5,
+    "tasks_completed": 10,
     "graduated": false,
     "company_id": "GROUP",
     "id": "content_001",
@@ -119,6 +119,78 @@
         "timestamp": "2026-09-07T10:23:47.543421",
         "action": "level_up",
         "detail": "正式员工 → 骨干",
+        "exp_gain": 500
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342221",
+        "action": "learn_skill",
+        "detail": "content: 40→70 (+30级)",
+        "exp_gain": 300
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342243",
+        "action": "learn_skill",
+        "detail": "seo: 25→40 (+15级)",
+        "exp_gain": 150
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342251",
+        "action": "learn_skill",
+        "detail": "data_analysis: 20→30 (+10级)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342260",
+        "action": "complete_task",
+        "detail": "撰写10篇深度旅游攻略 (难度:hard, 收益:$800.00)",
+        "exp_gain": 200
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342268",
+        "action": "complete_task",
+        "detail": "优化20篇文章SEO (难度:normal, 收益:$500.00)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342275",
+        "action": "complete_task",
+        "detail": "创建eBook内容 (难度:expert, 收益:$1200.00)",
+        "exp_gain": 400
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342284",
+        "action": "complete_task",
+        "detail": "联盟链接内容优化 (难度:normal, 收益:$600.00)",
+        "exp_gain": 100
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.342307",
+        "action": "mentor",
+        "detail": "指导新人 content_GROUP_009",
+        "exp_gain": 300
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.343054",
+        "action": "complete_task",
+        "detail": "打造爆款内容矩阵 (难度:expert, 收益:$2500.00)",
+        "exp_gain": 400
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.343070",
+        "action": "learn_skill",
+        "detail": "revenue: 30→50 (+20级)",
+        "exp_gain": 200
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.343081",
+        "action": "learn_skill",
+        "detail": "social: 25→40 (+15级)",
+        "exp_gain": 150
+      },
+      {
+        "timestamp": "2026-09-17T13:23:49.343098",
+        "action": "level_up",
+        "detail": "骨干 → 毕业",
         "exp_gain": 500
       }
     ]
@@ -324,6 +396,35 @@
     "primary_skill": "content",
     "mentor": "content_001",
     "join_date": "2026-09-07T10:23:47.541893",
+    "growth_log": []
+  },
+  "content_GROUP_009": {
+    "capability": 50.0,
+    "revenue": 0.0,
+    "exp": 0,
+    "level": "intern",
+    "skills": {
+      "content": 10,
+      "seo": 0,
+      "social": 0,
+      "revenue": 0,
+      "user_growth": 0,
+      "ops": 0,
+      "data_analysis": 0
+    },
+    "mentored_count": 0,
+    "kpi_history": [],
+    "tasks_completed": 0,
+    "graduated": false,
+    "company_id": "GROUP",
+    "id": "content_GROUP_009",
+    "name": "内容 Agent",
+    "name_cn": "内容 Agent",
+    "emoji": "📝",
+    "role": "内容创作实习生",
+    "primary_skill": "content",
+    "mentor": "content_001",
+    "join_date": "2026-09-17T13:23:49.342301",
     "growth_log": []
   }
 }
