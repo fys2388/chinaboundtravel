@@ -112,5 +112,11 @@ summary: "plain value"
 
 def test_generator_padding_no_longer_loops():
     src = GENERATOR.read_text(encoding="utf-8")
-    assert "while len(description) < 120" not in src
-    assert '"practical guide for foreign travelers" not in description.lower()' in src
+    # 修复前：while len(description) < 120 里反复追加同一句固定短语，
+    # 极短模板会被追加 2-3 次（见本文件 docstring 的复现样例）。
+    assert "while len(description) < 120" not in src, "生成器回退到循环填充模式"
+    # 2026-09 重构后改为「按预算挑一个合适短语，追加一次即 break」。
+    # 因此兜底短语在源码里只能出现一次；出现多次说明又回到了"重复追加"。
+    phrase = "Practical guide for foreign travelers"
+    assert src.count(phrase) == 1, f"兜底短语出现 {src.count(phrase)} 次，疑似回退到重复追加"
+    assert "for extra in (" in src and "break" in src, "预算制单次追加逻辑丢失"
