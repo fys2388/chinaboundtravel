@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-17T06:00:38",
+  "updated_at": "2026-09-17T17:37:30",
   "items": [
     {
       "id": "soc-000001",
@@ -1683,8 +1683,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1912,7 +1912,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nIs China Safe in 2026? Honest Guide | Visual guide to Tea: what to see and capture.\n\nIs China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'Is China Safe in 2026? Honest Guide' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? An honest look at crime rates, common scams, and how to stay safe, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/navigating-china-with-confidence-a-calif-pinterest-visual-1b1b9a22.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -1927,7 +1927,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "7633b389ff81"
+      "_sig": "7633b389ff81",
+      "image_generated": true
     },
     {
       "id": "soc-000075",
@@ -1989,7 +1990,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Tea tips most first-time visitors miss.\n\n· China Transportation Guide: Navigating the Middle Kingdom with Ease\n· The Anatomy of a Chinese Train Station\n· Buying Train Tickets in China\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'China Transportation Guide: Trains, Subways' (platform ig). Scene: modern Chinese metro station. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China transportation complete guide 2026: navigate with tested strategies from our editorial team.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/transportation-guide-ig-tip-de6a553a.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -2004,7 +2005,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "2afc239f419a"
+      "_sig": "2afc239f419a",
+      "image_generated": true
     },
     {
       "id": "soc-000078",
@@ -2014,7 +2016,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nChina Transportation Guide: Trains, Subways | What travelers discover about Tea — practical lessons from the ground.\n\nChina transportation complete guide 2026: navigate with tested strategies from our editorial team | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'China Transportation Guide: Trains, Subways' (platform pinterest). Scene: modern Chinese metro station. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China transportation complete guide 2026: navigate with tested strategies from our editorial team.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/transportation-guide-pinterest-story-4c55673c.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2029,7 +2031,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "9dfa2fd94ef9"
+      "_sig": "9dfa2fd94ef9",
+      "image_generated": true
     },
     {
       "id": "soc-000079",
@@ -2039,7 +2042,7 @@
       "type": "visual",
       "caption": "Visual guide to Tea: what to see and capture. → https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Transportation Guide: Trains, Subways' (platform x). Scene: modern Chinese metro station. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China transportation complete guide 2026: navigate with tested strategies from our editorial team.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/transportation-guide-x-visual-47e7f57d.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2054,7 +2057,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "2dbec17a289d"
+      "_sig": "2dbec17a289d",
+      "image_generated": true
     },
     {
       "id": "soc-000080",
@@ -6022,8 +6026,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6222,8 +6226,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
