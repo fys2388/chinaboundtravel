@@ -94,11 +94,27 @@ jobs:
         if: success()
         run: |
           echo "Regenerating ops dashboard..."
-          python ops-dashboard/collect_data.py || true
-          python ops-dashboard/build.py || true
+          DASH_FAIL=0
+          if ! python ops-dashboard/collect_data.py; then
+            DASH_FAIL=1
+            echo "::warning title=看板数据生成失败::ops-dashboard/collect_data.py 退出非零，本次流水线不阻断，但数据可能仍是旧值"
+          fi
+          if ! python ops-dashboard/build.py; then
+            DASH_FAIL=1
+            echo "::warning title=看板页面构建失败::ops-dashboard/build.py 退出非零，本次流水线不阻断，但 static/ops-dashboard/index.html 可能未更新"
+          fi
           cp ops-dashboard/index.html static/ops-dashboard/index.html
           cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
-          echo "Dashboard regenerated"
+          echo "Dashboard regenerated (script_failures=${DASH_FAIL})"
+          {
+            echo "### Regenerate Dashboard"
+            if [ "$DASH_FAIL" = "1" ]; then
+              echo "- ❌ collect_data.py 和/或 build.py 退出非零。流水线按设计继续（保持原有容错），"
+              echo "  但看板数据可能未刷新。请查看本 step 日志定位具体脚本。"
+            else
+              echo "- ✅ collect_data.py / build.py 均退出 0"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: (6/6) Commit & Push (提交)
         if: success()
