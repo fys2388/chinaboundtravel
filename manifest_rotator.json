@@ -240,8 +240,19 @@
         "pinterest": "2026-09-16"
       },
       "distribute_count": 4
+    },
+    "china-high-speed-train-survival-guide-booking-classes-and-insider-tips": {
+      "title": "China High-Speed Trains: Booking & Tips",
+      "last_distributed": "2026-09-17",
+      "platforms": {
+        "twitter": "2026-09-17",
+        "facebook": "2026-09-17",
+        "instagram": "2026-09-17",
+        "pinterest": "2026-09-17"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-09-16T17:53:12.100879+00:00",
-  "total_distributions": 91
+  "last_run": "2026-09-17T06:57:00.407414+00:00",
+  "total_distributions": 95
 }
