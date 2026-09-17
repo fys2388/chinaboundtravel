@@ -88,6 +88,34 @@
         "position": 17.6
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-09-17T06:49:49.054628",
+      "metrics_before": {
+        "impressions": 435,
+        "clicks": 0,
+        "position": 66.9
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "file": "content/posts/2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
+      "actions": [
+        "title: 'China Transportation Guide for European' -> 'China Transportation Guide for European (2026 Guide)'"
+      ],
+      "timestamp": "2026-09-17T06:49:50.073899",
+      "metrics_before": {
+        "impressions": 296,
+        "clicks": 0,
+        "position": 25.2
+      },
+      "result": "pending"
     }
   ]
 }

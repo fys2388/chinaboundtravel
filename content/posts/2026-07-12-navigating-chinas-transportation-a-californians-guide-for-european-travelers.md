@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-52a577c1b2b8"
-title: "China Transportation Guide for European"
+title: "China Transportation Guide for European (2026 Guide)"
 date: "2026-07-12T10:00:00+08:00"
 lastmod: "2026-07-12T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg"
 categories: ["transport", "cities"]
-last_updated: "2026-09-13"
+last_updated: "2026-09-17"
 
 ---
 ## Navigating China's Transportation: A Complete Guide for European Travelers
