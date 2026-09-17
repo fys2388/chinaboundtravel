@@ -41,7 +41,7 @@ import json
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -537,6 +537,144 @@ def print_group_architecture(group: Dict):
     print_company("GROUP")
 
 
+def export_growth_dashboard(employees: Dict, group: Dict, data_sources: Optional[Dict] = None) -> Path:
+    """导出成长看板数据到 ops-dashboard。"""
+    dashboard_data = {
+        "updated_at": datetime.now().isoformat(),
+        "data_sources": data_sources or {},
+        "group": {
+            "name": group["group_name"],
+            "total_employees": len(employees),
+            "total_companies": len(group["companies"]),
+            "total_invested": group["total_invested"],
+            "total_graduates": group["total_graduates"],
+        },
+        "employees": [
+            {
+                "id": e["id"],
+                "name": e["name_cn"],
+                "emoji": e["emoji"],
+                "role": e["role"],
+                "level": e["level"],
+                "level_name": LEVELS[e["level"]]["name"],
+                "capability": round(e["capability"], 1),
+                "revenue": round(e["revenue"], 2),
+                "exp": e["exp"],
+                "company_id": e["company_id"],
+                "graduated": e["graduated"],
+                "skills": e["skills"],
+                "mentored_count": e["mentored_count"],
+                "tasks_completed": e["tasks_completed"],
+                "kpi_history": e.get("kpi_history", []),
+            }
+            for e in employees.values()
+        ],
+        "companies": group["companies"],
+        "graduation_requirements": GRADUATION_REQUIREMENTS,
+        "levels": LEVELS,
+    }
+    dashboard_path = PROJECT_ROOT / "ops-dashboard" / "agent_growth_data.json"
+    with open(dashboard_path, "w", encoding="utf-8") as f:
+        json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
+    print(f"  💾 成长数据已导出: {dashboard_path}")
+    return dashboard_path
+
+
+KPI_TO_EMPLOYEE_MAP = {
+    "content": "content_001",
+    "seo": "seo_001",
+    "social": "social_001",
+    "revenue": "revenue_001",
+    "user": "user_001",
+    "ops": "ops_001",
+    "data": "data_001",
+}
+
+
+def load_latest_kpi_report(month: Optional[str] = None) -> Tuple[Optional[str], Optional[Dict], Optional[str]]:
+    """读取最新的 Agent KPI 月度报告，返回 (月份, 数据, 路径)。"""
+    kpi_dir = PROJECT_ROOT / "reports" / "agent_kpi"
+    candidates = list(kpi_dir.glob("agent_kpi_*.json")) if kpi_dir.exists() else []
+    if not candidates:
+        return None, None, None
+
+    def sort_key(path: Path) -> str:
+        parts = path.stem.split("_")
+        return parts[-1] if len(parts) >= 3 else path.stem
+
+    if month:
+        exact = kpi_dir / f"agent_kpi_{month}.json"
+        if exact.exists():
+            with exact.open("r", encoding="utf-8") as f:
+                return month, json.load(f), str(exact.relative_to(PROJECT_ROOT))
+
+    candidates.sort(key=sort_key, reverse=True)
+    path = candidates[0]
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    report_month = data.get("month") or sort_key(path)
+    return report_month, data, str(path.relative_to(PROJECT_ROOT))
+
+
+def load_revenue_snapshot() -> Tuple[Optional[Dict], Optional[str]]:
+    """读取营收快照（存在则返回真实来源，不构造缺失字段）。"""
+    path = PROJECT_ROOT / "reports" / "revenue" / "revenue_snapshot.json"
+    if not path.exists():
+        return None, None
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f), str(path.relative_to(PROJECT_ROOT))
+
+
+def sync_kpi_history_from_report(employees: Dict, month: str, kpi_report: Dict) -> Dict:
+    """把真实 KPI 月度结果同步到员工 kpi_history；不修改 revenue/exp/skills。"""
+    sources = {}
+    for kpi_agent_id, emp_id in KPI_TO_EMPLOYEE_MAP.items():
+        emp = employees.get(emp_id)
+        kpi = next((a for a in kpi_report.get("agents", []) if a.get("agent_id") == kpi_agent_id), None)
+        if not emp or not kpi:
+            continue
+        entry = {
+            "month": month,
+            "grade": kpi.get("grade"),
+            "score": kpi.get("score"),
+        }
+        history = emp.setdefault("kpi_history", [])
+        history[:] = [h for h in history if h.get("month") != month]
+        history.append(entry)
+        history.sort(key=lambda h: h.get("month", ""))
+        emp["kpi_history"] = history[-12:]
+        sources[emp_id] = entry
+    return sources
+
+
+def run_growth_refresh_from_reports(month: Optional[str] = None) -> Tuple[Dict, Dict, Dict]:
+    """基于真实 KPI/营收报告刷新成长看板；不模拟任务、收益或毕业。"""
+    employees = init_employees()
+    group = init_group_architecture()
+    kpi_month, kpi_report, kpi_path = load_latest_kpi_report(month)
+    revenue_snapshot, revenue_path = load_revenue_snapshot()
+
+    sources = {}
+    if kpi_report:
+        sources.update(sync_kpi_history_from_report(employees, kpi_month or month or datetime.now().strftime("%Y-%m"), kpi_report))
+
+    data_sources = {
+        "kpi_report": kpi_path,
+        "kpi_month": kpi_month,
+        "kpi_agents_synced": sources,
+        "revenue_snapshot": revenue_path,
+        "revenue_metrics": (revenue_snapshot or {}).get("metrics"),
+        "refresh_mode": "reports_only",
+        "note": "Growth dashboard refresh uses reported KPI results only; it does not simulate tasks, revenue, skill gains, or graduations.",
+    }
+
+    print(f"  📊 Growth refresh from reports: KPI={kpi_path or 'missing'}, Revenue={revenue_path or 'missing'}")
+    save_employees(employees)
+    save_group(group)
+    export_growth_dashboard(employees, group, data_sources)
+    return employees, group, data_sources
+
+
 def run_growth_demo():
     """运行成长模拟演示"""
     print(f"\n{'='*70}")
@@ -618,42 +756,7 @@ def run_growth_demo():
     save_group(group)
 
     # 导出 dashboard 数据
-    dashboard_data = {
-        "updated_at": datetime.now().isoformat(),
-        "group": {
-            "name": group["group_name"],
-            "total_employees": len(employees),
-            "total_companies": len(group["companies"]),
-            "total_invested": group["total_invested"],
-            "total_graduates": group["total_graduates"],
-        },
-        "employees": [
-            {
-                "id": e["id"],
-                "name": e["name_cn"],
-                "emoji": e["emoji"],
-                "role": e["role"],
-                "level": e["level"],
-                "level_name": LEVELS[e["level"]]["name"],
-                "capability": round(e["capability"], 1),
-                "revenue": round(e["revenue"], 2),
-                "exp": e["exp"],
-                "company_id": e["company_id"],
-                "graduated": e["graduated"],
-                "skills": e["skills"],
-                "mentored_count": e["mentored_count"],
-                "tasks_completed": e["tasks_completed"],
-            }
-            for e in employees.values()
-        ],
-        "companies": group["companies"],
-        "graduation_requirements": GRADUATION_REQUIREMENTS,
-        "levels": LEVELS,
-    }
-    dashboard_path = PROJECT_ROOT / "ops-dashboard" / "agent_growth_data.json"
-    with open(dashboard_path, "w", encoding="utf-8") as f:
-        json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
-    print(f"\n  💾 成长数据已导出: {dashboard_path}")
+    export_growth_dashboard(employees, group)
 
     return employees, group
 
@@ -668,6 +771,8 @@ def main():
     parser.add_argument("--mentor", help="导师ID")
     parser.add_argument("--status", help="查看指定员工状态")
     parser.add_argument("--demo", action="store_true", help="运行成长模拟演示")
+    parser.add_argument("--refresh-from-reports", action="store_true", help="从真实 KPI/营收报告刷新看板，不模拟成长数据")
+    parser.add_argument("--month", help="KPI 报告月份 (YYYY-MM，配合 --refresh-from-reports)")
     args = parser.parse_args()
 
     employees = init_employees()
@@ -687,6 +792,10 @@ def main():
 
     if args.spawn:
         spawn_new_employee(args.spawn, args.role, args.skill, employees, group, args.mentor)
+        return
+
+    if args.refresh_from_reports:
+        run_growth_refresh_from_reports(args.month)
         return
 
     if args.demo:

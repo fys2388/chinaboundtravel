@@ -81,7 +81,7 @@ jobs:
 
       - name: Generate Agent Growth Data
         run: |
-          python scripts/agent_growth_engine.py --demo
+          python scripts/agent_growth_engine.py --refresh-from-reports --month "$MONTH"
 
       - name: Publish Agent KPI and Growth Data to static/ops
         run: |

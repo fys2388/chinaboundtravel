@@ -1,8 +1,76 @@
 {
-  "updated_at": "2026-09-17T13:23:49.344527",
+  "updated_at": "2026-09-17T21:33:21.250323",
+  "data_sources": {
+    "kpi_report": "reports\\agent_kpi\\agent_kpi_2026-09.json",
+    "kpi_month": "2026-09",
+    "kpi_agents_synced": {
+      "content_001": {
+        "month": "2026-09",
+        "grade": "B",
+        "score": 75.0
+      },
+      "seo_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 66.0
+      },
+      "social_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 66.0
+      },
+      "revenue_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 66.0
+      },
+      "user_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 66.5
+      },
+      "ops_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 63.0
+      },
+      "data_001": {
+        "month": "2026-09",
+        "grade": "C",
+        "score": 66.0
+      }
+    },
+    "revenue_snapshot": "reports\\revenue\\revenue_snapshot.json",
+    "revenue_metrics": {
+      "period_start": "2026-08-17",
+      "period_end": "2026-09-14",
+      "days": 28,
+      "impressions": 0,
+      "clicks": 68,
+      "inits": 0,
+      "searches": 0,
+      "bookings": 0,
+      "revenue": 0.0,
+      "click_through_rate": 0.0,
+      "init_rate": 0.0,
+      "booking_rate": 0.0,
+      "conversion_rate": 0.0,
+      "revenue_per_click": 0.0,
+      "revenue_per_booking": 0.0,
+      "avg_order_value": 0.0,
+      "data_source": "api",
+      "data_quality": "good",
+      "notes": [
+        "有点击但无预订（新站正常，需关注转化）",
+        "有点击但inits=0（可能是追踪问题）"
+      ]
+    },
+    "refresh_mode": "reports_only",
+    "note": "Growth dashboard refresh uses reported KPI results only; it does not simulate tasks, revenue, skill gains, or graduations."
+  },
   "group": {
     "name": "数字员工创业孵化集团",
-    "total_employees": 9,
+    "total_employees": 8,
     "total_companies": 1,
     "total_invested": 0.0,
     "total_graduates": 0
@@ -13,24 +81,41 @@
       "name": "内容 Agent",
       "emoji": "📝",
       "role": "内容创作总监",
-      "level": "graduate",
-      "level_name": "毕业",
-      "capability": 100,
-      "revenue": 11200.0,
-      "exp": 6300,
+      "level": "senior",
+      "level_name": "骨干",
+      "capability": 91.0,
+      "revenue": 5600.0,
+      "exp": 3400,
       "company_id": "GROUP",
       "graduated": false,
       "skills": {
-        "content": 70,
-        "seo": 40,
-        "social": 40,
-        "revenue": 50,
+        "content": 40,
+        "seo": 25,
+        "social": 25,
+        "revenue": 30,
         "user_growth": 10,
         "ops": 10,
-        "data_analysis": 30
+        "data_analysis": 20
       },
-      "mentored_count": 2,
-      "tasks_completed": 10
+      "mentored_count": 1,
+      "tasks_completed": 5,
+      "kpi_history": [
+        {
+          "month": "2026-07",
+          "grade": "B",
+          "score": 75
+        },
+        {
+          "month": "2026-08",
+          "grade": "A",
+          "score": 82
+        },
+        {
+          "month": "2026-09",
+          "grade": "B",
+          "score": 75.0
+        }
+      ]
     },
     {
       "id": "seo_001",
@@ -54,7 +139,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 66.0
+        }
+      ]
     },
     {
       "id": "social_001",
@@ -78,7 +170,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 66.0
+        }
+      ]
     },
     {
       "id": "revenue_001",
@@ -102,7 +201,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 66.0
+        }
+      ]
     },
     {
       "id": "user_001",
@@ -126,7 +232,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 66.5
+        }
+      ]
     },
     {
       "id": "ops_001",
@@ -150,7 +263,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 63.0
+        }
+      ]
     },
     {
       "id": "data_001",
@@ -174,7 +294,14 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": [
+        {
+          "month": "2026-09",
+          "grade": "C",
+          "score": 66.0
+        }
+      ]
     },
     {
       "id": "content_GROUP_008",
@@ -198,31 +325,8 @@
         "data_analysis": 10
       },
       "mentored_count": 0,
-      "tasks_completed": 0
-    },
-    {
-      "id": "content_GROUP_009",
-      "name": "内容 Agent",
-      "emoji": "📝",
-      "role": "内容创作实习生",
-      "level": "intern",
-      "level_name": "实习生",
-      "capability": 50.0,
-      "revenue": 0.0,
-      "exp": 0,
-      "company_id": "GROUP",
-      "graduated": false,
-      "skills": {
-        "content": 10,
-        "seo": 0,
-        "social": 0,
-        "revenue": 0,
-        "user_growth": 0,
-        "ops": 0,
-        "data_analysis": 0
-      },
-      "mentored_count": 0,
-      "tasks_completed": 0
+      "tasks_completed": 0,
+      "kpi_history": []
     }
   ],
   "companies": {
@@ -240,8 +344,7 @@
         "user_001",
         "ops_001",
         "data_001",
-        "content_GROUP_008",
-        "content_GROUP_009"
+        "content_GROUP_008"
       ],
       "status": "active",
       "children": []
