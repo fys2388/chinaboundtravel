@@ -79,6 +79,42 @@ jobs:
           cp ops-dashboard/agent_kpi_data.json static/ops-dashboard/agent_kpi_data.json
           echo "KPI 监控页面已更新到 static/ops-dashboard/"
 
+      - name: Publish Agent KPI and Growth Data to static/ops
+        run: |
+          test -f ops-dashboard/agent_kpi_data.json
+          test -f ops-dashboard/agent_growth_data.json
+
+          mkdir -p static/ops
+          cp ops-dashboard/agent_kpi_data.json static/ops/agent_kpi_data.json
+          cp ops-dashboard/agent_growth_data.json static/ops/agent_growth_data.json
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          pairs = {
+              "KPI": (Path("ops-dashboard/agent_kpi_data.json"), Path("static/ops/agent_kpi_data.json")),
+              "Growth": (Path("ops-dashboard/agent_growth_data.json"), Path("static/ops/agent_growth_data.json")),
+          }
+
+          for label, (source, target) in pairs.items():
+              assert target.exists(), f"{label} target missing: {target}"
+              source_text = source.read_text(encoding="utf-8-sig")
+              target_text = target.read_text(encoding="utf-8-sig")
+              assert json.loads(source_text), f"{label} source JSON is empty or invalid"
+              assert json.loads(target_text), f"{label} target JSON is empty or invalid"
+              assert source.read_bytes() == target.read_bytes(), f"{label} source and target differ"
+
+          kpi = json.loads(Path("static/ops/agent_kpi_data.json").read_text(encoding="utf-8-sig"))
+          growth = json.loads(Path("static/ops/agent_growth_data.json").read_text(encoding="utf-8-sig"))
+          assert "updated_at" in kpi, "KPI updated_at missing"
+          assert "month" in kpi, "KPI month missing"
+          assert "updated_at" in growth, "Growth updated_at missing"
+          assert growth.get("group") and growth.get("employees"), "Growth group/employees missing"
+          print("KPI and Growth static/ops JSON validation PASS")
+          PY
+          echo "Agent KPI and Growth 数据已发布到 static/ops/"
+
       - name: Send Feishu Notification
         if: ${{ github.event.inputs.notify != 'false' }}
         env:
@@ -101,6 +137,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add ops-dashboard/agent_kpi_data.json ops-dashboard/agent-kpi.html static/ops-dashboard/ 2>/dev/null || true
+          git add ops-dashboard/agent_growth_data.json static/ops/agent_kpi_data.json static/ops/agent_growth_data.json 2>/dev/null || true
           git add reports/agent_kpi/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无 KPI 结果变更"
@@ -118,4 +155,6 @@ jobs:
           path: |
             reports/agent_kpi/
             ops-dashboard/agent_kpi_data.json
+            static/ops/agent_kpi_data.json
+            static/ops/agent_growth_data.json
           retention-days: 90
