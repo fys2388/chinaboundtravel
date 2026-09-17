@@ -3,7 +3,7 @@
   "agent_name": "Social Intelligence Agent (社媒智能优化)",
   "task_id": "task_2026-09-17_social",
   "created_at": "2026-09-17T02:29:47.394574+00:00",
-  "updated_at": "2026-09-17T02:29:47.676302",
+  "updated_at": "2026-09-17T16:05:51.253641",
   "target_date": "2026-09-17",
   "issue_count": 1,
   "severity_summary": {
@@ -14,45 +14,45 @@
   },
   "issues": [
     {
-      "id": "issue_d6d8a1fd2a29",
+      "id": "issue_236a6346db72",
       "type": "social_no_traffic",
-      "title": "社媒曝光7但点击为0，需检查帖子链接和CTA",
-      "description": "社媒曝光7但点击为0，需检查帖子链接和CTA",
+      "title": "社媒曝光2但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光2但点击为0，需检查帖子链接和CTA",
       "page": "",
       "file": "",
-      "evidence": "社媒曝光7但点击为0，需检查帖子链接和CTA",
+      "evidence": "社媒曝光2但点击为0，需检查帖子链接和CTA",
       "recommended_action": "Review the issue and apply the documented remediation.",
       "severity": "high",
       "agent": "social",
       "action": "audit_links_and_cta",
       "source": "daily_issue_router",
-      "source_file": "social_daily_2026-09-15.json",
+      "source_file": "social_daily_2026-09-16.json",
       "task_source": "daily_issue_router",
       "status": "new",
       "assigned": true,
       "assigned_to": "social",
-      "detected_at": "2026-09-17T02:29:47.377287"
+      "detected_at": "2026-09-17T16:05:50.311103"
     }
   ],
   "priority_issue": {
-    "id": "issue_d6d8a1fd2a29",
+    "id": "issue_236a6346db72",
     "type": "social_no_traffic",
-    "title": "社媒曝光7但点击为0，需检查帖子链接和CTA",
-    "description": "社媒曝光7但点击为0，需检查帖子链接和CTA",
+    "title": "社媒曝光2但点击为0，需检查帖子链接和CTA",
+    "description": "社媒曝光2但点击为0，需检查帖子链接和CTA",
     "page": "",
     "file": "",
-    "evidence": "社媒曝光7但点击为0，需检查帖子链接和CTA",
+    "evidence": "社媒曝光2但点击为0，需检查帖子链接和CTA",
     "recommended_action": "Review the issue and apply the documented remediation.",
     "severity": "high",
     "agent": "social",
     "action": "audit_links_and_cta",
     "source": "daily_issue_router",
-    "source_file": "social_daily_2026-09-15.json",
+    "source_file": "social_daily_2026-09-16.json",
     "task_source": "daily_issue_router",
     "status": "new",
     "assigned": true,
     "assigned_to": "social",
-    "detected_at": "2026-09-17T02:29:47.377287"
+    "detected_at": "2026-09-17T16:05:50.311103"
   },
   "expected_actions": [
     "audit_links_and_cta"
@@ -61,7 +61,7 @@
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-09-17T02:29:47.676306",
+    "completed_at": "2026-09-17T16:05:51.253645",
     "note": "resolved=0, need_manual=0, failed=0"
   }
 }
