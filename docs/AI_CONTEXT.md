@@ -24,7 +24,7 @@
 ## 2. Current branch / commit
 
 - 本地分支：`main`
-- 本地 HEAD：`4f4be36b` — `fix(ops): 消除 /ops-dashboard/ 重定向死循环`（2026-09-16 实测）
+- 本地 HEAD：`e87727f4` — workflow 修复后的最近远端同步点（以 `git pull --rebase` 为准）
 - **接手第一件事：`git pull --rebase`。** 本仓库有多个机器人每 30 分钟向 main 提交，本地历史随时落后数百个提交；
   要看线上真实代码用 `git show origin/main:<path>`，不要相信本地 checkout 里的旧内容。
 - 线上状态：push main → `deploy-cloudflare-pages.yml`（workflow 名 "Post-deploy Tasks"）→ Hugo 构建 →
@@ -70,19 +70,22 @@
 - `reports/`（除当前任务指定的审计报告）
 - 密钥类文件（`.env*`、`*-secrets*`、service-account key）
 
-## 7. Current task
-
-- **2026-09-16（最新）**：运营看板回退事故已修复并上线——`/ops-dashboard/` 现落地手工维护的
+- **2026-09-17（最新）**：`P1-OPS-01` 已修复并闭环——`agent-kpi-monthly.yml` 现在会把
+  `ops-dashboard/agent_kpi_data.json` 与 `ops-dashboard/agent_growth_data.json` 同时发布到 `static/ops/`，
+  并校验 source/target 一致、JSON 可解析、`updated_at` 已真实更新。
+  手动触发记录见 GitHub Actions run `35231157737`（`success`）。
+- **2026-09-16**：运营看板回退事故已修复并上线——`/ops-dashboard/` 现落地手工维护的
   「统一运营中心 v3.0」（966 行），根因与两个必须记住的坑见 `docs/OPS_DASHBOARD_HANDOVER.md`。
   日报链路 4 项修复已提交（7 日滚动口径 / 去重闸门对齐 / 失败门 / 告警死别名）。
-  未做的待办集中列在该交接文档的「遗留待办」。
 - 历史任务：2.0 工作流符合度修复（2026-08-30）
   - P0-1：`REPORTING_SNAPSHOT.json` 中文乱码已修复（源 CSV 已转 UTF-8 后重生成，issue_types 中文正常，as_of 2026-08-26 保留）
   - P0-2：weekly-blog-update cron 由每日 `0 0 * * *` 改每周 `0 0 * * 1`（落实 P1-OPS-02A）
   - P0-3：GSC 服务账号提 Owner，gsc-index-submit 20/20 success
   - 待办 P1：周/月/季/年 Feishu 报告改读 SNAPSHOT；新增 SNAPSHOT 每日自动刷新；补 `reports/2.0_REPORTING_RECONCILIATION.md`；social_distributor 收敛到 Buffer Worker
 - 前序：P1-REPORT-02 统一报告（PASS，2026-08-17，SNAPSHOT 单一 KPI 源）；P1-OPS-03 2.0 就绪审计（PARTIAL_READY）
-- 下一任务：待用户指派（建议：按上述 P1 待办推进，或 GROWTH-22 线上验证）## 8. Known architecture（架构速览）
+- 下一任务：待用户指派（建议：按上述 P1 待办推进，或 GROWTH-22 线上验证）
+
+## 8. Known architecture（架构速览）
 
 - 渲染：`layouts/`（自定义）覆盖 `themes/PaperMod/`（勿改主题源）
 - 静态：`static/` 原样发布；`assets/` 走 Hugo 资源管道（`resources.Get`）
