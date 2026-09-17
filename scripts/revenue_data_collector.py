@@ -55,7 +55,7 @@ def _read_env_file(filepath: Path) -> Dict[str, str]:
 
 
 def load_env() -> Dict[str, str]:
-    """加载环境变量配置（P2-FIX: 同时读取 .env 和 .env.revenue，自动映射字段名）"""
+    """加载环境变量配置：同时读 .env 与 .env.revenue（后者覆盖前者），再叠加系统环境变量"""
     env = {}
 
     # 1. 先读取主 .env 文件（优先级低）
@@ -64,14 +64,8 @@ def load_env() -> Dict[str, str]:
     # 2. 再读取 .env.revenue（优先级高，覆盖主 .env）
     env.update(_read_env_file(ENV_FILE))
 
-    # 3. 字段名映射（兼容主 .env 的命名）
-    field_mapping = {
-        "CLOUDFLARE_API_TOKEN": "CF_API_TOKEN",
-        "CLOUDFLARE_ZONE_ID": "CF_ZONE_ID",
-    }
-    for old_key, new_key in field_mapping.items():
-        if old_key in env and new_key not in env:
-            env[new_key] = env[old_key]
+    # 3. Cloudflare 统一用官方契约名（CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID），
+    #    与 GitHub Actions secrets 一致。旧短别名不再读取，见 .env.revenue.template 迁移说明。
 
     # 4. GA4_CREDENTIALS_JSON 处理：如果是文件名，读取文件内容
     ga4_creds = env.get("GA4_CREDENTIALS_JSON", "")
@@ -92,7 +86,7 @@ def load_env() -> Dict[str, str]:
     # 5. 同时从系统环境变量读取（优先级最高）
     for key in ["GA4_PROPERTY_ID", "GA4_CREDENTIALS_JSON", "STRIPE_SECRET_KEY",
                 "TRAVELPAYOUTS_API_TOKEN", "TRAVELPAYOUTS_MARKER",
-                "CF_API_TOKEN", "CF_ZONE_ID"]:
+                "CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ZONE_ID"]:
         if key in os.environ:
             env[key] = os.environ[key]
     return env
@@ -104,7 +98,7 @@ def check_config(env: Dict[str, str], source: str) -> Dict[str, bool]:
         "ga4": all([env.get("GA4_PROPERTY_ID"), env.get("GA4_CREDENTIALS_JSON")]),
         "stripe": bool(env.get("STRIPE_SECRET_KEY")),
         "travelpayouts": all([env.get("TRAVELPAYOUTS_API_TOKEN"), env.get("TRAVELPAYOUTS_MARKER")]),
-        "cloudflare": all([env.get("CF_API_TOKEN"), env.get("CF_ZONE_ID")]),
+        "cloudflare": all([env.get("CLOUDFLARE_API_TOKEN"), env.get("CLOUDFLARE_ZONE_ID")]),
     }
     return status
 

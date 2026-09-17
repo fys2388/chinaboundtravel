@@ -174,17 +174,24 @@
   - `test_meta_description::test_generator_padding_no_longer_loops` — **陈旧哨兵**：
     生成器 2026-09 已重构成「按预算挑一个短语追加一次即 break」（155 字符上限），
     旧断言仍在 grep 已不存在的原始句。已改为断言真实不变量。
-  - `test_secret_name_contract` — **真违规，未修**：`scripts/revenue_data_collector.py`
-    引入禁用别名 `CF_API_TOKEN`（官方契约是 `CLOUDFLARE_API_TOKEN`）。
-    该别名同时被 `.env.revenue.template:25` 使用；改成官方名会让本地
-    `.env.revenue` 里只填了旧别名的机器失效，而 `.env*` 属禁读文件、无法确认现状。
-    **需要人工决定**（改脚本+模板，或给测试加白名单）。
+  - `test_secret_name_contract` — **真违规，2026-09-17 已修**。
+    `gh secret list` 证实 GitHub Actions secrets 里只有官方名
+    `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ZONE_ID`，**从来没有过** `CF_API_TOKEN`。
+    所以旧代码在 CI 里 `check_config()["cloudflare"]` 恒为 `False`——
+    别名映射只在有本地 `.env` 的机器上才碰巧生效。已统一改为官方名，
+    并同步 `.env.revenue.template`（里面写明旧短别名要改名）。
 
-**⚠️ pytest 有写副作用（实测）**：跑全量 `pytest tests` 会改写
-`reports/revenue/*`、`reports/seo/*`（重新生成，日期戳变为当天）以及
-`static/lead-magnet/china-visa-free-entry-checklist.pdf`，共 12 个文件。
-这些是 Protected Area。提交前必须 `git status` 核对，**只 add 本任务文件**。
-这也是"预存失败只有 3 个"与实际 28 个对不上的原因之一。
+**⚠️ pytest 有写副作用（实测）**：跑全量 `pytest tests` 会改写 `reports/revenue/*`、
+`reports/seo/*`（重新生成，日期戳变当天）与 `static/lead-magnet/*.pdf`，共 12 个
+Protected Area 文件。提交前必须 `git status` 核对，**只 add 本任务文件**。
+
+**⚠️ KPI 考核的营收接入是死代码**
+`agent_kpi_auditor.py:42` 写 `from revenue_data_collector import RevenueDataCollector`，
+但那个模块（383 行）只有函数（`load_env`/`check_config`/`collect_all`/...），**没有这个类**。
+`ImportError` 被 try/except 静默吞掉 → `REVENUE_COLLECTOR_AVAILABLE=False`
+→ `load_real_revenue_data()` 恒返回 `{}` → **KPI 月度考核从未接入真实营收，一直用默认基础分**。
+修需设计（接哪个 `collect_*`、字段映射），属单独任务。
+`STRIPE_SECRET_KEY` 在 GitHub secrets 里也不存在，stripe 恒 `false`（本地与 CI 一致）。
 
 **环境性（网络相关，非代码问题）**：`tests/test_report_03.py::test_zero_revenue_never_converted_to_zero_dollar`
 — Travelpayouts `ProxyError`，本机有代理时失败、无代理时通过。
