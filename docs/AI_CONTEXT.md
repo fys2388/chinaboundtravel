@@ -130,6 +130,10 @@
   `retry-failed.yml` 按 `conclusion == 'failure'` 触发因而永不重跑。
   关键 step 后须加门：`if: steps.x.outcome == 'failure'` + `run: exit 1`。
 - 敏感文件不可读/不可提交：`.env`、`config/service-account.json`、`gsc-service-account-key.json`。
+- **这三份密钥全部 gitignore 且未跟踪（现状正确，勿改为提交），代价是全新 clone 里没有它们。**
+  全新 clone / 换机器 / 干净 CI 沙箱中不存在 → 所有 GA4 / GSC 采集与索引提交直接失效。
+  线上 workflow 走 GitHub Actions secrets；本地脚本走本机这三份文件。
+  缺失时先问用户，**不要创建占位文件或伪造内容**。
 
 ## 12. 环境陷阱（Windows / PowerShell，本项目实测）
 

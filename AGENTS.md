@@ -63,3 +63,9 @@
   工作区任何残留（含临时脚本）都会被它顺手提交上线。临时脚本用完即删。
 - **`content/posts/`、URL/slug/canonical/content_id、联盟链接、`reports/` 属保护区**，
   除非任务明确授权不得修改。详见 `docs/AI_CONTEXT.md` 第 6 节。
+- **全新 clone 里没有密钥**：`.env`、`config/service-account.json`、`gsc-service-account-key.json`
+  三份都被 `.gitignore` 排除且未跟踪（**这是正确做法，不要改成提交**）。
+  代价是：全新 clone / 换机器 / 干净 CI 沙箱里这三份文件**不存在**，
+  所有 GA4 / GSC 采集与索引提交会直接失效。
+  线上 workflow 走 GitHub Actions secrets；本地脚本走本机这三份文件。
+  接手时先确认三者齐全；缺失时**不要创建空文件或伪造内容**，先问用户。
