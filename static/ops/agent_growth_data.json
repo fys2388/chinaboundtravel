@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-17T21:33:21.250323",
+  "updated_at": "2026-09-17T13:37:08.627282",
   "data_sources": {
-    "kpi_report": "reports\\agent_kpi\\agent_kpi_2026-09.json",
+    "kpi_report": "reports/agent_kpi/agent_kpi_2026-09.json",
     "kpi_month": "2026-09",
     "kpi_agents_synced": {
       "content_001": {
@@ -40,7 +40,7 @@
         "score": 66.0
       }
     },
-    "revenue_snapshot": "reports\\revenue\\revenue_snapshot.json",
+    "revenue_snapshot": "reports/revenue/revenue_snapshot.json",
     "revenue_metrics": {
       "period_start": "2026-08-17",
       "period_end": "2026-09-14",
