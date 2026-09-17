@@ -197,3 +197,5 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)

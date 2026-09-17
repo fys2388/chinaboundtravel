@@ -169,3 +169,5 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

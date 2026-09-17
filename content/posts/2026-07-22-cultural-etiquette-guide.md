@@ -153,3 +153,5 @@ For international travelers comparing options, flight search platforms help you 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)

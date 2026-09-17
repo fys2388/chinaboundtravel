@@ -298,3 +298,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

@@ -208,3 +208,5 @@ No — China is massive and 7 days only covers three cities. But this itinerary 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

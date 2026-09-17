@@ -225,3 +225,5 @@ For international travelers comparing options, flight search platforms help you 
 - [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
 
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

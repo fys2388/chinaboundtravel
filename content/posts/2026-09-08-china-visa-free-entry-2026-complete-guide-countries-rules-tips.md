@@ -406,3 +406,5 @@ Safe travels, and welcome to China.
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 - [China Bargaining Guide: How to Haggle & Shop](https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/)
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
