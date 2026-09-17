@@ -35,6 +35,8 @@ def test_growth_source_and_static_ops_target_match():
 
     growth = _validate_json(target)
     assert growth, "Growth JSON must not be empty"
+    assert growth.get("data_sources", {}).get("refresh_mode") == "reports_only", "Growth data must be refreshed reports-only"
+    assert growth.get("data_sources", {}).get("kpi_report"), "Growth data must record KPI report source"
     assert growth.get("updated_at"), "Growth updated_at missing"
     assert growth.get("group"), "Growth group missing"
     assert growth.get("employees"), "Growth employees missing"
@@ -48,6 +50,9 @@ def test_workflow_publishes_kpi_and_growth_to_static_ops():
     assert "mkdir -p static/ops" in text, "workflow must create static/ops"
     assert "python scripts/agent_growth_engine.py --refresh-from-reports" in text, "workflow must refresh Growth data from real reports"
     assert "--month \"$MONTH\"" in text, "workflow must pass the KPI audit month to Growth refresh"
+    assert "Growth reports-only validation PASS" in text, "workflow must validate reports-only Growth refresh"
+    assert "default: \"false\"" in text, "manual notify default must avoid accidental Feishu sends"
     assert "cp ops-dashboard/agent_kpi_data.json static/ops/agent_kpi_data.json" in text, "workflow must publish KPI JSON"
     assert "cp ops-dashboard/agent_growth_data.json static/ops/agent_growth_data.json" in text, "workflow must publish Growth JSON"
+    assert "git pull --rebase --autostash" not in text, "monthly KPI workflow must not use autostash"
     assert "KPI and Growth static/ops JSON validation PASS" in text, "workflow must validate published JSON"

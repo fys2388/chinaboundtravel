@@ -14,7 +14,7 @@ on:
       notify:
         description: "是否发送飞书通知"
         required: false
-        default: "true"
+        default: "false"
         type: boolean
 
 jobs:
@@ -82,6 +82,17 @@ jobs:
       - name: Generate Agent Growth Data
         run: |
           python scripts/agent_growth_engine.py --refresh-from-reports --month "$MONTH"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          growth = json.loads(Path("ops-dashboard/agent_growth_data.json").read_text(encoding="utf-8-sig"))
+          sources = growth.get("data_sources", {})
+          assert sources.get("refresh_mode") == "reports_only", f"Growth refresh mode unexpected: {sources.get('refresh_mode')}"
+          assert sources.get("kpi_report"), "Growth KPI report source missing"
+          assert "Growth dashboard refresh uses reported KPI results only" in sources.get("note", ""), "Growth non-simulation note missing"
+          print("Growth reports-only validation PASS")
+          PY
 
       - name: Publish Agent KPI and Growth Data to static/ops
         run: |
@@ -120,7 +131,7 @@ jobs:
           echo "Agent KPI and Growth 数据已发布到 static/ops/"
 
       - name: Send Feishu Notification
-        if: ${{ github.event.inputs.notify != 'false' }}
+        if: ${{ github.event.inputs.notify == 'true' }}
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
@@ -148,7 +159,7 @@ jobs:
             echo "无 KPI 结果变更"
           else
             git commit -m "chore: update agent KPI monthly audit results [skip ci]"
-            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
+            git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "rebase失败，跳过"; }
             git push || echo "推送失败，跳过"
           fi
 
