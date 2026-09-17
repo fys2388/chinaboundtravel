@@ -150,11 +150,44 @@
 - `git diff` 的 `CRLF will be replaced by LF` 警告无害。
 - `web_search` 工具在本环境不可用（缺 API key）；用 `web_fetch` 直接打 GitHub API（仓库是公开的）。
 
-## 13. 已知测试失败（预先存在，勿当作自己的回归，勿用 stash/reset 掩盖）
+## 13. 已知测试失败（2026-09-17 全量实测：716 passed / 28 failed）
 
-- `tests/test_report_03.py::test_zero_revenue_never_converted_to_zero_dollar` — Travelpayouts `ProxyError`，环境性
-- `tests/test_growth05_first_content_action.py::test_growth05_scope_only_allowed_objects` —
-  用 `git diff 60f1c17..HEAD` 对固定基线比对，会扫到他人提交的文件
-- `::test_144h_title_and_description_updated` — 标题现为 `China 144 Hour Transit Visa: Complete Guide`，
-  测试断言 startswith `China 144-Hour Visa-Free Transit (2026 Guide)`
-- 以上均涉及 `content/`（Protected Area），修复需单独授权
+**先说结论：这 28 个都不是同一种东西，别当成一个"预存失败"包。**
+
+- **20 个是 `content/` 保护区断言**（`test_avatar_webp`×4、`test_brand_identity_p2`、
+  `test_brand_legacy_pilot`、`test_growth05`×2、`test_growth07`×2、`test_growth12`×2、
+  `test_growth12a`、`test_growth18`×2、`test_growth19`×2、`test_growth22`×3）。
+  都是标题 / H2 / front-matter / 联盟链接 / cover image 的具体文案断言，
+  修了就要动 `content/posts/`，需单独授权。
+- **2 个是报告状态依赖**（`test_growth20_monetization`×2）：断言
+  `reports/revenue/REV002_FINAL_REVIEW.md` 的 gate 字段，而 pytest 每次运行都会
+  重写该文件（见下条），所以结果跟着本机文件时间戳漂移。
+- **2 个是社媒库存**（`test_social_content_agent`×2：100 items / 20 sources 数量断言）。
+- **4 个是测试自身的问题**（2026-09-17 已修 3 个，commit `a988c8ed`）：
+  - `test_no_hardcoded_secrets` — **误报**：`lh-desktop-0830.json` 里内嵌的 base64
+    图片字节偶然拼出 `AIza…`。已加 base64 blob 豁免 + 2 个负向对照测试防止豁免过头。
+  - `test_robots` — **误报**：旧断言把所有 `Disallow: /` 跨组收集。生产 robots.txt
+    按 GEO 策略在「AI 训练爬虫」组里拦截 GPTBot / ClaudeBot / Google-Extended /
+    CCBot（`layouts/robots.txt` 有说明），通用爬虫是 `Allow: /`（线上实测确认）。
+    已改为只判定 `User-agent: *` 兜底组，并新增 `test_ai_training_bots_remain_blocked`
+    保护 GEO 策略不被误删。
+  - `test_meta_description::test_generator_padding_no_longer_loops` — **陈旧哨兵**：
+    生成器 2026-09 已重构成「按预算挑一个短语追加一次即 break」（155 字符上限），
+    旧断言仍在 grep 已不存在的原始句。已改为断言真实不变量。
+  - `test_secret_name_contract` — **真违规，未修**：`scripts/revenue_data_collector.py`
+    引入禁用别名 `CF_API_TOKEN`（官方契约是 `CLOUDFLARE_API_TOKEN`）。
+    该别名同时被 `.env.revenue.template:25` 使用；改成官方名会让本地
+    `.env.revenue` 里只填了旧别名的机器失效，而 `.env*` 属禁读文件、无法确认现状。
+    **需要人工决定**（改脚本+模板，或给测试加白名单）。
+
+**⚠️ pytest 有写副作用（实测）**：跑全量 `pytest tests` 会改写
+`reports/revenue/*`、`reports/seo/*`（重新生成，日期戳变为当天）以及
+`static/lead-magnet/china-visa-free-entry-checklist.pdf`，共 12 个文件。
+这些是 Protected Area。提交前必须 `git status` 核对，**只 add 本任务文件**。
+这也是"预存失败只有 3 个"与实际 28 个对不上的原因之一。
+
+**环境性（网络相关，非代码问题）**：`tests/test_report_03.py::test_zero_revenue_never_converted_to_zero_dollar`
+— Travelpayouts `ProxyError`，本机有代理时失败、无代理时通过。
+
+**纪律**：修任何一项前先看 `docs/OPS_DASHBOARD_HANDOVER.md` 与保护区清单；
+不要用 stash / reset / `--autostash` 清掉上述 pytest 产生的改动来"骗过"验证。
