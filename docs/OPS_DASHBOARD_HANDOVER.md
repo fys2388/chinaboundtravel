@@ -71,10 +71,19 @@ Cloudflare 对**真实 `.html` 文件**启用无扩展名规范化：
 
 ## 遗留待办（按优先级）
 
-1. **考核/成长数据陈旧 9 天**：线上 `/ops/agent_kpi_data.json` 的 `updated_at` 为
-   `2026-09-07T15:59:52`，`/ops/agent_growth_data.json` 为 `2026-09-07T10:23:47`。
-   原因候选：`agent-kpi-monthly.yml` 第 78-79 行只 `cp` 到 `static/ops-dashboard/`，**不写 `static/ops/`**。
-   修法：补 `cp ops-dashboard/agent_kpi_data.json static/ops/agent_kpi_data.json`（growth 同理）。
+1. **考核/成长数据已修复并闭环**：`agent-kpi-monthly.yml` 现在会把
+   `ops-dashboard/agent_kpi_data.json` 和 `ops-dashboard/agent_growth_data.json`
+   同时发布到 `static/ops/`，并通过 workflow 校验保证 source/target 一致、JSON 可解析、
+   `updated_at` / `month` / `group` / `employees` 等关键字段存在。
+   手动触发记录见 GitHub Actions run `35231157737`，结果 `success`。
+   后续如果再次发现陈旧数据，优先检查：
+   1) workflow 是否真的运行到 publish step；
+   2) `ops-dashboard/*` 源 JSON 是否被重新生成；
+   3) `static/ops/*` 是否被后续 job 覆盖回旧值。
+
+   历史根因留档：旧 workflow 只 `cp` 到 `static/ops-dashboard/`，**不写 `static/ops/`**，
+   导致线上 `/ops/agent_kpi_data.json` 和 `/ops/agent_growth_data.json` 停留在 `2026-09-07`。
+   已修复项：补上 `static/ops/` 发布、补上 Growth refresh 入口、补上回归测试。
 2. **生成版精简监控页现已无任何 URL 可达**：`/ops-dashboard/index.html` → 308 → `/ops-dashboard/`
    → 301 → 统一中心。build.py 仍在生成它，但被重定向盖住。要恢复可访问性，
    给它单独路径（如 `/ops/monitor/`）。
