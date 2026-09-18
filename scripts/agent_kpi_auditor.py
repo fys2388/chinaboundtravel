@@ -1035,6 +1035,78 @@ def _brand_consistency(report_path: Optional[Path] = None) -> Dict[str, Any]:
     return out
 
 
+def _mojibake_free(report_path: Optional[Path] = None) -> Dict[str, Any]:
+    """从 content_quality_validator 的输出算编码乱码合格率。
+
+    数据源：reports/content_audit/validator_output.json，由
+    content-quality-audit.yml 生成（
+        python scripts/content_quality_validator.py --json > validator_output.json
+    ）。weekly-blog-update.yml / deploy-cloudflare-pages.yml 也跑该脚本，
+    但只打印到日志，不产出这份文件。
+
+    口径：mojibake_free = 编码完全干净的文件数 / 总文件数。
+    「完全干净」= mojibake_issues 为空 且 encoding_errors 为空：
+      - mojibake_issues：detect_mojibake 的字节级双重编码序列
+        （UTF-8 被误读为 Latin-1/CP1252 后再编码为 UTF-8）
+      - encoding_errors：解码层错误
+    两个都要查——KPI 名是「编码乱码合格率」，只查双重编码会漏掉
+    解码层面的错误。
+
+    2026-09-18 修掉一个口径错位：本 KPI 原先从 content_coverage 报告的
+    post_fields.last_updated.passed 取值——那测的是「文章有没有填
+    last_updated 字段」，和编码乱码毫无关系。后果是：一篇文章哪怕
+    满篇乱码，只要 front-matter 里 last_updated 填了，就拿 100 分的
+    「编码乱码合格率」。KPI 定义里声明的源一直是
+    content_quality_validator(P0)，只是从来没接上——这是本轮之前
+    最隐蔽的一处假绿灯，因为它打出来的分数恰好是漂亮的 100 分。
+    """
+    out: Dict[str, Any] = {
+        "rate": None, "clean": 0, "total": 0,
+        "mojibake_files": 0, "encoding_files": 0,
+        "age_days": -1, "file": "", "note": "",
+    }
+
+    if report_path is None:
+        report_path = PROJECT_ROOT / "reports" / "content_audit" / "validator_output.json"
+    if not report_path.exists():
+        out["note"] = "无 content_quality_validator 输出"
+        return out
+
+    out["file"] = report_path.name
+    try:
+        data = json.loads(report_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        out["note"] = f"读取失败: {e}"
+        return out
+
+    try:
+        out["age_days"] = (datetime.now()
+                           - datetime.fromtimestamp(report_path.stat().st_mtime)).days
+    except OSError:
+        pass
+
+    rows = data.get("results") if isinstance(data, dict) else None
+    if not isinstance(rows, list) or not rows:
+        out["note"] = "输出里没有 results 列表，无法判定"
+        return out
+
+    out["total"] = len(rows)
+    clean = 0
+    for r in rows:
+        if not isinstance(r, dict):
+            continue
+        if r.get("mojibake_issues"):
+            out["mojibake_files"] += 1
+        if r.get("encoding_errors"):
+            out["encoding_files"] += 1
+        if not r.get("mojibake_issues") and not r.get("encoding_errors"):
+            clean += 1
+    out["clean"] = clean
+    out["rate"] = round(clean / out["total"] * 100, 1)
+
+    return out
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -1042,20 +1114,24 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     metrics = {aid: {} for aid in AGENTS}
 
-    # 1. 从 content_coverage_audit 读取内容指标
-    #    注意：不再写 avg_word_count=1808 / publish_rate=4.0 这类硬编码字面量。
-    #    它们原先被标成 status="measured" 参与评分，但其实是永远不会更新的常量——
-    #    对一个带 no_fabricated_data KPI 的考核系统，那是最不该出现的假数据。
-    #    拿不到真实值就留空，让上层标 no_data。
-    coverage_reports = sorted((PROJECT_ROOT / "reports" / "content_coverage").glob("*.json"))
-    if coverage_reports:
-        try:
-            with open(coverage_reports[-1], "r", encoding="utf-8") as f:
-                cov = json.load(f)
-            pf = cov.get("post_fields", {})
-            metrics["content"]["mojibake_free"] = 100.0 if pf.get("last_updated", {}).get("passed") else 60.0
-        except Exception:
-            pass
+    # 1. 编码乱码合格率 ← content_quality_validator 的字节级检测。
+    #    2026-09-18 修掉口径错位：原先这里读 content_coverage 报告的
+    #    post_fields.last_updated.passed，那测的是「文章有没有填
+    #    last_updated 字段」——和编码乱码无关。61/61 篇都填了字段，
+    #    于是长期稳定输出 100 分，不管正文里有没有乱码。
+    #    注意：content_coverage 报告没有别的 KPI 在用，整块删掉。
+    mb = _mojibake_free()
+    if mb["rate"] is not None:
+        metrics["content"]["mojibake_free"] = mb["rate"]
+        bad = mb["mojibake_files"] + mb["encoding_files"]
+        print(f"  🔤 编码乱码合格率: {mb['rate']}%"
+              f"（{mb['clean']}/{mb['total']} 篇完全干净"
+              f"，双重编码 {mb['mojibake_files']} 篇 / 解码错误 {mb['encoding_files']} 篇"
+              f"，{mb['file']}，{mb['age_days']} 天前）")
+        if bad:
+            print(f"     ⚠️  {bad} 篇文件有编码问题（quality 类型，<80 分再扣 20）")
+    else:
+        print(f"  🔤 编码乱码合格率: 未测量（{mb['file'] or '无报告'}，{mb['note']}）")
 
     # 2. 从 api_health_audit 读取 API 健康指标
     api_reports = sorted((PROJECT_ROOT / "reports" / "api_health").glob("*.json"))
