@@ -73,8 +73,10 @@ AGENTS = {
         "revenue_chain": "直接负责：联盟链接优化 → 点击率↑ → 转化率↑ → 佣金营收↑；eBook定价/促销 → 销售额↑",
         "kpis": [
             # 营收直接指标 (50%)
-            {"id": "affiliate_revenue", "name": "联盟佣金营收", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "source": "Travelpayouts/Booking/Klook API"},
-            {"id": "ebook_revenue", "name": "eBook 销售额", "weight": 25, "target": "环比增长≥15%", "type": "revenue", "source": "Stripe API"},
+            # unit 声明值量纲，归一化按它分派。不声明就走旧启发式（向后兼容）。
+            # currency = 绝对金额（美元）；目标是环比增长，两者不同口径。
+            {"id": "affiliate_revenue", "name": "联盟佣金营收", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "unit": "currency", "source": "Travelpayouts/Booking/Klook API"},
+            {"id": "ebook_revenue", "name": "eBook 销售额", "weight": 25, "target": "环比增长≥15%", "type": "revenue", "unit": "currency", "source": "Stripe API"},
             # 营收驱动过程指标 (30%)
             {"id": "affiliate_ctr", "name": "联盟链接点击率", "weight": 15, "target": "≥3%", "type": "process", "source": "GA4事件"},
             {"id": "conversion_rate", "name": "联盟转化率", "weight": 15, "target": "≥1.5%", "type": "process", "source": "联盟平台后台"},
@@ -91,7 +93,7 @@ AGENTS = {
         "kpis": [
             # 营收直接指标 (50%)
             {"id": "organic_traffic", "name": "自然搜索流量", "weight": 20, "target": "环比增长≥8%", "type": "revenue", "source": "GA4/GSC"},
-            {"id": "content_driven_revenue", "name": "内容驱动营收(联盟+eBook)", "weight": 30, "target": "环比增长≥10%", "type": "revenue", "source": "GA4归因+Stripe"},
+            {"id": "content_driven_revenue", "name": "内容驱动营收(联盟+eBook)", "weight": 30, "target": "环比增长≥10%", "type": "revenue", "unit": "currency", "source": "GA4归因+Stripe"},
             # 营收驱动过程指标 (30%)
             {"id": "publish_rate", "name": "文章发布量", "weight": 10, "target": "≥4篇/周", "type": "process", "source": "git log/content目录"},
             {"id": "avg_word_count", "name": "平均文章字数", "weight": 10, "target": "≥1500字", "type": "process", "source": "content_coverage_audit"},
@@ -109,7 +111,7 @@ AGENTS = {
         "kpis": [
             # 营收直接指标 (50%)
             {"id": "organic_traffic_seo", "name": "自然搜索流量(SEO归因)", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "source": "GA4/GSC"},
-            {"id": "seo_driven_revenue", "name": "SEO驱动营收", "weight": 25, "target": "环比增长≥12%", "type": "revenue", "source": "GA4归因"},
+            {"id": "seo_driven_revenue", "name": "SEO驱动营收", "weight": 25, "target": "环比增长≥12%", "type": "revenue", "unit": "currency", "source": "GA4归因"},
             # 营收驱动过程指标 (30%)
             {"id": "index_coverage", "name": "索引覆盖率", "weight": 10, "target": "≥95%", "type": "process", "source": "GSC"},
             {"id": "avg_position", "name": "平均排名", "weight": 10, "target": "环比提升≥5%", "type": "process", "source": "GSC"},
@@ -127,10 +129,10 @@ AGENTS = {
         "kpis": [
             # 营收直接指标 (50%)
             {"id": "social_referral_traffic", "name": "社媒推荐流量", "weight": 20, "target": "环比增长≥15%", "type": "revenue", "source": "GA4"},
-            {"id": "social_driven_revenue", "name": "社媒驱动营收", "weight": 30, "target": "环比增长≥20%", "type": "revenue", "source": "GA4归因+UTM"},
+            {"id": "social_driven_revenue", "name": "社媒驱动营收", "weight": 30, "target": "环比增长≥20%", "type": "revenue", "unit": "currency", "source": "GA4归因+UTM"},
             # 营收驱动过程指标 (30%)
             {"id": "publish_consistency", "name": "发布一致性(每周≥5条)", "weight": 10, "target": "≥90%达标率", "type": "process", "source": "social_reports"},
-            {"id": "engagement_rate", "name": "互动率(点赞+评论+转发)", "weight": 10, "target": "≥3%", "type": "process", "source": "各平台后台"},
+            {"id": "engagement_rate", "name": "互动率(点赞+评论+转发)", "weight": 10, "target": "≥3%", "type": "process", "unit": "ratio", "source": "各平台后台"},
             {"id": "follower_growth", "name": "粉丝增长率", "weight": 10, "target": "环比增长≥5%", "type": "process", "source": "各平台后台"},
             # 质量底线指标 (20%)
             {"id": "content_originality", "name": "内容原创率(无抄袭/无重复配图)", "weight": 10, "target": "100%", "type": "quality", "source": "social_image_validator"},
@@ -144,7 +146,7 @@ AGENTS = {
         "revenue_chain": "邮件列表↑/转化率↑ → eBook销售↑/复购↑/联盟推荐↑ → 营收↑",
         "kpis": [
             # 营收直接指标 (50%)
-            {"id": "email_driven_revenue", "name": "邮件驱动营收(eBook+联盟)", "weight": 30, "target": "环比增长≥15%", "type": "revenue", "source": "MailerLite+Stripe+UTM"},
+            {"id": "email_driven_revenue", "name": "邮件驱动营收(eBook+联盟)", "weight": 30, "target": "环比增长≥15%", "type": "revenue", "unit": "currency", "source": "MailerLite+Stripe+UTM"},
             {"id": "ebook_conversion", "name": "eBook转化率(访客→购买)", "weight": 20, "target": "≥1%", "type": "revenue", "source": "Stripe+GA4"},
             # 营收驱动过程指标 (30%)
             {"id": "email_list_growth", "name": "邮件列表增长率", "weight": 10, "target": "环比增长≥10%", "type": "process", "source": "MailerLite API"},
@@ -165,7 +167,8 @@ AGENTS = {
             {"id": "uptime", "name": "网站可用性", "weight": 20, "target": "≥99.9%", "type": "revenue", "source": "CF Analytics/监控"},
             {"id": "revenue_loss_prevented", "name": "避免营收损失(故障修复及时率)", "weight": 30, "target": "P0故障≤30分钟修复", "type": "revenue", "source": "error-alert+修复记录"},
             # 营收驱动过程指标 (30%)
-            {"id": "lcp_performance", "name": "LCP性能(Core Web Vitals)", "weight": 10, "target": "≤2.5s", "type": "process", "source": "Lighthouse/CF"},
+            # seconds 且越小越好：目标是「≤2.5s」，实际 3.0s 是更差而不是更好。
+            {"id": "lcp_performance", "name": "LCP性能(Core Web Vitals)", "weight": 10, "target": "≤2.5s", "type": "process", "unit": "seconds", "source": "Lighthouse/CF"},
             {"id": "deploy_success_rate", "name": "部署成功率", "weight": 10, "target": "≥98%", "type": "process", "source": "CF Pages部署记录"},
             {"id": "api_health_rate", "name": "API健康率(3端点)", "weight": 10, "target": "≥99%", "type": "process", "source": "api_health_audit"},
             # 质量底线指标 (20%)
@@ -213,59 +216,111 @@ def get_grade(score: float) -> Dict:
     return {"grade": "D", **GRADE_CONFIG["D"]}
 
 
-def normalize_metric_to_score(kpi: Dict, value: Any) -> float:
+def _ratio_ladder(value: float, target_val: float, lower_is_better: bool = False) -> float:
+    """按「实际值相对目标值」的达标程度给分。
+
+    lower_is_better=True 用于 LCP 这类越小越好的指标：目标 ≤2.5s，
+    实际 2.0s 是达标（目标的 0.8 倍），实际 5.0s 是两倍超标。
+    没有目标值或目标值非正时返回 70（无从比较，给中性分）。
     """
-    P0-FIX: 将原始指标值转换为 0-100 分。
-    根据指标类型和目标值进行归一化。
+    if not target_val or target_val <= 0:
+        return 70.0
+    ratio = (target_val / max(value, 1e-9)) if lower_is_better else (value / target_val)
+    if ratio >= 1.2:
+        return 95.0
+    if ratio >= 1.0:
+        return 85.0
+    if ratio >= 0.8:
+        return 70.0
+    if ratio >= 0.5:
+        return 50.0
+    return 30.0
+
+
+def _legacy_normalize(kpi: Dict, value: float, target_val, target_str: str) -> float:
+    """未声明 unit 的 KPI 走这里，保留 2026-09-18 第一轮修复后的旧行为。
+
+    留着这份启发式是为了避免给 48 个 KPI 一次性改口径造成大面积评分跳变：
+    没有 unit 的 KPI 评分与改造前逐分一致。
+    """
+    if 0 <= value <= 100 and kpi.get("type") in ("revenue", "quality"):
+        return value
+    if 0 < value <= 1:
+        return value * 100
+    if target_val and target_val > 0:
+        return _ratio_ladder(value, target_val)
+    if value > 1000:
+        return 75.0
+    if value > 100:
+        return 70.0
+    return value
+
+
+def normalize_metric_to_score(kpi: Dict, value: Any) -> float:
+    """把原始指标值归一成 0-100 分。
+
+    优先按 kpi["unit"] 声明的量纲分派；未声明 unit 的 KPI 走 _legacy_normalize
+    保持旧评分不变。
+
+    量纲为什么必须显式声明——靠「数值范围 + type」猜单位会漂移：
+      affiliate_revenue 是美元金额，旧逻辑给出 $0→0、$5→5、$500→95、
+      $0.50→50（被 `0 < value <= 1` 当成 0.5 的比率再 ×100）。
+      结果 $0.50 营收比 0 营收还高分，且分数量级随金额漂移。
+      lcp_performance 目标「≤2.5s」是越小越好，旧逻辑按 value/target 算达标度，
+      实际 3.0s（更差）反而拿 95 分。
+
+    更早一轮（零基准）修的是：target=0 且非百分比（「0 个坏链接」
+    「0 例伪造数据」）原先被 `0 <= value <= 100` 吃掉，value=0 直接 return 0.0，
+    「零个坏链接」拿了最低分，语义完全反了；value=1 掉进 `0 <= value <= 1`
+    返回 1.0，越坏分越高。
     """
     if value is None:
         return 70.0  # 无数据基础分
+    if not isinstance(value, (int, float)):
+        return 70.0
 
-    if isinstance(value, (int, float)):
-        # 零基准目标（target 为 0 且非百分比，如「0 个坏链接」「0 例伪造数据」）
-        # 必须最先判定：value=0 是满分。
-        # 2026-09-18 修复：这类指标原先被下面 `0 <= value <= 100` 的百分比分支
-        # 吃掉——value=0 直接 return 0.0，「零个坏链接」拿了最低分，语义完全反了；
-        # value=1 反而掉进 `0 <= value <= 1` 返回 1.0，越坏分越高。
-        target_str = kpi.get("target", "")
-        target_match = re.search(r'(\d+(?:\.\d+)?)', target_str)
-        if target_match and float(target_match.group(1)) == 0 and "%" not in target_str:
-            return 100.0 if value == 0 else 30.0
+    value = float(value)
+    target_str = kpi.get("target", "")
+    target_match = re.search(r'(\d+(?:\.\d+)?)', target_str)
+    target_val = float(target_match.group(1)) if target_match else None
 
-        # 已经是百分比形式的值（0-100）
-        if 0 <= value <= 100 and kpi["type"] in ("revenue", "quality"):
-            return float(value)
-        # 已经是比率（0-1）转为百分比。
-        # 必须严格大于 0：value=0 无法与「0% 比率」区分，无差别套用会把
-        # 「0 篇/周」「$0 营收」也当成 0% 返回 0.0 分。2026-09-18 修复——
-        # 收紧后任何 0 值都走下面的目标比较分支，统一归为「远低于目标」30 分，
-        # 语义一致；真比率（如 engagement_rate=0.05）不受影响。
-        if 0 < value <= 1:
-            return value * 100
-        # 对于大数值（如字数、流量、营收），根据目标值估算
-        # 默认：达到目标值给85分，超过目标值给95分
-        if target_match:
-            target_val = float(target_match.group(1))
-            if target_val > 0:
-                ratio = value / target_val
-                if ratio >= 1.2:
-                    return 95.0
-                elif ratio >= 1.0:
-                    return 85.0
-                elif ratio >= 0.8:
-                    return 70.0
-                elif ratio >= 0.5:
-                    return 50.0
-                else:
-                    return 30.0
-        # 无法解析目标值时，根据数值范围给分
-        if value > 1000:
-            return 75.0  # 大数值默认中等偏上
-        elif value > 100:
-            return 70.0
-        else:
-            return float(value)
-    return 70.0
+    # 零基准目标：value=0 是满分。必须最先判定。
+    if target_val == 0 and "%" not in target_str:
+        return 100.0 if value == 0 else 30.0
+
+    unit = kpi.get("unit")
+
+    if unit == "currency":
+        # 目标是环比增长（"环比增长≥10%"），实测值是绝对金额——不同口径。
+        # 没有历史基数就无法评估增长，唯一可判断的事实是「是否为 0」：
+        #   0   → 0 分（真实零营收，必须暴露的信号，不给默认分）
+        #   > 0 → 70 分（有营收，但增长不可评估：既不奖励也不惩罚）
+        # 真实金额始终通过 kpi_results 的 actual 字段暴露，不会被归一化吞掉。
+        return 0.0 if value == 0 else 70.0
+
+    if unit == "ratio":
+        # 明确声明为 0-1 比率：先 ×100 换成百分比，再和目标百分比比较。
+        # 不靠「0 < value <= 1」猜，因为 0.5 既可能是 50% 也可能是 $0.50。
+        # 必须先换单位再比目标：旧逻辑直接 return value*100 不看目标，
+        # engagement_rate=0.05 对「≥3%」是达标（5%>3%），却只得 5 分。
+        return _ratio_ladder(max(0.0, min(100.0, value * 100)), target_val)
+
+    if unit == "seconds":
+        return _ratio_ladder(value, target_val, lower_is_better=True)
+
+    if unit == "pct":
+        pct = max(0.0, min(100.0, value))
+        # 目标是 100%（合规率/覆盖率/结构化数据正确率）时是天花板指标，
+        # 不可能超过 100，直接取原值——用达标阶梯的话 100% 只能拿 85 分。
+        if target_val and target_val >= 100:
+            return pct
+        # 目标低于 100%（如 email_open_rate ≥25%）时按达标程度给分。
+        return _ratio_ladder(pct, target_val)
+
+    if unit in ("count", "words"):
+        return _ratio_ladder(value, target_val)
+
+    return _legacy_normalize(kpi, value, target_val, target_str)
 
 
 def calculate_agent_score(agent_id: str, metrics: Dict[str, Any]) -> Dict:
