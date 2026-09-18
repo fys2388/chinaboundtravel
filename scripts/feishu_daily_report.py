@@ -222,8 +222,8 @@ def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total):
     if paths_total is None:
         return "状态未知（未采集到记录）"
     if paths_total == 0:
-        return "状态未知（仓库无该 workflow 记录）"
-    return "状态未知（当日无已完成 run）"
+        return "状态未知（近 2 天无该 workflow 完成记录）"
+    return "状态未知（报告日无已完成 run）"
 
 
 class FeishuDailyReporter:
@@ -1897,6 +1897,7 @@ class FeishuDailyReporter:
             base_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/runs"
             # 只统计报告日（UTC 昨日）完成的工作流，避免把历史成功当成当日状态
             report_day = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+            today_day = datetime.now().strftime("%Y-%m-%d")
             # 当前正在运行的 run（GitHub Actions 自动注入），排除自身避免误判
             current_run_id = str(os.environ.get("GITHUB_RUN_ID", ""))
             
@@ -1912,18 +1913,35 @@ class FeishuDailyReporter:
             runs = []  # 预定义避免作用域问题
             api_ok, api_error = False, "未发起请求"
             try:
-                resp = requests.get(
-                    base_url,
-                    headers=headers,
-                    params={"per_page": 100},
-                    timeout=15
-                )
-                if resp.status_code == 200:
-                    runs = resp.json().get("workflow_runs", [])
+                # 必须服务端过滤 + 翻页。历史 bug：只取 per_page=100 的最新 run，
+                # 而本仓库每天 128+ 次提交、每次提交触发 Error Alert + Post-deploy，
+                # 最新 100 条覆盖不到 24 小时前。本工作流 00:30 UTC 触发，
+                # report_day=昨日的 run 落在窗口外 → _completed_runs 恒为空 →
+                # gh_report_success 恒 None → 日报把自己渲染成「未运行」。
+                # daily_2026-09-18.json 已复现该假声明，而同日 chinabound-bot 的
+                # OKR 快照提交（if: send_report.outcome == 'success'）证明发送实际成功。
+                page_size = 200
+                for page in range(1, 6):  # 最多 5 页 = 1000 条，覆盖 2 天窗口
+                    resp = requests.get(
+                        base_url,
+                        headers=headers,
+                        params={
+                            "per_page": page_size,
+                            "page": page,
+                            "status": "completed",
+                            "created": f"{report_day}..{today_day}",
+                        },
+                        timeout=15,
+                    )
+                    if resp.status_code != 200:
+                        api_error = f"HTTP {resp.status_code} (page {page})"
+                        print(f"   ⚠️ GitHub API 响应 {resp.status_code}: {resp.text[:200]}")
+                        break
+                    batch = resp.json().get("workflow_runs", [])
+                    runs.extend(batch)
                     api_ok = True
-                else:
-                    api_error = f"HTTP {resp.status_code}"
-                    print(f"   ⚠️ GitHub API 响应 {resp.status_code}: {resp.text[:200]}")
+                    if len(batch) < page_size:
+                        break  # 已到最后一页
             except Exception as e:
                 api_error = str(e)[:120]
                 print(f"   ⚠️ GitHub API 查询失败: {e}")
