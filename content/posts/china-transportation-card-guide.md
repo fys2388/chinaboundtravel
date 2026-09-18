@@ -188,3 +188,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
