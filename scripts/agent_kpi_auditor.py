@@ -564,6 +564,32 @@ def measure_structured_data(root: Path = None) -> Dict[str, Any]:
     return r
 
 
+def _report_age_days(path: Path) -> int:
+    """报告文件的年龄（天）。从文件名或内容里的时间戳取，取不到返回 -1。
+
+    为什么需要：拿一份 11 天前的审计当本月考核依据，等于让考核系统引用
+    过期结论。年龄打印出来至少让读者知道这个分数的时效。
+    """
+    m = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+    if m:
+        try:
+            return max(0, (datetime.now() - datetime.strptime(m.group(1), "%Y-%m-%d")).days)
+        except ValueError:
+            pass
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            head = json.load(f)
+        for key in ("audit_time", "generated_at", "collected_at"):
+            v = head.get(key) if isinstance(head, dict) else None
+            if isinstance(v, str):
+                m2 = re.match(r"(20\d{2}-\d{2}-\d{2})", v)
+                if m2:
+                    return max(0, (datetime.now() - datetime.strptime(m2.group(1), "%Y-%m-%d")).days)
+    except Exception:
+        pass
+    return -1
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -592,10 +618,30 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
         try:
             with open(api_reports[-1], "r", encoding="utf-8") as f:
                 api = json.load(f)
-            summary = api.get("summary", {})
-            health_rate = summary.get("pass_rate", 0)
-            metrics["ops"]["api_health_rate"] = health_rate
-            metrics["user"]["subscribe_api_health"] = health_rate
+            metrics["ops"]["api_health_rate"] = float(api.get("summary", {}).get("pass_rate", 0))
+            print(f"  🩺 API 健康率: {metrics['ops']['api_health_rate']}%"
+                  f"（{api_reports[-1].name}，{_report_age_days(api_reports[-1])} 天前）")
+        except Exception:
+            pass
+
+    # 2b. 订阅端点健康 ← subscription_health 专项审计。
+    # 2026-09-18 修复：原先把 user.subscribe_api_health 接到通用 api_health 的
+    # pass_rate 上。那份报告测的是全站 16 个端点，与订阅端点无关——等于用
+    # 一个不相关指标给订阅 API 打分，订阅端点真实健康度反而成了盲区。
+    sub_reports = sorted((PROJECT_ROOT / "reports" / "subscription_health").glob("*.json"))
+    if sub_reports:
+        try:
+            with open(sub_reports[-1], "r", encoding="utf-8") as f:
+                sub = json.load(f)
+            s = sub.get("summary", {})
+            total, passed = s.get("total", 0), s.get("passed", 0)
+            if total:
+                metrics["user"]["subscribe_api_health"] = round(passed / total * 100, 1)
+                fails = [t.get("name") for t in sub.get("api_tests", []) if not t.get("passed")]
+                print(f"  📧 订阅端点健康: {metrics['user']['subscribe_api_health']}%"
+                      f"（{passed}/{total}，{sub_reports[-1].name}，"
+                      f"{_report_age_days(sub_reports[-1])} 天前）"
+                      + (f" 失败: {fails}" if fails else ""))
         except Exception:
             pass
 

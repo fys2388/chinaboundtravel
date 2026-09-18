@@ -46,9 +46,12 @@ REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports" / "subscription
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # 订阅页面检查列表
+# 2026-09-18 修复：移除 "/blog/"。线上实测 404——博客在 /posts/
+# （hugo.toml [[menu.main]] identifier="posts" url="/posts/"），且
+# content/ + layouts/ + static/ 全站 0 处链接指向 /blog/，是纯孤儿 URL。
+# 留着它让每次审计都产生一个假失败，把真实健康度压低。
 SUBSCRIPTION_PAGES = [
     "/",
-    "/blog/",
     "/about/",
 ]
 
@@ -61,8 +64,13 @@ TEST_CASES = [
         "method": "POST",
         "body": {"email": "test-subscribe-" + str(int(time.time())) + "@example.com"},
         "expected_status": 200,
-        "expected_fields": ["success", "message"],
-        "description": "有效邮箱应返回 200 + 成功消息",
+        # 2026-09-18 修复：原先要求 ["success", "message"]，但线上实际响应是
+        # {"success":true,"subscriber_created":true,"delivered_pdf":false,
+        #  "lead_magnet":"china-visa-free-entry-checklist","detail":...}
+        # ——没有 message 字段。期望过时导致每次审计都把一个工作正常的接口
+        # 判成 critical 失败。success 才是真正的契约字段。
+        "expected_fields": ["success"],
+        "description": "有效邮箱应返回 200 + success=true",
         "severity": "critical",
     },
     # === /api/subscribe 无效输入 ===
@@ -108,9 +116,12 @@ TEST_CASES = [
         "endpoint": "/api/subscribe",
         "name": "subscribe_cors_preflight",
         "method": "OPTIONS",
-        "expected_status": 200,
+        # 2026-09-18 修复：原先只认 200。线上实测 204 No Content——
+        # 对 OPTIONS 预检这是标准且更正确的响应（预检无需响应体）。
+        # 只认 200 会把正常工作的预检判成失败。
+        "expected_status": [200, 204],
         "expected_headers": ["Access-Control-Allow-Origin"],
-        "description": "CORS 预检应返回 200 + CORS 头",
+        "description": "CORS 预检应返回 200/204 + CORS 头",
         "severity": "medium",
     },
 ]
@@ -149,9 +160,12 @@ def run_test(base_url: str, test: Dict) -> Dict:
         result["status_code"] = resp.status_code
         result["response_time_ms"] = elapsed
 
-        # 检查状态码
-        if resp.status_code != test["expected_status"]:
-            result["error"] = f"期望状态码 {test['expected_status']}，实际 {resp.status_code}"
+        # 检查状态码。expected_status 可以是单个值，也可以是可接受值的列表
+        #（OPTIONS 预检 200 与 204 都合法）。
+        expected = test["expected_status"]
+        ok_statuses = list(expected) if isinstance(expected, (list, tuple)) else [expected]
+        if resp.status_code not in ok_statuses:
+            result["error"] = f"期望状态码 {ok_statuses}，实际 {resp.status_code}"
             try:
                 result["response_body"] = resp.json()
             except:
