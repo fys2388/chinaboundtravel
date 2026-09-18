@@ -1,8 +1,8 @@
 {
   "date": "2026-09-17",
   "total_published": 6,
-  "total_impressions": 0,
-  "total_clicks": 0,
+  "total_impressions": 2,
+  "total_clicks": 1,
   "total_uv": 0,
   "by_platform": {
     "ig": {
@@ -25,8 +25,8 @@
     },
     "fb": {
       "published": 0,
-      "impressions": 0,
-      "clicks": 0,
+      "impressions": 2,
+      "clicks": 1,
       "uv": 0
     }
   },

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-18T05:47:06",
+  "updated_at": "2026-09-18T17:03:42",
   "items": [
     {
       "id": "soc-000001",
@@ -1608,8 +1608,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2127,7 +2127,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nChina Travel Safety 2026: Guide for Travelers | Essential Tea tips most first-time visitors miss.\n\nIs China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips researched and verified by our editorial team | Keywords: food, safety\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'China Travel Safety 2026: Guide for Travelers' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips researched and verified by our editorial .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/travel-safety-guide-pinterest-tip-cf8b1bcd.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2142,7 +2142,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "70b434288615"
+      "_sig": "70b434288615",
+      "image_generated": true
     },
     {
       "id": "soc-000083",
@@ -2152,7 +2153,7 @@
       "type": "story",
       "caption": "What travelers discover about Tea — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Travel Safety 2026: Guide for Travelers' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips researched and verified by our editorial .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/travel-safety-guide-x-story-56b6f2d7.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2167,7 +2168,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "be15a4e69e1c"
+      "_sig": "be15a4e69e1c",
+      "image_generated": true
     },
     {
       "id": "soc-000084",
@@ -2635,8 +2637,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6289,8 +6291,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6364,8 +6366,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
