@@ -289,3 +289,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
