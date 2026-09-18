@@ -201,6 +201,30 @@ def generate_priority_tasks(okr_data, suggestions):
     return out
 
 
+def gsc_windows(now: datetime = None) -> dict:
+    """GSC 查询窗口。抽成纯函数以便测试。
+
+    为什么不是单日查询：GSC dataState=final 的数据有 2-3 天定稿延迟，
+    (yesterday, yesterday) 几乎恒返回空行，把真实的「1883 曝光 / 28 天」
+    抹成「0 曝光 0 点击」——2026-09-18 实测复现，且该假信号每天都出现在
+    日报里，让自动化系统误判「站点在自然搜索里完全没有存在感」。
+
+    三个窗口同维度（都是 7 天）且互不重叠：
+      window  [D-9, D-3]   主窗口，止于 D-3 确保数据已定稿
+      prev7   [D-16, D-10] 周环比
+      prev4w  [D-34, D-28] 月环比（4 周前的 7 天）
+    """
+    now = now or datetime.now()
+    return {
+        "window_start": (now - timedelta(days=9)).strftime("%Y-%m-%d"),
+        "window_end": (now - timedelta(days=3)).strftime("%Y-%m-%d"),
+        "prev7_start": (now - timedelta(days=16)).strftime("%Y-%m-%d"),
+        "prev7_end": (now - timedelta(days=10)).strftime("%Y-%m-%d"),
+        "prev4w_start": (now - timedelta(days=34)).strftime("%Y-%m-%d"),
+        "prev4w_end": (now - timedelta(days=28)).strftime("%Y-%m-%d"),
+    }
+
+
 def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total):
     """CI 状态文案：把「未运行」这个假声明拆成可区分的几种情况。
 
@@ -508,6 +532,8 @@ class FeishuDailyReporter:
             gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
             gsc_week_trend = data.get('gsc_week_trend', 'N/A')
             gsc_month_trend = data.get('gsc_month_trend', 'N/A')
+            _pos = data.get('gsc_avg_position')
+            gsc_position_str = f"{_pos:.1f}" if _pos is not None else "N/A"
         elif gsc_available:
             # 已连接但昨日无数据：昨日列显示 NOT_AVAILABLE，缓存独立成行
             gsc_auth_str = "✅ 已连接"
@@ -516,8 +542,9 @@ class FeishuDailyReporter:
             gsc_ctr_str = "NOT_AVAILABLE"
             gsc_indexed_str = f"{data.get('indexed_pages', 'N/A')} 个"
             gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
-            gsc_week_trend = "NOT_AVAILABLE（无昨日数据）"
-            gsc_month_trend = "NOT_AVAILABLE（无昨日数据）"
+            gsc_week_trend = "NOT_AVAILABLE（无窗口数据）"
+            gsc_month_trend = "NOT_AVAILABLE（无窗口数据）"
+            gsc_position_str = "NOT_AVAILABLE"
         else:
             # GSC 未授权/取数失败：明确标注，不回退为缓存冒充昨日
             gsc_auth_str = "⚠️ 未授权（服务账号无站点访问权）"
@@ -528,6 +555,7 @@ class FeishuDailyReporter:
             gsc_errors_str = "未授权"
             gsc_week_trend = "NOT_AVAILABLE"
             gsc_month_trend = "NOT_AVAILABLE"
+            gsc_position_str = "未授权"
         
         # Top 搜索关键词
         top_keywords = data.get("top_keywords", [])
@@ -535,9 +563,9 @@ class FeishuDailyReporter:
         if gsc_has_data and top_keywords:
             kw_lines = [f"{i}. {kw['keyword']} (曝光 {kw['impressions']}, 点击 {kw['clicks']}, CTR {kw['ctr']}%, 排名 {kw['position']})" for i, kw in enumerate(top_keywords[:5], 1)]
         elif gsc_has_data and not top_keywords:
-            kw_lines = ["昨日无搜索关键词数据"]
+            kw_lines = ["本窗口无搜索关键词数据"]
         elif gsc_available and not gsc_has_data:
-            kw_lines = ["GSC 已连接，昨日暂无搜索数据"]
+            kw_lines = ["GSC 已连接，本窗口暂无搜索数据"]
         elif not gsc_available:
             kw_lines = ["GSC 未授权：服务账号无站点访问权，无法取数。请到 Search Console 将服务账号添加为站点所有者"]
         kw_str = "\n".join(kw_lines)
@@ -627,11 +655,12 @@ class FeishuDailyReporter:
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
 | 授权状态 | {gsc_auth_str} | Sitemap 数量 | {gsc_indexed_str} |
-| 昨日搜索曝光 | {gsc_impressions_str} | 昨日搜索点击 | {gsc_clicks_str} |
+| 搜索曝光（7天窗口） | {gsc_impressions_str} | 搜索点击（7天窗口） | {gsc_clicks_str} |
+| 平均排名 | {gsc_position_str} | 点击率 CTR | {gsc_ctr_str} |
 | 28天缓存窗口 | {gsc_cache_imp_str} | 缓存点击 | {gsc_cache_clk_str} |
-| 索引错误 | {gsc_errors_str} | 点击率 CTR | {gsc_ctr_str} |
+| 索引错误 | {gsc_errors_str} | 窗口 | {data.get('gsc_window_start', '?')}~{data.get('gsc_window_end', '?')} |
 
-**📈 GSC 同比趋势**: 周同比 {gsc_week_trend} ｜ 月同比 {gsc_month_trend}"""
+**📈 GSC 环比趋势**: 周环比 {gsc_week_trend}（vs 前 7 天） ｜ 月环比 {gsc_month_trend}（vs 4 周前同长窗口）"""
                     }
                 },
                 # Top 关键词
@@ -1209,12 +1238,15 @@ class FeishuDailyReporter:
         try:
             from googleapiclient.discovery import build
             
+            # 窗口口径（2026-09-18 修复）：见 gsc_windows() 的说明。
+            # 主窗口 7 天止于 D-3（已定稿）；单日查询恒空会把真实曝光抹成 0。
+            _w = gsc_windows()
             yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-            # 周同比：上周同日（D-7）；月同比：上月同日（D-30）
-            last_week_day = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
-            last_month_day = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
-            
-            print(f"   🔍 正在调用 GSC API ({yesterday})...")
+            window_start, window_end = _w["window_start"], _w["window_end"]
+            prev7_start, prev7_end = _w["prev7_start"], _w["prev7_end"]
+            prev4w_start, prev4w_end = _w["prev4w_start"], _w["prev4w_end"]
+
+            print(f"   🔍 正在调用 GSC API（主窗口 {window_start} ~ {window_end}）...")
             
             service_account_info = self._load_gsc_service_account()
             if not service_account_info:
@@ -1264,23 +1296,26 @@ class FeishuDailyReporter:
                     siteUrl=site_url, body=request_body
                 ).execute()
             
-            # === 昨日总览（单日精确查询） ===
-            yesterday_response = gsc_query(yesterday, yesterday)
+            # === 主窗口总览（7 天滚动，已定稿数据）===
+            window_response = gsc_query(window_start, window_end)
             print(f"   ✅ GSC API 调用成功")
 
             yesterday_impressions = 0
             yesterday_clicks = 0
             yesterday_ctr = 0.0
+            window_avg_position = None
+            window_rows = window_response.get("rows", []) if "rows" in window_response else []
 
-            if "rows" in yesterday_response and yesterday_response["rows"]:
-                yesterday_impressions = int(yesterday_response["rows"][0].get("impressions", 0))
-                yesterday_clicks = int(yesterday_response["rows"][0].get("clicks", 0))
-                yesterday_ctr = round(float(yesterday_response["rows"][0].get("ctr", 0)) * 100, 2)
-            
-            # === 周同比 ===
+            if window_rows:
+                yesterday_impressions = int(window_rows[0].get("impressions", 0))
+                yesterday_clicks = int(window_rows[0].get("clicks", 0))
+                yesterday_ctr = round(float(window_rows[0].get("ctr", 0)) * 100, 2)
+                window_avg_position = round(float(window_rows[0].get("position", 0)), 2)
+
+            # === 环比：前一个 7 天窗口（不是"上周同一天"，单日对比无统计意义）===
             week_impressions = 0
             try:
-                week_resp = gsc_query(last_week_day, last_week_day)
+                week_resp = gsc_query(prev7_start, prev7_end)
                 if "rows" in week_resp:
                     week_impressions = int(week_resp["rows"][0].get("impressions", 0)) if week_resp["rows"] else 0
             except:
@@ -1289,11 +1324,11 @@ class FeishuDailyReporter:
             if week_impressions > 0:
                 w_change = ((yesterday_impressions - week_impressions) / week_impressions) * 100
                 week_trend = f"+{w_change:.1f}%" if w_change >= 0 else f"{w_change:.1f}%"
-            
-            # === 月同比 ===
+
+            # === 月环比：4 周前的 7 天窗口（同维度，不拿 7 天比 28 天）===
             month_impressions = 0
             try:
-                month_resp = gsc_query(last_month_day, last_month_day)
+                month_resp = gsc_query(prev4w_start, prev4w_end)
                 if "rows" in month_resp:
                     month_impressions = int(month_resp["rows"][0].get("impressions", 0)) if month_resp["rows"] else 0
             except:
@@ -1302,11 +1337,11 @@ class FeishuDailyReporter:
             if month_impressions > 0:
                 m_change = ((yesterday_impressions - month_impressions) / month_impressions) * 100
                 month_trend = f"+{m_change:.1f}%" if m_change >= 0 else f"{m_change:.1f}%"
-            
-            # === Top 搜索关键词 Top10 ===
+
+            # === Top 搜索关键词 Top10（同主窗口，单日窗口拿不到）===
             top_keywords = []
             try:
-                kw_response = gsc_query(yesterday, yesterday, dimensions=["query"], row_limit=10)
+                kw_response = gsc_query(window_start, window_end, dimensions=["query"], row_limit=10)
                 if "rows" in kw_response:
                     for row in kw_response["rows"]:
                         keyword = row.get("keys", [""])[0] if row.get("keys") else "N/A"
@@ -1350,6 +1385,10 @@ class FeishuDailyReporter:
                 "gsc_impressions": yesterday_impressions,
                 "gsc_clicks": yesterday_clicks,
                 "gsc_ctr": yesterday_ctr,
+                "gsc_avg_position": window_avg_position,
+                "gsc_window_start": window_start,
+                "gsc_window_end": window_end,
+                "gsc_window_days": 7,
                 "gsc_errors": gsc_errors,
                 "gsc_week_trend": week_trend,
                 "gsc_month_trend": month_trend,
