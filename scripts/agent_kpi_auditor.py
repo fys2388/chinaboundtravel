@@ -125,9 +125,9 @@ AGENTS = {
             {"id": "organic_traffic_seo", "name": "自然搜索流量(SEO归因)", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "unit": "pct", "source": "GA4/GSC"},
             {"id": "seo_driven_revenue", "name": "SEO驱动营收", "weight": 25, "target": "环比增长≥12%", "type": "revenue", "unit": "currency", "source": "GA4归因"},
             # 营收驱动过程指标 (30%)
-            {"id": "index_coverage", "name": "索引覆盖率", "weight": 10, "target": "≥95%", "type": "process", "source": "GSC"},
+            {"id": "index_coverage", "name": "索引覆盖率", "weight": 10, "target": "≥95%", "type": "process", "unit": "pct", "source": "GSC"},
             {"id": "avg_position", "name": "平均排名", "weight": 10, "target": "环比提升≥5%", "type": "process", "source": "GSC"},
-            {"id": "internal_link_health", "name": "内链健康度(无死链)", "weight": 10, "target": "100%", "type": "process", "source": "audit_internal_links"},
+            {"id": "internal_link_health", "name": "内链健康度(无死链)", "weight": 10, "target": "100%", "type": "process", "unit": "pct", "source": "audit_internal_links"},
             # 质量底线指标 (20%)
             {"id": "structured_data", "name": "结构化数据正确率", "weight": 10, "target": "100%", "type": "quality", "source": "site_health_audit"},
             {"id": "canonical_consistency", "name": "Canonical一致性", "weight": 10, "target": "100%", "type": "quality", "source": "fix_canonical_urls"},
@@ -143,7 +143,7 @@ AGENTS = {
             {"id": "social_referral_traffic", "name": "社媒推荐流量", "weight": 20, "target": "环比增长≥15%", "type": "revenue", "source": "GA4"},
             {"id": "social_driven_revenue", "name": "社媒驱动营收", "weight": 30, "target": "环比增长≥20%", "type": "revenue", "unit": "currency", "source": "GA4归因+UTM"},
             # 营收驱动过程指标 (30%)
-            {"id": "publish_consistency", "name": "发布一致性(每周≥5条)", "weight": 10, "target": "≥90%达标率", "type": "process", "source": "social_reports"},
+            {"id": "publish_consistency", "name": "发布一致性(每周≥5条)", "weight": 10, "target": "≥90%达标率", "type": "process", "unit": "pct", "source": "social_reports"},
             {"id": "engagement_rate", "name": "互动率(点赞+评论+转发)", "weight": 10, "target": "≥3%", "type": "process", "unit": "ratio", "source": "各平台后台"},
             {"id": "follower_growth", "name": "粉丝增长率", "weight": 10, "target": "环比增长≥5%", "type": "process", "source": "各平台后台"},
             # 质量底线指标 (20%)
@@ -181,8 +181,8 @@ AGENTS = {
             # 营收驱动过程指标 (30%)
             # seconds 且越小越好：目标是「≤2.5s」，实际 3.0s 是更差而不是更好。
             {"id": "lcp_performance", "name": "LCP性能(Core Web Vitals)", "weight": 10, "target": "≤2.5s", "type": "process", "unit": "seconds", "source": "Lighthouse/CF"},
-            {"id": "deploy_success_rate", "name": "部署成功率", "weight": 10, "target": "≥98%", "type": "process", "source": "CF Pages部署记录"},
-            {"id": "api_health_rate", "name": "API健康率(3端点)", "weight": 10, "target": "≥99%", "type": "process", "source": "api_health_audit"},
+            {"id": "deploy_success_rate", "name": "部署成功率", "weight": 10, "target": "≥98%", "type": "process", "unit": "pct", "source": "CF Pages部署记录"},
+            {"id": "api_health_rate", "name": "API健康率(3端点)", "weight": 10, "target": "≥99%", "type": "process", "unit": "pct", "source": "api_health_audit"},
             # 质量底线指标 (20%)
             {"id": "security_headers", "name": "安全响应头合规率", "weight": 10, "target": "100%", "type": "quality", "source": "site_health_audit"},
             {"id": "ci_block_rate", "name": "CI阻断有效率(P0问题不流入生产)", "weight": 10, "target": "100%", "type": "quality", "source": "content-quality-audit+api_health"},
@@ -198,9 +198,9 @@ AGENTS = {
             {"id": "revenue_insight_adoption", "name": "营收洞察被采纳率(导致实际优化动作)", "weight": 25, "target": "≥60%", "type": "revenue", "source": "周报+优化记录"},
             {"id": "data_driven_revenue_uplift", "name": "数据驱动营收提升(归因到数据洞察的优化)", "weight": 25, "target": "环比贡献≥5%营收增长", "type": "revenue", "source": "A/B测试+前后对比"},
             # 营收驱动过程指标 (30%)
-            {"id": "report_timeliness", "name": "报告准时率(日报/周报/月报)", "weight": 10, "target": "100%", "type": "process", "source": "feishu报告记录"},
-            {"id": "data_accuracy", "name": "数据准确率(GA4/Stripe/联盟数据一致)", "weight": 10, "target": "≥99%", "type": "process", "source": "数据对账"},
-            {"id": "dashboard_uptime", "name": "监控台可用性", "weight": 10, "target": "≥99%", "type": "process", "source": "ops-dashboard监控"},
+            {"id": "report_timeliness", "name": "报告准时率(日报/周报/月报)", "weight": 10, "target": "100%", "type": "process", "unit": "pct", "source": "feishu报告记录"},
+            {"id": "data_accuracy", "name": "数据准确率(GA4/Stripe/联盟数据一致)", "weight": 10, "target": "≥99%", "type": "process", "unit": "pct", "source": "数据对账"},
+            {"id": "dashboard_uptime", "name": "监控台可用性", "weight": 10, "target": "≥99%", "type": "process", "unit": "pct", "source": "ops-dashboard监控"},
             # 质量底线指标 (20%)
             {"id": "no_fabricated_data", "name": "无伪造数据(零容忍)", "weight": 10, "target": "0例", "type": "quality", "source": "数据审计"},
             {"id": "kpi_coverage", "name": "KPI指标覆盖率(所有Agent有数据)", "weight": 10, "target": "100%", "type": "quality", "source": "agent_kpi_auditor"},
@@ -330,11 +330,14 @@ def normalize_metric_to_score(kpi: Dict, value: Any) -> float:
 
     if unit == "pct":
         pct = max(0.0, min(100.0, value))
-        # 目标是 100%（合规率/覆盖率/结构化数据正确率）时是天花板指标，
-        # 不可能超过 100，直接取原值——用达标阶梯的话 100% 只能拿 85 分。
-        if target_val and target_val >= 100:
+        # 天花板指标：百分比天然上限 100%，而阶梯的 95 分档要求
+        # 实际值 ≥ 1.2 × 目标。当 1.2 × 目标 > 100（即目标 > 100/1.2 ≈ 83.33%）
+        # 时，95 分档数学上不可达——api_health_rate 目标 ≥99%，
+        # 做到满额 100% 也只能拿 85 分。这类指标直接取原值。
+        # 阈值 100/1.2 是从 _ratio_ladder 的定义推出来的，不是拍的。
+        if target_val and target_val > 100.0 / 1.2:
             return pct
-        # 目标低于 100%（如 email_open_rate ≥25%）时按达标程度给分。
+        # 目标留有余量（如 email_open_rate ≥25%，1.2x=30% 可达）时按达标程度给分。
         return _ratio_ladder(pct, target_val)
 
     if unit in ("count", "words"):
