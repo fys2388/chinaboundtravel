@@ -16,7 +16,7 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-20
 categories: ["visa", "cities"]
 cover:
   image: "/img/china-dest/general/china-travel-safety-guide.webp"
-last_updated: "2026-09-17"
+last_updated: "2026-09-18"
 
 ---
 # ChinaBound Travel Guide 2026.08 - Now Updated With Latest Visa Rules
@@ -168,3 +168,17 @@ If you have topics you'd like to see covered in a future update, reply to any of
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
+## FAQ
+
+### Do I need a visa for China?
+
+It depends on your nationality. Citizens of many countries can enter China visa-free for up to 15 or 30 days under the current unilateral visa-free policy. For longer stays, a tourist visa (L-type) is required.
+
+### How long does it take to get a Chinese visa?
+
+Standard processing takes 4-7 business days. Same-day and 2-3 day express services are available at most consulates for an additional fee.
+
+### Can I extend my visa while in China?
+
+Yes, you can apply for an extension at the local Exit-Entry Administration Bureau. It's recommended to apply at least 7 days before your current visa expires.
