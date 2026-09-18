@@ -118,6 +118,28 @@ Cloudflare 对**真实 `.html` 文件**启用无扩展名规范化：
    （09-16 实测单日 1 会话，真实 7 日为 56 会话 / 61 页浏览）；`metrics.gsc_28d.date` 为 09-12，
    页面「最新」却显示 2026-08-17。要改 `ops-dashboard/collect_data.py`。
 5. `site-health-daily.yml` 的 `build.py || true` 静默吞失败。
+6. **✅ 已修（2026-09-18）：「API 健康检查」里 `/api/checkout` 的状态卡是错的。**
+   原来写「Stripe支付 · 密钥待修复 / 401 / 密钥错误」。实际 Stripe key **有效**，
+   端点返回的是 `400 No such coupon: "FIRSTMONTH1"`（优惠码从未创建）。
+   两个副本（`ops-dashboard/ops-center.html`、`static/ops/ops-center.html`）各改 1 行，
+   现为「key正常/折扣码缺失 / 400 / 折扣码未创建」，改后两文件仍逐字节一致。
+   该卡片是**静态 HTML**（不在 `fetch` 注入范围，见 `:527-529` 只注入 3 个 JSON），
+   所以只能手改；且 `tests/`、`scripts/` 无任何断言依赖旧文案（`git grep` 验证）。
+
+   **更重要的纠正——营收路径没有断**：`/api/checkout` 前端**零调用方**
+   （`git grep "api/checkout" -- layouts/ content/ static/ functions/ '*.js' '*.html'`
+   只命中定义本身和这两个展示卡片）。定价页三个按钮走 Stripe Payment Links
+   （`hugo.toml:176-178` 的 `stripeOnetime/stripeMonthly/stripeAnnual`，
+   `layouts/partials/pricing-table.html:476/503/530` 锚点 href + `:681-683` 的 `links` 映射
+   + `:712` 的 `window.open`），三条 Payment Link 实测均 HTTP 200。
+   真正影响用户的只有一处：monthly 链接带 `?prefilled_promo_code=FIRSTMONTH1`，
+   Stripe 托管页会提示优惠码无效，按钮文案 `Start for $1 →` 与页上实际 $9.99 不符；
+   结账本身可完成。
+
+   `functions/api/checkout.js` 已加折扣码 **fail-open**：优惠码被 Stripe 拒绝时
+   自动去掉折扣码重试一次，今天按原价成交，优惠码建好后无需改代码即自动带折扣
+   （返回体新增 `coupon_applied` 字段；非折扣类错误如 key 无效不重试，不掩盖真实故障）。
+   详见 `docs/stripe-configuration-guide.md` §1.4。
 
 ## 线上验证清单
 

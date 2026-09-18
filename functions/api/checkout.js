@@ -52,30 +52,45 @@ export async function onRequestPost({ request, env }) {
       return jsonResponse({ error: 'Stripe API key not configured' }, 500, corsHeaders);
     }
 
-    let successUrlEncoded = encodeURIComponent(successUrl + '?session_id={CHECKOUT_SESSION_ID}');
-    let cancelUrlEncoded = encodeURIComponent(cancelUrl);
-    let formData = `mode=${planConfig.mode}&success_url=${successUrlEncoded}&cancel_url=${cancelUrlEncoded}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&billing_address_collection=auto`;
+    const successUrlEncoded = encodeURIComponent(successUrl + '?session_id={CHECKOUT_SESSION_ID}');
+    const cancelUrlEncoded = encodeURIComponent(cancelUrl);
+    const baseForm = `mode=${planConfig.mode}&success_url=${successUrlEncoded}&cancel_url=${cancelUrlEncoded}&line_items[0][price]=${planConfig.priceId}&line_items[0][quantity]=1&metadata[plan]=${plan}&metadata[source]=chinaboundtravel_website&payment_method_types[0]=card&billing_address_collection=auto`;
 
-    if (planConfig.coupon) {
-      formData += `&discounts[0][coupon]=${planConfig.coupon}`;
+    async function createSession(body) {
+      const resp = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': `Bearer ${stripeKey}`,
+        },
+        body,
+      });
+      const json = await resp.json();
+      return { status: resp.status, ok: resp.ok, json };
     }
 
-    const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': `Bearer ${stripeKey}`,
-      },
-      body: formData,
-    });
+    let usedCoupon = false;
+    let result = await createSession(
+      (usedCoupon = Boolean(planConfig.coupon))
+        ? baseForm + `&discounts[0][coupon]=${planConfig.coupon}`
+        : baseForm
+    );
 
-    const session = await response.json();
-
-    if (!response.ok) {
-      return jsonResponse({ error: session.error?.message || 'Stripe API error' }, response.status, corsHeaders);
+    // 折扣码可能尚未在 Stripe 后台创建（FIRSTMONTH1 当前不存在）。
+    // Stripe 因折扣码拒绝请求时，去掉折扣码重试一次：今天按原价成交，
+    // 折扣码创建后无需改代码即自动带上折扣。
+    // 只处理折扣相关错误；key 无效、price 不存在等错误原样返回，不掩盖真实故障。
+    if (!result.ok && usedCoupon && /coupon|discount/i.test(JSON.stringify(result.json.error || {}))) {
+      console.warn(`Checkout: coupon ${planConfig.coupon} rejected by Stripe (${result.status}), retrying without discount`);
+      usedCoupon = false;
+      result = await createSession(baseForm);
     }
 
-    return jsonResponse({ url: session.url }, 200, corsHeaders);
+    if (!result.ok) {
+      return jsonResponse({ error: result.json.error?.message || 'Stripe API error' }, result.status, corsHeaders);
+    }
+
+    return jsonResponse({ url: result.json.url, coupon_applied: usedCoupon }, 200, corsHeaders);
 
   } catch (err) {
     console.error('Checkout error:', err.message);

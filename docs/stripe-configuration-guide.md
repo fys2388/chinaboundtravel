@@ -51,6 +51,25 @@
 
 ### 1.4 创建首月$1优惠码
 
+> **当前状态（2026-09-18 实测，接手必读）**
+>
+> - **该优惠码至今未创建**，`/api/checkout` 因此返回 `400 No such coupon: "FIRSTMONTH1"`。
+>   Stripe key 本身**有效**，错误只与优惠码有关，不是密钥问题。
+> - **但营收路径没有断。** 定价页三个按钮走的是 Stripe Payment Links
+>   （`hugo.toml:176-178` 的 `stripeOnetime/stripeMonthly/stripeAnnual`，
+>   `layouts/partials/pricing-table.html:476/503/530` 的锚点 href + `:681-683` 的 `links` 映射 +
+>   `:712` 的 `window.open`），**不走** `/api/checkout`。实测三条 Payment Link 均返回 HTTP 200。
+> - **`/api/checkout` 前端零调用方**：`git grep "api/checkout" -- layouts/ content/ static/ functions/ '*.js' '*.html'`
+>   只命中定义本身和两个展示用的看板卡片。它目前是个返回 400 的死端点。
+> - **真正影响用户的问题只有一个**：monthly 的 Payment Link 带 `?prefilled_promo_code=FIRSTMONTH1`，
+>   Stripe 托管页会提示优惠码无效；按钮文案 `Start for $1 →` 与 Stripe 页上实际显示的
+>   $9.99 不符。结账本身可以完成。
+> - `functions/api/checkout.js` 已加折扣码 fail-open：优惠码被 Stripe 拒绝时自动去掉折扣码重试，
+>   所以今天按原价成交，优惠码建好后无需改代码即自动带上折扣（返回体新增 `coupon_applied` 字段）。
+>
+> **所以优先级是「建优惠码」或「改定价页文案」，而不是排查"支付挂了"。**
+> 曾有多轮误判把它当成营收阻塞点。
+
 1. 进入 **Coupons** → **Create coupon**
 2. 填写：
    - **Name**：`FIRSTMONTH1`
