@@ -98,7 +98,11 @@ AGENTS = {
         "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑",
         "kpis": [
             # 营收直接指标 (50%)
-            {"id": "organic_traffic", "name": "自然搜索流量", "weight": 20, "target": "环比增长≥8%", "type": "revenue", "source": "GA4/GSC"},
+            # unit 必须声明：这两个 KPI 的 type 是 revenue，而 _legacy_normalize
+            # 对 revenue 走 `0 <= value <= 100 → return value`。环比变化是
+            # 百分比，+8% 会直接得 8 分——增长达标却拿不及格分。
+            # 声明 pct 后走 _ratio_ladder(value, target_val)，语义才对。
+            {"id": "organic_traffic", "name": "自然搜索流量", "weight": 20, "target": "环比增长≥8%", "type": "revenue", "unit": "pct", "source": "GA4/GSC"},
             {"id": "content_driven_revenue", "name": "内容驱动营收(联盟+eBook)", "weight": 30, "target": "环比增长≥10%", "type": "revenue", "unit": "currency", "source": "GA4归因+Stripe"},
             # 营收驱动过程指标 (30%)
             {"id": "publish_rate", "name": "文章发布量", "weight": 10, "target": "≥4篇/周", "type": "process", "source": "git log/content目录"},
@@ -116,7 +120,9 @@ AGENTS = {
         "revenue_chain": "搜索排名↑/索引覆盖率↑ → 自然流量↑ → 联盟点击↑ → 营收↑",
         "kpis": [
             # 营收直接指标 (50%)
-            {"id": "organic_traffic_seo", "name": "自然搜索流量(SEO归因)", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "source": "GA4/GSC"},
+            # 同 organic_traffic：必须声明 unit，否则 revenue 类型走
+            # legacy 的 `0 <= value <= 100 → return value`，+10% 只得 10 分。
+            {"id": "organic_traffic_seo", "name": "自然搜索流量(SEO归因)", "weight": 25, "target": "环比增长≥10%", "type": "revenue", "unit": "pct", "source": "GA4/GSC"},
             {"id": "seo_driven_revenue", "name": "SEO驱动营收", "weight": 25, "target": "环比增长≥12%", "type": "revenue", "unit": "currency", "source": "GA4归因"},
             # 营收驱动过程指标 (30%)
             {"id": "index_coverage", "name": "索引覆盖率", "weight": 10, "target": "≥95%", "type": "process", "source": "GSC"},
@@ -293,6 +299,14 @@ def normalize_metric_to_score(kpi: Dict, value: Any) -> float:
     # 零基准目标：value=0 是满分。必须最先判定。
     if target_val == 0 and "%" not in target_str:
         return 100.0 if value == 0 else 30.0
+
+    # 增长型目标（target 含「环比」）下的负值 = 明确退步，给 0 分。
+    # 2026-09-18 加入：接入 GSC 曝光环比后第一次出现负值（-72%）。
+    # 不加这条，负值会落进 _legacy_normalize 底部的 `return value` 拿到
+    # -72 分再被 max(0,...) 截成 0——结果偶然正确，靠的是截断而不是语义；
+    # 而落进 _ratio_ladder 时负值最差也拿 30 分，「明显退步」被奖励非零分。
+    if value < 0 and "环比" in target_str:
+        return 0.0
 
     unit = kpi.get("unit")
 
@@ -586,6 +600,142 @@ def measure_structured_data(root: Path = None) -> Dict[str, Any]:
     return r
 
 
+GSC_MAX_AGE_DAYS = 14
+"""GSC 快照超过这个年龄就不用于考核。
+
+api_health 那次是「报告 11 天没刷新」，GSC 这处是同类缺陷的另一形态：
+数据没消失、也没被标记 no_data，只是**旧**。status=OK 会让读者误以为
+是当前状态。GSC 本身按 2 天判定新鲜，这里放宽到 14 天是为了让
+28 天窗口的环比对比仍然成立——但超过 14 天的快照，其「环比」
+已经是过去两个月的故事，不该代表本月。
+"""
+
+GSC_MIN_DAILY_ROWS = 14
+"""做环比需要前后两个半程，每半程至少几天才有意义。
+14 行 = 28 天窗口的一半。不足时宁可不接，也不拿 3 天数据算「环比」。"""
+
+
+def _gsc_real_metrics(gsc_path: Optional[Path] = None) -> Dict[str, Any]:
+    """从 reports/real_data/gsc_real_data.json 计算环比口径的 SEO 实测值。
+
+    接 3 个 KPI：
+      seo.avg_position         ← 曝光加权平均排名的**改善率**（%）
+      content.organic_traffic  ← 曝光量环比变化（%）
+      seo.organic_traffic_seo  ← 同上（两者都指向 GSC，定义一致）
+
+    口径说明（这些决定了分数能不能信）：
+    - 平均排名按曝光加权，不按天简单平均：曝光 381 的天和曝光 25 的天
+      权重天差地别，简单平均会让低曝光日的波动主导结论。
+    - 「改善」定义为正数 = 排名数字变小（1 → 2 是变差，2 → 1 是改善）：
+      pct = (p1 - p2) / p1 * 100。
+    - 曝光量当作「自然搜索流量」的代理指标。GSC 的点击数在这个量级
+      站点上太少（28 天 5 次），算环比没有统计意义；曝光量是同一
+      数据源里唯一有足够样本量的流量信号。它是**代理**不是流量本身，
+      打印时必须注明。
+    - top10_keywords 是**绝对计数**（当前 0），而 KPI 目标是
+      「环比增长≥5%」。本文件只有单个快照、没有历史，无法算环比；
+      而且本函数已明确「绝对计数对增长型目标不接」，所以不写这个 KPI。
+      计数本身仍返回，供打印披露。
+    """
+    result: Dict[str, Any] = {
+        "avg_position_pct_change": None,
+        "organic_impressions_pct_change": None,
+        "top10_queries": None,
+        "top10_pages": None,
+        "age_days": -1, "data_date": "", "pull_time": "",
+        "note": "", "evidence": {},
+    }
+
+    if gsc_path is None:
+        gsc_path = PROJECT_ROOT / "reports" / "real_data" / "gsc_real_data.json"
+    if not gsc_path.exists():
+        result["note"] = "无 gsc_real_data.json"
+        return result
+
+    try:
+        with open(gsc_path, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+    except Exception as exc:
+        result["note"] = f"读取失败 {type(exc).__name__}"
+        return result
+
+    # 空壳防护：real_data_pull_engine 在鉴权失败时写过 is_real_data=False 的
+    # 空壳（2026-09-18 已修：不再覆盖上一份真实数据，但历史文件可能还在）。
+    # 空壳的 status 可能是 NOT_CONFIGURED，daily 是空列表——按 no_data 处理。
+    if raw.get("is_real_data") is not True:
+        result["note"] = f"非真实数据（status={raw.get('status', '?')}）"
+        return result
+
+    daily = [r for r in (raw.get("daily") or [])
+             if isinstance(r, dict)
+             and isinstance(r.get("impressions"), (int, float))
+             and isinstance(r.get("position"), (int, float))]
+    if len(daily) < GSC_MIN_DAILY_ROWS:
+        result["note"] = f"daily 行数不足（{len(daily)} < {GSC_MIN_DAILY_ROWS}），" \
+                         "无法做可靠环比"
+        return result
+
+    # 取数据日期判年龄。data_date 是数据截止日，pull_time 是拉取时刻；
+    # 对考核来说「数据多旧」比「拉取多旧」更相关。
+    for key in ("data_date", "pull_time"):
+        v = raw.get(key)
+        if isinstance(v, str):
+            m = re.match(r"(20\d{2}-\d{2}-\d{2})", v)
+            if m:
+                result[key] = m.group(1)
+                try:
+                    result["age_days"] = max(
+                        0, (datetime.now() - datetime.strptime(m.group(1), "%Y-%m-%d")).days)
+                except ValueError:
+                    pass
+                break
+
+    if result["age_days"] > GSC_MAX_AGE_DAYS:
+        result["note"] = (f"数据已 {result['age_days']} 天未刷新"
+                          f"（阈值 {GSC_MAX_AGE_DAYS} 天）")
+        return result
+
+    # 按日期排序后对半切，前一半 vs 后一半。
+    daily.sort(key=lambda r: str(r.get("date", "")))
+    half = len(daily) // 2
+    first, second = daily[:half], daily[half:]
+
+    def _weighted_position(seg: list) -> float:
+        imp = sum(r["impressions"] for r in seg)
+        if imp <= 0:
+            return 0.0
+        return sum(r["impressions"] * r["position"] for r in seg) / imp
+
+    p1, p2 = _weighted_position(first), _weighted_position(second)
+    i1 = sum(r["impressions"] for r in first)
+    i2 = sum(r["impressions"] for r in second)
+    c1 = sum(r.get("clicks", 0) or 0 for r in first)
+    c2 = sum(r.get("clicks", 0) or 0 for r in second)
+
+    pos_change = round((p1 - p2) / p1 * 100, 2) if p1 > 0 else None
+    imp_change = round((i2 - i1) / i1 * 100, 2) if i1 > 0 else None
+
+    result["avg_position_pct_change"] = pos_change
+    result["organic_impressions_pct_change"] = imp_change
+    result["top10_queries"] = len([q for q in (raw.get("top_queries") or [])
+                                   if isinstance(q, dict)
+                                   and isinstance(q.get("position"), (int, float))
+                                   and q["position"] <= 10])
+    result["top10_pages"] = len([p for p in (raw.get("top_pages") or [])
+                                 if isinstance(p, dict)
+                                 and isinstance(p.get("position"), (int, float))
+                                 and p["position"] <= 10])
+    result["evidence"] = {
+        "window_days": len(daily),
+        "first_half": {"days": len(first), "impressions": i1, "clicks": int(c1),
+                       "weighted_position": round(p1, 2)},
+        "second_half": {"days": len(second), "impressions": i2, "clicks": int(c2),
+                        "weighted_position": round(p2, 2)},
+        "window": f"{first[0].get('date','?')} ~ {second[-1].get('date','?')}",
+    }
+    return result
+
+
 def _report_age_days(path: Path) -> int:
     """报告文件的年龄（天）。从文件名或内容里的时间戳取，取不到返回 -1。
 
@@ -855,6 +1005,31 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
                   f"/ 模板残留 {_s['template_residue_count']} 处")
     except Exception as e:
         print(f"  ⚠️  结构化数据实测失败: {e}")
+
+    try:
+        _t = _gsc_real_metrics()
+        if _t["avg_position_pct_change"] is not None:
+            metrics.setdefault("seo", {})["avg_position"] = _t["avg_position_pct_change"]
+        if _t["organic_impressions_pct_change"] is not None:
+            metrics.setdefault("content", {})["organic_traffic"] = _t["organic_impressions_pct_change"]
+            metrics.setdefault("seo", {})["organic_traffic_seo"] = _t["organic_impressions_pct_change"]
+        _ev = _t["evidence"]
+        print(f"  🔎 GSC 实测（{_ev.get('window', '?') if _ev else '?'}，"
+              f"{_t['age_days']} 天前，{_ev.get('window_days', 0)} 天窗口）:")
+        if _ev:
+            _f, _s = _ev["first_half"], _ev["second_half"]
+            print(f"    排名（曝光加权）: {_f['weighted_position']} → {_s['weighted_position']}"
+                  f"  改善 {_t['avg_position_pct_change']}%"
+                  f"（目标环比提升≥5%）")
+            print(f"    曝光量: {_f['impressions']} → {_s['impressions']}"
+                  f"  变化 {_t['organic_impressions_pct_change']}%"
+                  f"（作为流量代理指标；点击 {_f['clicks']} → {_s['clicks']} 样本不足）")
+            print(f"    Top10 关键词: {_t['top10_queries']} 个 / Top10 页面: "
+                  f"{_t['top10_pages']} 个")
+        else:
+            print(f"    ⚠️  未接入（{_t['note']}）")
+    except Exception as e:
+        print(f"  ⚠️  GSC 实测失败: {e}")
 
     # 7. kpi_coverage：真实覆盖率。data Agent 有这个 KPI（目标 100%），
     #    之前从未被计算。它让「多少指标是真测量的」变成可见事实，

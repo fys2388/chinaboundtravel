@@ -128,9 +128,37 @@ def _check_freshness(data_date: Optional[str], max_age_days: int = 2) -> Dict:
         return {"fresh": False, "reason": "Date parsing error", "age_days": 999}
 
 
-def _save_json(path: Path, data: Dict) -> None:
+def _save_json(path: Path, data: Dict) -> bool:
+    """写报告文件。返回是否真的写入了。
+
+    2026-09-18 修复（数据销毁 bug）：本函数此前无条件覆盖。而各 pull_* 函数
+    在鉴权失败时（NOT_CONFIGURED / AUTH_FAILED / IMPORT_ERROR / NO_CREDENTIALS）
+    会以 is_real_data=False 的空壳调用它——**空壳会把上一份真实数据覆盖掉**。
+
+    后果是「拉取失败 = 销毁证据」：之后直到下一次鉴权成功之前，
+    reports/real_data/ 里只剩一份 is_real_data:false 的空壳，
+    上一份真实数据无法恢复，而读者若只看文件存在与否会以为数据还在。
+    本地没有 .env / gsc-service-account-key.json 时（全新 clone、干净 CI 沙箱），
+    一次 `--all` 就会踩到这条路。
+
+    现在：新数据 is_real_data 不是 True 时，若已有文件是真实数据则保留它。
+    真实数据（is_real_data=True）永远可以覆盖旧数据。
+    没有 is_real_data 字段的字典（如 data_validation 汇总）按原行为写入。
+    """
+    if path.exists():
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+        except Exception:
+            existing = None
+        if (existing is not None and existing.get("is_real_data")
+                and data.get("is_real_data") is not True):
+            print(f"  ⚠️  保留上一份真实数据，拒绝用失败结果覆盖: {path.name}"
+                  f"（新结果 status={data.get('status', '?')}）")
+            return False
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    return True
 
 
 # ============================================================
