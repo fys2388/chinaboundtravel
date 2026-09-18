@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Brand Identity Audit
 
-- Generated: 2026-08-31
+- Generated: 2026-09-18
 
 品牌层检查：全部 HTML 模板 + 全部非文章 markdown 页面 + hugo.toml（content/posts 由 --legacy 单独扫描）。
 
@@ -8,12 +8,14 @@
 |---|---|---|---|---|---|
 | homepage | hugo.toml | PASS | - | - | True |
 | template | layouts/404.html | WARN | - | - | False |
+| template | layouts/_default/baseof.html | WARN | - | - | False |
 | template | layouts/_default/single.html | PASS | - | - | True |
 | template | layouts/cities/list.html | WARN | - | - | False |
 | template | layouts/cities/single.html | PASS | - | - | True |
 | homepage | layouts/index.html | WARN | - | - | False |
 | template | layouts/partials/affiliate-disclosure.html | PASS | - | - | True |
 | template | layouts/partials/anchored_headings.html | WARN | - | - | False |
+| template | layouts/partials/article-sources.html | PASS | - | - | True |
 | template | layouts/partials/author.html | WARN | - | - | False |
 | template | layouts/partials/brand-logos.html | WARN | - | - | False |
 | template | layouts/partials/breadcrumbs.html | WARN | - | - | False |
@@ -28,7 +30,7 @@
 | template | layouts/partials/extend_footer.html | WARN | - | - | False |
 | template | layouts/partials/extend_head.html | WARN | - | - | False |
 | template | layouts/partials/extend_post_content.html | WARN | - | - | False |
-| template | layouts/partials/footer.html | WARN | - | - | False |
+| template | layouts/partials/footer.html | PASS | - | - | True |
 | template | layouts/partials/google_analytics.html | WARN | - | - | False |
 | template | layouts/partials/head/meta.html | WARN | - | - | False |
 | template | layouts/partials/head.html | WARN | - | - | False |
@@ -60,6 +62,7 @@
 | template | layouts/partials/travel-promo.html | PASS | - | - | True |
 | template | layouts/pricing/single.html | WARN | - | - | False |
 | template | layouts/shortcodes/ab-cta.html | WARN | - | - | False |
+| template | layouts/shortcodes/affiliate-cta.html | WARN | - | - | False |
 | template | layouts/shortcodes/affiliate-disclosure.html | PASS | - | - | True |
 | template | layouts/shortcodes/affiliate-esim.html | WARN | - | - | False |
 | template | layouts/shortcodes/affiliate-flight.html | WARN | - | - | False |
@@ -74,6 +77,7 @@
 | template | layouts/shortcodes/content-timestamp.html | WARN | - | - | False |
 | template | layouts/shortcodes/esim-link.html | WARN | - | - | False |
 | template | layouts/shortcodes/klook-link.html | WARN | - | - | False |
+| template | layouts/shortcodes/lead-magnet-cta.html | WARN | - | - | False |
 | template | layouts/shortcodes/safetywing-link.html | WARN | - | - | False |
 | template | layouts/shortcodes/soft-recommend.html | PASS | - | - | True |
 | template | layouts/shortcodes/travel-faq.html | WARN | - | - | False |
@@ -86,19 +90,21 @@
 | content | content/categories/payment/_index.md | WARN | - | - | False |
 | content | content/categories/visa/_index.md | WARN | - | - | False |
 | cities | content/cities/_index.md | WARN | - | - | False |
-| cities | content/cities/beijing.md | WARN | - | - | False |
-| cities | content/cities/chengdu.md | WARN | - | - | False |
-| cities | content/cities/guilin.md | WARN | - | - | False |
-| cities | content/cities/hangzhou.md | WARN | - | - | False |
-| cities | content/cities/shanghai.md | WARN | - | - | False |
-| cities | content/cities/western-sichuan.md | WARN | - | - | False |
-| cities | content/cities/xian.md | WARN | - | - | False |
-| cities | content/cities/yangshuo.md | WARN | - | - | False |
+| cities | content/cities/beijing.md | PASS | - | - | True |
+| cities | content/cities/chengdu.md | PASS | - | - | True |
+| cities | content/cities/guilin.md | PASS | - | - | True |
+| cities | content/cities/hangzhou.md | PASS | - | - | True |
+| cities | content/cities/shanghai.md | PASS | - | - | True |
+| cities | content/cities/western-sichuan.md | PASS | - | - | True |
+| cities | content/cities/xian.md | PASS | - | - | True |
+| cities | content/cities/yangshuo.md | PASS | - | - | True |
 | content | content/contact.md | WARN | - | - | False |
 | content | content/disclaimer.md | WARN | - | - | False |
 | content | content/ebook/2026-07-01-travel-guide-2026-07.md | WARN | - | - | False |
 | content | content/ebook/2026-08-01-travel-guide-2026-08.md | WARN | - | - | False |
 | content | content/ebook/2026-08-03-travel-guide-2026-08.md | WARN | - | - | False |
+| content | content/ebook/2026-09-01-travel-guide-2026-09.md | WARN | - | - | False |
+| content | content/free-itinerary.md | WARN | - | - | False |
 | content | content/guides/_index.md | WARN | - | - | False |
 | content | content/internet/_index.md | WARN | - | - | False |
 | content | content/member-month/_index.md | WARN | - | - | False |
@@ -111,9 +117,9 @@
 | content | content/search.md | WARN | - | - | False |
 | content | content/static-package/_index.md | WARN | - | - | False |
 | content | content/success.md | WARN | - | - | False |
-| content | content/terms-of-service.md | WARN | - | - | False |
+| content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 16/107 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 27/113 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
