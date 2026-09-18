@@ -186,6 +186,7 @@ export async function onRequestPost({ request, env }) {
   }
 }
 
-export async function onRequestOptions() {
-  return new Response(null, { status: 204 });
+export async function onRequestOptions({ request }) {
+  const origin = request.headers.get('Origin') || request.headers.get('origin');
+  return new Response(null, { status: 204, headers: cors(origin) });
 }

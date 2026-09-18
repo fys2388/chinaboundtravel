@@ -70,6 +70,11 @@ TEST_CASES = [
         # ——没有 message 字段。期望过时导致每次审计都把一个工作正常的接口
         # 判成 critical 失败。success 才是真正的契约字段。
         "expected_fields": ["success"],
+        # 2026-09-18：捕获成功响应体，用来判断线上 MailerLite/Resend 真实配置。
+        # 本机 env 里没有 token 不等于线上没配——生产走 GitHub Actions secrets，
+        # 本机只能看到本机 .env。端点自报的 subscriber_created / delivered_pdf /
+        # detail 才是线上真实状态（见 derive_endpoint_provider_status）。
+        "capture_body_on_pass": True,
         "description": "有效邮箱应返回 200 + success=true",
         "severity": "critical",
     },
@@ -191,6 +196,13 @@ def run_test(base_url: str, test: Dict) -> Dict:
                     result["error"] = f"响应缺少头: {header}"
                     return result
 
+        # 显式声明的用例在通过时也保留响应体，供下游读取端点自报的状态。
+        if test.get("capture_body_on_pass"):
+            try:
+                result["response_body"] = resp.json()
+            except Exception:
+                result["response_body"] = resp.text[:500]
+
         result["passed"] = True
 
     except requests.exceptions.Timeout:
@@ -258,6 +270,65 @@ def check_mailerlite_connection() -> Dict:
     return result
 
 
+def derive_endpoint_provider_status(api_results: List[Dict]) -> Dict:
+    """从端点自身响应推导线上服务商配置状态。
+
+    check_mailerlite_connection() 读的是本机 env。本机没有 MAILERLITE_API_TOKEN
+    只说明本机没配——生产环境由 GitHub Actions secrets 注入，本机根本看不到。
+    实测线上 /api/subscribe 返回 subscriber_created=true，即 MailerLite 已配置
+    且真的在创建订阅者；本机审计却报「未配置」，是一个持续误导运营者的假信号。
+
+    functions/api/subscribe.js 会自报状态：
+      subscriber_created / delivered_pdf / detail（含 "MailerLite:not_configured"
+      或 "Resend:422" 之类的标记）。读这些比读本机 env 准。
+
+    注意：detail 里的 422 不代表 Resend 没配。Resend 拒绝向 example.com 这类
+    RFC 保留域名发信，所以审计用的测试邮箱拿到 422 恰恰证明 Resend 已配置
+    并且真的发出了请求。真实订阅者邮箱不受此限制。
+    """
+    info: Dict[str, Any] = {
+        "source": "endpoint_response",
+        "mailerlite": "unknown",
+        "resend": "unknown",
+        "evidence": {},
+    }
+
+    for r in api_results:
+        if r.get("name") != "subscribe_valid_email":
+            continue
+        body = r.get("response_body")
+        if not isinstance(body, dict):
+            info["evidence"]["note"] = "有效邮箱用例未捕获响应体，无法判断线上配置"
+            return info
+
+        created = bool(body.get("subscriber_created"))
+        delivered = bool(body.get("delivered_pdf"))
+        detail = str(body.get("detail") or "")
+
+        info["mailerlite"] = "configured_and_accepting" if created else "not_accepting"
+
+        if delivered:
+            info["resend"] = "configured_and_delivering"
+        elif "Resend:not_configured" in detail:
+            info["resend"] = "not_configured"
+        elif "Resend:" in detail:
+            # 已配置并已发出请求，只是被收件方校验拒掉（常见于保留域名）
+            info["resend"] = "configured_but_rejected_by_provider"
+        else:
+            info["resend"] = "unknown"
+
+        info["evidence"] = {
+            "subscriber_created": created,
+            "delivered_pdf": delivered,
+            # 截断避免报告膨胀；该字段不含任何 token/key
+            "detail_excerpt": detail[:200],
+        }
+        return info
+
+    info["evidence"]["note"] = "未找到有效邮箱用例"
+    return info
+
+
 def run_audit(base_url: str, output_json: bool = False) -> int:
     """运行完整的订阅健康审计"""
     print(f"\n{'='*60}")
@@ -300,6 +371,10 @@ def run_audit(base_url: str, output_json: bool = False) -> int:
         print(f"    ✅ 已连接，订阅者数量: {ml_result['subscriber_count']}")
     else:
         print(f"    ⚠️  {ml_result['error']}")
+    # 本机 env 看不到的线上配置，改读端点自报
+    ep = derive_endpoint_provider_status(api_results)
+    ml_result["endpoint_reported"] = ep
+    print(f"    🔎 端点自报: MailerLite={ep['mailerlite']}  Resend={ep['resend']}")
 
     # 4. 总体结果
     total = passed + failed

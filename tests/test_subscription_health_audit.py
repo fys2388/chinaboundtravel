@@ -200,3 +200,99 @@ def test_report_age_helper(tmp_path):
     p3 = tmp_path / "report.json"
     p3.write_text("{}", encoding="utf-8")
     assert A._report_age_days(p3) == -1
+
+
+# ── 捕获成功响应体（端点自报） ────────────────────────────────
+
+def test_capture_body_on_pass_keeps_response_body():
+    """声明了 capture_body_on_pass 的用例，通过时也要留响应体。"""
+    with patch.object(S.requests, "post",
+                      return_value=_resp(200, {"success": True, "subscriber_created": True})):
+        r = S.run_test(S.DEFAULT_BASE_URL,
+                       _case("x", expected_fields=["success"], capture_body_on_pass=True))
+    assert r["passed"] is True
+    assert r["response_body"]["subscriber_created"] is True
+
+
+def test_no_capture_flag_does_not_keep_body():
+    """默认不捕获，报告保持精简；只有显式声明的用例留响应体。"""
+    with patch.object(S.requests, "post", return_value=_resp(200, {"success": True})):
+        r = S.run_test(S.DEFAULT_BASE_URL, _case("x", expected_fields=["success"]))
+    assert r["passed"] is True
+    assert "response_body" not in r
+
+
+def test_valid_email_case_captures_body():
+    case = next(c for c in S.TEST_CASES if c["name"] == "subscribe_valid_email")
+    assert case.get("capture_body_on_pass") is True
+
+
+# ── 从端点自报推导服务商配置 ─────────────────────────────────
+
+def _api(body=None, name="subscribe_valid_email"):
+    return [{"name": name, "passed": True, "status_code": 200,
+             "response_body": body}]
+
+
+def test_endpoint_says_mailerlite_is_configured():
+    """本机 env 报「未配置」时，端点说 subscriber_created=true 就是已配置。
+    这是本次审计发现的关键事实：线上 MailerLite 真的在工作。"""
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": True, "delivered_pdf": False}))
+    assert info["mailerlite"] == "configured_and_accepting"
+    assert info["source"] == "endpoint_response"
+
+
+def test_endpoint_says_mailerlite_not_accepting():
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": False,
+              "detail": "MailerLite:not_configured"}))
+    assert info["mailerlite"] == "not_accepting"
+
+
+def test_resend_422_means_configured_not_broken():
+    """关键判断：detail 里出现 Resend:422 说明 Resend 已配置并已发出请求。
+    422 是 Resend 拒绝向 example.com 这类保留域名发信——审计用的测试邮箱
+    必然拿到这个码。把它当成「Resend 没配」是误读。"""
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": True, "delivered_pdf": False,
+              "detail": "Resend:422:ct=application/json:len=196:body=[...]"}))
+    assert info["resend"] == "configured_but_rejected_by_provider"
+
+
+def test_resend_explicitly_not_configured():
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": True, "delivered_pdf": False,
+              "detail": " Resend:not_configured"}))
+    assert info["resend"] == "not_configured"
+
+
+def test_resend_actually_delivered():
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": True, "delivered_pdf": True}))
+    assert info["resend"] == "configured_and_delivering"
+
+
+def test_no_body_gives_unknown_not_a_crash():
+    """没捕获到响应体时给 unknown，不要抛异常、不要伪造结论。"""
+    info = S.derive_endpoint_provider_status(_api(None))
+    assert info["mailerlite"] == "unknown" and info["resend"] == "unknown"
+    assert "note" in info["evidence"]
+
+
+def test_no_matching_case_gives_unknown():
+    info = S.derive_endpoint_provider_status([{"name": "other", "response_body": {}}])
+    assert info["mailerlite"] == "unknown"
+
+
+def test_detail_excerpt_is_capped_and_leak_free():
+    """detail 截断防报告膨胀；且不得把 token/key 之类带进报告。"""
+    long_detail = "Resend:422:" + ("x" * 500)
+    info = S.derive_endpoint_provider_status(
+        _api({"success": True, "subscriber_created": True, "detail": long_detail}))
+    excerpt = info["evidence"]["detail_excerpt"]
+    assert len(excerpt) == 200
+    flat = str(info).lower()
+    for bad in ("token", "bearer ", "api_key", "apikey", "secret"):
+        assert bad not in flat, "detail 摘录泄漏了敏感片段: %s" % bad
+
