@@ -658,6 +658,65 @@ def check_security_headers():
     return issues
 
 
+REQUIRED_CSP_HOSTS = {
+    "sentry.io": "Sentry 错误追踪",
+    "sentry.avs.io": "Sentry 错误追踪（自定义域名）",
+    "googlesyndication.com": "Google AdSense",
+    "google-analytics.com": "Google Analytics",
+    "googletagmanager.com": "Google Tag Manager",
+    "cloudflareinsights.com": "Cloudflare Analytics",
+}
+"""CSP 必须放行的关键第三方服务。
+
+2026-09-18 补：报告 schema 从 findings[].module 迁到 issues[].type 时
+丢了这批检查。旧 site_health_audit_engine.py 会检查 CSP 里是否放行
+上面的域，新 check_security_headers() 只看头是否存在——6 条 HIGH/MEDIUM
+发现整体消失。而 site_health_audit_engine.py 没有任何 workflow 在跑
+（死代码），所以这些发现永远不会再出现。
+
+只看「CSP 头存在」不够：放行全部的 CSP 和放行空白的 CSP
+都会让 check_security_headers 通过。
+"""
+
+
+def check_csp_allowlist():
+    """检查 CSP 是否放行了关键第三方服务。
+
+    产出 type=csp_allowlist_missing。与 security_header_missing 区分开：
+    后者是「头不存在」（ops.security_headers 考核项），
+    前者是「头存在但内容不够」（不影响该 KPI，但同样是 HIGH 级发现）。
+
+    返回 [] 的两种情况都是刻意的，避免重复上报：
+      - 站点不可达 → check_security_headers 已报 site_unreachable
+      - CSP 头缺失 → check_security_headers 已报 security_header_missing
+    """
+    issues = []
+    resp, _ = _fetch_url(SITE_BASE_URL + "/")
+    if resp is None:
+        return issues
+    headers = {k.lower(): v for k, v in resp.headers.items()}
+    csp = headers.get("content-security-policy", "")
+    if not csp:
+        return issues
+
+    for domain, desc in REQUIRED_CSP_HOSTS.items():
+        if domain not in csp:
+            issues.append({
+                "type": "csp_allowlist_missing",
+                "severity": "high",
+                "file": SITE_BASE_URL,
+                "message": f"CSP 未允许 {desc}（{domain}）",
+                "detail": f"Content-Security-Policy 中未包含 {domain}，"
+                          f"可能导致 {desc} 被拦截",
+                "recommendation": f"在 CSP 的 script-src 和/或 connect-src 中添加 {domain}",
+                # 不自动修复：CSP 改错会打断分析/广告/错误追踪，
+                # 或反过来放开不必要的源。必须由人评审后改 Cloudflare 配置。
+                "auto_fixable": False,
+                "agent": "site_health",
+            })
+    return issues
+
+
 def check_mixed_content():
     """检查混合内容：HTTPS页面中加载HTTP资源"""
     issues = []
@@ -997,6 +1056,16 @@ def run_health_check(auto_fix=True):
     except Exception as e:
         print(f"  ⚠️ 安全头检查失败: {e}")
         record_check_failure(all_issues, "security_headers", "安全头检查", e)
+    
+    # 12b. CSP 放行检查（与 12 分开：头存在不等于头内容够用）
+    print("\n[12b/16] 检查 CSP 放行策略...")
+    try:
+        issues = check_csp_allowlist()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ CSP 放行检查失败: {e}")
+        record_check_failure(all_issues, "csp_allowlist", "CSP 放行检查", e)
     
     # 13. 混合内容检查
     print("\n[13/16] 检查混合内容...")

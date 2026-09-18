@@ -791,6 +791,7 @@ def _security_headers(reports=None) -> Dict[str, Any]:
     """
     out: Dict[str, Any] = {
         "compliance": None, "signal": "", "missing": [],
+        "csp_gaps": [],
         "checked": REQUIRED_SECURITY_HEADERS,
         "note": "", "age_days": -1, "file": "",
     }
@@ -820,6 +821,13 @@ def _security_headers(reports=None) -> Dict[str, Any]:
     # 新 schema：site_health_agent.py 的 issues[]
     if "issues" in sh:
         issues = [i for i in sh.get("issues") or [] if isinstance(i, dict)]
+        # CSP 放行缺口单独收集，不进 security_headers 合规率。
+        # 它是 HIGH 级发现但考核的是「CSP 内容够不够」，
+        # 和「6 个必需头是否齐全」不是同一件事——
+        # 混进去等于用一个 KPI 测两个口径。
+        out["csp_gaps"] = [str(i.get("message"))
+                           for i in issues
+                           if i.get("type") == "csp_allowlist_missing"]
         blocked = [i for i in issues
                    if i.get("type") == "check_failed"
                    and i.get("check") == "security_headers"]
@@ -829,6 +837,9 @@ def _security_headers(reports=None) -> Dict[str, Any]:
                             for i in (blocked or unreachable)[:2])
             out["signal"] = "not_measured"
             out["note"] = f"安全头检查未产出结论：{why}"
+            # 检查本身失败时，同报告里的 CSP 缺口也不能当结论用——
+            # 采集链路坏了，任何细粒度数字都不可信。
+            out["csp_gaps"] = []
             return out
         missing = [i for i in issues if i.get("type") == "security_header_missing"]
         n = len(missing)
@@ -1013,6 +1024,11 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
         print(f"  🔒 安全响应头: {sh['compliance']}%"
               f"（{sh['checked'] - len(sh['missing'])}/{sh['checked']} 个必需头齐全"
               f"，{sh['file']}，{sh['age_days']} 天前）{tail}")
+        if sh["csp_gaps"]:
+            print(f"     ⚠️  CSP 放行缺口 {len(sh['csp_gaps'])} 项（不影响上面的合规率，"
+                  f"那是另一个口径）:")
+            for g in sh["csp_gaps"]:
+                print(f"       - {g}")
     else:
         print(f"  🔒 安全响应头: 未测量（{sh['file'] or '无报告'}，{sh['note']}）")
 

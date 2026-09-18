@@ -331,15 +331,173 @@ def test_auditor_no_longer_reads_findings_only():
     assert "_security_headers()" in src
 
 
-def test_record_check_failure_is_wired_into_all_five_network_checks():
-    """修一处漏一处的风险：五个网络检查必须都接上了。
+def test_record_check_failure_is_wired_into_all_network_checks():
+    """修一处漏一处的风险：六个网络检查必须都接上了。
 
     数 8 空格缩进的调用行，不含函数定义行（定义是 0 缩进的 `def`）。"""
     import re
     src = (Path(__file__).resolve().parent.parent / "scripts"
            / "site_health_agent.py").read_text(encoding="utf-8")
-    for check_id in ("security_headers", "mixed_content", "og_tags",
-                     "ssl_certificate", "structured_data"):
+    for check_id in ("security_headers", "csp_allowlist", "mixed_content",
+                     "og_tags", "ssl_certificate", "structured_data"):
         assert f'"{check_id}"' in src, f"{check_id} 的检查失败没有留痕"
     calls = re.findall(r"^ {8}record_check_failure\(all_issues,", src, re.M)
-    assert len(calls) == 5, f"应有 5 处调用，实际 {len(calls)}"
+    assert len(calls) == 6, f"应有 6 处调用（含 12b CSP 放行检查），实际 {len(calls)}"
+
+
+# ── 6. CSP 放行检查（12b） ──────────────────────────────────
+
+class _FakeResp:
+    def __init__(self, headers):
+        self.headers = headers
+
+
+CSP_FULL = ("default-src 'self'; "
+            "script-src 'self' https://www.googletagmanager.com "
+            "https://www.google-analytics.com "
+            "https://pagead2.googlesyndication.com; "
+            "connect-src 'self' https://sentry.io https://sentry.avs.io "
+            "https://cloudflareinsights.com")
+# 去掉两个 sentry 域
+CSP_NO_SENTRY = ("default-src 'self'; "
+                 "script-src 'self' https://www.googletagmanager.com "
+                 "https://www.google-analytics.com "
+                 "https://pagead2.googlesyndication.com; "
+                 "connect-src 'self' https://cloudflareinsights.com")
+# 去掉 cloudflareinsights 域
+CSP_NO_CF = ("default-src 'self'; "
+             "script-src 'self' https://www.googletagmanager.com "
+             "https://www.google-analytics.com "
+             "https://pagead2.googlesyndication.com; "
+             "connect-src 'self' https://sentry.io https://sentry.avs.io")
+# 注意：不用「按域从 FULL 里删」的写法。sentry.io 是 sentry.avs.io 的子串，
+# 用 `domain in part` 删 sentry.io 会把整条 connect-src 一起删掉，
+# 多报出一条缺口——这是第一版测试失败的原因，不是产品 bug。
+
+
+def test_required_csp_hosts_are_all_six():
+    """域清单要和 site_health_agent.REQUIRED_CSP_HOSTS 同步。
+    少一个等于放弃监控那个第三方服务。"""
+    assert len(S.REQUIRED_CSP_HOSTS) == 6
+    for h in ("sentry.io", "sentry.avs.io", "googlesyndication.com",
+              "google-analytics.com", "googletagmanager.com",
+              "cloudflareinsights.com"):
+        assert h in S.REQUIRED_CSP_HOSTS, f"必需域 {h} 不在监控清单里"
+
+
+def test_csp_all_allowed_produces_no_findings(monkeypatch):
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"Content-Security-Policy": CSP_FULL}), ""))
+    assert S.check_csp_allowlist() == []
+
+
+def test_csp_missing_hosts_are_reported(monkeypatch):
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"Content-Security-Policy": CSP_NO_SENTRY}), ""))
+    found = S.check_csp_allowlist()
+    assert len(found) == 2, f"应报 sentry.io 和 sentry.avs.io，实际 {[i['message'] for i in found]}"
+    for i in found:
+        assert i["type"] == "csp_allowlist_missing"
+        assert i["severity"] == "high"
+        assert i["agent"] == "site_health"
+        assert i["detail"], "缺 detail 读者就不知道 CSP 里少了什么"
+
+
+def test_csp_allowlist_is_not_auto_fixable(monkeypatch):
+    """CSP 改错会打断分析/广告/错误追踪，或反过来放开不必要的源。
+    必须人工评审，不允许自动修复。旧 engine 标 auto_fixable=True 是个隐患。"""
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"Content-Security-Policy": CSP_NO_CF}), ""))
+    found = S.check_csp_allowlist()
+    assert len(found) == 1
+    assert found[0]["auto_fixable"] is False
+    assert "connect-src" in found[0]["recommendation"]
+
+
+def test_csp_header_absent_does_not_double_report(monkeypatch):
+    """CSP 头缺失时返回 []——那条由 check_security_headers 报
+    security_header_missing。重复上报会让未解决计数翻倍。"""
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"X-Frame-Options": "DENY"}), ""))
+    assert S.check_csp_allowlist() == []
+
+
+def test_csp_empty_string_does_not_double_report(monkeypatch):
+    """空 CSP 同样视为「头缺失」，不往下走。"""
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"Content-Security-Policy": ""}), ""))
+    assert S.check_csp_allowlist() == []
+
+
+def test_csp_site_unreachable_returns_empty(monkeypatch):
+    """站点不可达时返回 []——site_unreachable 由 check_security_headers 报。"""
+    monkeypatch.setattr(S, "_fetch_url", lambda u: (None, None))
+    assert S.check_csp_allowlist() == []
+
+
+def test_csp_issue_survives_severity_sort_and_summary(monkeypatch):
+    """产出必须能进主流程的排序（直接下标 x["severity"]）和 summary 统计。"""
+    monkeypatch.setattr(S, "_fetch_url",
+                        lambda u: (_FakeResp({"Content-Security-Policy": CSP_NO_CF}), ""))
+    all_issues = S.check_csp_allowlist()
+    severity_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+    sorted_issues = sorted(all_issues, key=lambda x: severity_order[x["severity"]])
+    unresolved = [i for i in sorted_issues
+                  if (i.get("status") or "").lower()
+                  not in {"resolved", "fixed", "false_positive", "closed"}]
+    assert len(unresolved) == 1
+    assert unresolved[0]["severity"] == "high"
+
+
+def test_csp_gaps_do_not_change_security_header_compliance(tmp_path):
+    """CSP 内容是另一个口径，不能拉低「6 个必需头是否齐全」的合规率。
+    混进去等于用一个 KPI 测两件事。"""
+    p = _write_report(tmp_path, _new_schema([
+        {"type": "csp_allowlist_missing", "severity": "high",
+         "message": "CSP 未允许 Sentry 错误追踪（sentry.io）"}]))
+    r = K._security_headers([p])
+    assert r["compliance"] == 100.0, "CSP 缺口不该影响响应头合规率"
+    assert r["signal"] == "compliant"
+    assert len(r["csp_gaps"]) == 1
+    assert "sentry.io" in r["csp_gaps"][0]
+
+
+def test_csp_gaps_collected_alongside_missing_headers(tmp_path):
+    """两类发现同时存在时都要报，不能互相覆盖。"""
+    p = _write_report(tmp_path, _new_schema([
+        _missing_header(),
+        {"type": "csp_allowlist_missing", "severity": "high",
+         "message": "CSP 未允许 Google AdSense（googlesyndication.com）"},
+    ]))
+    r = K._security_headers([p])
+    assert r["compliance"] == 83.3
+    assert r["signal"] == "missing"
+    assert len(r["missing"]) == 1
+    assert len(r["csp_gaps"]) == 1
+
+
+def test_csp_gaps_empty_on_legacy_schema(tmp_path):
+    p = _write_report(tmp_path, {"findings": [{"module": "seo"}]},
+                      name="site_health_audit.json")
+    r = K._security_headers([p])
+    assert r["csp_gaps"] == []
+
+
+def test_csp_gaps_empty_when_not_measured(tmp_path):
+    p = _write_report(tmp_path, _new_schema([
+        {"type": "check_failed", "check": "security_headers",
+         "message": "安全头检查失败: timeout"},
+        {"type": "csp_allowlist_missing", "message": "CSP 未允许 x（y）"},
+    ]))
+    r = K._security_headers([p])
+    assert r["compliance"] is None
+    assert r["csp_gaps"] == [], "测不出来时不应声称有具体的放行缺口"
+
+
+def test_auditor_prints_csp_gaps_separately():
+    """CSP 缺口必须单独打印——否则 100% 合规率的旁边什么都没有，
+    读者不知道还有 N 条 HIGH 发现。"""
+    src = (Path(__file__).resolve().parent.parent / "scripts"
+           / "agent_kpi_auditor.py").read_text(encoding="utf-8")
+    assert "csp_gaps" in src
+    assert "csp_allowlist_missing" in src
