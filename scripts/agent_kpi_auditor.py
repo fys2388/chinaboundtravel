@@ -107,7 +107,7 @@ AGENTS = {
             # 营收驱动过程指标 (30%)
             {"id": "publish_rate", "name": "文章发布量", "weight": 10, "target": "≥4篇/周", "type": "process", "source": "git log/content目录"},
             {"id": "avg_word_count", "name": "平均文章字数", "weight": 10, "target": "≥1500字", "type": "process", "source": "content_coverage_audit"},
-            {"id": "top10_keywords", "name": "Top10关键词数", "weight": 10, "target": "环比增长≥5%", "type": "process", "source": "GSC"},
+            {"id": "top10_keywords", "name": "Top10关键词数", "weight": 10, "target": "环比增长≥5%", "type": "process", "unit": "pct", "source": "GSC"},
             # 质量底线指标 (20%)
             {"id": "mojibake_free", "name": "编码乱码合格率", "weight": 10, "target": "100%", "type": "quality", "source": "content_quality_validator(P0)"},
             {"id": "fact_accuracy", "name": "事实准确率(签证/支付政策)", "weight": 10, "target": "≥98%", "type": "quality", "source": "content_fact_guard"},
@@ -126,7 +126,7 @@ AGENTS = {
             {"id": "seo_driven_revenue", "name": "SEO驱动营收", "weight": 25, "target": "环比增长≥12%", "type": "revenue", "unit": "currency", "source": "GA4归因"},
             # 营收驱动过程指标 (30%)
             {"id": "index_coverage", "name": "索引覆盖率", "weight": 10, "target": "≥95%", "type": "process", "unit": "pct", "source": "GSC"},
-            {"id": "avg_position", "name": "平均排名", "weight": 10, "target": "环比提升≥5%", "type": "process", "source": "GSC"},
+            {"id": "avg_position", "name": "平均排名", "weight": 10, "target": "环比提升≥5%", "type": "process", "unit": "pct", "source": "GSC"},
             {"id": "internal_link_health", "name": "内链健康度(无死链)", "weight": 10, "target": "100%", "type": "process", "unit": "pct", "source": "audit_internal_links"},
             # 质量底线指标 (20%)
             {"id": "structured_data", "name": "结构化数据正确率", "weight": 10, "target": "100%", "type": "quality", "source": "site_health_audit"},
@@ -145,7 +145,7 @@ AGENTS = {
             # 营收驱动过程指标 (30%)
             {"id": "publish_consistency", "name": "发布一致性(每周≥5条)", "weight": 10, "target": "≥90%达标率", "type": "process", "unit": "pct", "source": "social_reports"},
             {"id": "engagement_rate", "name": "互动率(点赞+评论+转发)", "weight": 10, "target": "≥3%", "type": "process", "unit": "ratio", "source": "各平台后台"},
-            {"id": "follower_growth", "name": "粉丝增长率", "weight": 10, "target": "环比增长≥5%", "type": "process", "source": "各平台后台"},
+            {"id": "follower_growth", "name": "粉丝增长率", "weight": 10, "target": "环比增长≥5%", "type": "process", "unit": "pct", "source": "各平台后台"},
             # 质量底线指标 (20%)
             {"id": "content_originality", "name": "内容原创率(无抄袭/无重复配图)", "weight": 10, "target": "100%", "type": "quality", "source": "social_image_validator"},
             {"id": "brand_consistency", "name": "品牌人设一致性(Joran)", "weight": 10, "target": "≥95%", "type": "quality", "source": "brand_identity_audit"},
@@ -161,8 +161,8 @@ AGENTS = {
             {"id": "email_driven_revenue", "name": "邮件驱动营收(eBook+联盟)", "weight": 30, "target": "环比增长≥15%", "type": "revenue", "unit": "currency", "source": "MailerLite+Stripe+UTM"},
             {"id": "ebook_conversion", "name": "eBook转化率(访客→购买)", "weight": 20, "target": "≥1%", "type": "revenue", "source": "Stripe+GA4"},
             # 营收驱动过程指标 (30%)
-            {"id": "email_list_growth", "name": "邮件列表增长率", "weight": 10, "target": "环比增长≥10%", "type": "process", "source": "MailerLite API"},
-            {"id": "lead_magnet_download", "name": "Lead Magnet下载量", "weight": 10, "target": "环比增长≥10%", "type": "process", "source": "GA4事件"},
+            {"id": "email_list_growth", "name": "邮件列表增长率", "weight": 10, "target": "环比增长≥10%", "type": "process", "unit": "pct", "source": "MailerLite API"},
+            {"id": "lead_magnet_download", "name": "Lead Magnet下载量", "weight": 10, "target": "环比增长≥10%", "type": "process", "unit": "pct", "source": "GA4事件"},
             {"id": "email_open_rate", "name": "邮件打开率", "weight": 10, "target": "≥25%", "type": "process", "source": "MailerLite"},
             # 质量底线指标 (20%)
             {"id": "subscribe_api_health", "name": "订阅API健康率", "weight": 10, "target": "≥99%", "type": "quality", "source": "api_health_audit"},
@@ -440,6 +440,88 @@ def _latest_daily_report() -> Dict[str, Any]:
     except Exception as e:
         print(f"  ⚠️  读取日报失败（营收/流量指标将标记 no_data）: {e}")
         return {}
+
+
+def _email_list_growth(daily_dir: Optional[Path] = None) -> Dict[str, Any]:
+    """从日报的 ml_total_subscribers 快照序列算邮件列表增长率（%）。
+
+    为什么必须用总量快照算增长率
+    ----------------------------
+    KPI 目标是「环比增长≥10%」——增长率，不是绝对数。
+    2026-09-18 之前这里接的是 ml_new_subscribers（**每日新增绝对数**），
+    把绝对数喂进增长率目标，语义完全不匹配：
+
+      当日 0 个新增  -> _ratio_ladder(0, 10)  = 30 分，看起来「很差」，
+                       但我们测的根本不是增长
+      当日 20 个新增 -> _ratio_ladder(20, 10) = 2.0 -> 95 分，
+                       「一天新增 20 人」被当成「达到目标的 2 倍」
+
+    原注释写「0 个新增订阅 → 0 分，这是真实测量而非缺数据」，
+    但代码给的是 30 分，且没有任何路径通向 0 分（只有 value<0 且
+    target 含「环比」才返回 0）——注释描述了一个代码没实现的意图。
+
+    仓库自己的原则是「绝对计数不接增长型目标」，
+    content.top10_keywords 就是因为这条被故意留成 no_data 的
+    （见 _gsc_metrics 里的注释）。email_list_growth 是这条原则的漏网之鱼。
+
+    现在改成 (最新总量 - 最早总量) / 最早总量 × 100。
+    当前 3 份快照 total 恒为 3，算出 0% 增长 -> 30 分，
+    **分数与修复前一致**，但口径从「绝对数冒充增长率」变成真增长率。
+
+    起始总量为 0 时百分比无定义，标记未测量而不是强行给 0 或 100。
+    """
+    out: Dict[str, Any] = {
+        "growth": None, "first_total": None, "last_total": None,
+        "window_days": 0, "snapshots": 0,
+        "file_first": "", "file_last": "", "note": "",
+    }
+    if daily_dir is None:
+        daily_dir = PROJECT_ROOT / "reports" / "feishu_daily"
+    files = sorted(daily_dir.glob("daily_*.json")) if daily_dir.exists() else []
+    if not files:
+        out["note"] = "无日报数据"
+        return out
+
+    snaps = []
+    for f in files:
+        try:
+            with open(f, "r", encoding="utf-8") as fh:
+                d = json.load(fh)
+        except Exception:
+            continue
+        m = re.search(r"(\d{4}-\d{2}-\d{2})", f.name)
+        total = d.get("ml_total_subscribers")
+        if not m or not isinstance(total, (int, float)):
+            continue
+        snaps.append((m.group(1), int(total)))
+
+    if len(snaps) < 2:
+        out["snapshots"] = len(snaps)
+        out["note"] = f"只有 {len(snaps)} 份有效快照，算不出增长率"
+        if snaps:
+            out["last_total"] = snaps[-1][1]
+            out["file_last"] = snaps[-1][0]
+        return out
+
+    (d0, t0), (d1, t1) = snaps[0], snaps[-1]
+    out["first_total"] = t0
+    out["last_total"] = t1
+    out["snapshots"] = len(snaps)
+    out["file_first"] = d0
+    out["file_last"] = d1
+    try:
+        out["window_days"] = (
+            datetime.strptime(d1, "%Y-%m-%d") - datetime.strptime(d0, "%Y-%m-%d")
+        ).days
+    except ValueError:
+        pass
+
+    if t0 <= 0:
+        out["note"] = "起始总量为 0，百分比增长率无定义"
+        return out
+
+    out["growth"] = round((t1 - t0) / t0 * 100.0, 2)
+    return out
 
 
 # ── 本地可实测指标 ─────────────────────────────────────────────────
@@ -1240,8 +1322,24 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
             _set("revenue", "conversion_rate", round(bookings / clicks * 100, 2))
         # Social Agent（engagement_rate 本就是百分比口径）
         _set("social", "engagement_rate", daily.get("engagement_rate"))
-        # User Agent（0 个新增订阅 → 0 分，这是真实测量而非缺数据）
-        _set("user", "email_list_growth", daily.get("ml_new_subscribers"))
+        # User Agent：邮件列表增长率必须用总量快照算。
+        # 2026-09-18 修掉：原先接 ml_new_subscribers（每日新增绝对数），
+        # 把绝对数喂进「环比增长≥10%」这个增长率目标——语义错配，
+        # 而且当天新增 20 人会拿 95 分。见 _email_list_growth 的 docstring。
+        _eg = _email_list_growth()
+        if _eg["growth"] is not None:
+            _set("user", "email_list_growth", _eg["growth"])
+            print(f"  ✉️  邮件列表增长率: {_eg['growth']}%"
+                  f"（{_eg['first_total']} → {_eg['last_total']} 人，"
+                  f"{_eg['window_days']} 天窗口 / {_eg['snapshots']} 份快照"
+                  f"，{_eg['file_first']}~{_eg['file_last']}）")
+            if _eg["window_days"] < 25:
+                print(f"     ⚠️  目标口径是「环比（月）」，当前窗口只有 "
+                      f"{_eg['window_days']} 天——比月环比短，分数仅供参考")
+        else:
+            tail = (f"，当前总量 {_eg['last_total']} 人"
+                    if _eg["last_total"] is not None else "")
+            print(f"  ✉️  邮件列表增长率: 未测量（{_eg['note']}{tail}）")
         # SEO Agent：空链接数是 0 → 100 分；与 ops.security_headers 同一映射口径
         empty_links = daily.get("empty_links")
         if empty_links is not None:
