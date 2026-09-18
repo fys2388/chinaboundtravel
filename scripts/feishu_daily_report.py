@@ -354,9 +354,11 @@ class FeishuDailyReporter:
         # 跳出率/时长告警改用此口径（见 report_advice.generate_advice）
         roll_line = ""
         if (data.get("sessions_7d") or 0) > 0 or (data.get("bounce_rate_7d") or 0) > 0:
+            _dur7 = data.get("avg_session_duration_7d", 0) or 0
             roll_line = (
                 f"\n- 7日滚动: 跳出率 {data.get('bounce_rate_7d', 0):.1f}% ｜ 互动率 "
                 f"{data.get('engagement_rate_7d', 0):.1f}% ｜ 会话 {data.get('sessions_7d', 0):,} 次"
+                f" ｜ 平均时长 {_dur7:.0f} 秒"
                 f"（单日值仅作展示，跳出率/时长告警以滚动口径为准）"
             )
         
@@ -394,15 +396,44 @@ class FeishuDailyReporter:
             pv = sum(p.get("views", 0) for p in top_pages)
             if pv != data.get("requests"):
                 consistency_notes.append(f"Top页面浏览合计 {pv} ≠ 总浏览 {data.get('requests')}")
-        consistency_str = ""
+        # GA4 session 维度指标与事件级总量在小样本下会背离（不是隐私抑制，
+        # GA4 Data API 对这几个指标没有 GSC 那种 1000 次阈值）。
+        # 判定：screenPageViews 是事件级总量，sessions/bounceRate/engagementRate 走
+        # sessionization 管线。若页浏览 > 会话数，则必有会话含 ≥2 页浏览 -> 按 GA4 定义
+        # 该会话必然 engaged -> engagementRate=0 / bounceRate=1 不可能同时成立。
+        ga4_session_notes = []
+        _pv_total = data.get("requests") or 0
+        _sess_total = data.get("sessions") or 0
+        _eng_val = data.get("engagement_rate")
+        if _sess_total > 0 and _pv_total > _sess_total and _eng_val == 0:
+            _extra = _pv_total - _sess_total
+            ga4_session_notes.append(
+                f"会话 {_sess_total} / 页浏览 {_pv_total}（均值 {_pv_total / _sess_total:.2f} 页，"
+                f"多出 {_extra} 页）但互动率 0.0% —— 含 ≥2 页浏览的会话按 GA4 定义必然 engaged，"
+                f"互动率实际应 ≥ {_extra / _sess_total:.1%}。该日跳出率/互动率不可信，勿据此判健康")
+        # 平均时长与互动率自相矛盾：互动率 0% = 无会话超过 10 秒，
+        # 则 averageSessionDuration 不可能 >10 秒（该指标只统计 duration>0 的会话）。
+        if _eng_val == 0 and avg_dur > 10:
+            ga4_session_notes.append(
+                f"平均时长 {dur_str} 但互动率 0.0% —— 自相矛盾。互动率 0% 表示无会话超过 10 秒，"
+                f"平均值不应 >10 秒；该日均值可能来自不同查询口径或缓存，勿单独引用")
+        _warn_blocks = []
+        if ga4_session_notes:
+            _warn_blocks.append("⚠️ 口径矛盾提示（GA4 sessionization 与事件级总量背离，非隐私抑制）："
+                                + "；".join(ga4_session_notes))
         if consistency_notes:
-            consistency_str = "\n\n⚠️ 一致性提示：" + "；".join(consistency_notes) + "\n（GA4 小流量隐私阈值/other 分组可能导致明细与总数不一致）"
-        # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障
+            _warn_blocks.append("⚠️ 一致性提示：" + "；".join(consistency_notes)
+                                + "\n（GA4 session 维度指标与事件级总量/分组明细在小样本下会背离）")
+        consistency_str = ("\n\n" + "\n\n".join(_warn_blocks)) if _warn_blocks else ""
+        # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障。
+        # 「平均时长 >10s 但互动率 0%」的矛盾形态由上方 ga4_session_notes 覆盖。
         if avg_dur > 600:
-            consistency_str += "\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，可能由 GA4 小流量/单会话长停留导致，建议以 28 天滚动口径为准"
+            consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，"
+                                "可能由 GA4 小流量/单会话长停留导致，建议以 7 日滚动口径为准")
         elif avg_dur == 0 and (data.get("sessions") or 0) > 0:
             consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
-                                " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，以 28 天滚动口径为准")
+                                " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，"
+                                "以 7 日滚动口径为准")
         
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
@@ -646,7 +677,7 @@ class FeishuDailyReporter:
 
 🩺 Site Health巡检: {self._format_site_health(data.get('site_health'))}
 
-🟢 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
+{('✅' if data.get('site_up') else '🔴')} 网站状态: {'正常' if data.get('site_up') else '异常'} | ⏱️ 响应: {data.get('response_time', 0):.0f}ms"""
                     }
                 },
                 {"tag": "hr"},
@@ -698,7 +729,10 @@ class FeishuDailyReporter:
         lines.append("| ID | 实验名称 | 状态 | 观察 | 样本 |")
         lines.append("| --- | --- | --- | --- | --- |")
         icon_map = {"RUNNING": "🔄", "WAITING_RECRAWL": "⏳", "PENDING": "📋", "WIN": "✅", "LOSE": "❌"}
-        for e in experiments[:6]:
+        # 表头统计全量实验，表格必须展示全量：原 experiments[:6] 硬截断导致
+        # 「待重爬 2」只渲染 1 行，与表头自相矛盾（未展示的项仅出现在关键阻塞里）
+        _MAX_EXPERIMENT_ROWS = 20
+        for e in experiments[:_MAX_EXPERIMENT_ROWS]:
             eid = e.get("experiment_id", "?")
             name = (e.get("display_name") or eid)[:28]
             st = e.get("status", "?")
@@ -708,6 +742,8 @@ class FeishuDailyReporter:
             samp = e.get("sample_status", "-")
             samp_short = "不足" if samp == "INSUFFICIENT_SAMPLE" else (samp or "-")[:8]
             lines.append(f"| {eid} | {name} | {icon} {st} | {days_str} | {samp_short} |")
+        if len(experiments) > _MAX_EXPERIMENT_ROWS:
+            lines.append(f"| … | 另有 {len(experiments) - _MAX_EXPERIMENT_ROWS} 项未展示 | | | |")
         blockers = []
         if waiting:
             blockers.append(f"⏳ 等待重爬: {', '.join(e.get('experiment_id','') for e in waiting)}")
@@ -1530,7 +1566,8 @@ class FeishuDailyReporter:
                 # engagementRate, averageSessionDuration, bounceRate
                 "bounce_rate_7d": self._parse_ga4_rate(roll_vals[5].get("value", "0")) if roll_vals else yesterday_bounce,
                 "engagement_rate_7d": self._parse_ga4_rate(roll_vals[3].get("value", "0")) if roll_vals else yesterday_engagement,
-                "avg_session_duration_7d": int(float(roll_vals[4].get("value", "0"))) if roll_vals else yesterday_avg_duration,
+                # 不截断：截断会把 174.89 -> 174，且低值（如 0.5）会变成 0 造成误判
+                "avg_session_duration_7d": float(roll_vals[4].get("value", "0")) if roll_vals else yesterday_avg_duration,
                 "sessions_7d": int(roll_vals[1].get("value", "0")) if roll_vals else yesterday_sessions,
                 "visitors_7d": int(roll_vals[0].get("value", "0")) if roll_vals else yesterday_users,
                 "top_channels": top_channels,
