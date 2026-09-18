@@ -155,18 +155,24 @@ ignoreFiles = ["/\\.archived/"]
   bing = { SiteVerificationTag = "" }
 
 [params.affiliate]
-  esim = "https://www.airalo.com/"
+  # ── 联盟链接审计（2026-09-18，hugo build 实测 588 条联盟链接）───────────
+  # 带 tracking 的才会产生归因佣金；不带的 = 白送流量。
+  # ⚠️ 以下标「无 tracking」的共 161 条渲染链接（占 27.4%），
+  #    其中 esim 一个 key 就占 156 条 —— 这是「6 次点击 0 成交」的主要原因之一：
+  #    流量被送往不带归属参数的落地页，联盟平台无从归因，佣金永远为 0。
+  #    修复动作是商务动作（去对应平台注册联盟计划拿专属 ID），不是改代码。
+  esim = "https://www.airalo.com/"                    # ⚠️ 无 tracking：需注册 Airalo Partner 拿 ref/partner 参数（渲染 156 处，全站最大联盟面）
   vpn = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   vpnNord = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
-  nordpass = "https://nordpass.com/"
+  nordpass = "https://nordpass.com/"                  # ⚠️ 无 tracking：无 shortcode 使用，保留占位
   hotel = "https://www.booking.com/index.html?aid=730795"
-  klook = "https://klook.tpo.li/vrPkmS2v"
+  klook = "https://klook.tpo.li/vrPkmS2v"             # Travelpayouts 短链，2027-07-24 到期需续
   klook_expire_date = "2027-07-24"
   safetywing = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
-  trip = "https://www.trip.com/"
+  trip = "https://www.trip.com/"                      # ⚠️ 无 tracking：需 Trip.com 联盟 ID（渲染 1 处）
   flight = "https://www.aviasales.com/?marker=730795"
-  worldnomads = "https://www.worldnomads.com/"
-  allianz = "https://www.allianztravelinsurance.com/"
+  worldnomads = "https://www.worldnomads.com/"        # ⚠️ 无 tracking：需 World Nomads 联盟 ID（渲染 2 处）
+  allianz = "https://www.allianztravelinsurance.com/" # ⚠️ 无 tracking：需 Allianz Travel 联盟 ID（渲染 2 处）
   partnerizeUserId = "10111425644"
 
 [params.ebook]

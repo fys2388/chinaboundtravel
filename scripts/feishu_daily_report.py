@@ -348,6 +348,29 @@ class FeishuDailyReporter:
         else:
             rev_status_line = "REVENUE_NOT_AVAILABLE（无接入渠道，与快照口径一致，非故障）"
 
+        # === 联盟链接 tracking 覆盖率 ===
+        # 为什么日报必须报这个：「6 次点击、0 笔成交」会被误读成转化率问题，
+        # 实际主因是归因问题——不带 tracking 参数的联盟链接点击永远不会被归因，
+        # 佣金恒为 0，而且这部分流量在平台后台根本不可见。
+        # 2026-09-18 hugo build 实测：588 条联盟链接中 161 条（27.4%）无 tracking，
+        # 其中 156 条来自单个 key（esim → 裸 airalo 首页）。
+        aff_track_line = ""
+        try:
+            import affiliate_link_audit as _aff_audit
+            _ta = _aff_audit.audit()
+            if _ta["links_total"] > 0:
+                _pct = _ta["untracked_ratio"] * 100
+                _icon = "🔴" if _pct > 5 else ("🟡" if _pct > 0 else "🟢")
+                _keys = "、".join(_ta["untracked_keys"]) or "无"
+                aff_track_line = (
+                    f"\n{_icon} **联盟链接 tracking 覆盖率**: "
+                    f"{_ta['links_tracked']}/{_ta['links_total']} 带 tracking"
+                    f"（{_pct:.1f}% 点击无法产生佣金）\n"
+                    f"   无 tracking 的 key：{_keys}"
+                )
+        except Exception as e:
+            aff_track_line = f"\n⚠️ 联盟链接覆盖率审计失败（不影响其余板块）：{e}"
+
         gsc_available = data.get("gsc_data_available", False)
         gsc_has_data = gsc_available and data.get("gsc_impressions", 0) > 0
         # 索引错误为真实 int 且 ==0 才算 🟢；未检测(None)不算；GSC 未授权用 🔴
@@ -673,6 +696,7 @@ class FeishuDailyReporter:
 | 昨日佣金 | {nord_display['revenue']} |
 
 > Klook、Booking.com 链接均通过 Travelpayouts 追踪，佣金统一统计
+{aff_track_line}
 
 **合计昨日佣金**: {total_rev_str}
 
