@@ -34,7 +34,7 @@ import json
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 # 无数据 KPI 的占位分。刻意不给 0（会让所有 Agent 塌成 D，掩盖真正的问题分布），
 # 也不能给 100（等于给没数据的项发满分）。70 是中性的「未知」先验。
@@ -612,6 +612,74 @@ def _report_age_days(path: Path) -> int:
     return -1
 
 
+def _publish_consistency(social_dir: Optional[Path] = None) -> Dict[str, Any]:
+    """从 reports/social/social_daily_*.json 计算发布一致性达标率。
+
+    数据源：social_daily 由 Buffer API 拉取（analytics_source="buffer_api"）。
+    口径已核对：平台分项求和与 total_published 一致
+    （2026-09-01: ig 9 + pinterest 13 + x 8 + fb 9 = 39 = total_published）。
+
+    明确排除 reports/social/post_performance_data.json —— 它自报
+    data_source="sample_data (replace with Buffer API)"，是样例数据，
+    接进考核等于喂编造数字。
+
+    目标「每周≥5条」→ 达标率 = 达标周 / 有数据的周。
+    按周而不是按日：目标本身定义在周上，日粒度会把「某一天没发」
+    这种不构成违约的噪音算成失败。
+    只统计**有数据文件**的周：某周完全没有日报文件时，
+    无法区分「当天没发」和「采集器没跑」，两种情况不能混为一谈。
+    """
+    result: Dict[str, Any] = {"rate": None, "weeks_met": 0, "weeks_measured": 0,
+                              "weeks": {}, "posts_total": 0, "days": 0,
+                              "age_days": -1, "note": ""}
+
+    if social_dir is None:
+        social_dir = PROJECT_ROOT / "reports" / "social"
+    files = sorted(social_dir.glob("social_daily_*.json"))
+    if not files:
+        result["note"] = "无 social_daily 数据"
+        return result
+
+    weeks: Dict[str, int] = {}
+    week_days: Dict[str, int] = {}
+    posts_total = 0
+    newest_name = ""
+
+    for f in files:
+        try:
+            with open(f, "r", encoding="utf-8") as fh:
+                d = json.load(fh)
+            date = d.get("date")
+            published = d.get("total_published")
+            if not isinstance(date, str) or not isinstance(published, (int, float)):
+                continue
+            dt = datetime.strptime(date, "%Y-%m-%d")
+        except Exception:
+            continue
+        key = f"{dt.isocalendar().year}-W{dt.isocalendar().week:02d}"
+        weeks[key] = weeks.get(key, 0) + int(published)
+        week_days[key] = week_days.get(key, 0) + 1
+        posts_total += int(published)
+        if f.name > newest_name:
+            newest_name = f.name
+
+    if not weeks:
+        result["note"] = "social_daily 里无可用数据"
+        return result
+
+    met = sum(1 for v in weeks.values() if v >= 5)
+    result.update({
+        "rate": round(met / len(weeks) * 100, 1),
+        "weeks_met": met,
+        "weeks_measured": len(weeks),
+        "weeks": {k: {"published": v, "days_with_data": week_days[k]} for k, v in sorted(weeks.items())},
+        "posts_total": posts_total,
+        "days": len(files),
+        "age_days": _report_age_days(social_dir / newest_name),
+    })
+    return result
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -676,8 +744,22 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
             findings = sh.get("findings", [])
             security_issues = [f for f in findings if f.get("module") == "security"]
             metrics["ops"]["security_headers"] = 100.0 if not security_issues else 60.0
+            # 2026-09-18 实测：这份报告已 18 天没更新。不打年龄，读者会把
+            # 三周前的安全扫描结论当成当前状态，和 api_health 那次是同一类问题。
+            print(f"  🔒 安全响应头: {metrics['ops']['security_headers']}%"
+                  f"（{site_health_reports[-1].name}，{_report_age_days(site_health_reports[-1])} 天前）")
         except Exception:
             pass
+
+    # 3b. 发布一致性 ← Buffer API 每日发布数据。
+    pc = _publish_consistency()
+    if pc["rate"] is not None:
+        metrics["social"]["publish_consistency"] = pc["rate"]
+        print(f"  📆 发布一致性: {pc['rate']}%"
+              f"（{pc['weeks_met']}/{pc['weeks_measured']} 周达标≥5条，"
+              f"{pc['days']} 天 / {pc['posts_total']} 条，{pc['age_days']} 天前）")
+    elif pc["note"]:
+        print(f"  📆 发布一致性: 无数据（{pc['note']}）")
 
     # 4. 从最新日报读取真实实测值。
     #    历史问题（2026-09-18 修复）：本函数原先只填 5 个指标，其中
