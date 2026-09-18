@@ -1,4 +1,4 @@
-﻿+++
++++
 title = "Disclaimer"
 date = 2026-05-19T10:00:00+08:00
 draft = false
@@ -52,3 +52,7 @@ We may update this Disclaimer periodically. Changes will be posted on this page 
 
 If you have questions about this Disclaimer, contact us at:
 joran@chinaboundtravel.com
+
+---
+
+*Reviewed by the ChinaBound editorial team, September 18, 2026. This disclaimer governs travel advice intended for international travelers, and is re-reviewed whenever visa policy, payment, or safety guidance on this site changes.*

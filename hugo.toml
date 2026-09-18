@@ -161,7 +161,27 @@ ignoreFiles = ["/\\.archived/"]
   #    其中 esim 一个 key 就占 156 条 —— 这是「6 次点击 0 成交」的主要原因之一：
   #    流量被送往不带归属参数的落地页，联盟平台无从归因，佣金永远为 0。
   #    修复动作是商务动作（去对应平台注册联盟计划拿专属 ID），不是改代码。
-  esim = "https://www.airalo.com/"                    # ⚠️ 无 tracking：需注册 Airalo Partner 拿 ref/partner 参数（渲染 156 处，全站最大联盟面）
+  #
+  # 【2026-09-18 补充：Travelpayouts 能覆盖什么，不能覆盖什么】
+  #   ✅ 已入驻且带 tracking（marker=730795）：
+  #        hotel   = booking.com?aid=730795      （酒店）
+  #        flight  = aviasales.com?marker=730795 （机票，含中国国内航线）
+  #        klook   = klook.tpo.li/vrPkmS2v       （当地体验/门票，2027-07-24 到期需续）
+  #        safetywing = referenceID=26548976      （旅行保险）
+  #        vpn     = get.affiliatescn.net aff_id=150687（NordVPN）
+  #   ❌ Travelpayouts 覆盖不到，无法用已入驻联盟替代：
+  #        esim    = eSIM 不在 Travelpayouts 网络内 → 只能等 Airalo Partner 码
+  #        trip    = Travelpayouts 理论上覆盖 Trip.com，但深链需后台生成 token，
+  #                  仓库里猜的 /trains?marker= 格式 404，等于从未生效过
+  #        worldnomads / allianz = 保险类，Travelpayouts 无对应产品；
+  #                  且这两条出现在"按需求推荐"的对比表里（60+/既往症→Allianz、
+  #                  极限运动→World Nomads），换成 SafetyWing 会让推荐与读者需求不符
+  esim = "https://www.airalo.com/"                    # ⚠️ 无 tracking：渲染 156 处，全站最大联盟面。
+                                                      # 历史上是 https://www.airalo.com/promo/38j3e4（带 ref 码），
+                                                      # 该链接 404 后被 2026-09 的一次"修复"替换成裸 URL——归属随之丢失
+                                                      # （见 reports/browser_ui_affiliate_check_report.md 问题 1）。
+                                                      # eSIM 不在 Travelpayouts 覆盖范围内，无法用已入驻联盟替代；
+                                                      # 唯一解是去 Airalo Partner 拿新的 referral 码。
   vpn = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   vpnNord = "https://get.affiliatescn.net/aff_c?offer_id=153&aff_id=150687&url_id=613"
   nordpass = "https://nordpass.com/"                  # ⚠️ 无 tracking：无 shortcode 使用，保留占位
@@ -169,7 +189,12 @@ ignoreFiles = ["/\\.archived/"]
   klook = "https://klook.tpo.li/vrPkmS2v"             # Travelpayouts 短链，2027-07-24 到期需续
   klook_expire_date = "2027-07-24"
   safetywing = "https://safetywing.com/nomad-insurance?referenceID=26548976&utm_source=26548976&utm_medium=Ambassador"
-  trip = "https://www.trip.com/"                      # ⚠️ 无 tracking：需 Trip.com 联盟 ID（渲染 1 处）
+  trip = "https://www.trip.com/"                      # ⚠️ 无 tracking：渲染 1 处（travel-faq.html 中国高铁购票）。
+                                                      # 曾尝试 https://trip.tpo.li/trains?marker=730795 ——
+                                                      # 这是猜的格式，Travelpayouts 深链真实格式是 trip.tpo.li/<随机token>，
+                                                      # 该猜测链接返回 404，随后被替换成裸 URL（见 browser_ui_affiliate_check_report 问题 2）。
+                                                      # 结论：Trip.com 的 Travelpayouts 深链在本站**从未真正生效过**，
+                                                      # 需要在 Travelpayouts 后台生成 token 才能补上。
   flight = "https://www.aviasales.com/?marker=730795"
   worldnomads = "https://www.worldnomads.com/"        # ⚠️ 无 tracking：需 World Nomads 联盟 ID（渲染 2 处）
   allianz = "https://www.allianztravelinsurance.com/" # ⚠️ 无 tracking：需 Allianz Travel 联盟 ID（渲染 2 处）

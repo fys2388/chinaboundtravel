@@ -227,7 +227,7 @@ For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunmin
 
 **Tips for booking domestic flights**:
 
-- Use [Trip.com](https://www.trip.com) for English-language booking
+- Use [Aviasales](https://www.aviasales.com/?marker=730795) for English-language domestic flight search
 - Book 2-3 weeks in advance for domestic routes
 - Budget airlines like Spring Airlines offer cheaper fares but charge for checked bags
 - Arrive at the airport 2 hours before domestic flights -- security at Chinese airports is thorough

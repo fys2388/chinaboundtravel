@@ -98,8 +98,8 @@
 | cities | content/cities/western-sichuan.md | PASS | - | - | True |
 | cities | content/cities/xian.md | PASS | - | - | True |
 | cities | content/cities/yangshuo.md | PASS | - | - | True |
-| content | content/contact.md | WARN | - | - | False |
-| content | content/disclaimer.md | WARN | - | - | False |
+| content | content/contact.md | PASS | - | - | True |
+| content | content/disclaimer.md | PASS | - | - | True |
 | content | content/ebook/2026-07-01-travel-guide-2026-07.md | WARN | - | - | False |
 | content | content/ebook/2026-08-01-travel-guide-2026-08.md | WARN | - | - | False |
 | content | content/ebook/2026-08-03-travel-guide-2026-08.md | WARN | - | - | False |
@@ -111,8 +111,8 @@
 | content | content/member-year/_index.md | WARN | - | - | False |
 | content | content/payments/_index.md | WARN | - | - | False |
 | content | content/pricing.md | WARN | - | - | False |
-| content | content/privacy-policy.md | WARN | - | - | False |
-| content | content/refund-policy.md | WARN | - | - | False |
+| content | content/privacy-policy.md | PASS | - | - | True |
+| content | content/refund-policy.md | PASS | - | - | True |
 | resources | content/resources/_index.md | PASS | - | - | True |
 | content | content/search.md | WARN | - | - | False |
 | content | content/static-package/_index.md | WARN | - | - | False |
@@ -120,6 +120,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 27/113 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/113 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.

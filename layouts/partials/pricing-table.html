@@ -1,4 +1,4 @@
-﻿<!-- Pricing Table Partial — Three-Tier Plan Display -->
+<!-- Pricing Table Partial — Three-Tier Plan Display -->
 <style>
 /* ===== Pricing Page Styles ===== */
 .pricing-page {
@@ -445,7 +445,7 @@
     <!-- Hero -->
     <div class="pricing-hero">
         <p class="hero-sub">Real-time visa alerts. Crowd-skipping routes. Scam-proof strategies.</p>
-        <p class="hero-note">All plans include the <strong>ChinaBound Travel Guide 2026.08</strong> PDF — updated monthly.</p>
+        <p class="hero-note">All plans include the <strong>ChinaBound Travel Guide 2026.09</strong> PDF — updated monthly.</p>
     </div>
 
     <!-- Three Tier Cards -->
@@ -479,14 +479,18 @@
 
         <!-- Tier 3: Monthly -->
         <div class="pricing-card">
-            <div class="pricing-badge" style="background: #C2410C;">🎁 COUPON: FIRSTMONTH1</div>
+            <!-- ⚠️ 2026-09-18：首月 $1 的 FIRSTMONTH1 优惠码在 Stripe 后台从未创建，
+                 带 ?prefilled_promo_code=FIRSTMONTH1 的 Payment Link 会静默跳过折扣、
+                 按原价 $9.99 扣款。原卡片四处宣称「$1 / auto-applied」，
+                 与用户实际被扣金额不一致，属误导性定价表述，已改回真实价格。
+                 优惠码创建后，把下面的价格与文案改回 $1 即可（链接无需改）。 -->
             <div class="pricing-tier-icon">🥉</div>
             <div class="pricing-tier-name">Monthly Radar</div>
             <div class="pricing-price">
-                <span class="amount">$1</span>
-                <span class="per"> first month</span>
+                <span class="amount">$9.99</span>
+                <span class="per"> / month</span>
             </div>
-            <p class="pricing-tagline">Then $9.99/month.<br>Coupon <strong>FIRSTMONTH1</strong> auto-applied.<br>Cancel anytime.</p>
+            <p class="pricing-tagline">Weekly Travel Radar + monthly guide updates.<br>Cancel anytime before renewal.</p>
             <hr class="pricing-divider">
             <ul class="pricing-features">
                 <li><span class="check">✓</span> PDF Guide (current edition)</li>
@@ -500,8 +504,8 @@
                 <input type="checkbox" id="cb-monthly">
                 <label for="cb-monthly">By clicking "Pay", I expressly authorize Chinaboundtravel to charge my card for the selected subscription. This recurring subscription will automatically renew unless I cancel. I acknowledge that I will lose my right to refunds once the download begins. <a href="/refund-policy" target="_blank">View refund policy</a></label>
             </div>
-            <a id="btn-monthly" href="https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_promo_code=FIRSTMONTH1" class="pricing-cta" target="_blank" rel="noopener noreferrer">Start for $1 →</a>
-            <p class="pricing-cta-note">Secure checkout via Stripe · Coupon <strong>FIRSTMONTH1</strong> auto-applied</p>
+            <a id="btn-monthly" href="https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05" class="pricing-cta" target="_blank" rel="noopener noreferrer">Start at $9.99/mo →</a>
+            <p class="pricing-cta-note">Secure checkout via Stripe · Cancel anytime</p>
         </div>
 
         <!-- Tier 1: Annual — FEATURED -->
@@ -679,7 +683,7 @@
 (function() {
     var links = {
         'btn-onetime': 'https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03',
-        'btn-monthly': 'https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_promo_code=FIRSTMONTH1',
+        'btn-monthly': 'https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05',
         'btn-annual': 'https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01'
     };
 

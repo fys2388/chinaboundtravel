@@ -1,4 +1,4 @@
-﻿---
+---
 title: Refund Policy | China Travel Guide
 description: Chinaboundtravel strict no-refund policy for digital products.
 date: '2026-06-02T10:00:00+08:00'
@@ -35,4 +35,4 @@ Initiating a payment dispute or chargeback with your bank after receiving access
 
 ---
 
-*Last updated: January 2026*
+*Reviewed by the ChinaBound editorial team, September 18, 2026 (originally published January 2026). Refund terms apply to all digital products and subscriptions on chinaboundtravel.com, including international travelers outside our home jurisdiction.*

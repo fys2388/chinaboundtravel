@@ -12,6 +12,8 @@ Have a question about traveling in China that isn't covered in our guides? Want 
 
 Fill out the form below and we'll get back to you as soon as possible.
 
+> **Response time:** editorial questions about travel content are reviewed by the ChinaBound editorial team within 3 business days. Corrections to published guidance are prioritized — if you spot outdated visa, payment, or safety information, that's the fastest way to get it fixed.
+
 <div class="contact-form-container">
   <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <div class="form-group">
