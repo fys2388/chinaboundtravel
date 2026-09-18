@@ -36,6 +36,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any
 
+# 无数据 KPI 的占位分。刻意不给 0（会让所有 Agent 塌成 D，掩盖真正的问题分布），
+# 也不能给 100（等于给没数据的项发满分）。70 是中性的「未知」先验。
+# 代价是它给分数加了 70 分的底，所以必须同时报出每个 Agent 的数据覆盖率和
+# 由此决定的分数上限（见 calculate_agent_score），否则读者会把占位分当成绩效。
+NO_DATA_BASE_SCORE = 70.0
+
 # P2: 营收数据收集器集成（有凭证时自动使用真实数据）
 # 该模块只导出函数（load_env / check_config / collect_all），没有 RevenueDataCollector 类。
 # 旧代码 import 一个不存在的类 → ImportError 被下面静默吞掉 →
@@ -336,7 +342,7 @@ def calculate_agent_score(agent_id: str, metrics: Dict[str, Any]) -> Dict:
         metric_value = metrics.get(kpi["id"], None)
         # P0-FIX: 使用 normalize_metric_to_score 进行正确的归一化
         if metric_value is None:
-            score = 70.0
+            score = NO_DATA_BASE_SCORE
             status = "no_data"
         else:
             score = normalize_metric_to_score(kpi, metric_value)
@@ -360,6 +366,18 @@ def calculate_agent_score(agent_id: str, metrics: Dict[str, Any]) -> Dict:
     final_score = round(weighted_score, 1)
     grade = get_grade(final_score)
 
+    # 数据覆盖率（按权重，不是按 KPI 个数）。
+    # no_data 拿 70 分占位分，所以这个 Agent 的分数上限是硬封顶的：
+    #   上限 = 100 * 已接数据权重占比 + 70 * 未接数据权重占比
+    #        = 70 + 30 * 覆盖率
+    # 没有接数据之前，运营做得再好分数也上不去——把这个上限打印出来，
+    # 读者就能分清「分数低是因为运营差」还是「分数低是因为没数据」。
+    measured_weight = sum(
+        k["weight"] for k in kpis if metrics.get(k["id"], None) is not None
+    )
+    data_coverage_weight = round(measured_weight / total_weight, 3) if total_weight else 0.0
+    score_ceiling = round(100 * data_coverage_weight + NO_DATA_BASE_SCORE * (1 - data_coverage_weight), 1)
+
     return {
         "agent_id": agent_id,
         "name": agent["name"],
@@ -372,6 +390,10 @@ def calculate_agent_score(agent_id: str, metrics: Dict[str, Any]) -> Dict:
         "bonus": grade["bonus"],
         "color": grade["color"],
         "action": grade["action"],
+        "measured_kpis": sum(1 for k in kpis if metrics.get(k["id"], None) is not None),
+        "total_kpis": len(kpis),
+        "data_coverage_weight": data_coverage_weight,
+        "score_ceiling": score_ceiling,
         "kpi_results": kpi_results,
     }
 
@@ -796,6 +818,7 @@ def run_audit(month: str = None) -> Dict:
         grade_icon = {"S": "🏆", "A": "🥇", "B": "✅", "C": "⚠️", "D": "❌"}[result["grade"]]
         print(f"  {grade_icon} {result['emoji']} {result['name_cn']} ({result['name']})")
         print(f"     得分: {result['score']}/100  等级: {result['grade']} ({result['grade_label']})  奖惩: {result['bonus']}")
+        print(f"     数据覆盖: {result['measured_kpis']}/{result['total_kpis']} 个 KPI 有真实数据（权重占比 {result['data_coverage_weight']*100:.1f}%）→ 分数上限 {result['score_ceiling']}")
         print(f"     营收链: {result['revenue_chain']}")
         print(f"     行动: {result['action']}")
 

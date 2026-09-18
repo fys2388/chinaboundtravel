@@ -195,3 +195,61 @@ def test_revenue_collector_import_does_not_fail():
     # 该模块只有函数，没有 RevenueDataCollector 类 —— 旧 import 形式必须失败
     with pytest.raises(ImportError):
         from revenue_data_collector import RevenueDataCollector  # noqa: F401
+
+
+# ── 数据覆盖率与分数上限 ─────────────────────────────────────
+
+def _score_agent(agent_id, kpi_values):
+    """按 KPI id 喂真实值，其余留 no_data，返回该 Agent 的考核结果。"""
+    metrics = {k: v for k, v in kpi_values.items()}
+    return A.calculate_agent_score(agent_id, metrics)
+
+
+def test_no_data_placeholder_is_a_named_constant():
+    """占位分必须只有一处定义，不能散落五六个 70.0 各自漂移。"""
+    assert A.NO_DATA_BASE_SCORE == 70.0
+    r = _score_agent("content", {})
+    assert r["kpi_results"][0]["score"] == A.NO_DATA_BASE_SCORE
+    assert r["kpi_results"][0]["status"] == "no_data"
+
+
+def test_score_ceiling_matches_the_placeholder_math():
+    """上限 = 70 + 30 * 已接数据权重占比。
+    没接数据前分数有硬顶，这个关系必须严格成立。"""
+    for agent_id in A.AGENTS:
+        r = _score_agent(agent_id, {})
+        assert r["score_ceiling"] == A.NO_DATA_BASE_SCORE, agent_id
+        assert r["measured_kpis"] == 0
+        assert r["data_coverage_weight"] == 0.0
+    r = _score_agent("revenue", {"affiliate_revenue": 100.0})
+    kpi = next(k for k in A.AGENTS["revenue"]["kpis"] if k["id"] == "affiliate_revenue")
+    expected = round(
+        100 * (kpi["weight"] / 100) + A.NO_DATA_BASE_SCORE * (1 - kpi["weight"] / 100), 1)
+    assert r["data_coverage_weight"] == round(kpi["weight"] / 100, 3)
+    assert r["score_ceiling"] == expected
+
+
+def test_full_coverage_lifts_ceiling_to_100():
+    """所有 KPI 都接上真实数据时，上限回到 100。"""
+    agent_id = "revenue"
+    all_ids = {k["id"]: 100.0 for k in A.AGENTS[agent_id]["kpis"]}
+    r = _score_agent(agent_id, all_ids)
+    assert r["measured_kpis"] == r["total_kpis"]
+    assert r["data_coverage_weight"] == 1.0
+    assert r["score_ceiling"] == 100.0
+
+
+def test_ceiling_is_never_below_current_score():
+    """当前分数不可能超过上限（否则上限算法就错了）。"""
+    agent_id = "seo"
+    all_ids = {k["id"]: 100.0 for k in A.AGENTS[agent_id]["kpis"]}
+    r = _score_agent(agent_id, all_ids)
+    assert r["score"] <= r["score_ceiling"], (r["score"], r["score_ceiling"])
+
+
+def test_ceiling_caps_below_A_grade():
+    """现实约束：按权重算，覆盖率不高的 Agent 上限根本到不了 A(≥90)。
+    把这个事实写成测试，防止将来有人偷偷把占位分改高、让分数看起来更好。"""
+    # 只接权重 25% 的单个 KPI
+    r = _score_agent("social", {"social_referral_traffic": 100.0})
+    assert r["score_ceiling"] < 90.0, r["score_ceiling"]
