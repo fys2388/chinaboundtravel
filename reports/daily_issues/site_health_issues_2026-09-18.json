@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-18T02:15:20.164476+00:00",
+  "timestamp": "2026-09-18T15:41:50.178094+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -11,11 +11,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-09-18T02:15:21.787728",
+      "assigned_at": "2026-09-18T15:41:52.641032",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-18T02:15:22.164198"
+      "updated_at": "2026-09-18T15:41:52.921375"
     },
     {
       "type": "content_placeholder",
@@ -26,11 +26,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-09-18T02:15:21.787732",
+      "assigned_at": "2026-09-18T15:41:52.641036",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-18T02:15:22.162609"
+      "updated_at": "2026-09-18T15:41:52.919814"
     },
     {
       "type": "draft_leak",
@@ -41,8 +41,24 @@
       "agent": "content",
       "assigned": true,
       "assigned_to": "ops",
-      "assigned_at": "2026-09-18T02:15:21.787733",
+      "assigned_at": "2026-09-18T15:41:52.641038",
       "status": "assigned"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/refund-policy.md",
+      "message": "Meta description过短(62字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-18T15:41:52.641039",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(133字符)",
+      "updated_at": "2026-09-18T15:41:52.892710",
+      "resolved_at": "2026-09-18T15:41:52.892714"
     },
     {
       "type": "title_too_short",
@@ -53,7 +69,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-18T02:15:21.787735",
+      "assigned_at": "2026-09-18T15:41:52.641040",
       "status": "assigned"
     },
     {
@@ -65,7 +81,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-18T02:15:21.787736",
+      "assigned_at": "2026-09-18T15:41:52.641042",
       "status": "assigned"
     },
     {
@@ -77,7 +93,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-18T02:15:21.787737",
+      "assigned_at": "2026-09-18T15:41:52.641043",
       "status": "assigned"
     },
     {
@@ -89,7 +105,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-18T02:15:21.787738",
+      "assigned_at": "2026-09-18T15:41:52.641044",
       "status": "assigned"
     },
     {
@@ -101,7 +117,7 @@
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-18T02:15:21.787739",
+      "assigned_at": "2026-09-18T15:41:52.641045",
       "status": "assigned"
     }
   ]

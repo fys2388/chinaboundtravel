@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-18T02:15:20.164476+00:00",
+  "timestamp": "2026-09-18T15:41:50.178094+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 8,
+    "total_issues": 9,
     "critical": 0,
     "high": 3,
     "medium": 0,
-    "low": 5,
+    "low": 6,
     "auto_fixed": 0,
     "need_manual": 19,
-    "resolved": 13,
+    "resolved": 14,
     "inherited_resolved": 13,
     "in_progress": 0,
-    "last_updated": "2026-09-18T02:15:22.164582"
+    "last_updated": "2026-09-18T15:41:52.921708"
   },
   "issues": [
     {
@@ -119,6 +119,18 @@
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/refund-policy.md",
+      "message": "Meta description过短(62字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "assigned": true,
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(133字符)"
     },
     {
       "type": "title_too_short",

@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-18",
-  "audited_at": "2026-09-18T02:15:22.242971",
+  "audited_at": "2026-09-18T15:41:53.002989",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -20,22 +20,22 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 8,
+        "site_health_total": 9,
         "site_health_file": "site_health_2026-09-18.json",
-        "daily_issues_count": 8
+        "daily_issues_count": 9
       }
     },
     {
       "stage": "assignment",
       "status": "fail",
       "issues": [
-        "2/8 个问题未分配"
+        "2/9 个问题未分配"
       ],
       "details": {
-        "total": 8,
-        "assigned": 6,
+        "total": 9,
+        "assigned": 7,
         "unassigned": 2,
-        "assignment_rate": "75.0%",
+        "assignment_rate": "77.8%",
         "agent_tasks": 5
       }
     },
@@ -45,11 +45,11 @@
       "issues": [],
       "details": {
         "total_tasks": 5,
-        "completed": 1,
+        "completed": 0,
         "pending": 0,
         "failed": 0,
-        "partial": 4,
-        "total_issues": 497,
+        "partial": 5,
+        "total_issues": 499,
         "resolved_issues": 1
       }
     },
@@ -59,9 +59,9 @@
       "issues": [],
       "details": {
         "need_manual": 19,
-        "resolved": 13,
+        "resolved": 14,
         "execution_log_exists": true,
-        "total_executions": 798
+        "total_executions": 922
       }
     },
     {
@@ -75,6 +75,6 @@
     }
   ],
   "all_issues": [
-    "[assignment] 2/8 个问题未分配"
+    "[assignment] 2/9 个问题未分配"
   ]
 }

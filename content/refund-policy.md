@@ -1,6 +1,6 @@
 ---
 title: Refund Policy | China Travel Guide
-description: Chinaboundtravel strict no-refund policy for digital products.
+description: "Due to the irrevertible nature of digital services and instant-download content, Chinaboundtravel operates a strict NO REFUND policy."
 date: '2026-06-02T10:00:00+08:00'
 type: page
 layout: single

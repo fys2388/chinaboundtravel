@@ -3,14 +3,14 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-18_seo",
   "created_at": "2026-09-18T01:01:04.129802+00:00",
-  "updated_at": "2026-09-18T15:30:56.173682",
+  "updated_at": "2026-09-18T15:41:52.895662",
   "target_date": "2026-09-18",
-  "issue_count": 427,
+  "issue_count": 428,
   "severity_summary": {
     "critical": 149,
     "high": 83,
     "medium": 194,
-    "low": 1
+    "low": 2
   },
   "issues": [
     {
@@ -8434,7 +8434,7 @@
       "detected_at": "2026-09-18T02:15:21.773879"
     },
     {
-      "id": "site_health-1985f68bf1ade5fb",
+      "id": "site_health-48e552779a12f024",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -8451,7 +8451,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-18T15:30:55.967306+00:00"
+      "detected_at": "2026-09-18T15:41:52.694998+00:00"
     },
     {
       "id": "issue_bb7b8456f5b2",
@@ -8514,7 +8514,7 @@
       "detected_at": "2026-09-18T02:15:21.773864"
     },
     {
-      "id": "site_health-1c0ab0f6436d1ced",
+      "id": "site_health-58e5de3d623fc506",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
@@ -8531,7 +8531,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-18T15:30:55.967311+00:00"
+      "detected_at": "2026-09-18T15:41:52.695003+00:00"
     },
     {
       "id": "issue_129769fd1fd0",
@@ -8552,6 +8552,26 @@
       "assigned": true,
       "assigned_to": "seo",
       "detected_at": "2026-09-18T02:15:21.773868"
+    },
+    {
+      "id": "issue_cbf0d7814367",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(62字符)",
+      "description": "Meta description过短(62字符)",
+      "page": "content/refund-policy.md",
+      "file": "content/refund-policy.md",
+      "evidence": "Meta description过短(62字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-18.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-18T15:41:52.626491"
     }
   ],
   "priority_issue": {
@@ -8581,9 +8601,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 0,
+    "resolved_count": 1,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=5, failed=0"
+    "note": "resolved=1, need_manual=5, failed=0"
   }
 }
