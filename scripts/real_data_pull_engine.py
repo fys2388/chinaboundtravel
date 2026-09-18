@@ -1240,16 +1240,36 @@ def pull_multi_partner_data() -> Dict:
 # ============================================================
 
 def validate_all_data(results: Dict[str, Dict]) -> Dict:
-    """验证所有数据的真实性和新鲜度"""
+    """验证所有数据的真实性和新鲜度
+
+    2026-09-18 修：total_sources 原本硬编码为 4，PASS 判定也是
+    `real_count == 4`。但 results 实际含 7 个源（ga4/gsc/social/content
+    + partnerize/impact/multi_partner），后 3 个恒以 NO_CREDENTIALS /
+    NO_CONNECTED_PARTNERS 失败。于是报告长期写着
+        overall_status: PASS
+        真实数据源: 4/4
+    同时下方 issues 列表明确列出 3 条失败——状态和明细自相矛盾。
+
+    overall_status 没有任何逻辑消费方（grep 确认：只有 print 和
+    markdown 报告读它），所以修这个不会破坏流水线，只是把「4/4 全绿」
+    改回「4/7 部分通过」这个真实结论。
+    """
     print("\n" + "=" * 60)
     print("  数据真实性和新鲜度验证")
     print("=" * 60)
 
+    total_sources = len(results)
     validation = {
         "validation_time": datetime.now().isoformat(),
         "overall_status": "PENDING",
         "sources": {},
-        "summary": {"total_sources": 4, "real_data_count": 0, "fresh_data_count": 0, "issues": []},
+        "summary": {
+            "total_sources": total_sources,
+            "real_data_count": 0,
+            "fresh_data_count": 0,
+            "failed_sources": [],
+            "issues": [],
+        },
     }
 
     for source_name, source_data in results.items():
@@ -1272,23 +1292,32 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
             validation["summary"]["fresh_data_count"] += 1
 
         if not is_real:
-            issue = f"{source_name}: {status} - {source_data.get('error', 'not real data')}"
+            validation["summary"]["failed_sources"].append(source_name)
+            # puller 用 "error": None 初始化，.get(k, default) 取到 None
+            # 而不是 default，会往报告里印出 "- None"。
+            err = source_data.get("error") or "not real data"
+            issue = f"{source_name}: {status} - {err}"
             validation["summary"]["issues"].append(issue)
         elif not is_fresh:
             validation["summary"]["issues"].append(f"{source_name}: data not fresh ({source_data.get('data_date', 'no date')})")
 
     real_count = validation["summary"]["real_data_count"]
     fresh_count = validation["summary"]["fresh_data_count"]
-    if real_count == 4 and fresh_count == 4:
+    # 判定阈值随 total_sources 缩放，不再锚定历史那个 4 源时代。
+    # PASS = 全部源真实且新鲜；PARTIAL = 至少一半真实；否则 FAIL。
+    if total_sources == 0:
+        validation["overall_status"] = "FAIL"
+        validation["summary"]["issues"].append("没有数据源可供验证")
+    elif real_count == total_sources and fresh_count == total_sources:
         validation["overall_status"] = "PASS"
-    elif real_count >= 3:
+    elif real_count * 2 >= total_sources:
         validation["overall_status"] = "PARTIAL"
     else:
         validation["overall_status"] = "FAIL"
 
     print(f"\n  验证结果: {validation['overall_status']}")
-    print(f"  真实数据源: {real_count}/4")
-    print(f"  新鲜数据源: {fresh_count}/4")
+    print(f"  真实数据源: {real_count}/{total_sources}")
+    print(f"  新鲜数据源: {fresh_count}/{total_sources}")
     if validation["summary"]["issues"]:
         print("  问题:")
         for issue in validation["summary"]["issues"]:
