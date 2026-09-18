@@ -38,6 +38,8 @@ import io
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 import real_data_pull_engine as E   # noqa: E402
@@ -48,32 +50,37 @@ def _src(name, real=True, fresh=True, status="OK", error=None):
             "status": status, "error": error}
 
 
-def _run(results):
-    """跑一次并把打印吃掉，同时禁掉磁盘写入。
+@pytest.fixture(autouse=True)
+def _isolate_report_writes(tmp_path, monkeypatch):
+    """把两个报告路径都指向临时目录，任何写入都不碰真仓库。
 
-    validate_all_data() 末尾会 _save_json 到 reports/real_data/
-    data_validation.json（CI 所有、保护区）。测试不隔离的话会把线上
-    报告覆盖成合成数据——第一轮跑测试就是这么把文件改坏的。
+    validate_all_data() 末尾有**两处**落盘，Round 16 只挡了其中一处：
+      1. _save_json(DATA_VALIDATION_JSON, ...)   — 走 _save_json
+      2. open(DATA_VALIDATION_REPORT, "w")        — 直接 open，绕过 _save_json
+    第二处是 markdown 报告，Round 16 的 monkeypatch 完全没覆盖到，
+    结果 test_verdict_only_depends_on_counts 的 _run(b) 把
+    reports/real_data/data_validation_report.md 覆盖成了
+    「S1/HTTP_500、S2、S3」的合成数据。
+    所以这里改成分数：把两个模块级路径常量都指到 tmp_path，
+    比逐个 monkeypatch 写函数更不容易漏。
     """
-    buf = io.StringIO()
-    with contextlib.redirect_stdout(buf):
-        _saved = E._save_json
-        E._save_json = lambda *a, **k: None
-        try:
-            return E.validate_all_data(results)
-        finally:
-            E._save_json = _saved
+    sink = tmp_path / "reports" / "real_data"
+    sink.mkdir(parents=True, exist_ok=True)
+    monkeypatch.setattr(E, "DATA_VALIDATION_JSON", sink / "data_validation.json")
+    monkeypatch.setattr(E, "DATA_VALIDATION_REPORT", sink / "data_validation_report.md")
+    yield
+
+
+def _run(results):
+    """跑一次并把打印吃掉。落盘由 autouse fixture 隔离。"""
+    with contextlib.redirect_stdout(io.StringIO()):
+        return E.validate_all_data(results)
 
 
 def _run_print(results):
     buf = io.StringIO()
-    _saved = E._save_json
-    E._save_json = lambda *a, **k: None
-    try:
-        with contextlib.redirect_stdout(buf):
-            E.validate_all_data(results)
-    finally:
-        E._save_json = _saved
+    with contextlib.redirect_stdout(buf):
+        E.validate_all_data(results)
     return buf.getvalue()
 
 
