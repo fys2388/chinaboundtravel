@@ -37,9 +37,13 @@ from pathlib import Path
 from typing import Dict, List, Any
 
 # P2: 营收数据收集器集成（有凭证时自动使用真实数据）
+# 该模块只导出函数（load_env / check_config / collect_all），没有 RevenueDataCollector 类。
+# 旧代码 import 一个不存在的类 → ImportError 被下面静默吞掉 →
+# REVENUE_COLLECTOR_AVAILABLE 恒为 False → load_real_revenue_data() 恒返回 {}
+# → KPI 从未接入过真实营收。改为导入模块本体，走真实函数 API。
 try:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from revenue_data_collector import RevenueDataCollector
+    import revenue_data_collector as _rdc
     REVENUE_COLLECTOR_AVAILABLE = True
 except ImportError:
     REVENUE_COLLECTOR_AVAILABLE = False
@@ -299,6 +303,33 @@ def calculate_agent_score(agent_id: str, metrics: Dict[str, Any]) -> Dict:
     }
 
 
+# 与实验注册表的 INSUFFICIENT_SAMPLE 阈值一致：样本量不足时不产出比率，
+# 避免用 6 次点击算出的「转化率 0%」被当成精确测量值写进考核分。
+MIN_SAMPLE_FOR_RATE = 20
+
+
+def _latest_daily_report() -> Dict[str, Any]:
+    """读最新一份飞书日报 JSON（reports/feishu_daily/daily_*.json）。
+
+    日报是仓库里唯一持续产出 GA4 / GSC / 联盟 / 订阅真实实测值的地方，
+    而且已经在 CI 里每天跑、结果已入库。这里复用它而不是在考核脚本里
+    重调一遍各 API，避免凭证缺失、限流和口径不一致三个问题。
+    找不到时返回 {}，对应 KPI 仍标记 no_data（不是默认分）。
+    """
+    daily_dir = PROJECT_ROOT / "reports" / "feishu_daily"
+    files = sorted(daily_dir.glob("daily_*.json")) if daily_dir.exists() else []
+    if not files:
+        return {}
+    try:
+        with open(files[-1], "r", encoding="utf-8") as f:
+            data = json.load(f)
+        data["_report_file"] = files[-1].name
+        return data
+    except Exception as e:
+        print(f"  ⚠️  读取日报失败（营收/流量指标将标记 no_data）: {e}")
+        return {}
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -307,6 +338,10 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
     metrics = {aid: {} for aid in AGENTS}
 
     # 1. 从 content_coverage_audit 读取内容指标
+    #    注意：不再写 avg_word_count=1808 / publish_rate=4.0 这类硬编码字面量。
+    #    它们原先被标成 status="measured" 参与评分，但其实是永远不会更新的常量——
+    #    对一个带 no_fabricated_data KPI 的考核系统，那是最不该出现的假数据。
+    #    拿不到真实值就留空，让上层标 no_data。
     coverage_reports = sorted((PROJECT_ROOT / "reports" / "content_coverage").glob("*.json"))
     if coverage_reports:
         try:
@@ -314,8 +349,6 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
                 cov = json.load(f)
             pf = cov.get("post_fields", {})
             metrics["content"]["mojibake_free"] = 100.0 if pf.get("last_updated", {}).get("passed") else 60.0
-            metrics["content"]["avg_word_count"] = 1808  # 已知基准
-            metrics["content"]["publish_rate"] = 4.0  # 基准
         except Exception:
             pass
 
@@ -344,6 +377,74 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
         except Exception:
             pass
 
+    # 4. 从最新日报读取真实实测值。
+    #    历史问题（2026-09-18 修复）：本函数原先只填 5 个指标，其中
+    #    avg_word_count=1808 与 publish_rate=4.0 是**硬编码字面量**，却被标记为
+    #    status="measured" 当作真实测量值参与评分；其余 41 个 KPI 全部落到
+    #    normalize_metric_to_score 的 70 分「无数据基础分」。
+    #    结果是一个标榜「营收导向考核」的月度报告，实际从未测量过任何营收指标——
+    #    每个 Agent 的营收项都是 70 分，谁也看不出差别。
+    #
+    #    接入原则（只接单位与归一化器语义对得上的）：
+    #    - 货币额、百分比、有明确阈值的比率 → 接入
+    #    - 绝对计数 对 增长型目标（如「环比增长≥8%」的 sessions=11 → 11 分）
+    #      → 不接，那会产生看起来精确实则无意义的分数
+    #    - 样本量不足的比率 → 不接（见 MIN_SAMPLE_FOR_RATE）
+    daily = _latest_daily_report()
+    if daily:
+        print(f"  📄 营收/流量指标来源: reports/feishu_daily/{daily.get('_report_file')}")
+
+        def _set(agent_id: str, kpi_id: str, value) -> None:
+            """只有拿到非 None 的真实值才写入；None 保持 no_data 语义。"""
+            if value is None:
+                return
+            metrics.setdefault(agent_id, {})[kpi_id] = value
+
+        # Revenue Agent
+        _set("revenue", "affiliate_revenue", daily.get("affiliate_revenue"))
+        clicks = daily.get("tp_clicks") or 0
+        bookings = daily.get("tp_bookings") or 0
+        if clicks >= MIN_SAMPLE_FOR_RATE:
+            _set("revenue", "conversion_rate", round(bookings / clicks * 100, 2))
+        # Social Agent（engagement_rate 本就是百分比口径）
+        _set("social", "engagement_rate", daily.get("engagement_rate"))
+        # User Agent（0 个新增订阅 → 0 分，这是真实测量而非缺数据）
+        _set("user", "email_list_growth", daily.get("ml_new_subscribers"))
+        # SEO Agent：空链接数是 0 → 100 分；与 ops.security_headers 同一映射口径
+        empty_links = daily.get("empty_links")
+        if empty_links is not None:
+            _set("seo", "internal_link_health",
+                 100.0 if empty_links == 0 else max(0.0, 100.0 - empty_links * 10))
+
+        # 注意：**不**接 ops.uptime ← daily.get("site_up")。
+        # 2026-09-18 那次日报 site_up=False / response_time=0，实为 CI runner
+        # 网络瞬时失败（当日线上站点实测 HTTP 200）。直接接入会把一次 CI 抖动
+        # 变成 0 分 uptime，等于给考核注入新的假扣分——正是本函数要消除的问题。
+
+    # 5. 专项营收收集器结果，优先级高于日报：它有 30 天窗口，日报只有单日口径。
+    #    两者都有值时以收集器为准。
+    for aid, vals in load_real_revenue_data().items():
+        metrics.setdefault(aid, {}).update(vals)
+
+    # 6. kpi_coverage：真实覆盖率。data Agent 有这个 KPI（目标 100%），
+    #    之前从未被计算。它让「多少指标是真测量的」变成可见事实，
+    #    而不是所有 Agent 都拿到 70 分默认值看起来差别不大。
+    #    注意顺序：必须先写入 kpi_coverage 再统计，否则 data Agent 的这个
+    #    KPI 永远是 no_data，覆盖率系统性低估 1/48（自指不一致）。
+    metrics.setdefault("data", {})["kpi_coverage"] = 0.0
+
+    total = measured = 0
+    for aid in AGENTS:
+        for kpi in AGENTS[aid]["kpis"]:
+            total += 1
+            if metrics.get(aid, {}).get(kpi["id"]) is not None:
+                measured += 1
+    coverage_pct = round(measured / total * 100, 1) if total else 0.0
+    metrics["data"]["kpi_coverage"] = coverage_pct
+    metrics["data"]["_measured_count"] = measured
+    metrics["data"]["_total_count"] = total
+
+    print(f"  📊 KPI 覆盖率: {measured}/{total} = {coverage_pct}%（其余标记 no_data）")
     return metrics
 
 
@@ -442,20 +543,44 @@ def run_audit(month: str = None) -> Dict:
 # ============================================================
 # P2: 真实营收数据集成
 # ============================================================
-def load_real_revenue_data() -> Dict[str, Any]:
-    """尝试从 revenue_data_collector 获取真实营收数据。
-    如果未配置凭证或获取失败，返回空字典，KPI 使用默认基础分。
+def load_real_revenue_data() -> Dict[str, Dict[str, Any]]:
+    """读 revenue_data_collector 已落盘的结果，返回 {agent_id: {kpi_id: value}}。
+
+    刻意不调用 collect_all()：它有网络调用和写文件副作用（写
+    reports/revenue_data/），而且 CI 里没有 Stripe key（gh secret list 已确认
+    secrets 里只有 CLOUDFLARE_* 官方名），调用只会白白失败再写一份空数据。
+
+    历史 bug：本函数曾**完全失效**，原因是两处独立的坑叠加——
+    1. import 了一个不存在的 RevenueDataCollector 类 → ImportError 被静默吞掉；
+    2. 即使 import 成功，collect_all() 的返回体里**根本没有 status 键**
+       （真实结构是 collected_at / period_days / total_revenue / sources），
+       所以 `data.get("status") == "success"` 永远为假。
+    此外本函数长期**没有被任何地方调用**——即使前两个问题都修好也白修。
     """
     if not REVENUE_COLLECTOR_AVAILABLE:
         return {}
+    rd_dir = PROJECT_ROOT / "reports" / "revenue_data"
+    files = sorted(rd_dir.glob("revenue_data_*.json")) if rd_dir.exists() else []
+    if not files:
+        return {}
     try:
-        collector = RevenueDataCollector()
-        data = collector.collect_all()
-        if data and data.get("status") == "success":
-            print("  📊 已接入真实营收数据驱动 KPI")
-            return data.get("data", {})
+        with open(files[-1], "r", encoding="utf-8") as f:
+            data = json.load(f)
+        total_revenue = data.get("total_revenue")
+        if total_revenue is None:
+            return {}
+        sources = data.get("sources") or {}
+        tp = sources.get("travelpayouts") or {}
+        stripe = sources.get("stripe") or {}
+        print(f"  📊 已接入真实营收数据: {files[-1].name} (合计 ${total_revenue:.2f})")
+        out: Dict[str, Dict[str, Any]] = {}
+        if tp.get("approved_commission") is not None:
+            out.setdefault("revenue", {})["affiliate_revenue"] = float(tp["approved_commission"])
+        if stripe.get("net_revenue") is not None:
+            out.setdefault("revenue", {})["ebook_revenue"] = float(stripe["net_revenue"])
+        return out
     except Exception as e:
-        print(f"  ⚠️  营收数据获取失败（使用默认分）: {e}")
+        print(f"  ⚠️  营收数据读取失败（对应 KPI 标记 no_data）: {e}")
     return {}
 
 
