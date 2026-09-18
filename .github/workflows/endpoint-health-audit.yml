@@ -1,0 +1,88 @@
+name: Endpoint Health Audit (API + Subscribe)
+
+# 为什么有这条流水线
+# ------------------
+# scripts/api_health_audit.py 与 scripts/subscription_health_audit.py
+# 此前没有任何定时任务运行。reports/api_health/ 最新文件停在 11 天前，
+# agent_kpi_auditor 于是拿一份 11 天前的扫描给 ops.api_health_rate 打分
+# （75.0%，而线上实际是 16/16 全通过 = 100.0%）。
+# subscription_health 报告也是靠人工跑才刷新。
+#
+# 考核系统引用过期结论，等于「自动化运营」只在报告文件名上自动化了，
+# 测量本身没有自动化。这条流水线把测量放进日程。
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 每 6 小时（UTC）
+  workflow_dispatch:
+
+jobs:
+  endpoint-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests python-dotenv
+
+      - name: Run API health audit
+        env:
+          MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          # 退出非零只表示「有端点失败」，是审计结果不是流水线故障：
+          # 一个真的挂掉的端点不应该把报告提交也一并取消。
+          python scripts/api_health_audit.py; echo "api_audit_exit=$?"
+
+      - name: Run subscription health audit
+        env:
+          MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          python scripts/subscription_health_audit.py; echo "sub_audit_exit=$?"
+
+      - name: Summarize
+        if: always()
+        run: |
+          # 汇总逻辑在 scripts/audit_summary_md.py，本地可跑可测。
+          # 不内联 python -c：多层 f-string 嵌 dict 取值的引号转义在
+          # YAML 层极易写错，且只能等 CI 才暴露。
+          python scripts/audit_summary_md.py >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Commit reports
+        if: always() && hashFiles('reports/api_health/*.json') != ''
+        run: |
+          git config --local user.email "ai-agent@chinaboundtravel.com"
+          git config --local user.name "Endpoint Health Agent"
+          # 只提交这两个审计目录。不用 git add -A：
+          # site-health-daily.yml 已经证明 git add -A 会把工作区
+          # 任何残留文件（含临时脚本）顺手打进提交。
+          git add reports/api_health reports/subscription_health
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(audit): refresh endpoint health reports (api + subscribe) [skip ci]"
+            git push origin main
+          fi
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: endpoint-health-reports
+          path: |
+            reports/api_health/
+            reports/subscription_health/
+          retention-days: 60
