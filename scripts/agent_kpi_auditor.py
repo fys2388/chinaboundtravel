@@ -48,6 +48,13 @@ try:
 except ImportError:
     REVENUE_COLLECTOR_AVAILABLE = False
 
+# SEO 结构化数据审计。同样只导函数（audit / main），导入模块本体。
+try:
+    import seo_structured_data_audit as _sd_audit
+    STRUCTURED_DATA_AUDIT_AVAILABLE = True
+except ImportError:
+    STRUCTURED_DATA_AUDIT_AVAILABLE = False
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -476,6 +483,32 @@ def measure_report_timeliness(root: Path = None) -> float:
     return 100.0 if age_days == 0 else (50.0 if age_days == 1 else 0.0)
 
 
+def measure_structured_data(root: Path = None) -> Dict[str, Any]:
+    """结构化数据覆盖率（%），来自构建产物的真实渲染结果。
+
+    只读 public/，不自己跑 hugo build：构建有副作用且耗时，而 KPI 审计
+    应该是快查。CI 的 site-health 工作流已经产出 public/，这里复用它。
+
+    为什么不用 reports/site_health/*.json：那份审计是 2026-08-31 的，
+    结论已陈旧 18 天——它报「缺 WebSite 结构化数据 / 首页缺 canonical」，
+    而实测 WebSite 在 287 页、首页 canonical 存在。拿陈旧结论当考核依据，
+    等于让考核系统引用一份已被事实推翻的报告。
+
+    无 public/ 或审计报 reason 时返回 {}，对应 KPI 仍标 no_data
+    （不是 70 分默认值）。root 可注入，便于测试。
+    """
+    if not STRUCTURED_DATA_AUDIT_AVAILABLE:
+        return {}
+    root = root or PROJECT_ROOT
+    build_dir = root / "public"
+    if not build_dir.is_dir():
+        return {}
+    r = _sd_audit.audit(build_dir)
+    if r.get("reason"):
+        return {}
+    return r
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -604,6 +637,19 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
         print(f"  ⏱️  日报时效: {_t}%")
     except Exception as e:
         print(f"  ⚠️  日报时效实测失败: {e}")
+
+    try:
+        _s = measure_structured_data()
+        if _s:
+            metrics.setdefault("seo", {})["structured_data"] = _s["structured_data_coverage_pct"]
+            metrics.setdefault("seo", {})["canonical_consistency"] = _s["canonical_coverage_pct"]
+            print(f"  🏷️  结构化数据: {_s['structured_data_coverage_pct']}%"
+                  f"（{_s['pages_with_structured_data']}/{_s['pages_total']} 页，文章页 "
+                  f"{_s['post_structured_data_coverage_pct']}%）"
+                  f"/ canonical {_s['canonical_coverage_pct']}%"
+                  f"/ 模板残留 {_s['template_residue_count']} 处")
+    except Exception as e:
+        print(f"  ⚠️  结构化数据实测失败: {e}")
 
     # 7. kpi_coverage：真实覆盖率。data Agent 有这个 KPI（目标 100%），
     #    之前从未被计算。它让「多少指标是真测量的」变成可见事实，
