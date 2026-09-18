@@ -201,6 +201,31 @@ def generate_priority_tasks(okr_data, suggestions):
     return out
 
 
+def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total):
+    """CI 状态文案：把「未运行」这个假声明拆成可区分的几种情况。
+
+    原先三种互不相干的情况都渲染成「未运行」：Actions API 调用失败（token 无
+    actions:read 权限 / 限流 / 网络）、仓库里没有该 workflow 的记录、以及当日
+    确实没有已完成的 run。读者会以为工作流没执行，实际是状态没查出来——
+    对一个以「自动化无需人工干预」为目标的日报，这类假声明比缺失更糟。
+    """
+    if value is True:
+        return "成功"
+    if value is False:
+        return "失败"
+    if ci_token_missing:
+        return "CI 状态未获取（本地预览）"
+    if api_ok is None:
+        return "状态未知（未采集到记录）"
+    if not api_ok:
+        return f"状态未知（Actions API 失败：{api_error}）"
+    if paths_total is None:
+        return "状态未知（未采集到记录）"
+    if paths_total == 0:
+        return "状态未知（仓库无该 workflow 记录）"
+    return "状态未知（当日无已完成 run）"
+
+
 class FeishuDailyReporter:
     """飞书每日日报推送器"""
     
@@ -507,8 +532,12 @@ class FeishuDailyReporter:
         blog_icon = "✅" if gh_blog == True else ("❌" if gh_blog == False else "⚪")
         report_icon = "✅" if gh_report == True else ("❌" if gh_report == False else "⚪")
         ci_token_missing = not os.environ.get("GITHUB_TOKEN")
-        blog_state = "成功" if gh_blog == True else ("失败" if gh_blog == False else ("CI 状态未获取（本地预览）" if ci_token_missing else "未运行"))
-        report_state = "成功" if gh_report == True else ("失败" if gh_report == False else ("CI 状态未获取（本地预览）" if ci_token_missing else "未运行"))
+        blog_state = _ci_state_str(gh_blog, ci_token_missing, data.get("gh_api_ok", True),
+                                   data.get("gh_api_error") or "未知原因",
+                                   data.get("gh_blog_paths_total"))
+        report_state = _ci_state_str(gh_report, ci_token_missing, data.get("gh_api_ok", True),
+                                     data.get("gh_api_error") or "未知原因",
+                                     data.get("gh_report_paths_total"))
         
         # 高优先级待办
         todos = data.get("high_priority_todos", [])
@@ -884,6 +913,11 @@ class FeishuDailyReporter:
             # GitHub Actions 状态
             "gh_blog_success": None,
             "gh_report_success": None,
+            "gh_api_ok": None,
+            "gh_api_error": None,
+            "gh_runs_total": None,
+            "gh_blog_paths_total": None,
+            "gh_report_paths_total": None,
             # 高优先级待办
             "high_priority_todos": [],
             # 数据获取状态
@@ -987,8 +1021,12 @@ class FeishuDailyReporter:
         gh_data = self._fetch_github_actions()
         if gh_data:
             data.update(gh_data)
-            blog_status = '成功' if data.get('gh_blog_success') == True else ('失败' if data.get('gh_blog_success') == False else '未运行')
-            report_status = '成功' if data.get('gh_report_success') == True else ('失败' if data.get('gh_report_success') == False else '未运行')
+            blog_status = _ci_state_str(data.get('gh_blog_success'), not GITHUB_TOKEN,
+                                        data.get('gh_api_ok', True), data.get('gh_api_error') or '未知原因',
+                                        data.get('gh_blog_paths_total'))
+            report_status = _ci_state_str(data.get('gh_report_success'), not GITHUB_TOKEN,
+                                          data.get('gh_api_ok', True), data.get('gh_api_error') or '未知原因',
+                                          data.get('gh_report_paths_total'))
             print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
             # 社媒分发失败 → 真实告警（不被日报状态吞掉）
             if data.get("gh_social_success") is False:
@@ -1872,6 +1910,7 @@ class FeishuDailyReporter:
             
             result = {}
             runs = []  # 预定义避免作用域问题
+            api_ok, api_error = False, "未发起请求"
             try:
                 resp = requests.get(
                     base_url,
@@ -1881,10 +1920,18 @@ class FeishuDailyReporter:
                 )
                 if resp.status_code == 200:
                     runs = resp.json().get("workflow_runs", [])
+                    api_ok = True
                 else:
+                    api_error = f"HTTP {resp.status_code}"
                     print(f"   ⚠️ GitHub API 响应 {resp.status_code}: {resp.text[:200]}")
             except Exception as e:
+                api_error = str(e)[:120]
                 print(f"   ⚠️ GitHub API 查询失败: {e}")
+            # 「未运行」原来把 API 失败、仓库无记录、当日无完成 run 三种情况混为一谈，
+            # 现在把 API 结果暴露出来让渲染端区分（见 _ci_state_str）
+            result["gh_api_ok"] = api_ok
+            result["gh_api_error"] = None if api_ok else api_error
+            result["gh_runs_total"] = len(runs)
 
             def _completed_runs(paths):
                 """报告日内、已完成、排除当前 run、按创建时间倒序"""
@@ -1897,6 +1944,11 @@ class FeishuDailyReporter:
                     key=lambda r: r.get("created_at") or "",
                     reverse=True,
                 )
+
+            def _path_runs(paths):
+                """该 workflow 路径的全部 run（不限日期/状态），用于区分
+                「仓库里根本没有这个 workflow」与「有记录但当日没跑完」"""
+                return [r for r in runs if r.get("path") in paths]
             
             # 检查博客生成工作流
             try:
@@ -1907,6 +1959,7 @@ class FeishuDailyReporter:
                     result["gh_blog_run_time"] = latest_blog.get("created_at", "")
                 else:
                     result["gh_blog_success"] = None  # 无已完成的工作流
+                    result["gh_blog_paths_total"] = len(_path_runs(BLOG_WORKFLOW_PATHS))
             except Exception as e:
                 print(f"   ⚠️ GitHub 博客工作流查询失败: {e}")
                 result["gh_blog_success"] = None
@@ -1920,6 +1973,7 @@ class FeishuDailyReporter:
                     print(f"   📋 日报工作流最新完成: {latest_report.get('display_title', 'N/A')} -> {latest_report.get('conclusion', 'N/A')}")
                 else:
                     result["gh_report_success"] = None
+                    result["gh_report_paths_total"] = len(_path_runs(REPORT_WORKFLOW_PATHS))
                     print(f"   ⚠️ 未找到已完成的日报工作流（可能正在运行中）")
             except Exception as e:
                 print(f"   ⚠️ GitHub 日报工作流查询失败: {e}")
