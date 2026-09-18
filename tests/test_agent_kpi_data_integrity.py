@@ -2,14 +2,17 @@
 
 守护 2026-09-18 修复的四个问题：
 1. 硬编码字面量（avg_word_count=1808 / publish_rate=4.0）曾被标成 measured
-   参与评分 —— 现在必须不存在。
+   参与评分 —— 后来接入真实测量，因此「键不存在」不再成立，改为断言值
+   等于独立重算结果（见 test_no_hardcoded_literal_metrics）。
 2. load_real_revenue_data() 曾完全失效（import 不存在的类 + 判断不存在的
    status 键）且从未被调用 —— 现在必须是可调用函数并返回同构结构。
 3. kpi_coverage 曾从未计算 —— 现在必须等于独立算出的实测占比。
 4. 小样本比率（tp_clicks < 20）不得产出「精确」转化率。
 """
 import json
+import re
 import shutil
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -25,19 +28,53 @@ def _daily_files():
     return sorted(DAILY_DIR.glob("daily_*.json"))
 
 
+def _recompute_content_stats():
+    """独立重算平均词数与近 7 天发布量，不依赖 A 的内部实现。
+
+    用于证明这两个值是实测出来的：若有人把它改回硬编码常量，
+    独立重算结果会不一致，测试立刻失败。
+    """
+    posts = sorted((A.PROJECT_ROOT / "content" / "posts").glob("*.md"))
+    counts, last7 = [], 0
+    now = datetime.now()
+    for p in posts:
+        text = p.read_text(encoding="utf-8", errors="ignore")
+        body = re.sub(r"^---\n.*?\n---\n", "", text, flags=re.S)
+        body = re.sub(r"<[^>]+>", " ", body)
+        counts.append(len(body.split()))
+        m = re.match(r"^---\n(.*?)\n---", text, re.S)
+        if m:
+            dm = re.search(r"^date:\s*[\"']?(\d{4}-\d{2}-\d{2})", m.group(1), re.M)
+            if dm:
+                try:
+                    if now - datetime.strptime(dm.group(1), "%Y-%m-%d") < timedelta(days=7):
+                        last7 += 1
+                except ValueError:
+                    pass
+    assert counts, "content/posts 下应有文章"
+    return round(sum(counts) / len(counts), 1), last7
+
+
 def test_no_hardcoded_literal_metrics():
-    """硬编码常量不得伪装成实测值进入评分。"""
+    """avg_word_count / publish_rate 必须是实测值，不是常量。
+
+    历史上这两个是硬编码 1808 / 4.0，却被标成 status=measured 参与评分。
+    2026-09-18 接入真实测量后，原先「键必须不存在」的断言已失效——
+    改为断言值等于独立重算结果。
+    """
     metrics = A.collect_metrics()
     content = metrics.get("content", {})
-    assert "avg_word_count" not in content, (
-        "avg_word_count 不得是硬编码常量：它曾是固定值 1808，"
-        "却被标为 status=measured 参与评分"
+
+    avg, last7 = _recompute_content_stats()
+    assert content.get("avg_word_count") == avg, (
+        f"avg_word_count={content.get('avg_word_count')} 但独立重算 {avg}——"
+        "疑似硬编码常量（历史上曾被固定为 1808）"
     )
-    assert "publish_rate" not in content, (
-        "publish_rate 不得是硬编码常量：它曾是固定值 4.0"
+    assert content.get("publish_rate") == last7, (
+        f"publish_rate={content.get('publish_rate')} 但独立重算近7天 {last7} 篇——"
+        "疑似硬编码常量（历史上曾被固定为 4.0）"
     )
-    # 反证：这两个 id 确实存在于 KPI 定义里，所以「不存在」是主动留空，
-    # 不是 id 拼错导致静默漏掉。
+    # 反证：这两个 id 确实存在于 KPI 定义里，取值不会因 id 拼错而静默漏掉。
     defined = {k["id"] for k in A.AGENTS["content"]["kpis"]}
     assert "avg_word_count" in defined and "publish_rate" in defined
 

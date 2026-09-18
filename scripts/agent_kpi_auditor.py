@@ -32,7 +32,7 @@ import argparse
 import re
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any
 
@@ -215,17 +215,28 @@ def normalize_metric_to_score(kpi: Dict, value: Any) -> float:
         return 70.0  # 无数据基础分
 
     if isinstance(value, (int, float)):
+        # 零基准目标（target 为 0 且非百分比，如「0 个坏链接」「0 例伪造数据」）
+        # 必须最先判定：value=0 是满分。
+        # 2026-09-18 修复：这类指标原先被下面 `0 <= value <= 100` 的百分比分支
+        # 吃掉——value=0 直接 return 0.0，「零个坏链接」拿了最低分，语义完全反了；
+        # value=1 反而掉进 `0 <= value <= 1` 返回 1.0，越坏分越高。
+        target_str = kpi.get("target", "")
+        target_match = re.search(r'(\d+(?:\.\d+)?)', target_str)
+        if target_match and float(target_match.group(1)) == 0 and "%" not in target_str:
+            return 100.0 if value == 0 else 30.0
+
         # 已经是百分比形式的值（0-100）
         if 0 <= value <= 100 and kpi["type"] in ("revenue", "quality"):
             return float(value)
-        # 已经是比率（0-1）转为百分比
-        if 0 <= value <= 1:
+        # 已经是比率（0-1）转为百分比。
+        # 必须严格大于 0：value=0 无法与「0% 比率」区分，无差别套用会把
+        # 「0 篇/周」「$0 营收」也当成 0% 返回 0.0 分。2026-09-18 修复——
+        # 收紧后任何 0 值都走下面的目标比较分支，统一归为「远低于目标」30 分，
+        # 语义一致；真比率（如 engagement_rate=0.05）不受影响。
+        if 0 < value <= 1:
             return value * 100
         # 对于大数值（如字数、流量、营收），根据目标值估算
         # 默认：达到目标值给85分，超过目标值给95分
-        target_str = kpi.get("target", "")
-        # 尝试从 target 中提取数值
-        target_match = re.search(r'(\d+(?:\.\d+)?)', target_str)
         if target_match:
             target_val = float(target_match.group(1))
             if target_val > 0:
@@ -330,6 +341,141 @@ def _latest_daily_report() -> Dict[str, Any]:
         return {}
 
 
+# ── 本地可实测指标 ─────────────────────────────────────────────────
+# 第 4 步接入的日报指标依赖外部 API 的每日快照：凭证缺失、限流、快照陈旧
+# 都会让它变成假信号（2026-09-18 刚修过 GSC 单日窗口恒空这一例）。
+# 下面这批测的是**仓库自身状态**，与站点流量无关，本地和干净 CI 沙箱里
+# 都算得出来，因此更适合作为考核底座。
+
+
+def _post_files(root: Path = None) -> List[Path]:
+    root = root or PROJECT_ROOT
+    d = root / "content" / "posts"
+    return sorted(d.glob("*.md")) if d.exists() else []
+
+
+def _body_without_frontmatter(text: str) -> str:
+    """去掉 YAML front matter 与 HTML 标签，剩下正文用于词数统计。"""
+    body = re.sub(r"^---\n.*?\n---\n", "", text, flags=re.S)
+    return re.sub(r"<[^>]+>", " ", body)
+
+
+def measure_content_stats(root: Path = None) -> Dict[str, Any]:
+    """从 content/posts/*.md 实测平均词数与发布率。
+
+    为什么不用 git log 算发布率：`git log --since=7d --name-only` 返回的是
+    「近 7 天被某个提交触碰过的文件」。本仓库机器人每 30 分钟批量提交一次，
+    一次提交会 name-only 出全部 63 篇文章，发布率会被算成 63 篇/周——
+    比硬编码的 4.0 更离谱。front-matter 的 date 才是文章真实发布日期。
+
+    root 可注入，便于测试用临时目录验证口径。
+    """
+    files = _post_files(root)
+    if not files:
+        return {}
+
+    word_counts: List[int] = []
+    publish_dates: List[datetime] = []
+    for p in files:
+        try:
+            text = p.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        word_counts.append(len(_body_without_frontmatter(text).split()))
+
+        m = re.match(r"^---\n(.*?)\n---", text, re.S)
+        if m:
+            dm = re.search(r"^date:\s*[\"']?(\d{4}-\d{2}-\d{2})", m.group(1), re.M)
+            if dm:
+                try:
+                    publish_dates.append(datetime.strptime(dm.group(1), "%Y-%m-%d"))
+                except ValueError:
+                    pass
+
+    if not word_counts:
+        return {}
+
+    now = datetime.now()
+    last7 = sum(1 for d in publish_dates if now - d < timedelta(days=7))
+    return {
+        "avg_word_count": round(sum(word_counts) / len(word_counts), 1),
+        "publish_rate": last7,
+        "_posts_total": len(files),
+        "_posts_dated": len(publish_dates),
+    }
+
+
+def measure_affiliate_compliance(root: Path = None) -> Dict[str, Any]:
+    """affiliate shortcode 的联盟链接合规率与坏链接数。
+
+    Google 要求付费/联盟链接带 rel="sponsored"，缺失有人工处罚风险。
+    只统计**外部**链接：`/disclosure/` 这类站内链接不是联盟链接，
+    算进去会得出 11/12 = 91.7% 的假不合规。
+
+    root 可注入，便于测试用临时目录验证口径。
+    """
+    root = root or PROJECT_ROOT
+    sc_dir = root / "layouts" / "shortcodes"
+    try:
+        files = sorted(sc_dir.glob("affiliate-*.html"))
+    except OSError:
+        return {}
+
+    external = compliant = broken = 0
+    for p in files:
+        try:
+            text = p.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        for m in re.finditer(r"<a\b([^>]*)>", text, re.I):
+            attrs = m.group(1)
+            if "href" not in attrs:
+                continue
+            hm = re.search(r'href\s*=\s*("([^"]*)"|\'([^\']*)\'|([^\s>]+))', attrs, re.I)
+            href = (hm.group(2) or hm.group(3) or hm.group(4) or "") if hm else ""
+            if not href or href in ("#", "./", "/"):
+                broken += 1
+                continue
+            if href.startswith(("/", "#")):
+                continue  # 站内链接，不属于联盟合规口径
+            external += 1
+            if "sponsored" in attrs.lower():
+                compliant += 1
+
+    if not external:
+        return {}
+    return {
+        "affiliate_compliance": round(compliant / external * 100, 1),
+        "broken_affiliate_links": broken,
+        "_affiliate_external_total": external,
+    }
+
+
+def measure_report_timeliness(root: Path = None) -> float:
+    """最新一份日报距今天数 → 时效率（%）。
+
+    0 天 = 100%，1 天 = 50%，≥2 天 = 0%。这是「自动化是否还在按时产出」
+    的直接信号。用文件名里的日期而不是 mtime：mtime 会被 git checkout、
+    CI 工作流复制和机器时间改写，文件名不会。
+
+    root 可注入，便于测试用临时目录验证口径。
+    """
+    root = root or PROJECT_ROOT
+    daily_dir = root / "reports" / "feishu_daily"
+    files = sorted(daily_dir.glob("daily_*.json")) if daily_dir.exists() else []
+    if not files:
+        return 0.0
+    m = re.search(r"(\d{4}-\d{2}-\d{2})", files[-1].name)
+    if not m:
+        return 0.0
+    try:
+        age_days = (datetime.now() - datetime.strptime(m.group(1), "%Y-%m-%d")).days
+    except ValueError:
+        return 0.0
+    age_days = max(age_days, 0)
+    return 100.0 if age_days == 0 else (50.0 if age_days == 1 else 0.0)
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -426,7 +572,40 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
     for aid, vals in load_real_revenue_data().items():
         metrics.setdefault(aid, {}).update(vals)
 
-    # 6. kpi_coverage：真实覆盖率。data Agent 有这个 KPI（目标 100%），
+    # 6. 本地可实测指标：仓库自身状态，不依赖外部 API 快照。
+    #    这五个此前全部落在 70 分无数据基础分，是考核盲区。
+    #    2026-09-18 实测：avg_word_count=1904（19/63 篇低于 1500 字目标）；
+    #    publish_rate=0 篇/周——最新一篇是 2026-09-08，已停滞 10 天。
+    #    后者才是本轮真正有价值的发现：内容停产不会出现在任何报表里，
+    #    因为它此前根本不在 KPI 里。
+    try:
+        _c = measure_content_stats()
+        if _c:
+            metrics.setdefault("content", {})["avg_word_count"] = _c["avg_word_count"]
+            metrics.setdefault("content", {})["publish_rate"] = _c["publish_rate"]
+            print(f"  📝 内容实测: 平均 {_c['avg_word_count']:.0f} 词 / 近7天新发 {_c['publish_rate']} 篇"
+                  f"（共 {_c['_posts_total']} 篇，{_c['_posts_dated']} 篇有日期）")
+    except Exception as e:
+        print(f"  ⚠️  内容指标实测失败: {e}")
+
+    try:
+        _a = measure_affiliate_compliance()
+        if _a:
+            metrics.setdefault("revenue", {})["affiliate_compliance"] = _a["affiliate_compliance"]
+            metrics.setdefault("revenue", {})["broken_affiliate_links"] = _a["broken_affiliate_links"]
+            print(f"  🔗 联盟合规: {_a['affiliate_compliance']}%"
+                  f"（{_a['_affiliate_external_total']} 条外部链接）/ 坏链接 {_a['broken_affiliate_links']} 个")
+    except Exception as e:
+        print(f"  ⚠️  联盟合规实测失败: {e}")
+
+    try:
+        _t = measure_report_timeliness()
+        metrics.setdefault("data", {})["report_timeliness"] = _t
+        print(f"  ⏱️  日报时效: {_t}%")
+    except Exception as e:
+        print(f"  ⚠️  日报时效实测失败: {e}")
+
+    # 7. kpi_coverage：真实覆盖率。data Agent 有这个 KPI（目标 100%），
     #    之前从未被计算。它让「多少指标是真测量的」变成可见事实，
     #    而不是所有 Agent 都拿到 70 分默认值看起来差别不大。
     #    注意顺序：必须先写入 kpi_coverage 再统计，否则 data Agent 的这个
