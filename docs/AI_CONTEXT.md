@@ -23,34 +23,36 @@
 
 ## 2. Current branch / commit
 
-- 本地分支：`main`
-- 本地 HEAD：`e87727f4` — workflow 修复后的最近远端同步点（以 `git pull --rebase` 为准）
-- **接手第一件事：`git pull --rebase`。** 本仓库有多个机器人每 30 分钟向 main 提交，本地历史随时落后数百个提交；
-  要看线上真实代码用 `git show origin/main:<path>`，不要相信本地 checkout 里的旧内容。
-- 线上状态：push main → `deploy-cloudflare-pages.yml`（workflow 名 "Post-deploy Tasks"）→ Hugo 构建 →
-  Cloudflare Pages，约 1-2 分钟生效。线上验证 2026-09-16：`/ops-dashboard/` 301 → `/ops/ops-center` 200。
-- 工作区纪律见 `AGENTS.md`（高危命令闸门）；看板专题见 `docs/OPS_DASHBOARD_HANDOVER.md`。
+- 本地分支 `main`；本地 HEAD 以 `git pull --rebase` 后的 `git log -1` 为准，
+  **不要写死 hash**（机器人每 30 分钟提交，写死即过期）。
+- **接手第一件事：`git pull --rebase`。** 要看线上真实代码用 `git show origin/main:<path>`，
+  不要相信本地 checkout 的旧内容（随时落后数百个提交）。
+- 线上状态：push main → `deploy-cloudflare-pages.yml` → Hugo → Cloudflare Pages，约 1-2 分钟生效。
+- 工作区纪律见 `AGENTS.md`；看板专题见 `docs/OPS_DASHBOARD_HANDOVER.md`。
 
 ## 3. Content / Reporting baseline（2.0）
 
-- 发布文章：59 posts；content_id：59/59（扫描复核，2026-08-30）
-- 单 inventory 源：`reports/seo/CONTENT_SEO_INVENTORY.csv`（60 行；`content_inventory.csv` 已废弃）
+- 发布文章：**63 posts，content_id 63/63**（`scripts/content_id_audit.py audit --strict` → PASS，09-18 实测）。
+  **别用 glob 数文章数**：glob 到 79 个 .md，但 `.archived/`（6）与 `.audit_backup/`（8）是点号目录
+  被 Hugo 跳过，另有 3 个 draft。以审计脚本为唯一口径。
+- 单 inventory 源：`reports/seo/CONTENT_SEO_INVENTORY.csv`；`content_inventory.csv` 已废弃
 - Revenue：NULL（REVENUE_NOT_AVAILABLE，无真实收入数据前不编造）
-- GA4（fetch 2026-08-17）：28d sitewide sessions 166 / pageviews 374 / affiliate_clicks 0
-- GSC：缓存基线为 2026-08-16 快照（impressions/clicks 标注实际抓取日期）
+- GA4（2026-09-17 单日）：11 sessions / 14 pageviews / bounce 100% / engagement 0% / avg 167s；
+  7 日滚动（09-11~17）：41 sessions / 55 pageviews / engagement 38.2% / avg 119s
+- GSC：28d 窗口有曝光（234 次）。昨日单日 0 多为 GSC 2-3 天数据延迟，**不作业务结论**
 
 ## 4. Experiments（当前注册表）
 
 | ID | 定义 | status |
 |---|---|---|
 | REV001 | Food Delivery（Meituan & Ele.me）· cbt-e464169c4991 · Airalo · food-delivery-mid-content | RUNNING（start 2026-08-16） |
-| REV002 | Transportation Guide · cbt-17c6738ffb32 · Trip.com mid-CTA | RUNNING（frozen，review gate >= 2026-09-13） |
+| REV002 | Transportation Guide · cbt-17c6738ffb32 · Trip.com mid-CTA | INSUFFICIENT_SAMPLE（gate 09-13 已过，样本仍不足） |
 | REV003 | CTA_COPY variant（Transportation） | PENDING（等待 REV002 评审） |
 | DRIVE-001 | Site-wide Travelpayouts Drive | RUNNING（start 2026-08-16，ACTIVE） |
 | GROWTH05-CTR-001 / GROWTH07B-TECH-001 / GROWTH07C-INDEX-001 | SEO 观察 | INSUFFICIENT_SAMPLE / WAITING_RECRAWL |
 
 - 观察窗口 >= 28 天；clicks < 20 = INSUFFICIENT_SAMPLE，禁止判定成败。
-- 2026-09-13 前不得修改 REV001/REV002 CTA 文案、位置或 partner。
+- 09-13 的 CTA 冻结期已过（现 09-18）；约束是**样本量而非日期**，日报 gate 已按实际观察天数动态生成。
 
 ## 5. Brand definition（品牌定义）
 
@@ -70,20 +72,12 @@
 - `reports/`（除当前任务指定的审计报告）
 - 密钥类文件（`.env*`、`*-secrets*`、service-account key）
 
-- **2026-09-17（最新）**：`P1-OPS-01` 已修复并闭环——`agent-kpi-monthly.yml` 现在会把
-  `ops-dashboard/agent_kpi_data.json` 与 `ops-dashboard/agent_growth_data.json` 同时发布到 `static/ops/`，
-  并校验 source/target 一致、JSON 可解析、`updated_at` 已真实更新。
-  手动触发记录见 GitHub Actions run `35231157737`（`success`）。
-- **2026-09-16**：运营看板回退事故已修复并上线——`/ops-dashboard/` 现落地手工维护的
-  「统一运营中心 v3.0」（966 行），根因与两个必须记住的坑见 `docs/OPS_DASHBOARD_HANDOVER.md`。
-  日报链路 4 项修复已提交（7 日滚动口径 / 去重闸门对齐 / 失败门 / 告警死别名）。
-- 历史任务：2.0 工作流符合度修复（2026-08-30）
-  - P0-1：`REPORTING_SNAPSHOT.json` 中文乱码已修复（源 CSV 已转 UTF-8 后重生成，issue_types 中文正常，as_of 2026-08-26 保留）
-  - P0-2：weekly-blog-update cron 由每日 `0 0 * * *` 改每周 `0 0 * * 1`（落实 P1-OPS-02A）
-  - P0-3：GSC 服务账号提 Owner，gsc-index-submit 20/20 success
-  - 待办 P1：周/月/季/年 Feishu 报告改读 SNAPSHOT；新增 SNAPSHOT 每日自动刷新；补 `reports/2.0_REPORTING_RECONCILIATION.md`；social_distributor 收敛到 Buffer Worker
-- 前序：P1-REPORT-02 统一报告（PASS，2026-08-17，SNAPSHOT 单一 KPI 源）；P1-OPS-03 2.0 就绪审计（PARTIAL_READY）
-- 下一任务：待用户指派（建议：按上述 P1 待办推进，或 GROWTH-22 线上验证）
+- 历史闭环（细节在各自交接文档，接手不必重读）：P1-OPS-01 考核数据发布（09-17，run 35231157737）；
+  运营看板回退事故（09-16，`docs/OPS_DASHBOARD_HANDOVER.md`）；2.0 工作流符合度（08-30：
+  P0-1 SNAPSHOT 乱码 / P0-2 weekly-blog-update 改每周 / P0-3 GSC 提 Owner）；
+  P1-REPORT-02 统一报告（08-17）；P1-OPS-03 就绪审计（PARTIAL_READY）。
+- 待办 P1：周/月/季/年 Feishu 报告改读 SNAPSHOT；SNAPSHOT 每日自动刷新；
+  补 `reports/2.0_REPORTING_RECONCILIATION.md`；social_distributor 收敛到 Buffer Worker。
 
 ## 8. Known architecture（架构速览）
 
@@ -164,22 +158,18 @@
   重写该文件（见下条），所以结果跟着本机文件时间戳漂移。
 - **2 个是社媒库存**（`test_social_content_agent`×2：100 items / 20 sources 数量断言）。
 - **4 个是测试自身的问题**（2026-09-17 已修 3 个，commit `a988c8ed`）：
-  - `test_no_hardcoded_secrets` — **误报**：`lh-desktop-0830.json` 里内嵌的 base64
-    图片字节偶然拼出 `AIza…`。已加 base64 blob 豁免 + 2 个负向对照测试防止豁免过头。
-  - `test_robots` — **误报**：旧断言把所有 `Disallow: /` 跨组收集。生产 robots.txt
-    按 GEO 策略在「AI 训练爬虫」组里拦截 GPTBot / ClaudeBot / Google-Extended /
-    CCBot（`layouts/robots.txt` 有说明），通用爬虫是 `Allow: /`（线上实测确认）。
-    已改为只判定 `User-agent: *` 兜底组，并新增 `test_ai_training_bots_remain_blocked`
+  - `test_no_hardcoded_secrets` — **误报**：`lh-desktop-0830.json` 内嵌 base64 图片字节
+    偶然拼出 `AIza…`。已加 blob 豁免 + 2 个负向对照测试防止豁免过头。
+  - `test_robots` — **误报**：旧断言跨组收集所有 `Disallow: /`。生产 robots.txt 按 GEO
+    策略在「AI 训练爬虫」组拦 GPTBot/ClaudeBot/Google-Extended/CCBot，通用爬虫 `Allow: /`
+    （线上实测）。已改为只判 `User-agent: *` 兜底组，并新增 `test_ai_training_bots_remain_blocked`
     保护 GEO 策略不被误删。
-  - `test_meta_description::test_generator_padding_no_longer_loops` — **陈旧哨兵**：
-    生成器 2026-09 已重构成「按预算挑一个短语追加一次即 break」（155 字符上限），
-    旧断言仍在 grep 已不存在的原始句。已改为断言真实不变量。
-  - `test_secret_name_contract` — **真违规，2026-09-17 已修**。
-    `gh secret list` 证实 GitHub Actions secrets 里只有官方名
-    `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ZONE_ID`，**从来没有过** `CF_API_TOKEN`。
-    所以旧代码在 CI 里 `check_config()["cloudflare"]` 恒为 `False`——
-    别名映射只在有本地 `.env` 的机器上才碰巧生效。已统一改为官方名，
-    并同步 `.env.revenue.template`（里面写明旧短别名要改名）。
+  - `test_meta_description::test_generator_padding_no_longer_loops` — **陈旧哨兵**：生成器已重构为
+    「按预算追加一次即 break」（155 字符上限），旧断言 grep 已不存在的原始句。已改断真实不变量。
+  - `test_secret_name_contract` — **真违规，已修**。`gh secret list` 证实 secrets 里只有官方名
+    `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ZONE_ID`，**从来没有过** `CF_API_TOKEN`，故旧代码在 CI 里
+    `check_config()["cloudflare"]` 恒 `False`（别名映射只在本机 `.env` 碰巧生效）。已统一改官方名，
+    并同步 `.env.revenue.template`（写明旧短别名要改名）。
 
 **⚠️ pytest 有写副作用（实测）**：跑全量 `pytest tests` 会改写 `reports/revenue/*`、
 `reports/seo/*`（重新生成，日期戳变当天）与 `static/lead-magnet/*.pdf`，共 12 个
@@ -191,10 +181,18 @@ Protected Area 文件。提交前必须 `git status` 核对，**只 add 本任�
 `ImportError` 被 try/except 静默吞掉 → `REVENUE_COLLECTOR_AVAILABLE=False`
 → `load_real_revenue_data()` 恒返回 `{}` → **KPI 月度考核从未接入真实营收，一直用默认基础分**。
 修需设计（接哪个 `collect_*`、字段映射），属单独任务。
-`STRIPE_SECRET_KEY` 在 GitHub secrets 里也不存在，stripe 恒 `false`（本地与 CI 一致）。
+`STRIPE_SECRET_KEY` 在 GitHub secrets 里也不存在（key 在 Cloudflare Pages env），
+stripe 恒 `false`（本地与 CI 一致）。
 
 **环境性（网络相关，非代码问题）**：`tests/test_report_03.py::test_zero_revenue_never_converted_to_zero_dollar`
 — Travelpayouts `ProxyError`，本机有代理时失败、无代理时通过。
 
 **纪律**：修任何一项前先看 `docs/OPS_DASHBOARD_HANDOVER.md` 与保护区清单；
 不要用 stash / reset / `--autostash` 清掉上述 pytest 产生的改动来"骗过"验证。
+
+## 14. 支付与营收（勿再误判）
+
+- `/api/checkout` **前端零调用方**（`git grep` 验证）→ `400 No such coupon`。**别排查"支付挂了"**。
+- 定价页走 **Stripe Payment Links**（`hugo.toml:176-178` + `pricing-table.html:681-683`/`:712`），三条均 HTTP 200。
+- 唯一问题：`prefilled_promo_code=FIRSTMONTH1` 无效（码未创建），文案「$1」与实价 $9.99 不符；结账可完成。
+  `checkout.js` 已加折扣码 fail-open。详见 `docs/stripe-configuration-guide.md` §1.4。
