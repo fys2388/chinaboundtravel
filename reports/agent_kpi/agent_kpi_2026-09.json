@@ -1,16 +1,16 @@
 {
   "kpi_version": "1.0",
-  "audit_time": "2026-09-18T19:46:46.817907",
+  "audit_time": "2026-09-18T22:36:15.870938",
   "month": "2026-09",
   "north_star": "revenue_growth",
   "summary": {
     "agent_count": 7,
-    "avg_score": 63.9,
+    "avg_score": 66.1,
     "grade_distribution": {
       "S": 0,
       "A": 0,
-      "B": 1,
-      "C": 3,
+      "B": 3,
+      "C": 1,
       "D": 3
     }
   },
@@ -163,7 +163,7 @@
           "source": "content_coverage_audit",
           "score": 95.0,
           "status": "measured",
-          "actual": 1908.1
+          "actual": 1910.1
         },
         {
           "id": "top10_keywords",
@@ -308,16 +308,16 @@
       "name_cn": "社媒 Agent",
       "emoji": "📱",
       "revenue_chain": "社媒内容→品牌曝光↑/推荐流量↑ → 直接访问↑ → 联盟点击/eBook购买↑",
-      "score": 68.0,
-      "grade": "C",
-      "grade_label": "待改进",
-      "bonus": "-10%绩效",
-      "color": "#e67e22",
-      "action": "黄牌警告，制定改进计划，1月内复查",
-      "measured_kpis": 3,
+      "score": 72.7,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
+      "action": "维持，关注薄弱项",
+      "measured_kpis": 4,
       "total_kpis": 7,
-      "data_coverage_weight": 0.3,
-      "score_ceiling": 79.0,
+      "data_coverage_weight": 0.4,
+      "score_ceiling": 82.0,
       "kpi_results": [
         {
           "id": "social_referral_traffic",
@@ -385,9 +385,9 @@
           "target": "100%",
           "type": "quality",
           "source": "social_image_validator",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 97.2,
+          "status": "measured",
+          "actual": 97.2
         },
         {
           "id": "brand_consistency",
@@ -408,16 +408,16 @@
       "name_cn": "用户增长 Agent",
       "emoji": "👥",
       "revenue_chain": "邮件列表↑/转化率↑ → eBook销售↑/复购↑/联盟推荐↑ → 营收↑",
-      "score": 67.0,
-      "grade": "C",
-      "grade_label": "待改进",
-      "bonus": "-10%绩效",
-      "color": "#e67e22",
-      "action": "黄牌警告，制定改进计划，1月内复查",
-      "measured_kpis": 2,
+      "score": 72.0,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
+      "action": "维持，关注薄弱项",
+      "measured_kpis": 3,
       "total_kpis": 7,
-      "data_coverage_weight": 0.2,
-      "score_ceiling": 76.0,
+      "data_coverage_weight": 0.3,
+      "score_ceiling": 79.0,
       "kpi_results": [
         {
           "id": "email_driven_revenue",
@@ -495,9 +495,9 @@
           "target": "100%",
           "type": "quality",
           "source": "cookie-consent审计",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 100.0,
+          "status": "measured",
+          "actual": 100.0
         }
       ]
     },
@@ -507,16 +507,16 @@
       "name_cn": "运维 Agent",
       "emoji": "⚙️",
       "revenue_chain": "网站可用性↑/性能↑ → 用户体验↑/留存↑ → 长期营收↑/SEO排名↑(Core Web Vitals)",
-      "score": 74.0,
+      "score": 79.0,
       "grade": "B",
       "grade_label": "合格",
       "bonus": "0%",
       "color": "#f39c12",
       "action": "维持，关注薄弱项",
-      "measured_kpis": 2,
+      "measured_kpis": 3,
       "total_kpis": 7,
-      "data_coverage_weight": 0.2,
-      "score_ceiling": 76.0,
+      "data_coverage_weight": 0.3,
+      "score_ceiling": 79.0,
       "kpi_results": [
         {
           "id": "uptime",
@@ -594,9 +594,9 @@
           "target": "100%",
           "type": "quality",
           "source": "content-quality-audit+api_health",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 100.0,
+          "status": "measured",
+          "actual": 100.0
         }
       ]
     },
@@ -606,7 +606,7 @@
       "name_cn": "数据 Agent",
       "emoji": "📊",
       "revenue_chain": "数据准确性↑/洞察及时性↑ → 决策质量↑ → 各Agent优化效率↑ → 间接营收↑",
-      "score": 66.4,
+      "score": 67.0,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",
@@ -693,9 +693,9 @@
           "target": "100%",
           "type": "quality",
           "source": "agent_kpi_auditor",
-          "score": 23.8,
+          "score": 30.0,
           "status": "measured",
-          "actual": 43.8
+          "actual": 50.0
         }
       ]
     }

@@ -6,6 +6,7 @@ import requests
 import hashlib
 import sys
 import base64
+import traceback
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -19,8 +20,33 @@ sys.stderr.reconfigure(encoding='utf-8')
 MANIFEST_PATH = BASE_DIR / "manifest.json"
 DRAFT_DIR = BASE_DIR / "content" / "_draft"
 POSTS_DIR = BASE_DIR / "content" / "posts"
-DRAFTS_DIR = BASE_DIR / "content" / "content" / "drafts"
+# 2026-09-18 修：原为 content/content/drafts（content 写重了一次），
+# 导致 3 轮审核失败后稿件落在 content/content/drafts/，人看 content/drafts/
+# 是空的，误以为 generator 从未走到草稿分支。2026-09-04 的 6 份草稿就在那里。
+DRAFTS_DIR = BASE_DIR / "content" / "drafts"
+GENERATION_LOG = BASE_DIR / "reports" / "content_generation" / "generation_events.jsonl"
 SITE_DOMAIN = "chinaboundtravel.com"
+
+
+def log_generation_event(outcome, **fields):
+    """追加一行生成事件到 reports/content_generation/generation_events.jsonl。
+
+    修：run() 里 except Exception: break 只发一次飞书通知，不写磁盘、不写报告，
+    失败完全无痕迹——停更 10 天后只能靠「content/drafts 不存在」和「没有
+    chore: auto publish Joran blog 提交」两个旁证反推，定位不到确切失败步骤。
+    现在每次运行无论成功/闸门/异常都落一行，CI 和人都能读。
+
+    outcome 取值：success / limit_daily / limit_monthly / unexpected_error /
+    all_attempts_failed
+    """
+    record = {"ts": datetime.now(timezone.utc).isoformat(), "outcome": outcome}
+    record.update(fields)
+    try:
+        GENERATION_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with open(GENERATION_LOG, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception as e:  # 日志失败不能影响主流程
+        print(f"[WARN] 写生成事件日志失败: {e}")
 
 # ========== 封面图生成相关常量
 COVER_BASE = BASE_DIR / "static" / "img" / "china-dest"
@@ -1119,8 +1145,20 @@ Output ONLY the rewritten article with proper Markdown formatting."""
         # 【深度重写】max_tokens=5000，确保足够深度（扩写到2000+词）
         return self.client.chat(messages, max_tokens=5000)
     
+    # LLM 元响应标记：模型在不该回答「请给我文章」的时候这样说。
+    # 这些字符串一旦出现就绝不能当文章正文存盘。
+    LLM_META_MARKERS = [
+        "i need the article text",
+        "please provide the article",
+        "i need you to provide",
+        "article text to proceed",
+        "i cannot complete this task",
+        "could you provide the article",
+        "i don't see an article",
+    ]
+
     def add_image_placeholders(self, article_md):
-        """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字，Token仅为全文5%"""
+        """【降本核心】局部补图 - 仅添加图片占位符，不修改任何文字"""
         prompt = f"""TASK: Add or fix EXACTLY 2 image placeholders in this article. DO NOT MODIFY ANY EXISTING TEXT.
 
 RULES:
@@ -1137,10 +1175,51 @@ Article:
 {article_md}
 
 Output ONLY the modified article with correct [Image:xxx] placeholders."""
-        
+
         messages = [{"role": "user", "content": prompt}]
-        # 【降本】max_tokens=500，补图只需要少量token
-        return self.client.chat(messages, max_tokens=500)
+        # 修：原为硬编码 max_tokens=500，但 prompt 要求「Output ONLY the modified
+        # article」即完整回显全文——典型文章 8KB ≈ 2000 token，500 根本输出不下。
+        # 模型给不出来就回一句元响应 "I need the article text to proceed"，
+        # 原实现直接当正文返回，于是草稿正文是 971B 的一句废话，
+        # 主编终审按「词数 < 700」驳回，3 轮全失败。
+        # 现在按文章长度估算所需 token，下限 1000。
+        est_tokens = int(len(article_md) / 3) + 512
+        max_tokens = max(1000, est_tokens)
+        output = self.client.chat(messages, max_tokens=max_tokens)
+        return self._guard_image_placeholder_response(article_md, output)
+
+    def _guard_image_placeholder_response(self, original, output):
+        """校验补图步骤的 LLM 输出，异常时保留原文。
+
+        失败模式（2026-09-04 实测）：max_tokens 不足 → 模型不输出全文，
+        改为回一句元响应。原实现无校验，元响应被当正文落盘。
+        三种判失败情形：
+          1. 命中 LLM_META_MARKERS（模型在索要输入而非执行任务）
+          2. 输出显著短于原文（被截断）
+          3. 输出和原文都没有 [Image:] 占位符（补图未发生）
+        任一条命中都返回原文，而不是把半成品交出去。
+        """
+        if not output or not output.strip():
+            print("[WARN] add_image_placeholders: 空输出，已保留原文")
+            return original
+
+        lowered = output.strip().lower()
+        for marker in self.LLM_META_MARKERS:
+            if marker in lowered:
+                print(f"[WARN] add_image_placeholders: LLM 返回元响应({marker!r})，已保留原文")
+                return original
+
+        if len(output) < len(original) * 0.8:
+            print(f"[WARN] add_image_placeholders: 输出过短"
+                  f"({len(output)} vs 原文 {len(original)})，疑似截断，已保留原文")
+            return original
+
+        if (re.search(r'\[\s*Image\s*:', output, re.IGNORECASE) is None
+                and re.search(r'\[\s*Image\s*:', original, re.IGNORECASE) is None):
+            print("[WARN] add_image_placeholders: 输出无 [Image:] 占位符，已保留原文")
+            return original
+
+        return output
 
 class SubEditor:
     def __init__(self):
@@ -1956,37 +2035,64 @@ class BlogGenerator:
         return {"success": True, "title": title, "canonical_url": canonical_url, "geo_region": geo_region, "cover_url": cover_url}
     
     def run(self):
+        """一轮自动生成。
+
+        修：每个退出路径都写 reports/content_generation/generation_events.jsonl。
+        原来 except Exception: break 只发一次飞书通知就退出，不写磁盘、不写报告，
+        失败完全无痕迹——停更 10 天后只能靠旁证反推。
+        """
         # 【社媒每日限额】放宽到5篇/天（原2篇太严格，频繁阻断生成）
         is_limited, current_count, daily_limit = self.manifest.check_daily_social_limit()
         if is_limited:
             self.notifier.send_notification("⏸️ 社媒发布已达日限", f"今日社媒已发布 {current_count} 篇文章，达到每日上限 {daily_limit} 篇。为保证社媒曝光效果，今日不再生成新文章，明日自动恢复。")
             print(f"Social media limit reached: {current_count}/{daily_limit}. Exiting.")
+            log_generation_event("limit_daily", daily_count=current_count,
+                                 daily_limit=daily_limit)
             return
-        
+
         max_posts = 30  # 从22提高到30，避免频繁撞上限
         post_count = self.manifest.get_post_count()
-        
+
         if post_count >= max_posts:
             self.notifier.send_notification("⚠️ 月度发文额度已满", f"本月已发布 {post_count} 篇文章，达到上限 {max_posts} 篇。自动生成已暂停，次月1日自动恢复。")
             print("Monthly post limit reached. Exiting.")
+            log_generation_event("limit_monthly", post_count=post_count, max_posts=max_posts)
             return
-        
+
         last_topic = None
-        
+
         for attempt in range(1, self.max_retries + 1):
             try:
                 result = self.run_single_post(attempt)
             except Exception as e:
                 self.notifier.send_notification("❌ 第{}次尝试发生未预期错误".format(attempt), f"错误: {str(e)[:200]}\n\n直接跳过本轮，不重试。")
                 print(f"[Attempt {attempt}] Unexpected error: {e}")
+                # 修：原来这里 break 后不留任何痕迹。现在把异常类型、
+                # 消息、堆栈前三帧、第几次尝试都落盘，CI 日志丢了也能查。
+                tb = traceback.format_exc()
+                frames = [l.strip() for l in tb.splitlines() if l.startswith('File "')]
+                log_generation_event(
+                    "unexpected_error",
+                    attempt=attempt,
+                    max_retries=self.max_retries,
+                    error_type=type(e).__name__,
+                    error_message=str(e)[:500],
+                    frames=frames[:3],
+                )
                 break
-            
+
             if result["success"]:
+                log_generation_event(
+                    "success",
+                    attempt=attempt,
+                    title=result.get("title"),
+                    canonical_url=result.get("canonical_url"),
+                )
                 return
-            
+
             if not result.get("same_topic", False):
                 last_topic = None
-            
+
             if attempt < self.max_retries:
                 print(f"[Attempt {attempt}] 审核失败，准备第 {attempt + 1} 次重试...")
             else:
@@ -1996,9 +2102,28 @@ class BlogGenerator:
                     import shutil
                     final_draft = DRAFTS_DIR / draft_path.name
                     shutil.move(str(draft_path), str(final_draft))
-                
-                self.notifier.send_notification("❌ 当日3轮撰稿全部审核失败", f"经过 {self.max_retries} 次尝试后仍未能发布文章。稿件已存入 content/drafts/ 目录，当日停止生成。")
-                print(f"All {self.max_retries} attempts failed. Post saved to drafts.")
+                    draft_path = final_draft
+
+                # 修：3 轮全失败也要落盘，记录失败原因和最终草稿位置。
+                # reason 取值见 run_single_post：topic_precheck_failed /
+                # chief_editor_failed / content_quality_failed /
+                # high_risk_human_gate
+                log_generation_event(
+                    "all_attempts_failed",
+                    attempts=self.max_retries,
+                    title=result.get("title"),
+                    reason=result.get("reason"),
+                    draft_path=str(draft_path.relative_to(BASE_DIR)) if draft_path else None,
+                )
+
+                self.notifier.send_notification(
+                    "❌ 当日3轮撰稿全部审核失败",
+                    f"经过 {self.max_retries} 次尝试后仍未能发布文章。"
+                    f"失败原因：{result.get('reason')}。"
+                    f"稿件已存入 content/drafts/ 目录，当日停止生成。"
+                )
+                print(f"All {self.max_retries} attempts failed. "
+                      f"Post saved to drafts. Reason: {result.get('reason')}")
 
 if __name__ == "__main__":
     generator = BlogGenerator()

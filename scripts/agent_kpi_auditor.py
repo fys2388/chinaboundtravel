@@ -29,6 +29,7 @@ KPI 权重原则：
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 import json
 import sys
@@ -1192,6 +1193,217 @@ def _mojibake_free(report_path: Optional[Path] = None) -> Dict[str, Any]:
     return out
 
 
+def _content_originality(root: Optional[Path] = None) -> Dict[str, Any]:
+    """算内容原创率：图片重复 + 正文重复，都是本地字节级可判定的。
+
+    KPI 定义里的 source 是 "social_image_validator"，该脚本不存在——
+    这 27 个 no_data KPI 里典型的「声明了源、从没接上」。
+
+    口径（为什么这么定义）：
+    - 图片重复：同一字节内容出现两次，第二次就是零边际价值的重复资产，
+      要么占 CDN 空间，要么是「换了张名字」的洗稿图。按 SHA-256 判等。
+    - 正文重复：去掉 front-matter 后正文 SHA-256 相同，说明两篇是同一篇
+      换了标题/日期。这正是 2026-09-04 那批草稿暴露的问题类别。
+    - 原创率 = 不重复的资产数 / 总资产数 × 100。
+
+    不做的事：不做「相似度」判重（近似重复需要 embedding，本仓库没有本地
+    模型）。字节级完全重复是硬信号，近似重复留给人工。宁可少报，不误报。
+    """
+    out: Dict[str, Any] = {
+        "rate": None,
+        "image_total": 0, "image_dups": 0,
+        "post_total": 0, "post_dups": 0,
+        "age_days": -1, "file": "", "note": "",
+    }
+    if root is None:
+        root = PROJECT_ROOT
+
+    def _dup_count(paths: list) -> tuple:
+        """返回 (文件总数, 重复文件数)。重复 = 内容哈希出现次数 > 1 的多余份。
+
+        注意：总数是**文件数**不是唯一内容数——3 个文件里 2 个相同，
+        应该报「3 个文件、1 个重复」，不是「2 个文件」。
+        """
+        hashes: Dict[str, int] = {}
+        total = 0
+        for p in paths:
+            try:
+                h = hashlib.sha256(p.read_bytes()).hexdigest()
+            except (OSError, IsADirectoryError):
+                continue
+            total += 1
+            hashes[h] = hashes.get(h, 0) + 1
+        dup = sum(v - 1 for v in hashes.values() if v > 1)
+        return total, dup
+
+    img_dir = root / "static" / "img"
+    if img_dir.is_dir():
+        imgs = [p for p in img_dir.rglob("*")
+                if p.is_file() and p.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg")]
+        out["image_total"], out["image_dups"] = _dup_count(imgs)
+
+    posts_dir = root / "content" / "posts"
+    if posts_dir.is_dir():
+        posts = sorted(posts_dir.glob("*.md"))
+        post_hashes: Dict[str, int] = {}
+        processed = 0
+        for p in posts:
+            try:
+                body = p.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                continue
+            # 去掉 front-matter：两篇文章只有 front-matter 不同就是同一篇
+            m = re.match(r"^---\n.*?\n---\n", body, re.DOTALL)
+            if m:
+                body = body[m.end():]
+            body = re.sub(r"\s+", " ", body).strip()
+            if len(body) < 200:
+                continue  # 太短的不判重（模板/占位页）
+            processed += 1
+            h = hashlib.sha256(body.encode("utf-8")).hexdigest()
+            post_hashes[h] = post_hashes.get(h, 0) + 1
+        out["post_total"] = processed
+        out["post_dups"] = sum(v - 1 for v in post_hashes.values() if v > 1)
+
+    total = out["image_total"] + out["post_total"]
+    if total == 0:
+        out["note"] = "static/img 和 content/posts 都为空，无法判定"
+        return out
+
+    # 实时测量（不是读历史报告），所以年龄是 0
+    out["age_days"] = 0
+    dups = out["image_dups"] + out["post_dups"]
+    out["rate"] = round((total - dups) / total * 100, 1)
+    return out
+
+
+def _gdpr_compliance(root: Optional[Path] = None) -> Dict[str, Any]:
+    """算 GDPR 合规率：逐项审计同意机制与退订路径。
+
+    KPI 定义里的 source 是 "cookie-consent审计"，仓库里没有这个脚本。
+    这里做的是逐项静态审计——每一项都是一个具体的、可读文件判定的事实，
+    不是主观打分。任何一项缺失都拉低分数，这是 GDPR「默示同意不算同意」
+    的直接体现。
+    """
+    out: Dict[str, Any] = {
+        "rate": None, "passed": 0, "total": 0,
+        "checks": [], "age_days": -1, "file": "", "note": "",
+    }
+    if root is None:
+        root = PROJECT_ROOT
+
+    def read(rel: str) -> str:
+        p = root / rel
+        return p.read_text(encoding="utf-8", errors="replace") if p.exists() else ""
+
+    checks = [
+        # (名称, 文件, 必须出现的模式, 说明)
+        ("隐私政策页存在", "content/privacy-policy.md", None,
+         "缺隐私政策页 = 无告知机制"),
+        ("隐私政策含数据主体权利说明", "content/privacy-policy.md",
+         r"(access|delete|rectif|object|withdraw)",
+         "GDPR Art.15-22 数据主体权利"),
+        ("隐私政策含退订机制", "content/privacy-policy.md",
+         r"(unsubscrib|退订|opt-?out)",
+         "GDPR Art.21 反对权：必须有一键退订路径"),
+        ("订阅端点支持退订", "functions/api/subscribe.js",
+         r"(unsubscrib|remove|delete)",
+         "没有退订端点，用户被永久绑定"),
+        ("隐私政策含国际传输说明", "content/privacy-policy.md",
+         r"(cross-?border|transfer|SCC|EU-U\.?S|jurisdiction)",
+         "中国运营者处理美国用户数据需说明传输机制"),
+        ("服务条款页存在", "content/terms-of-service.md", None,
+         "缺服务条款"),
+        ("退款政策页存在", "content/refund-policy.md", None,
+         "数字产品必须有退款政策"),
+        ("定价页有显式勾选同意", "layouts/partials/pricing-table.html",
+         r"(consent|authorize|agree)",
+         "Stripe 3DS / SCA 要求扣款前有显式授权"),
+    ]
+
+    for name, rel, pattern, note in checks:
+        if pattern is None:
+            ok = bool(read(rel))
+        else:
+            ok = bool(re.search(pattern, read(rel), re.IGNORECASE | re.DOTALL))
+        out["checks"].append({"name": name, "file": rel, "passed": ok, "note": note})
+        if ok:
+            out["passed"] += 1
+
+    out["total"] = len(checks)
+    if out["total"]:
+        # 实时静态审计，不是读历史报告
+        out["age_days"] = 0
+        out["rate"] = round(out["passed"] / out["total"] * 100, 1)
+    else:
+        out["note"] = "无检查项"
+    return out
+
+
+def _ci_block_rate(root: Optional[Path] = None) -> Dict[str, Any]:
+    """算 CI 阻断有效率：声明的硬门控里，引用的脚本真实存在的比例。
+
+    这个 KPI 要测的是「P0 问题会不会绕过 CI 流进生产」。一个门控如果引用
+    的脚本文件不存在，它必然 `exit 0` 通过（`python` 找不到文件会报
+    traceback 但不是硬失败，或者脚本压根没跑），门控就是假的。
+
+    这正是 2026-09-18 定位停更时发现的那类缺陷的反面：
+    generator 的 except Exception: break 让失败静默，CI 侧的门控同样
+    可能因为「引用了不存在的脚本」而形同虚设。两边一起查才是完整的。
+
+    口径：
+    - 门控 = workflow 里同时满足两个条件的 step：
+        (a) 有硬失败标记（`exit 1` / `|| exit 1` / `--strict`）
+        (b) 调用了本仓库的 `scripts/*.py` 或 `*.py`
+    - 有效 = 该 step 引用的所有 .py 路径在磁盘上存在
+    """
+    out: Dict[str, Any] = {
+        "rate": None, "gates": 0, "wired": 0,
+        "broken": [], "age_days": -1, "file": "", "note": "",
+    }
+    if root is None:
+        root = PROJECT_ROOT
+    wf_dir = root / ".github" / "workflows"
+    if not wf_dir.is_dir():
+        out["note"] = "无 .github/workflows"
+        return out
+
+    try:
+        newest = max(wf_dir.glob("*.yml"), key=lambda p: p.stat().st_mtime)
+        out["age_days"] = (datetime.now() - datetime.fromtimestamp(newest.stat().st_mtime)).days
+        out["file"] = newest.name
+    except OSError:
+        pass
+
+    HARD_FAIL = re.compile(r"(exit\s+1|\|\|\s*exit\s+1|--strict)", re.IGNORECASE)
+    # 保留 scripts/ 前缀，否则会把 scripts/foo.py 误判成仓库根目录下不存在
+    PY_REF = re.compile(r"((?:scripts/)?[A-Za-z0-9_\-/]+\.py)")
+
+    for wf in sorted(wf_dir.glob("*.yml")):
+        try:
+            text = wf.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        for block in re.split(r"\n\s*-\s*name:", text):
+            if not HARD_FAIL.search(block):
+                continue
+            refs = PY_REF.findall(block)
+            if not refs:
+                continue
+            out["gates"] += 1
+            missing = [r for r in refs if not (root / r).exists()]
+            if missing:
+                out["broken"].append({"workflow": wf.name, "missing": missing})
+            else:
+                out["wired"] += 1
+
+    if out["gates"]:
+        out["rate"] = round(out["wired"] / out["gates"] * 100, 1)
+    else:
+        out["note"] = "未发现任何硬失败门控——这意味着 CI 里没有一个真正的阻断点"
+    return out
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -1290,6 +1502,48 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
                   f"还没有品牌表述（脚本记为 WARN，不算违规）")
     else:
         print(f"  🏷️ 品牌一致性: 未测量（{bc['file'] or '无报告'}，{bc['note']}）")
+
+    # 3d. 内容原创率 ← 本地字节级重复检测（图片 + 正文）。
+    # KPI 定义的 source 是 "social_image_validator"，该脚本在仓库里不存在。
+    # 这里是首次接线：按 SHA-256 判完全重复，字节级硬信号，不做相似度。
+    co = _content_originality()
+    if co["rate"] is not None:
+        # 注意：这个 KPI 挂在社媒 Agent 下（不是内容 Agent），
+        # KPI 定义在 AGENTS["social"]["kpis"] 里。
+        metrics["social"]["content_originality"] = co["rate"]
+        print(f"  🎨 内容原创率: {co['rate']}%"
+              f"（图片 {co['image_dups']}/{co['image_total']} 重复"
+              f" + 正文 {co['post_dups']}/{co['post_total']} 重复"
+              f"，{co['age_days']} 天前）")
+    else:
+        print(f"  🎨 内容原创率: 未测量（{co['note']}）")
+
+    # 3e. GDPR 合规率 ← 逐项静态审计同意/退订机制。
+    # KPI 定义的 source 是 "cookie-consent审计"，同样不存在。
+    gc = _gdpr_compliance()
+    if gc["rate"] is not None:
+        metrics["user"]["gdpr_compliance"] = gc["rate"]
+        failed = [c["name"] for c in gc["checks"] if not c["passed"]]
+        print(f"  ⚖️  GDPR 合规率: {gc['rate']}%"
+              f"（{gc['passed']}/{gc['total']} 项通过"
+              f"，{gc['age_days']} 天前）")
+        if failed:
+            print(f"     ⚠️  未通过: {'; '.join(failed)}")
+    else:
+        print(f"  ⚖️  GDPR 合规率: 未测量（{gc['note']}）")
+
+    # 3f. CI 阻断有效率 ← 声明的硬门控里引用的脚本真实存在的比例。
+    # 门控引用了不存在的脚本 = 门控形同虚设，P0 问题能直接流进生产。
+    cb = _ci_block_rate()
+    if cb["rate"] is not None:
+        metrics["ops"]["ci_block_rate"] = cb["rate"]
+        print(f"  🚦 CI 阻断有效率: {cb['rate']}%"
+              f"（{cb['wired']}/{cb['gates']} 个硬门控引用的脚本真实存在"
+              f"，{cb['file'] or 'workflows'}，{cb['age_days']} 天前）")
+        for b in cb["broken"]:
+            print(f"     ⚠️  {b['workflow']}: 引用不存在的脚本 {b['missing']}")
+    else:
+        print(f"  🚦 CI 阻断有效率: 未测量（{cb['note']}）")
 
     # 4. 从最新日报读取真实实测值。
     #    历史问题（2026-09-18 修复）：本函数原先只填 5 个指标，其中
@@ -1537,6 +1791,24 @@ def run_audit(month: str = None) -> Dict:
     with open(dashboard_path, "w", encoding="utf-8") as f:
         json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
     print(f"  监控台数据已更新: {dashboard_path}")
+
+    # 同步到 static/ops/ 与 static/ops-dashboard/。
+    # 契约缺口（2026-09-18 修）：原本这个同步只在 agent-kpi-monthly.yml 里做，
+    # 而 tests/test_agent_kpi_ops_publish.py 断言 ops-dashboard/ 与
+    # static/ops/ 的 agent_kpi_data.json **字节完全一致**。结果本地每跑一次
+    # 审计，不变量立刻被打破——只有 CI 工作流能把它修好。也就是说这个测试
+    # 在本地永远会在跑完审计后失败，让人误以为代码坏了。
+    # 同步搬进审计器本身，让「写完即满足契约」在本地也成立。
+    import shutil
+    payload = dashboard_path.read_bytes()
+    for rel in ("static/ops/agent_kpi_data.json",
+                "static/ops-dashboard/agent_kpi_data.json"):
+        dst = PROJECT_ROOT / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            dst.write_bytes(payload)
+        except OSError as e:
+            print(f"  ⚠️  同步 {rel} 失败: {e}")
 
     return report
 

@@ -205,6 +205,11 @@ ignoreFiles = ["/\\.archived/"]
   pdfPath = "/ebook/china-bound-travel-guide.pdf"
   # Three pricing tiers
   stripeOnetime = "https://buy.stripe.com/14A7sF1vWcEH3mxc1m1gs03"
-  stripeMonthly = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05?prefilled_promo_code=FIRSTMONTH1"
+  # 2026-09-18：原先带 ?prefilled_promo_code=FIRSTMONTH1。该优惠码从未在
+  # Stripe 后台创建，Payment Link 会静默跳过折扣、按原价 $9.99 扣款。
+  # 已去掉 promo 码；优惠码建好后加回来即可。
+  # 注意：当前全站没有代码引用这三个变量（pricing 页直接内联 Stripe URL），
+  # 保留是为了单一来源；改价格时改这里和 layouts/partials/pricing-table.html。
+  stripeMonthly = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05"
   stripeAnnual = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
  
