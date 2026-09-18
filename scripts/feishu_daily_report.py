@@ -368,6 +368,14 @@ class FeishuDailyReporter:
         if top_pages:
             top_pages_lines = [f"{i}. {p['path']} ({p['views']} 次)" for i, p in enumerate(top_pages[:5], 1)]
         top_pages_str = "\n".join(top_pages_lines)
+        # /ops 是内部运营看板路径（统一运营中心），进入公开流量榜会污染访客/会话口径。
+        # 只标注不剔除：剔除会让页面浏览与总浏览口径不一致，过滤应在 GA4 侧配置。
+        _ops_pages = [p for p in top_pages if str(p.get("path", "")).startswith("/ops")]
+        if _ops_pages:
+            _ops_pv = sum(p.get("views", 0) for p in _ops_pages)
+            top_pages_str += (f"\n（⚠️ 内部看板路径 /ops 共 {_ops_pv} 次浏览进入公开流量榜，"
+                              f"已混入访客/会话统计。建议在 GA4 配置内部流量过滤，"
+                              f"否则访客数与同比会被看板访问扭曲）")
         
         # Top 流量来源渠道
         top_channels = data.get("top_channels", [])
