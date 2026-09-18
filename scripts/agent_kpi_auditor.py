@@ -961,6 +961,80 @@ def _publish_consistency(social_dir: Optional[Path] = None) -> Dict[str, Any]:
     return result
 
 
+def _brand_consistency(report_path: Optional[Path] = None) -> Dict[str, Any]:
+    """从 brand_identity_audit 的 markdown 报告解析品牌一致性。
+
+    数据源：reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md，由
+    brand_identity_audit.py 生成（deploy-cloudflare-pages.yml 每次部署
+    都会跑一次，content-quality-audit.yml / weekly-blog-update.yml 也跑）。
+    注意 --legacy 模式写的是另一份文件 P1_BRAND_02_LEGACY_PERSONA_REVIEW.md，
+    那个查的是旧人设短语，不是品牌一致性，不能混用。
+
+    口径（严格按脚本自己的定义）：
+      FAIL   = 命中 forbidden_phrases 或 FICTIONAL_PATTERNS → 真违规
+      WARN   = 品牌语言尚未出现，脚本注释明确写「no violations」
+      PASS   = 品牌语言已出现
+      MISSING = 文件不存在
+    一致性 = PASS / (PASS + FAIL)。WARN 不进分母——它既不是违规也不是
+    一致，脚本自己说它「不构成违约」。
+
+    刻意同时报出 PASS 覆盖率：一致性 100% 只表示「没有互相矛盾的品牌
+    表述」，不代表每个页面都写了品牌语言。2026-09-18 实测线上版本是
+    16/107 PASS、0 FAIL——0 处违规但只有 15% 的页面带品牌语言。
+    只打 100% 会掩盖覆盖缺口，所以打印里两个数都给。
+    """
+    out: Dict[str, Any] = {
+        "consistency": None, "pass": 0, "total": 0, "fail": 0,
+        "warn": 0, "coverage": None, "generated": "", "age_days": -1,
+        "file": "", "note": "",
+    }
+
+    if report_path is None:
+        report_path = PROJECT_ROOT / "reports" / "P1_BRAND_02_BRAND_IDENTITY_AUDIT.md"
+    if not report_path.exists():
+        out["note"] = "无 brand_identity_audit 报告"
+        return out
+
+    out["file"] = report_path.name
+    try:
+        text = report_path.read_text(encoding="utf-8")
+    except Exception as e:
+        out["note"] = f"读取失败: {e}"
+        return out
+
+    m = re.search(
+        r"Summary:\s*(\d+)\s*/\s*(\d+)\s*PASS;\s*(\d+)\s*FAIL;\s*(\d+)\s*MISSING",
+        text,
+    )
+    if not m:
+        out["note"] = "报告里没有可解析的 Summary 行（脚本输出格式可能已变）"
+        return out
+
+    out["pass"] = int(m.group(1))
+    out["total"] = int(m.group(2))
+    out["fail"] = int(m.group(3))
+    out["warn"] = out["total"] - out["pass"] - out["fail"]
+
+    assessed = out["pass"] + out["fail"]
+    if assessed <= 0:
+        out["note"] = "没有任何 PASS/FAIL 记录，无法判定"
+        return out
+    out["consistency"] = round(out["pass"] / assessed * 100, 1)
+    out["coverage"] = round(out["pass"] / out["total"] * 100, 1) if out["total"] else None
+
+    g = re.search(r"Generated:\s*(\d{4}-\d{2}-\d{2})", text)
+    if g:
+        out["generated"] = g.group(1)
+        try:
+            out["age_days"] = (
+                datetime.now().date() - datetime.strptime(g.group(1), "%Y-%m-%d").date()
+            ).days
+        except ValueError:
+            pass
+
+    return out
+
+
 def collect_metrics() -> Dict[str, Dict[str, Any]]:
     """
     收集各 Agent 的实际指标数据。
@@ -1041,6 +1115,20 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
               f"{pc['days']} 天 / {pc['posts_total']} 条，{pc['age_days']} 天前）")
     elif pc["note"]:
         print(f"  📆 发布一致性: 无数据（{pc['note']}）")
+
+    # 3c. 品牌一致性 ← brand_identity_audit 的 markdown 报告。
+    bc = _brand_consistency()
+    if bc["consistency"] is not None:
+        metrics["social"]["brand_consistency"] = bc["consistency"]
+        print(f"  🏷️ 品牌一致性: {bc['consistency']}%"
+              f"（{bc['fail']} 处违规 / {bc['pass']}+{bc['fail']} 个可判定面）"
+              f"，品牌语言覆盖率 {bc['coverage']}%（{bc['pass']}/{bc['total']}）"
+              f"，{bc['file']}，{bc['age_days']} 天前")
+        if bc["consistency"] >= 95.0 and bc["coverage"] < 50.0:
+            print(f"     ⚠️  零违规但覆盖不足：{bc['total'] - bc['pass']} 个页面"
+                  f"还没有品牌表述（脚本记为 WARN，不算违规）")
+    else:
+        print(f"  🏷️ 品牌一致性: 未测量（{bc['file'] or '无报告'}，{bc['note']}）")
 
     # 4. 从最新日报读取真实实测值。
     #    历史问题（2026-09-18 修复）：本函数原先只填 5 个指标，其中

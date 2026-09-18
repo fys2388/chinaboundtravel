@@ -1,4 +1,4 @@
-﻿name: Post-deploy Tasks
+name: Post-deploy Tasks
 
 on:
   push:
@@ -134,6 +134,28 @@ jobs:
               git push origin main || echo "manifest push failed (non-fatal)"
             }
           }
+
+      - name: Commit brand identity audit report back to repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 上面 [2.0] 步骤每次部署都跑 brand_identity_audit.py，但它之前
+          # 从来没把输出 commit 回仓库——仓库里那份报告因此永久停在
+          # 上次有人手动提交的状态（2026-09-18 实测已停 18 天）。
+          # 后果是静默假绿灯：某次部署若引入了品牌违规（FAIL>0），
+          # 仓库里看到的仍是那份 0-FAIL 的旧报告，agent_kpi_auditor.py
+          # 据此给出 100% 品牌一致性。和 api_health 报告 11 天不刷新
+          # 是同一类缺陷。
+          git add reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md \
+                  reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md
+          if git diff --cached --quiet; then
+            echo "No brand audit report changes"
+            exit 0
+          fi
+          git commit -m "chore(brand): publish brand identity audit [skip ci]"
+          git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase failed"; exit 0; }
+          git push origin main || echo "brand report push failed (non-fatal)"
 
       - name: Purge Cloudflare CDN Cache
         if: vars.CLOUDFLARE_ZONE_ID != ''
