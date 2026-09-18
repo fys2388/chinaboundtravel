@@ -161,10 +161,22 @@ def generate_advice(data: dict, scope: str) -> list:
         advice.append({"icon": "🟡", "title": f"站点文章 {total_content:g} 篇",
                        "detail": "内容基数偏低：核实去重/归档流程是否误删，目标季度新增 ≥20 篇"})
 
-    # 7) GSC 曝光为 0（新站单日波动正常，核心页通常已收录）
+    # 7) GSC 曝光为 0。GSC 有 2-3 天延迟，「昨日 = 0」通常是数据未到而非真无曝光。
+    # 若 28 天缓存窗口里有曝光，说明搜索基本盘存在，此条必须标为数据延迟而非业务信号——
+    # 否则会把数据延迟当成业务结论，诱导无谓的内容/内链调整。
     if gsc == 0:
-        advice.append({"icon": "🟠", "title": "今日无搜索曝光（新站正常波动）",
-                       "detail": "核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）"})
+        _snap28 = (data.get("reporting_snapshot") or {}).get("gsc_impressions_28d")
+        try:
+            _snap28 = float(_snap28) if _snap28 not in (None, "", "NULL", "NOT_AVAILABLE") else 0
+        except (TypeError, ValueError):
+            _snap28 = 0
+        if _snap28 > 0:
+            advice.append({"icon": "⚪", "title": "昨日搜索曝光数据未到（GSC 有 2-3 天延迟）",
+                           "detail": f"28 天窗口有 {_snap28:,.0f} 次曝光，说明搜索基本盘存在；"
+                                     "昨日为 0 属数据延迟，不作业务结论，勿据此调整内容或内链策略"})
+        else:
+            advice.append({"icon": "🟠", "title": "今日无搜索曝光（新站正常波动）",
+                           "detail": "核心页已收录但排名未起量：优先补内链与内容密度，持续提交新页 sitemap（不自动改标题）"})
 
     # 8) 趋势回落
     trend = str(data.get(f["trend"][0], "")) if f["trend"] else ""

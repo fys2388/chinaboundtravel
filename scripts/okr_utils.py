@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 okr_utils.py - 统一 OKR 目标与进度复盘工具
 供 日报/周报/月报/季报/年报 调用，实现"计划-执行-复盘"闭环：
@@ -23,6 +23,15 @@ KR_ALIASES = {
     "gsc_impressions": ["gsc_impressions"],
     "tp_revenue": ["tp_revenue", "week_revenue", "month_revenue", "quarter_revenue", "year_revenue"],
     "ml_total": ["ml_total_subscribers", "total_subscribers"],
+    "ml_new": ["ml_new_subscribers"],
+}
+
+# 累计型源在日度口径下的日增量替身。
+# ml_total 是上线以来累计订阅数：拿它对比「月度目标/30」的日目标，一旦累计值超过
+# 月度目标就会永久显示 ✅100%，无论昨天有没有新增——日报里「邮件订阅 3/1 = ✅100%」
+# 与同一份报告的「昨日新增 0 + 零增长告警」并存，就是这个问题。
+CUMULATIVE_TO_DAILY = {
+    "ml_total": "ml_new",
 }
 
 
@@ -80,6 +89,7 @@ def _source_available(data: dict, source: str) -> bool:
         "gsc_impressions": "gsc_data_available",
         "tp_revenue": "tp_available",
         "ml_total": "ml_available",
+        "ml_new": "ml_available",
     }
     flag = data.get(flag_map[source]) if source in flag_map else None
     if flag is not None:
@@ -97,6 +107,7 @@ def _na_display(source: str) -> str:
         "gsc_impressions": "未连接",
         "tp_revenue": "未接入",  # REVENUE_NOT_AVAILABLE，不显示 $0
         "ml_total": "未连接",
+        "ml_new": "未连接",
     }.get(source, "暂无数据")
 
 
@@ -169,6 +180,11 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
                 "display": _na_display(source),
             })
             continue
+        # 日度口径：累计型源改用日增量，并在名称上标注，避免累计值永久超过日目标
+        # 导致该 KR 恒为 ✅100%（那样它就不再是信号，而是装饰）
+        if scope == "daily" and source in CUMULATIVE_TO_DAILY:
+            source = CUMULATIVE_TO_DAILY[source]
+            name = f"{name}（昨日新增）"
         current = extract_kr(data, source)
         progress = min(round(current / target * 100), 100) if target > 0 else 0
         # 2.0 状态语义：0 值不自动标红（内容生产 0 / 曝光 0 / 佣金 0 / 订阅 0 均为参考值）

@@ -772,8 +772,26 @@ class FeishuDailyReporter:
             lines.append("**🚧 关键阻塞**")
             for b in blockers:
                 lines.append(f"- {b}")
-        lines.append("")
-        lines.append("> 评审gate: REV001/REV002/DRIVE-001 观察期至 2026-09-13，样本不足前不做判定")
+        # 评审 gate 原文案硬编码「观察期至 2026-09-13」，日期一过就读成
+        # 「已过期却仍写冻结中」，会误导是否能动 CTA 的判断。改为按实际观察天数生成。
+        def _obs_days(e):
+            try:
+                return int(e.get("observation_days"))
+            except (TypeError, ValueError):
+                return 0
+
+        _gated = [e for e in experiments
+                  if e.get("status") == "RUNNING"
+                  and (e.get("sample_status") == "INSUFFICIENT_SAMPLE" or _obs_days(e) < 7)]
+        if _gated:
+            _ids = ", ".join(str(e.get("experiment_id", "")) for e in _gated)
+            _maxd = max(_obs_days(e) for e in _gated)
+            lines.append("")
+            lines.append(f"> 评审gate: {_ids} 已观察 {_maxd} 天但样本不足，判定延后 —— "
+                         f"当前约束是样本量而非日期，原定观察期截止日已过")
+        else:
+            lines.append("")
+            lines.append("> 评审gate: 当前无处于观察期的实验")
         return "\n".join(lines)
 
     @staticmethod
@@ -912,7 +930,10 @@ class FeishuDailyReporter:
                 print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,} 次, 点击 {data['gsc_clicks']:,} 次")
             else:
                 print(f"   ✅ GSC已连接，昨日暂无搜索数据")
-                data["data_status"].append("GSC已连接，昨日搜索曝光 0（新站可能未起量，持续观察；非授权问题）")
+                # 不把「昨日 0」断言为业务结论：GSC 有 2-3 天延迟，
+                # 昨日为 0 通常是数据未到。是否真无曝光要等 28 天窗口对照。
+                data["data_status"].append("GSC已连接，昨日搜索曝光 0 —— GSC 有 2-3 天延迟，"
+                                           "可能是数据未到而非真无曝光；非授权问题")
         else:
             data["data_status"].append("GSC数据获取失败 - 请在 Google Search Console 中授权服务账号")
 
@@ -1004,6 +1025,12 @@ class FeishuDailyReporter:
         data["total_content_issues"] = data["placeholder_articles"] + data["empty_links"] + data["missing_alt"]
         data["affiliate_revenue"] = data.get("tp_revenue", 0) + data.get("nord_revenue", 0)
 
+        # 2.0: 附加统一 KPI 快照（GSC/收入缓存回退与状态标签）。
+        # 必须在 generate_advice 之前：建议生成需要 28 天缓存窗口来区分
+        # 「昨日曝光为 0 = GSC 数据延迟」与「昨日确实无曝光」——顺序反了会
+        # 让数据延迟被当成业务信号。
+        data["reporting_snapshot"] = load_reporting_snapshot()
+
         # 9. 当期 OKR 进度速览（季度目标）
         data["okr_section"] = okr_utils.build_okr_section(data, "daily")
 
@@ -1021,9 +1048,6 @@ class FeishuDailyReporter:
                 seen.add(t)
                 todos.append(t)
         data["high_priority_todos"] = todos[:8]
-
-        # 2.0: 附加统一 KPI 快照（GSC/收入缓存回退与状态标签）
-        data["reporting_snapshot"] = load_reporting_snapshot()
 
         return data
     
