@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Site Health Agent - ChinaBound Travel 2.1
 横向网站健康巡检 + 低风险自动修复 (L2权限)
@@ -596,6 +596,29 @@ def _fetch_url(url):
         return None, None
 
 
+def record_check_failure(all_issues, check_id, check_name_cn, exc):
+    """把「检查本身抛异常」记成一条 issue。
+
+    2026-09-18 修：五个网络检查（安全头/混合内容/OG标签/SSL/结构化数据）
+    此前都是 `except: print(...)` 后什么都不往 all_issues 里写。
+    结果「检查失败」和「检查通过、0 个问题」在报告里长得一模一样。
+
+    直接后果是 agent_kpi_auditor 的静默假绿灯：它读这份报告给
+    ops.security_headers 打分，拿到 0 条安全发现就判 100% 合规。
+    线上真的丢掉 HSTS 时报告里会出现 security_header_missing；
+    但检查抛异常时一条都没有，于是照样报 100 分。
+    """
+    all_issues.append({
+        "type": "check_failed",
+        "severity": "high",
+        "check": check_id,
+        "file": SITE_BASE_URL,
+        "message": f"{check_name_cn}失败: {exc}",
+        "auto_fixable": False,
+        "agent": "site_health",
+    })
+
+
 def check_security_headers():
     """检查安全头完整性"""
     issues = []
@@ -973,6 +996,7 @@ def run_health_check(auto_fix=True):
         all_issues.extend(issues)
     except Exception as e:
         print(f"  ⚠️ 安全头检查失败: {e}")
+        record_check_failure(all_issues, "security_headers", "安全头检查", e)
     
     # 13. 混合内容检查
     print("\n[13/16] 检查混合内容...")
@@ -982,6 +1006,7 @@ def run_health_check(auto_fix=True):
         all_issues.extend(issues)
     except Exception as e:
         print(f"  ⚠️ 混合内容检查失败: {e}")
+        record_check_failure(all_issues, "mixed_content", "混合内容检查", e)
     
     # 14. OG/Twitter标签检查
     print("\n[14/16] 检查OG/Twitter标签...")
@@ -991,6 +1016,7 @@ def run_health_check(auto_fix=True):
         all_issues.extend(issues)
     except Exception as e:
         print(f"  ⚠️ OG标签检查失败: {e}")
+        record_check_failure(all_issues, "og_tags", "OG标签检查", e)
     
     # 15. SSL证书检查
     print("\n[15/16] 检查SSL证书...")
@@ -1000,6 +1026,7 @@ def run_health_check(auto_fix=True):
         all_issues.extend(issues)
     except Exception as e:
         print(f"  ⚠️ SSL检查失败: {e}")
+        record_check_failure(all_issues, "ssl_certificate", "SSL证书检查", e)
     
     # 16. 结构化数据检查
     print("\n[16/16] 检查结构化数据...")
@@ -1009,6 +1036,7 @@ def run_health_check(auto_fix=True):
         all_issues.extend(issues)
     except Exception as e:
         print(f"  ⚠️ 结构化数据检查失败: {e}")
+        record_check_failure(all_issues, "structured_data", "结构化数据检查", e)
     
     # 按严重程度排序
     severity_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}

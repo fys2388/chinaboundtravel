@@ -736,6 +736,126 @@ def _gsc_real_metrics(gsc_path: Optional[Path] = None) -> Dict[str, Any]:
     return result
 
 
+def _report_recency(path: Path) -> datetime:
+    """报告的新旧排序键：优先文件名里的日期，退回文件 mtime。
+
+    为什么不能按文件名排序：`site_health_audit.json` 这个名字排在所有
+    `site_health_2026-09-*.json` **之后**（'a' > '2'），于是
+    `sorted(glob("*.json"))[-1]` 一直拿到那份 18 天前、schema 还是旧的
+    报告，把当天几小时前生成的新鲜报告完全忽略。
+    这不是本次才有的问题——旧代码 `findings` 恰好存在，掩盖了它。
+    """
+    m = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+    if m:
+        try:
+            return datetime.strptime(m.group(1), "%Y-%m-%d")
+        except ValueError:
+            pass
+    try:
+        return datetime.fromtimestamp(path.stat().st_mtime)
+    except OSError:
+        return datetime.min
+
+
+REQUIRED_SECURITY_HEADERS = 6
+"""site_health_agent.check_security_headers() 检查的必需安全头数量：
+Strict-Transport-Security / X-Content-Type-Options / X-Frame-Options /
+Content-Security-Policy / Referrer-Policy / Permissions-Policy。
+
+报告只记录**缺失**的头（type=security_header_missing），
+所以合规率 = (6 - 缺失数) / 6。改这个常量要同步改 site_health_agent.py
+的 REQUIRED_HEADERS 字典。"""
+
+
+def _security_headers(reports=None) -> Dict[str, Any]:
+    """从最新 site_health 报告读安全响应头合规率。
+
+    2026-09-18 修（静默假绿灯）：旧实现是
+        findings = sh.get("findings", [])
+        security_issues = [f for f in findings if f.get("module") == "security"]
+        metrics["ops"]["security_headers"] = 100.0 if not security_issues else 60.0
+    而 site_health_agent 的报告 schema 早已改成 `issues[].type`——
+    `sh.get("findings", [])` **恒为空**，于是「0 条安全发现」永远被解读成
+    100% 合规。线上真丢 HSTS 时报告里会出现 security_header_missing，
+    审计器读不到；检查抛异常时（try/except 吞掉）一条都没有，同样报 100 分。
+    两种情况都拿 100 分，而这个分数从没被测量过。
+
+    现在按 schema 分派，并把「测不出来」和「测出来不合规」分开：
+      issues schema:
+        type=check_failed 且 check=security_headers → not_measured
+        type=site_unreachable                        → not_measured
+        type=security_header_missing × N             → (6-N)/6
+        以上都没有                                    → compliant 100.0
+      findings schema（旧报告 site_health_audit.json）:
+        module=security 有无发现 → 60.0 / 100.0（保留旧口径，不重算历史）
+    """
+    out: Dict[str, Any] = {
+        "compliance": None, "signal": "", "missing": [],
+        "checked": REQUIRED_SECURITY_HEADERS,
+        "note": "", "age_days": -1, "file": "",
+    }
+    if reports is None:
+        reports = sorted(
+            (PROJECT_ROOT / "reports" / "site_health").glob("*.json"),
+            key=_report_recency,
+        )
+    if not reports:
+        out["note"] = "无 site_health 报告"
+        return out
+
+    path = reports[-1]
+    out["file"] = path.name
+    out["age_days"] = _report_age_days(path)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            sh = json.load(f)
+    except Exception as exc:
+        out["note"] = f"读取失败 {type(exc).__name__}"
+        return out
+
+    if not isinstance(sh, dict):
+        out["note"] = "报告不是 JSON 对象"
+        return out
+
+    # 新 schema：site_health_agent.py 的 issues[]
+    if "issues" in sh:
+        issues = [i for i in sh.get("issues") or [] if isinstance(i, dict)]
+        blocked = [i for i in issues
+                   if i.get("type") == "check_failed"
+                   and i.get("check") == "security_headers"]
+        unreachable = [i for i in issues if i.get("type") == "site_unreachable"]
+        if blocked or unreachable:
+            why = "; ".join(str(i.get("message") or i.get("type"))
+                            for i in (blocked or unreachable)[:2])
+            out["signal"] = "not_measured"
+            out["note"] = f"安全头检查未产出结论：{why}"
+            return out
+        missing = [i for i in issues if i.get("type") == "security_header_missing"]
+        n = len(missing)
+        out["missing"] = [str(i.get("message")) for i in missing]
+        if n:
+            out["signal"] = "missing"
+            out["compliance"] = round(
+                max(0.0, REQUIRED_SECURITY_HEADERS - n) / REQUIRED_SECURITY_HEADERS * 100, 1)
+            return out
+        out["signal"] = "compliant"
+        out["compliance"] = 100.0
+        return out
+
+    # 旧 schema：site_health_audit.json 的 findings[]
+    if "findings" in sh:
+        findings = [f for f in sh.get("findings") or [] if isinstance(f, dict)]
+        sec = [f for f in findings if f.get("module") == "security"]
+        out["signal"] = "legacy"
+        out["compliance"] = 100.0 if not sec else 60.0
+        out["missing"] = [str(f.get("title") or f.get("message")) for f in sec]
+        return out
+
+    out["signal"] = "not_measured"
+    out["note"] = "报告既无 issues 也无 findings 字段，无法判断安全头状态"
+    return out
+
+
 def _report_age_days(path: Path) -> int:
     """报告文件的年龄（天）。从文件名或内容里的时间戳取，取不到返回 -1。
 
@@ -886,20 +1006,15 @@ def collect_metrics() -> Dict[str, Dict[str, Any]]:
             pass
 
     # 3. 从 site_health 报告读取安全/性能指标
-    site_health_reports = sorted((PROJECT_ROOT / "reports" / "site_health").glob("*.json"))
-    if site_health_reports:
-        try:
-            with open(site_health_reports[-1], "r", encoding="utf-8") as f:
-                sh = json.load(f)
-            findings = sh.get("findings", [])
-            security_issues = [f for f in findings if f.get("module") == "security"]
-            metrics["ops"]["security_headers"] = 100.0 if not security_issues else 60.0
-            # 2026-09-18 实测：这份报告已 18 天没更新。不打年龄，读者会把
-            # 三周前的安全扫描结论当成当前状态，和 api_health 那次是同一类问题。
-            print(f"  🔒 安全响应头: {metrics['ops']['security_headers']}%"
-                  f"（{site_health_reports[-1].name}，{_report_age_days(site_health_reports[-1])} 天前）")
-        except Exception:
-            pass
+    sh = _security_headers()
+    if sh["compliance"] is not None:
+        metrics.setdefault("ops", {})["security_headers"] = sh["compliance"]
+        tail = f"，缺失: {'; '.join(sh['missing'])}" if sh["missing"] else ""
+        print(f"  🔒 安全响应头: {sh['compliance']}%"
+              f"（{sh['checked'] - len(sh['missing'])}/{sh['checked']} 个必需头齐全"
+              f"，{sh['file']}，{sh['age_days']} 天前）{tail}")
+    else:
+        print(f"  🔒 安全响应头: 未测量（{sh['file'] or '无报告'}，{sh['note']}）")
 
     # 3b. 发布一致性 ← Buffer API 每日发布数据。
     pc = _publish_consistency()
