@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-19T05:42:18",
+  "updated_at": "2026-09-19T16:23:45",
   "items": [
     {
       "id": "soc-000001",
@@ -1666,8 +1666,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2184,7 +2184,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\n💡 Visual guide to Tea: what to see and capture.\n\n• Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'China Travel Safety 2026: Guide for Travelers' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips researched and verified by our editorial .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/travel-safety-guide-fb-visual-de699e8b.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -2199,7 +2199,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "9bd9bcf5c68a"
+      "_sig": "9bd9bcf5c68a",
+      "image_generated": true
     },
     {
       "id": "soc-000085",
@@ -2312,7 +2313,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Etiquette: what to see and capture.\n\n· China Cultural Etiquette Guide: Dos and Don\n\nRead the full guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China Cultural Etiquette: Dos and Don'ts' (platform ig). Scene: traditional Chinese architecture with red lanterns. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check offi.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-ig-visual-61818065.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -2327,7 +2328,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "8f7bdaa9bb06"
+      "_sig": "8f7bdaa9bb06",
+      "image_generated": true
     },
     {
       "id": "soc-000090",
@@ -2337,7 +2339,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nChina Cultural Etiquette: Dos and Don'ts | Everything you need to know about Etiquette — in one practical guide.\n\nChina Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check official sources for | Keywords: etiquette\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'China Cultural Etiquette: Dos and Don'ts' (platform pinterest). Scene: traditional Chinese architecture with red lanterns. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check offi.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-pinterest-conversion-41b345a2.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2352,7 +2354,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "f0bb97bb31a5"
+      "_sig": "f0bb97bb31a5",
+      "image_generated": true
     },
     {
       "id": "soc-000091",
@@ -2362,7 +2365,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Etiquette every traveler should know. → https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'China Etiquette Guide for Aussie & Kiwi' (platform x). Scene: traditional Chinese architecture with red lanterns. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/body/external_d27b4dce5c2a.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-aussie-kiwi-x-knowledge-e33fb5a4.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2377,7 +2380,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "cc5d15efbed4"
+      "_sig": "cc5d15efbed4",
+      "image_generated": true
     },
     {
       "id": "soc-000092",
@@ -2699,8 +2703,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6428,8 +6432,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
