@@ -73,3 +73,5 @@ The current edition (2026.09) is included with every plan on [chinaboundtravel.c
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 - [China High-Speed Rail: How to Book Tickets](/posts/china-high-speed-rail-how-to-book-tickets/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

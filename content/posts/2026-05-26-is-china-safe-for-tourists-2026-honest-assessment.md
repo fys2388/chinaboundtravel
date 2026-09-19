@@ -173,3 +173,5 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

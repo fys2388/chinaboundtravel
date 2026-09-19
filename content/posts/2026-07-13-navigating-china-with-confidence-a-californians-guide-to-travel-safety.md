@@ -137,3 +137,5 @@ Avoid sharing passport details or verification codes with third parties.
 - [China Photography Guide: Top Spots & Tips](https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

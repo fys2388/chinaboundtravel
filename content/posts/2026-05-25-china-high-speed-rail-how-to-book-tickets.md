@@ -302,3 +302,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
+- [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)

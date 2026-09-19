@@ -212,3 +212,5 @@ No — China is massive and 7 days only covers three cities. But this itinerary 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

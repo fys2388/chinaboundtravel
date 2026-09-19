@@ -176,6 +176,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [China Food Guide: Must-Try Dishes &](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

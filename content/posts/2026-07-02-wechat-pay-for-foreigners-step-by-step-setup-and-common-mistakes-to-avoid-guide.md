@@ -262,3 +262,5 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
 - [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)

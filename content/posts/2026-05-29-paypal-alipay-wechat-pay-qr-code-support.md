@@ -173,3 +173,5 @@ One less thing to stress about. And that's often welcome. Before you land, make 
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

@@ -259,6 +259,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

@@ -169,6 +169,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 
+- [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
 ## FAQ
 
 ### Do I need a visa for China?

@@ -189,3 +189,5 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
