@@ -1,0 +1,67 @@
+{
+  "agent": "social",
+  "agent_name": "Social Intelligence Agent (社媒智能优化)",
+  "task_id": "task_2026-09-19_social",
+  "created_at": "2026-09-19T15:13:32.201491+00:00",
+  "updated_at": "2026-09-19T15:13:32.386919",
+  "target_date": "2026-09-19",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "issue_1df0cf16320b",
+      "type": "social_zero_engagement",
+      "title": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+      "description": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+      "page": "",
+      "file": "",
+      "evidence": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "social",
+      "action": "analyze_and_optimize",
+      "source": "daily_issue_router",
+      "source_file": "social_daily_2026-09-18.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "social",
+      "detected_at": "2026-09-19T15:13:32.187582"
+    }
+  ],
+  "priority_issue": {
+    "id": "issue_1df0cf16320b",
+    "type": "social_zero_engagement",
+    "title": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+    "description": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+    "page": "",
+    "file": "",
+    "evidence": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+    "recommended_action": "Review the issue and apply the documented remediation.",
+    "severity": "medium",
+    "agent": "social",
+    "action": "analyze_and_optimize",
+    "source": "daily_issue_router",
+    "source_file": "social_daily_2026-09-18.json",
+    "task_source": "daily_issue_router",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "social",
+    "detected_at": "2026-09-19T15:13:32.187582"
+  },
+  "expected_actions": [
+    "analyze_and_optimize"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
