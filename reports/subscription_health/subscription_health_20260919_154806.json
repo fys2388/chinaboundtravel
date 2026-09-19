@@ -1,0 +1,116 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-19T15:48:06.660029",
+  "base_url": "https://www.chinaboundtravel.com",
+  "api_tests": [
+    {
+      "name": "subscribe_valid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "有效邮箱应返回 200 + success=true",
+      "severity": "critical",
+      "passed": true,
+      "status_code": 200,
+      "response_time_ms": 698,
+      "error": null,
+      "response_body": {
+        "success": true,
+        "delivered_pdf": false,
+        "subscriber_created": true,
+        "lead_magnet": "china-visa-free-entry-checklist",
+        "detail": "Resend:422:ct=application/json:len=196:body=[{\"statusCode\":422,\"name\":\"validation_error\",\"message\":\"Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See our documentation for more information.\"}]"
+      }
+    },
+    {
+      "name": "subscribe_invalid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效邮箱格式应返回 400",
+      "severity": "high",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 76,
+      "error": null
+    },
+    {
+      "name": "subscribe_missing_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "缺失 email 字段应返回 400",
+      "severity": "high",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 115,
+      "error": null
+    },
+    {
+      "name": "subscribe_invalid_json",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效 JSON 应返回 400",
+      "severity": "medium",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 122,
+      "error": null
+    },
+    {
+      "name": "subscribe_empty_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "空邮箱应返回 400",
+      "severity": "medium",
+      "passed": true,
+      "status_code": 400,
+      "response_time_ms": 79,
+      "error": null
+    },
+    {
+      "name": "subscribe_cors_preflight",
+      "endpoint": "/api/subscribe",
+      "method": "OPTIONS",
+      "description": "CORS 预检应返回 200/204 + CORS 头",
+      "severity": "medium",
+      "passed": true,
+      "status_code": 204,
+      "response_time_ms": 119,
+      "error": null
+    }
+  ],
+  "page_checks": [
+    {
+      "page": "/",
+      "status_code": 200,
+      "has_subscribe_form": true,
+      "passed": true
+    },
+    {
+      "page": "/about/",
+      "status_code": 200,
+      "has_subscribe_form": true,
+      "passed": true
+    }
+  ],
+  "mailerlite": {
+    "configured": true,
+    "connected": false,
+    "subscriber_count": null,
+    "error": "连接失败: 'latin-1' codec can't encode character '\\ufeff' in position 7: ordinal not in range(256)",
+    "endpoint_reported": {
+      "source": "endpoint_response",
+      "mailerlite": "configured_and_accepting",
+      "resend": "configured_but_rejected_by_provider",
+      "evidence": {
+        "subscriber_created": true,
+        "delivered_pdf": false,
+        "detail_excerpt": "Resend:422:ct=application/json:len=196:body=[{\"statusCode\":422,\"name\":\"validation_error\",\"message\":\"Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See "
+      }
+    }
+  },
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  }
+}
