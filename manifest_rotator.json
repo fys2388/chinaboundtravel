@@ -284,8 +284,19 @@
         "pinterest": "2026-09-18"
       },
       "distribute_count": 4
+    },
+    "a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers": {
+      "title": "China Food Guide: Must-Try Dishes &",
+      "last_distributed": "2026-09-19",
+      "platforms": {
+        "twitter": "2026-09-19",
+        "facebook": "2026-09-19",
+        "instagram": "2026-09-19",
+        "pinterest": "2026-09-19"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-09-18T17:23:13.969516+00:00",
-  "total_distributions": 107
+  "last_run": "2026-09-19T06:52:55.590190+00:00",
+  "total_distributions": 111
 }
