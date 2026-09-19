@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-18T17:03:42",
+  "updated_at": "2026-09-19T05:42:18",
   "items": [
     {
       "id": "soc-000001",
@@ -166,7 +166,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "x",
       "type": "tip",
-      "caption": "Essential Tea tips most first-time visitors miss. The Art of Bargaining in China → https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Essential Bargain tips most first-time visitors miss. → https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Bargaining Guide: How to Haggle & Shop' (platform x). Scene: colorful Chinese shopping street market. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-x-tip-0fe09bd3.jpg",
       "utm_params": {
@@ -174,8 +174,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-12",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -184,7 +184,9 @@
         "platform": "x"
       },
       "_sig": "8395fba13cb0",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-09-19",
+      "recycle_count": 1
     },
     {
       "id": "soc-000008",
@@ -1636,8 +1638,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1656,16 +1658,16 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to Tea: what to see and capture.\n\n• Must-try Chinese dishes and restaurant recommendations for international travelers, with\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
       "image_prompt": "Professional visual social graphic for 'China Food Guide: Must-Try Dishes &' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-fb-visual-8f08d756.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-12",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1673,7 +1675,10 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "5019e804fe6b"
+      "_sig": "5019e804fe6b",
+      "recycled_at": "2026-09-19",
+      "recycle_count": 1,
+      "image_generated": true
     },
     {
       "id": "soc-000065",
@@ -2204,7 +2209,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nEverything you need to know about Tea — in one practical guide.\n\n· China Travel Safety 2026: Guide for Travelers\n\nRead the full guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Travel Safety 2026: Guide for Travelers' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Crime, scams, transport safety, food safety, and cultural tips researched and verified by our editorial .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/travel-safety-guide-ig-conversion-f4745aac.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -2219,7 +2224,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "a38968640555"
+      "_sig": "a38968640555",
+      "image_generated": true
     },
     {
       "id": "soc-000086",
@@ -2229,7 +2235,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nChina Cultural Etiquette: Dos and Don'ts | Research-backed facts about Etiquette every traveler should know.\n\nChina Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check official sources for | Keywords: etiquette\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'China Cultural Etiquette: Dos and Don'ts' (platform pinterest). Scene: traditional Chinese architecture with red lanterns. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check offi.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-pinterest-knowledge-f117b05b.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2244,7 +2250,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "19be324781ad"
+      "_sig": "19be324781ad",
+      "image_generated": true
     },
     {
       "id": "soc-000087",
@@ -2254,7 +2261,7 @@
       "type": "tip",
       "caption": "Essential Etiquette tips most first-time visitors miss. Cultural Etiquette in China: Essential Dos and Don'ts for → https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Cultural Etiquette: Dos and Don'ts' (platform x). Scene: traditional Chinese architecture with red lanterns. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check offi.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-x-tip-407bfabb.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2269,7 +2276,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "a9e62c8ff1e5"
+      "_sig": "a9e62c8ff1e5",
+      "image_generated": true
     },
     {
       "id": "soc-000088",
@@ -2656,7 +2664,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Accommodation — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about China travel — practical lessons from the ground. → https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform x). Scene: cozy Chinese boutique hotel room. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
       "utm_params": {
@@ -2665,7 +2673,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-09-12",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2673,7 +2681,9 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "631d90a71ef1"
+      "_sig": "631d90a71ef1",
+      "recycled_at": "2026-09-19",
+      "recycle_count": 1
     },
     {
       "id": "soc-000104",
@@ -2681,7 +2691,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to Accommodation: what to see and capture.\n\n• China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/accommodation-tips-guide/",
       "image_prompt": "Professional visual social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform fb). Scene: cozy Chinese boutique hotel room. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
       "utm_params": {
@@ -2689,8 +2699,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-12",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2698,7 +2708,9 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "ea7a14e59063"
+      "_sig": "ea7a14e59063",
+      "recycled_at": "2026-09-19",
+      "recycle_count": 1
     },
     {
       "id": "soc-000105",
@@ -6316,8 +6328,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6391,8 +6403,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-19",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6601,6 +6613,256 @@
         "platform": "pinterest"
       },
       "_sig": "5c8a4a4e0a05"
+    },
+    {
+      "id": "soc-000261",
+      "source_article": "paypal-alipay-wechat-pay-qr-code-support",
+      "source_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Alipay every traveler should know.\n\n· Dude, What Just Happened?\n· What PayPal Actually Announced\n· Why This Matters for Travelers\n\nRead the full guide: https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional knowledge social graphic for 'PayPal Supports Alipay & WeChat Pay QR' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: PayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testi.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "0a3b5953a843"
+    },
+    {
+      "id": "soc-000262",
+      "source_article": "paypal-alipay-wechat-pay-qr-code-support",
+      "source_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\nPayPal Supports Alipay & WeChat Pay QR | Essential Alipay tips most first-time visitors miss.\n\nPayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testing for 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional tip social graphic for 'PayPal Supports Alipay & WeChat Pay QR' (platform pinterest). Scene: smartphone showing mobile payment at a shop. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: PayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testi.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "9fbd1c57ffc1"
+    },
+    {
+      "id": "soc-000263",
+      "source_article": "paypal-alipay-wechat-pay-qr-code-support",
+      "source_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "platform": "x",
+      "type": "story",
+      "caption": "What travelers discover about Alipay — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional story social graphic for 'PayPal Supports Alipay & WeChat Pay QR' (platform x). Scene: smartphone showing mobile payment at a shop. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: PayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testi.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "7cfcbf2a49a4"
+    },
+    {
+      "id": "soc-000264",
+      "source_article": "paypal-alipay-wechat-pay-qr-code-support",
+      "source_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\n• PayPal now supports Alipay and WeChat Pay QR codes in China\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional visual social graphic for 'PayPal Supports Alipay & WeChat Pay QR' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: PayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testi.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "3b548e750d5e"
+    },
+    {
+      "id": "soc-000265",
+      "source_article": "paypal-alipay-wechat-pay-qr-code-support",
+      "source_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Alipay — in one practical guide.\n\n· PayPal Supports Alipay & WeChat Pay QR\n\nRead the full guide: https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional conversion social graphic for 'PayPal Supports Alipay & WeChat Pay QR' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: PayPal now supports Alipay and WeChat Pay QR codes in China. No Chinese bank account needed — setup steps, limitations, and real-world testi.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/general/paypal-alipay-wechat-pay-qr-code-support.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "5f919f0a92af"
+    },
+    {
+      "id": "soc-000266",
+      "source_article": "ultimate-guide-to-china-visa-for-tourists",
+      "source_title": "China Tourist Visa Guide: How to Apply in 2026",
+      "platform": "pinterest",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nChina Tourist Visa Guide: How to Apply in 2026 | Research-backed facts about Visa every traveler should know.\n\nChina tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreign travelers | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional knowledge social graphic for 'China Tourist Visa Guide: How to Apply in 2026' (platform pinterest). Scene: Chinese visa passport and travel documents. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreig.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "b8cd3d193606"
+    },
+    {
+      "id": "soc-000267",
+      "source_article": "ultimate-guide-to-china-visa-for-tourists",
+      "source_title": "China Tourist Visa Guide: How to Apply in 2026",
+      "platform": "x",
+      "type": "tip",
+      "caption": "Essential Visa tips most first-time visitors miss. Ultimate Guide to China Visa for Tourists 2026 → https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional tip social graphic for 'China Tourist Visa Guide: How to Apply in 2026' (platform x). Scene: Chinese visa passport and travel documents. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreig.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "4e2c7fd6b74c"
+    },
+    {
+      "id": "soc-000268",
+      "source_article": "ultimate-guide-to-china-visa-for-tourists",
+      "source_title": "China Tourist Visa Guide: How to Apply in 2026",
+      "platform": "fb",
+      "type": "story",
+      "caption": "🔥 linkedin\n\n💡 What travelers discover about Visa — practical lessons from the ground.\n\n• China tourist visa L-visa application guide for 2026: requirements, documents, costs,\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional story social graphic for 'China Tourist Visa Guide: How to Apply in 2026' (platform fb). Scene: Chinese visa passport and travel documents. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreig.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "873a6a672a3b"
+    },
+    {
+      "id": "soc-000269",
+      "source_article": "ultimate-guide-to-china-visa-for-tourists",
+      "source_title": "China Tourist Visa Guide: How to Apply in 2026",
+      "platform": "ig",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\nVisual guide to Visa: what to see and capture.\n\n· China tourist visa L-visa application guide for 2026: requirements, documents, costs,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional visual social graphic for 'China Tourist Visa Guide: How to Apply in 2026' (platform ig). Scene: Chinese visa passport and travel documents. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreig.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "9758c07d31d9"
+    },
+    {
+      "id": "soc-000270",
+      "source_article": "ultimate-guide-to-china-visa-for-tourists",
+      "source_title": "China Tourist Visa Guide: How to Apply in 2026",
+      "platform": "pinterest",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nChina Tourist Visa Guide: How to Apply in 2026 | Everything you need to know about Visa — in one practical guide.\n\nChina tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreign travelers | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional conversion social graphic for 'China Tourist Visa Guide: How to Apply in 2026' (platform pinterest). Scene: Chinese visa passport and travel documents. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China tourist visa L-visa application guide for 2026: requirements, documents, costs, processing times, and country-specific tips for foreig.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260919"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "0ccc3f838bf9"
     }
   ]
 }
