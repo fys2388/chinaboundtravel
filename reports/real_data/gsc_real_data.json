@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-18T10:11:38.166550",
-  "data_date": "2026-09-15",
+  "pull_time": "2026-09-19T09:52:20.613337",
+  "data_date": "2026-09-16",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 479,
+    "impressions": 462,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 71.2,
+    "average_position": 71.6,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-19",
-      "impressions": 100,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 57.9
-    },
     {
       "date": "2026-08-20",
       "impressions": 115,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 31.4
+    },
+    {
+      "date": "2026-09-16",
+      "impressions": 27,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 26
     }
   ],
   "top_queries": [
@@ -248,10 +248,10 @@
     },
     {
       "query": "144 hour visa",
-      "impressions": 2,
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "position": 73
+      "position": 59
     },
     {
       "query": "144 hour visa china",
@@ -311,10 +311,10 @@
     },
     {
       "query": "144 hours china visa",
-      "impressions": 6,
+      "impressions": 5,
       "clicks": 0,
       "ctr": 0,
-      "position": 73
+      "position": 82.4
     },
     {
       "query": "144 hours visa china",
@@ -355,24 +355,24 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 23,
+      "impressions": 25,
       "clicks": 2,
-      "ctr": 0.09,
-      "position": 17.3
+      "ctr": 0.08,
+      "position": 16.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 84,
+      "impressions": 92,
       "clicks": 1,
       "ctr": 0.01,
-      "position": 72.8
+      "position": 70.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-      "impressions": 10,
+      "impressions": 4,
       "clicks": 1,
-      "ctr": 0.1,
-      "position": 25.8
+      "ctr": 0.25,
+      "position": 6.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
@@ -383,10 +383,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 28,
+      "impressions": 27,
       "clicks": 0,
       "ctr": 0,
-      "position": 51.9
+      "position": 53.6
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/cancel/",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 4
     },
     {
       "page": "https://www.chinaboundtravel.com/categories/china-itinerary/",
@@ -418,10 +425,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/disclaimer/",
-      "impressions": 4,
+      "impressions": 5,
       "clicks": 0,
       "ctr": 0,
-      "position": 66
+      "position": 53.2
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
@@ -439,10 +446,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 581,
+      "impressions": 555,
       "clicks": 0,
       "ctr": 0,
-      "position": 65.4
+      "position": 65.0
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -474,24 +481,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 4,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 9.2
+      "position": 9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "impressions": 2,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
-      "impressions": 38,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 60.7
+      "position": 25.5
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-15"
+    "data_date": "2026-09-16"
   }
 }
