@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19 05:07:16",
+  "generated_at": "2026-09-19 09:00:56",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 143,
+    "response_ms": 205,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-18T18:06:26Z",
+      "last_run": "2026-09-18T21:07:36Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -149,7 +149,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-18T19:29:47Z",
+      "last_run": "2026-09-19T00:31:22Z",
       "last_event": "workflow_run"
     },
     {
@@ -158,8 +158,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-18T04:58:19Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-19T00:30:39Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "geo-check.yml",
@@ -221,8 +221,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-18T21:07:05Z",
-      "last_event": "schedule"
+      "last_run": "2026-09-19T01:00:43Z",
+      "last_event": "workflow_dispatch"
     },
     {
       "file": "purge-cache.yml",
@@ -238,7 +238,7 @@
       "name": "Quality Monitor (6-hour)",
       "id": "quality-monitor",
       "frequency": "每日",
-      "last_status": "",
+      "last_status": "failure",
       "last_run": "2026-09-18T20:55:45Z",
       "last_event": "schedule"
     },
@@ -257,7 +257,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-18T19:29:47Z",
+      "last_run": "2026-09-19T00:31:22Z",
       "last_event": "workflow_run"
     },
     {
@@ -379,7 +379,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-18 21:07",
+    "checked_at": "2026-09-19 01:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -392,49 +392,49 @@
       {
         "name": "SEO智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 8
       },
       {
         "name": "自我学习引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 8
       },
       {
         "name": "收入分析引擎",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 8
       },
       {
         "name": "转化优化Agent",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 8
       },
       {
         "name": "内容智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 2
       },
       {
         "name": "社媒智能优化",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 2
       },
       {
         "name": "用户智能运营",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 8
       },
       {
         "name": "网站健康巡检",
         "status": "✅ 正常",
-        "last_run": "2026-09-18",
+        "last_run": "2026-09-19",
         "max_age_days": 1
       }
     ],
@@ -547,20 +547,14 @@
       "date": "2026-09-18"
     },
     "ga4_daily": {
-      "visitors": 4,
-      "sessions": 7,
-      "pageviews": 6,
-      "new_users": 554,
-      "bounce_rate": 63.8,
-      "date": "2026-09-18",
+      "visitors": 3,
+      "sessions": 5,
+      "pageviews": 3,
+      "new_users": 552,
+      "bounce_rate": 64.0,
+      "date": "2026-09-19",
       "status": "OK",
       "daily": [
-        {
-          "date": "2026-06-21",
-          "sessions": 7,
-          "activeUsers": 2,
-          "pageviews": 207
-        },
         {
           "date": "2026-06-22",
           "sessions": 7,
@@ -1046,42 +1040,48 @@
           "sessions": 7,
           "activeUsers": 4,
           "pageviews": 6
+        },
+        {
+          "date": "2026-09-19",
+          "sessions": 5,
+          "activeUsers": 3,
+          "pageviews": 3
         }
       ],
       "ranges": {
         "today": {
+          "visitors": 3,
+          "sessions": 5,
+          "pageviews": 3,
+          "date_range": "2026-09-19 ~ 2026-09-19",
+          "days": 1
+        },
+        "yesterday": {
           "visitors": 4,
           "sessions": 7,
           "pageviews": 6,
           "date_range": "2026-09-18 ~ 2026-09-18",
           "days": 1
         },
-        "yesterday": {
-          "visitors": 10,
-          "sessions": 11,
-          "pageviews": 14,
-          "date_range": "2026-09-17 ~ 2026-09-17",
-          "days": 1
-        },
         "7d": {
-          "visitors": 49,
-          "sessions": 60,
-          "pageviews": 66,
-          "date_range": "2026-09-12 ~ 2026-09-18",
+          "visitors": 50,
+          "sessions": 63,
+          "pageviews": 67,
+          "date_range": "2026-09-13 ~ 2026-09-19",
           "days": 7
         },
         "30d": {
-          "visitors": 344,
-          "sessions": 433,
-          "pageviews": 814,
-          "date_range": "2026-08-19 ~ 2026-09-18",
+          "visitors": 340,
+          "sessions": 431,
+          "pageviews": 810,
+          "date_range": "2026-08-20 ~ 2026-09-19",
           "days": 30
         },
         "90d": {
-          "visitors": 638,
-          "sessions": 785,
-          "pageviews": 1909,
-          "date_range": "2026-06-21 ~ 2026-09-18",
+          "visitors": 639,
+          "sessions": 783,
+          "pageviews": 1705,
+          "date_range": "2026-06-22 ~ 2026-09-19",
           "days": 82
         },
         "last_month": {
@@ -1403,7 +1403,7 @@
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-09-18T21:07:16.056290+00:00",
+    "generated_at": "2026-09-19T01:00:55.877078+00:00",
     "total": 488,
     "P0": 157,
     "P1": 130,
@@ -1481,7 +1481,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "bc40c8462b39ee79",
@@ -1495,7 +1495,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "c2897bfdb9083440",
@@ -1509,7 +1509,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "c76dc31c1b6b49f6",
@@ -1523,7 +1523,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "610515a4e4298072",
@@ -1537,7 +1537,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "334f748578d3c81d",
@@ -1551,7 +1551,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "d49cae671e76d5b4",
@@ -1565,7 +1565,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "98f4a69add52ec3e",
@@ -1579,7 +1579,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "6c25544aaf1fefe5",
@@ -1593,7 +1593,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "37766393f04866e1",
@@ -1607,7 +1607,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "5e0d657cbf11e985",
@@ -1621,7 +1621,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "201c877b40463c05",
@@ -1635,7 +1635,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "685b3deea4aa16a8",
@@ -1649,7 +1649,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "f143348ca63b05ac",
@@ -1663,7 +1663,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "6217e0d7fb1c1a20",
@@ -1677,7 +1677,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "c9b8a27274c911bc",
@@ -1691,7 +1691,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "956c9730c0445f73",
@@ -1705,7 +1705,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "56aea48b11a81c93",
@@ -1719,7 +1719,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "6d81ed95c8ade9ad",
@@ -1733,7 +1733,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "94f9ed4644db6d10",
@@ -1747,7 +1747,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "7ad3558c4053c06b",
@@ -1761,7 +1761,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "8e3052c1c6b60c21",
@@ -1775,7 +1775,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "e8818e79bb34bdd4",
@@ -1789,7 +1789,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "d7bf3dfd6d76644a",
@@ -1803,7 +1803,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "5794fbe888d72962",
@@ -1817,7 +1817,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "3a608d6385239523",
@@ -1831,7 +1831,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "dd72a09a057f32eb",
@@ -1845,7 +1845,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "99dd88594a32a8fa",
@@ -1859,7 +1859,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "0a33cfa6b116925b",
@@ -1873,7 +1873,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "72a33f4f1d6d8855",
@@ -1887,7 +1887,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "cb1a0ca011f98a8e",
@@ -1901,7 +1901,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "c99e73874b5cd38f",
@@ -1915,7 +1915,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "aad7289630693fc1",
@@ -1929,7 +1929,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "ab7f82a2d116a728",
@@ -1943,7 +1943,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "bbe92054536254ac",
@@ -1957,7 +1957,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "d78d294056115a67",
@@ -1971,7 +1971,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "6d9e58be82663d6b",
@@ -1985,7 +1985,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "02672a4b28d6649e",
@@ -1999,7 +1999,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "5f158bcbedc529d7",
@@ -2013,7 +2013,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "5c50e4bbfa82dc05",
@@ -2027,7 +2027,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "162eafb618620a7f",
@@ -2041,7 +2041,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "0aa58d2692f37854",
@@ -2055,7 +2055,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "652531bea9c09cd1",
@@ -2069,7 +2069,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "b8ac5b62244318bf",
@@ -2083,7 +2083,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "0068bf2c6d607ff1",
@@ -2097,7 +2097,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "f4e760a8898b742f",
@@ -2111,7 +2111,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "549392dde0597e61",
@@ -2125,7 +2125,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "db3f5e9adfddc123",
@@ -2139,7 +2139,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "2ab8008d7a8bbbe4",
@@ -2153,7 +2153,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       },
       {
         "id": "b7d7aef3d2e98d70",
@@ -2167,34 +2167,26 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-18T21:07:16.056290+00:00"
+        "last_seen": "2026-09-19T01:00:55.877078+00:00"
       }
     ]
   },
   "agent_execution": {
-    "date": "2026-09-18",
+    "date": "2026-09-19",
     "is_today": true,
     "total_fixed": 0,
-    "total_issues": 5,
-    "manual_review": 5,
+    "total_issues": 3,
+    "manual_review": 3,
     "failed": 0,
     "in_progress": 0,
     "agents": {
-      "frontend": {
-        "total": 1,
-        "fixed": 0,
-        "failed": 0,
-        "manual_review": 1,
-        "in_progress": 0,
-        "last_run": "2026-09-18T01:01:04.295218"
-      },
       "content": {
         "total": 1,
         "fixed": 0,
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-18T21:07:16.350101"
+        "last_run": "2026-09-19T01:00:56.162079"
       },
       "seo": {
         "total": 1,
@@ -2202,23 +2194,15 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-18T21:07:16.387533"
+        "last_run": "2026-09-19T01:00:56.196264"
       },
-      "social": {
+      "frontend": {
         "total": 1,
         "fixed": 0,
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-18T15:41:52.866925"
-      },
-      "ops": {
-        "total": 1,
-        "fixed": 0,
-        "failed": 0,
-        "manual_review": 1,
-        "in_progress": 0,
-        "last_run": "2026-09-18T10:31:37.011756"
+        "last_run": "2026-09-19T01:00:56.216168"
       }
     }
   },
