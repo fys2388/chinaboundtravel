@@ -1,26 +1,26 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-19T09:52:21.840238",
-  "data_date": "2026-09-19",
+  "pull_time": "2026-09-20T10:14:30.432246",
+  "data_date": "2026-09-20",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 63,
     "articles_this_week": 0,
-    "avg_word_count": 2051,
+    "avg_word_count": 2052,
     "articles_with_affiliate_links": 36,
     "articles_with_internal_links": 60
   },
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 2083,
+      "word_count": 2090,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c",
-      "word_count": 1125,
+      "word_count": 1124,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -44,13 +44,13 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2062,
+      "word_count": 2068,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
-      "word_count": 1507,
+      "word_count": 1514,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -62,13 +62,13 @@
     },
     {
       "slug": "2026-05-27-how-to-survive-chinese-train-station",
-      "word_count": 1601,
+      "word_count": 1608,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1875,
+      "word_count": 1873,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -80,25 +80,25 @@
     },
     {
       "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
-      "word_count": 1769,
+      "word_count": 1776,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
-      "word_count": 2670,
+      "word_count": 2678,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide",
-      "word_count": 2178,
+      "word_count": 2177,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
-      "word_count": 2046,
+      "word_count": 2054,
       "has_affiliate_links": false,
       "has_internal_links": true
     }
