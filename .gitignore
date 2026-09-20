@@ -1,9 +1,10 @@
-﻿.vercel
+.vercel
 public/
 node_modules/
 
 .env
 .env*.local
+.env.sensenova
 
 # Hugo generated files
 /resources/

@@ -44,6 +44,9 @@ jobs:
       # Feishu
       FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
       FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+      # LLM - SenseNova
+      SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+      LLM_ENABLED: "1"
 
     steps:
       - name: Checkout repository
@@ -80,49 +83,36 @@ jobs:
         id: real_data
         run: |
           echo "=== Step 1: 拉取真实数据 ==="
-          python scripts/real_data_pull_engine.py --all || echo "Real data pull completed (some sources may use cache)"
+          python scripts/real_data_pull_engine.py --all
           echo "data_pull_status=completed" >> $GITHUB_OUTPUT
         continue-on-error: true
 
-      - name: Step 2 - Run Social Learning Closed Loop
-        id: social_learning
-        run: |
-          echo "=== Step 2: Social Learning闭环 ==="
-          python scripts/social_learning_closed_loop.py --run || echo "Social Learning completed"
-          echo "social_status=completed" >> $GITHUB_OUTPUT
-        continue-on-error: true
+      # P0 修复: 移除 Social/Content Learning Closed Loop (与 social/content_intelligence_agent.py 100%职责重叠)
+      # 策略文件由 core agent 内部通过 StrategyConsumer 消费，无需独立的 learning loop 生成
 
-      - name: Step 3 - Run Content Learning Closed Loop
-        id: content_learning
-        run: |
-          echo "=== Step 3: Content Learning闭环 ==="
-          python scripts/content_learning_closed_loop.py --run || echo "Content Learning completed"
-          echo "content_status=completed" >> $GITHUB_OUTPUT
-        continue-on-error: true
-
-      - name: Step 4 - Run Cross-Agent Learning Orchestrator (lightweight)
+      - name: Step 2 - Run Cross-Agent Learning Orchestrator (lightweight)
         id: cross_agent
         run: |
-          echo "=== Step 4: 跨Agent学习编排（轻量）==="
-          python scripts/cross_agent_learning_orchestrator.py --run-all || echo "Cross-agent orchestrator completed"
+          echo "=== Step 2: 跨Agent学习编排（轻量）==="
+          python scripts/cross_agent_learning_orchestrator.py --run-all
           echo "cross_agent_status=completed" >> $GITHUB_OUTPUT
         continue-on-error: true
 
-      - name: Step 5 - Update Growth Memory
+      - name: Step 3 - Update Growth Memory
         run: |
-          echo "=== Step 5: 更新 Growth Memory ==="
-          python scripts/growth_memory_updater.py --run || echo "Growth Memory updated"
+          echo "=== Step 3: 更新 Growth Memory ==="
+          python scripts/growth_memory_updater.py --run
         continue-on-error: true
 
-      - name: Step 6 - Run Growth Orchestrator (unified decision)
+      - name: Step 4 - Run Growth Orchestrator (unified decision)
         id: growth_orch
         run: |
-          echo "=== Step 6: Growth Orchestrator 统一增长决策 ==="
-          python scripts/growth_orchestrator.py --run || echo "Growth Orchestrator completed"
+          echo "=== Step 4: Growth Orchestrator 统一增长决策 ==="
+          python scripts/growth_orchestrator.py --run
           echo "growth_orch_status=completed" >> $GITHUB_OUTPUT
         continue-on-error: true
 
-      - name: Step 7 - Generate Daily Learning Summary
+      - name: Step 5 - Generate Daily Learning Summary
         id: summary
         run: |
           echo "=== Step 7: 生成日度学习总结 ==="
@@ -150,9 +140,9 @@ jobs:
             echo "growth_actions=0" >> $GITHUB_OUTPUT
           fi
 
-      - name: Step 8 - Commit daily learning results
+      - name: Step 6 - Commit daily learning results
         run: |
-          echo "=== Step 8: 提交日度学习结果 ==="
+          echo "=== Step 6: 提交日度学习结果 ==="
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -162,7 +152,7 @@ jobs:
             echo "No daily learning changes to commit"
           else
             COMMIT_MSG="feat(ai-learning): daily cross-agent learning update $(date +%Y-%m-%d)"
-            COMMIT_MSG="$COMMIT_MSG - Social+Content loops + cross-agent orchestrator + growth memory + growth orchestrator"
+            COMMIT_MSG="$COMMIT_MSG - cross-agent orchestrator + growth memory + growth orchestrator"
             git commit -m "$COMMIT_MSG"
             # Push with retry
             for i in 1 2 3 4 5; do
@@ -178,33 +168,31 @@ jobs:
             echo "Daily learning results committed and pushed"
           fi
 
-      - name: Step 9 - Send Feishu notification
+      - name: Step 7 - Send Feishu notification
         if: always()
         run: |
-          echo "=== Step 9: 发送飞书通知 ==="
+          echo "=== Step 7: 发送飞书通知 ==="
           if [ -n "${{ secrets.FEISHU_WEBHOOK_URL }}" ]; then
             python scripts/send_feishu_notification.py \
               --title "Daily Cross-Agent Learning Complete $(date +%Y-%m-%d)" \
-              --message "Social+Content learning + Growth Orchestrator completed. Growth actions: ${{ steps.summary.outputs.growth_actions }}. Social strategy: ${{ steps.summary.outputs.social_strategy }}, Content strategy: ${{ steps.summary.outputs.content_strategy }}" \
+              --message "Cross-agent orchestrator + Growth Orchestrator completed. Growth actions: ${{ steps.summary.outputs.growth_actions }}." \
               --webhook "${{ secrets.FEISHU_WEBHOOK_URL }}" || echo "Feishu notification failed"
           else
             echo "FEISHU_WEBHOOK_URL not configured"
           fi
         continue-on-error: true
 
-      - name: Step 10 - Show daily learning summary
+      - name: Step 8 - Show daily learning summary
         run: |
           echo "=========================================="
           echo "  Daily Cross-Agent Learning Summary"
           echo "=========================================="
           echo "Date: ${{ steps.summary.outputs.learning_date }}"
           echo "Data pull: ${{ steps.real_data.outputs.data_pull_status }}"
-          echo "Social Learning: ${{ steps.social_learning.outputs.social_status }}"
-          echo "Content Learning: ${{ steps.content_learning.outputs.content_status }}"
           echo "Cross-Agent: ${{ steps.cross_agent.outputs.cross_agent_status }}"
           echo "Growth Orchestrator: ${{ steps.growth_orch.outputs.growth_orch_status }}"
           echo "Growth Actions: ${{ steps.summary.outputs.growth_actions }}"
           echo ""
-          echo "Heavy loops (SEO/Revenue/Conversion/User): weekly only"
+          echo "Architecture: 6 core agents (weekly) + growth orchestrator (daily)"
           echo "All daily results committed to GitHub"
           echo "=========================================="

@@ -18,6 +18,9 @@ REQUIRED_VARS = [
     # AI服务（必须）
     ("DOUBAO_ARK_API_KEY", "豆包AI生成"),
     
+    # LLM智能分析（可选，启用后增强Agent能力）
+    ("SENSENOVA_API_KEY", "商汤SenseNova LLM(可选)"),
+    
     # 数据分析（必须）
     ("GA4_API_KEY", "Google Analytics"),
     ("GA4_PROPERTY_ID", "GA4属性ID"),

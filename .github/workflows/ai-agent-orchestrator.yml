@@ -1,4 +1,4 @@
-name: AI Agent Orchestrator - 7 Agents Weekly Run
+name: AI Agent Orchestrator - 6 Agents Weekly Run
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       agents:
-        description: '要运行的Agent (all, seo, revenue, conversion, content, social, user, self_learning)'
+        description: '要运行的Agent (all, seo, revenue, conversion, content, social, user)'
         required: false
         default: 'all'
       generate_dashboard:
@@ -24,7 +24,7 @@ env:
 
 jobs:
   orchestrate:
-    name: Run 7 AI Agents Orchestrator
+    name: Run 6 AI Agents Orchestrator
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -70,7 +70,7 @@ jobs:
           print('Permission boundaries: L0-L3 enforced via ai_governance module')
           "
 
-      - name: Run 7 Agents Orchestrator
+      - name: Run 6 Agents Orchestrator
         env:
           # GA4
           GA4_API_KEY: ${{ secrets.GA4_API_KEY }}
@@ -96,19 +96,22 @@ jobs:
           # Feishu
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          # LLM - SenseNova
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+          LLM_ENABLED: "1"
         run: |
-          echo "=== 开始运行7大AI Agent编排器 ==="
+          echo "=== 开始运行6大AI Agent编排器 ==="
           echo "运行时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           echo "Agent选择: ${{ github.event.inputs.agents || 'all' }}"
 
-          # 运行编排器
+          # 运行编排器（并行模式：3路并发）
           if [ "${{ github.event.inputs.agents || 'all' }}" = "all" ]; then
-            python scripts/run_all_agents.py --all
+            python scripts/run_all_agents.py --all --parallel
           else
-            python scripts/run_all_agents.py --${{ github.event.inputs.agents }}
+            python scripts/run_all_agents.py --${{ github.event.inputs.agents }} --parallel
           fi
 
-          echo "=== 7大AI Agent编排器运行完成 ==="
+          echo "=== 6大AI Agent编排器运行完成 ==="
 
       - name: Generate Unified Dashboard
         if: ${{ github.event.inputs.generate_dashboard != 'false' }}
@@ -146,9 +149,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "没有需要提交的变更"
           else
-            git commit -m "feat(ai-ops): 7大AI Agent周度运行结果 - $(date -u '+%Y-%m-%d')
+            git commit -m "feat(ai-ops): 6大AI Agent周度运行结果 - $(date -u '+%Y-%m-%d')
 
-            - 自动运行7大AI Agent编排器
+            - 自动运行6大AI Agent编排器
             - 生成统一运营报告和仪表盘
             - 更新Growth Memory学习记忆
             - 数据来源: GA4 + GSC + Travelpayouts + MailerLite + Buffer + 本地扫描"
@@ -181,7 +184,7 @@ jobs:
               状态: ${STATUS}
               时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
 
-              包含: 7大Agent运行 + 统一仪表盘 + Growth Memory更新
+              包含: 6大Agent运行 + 统一仪表盘 + Growth Memory更新
 
               查看报告: reports/orchestration/latest_unified_report.md"
           else

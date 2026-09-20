@@ -562,8 +562,35 @@ def build_image_prompt(article: dict, ctype: str, platform: str) -> str:
 
 
 def llm_enhance(article: dict, ctype: str, platform: str, base_text: str) -> str:
-    """可选 LLM 文案增强。仅当显式启用 SOCIAL_LLM_ENABLED 且配置了 key 才调用；
-    未启用、未配置或失败时返回 base_text（确定性降级）。"""
+    """LLM 文案增强 — 使用统一 llm_analyzer（SenseNova/DeepSeek）。
+
+    仅当 LLM 可用时调用；不可用或失败时返回 base_text（确定性降级）。
+    """
+    # 尝试使用统一 LLM 分析器
+    try:
+        from llm_analyzer import get_llm_analyzer
+        llm = get_llm_analyzer()
+        if llm.available:
+            prompt = (
+                f"Rewrite this social caption for platform '{platform}' (type '{ctype}') "
+                "in the ChinaBound 2.0 editorial voice. IMPORTANT: never use first-person "
+                "personal travel experience ('I stayed', 'I visited', 'my wife', etc.). "
+                "Keep UTM link untouched. Return only the caption.\n\n"
+                f"Article title: {article.get('title')}\n"
+                f"Base caption:\n{base_text}"
+            )
+            result = llm.chat(
+                prompt,
+                system_prompt="你是社媒文案专家。严禁使用第一人称个人经历。保留UTM链接。只返回文案，不要解释。",
+                max_tokens=400,
+                temperature=0.7,
+            )
+            if result and result.get("content"):
+                return result["content"].strip() or base_text
+    except Exception as e:
+        logger.debug("LLM analyzer unavailable: %s", e)
+
+    # 降级: 尝试原有 DeepSeek 直连方式
     if not os.environ.get("SOCIAL_LLM_ENABLED", ""):
         return base_text
     key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("DOUBAO_ARK_API_KEY")

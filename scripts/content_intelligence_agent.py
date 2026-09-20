@@ -21,6 +21,11 @@ import csv
 import re
 import math
 from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Dict, List, Any, Optional, Tuple
+from dataclasses import dataclass, asdict, field
+from enum import Enum
+from collections import defaultdict
 
 # P1-AI-OPS-03: Consume content optimization strategy from Learning Closed Loop
 try:
@@ -28,11 +33,28 @@ try:
     _STRATEGY_CONSUMER = None
 except Exception:
     _STRATEGY_CONSUMER = None
-from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
-from dataclasses import dataclass, asdict, field
-from enum import Enum
-from collections import defaultdict
+
+# P1: LLM 智能分析 — SenseNova API
+try:
+    sys.path.insert(0, str(Path(__file__).parent))
+    from llm_analyzer import get_llm_analyzer
+    _LLM_AVAILABLE = True
+except Exception:
+    _LLM_AVAILABLE = False
+
+# P0 修复: 补充缺失的项目根目录定义（原版遗漏导致第180行 NameError）
+PROJECT_ROOT = Path(__file__).parent.parent
+REPORTS_DIR = PROJECT_ROOT / "reports"
+CONTENT_REPORTS_DIR = REPORTS_DIR / "content"
+CONTENT_DIR = CONTENT_REPORTS_DIR  # 向后兼容：旧代码引用 CONTENT_DIR
+CONTENT_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+# 报告文件路径（与其他 Agent 保持一致）
+CONTENT_AUDIT_FILE = CONTENT_REPORTS_DIR / "content_audit_report.json"
+CONTENT_REPORT_FILE = CONTENT_REPORTS_DIR / "content_intelligence_report.md"
+TOPIC_RECOMMENDATIONS_FILE = CONTENT_REPORTS_DIR / "topic_recommendations.json"
+MULTIMODAL_PLAN_FILE = CONTENT_REPORTS_DIR / "multimodal_plan.json"
+POSTS_DIR = PROJECT_ROOT / "content" / "posts"  # P0 修复: 补充缺失定义
 
 
 def split_frontmatter(text: str):
@@ -126,6 +148,9 @@ class ContentRecord:
     # 多模态建议
     multimodal_recommendations: List[str] = field(default_factory=list)
 
+    # P1: LLM 智能评估结果
+    llm_evaluation: Dict[str, Any] = field(default_factory=dict)
+
 
 @dataclass
 class TopicRecommendation:
@@ -173,6 +198,18 @@ class ContentIntelligenceAgent:
                 self.strategy = _STRATEGY_CONSUMER("reports/content/content_optimization_strategy.json", "content")
             except Exception as _e:
                 print(f"  ⚠️ content Strategy load skipped: {_e}")
+        # P1: LLM 智能分析初始化
+        self._llm = None
+        self._llm_call_count = 0  # LLM 调用计数器
+        self._llm_call_limit = 15  # 最多评估 15 篇（避免超时）
+        if _LLM_AVAILABLE:
+            try:
+                self._llm = get_llm_analyzer()
+                print(f"  [LLM] Initialized: available={self._llm.available}, limit={self._llm_call_limit}")
+            except Exception as e:
+                print(f"  [LLM] Init failed: {e}")
+        else:
+            print(f"  [LLM] Not available (import failed)")
 
     def _load_gsc_data(self) -> Dict[str, Any]:
         """加载GSC数据"""
@@ -428,6 +465,16 @@ class ContentIntelligenceAgent:
         record.quality_scores = scores
         record.overall_score = sum(scores.values()) / len(scores) if scores else 0
 
+        # P1: LLM 智能内容评估（补充规则评分）
+        # 限制: 仅评估低分文章(overall_score < 75)，最多 15 篇，避免超时
+        if self._llm and self._llm.available:
+            should_evaluate = (
+                record.overall_score < 75 and
+                self._llm_call_count < self._llm_call_limit
+            )
+            if should_evaluate:
+                self._evaluate_with_llm(record, body, title)
+
         # 质量状态
         if record.overall_score >= 80:
             record.quality_status = ContentStatus.EXCELLENT.value
@@ -448,6 +495,89 @@ class ContentIntelligenceAgent:
         self._generate_multimodal_recommendations(record)
 
         return record
+
+    def _evaluate_with_llm(self, record: ContentRecord, body: str, title: str):
+        """P1: LLM 智能内容质量评估
+
+        使用 SenseNova 对文章内容进行语义级评估，补充规则评分的不足。
+        LLM 不可用或调用失败时静默降级。
+        """
+        self._llm_call_count += 1
+        print(f"    [LLM {self._llm_call_count}/{self._llm_call_limit}] 评估: {title[:40]}...")
+        try:
+            content_preview = body[:500]
+            description = body[:100].replace("\n", " ").strip()
+
+            prompt = (
+                f"请评估以下文章的内容质量：\n\n"
+                f"标题: {title}\n"
+                f"摘要: {description}\n"
+                f"正文前500字: {content_preview}\n\n"
+                f"评估标准:\n"
+                f"1. 信息准确性 (0-100): 信息是否准确、可信赖\n"
+                f"2. 时效性 (0-100): 信息是否过时（签证政策、价格等）\n"
+                f"3. 实用价值 (0-100): 对旅行者是否有实际帮助\n"
+                f"4. 内容深度 (0-100): 是否深入、有独特见解\n"
+                f"5. 可读性 (0-100): 结构是否清晰、易读\n"
+                f"6. SEO 友好度 (0-100): 标题、关键词、结构是否SEO优化\n\n"
+                f"返回 JSON:\n"
+                f'{{"scores": {{"accuracy": <number>, "freshness": <number>, "practicality": <number>, "depth": <number>, "readability": <number>, "seo_friendliness": <number>}}, "overall_score": <number>, "issues": [<list>], "improvements": [<list>], "priority": "high|medium|low"}}'
+            )
+
+            result = self._llm.chat(
+                prompt,
+                system_prompt="你是 ChinaBound Travel 的内容质量评估专家。该网站面向中国出境旅行者。请基于客观标准评估，返回 JSON 格式，不要额外解释。",
+                max_tokens=2000,
+                temperature=0.3,
+            )
+
+            if result and result.get("content"):
+                # 解析 LLM 返回的 JSON
+                content = result["content"].strip()
+                # 提取 JSON 块
+                if content.startswith("```"):
+                    import re as _re
+                    match = _re.search(r'```(?:json)?\s*(\{.*?\})\s*```', content, _re.DOTALL)
+                    if match:
+                        content = match.group(1)
+
+                try:
+                    llm_result = json.loads(content)
+                    llm_scores = llm_result.get("scores", {})
+                    llm_issues = llm_result.get("issues", [])
+                    llm_improvements = llm_result.get("improvements", [])
+                    llm_priority = llm_result.get("priority", "medium")
+
+                    # 将 LLM 评分合并到记录中（作为补充维度）
+                    record.llm_evaluation = {
+                        "scores": llm_scores,
+                        "overall_score": llm_result.get("overall_score", 0),
+                        "issues": llm_issues,
+                        "improvements": llm_improvements,
+                        "priority": llm_priority,
+                    }
+
+                    # LLM 发现的 issues 追加到记录
+                    if llm_issues:
+                        record.issues = record.issues + [f"[LLM] {i}" for i in llm_issues]
+
+                    # LLM 建议追加到记录
+                    if llm_improvements:
+                        record.recommendations = record.recommendations + [f"[LLM] {i}" for i in llm_improvements]
+
+                    print(f"    🤖 LLM 评估: {llm_result.get('overall_score', 0):.0f}/100 (priority={llm_priority})")
+                except json.JSONDecodeError:
+                    # LLM 返回了非 JSON，尝试用原始文本
+                    record.llm_evaluation = {
+                        "raw_response": content[:500],
+                        "issues": [],
+                        "improvements": [],
+                    }
+                    print(f"    🤖 LLM 返回非 JSON，已降级")
+
+        except Exception as e:
+            print(f"    ⚠️ LLM 评估失败（降级）: {str(e)[:80]}")
+
 
     def _detect_issues_and_recommendations(self, record: ContentRecord):
         """检测问题并生成建议"""
@@ -1134,6 +1264,12 @@ class ContentIntelligenceAgent:
 def main():
     """主函数"""
     import argparse
+    import io
+
+    # Windows 编码修复
+    if sys.platform == "win32":
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
     parser = argparse.ArgumentParser(description="ChinaBound Travel 内容智能优化Agent")
     parser.add_argument("--all", action="store_true", help="运行完整优化流程")

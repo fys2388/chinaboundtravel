@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "description": "ChinaBound Travel LLM 配置 — SenseNova 商汤日日新大模型",
+  "last_updated": "2026-09-20",
+
+  "enabled": true,
+  "default_provider": "sensenova",
+
+  "sensenova": {
+    "base_url": "https://token.sensenova.cn/v1",
+    "api_key_env": "SENSENOVA_API_KEY",
+    "model": "sensenova-6.8-flash-lite",
+    "models": [
+      "sensenova-6.8-flash-lite",
+      "sensenova-u1.5-lite"
+    ],
+    "max_tokens": 4000,
+    "timeout_seconds": 120,
+    "temperature": 0.7
+  },
+  "deepseek": {
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "model": "deepseek-chat",
+    "max_tokens": 4000,
+    "timeout_seconds": 120,
+    "temperature": 0.7
+  },
+  "openai": {
+    "base_url": "https://api.openai.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "gpt-4o",
+    "max_tokens": 4000,
+    "timeout_seconds": 120,
+    "temperature": 0.7
+  },
+
+  "limits": {
+    "daily_call_limit": 200,
+    "max_tokens_per_call": 4000,
+    "cache_ttl_hours": 24,
+    "retry_attempts": 2,
+    "retry_delay_seconds": 3
+  },
+
+  "governance": {
+    "require_kill_switch_check": true,
+    "kill_switch_subsystem": "strategy_updates",
+    "log_all_calls": true,
+    "cache_enabled": true
+  }
+}

@@ -29,6 +29,8 @@ import sys
 import csv
 from collections import defaultdict
 from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 
 # P1-AI-OPS-03: Consume SEO optimization strategy from Learning Closed Loop
 try:
@@ -36,8 +38,14 @@ try:
     _STRATEGY_CONSUMER = None
 except Exception:
     _STRATEGY_CONSUMER = None
-from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+
+# P1: LLM 智能分析 — SenseNova API
+try:
+    sys.path.insert(0, str(Path(__file__).parent))
+    from llm_analyzer import get_llm_analyzer
+    _LLM_AVAILABLE = True
+except Exception:
+    _LLM_AVAILABLE = False
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -645,6 +653,13 @@ class SEOIntelligentAnalyzer:
         self.data = data
         self.opportunities = opportunities
         self.analysis = {}
+        # P1: LLM 智能分析初始化
+        self._llm = None
+        if _LLM_AVAILABLE:
+            try:
+                self._llm = get_llm_analyzer()
+            except Exception:
+                pass
 
     def analyze_all(self) -> Dict:
         """执行全面的SEO智能分析"""
@@ -656,9 +671,111 @@ class SEOIntelligentAnalyzer:
         self.analyze_content_gaps()
         self.analyze_competition()
         self.analyze_ctr_patterns()
+
+        # P1: LLM 搜索意图深度分析
+        if self._llm and self._llm.available:
+            self.analyze_with_llm()
+
         self.generate_optimization_plan()
 
         return self.analysis
+
+    def analyze_with_llm(self) -> Dict:
+        """P1: LLM 搜索意图与内容缺口深度分析
+
+        使用 SenseNova 分析高展示关键词的搜索意图和排名机会。
+        限制: 最多分析 10 个关键词，避免超时。
+        """
+        print("\n[6/6] LLM 搜索意图分析...")
+
+        queries = self.data.get("gsc", {}).get("queries", [])
+        # 筛选高展示关键词 (impressions > 50)
+        high_imp_queries = [q for q in queries if q.get("impressions", 0) > 50][:10]
+
+        if not high_imp_queries:
+            print("  无高展示关键词可分析")
+            self.analysis["llm_analysis"] = {"status": "skipped", "reason": "no high-imp queries"}
+            return
+
+        llm_results = []
+        for i, query in enumerate(high_imp_queries[:10], 1):
+            keyword = query.get("keys", "")
+            position = query.get("position", 0)
+            impressions = query.get("impressions", 0)
+            ctr = query.get("ctr", 0)
+
+            prompt = (
+                f"请分析以下关键词的 SEO 机会：\n\n"
+                f"关键词: {keyword}\n"
+                f"当前排名: 第 {position:.0f} 位\n"
+                f"月搜索量: {impressions}\n"
+                f"CTR: {ctr:.2f}%\n\n"
+                f"分析维度:\n"
+                f"1. 搜索意图 (informational/transactional/navigational/commercial)\n"
+                f"2. 竞争程度 (0-100, 越高越激烈)\n"
+                f"3. 排名机会 (0-100, 越高越容易提升)\n"
+                f"4. 内容缺口: 当前页面缺失什么内容\n"
+                f"5. 标题建议 (60字符内, 含关键词)\n\n"
+                f"返回 JSON:\n"
+                f'{{"search_intent": "<type>", "competition_level": <number>, "ranking_opportunity": <number>, '
+                f'"content_gaps": [<list>], "title_suggestions": [<list>], "priority": "high|medium|low"}}'
+            )
+
+            try:
+                result = self._llm.chat(
+                    prompt,
+                    system_prompt="你是 SEO 搜索意图分析专家。请客观分析，返回 JSON 格式，不要额外解释。",
+                    max_tokens=1500,
+                    temperature=0.3,
+                )
+                if result and result.get("content"):
+                    content = result["content"].strip()
+                    import re as _re
+                    match = _re.search(r'\{.*?\}', content, _re.DOTALL)
+                    if match:
+                        try:
+                            llm_result = json.loads(match.group(0))
+                            llm_results.append({
+                                "keyword": keyword,
+                                "position": position,
+                                "impressions": impressions,
+                                "ctr": ctr,
+                                **llm_result,
+                            })
+                            print(f"  [{i}/10] {keyword[:40]}: intent={llm_result.get('search_intent', '?')}, "
+                                  f"opportunity={llm_result.get('ranking_opportunity', 0)}")
+                        except json.JSONDecodeError:
+                            pass
+            except Exception as e:
+                print(f"  [{i}/10] {keyword[:40]}: LLM error - {str(e)[:50]}")
+
+        analysis = {
+            "status": "completed",
+            "analyzed_keywords": len(llm_results),
+            "results": llm_results,
+            "summary": self._summarize_llm_analysis(llm_results),
+        }
+
+        self.analysis["llm_analysis"] = analysis
+        print(f"  完成: 分析 {len(llm_results)} 个关键词")
+        return analysis
+
+    def _summarize_llm_analysis(self, results: List[Dict]) -> str:
+        """生成 LLM 分析摘要"""
+        if not results:
+            return "无 LLM 分析结果"
+
+        high_priority = [r for r in results if r.get("priority") == "high"]
+        info_intent = [r for r in results if r.get("search_intent") == "informational"]
+        avg_opportunity = sum(r.get("ranking_opportunity", 0) for r in results) / len(results)
+
+        summary_parts = [
+            f"分析了 {len(results)} 个高展示关键词",
+            f"{len(high_priority)} 个高优先级机会",
+            f"{len(info_intent)} 个信息型搜索意图",
+            f"平均排名机会: {avg_opportunity:.0f}/100",
+        ]
+        return "; ".join(summary_parts)
 
     def analyze_traffic_patterns(self) -> Dict:
         """分析流量模式"""
