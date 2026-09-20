@@ -250,17 +250,41 @@ def audit_static_site(site_dir: Path, site_hosts: set[str]) -> dict:
                         )
                     )
 
+        # 所有 GA4 measurement ID，不限 gtag.js 加载脚本。
+        #
+        # 旧实现只匹配 gtag/js?id= —— 双计场景下第二个 ID 出现在 collect 路径
+        # tid=G-P6BH500VBK 里，闸门完全看不见。实测线上（2026-09-20）：首页每次
+        # page_view 同时 POST
+        #   /vo5w/ga/g/c?tid=G-P6BH500VBK   和   /vo5w/ga/g/c?tid=G-GECBME3YVJ
+        # 两条共用同一个 gtm= 配置哈希与 cid，即同一个配置里的两个 measurement ID。
+        # 仓库里只有 G-GECBME3YVJ（hugo.toml），另一个来自部署层。
+        #
+        # 后果：所有流量 KPI 双计 —— users_28d / sessions_28d /
+        # engagement_rate_28d 全部失真。一个"看起来干净"的错误数字比显示 0 更
+        # 危险，所以这是 P0，不是 P1（--fail-on P1 下 P1 同样拦，但语义要说清）。
+        #
+        # 只在 <script> 文本与 HTML 属性里扫，不扫正文散文，避免文章里出现
+        # "G-XXXXXXXX" 字样就误拦部署。
+        script_text = "\n".join(
+            s.get_text() for s in soup.find_all("script")
+        )
+        attr_text = " ".join(
+            f'{name}="{value}"'
+            for tag in soup.find_all(True)
+            for name, value in tag.attrs.items()
+        )
         tag_ids = set(
-            re.findall(r"googletagmanager\.com/gtag/js\?id=([A-Za-z0-9_-]+)", raw)
+            re.findall(r"\bG-[A-Z0-9]{8,12}\b", script_text + "\n" + attr_text)
         )
         if len(tag_ids) > 1:
             issues.append(
                 make_issue(
-                    "P1",
+                    "P0",
                     "multiple_analytics_tags",
                     page,
                     ", ".join(sorted(tag_ids)),
-                    "Load one analytics tag per page.",
+                    "Load exactly one GA4 measurement ID. Multiple IDs double-count "
+                    "every page_view and corrupt all traffic and revenue KPIs.",
                 )
             )
 

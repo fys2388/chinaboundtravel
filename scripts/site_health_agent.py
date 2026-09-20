@@ -967,6 +967,143 @@ def auto_fix_issue(issue):
         return False, f"修复失败: {str(e)}"
 
 
+def _fetch_gtag_destinations(measurement_id):
+    """拉 gtag.js?id=<id>，解析出这个 ID 实际配置了几个 GA4 目的地。
+
+    2026-09-20 根因定位：单看页面 HTML 是**检测不出**双计的 —— 线上首页
+    只有一句 gtag("config","G-GECBME3YVJ")，HTML 里只有 1 个 ID。
+    真正的双计发生在 Google 服务端：
+
+        https://www.googletagmanager.com/gtag/js?id=G-GECBME3YVJ
+        -> 返回的是一个 GTM 容器载荷（"resource":{"version":"2","macros":[...]}），
+           里面 __dest_ga 有**两个** vtp_destinationId：
+               tag_id:1  G-GECBME3YVJ
+               tag_id:7  G-P6BH500VBK
+           而且每一个事件 tag 都成对复制了（__ccd_em_page_view / form / download /
+           outbound_click / scroll / video / site_search / conversion_marking /
+           auto_redact / gct / ga_first / ga_last 各两份）。
+
+    即：有人在 Google Tag Manager（或 GA4 的 Google Tag）里建了一个
+    Google Tag 并配了**两个目的地**。一次 gtag config 会触发整条 tag 链，
+    所以每个事件都被记到两个属性上 —— users / sessions / engagement 全部双计。
+
+    这是 Google 控制台的配置问题，不是 Cloudflare Worker / Transform Rule，
+    仓库里改任何东西都修不了它。返回 (destinations, payload_len) 供上报。
+    """
+    url = f"https://www.googletagmanager.com/gtag/js?id={measurement_id}"
+    resp, payload = _fetch_url(url)
+    if resp is None or not payload:
+        return [], 0
+    dests = sorted(set(re.findall(
+        r'"vtp_destinationId":"(G-[A-Z0-9]{8,12})"', payload)))
+    if not dests:
+        # 旧版载荷用 trackingId，做个兜底
+        dests = sorted(set(re.findall(
+            r'"vtp_trackingId":"(G-[A-Z0-9]{8,12})"', payload)))
+    return dests, len(payload)
+
+
+def check_analytics_measurement_ids():
+    """检查 GA4 是否被双计，并写出机器可读的姿态报告。
+
+    为什么单独做一个「姿态文件」而不只记 issue：
+
+    双 GA4 是 **Google 服务端配置**问题，仓库和静态站闸门结构性都看不见。
+    2026-09-20 实测：线上首页每次 page_view 同时 POST
+        /vo5w/ga/g/c?tid=G-P6BH500VBK   和   ?tid=G-GECBME3YVJ
+    两条共用同一个 gtm= 配置哈希与 cid —— 即同一个配置里的两个目的地。
+    根因在 gtag.js 载荷里的 __dest_ga 有两个 destinationId（见
+    _fetch_gtag_destinations 的注释）。
+
+    predeploy_quality_gate 旧正则只匹配 gtag/js?id=（加载脚本），
+    而第二个 ID 出现在 collect 路径 tid= 里 —— 所以 reports/quality/
+    predeploy_quality.json（2026-09-14）显示 0 issues，闸门"通过"，
+    双计在 main 分支上跑了 6 天无人拦截。
+
+    后果是 users_28d / sessions_28d / engagement_rate_28d 全部双计，
+    而这三个数当时正被 reporting_kpi_engine 当 LIVE KPI 上报。
+    一个"看起来干净"的错误数字比显示 0 更危险。
+
+    本检查把结果写成 reports/quality/analytics_posture.json，
+    reporting_kpi_engine 读它把 GA4 来源的 KPI 标成 CONTAMINATED_SOURCE。
+    """
+    issues = []
+    # 注意：不能用 REPORTS_DIR（那是 reports/site_health），姿态文件要和
+    # predeploy_quality.json 放一起，reporting_kpi_engine 从那里读。
+    posture_file = ROOT / "reports" / "quality" / "analytics_posture.json"
+
+    # 第 1 层：页面 HTML 里显式出现几个 ID（抓「仓库里写了两个 gtag」这种常见情形）
+    found_by_page, failed_pages, html_ids = {}, [], []
+    for page_path in CHECK_PAGES:
+        resp, html = _fetch_url(SITE_BASE_URL + page_path)
+        if resp is None or not html:
+            failed_pages.append(page_path)
+            continue
+        ids = sorted(set(re.findall(r"\bG-[A-Z0-9]{8,12}\b", " ".join(html.split()))))
+        found_by_page[page_path] = ids
+        html_ids.extend(ids)
+
+    # 第 2 层：gtag.js 载荷里实际配置了几个目的地（抓 Google 侧的多目的地配置）
+    gtag_payload = {}
+    payload_dests = []
+    for mid in sorted(set(html_ids)):
+        try:
+            dests, plen = _fetch_gtag_destinations(mid)
+        except Exception:
+            dests, plen = [], 0
+        gtag_payload[mid] = {"destinations": dests, "payload_bytes": plen}
+        payload_dests.extend(dests)
+
+    all_ids = sorted(set(html_ids) | set(payload_dests))
+    contaminated = len(all_ids) > 1
+
+    if contaminated:
+        issues.append({
+            "type": "multiple_analytics_measurement_ids",
+            "severity": "critical",
+            "check": "analytics_measurement_ids",
+            "file": SITE_BASE_URL,
+            "message": (
+                f"GA4 实际配置了 {len(all_ids)} 个目的地: {', '.join(all_ids)}。"
+                "每次 page_view / form / download / outbound_click 都会被记到所有"
+                "目的地上，users_28d / sessions_28d / pageviews_28d / "
+                "engagement_rate_28d 全部双计。"
+                "根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个"
+                "destinationId（本案例的页面 HTML 只有 1 个 ID，双计来自 "
+                "gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。"
+                "修法是删掉多余的 destination，仓库里改代码修不了。"
+            ),
+            "evidence": json.dumps({
+                "html_ids_by_page": found_by_page,
+                "gtag_payload": gtag_payload,
+            }, ensure_ascii=False),
+            "auto_fixable": False,
+            "agent": "site_health",
+        })
+
+    posture_file.parent.mkdir(parents=True, exist_ok=True)
+    posture_file.write_text(json.dumps({
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "base_url": SITE_BASE_URL,
+        "pages_checked": list(found_by_page.keys()),
+        "pages_fetch_failed": failed_pages,
+        "html_measurement_ids": sorted(set(html_ids)),
+        "gtag_payload": gtag_payload,
+        "measurement_ids": all_ids,
+        "contaminated": contaminated,
+        "note": (
+            "contaminated=True 表示 GA4 实际配置了多个目的地，所有 GA4 来源的流量"
+            "KPI（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）"
+            "都是双计数值，不可作为决策依据。"
+            "根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），"
+            "不在本仓库，也不在 Cloudflare —— 改仓库代码修不了它。"
+        ),
+    }, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    return issues
+
+
+
 def run_health_check(auto_fix=True):
     """运行完整健康检查"""
     ensure_dirs()
@@ -1077,6 +1214,16 @@ def run_health_check(auto_fix=True):
         print(f"  ⚠️ 混合内容检查失败: {e}")
         record_check_failure(all_issues, "mixed_content", "混合内容检查", e)
     
+    # 13b. GA4 measurement ID 双计检查（写 analytics_posture.json）
+    print("\n[13b/16] 检查 GA4 measurement ID 是否被重复加载...")
+    try:
+        issues = check_analytics_measurement_ids()
+        print(f"  发现 {len(issues)} 个问题")
+        all_issues.extend(issues)
+    except Exception as e:
+        print(f"  ⚠️ GA4 双计检查失败: {e}")
+        record_check_failure(all_issues, "analytics_measurement_ids", "GA4 双计检查", e)
+
     # 14. OG/Twitter标签检查
     print("\n[14/16] 检查OG/Twitter标签...")
     try:

@@ -1,4 +1,14 @@
 {
+  "analytics_contamination": {
+    "affected_kpis": [
+      "users_28d",
+      "sessions_28d",
+      "pageviews_28d",
+      "engagement_rate_28d"
+    ],
+    "contaminated": true,
+    "note": "线上同一页面同时加载 2 个 GA4 measurement ID（G-GECBME3YVJ, G-P6BH500VBK），每个 page_view 被双计，GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）均为双计数值，不可作为决策依据。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。"
+  },
   "as_of": "2026-09-20",
   "domains": {
     "affiliate_funnel": {
@@ -6,6 +16,8 @@
         {
           "baseline": 277,
           "calculation": "count rows in funnel inventory",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Affiliate CTA inventory rows",
           "name": "cta_inventory_rows",
@@ -22,6 +34,8 @@
         {
           "baseline": 45,
           "calculation": "unique URLs in funnel inventory",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Pages with affiliate CTA coverage",
           "name": "cta_inventory_pages",
@@ -38,6 +52,8 @@
         {
           "baseline": 0,
           "calculation": "count affiliate_click events",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GA4 affiliate_click events, 28d window",
           "name": "affiliate_clicks_28d",
@@ -54,6 +70,8 @@
         {
           "baseline": 0,
           "calculation": "REV001 page only",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "CTA impressions (REV001 scope)",
           "name": "cta_impressions",
@@ -70,6 +88,8 @@
         {
           "baseline": 0,
           "calculation": "REV001 page only",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Affiliate outbound events (REV001 scope)",
           "name": "outbound_success",
@@ -86,6 +106,8 @@
         {
           "baseline": 0.0,
           "calculation": "clicks / impressions, same source (REV001_FUNNEL_METRICS.csv)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "CTA click rate (REV001 scope)",
           "name": "click_rate",
@@ -102,6 +124,8 @@
         {
           "baseline": 0.0,
           "calculation": "REV001 page only",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Outbound rate (REV001 scope)",
           "name": "outbound_rate",
@@ -118,6 +142,8 @@
         {
           "baseline": 0.0,
           "calculation": "affiliate_clicks / sessions * 1000",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Affiliate clicks per 1000 sessions (sitewide)",
           "name": "clicks_per_1000_sessions",
@@ -134,6 +160,8 @@
         {
           "baseline": null,
           "calculation": "per-partner page and link counts",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Partner pages/link counts and status",
           "name": "partner_breakdown",
@@ -214,6 +242,8 @@
         {
           "baseline": "31/113",
           "calculation": "PASS rows over 113 brand layers (82 WARN, 0 FAIL)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Brand layers passing editorial persona audit",
           "name": "editorial_persona_compliance",
@@ -230,6 +260,8 @@
         {
           "baseline": 25,
           "calculation": "legacy phrase hit count",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Posts still containing legacy persona phrases",
           "name": "legacy_persona_remaining",
@@ -246,6 +278,8 @@
         {
           "baseline": 0,
           "calculation": "pilot articles migrated (Western Sichuan / Guilin / Hotpot)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Legacy persona migrations in 2026-08-16 pilot",
           "name": "migrated_this_period",
@@ -262,6 +296,8 @@
         {
           "baseline": "WAITING",
           "calculation": "favicon.png replaced 2026-08-17; favicon.svg retained (no converter)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Brand logo / favicon asset migration status",
           "name": "logo_favicon_status",
@@ -278,6 +314,8 @@
         {
           "baseline": "WARN",
           "calculation": "no forbidden/fictional claims; editorial present per layer",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Core brand compliance status",
           "name": "core_brand_compliance",
@@ -294,6 +332,8 @@
         {
           "baseline": "PRESENT",
           "calculation": "static/images/joran-avatar.webp/.png present",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Joran avatar assets status",
           "name": "brand_asset_avatar",
@@ -382,6 +422,8 @@
         {
           "baseline": 63,
           "calculation": "count posts in content/posts with valid content_id",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Published posts (current inventory)",
           "name": "published_posts",
@@ -398,6 +440,8 @@
         {
           "baseline": "63/63",
           "calculation": "posts with content_id / total posts",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Posts with unique content_id",
           "name": "content_id_coverage",
@@ -414,6 +458,8 @@
         {
           "baseline": null,
           "calculation": "count published_date >= as_of - 30d",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Posts published in last 30 days",
           "name": "new_pages_30d",
@@ -430,6 +476,8 @@
         {
           "baseline": null,
           "calculation": "count unique post files touched by git log --since",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Posts with content change in period (git history)",
           "name": "updated_pages",
@@ -446,6 +494,8 @@
         {
           "baseline": null,
           "calculation": "count indexed_status == INDEXED",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Inventory posts marked INDEXED",
           "name": "indexed_posts",
@@ -467,6 +517,8 @@
             "D": 28
           },
           "calculation": "count by opportunity_tier",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Opportunity tier distribution A/B/C/D",
           "name": "asset_tier_distribution",
@@ -487,6 +539,8 @@
         {
           "baseline": 51,
           "calculation": "feed item count",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Content opportunity feed size",
           "name": "opportunity_pipeline",
@@ -503,6 +557,8 @@
         {
           "baseline": 25,
           "calculation": "posts matching legacy persona phrase list",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Posts with legacy persona phrases remaining",
           "name": "legacy_persona_pages",
@@ -519,6 +575,8 @@
         {
           "baseline": 0,
           "calculation": "pilot articles migrated",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Posts migrated to editorial persona (total)",
           "name": "migrated_persona_pages",
@@ -535,6 +593,8 @@
         {
           "baseline": 6,
           "calculation": "queue rows cross-checked against static/_redirects + front-matter canonicalURL",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Canonical conflicts still present in source",
           "name": "canonical_conflicts",
@@ -551,6 +611,8 @@
         {
           "baseline": 6,
           "calculation": "rows in canonical conflict queue (includes stale URL Inspection observations)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Rows in canonical conflict queue (raw)",
           "name": "canonical_conflicts_queue_total",
@@ -567,6 +629,8 @@
         {
           "baseline": null,
           "calculation": "count duplicate_count > 1",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Inventory rows with duplicate_count > 1",
           "name": "duplicate_risk_rows",
@@ -593,6 +657,8 @@
         {
           "baseline": 954,
           "calculation": "count audit rows",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Open content-trust audit issues (current)",
           "name": "total_issues",
@@ -609,6 +675,8 @@
         {
           "baseline": 534,
           "calculation": "count risk_level=HIGH",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "High-risk trust issues remaining",
           "name": "high_risk",
@@ -625,6 +693,8 @@
         {
           "baseline": 420,
           "calculation": "count risk_level=MEDIUM",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Medium-risk trust issues remaining",
           "name": "medium_risk",
@@ -641,6 +711,8 @@
         {
           "baseline": null,
           "calculation": "group by issue_type",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Audit issues by type",
           "name": "issue_types",
@@ -663,6 +735,8 @@
         {
           "baseline": null,
           "calculation": "count status=APPLIED",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Deterministic auto-fixes applied this round",
           "name": "auto_fixed",
@@ -679,6 +753,8 @@
         {
           "baseline": 474,
           "calculation": "count auto_fix_possible=no (facts/unsourced data)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Issues requiring human fact-check",
           "name": "fact_check_required",
@@ -695,6 +771,8 @@
         {
           "baseline": 480,
           "calculation": "count auto_fix_possible=yes still open (FAQ/local false positives, pinned structure)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Fixable audit rows left for manual review",
           "name": "deferred_manual",
@@ -848,6 +926,8 @@
         {
           "baseline": null,
           "calculation": "count funnel rows",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Growth funnel tracked social items (source retired; superseded by social-engine-daily)",
           "name": "funnel_rows",
@@ -864,6 +944,8 @@
         {
           "baseline": null,
           "calculation": "sum affiliate_clicks (NULL until measurement)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Affiliate clicks attributed to social",
           "name": "affiliate_clicks",
@@ -880,6 +962,8 @@
         {
           "baseline": null,
           "calculation": "sum affiliate_outbound (NULL until measurement)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Affiliate outbound events attributed to social",
           "name": "affiliate_outbound",
@@ -896,6 +980,8 @@
         {
           "baseline": null,
           "calculation": "sum revenue; NULL + REVENUE_NOT_AVAILABLE until real API data",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Revenue attributed to social funnel",
           "name": "revenue",
@@ -912,6 +998,8 @@
         {
           "baseline": null,
           "calculation": "GA4 engaged sessions for social source (NULL until data)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Engaged sessions from social (measured)",
           "name": "engaged_sessions",
@@ -935,6 +1023,8 @@
         {
           "baseline": "PASS",
           "calculation": "workflow schema and name contract tests green",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Automation workflow health (YAML/name validation)",
           "name": "automation_health",
@@ -951,6 +1041,8 @@
         {
           "baseline": "PASS",
           "calculation": "workflow definitions valid",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Workflow health (CI/deploy workflows validated)",
           "name": "workflow_health",
@@ -967,6 +1059,8 @@
         {
           "baseline": null,
           "calculation": "last recorded live 200/canonical/Drive checks",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Latest recorded production verification",
           "name": "deployment_health",
@@ -983,6 +1077,8 @@
         {
           "baseline": null,
           "calculation": "presence of site-backup-daily.yml + restore_site.sh + backup/site-* tags",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Backup / rollback status",
           "name": "backup_rollback",
@@ -999,6 +1095,8 @@
         {
           "baseline": "PASS",
           "calculation": "secret scan tests green; no new secret findings",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Security / secret scan status",
           "name": "security_scan",
@@ -1015,6 +1113,8 @@
         {
           "baseline": null,
           "calculation": "count plan entries",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Active OKR weekly plan items",
           "name": "okr_plan_items",
@@ -1038,6 +1138,8 @@
         {
           "baseline": 0.0,
           "calculation": "sum of paid_profit_usd_sum, 28d",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LIVE",
           "meaning": "Affiliate revenue (Travelpayouts, live)",
           "name": "revenue",
@@ -1054,6 +1156,8 @@
         {
           "baseline": 0,
           "calculation": "sum of paid_actions_count, 28d",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LIVE",
           "meaning": "Affiliate orders / conversions",
           "name": "orders_conversions",
@@ -1070,6 +1174,8 @@
         {
           "baseline": 0.0,
           "calculation": "sum of paid_profit_usd_sum (TP commission), 28d",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LIVE",
           "meaning": "Affiliate commission earned",
           "name": "commission",
@@ -1086,6 +1192,8 @@
         {
           "baseline": 0.0,
           "calculation": "revenue / pageviews * 1000 (28d)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LIVE",
           "meaning": "Revenue per 1000 pageviews",
           "name": "rpm",
@@ -1102,6 +1210,8 @@
         {
           "baseline": 0.0,
           "calculation": "revenue / sessions * 1000 (28d)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LIVE",
           "meaning": "Revenue per 1000 sessions",
           "name": "revenue_per_1000_sessions",
@@ -1125,6 +1235,8 @@
         {
           "baseline": 0,
           "calculation": "sum clicks from searchanalytics",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC clicks, 28d window (query-level baseline)",
           "name": "gsc_clicks_28d",
@@ -1141,6 +1253,8 @@
         {
           "baseline": 0,
           "calculation": "sum impressions from searchanalytics",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC impressions, 28d window (query-level baseline)",
           "name": "gsc_impressions_28d",
@@ -1157,6 +1271,8 @@
         {
           "baseline": 0.0,
           "calculation": "clicks / impressions * 100",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC CTR, 28d window",
           "name": "gsc_ctr_28d",
@@ -1173,6 +1289,8 @@
         {
           "baseline": null,
           "calculation": "average position from searchanalytics",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC average position, 28d window",
           "name": "gsc_avg_position_28d",
@@ -1189,6 +1307,8 @@
         {
           "baseline": null,
           "calculation": "GSC UI index count",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Pages indexed per GSC UI snapshot",
           "name": "indexed_pages",
@@ -1205,6 +1325,8 @@
         {
           "baseline": null,
           "calculation": "GSC UI index count",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Pages not indexed per GSC UI snapshot",
           "name": "not_indexed_pages",
@@ -1221,6 +1343,8 @@
         {
           "baseline": null,
           "calculation": "count of inspected URLs",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "URLs inspected by URL Inspection API",
           "name": "inspected_urls",
@@ -1237,6 +1361,8 @@
         {
           "baseline": null,
           "calculation": "count verdict == PASS",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "URLs with verdict PASS",
           "name": "inspection_pass",
@@ -1253,6 +1379,8 @@
         {
           "baseline": 3,
           "calculation": "sum clicks_28d over inventory",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC page-level clicks, 28d window (inventory sum)",
           "name": "page_level_clicks_28d",
@@ -1269,6 +1397,8 @@
         {
           "baseline": 1168,
           "calculation": "sum impressions_28d over inventory",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "GSC page-level impressions, 28d window",
           "name": "page_level_impressions_28d",
@@ -1285,6 +1415,8 @@
         {
           "baseline": null,
           "calculation": "delta of indexed page set vs prior snapshot",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Pages newly indexed this period",
           "name": "pages_newly_indexed",
@@ -1301,6 +1433,8 @@
         {
           "baseline": null,
           "calculation": "delta of impressions/position vs prior snapshot",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Pages losing visibility this period",
           "name": "pages_losing_visibility",
@@ -1317,6 +1451,8 @@
         {
           "baseline": null,
           "calculation": "top 3 rows by opportunity_score",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Top content opportunities by score",
           "name": "top_opportunities",
@@ -1362,6 +1498,8 @@
         {
           "baseline": null,
           "calculation": "count pilot schedule rows",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "GROWTH-29 social pilot scheduled slots (retired; superseded by social-engine-daily)",
           "name": "pilot_slots",
@@ -1378,6 +1516,8 @@
         {
           "baseline": null,
           "calculation": "unique dates in pilot schedule",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "GROWTH-29 pilot scheduling window (days)",
           "name": "pilot_days",
@@ -1394,6 +1534,8 @@
         {
           "baseline": null,
           "calculation": "count platform=pinterest rows",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Pinterest slots in pilot (2/day target)",
           "name": "pilot_pinterest_slots",
@@ -1410,6 +1552,8 @@
         {
           "baseline": null,
           "calculation": "count platform=ig rows",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Instagram slots in pilot (1/day target)",
           "name": "pilot_ig_slots",
@@ -1426,6 +1570,8 @@
         {
           "baseline": null,
           "calculation": "group by status",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Pilot slots by approval status",
           "name": "pilot_statuses",
@@ -1442,6 +1588,8 @@
         {
           "baseline": null,
           "calculation": "count inventory items",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Social asset inventory items",
           "name": "inventory_items",
@@ -1458,6 +1606,8 @@
         {
           "baseline": null,
           "calculation": "group by platform",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "LOCAL",
           "meaning": "Inventory items by platform",
           "name": "inventory_by_platform",
@@ -1479,6 +1629,8 @@
         {
           "baseline": 0,
           "calculation": "count status=已发布",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "CACHED",
           "meaning": "Social posts actually published",
           "name": "posts_published_social",
@@ -1495,6 +1647,8 @@
         {
           "baseline": null,
           "calculation": "sum impressions from funnel (NULL until platform metrics)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Social impressions (measured)",
           "name": "social_impressions",
@@ -1511,6 +1665,8 @@
         {
           "baseline": null,
           "calculation": "sum clicks from funnel (NULL until platform metrics)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Social clicks to website (measured)",
           "name": "social_clicks",
@@ -1527,6 +1683,8 @@
         {
           "baseline": null,
           "calculation": "GA4 sessionSource=social breakdown (NULL until GA4 data)",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Website sessions from social (measured)",
           "name": "social_website_sessions",
@@ -1552,6 +1710,8 @@
         {
           "baseline": null,
           "calculation": "GA4 activeUsers, 28d window",
+          "contaminated_source": true,
+          "contamination_note": "线上同一页面同时加载 2 个 GA4 measurement ID（G-GECBME3YVJ, G-P6BH500VBK），每个 page_view 被双计，GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）均为双计数值，不可作为决策依据。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "data_source_type": "LIVE",
           "meaning": "GA4 unique users, 28d window",
           "name": "users_28d",
@@ -1559,7 +1719,7 @@
           "source_age_days": 1,
           "source_observed_date": "2026-09-19",
           "stale_source": false,
-          "status": "OK",
+          "status": "CONTAMINATED_SOURCE",
           "unit": "users",
           "update_frequency": "daily",
           "valid_period": "2026-08-24..2026-09-19",
@@ -1568,6 +1728,8 @@
         {
           "baseline": 162,
           "calculation": "GA4 totalSessions, 28d window",
+          "contaminated_source": true,
+          "contamination_note": "线上同一页面同时加载 2 个 GA4 measurement ID（G-GECBME3YVJ, G-P6BH500VBK），每个 page_view 被双计，GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）均为双计数值，不可作为决策依据。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "data_source_type": "CACHED",
           "meaning": "GA4 sessions, 28d window",
           "name": "sessions_28d",
@@ -1575,7 +1737,7 @@
           "source_age_days": 34,
           "source_observed_date": "2026-08-17",
           "stale_source": true,
-          "status": "STALE_SOURCE",
+          "status": "CONTAMINATED_SOURCE",
           "unit": "sessions",
           "update_frequency": "daily",
           "valid_period": "2026-07-20..2026-08-16",
@@ -1584,6 +1746,8 @@
         {
           "baseline": 365,
           "calculation": "GA4 totalPageviews, 28d window",
+          "contaminated_source": true,
+          "contamination_note": "线上同一页面同时加载 2 个 GA4 measurement ID（G-GECBME3YVJ, G-P6BH500VBK），每个 page_view 被双计，GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）均为双计数值，不可作为决策依据。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "data_source_type": "CACHED",
           "meaning": "GA4 pageviews, 28d window",
           "name": "pageviews_28d",
@@ -1591,7 +1755,7 @@
           "source_age_days": 34,
           "source_observed_date": "2026-08-17",
           "stale_source": true,
-          "status": "STALE_SOURCE",
+          "status": "CONTAMINATED_SOURCE",
           "unit": "pageviews",
           "update_frequency": "daily",
           "valid_period": "2026-07-20..2026-08-16",
@@ -1600,6 +1764,8 @@
         {
           "baseline": null,
           "calculation": "GA4 engagedSessions 134 / sessions 366",
+          "contaminated_source": true,
+          "contamination_note": "线上同一页面同时加载 2 个 GA4 measurement ID（G-GECBME3YVJ, G-P6BH500VBK），每个 page_view 被双计，GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）均为双计数值，不可作为决策依据。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "data_source_type": "LIVE",
           "meaning": "GA4 engagement rate, 28d window",
           "name": "engagement_rate_28d",
@@ -1607,7 +1773,7 @@
           "source_age_days": 1,
           "source_observed_date": "2026-09-19",
           "stale_source": false,
-          "status": "OK",
+          "status": "CONTAMINATED_SOURCE",
           "unit": "%",
           "update_frequency": "daily",
           "valid_period": "2026-08-24..2026-09-19",
@@ -1616,6 +1782,8 @@
         {
           "baseline": null,
           "calculation": "group by sessionDefaultChannelGroup",
+          "contaminated_source": false,
+          "contamination_note": "",
           "data_source_type": "NOT_AVAILABLE",
           "meaning": "Sessions by default channel group, 28d window",
           "name": "source_channel_mix",
@@ -1645,7 +1813,11 @@
     "affiliate_funnel.outbound_rate: sample below guard",
     "affiliate_funnel.outbound_success: sample below guard",
     "seo_gsc.gsc_ctr_28d: sample below guard",
-    "seo_gsc.page_level_clicks_28d: sample below guard"
+    "seo_gsc.page_level_clicks_28d: sample below guard",
+    "traffic.engagement_rate_28d: GA4 double-counted source",
+    "traffic.pageviews_28d: GA4 double-counted source",
+    "traffic.sessions_28d: GA4 double-counted source",
+    "traffic.users_28d: GA4 double-counted source"
   ],
   "low_data_warning": true,
   "schema": "chinabound-2.0-kpi-snapshot",

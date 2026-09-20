@@ -289,3 +289,159 @@ class TestRealDataWiring:
         assert v["value"] == f"{counts['PASS']}/{counts['total']}"
         assert v["value"] != "31/13"  # 旧的分母
         assert b["editorial_persona_compliance"]["value"].count("/") == 1
+
+
+# --------------------------------------------------------------------------
+# GA4 双计污染：数值是真的测到了，但同一件事被记录了两次
+# --------------------------------------------------------------------------
+class TestAnalyticsContamination:
+    """线上实测（2026-09-20）：首页每次 page_view 同时 POST
+    /vo5w/ga/g/c?tid=G-P6BH500VBK 和 ?tid=G-GECBME3YVJ，两条共用同一个
+    gtm= 配置哈希与 cid。仓库里只有 G-GECBME3YVJ，另一个来自部署层。
+    users_28d / sessions_28d / pageviews_28d / engagement_rate_28d 因此全部双计。
+
+    盲区根因：predeploy_quality_gate 旧正则只匹配 gtag/js?id=（加载脚本），
+    第二个 ID 出现在 collect 路径 tid= 里 —— 所以 predeploy_quality.json
+    报 0 issues，闸门"通过"，双计在 main 上跑了 6 天无人拦截。
+    而那时这三个数正被当 LIVE KPI 上报。
+
+    注意区分三种状态，测试专门防串台：
+      NOT_AVAILABLE   —— 没有数据
+      STALE_SOURCE    —— 数据旧（时间问题）
+      CONTAMINATED_SOURCE —— 数据错（口径问题）
+    """
+
+    def _posture(self, tmp_path, contaminated, ids=("G-GECBME3YVJ", "G-P6BH500VBK")):
+        """写临时 posture 文件并把 loader 指向它 —— 测试结论不能依赖线上状态。
+        必须落在 BASE 内（loader 用相对路径），tmp_path 在仓库外用不了。"""
+        d = rke.BASE / ".pytest_tmp_posture"
+        d.mkdir(parents=True, exist_ok=True)
+        p = d / "analytics_posture.json"
+        p.write_text(json.dumps({
+            "checked_at": "2026-09-20T09:00:00+00:00",
+            "measurement_ids": list(ids),
+            "contaminated": contaminated,
+        }), encoding="utf-8")
+        self._tmp_dir = d
+        rke._ANALYTICS_POSTURE_PATH = str(p.relative_to(rke.BASE))
+
+    def teardown_method(self):
+        rke._ANALYTICS_CONTAMINATED = False
+        rke._ANALYTICS_CONTAMINATION_NOTE = ""
+        rke._ANALYTICS_POSTURE_PATH = "reports/quality/analytics_posture.json"
+        d = getattr(self, "_tmp_dir", None)
+        if d is not None:
+            for f in d.glob("*"):
+                f.unlink()
+            try:
+                d.rmdir()
+            except OSError:
+                pass
+
+    def test_is_ga4_source_distinguishes_ga4_from_others(self):
+        assert rke._is_ga4_source(
+            "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)")
+        assert rke._is_ga4_source("GA4 user dimension not persisted")
+        assert not rke._is_ga4_source(
+            "reports/revenue/REVENUE_DASHBOARD.md (GA4_API fetch 2026-08-17)") is None
+        assert not rke._is_ga4_source(
+            "reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)")
+        assert not rke._is_ga4_source("git log -- content/posts")
+
+    def test_clean_posture_does_not_touch_status(self):
+        """没有污染报告时，GA4 KPI 的行为与改动前完全一致。"""
+        rke._ANALYTICS_CONTAMINATED = False
+        k = rke._kpi("users_28d", "m", 246, "users", "LIVE",
+                     "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
+                     "c", "daily")
+        assert k["status"] == "OK"
+        assert k["contaminated_source"] is False
+        assert k["contamination_note"] == ""
+
+    def test_contaminated_marks_ga4_kpi(self):
+        rke._ANALYTICS_CONTAMINATED = True
+        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        k = rke._kpi("users_28d", "m", 246, "users", "LIVE",
+                     "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
+                     "c", "daily")
+        assert k["status"] == "CONTAMINATED_SOURCE"
+        assert k["contaminated_source"] is True
+        assert "双 GA4" in k["contamination_note"]
+        # 数值必须保留：它是有用的，只是不能当决策依据
+        assert k["value"] == 246
+
+    def test_contamination_ignores_non_ga4_sources(self):
+        """GSC/git/CSV 来源的 KPI 不受影响 —— 污染范围必须精确。"""
+        rke._ANALYTICS_CONTAMINATED = True
+        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        for src in ("reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)",
+                    "git log -- content/posts",
+                    "reports/revenue/REV001_BASELINE.csv"):
+            k = rke._kpi("x", "m", 1, "n", "LOCAL", src, "c", "daily")
+            assert k["status"] == "OK", src
+            assert k["contaminated_source"] is False, src
+
+    def test_contamination_wins_over_stale(self):
+        """陈旧是「数老」，污染是「数错」。两个都有时以污染为准。"""
+        rke._set_as_of(date(2026, 9, 20))
+        rke._ANALYTICS_CONTAMINATED = True
+        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        k = rke._kpi("old", "m", 69, "n", "CACHED",
+                     "reports/real_data/ga4_real_data.json (GA4 API pull 2026-08-01)",
+                     "c", "daily")
+        assert k["stale_source"] is True
+        assert k["status"] == "CONTAMINATED_SOURCE"
+
+    def test_contamination_does_not_clobber_insufficient_sample(self):
+        """不能覆盖更强的「没有数据」信号 —— 与上一轮 STALE_SOURCE 同一防串台。"""
+        rke._ANALYTICS_CONTAMINATED = True
+        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        k = rke._kpi("x", "m", 0, "n", "LIVE",
+                     "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
+                     "c", "daily", status="INSUFFICIENT_SAMPLE")
+        assert k["status"] == "INSUFFICIENT_SAMPLE"
+
+    def test_low_data_reasons_survives_contamination_marking(self, tmp_path):
+        """最关键的回归：上一轮 STALE_SOURCE 踩过这个坑 —— 状态被覆盖后
+        low_data_reasons 从 8 静默掉到 0，日报反而显得更"健康"。"""
+        self._posture(tmp_path, contaminated=True)
+        snap = rke.build_snapshot(date(2026, 8, 17))
+        contaminated = [
+            k["name"] for dom in snap["domains"].values()
+            for k in dom.get("kpis", []) if k.get("contaminated_source")
+        ]
+        assert contaminated, "临时 posture 已声明污染，但没有任何 KPI 被标记"
+        assert any("GA4 double-counted" in r for r in snap["low_data_reasons"]), (
+            f"污染 KPI {contaminated} 未进入 low_data_reasons")
+
+    def test_snapshot_exposes_contamination_block_clean(self, tmp_path):
+        """干净的 posture 下，污染块存在且为空。"""
+        self._posture(tmp_path, contaminated=False)
+        snap = rke.build_snapshot(date(2026, 8, 17))
+        assert "analytics_contamination" in snap
+        assert snap["analytics_contamination"]["contaminated"] is False
+        assert snap["analytics_contamination"]["affected_kpis"] == []
+
+    def test_snapshot_exposes_contamination_block_dirty(self, tmp_path):
+        """脏 posture 下，四个 GA4 流量 KPI 必须全部被列出。"""
+        self._posture(tmp_path, contaminated=True)
+        snap = rke.build_snapshot(date(2026, 8, 17))
+        ac = snap["analytics_contamination"]
+        assert ac["contaminated"] is True
+        assert set(ac["affected_kpis"]) == {
+            "users_28d", "sessions_28d", "pageviews_28d", "engagement_rate_28d"}
+        assert ac["note"]
+
+    def test_missing_posture_file_is_not_contamination(self):
+        """posture 文件不存在（site_health 还没跑过）时必须判为无污染 ——
+        缺文件不是「坏了」，不能把正常站点标成污染。"""
+        rke._ANALYTICS_POSTURE_PATH = ".pytest_tmp_posture/does_not_exist.json"
+        snap = rke.build_snapshot(date(2026, 8, 17))
+        assert snap["analytics_contamination"]["contaminated"] is False
+        assert snap["analytics_contamination"]["affected_kpis"] == []
+        # 四个 GA4 KPI 回归正常状态
+        t = {k["name"]: k for k in snap["domains"]["traffic"]["kpis"]}
+        assert all(k["contaminated_source"] is False
+                   for k in t.values() if k["name"].endswith("28d"))
+
+

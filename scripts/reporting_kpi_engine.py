@@ -218,6 +218,63 @@ def _set_as_of(as_of):
     _AS_OF = as_of
 
 
+_ANALYTICS_CONTAMINATED = False
+_ANALYTICS_CONTAMINATION_NOTE = ""
+
+# posture 文件路径。抽成变量是为了让测试能指向临时文件，
+# 否则 build_snapshot() 会去读线上真实文件，测试结论就取决于线上状态。
+_ANALYTICS_POSTURE_PATH = "reports/quality/analytics_posture.json"
+
+
+def _is_ga4_source(source):
+    """判断一个 KPI 的数值是否来自 GA4（会被双 GA4 污染的那一类）。"""
+    s = (source or "").lower()
+    return ("ga4_real_data" in s) or ("ga4_api" in s) or ("ga4 " in s)
+
+
+def _load_analytics_contamination():
+    """读 reports/quality/analytics_posture.json，判断 GA4 来源 KPI 是否被双计污染。
+
+    线上实测（2026-09-20）：首页每次 page_view 同时 POST
+        /vo5w/ga/g/c?tid=G-P6BH500VBK   和   /vo5w/ga/g/c?tid=G-GECBME3YVJ
+    两条共用同一个 gtm= 配置哈希与 cid，即同一配置里的两个目的地。
+    页面 HTML 里只有 G-GECBME3YVJ（hugo.toml），双计来自 Google 服务端：
+    gtag.js?id=G-GECBME3YVJ 返回的 GTM 容器载荷里 __dest_ga 有两个
+    destinationId，且每个事件 tag 都成对复制了。即 Google Tag 配了
+    两个目的地。这是 Google 控制台的配置问题，仓库里改代码修不了。
+    因此 users_28d / sessions_28d / pageviews_28d / engagement_rate_28d 全部双计。
+
+    注意：这不是"数据缺失"。数值是从 GA4 API 真拉下来的，问题是同一件事被
+    记录了两次。所以单独用 CONTAMINATED_SOURCE 表达，不复用 NOT_AVAILABLE，
+    也不复用 STALE_SOURCE（陈旧是时间问题，污染是口径问题）。
+
+    之前这个缺陷的盲区：predeploy_quality_gate 只匹配 gtag/js?id=（加载脚本），
+    而第二个 ID 出现在 collect 路径 tid= 里，所以 predeploy_quality.json 报 0
+    issues，闸门"通过"，双计在 main 上跑了 6 天无人拦截。
+    site_health_agent.check_analytics_measurement_ids() 每次运行刷新这个文件。
+    """
+    global _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE
+    path = BASE / _ANALYTICS_POSTURE_PATH
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = False, ""
+        return False, ""
+    if not data.get("contaminated"):
+        _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = False, ""
+        return False, ""
+    ids = ", ".join(data.get("measurement_ids") or [])
+    checked = (data.get("checked_at") or "?")[:10]
+    note = (f"线上同一页面同时加载 {len(data.get('measurement_ids') or [])} 个 "
+            f"GA4 measurement ID（{ids}），每个 page_view 被双计，"
+            f"GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / "
+            f"engagement_rate_28d）均为双计数值，不可作为决策依据。"
+            f"检测于 {checked}；根因在 Google 控制台的 tag 配置"
+            f"（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。")
+    _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = True, note
+    return True, note
+
+
 DATE_RE = re.compile(r"(20\d{2})-(\d{2})-(\d{2})")
 
 
@@ -328,6 +385,15 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
     # 覆盖会让 low_data_reasons 静默归零，日报反而更"健康"。
     if stale and status in (None, "OK"):
         status = "STALE_SOURCE"
+    # CONTAMINATED_SOURCE：数值真的测到了，但测量口径被双 GA4 污染。
+    # 比 STALE_SOURCE 更严重（陈旧是"数老"，污染是"数错"），所以能覆盖它；
+    # 但仍不能覆盖 INSUFFICIENT_SAMPLE / NOT_AVAILABLE（那是"没有数据"）。
+    contaminated = bool(
+        _ANALYTICS_CONTAMINATED and _is_ga4_source(source)
+        and status in (None, "OK", "STALE_SOURCE")
+    )
+    if contaminated:
+        status = "CONTAMINATED_SOURCE"
     return {
         "name": name,
         "meaning": meaning,
@@ -343,6 +409,8 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
         "source_observed_date": obs_date,
         "source_age_days": obs_age,
         "stale_source": stale,
+        "contaminated_source": contaminated,
+        "contamination_note": _ANALYTICS_CONTAMINATION_NOTE if contaminated else "",
     }
 
 
@@ -1326,12 +1394,20 @@ def low_data_reasons(snapshot: dict) -> list:
             reasons.append(f"experiments.{exp['experiment_id']}: observation < 28d or clicks < 20")
     if snapshot["domains"]["revenue"]["kpis"][0]["value"] is None:
         reasons.append("revenue: no affiliate revenue API (REVENUE_NOT_AVAILABLE)")
+    # CONTAMINATED_SOURCE 必须进 low_data_reasons —— 否则日报会拿到一个
+    # "看起来干净"的双计数值继续讲。上一轮 STALE_SOURCE 踩过同一个坑：
+    # 状态被覆盖后 low_data_reasons 从 8 静默掉到 0，日报反而更"健康"。
+    for domain, dom in snapshot["domains"].items():
+        for k in dom.get("kpis", []):
+            if k.get("status") == "CONTAMINATED_SOURCE":
+                reasons.append(f"{domain}.{k['name']}: GA4 double-counted source")
     return sorted(set(reasons))
 
 
 def build_snapshot(as_of=None) -> dict:
     as_of = as_of or date.today()
     _set_as_of(as_of)
+    _load_analytics_contamination()
     traffic = build_traffic()
     seo = build_seo_gsc()
     content = build_content(as_of)
@@ -1371,6 +1447,15 @@ def build_snapshot(as_of=None) -> dict:
     }
     snapshot["low_data_reasons"] = low_data_reasons(snapshot)
     snapshot["stale_sources"] = stale_sources(snapshot)
+    snapshot["analytics_contamination"] = {
+        "contaminated": _ANALYTICS_CONTAMINATED,
+        "note": _ANALYTICS_CONTAMINATION_NOTE,
+        "affected_kpis": [
+            k["name"] for domain, dom in snapshot["domains"].items()
+            for k in dom.get("kpis", [])
+            if k.get("contaminated_source")
+        ],
+    }
     return snapshot
 
 
