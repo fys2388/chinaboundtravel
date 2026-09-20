@@ -89,7 +89,7 @@ The Chinese tea ceremony is a beautiful and intricate ritual that has been passe
 ### The Preparation
 The first step in the Chinese tea ceremony is to prepare the tea set. This usually includes a teapot (preferably a clay teapot for some types of tea), cups, a tea tray, a tea scoop, and a tea strainer. The tea set should be clean and dry before use.
 
-Next, you need to choose the right tea. Different teas require different brewing methods and temperatures. For example, green tea is a popular brewed with water that is around 70-80 degrees Celsius, while black tea can be brewed with boiling water.
+Next, you need to choose the right tea. Different teas require different brewing methods and temperatures. For example, green tea is best brewed with water that is around 70-80 degrees Celsius, while black tea can be brewed with boiling water.
 
 ### The Brewing Process
 Once you have chosen the tea, it's time to start brewing. First, rinse the tea leaves with hot water. This helps to remove any dust or impurities and also wakes up the tea leaves. Then, pour the appropriate amount of hot water over the tea leaves and let it steep for the recommended time. The steeping time can vary depending on the type of tea and your personal taste.

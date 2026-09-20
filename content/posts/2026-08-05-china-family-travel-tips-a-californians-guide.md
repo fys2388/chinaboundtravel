@@ -69,7 +69,7 @@ Taxis are also available, but they can be a bit more expensive, especially durin
 Buses are another option, but they can be a bit more crowded and slower than the subway. However, they can be a great way to see the city and get a feel for the local culture. Just make sure to have exact change or a bus card.
 
 ### Traveling Between Cities
-If you want to travel between cities, your a popular bet is to take the high-speed rail. China has an extensive high-speed rail network that connects major cities across the country. It's fast, comfortable, and convenient. You can book your tickets online or at the train station. Just make sure to arrive at the station early and bring your passport or other valid identification.
+If you want to travel between cities, your best bet is to take the high-speed rail. China has an extensive high-speed rail network that connects major cities across the country. It's fast, comfortable, and convenient. You can book your tickets online or at the train station. Just make sure to arrive at the station early and bring your passport or other valid identification.
 
 If you're on a budget, you can also take the regular train. However, it can be a bit slower and less comfortable than the high-speed rail. You can also consider flying, but it can be more expensive, especially if you book your tickets last minute.
 

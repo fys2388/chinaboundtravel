@@ -172,13 +172,13 @@ The Yuanyang rice terraces were carved into the Ailao Mountains by the Hani peop
 **Three Main Viewing Platforms:**
 
 - **Duoyishu ()** — The sunrise platform. Terraces face east at around 1,800 meters altitude. The sun rises behind the mountains and illuminates the flooded paddies layer by layer. Arrive by 6:30 AM (even earlier in peak season) to get a spot on the main viewing deck.
-- **Bada ()** — The sunset platform. Faces west, offering the widest panorama of the terraced valley. a popular visited between 5:00-6:30 PM depending on the season.
+- **Bada ()** — The sunset platform. Faces west, offering the widest panorama of the terraced valley. Best visited between 5:00-6:30 PM depending on the season.
 - **Qingkou ()** — An all-day platform within walking distance of Xinjie town. Less dramatic than the other two, but the surrounding Hani village and forest setting make it the most culturally immersive.
 
 **Practical Details:**
 
 - **Ticket**: ¥100 (~€13), valid for one day, covers all three main viewing platforms.
-- **a popular season**: November through April (flooded paddies = mirror reflections). December to February is peak photography season.
+- **Best season**: November through April (flooded paddies = mirror reflections). December to February is peak photography season.
 - **Accommodation**: Xinjie town has guesthouses from ¥80-200/night (~€10-25). The closest options to Duoyishu are pricier (¥150-300) but save you the early morning drive.
 - **Getting around**: Hire a local driver for ¥200-300/day (~€25-38) to visit all three platforms. Shared minivans from Xinjie to individual platforms cost ¥15-30 per ride.
 

@@ -50,7 +50,7 @@ Here's the practical stuff, because we know you need it:
 
 one of the popular moment of many travelers' days isn't even the pandas. It's watching a group of Chinese tourists—grandparents, parents, and a toddler—all staring at a panda that was methodically peeling a bamboo stalk. The toddler pointed and said, "Mom, it's so lazy!" The grandfather laughed and said, "Just like your dad." Everyone cracked up. For a second, visitors forget they're foreigners. They're just another person in a crowd of panda-worshippers.
 
-So go. Take the flight. Wake up early. Don't try to hug one. And if you see a panda sleeping on a branch, just know: it's living its a popular life. You should too. While you're in Chengdu, don't miss our [guide to Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) — it's the city's other great obsession.
+So go. Take the flight. Wake up early. Don't try to hug one. And if you see a panda sleeping on a branch, just know: it's living its best life. You should too. While you're in Chengdu, don't miss our [guide to Sichuan hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) — it's the city's other great obsession.
 
 ### Further Reading
 

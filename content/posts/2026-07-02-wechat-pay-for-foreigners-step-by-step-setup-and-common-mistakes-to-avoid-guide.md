@@ -186,7 +186,7 @@ Short answer: **both**, but in this order. Here is a comparison based on common 
 | Transfer to other users | Yes (most popular in China) | Yes |
 | English interface | Yes | Yes |
 | Setup difficulty | Moderate (Tour Card step) | Easy |
-| a popular for | Social payments, Mini Programs, daily use | Online shopping, larger merchants |
+| Best for | Social payments, Mini Programs, daily use | Online shopping, larger merchants |
 
 **Our recommendation:** Set up WeChat Pay first because of Mini Programs — you can book high-speed train tickets, order food delivery, and access hundreds of services directly within WeChat. Then add Alipay as your backup for merchants that only accept Alipay (some small restaurants and certain online platforms). For the full Alipay setup walkthrough, see our [step-by-step Alipay guide](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/).
 

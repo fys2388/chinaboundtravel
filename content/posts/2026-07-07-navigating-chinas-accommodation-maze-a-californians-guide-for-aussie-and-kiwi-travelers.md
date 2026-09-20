@@ -64,7 +64,7 @@ However, like hostels and guesthouses, budget hotels can vary in quality. Make s
 {{< soft-recommend partner="esim" topic="visa" placement="article_mid_2" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
-If you're looking for a truly unforgettable experience, staying in a luxury hotel is the way to go. China has some of a popular luxury hotels in the world, offering world-class amenities and service. From five-star resorts in the mountains to high-end hotels in the city, there's something for every taste and budget.
+If you're looking for a truly unforgettable experience, staying in a luxury hotel is the way to go. China has some of the most popular luxury hotels in the world, offering world-class amenities and service. From five-star resorts in the mountains to high-end hotels in the city, there's something for every taste and budget.
 
 One of the advantages of staying in a luxury hotel is that you can expect to be treated like a king or queen. The staff will go out of their way to make sure that your stay is comfortable and enjoyable. You can also expect to have access to a wide range of amenities, such as a spa, a fitness center, a swimming pool, and a restaurant.
 

@@ -39,7 +39,7 @@ Let's start with the basics: greetings. In China, it's common to shake hands whe
 
 Another important aspect of Chinese culture is food. China is known for its delicious cuisine, but there are a few things to keep in mind when dining out. First of all, it's polite to wait for the host or eldest person to start eating before you dig in. And when using chopsticks, avoid pointing them at people or using them to stir your food. Instead, use them to pick up your food and place it in your bowl.
 
-When it comes to payment, it's common for the host to pay for the meal. But if you want to offer to pay, it's a popular to do so in a subtle way. For example, you could say something like, "Let me get this one" or "It's my treat." And if the host insists on paying, it's polite to thank them and offer to pay next time.
+When it comes to payment, it's common for the host to pay for the meal. But if you want to offer to pay, it's best to do so in a subtle way. For example, you could say something like, "Let me get this one" or "It's my treat." And if the host insists on paying, it's polite to thank them and offer to pay next time.
 
 Now, let's talk about transportation. China has an extensive transportation system, including buses, subways, trains, and planes. When using public transportation, it's important to be polite and respectful of others. For example, give up your seat to elderly people, pregnant women, or people with disabilities. And when boarding a train or plane, make sure to have your ticket and identification ready.
 

@@ -79,11 +79,11 @@ For a complete breakdown of the 12 most common China travel scams and exactly ho
 
 August weather in China is split down the middle: the north and east are hot, humid, and rainy (typhoon season hits the southeast coast hard), while the southwest, northwest, and northeast are pleasant and dry. Here are our three top recommended itineraries for this month:
 
-**Yunnan two-week loop (a popular weather, lowest crowds):** Fly into Kunming → Dali (2 nights, lake views, old town) → Lijiang (3 nights, including day trip to Tiger Leaping Gorge) → Shangri-La (3 nights, Tibetan culture, Potatso National Park) → Xishuangbanna (3 nights, tropical rainforest, Dai villages) → Fly out of Jinghong. The Yunnan chapter in the 2026.08 guide includes hotel recommendations for every budget and a day-by-day itinerary with transport times.
+**Yunnan two-week loop (best weather, lowest crowds):** Fly into Kunming → Dali (2 nights, lake views, old town) → Lijiang (3 nights, including day trip to Tiger Leaping Gorge) → Shangri-La (3 nights, Tibetan culture, Potatso National Park) → Xishuangbanna (3 nights, tropical rainforest, Dai villages) → Fly out of Jinghong. The Yunnan chapter in the 2026.08 guide includes hotel recommendations for every budget and a day-by-day itinerary with transport times.
 
-**Gansu Silk Road (a popular for photography and history):** Fly into Lanzhou → Zhangye (rainbow mountains, 2 nights) → Jiayuguan (Great Wall end, 1 night) → Dunhuang (Mogao Caves + Crescent Lake, 3 nights) → Back to Lanzhou. Temperatures in Dunhuang hit 35°C+ during the day but drop to 15°C at night, so pack layers. This is one of the popular month for clear skies and dramatic desert photography.
+**Gansu Silk Road (best for photography and history):** Fly into Lanzhou → Zhangye (rainbow mountains, 2 nights) → Jiayuguan (Great Wall end, 1 night) → Dunhuang (Mogao Caves + Crescent Lake, 3 nights) → Back to Lanzhou. Temperatures in Dunhuang hit 35°C+ during the day but drop to 15°C at night, so pack layers. This is one of the popular month for clear skies and dramatic desert photography.
 
-**Chengdu + surrounding mountains (a popular for food and pandas):** 3 days Chengdu city (panda base, Jinli old street, tea houses, endless hotpot), then 2-3 days in the surrounding mountains - Emei Shan, Leshan Giant Buddha, or the new Wolong Shenshuping Panda Base. The [Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) from our food section will tell you exactly which Chengdu hotpot restaurants are worth the hype and which ones are tourist traps.
+**Chengdu + surrounding mountains (best for food and pandas):** 3 days Chengdu city (panda base, Jinli old street, tea houses, endless hotpot), then 2-3 days in the surrounding mountains - Emei Shan, Leshan Giant Buddha, or the new Wolong Shenshuping Panda Base. The [Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) from our food section will tell you exactly which Chengdu hotpot restaurants are worth the hype and which ones are tourist traps.
 
 ## August Reader Questions: Live Q&A Highlights
 
@@ -91,7 +91,7 @@ Every month, our editorial team hosts a live Q&A session for ChinaBound readers 
 
 **Q: Can I use Google Translate in China, or do I need to download a Chinese app?**
 
-A: Google Translate does NOT work in mainland China (no Google services do - not even Maps or Gmail). The two a popular translation apps that work without a VPN are Baidu Translate and DeepL's mobile app (download the offline Chinese language pack before you leave). If you have an iPhone, the built-in Apple Translate also works offline for Chinese. Our editorial team has a full breakdown of the [top apps for China travel](/posts/internet-connection-china-esim-vpn-guide/) in the internet connectivity guide - including which ones work without VPN and which ones  require it.
+A: Google Translate does NOT work in mainland China (no Google services do - not even Maps or Gmail). The two best translation apps that work without a VPN are Baidu Translate and DeepL's mobile app (download the offline Chinese language pack before you leave). If you have an iPhone, the built-in Apple Translate also works offline for Chinese. Our editorial team has a full breakdown of the [top apps for China travel](/posts/internet-connection-china-esim-vpn-guide/) in the internet connectivity guide - including which ones work without VPN and which ones  require it.
 
 **Q: How bad is the internet censorship for remote workers? Do I really need a VPN?**
 
@@ -131,7 +131,7 @@ If you have topics you'd like to see covered in a future update, reply to any of
 | Need | Solution | Link |
 |------|----------|------|
 | 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
+| ✈️ Flights | Best deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

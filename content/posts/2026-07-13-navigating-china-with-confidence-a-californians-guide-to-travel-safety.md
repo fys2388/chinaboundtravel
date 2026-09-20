@@ -33,7 +33,7 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 If you're planning a trip to China, you're in for an adventure of a lifetime! China is a vast and fascinating country with diverse landscapes, rich culture, and welcoming people. This guide shares practical travel safety tips and insights to help you make the most of your journey, based on official safety advisories, local regulations, and aggregated traveler feedback.
 
 ## Introduction
-China is a country with a rich history, culture, and natural beauty. From the bustling streets of Beijing to the serene landscapes of Guilin, there's something for everyone to discover. However, like any destination, it's important to take some precautions to ensure your safety and well-being. This guide shares practical tips and a popular practices for staying safe while traveling in China, compiled from official sources and verified traveler experiences.
+China is a country with a rich history, culture, and natural beauty. From the bustling streets of Beijing to the serene landscapes of Guilin, there's something for everyone to discover. However, like any destination, it's important to take some precautions to ensure your safety and well-being. This guide shares practical tips and best practices for staying safe while traveling in China, compiled from official sources and verified traveler experiences.
 
 ![A group of tourists exploring the Forbidden City in Beijing. The sun is shining, and the ancient buildings are surrounded by a crowd of people.](/img/china-dest/body/external_1e2c8ab6a242.jpg)
 

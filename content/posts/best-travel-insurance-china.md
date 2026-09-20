@@ -32,7 +32,7 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 <div style="padding: 1.25rem; background: #f0fdf4; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #dcfce7;">
   <h4 style="margin-top: 0; color: #166534;">✅ Editorial Top Pick for China</h4>
-  <p style="margin-bottom: 1rem; color: #1f2937;">SafetyWing — a popular balance of price and coverage for most travelers. Pay monthly, cancel anytime. <strong>Highly rated by travelers for 2+ years.</strong></p>
+  <p style="margin-bottom: 1rem; color: #1f2937;">SafetyWing — best balance of price and coverage for most travelers. Pay monthly, cancel anytime. <strong>Highly rated by travelers for 2+ years.</strong></p>
   {{< ab-cta test_id="safetywing-top" variant_a="Get a Free Quote in 2 Minutes →" variant_b="See Why Travelers Choose SafetyWing →" affiliate_key="safetywing" style="secondary" analytics_id="safetywing_top_pick" >}}
 </div>
 
@@ -102,7 +102,7 @@ Based on extensive research and aggregated traveler feedback, here's our compari
 
 ### Editor's Pick: SafetyWing Nomad Insurance
 
-⭐ **a popular for:** Digital nomads, long-term travelers, budget-conscious adventurers
+⭐ **Best for:** Digital nomads, long-term travelers, budget-conscious adventurers
 
 {{< ab-cta test_id="safetywing-cta" variant_a="Get SafetyWing Quote" variant_b="See Why Travelers Recommend It" affiliate_key="safetywing" style="secondary" analytics_id="safetywing_main" >}}
 
@@ -121,7 +121,7 @@ After extensive research and aggregated traveler feedback from 2+ years (and hel
 
 ### Runner-Up: World Nomads
 
-⭐ **a popular for:** Adventure travelers, extreme sports enthusiasts
+⭐ **Best for:** Adventure travelers, extreme sports enthusiasts
 
 {{< ab-cta test_id="worldnomads-cta" variant_a="Compare World Nomads" variant_b="Get a Quote" affiliate_key="worldnomads" style="outline" analytics_id="worldnomads_cta" >}}
 
@@ -140,14 +140,14 @@ World Nomads is the gold standard for adventure travel coverage:
 
 ### Top-rated for Seniors & Families: Allianz Global Assistance
 
-⭐ **a popular for:** Travelers over 60, families with pre-existing conditions
+⭐ **Best for:** Travelers over 60, families with pre-existing conditions
 
 {{< ab-cta test_id="allianz-cta" variant_a="Get Allianz Quote" variant_b="Compare Plans" affiliate_key="allianz" style="outline" analytics_id="allianz_cta" >}}
 
 Allianz offers some of one of the popular coverage for older travelers:
 
 - ✅ **Covers travelers of all ages** (including seniors)
-- ✅ **a popular pre-existing condition coverage**
+- ✅ **Best pre-existing condition coverage**
 - ✅ **Family plans available**
 - ❌ **Excludes adventure sports**
 - ❌ **Lower medical coverage limits** ($50,000)
@@ -165,9 +165,9 @@ Allianz offers some of one of the popular coverage for older travelers:
 | **Emergency Medical** | **$250,000** | $100,000 | $50,000 |
 | **Emergency Evacuation** | $100,000 | **$500,000** | **$500,000** |
 | **Adventure Sports** | ✅ Included | ✅ 100+ activities | ❌ Excluded |
-| **Pre-existing Conditions** | ⚠️ Limited | ❌ Not covered | ✅ a popular option |
+| **Pre-existing Conditions** | ⚠️ Limited | ❌ Not covered | ✅ Best option |
 | **Age Limit** | 69 | 69 | **No limit** |
-| **a popular For** | Budget + Long trips | Adventure sports | Seniors + Families |
+| **Best For** | Budget + Long trips | Adventure sports | Seniors + Families |
 | **Get Quote** | {{< ab-cta test_id="sw-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="safetywing" style="primary" analytics_id="safetywing_table" >}} | {{< ab-cta test_id="wn-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="worldnomads" style="outline" analytics_id="worldnomads_table" >}} | {{< ab-cta test_id="az-table" variant_a="Get Quote →" variant_b="Learn More →" affiliate_key="allianz" style="outline" analytics_id="allianz_table" >}} |
 
 <small>*Pricing and coverage based on a 30-year-old traveler on a standard plan. Refer to the official website for real-time quotes and full policy details.*</small>
@@ -188,7 +188,7 @@ If your government has issued a travel warning for China (currently not the case
 
 ### Reckless Behavior
 
-World Nomads puts it a popular: "Deliberately putting your life in danger is not covered."
+World Nomads puts it best: "Deliberately putting your life in danger is not covered."
 
 - Racing rental cars
 - Fighting with locals
@@ -210,7 +210,7 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 
 After 5 years of travel research and 2+ years of aggregated traveler feedback on SafetyWing, here's our advice:
 
-- 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — a popular overall value.
+- 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — best overall value.
 - 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.
 - 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/" rel="nofollow sponsored" target="_blank">Choose World Nomads</a>.
 

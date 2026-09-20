@@ -210,7 +210,7 @@ You've probably heard horror stories. Here's the honest truth after five years o
 - **Street food is generally safe.** High turnover means fresh ingredients. If a stall has a long queue of locals, it's safe. If food has been sitting out, skip it.
 - **Drink bottled or boiled water.** Tap water in China is not potable. Every restaurant serves boiled water or tea for free.
 - **Watch out for MSG (MSG/).** Many restaurants use MSG liberally. If you're sensitive, say *bù yào wei jing* (). Some restaurants now advertise "MSG-free."
-- **Go during peak hours.** Chinese food is a popular when fresh. Lunch (11:30 AM - 1:00 PM) and dinner (6:00 - 8:00 PM) are when dishes come straight from the wok.
+- **Go during peak hours.** Chinese food is best when fresh. Lunch (11:30 AM - 1:00 PM) and dinner (6:00 - 8:00 PM) are when dishes come straight from the wok.
 - **Carry toilet paper.** Public restrooms at street markets and small restaurants often don't supply it.
 
 ## Recommended 7-Day Food Itinerary

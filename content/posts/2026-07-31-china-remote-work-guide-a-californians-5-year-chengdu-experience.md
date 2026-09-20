@@ -111,7 +111,7 @@ So what are you waiting for? Start planning your China remote work adventure tod
 | Need | Solution | Link |
 |------|----------|------|
 | 🏨 Hotels | Compare prices across all platforms | {{< affiliate-hotel >}} |
-| ✈️ Flights | a popular deals on flights to China | {{< affiliate-flight >}} |
+| ✈️ Flights | Best deals on flights to China | {{< affiliate-flight >}} |
 | 🚗 Trains & Transport | Book trains and transfers | {{< affiliate-tour >}} |
 | 🛡️ Travel Insurance | Stay covered with SafetyWing | {{< affiliate-insurance >}} |
 | 📶 Internet / eSIM | Stay connected from arrival | {{< affiliate-esim >}} |

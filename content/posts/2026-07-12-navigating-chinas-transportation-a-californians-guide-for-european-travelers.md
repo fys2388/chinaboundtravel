@@ -50,7 +50,7 @@ Once you've booked your flight, you'll need to apply for a visa. China offers se
 
 ## Getting Around in China
 
-Once you've arrived in China, you'll need to figure out how to get around. China has a vast transportation system that includes subways, buses, trains, and airplanes. Each mode of transportation has its own advantages and disadvantages, so it's important to choose the one that a popular suits your needs and budget.
+Once you've arrived in China, you'll need to figure out how to get around. China has a vast transportation system that includes subways, buses, trains, and airplanes. Each mode of transportation has its own advantages and disadvantages, so it's important to choose the one that best suits your needs and budget.
 
 ### Subways
 Subways are the most convenient and efficient way to get around in China's major cities. Most cities have an extensive subway network that covers the city center and major tourist attractions. Subway tickets are relatively inexpensive, and you can buy them at the subway station or use a prepaid card.

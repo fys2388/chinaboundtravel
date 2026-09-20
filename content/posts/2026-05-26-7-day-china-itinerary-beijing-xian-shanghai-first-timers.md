@@ -79,7 +79,7 @@ Book your ticket through a reputable tour operator or directly at the Mutianyu s
 **Day 4  Terracotta Army**
 Arrive, drop bags at hotel near the South Gate. Go to the Terracotta Army before 9 AM or after 3 PM  it's less crowded and the afternoon light is better for photos.
 
-What no one tells you: The "a popular" warriors are in Pit 1. For the full history and practical tips, read our [Xi'an Terracotta Army guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
+What no one tells you: The "best" warriors are in Pit 1. For the full history and practical tips, read our [Xi'an Terracotta Army guide](/posts/xian-terracotta-army-history-discovery-and-insider-tips/). Don't spend all your time in the smaller pits. The bronze chariots on display are the real treasures.
 
 Budget tip: Eating near the museum is expensive and mediocre. Bring your own snacks or eat after you leave.
 

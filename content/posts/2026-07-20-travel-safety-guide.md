@@ -134,7 +134,7 @@ When it comes to restaurants, bigger isn't often better. Here's our recommended 
 
 1. **Check the ratings**: Use Dianping (China's Yelp) to read reviews
 2. **Look at the kitchen**: If the kitchen is visible and clean, that's a good sign
-3. **Ask locals**: "Zhe ge hao chi ma?" (Is this good?) is your a popular friend
+3. **Ask locals**: "Zhe ge hao chi ma?" (Is this good?) is your best friend
 4. **Start small**: Order one dish first, see how your stomach feels
 
 **YOU SHOULD:** often carry antacids and Imodium with you. You'll thank yourself later.
@@ -244,7 +244,7 @@ Based on extensive research and aggregated traveler feedback, here are the essen
 3. **Download [VPN](/posts/internet-connection-china-esim-vpn-guide/) apps**: Google, Facebook, and Instagram are blocked in China
 4. **Use translation apps**: WeChat Translate and Google Translate are lifesavers
 5. **Keep your phone charged**: You'll use it for maps, translation, and payments
-6. **Stay in well-connected areas**: Hotels near subway stations are your a popular bet
+6. **Stay in well-connected areas**: Hotels near subway stations are your best bet
 7. **Bargain like a pro**: Start at 50% and work your way up
 8. **Try everything once**: But trust your gut—if it looks sketchy, it probably is
 9. **Make local friends**: Locals will show you the real China and keep you safe

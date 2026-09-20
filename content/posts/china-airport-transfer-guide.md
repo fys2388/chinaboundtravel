@@ -47,7 +47,7 @@ Major international airports -- Beijing Capital (PEK), Beijing Daxing (PKX), Sha
 
 ## Airport Transfer Options Compared
 
-| Option | Cost | Speed | Luggage-friendly | a popular for |
+| Option | Cost | Speed | Luggage-friendly | Best for |
 |---|---|---|---|---|
 | **Airport express train** | Medium | Fastest | Yes | Business travelers, big bags |
 | **Metro** | Low | Slow | No | Budget travelers, light luggage |

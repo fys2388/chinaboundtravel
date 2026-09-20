@@ -60,7 +60,7 @@ The rest of this guide covers the three main options, city-by-city examples, and
 
 ## China Transportation Card Options Compared
 
-| Option | a popular for | Deposit | Works offline | City coverage |
+| Option | Best for | Deposit | Works offline | City coverage |
 |---|---|---|---|---|
 | **Metro IC card (physical)** | Multi-city trips, no-signal areas, frequent riders | Usually required, refundable | Yes | City and participating interconnect cities |
 | **Transit app (city official apps)** | Route planning plus payment | No | No | Single city or region |

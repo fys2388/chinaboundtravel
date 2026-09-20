@@ -108,10 +108,10 @@ Restaurant menus in delivery apps are actually easier than physical menus becaus
 
 Common menu sections:
 - ****  Signature dishes
-- ****  a popular sellers
+- ****  Top sellers
 - ****  New items
 - ****  Discounted items (check these first  restaurants put random items on sale)
-- ****  Single person set meals (a popular value)
+- ****  Single person set meals (best value)
 
 ### Adding to Cart & Ordering
 

@@ -68,7 +68,7 @@ Train numbers in China follow a letter-prefix system. Here is what matters to yo
 
 ### G, D, C -- Which One Should You Actually Book?
 
-For 95% of tourists, the answer is simple: **book whatever G train fits your schedule a popular**. G trains are the fastest, most frequent, and most comfortable option. D and C trains come into play on shorter or less-traveled routes where G trains do not run.
+For 95% of tourists, the answer is simple: **book whatever G train fits your schedule best**. G trains are the fastest, most frequent, and most comfortable option. D and C trains come into play on shorter or less-traveled routes where G trains do not run.
 
 ### Second Class vs First Class vs Business Class
 
@@ -110,7 +110,7 @@ Booking your first train ticket? Trip.com works in English, accepts internationa
 #### Recommended Booking Options for Foreign Travelers
 
 
-| Option | a popular for | Notes |
+| Option | Best for | Notes |
 
 |---|---|---|
 
@@ -190,7 +190,7 @@ Arriving by air? See the [China Airport Transfer Guide](/posts/china-airport-tra
 Didi is the dominant ride-hailing app in China, and it is what most expats use daily. Here is what you need to know:
 
 1. **Download the Didi app** and register with your phone number. The app has an English interface.
-2. **Link your payment method**: [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) or Alipay works a popular. Some Didi options now accept international cards directly.
+2. **Link your payment method**: [WeChat Pay](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) or Alipay works well. Some Didi options now accept international cards directly.
 3. **Choose your ride type**: "Express" (standard car) is budget-friendly. "Comfort" is slightly nicer. "Premier" is luxury. For most trips, Express is fine.
 4. **Set your destination in English or Chinese**. The app translates automatically for the driver.
 
@@ -198,7 +198,7 @@ Didi is the dominant ride-hailing app in China, and it is what most expats use d
 
 In tier-2 and tier-3 cities where Didi coverage is spottier, street taxis are still common. A few rules:
 
-- **often insist on the meter**. If the driver refuses, get out and find another taxi
+- **always insist on the meter**. If the driver refuses, get out and find another taxi
 - **Show the driver a screenshot of your destination in Chinese**. Even if you cannot speak Chinese, a map pin or address screenshot solves most communication problems
 - **Take a photo of the license plate** when you get in. This is your safeguard if anything goes wrong
 - **Expect to pay ¥10-15** for a short city ride, ¥30-50 for cross-town, and ¥80-150 from airport to city center
@@ -223,7 +223,7 @@ For tourists, biking is great in cities with flat terrain and dedicated bike lan
 
 ## Domestic Flights: When the Train Does Not Make Sense
 
-For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunming, Shanghai to Lhasa), domestic flights are your a popular bet. China has several airlines, with China Southern, Air China, and China Eastern being the largest.
+For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunming, Shanghai to Lhasa), domestic flights are your best bet. China has several airlines, with China Southern, Air China, and China Eastern being the largest.
 
 **Tips for booking domestic flights**:
 
@@ -237,7 +237,7 @@ For routes over 1,500 km without direct high-speed rail (e.g., Beijing to Kunmin
 
 ## Quick Reference: Which Transport for Which Trip?
 
-| Distance | a popular Option | Budget Option | Time Saved |
+| Distance | Best Option | Budget Option | Time Saved |
 |----------|------------|---------------|------------|
 | Within a city | Subway / Didi | Shared bike | Subway is fastest |
 | Neighboring cities (< 300 km) | High-speed train | Bus | Train wins by 2-3x |
@@ -257,7 +257,7 @@ After five years of living in China, here are the principles that matter most:
 1. **Set up WeChat Pay and Alipay before you arrive**. You will use them for subway gates, Didi, and train tickets. Our [WeChat Pay guide](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/) and [Alipay for Foreigners guide](/posts/alipay-for-foreigners-guide/) cover the full setup.
 2. **Download offline maps**. Google Maps works in China with a [VPN](/posts/internet-connection-china-esim-vpn-guide/), but Baidu Maps has better transit routing. Download your destination city offline in both apps.
 3. **Learn a few transport phrases**: "zhan tai" (platform), "che xiang" (carriage), "zuo wei" (seat). Station staff will appreciate the effort.
-4. **often carry your passport**. You need it for train boarding, hotel check-in, and some subway security checks.
+4. **always carry your passport**. You need it for train boarding, hotel check-in, and some subway security checks.
 5. **Book popular routes early**. Beijing-Shanghai and Chengdu-Chongqing sell out during holidays. During Chinese New Year and National Day (October 1-7), tickets can sell out within minutes of release.
 
 China's transportation system is genuinely world-class. Once you get past the initial learning curve, you will find it faster, cheaper, and more reliable than almost anything back home. The key is knowing which option to use and how to pay for it -- and now you do.
