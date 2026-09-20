@@ -27,7 +27,7 @@
     "type": "title_meta_optimization",
     "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
     "file": "144-hour-visa-free-transit-guide.md",
-    "current_title": "China 144 Hour Transit Visa: Complete Guide",
+    "current_title": "China 144 Hour Transit Visa 2026: Complete Guide",
     "current_meta": "{{< soft-recommend partner=\"esim\" topic=\"visa\" placement=\"articlemid1\" text=\"See eSIM options\" >}} Keeping your phone connected in China is easier with...",
     "priority": "medium",
     "priority_score": 2.14,
@@ -64,12 +64,11 @@
     "target": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
     "title": "ChinaBound Travel Guide 2026.09 Update",
     "issues": [
-      "内容不足（253词）",
-      "内链不足（1条）"
+      "内容不足（442词）"
     ],
     "priority": "medium",
-    "priority_score": 27.47,
-    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等; 增加3-5条相关内链，指向同主题的其他文章",
+    "priority_score": 15.58,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
@@ -78,12 +77,11 @@
     "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
     "title": "China Travel Guide: July 2026 Updates",
     "issues": [
-      "内容不足（409词）",
-      "内链不足（2条）"
+      "内容不足（486词）"
     ],
     "priority": "medium",
-    "priority_score": 25.91,
-    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等; 增加3-5条相关内链，指向同主题的其他文章",
+    "priority_score": 15.14,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
@@ -92,7 +90,7 @@
     "target": "2026-08-05-china-family-travel-tips-a-californians-guide.md",
     "title": "China Family Travel Tips: Mistakes to Avoid",
     "issues": [
-      "缺少内链"
+      "内链不足（1条）"
     ],
     "priority": "medium",
     "priority_score": 10.0,
