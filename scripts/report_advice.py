@@ -108,6 +108,16 @@ def generate_advice(data: dict, scope: str) -> list:
     advice = []
 
     # 1) 自然搜索占比（核心瓶颈）
+    # 排名感知：平均排名在 20 名外时，「改标题」是最小杠杆干预——标题优化
+    # 最好移动 1-3 个位置，从 34 名进到 Page 1 需要的是排名手段，不是措辞。
+    # 不区分会把排名问题包装成标题问题，诱导无谓的标题改写。
+    # gsc_avg_position 缺失时不猜测，回退原口径（不误报）。
+    _avg_pos = data.get("gsc_avg_position")
+    try:
+        _avg_pos = float(_avg_pos) if _avg_pos not in (None, "", "NULL", "NOT_AVAILABLE") else None
+    except (TypeError, ValueError):
+        _avg_pos = None
+    rank_blocked = _avg_pos is not None and _avg_pos >= 20
     organic, total = _channel_users(data, "organic")
     if users > 0:
         ratio = organic / users * 100
@@ -115,8 +125,14 @@ def generate_advice(data: dict, scope: str) -> list:
             advice.append({"icon": "🟠", "title": f"自然搜索仅 {organic:g}/{users:g} 人（{ratio:.0f}%）",
                            "detail": "搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）"})
         elif ratio < 30:
-            advice.append({"icon": "🟡", "title": f"自然搜索占比 {ratio:.0f}%",
-                           "detail": "搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）"})
+            if rank_blocked:
+                advice.append({"icon": "🟡", "title": f"自然搜索占比 {ratio:.0f}%（平均排名 {_avg_pos:g}）",
+                               "detail": "瓶颈是排名而非标题：平均排名在 20 名外，改标题最多移动 1-3 位，"
+                                         "无法进入 Page 1。优先修 canonical 冲突、补内链到已有排名的页、"
+                                         "并核实 Top 查询与该页事实是否对齐"})
+            else:
+                advice.append({"icon": "🟡", "title": f"自然搜索占比 {ratio:.0f}%",
+                               "detail": "搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）"})
     elif users == 0:
         advice.append({"icon": "🟠", "title": "本期无流量",
                        "detail": "检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200"})

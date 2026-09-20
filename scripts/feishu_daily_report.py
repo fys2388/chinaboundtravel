@@ -88,6 +88,47 @@ GITHUB_REPO = "fys2388/chinaboundtravel"
 
 
 SNAPSHOT_FILE = BLOG_ROOT / "reports" / "management" / "REPORTING_SNAPSHOT.json"
+# 实验「是否真的启动」的权威登记表：快照里的 status 会漂移，
+# 这个文件记录的是 CTA/横幅实际部署状态（start_date 非空才算启动）。
+EXPERIMENT_CONFIG_FILE = BLOG_ROOT / "static" / "experiments.json"
+
+
+def load_experiment_config() -> dict:
+    """读 static/experiments.json，返回 {experiment_id: {status, start_date}}。
+
+    用途：日报的「在跑 N 个」来自 REPORTING_SNAPSHOT.json，那份快照会漂移
+    ——实测里 4 个实验标 RUNNING + start_date 2026-08-16，但登记表里全是
+    PLANNED / start_date:null，样本数全空。照快照原样渲染会把 4 个从未启动
+    的实验当成「已观察 1 天」，误导「要不要动 CTA」的判断。
+    读不到/解析失败返回 {} —— 调用方退化为只看快照，不误报。
+    """
+    try:
+        cfg = json.loads(EXPERIMENT_CONFIG_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    out = {}
+    for e in cfg.get("experiments", []) or []:
+        eid = e.get("id") or e.get("experiment_id")
+        if eid:
+            out[eid] = {"status": e.get("status"), "start_date": e.get("start_date")}
+    return out
+
+
+def _effective_running(e: dict, cfg: dict) -> str:
+    """判定一个实验是否真的在跑。
+
+    快照说 RUNNING 但登记表说 PLANNED 或 start_date 为空 -> 幻影实验
+    （从未部署，样本不可能累积）。返回 "RUNNING" 或 "NOT_STARTED"。
+    只有快照与登记表一致说 RUNNING 且 start_date 非空，才算真在跑。
+    """
+    if e.get("status") != "RUNNING":
+        return e.get("status", "?")
+    entry = cfg.get(e.get("experiment_id") or "")
+    if entry is None:
+        return "RUNNING"  # 登记表没有这项，保持快照结论
+    if entry.get("status") in ("PLANNED", "PENDING") or not entry.get("start_date"):
+        return "NOT_STARTED"
+    return "RUNNING"
 
 
 def load_reporting_snapshot() -> dict:
@@ -225,13 +266,17 @@ def gsc_windows(now: datetime = None) -> dict:
     }
 
 
-def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total):
+def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total, window_days=2):
     """CI 状态文案：把「未运行」这个假声明拆成可区分的几种情况。
 
     原先三种互不相干的情况都渲染成「未运行」：Actions API 调用失败（token 无
     actions:read 权限 / 限流 / 网络）、仓库里没有该 workflow 的记录、以及当日
     确实没有已完成的 run。读者会以为工作流没执行，实际是状态没查出来——
     对一个以「自动化无需人工干预」为目标的日报，这类假声明比缺失更糟。
+
+    window_days：实际使用的完成窗口。原先硬编码「近 2 天」，但真实过滤条件
+    曾是「报告日当天」；周更工作流（weekly-blog-update.yml, cron 0 0 * * 1）
+    在非周一必然落空，日报于是每周 6 天把健康的周更渲染成「状态未知」。
     """
     if value is True:
         return "成功"
@@ -246,8 +291,8 @@ def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total):
     if paths_total is None:
         return "状态未知（未采集到记录）"
     if paths_total == 0:
-        return "状态未知（近 2 天无该 workflow 完成记录）"
-    return "状态未知（报告日无已完成 run）"
+        return f"状态未知（{window_days} 天内该 workflow 无任何完成记录）"
+    return f"状态未知（{window_days} 天内无已完成 run，可能是周期未到期）"
 
 
 class FeishuDailyReporter:
@@ -585,10 +630,12 @@ class FeishuDailyReporter:
         ci_token_missing = not os.environ.get("GITHUB_TOKEN")
         blog_state = _ci_state_str(gh_blog, ci_token_missing, data.get("gh_api_ok", True),
                                    data.get("gh_api_error") or "未知原因",
-                                   data.get("gh_blog_paths_total"))
+                                   data.get("gh_blog_paths_total"),
+                                   data.get("gh_blog_window_days", 2))
         report_state = _ci_state_str(gh_report, ci_token_missing, data.get("gh_api_ok", True),
                                      data.get("gh_api_error") or "未知原因",
-                                     data.get("gh_report_paths_total"))
+                                     data.get("gh_report_paths_total"),
+                                     data.get("gh_report_window_days", 2))
         
         # 高优先级待办
         todos = data.get("high_priority_todos", [])
@@ -812,20 +859,28 @@ class FeishuDailyReporter:
         experiments = exp_domain.get("experiments", []) if isinstance(exp_domain, dict) else []
         if not experiments:
             return ""
-        running = [e for e in experiments if e.get("status") == "RUNNING"]
+        # 与 static/experiments.json 交叉核对：快照里的 RUNNING 可能是漂移出来的
+        # 幻影状态（从未部署 CTA/横幅），照原样渲染会误导「要不要动 CTA」的判断。
+        cfg = load_experiment_config()
+        eff = {e.get("experiment_id"): _effective_running(e, cfg) for e in experiments}
+        running = [e for e in experiments if eff.get(e.get("experiment_id")) == "RUNNING"]
+        phantom = [e for e in experiments if eff.get(e.get("experiment_id")) == "NOT_STARTED"]
         waiting = [e for e in experiments if e.get("status") == "WAITING_RECRAWL"]
         pending = [e for e in experiments if e.get("status") == "PENDING"]
-        lines = [f"**🧪 4. 实验与阻塞** | 在跑 {len(running)} | 待重爬 {len(waiting)} | 待启动 {len(pending)}", ""]
+        head = f"**🧪 4. 实验与阻塞** | 在跑 {len(running)} | 待重爬 {len(waiting)} | 待启动 {len(pending)}"
+        if phantom:
+            head += f" | ⚠️ 标记在跑但实际未启动 {len(phantom)}"
+        lines = [head, ""]
         lines.append("| ID | 实验名称 | 状态 | 观察 | 样本 |")
         lines.append("| --- | --- | --- | --- | --- |")
-        icon_map = {"RUNNING": "🔄", "WAITING_RECRAWL": "⏳", "PENDING": "📋", "WIN": "✅", "LOSE": "❌"}
+        icon_map = {"RUNNING": "🔄", "NOT_STARTED": "⚠️", "WAITING_RECRAWL": "⏳", "PENDING": "📋", "WIN": "✅", "LOSE": "❌"}
         # 表头统计全量实验，表格必须展示全量：原 experiments[:6] 硬截断导致
         # 「待重爬 2」只渲染 1 行，与表头自相矛盾（未展示的项仅出现在关键阻塞里）
         _MAX_EXPERIMENT_ROWS = 20
         for e in experiments[:_MAX_EXPERIMENT_ROWS]:
             eid = e.get("experiment_id", "?")
             name = (e.get("display_name") or eid)[:28]
-            st = e.get("status", "?")
+            st = eff.get(e.get("experiment_id")) or e.get("status", "?")
             icon = icon_map.get(st, "❓")
             days = e.get("observation_days")
             days_str = f"{days}d" if days is not None else "-"
@@ -835,6 +890,12 @@ class FeishuDailyReporter:
         if len(experiments) > _MAX_EXPERIMENT_ROWS:
             lines.append(f"| … | 另有 {len(experiments) - _MAX_EXPERIMENT_ROWS} 项未展示 | | | |")
         blockers = []
+        if phantom:
+            blockers.append(
+                "⚠️ 实验登记表不一致: " + ", ".join(e.get("experiment_id", "") for e in phantom)
+                + " 在快照里标 RUNNING，但 static/experiments.json 显示 PLANNED / 未设 start_date——"
+                "从未部署 CTA，样本不可能累积。需人工确认哪份登记表是权威"
+            )
         if waiting:
             blockers.append(f"⏳ 等待重爬: {', '.join(e.get('experiment_id','') for e in waiting)}")
         ca_kpis = (domains.get("content_assets", {}) or {}).get("kpis", [])
@@ -863,7 +924,7 @@ class FeishuDailyReporter:
                 return 0
 
         _gated = [e for e in experiments
-                  if e.get("status") == "RUNNING"
+                  if eff.get(e.get("experiment_id")) == "RUNNING"
                   and (e.get("sample_status") == "INSUFFICIENT_SAMPLE" or _obs_days(e) < 7)]
         if _gated:
             _ids = ", ".join(str(e.get("experiment_id", "")) for e in _gated)
@@ -873,7 +934,12 @@ class FeishuDailyReporter:
                          f"当前约束是样本量而非日期，原定观察期截止日已过")
         else:
             lines.append("")
-            lines.append("> 评审gate: 当前无处于观察期的实验")
+            if phantom:
+                lines.append(f"> 评审gate: 无处于观察期的实验。{len(phantom)} 项在快照里标 RUNNING "
+                             f"但从未实际部署（PLANNED / 无 start_date），评审对象不存在——"
+                             f"继续写「判定延后」会让人以为实验在积累样本。需先确认登记表权威并真正启动")
+            else:
+                lines.append("> 评审gate: 当前无处于观察期的实验")
         return "\n".join(lines)
 
     @staticmethod
@@ -1040,15 +1106,20 @@ class FeishuDailyReporter:
             data["data_status"].append("Travelpayouts联盟数据未配置（需设置 TRAVELPAYOUTS_API_TOKEN）")
         
         # 5. NordVPN 数据
+        # 原文案「需手动查看 Impact.com 后台」是一条自动化日报里的人工任务指派——
+        # 每天都在要求人去手工对账，等于承认这条自动化是断的，却仍标 🟢。
+        # 改成陈述归因缺口：这个渠道的点击/佣金不进日报，读者才知道营收是下限。
+        _NORD_GAP = ("NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），"
+                     "该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量")
         nord_data = self._fetch_nordvpn()
         if nord_data:
             data.update(nord_data)
             data["nord_available"] = nord_data.get("nord_available", False)
             if not data["nord_available"]:
-                data["data_status"].append("NordVPN: 需手动查看 Impact.com 后台")
+                data["data_status"].append(_NORD_GAP)
         else:
             data["nord_available"] = False
-            data["data_status"].append("NordVPN: 需手动查看 Impact.com 后台")
+            data["data_status"].append(_NORD_GAP)
         
         # 6. MailerLite 订阅数据
         ml_data = self._fetch_mailerlite()
@@ -1079,7 +1150,8 @@ class FeishuDailyReporter:
                                         data.get('gh_blog_paths_total'))
             report_status = _ci_state_str(data.get('gh_report_success'), not GITHUB_TOKEN,
                                           data.get('gh_api_ok', True), data.get('gh_api_error') or '未知原因',
-                                          data.get('gh_report_paths_total'))
+                                          data.get('gh_report_paths_total'),
+                                          data.get('gh_report_window_days', 2))
             print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
             # 社媒分发失败 → 真实告警（不被日报状态吞掉）
             if data.get("gh_social_success") is False:
@@ -1971,6 +2043,17 @@ class FeishuDailyReporter:
                 ".github/workflows/social-engine-daily.yml",
                 ".github/workflows/social_distributor.yml",
             }
+
+            # 各工作流的最小「完成窗口」（天）= 触发周期 + 1 天缓冲。
+            # 原实现用 report_day（仅昨日）过滤，weekly-blog-update.yml 的 cron 是
+            # '0 0 * * 1'（每周一 00:00 UTC）——除周一外每天都查不到完成记录，日报
+            # 每周 6 天把一个健康的周更渲染成「状态未知（近 2 天无完成记录）」。
+            # 那不是失败信号，是阈值套错：周更本来就不该在周二被期待。
+            WORKFLOW_WINDOW_DAYS = {
+                "blog": 8,   # 周更 + 1 天缓冲
+                "report": 2,  # 日更
+                "social": 2,  # 日更
+            }
             
             result = {}
             runs = []  # 预定义避免作用域问题
@@ -2014,14 +2097,18 @@ class FeishuDailyReporter:
             result["gh_api_error"] = None if api_ok else api_error
             result["gh_runs_total"] = len(runs)
 
-            def _completed_runs(paths):
-                """报告日内、已完成、排除当前 run、按创建时间倒序"""
+            def _completed_runs(paths, since_day):
+                """since_day 起、已完成、排除当前 run、按创建时间倒序。
+
+                原先用 startswith(report_day) 只认昨日当天，周更工作流必然落空。
+                改为 >= since_day 的比较，窗口由调用方按工作流周期传入。
+                """
                 return sorted(
                     [r for r in runs
                      if r.get("path") in paths
                      and r.get("status") == "completed"
                      and str(r.get("id")) != current_run_id
-                     and (r.get("created_at") or "").startswith(report_day)],
+                     and (r.get("created_at") or "")[:10] >= since_day],
                     key=lambda r: r.get("created_at") or "",
                     reverse=True,
                 )
@@ -2033,7 +2120,10 @@ class FeishuDailyReporter:
             
             # 检查博客生成工作流
             try:
-                blog_runs = _completed_runs(BLOG_WORKFLOW_PATHS)
+                blog_window = WORKFLOW_WINDOW_DAYS["blog"]
+                blog_since = (datetime.now() - timedelta(days=blog_window)).strftime("%Y-%m-%d")
+                result["gh_blog_window_days"] = blog_window
+                blog_runs = _completed_runs(BLOG_WORKFLOW_PATHS, blog_since)
                 if blog_runs:
                     latest_blog = blog_runs[0]
                     result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
@@ -2047,7 +2137,10 @@ class FeishuDailyReporter:
 
             # 检查日报工作流（精确路径，排除正在运行的当前实例）
             try:
-                report_runs = _completed_runs(REPORT_WORKFLOW_PATHS)
+                report_window = WORKFLOW_WINDOW_DAYS["report"]
+                report_since = (datetime.now() - timedelta(days=report_window)).strftime("%Y-%m-%d")
+                result["gh_report_window_days"] = report_window
+                report_runs = _completed_runs(REPORT_WORKFLOW_PATHS, report_since)
                 if report_runs:
                     latest_report = report_runs[0]
                     result["gh_report_success"] = latest_report.get("conclusion") == "success"
@@ -2062,7 +2155,10 @@ class FeishuDailyReporter:
 
             # 社媒分发工作流：失败是真实事件，转为告警而非被日报状态吞掉
             try:
-                social_runs = _completed_runs(SOCIAL_WORKFLOW_PATHS)
+                social_window = WORKFLOW_WINDOW_DAYS["social"]
+                social_since = (datetime.now() - timedelta(days=social_window)).strftime("%Y-%m-%d")
+                result["gh_social_window_days"] = social_window
+                social_runs = _completed_runs(SOCIAL_WORKFLOW_PATHS, social_since)
                 if social_runs:
                     latest_social = social_runs[0]
                     result["gh_social_success"] = latest_social.get("conclusion") == "success"

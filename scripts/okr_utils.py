@@ -7,7 +7,8 @@ okr_utils.py - 统一 OKR 目标与进度复盘工具
   3. save_snapshot: 保存本期计划+KR 快照（CI 中由 workflow 提交回 git，支持跨期复盘）
 """
 import json
-from datetime import datetime, timedelta
+import re
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -111,6 +112,66 @@ def _na_display(source: str) -> str:
     }.get(source, "暂无数据")
 
 
+def _days_since_last_post(report_date=None) -> int | None:
+    """扫 content/posts/*.md 的 front-matter date，返回距报告日的天数。
+
+    为什么不用「连续 0 新发天数」的快照统计：快照只有 3 天历史，数不出
+    真实断更长度。content/posts 是事实源，18 天就是 18 天。
+    解析失败返回 None——不猜，调用方在 None 时保持原有图标。
+    """
+    posts_dir = BLOG_ROOT / "content" / "posts"
+    if not posts_dir.is_dir():
+        return None
+    newest = None
+    for f in posts_dir.glob("*.md"):
+        try:
+            head = f.read_text(encoding="utf-8", errors="replace")[:4000]
+        except OSError:
+            continue
+        m = re.match(r"^---\n(.*?)\n---", head, re.S)
+        if not m:
+            continue
+        dm = re.search(r"^date:\s*['\"]?(\d{4}-\d{2}-\d{2})", m.group(1), re.M)
+        if dm and (newest is None or dm.group(1) > newest):
+            newest = dm.group(1)
+    if not newest:
+        return None
+    try:
+        last = date.fromisoformat(newest)
+    except ValueError:
+        return None
+    ref = (report_date or datetime.now()).date()
+    return (ref - last).days
+
+
+# 发布节奏：周更（1 周 1 篇）。超出的天数阈值用于连续零值升级。
+PUBLISH_CADENCE_DAYS = 7
+
+
+def _zero_run_icon(source: str, name: str, current: float, progress: int,
+                   report_date=None):
+    """连续零值升级判定。
+
+    原逻辑「current == 0 就不标红」的意图是对的——单日 0 在周更节奏下是
+    正常现象。但它没区分「今天刚好没发」和「18 天没发」。前者是节奏，
+    后者是生产中断。返回 (icon, note)。
+
+    只在有可靠事实源时升级：content_new 用 content/posts 的真实日期；
+    其它源没有可靠的历史，保持原有语义（不误报）。
+    """
+    base_icon = "🟢" if "新增文章" in name else "🟡"
+    if source != "content_new":
+        return base_icon, None
+    dslp = _days_since_last_post(report_date)
+    if dslp is None:
+        return base_icon, None
+    if dslp > PUBLISH_CADENCE_DAYS * 2:
+        return "🔴", f"已连续 {dslp} 天未发布（超出周更节奏 2 倍，生产中断）"
+    if dslp > PUBLISH_CADENCE_DAYS:
+        return "🟠", f"已连续 {dslp} 天未发布（超出周更节奏 {PUBLISH_CADENCE_DAYS} 天）"
+    return base_icon, f"今日无新发（距上次 {dslp} 天，周更节奏内）"
+
+
 def _target_for(kr: dict, scope: str) -> float:
     """按报表周期取 KR 目标：显式 targets 优先，缺省按月度目标推导（daily=月/30, weekly=月/4.3）"""
     base = float(kr.get("target", 0) or 0)
@@ -187,18 +248,28 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
             name = f"{name}（昨日新增）"
         current = extract_kr(data, source)
         progress = min(round(current / target * 100), 100) if target > 0 else 0
-        # 2.0 状态语义：0 值不自动标红（内容生产 0 / 曝光 0 / 佣金 0 / 订阅 0 均为参考值）
+        # 2.0 状态语义：单日 0 不自动标红（周更节奏下「今日无新发」是正常现象）。
+        # 2026-09-19 补充：连续零值升级——content_new 用 content/posts 的真实
+        # 发布日期判定，>14 天 🔴 / >7 天 🟠 / 节奏内保持原图标。
+        # 原先 18 天 0 篇仍显示 🟢，把最需要报警的信号藏起来了。
+        note = None
         if progress >= 100:
             icon = "✅"
-        elif current == 0 and "新增文章" in name:
-            icon = "🟢"  # 今日无新发 = 正常节奏，非失败
         elif current == 0:
-            icon = "🟡"  # 低样本 / 链路待验证，非失败
+            icon, note = _zero_run_icon(source, name, current, progress, d)
         elif progress >= 50:
             icon = "🟡"
         else:
             icon = "🟠"
-        rows.append({
+        # 100% 的两种「假绿」：目标 = 当前值（自动成立），或当前远超目标（进度被封顶）。
+        # 前者例：日访问 7人/目标7人；后者例：日曝光 164次/目标13次（1300% 封顶 100%）。
+        # 都不表示「达成」，只表示目标没有留出增长空间，不标出来读者会误读为进展。
+        if note is None and progress >= 100 and target > 0 and current >= target:
+            if abs(current - target) < 1e-9:
+                note = f"目标 {target:g}{unit} = 当前 {current:g}{unit}，100% 自动成立（目标未设增长）"
+            else:
+                note = f"当前 {current:g}{unit} = 目标的 {current / target:.0f}×，进度封顶 100%（目标偏低）"
+        row = {
             "name": name,
             "current": current,
             "target": target,
@@ -206,7 +277,10 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
             "icon": icon,
             "unit": unit,
             "available": True,
-        })
+        }
+        if note:
+            row["note"] = note
+        rows.append(row)
     return rows
 
 
@@ -258,7 +332,12 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
         if not r.get("available", True):
             # NOT_AVAILABLE 行：展示原因，进度 "-"，状态 ⚪
             return f"| {r['name']} | {r.get('display', '暂无数据')} | {r['target']:g}{r['unit']} | - | \u26AA |"
-        return f"| {r['name']} | {r['current']:g}{r['unit']} | {r['target']:g}{r['unit']} | {r['progress']}% | {r['icon']} |"
+        # note 放进状态列：图标后跟原因，保持 5 列不变。
+        # 例：| 日新增文章 | 0篇 | 1篇 | 0% | 🔴 已连续 18 天未发布… |
+        status_cell = r['icon']
+        if r.get("note"):
+            status_cell = f"{r['icon']} {r['note']}"
+        return f"| {r['name']} | {r['current']:g}{r['unit']} | {r['target']:g}{r['unit']} | {r['progress']}% | {status_cell} |"
     return header + "\n".join(_render_row(r) for r in rows)
 
 
