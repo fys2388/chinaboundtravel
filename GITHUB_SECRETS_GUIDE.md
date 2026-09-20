@@ -19,7 +19,7 @@
 | `DOUBAO_ARK_API_KEY` | 豆包大模型平台 | ark-xxx格式 | AI博客生成API密钥 |
 | `DEEPSEEK_API_KEY` | DeepSeek平台 | sk-xxx格式 | AI辅助写作API密钥 |
 | `GA4_API_KEY` | Google Analytics | 长字符串 | Google Analytics数据查询 |
-| `GA4_PROPERTY_ID` | Google Analytics | 数字(如541752321) | GA4属性ID |
+| `GA4_PROPERTY_ID` | Google Analytics | 数字(如538482322) | GA4属性ID |
 | `MAILERLITE_API_TOKEN` | MailerLite账户 | eyJ格式JWT | 邮件营销API密钥 |
 | `STRIPE_SECRET_KEY` | Stripe Dashboard | sk_live_xxx | 电子书支付处理 |
 | `STRIPE_WEBHOOK_SECRET` | Stripe Dashboard | whsec_xxx | Stripe回调验证 |

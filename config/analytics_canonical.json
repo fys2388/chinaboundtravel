@@ -1,0 +1,23 @@
+{
+  "canonical_property_id": "538482322",
+  "canonical_measurement_id": "G-GECBME3YVJ",
+  "decision": "方案 A —— 以 hugo.toml 声明的 measurement ID 为准",
+  "decided_at": "2026-09-20",
+  "confirmed_by": "GA4 控制台人工核对（账号 fys2388 / 账号ID 192133217）",
+  "duplicate_property_ids": ["541752321"],
+  "duplicate_measurement_ids": ["G-P6BH500VBK"],
+  "rationale": [
+    "账号下 3 个属性：538482322 衡量 ID = G-GECBME3YVJ，541752321 衡量 ID = G-P6BH500VBK，",
+    "两者数据流网址完全相同（https://chinaboundtravel.com），是同站点的重复属性。",
+    "hugo.toml 与线上 gtag 配置都指向 G-GECBME3YVJ，所以它为准。",
+    "旧版脚本默认 GA4_PROPERTY_ID=541752321 —— 即一直在读重复属性。",
+    "28 天活跃用户：538482322 = 234，541752321 = 7 天 55（换算 28 天约 246）。"
+  ],
+  "pending_actions": [
+    "本地 .env 的 GA4_PROPERTY_ID 改为 538482322",
+    "GitHub Secrets 的 GA4_PROPERTY_ID 改为 538482322",
+    "在 Google Tag Manager 删掉 G-P6BH500VBK 这个 destination（该容器不在 fys2388@gmail.com 账号下，需另找持有账号）",
+    "归档或删除重复属性 541752321",
+    "把两个数据流网址从 https://chinaboundtravel.com 改成 https://www.chinaboundtravel.com"
+  ]
+}

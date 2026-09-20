@@ -46,7 +46,7 @@ from affiliate_gap_detector import (PARTNER_DEFS, SITE_PREFIX, commercial_rankin
 
 import revenue_provider  # noqa: E402
 
-GA4_PROPERTY_ID = "541752321"
+GA4_PROPERTY_ID = "538482322"
 GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 DRIVE_ACTIVE_DATE = date(2026, 8, 16)
 MIN_OBSERVATION_DAYS = 28

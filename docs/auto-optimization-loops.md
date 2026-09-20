@@ -256,7 +256,7 @@
 | `GSC_SERVICE_ACCOUNT_JSON` | GSC 服务账号密钥全文 | 1, 2 | 需配置 |
 | `GA4_SERVICE_ACCOUNT_JSON` | GA4 服务账号密钥 | 3, 4 | 需配置 |
 | `GA4_API_KEY` | GA4 API Key | 3, 4 | 需配置 |
-| `GA4_PROPERTY_ID` | GA4 属性 ID (541752321) | 3, 4 | 需配置 |
+| `GA4_PROPERTY_ID` | GA4 属性 ID (538482322) | 3, 4 | 需配置 |
 | `TRAVELPAYOUTS_API_TOKEN` | Travelpayouts API Token | 3, 4 | 需配置 |
 | `TRAVELPAYOUTS_MARKER` | Travelpayouts Marker (730795) | 3, 4 | 需配置 |
 | `MAILERLITE_API_TOKEN` | MailerLite API Token | 3, 4 | 需配置 |

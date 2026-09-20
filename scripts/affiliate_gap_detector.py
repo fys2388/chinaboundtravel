@@ -36,7 +36,7 @@ REPORTS_REVENUE = BLOG_ROOT / "reports" / "revenue"
 REPORTS_REVENUE.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(SCRIPTS))
 
-GA4_PROPERTY_ID = "541752321"
+GA4_PROPERTY_ID = "538482322"
 GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 GA4_EVENT = "affiliate_click"
 

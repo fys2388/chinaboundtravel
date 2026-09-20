@@ -53,7 +53,7 @@ CTA_INVENTORY_CSV = REPORTS_DIR / "P0_AFFILIATE_CTA_INVENTORY.csv"
 LEARNING_LIBRARY_JSON = REPORTS_DIR / "affiliate-learning-library.json"
 HUGO_BIN = r"C:\Users\神魂之人\bin\hugo.exe"
 
-GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 
 # Thresholds

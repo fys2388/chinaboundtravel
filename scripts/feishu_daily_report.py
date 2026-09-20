@@ -73,7 +73,7 @@ CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
 CLOUDFLARE_ZONE_ID = os.environ.get("CLOUDFLARE_ZONE_ID", "")
 # GA4配置
 GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
-GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
 # GSC 站点配置：支持 sc-domain: 域属性或 https:// URL 前缀属性，逗号分隔多个候选

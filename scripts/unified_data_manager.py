@@ -55,7 +55,7 @@ class UnifiedDataManager:
         self.config = {
             "ga4": {
                 "api_key": os.environ.get("GA4_API_KEY", ""),
-                "property_id": os.environ.get("GA4_PROPERTY_ID", "541752321"),
+                "property_id": os.environ.get("GA4_PROPERTY_ID", "538482322"),
                 "service_account_json": os.environ.get("GA4_SERVICE_ACCOUNT_JSON", ""),
             },
             "gsc": {

@@ -302,10 +302,13 @@ class TestAnalyticsDuplicateDestination:
     即 Google Tag 配了两个目的地。
 
     **准确语义**：GA4 每个属性独立存事件，一个事件发两个目的地 = 各记一次，
-    所以单个属性的数值没有被双计。真实危害是来源的权威地位未被证实 ——
-    所有脚本查数值 ID GA4_PROPERTY_ID=541752321，hugo.toml 写的是
-    G-GECBME3YVJ，仓库无法证明两者是同一个属性，也无法证明当前读的不是
-    那个多余的。所以状态名是 DUPLICATE_DESTINATION，不是 CONTAMINATED
+    所以单个属性的数值没有被双计。真实危害是来源的权威地位曾被证伪：
+    GA4 控制台（2026-09-20 人工确认）显示账号下有 3 个属性，其中
+    538482322 的衡量 ID 是 G-GECBME3YVJ（= hugo.toml 声明的），
+    541752321 的衡量 ID 是 G-P6BH500VBK（= 重复体），两个数据流网址
+    完全相同。旧版脚本默认查 541752321 —— 即一直在读那个重复属性，
+    而 hugo.toml 声明的是另一个。现已按方案 A 统一为 538482322。
+    所以状态名是 DUPLICATE_DESTINATION，不是 CONTAMINATED
     （CONTAMINATED 暗示数值本身算错了，那是不成立的断言）。
 
     盲区根因：predeploy_quality_gate 旧正则只匹配 gtag/js?id=（加载脚本），

@@ -1003,6 +1003,81 @@ def _fetch_gtag_destinations(measurement_id):
     return dests, len(payload)
 
 
+def _load_analytics_canonical_config():
+    """读 config/analytics_canonical.json —— canonical 属性的显式声明。
+
+    为什么需要一个提交进仓库的声明文件：
+
+    GA4 的 measurement ID 和 property ID 是两套编号，仓库里历来各写各的：
+    hugo.toml 写 measurement ID（G-GECBME3YVJ），各脚本查数值 property ID
+    （GA4_PROPERTY_ID）。两套编号之间没有任何交叉验证 —— 直到 2026-09-20
+    人工上 GA4 控制台才发现：同一个账号下有两个数据流网址完全相同的属性
+    （538482322 -> G-GECBME3YVJ，541752321 -> G-P6BH500VBK），而所有脚本
+    默认查的是 541752321，即一直在读那个重复属性。
+
+    仓库侧无法证明「数值 ID 和 measurement ID 属于同一个属性」——
+    GA4 Admin API 返回 401（服务账号只授权了 Data API）。所以这个映射关系
+    只能靠人工在控制台核对一次，然后写进这个文件固化下来。
+
+    文件缺失不报错：那是「还没有做过核对」，不是「坏了」。
+    """
+    cfg = ROOT / "config" / "analytics_canonical.json"
+    try:
+        return json.loads(cfg.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _read_hugo_measurement_id():
+    """从 hugo.toml 读 GA4 measurement ID（PaperMod 字段 TrackingID）。"""
+    cfg = ROOT / "hugo.toml"
+    try:
+        text = cfg.read_text(encoding="utf-8")
+    except Exception:
+        return ""
+    m = re.search(r'TrackingID\s*=\s*"(G-[A-Z0-9]{8,12})"', text)
+    if m:
+        return m.group(1)
+    m = re.search(r"\b(G-[A-Z0-9]{8,12})\b", text)
+    return m.group(1) if m else ""
+
+
+def _check_analytics_config_consistency(canonical):
+    """校验 canonical 声明、hugo.toml、GA4_PROPERTY_ID 三方是否指向同一属性。
+
+    返回 (mismatch: bool, detail: dict)。
+
+    能查的只到「仓库内两处配置是否自相矛盾」这一步：
+      - hugo.toml 的 TrackingID 不是 canonical measurement ID
+      - 环境里的 GA4_PROPERTY_ID 不是 canonical property ID（或未设置）
+
+    查不了的：property ID 与 measurement ID 的对应关系 —— 那需要 GA4 Admin
+    API，而当前服务账号只有 Data API 权限。所以这个校验是「防回归」性质的：
+    任何人在仓库里改了 ID 而忘了改另一处，这里会立刻报出来。
+    """
+    detail = {
+        "canonical_property_id": canonical.get("canonical_property_id", ""),
+        "canonical_measurement_id": canonical.get("canonical_measurement_id", ""),
+        "hugo_measurement_id": _read_hugo_measurement_id(),
+        "env_property_id": os.environ.get("GA4_PROPERTY_ID", "").strip(),
+        "canonical_config_present": bool(canonical),
+    }
+    if not canonical:
+        return False, detail
+    reasons = []
+    if detail["hugo_measurement_id"] and \
+            detail["hugo_measurement_id"] != canonical["canonical_measurement_id"]:
+        reasons.append(
+            f"hugo.toml TrackingID={detail['hugo_measurement_id']} "
+            f"!= canonical {canonical['canonical_measurement_id']}")
+    if detail["env_property_id"] and \
+            detail["env_property_id"] != canonical["canonical_property_id"]:
+        reasons.append(
+            f"GA4_PROPERTY_ID={detail['env_property_id']} "
+            f"!= canonical {canonical['canonical_property_id']}")
+    return bool(reasons), {**detail, "mismatch_reasons": reasons}
+
+
 def check_analytics_measurement_ids():
     """检查 GA4 是否被双计，并写出机器可读的姿态报告。
 
@@ -1085,6 +1160,29 @@ def check_analytics_measurement_ids():
             "agent": "site_health",
         })
 
+    # 第 3 层：配置一致性 —— 仓库里两套编号（measurement ID / property ID）
+    # 必须指向同一个属性。这一层不看线上，只看仓库内配置是否自相矛盾。
+    canonical = _load_analytics_canonical_config()
+    config_mismatch, config_detail = _check_analytics_config_consistency(canonical)
+
+    if config_mismatch:
+        reasons = "; ".join(config_detail.get("mismatch_reasons", []))
+        issues.append({
+            "type": "analytics_config_inconsistency",
+            "severity": "critical",
+            "check": "analytics_measurement_ids",
+            "file": "config/analytics_canonical.json",
+            "message": (
+                "GA4 配置不一致：" + reasons + "。"
+                "仓库里 measurement ID（hugo.toml）和 property ID（GA4_PROPERTY_ID）"
+                "曾分属两个不同的属性 —— 旧配置让所有报表脚本读的是重复属性，"
+                "而站点的 gtag 指向另一个。修法是让两处都指向 canonical。"
+            ),
+            "evidence": json.dumps(config_detail, ensure_ascii=False),
+            "auto_fixable": False,
+            "agent": "site_health",
+        })
+
     posture_file.parent.mkdir(parents=True, exist_ok=True)
     posture_file.write_text(json.dumps({
         "checked_at": datetime.now(timezone.utc).isoformat(),
@@ -1099,6 +1197,8 @@ def check_analytics_measurement_ids():
         # 读取方（reporting_kpi_engine）两者都认，保留以免对不上。
         "duplicate_destinations": duplicated,
         "contaminated": duplicated,
+        "canonical_config": config_detail,
+        "config_mismatch": config_mismatch,
         "note": (
             "duplicate_destinations=True 表示 GA4 的 Google Tag 配了多个目的地，"
             "每个事件被记到多个属性里。单个属性的数值本身没有被双计，"

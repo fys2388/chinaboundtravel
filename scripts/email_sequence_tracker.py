@@ -45,7 +45,7 @@ REPORTS_DIR = PROJECT_ROOT / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 MAILERLITE_API_BASE = "https://connect.mailerlite.com/api"
-GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "541752321")
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 
 DEFAULT_LOOKBACK_DAYS = 7

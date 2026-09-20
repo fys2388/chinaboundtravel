@@ -249,9 +249,13 @@ def _load_analytics_duplication():
       1. 每次事件双倍开销（2x 网络请求 / 2x API 配额）
       2. 同一批访问行为存在于两个属性里 -> 受众/再营销名单被重复灌入，
          两边看板数字对不上，谁都不能当权威
-      3. 仓库没有任何地方声明哪个属性是 canonical。所有脚本都查数值 ID
-         GA4_PROPERTY_ID=541752321，而 hugo.toml 写的是 G-GECBME3YVJ；
-         仓库无法证明这两者指向同一个属性，也无法证明它不是那个多余的。
+      3. 曾没有交叉验证哪个属性是 canonical。GA4 控制台（2026-09-20
+         人工确认）显示同一账号下有 3 个属性：538482322 的衡量 ID 是
+         G-GECBME3YVJ（hugo.toml 声明的），541752321 的衡量 ID 是
+         G-P6BH500VBK（重复体），两者数据流网址完全相同。旧版脚本默认
+         查 541752321 —— 一直在读那个重复属性。现已按方案 A 统一为
+         538482322。注意：代码默认值不等于密钥已改，全新 clone 未配
+         .env 时会退回默认值，所以 .env 与 GitHub Secrets 必须同步改。
          若将来任一脚本改成查两个属性再相加，数值会立刻真的翻倍。
 
     所以这个标记的意思是「来源的权威地位未被证实」，不是「数值算错了」。
@@ -272,9 +276,22 @@ def _load_analytics_duplication():
         return False, ""
     # 兼容旧字段名 contaminated（2026-09-20 首版）与新字段名
     dup = data.get("duplicate_destinations", data.get("contaminated"))
-    if not dup:
+    cfg_bad = data.get("config_mismatch")
+    if not dup and not cfg_bad:
         _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE = False, ""
         return False, ""
+    if cfg_bad and not dup:
+        checked = (data.get("checked_at") or "?")[:10]
+        detail = data.get("canonical_config") or {}
+        reasons = "; ".join(detail.get("mismatch_reasons") or []) or "配置与 canonical 声明不一致"
+        note = (f"GA4 配置与 canonical 声明不一致（{reasons}）。"
+                f"仓库里 measurement ID（hugo.toml）与 property ID（GA4_PROPERTY_ID）"
+                f"指向了不同的属性 —— 所有 GA4 来源的 KPI 读的是哪个属性无法证明。"
+                f"2026-09-20 人工核对确认这两者曾分属两个数据流网址完全相同的重复属性，"
+                f"报表脚本一直在读重复的那个。修法是让两处都指向 canonical"
+                f"（config/analytics_canonical.json）。检测于 {checked}。")
+        _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE = True, note
+        return True, note
     ids = data.get("measurement_ids") or []
     ids_str = ", ".join(ids)
     checked = (data.get("checked_at") or "?")[:10]
