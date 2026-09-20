@@ -327,8 +327,19 @@
         "pinterest": "2026-09-20"
       },
       "distribute_count": 4
+    },
+    "transportation-guide": {
+      "title": "China Transportation Guide: Trains, Subways",
+      "last_distributed": "2026-09-20",
+      "platforms": {
+        "twitter": "2026-09-20",
+        "facebook": "2026-09-20",
+        "instagram": "2026-09-20",
+        "pinterest": "2026-09-20"
+      },
+      "distribute_count": 4
     }
   },
-  "last_run": "2026-09-20T07:17:55.604392+00:00",
-  "total_distributions": 122
+  "last_run": "2026-09-20T17:10:17.253134+00:00",
+  "total_distributions": 126
 }
