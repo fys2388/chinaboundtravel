@@ -91,9 +91,17 @@
         });
         var data = await resp.json();
         msg.style.display = 'block';
-        if (resp.ok && data.success) {
+        // P0-FIX (2026-09-20): 同 email-subscribe.html —— success 曾恒为 true，
+        // 而 delivered_pdf 可能为 false，客户被告知「指南在路上」却收不到。
+        if (resp.ok && data.success && data.delivered_pdf) {
           msg.className = 'lm-cta-msg ok';
           msg.textContent = '✅ Check your inbox — your guide is on its way!';
+          input.value = '';
+        } else if (resp.ok && data.success && data.pdf_url) {
+          msg.className = 'lm-cta-msg ok';
+          msg.innerHTML = "✅ You're in. If the email does not arrive within 10 minutes, "
+            + 'download it directly: '
+            + '<a href="' + data.pdf_url + '" target="_blank" rel="noopener">free guide</a>';
           input.value = '';
         } else {
           msg.className = 'lm-cta-msg err';

@@ -147,7 +147,8 @@ export async function onRequestPost({ request, env }) {
     const resendApiKey = cleanToken(env.RESEND_API_KEY);
 
     const result = {
-      success: true,
+      // success 在下方根据「每个已配置步骤是否都成功」计算 —— 绝不预设 true。
+      success: false,
       delivered_pdf: false,
       subscriber_created: false,
       lead_magnet: magnet.mlField,
@@ -172,10 +173,25 @@ export async function onRequestPost({ request, env }) {
       result.detail = (result.detail + ' Resend:not_configured').trim();
     }
 
-    if (!apiToken && !resendApiKey) {
-      result.success = true;
-      result.detail = 'No MailerLite/Resend configured — PDF link returned client-side.';
-      return jsonResponse({ ...result, pdf_url: magnetUrl }, 200, corsHeaders);
+    // P0-FIX (2026-09-20): success 必须反映客户是否真的收到了东西。
+    // 旧实现无条件 success:true —— 实测真实邮箱订阅返回
+    // {"success":true,"delivered_pdf":false,"detail":"Resend:422..."}，
+    // 前端只看 success 就显示「your guide is on its way」，而 PDF 根本没发出去。
+    // 客户被给了一个假承诺，然后永远不会回来。
+    // 新契约：每个「已配置」的步骤都必须成功才算 success；未配置不算失败。
+    // pdf_url 始终返回，前端可以拿它做兜底直链。
+    result.pdf_url = magnetUrl;
+    result.mailerlite_configured = Boolean(apiToken);
+    result.resend_configured = Boolean(resendApiKey);
+    result.success = (result.subscriber_created || !apiToken)
+                   && (result.delivered_pdf || !resendApiKey);
+
+    if (!result.success) {
+      return jsonResponse({
+        ...result,
+        error: 'Your guide could not be delivered right now. Use the download '
+             + 'link below, or try again in a few minutes.',
+      }, 200, corsHeaders);
     }
 
     return jsonResponse(result, 200, corsHeaders);

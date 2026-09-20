@@ -98,13 +98,24 @@
             });
             var data = await resp.json();
             msg.style.display = 'block';
-            if (resp.ok && data.success) {
+            // P0-FIX (2026-09-20): 不能只看 success。旧实现下 success 恒为 true，
+            // 而 delivered_pdf 可能为 false（PDF 邮件实际没发出去），客户会被告知
+            // 「指南在路上」然后永远收不到。按客户真正收到的东西分三档，并给兜底直链。
+            if (resp.ok && data.success && data.delivered_pdf) {
                 msg.className = 'subscribe-msg ok';
                 msg.textContent = '✅ Check your inbox — your guide is on its way!';
                 form.querySelector('#subscribe-email').value = '';
+            } else if (resp.ok && data.success && data.pdf_url) {
+                msg.className = 'subscribe-msg ok';
+                msg.innerHTML = "✅ You're subscribed. If the email does not arrive within "
+                    + '10 minutes, download it directly: '
+                    + '<a href="' + data.pdf_url + '" target="_blank" rel="noopener">free guide</a>';
+                form.querySelector('#subscribe-email').value = '';
             } else {
                 msg.className = 'subscribe-msg err';
-                msg.textContent = (data && data.error) ? data.error : 'Something went wrong. Please try again.';
+                msg.textContent = (data && data.error)
+                    ? data.error
+                    : 'Something went wrong. Please try again.';
             }
         } catch (err) {
             msg.style.display = 'block';

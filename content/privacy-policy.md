@@ -1,5 +1,6 @@
 +++
 title = "Privacy Policy"
+searchHidden = true
 date = 2026-05-19T10:00:00+08:00
 draft = false
 description = "Your privacy is important to us. Here's how we protect it."

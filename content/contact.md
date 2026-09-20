@@ -1,5 +1,6 @@
 ---
 title: "Contact ChinaBound Travel"
+searchHidden: true
 date: "2026-07-08T10:00:00+08:00"
 description: "Get in touch with ChinaBound Travel for questions about China travel, collaboration opportunities, or advertising inquiries. Use our contact form or email us..."
 slug: "contact"
