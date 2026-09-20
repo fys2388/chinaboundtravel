@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T06:00:35",
+  "updated_at": "2026-09-20T16:47:06",
   "items": [
     {
       "id": "soc-000001",
@@ -146,8 +146,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2290,7 +2290,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about Etiquette — practical lessons from the ground.\n\n• China Cultural Etiquette Guide: Dos and Don\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'China Cultural Etiquette: Dos and Don'ts' (platform fb). Scene: traditional Chinese architecture with red lanterns. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check offi.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-fb-story-80d79fbb.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -2305,7 +2305,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "2f1d15cb4166"
+      "_sig": "2f1d15cb4166",
+      "image_generated": true
     },
     {
       "id": "soc-000089",
@@ -2393,7 +2394,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\n💡 Essential Etiquette tips most first-time visitors miss.\n\n• Cultural Etiquette in China: A Californian's Guide for Aussie and Kiwi Travelers\n• Greetings and Body Language\n• Food and Dining Etiquette\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional tip social graphic for 'China Etiquette Guide for Aussie & Kiwi' (platform fb). Scene: traditional Chinese architecture with red lanterns. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/body/external_d27b4dce5c2a.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-aussie-kiwi-fb-tip-6a549080.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -2408,7 +2409,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "d24761cd7508"
+      "_sig": "d24761cd7508",
+      "image_generated": true
     },
     {
       "id": "soc-000093",
@@ -2418,7 +2420,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nWhat travelers discover about Etiquette — practical lessons from the ground.\n\n· China cultural etiquette essentials for Australian and New Zealand travelers: practical\n\nRead the full guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'China Etiquette Guide for Aussie & Kiwi' (platform ig). Scene: traditional Chinese architecture with red lanterns. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/body/external_d27b4dce5c2a.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-aussie-kiwi-ig-story-e11f4152.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -2433,7 +2435,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "46aa580f3a80"
+      "_sig": "46aa580f3a80",
+      "image_generated": true
     },
     {
       "id": "soc-000094",
@@ -2443,7 +2446,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nChina Etiquette Guide for Aussie & Kiwi | Visual guide to Etiquette: what to see and capture.\n\nChina cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid | Keywords: etiquette\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'China Etiquette Guide for Aussie & Kiwi' (platform pinterest). Scene: traditional Chinese architecture with red lanterns. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/body/external_d27b4dce5c2a.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-aussie-kiwi-pinterest-visual-001dfd58.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2458,7 +2461,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "8bb8b409a886"
+      "_sig": "8bb8b409a886",
+      "image_generated": true
     },
     {
       "id": "soc-000095",
@@ -2468,7 +2472,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Etiquette — in one practical guide. China Etiquette Guide for Aussie & Kiwi → https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'China Etiquette Guide for Aussie & Kiwi' (platform x). Scene: traditional Chinese architecture with red lanterns. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China cultural etiquette essentials for Australian and New Zealand travelers: practical tips and common mistakes to avoid.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/body/external_d27b4dce5c2a.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/cultural-etiquette-guide-aussie-kiwi-x-conversion-06434b4e.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2483,7 +2487,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "662e4d14f791"
+      "_sig": "662e4d14f791",
+      "image_generated": true
     },
     {
       "id": "soc-000096",
@@ -5990,8 +5995,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
