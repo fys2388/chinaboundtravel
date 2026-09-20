@@ -12,6 +12,7 @@
 | template | layouts/_default/single.html | PASS | - | - | True |
 | template | layouts/cities/list.html | WARN | - | - | False |
 | template | layouts/cities/single.html | PASS | - | - | True |
+| template | layouts/content/trip-planner-standalone.html | WARN | - | - | False |
 | homepage | layouts/index.html | WARN | - | - | False |
 | template | layouts/partials/affiliate-disclosure.html | PASS | - | - | True |
 | template | layouts/partials/anchored_headings.html | WARN | - | - | False |
@@ -100,6 +101,7 @@
 | cities | content/cities/xian.md | PASS | - | - | True |
 | cities | content/cities/yangshuo.md | PASS | - | - | True |
 | content | content/contact.md | PASS | - | - | True |
+| content | content/content/ai-trip-planner.md | WARN | - | - | False |
 | content | content/disclaimer.md | PASS | - | - | True |
 | content | content/ebook/2026-07-01-travel-guide-2026-07.md | WARN | - | - | False |
 | content | content/ebook/2026-08-01-travel-guide-2026-08.md | WARN | - | - | False |
@@ -121,6 +123,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 31/114 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/116 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
