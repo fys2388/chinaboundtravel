@@ -932,6 +932,19 @@ class FeishuDailyReporter:
             elif st in ("SCRIPT_ONLY", "PARTIAL"):
                 blockers.append("🗄️ 备份机制已配置但尚无回滚点——若 main 现在损坏仍无法还原，"
                                 "等 site-backup-daily 工作流首次运行后生成 backup/site-* 标签")
+        # 有数值 ≠ 测量在：每日快照会把同一份静态基线连盖几十天日期
+        #（实测 2026-08-17..09-20 共 24 个快照的 indexed_pages/gsc_impressions
+        # 完全相同，全部指向 08-16 的那次抓取）。不单独说明，日报等于拿
+        # 34 天前的数字当今日结论 —— 与 canonical、实验同一类「表达状态不表达真相」病。
+        stale = raw.get("stale_sources") or {}
+        if stale.get("count"):
+            _srows = stale.get("rows") or []
+            _stop = ", ".join(f"{r.get('name')} {r.get('source_age_days')}天"
+                              for r in _srows[:3])
+            blockers.append(
+                f"🕓 数据源陈旧: {stale['count']} 项指标仍是上一次观测日的数值"
+                f"（最老 {stale.get('oldest_age_days')} 天，非当日测量）—— "
+                f"{_stop}")
         if blockers:
             lines.append("")
             lines.append("**🚧 关键阻塞**")

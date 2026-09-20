@@ -25,7 +25,7 @@ import json
 import re
 import subprocess
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -43,6 +43,14 @@ STATIC = BASE / "static"
 EXPERIMENT_REGISTRY = STATIC / "experiments.json"
 
 DATA_SOURCE_TYPES = ("LIVE", "CACHED", "LOCAL", "NOT_AVAILABLE")
+
+# 一个「每日/每周」指标，如果它引用的观测点超过这个天数，就应当被标成陈旧 ——
+# 否则日报会拿着 34 天前的数字当今日测量值讲。见 build_snapshot 的 stale_sources。
+STALE_AFTER_DAYS = 14
+
+# build_snapshot 在组装前写入；_kpi 用它算观测点年龄（不改所有调用点签名）。
+_AS_OF = None
+
 REVENUE_NOT_AVAILABLE = "REVENUE_NOT_AVAILABLE"
 INSUFFICIENT_SAMPLE = "INSUFFICIENT_SAMPLE"
 
@@ -108,6 +116,146 @@ def _read_csv(path: Path) -> list:
         return []
 
 
+def _read_md_table(path: Path) -> list:
+    """读 markdown 报告里的所有管道表格，返回 [[cell, ...], ...]。
+
+    跳过表头分隔行（|---|---|）和表头行本身（含纯文字列名）。
+    用途：很多审计报告把真实数据写成表格却没有汇总行，
+    只 grep 汇总字符串会永远匹配不到 —— 见 build_brand 的历史 bug。
+    """
+    out = []
+    for line in _read_text(path).splitlines():
+        s = line.strip()
+        if not s.startswith("|"):
+            continue
+        if re.fullmatch(r"\|[\s:\-\|]+\|", s):
+            continue
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if len(cells) < 2 or all(c in ("", "-", "—") for c in cells):
+            continue
+        # 表头行：全英文短词且下一行是分隔行 -> 跳过。这里用更简单的判据：
+        # 跳过首列是常见列名的行。
+        if cells[0] in ("layer", "file", "status", "layer", "url", "metric",
+                        "key", "check", "item", "page", "domain"):
+            continue
+        out.append(cells)
+    return out
+
+
+def _count_md_table_status(path: Path, status_col: int = 2) -> dict:
+    """统计 markdown 表某一列的状态计数。返回 {status: count} + total。"""
+    counts: dict = {}
+    for row in _read_md_table(path):
+        if len(row) > status_col:
+            st = row[status_col].upper()
+            counts[st] = counts.get(st, 0) + 1
+    counts["total"] = sum(v for k, v in counts.items() if k != "total")
+    return counts
+
+
+def _count_updated_posts(since_iso: str) -> tuple:
+    """git 历史里 content/posts 下真实改动过的文章数（排除归档与审计备份）。
+
+    原 KPI 因「inventory 无 updated_at 字段」直接判 NOT_AVAILABLE，但 git 提交
+    历史本身就是权威的「更新」记录，不需要 inventory 字段。
+    排除 .archived/ 与 .audit_backup/：那是归档移动与审计备份，不是内容更新。
+    git 不可用时返回 (None, note) —— 不臆造数字。
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", f"--since={since_iso}", "--name-only", "--format=",
+             "--", "content/posts"],
+            cwd=str(BASE), capture_output=True, text=True, timeout=25,
+        )
+    except Exception:
+        return None, "git unavailable"
+    posts = {
+        f.strip() for f in out.stdout.splitlines()
+        if f.strip().endswith(".md")
+        and "/.archived/" not in f
+        and "/.audit_backup/" not in f
+    }
+    return len(posts), (
+        f"git log --since={since_iso} on content/posts "
+        f"(excl. .archived/ .audit_backup/)")
+
+
+def _read_ga4_real() -> dict:
+    """读 reports/real_data/ga4_real_data.json —— 真实 GA4 API 拉取产物。
+
+    原 build_traffic 只从 REVENUE_DASHBOARD.md 里 grep sessions/pageviews，
+    而 GA4 的用户维度和参与度维度其实已经拉下来了（activeUsers / engagementRate /
+    engagedSessions），只是没被引用。返回 {} 表示文件缺失/非真实/非新鲜。
+    """
+    p = REPORTS / "real_data" / "ga4_real_data.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not data.get("is_real_data") or data.get("status") != "OK":
+        return {}
+    m = data.get("metrics") or {}
+    daily = data.get("daily") or []
+    dates = [d.get("date") for d in daily if d.get("date")]
+    period = f"{dates[0]}..{dates[-1]}" if len(dates) >= 2 else None
+    return {
+        "activeUsers": m.get("activeUsers"),
+        "sessions": m.get("sessions"),
+        "engagedSessions": m.get("engagedSessions"),
+        "engagementRate": m.get("engagementRate"),
+        "traffic_sources": data.get("traffic_sources") or [],
+        "data_date": data.get("data_date"),
+        "pull_time": data.get("pull_time"),
+        "period": period,
+        "is_fresh": bool(data.get("is_fresh")),
+    }
+
+
+def _set_as_of(as_of):
+    global _AS_OF
+    _AS_OF = as_of
+
+
+DATE_RE = re.compile(r"(20\d{2})-(\d{2})-(\d{2})")
+
+
+def _source_observed_date(source, as_of):
+    """从 source 引用串里抽出观测日期，算出它相对 as_of 的年龄。
+
+    返回 (observed_iso, age_days)。抽不到就退回引用文件自己的 mtime；
+    都没有返回 (None, None) —— 不臆造年龄。
+
+    背景：每日快照会把同一份静态基线（如 INDEX_COVERAGE_BASELINE.md，
+    2026-08-16 GSC UI 抓取）连续盖 34 天日期。数值上它"有数据"，
+    实际上自 08-16 起从未再测量过。这类 CACHED KPI 必须显式标陈旧，
+    否则日报等于用过期数字当今日结论。
+    """
+    if not source or as_of is None:
+        return None, None
+    dates = DATE_RE.findall(str(source))
+    if dates:
+        cand = [f"{y}-{m}-{d}" for y, m, d in dates]
+        obs = max(cand)
+        try:
+            return obs, (as_of - date.fromisoformat(obs)).days
+        except ValueError:
+            return None, None
+    # 退回：引用路径的 mtime
+    m = re.search(r"((?:reports|scripts|content|static|docs)/[^\s()]+)", str(source))
+    if m:
+        p = BASE / m.group(1).strip(".")
+        if p.exists():
+            mt = datetime.fromtimestamp(p.stat().st_mtime).date()
+            return mt.isoformat(), (as_of - mt).days
+    return None, None
+
+
+
+
+
+
 POST_ID_RE = re.compile(r"^cbt-[0-9a-f]{12}$")
 
 
@@ -170,6 +318,16 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
         status = status or "NOT_AVAILABLE"
     elif status is None:
         status = "OK"
+    # CACHED 指标的观测点年龄：数值在，但数据源可能几个月没刷新过。
+    obs_date, obs_age = _source_observed_date(source, _AS_OF)
+    stale = bool(
+        obs_age is not None and ds_type == "CACHED" and obs_age > STALE_AFTER_DAYS
+    )
+    # 只在状态是「未显式给出」或「OK」时才降级成 STALE_SOURCE。
+    # INSUFFICIENT_SAMPLE / NOT_AVAILABLE 是更强的信号，绝不可被陈旧标记覆盖 ——
+    # 覆盖会让 low_data_reasons 静默归零，日报反而更"健康"。
+    if stale and status in (None, "OK"):
+        status = "STALE_SOURCE"
     return {
         "name": name,
         "meaning": meaning,
@@ -182,6 +340,9 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
         "baseline": baseline,
         "valid_period": valid_period,
         "status": status,
+        "source_observed_date": obs_date,
+        "source_age_days": obs_age,
+        "stale_source": stale,
     }
 
 
@@ -206,24 +367,42 @@ def build_traffic() -> dict:
     base_sessions = _int(rev_baseline[0].get("sessions")) if rev_baseline else None
     base_pageviews = _int(rev_baseline[0].get("pageviews")) if rev_baseline else None
 
+    # GA4 真实拉取产物：users / engagement 维度其实已经拉下来了，原实现没引用。
+    _ga4 = _read_ga4_real()
+    _ga4_src = (f"reports/real_data/ga4_real_data.json (GA4 API pull "
+                f"{_ga4['pull_time']}, data_date {_ga4['data_date']})")
+    _ga4_period = _ga4.get("period") or period
+
     kpis = [
-        _kpi("users_28d", "GA4 unique users, 28d window", None, "users",
-             "NOT_AVAILABLE", "GA4 user dimension not persisted in current artifacts",
-             "sum of active users, 28d", "daily", None, period),
+        _kpi("users_28d", "GA4 unique users, 28d window",
+             _ga4.get("activeUsers"), "users",
+             "LIVE" if _ga4.get("activeUsers") is not None else "NOT_AVAILABLE",
+             _ga4_src if _ga4 else "GA4 user dimension not persisted in current artifacts",
+             "GA4 activeUsers, 28d window", "daily", None, _ga4_period),
         _kpi("sessions_28d", "GA4 sessions, 28d window", sessions, "sessions",
              "CACHED", source, "GA4 totalSessions, 28d window", "daily",
              base_sessions, period),
         _kpi("pageviews_28d", "GA4 pageviews, 28d window", pageviews, "pageviews",
              "CACHED", source, "GA4 totalPageviews, 28d window", "daily",
              base_pageviews, period),
-        _kpi("engagement_rate_28d", "GA4 engagement rate, 28d window", None, "%",
-             "NOT_AVAILABLE", "Engagement dimension not persisted",
-             "engaged sessions / sessions", "daily", None, period),
-        _kpi("source_channel_mix", "Sessions by default channel group, 28d window", None,
-             "breakdown", "NOT_AVAILABLE", "GA4 channel dimension not persisted",
-             "group by sessionDefaultChannelGroup", "weekly", None, period),
+        _kpi("engagement_rate_28d", "GA4 engagement rate, 28d window",
+             _ga4.get("engagementRate"), "%",
+             "LIVE" if _ga4.get("engagementRate") is not None else "NOT_AVAILABLE",
+             _ga4_src if _ga4 else "Engagement dimension not persisted",
+             f"GA4 engagedSessions {_ga4.get('engagedSessions')} / "
+             f"sessions {_ga4.get('sessions')}", "daily", None, _ga4_period),
+        # traffic_sources 在拉取产物里是空数组 —— GA4 采集脚本没取 channel 维度，
+        # 这是真实的数据缺口，不臆造 breakdown。
+        _kpi("source_channel_mix", "Sessions by default channel group, 28d window",
+             _ga4.get("traffic_sources") or None,
+             "breakdown", "LIVE" if _ga4.get("traffic_sources") else "NOT_AVAILABLE",
+             _ga4_src + " (traffic_sources empty — GA4 采集脚本未取 channel 维度)"
+             if _ga4 else "GA4 channel dimension not persisted",
+             "group by sessionDefaultChannelGroup", "weekly", None, _ga4_period),
     ]
-    return {"source_artifacts": [str(REV / "REVENUE_DASHBOARD.md")], "kpis": kpis}
+    return {"source_artifacts": [str(REV / "REVENUE_DASHBOARD.md"),
+                                 "reports/real_data/ga4_real_data.json"],
+            "kpis": kpis}
 
 
 # --------------------------------------------------------------------------
@@ -373,6 +552,9 @@ def build_content(as_of: date) -> dict:
         canon_count = 0
     # 队列是 GSC 点观测（不会自己失效），逐条与本地权威数据交叉核验后再报。
     _canon_v = _canonical_conflicts_verified()
+    # updated_pages 原先因「inventory 无 updated_at」直接 NOT_AVAILABLE；
+    # git 历史就是权威更新记录，直接算。
+    _upd_n, _upd_src = _count_updated_posts(cutoff.isoformat())
 
     kpis = [
         _kpi("published_posts", "Published posts (current inventory)", total, "posts",
@@ -387,9 +569,10 @@ def build_content(as_of: date) -> dict:
              "CACHED", "reports/seo/CONTENT_SEO_INVENTORY.csv (published_date)",
              "count published_date >= as_of - 30d", "daily", None,
              f"{cutoff.isoformat()}..{as_of.isoformat()}"),
-        _kpi("updated_pages", "Pages updated this period", None, "pages",
-             "NOT_AVAILABLE", "No updated_at field in inventory",
-             "count posts with content change in period", "weekly", None, None),
+        _kpi("updated_pages", "Posts with content change in period (git history)",
+             _upd_n, "posts", "LOCAL" if _upd_n is not None else "NOT_AVAILABLE",
+             _upd_src, "count unique post files touched by git log --since",
+             "weekly", None, f"{cutoff.isoformat()}..{as_of.isoformat()}"),
         _kpi("indexed_posts", "Inventory posts marked INDEXED", indexed, "posts",
              "CACHED", "reports/seo/CONTENT_SEO_INVENTORY.csv (indexed_status)",
              "count indexed_status == INDEXED", "daily", None, "2026-08-17"),
@@ -440,17 +623,21 @@ def build_brand() -> dict:
     ai_text = _read_text(BASE / "docs" / "AI_CONTEXT.md")
     brand04_text = _read_text(REPORTS / "P1_BRAND_04_LOGO_REPLACEMENT_READY.md")
 
-    m = re.search(r"(\d+)/13\s*PASS", audit_text)
-    compliance = m.group(1) if m else None
-    warn = len(re.findall(r"WARN", audit_text))
+    # 原实现只 grep "(\d+)/13 PASS" 这个汇总字符串，而审计报告里根本没有汇总行——
+    # 真实数据是一张逐层表格（113 个模板/配置层）。于是 compliance 永远为 None，
+    # KPI 恒 NOT_AVAILABLE，且分母 "13" 本身也是错的。改为解析真实表格。
+    _bl = _count_md_table_status(REPORTS / "P1_BRAND_02_BRAND_IDENTITY_AUDIT.md")
+    compliance = f"{_bl.get('PASS', 0)}/{_bl['total']}" if _bl["total"] else None
+    warn = _bl.get("WARN", 0)
     legacy_hits = _reg_int(legacy_text, r"命中 legacy persona 短语\s*(\d+)\s*篇")
     logo_ready = "LOGO_REPLACEMENT_READY" in ai_text or "LOGO_REPLACEMENT_READY" in brand04_text
 
     kpis = [
         _kpi("editorial_persona_compliance", "Brand layers passing editorial persona audit",
-             f"{compliance}/13" if compliance else None, "layers", "LOCAL",
-             "reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md (2026-08-17)",
-             "PASS count over 13 brand layers", "weekly", "11/13", "2026-08-17"),
+             compliance, "layers", "LOCAL",
+             "reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md (per-layer table parse)",
+             f"PASS rows over {_bl['total']} brand layers ({_bl.get('WARN', 0)} WARN, "
+             f"{_bl.get('FAIL', 0)} FAIL)", "weekly", "31/113", "2026-08-17"),
         _kpi("legacy_persona_remaining", "Posts still containing legacy persona phrases",
              legacy_hits, "posts", "LOCAL",
              "reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md (2026-08-17)",
@@ -1144,6 +1331,7 @@ def low_data_reasons(snapshot: dict) -> list:
 
 def build_snapshot(as_of=None) -> dict:
     as_of = as_of or date.today()
+    _set_as_of(as_of)
     traffic = build_traffic()
     seo = build_seo_gsc()
     content = build_content(as_of)
@@ -1182,7 +1370,38 @@ def build_snapshot(as_of=None) -> dict:
         },
     }
     snapshot["low_data_reasons"] = low_data_reasons(snapshot)
+    snapshot["stale_sources"] = stale_sources(snapshot)
     return snapshot
+
+
+def stale_sources(snapshot: dict) -> dict:
+    """汇总「有数值但数据源已陈旧」的指标。
+
+    数值在 ≠ 测量在。每日快照会把同一份静态基线连盖几十天日期，
+    这类 KPI 必须单独可查，否则日报会用过期数字当今日结论。
+    """
+    rows = []
+    for domain, dom in snapshot["domains"].items():
+        for k in dom.get("kpis", []) or []:
+            if k.get("stale_source"):
+                rows.append({
+                    "domain": domain,
+                    "name": k["name"],
+                    "value": k["value"],
+                    "source_observed_date": k.get("source_observed_date"),
+                    "source_age_days": k.get("source_age_days"),
+                    "source": k.get("source"),
+                })
+    rows.sort(key=lambda r: -(r.get("source_age_days") or 0))
+    return {
+        "stale_after_days": STALE_AFTER_DAYS,
+        "count": len(rows),
+        "oldest_age_days": rows[0]["source_age_days"] if rows else None,
+        "rows": rows,
+        "note": ("有数值的 CACHED 指标，其引用的观测点已超过 "
+                 f"{STALE_AFTER_DAYS} 天未刷新。数值保留（可作趋势基线），"
+                 "但不得当作当日测量结论。"),
+    }
 
 
 def write_snapshot(snapshot: dict, out_path=None) -> Path:
