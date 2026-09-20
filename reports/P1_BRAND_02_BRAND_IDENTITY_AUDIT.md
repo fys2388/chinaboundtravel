@@ -60,6 +60,7 @@
 | template | layouts/partials/translation_list.html | WARN | - | - | False |
 | template | layouts/partials/travel-faq.html | WARN | - | - | False |
 | template | layouts/partials/travel-promo.html | PASS | - | - | True |
+| template | layouts/partials/trip-planner.html | WARN | - | - | False |
 | template | layouts/pricing/single.html | WARN | - | - | False |
 | template | layouts/shortcodes/ab-cta.html | WARN | - | - | False |
 | template | layouts/shortcodes/affiliate-cta.html | WARN | - | - | False |
@@ -120,6 +121,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 31/113 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/114 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
