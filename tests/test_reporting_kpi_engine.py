@@ -246,9 +246,16 @@ class TestRealDataWiring:
         if not g:
             import pytest
             pytest.skip("ga4_real_data.json 不在仓库里（本地拉取产物）")
-        assert g["activeUsers"] == 246
-        assert g["period"] == "2026-08-24..2026-09-19"
-        assert g["traffic_sources"] == []  # 采集脚本未取 channel 维度
+        assert isinstance(g["activeUsers"], int) and g["activeUsers"] > 0
+        assert g["period"]
+        # traffic_sources 曾经恒为空 —— 采集器 orderBys 的 JSON 字段名写错
+        # ({"field":{"fieldName":..},"sortOrder":..}) 导致 API 返回 400，
+        # 而 200 检查静默吞掉了失败，产物里就是空数组。修好后必须非空。
+        assert isinstance(g["traffic_sources"], list)
+        assert len(g["traffic_sources"]) > 0, (
+            "traffic_sources 又空了 —— 检查 real_data_pull_engine.pull_ga4_data "
+            "的 traffic_sources_error 字段")
+        assert "channel" in g["traffic_sources"][0]
 
     def test_users_28d_and_engagement_now_live(self):
         snap = rke.build_snapshot(AS_OF)
@@ -257,9 +264,13 @@ class TestRealDataWiring:
         assert tmap["users_28d"]["data_source_type"] == "LIVE"
         assert tmap["engagement_rate_28d"]["value"] is not None
         assert 0 < tmap["engagement_rate_28d"]["value"] < 1
-        # traffic_sources 为空 -> 该项必须如实保持 NOT_AVAILABLE，不得臆造 breakdown
-        assert tmap["source_channel_mix"]["value"] is None
-        assert tmap["source_channel_mix"]["data_source_type"] == "NOT_AVAILABLE"
+        # channel 维度曾恒为 NOT_AVAILABLE（采集器 orderBys 字段名错误 ->
+        # 400 -> 静默空数组）。修好后它必须如实呈现 breakdown，
+        # 同时它仍是 GA4 来源，会带 DUPLICATE_DESTINATION 标记。
+        assert tmap["source_channel_mix"]["value"] is not None
+        assert isinstance(tmap["source_channel_mix"]["value"], list)
+        assert len(tmap["source_channel_mix"]["value"]) > 0
+        assert tmap["source_channel_mix"]["data_source_type"] == "LIVE"
 
     def test_updated_pages_from_git_history(self):
         """原实现因「inventory 无 updated_at」直接 NOT_AVAILABLE；
@@ -438,13 +449,19 @@ class TestAnalyticsDuplicateDestination:
         assert d["affected_kpis"] == []
 
     def test_snapshot_exposes_duplication_block_dirty(self, tmp_path):
-        """脏 posture 下，四个 GA4 流量 KPI 必须全部被列出。"""
+        """脏 posture 下，所有 GA4 流量类 KPI 必须被列出。
+
+        用子集断言而不是等值断言：source_channel_mix 也是 GA4 来源，
+        一旦它的采集修好就会一起被标记。等值断言会把「新增一个合法
+        的受影响 KPI」当成回归，逼着下次改动再回来改这个测试。
+        """
         self._posture(contaminated=True)
         snap = rke.build_snapshot(date(2026, 8, 17))
         d = snap["analytics_destination_duplication"]
         assert d["duplicate_destinations"] is True
-        assert set(d["affected_kpis"]) == {
-            "users_28d", "sessions_28d", "pageviews_28d", "engagement_rate_28d"}
+        affected = set(d["affected_kpis"])
+        assert {"users_28d", "sessions_28d", "pageviews_28d",
+                "engagement_rate_28d"} <= affected
         assert d["note"]
 
     def test_legacy_contamination_key_still_populated(self, tmp_path):

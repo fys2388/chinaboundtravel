@@ -331,10 +331,14 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
                 "dateRanges": [{"startDate": start_date.isoformat(), "endDate": end_date.isoformat()}],
                 "dimensions": [{"name": "pagePath"}, {"name": "pageTitle"}],
                 "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}, {"name": "activeUsers"}],
-                "orderBys": [{"field": {"fieldName": "screenPageViews"}, "sortOrder": "DESCENDING"}],
+                "orderBys": [{"metric": {"metricName": "screenPageViews"}, "desc": True}],
                 "limit": 15,
             }
             resp = requests.post(url, headers=headers, json=body_pages, timeout=30)
+            if resp.status_code != 200:
+                print(f"  GA4 top pages HTTP {resp.status_code}: "
+                      f"{resp.text[:200]}")
+                result["top_pages_error"] = f"HTTP {resp.status_code}"
             if resp.status_code == 200:
                 for row in resp.json().get("rows", []):
                     dims = row.get("dimensionValues", [])
@@ -354,9 +358,13 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
                 "dateRanges": [{"startDate": start_date.isoformat(), "endDate": end_date.isoformat()}],
                 "dimensions": [{"name": "sessionDefaultChannelGroup"}],
                 "metrics": [{"name": "sessions"}, {"name": "activeUsers"}, {"name": "engagementRate"}],
-                "orderBys": [{"field": {"fieldName": "sessions"}, "sortOrder": "DESCENDING"}],
+                "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}],
             }
             resp = requests.post(url, headers=headers, json=body_src, timeout=30)
+            if resp.status_code != 200:
+                print(f"  GA4 traffic sources HTTP {resp.status_code}: "
+                      f"{resp.text[:200]}")
+                result["traffic_sources_error"] = f"HTTP {resp.status_code}"
             if resp.status_code == 200:
                 for row in resp.json().get("rows", []):
                     dims = row.get("dimensionValues", [])
@@ -365,6 +373,8 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
                         "channel": dims[0].get("value", "") if dims else "",
                         "sessions": int(vals[0].get("value", 0)) if len(vals) > 0 else 0,
                         "activeUsers": int(vals[1].get("value", 0)) if len(vals) > 1 else 0,
+                        "engagementRate": round(float(vals[2].get("value", 0)), 4)
+                        if len(vals) > 2 else None,
                     })
         except Exception as e:
             print(f"  GA4 traffic sources 跳过: {e}")

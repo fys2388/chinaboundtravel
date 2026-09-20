@@ -1,23 +1,23 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-20T10:14:26.640223",
+  "pull_time": "2026-09-20T21:05:24.124723",
   "data_date": "2026-09-19",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 232,
-    "sessions": 349,
-    "screenPageViews": 724,
-    "engagedSessions": 136,
-    "bounceRate": 0.6103151862464183,
-    "averageSessionDuration": 220.48932112607451,
-    "engagementRate": 0.38968481375358166,
-    "newUsers": 229
+    "activeUsers": 234,
+    "sessions": 347,
+    "screenPageViews": 704,
+    "engagedSessions": 131,
+    "bounceRate": 0.622478386167147,
+    "averageSessionDuration": 212.74540006916428,
+    "engagementRate": 0.37752161383285304,
+    "newUsers": 233
   },
   "daily": [
     {
       "date": "2026-08-24",
-      "sessions": 10,
+      "sessions": 11,
       "activeUsers": 7,
       "pageviews": 97
     },
@@ -41,39 +41,39 @@
     },
     {
       "date": "2026-08-28",
-      "sessions": 13,
-      "activeUsers": 13,
-      "pageviews": 13
+      "sessions": 12,
+      "activeUsers": 12,
+      "pageviews": 12
     },
     {
       "date": "2026-08-29",
-      "sessions": 15,
-      "activeUsers": 15,
-      "pageviews": 17
+      "sessions": 14,
+      "activeUsers": 14,
+      "pageviews": 16
     },
     {
       "date": "2026-08-30",
       "sessions": 15,
-      "activeUsers": 14,
-      "pageviews": 17
+      "activeUsers": 13,
+      "pageviews": 15
     },
     {
       "date": "2026-08-31",
-      "sessions": 30,
+      "sessions": 28,
       "activeUsers": 22,
-      "pageviews": 82
+      "pageviews": 69
     },
     {
       "date": "2026-09-01",
       "sessions": 21,
-      "activeUsers": 14,
-      "pageviews": 42
+      "activeUsers": 15,
+      "pageviews": 40
     },
     {
       "date": "2026-09-02",
-      "sessions": 13,
+      "sessions": 12,
       "activeUsers": 5,
-      "pageviews": 92
+      "pageviews": 91
     },
     {
       "date": "2026-09-03",
@@ -83,9 +83,9 @@
     },
     {
       "date": "2026-09-04",
-      "sessions": 23,
-      "activeUsers": 17,
-      "pageviews": 53
+      "sessions": 25,
+      "activeUsers": 18,
+      "pageviews": 54
     },
     {
       "date": "2026-09-05",
@@ -119,9 +119,9 @@
     },
     {
       "date": "2026-09-10",
-      "sessions": 19,
-      "activeUsers": 15,
-      "pageviews": 19
+      "sessions": 20,
+      "activeUsers": 17,
+      "pageviews": 21
     },
     {
       "date": "2026-09-11",
@@ -137,9 +137,9 @@
     },
     {
       "date": "2026-09-13",
-      "sessions": 13,
-      "activeUsers": 9,
-      "pageviews": 15
+      "sessions": 12,
+      "activeUsers": 8,
+      "pageviews": 13
     },
     {
       "date": "2026-09-14",
@@ -150,8 +150,8 @@
     {
       "date": "2026-09-15",
       "sessions": 5,
-      "activeUsers": 5,
-      "pageviews": 5
+      "activeUsers": 4,
+      "pageviews": 4
     },
     {
       "date": "2026-09-16",
@@ -179,13 +179,135 @@
     },
     {
       "date": "2026-09-20",
-      "sessions": 6,
-      "activeUsers": 3,
-      "pageviews": 12
+      "sessions": 12,
+      "activeUsers": 10,
+      "pageviews": 20
     }
   ],
-  "top_pages": [],
-  "traffic_sources": [],
+  "top_pages": [
+    {
+      "path": "/ops-dashboard/",
+      "title": "ChinaBound Travel · 运营监控中心",
+      "pageviews": 173,
+      "sessions": 66
+    },
+    {
+      "path": "/",
+      "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
+      "pageviews": 95,
+      "sessions": 75
+    },
+    {
+      "path": "/ops/ops-center",
+      "title": "ChinaBound Travel · 智能运营中心 v3.0",
+      "pageviews": 45,
+      "sessions": 32
+    },
+    {
+      "path": "/ops/ops-center",
+      "title": "ChinaBound Travel · 统一运营中心",
+      "pageviews": 25,
+      "sessions": 5
+    },
+    {
+      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "7-Day China Itinerary: Beijing, Xi'an, Shanghai | ChinaBound Travel",
+      "pageviews": 14,
+      "sessions": 8
+    },
+    {
+      "path": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "pageviews": 14,
+      "sessions": 14
+    },
+    {
+      "path": "/about/",
+      "title": "About Joran & ChinaBound Travel | ChinaBound Travel",
+      "pageviews": 12,
+      "sessions": 7
+    },
+    {
+      "path": "/posts/",
+      "title": "Posts | ChinaBound Travel",
+      "pageviews": 12,
+      "sessions": 6
+    },
+    {
+      "path": "/china-bargaining-and-shopping-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 11,
+      "sessions": 10
+    },
+    {
+      "path": "/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
+      "title": "China National Parks: Zhangjiajie, Jiuzhaigou, And Beyond Guide | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 3
+    },
+    {
+      "path": "/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "title": "Chinese Food Delivery: Meituan & Ele.me Guide | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 7
+    },
+    {
+      "path": "/posts/hangzhou-west-lake-tea-culture-g20-guide/",
+      "title": "Hangzhou Travel Guide: West Lake & Tea | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 4
+    },
+    {
+      "path": "/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "title": "How to Use Alipay as a Foreigner (2026) | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 5
+    },
+    {
+      "path": "/posts/shanghai-bund-french-concession-2-day-guide/",
+      "title": "Shanghai 48-Hour Guide: Bund & French Concession | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 6
+    },
+    {
+      "path": "/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+      "title": "Sichuan Hotpot Guide: History & Best Restaurants | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 7
+    }
+  ],
+  "traffic_sources": [
+    {
+      "channel": "Direct",
+      "sessions": 185,
+      "activeUsers": 107,
+      "engagementRate": 0.3135
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 135,
+      "activeUsers": 109,
+      "engagementRate": 0.5111
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 16,
+      "activeUsers": 14,
+      "engagementRate": 0.1875
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 8,
+      "activeUsers": 5,
+      "engagementRate": 0.125
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 3,
+      "activeUsers": 2,
+      "engagementRate": 0.0
+    }
+  ],
   "raw_source": "GA4 Data API v1beta",
   "status": "OK",
   "error": null,

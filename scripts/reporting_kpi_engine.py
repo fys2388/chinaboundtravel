@@ -474,6 +474,13 @@ def build_traffic() -> dict:
                 f"{_ga4['pull_time']}, data_date {_ga4['data_date']})")
     _ga4_period = _ga4.get("period") or period
 
+    # channel 维度曾经恒为空：real_data_pull_engine 的 orderBys 用了
+    # {"field":{"fieldName":..},"sortOrder":..}，而 GA4 Data API 要的是
+    # {"metric":{"metricName":..},"desc":True}，请求 400 被 200 检查静默吞掉，
+    # 产物里就是一份永远的空数组。修好后这里如实呈现 breakdown；
+    # 仍为空时按 NOT_AVAILABLE 处理，不臆造 breakdown。
+    _ts = _ga4.get("traffic_sources") or None
+
     kpis = [
         _kpi("users_28d", "GA4 unique users, 28d window",
              _ga4.get("activeUsers"), "users",
@@ -492,18 +499,111 @@ def build_traffic() -> dict:
              _ga4_src if _ga4 else "Engagement dimension not persisted",
              f"GA4 engagedSessions {_ga4.get('engagedSessions')} / "
              f"sessions {_ga4.get('sessions')}", "daily", None, _ga4_period),
-        # traffic_sources 在拉取产物里是空数组 —— GA4 采集脚本没取 channel 维度，
-        # 这是真实的数据缺口，不臆造 breakdown。
+        # channel 维度曾经恒为空：real_data_pull_engine 的 orderBys 用了
+        # {"field":{"fieldName":..},"sortOrder":..}，而 GA4 Data API 要的是
+        # {"metric":{"metricName":..},"desc":True}，请求 400 被 200 检查静默吞掉，
+        # 产物里就是一份永远的空数组。修好后这里如实呈现 breakdown；
+        # 仍为空时按 NOT_AVAILABLE 处理，不臆造 breakdown。
         _kpi("source_channel_mix", "Sessions by default channel group, 28d window",
-             _ga4.get("traffic_sources") or None,
-             "breakdown", "LIVE" if _ga4.get("traffic_sources") else "NOT_AVAILABLE",
-             _ga4_src + " (traffic_sources empty — GA4 采集脚本未取 channel 维度)"
-             if _ga4 else "GA4 channel dimension not persisted",
+             _ts,
+             "breakdown", "LIVE" if _ts else "NOT_AVAILABLE",
+             _ga4_src + (f" (traffic_sources {len(_ts)} 组)" if _ts
+                         else " (traffic_sources 为空 —— 见 ga4_real_data.json 的 "
+                              "traffic_sources_error 字段)") if _ga4
+             else "GA4 channel dimension not persisted",
              "group by sessionDefaultChannelGroup", "weekly", None, _ga4_period),
     ]
     return {"source_artifacts": [str(REV / "REVENUE_DASHBOARD.md"),
                                  "reports/real_data/ga4_real_data.json"],
             "kpis": kpis}
+
+
+def _index_snapshot_diff() -> dict:
+    """对 gsc_index_snapshot.py 产出的页面级快照做前后两份差。
+
+    返回 {
+        "newly_indexed": int|None,   # 本期新进入可见集合的页面数
+        "losing_visibility": int|None,  # 本期失去可见性的页面数
+        "status": str,               # OK / INSUFFICIENT_BASELINE
+        "note": str,
+        "latest_day": str|None,
+        "prior_day": str|None,
+        "detail": dict,
+    }
+
+    设计要点：
+
+    **第一天必须报 INSUFFICIENT_BASELINE，不能报 0。**
+    只有 1 份快照时，「新索引页面数」在数学上是可算的（全集 vs 空集），
+    但那会把站点全部 66 个页面报成「新索引」，日报于是天天高喊「今日新增
+    66 个索引页」—— 一个持续一个周期的假阳性。没有对照基线时正确答案是
+    「无法判定」，不是 0。
+
+    **只用 impressions > 0 判定「可见」。**
+    GSC searchAnalytics 不含索引状态，只反映页面是否出现在自然结果里。
+    impressions == 0 的页面可能是没被索引，也可能是被索引了但当期没人搜到
+    它的查询 —— 后一种不能算「失去可见性」。所以判据是曝光而非存在。
+
+    **差集方向。**
+    newly = 本期有曝光 & 上期无曝光
+    losing = 上期有曝光 & 本期无曝光
+    两侧对称，不引入 impression 降幅阈值 —— 阈值会让数值随阈值漂移，
+    而差集方向本身是确定的。
+
+    快照目录不存在 / 为空 / 全是坏 JSON 都返回 INSUFFICIENT_BASELINE，
+    不抛异常 —— 引擎是汇总器，单个上游产物缺失不该让它崩。
+    """
+    result = {"newly_indexed": None, "losing_visibility": None,
+              "status": "INSUFFICIENT_BASELINE",
+              "note": "至少需要 2 份 gsc_index_snapshot 快照才能计算差值",
+              "latest_day": None, "prior_day": None, "detail": {}}
+    try:
+        sys_path_guard = list(sys.path)
+        if str(BASE / "scripts") not in sys.path:
+            sys.path.insert(0, str(BASE / "scripts"))
+        import gsc_index_snapshot as gis  # noqa: E402
+        paths = gis.list_snapshots()
+        if len(paths) < 2:
+            result["note"] = (f"gsc_page_snapshots/ 下只有 {len(paths)} 份快照，"
+                             "需要至少 2 份（第一次运行只建立基线，"
+                             "第二天起自动转正）")
+            return result
+
+        def _load(p):
+            data = json.loads(p.read_text(encoding="utf-8"))
+            return data.get("pages", {}) or {}, data.get("window", {})
+
+        prior_pages, prior_win = _load(paths[-2])
+        latest_pages, latest_win = _load(paths[-1])
+
+        prior_visible = {u for u, v in prior_pages.items()
+                         if isinstance(v, dict) and (v.get("impressions") or 0) > 0}
+        latest_visible = {u for u, v in latest_pages.items()
+                          if isinstance(v, dict) and (v.get("impressions") or 0) > 0}
+
+        newly = sorted(latest_visible - prior_visible)
+        losing = sorted(prior_visible - latest_visible)
+
+        result.update({
+            "newly_indexed": len(newly),
+            "losing_visibility": len(losing),
+            "status": "OK",
+            "latest_day": latest_win.get("end"),
+            "prior_day": prior_win.get("end"),
+            "note": (f"对比 {prior_win.get('end')} → {latest_win.get('end')}；"
+                     f"判据为 page 维度 impressions > 0（GSC searchAnalytics "
+                     f"不含索引状态，用曝光作可见性的代理）"),
+            "detail": {
+                "newly_indexed_urls": newly[:20],
+                "losing_visibility_urls": losing[:20],
+                "prior_visible_count": len(prior_visible),
+                "latest_visible_count": len(latest_visible),
+            },
+        })
+        return result
+    except Exception as e:
+        result["note"] = f"gsc_page_snapshots/ 读取失败: {type(e).__name__}: {e}"
+        return result
 
 
 # --------------------------------------------------------------------------
@@ -515,6 +615,7 @@ def build_seo_gsc() -> dict:
     inventory = _read_csv(SEO / "CONTENT_SEO_INVENTORY.csv")
     opportunity = _read_csv(SEO / "content_opportunity_scores.csv")
     inspection = _read_json(SEO / "url_inspection_results.json")
+    idx_diff = _index_snapshot_diff()
 
     gsc_clicks = _reg_int(seo_text, r"\|\s*Clicks\s*\|\s*([0-9]+)\s*\|")
     gsc_impressions = _reg_int(seo_text, r"\|\s*Impressions\s*\|\s*([0-9]+)\s*\|")
@@ -588,12 +689,28 @@ def build_seo_gsc() -> dict:
              "reports/seo/CONTENT_SEO_INVENTORY.csv",
              "sum impressions_28d over inventory", "daily", 1168,
              "2026-07-19..2026-08-15"),
-        _kpi("pages_newly_indexed", "Pages newly indexed this period", None, "pages",
-             "NOT_AVAILABLE", "Requires prior index snapshot (first unified run)",
-             "delta of indexed page set vs prior snapshot", "weekly", None, None),
-        _kpi("pages_losing_visibility", "Pages losing visibility this period", None, "pages",
-             "NOT_AVAILABLE", "Requires prior GSC snapshot (first unified run)",
-             "delta of impressions/position vs prior snapshot", "weekly", None, None),
+        _kpi("pages_newly_indexed", "Pages newly indexed this period",
+             idx_diff["newly_indexed"], "pages",
+             "LIVE" if idx_diff["status"] == "OK" else "NOT_AVAILABLE",
+             "reports/seo/gsc_page_snapshots/ (2 consecutive snapshots)"
+             if idx_diff["status"] == "OK"
+             else f"reports/seo/gsc_page_snapshots/ — {idx_diff['note']}",
+             "pages with impressions>0 in latest snapshot but absent/zero in prior",
+             "weekly", None,
+             f"{idx_diff['prior_day']}..{idx_diff['latest_day']}"
+             if idx_diff["latest_day"] else None,
+             "OK" if idx_diff["status"] == "OK" else idx_diff["status"]),
+        _kpi("pages_losing_visibility", "Pages losing visibility this period",
+             idx_diff["losing_visibility"], "pages",
+             "LIVE" if idx_diff["status"] == "OK" else "NOT_AVAILABLE",
+             "reports/seo/gsc_page_snapshots/ (2 consecutive snapshots)"
+             if idx_diff["status"] == "OK"
+             else f"reports/seo/gsc_page_snapshots/ — {idx_diff['note']}",
+             "pages with impressions>0 in prior snapshot but absent/zero in latest",
+             "weekly", None,
+             f"{idx_diff['prior_day']}..{idx_diff['latest_day']}"
+             if idx_diff["latest_day"] else None,
+             "OK" if idx_diff["status"] == "OK" else idx_diff["status"]),
         _kpi("top_opportunities", "Top content opportunities by score", top_opp,
              "list", "CACHED", "reports/seo/content_opportunity_scores.csv",
              "top 3 rows by opportunity_score", "weekly", None, gsc_period),

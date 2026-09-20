@@ -4,7 +4,8 @@
       "users_28d",
       "sessions_28d",
       "pageviews_28d",
-      "engagement_rate_28d"
+      "engagement_rate_28d",
+      "source_channel_mix"
     ],
     "contaminated": true,
     "duplicate_destinations": true,
@@ -15,7 +16,8 @@
       "users_28d",
       "sessions_28d",
       "pageviews_28d",
-      "engagement_rate_28d"
+      "engagement_rate_28d",
+      "source_channel_mix"
     ],
     "contaminated": true,
     "duplicate_destinations": true,
@@ -1094,15 +1096,15 @@
           "duplicate_destination_source": false,
           "meaning": "Backup / rollback status",
           "name": "backup_rollback",
-          "source": "site-backup-daily.yml + restore_site.sh present, but no backup/site-* tag produced yet",
+          "source": "latest tag backup/site-20260920-124309Z (%Y->- (HEAD -> main, tag: backup/site-20260920-124309Z, origin/main, origin/backup/site-snapshot, origin/HEAD)); restore_site.sh + site-backup-daily.yml present",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "SCRIPT_ONLY",
+          "status": "CONFIGURED",
           "unit": "status",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": "SCRIPT_ONLY"
+          "valid_period": "%Y->- (HEAD -> main, tag: backup/site-20260920-124309Z, origin/main, origin/backup/site-snapshot, origin/HEAD)",
+          "value": "CONFIGURED"
         },
         {
           "baseline": "PASS",
@@ -1426,17 +1428,17 @@
         },
         {
           "baseline": null,
-          "calculation": "delta of indexed page set vs prior snapshot",
+          "calculation": "pages with impressions>0 in latest snapshot but absent/zero in prior",
           "data_source_type": "NOT_AVAILABLE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Pages newly indexed this period",
           "name": "pages_newly_indexed",
-          "source": "Requires prior index snapshot (first unified run)",
-          "source_age_days": null,
-          "source_observed_date": null,
+          "source": "reports/seo/gsc_page_snapshots/ — gsc_page_snapshots/ 下只有 1 份快照，需要至少 2 份（第一次运行只建立基线，第二天起自动转正）",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "INSUFFICIENT_BASELINE",
           "unit": "pages",
           "update_frequency": "weekly",
           "valid_period": null,
@@ -1444,17 +1446,17 @@
         },
         {
           "baseline": null,
-          "calculation": "delta of impressions/position vs prior snapshot",
+          "calculation": "pages with impressions>0 in prior snapshot but absent/zero in latest",
           "data_source_type": "NOT_AVAILABLE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Pages losing visibility this period",
           "name": "pages_losing_visibility",
-          "source": "Requires prior GSC snapshot (first unified run)",
-          "source_age_days": null,
-          "source_observed_date": null,
+          "source": "reports/seo/gsc_page_snapshots/ — gsc_page_snapshots/ 下只有 1 份快照，需要至少 2 份（第一次运行只建立基线，第二天起自动转正）",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "INSUFFICIENT_BASELINE",
           "unit": "pages",
           "update_frequency": "weekly",
           "valid_period": null,
@@ -1727,15 +1729,15 @@
           "duplicate_destination_source": true,
           "meaning": "GA4 unique users, 28d window",
           "name": "users_28d",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-19T09:52:19.545948, data_date 2026-09-18)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-19",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-20T21:05:24.124723, data_date 2026-09-19)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "DUPLICATE_DESTINATION",
           "unit": "users",
           "update_frequency": "daily",
-          "valid_period": "2026-08-24..2026-09-19",
-          "value": 246
+          "valid_period": "2026-08-24..2026-09-20",
+          "value": 234
         },
         {
           "baseline": 162,
@@ -1775,39 +1777,70 @@
         },
         {
           "baseline": null,
-          "calculation": "GA4 engagedSessions 134 / sessions 366",
+          "calculation": "GA4 engagedSessions 131 / sessions 347",
           "data_source_type": "LIVE",
           "destination_note": "GA4 的 Google Tag 配了 2 个目的地（G-GECBME3YVJ, G-P6BH500VBK），每个事件被同时记到这两个属性里。单个属性的数值本身没有被双计，但这个配置的权威地位未被证实：所有脚本都查数值 ID GA4_PROPERTY_ID，而 hugo.toml 写的是 measurement ID，仓库无法证明两者指向同一个属性，也无法证明当前读的不是多余的那个。涉及 KPI：users_28d / sessions_28d / pageviews_28d / engagement_rate_28d。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "duplicate_destination_source": true,
           "meaning": "GA4 engagement rate, 28d window",
           "name": "engagement_rate_28d",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-19T09:52:19.545948, data_date 2026-09-18)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-19",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-20T21:05:24.124723, data_date 2026-09-19)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "DUPLICATE_DESTINATION",
           "unit": "%",
           "update_frequency": "daily",
-          "valid_period": "2026-08-24..2026-09-19",
-          "value": 0.366120218579235
+          "valid_period": "2026-08-24..2026-09-20",
+          "value": 0.37752161383285304
         },
         {
           "baseline": null,
           "calculation": "group by sessionDefaultChannelGroup",
-          "data_source_type": "NOT_AVAILABLE",
-          "destination_note": "",
-          "duplicate_destination_source": false,
+          "data_source_type": "LIVE",
+          "destination_note": "GA4 的 Google Tag 配了 2 个目的地（G-GECBME3YVJ, G-P6BH500VBK），每个事件被同时记到这两个属性里。单个属性的数值本身没有被双计，但这个配置的权威地位未被证实：所有脚本都查数值 ID GA4_PROPERTY_ID，而 hugo.toml 写的是 measurement ID，仓库无法证明两者指向同一个属性，也无法证明当前读的不是多余的那个。涉及 KPI：users_28d / sessions_28d / pageviews_28d / engagement_rate_28d。检测于 2026-09-20；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
+          "duplicate_destination_source": true,
           "meaning": "Sessions by default channel group, 28d window",
           "name": "source_channel_mix",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-19T09:52:19.545948, data_date 2026-09-18) (traffic_sources empty — GA4 采集脚本未取 channel 维度)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-19",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-20T21:05:24.124723, data_date 2026-09-19) (traffic_sources empty — GA4 采集脚本未取 channel 维度)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "DUPLICATE_DESTINATION",
           "unit": "breakdown",
           "update_frequency": "weekly",
-          "valid_period": "2026-08-24..2026-09-19",
-          "value": null
+          "valid_period": "2026-08-24..2026-09-20",
+          "value": [
+            {
+              "activeUsers": 107,
+              "channel": "Direct",
+              "engagementRate": 0.3135,
+              "sessions": 185
+            },
+            {
+              "activeUsers": 109,
+              "channel": "Organic Social",
+              "engagementRate": 0.5111,
+              "sessions": 135
+            },
+            {
+              "activeUsers": 14,
+              "channel": "Organic Search",
+              "engagementRate": 0.1875,
+              "sessions": 16
+            },
+            {
+              "activeUsers": 5,
+              "channel": "AI Assistant",
+              "engagementRate": 0.125,
+              "sessions": 8
+            },
+            {
+              "activeUsers": 2,
+              "channel": "Unassigned",
+              "engagementRate": 0.0,
+              "sessions": 3
+            }
+          ]
         }
       ],
       "source_artifacts": [
@@ -1829,6 +1862,7 @@
     "traffic.engagement_rate_28d: GA4 source canonicality unverified",
     "traffic.pageviews_28d: GA4 source canonicality unverified",
     "traffic.sessions_28d: GA4 source canonicality unverified",
+    "traffic.source_channel_mix: GA4 source canonicality unverified",
     "traffic.users_28d: GA4 source canonicality unverified"
   ],
   "low_data_warning": true,
