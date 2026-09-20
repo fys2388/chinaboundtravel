@@ -65,11 +65,15 @@ jobs:
           git push origin "HEAD:${BRANCH}" \
             || { echo "::error::备份分支推送失败 ${BRANCH}（若 main 被 force-push，需人工介入）"; exit 1; }
 
-          # 3) 归档：只打 git 跟踪的文件，密钥文件天然不入库
-          tar czf site-archive.tar.gz \
-            --exclude='config/service-account.json' \
-            --exclude='.git' \
-            $(git ls-files) 2>/dev/null || { echo "::error::归档失败"; exit 1; }
+          # 3) 归档：直接打包 git 索引，密钥文件天然不入库（.gitignore 排除）
+          #
+          # 用 git archive 而不是 `tar czf $(git ls-files)`：
+          # git ls-files 对含非 ASCII 字符的路径会输出 C 风格转义的引号串
+          # （如 "README_\345\267\241\346\243\200..."），shell 按空白切词后变成
+          # 磁盘上不存在的字面路径，tar 报 No such file or directory，退出码非 0。
+          # 本仓库有 3 个中文文件名（README_质量控制系统.md 等），所以旧写法必挂。
+          git archive --format=tar.gz --output=site-archive.tar.gz HEAD \
+            || { echo "::error::归档失败"; exit 1; }
           ls -lh site-archive.tar.gz
 
           echo "### 备份完成"
