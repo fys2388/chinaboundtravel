@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T12:07:40.794221+00:00",
+  "checked_at": "2026-09-20T15:18:18.789648+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
     "/",
@@ -17,7 +17,7 @@
         "G-GECBME3YVJ",
         "G-P6BH500VBK"
       ],
-      "payload_bytes": 526600
+      "payload_bytes": 526575
     }
   },
   "measurement_ids": [
@@ -31,7 +31,7 @@
     "canonical_property_id": "538482322",
     "canonical_measurement_id": "G-GECBME3YVJ",
     "hugo_measurement_id": "G-GECBME3YVJ",
-    "env_property_id": "538482322",
+    "env_property_id": "",
     "canonical_config_present": true,
     "mismatch_reasons": []
   },

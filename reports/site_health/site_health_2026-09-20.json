@@ -1,21 +1,31 @@
 {
-  "timestamp": "2026-09-20T02:26:45.230089+00:00",
+  "timestamp": "2026-09-20T15:18:17.087120+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 8,
-    "critical": 0,
+    "total_issues": 9,
+    "critical": 1,
     "high": 3,
     "medium": 0,
     "low": 5,
     "auto_fixed": 0,
-    "need_manual": 19,
+    "need_manual": 20,
     "resolved": 13,
     "inherited_resolved": 13,
     "in_progress": 0,
-    "last_updated": "2026-09-20T02:26:47.081188"
+    "last_updated": "2026-09-20T15:18:19.784090"
   },
   "issues": [
+    {
+      "type": "multiple_analytics_destinations",
+      "severity": "critical",
+      "check": "analytics_measurement_ids",
+      "file": "https://www.chinaboundtravel.com",
+      "message": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 526575}}}",
+      "auto_fixable": false,
+      "agent": "site_health"
+    },
     {
       "type": "content_placeholder",
       "severity": "high",

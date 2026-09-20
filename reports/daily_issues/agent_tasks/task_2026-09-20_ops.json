@@ -3,12 +3,12 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-20_ops",
   "created_at": "2026-09-20T02:26:46.842856+00:00",
-  "updated_at": "2026-09-20T02:26:47.137275",
+  "updated_at": "2026-09-20T15:18:19.805942",
   "target_date": "2026-09-20",
-  "issue_count": 1,
+  "issue_count": 2,
   "severity_summary": {
     "critical": 0,
-    "high": 1,
+    "high": 2,
     "medium": 0,
     "low": 0
   },
@@ -32,6 +32,26 @@
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-09-20T02:26:46.829536"
+    },
+    {
+      "id": "issue_1ecda9bdeb8a",
+      "type": "multiple_analytics_destinations",
+      "title": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
+      "description": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
+      "page": "https://www.chinaboundtravel.com",
+      "file": "https://www.chinaboundtravel.com",
+      "evidence": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-20.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-09-20T15:18:19.469727"
     }
   ],
   "priority_issue": {
@@ -62,6 +82,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
