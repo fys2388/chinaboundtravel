@@ -11,10 +11,10 @@
 | Google 账号 | `fys2388@gmail.com`（Joran Fan） |
 | GA4 账号 | `fys2388` / 账号 ID `192133217` |
 | **canonical 属性** | `ChinaBound Travel` → `chinaboundtravel` / **`538482322`** / 衡量 ID **`G-GECBME3YVJ`** |
-| 待归档的重复属性 | **`541752321`** / 衡量 ID `G-P6BH500VBK` |
+| 重复属性 | ~~`541752321`~~ 衡量 ID `G-P6BH500VBK` —— **已归档**（2026-09-20 19:55，最终删除 2026-10-25） |
 
 canonical 数据流：名称 `chinaboundtravel`，数据流 ID `14917784829`，
-当前网址 `https://chinaboundtravel.com`（**待改，见第 4 步**）。
+网址 **`https://www.chinaboundtravel.com`**（已改，2026-09-20）。
 
 ---
 
@@ -28,7 +28,7 @@ GA4_PROPERTY_ID=538482322
 
 ---
 
-## 第 2 步 GitHub Secrets
+## 第 2 步 ✅ GitHub Secrets（已完成 2026-09-20 12:07 UTC）
 
 1. 打开 <https://github.com/fys2388/chinaboundtravel/settings/secrets/actions>
 2. 找到 `GA4_PROPERTY_ID`
@@ -40,7 +40,7 @@ GA4_PROPERTY_ID=538482322
 
 ---
 
-## 第 3 步 归档重复属性 `541752321`
+## 第 3 步 ✅ 归档重复属性 `541752321`（已完成 2026-09-20 19:55）
 
 1. <https://analytics.google.com/analytics/web/#/a192133217/admin/properties>
 2. 账号选择器（左上角）→ 选中 `ChinaBound Travel 541752321`
@@ -53,7 +53,7 @@ GA4_PROPERTY_ID=538482322
 
 ---
 
-## 第 4 步 数据流网址改为带 www
+## 第 4 步 ✅ 数据流网址改为带 www（已完成 2026-09-20）
 
 线上站点是 `https://www.chinaboundtravel.com`，但两个数据流都登记的是
 无 www 的 `https://chinaboundtravel.com`。这会影响跨域归属和内部流量过滤。
@@ -103,12 +103,12 @@ GA4_PROPERTY_ID=538482322
 
 | 检查项 | 预期 | 命令 / 位置 |
 |---|---|---|
-| `.env` | `GA4_PROPERTY_ID=538482322` | `Select-String -Path .env '^GA4_PROPERTY_ID='` |
-| GitHub Secrets | `538482322` | 同上 UI |
-| posture 一致性 | `config_mismatch: false` | `reports/quality/analytics_posture.json` |
-| 载荷只剩 1 个 destination | `destination_count: 1` | 同上，第 5 步完成后重跑 site_health_agent |
-| 重复属性 | 已归档 | GA4 账号 → 回收站可见 `541752321` |
-| 数据流网址 | 带 www | GA4 → 数据流详情页 |
+| `.env` | ✅ `GA4_PROPERTY_ID=538482322` | `Select-String -Path .env '^GA4_PROPERTY_ID='` |
+| GitHub Secrets | ✅ `2026-09-20T12:07:07Z` | `gh secret list --repo fys2388/chinaboundtravel` |
+| posture 一致性 | ✅ `config_mismatch: false` | `reports/quality/analytics_posture.json` |
+| 载荷只剩 1 个 destination | ⏳ 仍 `destination_count: 2` | 同上，第 5 步完成后重跑 site_health_agent |
+| 重复属性 | ✅ 已归档，最终删除 2026-10-25 | GA4 账号 → 回收站可见 `ChinaBound Travel` |
+| 数据流网址 | ✅ `https://www.chinaboundtravel.com` | GA4 → 数据流详情页 |
 
 重跑校验（第 5 步完成后）：
 

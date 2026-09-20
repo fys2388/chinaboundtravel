@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T10:33:52.931472+00:00",
+  "checked_at": "2026-09-20T12:07:40.794221+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
     "/",
@@ -31,7 +31,7 @@
     "canonical_property_id": "538482322",
     "canonical_measurement_id": "G-GECBME3YVJ",
     "hugo_measurement_id": "G-GECBME3YVJ",
-    "env_property_id": "",
+    "env_property_id": "538482322",
     "canonical_config_present": true,
     "mismatch_reasons": []
   },
