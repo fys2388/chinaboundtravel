@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """
+⚠️  DEPRECATED (2026-09-20): 本脚本与 user_intelligence_agent.py 100%职责重叠。
+   策略文件由 core agent 内部通过 StrategyConsumer 消费。
+   工作流已移除对此脚本的调用。保留仅供手动调试使用。
+   参见: scripts/user_intelligence_agent.py
+
 ChinaBound Travel - User Learning 闭环系统
 User Learning Closed Loop
 

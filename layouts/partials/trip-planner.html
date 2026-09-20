@@ -327,6 +327,19 @@
     const API_URL = 'https://trip-planner.chinaboundtravel.com/api/trip-plan';
     const currentArticle = {{ .Title | jsonify }};
     
+    // GA4 事件追踪辅助函数
+    function trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, params);
+        }
+    }
+    
+    // 卡片加载事件追踪
+    trackEvent('trip_planner_view', {
+        page_path: window.location.pathname,
+        article_title: currentArticle
+    });
+
     const form = document.getElementById('trip-planner-form');
     const btn = document.getElementById('trip-planner-btn');
     const result = document.getElementById('trip-planner-result');
@@ -352,6 +365,15 @@
             alert('Please select at least one city');
             return;
         }
+
+        // GA4: 表单提交事件
+        trackEvent('trip_planner_submit', {
+            trip_when,
+            trip_duration,
+            trip_cities: trip_cities.join(','),
+            trip_interests: trip_interests.join(','),
+            article_title: currentArticle
+        });
 
         // 显示加载状态
         form.style.display = 'none';
@@ -386,24 +408,45 @@
             // 填充摘要
             summary.textContent = data.summary || 'No summary available';
 
-            // 填充文章推荐
+            // 填充文章推荐（带点击追踪）
             if (data.recommended_articles && data.recommended_articles.length > 0) {
                 articleList.innerHTML = data.recommended_articles.map(article => `
-                    <a href="${article.url}" class="trip-planner-article-item" target="_blank" rel="noopener">
+                    <a href="${article.url}" class="trip-planner-article-item" target="_blank" rel="noopener" data-article-title="${article.title}">
                         <span class="icon">📖</span>
                         <span class="title">${article.title}</span>
                     </a>
                 `).join('');
+                
+                // 添加文章点击追踪
+                articleList.querySelectorAll('.trip-planner-article-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        trackEvent('trip_planner_article_click', {
+                            article_title: item.dataset.articleTitle,
+                            article_url: item.href,
+                            source_article: currentArticle
+                        });
+                    });
+                });
             } else {
                 articleList.innerHTML = '<p style="color:#666;">No specific articles recommended</p>';
             }
 
-            // 填充 CTA
+            // 填充 CTA（带点击追踪）
             if (data.cta) {
                 cta.innerHTML = data.cta
                     .split('|')
-                    .map(item => `<a href="/subscribe/" style="margin: 0 1rem;">${item.trim()}</a>`)
+                    .map(item => `<a href="/subscribe/" style="margin: 0 1rem;" class="trip-planner-cta-link">${item.trim()}</a>`)
                     .join(' • ');
+                
+                // 添加 CTA 点击追踪
+                cta.querySelectorAll('.trip-planner-cta-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        trackEvent('trip_planner_cta_click', {
+                            cta_text: link.textContent.trim(),
+                            source_article: currentArticle
+                        });
+                    });
+                });
             }
 
         } catch (error) {

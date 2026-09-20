@@ -1,7 +1,7 @@
 {
   "version": "2.1",
   "description": "ChinaBound Travel AI Governance - Kill Switch + L0-L3 Permission Boundaries. Single source of truth loaded by all AI agents and workflows.",
-  "last_updated": "2026-09-04",
+  "last_updated": "2026-09-20",
   "kill_switch": {
     "global_enabled": false,
     "reason": "",
@@ -29,6 +29,34 @@
         "reason": ""
       },
       "site_health_auto_fix": {
+        "enabled": false,
+        "reason": ""
+      },
+      "seo": {
+        "enabled": false,
+        "reason": ""
+      },
+      "revenue": {
+        "enabled": false,
+        "reason": ""
+      },
+      "conversion": {
+        "enabled": false,
+        "reason": ""
+      },
+      "content": {
+        "enabled": false,
+        "reason": ""
+      },
+      "social": {
+        "enabled": false,
+        "reason": ""
+      },
+      "user": {
+        "enabled": false,
+        "reason": ""
+      },
+      "site_health": {
         "enabled": false,
         "reason": ""
       }
@@ -76,13 +104,6 @@
       "allowed": ["optimize_seo_title", "optimize_meta_description", "keyword_analysis", "opportunity_identification"],
       "denied": ["modify_facts", "modify_visa_policy", "auto_publish"],
       "notes": "SEO Title优化需有GSC数据支撑（Position 5-30, CTR偏低），低样本下仅建议不执行"
-    },
-    "self_learning": {
-      "permission_level": "L0",
-      "name": "自我学习引擎",
-      "allowed": ["read", "analyze", "report", "pattern_extraction"],
-      "denied": ["write_content", "publish", "modify_config", "execute_changes"],
-      "notes": "学习引擎只读，产出策略建议后由对应权限级别的Agent执行"
     },
     "revenue": {
       "permission_level": "L1",

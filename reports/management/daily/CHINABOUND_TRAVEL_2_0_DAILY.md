@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-09-20 (Asia/Shanghai)
-- as_of: 2026-09-20
+- Generated: 2026-09-21 (Asia/Shanghai)
+- as_of: 2026-09-21
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -27,10 +27,10 @@ Daily window metrics are NOT available (no daily GA4 pull). 28d rolling figures 
 
 | KPI | Value | Baseline | Source type | Status |
 |---|---|---|---|---|
-| users_28d | NULL | NULL | NOT_AVAILABLE | NOT_AVAILABLE |
-| sessions_28d | 166 sessions | 162 | CACHED | OK |
-| pageviews_28d | 374 pageviews | 365 | CACHED | OK |
-| engagement_rate_28d | NULL | NULL | NOT_AVAILABLE | NOT_AVAILABLE |
+| users_28d | 234 users | NULL | LIVE | DUPLICATE_DESTINATION |
+| sessions_28d | 166 sessions | 162 | CACHED | DUPLICATE_DESTINATION |
+| pageviews_28d | 374 pageviews | 365 | CACHED | DUPLICATE_DESTINATION |
+| engagement_rate_28d | 0.37752161383285304 % | NULL | LIVE | DUPLICATE_DESTINATION |
 
 ## 2. SEO changes
 
@@ -40,18 +40,18 @@ Change vs previous day: **INSUFFICIENT_SAMPLE** (no prior daily snapshot).
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| gsc_clicks_28d | 0 clicks | CACHED | OK |
-| gsc_impressions_28d | 234 impressions | CACHED | OK |
+| gsc_clicks_28d | 0 clicks | CACHED | STALE_SOURCE |
+| gsc_impressions_28d | 234 impressions | CACHED | STALE_SOURCE |
 | gsc_ctr_28d | 0.0 % | CACHED | INSUFFICIENT_SAMPLE |
-| gsc_avg_position_28d | 56.5 position | CACHED | OK |
-| indexed_pages | 69 pages | CACHED | OK |
-| not_indexed_pages | 89 pages | CACHED | OK |
-| inspected_urls | 98 urls | CACHED | OK |
-| inspection_pass | 49 urls | CACHED | OK |
+| gsc_avg_position_28d | 56.5 position | CACHED | STALE_SOURCE |
+| indexed_pages | 69 pages | CACHED | STALE_SOURCE |
+| not_indexed_pages | 89 pages | CACHED | STALE_SOURCE |
+| inspected_urls | 98 urls | CACHED | STALE_SOURCE |
+| inspection_pass | 49 urls | CACHED | STALE_SOURCE |
 | page_level_clicks_28d | 2 clicks | CACHED | INSUFFICIENT_SAMPLE |
-| page_level_impressions_28d | 1073 impressions | CACHED | OK |
-| pages_newly_indexed | NULL | NOT_AVAILABLE | NOT_AVAILABLE |
-| pages_losing_visibility | NULL | NOT_AVAILABLE | NOT_AVAILABLE |
+| page_level_impressions_28d | 1073 impressions | CACHED | STALE_SOURCE |
+| pages_newly_indexed | NULL | NOT_AVAILABLE | INSUFFICIENT_BASELINE |
+| pages_losing_visibility | NULL | NOT_AVAILABLE | INSUFFICIENT_BASELINE |
 
 Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); China Transportation Guide for European Travelers (75.0, B); China Transportation Guide: Trains, Subways & Taxis (75.0, B)
 
@@ -67,8 +67,8 @@ Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); Chin
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| cta_inventory_rows | 278 rows | CACHED | OK |
-| cta_inventory_pages | 45 pages | CACHED | OK |
+| cta_inventory_rows | 278 rows | CACHED | STALE_SOURCE |
+| cta_inventory_pages | 45 pages | CACHED | STALE_SOURCE |
 | affiliate_clicks_28d | 0 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | cta_impressions | 0 impressions | CACHED | INSUFFICIENT_SAMPLE |
 | outbound_success | 0 events | CACHED | INSUFFICIENT_SAMPLE |
@@ -88,11 +88,11 @@ All experiments in observation window; no WIN/LOSE declarations.
 
 | ID | Type | Page | Start | Days | Primary metric | Baseline | Current | Delta | Sample | Status |
 |---|---|---|---|---|---|---|---|---|---|---|
-| REV001 | CTA_PLACEMENT | Chinese Food Delivery: Meituan & Ele.me Guide | 2026-08-16 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | RUNNING |
-| REV002 | CTA_PLACEMENT | China Transportation Guide | 2026-08-16 | - | affiliate_click_rate | NULL | NULL | NULL | - | RUNNING |
-| REV003 | CTA_COPY | China Transportation Guide | 2026-08-16 | - | affiliate_click_rate | NULL | NULL | NULL | - | PENDING |
-| DRIVE-001 | SITE_WIDE_DRIVE | Site-wide Travelpayouts Drive | 2026-08-16 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | RUNNING |
-| GROWTH05-CTR-001 | CTR_TITLE_META | 144-Hour Visa | 2026-08-16 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | RUNNING |
+| REV001 | CTA_PLACEMENT | Chinese Food Delivery: Meituan & Ele.me Guide | - | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
+| REV002 | CTA_PLACEMENT | China Transportation Guide | - | - | affiliate_click_rate | NULL | NULL | NULL | - | PLANNED |
+| REV003 | CTA_COPY | China Transportation Guide | - | - | affiliate_click_rate | NULL | NULL | NULL | - | PLANNED |
+| DRIVE-001 | SITE_WIDE_DRIVE | Site-wide Travelpayouts Drive | - | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
+| GROWTH05-CTR-001 | CTR_TITLE_META | 144-Hour Visa | - | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
 | GROWTH07B-TECH-001 | TECHNICAL_INDEX_FIX | High-Speed Rail Booking | 2026-08-16 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | WAITING_RECRAWL |
 | GROWTH07C-INDEX-001 | INDEX_RECOVERY | WeChat Pay Weak | 2026-08-16 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | WAITING_RECRAWL |
 
@@ -107,7 +107,7 @@ Guard: observation < 28d or clicks < 20 => INSUFFICIENT_SAMPLE. No WIN/LOSE decl
 | automation_health | PASS | LOCAL | OK |
 | workflow_health | PASS | LOCAL | OK |
 | deployment_health | VERIFIED_2026-08-16 | CACHED | OK |
-| backup_rollback | NULL | NOT_AVAILABLE | NOT_AVAILABLE |
+| backup_rollback | CONFIGURED | LOCAL | CONFIGURED |
 | security_scan | PASS | LOCAL | OK |
 | okr_plan_items | 13 items | LOCAL | OK |
 
@@ -119,7 +119,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 
 | KPI | Value | Source type |
 |---|---|---|
-| editorial_persona_compliance | NULL | LOCAL |
+| editorial_persona_compliance | 31/113 layers | LOCAL |
 | legacy_persona_remaining | 0 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |
@@ -128,7 +128,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 
 ## 8. Alerts / anomalies
 
-- LOW_DATA_WARNING: 8 low-data reasons (see ALERTS.md)
+- LOW_DATA_WARNING: 13 low-data reasons (see ALERTS.md)
 - Anomalies: none beyond expected low-sample state
 - Blockers: canonical conflicts (6 HIGH), WAITING_RECRAWL x2, no revenue API, no fresh GSC pull since 2026-08-16
 

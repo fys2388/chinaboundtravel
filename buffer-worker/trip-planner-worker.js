@@ -120,6 +120,16 @@ export default {
       }
     }
 
+    // Commerce Agent 端点：POST /api/commerce-recommend
+    if (url.pathname === '/api/commerce-recommend' && request.method === 'POST') {
+      try {
+        const body = await request.json();
+        return await handleCommerceRecommend(body, env, ctx);
+      } catch (e) {
+        return json({ error: 'Invalid request', message: e.message }, 400);
+      }
+    }
+
     // 404
     return json({ error: 'Not found' }, 404);
   }
@@ -223,5 +233,219 @@ async function logUsage(env, data) {
   
   await env.KV_STORE.put(key, JSON.stringify(existing), {
     expirationTtl: 365 * 24 * 60 * 60 // 1 year
+  });
+}
+
+// ============ Commerce Agent ============
+
+// 联盟产品知识库
+const AFFILIATE_PRODUCTS = {
+  esim: {
+    name: 'eSIM',
+    provider: 'Airalo',
+    description: 'Stay connected with local data plans',
+    base_url: 'https://www.airalo.com',
+    utm_source: 'chinaboundtravel',
+    utm_medium: 'affiliate',
+    recommendations: {
+      'usa': { 
+        plan: '10GB / 15 days', 
+        price: '$12', 
+        url: 'https://www.airalo.com/store/eSim/china-10gb-15days/?aff=chinaboundtravel' 
+      },
+      'europe': { 
+        plan: '10GB / 15 days', 
+        price: '$12', 
+        url: 'https://www.airalo.com/store/eSim/china-10gb-15days/?aff=chinaboundtravel' 
+      },
+      'asia': { 
+        plan: '5GB / 7 days', 
+        price: '$8', 
+        url: 'https://www.airalo.com/store/eSim/china-5gb-7days/?aff=chinaboundtravel' 
+      }
+    }
+  },
+  vpn: {
+    name: 'VPN',
+    provider: 'Affiliatescn',
+    description: 'Bypass restrictions and stay secure',
+    base_url: 'https://affiliatescn.com',
+    utm_source: 'chinaboundtravel',
+    utm_medium: 'affiliate',
+    recommendations: {
+      default: {
+        plan: '1 Month / Unlimited Devices',
+        price: '$7.50',
+        url: 'https://affiliatescn.com/go/chinaboundtravel?product=china-1month'
+      }
+    }
+  },
+  insurance: {
+    name: 'Travel Insurance',
+    provider: 'SafetyWing',
+    description: 'Comprehensive coverage for your trip',
+    base_url: 'https://safetywing.com',
+    utm_source: 'chinaboundtravel',
+    utm_medium: 'affiliate',
+    recommendations: {
+      '≤3 days': { 
+        plan: 'Nomad Insurance / 1 day', 
+        price: '$2.50', 
+        url: 'https://safetywing.com/travel-insurance/plan-nomad?ref=chinaboundtravel' 
+      },
+      '4-7 days': { 
+        plan: 'Nomad Insurance / 7 days', 
+        price: '$18', 
+        url: 'https://safetywing.com/travel-insurance/plan-nomad?ref=chinaboundtravel' 
+      },
+      '8-14 days': { 
+        plan: 'Nomad Insurance / 14 days', 
+        price: '$36', 
+        url: 'https://safetywing.com/travel-insurance/plan-nomad?ref=chinaboundtravel' 
+      },
+      '2+ weeks': { 
+        plan: 'Nomad Insurance / 1 month', 
+        price: '$64', 
+        url: 'https://safetywing.com/travel-insurance/plan-nomad?ref=chinaboundtravel' 
+      }
+    }
+  },
+  hotel: {
+    name: 'Hotels',
+    provider: 'Booking.com',
+    description: 'Best rates on trusted accommodations',
+    base_url: 'https://booking.com',
+    utm_source: 'chinaboundtravel',
+    utm_medium: 'affiliate',
+    recommendations: {
+      default: {
+        plan: 'Book Hotels & Homes',
+        price: 'Free cancellation available',
+        url: 'https://www.booking.com/searchresults.html?ss=China&aid=chinaboundtravel'
+      }
+    }
+  },
+  tour: {
+    name: 'Tours & Tickets',
+    provider: 'Klook',
+    description: 'Skip the lines with prepaid tickets',
+    base_url: 'https://klook.com',
+    utm_source: 'chinaboundtravel',
+    utm_medium: 'affiliate',
+    recommendations: {
+      'Beijing': {
+        plan: 'Great Wall + Forbidden City Tour',
+        price: 'From $45',
+        url: 'https://www.klook.com/en-US/search/result/?q=china&t=chinaboundtravel'
+      },
+      'Shanghai': {
+        plan: 'Shanghai Pudong Tour',
+        price: 'From $35',
+        url: 'https://www.klook.com/en-US/search/result/?q=shanghai&t=chinaboundtravel'
+      },
+      "Xi'an": {
+        plan: 'Terracotta Warriors Tour',
+        price: 'From $30',
+        url: 'https://www.klook.com/en-US/search/result/?q=xian&t=chinaboundtravel'
+      }
+    }
+  }
+};
+
+async function handleCommerceRecommend(body, env, ctx) {
+  const { origin_country, trip_duration, trip_cities, device_type, needs } = body;
+  
+  // 默认推荐：所有用户都需要
+  const recommendations = [];
+  
+  // 1. eSIM - 所有用户都需要
+  const esimRegion = origin_country || 'asia';
+  const esimPlan = AFFILIATE_PRODUCTS.esim.recommendations[esimRegion] || AFFILIATE_PRODUCTS.esim.recommendations.asia;
+  recommendations.push({
+    category: 'esim',
+    name: `eSIM - ${esimPlan.plan}`,
+    provider: 'Airalo',
+    price: esimPlan.price,
+    url: esimPlan.url,
+    reason: 'Stay connected from the moment you land'
+  });
+  
+  // 2. VPN - 根据设备类型
+  if (device_type || true) { // 默认推荐
+    const vpnPlan = AFFILIATE_PRODUCTS.vpn.recommendations.default;
+    recommendations.push({
+      category: 'vpn',
+      name: `VPN - ${vpnPlan.plan}`,
+      provider: 'Affiliatescn',
+      price: vpnPlan.price,
+      url: vpnPlan.url,
+      reason: 'Bypass internet restrictions and stay secure'
+    });
+  }
+  
+  // 3. Travel Insurance - 根据行程时长
+  const insurancePlan = AFFILIATE_PRODUCTS.insurance.recommendations[trip_duration] || AFFILIATE_PRODUCTS.insurance.recommendations['4-7 days'];
+  recommendations.push({
+    category: 'insurance',
+    name: `Travel Insurance - ${insurancePlan.plan}`,
+    provider: 'SafetyWing',
+    price: insurancePlan.price,
+    url: insurancePlan.url,
+    reason: 'Comprehensive coverage for peace of mind'
+  });
+  
+  // 4. Hotels - 根据城市
+  if (trip_cities && trip_cities.length > 0) {
+    const firstCity = trip_cities[0];
+    recommendations.push({
+      category: 'hotel',
+      name: `Hotels in ${firstCity}`,
+      provider: 'Booking.com',
+      price: 'Free cancellation available',
+      url: `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(firstCity)}&aid=chinaboundtravel`,
+      reason: `Best rates for ${firstCity} accommodations`
+    });
+  }
+  
+  // 5. Tours - 根据城市
+  if (trip_cities && trip_cities.length > 0) {
+    for (const city of trip_cities.slice(0, 2)) {
+      const tourPlan = AFFILIATE_PRODUCTS.tour.recommendations[city];
+      if (tourPlan) {
+        recommendations.push({
+          category: 'tour',
+          name: `Tours - ${tourPlan.plan}`,
+          provider: 'Klook',
+          price: tourPlan.price,
+          url: tourPlan.url,
+          reason: `Skip the lines in ${city}`
+        });
+      }
+    }
+  }
+  
+  // 记录推荐日志
+  if (env.KV_STORE) {
+    const key = `commerce:${new Date().toISOString().split('T')[0]}`;
+    const existing = await env.KV_STORE.get(key, 'json') || { count: 0, details: [] };
+    existing.count += 1;
+    existing.details.push({
+      timestamp: new Date().toISOString(),
+      origin_country,
+      trip_duration,
+      trip_cities,
+      needs,
+      recommended_categories: recommendations.map(r => r.category)
+    });
+    await env.KV_STORE.put(key, JSON.stringify(existing), {
+      expirationTtl: 365 * 24 * 60 * 60
+    });
+  }
+  
+  return json({
+    recommendations,
+    total_count: recommendations.length,
+    affiliate_disclosure: true,
+    disclaimer: 'Some links are affiliate links. We may earn a commission at no extra cost to you.'
   });
 }

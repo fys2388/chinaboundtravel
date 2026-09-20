@@ -40,7 +40,6 @@ STRATEGY_FILES = {
 # Agent reports
 AGENT_REPORTS = {
     "seo": REPORTS_DIR / "seo" / "seo_intelligence_report.md",
-    "self_learning": REPORTS_DIR / "learning" / "self_learning_report.md",
     "revenue": REPORTS_DIR / "revenue" / "revenue_analytics_report.md",
     "conversion": REPORTS_DIR / "conversion" / "conversion_optimization_report.md",
     "content": REPORTS_DIR / "content" / "content_intelligence_report.md",

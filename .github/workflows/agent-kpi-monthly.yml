@@ -42,6 +42,12 @@ jobs:
         id: kpi_audit
         run: |
           MONTH="${{ github.event.inputs.month || '' }}"
+          
+          # P0 修复: 先收集真实营收数据（GA4 + Stripe + Travelpayouts）
+          # 之前缺失此步骤 → load_real_revenue_data() 从磁盘读取时无文件 → 营收恒为0
+          echo "=== 收集营收数据 ==="
+          python scripts/revenue_data_collector.py --source all --days 30 || echo "⚠️ Revenue collector failed (non-fatal, continuing with cache)"
+          
           if [ -n "$MONTH" ]; then
             python scripts/agent_kpi_auditor.py --month "$MONTH"
           else

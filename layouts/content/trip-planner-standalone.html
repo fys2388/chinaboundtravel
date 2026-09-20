@@ -1,0 +1,717 @@
+{{- define "main" -}}
+<div class="trip-planner-standalone-container">
+    <!-- Hero Section -->
+    <section class="trip-planner-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">🧭 AI Trip Planner</h1>
+            <p class="hero-subtitle">Get your personalized China travel itinerary in 60 seconds</p>
+            <div class="hero-benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">🎯</span>
+                    <span>Personalized recommendations</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">📚</span>
+                    <span>Curated guide articles</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">💰</span>
+                    <span>Downloadable templates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trip Planner Form -->
+    <section class="trip-planner-standalone-form">
+        <h2>Tell Us About Your Trip</h2>
+        
+        <div class="standalone-form-group">
+            <div class="standalone-question">
+                <label for="standalone-trip-when">1. When are you coming to China?</label>
+                <select id="standalone-trip-when" name="trip_when">
+                    <option value="">Select...</option>
+                    <option value="this month">This month</option>
+                    <option value="1-3 months">1-3 months</option>
+                    <option value="3-6 months">3-6 months</option>
+                    <option value="later this year">Later this year</option>
+                    <option value="just browsing">Just browsing (no specific date)</option>
+                </select>
+            </div>
+
+            <div class="standalone-question">
+                <label for="standalone-trip-duration">2. How long will you stay?</label>
+                <select id="standalone-trip-duration" name="trip_duration">
+                    <option value="">Select...</option>
+                    <option value="≤3 days">3 days or less (144hr visa)</option>
+                    <option value="4-7 days">4-7 days</option>
+                    <option value="8-14 days">8-14 days</option>
+                    <option value="2+ weeks">2+ weeks</option>
+                </select>
+            </div>
+
+            <div class="standalone-question">
+                <label>3. Which cities interest you?</label>
+                <div class="standalone-checkboxes">
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Beijing"> Beijing</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Shanghai"> Shanghai</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Xi'an"> Xi'an</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Chengdu"> Chengdu</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Guangzhou"> Guangzhou</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Zhangjiajie"> Zhangjiajie</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_cities" value="Others"> Others</label>
+                </div>
+            </div>
+
+            <div class="standalone-question">
+                <label>4. What are you interested in?</label>
+                <div class="standalone-checkboxes">
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="Food"> Food</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="History"> History</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="Culture"> Culture</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="Nature"> Nature</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="Shopping"> Shopping</label>
+                    <label class="standalone-checkbox-label"><input type="checkbox" name="trip_interests" value="Business"> Business</label>
+                </div>
+            </div>
+
+            <button type="button" class="standalone-generate-btn" id="standalone-generate-btn">
+                Generate My Trip Plan →
+            </button>
+        </div>
+
+        <div class="standalone-privacy-note">
+            🔒 100% anonymous - no login required. Your answers stay private.
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="trip-planner-standalone-result" id="standalone-trip-planner-result" style="display: none;">
+        <div class="standalone-loading" id="standalone-trip-planner-loading">
+            <div class="standalone-spinner"></div>
+            <p>AI is generating your personalized plan...</p>
+        </div>
+
+        <div class="standalone-output" id="standalone-trip-planner-output" style="display: none;">
+            <div class="standalone-summary-card">
+                <h3>📋 Your Personalized Trip Plan</h3>
+                <div class="standalone-summary" id="standalone-trip-planner-summary"></div>
+            </div>
+
+            <div class="standalone-articles-section">
+                <h3>📚 Recommended Guides</h3>
+                <div class="standalone-article-grid" id="standalone-trip-planner-article-list"></div>
+            </div>
+
+            <div class="standalone-cta-section">
+                <h3>🎁 Take It With You</h3>
+                <div class="standalone-cta" id="standalone-trip-planner-cta"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="trip-planner-how-it-works">
+        <h2>How It Works</h2>
+        <div class="how-it-works-steps">
+            <div class="how-step">
+                <div class="step-number">1</div>
+                <h3>Answer Questions</h3>
+                <p>Tell us about your trip timing, duration, cities, and interests.</p>
+            </div>
+            <div class="how-step">
+                <div class="step-number">2</div>
+                <h3>AI Generates Plan</h3>
+                <p>Our AI creates a personalized itinerary with practical tips.</p>
+            </div>
+            <div class="how-step">
+                <div class="step-number">3</div>
+                <h3>Get Recommendations</h3>
+                <p>Receive curated article guides and downloadable resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="trip-planner-footer-cta">
+        <div class="footer-cta-content">
+            <h2>Ready to Plan Your China Trip?</h2>
+            <p>Join 10,000+ travelers who use ChinaBound Travel for accurate, up-to-date information.</p>
+            <div class="footer-cta-buttons">
+                <a href="/subscribe/" class="btn-primary">Get Monthly Updates</a>
+                <a href="/posts/" class="btn-secondary">Browse All Guides</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- CSS Styles -->
+<style>
+.trip-planner-standalone-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.trip-planner-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a8a 100%);
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin: 0 0 2rem 0;
+}
+
+.hero-benefits {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+}
+
+/* Form Section */
+.trip-planner-standalone-form {
+    background: white;
+    border: 2px solid #e0e8f0;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 3rem;
+}
+
+.trip-planner-standalone-form h2 {
+    text-align: center;
+    color: #1a365d;
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+}
+
+.standalone-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.standalone-question {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.standalone-question > label {
+    font-weight: 700;
+    color: #1a365d;
+    font-size: 1.05rem;
+}
+
+.standalone-question select {
+    padding: 1rem 1.25rem;
+    border: 2px solid #c4d8eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.standalone-question select:focus {
+    outline: none;
+    border-color: #3A6EA5;
+}
+
+.standalone-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.standalone-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #f8fbff;
+    border: 2px solid #e0e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.standalone-checkbox-label:hover {
+    border-color: #3A6EA5;
+    background: #f0f7ff;
+}
+
+.standalone-checkbox-label:has(input:checked) {
+    border-color: #3A6EA5;
+    background: #e8f4fd;
+    font-weight: 600;
+    color: #1a365d;
+}
+
+.standalone-generate-btn {
+    margin-top: 1rem;
+    padding: 1.25rem 2.5rem;
+    background: linear-gradient(135deg, #3A6EA5 0%, #2d5a8a 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(58, 110, 165, 0.4);
+    align-self: center;
+}
+
+.standalone-generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(58, 110, 165, 0.5);
+}
+
+.standalone-privacy-note {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #6a8caf;
+}
+
+/* Results Section */
+.trip-planner-standalone-result {
+    margin-bottom: 3rem;
+}
+
+.standalone-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+}
+
+.standalone-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #c4d8eb;
+    border-top-color: #3A6EA5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.standalone-output {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.standalone-summary-card {
+    background: white;
+    border: 2px solid #3A6EA5;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(58, 110, 165, 0.15);
+}
+
+.standalone-summary-card h3 {
+    margin: 0 0 1rem 0;
+    color: #1a365d;
+    font-size: 1.5rem;
+}
+
+.standalone-summary {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.standalone-articles-section h3 {
+    color: #1a365d;
+    margin: 0 0 1rem 0;
+}
+
+.standalone-article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.standalone-article-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: white;
+    border: 2px solid #e0e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.standalone-article-item:hover {
+    border-color: #3A6EA5;
+    background: #f8fbff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(58, 110, 165, 0.15);
+}
+
+.standalone-article-item .icon {
+    font-size: 1.5rem;
+}
+
+.standalone-article-item .title {
+    font-weight: 700;
+    color: #1a365d;
+    font-size: 1rem;
+}
+
+.standalone-cta-section {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border: 2px solid #ffb74d;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.standalone-cta-section h3 {
+    margin: 0 0 1rem 0;
+    color: #e65100;
+}
+
+.standalone-cta a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #e65100;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.standalone-cta a:hover {
+    background: #bf360c;
+    transform: translateY(-2px);
+}
+
+/* How It Works Section */
+.trip-planner-how-it-works {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.trip-planner-how-it-works h2 {
+    font-size: 2rem;
+    color: #1a365d;
+    margin: 0 0 2rem 0;
+}
+
+.how-it-works-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.how-step {
+    background: white;
+    border: 2px solid #e0e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.how-step:hover {
+    border-color: #3A6EA5;
+    box-shadow: 0 4px 20px rgba(58, 110, 165, 0.15);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #3A6EA5;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.how-step h3 {
+    color: #1a365d;
+    margin: 0 0 0.75rem 0;
+}
+
+.how-step p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Footer CTA */
+.trip-planner-footer-cta {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a8a 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+}
+
+.footer-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-cta-content h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.footer-cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0 0 2rem 0;
+}
+
+.footer-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    background: white;
+    color: #1a365d;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+}
+
+.btn-secondary {
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #1a365d;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .trip-planner-standalone-container {
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-benefits {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .standalone-checkboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .standalone-generate-btn {
+        width: 100%;
+    }
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+(function() {
+    const API_URL = 'https://trip-planner.chinaboundtravel.com/api/trip-plan';
+    
+    // GA4 事件追踪
+    function trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, params);
+        }
+    }
+    
+    // 页面加载事件
+    trackEvent('trip_planner_page_view', {
+        page_path: '/ai-trip-planner/'
+    });
+
+    const generateBtn = document.getElementById('standalone-generate-btn');
+    const result = document.getElementById('standalone-trip-planner-result');
+    const loading = document.getElementById('standalone-trip-planner-loading');
+    const output = document.getElementById('standalone-trip-planner-output');
+    const summary = document.getElementById('standalone-trip-planner-summary');
+    const articleList = document.getElementById('standalone-trip-planner-article-list');
+    const cta = document.getElementById('standalone-trip-planner-cta');
+
+    generateBtn.addEventListener('click', async function() {
+        // 收集数据
+        const trip_when = document.getElementById('standalone-trip-when').value;
+        const trip_duration = document.getElementById('standalone-trip-duration').value;
+        const trip_cities = Array.from(
+            document.querySelectorAll('input[name="trip_cities"]:checked')
+        ).map(el => el.value);
+        const trip_interests = Array.from(
+            document.querySelectorAll('input[name="trip_interests"]:checked')
+        ).map(el => el.value);
+
+        // 验证
+        if (trip_cities.length === 0) {
+            alert('Please select at least one city');
+            return;
+        }
+
+        // GA4 事件
+        trackEvent('trip_planner_page_submit', {
+            trip_when,
+            trip_duration,
+            trip_cities: trip_cities.join(','),
+            trip_interests: trip_interests.join(',')
+        });
+
+        // 显示加载
+        result.style.display = 'block';
+        loading.style.display = 'flex';
+        output.style.display = 'none';
+        
+        // 滚动到结果区域
+        result.scrollIntoView({ behavior: 'smooth' });
+
+        try {
+            // 调用 API
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    trip_when,
+                    trip_duration,
+                    trip_cities,
+                    trip_interests,
+                    current_article: 'AI Trip Planner Standalone'
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('API request failed');
+            }
+
+            const data = await response.json();
+
+            // 显示结果
+            loading.style.display = 'none';
+            output.style.display = 'block';
+
+            // 填充摘要
+            summary.textContent = data.summary || 'No summary available';
+
+            // 填充文章推荐
+            if (data.recommended_articles && data.recommended_articles.length > 0) {
+                articleList.innerHTML = data.recommended_articles.map(article => `
+                    <a href="${article.url}" class="standalone-article-item" target="_blank" rel="noopener" data-article-title="${article.title}">
+                        <span class="icon">📖</span>
+                        <span class="title">${article.title}</span>
+                    </a>
+                `).join('');
+                
+                // 添加文章点击追踪
+                articleList.querySelectorAll('.standalone-article-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        trackEvent('trip_planner_article_click', {
+                            article_title: item.dataset.articleTitle,
+                            source: 'standalone-page'
+                        });
+                    });
+                });
+            }
+
+            // 填充 CTA
+            if (data.cta) {
+                cta.innerHTML = data.cta
+                    .split('|')
+                    .map(item => `<a href="/subscribe/" class="standalone-cta-link">${item.trim()}</a>`)
+                    .join(' • ');
+                
+                // 添加 CTA 点击追踪
+                cta.querySelectorAll('.standalone-cta-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        trackEvent('trip_planner_cta_click', {
+                            cta_text: link.textContent.trim(),
+                            source: 'standalone-page'
+                        });
+                    });
+                });
+            }
+
+        } catch (error) {
+            console.error('Trip Planner Error:', error);
+            loading.innerHTML = '<p style="color:#d32f2f;font-size:1.1rem;">⚠️ Sorry, something went wrong. Please try again.</p>';
+        }
+    });
+})();
+</script>
+
+{{- end -}}

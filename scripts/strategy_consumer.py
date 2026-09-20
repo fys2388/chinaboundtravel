@@ -29,6 +29,7 @@ class StrategyConsumer:
         self.agent_name = agent_name
         self.strategy: Dict[str, Any] = {}
         self.available: bool = False
+        self.has_real_data: bool = False  # P1: 是否有实质性数据
         self.version: str = "unknown"
         self.last_updated: str = "unknown"
         self._load()
@@ -44,13 +45,55 @@ class StrategyConsumer:
             self.version = str(self.strategy.get("version", "unknown"))
             self.last_updated = str(self.strategy.get("last_updated", "unknown"))
             self.available = True
+            # P1 修复: 检查策略文件是否有实质性数据（非空/非全0）
+            self.has_real_data = self._check_has_real_data()
+            if not self.has_real_data:
+                logger.warning(
+                    "[%s] Strategy file loaded but contains no real data (empty/zero values)",
+                    self.agent_name,
+                )
             logger.info(
-                "[%s] Strategy loaded: version=%s, updated=%s",
-                self.agent_name, self.version, self.last_updated,
+                "[%s] Strategy loaded: version=%s, updated=%s, has_real_data=%s",
+                self.agent_name, self.version, self.last_updated, self.has_real_data,
             )
         except Exception as e:
             logger.warning("[%s] Strategy load failed: %s", self.agent_name, e)
             self.available = False
+            self.has_real_data = False
+
+    def _check_has_real_data(self) -> bool:
+        """Check if strategy file contains substantive data (not just empty/zero values).
+
+        策略文件常见结构:
+        - 列表: best_keywords, best_products, best_cta_types, high_priority_articles
+        - 字典: platforms, global_rules
+        - 空数组/空对象/全0值 = 无实质数据
+        """
+        if not self.strategy:
+            return False
+
+        # 检查是否有任何非空值
+        for key in ("best_keywords", "best_products", "best_cta_types",
+                     "high_priority_articles", "platforms", "global_rules",
+                     "learning_insights", "strategy_changes"):
+            val = self.strategy.get(key)
+            if isinstance(val, list) and len(val) > 0:
+                # 检查列表第一个元素是否有实质内容
+                first = val[0]
+                if isinstance(first, dict):
+                    has_value = any(
+                        v not in [0, "", [], None, ""]
+                        for v in first.values()
+                    )
+                    if has_value:
+                        return True
+                elif isinstance(first, str) and first.strip():
+                    return True
+            elif isinstance(val, dict) and len(val) > 0:
+                # 字典非空即认为有数据
+                return True
+
+        return False
 
     def get(self, key: str, default: Any = None) -> Any:
         """Get a top-level strategy field."""
@@ -124,6 +167,7 @@ class StrategyConsumer:
         """Return strategy metadata for logging/reporting."""
         return {
             "available": str(self.available),
+            "has_real_data": str(self.has_real_data),
             "version": self.version,
             "last_updated": self.last_updated,
             "strategy_file": str(self.strategy_path),

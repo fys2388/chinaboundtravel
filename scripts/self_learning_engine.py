@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+⚠️  DEPRECATED (2026-09-20): 空转模块——历史效果追踪提取 0 条成功模式，0 条失败案例。
+   数据源断裂（无 Agent 写入优化历史），导致输出永远为空。
+   已从 run_all_agents.py 编排器中移除。保留仅供手动调试。
+
 ChinaBound Travel - 自我学习与进化引擎
 Self-Learning & Evolution Engine
 

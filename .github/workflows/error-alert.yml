@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows:
       - "Affiliate Gap Audit (2.0 联盟链接缺口审计)"
-      - "AI Agent Orchestrator - 7 Agents Weekly Run"
+      - "AI Agent Orchestrator - 6 Agents Weekly Run"
       - "Clear Scheduled Buffer Batch"
       - "Content Quality Audit (2.0 内容质量综合巡检)"
       - "Content Rotation Distributor"
