@@ -18,10 +18,23 @@ import pytest
 
 import okr_utils
 import report_advice
+import reporting_kpi_engine as rke
 import feishu_daily_report as fdr
 
 REPO = Path(__file__).resolve().parent.parent
 SNAPSHOT = REPO / "reports" / "feishu_daily" / "daily_2026-09-18.json"
+
+# ---------------------------------------------------------------------------
+# 0. 常量契约：新增函数确实存在，避免「测了空壳」
+# ---------------------------------------------------------------------------
+
+def test_new_helpers_exist():
+    assert callable(fdr.load_experiment_config)
+    assert callable(fdr._effective_running)
+    assert callable(rke._read_experiment_registry)
+    assert callable(rke._backup_rollback_state)
+    assert hasattr(fdr, "EXPERIMENT_CONFIG_FILE")
+    assert hasattr(rke, "EXPERIMENT_REGISTRY")
 
 
 # ---------------------------------------------------------------------------
@@ -243,3 +256,201 @@ class TestCiWindow:
     def test_token_missing_still_distinguishable(self):
         s = fdr._ci_state_str(None, True, True, "x", 0, 8)
         assert "本地预览" in s
+
+
+# ---------------------------------------------------------------------------
+# 6. 实验登记表收敛：快照不再硬编码 RUNNING
+# ---------------------------------------------------------------------------
+
+class TestExperimentRegistryConvergence:
+    """reporting_kpi_engine.build_experiments 原先有硬编码 status_override，
+    把 REV001 / DRIVE-001 / GROWTH05-CTR-001 无条件标成 RUNNING；REV002 的
+    RUNNING 来自 CSV 里的 start_date 2026-08-16（那是「原计划启动日」）。
+    而 static/experiments.json（owner 指定为权威）里它们全是 PLANNED /
+    start_date:null —— 从未部署 CTA，样本不可能累积。
+    """
+
+    def test_registry_reads_all_config_entries(self):
+        status, start = rke._read_experiment_registry()
+        assert len(status) >= 7
+        assert "REV001" in status
+
+    def test_snapshot_experiments_follow_registry(self):
+        status, start = rke._read_experiment_registry()
+        built = rke.build_experiments()
+        by_id = {e["experiment_id"]: e for e in built["experiments"]}
+        for eid, cfg_status in status.items():
+            if eid in by_id:
+                assert by_id[eid]["status"] == cfg_status, (
+                    f"{eid}: 快照 {by_id[eid]['status']} != 登记表 {cfg_status}"
+                )
+
+    def test_not_started_experiments_have_no_start_date(self):
+        status, start = rke._read_experiment_registry()
+        built = rke.build_experiments()
+        by_id = {e["experiment_id"]: e for e in built["experiments"]}
+        for eid, st in status.items():
+            if st in ("PLANNED", "PENDING") and eid in by_id:
+                assert by_id[eid]["start_date"] is None, (
+                    f"{eid}: 未启动实验不应有 start_date"
+                )
+
+    def test_registry_missing_falls_back_to_csv(self, monkeypatch, tmp_path):
+        monkeypatch.setattr(rke, "EXPERIMENT_REGISTRY", tmp_path / "missing.json")
+        assert rke._read_experiment_registry() == ({}, {})
+
+
+# ---------------------------------------------------------------------------
+# 7. 备份/回滚能力实测（不再硬编码 NOT_AVAILABLE）
+# ---------------------------------------------------------------------------
+
+class TestBackupRollbackState:
+    """原实现把 backup_rollback 硬编码为 NOT_AVAILABLE，机制建成后仍会
+    长期显示「备份回滚: 未配置」，让日报的阻塞区挂着一个不存在的问题。
+    """
+
+    def test_real_repo_state_is_deterministic(self):
+        status, iso, note = rke._backup_rollback_state()
+        assert status in ("CONFIGURED", "SCRIPT_ONLY", "PARTIAL", "NOT_AVAILABLE")
+        assert isinstance(note, str) and note
+
+    def test_no_workflow_no_script_is_not_available(self, monkeypatch, tmp_path):
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        status, iso, note = rke._backup_rollback_state()
+        assert status == "NOT_AVAILABLE"
+        assert iso is None
+
+    def test_workflow_and_script_but_no_tag_is_script_only(self, monkeypatch, tmp_path):
+        (tmp_path / "scripts").mkdir()
+        (tmp_path / "scripts" / "restore_site.sh").write_text("#!/bin/bash\n", encoding="utf-8")
+        (tmp_path / ".github" / "workflows").mkdir(parents=True)
+        (tmp_path / ".github" / "workflows" / "site-backup-daily.yml").write_text("name: x\n", encoding="utf-8")
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        status, iso, note = rke._backup_rollback_state()
+        # git 不可用时退化为文件判定，不能报错也不能谎称已配置
+        assert status in ("SCRIPT_ONLY", "NOT_AVAILABLE")
+
+    def test_partial_is_reported(self, monkeypatch, tmp_path):
+        (tmp_path / "scripts").mkdir()
+        (tmp_path / "scripts" / "restore_site.sh").write_text("#!/bin/bash\n", encoding="utf-8")
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        status, _iso, note = rke._backup_rollback_state()
+        assert status == "PARTIAL"
+        assert "机制不完整" in note
+
+
+# ---------------------------------------------------------------------------
+# 8. Canonical 队列交叉核验：陈旧观测不是真冲突
+# ---------------------------------------------------------------------------
+
+class TestCanonicalVerification:
+    """CANONICAL_CONFLICT_QUEUE.md 由 GSC URL Inspection API 生成，是一次性
+    点观测，不会自己失效。源码修好后队列仍会持续列出它，日报于是每天报
+    「canonical 冲突 6 处 HIGH」——实测 6/6 都已在源码解决。
+    """
+
+    def test_queue_is_parsed(self):
+        v = rke._canonical_conflicts_verified()
+        assert v["total"] >= 1, f"未解析出任何队列行: {v}"
+
+    def test_verdicts_are_exhaustive(self):
+        v = rke._canonical_conflicts_verified()
+        assert v["real"] + v["stale"] + v["unknown"] == v["total"]
+
+    def test_current_queue_has_no_real_conflicts(self):
+        """2026-09-20 实测：5 条有精确 301，1 条 front-matter 已声明 www。
+
+        若源码出现真实冲突，这条测试会失败并提示去看具体行。
+        """
+        v = rke._canonical_conflicts_verified()
+        real = [r for r in v["rows"] if r["verdict"] == "REAL"]
+        assert not real, f"源码里仍有真实 canonical 冲突: {real}"
+
+    def test_every_row_has_a_reason(self):
+        v = rke._canonical_conflicts_verified()
+        for r in v["rows"]:
+            assert r["reason"], f"{r['url']} 没有判定依据"
+            assert r["verdict"] in ("REAL", "STALE", "UNKNOWN")
+
+    def test_missing_queue_does_not_crash(self, monkeypatch, tmp_path):
+        monkeypatch.setattr(rke, "SEO", tmp_path)
+        v = rke._canonical_conflicts_verified()
+        assert v["total"] == 0
+        assert v["real"] == 0
+
+    def test_real_conflict_is_detected(self, monkeypatch, tmp_path):
+        """构造一条真冲突：无 301，front-matter 指向的页与队列两个值都不符。"""
+        seo = tmp_path / "seo"
+        seo.mkdir()
+        (tmp_path / "static").mkdir()
+        (tmp_path / "static" / "_redirects").write_text("", encoding="utf-8")
+        posts = tmp_path / "content" / "posts"
+        posts.mkdir(parents=True)
+        (posts / "2026-01-01-my-post.md").write_text(
+            "---\ncanonicalURL: \"https://www.example.com/posts/wrong-page/\"\n---\nbody\n",
+            encoding="utf-8")
+        (seo / "CANONICAL_CONFLICT_QUEUE.md").write_text(
+            "| url | canonical | user_canonical | sitemap_status | indexed_status | severity | recommended_action |\n"
+            "|---|---|---|---|---|---|---|\n"
+            "| https://www.example.com/posts/my-post/ "
+            "| https://www.example.com/posts/my-post/ "
+            "| https://www.example.com/posts/the-correct-page/ "
+            "| NOT_IN_SITEMAP | INDEXED | HIGH | TECHNICAL_REVIEW |\n",
+            encoding="utf-8")
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        monkeypatch.setattr(rke, "SEO", seo)
+        v = rke._canonical_conflicts_verified()
+        assert v["total"] == 1
+        assert v["real"] == 1
+        assert v["rows"][0]["verdict"] == "REAL"
+
+    def test_front_matter_matching_google_canonical_is_stale(self, monkeypatch, tmp_path):
+        """front-matter 与 google_canonical 一致 = 源已声明正确值，属陈旧观测。"""
+        seo = tmp_path / "seo"
+        seo.mkdir()
+        (tmp_path / "static").mkdir()
+        (tmp_path / "static" / "_redirects").write_text("", encoding="utf-8")
+        posts = tmp_path / "content" / "posts"
+        posts.mkdir(parents=True)
+        (posts / "2026-01-01-my-post.md").write_text(
+            "---\ncanonicalURL: \"https://www.example.com/posts/other-post/\"\n---\nbody\n",
+            encoding="utf-8")
+        (seo / "CANONICAL_CONFLICT_QUEUE.md").write_text(
+            "| url | canonical | user_canonical | sitemap_status | indexed_status | severity | recommended_action |\n"
+            "|---|---|---|---|---|---|---|\n"
+            "| https://www.example.com/posts/my-post/ "
+            "| https://www.example.com/posts/other-post/ "
+            "| https://www.example.com/posts/my-post/ "
+            "| NOT_IN_SITEMAP | INDEXED | HIGH | TECHNICAL_REVIEW |\n",
+            encoding="utf-8")
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        monkeypatch.setattr(rke, "SEO", seo)
+        v = rke._canonical_conflicts_verified()
+        assert v["stale"] == 1
+        assert "front-matter" in v["rows"][0]["reason"]
+
+    def test_exact_redirect_is_stale(self, monkeypatch, tmp_path):
+        """_redirects 里已有精确 301 = 源已修。"""
+        seo = tmp_path / "seo"
+        seo.mkdir()
+        (tmp_path / "static").mkdir()
+        (tmp_path / "static" / "_redirects").write_text(
+            "/posts/old-slug/ /posts/new-slug/ 301\n", encoding="utf-8")
+        posts = tmp_path / "content" / "posts"
+        posts.mkdir(parents=True)
+        (seo / "CANONICAL_CONFLICT_QUEUE.md").write_text(
+            "| url | canonical | user_canonical | sitemap_status | indexed_status | severity | recommended_action |\n"
+            "|---|---|---|---|---|---|---|\n"
+            "| https://www.example.com/posts/old-slug/ "
+            "| https://www.example.com/posts/old-slug/ "
+            "| https://www.example.com/posts/new-slug/ "
+            "| NOT_IN_SITEMAP | INDEXED | HIGH | TECHNICAL_REVIEW |\n",
+            encoding="utf-8")
+        monkeypatch.setattr(rke, "BASE", tmp_path)
+        monkeypatch.setattr(rke, "SEO", seo)
+        v = rke._canonical_conflicts_verified()
+        assert v["stale"] == 1
+        assert "301 已存在" in v["rows"][0]["reason"]
+
+
+

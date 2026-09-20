@@ -1,0 +1,90 @@
+name: Site Backup Daily
+
+# 每日把 main 的当前状态固化成两个可回滚产物：
+#   1. 不可变命名标签 backup/site-<UTC 时间戳>  —— 精确回滚点，随时可 checkout
+#   2. 镜像分支 backup/site-snapshot            —— 指向最新回滚点的追踪引用
+#   3. Actions 归档 tarball                    —— 独立于 git 历史的文件副本
+#
+# 触发时间在快照刷新（00:30）和日报（01:00）之后，保证当天产物都已生成。
+#
+# 设计约束（有意为之）：
+#   * 不 force-push、不删 tag、不 reset。main 的历史纪律是 rebase-only（见
+#     AGENTS.md），因此备份分支始终是 HEAD 的祖先，普通 push 即可 fast-forward。
+#     若有人对 main 做了 force-push，这里会**推送失败并显式报错**——那正是应该
+#     发现的信号，而不是被静默覆盖。
+#   * 归档只打包 git 跟踪的文件，因此不会夹带 .env / config/service-account.json /
+#     gsc-service-account-key.json（三者均被 .gitignore 排除）。
+#   * 归档里显式再排除一次 config/service-account.json，双保险。
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # 每日 02:00 UTC，晚于快照刷新与日报
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '备份原因（写入 tag 消息）'
+        required: false
+        default: 'manual'
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-backup-daily
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Snapshot to backup branch and tag
+        env:
+          REASON: ${{ inputs.reason || 'daily' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          TS="$(date -u +%Y%m%d-%H%M%SZ)"
+          BRANCH="backup/site-snapshot"
+          TAG="backup/site-${TS}"
+          SHA="$(git rev-parse HEAD)"
+          SHORT="$(git rev-parse --short HEAD)"
+
+          # 1) 不可变命名标签：精确回滚点
+          git tag -a "${TAG}" -m "site backup ${TS} [${REASON}] ${SHA}"
+          git push origin "${TAG}" || { echo "::error::标签推送失败 ${TAG}"; exit 1; }
+
+          # 2) 镜像分支：main 为 rebase-only 线性历史，这里无需 --force
+          git push origin "HEAD:${BRANCH}" \
+            || { echo "::error::备份分支推送失败 ${BRANCH}（若 main 被 force-push，需人工介入）"; exit 1; }
+
+          # 3) 归档：只打 git 跟踪的文件，密钥文件天然不入库
+          tar czf site-archive.tar.gz \
+            --exclude='config/service-account.json' \
+            --exclude='.git' \
+            $(git ls-files) 2>/dev/null || { echo "::error::归档失败"; exit 1; }
+          ls -lh site-archive.tar.gz
+
+          echo "### 备份完成"
+          echo "- tag: \`${TAG}\`"
+          echo "- branch: \`${BRANCH}\`"
+          echo "- sha: \`${SHA}\` (${SHORT})"
+          echo "- archive: site-archive.tar.gz"
+          echo ""
+          echo '回滚：`git checkout <tag>` 或 `./scripts/restore_site.sh --list`'
+          >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload site archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-archive-${{ github.run_number }}
+          path: site-archive.tar.gz
+          if-no-files-found: error
+          retention-days: 30

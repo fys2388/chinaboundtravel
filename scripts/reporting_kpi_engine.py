@@ -23,6 +23,7 @@ import argparse
 import csv
 import json
 import re
+import subprocess
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -37,6 +38,9 @@ SEO = REPORTS / "seo"
 REV = REPORTS / "revenue"
 MGMT = REPORTS / "management"
 SNAPSHOTS = MGMT / "snapshots"
+STATIC = BASE / "static"
+# CTA/横幅「是否真的部署」的权威登记表。owner 2026-09-20 确认以此为准。
+EXPERIMENT_REGISTRY = STATIC / "experiments.json"
 
 DATA_SOURCE_TYPES = ("LIVE", "CACHED", "LOCAL", "NOT_AVAILABLE")
 REVENUE_NOT_AVAILABLE = "REVENUE_NOT_AVAILABLE"
@@ -69,6 +73,29 @@ def _read_text(path: Path) -> str:
         return path.read_text(encoding="utf-8")
     except (OSError, UnicodeError):
         return ""
+
+
+def _read_experiment_registry() -> tuple:
+    """读 static/experiments.json，返回 (status_map, start_date_map)。
+
+    该文件记录 CTA/横幅的**实际部署状态**（start_date 非空才算启动），
+    是 owner 指定的权威登记表。CSV 里的 status/start_date 只反映实验设计
+    意图（「原计划 2026-08-16 启动」），不代表已部署。
+
+    读不到或解析失败返回 ({}, {}) —— 调用方退化为保留 CSV 原值，不误报。
+    """
+    try:
+        cfg = json.loads(EXPERIMENT_REGISTRY.read_text(encoding="utf-8"))
+    except Exception:
+        return {}, {}
+    status, start = {}, {}
+    for e in cfg.get("experiments", []) or []:
+        eid = e.get("id") or e.get("experiment_id")
+        if not eid:
+            continue
+        status[eid] = e.get("status")
+        start[eid] = e.get("start_date")
+    return status, start
 
 
 def _read_csv(path: Path) -> list:
@@ -344,6 +371,8 @@ def build_content(as_of: date) -> dict:
     canon_count = len(re.findall(r"^\|\s*http", canon_text, re.M)) if canon_text.strip() else 0
     if canon_count < 0:
         canon_count = 0
+    # 队列是 GSC 点观测（不会自己失效），逐条与本地权威数据交叉核验后再报。
+    _canon_v = _canonical_conflicts_verified()
 
     kpis = [
         _kpi("published_posts", "Published posts (current inventory)", total, "posts",
@@ -379,9 +408,17 @@ def build_content(as_of: date) -> dict:
              3, "posts", "LOCAL",
              "reports/P1_BRAND_03_LEGACY_PILOT_REPORT.md (2026-08-16, 3 pilots)",
              "pilot articles migrated", "weekly", 0, "2026-08-16"),
-        _kpi("canonical_conflicts", "Canonical conflicts in queue (HIGH severity)",
-             canon_count, "urls", "CACHED", "reports/seo/CANONICAL_CONFLICT_QUEUE.md",
-             "rows in canonical conflict queue", "weekly", 6, "2026-08-16"),
+        # canon_count 是队列原始行数（含陈旧观测）。真正需要动手的是
+        # _canonical_conflicts_verified() 判定为 REAL 的那部分。
+        _kpi("canonical_conflicts", "Canonical conflicts still present in source",
+             _canon_v["real"], "urls", "LOCAL",
+             _canon_v.get("note", "reports/seo/CANONICAL_CONFLICT_QUEUE.md"),
+             "queue rows cross-checked against static/_redirects + front-matter canonicalURL",
+             "daily", canon_count, as_of.isoformat() if as_of else None),
+        _kpi("canonical_conflicts_queue_total", "Rows in canonical conflict queue (raw)",
+             canon_count, "rows", "CACHED", "reports/seo/CANONICAL_CONFLICT_QUEUE.md",
+             "rows in canonical conflict queue (includes stale URL Inspection observations)",
+             "weekly", 6, "2026-08-16"),
         _kpi("duplicate_risk_rows", "Inventory rows with duplicate_count > 1",
              dupes, "rows", "CACHED", "reports/seo/content_opportunity_scores.csv",
              "count duplicate_count > 1", "weekly", None, "2026-08-17"),
@@ -849,17 +886,21 @@ def build_experiments() -> dict:
             "data_source_type": "CACHED",
         })
 
-    # Registry-level status overrides (sample guard kept separately as sample_status)
-    status_override = {
-        "REV001": "RUNNING",
-        "DRIVE-001": "RUNNING",
-        "GROWTH05-CTR-001": "RUNNING",
-        "GROWTH07B-TECH-001": "WAITING_RECRAWL",
-        "GROWTH07C-INDEX-001": "WAITING_RECRAWL",
-    }
+    # 状态与启动日期来自权威登记表 static/experiments.json（owner 2026-09-20
+    # 确认为准）。原先在这里硬编码 status_override = {"REV001": "RUNNING",
+    # "DRIVE-001": "RUNNING", "GROWTH05-CTR-001": "RUNNING", ...}，把 3 个实验
+    # 无条件标成 RUNNING；REV002 的 RUNNING 则来自 CSV 里的 start_date 2026-08-16
+    # （那是「原计划启动日」，不是「已部署」）。结果是快照每天产出「在跑 4」+
+    # 「已观察 1 天但样本不足」的幻影实验，而登记表里它们全是 PLANNED /
+    # start_date:null —— 从未部署 CTA，样本不可能累积。
+    # 改为直接读登记表；登记表缺失时保留 CSV 原值（退化而非报错）。
+    reg_status, reg_start = _read_experiment_registry()
     for exp in experiments:
-        if exp["experiment_id"] in status_override:
-            exp["status"] = status_override[exp["experiment_id"]]
+        eid = exp["experiment_id"]
+        if eid in reg_status:
+            exp["status"] = reg_status[eid]
+            # 只有登记表记了 start_date 才算真的启动过
+            exp["start_date"] = reg_start.get(eid)
 
     seen = {}
     for exp in experiments:
@@ -918,9 +959,139 @@ def build_clusters() -> dict:
 # --------------------------------------------------------------------------
 # I. Operations
 # --------------------------------------------------------------------------
+def _backup_rollback_state() -> tuple:
+    """实测备份/回滚能力，不再硬编码 NOT_AVAILABLE。
+
+    判据（三者独立，逐级降级）：
+      backup/site-* 标签  —— 有可 checkout 的回滚点
+      scripts/restore_site.sh —— 回滚操作已文档化且可执行
+      .github/workflows/site-backup-daily.yml —— 有持续产出回滚点的机制
+
+    原先这一项恒为 NOT_AVAILABLE（硬编码），即使机制已就位也永远显示
+    「🗄️ 备份回滚: 未配置」，让日报的「关键阻塞」区长期挂着一个不存在的问题。
+    git 不可用（全新 clone 无 tag / CI 未 fetch tags）时退化为只看文件，
+    返回 SCRIPT_ONLY 而非报错。
+    """
+    have_script = (BASE / "scripts" / "restore_site.sh").is_file()
+    have_workflow = (BASE / ".github" / "workflows" / "site-backup-daily.yml").is_file()
+
+    latest_tag, latest_iso = None, None
+    try:
+        out = subprocess.run(
+            ["git", "tag", "-l", "backup/site-*", "--sort=-creatordate"],
+            cwd=str(BASE), capture_output=True, text=True, timeout=20,
+        )
+        tags = [t for t in out.stdout.split() if t.strip()]
+        if tags:
+            latest_tag = tags[0]
+            ci = subprocess.run(
+                ["git", "log", "-1", "--format=%Y-%m-%d", latest_tag],
+                cwd=str(BASE), capture_output=True, text=True, timeout=20,
+            )
+            latest_iso = (ci.stdout or "").strip() or None
+    except Exception:
+        pass
+
+    if have_workflow and have_script and latest_tag:
+        return ("CONFIGURED", latest_iso,
+                f"latest tag {latest_tag} ({latest_iso}); restore_site.sh + site-backup-daily.yml present")
+    if have_workflow and have_script:
+        return ("SCRIPT_ONLY", None,
+                "site-backup-daily.yml + restore_site.sh present, but no backup/site-* tag produced yet")
+    if have_script or have_workflow:
+        return ("PARTIAL", None,
+                f"restore_site.sh={have_script}, site-backup-daily.yml={have_workflow} — 机制不完整")
+    return ("NOT_AVAILABLE", None, "No backup workflow, restore script, or backup tags found")
+
+
+def _canonical_conflicts_verified() -> dict:
+    """对 CANONICAL_CONFLICT_QUEUE.md 逐条做本地权威核验。
+
+    队列由 content_opportunity_engine 从 GSC URL Inspection API 生成，是
+    **一次性点观测**，不会自己失效：源码修好后队列仍会持续列出它，日报于是
+    每天都报「canonical 冲突 6 处 HIGH」——而 2026-09-20 实测 6/6 都已在源码
+    解决（5 条有精确 301，1 条 front-matter 已声明 www canonical + 域名级 301）。
+    把陈旧观测当真冲突报，等于每天让一个不存在的问题占据「关键阻塞」区。
+
+    判据全部走本地权威数据，不依赖 Google 是否重新抓取：
+      A. static/_redirects 有该 url 的精确 301          -> 源已修
+      B. 文章 front-matter canonicalURL == 队列任一值     -> 源已声明正确
+      C. 仅 www/non-www 差异，且 _redirects 有域名级规范化 -> 源已修
+      找不到依据                                       -> UNKNOWN（不臆断）
+    """
+    out = {"total": 0, "real": 0, "stale": 0, "unknown": 0, "rows": []}
+
+    text = _read_text(SEO / "CANONICAL_CONFLICT_QUEUE.md")
+    if not text.strip():
+        out["note"] = "CANONICAL_CONFLICT_QUEUE.md 不存在或为空"
+        return out
+
+    exact, www_normalize = {}, False
+    for line in _read_text(BASE / "static" / "_redirects").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split()
+        if len(parts) < 2:
+            continue
+        if parts[0].startswith("http"):
+            if "://www." in parts[1]:
+                www_normalize = True
+            continue
+        exact[parts[0].rstrip("/")] = parts[1].rstrip("/")
+
+    def last_seg(u):
+        return u.rstrip("/").rsplit("/", 1)[-1]
+
+    def norm(u):
+        return u.replace("://www.", "://").rstrip("/")
+
+    def post_canonical(slug):
+        for p in (BASE / "content" / "posts").glob("*" + slug + "*.md"):
+            m = re.search(r"canonicalURL:\s*[\"']?([^\"'\n]+)",
+                          _read_text(p)[:1500])
+            if m:
+                return m.group(1).strip()
+        return None
+
+    for line in text.splitlines():
+        if not re.match(r"^\|\s*https?://", line):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 7:
+            continue
+        url, google_c, user_c, _sitemap, _indexed, severity, _action = cells[:7]
+        out["total"] += 1
+        slug = last_seg(url)
+        path = f"/posts/{slug}"
+        canon = post_canonical(slug)
+
+        if path in exact:
+            verdict, reason = "STALE", f"301 已存在 -> {last_seg(exact[path])}"
+        elif canon and canon.rstrip("/") in (user_c.rstrip("/"), google_c.rstrip("/")):
+            verdict, reason = "STALE", "front-matter canonicalURL 已声明正确值"
+        elif www_normalize and canon and norm(canon) == norm(user_c) == norm(google_c):
+            verdict, reason = "STALE", "仅 www/non-www 差异，_redirects 已有域名级 301 规范化"
+        elif canon is None and path not in exact:
+            verdict, reason = "UNKNOWN", "源码里既无该文又无 301（可能是重定向目标页）"
+        else:
+            verdict, reason = "REAL", (
+                f"front-matter={last_seg(canon) if canon else '(无)'}，"
+                f"与 user_canonical({last_seg(user_c)}) 不一致")
+
+        out[verdict.lower()] += 1
+        out["rows"].append({"url": url, "severity": severity,
+                            "verdict": verdict, "reason": reason})
+    out["note"] = (f"队列 {out['total']} 条中真实冲突 {out['real']} 条、"
+                   f"陈旧观测 {out['stale']} 条、无法判定 {out['unknown']} 条"
+                   f"（核验依据：static/_redirects + 文章 front-matter canonicalURL）")
+    return out
+
+
 def build_operations() -> dict:
     okr = _read_json(REPORTS / "okr_progress" / "weekly_2026-W34.json")
     plan_items = len(okr.get("plan", [])) if isinstance(okr, dict) else None
+    _bk_status, _bk_iso, _bk_note = _backup_rollback_state()
 
     kpis = [
         _kpi("automation_health", "Automation workflow health (YAML/name validation)",
@@ -937,10 +1108,11 @@ def build_operations() -> dict:
              "reports/2.0_REPORTING_RECONCILIATION.md (GROWTH-05/07, BRAND-03 live checks)",
              "last recorded live 200/canonical/Drive checks", "weekly", None,
              "2026-08-16"),
-        _kpi("backup_rollback", "Backup / rollback status", None, "status",
-             "NOT_AVAILABLE", "No backup/rollback source artifact",
-             "backup freshness and rollback plan status", "weekly", None, None,
-             "NOT_AVAILABLE"),
+        _kpi("backup_rollback", "Backup / rollback status",
+             _bk_status, "status",
+             "LOCAL", _bk_note,
+             "presence of site-backup-daily.yml + restore_site.sh + backup/site-* tags",
+             "daily", None, _bk_iso, _bk_status),
         _kpi("security_scan", "Security / secret scan status", "PASS", "status",
              "LOCAL", "tests/test_no_hardcoded_secrets.py + test_secret_name_contract.py (2026-08-17)",
              "secret scan tests green; no new secret findings", "weekly", "PASS",

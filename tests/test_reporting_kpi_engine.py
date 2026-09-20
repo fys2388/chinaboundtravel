@@ -70,15 +70,40 @@ def test_low_data_guard_present():
 
 
 def test_experiment_states():
+    """快照的实验状态必须等于权威登记表 static/experiments.json 的状态。
+
+    原先这里硬编码了 RUNNING，而那是 reporting_kpi_engine 里一个硬编码
+    status_override 的产物（把 3 个从未部署 CTA 的实验标成在跑）。owner 于
+    2026-09-20 裁定以 static/experiments.json 为准，因此断言改为与登记表逐条
+    对齐——登记表一变，这个测试就该跟着报，而不是继续锁死幻影状态。
+    """
     snap = rke.build_snapshot(AS_OF)
     exps = {e["experiment_id"]: e for e in snap["domains"]["experiments"]["experiments"]}
-    assert exps["REV001"]["status"] == "RUNNING"
-    assert exps["REV002"]["status"] == "RUNNING"
-    assert exps["REV003"]["status"] == "PENDING"
-    assert exps["DRIVE-001"]["status"] == "RUNNING"
-    assert exps["GROWTH05-CTR-001"]["status"] == "RUNNING"
+
+    reg_status, reg_start = rke._read_experiment_registry()
+    assert reg_status, "登记表为空，无法判定"
+
+    # 结构契约：7 个已知实验必须都在
+    for eid in ("REV001", "REV002", "REV003", "DRIVE-001",
+                "GROWTH05-CTR-001", "GROWTH07B-TECH-001", "GROWTH07C-INDEX-001"):
+        assert eid in exps, f"缺少实验 {eid}"
+
+    # 状态契约：快照 = 登记表
+    for eid, st in reg_status.items():
+        if eid in exps:
+            assert exps[eid]["status"] == st, (
+                f"{eid}: 快照 {exps[eid]['status']} != 登记表 {st}"
+            )
+            # 未启动的实验不该有 start_date（那是幻影的第二个症状）
+            if st in ("PLANNED", "PENDING"):
+                assert exps[eid]["start_date"] is None, (
+                    f"{eid}: 状态 {st} 但 start_date={exps[eid]['start_date']}"
+                )
+
+    # 两个索引恢复实验在两份登记里都是 WAITING_RECRAWL，属稳定契约
     assert exps["GROWTH07B-TECH-001"]["status"] == "WAITING_RECRAWL"
     assert exps["GROWTH07C-INDEX-001"]["status"] == "WAITING_RECRAWL"
+
 
 
 def test_data_source_labels_valid():

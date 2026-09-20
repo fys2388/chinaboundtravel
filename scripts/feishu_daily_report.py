@@ -866,14 +866,17 @@ class FeishuDailyReporter:
         running = [e for e in experiments if eff.get(e.get("experiment_id")) == "RUNNING"]
         phantom = [e for e in experiments if eff.get(e.get("experiment_id")) == "NOT_STARTED"]
         waiting = [e for e in experiments if e.get("status") == "WAITING_RECRAWL"]
-        pending = [e for e in experiments if e.get("status") == "PENDING"]
+        # PLANNED 与 PENDING 语义相同（尚未启动）。登记表收敛后实验普遍是 PLANNED，
+        # 只认 PENDING 会让「待启动」显示 0 而表格里躺着一堆 PLANNED，读不出真实规模。
+        pending = [e for e in experiments if e.get("status") in ("PENDING", "PLANNED")]
         head = f"**🧪 4. 实验与阻塞** | 在跑 {len(running)} | 待重爬 {len(waiting)} | 待启动 {len(pending)}"
         if phantom:
             head += f" | ⚠️ 标记在跑但实际未启动 {len(phantom)}"
         lines = [head, ""]
         lines.append("| ID | 实验名称 | 状态 | 观察 | 样本 |")
         lines.append("| --- | --- | --- | --- | --- |")
-        icon_map = {"RUNNING": "🔄", "NOT_STARTED": "⚠️", "WAITING_RECRAWL": "⏳", "PENDING": "📋", "WIN": "✅", "LOSE": "❌"}
+        icon_map = {"RUNNING": "🔄", "NOT_STARTED": "⚠️", "WAITING_RECRAWL": "⏳",
+                    "PENDING": "📋", "PLANNED": "📋", "WIN": "✅", "LOSE": "❌"}
         # 表头统计全量实验，表格必须展示全量：原 experiments[:6] 硬截断导致
         # 「待重爬 2」只渲染 1 行，与表头自相矛盾（未展示的项仅出现在关键阻塞里）
         _MAX_EXPERIMENT_ROWS = 20
@@ -899,17 +902,36 @@ class FeishuDailyReporter:
         if waiting:
             blockers.append(f"⏳ 等待重爬: {', '.join(e.get('experiment_id','') for e in waiting)}")
         ca_kpis = (domains.get("content_assets", {}) or {}).get("kpis", [])
+        _canon_real, _canon_total = None, 0
         for k in ca_kpis:
-            if k.get("name") == "canonical_conflicts":
-                val = k.get("value")
-                if isinstance(val, (int, float)) and val > 0:
-                    blockers.append(f"⚠️ canonical冲突: {int(val)} 处 HIGH")
-                elif isinstance(val, str) and val not in ("0", "NULL", "None", ""):
-                    blockers.append(f"⚠️ canonical冲突: {val}")
+            nm, v = k.get("name"), k.get("value")
+            if nm == "canonical_conflicts" and isinstance(v, (int, float)):
+                _canon_real = int(v)
+            elif nm == "canonical_conflicts_queue_total" and isinstance(v, (int, float)):
+                _canon_total = int(v)
+        # 队列是非空的 GSC 点观测，不会自己失效；必须和「源码是否真的还有冲突」分开报。
+        # 原逻辑把队列行数直接渲染成「canonical 冲突 6 处 HIGH」，而 6 条全已在源码修好
+        # （5 条有精确 301，1 条 www canonical + 域名级 301），于是每天都报一个不存在的问题。
+        if _canon_real:
+            blockers.append(f"⚠️ canonical 冲突: {_canon_real} 处真实（源码确实不一致，需修）"
+                            + (f"；队列共 {_canon_total} 条" if _canon_total else ""))
+        elif _canon_total:
+            lines.append(f"   ℹ️ canonical 队列 {_canon_total} 条均为 GSC 陈旧观测——"
+                         f"本地核验（static/_redirects + 文章 front-matter canonicalURL）"
+                         f"显示源码已修，无需处理")
         ops_kpis = (domains.get("operations", {}) or {}).get("kpis", [])
         for k in ops_kpis:
-            if k.get("name") == "backup_rollback" and (k.get("value") is None or k.get("status") == "NOT_AVAILABLE"):
-                blockers.append("🗄️ 备份回滚: 未配置")
+            if k.get("name") != "backup_rollback":
+                continue
+            st = k.get("status") or ("NOT_AVAILABLE" if k.get("value") is None else "OK")
+            # 分级文案：机制是否就位、是否真的已有可回滚的点，是两件不同的事。
+            # 原来只有「未配置」一档，机制建成后会把阻塞静默消失，
+            # 而实际上当天可能仍没有任何回滚点可用。
+            if st == "NOT_AVAILABLE":
+                blockers.append("🗄️ 备份回滚: 未配置（无 site-backup-daily.yml / restore_site.sh / 备份标签）")
+            elif st in ("SCRIPT_ONLY", "PARTIAL"):
+                blockers.append("🗄️ 备份机制已配置但尚无回滚点——若 main 现在损坏仍无法还原，"
+                                "等 site-backup-daily 工作流首次运行后生成 backup/site-* 标签")
         if blockers:
             lines.append("")
             lines.append("**🚧 关键阻塞**")
