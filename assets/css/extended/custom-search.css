@@ -1,0 +1,59 @@
+/*
+ * /search/ 空状态与无结果样式
+ * 配套 assets/js/fastsearch.js 的覆盖版。
+ *
+ * 主题原版的搜索结果 <ul> 只有 .entry-link 样式，没有 .search-empty。
+ * 不加样式的话，提示语会以裸文本挤在结果列表里，跟真结果混在一起。
+ */
+
+.searchResults {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.searchResults .search-empty {
+    padding: 1.1em 0.9em;
+    margin: 0;
+    border: 1px dashed var(--border, #ddd);
+    border-radius: 8px;
+    background: var(--tag-bg, rgba(0, 0, 0, 0.03));
+    color: var(--secondary, #555);
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.searchResults .search-empty strong {
+    color: var(--primary, inherit);
+    font-weight: 600;
+}
+
+.searchResults .search-error {
+    border-color: var(--warning, #b45309);
+    color: var(--warning, #b45309);
+}
+
+.searchResults .search-error a {
+    color: var(--primary, inherit);
+    text-decoration: underline;
+}
+
+.search-suggest {
+    display: inline-block;
+    margin: 0.45em 0.35em 0 0;
+    padding: 0.28em 0.75em;
+    border: 1px solid var(--border, #ccc);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--primary, #0f2b46);
+    font: inherit;
+    font-size: 0.88em;
+    cursor: pointer;
+}
+
+.search-suggest:hover,
+.search-suggest:focus {
+    border-color: var(--primary, #0f2b46);
+    background: var(--tag-bg, rgba(0, 0, 0, 0.05));
+    outline: none;
+}
