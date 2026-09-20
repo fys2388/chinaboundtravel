@@ -149,3 +149,5 @@ And as often, if you have any questions or comments, feel free to reach out to o
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)
 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

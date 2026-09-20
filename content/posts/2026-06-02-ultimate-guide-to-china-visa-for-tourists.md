@@ -293,3 +293,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

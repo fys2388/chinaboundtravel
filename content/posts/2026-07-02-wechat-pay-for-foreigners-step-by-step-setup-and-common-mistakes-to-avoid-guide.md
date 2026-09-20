@@ -264,3 +264,5 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

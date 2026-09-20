@@ -164,3 +164,5 @@ For more China travel guides, explore our [7-Day China Itinerary](/posts/7-day-c
 - [The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)](https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

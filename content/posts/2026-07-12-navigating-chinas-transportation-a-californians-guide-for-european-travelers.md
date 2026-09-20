@@ -123,6 +123,8 @@ For more information on China travel, check out these articles:
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

@@ -1469,6 +1469,204 @@
       "target": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-09-19T07:55:04.731503"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-09-20T08:24:44.419382"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-09-20T08:24:45.500637"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-09-20T08:24:46.792646"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:24:47.961221"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-visa-free-entry-2026-complete-guide-countries-rules-tips -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:24:48.959704"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-airport-transfer-guide -> foodies-guide-to-china-a-gastronomic-adventure",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:24:49.957301"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> china-travel-etiquette-tipping-photos-and-unwritten-rules-guide",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:50.958742"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary-beijing-xian-shanghai-first-timers -> china-travel-etiquette-tipping-photos-and-unwritten-rules-guide",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:51.951842"
+    },
+    {
+      "type": "internal_link",
+      "target": "hangzhou-west-lake-tea-culture-g20-guide -> china-travel-etiquette-tipping-photos-and-unwritten-rules-guide",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:52.953192"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=4",
+      "timestamp": "2026-09-20T08:24:53.967187"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-airport-transfer-guide -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-09-20T08:24:54.966919"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-09-20T08:24:55.968562"
+    },
+    {
+      "type": "internal_link",
+      "target": "wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:56.980120"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:57.979451"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-chinas-transportation-a-californians-guide-for-european-travelers -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:24:58.979501"
+    },
+    {
+      "type": "internal_link",
+      "target": "2026-05-27-how-to-survive-chinese-train-station -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:24:59.989120"
+    },
+    {
+      "type": "internal_link",
+      "target": "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:25:01.006894"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:25:02.026049"
+    },
+    {
+      "type": "internal_link",
+      "target": "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:25:03.028013"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:25:04.024939"
+    },
+    {
+      "type": "internal_link",
+      "target": "xian-terracotta-army-history-discovery-and-insider-tips -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-09-20T08:25:05.025333"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> chinese-language-survival-phrases-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:25:06.068328"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-chinas-transportation-a-californians-guide-for-european-travelers -> chinese-language-survival-phrases-guide",
+      "detail": "score=2",
+      "timestamp": "2026-09-20T08:25:07.067999"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:07.609937"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:08.038784"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:08.485899"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:08.816520"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:09.260823"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:09.688024"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:10.134100"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:10.555090"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:11.024839"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-09-20T08:25:11.431531"
     }
   ]
 }

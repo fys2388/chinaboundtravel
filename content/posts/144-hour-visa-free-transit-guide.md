@@ -272,6 +272,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?
