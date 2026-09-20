@@ -55,6 +55,13 @@
       "fixed_by": "auto_error_router:ops",
       "fix_note": "已发送飞书告警(category=git_push_failed)",
       "fixed_at": "2026-09-19T05:32:19.824601"
+    },
+    {
+      "workflow": "Ops Dashboard Refresh",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:ops",
+      "fix_note": "已发送飞书告警(category=git_push_failed)",
+      "fixed_at": "2026-09-20T18:02:22.362572"
     }
   ]
 }

@@ -3,12 +3,12 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-20_ops",
   "created_at": "2026-09-20T02:26:46.842856+00:00",
-  "updated_at": "2026-09-20T18:00:56.347840",
+  "updated_at": "2026-09-20T18:02:22.524600",
   "target_date": "2026-09-20",
-  "issue_count": 3,
+  "issue_count": 4,
   "severity_summary": {
     "critical": 1,
-    "high": 2,
+    "high": 3,
     "medium": 0,
     "low": 0
   },
@@ -32,6 +32,26 @@
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-09-20T18:00:55.948143+00:00"
+    },
+    {
+      "id": "workflow-35527709740-git_push_failed",
+      "type": "git_push_failed",
+      "title": "Ops Dashboard Refresh 失败：Git 推送失败",
+      "description": "refresh-dashboard / Push and trigger deploy",
+      "page": "Ops Dashboard Refresh",
+      "file": "Ops Dashboard Refresh",
+      "evidence": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\nerror: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
+      "recommended_action": "Git 推送失败，通常是并发冲突。检查是否有其他 workflow 同时推送，添加 rebase 容错。",
+      "severity": "high",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-09-20T18:02:20.206894+00:00"
     },
     {
       "id": "issue_d448275a47b0",
@@ -103,6 +123,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=3, failed=0"
+    "note": "resolved=0, need_manual=4, failed=0"
   }
 }
