@@ -299,6 +299,11 @@
     </section>
     {{- end -}}
 
+    {{- /* ===== AI Trip Planner Card (posts only) ===== */ -}}
+    {{- if eq .Type "posts" -}}
+    {{- partial "trip-planner.html" . -}}
+    {{- end -}}
+
     {{- /* ===== Post Navigation (posts only) ===== */ -}}
     {{- if or .PrevInSection .NextInSection -}}
     <nav class="post-nav-links" aria-label="Post navigation">

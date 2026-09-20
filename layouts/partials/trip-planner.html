@@ -1,0 +1,420 @@
+{{- /* Trip Planner Card - AI Personalized Travel Plan */ -}}
+{{- /* 文章页底部嵌入，引导用户获取个性化行程建议 */ -}}
+
+<div class="trip-planner-card" id="trip-planner-card">
+    <div class="trip-planner-header">
+        <div class="trip-planner-icon">🧭</div>
+        <div class="trip-planner-title-group">
+            <h3 class="trip-planner-title">Plan Your Actual Trip in 60 Seconds</h3>
+            <p class="trip-planner-subtitle">Get personalized recommendations based on your travel plans</p>
+        </div>
+    </div>
+
+    <div class="trip-planner-form" id="trip-planner-form">
+        <div class="trip-planner-question">
+            <label for="trip-when">1. When are you coming to China?</label>
+            <select id="trip-when" name="trip_when">
+                <option value="">Select...</option>
+                <option value="this month">This month</option>
+                <option value="1-3 months">1-3 months</option>
+                <option value="3-6 months">3-6 months</option>
+                <option value="later this year">Later this year</option>
+                <option value="just browsing">Just browsing (no specific date)</option>
+            </select>
+        </div>
+
+        <div class="trip-planner-question">
+            <label for="trip-duration">2. How long will you stay?</label>
+            <select id="trip-duration" name="trip_duration">
+                <option value="">Select...</option>
+                <option value="≤3 days">3 days or less (144hr visa)</option>
+                <option value="4-7 days">4-7 days</option>
+                <option value="8-14 days">8-14 days</option>
+                <option value="2+ weeks">2+ weeks</option>
+            </select>
+        </div>
+
+        <div class="trip-planner-question">
+            <label>3. Which cities interest you? (select all that apply)</label>
+            <div class="trip-planner-checkboxes">
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Beijing"> Beijing</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Shanghai"> Shanghai</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Xi'an"> Xi'an</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Chengdu"> Chengdu</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Guangzhou"> Guangzhou</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Zhangjiajie"> Zhangjiajie</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_cities" value="Others"> Others</label>
+            </div>
+        </div>
+
+        <div class="trip-planner-question">
+            <label>4. What are you interested in? (optional)</label>
+            <div class="trip-planner-checkboxes">
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="Food"> Food</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="History"> History</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="Culture"> Culture</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="Nature"> Nature</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="Shopping"> Shopping</label>
+                <label class="checkbox-label"><input type="checkbox" name="trip_interests" value="Business"> Business</label>
+            </div>
+        </div>
+
+        <button type="button" class="trip-planner-btn" id="trip-planner-btn">
+            Get My Personalized Plan →
+        </button>
+
+        <p class="trip-planner-privacy">🔒 Anonymous - no login required. Your answers stay private.</p>
+    </div>
+
+    {{- /* 结果展示区域（初始隐藏） */ -}}
+    <div class="trip-planner-result" id="trip-planner-result" style="display: none;">
+        <div class="trip-planner-loading" id="trip-planner-loading">
+            <div class="spinner"></div>
+            <p>Generating your personalized plan...</p>
+        </div>
+
+        <div class="trip-planner-output" id="trip-planner-output" style="display: none;">
+            <div class="trip-planner-summary" id="trip-planner-summary"></div>
+
+            <div class="trip-planner-articles" id="trip-planner-articles">
+                <h4>📚 Recommended Guides for Your Trip:</h4>
+                <div class="trip-planner-article-list" id="trip-planner-article-list"></div>
+            </div>
+
+            <div class="trip-planner-cta" id="trip-planner-cta"></div>
+        </div>
+    </div>
+</div>
+
+{{- /* CSS 样式 */ -}}
+<style>
+.trip-planner-card {
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+    border: 2px solid #3A6EA5;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(58, 110, 165, 0.15);
+}
+
+.trip-planner-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #c4d8eb;
+}
+
+.trip-planner-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.trip-planner-title-group h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.3rem;
+    color: #1a365d;
+}
+
+.trip-planner-title-group p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4a6b8a;
+}
+
+.trip-planner-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.trip-planner-question {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.trip-planner-question > label {
+    font-weight: 600;
+    color: #1a365d;
+    font-size: 0.95rem;
+}
+
+.trip-planner-question select {
+    padding: 0.75rem 1rem;
+    border: 2px solid #c4d8eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: white;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.trip-planner-question select:focus {
+    outline: none;
+    border-color: #3A6EA5;
+}
+
+.trip-planner-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 1px solid #c4d8eb;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.checkbox-label:hover {
+    border-color: #3A6EA5;
+    background: #f8fbff;
+}
+
+.checkbox-label input:checked + span,
+.checkbox-label:has(input:checked) {
+    color: #1a365d;
+    font-weight: 600;
+}
+
+.checkbox-label:has(input:checked) {
+    border-color: #3A6EA5;
+    background: #e8f4fd;
+}
+
+.trip-planner-btn {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #3A6EA5 0%, #2d5a8a 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(58, 110, 165, 0.3);
+}
+
+.trip-planner-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(58, 110, 165, 0.4);
+}
+
+.trip-planner-btn:active {
+    transform: translateY(0);
+}
+
+.trip-planner-privacy {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
+    color: #6a8caf;
+    text-align: center;
+}
+
+.trip-planner-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #c4d8eb;
+    border-top-color: #3A6EA5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.trip-planner-summary {
+    padding: 1.25rem;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.trip-planner-articles {
+    margin-bottom: 1rem;
+}
+
+.trip-planner-articles h4 {
+    margin: 0 0 0.75rem 0;
+    color: #1a365d;
+}
+
+.trip-planner-article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.trip-planner-article-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid #e0e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.trip-planner-article-item:hover {
+    border-color: #3A6EA5;
+    background: #f8fbff;
+    transform: translateX(4px);
+}
+
+.trip-planner-article-item .icon {
+    font-size: 1.2rem;
+}
+
+.trip-planner-article-item .title {
+    font-weight: 600;
+    color: #1a365d;
+}
+
+.trip-planner-cta {
+    padding: 1rem;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border: 1px solid #ffb74d;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #e65100;
+}
+
+.trip-planner-cta a {
+    color: #e65100;
+    text-decoration: underline;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .trip-planner-card {
+        padding: 1.5rem;
+    }
+    
+    .trip-planner-checkboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+{{- /* 前端 JS */ -}}
+<script>
+(function() {
+    const API_URL = 'https://trip-planner.chinaboundtravel.com/api/trip-plan';
+    const currentArticle = {{ .Title | jsonify }};
+    
+    const form = document.getElementById('trip-planner-form');
+    const btn = document.getElementById('trip-planner-btn');
+    const result = document.getElementById('trip-planner-result');
+    const loading = document.getElementById('trip-planner-loading');
+    const output = document.getElementById('trip-planner-output');
+    const summary = document.getElementById('trip-planner-summary');
+    const articleList = document.getElementById('trip-planner-article-list');
+    const cta = document.getElementById('trip-planner-cta');
+
+    btn.addEventListener('click', async function() {
+        // 收集表单数据
+        const trip_when = document.getElementById('trip-when').value;
+        const trip_duration = document.getElementById('trip-duration').value;
+        const trip_cities = Array.from(
+            document.querySelectorAll('input[name="trip_cities"]:checked')
+        ).map(el => el.value);
+        const trip_interests = Array.from(
+            document.querySelectorAll('input[name="trip_interests"]:checked')
+        ).map(el => el.value);
+
+        // 验证
+        if (trip_cities.length === 0) {
+            alert('Please select at least one city');
+            return;
+        }
+
+        // 显示加载状态
+        form.style.display = 'none';
+        result.style.display = 'block';
+        loading.style.display = 'flex';
+        output.style.display = 'none';
+
+        try {
+            // 调用 API
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    trip_when,
+                    trip_duration,
+                    trip_cities,
+                    trip_interests,
+                    current_article: currentArticle
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('API request failed');
+            }
+
+            const data = await response.json();
+
+            // 隐藏加载，显示结果
+            loading.style.display = 'none';
+            output.style.display = 'block';
+
+            // 填充摘要
+            summary.textContent = data.summary || 'No summary available';
+
+            // 填充文章推荐
+            if (data.recommended_articles && data.recommended_articles.length > 0) {
+                articleList.innerHTML = data.recommended_articles.map(article => `
+                    <a href="${article.url}" class="trip-planner-article-item" target="_blank" rel="noopener">
+                        <span class="icon">📖</span>
+                        <span class="title">${article.title}</span>
+                    </a>
+                `).join('');
+            } else {
+                articleList.innerHTML = '<p style="color:#666;">No specific articles recommended</p>';
+            }
+
+            // 填充 CTA
+            if (data.cta) {
+                cta.innerHTML = data.cta
+                    .split('|')
+                    .map(item => `<a href="/subscribe/" style="margin: 0 1rem;">${item.trim()}</a>`)
+                    .join(' • ');
+            }
+
+        } catch (error) {
+            console.error('Trip Planner Error:', error);
+            loading.innerHTML = '<p style="color:#d32f2f;">⚠️ Sorry, something went wrong. Please try again.</p>';
+            setTimeout(() => {
+                loading.style.display = 'none';
+                form.style.display = 'flex';
+                result.style.display = 'none';
+            }, 3000);
+        }
+    });
+})();
+</script>
