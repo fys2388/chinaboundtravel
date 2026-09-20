@@ -1,0 +1,281 @@
+{
+  "date": "2026-09-20",
+  "site_up": true,
+  "response_time": 80.54799999999999,
+  "visitors": 7,
+  "sessions": 8,
+  "requests": 7,
+  "visitors_trend": "+0.0%",
+  "week_trend": "-22.2%",
+  "month_trend": "-70.8%",
+  "bounce_rate": 100.0,
+  "avg_session_duration": 5,
+  "engagement_rate": 0.0,
+  "bounce_rate_7d": 52.9,
+  "engagement_rate_7d": 47.1,
+  "avg_session_duration_7d": 93.91764798529412,
+  "sessions_7d": 68,
+  "visitors_7d": 54,
+  "top_pages": [
+    {
+      "path": "/posts/accommodation-tips-guide/",
+      "views": 3
+    },
+    {
+      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "views": 2
+    },
+    {
+      "path": "/",
+      "views": 1
+    },
+    {
+      "path": "/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Organic Social",
+      "users": 3,
+      "sessions": 3
+    },
+    {
+      "channel": "Cross-network",
+      "users": 2,
+      "sessions": 2
+    },
+    {
+      "channel": "Unassigned",
+      "users": 2,
+      "sessions": 5
+    },
+    {
+      "channel": "Organic Search",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 4
+    },
+    {
+      "country": "Ireland",
+      "users": 1
+    },
+    {
+      "country": "Singapore",
+      "users": 1
+    },
+    {
+      "country": "Sweden",
+      "users": 1
+    }
+  ],
+  "indexed_pages": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 164,
+  "gsc_clicks": 0,
+  "gsc_ctr": 0.0,
+  "gsc_errors": 0,
+  "gsc_week_trend": "-42.5%",
+  "gsc_month_trend": "-85.3%",
+  "top_keywords": [
+    {
+      "keyword": "144 hour china visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "144 hour visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 59.0
+    },
+    {
+      "keyword": "144 hour visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 84.0
+    },
+    {
+      "keyword": "144-hour visa-free transit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 70.0
+    },
+    {
+      "keyword": "alipay ile ödeme nasıl yapılır",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "keyword": "business meeting in china",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "business travel in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 77.0
+    },
+    {
+      "keyword": "chengdu traditional tea ceremony experience",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 72.0
+    },
+    {
+      "keyword": "china 144 hour transit visa",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 67.2
+    },
+    {
+      "keyword": "china business trip support",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 88.4
+    }
+  ],
+  "total_posts": 63,
+  "new_posts": 0,
+  "pending_posts": 0,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 3,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 15,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": null,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "🟡 自然搜索占比 14%：搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）",
+    "🟡 联盟 3 次点击 / 0 转化：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"
+  ],
+  "data_status": [
+    "NordVPN: 需手动查看 Impact.com 后台",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-09-19",
+  "gsc_avg_position": 33.6,
+  "gsc_window_start": "2026-09-11",
+  "gsc_window_end": "2026-09-17",
+  "gsc_window_days": 7,
+  "ml_zero_growth_alert": true,
+  "gh_social_success": true,
+  "agent_health": {
+    "checked_at": "2026-09-20 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-09-14 03:47:58",
+      "success": 6,
+      "failed": 1,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-09-20",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-09-19",
+    "generated_at": "2026-09-19",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 234,
+    "gsc_clicks_28d": 0,
+    "gsc_label": "CACHED",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🎯 今日 OKR 速览（Q3 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 7人 | 7人 | 100% | ✅ |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟢 |\n| 日搜索曝光 | 164次 | 13次 | 100% | ✅ |\n| 日联盟佣金 | 0$ | 1$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 1人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **自然搜索占比 14%**：搜索开始起量，继续补收录与内链，在标题第一行加入明确关键词（城市/主题+年份）\n- 🟡 **联盟 3 次点击 / 0 转化**：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"
+}
