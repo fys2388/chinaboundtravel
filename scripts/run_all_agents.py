@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
-ChinaBound Travel - 7大AI Agent统一运行脚本
+ChinaBound Travel - 6大AI Agent统一运行脚本
 Run All Agents Orchestrator
 
-依次运行7大AI Agent，生成统一的运营报告：
+依次运行6大AI Agent，生成统一的运营报告：
 1. SEO智能优化Agent (seo_intelligent_agent.py)
-2. 自我学习引擎 (self_learning_engine.py)
-3. 收入分析引擎 (revenue_analytics_engine.py)
-4. 转化优化Agent (conversion_optimization_agent.py)
-5. 内容智能优化Agent (content_intelligence_agent.py)
-6. 社媒智能优化Agent (social_intelligence_agent.py)
-7. 用户智能运营Agent (user_intelligence_agent.py)
+2. 收入分析引擎 (revenue_analytics_engine.py)
+3. 转化优化Agent (conversion_optimization_agent.py)
+4. 内容智能优化Agent (content_intelligence_agent.py)
+5. 社媒智能优化Agent (social_intelligence_agent.py)
+6. 用户智能运营Agent (user_intelligence_agent.py)
+
+已废弃: self_learning_engine.py（历史效果追踪，0条成功模式，空转）
+已废弃: 6个 *_learning_closed_loop.py（与 core agent 100%职责重叠，策略文件由 core agent 内部消费）
 
 使用方式：
     python scripts/run_all_agents.py --all
@@ -22,6 +24,7 @@ import os
 import sys
 import json
 import subprocess
+import concurrent.futures
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -45,7 +48,7 @@ except ImportError:
     GOVERNANCE_AVAILABLE = False
     print("  ⚠️ ai_governance module not found, running without governance checks")
 
-# 7大Agent定义
+# 6大Agent定义（已移除 self_learning_engine.py：空转，0条模式）
 AGENTS = {
     "seo": {
         "name": "SEO智能优化Agent",
@@ -55,15 +58,6 @@ AGENTS = {
         "report_pattern": "seo_intelligence_report.md",
         "description": "SEO机会识别、关键词分析、优化建议",
         "maturity": "L2"
-    },
-    "self_learning": {
-        "name": "自我学习引擎",
-        "script": "self_learning_engine.py",
-        "args": ["--cycle"],
-        "report_file": REPORTS_DIR / "learning" / "self_learning_report.md",
-        "report_pattern": "self_learning_report.md",
-        "description": "历史效果追踪、模式提取、策略迭代",
-        "maturity": "L1"
     },
     "revenue": {
         "name": "收入分析引擎",
@@ -113,7 +107,94 @@ AGENTS = {
 }
 
 # 运行顺序（按依赖关系排序）
-RUN_ORDER = ["seo", "self_learning", "revenue", "conversion", "content", "social", "user"]
+RUN_ORDER = ["seo", "revenue", "conversion", "content", "social", "user"]
+
+
+def _run_single_agent_subprocess(agent_id: str, use_real_data: bool) -> Dict[str, Any]:
+    """模块级函数：供 ProcessPoolExecutor 并行调用（可 pickle）。
+
+    独立执行单个 Agent 的完整流程：治理检查 → subprocess.run → 结果收集。
+    不与主进程共享状态，所有输出通过返回值传递。
+    """
+    agent_config = AGENTS.get(agent_id)
+    if not agent_config:
+        return {"success": False, "error": f"Unknown agent: {agent_id}", "agent": agent_id}
+
+    script_path = SCRIPTS_DIR / agent_config["script"]
+    if not script_path.exists():
+        return {
+            "success": False,
+            "error": f"Script not found: {script_path}",
+            "agent": agent_id,
+            "name": agent_config["name"],
+        }
+
+    # 治理检查
+    if GOVERNANCE_AVAILABLE:
+        is_safe, ks_reason = check_kill_switch(agent_id)
+        if not is_safe:
+            return {
+                "success": False,
+                "error": "kill_switch_active",
+                "agent": agent_id,
+                "name": agent_config["name"],
+                "reason": ks_reason,
+            }
+
+    start_time = datetime.now()
+
+    # 构建命令
+    agent_args = agent_config.get("args", ["--all"])
+    cmd = [sys.executable, str(script_path)] + agent_args
+
+    try:
+        result = subprocess.run(
+            cmd,
+            cwd=str(PROJECT_ROOT),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=300,
+        )
+
+        end_time = datetime.now()
+        duration = (end_time - start_time).total_seconds()
+        success = result.returncode == 0
+        report_exists = agent_config["report_file"].exists()
+
+        return {
+            "success": success,
+            "agent": agent_id,
+            "name": agent_config["name"],
+            "maturity": agent_config["maturity"],
+            "permission_level": get_agent_permission_level(agent_id) if GOVERNANCE_AVAILABLE else "unknown",
+            "duration_seconds": duration,
+            "return_code": result.returncode,
+            "stdout": result.stdout[-2000:] if result.stdout else "",
+            "stderr": result.stderr[-1000:] if result.stderr else "",
+            "report_generated": report_exists,
+            "report_file": str(agent_config["report_file"]) if report_exists else None,
+            "started_at": start_time.isoformat(),
+            "finished_at": end_time.isoformat(),
+        }
+
+    except subprocess.TimeoutExpired:
+        return {
+            "success": False,
+            "agent": agent_id,
+            "name": agent_config["name"],
+            "error": "Timeout after 300 seconds",
+            "duration_seconds": 300,
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "agent": agent_id,
+            "name": agent_config["name"],
+            "error": str(e),
+            "duration_seconds": 0,
+        }
 
 
 class AgentOrchestrator:
@@ -127,7 +208,7 @@ class AgentOrchestrator:
         self.end_time = None
 
     def run_agent(self, agent_id: str, extra_args: List[str] = None) -> Dict[str, Any]:
-        """运行单个Agent"""
+        """运行单个Agent，含 Agent 级治理检查"""
         agent_config = AGENTS.get(agent_id)
         if not agent_config:
             return {"success": False, "error": f"Unknown agent: {agent_id}"}
@@ -144,9 +225,29 @@ class AgentOrchestrator:
         print(f"\n{'=' * 60}")
         print(f"  运行: {agent_config['name']} ({agent_id})")
         print(f"  成熟度: {agent_config['maturity']}")
+
+        # === P0 治理: Agent 级 Kill Switch + 注册验证 ===
         if GOVERNANCE_AVAILABLE:
+            # 1) 子系统级 Kill Switch（可针对单个 Agent 禁用）
+            is_safe, ks_reason = check_kill_switch(agent_id)
+            if not is_safe:
+                print(f"  ❌ KILL SWITCH [{agent_id}] ACTIVE: {ks_reason}")
+                print(f"  Agent 运行被阻止，跳过执行")
+                return {
+                    "success": False,
+                    "error": "kill_switch_active",
+                    "agent": agent_id,
+                    "name": agent_config["name"],
+                    "reason": ks_reason,
+                }
+
+            # 2) 验证 Agent 是否在治理配置中注册（防止未注册 Agent 静默执行）
             plevel = get_agent_permission_level(agent_id)
-            print(f"  权限级别: {plevel}")
+            if plevel == "L0":
+                print(f"  ⚠️ Agent '{agent_id}' 权限级别 L0（只读），仅做报告不做写操作")
+
+            print(f"  🛡️ 治理检查通过 | 权限级别: {plevel} | Kill Switch: OK")
+
         print(f"  描述: {agent_config['description']}")
         print(f"{'=' * 60}")
 
@@ -243,7 +344,7 @@ class AgentOrchestrator:
         self.start_time = datetime.now()
 
         print("\n" + "=" * 60)
-        print("  ChinaBound Travel - 7大AI Agent统一运行")
+        print("  ChinaBound Travel - 6大AI Agent统一运行")
         print("=" * 60)
         print(f"\n  运行时间: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"  运行Agent数: {len(agents)}")
@@ -271,6 +372,87 @@ class AgentOrchestrator:
         # 保存运行结果
         self.save_results(total_duration)
 
+        return summary
+
+    def run_parallel(self, agents: List[str] = None, max_workers: int = 3) -> Dict[str, Any]:
+        """并行运行所有指定的Agent（3路并发）
+
+        使用 ProcessPoolExecutor 并行执行，每个 Agent 在独立子进程中运行。
+        子进程内的治理检查、subprocess.run 调用独立执行，互不干扰。
+        """
+        if agents is None:
+            agents = RUN_ORDER
+
+        # === AI Governance: Kill Switch Check ===
+        if GOVERNANCE_AVAILABLE:
+            is_safe, reason = check_kill_switch()
+            if not is_safe:
+                print("\n" + "=" * 60)
+                print("  KILL SWITCH ACTIVE - AI Agent 运行被阻止")
+                print("=" * 60)
+                print(f"  原因: {reason}")
+                print("  如需恢复运行，请在 config/ai_governance.json 中禁用 kill_switch")
+                return {"success": False, "error": "kill_switch_active", "reason": reason}
+            print("  ✅ Kill Switch: 未激活，运行允许")
+
+        self.start_time = datetime.now()
+
+        print("\n" + "=" * 60)
+        print("  ChinaBound Travel - 6大AI Agent统一运行 [并行模式]")
+        print("=" * 60)
+        print(f"\n  运行时间: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"  运行Agent数: {len(agents)}")
+        print(f"  Agent列表: {', '.join(agents)}")
+        print(f"  并行线程数: {max_workers}")
+        print(f"  真实数据: {'是' if self.use_real_data else '否（样本数据）'}")
+
+        if GOVERNANCE_AVAILABLE:
+            print(f"\n  权限分级 (L0-L3):")
+            for aid in agents:
+                if aid in AGENTS:
+                    plevel = get_agent_permission_level(aid)
+                    print(f"    {aid:15s}: {plevel}")
+
+        # 并行执行
+        with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+            futures = {}
+            for agent_id in agents:
+                if agent_id in AGENTS:
+                    future = executor.submit(
+                        _run_single_agent_subprocess,
+                        agent_id,
+                        self.use_real_data,
+                    )
+                    futures[future] = agent_id
+
+            for future in concurrent.futures.as_completed(futures):
+                agent_id = futures[future]
+                try:
+                    result = future.result(timeout=360)
+                    self.results[agent_id] = result
+                    icon = "✅" if result.get("success") else "❌"
+                    duration = result.get("duration_seconds", 0)
+                    print(f"\n  {icon} {AGENTS[agent_id]['name']} 完成 ({duration:.1f}s)")
+                    if not result.get("success"):
+                        err = result.get("error", "")
+                        if err:
+                            print(f"     错误: {err[:150]}")
+                except Exception as e:
+                    self.results[agent_id] = {
+                        "success": False,
+                        "agent": agent_id,
+                        "name": AGENTS[agent_id]["name"],
+                        "error": str(e),
+                        "duration_seconds": 0,
+                    }
+                    print(f"\n  ❌ {AGENTS[agent_id]['name']} 并行执行异常: {e}")
+
+        self.end_time = datetime.now()
+        total_duration = (self.end_time - self.start_time).total_seconds()
+
+        # 生成汇总报告
+        summary = self.generate_summary(total_duration)
+        self.save_results(total_duration)
         return summary
 
     def generate_summary(self, total_duration: float) -> Dict[str, Any]:
@@ -372,14 +554,13 @@ class AgentOrchestrator:
 | 维度 | 成熟度 | 目标 | 状态 |
 |------|--------|------|------|
 | SEO优化 | L2 | L3 | 🟡 进行中 |
-| 自我学习 | L1 | L2 | 🟡 进行中 |
 | 数据分析 | L3 | L3 | ✅ 已达标 |
 | 转化优化 | L3 | L3 | ✅ 已达标 |
 | 内容生产 | L4 | L4 | ✅ 已达标 |
 | 社媒运营 | L3 | L3 | ✅ 已达标 |
 | 用户运营 | L2 | L2 | ✅ 已达标 |
 
-**5/7维度已达标，2/7维度进行中**
+**5/6维度已达标，1/6维度进行中**
 
 ---
 
@@ -417,7 +598,7 @@ class AgentOrchestrator:
 
 ---
 
-*报告由7大AI Agent统一运行脚本自动生成*
+*报告由6大AI Agent统一运行脚本自动生成*
 *生成时间: {now.strftime('%Y-%m-%d %H:%M:%S')}*
 """
 
@@ -441,10 +622,9 @@ def main():
     """主函数"""
     import argparse
 
-    parser = argparse.ArgumentParser(description="ChinaBound Travel 7大AI Agent统一运行脚本")
+    parser = argparse.ArgumentParser(description="ChinaBound Travel 6大AI Agent统一运行脚本")
     parser.add_argument("--all", action="store_true", help="运行所有Agent")
     parser.add_argument("--seo", action="store_true", help="仅运行SEO Agent")
-    parser.add_argument("--self-learning", action="store_true", help="仅运行自我学习引擎")
     parser.add_argument("--revenue", action="store_true", help="仅运行收入分析引擎")
     parser.add_argument("--conversion", action="store_true", help="仅运行转化优化Agent")
     parser.add_argument("--content", action="store_true", help="仅运行内容智能优化Agent")
@@ -452,13 +632,14 @@ def main():
     parser.add_argument("--user", action="store_true", help="仅运行用户智能运营Agent")
     parser.add_argument("--report-only", action="store_true", help="仅生成统一报告（不运行Agent）")
     parser.add_argument("--sample-data", action="store_true", help="使用样本数据")
+    parser.add_argument("--parallel", action="store_true", help="并行运行Agent（3路并发，默认串行）")
     parser.add_argument("--list", action="store_true", help="列出所有Agent")
 
     args = parser.parse_args()
 
     # 列出Agent
     if args.list:
-        print("\n📋 7大AI Agent列表:")
+        print("\n📋 6大AI Agent列表:")
         print(f"\n  {'ID':<15} {'名称':<25} {'成熟度':<8} {'描述'}")
         print("  " + "-" * 80)
         for agent_id in RUN_ORDER:
@@ -468,14 +649,12 @@ def main():
 
     # 确定要运行的Agent
     agents_to_run = []
-    if args.all or not any([args.seo, args.self_learning, args.revenue,
-                            args.conversion, args.content, args.social, args.user]):
+    if args.all or not any([args.seo, args.revenue,
+                             args.conversion, args.content, args.social, args.user]):
         agents_to_run = RUN_ORDER
     else:
         if args.seo:
             agents_to_run.append("seo")
-        if args.self_learning:
-            agents_to_run.append("self_learning")
         if args.revenue:
             agents_to_run.append("revenue")
         if args.conversion:
@@ -491,7 +670,10 @@ def main():
     orchestrator = AgentOrchestrator(use_real_data=not args.sample_data)
 
     if not args.report_only:
-        orchestrator.run_all(agents_to_run)
+        if args.parallel:
+            orchestrator.run_parallel(agents_to_run, max_workers=3)
+        else:
+            orchestrator.run_all(agents_to_run)
 
     # 生成统一报告
     orchestrator.generate_unified_report()
