@@ -218,8 +218,8 @@ def _set_as_of(as_of):
     _AS_OF = as_of
 
 
-_ANALYTICS_CONTAMINATED = False
-_ANALYTICS_CONTAMINATION_NOTE = ""
+_ANALYTICS_DUPLICATED = False
+_ANALYTICS_DUPLICATION_NOTE = ""
 
 # posture 文件路径。抽成变量是为了让测试能指向临时文件，
 # 否则 build_snapshot() 会去读线上真实文件，测试结论就取决于线上状态。
@@ -227,51 +227,66 @@ _ANALYTICS_POSTURE_PATH = "reports/quality/analytics_posture.json"
 
 
 def _is_ga4_source(source):
-    """判断一个 KPI 的数值是否来自 GA4（会被双 GA4 污染的那一类）。"""
+    """判断一个 KPI 的数值是否来自 GA4（受重复目的地配置影响的那一类）。"""
     s = (source or "").lower()
     return ("ga4_real_data" in s) or ("ga4_api" in s) or ("ga4 " in s)
 
 
-def _load_analytics_contamination():
-    """读 reports/quality/analytics_posture.json，判断 GA4 来源 KPI 是否被双计污染。
+def _load_analytics_duplication():
+    """读 reports/quality/analytics_posture.json，判断 GA4 是否配了重复目的地。
 
     线上实测（2026-09-20）：首页每次 page_view 同时 POST
         /vo5w/ga/g/c?tid=G-P6BH500VBK   和   /vo5w/ga/g/c?tid=G-GECBME3YVJ
-    两条共用同一个 gtm= 配置哈希与 cid，即同一配置里的两个目的地。
-    页面 HTML 里只有 G-GECBME3YVJ（hugo.toml），双计来自 Google 服务端：
+    页面 HTML 里只有 G-GECBME3YVJ（hugo.toml），重复来自 Google 服务端：
     gtag.js?id=G-GECBME3YVJ 返回的 GTM 容器载荷里 __dest_ga 有两个
-    destinationId，且每个事件 tag 都成对复制了。即 Google Tag 配了
-    两个目的地。这是 Google 控制台的配置问题，仓库里改代码修不了。
-    因此 users_28d / sessions_28d / pageviews_28d / engagement_rate_28d 全部双计。
+    destinationId（tag_id:1 / tag_id:7），且每个事件 tag 都成对复制了。
+    即 Google Tag Manager 里的一个 Google Tag 配了两个目的地。
+    这是 Google 控制台的配置问题，仓库里改代码修不了。
 
-    注意：这不是"数据缺失"。数值是从 GA4 API 真拉下来的，问题是同一件事被
-    记录了两次。所以单独用 CONTAMINATED_SOURCE 表达，不复用 NOT_AVAILABLE，
-    也不复用 STALE_SOURCE（陈旧是时间问题，污染是口径问题）。
+    **准确说法（重要，别搞反）**：GA4 每个属性独立存事件。一个事件发给
+    两个目的地 = 两个属性**各记一次**，所以单个属性的数值**没有被双计**。
+    真实的危害是另外三件：
+      1. 每次事件双倍开销（2x 网络请求 / 2x API 配额）
+      2. 同一批访问行为存在于两个属性里 -> 受众/再营销名单被重复灌入，
+         两边看板数字对不上，谁都不能当权威
+      3. 仓库没有任何地方声明哪个属性是 canonical。所有脚本都查数值 ID
+         GA4_PROPERTY_ID=541752321，而 hugo.toml 写的是 G-GECBME3YVJ；
+         仓库无法证明这两者指向同一个属性，也无法证明它不是那个多余的。
+         若将来任一脚本改成查两个属性再相加，数值会立刻真的翻倍。
+
+    所以这个标记的意思是「来源的权威地位未被证实」，不是「数值算错了」。
+    因此命名用 DUPLICATE_DESTINATION，不用 CONTAMINATED（那暗示数值本身错）。
+    数值保留，也不进 NOT_AVAILABLE —— 数据是真的测到了。
 
     之前这个缺陷的盲区：predeploy_quality_gate 只匹配 gtag/js?id=（加载脚本），
     而第二个 ID 出现在 collect 路径 tid= 里，所以 predeploy_quality.json 报 0
-    issues，闸门"通过"，双计在 main 上跑了 6 天无人拦截。
+    issues，闸门"通过"，这个配置在 main 上跑了 6 天无人拦截。
     site_health_agent.check_analytics_measurement_ids() 每次运行刷新这个文件。
     """
-    global _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE
+    global _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE
     path = BASE / _ANALYTICS_POSTURE_PATH
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except Exception:
-        _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = False, ""
+        _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE = False, ""
         return False, ""
-    if not data.get("contaminated"):
-        _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = False, ""
+    # 兼容旧字段名 contaminated（2026-09-20 首版）与新字段名
+    dup = data.get("duplicate_destinations", data.get("contaminated"))
+    if not dup:
+        _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE = False, ""
         return False, ""
-    ids = ", ".join(data.get("measurement_ids") or [])
+    ids = data.get("measurement_ids") or []
+    ids_str = ", ".join(ids)
     checked = (data.get("checked_at") or "?")[:10]
-    note = (f"线上同一页面同时加载 {len(data.get('measurement_ids') or [])} 个 "
-            f"GA4 measurement ID（{ids}），每个 page_view 被双计，"
-            f"GA4 来源的流量指标（users_28d / sessions_28d / pageviews_28d / "
-            f"engagement_rate_28d）均为双计数值，不可作为决策依据。"
+    note = (f"GA4 的 Google Tag 配了 {len(ids)} 个目的地（{ids_str}），"
+            f"每个事件被同时记到这两个属性里。单个属性的数值本身没有被双计，"
+            f"但这个配置的权威地位未被证实：所有脚本都查数值 ID "
+            f"GA4_PROPERTY_ID，而 hugo.toml 写的是 measurement ID，"
+            f"仓库无法证明两者指向同一个属性，也无法证明当前读的不是多余的那个。"
+            f"涉及 KPI：users_28d / sessions_28d / pageviews_28d / engagement_rate_28d。"
             f"检测于 {checked}；根因在 Google 控制台的 tag 配置"
             f"（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。")
-    _ANALYTICS_CONTAMINATED, _ANALYTICS_CONTAMINATION_NOTE = True, note
+    _ANALYTICS_DUPLICATED, _ANALYTICS_DUPLICATION_NOTE = True, note
     return True, note
 
 
@@ -385,15 +400,16 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
     # 覆盖会让 low_data_reasons 静默归零，日报反而更"健康"。
     if stale and status in (None, "OK"):
         status = "STALE_SOURCE"
-    # CONTAMINATED_SOURCE：数值真的测到了，但测量口径被双 GA4 污染。
-    # 比 STALE_SOURCE 更严重（陈旧是"数老"，污染是"数错"），所以能覆盖它；
-    # 但仍不能覆盖 INSUFFICIENT_SAMPLE / NOT_AVAILABLE（那是"没有数据"）。
-    contaminated = bool(
-        _ANALYTICS_CONTAMINATED and _is_ga4_source(source)
+    # DUPLICATE_DESTINATION：数值真的测到了，但这个 GA4 属性的权威地位未证实。
+    # 站点给两个目的地各发一次，单个属性没被双计 —— 所以这不是"数错"，
+    # 是"不知道读的哪个是对的"。与 STALE_SOURCE（数老）同为降级而非作废，
+    # 但两者都要让位于 INSUFFICIENT_SAMPLE / NOT_AVAILABLE（那是"没有数据"）。
+    duplicated = bool(
+        _ANALYTICS_DUPLICATED and _is_ga4_source(source)
         and status in (None, "OK", "STALE_SOURCE")
     )
-    if contaminated:
-        status = "CONTAMINATED_SOURCE"
+    if duplicated:
+        status = "DUPLICATE_DESTINATION"
     return {
         "name": name,
         "meaning": meaning,
@@ -409,8 +425,8 @@ def _kpi(name, meaning, value, unit, ds_type, source, calculation,
         "source_observed_date": obs_date,
         "source_age_days": obs_age,
         "stale_source": stale,
-        "contaminated_source": contaminated,
-        "contamination_note": _ANALYTICS_CONTAMINATION_NOTE if contaminated else "",
+        "duplicate_destination_source": duplicated,
+        "destination_note": _ANALYTICS_DUPLICATION_NOTE if duplicated else "",
     }
 
 
@@ -1394,20 +1410,20 @@ def low_data_reasons(snapshot: dict) -> list:
             reasons.append(f"experiments.{exp['experiment_id']}: observation < 28d or clicks < 20")
     if snapshot["domains"]["revenue"]["kpis"][0]["value"] is None:
         reasons.append("revenue: no affiliate revenue API (REVENUE_NOT_AVAILABLE)")
-    # CONTAMINATED_SOURCE 必须进 low_data_reasons —— 否则日报会拿到一个
-    # "看起来干净"的双计数值继续讲。上一轮 STALE_SOURCE 踩过同一个坑：
+    # DUPLICATE_DESTINATION 必须进 low_data_reasons —— 否则日报会拿到一个
+    # "来源未证实"的数值继续讲。上一轮 STALE_SOURCE 踩过同一个坑：
     # 状态被覆盖后 low_data_reasons 从 8 静默掉到 0，日报反而更"健康"。
     for domain, dom in snapshot["domains"].items():
         for k in dom.get("kpis", []):
-            if k.get("status") == "CONTAMINATED_SOURCE":
-                reasons.append(f"{domain}.{k['name']}: GA4 double-counted source")
+            if k.get("status") == "DUPLICATE_DESTINATION":
+                reasons.append(f"{domain}.{k['name']}: GA4 source canonicality unverified")
     return sorted(set(reasons))
 
 
 def build_snapshot(as_of=None) -> dict:
     as_of = as_of or date.today()
     _set_as_of(as_of)
-    _load_analytics_contamination()
+    _load_analytics_duplication()
     traffic = build_traffic()
     seo = build_seo_gsc()
     content = build_content(as_of)
@@ -1447,15 +1463,19 @@ def build_snapshot(as_of=None) -> dict:
     }
     snapshot["low_data_reasons"] = low_data_reasons(snapshot)
     snapshot["stale_sources"] = stale_sources(snapshot)
-    snapshot["analytics_contamination"] = {
-        "contaminated": _ANALYTICS_CONTAMINATED,
-        "note": _ANALYTICS_CONTAMINATION_NOTE,
+    snapshot["analytics_destination_duplication"] = {
+        "duplicate_destinations": _ANALYTICS_DUPLICATED,
+        "note": _ANALYTICS_DUPLICATION_NOTE,
         "affected_kpis": [
             k["name"] for domain, dom in snapshot["domains"].items()
             for k in dom.get("kpis", [])
-            if k.get("contaminated_source")
+            if k.get("duplicate_destination_source")
         ],
+        # 兼容旧字段名，避免读取方（含 feishu_daily_report）一时对不上
+        "contaminated": _ANALYTICS_DUPLICATED,
     }
+    # 旧键保留一段时间，日报与下游脚本还在读它
+    snapshot["analytics_contamination"] = snapshot["analytics_destination_duplication"]
     return snapshot
 
 

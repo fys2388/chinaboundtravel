@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T09:04:42.519571+00:00",
+  "checked_at": "2026-09-20T09:44:13.215108+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
     "/",
@@ -24,6 +24,8 @@
     "G-GECBME3YVJ",
     "G-P6BH500VBK"
   ],
+  "destination_count": 2,
+  "duplicate_destinations": true,
   "contaminated": true,
-  "note": "contaminated=True 表示 GA4 实际配置了多个目的地，所有 GA4 来源的流量KPI（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）都是双计数值，不可作为决策依据。根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库，也不在 Cloudflare —— 改仓库代码修不了它。"
+  "note": "duplicate_destinations=True 表示 GA4 的 Google Tag 配了多个目的地，每个事件被记到多个属性里。单个属性的数值本身没有被双计，受影响的是来源的权威地位：受影响的流量 KPI（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）无法证明读的是 canonical 属性。根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库，也不在 Cloudflare —— 改仓库代码修不了它。"
 }

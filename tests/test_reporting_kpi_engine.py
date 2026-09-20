@@ -292,26 +292,37 @@ class TestRealDataWiring:
 
 
 # --------------------------------------------------------------------------
-# GA4 双计污染：数值是真的测到了，但同一件事被记录了两次
+# GA4 重复目的地：来源的权威地位未被证实（不是「数值算错」）
 # --------------------------------------------------------------------------
-class TestAnalyticsContamination:
+class TestAnalyticsDuplicateDestination:
     """线上实测（2026-09-20）：首页每次 page_view 同时 POST
-    /vo5w/ga/g/c?tid=G-P6BH500VBK 和 ?tid=G-GECBME3YVJ，两条共用同一个
-    gtm= 配置哈希与 cid。仓库里只有 G-GECBME3YVJ，另一个来自部署层。
-    users_28d / sessions_28d / pageviews_28d / engagement_rate_28d 因此全部双计。
+    /vo5w/ga/g/c?tid=G-P6BH500VBK 和 ?tid=G-GECBME3YVJ。
+    页面 HTML 里只有 G-GECBME3YVJ，重复来自 gtag.js 载荷服务端配置：
+    __dest_ga 有两个 destinationId，每个事件 tag 都成对复制了，
+    即 Google Tag 配了两个目的地。
+
+    **准确语义**：GA4 每个属性独立存事件，一个事件发两个目的地 = 各记一次，
+    所以单个属性的数值没有被双计。真实危害是来源的权威地位未被证实 ——
+    所有脚本查数值 ID GA4_PROPERTY_ID=541752321，hugo.toml 写的是
+    G-GECBME3YVJ，仓库无法证明两者是同一个属性，也无法证明当前读的不是
+    那个多余的。所以状态名是 DUPLICATE_DESTINATION，不是 CONTAMINATED
+    （CONTAMINATED 暗示数值本身算错了，那是不成立的断言）。
 
     盲区根因：predeploy_quality_gate 旧正则只匹配 gtag/js?id=（加载脚本），
     第二个 ID 出现在 collect 路径 tid= 里 —— 所以 predeploy_quality.json
-    报 0 issues，闸门"通过"，双计在 main 上跑了 6 天无人拦截。
-    而那时这三个数正被当 LIVE KPI 上报。
+    报 0 issues，闸门"通过"，这个配置在 main 上跑了 6 天无人拦截。
+    而那时 users_28d=246 正被当 LIVE KPI 上报。
 
-    注意区分三种状态，测试专门防串台：
-      NOT_AVAILABLE   —— 没有数据
-      STALE_SOURCE    —— 数据旧（时间问题）
-      CONTAMINATED_SOURCE —— 数据错（口径问题）
+    注意区分四种状态，测试专门防串台：
+      NOT_AVAILABLE        —— 没有数据
+      STALE_SOURCE         —— 数据旧（时间问题）
+      INSUFFICIENT_SAMPLE  —— 样本不够（统计问题）
+      DUPLICATE_DESTINATION —— 来源权威地位未证实（口径问题）
+    前三种都是「数值不可用」，最后一种「数值可用但出处待确认」——
+    把它误标成前三种会丢掉一个真实测到的数。
     """
 
-    def _posture(self, tmp_path, contaminated, ids=("G-GECBME3YVJ", "G-P6BH500VBK")):
+    def _posture(self, contaminated, ids=("G-GECBME3YVJ", "G-P6BH500VBK")):
         """写临时 posture 文件并把 loader 指向它 —— 测试结论不能依赖线上状态。
         必须落在 BASE 内（loader 用相对路径），tmp_path 在仓库外用不了。"""
         d = rke.BASE / ".pytest_tmp_posture"
@@ -320,14 +331,14 @@ class TestAnalyticsContamination:
         p.write_text(json.dumps({
             "checked_at": "2026-09-20T09:00:00+00:00",
             "measurement_ids": list(ids),
-            "contaminated": contaminated,
+            "duplicate_destinations": contaminated,
         }), encoding="utf-8")
         self._tmp_dir = d
         rke._ANALYTICS_POSTURE_PATH = str(p.relative_to(rke.BASE))
 
     def teardown_method(self):
-        rke._ANALYTICS_CONTAMINATED = False
-        rke._ANALYTICS_CONTAMINATION_NOTE = ""
+        rke._ANALYTICS_DUPLICATED = False
+        rke._ANALYTICS_DUPLICATION_NOTE = ""
         rke._ANALYTICS_POSTURE_PATH = "reports/quality/analytics_posture.json"
         d = getattr(self, "_tmp_dir", None)
         if d is not None:
@@ -349,99 +360,125 @@ class TestAnalyticsContamination:
         assert not rke._is_ga4_source("git log -- content/posts")
 
     def test_clean_posture_does_not_touch_status(self):
-        """没有污染报告时，GA4 KPI 的行为与改动前完全一致。"""
-        rke._ANALYTICS_CONTAMINATED = False
+        """没有重复目的地报告时，GA4 KPI 的行为与改动前完全一致。"""
+        rke._ANALYTICS_DUPLICATED = False
         k = rke._kpi("users_28d", "m", 246, "users", "LIVE",
                      "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
                      "c", "daily")
         assert k["status"] == "OK"
-        assert k["contaminated_source"] is False
-        assert k["contamination_note"] == ""
+        assert k["duplicate_destination_source"] is False
+        assert k["destination_note"] == ""
 
-    def test_contaminated_marks_ga4_kpi(self):
-        rke._ANALYTICS_CONTAMINATED = True
-        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+    def test_duplicate_marks_ga4_kpi(self):
+        rke._ANALYTICS_DUPLICATED = True
+        rke._ANALYTICS_DUPLICATION_NOTE = "Google Tag 配了两个 destination"
         k = rke._kpi("users_28d", "m", 246, "users", "LIVE",
                      "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
                      "c", "daily")
-        assert k["status"] == "CONTAMINATED_SOURCE"
-        assert k["contaminated_source"] is True
-        assert "双 GA4" in k["contamination_note"]
-        # 数值必须保留：它是有用的，只是不能当决策依据
+        assert k["status"] == "DUPLICATE_DESTINATION"
+        assert k["duplicate_destination_source"] is True
+        assert "两个 destination" in k["destination_note"]
+        # 数值必须保留：它是真实测到的，只是出处待确认，不是算错
         assert k["value"] == 246
 
-    def test_contamination_ignores_non_ga4_sources(self):
-        """GSC/git/CSV 来源的 KPI 不受影响 —— 污染范围必须精确。"""
-        rke._ANALYTICS_CONTAMINATED = True
-        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+    def test_duplicate_ignores_non_ga4_sources(self):
+        """GSC/git/CSV 来源的 KPI 不受影响 —— 标记范围必须精确。"""
+        rke._ANALYTICS_DUPLICATED = True
+        rke._ANALYTICS_DUPLICATION_NOTE = "Google Tag 配了两个 destination"
         for src in ("reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)",
                     "git log -- content/posts",
                     "reports/revenue/REV001_BASELINE.csv"):
             k = rke._kpi("x", "m", 1, "n", "LOCAL", src, "c", "daily")
             assert k["status"] == "OK", src
-            assert k["contaminated_source"] is False, src
+            assert k["duplicate_destination_source"] is False, src
 
-    def test_contamination_wins_over_stale(self):
-        """陈旧是「数老」，污染是「数错」。两个都有时以污染为准。"""
+    def test_duplicate_wins_over_stale(self):
+        """两个都是降级信号时取更具体的那个：来源未证实 优先于 数据旧。"""
         rke._set_as_of(date(2026, 9, 20))
-        rke._ANALYTICS_CONTAMINATED = True
-        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        rke._ANALYTICS_DUPLICATED = True
+        rke._ANALYTICS_DUPLICATION_NOTE = "Google Tag 配了两个 destination"
         k = rke._kpi("old", "m", 69, "n", "CACHED",
                      "reports/real_data/ga4_real_data.json (GA4 API pull 2026-08-01)",
                      "c", "daily")
-        assert k["stale_source"] is True
-        assert k["status"] == "CONTAMINATED_SOURCE"
+        assert k["stale_source"] is True  # 陈旧事实不能丢
+        assert k["status"] == "DUPLICATE_DESTINATION"
 
-    def test_contamination_does_not_clobber_insufficient_sample(self):
+    def test_duplicate_does_not_clobber_insufficient_sample(self):
         """不能覆盖更强的「没有数据」信号 —— 与上一轮 STALE_SOURCE 同一防串台。"""
-        rke._ANALYTICS_CONTAMINATED = True
-        rke._ANALYTICS_CONTAMINATION_NOTE = "双 GA4 实测"
+        rke._ANALYTICS_DUPLICATED = True
+        rke._ANALYTICS_DUPLICATION_NOTE = "Google Tag 配了两个 destination"
         k = rke._kpi("x", "m", 0, "n", "LIVE",
                      "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-18)",
                      "c", "daily", status="INSUFFICIENT_SAMPLE")
         assert k["status"] == "INSUFFICIENT_SAMPLE"
 
-    def test_low_data_reasons_survives_contamination_marking(self, tmp_path):
+    def test_low_data_reasons_survives_duplicate_marking(self, tmp_path):
         """最关键的回归：上一轮 STALE_SOURCE 踩过这个坑 —— 状态被覆盖后
         low_data_reasons 从 8 静默掉到 0，日报反而显得更"健康"。"""
-        self._posture(tmp_path, contaminated=True)
+        self._posture(contaminated=True)
         snap = rke.build_snapshot(date(2026, 8, 17))
-        contaminated = [
+        marked = [
             k["name"] for dom in snap["domains"].values()
-            for k in dom.get("kpis", []) if k.get("contaminated_source")
+            for k in dom.get("kpis", []) if k.get("duplicate_destination_source")
         ]
-        assert contaminated, "临时 posture 已声明污染，但没有任何 KPI 被标记"
-        assert any("GA4 double-counted" in r for r in snap["low_data_reasons"]), (
-            f"污染 KPI {contaminated} 未进入 low_data_reasons")
+        assert marked, "临时 posture 已声明重复目的地，但没有任何 KPI 被标记"
+        assert any("canonicality unverified" in r for r in snap["low_data_reasons"]), (
+            f"标记的 KPI {marked} 未进入 low_data_reasons")
 
-    def test_snapshot_exposes_contamination_block_clean(self, tmp_path):
-        """干净的 posture 下，污染块存在且为空。"""
-        self._posture(tmp_path, contaminated=False)
+    def test_snapshot_exposes_duplication_block_clean(self, tmp_path):
+        """干净的 posture 下，重复块存在且为空。"""
+        self._posture(contaminated=False)
         snap = rke.build_snapshot(date(2026, 8, 17))
-        assert "analytics_contamination" in snap
-        assert snap["analytics_contamination"]["contaminated"] is False
-        assert snap["analytics_contamination"]["affected_kpis"] == []
+        assert "analytics_destination_duplication" in snap
+        d = snap["analytics_destination_duplication"]
+        assert d["duplicate_destinations"] is False
+        assert d["affected_kpis"] == []
 
-    def test_snapshot_exposes_contamination_block_dirty(self, tmp_path):
+    def test_snapshot_exposes_duplication_block_dirty(self, tmp_path):
         """脏 posture 下，四个 GA4 流量 KPI 必须全部被列出。"""
-        self._posture(tmp_path, contaminated=True)
+        self._posture(contaminated=True)
         snap = rke.build_snapshot(date(2026, 8, 17))
-        ac = snap["analytics_contamination"]
-        assert ac["contaminated"] is True
-        assert set(ac["affected_kpis"]) == {
+        d = snap["analytics_destination_duplication"]
+        assert d["duplicate_destinations"] is True
+        assert set(d["affected_kpis"]) == {
             "users_28d", "sessions_28d", "pageviews_28d", "engagement_rate_28d"}
-        assert ac["note"]
+        assert d["note"]
 
-    def test_missing_posture_file_is_not_contamination(self):
-        """posture 文件不存在（site_health 还没跑过）时必须判为无污染 ——
-        缺文件不是「坏了」，不能把正常站点标成污染。"""
+    def test_legacy_contamination_key_still_populated(self, tmp_path):
+        """旧键 analytics_contamination 保留一段时间，下游（含日报）还在读它。"""
+        self._posture(contaminated=True)
+        snap = rke.build_snapshot(date(2026, 8, 17))
+        assert snap["analytics_contamination"]["contaminated"] is True
+        assert snap["analytics_contamination"]["affected_kpis"] == \
+            snap["analytics_destination_duplication"]["affected_kpis"]
+
+    def test_posture_accepts_legacy_field_name(self, tmp_path):
+        """首版 posture 文件用 contaminated 字段，读取方必须兼容两种名。"""
+        d = rke.BASE / ".pytest_tmp_posture"
+        d.mkdir(parents=True, exist_ok=True)
+        p = d / "analytics_posture.json"
+        p.write_text(json.dumps({
+            "checked_at": "2026-09-20T09:00:00+00:00",
+            "measurement_ids": ["G-GECBME3YVJ", "G-P6BH500VBK"],
+            "contaminated": True,  # 旧字段名
+        }), encoding="utf-8")
+        self._tmp_dir = d
+        rke._ANALYTICS_POSTURE_PATH = str(p.relative_to(rke.BASE))
+        flag, note = rke._load_analytics_duplication()
+        assert flag is True
+        assert "2 个目的地" in note
+
+    def test_missing_posture_file_is_not_duplication(self):
+        """posture 文件不存在（site_health 还没跑过）时必须判为无重复 ——
+        缺文件不是「坏了」，不能把正常站点标上标记。"""
         rke._ANALYTICS_POSTURE_PATH = ".pytest_tmp_posture/does_not_exist.json"
         snap = rke.build_snapshot(date(2026, 8, 17))
-        assert snap["analytics_contamination"]["contaminated"] is False
-        assert snap["analytics_contamination"]["affected_kpis"] == []
+        assert snap["analytics_destination_duplication"]["duplicate_destinations"] is False
+        assert snap["analytics_destination_duplication"]["affected_kpis"] == []
         # 四个 GA4 KPI 回归正常状态
         t = {k["name"]: k for k in snap["domains"]["traffic"]["kpis"]}
-        assert all(k["contaminated_source"] is False
+        assert all(k["duplicate_destination_source"] is False
                    for k in t.values() if k["name"].endswith("28d"))
+
 
 

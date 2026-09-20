@@ -1055,21 +1055,25 @@ def check_analytics_measurement_ids():
         payload_dests.extend(dests)
 
     all_ids = sorted(set(html_ids) | set(payload_dests))
-    contaminated = len(all_ids) > 1
+    duplicated = len(all_ids) > 1
 
-    if contaminated:
+    if duplicated:
         issues.append({
-            "type": "multiple_analytics_measurement_ids",
+            "type": "multiple_analytics_destinations",
             "severity": "critical",
             "check": "analytics_measurement_ids",
             "file": SITE_BASE_URL,
             "message": (
-                f"GA4 实际配置了 {len(all_ids)} 个目的地: {', '.join(all_ids)}。"
-                "每次 page_view / form / download / outbound_click 都会被记到所有"
-                "目的地上，users_28d / sessions_28d / pageviews_28d / "
-                "engagement_rate_28d 全部双计。"
+                f"GA4 的 Google Tag 配了 {len(all_ids)} 个目的地: "
+                f"{', '.join(all_ids)}。每个事件会被同时记到所有目的地上。"
+                "注意：单个属性的数值本身没被双计（各记一次），真实危害是 "
+                "(1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个"
+                "属性里，受众/再营销名单被重复灌入、两边看板对不上，"
+                "(3) 仓库没有任何地方声明哪个属性是 canonical —— "
+                "所有脚本查数值 ID GA4_PROPERTY_ID，hugo.toml 写的是 "
+                "measurement ID，两边无交叉验证。"
                 "根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个"
-                "destinationId（本案例的页面 HTML 只有 1 个 ID，双计来自 "
+                "destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 "
                 "gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。"
                 "修法是删掉多余的 destination，仓库里改代码修不了。"
             ),
@@ -1090,11 +1094,17 @@ def check_analytics_measurement_ids():
         "html_measurement_ids": sorted(set(html_ids)),
         "gtag_payload": gtag_payload,
         "measurement_ids": all_ids,
-        "contaminated": contaminated,
+        "destination_count": len(all_ids),
+        # duplicate_destinations 是规范字段名；contaminated 是首版遗留名，
+        # 读取方（reporting_kpi_engine）两者都认，保留以免对不上。
+        "duplicate_destinations": duplicated,
+        "contaminated": duplicated,
         "note": (
-            "contaminated=True 表示 GA4 实际配置了多个目的地，所有 GA4 来源的流量"
-            "KPI（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）"
-            "都是双计数值，不可作为决策依据。"
+            "duplicate_destinations=True 表示 GA4 的 Google Tag 配了多个目的地，"
+            "每个事件被记到多个属性里。单个属性的数值本身没有被双计，"
+            "受影响的是来源的权威地位：受影响的流量 KPI"
+            "（users_28d / sessions_28d / pageviews_28d / engagement_rate_28d）"
+            "无法证明读的是 canonical 属性。"
             "根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），"
             "不在本仓库，也不在 Cloudflare —— 改仓库代码修不了它。"
         ),

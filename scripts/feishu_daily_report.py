@@ -945,18 +945,21 @@ class FeishuDailyReporter:
                 f"🕓 数据源陈旧: {stale['count']} 项指标仍是上一次观测日的数值"
                 f"（最老 {stale.get('oldest_age_days')} 天，非当日测量）—— "
                 f"{_stop}")
-        # 有数值 ≠ 数值对：GA4 的 Google Tag 配了两个 destination，
-        # 每次 page_view 被记两次，流量指标全是双计数值。
-        # 与陈旧（数老）不同，这是口径错（数错），更严重 —— 且无法在仓库里修，
-        # 必须去 Google 控制台删多余的 destination。不写进日报就等于
-        # 继续拿一个"看起来干净"的错数讲今日结论。
-        contam = raw.get("analytics_contamination") or {}
-        if contam.get("contaminated"):
+        # GA4 的 Google Tag 配了多个 destination，每个事件发给两个属性。
+        # 注意：单个属性的数值本身没被双计（各记一次），真正的问题是
+        # 仓库无法证明当前读的属性是权威的那个 —— hugo.toml 写 measurement ID，
+        # 脚本查数值 ID，两边没有交叉验证。所以这里说的是「来源未证实」，
+        # 不是「数字算错」。不写进日报，读者就会把一个出处不明的数当结论。
+        contam = (raw.get("analytics_destination_duplication")
+                  or raw.get("analytics_contamination") or {})
+        if contam.get("duplicate_destinations") or contam.get("contaminated"):
             _ak = ", ".join(contam.get("affected_kpis") or [])
             blockers.append(
-                f"⚠️ GA4 双计污染: {len(contam.get('affected_kpis') or [])} 项流量指标"
-                f"被重复计数（{_ak}）—— Google Tag 配了多个 destination，"
-                "根因在 Google 控制台，改仓库代码修不了，需人工删除多余 destination")
+                f"⚠️ GA4 来源未证实: {len(contam.get('affected_kpis') or [])} 项流量指标"
+                f"（{_ak}）来自一个配了多个 destination 的 GA4 属性。数值本身没被双计，"
+                "但仓库无法证明当前读的就是权威属性（hugo.toml 写 measurement ID、"
+                "脚本查数值 ID，无交叉验证）。修法是删掉多余的 destination，"
+                "根因在 Google 控制台，改仓库代码修不了")
         if blockers:
             lines.append("")
             lines.append("**🚧 关键阻塞**")
