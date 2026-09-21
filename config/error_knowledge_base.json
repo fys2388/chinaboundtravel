@@ -1261,6 +1261,17 @@
       "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\nerror: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260921_014747",
+      "timestamp": "2026-09-21T01:47:47.231857",
+      "workflow_name": "Environment Check",
+      "run_id": "35552026485",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
