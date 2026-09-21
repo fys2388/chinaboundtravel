@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:06:44",
+  "updated_at": "2026-09-21T18:38:21",
   "items": [
     {
       "id": "soc-000001",
@@ -2763,7 +2763,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nChina Remote Work Guide: Digital Nomad Tips | Research-backed facts about Visa every traveler should know.\n\nRemote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by our editorial team | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'China Remote Work Guide: Digital Nomad Tips' (platform pinterest). Scene: laptop on a cafe table with a Chinese city view. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by o.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-remote-work-guide-a-californians-5-pinterest-knowledge-3f1f34bb.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2778,7 +2778,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "5d0640fd3bdd"
+      "_sig": "5d0640fd3bdd",
+      "image_generated": true
     },
     {
       "id": "soc-000107",
@@ -2838,7 +2839,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Visa: what to see and capture.\n\n· Remote work from China: visa options, transport hacks, co-working scenes, and cultural\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China Remote Work Guide: Digital Nomad Tips' (platform ig). Scene: laptop on a cafe table with a Chinese city view. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by o.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-remote-work-guide-a-californians-5-ig-visual-cc52cfde.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -2853,7 +2854,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "6b77a42b7ba4"
+      "_sig": "6b77a42b7ba4",
+      "image_generated": true
     },
     {
       "id": "soc-000110",
@@ -3644,8 +3646,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-21",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3994,8 +3996,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-21",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4019,8 +4021,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-21",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4798,8 +4800,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-21",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5554,8 +5556,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-21",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
