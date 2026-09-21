@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-09-20T10:14:30.898874",
+  "run_time": "2026-09-21T11:19:36.784749",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.755727",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.563993",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -134,8 +134,8 @@
       "strategy_changes": []
     },
     "revenue": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.819754",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.662427",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -218,8 +218,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.717956",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.504921",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -303,8 +303,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.691642",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.460081",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -399,8 +399,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.653254",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.401749",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -410,10 +410,10 @@
           ],
           "best_hooks": [
             "linkedin",
-            "story",
             "visual",
             "warning",
-            "conversion"
+            "conversion",
+            "pinterest"
           ],
           "best_ctas": [
             "save for later",
@@ -434,10 +434,10 @@
           ],
           "best_hooks": [
             "linkedin",
-            "story",
             "visual",
             "warning",
-            "conversion"
+            "conversion",
+            "pinterest"
           ],
           "best_ctas": [
             "link in bio",
@@ -458,10 +458,10 @@
           ],
           "best_hooks": [
             "linkedin",
-            "story",
             "visual",
             "warning",
-            "conversion"
+            "conversion",
+            "pinterest"
           ],
           "best_ctas": [
             "read more",
@@ -482,10 +482,10 @@
           ],
           "best_hooks": [
             "linkedin",
-            "story",
             "visual",
             "warning",
-            "conversion"
+            "conversion",
+            "pinterest"
           ],
           "best_ctas": [
             "read thread",
@@ -509,13 +509,13 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 3.98%，比Bottom 20%高 3.98个百分点",
+          "description": "Top 20%帖子平均CTR 3.86%，比Bottom 20%高 3.86个百分点",
           "common_hooks": [
             "linkedin",
-            "story",
             "visual",
             "warning",
-            "conversion"
+            "conversion",
+            "pinterest"
           ],
           "best_times": [
             "22:00",
@@ -524,11 +524,96 @@
           ]
         }
       ],
-      "strategy_changes": []
+      "strategy_changes": [
+        {
+          "field": "pinterest.best_hooks",
+          "old": [
+            "linkedin",
+            "story",
+            "visual",
+            "warning",
+            "conversion"
+          ],
+          "new": [
+            "linkedin",
+            "visual",
+            "warning",
+            "conversion",
+            "pinterest"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-09-21T11:19:36.401744",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "instagram.best_hooks",
+          "old": [
+            "linkedin",
+            "story",
+            "visual",
+            "warning",
+            "conversion"
+          ],
+          "new": [
+            "linkedin",
+            "visual",
+            "warning",
+            "conversion",
+            "pinterest"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-09-21T11:19:36.401744",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "facebook.best_hooks",
+          "old": [
+            "linkedin",
+            "story",
+            "visual",
+            "warning",
+            "conversion"
+          ],
+          "new": [
+            "linkedin",
+            "visual",
+            "warning",
+            "conversion",
+            "pinterest"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-09-21T11:19:36.401744",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "x.best_hooks",
+          "old": [
+            "linkedin",
+            "story",
+            "visual",
+            "warning",
+            "conversion"
+          ],
+          "new": [
+            "linkedin",
+            "visual",
+            "warning",
+            "conversion",
+            "pinterest"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-09-21T11:19:36.401744",
+          "evidence": "based on performance data analysis"
+        }
+      ]
     },
     "user": {
-      "version": "2.0-20260920_101430",
-      "last_updated": "2026-09-20T10:14:30.781881",
+      "version": "2.0-20260921_111936",
+      "last_updated": "2026-09-21T11:19:36.604929",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -547,6 +632,30 @@
           "segment": "",
           "revenue_per_user": 0,
           "users": 0,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Direct",
+          "revenue_per_user": 0,
+          "users": 107,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Organic Social",
+          "revenue_per_user": 0,
+          "users": 118,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Organic Search",
+          "revenue_per_user": 0,
+          "users": 15,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "AI Assistant",
+          "revenue_per_user": 0,
+          "users": 5,
           "conversion_rate": 0
         }
       ],
@@ -573,12 +682,39 @@
           }
         }
       ],
-      "strategy_changes": [],
+      "strategy_changes": [
+        {
+          "field": "best_segments",
+          "reason": "基于用户价值分析，更新最佳用户分层排名"
+        },
+        {
+          "field": "high_value_segments",
+          "reason": "基于收入分析，更新高价值用户分层"
+        }
+      ],
       "high_value_segments": [
         {
           "segment": "",
           "revenue_per_user": 0,
           "users": 0,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Direct",
+          "revenue_per_user": 0,
+          "users": 107,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Organic Social",
+          "revenue_per_user": 0,
+          "users": 118,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Organic Search",
+          "revenue_per_user": 0,
+          "users": 15,
           "conversion_rate": 0
         }
       ]
@@ -586,7 +722,6 @@
   },
   "reports_available": {
     "seo": false,
-    "self_learning": false,
     "revenue": true,
     "conversion": true,
     "content": true,
@@ -600,77 +735,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 1.5299999999999994, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'traffic_potential': 1.2, 'position': 4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cancel/', 'traffic_potential': 0.3, 'position': 7}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260920_101430"
+      "strategy_version": "2.0-20260921_111936"
     }
   ],
   "domain_summary": {

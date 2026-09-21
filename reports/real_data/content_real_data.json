@@ -1,20 +1,20 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-20T10:14:30.432246",
-  "data_date": "2026-09-20",
+  "pull_time": "2026-09-21T11:19:36.248491",
+  "data_date": "2026-09-21",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "total_articles": 63,
+    "total_articles": 64,
     "articles_this_week": 0,
-    "avg_word_count": 2052,
+    "avg_word_count": 2048,
     "articles_with_affiliate_links": 36,
-    "articles_with_internal_links": 60
+    "articles_with_internal_links": 61
   },
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 2090,
+      "word_count": 2099,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -26,13 +26,13 @@
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1752,
+      "word_count": 1759,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2272,
+      "word_count": 2279,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -44,7 +44,7 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2068,
+      "word_count": 2075,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -56,7 +56,7 @@
     },
     {
       "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
-      "word_count": 1877,
+      "word_count": 1884,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1873,
+      "word_count": 1880,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -80,13 +80,13 @@
     },
     {
       "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
-      "word_count": 1776,
+      "word_count": 1785,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
-      "word_count": 2678,
+      "word_count": 2685,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -98,7 +98,7 @@
     },
     {
       "slug": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
-      "word_count": 2054,
+      "word_count": 2061,
       "has_affiliate_links": false,
       "has_internal_links": true
     }

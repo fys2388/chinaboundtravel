@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260920_101430",
-  "last_updated": "2026-09-20T10:14:30.653254",
+  "version": "2.0-20260921_111936",
+  "last_updated": "2026-09-21T11:19:36.401749",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -10,10 +10,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "story",
         "visual",
         "warning",
-        "conversion"
+        "conversion",
+        "pinterest"
       ],
       "best_ctas": [
         "save for later",
@@ -34,10 +34,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "story",
         "visual",
         "warning",
-        "conversion"
+        "conversion",
+        "pinterest"
       ],
       "best_ctas": [
         "link in bio",
@@ -58,10 +58,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "story",
         "visual",
         "warning",
-        "conversion"
+        "conversion",
+        "pinterest"
       ],
       "best_ctas": [
         "read more",
@@ -82,10 +82,10 @@
       ],
       "best_hooks": [
         "linkedin",
-        "story",
         "visual",
         "warning",
-        "conversion"
+        "conversion",
+        "pinterest"
       ],
       "best_ctas": [
         "read thread",
@@ -109,13 +109,13 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 3.98%，比Bottom 20%高 3.98个百分点",
+      "description": "Top 20%帖子平均CTR 3.86%，比Bottom 20%高 3.86个百分点",
       "common_hooks": [
         "linkedin",
-        "story",
         "visual",
         "warning",
-        "conversion"
+        "conversion",
+        "pinterest"
       ],
       "best_times": [
         "22:00",
@@ -124,5 +124,90 @@
       ]
     }
   ],
-  "strategy_changes": []
+  "strategy_changes": [
+    {
+      "field": "pinterest.best_hooks",
+      "old": [
+        "linkedin",
+        "story",
+        "visual",
+        "warning",
+        "conversion"
+      ],
+      "new": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-09-21T11:19:36.401744",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "instagram.best_hooks",
+      "old": [
+        "linkedin",
+        "story",
+        "visual",
+        "warning",
+        "conversion"
+      ],
+      "new": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-09-21T11:19:36.401744",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "facebook.best_hooks",
+      "old": [
+        "linkedin",
+        "story",
+        "visual",
+        "warning",
+        "conversion"
+      ],
+      "new": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-09-21T11:19:36.401744",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "x.best_hooks",
+      "old": [
+        "linkedin",
+        "story",
+        "visual",
+        "warning",
+        "conversion"
+      ],
+      "new": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-09-21T11:19:36.401744",
+      "evidence": "based on performance data analysis"
+    }
+  ]
 }

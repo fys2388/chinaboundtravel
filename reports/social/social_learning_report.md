@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-09-20 10:14:30
+**生成时间**: 2026-09-21 11:19:36
 **闭环版本**: 2.0
-**策略版本**: 2.0-20260920_101430
+**策略版本**: 2.0-20260921_111936
 
 ---
 
@@ -20,26 +20,26 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 238 |
-| 本轮新增记录 | 0 |
+| 历史帖子总数 | 251 |
+| 本轮新增记录 | 13 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
-| 策略变更项 | 0 |
+| 策略变更项 | 4 |
 
 ---
 
 ## 📱 平台表现
 
 ### 🔴 facebook
-- 帖子数: 39
+- 帖子数: 40
 - 总展示: 2890
 - 总点击: 82
-- 平均CTR: 0.72%
-- 平均互动率: 1.29%
+- 平均CTR: 0.70%
+- 平均互动率: 1.26%
 - 表现评级: needs_improvement
 
 ### 🔴 twitter
-- 帖子数: 45
+- 帖子数: 49
 - 总展示: 12
 - 总点击: 0
 - 平均CTR: 0.00%
@@ -47,19 +47,19 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 instagram
-- 帖子数: 55
+- 帖子数: 60
 - 总展示: 4725
 - 总点击: 94
-- 平均CTR: 0.36%
-- 平均互动率: 0.92%
+- 平均CTR: 0.33%
+- 平均互动率: 0.85%
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 79
+- 帖子数: 82
 - 总展示: 9248
 - 总点击: 364
-- 平均CTR: 0.50%
-- 平均互动率: 0.74%
+- 平均CTR: 0.48%
+- 平均互动率: 0.72%
 - 表现评级: needs_improvement
 
 ### 🟢 x
@@ -85,10 +85,10 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ### 最佳Hook关键词
 
 1. **linkedin** - 平均CTR: 5.72% (出现10次)
-2. **story** - 平均CTR: 4.17% (出现5次)
-3. **visual** - 平均CTR: 4.11% (出现6次)
-4. **warning** - 平均CTR: 4.06% (出现7次)
-5. **conversion** - 平均CTR: 4.06% (出现6次)
+2. **visual** - 平均CTR: 4.11% (出现6次)
+3. **warning** - 平均CTR: 4.06% (出现7次)
+4. **conversion** - 平均CTR: 4.06% (出现6次)
+5. **pinterest** - 平均CTR: 3.92% (出现10次)
 
 
 ### 最佳发布时间
@@ -102,7 +102,26 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ## 🎯 策略变更
 
-本轮无策略变更（数据不足或当前策略已最优）
+1. **pinterest.best_hooks**
+   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
+   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+2. **instagram.best_hooks**
+   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
+   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+3. **facebook.best_hooks**
+   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
+   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+4. **x.best_hooks**
+   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
+   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
 ---
 
 ## 🚀 下一步行动
@@ -125,4 +144,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-09-20 10:14:30*
+*生成时间: 2026-09-21 11:19:36*

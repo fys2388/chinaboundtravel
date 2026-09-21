@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-20T21:05:24.124723",
-  "data_date": "2026-09-19",
+  "pull_time": "2026-09-21T11:19:32.156182",
+  "data_date": "2026-09-20",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 234,
-    "sessions": 347,
-    "screenPageViews": 704,
-    "engagedSessions": 131,
-    "bounceRate": 0.622478386167147,
-    "averageSessionDuration": 212.74540006916428,
-    "engagementRate": 0.37752161383285304,
-    "newUsers": 233
+    "activeUsers": 244,
+    "sessions": 359,
+    "screenPageViews": 727,
+    "engagedSessions": 141,
+    "bounceRate": 0.6072423398328691,
+    "averageSessionDuration": 210.28799062116994,
+    "engagementRate": 0.39275766016713093,
+    "newUsers": 243
   },
   "daily": [
-    {
-      "date": "2026-08-24",
-      "sessions": 11,
-      "activeUsers": 7,
-      "pageviews": 97
-    },
     {
       "date": "2026-08-25",
       "sessions": 8,
@@ -180,7 +174,13 @@
     {
       "date": "2026-09-20",
       "sessions": 12,
-      "activeUsers": 10,
+      "activeUsers": 11,
+      "pageviews": 23
+    },
+    {
+      "date": "2026-09-21",
+      "sessions": 11,
+      "activeUsers": 7,
       "pageviews": 20
     }
   ],
@@ -194,8 +194,8 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 95,
-      "sessions": 75
+      "pageviews": 98,
+      "sessions": 77
     },
     {
       "path": "/ops/ops-center",
@@ -210,28 +210,28 @@
       "sessions": 5
     },
     {
+      "path": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "pageviews": 15,
+      "sessions": 15
+    },
+    {
+      "path": "/posts/",
+      "title": "Posts | ChinaBound Travel",
+      "pageviews": 14,
+      "sessions": 7
+    },
+    {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
       "title": "7-Day China Itinerary: Beijing, Xi'an, Shanghai | ChinaBound Travel",
       "pageviews": 14,
       "sessions": 8
     },
     {
-      "path": "/pricing/",
-      "title": "Choose Your China Travel Pass | ChinaBound Travel",
-      "pageviews": 14,
-      "sessions": 14
-    },
-    {
       "path": "/about/",
       "title": "About Joran & ChinaBound Travel | ChinaBound Travel",
       "pageviews": 12,
       "sessions": 7
-    },
-    {
-      "path": "/posts/",
-      "title": "Posts | ChinaBound Travel",
-      "pageviews": 12,
-      "sessions": 6
     },
     {
       "path": "/china-bargaining-and-shopping-guide/",
@@ -264,16 +264,16 @@
       "sessions": 5
     },
     {
-      "path": "/posts/shanghai-bund-french-concession-2-day-guide/",
-      "title": "Shanghai 48-Hour Guide: Bund & French Concession | ChinaBound Travel",
+      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 6
     },
     {
-      "path": "/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
-      "title": "Sichuan Hotpot Guide: History & Best Restaurants | ChinaBound Travel",
+      "path": "/posts/shanghai-bund-french-concession-2-day-guide/",
+      "title": "Shanghai 48-Hour Guide: Bund & French Concession | ChinaBound Travel",
       "pageviews": 6,
-      "sessions": 7
+      "sessions": 6
     }
   ],
   "traffic_sources": [
@@ -285,15 +285,15 @@
     },
     {
       "channel": "Organic Social",
-      "sessions": 135,
-      "activeUsers": 109,
-      "engagementRate": 0.5111
+      "sessions": 146,
+      "activeUsers": 118,
+      "engagementRate": 0.5411
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
-      "activeUsers": 14,
-      "engagementRate": 0.1875
+      "sessions": 17,
+      "activeUsers": 15,
+      "engagementRate": 0.1765
     },
     {
       "channel": "AI Assistant",
@@ -315,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-19"
+    "data_date": "2026-09-20"
   }
 }
