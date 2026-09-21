@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-20T16:36:25.873212",
+  "generated_at": "2026-09-21T03:46:40.827200",
   "period": {
-    "start": "2026-08-23",
-    "end": "2026-09-20",
+    "start": "2026-08-24",
+    "end": "2026-09-21",
     "days": 28
   },
   "metrics": {
-    "period_start": "2026-08-23",
-    "period_end": "2026-09-20",
+    "period_start": "2026-08-24",
+    "period_end": "2026-09-21",
     "days": 28,
     "impressions": 0,
-    "clicks": 81,
+    "clicks": 78,
     "inits": 0,
     "searches": 0,
     "bookings": 0,
@@ -32,7 +32,7 @@
   "products": [
     {
       "product_type": "hotel",
-      "clicks": 32,
+      "clicks": 31,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -43,7 +43,7 @@
     },
     {
       "product_type": "flight",
-      "clicks": 20,
+      "clicks": 19,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -54,7 +54,7 @@
     },
     {
       "product_type": "insurance",
-      "clicks": 4,
+      "clicks": 3,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -65,7 +65,7 @@
     },
     {
       "product_type": "esim",
-      "clicks": 4,
+      "clicks": 3,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -76,7 +76,7 @@
     },
     {
       "product_type": "tour",
-      "clicks": 12,
+      "clicks": 11,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -87,7 +87,7 @@
     },
     {
       "product_type": "transfer",
-      "clicks": 8,
+      "clicks": 7,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -101,7 +101,7 @@
     {
       "channel_name": "指南文章 (Guide Posts)",
       "channel_type": "article",
-      "clicks": 40,
+      "clicks": 39,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -113,7 +113,7 @@
     {
       "channel_name": "资源页面 (Resources)",
       "channel_type": "page",
-      "clicks": 16,
+      "clicks": 15,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -125,7 +125,7 @@
     {
       "channel_name": "城市页面 (City Pages)",
       "channel_type": "page",
-      "clicks": 12,
+      "clicks": 11,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -137,7 +137,7 @@
     {
       "channel_name": "首页 (Homepage)",
       "channel_type": "page",
-      "clicks": 8,
+      "clicks": 7,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
@@ -149,7 +149,7 @@
     {
       "channel_name": "其他页面 (Other)",
       "channel_type": "page",
-      "clicks": 4,
+      "clicks": 3,
       "bookings": 0,
       "revenue": 0.0,
       "conversion_rate": 0.0,
