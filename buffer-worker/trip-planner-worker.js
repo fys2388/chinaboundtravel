@@ -355,6 +355,102 @@ const AFFILIATE_PRODUCTS = {
 async function handleCommerceRecommend(body, env, ctx) {
   const { origin_country, trip_duration, trip_cities, device_type, needs } = body;
   
+  // 尝试使用 LLM 个性化推荐
+  const apiKey = env.SENSENOVA_API_KEY;
+  if (apiKey) {
+    try {
+      return await handleCommerceRecommendLLM(body, apiKey, env);
+    } catch (e) {
+      console.error('LLM recommendation failed, falling back to rules:', e);
+    }
+  }
+  
+  // 规则推荐（降级）
+  return handleCommerceRecommendRules(body, env);
+}
+
+async function handleCommerceRecommendLLM(body, apiKey, env) {
+  const { origin_country, trip_duration, trip_cities } = body;
+  
+  const prompt = `User: ${origin_country || 'Unknown'}, ${trip_duration || 'Unknown'} days, cities: ${trip_cities?.join(',') || 'Not specified'}, interests: ${body.interests?.join(',') || 'Not specified'}
+
+Products: [
+  {"name":"eSIM 10GB","provider":"Airalo","price":"$12","url":"https://www.airalo.com/store/eSim/china-10gb-15days/?aff=chinaboundtravel"},
+  {"name":"VPN 1 Month","provider":"Affiliatescn","price":"$7.50","url":"https://affiliatescn.com/go/chinaboundtravel?product=china-1month"},
+  {"name":"Travel Insurance","provider":"SafetyWing","price":"$36","url":"https://safetywing.com/travel-insurance/plan-nomad?ref=chinaboundtravel"},
+  {"name":"Hotels","provider":"Booking.com","price":"Variable","url":"https://www.booking.com/searchresults.html?ss=China&aid=chinaboundtravel"},
+  {"name":"Tours","provider":"Klook","price":"From $30","url":"https://www.klook.com/en-US/search/result/?q=china&t=chinaboundtravel"}
+]
+
+Return JSON with max 3 recommendations:
+{"recommendations":[{"name":"...","provider":"...","price":"...","url":"...","reason":"...","urgency":1-10}],"summary":"...","roi":"low|medium|high"}
+
+JSON only, no markdown.`;
+
+  const response = await fetch(SENSENOVA_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      model: SENSENOVA_MODEL,
+      messages: [
+        { role: 'system', content: 'You are a travel affiliate recommendation engine. Return JSON only.' },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.7,
+      max_tokens: 2000
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error('LLM API error');
+  }
+
+  const data = await response.json();
+  const content = data.choices?.[0]?.message?.content || '{}';
+
+  // 解析 JSON
+  let result;
+  try {
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
+    result = JSON.parse(jsonMatch ? jsonMatch[0] : content);
+  } catch (e) {
+    throw new Error('Failed to parse LLM response');
+  }
+
+  // 记录日志
+  if (env.KV_STORE) {
+    const key = `commerce-llm:${new Date().toISOString().split('T')[0]}`;
+    const existing = await env.KV_STORE.get(key, 'json') || { count: 0, details: [] };
+    existing.count += 1;
+    existing.details.push({
+      timestamp: new Date().toISOString(),
+      origin_country,
+      trip_duration,
+      trip_cities,
+      tokens_used: data.usage?.total_tokens || 0
+    });
+    await env.KV_STORE.put(key, JSON.stringify(existing), {
+      expirationTtl: 365 * 24 * 60 * 60
+    });
+  }
+
+  return json({
+    recommendations: result.recommendations || [],
+    summary: result.summary,
+    estimated_roi: result.roi,
+    total_count: (result.recommendations || []).length,
+    affiliate_disclosure: true,
+    disclaimer: 'Some links are affiliate links. We may earn a commission at no extra cost to you.',
+    llm_powered: true
+  });
+}
+
+async function handleCommerceRecommendRules(body, env) {
+  const { origin_country, trip_duration, trip_cities, device_type, needs } = body;
+  
   // 默认推荐：所有用户都需要
   const recommendations = [];
   
