@@ -76,6 +76,32 @@ PARTNERIZE_API_BASE = "https://api.partnerize.com"
 # Impact.com API 配置 (NordVPN 等)
 IMPACT_API_BASE = "https://api.impact.com"
 
+# 已决策停用的数据源（2026-09-21）。
+#
+# 与 NO_CREDENTIALS 的区别很重要：
+#   NO_CREDENTIALS = 「本该工作，去把凭证配上」——是可行动项。
+#   DISABLED_BY_DECISION = 「按决策停用，别再试了」——是终态。
+#
+# partnerize / impact / multi_partner 三个源只可能承载保险类品牌
+# （World Nomads 走 Impact 被拒、Allianz 无公开联盟计划），这两个计划
+# 已于 2026-09-21 从 hugo.toml 移除。留在这里的代价是：
+#   1. 每次全量拉取都烧 3 轮注定失败的 API 调用；
+#   2. reports/real_data/ 里留 3 个空 JSON，下游 agent 无法区分
+#      「源坏了」和「源被决策停掉」，会继续当活数据源学习。
+# 需要恢复时：确认联盟计划已获批，把 key 加回 hugo.toml 并从本集合删除即可。
+DISABLED_SOURCES = {
+    "partnerize": (
+        "World Nomads 走 Impact 被拒、Allianz 无公开联盟计划；"
+        "两计划已移出 hugo.toml，本源无承载对象。"
+    ),
+    "impact": (
+        "同上——Impact 网络上本站点无在册品牌，NordVPN 走 affiliatescn 不经 Impact。"
+    ),
+    "multi_partner": (
+        "依赖 partnerize/impact 连接状态聚合，上游已停用。"
+    ),
+}
+
 
 # ============================================================
 # 工具函数
@@ -1277,12 +1303,21 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
     print("=" * 60)
 
     total_sources = len(results)
+    # DISABLED_BY_DECISION 不参与通过率分母：它们不是「坏了」，是「按决策停用」。
+    # 否则停用 3 个源后报告会永远停在 PARTIAL，而真正需要看的是活源是否全绿。
+    active = {k: v for k, v in results.items() if v.get("status") != "DISABLED_BY_DECISION"}
+    active_count = len(active)
+    disabled_names = sorted(
+        k for k, v in results.items() if v.get("status") == "DISABLED_BY_DECISION"
+    )
     validation = {
         "validation_time": datetime.now().isoformat(),
         "overall_status": "PENDING",
         "sources": {},
         "summary": {
             "total_sources": total_sources,
+            "active_sources": active_count,
+            "disabled_sources": disabled_names,
             "real_data_count": 0,
             "fresh_data_count": 0,
             "failed_sources": [],
@@ -1301,8 +1336,13 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
             "data_date": source_data.get("data_date"),
             "status": status,
             "error": source_data.get("error"),
-            "validation_status": "PASS" if (is_real and is_fresh) else "WARN" if is_real else "FAIL",
+            "disabled_reason": source_data.get("disabled_reason"),
+            "validation_status": "DISABLED" if status == "DISABLED_BY_DECISION"
+            else "PASS" if (is_real and is_fresh) else "WARN" if is_real else "FAIL",
         }
+
+        if status == "DISABLED_BY_DECISION":
+            continue
 
         if is_real:
             validation["summary"]["real_data_count"] += 1
@@ -1321,21 +1361,23 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
 
     real_count = validation["summary"]["real_data_count"]
     fresh_count = validation["summary"]["fresh_data_count"]
-    # 判定阈值随 total_sources 缩放，不再锚定历史那个 4 源时代。
-    # PASS = 全部源真实且新鲜；PARTIAL = 至少一半真实；否则 FAIL。
-    if total_sources == 0:
+    # 判定阈值随 active_count 缩放，不再锚定历史那个 4 源时代。
+    # PASS = 全部活源真实且新鲜；PARTIAL = 至少一半真实；否则 FAIL。
+    if active_count == 0:
         validation["overall_status"] = "FAIL"
         validation["summary"]["issues"].append("没有数据源可供验证")
-    elif real_count == total_sources and fresh_count == total_sources:
+    elif real_count == active_count and fresh_count == active_count:
         validation["overall_status"] = "PASS"
-    elif real_count * 2 >= total_sources:
+    elif real_count * 2 >= active_count:
         validation["overall_status"] = "PARTIAL"
     else:
         validation["overall_status"] = "FAIL"
 
     print(f"\n  验证结果: {validation['overall_status']}")
-    print(f"  真实数据源: {real_count}/{total_sources}")
-    print(f"  新鲜数据源: {fresh_count}/{total_sources}")
+    print(f"  真实数据源: {real_count}/{active_count}（另 {len(disabled_names)} 个已决策停用）")
+    print(f"  新鲜数据源: {fresh_count}/{active_count}")
+    if disabled_names:
+        print(f"  已决策停用: {', '.join(disabled_names)}")
     if validation["summary"]["issues"]:
         print("  问题:")
         for issue in validation["summary"]["issues"]:
@@ -1357,6 +1399,10 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
 |--------|---------|--------|---------|---------|---------|
 """
     for source_name, info in validation["sources"].items():
+        if info["validation_status"] == "DISABLED":
+            # 停用源不参与真实/新鲜度判定，用 ⏸ 而非 ❌，避免被读成「坏了」。
+            report += f"| {source_name.upper()} | ⏸ | ⏸ | {info.get('data_date') or 'N/A'} | {info.get('status', 'N/A')} | DISABLED |\n"
+            continue
         real_icon = "✅" if info["is_real_data"] else "❌"
         fresh_icon = "✅" if info["is_fresh"] else "❌"
         report += f"| {source_name.upper()} | {real_icon} | {fresh_icon} | {info.get('data_date', 'N/A')} | {info.get('status', 'N/A')} | {info['validation_status']} |\n"
@@ -1366,8 +1412,9 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
 
 ## 统计
 
-- 真实数据源: {real_count}/4
-- 新鲜数据源: {fresh_count}/4
+- 真实数据源: {real_count}/{active_count}
+- 新鲜数据源: {fresh_count}/{active_count}
+- 已决策停用: {len(disabled_names)}{('（' + ', '.join(disabled_names) + '）') if disabled_names else ''}
 - 问题数: {len(validation['summary']['issues'])}
 
 ---
@@ -1379,7 +1426,18 @@ def validate_all_data(results: Dict[str, Dict]) -> Dict:
         for i, issue in enumerate(validation["summary"]["issues"], 1):
             report += f"{i}. {issue}\n"
     else:
-        report += "无问题，所有数据源均为真实且新鲜的数据。\n"
+        report += "无问题，所有活动数据源均为真实且新鲜的数据。\n"
+
+    if disabled_names:
+        report += f"""
+---
+
+## 已决策停用的数据源（非故障，不计入通过率）
+
+"""
+        for name in disabled_names:
+            report += f"- **{name}**: {validation['sources'][name].get('disabled_reason')}\n"
+        report += "\n恢复步骤：确认联盟计划已获批 → 把 key 加回 `hugo.toml [params.affiliate]` → 从 `DISABLED_SOURCES` 删除。\n"
 
     report += f"""
 ---
@@ -1429,9 +1487,21 @@ def run_all() -> Dict:
     results["gsc"] = pull_gsc_data()
     results["social"] = pull_social_data()
     results["content"] = pull_content_data()
-    results["partnerize"] = pull_partnerize_data()
-    results["impact"] = pull_impact_data()
-    results["multi_partner"] = pull_multi_partner_data()
+    for _src in ("partnerize", "impact", "multi_partner"):
+        if _src in DISABLED_SOURCES:
+            results[_src] = {
+                "status": "DISABLED_BY_DECISION",
+                "is_real_data": False,
+                "disabled_reason": DISABLED_SOURCES[_src],
+                "message": "source disabled by decision; see DISABLED_SOURCES",
+                "fetched_at": datetime.now().isoformat(),
+            }
+        elif _src == "partnerize":
+            results[_src] = pull_partnerize_data()
+        elif _src == "impact":
+            results[_src] = pull_impact_data()
+        elif _src == "multi_partner":
+            results[_src] = pull_multi_partner_data()
 
     validation = validate_all_data(results)
 

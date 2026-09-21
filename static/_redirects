@@ -130,3 +130,10 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /ops/agent-kpi     /ops/ops-center  301
 /ops/agent-growth  /ops/ops-center  301
 /ops/              /ops/ops-center  301
+
+# ===== 2026-09-21: 活体 404 =====
+# GA4 top_pages 显示 /china-bargaining-and-shopping-guide/（无 /posts/ 前缀）
+# 返回 404，11 pageviews / 10 sessions，是除内部运营页外最大的流量损失点。
+# 内容实际存在于 /posts/ 下（slug 见 2026-08-07-...md 的 front matter）。
+# 用户从社媒分享/旧链接直接访问顶层 slug 是最常见入口，按观察到的 404 逐条补。
+/china-bargaining-and-shopping-guide/ /posts/china-bargaining-and-shopping-guide/ 301

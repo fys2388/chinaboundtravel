@@ -135,7 +135,7 @@ This is an editorial comparison layer, not a single-provider endorsement. The to
 
 | Need | Option |
 |---|---|
-| Train tickets | {{< affiliate-link key="trip" text="Trip.com" />}} -- English interface, international payment |
+| Train tickets | [Trip.com](https://www.trip.com/) -- English interface, international payment |
 | Attraction tickets | {{< affiliate-link key="klook" text="Klook" />}} -- tours and skip-the-line tickets |
 | Mobile data | {{< affiliate-link key="esim" text="Airalo eSIM" />}} -- internet on arrival |
 

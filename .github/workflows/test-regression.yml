@@ -1,0 +1,113 @@
+name: Test Regression Gate (回归闸门)
+
+# 为什么存在
+# ----------
+# 2026-09-21 之前本仓库的 CI 完全没有跑 pytest（46 个 workflow 里 "pytest"
+# 只出现在一个注释里），导致三类缺陷直接上了 main：
+#   - ec4a6525 同义替换提交带着 4 个坏测试上线
+#   - REV002 时间炸弹以「永久失败」的形式入库
+#   - 审计脚本的全绿假象上线（--fail 返回 1 但打印 ✅）
+# 根因不是测试写得不够严，而是没有反馈边：测试红了也没人知道。
+#
+# 本闸门补这条边。设计要点：
+#   - 只对**新增**失败 exit 1。存量失败登记在 reports/quality/
+#     test_failure_baseline.json 里，只记录不阻断——仓库存量失败 ~30 个，
+#     做成硬阻断会挡住所有 bot 推送。
+#   - 每个新失败都会 git log 定位最后一次改到该测试文件的提交（作者+消息），
+#     即「谁引入的」，写进 reports/quality/test_regression_report.md。
+#   - 只 add reports/quality/，绝不 git add -A（site-health-daily 会用
+#     git add -A，任何残留都会被它顺手推上生产）。
+#
+# 为什么用 schedule 而不是 push 触发
+# ----------------------------------
+# 机器人每 ~30 分钟直推 main，push 触发会让本闸门一天跑 ~48 次（每次约 15 分钟），
+# 直接耗尽公共仓库的免费 Actions 额度。每日一次 + PR 检查是当前额度下的平衡点；
+# 套件跑快后或仓库转私有计划，可加上 push 触发。
+
+on:
+  schedule:
+    # 每天 06:30 UTC = 北京 14:30，避开机器的整点批处理高峰
+    - cron: '30 6 * * *'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: test-regression-gate
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install pytest
+
+      - name: Install Hugo (pinned to the repo's version)
+        run: |
+          set -e
+          HUGO_VERSION=0.147.0
+          curl -fsSL -o /tmp/hugo.tar.gz \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          tar -xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo
+          hugo version
+
+      - name: Bootstrap baseline on first run
+        if: ${{ !hashFiles('reports/quality/test_failure_baseline.json') }}
+        run: |
+          echo "首次运行：登记当前存量失败为基线（不阻断）"
+          python scripts/test_regression_gate.py --update-baseline
+
+      - name: Run regression gate
+        id: gate
+        continue-on-error: true
+        run: python scripts/test_regression_gate.py
+
+      - name: Show report
+        if: always()
+        run: |
+          echo "=== test_regression_report.md ==="
+          cat reports/quality/test_regression_report.md 2>/dev/null || echo "(未生成)"
+
+      - name: Fail on new regressions
+        if: ${{ steps.gate.outcome == 'failure' }}
+        run: exit 1
+
+      - name: Commit regression report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/quality/test_failure_baseline.json \
+                  reports/quality/test_regression.json \
+                  reports/quality/test_regression_report.md
+          if git diff --cached --quiet; then
+            echo "无报告变更"
+            exit 0
+          fi
+          git commit -m "chore(tests): refresh regression gate report [skip ci]"
+          git pull --rebase --autostash origin main || {
+            echo "::error title=Rebase 失败::报告已 commit 但无法 rebase，请人工介入"
+            git rebase --abort 2>/dev/null || true
+            exit 1
+          }
+          git push origin main || {
+            echo "::error title=Push 失败::报告已 commit 但 push 被拒（多个机器人每 ~30 分钟提交，push 被拒是常态）"
+            exit 1
+          }

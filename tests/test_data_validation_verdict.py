@@ -50,6 +50,17 @@ def _src(name, real=True, fresh=True, status="OK", error=None):
             "status": status, "error": error}
 
 
+def _disabled(name, reason="按决策停用"):
+    """构造一个 DISABLED_BY_DECISION 源。
+
+    与 _src(real=False, status="NO_CREDENTIALS") 的区别是终态：
+    NO_CREDENTIALS 意味着「去配凭证」，DISABLED 意味着「别试了」。
+    """
+    return {"is_real_data": False, "is_fresh": False,
+            "status": "DISABLED_BY_DECISION", "error": None,
+            "disabled_reason": reason}
+
+
 @pytest.fixture(autouse=True)
 def _isolate_report_writes(tmp_path, monkeypatch):
     """把两个报告路径都指向临时目录，任何写入都不碰真仓库。
@@ -202,6 +213,62 @@ def test_error_message_kept_when_present():
                           error="HTTP 500: server unavailable")}
     v = _run(results)
     assert any("HTTP 500: server unavailable" in i for i in v["summary"]["issues"])
+
+
+# ── DISABLED_BY_DECISION：决策停用 ≠ 凭证缺失 ────────────────
+
+
+def test_disabled_sources_are_excluded_from_denominator():
+    """停用源不该把通过率拉低：4 个活源全绿 + 3 个停用 = PASS。"""
+    results = _seven_source_results()
+    for name in ("partnerize", "impact", "multi_partner"):
+        results[name] = _disabled(name)
+    v = _run(results)
+    assert v["overall_status"] == "PASS"
+    assert v["summary"]["active_sources"] == 4
+    assert v["summary"]["total_sources"] == 7
+    assert v["summary"]["disabled_sources"] == ["impact", "multi_partner", "partnerize"]
+    assert v["summary"]["failed_sources"] == []
+    assert v["summary"]["issues"] == []
+
+
+def test_disabled_is_distinguishable_from_credentials_missing():
+    """NO_CREDENTIALS 是可行动故障，DISABLED 是终态，两者不能混为一谈。"""
+    v = _run({"missing": _src("missing", real=False, fresh=False,
+                              status="NO_CREDENTIALS"),
+              "off": _disabled("off")})
+    assert v["sources"]["missing"]["validation_status"] == "FAIL"
+    assert v["sources"]["off"]["validation_status"] == "DISABLED"
+    assert "missing" in v["summary"]["failed_sources"]
+    assert "off" not in v["summary"]["failed_sources"]
+    assert not any("off:" in i for i in v["summary"]["issues"])
+    assert v["sources"]["off"]["disabled_reason"]
+
+
+def test_disabled_sources_do_not_mask_real_failures():
+    """停用不能成为掩盖真实故障的借口：活源坏了要进 failed_sources、不能判 PASS。
+
+    注意判定阈值是「real_count*2 >= active_count 即 PARTIAL」（见
+    validate_all_data 的注释），所以 1/2 是 PARTIAL 而非 FAIL——
+    断言重点是「不是 PASS 且故障被点名」，而不是具体落到哪一档。
+    """
+    v = _run({"ok": _src("ok"),
+              "bad": _src("bad", real=False, fresh=False, status="HTTP_500"),
+              "off": _disabled("off")})
+    assert v["summary"]["active_sources"] == 2
+    assert v["summary"]["failed_sources"] == ["bad"]
+    assert v["overall_status"] in ("PARTIAL", "FAIL")
+    assert v["overall_status"] != "PASS"
+
+
+def test_disabled_reason_reaches_the_report():
+    """停用原因要落到 markdown 里，否则运维看不出「为什么停了」。"""
+    _run({"ok": _src("ok"), "off": _disabled("off", "World Nomads 被拒")})
+    report = E.DATA_VALIDATION_REPORT.read_text(encoding="utf-8")
+    assert "DISABLED" in report
+    assert "World Nomads 被拒" in report
+    # 分母不能写死 4
+    assert "真实数据源: 1/1" in report
 
 
 # ── schema 兼容性 ───────────────────────────────────────────

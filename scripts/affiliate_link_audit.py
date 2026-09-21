@@ -14,6 +14,7 @@ tracking 参数，其中 156 条来自单个 key（esim → 裸 airalo 首页）
     python scripts/affiliate_link_audit.py            # 人类可读
     python scripts/affiliate_link_audit.py --json     # 机器可读
     python scripts/affiliate_link_audit.py --fail     # 存在未跟踪链接时 exit 1
+    python scripts/affiliate_link_audit.py --root DIR # 审计另一个仓库根目录
 
 用法::
 
@@ -162,6 +163,19 @@ def count_key_usage(root: Path = PROJECT_ROOT, partner_hosts: List[str] = None) 
     return keys
 
 
+# 未加入其联盟计划的合作方域名。裸链到这些站点是正确的编辑行为——
+# 推荐第三方产品，既无 tracking 也无佣金可漏，不应计入「联盟失败」。
+# 其中 Trip.com 是计划中的合作方（申请未通过，需 3 个月稳定流量）：
+# 获批后把 trip key 加回 hugo.toml [params.affiliate] 即可自动重新纳入统计，
+# 因为 _partner_hosts 同时从配置值推导域名。
+NON_AFFILIATE_HOSTS = frozenset({
+    "www.trip.com",
+    "www.worldnomads.com",
+    "www.allianztravelinsurance.com",
+    "www.nordpass.com",
+})
+
+
 def _partner_hosts(cfg: Dict[str, str]) -> List[str]:
     """从配置里提取合作伙伴域名，用于识别绕过 shortcode 的裸联盟链接。"""
     hosts: List[str] = []
@@ -172,12 +186,15 @@ def _partner_hosts(cfg: Dict[str, str]) -> List[str]:
             hosts.append(m.group(1).lower())
     # 已知联盟平台的裸域（即使配置里没填 tracking 也要认）
     hosts += [
-        "www.airalo.com", "www.trip.com", "www.worldnomads.com",
-        "www.allianztravelinsurance.com", "www.booking.com",
-        "www.aviasales.com", "www.klook.com", "safetywing.com",
-        "get.affiliatescn.net", "www.nordpass.com", "klook.tpo.li",
+        "www.airalo.com",
+        "www.booking.com",
+        "www.aviasales.com",
+        "www.klook.com",
+        "safetywing.com",
+        "get.affiliatescn.net",
+        "klook.tpo.li",
     ]
-    return sorted(set(hosts))
+    return sorted(set(hosts) - NON_AFFILIATE_HOSTS)
 
 
 def _host_of(url: str) -> str:
@@ -233,9 +250,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="联盟链接 tracking 覆盖率审计（只读）")
     parser.add_argument("--json", action="store_true", help="输出 JSON")
     parser.add_argument("--fail", action="store_true", help="存在未跟踪链接时 exit 1")
+    parser.add_argument("--root", type=Path, default=PROJECT_ROOT,
+                        help="仓库根目录（默认脚本所在仓库）")
     args = parser.parse_args()
 
-    result = audit()
+    result = audit(args.root)
 
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=2))

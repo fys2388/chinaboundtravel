@@ -160,9 +160,24 @@ ignoreFiles = ["/\\.archived/"]
   #
   # 28 天 affiliate 数据实况（Ops Dashboard）：
   #   Clicks 81 · Inits 0 · Bookings 0 · Revenue $0
-  # 「0 成交」不代表「用户不想买」—— 4 个 key 完全无 tracking，
-  # 流量进入落地页但联盟平台无从归因，Commission 永远为 0。
-  # 完整追踪状态与修复动作详见 reports/commerce_fix_2026-09-21.md。
+  #
+  # ⚠️ 2026-09-21 更正：Revenue $0 的原因不是 tracking 缺口。
+  # scripts/affiliate_link_audit.py 当前结论：211 条链接全部带 tracking、
+  # 0 个未跟踪 key、0 处裸联盟链接。当天已修掉 4 处裸 airalo.com——Airalo 的
+  # App 内购买不计佣金，裸链到品牌站等于把可归因路径漏成不可归因。
+  # 剩余 7 处裸链指向 trip.com / worldnomads / allianz：这三个计划未获批准，
+  # 裸链是正确编辑行为，不存在「漏 tracking」，已列入 NON_AFFILIATE_HOSTS。
+  #
+  # 真实的 $0 阻塞项（按依赖顺序，前三项都不是改代码能解决的）：
+  #   1. Travelpayouts 未配置提现方式（余额 $0）→ 商务动作，agent 无法代办
+  #   2. Impact / Partnerize / multi_partner 归因数据源 NO_CREDENTIALS →
+  #      学习 agent 读不到任何联盟结果，在拿噪声学习
+  #   3. affiliate_clicks < 20，未达样本阈值 → 无统计依据做 CTA 优化
+  #   4. 流量才是瓶颈：GSC 28 天 421 曝光 / ~4 点击 / 平均排名 71 位
+  #      （Google 第 8 页）；Organic Search 仅占全站 sessions 的 4.7%
+  # 另注：GA4 流量榜第一大页是 /ops-dashboard/（173 pv），超过首页（98 pv），
+  # 内部流量正在污染所有漏斗样本，需配置 GA4 内部流量排除。
+  # 详见 reports/revenue/ 与 reports/real_data/。
   #
   # 【覆盖状态表：2026-09-21 清理后】
   #   ✅ TRACKED  hotel · flight · klook · safetywing · vpn · vpnNord · esim
@@ -173,6 +188,8 @@ ignoreFiles = ["/\\.archived/"]
   #              Allianz 无公开 affiliate 计划；NordPass 0 处引用。
   #              对应 shortcode（ab-cta / affiliate-link / affiliate-mid-cta）已改为
   #              URL 缺失时渲染纯文本/虚线标签，不产生死链接。
+  #              2026-09-21 收尾：残留的 3 处 trip shortcode cell 已改为普通编辑链接
+  #              —— Trip.com 的推荐本身成立，只是不在联盟计划内，不应伪装成 affiliate。
   #
   # ⛔ GAP 类全部无法通过改代码修复：tracking 参数（referral code / affiliate ID /
   # token）需要向对应平台注册联盟计划、人工申请后才能拿到。改代码只能改文案或

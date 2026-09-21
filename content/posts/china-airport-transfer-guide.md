@@ -129,7 +129,7 @@ This is an editorial comparison layer, not a single-provider endorsement. The se
 | Need | Option |
 |---|---|
 | Airport transfer | {{< affiliate-link key="klook" text="Klook" />}} -- pre-booked transfers and tours |
-| Train connection | {{< affiliate-link key="trip" text="Trip.com" />}} -- English interface, international payment |
+| Train connection | [Trip.com](https://www.trip.com/) -- English interface, international payment |
 | Mobile data | {{< affiliate-link key="esim" text="Airalo eSIM" />}} -- internet on arrival |
 
 {{< /affiliate-section >}}

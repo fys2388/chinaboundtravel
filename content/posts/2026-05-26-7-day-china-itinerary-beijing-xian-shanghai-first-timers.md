@@ -134,7 +134,7 @@ Jade Buddha Temple (Yufo Gong)  even if you're not Buddhist, the architecture is
 
 | Item | Why | Where to Buy |
 |------|-----|-------------|
-| Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://www.airalo.com/) China eSIM — see our [full internet guide](/posts/internet-connection-china-esim-vpn-guide/) for options |
+| Portable WiFi / eSIM | Alipay/WeChat require connectivity | [Airalo eSIM](https://airalo.tpo.li/39yPity6) China eSIM — see our [full internet guide](/posts/internet-connection-china-esim-vpn-guide/) for options |
 | Noise-canceling earbuds | Long flights + high-speed trains are loud | Sony WF-1000XM5 |
 | Universal adapter | China uses Type I sockets | Amazon |
 | Small daypack | Wall is steep  pack light | Any durable daypack from Amazon |

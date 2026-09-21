@@ -29,6 +29,7 @@ on:
       - "Social Backfill (2.0 社媒补位)"
       - "Social Engine Daily (闭环)"
       - "Social Media Distributor"
+      - "Test Regression Gate (回归闸门)"
       - "Weekly Feishu Report"
       - "Yearly Feishu Report"
       - "YouTube Auto Publish"

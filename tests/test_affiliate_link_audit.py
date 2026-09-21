@@ -189,8 +189,18 @@ def test_cli_plain_output_matches_the_audit():
         assert "都带 tracking 参数" not in r.stdout
 
 
-def test_cli_fail_exits_nonzero_when_untracked_exist():
-    r = _run("--fail")
-    assert r.returncode == 1, (
-        "--fail 在存在未跟踪链接时必须 exit 1，才能被 CI 当作质量闸门"
-    )
+def test_cli_fail_exits_nonzero_when_untracked_exist(tmp_path):
+    """--fail 在有未跟踪链接时必须 exit 1，才能被 CI 当作质量闸门。
+
+    对着受控夹具验证：真实仓库的干净程度会随修复变化，把「当前必须 exit 1」
+    写成断言会在缺陷修好的当天变红（2026-09-21 已发生过一次）。
+    """
+    _repo_with_untracked_key(tmp_path)
+    r = _run("--fail", "--root", str(tmp_path))
+    assert r.returncode == 1, r.stdout
+
+
+def test_cli_fail_exit_code_tracks_the_blocking_flag():
+    """--fail 的退出码必须与 audit()['blocking'] 一致——这条不变量不会过期。"""
+    expected = 1 if A.audit(ROOT)["blocking"] else 0
+    assert _run("--fail").returncode == expected
