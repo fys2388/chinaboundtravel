@@ -1,0 +1,296 @@
+{
+  "date": "2026-09-21",
+  "site_up": true,
+  "response_time": 229.19500000000002,
+  "visitors": 10,
+  "sessions": 12,
+  "requests": 23,
+  "visitors_trend": "+25.0%",
+  "week_trend": "+42.9%",
+  "month_trend": "-58.3%",
+  "bounce_rate": 100.0,
+  "avg_session_duration": 83,
+  "engagement_rate": 0.0,
+  "bounce_rate_7d": 52.2,
+  "engagement_rate_7d": 47.8,
+  "avg_session_duration_7d": 68.27278265671642,
+  "sessions_7d": 67,
+  "visitors_7d": 55,
+  "top_pages": [
+    {
+      "path": "/posts/144-hour-visa-free-transit-guide/",
+      "views": 9
+    },
+    {
+      "path": "/",
+      "views": 3
+    },
+    {
+      "path": "/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "views": 3
+    },
+    {
+      "path": "/posts/",
+      "views": 2
+    },
+    {
+      "path": "/resources/",
+      "views": 2
+    },
+    {
+      "path": "/search/",
+      "views": 2
+    },
+    {
+      "path": "/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "views": 1
+    },
+    {
+      "path": "/pricing/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Cross-network",
+      "users": 5,
+      "sessions": 5
+    },
+    {
+      "channel": "Organic Social",
+      "users": 4,
+      "sessions": 5
+    },
+    {
+      "channel": "Unassigned",
+      "users": 2,
+      "sessions": 6
+    },
+    {
+      "channel": "Organic Search",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 8
+    },
+    {
+      "country": "Sweden",
+      "users": 2
+    },
+    {
+      "country": "China",
+      "users": 1
+    }
+  ],
+  "indexed_pages": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 151,
+  "gsc_clicks": 0,
+  "gsc_ctr": 0.0,
+  "gsc_errors": 0,
+  "gsc_week_trend": "-44.9%",
+  "gsc_month_trend": "-81.8%",
+  "top_keywords": [
+    {
+      "keyword": "144 hour china visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "144 hour visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 59.0
+    },
+    {
+      "keyword": "144 hour visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 84.0
+    },
+    {
+      "keyword": "144-hour visa-free transit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 70.0
+    },
+    {
+      "keyword": "alipay ile ödeme nasıl yapılır",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "keyword": "business meeting in china",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "business travel in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 77.0
+    },
+    {
+      "keyword": "business trip to china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 75.0
+    },
+    {
+      "keyword": "chengdu traditional tea ceremony experience",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 72.0
+    },
+    {
+      "keyword": "china 144 hour transit visa",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 67.2
+    }
+  ],
+  "total_posts": 63,
+  "new_posts": 0,
+  "pending_posts": 0,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 2,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 21,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": null,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "🟡 自然搜索占比 10%（平均排名 31.59）：瓶颈是排名而非标题：平均排名在 20 名外，改标题最多移动 1-3 位，无法进入 Page 1。优先修 canonical 冲突、补内链到已有排名的页、并核实 Top 查询与该页事实是否对齐",
+    "🟡 联盟 2 次点击 / 0 转化：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-09-20",
+  "gsc_avg_position": 31.59,
+  "gsc_window_start": "2026-09-12",
+  "gsc_window_end": "2026-09-18",
+  "gsc_window_days": 7,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_report_window_days": 2,
+  "gh_social_window_days": 2,
+  "gh_social_success": true,
+  "agent_health": {
+    "checked_at": "2026-09-21 00:30",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-09-20 16:40:21",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-09-21",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-09-20",
+    "generated_at": "2026-09-20",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 234,
+    "gsc_clicks_28d": 0,
+    "gsc_label": "CACHED",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": 0.0,
+    "revenue_status": "OK",
+    "revenue_source": "LIVE"
+  },
+  "okr_section": "---\n## 🎯 今日 OKR 速览（Q3 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 10人 | 7人 | 100% | ✅ 当前 10人 = 目标的 1×，进度封顶 100%（目标偏低） |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟠 已连续 13 天未发布（超出周更节奏 7 天） |\n| 日搜索曝光 | 151次 | 13次 | 100% | ✅ 当前 151次 = 目标的 12×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 1$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 1人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **自然搜索占比 10%（平均排名 31.59）**：瓶颈是排名而非标题：平均排名在 20 名外，改标题最多移动 1-3 位，无法进入 Page 1。优先修 canonical 冲突、补内链到已有排名的页、并核实 Top 查询与该页事实是否对齐\n- 🟡 **联盟 2 次点击 / 0 转化**：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"
+}
