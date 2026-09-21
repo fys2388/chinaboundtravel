@@ -32,6 +32,8 @@ Thumbs.db
 # Build artifacts
 *.pdf
 reports/quality/screenshots/
+# 测试回归闸门的 junit 输出，每次运行重新生成（~170KB）
+reports/quality/pytest_junit.xml
 # 浣?Lead Magnet PDF 闇€閮ㄧ讲鍒扮珯鐐癸紝淇濈暀 static/lead-magnet/ 涓嬬殑 PDF
 !static/lead-magnet/*.pdf
 
