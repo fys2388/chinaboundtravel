@@ -119,10 +119,11 @@
 | resources | content/resources/_index.md | PASS | - | - | True |
 | content | content/search.md | WARN | - | - | False |
 | content | content/static-package/_index.md | WARN | - | - | False |
+| content | content/subscribe.md | WARN | - | - | False |
 | content | content/success.md | WARN | - | - | False |
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 31/116 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/117 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
