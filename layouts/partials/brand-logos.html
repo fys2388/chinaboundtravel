@@ -1,7 +1,7 @@
 <!-- Brand Logos Component - High-quality SVG logos for affiliate partners -->
 <div class="brand-logos">
     <!-- SafetyWing Logo -->
-    <a href="{{ .Site.Params.affiliate.safetywing | default "#" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-safetywing" title="SafetyWing Travel Insurance">
+    <a href="{{ .Site.Params.affiliate.safetywing | default "#" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.safetywing }} sponsored{{ end }}" class="brand-logo brand-logo-safetywing" title="SafetyWing Travel Insurance">
         <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="sw-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -19,7 +19,7 @@
     </a>
 
     <!-- World Nomads Logo -->
-    <a href="{{ .Site.Params.affiliate.worldnomads | default "https://www.worldnomads.com" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-worldnomads" title="World Nomads Travel Insurance">
+    <a href="{{ .Site.Params.affiliate.worldnomads | default "https://www.worldnomads.com" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.worldnomads }} sponsored{{ end }}" class="brand-logo brand-logo-worldnomads" title="World Nomads Travel Insurance">
         <svg viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="wn-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -39,7 +39,7 @@
     </a>
 
     <!-- NordVPN Logo -->
-    <a href="{{ .Site.Params.affiliate.vpnNord | default "#" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-nordvpn" title="NordVPN">
+    <a href="{{ .Site.Params.affiliate.vpnNord | default "#" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.vpnNord }} sponsored{{ end }}" class="brand-logo brand-logo-nordvpn" title="NordVPN">
         <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="nord-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -55,7 +55,7 @@
     </a>
 
     <!-- Airalo Logo -->
-    <a href="{{ .Site.Params.affiliate.esim | default "#" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-airalo" title="Airalo eSIM">
+    <a href="{{ .Site.Params.affiliate.esim | default "#" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.esim }} sponsored{{ end }}" class="brand-logo brand-logo-airalo" title="Airalo eSIM">
         <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="airalo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -74,7 +74,7 @@
     </a>
 
     <!-- Klook Logo -->
-    <a href="{{ .Site.Params.affiliate.klook | default "#" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-klook" title="Klook Tours & Tickets">
+    <a href="{{ .Site.Params.affiliate.klook | default "#" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.klook }} sponsored{{ end }}" class="brand-logo brand-logo-klook" title="Klook Tours & Tickets">
         <svg viewBox="0 0 90 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="klook-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -90,7 +90,7 @@
     </a>
 
     <!-- Booking.com Logo -->
-    <a href="{{ .Site.Params.affiliate.hotel | default "#" }}" target="_blank" rel="nofollow sponsored" class="brand-logo brand-logo-booking" title="Booking.com Hotels">
+    <a href="{{ .Site.Params.affiliate.hotel | default "#" }}" target="_blank" rel="nofollow{{ if .Site.Params.affiliate.hotel }} sponsored{{ end }}" class="brand-logo brand-logo-booking" title="Booking.com Hotels">
         <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" class="brand-svg">
             <defs>
                 <linearGradient id="booking-gradient" x1="0%" y1="0%" x2="100%" y2="100%">

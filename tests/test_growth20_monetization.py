@@ -105,10 +105,15 @@ def test_drive_exactly_once():
 def test_affiliate_urls_unchanged():
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li",
                    "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"',
                    'hotel = "https://www.booking.com/index.html?aid=730795"',
-                   'esim = "https://www.airalo.com/"'):
+                   'esim = "https://airalo.tpo.li/39yPity6"'):
         assert marker in TOML, marker
+    # trip / worldnomads / allianz / nordpass were removed 2026-09-21: none of them
+    # has an approved affiliate program, so no tracking key exists for them. Guard
+    # against an untracked key definition coming back. Anchor on the definition line
+    # so prose mentioning the name in a comment does not trip it.
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", TOML, re.M), gone
 
 
 def test_no_new_partner_in_new_pages():

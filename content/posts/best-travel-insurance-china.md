@@ -211,8 +211,8 @@ If you're involved in an accident while intoxicated, your claim will likely be d
 After 5 years of travel research and 2+ years of aggregated traveler feedback on SafetyWing, here's our advice:
 
 - 👉 **Most travelers:** <a href="https://safetywing.com/ambassador/refer/26548976" rel="nofollow sponsored" target="_blank">Get started with SafetyWing</a> — best overall value.
-- 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/" rel="nofollow sponsored" target="_blank">Go with Allianz</a>.
-- 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/" rel="nofollow sponsored" target="_blank">Choose World Nomads</a>.
+- 👉 **Over 60 / pre-existing conditions:** <a href="https://www.allianztravelinsurance.com/" rel="nofollow" target="_blank">Go with Allianz</a>.
+- 👉 **Adventure & extreme sports:** <a href="https://www.worldnomads.com/" rel="nofollow" target="_blank">Choose World Nomads</a>.
 
 **Whatever you do, don't travel to China without coverage.** The math is simple: one hospital visit can cost more than 5 years of travel insurance premiums.
 

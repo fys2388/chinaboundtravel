@@ -10,6 +10,7 @@ Covers (deterministic, no network):
 - experiment artifacts (registry / baseline / log)
 """
 import csv
+import re
 import sys
 from pathlib import Path
 
@@ -131,7 +132,10 @@ def test_rev002_placement_after_booking_section():
 
 
 def test_rev002_affiliate_url_unchanged():
-    assert 'trip = "https://www.trip.com/"' in TOML
+    # trip was removed 2026-09-21: the Trip.com affiliate program (Travelpayouts
+    # program 121) is not approved for this site yet, so no tracking key exists.
+    # Assert the removal holds so an untracked reintroduction is caught.
+    assert not re.search(r"^\s*trip\s*=", TOML, re.M)
 
 
 def test_rev002_content_id_and_url_unchanged():
