@@ -114,4 +114,13 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    # Windows 控制台默认 GBK，打印 ✅/⚠️ 会 UnicodeEncodeError 崩溃——
+    # 后果是 --fail 的退出码不可信：全绿也会因编码崩溃而返回非零，
+    # 依赖这个退出码的 CI 门控就形同虚设。
+    # 2026-09-21 修；同 affiliate_link_audit.py 的处理方式。
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
     sys.exit(main())

@@ -1376,8 +1376,19 @@ def _ci_block_rate(root: Optional[Path] = None) -> Dict[str, Any]:
         pass
 
     HARD_FAIL = re.compile(r"(exit\s+1|\|\|\s*exit\s+1|--strict)", re.IGNORECASE)
-    # 保留 scripts/ 前缀，否则会把 scripts/foo.py 误判成仓库根目录下不存在
-    PY_REF = re.compile(r"((?:scripts/)?[A-Za-z0-9_\-/]+\.py)")
+    # 只认「真的被 python 调用」的路径。
+    # 2026-09-21 修：原先用任何 `.py` 匹配，会把注释和 echo 里提到的文件名
+    # 当成引用——site-health-daily.yml 注释里那句「绝不能用 build.py 的生成版
+    # 覆盖它」被判成失效门控，deploy-cloudflare-pages.yml 注释里的
+    # agent_kpi_auditor.py 同理。结果是 ci_block_rate 报出一堆假告警，
+    # ops agent 会以为自己精心接好的门控是坏的，然后去「修」本来没坏的东西。
+    PY_REF = re.compile(r"python[0-9.]*\s+((?:[\w\-]+/)*[\w\-]+\.py)", re.IGNORECASE)
+
+    def _resolve(ref: str) -> bool:
+        """带目录的直接解析；裸文件名回退到 scripts/ 下再找一次。"""
+        if (root / ref).exists():
+            return True
+        return ("/" not in ref) and (root / "scripts" / ref).exists()
 
     for wf in sorted(wf_dir.glob("*.yml")):
         try:
@@ -1391,7 +1402,7 @@ def _ci_block_rate(root: Optional[Path] = None) -> Dict[str, Any]:
             if not refs:
                 continue
             out["gates"] += 1
-            missing = [r for r in refs if not (root / r).exists()]
+            missing = [r for r in refs if not _resolve(r)]
             if missing:
                 out["broken"].append({"workflow": wf.name, "missing": missing})
             else:
