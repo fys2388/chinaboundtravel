@@ -1,8 +1,8 @@
 {
-  "month_post_count": 13,
-  "last_reset_date": "2026-08-01",
+  "month_post_count": 1,
+  "last_reset_date": "2026-09-01",
   "last_social_publish": "2026-09-14 08:25:18",
-  "daily_social_publish_date": "2026-09-14",
+  "daily_social_publish_date": "2026-09-21",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -119,6 +119,12 @@
       "geo_region": "US",
       "category": "cultural",
       "create_date": "2026-08-31"
+    },
+    {
+      "topic": "China Nightlife Guide: Bars, Clubs, and Evening Culture",
+      "geo_region": "US",
+      "category": "general",
+      "create_date": "2026-09-21"
     }
   ],
   "keyword_convert_rate": {
