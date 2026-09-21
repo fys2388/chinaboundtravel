@@ -137,10 +137,13 @@ def test_recommended_tools_table():
 def test_partner_urls_unchanged():
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li",
                    "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"',
                    'hotel = "https://www.booking.com/index.html?aid=730795"',
-                   'esim = "https://www.airalo.com/"'):
+                   'esim = "https://airalo.tpo.li/39yPity6"'):
         assert marker in TOML, marker
+    # trip / worldnomads / allianz / nordpass removed 2026-09-21 (no approved
+    # affiliate program); assert the removal holds rather than the old literals.
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", TOML, re.M), gone
 
 
 def test_no_new_partner_key():

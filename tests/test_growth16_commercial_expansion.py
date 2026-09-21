@@ -8,6 +8,7 @@ Covers (deterministic, no network, analysis only):
 - REV002 protection + SEO invariants
 """
 import csv
+import re
 import sys
 from pathlib import Path
 
@@ -193,5 +194,9 @@ def test_drive_and_ga4_unchanged():
 def test_affiliate_urls_unchanged():
     toml = (REPO / "hugo.toml").read_text(encoding="utf-8")
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li", "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"'):
+                   'esim = "https://airalo.tpo.li/39yPity6"'):
         assert marker in toml
+    # trip / worldnomads / allianz / nordpass removed 2026-09-21 (no approved
+    # affiliate program); assert the removal holds rather than the old literals.
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", toml, re.M), gone

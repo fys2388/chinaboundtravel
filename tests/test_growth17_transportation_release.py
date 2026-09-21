@@ -124,8 +124,12 @@ def test_release_decision_schema():
 def test_affiliate_urls_unchanged():
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li",
                    "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"'):
+                   'esim = "https://airalo.tpo.li/39yPity6"'):
         assert marker in TOML
+    # trip / worldnomads / allianz / nordpass removed 2026-09-21 (no approved
+    # affiliate program); assert the removal holds rather than the old literals.
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", TOML, re.M), gone
 
 
 def test_drive_exactly_once():

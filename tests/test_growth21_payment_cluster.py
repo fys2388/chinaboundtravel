@@ -204,8 +204,12 @@ def test_wechat_strong_persona_guard_script():
 def test_no_new_affiliate_partner():
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li",
                    "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"', 'esim = "https://www.airalo.com/"'):
+                   'esim = "https://airalo.tpo.li/39yPity6"'):
         assert marker in TOML, marker
+    # trip / worldnomads / allianz / nordpass removed 2026-09-21 (no approved
+    # affiliate program); assert the removal holds rather than the old literals.
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", TOML, re.M), gone
 
 
 def test_no_extra_partner_keys():

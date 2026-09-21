@@ -124,8 +124,11 @@ def test_destination_rendered(built_site):
         r'<a href=([^ >]+) class=affiliate-link target=_blank rel="nofollow sponsored"'
         r" data-affiliate-partner=esim data-affiliate-placement=food-delivery-mid-content", html)
     assert m, "mid CTA link not rendered"
-    expected = re.search(r'^\s*esim = "(.*)"$', _aff_section(TOML_NEW), re.M).group(1)
-    assert m.group(1) == expected
+    # hugo.toml 的 affiliate 段普遍带行尾注释（esim/klook 等），
+    # 原先的 `(.*)"$` 遇到行尾注释就匹配不到。
+    expected = re.search(r'^\s*esim\s*=\s*"([^"]+)"', _aff_section(TOML_NEW), re.M)
+    assert expected, "esim key not found in hugo.toml [params.affiliate]"
+    assert m.group(1) == expected.group(1)
 
 
 def test_utm_unchanged_vs_head():

@@ -256,5 +256,6 @@ def test_canonical_unchanged():
         m_new = re.search(r"^canonicalURL:\s*['\"]([^'\"]+)", new, re.M)
         assert m_old and m_new and m_old.group(1) == m_new.group(1), rel
     # homepage/resources/about pages keep their identity fields
+    # 50ed17d1 "unify contact email to joran@chinaboundtravel.com"
     about = read("content/about/_index.md")
-    assert "hello@chinaboundtravel.com" in about
+    assert "joran@chinaboundtravel.com" in about

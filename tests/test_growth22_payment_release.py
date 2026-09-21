@@ -11,6 +11,7 @@ Deterministic, no network. Covers:
 - Reports exist: WECHAT_PAYMENT_STATUS.md / PAYMENT_CLUSTER_LINK_GRAPH.md /
   PAYMENT_ESIM_EXPERIMENT_CANDIDATE.md
 """
+import html as _html
 import re
 import subprocess
 import sys
@@ -85,11 +86,13 @@ def test_alipay_page_exists():
 
 
 def test_front_matter_title():
-    # Base Alipay title is preserved; the "转化与排名优化" task appends a long-tail
-    # variant (authorized deep optimizer), e.g. "...(2026) — Foreigners Payment Setup".
-    assert "Alipay for Foreigners in China: Setup Guide and Payment Tips (2026)" in ALIPAY_TEXT
+    # The exact pre-compression title is gone: 69ba31cf (GitHub Action, 2026-09-01,
+    # "compress 52 long titles") deliberately shortened it. Assert the invariant
+    # that still matters instead of the frozen old string.
     m = re.search(r'^title:\s*"([^"]+)"', ALIPAY_TEXT, re.M)
-    assert m and "Alipay" in m.group(1)
+    assert m, "missing title in front matter"
+    assert "Alipay" in m.group(1), m.group(1)
+    assert 20 <= len(m.group(1)) <= 90, m.group(1)
 
 
 def test_front_matter_description():
@@ -115,8 +118,14 @@ def test_no_noindex():
 
 
 def test_no_cover_image_breakage():
-    # cover removed because no matching local image exists (no broken /img ref)
-    assert "cover" not in ALIPAY_TEXT.split("---", 2)[1].lower() or "image" not in ALIPAY_TEXT.split("---", 2)[1].lower()
+    # A cover image was added later and it exists on disk, so the original
+    # "field must be absent" assertion was wrong: it forbade any valid cover.
+    # Check the actual intent instead -- the referenced /img path resolves to a
+    # real file.
+    fm = ALIPAY_TEXT.split("---", 2)[1]
+    m = re.search(r'image:\s*"(/img/[^"]+)"', fm)
+    assert m, "no /img cover reference in front matter"
+    assert (REPO / "static" / m.group(1).lstrip("/")).exists(), m.group(1)
 
 
 # ---------------------------------------------------------------------------
@@ -142,8 +151,13 @@ def test_rendered_no_noindex(built_site):
 
 
 def test_rendered_h1(built_site):
-    html = _page_html(built_site, "posts/alipay-for-foreigners-guide/index.html")
-    assert "Alipay for Foreigners in China" in html
+    # Title is compressed by the automated SEO pass, so derive the expectation
+    # from the front matter rather than hard-coding it. Unescape first: the title
+    # contains "&" which renders as "&amp;".
+    page = _page_html(built_site, "posts/alipay-for-foreigners-guide/index.html")
+    m = re.search(r'^title:\s*"([^"]+)"', ALIPAY_TEXT, re.M)
+    assert m, "missing title"
+    assert m.group(1) in _html.unescape(page), m.group(1)
 
 
 def test_sitemap_includes_alipay(built_site):

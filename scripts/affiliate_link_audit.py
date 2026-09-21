@@ -258,7 +258,14 @@ def main() -> int:
             print()
             print("  修复动作是商务动作：去对应平台注册联盟计划拿专属 tracking 参数，")
             print("  然后更新 hugo.toml [params.affiliate]。不是改代码。")
-        else:
+        if result["raw_untracked_urls"]:
+            # 这些链接绕过 shortcode、直接写在 markdown 里，不在 key 表中，
+            # 所以上一段无论如何都不会打印它们。
+            print(f"  ⚠️  另有 {result['raw_untracked_urls']} 处裸联盟链接直接写在 markdown 里，")
+            print("      不带 tracking 参数，需改用 affiliate-link shortcode。")
+        # 原先只看 untracked_keys：11 处裸联盟链接会打出「✅ 全绿」，
+        # 而 --fail 同时返回 1，日报就会误判为健康。
+        if result["links_untracked"] == 0:
             print("  ✅ 所有被引用的联盟链接都带 tracking 参数")
         print("=" * 66)
 

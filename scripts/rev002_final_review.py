@@ -17,6 +17,9 @@ LOW_SAMPLE_CLICKS = 20
 REV002_REGISTRY = REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv"
 REV002_BASELINE = REPO / "reports/revenue/REV002_BASELINE.csv"
 
+# Every status build_review() can legitimately produce.
+VALID_STATUSES = {"WAITING_REVIEW_GATE", "INSUFFICIENT_SAMPLE", "NEUTRAL", "PROMISING"}
+
 
 def load_registry():
     with REV002_REGISTRY.open(encoding="utf-8") as f:
@@ -84,9 +87,13 @@ def build_review():
 if __name__ == "__main__":
     if "--check" in sys.argv:
         result = build_review()
-        assert result["status"] == "WAITING_REVIEW_GATE"
+        assert result["status"] in VALID_STATUSES, result["status"]
+        # WAITING_REVIEW_GATE only holds before the gate date. Asserting it
+        # unconditionally made this check fail permanently once 2026-09-13 passed.
+        if date.today() >= REVIEW_GATE:
+            assert result["status"] != "WAITING_REVIEW_GATE", result["status"]
         assert OUT.exists()
-        print("OK status=WAITING_REVIEW_GATE")
+        print(f"OK status={result['status']}")
     else:
         result = build_review()
         print(f"written {result['output']} status={result['status']}")

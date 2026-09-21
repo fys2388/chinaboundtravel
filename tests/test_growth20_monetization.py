@@ -10,6 +10,7 @@ import csv
 import re
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -125,19 +126,30 @@ def test_no_new_partner_in_new_pages():
 # ---------------------------------------------------------------------------
 # 20A REV002 review framework
 # ---------------------------------------------------------------------------
-def test_rev002_final_review_gate_waiting():
+# REV002 review gate. The verdict is data-driven after the gate date, so these
+# tests assert coherence with the gate date instead of freezing one status --
+# hard-coding WAITING_REVIEW_GATE made both fail permanently on 2026-09-13.
+REV002_VALID = {"WAITING_REVIEW_GATE", "INSUFFICIENT_SAMPLE", "NEUTRAL", "PROMISING"}
+REV002_GATE = date(2026, 9, 13)
+
+
+def test_rev002_final_review_status_coherent():
     p = REPO / "reports/revenue/REV002_FINAL_REVIEW.md"
     assert p.exists()
     text = p.read_text(encoding="utf-8")
-    assert "WAITING_REVIEW_GATE" in text
-    assert "2026-09-13" in text
+    m = re.search(r"## Status:\s*(\S+)", text)
+    assert m, text
+    status = m.group(1)
+    assert status in REV002_VALID, status
+    if date.today() >= REV002_GATE:
+        assert status != "WAITING_REVIEW_GATE", status
 
 
 def test_rev002_final_review_script_clean():
     proc = subprocess.run(["python", "scripts/rev002_final_review.py", "--check"],
                           cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
     assert proc.returncode == 0, proc.stdout + proc.stderr
-    assert "OK status=WAITING_REVIEW_GATE" in proc.stdout
+    assert re.search(r"OK status=" + "|".join(sorted(REV002_VALID)), proc.stdout), proc.stdout
 
 
 # ---------------------------------------------------------------------------

@@ -93,16 +93,50 @@ def test_empty_content_reports_zero_not_error(tmp_path):
 
 # ── 全量审计 ───────────────────────────────────────────────
 
-def test_real_repo_has_untracked_keys_and_reports_them():
-    """真实仓库当前应存在未跟踪联盟链接，审计必须点名而不是沉默。"""
+def _repo_with_untracked_key(tmp_path):
+    """构造一个含未跟踪联盟链接的最小仓库。
+
+    上报逻辑必须对着受控输入验证，而不是断言真实仓库当前的状态：2026-09-21 把
+    esim 升级为带 tracking 的深链、trip 等无联盟计划的 key 一并移除，
+    「真实仓库必须报 esim」这类断言会在缺陷被修好的当天就红。
+    """
+    (tmp_path / "content").mkdir(parents=True)
+    (tmp_path / "hugo.toml").write_text(
+        "[params]\n"
+        "  [params.affiliate]\n"
+        "    esim = \"https://www.airalo.com/\"\n"
+        "    hotel = \"https://www.booking.com/index.html?aid=730795\"\n",
+        encoding="utf-8",
+    )
+    (tmp_path / "content" / "post.md").write_text(
+        "{{< affiliate-link partner=\"esim\" text=\"eSIM\" >}}\n"
+        "{{< affiliate-link partner=\"hotel\" text=\"Hotel\" >}}\n",
+        encoding="utf-8",
+    )
+    return tmp_path
+
+
+def test_audit_reports_untracked_referenced_keys(tmp_path):
+    """未跟踪且被引用的 key 必须被点名，不能沉默；带 tracking 的不算。"""
+    result = A.audit(_repo_with_untracked_key(tmp_path))
+    assert result["untracked_keys"] == ["esim"], result["untracked_keys"]
+    assert result["blocking"] is True
+
+
+def test_real_repo_audit_is_coherent():
+    """真实仓库：审计可运行、统计字段自洽、blocking 与数据一致。"""
     result = A.audit(ROOT)
     assert result["links_total"] > 0
-    # 已知事实：esim（裸 airalo）与 trip 未带 tracking
-    for key in ("esim", "trip"):
-        assert key in result["untracked_keys"], (
-            f"{key} 在 hugo.toml 里无 tracking 参数，审计必须报告它"
-        )
-    assert result["blocking"] is True
+    assert result["keys_untracked"] <= result["keys_total"]
+    assert result["links_tracked"] + result["links_untracked"] == result["links_total"]
+    assert result["untracked_ratio"] == round(
+        result["links_untracked"] / result["links_total"], 4
+    )
+    assert result["blocking"] is bool(result["links_untracked"] > 0)
+    # 点名的 key 必须是「未跟踪且被引用」的子集
+    for k in result["untracked_keys"]:
+        row = next(r for r in result["per_key"] if r["key"] == k)
+        assert not row["tracked"] and row["usage"] > 0
 
 
 def test_audit_structure_is_stable_for_json_consumers():
@@ -133,11 +167,26 @@ def test_cli_json_is_valid_and_has_stats():
     assert isinstance(data["untracked_ratio"], float)
 
 
-def test_cli_plain_output_names_the_offending_keys():
+def test_cli_plain_output_matches_the_audit():
+    """CLI 与 audit() 结论一致：有问题就点名/警告，全干净才打勾。
+
+    原先直接断言输出含 "esim"，那是把 2026-09-18 的已知缺陷写死成期望；
+    2026-09-21 esim 升级为带 tracking 的深链后该断言永久红。
+    """
     r = _run()
     assert r.returncode == 0
     assert "tracking 覆盖率" in r.stdout
-    assert "esim" in r.stdout, "输出必须点名 esim，否则运维不知道去哪修"
+    result = A.audit(ROOT)
+    if result["untracked_keys"]:
+        for k in result["untracked_keys"]:
+            assert k in r.stdout, f"输出必须点名 {k}，否则运维不知道去哪修"
+    if result["raw_untracked_urls"]:
+        assert "裸联盟链接" in r.stdout, "绕过 shortcode 的裸链接必须被报告"
+    # 绿勾只能在真正没有未跟踪链接时出现；否则 --fail 返回 1 而日报看到全绿。
+    if result["links_untracked"] == 0:
+        assert "都带 tracking 参数" in r.stdout
+    else:
+        assert "都带 tracking 参数" not in r.stdout
 
 
 def test_cli_fail_exits_nonzero_when_untracked_exist():
