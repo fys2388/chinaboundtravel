@@ -20,6 +20,16 @@ import hashlib
 import hmac
 import base64
 from datetime import datetime, timedelta, timezone
+
+# 内部流量黑名单单一事实来源。本日报早就能检测 /ops 污染但只报不滤，
+# 前缀列表也各写各的；统一收敛到 internal_traffic_filter。
+_SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+if _SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR)
+try:
+    import internal_traffic_filter as ITF  # type: ignore
+except Exception:  # 模块缺失时退回本地判定，保证日报不会因此中断
+    ITF = None
 from pathlib import Path
 
 # GA4服务账号认证依赖
@@ -481,18 +491,40 @@ class FeishuDailyReporter:
         
         # Top 流量页面
         top_pages = data.get("top_pages", [])
+        # /ops 是内部运营看板路径（bot 与 agent 会话每 ~30 分钟轮询），
+        # 不是真实访客。它们占用流量榜前排，会把「表现最好的内容」读成运营看板。
+        #
+        # 处理口径：从**榜单**里剔除（这才是污染点），但**不改**总浏览/总访客
+        # 汇总数——剔除总量会让下面的一致性校验（Top 合计 vs 总数）出现假差异，
+        # 那是更糟的信号失真。GA4 侧 IP 过滤仍是最终正解，这里只是报表层止血。
+        _pages_all = list(top_pages)
+        if ITF is not None:
+            top_pages, _ops_pages = ITF.filter_pages(_pages_all)
+        else:
+            # 兜底路径：与 ITF.is_internal_path 保持同一套首段判定。
+            # 注意不能用 startswith("/ops")——那会把 /ops-guide-for-travelers
+            # 这类真实公共页误判成内部页。
+            _segments = frozenset({"ops", "ops-dashboard"})
+
+            def _is_internal(seg_path):
+                seg = str(seg_path or "").split("?", 1)[0].split("#", 1)[0].rstrip("/")
+                return seg.lstrip("/").split("/", 1)[0] in _segments
+
+            top_pages = [p for p in _pages_all if not _is_internal(p.get("path"))]
+            _ops_pages = [p for p in _pages_all if _is_internal(p.get("path"))]
+
         top_pages_lines = ["暂无数据"]
         if top_pages:
             top_pages_lines = [f"{i}. {p['path']} ({p['views']} 次)" for i, p in enumerate(top_pages[:5], 1)]
         top_pages_str = "\n".join(top_pages_lines)
-        # /ops 是内部运营看板路径（统一运营中心），进入公开流量榜会污染访客/会话口径。
-        # 只标注不剔除：剔除会让页面浏览与总浏览口径不一致，过滤应在 GA4 侧配置。
-        _ops_pages = [p for p in top_pages if str(p.get("path", "")).startswith("/ops")]
         if _ops_pages:
             _ops_pv = sum(p.get("views", 0) for p in _ops_pages)
-            top_pages_str += (f"\n（⚠️ 内部看板路径 /ops 共 {_ops_pv} 次浏览进入公开流量榜，"
-                              f"已混入访客/会话统计。建议在 GA4 配置内部流量过滤，"
-                              f"否则访客数与同比会被看板访问扭曲）")
+            _paths = list(ITF.INTERNAL_PATHS_DOCUMENTED) if ITF is not None else \
+                ["/ops/", "/ops-dashboard/"]
+            top_pages_str += (f"\n（⚠️ 已从榜单剔除 {len(_ops_pages)} 个内部看板路径 "
+                              f"{' '.join(_paths)}，共 {_ops_pv} 次浏览——来自 bot/agent 轮询，"
+                              f"非真实访客。汇总数未扣除以保持一致性校验，"
+                              f"最终应在 GA4 配置 IP 内部流量过滤）")
         
         # Top 流量来源渠道
         top_channels = data.get("top_channels", [])

@@ -16,6 +16,7 @@ Real Data Bridge - 将 reports/real_data/ 下的真实数据转换为各 Learnin
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -23,6 +24,15 @@ from typing import Dict, List, Any, Optional
 PROJECT_ROOT = Path(__file__).parent.parent
 REAL_DATA_DIR = PROJECT_ROOT / "reports" / "real_data"
 REVENUE_DIR = PROJECT_ROOT / "reports" / "revenue"
+
+# 内部流量黑名单是单一事实来源，供所有消费方共用。
+# 见 internal_traffic_filter.py 的模块文档：GA4 流量榜前 3 名里两个是内部运营页
+# （/ops-dashboard/ 173 pv、/ops/ops-center 70 pv，首页仅 98 pv），占全站 33.4%
+# pageview。不剔除的话 agent 会把 /ops-dashboard/ 读成「表现最好的内容」。
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+import internal_traffic_filter as ITF  # noqa: E402
 
 
 def _load_json(path: Path) -> Optional[Dict]:
@@ -277,6 +287,10 @@ def get_user_records() -> List[Dict]:
     records = []
     metrics = data.get("metrics", {})
 
+    # 先剔除内部运营页再建记录，避免 agent 把 /ops-dashboard/ 当成高表现内容。
+    public_pages, excluded_internal = ITF.filter_pages(data.get("top_pages", []))
+    internal_exclusion = ITF.apply_to_metrics(metrics, excluded_internal)
+
     # Overall user metrics
     record = {
         "type": "overall",
@@ -291,10 +305,15 @@ def get_user_records() -> List[Dict]:
             "avg_session_duration": metrics.get("averageSessionDuration", 0),
             "engagement_rate": metrics.get("engagementRate", 0),
         },
-        "metadata": {},
+        "metadata": {
+            # metrics 块是全站汇总，含内部流量；剔除量挂在 calculated 里，
+            # 消费方要算公开流量转化率时应该用 public_* 那组。
+            "internal_traffic_excluded_from_pages": True,
+        },
         "calculated": {
             "returning_users": max(0, metrics.get("activeUsers", 0) - metrics.get("newUsers", 0)),
             "pages_per_session": metrics.get("screenPageViews", 0) / max(1, metrics.get("sessions", 1)),
+            **internal_exclusion,
         },
     }
     records.append(record)
@@ -314,8 +333,8 @@ def get_user_records() -> List[Dict]:
         }
         records.append(record)
 
-    # Top pages (user engagement)
-    for page in data.get("top_pages", []):
+    # Top pages (user engagement) —— 仅公共页，内部运营页已剔除
+    for page in public_pages:
         record = {
             "type": "page_engagement",
             "page": page.get("path", ""),
