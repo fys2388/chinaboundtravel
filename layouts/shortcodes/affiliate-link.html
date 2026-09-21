@@ -5,8 +5,12 @@
   {{- errorf "affiliate-link shortcode requires a 'key' parameter" -}}
 {{- end -}}
 
-{{- $url := index .Site.Params.affiliate $key | default "#" -}}
+{{- $url := index .Site.Params.affiliate $key | default "" -}}
 
+{{- if $url -}}
 <a href="{{ $url }}" rel="nofollow sponsored" target="_blank">
 {{- $text | safeHTML -}}
 </a>
+{{- else -}}
+<strong>{{- $text | safeHTML -}}</strong>
+{{- end -}}

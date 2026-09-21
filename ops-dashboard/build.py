@@ -306,6 +306,52 @@ except Exception:
     update_hour = _update_raw
     update_date = ""
 
+# ── 数据新鲜度告警条（2026-09-21 新增）──────────────────────────────
+# 从 data_freshness 块读取每个数据源的 freshness，超过阈值或数据缺失时
+# 在页面顶部渲染一条告警，让读者不必进 JSON 才能看到"数据陈旧"这件事。
+# 不修改手工维护的 ops-center.html。
+_fresh = data.get("data_freshness", {}) or {}
+_fresh_overall = _fresh.get("overall", "fresh")
+_fresh_label = _fresh.get("overall_label", "")
+_fresh_warnings = _fresh.get("warnings", []) or []
+_fresh_generated = _fresh.get("generated_at", data.get("generated_at", ""))
+
+_freshness_banner_html = ""
+if _fresh_overall == "fresh" and not _fresh_warnings:
+    # 全部数据源健康时，也展示一条轻量提示（不占空间感），让"程序跑完"和
+    # "数据真的最新"两件事都可见。
+    _freshness_banner_html = (
+        '<div class="freshness-banner fresh">'
+        '<span class="fb-icon">✓</span>'
+        '<div>'
+        f'<div class="fb-title">数据新鲜度：{_fresh_label or "全部数据源在阈值内"}</div>'
+        f'<div class="fb-detail">generated_at {str(_fresh_generated)[:16]} · 所有源 updated_at 均在阈值内</div>'
+        '</div>'
+        '</div>'
+    )
+else:
+    _icon = {"stale": "!", "missing": "✕"}.get(_fresh_overall, "!")
+    _banner_class = _fresh_overall if _fresh_overall in ("stale", "missing") else "stale"
+    _warnings_html = ""
+    if _fresh_warnings:
+        _items = "".join(
+            f'<li>{html_lib.escape(str(w))}</li>' for w in _fresh_warnings
+        )
+        _warnings_html = f'<ul>{_items}</ul>'
+    _fresh_label_safe = html_lib.escape(str(_fresh_label or ""))
+    _freshness_banner_html = (
+        f'<div class="freshness-banner {_banner_class}">'
+        f'<span class="fb-icon">{_icon}</span>'
+        '<div style="flex:1;min-width:220px">'
+        f'<div class="fb-title">数据新鲜度告警：{_fresh_label_safe or "存在陈旧/缺失数据源"}</div>'
+        f'<div class="fb-detail">generated_at {str(_fresh_generated)[:16]} · '
+        f'{html_lib.escape(_fresh_overall)} · 详见下方告警列表</div>'
+        f'{_warnings_html}'
+        '</div>'
+        '</div>'
+    )
+
+
 html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -473,6 +519,34 @@ body {{
 .exp-name {{ font-size:12px; color:var(--text); margin-bottom:6px; line-height:1.4; }}
 .exp-meta {{ font-size:10px; color:var(--text3); }}
 
+/* 数据新鲜度告警条 —— 2026-09-21 新增（GSC 日期错位事件治理）
+   作用：让"程序成功结束但结果不是最新结果"这种假绿灯在 UI 上一眼可见。
+   不修改手工维护的 ops-center.html，只在 build.py 生成的 index.html 里注入。 */
+.freshness-banner {{
+  margin-bottom:16px; padding:10px 14px; border-radius:8px;
+  border:1px solid var(--border); background:var(--panel);
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  font-size:11.5px;
+}}
+.freshness-banner.stale {{ background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.3); }}
+.freshness-banner.missing {{ background:rgba(239,68,68,0.08); border-color:rgba(239,68,68,0.3); }}
+.freshness-banner.fresh {{ background:rgba(34,197,94,0.06); border-color:rgba(34,197,94,0.25); }}
+.freshness-banner .fb-icon {{
+  width:22px; height:22px; flex-shrink:0; border-radius:6px;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:12px; color:#000;
+}}
+.freshness-banner.stale .fb-icon {{ background:var(--yellow); }}
+.freshness-banner.missing .fb-icon {{ background:var(--red); }}
+.freshness-banner.fresh .fb-icon {{ background:var(--green); }}
+.freshness-banner .fb-title {{ font-weight:700; color:var(--text); }}
+.freshness-banner .fb-detail {{ color:var(--text2); font-size:10.5px; }}
+.freshness-banner ul {{ list-style:none; margin:6px 0 0 0; padding:0; display:flex; flex-wrap:wrap; gap:6px 12px; width:100%; }}
+.freshness-banner ul li {{
+  font-size:10.5px; color:var(--text2); padding:2px 8px; border-radius:4px;
+  background:rgba(15,23,42,0.5); border:1px solid var(--border);
+}}
+
 /* 数据源 */
 .ds-grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:8px; }}
 .ds-item {{
@@ -543,6 +617,9 @@ body {{
       </div>
     </div>
   </div>
+
+  <!-- 数据新鲜度告警条（2026-09-21 新增）：让陈旧数据源在 UI 上一眼可见 -->
+  {_freshness_banner_html}
 
   <!-- KPI 趋势图 -->
   <div class="kpi-trend-grid">

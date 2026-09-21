@@ -92,41 +92,80 @@ jobs:
 
       - name: (5/6) Regenerate Dashboard (看板更新)
         if: success()
+        id: dashboard
         run: |
           echo "Regenerating ops dashboard..."
           DASH_FAIL=0
           if ! python ops-dashboard/collect_data.py; then
             DASH_FAIL=1
-            echo "::warning title=看板数据生成失败::ops-dashboard/collect_data.py 退出非零，本次流水线不阻断，但数据可能仍是旧值"
+            echo "::error title=看板数据生成失败::ops-dashboard/collect_data.py 退出非零，本次不会把旧/半成品看板发布上线"
           fi
           if ! python ops-dashboard/build.py; then
             DASH_FAIL=1
-            echo "::warning title=看板页面构建失败::ops-dashboard/build.py 退出非零，本次流水线不阻断，但 static/ops-dashboard/index.html 可能未更新"
+            echo "::error title=看板页面构建失败::ops-dashboard/build.py 退出非零，本次不会把旧/半成品看板发布上线"
           fi
-          cp ops-dashboard/index.html static/ops-dashboard/index.html
-          cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
-          echo "Dashboard regenerated (script_failures=${DASH_FAIL})"
+          # 只有构建成功时才发布到 static/ops-dashboard/。
+          # 旧实现无条件 cp，build.py 失败时会把旧/半成品文件覆盖到
+          # static/ops-dashboard/index.html 与 dashboard_data.json，
+          # 等于把陈旧数据发布上线。
+          if [ "$DASH_FAIL" = "0" ]; then
+            cp ops-dashboard/index.html static/ops-dashboard/index.html
+            cp ops-dashboard/dashboard_data.json static/ops-dashboard/dashboard_data.json
+            echo "Dashboard regenerated and published"
+          else
+            echo "Dashboard build failed — skipping publish to static/ops-dashboard/ to avoid publishing stale/partial data"
+          fi
           {
             echo "### Regenerate Dashboard"
-            if [ "$DASH_FAIL" = "1" ]; then
-              echo "- ❌ collect_data.py 和/或 build.py 退出非零。流水线按设计继续（保持原有容错），"
-              echo "  但看板数据可能未刷新。请查看本 step 日志定位具体脚本。"
+            if [ "$DASH_FAIL" = "0" ]; then
+              echo "- ✅ collect_data.py / build.py 均退出 0；index.html 与 dashboard_data.json 已同步到 static/ops-dashboard/"
             else
-              echo "- ✅ collect_data.py / build.py 均退出 0"
+              echo "- ❌ collect_data.py 和/或 build.py 退出非零"
+              echo "- ❌ 未把 ops-dashboard/index.html 或 dashboard_data.json 复制到 static/ops-dashboard/（避免发布陈旧/半成品数据）"
+              echo "- 请查看本 step 日志定位具体脚本；本 step 将 exit 1 让 job 可见失败（消除「Workflow=SUCCESS 但看板没刷新」假绿灯）"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
+          echo "dashboard_fail=$DASH_FAIL" >> "$GITHUB_OUTPUT"
+          # 假绿灯修复：DASH_FAIL != 0 时让 step 失败，job conclusion = failed，
+          # 不再只 echo warning 后继续。
+          if [ "$DASH_FAIL" != "0" ]; then
+            exit 1
+          fi
 
       - name: (6/6) Commit & Push (提交)
-        if: success()
+        if: always()
         run: |
           git config --local user.email "ai-agent@chinaboundtravel.com"
           git config --local user.name "Closed Loop Agent"
-          git add -A
+          # 按路径限定 add（替代旧的 git add -A）。
+          # AGENTS.md 明说 site-health-daily 的 git add -A 会把工作区任何残留
+          # （含临时脚本、pytest 副作用产物）顺手提交上线。改为只 add 本 workflow
+          # 实际产出目录，收敛风险面。
+          # 注意：不 add ops-dashboard/（build.py 失败时的半成品产物会被留在
+          # 工作区，下次 workflow 会重新生成），也不 add content/、static/_redirects
+          # 等手工维护区。
+          git add \
+            reports/site_health/ \
+            reports/daily_issues/ \
+            reports/closed_loop_audit/ \
+            reports/quality/ \
+            static/ops-dashboard/ \
+            static/ops/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "fix(closed-loop): auto detect→assign→execute→audit by Site Health Agent [skip ci]"
-            git push origin main
+            # push 前必须 rebase：多个机器人每 ~30 分钟向 main 提交，push 被拒
+            # 是常态（见 AGENTS.md "自动化并发纪律"）。--autostash 处理工作区残留。
+            git pull --rebase --autostash origin main || {
+              echo "::error title=Rebase 冲突::site-health 提交无法 rebase，请人工介入"
+              git rebase --abort 2>/dev/null || true
+              exit 1
+            }
+            git push origin main || {
+              echo "::error title=Push 失败::site-health 提交已 commit 但 push 被拒（其他机器人可能同时提交）"
+              exit 1
+            }
           fi
 
       - name: Upload Reports

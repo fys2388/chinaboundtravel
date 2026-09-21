@@ -26,6 +26,88 @@ THREAD_LOCAL = threading.local()
 STATUS_LOCK = threading.Lock()
 STATUS_CACHE: dict[str, tuple[int, str, int, str]] = {}
 
+# ---------------------------------------------------------------------------
+# False-positive ignore list (2026-09-21: audit governance)
+# ---------------------------------------------------------------------------
+
+# URL path prefixes that are Cloudflare runtime endpoints. A headless audit
+# that does not execute JavaScript will always receive HTTP 404 from these.
+# They appear in ~60 broken_internal_link findings per audit run — the single
+# largest noise source in the 489-issue report.
+IGNORE_URL_PREFIXES = (
+    "/cdn-cgi/l/email-protection",  # Cloudflare Email Address Obfuscation
+    "/cdn-cgi/trace",               # Cloudflare trace endpoint
+    "/cdn-cgi/",                    # Any other Cloudflare runtime endpoint
+)
+
+# URLs that resolve via Cloudflare Pages' built-in trailing-slash
+# normalization (308 redirect). These are NOT defects; they are the platform
+# doing its job. Without this list, ~67 findings per audit run point at
+# "/pricing" -> "/pricing/".
+IGNORE_REDIRECT_URLS = frozenset({
+    "/pricing",
+    "/refund-policy",
+})
+
+# ---------------------------------------------------------------------------
+# Designed 301 redirects loaded from static/_redirects
+# ---------------------------------------------------------------------------
+
+_REDIRECTS_FILE = Path(__file__).resolve().parent.parent / "static" / "_redirects"
+
+
+def _load_redirect_rules() -> set[str]:
+    """Load designed 301 redirect source URLs from static/_redirects.
+
+    A URL that has an explicit rule in _redirects is an intentional migration
+    (e.g. date-prefixed post URL -> canonical slug). The audit should not
+    report it as a defect. Without this guard, ~187 P2 findings per audit
+    run are noise.
+    """
+    rules: set[str] = set()
+    if not _REDIRECTS_FILE.exists():
+        return rules
+    try:
+        for line in _REDIRECTS_FILE.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split()
+            if len(parts) >= 3 and parts[0].startswith("/"):
+                # Normalize: strip trailing slash so "/pricing" and "/pricing/"
+                # both map to "/pricing".
+                rules.add(parts[0].rstrip("/"))
+    except OSError:
+        pass
+    return rules
+
+
+DESIGNED_REDIRECTS = _load_redirect_rules()
+
+
+def _is_ignored_link(url: str) -> bool:
+    """Return True if the link should be skipped as a known false positive."""
+    return any(url.startswith(p) for p in IGNORE_URL_PREFIXES)
+
+
+def _is_designed_redirect(source_url: str, final_url: str) -> bool:
+    """Return True if the redirect is intentional, not a defect.
+
+    Covers three patterns:
+      1. Source URL has an explicit rule in static/_redirects.
+      2. Source URL is in the trailing-slash normalization allowlist.
+      3. Source URL + "/" == final URL (trailing-slash redirect).
+    """
+    src = source_url.rstrip("/")
+    if src in IGNORE_REDIRECT_URLS:
+        return True
+    if src in DESIGNED_REDIRECTS:
+        return True
+    # Trailing-slash normalization: /foo -> /foo/
+    if final_url.rstrip("/") == src:
+        return True
+    return False
+
 
 def make_issue(
     severity: str,
@@ -285,6 +367,9 @@ def audit_page(page_url: str, timeout: int) -> tuple[list[dict], dict]:
     for link in sorted(internal_links):
         if link == page_url:
             continue
+        # Skip Cloudflare runtime endpoints (headless audit always gets 404).
+        if _is_ignored_link(link):
+            continue
         status, final, redirects, error = check_url(link, timeout)
         stats["links"] += 1
         if status == 0 or status >= 400:
@@ -297,7 +382,7 @@ def audit_page(page_url: str, timeout: int) -> tuple[list[dict], dict]:
                     "Update the link to a live route or add a redirect.",
                 )
             )
-        elif redirects:
+        elif redirects and not _is_designed_redirect(link, final):
             issues.append(
                 make_issue(
                     "P2",

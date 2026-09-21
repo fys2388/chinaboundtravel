@@ -108,6 +108,12 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/ /posts/accommodation-tips-guide/ 301
 /posts/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/ /posts/food-recommendations-guide/ 301
 
+# ===== 2026-09-21: seo-links fixes =====
+# Date-prefixed URL for business travel guide -> slug version.
+# The post file (2026-08-30-...md) has slug set, so Hugo only generates the
+# slug URL; the date-prefixed URL was never created. 3 posts link to it.
+/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking/ /posts/china-business-travel-guide-meetings-dining-and-networking/ 301
+
 # ===== 统一运营中心（2026-09-16 修正方向）=====
 # /ops/ops-center(.html) = 手工维护的「统一运营中心」（看板/监控/考核/成长/营收/KPI 全量版）
 # /ops-dashboard/        = ops-dashboard/build.py 生成的精简监控页

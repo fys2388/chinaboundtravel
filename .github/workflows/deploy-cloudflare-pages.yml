@@ -78,6 +78,7 @@ jobs:
 
       - name: Publish quality data for ops dashboard
         if: always()
+        continue-on-error: true
         run: |
           python scripts/merge_quality_issues.py
           git config user.name "github-actions[bot]"
@@ -88,8 +89,18 @@ jobs:
             exit 0
           fi
           git commit -m "chore(quality): publish post-deploy quality gate [skip ci]"
-          git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase failed"; exit 0; }
-          git push origin main || echo "quality report push failed (non-fatal)"
+          # --autostash 已存在；把 exit 0 改为 exit 1 + ::error:: 让失败可见
+          # （旧实现 rebase 失败后 exit 0 = 静默成功，job 仍显示绿勾）。
+          # continue-on-error: true 确保失败不阻断后续部署步骤。
+          git pull --rebase --autostash origin main || {
+            echo "::error title=Rebase 冲突::quality data commit 无法 rebase，请人工介入"
+            git rebase --abort 2>/dev/null || true
+            exit 1
+          }
+          git push origin main || {
+            echo "::error title=Push 失败::quality data 已 commit 但 push 被拒（多个机器人每 ~30 分钟提交，push 被拒是常态）"
+            exit 1
+          }
 
       - name: 2.0 Post-build Validation (content_id + brand_identity)
         run: |
@@ -124,19 +135,31 @@ jobs:
 
       - name: Commit social manifest back to repo
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add manifest.json
           git diff --cached --quiet && echo "no manifest changes to commit" || {
             git commit -m "chore: sync social publish manifest" && {
-              git pull --rebase origin main || echo "rebase had conflicts"
-              git push origin main || echo "manifest push failed (non-fatal)"
+              # 补 --autostash（旧实现缺此项，会导致与 quality-monitor 同款的
+              # unstaged changes rebase 失败）。exit 0 → exit 1 + ::error:: 让
+              # 失败可见；continue-on-error: true 确保不阻断后续步骤。
+              git pull --rebase --autostash origin main || {
+                echo "::error title=Rebase 冲突::manifest commit 无法 rebase，请人工介入"
+                git rebase --abort 2>/dev/null || true
+                exit 1
+              }
+              git push origin main || {
+                echo "::error title=Push 失败::manifest 已 commit 但 push 被拒"
+                exit 1
+              }
             }
           }
 
       - name: Commit brand identity audit report back to repo
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -154,8 +177,18 @@ jobs:
             exit 0
           fi
           git commit -m "chore(brand): publish brand identity audit [skip ci]"
-          git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; echo "rebase failed"; exit 0; }
-          git push origin main || echo "brand report push failed (non-fatal)"
+          # --autostash 已存在；把 exit 0 改为 exit 1 + ::error:: 让失败可见
+          # （旧实现 rebase 失败后 exit 0 = 静默成功，job 仍显示绿勾）。
+          # continue-on-error: true 确保失败不阻断后续步骤。
+          git pull --rebase --autostash origin main || {
+            echo "::error title=Rebase 冲突::brand audit commit 无法 rebase，请人工介入"
+            git rebase --abort 2>/dev/null || true
+            exit 1
+          }
+          git push origin main || {
+            echo "::error title=Push 失败::brand audit 已 commit 但 push 被拒"
+            exit 1
+          }
 
       - name: Purge Cloudflare CDN Cache
         if: vars.CLOUDFLARE_ZONE_ID != ''

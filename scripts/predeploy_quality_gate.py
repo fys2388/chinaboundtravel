@@ -19,6 +19,35 @@ from bs4 import BeautifulSoup
 
 SEVERITY_RANK = {"P0": 0, "P1": 1, "P2": 2}
 
+# ---------------------------------------------------------------------------
+# False-positive ignore list (2026-09-21: audit governance)
+# ---------------------------------------------------------------------------
+
+# URL path prefixes that are Cloudflare runtime endpoints. A headless audit
+# that does not execute JavaScript will always receive HTTP 404 from these.
+# They appear in ~60 broken_internal_link findings per audit run — the single
+# largest noise source in the 489-issue report.
+#
+# This list is shared with site_quality_audit.py to ensure the two gates
+# have consistent ignore logic.
+IGNORE_URL_PREFIXES = (
+    "/cdn-cgi/l/email-protection",  # Cloudflare Email Address Obfuscation
+    "/cdn-cgi/trace",               # Cloudflare trace endpoint
+    "/cdn-cgi/",                    # Any other Cloudflare runtime endpoint
+)
+
+# Dot-directories under site_dir that must be skipped. Hugo does not publish
+# these, but if --site-dir is pointed at content/ instead of public/, they
+# would leak into the scan and produce false U+FFFD findings.
+SKIP_DIRS = frozenset({
+    ".archived",
+    ".audit_backup",
+    "drafts",
+    "_draft",
+    "_drafts",
+    ".git",
+})
+
 
 def make_issue(
     severity: str,
@@ -86,6 +115,10 @@ def resolve_local_path(
     page_url: str = "",
 ) -> Path | None:
     value = unquote(raw_url.strip())
+    # Skip Cloudflare runtime endpoints (headless audit always gets 404).
+    # These are false positives, not real broken links.
+    if any(value.startswith(p) for p in IGNORE_URL_PREFIXES):
+        return None
     if not value or value.startswith(("#", "data:", "mailto:", "tel:", "javascript:")):
         return None
     parsed = urlparse(value)
@@ -116,7 +149,16 @@ def load_issue_count(issues: list[dict]) -> dict:
 
 def audit_static_site(site_dir: Path, site_hosts: set[str]) -> dict:
     issues: list[dict] = []
-    all_pages = sorted(site_dir.rglob("*.html"))
+    # Skip dot-directories (e.g. .audit_backup, .archived, drafts). Hugo does
+    # not publish these, but if --site-dir is pointed at content/ instead of
+    # public/, they would leak into the scan and produce false U+FFFD findings.
+    all_pages = []
+    for html_file in site_dir.rglob("*.html"):
+        parts = html_file.relative_to(site_dir).parts
+        if any(p in SKIP_DIRS for p in parts):
+            continue
+        all_pages.append(html_file)
+    all_pages = sorted(all_pages)
     targets = sitemap_targets(site_dir)
     if targets is None:
         pages = all_pages

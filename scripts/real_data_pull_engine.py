@@ -582,7 +582,15 @@ def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
             "endDate": daily_end.isoformat(),
             "searchType": "web",
             "dimensions": ["date"],
-            "rowLimit": 30,
+            # 2026-09-21 修复（t15 根治，GSC 日期错位根因）:
+            #   原值 "rowLimit": 30 是硬编码，跟 days 参数完全无关。
+            #   collect_data.py 里 pull_gsc_data(days=90, save=False) 请求 90 天窗口，
+            #   但 GSC API 只按曝光降序返回 top 30 行，daily 序列因此被截断到 30 行，
+            #   末条 date 停在 2026-08-17（35 天前），
+            #   dashboard_data.json.metrics.gsc_daily.date / daily 末端 / ranges.* 全部错位。
+            #   改为 max(days, 30)：按请求窗口动态放大（下限 30，兼容 7d/28d 等短窗口调用方），
+            #   让 daily 序列真正覆盖整个查询窗口。
+            "rowLimit": max(days, 30),
         }
         resp = requests.post(api_url, headers=headers, json=daily_body, timeout=60)
         if resp.status_code == 200:

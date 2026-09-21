@@ -5,13 +5,17 @@
 {{- $experimentId := .Get "experiment_id" | default "" -}}
 {{- $text := .Get "text" | default "Compare available travel options" -}}
 {{- $key := .Get "key" | default $partner -}}
-{{- $url := index .Site.Params.affiliate $key | default "#" -}}
+{{- $url := index .Site.Params.affiliate $key | default "" -}}
 <div class="affiliate-mid-cta affiliate-block">
     <p>{{ .Inner | markdownify }}</p>
+    {{- if $url -}}
     <a href="{{ $url }}" class="affiliate-link" target="_blank" rel="nofollow sponsored"
        data-affiliate-partner="{{ $partner }}" data-affiliate-placement="{{ $placement }}"
        data-cta-id="{{ $ctaId }}" data-experiment-id="{{ $experimentId }}">
         {{ $text }} →
     </a>
     <p class="affiliate-mid-cta-disclosure"><small><em>Affiliate link - we may earn a small commission at no extra cost to you.</em></small></p>
+    {{- else -}}
+    <p class="affiliate-mid-cta-plain"><strong>{{ $text }}</strong></p>
+    {{- end -}}
 </div>

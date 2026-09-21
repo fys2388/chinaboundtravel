@@ -160,6 +160,8 @@ def test_no_content_or_affiliate_files_touched():
                "content/cities/beijing.md",
                "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
                "content/cities/chengdu.md",
+               # t10 authorized: /subscribe/ subscription landing page（修复全站引用的缺失页，test_internal_links 唯一失败项）
+               "content/subscribe.md",
                # Social growth engine: content/social/ inventory (JSON data, not Hugo pages)
                "content/social/"))
     # 本次"转化与排名优化"任务授权：联盟软推荐 + 分类规范化 + 深度优化
@@ -170,8 +172,36 @@ def test_no_content_or_affiliate_files_touched():
                          capture_output=True, text=True, encoding="utf-8", errors="replace")
     assert old.returncode == 0
     new = (REPO / "hugo.toml").read_text(encoding="utf-8")
+
+    # 断言：[params.affiliate] 段里所有 URL 值必须与 HEAD 一致。
+    # 比较的是 URL 值，不是整段文本——注释允许更新（例如 t6 把该段重写为覆盖状态表：
+    # 加 ⛔ GAP 标注和人工行动项 URL，URL 值全部保持原样），但 URL 值不得被无授权修改。
+    # 历史 bug：这个断言曾使用整段文本比较，导致合法的注释/状态表更新也被判为
+    # 「affiliate config must stay intact」失败。与 tests/test_brand_identity_p2.py
+    # ::test_affiliate_urls_unchanged 是同一缺陷模式（t14 已用同一修法修过那个）。
     def aff(t):
         i = t.find("[params.affiliate]")
         j = t.find("\n[", i + 10)
         return t[i:j if j > 0 else len(t)]
-    assert aff(old.stdout) == aff(new), "affiliate config must stay intact"
+
+    def _url_map(t: str) -> dict:
+        section = aff(t)
+        out = {}
+        for line in section.splitlines():
+            line = line.split("#", 1)[0].rstrip()
+            stripped = line.strip()
+            if not stripped:
+                continue
+            m = re.match(r'^([A-Za-z0-9_]+)\s*=\s*"([^"]*)"\s*$', stripped)
+            if m:
+                out[m.group(1)] = m.group(2)
+        return out
+
+    old_urls = _url_map(old.stdout)
+    new_urls = _url_map(new)
+    assert old_urls == new_urls, (
+        f"affiliate URL 值发生未授权修改:\n"
+        f"  新增: {set(new_urls) - set(old_urls)}\n"
+        f"  删除: {set(old_urls) - set(new_urls)}\n"
+        f"  值变: {[k for k in old_urls if k in new_urls and old_urls[k] != new_urls[k]]}"
+    )

@@ -314,10 +314,17 @@ def test_ga4_schema_unchanged():
 
 
 def test_affiliate_config_unchanged():
+    # 2026-09-21: affiliate config 清理未批准的计划。
+    # - esim 由裸 URL 升级为 Travelpayouts 深链（原判定"eSIM 不在 Travelpayouts 网络内"是错的）
+    # - trip / worldnomads / allianz / nordpass 已移除：均为未通过准入或未申请的计划
+    #   （Trip.com 需 3 个月稳定月流量；World Nomads 走 Impact 被拒；Allianz 无公开计划；
+    #     NordPass 0 处引用）。对应 shortcode 已改为无 URL 时渲染纯文本，不产生死链接。
     for marker in ("aid=730795", "aff_id=150687", "klook.tpo.li",
                    "safetywing.com/nomad-insurance?referenceID=26548976",
-                   'trip = "https://www.trip.com/"', 'esim = "https://www.airalo.com/"'):
+                   "airalo.tpo.li"):
         assert marker in TOML, marker
+    for gone in ("trip", "worldnomads", "allianz", "nordpass"):
+        assert not re.search(rf"^\s*{re.escape(gone)}\s*=", TOML, re.M), gone
 
 
 def test_no_utm_in_alipay_body():

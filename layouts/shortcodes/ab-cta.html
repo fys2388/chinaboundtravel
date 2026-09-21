@@ -6,19 +6,25 @@
 {{- $url := .Get "url" }}
 
 {{- if $affiliate_key }}
-  {{- $url = index .Site.Params.affiliate $affiliate_key | default "#" }}
+  {{- $url = index .Site.Params.affiliate $affiliate_key | default "" }}
 {{- else }}
-  {{- $url = $url | default "#" }}
+  {{- $url = $url | default "" }}
 {{- end }}
 
 {{- $style := .Get "style" | default "primary" }}
 {{- $analytics_id := .Get "analytics_id" | default "cta_click" }}
 
 <span class="ab-cta" data-test-id="{{ $test_id }}" data-analytics="{{ $analytics_id }}" data-variant-a="{{ $variant_a }}" data-variant-b="{{ $variant_b }}">
+{{- if $url }}
     <a href="{{ $url }}" target="_blank" rel="nofollow sponsored" class="ab-cta-btn ab-cta-{{ $style }} affiliate-link" data-affiliate-partner="{{ $affiliate_key }}" data-affiliate-placement="{{ $test_id }}" data-cta-id="{{ $analytics_id }}" data-experiment-id="" data-variant="loading">
         <span class="ab-cta-text">{{ $variant_a }}</span>
         <span class="ab-cta-arrow">→</span>
     </a>
+{{- else }}
+    <span class="ab-cta-btn ab-cta-{{ $style }} ab-cta-no-offer" title="暂无联盟合作 — 可独立搜索比价" data-affiliate-partner="{{ $affiliate_key }}" data-affiliate-placement="{{ $test_id }}" data-cta-id="{{ $analytics_id }}">
+        <span class="ab-cta-text">{{ $variant_a }}</span>
+    </span>
+{{- end }}
     <span class="ab-cta-label">🔄 A/B Test Active</span>
 </span>
 
@@ -49,6 +55,8 @@
 }
 .ab-cta-outline { background: #fff; color: #1f2937 !important; border: 2px solid #e2e8f0; box-shadow: none; }
 .ab-cta-outline:hover { border-color: #0369a1; color: #0369a1 !important; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15); }
+.ab-cta-no-offer { cursor: default; opacity: 0.6; border-style: dashed !important; box-shadow: none !important; }
+.ab-cta-no-offer:hover { transform: none; }
 .ab-cta-arrow { font-size: 1.1rem; transition: transform 0.2s ease; }
 .ab-cta-btn:hover .ab-cta-arrow { transform: translateX(4px); }
 .ab-cta-label { font-size: 0.7rem; color: #94a3b8; font-weight: 500; }

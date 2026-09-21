@@ -130,8 +130,20 @@ jobs:
             exit 0
           fi
           git commit -m "chore(quality): refresh website audit reports [skip ci]"
-          git pull --rebase origin main
-          git push origin main
+          # --autostash: 审计脚本会写到 reports/quality/ 与 reports/daily_issues/
+          # 之外的目录（例如 ops-dashboard/、static/ops/、reports/site_health/），
+          # 那些改动会留在工作区；`git pull --rebase` 遇到 unstaged changes 会以
+          # "cannot pull with rebase: You have unstaged changes" 失败，
+          # 整个「发现→报警→写报告→commit→push」闭环断在最后一步。
+          git pull --rebase --autostash origin main || {
+            echo "::error title=Rebase 冲突::quality report commit 无法 rebase，请人工介入"
+            git rebase --abort 2>/dev/null || true
+            exit 1
+          }
+          git push origin main || {
+            echo "::error title=Push 失败::quality reports 已 commit 但 push 被拒（多个机器人每 ~30 分钟提交，push 被拒是常态）"
+            exit 1
+          }
 
       - name: Upload quality reports
         if: always()

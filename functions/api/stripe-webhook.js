@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Stripe Webhook Handler - PRODUCTION
  * POST /api/stripe-webhook
  *
@@ -132,6 +132,27 @@ function constantTimeEqual(a, b) {
   return diff === 0;
 }
 
+/**
+ * P0-6 (2026-09-21): sendEmail 必须严格校验 Resend HTTP 响应。
+ *
+ * 历史行为（本 bug 的根因）：只 await fetch()，从不读 res.ok / res.status。
+ * 后果：Stripe payment 成功 → webhook 收到 → Resend 邮件接口返回 500
+ * → 代码仍然往下走 → webhook 返回 200 给 Stripe → Stripe 认为已处理，
+ * 不再重试 → 付费用户永远收不到电子书下载链接。
+ *
+ * 修复：
+ *  - 3 次指数退避重试（300ms / 1s），每次携带同一 Idempotency-Key，
+ *    让 Resend 自己去重，不会造成重复邮件。
+ *  - 任一尝试返回 2xx 立即返回（成功）。
+ *  - 全部尝试失败 / 抛错 → 抛 Error 到上层 catch → webhook 返回 500
+ *    → Stripe 自动重试整个 webhook delivery。KV 里只在成功后写入，
+ *    所以重试不会被误判成 duplicate。
+ *  - 每次非 2xx 都 console.error，方便 Cloudflare Workers logs 观测。
+ */
+const RESEND_MAX_ATTEMPTS = 3;
+const RESEND_BACKOFF_MS = [300, 1000]; // 两次重试之间的等待
+const RESEND_TIMEOUT_MS = 10000;
+
 async function sendEmail(email, plan, ebookUrl, apiKey, eventId) {
   const subject = 'Your ChinaBound Travel Guide Download';
   const html = `
@@ -150,20 +171,76 @@ async function sendEmail(email, plan, ebookUrl, apiKey, eventId) {
     'Authorization': `Bearer ${apiKey}`,
   };
   if (eventId) {
-    // Deterministic idempotency key: duplicate webhook deliveries cannot send the email twice.
+    // Deterministic idempotency key: 同一 event 的多次尝试 / 多次 webhook
+    // delivery 共享同一 key，Resend 侧天然去重，不会造成重复邮件。
     headers['Idempotency-Key'] = `stripe-${eventId}`;
   }
 
-  await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      from: 'ChinaBound Travel <joran@chinaboundtravel.com>',
-      to: email,
-      subject,
-      html,
-    }),
-  });
+  let lastError = null;
+  for (let attempt = 1; attempt <= RESEND_MAX_ATTEMPTS; attempt++) {
+    let res;
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), RESEND_TIMEOUT_MS);
+      try {
+        res = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            from: 'ChinaBound Travel <joran@chinaboundtravel.com>',
+            to: email,
+            subject,
+            html,
+          }),
+          signal: controller.signal,
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (netErr) {
+      // Network / abort error: 网络层失败，可重试。
+      lastError = netErr;
+      console.error(
+        `Resend email network error (attempt ${attempt}/${RESEND_MAX_ATTEMPTS}) for ${email}: ${netErr.message}`
+      );
+      if (attempt < RESEND_MAX_ATTEMPTS) {
+        await sleep(RESEND_BACKOFF_MS[attempt - 1]);
+        continue;
+      }
+      break;
+    }
+
+    // 严格校验 HTTP 响应：非 2xx 视为失败。
+    if (res.ok && res.status >= 200 && res.status < 300) {
+      return { ok: true, status: res.status, attempt };
+    }
+
+    // 客户端错误（4xx，除 429）一般是永久性：邮箱格式非法 / API key 无效等，
+    // 重试也不会好；直接抛错让 Stripe 重试整个 webhook 并触发人工排查。
+    let bodyText = '';
+    try { bodyText = (await res.text()).slice(0, 500); } catch (_) { /* ignore */ }
+
+    console.error(
+      `Resend email HTTP ${res.status} (attempt ${attempt}/${RESEND_MAX_ATTEMPTS}) for ${email}: ${bodyText}`
+    );
+    lastError = new Error(`Resend returned HTTP ${res.status} for ${email}: ${bodyText}`);
+
+    // 429 限流、5xx 服务器错误 → 可重试；其他 4xx → 重试无意义，直接抛错。
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt >= RESEND_MAX_ATTEMPTS) {
+      break;
+    }
+    await sleep(RESEND_BACKOFF_MS[attempt - 1]);
+  }
+
+  // 全部尝试失败：抛错让上层 catch 把 webhook 变成 5xx，Stripe 会重试整个 delivery。
+  throw lastError instanceof Error
+    ? lastError
+    : new Error(`Resend email failed for ${email}: ${lastError}`);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function jsonResponse(body, status, headers) {

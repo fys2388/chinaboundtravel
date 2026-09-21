@@ -129,14 +129,37 @@ def test_forbidden_phrases_governed():
 # 7: affiliate URLs unchanged (hugo.toml affiliate section)
 # ---------------------------------------------------------------------------
 def test_affiliate_urls_unchanged():
+    """[params.affiliate] 段里所有 URL key 的值必须与 HEAD 一致。
+
+    比较的是 URL 值，不是整段文本——注释可更新（例如补 tracking 覆盖文档），
+    但 URL 值不得被无授权修改。历史 bug：这个断言曾使用整段文本比较，
+    导致合法的注释更新也被判为「URL 未变」失败。
+    """
     old = git_show_head("hugo.toml")
     new = read("hugo.toml")
-    def aff_section(t: str) -> str:
+    def _url_map(t: str) -> dict:
         start = t.find("[params.affiliate]")
         assert start >= 0, "affiliate section missing"
         end = t.find("\n[", start + 10)
-        return t[start:end if end > 0 else len(t)]
-    assert aff_section(old) == aff_section(new)
+        section = t[start:end if end > 0 else len(t)]
+        out = {}
+        for line in section.splitlines():
+            line = line.split("#", 1)[0].rstrip()
+            stripped = line.strip()
+            if not stripped:
+                continue
+            m = re.match(r'^([A-Za-z0-9_]+)\s*=\s*"([^"]*)"\s*$', stripped)
+            if m:
+                out[m.group(1)] = m.group(2)
+        return out
+    old_urls = _url_map(old)
+    new_urls = _url_map(new)
+    assert old_urls == new_urls, (
+        f"affiliate URL 值发生未授权修改:\n"
+        f"  新增: {set(new_urls) - set(old_urls)}\n"
+        f"  删除: {set(old_urls) - set(new_urls)}\n"
+        f"  值变: {[k for k in old_urls if k in new_urls and old_urls[k] != new_urls[k]]}"
+    )
 
 
 # ---------------------------------------------------------------------------

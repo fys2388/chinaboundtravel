@@ -86,7 +86,17 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore(ops): auto-refresh dashboard $(date -u '+%Y-%m-%d %H:%M')"
-            git push origin main
+            # push 前必须 rebase：多个机器人每 ~30 分钟向 main 提交，push 被拒
+            # 是常态（见 AGENTS.md "自动化并发纪律"）。--autostash 处理工作区残留。
+            git pull --rebase --autostash origin main || {
+              echo "::error title=Rebase 冲突::ops-dashboard commit 无法 rebase，请人工介入"
+              git rebase --abort 2>/dev/null || true
+              exit 1
+            }
+            git push origin main || {
+              echo "::error title=Push 失败::ops-dashboard commit 已 commit 但 push 被拒（多个机器人每 ~30 分钟提交，push 被拒是常态）"
+              exit 1
+            }
             echo "Dashboard updated and pushed"
             sleep 2
             gh workflow run "Post-deploy Tasks" || echo "Deploy trigger failed (non-fatal)"
