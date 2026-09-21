@@ -133,3 +133,5 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
