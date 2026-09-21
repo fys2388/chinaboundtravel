@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-21 16:30:32",
+  "generated_at": "2026-09-21 17:00:26",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 267,
+    "response_ms": 139,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,8 +113,8 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-21T08:00:51Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-09-21T08:59:08Z",
+      "last_event": "push"
     },
     {
       "file": "email-growth-loop.yml",
@@ -149,7 +149,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-21T08:29:43Z",
+      "last_run": "2026-09-21T09:00:20Z",
       "last_event": "workflow_run"
     },
     {
@@ -167,7 +167,7 @@
       "id": "geo-check",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-20T22:47:58Z",
+      "last_run": "2026-09-21T08:59:08Z",
       "last_event": "push"
     },
     {
@@ -221,7 +221,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-21T08:30:12Z",
+      "last_run": "2026-09-21T09:00:12Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -275,7 +275,7 @@
       "id": "seo-growth-loop",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-20T08:24:10Z",
+      "last_run": "2026-09-21T08:43:00Z",
       "last_event": "schedule"
     },
     {
@@ -388,7 +388,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-21 08:30",
+    "checked_at": "2026-09-21 09:00",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -556,9 +556,9 @@
       "date": "2026-09-20"
     },
     "ga4_daily": {
-      "visitors": 3,
-      "sessions": 7,
-      "pageviews": 15,
+      "visitors": 4,
+      "sessions": 8,
+      "pageviews": 16,
       "new_users": 571,
       "bounce_rate": 64.6,
       "date": "2026-09-21",
@@ -1052,16 +1052,16 @@
         },
         {
           "date": "2026-09-21",
-          "sessions": 7,
-          "activeUsers": 3,
-          "pageviews": 15
+          "sessions": 8,
+          "activeUsers": 4,
+          "pageviews": 16
         }
       ],
       "ranges": {
         "today": {
-          "visitors": 3,
-          "sessions": 7,
-          "pageviews": 15,
+          "visitors": 4,
+          "sessions": 8,
+          "pageviews": 16,
           "date_range": "2026-09-21 ~ 2026-09-21",
           "days": 1
         },
@@ -1073,23 +1073,23 @@
           "days": 1
         },
         "7d": {
-          "visitors": 55,
-          "sessions": 67,
-          "pageviews": 89,
+          "visitors": 56,
+          "sessions": 68,
+          "pageviews": 90,
           "date_range": "2026-09-15 ~ 2026-09-21",
           "days": 7
         },
         "30d": {
-          "visitors": 299,
-          "sessions": 391,
-          "pageviews": 774,
+          "visitors": 300,
+          "sessions": 392,
+          "pageviews": 775,
           "date_range": "2026-08-22 ~ 2026-09-21",
           "days": 30
         },
         "90d": {
-          "visitors": 643,
-          "sessions": 784,
-          "pageviews": 1635,
+          "visitors": 644,
+          "sessions": 785,
+          "pageviews": 1636,
           "date_range": "2026-06-24 ~ 2026-09-21",
           "days": 82
         },
@@ -1100,14 +1100,23 @@
           "date_range": "2026-08-01 ~ 2026-08-31",
           "days": 30
         }
+      },
+      "is_real_data": true,
+      "freshness": {
+        "name": "ga4_daily",
+        "updated_at": "2026-09-21",
+        "age_days": 0,
+        "threshold_days": 2,
+        "status": "fresh",
+        "label": "实时"
       }
     },
     "gsc_daily": {
-      "impressions": 381,
+      "impressions": 13,
       "clicks": 0,
       "ctr": 0,
-      "avg_position": 34.4,
-      "date": "2026-08-17",
+      "avg_position": 31.8,
+      "date": "2026-09-18",
       "status": "OK",
       "daily": [
         {
@@ -1319,45 +1328,278 @@
           "clicks": 0,
           "ctr": 0,
           "position": 34.4
+        },
+        {
+          "date": "2026-08-18",
+          "impressions": 96,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 54.3
+        },
+        {
+          "date": "2026-08-19",
+          "impressions": 100,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 57.9
+        },
+        {
+          "date": "2026-08-20",
+          "impressions": 115,
+          "clicks": 1,
+          "ctr": 0.01,
+          "position": 61.8
+        },
+        {
+          "date": "2026-08-21",
+          "impressions": 132,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 66.7
+        },
+        {
+          "date": "2026-08-22",
+          "impressions": 100,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 64.6
+        },
+        {
+          "date": "2026-08-23",
+          "impressions": 193,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 34.8
+        },
+        {
+          "date": "2026-08-24",
+          "impressions": 92,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 67.6
+        },
+        {
+          "date": "2026-08-25",
+          "impressions": 85,
+          "clicks": 1,
+          "ctr": 0.01,
+          "position": 64.1
+        },
+        {
+          "date": "2026-08-26",
+          "impressions": 95,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 68.4
+        },
+        {
+          "date": "2026-08-27",
+          "impressions": 97,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 65.7
+        },
+        {
+          "date": "2026-08-28",
+          "impressions": 123,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 68.7
+        },
+        {
+          "date": "2026-08-29",
+          "impressions": 180,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 68.3
+        },
+        {
+          "date": "2026-08-30",
+          "impressions": 147,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 65.0
+        },
+        {
+          "date": "2026-08-31",
+          "impressions": 84,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 64.3
+        },
+        {
+          "date": "2026-09-01",
+          "impressions": 35,
+          "clicks": 1,
+          "ctr": 0.03,
+          "position": 51.9
+        },
+        {
+          "date": "2026-09-02",
+          "impressions": 26,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 35.0
+        },
+        {
+          "date": "2026-09-03",
+          "impressions": 31,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 43.7
+        },
+        {
+          "date": "2026-09-04",
+          "impressions": 37,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 31.2
+        },
+        {
+          "date": "2026-09-05",
+          "impressions": 36,
+          "clicks": 2,
+          "ctr": 0.06,
+          "position": 35.2
+        },
+        {
+          "date": "2026-09-06",
+          "impressions": 46,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 32.6
+        },
+        {
+          "date": "2026-09-07",
+          "impressions": 48,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 41.9
+        },
+        {
+          "date": "2026-09-08",
+          "impressions": 37,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 41.1
+        },
+        {
+          "date": "2026-09-09",
+          "impressions": 48,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 44.9
+        },
+        {
+          "date": "2026-09-10",
+          "impressions": 33,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 29.2
+        },
+        {
+          "date": "2026-09-11",
+          "impressions": 26,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 44.3
+        },
+        {
+          "date": "2026-09-12",
+          "impressions": 27,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 26.7
+        },
+        {
+          "date": "2026-09-13",
+          "impressions": 25,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 39.7
+        },
+        {
+          "date": "2026-09-14",
+          "impressions": 20,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 41.6
+        },
+        {
+          "date": "2026-09-15",
+          "impressions": 19,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 31.4
+        },
+        {
+          "date": "2026-09-16",
+          "impressions": 27,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 26
+        },
+        {
+          "date": "2026-09-17",
+          "impressions": 20,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 25.7
+        },
+        {
+          "date": "2026-09-18",
+          "impressions": 13,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 31.8
         }
       ],
       "ranges": {
         "today": {
-          "impressions": 381,
+          "impressions": 13,
           "clicks": 0,
-          "date_range": "2026-08-17 ~ 2026-08-17",
+          "date_range": "2026-09-18 ~ 2026-09-18",
           "days": 1
         },
         "yesterday": {
-          "impressions": 144,
+          "impressions": 20,
           "clicks": 0,
-          "date_range": "2026-08-16 ~ 2026-08-16",
+          "date_range": "2026-09-17 ~ 2026-09-17",
           "days": 1
         },
         "7d": {
-          "impressions": 1434,
-          "clicks": 2,
-          "date_range": "2026-08-11 ~ 2026-08-17",
+          "impressions": 151,
+          "clicks": 0,
+          "date_range": "2026-09-12 ~ 2026-09-18",
           "days": 7
         },
         "30d": {
-          "impressions": 2004,
-          "clicks": 3,
-          "date_range": "2026-07-19 ~ 2026-08-17",
+          "impressions": 1997,
+          "clicks": 5,
+          "date_range": "2026-08-20 ~ 2026-09-18",
           "days": 30
         },
         "90d": {
-          "impressions": 2004,
-          "clicks": 3,
-          "date_range": "2026-07-19 ~ 2026-08-17",
-          "days": 30
+          "impressions": 4197,
+          "clicks": 8,
+          "date_range": "2026-07-19 ~ 2026-09-18",
+          "days": 62
         },
         "last_month": {
-          "impressions": 1758,
-          "clicks": 3,
+          "impressions": 3397,
+          "clicks": 5,
           "date_range": "2026-08-01 ~ 2026-08-31",
-          "days": 17
+          "days": 31
         }
+      },
+      "is_real_data": true,
+      "freshness": {
+        "name": "gsc_daily",
+        "updated_at": "2026-09-18",
+        "age_days": 3,
+        "threshold_days": 5,
+        "status": "fresh",
+        "label": "3 天前"
       }
     }
   },
@@ -1365,37 +1607,72 @@
     {
       "name": "GA4",
       "configured": true,
-      "status": "OK"
+      "status": "ok",
+      "updated_at": "2026-09-21",
+      "age_days": 0,
+      "threshold_days": 2,
+      "freshness_status": "fresh",
+      "freshness_label": "实时"
     },
     {
       "name": "GSC",
       "configured": true,
-      "status": "OK"
+      "status": "ok",
+      "updated_at": "2026-09-18",
+      "age_days": 3,
+      "threshold_days": 5,
+      "freshness_status": "fresh",
+      "freshness_label": "3 天前"
     },
     {
       "name": "Travelpayouts",
       "configured": true,
-      "status": "ok"
+      "status": "ok",
+      "updated_at": "",
+      "age_days": null,
+      "threshold_days": 0,
+      "freshness_status": "unknown",
+      "freshness_label": "无时间戳字段（凭据存在即视为可用）"
     },
     {
       "name": "NordVPN",
       "configured": true,
-      "status": "ok"
+      "status": "ok",
+      "updated_at": "",
+      "age_days": null,
+      "threshold_days": 0,
+      "freshness_status": "unknown",
+      "freshness_label": "无时间戳字段（凭据存在即视为可用）"
     },
     {
       "name": "MailerLite",
       "configured": true,
-      "status": "ok"
+      "status": "ok",
+      "updated_at": "",
+      "age_days": null,
+      "threshold_days": 0,
+      "freshness_status": "unknown",
+      "freshness_label": "无时间戳字段（凭据存在即视为可用）"
     },
     {
       "name": "Buffer",
       "configured": true,
-      "status": "ok"
+      "status": "ok",
+      "updated_at": "",
+      "age_days": null,
+      "threshold_days": 0,
+      "freshness_status": "unknown",
+      "freshness_label": "无时间戳字段（凭据存在即视为可用）"
     },
     {
       "name": "Cloudflare",
       "configured": true,
-      "status": "ok"
+      "status": "ok",
+      "updated_at": "",
+      "age_days": null,
+      "threshold_days": 0,
+      "freshness_status": "unknown",
+      "freshness_label": "无时间戳字段（凭据存在即视为可用）"
     }
   ],
   "site_health": {
@@ -1412,7 +1689,7 @@
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-09-21T08:30:31.411145+00:00",
+    "generated_at": "2026-09-21T09:00:25.735215+00:00",
     "total": 489,
     "P0": 158,
     "P1": 130,
@@ -1432,7 +1709,7 @@
     "sources": {
       "predeploy": {
         "available": true,
-        "generated_at": "2026-09-14T07:58:55.237671+00:00",
+        "generated_at": "2026-09-21T07:08:04.572598+00:00",
         "issues": 0,
         "P0": 0,
         "P1": 0,
@@ -1491,7 +1768,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "bc40c8462b39ee79",
@@ -1505,7 +1782,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "c2897bfdb9083440",
@@ -1519,7 +1796,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "c76dc31c1b6b49f6",
@@ -1533,7 +1810,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "610515a4e4298072",
@@ -1547,7 +1824,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "334f748578d3c81d",
@@ -1561,7 +1838,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "d49cae671e76d5b4",
@@ -1575,7 +1852,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "98f4a69add52ec3e",
@@ -1589,7 +1866,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "6c25544aaf1fefe5",
@@ -1603,7 +1880,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "37766393f04866e1",
@@ -1617,7 +1894,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "5e0d657cbf11e985",
@@ -1631,7 +1908,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "201c877b40463c05",
@@ -1645,7 +1922,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "685b3deea4aa16a8",
@@ -1659,7 +1936,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "f143348ca63b05ac",
@@ -1673,7 +1950,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "6217e0d7fb1c1a20",
@@ -1687,7 +1964,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "c9b8a27274c911bc",
@@ -1701,7 +1978,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "956c9730c0445f73",
@@ -1715,7 +1992,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "56aea48b11a81c93",
@@ -1729,7 +2006,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "6d81ed95c8ade9ad",
@@ -1743,7 +2020,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "94f9ed4644db6d10",
@@ -1757,7 +2034,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "7ad3558c4053c06b",
@@ -1771,7 +2048,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "8e3052c1c6b60c21",
@@ -1785,7 +2062,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "e8818e79bb34bdd4",
@@ -1799,7 +2076,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "d7bf3dfd6d76644a",
@@ -1813,7 +2090,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "5794fbe888d72962",
@@ -1827,7 +2104,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "3a608d6385239523",
@@ -1841,7 +2118,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "dd72a09a057f32eb",
@@ -1855,7 +2132,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "99dd88594a32a8fa",
@@ -1869,7 +2146,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "0a33cfa6b116925b",
@@ -1883,7 +2160,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "72a33f4f1d6d8855",
@@ -1897,7 +2174,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "cb1a0ca011f98a8e",
@@ -1911,7 +2188,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "c99e73874b5cd38f",
@@ -1925,7 +2202,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "aad7289630693fc1",
@@ -1939,7 +2216,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "ab7f82a2d116a728",
@@ -1953,7 +2230,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "bbe92054536254ac",
@@ -1967,7 +2244,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "d78d294056115a67",
@@ -1981,7 +2258,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "6d9e58be82663d6b",
@@ -1995,7 +2272,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "02672a4b28d6649e",
@@ -2009,7 +2286,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "5f158bcbedc529d7",
@@ -2023,7 +2300,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "5c50e4bbfa82dc05",
@@ -2037,7 +2314,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "162eafb618620a7f",
@@ -2051,7 +2328,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "0aa58d2692f37854",
@@ -2065,7 +2342,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "652531bea9c09cd1",
@@ -2079,7 +2356,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "b8ac5b62244318bf",
@@ -2093,7 +2370,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "0068bf2c6d607ff1",
@@ -2107,7 +2384,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "f4e760a8898b742f",
@@ -2121,7 +2398,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "549392dde0597e61",
@@ -2135,7 +2412,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "db3f5e9adfddc123",
@@ -2149,7 +2426,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "2ab8008d7a8bbbe4",
@@ -2163,7 +2440,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       },
       {
         "id": "b7d7aef3d2e98d70",
@@ -2177,7 +2454,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-21T08:30:31.411145+00:00"
+        "last_seen": "2026-09-21T09:00:25.735215+00:00"
       }
     ]
   },
@@ -2204,7 +2481,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-21T08:30:31.932480"
+        "last_run": "2026-09-21T09:00:26.236401"
       },
       "ops": {
         "total": 1,
@@ -2212,7 +2489,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-21T08:30:31.995892"
+        "last_run": "2026-09-21T09:00:26.260272"
       },
       "seo": {
         "total": 1,
@@ -2220,7 +2497,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-21T08:30:32.038355"
+        "last_run": "2026-09-21T09:00:26.305675"
       },
       "social": {
         "total": 1,
@@ -2235,5 +2512,117 @@
   "kill_switch": {
     "active": false,
     "reason": "OK"
+  },
+  "data_freshness": {
+    "generated_at": "2026-09-21 17:00:26",
+    "thresholds": {
+      "ga4_daily": 2,
+      "gsc_daily": 5,
+      "ga4_28d": 4,
+      "gsc_28d": 4,
+      "content": 3,
+      "agent_kpi": 35,
+      "agent_growth": 35,
+      "site_health": 2,
+      "quality": 2,
+      "agent_execution": 2
+    },
+    "overall": "fresh",
+    "overall_label": "全部数据源均在阈值内",
+    "warnings": [],
+    "sources": {
+      "ga4_daily": {
+        "name": "ga4_daily",
+        "updated_at": "2026-09-21",
+        "age_days": 0,
+        "threshold_days": 2,
+        "status": "fresh",
+        "label": "实时"
+      },
+      "gsc_daily": {
+        "name": "gsc_daily",
+        "updated_at": "2026-09-18",
+        "age_days": 3,
+        "threshold_days": 5,
+        "status": "fresh",
+        "label": "3 天前"
+      },
+      "ga4_28d": {
+        "name": "ga4_28d",
+        "updated_at": "2026-09-19",
+        "age_days": 2,
+        "threshold_days": 4,
+        "status": "fresh",
+        "label": "2 天前"
+      },
+      "gsc_28d": {
+        "name": "gsc_28d",
+        "updated_at": "2026-09-17",
+        "age_days": 4,
+        "threshold_days": 4,
+        "status": "fresh",
+        "label": "4 天前"
+      },
+      "content": {
+        "name": "content",
+        "updated_at": "2026-09-20",
+        "age_days": 1,
+        "threshold_days": 3,
+        "status": "fresh",
+        "label": "1 天前"
+      },
+      "agent_kpi": {
+        "name": "agent_kpi",
+        "updated_at": "2026-09-18T22:36:15.872074",
+        "age_days": 3,
+        "threshold_days": 35,
+        "status": "fresh",
+        "label": "3 天前"
+      },
+      "agent_growth": {
+        "name": "agent_growth",
+        "updated_at": "2026-09-17T14:04:45.311625",
+        "age_days": 4,
+        "threshold_days": 35,
+        "status": "fresh",
+        "label": "4 天前"
+      },
+      "site_health": {
+        "name": "site_health",
+        "updated_at": "2026-09-21T02:25:06.066129+00:00",
+        "age_days": 0,
+        "threshold_days": 2,
+        "status": "fresh",
+        "label": "实时"
+      },
+      "quality": {
+        "name": "quality",
+        "updated_at": "2026-09-21T09:00:25.735215+00:00",
+        "age_days": 0,
+        "threshold_days": 2,
+        "status": "fresh",
+        "label": "实时"
+      },
+      "agent_execution": {
+        "name": "agent_execution",
+        "updated_at": "2026-09-21",
+        "age_days": 0,
+        "threshold_days": 2,
+        "status": "fresh",
+        "label": "实时"
+      }
+    },
+    "publish_path_gap": {
+      "dashboard_generated_at": "2026-09-21 17:00:26",
+      "agent_kpi_updated_at": "2026-09-18T22:36:15.872074",
+      "agent_kpi_age_days": 3,
+      "agent_kpi_threshold_days": 35,
+      "agent_kpi_status": "fresh",
+      "agent_growth_updated_at": "2026-09-17T14:04:45.311625",
+      "agent_growth_age_days": 4,
+      "agent_growth_threshold_days": 35,
+      "agent_growth_status": "fresh",
+      "note": "agent_kpi_data.json 与 agent_growth_data.json 由 agent-kpi-monthly.yml 每月 1 日 10:00 北京时间生成；dashboard_data.json 由 ops-dashboard-hourly.yml 每 30 分钟刷新。月度产物天然与小时级看板存在时间差，本字段用于让看板自身承认这个差值，而不是让读者误以为看板刷新了考核数据也刷新了。"
+    }
   }
 }
