@@ -20,7 +20,8 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-for p in (REPO_ROOT, REPO_ROOT / "scripts", REPO_ROOT / "chinaboundtravel_social_bot"):
+for p in (REPO_ROOT, REPO_ROOT / "scripts", REPO_ROOT / "chinaboundtravel_social_bot",
+          REPO_ROOT / "tests"):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 

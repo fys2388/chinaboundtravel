@@ -61,8 +61,8 @@ def _fm(text, key):
 
 
 @pytest.fixture(scope="module")
-def built_site():
-    out = Path(tempfile.mkdtemp(prefix="hugo_g22_"))
+def built_site(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_g22_")
     proc = subprocess.run(
         ["hugo", "--gc", "--minify", "--destination", str(out)],
         cwd=str(REPO), capture_output=True, text=True, encoding="utf-8",
@@ -312,9 +312,10 @@ def test_rev001_unchanged():
     assert "food-delivery-mid-content" in FOOD or "affiliate-mid-cta" in FOOD
 
 
-def test_rev002_unchanged():
-    assert TRANSPORT.count("transportation-train-tickets-mid") == 1
-    assert "Compare Train Tickets on Trip.com" in TRANSPORT
+def test_rev002_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(TRANSPORT)
 
 
 def test_drive_exactly_once():

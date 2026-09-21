@@ -170,17 +170,18 @@ def test_risk_report_artifact():
 # ---------------------------------------------------------------------------
 # REV002 protection + invariants
 # ---------------------------------------------------------------------------
-def test_rev002_still_running():
-    with (REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv").open(encoding="utf-8") as f:
-        row = next(csv.DictReader(f))
-    assert row["status"] == "RUNNING"
+def test_rev002_still_retired():
+    from _rev002_retired import assert_rev002_registry_retired
+
+    row = assert_rev002_registry_retired(REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv")
     assert row["minimum_observation_days"] == "28"
 
 
-def test_rev002_cta_not_modified():
+def test_rev002_cta_retired():
+    from _rev002_retired import assert_rev002_retired
+
     post = (REPO / "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md")
-    text = post.read_text(encoding="utf-8")
-    assert text.count("transportation-train-tickets-mid") == 1
+    assert_rev002_retired(post.read_text(encoding="utf-8"))
 
 
 def test_drive_and_ga4_unchanged():

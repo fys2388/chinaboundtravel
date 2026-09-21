@@ -32,7 +32,10 @@ PILOT_POSTS = {
     "content/posts/western-sichuan-overland-camping-route.md": {
         "content_id": "cbt-80f6c218ad94",
         "canonical": SITE + "/posts/western-sichuan-overland-camping-route/",
-        "title": "Western Sichuan Overland Camping Route: 7 Days",
+        # 2026-09-21：标题经深度优化改写（原 "Western Sichuan Overland Camping
+        # Route: 7 Days"）。本测试锁的是结构（content_id/canonical/h2）与
+        # 旧 persona 声明的移除，不是标题字面量。
+        "title": "Western Sichuan Overland Camping: 7-Day Route",
         "h2": [
             "## Why Western Sichuan?",
             "## Day 1: Chengdu to Kangding (280km, ~5 hours)",
@@ -61,7 +64,7 @@ PILOT_POSTS = {
         "title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
         "h2": [
             "## Li River Cruise: Your Core Decision",
-            "## Best Time to Visit",
+            "## Top-rated Time to Visit",
             "## 3-Day Itinerary",
             "## What to Eat (With Prices)",
             "## How to Get There",
@@ -85,11 +88,11 @@ PILOT_POSTS = {
     "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md": {
         "content_id": "cbt-550a6e3e929c",
         "canonical": SITE + "/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
-        "title": "Sichuan Hotpot Guide: History & Best Restaurants",
+        "title": "Sichuan Hotpot: History & Best Restaurants",
         "h2": [
             "## History of Sichuan Hotpot",
             "## Cultural Significance of Sichuan Hotpot",
-            "## Best Restaurants for Sichuan Hotpot",
+            "## Top-rated Restaurants for Sichuan Hotpot",
             "## Tips for Enjoying Sichuan Hotpot",
             "## Conclusion",
         ],

@@ -18,8 +18,8 @@ SITEMAP_EXPECTED = "https://www.chinaboundtravel.com/sitemap.xml"
 
 
 @pytest.fixture(scope="module")
-def built_robots():
-    out = Path(tempfile.mkdtemp(prefix="hugo_robots_"))
+def built_robots(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_robots_")
     try:
         proc = subprocess.run(
             ["hugo", "--gc", "--minify", "--destination", str(out)],

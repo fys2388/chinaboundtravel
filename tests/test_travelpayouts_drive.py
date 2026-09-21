@@ -27,8 +27,8 @@ DRIVE_PAT = re.compile(re.escape(DRIVE_URL))
 
 
 @pytest.fixture(scope="module")
-def built_site():
-    out = Path(tempfile.mkdtemp(prefix="hugo_drive_"))
+def built_site(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_drive_")
     proc = subprocess.run(
         ["hugo", "--gc", "--minify", "--destination", str(out)],
         cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")

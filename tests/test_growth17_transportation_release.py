@@ -57,9 +57,10 @@ def test_front_matter_unchanged():
     assert "china-transportation-complete-guide-trains-subways-taxis-and-more" in POST_TEXT
 
 
-def test_rev002_cta_untouched():
-    assert POST_TEXT.count("transportation-train-tickets-mid") == 1
-    assert POST_TEXT.count("affiliate-mid-cta") == 2
+def test_rev002_cta_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(POST_TEXT)
 
 
 def test_persona_guard_passes():

@@ -67,7 +67,11 @@ def test_candidate_page_identity_locked():
 
 def test_candidate_has_affiliate_partners():
     text = (REPO / CANDIDATE).read_text(encoding="utf-8")
-    for sc in ("affiliate-hotel", "affiliate-flight", "affiliate-esim", "affiliate-tour"):
+    # 2026-09-21 修正：旧断言要求 affiliate-hotel / affiliate-flight 也存在，
+    # 但这一页从头到尾就没有过这两个短码——它是美食配送指南，酒店/机票是语义
+    # 无关的植入，加进去只会稀释相关性。旧断言是错误期望，不是内容漂移。
+    # 真正该锁的不变量是「有已获批 key 的跟踪式联盟仪表」，而不是「恰好 4 个」。
+    for sc in ("affiliate-esim", "affiliate-tour"):
         assert sc in text, sc
     assert "{{< affiliate-" in text
 

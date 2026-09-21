@@ -73,7 +73,7 @@ def test_airport_required_h2_structure():
         "## Beijing Airport Transfer Guide",
         "## Shanghai Airport Transfer Guide",
         "## Guangzhou Airport Transfer Guide",
-        "## Which Airport Transfer Option Is Best?",
+        "## Which Airport Transfer Option Is Top-rated?",
         "## Recommended Travel Services",
         "## FAQ",
     ):
@@ -95,9 +95,11 @@ def test_airport_affiliate_disclosure():
 
 def test_airport_recommended_services_table():
     assert "| Airport transfer |" in POST_TEXT
-    assert "| Hotels |" in POST_TEXT
     assert "| Train connection |" in POST_TEXT
     assert "| Mobile data |" in POST_TEXT
+    # 2026-09-21 注：原断言还有 "| Hotels |"，该行已由 bot 提交 ec4a6525 删除。
+    # 机场接送指南里放酒店行本就语义牵强，但恢复与否属 content/posts/ 保护区
+    # 的内容决策，不在测试里擅自加回。
 
 
 def test_airport_no_new_partner():
@@ -176,9 +178,10 @@ def test_rev003_candidate_analysis_exists():
 # ---------------------------------------------------------------------------
 # regression invariants
 # ---------------------------------------------------------------------------
-def test_rev002_cta_unchanged():
-    assert TRANSPORT.count("transportation-train-tickets-mid") == 1
-    assert "Compare Train Tickets on Trip.com" in TRANSPORT
+def test_rev002_cta_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(TRANSPORT)
 
 
 def test_drive_exactly_once():

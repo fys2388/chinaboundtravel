@@ -55,8 +55,8 @@ def _read(name):
 
 
 @pytest.fixture(scope="module")
-def built_site():
-    out = Path(tempfile.mkdtemp(prefix="hugo_g07b_"))
+def built_site(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_g07b_")
     proc = subprocess.run(
         ["hugo", "--gc", "--minify", "--destination", str(out)],
         cwd=str(REPO),

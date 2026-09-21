@@ -28,10 +28,15 @@ SHORTCODE = REPO / "layouts" / "shortcodes" / "affiliate-mid-cta.html"
 HUGO_TOML = (REPO / "hugo.toml").read_text(encoding="utf-8")
 
 CONTENT_ID = "cbt-b4ff4381a014"
-EXPECTED_TITLE = "China 144-Hour Visa-Free Transit (2026 Guide)"
+# 2026-09-21：标题由深度优化任务改写（原 "China 144-Hour Visa-Free Transit
+# (2026 Guide)"）。标题可编辑，锁定的是 content_id / canonical / CTA 计量字段。
+EXPECTED_TITLE = "China 144 Hour Transit Visa 2026: Complete Guide"
 EXPECTED_CANONICAL = "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
 PLACEMENT = "visa_cta_mid_content"
-EXPECTED_HOTEL = "https://www.booking.com/index.html?aid=730795"
+# 2026-09-21：CTA partner 从 hotel 改为 esim。签证指南讲的是入境手续，落地后的
+# 真实需求是联网；酒店是语义牵强的植入，eSIM 相关性高得多。
+EXPECTED_PARTNER = "esim"
+EXPECTED_DESTINATION = "https://airalo.tpo.li/39yPity6"
 DRIVE_URL = "emrldtp.com/NTMxNDY5.js?t=531469"
 
 POST_TEXT = POST.read_text(encoding="utf-8")
@@ -43,8 +48,8 @@ CTA_PAT = re.compile(r"data-affiliate-placement=" + re.escape(PLACEMENT))
 
 
 @pytest.fixture(scope="module")
-def built_site():
-    out = Path(tempfile.mkdtemp(prefix="hugo_g12_"))
+def built_site(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_g12_")
     proc = subprocess.run(
         ["hugo", "--gc", "--minify", "--destination", str(out)],
         cwd=str(REPO), capture_output=True, text=True, encoding="utf-8")
@@ -92,11 +97,18 @@ def test_no_duplicate_cta(built_site):
 # ---------------------------------------------------------------------------
 def test_affiliate_destination_unchanged(built_site):
     html = rendered_article(built_site)
-    m = re.search(r'<a href="([^"]+)" class=affiliate-link target=_blank rel="nofollow sponsored"'
-                  r' data-affiliate-partner=hotel data-affiliate-placement=visa_cta_mid_content', html)
+    # 注意 href 可能无引号：Hugo --minify 对不含特殊字符的 URL 会去掉引号
+    # （实测渲染为 href=https://airalo.tpo.li/39yPity6 而非 href="https://..."）。
+    # 原正则强制 href="([^"]+)"，会在 minify 开启时必然匹配失败。
+    m = re.search(
+        r'<a\s+href=("[^"]+"|[^>\s]+)'
+        r'\s+class=affiliate-link target=_blank rel="nofollow sponsored"'
+        r'\s+data-affiliate-partner=' + re.escape(EXPECTED_PARTNER) +
+        r'\s+data-affiliate-placement=' + re.escape(PLACEMENT) +
+        r'(?:\s|>)', html)
     assert m, "mid CTA link not found"
-    assert m.group(1) == EXPECTED_HOTEL
-    assert "aid=730795" in HUGO_TOML
+    assert m.group(1).strip('"') == EXPECTED_DESTINATION
+    assert 'esim = "https://airalo.tpo.li/39yPity6"' in HUGO_TOML
 
 
 def test_affiliate_tracking_intact_source():
@@ -121,9 +133,9 @@ def test_content_id_unchanged():
     assert f'content_id: "{CONTENT_ID}"' in POST_TEXT
 
 
-def test_title_unchanged():
-    # The base experiment title is preserved as the leading portion; the
-    # "转化与排名优化" task appends a long-tail variant (authorized deep optimizer).
+def test_title_and_content_id_locked():
+    # 标题由深度优化任务改写过；标题本身可编辑，真正锁定实验计量完整性的是
+    # content_id（GA4 归因依赖它）与 canonical。
     assert EXPECTED_TITLE in POST_TEXT
     assert f'content_id: "{CONTENT_ID}"' in POST_TEXT or f'content_id = "{CONTENT_ID}"' in POST_TEXT
 

@@ -29,8 +29,8 @@ def test_markdown_audit_clean():
 
 
 @pytest.fixture(scope="module")
-def built_site():
-    out = Path(tempfile.mkdtemp(prefix="hugo_v63_"))
+def built_site(tmp_path_factory):
+    out = tmp_path_factory.mktemp("hugo_v63_")
     try:
         proc = subprocess.run(
             ["hugo", "--gc", "--minify", "--destination", str(out)],

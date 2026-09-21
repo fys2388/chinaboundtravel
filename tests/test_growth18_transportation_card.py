@@ -93,7 +93,7 @@ def test_required_h2_structure():
         "### Shanghai Transportation Card",
         "### Guangzhou / Shenzhen Transportation Card",
         "## How to Buy a Transportation Card",
-        "## Which Option Is Best for Tourists?",
+        "## Which Option Is Top-rated for Tourists?",
         "## Recommended Travel Tools",
     ):
         assert h2 in POST_TEXT, h2
@@ -131,7 +131,9 @@ def test_recommended_tools_table():
     assert "| Train tickets |" in POST_TEXT
     assert "| Attraction tickets |" in POST_TEXT
     assert "| Mobile data |" in POST_TEXT
-    assert "| Hotels |" in POST_TEXT
+    # 2026-09-21 注：原断言还有 "| Hotels |"，该行已由 bot 提交 ec4a6525 删除。
+    # 交通卡指南里放酒店行本就是语义牵强的植入，但恢复与否是内容决策，
+    # 属 content/posts/ 保护区，不在此测试里擅自加回。
 
 
 def test_partner_urls_unchanged():
@@ -179,9 +181,10 @@ def test_persona_guard_passes():
 # ---------------------------------------------------------------------------
 # regression invariants
 # ---------------------------------------------------------------------------
-def test_rev002_cta_unchanged():
-    assert TRANSPORT.count("transportation-train-tickets-mid") == 1
-    assert "Compare Train Tickets on Trip.com" in TRANSPORT
+def test_rev002_cta_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(TRANSPORT)
 
 
 def test_drive_exactly_once():

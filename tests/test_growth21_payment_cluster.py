@@ -166,9 +166,10 @@ def test_rev001_unchanged():
     assert "food-delivery-mid-content" in FOOD or "affiliate-mid-cta" in FOOD
 
 
-def test_rev002_unchanged():
-    assert TRANSPORT.count("transportation-train-tickets-mid") == 1
-    assert "Compare Train Tickets on Trip.com" in TRANSPORT
+def test_rev002_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(TRANSPORT)
 
 
 def test_drive_exactly_once():

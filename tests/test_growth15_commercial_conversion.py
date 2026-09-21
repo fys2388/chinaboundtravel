@@ -4,7 +4,8 @@ Covers (deterministic, no network):
 - conversion scoring model (traffic 25 / intent 30 / cta match 25 / gap 15 / risk 5)
 - top-3 eligibility (impressions > 50, indexed, commercial query)
 - URL dedupe + ground-truth content_id
-- REV002 CTA (exactly once, correct placement, Trip.com partner)
+- REV002 CTA (retired 2026-09-21: Trip.com affiliate program not approved,
+  so the affiliate instrumentation was removed and replaced by an editorial link)
 - SEO invariants (URL/canonical/content_id/affiliate unchanged)
 - persona guard on new CTA copy
 - experiment artifacts (registry / baseline / log)
@@ -114,21 +115,24 @@ def test_true_content_id_map_consistent():
 # ---------------------------------------------------------------------------
 # REV002 CTA
 # ---------------------------------------------------------------------------
-def test_rev002_cta_exists_once():
-    assert POST_TEXT.count("affiliate-mid-cta") == 2  # open + close
-    assert POST_TEXT.count("transportation-train-tickets-mid") == 1
+def test_rev002_cta_retired():
+    """REV002 的联盟 CTA 已于 2026-09-21 撤下：Trip.com 计划未获批。
+
+    三个旧测试（cta_exists_once / partner_trip / placement_after_booking_section）
+    合并成一个——它们断言的正是被故意删掉的东西，拆成三个只会重复同一个断言。
+    新断言更严格：撤下必须保持住，且编辑性推荐必须保留。
+    """
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(POST_TEXT)
 
 
-def test_rev002_partner_trip():
-    assert 'partner="trip"' in POST_TEXT
-    assert "Trip.com" in POST_TEXT
-
-
-def test_rev002_placement_after_booking_section():
+def test_rev002_editorial_link_after_booking_section():
+    """编辑性外链仍在原 CTA 的位置：购票章节之后、车站生存指南之前。"""
     buy = POST_TEXT.find("### How to Buy Tickets")
-    cta = POST_TEXT.find("transportation-train-tickets-mid")
+    link = POST_TEXT.find("Compare Train Tickets on Trip.com")
     station = POST_TEXT.find("### Station Survival Guide")
-    assert buy < cta < station
+    assert buy < link < station
 
 
 def test_rev002_affiliate_url_unchanged():
@@ -157,13 +161,14 @@ def test_rev002_artifacts_exist():
 
 
 def test_rev002_registry_schema():
-    with (REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv").open(encoding="utf-8") as f:
-        row = next(csv.DictReader(f))
-    assert row["experiment_id"] == "REV002"
+    from _rev002_retired import assert_rev002_registry_retired
+
+    row = assert_rev002_registry_retired(REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv")
     assert row["content_id"] == REV002_CID
-    assert row["status"] == "RUNNING"
-    assert row["decision"] == "PENDING"
     assert row["minimum_observation_days"] == "28"
+    # primary_metric 保留原值：退役实验的指标定义不应被抹掉，
+    # 否则将来 Trip.com 真获批时无法复现这次实验的口径。
+    assert row["primary_metric"] == "affiliate_click_rate"
 
 
 def test_rev002_baseline_schema():

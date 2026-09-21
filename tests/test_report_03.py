@@ -64,22 +64,37 @@ def test_no_false_red_for_zero_new_articles():
 
 
 def test_zero_revenue_never_converted_to_zero_dollar():
-    """Revenue 必须保持真实口径：无凭据→NULL/NOT_AVAILABLE；有凭据→LIVE 真实值（含 0）。
-    绝不允许把未接入的 NULL 伪造成 $0。"""
+    """Revenue 必须保持真实口径，绝不把未接入的 NULL 伪造成 $0。
+
+    只断言代码的口径行为，不断言活体 API 是否成功——网络可靠性不是代码属性。
+
+    旧版本在 TRAVELPAYOUTS_API_TOKEN 存在时硬断言 data_source_type == "LIVE"，
+    把「有凭据」和「API 调用成功」当成同一件事。实际 Travelpayouts 一次
+    SSL 握手抖动（SSLEOFError）就让本测试假红，而回归闸门会把假红当成
+    「新增失败」上报——噪声会把真信号淹没掉。
+    """
     snap = rke.build_snapshot(AS_OF)
     rmap = {k["name"]: k for k in snap["domains"]["revenue"]["kpis"]}
-    rev = rmap["revenue"]
-    if os.getenv("TRAVELPAYOUTS_API_TOKEN"):
-        # 有凭据：revenue 域 LIVE，0 是真实返回，不允许把 NULL 当 $0（LIVE 0 是真实值）
-        assert rev["data_source_type"] == "LIVE"
-        assert isinstance(rev["value"], (int, float))
-    else:
-        # 无凭据：必须保持 NULL / NOT_AVAILABLE，绝不显示 $0
-        assert rev["value"] is None
-        assert rev["data_source_type"] == "NOT_AVAILABLE"
-        assert rev["status"] in ("REVENUE_NOT_AVAILABLE", "NOT_AVAILABLE")
+
+    # 核心口径不变量，两个方向都查：
+    #   有数字 → 必来自 LIVE 源（不是 LIVE 就造不出数，那是伪造）
+    #   是 LIVE → 必有真实返回值（LIVE 却返回 None 说明状态标记错了）
+    for k in rmap.values():
+        if k["value"] is not None:
+            assert k["data_source_type"] == "LIVE", (
+                f"{k['name']}: value={k['value']} 但 data_source_type="
+                f"{k['data_source_type']}——数字不能来自非 LIVE 源")
+        else:
+            assert k["data_source_type"] != "LIVE", (
+                f"{k['name']}: data_source_type=LIVE 但 value=None——"
+                "LIVE 必须有真实返回值")
+
+    # 无凭据时必须整体保持 NOT_AVAILABLE，不能部分 KPI 飘出数字
+    if not os.getenv("TRAVELPAYOUTS_API_TOKEN"):
         for k in rmap.values():
             assert k["value"] is None, f"{k['name']} should be NULL"
+            assert k["data_source_type"] == "NOT_AVAILABLE"
+        assert rmap["revenue"]["status"] in ("REVENUE_NOT_AVAILABLE", "NOT_AVAILABLE")
 
 
 def test_gsc_zero_yesterday_not_red():

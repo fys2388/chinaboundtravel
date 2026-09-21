@@ -29,21 +29,17 @@ CLUSTER = {"transport": TRANSPORT, "hsr": HSR, "card": CARD, "airport": AIRPORT}
 # ---------------------------------------------------------------------------
 # REV002 freeze
 # ---------------------------------------------------------------------------
-def test_rev002_cta_unchanged():
-    assert TRANSPORT.count("transportation-train-tickets-mid") == 1
-    assert "Compare Train Tickets on Trip.com" in TRANSPORT
-    assert "affiliate-mid-cta" in TRANSPORT
+def test_rev002_cta_retired():
+    from _rev002_retired import assert_rev002_retired
+
+    assert_rev002_retired(TRANSPORT)
 
 
-def test_rev002_partner_unchanged():
-    assert 'partner="trip"' in TRANSPORT or "partner = \"trip\"" in TRANSPORT or "partner=\"trip\"" in TRANSPORT
+def test_rev002_registry_retired():
+    from _rev002_retired import assert_rev002_registry_retired
 
-
-def test_rev002_registry_running():
-    with (REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv").open(encoding="utf-8") as f:
-        row = next(csv.DictReader(f))
-    assert row["experiment_id"] == "REV002"
-    assert row["status"] == "RUNNING"
+    row = assert_rev002_registry_retired(REPO / "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv")
+    # 指标定义保留，便于将来 Trip.com 获批时按同一口径复现
     assert row["primary_metric"] == "affiliate_click_rate"
 
 
