@@ -11,7 +11,7 @@ slug: "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture"
 geo: "AU"
 draft: false
 audit_status: "pass2"
-description: "Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authentic cultural experiences."
+description: "Explore Shanghai beyond the Bund: French Concession streets, Tianzifang alleys, local xiaolongbao, and off-the-trail cultural spots."
 canonicalURL: "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/"
 ShowToc: "true"
 TocOpen: "false"

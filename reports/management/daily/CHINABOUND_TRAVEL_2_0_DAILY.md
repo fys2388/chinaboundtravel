@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-09-22 (Asia/Shanghai)
-- as_of: 2026-09-22
+- Generated: 2026-09-23 (Asia/Shanghai)
+- as_of: 2026-09-23
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -13,7 +13,7 @@
 
 - Published posts: 64 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
-- GSC clicks 28d: 0 clicks | Impressions: 234 impressions
+- GSC clicks 28d: 0 clicks | Impressions: 404 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)
 - Drive: ACTIVE (DRIVE-001 RUNNING since 2026-08-16)
 - Overall alert level: YELLOW (low sample + open recovery queues, see ALERTS.md)
@@ -27,10 +27,10 @@ Daily window metrics are NOT available (no daily GA4 pull). 28d rolling figures 
 
 | KPI | Value | Baseline | Source type | Status |
 |---|---|---|---|---|
-| users_28d | 244 users | NULL | LIVE | DUPLICATE_DESTINATION |
+| users_28d | 248 users | NULL | LIVE | DUPLICATE_DESTINATION |
 | sessions_28d | 166 sessions | 162 | CACHED | DUPLICATE_DESTINATION |
 | pageviews_28d | 374 pageviews | 365 | CACHED | DUPLICATE_DESTINATION |
-| engagement_rate_28d | 0.39275766016713093 % | NULL | LIVE | DUPLICATE_DESTINATION |
+| engagement_rate_28d | 0.39285714285714285 % | NULL | LIVE | DUPLICATE_DESTINATION |
 
 ## 2. SEO changes
 
@@ -40,26 +40,26 @@ Change vs previous day: **INSUFFICIENT_SAMPLE** (no prior daily snapshot).
 
 | KPI | Value | Source type | Status |
 |---|---|---|---|
-| gsc_clicks_28d | 0 clicks | CACHED | STALE_SOURCE |
-| gsc_impressions_28d | 234 impressions | CACHED | STALE_SOURCE |
-| gsc_ctr_28d | 0.0 % | CACHED | INSUFFICIENT_SAMPLE |
-| gsc_avg_position_28d | 56.5 position | CACHED | STALE_SOURCE |
+| gsc_clicks_28d | 0 clicks | LIVE | OK |
+| gsc_impressions_28d | 404 impressions | LIVE | OK |
+| gsc_ctr_28d | 0.0 % | LIVE | INSUFFICIENT_SAMPLE |
+| gsc_avg_position_28d | 71.5 position | LIVE | OK |
 | indexed_pages | 69 pages | CACHED | STALE_SOURCE |
 | not_indexed_pages | 89 pages | CACHED | STALE_SOURCE |
 | inspected_urls | 98 urls | CACHED | STALE_SOURCE |
 | inspection_pass | 49 urls | CACHED | STALE_SOURCE |
 | page_level_clicks_28d | 2 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | page_level_impressions_28d | 1073 impressions | CACHED | STALE_SOURCE |
-| pages_newly_indexed | 1 pages | LIVE | OK |
-| pages_losing_visibility | 2 pages | LIVE | OK |
+| pages_newly_indexed | 0 pages | LIVE | OK |
+| pages_losing_visibility | 0 pages | LIVE | OK |
 
 Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); China Transportation Guide for European Travelers (75.0, B); China Transportation Guide: Trains, Subways & Taxis (75.0, B)
 
 ## 3. Indexing changes
 
 - Indexed: 69 pages | Not indexed: 89 pages (GSC UI 2026-08-16, CACHED)
-- Newly indexed this period: 1 (requires prior snapshot: INSUFFICIENT_SAMPLE)
-- Losing visibility: 2 (INSUFFICIENT_SAMPLE)
+- Newly indexed this period: 0 (requires prior snapshot: INSUFFICIENT_SAMPLE)
+- Losing visibility: 0 (INSUFFICIENT_SAMPLE)
 
 ## 4. Revenue / affiliate events
 
@@ -88,10 +88,10 @@ All experiments in observation window; no WIN/LOSE declarations.
 
 | ID | Type | Page | Start | Days | Primary metric | Baseline | Current | Delta | Sample | Status |
 |---|---|---|---|---|---|---|---|---|---|---|
-| REV001 | CTA_PLACEMENT | Chinese Food Delivery: Meituan & Ele.me Guide | - | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
-| REV002 | CTA_PLACEMENT | China Transportation Guide | - | - | affiliate_click_rate | NULL | NULL | NULL | - | PLANNED |
+| REV001 | CTA_PLACEMENT | Chinese Food Delivery: Meituan & Ele.me Guide | 2026-08-16 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | RUNNING |
+| REV002 | CTA_PLACEMENT | China Transportation Guide | - | - | affiliate_click_rate | NULL | NULL | NULL | - | RETIRED |
 | REV003 | CTA_COPY | China Transportation Guide | - | - | affiliate_click_rate | NULL | NULL | NULL | - | PLANNED |
-| DRIVE-001 | SITE_WIDE_DRIVE | Site-wide Travelpayouts Drive | - | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
+| DRIVE-001 | SITE_WIDE_DRIVE | Site-wide Travelpayouts Drive | 2026-08-16 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | RUNNING |
 | GROWTH05-CTR-001 | CTR_TITLE_META | 144-Hour Visa | - | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | PLANNED |
 | GROWTH07B-TECH-001 | TECHNICAL_INDEX_FIX | High-Speed Rail Booking | 2026-08-16 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | WAITING_RECRAWL |
 | GROWTH07C-INDEX-001 | INDEX_RECOVERY | WeChat Pay Weak | 2026-08-16 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | INSUFFICIENT_SAMPLE | WAITING_RECRAWL |

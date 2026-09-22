@@ -394,6 +394,28 @@ def run_audit(base_url: str, output_json: bool = False) -> int:
         "api_tests": api_results,
         "page_checks": page_results,
         "mailerlite": ml_result,
+        # AUDIT-RV-003: summary.all_passed 只统计测试用例的 HTTP 状态码是否匹配
+        # expected_status（HTTP 200 + success=true 即通过），不区分「PDF 真的
+        # 送达了」与「Resend 拒绝向测试邮箱发信」。测试邮箱是 @example.com
+        # （RFC 6761 保留域名），Resend 强制返回 422；真实用户邮箱不受此限。
+        # delivery_unverifiable=true 表示审计无法验证 PDF 送达，需要人工
+        # 登录 Resend / MailerLite 后台核实。不 claim 真实用户收不到 PDF。
+        "delivery_unverifiable": ep["resend"] in (
+            "configured_but_rejected_by_provider", "unknown",
+        ),
+        "delivery_evidence": {
+            "test_email_domain": "example.com",
+            "resend_status": ep["resend"],
+            "resend_note": (
+                "Resend 拒绝向 RFC 6761 保留域名（example.com）发信并返回 422；"
+                "该拒绝恰恰证明 Resend 已配置并真的发出了请求。真实用户邮箱"
+                "不在保留域名内，不受此限。"
+                if ep["resend"] == "configured_but_rejected_by_provider" else
+                "Resend 未配置或状态未知，PDF 送达无法验证"
+                if ep["resend"] in ("not_configured", "unknown") else
+                "Resend 已配置且已送达（delivered_pdf=true）"
+            ),
+        },
         "summary": {
             "total": total,
             "passed": passed,

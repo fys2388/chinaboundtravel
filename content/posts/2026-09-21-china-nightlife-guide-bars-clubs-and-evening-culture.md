@@ -16,8 +16,8 @@ categories:
 geo: "US"
 draft: false
 audit_status: "pass2"
-summary: "China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China."
-description: "China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China."
+summary: "From Beijing's Sanlitun to Shanghai's Xintiandi, Chunxi Road and Guangzhou: a city-by-city shortlist of China's liveliest neighborhoods after dark."
+description: "Where to go after dark in China: Sanlitun, Xintiandi, Chunxi Road, venue types, cover charges, dress code and safety tips for first-time visitors."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/"
 ShowToc: "true"
 TocOpen: "false"

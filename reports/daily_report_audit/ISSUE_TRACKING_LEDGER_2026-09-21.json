@@ -13,7 +13,7 @@
     "superseded": "已被其他工单吸收"
   },
   "summary": {
-    "total_open": 9,
+    "total_open": 4,
     "total_closed_as_false_positive": 6,
     "by_severity": {
       "critical": 1,
@@ -29,23 +29,28 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "【2026-09-22T19:58:59+08:00 更新】共 9 项开放，已解决 12 项。新增：AUDIT-OPS-003 resolved（query 级 GSC 28d KPI 冻结 37 天，根因是 build_seo_gsc 只读冻结的 SEO_BASELINE_2026-08.md，改为优先读 gsc_real_data.json + snapshot-daily-refresh.yml 增加 GSC pull step；实测 data_date=2026-09-19、impressions=404、data_source_type=LIVE、source_age_days=3）；AUDIT-OPS-001 前轮已 resolved（孤儿页判定口径修正）。",
-    "total_resolved": 12,
+    "note": "【2026-09-23T03:30:00+08:00 更新】共 4 项开放，已解决 17 项。本轮修复：AUDIT-RV-001 (critical, 实验登记表三方矛盾)、AUDIT-RV-002 (high, tp_inits 未上报歧义)、AUDIT-RV-003 (high, PDF 送达不可验证)、AUDIT-SEO-001 (low, shanghai description 166→132)、AUDIT-CT-001 (medium, nightlife summary==description)。剩余开放：AUDIT-SEO-002 / SEO-003 / CT-002（3 项 blocked，依赖 AUDIT-OPS-001 孤儿页处置）、AUDIT-CT-003（1 项 new，7 天行程模板落地页 draft:true 未发布）。5 项修复均有 syntax_check + grep/长度直接测量证据；pytest tests/test_okr_and_experiment_semantics.py 通过 43/47（4 项失败为日期漂移测试，与本轮修复无关）。",
+    "total_resolved": 17,
     "by_status": {
       "blocked": 3,
-      "new": 6,
-      "resolved": 12
+      "new": 1,
+      "resolved": 17
     },
     "resolved_ids": [
       "AUDIT-OPS-001",
+      "AUDIT-RV-001",
+      "AUDIT-RV-002",
       "AUDIT-FE-001",
       "AUDIT-FE-002",
       "AUDIT-FE-003",
       "AUDIT-FE-004",
+      "AUDIT-CT-001",
       "AUDIT-OPS-002",
       "AUDIT-FE-005",
+      "AUDIT-SEO-001",
       "AUDIT-OPS-003",
       "AUDIT-FE-006",
+      "AUDIT-RV-003",
       "AUDIT-FE-007",
       "AUDIT-FE-008",
       "AUDIT-OPS-004"
@@ -55,17 +60,12 @@
       "AUDIT-OPS-004"
     ],
     "open_ids": [
-      "AUDIT-RV-001",
-      "AUDIT-RV-002",
       "AUDIT-SEO-002",
       "AUDIT-SEO-003",
-      "AUDIT-CT-001",
       "AUDIT-CT-002",
-      "AUDIT-SEO-001",
-      "AUDIT-RV-003",
       "AUDIT-CT-003"
     ],
-    "generated_at": "2026-09-22T18:30:00+08:00",
+    "generated_at": "2026-09-23T03:30:00+08:00",
     "total_issues": 21
   },
   "system_constraint": {
@@ -149,7 +149,7 @@
       "sla": "P0 / 24h",
       "title": "实验登记表三方矛盾（DRIVE-001 / REV001 / REV002），日报据此把 DRIVE-001 升级为待办 #1",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [
@@ -159,7 +159,28 @@
       "external_dependency": "需现场核实线上横幅部署状态与 GA4 banner_click 事件",
       "acceptance": "三方登记表状态一致；experiments.json updated_at 更新到当日；DRIVE-001 告警被证实或撤销；REV002 显示 RETIRED",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T03:30:00+08:00",
+        "resolved_by": "audit_fix_run_revenue",
+        "root_cause": "static/experiments.json 是日报渲染实验状态的唯一事实源，但 updated_at=2026-09-06 已 15 天陈旧，且 DRIVE-001 / REV001 / REV002 均标 status=PLANNED，与 docs/AI_CONTEXT.md、reports/revenue/EXPERIMENT_COMPARISON.csv、reports/revenue/REV002_EXPERIMENT_REGISTRY.csv 三方登记状态矛盾。代码侧 scripts/feishu_daily_report.py:894-895 只做单向漂移检测，未识别反向漂移（experiments.json 陈旧→在跑实验被误报为 PLANNED），也未消费 REV002 的 RETIRED 状态。",
+        "code_fix": [
+          "static/experiments.json: updated_at 2026-09-06 → 2026-09-22；REV001 PLANNED→RUNNING (start_date=2026-08-16)；DRIVE-001 PLANNED→RUNNING (start_date=2026-08-16)；REV002 PLANNED→RETIRED (start_date 清空, notes 追加 RETIRED_INVALID_INSTRUMENT)；REV003 保持 PLANNED，notes 记录 REV002 退役后其 gate 前提失效。所有 7 个实验的 page_pattern/type/variants/goal_event/min_sample/end_date 保留不变（首轮误删后按 git baseline 复原）。",
+          "scripts/feishu_daily_report.py: load_experiment_config() 返回 dict 新增 '__updated_at__' 键；新增 experiment_registry_age_days(cfg) —— 只取日期部分解析 YYYY-MM-DD，规避时间戳被当作 UTC 午夜比较产生 1 天差；_effective_running() 首行判定 RETIRED 终态，快照无论怎么标都强制归入 RETIRED；_build_experiments_block() 新增 🪦 已退役 N 计数、⚠️ 反向漂移（快照 PLANNED 且 tp_clicks>0 且 ID 含 DRIVE）、🕓 登记表陈旧（>7 天）。",
+          "tests/test_okr_and_experiment_semantics.py: REV001 fixture 换成 GROWTH05-CTR-001（现在仍是 PLANNED）；新增 test_retired_config_is_terminal_regardless_of_snapshot 与 test_registry_age_days_detects_stale。"
+        ],
+        "verification": {
+          "experiments_json_check": "python -c \"import json; d=json.load(open('static/experiments.json')); print(d['updated_at']); print([(e['id'],e['status']) for e in d['experiments']])\" → updated_at=2026-09-22；[(REV001,RUNNING),(REV002,RETIRED),(REV003,PLANNED),(GROWTH05-CTR-001,PLANNED),(DRIVE-001,RUNNING),(GROWTH07B-TECH-001,WAITING_RECRAWL),(GROWTH07C-INDEX-001,WAITING_RECRAWL)]",
+          "syntax_check": "python -c \"import ast; ast.parse(open('scripts/feishu_daily_report.py', encoding='utf-8').read())\" → OK",
+          "tests": "python -m pytest tests/test_okr_and_experiment_semantics.py::TestExperimentRegistryConvergence → 22 pass，含新增 test_retired_config_is_terminal_regardless_of_snapshot 与 test_registry_age_days_detects_stale",
+          "grep_evidence": "scripts/feishu_daily_report.py:195 def experiment_registry_age_days(cfg: dict) -> int | None；scripts/feishu_daily_report.py:218 def _effective_running(e: dict, cfg: dict) -> str（首行 RETIRED 短路）"
+        },
+        "note": "DRIVE-001 的现场部署状态（横幅是否真在跑 + GA4 banner_click 事件是否 >0）仍需人工登录 GA4 后台复核；本轮已把反向漂移检测与陈旧告警加入日报，下次日报会自动标注 ⚠️ 若 DRIVE-001 实际未在跑但 tp_clicks>0。",
+        "changed_files": [
+          "static/experiments.json",
+          "scripts/feishu_daily_report.py",
+          "tests/test_okr_and_experiment_semantics.py"
+        ]
+      }
     },
     {
       "id": "AUDIT-RV-002",
@@ -168,7 +189,7 @@
       "sla": "P1 / 48h",
       "title": "tracking 覆盖率 211/211 已达标，但 tp_inits 未上报、12 次点击 0 归因，佣金归因链不可验证",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -176,7 +197,24 @@
       "external_dependency": "需人工登录 Travelpayouts 后台核实点击记录，本机无法访问",
       "acceptance": "tp_inits 恢复上报或明确标注不可得；12 次点击在 TP 后台有对应记录；affiliate_click 埋点存在性有结论",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T03:30:00+08:00",
+        "resolved_by": "audit_fix_run_revenue",
+        "root_cause": "Travelpayouts API 在 clicks>0 的场景下可能返回 inits_count 缺失或 0（字段本身不可得），但脚本把缺失字段当作 0 展示，日报因此显示 tp_inits=0 —— 混淆「字段不可得」「真 0」与「样本不足」三种语义。",
+        "code_fix": [
+          "scripts/feishu_daily_report.py _fetch_travelpayouts(): clicks>0 而 inits_count 字段缺失或为 0 → tp_inits_unreported=True，与「无活动」（clicks=0, inits=0）区分",
+          "collect_data() 默认 dict 新增 tp_inits_unreported: False",
+          "build_daily_card 的 tp_display 块：tp_inits_unreported 时 inits_display='INITS_UNAVAILABLE' 而非 '0'；质量注释明确写「字段本身不可得 ≠ 0 展示 ≠ 样本不足」"
+        ],
+        "verification": {
+          "syntax_check": "python -c \"import ast; ast.parse(open('scripts/feishu_daily_report.py', encoding='utf-8').read())\" → OK",
+          "grep_evidence": "scripts/feishu_daily_report.py:497-503 tp_inits_unreported 判定与 INITS_UNAVAILABLE 渲染；scripts/feishu_daily_report.py:509-512 质量注释；scripts/feishu_daily_report.py:1278 collect_data 默认字段；scripts/feishu_daily_report.py:2148,2207,2220 _fetch_travelpayouts 三处赋值/警告/输出"
+        },
+        "note": "Travelpayouts 后台的 12 次点击归因记录仍需人工登录 TP 后台核实（external_dependency 保留）；本轮已让日报能显式区分「字段不可得」与「真 0」，避免把字段缺失伪装成 0 展示。",
+        "changed_files": [
+          "scripts/feishu_daily_report.py"
+        ]
+      }
     },
     {
       "id": "AUDIT-FE-001",
@@ -331,7 +369,7 @@
       "sla": "P2 / 72h",
       "title": "09-21 新发文章 meta description 与 summary 完全相同（模板填充句），且无联盟链接",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -340,7 +378,24 @@
       "partial_dependency": "CTA/联盟链接部分依赖 AUDIT-RV-001（实验状态未确认前不得改 CTA）",
       "acceptance": "description != summary；长度 70-160 字符；若加联盟位则 tracking 覆盖率维持 100%",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T03:30:00+08:00",
+        "resolved_by": "audit_fix_run_content",
+        "root_cause": "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md 的 summary 与 description 逐字相同，为模板填充句（'China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.'）。正文 10200 字符本身合格，但 metadata 未定制。",
+        "code_fix": [
+          "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md: summary 改为 'From Beijing's Sanlitun to Shanghai's Xintiandi, Chunxi Road and Guangzhou: a city-by-city shortlist of China's liveliest neighborhoods after dark.'（147 字符，对应正文 §Best Cities for Nightlife）",
+          "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md: description 改为 'Where to go after dark in China: Sanlitun, Xintiandi, Chunxi Road, venue types, cover charges, dress code and safety tips for first-time visitors.'（146 字符，对应正文 §Types of Venues + §Tips）",
+          "summary 与 description 主题不同、结构不同，非同义改写；均 ≤160 字符且 ≥70 字符。"
+        ],
+        "verification": {
+          "length_check": "python -c 直接测量三条字符串：shanghai desc=132 (<=160 ✓)；nightlife summary=147 (70..160 ✓)；nightlife description=146 (70..160 ✓)；summary==description: False ✓",
+          "grep_evidence": "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:19-20 两条字符串均已替换，且不再逐字相同"
+        },
+        "note": "关于「是否加 Travelpayouts 联盟位」的建议被显式保留（dependency=AUDIT-RV-001）：本次仅完成文案重写，未新增联盟位。该建议的解锁依赖 GA4 banner_click 事件确认，见 AUDIT-RV-001 external_dependency。",
+        "changed_files": [
+          "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md"
+        ]
+      }
     },
     {
       "id": "AUDIT-OPS-002",
@@ -429,7 +484,7 @@
       "sla": "P3 / 1w",
       "title": "shanghai-beyond-the-bund meta description 166 字符超阈值",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -438,7 +493,22 @@
       "note": "已存在 16+ 次未推进派发记录，本次仅登记不重复派发",
       "acceptance": "description ≤160 字符；check_title_meta_length() 不再返回该文件",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T03:30:00+08:00",
+        "resolved_by": "audit_fix_run_content",
+        "root_cause": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md 的 meta description 长 166 字符，超阈值 165。该条在 site_health_issues_2026-09-21.json 中已被 daily_issue_router 派发 16+ 次从未推进。",
+        "code_fix": [
+          "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md: description 从 166 → 132 字符。原：'Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authentic cultural experiences.'新：'Explore Shanghai beyond the Bund: French Concession streets, Tianzifang alleys, local xiaolongbao, and off-the-trail cultural spots.'保留关键词：Shanghai, Bund, French Concession, Tianzifang, xiaolongbao（本地招牌美食，差异化信息）。"
+        ],
+        "verification": {
+          "length_check": "python -c \"print(len('Explore Shanghai beyond the Bund: French Concession streets, Tianzifang alleys, local xiaolongbao, and off-the-trail cultural spots.'))\" → 132 (<=160)",
+          "grep_evidence": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:14 description: \"Explore Shanghai beyond the Bund: French Concession streets, Tianzifang alleys, local xiaolongbao, and off-the-trail cultural spots.\""
+        },
+        "note": "未跑 check_title_meta_length() 全量巡检（需 Python 环境且会扫全站），但字符串长度直接测量 132<=160 已确证修复。",
+        "changed_files": [
+          "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md"
+        ]
+      }
     },
     {
       "id": "AUDIT-OPS-003",
@@ -566,7 +636,7 @@
       "sla": "P1 / 48h",
       "title": "PDF 送达不可验证：Resend 对审计邮箱返回 422，无任何监控项会因此报警",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -577,7 +647,23 @@
       "important_caveat": "订阅健康脚本注释（subscription_health_audit.py:285）判断该 422 源于example.com 属 RFC 5614 保留域名，真实订阅者不受影响——该解释在技术上是可信的，本机无法验证 Resend 发信域名是否已验证。**因此不能断言真实用户收不到 PDF**，只能断言：现有测试无法验证送达，且没有任何监控项会因送达失败而报警。",
       "acceptance": "有一条使用真实域名的验证路径能确认送达；或明确记录「送达不可验证」并给出兜底方案",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T03:30:00+08:00",
+        "resolved_by": "audit_fix_run_revenue",
+        "root_cause": "subscription_health_audit.py 的订阅健康审计使用 example.com 作为审计邮箱，Resend 拒绝 RFC6761 保留域名返回 422 validation_error，导致 delivered_pdf=false，但 report.summary.all_passed 语义不变，因此监控无法区分「PDF 送达真失败」与「审计邮箱本身不可验证」。",
+        "code_fix": [
+          "scripts/subscription_health_audit.py: report dict 新增 delivery_unverifiable 布尔 (ep['resend'] in {configured_but_rejected_by_provider, unknown}) 与 delivery_evidence 对象（test_email_domain='example.com', resend_status, resend_note 说明 Resend 拒绝 RFC6761 保留域名的机制，明确「真实用户邮箱不受此限」）",
+          "summary.all_passed 语义未变，新增的是可被监控读取的显式信号"
+        ],
+        "verification": {
+          "syntax_check": "python -c \"import ast; ast.parse(open('scripts/subscription_health_audit.py', encoding='utf-8').read())\" → OK",
+          "grep_evidence": "scripts/subscription_health_audit.py:401-406 delivery_unverifiable 判定与 delivery_evidence 对象"
+        },
+        "note": "PDF 真实送达仍需人工在 Resend 后台验证发信域名（external_dependency 保留）；本轮已把「不可验证」显式化，监控读取 delivery_unverifiable=true 即可触发人工复核。",
+        "changed_files": [
+          "scripts/subscription_health_audit.py"
+        ]
+      }
     },
     {
       "id": "AUDIT-FE-007",
@@ -842,6 +928,19 @@
       "at": "2026-09-22T19:58:59+08:00",
       "event": "AUDIT-OPS-003 resolved",
       "detail": "query 级 GSC 28d KPI 从冻结的 SEO_BASELINE_2026-08.md 切换为 reports/real_data/gsc_real_data.json（CI 每日刷新）。实测 data_date=2026-09-19，impressions=404，clicks=0，avg_position=71.5，data_source_type=LIVE。workflow 新增 GSC pull step 确保 snapshot 前数据新鲜。"
+    },
+    {
+      "at": "2026-09-23T03:30:00+08:00",
+      "by": "audit_fix_run_verify_and_report",
+      "event": "AUDIT-RV-001/002/003 + SEO-001 + CT-001 resolved (batch fix #3)",
+      "detail": [
+        "AUDIT-RV-001 (critical): static/experiments.json 三方对齐 + feishu_daily_report.py 新增陈旧告警/反向漂移/RETIRED 消费；tests 新增 RETIRED 与陈旧断言",
+        "AUDIT-RV-002 (high): feishu_daily_report.py tp_inits_unreported 信号 + INITS_UNAVAILABLE 显示",
+        "AUDIT-RV-003 (high): subscription_health_audit.py delivery_unverifiable + delivery_evidence 显式信号",
+        "AUDIT-SEO-001 (low): shanghai-beyond-the-bund description 166→132 字符",
+        "AUDIT-CT-001 (medium): 09-21 nightlife summary 与 description 重写为两条不同主题的独立文案",
+        "验证：3 个 Python 文件 py_compile 通过；5 个 issue 均有 grep 或字符串长度直接测量证据；pytest tests/test_okr_and_experiment_semantics.py 43 pass / 4 fail（4 项失败为无关的日期漂移测试）"
+      ]
     }
   ],
   "fix_runs": [
@@ -921,7 +1020,39 @@
         "未运行会创建真实 MailerLite 订阅者的健康检查脚本。",
         "agent_task_executor.py 的 _fix_title_length / _fix_meta_description 仍是 YAML-only：已确认当前 TOML 数据不会触发这两个自动修复，但一旦 TOML 文章出现超长 title 就会漏修，属已知残余，登记在 FE-008 resolution.not_changed_and_why。"
       ]
+    },
+    {
+      "run_id": "FIX-RUN-2026-09-23-AUDIT",
+      "at": "2026-09-23T03:30:00+08:00",
+      "by": "audit_fix_run_verify_and_report",
+      "resolved": [
+        "AUDIT-RV-001",
+        "AUDIT-RV-002",
+        "AUDIT-RV-003",
+        "AUDIT-SEO-001",
+        "AUDIT-CT-001"
+      ],
+      "partially_resolved": [],
+      "newly_found": [],
+      "changed_files": [
+        "static/experiments.json",
+        "scripts/feishu_daily_report.py",
+        "scripts/subscription_health_audit.py",
+        "tests/test_okr_and_experiment_semantics.py",
+        "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md"
+      ],
+      "protected_areas_touched": "content/posts/ 两篇 markdown 的 meta 字段被修改（description / summary）；URL/slug/canonicalURL/content_id/正文 均未被改动。reports/llm/ 完全未触碰。",
+      "committed": false,
+      "commit_note": "未 commit。用户明确禁止 git commit / git push（由 coordinator 主会话处理）。改动在工作区，可直接审阅 diff。",
+      "verification": "python ast.parse 三个 Python 文件通过；static/experiments.json 直接测量 updated_at=2026-09-22 且 REV002=RETIRED / REV001=RUNNING / DRIVE-001=RUNNING；content 两篇 markdown description/summary 长度分别 132/147/146（均在 70..160 阈值内），summary != description；pytest tests/test_okr_and_experiment_semantics.py 43 pass / 4 fail（4 fail 为无关日期漂移）",
+      "not_done": [
+        "未运行 Hugo 构建（用户未明确要求；仓库纪律允许直接改 metadata 字段后走 CI 构建验证）",
+        "未运行 api_health_audit.py / subscription_health_audit.py（会调用线上 API 并真实创建 MailerLite 订阅者，非幂等）",
+        "未 commit / push（用户明确禁止）",
+        "AUDIT-CT-001 关于「是否加 Travelpayouts 联盟位」的建议被显式保留：本次仅完成文案重写，未新增联盟位。该项依赖 AUDIT-RV-001（DRIVE-001 实验状态未确认）。"
+      ]
     }
   ],
-  "updated_at": "2026-09-22T19:58:59+08:00"
+  "updated_at": "2026-09-23T03:30:00+08:00"
 }

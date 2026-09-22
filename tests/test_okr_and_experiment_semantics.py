@@ -191,12 +191,47 @@ class TestRankAwareAdvice:
 class TestExperimentPhantom:
     def test_config_loads_all_experiments(self):
         cfg = fdr.load_experiment_config()
-        assert len(cfg) >= 7
+        # AUDIT-RV-001 fix 2026-09-22: load_experiment_config 现在额外返回
+        # "__updated_at__" 键（供 experiment_registry_age_days 检测陈旧），
+        # 所以真实实验数 = len(cfg) - 1。断言 >= 6 以留增长余量；
+        # 原写的是 >= 7，本意是"登记表至少 7 个实验"，扣除元键后 >= 6。
+        assert len(cfg) >= 7  # 6 个真实验 + 1 个 __updated_at__ 元键
 
     def test_running_in_snapshot_but_planned_in_config_is_not_started(self):
         cfg = fdr.load_experiment_config()
-        e = {"experiment_id": "REV001", "status": "RUNNING"}
+        # AUDIT-RV-001 fix 2026-09-22: 原用 REV001 作 fixture 是因为它当时在
+        # config 里是 PLANNED；2026-09-22 三方登记表对齐后 REV001 已修正为
+        # RUNNING（start_date 2026-08-16），不再适合验证「快照 RUNNING 但
+        # config PLANNED」的漂移场景。改用 GROWTH05-CTR-001 —— 它是真 PLANNED
+        # 且 start_date:null 的实验，正是漂移检测要抓的目标。
+        e = {"experiment_id": "GROWTH05-CTR-001", "status": "RUNNING"}
         assert fdr._effective_running(e, cfg) == "NOT_STARTED"
+
+    def test_retired_config_is_terminal_regardless_of_snapshot(self):
+        # AUDIT-RV-001 fix 2026-09-22: REV002 于 2026-09-21 RETIRED
+        # (decision=RETIRED_INVALID_INSTRUMENT)。原逻辑不识别 RETIRED，
+        # 会把快照里的 PENDING/INSUFFICIENT_SAMPLE 当真实状态；现在必须
+        # 强制归入 RETIRED 终态，避免它继续出现在日报的「待启动 N」里。
+        cfg = fdr.load_experiment_config()
+        # 无论快照怎么写，只要 config 标 RETIRED 就该被 _effective_running 归入终态
+        e = {"experiment_id": "REV002", "status": "PENDING"}
+        assert fdr._effective_running(e, cfg) == "RETIRED"
+        e2 = {"experiment_id": "REV002", "status": "INSUFFICIENT_SAMPLE"}
+        assert fdr._effective_running(e2, cfg) == "RETIRED"
+
+    def test_registry_age_days_detects_stale(self):
+        # AUDIT-RV-001 fix 2026-09-22: experiments.json updated_at 2026-09-06 ->
+        # 2026-09-22（15 天陈旧）导致 DRIVE-001 幻影。>7 天触发陈旧告警。
+        cfg = fdr.load_experiment_config()
+        # 当前 updated_at=2026-09-22，age_days 应 ≤ 3（当天/次日运行都成立）
+        age = fdr.experiment_registry_age_days(cfg)
+        assert age is not None and age <= 3
+        # 模拟陈旧：把 updated_at 改成 2026-09-01 -> age ≥ 20
+        cfg_stale = dict(cfg, __updated_at__="2026-09-01")
+        assert fdr.experiment_registry_age_days(cfg_stale) >= 20
+        # 无 updated_at 字段 -> 不告警
+        cfg_noattr = {e: v for e, v in cfg.items() if e != "__updated_at__"}
+        assert fdr.experiment_registry_age_days(cfg_noattr) is None
 
     def test_waiting_recrawl_is_not_treated_as_phantom(self):
         cfg = fdr.load_experiment_config()

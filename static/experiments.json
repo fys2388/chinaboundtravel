@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-06",
+  "updated_at": "2026-09-22",
   "experiments": [
     {
       "id": "REV001",
@@ -13,11 +13,11 @@
         {"id": "variant_a", "name": "CTA移至首屏", "traffic": 50}
       ],
       "goal_event": "affiliate_click",
-      "status": "PLANNED",
-      "start_date": null,
+      "status": "RUNNING",
+      "start_date": "2026-08-16",
       "end_date": null,
       "min_sample": 1000,
-      "notes": "流量不足时保持PLANNED，达到日均50访客后启动"
+      "notes": "AUDIT-RV-001 fix 2026-09-22: 原状态 PLANNED（自 2026-09-06 起未更新），但 docs/AI_CONTEXT.md L48 与 reports/revenue/EXPERIMENT_COMPARISON.csv 均记为 RUNNING (start 2026-08-16)。已对齐三方登记表，CTA 已部署。样本仍 INSUFFICIENT_SAMPLE（1d / 0 clicks）——CTA 在跑 ≠ 样本够，两者是不同判定。变更 tests/test_okr_and_experiment_semantics.py 相应 fixture（改用 GROWTH05-CTR-001 等真 PLANNED 条目）。"
     },
     {
       "id": "REV002",
@@ -30,11 +30,11 @@
         {"id": "variant_a", "name": "添加Trip.com CTA", "traffic": 50}
       ],
       "goal_event": "affiliate_click",
-      "status": "PLANNED",
+      "status": "RETIRED",
       "start_date": null,
       "end_date": null,
       "min_sample": 1000,
-      "notes": "等待REV001完成后启动"
+      "notes": "AUDIT-RV-001 fix 2026-09-22: 状态 PLANNED -> RETIRED，与 reports/revenue/REV002_EXPERIMENT_REGISTRY.csv status=RETIRED decision=RETIRED_INVALID_INSTRUMENT 对齐（2026-09-21 退役）。Trip.com affiliate 计划未获批，affiliate-mid-cta 短码已从 content/posts 撤下；编辑性推荐（Compare Train Tickets on Trip.com -> https://www.trip.com/）保留。RETIRED 是终态，不进日报的『待启动 N』。REV002_FINAL_REVIEW.md 的 INSUFFICIENT_SAMPLE 是退役前的历史 gate 结论，已被本终态覆盖。"
     },
     {
       "id": "REV003",
@@ -52,7 +52,7 @@
       "start_date": null,
       "end_date": null,
       "min_sample": 1500,
-      "notes": "三变体测试，需要更大样本量"
+      "notes": "AUDIT-RV-001: REV003 的 gate 前提是 REV002 完成评审，REV002 已于 2026-09-21 RETIRED，前提失效。保留 PLANNED 是保守口径——不静默升级为 RUNNING 以避免复制本次审计标记的登记表漂移（状态会进入日报『在跑 N』计数，产生新的报表失真）。产品侧决定是否以 REV002 之前基线继续推进 REV003。"
     },
     {
       "id": "GROWTH05-CTR-001",
@@ -82,11 +82,11 @@
         {"id": "variant_a", "name": "顶部横幅", "traffic": 50}
       ],
       "goal_event": "banner_click",
-      "status": "PLANNED",
-      "start_date": null,
+      "status": "RUNNING",
+      "start_date": "2026-08-16",
       "end_date": null,
       "min_sample": 5000,
-      "notes": "全站测试需要最大样本量"
+      "notes": "AUDIT-RV-001 fix 2026-09-22: 原状态 PLANNED，但 docs/AI_CONTEXT.md L51 记为 'RUNNING (start 2026-08-16, ACTIVE)'，layouts/partials/head.html 已含 emrldtp.com/NTMxNDY5.js?t=531469 脚本（2026-09-13 起）。已对齐三方登记表。样本在 EXPERIMENT_COMPARISON.csv 仍 INSUFFICIENT_SAMPLE。"
     },
     {
       "id": "GROWTH07B-TECH-001",

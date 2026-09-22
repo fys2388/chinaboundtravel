@@ -19,7 +19,7 @@ import requests
 import hashlib
 import hmac
 import base64
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 
 # 内部流量黑名单单一事实来源。本日报早就能检测 /ops 污染但只报不滤，
 # 前缀列表也各写各的；统一收敛到 internal_traffic_filter。
@@ -166,17 +166,53 @@ def load_experiment_config() -> dict:
     PLANNED / start_date:null，样本数全空。照快照原样渲染会把 4 个从未启动
     的实验当成「已观察 1 天」，误导「要不要动 CTA」的判断。
     读不到/解析失败返回 {} —— 调用方退化为只看快照，不误报。
+
+    AUDIT-RV-001: RETIRED 状态是终态（REV002 = RETIRED_INVALID_INSTRUMENT，
+    Trip.com 计划未获批，affiliate 仪表已撤下）。原逻辑只识别 PLANNED /
+    PENDING -> NOT_STARTED 一种「快照与登记表不一致」方向，会漏掉「快照说
+    PLANNED、登记表实际已 RETIRED」这一反向情况；而且 REV002 会被算进
+    日报的「待启动 N」，让人以为它还在排队。这里显式识别 RETIRED，由
+    _build_experiments_block 单独统计、从 pending 中剔除。
     """
     try:
-        cfg = json.loads(EXPERIMENT_CONFIG_FILE.read_text(encoding="utf-8"))
+        raw = json.loads(EXPERIMENT_CONFIG_FILE.read_text(encoding="utf-8"))
     except Exception:
         return {}
-    out = {}
-    for e in cfg.get("experiments", []) or []:
+    out: dict = {}
+    # 顶层 updated_at 一并塞进返回字典，供 experiment_registry_age_days
+    # 检测陈旧；load_experiment_config 原本只返回 {eid: {...}}，无法追溯
+    # 登记表本身的更新时间（AUDIT-RV-001 就是靠这个字段判断陈旧）。
+    updated_at = raw.get("updated_at")
+    if updated_at is not None:
+        out["__updated_at__"] = updated_at
+    for e in raw.get("experiments", []) or []:
         eid = e.get("id") or e.get("experiment_id")
         if eid:
             out[eid] = {"status": e.get("status"), "start_date": e.get("start_date")}
     return out
+
+
+def experiment_registry_age_days(cfg: dict) -> int | None:
+    """static/experiments.json 距今多少天未更新。
+
+    AUDIT-RV-001: 2026-09-06 到 2026-09-22 连续 15 天陈旧，且 REV001 /
+    DRIVE-001 / REV002 三份登记表相互矛盾，日报据此产出「DRIVE-001 幻影」
+    的误导结论。>7 天即视为陈旧，日报头部标注 ⚠️ 提示人工核实。
+
+    输入约定：cfg 是 load_experiment_config() 的返回值，其 "__updated_at__"
+    键存放原始 updated_at 字段。解析策略：只取日期部分（YYYY-MM-DD），
+    避免把 "2026-09-22T15:04:00" 这类时间戳当成 UTC 午夜去比 datetime.now()，
+    从而在今天刚更新时算出一天的差。日期字符串解析失败或字段缺失返回 None
+    （不告警）。
+    """
+    s = str(cfg.get("__updated_at__") or "").strip()
+    if not s:
+        return None
+    try:
+        d = date.fromisoformat(s[:10])
+    except (ValueError, TypeError):
+        return None
+    return (date.today() - d).days
 
 
 def _effective_running(e: dict, cfg: dict) -> str:
@@ -185,10 +221,17 @@ def _effective_running(e: dict, cfg: dict) -> str:
     快照说 RUNNING 但登记表说 PLANNED 或 start_date 为空 -> 幻影实验
     （从未部署，样本不可能累积）。返回 "RUNNING" 或 "NOT_STARTED"。
     只有快照与登记表一致说 RUNNING 且 start_date 非空，才算真在跑。
+
+    AUDIT-RV-001: 增加 RETIRED 消费。REV002 于 2026-09-21 退役
+    （decision=RETIRED_INVALID_INSTRUMENT），登记为 RETIRED。快照里可能
+    仍是 PENDING / INSUFFICIENT_SAMPLE，需以登记表为准。RETIRED 是终态，
+    不进「在跑」也不进「待启动」，_build_experiments_block 会单独计数。
     """
+    entry = cfg.get(e.get("experiment_id") or "")
+    if entry and entry.get("status") == "RETIRED":
+        return "RETIRED"
     if e.get("status") != "RUNNING":
         return e.get("status", "?")
-    entry = cfg.get(e.get("experiment_id") or "")
     if entry is None:
         return "RUNNING"  # 登记表没有这项，保持快照结论
     if entry.get("status") in ("PLANNED", "PENDING") or not entry.get("start_date"):
@@ -448,12 +491,28 @@ class FeishuDailyReporter:
         if tp_available:
             _tp_inits = float(data.get('tp_inits', 0) or 0)
             _tp_clicks = float(data.get('tp_clicks', 0) or 0)
-            # 口径标注：TP inits=initiations（触达），非"展示"；触达未全量上报时避免被误读为 0 展示
-            inits_display = (f"{_tp_inits:,.0f}" if (_tp_inits > 0 or _tp_clicks == 0)
-                             else "未上报（点击>0，勿读作0展示）")
-            if _tp_inits == 0 and _tp_clicks > 0:
-                tp_quality_note = ("\n> 口径说明：TP 触达(initiations)维度未全量上报，点击为同源有效数据；"
-                                   "「未上报」≠ 0 展示")
+            # AUDIT-RV-002: Travelpayouts API 的 inits_count 字段持续 6+ 天
+            # 未上报（daily_2026-09-16 至 daily_2026-09-22 均为 0），代码不能
+            # 默认把「0」当真实值渲染，需暴露显式数据质量信号。
+            # tp_inits_unreported 由 _fetch_travelpayouts 判定：clicks > 0 而
+            # inits_count 字段缺失或为 0 时置 True；日报据此标 INITS_UNAVAILABLE
+            # 而非「INSUFFICIENT_SAMPLE」（后者是转化率样本不足，与本字段系统性
+            # 不可得是不同性质的问题）。
+            tp_inits_unreported = bool(data.get('tp_inits_unreported', False))
+            if tp_inits_unreported:
+                inits_display = "INITS_UNAVAILABLE"
+            elif _tp_inits > 0:
+                inits_display = f"{_tp_inits:,.0f}"
+            else:
+                # inits_count 字段存在且 = 0（无活动场景）—— 与「未上报」区分
+                inits_display = "0（无活动）" if _tp_clicks == 0 else "0"
+            if tp_inits_unreported:
+                tp_quality_note = (
+                    "\n> 📊 数据质量：Travelpayouts API 的 inits_count 字段系统性未上报，"
+                    "「INITS_UNAVAILABLE」表示字段本身不可得（非零展示、非样本不足）。"
+                    "点击、订单、佣金为同源有效数据。"
+                    "CTR 因缺分母不可算，标为 INSUFFICIENT_SAMPLE"
+                )
             tp_display = {"inits": inits_display, "searches": f"{data.get('tp_searches', 0):,}",
                           "clicks": f"{data.get('tp_clicks', 0)}", "bookings": f"{data.get('tp_bookings', 0)}",
                           "revenue": f"${data.get('tp_revenue', 0):.2f}"}
@@ -961,17 +1020,28 @@ class FeishuDailyReporter:
         running = [e for e in experiments if eff.get(e.get("experiment_id")) == "RUNNING"]
         phantom = [e for e in experiments if eff.get(e.get("experiment_id")) == "NOT_STARTED"]
         waiting = [e for e in experiments if e.get("status") == "WAITING_RECRAWL"]
+        # AUDIT-RV-001: RETIRED 是终态（REV002 = RETIRED_INVALID_INSTRUMENT，
+        # Trip.com 计划未获批，affiliate 仪表已撤下）。原逻辑把它归入 pending
+        # 让人以为还在排队；单独计数、不进入「待启动 N」，并写进关键阻塞里
+        # 提醒运营者：不要再等它的样本。
+        retired = [e for e in experiments if eff.get(e.get("experiment_id")) == "RETIRED"]
         # PLANNED 与 PENDING 语义相同（尚未启动）。登记表收敛后实验普遍是 PLANNED，
         # 只认 PENDING 会让「待启动」显示 0 而表格里躺着一堆 PLANNED，读不出真实规模。
-        pending = [e for e in experiments if e.get("status") in ("PENDING", "PLANNED")]
+        # 同时明确排除 RETIRED —— 终态实验不是「待启动」，是「永远不会启动」。
+        pending = [e for e in experiments
+                   if e.get("status") in ("PENDING", "PLANNED")
+                   and eff.get(e.get("experiment_id")) != "RETIRED"]
         head = f"**🧪 4. 实验与阻塞** | 在跑 {len(running)} | 待重爬 {len(waiting)} | 待启动 {len(pending)}"
         if phantom:
             head += f" | ⚠️ 标记在跑但实际未启动 {len(phantom)}"
+        if retired:
+            head += f" | 🪦 已退役 {len(retired)}"
         lines = [head, ""]
         lines.append("| ID | 实验名称 | 状态 | 观察 | 样本 |")
         lines.append("| --- | --- | --- | --- | --- |")
         icon_map = {"RUNNING": "🔄", "NOT_STARTED": "⚠️", "WAITING_RECRAWL": "⏳",
-                    "PENDING": "📋", "PLANNED": "📋", "WIN": "✅", "LOSE": "❌"}
+                    "PENDING": "📋", "PLANNED": "📋", "WIN": "✅", "LOSE": "❌",
+                    "RETIRED": "🪦", "INSUFFICIENT_SAMPLE": "⏳"}
         # 表头统计全量实验，表格必须展示全量：原 experiments[:6] 硬截断导致
         # 「待重爬 2」只渲染 1 行，与表头自相矛盾（未展示的项仅出现在关键阻塞里）
         _MAX_EXPERIMENT_ROWS = 20
@@ -994,6 +1064,45 @@ class FeishuDailyReporter:
                 + " 在快照里标 RUNNING，但 static/experiments.json 显示 PLANNED / 未设 start_date——"
                 "从未部署 CTA，样本不可能累积。需人工确认哪份登记表是权威"
             )
+        # AUDIT-RV-001: 反向漂移检测。快照里 PENDING/PLANNED 但 GA4 有实际点击，
+        # 意味着横幅可能已经部署而登记表没跟上——这是 09-06 版本 static/experiments.json
+        # 把 DRIVE-001 标 PLANNED 的原始症状（当时 head.html 里 emrldtp.com 脚本已在跑）。
+        # 只有能读到 GA4 点击数据时才判，避免把「无点击」误读成「未部署」——
+        # 低样本站点单日 0 点击是常态（见 INSUFFICIENT_SAMPLE 判定）。
+        try:
+            tp_clicks = float(data.get("tp_clicks", 0) or 0)
+            tp_available = bool(data.get("tp_available"))
+            if tp_available and tp_clicks > 0:
+                planned_ids = [e.get("experiment_id", "") for e in experiments
+                               if e.get("status") in ("PLANNED", "PENDING")
+                               and "DRIVE" in str(e.get("experiment_id", "")).upper()]
+                if planned_ids:
+                    blockers.append(
+                        "⚠️ 反向漂移: " + ", ".join(planned_ids)
+                        + f" 在快照里标 PLANNED，但 Travelpayouts 昨日点击 {int(tp_clicks)}——"
+                        "Drive 脚本疑似已部署但登记表未同步，需人工核实 static/experiments.json"
+                    )
+        except (TypeError, ValueError):
+            pass
+        if retired:
+            blockers.append(
+                "🪦 已退役: " + ", ".join(e.get("experiment_id", "") for e in retired)
+                + " —— 登记表登记为 RETIRED（如 REV002 = RETIRED_INVALID_INSTRUMENT，"
+                "Trip.com 计划未获批、affiliate 仪表已撤下）。已从「待启动 N」中剔除，"
+                "不要等它的样本；如需重新推进，产品侧决定后单独登记新实验"
+            )
+        # AUDIT-RV-001: 登记表陈旧检查。static/experiments.json updated_at > 7 天未更新
+        # 时标 ⚠️ 并附「陈旧 N 天」——09-06 到 09-22 陈旧 15 天，日报据此产生 4 个幻影
+        # 实验。陈旧不一定代表状态错，但代表它不再值得作为唯一事实源信任。
+        try:
+            age_days = experiment_registry_age_days(cfg)
+            if age_days is not None and age_days > 7:
+                blockers.append(
+                    f"🕓 实验登记表陈旧: static/experiments.json updated_at 距今 {age_days} 天"
+                    f"（> 7 天阈值），需人工核实当前状态并更新"
+                )
+        except Exception:
+            pass
         if waiting:
             blockers.append(f"⏳ 等待重爬: {', '.join(e.get('experiment_id','') for e in waiting)}")
         ca_kpis = (domains.get("content_assets", {}) or {}).get("kpis", [])
@@ -1164,6 +1273,9 @@ class FeishuDailyReporter:
             "tp_available": False,
             "tp_inits": 0,
             "tp_searches": 0,
+            # AUDIT-RV-002: inits_count 字段是否系统性未上报（clicks > 0 而 inits=0
+            # 或缺失）。日报据此显示 INITS_UNAVAILABLE 而非把「未上报」当 0。
+            "tp_inits_unreported": False,
             "nord_available": False,
             "nord_clicks": 0,
             "nord_conversions": 0,
@@ -2028,7 +2140,14 @@ class FeishuDailyReporter:
         return result
     
     def _fetch_travelpayouts(self) -> dict:
-        """获取 Travelpayouts 数据（昨日汇总：点击、订单、佣金）"""
+        """获取 Travelpayouts 数据（昨日汇总：点击、订单、佣金）
+
+        AUDIT-RV-002: inits_count 字段自 2026-09-16 起 6+ 天系统性未上报
+        （daily_2026-09-16..22 均为 0，同期 redirects_count 有点击）。
+        不能把「字段=0」与「字段缺失」混为一谈：前者是无活动，后者是采集断链。
+        通过 tp_inits_unreported 显式标注，日报据此显示 INITS_UNAVAILABLE
+        而非「0」，避免读者把「未上报」当「0 展示」误判为转化率问题。
+        """
         if not TRAVELPAYOUTS_API_TOKEN:
             print("   ⚠️ Travelpayouts API Token 未配置")
             return None
@@ -2071,7 +2190,8 @@ class FeishuDailyReporter:
                 clicks = 0
                 bookings = 0
                 revenue = 0.0
-                
+                inits_unreported = False
+
                 if rows:
                     row = rows[0]
                     clicks = int(row.get("redirects_count", 0) or 0)
@@ -2079,6 +2199,12 @@ class FeishuDailyReporter:
                     revenue = float(row.get("paid_profit_usd_sum", 0) or 0)
                     inits = int(row.get("inits_count", 0) or 0)
                     searches = int(row.get("searches_count", 0) or 0)
+                    # AUDIT-RV-002: 点击 > 0 而 inits_count 字段缺失或为 0 → 系统性未上报。
+                    # 与「无活动」区分：无活动时 clicks == 0，此时 inits_count=0 是合理真值。
+                    if clicks > 0 and (inits == 0 or "inits_count" not in row):
+                        inits_unreported = True
+                        print(f"   ⚠️ Travelpayouts inits_count 未上报（clicks={clicks}, inits={inits}）—— "
+                              f"该字段系统性不可得，日报将标 INITS_UNAVAILABLE")
                     print(f"   📊 Travelpayouts: 展示 {inits}, 搜索 {searches}, 点击 {clicks}, 订单 {bookings}, 佣金 ${revenue:.2f}")
                 else:
                     print(f"   📊 Travelpayouts: 昨日暂无数据（正常）")
@@ -2091,6 +2217,7 @@ class FeishuDailyReporter:
                     "tp_revenue": round(revenue, 2),
                     "tp_inits": inits,
                     "tp_searches": searches,
+                    "tp_inits_unreported": inits_unreported,
                     "top_converting_article": "N/A",
                     "affiliate_revenue": round(revenue, 2)
                 }

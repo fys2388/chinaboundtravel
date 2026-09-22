@@ -1,0 +1,119 @@
+{
+  "audit_version": "1.0",
+  "audit_time": "2026-09-23T03:24:13.698911",
+  "base_url": "https://cbt-travel.com",
+  "api_tests": [
+    {
+      "name": "subscribe_valid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "有效邮箱应返回 200 + success=true",
+      "severity": "critical",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1626,
+      "error": "期望状态码 [200]，实际 404",
+      "response_body": ""
+    },
+    {
+      "name": "subscribe_invalid_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效邮箱格式应返回 400",
+      "severity": "high",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1185,
+      "error": "期望状态码 [400]，实际 404",
+      "response_body": ""
+    },
+    {
+      "name": "subscribe_missing_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "缺失 email 字段应返回 400",
+      "severity": "high",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1122,
+      "error": "期望状态码 [400]，实际 404",
+      "response_body": ""
+    },
+    {
+      "name": "subscribe_invalid_json",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "无效 JSON 应返回 400",
+      "severity": "medium",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1066,
+      "error": "期望状态码 [400]，实际 404",
+      "response_body": ""
+    },
+    {
+      "name": "subscribe_empty_email",
+      "endpoint": "/api/subscribe",
+      "method": "POST",
+      "description": "空邮箱应返回 400",
+      "severity": "medium",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1179,
+      "error": "期望状态码 [400]，实际 404",
+      "response_body": ""
+    },
+    {
+      "name": "subscribe_cors_preflight",
+      "endpoint": "/api/subscribe",
+      "method": "OPTIONS",
+      "description": "CORS 预检应返回 200/204 + CORS 头",
+      "severity": "medium",
+      "passed": false,
+      "status_code": 404,
+      "response_time_ms": 1064,
+      "error": "期望状态码 [200, 204]，实际 404",
+      "response_body": ""
+    }
+  ],
+  "page_checks": [
+    {
+      "page": "/",
+      "status_code": 200,
+      "has_subscribe_form": false,
+      "passed": true
+    },
+    {
+      "page": "/about/",
+      "status_code": 200,
+      "has_subscribe_form": false,
+      "passed": true
+    }
+  ],
+  "mailerlite": {
+    "configured": false,
+    "connected": false,
+    "subscriber_count": null,
+    "error": "MAILERLITE_API_TOKEN 未配置",
+    "endpoint_reported": {
+      "source": "endpoint_response",
+      "mailerlite": "unknown",
+      "resend": "unknown",
+      "evidence": {
+        "note": "有效邮箱用例未捕获响应体，无法判断线上配置"
+      }
+    }
+  },
+  "delivery_unverifiable": true,
+  "delivery_evidence": {
+    "test_email_domain": "example.com",
+    "resend_status": "unknown",
+    "resend_note": "Resend 未配置或状态未知，PDF 送达无法验证"
+  },
+  "summary": {
+    "total": 6,
+    "passed": 0,
+    "failed": 6,
+    "all_passed": false
+  }
+}
