@@ -42,7 +42,7 @@ jobs:
           python scripts/trip_planner_analytics.py --days 7 --export-csv
 
       - name: Upload analytics report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: trip-planner-analytics-${{ github.run_number }}
           path: reports/trip-planner/
