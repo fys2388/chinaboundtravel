@@ -3,13 +3,13 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-22_seo",
   "created_at": "2026-09-22T01:00:34.048734+00:00",
-  "updated_at": "2026-09-22T19:35:51.455373",
+  "updated_at": "2026-09-22T21:42:17.935389",
   "target_date": "2026-09-22",
-  "issue_count": 184,
+  "issue_count": 186,
   "severity_summary": {
     "critical": 0,
     "high": 69,
-    "medium": 110,
+    "medium": 112,
     "low": 5
   },
   "issues": [
@@ -1574,6 +1574,26 @@
       "detected_at": "2026-09-22T01:00:34.047803+00:00"
     },
     {
+      "id": "0b889816a99b2829",
+      "type": "internal_link_redirect",
+      "title": "internal_link_redirect",
+      "description": "internal_link_redirect",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "file": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "evidence": "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/ -> https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "recommended_action": "Link directly to the final URL.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T21:42:17.687129+00:00"
+    },
+    {
       "id": "84bdd9c22225eca4",
       "type": "internal_link_redirect",
       "title": "internal_link_redirect",
@@ -1932,6 +1952,26 @@
       "assigned": true,
       "assigned_to": "seo",
       "detected_at": "2026-09-22T01:00:34.047855+00:00"
+    },
+    {
+      "id": "5c398e01d8f28e25",
+      "type": "internal_link_redirect",
+      "title": "internal_link_redirect",
+      "description": "internal_link_redirect",
+      "page": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "file": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "evidence": "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/ -> https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "recommended_action": "Link directly to the final URL.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T21:42:17.687235+00:00"
     },
     {
       "id": "ee0096fb0ee45e54",
@@ -3534,7 +3574,7 @@
       "detected_at": "2026-09-22T01:00:34.048136+00:00"
     },
     {
-      "id": "site_health-7019e68919f4ab3d",
+      "id": "site_health-19fedc6e09b6ecb",
       "type": "meta_description_too_short",
       "title": "meta_description_too_short",
       "description": "meta_description_too_short",
@@ -3551,10 +3591,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-22T19:35:50.963406+00:00"
+      "detected_at": "2026-09-22T21:42:17.687719+00:00"
     },
     {
-      "id": "site_health-497bf75cdce20157",
+      "id": "site_health-c76c188d2d29fc9",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -3571,10 +3611,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-22T19:35:50.963403+00:00"
+      "detected_at": "2026-09-22T21:42:17.687712+00:00"
     },
     {
-      "id": "site_health-5569c87111d857cf",
+      "id": "site_health-3737cb9dc5bf7b00",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
@@ -3591,7 +3631,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-22T19:35:50.963410+00:00"
+      "detected_at": "2026-09-22T21:42:17.687725+00:00"
     },
     {
       "id": "issue_465b0b5928ee",

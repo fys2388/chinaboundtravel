@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-21T22:01:00.827281+00:00",
+  "generated_at": "2026-09-22T21:22:15.506801+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
     "pages": 70,
     "images_checked": 333,
-    "links_checked": 2096,
-    "issues": 176,
+    "links_checked": 2109,
+    "issues": 178,
     "P0": 0,
     "P1": 69,
-    "P2": 107
+    "P2": 109
   },
   "issues": [
     {
@@ -715,6 +715,15 @@
       "recommended_action": "Link directly to the final URL."
     },
     {
+      "id": "0b889816a99b2829",
+      "severity": "P2",
+      "source": "site",
+      "type": "internal_link_redirect",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "evidence": "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/ -> https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "recommended_action": "Link directly to the final URL."
+    },
+    {
       "id": "84bdd9c22225eca4",
       "severity": "P2",
       "source": "site",
@@ -874,6 +883,15 @@
       "type": "internal_link_redirect",
       "page": "/posts/china-high-speed-rail-how-to-book-tickets/",
       "evidence": "https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ -> https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "recommended_action": "Link directly to the final URL."
+    },
+    {
+      "id": "5c398e01d8f28e25",
+      "severity": "P2",
+      "source": "site",
+      "type": "internal_link_redirect",
+      "page": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "evidence": "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/ -> https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
       "recommended_action": "Link directly to the final URL."
     },
     {
