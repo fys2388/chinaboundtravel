@@ -3,15 +3,16 @@
   "agent_name": "Frontend Agent (页面/视觉/响应式)",
   "task_id": "task_2026-09-22_audit_frontend",
   "created_at": "2026-09-22T10:00:00+00:00",
-  "updated_at": "2026-09-22T14:40:00+00:00",
+  "updated_at": "2026-09-22T15:36:36+08:00",
   "target_date": "2026-09-21",
   "task_source": "daily_report_audit",
   "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
-  "issue_count": 6,
+  "issue_count": 7,
   "severity_summary": {
     "medium": 4,
     "low": 1,
-    "critical": 1
+    "critical": 1,
+    "high": 1
   },
   "note": "本任务全部为 scripts/ 下的巡检与报告代码缺陷修复，属代码变更（非页面视觉）。本仓 executor 的 agent 名册中无 instrumentation 角色，故按代码归属派给 frontend。修复后必须跑 tests/ 相关用例并确认未引入新的 pytest 副作用（已知 pytest 会改写 12 个受保护文件）。",
   "issues": [
@@ -206,6 +207,42 @@
       "auto_fixable": false,
       "expected_post_fix": "delivered_pdf=false 时前端仍渲染 pdf_url 直链，漏斗不断裂",
       "blocks": []
+    },
+    {
+      "id": "AUDIT-FE-008",
+      "type": "checker_blind_spot",
+      "severity": "high",
+      "title": "巡检器 9 处 YAML-only 正则对 19 个 TOML front-matter 文件完全失明",
+      "status": "new",
+      "auto_fixable": false,
+      "detected_at": "2026-09-22T15:36:36+08:00",
+      "detected_by": "audit_fix_run（孤儿页清单实测时发现）",
+      "description": "content/ 下 125 个已发布源文件中 19 个使用 TOML front-matter（+++），占 15.2%。site_health_agent.py 有 9 处 re.match(r'^---\\s*\\n...') 只匹配 YAML，TOML 文件被判为「无 front-matter」而跳过 —— 其 title 长度、meta description、占位符、AI 禁用词、persona 违规全部从未被检查。",
+      "affected_code_sites": [
+        "site_health_agent.py:127 split_front_matter（本轮新增，同样漏检）",
+        "site_health_agent.py:207",
+        "site_health_agent.py:421",
+        "site_health_agent.py:451",
+        "site_health_agent.py:493",
+        "site_health_agent.py:532",
+        "site_health_agent.py:570",
+        "site_health_agent.py:1040"
+      ],
+      "affected_content_files": [
+        "content/cities/{beijing,chengdu,guilin,hangzhou,shanghai,western-sichuan,xian,yangshuo}.md",
+        "content/{disclaimer,privacy-policy}.md",
+        "content/{about,guides,resources}/_index.md",
+        "content/posts/best-travel-insurance-china.md",
+        "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "content/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md"
+      ],
+      "impact": "3 个 content/posts/ 文件被 AUDIT-OPS-001 错报为孤儿页；8 个城市页 + 2 个法务页 + 3 个 _index 页的标题/description 从未校验。",
+      "recommended_action": "9 处 YAML-only 正则统一换成 YAML+TOML 双格式解析器。注意 TOML 语法是 key = \"value\"，不是 key: value。",
+      "acceptance": "check_title_meta_length() 能读到 TOML 文件的 title；19 个 TOML 文件全部进入巡检结果",
+      "not_fixed_this_run": "需改 9 处调用点且 TOML 语法与 YAML 不同，回归风险高；属新发现缺陷类，需用户确认是否纳入本轮范围。",
+      "blocks": [
+        "AUDIT-OPS-001"
+      ]
     }
   ],
   "priority_issue": {
@@ -217,7 +254,7 @@
   "expected_actions": [
     "manual_review"
   ],
-  "status": "resolved",
+  "status": "partially_resolved",
   "execution": {
     "resolved_count": 6,
     "failed_count": 0,
@@ -232,7 +269,8 @@
     "AUDIT-FE-003": "resolved",
     "AUDIT-FE-004": "resolved",
     "AUDIT-FE-005": "resolved",
-    "AUDIT-FE-006": "resolved"
+    "AUDIT-FE-006": "resolved",
+    "AUDIT-FE-008": "new"
   },
   "fix_run": {
     "run_id": "FIX-RUN-2026-09-22",
@@ -248,6 +286,10 @@
     "verification_script": "C:/temp/dsh/verify_all_fixes.py",
     "committed": false,
     "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
-    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
-  }
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+    "latest_at": "2026-09-22T15:36:36+08:00",
+    "latest_note": "方案 A 落地 + OPS-001 口径修正 + 新增 FE-008 / OPS-004"
+  },
+  "open_count": 1,
+  "resolved_count": 6
 }

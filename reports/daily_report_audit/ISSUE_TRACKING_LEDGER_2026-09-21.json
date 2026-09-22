@@ -13,43 +13,59 @@
     "superseded": "已被其他工单吸收"
   },
   "summary": {
-    "total_open": 12,
+    "total_open": 13,
     "total_closed_as_false_positive": 6,
     "by_severity": {
+      "medium": 10,
       "critical": 2,
-      "high": 2,
-      "medium": 4,
-      "low": 4
+      "high": 3,
+      "low": 6
     },
     "by_agent": {
-      "ops": 3,
+      "ops": 5,
       "revenue": 3,
+      "frontend": 7,
       "seo": 3,
       "content": 3
     },
     "auto_fixable_count": 0,
-    "note": "原 15 项中 5 项（AUDIT-FE-001..005）已修复并验证。本轮修复顺带发现 4 项新问题，其中 2 项已修复（AUDIT-FE-006 前端兜底链、AUDIT-FE-007 语义契约校验）。剩余 12 项仍需责任人处理，其中 7 项阻塞于外部条件或用户决策。关键变化：AUDIT-OPS-002 方案 B 的前置条件（关闭自动化误报源）已解除。",
-    "total_resolved": 7,
+    "note": "（2026-09-22T15:35:06+08:00 更新）开放 13 项，已解决 8 项。本轮：AUDIT-OPS-002 方案 A 已落地（router 按能力矩阵分流，dry-run 验证 10 个问题全部进人工队列）；AUDIT-OPS-001 口径修正 —— 孤儿页 7→4，根因是 TOML front-matter 漏检，降级 critical→medium，已产出逐页处置清单并阻断于处置授权；新增 AUDIT-FE-008（巡检器 TOML 漏检，high）与 AUDIT-OPS-004（分页容器误计，low）。误报关闭 6 项不变。",
+    "total_resolved": 8,
     "by_status": {
-      "new": 8,
-      "resolved": 7,
-      "blocked": 4
+      "blocked": 4,
+      "new": 9,
+      "resolved": 8
     },
     "resolved_ids": [
       "AUDIT-FE-001",
       "AUDIT-FE-002",
       "AUDIT-FE-003",
       "AUDIT-FE-004",
+      "AUDIT-OPS-002",
       "AUDIT-FE-005",
       "AUDIT-FE-006",
       "AUDIT-FE-007"
     ],
     "new_in_fix_run": [
-      "AUDIT-FE-006",
+      "AUDIT-FE-008",
+      "AUDIT-OPS-004"
+    ],
+    "open_ids": [
+      "AUDIT-OPS-001",
+      "AUDIT-RV-001",
+      "AUDIT-RV-002",
+      "AUDIT-SEO-002",
+      "AUDIT-SEO-003",
+      "AUDIT-CT-001",
+      "AUDIT-CT-002",
+      "AUDIT-SEO-001",
+      "AUDIT-OPS-003",
       "AUDIT-RV-003",
-      "AUDIT-FE-007",
-      "AUDIT-CT-003"
-    ]
+      "AUDIT-CT-003",
+      "AUDIT-FE-008",
+      "AUDIT-OPS-004"
+    ],
+    "generated_at": "2026-09-22T15:35:06+08:00"
   },
   "system_constraint": {
     "problem": "问题分配闭环自 2026-09-04 起空转 18 天",
@@ -66,11 +82,11 @@
     {
       "id": "AUDIT-OPS-001",
       "agent": "ops",
-      "severity": "critical",
-      "sla": "P0 / 24h",
-      "title": "线上 7 个孤儿页（占 public/posts 的 10.4%）+ 4 个 <title> 为裸 URL 的桩页",
+      "severity": "medium",
+      "sla": "P1 / 需用户决策",
+      "title": "线上 4 个孤儿页（占 public/posts 的 6.0%）+ 4 个 <title> 为裸 URL 的页",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
-      "status": "new",
+      "status": "blocked",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [
@@ -81,9 +97,23 @@
       "high_risk": true,
       "high_risk_reason": "涉及线上内容与 Hugo 构建行为变更（cleanDestinationDir），须先向用户说明做什么/为什么/影响什么并等确认",
       "external_dependency": null,
-      "acceptance": "public/posts 页面数 67→60；孤儿/仅草稿支撑页 7→0；<title> 为裸 URL 的页 4→0",
+      "acceptance": "孤儿/仅草稿支撑页 4→0；<title> 为裸 URL 的页 4→0（下线或 title 改回自身内容）",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": null,
+      "blocked_reason": "逐页处置清单已产出（ORPHAN_PAGE_DISPOSITION_2026-09-22.md），执行需授权：涉及线上页面下线/301 与 Hugo 构建行为变更（cleanDestinationDir）。用户 2026-09-22 选择「先只出逐页清单，不动手」。",
+      "corrections": [
+        {
+          "corrected_at": "2026-09-22T15:35:06+08:00",
+          "corrected_by": "audit_fix_run",
+          "field": "severity / 数量 / 危害程度",
+          "before": "critical / 7 个孤儿页（10.4%）/ 5 个带正常标题的孤儿页很可能正在获得排名与曝光",
+          "after": "medium / 4 个真孤儿（6.0%）/ 4 个中只有 1 个有 GSC 曝光（6 次，0 点击，位置 86.5）",
+          "root_cause": "原 slug 解析只认 YAML（^---），本仓有 19 个 TOML（+++）文件占已发布源 15.2%，其中 3 个在 content/posts/ —— 被错报成「无源」。详见 AUDIT-FE-008。",
+          "mechanism_finding_kept": "机制判断仍成立：hugo.toml 未设 cleanDestinationDir，Hugo 从不删除下线页面；router QA 只扫 content/ 看不到 public/ 孤儿。",
+          "evidence": "orphan_final.py 实测 67 篇文章页中 4 个无源；fm_stats.py 实测 TOML 19 个",
+          "disposition_report": "reports/daily_report_audit/ORPHAN_PAGE_DISPOSITION_2026-09-22.md"
+        }
+      ]
     },
     {
       "id": "AUDIT-RV-001",
@@ -292,21 +322,32 @@
       "sla": "P2 / 需用户决策",
       "title": "问题分配→追踪闭环空转 18 天，累计 resolved ≈ 0",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
-      "status": "blocked",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
-      "blocked_reason": "方案 B 的前置条件已解除：AUDIT-FE-001 / AUDIT-FE-002（自动化误报源）已修复并验证，误报率从 2/2 降到 0/2。现在扩展 executor 能力矩阵不会再自动化执行错误修改。仍需用户在方案 A（收窄 router 产出）与方案 B（扩展 executor）之间做选择。",
       "high_risk": false,
       "external_dependency": null,
       "requires_user_decision": true,
       "acceptance": "executor 不再对不可修问题重复派单；need_manual 有终态",
       "owner_acknowledged": false,
       "resolution": {
-        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_at": "2026-09-22T15:35:06+08:00",
         "resolved_by": "audit_fix_run",
-        "scope": "partial",
-        "what_changed": "解除方案 B 的前置阻塞（误报源已关闭）；方案本身仍需用户决策，未实施。",
-        "verification": "see AUDIT-FE-001 / AUDIT-FE-002 resolution"
+        "scope": "full",
+        "option": "A —— 收窄 router，只路由 executor 能力矩阵内的 type",
+        "user_decision": "2026-09-22 用户选定方案 A",
+        "changed_files": [
+          "scripts/agent_task_executor.py",
+          "scripts/daily_issue_router.py"
+        ],
+        "what_changed": [
+          "agent_task_executor.py 新增 AUTO_FIXABLE_TYPES 作为能力矩阵单一事实源",
+          "daily_issue_router.py import 该集合并在 assign_issues() 分流：能自动修 -> agent_tasks/；不能 -> manual_queue_<date>.json，不进入 enqueue_issues",
+          "generate_summary() 输出「自动修复 N 个 | 人工队列 N 个」"
+        ],
+        "verification": "daily_issue_router.py --dry-run --date 2026-09-22：发现问题 10 个 | 自动修复 0 个 | 人工队列 10 个 | 分配Agent 0 个。此前这些每天生成任务文件并被 executor 判 need_manual 无限重派。",
+        "capability_matrix": "ai_forbidden_word / title_too_long / meta_description_too_short / workflow_missing_guard（executor 与 router 两处已比对一致）",
+        "residual": "manual_queue 按日期落盘，不做跨日去重 —— 同一 issue 每天仍出现在当天队列。有意为之：人工队列是每日快照。"
       }
     },
     {
@@ -486,6 +527,70 @@
       "acceptance": "决定 7-day-china-itinerary 发布或调整 CTA 指向 free-itinerary",
       "owner_acknowledged": false,
       "resolution": null
+    },
+    {
+      "id": "AUDIT-FE-008",
+      "agent": "frontend",
+      "severity": "high",
+      "sla": "P1 / 48h",
+      "title": "巡检器 9 处 YAML-only 正则对 19 个 TOML front-matter 文件完全失明",
+      "task_file": null,
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [
+        "AUDIT-OPS-001（修好前无法判定「孤儿已清完」）"
+      ],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "check_title_meta_length() 能读到 TOML 文件的 title；fm_stats.py 报告的 19 个 TOML 文件全部进入巡检结果",
+      "owner_acknowledged": false,
+      "resolution": null,
+      "detected_at": "2026-09-22T15:35:06+08:00",
+      "detected_by": "audit_fix_run（孤儿页清单实测时发现）",
+      "description": "content/ 下 125 个已发布源文件中 19 个使用 TOML front-matter（+++），占 15.2%。site_health_agent.py 有 9 处 re.match(r'^---\\s*\\n...') 只匹配 YAML，TOML 文件被判为「无 front-matter」而跳过 —— 其 title 长度、meta description、占位符、AI 禁用词、persona 违规全部从未被检查。",
+      "affected_code_sites": [
+        "site_health_agent.py:127 split_front_matter（本轮新增，同样漏检）",
+        "site_health_agent.py:207",
+        "site_health_agent.py:421",
+        "site_health_agent.py:451",
+        "site_health_agent.py:493",
+        "site_health_agent.py:532",
+        "site_health_agent.py:570",
+        "site_health_agent.py:1040"
+      ],
+      "affected_content_files": [
+        "content/cities/{beijing,chengdu,guilin,hangzhou,shanghai,western-sichuan,xian,yangshuo}.md",
+        "content/{disclaimer,privacy-policy}.md",
+        "content/{about,guides,resources}/_index.md",
+        "content/posts/best-travel-insurance-china.md",
+        "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+        "content/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md"
+      ],
+      "impact": "3 个 content/posts/ 文件被 AUDIT-OPS-001 错报为孤儿页；8 个城市页 + 2 个法务页 + 3 个 _index 页的标题/description 从未校验。",
+      "recommended_action": "9 处 YAML-only 正则统一换成 YAML+TOML 双格式解析器。注意 TOML 语法是 key = \"value\"，不是 key: value，不能只改分隔符。",
+      "not_fixed_this_run": "需改 9 处调用点且 TOML 解析语法与 YAML 不同，回归风险高；属新发现缺陷类，需用户确认是否纳入本轮范围。"
+    },
+    {
+      "id": "AUDIT-OPS-004",
+      "agent": "ops",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "孤儿页统计未排除 Hugo 分页容器 /posts/page/，虚增 1 个",
+      "task_file": null,
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "孤儿页统计输出 67 篇文章页而非 68 个目录",
+      "owner_acknowledged": false,
+      "resolution": null,
+      "detected_at": "2026-09-22T15:35:06+08:00",
+      "detected_by": "audit_fix_run",
+      "description": "public/posts/page/ 下含 1~7 七个分页子目录，是 Hugo 分页产物而非文章页。直接枚举 public/posts/* 会把 page 计入。",
+      "recommended_action": "孤儿页扫描脚本排除 name=='page'。"
     }
   ],
   "closed_as_false_positive": [
@@ -585,6 +690,19 @@
       "by": "audit_fix_run",
       "event": "fix run completed",
       "detail": "修复 7 项（5 项原有 + 2 项本轮新发现），部分解除 AUDIT-OPS-002 阻塞，新增登记 4 项。12 项仍开放。全部改动未 commit。验证脚本 C:/temp/dsh/verify_all_fixes.py 全绿。"
+    },
+    {
+      "at": "2026-09-22T15:35:06+08:00",
+      "by": "audit_fix_run",
+      "event": "plan A landed + orphan disposition list + 2 new findings",
+      "detail": [
+        "提交 b48c6c27（已推送）：7 项日报缺陷修复 + 台账，15 文件",
+        "提交 598ab89c（已推送）：其他 agent 未入库的报告重生成产物",
+        "AUDIT-OPS-002 方案 A 落地：executor 定义 AUTO_FIXABLE_TYPES 单一事实源，router import 后分流，manual_queue_<date>.json 独立落盘不派 agent 任务",
+        "AUDIT-OPS-001 口径修正：孤儿页 7→4（TOML 漏检导致 3 个误判），critical→medium",
+        "新增 AUDIT-FE-008（TOML front-matter 漏检，high）、AUDIT-OPS-004（分页容器误计，low）",
+        "新增 ORPHAN_PAGE_DISPOSITION_2026-09-22.md（只读清单，未做任何线上修改）"
+      ]
     }
   ],
   "fix_runs": [

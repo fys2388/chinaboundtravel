@@ -3,15 +3,15 @@
   "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
   "task_id": "task_2026-09-22_audit_ops",
   "created_at": "2026-09-22T10:00:00+00:00",
-  "updated_at": "2026-09-22T14:40:00+00:00",
+  "updated_at": "2026-09-22T15:36:36+08:00",
   "target_date": "2026-09-21",
   "task_source": "daily_report_audit",
   "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
-  "issue_count": 4,
+  "issue_count": 5,
   "severity_summary": {
     "critical": 1,
     "medium": 2,
-    "low": 1
+    "low": 2
   },
   "issues": [
     {
@@ -29,14 +29,23 @@
       "source": "daily_report_audit",
       "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
       "task_source": "daily_report_audit",
-      "status": "new",
+      "status": "blocked",
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-09-22T10:00:00+00:00",
       "auto_fixable": false,
       "verify_command": "python -c \"import re,pathlib;P=pathlib.Path('E:/AI/dulizhan/travel-blog/public/posts');n=len(list(P.glob('*/index.html')));print('live pages:',n)\"",
       "expected_post_fix": "public/posts 页面数 67 -> 60；孤儿/仅草稿支撑页 7 -> 0；<title> 为裸 URL 的页 4 -> 0",
-      "sla": "P0，24 小时内给出逐页处置决策"
+      "sla": "P0，24 小时内给出逐页处置决策",
+      "blocked_reason": "逐页处置清单已产出（ORPHAN_PAGE_DISPOSITION_2026-09-22.md），执行需授权：涉及线上页面下线/301 与 Hugo 构建行为变更。用户 2026-09-22 选择「先只出逐页清单，不动手」。",
+      "correction": {
+        "corrected_at": "2026-09-22T15:36:36+08:00",
+        "field": "severity / 数量 / 危害程度",
+        "before": "critical / 7 个孤儿页（10.4%）/ 5 个带正常标题孤儿页很可能正在获得排名与曝光",
+        "after": "medium / 4 个真孤儿（6.0%）/ 4 个中只有 1 个有 GSC 曝光（6 次，0 点击，位置 86.5）",
+        "root_cause": "原 slug 解析只认 YAML（^---），本仓 19 个 TOML（+++）文件占已发布源 15.2%，其中 3 个在 content/posts/ 被错报成「无源」。详见 AUDIT-FE-008。",
+        "evidence": "orphan_final.py 实测 67 篇文章页中 4 个无源；fm_stats.py 实测 TOML 19 个"
+      }
     },
     {
       "id": "AUDIT-OPS-002",
@@ -53,7 +62,7 @@
       "source": "daily_report_audit",
       "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
       "task_source": "daily_report_audit",
-      "status": "blocked",
+      "status": "resolved",
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-09-22T10:00:00+00:00",
@@ -63,11 +72,21 @@
       "sla": "P2，需用户决策方案 A 或 B",
       "blocked_reason": "方案 B 的前置条件已解除：AUDIT-FE-001 / AUDIT-FE-002（自动化误报源）已修复并验证，误报率从 2/2 降到 0/2。现在扩展 executor 能力矩阵不会再自动化执行错误修改。仍需用户在方案 A（收窄 router 产出）与方案 B（扩展 executor）之间做选择。",
       "resolution": {
-        "resolved_at": "2026-09-22T14:40:00+00:00",
-        "resolved_by": "FIX-RUN-2026-09-22",
-        "scope": "partial",
-        "what_changed": "解除方案 B 的前置阻塞（误报源已关闭）；方案本身仍需用户决策，未实施。",
-        "verification": "see AUDIT-FE-001 / AUDIT-FE-002"
+        "resolved_at": "2026-09-22T15:36:36+08:00",
+        "resolved_by": "audit_fix_run",
+        "scope": "full",
+        "option": "A —— 收窄 router，只路由 executor 能力矩阵内的 type",
+        "changed_files": [
+          "scripts/agent_task_executor.py",
+          "scripts/daily_issue_router.py"
+        ],
+        "what_changed": [
+          "agent_task_executor.py 新增 AUTO_FIXABLE_TYPES 能力矩阵单一事实源",
+          "daily_issue_router.py import 该集合并在 assign_issues() 分流：能自动修 -> agent_tasks/；不能 -> manual_queue_<date>.json，不进 enqueue_issues",
+          "generate_summary() 输出「自动修复 N 个 | 人工队列 N 个」"
+        ],
+        "verification": "daily_issue_router.py --dry-run --date 2026-09-22：发现问题 10 | 自动修复 0 | 人工队列 10 | 分配Agent 0。此前这些每天生成任务文件并被 executor 判 need_manual 无限重派。",
+        "residual": "manual_queue 按日期落盘不做跨日去重，同一 issue 每天仍出现在当天队列。"
       },
       "depends_on": []
     },
@@ -117,6 +136,19 @@
       "auto_fixable": false,
       "expected_post_fix": "字段值不符合契约时产出 semantic_warnings，不再静默通过",
       "blocks": []
+    },
+    {
+      "id": "AUDIT-OPS-004",
+      "type": "metric_miscount",
+      "severity": "low",
+      "title": "孤儿页统计未排除 Hugo 分页容器 /posts/page/，虚增 1 个",
+      "status": "new",
+      "auto_fixable": false,
+      "detected_at": "2026-09-22T15:36:36+08:00",
+      "detected_by": "audit_fix_run",
+      "description": "public/posts/page/ 下含 1~7 七个分页子目录，是 Hugo 分页产物而非文章页。直接枚举 public/posts/* 会把 page 计入。",
+      "recommended_action": "孤儿页扫描脚本排除 name=='page'。",
+      "acceptance": "孤儿页统计输出 67 篇文章页而非 68 个目录"
     }
   ],
   "priority_issue": {
@@ -138,10 +170,11 @@
     "note": "1 项已修复并验证 ['AUDIT-FE-007']，3 项仍需责任人处理（new=2 / blocked=1）。"
   },
   "status_by_issue": {
-    "AUDIT-OPS-001": "new",
-    "AUDIT-OPS-002": "blocked",
+    "AUDIT-OPS-001": "blocked",
+    "AUDIT-OPS-002": "resolved",
     "AUDIT-OPS-003": "new",
-    "AUDIT-FE-007": "resolved"
+    "AUDIT-FE-007": "resolved",
+    "AUDIT-OPS-004": "new"
   },
   "fix_run": {
     "run_id": "FIX-RUN-2026-09-22",
@@ -157,6 +190,10 @@
     "verification_script": "C:/temp/dsh/verify_all_fixes.py",
     "committed": false,
     "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
-    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
-  }
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+    "latest_at": "2026-09-22T15:36:36+08:00",
+    "latest_note": "方案 A 落地 + OPS-001 口径修正 + 新增 FE-008 / OPS-004"
+  },
+  "open_count": 3,
+  "resolved_count": 2
 }

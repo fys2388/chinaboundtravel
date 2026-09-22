@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Agent Task Executor — Agent 任务自动执行器
 
@@ -33,6 +33,24 @@ from content_seo_policy import TITLE_HARD_MAX, truncate_title
 
 BASE_DIR = Path(__file__).parent.parent
 SITE_URL = "https://www.chinaboundtravel.com"
+
+# ============================================================
+# 能力矩阵（单一事实源）
+# ============================================================
+# 只有列在这里的 issue type 才会被本执行器真正改动文件并标记 resolved。
+# 其余 type 一律走 need_manual —— 见 AUDIT-OPS-002（问题分配闭环空转 18 天）。
+#
+# 为什么必须显式声明：本执行器历史上按「碰到就 try」的方式写，5 类 issue 被硬编码成
+# need_manual 后仍每天被 router 派进来，轮次结果恒为 resolved=0/need_manual=N，
+# 看起来在推进其实毫无进展。router 现在 import 本集合做分流，避免再派无效任务。
+#
+# 新增自动修复能力时必须同步改这一行，否则 router 不会把该类问题派进来。
+AUTO_FIXABLE_TYPES = frozenset({
+    "ai_forbidden_word",            # execute_content -> _fix_forbidden_word
+    "title_too_long",               # execute_seo -> _fix_title_length
+    "meta_description_too_short",   # execute_seo -> _fix_meta_description
+    "workflow_missing_guard",       # execute_ops -> 条件解决（guard 已存在时）
+})
 
 
 def _writeback_issue(task: dict, issue: dict, status: str, resolved_by: str, note: str) -> bool:

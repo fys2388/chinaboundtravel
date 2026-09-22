@@ -30,6 +30,18 @@ from typing import Optional
 sys.path.insert(0, str(Path(__file__).parent))
 from agent_task_queue import enqueue_issues
 
+try:
+    # 能力矩阵的单一事实源在 agent_task_executor 里。失败时退回本文件内的
+    # 兜底集合，避免执行器侧改动导致路由整体崩溃。
+    from agent_task_executor import AUTO_FIXABLE_TYPES
+except Exception:  # pragma: no cover - 兜底路径
+    AUTO_FIXABLE_TYPES = frozenset({
+        "ai_forbidden_word",
+        "title_too_long",
+        "meta_description_too_short",
+        "workflow_missing_guard",
+    })
+
 BASE_DIR = Path(__file__).parent.parent
 REPORTS_DIR = BASE_DIR / "reports"
 ISSUES_DIR = BASE_DIR / "reports" / "daily_issues"
@@ -315,6 +327,7 @@ class DailyIssueRouter:
         self.target_date = target_date or date.today().isoformat()
         self.dry_run = dry_run
         self.issues = []
+        self.manual_issues = []
         self.assignments = []
         self.router_version = "1.0"
 
@@ -587,12 +600,26 @@ class DailyIssueRouter:
         }
 
     def assign_issues(self) -> list:
-        """将问题分配给对应 Agent"""
+        """将问题分配给对应 Agent。
+
+        分流（AUDIT-OPS-002 方案 A）：只有 executor 能力矩阵内（AUTO_FIXABLE_TYPES）的
+        type 才会生成 agent 任务；其余进人工队列文件，不再每天被重派。
+        理由见 agent_task_executor.AUTO_FIXABLE_TYPES 的注释。
+        """
         assignments = []
 
-        # 按 Agent 分组
-        by_agent = {}
+        # 按「能否自动修」分流，再按 Agent 分组
+        auto_issues = []
+        self.manual_issues = []
         for issue in self.issues:
+            issue.setdefault("auto_fixable", issue["type"] in AUTO_FIXABLE_TYPES)
+            if issue["auto_fixable"]:
+                auto_issues.append(issue)
+            else:
+                self.manual_issues.append(issue)
+
+        by_agent = {}
+        for issue in auto_issues:
             agent = issue["agent"]
             if agent not in by_agent:
                 by_agent[agent] = []
@@ -676,8 +703,51 @@ class DailyIssueRouter:
 
         print(f"✅ Agent任务文件已合并到: {ISSUES_DIR / 'agent_tasks'}")
 
+        # 人工队列：不在 executor 能力矩阵内的 type 不再派 agent 任务，
+        # 单独落盘以免静默丢失，也避免每天重派同一批 need_manual。
+        self._save_manual_queue()
+
         # 回写分配状态到原始问题文件（site_health_issues等）
         self._writeback_assigned_status()
+
+    def _save_manual_queue(self):
+        """保存无法自动修复的问题到人工队列（与 agent_tasks 分离）。
+
+        这是 AUDIT-OPS-002 方案 A 的核心：让「派不出去」变成显式的、
+        一次性的输出，而不是每天重复的 need_manual 轮次。
+        """
+        if not self.manual_issues:
+            return
+
+        by_agent = {}
+        for issue in self.manual_issues:
+            by_agent.setdefault(issue.get("agent", "ops"), []).append(issue)
+
+        queue = {
+            "queue_type": "manual",
+            "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，"
+                      "executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+            "generated_at": datetime.now().isoformat(),
+            "target_date": self.target_date,
+            "issue_count": len(self.manual_issues),
+            "by_agent": {
+                agent: {
+                    "count": len(issues),
+                    "types": sorted({i.get("type") for i in issues}),
+                }
+                for agent, issues in sorted(by_agent.items())
+            },
+            "issues": self.manual_issues,
+        }
+
+        output_file = ISSUES_DIR / f"manual_queue_{self.target_date}.json"
+        output_file.write_text(
+            json.dumps(queue, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(
+            f"📋 人工队列已保存: {output_file.name}（{len(self.manual_issues)} 个，"
+            f"{len(by_agent)} 个 agent）—— 不再派 agent 任务"
+        )
 
     def _writeback_assigned_status(self):
         """把已分配状态回写到原始问题来源文件，确保看板显示正确"""
@@ -731,8 +801,21 @@ class DailyIssueRouter:
         lines = []
         lines.append(f"📋 日报问题分配摘要 | {self.target_date}")
         lines.append(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        lines.append(f"发现问题: {len(self.issues)} 个 | 分配Agent: {len(self.assignments)} 个")
+        auto_count = len(self.issues) - len(self.manual_issues)
+        lines.append(
+            f"发现问题: {len(self.issues)} 个 | "
+            f"自动修复: {auto_count} 个 | 人工队列: {len(self.manual_issues)} 个"
+        )
+        lines.append(f"分配Agent: {len(self.assignments)} 个")
         lines.append("")
+        if self.manual_issues:
+            types = sorted({i.get("type") for i in self.manual_issues})
+            lines.append(
+                f"📋 人工队列 {len(self.manual_issues)} 个（不在 executor 能力矩阵内，"
+                f"不派 agent 任务，见 manual_queue_{self.target_date}.json）："
+            )
+            lines.append(f"   {', '.join(types)}")
+            lines.append("")
 
         for task in self.assignments:
             sev = task["severity_summary"]
