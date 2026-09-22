@@ -36,10 +36,10 @@
           "meaning": "Affiliate CTA inventory rows",
           "name": "cta_inventory_rows",
           "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 27,
+          "source_observed_date": "2026-08-26",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "rows",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
@@ -54,10 +54,10 @@
           "meaning": "Pages with affiliate CTA coverage",
           "name": "cta_inventory_pages",
           "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 27,
+          "source_observed_date": "2026-08-26",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "pages",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
@@ -90,9 +90,9 @@
           "meaning": "CTA impressions (REV001 scope)",
           "name": "cta_impressions",
           "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "impressions",
           "update_frequency": "daily",
@@ -108,9 +108,9 @@
           "meaning": "Affiliate outbound events (REV001 scope)",
           "name": "outbound_success",
           "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "events",
           "update_frequency": "daily",
@@ -126,9 +126,9 @@
           "meaning": "CTA click rate (REV001 scope)",
           "name": "click_rate",
           "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "%",
           "update_frequency": "daily",
@@ -144,9 +144,9 @@
           "meaning": "Outbound rate (REV001 scope)",
           "name": "outbound_rate",
           "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "%",
           "update_frequency": "daily",
@@ -162,9 +162,9 @@
           "meaning": "Affiliate clicks per 1000 sessions (sitewide)",
           "name": "clicks_per_1000_sessions",
           "source": "reports/revenue/REV001_FUNNEL_METRICS.csv + REVENUE_DASHBOARD.md",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "clicks/1000",
           "update_frequency": "daily",
@@ -180,10 +180,10 @@
           "meaning": "Partner pages/link counts and status",
           "name": "partner_breakdown",
           "source": "reports/revenue/AFFILIATE_PARTNER_INVENTORY.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 23,
+          "source_observed_date": "2026-08-30",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "breakdown",
           "update_frequency": "weekly",
           "valid_period": "2026-08-17",
@@ -246,9 +246,9 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/AFFILIATE_PARTNER_INVENTORY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/REV001_FUNNEL_METRICS.csv"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\AFFILIATE_FUNNEL_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\AFFILIATE_PARTNER_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV001_FUNNEL_METRICS.csv"
       ]
     },
     "brand": {
@@ -298,8 +298,8 @@
           "meaning": "Legacy persona migrations in 2026-08-16 pilot",
           "name": "migrated_this_period",
           "source": "reports/P1_BRAND_03_LEGACY_PILOT_REPORT.md",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
           "stale_source": false,
           "status": "OK",
           "unit": "posts",
@@ -316,8 +316,8 @@
           "meaning": "Brand logo / favicon asset migration status",
           "name": "logo_favicon_status",
           "source": "reports/P1_BRAND_04_LOGO_REPLACEMENT_READY.md + docs/AI_CONTEXT.md",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 23,
+          "source_observed_date": "2026-08-30",
           "stale_source": false,
           "status": "OK",
           "unit": "status",
@@ -352,8 +352,8 @@
           "meaning": "Joran avatar assets status",
           "name": "brand_asset_avatar",
           "source": "docs/AI_CONTEXT.md (avatar webp + png)",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 4,
+          "source_observed_date": "2026-09-18",
           "stale_source": false,
           "status": "OK",
           "unit": "status",
@@ -363,9 +363,9 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/P1_BRAND_02_BRAND_IDENTITY_AUDIT.md",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/P1_BRAND_04_LOGO_REPLACEMENT_READY.md"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_BRAND_IDENTITY_AUDIT.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_04_LOGO_REPLACEMENT_READY.md"
       ]
     },
     "commercial_clusters": {
@@ -427,8 +427,8 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/COMMERCIAL_CLUSTER_PRIORITY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/COMMERCIAL_CLUSTER_PROGRESS.md"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\COMMERCIAL_CLUSTER_PRIORITY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\COMMERCIAL_CLUSTER_PROGRESS.md"
       ]
     },
     "content_assets": {
@@ -478,10 +478,10 @@
           "meaning": "Posts published in last 30 days",
           "name": "new_pages_30d",
           "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (published_date)",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "posts",
           "update_frequency": "daily",
           "valid_period": "2026-08-23..2026-09-22",
@@ -514,10 +514,10 @@
           "meaning": "Inventory posts marked INDEXED",
           "name": "indexed_posts",
           "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (indexed_status)",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "posts",
           "update_frequency": "daily",
           "valid_period": "2026-08-17",
@@ -660,10 +660,10 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/CONTENT_SEO_INVENTORY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/content_opportunity_scores.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/CANONICAL_CONFLICT_QUEUE.md"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CONTENT_SEO_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\content_opportunity_scores.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\P1_BRAND_02_LEGACY_PERSONA_REVIEW.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CANONICAL_CONFLICT_QUEUE.md"
       ]
     },
     "content_trust": {
@@ -677,8 +677,8 @@
           "meaning": "Open content-trust audit issues (current)",
           "name": "total_issues",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "issues",
@@ -695,8 +695,8 @@
           "meaning": "High-risk trust issues remaining",
           "name": "high_risk",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "issues",
@@ -713,8 +713,8 @@
           "meaning": "Medium-risk trust issues remaining",
           "name": "medium_risk",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "issues",
@@ -731,8 +731,8 @@
           "meaning": "Audit issues by type",
           "name": "issue_types",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "breakdown",
@@ -755,8 +755,8 @@
           "meaning": "Deterministic auto-fixes applied this round",
           "name": "auto_fixed",
           "source": "reports/content_trust_fix/FIX_REPORT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 23,
+          "source_observed_date": "2026-08-30",
           "stale_source": false,
           "status": "OK",
           "unit": "fixes",
@@ -773,8 +773,8 @@
           "meaning": "Issues requiring human fact-check",
           "name": "fact_check_required",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "issues",
@@ -791,8 +791,8 @@
           "meaning": "Fixable audit rows left for manual review",
           "name": "deferred_manual",
           "source": "reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 2,
+          "source_observed_date": "2026-09-20",
           "stale_source": false,
           "status": "OK",
           "unit": "issues",
@@ -802,8 +802,8 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/content_audit/CONTENT_TRUST_AUDIT.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/content_trust_fix/FIX_REPORT.csv"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\content_audit\\CONTENT_TRUST_AUDIT.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\content_trust_fix\\FIX_REPORT.csv"
       ]
     },
     "experiments": {
@@ -929,10 +929,10 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/EXPERIMENT_COMPARISON.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/REV002_EXPERIMENT_REGISTRY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/REV003_EXPERIMENT_REGISTRY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/DRIVE_EXPERIMENT_REGISTRY.csv"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\EXPERIMENT_COMPARISON.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV002_EXPERIMENT_REGISTRY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REV003_EXPERIMENT_REGISTRY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\DRIVE_EXPERIMENT_REGISTRY.csv"
       ]
     },
     "growth_funnel": {
@@ -1029,7 +1029,7 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_GROWTH_FUNNEL.csv"
       ]
     },
     "operations": {
@@ -1096,14 +1096,14 @@
           "duplicate_destination_source": false,
           "meaning": "Backup / rollback status",
           "name": "backup_rollback",
-          "source": "latest tag backup/site-20260921-073917Z (%Y->- (tag: backup/site-20260921-073917Z, origin/backup/site-snapshot)); restore_site.sh + site-backup-daily.yml present",
+          "source": "latest tag backup/site-20260922-072102Z (%Y->- (tag: backup/site-20260922-072102Z, origin/backup/site-snapshot)); restore_site.sh + site-backup-daily.yml present",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
           "status": "CONFIGURED",
           "unit": "status",
           "update_frequency": "daily",
-          "valid_period": "%Y->- (tag: backup/site-20260921-073917Z, origin/backup/site-snapshot)",
+          "valid_period": "%Y->- (tag: backup/site-20260922-072102Z, origin/backup/site-snapshot)",
           "value": "CONFIGURED"
         },
         {
@@ -1133,8 +1133,8 @@
           "meaning": "Active OKR weekly plan items",
           "name": "okr_plan_items",
           "source": "reports/okr_progress/weekly_2026-W34.json",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
           "stale_source": false,
           "status": "OK",
           "unit": "items",
@@ -1144,179 +1144,179 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/okr_progress/weekly_2026-W34.json"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\okr_progress\\weekly_2026-W34.json"
       ]
     },
     "revenue": {
       "kpis": [
         {
-          "baseline": null,
-          "calculation": "sum of confirmed affiliate earnings",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "sum of paid_profit_usd_sum, 28d",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
-          "meaning": "Affiliate revenue (never fabricated)",
+          "meaning": "Affiliate revenue (Travelpayouts, live)",
           "name": "revenue",
-          "source": "No affiliate revenue API / data source",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "count of confirmed conversions",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0,
+          "calculation": "sum of paid_actions_count, 28d",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Affiliate orders / conversions",
           "name": "orders_conversions",
-          "source": "No conversion API",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "orders",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0
         },
         {
-          "baseline": null,
-          "calculation": "sum of commission",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "sum of paid_profit_usd_sum (TP commission), 28d",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Affiliate commission earned",
           "name": "commission",
-          "source": "No affiliate revenue API",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "revenue / pageviews * 1000",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "revenue / pageviews * 1000 (28d)",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Revenue per 1000 pageviews",
           "name": "rpm",
-          "source": "Revenue unavailable",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0.0
         },
         {
-          "baseline": null,
-          "calculation": "revenue / sessions * 1000",
-          "data_source_type": "NOT_AVAILABLE",
+          "baseline": 0.0,
+          "calculation": "revenue / sessions * 1000 (28d)",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "Revenue per 1000 sessions",
           "name": "revenue_per_1000_sessions",
-          "source": "Revenue unavailable",
+          "source": "Travelpayouts statistics/v1/execute_query (LIVE 28d)",
           "source_age_days": null,
           "source_observed_date": null,
           "stale_source": false,
-          "status": "NOT_AVAILABLE",
+          "status": "OK",
           "unit": "USD",
           "update_frequency": "daily",
-          "valid_period": null,
-          "value": null
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0.0
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/REVENUE_DASHBOARD.md"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REVENUE_DASHBOARD.md"
       ]
     },
     "seo_gsc": {
       "kpis": [
         {
           "baseline": 0,
-          "calculation": "sum clicks from searchanalytics",
-          "data_source_type": "CACHED",
+          "calculation": "sum clicks from searchanalytics (dimensions=['query'])",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
-          "meaning": "GSC clicks, 28d window (query-level baseline)",
+          "meaning": "GSC clicks, 28d window (query-level, searchanalytics)",
           "name": "gsc_clicks_28d",
-          "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-          "source_age_days": 38,
-          "source_observed_date": "2026-08-15",
-          "stale_source": true,
-          "status": "STALE_SOURCE",
+          "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+          "source_age_days": 3,
+          "source_observed_date": "2026-09-19",
+          "stale_source": false,
+          "status": "OK",
           "unit": "clicks",
           "update_frequency": "daily",
-          "valid_period": "2026-07-19..2026-08-13",
+          "valid_period": "2026-08-23..2026-09-19",
           "value": 0
         },
         {
           "baseline": 0,
-          "calculation": "sum impressions from searchanalytics",
-          "data_source_type": "CACHED",
+          "calculation": "sum impressions from searchanalytics (dimensions=['query'])",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
-          "meaning": "GSC impressions, 28d window (query-level baseline)",
+          "meaning": "GSC impressions, 28d window (query-level, searchanalytics)",
           "name": "gsc_impressions_28d",
-          "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-          "source_age_days": 38,
-          "source_observed_date": "2026-08-15",
-          "stale_source": true,
-          "status": "STALE_SOURCE",
+          "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+          "source_age_days": 3,
+          "source_observed_date": "2026-09-19",
+          "stale_source": false,
+          "status": "OK",
           "unit": "impressions",
           "update_frequency": "daily",
-          "valid_period": "2026-07-19..2026-08-13",
-          "value": 234
+          "valid_period": "2026-08-23..2026-09-19",
+          "value": 404
         },
         {
           "baseline": 0.0,
           "calculation": "clicks / impressions * 100",
-          "data_source_type": "CACHED",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "GSC CTR, 28d window",
           "name": "gsc_ctr_28d",
-          "source": "reports/seo/SEO_BASELINE_2026-08.md",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+          "source_age_days": 3,
+          "source_observed_date": "2026-09-19",
           "stale_source": false,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "%",
           "update_frequency": "daily",
-          "valid_period": "2026-07-19..2026-08-13",
+          "valid_period": "2026-08-23..2026-09-19",
           "value": 0.0
         },
         {
           "baseline": null,
-          "calculation": "average position from searchanalytics",
-          "data_source_type": "CACHED",
+          "calculation": "impressions-weighted average position from searchanalytics",
+          "data_source_type": "LIVE",
           "destination_note": "",
           "duplicate_destination_source": false,
           "meaning": "GSC average position, 28d window",
           "name": "gsc_avg_position_28d",
-          "source": "reports/seo/SEO_BASELINE_2026-08.md",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
+          "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+          "source_age_days": 3,
+          "source_observed_date": "2026-09-19",
           "stale_source": false,
           "status": "OK",
           "unit": "position",
           "update_frequency": "daily",
-          "valid_period": "2026-07-19..2026-08-13",
-          "value": 56.5
+          "valid_period": "2026-08-23..2026-09-19",
+          "value": 71.5
         },
         {
           "baseline": null,
@@ -1381,10 +1381,10 @@
           "meaning": "URLs with verdict PASS",
           "name": "inspection_pass",
           "source": "reports/seo/url_inspection_results.json",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "urls",
           "update_frequency": "weekly",
           "valid_period": "2026-08-16",
@@ -1399,9 +1399,9 @@
           "meaning": "GSC page-level clicks, 28d window (inventory sum)",
           "name": "page_level_clicks_28d",
           "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
           "status": "INSUFFICIENT_SAMPLE",
           "unit": "clicks",
           "update_frequency": "daily",
@@ -1417,10 +1417,10 @@
           "meaning": "GSC page-level impressions, 28d window",
           "name": "page_level_impressions_28d",
           "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
-          "source_age_days": 0,
-          "source_observed_date": "2026-09-22",
-          "stale_source": false,
-          "status": "OK",
+          "source_age_days": 29,
+          "source_observed_date": "2026-08-24",
+          "stale_source": true,
+          "status": "STALE_SOURCE",
           "unit": "impressions",
           "update_frequency": "daily",
           "valid_period": "2026-07-19..2026-08-15",
@@ -1477,7 +1477,7 @@
           "status": "OK",
           "unit": "list",
           "update_frequency": "weekly",
-          "valid_period": "2026-07-19..2026-08-13",
+          "valid_period": "2026-08-23..2026-09-19",
           "value": [
             {
               "content_id": "cbt-b4ff4381a014",
@@ -1501,10 +1501,10 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/SEO_BASELINE_2026-08.md",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/INDEX_COVERAGE_BASELINE.md",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/CONTENT_SEO_INVENTORY.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/url_inspection_results.json"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\SEO_BASELINE_2026-08.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\INDEX_COVERAGE_BASELINE.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\CONTENT_SEO_INVENTORY.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\seo\\url_inspection_results.json"
       ]
     },
     "social_growth": {
@@ -1615,7 +1615,7 @@
           "unit": "items",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": 285
+          "value": 295
         },
         {
           "baseline": null,
@@ -1634,10 +1634,10 @@
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
           "value": {
-            "fb": 68,
-            "ig": 77,
-            "pinterest": 72,
-            "x": 68
+            "fb": 70,
+            "ig": 80,
+            "pinterest": 75,
+            "x": 70
           }
         },
         {
@@ -1656,7 +1656,7 @@
           "unit": "posts",
           "update_frequency": "daily",
           "valid_period": "2026-08-26",
-          "value": 44
+          "value": 43
         },
         {
           "baseline": null,
@@ -1714,9 +1714,9 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/P1_GROWTH_29_GROWTH_FUNNEL.csv",
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/content/social/inventory.json"
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_SOCIAL_PILOT_SCHEDULE.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\social\\P1_GROWTH_29_GROWTH_FUNNEL.csv",
+        "E:\\AI\\dulizhan\\travel-blog\\content\\social\\inventory.json"
       ]
     },
     "traffic": {
@@ -1729,15 +1729,15 @@
           "duplicate_destination_source": true,
           "meaning": "GA4 unique users, 28d window",
           "name": "users_28d",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-21T11:19:32.156182, data_date 2026-09-20)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-21",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-22T10:30:11.367936, data_date 2026-09-21)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-22",
           "stale_source": false,
           "status": "DUPLICATE_DESTINATION",
           "unit": "users",
           "update_frequency": "daily",
-          "valid_period": "2026-08-25..2026-09-21",
-          "value": 244
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 248
         },
         {
           "baseline": 162,
@@ -1777,21 +1777,21 @@
         },
         {
           "baseline": null,
-          "calculation": "GA4 engagedSessions 141 / sessions 359",
+          "calculation": "GA4 engagedSessions 143 / sessions 364",
           "data_source_type": "LIVE",
           "destination_note": "GA4 的 Google Tag 配了 2 个目的地（G-GECBME3YVJ, G-P6BH500VBK），每个事件被同时记到这两个属性里。单个属性的数值本身没有被双计，但这个配置的权威地位未被证实：所有脚本都查数值 ID GA4_PROPERTY_ID，而 hugo.toml 写的是 measurement ID，仓库无法证明两者指向同一个属性，也无法证明当前读的不是多余的那个。涉及 KPI：users_28d / sessions_28d / pageviews_28d / engagement_rate_28d。检测于 2026-09-22；根因在 Google 控制台的 tag 配置（gtag.js 载荷服务端生成），不在本仓库 —— 改代码修不了。",
           "duplicate_destination_source": true,
           "meaning": "GA4 engagement rate, 28d window",
           "name": "engagement_rate_28d",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-21T11:19:32.156182, data_date 2026-09-20)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-21",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-22T10:30:11.367936, data_date 2026-09-21)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-22",
           "stale_source": false,
           "status": "DUPLICATE_DESTINATION",
           "unit": "%",
           "update_frequency": "daily",
-          "valid_period": "2026-08-25..2026-09-21",
-          "value": 0.39275766016713093
+          "valid_period": "2026-08-26..2026-09-22",
+          "value": 0.39285714285714285
         },
         {
           "baseline": null,
@@ -1801,32 +1801,32 @@
           "duplicate_destination_source": true,
           "meaning": "Sessions by default channel group, 28d window",
           "name": "source_channel_mix",
-          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-21T11:19:32.156182, data_date 2026-09-20) (traffic_sources 5 组)",
-          "source_age_days": 1,
-          "source_observed_date": "2026-09-21",
+          "source": "reports/real_data/ga4_real_data.json (GA4 API pull 2026-09-22T10:30:11.367936, data_date 2026-09-21) (traffic_sources 5 组)",
+          "source_age_days": 0,
+          "source_observed_date": "2026-09-22",
           "stale_source": false,
           "status": "DUPLICATE_DESTINATION",
           "unit": "breakdown",
           "update_frequency": "weekly",
-          "valid_period": "2026-08-25..2026-09-21",
+          "valid_period": "2026-08-26..2026-09-22",
           "value": [
             {
-              "activeUsers": 107,
+              "activeUsers": 108,
               "channel": "Direct",
-              "engagementRate": 0.3135,
-              "sessions": 185
+              "engagementRate": 0.2928,
+              "sessions": 181
             },
             {
-              "activeUsers": 118,
+              "activeUsers": 122,
               "channel": "Organic Social",
-              "engagementRate": 0.5411,
-              "sessions": 146
+              "engagementRate": 0.5613,
+              "sessions": 155
             },
             {
-              "activeUsers": 15,
+              "activeUsers": 14,
               "channel": "Organic Search",
-              "engagementRate": 0.1765,
-              "sessions": 17
+              "engagementRate": 0.125,
+              "sessions": 16
             },
             {
               "activeUsers": 5,
@@ -1844,7 +1844,7 @@
         }
       ],
       "source_artifacts": [
-        "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/REVENUE_DASHBOARD.md",
+        "E:\\AI\\dulizhan\\travel-blog\\reports\\revenue\\REVENUE_DASHBOARD.md",
         "reports/real_data/ga4_real_data.json"
       ]
     }
@@ -1857,7 +1857,6 @@
     "affiliate_funnel.cta_impressions: sample below guard",
     "affiliate_funnel.outbound_rate: sample below guard",
     "affiliate_funnel.outbound_success: sample below guard",
-    "revenue: no affiliate revenue API (REVENUE_NOT_AVAILABLE)",
     "seo_gsc.gsc_ctr_28d: sample below guard",
     "seo_gsc.page_level_clicks_28d: sample below guard",
     "traffic.engagement_rate_28d: GA4 source canonicality unverified",
@@ -1870,26 +1869,10 @@
   "schema": "chinabound-2.0-kpi-snapshot",
   "schema_version": "1.0",
   "stale_sources": {
-    "count": 8,
+    "count": 19,
     "note": "有数值的 CACHED 指标，其引用的观测点已超过 14 天未刷新。数值保留（可作趋势基线），但不得当作当日测量结论。",
-    "oldest_age_days": 38,
+    "oldest_age_days": 37,
     "rows": [
-      {
-        "domain": "seo_gsc",
-        "name": "gsc_clicks_28d",
-        "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-        "source_age_days": 38,
-        "source_observed_date": "2026-08-15",
-        "value": 0
-      },
-      {
-        "domain": "seo_gsc",
-        "name": "gsc_impressions_28d",
-        "source": "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-        "source_age_days": 38,
-        "source_observed_date": "2026-08-15",
-        "value": 234
-      },
       {
         "domain": "seo_gsc",
         "name": "indexed_pages",
@@ -1937,6 +1920,165 @@
         "source_age_days": 36,
         "source_observed_date": "2026-08-17",
         "value": 0
+      },
+      {
+        "domain": "seo_gsc",
+        "name": "inspection_pass",
+        "source": "reports/seo/url_inspection_results.json",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 49
+      },
+      {
+        "domain": "seo_gsc",
+        "name": "page_level_clicks_28d",
+        "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 2
+      },
+      {
+        "domain": "seo_gsc",
+        "name": "page_level_impressions_28d",
+        "source": "reports/seo/CONTENT_SEO_INVENTORY.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 1073
+      },
+      {
+        "domain": "content_assets",
+        "name": "new_pages_30d",
+        "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (published_date)",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0
+      },
+      {
+        "domain": "content_assets",
+        "name": "indexed_posts",
+        "source": "reports/seo/CONTENT_SEO_INVENTORY.csv (indexed_status)",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 47
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "cta_impressions",
+        "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "outbound_success",
+        "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "click_rate",
+        "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0.0
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "outbound_rate",
+        "source": "reports/revenue/REV001_FUNNEL_METRICS.csv",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0.0
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "clicks_per_1000_sessions",
+        "source": "reports/revenue/REV001_FUNNEL_METRICS.csv + REVENUE_DASHBOARD.md",
+        "source_age_days": 29,
+        "source_observed_date": "2026-08-24",
+        "value": 0.0
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "cta_inventory_rows",
+        "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
+        "source_age_days": 27,
+        "source_observed_date": "2026-08-26",
+        "value": 278
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "cta_inventory_pages",
+        "source": "reports/revenue/AFFILIATE_FUNNEL_INVENTORY.csv",
+        "source_age_days": 27,
+        "source_observed_date": "2026-08-26",
+        "value": 45
+      },
+      {
+        "domain": "affiliate_funnel",
+        "name": "partner_breakdown",
+        "source": "reports/revenue/AFFILIATE_PARTNER_INVENTORY.csv",
+        "source_age_days": 23,
+        "source_observed_date": "2026-08-30",
+        "value": [
+          {
+            "link_count": 42,
+            "pages_count": 32,
+            "partner": "Airalo",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 3,
+            "pages_count": 1,
+            "partner": "Allianz",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 43,
+            "pages_count": 35,
+            "partner": "Aviasales",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 45,
+            "pages_count": 35,
+            "partner": "Booking",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 49,
+            "pages_count": 40,
+            "partner": "Klook",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 0,
+            "pages_count": 0,
+            "partner": "NordPass",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 40,
+            "pages_count": 27,
+            "partner": "SafetyWing",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 5,
+            "pages_count": 5,
+            "partner": "Trip.com",
+            "status": "ACTIVE"
+          },
+          {
+            "link_count": 3,
+            "pages_count": 1,
+            "partner": "World Nomads",
+            "status": "ACTIVE"
+          }
+        ]
       }
     ],
     "stale_after_days": 14

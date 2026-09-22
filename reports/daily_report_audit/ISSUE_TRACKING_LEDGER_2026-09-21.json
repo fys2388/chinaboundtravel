@@ -13,7 +13,7 @@
     "superseded": "已被其他工单吸收"
   },
   "summary": {
-    "total_open": 10,
+    "total_open": 9,
     "total_closed_as_false_positive": 6,
     "by_severity": {
       "critical": 1,
@@ -29,25 +29,26 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "（2026-09-22T18:30:00+08:00 更新）开放 10 项，已解决 11 项。本轮：AUDIT-OPS-001 已修复（第三次修正孤儿页判定口径后确认；static/_redirects:141-149 补 monthly-update 301；hugo.toml:30 sitemapExclude 追加 monthly-update 前缀条目；4 个孤儿 stale 目录中 3 个已有 _redirects 301 补偿，1 个本条补齐；所有孤儿页 URL 层与 sitemap 层均已处理）。误报关闭 6 项不变。",
-    "total_resolved": 11,
+    "note": "【2026-09-22T19:58:59+08:00 更新】共 9 项开放，已解决 12 项。新增：AUDIT-OPS-003 resolved（query 级 GSC 28d KPI 冻结 37 天，根因是 build_seo_gsc 只读冻结的 SEO_BASELINE_2026-08.md，改为优先读 gsc_real_data.json + snapshot-daily-refresh.yml 增加 GSC pull step；实测 data_date=2026-09-19、impressions=404、data_source_type=LIVE、source_age_days=3）；AUDIT-OPS-001 前轮已 resolved（孤儿页判定口径修正）。",
+    "total_resolved": 12,
     "by_status": {
       "blocked": 3,
-      "new": 7,
-      "resolved": 11
+      "new": 6,
+      "resolved": 12
     },
     "resolved_ids": [
+      "AUDIT-OPS-001",
       "AUDIT-FE-001",
       "AUDIT-FE-002",
       "AUDIT-FE-003",
       "AUDIT-FE-004",
+      "AUDIT-OPS-002",
       "AUDIT-FE-005",
+      "AUDIT-OPS-003",
       "AUDIT-FE-006",
       "AUDIT-FE-007",
       "AUDIT-FE-008",
-      "AUDIT-OPS-002",
-      "AUDIT-OPS-004",
-      "AUDIT-OPS-001"
+      "AUDIT-OPS-004"
     ],
     "new_in_fix_run": [
       "AUDIT-FE-008",
@@ -61,7 +62,6 @@
       "AUDIT-CT-001",
       "AUDIT-CT-002",
       "AUDIT-SEO-001",
-      "AUDIT-OPS-003",
       "AUDIT-RV-003",
       "AUDIT-CT-003"
     ],
@@ -447,7 +447,7 @@
       "sla": "P3 / 1w",
       "title": "gsc_*_28d 等 8 项指标 37 天未刷新",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -456,7 +456,79 @@
       "safety_note": "该凭据文件属 .gitignore 排除项。缺失时不要创建空文件或伪造内容，须先向用户确认。",
       "acceptance": "快照中 gsc_*_28d 的 as_of 更新到最近观测日",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "root_cause": "reports/management/REPORTING_SNAPSHOT.json 的 gsc_clicks_28d / gsc_impressions_28d / gsc_ctr_28d / gsc_avg_position_28d 四份 query 级 GSC 28d KPI 只从 reports/seo/SEO_BASELINE_2026-08.md 解析（该文件最后修改于 2026-08-24，28d window 冻结在 2026-07-19..2026-08-15，全仓无任何脚本写它，只被 reporting_kpi_engine 单向读取）。真实 GSC 数据其实每天都在拉：reports/real_data/gsc_real_data.json 由 cross-agent-learning-daily.yml 与新增的 snapshot-daily-refresh.yml 步骤刷新。数据流是断的，不是凭据问题。",
+        "code_fix": [
+          "scripts/reporting_kpi_engine.py: build_seo_gsc() 改为优先读 reports/real_data/gsc_real_data.json（is_real_data + data_date + metrics 三条件），从 metrics.clicks / impressions / ctr / average_position 取 4 份 query 级 28d KPI，source 标注为 GSC API data_date；回退到 SEO_BASELINE_2026-08.md 保证 CI 首次运行前不产生 NOT_AVAILABLE 假信号。",
+          "scripts/reporting_kpi_engine.py: 引入 _gsc_ds_type = LIVE | CACHED，query 级 28d KPI 的 data_source_type 与 source 字段随路径切换。",
+          ".github/workflows/snapshot-daily-refresh.yml: 在 gsc_index_snapshot 之后、reporting_kpi_engine --as-of 之前新增 'Refresh GSC real data' 步骤，调 pull_gsc_data(days=28, save=True) 刷新 gsc_real_data.json，并把 reports/real_data/gsc_real_data.json 纳入 git add。"
+        ],
+        "verification": {
+          "pull_gsc_data_live": {
+            "status": "OK",
+            "data_date": "2026-09-19",
+            "impressions": 404,
+            "clicks": 0,
+            "ctr": 0.0,
+            "average_position": 71.5,
+            "daily_len": 28
+          },
+          "reporting_snapshot_after_fix": {
+            "generated_at": "2026-09-22",
+            "as_of": "2026-09-22",
+            "stale_sources_count": 19,
+            "query_level_gsc_kpis_now_live": [
+              [
+                {
+                  "name": "gsc_clicks_28d",
+                  "value": 0,
+                  "data_source_type": "LIVE",
+                  "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+                  "valid_period": "2026-08-23..2026-09-19",
+                  "source_observed_date": "2026-09-19",
+                  "source_age_days": 3,
+                  "status": "OK"
+                },
+                {
+                  "name": "gsc_impressions_28d",
+                  "value": 404,
+                  "data_source_type": "LIVE",
+                  "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+                  "valid_period": "2026-08-23..2026-09-19",
+                  "source_observed_date": "2026-09-19",
+                  "source_age_days": 3,
+                  "status": "OK"
+                },
+                {
+                  "name": "gsc_ctr_28d",
+                  "value": 0.0,
+                  "data_source_type": "LIVE",
+                  "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+                  "valid_period": "2026-08-23..2026-09-19",
+                  "source_observed_date": "2026-09-19",
+                  "source_age_days": 3,
+                  "status": "INSUFFICIENT_SAMPLE"
+                },
+                {
+                  "name": "gsc_avg_position_28d",
+                  "value": 71.5,
+                  "data_source_type": "LIVE",
+                  "source": "reports/real_data/gsc_real_data.json (GSC API, data_date=2026-09-19)",
+                  "valid_period": "2026-08-23..2026-09-19",
+                  "source_observed_date": "2026-09-19",
+                  "source_age_days": 3,
+                  "status": "OK"
+                }
+              ]
+            ],
+            "gsc_query_level_in_stale_sources": false
+          },
+          "dashboard_consumer_path": "reports/management/REPORTING_SNAPSHOT.json（engine 写入 & feishu_daily_report / feishu_monthly_report / feishu_quarterly_report 读取，路径一致）",
+          "workflow_yaml_syntax": "pass (ruamel.yaml)"
+        },
+        "note": "四份 query 级 GSC 28d KPI 现在从 gsc_real_data.json 读取，data_source_type=LIVE，source_age_days=3（观测日 2026-09-19，比 as_of 2026-09-22 早 3 天，符合 GSC API 自身的数据延迟）。stale_sources 里的 6 项 seo_gsc 剩余项（indexed_pages / not_indexed_pages / inspected_urls / inspection_pass / page_level_clicks_28d / page_level_impressions_28d）分别对应 index coverage 与 page 级 inventory，数据源不是 query 级 searchanalytics，不在本次任务范围内（用户约束：只处理 GSC 数据采集与 snapshot 更新链路）。"
+      },
+      "resolved_at": "2026-09-22T19:58:59+08:00"
     },
     {
       "id": "AUDIT-FE-006",
@@ -765,6 +837,11 @@
         "YAML 撇号回归 5/5 一致，无二次误报",
         "git rebase 到 origin/main 后推送（本地提交前先 rebase，未用 stash/reset 绕过）"
       ]
+    },
+    {
+      "at": "2026-09-22T19:58:59+08:00",
+      "event": "AUDIT-OPS-003 resolved",
+      "detail": "query 级 GSC 28d KPI 从冻结的 SEO_BASELINE_2026-08.md 切换为 reports/real_data/gsc_real_data.json（CI 每日刷新）。实测 data_date=2026-09-19，impressions=404，clicks=0，avg_position=71.5，data_source_type=LIVE。workflow 新增 GSC pull step 确保 snapshot 前数据新鲜。"
     }
   ],
   "fix_runs": [
@@ -845,5 +922,6 @@
         "agent_task_executor.py 的 _fix_title_length / _fix_meta_description 仍是 YAML-only：已确认当前 TOML 数据不会触发这两个自动修复，但一旦 TOML 文章出现超长 title 就会漏修，属已知残余，登记在 FE-008 resolution.not_changed_and_why。"
       ]
     }
-  ]
+  ],
+  "updated_at": "2026-09-22T19:58:59+08:00"
 }

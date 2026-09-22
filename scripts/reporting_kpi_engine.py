@@ -610,6 +610,20 @@ def _index_snapshot_diff() -> dict:
 # B. SEO / GSC
 # --------------------------------------------------------------------------
 def build_seo_gsc() -> dict:
+    # 2026-09-22 (AUDIT-OPS-003) 修复：query 级 GSC 28d 指标此前只从
+    # reports/seo/SEO_BASELINE_2026-08.md 解析（该文件最后修改于 2026-08-24，
+    # 内容里的 28d window 是 2026-07-19..2026-08-15，且无任何脚本负责刷新它，
+    # 只被 reporting_kpi_engine 单向读取）。结果 gsc_clicks_28d / impressions_28d /
+    # ctr_28d / avg_position_28d 四份 KPI 自 2026-08-15 起冻结 38 天，
+    # REPORTING_SNAPSHOT 的 stale_sources 里连续 15+ 天挂着同一段数字。
+    #
+    # 真实 GSC 数据其实每天都在拉：reports/real_data/gsc_real_data.json 由
+    # .github/workflows/snapshot-daily-refresh.yml（新增步骤）与
+    # .github/workflows/cross-agent-learning-daily.yml 每日刷新，
+    # 2026-09-22 实测 data_date=2026-09-19、impressions=404、clicks=0，
+    # gsc_api 直连 searchanalytics 是通的（凭据与站点授权 OK）。
+    # 本函数改为从 gsc_real_data.json 读，回退到原 SEO_BASELINE_2026-08.md
+    # 以保证 CI 首次运行前不会拿到 NOT_AVAILABLE 的假信号。
     seo_text = _read_text(SEO / "SEO_BASELINE_2026-08.md")
     index_text = _read_text(SEO / "INDEX_COVERAGE_BASELINE.md")
     inventory = _read_csv(SEO / "CONTENT_SEO_INVENTORY.csv")
@@ -617,14 +631,41 @@ def build_seo_gsc() -> dict:
     inspection = _read_json(SEO / "url_inspection_results.json")
     idx_diff = _index_snapshot_diff()
 
-    gsc_clicks = _reg_int(seo_text, r"\|\s*Clicks\s*\|\s*([0-9]+)\s*\|")
-    gsc_impressions = _reg_int(seo_text, r"\|\s*Impressions\s*\|\s*([0-9]+)\s*\|")
-    ctr_m = re.search(r"\|\s*CTR\s*\|\s*([0-9.]+)%\s*\|", seo_text)
-    gsc_ctr = _num(ctr_m.group(1)) if ctr_m else None
-    pos_m = re.search(r"\|\s*Average position\s*\|\s*([0-9.]+)\s*\|", seo_text)
-    gsc_pos = _num(pos_m.group(1)) if pos_m else None
-    win_m = re.search(r"28d window:\s*([0-9-]+)\s*\.\.\s*([0-9-]+)", seo_text)
-    gsc_period = f"{win_m.group(1)}..{win_m.group(2)}" if win_m else None
+    # --- 首选路径：CI 每日刷新的 gsc_real_data.json ---
+    real = _read_json(REPORTS / "real_data" / "gsc_real_data.json") or {}
+    metrics = real.get("metrics") if isinstance(real.get("metrics"), dict) else {}
+    data_date = real.get("data_date")
+    is_real = bool(real.get("is_real_data"))
+
+    gsc_clicks = None
+    gsc_impressions = None
+    gsc_ctr = None
+    gsc_pos = None
+    gsc_period = None
+    gsc_source = None
+
+    if is_real and data_date and metrics:
+        _daily = real.get("daily") or []
+        if _daily:
+            _start = _daily[0].get("date", "")
+            _end = _daily[-1].get("date", "")
+            gsc_period = f"{_start}..{_end}" if _start and _end else None
+        gsc_clicks = _int(metrics.get("clicks")) if metrics.get("clicks") is not None else None
+        gsc_impressions = _int(metrics.get("impressions")) if metrics.get("impressions") is not None else None
+        gsc_ctr = _num(metrics.get("ctr")) if metrics.get("ctr") is not None else None
+        gsc_pos = _num(metrics.get("average_position")) if metrics.get("average_position") is not None else None
+        gsc_source = f"reports/real_data/gsc_real_data.json (GSC API, data_date={data_date})"
+    else:
+        # --- 回退路径：老的 SEO_BASELINE_2026-08.md 冻结基线 ---
+        gsc_clicks = _reg_int(seo_text, r"\|\s*Clicks\s*\|\s*([0-9]+)\s*\|")
+        gsc_impressions = _reg_int(seo_text, r"\|\s*Impressions\s*\|\s*([0-9]+)\s*\|")
+        ctr_m = re.search(r"\|\s*CTR\s*\|\s*([0-9.]+)%\s*\|", seo_text)
+        gsc_ctr = _num(ctr_m.group(1)) if ctr_m else None
+        pos_m = re.search(r"\|\s*Average position\s*\|\s*([0-9.]+)\s*\|", seo_text)
+        gsc_pos = _num(pos_m.group(1)) if pos_m else None
+        win_m = re.search(r"28d window:\s*([0-9-]+)\s*\.\.\s*([0-9-]+)", seo_text)
+        gsc_period = f"{win_m.group(1)}..{win_m.group(2)}" if win_m else None
+        gsc_source = "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15, stale fallback)"
 
     indexed = _reg_int(index_text, r"Indexed:\s*\*\*([0-9]+)\*\*")
     not_indexed = _reg_int(index_text, r"Not indexed:\s*\*\*([0-9]+)\*\*")
@@ -651,21 +692,28 @@ def build_seo_gsc() -> dict:
             "tier": r.get("opportunity_tier"),
         } for r in rows[:3]]
 
+    # GSC query-level 28d KPI 的 ds_type：
+    # 首选路径来自 reports/real_data/gsc_real_data.json（CI 每日刷新）→ LIVE
+    # 回退路径来自 reports/seo/SEO_BASELINE_2026-08.md（冻结 38 天）→ CACHED + STALE_SOURCE
+    _gsc_ds_type = "LIVE" if gsc_source and gsc_source.startswith("reports/real_data/") else "CACHED"
+
     kpis = [
-        _kpi("gsc_clicks_28d", "GSC clicks, 28d window (query-level baseline)", gsc_clicks,
-             "clicks", "CACHED", "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-             "sum clicks from searchanalytics", "daily", 0, gsc_period),
-        _kpi("gsc_impressions_28d", "GSC impressions, 28d window (query-level baseline)",
-             gsc_impressions, "impressions", "CACHED",
-             "reports/seo/SEO_BASELINE_2026-08.md (GSC API 2026-08-15)",
-             "sum impressions from searchanalytics", "daily", 0, gsc_period),
-        _kpi("gsc_ctr_28d", "GSC CTR, 28d window", gsc_ctr, "%", "CACHED",
-             "reports/seo/SEO_BASELINE_2026-08.md", "clicks / impressions * 100",
+        _kpi("gsc_clicks_28d", "GSC clicks, 28d window (query-level, searchanalytics)", gsc_clicks,
+             "clicks", _gsc_ds_type, gsc_source,
+             "sum clicks from searchanalytics (dimensions=['query'])",
+             "daily", 0, gsc_period),
+        _kpi("gsc_impressions_28d", "GSC impressions, 28d window (query-level, searchanalytics)",
+             gsc_impressions, "impressions", _gsc_ds_type, gsc_source,
+             "sum impressions from searchanalytics (dimensions=['query'])",
+             "daily", 0, gsc_period),
+        _kpi("gsc_ctr_28d", "GSC CTR, 28d window", gsc_ctr, "%", _gsc_ds_type, gsc_source,
+             "clicks / impressions * 100",
              "daily", 0.0, gsc_period,
              INSUFFICIENT_SAMPLE if (gsc_clicks or 0) < LOW_CLICK_THRESHOLD else "OK"),
         _kpi("gsc_avg_position_28d", "GSC average position, 28d window", gsc_pos, "position",
-             "CACHED", "reports/seo/SEO_BASELINE_2026-08.md",
-             "average position from searchanalytics", "daily", None, gsc_period),
+             _gsc_ds_type, gsc_source,
+             "impressions-weighted average position from searchanalytics",
+             "daily", None, gsc_period),
         _kpi("indexed_pages", "Pages indexed per GSC UI snapshot", indexed, "pages",
              "CACHED", "reports/seo/INDEX_COVERAGE_BASELINE.md (GSC UI 2026-08-16)",
              "GSC UI index count", "weekly", None, "2026-08-16"),

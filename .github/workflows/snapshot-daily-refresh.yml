@@ -41,6 +41,29 @@ jobs:
             echo "::warning::GSC 快照采集失败（引擎会保持 INSUFFICIENT_BASELINE，不阻塞）"
           }
 
+      # 2026-09-22 (AUDIT-OPS-003)：在生成 REPORTING_SNAPSHOT 之前先刷一次
+      # reports/real_data/gsc_real_data.json（query 级 28d GSC 数据）。
+      # reporting_kpi_engine.build_seo_gsc() 从此文件读取 GSC query 级 KPI，
+      # 而不是从冻结的 SEO_BASELINE_2026-08.md。这一步不阻塞主流程；如果
+      # GSC 凭据有问题，reporting_kpi_engine 会退回 SEO_BASELINE 并标记 CACHED。
+      - name: Refresh GSC real data (query-level 28d, feeds build_seo_gsc)
+        id: gsc_real_data
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          python -c "
+          import sys; sys.path.insert(0, 'scripts')
+          from real_data_pull_engine import pull_gsc_data
+          r = pull_gsc_data(days=28, save=True)
+          print('status:', r.get('status'))
+          print('data_date:', r.get('data_date'))
+          print('impressions:', (r.get('metrics') or {}).get('impressions'))
+          print('clicks:', (r.get('metrics') or {}).get('clicks'))
+          " || {
+            echo "::warning::GSC real-data 拉取失败（build_seo_gsc 将回退到 SEO_BASELINE_2026-08.md）"
+          }
+
       - name: Regenerate 2.0 KPI snapshot
         run: |
           TODAY="$(date +%Y-%m-%d)"
@@ -51,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/management/REPORTING_SNAPSHOT.json reports/management/snapshots/ reports/seo/gsc_page_snapshots/ 2>/dev/null || true
+          git add reports/management/REPORTING_SNAPSHOT.json reports/management/snapshots/ reports/seo/gsc_page_snapshots/ reports/real_data/gsc_real_data.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无待提交变更（数据未变化）"
           else
