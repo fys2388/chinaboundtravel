@@ -113,43 +113,64 @@ GARBLED_PATTERNS = [
 
 
 # --- Front matter 解析 -------------------------------------------------------
-# 两个历史缺陷的集中修复：
+# 三个历史缺陷的集中修复：
 #   1) BOM：re.match(r'^---...') 不容忍 UTF-8 BOM(\ufeff)。只要文件头有一个
 #      BOM，front matter 解析就整体失效并退化为「整文件当正文扫描」，
 #      于是 YAML 键名 placeholder: 被当成占位符（content/search.md 误报）。
 #   2) 撇号：r'title\s*:\s*["\']?([^\"\'\n]+)' 的捕获组遇到引号内的撇号就截断，
 #      "Xi'an Terracotta Army..." 被读成 "Xi"（2 字符），进而误报 title_too_short。
+#   3) TOML：本仓有 19 个 TOML front matter 文件（+++ 分隔），语法是
+#      key = "value" 而非 key: value。旧解析器只认 YAML，导致 8 个城市页、
+#      2 个法务页、3 个 _index 页、3 个 posts 文件的 title/description/slug
+#      从未被读取过（AUDIT-FE-008）。其中 3 个 posts 文件曾被误报为「线上无源」
+#      从而虚增孤儿页数。
 # 因此所有 front matter 读取都应走下面两个函数，不再各自写正则。
 
-def split_front_matter(content):
-    """拆分 Hugo front matter。返回 (front_matter, body)；无 front matter 返回 (None, body)。"""
-    text = content.lstrip('\ufeff') if content else content
-    m = re.match(r'^---\s*\n(.*?)\n---[ \t]*\r?\n?', text, re.DOTALL)
-    if not m:
-        return None, text
-    return m.group(1), text[m.end():]
+def _strip_scalar_value(raw):
+    """从一个标量字段值里剥出字符串内容，兼容 YAML/TOML 的引号与非引号写法。
 
-
-def front_matter_field(front_matter, name):
-    """取 front matter 中的标量字段值。正确处理带引号值内的撇号。
-
-    front_matter 为 None 时返回 None。无引号值会剥离行尾注释。
+    保留与旧实现一致的行为：找到匹配的引号即取其内部内容，正确处理带引号
+    值内的撇号/冒号（"China'S High-Speed Trains: How to..." 完整返回）。
     """
-    if not front_matter:
-        return None
-    m = re.search(r'^[ \t]*%s[ \t]*:[ \t]*(.*)$' % re.escape(name),
-                  front_matter, re.MULTILINE)
-    if not m:
-        return None
-    raw = m.group(1).strip()
+    raw = raw.strip()
     if raw and raw[0] in ('"', "'"):
         quote = raw[0]
         end = raw.find(quote, 1)
         if end > 0:
             return raw[1:end].strip() or None
-    # 无引号：剥离行尾注释（'# ...'），YAML 里井号前必须有空白才算注释
+        return None
+    # 无引号：TOML 允许 # 注释（无需前置空白），YAML 要求井号前有空白。
+    # 统一用「井号前有空白」这一较宽松的形式，两种格式下都不会误剥。
     raw = re.sub(r'\s+#.*$', '', raw).strip()
     return raw or None
+
+
+def split_front_matter(content):
+    """拆分 Hugo front matter，同时支持 YAML (---) 与 TOML (+++)。
+
+    返回 (front_matter, body)；无 front matter 返回 (None, text)。
+    """
+    text = content.lstrip('\ufeff') if content else content
+    m = re.match(r'^(---|\+\+\+)\s*\n(.*?)(?:^|\n)\1[ \t]*\r?\n?',
+                 text, re.DOTALL)
+    if not m:
+        return None, text
+    return m.group(2), text[m.end():]
+
+
+def front_matter_field(front_matter, name):
+    """取 front matter 中的标量字段值，兼容 YAML 的 `key: value` 与 TOML 的 `key = value`。
+
+    正确处理带引号值内的撇号/冒号。front_matter 为 None 时返回 None。
+    非标量值（如 TOML 数组 `[0, 0]`、YAML 锚点 `&x`、引用 `*x`）返回 None。
+    """
+    if not front_matter:
+        return None
+    m = re.search(r'^[ \t]*%s[ \t]*[:=][ \t]*(.*)$' % re.escape(name),
+                  front_matter, re.MULTILINE)
+    if not m:
+        return None
+    return _strip_scalar_value(m.group(1))
 # --- End front matter 解析 ---------------------------------------------------
 
 
@@ -204,20 +225,21 @@ def check_sitemap_health():
     for md_file in CONTENT_DIR.rglob("*.md"):
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
-            if not front_matter_match:
+            # 走 split_front_matter()：BOM 容错 + YAML/TOML 双格式
+            front_matter, _ = split_front_matter(content)
+            if not front_matter:
                 continue
-            
-            front_matter = front_matter_match.group(1)
-            
-            # 检查是否有noindex
-            has_noindex = bool(re.search(r'robots\s*:\s*noindex|robotsdisallow\s*:\s*true', front_matter))
-            has_build_list_false = bool(re.search(r'_build\s*:.*?list\s*:\s*false', front_matter, re.DOTALL))
-            
+
+            # 检查是否有noindex（YAML: robots: noindex / TOML: robots = "noindex"）
+            has_noindex = bool(re.search(
+                r'robots\s*[:=]\s*["\']?noindex|robotsdisallow\s*[:=]\s*["\']?true',
+                front_matter))
+            has_build_list_false = bool(re.search(
+                r'_build\s*[:=].*?list\s*[:=]\s*false', front_matter, re.DOTALL))
+
             if has_noindex and not has_build_list_false:
-                # 推断URL
-                slug_match = re.search(r'slug\s*:\s*["\']?([^"\'\n]+)', front_matter)
-                url_path = slug_match.group(1) if slug_match else md_file.stem
+                # 推断URL（YAML: slug: x / TOML: slug = "x"）
+                url_path = front_matter_field(front_matter, "slug") or md_file.stem
                 
                 # 检查是否在sitemap中
                 if any(url_path in url for url in sitemap_urls):
@@ -418,8 +440,7 @@ def check_empty_links():
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-            body = content[front_matter_match.end():] if front_matter_match else content
+            _fm, body = split_front_matter(content)
             
             for pattern in EMPTY_LINK_PATTERNS:
                 if pattern.search(body):
@@ -448,8 +469,7 @@ def check_image_alt():
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-            body = content[front_matter_match.end():] if front_matter_match else content
+            _fm, body = split_front_matter(content)
             
             # 检查Markdown图片 ![]() - alt为空
             md_images = re.findall(r'!\[([^\]]*)\]\(([^)]+)\)', body)
@@ -490,12 +510,13 @@ def check_draft_leak():
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
-            if not front_matter_match:
+            # 走 split_front_matter()：BOM 容错 + YAML/TOML 双格式
+            front_matter, _ = split_front_matter(content)
+            if not front_matter:
                 continue
-            front_matter = front_matter_match.group(1)
-            
-            if re.search(r'draft\s*:\s*true', front_matter, re.IGNORECASE):
+
+            # YAML: draft: true / TOML: draft = true
+            if re.search(r'draft\s*[:=]\s*["\']?true', front_matter, re.IGNORECASE):
                 issues.append({
                     "type": "draft_leak",
                     "severity": "high",
@@ -529,8 +550,7 @@ def check_persona_violation():
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-            body = content[front_matter_match.end():] if front_matter_match else content
+            _fm, body = split_front_matter(content)
             
             for pattern in PERSONA_FORBIDDEN:
                 matches = pattern.findall(body)
@@ -567,8 +587,7 @@ def check_ai_forbidden_words():
             continue
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-            body = content[front_matter_match.end():] if front_matter_match else content
+            _fm, body = split_front_matter(content)
             
             for pattern, word in AI_FORBIDDEN:
                 if pattern.search(body):
