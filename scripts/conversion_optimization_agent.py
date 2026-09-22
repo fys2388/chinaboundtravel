@@ -10,6 +10,7 @@ Conversion Optimization Agent
 4. 自动决策与优化 - 基于数据自动选择最优方案
 5. 转化漏斗智能优化 - 全链路转化优化
 6. 个性化推荐引擎 - 基于内容意图的CTA匹配
+7. LLM CTA 变体生成 - AI 驱动的 A/B 测试文案
 
 成熟度目标：L1 → L3（6个月）
 """
@@ -27,6 +28,14 @@ try:
     _STRATEGY_CONSUMER = None
 except Exception:
     _STRATEGY_CONSUMER = None
+
+# LLM Agent Enhancer (可选)
+try:
+    from llm_agent_enhancer import get_enhancer
+    _LLM_ENHANCER = get_enhancer()
+except Exception:
+    _LLM_ENHANCER = None
+
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -573,6 +582,68 @@ class ConversionOptimizationAgent:
 
 
         return recommendations
+
+    # ==================== LLM CTA 变体生成 ====================
+
+    def generate_cta_variants_with_llm(self, article_context: Dict) -> Optional[Dict]:
+        """使用 LLM 生成 CTA 变体
+
+        Args:
+            article_context: {article_type, topic, audience, current_cta}
+
+        Returns:
+            {variants, recommended_variant, a_b_test_design} 或 None
+        """
+        if not _LLM_ENHANCER or not _LLM_ENHANCER.available:
+            return None
+
+        try:
+            result = _LLM_ENHANCER.generate_cta_variants(article_context)
+            if result:
+                variants = result.get('variants', [])
+                print(f"  🤖 LLM 生成 {len(variants)} 个 CTA 变体:")
+                for v in variants:
+                    print(f"    [{v.get('style', 'N/A')}] {v.get('cta_text', v.get('text', 'N/A'))[:60]}...")
+            return result
+        except Exception as e:
+            print(f"  ⚠️ LLM CTA 生成失败: {e}")
+            return None
+
+    def generate_ab_test_with_llm_variants(self, page: str, element: str,
+                                            article_context: Dict) -> Optional[ABTest]:
+        """使用 LLM 生成的变体创建 A/B 测试"""
+        variants_result = self.generate_cta_variants_with_llm(article_context)
+        if not variants_result or 'variants' not in variants_result:
+            return None
+
+        variants = variants_result['variants']
+        if len(variants) < 2:
+            return None
+
+        # 使用推荐变体作为对照组，第一个变体作为实验组
+        variant_a = {"text": variants[0].get('cta_text', variants[0].get('text', 'Original')),
+                     "type": "control", "style": variants[0].get('style', 'baseline')}
+        variant_b = {"text": variants[1].get('cta_text', variants[1].get('text', 'Variant')),
+                     "type": "treatment", "style": variants[1].get('style', 'treatment')}
+
+        hypothesis = variants_result.get('recommended', 'Variant B should outperform control')
+
+        print(f"\n  🤖 创建 LLM 驱动的 A/B 测试:")
+        print(f"    页面: {page}")
+        print(f"    元素: {element}")
+        print(f"    假设: {hypothesis}")
+        print(f"    对照组: {variant_a['text'][:60]}...")
+        print(f"    实验组: {variant_b['text'][:60]}...")
+
+        return self.design_ab_test(
+            page=page,
+            element=element,
+            hypothesis=hypothesis,
+            variant_a=variant_a,
+            variant_b=variant_b,
+            name=f"LLM CTA Test - {element} - {datetime.now().strftime('%Y%m%d')}",
+            description=f"LLM-generated CTA variants for {page}"
+        )
 
     # ==================== 3. 实验结果自动分析 ====================
 

@@ -10,6 +10,7 @@ User Intelligence Agent
 4. 智能客服知识库 - FAQ自动匹配、常见问题解答、问题分类
 5. 用户反馈收集与分析 - 反馈收集、情感分析、问题优先级
 6. 用户留存与忠诚度优化 - 留存策略、召回机制、忠诚度计划
+7. LLM 用户意图分析 - 基于行为数据的意图预测
 
 成熟度目标：L1 → L2（6个月）
 """
@@ -28,6 +29,14 @@ try:
     _STRATEGY_CONSUMER = None
 except Exception:
     _STRATEGY_CONSUMER = None
+
+# LLM Agent Enhancer (可选)
+try:
+    from llm_agent_enhancer import get_enhancer
+    _LLM_ENHANCER = get_enhancer()
+except Exception:
+    _LLM_ENHANCER = None
+
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict, field
@@ -401,6 +410,59 @@ class UserIntelligenceAgent:
             recommendations.append(f"新访客占比过高（{analysis['new_visitor_percentage']:.1f}%），加强邮件订阅和社媒关注，提升回访率")
 
         return recommendations
+
+    # ==================== LLM 用户意图分析 ====================
+
+    def analyze_user_intent_with_llm(self, behavior: Dict) -> Optional[Dict]:
+        """使用 LLM 分析用户意图
+
+        Args:
+            behavior: {actions, session_duration, pages_visited, current_page, device_type, traffic_source}
+
+        Returns:
+            {intent, confidence, next_action, engagement, conversion, risk} 或 None
+        """
+        if not _LLM_ENHANCER or not _LLM_ENHANCER.available:
+            return None
+
+        try:
+            result = _LLM_ENHANCER.analyze_user_intent(behavior)
+            if result:
+                print(f"  🤖 LLM 意图分析: {result.get('intent', 'N/A')} "
+                      f"(confidence: {result.get('confidence', 'N/A')})")
+            return result
+        except Exception as e:
+            print(f"  ⚠️ LLM 意图分析失败: {e}")
+            return None
+
+    def generate_intent_summary(self, behaviors: List[Dict]) -> Dict:
+        """批量分析用户意图并生成摘要"""
+        if not _LLM_ENHANCER or not _LLM_ENHANCER.available:
+            return {"llm_available": False}
+
+        results = []
+        intent_counts = defaultdict(int)
+        avg_confidence = 0
+
+        for i, behavior in enumerate(behaviors[:20]):  # 限制为前 20 个
+            result = self.analyze_user_intent_with_llm(behavior)
+            if result:
+                results.append(result)
+                intent_counts[result.get('intent', 'unknown')] += 1
+                avg_confidence += result.get('confidence', 0)
+
+        summary = {
+            "llm_available": True,
+            "total_analyzed": len(results),
+            "intent_distribution": dict(intent_counts),
+            "avg_confidence": avg_confidence / len(results) if results else 0,
+            "detailed_results": results[:5]  # 保存前 5 个详细结果
+        }
+
+        print(f"  🤖 LLM 意图分析完成: {len(results)} 个用户")
+        print(f"  📊 意图分布: {dict(intent_counts)}")
+
+        return summary
 
     # ==================== 2. 用户分层与画像 ====================
 
