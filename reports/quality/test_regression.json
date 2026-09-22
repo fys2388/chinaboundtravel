@@ -1,17 +1,65 @@
 {
-  "generated_at": "2026-09-21T16:04:01+00:00",
+  "generated_at": "2026-09-22T11:56:16+00:00",
   "counts": {
-    "collected": 1348,
-    "failed": 16,
-    "passed": 1332,
+    "collected": 6,
+    "failed": 6,
+    "passed": 0,
     "skipped": 0,
     "baseline": 16,
-    "new_failures": 0,
-    "fixed_failures": 0
+    "new_failures": 6,
+    "fixed_failures": 16
   },
-  "new_failures": [],
-  "fixed_baseline_failures": [],
-  "all_current_failures": [
+  "new_failures": [
+    {
+      "node_id": "tests.test_generation_failure_logging",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_predeploy_quality_gate",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_seo_optimizer_logic",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_site_health_dashboard_regen",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_workflow_names",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_workflow_yaml",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    }
+  ],
+  "fixed_baseline_failures": [
     "tests.test_agent_kpi_data_integrity::test_daily_report_values_are_real_measurements",
     "tests.test_avatar_webp::test_about_hero_prefers_webp",
     "tests.test_avatar_webp::test_profile_mode_uses_webp",
@@ -29,5 +77,13 @@
     "tests.test_social_content_agent::test_inventory_has_100_items_and_20_sources",
     "tests.test_social_content_agent::test_inventory_platform_balance"
   ],
-  "blocking": false
+  "all_current_failures": [
+    "tests.test_generation_failure_logging",
+    "tests.test_predeploy_quality_gate",
+    "tests.test_seo_optimizer_logic",
+    "tests.test_site_health_dashboard_regen",
+    "tests.test_workflow_names",
+    "tests.test_workflow_yaml"
+  ],
+  "blocking": true
 }
