@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-21T11:19:36.248491",
-  "data_date": "2026-09-21",
+  "pull_time": "2026-09-22T10:30:15.094683",
+  "data_date": "2026-09-22",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 64,
     "articles_this_week": 0,
-    "avg_word_count": 2048,
+    "avg_word_count": 2049,
     "articles_with_affiliate_links": 36,
     "articles_with_internal_links": 61
   },
@@ -32,7 +32,7 @@
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2279,
+      "word_count": 2288,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -44,19 +44,19 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2075,
+      "word_count": 2084,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-hangzhou-west-lake-tea-culture-g20-guide",
-      "word_count": 1514,
+      "word_count": 1521,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
-      "word_count": 1884,
+      "word_count": 1891,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1880,
+      "word_count": 1887,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -80,13 +80,13 @@
     },
     {
       "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
-      "word_count": 1785,
+      "word_count": 1792,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
-      "word_count": 2685,
+      "word_count": 2692,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -98,7 +98,7 @@
     },
     {
       "slug": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
-      "word_count": 2061,
+      "word_count": 2068,
       "has_affiliate_links": false,
       "has_internal_links": true
     }

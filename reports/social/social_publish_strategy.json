@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260921_111936",
-  "last_updated": "2026-09-21T11:19:36.401749",
+  "version": "2.0-20260922_103015",
+  "last_updated": "2026-09-22T10:30:15.224765",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -109,7 +109,7 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 3.86%，比Bottom 20%高 3.86个百分点",
+      "description": "Top 20%帖子平均CTR 3.71%，比Bottom 20%高 3.71个百分点",
       "common_hooks": [
         "linkedin",
         "visual",
@@ -124,90 +124,5 @@
       ]
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "pinterest.best_hooks",
-      "old": [
-        "linkedin",
-        "story",
-        "visual",
-        "warning",
-        "conversion"
-      ],
-      "new": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-09-21T11:19:36.401744",
-      "evidence": "based on performance data analysis"
-    },
-    {
-      "field": "instagram.best_hooks",
-      "old": [
-        "linkedin",
-        "story",
-        "visual",
-        "warning",
-        "conversion"
-      ],
-      "new": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-09-21T11:19:36.401744",
-      "evidence": "based on performance data analysis"
-    },
-    {
-      "field": "facebook.best_hooks",
-      "old": [
-        "linkedin",
-        "story",
-        "visual",
-        "warning",
-        "conversion"
-      ],
-      "new": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-09-21T11:19:36.401744",
-      "evidence": "based on performance data analysis"
-    },
-    {
-      "field": "x.best_hooks",
-      "old": [
-        "linkedin",
-        "story",
-        "visual",
-        "warning",
-        "conversion"
-      ],
-      "new": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-09-21T11:19:36.401744",
-      "evidence": "based on performance data analysis"
-    }
-  ]
+  "strategy_changes": []
 }

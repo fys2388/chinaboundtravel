@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-09-21 11:19:36
+**生成时间**: 2026-09-22 10:30:15
 **闭环版本**: 2.0
-**策略版本**: 2.0-20260921_111936
+**策略版本**: 2.0-20260922_103015
 
 ---
 
@@ -20,26 +20,26 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 251 |
-| 本轮新增记录 | 13 |
+| 历史帖子总数 | 263 |
+| 本轮新增记录 | 12 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
-| 策略变更项 | 4 |
+| 策略变更项 | 0 |
 
 ---
 
 ## 📱 平台表现
 
 ### 🔴 facebook
-- 帖子数: 40
+- 帖子数: 42
 - 总展示: 2890
 - 总点击: 82
-- 平均CTR: 0.70%
-- 平均互动率: 1.26%
+- 平均CTR: 0.67%
+- 平均互动率: 1.20%
 - 表现评级: needs_improvement
 
 ### 🔴 twitter
-- 帖子数: 49
+- 帖子数: 52
 - 总展示: 12
 - 总点击: 0
 - 平均CTR: 0.00%
@@ -47,19 +47,19 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 instagram
-- 帖子数: 60
+- 帖子数: 65
 - 总展示: 4725
 - 总点击: 94
-- 平均CTR: 0.33%
-- 平均互动率: 0.85%
+- 平均CTR: 0.30%
+- 平均互动率: 0.78%
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 82
+- 帖子数: 84
 - 总展示: 9248
 - 总点击: 364
-- 平均CTR: 0.48%
-- 平均互动率: 0.72%
+- 平均CTR: 0.47%
+- 平均互动率: 0.70%
 - 表现评级: needs_improvement
 
 ### 🟢 x
@@ -102,26 +102,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ## 🎯 策略变更
 
-1. **pinterest.best_hooks**
-   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
-   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
-
-2. **instagram.best_hooks**
-   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
-   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
-
-3. **facebook.best_hooks**
-   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
-   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
-
-4. **x.best_hooks**
-   - 旧值: ['linkedin', 'story', 'visual', 'warning', 'conversion']
-   - 新值: ['linkedin', 'visual', 'warning', 'conversion', 'pinterest']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
-
+本轮无策略变更（数据不足或当前策略已最优）
 ---
 
 ## 🚀 下一步行动
@@ -144,4 +125,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-09-21 11:19:36*
+*生成时间: 2026-09-22 10:30:15*

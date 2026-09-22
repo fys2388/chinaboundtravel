@@ -1,77 +1,82 @@
 {
-  "validation_time": "2026-09-21T11:19:36.261414",
-  "overall_status": "PARTIAL",
+  "validation_time": "2026-09-22T10:30:15.104569",
+  "overall_status": "PASS",
   "sources": {
     "ga4": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-20",
+      "data_date": "2026-09-21",
       "status": "OK",
       "error": null,
+      "disabled_reason": null,
       "validation_status": "PASS"
     },
     "gsc": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-18",
+      "data_date": "2026-09-19",
       "status": "OK",
       "error": null,
+      "disabled_reason": null,
       "validation_status": "PASS"
     },
     "social": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-21",
+      "data_date": "2026-09-22",
       "status": "OK",
       "error": null,
+      "disabled_reason": null,
       "validation_status": "PASS"
     },
     "content": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-09-21",
+      "data_date": "2026-09-22",
       "status": "UNKNOWN",
       "error": null,
+      "disabled_reason": null,
       "validation_status": "PASS"
     },
     "partnerize": {
       "is_real_data": false,
       "is_fresh": false,
       "data_date": null,
-      "status": "NO_CREDENTIALS",
+      "status": "DISABLED_BY_DECISION",
       "error": null,
-      "validation_status": "FAIL"
+      "disabled_reason": "World Nomads 走 Impact 被拒、Allianz 无公开联盟计划；两计划已移出 hugo.toml，本源无承载对象。",
+      "validation_status": "DISABLED"
     },
     "impact": {
       "is_real_data": false,
       "is_fresh": false,
       "data_date": null,
-      "status": "NO_CREDENTIALS",
+      "status": "DISABLED_BY_DECISION",
       "error": null,
-      "validation_status": "FAIL"
+      "disabled_reason": "同上——Impact 网络上本站点无在册品牌，NordVPN 走 affiliatescn 不经 Impact。",
+      "validation_status": "DISABLED"
     },
     "multi_partner": {
       "is_real_data": false,
       "is_fresh": false,
       "data_date": null,
-      "status": "NO_CONNECTED_PARTNERS",
+      "status": "DISABLED_BY_DECISION",
       "error": null,
-      "validation_status": "FAIL"
+      "disabled_reason": "依赖 partnerize/impact 连接状态聚合，上游已停用。",
+      "validation_status": "DISABLED"
     }
   },
   "summary": {
     "total_sources": 7,
+    "active_sources": 4,
+    "disabled_sources": [
+      "impact",
+      "multi_partner",
+      "partnerize"
+    ],
     "real_data_count": 4,
     "fresh_data_count": 4,
-    "failed_sources": [
-      "partnerize",
-      "impact",
-      "multi_partner"
-    ],
-    "issues": [
-      "partnerize: NO_CREDENTIALS - not real data",
-      "impact: NO_CREDENTIALS - not real data",
-      "multi_partner: NO_CONNECTED_PARTNERS - not real data"
-    ]
+    "failed_sources": [],
+    "issues": []
   }
 }
