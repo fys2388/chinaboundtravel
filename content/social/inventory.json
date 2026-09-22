@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-21T18:38:21",
+  "updated_at": "2026-09-22T06:01:50",
   "items": [
     {
       "id": "soc-000001",
@@ -2789,7 +2789,7 @@
       "type": "tip",
       "caption": "Essential Visa tips most first-time visitors miss. China Visa Requirements → https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Remote Work Guide: Digital Nomad Tips' (platform x). Scene: laptop on a cafe table with a Chinese city view. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by o.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-remote-work-guide-a-californians-5-x-tip-32df5909.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2804,7 +2804,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "7e69fe84587d"
+      "_sig": "7e69fe84587d",
+      "image_generated": true
     },
     {
       "id": "soc-000108",
@@ -2814,7 +2815,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about Visa — practical lessons from the ground.\n\n• Remote work from China: visa options, transport hacks, co-working scenes, and cultural\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'China Remote Work Guide: Digital Nomad Tips' (platform fb). Scene: laptop on a cafe table with a Chinese city view. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by o.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-remote-work-guide-a-californians-5-fb-story-b8491d23.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -2829,7 +2830,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "6a840e51b4ab"
+      "_sig": "6a840e51b4ab",
+      "image_generated": true
     },
     {
       "id": "soc-000109",
@@ -2865,7 +2867,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nChina Remote Work Guide: Digital Nomad Tips | Everything you need to know about Visa — in one practical guide.\n\nRemote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by our editorial team | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'China Remote Work Guide: Digital Nomad Tips' (platform pinterest). Scene: laptop on a cafe table with a Chinese city view. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by o.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-remote-work-guide-a-californians-5-pinterest-conversion-fc95b802.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -2880,7 +2882,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "6184cc8ac592"
+      "_sig": "6184cc8ac592",
+      "image_generated": true
     },
     {
       "id": "soc-000111",
@@ -2890,7 +2893,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Visa every traveler should know. → https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'China Travel Guide: August 2026 Updates' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: August 2026 China travel updates: latest visa changes, crowd forecasts, payment updates, scam alerts, and seasonal picks.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-08.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-08-monthly--x-knowledge-248b6a90.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -2905,7 +2908,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "70b3a2945f29"
+      "_sig": "70b3a2945f29",
+      "image_generated": true
     },
     {
       "id": "soc-000112",
@@ -3746,8 +3750,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-22",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3896,8 +3900,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-22",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4819,7 +4823,7 @@
       "source_title": "China 144 Hour Transit Visa: Complete Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Visa — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Visa — practical lessons from the ground. → https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China 144 Hour Transit Visa: Complete Guide' (platform x). Scene: Chinese visa passport and travel documents. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Keeping your phone connected in China is easier with.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp",
       "utm_params": {
@@ -4828,7 +4832,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-09-15",
+      "publish_date": "2026-09-22",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4836,7 +4840,9 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "5db3b0bd28b3"
+      "_sig": "5db3b0bd28b3",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000189",
@@ -4844,7 +4850,7 @@
       "source_title": "China 144 Hour Transit Visa: Complete Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to Visa: what to see and capture.\n\n• Keeping your phone connected in China is easier with\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/",
       "image_prompt": "Professional visual social graphic for 'China 144 Hour Transit Visa: Complete Guide' (platform fb). Scene: Chinese visa passport and travel documents. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Keeping your phone connected in China is easier with.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp",
       "utm_params": {
@@ -4852,8 +4858,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-15",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4861,7 +4867,9 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "0b6bd095055b"
+      "_sig": "0b6bd095055b",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000190",
@@ -5575,7 +5583,7 @@
       "source_title": "China Food Guide for European Travelers",
       "platform": "ig",
       "type": "story",
-      "caption": "🔥 linkedin\n\nWhat travelers discover about Food — practical lessons from the ground.\n\n· China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant\n\nRead the full guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 linkedin\n\nWhat travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'China Food Guide for European Travelers' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.jpg",
       "utm_params": {
@@ -5584,7 +5592,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-09-15",
+      "publish_date": "2026-09-22",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5592,7 +5600,9 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "9f1c2906d3a3"
+      "_sig": "9f1c2906d3a3",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000219",
@@ -5600,7 +5610,7 @@
       "source_title": "China Food Guide for European Travelers",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "🔥 linkedin\n\nChina Food Guide for European Travelers | Visual guide to Food: what to see and capture.\n\nChina food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nChina Food Guide for European Travelers | Visual guide to Food: what to see and capture.\n\nChina Food Guide for European Travelers | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'China Food Guide for European Travelers' (platform pinterest). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.jpg",
       "utm_params": {
@@ -5608,8 +5618,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-15",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5617,7 +5627,9 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "a75547b4daba"
+      "_sig": "a75547b4daba",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000220",
@@ -5902,7 +5914,7 @@
       "source_title": "How to Use Alipay & WeChat Pay in China 2026",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "🔥 linkedin\n\nResearch-backed facts about Alipay every traveler should know.\n\n· 2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners\n· Why This Guide Exists\n· Why You Need Mobile Payment in China\n\nRead the full guide: https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260915&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Alipay every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'How to Use Alipay & WeChat Pay in China 2026' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up your wallet, and pay anywhere with ease.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.webp",
       "utm_params": {
@@ -5911,7 +5923,7 @@
         "utm_campaign": "cbt_social_20260915"
       },
       "status": "已发布",
-      "publish_date": "2026-09-15",
+      "publish_date": "2026-09-22",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5919,7 +5931,9 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "ba9f324727ae"
+      "_sig": "ba9f324727ae",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000232",
@@ -5927,7 +5941,7 @@
       "source_title": "How to Use Alipay & WeChat Pay in China 2026",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "🔥 linkedin\n\nHow to Use Alipay & WeChat Pay in China 2026 | Essential Alipay tips most first-time visitors miss.\n\nUse Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up your wallet, and pay anywhere with ease\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260915&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nHow to Use Alipay & WeChat Pay in China 2026 | Essential Alipay tips most first-time visitors miss.\n\nHow to Use Alipay & WeChat Pay in China 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'How to Use Alipay & WeChat Pay in China 2026' (platform pinterest). Scene: smartphone showing mobile payment at a shop. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up your wallet, and pay anywhere with ease.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.webp",
       "utm_params": {
@@ -5935,8 +5949,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-15",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5944,7 +5958,9 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "963589de03ac"
+      "_sig": "963589de03ac",
+      "recycled_at": "2026-09-22",
+      "recycle_count": 1
     },
     {
       "id": "soc-000233",
@@ -7270,6 +7286,256 @@
         "platform": "ig"
       },
       "_sig": "6c786f3ce745"
+    },
+    {
+      "id": "soc-000286",
+      "source_article": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "source_title": "Shanghai Beyond the Bund: Hidden",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nResearch-backed facts about Shanghai every traveler should know.\n\n· What Makes Shanghai's Hidden Neighborhoods Special\n· The Hidden Neighborhoods of Shanghai\n· Former French Concession\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional knowledge social graphic for 'Shanghai Beyond the Bund: Hidden' (platform ig). Scene: Shanghai Bund skyline at night. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "6d12cf52329c"
+    },
+    {
+      "id": "soc-000287",
+      "source_article": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "source_title": "Shanghai Beyond the Bund: Hidden",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🔥 linkedin\n\nShanghai Beyond the Bund: Hidden | Essential Shanghai tips most first-time visitors miss.\n\nShanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authentic cultural experiences\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional tip social graphic for 'Shanghai Beyond the Bund: Hidden' (platform pinterest). Scene: Shanghai Bund skyline at night. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "bf21c763dee4"
+    },
+    {
+      "id": "soc-000288",
+      "source_article": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "source_title": "Shanghai Beyond the Bund: Hidden",
+      "platform": "x",
+      "type": "story",
+      "caption": "What travelers discover about Shanghai — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional story social graphic for 'Shanghai Beyond the Bund: Hidden' (platform x). Scene: Shanghai Bund skyline at night. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "d506a6ddb13f"
+    },
+    {
+      "id": "soc-000289",
+      "source_article": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "source_title": "Shanghai Beyond the Bund: Hidden",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Shanghai: what to see and capture.\n\n• Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional visual social graphic for 'Shanghai Beyond the Bund: Hidden' (platform fb). Scene: Shanghai Bund skyline at night. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "7aed06e003db"
+    },
+    {
+      "id": "soc-000290",
+      "source_article": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
+      "source_title": "Shanghai Beyond the Bund: Hidden",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Shanghai — in one practical guide.\n\n· Shanghai Beyond the Bund: Hidden\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional conversion social graphic for 'Shanghai Beyond the Bund: Hidden' (platform ig). Scene: Shanghai Bund skyline at night. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "7360e4980e61"
+    },
+    {
+      "id": "soc-000291",
+      "source_article": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+      "source_title": "Sichuan Hotpot: History & Best Restaurants",
+      "platform": "pinterest",
+      "type": "knowledge",
+      "caption": "🔥 linkedin\n\nSichuan Hotpot: History & Best Restaurants | Research-backed facts about Hotpot every traveler should know.\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional knowledge social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform pinterest). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "b5d287fa6cbb"
+    },
+    {
+      "id": "soc-000292",
+      "source_article": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+      "source_title": "Sichuan Hotpot: History & Best Restaurants",
+      "platform": "x",
+      "type": "tip",
+      "caption": "Essential Hotpot tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Professional tip social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform x). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "df39369076df"
+    },
+    {
+      "id": "soc-000293",
+      "source_article": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+      "source_title": "Sichuan Hotpot: History & Best Restaurants",
+      "platform": "fb",
+      "type": "story",
+      "caption": "🔥 linkedin\n\n💡 What travelers discover about Hotpot — practical lessons from the ground.\n\n• Sichuan hotpot: its history, where locals eat, and how to order, with current picks for\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=fb_v1\n\n👉 read more",
+      "image_prompt": "Professional story social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform fb). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "888a20922665"
+    },
+    {
+      "id": "soc-000294",
+      "source_article": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+      "source_title": "Sichuan Hotpot: History & Best Restaurants",
+      "platform": "ig",
+      "type": "visual",
+      "caption": "🔥 linkedin\n\nVisual guide to Hotpot: what to see and capture.\n\n· Sichuan hotpot: its history, where locals eat, and how to order, with current picks for\n\nRead the full guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "image_prompt": "Professional visual social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform ig). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "8e2f783d072a"
+    },
+    {
+      "id": "soc-000295",
+      "source_article": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance",
+      "source_title": "Sichuan Hotpot: History & Best Restaurants",
+      "platform": "pinterest",
+      "type": "conversion",
+      "caption": "🔥 linkedin\n\nSichuan Hotpot: History & Best Restaurants | Everything you need to know about Hotpot — in one practical guide.\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
+      "image_prompt": "Professional conversion social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform pinterest). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
+      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20260922"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "99a04b05f317"
     }
   ]
 }
