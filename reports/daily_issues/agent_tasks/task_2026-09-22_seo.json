@@ -3,13 +3,13 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-22_seo",
   "created_at": "2026-09-22T01:00:34.048734+00:00",
-  "updated_at": "2026-09-22T16:08:32.345373",
+  "updated_at": "2026-09-22T16:30:25.155724",
   "target_date": "2026-09-22",
-  "issue_count": 183,
+  "issue_count": 184,
   "severity_summary": {
     "critical": 0,
     "high": 69,
-    "medium": 109,
+    "medium": 110,
     "low": 5
   },
   "issues": [
@@ -3534,13 +3534,33 @@
       "detected_at": "2026-09-22T01:00:34.048136+00:00"
     },
     {
-      "id": "site_health-5730861cc3396dde",
+      "id": "site_health-789dee516f55b159",
+      "type": "meta_description_too_short",
+      "title": "meta_description_too_short",
+      "description": "meta_description_too_short",
+      "page": "content/cancel.md",
+      "file": "content/cancel.md",
+      "evidence": "Meta description过短(69字符)",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T16:30:24.634298+00:00"
+    },
+    {
+      "id": "site_health-133e328c805b1305",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
-      "page": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "evidence": "Meta description过长(166字符)",
+      "page": "content/cities/western-sichuan.md",
+      "file": "content/cities/western-sichuan.md",
+      "evidence": "Meta description过长(267字符)",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -3551,16 +3571,16 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-22T16:08:32.111687+00:00"
+      "detected_at": "2026-09-22T16:30:24.634294+00:00"
     },
     {
-      "id": "site_health-140d09463e79fbf9",
+      "id": "site_health-706228062a85274d",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
-      "page": "content/success.md",
-      "file": "content/success.md",
-      "evidence": "Title过短(19字符<20)",
+      "page": "content/disclaimer.md",
+      "file": "content/disclaimer.md",
+      "evidence": "Title过短(10字符<20)",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -3571,7 +3591,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-22T16:08:32.111692+00:00"
+      "detected_at": "2026-09-22T16:30:24.634302+00:00"
     },
     {
       "id": "issue_465b0b5928ee",
@@ -3703,6 +3723,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=6, failed=0"
+    "note": "resolved=0, need_manual=7, failed=0"
   }
 }
