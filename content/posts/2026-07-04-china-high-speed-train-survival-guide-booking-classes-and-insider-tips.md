@@ -192,3 +192,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
 
 - [China Transportation Guide: Trains, Subways](/posts/transportation-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
