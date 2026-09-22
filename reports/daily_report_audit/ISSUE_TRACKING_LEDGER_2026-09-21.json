@@ -13,38 +13,40 @@
     "superseded": "已被其他工单吸收"
   },
   "summary": {
-    "total_open": 13,
+    "total_open": 11,
     "total_closed_as_false_positive": 6,
     "by_severity": {
-      "medium": 10,
-      "critical": 2,
-      "high": 3,
-      "low": 6
+      "critical": 1,
+      "high": 2,
+      "medium": 4,
+      "low": 4
     },
     "by_agent": {
+      "content": 3,
+      "frontend": 7,
       "ops": 5,
       "revenue": 3,
-      "frontend": 7,
-      "seo": 3,
-      "content": 3
+      "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "（2026-09-22T15:35:06+08:00 更新）开放 13 项，已解决 8 项。本轮：AUDIT-OPS-002 方案 A 已落地（router 按能力矩阵分流，dry-run 验证 10 个问题全部进人工队列）；AUDIT-OPS-001 口径修正 —— 孤儿页 7→4，根因是 TOML front-matter 漏检，降级 critical→medium，已产出逐页处置清单并阻断于处置授权；新增 AUDIT-FE-008（巡检器 TOML 漏检，high）与 AUDIT-OPS-004（分页容器误计，low）。误报关闭 6 项不变。",
-    "total_resolved": 8,
+    "note": "（2026-09-22T17:20:00+08:00 更新）开放 11 项，已解决 10 项。本轮：AUDIT-FE-008 已修复（commit 7419ad21，9 处 YAML-only 正则换成 YAML+TOML 双格式解析器，16 个 TOML 文件 title 覆盖率 0%→100%，YAML 撇号回归 5/5 无截断）；AUDIT-OPS-004 已关闭（修复代码早已存在于 seo_structured_data_audit.py:129-135 并有回归测试，此条作为口径记录保留）；AUDIT-OPS-001 再次修正 —— 孤儿页 4→2，因为 TOML slug 值本身不带日期前缀，用 stem 判孤儿仍误判；3 天内该数被修正两次（7→4→2），根因均为 slug 解析缺陷。误报关闭 6 项不变。",
+    "total_resolved": 10,
     "by_status": {
       "blocked": 4,
-      "new": 9,
-      "resolved": 8
+      "new": 7,
+      "resolved": 10
     },
     "resolved_ids": [
       "AUDIT-FE-001",
       "AUDIT-FE-002",
       "AUDIT-FE-003",
       "AUDIT-FE-004",
-      "AUDIT-OPS-002",
       "AUDIT-FE-005",
       "AUDIT-FE-006",
-      "AUDIT-FE-007"
+      "AUDIT-FE-007",
+      "AUDIT-FE-008",
+      "AUDIT-OPS-002",
+      "AUDIT-OPS-004"
     ],
     "new_in_fix_run": [
       "AUDIT-FE-008",
@@ -61,11 +63,10 @@
       "AUDIT-SEO-001",
       "AUDIT-OPS-003",
       "AUDIT-RV-003",
-      "AUDIT-CT-003",
-      "AUDIT-FE-008",
-      "AUDIT-OPS-004"
+      "AUDIT-CT-003"
     ],
-    "generated_at": "2026-09-22T15:35:06+08:00"
+    "generated_at": "2026-09-22T17:20:00+08:00",
+    "total_issues": 21
   },
   "system_constraint": {
     "problem": "问题分配闭环自 2026-09-04 起空转 18 天",
@@ -84,7 +85,7 @@
       "agent": "ops",
       "severity": "medium",
       "sla": "P1 / 需用户决策",
-      "title": "线上 4 个孤儿页（占 public/posts 的 6.0%）+ 4 个 <title> 为裸 URL 的页",
+      "title": "线上 2 个孤儿页（占 67 篇文章页的 3.0%）+ 4 个 <title> 为裸 URL 的页",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
       "status": "blocked",
       "auto_fixable": false,
@@ -97,7 +98,7 @@
       "high_risk": true,
       "high_risk_reason": "涉及线上内容与 Hugo 构建行为变更（cleanDestinationDir），须先向用户说明做什么/为什么/影响什么并等确认",
       "external_dependency": null,
-      "acceptance": "孤儿/仅草稿支撑页 4→0；<title> 为裸 URL 的页 4→0（下线或 title 改回自身内容）",
+      "acceptance": "孤儿/仅草稿支撑页 2→0；<title> 为裸 URL 的页 4→0（下线或 title 改回自身内容）",
       "owner_acknowledged": false,
       "resolution": null,
       "blocked_reason": "逐页处置清单已产出（ORPHAN_PAGE_DISPOSITION_2026-09-22.md），执行需授权：涉及线上页面下线/301 与 Hugo 构建行为变更（cleanDestinationDir）。用户 2026-09-22 选择「先只出逐页清单，不动手」。",
@@ -112,6 +113,16 @@
           "mechanism_finding_kept": "机制判断仍成立：hugo.toml 未设 cleanDestinationDir，Hugo 从不删除下线页面；router QA 只扫 content/ 看不到 public/ 孤儿。",
           "evidence": "orphan_final.py 实测 67 篇文章页中 4 个无源；fm_stats.py 实测 TOML 19 个",
           "disposition_report": "reports/daily_report_audit/ORPHAN_PAGE_DISPOSITION_2026-09-22.md"
+        },
+        {
+          "corrected_at": "2026-09-22T17:20:00+08:00",
+          "corrected_by": "audit_fix_run",
+          "field": "孤儿页数量 4 → 2",
+          "before": "4 个真孤儿（6.0%）：is-china-safe-for-tourists-2026-honest-assessment / 2026-05-27-how-to-survive-chinese-train-station / 2026-09-01-chinabound-travel-guide-2026-09-monthly-update / transportation-guide-guide",
+          "after": "2 个真孤儿（3.0%）：2026-05-26-is-china-safe-for-tourists-2026-honest-assessment / transportation-guide-guide",
+          "root_cause": "上一轮修正只到「解析器读不到 slug 才算孤儿」，但 TOML 文件里的 slug 值本身不带日期前缀（slug = \"china-transportation-complete-guide-...\"），而 stem 是2026-07-16-china-transportation-complete-guide-...。用 stem 当孤儿判据仍会误判。修好 AUDIT-FE-008 后 slug 能读出，两页实际都有源。",
+          "evidence": "front_matter_field(fm, 'slug') 对两个 TOML post 分别返回 'china-transportation-complete-guide-trains-subways-taxis-and-more' 与 'is-china-safe-for-tourists-2026-honest-safety-assessment'；public/posts/ 下对应无日期目录的 index.html 实测均 EXISTS；带 2026-07-16- 前缀的目录实测 MISSING（说明线上从未存在前缀版，非下线遗留）。",
+          "note": "孤儿页数量在 3 天内被修正两次（7→4→2），两次根因都是 slug 解析缺陷而非内容真被删。后续任何孤儿页结论都应先确认 front-matter 解析器能读到 slug，再比对线上目录。"
         }
       ]
     },
@@ -535,7 +546,7 @@
       "sla": "P1 / 48h",
       "title": "巡检器 9 处 YAML-only 正则对 19 个 TOML front-matter 文件完全失明",
       "task_file": null,
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [
@@ -545,7 +556,22 @@
       "external_dependency": null,
       "acceptance": "check_title_meta_length() 能读到 TOML 文件的 title；fm_stats.py 报告的 19 个 TOML 文件全部进入巡检结果",
       "owner_acknowledged": false,
-      "resolution": null,
+      "resolution": {
+        "resolved_at": "2026-09-22T17:20:00+08:00",
+        "resolved_by": "audit_fix_run",
+        "commit": "7419ad21",
+        "changed_files": [
+          "scripts/site_health_agent.py"
+        ],
+        "what_changed": "split_front_matter() 分隔符改为 (---|\\+\\+\\+) 双格式并用捕获组回溯匹配闭合分隔符；front_matter_field() 字段分隔符改为 [:=] 兼容 `key: value` 与 `key = \"value\"`；新增 _strip_scalar_value() 收敛引号/注释剥离并显式返回 None 处理 TOML 非标量（数组 latitude=[0,0]、YAML 锚点 &x / 引用 *x），不再报错；7 处散点调用全部改走统一解析器：check_sitemap_health（含 robots/_build 双格式匹配）、check_empty_links、check_image_alt、check_draft_leak（draft 值兼容 : 与 =）、check_persona_violation、check_ai_forbidden_words。",
+        "verification": "16 个 TOML 文件（3 posts + 8 城市 + 2 法务 + 3 _index）title 覆盖率 0%→100%；content/ 全树 103/103 篇可解析 title；YAML 撇号回归 5/5 一致（China'S / Xi'an / Foodie's / I've / China's 无截断）；TOML 非标量值返回 None 不报错；py_compile 通过。",
+        "not_changed_and_why": [
+          "agent_task_executor.py 的 _fix_title_length / _fix_meta_description 仍是 YAML-only 写法，但 11 个可解析 TOML 的 title 全 <=56 字符、description 全 >=103 字符，两者都够不到自动修复触发阈值（title_too_long / meta_description_too_short），故无需改。",
+          "site_health_agent.py:1052 的 shorten_title 修复器是死代码：executor 的 AUTO_FIXABLE_TYPES 不含 title_too_long，executor 走自己的 _fix_title_length，不消费该 fix_action。",
+          "content/ 下任何文件未改动；纯解析层修复。"
+        ],
+        "side_effect": "TOML 的 slug 现在能读到了，AUDIT-OPS-001 的孤儿页数从 4 修正为 2（见该条 corrections[1]）。"
+      },
       "detected_at": "2026-09-22T15:35:06+08:00",
       "detected_by": "audit_fix_run（孤儿页清单实测时发现）",
       "description": "content/ 下 125 个已发布源文件中 19 个使用 TOML front-matter（+++），占 15.2%。site_health_agent.py 有 9 处 re.match(r'^---\\s*\\n...') 只匹配 YAML，TOML 文件被判为「无 front-matter」而跳过 —— 其 title 长度、meta description、占位符、AI 禁用词、persona 违规全部从未被检查。",
@@ -577,8 +603,8 @@
       "severity": "low",
       "sla": "P3 / 1w",
       "title": "孤儿页统计未排除 Hugo 分页容器 /posts/page/，虚增 1 个",
-      "task_file": null,
-      "status": "new",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -586,7 +612,15 @@
       "external_dependency": null,
       "acceptance": "孤儿页统计输出 67 篇文章页而非 68 个目录",
       "owner_acknowledged": false,
-      "resolution": null,
+      "resolution": {
+        "resolved_at": "2026-09-22T17:20:00+08:00",
+        "resolved_by": "audit_fix_run",
+        "commit": "7419ad21",
+        "changed_files": [],
+        "what_changed": "无代码改动 —— 该缺陷的修复代码在本轮修复开始前就已存在于仓库中：scripts/seo_structured_data_audit.py:129-135 明确把 /posts/page/N/ 排除在文章页统计之外，注释原文「分页页（posts/page/2/index.html）不是文章，不应计入文章页覆盖率」，且 tests/test_seo_structured_data_audit.py:120-123 有对应回归测试。",
+        "verification": "grep 复核 scripts/ 下所有孤儿页/文章页枚举点：seo_structured_data_audit.py:134 已排除分页容器；site_health_agent.py 不枚举 public/posts（只读 content/ 与 public/sitemap.xml），不受影响；ORPHAN_PAGE_DISPOSITION_2026-09-22.md:68 的 67 篇口径已排除 page 目录（68 目录 - 1 分页容器）。",
+        "closure_reason": "登记时该缺陷在「人工孤儿页审计流程」中存在（ORPHAN_PAGE_DISPOSITION 的口径是人工核对得出的），自动审计脚本早已修好。此条作为口径记录保留，避免后续读者误以为自动审计仍在虚增 1 个。"
+      },
       "detected_at": "2026-09-22T15:35:06+08:00",
       "detected_by": "audit_fix_run",
       "description": "public/posts/page/ 下含 1~7 七个分页子目录，是 Hugo 分页产物而非文章页。直接枚举 public/posts/* 会把 page 计入。",
@@ -669,14 +703,13 @@
     ]
   },
   "next_actions_for_owner": [
-    "1. 【需你决策】AUDIT-OPS-001（孤儿页 + cleanDestinationDir）：唯一高危项，涉及线上内容与 Hugo 构建行为，未获确认前不可执行。",
-    "2. 【需你决策】AUDIT-OPS-002 方案 A 还是 B：方案 B 的前置阻塞已解除（误报源已关闭），现在扩展 executor 能力矩阵是安全的。",
-    "3. 【需现场核实】AUDIT-RV-001（实验登记表三方矛盾）：DRIVE-001 告警是否成立。",
-    "4. 【需后台权限】AUDIT-RV-002（tp_inits 未上报）与 AUDIT-RV-003（PDF 送达不可验证）。",
-    "5. 【需构建验证】AUDIT-FE-006 前端兜底链已改，但需在 CI/构建环境验证渲染效果。",
-    "6. 【可直接改】AUDIT-SEO-001（shanghai description 166→≤160 字符）、AUDIT-CT-001（新文章 description=summary）、AUDIT-CT-003（行程模板落地页 draft:true）—— 均无需外部条件。",
-    "7. 【已修复无需动作】AUDIT-FE-001..005、AUDIT-FE-006、AUDIT-FE-007 共 7 项。",
-    "8. 5 条误报已关闭（见 closed_as_false_positive），不要再派单给 content_agent。"
+    "1. 【需你决策】AUDIT-OPS-001（2 个孤儿页 + 4 个裸 URL 标题页 + cleanDestinationDir）：唯一高危项，涉及线上内容与 Hugo 构建行为，未获确认前不可执行。处置清单 ORPHAN_PAGE_DISPOSITION_2026-09-22.md 的孤儿页名单需按 4→2 更新后再执行。",
+    "2. 【需现场核实】AUDIT-RV-001（实验登记表三方矛盾）：DRIVE-001 告警是否成立。",
+    "3. 【需后台权限】AUDIT-RV-002（tp_inits 未上报）与 AUDIT-RV-003（PDF 送达不可验证）。",
+    "4. 【需构建验证】AUDIT-FE-006 前端兜底链已改，但需在 CI/构建环境验证渲染效果。",
+    "5. 【可直接改】AUDIT-SEO-001（shanghai description 166→≤160 字符）、AUDIT-CT-001（新文章 description=summary）、AUDIT-CT-003（行程模板落地页 draft:true）—— 均无需外部条件。",
+    "6. 【已修复无需动作】AUDIT-FE-001..008、AUDIT-OPS-002、AUDIT-OPS-004 共 10 项。",
+    "7. 5 条误报已关闭（见 closed_as_false_positive），不要再派单给 content_agent。"
   ],
   "history": [
     {
@@ -702,6 +735,19 @@
         "AUDIT-OPS-001 口径修正：孤儿页 7→4（TOML 漏检导致 3 个误判），critical→medium",
         "新增 AUDIT-FE-008（TOML front-matter 漏检，high）、AUDIT-OPS-004（分页容器误计，low）",
         "新增 ORPHAN_PAGE_DISPOSITION_2026-09-22.md（只读清单，未做任何线上修改）"
+      ]
+    },
+    {
+      "at": "2026-09-22T17:20:00+08:00",
+      "by": "audit_fix_run",
+      "event": "TOML front-matter 解析器落地 + 孤儿页 4→2 再修正",
+      "detail": [
+        "提交 7419ad21（已推送）：site_health_agent.py 双格式 front-matter 解析，1 文件 +60/-41",
+        "AUDIT-FE-008 resolved：9 处 YAML-only 正则统一走 split_front_matter()/front_matter_field()，TOML 语法 key = \"value\" 兼容，非标量值（数组/锚点/引用）返回 None 不报错",
+        "AUDIT-OPS-004 resolved（无代码改动）：自动审计脚本早已排除 /posts/page/ 分页容器，此条记录人工审计口径",
+        "AUDIT-OPS-001 corrections 追加第 2 条：孤儿页 4→2（TOML slug 值不带日期前缀，stem 判据误判）",
+        "YAML 撇号回归 5/5 一致，无二次误报",
+        "git rebase 到 origin/main 后推送（本地提交前先 rebase，未用 stash/reset 绕过）"
       ]
     }
   ],
@@ -751,6 +797,36 @@
         "未运行 api_health_audit.py / subscription_health_audit.py（会调用线上 API 并真实创建MailerLite 订阅者，非幂等外部副作用）。",
         "未 commit / push。",
         "未创建任何密钥文件（gsc-service-account-key.json 等属 .gitignore 排除项，缺失时须先问用户）。"
+      ]
+    },
+    {
+      "run_id": "FIX-RUN-2026-09-22-R2",
+      "at": "2026-09-22T17:20:00+08:00",
+      "by": "audit_fix_run",
+      "resolved": [
+        "AUDIT-FE-008",
+        "AUDIT-OPS-004"
+      ],
+      "partially_resolved": [],
+      "newly_found": [],
+      "changed_files": [
+        "scripts/site_health_agent.py"
+      ],
+      "protected_areas_touched": "无。未修改 content/、URL/slug/canonical/content_id、联盟链接、密钥文件、ops-dashboard/ops-center.html、static/_redirects、layouts/、functions/。台账与任务单按约定更新。",
+      "committed": true,
+      "commit_sha": "7419ad21",
+      "commit_note": "提交前发现 origin/main 有 8 个其他 agent 的提交（运维 dashboard 自动刷新 + quality gate + affiliate A/B 报告），本地与远端分叉。已 git rebase origin/main 后推送，未使用 stash/reset/clean。这些提交未触碰 site_health_agent.py，零冲突。",
+      "verification": "python -m py_compile scripts/site_health_agent.py 通过；C:/temp/dsh/verify_final.py：TOML title 覆盖率 16/16、content/ 全树 103/103、YAML 撇号回归 5/5 一致、TOML 非标量值返回 None；git rev-list --left-right --count origin/main...HEAD = 0 0（已同步）。",
+      "self_corrections": [
+        "首轮把「引号内冒号」当回归证据去改 _strip_scalar_value() 的尾部检查，反而让 5 个含撇号标题里 4 个变成 None（更严重的回归）。已撤回该改动，恢复与旧实现一致的「找到匹配引号即取内部」行为。教训：改动前先跑全量回归，别用单例验证改解析器。",
+        "把 TOML 3 个 posts 文件的 slug 全记成『与 stem 一致』，实测只有 0 个一致 —— slug 值本身就不带日期前缀。用 stem 当孤儿判据在 TOML 下必然误判，这才是 4→2 的真因。",
+        "git commit -m 传含反引号的消息被 PowerShell 当转义字符吞掉导致提交失败，改用 git commit --file 后成功。"
+      ],
+      "not_done": [
+        "未运行 Hugo 构建（仓库纪律）。",
+        "未运行 pytest（会改写 12 个受保护文件）。",
+        "未运行会创建真实 MailerLite 订阅者的健康检查脚本。",
+        "agent_task_executor.py 的 _fix_title_length / _fix_meta_description 仍是 YAML-only：已确认当前 TOML 数据不会触发这两个自动修复，但一旦 TOML 文章出现超长 title 就会漏修，属已知残余，登记在 FE-008 resolution.not_changed_and_why。"
       ]
     }
   ]

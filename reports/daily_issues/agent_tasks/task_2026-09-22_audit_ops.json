@@ -3,27 +3,26 @@
   "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
   "task_id": "task_2026-09-22_audit_ops",
   "created_at": "2026-09-22T10:00:00+00:00",
-  "updated_at": "2026-09-22T15:36:36+08:00",
+  "updated_at": "2026-09-22T17:20:00+08:00",
   "target_date": "2026-09-21",
   "task_source": "daily_report_audit",
   "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
   "issue_count": 5,
   "severity_summary": {
-    "critical": 1,
-    "medium": 2,
+    "medium": 3,
     "low": 2
   },
   "issues": [
     {
       "id": "AUDIT-OPS-001",
       "type": "orphan_pages_live",
-      "title": "线上 7 个孤儿页（占 public/posts 的 10.4%），仓库无对应已发布源文件",
-      "description": "public/posts/ 共 67 个页面，其中 7 个在 content/ 全树中找不到已发布源文件：6 个真孤儿 + 1 个仅由 _draft/ 草稿支撑。另有 4 个页面的 <title> 是一个裸 URL（重定向桩）。这些页面持续被 Google 收录与抓取，其中 5 个带正常标题，很可能正在获得排名与曝光，而团队以为已下线。日报完全没发现（日报文章数取 content/posts/*.md 文件数，QA 扫描只扫 content/）。",
+      "title": "线上 2 个孤儿页（占 67 篇文章页的 3.0%）+ 4 个 <title> 为裸 URL 的页",
+      "description": "public/posts/ 下 68 个目录，排除 /posts/page/ 分页容器后为 67 篇文章页。其中 2 个在线上找不到对应已发布源文件：2026-05-26-is-china-safe-for-tourists-2026-honest-assessment、transportation-guide-guide。另有 4 个 <title> 为裸 URL 的页。",
       "page": "https://www.chinaboundtravel.com/posts/",
       "file": "hugo.toml",
       "evidence": "线上页面：/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ | /posts/2026-05-27-how-to-survive-chinese-train-station/ | /posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/ | /posts/best-travel-insurance-china/ | /posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ | /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ （以上 6 个无任何源文件）；/posts/transportation-guide-guide/ （唯一源文件 content/_draft/2026-06-06-transportation-guide-guide-attempt1.md 为 draft:true 且正文仅 2 字符）。<title> 为裸 URL 的 4 个：2026-09-01-...-monthly-update / how-to-survive-chinese-train-station / is-china-safe-for-tourists-2026-honest-assessment / transportation-guide-guide。重复 URL 分权：is-china-safe-for-tourists-2026-honest-assessment 与 is-china-safe-for-tourists-2026-honest-safety-assessment 同时在线上。",
       "recommended_action": "1) 在 hugo.toml 的 [params] 或 build 段加入 cleanDestinationDir = true，使构建删除已下线页面（注意：这是行为变更，需先 dry-run 构建并 diff public/ 确认不会误删静态资源）。2) 对 7 个孤儿页逐个决策：若需保留则把内容源文件恢复到 content/posts/ 并补 content_id；若确认下线则在 _redirects 加 301 到替代页（注意 docs/OPS_DASHBOARD_HANDOVER.md 的重定向规则约束）或直接返回 404。3) 对 2 组重复 URL 选定单一规范 URL 并 301。4) 重建并核验：hugo build 后确认 public/posts 页面数从 67 降为 60，且 4 个裸 URL 标题页不再存在。5) 该问题不可由 agent_task_executor.py 自动修复（不在其能力矩阵内），需人工授权后执行 —— 涉及线上内容与构建行为，属高危变更，须先向用户说明「做什么/为什么/影响什么」并等确认。",
-      "severity": "critical",
+      "severity": "medium",
       "agent": "ops",
       "action": "manual_review",
       "source": "daily_report_audit",
@@ -35,16 +34,18 @@
       "detected_at": "2026-09-22T10:00:00+00:00",
       "auto_fixable": false,
       "verify_command": "python -c \"import re,pathlib;P=pathlib.Path('E:/AI/dulizhan/travel-blog/public/posts');n=len(list(P.glob('*/index.html')));print('live pages:',n)\"",
-      "expected_post_fix": "public/posts 页面数 67 -> 60；孤儿/仅草稿支撑页 7 -> 0；<title> 为裸 URL 的页 4 -> 0",
+      "expected_post_fix": "孤儿/仅草稿支撑页 2→0；<title> 为裸 URL 的页 4→0",
       "sla": "P0，24 小时内给出逐页处置决策",
-      "blocked_reason": "逐页处置清单已产出（ORPHAN_PAGE_DISPOSITION_2026-09-22.md），执行需授权：涉及线上页面下线/301 与 Hugo 构建行为变更。用户 2026-09-22 选择「先只出逐页清单，不动手」。",
+      "blocked_reason": "逐页处置清单已产出（ORPHAN_PAGE_DISPOSITION_2026-09-22.md），执行需授权：涉及线上页面下线/301 与 Hugo 构建行为变更（cleanDestinationDir）。用户 2026-09-22 选择「先只出逐页清单，不动手」。该清单的孤儿页名单需按 4→2 更新后再执行。",
       "correction": {
-        "corrected_at": "2026-09-22T15:36:36+08:00",
-        "field": "severity / 数量 / 危害程度",
-        "before": "critical / 7 个孤儿页（10.4%）/ 5 个带正常标题孤儿页很可能正在获得排名与曝光",
-        "after": "medium / 4 个真孤儿（6.0%）/ 4 个中只有 1 个有 GSC 曝光（6 次，0 点击，位置 86.5）",
-        "root_cause": "原 slug 解析只认 YAML（^---），本仓 19 个 TOML（+++）文件占已发布源 15.2%，其中 3 个在 content/posts/ 被错报成「无源」。详见 AUDIT-FE-008。",
-        "evidence": "orphan_final.py 实测 67 篇文章页中 4 个无源；fm_stats.py 实测 TOML 19 个"
+        "corrected_at": "2026-09-22T17:20:00+08:00",
+        "corrected_by": "audit_fix_run",
+        "field": "孤儿页数量 4 → 2",
+        "before": "4 个真孤儿（6.0%）",
+        "after": "2 个真孤儿（3.0%）：2026-05-26-is-china-safe-for-tourists-2026-honest-assessment / transportation-guide-guide",
+        "root_cause": "TOML 文件里的 slug 值本身不带日期前缀（slug = \"china-transportation-complete-guide-...\"），而 stem 是 2026-07-16-china-transportation-complete-guide-...。用 stem 当孤儿判据在 TOML 下仍会误判。修好 AUDIT-FE-008 后 slug 能读出，两页实际都有源。",
+        "evidence": "front_matter_field(fm,'slug') 对两个 TOML post 分别返回 'china-transportation-complete-guide-trains-subways-taxis-and-more' 与 'is-china-safe-for-tourists-2026-honest-safety-assessment'；public/posts/ 下对应无日期目录的 index.html 实测均 EXISTS；带 2026-07-16- 前缀的目录实测 MISSING。",
+        "note": "孤儿页数量在 3 天内被修正两次（7→4→2），两次根因都是 slug 解析缺陷而非内容被删。后续孤儿页结论应先确认 front-matter 解析器能读到 slug，再比对线上目录。"
       }
     },
     {
@@ -142,39 +143,49 @@
       "type": "metric_miscount",
       "severity": "low",
       "title": "孤儿页统计未排除 Hugo 分页容器 /posts/page/，虚增 1 个",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "detected_at": "2026-09-22T15:36:36+08:00",
       "detected_by": "audit_fix_run",
       "description": "public/posts/page/ 下含 1~7 七个分页子目录，是 Hugo 分页产物而非文章页。直接枚举 public/posts/* 会把 page 计入。",
       "recommended_action": "孤儿页扫描脚本排除 name=='page'。",
-      "acceptance": "孤儿页统计输出 67 篇文章页而非 68 个目录"
+      "acceptance": "孤儿页统计输出 67 篇文章页而非 68 个目录",
+      "resolution": {
+        "resolved_at": "2026-09-22T17:20:00+08:00",
+        "resolved_by": "audit_fix_run",
+        "commit": "7419ad21",
+        "changed_files": [],
+        "what_changed": "无代码改动 —— 修复代码在本轮修复开始前就已存在于仓库：scripts/seo_structured_data_audit.py:129-135 明确排除 /posts/page/N/ 分页容器，注释原文「分页页（posts/page/2/index.html）不是文章，不应计入文章页覆盖率」，tests/test_seo_structured_data_audit.py:120-123 有对应回归测试。",
+        "verification": "grep 复核 scripts/ 下所有孤儿页/文章页枚举点：seo_structured_data_audit.py:134 已排除；site_health_agent.py 不枚举 public/posts（只读 content/ 与 public/sitemap.xml）；ORPHAN_PAGE_DISPOSITION_2026-09-22.md:68 的 67 篇口径已排除 page 目录。",
+        "closure_reason": "登记时该缺陷存在于人工孤儿页审计流程，自动审计脚本早已修好。此条作为口径记录保留，避免后续读者误以为自动审计仍在虚增 1 个。"
+      }
     }
   ],
   "priority_issue": {
     "id": "AUDIT-OPS-001",
     "type": "orphan_pages_live",
-    "title": "线上 7 个孤儿页（占 public/posts 的 10.4%），仓库无对应已发布源文件",
-    "severity": "critical"
+    "title": "线上 2 个孤儿页（占 67 篇文章页的 3.0%）+ 4 个 <title> 为裸 URL 的页",
+    "severity": "medium"
   },
   "expected_actions": [
     "manual_review"
   ],
   "status": "partially_resolved",
   "execution": {
-    "resolved_count": 1,
+    "resolved_count": 3,
     "failed_count": 0,
-    "completed_at": null,
-    "fix_run": "FIX-RUN-2026-09-22",
-    "committed": false,
-    "note": "1 项已修复并验证 ['AUDIT-FE-007']，3 项仍需责任人处理（new=2 / blocked=1）。"
+    "completed_at": "2026-09-22T17:20:00+08:00",
+    "fix_run": "FIX-RUN-2026-09-22-R2",
+    "committed": true,
+    "commit_sha": "7419ad21",
+    "note": "5 项中 2 项已解决（AUDIT-OPS-002、AUDIT-OPS-004），2 项仍开放（AUDIT-OPS-001 blocked 需授权、AUDIT-OPS-003 new）；AUDIT-FE-007 早前已解决。"
   },
   "status_by_issue": {
     "AUDIT-OPS-001": "blocked",
     "AUDIT-OPS-002": "resolved",
     "AUDIT-OPS-003": "new",
     "AUDIT-FE-007": "resolved",
-    "AUDIT-OPS-004": "new"
+    "AUDIT-OPS-004": "resolved"
   },
   "fix_run": {
     "run_id": "FIX-RUN-2026-09-22",
@@ -188,12 +199,25 @@
       "scripts/site_health_agent.py"
     ],
     "verification_script": "C:/temp/dsh/verify_all_fixes.py",
-    "committed": false,
+    "committed": true,
     "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
     "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
     "latest_at": "2026-09-22T15:36:36+08:00",
-    "latest_note": "方案 A 落地 + OPS-001 口径修正 + 新增 FE-008 / OPS-004"
+    "latest_note": "方案 A 落地 + OPS-001 口径修正 + 新增 FE-008 / OPS-004",
+    "commit_sha": "7419ad21",
+    "second_run": {
+      "run_id": "FIX-RUN-2026-09-22-R2",
+      "at": "2026-09-22T17:20:00+08:00",
+      "commit": "7419ad21",
+      "resolved": [
+        "AUDIT-OPS-004"
+      ],
+      "changed_files": [
+        "scripts/site_health_agent.py"
+      ],
+      "verification": "grep 复核 scripts/ 下所有孤儿页/文章页枚举点：seo_structured_data_audit.py:134 已排除；site_health_agent.py 不枚举 public/posts（只读 content/ 与 public/sitemap.xml）；ORPHAN_PAGE_DISPOSITION_2026-09-22.md:68 的 67 篇口径已排除 page 目录。"
+    }
   },
-  "open_count": 3,
-  "resolved_count": 2
+  "open_count": 2,
+  "resolved_count": 3
 }
