@@ -3,18 +3,18 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-22_ops",
   "created_at": "2026-09-22T01:00:34.048343+00:00",
-  "updated_at": "2026-09-22T16:00:37.293255",
+  "updated_at": "2026-09-22T16:08:32.283678",
   "target_date": "2026-09-22",
-  "issue_count": 5,
+  "issue_count": 3,
   "severity_summary": {
     "critical": 1,
-    "high": 2,
+    "high": 0,
     "medium": 2,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-362aaeb107391419",
+      "id": "site_health-11115d637239c53c",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "description": "multiple_analytics_destinations",
@@ -31,47 +31,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-09-22T16:00:37.081161+00:00"
-    },
-    {
-      "id": "issue_6835b20d38b8",
-      "type": "draft_leak",
-      "title": "draft:true的文章可能已发布到线上",
-      "description": "draft:true的文章可能已发布到线上",
-      "page": "content/posts/2026-07-22-cultural-etiquette-guide.md",
-      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
-      "evidence": "draft:true的文章可能已发布到线上",
-      "recommended_action": "Review the issue and apply the documented remediation.",
-      "severity": "high",
-      "agent": "ops",
-      "action": "diagnose_and_fix",
-      "source": "daily_issue_router",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "task_source": "daily_issue_router",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "ops",
-      "detected_at": "2026-09-22T02:28:34.691067"
-    },
-    {
-      "id": "issue_f63e55c5aac7",
-      "type": "multiple_analytics_destinations",
-      "title": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
-      "description": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
-      "page": "https://www.chinaboundtravel.com",
-      "file": "https://www.chinaboundtravel.com",
-      "evidence": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
-      "recommended_action": "Review the issue and apply the documented remediation.",
-      "severity": "high",
-      "agent": "ops",
-      "action": "diagnose_and_fix",
-      "source": "daily_issue_router",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "task_source": "daily_issue_router",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "ops",
-      "detected_at": "2026-09-22T02:28:34.691047"
+      "detected_at": "2026-09-22T16:08:32.110551+00:00"
     },
     {
       "id": "workflow-35677688971-unknown",
@@ -115,7 +75,7 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-362aaeb107391419",
+    "id": "site_health-11115d637239c53c",
     "type": "multiple_analytics_destinations",
     "title": "multiple_analytics_destinations",
     "description": "multiple_analytics_destinations",
@@ -132,10 +92,9 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-09-22T16:00:37.081161+00:00"
+    "detected_at": "2026-09-22T16:08:32.110551+00:00"
   },
   "expected_actions": [
-    "diagnose_and_fix",
     "manual_review"
   ],
   "status": "partial",
@@ -143,6 +102,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=5, failed=0"
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }

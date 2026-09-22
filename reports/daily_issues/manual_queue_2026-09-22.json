@@ -1,9 +1,31 @@
 {
-  "router_version": "1.0",
-  "generated_at": "2026-09-22T16:08:32.031854",
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-09-22T16:08:32.040290",
   "target_date": "2026-09-22",
-  "total_issues": 22,
-  "total_assignments": 1,
+  "issue_count": 17,
+  "by_agent": {
+    "ops": {
+      "count": 3,
+      "types": [
+        "draft_leak",
+        "multiple_analytics_destinations"
+      ]
+    },
+    "seo": {
+      "count": 13,
+      "types": [
+        "meta_description_too_long",
+        "title_too_short"
+      ]
+    },
+    "social": {
+      "count": 1,
+      "types": [
+        "social_zero_engagement"
+      ]
+    }
+  },
   "issues": [
     {
       "id": "issue_c49db75efc23",
@@ -61,21 +83,6 @@
       "auto_fixable": false
     },
     {
-      "id": "issue_465b0b5928ee",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(69字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "detected_at": "2026-09-22T16:08:32.031666",
-      "status": "new",
-      "assigned": true,
-      "file": "content/cancel.md",
-      "auto_fixable": true,
-      "assigned_to": "seo"
-    },
-    {
       "id": "issue_8a8cb1a4bc40",
       "type": "title_too_short",
       "description": "Title过短(10字符<20)",
@@ -88,21 +95,6 @@
       "assigned": false,
       "file": "content/disclaimer.md",
       "auto_fixable": false
-    },
-    {
-      "id": "issue_465b0b5928ee",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(69字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "detected_at": "2026-09-22T16:08:32.031674",
-      "status": "new",
-      "assigned": true,
-      "file": "content/disclaimer.md",
-      "auto_fixable": true,
-      "assigned_to": "seo"
     },
     {
       "id": "issue_e8581edfc966",
@@ -119,21 +111,6 @@
       "auto_fixable": false
     },
     {
-      "id": "issue_61dafc71d577",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(58字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "detected_at": "2026-09-22T16:08:32.031690",
-      "status": "new",
-      "assigned": true,
-      "file": "content/privacy-policy.md",
-      "auto_fixable": true,
-      "assigned_to": "seo"
-    },
-    {
       "id": "issue_50a9acfb54d8",
       "type": "meta_description_too_long",
       "description": "Meta description过长(267字符)",
@@ -146,21 +123,6 @@
       "assigned": false,
       "file": "content/cities/western-sichuan.md",
       "auto_fixable": false
-    },
-    {
-      "id": "issue_1ba3259905d5",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(60字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "detected_at": "2026-09-22T16:08:32.031698",
-      "status": "new",
-      "assigned": true,
-      "file": "content/cities/_index.md",
-      "auto_fixable": true,
-      "assigned_to": "seo"
     },
     {
       "id": "issue_f2571530309a",
@@ -275,21 +237,6 @@
       "auto_fixable": false
     },
     {
-      "id": "issue_c082e869cdab",
-      "type": "meta_description_too_short",
-      "description": "Meta description过短(38字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-09-22.json",
-      "detected_at": "2026-09-22T16:08:32.031728",
-      "status": "new",
-      "assigned": true,
-      "file": "content/guides/_index.md",
-      "auto_fixable": true,
-      "assigned_to": "seo"
-    },
-    {
       "id": "issue_308160763765",
       "type": "meta_description_too_long",
       "description": "Meta description过长(166字符)",
@@ -316,118 +263,6 @@
       "assigned": false,
       "file": "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
       "auto_fixable": false
-    }
-  ],
-  "assignments": [
-    {
-      "agent": "seo",
-      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
-      "task_id": "task_2026-09-22_seo",
-      "created_at": "2026-09-22T16:08:32.031840",
-      "target_date": "2026-09-22",
-      "issue_count": 5,
-      "severity_summary": {
-        "critical": 0,
-        "high": 0,
-        "medium": 0,
-        "low": 5
-      },
-      "issues": [
-        {
-          "id": "issue_465b0b5928ee",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(69字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-22.json",
-          "detected_at": "2026-09-22T16:08:32.031666",
-          "status": "new",
-          "assigned": true,
-          "file": "content/cancel.md",
-          "auto_fixable": true,
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_465b0b5928ee",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(69字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-22.json",
-          "detected_at": "2026-09-22T16:08:32.031674",
-          "status": "new",
-          "assigned": true,
-          "file": "content/disclaimer.md",
-          "auto_fixable": true,
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_61dafc71d577",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(58字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-22.json",
-          "detected_at": "2026-09-22T16:08:32.031690",
-          "status": "new",
-          "assigned": true,
-          "file": "content/privacy-policy.md",
-          "auto_fixable": true,
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_1ba3259905d5",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(60字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-22.json",
-          "detected_at": "2026-09-22T16:08:32.031698",
-          "status": "new",
-          "assigned": true,
-          "file": "content/cities/_index.md",
-          "auto_fixable": true,
-          "assigned_to": "seo"
-        },
-        {
-          "id": "issue_c082e869cdab",
-          "type": "meta_description_too_short",
-          "description": "Meta description过短(38字符)",
-          "severity": "low",
-          "agent": "seo",
-          "action": "optimize_meta",
-          "source_file": "site_health_issues_2026-09-22.json",
-          "detected_at": "2026-09-22T16:08:32.031728",
-          "status": "new",
-          "assigned": true,
-          "file": "content/guides/_index.md",
-          "auto_fixable": true,
-          "assigned_to": "seo"
-        }
-      ],
-      "priority_issue": {
-        "id": "issue_465b0b5928ee",
-        "type": "meta_description_too_short",
-        "description": "Meta description过短(69字符)",
-        "severity": "low",
-        "agent": "seo",
-        "action": "optimize_meta",
-        "source_file": "site_health_issues_2026-09-22.json",
-        "detected_at": "2026-09-22T16:08:32.031666",
-        "status": "new",
-        "assigned": true,
-        "file": "content/cancel.md",
-        "auto_fixable": true,
-        "assigned_to": "seo"
-      },
-      "expected_actions": [
-        "optimize_meta"
-      ],
-      "status": "pending"
     }
   ]
 }

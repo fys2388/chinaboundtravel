@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-22T02:28:32.033581+00:00",
+  "timestamp": "2026-09-22T16:08:20.330599+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -10,41 +10,15 @@
       "message": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
       "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527132}}}",
       "auto_fixable": false,
-      "agent": "site_health",
-      "assigned": true,
-      "assigned_to": "ops",
-      "assigned_at": "2026-09-22T02:28:34.698495",
-      "status": "assigned"
+      "agent": "site_health"
     },
     {
-      "type": "content_placeholder",
+      "type": "draft_leak",
       "severity": "high",
-      "file": "content/search.md",
-      "message": "发现模板占位符: placeholder",
+      "file": "content/7-day-china-itinerary.md",
+      "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
-      "agent": "content",
-      "assigned": false,
-      "assigned_to": "content",
-      "assigned_at": "2026-09-22T02:28:34.698499",
-      "status": "need_manual",
-      "resolved_by": "content_agent",
-      "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-22T02:28:34.969922"
-    },
-    {
-      "type": "content_placeholder",
-      "severity": "high",
-      "file": "content/contact.md",
-      "message": "发现模板占位符: placeholder",
-      "auto_fixable": false,
-      "agent": "content",
-      "assigned": false,
-      "assigned_to": "content",
-      "assigned_at": "2026-09-22T02:28:34.698501",
-      "status": "need_manual",
-      "resolved_by": "content_agent",
-      "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-09-22T02:28:34.968383"
+      "agent": "content"
     },
     {
       "type": "draft_leak",
@@ -52,22 +26,154 @@
       "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
-      "agent": "content",
+      "agent": "content"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/cancel.md",
+      "message": "Meta description过短(69字符)",
+      "auto_fixable": false,
+      "agent": "seo",
       "assigned": true,
-      "assigned_to": "ops",
-      "assigned_at": "2026-09-22T02:28:34.698502",
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-22T16:08:32.040695",
       "status": "assigned"
     },
     {
       "type": "title_too_short",
       "severity": "low",
-      "file": "content/success.md",
-      "message": "Title过短(19字符<20)",
+      "file": "content/disclaimer.md",
+      "message": "Title过短(10字符<20)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/disclaimer.md",
+      "message": "Meta description过短(69字符)",
       "auto_fixable": false,
       "agent": "seo",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-09-22T02:28:34.698504",
+      "assigned_at": "2026-09-22T16:08:32.040700",
+      "status": "assigned"
+    },
+    {
+      "type": "title_too_short",
+      "severity": "low",
+      "file": "content/privacy-policy.md",
+      "message": "Title过短(14字符<20)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/privacy-policy.md",
+      "message": "Meta description过短(58字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-22T16:08:32.040701",
+      "status": "assigned"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/western-sichuan.md",
+      "message": "Meta description过长(267字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/cities/_index.md",
+      "message": "Meta description过短(60字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-22T16:08:32.040703",
+      "status": "assigned"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/shanghai.md",
+      "message": "Meta description过长(196字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/xian.md",
+      "message": "Meta description过长(242字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/hangzhou.md",
+      "message": "Meta description过长(216字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/yangshuo.md",
+      "message": "Meta description过长(226字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/guilin.md",
+      "message": "Meta description过长(245字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/chengdu.md",
+      "message": "Meta description过长(227字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/cities/beijing.md",
+      "message": "Meta description过长(205字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "title_too_short",
+      "severity": "low",
+      "file": "content/guides/_index.md",
+      "message": "Title过短(13字符<20)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/guides/_index.md",
+      "message": "Meta description过短(38字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-09-22T16:08:32.040705",
       "status": "assigned"
     },
     {
@@ -76,47 +182,15 @@
       "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
       "message": "Meta description过长(166字符)",
       "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-22T02:28:34.698505",
-      "status": "assigned"
+      "agent": "seo"
     },
     {
-      "type": "title_too_short",
+      "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
-      "message": "Title过短(2字符<20)",
+      "file": "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+      "message": "Meta description过长(187字符)",
       "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-22T02:28:34.698506",
-      "status": "assigned"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "message": "Title过短(17字符<20)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-22T02:28:34.698507",
-      "status": "assigned"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
-      "message": "Title过短(6字符<20)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-09-22T02:28:34.698508",
-      "status": "assigned"
+      "agent": "seo"
     }
   ]
 }
