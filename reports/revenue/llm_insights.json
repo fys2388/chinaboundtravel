@@ -1,0 +1,39 @@
+{
+  "analyzed_at": "2026-09-22T11:50:42.606100",
+  "insights": {
+    "trend": "stable",
+    "growth": "$49.4K/30d, $19.67 AOV, 2.56% CR; affiliate-led with 60% organic base",
+    "rpv": "$0.168",
+    "opportunities": [
+      {
+        "category": "AOV",
+        "opportunity": "Implement upsell/cross-sell bundles and post-purchase offers to lift AOV from $19.67 toward $25+",
+        "impact": "$25,000",
+        "priority": "high"
+      },
+      {
+        "category": "Conversion",
+        "opportunity": "Redesign top landing pages to reduce 45% bounce rate and improve CR from 2.56% to 3.2%+",
+        "impact": "$18,500",
+        "priority": "high"
+      },
+      {
+        "category": "Channel",
+        "opportunity": "Expand affiliate program with tiered commissions and recruit 20+ new partners to diversify beyond current top source",
+        "impact": "$12,000",
+        "priority": "medium"
+      }
+    ],
+    "risks": [
+      {
+        "risk": "Over-dependence on affiliate channel as top revenue source creates concentration risk if key partners underperform",
+        "mitigation": "Grow organic and paid channels to reduce affiliate share below 50% of revenue within 90 days"
+      },
+      {
+        "risk": "45% bounce rate signals poor landing page relevance or UX friction, capping conversion potential",
+        "mitigation": "Run A/B tests on hero sections, CTAs, and page load speed; target bounce rate below 35%"
+      }
+    ],
+    "summary": "Revenue is stable at $49.4K/30d with a $0.168 RPV. The 60% organic traffic base is healthy, but low AOV ($19.67) and 45% bounce rate are the primary growth constraints. Prioritize AOV uplift via bundling and landing page optimization to unlock $40K+ in incremental monthly revenue. Diversify away from affiliate concentration to reduce channel risk."
+  }
+}

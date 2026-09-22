@@ -1,6 +1,6 @@
 # REV002 Review Readiness (P1-GROWTH-19F)
 
-Generated: 2026-09-21  |  Status: PREPARATION ONLY (no judgement)
+Generated: 2026-09-22  |  Status: PREPARATION ONLY (no judgement)
 
 ## Experiment
 - experiment_id: REV002
@@ -10,7 +10,7 @@ Generated: 2026-09-21  |  Status: PREPARATION ONLY (no judgement)
 - start_date: 2026-08-16
 - baseline_period: 2026-07-19..2026-08-15
 - review gate (min observation): 28 days
-- status: RUNNING
+- status: RETIRED
 
 ## Metrics for review
 - Primary: affiliate_click_rate

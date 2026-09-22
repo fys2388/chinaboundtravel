@@ -1,7 +1,7 @@
 # ChinaBound Travel 2.0 — DAILY REPORT
 
-- Generated: 2026-09-21 (Asia/Shanghai)
-- as_of: 2026-09-21
+- Generated: 2026-09-22 (Asia/Shanghai)
+- as_of: 2026-09-22
 - Data source: ONE unified snapshot — reports/management/REPORTING_SNAPSHOT.json
 - Labels: LIVE / CACHED / LOCAL / NOT_AVAILABLE
 - Revenue: NULL (REVENUE_NOT_AVAILABLE) — never fabricated
@@ -11,7 +11,7 @@
 
 ## Executive status
 
-- Published posts: 63 posts
+- Published posts: 64 posts
 - Sessions 28d: 166 sessions | Pageviews 28d: 374 pageviews
 - GSC clicks 28d: 0 clicks | Impressions: 234 impressions
 - Revenue: NULL (REVENUE_NOT_AVAILABLE)
@@ -27,10 +27,10 @@ Daily window metrics are NOT available (no daily GA4 pull). 28d rolling figures 
 
 | KPI | Value | Baseline | Source type | Status |
 |---|---|---|---|---|
-| users_28d | 234 users | NULL | LIVE | DUPLICATE_DESTINATION |
+| users_28d | 244 users | NULL | LIVE | DUPLICATE_DESTINATION |
 | sessions_28d | 166 sessions | 162 | CACHED | DUPLICATE_DESTINATION |
 | pageviews_28d | 374 pageviews | 365 | CACHED | DUPLICATE_DESTINATION |
-| engagement_rate_28d | 0.37752161383285304 % | NULL | LIVE | DUPLICATE_DESTINATION |
+| engagement_rate_28d | 0.39275766016713093 % | NULL | LIVE | DUPLICATE_DESTINATION |
 
 ## 2. SEO changes
 
@@ -50,16 +50,16 @@ Change vs previous day: **INSUFFICIENT_SAMPLE** (no prior daily snapshot).
 | inspection_pass | 49 urls | CACHED | STALE_SOURCE |
 | page_level_clicks_28d | 2 clicks | CACHED | INSUFFICIENT_SAMPLE |
 | page_level_impressions_28d | 1073 impressions | CACHED | STALE_SOURCE |
-| pages_newly_indexed | NULL | NOT_AVAILABLE | INSUFFICIENT_BASELINE |
-| pages_losing_visibility | NULL | NOT_AVAILABLE | INSUFFICIENT_BASELINE |
+| pages_newly_indexed | 1 pages | LIVE | OK |
+| pages_losing_visibility | 2 pages | LIVE | OK |
 
 Top opportunities: China 144-Hour Visa-Free Transit (2026 Guide) (77.0, B); China Transportation Guide for European Travelers (75.0, B); China Transportation Guide: Trains, Subways & Taxis (75.0, B)
 
 ## 3. Indexing changes
 
 - Indexed: 69 pages | Not indexed: 89 pages (GSC UI 2026-08-16, CACHED)
-- Newly indexed this period: NULL (requires prior snapshot: INSUFFICIENT_SAMPLE)
-- Losing visibility: NULL (INSUFFICIENT_SAMPLE)
+- Newly indexed this period: 1 (requires prior snapshot: INSUFFICIENT_SAMPLE)
+- Losing visibility: 2 (INSUFFICIENT_SAMPLE)
 
 ## 4. Revenue / affiliate events
 
@@ -119,7 +119,7 @@ No brand changes today. Last brand event: P1-BRAND-04 favicon.png replacement 20
 
 | KPI | Value | Source type |
 |---|---|---|
-| editorial_persona_compliance | 31/113 layers | LOCAL |
+| editorial_persona_compliance | 31/117 layers | LOCAL |
 | legacy_persona_remaining | 0 posts | LOCAL |
 | migrated_this_period | 3 posts | LOCAL |
 | logo_favicon_status | LOGO_REPLACEMENT_READY | LOCAL |

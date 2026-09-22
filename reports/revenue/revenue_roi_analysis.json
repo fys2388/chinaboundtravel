@@ -1,0 +1,50 @@
+{
+  "analyzed_at": "2026-09-22T11:50:42.599123",
+  "results": [
+    {
+      "channel": "organic_search",
+      "total_investment": 0,
+      "total_revenue": 11400.0,
+      "roi_percentage": 9999,
+      "cost_per_click": 0.0,
+      "cost_per_conversion": 0.0,
+      "efficiency_score": 100
+    },
+    {
+      "channel": "direct",
+      "total_investment": 0,
+      "total_revenue": 7599.96,
+      "roi_percentage": 9999,
+      "cost_per_click": 0.0,
+      "cost_per_conversion": 0.0,
+      "efficiency_score": 100
+    },
+    {
+      "channel": "email",
+      "total_investment": 200,
+      "total_revenue": 15200.1,
+      "roi_percentage": 7500.05,
+      "cost_per_click": 0.01,
+      "cost_per_conversion": 0.26,
+      "efficiency_score": 100
+    },
+    {
+      "channel": "affiliate",
+      "total_investment": 300,
+      "total_revenue": 7599.96,
+      "roi_percentage": 2433.32,
+      "cost_per_click": 0.02,
+      "cost_per_conversion": 0.78,
+      "efficiency_score": 100
+    },
+    {
+      "channel": "social_media",
+      "total_investment": 500,
+      "total_revenue": 7599.96,
+      "roi_percentage": 1419.99,
+      "cost_per_click": 0.03,
+      "cost_per_conversion": 1.29,
+      "efficiency_score": 100
+    }
+  ]
+}

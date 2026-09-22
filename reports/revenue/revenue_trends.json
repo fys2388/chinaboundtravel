@@ -1,0 +1,125 @@
+{
+  "analyzed_at": "2026-09-22T11:50:42.595135",
+  "trends": [
+    {
+      "period": "2026-07-02",
+      "total_revenue": 5417.19,
+      "previous_revenue": 4886.31,
+      "change_amount": 530.88,
+      "change_percentage": 10.86,
+      "direction": "up",
+      "daily_average": 773.88,
+      "projection": 6005.75
+    },
+    {
+      "period": "2026-07-09",
+      "total_revenue": 5005.17,
+      "previous_revenue": 5417.19,
+      "change_amount": -412.02,
+      "change_percentage": -7.61,
+      "direction": "stable",
+      "daily_average": 715.02,
+      "projection": 4624.49
+    },
+    {
+      "period": "2026-07-16",
+      "total_revenue": 3844.14,
+      "previous_revenue": 5005.17,
+      "change_amount": -1161.03,
+      "change_percentage": -23.2,
+      "direction": "down",
+      "daily_average": 549.16,
+      "projection": 2952.43
+    },
+    {
+      "period": "2026-07-23",
+      "total_revenue": 2480.19,
+      "previous_revenue": 3844.14,
+      "change_amount": -1363.95,
+      "change_percentage": -35.48,
+      "direction": "down",
+      "daily_average": 354.31,
+      "projection": 1600.19
+    },
+    {
+      "period": "2026-07-30",
+      "total_revenue": 1554.66,
+      "previous_revenue": 2480.19,
+      "change_amount": -925.53,
+      "change_percentage": -37.32,
+      "direction": "down",
+      "daily_average": 222.09,
+      "projection": 974.51
+    },
+    {
+      "period": "2026-08-06",
+      "total_revenue": 1502.94,
+      "previous_revenue": 1554.66,
+      "change_amount": -51.72,
+      "change_percentage": -3.33,
+      "direction": "stable",
+      "daily_average": 214.71,
+      "projection": 1452.94
+    },
+    {
+      "period": "2026-08-13",
+      "total_revenue": 2349.18,
+      "previous_revenue": 1502.94,
+      "change_amount": 846.24,
+      "change_percentage": 56.31,
+      "direction": "up",
+      "daily_average": 335.6,
+      "projection": 3671.9
+    },
+    {
+      "period": "2026-08-20",
+      "total_revenue": 3695.64,
+      "previous_revenue": 2349.18,
+      "change_amount": 1346.46,
+      "change_percentage": 57.32,
+      "direction": "up",
+      "daily_average": 527.95,
+      "projection": 5813.84
+    },
+    {
+      "period": "2026-08-27",
+      "total_revenue": 4909.05,
+      "previous_revenue": 3695.64,
+      "change_amount": 1213.41,
+      "change_percentage": 32.83,
+      "direction": "up",
+      "daily_average": 701.29,
+      "projection": 6520.87
+    },
+    {
+      "period": "2026-09-03",
+      "total_revenue": 5418.24,
+      "previous_revenue": 4909.05,
+      "change_amount": 509.19,
+      "change_percentage": 10.37,
+      "direction": "up",
+      "daily_average": 774.03,
+      "projection": 5980.25
+    },
+    {
+      "period": "2026-09-10",
+      "total_revenue": 4984.38,
+      "previous_revenue": 5418.24,
+      "change_amount": -433.86,
+      "change_percentage": -8.01,
+      "direction": "stable",
+      "daily_average": 712.05,
+      "projection": 4585.26
+    },
+    {
+      "period": "2026-09-17",
+      "total_revenue": 3352.89,
+      "previous_revenue": 4984.38,
+      "change_amount": -1631.49,
+      "change_percentage": -32.73,
+      "direction": "down",
+      "daily_average": 478.98,
+      "projection": 2255.42
+    }
+  ]
+}

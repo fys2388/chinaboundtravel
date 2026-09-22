@@ -1,0 +1,32 @@
+{
+  "analyzed_at": "2026-09-22T11:50:42.597130",
+  "opportunities": [
+    {
+      "id": "opp_001",
+      "category": "conversion_optimization",
+      "description": "活动 'china_travel_guide' 转化率低于平均，有优化空间",
+      "estimated_impact": 8231.9,
+      "priority": "medium",
+      "confidence": 0.65,
+      "recommended_action": "优化 china_travel_guide 的落地页和CTA，目标提升转化率 50%"
+    },
+    {
+      "id": "opp_002",
+      "category": "conversion_optimization",
+      "description": "活动 'visa_guide' 转化率低于平均，有优化空间",
+      "estimated_impact": 8231.9,
+      "priority": "medium",
+      "confidence": 0.65,
+      "recommended_action": "优化 visa_guide 的落地页和CTA，目标提升转化率 50%"
+    },
+    {
+      "id": "opp_003",
+      "category": "conversion_optimization",
+      "description": "活动 'payment_guide' 转化率低于平均，有优化空间",
+      "estimated_impact": 8231.9,
+      "priority": "medium",
+      "confidence": 0.65,
+      "recommended_action": "优化 payment_guide 的落地页和CTA，目标提升转化率 50%"
+    }
+  ]
+}

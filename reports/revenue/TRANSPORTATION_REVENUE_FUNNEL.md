@@ -1,6 +1,6 @@
 # Transportation Revenue Funnel (P1-GROWTH-20D)
 
-Generated: 2026-09-21  |  Deterministic map, no network
+Generated: 2026-09-22  |  Deterministic map, no network
 
 ## Funnel
 Traffic Entry -> Informational Page -> Commercial Intent -> Affiliate CTA -> Outbound -> Revenue
@@ -8,10 +8,10 @@ Traffic Entry -> Informational Page -> Commercial Intent -> Affiliate CTA -> Out
 ## Page classification
 | Page | content_id | Stage | Commercial element |
 |---|---|---|---|
-| transportation_guide | cbt-17c6738ffb32 | Discovery | REV002 Trip.com mid-cta (shortcode uses: 2) |
+| transportation_guide | cbt-17c6738ffb32 | Discovery | REV002 Trip.com mid-cta (shortcode uses: 0) |
 | high_speed_rail | cbt-cc4549872c92 | Transaction | Trip.com/booking links (shortcode uses: 0) |
-| transportation_card | cbt-55aef784e6aa | Utility | comparison layer (Trip/Klook/Airalo/Booking) (shortcode uses: 5) |
-| airport_transfer | cbt-02a3e0d6ed4f | Transaction | comparison layer (Klook/Booking/Trip/Airalo) (shortcode uses: 5) |
+| transportation_card | cbt-55aef784e6aa | Utility | comparison layer (Trip/Klook/Airalo/Booking) (shortcode uses: 4) |
+| airport_transfer | cbt-02a3e0d6ed4f | Transaction | comparison layer (Klook/Booking/Trip/Airalo) (shortcode uses: 4) |
 
 ## Stage inventory
 - Discovery: Transportation Guide (authority hub, REV002 active)
