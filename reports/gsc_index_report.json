@@ -1,12 +1,34 @@
 {
-  "timestamp": "2026-09-15 07:34:06",
+  "timestamp": "2026-09-22 07:36:47",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 10,
+  "indexed_count": 9,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/subscribe/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/subscribe/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "status": "success",
@@ -145,8 +167,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     },
@@ -202,28 +224,6 @@
         "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
         "verdict": "NEUTRAL",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     }
