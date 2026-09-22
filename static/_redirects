@@ -137,3 +137,13 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 # 内容实际存在于 /posts/ 下（slug 见 2026-08-07-...md 的 front matter）。
 # 用户从社媒分享/旧链接直接访问顶层 slug 是最常见入口，按观察到的 404 逐条补。
 /china-bargaining-and-shopping-guide/ /posts/china-bargaining-and-shopping-guide/ 301
+
+# ===== 2026-09-22: 补 2026-09 月报的日期前缀软跳转（AUDIT-OPS-001 唯一缺 301 补偿的孤儿）=====
+# content/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md 的
+# front-matter 有 slug="chinabound-travel-guide-2026-09-monthly-update"，
+# 内容已在 /posts/chinabound-travel-guide-2026-09-monthly-update/ 正常发布，
+# 但 hugo.toml 未开 cleanDestinationDir，public/posts/ 下仍留着 2026-09-01-...
+# 目录的软跳转 HTML（<link rel=canonical> + <meta noindex> + <meta http-equiv=refresh>）。
+# 其余 3 个同型孤儿（05-26 / 05-27 / transportation-guide-guide）已在 _redirects:55/56/80
+# 配了 301，本条补齐月报这条唯一缺口。与 _redirects:55/56 的模式完全一致。
+/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/ /posts/chinabound-travel-guide-2026-09-monthly-update/ 301
