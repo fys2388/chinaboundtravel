@@ -3,7 +3,7 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-22_ops",
   "created_at": "2026-09-22T01:00:34.048343+00:00",
-  "updated_at": "2026-09-22T02:28:34.945278",
+  "updated_at": "2026-09-22T02:30:33.061887",
   "target_date": "2026-09-22",
   "issue_count": 4,
   "severity_summary": {
@@ -14,13 +14,13 @@
   },
   "issues": [
     {
-      "id": "site_health-2e5bf65bb61eb069",
+      "id": "site_health-2e41c1efc278b45e",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "description": "multiple_analytics_destinations",
       "page": "https://www.chinaboundtravel.com",
       "file": "https://www.chinaboundtravel.com",
-      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 526475}}}",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527132}}}",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "critical",
       "agent": "ops",
@@ -31,7 +31,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-09-22T02:28:34.747673+00:00"
+      "detected_at": "2026-09-22T02:30:32.708893+00:00"
     },
     {
       "id": "issue_6835b20d38b8",
@@ -95,13 +95,13 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-2e5bf65bb61eb069",
+    "id": "site_health-2e41c1efc278b45e",
     "type": "multiple_analytics_destinations",
     "title": "multiple_analytics_destinations",
     "description": "multiple_analytics_destinations",
     "page": "https://www.chinaboundtravel.com",
     "file": "https://www.chinaboundtravel.com",
-    "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 526475}}}",
+    "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527132}}}",
     "recommended_action": "Review and remediate the reported issue.",
     "severity": "critical",
     "agent": "ops",
@@ -112,7 +112,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-09-22T02:28:34.747673+00:00"
+    "detected_at": "2026-09-22T02:30:32.708893+00:00"
   },
   "expected_actions": [
     "diagnose_and_fix",
