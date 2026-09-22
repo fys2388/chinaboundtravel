@@ -1,0 +1,130 @@
+{
+  "agent": "content",
+  "agent_name": "Content Intelligence Agent (内容智能优化)",
+  "task_id": "task_2026-09-22_audit_content",
+  "created_at": "2026-09-22T10:00:00+00:00",
+  "updated_at": "2026-09-22T14:40:00+00:00",
+  "target_date": "2026-09-21",
+  "task_source": "daily_report_audit",
+  "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
+  "issue_count": 3,
+  "severity_summary": {
+    "medium": 1,
+    "low": 2
+  },
+  "issues": [
+    {
+      "id": "AUDIT-CT-001",
+      "type": "meta_description_template_filler",
+      "title": "09-21 新发文章 meta description 与 summary 完全相同，为模板填充句且无任何联盟链接",
+      "description": "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md：summary 与 description 逐字相同，内容为模板填充句（与 _draft/ 下同类被放弃文章的句式一致）。正文 10200 字符、9 个 H2、3 图、7 个内链，篇幅本身合格，但 description 不是独立文案。另外正文不含任何 Travelpayouts 联盟链接（无 tpo.li），意味着这篇新文章对本次会话的 12 次联盟点击贡献为 0。日报的 QA 扫描只匹配 #TP_# / #VPN_# / PLACEHOLDER / [Image:，抓不到模板填充型 description。",
+      "page": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+      "file": "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
+      "evidence": "summary == description == \"China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.\"；正文含 tpo.li = False；同题材历史尝试 content/_draft/2026-08-24-...attempt2.md 与 content/_draft/2026-08-25-...attempt1.md 已被放弃。",
+      "recommended_action": "1) 为该文撰写独立 meta description（≤160 字符，与 summary 不同，含关键词与差异化卖点）。2) 按站点既有模式评估是否加入 Travelpayouts 联盟位（注意：联盟链接与 CTA 位置变更可能落入 REV001/REV002 的冻结范围，需先确认实验状态 —— 见 AUDIT-RV-001，DRIVE-001 状态存疑，勿在实验状态未确认前改动 CTA）。3) 注意 content/posts/ 属受保护区域，修改需明确授权。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "dependency": "CTA/联盟链接部分依赖 AUDIT-RV-001（实验登记表状态确认）",
+      "expected_post_fix": "description != summary；description 长度 70-160 字符；若加联盟位则 tracking 覆盖率维持 211/211 且追踪参数齐全"
+    },
+    {
+      "id": "AUDIT-CT-002",
+      "type": "repo_hygiene_drafts",
+      "title": "仓库卫生：content/posts/ 内混入草稿；_draft/ 31 篇草稿中 12 篇 slug 与已发布文章同名",
+      "description": "① content/posts/2026-07-22-cultural-etiquette-guide.md 是 front-matter draft:true 的草稿，却放在 content/posts/ 下（其他草稿都在 content/_draft/）。它不是线上泄露 —— 其 slug 为 cultural-etiquette-guide-aussie-kiwi，public/ 中不存在该路径，已发布的 /posts/cultural-etiquette-guide/ 由 07-21 的同题材正式版支撑（datePublished 2026-07-21）。日报把它报成「draft:true 的文章可能已发布到线上」（severity: high），定性错误。② content/_draft/ 下 31 篇草稿中有 12 篇的 slug 与已发布文章相同，属废弃尝试堆积，虽被 Hugo 正确排除，但会干扰 slug 级检查与孤儿页排查。③ content/_draft/2026-06-06-transportation-guide-guide-attempt1.md（draft:true，audit_status:pending，正文仅 2 字符）在线上留下了一个孤儿页 /posts/transportation-guide-guide/（<title> 为裸 URL），见 AUDIT-OPS-001。",
+      "page": "content/",
+      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
+      "evidence": "content/ 下 draft:true 文件共 39 个；其中 content/posts/ 下 1 个（应移入 _draft/）；content/_draft/ 下 31 个，其中 12 个 slug 与已发布文章重名。content/ 根级无 draft:true 文件。",
+      "recommended_action": "1) 将 content/posts/2026-07-22-cultural-etiquette-guide.md 移入 content/_draft/（与同类草稿统一）。2) 对 _draft/ 中 12 个 slug 重名的废弃尝试决定保留或删除（删除前确认无引用；属高危操作，需用户确认）。3) 处理 transportation-guide-guide 对应的孤儿页时同步清理该草稿源（配合 AUDIT-OPS-001）。注意 content/posts/ 与 content/ 内容属受保护区域，移动文件需明确授权，且不得改动 URL/slug/canonical/content_id。",
+      "severity": "low",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "related": [
+        "AUDIT-OPS-001"
+      ],
+      "expected_post_fix": "content/posts/ 下 draft:true 文件 1 → 0；日报 pending_posts 口径修正后（见 AUDIT-FE-003）能正确识别草稿位置"
+    },
+    {
+      "id": "AUDIT-CT-003",
+      "type": "unpublished_promoted_landing_page",
+      "title": "免费 7 天行程模板落地页 draft:true 未发布，但 6 篇文章的 CTA 在推广它",
+      "description": "content/7-day-china-itinerary.md 为 draft:true（正文 1999 字符，未发布），而 6 篇文章含 7 处 lead-magnet-cta shortcode 在推广它。",
+      "page": "content/7-day-china-itinerary.md",
+      "file": "content/7-day-china-itinerary.md",
+      "evidence": "该文件 front-matter 含 draft:true。另有 content/free-itinerary.md 为已发布态（无 draft 字段，正文 3377 字符）。",
+      "important_caveat": "经核查该 shortcode 走 /api/subscribe 邮件表单而非链接到该页面，故这不是断链，属「推广物本身未发布」的运营一致性问题。",
+      "recommended_action": "决定 7-day-china-itinerary 是否发布，或调整 CTA 指向 free-itinerary。",
+      "severity": "low",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-09-22T14:40:00+00:00",
+      "found_by": "FIX-RUN-2026-09-22",
+      "found_in": "由 AUDIT-FE-003 的草稿判定修复暴露",
+      "auto_fixable": false,
+      "expected_post_fix": "推广物与落地页发布状态一致",
+      "blocks": []
+    }
+  ],
+  "priority_issue": {
+    "id": "AUDIT-CT-001",
+    "type": "meta_description_template_filler",
+    "title": "09-21 新发文章 meta description 与 summary 完全相同，为模板填充句且无任何联盟链接",
+    "severity": "medium"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "new",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "fix_run": "FIX-RUN-2026-09-22",
+    "committed": false,
+    "note": "0 项已修复并验证 []，3 项仍需责任人处理（new=3 / blocked=0）。"
+  },
+  "status_by_issue": {
+    "AUDIT-CT-001": "new",
+    "AUDIT-CT-002": "new",
+    "AUDIT-CT-003": "new"
+  },
+  "fix_run": {
+    "run_id": "FIX-RUN-2026-09-22",
+    "at": "2026-09-22T14:40:00+00:00",
+    "changed_files": [
+      "layouts/partials/email-subscribe.html",
+      "layouts/shortcodes/lead-magnet-cta.html",
+      "scripts/api_health_audit.py",
+      "scripts/feishu_daily_report.py",
+      "scripts/okr_utils.py",
+      "scripts/site_health_agent.py"
+    ],
+    "verification_script": "C:/temp/dsh/verify_all_fixes.py",
+    "committed": false,
+    "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
+  }
+}

@@ -111,6 +111,22 @@
                     + '10 minutes, download it directly: '
                     + '<a href="' + data.pdf_url + '" target="_blank" rel="noopener">free guide</a>';
                 form.querySelector('#subscribe-email').value = '';
+            } else if (resp.ok && data && data.pdf_url) {
+                // P0-FIX (2026-09-22): PDF 邮件失败时也要给兜底直链。
+                // 后端错误文案是 "Use the download link below"，但原实现从不渲染
+                // 那个链接 —— 客户订阅成功却既收不到 PDF 也拿不到下载链接，
+                // 漏斗 100% 断裂（实测 Resend 422，delivered_pdf 恒为 false）。
+                msg.className = 'subscribe-msg err';
+                msg.textContent = (data.error
+                    ? data.error + ' '
+                    : 'Your guide could not be delivered right now. ')
+                    + 'Download it directly instead: ';
+                var fallbackLink = document.createElement('a');
+                fallbackLink.href = data.pdf_url;
+                fallbackLink.target = '_blank';
+                fallbackLink.rel = 'noopener';
+                fallbackLink.textContent = 'free guide';
+                msg.appendChild(fallbackLink);
             } else {
                 msg.className = 'subscribe-msg err';
                 msg.textContent = (data && data.error)

@@ -1,0 +1,253 @@
+{
+  "agent": "frontend",
+  "agent_name": "Frontend Agent (页面/视觉/响应式)",
+  "task_id": "task_2026-09-22_audit_frontend",
+  "created_at": "2026-09-22T10:00:00+00:00",
+  "updated_at": "2026-09-22T14:40:00+00:00",
+  "target_date": "2026-09-21",
+  "task_source": "daily_report_audit",
+  "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
+  "issue_count": 6,
+  "severity_summary": {
+    "medium": 4,
+    "low": 1,
+    "critical": 1
+  },
+  "note": "本任务全部为 scripts/ 下的巡检与报告代码缺陷修复，属代码变更（非页面视觉）。本仓 executor 的 agent 名册中无 instrumentation 角色，故按代码归属派给 frontend。修复后必须跑 tests/ 相关用例并确认未引入新的 pytest 副作用（已知 pytest 会改写 12 个受保护文件）。",
+  "issues": [
+    {
+      "id": "AUDIT-FE-001",
+      "type": "checker_regex_bug",
+      "title": "title 提取正则 [^\\\"'\\n]+ 在撇号处截断，系统性误判 title 过短",
+      "description": "scripts/site_health_agent.py 的 title 提取正则遇到带英文撇号的 title 会在撇号处截断，进而误报 title_too_short。本次审计实测 3 例误报，全部由同一根因产生，属系统性、可复现缺陷。",
+      "page": "scripts/site_health_agent.py",
+      "file": "scripts/site_health_agent.py",
+      "evidence": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md：报 2 字符，真实 title \"Xi'an Terracotta Army: Tickets & History\" = 40 字符，截断到 \"Xi\"。content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md：报 17 字符，真实 = 58 字符 \"How To Ride China'S High-Speed Trains: How to Book in 2026\"，截断到 \"How To Ride China\"。content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md：报 6 字符，真实 = 44 字符 \"Foodie's Guide to China: Dishes You Must Try\"，截断到 \"Foodie\"。同一正则也影响了 meta description 检查（xian 文报 2 字符）。",
+      "recommended_action": "把 title/description 的提取改为 front-matter 解析器（PyYAML 或项目已有的 frontmatter 解析函数），不要用正则切分引号。若保留正则方案，则用「成对引号优先」的写法：先尝试匹配整段带引号值，再回退。修复后跑一次全量检查，预期 title_too_short 从 4 条降为 1 条（仅 content/success.md 保留）。注意 content/success.md 的 19 字符是真实的，但 TITLE_MIN=20 对支付成功页不适用，建议按页型豁免。",
+      "severity": "medium",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "verification": "python -c \"import sys;sys.path.insert(0,'E:/AI/dulizhan/travel-blog/scripts');import site_health_agent as s;iss=[i for i in s.check_title_meta_length() if i['type']=='title_too_short'];print(len(iss));[print(i['file'],i['message']) for i in iss]\"  —— 预期仅返回 1 条（content/success.md）",
+      "expected_post_fix": "title_too_short 误报 3 条 → 0 条；meta_description_too_short 中由撇号截断导致的 1 条（xian 文）→ 0 条",
+      "blocks": [
+        "AUDIT-OPS-002 (方案 B：扩展 executor 自动修复能力前必须先消除误报源)"
+      ],
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "FIX-RUN-2026-09-22",
+        "changed_files": [
+          "scripts/site_health_agent.py"
+        ],
+        "what_changed": "新增 split_front_matter() / front_matter_field() 统一 front-matter 解析，正确处理带撇号与带引号的标题；check_title_meta_length() 改走该函数。",
+        "verification": "title_too_short 由 4 条 → 0 条；xian(40字符)/high-speed-rail(58)/foodies(44) 三个误报文件全部消失；check_title_meta_length() 现返回 7 条（meta_description_too_short×6 + meta_description_too_long×1）。",
+        "extra": "同时加了 SHORT_TITLE_EXEMPT 白名单（content/success.md、cancel.md），只豁免 title_too_short，不豁免 title_too_long。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-002",
+      "type": "checker_pattern_and_encoding_bug",
+      "title": "PLACEHOLDER_PATTERNS 裸词匹配 + front-matter 正则不兼容 BOM，导致 2/2 占位符告警全为误报",
+      "description": "两个独立缺陷叠加：① PLACEHOLDER_PATTERNS 含 re.compile(r'placeholder', re.IGNORECASE)，裸词匹配必然命中 HTML 表单属性 placeholder=\"...\" 与 YAML 键名 placeholder:。② front-matter 正则 re.match(r'^---\\s*\\n...') 不容忍 UTF-8 BOM，一个 BOM 字符即让 front-matter 解析整体失效，退化成本文扫描。",
+      "page": "scripts/site_health_agent.py",
+      "file": "scripts/site_health_agent.py",
+      "evidence": "content/contact.md：正文 3 处 placeholder 全部是 <input placeholder=\"...\"> 表单属性。content/search.md：文件首字节为 \\ufeff，front-matter 正则失配，整文件被当正文扫描，命中 YAML 键 placeholder:（Hugo 搜索模板的合法变量）。两个文件都不是模板占位符残留，均已在 content 层被 content_agent 标记 need_manual（site_health_issues_2026-09-21.json），属无效告警。",
+      "recommended_action": "① 收紧 PLACEHOLDER_PATTERNS：只匹配真正的占位符形态（例如 {{...}}、<PLACEHOLDER>、TODO:、待补充、[Image: ...] 之类有边界的模式），不要在正文里裸匹配 'placeholder' 这个词；HTML 属性需先剥离标签再扫描，或明确排除 <...> 标签内容。② front-matter 正则改为在 BOM 容错的文本上运行（读取时用 utf-8-sig，或 strip 掉 \\ufeff）。修复后重跑 check_content_placeholders()，预期返回 0 条。",
+      "severity": "medium",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "verification": "python -c \"import sys;sys.path.insert(0,'E:/AI/dulizhan/travel-blog/scripts');import site_health_agent as s;iss=s.check_content_placeholders();print('content_placeholder:',len([i for i in iss if i['type']=='content_placeholder']));[print(i['file']) for i in iss if i['type']=='content_placeholder']\"",
+      "expected_post_fix": "content_placeholder 告警 2 条 → 0 条",
+      "blocks": [
+        "AUDIT-OPS-002"
+      ],
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "FIX-RUN-2026-09-22",
+        "changed_files": [
+          "scripts/site_health_agent.py"
+        ],
+        "what_changed": "PLACEHOLDER_PATTERNS 移除 re.IGNORECASE 裸词 'placeholder'，改为有边界形态；新增 strip_html_for_scan()（剥 HTML 标签但保留 Hugo shortcode）；split_front_matter() 支持 UTF-8 BOM；EXCLUDE_DIRS 修正为包含 '_draft' 与 '.archived'。",
+        "verification": "content_placeholder 由 2 条 → 0 条。contact.md 剥离 HTML 后 'placeholder=' 残留 0 处。",
+        "self_correction": "首轮把 {{...}} 当占位符，误报 60+ 篇正常文章——本仓大量使用 {{< affiliate-flight >}} / {{< lead-magnet-cta >}} 等 Hugo shortcode。已回退该模式并改为「先 stash shortcode 再剥 HTML」。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-003",
+      "type": "scan_blind_spot",
+      "title": "scan_content() 只看文件名判草稿、只扫 content/posts/，造成漏报并与站点巡检结论直接冲突",
+      "description": "scripts/feishu_daily_report.py:1895-1937 的 scan_content() 存在两个盲区：① pending_posts 判定为 if '_draft' in post.name.lower() or post.name.startswith('draft')，只看文件名，从不读 front-matter 的 draft 字段，因此把 front-matter draft:true 的文件当成已发布。② 扫描范围仅 content/posts/*.md，漏掉 content/ 根级 13 个页面。结果同一份日报同时显示「占位符残留 0 篇 ✅」与「2 条 high 占位符问题」，两套扫描器互不校验、结果直接拼接。",
+      "page": "scripts/feishu_daily_report.py",
+      "file": "scripts/feishu_daily_report.py",
+      "evidence": "日报称 草稿待审 0 篇；实测 content/posts/ 内 front-matter draft:true 的文件有 1 个：content/posts/2026-07-22-cultural-etiquette-guide.md（日报漏检）。日报占位符扫描范围 content/posts/*.md，共 64 个文件；content/ 根级另有 13 个页面（search.md / contact.md / pricing.md / subscribe.md / success.md / free-itinerary.md / cancel.md / affiliate-disclosure.md / disclaimer.md / privacy-policy.md / refund-policy.md / terms-of-service.md 等）完全不在扫描范围，而 Pipeline A 的两条占位符命中正好落在这两个未扫描文件中。",
+      "recommended_action": "① pending_posts 改为读 front-matter 的 draft 字段（与 site_health_agent 的判定口径对齐），并明确区分「草稿文件被放在 content/posts/」这一仓库卫生问题。② 扫描范围扩大到 content/ 全树（或至少 content/ 根级 + content/posts/），排除 _draft / .archived / .audit_backup 等点号目录。③ 与 site_health_agent 统一为单一扫描实现，避免两套并行扫描器产出互相矛盾的结论。",
+      "severity": "medium",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "verification": "修复后跑 scan_content()，pending_posts 应为 1（而非 0），扫描文件数应 > 64",
+      "expected_post_fix": "草稿漏检 1 → 0；扫描覆盖 content/ 根级 13 页；日报不再自相矛盾",
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "FIX-RUN-2026-09-22",
+        "changed_files": [
+          "scripts/feishu_daily_report.py"
+        ],
+        "what_changed": "_scan_content_quality() 重写：① 草稿判定读 front-matter draft 字段（原只看文件名）；② 扫描范围扩展到 content/ 根级；③ 占位符扫描改走 strip_html_tags + 有边界正则；④ 新增 content_pages_scanned / root_pages_scanned / drafts_in_posts_dir 三个可观测字段。",
+        "verification": "_scan_content_quality('2026-09-21') → total_posts=64, new_posts=1, pending_posts=2（原 0）, placeholder_articles=0, content_pages_scanned=77 (64 文章 + 13 根级), drafts_in_posts_dir=1。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-004",
+      "type": "okr_window_mislabel",
+      "title": "OKR 把 7 天 GSC 窗口值当作「日搜索曝光」，造成数学上必然 100% 的虚假达标",
+      "description": "OKR「日搜索曝光 141 次 vs 目标 13 次 = 100%」中的 141 实际是 2026-09-13~2026-09-19 的 7 天 GSC 窗口值，窗口结束于报告日前 2 天。而日目标由 Q3 月目标 400 ÷ 30 = 13.3 折算。用 7 天累计值对比日目标，必然 100%，这不是达标。",
+      "page": "scripts/okr_utils.py",
+      "file": "scripts/okr_utils.py",
+      "evidence": "调用链 scripts/feishu_daily_report.py:1280 -> okr_utils.build_okr_section() -> extract_kr(data, 'gsc_impressions')。okr_utils.py:24 KR_ALIASES['gsc_impressions'] = ['gsc_impressions']，只认一个字段，无任何窗口语义。gsc_impressions 实际值窗口为 2026-09-13..2026-09-19（141 次）。报告 28 天缓存窗口已修复（feishu_daily_report.py:598 注释「绝不冒充昨日（真实性修复）」），但 7 天窗口未修复。",
+      "recommended_action": "为 gsc_impressions 增加窗口语义：在 data 中同时保留 gsc_impressions_7d 与 gsc_impressions_28d 字段，OKR 的日度折算只用单日值（若无单日值则标注 NOT_AVAILABLE，而不是拿 7 天值顶替）。若必须用窗口值，则目标也按同窗口折算（Q3 月目标 400 折算 7 天 ≈ 93），并在 OKR 行内显式标注窗口。同时检查其他 KR 是否存在同类窗口错配（traffic / content / revenue 的日折算是否也有相同问题）。",
+      "severity": "medium",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "expected_post_fix": "OKR「日搜索曝光」不再用 7 天窗口值；无单日数据时显示 NOT_AVAILABLE 而非虚假达标",
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "FIX-RUN-2026-09-22",
+        "changed_files": [
+          "scripts/okr_utils.py"
+        ],
+        "what_changed": "新增 WINDOW_DAYS_FOR_DAILY={'gsc_impressions':7}：日度口径下先折算成窗口日均再比日目标，KR 名称标注「（7天窗口日均）」。窗口长度优先读 data['gsc_window_days']。",
+        "verification": "build_okr_progress(data,'daily') → 「日搜索曝光（7天窗口日均）」current=20.1(=141/7)、target=13(=400/30)，note 由「目标的 11×」变「目标的 2×」。",
+        "note": "进度仍封顶 100%——因为日均 20.1 确实超过日目标 13，这次是真实达成，不再是窗口跨度造成的虚假达标。原有「目标偏低」提示仍然生效。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-005",
+      "type": "field_semantics_mismatch",
+      "title": "字段名 indexed_pages 实际含义是 sitemap 条数，与快照中真实的 indexed_pages 冲突",
+      "description": "日报字段 indexed_pages 渲染为「Sitemap 数量 1 个」，标签写对了，但字段名与语义不符：其值是 len(sitemaps['sitemap'])（sitemap 索引条目数）。同一时点快照 REPORTING_SNAPSHOT_2026-09-21.json:1337 里真正的 indexed_pages = 69。任何下游（周报/月报/看板）若复用该字段名，会把「1 个 sitemap」当成「只有 1 个页面被索引」，得出灾难性错误结论。",
+      "page": "scripts/feishu_daily_report.py",
+      "file": "scripts/feishu_daily_report.py",
+      "evidence": "日报字段 indexed_pages = 1（= len(sitemaps['sitemap'])）；reports/management/snapshots/REPORTING_SNAPSHOT_2026-09-21.json:1328-1337 name=indexed_pages value=69。两者同名不同义。",
+      "recommended_action": "把日报字段改名为 sitemap_count，并把「已索引页面数」作为独立字段从快照取（indexed_pages=69）。改名需同步检查所有下游消费者（周报/月报/季报/年报/看板/测试用例）是否引用该字段名。注意 reports/ 与 content/posts/ 属受保护区域，改报表模板属授权范围内但需确认。",
+      "severity": "low",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "expected_post_fix": "日报字段拆分：sitemap_count=1 与 indexed_pages=69 各表其义，下游不再歧义",
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "FIX-RUN-2026-09-22",
+        "changed_files": [
+          "scripts/feishu_daily_report.py"
+        ],
+        "what_changed": "数据字段 indexed_pages → sitemap_count（赋值/返回/兜底/2 处渲染共 4 处）；快照读取新增 gsc_indexed_pages；报表新增独立行「已索引页面（GSC 快照）」，并显示窗口天数。",
+        "verification": "日报源码中 'indexed_pages' 仅剩 1 处（_find('seo_gsc','indexed_pages')，即从快照取真实索引页数）；sitemap_count 出现 9 处。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-006",
+      "type": "missing_fallback_link",
+      "title": "lead-magnet 兜底直链缺失：用户订阅成功却既收不到 PDF 也拿不到下载链接",
+      "description": "后端 functions/api/subscribe.js 在 PDF 未送达时返回 200 + error='Your guide could not be delivered right now. Use the download link below...'，但前端两处 else 分支只渲染 textContent，从不渲染那个链接。用户提交邮箱 → MailerLite 写入成功 → Resend 422 → 看到「用下面的链接下载」却看不到任何链接。后端 subscribe.js:183 始终返回 pdf_url，但前端只在 success=true 分支使用它。",
+      "page": "layouts/partials/email-subscribe.html",
+      "file": "layouts/shortcodes/lead-magnet-cta.html",
+      "evidence": "reports/subscription_health/subscription_health_20260921_215530.json：subscriber_created=true, delivered_pdf=false, success=false, pdf_url='https://www.chinaboundtravel.com/lead-magnet/china-visa-free-entry-checklist.pdf', error='Your guide could not be delivered right now. Use the download link below...'。6 篇文章含 7 处 lead-magnet-cta shortcode 指向该漏斗。",
+      "recommended_action": "在前端失败分支渲染 pdf_url 直链（本轮已实施）。",
+      "severity": "critical",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "resolved",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-09-22T14:40:00+00:00",
+      "found_by": "FIX-RUN-2026-09-22",
+      "found_in": "本轮修复中顺带发现（原审计未发现）",
+      "auto_fixable": false,
+      "expected_post_fix": "delivered_pdf=false 时前端仍渲染 pdf_url 直链，漏斗不断裂",
+      "blocks": []
+    }
+  ],
+  "priority_issue": {
+    "id": "AUDIT-FE-001",
+    "type": "checker_regex_bug",
+    "title": "title 提取正则 [^\\\"'\\n]+ 在撇号处截断，系统性误判 title 过短",
+    "severity": "medium"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "resolved",
+  "execution": {
+    "resolved_count": 6,
+    "failed_count": 0,
+    "completed_at": "2026-09-22T14:40:00+00:00",
+    "fix_run": "FIX-RUN-2026-09-22",
+    "committed": false,
+    "note": "6 项已修复并验证 ['AUDIT-FE-001', 'AUDIT-FE-002', 'AUDIT-FE-003', 'AUDIT-FE-004', 'AUDIT-FE-005', 'AUDIT-FE-006']，0 项仍需责任人处理（new=0 / blocked=0）。"
+  },
+  "status_by_issue": {
+    "AUDIT-FE-001": "resolved",
+    "AUDIT-FE-002": "resolved",
+    "AUDIT-FE-003": "resolved",
+    "AUDIT-FE-004": "resolved",
+    "AUDIT-FE-005": "resolved",
+    "AUDIT-FE-006": "resolved"
+  },
+  "fix_run": {
+    "run_id": "FIX-RUN-2026-09-22",
+    "at": "2026-09-22T14:40:00+00:00",
+    "changed_files": [
+      "layouts/partials/email-subscribe.html",
+      "layouts/shortcodes/lead-magnet-cta.html",
+      "scripts/api_health_audit.py",
+      "scripts/feishu_daily_report.py",
+      "scripts/okr_utils.py",
+      "scripts/site_health_agent.py"
+    ],
+    "verification_script": "C:/temp/dsh/verify_all_fixes.py",
+    "committed": false,
+    "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
+  }
+}

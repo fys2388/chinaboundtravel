@@ -68,6 +68,61 @@ except ImportError:
 
 CONTENT_DIR = BLOG_ROOT / "content"
 POSTS_DIR = CONTENT_DIR / "posts"
+
+# --- 内容质量扫描（BOM 容错 + HTML 属性不误报）------------------------------
+# 原实现的三个缺陷：
+#   1) re.match(r'^---') 不容忍 UTF-8 BOM，BOM 文件整文件被当正文扫描；
+#   2) 草稿判定只看文件名（'_draft' in name），从不读 front-matter 的 draft 字段，
+#      导致 draft:true 的文章被当成已发布（pending_posts 漏检）；
+#   3) PLACEHOLDER 加了 re.IGNORECASE，会命中 HTML 属性 placeholder="..."。
+_HTML_TAG_RE = re.compile(r'<[^>]+>')
+_HUGO_SHORTCODE_RE = re.compile(r'\{\{[^}]*\}\}')
+_PLACEHOLDER_BODY_RE = re.compile(
+    r'#(?:TP|VPN)_[A-Z_]+#'      # 项目专用追踪占位符
+    r'|\[Image\s*[:\]]'           # 未替换的图片占位提示 [Image: ...]
+    r'|\bTODO\b|\bFIXME\b'
+    r'|待补充|待填写|待填充|待完善'
+    r'|\bPLACEHOLDER\b'           # 全大写；不加 IGNORECASE 以免命中 HTML 属性名
+)
+_TRAILER_COMMENT_RE = re.compile(r'\s+#.*$')
+
+
+def _split_front_matter(content):
+    """BOM 容错的 front matter 拆分，返回 (front_matter_or_None, body)。"""
+    text = content.lstrip('\ufeff') if content else content
+    m = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
+    if not m:
+        return None, text
+    return m.group(1), text[m.end():]
+
+
+def _strip_html_tags(body):
+    """剥离 HTML 标签但保留 Hugo shortcode（{{< affiliate-flight >}} 等），
+    供占位符检测使用，避免 <input placeholder="..."> 被当成内容缺陷。"""
+    if not body:
+        return body
+    held = []
+
+    def _stash(m):
+        held.append(m.group(0))
+        return "\x00SC%d\x00" % (len(held) - 1)
+
+    text = _HUGO_SHORTCODE_RE.sub(_stash, body)
+    text = _HTML_TAG_RE.sub(" ", text)
+    for i, sc in enumerate(held):
+        text = text.replace("\x00SC%d\x00" % i, sc)
+    return text
+
+
+def _is_truthy_draft(front_matter):
+    """读 front-matter 的 draft 字段判定是否为草稿。"""
+    if not front_matter:
+        return False
+    m = re.search(r'^draft\s*:\s*["\']?(\w+)', front_matter, re.MULTILINE)
+    if not m:
+        return False
+    return m.group(1).strip().lower() in ('true', 'yes', 'on', '1')
+# --- End 内容质量扫描辅助 ---------------------------------------------------
 CONFIG_DIR = BLOG_ROOT / "config"
 
 # 飞书配置
@@ -160,6 +215,7 @@ def load_reporting_snapshot() -> dict:
 
         gsc_imp = _find("seo_gsc", "gsc_impressions_28d")
         gsc_clk = _find("seo_gsc", "gsc_clicks_28d")
+        gsc_idx = _find("seo_gsc", "indexed_pages")
         rev = _find("revenue", "revenue")
         traf_s = _find("traffic", "sessions_28d")
         traf_p = _find("traffic", "pageviews_28d")
@@ -169,6 +225,8 @@ def load_reporting_snapshot() -> dict:
             "low_data_warning": snap.get("low_data_warning"),
             "gsc_impressions_28d": gsc_imp.get("value"),
             "gsc_clicks_28d": gsc_clk.get("value"),
+            "gsc_indexed_pages": gsc_idx.get("value"),
+            "gsc_indexed_label": gsc_idx.get("data_source_type"),
             "gsc_label": gsc_imp.get("data_source_type"),
             "sessions_28d": traf_s.get("value"),
             "pageviews_28d": traf_p.get("value"),
@@ -600,12 +658,16 @@ class FeishuDailyReporter:
         _cached_imp = _snap.get("gsc_impressions_28d")
         gsc_cache_imp_str = f"{_cached_imp:,.0f} 次" if _cached_imp is not None else "—"
         gsc_cache_clk_str = f"{(_snap.get('gsc_clicks_28d') or 0):,.0f} 次" if _cached_imp is not None else "—"
+        # A2 修复：真实索引页数来自快照的 GSC UI 快照，与 sitemap_count 不是一回事。
+        # 原先日报只显示 sitemap 条数却命名 indexed_pages，读者会把它当索引页数。
+        _snap_idx = _snap.get("gsc_indexed_pages")
+        gsc_real_indexed_str = f"{_snap_idx:,.0f} 个" if _snap_idx is not None else "—"
         if gsc_has_data:
             gsc_auth_str = "✅ 已连接"
             gsc_impressions_str = f"{data.get('gsc_impressions', 0):,} 次"
             gsc_clicks_str = f"{data.get('gsc_clicks', 0):,} 次"
             gsc_ctr_str = f"{data.get('gsc_ctr', 0):.2f}%"
-            gsc_indexed_str = f"{data.get('indexed_pages', 'N/A')} 个"
+            gsc_indexed_str = f"{data.get('sitemap_count', 'N/A')} 个"
             gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
             gsc_week_trend = data.get('gsc_week_trend', 'N/A')
             gsc_month_trend = data.get('gsc_month_trend', 'N/A')
@@ -617,7 +679,7 @@ class FeishuDailyReporter:
             gsc_impressions_str = "NOT_AVAILABLE"
             gsc_clicks_str = "NOT_AVAILABLE"
             gsc_ctr_str = "NOT_AVAILABLE"
-            gsc_indexed_str = f"{data.get('indexed_pages', 'N/A')} 个"
+            gsc_indexed_str = f"{data.get('sitemap_count', 'N/A')} 个"
             gsc_errors_str = ("未检测" if data.get('gsc_errors') is None else f"{data['gsc_errors']} 个")
             gsc_week_trend = "NOT_AVAILABLE（无窗口数据）"
             gsc_month_trend = "NOT_AVAILABLE（无窗口数据）"
@@ -734,10 +796,11 @@ class FeishuDailyReporter:
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
 | 授权状态 | {gsc_auth_str} | Sitemap 数量 | {gsc_indexed_str} |
+| 已索引页面（GSC 快照） | {gsc_real_indexed_str} | 索引错误 | {gsc_errors_str} |
 | 搜索曝光（7天窗口） | {gsc_impressions_str} | 搜索点击（7天窗口） | {gsc_clicks_str} |
 | 平均排名 | {gsc_position_str} | 点击率 CTR | {gsc_ctr_str} |
 | 28天缓存窗口 | {gsc_cache_imp_str} | 缓存点击 | {gsc_cache_clk_str} |
-| 索引错误 | {gsc_errors_str} | 窗口 | {data.get('gsc_window_start', '?')}~{data.get('gsc_window_end', '?')} |
+| 窗口 | {data.get('gsc_window_start', '?')}~{data.get('gsc_window_end', '?')} | 窗口天数 | {data.get('gsc_window_days', '?')} |
 
 **📈 GSC 环比趋势**: 周环比 {gsc_week_trend}（vs 前 7 天） ｜ 月环比 {gsc_month_trend}（vs 4 周前同长窗口）"""
                     }
@@ -1077,7 +1140,7 @@ class FeishuDailyReporter:
             "top_channels": [],
             "top_countries": [],
             # 搜索数据
-            "indexed_pages": "N/A",
+            "sitemap_count": "N/A",
             "gsc_data_available": False,
             "gsc_impressions": 0,
             "gsc_clicks": 0,
@@ -1515,12 +1578,17 @@ class FeishuDailyReporter:
                 print(f"   ⚠️ GSC 关键词查询失败: {e}")
             
             # === 获取 sitemap 信息 + 真实索引错误数（sitemaps API 提供 errors 字段）===
-            indexed_pages = "N/A"
+            # A2 修复：这个字段量的是 sitemaps().list() 返回的 sitemap 条数，
+            # 不是已索引页面数。原先命名 indexed_pages，与快照里真正的
+            # indexed_pages（Pages indexed per GSC UI snapshot）同名不同义，
+            # 下游任何按字段名取值的消费者都会拿 sitemap 条数当索引页数。
+            # 改名为 sitemap_count；真实索引页数从快照取（见 gsc_indexed_str）。
+            sitemap_count = "N/A"
             gsc_errors = None  # None=未检测；真实错误数来自 sitemaps API
             try:
                 sitemaps = service.sitemaps().list(siteUrl=site_url).execute()
                 if sitemaps.get("sitemap"):
-                    indexed_pages = len(sitemaps["sitemap"])
+                    sitemap_count = len(sitemaps["sitemap"])
                     _err_sum = 0
                     for _s in sitemaps["sitemap"]:
                         try:
@@ -1535,7 +1603,7 @@ class FeishuDailyReporter:
             
             return {
                 "gsc_data_available": True,
-                "indexed_pages": indexed_pages,
+                "sitemap_count": sitemap_count,
                 "gsc_impressions": yesterday_impressions,
                 "gsc_clicks": yesterday_clicks,
                 "gsc_ctr": yesterday_ctr,
@@ -1886,54 +1954,77 @@ class FeishuDailyReporter:
             "pending_posts": 0,
             "placeholder_articles": 0,
             "empty_links": 0,
-            "missing_alt": 0
+            "missing_alt": 0,
+            # 新增：让扫描范围与草稿口径可见，避免「占位符 0 篇 ✅」与
+            # 站点巡检的占位符告警并存却无人发现范围不一致
+            "content_pages_scanned": 0,
+            "root_pages_scanned": 0,
+            "drafts_in_posts_dir": 0,
         }
-        
-        if not POSTS_DIR.exists():
-            print(f"   ⚠️ 文章目录不存在: {POSTS_DIR}")
+
+        if not CONTENT_DIR.exists():
+            print(f"   ⚠️ 内容目录不存在: {CONTENT_DIR}")
             return result
-        
-        posts = list(POSTS_DIR.glob("*.md"))
-        result["total_posts"] = len(posts)
-        
+
         # 默认统计昨日新增；优先取 frontmatter date，其次文件名日期前缀
         report_date = report_date or (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
-        for post in posts:
-            try:
-                content = post.read_text(encoding='utf-8')
+        # 扫描范围：content/posts/*.md（文章）+ content/ 根级 *.md（站点页）
+        # 修复前只扫 content/posts/，导致 contact.md / search.md / pricing.md 等
+        # 13 个根级页面完全不被日报检查，占位符问题在此盲区里从未被看到。
+        files = []
+        if POSTS_DIR.exists():
+            files.extend(sorted(POSTS_DIR.glob("*.md")))
+        root_pages = sorted(CONTENT_DIR.glob("*.md"))
+        files.extend(root_pages)
 
-                # 统计 report_date 当天新增的文章（frontmatter date 优先，文件名前缀兜底）
-                post_date = None
-                fm = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
-                if fm:
-                    dm = re.search(r'^date:\s*["\']?([\d-]+)', fm.group(1), re.MULTILINE)
-                    if dm:
-                        post_date = dm.group(1)
-                if post_date == report_date or (not post_date and post.name.startswith(report_date)):
-                    result["new_posts"] += 1
-                
-                # 检查是否草稿
-                if "_draft" in post.name.lower() or post.name.startswith("draft"):
+        posts = [f for f in files if f.parent == POSTS_DIR]
+        result["total_posts"] = len(posts)
+        result["root_pages_scanned"] = len(root_pages)
+        result["content_pages_scanned"] = len(files)
+
+        for post in files:
+            try:
+                content = post.read_text(encoding='utf-8', errors='replace')
+                fm_text, body = _split_front_matter(content)
+
+                if post.parent == POSTS_DIR:
+                    # 统计 report_date 当天新增的文章（frontmatter date 优先，文件名前缀兜底）
+                    post_date = None
+                    if fm_text:
+                        dm = re.search(r'^date:\s*["\']?([\d-]+)', fm_text, re.MULTILINE)
+                        if dm:
+                            post_date = dm.group(1)
+                    if post_date == report_date or (not post_date and post.name.startswith(report_date)):
+                        result["new_posts"] += 1
+
+                # 检查是否草稿：读 front-matter 的 draft 字段。
+                # 修复前只看文件名（'_draft' in name），从不读 draft 字段，
+                # 导致 draft:true 的文章被当成已发布（漏检）。
+                if _is_truthy_draft(fm_text):
                     result["pending_posts"] += 1
-                
-                # 检查占位符（含 Joran 图片占位符 [Image: ...] 格式）
-                if re.search(r'#TP_[A-Z_]+#|#VPN_[A-Z_]+#|PLACEHOLDER|\[\s*Image\s*:', content, re.IGNORECASE):
+                    # 草稿应放在 content/_draft/；放在 content/posts/ 属仓库卫生问题，
+                    # 单独计数，不混进「草稿待审」这一业务指标
+                    if post.parent == POSTS_DIR:
+                        result["drafts_in_posts_dir"] += 1
+
+                # 检查占位符（只扫正文，剥离 HTML 标签避免 <input placeholder="..."> 误报）
+                if _PLACEHOLDER_BODY_RE.search(_strip_html_tags(body)):
                     result["placeholder_articles"] += 1
-                
+
                 # 检查空链接
                 if re.search(r'\[([^\]]+)\]\(\s*\)', content):
                     result["empty_links"] += 1
-                
+
                 # 检查图片 Alt 缺失（排除相对路径但无alt文本的情况）
                 for img_match in re.finditer(r'!\[([^\]]*)\]\([^)]+\)', content):
                     alt_text = img_match.group(1).strip()
                     if not alt_text:
                         result["missing_alt"] += 1
-                    
+
             except Exception as e:
                 print(f"   ⚠️ 扫描文件失败: {post.name}")
-        
+
         return result
     
     def _fetch_travelpayouts(self) -> dict:

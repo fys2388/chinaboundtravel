@@ -1,0 +1,126 @@
+{
+  "agent": "seo",
+  "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+  "task_id": "task_2026-09-22_audit_seo",
+  "created_at": "2026-09-22T10:00:00+00:00",
+  "updated_at": "2026-09-22T14:40:00+00:00",
+  "target_date": "2026-09-21",
+  "task_source": "daily_report_audit",
+  "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
+  "issue_count": 3,
+  "severity_summary": {
+    "low": 1,
+    "medium": 2
+  },
+  "note": "本次审计确认日报 9 条站点问题中仅 2 条为真实 SEO 问题（其余 5 条误报、1 条定性错误、1 条阈值不适用）。另补充 1 条由孤儿页引发的重复 URL 分权问题。",
+  "issues": [
+    {
+      "id": "AUDIT-SEO-001",
+      "type": "meta_description_too_long",
+      "title": "shanghai-beyond-the-bund 文章 meta description 166 字符，超阈值",
+      "description": "日报中唯一确认属实的 meta description 问题。该条在 site_health_issues_2026-09-21.json 中已标记 auto_fixable=false、status=assigned，且已被 daily_issue_router 派发 16+ 次（execution_log.json 中该文件反复出现），从未推进。",
+      "page": "https://www.chinaboundtravel.com/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "evidence": "实测 description 长度 166 字符，阈值 165。日报与站点巡检结论一致，属真实问题。",
+      "recommended_action": "压缩至 ≤160 字符，保留关键词与差异化信息。注意：description 字段属 SEO 元数据而非受保护的 content/posts 正文，但文件本身在 content/posts/ 下，修改需明确授权。修复后跑一次 check_title_meta_length() 确认该条消失。",
+      "severity": "low",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_issues/site_health_issues_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "note": "已存在 16+ 次未推进的派发记录，本次不重复派发同一工单，仅在此登记归属与优先级",
+      "expected_post_fix": "description ≤160 字符；check_title_meta_length() 不再返回该文件"
+    },
+    {
+      "id": "AUDIT-SEO-002",
+      "type": "duplicate_url_authority_split",
+      "title": "is-china-safe-for-tourists 主题存在两个同时在线的 URL，权重分流",
+      "description": "/posts/is-china-safe-for-tourists-2026-honest-assessment/ 与 /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 同时在线，且都无仓库源文件（属 AUDIT-OPS-001 的孤儿页）。同一主题两个 URL 会分流索引与权重，且两个 <title> 分别为 \"Is China Safe for Tourists in 2026? Honest\" 与 \"Is China Safe for Tourists in 2026?\"。",
+      "page": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-assessment/",
+      "file": "_redirects",
+      "evidence": "public/posts/is-china-safe-for-tourists-2026-honest-assessment/index.html 与 public/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/index.html 均存在；两者 slug 在 content/ 全树中无源文件。",
+      "recommended_action": "选定一个规范 URL（建议取排名/外链表现更好者，需在 GSC 中查询），另一个 301 到规范 URL。注意 docs/OPS_DASHBOARD_HANDOVER.md 对 _redirects 的规则约束：规则目标须写无扩展名且必须精确匹配（不带 *），不得新增 /ops/ops-center 规则。该操作依赖 AUDIT-OPS-001 的逐页处置决策。",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "dependency": "AUDIT-OPS-001（孤儿页逐页处置决策）",
+      "expected_post_fix": "同一主题仅保留 1 个 URL，另一个 301；canonical 指向唯一规范 URL"
+    },
+    {
+      "id": "AUDIT-SEO-003",
+      "type": "orphan_pages_seo_exposure",
+      "title": "5 个带正常标题的孤儿页正在线上获得曝光，但团队以为已下线",
+      "description": "AUDIT-OPS-001 的 7 个孤儿页中，5 个带正常标题（best-travel-insurance-china、china-transportation-complete-guide-trains-subways-taxis-and-more、2026-05-26-is-china-safe...、2026-05-27-how-to-survive-chinese-train-station、is-china-safe-for-tourists-2026-honest-safety-assessment）。这些页面持续被 Google 收录与抓取，很可能正在获得排名与曝光。其中 3 个孤儿页（2026-05-26-is-china-safe、2026-05-27-how-to-survive-chinese-train-station、2026-09-01-...-monthly-update）的 slug 形似旧版本 URL，说明内容曾被改名/迁移但旧页未清理。",
+      "page": "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/",
+      "file": "static/_redirects",
+      "evidence": "6 个真孤儿页 + 1 个仅草稿支撑页；hugo.toml 未设置 cleanDestinationDir（默认 false），Hugo 从不删除已下线页面。日报文章数取 content/posts/*.md = 64，线上真实 67 页，两个口径互不校验。",
+      "recommended_action": "1) 在 GSC 中查询这 7 个 URL 的实际曝光/点击/排名，量化仍在获得的流量。2) 对仍在获得流量的页面优先恢复内容源文件或建 301，而非直接下线。3) 对 best-travel-insurance-china 这类商业意图强的孤儿页尤其要查（travel insurance 通常有联盟位，可能是仍在产生佣金的页面，也可能是完全失联的页面）。4) 排查为何 content_id_audit 的 64 篇口径与线上 67 页不一致 —— 说明「文章总数」这个指标本身有两个互不校验的来源。",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "dependency": "AUDIT-OPS-001",
+      "expected_post_fix": "7 个孤儿页均有明确处置（恢复源文件 / 301 / 404），并量化了其在下线前获得的曝光"
+    }
+  ],
+  "priority_issue": {
+    "id": "AUDIT-SEO-003",
+    "type": "orphan_pages_seo_exposure",
+    "title": "5 个带正常标题的孤儿页正在线上获得曝光，但团队以为已下线",
+    "severity": "medium"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "new",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "fix_run": "FIX-RUN-2026-09-22",
+    "committed": false,
+    "note": "0 项已修复并验证 []，3 项仍需责任人处理（new=3 / blocked=0）。"
+  },
+  "status_by_issue": {
+    "AUDIT-SEO-001": "new",
+    "AUDIT-SEO-002": "new",
+    "AUDIT-SEO-003": "new"
+  },
+  "fix_run": {
+    "run_id": "FIX-RUN-2026-09-22",
+    "at": "2026-09-22T14:40:00+00:00",
+    "changed_files": [
+      "layouts/partials/email-subscribe.html",
+      "layouts/shortcodes/lead-magnet-cta.html",
+      "scripts/api_health_audit.py",
+      "scripts/feishu_daily_report.py",
+      "scripts/okr_utils.py",
+      "scripts/site_health_agent.py"
+    ],
+    "verification_script": "C:/temp/dsh/verify_all_fixes.py",
+    "committed": false,
+    "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
+  }
+}

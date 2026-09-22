@@ -35,6 +35,17 @@ CUMULATIVE_TO_DAILY = {
     "ml_total": "ml_new",
 }
 
+# 窗口型源在日度口径下的折算窗口长度。
+# gsc_impressions 取的是固定的 7 天窗口总量，不是单日值（GSC 单日查询恒空，
+# 见 feishu_daily_report.gsc_windows）。直接拿窗口总量对比日目标会让该 KR 几乎
+# 必然 100%（实测 141 次 vs 日目标 13 次 = ✅100%），变成一个只靠窗口跨度就能
+# 自动达标的装饰，而不是信号。
+# 折算成窗口日均后再比：该比率与「窗口总量 vs 窗口折算目标」完全一致，
+# 且不会因为窗口跨 7 天而自动达标。
+WINDOW_DAYS_FOR_DAILY = {
+    "gsc_impressions": 7,
+}
+
 
 def load_okr() -> dict:
     """读取 config/okr.json"""
@@ -246,7 +257,15 @@ def build_okr_progress(data: dict, scope: str, report_date=None) -> list:
         if scope == "daily" and source in CUMULATIVE_TO_DAILY:
             source = CUMULATIVE_TO_DAILY[source]
             name = f"{name}（昨日新增）"
+        # 日度口径：窗口型源先折算成窗口日均再比，避免拿 7 天总量对比单日目标。
+        # 名称标注口径，避免读者把它误当成单日实测值。见 WINDOW_DAYS_FOR_DAILY。
+        window_days = None
+        if scope == "daily" and source in WINDOW_DAYS_FOR_DAILY:
+            window_days = int(data.get("gsc_window_days") or WINDOW_DAYS_FOR_DAILY[source])
+            name = f"{name}（{window_days}天窗口日均）"
         current = extract_kr(data, source)
+        if window_days:
+            current = round(current / window_days, 1)
         progress = min(round(current / target * 100), 100) if target > 0 else 0
         # 2.0 状态语义：单日 0 不自动标红（周更节奏下「今日无新发」是正常现象）。
         # 2026-09-19 补充：连续零值升级——content_new 用 content/posts 的真实

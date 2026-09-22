@@ -1,0 +1,639 @@
+{
+  "ledger_id": "LEDGER-AUDIT-2026-09-21",
+  "created_at": "2026-09-22T10:00:00+00:00",
+  "audited_report": "reports/feishu_daily/daily_2026-09-22.json (data date 2026-09-21)",
+  "audit_report": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
+  "evidence": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+  "status_vocabulary": {
+    "new": "已登记，未处理",
+    "in_progress": "处理中",
+    "resolved": "已修复并验证",
+    "false_positive": "经核验为误报，关闭且不应再派单",
+    "blocked": "受阻，等待外部条件或用户决策",
+    "superseded": "已被其他工单吸收"
+  },
+  "summary": {
+    "total_open": 12,
+    "total_closed_as_false_positive": 6,
+    "by_severity": {
+      "critical": 2,
+      "high": 2,
+      "medium": 4,
+      "low": 4
+    },
+    "by_agent": {
+      "ops": 3,
+      "revenue": 3,
+      "seo": 3,
+      "content": 3
+    },
+    "auto_fixable_count": 0,
+    "note": "原 15 项中 5 项（AUDIT-FE-001..005）已修复并验证。本轮修复顺带发现 4 项新问题，其中 2 项已修复（AUDIT-FE-006 前端兜底链、AUDIT-FE-007 语义契约校验）。剩余 12 项仍需责任人处理，其中 7 项阻塞于外部条件或用户决策。关键变化：AUDIT-OPS-002 方案 B 的前置条件（关闭自动化误报源）已解除。",
+    "total_resolved": 7,
+    "by_status": {
+      "new": 8,
+      "resolved": 7,
+      "blocked": 4
+    },
+    "resolved_ids": [
+      "AUDIT-FE-001",
+      "AUDIT-FE-002",
+      "AUDIT-FE-003",
+      "AUDIT-FE-004",
+      "AUDIT-FE-005",
+      "AUDIT-FE-006",
+      "AUDIT-FE-007"
+    ],
+    "new_in_fix_run": [
+      "AUDIT-FE-006",
+      "AUDIT-RV-003",
+      "AUDIT-FE-007",
+      "AUDIT-CT-003"
+    ]
+  },
+  "system_constraint": {
+    "problem": "问题分配闭环自 2026-09-04 起空转 18 天",
+    "evidence": "reports/daily_issues/execution_log.json：累计执行数千轮，累计 resolved ≈ 0，累计 failed = 0，所有 issue 终态为 need_manual / manual_review。task_2026-09-14_seo 在 09-14 一天内被执行约 30 轮，轮次结果恒为 resolved=2 / need_manual=5，无任何推进。",
+    "root_cause": "scripts/agent_task_executor.py 只自动修 3 类（title_too_long / meta_description_too_short / ai_forbidden_word），而 scripts/daily_issue_router.py 产出的 6 类中有 5 类在代码里硬编码为 need_manual（content_placeholder / image_missing_alt / title_too_short / draft_leak / social_zero_engagement）。",
+    "consequence": "分配给 agent 的问题不会前进，只会无限重复写回同一状态。分配了等于没分配。",
+    "remediation_options": {
+      "A": "收窄 router 产出 —— 只路由 executor 能自动修的类型，其余走人工工单而非 agent 任务",
+      "B": "扩展 executor 能力矩阵 —— 但必须先关闭 AUDIT-FE-001 / AUDIT-FE-002（误报源），否则会自动化执行一批错误修改"
+    },
+    "requires_user_decision": true
+  },
+  "open_issues": [
+    {
+      "id": "AUDIT-OPS-001",
+      "agent": "ops",
+      "severity": "critical",
+      "sla": "P0 / 24h",
+      "title": "线上 7 个孤儿页（占 public/posts 的 10.4%）+ 4 个 <title> 为裸 URL 的桩页",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [
+        "AUDIT-SEO-002",
+        "AUDIT-SEO-003",
+        "AUDIT-CT-002"
+      ],
+      "high_risk": true,
+      "high_risk_reason": "涉及线上内容与 Hugo 构建行为变更（cleanDestinationDir），须先向用户说明做什么/为什么/影响什么并等确认",
+      "external_dependency": null,
+      "acceptance": "public/posts 页面数 67→60；孤儿/仅草稿支撑页 7→0；<title> 为裸 URL 的页 4→0",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-RV-001",
+      "agent": "revenue",
+      "severity": "critical",
+      "sla": "P0 / 24h",
+      "title": "实验登记表三方矛盾（DRIVE-001 / REV001 / REV002），日报据此把 DRIVE-001 升级为待办 #1",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [
+        "AUDIT-CT-001 (CTA/联盟位部分)"
+      ],
+      "high_risk": false,
+      "external_dependency": "需现场核实线上横幅部署状态与 GA4 banner_click 事件",
+      "acceptance": "三方登记表状态一致；experiments.json updated_at 更新到当日；DRIVE-001 告警被证实或撤销；REV002 显示 RETIRED",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-RV-002",
+      "agent": "revenue",
+      "severity": "high",
+      "sla": "P1 / 48h",
+      "title": "tracking 覆盖率 211/211 已达标，但 tp_inits 未上报、12 次点击 0 归因，佣金归因链不可验证",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": "需人工登录 Travelpayouts 后台核实点击记录，本机无法访问",
+      "acceptance": "tp_inits 恢复上报或明确标注不可得；12 次点击在 TP 后台有对应记录；affiliate_click 埋点存在性有结论",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-FE-001",
+      "agent": "frontend",
+      "severity": "medium",
+      "sla": "P1 / 48h",
+      "title": "title 提取正则 [^\\\"'\\n]+ 在撇号处截断，系统性误判 title 过短",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [
+        "AUDIT-OPS-002 (方案 B 前置)"
+      ],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "check_title_meta_length() 返回的 title_too_short 仅 1 条（content/success.md）",
+      "verification": "python -c \"import sys;sys.path.insert(0,'E:/AI/dulizhan/travel-blog/scripts');import site_health_agent as s;iss=[i for i in s.check_title_meta_length() if i['type']=='title_too_short'];print(len(iss))\"  预期 1",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/site_health_agent.py"
+        ],
+        "what_changed": "新增 split_front_matter() / front_matter_field() 统一 front-matter 解析，正确提取带撇号/带引号标题；title_too_short 由 4 条 → 0 条（含误报 3 条）。",
+        "verification": "check_title_meta_length() 返回 7 条：meta_description_too_short×6 + meta_description_too_long×1；xian/high-speed-rail/foodies 三个误报文件均已消失。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-002",
+      "agent": "frontend",
+      "severity": "medium",
+      "sla": "P1 / 48h",
+      "title": "PLACEHOLDER_PATTERNS 裸词匹配 + front-matter 正则不兼容 BOM，占位符告警 2/2 误报",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [
+        "AUDIT-OPS-002 (方案 B 前置)"
+      ],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "check_content_placeholders() 返回的 content_placeholder = 0 条",
+      "verification": "python -c \"import sys;sys.path.insert(0,'E:/AI/dulizhan/travel-blog/scripts');import site_health_agent as s;iss=s.check_content_placeholders();print(len([i for i in iss if i['type']=='content_placeholder']))\"  预期 0",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/site_health_agent.py"
+        ],
+        "what_changed": "PLACEHOLDER_PATTERNS 移除 re.IGNORECASE 裸词 'placeholder'，改为有边界形态；新增 strip_html_for_scan() 剥 HTML 标签但保留 Hugo shortcode；split_front_matter() 支持 BOM。另修正 EXCLUDE_DIRS：原为 ['drafts','.audit_backup','_drafts']，实际草稿目录是 '_draft'（少个 s），且未排除 '.archived'。",
+        "verification": "check_content_placeholders() 的 content_placeholder 由 2 → 0。",
+        "self_correction": "首轮修复把 {{...}} 当占位符，误报 60+ 篇正常文章（本仓大量使用 {{< affiliate-flight >}} 等 Hugo shortcode）。已回退该模式并改为先保护 shortcode 再剥 HTML。修复自己引入的误报是本轮最大教训。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-003",
+      "agent": "frontend",
+      "severity": "medium",
+      "sla": "P1 / 48h",
+      "title": "scan_content() 只看文件名判草稿、只扫 content/posts/，漏报并与站点巡检结论冲突",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "pending_posts 由 0 修正为 1；扫描覆盖 content/ 根级 13 页；日报不再自相矛盾",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/feishu_daily_report.py"
+        ],
+        "what_changed": "_scan_content_quality() 重写：① 草稿判定改为读 front-matter draft 字段（原只看文件名）；② 扫描范围扩展到 content/ 根级 13 页；③ 占位符扫描改用strip_html_tags + 有边界正则；④ 新增 content_pages_scanned / root_pages_scanned / drafts_in_posts_dir 三个可观测字段。",
+        "verification": "_scan_content_quality('2026-09-21') → total_posts=64, new_posts=1, pending_posts=2（原 0）, placeholder_articles=0, content_pages_scanned=77 (64 文章 + 13 根级), drafts_in_posts_dir=1。"
+      }
+    },
+    {
+      "id": "AUDIT-FE-004",
+      "agent": "frontend",
+      "severity": "medium",
+      "sla": "P1 / 48h",
+      "title": "OKR 把 7 天 GSC 窗口值当作「日搜索曝光」，造成数学上必然 100% 的虚假达标",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "OKR 日搜索曝光不再使用 7 天窗口值；无单日数据时显示 NOT_AVAILABLE",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/okr_utils.py"
+        ],
+        "what_changed": "新增 WINDOW_DAYS_FOR_DAILY = {'gsc_impressions': 7}：日度口径下先折算成窗口日均再与日目标比，KR 名称标注「（7天窗口日均）」。窗口长度优先读 data['gsc_window_days']，避免硬编码漂移。",
+        "verification": "build_okr_progress(data, 'daily') → 「日搜索曝光（7天窗口日均）」current=20.1 (=141/7)，target=13（=400/30），note 由「目标的 11×」变为「目标的 2×」。",
+        "note": "进度仍封顶 100%，因为日均 20.1 确实超过日目标 13 —— 这次是真实达成，不再是窗口跨度造成的虚假达标。原有的「目标偏低」提示仍然生效。"
+      }
+    },
+    {
+      "id": "AUDIT-SEO-002",
+      "agent": "seo",
+      "severity": "medium",
+      "sla": "P2 / 72h",
+      "title": "is-china-safe-for-tourists 主题两个 URL 同时在线，权重分流",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
+      "status": "blocked",
+      "auto_fixable": false,
+      "depends_on": [
+        "AUDIT-OPS-001"
+      ],
+      "blocked_reason": "需先完成孤儿页逐页处置决策，并在 GSC 中查询两 URL 表现以确定规范 URL",
+      "high_risk": false,
+      "external_dependency": "需在 GSC 查询两个 URL 的曝光/点击/排名",
+      "acceptance": "同主题仅保留 1 个 URL，另一个 301；canonical 指向唯一规范 URL",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-SEO-003",
+      "agent": "seo",
+      "severity": "medium",
+      "sla": "P2 / 72h",
+      "title": "5 个带正常标题的孤儿页正在线上获得曝光，团队以为已下线",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
+      "status": "blocked",
+      "auto_fixable": false,
+      "depends_on": [
+        "AUDIT-OPS-001"
+      ],
+      "blocked_reason": "依赖 AUDIT-OPS-001 的逐页处置决策",
+      "high_risk": false,
+      "external_dependency": "需在 GSC 查询 7 个孤儿 URL 的实际曝光/点击/排名",
+      "acceptance": "7 个孤儿页均有明确处置，并量化其下线前获得的曝光",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-CT-001",
+      "agent": "content",
+      "severity": "medium",
+      "sla": "P2 / 72h",
+      "title": "09-21 新发文章 meta description 与 summary 完全相同（模板填充句），且无联盟链接",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "partial_dependency": "CTA/联盟链接部分依赖 AUDIT-RV-001（实验状态未确认前不得改 CTA）",
+      "acceptance": "description != summary；长度 70-160 字符；若加联盟位则 tracking 覆盖率维持 100%",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-OPS-002",
+      "agent": "ops",
+      "severity": "medium",
+      "sla": "P2 / 需用户决策",
+      "title": "问题分配→追踪闭环空转 18 天，累计 resolved ≈ 0",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
+      "status": "blocked",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocked_reason": "方案 B 的前置条件已解除：AUDIT-FE-001 / AUDIT-FE-002（自动化误报源）已修复并验证，误报率从 2/2 降到 0/2。现在扩展 executor 能力矩阵不会再自动化执行错误修改。仍需用户在方案 A（收窄 router 产出）与方案 B（扩展 executor）之间做选择。",
+      "high_risk": false,
+      "external_dependency": null,
+      "requires_user_decision": true,
+      "acceptance": "executor 不再对不可修问题重复派单；need_manual 有终态",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "scope": "partial",
+        "what_changed": "解除方案 B 的前置阻塞（误报源已关闭）；方案本身仍需用户决策，未实施。",
+        "verification": "see AUDIT-FE-001 / AUDIT-FE-002 resolution"
+      }
+    },
+    {
+      "id": "AUDIT-FE-005",
+      "agent": "frontend",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "字段名 indexed_pages 实际含义是 sitemap 条数，与快照真实 indexed_pages=69 冲突",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "acceptance": "字段拆分为 sitemap_count=1 与 indexed_pages=69；下游不再歧义",
+      "owner_acknowledged": false,
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/feishu_daily_report.py"
+        ],
+        "what_changed": "数据字段 indexed_pages → sitemap_count（4 处：赋值/返回/兜底/2 处渲染），与它实际量测的东西一致（len(sitemaps['sitemap'])）。快照读取新增 gsc_indexed_pages（来自 seo_gsc 域的 indexed_pages KPI），报表新增独立行「已索引页面（GSC 快照）」，并把窗口天数一并显示。",
+        "verification": "日报源码中 'indexed_pages' 仅剩 1 处 —— _find(\"seo_gsc\", \"indexed_pages\")，即从快照读取真实索引页数；sitemap_count 出现 9 处。"
+      }
+    },
+    {
+      "id": "AUDIT-CT-002",
+      "agent": "content",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "仓库卫生：content/posts/ 混入草稿；_draft/ 31 篇草稿中 12 篇 slug 与已发布文章同名",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
+      "status": "blocked",
+      "auto_fixable": false,
+      "depends_on": [
+        "AUDIT-OPS-001"
+      ],
+      "blocked_reason": "transportation-guide-guide 对应的草稿源需配合孤儿页处置一起清理",
+      "high_risk": true,
+      "high_risk_reason": "移动/删除 content/ 下文件属受保护区域，需明确授权；删除草稿前须确认无引用",
+      "external_dependency": null,
+      "acceptance": "content/posts/ 下 draft:true 文件 1→0",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-SEO-001",
+      "agent": "seo",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "shanghai-beyond-the-bund meta description 166 字符超阈值",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "note": "已存在 16+ 次未推进派发记录，本次仅登记不重复派发",
+      "acceptance": "description ≤160 字符；check_title_meta_length() 不再返回该文件",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-OPS-003",
+      "agent": "ops",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "gsc_*_28d 等 8 项指标 37 天未刷新",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": "需确认 GSC API 凭据状态（仓库根 gsc-service-account-key.json）",
+      "safety_note": "该凭据文件属 .gitignore 排除项。缺失时不要创建空文件或伪造内容，须先向用户确认。",
+      "acceptance": "快照中 gsc_*_28d 的 as_of 更新到最近观测日",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-FE-006",
+      "agent": "frontend",
+      "severity": "critical",
+      "sla": "P0 / 24h",
+      "title": "lead-magnet 兜底直链缺失：用户订阅成功却既收不到 PDF 也拿不到下载链接",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_frontend.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "found_in": "本轮修复中顺带发现（原审计未发现）",
+      "detail": "后端 functions/api/subscribe.js 在 PDF 未送达时返回 200 + error='Your guide could not be delivered right now. Use the download link below...'，但前端两处 else 分支只渲染 textContent，从不渲染那个链接。用户提交邮箱 → MailerLite 写入成功 → Resend 422 → 看到「用下面的链接下载」却看不到任何链接，漏斗 100% 断裂。",
+      "acceptance": "delivered_pdf=false 时前端仍渲染 pdf_url 直链",
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "layouts/partials/email-subscribe.html",
+          "layouts/shortcodes/lead-magnet-cta.html"
+        ],
+        "what_changed": "两处各新增 resp.ok && data.pdf_url 分支，用 document.createElement('a') 构建兜底直链（避免 innerHTML 注入风险）。",
+        "verification": "两文件均确认存在该分支且使用 createElement；未运行 Hugo 构建验证渲染",
+        "residual": "该分支只在 pdf_url 存在时生效；后端始终返回 pdf_url（subscribe.js:183），故已覆盖。"
+      },
+      "owner_acknowledged": false
+    },
+    {
+      "id": "AUDIT-RV-003",
+      "agent": "revenue",
+      "severity": "high",
+      "sla": "P1 / 48h",
+      "title": "PDF 送达不可验证：Resend 对审计邮箱返回 422，无任何监控项会因此报警",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_revenue.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": "需在 Resend 后台确认发信域名是否已验证（本机无法访问）",
+      "found_in": "本轮修复中顺带发现（原审计未发现）",
+      "detail": "subscription_health_20260921_215530.json 实测：subscriber_created=true 但 delivered_pdf=false，Resend 返回 422 validation_error：'Invalid `to` field. Please use our testing email address instead of domains like `example.com`.'",
+      "important_caveat": "订阅健康脚本注释（subscription_health_audit.py:285）判断该 422 源于example.com 属 RFC 5614 保留域名，真实订阅者不受影响——该解释在技术上是可信的，本机无法验证 Resend 发信域名是否已验证。**因此不能断言真实用户收不到 PDF**，只能断言：现有测试无法验证送达，且没有任何监控项会因送达失败而报警。",
+      "acceptance": "有一条使用真实域名的验证路径能确认送达；或明确记录「送达不可验证」并给出兜底方案",
+      "owner_acknowledged": false,
+      "resolution": null
+    },
+    {
+      "id": "AUDIT-FE-007",
+      "agent": "ops",
+      "severity": "medium",
+      "sla": "P2 / 72h",
+      "title": "健康检查只校验字段存在不校验字段值，语义契约被违反也判 passed",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json",
+      "status": "resolved",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "found_in": "本轮修复中顺带发现（原审计未发现）",
+      "detail": "api_health_audit.py 的 subscribe_valid_email 用例 description 写明「应返回 200 + success=true」，但 expected_fields 只要求 success 字段存在。实际响应 success=false 时该用例仍判 passed=true，看板显示「订阅API 4/6 通过」——契约被违反却无任何信号。",
+      "acceptance": "存在字段值校验机制；订阅用例断言 success=true",
+      "resolution": {
+        "resolved_at": "2026-09-22T14:40:00+00:00",
+        "resolved_by": "audit_fix_run",
+        "changed_files": [
+          "scripts/api_health_audit.py"
+        ],
+        "what_changed": "新增 expected_json_values 机制：校验字段值而非仅字段存在；产出 semantic_warnings / semantic_passed，且不改变 passed（passed 仍只代表HTTP 可达性），避免把「测试邮箱被 Resend 拒」误报成 API 宕机。subscribe_valid_email 用例加上 expected_json_values: {success: true}，并在用例注释里写明：若只有 success 一项持续告警，含义是「本审计邮箱无法验证送达」，需真实域名验证路径才能闭环。",
+        "verification": "用例已含 expected_json_values={'success': True}；源码含 semantic_warnings 与 semantic_passed 机制；py_compile 通过",
+        "residual": "未重新运行健康检查（需调用线上 API 并会真实创建 MailerLite 订阅者，属非幂等外部副作用，未授权前不执行）。"
+      },
+      "owner_acknowledged": false
+    },
+    {
+      "id": "AUDIT-CT-003",
+      "agent": "content",
+      "severity": "low",
+      "sla": "P3 / 1w",
+      "title": "免费 7 天行程模板落地页 draft:true 未发布，但 6 篇文章的 CTA 在推广它",
+      "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
+      "status": "new",
+      "auto_fixable": false,
+      "depends_on": [],
+      "blocks": [],
+      "high_risk": false,
+      "external_dependency": null,
+      "found_in": "本轮修复中顺带发现（由 AUDIT-FE-003 的草稿判定修复暴露）",
+      "detail": "content/7-day-china-itinerary.md 为 draft:true（正文 1999 字符，未发布），而 6 篇文章含 7 处 {{< lead-magnet-cta magnet=\"itinerary-template\" >}} 在推广它。",
+      "important_caveat": "经核查该 shortcode 走 /api/subscribe 邮件表单而非链接到该页面，故这不是断链。属「推广物本身未发布」的运营一致性问题。另有 content/free-itinerary.md 为已发布态（无 draft 字段，3377 字符）。",
+      "acceptance": "决定 7-day-china-itinerary 发布或调整 CTA 指向 free-itinerary",
+      "owner_acknowledged": false,
+      "resolution": null
+    }
+  ],
+  "closed_as_false_positive": [
+    {
+      "source_issue": "reports/daily_issues/site_health_issues_2026-09-21.json -> content/contact.md (content_placeholder, high)",
+      "verdict": "false_positive",
+      "reason": "正文 3 处 'placeholder' 全部是 HTML <input placeholder=\"...\"> 表单属性，不是模板占位符残留",
+      "root_cause_fix": "AUDIT-FE-002",
+      "action_taken": "关闭。不要再派单给 content_agent（当前已在 site_health_issues 中标记 need_manual，属无效告警）"
+    },
+    {
+      "source_issue": "reports/daily_issues/site_health_issues_2026-09-21.json -> content/search.md (content_placeholder, high)",
+      "verdict": "false_positive",
+      "reason": "文件首字节为 UTF-8 BOM (\\ufeff)，front-matter 正则失配，整文件被当正文扫描，命中 YAML 键 'placeholder:'（Hugo 搜索模板的合法变量）",
+      "root_cause_fix": "AUDIT-FE-002",
+      "action_taken": "关闭。不要再派单给 content_agent"
+    },
+    {
+      "source_issue": "site_health_issues -> content/posts/2026-06-30-xian-terracotta-army-...md (title_too_short, 报 2 字符)",
+      "verdict": "false_positive",
+      "reason": "真实 title \"Xi'an Terracotta Army: Tickets & History\" = 40 字符；正则在 Xi'an 撇号处截断到 'Xi'",
+      "root_cause_fix": "AUDIT-FE-001",
+      "action_taken": "关闭。不要按「title 过短」改写该文章标题 —— 改写会破坏一个本就合格的标题"
+    },
+    {
+      "source_issue": "site_health_issues -> content/posts/2026-05-25-china-high-speed-rail-...md (title_too_short, 报 17 字符)",
+      "verdict": "false_positive",
+      "reason": "真实 title = 58 字符 \"How To Ride China'S High-Speed Trains: How to Book in 2026\"；在 China'S 撇号处截断到 'How To Ride China'",
+      "root_cause_fix": "AUDIT-FE-001",
+      "action_taken": "关闭。不要改写标题"
+    },
+    {
+      "source_issue": "site_health_issues -> content/posts/2026-07-23-foodies-guide-to-china-...md (title_too_short, 报 6 字符)",
+      "verdict": "false_positive",
+      "reason": "真实 title = 44 字符 \"Foodie's Guide to China: Dishes You Must Try\"；在 Foodie's 撇号处截断到 'Foodie'",
+      "root_cause_fix": "AUDIT-FE-001",
+      "action_taken": "关闭。不要改写标题"
+    },
+    {
+      "source_issue": "site_health_issues -> content/posts/2026-07-22-cultural-etiquette-guide.md (draft_leak, high)",
+      "verdict": "mischaracterised_not_false_positive",
+      "reason": "文件确为 draft:true，但其 slug 为 cultural-etiquette-guide-aussie-kiwi，public/ 中不存在该路径，已发布的 /posts/cultural-etiquette-guide/ 由 07-21 正式版支撑（datePublished 2026-07-21）。不是线上泄露。",
+      "remapped_to": "AUDIT-CT-002",
+      "severity_change": "high -> low",
+      "action_taken": "重新定性为仓库卫生问题（草稿放在 content/posts/ 而非 _draft/），不属紧急。原「可能已发布到线上」的 high 告警作废"
+    }
+  ],
+  "notable_correction": {
+    "claim": "曾怀疑新文章 audit_status: pass2 偏低属缺陷",
+    "verdict": "withdrawn",
+    "reason": "实测 64 篇中 pass2=26、pass4=7、无该字段=31。pass2 是已发布文章的多数态，不构成缺陷。",
+    "lesson": "阈值类判断必须先统计分布再下结论，不要凭直觉认定某值偏低"
+  },
+  "verification_coverage": {
+    "verified_true": 9,
+    "mislabelled": 2,
+    "false_positive_closed": 5,
+    "mischaracterised_remapped": 1,
+    "true_confirmed": 2,
+    "new_findings": 2,
+    "report_sections_audited": [
+      "今日OKR速览",
+      "1 流量总览",
+      "2 搜索表现",
+      "3 内容质量巡检",
+      "4 实验与阻塞",
+      "5 联盟变现数据",
+      "6 邮件订阅",
+      "7 自动化运维状态",
+      "8 今日高优先级待办"
+    ],
+    "not_verified": [
+      "GA4/GSC/MailerLite/Travelpayouts 上游真实值（需访问第三方后台，本机无法复核）",
+      "GA4 数据源交叉验证（measurement ID vs 数值 ID，报告自述缺陷，仍成立）",
+      "NordVPN/AffiliatesCN 渠道未接入（报告自述，合计佣金 $0.00 仅为接入渠道下限）"
+    ]
+  },
+  "next_actions_for_owner": [
+    "1. 【需你决策】AUDIT-OPS-001（孤儿页 + cleanDestinationDir）：唯一高危项，涉及线上内容与 Hugo 构建行为，未获确认前不可执行。",
+    "2. 【需你决策】AUDIT-OPS-002 方案 A 还是 B：方案 B 的前置阻塞已解除（误报源已关闭），现在扩展 executor 能力矩阵是安全的。",
+    "3. 【需现场核实】AUDIT-RV-001（实验登记表三方矛盾）：DRIVE-001 告警是否成立。",
+    "4. 【需后台权限】AUDIT-RV-002（tp_inits 未上报）与 AUDIT-RV-003（PDF 送达不可验证）。",
+    "5. 【需构建验证】AUDIT-FE-006 前端兜底链已改，但需在 CI/构建环境验证渲染效果。",
+    "6. 【可直接改】AUDIT-SEO-001（shanghai description 166→≤160 字符）、AUDIT-CT-001（新文章 description=summary）、AUDIT-CT-003（行程模板落地页 draft:true）—— 均无需外部条件。",
+    "7. 【已修复无需动作】AUDIT-FE-001..005、AUDIT-FE-006、AUDIT-FE-007 共 7 项。",
+    "8. 5 条误报已关闭（见 closed_as_false_positive），不要再派单给 content_agent。"
+  ],
+  "history": [
+    {
+      "at": "2026-09-22T10:00:00+00:00",
+      "by": "audit",
+      "event": "ledger created",
+      "detail": "15 open + 5 closed_as_false_positive + 1 remapped。审计脚本 C:/temp/dsh/verify_report.py 与 verify2~7.py（仓库外，只读）"
+    },
+    {
+      "at": "2026-09-22T14:40:00+00:00",
+      "by": "audit_fix_run",
+      "event": "fix run completed",
+      "detail": "修复 7 项（5 项原有 + 2 项本轮新发现），部分解除 AUDIT-OPS-002 阻塞，新增登记 4 项。12 项仍开放。全部改动未 commit。验证脚本 C:/temp/dsh/verify_all_fixes.py 全绿。"
+    }
+  ],
+  "fix_runs": [
+    {
+      "run_id": "FIX-RUN-2026-09-22",
+      "at": "2026-09-22T14:40:00+00:00",
+      "by": "audit_fix_run",
+      "resolved": [
+        "AUDIT-FE-001",
+        "AUDIT-FE-002",
+        "AUDIT-FE-003",
+        "AUDIT-FE-004",
+        "AUDIT-FE-005",
+        "AUDIT-FE-006",
+        "AUDIT-FE-007"
+      ],
+      "partially_resolved": [
+        "AUDIT-OPS-002"
+      ],
+      "newly_found": [
+        "AUDIT-FE-006",
+        "AUDIT-RV-003",
+        "AUDIT-FE-007",
+        "AUDIT-CT-003"
+      ],
+      "changed_files": [
+        "scripts/site_health_agent.py",
+        "scripts/feishu_daily_report.py",
+        "scripts/okr_utils.py",
+        "scripts/api_health_audit.py",
+        "layouts/partials/email-subscribe.html",
+        "layouts/shortcodes/lead-magnet-cta.html"
+      ],
+      "protected_areas_touched": "无。未修改 content/、reports/、URL/slug/canonical/content_id、联盟链接、密钥文件、ops-dashboard/ops-center.html、static/_redirects。",
+      "committed": false,
+      "commit_note": "未 commit。用户未明确要求提交，且本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区，可直接审阅 diff。",
+      "verification": "C:/temp/dsh/verify_all_fixes.py —— 4 个 Python 文件 py_compile 全通过；OKR 日均折算 20.1/13 已验证；sitemap_count 字段改造已验证；前端两处兜底分支已验证；语义契约机制已验证。",
+      "self_corrections": [
+        "首轮把 {{...}} 当占位符，误报 60+ 篇正常文章（本仓用 Hugo shortcode），已回退。",
+        "首轮 HTML 剥离未保护 shortcode，把 {{< affiliate-flight >}} 剥成 '{{ }}' 制造假占位符，已改为先 stash shortcode 再剥 HTML。",
+        "曾怀疑 /api/subscribe 健康检查「4/6 通过」意味着 PDF 送达全断。经查 Resend 原话是'instead of domains like `example.com`'，指向 RFC 保留域名，团队注释解释成立。已改为只断言「不可验证」，不断言「全断」。"
+      ],
+      "not_done": [
+        "未运行 Hugo 构建（仓库纪律：不要本地构建验证），前端改动仅静态验证语法与结构。",
+        "未运行 pytest（已知会改写 12 个受保护文件）。",
+        "未运行 api_health_audit.py / subscription_health_audit.py（会调用线上 API 并真实创建MailerLite 订阅者，非幂等外部副作用）。",
+        "未 commit / push。",
+        "未创建任何密钥文件（gsc-service-account-key.json 等属 .gitignore 排除项，缺失时须先问用户）。"
+      ]
+    }
+  ]
+}

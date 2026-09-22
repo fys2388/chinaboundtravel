@@ -1,0 +1,150 @@
+{
+  "audit_id": "AUDIT-2026-09-21",
+  "audited_report": "reports/feishu_daily/daily_2026-09-22.json",
+  "data_date": "2026-09-21",
+  "audit_date": "2026-09-22",
+  "method": "re-derive every claim from primary sources; do not reuse report numbers",
+  "audit_scripts": [
+    "C:/temp/dsh/verify_report.py",
+    "C:/temp/dsh/verify2.py",
+    "C:/temp/dsh/verify3.py",
+    "C:/temp/dsh/verify4.py",
+    "C:/temp/dsh/verify5.py",
+    "C:/temp/dsh/verify6.py",
+    "C:/temp/dsh/verify7.py"
+  ],
+  "verified_true": [
+    {"claim": "total_posts=64", "actual": 64, "source": "content/posts/*.md count"},
+    {"claim": "new_posts=1", "actual": 1, "source": "content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md (date 2026-09-21T10:00:00+08:00)"},
+    {"claim": "affiliate tracking coverage 211/211", "actual": "211/211", "source": "affiliate_link_audit.audit() re-run: links_tracked=211 links_untracked=0 keys_total=8"},
+    {"claim": "ga4 users=9 sessions=13 pageviews=22", "actual": "9/13/22", "source": "feishu_daily_report output matches daily_2026-09-22.json exactly"},
+    {"claim": "bounce=100.0% engagement=0.0% avg_duration=109s", "actual": "100.0/0.0/109", "source": "same"},
+    {"claim": "7d rolling sessions=73 bounce=50.7% engagement=49.3% avg=88s", "actual": "73/50.7/49.3/88", "source": "same"},
+    {"claim": "gsc 7d window impressions=141 clicks=0 avg_position=30.77 ctr=0.00%", "actual": "141/0/30.77/0.00", "source": "window 2026-09-13..2026-09-19"},
+    {"claim": "mailership total=24 new=0", "actual": "24/0", "source": "ml_available=true"},
+    {"claim": "travelpayouts clicks=12 orders=0 commission=$0.00; inits='not reported'", "actual": "12/0/0.00/not_reported", "source": "tp_inits=0 labelled '未上报' not '0 shown' - correct handling"}
+  ],
+  "mislabelled": [
+    {
+      "claim": "OKR '日搜索曝光 141次 vs 目标13次 = 100%'",
+      "verdict": "FALSE_ACHIEVEMENT",
+      "actual": "141 is the 7-day GSC window (2026-09-13..2026-09-19), window ends 2 days before report date",
+      "root_cause": "okr_utils.extract_kr() maps source 'gsc_impressions' to alias list ['gsc_impressions'] with no window semantics; daily target derived as Q3 monthly 400 / 30 = 13.3",
+      "consequence": "7-day cumulative compared against a daily target => 100% is mathematically guaranteed, not an achievement",
+      "code": "scripts/feishu_daily_report.py:1280 -> scripts/okr_utils.py:24,73-82",
+      "note": "The 28-day cache window WAS fixed (comment at feishu_daily_report.py:598) but the 7-day window was not"
+    },
+    {
+      "claim": "field 'indexed_pages' rendered as 'Sitemap 数量 1 个'",
+      "verdict": "FIELD_SEMANTICS_MISMATCH",
+      "actual": "value 1 is len(sitemaps['sitemap']) (number of sitemap entries)",
+      "conflicting_source": "reports/management/snapshots/REPORTING_SNAPSHOT_2026-09-21.json:1337 has real indexed_pages=69",
+      "consequence": "label in the report is correct, but any downstream consumer (weekly/monthly/dashboard) reusing the field name will read '1 sitemap' as 'only 1 page indexed'"
+    }
+  ],
+  "pipeline_a_site_health_verdicts": {
+    "source": "reports/daily_issues/site_health_issues_2026-09-21.json (scripts/site_health_agent.py)",
+    "total": 9,
+    "false_positive": 5,
+    "true": 2,
+    "true_but_mischaracterised": 1,
+    "true_but_threshold_inappropriate": 1,
+    "items": [
+      {"file": "content/contact.md", "type": "content_placeholder", "severity": "high", "verdict": "FALSE_POSITIVE", "reason": "3 'placeholder' hits are HTML <input placeholder=\"...\"> attributes"},
+      {"file": "content/search.md", "type": "content_placeholder", "severity": "high", "verdict": "FALSE_POSITIVE", "reason": "file has UTF-8 BOM (\\ufeff) so re.match(r'^---\\s*\\n') fails; whole file scanned as body; matches YAML key 'placeholder:' which is a legitimate Hugo search-template variable"},
+      {"file": "content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md", "type": "title_too_short", "reported_chars": 2, "actual_chars": 40, "actual_title": "Xi'an Terracotta Army: Tickets & History", "verdict": "FALSE_POSITIVE", "reason": "regex [^\\\"'\\n]+ truncates at apostrophe in Xi'an -> captured 'Xi'"},
+      {"file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md", "type": "title_too_short", "reported_chars": 17, "actual_chars": 58, "actual_title": "How To Ride China'S High-Speed Trains: How to Book in 2026", "verdict": "FALSE_POSITIVE", "reason": "truncates at apostrophe in China'S -> 'How To Ride China'"},
+      {"file": "content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md", "type": "title_too_short", "reported_chars": 6, "actual_chars": 44, "actual_title": "Foodie's Guide to China: Dishes You Must Try", "verdict": "FALSE_POSITIVE", "reason": "truncates at apostrophe in Foodie's -> 'Foodie'"},
+      {"file": "content/success.md", "type": "title_too_short", "reported_chars": 19, "actual_chars": 19, "actual_title": "Payment Successful!", "verdict": "TRUE_BUT_THRESHOLD_INAPPROPRIATE", "reason": "genuinely 19 chars, but TITLE_MIN=20 is not appropriate for a payment-success page"},
+      {"file": "content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md", "type": "meta_description_too_long", "actual_chars": 166, "verdict": "TRUE"},
+      {"file": "content/posts/2026-07-22-cultural-etiquette-guide.md", "type": "draft_leak", "severity": "high", "verdict": "TRUE_BUT_MISCHARACTERISED", "reason": "file IS draft:true, but slug=cultural-etiquette-guide-aussie-kiwi has NO page in public/; published page /posts/cultural-etiquette-guide/ is sourced from the 07-21 file (datePublished 2026-07-21). Real issue is repo hygiene (draft living in content/posts/ instead of content/_draft/), NOT a live leak"},
+      {"file": "https://www.chinaboundtravel.com", "type": "multiple_analytics_destinations", "severity": "critical", "verdict": "TRUE", "reason": "GA4 Google Tag has 2 destinations G-GECBME3YVJ + G-P6BH500VBK"}
+    ],
+    "systematic_bugs": [
+      {"bug": "PLACEHOLDER_PATTERNS contains re.compile(r'placeholder', re.IGNORECASE) - bare word, always matches HTML placeholder= attributes and YAML key names"},
+      {"bug": "front-matter regex re.match(r'^---\\s*\\n...') is not BOM-tolerant; one BOM char disables whole-front-matter parsing and degrades to body scan"},
+      {"bug": "title extraction regex [^\\\"'\\n]+ truncates at apostrophes - any English title containing ' is truncated and misjudged as too short. Systematic, reproducible."},
+      {"bug": "check_title_meta_length() returns 12 issues but the daily snapshot only recorded 9 - 7 meta_description_too_short items were dropped with no record of the filtering"}
+    ]
+  },
+  "pipeline_b_daily_report_scan_verdicts": {
+    "source": "scripts/feishu_daily_report.py:1895-1937 scan_content()",
+    "placeholder_articles": {"reported": 0, "verdict": "TRUE_WITHIN_SCOPE_ONLY", "blind_spot": "only scans content/posts/*.md; misses 13 root-level pages in content/ (search.md, contact.md, pricing.md, subscribe.md, success.md, free-itinerary.md, cancel.md, affiliate-disclosure.md, disclaimer.md, privacy-policy.md, refund-policy.md, terms-of-service.md). Pipeline A's placeholder hits are exactly in the unsanned files."},
+    "pending_posts": {"reported": 0, "actual": 1, "verdict": "FALSE", "reason": "logic is `if '_draft' in post.name.lower() or post.name.startswith('draft')` - filename only, never reads front-matter draft field", "missed": ["content/posts/2026-07-22-cultural-etiquette-guide.md (front-matter draft:true)"]},
+    "empty_links": {"reported": 0, "verdict": "TRUE_WITHIN_SCOPE"},
+    "missing_alt": {"reported": 0, "verdict": "TRUE_WITHIN_SCOPE"},
+    "conflict": "The same report simultaneously states '占位符残留 0 篇 ✅' and lists 2 high-severity content_placeholder issues. Two parallel scanners, no cross-validation, results concatenated."
+  },
+  "new_findings_not_in_report": {
+    "orphan_pages": {
+      "severity": "critical",
+      "public_posts_total": 67,
+      "orphan_total": 7,
+      "ratio": 0.104,
+      "method": "Hugo slug resolution approximated: explicit 'slug:' front-matter else filename stem with YYYY-MM-DD prefix stripped; then diff public/posts/*/index.html against content/ source files",
+      "true_orphans": [
+        "/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+        "/posts/2026-05-27-how-to-survive-chinese-train-station/",
+        "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+        "/posts/best-travel-insurance-china/",
+        "/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+        "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/"
+      ],
+      "draft_only": [
+        {"page": "/posts/transportation-guide-guide/", "only_source": "content/_draft/2026-06-06-transportation-guide-guide-attempt1.md", "note": "source is draft:'true', audit_status:pending, body is 2 characters"}
+      ],
+      "bare_url_title_pages": [
+        "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/",
+        "/posts/how-to-survive-chinese-train-station/",
+        "/posts/is-china-safe-for-tourists-2026-honest-assessment/",
+        "/posts/transportation-guide-guide/"
+      ],
+      "root_cause": "hugo.toml does not set cleanDestinationDir (defaults false) - Hugo never deletes retired pages, so renamed/moved/rewritten content leaves orphan pages live forever",
+      "duplication": "is-china-safe-for-tourists-2026-honest-assessment and is-china-safe-for-tourists-2026-honest-safety-assessment both live => same topic, two URLs, split authority",
+      "impact": [
+        "5 orphan pages carry normal titles and are likely ranking while the team believes them offline",
+        "report claims 64 articles (content/posts/*.md count) vs 67 live pages - two unvalidated scopes",
+        "daily QA scans only content/ and can never see public/ orphans"
+      ]
+    },
+    "experiment_registry_conflicts": {
+      "severity": "high",
+      "source_of_report": "static/experiments.json",
+      "stale_by_days": 15,
+      "source_updated_at": "2026-09-06",
+      "conflicts": [
+        {"id": "DRIVE-001", "report_says": "PLANNED (escalated to today's priority #1, red)", "authoritative_says": "docs/AI_CONTEXT.md: RUNNING since 2026-08-16 ACTIVE; reports/revenue/EXPERIMENT_COMPARISON.csv: observation_days=1 status=INSUFFICIENT_SAMPLE data_source=CACHED"},
+        {"id": "REV002", "report_says": "PLANNED", "authoritative_says": "reports/revenue/REV002_EXPERIMENT_REGISTRY.csv: status=RETIRED decision=RETIRED_INVALID_INSTRUMENT"},
+        {"id": "REV001", "report_says": "PLANNED, 0d", "authoritative_says": "docs/AI_CONTEXT.md: RUNNING since 2026-08-16 -> if true, 36 days with 0 sample = instrumentation failure, not 'not started'"}
+      ],
+      "consequence": "The report escalates DRIVE-001 to the highest-priority todo. If Drive is actually running this is a false alarm; if it is not deployed, AI_CONTEXT.md and EXPERIMENT_COMPARISON.csv need correcting. Either way the report escalates an alert on the basis of a 15-day-stale, self-contradicting file.",
+      "code_note": "feishu_daily_report.py:894-895 detects only the FORWARD drift (snapshot RUNNING that is really phantom); the REVERSE drift (experiments.json stale -> running experiment shown as PLANNED) is unhandled"
+    }
+  },
+  "tracking_mechanism_verdict": {
+    "verdict": "INOPERATIVE",
+    "source": "reports/daily_issues/execution_log.json",
+    "span": "2026-09-04 .. 2026-09-22",
+    "runs": "thousands",
+    "cumulative_resolved": "approximately 0",
+    "cumulative_failed": 0,
+    "all_issues_end_state": "need_manual / manual_review",
+    "example": "task_2026-09-14_seo executed ~30 times in one day, always resolved=2 need_manual=5, unchanged",
+    "root_cause": "agent_task_executor.py can auto-fix only 3 types (title_too_long, meta_description_too_short, ai_forbidden_word); 5 of the 6 types produced by daily_issue_router are hard-coded to need_manual (content_placeholder, image_missing_alt, title_too_short, draft_leak, social_zero_engagement)",
+    "consequence": "Assignment loop is not a queue: every 30 minutes an agent reads the same unfixed issue, writes back need_manual, and the cycle repeats. Assigning a problem to an agent in this system does not advance it."
+  },
+  "report_self_flags_that_are_correct": [
+    "GA4 sessionization vs event-level contradiction self-flagged (feishu_daily_report.py:560-583) with computed correct lower bound (engagement should be >=69.2%)",
+    "average duration vs engagement contradiction self-flagged",
+    "channel totals != grand totals self-flagged (20!=13 sessions, 12!=9 users, 21!=22 pageviews)",
+    "low-sample flag (9 visitors < 10)",
+    "28-day cache staleness self-flagged (oldest 37 days)",
+    "bot traffic excluded from top pages (/ops/ops-center, 1 view)",
+    "tp_inits labelled '未上报' rather than '0' - missing is not treated as zero"
+  ],
+  "not_verified": [
+    "Upstream truth of GA4/GSC/MailerLite/Travelpayouts values cannot be checked from this machine (requires vendor console access). This audit verified only that report numbers match the local data files they cite.",
+    "GA4 source not cross-validated (report's own caveat about measurement ID vs value ID remains valid)",
+    "NordVPN channel not integrated into automation (report's own caveat remains valid)"
+  ]
+}

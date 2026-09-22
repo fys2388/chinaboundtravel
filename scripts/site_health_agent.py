@@ -47,17 +47,61 @@ ISSUES_DIR = ROOT / "reports" / "daily_issues"
 # 乱码检测模式（双编码UTF-8字符）
 MOJIBAKE_PATTERN = re.compile(r'[ÃÂâäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]')
 # 占位符模式
+# 注意：
+#   1) 不能用 re.IGNORECASE 去匹配裸词 'placeholder'——HTML 表单属性
+#      placeholder="John Smith" 会被命中（content/contact.md 历史误报）。
+#      英文占位符词保持全大写，不带 IGNORECASE。
+#   2) 不要把 {{ ... }} 当占位符——本仓大量使用 Hugo shortcode
+#      {{< affiliate-flight >}} / {{< lead-magnet-cta ... >}} / {{< soft-recommend ... >}}，
+#      那是合法的联盟位与组件标记，不是残留占位符（60+ 篇正常文章都含此语法）。
+#   3) 不要用 <[A-Z_]+> 匹配——HTML 标签在扫描前已剥离，该模式永远不可达。
 PLACEHOLDER_PATTERNS = [
     re.compile(r'Review needed', re.IGNORECASE),
     re.compile(r'\bTODO\b'),
     re.compile(r'\bFIXME\b'),
-    re.compile(r'placeholder', re.IGNORECASE),
-    re.compile(r'待完善', re.IGNORECASE),
+    re.compile(r'#(?:TP|VPN)_[A-Z_]+#'),          # 项目专用追踪占位符
+    re.compile(r'\bPLACEHOLDER\b'),               # 全大写独立词（无 IGNORECASE）
+    re.compile(r'\[Image\s*[:\]]'),               # 未替换的图片占位提示 [Image: ...]
+    re.compile(r'待完善|待补充|待填写|待填充'),
     re.compile(r'Lorem ipsum', re.IGNORECASE),
     # Template placeholders like P1, P2, P3 in headings or inline text
     re.compile(r'\bP[1-4]\s*[:：]\s*[A-Z]'),
     re.compile(r'\bChP[1-4]\b'),
 ]
+
+# HTML 标签剥离：占位符检测只在标签文本上做，
+# 避免 <input placeholder="..."> 这类表单属性被当成内容缺陷。
+# 但 Hugo shortcode {{< ... >}} 里的 < ... > 是模板语法不是 HTML，
+# 必须先保护出来再剥离，否则 shortcode 被破坏成 "{{ }}" 假占位符。
+_HTML_TAG_RE = re.compile(r'<[^>]+>')
+_HUGO_SHORTCODE_RE = re.compile(r'\{\{[^}]*\}\}')
+
+
+def strip_html_for_scan(body):
+    """剥离 HTML 标签但保留 Hugo shortcode，供占位符/乱码检测使用。"""
+    if not body:
+        return body
+    # 先把 shortcode 换成占位符，避免内部 < ... > 被当成 HTML 标签剥掉
+    shortcodes = []
+
+    def _stash(m):
+        shortcodes.append(m.group(0))
+        return "\x00SC%d\x00" % (len(shortcodes) - 1)
+
+    text = _HUGO_SHORTCODE_RE.sub(_stash, body)
+    text = _HTML_TAG_RE.sub(" ", text)
+    for i, sc in enumerate(shortcodes):
+        text = text.replace("\x00SC%d\x00" % i, sc)
+    return text
+
+# 「Title 过短」检查豁免的交易类状态页（相对 CONTENT_DIR 的路径）。
+# 这些页面的标题是功能性文案而非 SEO 标题，过短是设计使然。
+# 2026-09-22 审计新增：content/success.md 的 "Payment Successful!" 19 字符
+# 被 TITLE_MIN=20 判为缺陷，属阈值不适用而非内容缺陷。
+SHORT_TITLE_EXEMPT = {
+    "success.md",
+    "cancel.md",
+}
 
 # Garbled text patterns (separate severity)
 GARBLED_PATTERNS = [
@@ -66,6 +110,47 @@ GARBLED_PATTERNS = [
     # Duplicate consecutive words (excluding proper nouns like "Dan Dan")
     re.compile(r'\b(of|the|and|to|in|a|is|that|for|with|on)\s+\1\b', re.IGNORECASE),
 ]
+
+
+# --- Front matter 解析 -------------------------------------------------------
+# 两个历史缺陷的集中修复：
+#   1) BOM：re.match(r'^---...') 不容忍 UTF-8 BOM(\ufeff)。只要文件头有一个
+#      BOM，front matter 解析就整体失效并退化为「整文件当正文扫描」，
+#      于是 YAML 键名 placeholder: 被当成占位符（content/search.md 误报）。
+#   2) 撇号：r'title\s*:\s*["\']?([^\"\'\n]+)' 的捕获组遇到引号内的撇号就截断，
+#      "Xi'an Terracotta Army..." 被读成 "Xi"（2 字符），进而误报 title_too_short。
+# 因此所有 front matter 读取都应走下面两个函数，不再各自写正则。
+
+def split_front_matter(content):
+    """拆分 Hugo front matter。返回 (front_matter, body)；无 front matter 返回 (None, body)。"""
+    text = content.lstrip('\ufeff') if content else content
+    m = re.match(r'^---\s*\n(.*?)\n---[ \t]*\r?\n?', text, re.DOTALL)
+    if not m:
+        return None, text
+    return m.group(1), text[m.end():]
+
+
+def front_matter_field(front_matter, name):
+    """取 front matter 中的标量字段值。正确处理带引号值内的撇号。
+
+    front_matter 为 None 时返回 None。无引号值会剥离行尾注释。
+    """
+    if not front_matter:
+        return None
+    m = re.search(r'^[ \t]*%s[ \t]*:[ \t]*(.*)$' % re.escape(name),
+                  front_matter, re.MULTILINE)
+    if not m:
+        return None
+    raw = m.group(1).strip()
+    if raw and raw[0] in ('"', "'"):
+        quote = raw[0]
+        end = raw.find(quote, 1)
+        if end > 0:
+            return raw[1:end].strip() or None
+    # 无引号：剥离行尾注释（'# ...'），YAML 里井号前必须有空白才算注释
+    raw = re.sub(r'\s+#.*$', '', raw).strip()
+    return raw or None
+# --- End front matter 解析 ---------------------------------------------------
 
 
 def ensure_dirs():
@@ -242,7 +327,9 @@ def check_content_placeholders():
     issues = []
     
     # 排除目录
-    EXCLUDE_DIRS = ['drafts', '.audit_backup', '_drafts']
+    # 与 check_title_meta_length() 保持一致：_draft（注意不是 _drafts）与
+    # .archived 也要排除。草稿是进行中的稿件，扫描它们只产出噪音。
+    EXCLUDE_DIRS = ['drafts', '_drafts', '_draft', '.audit_backup', '.archived']
     
     for md_file in CONTENT_DIR.rglob("*.md"):
         # 跳过排除目录
@@ -252,12 +339,15 @@ def check_content_placeholders():
             
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            # 只检查正文（front matter之后）
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-            body = content[front_matter_match.end():] if front_matter_match else content
-            
+            # 只检查正文（front matter 之后）
+            # 走 split_front_matter()：BOM 容错，且保证 YAML 键名不被当成正文扫描
+            _fm, body = split_front_matter(content)
+            # 剥离 HTML 标签（保留 Hugo shortcode），占位符检测只在标签文本上做
+            # （否则 <input placeholder="..."> 表单属性会被当成内容缺陷）
+            scan_text = strip_html_for_scan(body)
+
             for pattern in PLACEHOLDER_PATTERNS:
-                matches = pattern.findall(body)
+                matches = pattern.findall(scan_text)
                 if matches:
                     issues.append({
                         "type": "content_placeholder",
@@ -498,22 +588,27 @@ def check_ai_forbidden_words():
 def check_title_meta_length():
     """检查Title和Meta description长度"""
     issues = []
-    
+
     for md_file in CONTENT_DIR.rglob("*.md"):
         rel_path = str(md_file.relative_to(ROOT))
         if any(exclude in rel_path for exclude in ['drafts', '.audit_backup', '_drafts', '_draft', '.archived']):
             continue
+        # 交易类状态页豁免「Title 过短」检查。
+        # TITLE_MIN=20 是为 SEO 文章标题设计的下限（配合 head 模板的
+        # " | ChinaBound Travel" 后缀）。支付成功/取消这类事务页的标题
+        # 本来就该短，"Payment Successful!" 不是缺陷。
+        # 只豁免 too_short，不豁免 too_long——事务页标题过长同样是真问题。
+        # 按文件白名单，不放开整个 content/ 根目录，避免掩盖其他页面的真实短标题。
+        is_short_exempt = str(md_file.relative_to(CONTENT_DIR)) in SHORT_TITLE_EXEMPT
         try:
             content = md_file.read_text(encoding="utf-8", errors="replace")
-            front_matter_match = re.match(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
-            if not front_matter_match:
+            front_matter, _body = split_front_matter(content)
+            if not front_matter:
                 continue
-            front_matter = front_matter_match.group(1)
-            
+
             # Title长度检查
-            title_match = re.search(r"title\s*:\s*[\"']?([^\"'\n]+)", front_matter)
-            if title_match:
-                title = title_match.group(1).strip()
+            title = front_matter_field(front_matter, "title")
+            if title:
                 if is_title_too_long(title):
                     issues.append({
                         "type": "title_too_long",
@@ -529,7 +624,7 @@ def check_title_meta_length():
                         ),
                         "agent": "seo"
                     })
-                elif len(title) < TITLE_MIN:
+                elif len(title) < TITLE_MIN and not is_short_exempt:
                     issues.append({
                         "type": "title_too_short",
                         "severity": "low",
@@ -540,9 +635,8 @@ def check_title_meta_length():
                     })
             
             # Meta description长度检查
-            desc_match = re.search(r"description\s*:\s*[\"']?([^\"'\n]+)", front_matter)
-            if desc_match:
-                desc = desc_match.group(1).strip()
+            desc = front_matter_field(front_matter, "description")
+            if desc:
                 if len(desc) > 165:
                     issues.append({
                         "type": "meta_description_too_long",

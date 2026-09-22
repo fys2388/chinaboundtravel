@@ -126,7 +126,15 @@ TEST_CASES = [
         "body": {"email": "test-api-health@example.com", "source": "api_health_audit"},
         "expected_status": 200,
         "expected_fields": ["success"],
-        "description": "正常 email 订阅应返回 200",
+        # 语义契约：success 必须反映客户是否真的收到了东西（见
+        # functions/api/subscribe.js 的 P0-FIX 2026-09-20）。
+        # 不强制 delivered_pdf=true —— 审计用的 example.com 是 RFC 5614 保留域名，
+        # Resend 会拒收（"Please use our testing email address instead of domains
+        # like `example.com`"），这不代表真实订阅者收不到。
+        # 因此若 semantic_warnings 里只有 success 一项，含义是「本审计邮箱无法
+        # 验证送达」，需要一条真实域名的验证路径才能闭环。
+        "expected_json_values": {"success": True},
+        "description": "正常 email 订阅应返回 200 + success=true",
         "severity": "critical",
     },
     {
@@ -270,6 +278,7 @@ def run_test(base_url: str, test_case: Dict) -> Dict:
             return result
 
         # 检查响应字段
+        body = None
         if test_case.get("expected_fields"):
             try:
                 body = resp.json()
@@ -281,6 +290,26 @@ def run_test(base_url: str, test_case: Dict) -> Dict:
             except Exception as e:
                 result["error"] = f"Response is not valid JSON: {e}"
                 return result
+
+        # 语义契约检查：校验字段「值」而不只是字段「存在」。
+        # 只做 expected_fields 会让 description 写了 "success=true" 的用例在
+        # success=false 时依然判 passed —— 契约被违反却没有任何信号。
+        # 这里单独产出 semantic_warnings / semantic_passed，不改动 passed：
+        # passed 仍只代表 HTTP 可达性。这样「测试邮箱被 Resend 拒收」不会被误报成
+        # API 宕机，但语义缺口也不会被静默吞掉。
+        if body is None:
+            try:
+                body = resp.json()
+            except Exception:
+                body = None
+        if body is not None and test_case.get("expected_json_values"):
+            warnings = []
+            for field, want in test_case["expected_json_values"].items():
+                if body.get(field) != want:
+                    warnings.append(f"{field}: expected {want!r}, got {body.get(field)!r}")
+            if warnings:
+                result["semantic_warnings"] = warnings
+                result["semantic_passed"] = False
 
         result["passed"] = True
 

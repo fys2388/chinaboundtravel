@@ -1,0 +1,129 @@
+{
+  "agent": "revenue",
+  "agent_name": "Revenue Analytics Engine (收入分析引擎)",
+  "task_id": "task_2026-09-22_audit_revenue",
+  "created_at": "2026-09-22T10:00:00+00:00",
+  "updated_at": "2026-09-22T14:40:00+00:00",
+  "target_date": "2026-09-21",
+  "task_source": "daily_report_audit",
+  "source_file": "reports/daily_report_audit/AUDIT_daily_report_authenticity_2026-09-21.md",
+  "issue_count": 3,
+  "severity_summary": {
+    "critical": 1,
+    "high": 2
+  },
+  "issues": [
+    {
+      "id": "AUDIT-RV-001",
+      "type": "experiment_registry_conflict",
+      "title": "实验登记表三方矛盾（DRIVE-001 / REV001 / REV002），日报据此把 DRIVE-001 升级为最高优先级待办 #1",
+      "description": "日报「实验与阻塞」表的状态来源是 static/experiments.json，其 updated_at = 2026-09-06（已 15 天未更新），且与另外两份权威登记表互相矛盾。日报在此基础上把 DRIVE-001 列为「今日高优先级待办 #1 🔴 状态异常」。",
+      "page": "static/experiments.json",
+      "file": "static/experiments.json",
+      "evidence": "三方冲突：① DRIVE-001 —— 日报显示 PLANNED 并升级告警；docs/AI_CONTEXT.md 记录 RUNNING（start 2026-08-16，ACTIVE）；reports/revenue/EXPERIMENT_COMPARISON.csv 记录 observation_days=1、status=INSUFFICIENT_SAMPLE、data_source=CACHED。② REV002 —— 日报显示 PLANNED；reports/revenue/REV002_EXPERIMENT_REGISTRY.csv 记录 status=RETIRED、decision=RETIRED_INVALID_INSTRUMENT（已退役，非待启动）。③ REV001 —— 日报显示 PLANNED、观察 0d；docs/AI_CONTEXT.md 记录 RUNNING（start 2026-08-16），若为真则是 36 天 0 样本，属埋点失效而非未启动。后果：若 Drive 实际在跑，日报的 #1 待办是假警报，浪费了排查精力；若确实未部署，则 AI_CONTEXT.md 与 EXPERIMENT_COMPARISON.csv 需修正。两种情况下日报都没有给出正确判断依据 —— 它把一份 15 天前、且自相矛盾的文件当作事实输出，并在此基础上升级了告警等级。代码侧：feishu_daily_report.py:894-895 只检测单向漂移（快照 RUNNING 实为幻影），反向漂移（experiments.json 陈旧 → 在跑实验显示为 PLANNED）无处理。",
+      "recommended_action": "1) 现场核实 DRIVE-001 的实际部署状态：检查线上页面 HTML 中 Travelpayouts Drive 横幅是否存在（可查 static/ 或 layouts/ 中的横幅组件及其启用条件），以及在 GA4 中 banner_click 事件是否有数据。2) 根据核实结果统一三方登记表：更新 static/experiments.json 的 status 与 updated_at；同步 REV002 的 RETIRED 状态到 experiments.json（已退役的实验不应显示为 PLANNED）；修正 AI_CONTEXT.md 中与实际不符的记录。3) 判定 REV001：若在跑 36 天 0 样本，则确认 affiliate_click 埋点是否存在（对照 12 次 TP 点击是否能归因到 affiliate_click 事件）；若埋点缺失，这是收入归因的结构性缺陷，需与 AUDIT-FE-004 一并处理。4) 建立实验登记表的单一事实源约定：明确哪份文件是权威（建议 static/experiments.json 为唯一源，AI_CONTEXT.md 只引用不复制状态），并给 experiments.json 加 updated_at 校验（超过 N 天未更新即在日报标注陈旧）。",
+      "severity": "critical",
+      "agent": "revenue",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "revenue",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "note": "日报已知的 12 次 TP 点击全部无归因（0 订单 0 佣金）；若 affiliate_click 埋点本身缺失，则所有实验的 primary_metric 都不可测，这是比单个实验状态更根本的问题",
+      "expected_post_fix": "三方登记表状态一致；experiments.json updated_at 为当日；DRIVE-001 的告警被证实或撤销；REV002 显示 RETIRED；affiliate_click 事件的可测性有明确结论"
+    },
+    {
+      "id": "AUDIT-RV-002",
+      "type": "revenue_attribution_invisible",
+      "title": "联盟链接 tracking 覆盖率 211/211 已达标，但 tp_inits 未上报、12 次点击 0 归因，佣金归因链不可验证",
+      "description": "本次审计重跑 affiliate_link_audit.audit() 确认 links_tracked=211 / links_total=211、links_untracked=0，日报的 211/211 覆盖率数字真实。但链路另一端不可验证：tp_inits（Travelpayouts 初始化数）在日报中标为「未上报」而非 0，且 12 次点击全部无归因（0 订单 0 佣金）。这意味着「链接带 tracking」只是必要条件，实际归因链是否工作无法从现有数据判断。",
+      "page": "https://www.chinaboundtravel.com",
+      "file": "scripts/feishu_daily_report.py",
+      "evidence": "affiliate_link_audit.audit() 实测：links_tracked=211, links_untracked=0, keys_total=8, keys_tracked=7, keys_untracked=1（partnerizeUserId 无 URL 但不计入链接）。日报 tp_inits=0 已正确标为「未上报（点击>0，勿读作 0 展示）」。tp_clicks=12, tp_orders=0, tp_commission=$0.00。",
+      "recommended_action": "1) 确认 Travelpayouts 后台是否真有 12 次点击的记录（需人工登录 Travelpayouts，本机无法访问）。2) 排查 tp_inits 为何持续未上报 —— 是采集端缺失、字段映射错误，还是 Travelpayouts API 无此字段。3) 确认 affiliate_click GA4 事件的埋点是否存在（与 AUDIT-RV-001 的 REV001 判定共用同一结论）。4) 注意：NordVPN/AffiliatesCN 渠道未接入自动化，合计佣金 $0.00 仅代表 Travelpayouts 接入渠道的下限，不是全量佣金 —— 该自我标注在日报中已存在，保留。",
+      "severity": "high",
+      "agent": "revenue",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/verification_evidence_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "revenue",
+      "detected_at": "2026-09-22T10:00:00+00:00",
+      "auto_fixable": false,
+      "external_dependency": "需人工登录 Travelpayouts 后台核实点击记录，本机无法访问",
+      "expected_post_fix": "tp_inits 恢复上报或明确标注该字段不可得；12 次点击在 TP 后台有对应记录；affiliate_click 埋点存在性有明确结论"
+    },
+    {
+      "id": "AUDIT-RV-003",
+      "type": "delivery_unverifiable",
+      "title": "PDF 送达不可验证：Resend 对审计邮箱返回 422，无任何监控项会因此报警",
+      "description": "订阅审计实测：MailerLite 写入成功但 Resend 返回 422 validation_error。该用例在两个健康检查里都判 passed（见 AUDIT-FE-007），因此送达失败完全不可见。",
+      "page": "functions/api/subscribe.js",
+      "file": "scripts/subscription_health_audit.py",
+      "evidence": "subscription_health_20260921_215530.json 的 response_body.detail：",
+      "resend_error_verbatim": "Resend:422:body=[{\"statusCode\":422,\"name\":\"validation_error\",\"message\":\"Invalid `to` field. Please use our testing email address instead of domains like `example.com`.\"}]}",
+      "important_caveat": "subscription_health_audit.py:285 的注释判断该 422 源于 example.com 属 RFC 5614 保留域名，真实订阅者不受影响——该解释技术上可信，本机无法验证 Resend 发信域名是否已验证。**因此不能断言真实用户收不到 PDF**，只能断言：现有测试无法验证送达，且没有任何监控项会因送达失败而报警。",
+      "recommended_action": "① 在 Resend 后台确认发信域名验证状态；② 提供一条使用真实域名的送达验证路径，或明确记录「送达不可验证」并给出兜底方案（当前前端已有兜底直链，见 AUDIT-FE-006）；③ 在健康检查中把「送达不可验证」作为独立信号暴露。",
+      "severity": "high",
+      "agent": "revenue",
+      "action": "manual_review",
+      "source": "daily_report_audit",
+      "source_file": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+      "task_source": "daily_report_audit",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "revenue",
+      "detected_at": "2026-09-22T14:40:00+00:00",
+      "found_by": "FIX-RUN-2026-09-22",
+      "found_in": "本轮修复中顺带发现（原审计未发现）",
+      "auto_fixable": false,
+      "expected_post_fix": "有一条真实域名验证路径能确认送达，或明确标注送达不可验证",
+      "blocks": []
+    }
+  ],
+  "priority_issue": {
+    "id": "AUDIT-RV-001",
+    "type": "experiment_registry_conflict",
+    "title": "实验登记表三方矛盾（DRIVE-001 / REV001 / REV002），日报据此把 DRIVE-001 升级为最高优先级待办 #1",
+    "severity": "critical"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "new",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "fix_run": "FIX-RUN-2026-09-22",
+    "committed": false,
+    "note": "0 项已修复并验证 []，3 项仍需责任人处理（new=3 / blocked=0）。"
+  },
+  "status_by_issue": {
+    "AUDIT-RV-001": "new",
+    "AUDIT-RV-002": "new",
+    "AUDIT-RV-003": "new"
+  },
+  "fix_run": {
+    "run_id": "FIX-RUN-2026-09-22",
+    "at": "2026-09-22T14:40:00+00:00",
+    "changed_files": [
+      "layouts/partials/email-subscribe.html",
+      "layouts/shortcodes/lead-magnet-cta.html",
+      "scripts/api_health_audit.py",
+      "scripts/feishu_daily_report.py",
+      "scripts/okr_utils.py",
+      "scripts/site_health_agent.py"
+    ],
+    "verification_script": "C:/temp/dsh/verify_all_fixes.py",
+    "committed": false,
+    "commit_note": "未 commit。用户未明确要求提交；本仓有并发 agent 每 30 分钟提交 main，提交前须 git pull --rebase。改动在工作区可直接审阅 diff。",
+    "ledger": "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json"
+  }
+}
