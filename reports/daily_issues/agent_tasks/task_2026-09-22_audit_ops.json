@@ -186,18 +186,18 @@
   "expected_actions": [
     "manual_review"
   ],
-  "status": "partially_resolved",
+  "status": "resolved",
   "execution": {
-    "resolved_count": 3,
+    "resolved_count": 4,
     "failed_count": 0,
-    "completed_at": "2026-09-22T17:20:00+08:00",
-    "fix_run": "FIX-RUN-2026-09-22-R2",
+    "completed_at": "2026-09-22T19:30:00+08:00",
+    "fix_run": "FIX-RUN-2026-09-22-R3",
     "committed": true,
-    "commit_sha": "7419ad21",
-    "note": "5 项中 2 项已解决（AUDIT-OPS-002、AUDIT-OPS-004），2 项仍开放（AUDIT-OPS-001 blocked 需授权、AUDIT-OPS-003 new）；AUDIT-FE-007 早前已解决。"
+    "commit_sha": "d65894cc",
+    "note": "5 项中 4 项已解决（OPS-001/002/004、FE-007），仅 AUDIT-OPS-003 保持 new（GSC 快照凭据/采集未刷新，属独立运维事项）。OPS-001 于 d65894cc 通过补 static/_redirects + hugo.toml sitemapExclude 闭环，孤儿页判定口径第三次修正。"
   },
   "status_by_issue": {
-    "AUDIT-OPS-001": "blocked",
+    "AUDIT-OPS-001": "resolved",
     "AUDIT-OPS-002": "resolved",
     "AUDIT-OPS-003": "new",
     "AUDIT-FE-007": "resolved",
@@ -232,8 +232,23 @@
         "scripts/site_health_agent.py"
       ],
       "verification": "grep 复核 scripts/ 下所有孤儿页/文章页枚举点：seo_structured_data_audit.py:134 已排除；site_health_agent.py 不枚举 public/posts（只读 content/ 与 public/sitemap.xml）；ORPHAN_PAGE_DISPOSITION_2026-09-22.md:68 的 67 篇口径已排除 page 目录。"
+    },
+    "third_run": {
+      "run_id": "FIX-RUN-2026-09-22-R3",
+      "at": "2026-09-22T19:30:00+08:00",
+      "commit": "d65894cc",
+      "resolved": [
+        "AUDIT-OPS-001"
+      ],
+      "changed_files": [
+        "static/_redirects",
+        "hugo.toml",
+        "reports/daily_report_audit/ISSUE_TRACKING_LEDGER_2026-09-21.json",
+        "reports/daily_issues/agent_tasks/task_2026-09-22_audit_ops.json"
+      ],
+      "verification": "static/_redirects:141-149 追加 /posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/ → /posts/chinabound-travel-guide-2026-09-monthly-update/ 301；hugo.toml:30 sitemapExclude 追加同 slug 条目；ledger AUDIT-OPS-001 status=resolved、corrections=3 条、summary.total_open=10/total_resolved=11、open_ids/resolved_ids 无交集。"
     }
   },
-  "open_count": 2,
-  "resolved_count": 3
+  "open_count": 1,
+  "resolved_count": 4
 }
