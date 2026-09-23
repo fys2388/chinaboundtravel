@@ -3,13 +3,13 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-23_ops",
   "created_at": "2026-09-23T01:00:24.398335+00:00",
-  "updated_at": "2026-09-23T11:30:28.046201",
+  "updated_at": "2026-09-23T11:56:45.624727",
   "target_date": "2026-09-23",
-  "issue_count": 2,
+  "issue_count": 3,
   "severity_summary": {
     "critical": 1,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 0
   },
   "issues": [
@@ -52,6 +52,26 @@
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-09-23T01:54:31.305408+00:00"
+    },
+    {
+      "id": "workflow-35857392085-unknown",
+      "type": "unknown",
+      "title": "Test Regression Gate (回归闸门) 失败：未分类错误",
+      "description": "gate / Fail on new regressions",
+      "page": "Test Regression Gate (回归闸门)",
+      "file": "Test Regression Gate (回归闸门)",
+      "evidence": "##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "medium",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-09-23T11:56:43.677233+00:00"
     }
   ],
   "priority_issue": {
@@ -82,6 +102,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }
