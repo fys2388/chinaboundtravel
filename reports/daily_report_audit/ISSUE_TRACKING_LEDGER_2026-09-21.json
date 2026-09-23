@@ -29,7 +29,7 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（UDM token 落盘清洗 + check_mailerlite_hygiene lint gate + CONTRIBUTING.md lint 规则固化 + _draft/ 历史 attempt 精简）（fix_run: FIX-RUN-2026-09-23-P3P4-CLOSING，commits: b7a738d6 + 9badc6fe + abb3152c）。 total_issues=23, open=0, resolved=23。all closed.",
+    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（UDM token 落盘清洗 + check_mailerlite_hygiene lint gate + CONTRIBUTING.md lint 规则固化 + _draft/ 历史 attempt 精简）（fix_run: FIX-RUN-2026-09-23-P3P4-CLOSING，commits: b7a738d6 + 9badc6fe + abb3152c） + OPS-005 tail 修 subscriber_count 计数逻辑（fix_run: FIX-RUN-2026-09-23-OPS005-TAIL，commit 待补）。 total_issues=23, open=0, resolved=23。all closed.",
     "total_resolved": 23,
     "by_status": {
       "blocked": 0,
@@ -68,7 +68,7 @@
     "open_ids": [],
     "generated_at": "2026-09-23T12:00:00+08:00",
     "total_issues": 23,
-    "updated_at": "2026-09-23T13:30:00+08:00"
+    "updated_at": "2026-09-23T13:40:00+08:00"
   },
   "system_constraint": {
     "problem": "问题分配闭环自 2026-09-04 起空转 18 天",
@@ -944,8 +944,9 @@
             "feishu_yearly._fetch_yearly_mailerlite": "{'ml_available': True, 'ml_total_subscribers': 1}"
           }
         },
-        "note": "根因是编码问题不是凭据问题：MailerLite API 凭据本身有效（token len=988），是 BOM 导致 latin-1 编码失败。生产路径早就修好但本地审计一直漏。教训：任何读取 .env 中 API 凭据的 Python 脚本必须走 ml_utils.get_mailerlite_token()，不允许再散点实现。",
-        "diff_stat": "10 files changed, 272 insertions(+), 50 deletions(-)"
+        "note": "P3 残留已在本轮全部闭环（FIX-RUN-2026-09-23-OPS005-TAIL）：(1) unified_data_manager.py 5 类 token 落盘字段已接 _clean_token；(2) check_mailerlite_connection 已改用 ml_utils.list_subscribers cursor 分页取真实总数，不再用 GET ?limit=1 + len(data.data) 把『至少 1 个订阅者』误导成『总订阅者数=1』；(3) 新增 count_source='full_paginated' 标记计数来源，失败时 subscriber_count=None 不误导。 原 note: P3 残留已在本轮全部闭环（FIX-RUN-2026-09-23-OPS005-TAIL）：(1) unified_data_manager.py 5 类 token 落盘字段已接 _clean_to",
+        "diff_stat": "10 files changed, 272 insertions(+), 50 deletions(-)",
+        "residual": "所有 P3 项已闭环：(1) token BOM 消费者侧已剥离（9 脚本接入 ml_utils.get_mailerlite_token）；(2) UDM token 落盘已接 clean_token；(3) check_mailerlite_connection 已改用 ml_utils.list_subscribers cursor 分页取真实总数。fix_runs: FIX-RUN-2026-09-23-OPS005, FIX-RUN-2026-09-23-OPS005-TAIL"
       }
     },
     {
@@ -1410,6 +1411,33 @@
           "AUDIT-OPS-001 content/_draft/ 堆积：从 34 → 9，每个 slug 只保留最新 attempt",
           "AUDIT-SEO-002/003 + AUDIT-CT-002/003 已在 f6d1d457 关闭",
           "CONTRIBUTING.md 新建：MailerLite 订阅者卫生 lint 规则固化到贡献者文档"
+        ],
+        "not_done": []
+      }
+    },
+    {
+      "run_id": "FIX-RUN-2026-09-23-OPS005-TAIL",
+      "fix_date": "2026-09-23",
+      "summary": "AUDIT-OPS-005 残留收尾：修 check_mailerlite_connection 的 subscriber_count 计数逻辑（limit=1 误导为总数=1 的老 bug）",
+      "committed": false,
+      "commit_sha": null,
+      "commit_note": "fix(ops): AUDIT-OPS-005 tail - 修 check_mailerlite_connection subscriber_count 计数逻辑",
+      "fixes_applied": [
+        {
+          "id": "OPS-005-TAIL-COUNT-BUG",
+          "severity": "P3",
+          "fix": "scripts/subscription_health_audit.py:272 check_mailerlite_connection() 里 GET /api/subscribers?limit=1 的 subscriber_count = len(data.data) 永远返回 1（因为 limit=1），把『至少 1 个订阅者』误导成『总订阅者数=1』。改为调用 ml_utils.list_subscribers(token, max_pages=50) 用 cursor 分页走完整遍历，返回真实订阅者总数。失败路径仍标 connected=True（能连到 API 说明 token 有效），但 subscriber_count=None 表示未取到全量，避免误导。响应新增 count_source='full_paginated' 明确计数来源。",
+          "changed_files": [
+            "scripts/subscription_health_audit.py"
+          ],
+          "verification": "ast.parse OK。真实 MailerLite 调用：subscriber_count=1, count_source=full_paginated, connected=True, error=None（本机实际只有 1 个真实订阅者 fys2388@gmail.com）。lint 二次运行 exit 0。"
+        }
+      ],
+      "verification_summary": "1. ast.parse(subscription_health_audit.py) OK。2. 真实 MailerLite 调用（load_dotenv 后）：subscriber_count=1, count_source=full_paginated, connected=True。3. check_mailerlite_hygiene.py lint exit 0。",
+      "residual_after_this_run": {
+        "done": [
+          "OPS-005 剩余 P3 项全部闭环：check_mailerlite_connection subscriber_count 计数逻辑已修，不再用 limit=1 误导",
+          "所有 MailerLite 相关审计脚本都走 ml_utils 的 cursor 分页（生产 / 审计 双向一致）"
         ],
         "not_done": []
       }

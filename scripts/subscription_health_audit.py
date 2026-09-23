@@ -270,12 +270,24 @@ def _clean_token(token: str) -> str:
 
 
 def check_mailerlite_connection() -> Dict:
-    """检查 MailerLite API 连接状态"""
+    """检查 MailerLite API 连接并计数真实订阅者。
+
+    AUDIT-OPS-005 沉淀：老实现用 `GET /api/subscribers?limit=1` 只测连通性，
+    把返回的 `data` 数组长度当成 subscriber_count 报告 —— 但因为 limit=1，
+    永远返回 1，把"至少 1 个订阅者"误导成"总订阅者数=1"。
+
+    现在改用 ml_utils.list_subscribers 的 cursor 分页走完整遍历，得到真实
+    订阅者总数。失败时仍标记 connected=True（说明 token 有效、API 可达），
+    但 subscriber_count=None 表示"未取到全量"，避免误导。
+    """
+    import ml_utils
+
     api_token = get_mailerlite_token()
     result = {
         "configured": bool(api_token),
         "connected": False,
         "subscriber_count": None,
+        "count_source": "full_paginated",
         "error": None,
     }
 
@@ -284,17 +296,13 @@ def check_mailerlite_connection() -> Dict:
         return result
 
     try:
-        resp = requests.get(
-            "https://connect.mailerlite.com/api/subscribers?limit=1",
-            headers={"Authorization": f"Bearer {api_token}"},
-            timeout=10
-        )
-        if resp.status_code == 200:
-            result["connected"] = True
-            data = resp.json()
-            result["subscriber_count"] = data.get("total", len(data.get("data", [])))
-        else:
-            result["error"] = f"API 返回 {resp.status_code}: {resp.text[:100]}"
+        subs = ml_utils.list_subscribers(api_token, max_pages=50, retries=3, verbose=False)
+        result["connected"] = True
+        result["subscriber_count"] = len(subs)
+    except RuntimeError as e:
+        # ml_utils.list_subscribers 认证失败会 raise RuntimeError
+        result["connected"] = True  # 能拿到 401 说明 API 通，token 无效
+        result["error"] = f"认证失败: {str(e)[:100]}"
     except Exception as e:
         result["error"] = f"连接失败: {str(e)[:100]}"
 
