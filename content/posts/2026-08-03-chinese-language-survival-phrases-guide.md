@@ -209,3 +209,5 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 - [China Bargaining Guide: How to Haggle & Shop](https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/)
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

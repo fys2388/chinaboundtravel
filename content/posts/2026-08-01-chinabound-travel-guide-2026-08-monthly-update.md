@@ -171,6 +171,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
 ## FAQ
 
 ### Do I need a visa for China?

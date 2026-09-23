@@ -146,3 +146,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [Where to Stay in China: Hotels & Budget](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

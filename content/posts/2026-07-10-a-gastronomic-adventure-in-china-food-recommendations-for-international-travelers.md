@@ -156,6 +156,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
 
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
 ## FAQ
 
 ### What should I know about best food in china?

@@ -143,3 +143,5 @@ Finding the well-suited accommodation in China can be a challenge, but with a li
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)
 - [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
