@@ -32,6 +32,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any
 
+# 2026-09-23 AUDIT-OPS-005：统一从 ml_utils 取 MailerLite token 清洗逻辑。
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+from ml_utils import clean_token, get_mailerlite_token  # noqa: E402
+
 try:
     import requests
 except ImportError:
@@ -44,6 +50,12 @@ sys.stderr.reconfigure(encoding="utf-8")
 DEFAULT_BASE_URL = "https://www.chinaboundtravel.com"
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports" / "subscription_health"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+# 2026-09-23 AUDIT-OPS-005：固定测试邮箱。
+# 每次 audit 运行都用同一地址，MailerLite POST /subscribers 对已存在 email
+# 会返回 200 并更新 fields，不新建记录。3 天累积 28 条 test-subscribe-<ts>
+# 脏订阅者的根因是每轮用不同 timestamp 绕过 MailerLite "已订阅" 检测。
+AUDIT_TEST_EMAIL = "healthcheck.chinaboundtravel@example.com"
 
 # 订阅页面检查列表
 # 2026-09-18 修复：移除 "/blog/"。线上实测 404——博客在 /posts/
@@ -62,7 +74,16 @@ TEST_CASES = [
         "endpoint": "/api/subscribe",
         "name": "subscribe_valid_email",
         "method": "POST",
-        "body": {"email": "test-subscribe-" + str(int(time.time())) + "@example.com"},
+        # 2026-09-23 AUDIT-OPS-005：改用固定测试邮箱。
+        # 旧实现 "test-subscribe-<timestamp>@example.com" 每次运行都会创建
+        # 一个全新的 MailerLite 订阅者（用不同 timestamp 绕过 MailerLite 的
+        # "已订阅" 检测），3 天累积污染 28 条脏订阅者。
+        # 固定邮箱：MailerLite POST /subscribers 对已存在 email 会返回 200
+        # 并把 signup_source/lead_magnet 字段更新为本次值，不新建记录。
+        # Resend 依然会因 @example.com 返回 422 —— 这是设计意图，用来
+        # 证明 Resend API 已配置并真的发出了请求（见
+        # derive_endpoint_provider_status 注释）。
+        "body": {"email": AUDIT_TEST_EMAIL},
         "expected_status": 200,
         # 2026-09-18 修复：原先要求 ["success", "message"]，但线上实际响应是
         # {"success":true,"subscriber_created":true,"delivered_pdf":false,
@@ -238,9 +259,19 @@ def check_subscription_pages(base_url: str) -> List[Dict]:
     return results
 
 
+def _clean_token(token: str) -> str:
+    """清洗 API token：委托 ml_utils.clean_token（2026-09-23 AUDIT-OPS-005）。
+
+    保留此 wrapper 因为其它代码可能按名字 _clean_token 引用；实现细节
+    统一在 scripts/ml_utils.py，语义与 functions/api/subscribe.js:cleanToken
+    完全一致（剥离 UTF-8 BOM、去空白、剔除非可打印字符）。
+    """
+    return clean_token(token)
+
+
 def check_mailerlite_connection() -> Dict:
     """检查 MailerLite API 连接状态"""
-    api_token = os.environ.get("MAILERLITE_API_TOKEN", "")
+    api_token = get_mailerlite_token()
     result = {
         "configured": bool(api_token),
         "connected": False,

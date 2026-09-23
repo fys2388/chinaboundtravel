@@ -63,6 +63,12 @@ GA4_API_KEY = os.environ.get("GA4_API_KEY", "")
 GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
+_SCRIPTS_DIR_LOCAL = os.path.dirname(os.path.abspath(__file__))
+if _SCRIPTS_DIR_LOCAL not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR_LOCAL)
+from ml_utils import clean_token as _ml_clean_token  # noqa: E402
+MAILERLITE_API_TOKEN = _ml_clean_token(MAILERLITE_API_TOKEN)  # 2026-09-23 AUDIT-OPS-005
+
 GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
 GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
@@ -483,16 +489,14 @@ class FeishuWeeklyReporter:
         return {"status": "error", "estimated_pages": len(list(POSTS_DIR.glob("*.md"))) if POSTS_DIR.exists() else 0}
 
     def _fetch_weekly_mailerlite(self) -> dict:
-        """获取MailerLite数据（未配置/认证失败时明确标记，不伪装成 0）"""
+        """获取MailerLite数据（未配置/认证失败时明确标记，不伪装成 0）
+        2026-09-23 AUDIT-OPS-005：token 已在模块顶层用 ml_utils.clean_token() 剥离 BOM。
+        """
         if not MAILERLITE_API_TOKEN:
             return {"ml_available": False, "ml_error": "MAILERLITE_API_TOKEN 未配置"}
 
-        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
-        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
-        clean_token = "".join(c for c in clean_token if ord(c) < 128)
-
         try:
-            headers = {"Authorization": f"Bearer {clean_token}", "Content-Type": "application/json"}
+            headers = {"Authorization": f"Bearer {MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
             resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params={"limit": 1}, timeout=15)
             if resp.status_code != 200:
                 print(f"   ⚠️ MailerLite API 响应 {resp.status_code}: {resp.text[:150]}")

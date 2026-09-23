@@ -36,6 +36,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+# 2026-09-23 AUDIT-OPS-005：从 ml_utils 统一取 MailerLite token（剥离 UTF-8 BOM）。
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+from ml_utils import get_mailerlite_token  # noqa: E402
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -90,7 +96,11 @@ def load_env() -> None:
 
 
 def get_token() -> str:
-    return os.environ.get("MAILERLITE_API_TOKEN", "").strip()
+    # 2026-09-23 AUDIT-OPS-005：委托给 ml_utils.get_mailerlite_token()
+    # 以剥离 UTF-8 BOM（本机 .env 里 MAILERLITE_API_TOKEN 常带 \ufeff 前缀，
+    # 直接 os.environ.get 会导致 requests latin-1 编码崩溃）。保留本 wrapper
+    # 以免修改其它调用点。
+    return get_mailerlite_token()
 
 
 # ---------------------------------------------------------------------------

@@ -146,6 +146,13 @@ GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
 # MailerLite 订阅配置
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
+# 2026-09-23 AUDIT-OPS-005：接入 ml_utils.clean_token，语义与
+# functions/api/subscribe.js:cleanToken 完全一致（剥离 BOM + 空白 + 剔非可打印 ASCII）
+_SCRIPTS_DIR_LOCAL = os.path.dirname(os.path.abspath(__file__))
+if _SCRIPTS_DIR_LOCAL not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR_LOCAL)
+from ml_utils import clean_token as _ml_clean_token  # noqa: E402
+MAILERLITE_API_TOKEN = _ml_clean_token(MAILERLITE_API_TOKEN)
 
 # GitHub 配置
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -2238,18 +2245,16 @@ class FeishuDailyReporter:
         return {"nord_available": False}
     
     def _fetch_mailerlite(self) -> dict:
-        """获取 MailerLite 订阅数据（总订阅数 + 昨日新增）"""
+        """获取 MailerLite 订阅数据（总订阅数 + 昨日新增）
+        2026-09-23 AUDIT-OPS-005：token 已在模块顶层用 ml_utils.clean_token() 剥离 BOM。
+        """
         if not MAILERLITE_API_TOKEN:
             print("   ⚠️ MailerLite API Token 未配置")
             return None
 
-        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
-        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
-        clean_token = "".join(c for c in clean_token if ord(c) < 128)
-
         try:
             headers = {
-                "Authorization": f"Bearer {clean_token}",
+                "Authorization": f"Bearer {MAILERLITE_API_TOKEN}",
                 "Content-Type": "application/json"
             }
             

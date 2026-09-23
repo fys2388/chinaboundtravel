@@ -54,6 +54,12 @@ TRAVELPAYOUTS_MARKER = os.environ.get("TRAVELPAYOUTS_MARKER", "730795")
 GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "538482322")
 GA4_SERVICE_ACCOUNT_JSON = os.environ.get("GA4_SERVICE_ACCOUNT_JSON", "")
 MAILERLITE_API_TOKEN = os.environ.get("MAILERLITE_API_TOKEN", "")
+_SCRIPTS_DIR_LOCAL = os.path.dirname(os.path.abspath(__file__))
+if _SCRIPTS_DIR_LOCAL not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR_LOCAL)
+from ml_utils import clean_token as _ml_clean_token  # noqa: E402
+MAILERLITE_API_TOKEN = _ml_clean_token(MAILERLITE_API_TOKEN)  # 2026-09-23 AUDIT-OPS-005
+
 GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
 GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
@@ -253,17 +259,28 @@ class FeishuYearlyReporter:
     def _fetch_yearly_mailerlite(self) -> dict:
         if not MAILERLITE_API_TOKEN:
             return {"ml_available": False}
-        # 清洗 token：去除 BOM（\ufeff）和空白，避免 latin-1 编码错误
-        clean_token = MAILERLITE_API_TOKEN.lstrip("\ufeff").strip()
-        clean_token = "".join(c for c in clean_token if ord(c) < 128)
+        # 2026-09-23 AUDIT-OPS-005：MAILERLITE_API_TOKEN 已在模块顶层用
+        # ml_utils.clean_token() 剥离 BOM。同时把 x-total-count 换成 cursor 分页。
         try:
-            headers = {"Authorization": f"Bearer {clean_token}", "Content-Type": "application/json"}
-            resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers,
-                                params={"limit": 1}, timeout=15)
-            if resp.status_code != 200:
-                return {"ml_available": False}
-            return {"ml_available": True,
-                    "ml_total_subscribers": int(resp.headers.get("x-total-count", "0"))}
+            headers = {"Authorization": f"Bearer {MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
+            total = 0
+            cursor = None
+            for _ in range(20):
+                params = {"limit": 1000}
+                if cursor:
+                    params["cursor"] = cursor
+                resp = requests.get("https://connect.mailerlite.com/api/subscribers",
+                                    headers=headers, params=params, timeout=15)
+                if resp.status_code != 200:
+                    return {"ml_available": False}
+                data = resp.json()
+                for s in data.get("data", []):
+                    if s.get("status") == "active":
+                        total += 1
+                cursor = (data.get("meta") or {}).get("next_cursor")
+                if not cursor:
+                    break
+            return {"ml_available": True, "ml_total_subscribers": total}
         except Exception as e:
             return {"ml_available": False}
 

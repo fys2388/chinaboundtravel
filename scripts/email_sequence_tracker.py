@@ -37,6 +37,16 @@ from typing import Any, Dict, List, Optional, Tuple
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
+# 2026-09-23 AUDIT-OPS-005：从 ml_utils 统一取 token（会剥离 UTF-8 BOM）。
+# 之前 os.environ.get("MAILERLITE_API_TOKEN").strip() 不处理 \ufeff，
+# requests 发 Bearer header 时 latin-1 编码崩溃 → 生成 "MailerLite API error
+# or missing token" 假信号。函数放在 main() 里用，因为模块 top-level 只有
+# PROJECT_ROOT 定义在下方。
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+from ml_utils import get_mailerlite_token  # noqa: E402
+
 # ---------------------------------------------------------------------------
 # Paths & constants
 # ---------------------------------------------------------------------------
@@ -522,7 +532,9 @@ def main() -> int:
     args = parser.parse_args()
 
     load_env()
-    token = os.environ.get("MAILERLITE_API_TOKEN", "").strip()
+    # 2026-09-23 AUDIT-OPS-005：get_mailerlite_token() 已剥离 UTF-8 BOM，
+    # 避免 requests latin-1 编码崩到 "MailerLite API error or missing token"。
+    token = get_mailerlite_token()
 
     print("=" * 70)
     print("  Email Sequence Tracker — Closed Loop 4")

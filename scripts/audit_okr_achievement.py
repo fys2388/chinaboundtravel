@@ -81,17 +81,54 @@ def tp_sum(start, end):
         return {"tp_available": False, "profit": 0, "err": str(e)}
 
 def ml_total():
-    if not qm.MAILERLITE_API_TOKEN:
+    # 2026-09-23 AUDIT-OPS-005：token 必须剥离 UTF-8 BOM。
+    # 之前直接用 qm.MAILERLITE_API_TOKEN 会让 requests 在 latin-1 编码
+    # Authorization header 时抛 UnicodeEncodeError('latin-1' codec can't
+    # encode '\ufeff')，导致本地审计报 "MailerLite API error"，线上却 OK。
+    # 统一走 ml_utils.get_mailerlite_token()，语义与 functions/api/subscribe.js
+    # 的 cleanToken 完全一致。
+    #
+    # 第二个修复：MailerLite API v3 已移除 `x-total-count` 响应头，
+    # 之前读 header 永远拿 0。改用分页遍历 data.data 数组计数。
+    import ml_utils
+    ml_token = ml_utils.get_mailerlite_token()
+    if not ml_token:
         return {"ml_available": False, "total": 0}
     try:
         import requests
-        headers = {"Authorization": f"Bearer {qm.MAILERLITE_API_TOKEN}", "Content-Type": "application/json"}
-        resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params={"limit": 1}, timeout=15)
-        if resp.status_code != 200:
-            return {"ml_available": False, "total": 0}
-        return {"ml_available": True, "total": int(resp.headers.get("x-total-count", "0"))}
-    except Exception:
-        return {"ml_available": False, "total": 0}
+        import time
+        headers = {"Authorization": f"Bearer {ml_token}", "Content-Type": "application/json"}
+        total_active = 0
+        cursor = None
+        for _ in range(20):  # 安全上限 ~20k subscribers
+            params = {"limit": 1000}
+            if cursor:
+                params["cursor"] = cursor
+            # 简单重试：网络偶发 SSL EOF
+            last_err = None
+            for attempt in range(3):
+                try:
+                    resp = requests.get("https://connect.mailerlite.com/api/subscribers", headers=headers, params=params, timeout=15)
+                    if resp.status_code == 200:
+                        break
+                    last_err = f"HTTP {resp.status_code}"
+                    resp = None
+                except Exception as e:
+                    last_err = str(e)[:80]
+                    time.sleep(1)
+            if resp is None or resp.status_code != 200:
+                return {"ml_available": False, "total": 0, "err": last_err}
+            data = resp.json()
+            batch = data.get("data", [])
+            for s in batch:
+                if s.get("status") == "active":
+                    total_active += 1
+            cursor = data.get("meta", {}).get("next_cursor")
+            if not cursor or len(batch) < 1000:
+                break
+        return {"ml_available": True, "total": total_active}
+    except Exception as e:
+        return {"ml_available": False, "total": 0, "err": str(e)[:100]}
 
 def scan_content():
     posts_dir = BLOG_ROOT / "content" / "posts"
