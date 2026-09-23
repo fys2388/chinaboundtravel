@@ -98,7 +98,7 @@
 | cities | content/cities/hangzhou.md | PASS | - | - | True |
 | cities | content/cities/shanghai.md | PASS | - | - | True |
 | cities | content/cities/western-sichuan.md | PASS | - | - | True |
-| cities | content/cities/xian.md | PASS | - | - | True |
+| cities | content/cities/xian.md | WARN | - | - | False |
 | cities | content/cities/yangshuo.md | PASS | - | - | True |
 | content | content/contact.md | PASS | - | - | True |
 | content | content/content/ai-trip-planner.md | WARN | - | - | False |
@@ -108,7 +108,7 @@
 | content | content/ebook/2026-08-03-travel-guide-2026-08.md | WARN | - | - | False |
 | content | content/ebook/2026-09-01-travel-guide-2026-09.md | WARN | - | - | False |
 | content | content/free-itinerary.md | WARN | - | - | False |
-| content | content/guides/_index.md | WARN | - | - | False |
+| content | content/guides/_index.md | PASS | - | - | True |
 | content | content/internet/_index.md | WARN | - | - | False |
 | content | content/member-month/_index.md | WARN | - | - | False |
 | content | content/member-year/_index.md | WARN | - | - | False |
