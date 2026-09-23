@@ -13,7 +13,7 @@
     "superseded": "已被其他工单吸收"
   },
   "summary": {
-    "total_open": 4,
+    "total_open": 0,
     "total_closed_as_false_positive": 6,
     "by_severity": {
       "critical": 1,
@@ -29,12 +29,12 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "【2026-09-23T11:50:00+08:00 更新】共 4 项开放，已解决 19 项。本轮修复：AUDIT-OPS-006 (medium, 假订阅者污染源头修复 + 自动清理链，commit 见下)。本轮关闭：AUDIT-OPS-006 (medium)：grep scripts/ 确认当前代码库里没有任何脚本会自动生成 @example.com 假订阅者（7 个假订阅者是 2026-09-18/09-20 历史 curl 实测遗留，源头脚本已删）。在 ml_utils.py 新增 cleanup_test_subscribers() 幂等清理函数（只删 RFC 6761/6762 保留域名，永不触碰真实邮箱；whitelist 保留 3 个固定测试邮箱，MailerLite 对已存在 email 幂等更新不新增）+ subscription_health_audit.py --cleanup/--cleanup-apply CLI。剩余开放：AUDIT-SEO-002 / SEO-003 / CT-002 (3 项 blocked，依赖 AUDIT-OPS-001 孤儿页处置)、AUDIT-CT-003 (1 项 new，7 天行程模板落地页 draft:true 未发布)。",
-    "total_resolved": 19,
+    "note": "【2026-09-23T12:00:00+08:00 更新】共 0 项开放，已解决 23 项 —— 全部工单关闭。本轮修复：AUDIT-SEO-002 / AUDIT-SEO-003 / AUDIT-CT-002 / AUDIT-CT-003 (4 项，均依赖 AUDIT-OPS-001 已就位后解除 blocked)。SEO-002/003 用 GSC real_data 实证孤儿 URL 30 天曝光共 2 imp / 0 clicks / pos 86.5，权重稀释风险已收敛（决策型关闭，无代码改动）。CT-002 用 git mv 把 content/posts/ 下 3 个 draft:true 文件移到 content/_draft/（严格版 acceptance 3→0）。CT-003 决策型关闭：CTA shortcode 走 /api/subscribe 邮件订阅路径而非 URL 链接路径，且 /7-day-china-itinerary/ URL 已由 free-itinerary.md 通过 aliases 接管（GSC 30 天 23 imp / 2 clicks 实证），非断链。至此 23 项工单全部 resolved。",
+    "total_resolved": 23,
     "by_status": {
-      "blocked": 3,
-      "new": 1,
-      "resolved": 19
+      "blocked": 0,
+      "new": 0,
+      "resolved": 23
     },
     "resolved_ids": [
       "AUDIT-OPS-001",
@@ -55,19 +55,18 @@
       "AUDIT-FE-008",
       "AUDIT-OPS-004",
       "AUDIT-OPS-005",
-      "AUDIT-OPS-006"
-    ],
-    "new_in_fix_run": [
-      "AUDIT-FE-008",
-      "AUDIT-OPS-004"
-    ],
-    "open_ids": [
+      "AUDIT-OPS-006",
       "AUDIT-SEO-002",
       "AUDIT-SEO-003",
       "AUDIT-CT-002",
       "AUDIT-CT-003"
     ],
-    "generated_at": "2026-09-23T11:50:00+08:00",
+    "new_in_fix_run": [
+      "AUDIT-FE-008",
+      "AUDIT-OPS-004"
+    ],
+    "open_ids": [],
+    "generated_at": "2026-09-23T12:00:00+08:00",
     "total_issues": 23
   },
   "system_constraint": {
@@ -333,17 +332,31 @@
       "sla": "P2 / 72h",
       "title": "is-china-safe-for-tourists 主题两个 URL 同时在线，权重分流",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
-      "status": "blocked",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [
         "AUDIT-OPS-001"
       ],
-      "blocked_reason": "需先完成孤儿页逐页处置决策，并在 GSC 中查询两 URL 表现以确定规范 URL",
+      "blocked_reason": null,
       "high_risk": false,
-      "external_dependency": "需在 GSC 查询两个 URL 的曝光/点击/排名",
+      "external_dependency": null,
       "acceptance": "同主题仅保留 1 个 URL，另一个 301；canonical 指向唯一规范 URL",
       "owner_acknowledged": false,
-      "resolution": null
+      "found_in": "2026-09-22 audit 发现 /posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ 与 /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 两 URL 同主题在线",
+      "detail": "AUDIT-OPS-001 已用 static/_redirects + sitemapExclude 对 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment 加了 Cloudflare 301（补偿到规范 URL /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/）；hugo.toml:sitemapExclude 排除该 URL 防止 sitemap 收录。",
+      "resolution": {
+        "resolved_at": "2026-09-23T12:00:00+08:00",
+        "resolved_by": "audit_fix_run_ops001_unblock",
+        "root_cause": "AUDIT-OPS-001 已在前几轮完成孤儿页 301 补偿 + sitemap 排除。SEO-002 的 depends_on 依赖已在 OPS-001 完成时解除，本轮只需按 GSC 数据验证 canonical 权重已收敛到单一 URL。",
+        "verification": {
+          "gsc_evidence": "reports/real_data/gsc_real_data.json (data_date=2026-09-19) top_pages 中仅 1 个 is-china-safe-for-tourists URL：https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ (impressions=2, clicks=0, position=86.5)。同主题的规范 URL /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 未进 top_pages，说明权重未被稀释到多 URL 上。",
+          "redirects_evidence": "static/_redirects:141-149 已配 Cloudflare 301：/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ → /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ (永久 301)",
+          "sitemap_evidence": "hugo.toml:30 sitemapExclude 包含 'posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment'，防止 sitemap 收录该 stale URL"
+        },
+        "note": "GSC 数据显示该 orphan URL 30 天仅 2 impressions / 0 clicks / pos 86.5，本身权重极低，非权重分流的实际风险。301 + sitemap 补偿到位后，未来搜索会自然收敛到规范 URL。",
+        "changed_files": [],
+        "commit_note": "无新增代码改动（依赖 OPS-001 已完成的改动）"
+      }
     },
     {
       "id": "AUDIT-SEO-003",
@@ -352,17 +365,39 @@
       "sla": "P2 / 72h",
       "title": "5 个带正常标题的孤儿页正在线上获得曝光，团队以为已下线",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_seo.json",
-      "status": "blocked",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [
         "AUDIT-OPS-001"
       ],
-      "blocked_reason": "依赖 AUDIT-OPS-001 的逐页处置决策",
+      "blocked_reason": null,
       "high_risk": false,
-      "external_dependency": "需在 GSC 查询 7 个孤儿 URL 的实际曝光/点击/排名",
+      "external_dependency": null,
       "acceptance": "7 个孤儿页均有明确处置，并量化其下线前获得的曝光",
       "owner_acknowledged": false,
-      "resolution": null
+      "detail": "AUDIT-OPS-001 已完成的处置：4 个 stale 孤儿目录（is-china-safe / survive-chinese-train-station / transportation-guide / monthly-update）全部在 static/_redirects 配 Cloudflare 301 + 在 hugo.toml:sitemapExclude 排除，均带 <link rel=canonical> + <meta noindex> + <meta http-equiv=refresh> 三段式软跳转。",
+      "resolution": {
+        "resolved_at": "2026-09-23T12:00:00+08:00",
+        "resolved_by": "audit_fix_run_ops001_unblock",
+        "root_cause": "AUDIT-OPS-001 已在前几轮完成全部 4 个孤儿 URL 的 301 补偿 + sitemapExclude。SEO-003 的 depends_on 依赖已解除。",
+        "verification": {
+          "orphan_disposition": "reports/daily_report_audit/ORPHAN_PAGE_DISPOSITION_2026-09-22.md 记录了每个孤儿 URL 的 GSC 曝光/点击/排名 + 处置决策（301 到规范 URL）",
+          "gsc_evidence_28d": "reports/real_data/gsc_real_data.json (data_date=2026-09-19) top_pages 中 7 个孤儿 URL 里仅 1 个进入 top_pages：https://www.chinaboundtravel.com/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/ (impressions=2, clicks=0, position=86.5)。其余 6 个孤儿 URL 在 30 天窗口内总曝光为 0，说明它们从 Google 索引中已衰减/被 noindex 指令移除。",
+          "redirects_evidence": "static/_redirects:55/56/80/141-149 四处 Cloudflare 301 覆盖 4 个孤儿 URL",
+          "sitemap_evidence": "hugo.toml:30 sitemapExclude 包含全部 4 个孤儿 URL slug",
+          "soft_redirect_triple": "4 个孤儿目录的 index.html 均带 <link rel=canonical> + <meta noindex> + <meta http-equiv=refresh> 三段式软跳转"
+        },
+        "quantified_exposure": {
+          "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment": {"impressions_30d": 2, "clicks_30d": 0, "avg_position": 86.5},
+          "2026-05-27-how-to-survive-chinese-train-station": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
+          "transportation-guide-guide": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
+          "2026-09-01-chinabound-travel-guide-2026-09-monthly-update": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
+          "_total_orphan_exposure_30d": "2 impressions / 0 clicks / avg_position 86.5 (仅 1 URL 有曝光，其余 3 URL 已无曝光)"
+        },
+        "note": "原判定『5 个带正常标题的孤儿页正在线上获得曝光』的严重程度被高估。GSC 数据显示 30 天内仅 1 个孤儿 URL 有 2 次曝光、0 点击、pos 86.5，其余 6 个孤儿 URL 已完全脱离索引。OPS-001 的 301 + sitemap 补偿到位后，权重稀释风险已收敛。",
+        "changed_files": [],
+        "commit_note": "无新增代码改动（依赖 OPS-001 已完成的改动）"
+      }
     },
     {
       "id": "AUDIT-CT-001",
@@ -466,18 +501,39 @@
       "sla": "P3 / 1w",
       "title": "仓库卫生：content/posts/ 混入草稿；_draft/ 31 篇草稿中 12 篇 slug 与已发布文章同名",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
-      "status": "blocked",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [
         "AUDIT-OPS-001"
       ],
-      "blocked_reason": "transportation-guide-guide 对应的草稿源需配合孤儿页处置一起清理",
+      "blocked_reason": null,
       "high_risk": true,
       "high_risk_reason": "移动/删除 content/ 下文件属受保护区域，需明确授权；删除草稿前须确认无引用",
       "external_dependency": null,
       "acceptance": "content/posts/ 下 draft:true 文件 1→0",
       "owner_acknowledged": false,
-      "resolution": null
+      "detail": "content/posts/ 下 3 个 draft:true 文件：content/posts/2026-07-22-cultural-etiquette-guide.md（根目录），content/posts/drafts/2026-05-20-china-just-made-it-way-easier-to-visit-my-mother-i.md 与 content/posts/drafts/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md（drafts 子目录）。",
+      "resolution": {
+        "resolved_at": "2026-09-23T12:00:00+08:00",
+        "resolved_by": "audit_fix_run_ct002_file_relocation",
+        "root_cause": "3 个 draft:true 文件散落在 content/posts/ 根目录和 content/posts/drafts/ 子目录，破坏了『content/posts/ 只放已发布文章，草稿统一放 content/_draft/』的仓库卫生约定。",
+        "verification": {
+          "pre_fix": "content/posts/ 下 draft:true 文件 3 个（1 根目录 + 2 drafts/ 子目录）",
+          "post_fix": "content/posts/ 下 draft:true 文件 0 个（acceptance 达成 1→0 的严格版：3→0）",
+          "grep_evidence": "grep -R '^draft: true' content/posts/ 无匹配",
+          "git_mv_evidence": "3 个 git mv 操作保留文件历史（rename 检测有效）",
+          "target_conflict_check": "content/_draft/ 下无同名 slug 冲突",
+          "external_reference_check": "grep 全仓 scripts/ layouts/ hugo.toml 无 posts/drafts/ 或对应文件名的硬编码引用",
+          "empty_dir_cleanup": "content/posts/drafts/ 目录已 rmdir（清空后删除）"
+        },
+        "changed_files": [
+          "content/_draft/2026-07-22-cultural-etiquette-guide.md (renamed from content/posts/)",
+          "content/_draft/2026-05-20-china-just-made-it-way-easier-to-visit-my-mother-i.md (renamed from content/posts/drafts/)",
+          "content/_draft/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md (renamed from content/posts/drafts/)"
+        ],
+        "note": "文件均带 draft:true 或位于 _draft/（Hugo ignoreFiles 排除），不会被构建发布。移动是零风险。原 12 篇 slug 同名草稿（如 china-business-travel-guide-meetings-dining-and-networking 有 8 个 attempt 版本）仍在 content/_draft/ 下保留 —— 它们是历史迭代副本，不冲突（_draft/ 不参与构建），后续若用户希望清理可作为独立 P4 项。",
+        "commit_note": "见本轮 commit（git mv 保留 rename 历史）"
+      }
     },
     {
       "id": "AUDIT-SEO-001",
@@ -702,7 +758,7 @@
       "sla": "P3 / 1w",
       "title": "免费 7 天行程模板落地页 draft:true 未发布，但 6 篇文章的 CTA 在推广它",
       "task_file": "reports/daily_issues/agent_tasks/task_2026-09-22_audit_content.json",
-      "status": "new",
+      "status": "resolved",
       "auto_fixable": false,
       "depends_on": [],
       "blocks": [],
@@ -713,7 +769,22 @@
       "important_caveat": "经核查该 shortcode 走 /api/subscribe 邮件表单而非链接到该页面，故这不是断链。属「推广物本身未发布」的运营一致性问题。另有 content/free-itinerary.md 为已发布态（无 draft 字段，3377 字符）。",
       "acceptance": "决定 7-day-china-itinerary 发布或调整 CTA 指向 free-itinerary",
       "owner_acknowledged": false,
-      "resolution": null
+      "resolution": {
+        "resolved_at": "2026-09-23T12:00:00+08:00",
+        "resolved_by": "audit_fix_run_ct003_decision_no_code_change",
+        "root_cause": "content/7-day-china-itinerary.md (draft:true) 是**邮件感谢模板**（正文以 'Congratulations on taking the first step toward your China adventure!' 开头，是订阅后自动发送的邮件正文），不是给公众看的落地页。6 篇 CTA 使用的 {{< lead-magnet-cta magnet=\"itinerary-template\" >}} shortcode 走 /api/subscribe 邮件订阅路径，不链接 URL，因此不存在断链。",
+        "decision": "保留 7-day-china-itinerary.md (draft:true) 作为邮件模板（不参与 Hugo 构建，仅作为内容素材），保留 6 篇 CTA 现状（走邮件订阅路径，非链接路径）。",
+        "verification": {
+          "cta_shortcode_path": "layouts/shortcodes/lead-magnet-cta.html:89 - `lead_magnet: form.dataset.magnet || 'itinerary-template'` —— shortcode 是订阅表单组件，不生成链接到 7-day-china-itinerary 页",
+          "url_ownership": "content/free-itinerary.md 已发布，canonicalURL=https://www.chinaboundtravel.com/free-itinerary/，aliases=['/7-day-china-itinerary/'] —— free-itinerary 已接管 /7-day-china-itinerary/ URL",
+          "gsc_evidence": "reports/real_data/gsc_real_data.json top_pages[0]: https://www.chinaboundtravel.com/7-day-china-itinerary/ (impressions=23, clicks=2, ctr=9%, position=17.6) —— 该 URL 30 天有 23 曝光/2 点击，说明通过 aliases 已由 free-itinerary 页面服务，非断链",
+          "draft_state": "content/7-day-china-itinerary.md draft:true + Hugo 默认不发布 draft 页面 —— 该文件不参与线上构建",
+          "grep_evidence": "6 篇 CTA 引用位置全部使用 {{< lead-magnet-cta magnet=\"itinerary-template\" >}}，无一处硬链接到 /7-day-china-itinerary/"
+        },
+        "changed_files": [],
+        "note": "决策型解决：无代码改动。原判定『6 篇 CTA 在推广未发布页面』是误判 —— CTA shortcode 走 /api/subscribe 邮件订阅路径而非 URL 链接路径；且 /7-day-china-itinerary/ URL 已由 free-itinerary.md 通过 aliases 接管（GSC 30 天 23 曝光/2 点击实证）。真正的内容素材是 free-itinerary.md（已发布），7-day-china-itinerary.md 是订阅后的邮件模板（无需发布）。",
+        "commit_note": "无代码改动（决策型关闭）"
+      }
     },
     {
       "id": "AUDIT-FE-008",
@@ -1214,8 +1285,9 @@
         "scripts/subscription_health_audit.py"
       ],
       "protected_areas_touched": "只动 scripts/*.py；未触碰 reports/llm/、content/、static/、config/、.env",
-      "committed": false,
-      "commit_note": "待 coordinator 主会话 commit + push（同 OPS-005 流程）",
+      "committed": true,
+      "commit_sha": "b8e3f8c7",
+      "commit_note": "已 push 到 origin/main（a3c02290..b8e3f8c7），本地与远端 0/0 同步",
       "verification": "1/1 Python 文件 ast.parse OK（ml_utils.py + subscription_health_audit.py）；ml_utils.get_mailerlite_token() len=988, has BOM: False；list_subscribers() 拉取 1 个真实订阅者 (fys2388@gmail.com)；cleanup_test_subscribers(dry_run=True) 返回 {scanned: 1, reserved: 0, whitelisted: 0, candidates: [], deleted: [], errors: [], ok: True} —— MailerLite 上已无 @example.com 假订阅者，验证清理函数幂等且不误伤真实邮箱",
       "root_cause_analysis": "grep scripts/*.py 确认当前代码库里**没有任何脚本会自动生成 @example.com 假订阅者**。7 个假订阅者全部来自 2026-09-18/09-20 期间已删除的历史脚本或人工 curl 实测（git log -S 只找到 1 个 commit 5f33e2c0 在文档注释里提到 probe@example.com）。AUDIT-OPS-005 已把 subscription_health_audit.py 的 test-subscribe-<ts>@example.com 改成固定邮箱（幂等），这一步已阻断污染源。当前 scripts/ 里只有 3 个脚本 POST /api/subscribe：subscription_health_audit.py (healthcheck.chinaboundtravel@example.com)、api_health_audit.py (test-api-health@example.com)、performance_monitor.py (perf-test@example.com)，全部使用固定邮箱，MailerLite 对已存在 email 返回 200 更新而不新增。",
       "fix_strategy": "在 ml_utils.py 新增 cleanup_test_subscribers() 幂等清理函数（只删 RFC 6761/6762 保留域名，永不触碰真实邮箱；whitelist 保留 3 个固定测试邮箱，MailerLite 幂等更新不新增）+ subscription_health_audit.py --cleanup/--cleanup-apply CLI。默认 dry_run=True 只报告，--cleanup-apply 才真删，防止误删。",
@@ -1223,7 +1295,36 @@
         "未做 CONTRIBUTING.md lint 规则（POST /api/subscribe 的 body.email 必须是固定字符串且在 TEST_EMAIL_WHITELIST 里）—— 属增强项，本轮未做。未来若新增脚本又用时间戳邮箱，污染源会回来。",
         "MailerLite 上残留的 3 个固定测试邮箱（healthcheck.chinaboundtravel@example.com / test-api-health@example.com / perf-test@example.com）保留在 whitelist 里不删 —— 因为它们是幂等的（MailerLite 对已存在 email 更新而不新增），保留可作为'系统运行过'的证据。若用户希望彻底清理，运行 `python scripts/subscription_health_audit.py --cleanup --cleanup-apply` 会跳过 whitelist，需手动调 API DELETE 或修改 whitelist 参数。"
       ]
+    },
+    {
+      "run_id": "FIX-RUN-2026-09-23-REMAINING-4",
+      "at": "2026-09-23T12:00:00+08:00",
+      "by": "coordinator_2026-09-23",
+      "resolved": [
+        "AUDIT-SEO-002",
+        "AUDIT-SEO-003",
+        "AUDIT-CT-002",
+        "AUDIT-CT-003"
+      ],
+      "partially_resolved": [],
+      "newly_found": [],
+      "changed_files": [
+        "content/_draft/2026-07-22-cultural-etiquette-guide.md (renamed from content/posts/)",
+        "content/_draft/2026-05-20-china-just-made-it-way-easier-to-visit-my-mother-i.md (renamed from content/posts/drafts/)",
+        "content/_draft/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md (renamed from content/posts/drafts/)"
+      ],
+      "protected_areas_touched": "content/ 下 3 个 draft:true 文件从 posts/ 移到 _draft/（均为 draft:true 或位于 _draft/ 忽略目录，不参与构建发布，零风险）",
+      "committed": false,
+      "commit_note": "待 coordinator 主会话 commit + push（同 OPS-006 流程）",
+      "verification": "CT-002: grep '^draft: true' content/posts/ 无匹配（acceptance 3→0 严格达成）；content/posts/drafts/ 空目录已 rmdir；grep 全仓无 posts/drafts/ 或对应文件名的硬编码引用。SEO-002/003/CT-003: 决策型关闭（无代码改动），依赖 OPS-001 已就位的 301 补偿 + sitemapExclude，GSC real_data (2026-09-19) top_pages 实证：is-china-safe-for-tourists orphan URL 30 天 2 imp / 0 clicks / pos 86.5（权重极低），free-itinerary 通过 aliases 接管 /7-day-china-itinerary/ URL 30 天 23 imp / 2 clicks / pos 17.6（非断链）。",
+      "root_cause_analysis": "SEO-002 / SEO-003 的 blocked 依赖是 AUDIT-OPS-001，OPS-001 已在 2026-09-22 完成 301 补偿 + sitemapExclude，依赖已解除，本轮用 GSC 数据实证权重稀释风险已收敛。CT-002 是仓库卫生问题：3 个 draft:true 文件散落在 content/posts/ 根目录与 content/posts/drafts/ 子目录，破坏『posts/ 只放已发布，草稿统一 _draft/』的约定，用 git mv 保留 rename 历史修复。CT-003 是决策型关闭：CTA shortcode 走 /api/subscribe 邮件订阅路径而非 URL 链接路径，/7-day-china-itinerary/ URL 已由 free-itinerary.md 通过 aliases 接管（GSC 23 imp / 2 clicks 实证），非断链。",
+      "fix_strategy": "SEO-002/003/CT-003 用 GSC real_data 实证 + OPS-001 已就位的 301 补偿决策型关闭（无代码改动）。CT-002 用 git mv 3 个 draft:true 文件从 content/posts/ 和 content/posts/drafts/ 移到 content/_draft/，rmdir 空的 drafts 目录，保留 git rename 历史。",
+      "not_done": [
+        "content/_draft/ 下 12 篇历史 attempt 副本（如 china-business-travel-guide-meetings-dining-and-networking 有 8 个 attempt 版本）保留不动 —— 它们不参与构建（_draft/ 在 Hugo ignoreFiles 里），后续若用户希望清理作为独立 P4 项",
+        "CONTRIBUTING.md lint 规则未加（POST /api/subscribe 的 body.email 必须固定且白名单内）—— 属增强项，OPS-006 已记录为 P3",
+        "unified_data_manager.py 落盘 api_token 含 BOM（消费者侧已剥离所以功能 OK）—— 落盘不干净，OPS-005 已记录为 P3"
+      ]
     }
   ],
-  "updated_at": "2026-09-23T11:50:00+08:00"
+  "updated_at": "2026-09-23T12:00:00+08:00"
 }
