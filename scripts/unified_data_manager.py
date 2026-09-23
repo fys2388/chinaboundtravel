@@ -34,6 +34,18 @@ REPORTS_DIR = PROJECT_ROOT / "reports"
 DATA_CACHE_DIR = REPORTS_DIR / "data_cache"
 DATA_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
+# 加载 MailerLite 统一入口（BOM 清洗 + 订阅者清理，AUDIT-OPS-005/006）
+# unified_data_manager.py 只把 token 落 JSON cache，不发 HTTP，但落盘值含 BOM
+# 会让下游调试脚本困惑。接 clean_token 保证落盘值与消费者侧一致。
+_scripts_dir = Path(__file__).resolve().parent
+if str(_scripts_dir) not in sys.path:
+    sys.path.insert(0, str(_scripts_dir))
+try:
+    from ml_utils import clean_token as _clean_token
+except ImportError:  # pragma: no cover - fallback for CI-less checkouts
+    def _clean_token(v):
+        return (v or "").lstrip("\ufeff").strip() if isinstance(v, str) else ""
+
 # 加载环境变量
 try:
     from dotenv import load_dotenv
@@ -54,7 +66,7 @@ class UnifiedDataManager:
         """加载配置"""
         self.config = {
             "ga4": {
-                "api_key": os.environ.get("GA4_API_KEY", ""),
+                "api_key": _clean_token(os.environ.get("GA4_API_KEY", "")),
                 "property_id": os.environ.get("GA4_PROPERTY_ID", "538482322"),
                 "service_account_json": os.environ.get("GA4_SERVICE_ACCOUNT_JSON", ""),
             },
@@ -63,22 +75,22 @@ class UnifiedDataManager:
                 "site_url": os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com"),
             },
             "travelpayouts": {
-                "api_token": os.environ.get("TRAVELPAYOUTS_API_TOKEN", ""),
-                "marker": os.environ.get("TRAVELPAYOUTS_MARKER", ""),
-                "drive_id": os.environ.get("TRAVELPAYOUTS_DRIVE_ID", ""),
+                "api_token": _clean_token(os.environ.get("TRAVELPAYOUTS_API_TOKEN", "")),
+                "marker": _clean_token(os.environ.get("TRAVELPAYOUTS_MARKER", "")),
+                "drive_id": _clean_token(os.environ.get("TRAVELPAYOUTS_DRIVE_ID", "")),
             },
             "mailerlite": {
-                "api_token": os.environ.get("MAILERLITE_API_TOKEN", ""),
+                "api_token": _clean_token(os.environ.get("MAILERLITE_API_TOKEN", "")),
             },
             "buffer": {
                 "worker_url": os.environ.get("BUFFER_WORKER_URL", ""),
                 "new_worker_url": os.environ.get("NEW_BUFFER_WORKER_URL", ""),
-                "api_token_a": os.environ.get("BUFFER_API_TOKEN_A", ""),
-                "api_token_b": os.environ.get("BUFFER_API_TOKEN_B", ""),
+                "api_token_a": _clean_token(os.environ.get("BUFFER_API_TOKEN_A", "")),
+                "api_token_b": _clean_token(os.environ.get("BUFFER_API_TOKEN_B", "")),
             },
             "cloudflare": {
-                "api_token": os.environ.get("CLOUDFLARE_API_TOKEN", ""),
-                "zone_id": os.environ.get("CLOUDFLARE_ZONE_ID", ""),
+                "api_token": _clean_token(os.environ.get("CLOUDFLARE_API_TOKEN", "")),
+                "zone_id": _clean_token(os.environ.get("CLOUDFLARE_ZONE_ID", "")),
             }
         }
 

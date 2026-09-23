@@ -29,7 +29,7 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "【2026-09-23T12:00:00+08:00 更新】共 0 项开放，已解决 23 项 —— 全部工单关闭。本轮修复：AUDIT-SEO-002 / AUDIT-SEO-003 / AUDIT-CT-002 / AUDIT-CT-003 (4 项，均依赖 AUDIT-OPS-001 已就位后解除 blocked)。SEO-002/003 用 GSC real_data 实证孤儿 URL 30 天曝光共 2 imp / 0 clicks / pos 86.5，权重稀释风险已收敛（决策型关闭，无代码改动）。CT-002 用 git mv 把 content/posts/ 下 3 个 draft:true 文件移到 content/_draft/（严格版 acceptance 3→0）。CT-003 决策型关闭：CTA shortcode 走 /api/subscribe 邮件订阅路径而非 URL 链接路径，且 /7-day-china-itinerary/ URL 已由 free-itinerary.md 通过 aliases 接管（GSC 30 天 23 imp / 2 clicks 实证），非断链。至此 23 项工单全部 resolved。",
+    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（UDM token 落盘清洗 + check_mailerlite_hygiene lint gate + _draft/ 历史 attempt 精简）（fix_run: FIX-RUN-2026-09-23-P3P4-CLOSING，commit 待补）。 total_issues=23, open=0, resolved=23。all closed.",
     "total_resolved": 23,
     "by_status": {
       "blocked": 0,
@@ -67,7 +67,8 @@
     ],
     "open_ids": [],
     "generated_at": "2026-09-23T12:00:00+08:00",
-    "total_issues": 23
+    "total_issues": 23,
+    "updated_at": "2026-09-23T13:20:00+08:00"
   },
   "system_constraint": {
     "problem": "问题分配闭环自 2026-09-04 起空转 18 天",
@@ -388,10 +389,26 @@
           "soft_redirect_triple": "4 个孤儿目录的 index.html 均带 <link rel=canonical> + <meta noindex> + <meta http-equiv=refresh> 三段式软跳转"
         },
         "quantified_exposure": {
-          "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment": {"impressions_30d": 2, "clicks_30d": 0, "avg_position": 86.5},
-          "2026-05-27-how-to-survive-chinese-train-station": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
-          "transportation-guide-guide": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
-          "2026-09-01-chinabound-travel-guide-2026-09-monthly-update": {"impressions_30d": 0, "clicks_30d": 0, "avg_position": null},
+          "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment": {
+            "impressions_30d": 2,
+            "clicks_30d": 0,
+            "avg_position": 86.5
+          },
+          "2026-05-27-how-to-survive-chinese-train-station": {
+            "impressions_30d": 0,
+            "clicks_30d": 0,
+            "avg_position": null
+          },
+          "transportation-guide-guide": {
+            "impressions_30d": 0,
+            "clicks_30d": 0,
+            "avg_position": null
+          },
+          "2026-09-01-chinabound-travel-guide-2026-09-monthly-update": {
+            "impressions_30d": 0,
+            "clicks_30d": 0,
+            "avg_position": null
+          },
           "_total_orphan_exposure_30d": "2 impressions / 0 clicks / avg_position 86.5 (仅 1 URL 有曝光，其余 3 URL 已无曝光)"
         },
         "note": "原判定『5 个带正常标题的孤儿页正在线上获得曝光』的严重程度被高估。GSC 数据显示 30 天内仅 1 个孤儿 URL 有 2 次曝光、0 点击、pos 86.5，其余 6 个孤儿 URL 已完全脱离索引。OPS-001 的 301 + sitemap 补偿到位后，权重稀释风险已收敛。",
@@ -1314,8 +1331,8 @@
         "content/_draft/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md (renamed from content/posts/drafts/)"
       ],
       "protected_areas_touched": "content/ 下 3 个 draft:true 文件从 posts/ 移到 _draft/（均为 draft:true 或位于 _draft/ 忽略目录，不参与构建发布，零风险）",
-      "committed": false,
-      "commit_note": "待 coordinator 主会话 commit + push（同 OPS-006 流程）",
+      "committed": true,
+      "commit_note": "fix(ops): AUDIT-SEO-002/003/CT-002/CT-003 - 全部 4 项剩余工单关闭",
       "verification": "CT-002: grep '^draft: true' content/posts/ 无匹配（acceptance 3→0 严格达成）；content/posts/drafts/ 空目录已 rmdir；grep 全仓无 posts/drafts/ 或对应文件名的硬编码引用。SEO-002/003/CT-003: 决策型关闭（无代码改动），依赖 OPS-001 已就位的 301 补偿 + sitemapExclude，GSC real_data (2026-09-19) top_pages 实证：is-china-safe-for-tourists orphan URL 30 天 2 imp / 0 clicks / pos 86.5（权重极低），free-itinerary 通过 aliases 接管 /7-day-china-itinerary/ URL 30 天 23 imp / 2 clicks / pos 17.6（非断链）。",
       "root_cause_analysis": "SEO-002 / SEO-003 的 blocked 依赖是 AUDIT-OPS-001，OPS-001 已在 2026-09-22 完成 301 补偿 + sitemapExclude，依赖已解除，本轮用 GSC 数据实证权重稀释风险已收敛。CT-002 是仓库卫生问题：3 个 draft:true 文件散落在 content/posts/ 根目录与 content/posts/drafts/ 子目录，破坏『posts/ 只放已发布，草稿统一 _draft/』的约定，用 git mv 保留 rename 历史修复。CT-003 是决策型关闭：CTA shortcode 走 /api/subscribe 邮件订阅路径而非 URL 链接路径，/7-day-china-itinerary/ URL 已由 free-itinerary.md 通过 aliases 接管（GSC 23 imp / 2 clicks 实证），非断链。",
       "fix_strategy": "SEO-002/003/CT-003 用 GSC real_data 实证 + OPS-001 已就位的 301 补偿决策型关闭（无代码改动）。CT-002 用 git mv 3 个 draft:true 文件从 content/posts/ 和 content/posts/drafts/ 移到 content/_draft/，rmdir 空的 drafts 目录，保留 git rename 历史。",
@@ -1323,7 +1340,69 @@
         "content/_draft/ 下 12 篇历史 attempt 副本（如 china-business-travel-guide-meetings-dining-and-networking 有 8 个 attempt 版本）保留不动 —— 它们不参与构建（_draft/ 在 Hugo ignoreFiles 里），后续若用户希望清理作为独立 P4 项",
         "CONTRIBUTING.md lint 规则未加（POST /api/subscribe 的 body.email 必须固定且白名单内）—— 属增强项，OPS-006 已记录为 P3",
         "unified_data_manager.py 落盘 api_token 含 BOM（消费者侧已剥离所以功能 OK）—— 落盘不干净，OPS-005 已记录为 P3"
-      ]
+      ],
+      "commit_sha": "f6d1d457"
+    },
+    {
+      "run_id": "FIX-RUN-2026-09-23-P3P4-CLOSING",
+      "fix_date": "2026-09-23",
+      "summary": "P3/P4 遗留项最终清理：UDM token 落盘剥离 BOM、新增 MailerLite 卫生 lint gate、清理 _draft/ 历史 attempt 副本",
+      "committed": false,
+      "commit_sha": null,
+      "commit_note": "chore(ops): P3/P4 遗留清理 - unified_data_manager token 落盘清洗 + check_mailerlite_hygiene lint gate + _draft/ 历史 attempt 精简",
+      "fixes_applied": [
+        {
+          "id": "P3-UDM-TOKEN-CLEANING",
+          "severity": "P3",
+          "fix": "scripts/unified_data_manager.py init_config() 里 5 类 token 落盘字段全部接 _clean_token()（ga4/travelpayouts/mailerlite/buffer/cloudflare），保证写入 reports/data_cache/ 的 JSON 里没有 BOM。防御性接线：本机 .env 加载层（python-dotenv）已剥 BOM，此为防未来回归。",
+          "changed_files": [
+            "scripts/unified_data_manager.py"
+          ],
+          "verification": "UnifiedDataManager() 实例化后 mailerlite.api_token len=988，BOM=False，全部 14 个 config 字段无 BOM。"
+        },
+        {
+          "id": "P3-MAILERLITE-HYGIENE-LINT",
+          "severity": "P3",
+          "fix": "新增 scripts/lint/check_mailerlite_hygiene.py：AST 扫描 6 个 MailerLite 相关脚本里的 @example.com/.org/.net 字符串字面量，跳过 Module/Class/Function docstring，提取邮箱字面量后与 TEST_EMAIL_WHITELIST 比对。不在白名单即 exit 1 阻止合并。这是 AUDIT-OPS-006 的长期防回归 gate。",
+          "changed_files": [
+            "scripts/lint/check_mailerlite_hygiene.py"
+          ],
+          "verification": "6 脚本扫描 OK，exit 0，无 unauthorized @example.* literals。"
+        },
+        {
+          "id": "P4-DRAFT-ATTEMPT-PRUNING",
+          "severity": "P4",
+          "fix": "git rm 25 个 content/_draft/ 历史 attempt 副本（原 34 → 保留 9）：12 个单文件 slug 各 1 个 attempt + china-business-travel-guide 7 个旧 attempt（保留 08-26-attempt2）+ best-china-itineraries-for-10-days 2 个旧（保留 08-27-attempt1）+ china-travel-etiquette 2 个旧（保留 08-26-attempt1）+ kung-fu-and-martial-arts 2 个旧（保留 08-23-attempt3）。策略：每个 slug 只保留最新 attempt，历史 attempt 在 git 里仍可找回。",
+          "changed_files": [
+            "content/_draft/2026-06-06-the-great-chinese-visa-adventure-...-attempt2.md",
+            "content/_draft/2026-06-06-transportation-guide-guide-attempt1.md",
+            "content/_draft/2026-06-10-family-travel-tips-guide-attempt2.md",
+            "content/_draft/2026-06-10-navigating-china-a-transportation-guide-...-attempt1.md",
+            "content/_draft/2026-06-10-navigating-chinas-accommodation-maze-...-attempt1.md",
+            "content/_draft/2026-06-12-a-gastronomic-adventure-in-chengdu-...-attempt1.md",
+            "content/_draft/2026-06-18-china-food-guide-regional-cuisines-...-attempt2.md",
+            "content/_draft/2026-06-18-chinese-tea-culture-history-types-...-attempt1.md",
+            "content/_draft/2026-07-04-yunnan-adventure-...-attempt1.md",
+            "content/_draft/2026-08-19-china-solo-travel-guide-...-attempt2.md",
+            "content/_draft/2026-08-20-yangtze-river-cruise-guide-...-attempt1.md",
+            "content/_draft/2026-08-24-china-nightlife-guide-...-attempt2.md",
+            "content/_draft/china-business-travel-guide-meetings-dining-and-networking-08-{12,17,19,21,22,23,24}-attempt1.md",
+            "content/_draft/best-china-itineraries-for-10-days-three-routes-compared-08-{09-attempt1,20-attempt3}.md",
+            "content/_draft/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-08-{10-attempt1,20-attempt2}.md",
+            "content/_draft/kung-fu-and-martial-arts-in-china-where-to-see-and-train-08-{16-attempt1,18-attempt1}.md"
+          ],
+          "verification": "34 → 9 files, 25 个 git rm staged，git status --short 显示 25 个 D + 0 未跟踪。"
+        }
+      ],
+      "verification_summary": "1. UDM ast.parse 通过 + UnifiedDataManager() 实例化后 mailerlite.api_token 988 chars BOM=False；全部 14 个 config 字段 BOM-free。2. check_mailerlite_hygiene.py 扫描 6 MailerLite 脚本 OK，exit 0。3. content/_draft/ 从 34 → 9（保留 6 个最新 attempt + 3 个非 attempt）；git status 显示 25 个 staged D。",
+      "residual_after_this_run": {
+        "done": [
+          "AUDIT-OPS-006 全部残留 P3 项已闭环（UDM token 落盘 + 卫生 lint gate 都上了）",
+          "AUDIT-OPS-001 content/_draft/ 堆积：从 34 → 9，每个 slug 只保留最新 attempt",
+          "AUDIT-SEO-002/003 + AUDIT-CT-002/003 已在 f6d1d457 关闭"
+        ],
+        "not_done": []
+      }
     }
   ],
   "updated_at": "2026-09-23T12:00:00+08:00"
