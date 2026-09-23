@@ -1,0 +1,67 @@
+{
+  "agent": "ops",
+  "agent_name": "Ops Agent (部署/配置/权限)",
+  "task_id": "task_2026-09-23_ops",
+  "created_at": "2026-09-23T01:00:24.398335+00:00",
+  "updated_at": "2026-09-23T01:00:24.625988",
+  "target_date": "2026-09-23",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "site_health-5606f1a7491a0f6d",
+      "type": "multiple_analytics_destinations",
+      "title": "multiple_analytics_destinations",
+      "description": "multiple_analytics_destinations",
+      "page": "https://www.chinaboundtravel.com",
+      "file": "https://www.chinaboundtravel.com",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527132}}}",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "critical",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-09-23T01:00:24.396932+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "site_health-5606f1a7491a0f6d",
+    "type": "multiple_analytics_destinations",
+    "title": "multiple_analytics_destinations",
+    "description": "multiple_analytics_destinations",
+    "page": "https://www.chinaboundtravel.com",
+    "file": "https://www.chinaboundtravel.com",
+    "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527132}}}",
+    "recommended_action": "Review and remediate the reported issue.",
+    "severity": "critical",
+    "agent": "ops",
+    "action": "manual_review",
+    "source": "site_health",
+    "source_file": "",
+    "task_source": "quality_gate",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "ops",
+    "detected_at": "2026-09-23T01:00:24.396932+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
