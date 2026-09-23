@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-22T21:22:15.506801+00:00",
+  "generated_at": "2026-09-23T17:05:22.506692+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
     "pages": 70,
     "images_checked": 333,
-    "links_checked": 2109,
-    "issues": 178,
+    "links_checked": 2119,
+    "issues": 179,
     "P0": 0,
     "P1": 69,
-    "P2": 109
+    "P2": 110
   },
   "issues": [
     {
@@ -1342,6 +1342,15 @@
       "type": "internal_link_redirect",
       "page": "/posts/hangzhou-west-lake-tea-culture-g20-guide/",
       "evidence": "https://www.chinaboundtravel.com/disclosure/ -> https://www.chinaboundtravel.com/affiliate-disclosure/",
+      "recommended_action": "Link directly to the final URL."
+    },
+    {
+      "id": "34f7075bd9e6be1c",
+      "severity": "P2",
+      "source": "site",
+      "type": "internal_link_redirect",
+      "page": "/posts/hangzhou-west-lake-tea-culture-g20-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/foodies-guide-to-china-a-gastronomic-adventure/ -> https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
       "recommended_action": "Link directly to the final URL."
     },
     {
