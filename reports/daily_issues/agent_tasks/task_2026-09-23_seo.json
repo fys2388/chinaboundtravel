@@ -3,14 +3,14 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-09-23_seo",
   "created_at": "2026-09-23T01:00:24.398982+00:00",
-  "updated_at": "2026-09-23T02:00:28.361757",
+  "updated_at": "2026-09-23T02:28:34.118919",
   "target_date": "2026-09-23",
-  "issue_count": 181,
+  "issue_count": 186,
   "severity_summary": {
     "critical": 0,
     "high": 69,
     "medium": 112,
-    "low": 0
+    "low": 5
   },
   "issues": [
     {
@@ -3574,7 +3574,7 @@
       "detected_at": "2026-09-23T01:00:24.398021+00:00"
     },
     {
-      "id": "site_health-7161ee9fd059e9a0",
+      "id": "site_health-2c322eda922c49f1",
       "type": "meta_description_too_short",
       "title": "meta_description_too_short",
       "description": "meta_description_too_short",
@@ -3591,10 +3591,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-23T02:00:27.871870+00:00"
+      "detected_at": "2026-09-23T02:28:33.913510+00:00"
     },
     {
-      "id": "site_health-5aa3f2bf403b5b79",
+      "id": "site_health-301131aa8b087edb",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -3611,10 +3611,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-23T02:00:27.871865+00:00"
+      "detected_at": "2026-09-23T02:28:33.913505+00:00"
     },
     {
-      "id": "site_health-f136abd0dee02f6",
+      "id": "site_health-fd949a9e7773f17",
       "type": "title_too_short",
       "title": "title_too_short",
       "description": "title_too_short",
@@ -3631,7 +3631,107 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-09-23T02:00:27.871875+00:00"
+      "detected_at": "2026-09-23T02:28:33.913516+00:00"
+    },
+    {
+      "id": "issue_18599cb78da1",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(69字符)",
+      "description": "Meta description过短(69字符)",
+      "page": "content/cancel.md",
+      "file": "content/cancel.md",
+      "evidence": "Meta description过短(69字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-23.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-23T02:28:33.843229"
+    },
+    {
+      "id": "issue_9fb94f0a869d",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(60字符)",
+      "description": "Meta description过短(60字符)",
+      "page": "content/cities/_index.md",
+      "file": "content/cities/_index.md",
+      "evidence": "Meta description过短(60字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-23.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-23T02:28:33.843261"
+    },
+    {
+      "id": "issue_18599cb78da1",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(69字符)",
+      "description": "Meta description过短(69字符)",
+      "page": "content/disclaimer.md",
+      "file": "content/disclaimer.md",
+      "evidence": "Meta description过短(69字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-23.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-23T02:28:33.843237"
+    },
+    {
+      "id": "issue_a4773f6da2ca",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(38字符)",
+      "description": "Meta description过短(38字符)",
+      "page": "content/guides/_index.md",
+      "file": "content/guides/_index.md",
+      "evidence": "Meta description过短(38字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-23.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-23T02:28:33.843290"
+    },
+    {
+      "id": "issue_5affb8e300af",
+      "type": "meta_description_too_short",
+      "title": "Meta description过短(58字符)",
+      "description": "Meta description过短(58字符)",
+      "page": "content/privacy-policy.md",
+      "file": "content/privacy-policy.md",
+      "evidence": "Meta description过短(58字符)",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-09-23.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-09-23T02:28:33.843252"
     }
   ],
   "priority_issue": {
@@ -3655,13 +3755,14 @@
     "detected_at": "2026-09-23T01:00:24.396987+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "optimize_meta"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=0, need_manual=7, failed=0"
   }
 }
