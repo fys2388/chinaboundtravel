@@ -1,142 +1,14 @@
 {
-  "timestamp": "2026-09-23T07:58:16.249304+00:00",
+  "timestamp": "2026-09-23T08:30:00.311370+00:00",
   "source": "site_health_agent",
   "issues": [
     {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content\\cancel.md",
-      "message": "Meta description过短(69字符)",
+      "type": "ssl_check_failed",
+      "severity": "medium",
+      "file": "https://www.chinaboundtravel.com",
+      "message": "SSL检查失败: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING]",
       "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\disclaimer.md",
-      "message": "Title过短(10字符<20)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content\\disclaimer.md",
-      "message": "Meta description过短(69字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\privacy-policy.md",
-      "message": "Title过短(14字符<20)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content\\privacy-policy.md",
-      "message": "Meta description过短(58字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\beijing.md",
-      "message": "Meta description过长(205字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\chengdu.md",
-      "message": "Meta description过长(227字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\guilin.md",
-      "message": "Meta description过长(245字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\hangzhou.md",
-      "message": "Meta description过长(216字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\shanghai.md",
-      "message": "Meta description过长(196字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\western-sichuan.md",
-      "message": "Meta description过长(267字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\xian.md",
-      "message": "Meta description过长(242字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\cities\\yangshuo.md",
-      "message": "Meta description过长(226字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content\\cities\\_index.md",
-      "message": "Meta description过短(60字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "title_too_short",
-      "severity": "low",
-      "file": "content\\guides\\_index.md",
-      "message": "Title过短(13字符<20)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content\\guides\\_index.md",
-      "message": "Meta description过短(38字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content\\posts\\2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
-      "message": "Meta description过长(187字符)",
-      "auto_fixable": false,
-      "agent": "seo"
+      "agent": "site_health"
     }
   ]
 }

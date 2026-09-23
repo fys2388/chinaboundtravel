@@ -1,6 +1,6 @@
 +++
 title = "Hangzhou 2026: West Lake & Longjing Tea"
-description = "Complete Hangzhou travel guide for 2026: West Lake cycling, Lingyin Temple, Longjing tea plantations, Xixi Wetland, where to stay, 2-4 day itineraries, local food, and everything international travelers need to know."
+description = "Hangzhou 2026 guide: West Lake cycling, Lingyin Temple, Longjing tea, Xixi Wetland, 2-4 day itineraries for international travelers."
 date = 2026-06-09
 lastmod = 2026-08-31
 categories = ["Destinations & Itineraries"]

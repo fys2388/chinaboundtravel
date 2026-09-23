@@ -1,6 +1,6 @@
 +++
 title = "Yangshuo 2026: Bamboo Rafts & West Street"
-description = "Complete Yangshuo travel guide for 2026: Yulong River bamboo rafting, cycling routes, Moon Hill, West Street, Impression Liu Sanjie show, where to stay, 2-4 day itineraries, and everything international travelers need to know."
+description = "Yangshuo 2026 guide: Yulong River rafting, cycling, Moon Hill, West Street, Liu Sanjie show, 2-4 day itineraries for travelers."
 date = 2026-06-21
 lastmod = 2026-08-31
 categories = ["Destinations & Itineraries"]

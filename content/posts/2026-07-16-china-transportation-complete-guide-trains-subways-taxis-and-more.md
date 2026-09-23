@@ -1,7 +1,7 @@
 +++
 content_id = "cbt-17c6738ffb32"
 title = "China Transportation 2026: Trains & Didi"
-description = "Complete guide to getting around China in 2026: high-speed train booking, seat classes with real prices, subway hacks, Didi tips, and station survival for foreigners. Travel like a local!"
+description = "Getting around China 2026: high-speed trains, real seat prices, subway hacks, Didi tips, and station survival for foreigners."
 date = 2026-07-16
 lastmod = 2026-07-16
 last_updated = "2026-07-16"

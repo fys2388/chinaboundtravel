@@ -1,6 +1,6 @@
 ﻿---
 title: "China City Travel Guides"
-description: "Explore China's greatest cities with insider tips from Joran"
+description: "Insider tips from Joran on China's greatest cities: Beijing, Shanghai, Chengdu, Guilin, Yangshuo, Xi'an, and more. No tourist traps."
 date: 2026-06-09T10:00:00+08:00
 ---
 

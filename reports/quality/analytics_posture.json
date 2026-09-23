@@ -1,13 +1,14 @@
 {
-  "checked_at": "2026-09-23T02:28:33.165986+00:00",
+  "checked_at": "2026-09-23T08:33:36.781749+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
-    "/",
     "/pricing/",
-    "/contact/",
     "/posts/ultimate-guide-to-china-visa-for-tourists/"
   ],
-  "pages_fetch_failed": [],
+  "pages_fetch_failed": [
+    "/",
+    "/contact/"
+  ],
   "html_measurement_ids": [
     "G-GECBME3YVJ"
   ],
@@ -17,7 +18,7 @@
         "G-GECBME3YVJ",
         "G-P6BH500VBK"
       ],
-      "payload_bytes": 527378
+      "payload_bytes": 527403
     }
   },
   "measurement_ids": [

@@ -1,9 +1,9 @@
 +++
-title = "Disclaimer"
+title = "China Travel Disclaimer"
 searchHidden = true
 date = 2026-05-19T10:00:00+08:00
 draft = false
-description = "Important information about affiliate links and content on this site."
+description = "Read this important disclaimer about affiliate links, sponsored content, and editorial policy on ChinaBound Travel."
 +++
 
 # Disclaimer

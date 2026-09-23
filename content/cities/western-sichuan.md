@@ -1,6 +1,6 @@
 +++
 title = "Western Sichuan 2026: Jiuzhaigou & Siguniang"
-description = "Complete Western Sichuan (Chuanxi) travel guide for 2026: Jiuzhaigou Valley, Huanglong, Siguniang Mountain, Kangding, Danba Tibetan villages, altitude sickness tips, best routes, where to stay, 3-7 day itineraries, and everything international travelers need to know."
+description = "Western Sichuan 2026 guide: Jiuzhaigou, Huanglong, Siguniang, Kangding, altitude tips, 3-7 day routes for international travelers."
 date = 2026-06-09
 lastmod = 2026-08-31
 categories = ["Destinations & Itineraries"]

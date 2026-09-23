@@ -1,6 +1,6 @@
 ﻿---
 title: 'Payment Cancelled'
-description: 'Your payment was cancelled. You can try again or contact us for help.'
+description: 'Your payment was cancelled and not processed. Try again or contact us for help with checkout.'
 date: '2026-06-02T10:00:00+08:00'
 type: page
 hideMeta: true

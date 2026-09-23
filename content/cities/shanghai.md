@@ -1,6 +1,6 @@
 +++
 title = "Shanghai 2026: The Bund & French Concession"
-description = "Complete Shanghai travel guide for 2026: The Bund skyline, French Concession lanes, xiaolongbao food tours, where to stay, 3-5 day itineraries, and everything international travelers need to know."
+description = "Shanghai 2026 guide: The Bund, French Concession, xiaolongbao tours, 3-5 day itineraries for international travelers."
 date = 2026-05-23
 lastmod = 2026-08-31
 categories = ["Destinations & Itineraries"]

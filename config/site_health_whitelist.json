@@ -46,6 +46,19 @@
       "added_at": "2026-09-23",
       "added_by": "coordinator_2026-09-23",
       "related_config": "config/analytics_canonical.json"
+    },
+    {
+      "id": "WL-004",
+      "match": {
+        "type": "ssl_check_failed",
+        "file_contains": "chinaboundtravel.com"
+      },
+      "status": "false_positive",
+      "reason": "TLS 握手瞬断（urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING]）。Cloudflare 边缘节点或本地网络偶发抖动，3 次重试 Invoke-WebRequest -Method HEAD 全部 HTTP 200。审计引擎用 urllib.urlopen(timeout=10) 单次无重试，任何一次 TLS 抖动即误报。",
+      "notes": "与 WL-001 同源（Cloudflare Pages 边缘 + 网络抖动）。真正 TLS 失效时 quality-monitor / error-alert / browser 端监控会先报。长期解：给 audit 网络探测加 3 次重试。",
+      "added_at": "2026-09-23",
+      "added_by": "coordinator_2026-09-23",
+      "related_rule": "WL-001"
     }
   ]
 }

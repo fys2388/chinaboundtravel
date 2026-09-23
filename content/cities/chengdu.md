@@ -1,6 +1,6 @@
 +++
 title = "Chengdu 2026: Pandas & Hot Pot"
-description = "Complete Chengdu travel guide for 2026: Giant Panda Breeding Base, Sichuan hot pot, tea house culture, where to stay, 3-5 day itineraries, day trips to Leshan and Mount Emei, and everything international travelers need to know."
+description = "Chengdu 2026 guide: Panda Base, Sichuan hot pot, tea houses, 3-5 day itineraries, plus Leshan and Mt Emei day trips for international travelers."
 date = 2026-05-23
 lastmod = 2026-08-31
 categories = ["Destinations & Itineraries"]
