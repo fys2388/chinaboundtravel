@@ -943,32 +943,6 @@
       "passed": true
     },
     {
-      "file": "2026-07-22-cultural-etiquette-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
-      "url_ok": true,
-      "canonical_ok": true,
-      "brand_issues": [],
-      "language_issues": [],
-      "mojibake_issues": [],
-      "encoding_errors": [],
-      "fact_issues": [],
-      "seo_issues": [],
-      "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/body/external_d27b4dce5c2a.jpg",
-      "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
-        "mojibake": 100,
-        "seo": 100,
-        "media": 100
-      },
-      "trust_score": 100.0,
-      "passed": true
-    },
-    {
       "file": "2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1449,6 +1423,32 @@
         "media": 100
       },
       "trust_score": 95.0,
+      "passed": true
+    },
+    {
+      "file": "2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 100,
+        "media": 100
+      },
+      "trust_score": 100.0,
       "passed": true
     },
     {
