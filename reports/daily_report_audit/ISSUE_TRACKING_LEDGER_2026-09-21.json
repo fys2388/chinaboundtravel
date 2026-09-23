@@ -29,7 +29,7 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（UDM token 落盘清洗 + check_mailerlite_hygiene lint gate + _draft/ 历史 attempt 精简）（fix_run: FIX-RUN-2026-09-23-P3P4-CLOSING，commit 待补）。 total_issues=23, open=0, resolved=23。all closed.",
+    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（UDM token 落盘清洗 + check_mailerlite_hygiene lint gate + _draft/ 历史 attempt 精简）（fix_run: FIX-RUN-2026-09-23-P3P4-CLOSING，commit: 4e4e1f8e）。 total_issues=23, open=0, resolved=23。all closed.",
     "total_resolved": 23,
     "by_status": {
       "blocked": 0,
@@ -1347,8 +1347,8 @@
       "run_id": "FIX-RUN-2026-09-23-P3P4-CLOSING",
       "fix_date": "2026-09-23",
       "summary": "P3/P4 遗留项最终清理：UDM token 落盘剥离 BOM、新增 MailerLite 卫生 lint gate、清理 _draft/ 历史 attempt 副本",
-      "committed": false,
-      "commit_sha": null,
+      "committed": true,
+      "commit_sha": "4e4e1f8e",
       "commit_note": "chore(ops): P3/P4 遗留清理 - unified_data_manager token 落盘清洗 + check_mailerlite_hygiene lint gate + _draft/ 历史 attempt 精简",
       "fixes_applied": [
         {
