@@ -470,9 +470,46 @@ def main():
     parser = argparse.ArgumentParser(description="Subscription Health Audit")
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="Base URL of the website")
     parser.add_argument("--json", action="store_true", help="Output JSON report")
+    parser.add_argument("--cleanup", action="store_true",
+                        help="Audit 完成后清理 MailerLite 上非白名单的 @example.com 假订阅者（幂等）")
+    # --cleanup 默认 dry_run=True 只报告；--cleanup-apply 才真删（防止误删）。
+    # 用 dest=cleanup_dry_run 让两个 flag 互斥地共享同一变量。
+    parser.add_argument("--cleanup-apply", dest="cleanup_dry_run", action="store_false",
+                        default=True,
+                        help="--cleanup 时真删非白名单 @example.com 订阅者（默认关闭，只报告）")
     args = parser.parse_args()
 
-    sys.exit(run_audit(args.base_url, args.json))
+    exit_code = run_audit(args.base_url, args.json)
+
+    # AUDIT-OPS-006：可选清理非白名单 @example.com 假订阅者
+    # 默认 dry_run=True 只报告；--cleanup-apply 才真删。
+    # 幂等：固定测试邮箱在 TEST_EMAIL_WHITELIST 里会被跳过。
+    if args.cleanup:
+        import ml_utils
+        token = ml_utils.get_mailerlite_token()
+        if not token:
+            print("[cleanup] MAILERLITE_API_TOKEN 未配置，跳过")
+        else:
+            try:
+                result = ml_utils.cleanup_test_subscribers(
+                    token,
+                    dry_run=args.cleanup_dry_run,
+                    verbose=True,
+                )
+                print(f"[cleanup] scanned={result['total_scanned']} "
+                      f"reserved={result['reserved_test_count']} "
+                      f"whitelisted={result['whitelisted_count']} "
+                      f"candidates={len(result['candidates'])} "
+                      f"deleted={len(result['deleted'])} "
+                      f"dry_run={result['dry_run']} ok={result['ok']}")
+                if result["candidates"] and result["dry_run"]:
+                    print(f"[cleanup] 要删的邮箱（未真删，需 --cleanup-apply）: {result['candidates']}")
+                if result["errors"]:
+                    print(f"[cleanup] 错误: {result['errors']}")
+            except Exception as e:
+                print(f"[cleanup] 清理失败（不影响 audit 结果）: {type(e).__name__}: {e}")
+
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":
