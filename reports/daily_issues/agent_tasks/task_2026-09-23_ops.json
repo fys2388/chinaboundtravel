@@ -3,7 +3,7 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-23_ops",
   "created_at": "2026-09-23T01:00:24.398335+00:00",
-  "updated_at": "2026-09-23T15:58:47.068240",
+  "updated_at": "2026-09-23T16:00:32.218478",
   "target_date": "2026-09-23",
   "issue_count": 3,
   "severity_summary": {
@@ -14,13 +14,13 @@
   },
   "issues": [
     {
-      "id": "site_health-27b37d7d9931e729",
+      "id": "site_health-338dd4872c702732",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "description": "multiple_analytics_destinations",
       "page": "https://www.chinaboundtravel.com",
       "file": "https://www.chinaboundtravel.com",
-      "evidence": "{\"html_ids_by_page\": {\"/pricing/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527403}}}",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527378}}}",
       "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
       "severity": "critical",
       "agent": "ops",
@@ -31,7 +31,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-09-23T15:58:46.919704+00:00"
+      "detected_at": "2026-09-23T16:00:31.902320+00:00"
     },
     {
       "id": "workflow-35808188217-unknown",
@@ -75,13 +75,13 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-27b37d7d9931e729",
+    "id": "site_health-338dd4872c702732",
     "type": "multiple_analytics_destinations",
     "title": "multiple_analytics_destinations",
     "description": "multiple_analytics_destinations",
     "page": "https://www.chinaboundtravel.com",
     "file": "https://www.chinaboundtravel.com",
-    "evidence": "{\"html_ids_by_page\": {\"/pricing/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527403}}}",
+    "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527378}}}",
     "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
     "severity": "critical",
     "agent": "ops",
@@ -92,7 +92,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-09-23T15:58:46.919704+00:00"
+    "detected_at": "2026-09-23T16:00:31.902320+00:00"
   },
   "expected_actions": [
     "manual_review"
