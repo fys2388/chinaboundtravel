@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-22T10:30:11.367936",
-  "data_date": "2026-09-21",
+  "pull_time": "2026-09-23T10:24:50.241059",
+  "data_date": "2026-09-22",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "activeUsers": 248,
-    "sessions": 364,
-    "screenPageViews": 654,
-    "engagedSessions": 143,
-    "bounceRate": 0.6071428571428571,
-    "averageSessionDuration": 198.73730399999997,
-    "engagementRate": 0.39285714285714285,
+    "sessions": 368,
+    "screenPageViews": 659,
+    "engagedSessions": 145,
+    "bounceRate": 0.6059782608695652,
+    "averageSessionDuration": 198.68316841847826,
+    "engagementRate": 0.39402173913043476,
     "newUsers": 247
   },
   "daily": [
-    {
-      "date": "2026-08-26",
-      "sessions": 3,
-      "activeUsers": 3,
-      "pageviews": 3
-    },
     {
       "date": "2026-08-27",
       "sessions": 7,
@@ -181,7 +175,13 @@
       "date": "2026-09-22",
       "sessions": 12,
       "activeUsers": 9,
-      "pageviews": 14
+      "pageviews": 15
+    },
+    {
+      "date": "2026-09-23",
+      "sessions": 4,
+      "activeUsers": 4,
+      "pageviews": 4
     }
   ],
   "top_pages": [
@@ -194,14 +194,14 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 103,
-      "sessions": 81
+      "pageviews": 107,
+      "sessions": 84
     },
     {
       "path": "/ops/ops-center",
       "title": "ChinaBound Travel · 智能运营中心 v3.0",
-      "pageviews": 46,
-      "sessions": 34
+      "pageviews": 47,
+      "sessions": 35
     },
     {
       "path": "/ops/ops-center",
@@ -240,16 +240,22 @@
       "sessions": 10
     },
     {
-      "path": "/cities/",
-      "title": "China City Travel Guides | ChinaBound Travel",
-      "pageviews": 6,
-      "sessions": 6
+      "path": "/contact/",
+      "title": "Contact ChinaBound Travel | ChinaBound Travel",
+      "pageviews": 7,
+      "sessions": 7
     },
     {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
+      "pageviews": 7,
+      "sessions": 6
+    },
+    {
+      "path": "/cities/",
+      "title": "China City Travel Guides | ChinaBound Travel",
       "pageviews": 6,
-      "sessions": 5
+      "sessions": 6
     },
     {
       "path": "/posts/hangzhou-west-lake-tea-culture-g20-guide/",
@@ -268,12 +274,6 @@
       "title": "China Travel Resources 2026: Tools & Services | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 4
-    },
-    {
-      "path": "/contact/",
-      "title": "Contact ChinaBound Travel | ChinaBound Travel",
-      "pageviews": 5,
-      "sessions": 5
     }
   ],
   "traffic_sources": [
@@ -281,25 +281,25 @@
       "channel": "Direct",
       "sessions": 181,
       "activeUsers": 108,
-      "engagementRate": 0.2928
+      "engagementRate": 0.2762
     },
     {
       "channel": "Organic Social",
-      "sessions": 155,
-      "activeUsers": 122,
-      "engagementRate": 0.5613
+      "sessions": 161,
+      "activeUsers": 125,
+      "engagementRate": 0.5776
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
-      "activeUsers": 14,
-      "engagementRate": 0.125
+      "sessions": 15,
+      "activeUsers": 12,
+      "engagementRate": 0.0667
     },
     {
       "channel": "AI Assistant",
-      "sessions": 8,
-      "activeUsers": 5,
-      "engagementRate": 0.125
+      "sessions": 7,
+      "activeUsers": 4,
+      "engagementRate": 0.1429
     },
     {
       "channel": "Unassigned",
@@ -315,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-21"
+    "data_date": "2026-09-22"
   }
 }
