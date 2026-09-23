@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-23T02:28:31.787134+00:00",
+  "timestamp": "2026-09-23T07:58:16.249304+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 20,
-    "critical": 1,
-    "high": 2,
+    "total_issues": 17,
+    "critical": 0,
+    "high": 0,
     "medium": 0,
     "low": 17,
     "auto_fixed": 0,
-    "need_manual": 20,
-    "resolved": 10,
+    "need_manual": 17,
+    "resolved": 12,
     "inherited_resolved": 10
   },
   "issues": [
@@ -20,30 +20,32 @@
       "check": "analytics_measurement_ids",
       "file": "https://www.chinaboundtravel.com",
       "message": "GA4 的 Google Tag 配了 2 个目的地: G-GECBME3YVJ, G-P6BH500VBK。每个事件会被同时记到所有目的地上。注意：单个属性的数值本身没被双计（各记一次），真实危害是 (1) 每次事件双倍开销与 API 配额，(2) 同一批访问行为存在于两个属性里，受众/再营销名单被重复灌入、两边看板对不上，(3) 仓库曾没有地方声明哪个属性是 canonical —— 现已补上config/analytics_canonical.json，第 3 层校验会检查hugo.toml / GA4_PROPERTY_ID / canonical 声明三方一致性（结果见 posture 的 config_mismatch 字段）。根因通常是 Google Tag Manager 里的一个 Google Tag 配了多个destinationId（本案例的页面 HTML 只有 1 个 ID，重复来自 gtag.js 载荷服务端配置），也可能只是仓库里写了两个 gtag。修法是删掉多余的 destination，仓库里改代码修不了。",
-      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527378}}}",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527403}}}",
       "auto_fixable": false,
-      "agent": "site_health"
+      "agent": "site_health",
+      "status": "external_blocked",
+      "resolved_by": "coordinator_2026-09-23",
+      "resolution_note": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
+      "resolved_at": "2026-09-23",
+      "whitelist_id": "WL-003"
     },
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/7-day-china-itinerary.md",
+      "file": "content\\7-day-china-itinerary.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
-      "agent": "content"
-    },
-    {
-      "type": "draft_leak",
-      "severity": "high",
-      "file": "content/posts/2026-07-22-cultural-etiquette-guide.md",
-      "message": "draft:true的文章可能已发布到线上",
-      "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "status": "accepted_risk",
+      "resolved_by": "coordinator_2026-09-23",
+      "resolution_note": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
+      "resolved_at": "2026-09-23",
+      "whitelist_id": "WL-002"
     },
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -55,7 +57,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+      "file": "content\\posts\\2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -67,7 +69,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/western-sichuan-overland-camping-route.md",
+      "file": "content\\posts\\2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -79,7 +81,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "file": "content\\posts\\2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -91,7 +93,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
+      "file": "content\\posts\\2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -103,7 +105,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+      "file": "content\\posts\\western-sichuan-overland-camping-route.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -115,7 +117,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/cancel.md",
+      "file": "content\\cancel.md",
       "message": "Meta description过短(69字符)",
       "auto_fixable": false,
       "agent": "seo"
@@ -123,7 +125,7 @@
     {
       "type": "title_too_short",
       "severity": "low",
-      "file": "content/disclaimer.md",
+      "file": "content\\disclaimer.md",
       "message": "Title过短(10字符<20)",
       "auto_fixable": false,
       "agent": "seo"
@@ -131,7 +133,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/disclaimer.md",
+      "file": "content\\disclaimer.md",
       "message": "Meta description过短(69字符)",
       "auto_fixable": false,
       "agent": "seo"
@@ -139,7 +141,7 @@
     {
       "type": "title_too_short",
       "severity": "low",
-      "file": "content/privacy-policy.md",
+      "file": "content\\privacy-policy.md",
       "message": "Title过短(14字符<20)",
       "auto_fixable": false,
       "agent": "seo"
@@ -147,7 +149,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/privacy-policy.md",
+      "file": "content\\privacy-policy.md",
       "message": "Meta description过短(58字符)",
       "auto_fixable": false,
       "agent": "seo"
@@ -155,63 +157,15 @@
     {
       "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/cities/western-sichuan.md",
-      "message": "Meta description过长(267字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/cities/_index.md",
-      "message": "Meta description过短(60字符)",
+      "file": "content\\cities\\beijing.md",
+      "message": "Meta description过长(205字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
     {
       "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/cities/shanghai.md",
-      "message": "Meta description过长(196字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/cities/xian.md",
-      "message": "Meta description过长(242字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/cities/hangzhou.md",
-      "message": "Meta description过长(216字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/cities/yangshuo.md",
-      "message": "Meta description过长(226字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/cities/guilin.md",
-      "message": "Meta description过长(245字符)",
-      "auto_fixable": false,
-      "agent": "seo"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/cities/chengdu.md",
+      "file": "content\\cities\\chengdu.md",
       "message": "Meta description过长(227字符)",
       "auto_fixable": false,
       "agent": "seo"
@@ -219,15 +173,111 @@
     {
       "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/cities/beijing.md",
-      "message": "Meta description过长(205字符)",
+      "file": "content\\cities\\guilin.md",
+      "message": "Meta description过长(245字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
     {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content\\cities\\hangzhou.md",
+      "message": "Meta description过长(216字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content\\cities\\shanghai.md",
+      "message": "Meta description过长(196字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content\\cities\\western-sichuan.md",
+      "message": "Meta description过长(267字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content\\cities\\xian.md",
+      "message": "Meta description过长(242字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content\\cities\\yangshuo.md",
+      "message": "Meta description过长(226字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content\\cities\\_index.md",
+      "message": "Meta description过短(60字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content\\ebook\\2026-07-01-travel-guide-2026-07.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content\\ebook\\2026-08-01-travel-guide-2026-08.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content\\ebook\\2026-08-03-travel-guide-2026-08.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content\\ebook\\2026-09-01-travel-guide-2026-09.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
       "type": "title_too_short",
       "severity": "low",
-      "file": "content/guides/_index.md",
+      "file": "content\\guides\\_index.md",
       "message": "Title过短(13字符<20)",
       "auto_fixable": false,
       "agent": "seo"
@@ -235,63 +285,15 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/guides/_index.md",
+      "file": "content\\guides\\_index.md",
       "message": "Meta description过短(38字符)",
       "auto_fixable": false,
       "agent": "seo"
     },
     {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-07-01-travel-guide-2026-07.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-08-01-travel-guide-2026-08.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-08-03-travel-guide-2026-08.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
       "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
+      "file": "content\\posts\\2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
       "message": "Meta description过长(187字符)",
       "auto_fixable": false,
       "agent": "seo"

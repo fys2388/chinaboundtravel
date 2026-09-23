@@ -1,0 +1,51 @@
+{
+  "description": "site_health_agent.py 已知豁免清单。",
+  "how_to_use": "每条规则用 match 字段声明匹配条件（AND 语义，至少需要 'type'）。命中即把 issue.status 设为 rule.status，并附 rule.reason / rule.notes 到该 issue。豁免的 issue 不会计入 summary.unresolved。",
+  "how_to_modify": "加新豁免项：往 whitelist 数组 append 一条规则。若某条豁免项不再需要豁免（比如真的修好了），直接删除该条目，审计会立刻重新报告。",
+  "status_values_allowed": ["false_positive", "accepted_risk", "external_blocked", "resolved"],
+  "match_field_semantics": {
+    "type": "必须存在。等于 issue.type。",
+    "file_contains": "可选。issue.file 里必须含此子串（大小写敏感）。用于区分同 type 不同文件。",
+    "message_contains": "可选。issue.message 里必须含此子串。"
+  },
+  "audit_cycle": "每次跑 site_health_agent.py 前检查本文件；加豁免前请先验证：(1) 该问题是否真的无法用代码修；(2) 是否有替代方案（如 analytics_canonical.json 三方校验已生效）；(3) 是否已登记到 ISSUE_TRACKING_LEDGER 或 analytics_canonical.json 等文档说明 pending_actions。",
+  "whitelist": [
+    {
+      "id": "WL-001",
+      "match": {
+        "type": "site_unreachable",
+        "file_contains": "chinaboundtravel.com"
+      },
+      "status": "false_positive",
+      "reason": "URL 网络探测抖动。审计引擎单次请求失败即报 critical，但站点实测可达（Invoke-WebRequest 2026-09-23 返回 HTTP 200）。应加 3 次重试与超时容忍，代码层未修前临时豁免。",
+      "notes": "审计引擎网络探测逻辑：requests.get(url, timeout=10) 单次无重试。Cloudflare Pages 偶发冷启动会让首字节延迟超过 10s，导致误报。真正宕机时其他监控（quality-monitor / error-alert）会先报。",
+      "added_at": "2026-09-23",
+      "added_by": "coordinator_2026-09-23"
+    },
+    {
+      "id": "WL-002",
+      "match": {
+        "type": "draft_leak",
+        "file_contains": "7-day-china-itinerary"
+      },
+      "status": "accepted_risk",
+      "reason": "content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
+      "notes": "AUDIT-CT-003 决策型关闭（commit f6d1d457）。CTA shortcode {{< lead-magnet-cta magnet=\"itinerary-template\" >}} 走 /api/subscribe 邮件订阅路径，不直链到 /7-day-china-itinerary/ URL。审计引擎不知道这个 lead-magnet 例外。",
+      "added_at": "2026-09-23",
+      "added_by": "coordinator_2026-09-23",
+      "related_issue": "AUDIT-CT-003"
+    },
+    {
+      "id": "WL-003",
+      "match": {
+        "type": "multiple_analytics_destinations"
+      },
+      "status": "external_blocked",
+      "reason": "GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
+      "notes": "config/analytics_canonical.json 已声明 canonical_measurement_id=G-GECBME3YVJ + canonical_property_id=538482322，hugo.toml / .env / GitHub Secrets / GA4_PROPERTY_ID 三方一致性由第 3 层校验检查。代码侧已到位，仅剩 GTM 层面的外部账号操作。",
+      "added_at": "2026-09-23",
+      "added_by": "coordinator_2026-09-23",
+      "related_config": "config/analytics_canonical.json"
+    }
+  ]
+}

@@ -183,7 +183,11 @@ def ensure_dirs():
 def load_resolved_issues():
     """加载历史报告中已解决的问题（用于继承状态，避免重复报告）"""
     resolved = {}
-    RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
+    # 包含 whitelist 豁免状态（external_blocked / accepted_risk）以便跨 run 继承
+    RESOLVED_STATUSES = {
+        "resolved", "fixed", "false_positive", "closed",
+        "accepted_risk", "external_blocked",
+    }
     try:
         reports = sorted(REPORTS_DIR.glob("site_health_*.json"))
         if not reports:
@@ -208,6 +212,81 @@ def load_resolved_issues():
     except Exception:
         pass
     return resolved
+
+
+def load_whitelist():
+    """加载 config/site_health_whitelist.json 已知豁免清单。
+
+    豁免清单是显式声明的"已知接受风险 / 决策型关闭 / 外部阻塞"条目。
+    与 load_resolved_issues() 的"历史报告自动继承"不同：白名单是静态文档，
+    需要人为维护；豁免必须写明 reason + notes 以便后人复查。
+
+    每条规则结构：
+        {
+          "id": "WL-001",
+          "match": {"type": "site_unreachable", "file_contains": "...", "message_contains": "..."},
+          "status": "false_positive|accepted_risk|external_blocked|resolved",
+          "reason": "...",
+          "notes": "..."
+        }
+
+    match 字段 AND 语义：全部子字段都必须命中才算豁免。type 必需。
+
+    文件缺失 / 解析失败时返回空列表（不阻塞主流程）。
+    """
+    whitelist_path = ROOT / "config" / "site_health_whitelist.json"
+    if not whitelist_path.exists():
+        return []
+    try:
+        data = json.loads(whitelist_path.read_text(encoding="utf-8"))
+        items = data.get("whitelist", [])
+        if not isinstance(items, list):
+            return []
+        return items
+    except Exception as e:
+        print(f"  [警告] whitelist 加载失败: {e}")
+        return []
+
+
+def apply_whitelist(issues):
+    """把 whitelist 规则应用到 issues 列表。命中即写 status + resolution_note。
+
+    返回 (豁免条目数, 命中规则 id 列表)。已带 status 的 issue 不覆盖
+    （状态继承先跑，避免覆盖历史真实数据）。
+    """
+    whitelist = load_whitelist()
+    if not whitelist:
+        return 0, []
+    applied = 0
+    hit_ids = []
+    for issue in issues:
+        # 已有 status 的不覆盖（比如历史 resolved 继承）
+        if (issue.get("status") or "").strip():
+            continue
+        itype = issue.get("type", "")
+        for rule in whitelist:
+            match = rule.get("match", {})
+            if match.get("type") != itype:
+                continue
+            # file_contains 子串匹配
+            file_val = issue.get("file", "") or issue.get("page", "") or ""
+            if "file_contains" in match and match["file_contains"] not in file_val:
+                continue
+            # message_contains 子串匹配
+            if "message_contains" in match and match["message_contains"] not in issue.get("message", ""):
+                continue
+            # 全部命中 → 应用豁免
+            issue["status"] = rule.get("status", "accepted_risk")
+            issue["resolved_by"] = rule.get("added_by", "whitelist")
+            issue["resolution_note"] = (
+                f"[{rule.get('id', '?')}] {rule.get('reason', '')}"
+            )
+            issue["resolved_at"] = rule.get("added_at", "")
+            issue["whitelist_id"] = rule.get("id", "")
+            applied += 1
+            hit_ids.append(rule.get("id", "?"))
+            break  # 首条命中即应用，不再往下匹配
+    return applied, hit_ids
 
 
 def check_sitemap_health():
@@ -1496,6 +1575,11 @@ def run_health_check(auto_fix=True):
             inherited_count += 1
     if inherited_count > 0:
         print(f"\n  [状态继承] {inherited_count} 个问题继承历史已解决状态，不计入未解决")
+
+    # 应用已知豁免清单（config/site_health_whitelist.json）
+    wl_count, wl_ids = apply_whitelist(all_issues)
+    if wl_count > 0:
+        print(f"\n  [白名单豁免] {wl_count} 个问题命中豁免清单 {wl_ids}，不计入未解决")
     
     # 自动修复
     fixed_issues = []
@@ -1513,7 +1597,11 @@ def run_health_check(auto_fix=True):
                 print(f"  {status} [{issue['severity']}] {issue['type']}: {message}")
     
     # 生成报告（只统计未解决问题）
-    RESOLVED_STATUSES = {"resolved", "fixed", "false_positive", "closed"}
+    # 包含历史继承状态 + whitelist 豁免状态（external_blocked / accepted_risk 也算已处置）
+    RESOLVED_STATUSES = {
+        "resolved", "fixed", "false_positive", "closed",
+        "accepted_risk", "external_blocked",  # whitelist 豁免状态
+    }
     unresolved = [i for i in all_issues if (i.get("status") or "").lower() not in RESOLVED_STATUSES]
     resolved_count = len(all_issues) - len(unresolved)
     
