@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-24T06:02:27",
+  "updated_at": "2026-09-24T17:52:28",
   "items": [
     {
       "id": "soc-000001",
@@ -174,8 +174,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-24",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2742,8 +2742,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-24",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3388,7 +3388,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nShanghai vs Beijing: Which to Visit First | Everything you need to know about Food — in one practical guide.\n\nShanghai vs Beijing comparison guide: culture, food, cost, transport, and which city fits your travel style best for a first China trip | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Shanghai vs Beijing: Which to Visit First' (platform pinterest). Scene: Shanghai Bund skyline at night. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai vs Beijing comparison guide: culture, food, cost, transport, and which city fits your travel style best for a first China trip.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-vs-beijing-which-chinese-city-s-pinterest-conversion-9ac7eff2.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -3403,7 +3403,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "f1fa5e8351d6"
+      "_sig": "f1fa5e8351d6",
+      "image_generated": true
     },
     {
       "id": "soc-000131",
@@ -3413,7 +3414,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Zhangjiajie every traveler should know. → https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'China National Parks: Zhangjiajie &' (platform x). Scene: Zhangjiajie sandstone pillars in clouds. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-national-parks-zhangjiajie-jiuzhai-x-knowledge-ab284539.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -3428,7 +3429,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "b152af185bc7"
+      "_sig": "b152af185bc7",
+      "image_generated": true
     },
     {
       "id": "soc-000132",
@@ -3438,7 +3440,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\n💡 Essential Zhangjiajie tips most first-time visitors miss.\n\n• Zhangjiajie National Forest Park\n• Jiuzhaigou National Park\n• Huangshan National Park\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional tip social graphic for 'China National Parks: Zhangjiajie &' (platform fb). Scene: Zhangjiajie sandstone pillars in clouds. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-national-parks-zhangjiajie-jiuzhai-fb-tip-67bd7550.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -3453,7 +3455,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "1402b41733ea"
+      "_sig": "1402b41733ea",
+      "image_generated": true
     },
     {
       "id": "soc-000133",
@@ -3463,7 +3466,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nWhat travelers discover about Zhangjiajie — practical lessons from the ground.\n\n· China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'China National Parks: Zhangjiajie &' (platform ig). Scene: Zhangjiajie sandstone pillars in clouds. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-national-parks-zhangjiajie-jiuzhai-ig-story-bff0749f.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -3478,7 +3481,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "eae4146a8247"
+      "_sig": "eae4146a8247",
+      "image_generated": true
     },
     {
       "id": "soc-000134",
@@ -3488,7 +3492,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nChina National Parks: Zhangjiajie & | Visual guide to Zhangjiajie: what to see and capture.\n\nChina National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'China National Parks: Zhangjiajie &' (platform pinterest). Scene: Zhangjiajie sandstone pillars in clouds. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-national-parks-zhangjiajie-jiuzhai-pinterest-visual-a7ccdb68.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -3503,7 +3507,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "fdddb9e7df30"
+      "_sig": "fdddb9e7df30",
+      "image_generated": true
     },
     {
       "id": "soc-000135",
@@ -4119,8 +4124,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-24",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6128,8 +6133,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-24",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6332,8 +6337,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-24",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
