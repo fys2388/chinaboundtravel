@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-23T10:24:50.241059",
-  "data_date": "2026-09-22",
+  "pull_time": "2026-09-24T10:41:16.455305",
+  "data_date": "2026-09-23",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 248,
-    "sessions": 368,
-    "screenPageViews": 659,
-    "engagedSessions": 145,
-    "bounceRate": 0.6059782608695652,
-    "averageSessionDuration": 198.68316841847826,
-    "engagementRate": 0.39402173913043476,
-    "newUsers": 247
+    "activeUsers": 250,
+    "sessions": 370,
+    "screenPageViews": 661,
+    "engagedSessions": 149,
+    "bounceRate": 0.5972972972972973,
+    "averageSessionDuration": 197.94015269189188,
+    "engagementRate": 0.4027027027027027,
+    "newUsers": 248
   },
   "daily": [
-    {
-      "date": "2026-08-27",
-      "sessions": 7,
-      "activeUsers": 7,
-      "pageviews": 7
-    },
     {
       "date": "2026-08-28",
       "sessions": 12,
@@ -179,9 +173,15 @@
     },
     {
       "date": "2026-09-23",
-      "sessions": 4,
+      "sessions": 5,
       "activeUsers": 4,
-      "pageviews": 4
+      "pageviews": 5
+    },
+    {
+      "date": "2026-09-24",
+      "sessions": 1,
+      "activeUsers": 1,
+      "pageviews": 5
     }
   ],
   "top_pages": [
@@ -194,8 +194,8 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 107,
-      "sessions": 84
+      "pageviews": 106,
+      "sessions": 83
     },
     {
       "path": "/ops/ops-center",
@@ -279,15 +279,15 @@
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 181,
-      "activeUsers": 108,
-      "engagementRate": 0.2762
+      "sessions": 180,
+      "activeUsers": 107,
+      "engagementRate": 0.2833
     },
     {
       "channel": "Organic Social",
-      "sessions": 161,
-      "activeUsers": 125,
-      "engagementRate": 0.5776
+      "sessions": 164,
+      "activeUsers": 128,
+      "engagementRate": 0.5854
     },
     {
       "channel": "Organic Search",
@@ -315,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-22"
+    "data_date": "2026-09-23"
   }
 }
