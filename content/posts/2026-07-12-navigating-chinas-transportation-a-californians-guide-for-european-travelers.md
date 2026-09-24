@@ -129,6 +129,8 @@ For more information on China travel, check out these articles:
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

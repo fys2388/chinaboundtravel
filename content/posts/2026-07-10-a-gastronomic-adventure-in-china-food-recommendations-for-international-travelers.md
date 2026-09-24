@@ -158,6 +158,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
 ## FAQ
 
 ### What should I know about best food in china?
