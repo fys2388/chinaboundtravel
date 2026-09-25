@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-25T06:04:16",
+  "updated_at": "2026-09-25T17:55:45",
   "items": [
     {
       "id": "soc-000001",
@@ -256,8 +256,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-25",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1612,8 +1612,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-25",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2661,8 +2661,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-25",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3518,7 +3518,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Zhangjiajie — in one practical guide. → https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'China National Parks: Zhangjiajie &' (platform x). Scene: Zhangjiajie sandstone pillars in clouds. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-national-parks-zhangjiajie-jiuzhai-x-conversion-b6e00c19.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -3533,7 +3533,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "774495ba6f86"
+      "_sig": "774495ba6f86",
+      "image_generated": true
     },
     {
       "id": "soc-000136",
@@ -3543,7 +3544,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\n💡 Research-backed facts about Etiquette every traveler should know.\n\n• Why China Etiquette Matters More Than You Think\n• Tipping in China: What Most Travelers Get Wrong\n• Taking Photos in China: What Is Allowed and What Is Not\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional knowledge social graphic for 'China Travel Etiquette: Tipping & Photos' (platform fb). Scene: traditional Chinese architecture with red lanterns. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-travel-etiquette-tipping-photos-an-fb-knowledge-7c7f9b65.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -3558,7 +3559,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "67388c418e75"
+      "_sig": "67388c418e75",
+      "image_generated": true
     },
     {
       "id": "soc-000137",
@@ -3568,7 +3570,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Etiquette tips most first-time visitors miss.\n\n· Why China Etiquette Matters More Than You Think\n· Tipping in China: What Most Travelers Get Wrong\n· Taking Photos in China: What Is Allowed and What Is Not\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'China Travel Etiquette: Tipping & Photos' (platform ig). Scene: traditional Chinese architecture with red lanterns. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-travel-etiquette-tipping-photos-an-ig-tip-fd27fdbe.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -3583,7 +3585,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "364baa3f1cde"
+      "_sig": "364baa3f1cde",
+      "image_generated": true
     },
     {
       "id": "soc-000138",
@@ -3593,7 +3596,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nChina Travel Etiquette: Tipping & Photos | What travelers discover about Etiquette — practical lessons from the ground.\n\nChina travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial desk | Keywords: etiquette, photo\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'China Travel Etiquette: Tipping & Photos' (platform pinterest). Scene: traditional Chinese architecture with red lanterns. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-travel-etiquette-tipping-photos-an-pinterest-story-7c128055.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -3608,7 +3611,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "3f72fb13f4a2"
+      "_sig": "3f72fb13f4a2",
+      "image_generated": true
     },
     {
       "id": "soc-000139",
@@ -6393,8 +6397,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-25",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6472,8 +6476,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-25",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
