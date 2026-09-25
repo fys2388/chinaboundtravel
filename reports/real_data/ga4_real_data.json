@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-24T10:41:16.455305",
-  "data_date": "2026-09-23",
+  "pull_time": "2026-09-25T10:45:00.713797",
+  "data_date": "2026-09-24",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 250,
-    "sessions": 370,
-    "screenPageViews": 661,
-    "engagedSessions": 149,
-    "bounceRate": 0.5972972972972973,
-    "averageSessionDuration": 197.94015269189188,
-    "engagementRate": 0.4027027027027027,
-    "newUsers": 248
+    "activeUsers": 244,
+    "sessions": 365,
+    "screenPageViews": 660,
+    "engagedSessions": 144,
+    "bounceRate": 0.6054794520547945,
+    "averageSessionDuration": 206.38650964657535,
+    "engagementRate": 0.39452054794520547,
+    "newUsers": 242
   },
   "daily": [
-    {
-      "date": "2026-08-28",
-      "sessions": 12,
-      "activeUsers": 12,
-      "pageviews": 12
-    },
     {
       "date": "2026-08-29",
       "sessions": 14,
@@ -179,9 +173,15 @@
     },
     {
       "date": "2026-09-24",
-      "sessions": 1,
+      "sessions": 2,
+      "activeUsers": 2,
+      "pageviews": 6
+    },
+    {
+      "date": "2026-09-25",
+      "sessions": 2,
       "activeUsers": 1,
-      "pageviews": 5
+      "pageviews": 1
     }
   ],
   "top_pages": [
@@ -194,8 +194,8 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 106,
-      "sessions": 83
+      "pageviews": 103,
+      "sessions": 80
     },
     {
       "path": "/ops/ops-center",
@@ -210,16 +210,16 @@
       "sessions": 5
     },
     {
+      "path": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "pageviews": 16,
+      "sessions": 16
+    },
+    {
       "path": "/posts/",
       "title": "Posts | ChinaBound Travel",
       "pageviews": 15,
       "sessions": 8
-    },
-    {
-      "path": "/pricing/",
-      "title": "Choose Your China Travel Pass | ChinaBound Travel",
-      "pageviews": 15,
-      "sessions": 15
     },
     {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -243,7 +243,7 @@
       "path": "/contact/",
       "title": "Contact ChinaBound Travel | ChinaBound Travel",
       "pageviews": 7,
-      "sessions": 7
+      "sessions": 8
     },
     {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
@@ -279,14 +279,14 @@
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 180,
-      "activeUsers": 107,
-      "engagementRate": 0.2833
+      "sessions": 174,
+      "activeUsers": 101,
+      "engagementRate": 0.2644
     },
     {
       "channel": "Organic Social",
       "sessions": 164,
-      "activeUsers": 128,
+      "activeUsers": 127,
       "engagementRate": 0.5854
     },
     {
@@ -303,8 +303,14 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": 3,
+      "sessions": 4,
       "activeUsers": 2,
+      "engagementRate": 0.0
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 1,
+      "activeUsers": 1,
       "engagementRate": 0.0
     }
   ],
@@ -315,6 +321,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-23"
+    "data_date": "2026-09-24"
   }
 }
