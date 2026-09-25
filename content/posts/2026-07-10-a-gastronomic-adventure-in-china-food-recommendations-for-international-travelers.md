@@ -160,6 +160,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
+- [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
+
 ## FAQ
 
 ### What should I know about best food in china?

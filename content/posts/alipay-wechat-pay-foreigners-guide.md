@@ -199,3 +199,5 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 - [China Business Travel Guide: Meetings, Dining, and Networking](https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/)
 - [Dude, What Just Happened?](https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
+
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

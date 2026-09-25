@@ -131,6 +131,8 @@ For more information on China travel, check out these articles:
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
+- [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
+
 ## FAQ
 
 ### How do I book how to take train in china?
