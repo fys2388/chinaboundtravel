@@ -1349,6 +1349,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20260925_020134",
+      "timestamp": "2026-09-25T02:01:34.261685",
+      "workflow_name": "Ops Dashboard Refresh",
+      "run_id": "36084418725",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
