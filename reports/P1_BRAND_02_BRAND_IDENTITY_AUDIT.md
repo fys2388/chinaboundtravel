@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Brand Identity Audit
 
-- Generated: 2026-09-25
+- Generated: 2026-09-26
 
 品牌层检查：全部 HTML 模板 + 全部非文章 markdown 页面 + hugo.toml（content/posts 由 --legacy 单独扫描）。
 
