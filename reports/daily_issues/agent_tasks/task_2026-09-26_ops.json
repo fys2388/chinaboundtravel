@@ -3,7 +3,7 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-26_ops",
   "created_at": "2026-09-26T01:00:27.949526+00:00",
-  "updated_at": "2026-09-26T17:31:15.348954",
+  "updated_at": "2026-09-26T18:01:01.542878",
   "target_date": "2026-09-26",
   "issue_count": 3,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-58a65099a5598470",
+      "id": "site_health-67c8051742d030bd",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "description": "multiple_analytics_destinations",
@@ -31,7 +31,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-09-26T17:31:15.001399+00:00"
+      "detected_at": "2026-09-26T18:01:01.205402+00:00"
     },
     {
       "id": "workflow-36210591063-unknown",
@@ -75,7 +75,7 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-58a65099a5598470",
+    "id": "site_health-67c8051742d030bd",
     "type": "multiple_analytics_destinations",
     "title": "multiple_analytics_destinations",
     "description": "multiple_analytics_destinations",
@@ -92,7 +92,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-09-26T17:31:15.001399+00:00"
+    "detected_at": "2026-09-26T18:01:01.205402+00:00"
   },
   "expected_actions": [
     "manual_review"
