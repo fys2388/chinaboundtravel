@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-25T17:55:45",
+  "updated_at": "2026-09-26T06:03:36",
   "items": [
     {
       "id": "soc-000001",
@@ -202,8 +202,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1632,7 +1632,7 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Food — practical lessons from the → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260918&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Food — practical lessons from the → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Food Guide: Must-Try Dishes &' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-x-story-55a44ef5.jpg",
       "utm_params": {
@@ -1641,7 +1641,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-09-19",
+      "publish_date": "2026-09-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1650,8 +1650,8 @@
         "platform": "x"
       },
       "_sig": "f221fb16a744",
-      "recycled_at": "2026-09-18",
-      "recycle_count": 1,
+      "recycled_at": "2026-09-26",
+      "recycle_count": 2,
       "image_generated": true
     },
     {
@@ -1660,7 +1660,7 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
       "image_prompt": "Professional visual social graphic for 'China Food Guide: Must-Try Dishes &' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-fb-visual-8f08d756.jpg",
       "utm_params": {
@@ -1668,8 +1668,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1678,8 +1678,8 @@
         "platform": "fb"
       },
       "_sig": "5019e804fe6b",
-      "recycled_at": "2026-09-19",
-      "recycle_count": 1,
+      "recycled_at": "2026-09-26",
+      "recycle_count": 2,
       "image_generated": true
     },
     {
@@ -2680,16 +2680,16 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about China travel — practical lessons from the ground. → https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about China travel — practical lessons from the ground. → https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform x). Scene: cozy Chinese boutique hotel room. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-x-story-4d9af636.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2698,8 +2698,9 @@
         "platform": "x"
       },
       "_sig": "631d90a71ef1",
-      "recycled_at": "2026-09-19",
-      "recycle_count": 1
+      "recycled_at": "2026-09-26",
+      "recycle_count": 2,
+      "image_generated": true
     },
     {
       "id": "soc-000104",
@@ -2707,7 +2708,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/accommodation-tips-guide/",
+      "caption": "🔥 linkedin\n\n💡 Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/accommodation-tips-guide/",
       "image_prompt": "Professional visual social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform fb). Scene: cozy Chinese boutique hotel room. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
       "utm_params": {
@@ -2715,8 +2716,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2725,8 +2726,8 @@
         "platform": "fb"
       },
       "_sig": "ea7a14e59063",
-      "recycled_at": "2026-09-19",
-      "recycle_count": 1
+      "recycled_at": "2026-09-26",
+      "recycle_count": 2
     },
     {
       "id": "soc-000105",
@@ -3622,7 +3623,7 @@
       "type": "visual",
       "caption": "Visual guide to Etiquette: what to see and capture. → https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Travel Etiquette: Tipping & Photos' (platform x). Scene: traditional Chinese architecture with red lanterns. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-travel-etiquette-tipping-photos-an-x-visual-a0d93e96.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -3637,7 +3638,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "a1135a11b9c8"
+      "_sig": "a1135a11b9c8",
+      "image_generated": true
     },
     {
       "id": "soc-000140",
@@ -3647,7 +3649,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\n💡 Everything you need to know about Etiquette — in one practical guide.\n\n• China Travel Etiquette: Tipping & Photos\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional conversion social graphic for 'China Travel Etiquette: Tipping & Photos' (platform fb). Scene: traditional Chinese architecture with red lanterns. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China travel etiquette for travelers visiting China. research-based essential guide for travelers curated by the ChinaBound Travel editorial.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-travel-etiquette-tipping-photos-an-fb-conversion-810d1e26.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -3662,7 +3664,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "4f3b57beb778"
+      "_sig": "4f3b57beb778",
+      "image_generated": true
     },
     {
       "id": "soc-000141",
@@ -6416,7 +6419,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "ig",
       "type": "visual",
-      "caption": "🔥 linkedin\n\nVisual guide to Food: what to see and capture.\n\n· Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260917&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 linkedin\n\nVisual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp",
       "utm_params": {
@@ -6425,7 +6428,7 @@
         "utm_campaign": "cbt_social_20260917"
       },
       "status": "已发布",
-      "publish_date": "2026-09-19",
+      "publish_date": "2026-09-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6433,7 +6436,9 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "937ced66e707"
+      "_sig": "937ced66e707",
+      "recycled_at": "2026-09-26",
+      "recycle_count": 1
     },
     {
       "id": "soc-000250",
@@ -6495,7 +6500,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260918&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'Chinese Train Stations: Survival Guide for' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-27-how-to-survive-chinese-train-station.webp",
       "utm_params": {
@@ -6504,7 +6509,7 @@
         "utm_campaign": "cbt_social_20260918"
       },
       "status": "已发布",
-      "publish_date": "2026-09-19",
+      "publish_date": "2026-09-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6512,7 +6517,9 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "bb5c366e110e"
+      "_sig": "bb5c366e110e",
+      "recycled_at": "2026-09-26",
+      "recycle_count": 1
     },
     {
       "id": "soc-000253",
@@ -6520,7 +6527,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Train — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260918&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Train — practical lessons from the ground. → https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260926&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Chinese Train Stations: Survival Guide for' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-27-how-to-survive-chinese-train-station.webp",
       "utm_params": {
@@ -6528,8 +6535,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6537,7 +6544,9 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "a38223e4df39"
+      "_sig": "a38223e4df39",
+      "recycled_at": "2026-09-26",
+      "recycle_count": 1
     },
     {
       "id": "soc-000254",
