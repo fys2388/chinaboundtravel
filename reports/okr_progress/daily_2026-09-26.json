@@ -1,0 +1,29 @@
+{
+  "report_type": "daily",
+  "period": "2026-09-26",
+  "generated_at": "2026-09-26 00:30:36",
+  "plan": [
+    {
+      "task": "审核并发布 1 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 日访问用户：当前 3人 / 目标 7人（43%），需重点推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 自然搜索仅 0/3 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 3.0,
+    "content": 0.0,
+    "gsc": 107.0,
+    "revenue": 0.0,
+    "email": 1.0
+  }
+}
