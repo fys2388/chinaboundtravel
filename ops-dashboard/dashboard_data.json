@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-26 18:01:17",
+  "generated_at": "2026-09-26 18:31:44",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 134,
+    "response_ms": 57,
     "server": "cloudflare"
   },
   "workflows": [
@@ -86,7 +86,7 @@
       "id": "cross-agent-learning-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-09-25T10:44:37Z",
+      "last_run": "2026-09-26T10:27:11Z",
       "last_event": "schedule"
     },
     {
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-09-26T09:31:41Z",
+      "last_run": "2026-09-26T10:01:37Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -149,7 +149,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-09-26T09:31:46Z",
+      "last_run": "2026-09-26T10:27:53Z",
       "last_event": "workflow_run"
     },
     {
@@ -221,7 +221,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-09-26T10:00:58Z",
+      "last_run": "2026-09-26T10:30:54Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -406,7 +406,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-09-26 10:01",
+    "checked_at": "2026-09-26 10:31",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -557,10 +557,10 @@
   ],
   "metrics": {
     "ga4_28d": {
-      "visitors": 244,
-      "sessions": 365,
-      "pageviews": 660,
-      "date": "2026-09-24"
+      "visitors": 236,
+      "sessions": 356,
+      "pageviews": 655,
+      "date": "2026-09-25"
     },
     "gsc_28d": {
       "impressions": 345,
@@ -570,8 +570,8 @@
     "content": {
       "total_articles": 63,
       "with_affiliate": 35,
-      "avg_word_count": 2055,
-      "date": "2026-09-25"
+      "avg_word_count": 2057,
+      "date": "2026-09-26"
     },
     "ga4_daily": {
       "visitors": 8,
@@ -1754,7 +1754,7 @@
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-09-26T10:01:16.633263+00:00",
+    "generated_at": "2026-09-26T10:31:43.532204+00:00",
     "total": 210,
     "P0": 1,
     "P1": 95,
@@ -1822,7 +1822,7 @@
     },
     "issues": [
       {
-        "id": "site_health-6baeccde2b256a01",
+        "id": "site_health-70cfb78b4e9e440c",
         "severity": "P0",
         "source": "site_health",
         "type": "multiple_analytics_destinations",
@@ -1832,8 +1832,8 @@
         "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
         "owner": "site_health",
         "status": "external_blocked",
-        "first_seen": "2026-09-26T10:01:16.633263+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "first_seen": "2026-09-26T10:31:43.532204+00:00",
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "content-media-2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
@@ -1847,7 +1847,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "content-media-2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
@@ -1861,7 +1861,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "content-media-2026-07-27-accommodation-tips-guide.md",
@@ -1875,7 +1875,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "content-media-2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
@@ -1889,7 +1889,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "content-media-best-travel-insurance-china.md",
@@ -1903,7 +1903,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "8bccafb9d2e21dac",
@@ -1917,7 +1917,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "402430691a47c011",
@@ -1931,7 +1931,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "7f6a8296bee6e17f",
@@ -1945,7 +1945,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "4806e49872c2af7c",
@@ -1959,7 +1959,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "4d114ebf1e0162d7",
@@ -1973,7 +1973,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "b5ce8a46750dc109",
@@ -1987,7 +1987,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "c8b8fc40b7947480",
@@ -2001,7 +2001,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "b07960d97d9ce154",
@@ -2015,7 +2015,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "cf38b1e4fa38a382",
@@ -2029,7 +2029,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "33f2e43c764246f8",
@@ -2043,7 +2043,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "20464a5d3916ab19",
@@ -2057,7 +2057,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "24a6d998a97f94d8",
@@ -2071,7 +2071,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "edc75191237002de",
@@ -2085,7 +2085,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "20db02e528de2835",
@@ -2099,7 +2099,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "f70de10ac8d61032",
@@ -2113,7 +2113,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "6a97267590d622a5",
@@ -2127,7 +2127,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "15bf09c9a087deb3",
@@ -2141,7 +2141,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "dbdaae8f116eb1f8",
@@ -2155,7 +2155,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "201795a0d1510cae",
@@ -2169,7 +2169,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "a00b3bd5b798af08",
@@ -2183,7 +2183,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "e1bd2751fdaa17f6",
@@ -2197,7 +2197,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "5c97d8f2e7670464",
@@ -2211,7 +2211,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "fd5fcd64c2bfb0b6",
@@ -2225,7 +2225,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "ed2d5b5ea5c711ac",
@@ -2239,7 +2239,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "4199a194cef6d9bc",
@@ -2253,7 +2253,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "25dbe716f1a2ae62",
@@ -2267,7 +2267,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "e0a8c197b8b15837",
@@ -2281,7 +2281,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "bdde99014afe0f76",
@@ -2295,7 +2295,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-21T22:21:03.644439+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "8a04e3727b296cfe",
@@ -2309,7 +2309,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "889144977393ca21",
@@ -2323,7 +2323,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "cb55c79046f47f19",
@@ -2337,7 +2337,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "e575e33d7f95683b",
@@ -2351,7 +2351,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "588c2fefd482713e",
@@ -2365,7 +2365,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "65d2a84d64973a91",
@@ -2379,7 +2379,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "d2060fbfaba9e106",
@@ -2393,7 +2393,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "cab5ae3e7416cc4c",
@@ -2407,7 +2407,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "78d12d69f13f255e",
@@ -2421,7 +2421,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "9d046bd5bb6ccb82",
@@ -2435,7 +2435,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-21T22:21:03.644439+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "669f47a0c7df1782",
@@ -2449,7 +2449,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "5c09065fe284069f",
@@ -2463,7 +2463,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "616ba71868610295",
@@ -2477,7 +2477,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "356ad9dd341dec5e",
@@ -2491,7 +2491,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "ef59db9284e8fd0d",
@@ -2505,7 +2505,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       },
       {
         "id": "7fc40e02592c67f5",
@@ -2519,7 +2519,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-09-13T16:21:17.439579+00:00",
-        "last_seen": "2026-09-26T10:01:16.633263+00:00"
+        "last_seen": "2026-09-26T10:31:43.532204+00:00"
       }
     ]
   },
@@ -2554,7 +2554,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-26T10:01:17.077183"
+        "last_run": "2026-09-26T10:31:43.956036"
       },
       "ops": {
         "total": 1,
@@ -2562,7 +2562,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-09-26T10:01:17.113363"
+        "last_run": "2026-09-26T10:31:43.993615"
       }
     }
   },
@@ -2571,7 +2571,7 @@
     "reason": "OK"
   },
   "data_freshness": {
-    "generated_at": "2026-09-26 18:01:17",
+    "generated_at": "2026-09-26 18:31:44",
     "thresholds": {
       "ga4_daily": 2,
       "gsc_daily": 5,
@@ -2606,11 +2606,11 @@
       },
       "ga4_28d": {
         "name": "ga4_28d",
-        "updated_at": "2026-09-24",
-        "age_days": 2,
+        "updated_at": "2026-09-25",
+        "age_days": 1,
         "threshold_days": 4,
         "status": "fresh",
-        "label": "2 天前"
+        "label": "1 天前"
       },
       "gsc_28d": {
         "name": "gsc_28d",
@@ -2622,11 +2622,11 @@
       },
       "content": {
         "name": "content",
-        "updated_at": "2026-09-25",
-        "age_days": 1,
+        "updated_at": "2026-09-26",
+        "age_days": 0,
         "threshold_days": 3,
         "status": "fresh",
-        "label": "1 天前"
+        "label": "实时"
       },
       "agent_kpi": {
         "name": "agent_kpi",
@@ -2654,7 +2654,7 @@
       },
       "quality": {
         "name": "quality",
-        "updated_at": "2026-09-26T10:01:16.633263+00:00",
+        "updated_at": "2026-09-26T10:31:43.532204+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2670,7 +2670,7 @@
       }
     },
     "publish_path_gap": {
-      "dashboard_generated_at": "2026-09-26 18:01:17",
+      "dashboard_generated_at": "2026-09-26 18:31:44",
       "agent_kpi_updated_at": "2026-09-18T22:36:15.872074",
       "agent_kpi_age_days": 8,
       "agent_kpi_threshold_days": 35,
