@@ -1,18 +1,18 @@
 # 🚀 Growth Orchestrator — 统一增长决策报告
 
-**生成时间**: 2026-09-25T10:45:06.619717
+**生成时间**: 2026-09-26T10:27:44.541593
 **Orchestrator 版本**: 1.0
 
 ## 📊 数据源状态
 
 | 域 | 策略文件 | Agent报告 | 策略版本 |
 |---|---|---|---|
-| seo | ✅ | ❌ | 2.0-20260925_104506 |
-| revenue | ✅ | ✅ | 2.0-20260925_104506 |
-| conversion | ✅ | ✅ | 2.0-20260925_104506 |
-| content | ✅ | ✅ | 2.0-20260925_104506 |
-| social | ✅ | ✅ | 2.0-20260925_104506 |
-| user | ✅ | ✅ | 2.0-20260925_104506 |
+| seo | ✅ | ❌ | 2.0-20260926_102744 |
+| revenue | ✅ | ✅ | 2.0-20260926_102744 |
+| conversion | ✅ | ✅ | 2.0-20260926_102744 |
+| content | ✅ | ✅ | 2.0-20260926_102744 |
+| social | ✅ | ✅ | 2.0-20260926_102744 |
+| user | ✅ | ✅ | 2.0-20260926_102744 |
 
 ## 🎯 统一优先级行动（共 11 项，Top 15）
 
@@ -22,7 +22,7 @@
 | 2 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangz | seo_strategy.high_priority_keywords |
 | 3 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shang | seo_strategy.high_priority_keywords |
 | 4 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'tr | seo_strategy.high_priority_keywords |
-| 5 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/accommodation-ti | seo_strategy.high_priority_keywords |
+| 5 | seo | 0.72 | 优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/categories/', 'traffic | seo_strategy.high_priority_keywords |
 | 6 | conversion | 0.72 | CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar'] | conversion_strategy.cta_rules |
 | 7 | conversion | 0.72 | CTA优化: types = ['text_link', 'button', 'banner', 'product_card'] | conversion_strategy.cta_rules |
 | 8 | conversion | 0.72 | CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article':  | conversion_strategy.cta_rules |
@@ -46,4 +46,4 @@
 5. 策略变更前自动保存回滚快照（rollback mechanism）
 
 ---
-*本报告由 Growth Orchestrator v1.0 自动生成 | 2026-09-25T10:45:06.619717*
+*本报告由 Growth Orchestrator v1.0 自动生成 | 2026-09-26T10:27:44.541593*

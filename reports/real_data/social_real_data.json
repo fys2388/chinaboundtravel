@@ -1,7 +1,7 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-25T10:45:05.280946",
-  "data_date": "2026-09-25",
+  "pull_time": "2026-09-26T10:27:43.277228",
+  "data_date": "2026-09-26",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -13,6 +13,54 @@
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6ab7602db097c5b401af690a",
+      "text": "What travelers discover about Food — practical lessons from the → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-26T08:03:31.193Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ab76028b097c5b401af6614",
+      "text": "🔥 linkedin\n\n💡 What travelers discover about Bargain — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chin",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-26T08:03:34.342Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ab6b59bbaa4912dff9197aa",
+      "text": "🔥 linkedin\n\n💡 What travelers discover about China travel — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-25T19:55:50.251Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6ab60edd8c95968bb02e0b24",
       "text": "🔥 linkedin\n\nEverything you need to know about Train — in one practical guide.\n\n· Chinese Train Stations: Survival Guide for\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-sur",
@@ -126,11 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ab5634df2f88235921c2223",
-      "text": "🔥 linkedin\n\nEverything you need to know about China travel — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-24T19:52:27.100Z",
+      "id": "6ab6b59788146db945e03a55",
+      "text": "🔥 linkedin\n\nWhere to Stay in China: Complete 2026 Guide | Essential China travel tips most first-time visitors miss.\n\nWhere to Stay in China: Complete 2026 Guide\n\n📌 Save this for your China trip plann",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-26T06:55:46.316Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -142,11 +190,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ab563494a68d8afcc59c4d3",
-      "text": "Essential Bargain tips most first-time visitors miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-24T19:52:16.568Z",
+      "id": "6ab6b5935c3761cdae7e0660",
+      "text": "🔥 linkedin\n\nChina Food Guide: Must-Try Dishes & | Essential Food tips most first-time visitors miss.\n\nChina Food Guide: Must-Try Dishes &\n\n📌 Save this for your China trip planning.\n\nFull guide: https:",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-26T06:55:46.256Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -158,11 +206,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ab4bce41a0af4842624bddb",
-      "text": "🔥 linkedin\n\nEverything you need to know about Food — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-ch",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-24T08:03:36.264Z",
+      "id": "6ab6b58fbaa4912dff919622",
+      "text": "🔥 linkedin\n\nChina Bargaining Guide: How to Haggle & Shop | Everything you need to know about Tea — in one practical guide.\n\nHow to bargain and shop in China: market etiquette, haggling phrases, and wh",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-26T06:55:31.441Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -284,63 +332,9 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab2bd253940995ca156098f",
-      "text": "🔥 linkedin\n\nAlipay vs WeChat Pay: Which Payment App | Essential Alipay tips most first-time visitors miss.\n\nAlipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchan",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-23T06:39:03.230Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab17997a660579f94684015",
-      "text": "🔥 linkedin\n\nChina 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFu",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-22T07:38:16.109Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab0dc4d3649bbabeac177f9",
-      "text": "Dreaming of exploring China?\n\nWhat foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and\n\nRead the full guide: https://www.chinaboundtravel.c",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-21T20:27:16.592Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "instagram": {
-      "posts": 5,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
     "twitter": {
       "posts": 4,
       "impressions": 0,
@@ -348,7 +342,13 @@
       "likes": 0
     },
     "facebook": {
-      "posts": 1,
+      "posts": 3,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0
+    },
+    "instagram": {
+      "posts": 3,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -369,6 +369,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-25"
+    "data_date": "2026-09-26"
   }
 }

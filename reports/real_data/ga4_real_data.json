@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-25T10:45:00.713797",
-  "data_date": "2026-09-24",
+  "pull_time": "2026-09-26T10:27:40.611286",
+  "data_date": "2026-09-25",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 244,
-    "sessions": 365,
-    "screenPageViews": 660,
-    "engagedSessions": 144,
-    "bounceRate": 0.6054794520547945,
-    "averageSessionDuration": 206.38650964657535,
-    "engagementRate": 0.39452054794520547,
-    "newUsers": 242
+    "activeUsers": 236,
+    "sessions": 356,
+    "screenPageViews": 655,
+    "engagedSessions": 145,
+    "bounceRate": 0.5926966292134831,
+    "averageSessionDuration": 207.5542107949438,
+    "engagementRate": 0.40730337078651685,
+    "newUsers": 234
   },
   "daily": [
-    {
-      "date": "2026-08-29",
-      "sessions": 14,
-      "activeUsers": 14,
-      "pageviews": 16
-    },
     {
       "date": "2026-08-30",
       "sessions": 15,
@@ -173,15 +167,21 @@
     },
     {
       "date": "2026-09-24",
-      "sessions": 2,
-      "activeUsers": 2,
-      "pageviews": 6
+      "sessions": 3,
+      "activeUsers": 3,
+      "pageviews": 10
     },
     {
       "date": "2026-09-25",
-      "sessions": 2,
-      "activeUsers": 1,
-      "pageviews": 1
+      "sessions": 3,
+      "activeUsers": 3,
+      "pageviews": 3
+    },
+    {
+      "date": "2026-09-26",
+      "sessions": 8,
+      "activeUsers": 8,
+      "pageviews": 6
     }
   ],
   "top_pages": [
@@ -242,7 +242,7 @@
     {
       "path": "/contact/",
       "title": "Contact ChinaBound Travel | ChinaBound Travel",
-      "pageviews": 7,
+      "pageviews": 8,
       "sessions": 8
     },
     {
@@ -258,6 +258,12 @@
       "sessions": 6
     },
     {
+      "path": "/posts/144-hour-visa-free-transit-guide/",
+      "title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "pageviews": 6,
+      "sessions": 5
+    },
+    {
       "path": "/posts/hangzhou-west-lake-tea-culture-g20-guide/",
       "title": "Hangzhou Travel Guide: West Lake & Tea | ChinaBound Travel",
       "pageviews": 6,
@@ -268,43 +274,37 @@
       "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 6
-    },
-    {
-      "path": "/resources/",
-      "title": "China Travel Resources 2026: Tools & Services | ChinaBound Travel",
-      "pageviews": 6,
-      "sessions": 4
     }
   ],
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 174,
-      "activeUsers": 101,
-      "engagementRate": 0.2644
+      "sessions": 165,
+      "activeUsers": 91,
+      "engagementRate": 0.2788
     },
     {
       "channel": "Organic Social",
-      "sessions": 164,
-      "activeUsers": 127,
-      "engagementRate": 0.5854
+      "sessions": 165,
+      "activeUsers": 128,
+      "engagementRate": 0.5879
     },
     {
       "channel": "Organic Search",
-      "sessions": 15,
-      "activeUsers": 12,
-      "engagementRate": 0.0667
+      "sessions": 16,
+      "activeUsers": 13,
+      "engagementRate": 0.0625
     },
     {
       "channel": "AI Assistant",
-      "sessions": 7,
-      "activeUsers": 4,
-      "engagementRate": 0.1429
+      "sessions": 6,
+      "activeUsers": 3,
+      "engagementRate": 0.1667
     },
     {
       "channel": "Unassigned",
-      "sessions": 4,
-      "activeUsers": 2,
+      "sessions": 5,
+      "activeUsers": 3,
       "engagementRate": 0.0
     },
     {
@@ -321,6 +321,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-24"
+    "data_date": "2026-09-25"
   }
 }

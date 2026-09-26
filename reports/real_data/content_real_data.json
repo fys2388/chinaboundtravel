@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-25T10:45:06.084540",
-  "data_date": "2026-09-25",
+  "pull_time": "2026-09-26T10:27:43.930727",
+  "data_date": "2026-09-26",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 63,
     "articles_this_week": 0,
-    "avg_word_count": 2055,
+    "avg_word_count": 2057,
     "articles_with_affiliate_links": 35,
     "articles_with_internal_links": 61
   },
@@ -20,7 +20,7 @@
     },
     {
       "slug": "2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c",
-      "word_count": 1124,
+      "word_count": 1131,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -38,7 +38,7 @@
     },
     {
       "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
-      "word_count": 1448,
+      "word_count": 1455,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
