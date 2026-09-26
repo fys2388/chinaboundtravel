@@ -122,3 +122,5 @@ China's nightlife scene is a vibrant and diverse world waiting to be explored. F
 ## Related Reading
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

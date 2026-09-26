@@ -133,6 +133,8 @@ For more information on China travel, check out these articles:
 
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
+- [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

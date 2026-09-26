@@ -162,6 +162,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
+- [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?

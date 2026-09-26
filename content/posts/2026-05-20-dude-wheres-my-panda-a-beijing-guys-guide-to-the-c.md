@@ -80,3 +80,5 @@ So go. Take the flight. Wake up early. Don't try to hug one. And if you see a pa
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

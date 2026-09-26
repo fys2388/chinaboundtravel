@@ -175,6 +175,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?
