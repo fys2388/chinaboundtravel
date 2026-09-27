@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-09-26T10:27:42.320197",
-  "data_date": "2026-09-23",
+  "pull_time": "2026-09-27T05:31:35.073072",
+  "data_date": "2026-09-24",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 345,
+    "impressions": 331,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 70.5,
+    "average_position": 70.1,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-08-27",
-      "impressions": 97,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 65.7
-    },
     {
       "date": "2026-08-28",
       "impressions": 123,
@@ -208,6 +201,13 @@
       "clicks": 1,
       "ctr": 0.06,
       "position": 29.2
+    },
+    {
+      "date": "2026-09-24",
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.2
     }
   ],
   "top_queries": [
@@ -296,13 +296,6 @@
       "position": 78
     },
     {
-      "query": "144 transit visa china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 64
-    },
-    {
       "query": "144 visa china",
       "impressions": 1,
       "clicks": 0,
@@ -331,13 +324,6 @@
       "position": 61
     },
     {
-      "query": "144hr visa china",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 77
-    },
-    {
       "query": "6 day visa free china",
       "impressions": 1,
       "clicks": 0,
@@ -350,6 +336,20 @@
       "clicks": 0,
       "ctr": 0,
       "position": 69
+    },
+    {
+      "query": "alipay ile ödeme nasıl yapılır",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "bargaining in china",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 83
     }
   ],
   "top_pages": [
@@ -358,21 +358,21 @@
       "impressions": 19,
       "clicks": 1,
       "ctr": 0.05,
-      "position": 19.4
+      "position": 16
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 130,
+      "impressions": 133,
       "clicks": 1,
       "ctr": 0.01,
-      "position": 64.1
+      "position": 64
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 48,
+      "impressions": 52,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 10.5
+      "position": 10.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
@@ -383,10 +383,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 27,
+      "impressions": 26,
       "clicks": 0,
       "ctr": 0,
-      "position": 49.6
+      "position": 48.6
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -397,17 +397,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/categories/",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/categories/china-itinerary/",
       "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 94
+      "position": 5.5
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
@@ -432,7 +425,7 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 64,
+      "impressions": 57,
       "clicks": 0,
       "ctr": 0,
       "position": 76.9
@@ -446,10 +439,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 354,
+      "impressions": 320,
       "clicks": 0,
       "ctr": 0,
-      "position": 62.9
+      "position": 62.4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
@@ -492,6 +485,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 63.1
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 9
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-23"
+    "data_date": "2026-09-24"
   }
 }
