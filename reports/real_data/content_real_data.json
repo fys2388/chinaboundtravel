@@ -1,20 +1,20 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-09-26T10:27:43.930727",
-  "data_date": "2026-09-26",
+  "pull_time": "2026-09-27T10:58:14.117252",
+  "data_date": "2026-09-27",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 63,
     "articles_this_week": 0,
-    "avg_word_count": 2057,
+    "avg_word_count": 2060,
     "articles_with_affiliate_links": 35,
     "articles_with_internal_links": 61
   },
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 2099,
+      "word_count": 2108,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -32,7 +32,7 @@
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2288,
+      "word_count": 2297,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -62,7 +62,7 @@
     },
     {
       "slug": "2026-05-27-how-to-survive-chinese-train-station",
-      "word_count": 1617,
+      "word_count": 1624,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -98,7 +98,7 @@
     },
     {
       "slug": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture",
-      "word_count": 2063,
+      "word_count": 2075,
       "has_affiliate_links": false,
       "has_internal_links": true
     }

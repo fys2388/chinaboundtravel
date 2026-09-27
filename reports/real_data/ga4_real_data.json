@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-26T10:27:40.611286",
-  "data_date": "2026-09-25",
+  "pull_time": "2026-09-27T10:58:11.130733",
+  "data_date": "2026-09-26",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 236,
-    "sessions": 356,
-    "screenPageViews": 655,
-    "engagedSessions": 145,
-    "bounceRate": 0.5926966292134831,
-    "averageSessionDuration": 207.5542107949438,
-    "engagementRate": 0.40730337078651685,
-    "newUsers": 234
+    "activeUsers": 231,
+    "sessions": 350,
+    "screenPageViews": 647,
+    "engagedSessions": 153,
+    "bounceRate": 0.5628571428571428,
+    "averageSessionDuration": 209.6121837742857,
+    "engagementRate": 0.43714285714285717,
+    "newUsers": 229
   },
   "daily": [
-    {
-      "date": "2026-08-30",
-      "sessions": 15,
-      "activeUsers": 13,
-      "pageviews": 15
-    },
     {
       "date": "2026-08-31",
       "sessions": 28,
@@ -181,7 +175,13 @@
       "date": "2026-09-26",
       "sessions": 8,
       "activeUsers": 8,
-      "pageviews": 6
+      "pageviews": 8
+    },
+    {
+      "date": "2026-09-27",
+      "sessions": 21,
+      "activeUsers": 18,
+      "pageviews": 17
     }
   ],
   "top_pages": [
@@ -194,8 +194,8 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 103,
-      "sessions": 80
+      "pageviews": 101,
+      "sessions": 79
     },
     {
       "path": "/ops/ops-center",
@@ -246,6 +246,12 @@
       "sessions": 8
     },
     {
+      "path": "/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 7,
+      "sessions": 7
+    },
+    {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
       "pageviews": 7,
@@ -268,26 +274,20 @@
       "title": "Hangzhou Travel Guide: West Lake & Tea | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 4
-    },
-    {
-      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
-      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 6,
-      "sessions": 6
     }
   ],
   "traffic_sources": [
     {
-      "channel": "Direct",
-      "sessions": 165,
-      "activeUsers": 91,
-      "engagementRate": 0.2788
-    },
-    {
       "channel": "Organic Social",
       "sessions": 165,
       "activeUsers": 128,
-      "engagementRate": 0.5879
+      "engagementRate": 0.6424
+    },
+    {
+      "channel": "Direct",
+      "sessions": 158,
+      "activeUsers": 86,
+      "engagementRate": 0.2848
     },
     {
       "channel": "Organic Search",
@@ -297,20 +297,14 @@
     },
     {
       "channel": "AI Assistant",
-      "sessions": 6,
-      "activeUsers": 3,
-      "engagementRate": 0.1667
+      "sessions": 7,
+      "activeUsers": 4,
+      "engagementRate": 0.1429
     },
     {
       "channel": "Unassigned",
-      "sessions": 5,
+      "sessions": 4,
       "activeUsers": 3,
-      "engagementRate": 0.0
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 1,
-      "activeUsers": 1,
       "engagementRate": 0.0
     }
   ],
@@ -321,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-25"
+    "data_date": "2026-09-26"
   }
 }
