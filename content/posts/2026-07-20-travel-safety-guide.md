@@ -305,6 +305,8 @@ Originally posted on ChinaBound Travel Blog
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
+
 ## FAQ
 
 ### What should I know about how safe is china,travel & destinations,210,26,informational,0.0,/resources?
