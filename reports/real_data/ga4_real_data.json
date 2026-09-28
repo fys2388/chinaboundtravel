@@ -1,18 +1,18 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-09-28T04:25:27.789644",
+  "pull_time": "2026-09-28T12:14:52.975263",
   "data_date": "2026-09-27",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 237,
-    "sessions": 357,
-    "screenPageViews": 650,
-    "engagedSessions": 153,
-    "bounceRate": 0.5714285714285714,
-    "averageSessionDuration": 205.89398607002803,
-    "engagementRate": 0.42857142857142855,
-    "newUsers": 234
+    "activeUsers": 240,
+    "sessions": 358,
+    "screenPageViews": 654,
+    "engagedSessions": 170,
+    "bounceRate": 0.5251396648044693,
+    "averageSessionDuration": 206.1086862988827,
+    "engagementRate": 0.4748603351955307,
+    "newUsers": 238
   },
   "daily": [
     {
@@ -173,9 +173,15 @@
     },
     {
       "date": "2026-09-27",
-      "sessions": 22,
-      "activeUsers": 19,
-      "pageviews": 18
+      "sessions": 23,
+      "activeUsers": 22,
+      "pageviews": 22
+    },
+    {
+      "date": "2026-09-28",
+      "sessions": 2,
+      "activeUsers": 2,
+      "pageviews": 2
     }
   ],
   "top_pages": [
@@ -222,16 +228,16 @@
       "sessions": 8
     },
     {
+      "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 12,
+      "sessions": 12
+    },
+    {
       "path": "/about/",
       "title": "About Joran & ChinaBound Travel | ChinaBound Travel",
       "pageviews": 12,
       "sessions": 7
-    },
-    {
-      "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 11,
-      "sessions": 12
     },
     {
       "path": "/china-bargaining-and-shopping-guide/",
@@ -242,7 +248,7 @@
     {
       "path": "/accommodation-tips-guide/",
       "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 8,
+      "pageviews": 10,
       "sessions": 11
     },
     {
@@ -273,39 +279,33 @@
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 159,
-      "activeUsers": 122,
-      "engagementRate": 0.6604
+      "sessions": 178,
+      "activeUsers": 141,
+      "engagementRate": 0.6966
     },
     {
       "channel": "Direct",
-      "sessions": 150,
-      "activeUsers": 80,
-      "engagementRate": 0.2933
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 17,
-      "activeUsers": 17,
-      "engagementRate": 0.1176
+      "sessions": 151,
+      "activeUsers": 81,
+      "engagementRate": 0.2914
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
-      "activeUsers": 13,
-      "engagementRate": 0.0625
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 16,
-      "activeUsers": 4,
-      "engagementRate": 0.0
+      "sessions": 17,
+      "activeUsers": 14,
+      "engagementRate": 0.0588
     },
     {
       "channel": "AI Assistant",
       "sessions": 7,
       "activeUsers": 4,
       "engagementRate": 0.1429
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 5,
+      "activeUsers": 3,
+      "engagementRate": 0.0
     }
   ],
   "raw_source": "GA4 Data API v1beta",

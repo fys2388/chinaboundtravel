@@ -1,18 +1,34 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-28T04:25:30.602445",
+  "pull_time": "2026-09-28T12:14:57.065769",
   "data_date": "2026-09-28",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 1,
+    "total_impressions": 8,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6aba0b63612c9e6ac942c69f",
+      "text": "Everything you need to know about Food — in one practical guide. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-28T08:38:31.125Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6ab9553354f1e60c7e747a2d",
       "text": "Research-backed facts about High Speed every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=x&utm_medium=social&utm_",
@@ -26,7 +42,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 3,
       "engagement_rate": 0.0
     },
     {
@@ -58,7 +74,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 3,
       "engagement_rate": 0.0
     },
     {
@@ -106,7 +122,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "engagement_rate": 0.0
     },
     {
@@ -158,11 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ab6b59bbaa4912dff9197aa",
-      "text": "🔥 linkedin\n\n💡 What travelers discover about China travel — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-09-25T19:55:50.251Z",
+      "id": "6ab9552c43493a0ede981699",
+      "text": "🔥 linkedin\n\nChina Bargaining Guide: How to Haggle & Shop | Research-backed facts about Bargain every traveler should know.\n\nChina Bargaining Guide: How to Haggle & Shop\n\n📌 Save this for your China tri",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-09-28T06:41:18.139Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,33 +332,17 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab2bd34b192c8cad1916895",
-      "text": "🔥 linkedin\n\nHow to Use Alipay & WeChat Pay in China 2026 | Essential Alipay tips most first-time visitors miss.\n\nHow to Use Alipay & WeChat Pay in China 2026\n\n📌 Save this for your China trip planning.",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-23T06:39:03.521Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "twitter": {
-      "posts": 5,
-      "impressions": 1,
+      "posts": 6,
+      "impressions": 8,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
-      "posts": 5,
+      "posts": 4,
       "impressions": 0,
       "clicks": 0,
       "likes": 0

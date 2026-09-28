@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-09-27T10:58:14.708089",
+  "run_time": "2026-09-28T12:14:58.268777",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.458160",
+      "version": "2.0-20260928_121457",
+      "last_updated": "2026-09-28T12:14:58.012121",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -50,8 +50,8 @@
         {
           "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
           "ctr": 0.02,
-          "position": 10.2,
-          "impressions": 52
+          "position": 7.6,
+          "impressions": 51
         },
         {
           "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -87,6 +87,11 @@
       "best_pages": [],
       "high_priority_keywords": [
         {
+          "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+          "traffic_potential": 12.240000000000002,
+          "position": 7.6
+        },
+        {
           "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
           "traffic_potential": 3.2,
           "position": 3.6
@@ -105,11 +110,6 @@
           "keyword": "https://www.chinaboundtravel.com/cities/yangshuo/",
           "traffic_potential": 1.2,
           "position": 4
-        },
-        {
-          "keyword": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-          "traffic_potential": 1.1,
-          "position": 9
         }
       ],
       "learning_insights": [
@@ -120,7 +120,7 @@
         },
         {
           "pattern": "快速提升机会关键词",
-          "description": "发现 7 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+          "description": "发现 8 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
           "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
           "keywords": [
             "https://www.chinaboundtravel.com/cancel/",
@@ -131,26 +131,11 @@
           ]
         }
       ],
-      "strategy_changes": [
-        {
-          "field": "best_keywords",
-          "reason": "基于GSC数据分析，更新最佳关键词排名",
-          "version": "2.1",
-          "timestamp": "2026-09-27T10:58:14.439909",
-          "evidence": "based on performance data analysis"
-        },
-        {
-          "field": "high_priority_keywords",
-          "reason": "基于流量潜力分析，更新高优先级关键词",
-          "version": "2.1",
-          "timestamp": "2026-09-27T10:58:14.439909",
-          "evidence": "based on performance data analysis"
-        }
-      ]
+      "strategy_changes": []
     },
     "revenue": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.566499",
+      "version": "2.0-20260928_121458",
+      "last_updated": "2026-09-28T12:14:58.122343",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -233,8 +218,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.393014",
+      "version": "2.0-20260928_121457",
+      "last_updated": "2026-09-28T12:14:57.946415",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -318,8 +303,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.347609",
+      "version": "2.0-20260928_121457",
+      "last_updated": "2026-09-28T12:14:57.901397",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -414,8 +399,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.282028",
+      "version": "2.0-20260928_121457",
+      "last_updated": "2026-09-28T12:14:57.834774",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -542,8 +527,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20260927_105814",
-      "last_updated": "2026-09-27T10:58:14.502989",
+      "version": "2.0-20260928_121458",
+      "last_updated": "2026-09-28T12:14:58.056831",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -567,25 +552,25 @@
         {
           "segment": "Organic Social",
           "revenue_per_user": 0,
-          "users": 128,
+          "users": 122,
           "conversion_rate": 0
         },
         {
           "segment": "Direct",
           "revenue_per_user": 0,
-          "users": 86,
+          "users": 80,
+          "conversion_rate": 0
+        },
+        {
+          "segment": "Cross-network",
+          "revenue_per_user": 0,
+          "users": 17,
           "conversion_rate": 0
         },
         {
           "segment": "Organic Search",
           "revenue_per_user": 0,
           "users": 13,
-          "conversion_rate": 0
-        },
-        {
-          "segment": "AI Assistant",
-          "revenue_per_user": 0,
-          "users": 4,
           "conversion_rate": 0
         }
       ],
@@ -612,16 +597,7 @@
           }
         }
       ],
-      "strategy_changes": [
-        {
-          "field": "best_segments",
-          "reason": "基于用户价值分析，更新最佳用户分层排名"
-        },
-        {
-          "field": "high_value_segments",
-          "reason": "基于收入分析，更新高价值用户分层"
-        }
-      ],
+      "strategy_changes": [],
       "high_value_segments": [
         {
           "segment": "",
@@ -632,13 +608,13 @@
         {
           "segment": "Organic Social",
           "revenue_per_user": 0,
-          "users": 128,
+          "users": 122,
           "conversion_rate": 0
         },
         {
           "segment": "Direct",
           "revenue_per_user": 0,
-          "users": 86,
+          "users": 80,
           "conversion_rate": 0
         }
       ]
@@ -656,80 +632,80 @@
   "actions": [
     {
       "domain": "seo",
+      "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
+      "priority_score": 0.7200000000000001,
+      "source": "seo_strategy.high_priority_keywords",
+      "strategy_version": "2.0-20260928_121457"
+    },
+    {
+      "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 1.5299999999999994, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'traffic_potential': 1.2, 'position': 4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260927_105814"
-    },
-    {
-      "domain": "seo",
-      "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/accommodation-tips-guide/', 'traffic_potential': 1.1, 'position': 9}",
-      "priority_score": 0.7200000000000001,
-      "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260927_105814"
+      "strategy_version": "2.0-20260928_121457"
     }
   ],
   "domain_summary": {
