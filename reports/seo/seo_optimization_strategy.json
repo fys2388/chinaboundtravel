@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260914_040147",
-  "last_updated": "2026-09-14T04:01:47.594059",
+  "version": "2.0-20260928_042531",
+  "last_updated": "2026-09-28T04:25:31.415762",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -44,6 +44,12 @@
       "impressions": 53
     },
     {
+      "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "ctr": 0.02,
+      "position": 7.6,
+      "impressions": 51
+    },
+    {
       "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
       "ctr": 0.01,
       "position": 20.8,
@@ -72,16 +78,15 @@
       "ctr": 0,
       "position": 46.3,
       "impressions": 3
-    },
-    {
-      "keyword": "144 hour visa",
-      "ctr": 0,
-      "position": 87,
-      "impressions": 1
     }
   ],
   "best_pages": [],
   "high_priority_keywords": [
+    {
+      "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "traffic_potential": 12.240000000000002,
+      "position": 7.6
+    },
     {
       "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
       "traffic_potential": 3.2,
@@ -101,11 +106,6 @@
       "keyword": "https://www.chinaboundtravel.com/cities/yangshuo/",
       "traffic_potential": 1.2,
       "position": 4
-    },
-    {
-      "keyword": "https://www.chinaboundtravel.com/cancel/",
-      "traffic_potential": 0.3,
-      "position": 7
     }
   ],
   "learning_insights": [
@@ -116,7 +116,7 @@
     },
     {
       "pattern": "快速提升机会关键词",
-      "description": "发现 5 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+      "description": "发现 8 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
       "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
       "keywords": [
         "https://www.chinaboundtravel.com/cancel/",
@@ -127,5 +127,20 @@
       ]
     }
   ],
-  "strategy_changes": []
+  "strategy_changes": [
+    {
+      "field": "best_keywords",
+      "reason": "基于GSC数据分析，更新最佳关键词排名",
+      "version": "2.1",
+      "timestamp": "2026-09-28T04:25:31.397742",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "high_priority_keywords",
+      "reason": "基于流量潜力分析，更新高优先级关键词",
+      "version": "2.1",
+      "timestamp": "2026-09-28T04:25:31.397742",
+      "evidence": "based on performance data analysis"
+    }
+  ]
 }

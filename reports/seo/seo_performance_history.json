@@ -938,8 +938,250 @@
         "is_optimization_candidate": false
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 visa china",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 64
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144-hour visa-free transit",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 67.3
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144-hour visa-free transit in china",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 61
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay ile ödeme nasıl yapılır",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 1
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0.9,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "bargaining in china",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 83
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "beijing visa free",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 70
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "best dishes in china",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 68
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 51,
+        "clicks": 1,
+        "ctr": 0.02,
+        "position": 7.6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 12.240000000000002,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/categories/",
+      "page": "https://www.chinaboundtravel.com/categories/",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 5.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.9,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 33
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "page": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 14,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 62.6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "date": "2026-09-25",
+      "metrics": {
+        "impressions": 11,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 9
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 1.1,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-09-14T04:01:47.584503"
+  "last_updated": "2026-09-28T04:25:31.396162"
 }

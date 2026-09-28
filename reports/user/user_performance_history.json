@@ -21,8 +21,266 @@
       "segment": "",
       "page": "",
       "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "Organic Social",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 159,
+        "users": 122
+      },
+      "metadata": {
+        "channel": "Organic Social"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "Direct",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 150,
+        "users": 80
+      },
+      "metadata": {
+        "channel": "Direct"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "Cross-network",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 17,
+        "users": 17
+      },
+      "metadata": {
+        "channel": "Cross-network"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "Organic Search",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 16,
+        "users": 13
+      },
+      "metadata": {
+        "channel": "Organic Search"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "Unassigned",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 16,
+        "users": 4
+      },
+      "metadata": {
+        "channel": "Unassigned"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "traffic_source",
+      "segment": "AI Assistant",
+      "date": "2026-09-27",
+      "metrics": {
+        "sessions": 7,
+        "users": 4
+      },
+      "metadata": {
+        "channel": "AI Assistant"
+      },
+      "calculated": {},
+      "page": "",
+      "title": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/",
+      "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 96,
+        "sessions": 74,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/",
+      "title": "Posts | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 15,
+        "sessions": 8,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 15,
+        "sessions": 15,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "7-Day China Itinerary: Beijing, Xi'an, Shanghai | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 14,
+        "sessions": 8,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/about/",
+      "title": "About Joran & ChinaBound Travel | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 12,
+        "sessions": 7,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 11,
+        "sessions": 12,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/china-bargaining-and-shopping-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 11,
+        "sessions": 10,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/accommodation-tips-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 8,
+        "sessions": 11,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/contact/",
+      "title": "Contact ChinaBound Travel | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 8,
+        "sessions": 8,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 7,
+        "sessions": 7,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 7,
+        "sessions": 6,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/cities/",
+      "title": "China City Travel Guides | ChinaBound Travel",
+      "date": "2026-09-27",
+      "metrics": {
+        "pageviews": 6,
+        "sessions": 6,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-09-14T04:01:47.621676"
+  "last_updated": "2026-09-28T04:25:31.460064"
 }

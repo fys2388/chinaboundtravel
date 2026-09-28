@@ -1,6 +1,6 @@
 {
-  "validation_time": "2026-09-14T04:01:47.786705",
-  "overall_score": 64.3,
+  "validation_time": "2026-09-28T04:25:31.736269",
+  "overall_score": 60.7,
   "is_effective": true,
   "effective_strategies": [
     {
@@ -16,9 +16,18 @@
       "total": 5
     }
   ],
-  "ineffective_strategies": [],
+  "ineffective_strategies": [
+    {
+      "category": "social",
+      "improve_rate": 28.6,
+      "improved": 2,
+      "declined": 0,
+      "total": 7
+    }
+  ],
   "needs_more_data": [],
   "recommendations": [
-    "学习策略整体有效，继续当前方向"
+    "学习策略整体有效，继续当前方向",
+    "低效策略需要优化: social"
   ]
 }

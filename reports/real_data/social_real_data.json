@@ -1,18 +1,34 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-27T10:58:13.551628",
-  "data_date": "2026-09-27",
+  "pull_time": "2026-09-28T04:25:30.602445",
+  "data_date": "2026-09-28",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 0,
+    "total_impressions": 1,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6ab9553354f1e60c7e747a2d",
+      "text": "Research-backed facts about High Speed every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=x&utm_medium=social&utm_",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-27T19:41:16.663Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6ab8b81a0f79a37c5d480e4d",
       "text": "🔥 linkedin\n\n💡 Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chine",
@@ -90,7 +106,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
@@ -150,22 +166,6 @@
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab60edd8c95968bb02e0b24",
-      "text": "🔥 linkedin\n\nEverything you need to know about Train — in one practical guide.\n\n· Chinese Train Stations: Survival Guide for\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-sur",
-      "platform": "instagram",
-      "channel_name": "joranchinatravel",
-      "published_at": "2026-09-25T08:04:21.954Z",
-      "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -335,20 +335,14 @@
     }
   ],
   "by_platform": {
+    "twitter": {
+      "posts": 5,
+      "impressions": 1,
+      "clicks": 0,
+      "likes": 0
+    },
     "facebook": {
       "posts": 5,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
-    "twitter": {
-      "posts": 4,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
-    "instagram": {
-      "posts": 1,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -363,12 +357,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 19,
-  "impression_metric_count": 19,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-27"
+    "data_date": "2026-09-28"
   }
 }

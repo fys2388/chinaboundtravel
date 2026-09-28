@@ -9359,8 +9359,40 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6ab9553354f1e60c7e747a2d",
+      "platform": "twitter",
+      "text": "Research-backed facts about High Speed every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=x&utm_medium=social&utm_",
+      "published_at": "2026-09-27T19:41:16.663Z",
+      "date": "2026-09-27",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "fys2388",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Research-backed facts about High Speed every traveler should know. → #ChinaTravel\n\nhttps://www.china",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-09-27T10:58:14.271518",
+  "last_updated": "2026-09-28T04:25:31.232226",
   "version": "1.0"
 }
