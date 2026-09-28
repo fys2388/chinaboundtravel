@@ -164,6 +164,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?

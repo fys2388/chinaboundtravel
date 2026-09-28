@@ -177,6 +177,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
 ## FAQ
 
 ### Do I need a visa for China?

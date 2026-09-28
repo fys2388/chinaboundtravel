@@ -135,6 +135,8 @@ For more information on China travel, check out these articles:
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+
 ## FAQ
 
 ### How do I book how to take train in china?
