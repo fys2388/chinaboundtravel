@@ -1,0 +1,278 @@
+{
+  "date": "2026-09-28",
+  "site_up": true,
+  "response_time": 95.868,
+  "visitors": 19,
+  "sessions": 22,
+  "requests": 18,
+  "visitors_trend": "+137.5%",
+  "week_trend": "+72.7%",
+  "month_trend": "+35.7%",
+  "bounce_rate": 90.9,
+  "avg_session_duration": 11,
+  "engagement_rate": 9.1,
+  "bounce_rate_7d": 55.9,
+  "engagement_rate_7d": 44.1,
+  "avg_session_duration_7d": 57.1798755882353,
+  "sessions_7d": 68,
+  "visitors_7d": 55,
+  "top_pages": [
+    {
+      "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
+      "views": 10
+    },
+    {
+      "path": "/accommodation-tips-guide/",
+      "views": 7
+    },
+    {
+      "path": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Cross-network",
+      "users": 17,
+      "sessions": 17
+    },
+    {
+      "channel": "Organic Social",
+      "users": 1,
+      "sessions": 1
+    },
+    {
+      "channel": "Unassigned",
+      "users": 1,
+      "sessions": 12
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 17
+    },
+    {
+      "country": "Israel",
+      "users": 1
+    },
+    {
+      "country": "Sweden",
+      "users": 1
+    }
+  ],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 104,
+  "gsc_clicks": 1,
+  "gsc_ctr": 0.96,
+  "gsc_errors": 0,
+  "gsc_week_trend": "-31.1%",
+  "gsc_month_trend": "-87.2%",
+  "top_keywords": [
+    {
+      "keyword": "business meeting in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 93.0
+    },
+    {
+      "keyword": "chengdu traditional tea ceremony experience",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 92.0
+    },
+    {
+      "keyword": "china for business",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 68.0
+    },
+    {
+      "keyword": "china travel 7 day itinerary",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 85.0
+    },
+    {
+      "keyword": "chinabound.online",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 44.0
+    },
+    {
+      "keyword": "how to ride china's high-speed trains",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 63.0
+    },
+    {
+      "keyword": "how to visit zhangjiajie",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keyword": "traditional chinese tea ceremony in chengdu",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 75.0
+    },
+    {
+      "keyword": "travel to china for business",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 57.0
+    },
+    {
+      "keyword": "traveling to china for business",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0.0,
+      "position": 55.9
+    }
+  ],
+  "total_posts": 63,
+  "new_posts": 0,
+  "pending_posts": 1,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 0,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": false,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 1,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": null,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "审核并发布 1 篇草稿文章",
+    "🟠 自然搜索仅 0/19 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+    "🟠 高流量但联盟零点击：联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-09-27",
+  "gsc_avg_position": 23.01,
+  "gsc_window_start": "2026-09-19",
+  "gsc_window_end": "2026-09-25",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 76,
+  "root_pages_scanned": 13,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_report_window_days": 2,
+  "gh_social_window_days": 2,
+  "gh_social_success": true,
+  "agent_health": {
+    "checked_at": "2026-09-28 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-09-21 03:51:17",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-09-28",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-09-27",
+    "generated_at": "2026-09-27",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 331,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🎯 今日 OKR 速览（Q3 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 19人 | 7人 | 100% | ✅ 当前 19人 = 目标的 3×，进度封顶 100%（目标偏低） |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟢 今日无新发（距上次 7 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 14.9次 | 13次 | 100% | ✅ 当前 14.9次 = 目标的 1×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 1$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 1人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟠 **自然搜索仅 0/19 人（0%）**：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）\n- 🟠 **高流量但联盟零点击**：联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"
+}

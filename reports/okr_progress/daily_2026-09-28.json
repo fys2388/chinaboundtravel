@@ -1,0 +1,29 @@
+{
+  "report_type": "daily",
+  "period": "2026-09-28",
+  "generated_at": "2026-09-28 00:31:14",
+  "plan": [
+    {
+      "task": "审核并发布 1 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 自然搜索仅 0/19 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 高流量但联盟零点击：联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 19.0,
+    "content": 0.0,
+    "gsc": 104.0,
+    "revenue": 0.0,
+    "email": 1.0
+  }
+}
