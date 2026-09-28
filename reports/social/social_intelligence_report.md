@@ -1,6 +1,6 @@
 # ChinaBound Travel 社媒智能优化报告
 
-**生成时间**: 2026-09-21 03:46:40
+**生成时间**: 2026-09-28 04:09:05
 **引擎版本**: v1.0
 **成熟度目标**: L2 → L3
 
@@ -57,11 +57,11 @@
 
 | 排名 | 模式名称 | 内容类型 | 平均互动率 | 样本量 | 适用平台 | 置信度 |
 |------|----------|----------|------------|--------|----------|--------|
-| 1 | Question Content Pattern | question | 7.20% | 6 | x, facebook, instagram | 60% |
-| 2 | Visual Content Pattern | visual | 7.18% | 6 | x, facebook, instagram | 60% |
-| 3 | Story Content Pattern | story | 5.82% | 6 | x, facebook, instagram | 60% |
-| 4 | Guide Content Pattern | guide | 5.60% | 6 | x, facebook, instagram | 60% |
-| 5 | List Content Pattern | list | 4.70% | 6 | x, facebook, instagram | 60% |
+| 1 | Question Content Pattern | question | 7.20% | 6 | x, pinterest, instagram | 60% |
+| 2 | Visual Content Pattern | visual | 7.18% | 6 | x, pinterest, facebook | 60% |
+| 3 | Story Content Pattern | story | 5.82% | 6 | x, pinterest, instagram | 60% |
+| 4 | Guide Content Pattern | guide | 5.60% | 6 | x, pinterest, facebook | 60% |
+| 5 | List Content Pattern | list | 4.70% | 6 | x, pinterest, linkedin | 60% |
 
 ### 爆款内容关键元素
 
@@ -149,5 +149,5 @@
 
 ---
 
-*报告由社媒智能优化Agent自动生成 | 2026-09-21 03:46:40*
+*报告由社媒智能优化Agent自动生成 | 2026-09-28 04:09:05*
 *引擎版本: v1.0 | 成熟度目标: L2 → L3*

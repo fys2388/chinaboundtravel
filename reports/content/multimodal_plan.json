@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T03:51:17.348667",
+  "generated_at": "2026-09-28T04:12:12.591053",
   "total_recommendations": 27,
   "type_distribution": {
     "infographic": 22,
@@ -9,8 +9,8 @@
   },
   "priority_distribution": {
     "high": 14,
-    "medium": 10,
-    "low": 3
+    "medium": 8,
+    "low": 5
   },
   "recommendations": [
     {
@@ -34,39 +34,6 @@
       "priority": "high",
       "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
       "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_144-hour-visa-free-t_0",
-      "content_id": "content_144-hour-visa-free-t",
-      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
-      "media_type": "infographic",
-      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
-      "purpose": "seo + engagement",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_144-hour-visa-free-t_1",
-      "content_id": "content_144-hour-visa-free-t",
-      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
-      "media_type": "infographic",
-      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
-      "purpose": "seo + engagement",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_144-hour-visa-free-t_2",
-      "content_id": "content_144-hour-visa-free-t",
-      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
-      "media_type": "step_diagram",
-      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
-      "purpose": "understanding",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "low"
     },
     {
       "id": "mm_content_china-transportation_0",
@@ -94,6 +61,39 @@
       "id": "mm_content_china-transportation_2",
       "content_id": "content_china-transportation",
       "content_title": "China Transportation 2026: Trains & Didi",
+      "media_type": "step_diagram",
+      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
+      "purpose": "understanding",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "low"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_0",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_1",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_144-hour-visa-free-t_2",
+      "content_id": "content_144-hour-visa-free-t",
+      "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
       "media_type": "step_diagram",
       "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
       "purpose": "understanding",
@@ -234,17 +234,6 @@
       "creation_complexity": "medium"
     },
     {
-      "id": "mm_content_shanghai-bund-french_0",
-      "content_id": "content_shanghai-bund-french",
-      "content_title": "Shanghai 48-Hour: Bund & French Concession",
-      "media_type": "infographic",
-      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
-      "purpose": "seo + engagement",
-      "priority": "medium",
-      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
-      "creation_complexity": "medium"
-    },
-    {
       "id": "mm_content_chinese-language-sur_0",
       "content_id": "content_chinese-language-sur",
       "content_title": "Chinese Language Survival Phrases Guide 2026",
@@ -253,6 +242,17 @@
       "purpose": "seo + engagement",
       "priority": "medium",
       "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_shanghai-bund-french_0",
+      "content_id": "content_shanghai-bund-french",
+      "content_title": "Shanghai 48-Hour: Bund & French Concession",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
       "creation_complexity": "medium"
     },
     {
@@ -295,8 +295,8 @@
       "media_type": "infographic",
       "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
       "purpose": "seo + engagement",
-      "priority": "medium",
-      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "priority": "low",
+      "estimated_impact": "低 - 一般内容，多模态提升有限",
       "creation_complexity": "medium"
     },
     {

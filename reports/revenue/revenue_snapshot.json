@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-21T03:46:40.827200",
+  "generated_at": "2026-09-28T04:09:04.957722",
   "period": {
-    "start": "2026-08-24",
-    "end": "2026-09-21",
+    "start": "2026-08-31",
+    "end": "2026-09-28",
     "days": 28
   },
   "metrics": {
-    "period_start": "2026-08-24",
-    "period_end": "2026-09-21",
+    "period_start": "2026-08-31",
+    "period_end": "2026-09-28",
     "days": 28,
     "impressions": 0,
-    "clicks": 78,
+    "clicks": 79,
     "inits": 0,
     "searches": 0,
     "bookings": 0,
