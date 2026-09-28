@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T06:38:29",
+  "updated_at": "2026-09-28T20:04:46",
   "items": [
     {
       "id": "soc-000001",
@@ -3682,8 +3682,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-28",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4040,8 +4040,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-28",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4068,8 +4068,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-28",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4452,7 +4452,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Internet every traveler should know. → https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/internet-connection-china-esim-vpn-guide-x-knowledge-5f029434.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -4467,7 +4467,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "35cb68a4d8f2"
+      "_sig": "35cb68a4d8f2",
+      "image_generated": true
     },
     {
       "id": "soc-000172",
@@ -4860,8 +4861,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-28",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5620,8 +5621,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-28",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
