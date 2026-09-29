@@ -182,6 +182,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
+- [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

@@ -299,3 +299,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
+
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)

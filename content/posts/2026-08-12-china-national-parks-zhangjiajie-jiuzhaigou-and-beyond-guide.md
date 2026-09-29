@@ -115,3 +115,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 - [China Photography Guide: Top Spots & Tips](https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

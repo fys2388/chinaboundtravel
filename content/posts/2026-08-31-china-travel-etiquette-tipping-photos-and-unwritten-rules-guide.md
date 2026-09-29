@@ -140,3 +140,5 @@ By following these simple etiquette tips, you'll be well on your way to having a
 - [China Family Travel Tips: Mistakes to Avoid](/posts/china-family-travel-tips-a-californians-guide/)
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

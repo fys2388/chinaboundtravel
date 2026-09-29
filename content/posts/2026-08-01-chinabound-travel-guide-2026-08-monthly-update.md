@@ -179,6 +179,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
+- [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
+
 ## FAQ
 
 ### Do I need a visa for China?
