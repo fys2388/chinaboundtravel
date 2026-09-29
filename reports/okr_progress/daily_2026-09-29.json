@@ -1,0 +1,29 @@
+{
+  "report_type": "daily",
+  "period": "2026-09-29",
+  "generated_at": "2026-09-29 00:31:23",
+  "plan": [
+    {
+      "task": "审核并发布 1 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 日访问用户：当前 5人 / 目标 7人（71%），保持推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 联盟 1 次点击 / 0 转化：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 5.0,
+    "content": 0.0,
+    "gsc": 119.0,
+    "revenue": 0.0,
+    "email": 1.0
+  }
+}
