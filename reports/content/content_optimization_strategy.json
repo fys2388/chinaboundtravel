@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260928_121457",
-  "last_updated": "2026-09-28T12:14:57.901397",
+  "version": "2.0-20260929_114430",
+  "last_updated": "2026-09-29T11:44:30.892419",
   "content_rules": {
     "min_word_count": 1500,
     "target_word_count": 2000,
