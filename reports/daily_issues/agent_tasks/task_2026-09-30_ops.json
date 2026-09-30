@@ -3,7 +3,7 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-09-30_ops",
   "created_at": "2026-09-30T01:01:15.354975+00:00",
-  "updated_at": "2026-09-30T07:01:04.410884",
+  "updated_at": "2026-09-30T07:31:03.381592",
   "target_date": "2026-09-30",
   "issue_count": 1,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-5c2c8662e8b47997",
+      "id": "site_health-4b820f22d7af6d0",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "description": "multiple_analytics_destinations",
@@ -31,11 +31,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-09-30T07:01:04.084689+00:00"
+      "detected_at": "2026-09-30T07:31:03.216707+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-5c2c8662e8b47997",
+    "id": "site_health-4b820f22d7af6d0",
     "type": "multiple_analytics_destinations",
     "title": "multiple_analytics_destinations",
     "description": "multiple_analytics_destinations",
@@ -52,7 +52,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-09-30T07:01:04.084689+00:00"
+    "detected_at": "2026-09-30T07:31:03.216707+00:00"
   },
   "expected_actions": [
     "manual_review"
