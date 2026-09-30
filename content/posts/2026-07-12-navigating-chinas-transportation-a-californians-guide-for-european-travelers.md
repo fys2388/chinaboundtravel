@@ -137,6 +137,8 @@ For more information on China travel, check out these articles:
 
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
 
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

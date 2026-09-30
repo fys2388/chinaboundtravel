@@ -181,6 +181,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+
 ## FAQ
 
 ### Do I need a visa for China?

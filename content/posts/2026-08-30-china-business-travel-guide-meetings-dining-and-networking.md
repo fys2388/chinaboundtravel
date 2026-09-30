@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-09-29"
+last_updated: "2026-09-30"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 
@@ -158,6 +158,8 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
 ## FAQ
 
