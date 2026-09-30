@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T06:32:15",
+  "updated_at": "2026-09-30T18:21:00",
   "items": [
     {
       "id": "soc-000001",
@@ -3738,8 +3738,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-30",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3760,7 +3760,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260930&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "image_prompt": "Professional visual social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-vs-wechat-pay-which-tourists-shou-fb-visual-93c6c3ef.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -3777,7 +3777,8 @@
       },
       "_sig": "d6a1947775fd",
       "recycled_at": "2026-09-30",
-      "recycle_count": 1
+      "recycle_count": 1,
+      "image_generated": true
     },
     {
       "id": "soc-000145",
@@ -4031,8 +4032,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-30",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4191,8 +4192,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-30",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6082,8 +6083,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-30",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6136,8 +6137,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-09-30",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
