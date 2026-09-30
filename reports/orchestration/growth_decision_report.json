@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-09-29T11:44:31.178906",
+  "run_time": "2026-09-30T11:30:48.330491",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20260929_114430",
-      "last_updated": "2026-09-29T11:44:30.981805",
+      "version": "2.0-20260930_113048",
+      "last_updated": "2026-09-30T11:30:48.092787",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -28,6 +28,12 @@
           "ctr": 0.33,
           "position": 13.7,
           "impressions": 3
+        },
+        {
+          "keyword": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+          "ctr": 0.2,
+          "position": 10.2,
+          "impressions": 5
         },
         {
           "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -76,12 +82,6 @@
           "ctr": 0,
           "position": 87,
           "impressions": 1
-        },
-        {
-          "keyword": "144 hour transit visa china",
-          "ctr": 0,
-          "position": 46.3,
-          "impressions": 3
         }
       ],
       "best_pages": [],
@@ -131,11 +131,19 @@
           ]
         }
       ],
-      "strategy_changes": []
+      "strategy_changes": [
+        {
+          "field": "best_keywords",
+          "reason": "基于GSC数据分析，更新最佳关键词排名",
+          "version": "2.1",
+          "timestamp": "2026-09-30T11:30:48.074822",
+          "evidence": "based on performance data analysis"
+        }
+      ]
     },
     "revenue": {
-      "version": "2.0-20260929_114431",
-      "last_updated": "2026-09-29T11:44:31.065305",
+      "version": "2.0-20260930_113048",
+      "last_updated": "2026-09-30T11:30:48.196728",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -218,8 +226,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20260929_114430",
-      "last_updated": "2026-09-29T11:44:30.925887",
+      "version": "2.0-20260930_113048",
+      "last_updated": "2026-09-30T11:30:48.029633",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -303,8 +311,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20260929_114430",
-      "last_updated": "2026-09-29T11:44:30.892419",
+      "version": "2.0-20260930_113047",
+      "last_updated": "2026-09-30T11:30:47.987796",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -399,8 +407,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20260929_114430",
-      "last_updated": "2026-09-29T11:44:30.842215",
+      "version": "2.0-20260930_113047",
+      "last_updated": "2026-09-30T11:30:47.923418",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -509,7 +517,7 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 3.11%，比Bottom 20%高 3.11个百分点",
+          "description": "Top 20%帖子平均CTR 3.02%，比Bottom 20%高 3.02个百分点",
           "common_hooks": [
             "linkedin",
             "visual",
@@ -527,8 +535,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20260929_114431",
-      "last_updated": "2026-09-29T11:44:31.016407",
+      "version": "2.0-20260930_113048",
+      "last_updated": "2026-09-30T11:30:48.135646",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -646,77 +654,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 1.5299999999999994, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/cities/yangshuo/', 'traffic_potential': 1.2, 'position': 4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20260929_114430"
+      "strategy_version": "2.0-20260930_113048"
     }
   ],
   "domain_summary": {
