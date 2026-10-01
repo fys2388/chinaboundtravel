@@ -1,0 +1,43 @@
+{
+  "report_type": "monthly",
+  "period": "2026-10",
+  "generated_at": "2026-10-01 05:11:14",
+  "plan": [
+    {
+      "task": "优化跳出率偏高的核心页面",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "上线邮件订阅诱饵",
+      "priority": "medium",
+      "period": "本周",
+      "kr_id": "email",
+      "target": 10
+    },
+    {
+      "task": "补充文章结构化数据",
+      "priority": "medium",
+      "period": "本周"
+    },
+    {
+      "task": "发布5篇高转化长尾攻略",
+      "priority": "medium",
+      "period": "本月",
+      "kr_id": "content",
+      "target": 5
+    },
+    {
+      "task": "全量检测内部断链",
+      "priority": "low",
+      "period": "本周"
+    }
+  ],
+  "krs": {
+    "traffic": 224.0,
+    "content": 0.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 1.0
+  }
+}
