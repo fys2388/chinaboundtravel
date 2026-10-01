@@ -1,18 +1,82 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-09-30T11:30:46.972181",
-  "data_date": "2026-09-30",
+  "pull_time": "2026-10-01T11:59:21.416054",
+  "data_date": "2026-10-01",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 5,
+    "total_impressions": 3,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6abe060e55a3f6ac7b289cd0",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tou",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-10-01T09:05:06.959Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6abd53062f3e6ae2be675714",
+      "text": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-g",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-30T20:21:05.064Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6abd53032f3e6ae2be6756ce",
+      "text": "🔥 linkedin\n\n💡 Everything you need to know about China travel — in one practical guide.\n\n• China Airport Transfer Guide (2026)\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: ",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-09-30T20:21:04.763Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6abd52fb7f0602bda64b201a",
+      "text": "What travelers discover about Alipay — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=x&utm_m",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-09-30T20:20:46.385Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 1,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6abcace95df9296bd8e30e30",
       "text": "What travelers discover about Alipay — practical lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=x&utm_medium=social&utm_campai",
@@ -26,7 +90,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
@@ -74,7 +138,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
@@ -110,11 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6abac8541118876b8191a5c6",
-      "text": "🔥 linkedin\n\n💡 Research-backed facts about China travel every traveler should know.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-airp",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-09-28T22:04:49.047Z",
+      "id": "6abd52ff7aad006ba5cd58a2",
+      "text": "🔥 linkedin\n\nAlipay in China: Setup & Payment Tips (2026) | Visual guide to Alipay: what to see and capture.\n\nAlipay in China: Setup & Payment Tips (2026)\n\n📌 Save this for your China trip planning.\n\nFu",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-01T07:21:03.745Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -123,54 +187,6 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6abac850c375fa5e8aa89321",
-      "text": "Everything you need to know about Alipay — in one practical guide. Alipay in China: Setup & Payment Tips (2026) → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-28T22:04:46.750Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 2,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6aba0b63612c9e6ac942c69f",
-      "text": "Everything you need to know about Food — in one practical guide. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-28T08:38:31.125Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab9553354f1e60c7e747a2d",
-      "text": "Research-backed facts about High Speed every traveler should know. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=x&utm_medium=social&utm_",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-09-27T19:41:16.663Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 3,
       "engagement_rate": 0.0
     },
     {
@@ -316,34 +332,18 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ab56359197a53bc51f4195e",
-      "text": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Research-backed facts about China travel every traveler should know.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China tr",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-09-25T06:52:31.121Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "twitter": {
+    "facebook": {
       "posts": 6,
-      "impressions": 5,
+      "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
-    "facebook": {
+    "twitter": {
       "posts": 4,
-      "impressions": 0,
+      "impressions": 3,
       "clicks": 0,
       "likes": 0
     },
@@ -363,6 +363,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-09-30"
+    "data_date": "2026-10-01"
   }
 }
