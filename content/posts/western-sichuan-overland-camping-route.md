@@ -199,6 +199,10 @@ So what are you waiting for? Pack your bags, grab your passport, and let's go ex
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)

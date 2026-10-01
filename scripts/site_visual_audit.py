@@ -8,8 +8,9 @@ import hashlib
 import json
 import re
 import sys
+import time
 import xml.etree.ElementTree as ET
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -165,6 +166,96 @@ def pixel_diff_ratio(current: Path, baseline: Path) -> float | None:
         return changed / total if total else 0.0
 
 
+def _goto_with_retry(
+    page,
+    url: str,
+    *,
+    attempts: int = 3,
+    backoff: int = 2,
+    timeout_ms: int = 30000,
+):
+    """Retry page.goto on transient failures before giving up.
+
+    Returns the Response object on success. On total failure, re-raises
+    the last exception with the attempt count appended to its message so
+    downstream evidence can distinguish a transient network blip from a
+    persistent failure that survived all retries.
+
+    Only timeout / connection errors are retried; other errors (e.g. a
+    deliberate navigation abort) are re-raised immediately.
+    """
+    last_exc: Exception | None = None
+    for i in range(attempts):
+        try:
+            response = page.goto(
+                url, wait_until="domcontentloaded", timeout=timeout_ms
+            )
+            page.wait_for_timeout(1000)
+            return response
+        except Exception as exc:
+            last_exc = exc
+            err_str = str(exc)
+            retriable = (
+                "Timeout" in err_str
+                or "timed out" in err_str
+                or "ECONN" in err_str
+            )
+            if not retriable:
+                raise
+            if i == attempts - 1:
+                # All retries exhausted — annotate for evidence so the
+                # dedup step can tell a genuine persistent failure apart
+                # from a single-attempt timeout.
+                annotated = f"{err_str} (attempts={attempts}/{attempts})"
+                try:
+                    raise type(exc)(annotated) from exc
+                except TypeError:
+                    raise RuntimeError(annotated) from exc
+            time.sleep(backoff * (2**i))
+    raise last_exc  # unreachable; keeps type-checkers happy
+
+
+def dedup_timeout_issues(issues: list[dict]) -> list[dict]:
+    """Collapse same-evidence ``visual_audit_failed`` timeout issues per batch.
+
+    一次网络抖动可能让 N 个页面全部 timeout，本质上是 1 个环境问题。
+    保留 1 条 + 记录 affected_pages 数量，避免 N 条 P1 污染统计。
+    只合并 type=visual_audit_failed 且 evidence 含 "Timeout" 的 issue，
+    其他类型不去重。
+    """
+    timeout_issues: list[dict] = []
+    other_issues: list[dict] = []
+    for issue in issues:
+        if (
+            issue.get("type") == "visual_audit_failed"
+            and "Timeout" in issue.get("evidence", "")
+        ):
+            timeout_issues.append(issue)
+        else:
+            other_issues.append(issue)
+
+    if not timeout_issues:
+        return issues
+
+    # 按 evidence 第一行归组（同一种超时原因归到一起）
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for issue in timeout_issues:
+        key = issue.get("evidence", "").split("\n")[0]
+        groups[key].append(issue)
+
+    deduped: list[dict] = []
+    for evidence, group in groups.items():
+        rep = group[0].copy()
+        rep["evidence"] = (
+            f"{evidence}\n"
+            f"[batch_dedup] 同批次 {len(group)} 个页面同类超时，只保留 1 条"
+        )
+        rep["affected_pages"] = [g.get("page") for g in group]
+        deduped.append(rep)
+
+    return deduped + other_issues
+
+
 def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict], dict]:
     issues: list[dict] = []
     console_errors: list[str] = []
@@ -200,8 +291,7 @@ def audit_page(page, url: str, viewport: dict, timeout: int) -> tuple[list[dict]
     page.on("pageerror", on_page_error)
     page.on("requestfailed", on_request_failed)
     page.on("request", on_request)
-    response = page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
-    page.wait_for_timeout(1000)
+    response = _goto_with_retry(page, url, timeout_ms=timeout * 1000)
     viewport_name = viewport["name"]
 
     status = response.status if response else 0
@@ -513,6 +603,7 @@ def main() -> int:
         print(f"visual audit failed: {exc}", file=sys.stderr)
         return 2
 
+    issues = dedup_timeout_issues(issues)
     issues.sort(
         key=lambda item: (
             SEVERITY_RANK.get(item["severity"], 9),

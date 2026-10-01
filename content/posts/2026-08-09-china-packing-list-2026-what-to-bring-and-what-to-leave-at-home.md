@@ -139,6 +139,10 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)

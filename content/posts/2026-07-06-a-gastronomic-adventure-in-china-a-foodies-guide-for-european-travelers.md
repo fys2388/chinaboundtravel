@@ -262,6 +262,10 @@ If you found this guide helpful, [check out our other China travel guides](/post
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Foodie's Guide to China: Dishes You Must Try](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)

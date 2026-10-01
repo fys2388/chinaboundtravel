@@ -126,6 +126,10 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)

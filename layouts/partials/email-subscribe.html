@@ -79,6 +79,14 @@
     if (!form) return;
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
+        // P0-FIX (2026-09-24): 校验失败早返回，保留表单节点 + 触发浏览器原生错误提示。
+        // 旧实现只判断 !email，type=email 非法值（如 not-an-email）仍会继续 POST
+        // 并禁用按钮，视觉上像"表单消失了"。加 checkValidity 前置判断后：
+        // 非法输入 → 显示 "Please enter a valid email" 气泡，表单保留，按钮不变。
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
         var btn = form.querySelector('.subscribe-btn');
         var msg = form.querySelector('.subscribe-msg');
         var email = form.querySelector('#subscribe-email').value.trim();

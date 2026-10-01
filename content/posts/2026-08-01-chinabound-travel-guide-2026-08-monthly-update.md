@@ -155,6 +155,10 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [ChinaBound Travel Guide 2026.09 Update](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/)

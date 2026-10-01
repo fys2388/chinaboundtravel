@@ -9,6 +9,7 @@ import json
 import re
 import sys
 import threading
+import time
 import xml.etree.ElementTree as ET
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -86,25 +87,42 @@ DESIGNED_REDIRECTS = _load_redirect_rules()
 
 
 def _is_ignored_link(url: str) -> bool:
-    """Return True if the link should be skipped as a known false positive."""
-    return any(url.startswith(p) for p in IGNORE_URL_PREFIXES)
+    """Return True if the link should be skipped as a known false positive.
+
+    修复历史 bug：url 是完整绝对 URL（如 https://.../cdn-cgi/...），
+    而 IGNORE_URL_PREFIXES 是路径前缀（"/cdn-cgi/..."），原先直接
+    url.startswith("/cdn-cgi/...") 恒 False。改用 urlparse().path 比对。
+    """
+    path = urlparse(url).path
+    return any(path.startswith(p) for p in IGNORE_URL_PREFIXES)
 
 
 def _is_designed_redirect(source_url: str, final_url: str) -> bool:
     """Return True if the redirect is intentional, not a defect.
 
     Covers three patterns:
-      1. Source URL has an explicit rule in static/_redirects.
-      2. Source URL is in the trailing-slash normalization allowlist.
-      3. Source URL + "/" == final URL (trailing-slash redirect).
+      1. Source URL (path form) has an explicit rule in static/_redirects.
+      2. Source URL path is in the trailing-slash normalization allowlist.
+      3. Source path + "/" == final URL path (trailing-slash redirect).
+
+    修复历史 bug：source_url 是完整绝对 URL，DESIGNED_REDIRECTS 的 key
+    是路径。原实现用绝对 URL 直接查字典永远 miss，导致 109 个
+    _redirects 已声明的迁移链接被误报为 internal_link_redirect。
+    现在统一规范化为 path 后再查表。
     """
-    src = source_url.rstrip("/")
-    if src in IGNORE_REDIRECT_URLS:
+    try:
+        src_path = urlparse(source_url).path.rstrip("/")
+        dst_path = urlparse(final_url).path.rstrip("/")
+    except Exception:
+        src_path = source_url.rstrip("/")
+        dst_path = final_url.rstrip("/")
+    if src_path in IGNORE_REDIRECT_URLS:
         return True
-    if src in DESIGNED_REDIRECTS:
+    # 1) 精确命中 _redirects（key 可能是 "/foo" 或 "/foo/"，两种都试）
+    if src_path in DESIGNED_REDIRECTS or (src_path + "/") in DESIGNED_REDIRECTS:
         return True
-    # Trailing-slash normalization: /foo -> /foo/
-    if final_url.rstrip("/") == src:
+    # 3) trailing-slash normalization: /foo -> /foo/
+    if dst_path == src_path:
         return True
     return False
 
@@ -145,6 +163,60 @@ def same_origin(left: str, right: str) -> bool:
     return (a.scheme, a.netloc.lower()) == (b.scheme, b.netloc.lower())
 
 
+# Error strings that indicate a transient network failure rather than a real
+# site defect. Used to decide whether an all-retries-failed request should be
+# reported as a P0 hard failure or downgraded to a lower-severity probe timeout.
+_TIMEOUT_HINTS = (
+    "Read timed out",
+    "ConnectTimeout",
+    "ConnectionError",
+    "ConnectionResetError",
+    "RemoteDisconnected",
+    "ProtocolError",
+    "Connection aborted",
+    "Operation timed out",
+)
+
+
+def _retry(fn, *, attempts: int = 3, backoff: float = 1.5,
+           what: str = "request"):
+    """Retry `fn` up to `attempts` times on transient network errors.
+
+    - Success: return `(value, attempts_made)` immediately.
+    - Transient error (Timeout / ConnectionError / builtin variants):
+      sleep with exponential backoff (`backoff * 2 ** i`) and retry.
+    - Any other exception (e.g. 404 / 403 wrapped as `HTTPError`):
+      propagate immediately, never retried.
+    - Exhausted retries: re-raise the last transient exception.
+    """
+    attempts = max(1, int(attempts))
+    what = what or "request"
+    last_exc = None
+    for i in range(attempts):
+        try:
+            return fn(), i + 1
+        except (TimeoutError, ConnectionError,
+                requests.exceptions.Timeout,
+                requests.exceptions.ConnectionError) as e:
+            last_exc = e
+        except requests.exceptions.RequestException as e:
+            # Anything else raised by `requests` (HTTPError,
+            # InvalidURL, TooManyRedirects, ...) is not a transient network
+            # failure. Do NOT retry — real HTTP outcomes must surface.
+            raise
+        except Exception:
+            # Bare non-request exceptions (ValueError, TypeError, ...) are
+            # programming bugs, not network flakes. Propagate immediately.
+            raise
+        if i < attempts - 1:
+            time.sleep(backoff * (2 ** i))
+    if last_exc is not None:
+        print(f"{what}: {attempts} attempts exhausted "
+              f"({last_exc.__class__.__name__}: {last_exc})",
+              file=sys.stderr)
+    raise last_exc if last_exc is not None else RuntimeError("retry exhausted")
+
+
 def visible_text_without_code(soup: BeautifulSoup) -> str:
     parts: list[str] = []
     for node in soup.find_all(string=True):
@@ -162,29 +234,42 @@ def check_url(url: str, timeout: int) -> tuple[int, str, int, str]:
     if cached is not None:
         return cached
 
-    try:
-        response = session().head(clean, timeout=timeout, allow_redirects=True)
-        if response.status_code in (403, 405, 501):
-            response = session().get(
-                clean, timeout=timeout, allow_redirects=True, stream=True
+    def _probe() -> tuple[int, str, int, str]:
+        try:
+            response = session().head(clean, timeout=timeout, allow_redirects=True)
+            if response.status_code in (403, 405, 501):
+                response = session().get(
+                    clean, timeout=timeout, allow_redirects=True, stream=True
+                )
+                response.close()
+            return (
+                response.status_code,
+                response.url,
+                len(response.history),
+                "",
             )
-            response.close()
-        result = (
-            response.status_code,
-            response.url,
-            len(response.history),
-            "",
-        )
-    except requests.RequestException as exc:
-        result = (0, clean, 0, str(exc)[:240])
+        except requests.RequestException as exc:
+            return (0, clean, 0, str(exc)[:240])
 
-    with STATUS_LOCK:
-        STATUS_CACHE[clean] = result
+    # Only retry on transient network errors (timeout / connection refused).
+    # Real HTTP outcomes (404, 403, ...) come back as a status_code tuple,
+    # not an exception, so they are never retried.
+    result, _attempts = _retry(_probe, what=f"HEAD/GET {clean}")
+
+    # Cache successful lookups (status != 0) but never cache transient
+    # failures — those are exactly what we do NOT want to lock in after a
+    # single flaky network blip.
+    if result[0] != 0:
+        with STATUS_LOCK:
+            STATUS_CACHE[clean] = result
     return result
 
 
 def sitemap_urls(sitemap_url: str, timeout: int) -> list[str]:
-    response = session().get(sitemap_url, timeout=timeout)
+    response, _ = _retry(
+        lambda: session().get(sitemap_url, timeout=timeout),
+        what=f"GET {sitemap_url}",
+    )
     response.raise_for_status()
     root = ET.fromstring(response.content)
     namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -192,7 +277,10 @@ def sitemap_urls(sitemap_url: str, timeout: int) -> list[str]:
     if root.tag.endswith("sitemapindex"):
         urls: list[str] = []
         for child in locations:
-            child_response = session().get(child, timeout=timeout)
+            child_response, _ = _retry(
+                lambda u=child: session().get(u, timeout=timeout),
+                what=f"GET {child}",
+            )
             child_response.raise_for_status()
             child_root = ET.fromstring(child_response.content)
             urls.extend(
@@ -207,18 +295,38 @@ def audit_page(page_url: str, timeout: int) -> tuple[list[dict], dict]:
     issues: list[dict] = []
     stats: Counter = Counter()
     try:
-        response = session().get(page_url, timeout=timeout, allow_redirects=True)
-    except requests.RequestException as exc:
-        issues.append(
-            make_issue(
-                "P0",
-                "sitemap_page_unreachable",
-                page_url,
-                str(exc)[:240],
-                "Restore the page or remove it from the sitemap.",
-            )
+        response, _attempts = _retry(
+            lambda: session().get(page_url, timeout=timeout, allow_redirects=True),
+            what=f"GET {page_url}",
         )
-        return issues, {"status": 0, "error": str(exc)[:240]}
+    except requests.RequestException as exc:
+        # All 3 retries failed. If the error text still screams "timeout" or
+        # "connection dropped", classify it as a lower-severity probe timeout
+        # instead of a P0 sitemap_page_unreachable — the browser usually
+        # renders the page fine, so this is a network flake rather than a
+        # real site defect (see 2026-09-23 yangshuo/ false positive).
+        error_text = str(exc)[:240]
+        if any(hint in error_text for hint in _TIMEOUT_HINTS):
+            issues.append(
+                make_issue(
+                    "P2",
+                    "sitemap_page_probe_timeout",
+                    page_url,
+                    f"3 attempts failed (likely transient network): {error_text}",
+                    "Re-run the audit; this is a probe timeout, not a confirmed site defect.",
+                )
+            )
+        else:
+            issues.append(
+                make_issue(
+                    "P0",
+                    "sitemap_page_unreachable",
+                    page_url,
+                    error_text,
+                    "Restore the page or remove it from the sitemap.",
+                )
+            )
+        return issues, {"status": 0, "error": error_text}
 
     path = urlparse(page_url).path or "/"
     if response.status_code >= 400:

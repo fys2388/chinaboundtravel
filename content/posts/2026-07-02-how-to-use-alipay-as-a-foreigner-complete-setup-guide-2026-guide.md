@@ -170,6 +170,10 @@ Account restrictions usually happen when Alipay's security system flags unusual 
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)

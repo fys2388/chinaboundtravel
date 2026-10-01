@@ -190,6 +190,10 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Where to Stay in China: Hotels & Budget](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)

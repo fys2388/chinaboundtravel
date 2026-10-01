@@ -139,6 +139,9 @@ ignoreFiles = ["/\\.archived/"]
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.goldmark.extensions]
+  smartypants = false
+
 [minify]
   disableXML = false
   minifyOutput = true
@@ -250,4 +253,10 @@ ignoreFiles = ["/\\.archived/"]
   # 保留是为了单一来源；改价格时改这里和 layouts/partials/pricing-table.html。
   stripeMonthly = "https://buy.stripe.com/fZudR35McdILaOZ9Te1gs05"
   stripeAnnual = "https://buy.stripe.com/28E8wJ4I8bADg9je9u1gs01"
+
+[security]
+  enableInlineShortcodes = true
+  [security.funcs]
+    # Default whitelist is '^HUGO_', '^CI$'; add WEB3FORMS_ACCESS_KEY for contact form.
+    getenv = ['^HUGO_', '^CI$', '^WEB3FORMS_']
  

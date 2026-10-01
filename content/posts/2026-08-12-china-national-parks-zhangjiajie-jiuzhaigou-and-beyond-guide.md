@@ -14,7 +14,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers."
-description: "China National Parks: Zhangjiajie, Jiuzhaigou. practical guide for foreign travelers."
+description: "China National Parks 2026: Zhangjiajie, Jiuzhaigou, and beyond. Practical guide for foreign travelers with routes, permits, and budget tips."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -105,6 +105,10 @@ If you have any questions about China's national parks, feel free to reach out t
 {{< soft-recommend partner="esim" topic="city" placement="article_soft_3" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

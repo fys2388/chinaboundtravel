@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: '{{< soft-recommend partner="esim" topic="visa" placement="articlemid1" text="See eSIM options" >}} Keeping your phone connected in China is easier with...'
+description: 'Complete guide to China 144-hour visa-free transit policy 2026: eligible cities, entry requirements, and how to stay connected with eSIM.'
 ShowToc: true
 TocOpen: false
 cover:
@@ -247,6 +247,10 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="visa-free-checklist" text="Get the Free Visa-Free Entry Checklist →" >}}
 
 ---
 

@@ -692,22 +692,122 @@ class FeishuWeeklyReporter:
         if posts_without_schema > 5 and not template_level_coverage:
             yellow_risks.append(f"结构化数据缺失{posts_without_schema}篇，影响SEO → 对应行动：批量补充Article Schema")
 
+        # P0 FIX 2026-09-28：404 页面高占比检测（Top10 中的 404 页面对应的浏览量占比）
+        # 周报第 39 周实际数据：55 访客中 27% 命中 404（3 个 404 页 22 次浏览），
+        # 旧逻辑完全未捕获，导致"基建止血"段被误判为"暂无"。
+        top_pages = data.get("top_pages", [])
+        if top_pages:
+            _is_404 = lambda p: (
+                "404" in (p.get("title") or "").lower()
+                or "page not found" in (p.get("title") or "").lower()
+                or "/404" in (p.get("path") or "").lower()
+                or "/page-not-found" in (p.get("path") or "").lower()
+            )
+            _404_pages = [p for p in top_pages if _is_404(p)]
+            _404_views = sum(p.get("views", 0) for p in _404_pages)
+            _total_views = data.get("week_pageviews", 0) or sum(p.get("views", 0) for p in top_pages)
+            _404_rate = round(_404_views / max(_total_views, 1) * 100, 1) if _total_views else 0
+            if _404_rate >= 20 and _404_views >= 5:
+                red_risks.append(
+                    f"Top 页面中 404 页面占浏览量 {_404_rate}%（{_404_views}/{_total_views}，共 {len(_404_pages)} 个页面）"
+                    f" → 对应行动：全量检测内部断链与占位符、修复跳转失效的内链"
+                )
+            elif _404_rate >= 10 and _404_views >= 3:
+                yellow_risks.append(
+                    f"Top 页面中 404 页面占浏览量 {_404_rate}%（{_404_views}/{_total_views}，共 {len(_404_pages)} 个页面）"
+                    f" → 对应行动：抽查 3-5 条最热外链与内链来源"
+                )
+
+        # P0 FIX 2026-09-28：GSC 已授权但未提交任何 sitemap（独立于 indexed_pages 检查）
+        # 旧逻辑只判 indexed_pages == 0，导致"曝光 27 页 / 已提交 0 页"漏检 ——
+        # 27 页曝光说明有零星 URL 被爬取，但 sitemap 未注册意味着 GSC 不知道全站结构。
+        sitemap_count = gsc_data.get("sitemap_count", 0)
+        if gsc_ok and sitemap_count == 0:
+            red_risks.append(
+                "GSC 已授权但 sitemap_count=0，站内 63 篇文章未被主动提交索引 → 对应行动：调用 gsc-automation.py 提交 sitemap + 抽样 URL Inspection 请求索引"
+            )
+
         return {"red": red_risks, "yellow": yellow_risks}
 
-    def _generate_next_week_plan(self, risks: dict) -> list:
-        """基于风险动态生成下周计划"""
+    def _generate_next_week_plan(self, risks: dict, data: dict = None) -> list:
+        """基于风险和真实状态生成下周计划。
+
+        P0 FIX 2026-09-28：旧逻辑在 risks["red"] 非空时 dump 一整批 high 任务，
+        导致已完成的 301/OG/Twitter Card（"本周整改验收"明确标 ✅）下周继续被列 high。
+        现在改为按实际状态过滤，仅添加真正未完成的任务。
+        """
         plan = []
 
-        if risks.get("red"):
-            plan.extend([
-                {"task": "Cloudflare 配置 www → 裸域名 301 永久重定向，统一 canonical", "priority": "high", "period": "3天内"},
-                {"task": "补全全站 OG / Twitter Card 社交预览标签，修复零分享预览问题", "priority": "high", "period": "3天内"},
-                {"task": "GSC 验证域名、提交 sitemap，手动请求 5 篇核心文章索引", "priority": "high", "period": "3天内", "kr_id": "gsc", "target": 300},
-                {"task": "全局批量修正 Joran 旅居年限文案，统一为 5 年标准表述", "priority": "high", "period": "3天内"},
-                {"task": "完成全站联盟链接覆盖，目标覆盖率 100%", "priority": "high", "period": "本周", "kr_id": "revenue", "target": 30},
-                {"task": "深度优化张家界、成都火锅 2 篇核心文章，扩充至 2000+ 字", "priority": "high", "period": "本周", "kr_id": "content", "target": 5}
-            ])
+        # 从 data 提取状态（向后兼容 data=None）
+        d = data or {}
+        gsc_data = d.get("gsc_data", {}) or {}
+        gsc_ok = gsc_data.get("status") == "authorized"
+        indexed_pages = gsc_data.get("indexed_pages", 0)
+        sitemap_count = gsc_data.get("sitemap_count", 0)
+        content_data = d.get("content_data", {}) or {}
+        posts_with_conflict = content_data.get("posts_with_conflict", 0)
+        posts_without_schema = content_data.get("posts_without_schema", 0)
+        template_level_coverage = content_data.get("template_level_coverage", False)
+        total_posts = content_data.get("total_posts", 0)
+        posts_with_affiliate = content_data.get("posts_with_affiliate", 0)
+        coverage = round(posts_with_affiliate / max(total_posts, 1) * 100, 1) if total_posts > 0 else 0
+        site_wide_affiliate = content_data.get("site_wide_affiliate", False)
+        top_pages = d.get("top_pages", []) or []
+        _is_404 = lambda p: (
+            "404" in (p.get("title") or "").lower()
+            or "page not found" in (p.get("title") or "").lower()
+            or "/404" in (p.get("path") or "").lower()
+            or "/page-not-found" in (p.get("path") or "").lower()
+        )
+        _404_views = sum(p.get("views", 0) for p in top_pages if _is_404(p))
+        _pv_denom = d.get("week_pageviews", 0) or sum(p.get("views", 0) for p in top_pages)
+        _404_rate = round(_404_views / max(_pv_denom, 1) * 100, 1) if _pv_denom else 0
 
+        # ── High 优先级（基建止血）：按实际状态条件过滤 ─────────────
+        if _404_rate >= 10 and _404_views >= 3:
+            plan.append({
+                "task": f"修复 404 断链：全量检测内部断链与占位符，修复跳转失效的内链"
+                        f"（本周 Top 页面 404 占浏览量 {_404_rate}%，{_404_views} 次浏览）",
+                "priority": "high", "period": "3天内"
+            })
+
+        if not REDIRECTS_PATH.exists():
+            plan.append({
+                "task": "Cloudflare 配置 www → 裸域名 301 永久重定向，统一 canonical",
+                "priority": "high", "period": "3天内"
+            })
+
+        if not META_TAGS_PATH.exists():
+            plan.append({
+                "task": "补全全站 OG / Twitter Card 社交预览标签，修复零分享预览问题",
+                "priority": "high", "period": "3天内"
+            })
+
+        if gsc_ok and (indexed_pages == 0 or sitemap_count == 0):
+            plan.append({
+                "task": "GSC 验证域名、提交 sitemap，手动请求 5 篇核心文章索引",
+                "priority": "high", "period": "3天内", "kr_id": "gsc", "target": 300
+            })
+
+        if posts_with_conflict > 0:
+            plan.append({
+                "task": "全局批量修正 Joran 旅居年限文案，统一为 5 年标准表述",
+                "priority": "high", "period": "3天内"
+            })
+
+        if coverage < 95 and not site_wide_affiliate:
+            plan.append({
+                "task": f"提升联盟链接内容覆盖率至 100%（当前 {coverage}%）",
+                "priority": "high", "period": "本周", "kr_id": "revenue", "target": 30
+            })
+
+        if posts_without_schema > 5 and not template_level_coverage:
+            plan.append({
+                "task": "深度优化张家界、成都火锅 2 篇核心文章，扩充至 2000+ 字",
+                "priority": "high", "period": "本周", "kr_id": "content", "target": 5
+            })
+
+        # ── Medium 优先级（增长配套）：保持原逻辑 ─────────────────
         if risks.get("yellow"):
             plan.extend([
                 {"task": "评估 Travelpayouts Drive 对核心页面的覆盖价值（人工决策）", "priority": "medium", "period": "本月", "kr_id": "revenue"},
@@ -717,10 +817,10 @@ class FeishuWeeklyReporter:
                 {"task": "上线免费订阅诱饵（7 天中国行程模板）", "priority": "medium", "period": "本周", "kr_id": "email", "target": 10}
             ])
 
-        plan.extend([
-            {"task": "全量检测内部断链与占位符", "priority": "low", "period": "本周"},
-            {"task": "文章页批量补充 Article 结构化数据", "priority": "low", "period": "本周"}
-        ])
+        # ── Low 优先级（常规运维）：Article Schema 已完成时移除 ─────
+        plan.append({"task": "全量检测内部断链与占位符", "priority": "low", "period": "本周"})
+        if posts_without_schema > 0 and not template_level_coverage:
+            plan.append({"task": "文章页批量补充 Article 结构化数据", "priority": "low", "period": "本周"})
 
         return plan
 
@@ -790,6 +890,34 @@ class FeishuWeeklyReporter:
 
             review.append({"task": task, "priority": priority, "status": status})
 
+        # P2 FIX 2026-09-28：检测连续未完成周数。
+        # 根因：_generate_next_week_plan 在 risks 触发时把同一批任务连续几周重复列入，
+        # 但 _review_last_week_plan 只看单周状态，导致"发布 3 篇文章"这种
+        # 连续 2 周只完成 20% 的任务永远显示 "🟡 进行中"，掩盖真实生产瓶颈。
+        # 数据源：reports/okr_progress/weekly_2026-W{N}.json 快照（含 plan 列表）。
+        # 策略：从上一周往前扫描，若同一 task 出现在连续 N 周的快照中且本周仍未完成，
+        # N>=2 时在状态末尾追加 "🔴 连续 N 周未完成"，触发运营层面的关注升级。
+        now = datetime.now()
+        last_week_dt = now - timedelta(days=7)
+        prev_key_1 = okr_utils.period_key("weekly", last_week_dt)
+        prev_key_2 = okr_utils.period_key("weekly", last_week_dt - timedelta(days=7))
+        snap_1 = okr_utils.load_snapshot("weekly", prev_key_1)
+        snap_2 = okr_utils.load_snapshot("weekly", prev_key_2)
+        plan_1 = snap_1.get("plan", []) if snap_1 else []
+        plan_2 = snap_2.get("plan", []) if snap_2 else []
+        tasks_1 = {t.get("task", "") for t in plan_1 if isinstance(t, dict)}
+        tasks_2 = {t.get("task", "") for t in plan_2 if isinstance(t, dict)}
+
+        for r in review:
+            task_text = r.get("task", "")
+            is_finished = r.get("status", "").startswith("✅")
+            if is_finished:
+                continue
+            if task_text in tasks_1 and task_text in tasks_2:
+                r["status"] = f"{r['status']} 🔴 连续 3 周未完成"
+            elif task_text in tasks_1:
+                r["status"] = f"{r['status']} 🔴 连续 2 周未完成"
+
         return review
 
     def collect_data(self) -> dict:
@@ -833,7 +961,7 @@ class FeishuWeeklyReporter:
         data["risks"] = risks
 
         print("7️⃣ 生成下周计划...")
-        next_week_plan = self._generate_next_week_plan(risks)
+        next_week_plan = self._generate_next_week_plan(risks, data)
         data["next_week_plan"] = next_week_plan
 
         print("8️⃣ 复盘上周计划...")
@@ -921,7 +1049,9 @@ class FeishuWeeklyReporter:
             
             remark = ""
             if c['channel'].lower() == "direct":
-                remark = "｜停留时长优质，跳出率偏高，需优化内链引导"
+                # P2 FIX 2026-09-28：原备注"停留时长优质"是硬编码，与 W39 真实数据（3秒）矛盾；
+                # 改为仅描述可验证的跳出率与内链诉求，不对停留时长做主观定性。
+                remark = "｜跳出率偏高，需优化内链引导与内容相关性"
             elif c['channel'].lower() == "organic social":
                 remark = "｜短停留低质量流量，社媒素材匹配度不足"
             
@@ -1016,10 +1146,29 @@ class FeishuWeeklyReporter:
             conclusions.append("内容批量产出但质量存风险")
         elif content_rate >= 100:
             conclusions.append("内容产出达标")
-        
+
+        # P2 FIX 2026-09-28：404 / sitemap 风险也要进入"核心优先级"文字，
+        # 与 _detect_risk_level 中的 red 触发条件对齐，避免"顶部结论"与"风险汇总"不一致。
+        _top_pages = data.get("top_pages", [])
+        _is_404 = lambda p: (
+            "404" in (p.get("title") or "").lower()
+            or "page not found" in (p.get("title") or "").lower()
+            or "/404" in (p.get("path") or "").lower()
+            or "/page-not-found" in (p.get("path") or "").lower()
+        )
+        _404_views = sum(p.get("views", 0) for p in _top_pages if _is_404(p))
+        _pv_denom = data.get("week_pageviews", 0) or sum(p.get("views", 0) for p in _top_pages)
+        _404_rate = round(_404_views / max(_pv_denom, 1) * 100, 1) if _pv_denom else 0
+        _sitemap_count_top = gsc_data.get("sitemap_count")
+
         priority_actions = []
-        if gsc_ok and indexed_pages == 0:
-            priority_actions.append("提交GSC索引")
+        if _404_rate >= 20 and _404_views >= 5:
+            conclusions.append(f"Top 页面 {round(_404_rate, 1)}% 命中 404（{_404_views} 次浏览）")
+            priority_actions.append("修复 404 断链")
+        elif _404_rate >= 10 and _404_views >= 3:
+            conclusions.append(f"Top 页面 {round(_404_rate, 1)}% 命中 404")
+        if gsc_ok and ((indexed_pages == 0) or (_sitemap_count_top is not None and _sitemap_count_top == 0)):
+            priority_actions.append("提交 GSC sitemap")
         if coverage < 30 and not site_wide_affiliate:
             priority_actions.append("全站联盟链接覆盖")
         if posts_with_conflict > 0:
@@ -1066,9 +1215,14 @@ class FeishuWeeklyReporter:
         twitter_status = "✅"
         article_schema_status = "✅"
 
+        # P0 FIX 2026-09-28：SEO 段的"已提交 0 页"曾是硬编码字面量，
+        # 现从 gsc_data.sitemap_count 动态取值；未授权/错误时显示"-"而非伪造 0。
+        _sitemap_count = gsc_data.get("sitemap_count")
+        _sitemap_display = "-" if _sitemap_count is None else str(_sitemap_count)
+
         seo_section = f"""### 3. 🔍 SEO 专项巡检
 - **GSC 状态**：{gsc_status}｜预估可收录页面 {estimated_pages} 页
-- **索引进度**：已提交 0 页 / GSC 曝光页面 {indexed_display} 页 / 索引错误 0 项
+- **索引进度**：已提交 sitemap {_sitemap_display} 个 / GSC 曝光页面 {indexed_display} 页 / 索引错误 0 项
 - **技术整改进度**：
   ✅ 首页 Organization 结构化数据
   {redirect_status} www → 裸域名 301 重定向

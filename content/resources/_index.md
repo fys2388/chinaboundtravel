@@ -7,7 +7,7 @@ layout = "single"
 
 The right travel tool can make the journey so much easier. The resources below are selected and reviewed by the ChinaBound Travel editorial team for international travelers planning a China trip.
 
-Some links below are affiliate links — at no extra cost to you, we may earn a commission. We only recommend tools our editorial team has reviewed. <a href="/disclosure/">Learn more →</a>
+Some links below are affiliate links — at no extra cost to you, we may earn a commission. We only recommend tools our editorial team has reviewed. <a href="/affiliate-disclosure/">Learn more →</a>
 
 ---
 

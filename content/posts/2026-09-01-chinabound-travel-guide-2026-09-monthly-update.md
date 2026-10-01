@@ -64,6 +64,10 @@ The current edition (2026.09) is included with every plan on [chinaboundtravel.c
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)

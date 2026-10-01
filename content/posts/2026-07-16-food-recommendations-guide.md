@@ -136,6 +136,10 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Foodie Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 {{< affiliate-disclosure >}}
 
 ---

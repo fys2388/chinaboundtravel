@@ -366,6 +366,10 @@ Safe travels, and may your QR codes always scan on the first try.
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Alipay in China: Setup & Payment Tips (2026)](https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/)

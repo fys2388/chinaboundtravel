@@ -280,6 +280,10 @@ Questions about your Zhangjiajie trip? Drop a comment or DM us on Twitter — [@
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China National Parks: Zhangjiajie &](https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/)

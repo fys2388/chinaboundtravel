@@ -1,7 +1,7 @@
 ---
 content_id: "cbt-673e981fe6f2"
 title: "Is China Safe for Tourists in 2026? Honest"
-description: "Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safety tips for travelers."
+description: "Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical tips for travelers."
 date: "2026-05-27"
 author: "Joran"
 tags: ["ChinaSafety", "ChinaTravelTips", "ChinaTravel"]
@@ -157,6 +157,10 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

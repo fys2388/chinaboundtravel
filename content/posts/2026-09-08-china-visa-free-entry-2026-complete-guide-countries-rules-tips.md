@@ -399,6 +399,10 @@ Safe travels, and welcome to China.
 
 ---
 
+{{< lead-magnet-cta magnet="visa-free-checklist" text="Get the Free Visa-Free Entry Checklist →" >}}
+
+---
+
 ## Related Reading
 
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)

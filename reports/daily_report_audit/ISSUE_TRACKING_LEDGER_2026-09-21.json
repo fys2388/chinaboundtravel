@@ -29,7 +29,7 @@
       "seo": 3
     },
     "auto_fixable_count": 0,
-    "note": "AUDIT-CT-001 已 closed。2026-09-23 09:20 完成 4 项 OPS/CT/SEO 关闭（OPS-001/002/003 + CT-001）（fix_run: FIX-RUN-2026-09-23-AUDIT，commit: 448bdf13）+ AUDIT-OPS-005 关闭（commit: affba62e） + AUDIT-OPS-006 关闭（commit: b8e3f8c7）+ AUDIT-SEO-002/003 + AUDIT-CT-002/003 关闭（commit: f6d1d457） + P3/P4 遗留收尾（commit: b7a738d6 + 9badc6fe + abb3152c） + OPS-005 tail 修 subscriber_count（commit: 67e10c32） + 2026-09-23 新审计轮：whitelist 机制 + 4 个 issue 登记（3 resolved via WL + 1 SEO batch）（commit: dbddf56b） + B 阶段 SEO polish 批量修 17 个文件 front matter，SEO batch issue 已 resolved（commit 待补） + 新增 WL-004 处理 transient ssl_check_failed。 total_issues=27, open=0, resolved=27。全部闭环。",
+    "note": "AUDIT-CT-001 已 closed。2026-09-23 完成：4 项 OPS/CT/SEO（commit 448bdf13） + AUDIT-OPS-005（commit affba62e）+ AUDIT-OPS-006（commit b8e3f8c7） + AUDIT-SEO-002/003 + AUDIT-CT-002/003（commit f6d1d457） + P3/P4 遗留收尾（commit b7a738d6 + 9badc6fe + abb3152c） + OPS-005 tail（commit 67e10c32） + whitelist 机制 + 4 issue 登记（commit dbddf56b） + B 阶段 SEO polish 批量修 17 文件 + WL-004（commit cace29a2）。 total_issues=27, open=0, resolved=27。全部闭环。",
     "total_resolved": 27,
     "by_status": {
       "blocked": 0,
@@ -1107,7 +1107,7 @@
       "resolution": {
         "resolved_at": "2026-09-23T14:30:00+08:00",
         "resolved_by": "coordinator_2026-09-23",
-        "commit": "PENDING (to be filled after commit)",
+        "commit": "cace29a2",
         "root_cause": "17 个文件 front matter 的 title/description 长度超阈值。审计引擎阈值：title<20 报 too_short，description<70 或 >165 报 too_short/too_long。",
         "code_fix": "批量调整 17 个文件的 front matter title/description 长度到目标区间（title 20-60，description 70-155）。保留原意、精简措辞。文件类型多样：8 cities/*.md (TOML +++), 5 *.md 单页 (YAML ---), 1 post (TOML), 1 cities/_index.md (YAML+BOM), 1 guides/_index.md (TOML)。",
         "verification": "site_health_agent.py --no-fix 全量重跑：17 项 SEO polish issue 全部消失。未解决问题从 17 降到 0（同时处理了 1 个 transient ssl_check_failed，通过新增 WL-004 豁免）。",
@@ -1630,9 +1630,9 @@
       "run_id": "FIX-RUN-2026-09-23-SEO-POLISH-B",
       "fix_date": "2026-09-23",
       "summary": "B 阶段：17 项 SEO polish 批量修（meta description 长度 + title 长度）。批量脚本按 front matter 格式（TOML +++ / YAML ---）+ BOM 兼容批量改。新增 WL-004 处理审计引擎瞬断 SSL。",
-      "committed": false,
-      "commit_sha": null,
-      "commit_note": "fix(seo): 17 项 SEO polish 批量修 - description/title 长度",
+      "committed": true,
+      "commit_sha": "cace29a2",
+      "commit_note": "fix(seo): 17 项 SEO polish 批量修 + WL-004 处理 transient SSL",
       "fixes_applied": [
         {
           "id": "B-SEO-POLISH-BATCH",

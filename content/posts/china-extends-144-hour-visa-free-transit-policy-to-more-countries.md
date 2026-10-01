@@ -10,7 +10,7 @@ tags:
 - ChinaTravelNews
 - ChinaTransit
 - ChinaTravelPolicy
-description: "China extends 144-hour visa-free transit to 15 more countries in 2026. See the full list of eligible nations, qualifying cities, and requirements. Check if y..."
+description: "China extends 144-hour visa-free transit to 15 more countries in 2026. Full list of eligible nations, cities, and requirements. Check if you qualify."
 ShowToc: true
 TocOpen: false
 cover:
@@ -184,6 +184,10 @@ Sources: National Immigration Administration
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="visa-free-checklist" text="Get the Free Visa-Free Entry Checklist →" >}}
 
 ---
 

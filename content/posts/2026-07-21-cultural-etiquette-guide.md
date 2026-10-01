@@ -14,7 +14,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "cultural etiquette for travelers visiting China. essential guide based on research curated by our editorial team."
-description: "China Cultural Etiquette Guide: Dos and Don. Research-based practical guidance for international travelers planning a China trip. Check official sources for..."
+description: "China Cultural Etiquette Guide: Dos and Don'ts. Practical guidance for travelers planning a China trip. Check official sources for latest info."
 canonicalURL: "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -96,6 +96,10 @@ For more information on China travel, check out these articles:
 {{< soft-recommend partner="esim" topic="city" placement="article_soft_3" text="See eSIM options" >}}
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

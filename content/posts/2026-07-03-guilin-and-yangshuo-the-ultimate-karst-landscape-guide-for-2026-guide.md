@@ -195,6 +195,10 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Yunnan Travel: Rice Terraces & Ancient Towns](https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)

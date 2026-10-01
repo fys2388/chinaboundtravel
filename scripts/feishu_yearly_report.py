@@ -336,7 +336,7 @@ class FeishuYearlyReporter:
         data["okr_section"] = okr_utils.build_okr_section(data, "yearly", report_date=rep_end_dt)
         prev_key = okr_utils.period_key("yearly", rep_end_dt - timedelta(days=1))
         prev_snap = okr_utils.load_snapshot("yearly", prev_key)
-        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data)
+        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data, scope="yearly")
 
         # 下一年计划（按年度 OKR 差距）
         plan = []

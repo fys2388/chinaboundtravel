@@ -73,6 +73,11 @@
     </div>
     {{- end }}
 
+    {{- /* ===== AI Trip Planner Card (posts only) — moved to mid-post ===== */ -}}
+    {{- if eq .Type "posts" -}}
+    {{- partial "trip-planner.html" . -}}
+    {{- end -}}
+
     {{- /* ===== Ebook Annual Pass CTA ===== */ -}}
     {{- partial "ebook-promo.html" . -}}
 
@@ -299,11 +304,6 @@
     </section>
     {{- end -}}
 
-    {{- /* ===== AI Trip Planner Card (posts only) ===== */ -}}
-    {{- if eq .Type "posts" -}}
-    {{- partial "trip-planner.html" . -}}
-    {{- end -}}
-
     {{- /* ===== Post Navigation (posts only) ===== */ -}}
     {{- if or .PrevInSection .NextInSection -}}
     <nav class="post-nav-links" aria-label="Post navigation">
@@ -341,9 +341,7 @@
         {{- end }}
     </footer>
 
-    {{- if (.Param "comments") }}
-    {{- partial "comments.html" . }}
-    {{- end }}
+    {{- partial "giscus.html" . }}
 </article>
 
 <style>

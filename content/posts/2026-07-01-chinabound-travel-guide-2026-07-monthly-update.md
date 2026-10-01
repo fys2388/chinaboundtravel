@@ -85,6 +85,10 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Family Travel Tips: Mistakes to Avoid](https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/)

@@ -1,5 +1,5 @@
 ---
-title: 'Payment Successful!'
+title: 'Payment Confirmed — China Bound Travel Guide'
 description: 'Thank you for your purchase. Download your China Bound Travel Guide now.'
 date: '2026-06-02T10:00:00+08:00'
 type: page

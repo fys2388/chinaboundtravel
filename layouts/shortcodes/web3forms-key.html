@@ -1,0 +1,4 @@
+{{- /* Web3Forms access key via env var.
+     Set WEB3FORMS_ACCESS_KEY in Cloudflare Pages Secrets (or any build-time env).
+     Falls back to empty string if unset, so build never breaks. */ -}}
+{{- getenv "WEB3FORMS_ACCESS_KEY" | html -}}

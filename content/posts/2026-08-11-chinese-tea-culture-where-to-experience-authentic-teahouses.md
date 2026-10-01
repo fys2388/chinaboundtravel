@@ -149,6 +149,10 @@ Here are some related articles on chinaboundtravel.com that you might enjoy:
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Food Guide: Must-Try Dishes &](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)

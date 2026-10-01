@@ -140,6 +140,10 @@ And as often, if you have any questions or comments, feel free to reach out to o
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Xi'an Terracotta Army: Tickets & History](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)

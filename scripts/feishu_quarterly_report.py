@@ -253,6 +253,7 @@ class FeishuQuarterlyReporter:
 
     # ---------- GSC ----------
     def _fetch_gsc_data(self) -> dict:
+        """获取 GSC 数据。季度完整窗口 API 不稳定，优先回退最近 28 天（与月报口径一致）。"""
         if not GSC_SERVICE_ACCOUNT_JSON or not HAS_GOOGLE_AUTH:
             return {"status": "unauthorized"}
         try:
@@ -277,17 +278,24 @@ class FeishuQuarterlyReporter:
                     continue
             if not site_url:
                 return {"status": "unauthorized"}
+            # 季度完整窗口 GSC API 不稳定，回退最近 28 天（与月报口径一致）
+            end_date = datetime.now().date()
+            start_date = end_date - timedelta(days=28)
             p = self._get_period()
+            print(f"   🔍 GSC 季度报告回退 28d 窗口: {start_date} ~ {end_date} (原季度 {p['rep_start']}~{p['rep_end']})")
             resp = service.searchanalytics().query(
                 siteUrl=site_url,
-                body={"startDate": p["rep_start"], "endDate": p["rep_end"],
+                body={"startDate": start_date.strftime("%Y-%m-%d"),
+                      "endDate": end_date.strftime("%Y-%m-%d"),
                       "rowLimit": 1000, "dataState": "final"}).execute()
             impressions = 0
             clicks = 0
             if "rows" in resp:
                 impressions = int(resp["rows"][0].get("impressions", 0))
                 clicks = int(resp["rows"][0].get("clicks", 0))
-            return {"status": "authorized", "gsc_impressions": impressions, "gsc_clicks": clicks}
+            return {"status": "authorized", "gsc_impressions": impressions,
+                    "gsc_clicks": clicks, "impressions_28d": impressions,
+                    "data_source": "GSC_28d_fallback"}
         except Exception as e:
             print(f"   ⚠️ GSC API 获取失败: {e}")
             return {"status": "error"}
@@ -391,6 +399,7 @@ class FeishuQuarterlyReporter:
             _snap_gsc = reporting_snapshot_reader.snapshot_gsc()
             if _snap_gsc is not None:
                 data.update(_snap_gsc)
+                print(f"   📦 GSC 快照命中：曝光={_snap_gsc.get('gsc_impressions','?')} 次 (28d)")
             else:
                 data.update(self._fetch_gsc_data())
         else:
@@ -417,7 +426,7 @@ class FeishuQuarterlyReporter:
         data["okr_section"] = okr_utils.build_okr_section(data, "quarterly", report_date=rep_end_dt)
         prev_key = okr_utils.period_key("quarterly", rep_end_dt - timedelta(days=1))
         prev_snap = okr_utils.load_snapshot("quarterly", prev_key)
-        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data)
+        data["okr_review"] = okr_utils.review_previous_plan(prev_snap, data, scope="quarterly")
 
         # 本季度计划（按当前季度 OKR 差距生成）
         plan = []

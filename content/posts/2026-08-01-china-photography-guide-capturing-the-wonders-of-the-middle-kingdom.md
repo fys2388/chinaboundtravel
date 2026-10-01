@@ -45,7 +45,7 @@ audit_status: "pass2"
 summary: "China photography guide for travelers: essential tips, gear recommendations, composition techniques, and a complete breakdown of a top choice photo locations across 12 major Chinese destinations. Research-based guidance from our editorial team."
 
 
-description: "China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by our editorial team."
+description: "China photography guide: gear, lighting, composition, and top photo locations across 12 destinations for travelers in 2026."
 
 
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/"
@@ -319,6 +319,10 @@ And if you're interested in learning more about China travel, be sure to check o
 
 
 {{< affiliate-disclosure >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

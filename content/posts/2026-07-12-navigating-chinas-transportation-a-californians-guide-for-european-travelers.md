@@ -14,7 +14,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate like a local, research-based strategies for international travelers."
-description: "China Transportation Guide for European Travelers. Research-based practical guidance for international travelers planning a China trip. Check official source..."
+description: "China Transportation Guide for European Travelers. Practical guidance for travelers planning a China trip. Check official sources for latest info."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
 ShowToc: "true"
 TocOpen: "false"
@@ -106,6 +106,10 @@ For more information on China travel, check out these articles:
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

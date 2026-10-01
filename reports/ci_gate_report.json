@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-09-25T13:15:42.285707+00:00",
+  "build": null,
+  "checks": [
+    {
+      "name": "no_shortcode_leak",
+      "passed": true,
+      "count": 0,
+      "detail": "No shortcode leaks",
+      "offenders": []
+    },
+    {
+      "name": "no_html_source_leak",
+      "passed": true,
+      "count": 0,
+      "detail": "No HTML source leaks",
+      "offenders": []
+    },
+    {
+      "name": "no_hardcoded_key",
+      "passed": true,
+      "count": 0,
+      "detail": "No hardcoded keys",
+      "offenders": []
+    },
+    {
+      "name": "contact_form_complete",
+      "passed": true,
+      "count": 2,
+      "detail": "form=True send=True",
+      "offenders": []
+    },
+    {
+      "name": "subscribe_checkValidity",
+      "passed": true,
+      "count": 96,
+      "detail": "96 checkValidity occurrences (need >= 2)",
+      "offenders": []
+    },
+    {
+      "name": "posts_have_comments",
+      "passed": true,
+      "count": 63,
+      "detail": "63/67 posts have comments section (need >= 50)",
+      "offenders": [
+        "2026-09-01-chinabound-travel-guide-2026-09-monthly-update",
+        "how-to-survive-chinese-train-station",
+        "is-china-safe-for-tourists-2026-honest-assessment",
+        "transportation-guide-guide"
+      ]
+    },
+    {
+      "name": "robots_no_leak",
+      "passed": true,
+      "count": 0,
+      "detail": "No internal data leaks in comments",
+      "offenders": []
+    },
+    {
+      "name": "no_broken_links",
+      "passed": true,
+      "count": 0,
+      "detail": "No broken internal links",
+      "offenders": []
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0
+  }
+}

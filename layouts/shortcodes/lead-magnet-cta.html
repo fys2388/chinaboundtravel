@@ -71,6 +71,12 @@
     form.dataset.bound = '1';
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+      // P0-FIX (2026-09-24): 校验失败早返回，保留表单节点 + 触发浏览器原生错误提示。
+      // 旧实现只判断 !email，type=email 非法值仍会禁用按钮并 POST，用户看起来像"表单失效"。
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       var btn = form.querySelector('.lm-cta-btn');
       var msg = form.querySelector('.lm-cta-msg');
       var input = form.querySelector('.lm-cta-input');

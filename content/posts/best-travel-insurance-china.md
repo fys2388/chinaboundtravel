@@ -250,6 +250,10 @@ Still have questions? Drop us a line by [Contacting Us](mailto:joran@chinaboundt
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [China Travel Guide: July 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/)

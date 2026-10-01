@@ -182,6 +182,10 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)

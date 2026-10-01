@@ -181,6 +181,10 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)

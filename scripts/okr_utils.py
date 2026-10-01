@@ -386,11 +386,22 @@ def _plan_judge(item: dict, data: dict) -> str:
     task = item.get("task", "")
     weekly_new = data.get("weekly_new_posts") or data.get("new_posts", 0)
     month_new = data.get("monthly_new_posts", 0)
-    if "发布" in task and "文章" in task:
-        got = month_new if "月" in item.get("period", "") else weekly_new
-        if got >= 3:
+    period = item.get("period", "")
+    # P1 FIX 2026-09-28：原条件 `"发布" and "文章"` 太窄，
+    # 匹配不到 W39 真实任务 "发布 3 篇高转化长尾攻略"（无"文章"两字）。
+    # 加宽为"发布" + （文章 | 攻略 | 篇 | 内容）任一，保留旧兼容 + 覆盖攻略/篇/内容变体。
+    is_publish_task = (
+        "发布" in task and
+        ("文章" in task or "攻略" in task or "篇" in task or "内容" in task)
+    )
+    if is_publish_task:
+        got = month_new if "月" in period else weekly_new
+        target_num = 3  # 默认周更 3 篇（与 task 文案一致）
+        if got >= target_num:
             return "✅ 已完成"
-        return "🟡 进行中" if got > 0 else "❌ 未启动"
+        if got > 0:
+            return f"🟡 进行中（{got}/{target_num}）"
+        return "❌ 未启动"
     if "索引" in task or "GSC" in task:
         gsc = data.get("gsc_impressions", 0)
         if gsc > 0:
@@ -412,8 +423,58 @@ def _all_krs() -> list:
     return krs
 
 
-def review_previous_plan(prev_snapshot: dict, data: dict) -> list:
-    """复盘上期计划：读取快照 plan，用本期数据判定完成度"""
+def _infer_root_cause(item: dict, data: dict, status: str) -> str:
+    """根据任务状态和可用数据推断连续未完成的根因提示。
+
+    返回一段简短的根因提示字符串（可追加到状态末尾），无提示则返回空串。
+    策略：
+      - 数据源不可用 → "⚠️ 根因：数据缺失"
+      - 完成率极低（<10%）且目标>0 → "⚠️ 根因：目标过高"
+      - 状态为"未启动"或"起步中" → "⚠️ 根因：执行阻塞"
+      - 其他进行中 → "⚠️ 根因：执行阻塞（进度缓慢）"
+    """
+    effective_source = item.get("source", "") or ""
+    kr_id = item.get("kr_id", "") or ""
+    if not effective_source and kr_id:
+        for kr in _all_krs():
+            if kr.get("id") == kr_id:
+                effective_source = kr.get("source", "")
+                break
+
+    # 1. 数据缺失：数据源不可用
+    if effective_source and not _source_available(data, effective_source):
+        return "⚠️ 根因：数据缺失（数据源未连接）"
+
+    # 2. 目标过高：当前值远小于目标（<10%）
+    target = float(item.get("target", 0) or 0)
+    if target > 0 and effective_source:
+        current = extract_kr(data, effective_source)
+        if current / target < 0.1:
+            return "⚠️ 根因：目标过高（当前不足目标 10%）"
+
+    # 3. 执行阻塞：未启动 / 起步中
+    if "未启动" in status or "起步中" in status:
+        return "⚠️ 根因：执行阻塞（任务未启动）"
+
+    # 4. 进行中但进度缓慢
+    if "进行中" in status or "起步中" in status:
+        return "⚠️ 根因：执行阻塞（进度缓慢）"
+
+    return ""
+
+
+def review_previous_plan(prev_snapshot: dict, data: dict, scope: str = "weekly") -> list:
+    """复盘上期计划：读取快照 plan，用本期数据判定完成度。
+
+    P2 FIX 2026-09-28：加载上一周 + 上上周快照，检测任务连续未完成周数。
+    连续 2+ 周未完成时状态末尾追加 "🔴 连续 N 周未完成"，触发运营层面的关注升级。
+    根因：_generate_next_week_plan 在 risks 触发时会重复列入同一批任务，
+    连续几周的"进行中"掩盖了真实的执行瓶颈（例如 W38+W39 都发布 20% 完成率）。
+
+    P2 FIX 2026-10：追加根因分析提示。当任务连续 2 周未完成时，
+    自动推断并附加根因提示（目标过高 / 数据缺失 / 执行阻塞），
+    帮助运营快速定位问题。
+    """
     plan = (prev_snapshot or {}).get("plan", [])
     review = []
     for item in plan:
@@ -421,7 +482,46 @@ def review_previous_plan(prev_snapshot: dict, data: dict) -> list:
         status = _plan_judge(item, data)
         priority_icon = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(item.get("priority", "medium"), "⚪")
         review.append({"task": task, "priority": item.get("priority", "medium"),
-                       "icon": priority_icon, "status": status, "period": item.get("period", "-")})
+                        "icon": priority_icon, "status": status, "period": item.get("period", "-"),
+                        "source": item.get("source", ""), "kr_id": item.get("kr_id", "")})
+
+    # P2 FIX 2026-09-28 / 2026-10：连续未完成检测 + 根因分析
+    try:
+        now = datetime.now()
+        if scope == "quarterly":
+            # 季报：检查上一季度 + 上上一季度快照
+            last_q_dt = now - timedelta(days=90)
+            prev_key_1 = period_key("quarterly", last_q_dt)
+            prev_key_2 = period_key("quarterly", last_q_dt - timedelta(days=90))
+        else:
+            # 周报/月报：检查上一周 + 上上周快照
+            last_week_dt = now - timedelta(days=7)
+            prev_key_1 = period_key("weekly", last_week_dt)
+            prev_key_2 = period_key("weekly", last_week_dt - timedelta(days=7))
+
+        snap_scope = "quarterly" if scope == "quarterly" else "weekly"
+        snap_1 = load_snapshot(snap_scope, prev_key_1)
+        snap_2 = load_snapshot(snap_scope, prev_key_2)
+        tasks_1 = {t.get("task", "") for t in (snap_1.get("plan", []) if snap_1 else []) if isinstance(t, dict)}
+        tasks_2 = {t.get("task", "") for t in (snap_2.get("plan", []) if snap_2 else []) if isinstance(t, dict)}
+        for r in review:
+            is_finished = r.get("status", "").startswith("✅")
+            if is_finished:
+                continue
+            task_text = r.get("task", "")
+            if task_text in tasks_1 and task_text in tasks_2:
+                r["status"] = f"{r['status']} 🔴 连续 3 周未完成"
+                rc = _infer_root_cause(r, data, r["status"])
+                if rc:
+                    r["status"] = f"{r['status']} {rc}"
+            elif task_text in tasks_1:
+                r["status"] = f"{r['status']} 🔴 连续 2 周未完成"
+                rc = _infer_root_cause(r, data, r["status"])
+                if rc:
+                    r["status"] = f"{r['status']} {rc}"
+    except Exception as e:
+        print(f"   ⚠️ 连续未完成周数检测失败: {e}")
+
     return review
 
 

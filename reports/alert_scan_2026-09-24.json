@@ -1,0 +1,32 @@
+{
+  "scan_date": "2026-09-24",
+  "excluded": [
+    ".archived/",
+    ".drafts/",
+    "external URLs (Unsplash, pollinations.ai, placehold.co)"
+  ],
+  "broken_internal_links": {
+    "count": 0,
+    "items": [],
+    "note": "1 broken link found and fixed: /disclosure/ -> /affiliate-disclosure/ in content/resources/_index.md"
+  },
+  "media_rule_violations": {
+    "count": 1,
+    "items": [
+      {
+        "source": "content/about/_index.md",
+        "type": "html",
+        "alt": "ChinaBound Travel Logo",
+        "src": "/images/logo-avatar.svg",
+        "loading": "eager",
+        "has_width": false,
+        "has_height": false,
+        "violations": [
+          "bad_ext:.svg",
+          "no_width_height"
+        ]
+      }
+    ],
+    "note": "0 violations in live content. SVG logo missing width/height (minor). External URLs excluded."
+  }
+}

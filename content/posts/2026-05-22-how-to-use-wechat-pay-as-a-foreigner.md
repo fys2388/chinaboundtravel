@@ -9,7 +9,7 @@ tags:
 - WeChatPay
 - ChinaTravelTips
 summary: "Can foreigners use WeChat Pay in China? Eligibility, supported cards, payment basics, and limitations explained for 2026."
-description: "Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits, and tips here."
+description: "Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card. Setup steps, limits, and tips here."
 ShowToc: true
 TocOpen: false
 cover:
@@ -165,6 +165,10 @@ Using the official app gives you a clear transaction history, which helps with b
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

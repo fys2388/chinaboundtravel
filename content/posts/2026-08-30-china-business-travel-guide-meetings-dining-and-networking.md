@@ -17,7 +17,7 @@ geo: "EU"
 draft: false
 audit_status: "pass2"
 summary: "China business travel guide 2026: visa requirements, meeting etiquette, dining customs, networking tips, and practical advice for foreign business travelers."
-description: "China business travel guide 2026: M visa requirements, meeting etiquette, dining customs, networking tips, and practical advice for foreign business travelers."
+description: "China business travel guide 2026: M visa requirements, meeting etiquette, dining customs, networking tips, and practical advice for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/"
 ShowToc: "true"
 TocOpen: "false"
@@ -146,6 +146,10 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

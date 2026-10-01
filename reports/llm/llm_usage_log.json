@@ -1,0 +1,25 @@
+{
+  "total_calls": 73,
+  "total_tokens": 100041,
+  "by_provider": {
+    "sensenova": {
+      "calls": 73,
+      "tokens": 100041
+    }
+  },
+  "by_date": {
+    "2026-09-20": {
+      "calls": 62,
+      "tokens": 88551
+    },
+    "2026-09-21": {
+      "calls": 9,
+      "tokens": 9979
+    },
+    "2026-09-22": {
+      "calls": 2,
+      "tokens": 1511
+    }
+  },
+  "errors": []
+}

@@ -73,6 +73,10 @@ So go. Take the flight. Wake up early. Don't try to hug one. And if you see a pa
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Shanghai 48-Hour: Bund & French Concession](https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/)

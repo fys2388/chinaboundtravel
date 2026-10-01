@@ -155,6 +155,10 @@ For more China travel guides, explore our [7-Day China Itinerary](/posts/7-day-c
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Great Wall of China: History & Hidden Secrets](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)

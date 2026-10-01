@@ -30,7 +30,7 @@
     ]},
     {"q": 4, "name": "Q4 增长与变现冲刺（10-12月）", "krs": [
       {"id": "traffic", "name": "月访问用户", "unit": "人", "target": 400, "source": "ga4_users", "targets": {"monthly": 400, "quarterly": 1200, "yearly": 2000}},
-      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 20, "source": "content_new", "targets": {"monthly": 8, "quarterly": 24, "yearly": 60}},
+      {"id": "content", "name": "季度新增文章", "unit": "篇", "target": 40, "source": "content_new", "targets": {"monthly": 13, "quarterly": 40, "yearly": 120}},
       {"id": "gsc", "name": "月搜索曝光", "unit": "次", "target": 1000, "source": "gsc_impressions", "targets": {"monthly": 1000, "quarterly": 3000, "yearly": 6000}},
       {"id": "revenue", "name": "月联盟佣金", "unit": "$", "target": 50, "source": "tp_revenue", "targets": {"monthly": 50, "quarterly": 150, "yearly": 300}},
       {"id": "email", "name": "邮件订阅", "unit": "人", "target": 100, "source": "ml_total", "targets": {"monthly": 100, "quarterly": 100, "yearly": 100}}

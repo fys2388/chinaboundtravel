@@ -820,20 +820,18 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
-      "cover_ok": false,
-      "cover_image": "",
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "/img/china-dest/transport/china-transportation-complete-guide.webp",
       "scores": {
         "brand": 100,
         "fact": 100,
         "language": 100,
         "mojibake": 100,
         "seo": 100,
-        "media": 75
+        "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {
@@ -874,20 +872,18 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
-      "cover_ok": false,
-      "cover_image": "",
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "/img/china-dest/general/china-travel-safety-guide.webp",
       "scores": {
         "brand": 100,
         "fact": 100,
         "language": 100,
         "mojibake": 100,
         "seo": 100,
-        "media": 75
+        "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {
@@ -980,20 +976,18 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
-      "cover_ok": false,
-      "cover_image": "",
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
       "scores": {
         "brand": 100,
         "fact": 100,
         "language": 100,
         "mojibake": 100,
         "seo": 100,
-        "media": 75
+        "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {
@@ -1515,20 +1509,18 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
-      "cover_ok": false,
-      "cover_image": "",
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "/img/china-dest/chengdu/chengdu-hotpot-street.webp",
       "scores": {
         "brand": 100,
         "fact": 100,
         "language": 100,
         "mojibake": 100,
         "seo": 100,
-        "media": 75
+        "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {

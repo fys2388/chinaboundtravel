@@ -255,6 +255,10 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Alipay vs WeChat Pay: Which Payment App](https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/)

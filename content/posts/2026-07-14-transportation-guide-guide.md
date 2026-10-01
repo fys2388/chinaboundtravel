@@ -14,7 +14,7 @@ geo: "US"
 draft: false
 audit_status: "pass2"
 summary: "China transportation: complete guide 2026. how to navigate with tested strategies researched and verified by our editorial team."
-description: "China transportation complete guide 2026: navigate with tested strategies from our editorial team."
+description: "China transportation complete guide 2026: high-speed rail, subways, Didi, and station survival tips with tested strategies from our editorial team."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
 ShowToc: "true"
 TocOpen: "false"
@@ -113,6 +113,10 @@ If you're interested in learning more about China's transportation system or pla
 {{< affiliate-insurance >}}
 
 {{< affiliate-esim >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

@@ -88,6 +88,9 @@ def snapshot_gsc():
         "errors": 0,
         "impressions_28d": snap.get("gsc_impressions_28d"),
         "clicks_28d": snap.get("gsc_clicks_28d"),
+        # 兼容季报/年报的 gsc_impressions / gsc_clicks 键名（快照只提供 28d 后缀）
+        "gsc_impressions": snap.get("gsc_impressions_28d"),
+        "gsc_clicks": snap.get("gsc_clicks_28d"),
         "data_source": "SNAPSHOT",
         "snapshot_as_of": snap.get("as_of"),
     }

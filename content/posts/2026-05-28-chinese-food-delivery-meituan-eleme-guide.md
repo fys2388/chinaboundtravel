@@ -6,7 +6,7 @@ date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/"
 tags: ["ChinaTravel", "ChinaFood", "ChinaAppGuide", "ChinaDailyLife", "ChinaTravelTips"]
-description: "Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, pro tips. Start ordering l..."
+description: "Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, and pro tips."
 author: "Joran"
 params:
   keywords:
@@ -242,6 +242,10 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

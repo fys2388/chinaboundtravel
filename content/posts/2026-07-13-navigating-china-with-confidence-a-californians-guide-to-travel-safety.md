@@ -128,6 +128,10 @@ Avoid sharing passport details or verification codes with third parties.
 
 ---
 
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
 ## Related Reading
 
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)

@@ -13,7 +13,7 @@ tags:
 geo: "EU"
 draft: false
 summary: "China remote work guide 2026: essential tips for digital nomads and remote workers. Covers visa requirements, transportation, cultural differences, and a top choice cities for remote work in China."
-description: "Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads, researched and verified by our editorial team."
+description: "Remote work from China: visa options, transport hacks, co-working scenes, and cultural tips for digital nomads in 2026. Real experiences from Chengdu."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/"
 ShowToc: "true"
 TocOpen: "false"
@@ -130,6 +130,10 @@ So what are you waiting for? Start planning your China remote work adventure tod
 ---
 
 {{< affiliate-disclosure >}}
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

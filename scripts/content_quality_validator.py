@@ -242,23 +242,60 @@ def validate_article(path: Path) -> dict:
     seo_score = max(0, 100 - len(seo_issues) * 20)
 
     # ---- 媒体/封面 (P0) ----
+    # 支持两种 front matter 格式（与 scripts/cover_gate.py 保持一致）：
+    #   TOML (+++) :  [cover]  然后  image = "..."
+    #   YAML (---) :  cover:   然后  image: "..."
+    # 修复历史 bug：原实现只处理 YAML `cover:` 且用 `stripped.startswith(" ")`
+    # 判断嵌套行，但 line.strip() 已经把前导空格去掉，条件恒 False，
+    # 导致 `  alt:` 之后 `in_cover` 被错误置回 False，跳过 image 行。
     media_issues = []
     cover_ok = False
     cover_image = ""
     fm_lines = (fm or "").split("\n")
-    in_cover = False
-    for line in fm_lines:
-        stripped = line.strip()
-        if stripped.startswith("cover:"):
-            in_cover = True
+
+    # 先根据整块 front matter 的语法特征识别 TOML/YAML。
+    # TOML 强特征：包含 `[section]` 头；YAML 特征：以 `key:` 开头的行。
+    _is_toml = False
+    for _ln in fm_lines:
+        _s = _ln.strip()
+        if not _s:
             continue
-        if in_cover and stripped.startswith("image:"):
-            cover_image = stripped.split(":", 1)[1].strip().strip('"').strip("'")
-            cover_ok = True
-            in_cover = False
+        if _s.startswith("[") and _s.endswith("]"):
+            _is_toml = True
             break
-        if in_cover and stripped and not stripped.startswith(" "):
-            in_cover = False
+        if _s.startswith("cover:") or (
+            "=" not in _s and _s.endswith(":") is False
+            and re.match(r"^[A-Za-z_][A-Za-z0-9_\-]*\s*:", _s)
+        ):
+            _is_toml = False
+            break
+
+    in_cover = False
+    if _is_toml:
+        for line in fm_lines:
+            stripped = line.strip()
+            if stripped == "[cover]":
+                in_cover = True
+                continue
+            if in_cover and stripped.startswith("image") and "=" in stripped:
+                cover_image = stripped.split("=", 1)[1].strip().strip('"').strip("'")
+                cover_ok = True
+                break
+            if in_cover and stripped.startswith("["):
+                in_cover = False
+    else:
+        for line in fm_lines:
+            stripped = line.strip()
+            raw_lead = len(line) - len(line.lstrip())
+            if raw_lead == 0 and stripped.startswith("cover:"):
+                in_cover = True
+                continue
+            if in_cover and raw_lead > 0 and stripped.startswith("image:"):
+                cover_image = stripped.split(":", 1)[1].strip().strip('"').strip("'")
+                cover_ok = True
+                break
+            if in_cover and raw_lead == 0 and stripped:
+                in_cover = False
     if not cover_ok:
         media_issues.append("missing_cover")
     if cover_image:

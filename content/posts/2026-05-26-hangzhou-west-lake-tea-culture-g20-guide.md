@@ -5,7 +5,7 @@ slug: "hangzhou-west-lake-tea-culture-g20-guide"
 date: 2026-05-23T09:00:00+08:00
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/"
-description: "Hangzhou Travel Guide: West Lake & Tea Culture. Research-based practical guidance for international travelers planning a China trip. Check official sources f..."
+description: "Hangzhou Travel Guide: West Lake & Tea Culture. Practical guidance for travelers planning a China trip. Check official sources for latest info."
 author: "Joran"
 params:
   keywords:
@@ -179,6 +179,10 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 ---
 
 *Note: visa, pricing, schedule, and policy details can change. Please verify the latest information from official sources before your trip.*
+
+---
+
+{{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
 
 ---
 

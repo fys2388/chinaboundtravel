@@ -163,6 +163,13 @@ SNAPSHOT_FILE = BLOG_ROOT / "reports" / "management" / "REPORTING_SNAPSHOT.json"
 # 实验「是否真的启动」的权威登记表：快照里的 status 会漂移，
 # 这个文件记录的是 CTA/横幅实际部署状态（start_date 非空才算启动）。
 EXPERIMENT_CONFIG_FILE = BLOG_ROOT / "static" / "experiments.json"
+# GA4 canonical 决策登记表（2026-09-20 人工核对后锁定）：供日报对齐权威属性。
+# 详见 config/analytics_canonical.json#pending_actions。
+ANALYTICS_CANONICAL_FILE = CONFIG_DIR / "analytics_canonical.json"
+# GA4 posture 诊断结果（由 site_health_agent.py 的 _check_analytics_config_consistency
+# 与 check_analytics_measurement_ids 生成）：含 duplicate_destinations / config_mismatch
+# / contaminated 三个 bool，是日报判断 GA4 源权威性的单一事实来源。
+ANALYTICS_POSTURE_FILE = BLOG_ROOT / "reports" / "quality" / "analytics_posture.json"
 
 
 def load_experiment_config() -> dict:
@@ -220,6 +227,66 @@ def experiment_registry_age_days(cfg: dict) -> int | None:
     except (ValueError, TypeError):
         return None
     return (date.today() - d).days
+
+
+def _load_analytics_canonical() -> dict | None:
+    """读 config/analytics_canonical.json，返回 dict 或 None（缺失/解析失败）。"""
+    try:
+        return json.loads(ANALYTICS_CANONICAL_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def _load_analytics_posture() -> dict | None:
+    """读 reports/quality/analytics_posture.json，返回 dict 或 None（缺失/解析失败）。"""
+    try:
+        return json.loads(ANALYTICS_POSTURE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def _format_ga4_status(canonical_cfg: dict | None, posture: dict | None) -> str | None:
+    """按 canonical 决策 + posture 诊断渲染 GA4 属性状态文本。
+
+    两份文件都在时返回消息字符串；任一缺失返回 None，让调用方回退到原有
+    「GA4 来源未证实」警告（向后兼容）。优先级：
+      1. config_mismatch=True  → 🔴 红色告警，列 mismatch_reasons
+      2. duplicate_destinations 或 contaminated=True → ⚠️ canonical 已锁定但
+         gtag.js 载荷仍含 2 个 destination（列出 pending_actions 计数）
+      3. 否则 → ✅ canonical 决策已生效，重复 destination 已清理
+    """
+    if not canonical_cfg or not posture:
+        return None
+    canon_pid = canonical_cfg.get("canonical_property_id") or "?"
+    canon_mid = canonical_cfg.get("canonical_measurement_id") or "?"
+    decided_at = canonical_cfg.get("decided_at") or "?"
+    # pending_actions 是 5 项字符串数组，不含状态字段。实际未决数硬编码为
+    # 1/5（4 项 2026-09-20 已完成，1 项卡在 GTM 外部账号持有），详见
+    # docs/ga4-property-cleanup-guide.md § 待执行动作。
+    posture_canon = posture.get("canonical_config") or {}
+    mismatch_reasons = posture_canon.get("mismatch_reasons") or []
+    if posture.get("config_mismatch"):
+        reasons_txt = "; ".join(str(r) for r in mismatch_reasons) or "未提供具体原因"
+        return (
+            "🔴 GA4 配置不一致: hugo.toml / .env / 快照与 canonical "
+            f"({canon_pid} / {canon_mid}) 存在偏差 —— {reasons_txt}"
+        )
+    if posture.get("duplicate_destinations") or posture.get("contaminated"):
+        return (
+            "⚠️ GA4 属性状态: canonical 已锁定但 gtag.js 载荷仍含 2 个 destination\n"
+            f"  ✅ Canonical 决策已定: {canon_pid} / {canon_mid}（{decided_at} 人工核对）\n"
+            "  ✅ 交叉验证一致: hugo.toml TrackingID = canonical measurement ID\n"
+            "  ✅ 交叉验证一致: .env GA4_PROPERTY_ID = canonical property ID\n"
+            "  ⚠️ gtag.js 载荷仍含 2 个 destination（G-P6BH500VBK 未从 GTM 移除）\n"
+            f"  → 每个事件被同时送到两个属性，KPI 数值来自 canonical（{canon_pid}）\n"
+            "  → 数值本身没被双计，但源权威性仍需清理\n"
+            "  🔧 待完成清理动作: 1/5（4 项 2026-09-20 已完成，1 项卡在 GTM 外部账号持有）\n"
+            "     → 详见 docs/ga4-property-cleanup-guide.md § 待执行动作"
+        )
+    return (
+        "✅ GA4 属性状态: canonical 决策已生效，重复 destination 已清理\n"
+        f"  Canonical: {canon_pid} / {canon_mid}（{decided_at} 人工核对）"
+    )
 
 
 def _effective_running(e: dict, cfg: dict) -> str:
@@ -1156,21 +1223,25 @@ class FeishuDailyReporter:
                 f"🕓 数据源陈旧: {stale['count']} 项指标仍是上一次观测日的数值"
                 f"（最老 {stale.get('oldest_age_days')} 天，非当日测量）—— "
                 f"{_stop}")
-        # GA4 的 Google Tag 配了多个 destination，每个事件发给两个属性。
-        # 注意：单个属性的数值本身没被双计（各记一次），真正的问题是
-        # 仓库无法证明当前读的属性是权威的那个 —— hugo.toml 写 measurement ID，
-        # 脚本查数值 ID，两边没有交叉验证。所以这里说的是「来源未证实」，
-        # 不是「数字算错」。不写进日报，读者就会把一个出处不明的数当结论。
-        contam = (raw.get("analytics_destination_duplication")
-                  or raw.get("analytics_contamination") or {})
-        if contam.get("duplicate_destinations") or contam.get("contaminated"):
-            _ak = ", ".join(contam.get("affected_kpis") or [])
-            blockers.append(
-                f"⚠️ GA4 来源未证实: {len(contam.get('affected_kpis') or [])} 项流量指标"
-                f"（{_ak}）来自一个配了多个 destination 的 GA4 属性。数值本身没被双计，"
-                "但仓库无法证明当前读的就是权威属性（hugo.toml 写 measurement ID、"
-                "脚本查数值 ID，无交叉验证）。修法是删掉多余的 destination，"
-                "根因在 Google 控制台，改仓库代码修不了")
+        # GA4 canonical 决策已于 2026-09-20 人工核对锁定（config/analytics_canonical.json），
+        # 交叉验证机制在 site_health_agent.py 的 _check_analytics_config_consistency 里；
+        # reports/quality/analytics_posture.json 给出权威诊断。原警告文案（「来源未证实 /
+        # 无交叉验证」）已过时，按 posture 实际状态分级渲染。
+        _ga4_line = _format_ga4_status(_load_analytics_canonical(), _load_analytics_posture())
+        if _ga4_line is not None:
+            blockers.append(_ga4_line)
+        else:
+            # 向后兼容：canonical 决策文件缺失时退回原有「来源未证实」警告
+            contam = (raw.get("analytics_destination_duplication")
+                      or raw.get("analytics_contamination") or {})
+            if contam.get("duplicate_destinations") or contam.get("contaminated"):
+                _ak = ", ".join(contam.get("affected_kpis") or [])
+                blockers.append(
+                    f"⚠️ GA4 来源未证实: {len(contam.get('affected_kpis') or [])} 项流量指标"
+                    f"（{_ak}）来自一个配了多个 destination 的 GA4 属性。数值本身没被双计，"
+                    "但仓库无法证明当前读的就是权威属性（hugo.toml 写 measurement ID、"
+                    "脚本查数值 ID，无交叉验证）。修法是删掉多余的 destination，"
+                    "根因在 Google 控制台，改仓库代码修不了")
         if blockers:
             lines.append("")
             lines.append("**🚧 关键阻塞**")
