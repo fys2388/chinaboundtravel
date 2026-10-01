@@ -209,6 +209,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/33",
       "fixed_at": "2026-10-01T02:33:40.881324"
+    },
+    {
+      "workflow": "Monthly Ebook Guide Update",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/34",
+      "fixed_at": "2026-10-01T11:55:43.647847"
     }
   ]
 }

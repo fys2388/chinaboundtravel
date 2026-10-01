@@ -1492,6 +1492,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261001_115541",
+      "timestamp": "2026-10-01T11:55:41.450546",
+      "workflow_name": "Monthly Ebook Guide Update",
+      "run_id": "36858351604",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "ERROR error building site: assemble: failed to create page from pageMetaSource /posts/2026-10-01-chinabound-travel-guide-2026-10-monthly-update: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-10-01-chinabound-travel-guide-2026-10-monthly-update.md:2:31\": [1:31] value is not allowed in this context. map key-value is pre-defined\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
