@@ -1,296 +1,128 @@
 {
-  "generated_at": "2026-09-30T05:56:51.818858+00:00",
+  "generated_at": "2026-10-01T23:25:56.439553+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "summary": {
     "pages": 10,
     "viewports": 2,
-    "issues": 20,
+    "issues": 1,
     "P0": 0,
-    "P1": 20,
+    "P1": 1,
     "P2": 0
   },
   "pages": {
     "https://www.chinaboundtravel.com/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/pricing/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/pricing/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     }
   },
   "issues": [
     {
-      "id": "ef896027ab0de7bc",
+      "id": "eda93581fbec80e3",
       "severity": "P1",
       "source": "visual",
       "type": "visual_audit_failed",
       "page": "/",
       "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "1e55b600bf005af3",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "5c123d3f5ff2135c",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/144-hour-visa-free-transit-guide/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "36d6ab0d00505c37",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/144-hour-visa-free-transit-guide/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "221420c29495f0ac",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "a2f952e0034bfaa9",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "2b5da4b8884db091",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/accommodation-tips-guide/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "18e4cc475d7324f8",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/accommodation-tips-guide/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "4c737fb77a3d0c3f",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-for-foreigners-guide/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "35743e200a301903",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-for-foreigners-guide/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "8906403c1296bf4a",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "186045e84257af2a",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "33cb6e55b183092c",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "27ef81dbb8a5c192",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "9426e88c708527a4",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/best-travel-insurance-china/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "2433bcc5104b7951",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/best-travel-insurance-china/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "79f98c67d94e814b",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "4bb6cdd04cb62c11",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/posts/chinabound-travel-guide-2026-09-monthly-update/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "99691a8a91e2021a",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/pricing/",
-      "viewport": "desktop",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
-    },
-    {
-      "id": "e63e8274326df798",
-      "severity": "P1",
-      "source": "visual",
-      "type": "visual_audit_failed",
-      "page": "/pricing/",
-      "viewport": "mobile",
-      "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n",
-      "recommended_action": "Investigate the browser failure and rerun."
+      "evidence": "Page.goto: Timeout 30000ms exceeded.\n[batch_dedup] 同批次 20 个页面同类超时，只保留 1 条",
+      "recommended_action": "Investigate the browser failure and rerun.",
+      "affected_pages": [
+        "/",
+        "/pricing/",
+        "/posts/alipay-for-foreigners-guide/",
+        "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+        "/posts/accommodation-tips-guide/",
+        "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+        "/posts/alipay-wechat-pay-foreigners-guide/",
+        "/posts/best-travel-insurance-china/",
+        "/",
+        "/pricing/",
+        "/posts/alipay-for-foreigners-guide/",
+        "/posts/chinabound-travel-guide-2026-09-monthly-update/",
+        "/posts/144-hour-visa-free-transit-guide/",
+        "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+        "/posts/accommodation-tips-guide/",
+        "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+        "/posts/alipay-wechat-pay-foreigners-guide/",
+        "/posts/best-travel-insurance-china/"
+      ]
     }
   ]
 }

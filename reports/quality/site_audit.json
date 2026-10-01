@@ -1,25 +1,15 @@
 {
-  "generated_at": "2026-09-23T14:50:14.220199+00:00",
+  "generated_at": "2026-10-01T22:43:52.298512+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
     "pages": 70,
-    "images_checked": 331,
-    "links_checked": 2031,
-    "issues": 1,
-    "P0": 1,
+    "images_checked": 333,
+    "links_checked": 2076,
+    "issues": 0,
+    "P0": 0,
     "P1": 0,
     "P2": 0
   },
-  "issues": [
-    {
-      "id": "e31a84baea78940c",
-      "severity": "P0",
-      "source": "site",
-      "type": "sitemap_page_unreachable",
-      "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
-      "evidence": "HTTPSConnectionPool(host='www.chinaboundtravel.com', port=443): Read timed out. (read timeout=15)",
-      "recommended_action": "Restore the page or remove it from the sitemap."
-    }
-  ]
+  "issues": []
 }
