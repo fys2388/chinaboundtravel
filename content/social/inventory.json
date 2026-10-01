@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T18:21:00",
+  "updated_at": "2026-10-01T07:04:56",
   "items": [
     {
       "id": "soc-000001",
@@ -166,7 +166,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "x",
       "type": "tip",
-      "caption": "Essential Bargain tips most first-time visitors miss. → https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260919&utm_content=x_v1 #ChinaTravel",
+      "caption": "Essential Bargain tips most first-time visitors miss. → https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Bargaining Guide: How to Haggle & Shop' (platform x). Scene: colorful Chinese shopping street market. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-x-tip-0fe09bd3.jpg",
       "utm_params": {
@@ -174,8 +174,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-24",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -185,8 +185,8 @@
       },
       "_sig": "8395fba13cb0",
       "image_generated": true,
-      "recycled_at": "2026-09-19",
-      "recycle_count": 1
+      "recycled_at": "2026-10-01",
+      "recycle_count": 2
     },
     {
       "id": "soc-000008",
@@ -1688,7 +1688,7 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "ig",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nEverything you need to know about Food — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 linkedin\n\nEverything you need to know about Food — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Food Guide: Must-Try Dishes &' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-ig-conversion-bcc13869.jpg",
       "utm_params": {
@@ -1697,7 +1697,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-09-24",
+      "publish_date": "2026-10-01",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1706,8 +1706,8 @@
         "platform": "ig"
       },
       "_sig": "662fe3fdb673",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 2,
+      "recycled_at": "2026-10-01",
+      "recycle_count": 3,
       "image_generated": true
     },
     {
@@ -2736,7 +2736,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "ig",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nEverything you need to know about China travel — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 linkedin\n\nEverything you need to know about China travel — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform ig). Scene: cozy Chinese boutique hotel room. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-ig-conversion-aec0c8d3.jpg",
       "utm_params": {
@@ -2745,7 +2745,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-09-24",
+      "publish_date": "2026-10-01",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2754,8 +2754,8 @@
         "platform": "ig"
       },
       "_sig": "5ab340d82b59",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 2,
+      "recycled_at": "2026-10-01",
+      "recycle_count": 3,
       "image_generated": true
     },
     {
@@ -3766,8 +3766,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-01",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4134,7 +4134,7 @@
       "source_title": "China Airport Transfer Guide (2026)",
       "platform": "pinterest",
       "type": "story",
-      "caption": "🔥 linkedin\n\nChina Airport Transfer Guide (2026) | What travelers discover about Beijing — practical lessons from the ground.\n\nHow to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared for Beijing | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nChina Airport Transfer Guide (2026) | What travelers discover about China travel — practical lessons from the ground.\n\nChina Airport Transfer Guide (2026)\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-airport-transfer-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'China Airport Transfer Guide (2026)' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared.",
       "image_url": "https://chinaboundtravel.com/img/china-dest/transport/china-airport-transfer-guide.jpg",
       "utm_params": {
@@ -4142,8 +4142,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-24",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4151,7 +4151,9 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "2dc61b896b8c"
+      "_sig": "2dc61b896b8c",
+      "recycled_at": "2026-10-01",
+      "recycle_count": 1
     },
     {
       "id": "soc-000159",
@@ -4159,7 +4161,7 @@
       "source_title": "China Airport Transfer Guide (2026)",
       "platform": "x",
       "type": "visual",
-      "caption": "Visual guide to Beijing: what to see and capture. How to get from Chinese airports to city centers in 2026: → https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Visual guide to China travel: what to see and capture. → https://www.chinaboundtravel.com/china-airport-transfer-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Airport Transfer Guide (2026)' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared.",
       "image_url": "https://chinaboundtravel.com/img/china-dest/transport/china-airport-transfer-guide.jpg",
       "utm_params": {
@@ -4167,8 +4169,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-24",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4176,7 +4178,9 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "5f5c695da7b4"
+      "_sig": "5f5c695da7b4",
+      "recycled_at": "2026-10-01",
+      "recycle_count": 1
     },
     {
       "id": "soc-000160",
@@ -6156,7 +6160,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 | Essential Itinerary tips most first-time visitors miss.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 | Essential Itinerary tips most first-time visitors miss.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform pinterest). Scene: China travel map with landmarks and compass. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
       "utm_params": {
@@ -6165,7 +6169,7 @@
         "utm_campaign": "cbt_social_20260916"
       },
       "status": "已发布",
-      "publish_date": "2026-09-24",
+      "publish_date": "2026-10-01",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6174,8 +6178,8 @@
         "platform": "pinterest"
       },
       "_sig": "5edeb5895480",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 1
+      "recycled_at": "2026-10-01",
+      "recycle_count": 2
     },
     {
       "id": "soc-000238",
@@ -6183,7 +6187,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Itinerary — practical lessons from the ground. → https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Itinerary — practical lessons from the ground. → https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform x). Scene: China travel map with landmarks and compass. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
       "utm_params": {
@@ -6191,8 +6195,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-24",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6201,8 +6205,8 @@
         "platform": "x"
       },
       "_sig": "db00d17a2c9f",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 1
+      "recycled_at": "2026-10-01",
+      "recycle_count": 2
     },
     {
       "id": "soc-000239",
@@ -6389,7 +6393,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "pinterest",
       "type": "knowledge",
-      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Research-backed facts about China travel every traveler should know.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Research-backed facts about China travel every traveler should know.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp",
       "utm_params": {
@@ -6397,8 +6401,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "已发布",
-      "publish_date": "2026-09-24",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6407,8 +6411,8 @@
         "platform": "pinterest"
       },
       "_sig": "517de33728f3",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 1
+      "recycled_at": "2026-10-01",
+      "recycle_count": 2
     },
     {
       "id": "soc-000247",
@@ -6497,7 +6501,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260924&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp",
       "utm_params": {
@@ -6506,7 +6510,7 @@
         "utm_campaign": "cbt_social_20260917"
       },
       "status": "已发布",
-      "publish_date": "2026-09-24",
+      "publish_date": "2026-10-01",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6515,8 +6519,8 @@
         "platform": "pinterest"
       },
       "_sig": "fea6b3401d0c",
-      "recycled_at": "2026-09-24",
-      "recycle_count": 1
+      "recycled_at": "2026-10-01",
+      "recycle_count": 2
     },
     {
       "id": "soc-000251",
