@@ -1,0 +1,42 @@
+{
+  "report_type": "quarterly",
+  "period": "2026-Q3",
+  "generated_at": "2026-10-01 03:43:43",
+  "plan": [
+    {
+      "task": "提升「月访问用户」至月度目标的50%以上（上季月均74.6667，目标400）",
+      "priority": "high",
+      "period": "本季度",
+      "kr_id": "traffic",
+      "target": 400.0
+    },
+    {
+      "task": "提升「月搜索曝光」至月度目标的50%以上（上季月均0，目标1000）",
+      "priority": "high",
+      "period": "本季度",
+      "kr_id": "gsc",
+      "target": 1000.0
+    },
+    {
+      "task": "提升「月联盟佣金」至月度目标的50%以上（上季月均0，目标50）",
+      "priority": "high",
+      "period": "本季度",
+      "kr_id": "revenue",
+      "target": 50.0
+    },
+    {
+      "task": "提升「邮件订阅」至月度目标的50%以上（上季月均0.333333，目标100）",
+      "priority": "high",
+      "period": "本季度",
+      "kr_id": "email",
+      "target": 100.0
+    }
+  ],
+  "krs": {
+    "traffic": 224.0,
+    "content": 38.0,
+    "gsc": 0.0,
+    "revenue": 0.0,
+    "email": 1.0
+  }
+}
