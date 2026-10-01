@@ -32,6 +32,7 @@
 | template | layouts/partials/extend_head.html | WARN | - | - | False |
 | template | layouts/partials/extend_post_content.html | WARN | - | - | False |
 | template | layouts/partials/footer.html | PASS | - | - | True |
+| template | layouts/partials/giscus.html | WARN | - | - | False |
 | template | layouts/partials/google_analytics.html | WARN | - | - | False |
 | template | layouts/partials/head/meta.html | WARN | - | - | False |
 | template | layouts/partials/head.html | WARN | - | - | False |
@@ -84,6 +85,7 @@
 | template | layouts/shortcodes/soft-recommend.html | PASS | - | - | True |
 | template | layouts/shortcodes/travel-faq.html | WARN | - | - | False |
 | template | layouts/shortcodes/vpn-link.html | WARN | - | - | False |
+| template | layouts/shortcodes/web3forms-key.html | WARN | - | - | False |
 | content | content/7-day-china-itinerary.md | PASS | - | - | True |
 | about | content/about/_index.md | PASS | - | - | True |
 | content | content/affiliate-disclosure.md | PASS | - | - | True |
@@ -124,6 +126,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 31/117 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/119 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
