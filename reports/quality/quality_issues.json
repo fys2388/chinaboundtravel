@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T14:50:31.365992+00:00",
+  "generated_at": "2026-10-01T12:14:37.533033+00:00",
   "summary": {
     "total": 25,
     "P0": 2,
@@ -16,13 +16,6 @@
       "site_health": 1,
       "content": 3,
       "engineering": 20
-    },
-    "effective": {
-      "open_P0": 0,
-      "open_P1": 1,
-      "open_P2": 1,
-      "false_positives_archived": 21,
-      "external_blocked": 1
     }
   },
   "sources": {
@@ -44,7 +37,7 @@
     },
     "visual": {
       "available": true,
-      "generated_at": "2026-09-22T21:42:17.437196+00:00",
+      "generated_at": "2026-09-30T05:56:51.818858+00:00",
       "issues": 20,
       "P0": 0,
       "P1": 20,
@@ -52,7 +45,7 @@
     },
     "content": {
       "available": true,
-      "generated_at": "2026-09-20T07:21:55.863084",
+      "generated_at": "2026-10-01T12:14:36.674516",
       "issues": 2,
       "P0": 0,
       "P1": 1,
@@ -67,7 +60,7 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-09-23T08:32:56.214137+00:00",
+      "generated_at": "2026-10-01T03:09:57.227378+00:00",
       "issues": 2,
       "P0": 1,
       "P1": 1,
@@ -85,26 +78,23 @@
       "evidence": "HTTPSConnectionPool(host='www.chinaboundtravel.com', port=443): Read timed out. (read timeout=15)",
       "recommended_action": "Restore the page or remove it from the sitemap.",
       "owner": "seo",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-23T14:50:31.365992+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
-      "id": "site_health-605967f4356c9573",
+      "id": "site_health-778fd41cfda51740",
       "severity": "P0",
       "source": "site_health",
       "type": "multiple_analytics_destinations",
       "title": "multiple_analytics_destinations",
       "page": "https://www.chinaboundtravel.com",
-      "evidence": "{\"html_ids_by_page\": {\"/pricing/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 527403}}}",
+      "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 535950}}}",
       "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
       "owner": "site_health",
       "status": "external_blocked",
-      "first_seen": "2026-09-23T14:50:31.365992+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00"
+      "first_seen": "2026-10-01T12:14:37.533033+00:00",
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "content-media-2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
@@ -118,21 +108,21 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
-      "id": "site_health-6272a1413b2d46c4",
+      "id": "site_health-44b6959138f08dc5",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
       "title": "draft_leak",
-      "page": "content\\7-day-china-itinerary.md",
+      "page": "content/7-day-china-itinerary.md",
       "evidence": "draft:true的文章可能已发布到线上",
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-09-23T14:50:31.365992+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00"
+      "first_seen": "2026-10-01T12:14:37.533033+00:00",
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "ef896027ab0de7bc",
@@ -144,12 +134,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "1e55b600bf005af3",
@@ -161,12 +148,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "5c123d3f5ff2135c",
@@ -178,12 +162,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "36d6ab0d00505c37",
@@ -195,12 +176,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "221420c29495f0ac",
@@ -212,12 +190,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "a2f952e0034bfaa9",
@@ -229,12 +204,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "2b5da4b8884db091",
@@ -246,12 +218,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "18e4cc475d7324f8",
@@ -263,12 +232,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "4c737fb77a3d0c3f",
@@ -280,12 +246,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "35743e200a301903",
@@ -297,12 +260,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "8906403c1296bf4a",
@@ -314,12 +274,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "186045e84257af2a",
@@ -331,12 +288,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "33cb6e55b183092c",
@@ -348,12 +302,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "27ef81dbb8a5c192",
@@ -365,12 +316,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "9426e88c708527a4",
@@ -382,12 +330,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "2433bcc5104b7951",
@@ -399,12 +344,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "79f98c67d94e814b",
@@ -416,12 +358,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "4bb6cdd04cb62c11",
@@ -433,12 +372,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "99691a8a91e2021a",
@@ -450,12 +386,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "e63e8274326df798",
@@ -467,12 +400,9 @@
       "evidence": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/pricing/\", waiting until \"domcontentloaded\"\n",
       "recommended_action": "Investigate the browser failure and rerun.",
       "owner": "engineering",
-      "status": "false_positive",
+      "status": "open",
       "first_seen": "2026-09-21T22:21:03.644439+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00",
-      "resolution_note": "[2026-09-28 diagnostic] 浏览器实测页面正常渲染，此 issue 为扫描时网络抖动导致的一次性超时假报。已给 site_quality_audit.py / site_visual_audit.py 加 3 次重试避免复现。",
-      "resolved_by": "coordinator_2026-09-28",
-      "resolved_at": "2026-09-28"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -486,7 +416,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-09-23T14:50:31.365992+00:00"
+      "last_seen": "2026-10-01T12:14:37.533033+00:00"
     }
   ]
 }
