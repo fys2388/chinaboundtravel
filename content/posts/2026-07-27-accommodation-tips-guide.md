@@ -211,3 +211,5 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)

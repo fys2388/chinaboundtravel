@@ -184,6 +184,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

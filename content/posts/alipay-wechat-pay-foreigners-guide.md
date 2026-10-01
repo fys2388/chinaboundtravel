@@ -201,3 +201,5 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)

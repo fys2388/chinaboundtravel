@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-09-30"
+last_updated: "2026-10-01"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 
@@ -160,6 +160,8 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
 ## FAQ
 

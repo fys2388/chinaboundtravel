@@ -166,6 +166,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?

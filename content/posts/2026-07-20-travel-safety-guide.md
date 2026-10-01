@@ -309,6 +309,8 @@ Originally posted on ChinaBound Travel Blog
 
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
 
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
 ## FAQ
 
 ### What should I know about how safe is china,travel & destinations,210,26,informational,0.0,/resources?

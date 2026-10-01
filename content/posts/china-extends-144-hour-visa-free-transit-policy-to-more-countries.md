@@ -195,6 +195,8 @@ Sources: National Immigration Administration
 - [Chinese Food Delivery 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](/posts/internet-connection-china-esim-vpn-guide/)
 
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
 ## FAQ
 
 ### Do I need a visa for China?
