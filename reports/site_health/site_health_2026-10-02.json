@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-02T03:11:33.384157+00:00",
+  "timestamp": "2026-10-02T03:21:37.935680+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -17,7 +17,7 @@
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/7-day-china-itinerary.md",
+      "file": "content\\7-day-china-itinerary.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
       "agent": "content",
@@ -29,7 +29,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+      "file": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -41,7 +41,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+      "file": "content\\posts\\2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -53,7 +53,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "file": "content\\posts\\2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -65,7 +65,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/western-sichuan-overland-camping-route.md",
+      "file": "content\\posts\\2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -77,7 +77,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
+      "file": "content\\posts\\2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -89,7 +89,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "file": "content\\posts\\western-sichuan-overland-camping-route.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -101,7 +101,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/ebook/2026-08-03-travel-guide-2026-08.md",
+      "file": "content\\ebook\\2026-07-01-travel-guide-2026-07.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
       "agent": "seo",
@@ -113,7 +113,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/ebook/2026-07-01-travel-guide-2026-07.md",
+      "file": "content\\ebook\\2026-08-01-travel-guide-2026-08.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
       "agent": "seo",
@@ -125,7 +125,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
+      "file": "content\\ebook\\2026-08-03-travel-guide-2026-08.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
       "agent": "seo",
@@ -137,7 +137,7 @@
     {
       "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/ebook/2026-08-01-travel-guide-2026-08.md",
+      "file": "content\\ebook\\2026-09-01-travel-guide-2026-09.md",
       "message": "Meta description过短(54字符)",
       "auto_fixable": false,
       "agent": "seo",
