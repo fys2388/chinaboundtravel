@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01T17:54:26.639331+00:00",
+  "checked_at": "2026-10-02T03:11:34.761577+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
     "/",
@@ -14,19 +14,17 @@
   "gtag_payload": {
     "G-GECBME3YVJ": {
       "destinations": [
-        "G-GECBME3YVJ",
-        "G-P6BH500VBK"
+        "G-GECBME3YVJ"
       ],
-      "payload_bytes": 536504
+      "payload_bytes": 533766
     }
   },
   "measurement_ids": [
-    "G-GECBME3YVJ",
-    "G-P6BH500VBK"
+    "G-GECBME3YVJ"
   ],
-  "destination_count": 2,
-  "duplicate_destinations": true,
-  "contaminated": true,
+  "destination_count": 1,
+  "duplicate_destinations": false,
+  "contaminated": false,
   "canonical_config": {
     "canonical_property_id": "538482322",
     "canonical_measurement_id": "G-GECBME3YVJ",

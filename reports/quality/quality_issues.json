@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T03:01:27.467555+00:00",
+  "generated_at": "2026-10-02T03:11:33.187938+00:00",
   "summary": {
     "total": 5,
     "P0": 1,
@@ -19,7 +19,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-02T03:01:25.550189+00:00",
+      "generated_at": "2026-09-21T07:08:04.572598+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -67,7 +67,7 @@
   },
   "issues": [
     {
-      "id": "site_health-3bd2f66947fb00fb",
+      "id": "site_health-7531de182c5b197e",
       "severity": "P0",
       "source": "site_health",
       "type": "multiple_analytics_destinations",
@@ -77,8 +77,8 @@
       "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
       "owner": "site_health",
       "status": "external_blocked",
-      "first_seen": "2026-10-02T03:01:27.467555+00:00",
-      "last_seen": "2026-10-02T03:01:27.467555+00:00"
+      "first_seen": "2026-10-02T03:11:33.187938+00:00",
+      "last_seen": "2026-10-02T03:11:33.187938+00:00"
     },
     {
       "id": "content-media-2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
@@ -92,10 +92,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-02T03:01:27.467555+00:00"
+      "last_seen": "2026-10-02T03:11:33.187938+00:00"
     },
     {
-      "id": "site_health-15227bd9db742093",
+      "id": "site_health-151e86c32955cea6",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -105,8 +105,8 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-02T03:01:27.467555+00:00",
-      "last_seen": "2026-10-02T03:01:27.467555+00:00"
+      "first_seen": "2026-10-02T03:11:33.187938+00:00",
+      "last_seen": "2026-10-02T03:11:33.187938+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -120,7 +120,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-02T03:01:27.467555+00:00"
+      "last_seen": "2026-10-02T03:11:33.187938+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,7 +134,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-02T03:01:27.467555+00:00"
+      "last_seen": "2026-10-02T03:11:33.187938+00:00"
     }
   ]
 }
