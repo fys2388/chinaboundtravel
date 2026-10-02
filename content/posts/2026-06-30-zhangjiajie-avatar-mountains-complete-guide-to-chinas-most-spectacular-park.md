@@ -101,11 +101,11 @@ Start early — gates open at 7:00 AM, and you want to be there by 7:30 to beat 
 - Takes about 2 hours at a relaxed pace
 - **Pro tip:** Walk the stream in the reverse direction (east to west) — 80% of tour groups go west to east, so you'll have sections almost to yourself
 
-**Afternoon: Huangshi Village ()**
+**Afternoon: Huangshi Village**
 - Take the cable car up (¥65 one way, ¥118 round trip)
 - Huangshi is the original "must-see" viewpoint in Zhangjiajie before Yuanjiajie was discovered
 - The summit trail takes about 2 hours and passes six major viewing platforms
-- The sunset view from "Star Picking Platform" () is genuinely spectacular
+- The sunset view from "Star Picking Platform" is genuinely spectacular
 - **Pro tip:** Most groups leave by 4 PM. Stay until 6 PM and you'll have the summit nearly alone
 
 ### Day 2: Yuanjiajie — The Avatar Mountain
@@ -121,7 +121,7 @@ This is what you came for.
 **Afternoon: Tianzi Mountain**
 - Take the park bus from Yuanjiajie to Tianzi Mountain (about 40 minutes) — remember, Tianzi Mountain is inside the same park, covered by your existing ticket
 - Ride the Tianzi cable car up for panoramic views of the entire park
-- Walk the "Ten-Mile Gallery" () — a paved valley trail surrounded by peaks
+- Walk the "Ten-Mile Gallery" — a paved valley trail surrounded by peaks
 - The **Helong Park** viewing area at sunset is one of the most photographed spots in all of China
 
 ### Day 3: Tianmen Mountain — Glass Walkway and the Heaven's Gate
@@ -130,11 +130,11 @@ Take a taxi from your hotel to the Tianmen Mountain cable car station. This is a
 
 **The Tianmen Cable Car** — at 7,455 meters, this is the world's longest cable car. It climbs from the city center (200m elevation) to the mountain top (1,300m) in about 30 minutes. The views are insane — you literally soar over roads and villages.
 
-**Tianmen Cave ()** — A massive natural hole punched through the mountain. You can reach it via:
+**Tianmen Cave** — A massive natural hole punched through the mountain. You can reach it via:
 - The **999 Steps** (free, takes about 30-40 minutes of stair climbing). It's brutal but iconic.
 - The **escalator system** (built inside the mountain, free with ticket). Much less romantic but your knees will thank you.
 
-**Glass Skywalk ()** — A narrow walkway bolted to the vertical cliff face. It's about 1.6 km long with transparent glass sections. Not as terrifying as expected — the path is wide enough that you don't feel like you'll fall.
+**Glass Skywalk** — A narrow walkway bolted to the vertical cliff face. It's about 1.6 km long with transparent glass sections. Not as terrifying as expected — the path is wide enough that you don't feel like you'll fall.
 
 **Pro tip:** Do Tianmen Mountain on a weekday. On weekends, the wait for the cable car can exceed 2 hours.
 
@@ -142,7 +142,7 @@ Take a taxi from your hotel to the Tianmen Mountain cable car station. This is a
 
 If you have the energy, the **Grand Canyon Glass Bridge** is worth the trip. It's the world's longest and highest glass-bottomed bridge at 430 meters long and 300 meters above the canyon floor.
 
-If you need a rest day, spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park (Tǔjiā Fēngqíng Yuán / )**. If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo () before heading out.
+If you need a rest day, spend the morning in Zhangjiajie city at the **Tujia Folk Customs Park (Tǔjiā Fēngqíng Yuán / )**. If you have an extra half day and are interested in Tujia ethnic culture, it's a cheap, low-effort stop. Skip it if you're short on time — it's not a must-see. Then grab a final bowl of the local Sanxia Guo before heading out.
 
 ![Tianzi Mountain sunset with sea of clouds around Zhangjiajie sandstone pillars](/img/china-dest/zhangjiajie/tianzi-mountain-sunset.webp)
 
@@ -168,10 +168,10 @@ If you need a rest day, spend the morning in Zhangjiajie city at the **Tujia Fol
 
 Zhangjiajie's food is Hunan-style — spicy, sour, and deeply flavorful. A few must-tries:
 
-- **Sanxia Guo ()** — The signature dish. Literally "three-pot-braise" — three ingredients (usually pork belly, fish, and tofu or chicken) stewed separately in a rich, mildly spicy broth. Every restaurant has their own version. A popular choice is a small restaurant near Wulingyuan bus station, where a generous pot costs around ¥38 (~$5).
-- **Tu Jia Bacon ()** — Smoked pork belly that's been curing for months. The fat melts in your mouth. Order it stir-fried with garlic shoots.
-- **Stinky Tofu ()** — Hunan-style is different from the Changsha version — crispier and served with chili oil and pickled vegetables.
-- **Wild Fern Noodles ()** — A local specialty made from fern root. Has a unique gelatinous texture, served cold with chili and vinegar.
+- **Sanxia Guo** — The signature dish. Literally "three-pot-braise" — three ingredients (usually pork belly, fish, and tofu or chicken) stewed separately in a rich, mildly spicy broth. Every restaurant has their own version. A popular choice is a small restaurant near Wulingyuan bus station, where a generous pot costs around ¥38 (~$5).
+- **Tu Jia Bacon** — Smoked pork belly that's been curing for months. The fat melts in your mouth. Order it stir-fried with garlic shoots.
+- **Stinky Tofu** — Hunan-style is different from the Changsha version — crispier and served with chili oil and pickled vegetables.
+- **Wild Fern Noodles** — A local specialty made from fern root. Has a unique gelatinous texture, served cold with chili and vinegar.
 
 ## Top-rated Time to Visit (Honestly)
 

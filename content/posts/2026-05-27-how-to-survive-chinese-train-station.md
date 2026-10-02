@@ -48,15 +48,15 @@ The good news: you will generally not recommended need to feel lost in a Chinese
 Before you arrive, understand what you're walking into. Chinese train stations typically have:
 
 ### Floor -2: Metro/Subway
-Usually the bottom level (). If you're coming by metro, you enter here. Some stations have the metro on a completely different floor  follow signs carefully.
+Usually the bottom level. If you're coming by metro, you enter here. Some stations have the metro on a completely different floor  follow signs carefully.
 
 ### Floor -1: Entrance Hall / Ticket Halls
 The main arrival area if you come by taxi or bus. This is where you'll see:
-- **Ticket halls ()**  windows for buying tickets in person
-- **ID verification gates ()**  you scan your passport here
-- **Security screening ()**  bags go through X-ray, you walk through metal detector
+- **Ticket halls**  windows for buying tickets in person
+- **ID verification gates**  you scan your passport here
+- **Security screening**  bags go through X-ray, you walk through metal detector
 
-### Floor 0 or 1: Platforms ()
+### Floor 0 or 1: Platforms
 Where the trains actually are. This is where you wait after you've passed all the gates.
 
 ---
@@ -65,13 +65,13 @@ Where the trains actually are. This is where you wait after you've passed all th
 
 ### Step 1: Find the Right Entrance
 
-Most large stations have multiple entrances (). Look at your ticket or app confirmation  it tells you which entrance to use. Using the wrong entrance can mean a 20-minute walk to the correct platform.
+Most large stations have multiple entrances. Look at your ticket or app confirmation  it tells you which entrance to use. Using the wrong entrance can mean a 20-minute walk to the correct platform.
 
 ### Step 2: ID Verification (If You're Not Sure, Ask)
 
-Before security, you'll pass through gates that require ID verification (). Show your passport  they scan it or look at it, depending on the station. This is for ticket-holder verification.
+Before security, you'll pass through gates that require ID verification. Show your passport  they scan it or look at it, depending on the station. This is for ticket-holder verification.
 
-> **Editor's Tip:** If you're confused about where to go, find a staff member () and show them your ticket or booking confirmation on your phone. Point to "" (platform). They will help you.
+> **Editor's Tip:** If you're confused about where to go, find a staff member and show them your ticket or booking confirmation on your phone. Point to "" (platform). They will help you.
 
 ### Step 3: Security Screening
 
@@ -110,7 +110,7 @@ If you didn't book online, here's how to buy at the window:
 4. They'll tell you what's available  confirm the train number and seat class
 5. Pay (cash or Chinese bank card — foreign cards often don't work at window machines). If you need to set up Chinese payment apps first, our [Alipay & WeChat Pay guide](/posts/alipay-wechat-pay-foreigners-guide/) has you covered.
 
-> **Editor's Tip:** Use the **automatic ticket machines ()** instead of windows. They're faster, accept passport input, and usually work with foreign cards. Look for the blue machines near the ticket windows.
+> **Editor's Tip:** Use the **automatic ticket machines** instead of windows. They're faster, accept passport input, and usually work with foreign cards. Look for the blue machines near the ticket windows.
 
 ---
 
@@ -127,7 +127,7 @@ If you didn't book online, here's how to buy at the window:
 ### Problem: "My passport won't scan at the gate"
 
 **Solutions:**
-- Try the manual verification lane ()  there's often one for people whose passport chips don't scan
+- Try the manual verification lane  there's often one for people whose passport chips don't scan
 - Make sure your passport is valid (6+ months)
 - Try a different gate  sometimes a machine is just broken
 
@@ -136,13 +136,13 @@ If you didn't book online, here's how to buy at the window:
 **Solutions:**
 - Go to the "/" (reschedule/refund) window
 - Same-day tickets on the same route are usually allowed (you pay the difference if more expensive)
-- If it's sold out, next train might have standing room ()  you can stand for short trips
+- If it's sold out, next train might have standing room  you can stand for short trips
 
 ### Problem: "I can't find my luggage after I put it through the X-ray"
 
 **Solutions:**
 - Luggage gets pulled for inspection sometimes  wait by the machine for 2 minutes
-- If still not there, go to the security office () nearby
+- If still not there, go to the security office nearby
 
 ---
 

@@ -51,7 +51,7 @@ Before diving into regional cuisines, a few things that consistently catch first
 
 ## The Eight Cuisines You Need to Know
 
-### 1. Sichuan Cuisine () — Bold, Spicy, Addictive
+### 1. Sichuan Cuisine — Bold, Spicy, Addictive
 
 **Where to eat it:** Chengdu, Chongqing
 
@@ -59,17 +59,17 @@ Sichuan cuisine is the one that will challenge — and change — you. The signa
 
 **Must-try dishes:**
 
-- **[Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) ()** — The iconic communal dining experience. A simmering pot of spicy broth in the center of the table, where you cook raw ingredients yourself. Budget: 60-120 RMB per person. For your first time, order half-spicy / half-tomato broth split pot. [Read our full Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) for restaurant picks.
+- **[Sichuan Hotpot](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/)** — The iconic communal dining experience. A simmering pot of spicy broth in the center of the table, where you cook raw ingredients yourself. Budget: 60-120 RMB per person. For your first time, order half-spicy / half-tomato broth split pot. [Read our full Sichuan Hotpot Guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) for restaurant picks.
 
-- **Mapo Tofu ()** — Silky soft tofu in a fiery, savory sauce with minced pork. one of the popular versions are found at tiny local restaurants in Chengdu's old quarter — the kind of place with plastic stools and handwritten menus. Budget: 18-30 RMB.
+- **Mapo Tofu** — Silky soft tofu in a fiery, savory sauce with minced pork. one of the popular versions are found at tiny local restaurants in Chengdu's old quarter — the kind of place with plastic stools and handwritten menus. Budget: 18-30 RMB.
 
-- **Dan Dan Noodles ()** — The well-suited street food. Spicy chili oil sauce, Sichuan peppercorns, minced pork, scallions, and crushed peanuts over fresh noodles. Budget: 10-15 RMB from a street stall.
+- **Dan Dan Noodles** — The well-suited street food. Spicy chili oil sauce, Sichuan peppercorns, minced pork, scallions, and crushed peanuts over fresh noodles. Budget: 10-15 RMB from a street stall.
 
-- **Kung Pao Chicken ()** — A milder introduction to Sichuan flavors. Chicken, peanuts, dried chili, and a sweet-savory glaze. Familiar enough for beginners, complex enough for foodies.
+- **Kung Pao Chicken** — A milder introduction to Sichuan flavors. Chicken, peanuts, dried chili, and a sweet-savory glaze. Familiar enough for beginners, complex enough for foodies.
 
 > **Actionable tip:** In Chengdu, skip the tourist restaurants on Jinli Street. Instead, head to the alleys behind the Jinjiang Hotel area or the Yulin neighborhood for where locals actually eat. Look for places with high turnover — packed tables mean fresh food.
 
-### 2. Cantonese Cuisine () — Refined, Fresh, Delicate
+### 2. Cantonese Cuisine — Refined, Fresh, Delicate
 
 **Where to eat it:** Guangzhou, Hong Kong, Shenzhen
 
@@ -77,15 +77,15 @@ If Sichuan is a rock concert, Cantonese is a chamber orchestra — subtle, preci
 
 **Must-try dishes:**
 
-- **Dim Sum ()** — The world's most civilized brunch. Small portions of dumplings, buns, rice rolls, and custards served in bamboo steamers. A proper dim sum meal involves 8-12 different plates shared among friends. Budget: 80-150 RMB per person for a solid spread.
+- **Dim Sum** — The world's most civilized brunch. Small portions of dumplings, buns, rice rolls, and custards served in bamboo steamers. A proper dim sum meal involves 8-12 different plates shared among friends. Budget: 80-150 RMB per person for a solid spread.
 
-- **Char Siu ()** — Cantonese roasted pork with a sweet, glossy glaze. one of the popular has caramelized edges and juicy interior. Budget: 30-50 RMB as part of a rice plate.
+- **Char Siu** — Cantonese roasted pork with a sweet, glossy glaze. one of the popular has caramelized edges and juicy interior. Budget: 30-50 RMB as part of a rice plate.
 
-- **Wonton Noodles ()** — Springy egg noodles in a clear broth with plump shrimp wontons. Simple but incredibly satisfying. Budget: 20-35 RMB.
+- **Wonton Noodles** — Springy egg noodles in a clear broth with plump shrimp wontons. Simple but incredibly satisfying. Budget: 20-35 RMB.
 
-> **Actionable tip:** In Guangzhou, dim sum restaurants are serious business on weekend mornings. Arrive by 9:30 AM or expect a long queue. Try a traditional "tea restaurant" () for a more casual, local experience.
+> **Actionable tip:** In Guangzhou, dim sum restaurants are serious business on weekend mornings. Arrive by 9:30 AM or expect a long queue. Try a traditional "tea restaurant" for a more casual, local experience.
 
-### 3. Beijing Cuisine () — Hearty, Savory, Imperial Roots
+### 3. Beijing Cuisine — Hearty, Savory, Imperial Roots
 
 **Where to eat it:** Beijing
 
@@ -93,13 +93,13 @@ Beijing's cuisine reflects its history as the imperial capital — hearty, warmi
 
 **Must-try dishes:**
 
-- **Peking Duck ()** — The dish everyone has heard of, and it genuinely lives up to the hype. Crispy lacquered skin, tender meat, wrapped in thin pancakes with scallion, cucumber, and sweet bean sauce. Budget: 150-300 RMB per duck (feeds 2-3 people). Historic restaurants like Siji Minyi () offer views of the Forbidden City while you eat.
+- **Peking Duck** — The dish everyone has heard of, and it genuinely lives up to the hype. Crispy lacquered skin, tender meat, wrapped in thin pancakes with scallion, cucumber, and sweet bean sauce. Budget: 150-300 RMB per duck (feeds 2-3 people). Historic restaurants like Siji Minyi offer views of the Forbidden City while you eat.
 
-- **Zhajiangmian ()** — Beijing's soul food. Thick wheat noodles topped with a savory fermented soybean paste and fresh vegetables. Budget: 15-25 RMB. This is what Beijingers eat when they miss home.
+- **Zhajiangmian** — Beijing's soul food. Thick wheat noodles topped with a savory fermented soybean paste and fresh vegetables. Budget: 15-25 RMB. This is what Beijingers eat when they miss home.
 
 > **Actionable tip:** For Peking duck, book a table in advance at established restaurants. Many of one of the popular spots (like Quanjude  or Siji Minyi) have wait times of 1-2 hours during dinner without a reservation.
 
-### 4. Hunan Cuisine () — Fiery, Tangy, Bold
+### 4. Hunan Cuisine — Fiery, Tangy, Bold
 
 **Where to eat it:** Changsha
 
@@ -107,11 +107,11 @@ Hunan food is often confused with Sichuan, but there's a key difference: Hunan c
 
 **Must-try dishes:**
 
-- **Chairman Mao's Red Braised Pork ()** — Fatty pork belly braised in soy sauce, sugar, and spices until caramelized. Rich, sticky, and dangerously addictive. Budget: 40-60 RMB.
+- **Chairman Mao's Red Braised Pork** — Fatty pork belly braised in soy sauce, sugar, and spices until caramelized. Rich, sticky, and dangerously addictive. Budget: 40-60 RMB.
 
-- **Steamed Fish Head with Chopped Chili ()** — A massive fish head steamed with a mountain of bright red chopped chilies. Looks intimidating, tastes incredible. Budget: 50-80 RMB.
+- **Steamed Fish Head with Chopped Chili** — A massive fish head steamed with a mountain of bright red chopped chilies. Looks intimidating, tastes incredible. Budget: 50-80 RMB.
 
-> **Actionable tip:** Changsha's Pozi Street () and Taiping Street () are foodie paradise. Go in the evening when the night markets come alive.
+> **Actionable tip:** Changsha's Pozi Street and Taiping Street are foodie paradise. Go in the evening when the night markets come alive.
 
 ### 5. Jiangsu/Zhejiang Cuisine (/) — Elegant, Sweet, Seafood-Forward
 
@@ -121,15 +121,15 @@ Eastern China's cuisine is the most approachable for European palates — lighte
 
 **Must-try dishes:**
 
-- **Xiaolongbao ()** — Shanghai's famous soup dumplings. Each one is a delicate parcel filled with pork and hot, savory broth. The trick: bite a tiny hole near the top, slurp the soup, then eat the dumpling with vinegar-ginger dipping sauce. Budget: 15-30 RMB for a steamer of 8.
+- **Xiaolongbao** — Shanghai's famous soup dumplings. Each one is a delicate parcel filled with pork and hot, savory broth. The trick: bite a tiny hole near the top, slurp the soup, then eat the dumpling with vinegar-ginger dipping sauce. Budget: 15-30 RMB for a steamer of 8.
 
-- **Squirrel-Shaped Mandarin Fish ()** — A whole fish scored and deep-fried until it "stands up" like a squirrel's tail, then doused in a sweet-and-sour sauce. A Shanghai banquet classic. Budget: 80-120 RMB.
+- **Squirrel-Shaped Mandarin Fish** — A whole fish scored and deep-fried until it "stands up" like a squirrel's tail, then doused in a sweet-and-sour sauce. A Shanghai banquet classic. Budget: 80-120 RMB.
 
-- **Dongpo Pork ()** — Slow-braised pork belly in Shaoxing wine and soy sauce. The fat melts like butter. Originated in Hangzhou over 1,000 years ago. Budget: 40-60 RMB.
+- **Dongpo Pork** — Slow-braised pork belly in Shaoxing wine and soy sauce. The fat melts like butter. Originated in Hangzhou over 1,000 years ago. Budget: 40-60 RMB.
 
 > **Actionable tip:** For xiaolongbao in Shanghai, skip the famous (and crowded) Jia Jia Tang Bao and try the smaller shops in the French Concession area. The quality is often better and the queues shorter. Check out our [Shanghai Beyond the Bund guide](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/) for neighborhood food recommendations.
 
-### 6. Yunnan Cuisine () — Fresh, Herbaceous, Diverse
+### 6. Yunnan Cuisine — Fresh, Herbaceous, Diverse
 
 **Where to eat it:** Kunming, Dali, Lijiang
 
@@ -137,13 +137,13 @@ Yunnan's cuisine is unlike anywhere else in China — influenced by the province
 
 **Must-try dishes:**
 
-- **Crossing-the-Bridge Noodles ()** — Yunnan's signature dish. A bowl of boiling chicken-pork broth arrives at your table, and you add raw ingredients (thinly sliced meat, quail eggs, tofu skin, vegetables, rice noodles) one by one. The broth cooks everything instantly. Budget: 25-50 RMB.
+- **Crossing-the-Bridge Noodles** — Yunnan's signature dish. A bowl of boiling chicken-pork broth arrives at your table, and you add raw ingredients (thinly sliced meat, quail eggs, tofu skin, vegetables, rice noodles) one by one. The broth cooks everything instantly. Budget: 25-50 RMB.
 
-- **Erkuai ()** — Rice cakes grilled with sauce, meat, and vegetables. Simple street food that's crunchy on the outside, chewy inside. Budget: 5-10 RMB.
+- **Erkuai** — Rice cakes grilled with sauce, meat, and vegetables. Simple street food that's crunchy on the outside, chewy inside. Budget: 5-10 RMB.
 
 > **Actionable tip:** In Kunming, visit the Nanqiang Street Night Market for the widest variety of Yunnan street food in one place. For a deeper dive into Yunnan's food and culture, see our [Yunnan Adventure Guide](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/).
 
-### 7. Xinjiang Cuisine () — Middle Eastern Influences, Hearty, Meaty
+### 7. Xinjiang Cuisine — Middle Eastern Influences, Hearty, Meaty
 
 **Where to eat it:** Urumqi, Kashgar (for the adventurous)
 
@@ -151,15 +151,15 @@ Xinjiang's food reflects its Central Asian heritage — lamb-centric, naan bread
 
 **Must-try dishes:**
 
-- **Lamb Kebabs ()** — Charcoal-grilled lamb seasoned with cumin, chili, and salt. one of the popular ones are from street vendors who've been perfecting their technique for decades. Budget: 5-10 RMB per skewer.
+- **Lamb Kebabs** — Charcoal-grilled lamb seasoned with cumin, chili, and salt. one of the popular ones are from street vendors who've been perfecting their technique for decades. Budget: 5-10 RMB per skewer.
 
-- **Da Pan Ji ()** — "Big Plate Chicken" — a massive wok of stewed chicken, potatoes, and flat hand-pulled noodles in a rich, spicy sauce. Feeds 2-3 hungry travelers. Budget: 60-90 RMB.
+- **Da Pan Ji** — "Big Plate Chicken" — a massive wok of stewed chicken, potatoes, and flat hand-pulled noodles in a rich, spicy sauce. Feeds 2-3 hungry travelers. Budget: 60-90 RMB.
 
-- **Polo ()** — Uyghur pilaf made with lamb, carrots, and rice cooked in stock. Budget: 20-35 RMB.
+- **Polo** — Uyghur pilaf made with lamb, carrots, and rice cooked in stock. Budget: 20-35 RMB.
 
-> **Actionable tip:** Xinjiang cuisine is increasingly available in major cities. In Beijing, try the Xinjiang restaurant clusters around Weigongcun () for authentic flavors without the 4-hour flight.
+> **Actionable tip:** Xinjiang cuisine is increasingly available in major cities. In Beijing, try the Xinjiang restaurant clusters around Weigongcun for authentic flavors without the 4-hour flight.
 
-### 8. Fujian Cuisine () — Umami-Rich, Soups, Seafood
+### 8. Fujian Cuisine — Umami-Rich, Soups, Seafood
 
 **Where to eat it:** Xiamen, Fuzhou, Quanzhou
 
@@ -167,9 +167,9 @@ Fujian is famous for its soups, seafood, and the invention of an ingredient that
 
 **Must-try dishes:**
 
-- **Buddha Jumps Over the Wall ()** — Fujian's most legendary dish. A complex soup made with shark fin (now often substituted with sea cucumber or abalone), abalone, scallops, ginseng, and medicinal herbs, slow-braised for hours. Budget: 200-400 RMB per person (it's a special occasion dish).
+- **Buddha Jumps Over the Wall** — Fujian's most legendary dish. A complex soup made with shark fin (now often substituted with sea cucumber or abalone), abalone, scallops, ginseng, and medicinal herbs, slow-braised for hours. Budget: 200-400 RMB per person (it's a special occasion dish).
 
-- **Oyster Omelet ()** — Fresh oysters, eggs, and sweet potato starch fried into a crispy, savory pancake. A popular street food. Budget: 15-25 RMB.
+- **Oyster Omelet** — Fresh oysters, eggs, and sweet potato starch fried into a crispy, savory pancake. A popular street food. Budget: 15-25 RMB.
 
 ## How to Order Like a Pro (Even Without Speaking Chinese)
 
@@ -178,11 +178,11 @@ One of the biggest fears European travelers have is ordering food without knowin
 1. **Point at other tables.** This is the single most effective strategy. See something that looks good? Point at it. The staff will understand.
 
 2. **Learn five survival phrases:**
-   - *Bù là* () — "Not spicy"
-   - *Wēi là* () — "A little spicy"
-   - *Tài là le* () — "Too spicy!" (you'll need this)
-   - *Méi yǒu zhū ròu* () — "No pork" (useful for Muslim/halal travelers)
-   - *Zhè ge hǎo chī* () — "This is delicious" (the universal friend-maker)
+   - *Bù là* — "Not spicy"
+   - *Wēi là* — "A little spicy"
+   - *Tài là le* — "Too spicy!" (you'll need this)
+   - *Méi yǒu zhū ròu* — "No pork" (useful for Muslim/halal travelers)
+   - *Zhè ge hǎo chī* — "This is delicious" (the universal friend-maker)
 
 3. **Use translation apps.** Google Translate's camera feature works well for menus. Baidu Translate is better for regional Chinese dishes.
 
@@ -209,7 +209,7 @@ You've probably heard horror stories. Here's the honest truth after five years o
 
 - **Street food is generally safe.** High turnover means fresh ingredients. If a stall has a long queue of locals, it's safe. If food has been sitting out, skip it.
 - **Drink bottled or boiled water.** Tap water in China is not potable. Every restaurant serves boiled water or tea for free.
-- **Watch out for MSG (MSG/).** Many restaurants use MSG liberally. If you're sensitive, say *bù yào wei jing* (). Some restaurants now advertise "MSG-free."
+- **Watch out for MSG (MSG/).** Many restaurants use MSG liberally. If you're sensitive, say *bù yào wei jing*. Some restaurants now advertise "MSG-free."
 - **Go during peak hours.** Chinese food is best when fresh. Lunch (11:30 AM - 1:00 PM) and dinner (6:00 - 8:00 PM) are when dishes come straight from the wok.
 - **Carry toilet paper.** Public restrooms at street markets and small restaurants often don't supply it.
 

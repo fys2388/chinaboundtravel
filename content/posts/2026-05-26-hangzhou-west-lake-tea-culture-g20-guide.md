@@ -43,7 +43,7 @@ Hangzhou sits at the foot of the Qiantang River and has been a center of Chinese
 
 Today, it's famous for:
 - **West Lake (Xi Hu)**  UNESCO World Heritage, 2,000+ years of poetic inspiration
-- **Longjing Tea ()** —The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
+- **Longjing Tea** —The most famous green tea in China, grown in Hangzhou's own backyard. If tea culture fascinates you, our [complete guide to Chinese tea culture](/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/) goes deep into history, varieties, and ceremony traditions.
 - **G20 Summit 2016**  China spent $40 billion upgrading the city for the summit. The infrastructure is brand new.
 - **Alibaba**  HQ is here, which means the city is unusually tech-forward
 

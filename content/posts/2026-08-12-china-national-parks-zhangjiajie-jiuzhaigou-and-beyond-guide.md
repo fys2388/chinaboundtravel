@@ -63,7 +63,7 @@ One of one of the popular ways to experience Jiuzhaigou National Park is to walk
 
 If you're looking for a more active experience, consider hiking through the park. There are several trails available, ranging from easy boardwalk walks to more challenging routes. If you have an extra day, the **Huanglong Scenic Area** is a worthwhile add-on. Located about 2 hours from Jiuzhaigou, Huanglong is famous for its spectacular travertine pools (colorful calcium-deposit terraces), not hot springs. The golden-yellow terraces filled with turquoise water are a UNESCO World Heritage Site and unlike anything else in China.
 
-If you're interested in learning more about Tibetan and Qiang culture in the Jiuzhaigou region, the **Jiuzhai Tibetan and Qiang Intangible Cultural Heritage Museum** () is worth a visit. It is located in **Zhangzha Town at the Luneng Meilihui commercial area**, about 10-15 minutes from the park entrance — **not inside the scenic area itself**. Admission is around ¥88. The museum covers Tibetan and Qiang weaving, thangka paintings, traditional medicine, and intangible cultural heritage. Allow about 30-60 minutes.
+If you're interested in learning more about Tibetan and Qiang culture in the Jiuzhaigou region, the **Jiuzhai Tibetan and Qiang Intangible Cultural Heritage Museum** is worth a visit. It is located in **Zhangzha Town at the Luneng Meilihui commercial area**, about 10-15 minutes from the park entrance — **not inside the scenic area itself**. Admission is around ¥88. The museum covers Tibetan and Qiang weaving, thangka paintings, traditional medicine, and intangible cultural heritage. Allow about 30-60 minutes.
 
 ### Huangshan National Park
 

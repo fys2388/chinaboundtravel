@@ -54,7 +54,7 @@ Visitors who return in different seasons report a staggering difference. Here's 
 
 | Months | Rating | Why |
 |--------|--------|-----|
-| April–May | ★★★★★ | "Misty rain on the Li River" () — the classic Chinese painting aesthetic. Peaks disappear into clouds. The most photographed season, and rightfully so |
+| April–May | ★★★★★ | "Misty rain on the Li River" — the classic Chinese painting aesthetic. Peaks disappear into clouds. The most photographed season, and rightfully so |
 | September–October | ★★★★ | Clear skies, comfortable temperatures (20-28°C), water levels stable after summer rains. Second-best overall |
 | June–August | ★★★ | Hot (33-36°C), humid, crowded with domestic tourists. Upside: you can swim in the Yulong River and go tubing |
 | November–March | ★★ | Cold (5-12°C), grey, many raft operations suspend service. Hotels are half price though, and you'll have viewpoints to yourself |
@@ -67,22 +67,22 @@ This route covers the essential Guilin and Yangshuo highlights without overpacki
 
 ### Day 1: Arrive in Guilin — City Sights and Noodles
 
-- **Morning/afternoon:** Arrive in Guilin (by high-speed train or flight). Head straight to **Elephant Trunk Hill ()** — it's free to enter (since 2022, the city removed the ¥75 entrance fee), and it takes about 45 minutes to walk around. The hill looks exactly like an elephant drinking from the river. Not life-changing, but it's the symbol of Guilin and worth the quick stop.
-- **Evening:** Walk the **Two Rivers and Four Lakes ()** scenic area after dark. The lighting on the bridges and pagodas is genuinely beautiful. You can buy a boat ticket for ¥190 (~€24) if you want to be on the water, but walking the perimeter for free gives you the same views from different angles.
-- **Dinner:** Find a noodle shop serving **Guilin rice noodles ()**. Proper ones — the kind where you see a line of locals at 6 AM. Not the hotel restaurant version. See the food section below for details.
+- **Morning/afternoon:** Arrive in Guilin (by high-speed train or flight). Head straight to **Elephant Trunk Hill** — it's free to enter (since 2022, the city removed the ¥75 entrance fee), and it takes about 45 minutes to walk around. The hill looks exactly like an elephant drinking from the river. Not life-changing, but it's the symbol of Guilin and worth the quick stop.
+- **Evening:** Walk the **Two Rivers and Four Lakes** scenic area after dark. The lighting on the bridges and pagodas is genuinely beautiful. You can buy a boat ticket for ¥190 (~€24) if you want to be on the water, but walking the perimeter for free gives you the same views from different angles.
+- **Dinner:** Find a noodle shop serving **Guilin rice noodles**. Proper ones — the kind where you see a line of locals at 6 AM. Not the hotel restaurant version. See the food section below for details.
 
 ### Day 2: Li River → Xingping → Yangshuo
 
 - **Early morning (7:00 AM):** Take a bus or taxi from Yangshuo to the Yangdi pier (about 40 minutes, ¥30 by bus). Board the **bamboo raft for the Yangdi → Xingping route**. The early departure means fewer crowds and softer light for photos.
 - **Mid-morning:** Arrive in **Xingping Ancient Town**. This is the village you see in the 20 RMB banknote photo. Walk up to the viewing platform (free, about 15 minutes from the river) for the panoramic shot. The town itself has narrow stone alleys and old Ming-era architecture — spend an hour wandering.
-- **Afternoon:** Rent an e-bike in Xingping (¥50/day, ~€6) or walk to the **Yulong River ()** area. The road alongside the Yulong is flat, lined with bamboo, and passes through small farming villages. It's the most scenic cycling in all of China. No car traffic — only bikes and e-bikes allowed on the main path.
-- **Evening:** **Yangshuo West Street ()** for dinner. Yes, it's touristy. Yes, it's worth it for a first visit. The street food options are excellent and the energy is high. See the food section for what to order.
+- **Afternoon:** Rent an e-bike in Xingping (¥50/day, ~€6) or walk to the **Yulong River** area. The road alongside the Yulong is flat, lined with bamboo, and passes through small farming villages. It's the most scenic cycling in all of China. No car traffic — only bikes and e-bikes allowed on the main path.
+- **Evening:** **Yangshuo West Street** for dinner. Yes, it's touristy. Yes, it's worth it for a first visit. The street food options are excellent and the energy is high. See the food section for what to order.
 - **Practical tip:** Set up [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before you arrive — most small vendors and e-bike rentals only accept mobile payment.
 
 ### Day 3: Silver Cave → Moon Hill → Departure
 
-- **Morning:** Visit **Silver Cave ()** — a massive karst cave with stalactites, stalagmites, and underground pools lit with colored lighting. Entry: ¥65/person (~€8). It's commercialized, but the scale of the formations is genuinely impressive. Allow 1.5 hours. Take a bus from Yangshuo (¥15, 40 minutes).
-- **Mid-day:** **Moon Hill ()** — a limestone peak with a natural arch near the summit that looks like a full moon. The hike up takes about 20-30 minutes on stone steps. Entry is free if you approach from the trail side (some guides will try to sell you a ¥15 "ticket" — the hill itself has no gate). The view from the top encompasses the entire Yangshuo karst plain.
+- **Morning:** Visit **Silver Cave** — a massive karst cave with stalactites, stalagmites, and underground pools lit with colored lighting. Entry: ¥65/person (~€8). It's commercialized, but the scale of the formations is genuinely impressive. Allow 1.5 hours. Take a bus from Yangshuo (¥15, 40 minutes).
+- **Mid-day:** **Moon Hill** — a limestone peak with a natural arch near the summit that looks like a full moon. The hike up takes about 20-30 minutes on stone steps. Entry is free if you approach from the trail side (some guides will try to sell you a ¥15 "ticket" — the hill itself has no gate). The view from the top encompasses the entire Yangshuo karst plain.
 - **Afternoon:** Return to Yangshuo, pick up your luggage, and depart. High-speed train from Yangshuo Railway Station connects to Guangzhou (2.5 hours) and most major southern Chinese cities.
 
 ![Yangshuo Moon Hill karst peak with unique circular hole](/img/china-dest/body/external_171ad89e37f6.jpg)
@@ -91,15 +91,15 @@ This route covers the essential Guilin and Yangshuo highlights without overpacki
 
 Guilin cuisine is distinct from the rest of Guangxi — heavier on rice noodles, lighter on spice compared to neighboring Hunan. Here's what to order:
 
-- **Guilin Rice Noodles ()** — ¥5-10 (~€0.60-1.25). The single must-eat dish. Thin round rice noodles served in a clear broth with braised meat, peanuts, pickled green beans, and chili oil. The proper way: add your own chili and vinegar at the table, mix well, eat fast (noodles get soggy if you wait). This is primarily a breakfast food — go where the locals queue, not where the tour bus parks.
+- **Guilin Rice Noodles** — ¥5-10 (~€0.60-1.25). The single must-eat dish. Thin round rice noodles served in a clear broth with braised meat, peanuts, pickled green beans, and chili oil. The proper way: add your own chili and vinegar at the table, mix well, eat fast (noodles get soggy if you wait). This is primarily a breakfast food — go where the locals queue, not where the tour bus parks.
 
-- **Beer Fish ()** — ¥60-100 (~€7.50-12.50). Yangshuo's signature dish. Fresh river fish (usually Li River carp or tilapia) braised in a wok with beer, tomatoes, garlic, and chili. The sauce is rich and slightly sweet. The best versions are at the smaller restaurants on West Street's side alleys, not the big names with English menus. Serves 2 people.
+- **Beer Fish** — ¥60-100 (~€7.50-12.50). Yangshuo's signature dish. Fresh river fish (usually Li River carp or tilapia) braised in a wok with beer, tomatoes, garlic, and chili. The sauce is rich and slightly sweet. The best versions are at the smaller restaurants on West Street's side alleys, not the big names with English menus. Serves 2 people.
 
-- **Stuffed River Snails ()** — ¥15-25 (~€2-3). A Guangxi specialty: snail meat is removed from the shell, mixed with minced pork and herbs, stuffed back in, and braised. The flavor is earthy and savory. Available at most Yangshuo night market stalls.
+- **Stuffed River Snails** — ¥15-25 (~€2-3). A Guangxi specialty: snail meat is removed from the shell, mixed with minced pork and herbs, stuffed back in, and braised. The flavor is earthy and savory. Available at most Yangshuo night market stalls.
 
-- **Lipu Taro Pork Belly ()** — ¥35-50 (~€4-6). Thick slices of pork belly layered with taro root, braised in soy sauce and star anise until the fat melts. This is a restaurant dish — look for it at Guilin city restaurants, not street stalls. Serves 2-3 as part of a larger meal.
+- **Lipu Taro Pork Belly** — ¥35-50 (~€4-6). Thick slices of pork belly layered with taro root, braised in soy sauce and star anise until the fat melts. This is a restaurant dish — look for it at Guilin city restaurants, not street stalls. Serves 2-3 as part of a larger meal.
 
-- **Oil Tea ()** — ¥10-20 (~€1.25-2.50). A Guilin-specific drink you won't find elsewhere. Tea leaves are pan-fried with ginger, garlic, and roasted peanuts, then pounded and brewed into a thick, savory broth. It tastes like nothing you've had before — slightly bitter, nutty, and warming. Locals drink it daily. Available at traditional tea houses in Guilin's old town, not at tourist cafes.
+- **Oil Tea** — ¥10-20 (~€1.25-2.50). A Guilin-specific drink you won't find elsewhere. Tea leaves are pan-fried with ginger, garlic, and roasted peanuts, then pounded and brewed into a thick, savory broth. It tastes like nothing you've had before — slightly bitter, nutty, and warming. Locals drink it daily. Available at traditional tea houses in Guilin's old town, not at tourist cafes.
 
 > **Breakfast strategy:** Skip your hotel breakfast. Walk to any noodle shop with a line of locals between 6:30-8:00 AM. A bowl of Guilin rice noodles costs ¥6-8 and takes 5 minutes. Follow it with a cup of oil tea at the shop next door. That's a well-spent ¥15 (~€1.90) for the whole day.
 
@@ -158,7 +158,7 @@ You could push this down to €120 by staying in Guilin city hostels (¥80/night
 
 - **Li River rafts have a weight limit.** Most operators cap combined passenger weight at ~100kg per raft. If you're over 80kg, you may need to pay for a single raft (¥160 instead of ¥80-100 shared). This is enforced at the pier — they literally put you on a scale.
 
-- **Rain makes the Li River *better*.** The famous "misty rain Li River" () is a real phenomenon — low clouds wrap around the karst peaks and the whole landscape turns into a traditional Chinese ink painting. Most tourists avoid rainy days. Locals know that's when the scenery peaks. Bring a rain jacket, not an umbrella.
+- **Rain makes the Li River *better*.** The famous "misty rain Li River" is a real phenomenon — low clouds wrap around the karst peaks and the whole landscape turns into a traditional Chinese ink painting. Most tourists avoid rainy days. Locals know that's when the scenery peaks. Bring a rain jacket, not an umbrella.
 
 - **Don't buy "silver" products in scenic areas.** Xingping and Yangshuo are full of shops selling "Miao silver" jewelry at bargain prices. Almost all of it is stainless steel with a thin silver coating. If you want real silver, buy from a certified jewelry store in Guilin city, not from a tourist shop.
 
