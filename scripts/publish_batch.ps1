@@ -16,17 +16,16 @@ function Write-Step($msg) { Write-Host "==> $msg" -ForegroundColor Cyan }
 if ($Batch -eq 1) {
   $items = @(
     @{ Src = "content/_draft/2026-08-23-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide-attempt3.md";
-       Slug = "kung-fu-and-martial-arts-in-china";
+       Slug = "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide";
        Title = "Kung Fu & Martial Arts in China" }
   )
 } elseif ($Batch -eq 2) {
+  # 2026-10-02 修订：礼仪篇 attempt1 因 slug+content_id 与已发布 2026-08-31 篇
+  # 完全重复（全站 29 篇正文已链接该 canonicalURL），剔除。批次 2 只剩独行旅 1 篇。
   $items = @(
     @{ Src = "content/_draft/2026-08-23-china-solo-travel-guide-safety-hostels-and-making-friends-attempt2.md";
        Slug = "china-solo-travel-guide-safety-hostels-and-making-friends";
-       Title = "China Solo Travel Guide" },
-    @{ Src = "content/_draft/2026-08-26-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide-attempt1.md";
-       Slug = "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide";
-       Title = "China Travel Etiquette Guide" }
+       Title = "China Solo Travel Guide" }
   )
 } else {
   Write-Error "未知批次: $Batch（支持 1 或 2）"
@@ -69,7 +68,7 @@ Write-Step "git 提交推送"
 $env:PYTHONIOENCODING = "utf-8"
 git add -A
 if (-not (git diff --staged --quiet)) {
-  $batchLabel = if ($Batch -eq 1) { "kung-fu-martial-arts" } else { "china-solo-travel + china-travel-etiquette" }
+  $batchLabel = if ($Batch -eq 1) { "kung-fu-and-martial-arts" } else { "china-solo-travel" }
   git commit -m "feat(content): publish $batchLabel batch $Batch"
   git pull --rebase origin main
   git push origin main

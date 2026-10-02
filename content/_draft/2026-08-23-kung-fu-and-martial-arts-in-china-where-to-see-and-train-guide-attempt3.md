@@ -16,8 +16,8 @@ categories:
 geo: "EU"
 draft: "true"
 audit_status: "pending"
-summary: "China Kung Fu and Martial Arts in China: Where to See and Train: complete guide 2026. how to navigate like a local. practical guide for foreign travelers"
-description: "China Kung Fu and Martial Arts in China: Where to See and Train: complete guide 2026. how to navigate like a local. practical guide for foreign travelers"
+summary: "Where to see and train Kung Fu in China 2026: Shaolin Temple, Wudang Mountains, and Foshan. Practical guide for foreign travelers."
+description: "Where to see and train Kung Fu in China 2026: Shaolin Temple, Wudang Mountains, and Foshan. Practical guide for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/"
 ShowToc: "true"
 TocOpen: "false"
@@ -28,11 +28,9 @@ weight: "1"
 
 ### Introduction
 
-If you're planning a trip to China and have a passion for Kung Fu and martial arts, you're in for a treat. China is the birthplace of many martial arts styles, and there are numerous places where you can witness these ancient arts in action and even train like a master. In this guide, I'll take you on a journey through a top choice locations in China to experience Kung Fu and martial arts, from bustling cities to serene temples.
+If you're planning a trip to China and have a passion for Kung Fu and martial arts, you're in for a treat. China is the birthplace of many martial arts styles, and there are numerous places where you can witness these ancient arts in action and even train like a master. In this guide, I'll take you on a journey through top choice locations in China to experience Kung Fu and martial arts, from bustling cities to serene temples.
 
-[Image:Ancient temple in a forest with a martial artist practicing Kung Fu in the foreground. The temple has red columns and a tiled roof. The forest is lush and green, with sunlight filtering through the trees. The martial artist is in a dynamic pose, performing a kick.]
-
-### The Cradle of Kung Fu: Henan Province
+## The Cradle of Kung Fu: Henan Province
 
 Henan province is often regarded as the birthplace of Kung Fu, and it's home to some of the most famous martial arts temples in the world. The Shaolin Temple, located in Dengfeng, is perhaps the most iconic of them all. This ancient temple has a long history of martial arts training and is known for its Shaolin Kung Fu, which is a combination of Buddhist philosophy and combat techniques.
 
@@ -79,11 +77,9 @@ In addition to these famous Kung Fu schools, there are many other training cente
 
 China is a country with a rich history and culture of martial arts, and there are many places where you can experience these ancient arts in action and even train like a master. Whether you're a beginner or an advanced practitioner, there's something for everyone in China's martial arts world. So, what are you waiting for? Book your trip to China today and start your martial arts journey!
 
-[Image:A group of martial artists practicing Kung Fu in a courtyard. The courtyard is surrounded by traditional Chinese buildings, and there are bamboo trees and flowers in the background. The martial artists are wearing traditional Kung Fu uniforms and are performing a variety of kicks, punches, and blocks.]
-
-[Image:A martial artist performing a solo routine with a sword. The martial artist is in a large hall, and there are traditional Chinese paintings and calligraphy on the walls. The sword is shiny and reflects the light as the martial artist moves.]
-
-[Image:A group of students practicing Taijiquan in a park. The park is located in a city, and there are people walking and jogging in the background. The students are wearing comfortable clothes and are following the instructions of their instructor.]
+{{< soft-recommend partner="esim" topic="martial-arts" placement="article_end" text="See eSIM options" >}}
+Stay connected while you explore martial arts destinations across China. eSIM keeps you online for navigation, translation, and booking without a physical SIM swap.
+{{< /soft-recommend >}}
 
 If you're interested in learning more about Kung Fu and martial arts in China, be sure to check out these related articles on chinaboundtravel.com:
 - [Xi'an Terracotta Army: History, Discovery, and Insider Tips](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
