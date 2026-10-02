@@ -187,6 +187,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
 
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
 ## FAQ
 
 ### Do I need a visa for China?

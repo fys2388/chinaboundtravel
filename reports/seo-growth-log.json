@@ -3821,6 +3821,198 @@
       "target": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-01T09:54:53.802916"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-02T09:31:12.179599"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-10-02T09:31:13.286193"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-10-02T09:31:14.392486"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> best-china-itineraries-for-10-days-three-routes-compared",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:15.567747"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> best-china-itineraries-for-10-days-three-routes-compared",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:16.672076"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> best-china-itineraries-for-10-days-three-routes-compared",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:17.782767"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:18.904665"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:20.020826"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-nightlife-guide-bars-clubs-and-evening-culture -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:21.140886"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:22.255186"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-wechat-pay-foreigners-guide -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:23.403628"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:24.518893"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:25.637191"
+    },
+    {
+      "type": "internal_link",
+      "target": "foodies-guide-to-china-a-gastronomic-adventure -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:26.737411"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:27.845607"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:28.965652"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:30.094114"
+    },
+    {
+      "type": "internal_link",
+      "target": "a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:31.216337"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-02T09:31:32.341356"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=2",
+      "timestamp": "2026-10-02T09:31:33.471629"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=2",
+      "timestamp": "2026-10-02T09:31:34.585341"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=2",
+      "timestamp": "2026-10-02T09:31:35.730490"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:36.170480"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:36.431573"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:36.759839"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:37.035706"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:37.360679"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:37.693449"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:38.006307"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:38.345479"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:38.680956"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-02T09:31:39.016956"
     }
   ]
 }

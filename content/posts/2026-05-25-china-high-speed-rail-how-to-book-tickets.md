@@ -312,3 +312,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [Top-rated China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared/)

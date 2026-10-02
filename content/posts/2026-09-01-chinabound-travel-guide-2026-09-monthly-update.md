@@ -91,3 +91,5 @@ The current edition (2026.09) is included with every plan on [chinaboundtravel.c
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)

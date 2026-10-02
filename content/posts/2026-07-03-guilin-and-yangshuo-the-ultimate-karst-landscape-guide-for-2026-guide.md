@@ -216,3 +216,5 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)

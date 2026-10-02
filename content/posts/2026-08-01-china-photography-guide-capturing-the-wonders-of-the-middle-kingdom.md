@@ -343,3 +343,5 @@ And if you're interested in learning more about China travel, be sure to check o
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)

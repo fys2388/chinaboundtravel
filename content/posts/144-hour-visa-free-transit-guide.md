@@ -282,6 +282,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Top-rated China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?
