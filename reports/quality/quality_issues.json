@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T19:02:09.429972+00:00",
+  "generated_at": "2026-10-02T22:59:21.492394+00:00",
   "summary": {
     "total": 7,
     "P0": 0,
@@ -19,7 +19,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-02T19:02:06.161398+00:00",
+      "generated_at": "2026-09-21T07:08:04.572598+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -27,7 +27,7 @@
     },
     "site": {
       "available": true,
-      "generated_at": "2026-10-01T22:43:52.298512+00:00",
+      "generated_at": "2026-10-02T22:17:18.664835+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -35,7 +35,7 @@
     },
     "visual": {
       "available": true,
-      "generated_at": "2026-10-01T23:25:56.439553+00:00",
+      "generated_at": "2026-10-02T22:59:21.406472+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 1,
@@ -78,10 +78,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
-      "id": "site_health-6fe3d2d1c2591aa5",
+      "id": "site_health-4dcbda445129fda4",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -91,11 +91,11 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-02T19:02:09.429972+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "first_seen": "2026-10-02T22:59:21.492394+00:00",
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
-      "id": "site_health-3415ecad521323e1",
+      "id": "site_health-863b7d28148db5d",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -105,8 +105,8 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-02T19:02:09.429972+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "first_seen": "2026-10-02T22:59:21.492394+00:00",
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -120,7 +120,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,10 +134,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
-      "id": "site_health-24a7bd4f3e4c0ff",
+      "id": "site_health-5350fea45ec512da",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -147,11 +147,11 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-02T19:02:09.429972+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "first_seen": "2026-10-02T22:59:21.492394+00:00",
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     },
     {
-      "id": "site_health-58fd5805a43eba99",
+      "id": "site_health-2adc07f93c07d240",
       "severity": "P2",
       "source": "site_health",
       "type": "title_too_long",
@@ -161,8 +161,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-02T19:02:09.429972+00:00",
-      "last_seen": "2026-10-02T19:02:09.429972+00:00"
+      "first_seen": "2026-10-02T22:59:21.492394+00:00",
+      "last_seen": "2026-10-02T22:59:21.492394+00:00"
     }
   ]
 }

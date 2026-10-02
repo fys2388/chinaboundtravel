@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:25:56.439553+00:00",
+  "generated_at": "2026-10-02T22:59:21.406472+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "summary": {
     "pages": 10,
@@ -46,9 +46,9 @@
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
-    "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/#desktop": {
+    "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/#desktop": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/#mobile": {
       "status": 0,
@@ -86,9 +86,9 @@
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
-    "https://www.chinaboundtravel.com/posts/best-travel-insurance-china/#mobile": {
+    "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/#mobile": {
       "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-travel-insurance-china/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     }
   },
   "issues": [
@@ -111,7 +111,7 @@
         "/posts/accommodation-tips-guide/",
         "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
         "/posts/alipay-wechat-pay-foreigners-guide/",
-        "/posts/best-travel-insurance-china/",
+        "/posts/best-china-itineraries-for-10-days-three-routes-compared/",
         "/",
         "/pricing/",
         "/posts/alipay-for-foreigners-guide/",
@@ -121,7 +121,7 @@
         "/posts/accommodation-tips-guide/",
         "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
         "/posts/alipay-wechat-pay-foreigners-guide/",
-        "/posts/best-travel-insurance-china/"
+        "/posts/best-china-itineraries-for-10-days-three-routes-compared/"
       ]
     }
   ]
