@@ -14,8 +14,8 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "true"
-audit_status: "pending"
+draft: false
+audit_status: "pass2"
 summary: "Top-rated China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers based on official sources and verified traveler guidance."
 description: "Top-rated China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. research-based essential guide for travelers based on official s..."
 canonicalURL: "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/"
