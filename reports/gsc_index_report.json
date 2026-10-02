@@ -1,57 +1,12 @@
 {
-  "timestamp": "2026-10-02 11:32:40",
+  "timestamp": "2026-10-02 11:59:26",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "submitted_count": 10,
-  "total_urls": 10,
+  "submitted_count": 1,
+  "total_urls": 1,
   "results": [
     {
-      "url": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-      "status": "success",
-      "message": "indexing request submitted"
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/",
+      "url": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
       "status": "success",
       "message": "indexing request submitted"
     }
