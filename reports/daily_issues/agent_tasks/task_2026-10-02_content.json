@@ -3,12 +3,12 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-02_content",
   "created_at": "2026-10-02T01:00:50.168596+00:00",
-  "updated_at": "2026-10-02T17:19:08.065020",
+  "updated_at": "2026-10-02T17:30:34.799201",
   "target_date": "2026-10-02",
-  "issue_count": 3,
+  "issue_count": 4,
   "severity_summary": {
     "critical": 0,
-    "high": 2,
+    "high": 3,
     "medium": 1,
     "low": 0
   },
@@ -34,7 +34,7 @@
       "detected_at": "2026-10-02T01:00:50.168114+00:00"
     },
     {
-      "id": "site_health-3e78b7482c1b70b4",
+      "id": "site_health-358e00e7fd60256",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -51,7 +51,27 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-02T17:19:07.893904+00:00"
+      "detected_at": "2026-10-02T17:30:34.435829+00:00"
+    },
+    {
+      "id": "site_health-2c493e657e306540",
+      "type": "content_placeholder",
+      "title": "content_placeholder",
+      "description": "content_placeholder",
+      "page": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
+      "file": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
+      "evidence": "发现模板占位符: [Image:",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-02T17:30:34.435821+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -102,6 +122,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
