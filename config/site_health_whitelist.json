@@ -40,12 +40,14 @@
       "match": {
         "type": "multiple_analytics_destinations"
       },
-      "status": "external_blocked",
-      "reason": "GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
-      "notes": "config/analytics_canonical.json 已声明 canonical_measurement_id=G-GECBME3YVJ + canonical_property_id=538482322，hugo.toml / .env / GitHub Secrets / GA4_PROPERTY_ID 三方一致性由第 3 层校验检查。代码侧已到位，仅剩 GTM 层面的外部账号操作。",
+      "status": "resolved",
+      "reason": "GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。已于 2026-10-02 通过 Google 代码管理器（tagmanager.google.com → Google 代码标签页）完成清理：将 G-P6BH500VBK 分配到新建独立代码 chinaboundtravel-duplicate，主代码 chinaboundtravel 仅保留 G-GECBME3YVJ 一个目标账号。详见 docs/ga4-property-cleanup-guide.md 动作 3。",
+      "notes": "config/analytics_canonical.json 已声明 canonical_measurement_id=G-GECBME3YVJ + canonical_property_id=538482322，hugo.toml / .env / GitHub Secrets / GA4_PROPERTY_ID 三方一致性由第 3 层校验检查。2026-10-02 GTM 层面外部操作已完成。此豁免可删除，让 site_health_agent 重新报告 actual posture（analytics_posture.json 应翻转为 duplicate_destinations=false）。",
       "added_at": "2026-09-23",
       "added_by": "coordinator_2026-09-23",
-      "related_config": "config/analytics_canonical.json"
+      "related_config": "config/analytics_canonical.json",
+      "resolved_at": "2026-10-02",
+      "resolved_by": "agent_captain"
     },
     {
       "id": "WL-004",

@@ -131,4 +131,7 @@ class TestCapabilityBoundary:
         assert "confirmed_by" in cfg
         assert "人工" in cfg["confirmed_by"]
         assert "rationale" in cfg and cfg["rationale"]
-        assert "pending_actions" in cfg and cfg["pending_actions"]
+        assert "pending_actions" in cfg
+        # 2026-10-02: 全部动作完成后 pending_actions 清空，历史迁移到 completed_actions
+        if cfg.get("completed_actions"):
+            assert cfg["pending_actions"] == []
