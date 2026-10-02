@@ -1,231 +1,59 @@
 {
-  "timestamp": "2026-09-29 08:16:20",
+  "timestamp": "2026-10-01 20:16:03",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 10,
-  "submitted_count": 20,
-  "total_sitemap_urls": 50,
-  "submitted_urls": 20,
+  "submitted_count": 10,
+  "total_urls": 10,
   "results": [
     {
-      "url": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+      "url": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/subscribe/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/subscribe/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/",
+      "url": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
+      "url": "https://www.chinaboundtravel.com/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     },
     {
-      "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
+      "url": "https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/",
       "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
+      "message": "indexing request submitted"
     }
   ]
 }

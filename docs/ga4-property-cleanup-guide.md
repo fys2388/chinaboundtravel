@@ -107,46 +107,33 @@ gh secret list --repo fys2388/chinaboundtravel | Select-String 'GA4_PROPERTY_ID'
 
 ### 动作 3：在 Google Tag Manager 里删掉 `G-P6BH500VBK` destination
 
-- **状态**：⏳ **待执行 / 有卡点** —— 这是**唯一真正卡住**的动作
-- **根因**：`fys2388@gmail.com` 账号下 GTM 账号列表为空，容器在别的 Google 账号下
+- **状态**：✅ 已完成（2026-10-02，通过 Google 代码管理器 UI 操作）
+- **操作方式**：将 `G-P6BH500VBK` 分配到新建的独立代码 `chinaboundtravel-duplicate`，主代码 `chinaboundtravel` 只保留 `G-GECBME3YVJ`
+- **结果**：主代码不再向 `G-P6BH500VBK` 发送数据，双目的地污染已消除
 
-**关键卡点（必须先解决）**：
+**历史卡点记录**（2026-09-20 曾卡住）：
 
 1. 用 `fys2388@gmail.com` 登录 <https://tagmanager.google.com/>
 2. 顶部账号选择器 → 展开 → 显示「**账号列表为空**」（2026-09-20 人工核对）
 3. 也就是说，`G-P6BH500VBK` 这个 destination 所属的 GTM 容器**不在这个 Google 账号下**，无法直接改
 
-**排查路径（按优先级）**：
+**具体操作路径（2026-10-02 实际执行）**：
 
-- **路径 A：找容器所有者**
-  1. 回忆站点最初是谁搭建的、用的哪个 Google 账号（可能是组织账号、旧个人账号、外包服务商账号）
-  2. 该账号持有人需要：登录 GTM → 找到容器 ID（形如 `GTM-XXXXXXX`，通常在站点 HTML 的 `<head>` 里，或在 GSC → 网站设置 → 验证方式里）→ 编辑那个 Google Analytics 配置标签 → 删掉第二个配置（衡量 ID `G-P6BH500VBK`，tag_id 7）→ 发布
-- **路径 B：GTM 容器所有权转移**
-  1. 联系当前容器持有人，请其在 GTM → Admin → **用户权限** → 添加 `fys2388@gmail.com` 为 **管理员**
-  2. 或用 Google Workspace 管理员在 Google 账户中心做所有权转移
-- **路径 C：Google Support 介入**
-  1. 打开 <https://support.google.com/tagmanager/>
-  2. **帮助 → 联系支持** → 选择「Google Tag Manager 容器访问」议题
-  3. 附上容器 ID、当前持有的账号（能证明合法拥有的账号）、以及 `fys2388@gmail.com` 需要被加入的理由
-  4. 通常需要 Google Workspace 商业账号才能发起此工单；个人账号可能无法触发支持
-- **路径 D：临时兜底 —— 放弃 GTM，直连 gtag**
-  1. 编辑 `hugo.toml`：`params.trackingID = "G-GECBME3YVJ"`，删掉所有其他 tag 配置
-  2. 但**这不能真正解决问题**：gtag.js 载荷里的两个 destination 是 Google 服务端配置，即使 HTML 只加载 1 个 ID，载荷也还是会把事件发到两个 tid
-  3. 所以路径 D **只能**作为「放弃 GTM 集中管理」的降级方案，仍需配合路径 A/B/C 清理 Google 侧的多 destination 配置
+1. 打开 <https://tagmanager.google.com/> → 切换到 **Google 代码** 标签
+2. 找到代码 `chinaboundtravel`（代码 ID：G-GECBME3YVJ, GT-NGSXZL7C, G-P6BH500VBK, GT-PL9QDZJS）
+3. 点击代码进入「管理 Google 代码」编辑界面
+4. 在「代码 ID」区域，点击 `G-P6BH500VBK` 旁的「**将"G-P6BH500VBK"分配给新的 Google 代码**」
+5. 填写新代码名称 `chinaboundtravel-duplicate`，选择「使用默认配置」和「请勿复制用户」
+6. 点击「查看所做选择」→「保存更改」
+7. 回到编辑界面，在「目标账号」表格中找到 `G-P6BH500VBK` 行，点击「**移除目标账号**」
+8. 选择「选择现有代码」→ 选中 `chinaboundtravel-duplicate`
+9. 点击「保存」
+10. 验证：主代码的「目标账号」表格只剩 `G-GECBME3YVJ` 一行
 
-**具体点击路径（假设已获得 GTM 容器访问权）**：
+**历史排查路径（2026-09-20 记录，现已无效）**：
 
-1. 打开 <https://tagmanager.google.com/>
-2. 左上角账号选择器 → 切换到正确账号
-3. 左侧容器列表 → 找到目标容器（容器 ID 形如 `GTM-XXXXXXX`）→ 点击容器名
-4. 左侧菜单 → **标签**
-5. 找到那个 **Google Analytics 配置** 类型的标签（标签名通常形如「Google Analytics 配置」或「GA4」）→ 点击编辑
-6. 顶部标签 → **设置** 或 **配置**（新版 GTM UI）
-7. 找到「**多个配置**」或「**Measurement ID**」栏，展开会看到两个（或更多）行
-   - 保留：`G-GECBME3YVJ`
-   - **删除**：`G-P6BH500VBK`（这行右侧有一个垃圾桶图标）
-8. 保存标签
-9. 左侧菜单 → **版本** → 右上角 **发布** → 输入版本名（如 `Remove duplicate GA destination 2026-XX-XX`）→ **发布**
+- **路径 A：找容器所有者** —— 2026-10-02 确认容器实际在 `fys2388@gmail.com` 账号下（Google 代码标签页可见），原「账号列表为空」可能是当时看的是 GTM 账号而非 Google 代码
+- **路径 B/C/D**：不再需要
 
 **发布后验证**：
 
