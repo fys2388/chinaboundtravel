@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02 11:00:47",
+  "generated_at": "2026-10-02 11:30:39",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 113,
+    "response_ms": 287,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,8 +113,8 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-10-02T02:30:52Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-10-02T03:13:16Z",
+      "last_event": "push"
     },
     {
       "file": "email-growth-loop.yml",
@@ -149,7 +149,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-10-02T02:43:56Z",
+      "last_run": "2026-10-02T03:14:20Z",
       "last_event": "workflow_run"
     },
     {
@@ -221,7 +221,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-10-02T03:00:29Z",
+      "last_run": "2026-10-02T03:30:21Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -302,7 +302,7 @@
       "id": "site-health-daily",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-10-01T17:54:01Z",
+      "last_run": "2026-10-02T03:11:18Z",
       "last_event": "schedule"
     },
     {
@@ -406,7 +406,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-10-02 03:00",
+    "checked_at": "2026-10-02 03:30",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -1783,31 +1783,30 @@
     }
   ],
   "site_health": {
-    "total": 2,
-    "critical": 1,
+    "total": 1,
+    "critical": 0,
     "high": 1,
     "medium": 0,
     "low": 0,
     "auto_fixed": 0,
-    "pending": 2,
+    "pending": 1,
     "resolved": 10,
-    "timestamp": "2026-10-01T17:54:24.629599+00:00",
+    "timestamp": "2026-10-02T03:21:37.935680+00:00",
     "checks": 16
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-10-02T03:00:46.305113+00:00",
-    "total": 5,
-    "P0": 1,
+    "generated_at": "2026-10-02T03:30:38.757797+00:00",
+    "total": 4,
+    "P0": 0,
     "P1": 3,
     "P2": 1,
     "by_source": {
-      "site_health": 2,
       "content": 2,
+      "site_health": 1,
       "visual": 1
     },
     "by_owner": {
-      "site_health": 1,
       "content": 3,
       "engineering": 1
     },
@@ -1853,28 +1852,14 @@
       },
       "site_health": {
         "available": true,
-        "generated_at": "2026-10-01T17:54:24.629599+00:00",
-        "issues": 2,
-        "P0": 1,
+        "generated_at": "2026-10-02T03:21:37.935680+00:00",
+        "issues": 1,
+        "P0": 0,
         "P1": 1,
         "P2": 0
       }
     },
     "issues": [
-      {
-        "id": "site_health-dd5cb5e6b7d5589",
-        "severity": "P0",
-        "source": "site_health",
-        "type": "multiple_analytics_destinations",
-        "title": "multiple_analytics_destinations",
-        "page": "https://www.chinaboundtravel.com",
-        "evidence": "{\"html_ids_by_page\": {\"/\": [\"G-GECBME3YVJ\"], \"/pricing/\": [\"G-GECBME3YVJ\"], \"/contact/\": [\"G-GECBME3YVJ\"], \"/posts/ultimate-guide-to-china-visa-for-tourists/\": [\"G-GECBME3YVJ\"]}, \"gtag_payload\": {\"G-GECBME3YVJ\": {\"destinations\": [\"G-GECBME3YVJ\", \"G-P6BH500VBK\"], \"payload_bytes\": 536504}}}",
-        "recommended_action": "[WL-003] GA4 里 G-GECBME3YVJ（属性 538482322）为 canonical（决策已固化到 config/analytics_canonical.json），duplicate G-P6BH500VBK（属性 541752321）需删除。但 duplicate destination 不在 fys2388@gmail.com 账号下，需要另找持有账号才能执行 GTM 修改。代码无法修，需人工外部动作。",
-        "owner": "site_health",
-        "status": "external_blocked",
-        "first_seen": "2026-10-02T03:00:46.305113+00:00",
-        "last_seen": "2026-10-02T03:00:46.305113+00:00"
-      },
       {
         "id": "content-media-2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
         "severity": "P1",
@@ -1887,21 +1872,21 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-10-02T03:00:46.305113+00:00"
+        "last_seen": "2026-10-02T03:30:38.757797+00:00"
       },
       {
-        "id": "site_health-1ce7d8a30fa1c5c2",
+        "id": "site_health-74f72ee0c25e9917",
         "severity": "P1",
         "source": "site_health",
         "type": "draft_leak",
         "title": "draft_leak",
-        "page": "content/7-day-china-itinerary.md",
+        "page": "content\\7-day-china-itinerary.md",
         "evidence": "draft:true的文章可能已发布到线上",
         "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
         "owner": "content",
         "status": "accepted_risk",
-        "first_seen": "2026-10-02T03:00:46.305113+00:00",
-        "last_seen": "2026-10-02T03:00:46.305113+00:00"
+        "first_seen": "2026-10-02T03:30:38.757797+00:00",
+        "last_seen": "2026-10-02T03:30:38.757797+00:00"
       },
       {
         "id": "eda93581fbec80e3",
@@ -1915,7 +1900,7 @@
         "owner": "engineering",
         "status": "open",
         "first_seen": "2026-10-01T23:25:56.543892+00:00",
-        "last_seen": "2026-10-02T03:00:46.305113+00:00"
+        "last_seen": "2026-10-02T03:30:38.757797+00:00"
       },
       {
         "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -1929,7 +1914,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-10-02T03:00:46.305113+00:00"
+        "last_seen": "2026-10-02T03:30:38.757797+00:00"
       }
     ]
   },
@@ -1948,7 +1933,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-10-02T03:00:46.920716"
+        "last_run": "2026-10-02T03:30:38.838780+00:00"
       },
       "content": {
         "total": 1,
@@ -1956,7 +1941,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-10-02T03:00:46.971041"
+        "last_run": "2026-10-02T03:30:39.436931"
       },
       "frontend": {
         "total": 1,
@@ -1973,7 +1958,7 @@
     "reason": "OK"
   },
   "data_freshness": {
-    "generated_at": "2026-10-02 11:00:47",
+    "generated_at": "2026-10-02 11:30:39",
     "thresholds": {
       "ga4_daily": 2,
       "gsc_daily": 5,
@@ -2048,15 +2033,15 @@
       },
       "site_health": {
         "name": "site_health",
-        "updated_at": "2026-10-01T17:54:24.629599+00:00",
-        "age_days": 1,
+        "updated_at": "2026-10-02T03:21:37.935680+00:00",
+        "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
-        "label": "1 天前"
+        "label": "实时"
       },
       "quality": {
         "name": "quality",
-        "updated_at": "2026-10-02T03:00:46.305113+00:00",
+        "updated_at": "2026-10-02T03:30:38.757797+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2072,7 +2057,7 @@
       }
     },
     "publish_path_gap": {
-      "dashboard_generated_at": "2026-10-02 11:00:47",
+      "dashboard_generated_at": "2026-10-02 11:30:39",
       "agent_kpi_updated_at": "2026-10-01T08:17:19.333831",
       "agent_kpi_age_days": 1,
       "agent_kpi_threshold_days": 35,
