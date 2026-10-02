@@ -113,11 +113,11 @@ China high-speed rail tickets usually go on sale **15 days before departure** on
 
 | Class | What You Get | Good For |
 |-------|-------------|---------|
-| **Business ()** | Fully reclining seats, meals, privacy | Long distances, premium travelers |
-| **First Class ()** | Wider seats, more legroom | Comfortable medium trips |
-| **Second Class ()** | Standard airline seats | Most routes, fine for 3-4 hours |
-| **Soft Sleeper ()** | 4-berth cabin, fold-flat beds | Overnight trains |
-| **Hard Sleeper ()** | 6-berth open cabin, thin mattress | Budget overnight |
+| **Business (商务座)** | Fully reclining seats, meals, privacy | Long distances, premium travelers |
+| **First Class (一等座)** | Wider seats, more legroom | Comfortable medium trips |
+| **Second Class (二等座)** | Standard airline seats | Most routes, fine for 3-4 hours |
+| **Soft Sleeper (软卧)** | 4-berth cabin, fold-flat beds | Overnight trains |
+| **Hard Sleeper (硬卧)** | 6-berth open cabin, thin mattress | Budget overnight |
 
 > **Tip:** For trips over 3 hours, First Class is worth the extra cost — the difference in comfort is significant. Second Class on a long ride is fine, but less comfortable.
 
@@ -132,7 +132,7 @@ This is where most foreigners panic. Chinese train stations are enormous. Here's
 At the station entrance, you'll go through:
 1. **ID Check**  Show your passport. Sometimes they scan it, sometimes they just look.
 2. **Security Screening**  Bag through X-ray machine, walk through metal detector. Same as airport security but faster.
-3. **Ticket Verification**  Scan your ticket (or QR code from app) at the gate. It tells you which **platform ()** and **carriage number ()**.
+3. **Ticket Verification**  Scan your ticket (or QR code from app) at the gate. It tells you which **platform (检票口)** and **carriage number (车厢号)**.
 
 ### Step 2: Find Your Platform
 
@@ -142,7 +142,7 @@ The platform number will be huge and displayed in Chinese + English. **Go to you
 
 ### Step 3: Board Your Car
 
-Your ticket shows **Car Number ()**. Board at the marked position on the platform  the doors open exactly there.
+Your ticket shows **Car Number (车厢号)**. Board at the marked position on the platform  the doors open exactly there.
 
 ---
 

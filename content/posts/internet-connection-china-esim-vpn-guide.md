@@ -89,7 +89,7 @@ An eSIM (embedded SIM) is a digital SIM card that allows you to activate a mobil
 - **Best Coverage**: Full access to China's 4G/5G networks
 - **Cost-Effective**: Cheaper than international roaming
 - **Reliable**: Established network infrastructure
-- **Mobile Payment Ready**: Required for [Alipay/WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) verification
+- **Mobile Payment Ready**: Required for [Alipay/WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) verification — see [how to use WeChat Pay as a foreigner](/posts/how-to-use-wechat-pay-as-a-foreigner/) for the full setup
 
 ### Cons of Local SIM
 
@@ -209,7 +209,7 @@ Staying connected in China is more straightforward than ever in 2026. For most t
 
 **Pro Tip**: often set up and test your VPN before arriving in China, and keep it running in the background for seamless access to your favorite apps.
 
-Having reliable connectivity also gives you access to essential travel tools like the [high-speed rail booking system](/posts/china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](/posts/chinese-food-delivery-meituan-eleme-guide/). With a little preparation—which this guide is designed to provide—you'll be connected and ready to explore from the moment you land.
+Having reliable connectivity also gives you access to essential travel tools like the [high-speed rail booking system](/posts/china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](/posts/chinese-food-delivery-meituan-eleme-guide/). If you're on the 144-hour visa-free transit, our [144-hour transit guide](/posts/144-hour-visa-free-transit-guide/) explains how to stay within the permitted zone while exploring nearby cities. With a little preparation—which this guide is designed to provide—you'll be connected and ready to explore from the moment you land.
 
 ### Further Reading
 

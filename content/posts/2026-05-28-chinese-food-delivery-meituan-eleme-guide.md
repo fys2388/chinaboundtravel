@@ -49,8 +49,8 @@ This guide works whether you're in Beijing, Shanghai, Chengdu, Hangzhou, or any 
 
 | App | Pros | Cons |
 |-----|------|------|
-| **Meituan ()** | More English-friendly, slightly better UX | Sometimes more expensive |
-| **Ele.me ()** | Usually cheaper delivery fees | Less English, better promotions |
+| **Meituan (美团)** | More English-friendly, slightly better UX | Sometimes more expensive |
+| **Ele.me (饿了么)** | Usually cheaper delivery fees | Less English, better promotions |
 | **Both** | Same restaurants, similar prices | Just use both and compare |
 
 A common routine: Open both apps, search the same restaurant, pick the cheaper one. Takes 30 extra seconds, saves $2.
@@ -117,7 +117,7 @@ Common menu sections:
 
 1. Tap items to add to cart
 2. Adjust quantity if needed
-3. Check out ()
+3. Check out (下单/结账)
 4. Verify delivery address
 5. Add delivery instructions (optional): e.g., "please leave at door" in Chinese: "" (fng mn ku)
 6. Select payment: Alipay or WeChat Pay
@@ -143,10 +143,10 @@ Start with these  easy to order, hard to get wrong:
 
 | Dish | Why Avoid |
 |------|-----------|
-| Organ meats () | Some foreigners are not prepared |
-| Whole fish () | Bone issues |
-| Anything marked "" (stinky fermented) | Acquired taste |
-| Spicy intestines () | See above |
+| Organ meats (内脏) | Some foreigners are not prepared |
+| Whole fish (整鱼) | Bone issues |
+| Anything marked "臭" (stinky fermented) | Acquired taste |
+| Spicy intestines (麻辣肠) | See above |
 
 ---
 
@@ -154,16 +154,16 @@ Start with these  easy to order, hard to get wrong:
 
 After you order, here's the timeline:
 
-### 1. Order Confirmed ()
+### 1. Order Confirmed (已接单)
 You get a push notification. The restaurant starts cooking.
 
-### 2. Pickup ()
+### 2. Pickup (已取餐)
 A delivery driver accepts the job. You see their name, photo, and phone number.
 
-### 3. Picking Up ()
+### 3. Picking Up (配送中)
 The driver has your food. This is usually 15-25 minutes after ordering, depending on distance.
 
-### 4. On the Way ()
+### 4. On the Way (骑手途中)
 Driver is heading to you. You can track them on the map in real-time.
 
 ### 5. The Call (Important!)
@@ -194,7 +194,7 @@ Collect your food. Check the bag  if something's wrong, you can request a refund
 ### "My food is wrong/missing/terrible"
 
 **Fix:** Meituan and Ele.me both have robust refund processes:
-1. Go to "My Orders" ()
+1. Go to "My Orders" (我的订单)
 2. Find the order
 3. Tap "" (apply for after-sales service)
 4. Select the issue (missing item, wrong item, quality problem)

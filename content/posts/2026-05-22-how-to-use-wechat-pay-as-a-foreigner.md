@@ -73,7 +73,7 @@ Set a payment password that's different from your login password and don't share
 
 WeChat Pay works in some places outside China — such as Japan, Thailand, and Singapore — but generally only when you're paying a Chinese merchant or a store that accepts it. It's a China-first tool, so don't expect it to replace Apple Pay or Google Pay in the U.S. or Europe.
 
-The same account pays for meals, [high-speed rail tickets](/posts/china-high-speed-rail-how-to-book-tickets/), and shopping. It also lets you send money to other WeChat users, which is useful for splitting bills with friends. Many travelers run [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) alongside WeChat Pay, since some merchants accept only one of the two.
+The same account pays for meals, [high-speed rail tickets](/posts/china-high-speed-rail-how-to-book-tickets/), and shopping. It also lets you send money to other WeChat users, which is useful for splitting bills with friends. Many travelers run [Alipay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) alongside WeChat Pay, since some merchants accept only one of the two. If you're on the 144-hour visa-free transit, set WeChat Pay up before you land so your first meal doesn't become a payment scramble — our [144-hour transit guide](/posts/144-hour-visa-free-transit-guide/) walks through the entry process.
 
 
 ## The Bottom Line
