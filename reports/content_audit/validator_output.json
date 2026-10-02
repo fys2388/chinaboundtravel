@@ -87,7 +87,18 @@
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
-      "language_issues": [],
+      "language_issues": [
+        "商",
+        "务",
+        "座",
+        "一",
+        "等",
+        "座",
+        "二",
+        "等",
+        "座",
+        "软"
+      ],
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
@@ -98,12 +109,12 @@
       "scores": {
         "brand": 100,
         "fact": 100,
-        "language": 100,
+        "language": 0,
         "mojibake": 100,
         "seo": 100,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 95.0,
       "passed": true
     },
     {
@@ -243,7 +254,18 @@
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
-      "language_issues": [],
+      "language_issues": [
+        "美",
+        "团",
+        "饿",
+        "了",
+        "么",
+        "下",
+        "单",
+        "结",
+        "账",
+        "内"
+      ],
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
@@ -254,12 +276,12 @@
       "scores": {
         "brand": 100,
         "fact": 100,
-        "language": 100,
+        "language": 0,
         "mojibake": 100,
         "seo": 100,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 95.0,
       "passed": true
     },
     {
