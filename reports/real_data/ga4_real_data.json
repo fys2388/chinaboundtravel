@@ -1,32 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-01T11:59:17.507058",
-  "data_date": "2026-09-30",
+  "pull_time": "2026-10-03T10:46:11.828826",
+  "data_date": "2026-10-02",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 224,
-    "sessions": 320,
-    "screenPageViews": 478,
-    "engagedSessions": 149,
-    "bounceRate": 0.534375,
-    "averageSessionDuration": 156.160780921875,
-    "engagementRate": 0.465625,
-    "newUsers": 223
+    "activeUsers": 230,
+    "sessions": 313,
+    "screenPageViews": 412,
+    "engagedSessions": 172,
+    "bounceRate": 0.4504792332268371,
+    "averageSessionDuration": 129.35179372204473,
+    "engagementRate": 0.549520766773163,
+    "newUsers": 227
   },
   "daily": [
-    {
-      "date": "2026-09-04",
-      "sessions": 25,
-      "activeUsers": 18,
-      "pageviews": 54
-    },
-    {
-      "date": "2026-09-05",
-      "sessions": 14,
-      "activeUsers": 9,
-      "pageviews": 18
-    },
     {
       "date": "2026-09-06",
       "sessions": 24,
@@ -173,29 +161,41 @@
     },
     {
       "date": "2026-09-30",
-      "sessions": 12,
-      "activeUsers": 12,
+      "sessions": 13,
+      "activeUsers": 13,
       "pageviews": 13
     },
     {
       "date": "2026-10-01",
-      "sessions": 20,
-      "activeUsers": 15,
-      "pageviews": 14
+      "sessions": 23,
+      "activeUsers": 20,
+      "pageviews": 20
+    },
+    {
+      "date": "2026-10-02",
+      "sessions": 13,
+      "activeUsers": 12,
+      "pageviews": 13
+    },
+    {
+      "date": "2026-10-03",
+      "sessions": 2,
+      "activeUsers": 2,
+      "pageviews": 3
     }
   ],
   "top_pages": [
     {
-      "path": "/ops-dashboard/",
-      "title": "ChinaBound Travel · 运营监控中心",
-      "pageviews": 112,
-      "sessions": 51
-    },
-    {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 69,
-      "sessions": 61
+      "pageviews": 62,
+      "sessions": 55
+    },
+    {
+      "path": "/ops-dashboard/",
+      "title": "ChinaBound Travel · 运营监控中心",
+      "pageviews": 50,
+      "sessions": 32
     },
     {
       "path": "/ops/ops-center",
@@ -216,6 +216,12 @@
       "sessions": 12
     },
     {
+      "path": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 11,
+      "sessions": 11
+    },
+    {
       "path": "/china-bargaining-and-shopping-guide/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 11,
@@ -228,16 +234,22 @@
       "sessions": 11
     },
     {
+      "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 10,
+      "sessions": 10
+    },
+    {
       "path": "/alipay-for-foreigners-guide/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 8,
       "sessions": 8
     },
     {
-      "path": "/144-hour-visa-free-transit-guide/",
+      "path": "/alipay-wechat-pay-foreigners-guide/",
       "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 7,
-      "sessions": 6
+      "pageviews": 8,
+      "sessions": 11
     },
     {
       "path": "/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
@@ -246,65 +258,47 @@
       "sessions": 7
     },
     {
-      "path": "/posts/",
-      "title": "Posts | ChinaBound Travel",
-      "pageviews": 7,
-      "sessions": 5
-    },
-    {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
       "pageviews": 7,
       "sessions": 6
     },
     {
-      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
-      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 7,
-      "sessions": 7
-    },
-    {
-      "path": "/posts/144-hour-visa-free-transit-guide/",
-      "title": "China 144 Hour Transit Visa 2026: Complete Guide",
-      "pageviews": 6,
-      "sessions": 5
-    },
-    {
-      "path": "/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "title": "WeChat Pay Setup Guide for Foreigners (2026)",
+      "path": "/144-hour-visa-free-transit-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 6
+    },
+    {
+      "path": "/posts/",
+      "title": "Posts | ChinaBound Travel",
+      "pageviews": 6,
+      "sessions": 5
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 166,
-      "activeUsers": 129,
-      "engagementRate": 0.747
+      "sessions": 187,
+      "activeUsers": 153,
+      "engagementRate": 0.8235
     },
     {
       "channel": "Direct",
-      "sessions": 117,
-      "activeUsers": 65,
-      "engagementRate": 0.2051
+      "sessions": 95,
+      "activeUsers": 57,
+      "engagementRate": 0.1789
     },
     {
       "channel": "Organic Search",
-      "sessions": 21,
-      "activeUsers": 18,
-      "engagementRate": 0.0476
+      "sessions": 20,
+      "activeUsers": 17,
+      "engagementRate": 0.05
     },
     {
       "channel": "Unassigned",
-      "sessions": 11,
-      "activeUsers": 4,
-      "engagementRate": 0.0
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": 10,
-      "activeUsers": 10,
+      "sessions": 9,
+      "activeUsers": 3,
       "engagementRate": 0.0
     },
     {
@@ -321,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-09-30"
+    "data_date": "2026-10-02"
   }
 }
