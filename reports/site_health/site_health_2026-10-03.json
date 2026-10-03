@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-03T02:57:33.036264+00:00",
+  "timestamp": "2026-10-03T15:36:24.419583+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 3,
+    "total_issues": 2,
     "critical": 0,
     "high": 1,
     "medium": 0,
-    "low": 2,
+    "low": 1,
     "auto_fixed": 1,
-    "need_manual": 12,
+    "need_manual": 13,
     "resolved": 11,
-    "inherited_resolved": 11,
+    "inherited_resolved": 12,
     "in_progress": 0,
-    "last_updated": "2026-10-03T02:57:36.244464"
+    "last_updated": "2026-10-03T15:36:27.236941"
   },
   "issues": [
     {
@@ -169,12 +169,12 @@
       "fix_action": "shorten_title",
       "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
       "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 62->53字符",
       "status": "resolved",
-      "assigned": true,
       "resolved_by": "seo_agent",
-      "resolution_note": "title已合规(53字符)"
+      "resolution_note": "title已合规(53字符)",
+      "resolved_at": "2026-10-03T02:57:33.036264+00:00",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 62->53字符"
     },
     {
       "type": "meta_description_too_long",
