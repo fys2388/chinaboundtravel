@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T13:31:16.791228+00:00",
+  "generated_at": "2026-10-03T14:01:16.642460+00:00",
   "summary": {
     "total": 6,
     "P0": 0,
@@ -19,7 +19,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-03T13:31:14.941509+00:00",
+      "generated_at": "2026-10-03T14:01:14.084197+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -78,10 +78,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     },
     {
-      "id": "site_health-177afe064c2fdb10",
+      "id": "site_health-164e5f13ffb7552a",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -91,11 +91,11 @@
       "recommended_action": "占位内容需人工补充",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-10-03T13:31:16.791228+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "first_seen": "2026-10-03T14:01:16.642460+00:00",
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     },
     {
-      "id": "site_health-69a186646199a00e",
+      "id": "site_health-74b29bf7e683f113",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -105,8 +105,8 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-03T13:31:16.791228+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "first_seen": "2026-10-03T14:01:16.642460+00:00",
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -120,7 +120,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,10 +134,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     },
     {
-      "id": "site_health-3c79c27a94ffccf9",
+      "id": "site_health-2a3448a7c4141c80",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -147,8 +147,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-03T13:31:16.791228+00:00",
-      "last_seen": "2026-10-03T13:31:16.791228+00:00"
+      "first_seen": "2026-10-03T14:01:16.642460+00:00",
+      "last_seen": "2026-10-03T14:01:16.642460+00:00"
     }
   ]
 }
