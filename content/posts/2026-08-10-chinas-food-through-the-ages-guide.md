@@ -101,3 +101,5 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [Foodie's Guide to China: Dishes You Must Try](https://www.chinaboundtravel.com/posts/food-recommendations-guide/)
 - [China Cultural Etiquette: Dos and Don'ts](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)

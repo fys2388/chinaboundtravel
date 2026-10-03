@@ -190,6 +190,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?
