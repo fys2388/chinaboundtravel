@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-03T06:17:43",
+  "updated_at": "2026-10-03T17:09:06",
   "items": [
     {
       "id": "soc-000001",
@@ -202,8 +202,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-03",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1672,8 +1672,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-03",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2694,8 +2694,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-03",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4511,7 +4511,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\n💡 Essential Internet tips most first-time visitors miss.\n\n• How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN\n• Why This Guide Matters\n• Understanding China's Internet Landscape\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional tip social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/internet-connection-china-esim-vpn-guide-fb-tip-47775c90.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4526,7 +4526,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "84b2164c2869"
+      "_sig": "84b2164c2869",
+      "image_generated": true
     },
     {
       "id": "soc-000173",
@@ -5987,8 +5988,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-03",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6598,8 +6599,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-03",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
