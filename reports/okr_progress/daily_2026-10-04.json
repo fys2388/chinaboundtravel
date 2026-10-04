@@ -1,0 +1,44 @@
+{
+  "report_type": "daily",
+  "period": "2026-10-04",
+  "generated_at": "2026-10-04 00:30:42",
+  "plan": [
+    {
+      "task": "修复 1 篇占位符残留文章",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "审核并发布 1 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 日访问用户：当前 2人 / 目标 13人（15%），需重点推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 日搜索曝光（7天窗口日均）：当前 22次 / 目标 33次（67%），保持推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 平均时长（7日滚动） 20 秒：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟠 自然搜索仅 0/2 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 2.0,
+    "content": 0.0,
+    "gsc": 154.0,
+    "revenue": 0.0,
+    "email": 2.0
+  }
+}
