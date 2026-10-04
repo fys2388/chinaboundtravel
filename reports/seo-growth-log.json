@@ -4157,6 +4157,138 @@
       "target": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-03T08:59:11.522116"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-04T09:30:08.304166"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-10-04T09:30:09.412250"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-10-04T09:30:10.532448"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-tea-culture-where-to-experience-authentic-teahouses -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:11.717469"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-nightlife-guide-bars-clubs-and-evening-culture -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:12.836400"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-for-foreigners-guide -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:14.004197"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:15.449891"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:16.678549"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-language-survival-phrases-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:17.796712"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=2",
+      "timestamp": "2026-10-04T09:30:18.905103"
+    },
+    {
+      "type": "internal_link",
+      "target": "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:20.068711"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-04T09:30:21.175674"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:21.749799"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:22.189253"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:22.624524"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:23.026846"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:23.509179"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:23.948291"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:24.362745"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:24.806268"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:25.257151"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-04T09:30:25.705566"
     }
   ]
 }

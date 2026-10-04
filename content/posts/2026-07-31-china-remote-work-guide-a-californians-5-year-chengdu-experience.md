@@ -156,3 +156,5 @@ So what are you waiting for? Start planning your China remote work adventure tod
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)

@@ -162,3 +162,5 @@ Here are some related articles on chinaboundtravel.com that you might enjoy:
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)

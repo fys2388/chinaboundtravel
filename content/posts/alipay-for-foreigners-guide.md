@@ -237,3 +237,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
