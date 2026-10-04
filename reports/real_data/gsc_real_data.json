@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-03T10:46:14.379822",
-  "data_date": "2026-09-30",
+  "pull_time": "2026-10-04T06:08:42.960049",
+  "data_date": "2026-10-01",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 244,
+    "impressions": 229,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 68.0,
+    "average_position": 67.3,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-03",
-      "impressions": 31,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 43.7
-    },
     {
       "date": "2026-09-04",
       "impressions": 37,
@@ -262,10 +255,10 @@
     },
     {
       "query": "144-hour visa-free transit",
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 67.3
+      "position": 67.5
     },
     {
       "query": "alipay ile ödeme nasıl yapılır",
@@ -287,13 +280,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 70
-    },
-    {
-      "query": "best food in china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 51
     },
     {
       "query": "business meeting in china",
@@ -343,12 +329,19 @@
       "clicks": 0,
       "ctr": 0,
       "position": 63
+    },
+    {
+      "query": "china business tour",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 42
     }
   ],
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 13,
+      "impressions": 12,
       "clicks": 1,
       "ctr": 0.08,
       "position": 8.4
@@ -362,17 +355,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 138,
+      "impressions": 130,
       "clicks": 1,
       "ctr": 0.01,
-      "position": 62.5
+      "position": 61.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 48,
+      "impressions": 47,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 7.5
+      "position": 7.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
@@ -383,10 +376,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 20,
+      "impressions": 17,
       "clicks": 0,
       "ctr": 0,
-      "position": 52.0
+      "position": 47.2
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -439,10 +432,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 92,
+      "impressions": 91,
       "clicks": 0,
       "ctr": 0,
-      "position": 39.5
+      "position": 39.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -457,13 +450,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 26.1
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 51
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
@@ -485,6 +471,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 25.5
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "impressions": 30,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 33.2
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -494,6 +487,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-09-30"
+    "data_date": "2026-10-01"
   }
 }
