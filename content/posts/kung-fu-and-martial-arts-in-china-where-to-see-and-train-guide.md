@@ -14,8 +14,8 @@ tags:
 categories:
   - China
 geo: "EU"
-draft: "true"
-audit_status: "pending"
+draft: false
+audit_status: "pass2"
 summary: "Where to see and train Kung Fu in China 2026: Shaolin Temple, Wudang Mountains, and Foshan. Practical guide for foreign travelers."
 description: "Where to see and train Kung Fu in China 2026: Shaolin Temple, Wudang Mountains, and Foshan. Practical guide for foreign travelers."
 canonicalURL: "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/"

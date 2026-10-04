@@ -14,8 +14,8 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "true"
-audit_status: "pending"
+draft: false
+audit_status: "pass2"
 summary: "China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler."
 description: "China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/"
