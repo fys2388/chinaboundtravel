@@ -1,12 +1,17 @@
 {
-  "timestamp": "2026-10-02 11:59:26",
+  "timestamp": "2026-10-04 22:38:28",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "submitted_count": 1,
-  "total_urls": 1,
+  "submitted_count": 2,
+  "total_urls": 2,
   "results": [
     {
-      "url": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "url": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/",
+      "status": "success",
+      "message": "indexing request submitted"
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
       "status": "success",
       "message": "indexing request submitted"
     }
