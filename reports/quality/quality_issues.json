@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-04T07:31:14.818902+00:00",
+  "generated_at": "2026-10-04T07:40:41.202787+00:00",
   "summary": {
-    "total": 6,
+    "total": 8,
     "P0": 0,
-    "P1": 4,
-    "P2": 2,
+    "P1": 5,
+    "P2": 3,
     "by_source": {
-      "content": 2,
+      "content": 4,
       "site_health": 3,
       "visual": 1
     },
     "by_owner": {
-      "content": 4,
+      "content": 6,
       "engineering": 1,
       "seo": 1
     }
@@ -19,7 +19,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-04T07:31:12.222400+00:00",
+      "generated_at": "2026-09-21T07:08:04.572598+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -43,11 +43,11 @@
     },
     "content": {
       "available": true,
-      "generated_at": "2026-10-02T03:55:07.747722",
-      "issues": 2,
+      "generated_at": "2026-10-04T07:40:39.918528",
+      "issues": 4,
       "P0": 0,
-      "P1": 1,
-      "P2": 1
+      "P1": 2,
+      "P2": 2
     },
     "seo": {
       "available": true,
@@ -78,10 +78,24 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     },
     {
-      "id": "site_health-29a1ca3adeaba61",
+      "id": "content-media-best-china-itineraries-for-10-days-three-routes-compared.md",
+      "severity": "P1",
+      "source": "content",
+      "type": "media_compliance",
+      "title": "文章媒体资源不符合发布规则",
+      "page": "best-china-itineraries-for-10-days-three-routes-compared.md",
+      "evidence": "missing_cover",
+      "recommended_action": "替换违规图片、补齐封面或改用本站允许的媒体地址。",
+      "owner": "content",
+      "status": "open",
+      "first_seen": "2026-10-04T07:40:41.202787+00:00",
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
+    },
+    {
+      "id": "site_health-18e3da3db70eca68",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -91,11 +105,11 @@
       "recommended_action": "占位内容需人工补充",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-10-04T07:31:14.818902+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "first_seen": "2026-10-04T07:40:41.202787+00:00",
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     },
     {
-      "id": "site_health-7ee5795c3368849",
+      "id": "site_health-4e66d4d2728a48b",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -105,8 +119,8 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-04T07:31:14.818902+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "first_seen": "2026-10-04T07:40:41.202787+00:00",
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -120,7 +134,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,10 +148,24 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     },
     {
-      "id": "site_health-32e6c16bad62bd79",
+      "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
+      "severity": "P2",
+      "source": "content",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "page": "best-china-itineraries-for-10-days-three-routes-compared.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "owner": "content",
+      "status": "open",
+      "first_seen": "2026-10-04T07:40:41.202787+00:00",
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
+    },
+    {
+      "id": "site_health-5ed03727a030458",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -147,8 +175,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-04T07:31:14.818902+00:00",
-      "last_seen": "2026-10-04T07:31:14.818902+00:00"
+      "first_seen": "2026-10-04T07:40:41.202787+00:00",
+      "last_seen": "2026-10-04T07:40:41.202787+00:00"
     }
   ]
 }

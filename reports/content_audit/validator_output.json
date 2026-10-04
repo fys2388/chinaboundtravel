@@ -1520,6 +1520,39 @@
       "passed": true
     },
     {
+      "file": "best-china-itineraries-for-10-days-three-routes-compared.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [
+        "清",
+        "香"
+      ],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
+      "media_issues": [
+        "missing_cover"
+      ],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 60,
+        "mojibake": 100,
+        "seo": 80,
+        "media": 75
+      },
+      "trust_score": 90.0,
+      "passed": true
+    },
+    {
       "file": "best-travel-insurance-china.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1676,6 +1709,6 @@
       "passed": true
     }
   ],
-  "passed_count": 63,
-  "total": 63
+  "passed_count": 64,
+  "total": 64
 }
