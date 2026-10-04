@@ -1,0 +1,51 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-10-04T03:27:11.252876",
+  "target_date": "2026-10-04",
+  "total_issues": 3,
+  "total_assignments": 0,
+  "issues": [
+    {
+      "id": "issue_9d9bc4398ee4",
+      "type": "social_zero_engagement",
+      "description": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
+      "severity": "medium",
+      "agent": "social",
+      "action": "analyze_and_optimize",
+      "source_file": "social_daily_2026-10-02.json",
+      "detected_at": "2026-10-04T03:27:11.249256",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_ab2d077506a6",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: [Image:",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-10-04.json",
+      "detected_at": "2026-10-04T03:27:11.252767",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_341f5a8b3431",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(174字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-10-04.json",
+      "detected_at": "2026-10-04T03:27:11.252777",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "auto_fixable": false
+    }
+  ],
+  "assignments": []
+}
