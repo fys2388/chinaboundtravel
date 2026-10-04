@@ -1569,6 +1569,17 @@
       "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261004_025537",
+      "timestamp": "2026-10-04T02:55:37.016782",
+      "workflow_name": "Environment Check",
+      "run_id": "37172501979",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
