@@ -1631,6 +1631,34 @@
       "passed": true
     },
     {
+      "file": "china-solo-travel-guide-safety-hostels-and-making-friends.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [
+        "missing_cover"
+      ],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 100,
+        "media": 75
+      },
+      "trust_score": 95.0,
+      "passed": true
+    },
+    {
       "file": "china-transportation-card-guide.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1683,6 +1711,36 @@
       "passed": true
     },
     {
+      "file": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
+      "media_issues": [
+        "missing_cover"
+      ],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 80,
+        "media": 75
+      },
+      "trust_score": 92.0,
+      "passed": true
+    },
+    {
       "file": "western-sichuan-overland-camping-route.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1709,6 +1767,6 @@
       "passed": true
     }
   ],
-  "passed_count": 64,
-  "total": 64
+  "passed_count": 66,
+  "total": 66
 }
