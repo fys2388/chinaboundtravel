@@ -1,33 +1,21 @@
 {
-  "timestamp": "2026-10-04T03:27:09.113702+00:00",
+  "timestamp": "2026-10-04T16:20:10.223958+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
     "total_issues": 2,
     "critical": 0,
-    "high": 1,
+    "high": 0,
     "medium": 0,
-    "low": 1,
-    "auto_fixed": 1,
-    "need_manual": 13,
+    "low": 2,
+    "auto_fixed": 2,
+    "need_manual": 14,
     "resolved": 11,
     "inherited_resolved": 12,
     "in_progress": 0,
-    "last_updated": "2026-10-04T03:27:11.577885"
+    "last_updated": "2026-10-04T16:20:13.133695"
   },
   "issues": [
-    {
-      "type": "content_placeholder",
-      "severity": "high",
-      "file": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
-      "message": "发现模板占位符: [Image:",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "need_manual",
-      "assigned": true,
-      "resolved_by": "content_agent",
-      "resolution_note": "占位内容需人工补充"
-    },
     {
       "type": "draft_leak",
       "severity": "high",
@@ -159,6 +147,18 @@
       "resolved_by": "seo_agent",
       "resolution_note": "meta description已生成(155字符)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
+      "message": "Title过长(63字符，模板上限60): Kung Fu And Martial Arts In China: Where...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 63->57字符"
     },
     {
       "type": "title_too_long",

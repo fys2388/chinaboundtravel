@@ -1,16 +1,10 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-10-04T03:27:11.253623",
+  "generated_at": "2026-10-04T16:20:12.940925",
   "target_date": "2026-10-04",
-  "issue_count": 3,
+  "issue_count": 2,
   "by_agent": {
-    "content": {
-      "count": 1,
-      "types": [
-        "content_placeholder"
-      ]
-    },
     "seo": {
       "count": 1,
       "types": [
@@ -20,36 +14,22 @@
     "social": {
       "count": 1,
       "types": [
-        "social_zero_engagement"
+        "social_no_traffic"
       ]
     }
   },
   "issues": [
     {
-      "id": "issue_9d9bc4398ee4",
-      "type": "social_zero_engagement",
-      "description": "分析数据可用，社媒已发布9条但曝光为0，需检查发布与指标归属",
-      "severity": "medium",
-      "agent": "social",
-      "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-10-02.json",
-      "detected_at": "2026-10-04T03:27:11.249256",
-      "status": "new",
-      "assigned": false,
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_ab2d077506a6",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
+      "id": "issue_b088e5b362db",
+      "type": "social_no_traffic",
+      "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
       "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-04.json",
-      "detected_at": "2026-10-04T03:27:11.252767",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-03.json",
+      "detected_at": "2026-10-04T16:20:12.938409",
       "status": "new",
       "assigned": false,
-      "file": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
       "auto_fixable": false
     },
     {
@@ -60,7 +40,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-10-04.json",
-      "detected_at": "2026-10-04T03:27:11.252777",
+      "detected_at": "2026-10-04T16:20:12.940403",
       "status": "new",
       "assigned": false,
       "file": "content/posts/144-hour-visa-free-transit-guide.md",

@@ -1,20 +1,7 @@
 {
-  "timestamp": "2026-10-04T03:27:09.113702+00:00",
+  "timestamp": "2026-10-04T16:20:10.223958+00:00",
   "source": "site_health_agent",
   "issues": [
-    {
-      "type": "content_placeholder",
-      "severity": "high",
-      "file": "content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
-      "message": "发现模板占位符: [Image:",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "need_manual",
-      "assigned": false,
-      "resolved_by": "content_agent",
-      "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-10-04T14:37:35.946349"
-    },
     {
       "type": "meta_description_too_long",
       "severity": "low",
