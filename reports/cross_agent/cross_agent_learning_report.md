@@ -1,6 +1,6 @@
 # ChinaBound Travel 跨Agent协同学习报告
 
-**生成时间**: 2026-10-03 10:46:16
+**生成时间**: 2026-10-04 11:29:25
 **编排器版本**: 1.0
 **运行Agent数**: 6
 
@@ -10,12 +10,12 @@
 
 | Agent | 状态 | 策略版本 | 策略变更 | 学习洞察 |
 |-------|------|----------|----------|----------|
-| Social Learning | ✅ success | 2.0-20261003_104615 | 0 | 1 |
-| Content Learning | ✅ success | 2.0-20261003_104616 | 0 | 1 |
-| Conversion Learning | ✅ success | 2.0-20261003_104616 | 0 | 2 |
-| SEO Learning | ✅ success | 2.0-20261003_104616 | 2 | 2 |
-| User Learning | ✅ success | 2.0-20261003_104616 | 1 | 2 |
-| Revenue Learning | ✅ success | 2.0-20261003_104616 | 0 | 2 |
+| Social Learning | ✅ success | 2.0-20261004_112925 | 0 | 1 |
+| Content Learning | ✅ success | 2.0-20261004_112925 | 0 | 1 |
+| Conversion Learning | ✅ success | 2.0-20261004_112925 | 0 | 2 |
+| SEO Learning | ✅ success | 2.0-20261004_112925 | 2 | 2 |
+| User Learning | ✅ success | 2.0-20261004_112925 | 1 | 2 |
+| Revenue Learning | ✅ success | 2.0-20261004_112925 | 0 | 2 |
 
 ---
 
@@ -111,4 +111,4 @@ User Learning识别的高价值用户分层和行为模式，可以指导所有A
 ---
 
 *报告由跨Agent协同学习编排器自动生成*
-*生成时间: 2026-10-03 10:46:16*
+*生成时间: 2026-10-04 11:29:25*
