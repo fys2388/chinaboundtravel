@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-04T06:42:49",
+  "updated_at": "2026-10-04T17:25:10",
   "items": [
     {
       "id": "soc-000001",
@@ -146,8 +146,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-04",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3168,8 +3168,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-04",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4337,8 +4337,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-04",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4565,7 +4565,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nInternet in China: eSIM vs SIM vs VPN (2026) | Visual guide to Internet: what to see and capture.\n\nTop-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall | Keywords: internet\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'Internet in China: eSIM vs SIM vs VPN (2026)' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Top-rated ways to stay connected in China in 2026: eSIM vs local SIM vs VPN, tested and compared, plus getting around the firewall.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/internet-connection-china-esim-vpn-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/internet-connection-china-esim-vpn-guide-pinterest-visual-f92a112d.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -4580,7 +4580,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "2d3a1a750f76"
+      "_sig": "2d3a1a750f76",
+      "image_generated": true
     },
     {
       "id": "soc-000175",
@@ -5131,8 +5132,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-04",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5893,8 +5894,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-04",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
