@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-04_content",
   "created_at": "2026-10-04T01:00:30.652646+00:00",
-  "updated_at": "2026-10-04T15:30:31.702260",
+  "updated_at": "2026-10-04T16:00:33.953792",
   "target_date": "2026-10-04",
   "issue_count": 9,
   "severity_summary": {
@@ -74,7 +74,7 @@
       "detected_at": "2026-10-04T14:37:35.679943+00:00"
     },
     {
-      "id": "site_health-40c24ea24fdc9a8b",
+      "id": "site_health-24197dbdd1f17099",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -91,10 +91,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-04T15:30:31.490087+00:00"
+      "detected_at": "2026-10-04T16:00:33.718302+00:00"
     },
     {
-      "id": "site_health-77d36915ac467d23",
+      "id": "site_health-629b3f580da735c3",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -111,7 +111,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-04T15:30:31.490082+00:00"
+      "detected_at": "2026-10-04T16:00:33.718299+00:00"
     },
     {
       "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
