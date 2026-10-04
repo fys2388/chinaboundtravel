@@ -26,9 +26,7 @@ weight: "1"
 
 ## Top-rated China Itineraries for 10 Days: Three Routes Compared
 ## Introduction
-China, a land that seems to be plucked straight out of a historical epic and yet is firmly planted in the modern era, is a traveler's paradise. It's a place where ancient pagodas stand tall beside towering skyscrapers, and where traditions that are thousands of years old coexist harmoniously with the latest technological advancements. If you're planning a 10-day trip from Australia or New Zealand, you're about to embark on an adventure of a lifetime. In this guide, I'll be your trusty sherpa, leading you through three amazing routes, each with its own distinct charm and attractions. We'll cover everything from visa requirements to a top choice places to eat, so you can make the most of your time in this incredible country.
-
-[Image:Rows of Terracotta Army warriors in Xi'an, with a museum in the background]
+China, a land that seems to be plucked straight out of a historical epic and yet is firmly planted in the modern era, is a traveler's paradise. It's a place where ancient pagodas stand tall beside towering skyscrapers, and where traditions that are thousands of years old coexist harmoniously with the latest technological advancements. If you're planning a 10-day trip from Australia or New Zealand, you're about to embark on an adventure of a lifetime. In this guide, I'll be your trusty sherpa, leading you through three amazing routes, each with its own distinct charm and attractions. We'll cover everything from visa requirements to top choice places to eat, so you can make the most of your time in this incredible country.
 
 ## Route 1: Beijing, Xi'an, and Shanghai
 
@@ -40,8 +38,6 @@ Start your journey at the Temple of Heaven, a UNESCO World Heritage Site that da
 Next, head to the Forbidden City, a vast complex of palaces and courtyards that was once the imperial palace of the Ming and Qing dynasties. This place is huge, and it's easy to get lost in its maze of buildings. Plan to spend at least 4 hours here to fully explore its wonders. As you wander through the halls, you can almost hear the echoes of the past, the footsteps of emperors and their retinues. The Forbidden City is not just a historical site; it's a window into China's imperial history.
 
 And of course, no trip to Beijing would be complete without a visit to the Great Wall. There are several sections to choose from, each with its own unique features. The Badaling section is the most popular and the most visited, but if you're looking for a more off-the-beaten-path experience, you might consider the Simatai section. The Great Wall is not just a wall; it's a symbol of China's perseverance and strength. As you stand on top of the wall, looking out at the vast landscape, you can't help but feel a sense of awe and wonder.
-
-[Image:Ancient architecture of the Forbidden City in Beijing, with red walls and golden roofs, under a clear blue sky]
 
 ### Xi'an: The Cradle of Chinese Civilization
 Xi'an, a city with a history that spans over 3,000 years, is famous for its Terracotta Army. This collection of life-sized clay sculptures was buried with Emperor Qin Shi Huang in the 3rd century BC. It's a sight that's truly hard to believe. The sheer number of sculptures, each with its own unique face and expression, is mind-boggling. Make sure to book your tickets in advance to avoid the long queues. You can also consider taking a guided tour to get a more in-depth understanding of the history and significance of the Terracotta Army.
@@ -88,10 +84,14 @@ Zhangjiajie is a city that's known for its Avatar Mountains. These mountains are
 While in Zhangjiajie, also visit the Tianmen Mountain. This mountain is a natural wonder, with its large cave and its steep cliffs. It's a place that's full of adventure. And don't forget to try some of the local specialties like Zhangjiajie bacon. This is a type of bacon that's made with a special recipe and is known for its delicious flavor.
 
 ## Visa Requirements
-Before you start planning your trip to China, it's important to make sure that you have the right visa. Citizens of Australia and New Zealand need to apply for a tourist visa to enter China. You can apply for a visa at the Chinese embassy or consulate in your home country. Make sure to apply for your visa well in advance of your trip to avoid any delays.
+Before you start planning your trip to China, it's important to make sure that you have the right visa. Citizens of Australia and New Zealand need to apply for a tourist visa to enter China. You can apply for a visa at the Chinese embassy or consulate in your home country. Make sure to apply for your visa well in advance of your trip to avoid any delays. Schengen and some other visa holders may qualify for [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) instead — check eligibility before applying. Set up [Alipay or WeChat Pay](/posts/alipay-wechat-pay-foreigners-guide/) before you land; cash is rarely accepted.
 
 ## Top-rated Places to Eat
-China is known for its delicious food, and each region has its own unique specialties. In Beijing, make sure to try some of the local specialties like Peking duck, dumplings, and noodles. In Xi'an, try roujiamo and yangrou paomo. In Shanghai, try xiaolongbao (steamed dumplings) and Shanghai noodles. In Chengdu, try hot pot and mapo tofu. In Guilin, try Guilin rice noodles. In Hangzhou, try Longjing tea and Hangzhou duck. And in Zhangjiajie, try Zhangjiajie bacon.
+China is known for its delicious food, and each region has its own unique specialties. In Beijing, make sure to try some of the local specialties like Peking duck, dumplings, and noodles. In Xi'an, try roujiamo and yangrou paomo. In Shanghai, try xiaolongbao (steamed dumplings) and Shanghai noodles. In Chengdu, try hot pot and mapo tofu. In Guilin, try Guilin rice noodles. In Hangzhou, try Longjing tea and Hangzhou duck. And in Zhangjiajie, try Zhangjiajie bacon. See our [food recommendations guide](/posts/food-recommendations-guide/) and [Sichuan hotpot guide](/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/) for deeper picks.
+
+{{< soft-recommend partner="esim" topic="itinerary" placement="article_end" text="See eSIM options" >}}
+A 10-day route means moving between several cities — an eSIM keeps you connected for navigation, translation, and bookings without swapping physical SIM cards at every stop.
+{{< /soft-recommend >}}
 
 ## Conclusion
 China is a vast and diverse country with something to offer everyone. Whether you're interested in history, culture, nature, or food, there's a route that's excellent for you. So, start planning your trip today and get ready to experience the wonders of China.
