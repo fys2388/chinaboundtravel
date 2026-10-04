@@ -634,8 +634,33 @@ def _site_img_url(rel_path: str) -> str:
     return f"https://www.{SITE_DOMAIN}/{rel}"
 
 
+def _gen_via_agnes(prompt: str, out_path: Path) -> bool:
+    """首选：Agnes AI 文生图（需 AGNES_API_KEY 配置，免费）。"""
+    key = os.environ.get("AGNES_API_KEY", "")
+    if not key:
+        return False
+    try:
+        resp = requests.post(
+            "https://apihub.agnes-ai.com/v1/images/generations",
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
+            timeout=90,
+        )
+        resp.raise_for_status()
+        url = (resp.json().get("data") or [{}])[0].get("url", "")
+        if not url:
+            return False
+        img = requests.get(url, timeout=90)
+        img.raise_for_status()
+        out_path.write_bytes(img.content)
+        return out_path.stat().st_size > 1000
+    except Exception as e:
+        logger.warning("Agnes 文生图失败（降级 Ark Seedream）: %s", str(e)[:120])
+        return False
+
+
 def _gen_via_ark(prompt: str, out_path: Path) -> bool:
-    """首选：豆包 Ark Seedream 文生图（需 ARK_IMAGE_MODEL 配置且账号已开通该模型）。"""
+    """次选：豆包 Ark Seedrec 文生图（需 ARK_IMAGE_MODEL 配置且账号已开通该模型）。"""
     key = os.environ.get("DOUBAO_ARK_API_KEY", "")
     model = os.environ.get("ARK_IMAGE_MODEL", "")
     if not key or not model:
@@ -706,7 +731,8 @@ def _gen_via_pollinations(prompt: str, out_path: Path, platform: str) -> bool:
 def generate_image(item: dict, path: Path) -> str:
     """真实文生图：为单条帖子生成独立配图并本地托管到 static/img/china-dest/social/。
 
-    后端链：Ark Seedream（首选，需 ARK_IMAGE_MODEL）→ pollinations flux（兜底）→ 空串。
+    后端链：Agnes AI（首选，需 AGNES_API_KEY）→ Ark Seedream（次选，需 ARK_IMAGE_MODEL）
+    → pollinations flux（兜底）→ 空串。
     返回站点绝对 URL；未生成返回 ""（调用方回退文章封面）。需 IMAGE_GEN_ENABLED=1。
     文件名含 slug/platform/type/prompt 摘要 → 同文同平台同类型也互不重复。
     """
@@ -725,7 +751,8 @@ def generate_image(item: dict, path: Path) -> str:
     out_path = out_dir / f"{slug}-{item.get('platform')}-{item.get('type')}-{digest}.jpg"
     if out_path.exists() and out_path.stat().st_size > 1000:
         return _site_img_url(str(out_path))
-    if not (_gen_via_ark(prompt, out_path)
+    if not (_gen_via_agnes(prompt, out_path)
+            or _gen_via_ark(prompt, out_path)
             or _gen_via_pollinations(prompt, out_path, item.get("platform", "ig"))):
         try:
             out_path.unlink()

@@ -143,7 +143,8 @@ def classify_category(title: str) -> str:
 def generate_cover_image(title: str, slug: str, category: str) -> str:
     """
     生成真实风景照片封面图（不再使用纯文字海报）。
-    优先使用 Pollinations.ai 生成 AI 风景照片，兜底使用 Unsplash 高质量图片。
+    优先使用 Agnes AI 生成 AI 风景照片（需 AGNES_API_KEY），兜底使用 Pollinations.ai，
+    再兜底使用 Unsplash 高质量图片。
     下载后保存到 static/img/china-dest/<category>/ 并返回完整 URL。
     """
     # 创建目录
@@ -173,6 +174,37 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
         "budget": "China budget travel street market affordable goods",
     }
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
+
+    # 尝试 Agnes AI（首选，免费 AI 图片生成，需 AGNES_API_KEY）
+    print(f"  [CoverGen] Trying Agnes AI first...")
+    agnes_key = os.environ.get("AGNES_API_KEY", "")
+    if agnes_key:
+        try:
+            resp = requests.post(
+                "https://apihub.agnes-ai.com/v1/images/generations",
+                headers={"Authorization": f"Bearer {agnes_key}", "Content-Type": "application/json"},
+                json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
+                timeout=90,
+            )
+            resp.raise_for_status()
+            img_url = (resp.json().get("data") or [{}])[0].get("url", "")
+            if img_url:
+                r = requests.get(img_url, timeout=90, stream=True)
+                if r.status_code == 200 and "image" in r.headers.get("content-type", "").lower():
+                    filename = f"{slug}.jpg"
+                    image_path = cover_dir / filename
+                    with open(image_path, "wb") as f:
+                        for chunk in r.iter_content(chunk_size=8192):
+                            f.write(chunk)
+                    file_size_kb = image_path.stat().st_size / 1024
+                    print(f"  [CoverGen] Saved (Agnes): {filename} ({file_size_kb:.0f} KB)")
+                    return f"https://www.{SITE_DOMAIN}/img/china-dest/{category}/{filename}"
+                else:
+                    print(f"  [CoverGen] Agnes download failed: HTTP {r.status_code}")
+            else:
+                print(f"  [CoverGen] Agnes returned no URL")
+        except Exception as e:
+            print(f"  [CoverGen] Agnes error: {e}")
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
     # 发布规则（2026-08-28）：配图必须是真实写实的实景照片 —— 禁止人物/头像、禁止抽象图

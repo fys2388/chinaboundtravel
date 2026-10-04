@@ -90,7 +90,7 @@ def wrap_text(text, max_chars):
 
 
 # ========== 多 API 图片生成系统（智能降级）
-# 优先级: Google Gemini 官方 API > Google AI Studio > Pollinations.ai > Picsum.photos
+# 优先级: Agnes AI > Pollinations.ai > Picsum.photos
 
 PROXIES = {}
 
@@ -98,17 +98,23 @@ IMAGE_SAVE_DIR = BASE_DIR / "static" / "generated_images"
 IMAGE_SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
 IMAGE_API_CONFIG = {
-    "pollinations": {
-        "name": "Pollinations.ai (主力生产)",
+    "agnes": {
+        "name": "Agnes AI (主力生产)",
         "api_key": "",
-        "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
+        "url": "",
         "priority": 0,
     },
+    "pollinations": {
+        "name": "Pollinations.ai (兜底)",
+        "api_key": "",
+        "url": "https://image.pollinations.ai/prompt/{prompt}?width={w}&height={h}&nologo=true&seed={seed}",
+        "priority": 1,
+    },
     "picsum": {
-        "name": "Picsum.photos (兜底)",
+        "name": "Picsum.photos (最终兜底)",
         "api_key": "",
         "url": "https://picsum.photos/seed/{seed}/{w}/{h}",
-        "priority": 1,
+        "priority": 2,
     },
 }
 
@@ -145,6 +151,39 @@ def build_prompt(title, slug):
             scene_desc = desc
             break
     return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, empty scene, pure landscape architecture food objects only, absolutely no human beings whatsoever"
+
+def try_agnes(prompt, width=1200, height=630, seed=None):
+    """API #1: Agnes AI (免费文生图，需 AGNES_API_KEY)"""
+    try:
+        api_key = os.environ.get("AGNES_API_KEY", "")
+        if not api_key:
+            return None
+        # Map to supported sizes
+        size_map = {
+            (1792, 1024): "1024x1024",
+            (1200, 630): "1024x1024",
+            (1024, 768): "1024x768",
+            (1024, 1024): "1024x1024",
+        }
+        size_str = size_map.get((width, height), f"{width}x{height}")
+        resp = requests.post(
+            "https://apihub.agnes-ai.com/v1/images/generations",
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": size_str},
+            timeout=90,
+            proxies=PROXIES,
+            verify=False,
+        )
+        resp.raise_for_status()
+        url = (resp.json().get("data") or [{}])[0].get("url", "")
+        if url:
+            return url
+        print(f"  [{IMAGE_API_CONFIG['agnes']['name']}] 未返回图片 URL")
+        return None
+    except Exception as e:
+        print(f"  [{IMAGE_API_CONFIG['agnes']['name']}] {type(e).__name__}: {str(e)[:80]}")
+        return None
+
 
 def try_pollinations(prompt, width=1200, height=630, seed=None):
     """API #2: Pollinations.ai (free fallback) with negative prompt for better quality"""
@@ -189,7 +228,9 @@ def generate_image_url(prompt, size_str="16:9", seed=None):
         
         result = None
         try:
-            if api_id == "pollinations":
+            if api_id == "agnes":
+                result = try_agnes(prompt, size_cfg["w"], size_cfg["h"])
+            elif api_id == "pollinations":
                 result = try_pollinations(prompt, size_cfg["w"], size_cfg["h"], seed=seed)
             elif api_id == "picsum":
                 picsum_url = f"https://picsum.photos/seed/{seed}/{size_cfg['w']}/{size_cfg['h']}"
