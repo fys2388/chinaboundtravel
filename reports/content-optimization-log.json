@@ -593,6 +593,34 @@
         "position": 18.5
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-10-05T07:46:50.162964",
+      "metrics_before": {
+        "impressions": 443,
+        "clicks": 0,
+        "position": 66.4
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-10-05T07:46:51.247919",
+      "metrics_before": {
+        "impressions": 183,
+        "clicks": 0,
+        "position": 18.5
+      },
+      "result": "pending"
     }
   ]
 }
