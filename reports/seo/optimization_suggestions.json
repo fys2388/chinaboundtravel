@@ -28,10 +28,10 @@
     "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
     "file": "144-hour-visa-free-transit-guide.md",
     "current_title": "China 144 Hour Transit Visa 2026: Complete Guide",
-    "current_meta": "{{< soft-recommend partner=\"esim\" topic=\"visa\" placement=\"articlemid1\" text=\"See eSIM options\" >}} Keeping your phone connected in China is easier with...",
+    "current_meta": "China 144-hour visa-free transit 2026: all eligible ports & zones, step-by-step entry process, the 3 mistakes that get travelers denied, and eSIM setup for staying connected.",
     "priority": "medium",
     "priority_score": 2.14,
-    "suggestion": "Title长度合适，建议优化关键词位置和吸引力",
+    "suggestion": "Title长度合适，建议优化关键词位置和吸引力; Meta描述过长（174字符），建议精简至150-160字符",
     "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
     "status": "pending"
   },
@@ -64,10 +64,10 @@
     "target": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
     "title": "ChinaBound Travel Guide 2026.09 Update",
     "issues": [
-      "内容不足（487词）"
+      "内容不足（554词）"
     ],
     "priority": "medium",
-    "priority_score": 15.13,
+    "priority_score": 14.46,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
@@ -77,10 +77,10 @@
     "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
     "title": "China Travel Guide: July 2026 Updates",
     "issues": [
-      "内容不足（555词）"
+      "内容不足（589词）"
     ],
     "priority": "medium",
-    "priority_score": 14.45,
+    "priority_score": 14.11,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
@@ -90,7 +90,7 @@
     "target": "2026-08-10-chinas-food-through-the-ages-guide.md",
     "title": "How Chinese Food Evolved: 2 Million Years",
     "issues": [
-      "缺少内链"
+      "内链不足（1条）"
     ],
     "priority": "medium",
     "priority_score": 10.0,
@@ -113,14 +113,14 @@
   },
   {
     "type": "content_optimization",
-    "target": "best-travel-insurance-china.md",
-    "title": "",
+    "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
+    "title": "Kung Fu And Martial Arts In China: Where To See And Train Guide",
     "issues": [
-      "缺少Meta描述"
+      "缺少内链"
     ],
     "priority": "medium",
     "priority_score": 10.0,
-    "suggestion": "添加Meta描述（150-160字符），包含核心关键词",
+    "suggestion": "增加3-5条相关内链，指向同主题的其他文章",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },

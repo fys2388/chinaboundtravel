@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T04:12:12.591053",
+  "generated_at": "2026-10-05T04:35:02.726108",
   "total_recommendations": 27,
   "type_distribution": {
     "infographic": 22,
@@ -36,39 +36,6 @@
       "creation_complexity": "medium"
     },
     {
-      "id": "mm_content_china-transportation_0",
-      "content_id": "content_china-transportation",
-      "content_title": "China Transportation 2026: Trains & Didi",
-      "media_type": "infographic",
-      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
-      "purpose": "seo + engagement",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_china-transportation_1",
-      "content_id": "content_china-transportation",
-      "content_title": "China Transportation 2026: Trains & Didi",
-      "media_type": "infographic",
-      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
-      "purpose": "seo + engagement",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_china-transportation_2",
-      "content_id": "content_china-transportation",
-      "content_title": "China Transportation 2026: Trains & Didi",
-      "media_type": "step_diagram",
-      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
-      "purpose": "understanding",
-      "priority": "high",
-      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
-      "creation_complexity": "low"
-    },
-    {
       "id": "mm_content_144-hour-visa-free-t_0",
       "content_id": "content_144-hour-visa-free-t",
       "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
@@ -94,6 +61,39 @@
       "id": "mm_content_144-hour-visa-free-t_2",
       "content_id": "content_144-hour-visa-free-t",
       "content_title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "media_type": "step_diagram",
+      "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
+      "purpose": "understanding",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "low"
+    },
+    {
+      "id": "mm_content_china-transportation_0",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation 2026: Trains & Didi",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-transportation_1",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation 2026: Trains & Didi",
+      "media_type": "infographic",
+      "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
+      "purpose": "seo + engagement",
+      "priority": "high",
+      "estimated_impact": "高 - 高流量页面，多模态内容可显著提升停留和转化",
+      "creation_complexity": "medium"
+    },
+    {
+      "id": "mm_content_china-transportation_2",
+      "content_id": "content_china-transportation",
+      "content_title": "China Transportation 2026: Trains & Didi",
       "media_type": "step_diagram",
       "description": "创建步骤示意图（Step-by-step diagram），降低理解门槛",
       "purpose": "understanding",

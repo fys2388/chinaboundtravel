@@ -1,23 +1,23 @@
 {
-  "audited_at": "2026-09-28T04:12:12.585705",
-  "total_content": 63,
-  "average_score": 69.1043083900227,
-  "average_word_count": 1939,
+  "audited_at": "2026-10-05T04:35:02.717990",
+  "total_content": 66,
+  "average_score": 68.46320346320346,
+  "average_word_count": 1961,
   "status_distribution": {
     "good": 47,
-    "average": 13,
+    "average": 16,
     "excellent": 3
   },
   "dimension_averages": {
-    "depth": 72.6984126984127,
-    "structure": 74.2063492063492,
-    "seo": 51.111111111111114,
-    "readability": 83.80952380952381,
-    "multimedia": 48.80952380952381,
-    "engagement": 75.23809523809524,
-    "freshness": 77.85714285714286
+    "depth": 73.33333333333333,
+    "structure": 73.93939393939394,
+    "seo": 50.15151515151515,
+    "readability": 83.86363636363636,
+    "multimedia": 47.95454545454545,
+    "engagement": 74.54545454545455,
+    "freshness": 75.45454545454545
   },
-  "high_priority_count": 12,
+  "high_priority_count": 14,
   "content_records": [
     {
       "id": "content_china-bargaining-and",
@@ -27,7 +27,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-07-china-bargaining-and-shopping-guide.md",
       "publish_date": "2026-08-07",
       "last_updated": "2026-09-13",
-      "word_count": 2214,
+      "word_count": 2261,
       "reading_time": 11,
       "quality_scores": {
         "depth": 80,
@@ -48,7 +48,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 8,
+      "internal_link_count": 12,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": true,
@@ -77,8 +77,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
       "publish_date": "2026-09-01",
       "last_updated": "2026-09-18",
-      "word_count": 378,
-      "reading_time": 1,
+      "word_count": 420,
+      "reading_time": 2,
       "quality_scores": {
         "depth": 40,
         "structure": 65,
@@ -98,7 +98,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 9,
+      "internal_link_count": 12,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -126,27 +126,27 @@
       "llm_evaluation": {
         "scores": {
           "accuracy": 65,
-          "freshness": 90,
-          "practicality": 55,
-          "depth": 35,
-          "readability": 80,
-          "seo_friendliness": 70
+          "freshness": 85,
+          "practicality": 40,
+          "depth": 25,
+          "readability": 70,
+          "seo_friendliness": 60
         },
-        "overall_score": 59,
+        "overall_score": 48,
         "issues": [
-          "内容过于单薄，本质上仅为更新日志/变更公告，缺乏实质性旅行信息",
-          "'15-day visa-free entry'表述需核实——中国免签政策因国籍而异，笼统表述可能误导读者",
-          "可见部分未提供任何具体的签证政策变更细节、价格数据或实用建议",
-          "缺少对PDF指南本身的下载引导或核心内容预览",
-          "作为独立文章价值有限，更像是一个占位式更新通知"
+          "内容极度单薄，仅为一则更新日志/变更说明，未提供实质性旅行信息",
+          "仅列出更新项目（签证政策、人流预测等）但未展开具体细节",
+          "正文截断，信息不完整，读者无法获取实际有用的旅行指导",
+          "缺乏对更新内容的背景说明和旅行者影响分析",
+          "作为独立文章价值有限，更像是指向PDF的占位通知"
         ],
         "improvements": [
-          "在更新日志之外增加实质性内容，如具体签证政策变更的详细说明（适用国籍、停留天数、申请流程等）",
-          "加入当月热门目的地的人流预测具体数据和建议出行时段",
-          "提供PDF指南的核心功能概览或目录预览，让读者了解指南价值",
-          "增加当月旅行注意事项或安全提示等实用信息",
-          "在文章末尾添加明确的下载CTA（Call to Action）链接",
-          "针对SEO增加长尾关键词，如'China visa-free policy 2026'、'China travel guide September'等"
+          "针对每项更新提供具体细节，如签证政策的具体变化内容和适用条件",
+          "加入人流预测的具体数据和建议出行时段",
+          "补充更新对旅行者的实际影响和应对建议",
+          "增加可操作的旅行提示，而非仅罗列变更项",
+          "扩展内容深度，加入独特见解或趋势分析",
+          "考虑将更新日志与实质性旅行指南内容合并，提升单页价值"
         ],
         "priority": "medium"
       }
@@ -159,7 +159,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
       "publish_date": "2026-06-23",
       "last_updated": "2026-06-23",
-      "word_count": 1265,
+      "word_count": 1280,
       "reading_time": 6,
       "quality_scores": {
         "depth": 60,
@@ -207,29 +207,30 @@
         "scores": {
           "accuracy": 70,
           "freshness": 60,
-          "practicality": 35,
-          "depth": 45,
+          "practicality": 65,
+          "depth": 55,
           "readability": 75,
           "seo_friendliness": 70
         },
-        "overall_score": 52,
+        "overall_score": 65,
         "issues": [
-          "受众定位严重错位：文章介绍的是中国国内（成都）的火锅餐厅，而ChinaBound Travel的目标读者是中国出境旅行者，内容与其出行需求完全不匹配",
-          "可见内容仅为引言部分，缺乏实质性的历史介绍、餐厅推荐等标题所承诺的核心内容",
-          "未提及任何与出境旅行相关的实用信息（如海外中餐厅推荐、火锅食材出境注意事项等）",
-          "内部链接指向的'Chinese street food guide'同样面向入境游客，进一步偏离目标受众",
-          "缺乏时效性标记（如更新日期、餐厅营业状态确认等）",
-          "内容深度不足，仅停留在'标志性美食'的泛泛描述，无独特见解或深度分析"
+          "正文内容过短，仅展示引言部分，缺乏实质性的历史背景和餐厅推荐细节",
+          "未提供具体餐厅名称、地址、人均消费等实用信息",
+          "缺少四川火锅的食用礼仪、点菜技巧等对旅行者有价值的实操建议",
+          "未标注文章发布日期或最后更新日期，时效性无法判断",
+          "内部链接指向街道美食指南，但与火锅主题关联度一般",
+          "缺乏图片、地图等视觉元素来增强旅行指南的实用性"
         ],
         "improvements": [
-          "重新定位内容方向：改为介绍海外（如东南亚、北美、欧洲）的优质中餐厅/火锅店，或中国出境旅行者在国外如何寻找地道中餐",
-          "若保留国内火锅内容，应明确标注为'入境旅游参考'或移至入境旅游板块，避免误导目标受众",
-          "增加实用信息：如海外火锅餐厅推荐、火锅底料/食材出入境规定、国外中餐消费注意事项等",
-          "补充时效性信息：标注最后更新日期，确认推荐餐厅的营业状态和价格",
-          "深化内容：增加火锅文化历史脉络、不同流派对比（川渝vs其他）、点菜技巧等深度内容",
-          "优化SEO策略：针对出境旅行场景调整关键词，如'overseas Chinese restaurants'、'hotpot abroad'等"
+          "补充至少5-8家成都知名火锅店的详细信息（名称、地址、特色、人均价格、推荐菜品）",
+          "增加四川火锅的历史演变章节，涵盖起源、发展、文化意义",
+          "添加实用章节：如何点菜、锅底选择指南、蘸料搭配、辣度分级说明",
+          "加入价格区间和消费提示，帮助旅行者做预算",
+          "标注文章最后更新日期，并定期更新餐厅信息",
+          "增加FAQ板块，回答常见旅行者问题（如素食选项、辣度适应等）",
+          "优化内部链接，关联更多相关旅行内容如成都美食地图、川菜文化等"
         ],
-        "priority": "high"
+        "priority": "medium"
       }
     },
     {
@@ -240,7 +241,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md",
       "publish_date": "2026-07-04",
       "last_updated": "2026-07-04",
-      "word_count": 2334,
+      "word_count": 2356,
       "reading_time": 11,
       "quality_scores": {
         "depth": 80,
@@ -249,9 +250,9 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 80,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 69.28571428571429,
+      "overall_score": 67.14285714285714,
       "quality_status": "good",
       "impressions_28d": 0,
       "clicks_28d": 0,
@@ -261,7 +262,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 12,
+      "internal_link_count": 13,
       "has_affiliate_links": true,
       "affiliate_link_count": 6,
       "has_images": true,
@@ -285,29 +286,29 @@
       "llm_evaluation": {
         "scores": {
           "accuracy": 50,
-          "freshness": 40,
-          "practicality": 45,
-          "depth": 35,
-          "readability": 30,
-          "seo_friendliness": 55
+          "freshness": 50,
+          "practicality": 40,
+          "depth": 40,
+          "readability": 45,
+          "seo_friendliness": 65
         },
-        "overall_score": 42,
+        "overall_score": 48,
         "issues": [
-          "前500字符中广告/联盟链接占比较大（affiliate-esim、affiliate-insurance、soft-recommend），实际内容极少",
-          "引言部分在\"can fe\"处截断，内容不完整",
-          "广告插入位置过于靠前，严重影响读者获取有效信息的体验",
-          "无法从可见内容中判断信息的准确性和时效性",
-          "内容深度不足，仅展示了标题和引言开头"
+          "前500字中affiliate链接和soft-recommend占比过高，实际高铁信息内容极少",
+          "affiliate-esim和affiliate-insurance在标题后立即出现，干扰阅读体验",
+          "hotel soft-recommend插入在Introduction段落中，打断内容流",
+          "无法从可见内容中验证信息准确性和时效性",
+          "文章似乎更偏向affiliate营销而非真正的旅行指南"
         ],
         "improvements": [
-          "大幅减少文章开头的广告/联盟链接数量，将推广内容移至文章中部或末尾",
-          "确保引言完整，提供清晰的文章概览",
-          "在开头即提供核心实用信息（如购票渠道、车次分类等）",
-          "添加具体数据、价格、政策日期以增强可信度和时效性",
-          "优化内容结构，在H2标题下提供实质性内容而非仅放置广告",
-          "增加独特见解，如不同座位等级的实际体验对比、购票技巧等"
+          "大幅减少Introduction部分的affiliate链接密度，将推荐移至文末或相关段落",
+          "在开头提供核心高铁信息（如主要线路、票价范围、预订方式）",
+          "添加具体日期和时效性信息（如最新票价、政策变更）",
+          "将affiliate-esim和affiliate-insurance移至更相关的上下文位置",
+          "增加实际预订步骤、车厢等级对比、注意事项等实用内容",
+          "确保内容深度足以支撑'Survival Guide'的定位"
         ],
-        "priority": "high"
+        "priority": "medium"
       }
     },
     {
@@ -318,8 +319,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/china-airport-transfer-guide.md",
       "publish_date": "2026-08-16",
       "last_updated": "2026-08-24",
-      "word_count": 1376,
-      "reading_time": 6,
+      "word_count": 1418,
+      "reading_time": 7,
       "quality_scores": {
         "depth": 60,
         "structure": 90,
@@ -339,7 +340,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 8,
+      "internal_link_count": 11,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": false,
@@ -362,31 +363,31 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 65,
-          "freshness": 75,
-          "practicality": 70,
+          "accuracy": 68,
+          "freshness": 78,
+          "practicality": 72,
           "depth": 55,
-          "readability": 72,
-          "seo_friendliness": 78
+          "readability": 74,
+          "seo_friendliness": 80
         },
-        "overall_score": 69,
+        "overall_score": 71,
         "issues": [
-          "正文中嵌入了 soft-recommend partner 广告标签（如 flight/transport 推荐），影响内容纯粹性和读者信任度",
-          "存在 {{< content-timestamp >}} 模板占位符未替换，显示内容可能未完成最终编辑",
-          "仅覆盖北京、上海、广州三座城市，未涉及成都、深圳、杭州等热门目的地",
-          "从可见内容看，缺乏具体价格、运营时间、末班车时刻等关键实用数据",
-          "未提及支付方式（微信/支付宝/现金）等中国特有的出行细节",
-          "内容深度不足，仅停留在选项罗列层面，缺少对比表格或场景化建议"
+          "内容中存在未渲染的模板占位符（{{< content-timestamp >}}），影响专业性和可信度",
+          "文章内嵌了合作伙伴推荐广告（soft-recommend partner），可能降低读者信任感",
+          "仅覆盖北京、上海、广州三城，未涉及成都、深圳、杭州等热门目的地",
+          "从可见内容看，缺乏具体价格、运行时间、班次频率等关键实用数据",
+          "缺少各交通方式的优缺点对比表格，信息呈现不够直观",
+          "未提及夜间到达机场的特殊情况（末班车时间、夜间交通方案）"
         ],
         "improvements": [
-          "移除或显著弱化正文中的商业推荐标签，保持内容客观性",
-          "为每种交通方式补充具体价格区间、耗时、运营时间等数据",
-          "增加对比表格，按价格、速度、便利性、语言友好度等维度横向比较",
-          "补充支付方式和语言障碍等中国特有实用信息",
-          "扩展覆盖城市范围，至少增加深圳、成都、杭州",
-          "加入场景化建议（如深夜到达、携带大件行李、家庭出行等）",
-          "替换所有模板占位符，确保内容完整发布",
-          "添加地图或路线示意图提升可读性"
+          "清除所有模板占位符，确保内容完整渲染",
+          "将合作伙伴推荐移至文末或独立板块，避免打断阅读流",
+          "为每种交通方式添加具体价格区间、耗时、首末班时间等数据",
+          "增加对比表格，方便读者快速决策",
+          "补充成都、深圳、杭州等城市的机场交通信息",
+          "添加夜间到达场景的专项建议",
+          "加入真实旅客经验分享或常见问题解答（FAQ）",
+          "提供各交通方式的购票/叫车流程截图或步骤说明"
         ],
         "priority": "medium"
       }
@@ -399,7 +400,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
       "publish_date": "2026-07-01",
       "last_updated": "2026-07-01",
-      "word_count": 431,
+      "word_count": 455,
       "reading_time": 2,
       "quality_scores": {
         "depth": 40,
@@ -408,9 +409,9 @@
         "readability": 75,
         "multimedia": 30,
         "engagement": 60,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 57.857142857142854,
+      "overall_score": 55.714285714285715,
       "quality_status": "average",
       "impressions_28d": 0,
       "clicks_28d": 0,
@@ -420,7 +421,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 11,
+      "internal_link_count": 12,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -445,29 +446,30 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 50,
-          "freshness": 60,
-          "practicality": 35,
-          "depth": 15,
-          "readability": 55,
-          "seo_friendliness": 50
+          "accuracy": 30,
+          "freshness": 40,
+          "practicality": 25,
+          "depth": 10,
+          "readability": 40,
+          "seo_friendliness": 45
         },
-        "overall_score": 34,
+        "overall_score": 28,
         "issues": [
-          "前500字几乎全部为联盟链接推广，缺乏实质性旅行信息",
-          "内容深度严重不足，仅有一个版本标题和推荐链接，无任何实际旅行指南内容",
-          "联盟推广内容占比过高，在正文开头即大量插入affiliate-section，影响用户体验",
-          "标题承诺'July 2026 Updates'但正文未提供任何具体更新信息（如签证政策、旅行限制等）",
-          "内容结构呈现模板化/骨架化特征，疑似未完成的文章或占位内容",
-          "soft-recommend标签暗示后续仍有更多推广内容，进一步稀释信息价值"
+          "内容严重不足：前500字几乎全部为联盟链接和模板占位符，缺乏实质性旅行信息",
+          "模板占位符未渲染：存在 {{< param affiliate.flight >}}、{{< param affiliate.safetywing >}}、{{< param affiliate.esim >}} 等未解析的模板标记，影响用户体验",
+          "联盟链接密度过高：开篇即堆砌航班、保险、eSIM等推广链接，内容以商业推广为主而非信息服务",
+          "缺乏核心旅行内容：无目的地介绍、签证指南、实用贴士、交通建议等旅行者真正需要的信息",
+          "soft-recommend 标签截断：partner='esim' topic='payments' 标签未完整显示，疑似渲染错误",
+          "标题承诺与实际内容不符：标题暗示'July 2026 Updates'但正文无具体更新内容"
         ],
         "improvements": [
-          "在联盟链接之前或之间加入实质性旅行信息，如签证政策更新、入境要求、热门目的地推荐等",
-          "大幅减少前500字中的联盟推广比例，将affiliate-section移至文章末尾或穿插在相关内容中",
-          "针对'July 2026 Updates'标题，提供具体的时效性内容：最新签证政策、航班恢复情况、旅行安全提示等",
-          "增加内容深度：加入个人经验、实用技巧、常见问题解答等独特见解",
-          "平衡商业推广与信息服务的比例，确保文章对旅行者有真正的参考价值",
-          "补充结构化内容如表格、清单、分步指南等提升可读性和实用性"
+          "大幅补充实质性旅行内容：签证政策、热门目的地、交通指南、文化注意事项、预算建议等",
+          "降低联盟链接密度：将推广链接分散到内容中自然嵌入，而非集中堆砌在开头",
+          "修复模板渲染问题：确保所有 {{< param >}} 和 {{< soft-recommend >}} 标签正确解析为实际内容",
+          "增加独特见解：加入本地化建议、避坑指南、季节性信息等差异化内容",
+          "优化内容结构：按主题分章节（签证、交通、住宿、景点、美食等），提升信息层次",
+          "补充时效性内容：具体列出2026年7月的政策变化、价格变动、新开放区域等",
+          "增加用户互动元素：常见问题、读者评论、实用清单等提升参与度"
         ],
         "priority": "high"
       }
@@ -480,7 +482,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
       "publish_date": "2026-05-25",
       "last_updated": "2026-09-13",
-      "word_count": 2057,
+      "word_count": 2074,
       "reading_time": 10,
       "quality_scores": {
         "depth": 80,
@@ -501,7 +503,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 20,
+      "internal_link_count": 22,
       "has_affiliate_links": true,
       "affiliate_link_count": 16,
       "has_images": false,
@@ -525,28 +527,28 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 75,
-          "freshness": 80,
+          "accuracy": 72,
+          "freshness": 70,
           "practicality": 75,
-          "depth": 65,
+          "depth": 60,
           "readability": 70,
-          "seo_friendliness": 75
+          "seo_friendliness": 72
         },
-        "overall_score": 73,
+        "overall_score": 68,
         "issues": [
           "标题大小写不一致：'China'S' 应为 'China's'",
-          "文章内嵌了酒店推荐广告（soft-recommend），与高铁订票主题不相关，分散读者注意力",
-          "仅展示前500字，内容深度难以全面评估，可能缺乏对购票流程、证件要求、退改签规则等关键环节的详细覆盖",
-          "摘要部分包含模板代码（{{< soft-recommend >}}），若未正确渲染会影响用户体验",
-          "缺少对比信息：如 Trip.com 与其他平台（12306、携程等）的优劣对比"
+          "soft-recommend 广告插入正文中部，打断阅读流",
+          "可见内容有限，难以全面评估信息准确性",
+          "文章商业化倾向明显，广告位影响内容纯粹性",
+          "'Quick Answer' 部分仅提及 Trip.com，缺乏多平台对比的完整性"
         ],
         "improvements": [
           "修正标题大小写错误，统一为 'China's'",
-          "移除或重新定位酒店推荐广告，保持文章主题聚焦",
-          "补充12306官方App的购票指南，包括外国人护照注册流程",
-          "增加退改签政策、座位选择、车站导航等实用细节",
-          "添加常见问题（FAQ）板块，如是否需要签证、是否支持在线支付等",
-          "确保模板代码正确渲染，避免前端显示异常"
+          "减少或优化广告插入位置，避免打断核心内容流",
+          "增加具体购票步骤的截图或分步指南",
+          "补充不同票种（一等座/二等座/商务座）的价格与选择建议",
+          "加入更多平台对比（如 12306、Trip.com、携程等）的优缺点分析",
+          "增加常见问题（FAQ）板块，覆盖外国人购票常见痛点"
         ],
         "priority": "medium"
       }
@@ -559,18 +561,18 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-10-chinas-food-through-the-ages-guide.md",
       "publish_date": "2026-08-10",
       "last_updated": "2026-08-10",
-      "word_count": 1190,
-      "reading_time": 5,
+      "word_count": 1212,
+      "reading_time": 6,
       "quality_scores": {
         "depth": 60,
-        "structure": 50,
+        "structure": 65,
         "seo": 30,
         "readability": 75,
         "multimedia": 60,
         "engagement": 60,
         "freshness": 75
       },
-      "overall_score": 58.57142857142857,
+      "overall_score": 60.714285714285715,
       "quality_status": "average",
       "impressions_28d": 0,
       "clicks_28d": 0,
@@ -579,8 +581,8 @@
       "indexed_status": "NOT_INDEXED",
       "has_faq": false,
       "has_toc": false,
-      "has_internal_links": false,
-      "internal_link_count": 0,
+      "has_internal_links": true,
+      "internal_link_count": 1,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -589,7 +591,7 @@
       "issues": [
         "内容深度一般（<1500词）",
         "缺少FAQ区块",
-        "内链不足（仅0条）",
+        "内链不足（仅1条）",
         "页面未被Google索引",
         "缺少联盟链接和CTA"
       ],
@@ -606,24 +608,27 @@
       "llm_evaluation": {
         "scores": {
           "accuracy": 70,
-          "freshness": 75,
-          "practicality": 30,
-          "depth": 45,
-          "readability": 85,
-          "seo_friendliness": 65
+          "freshness": 65,
+          "practicality": 35,
+          "depth": 50,
+          "readability": 80,
+          "seo_friendliness": 55
         },
         "overall_score": 55,
         "issues": [
-          "标题与内容严重不匹配：标题承诺'200万年'的中国饮食演变史，但正文实际讨论的是一个社交媒体病毒视频，存在标题党嫌疑",
-          "对目标受众（中国出境旅行者）的实用价值极低，属于泛文化兴趣类内容而非旅行指南",
-          "内容深度不足：从已有文本看，文章停留在描述一个短视频的表面，缺乏对饮食演变的实质性历史分析",
-          "文章定位模糊：既不是严谨的历史科普，也不是实用的旅行建议，夹在两者之间"
+          "标题与内容严重不匹配：标题承诺'200万年'的演变史，但正文实际讨论的是社交媒体病毒视频",
+          "对目标受众（中国出境旅行者）缺乏实用旅行信息，如餐厅推荐、地点、价格等",
+          "内容偏向文化娱乐，而非旅行指南",
+          "缺乏具体可操作的信息，旅行者无法据此规划美食之旅",
+          "未提供中国各地美食的具体地理位置或交通信息"
         ],
         "improvements": [
-          "重新定位文章：要么将标题改为与病毒视频相关的内容（如'中国各省最想念的家乡菜'），要么真正展开200万年的饮食演变历史",
-          "增加实用旅行元素：如推荐各省必吃美食、当地餐厅推荐、美食旅游路线等",
-          "补充历史深度：如果保留'200万年'的标题，需要加入考古发现、饮食文化演变等实质性内容",
-          "增加互动性和行动号召：引导读者分享自己家乡的美食记忆，或推荐旅行时必尝的菜品"
+          "修正标题以匹配实际内容，或补充历史演变内容以匹配标题",
+          "增加实用旅行信息：具体餐厅推荐、城市美食地图、人均消费等",
+          "添加旅行者可直接使用的信息，如'必吃清单'、'当地人才知道的店'",
+          "补充中国各地美食的历史背景，增强内容深度",
+          "优化SEO：在正文中自然融入关键词如'Chinese food travel guide'、'best Chinese restaurants'等",
+          "增加互动元素，如读者投票或评论引导"
         ],
         "priority": "medium"
       }
@@ -636,7 +641,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md",
       "publish_date": "2026-05-27",
       "last_updated": "2026-08-24",
-      "word_count": 1438,
+      "word_count": 1469,
       "reading_time": 7,
       "quality_scores": {
         "depth": 60,
@@ -657,7 +662,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 16,
+      "internal_link_count": 18,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -682,30 +687,28 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 72,
-          "freshness": 65,
-          "practicality": 68,
-          "depth": 60,
-          "readability": 75,
-          "seo_friendliness": 78
+          "accuracy": 75,
+          "freshness": 80,
+          "practicality": 70,
+          "depth": 65,
+          "readability": 80,
+          "seo_friendliness": 80
         },
-        "overall_score": 71,
+        "overall_score": 75,
         "issues": [
-          "\"Most honest\" claim is a marketing tactic that may undermine credibility rather than build trust",
-          "Some cited risks (teahouse bait-and-switch, unmetered taxis) are somewhat outdated — these have diminished significantly with Didi and digital payment adoption",
-          "No specific crime statistics or data sources cited to support the 'statistically safer' claim",
-          "Reliance on 'aggregated traveler feedback' without disclosing methodology or sample size",
-          "Lacks regional variation analysis — safety profiles differ significantly between Tier-1 cities and rural areas",
-          "No mention of newer 2026-era concerns such as app-based scams, data privacy, or evolving geopolitical sensitivities"
+          "内容深度不足，仅从摘要看缺乏具体数据支撑（如犯罪率统计、具体城市对比）",
+          "风险提示较笼统，未提供具体应对策略或案例",
+          "标题中'Honest'一词有点击诱饵嫌疑，可能降低可信度",
+          "未引用具体数据来源或权威报告，'5+ years of aggregated traveler feedback'缺乏透明度",
+          "缺少不同城市/地区的安全差异分析"
         ],
         "improvements": [
-          "Cite specific crime statistics from official sources (e.g., Chinese Ministry of Public Security, UNODC data) to substantiate safety claims",
-          "Update risk taxonomy to reflect current realities — emphasize app-based fraud, ride-hailing safety, and digital payment security over legacy scams",
-          "Provide concrete, actionable avoidance tips for each identified risk category",
-          "Include a regional safety breakdown (e.g., Beijing/Shanghai vs. Yunnan/Gansu) with specific advisories",
-          "Add verifiable traveler testimonials or recent incident data to strengthen credibility",
-          "Replace the 'most honest' framing with a more evidence-based, transparent editorial stance",
-          "Include a 'What Has Changed Since 2024' section to demonstrate genuine freshness"
+          "补充具体统计数据（如联合国犯罪调查、中国公安部公开数据）",
+          "按城市分级提供安全建议（一线vs二三线vs偏远地区）",
+          "针对每类风险提供具体应对方案（如如何识别正规出租车、推荐安全街食品区域）",
+          "增加真实旅行者案例或访谈增强可信度",
+          "添加紧急联系方式、报警流程等实用信息",
+          "将'Honest'改为更专业的表述，如'Comprehensive Safety Guide'"
         ],
         "priority": "medium"
       }
@@ -718,7 +721,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
       "publish_date": "2026-07-02",
       "last_updated": "2026-07-02",
-      "word_count": 1802,
+      "word_count": 1817,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -727,9 +730,9 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 80,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 73.57142857142857,
+      "overall_score": 71.42857142857143,
       "quality_status": "good",
       "impressions_28d": 1,
       "clicks_28d": 0,
@@ -762,29 +765,28 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 85,
-          "freshness": 90,
-          "practicality": 85,
-          "depth": 75,
-          "readability": 85,
+          "accuracy": 75,
+          "freshness": 80,
+          "practicality": 40,
+          "depth": 60,
+          "readability": 75,
           "seo_friendliness": 80
         },
-        "overall_score": 83,
+        "overall_score": 60,
         "issues": [
-          "标题不完整，'Complete'后缺少内容（应为'Complete Guide'）",
-          "仅凭引言无法验证全文深度和完整性",
-          "未提及具体截图或视觉辅助说明",
-          "缺少常见问题的故障排除部分"
+          "受众严重错配：ChinaBound Travel 面向中国出境旅行者，但本文主题是外国人在中国使用支付宝，属于入境游内容，与网站定位不符",
+          "标题不完整：'How to Use Alipay as a Foreigner: Complete' 末尾截断，疑似缺少副标题或关键词",
+          "仅凭引言无法验证正文的准确性和深度，存在信息完整性风险",
+          "引言中 'cash is rarely needed in major cities' 等表述虽基本正确，但缺乏具体数据或来源支撑"
         ],
         "improvements": [
-          "补全标题为'How to Use Alipay as a Foreigner: Complete Guide'",
-          "添加分步骤截图以增强可操作性",
-          "增加支付宝在不同场景（地铁、出租车、外卖等）的具体使用示例",
-          "补充外国人常见问题的解决方案（如身份验证失败、限额问题等）",
-          "加入与微信支付对比的内容，帮助旅行者选择",
-          "提供支付宝国际版与本地版的区别说明"
+          "重新定位受众：若保留此内容，应明确标注为'入境中国实用指南'板块，或改写为面向中国出境旅行者的海外支付指南（如境外使用支付宝/微信支付）",
+          "补全标题，例如 'How to Use Alipay as a Foreigner: Complete 2026 Setup Guide'",
+          "增加具体操作步骤截图、常见问题（如限额、汇率、退款流程）等实操细节以提升实用价值",
+          "添加数据引用（如支付宝在境外的覆盖商户数量、支持的国家/地区列表）增强可信度",
+          "若网站定位不变，建议替换为更贴合出境旅行者的支付主题，如'境外使用支付宝/微信支付的完整指南'"
         ],
-        "priority": "medium"
+        "priority": "high"
       }
     },
     {
@@ -795,7 +797,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
       "publish_date": "2026-06-02",
       "last_updated": "2026-08-24",
-      "word_count": 1036,
+      "word_count": 1051,
       "reading_time": 5,
       "quality_scores": {
         "depth": 60,
@@ -841,28 +843,29 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 72,
-          "freshness": 60,
-          "practicality": 65,
-          "depth": 60,
-          "readability": 78,
+          "accuracy": 62,
+          "freshness": 55,
+          "practicality": 60,
+          "depth": 58,
+          "readability": 80,
           "seo_friendliness": 75
         },
-        "overall_score": 68,
+        "overall_score": 65,
         "issues": [
-          "受众错配：文章明显面向入境中国的国际旅行者，但网站定位为中国出境旅行者，内容方向不一致",
-          "「从北京到成都一日游」表述不准确——高铁约8小时、飞行约2小时，实际难以构成一日游",
-          "可见内容中缺少具体实用信息（票价、开放时间、预约方式、交通路线等）",
-          "标题承诺「像当地人一样看熊猫」，但可见部分未体现任何本地化独家视角",
-          "文章被截断，无法完整评估内容完整性"
+          "称北京到成都为'day trip'存在误导——两地相距约1500公里，飞行需3小时以上，加上往返交通和游览时间，实际难以在一天内完成",
+          "文章定位偏向国际入境游客（'first-time visitors to China'），与ChinaBound Travel面向中国出境旅行者的目标受众不匹配",
+          "缺少具体实用信息：门票价格、开放时间、预约方式、最佳参观时段等关键数据未提及",
+          "未提及成都大熊猫繁育研究基地的具体地址、交通方式（地铁/公交/打车）等实操细节",
+          "内容截断处信息不完整，无法判断后续是否有实质性攻略内容"
         ],
         "improvements": [
-          "明确目标受众：若面向出境旅行者，应调整角度（如中国游客如何高效游览熊猫基地）；若面向入境游客，需与网站定位对齐",
-          "补充具体实用数据：门票价格、最佳参观时段、预约渠道、周边交通、餐饮推荐等",
-          "兑现「local」承诺：加入本地人视角的独家技巧，如避开人流的冷门展区、最佳拍照机位、当地美食搭配等",
-          "修正北京-成都交通描述，提供准确的交通方式和时间预估",
-          "增加时效性信息：标注最后更新日期，注明政策/价格可能变动",
-          "完善文章结构：添加小标题、列表、实用信息框等提升可读性和SEO"
+          "将目标受众调整为国内出境游客，或明确标注为入境游内容",
+          "补充具体实用信息：门票价格（约55元）、开放时间（7:30-18:00）、官方预约渠道",
+          "修正'北京到成都一日游'的表述，改为'从北京飞往成都仅需3小时'等准确描述",
+          "增加交通指南：如何从成都双流/天府机场到达熊猫基地（地铁3号线转公交等）",
+          "补充最佳观赏时段（上午9-11点熊猫最活跃）、注意事项（禁止闪光灯、保持安静等）",
+          "加入实用小贴士：周边餐饮推荐、与都江堰熊猫谷的对比选择建议",
+          "增加结构化信息（表格/列表）提升可读性和SEO表现"
         ],
         "priority": "medium"
       }
@@ -875,7 +878,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md",
       "publish_date": "2026-05-23",
       "last_updated": "2026-08-24",
-      "word_count": 1372,
+      "word_count": 1393,
       "reading_time": 6,
       "quality_scores": {
         "depth": 60,
@@ -896,7 +899,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 11,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": false,
@@ -921,28 +924,31 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 72,
-          "freshness": 58,
-          "practicality": 65,
-          "depth": 60,
-          "readability": 78,
-          "seo_friendliness": 70
+          "accuracy": 70,
+          "freshness": 55,
+          "practicality": 60,
+          "depth": 55,
+          "readability": 75,
+          "seo_friendliness": 75
         },
-        "overall_score": 67,
+        "overall_score": 65,
         "issues": [
-          "G20 Summit引用为2016年事件，缺乏时效性更新",
-          "正文中'ranked among a notable urban spaces'表述不完整，疑似缺失具体排名或奖项名称",
-          "摘要与正文标题重复，信息冗余",
-          "前500字缺乏具体实用信息（如交通方式、门票价格、最佳游览时间等）",
-          "未提及中国出境旅行者关心的签证、支付、语言等实用信息"
+          "内容不完整，正文被截断，无法评估完整信息量",
+          "G20峰会引用为2016年事件，时效性不足",
+          "缺乏具体实用信息（价格、开放时间、地址、交通方式等）",
+          "描述较为表面化，使用常见旅游套话（如'中国最悠闲的城市'）",
+          "未提供针对中国出境旅行者的特定信息（签证、语言、支付等）",
+          "缺少具体推荐和独特见解，内容同质化严重"
         ],
         "improvements": [
-          "更新或重新定位G20 Summit相关内容，聚焦当前旅游价值",
-          "补充具体实用信息：门票价格、开放时间、交通路线、推荐游览时长",
-          "完善West Lake排名表述，引用具体权威来源",
-          "增加中国出境旅行者专属提示（签证、移动支付、语言沟通等）",
-          "在摘要中增加差异化信息，避免与正文标题重复",
-          "添加具体茶山推荐及实用导航建议"
+          "补充具体实用信息：景点门票价格、开放时间、最佳游览路线",
+          "更新时效性内容，移除或更新G20相关引用",
+          "增加针对中国出境旅行者的实用贴士（移动支付、翻译工具、签证政策）",
+          "深化内容，加入个人体验、独特视角或本地人推荐",
+          "添加具体茶山推荐（如龙井村、梅家坞）及采茶体验指南",
+          "补充交通指南（地铁、公交、打车方式及费用）",
+          "增加住宿区域推荐及预算参考",
+          "添加季节性建议（最佳旅游时间、天气注意事项）"
         ],
         "priority": "medium"
       }
@@ -955,8 +961,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
       "publish_date": "2026-09-08",
       "last_updated": "2026-09-08",
-      "word_count": 3578,
-      "reading_time": 17,
+      "word_count": 3620,
+      "reading_time": 18,
       "quality_scores": {
         "depth": 90,
         "structure": 80,
@@ -976,7 +982,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 18,
+      "internal_link_count": 21,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -1005,28 +1011,29 @@
         "scores": {
           "accuracy": 70,
           "freshness": 75,
-          "practicality": 65,
-          "depth": 60,
+          "practicality": 75,
+          "depth": 65,
           "readability": 80,
           "seo_friendliness": 85
         },
-        "overall_score": 72,
+        "overall_score": 75,
         "issues": [
-          "仅评估了前500字符，无法全面判断信息准确性与完整性",
-          "文章面向外国入境中国游客，但网站定位为面向中国出境旅行者，存在受众错配",
-          "2026年签证政策可能仍属推测性内容，缺乏官方来源引用",
-          "叙事性开头虽吸引人，但可能延迟读者获取核心实用信息",
-          "缺少具体免签国家列表、停留天数、适用口岸等关键细节的可见证据",
-          "未提及免签政策的限制条件（如不可延期、不可转签等）"
+          "仅能看到引言部分，无法全面验证具体签证政策细节的准确性",
+          "叙事性开头（法国旅行者故事）虽引人入胜，但延迟了核心信息的呈现",
+          "标题中的'2026'可能让读者困惑——是预测性内容还是当前政策指南",
+          "引言中未提及具体免签国家列表、免签天数等关键数据",
+          "缺少官方政策来源引用，降低可信度",
+          "未说明免签政策的生效日期和有效期，时效性存疑"
         ],
         "improvements": [
-          "在开头段落后立即列出免签国家清单及对应政策要点",
-          "添加对比表格展示不同国家/地区的免签天数、适用口岸、停留限制",
-          "引用中国外交部或国家移民管理局的官方政策文件作为信息来源",
-          "增加实用板块：入境流程、海关申报、住宿登记、交通建议",
-          "补充FAQ部分解答常见疑问（如商务/旅游/过境免签的区别）",
-          "添加政策更新时间戳和来源链接以增强可信度",
-          "考虑增加中国出境签证政策对比内容以匹配网站目标受众"
+          "在引言后立即提供免签国家一览表（含免签天数、适用签证类型）",
+          "明确标注政策生效日期和最后更新日期",
+          "引用中国外交部或国家移民管理局等官方来源",
+          "增加免签入境的具体条件说明（如停留期限、是否可延期、是否可转签等）",
+          "添加常见问题解答（FAQ）板块，覆盖常见疑问",
+          "加入对比表格：免签 vs 落地签 vs 电子签的适用场景",
+          "在正文中嵌入关键词如'China visa-free policy 2026'、'visa-free countries China'等长尾词",
+          "增加实际案例或旅行者经验分享，增强实用性"
         ],
         "priority": "medium"
       }
@@ -1039,7 +1046,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
       "publish_date": "2026-07-16",
       "last_updated": "2026-07-16",
-      "word_count": 2626,
+      "word_count": 2641,
       "reading_time": 13,
       "quality_scores": {
         "depth": 90,
@@ -1090,29 +1097,30 @@
       "llm_evaluation": {
         "scores": {
           "accuracy": 75,
-          "freshness": 75,
-          "practicality": 72,
-          "depth": 62,
-          "readability": 82,
-          "seo_friendliness": 78
+          "freshness": 70,
+          "practicality": 40,
+          "depth": 45,
+          "readability": 72,
+          "seo_friendliness": 75
         },
-        "overall_score": 74,
+        "overall_score": 59,
         "issues": [
-          "可见内容以引言为主，缺乏具体操作步骤和截图指引",
-          "未提供票价区间、座位等级对比等关键实用数据",
-          "Didi 部分在可见范围内未展开，标题承诺与内容覆盖不匹配",
-          "存在软性广告植入（esim 推荐），可能影响读者对客观性的信任",
-          "缺少常见陷阱提示（如12306实名验证、抢票技巧、退改签规则）"
+          "受众严重错配：网站面向中国出境旅行者，但本文内容针对入境中国的外国游客，核心受众不匹配",
+          "内容截断严重，仅展示前500字，无法评估完整信息量和深度",
+          "正文中嵌入了软推荐（esim partner），影响内容专业性和读者信任度",
+          "标题含'2026'但正文未体现前瞻性数据或政策更新，时效性存疑",
+          "缺乏具体价格、时间、操作步骤等可执行细节，实用性不足",
+          "未提及中国出境旅行者真正关心的内容（如国际航班、境外交通、签证相关交通等）"
         ],
         "improvements": [
-          "增加12306注册与购票的分步图文教程，降低首次用户门槛",
-          "补充高铁/动车/普速的票价区间与座位舒适度对比表",
-          "加入Didi叫车的完整流程（注册、支付、常用目的地预估价）",
-          "提供替代方案：携程、飞猪、线下窗口等购票渠道对比",
-          "增加时效性信息：2026年铁路调图、新线路开通等最新动态",
-          "在软性推荐处明确标注赞助内容，保持透明度"
+          "重新定位受众：将内容改为中国出境旅行者的交通指南（如国际航班值机、境外打车软件、跨境交通等）",
+          "移除或弱化软推荐嵌入，保持内容客观中立",
+          "补充具体数据：票价区间、耗时对比、实际操作截图说明",
+          "增加出境场景相关内容：如境外使用DiDi的替代方案（Uber、Grab等）、国际列车（如中欧班列）等",
+          "完善内容深度：加入常见问题FAQ、避坑指南、真实用户案例",
+          "标题优化：去除'2026'或确保正文有对应的前瞻性内容支撑"
         ],
-        "priority": "medium"
+        "priority": "high"
       }
     },
     {
@@ -1123,7 +1131,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md",
       "publish_date": "2026-05-27",
       "last_updated": "2026-08-24",
-      "word_count": 1677,
+      "word_count": 1693,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -1144,7 +1152,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 16,
+      "internal_link_count": 18,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": false,
@@ -1166,33 +1174,32 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 62,
-          "freshness": 70,
-          "practicality": 60,
-          "depth": 50,
-          "readability": 68,
-          "seo_friendliness": 75
+          "accuracy": 55,
+          "freshness": 75,
+          "practicality": 50,
+          "depth": 35,
+          "readability": 40,
+          "seo_friendliness": 78
         },
-        "overall_score": 64,
+        "overall_score": 52,
         "issues": [
-          "语言与目标受众不匹配：网站面向中国出境旅行者，但文章为全英文，可能降低目标用户的可读性和信任度",
-          "软广告（SafetyWing保险推荐）出现在正文极早期位置，打断阅读节奏，影响用户体验",
-          "7天覆盖北京、西安、上海三座大城市，行程过于紧凑，缺乏深度游览的可行性",
-          "可见内容中缺少关键实用信息：签证要求、城际交通方式、预算估算、具体景点推荐等",
-          "内容深度不足：从可见部分看，缺乏独特见解或本地化经验，更像通用模板化攻略",
-          "标题中的'2026'虽体现时效性意图，但正文未展示具体2026年政策更新或变化说明"
+          "正文中暴露了模板占位符代码（{{< soft-recommend ... >}}），严重影响专业性和可信度",
+          "前500字内几乎没有实质性行程内容，仅有一个软推荐广告块",
+          "软推荐广告放置位置过早（文章开头即出现），打断阅读体验",
+          "7天覆盖北京、西安、上海三座城市节奏过于紧凑，可能缺乏可行性论证",
+          "可见内容中缺少具体实用信息（交通方式、预算、时间安排等）",
+          "编辑团队署名格式不够规范，'Research-based China travel guides'表述模糊"
         ],
         "improvements": [
-          "提供中英双语版本或至少添加中文摘要，匹配目标受众语言习惯",
-          "将软广告移至文末或侧边栏，减少对核心内容的干扰",
-          "增加城际交通详细指南（高铁班次、时长、票价）和每日预算参考",
-          "为每个城市分配更合理的天数，或建议精简至2个城市以保证深度",
-          "补充签证政策最新变化、入境流程、支付/网络等实用信息",
-          "加入具体景点推荐、开放时间、门票价格等可操作细节",
-          "增加用户评价或真实旅行体验引用，提升可信度和深度",
-          "在正文中明确标注信息更新日期，增强时效性可信度"
+          "移除所有模板代码残留，确保渲染后内容干净",
+          "将软推荐广告移至文章中段或末尾，避免开头即出现商业内容",
+          "在开头增加行程概览表（每日城市、主要景点、交通方式），快速建立读者预期",
+          "增加可行性分析：说明7天3城的交通衔接方案（高铁时长、航班选择）",
+          "补充实用细节：每日预算参考、门票价格、最佳游览时段等",
+          "添加'为什么选择这3座城市'的简短论证，增强内容深度",
+          "优化编辑署名，明确团队资质或研究方法论"
         ],
-        "priority": "medium"
+        "priority": "high"
       }
     },
     {
@@ -1203,7 +1210,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-20-travel-safety-guide.md",
       "publish_date": "2026-07-20",
       "last_updated": "2026-09-13",
-      "word_count": 2401,
+      "word_count": 2437,
       "reading_time": 12,
       "quality_scores": {
         "depth": 80,
@@ -1224,7 +1231,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 12,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": true,
@@ -1253,7 +1260,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
       "publish_date": "2026-06-30",
       "last_updated": "2026-06-30",
-      "word_count": 2971,
+      "word_count": 2990,
       "reading_time": 14,
       "quality_scores": {
         "depth": 90,
@@ -1262,9 +1269,9 @@
         "readability": 85,
         "multimedia": 75,
         "engagement": 100,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 82.85714285714286,
+      "overall_score": 80.71428571428571,
       "quality_status": "excellent",
       "impressions_28d": 20,
       "clicks_28d": 0,
@@ -1274,7 +1281,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 14,
+      "internal_link_count": 16,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": true,
@@ -1303,7 +1310,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/alipay-wechat-pay-foreigners-guide.md",
       "publish_date": "2026-05-19",
       "last_updated": "2026-08-24",
-      "word_count": 1092,
+      "word_count": 1128,
       "reading_time": 5,
       "quality_scores": {
         "depth": 60,
@@ -1324,7 +1331,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 15,
+      "internal_link_count": 17,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -1349,28 +1356,30 @@
       ],
       "llm_evaluation": {
         "scores": {
-          "accuracy": 72,
-          "freshness": 85,
-          "practicality": 68,
-          "depth": 62,
-          "readability": 88,
-          "seo_friendliness": 85
+          "accuracy": 65,
+          "freshness": 70,
+          "practicality": 60,
+          "depth": 55,
+          "readability": 80,
+          "seo_friendliness": 82
         },
-        "overall_score": 76,
+        "overall_score": 68,
         "issues": [
-          "仅可见开头500字，无法全面评估信息准确性与内容深度",
-          "开篇以幽默轶事切入，虽引人入胜但延迟了实用信息的呈现",
-          "语气过于口语化（如'real talk'、'throw their phone into the nearest river'），可能不适合所有读者",
-          "可见部分缺乏具体操作步骤、截图或数据支撑",
-          "未展示文章是否包含分步教程、常见问题解答等核心实用模块"
+          "仅提供了文章开头部分，无法全面评估信息准确性和内容深度",
+          "无法验证具体的支付设置步骤、限额政策等技术细节是否准确",
+          "语气过于口语化（如'real talk'、'throw their phone into the nearest river'），可能不适合所有读者群体",
+          "提供的摘录中缺乏具体的操作步骤或实用指南内容",
+          "未提及具体的绑定银行卡流程、限额、手续费等关键信息",
+          "未涵盖微信支付与支付宝的功能差异对比"
         ],
         "improvements": [
-          "在开篇轶事后立即插入'快速上手'摘要框，提供3-5步核心操作指引",
-          "增加分步截图或GIF动图，降低外国用户的学习门槛",
-          "补充Alipay与WeChat Pay的功能对比表格，帮助读者快速选择",
-          "加入2026年最新政策更新（如外卡绑定限额、实名认证变化等）的具体说明",
-          "在文章开头添加目录（Table of Contents），提升长文导航体验",
-          "增加真实用户案例或视频链接，增强可信度与代入感"
+          "增加详细的分步设置指南，配合截图或图示说明",
+          "添加常见问题排查（Troubleshooting）板块，覆盖绑定失败、限额不足等场景",
+          "补充替代支付方案（现金、国际信用卡、银联卡）的适用场景",
+          "按使用场景分类提供建议（菜市场、餐厅、出租车、酒店、景区等）",
+          "加入支付宝与微信支付的功能对比表格，帮助读者选择",
+          "注明信息来源和最后更新日期，增强可信度",
+          "适当收敛过于随意的语气，保持专业性与可读性的平衡"
         ],
         "priority": "medium"
       }
@@ -1383,7 +1392,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
       "publish_date": "2026-05-23",
       "last_updated": "2026-09-16",
-      "word_count": 1728,
+      "word_count": 1750,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -1404,7 +1413,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 14,
+      "internal_link_count": 15,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -1438,7 +1447,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/internet-connection-china-esim-vpn-guide.md",
       "publish_date": "2026-05-19",
       "last_updated": "2026-08-24",
-      "word_count": 1702,
+      "word_count": 1763,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -1459,7 +1468,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 13,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -1493,7 +1502,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
       "publish_date": "2026-07-12",
       "last_updated": "2026-09-17",
-      "word_count": 1612,
+      "word_count": 1648,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -1514,7 +1523,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 9,
+      "internal_link_count": 11,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1539,14 +1548,73 @@
       "llm_evaluation": {}
     },
     {
+      "id": "content_kung-fu-and-martial-",
+      "title": "Kung Fu And Martial Arts In China: Where To See And Train Guide",
+      "slug": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide",
+      "url": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/",
+      "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
+      "publish_date": "2026-08-23",
+      "last_updated": "2026-08-23",
+      "word_count": 1532,
+      "reading_time": 7,
+      "quality_scores": {
+        "depth": 70,
+        "structure": 50,
+        "seo": 30,
+        "readability": 85,
+        "multimedia": 30,
+        "engagement": 60,
+        "freshness": 75
+      },
+      "overall_score": 57.142857142857146,
+      "quality_status": "average",
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "position_28d": 0.0,
+      "indexed_status": "unknown",
+      "has_faq": false,
+      "has_toc": false,
+      "has_internal_links": false,
+      "internal_link_count": 0,
+      "has_affiliate_links": false,
+      "affiliate_link_count": 0,
+      "has_images": false,
+      "image_count": 0,
+      "has_video": false,
+      "issues": [
+        "缺少FAQ区块",
+        "长文章缺少目录导航",
+        "内链不足（仅0条）",
+        "页面未被Google索引",
+        "文章无图片",
+        "缺少联盟链接和CTA"
+      ],
+      "recommendations": [
+        "添加3-5个常见问题及答案，提升SEO和用户体验",
+        "添加目录（TOC），方便用户快速导航",
+        "增加3-5条相关文章内链，提升用户停留和SEO",
+        "提交GSC索引请求，检查是否有索引错误",
+        "添加2-3张高质量相关图片，提升视觉体验和SEO",
+        "添加相关的联盟推荐区块和CTA按钮"
+      ],
+      "optimization_priority": "high",
+      "estimated_impact": "高 - 预计可显著提升流量和转化",
+      "multimodal_recommendations": [
+        "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+        "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流"
+      ],
+      "llm_evaluation": {}
+    },
+    {
       "id": "content_china-business-trave",
       "title": "Traveling To China For Business: Meetings, Dining &",
       "slug": "china-business-travel-guide-meetings-dining-and-networking",
       "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md",
       "publish_date": "2026-08-30",
-      "last_updated": "2026-09-27",
-      "word_count": 1906,
+      "last_updated": "2026-10-04",
+      "word_count": 1984,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -1567,7 +1635,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 15,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": true,
@@ -1596,7 +1664,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
       "publish_date": "2026-08-09",
       "last_updated": "2026-08-09",
-      "word_count": 1646,
+      "word_count": 1698,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -1617,7 +1685,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 6,
+      "internal_link_count": 10,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1646,8 +1714,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md",
       "publish_date": "2026-05-29",
       "last_updated": "2026-08-24",
-      "word_count": 1393,
-      "reading_time": 6,
+      "word_count": 1408,
+      "reading_time": 7,
       "quality_scores": {
         "depth": 60,
         "structure": 90,
@@ -1696,7 +1764,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md",
       "publish_date": "2026-06-22",
       "last_updated": "2026-06-22",
-      "word_count": 2107,
+      "word_count": 2129,
       "reading_time": 10,
       "quality_scores": {
         "depth": 80,
@@ -1717,7 +1785,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 11,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1748,7 +1816,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
       "publish_date": "2026-06-22",
       "last_updated": "2026-06-22",
-      "word_count": 2012,
+      "word_count": 2036,
       "reading_time": 10,
       "quality_scores": {
         "depth": 80,
@@ -1769,7 +1837,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 19,
+      "internal_link_count": 20,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1796,7 +1864,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-16-food-recommendations-guide.md",
       "publish_date": "2026-07-16",
       "last_updated": "2026-07-16",
-      "word_count": 1940,
+      "word_count": 1977,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -1817,7 +1885,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 13,
+      "internal_link_count": 15,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1848,18 +1916,18 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md",
       "publish_date": "2026-08-31",
       "last_updated": "2026-08-31",
-      "word_count": 1984,
-      "reading_time": 9,
+      "word_count": 2015,
+      "reading_time": 10,
       "quality_scores": {
-        "depth": 70,
+        "depth": 80,
         "structure": 75,
         "seo": 30,
         "readability": 85,
         "multimedia": 30,
         "engagement": 80,
-        "freshness": 90
+        "freshness": 75
       },
-      "overall_score": 65.71428571428571,
+      "overall_score": 65.0,
       "quality_status": "good",
       "impressions_28d": 0,
       "clicks_28d": 0,
@@ -1869,7 +1937,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 3,
+      "internal_link_count": 5,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": false,
@@ -1903,7 +1971,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
       "publish_date": "2026-07-13",
       "last_updated": "2026-07-13",
-      "word_count": 1504,
+      "word_count": 1540,
       "reading_time": 7,
       "quality_scores": {
         "depth": 70,
@@ -1924,7 +1992,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 9,
+      "internal_link_count": 11,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -1957,7 +2025,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide.md",
       "publish_date": "2026-05-24",
       "last_updated": "2026-08-24",
-      "word_count": 1331,
+      "word_count": 1346,
       "reading_time": 6,
       "quality_scores": {
         "depth": 60,
@@ -2008,8 +2076,8 @@
       "url": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
       "publish_date": "2026-07-05",
-      "last_updated": "2026-09-27",
-      "word_count": 3204,
+      "last_updated": "2026-10-04",
+      "word_count": 3202,
       "reading_time": 16,
       "quality_scores": {
         "depth": 90,
@@ -2061,7 +2129,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-14-transportation-guide-guide.md",
       "publish_date": "2026-07-14",
       "last_updated": "2026-07-14",
-      "word_count": 1670,
+      "word_count": 1711,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -2082,7 +2150,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 4,
+      "internal_link_count": 7,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": true,
@@ -2114,7 +2182,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
       "publish_date": "2026-07-01",
       "last_updated": "2026-07-01",
-      "word_count": 1913,
+      "word_count": 1940,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -2123,9 +2191,9 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 60,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 68.57142857142857,
+      "overall_score": 66.42857142857143,
       "quality_status": "good",
       "impressions_28d": 6,
       "clicks_28d": 0,
@@ -2135,7 +2203,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 17,
+      "internal_link_count": 18,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2168,7 +2236,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md",
       "publish_date": "2026-07-31",
       "last_updated": "2026-07-31",
-      "word_count": 2867,
+      "word_count": 2917,
       "reading_time": 14,
       "quality_scores": {
         "depth": 90,
@@ -2189,7 +2257,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 13,
+      "internal_link_count": 17,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2220,7 +2288,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
       "publish_date": "2026-07-03",
       "last_updated": "2026-07-03",
-      "word_count": 2776,
+      "word_count": 2789,
       "reading_time": 13,
       "quality_scores": {
         "depth": 90,
@@ -2229,9 +2297,9 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 100,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 82.14285714285714,
+      "overall_score": 80.0,
       "quality_status": "excellent",
       "impressions_28d": 24,
       "clicks_28d": 0,
@@ -2241,7 +2309,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 19,
+      "internal_link_count": 20,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": true,
@@ -2268,8 +2336,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
       "publish_date": "2026-06-30",
       "last_updated": "2026-06-30",
-      "word_count": 2787,
-      "reading_time": 13,
+      "word_count": 2802,
+      "reading_time": 14,
       "quality_scores": {
         "depth": 90,
         "structure": 65,
@@ -2277,9 +2345,9 @@
         "readability": 85,
         "multimedia": 75,
         "engagement": 60,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 76.42857142857143,
+      "overall_score": 74.28571428571429,
       "quality_status": "good",
       "impressions_28d": 1,
       "clicks_28d": 0,
@@ -2313,6 +2381,64 @@
       "llm_evaluation": {}
     },
     {
+      "id": "content_best-china-itinerari",
+      "title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "slug": "best-china-itineraries-for-10-days-three-routes-compared",
+      "url": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/best-china-itineraries-for-10-days-three-routes-compared.md",
+      "publish_date": "2026-08-27",
+      "last_updated": "2026-08-27",
+      "word_count": 1835,
+      "reading_time": 9,
+      "quality_scores": {
+        "depth": 70,
+        "structure": 65,
+        "seo": 30,
+        "readability": 85,
+        "multimedia": 30,
+        "engagement": 60,
+        "freshness": 75
+      },
+      "overall_score": 59.285714285714285,
+      "quality_status": "average",
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "position_28d": 0.0,
+      "indexed_status": "unknown",
+      "has_faq": false,
+      "has_toc": false,
+      "has_internal_links": true,
+      "internal_link_count": 7,
+      "has_affiliate_links": false,
+      "affiliate_link_count": 0,
+      "has_images": false,
+      "image_count": 0,
+      "has_video": false,
+      "issues": [
+        "缺少FAQ区块",
+        "长文章缺少目录导航",
+        "页面未被Google索引",
+        "文章无图片",
+        "缺少联盟链接和CTA"
+      ],
+      "recommendations": [
+        "添加3-5个常见问题及答案，提升SEO和用户体验",
+        "添加目录（TOC），方便用户快速导航",
+        "提交GSC索引请求，检查是否有索引错误",
+        "添加2-3张高质量相关图片，提升视觉体验和SEO",
+        "添加相关的联盟推荐区块和CTA按钮"
+      ],
+      "optimization_priority": "high",
+      "estimated_impact": "高 - 预计可显著提升流量和转化",
+      "multimodal_recommendations": [
+        "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+        "创建短视频脚本（60秒），展示行程亮点，用于YouTube Shorts/TikTok",
+        "创建Instagram轮播图（Carousel），每项一张图，提升互动"
+      ],
+      "llm_evaluation": {}
+    },
+    {
       "id": "content_best-travel-insuranc",
       "title": "Top-rated Travel Insurance for China 2026",
       "slug": "best-travel-insurance-china",
@@ -2320,7 +2446,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/best-travel-insurance-china.md",
       "publish_date": "2026-06-21",
       "last_updated": "2026-06-21",
-      "word_count": 1525,
+      "word_count": 1540,
       "reading_time": 7,
       "quality_scores": {
         "depth": 70,
@@ -2373,7 +2499,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
       "publish_date": "2026-07-06",
       "last_updated": "2026-07-06",
-      "word_count": 2767,
+      "word_count": 2762,
       "reading_time": 13,
       "quality_scores": {
         "depth": 90,
@@ -2382,10 +2508,10 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 60,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 66.42857142857143,
-      "quality_status": "good",
+      "overall_score": 64.28571428571429,
+      "quality_status": "average",
       "impressions_28d": 0,
       "clicks_28d": 0,
       "ctr_28d": 0.0,
@@ -2394,7 +2520,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 22,
+      "internal_link_count": 24,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2412,8 +2538,8 @@
         "提交GSC索引请求，检查是否有索引错误",
         "添加相关的联盟推荐区块和CTA按钮"
       ],
-      "optimization_priority": "medium",
-      "estimated_impact": "中 - 预计可提升流量和用户体验",
+      "optimization_priority": "high",
+      "estimated_impact": "高 - 预计可显著提升流量和转化",
       "multimodal_recommendations": [
         "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流"
       ],
@@ -2427,7 +2553,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-05-china-family-travel-tips-a-californians-guide.md",
       "publish_date": "2026-08-05",
       "last_updated": "2026-08-05",
-      "word_count": 1832,
+      "word_count": 1863,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -2448,7 +2574,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 2,
+      "internal_link_count": 4,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2457,13 +2583,11 @@
       "issues": [
         "缺少FAQ区块",
         "长文章缺少目录导航",
-        "内链不足（仅2条）",
         "缺少联盟链接和CTA"
       ],
       "recommendations": [
         "添加3-5个常见问题及答案，提升SEO和用户体验",
         "添加目录（TOC），方便用户快速导航",
-        "增加3-5条相关文章内链，提升用户停留和SEO",
         "添加相关的联盟推荐区块和CTA按钮"
       ],
       "optimization_priority": "low",
@@ -2481,7 +2605,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-21-cultural-etiquette-guide.md",
       "publish_date": "2026-07-21",
       "last_updated": "2026-07-21",
-      "word_count": 1218,
+      "word_count": 1259,
       "reading_time": 6,
       "quality_scores": {
         "depth": 60,
@@ -2502,7 +2626,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 2,
+      "internal_link_count": 5,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2511,13 +2635,11 @@
       "issues": [
         "内容深度一般（<1500词）",
         "缺少FAQ区块",
-        "内链不足（仅2条）",
         "缺少联盟链接和CTA"
       ],
       "recommendations": [
         "扩充内容至2000+词，增加更多实用细节",
         "添加3-5个常见问题及答案，提升SEO和用户体验",
-        "增加3-5条相关文章内链，提升用户停留和SEO",
         "添加相关的联盟推荐区块和CTA按钮"
       ],
       "optimization_priority": "low",
@@ -2533,7 +2655,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md",
       "publish_date": "2026-08-10",
       "last_updated": "2026-08-10",
-      "word_count": 1469,
+      "word_count": 1484,
       "reading_time": 7,
       "quality_scores": {
         "depth": 60,
@@ -2583,8 +2705,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md",
       "publish_date": "2026-06-19",
       "last_updated": "2026-06-19",
-      "word_count": 2599,
-      "reading_time": 12,
+      "word_count": 2623,
+      "reading_time": 13,
       "quality_scores": {
         "depth": 90,
         "structure": 65,
@@ -2604,7 +2726,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 17,
+      "internal_link_count": 18,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2637,7 +2759,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-27-accommodation-tips-guide.md",
       "publish_date": "2026-07-27",
       "last_updated": "2026-07-27",
-      "word_count": 1888,
+      "word_count": 1933,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -2658,7 +2780,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 11,
+      "internal_link_count": 14,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": true,
@@ -2689,10 +2811,10 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/144-hour-visa-free-transit-guide.md",
       "publish_date": "2026-05-19",
       "last_updated": "2026-09-15",
-      "word_count": 1986,
-      "reading_time": 9,
+      "word_count": 2025,
+      "reading_time": 10,
       "quality_scores": {
-        "depth": 70,
+        "depth": 80,
         "structure": 80,
         "seo": 65,
         "readability": 85,
@@ -2700,7 +2822,7 @@
         "engagement": 80,
         "freshness": 90
       },
-      "overall_score": 71.42857142857143,
+      "overall_score": 72.85714285714286,
       "quality_status": "good",
       "impressions_28d": 107,
       "clicks_28d": 0,
@@ -2710,7 +2832,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 20,
+      "internal_link_count": 22,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -2747,10 +2869,10 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses.md",
       "publish_date": "2026-08-11",
       "last_updated": "2026-08-11",
-      "word_count": 2478,
+      "word_count": 2500,
       "reading_time": 12,
       "quality_scores": {
-        "depth": 80,
+        "depth": 90,
         "structure": 65,
         "seo": 60,
         "readability": 85,
@@ -2758,7 +2880,7 @@
         "engagement": 60,
         "freshness": 75
       },
-      "overall_score": 71.42857142857143,
+      "overall_score": 72.85714285714286,
       "quality_status": "good",
       "impressions_28d": 0,
       "clicks_28d": 0,
@@ -2768,7 +2890,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 1,
+      "internal_link_count": 2,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2777,7 +2899,7 @@
       "issues": [
         "缺少FAQ区块",
         "长文章缺少目录导航",
-        "内链不足（仅1条）",
+        "内链不足（仅2条）",
         "缺少联盟链接和CTA"
       ],
       "recommendations": [
@@ -2799,8 +2921,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
       "publish_date": "2026-07-02",
       "last_updated": "2026-07-02",
-      "word_count": 2796,
-      "reading_time": 13,
+      "word_count": 2823,
+      "reading_time": 14,
       "quality_scores": {
         "depth": 90,
         "structure": 80,
@@ -2808,9 +2930,9 @@
         "readability": 85,
         "multimedia": 60,
         "engagement": 80,
-        "freshness": 75
+        "freshness": 60
       },
-      "overall_score": 71.42857142857143,
+      "overall_score": 69.28571428571429,
       "quality_status": "good",
       "impressions_28d": 1,
       "clicks_28d": 0,
@@ -2820,7 +2942,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 21,
+      "internal_link_count": 22,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2851,7 +2973,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
       "publish_date": "2026-08-01",
       "last_updated": "2026-08-01",
-      "word_count": 3221,
+      "word_count": 3271,
       "reading_time": 16,
       "quality_scores": {
         "depth": 90,
@@ -2872,7 +2994,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 16,
+      "internal_link_count": 20,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2907,7 +3029,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-03-chinese-language-survival-phrases-guide.md",
       "publish_date": "2026-08-03",
       "last_updated": "2026-08-03",
-      "word_count": 2420,
+      "word_count": 2454,
       "reading_time": 12,
       "quality_scores": {
         "depth": 80,
@@ -2928,7 +3050,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 12,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -2961,7 +3083,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-27-how-to-survive-chinese-train-station.md",
       "publish_date": "2026-05-23",
       "last_updated": "2026-08-24",
-      "word_count": 1472,
+      "word_count": 1475,
       "reading_time": 7,
       "quality_scores": {
         "depth": 60,
@@ -3015,7 +3137,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/china-transportation-card-guide.md",
       "publish_date": "2026-08-16",
       "last_updated": "2026-08-24",
-      "word_count": 1547,
+      "word_count": 1596,
       "reading_time": 7,
       "quality_scores": {
         "depth": 70,
@@ -3036,7 +3158,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 14,
+      "internal_link_count": 18,
       "has_affiliate_links": true,
       "affiliate_link_count": 2,
       "has_images": false,
@@ -3069,10 +3191,10 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
       "publish_date": "2026-07-23",
       "last_updated": "2026-07-23",
-      "word_count": 1995,
-      "reading_time": 9,
+      "word_count": 2036,
+      "reading_time": 10,
       "quality_scores": {
-        "depth": 70,
+        "depth": 80,
         "structure": 65,
         "seo": 30,
         "readability": 85,
@@ -3080,8 +3202,8 @@
         "engagement": 60,
         "freshness": 75
       },
-      "overall_score": 63.57142857142857,
-      "quality_status": "average",
+      "overall_score": 65.0,
+      "quality_status": "good",
       "impressions_28d": 0,
       "clicks_28d": 0,
       "ctr_28d": 0.0,
@@ -3090,7 +3212,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 3,
+      "internal_link_count": 6,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -3108,8 +3230,8 @@
         "提交GSC索引请求，检查是否有索引错误",
         "添加相关的联盟推荐区块和CTA按钮"
       ],
-      "optimization_priority": "high",
-      "estimated_impact": "高 - 预计可显著提升流量和转化",
+      "optimization_priority": "medium",
+      "estimated_impact": "中 - 预计可提升流量和用户体验",
       "multimodal_recommendations": [
         "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流"
       ],
@@ -3123,8 +3245,8 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
       "publish_date": "2026-09-21",
       "last_updated": "2026-09-21",
-      "word_count": 1565,
-      "reading_time": 7,
+      "word_count": 1604,
+      "reading_time": 8,
       "quality_scores": {
         "depth": 70,
         "structure": 65,
@@ -3144,7 +3266,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 2,
+      "internal_link_count": 5,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -3153,14 +3275,12 @@
       "issues": [
         "缺少FAQ区块",
         "长文章缺少目录导航",
-        "内链不足（仅2条）",
         "页面未被Google索引",
         "缺少联盟链接和CTA"
       ],
       "recommendations": [
         "添加3-5个常见问题及答案，提升SEO和用户体验",
         "添加目录（TOC），方便用户快速导航",
-        "增加3-5条相关文章内链，提升用户停留和SEO",
         "提交GSC索引请求，检查是否有索引错误",
         "添加相关的联盟推荐区块和CTA按钮"
       ],
@@ -3179,7 +3299,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/alipay-for-foreigners-guide.md",
       "publish_date": "2026-08-16",
       "last_updated": "2026-08-24",
-      "word_count": 1503,
+      "word_count": 1528,
       "reading_time": 7,
       "quality_scores": {
         "depth": 70,
@@ -3200,7 +3320,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 11,
+      "internal_link_count": 14,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -3234,7 +3354,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/western-sichuan-overland-camping-route.md",
       "publish_date": "2026-06-02",
       "last_updated": "2026-09-14",
-      "word_count": 1763,
+      "word_count": 1785,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -3255,7 +3375,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 10,
+      "internal_link_count": 11,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -3286,9 +3406,9 @@
       "url": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
       "publish_date": "2026-06-02",
-      "last_updated": "2026-09-27",
-      "word_count": 1393,
-      "reading_time": 6,
+      "last_updated": "2026-10-04",
+      "word_count": 1412,
+      "reading_time": 7,
       "quality_scores": {
         "depth": 60,
         "structure": 90,
@@ -3308,7 +3428,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 17,
+      "internal_link_count": 18,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": false,
@@ -3342,7 +3462,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
       "publish_date": "2026-06-02",
       "last_updated": "2026-08-24",
-      "word_count": 1710,
+      "word_count": 1719,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -3363,7 +3483,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 17,
+      "internal_link_count": 18,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -3398,7 +3518,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
       "publish_date": "2026-08-12",
       "last_updated": "2026-08-12",
-      "word_count": 1815,
+      "word_count": 1852,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -3419,7 +3539,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 1,
+      "internal_link_count": 4,
       "has_affiliate_links": true,
       "affiliate_link_count": 1,
       "has_images": true,
@@ -3428,13 +3548,11 @@
       "issues": [
         "缺少FAQ区块",
         "长文章缺少目录导航",
-        "内链不足（仅1条）",
         "页面未被Google索引"
       ],
       "recommendations": [
         "添加3-5个常见问题及答案，提升SEO和用户体验",
         "添加目录（TOC），方便用户快速导航",
-        "增加3-5条相关文章内链，提升用户停留和SEO",
         "提交GSC索引请求，检查是否有索引错误"
       ],
       "optimization_priority": "low",
@@ -3452,7 +3570,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
       "publish_date": "2026-07-07",
       "last_updated": "2026-07-07",
-      "word_count": 2088,
+      "word_count": 2129,
       "reading_time": 10,
       "quality_scores": {
         "depth": 80,
@@ -3473,7 +3591,7 @@
       "has_faq": false,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 3,
+      "internal_link_count": 6,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -3506,7 +3624,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
       "publish_date": "2026-07-10",
       "last_updated": "2026-09-14",
-      "word_count": 2094,
+      "word_count": 2135,
       "reading_time": 10,
       "quality_scores": {
         "depth": 80,
@@ -3527,7 +3645,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 6,
+      "internal_link_count": 9,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
@@ -3556,7 +3674,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
       "publish_date": "2026-07-16",
       "last_updated": "2026-07-16",
-      "word_count": 1917,
+      "word_count": 1932,
       "reading_time": 9,
       "quality_scores": {
         "depth": 70,
@@ -3605,6 +3723,61 @@
       "llm_evaluation": {}
     },
     {
+      "id": "content_china-solo-travel-gu",
+      "title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "slug": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "url": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
+      "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/china-solo-travel-guide-safety-hostels-and-making-friends.md",
+      "publish_date": "2026-08-23",
+      "last_updated": "2026-08-23",
+      "word_count": 2045,
+      "reading_time": 10,
+      "quality_scores": {
+        "depth": 80,
+        "structure": 75,
+        "seo": 30,
+        "readability": 85,
+        "multimedia": 30,
+        "engagement": 60,
+        "freshness": 75
+      },
+      "overall_score": 62.142857142857146,
+      "quality_status": "average",
+      "impressions_28d": 0,
+      "clicks_28d": 0,
+      "ctr_28d": 0.0,
+      "position_28d": 0.0,
+      "indexed_status": "unknown",
+      "has_faq": false,
+      "has_toc": false,
+      "has_internal_links": true,
+      "internal_link_count": 4,
+      "has_affiliate_links": true,
+      "affiliate_link_count": 1,
+      "has_images": false,
+      "image_count": 0,
+      "has_video": false,
+      "issues": [
+        "缺少FAQ区块",
+        "长文章缺少目录导航",
+        "页面未被Google索引",
+        "文章无图片"
+      ],
+      "recommendations": [
+        "添加3-5个常见问题及答案，提升SEO和用户体验",
+        "添加目录（TOC），方便用户快速导航",
+        "提交GSC索引请求，检查是否有索引错误",
+        "添加2-3张高质量相关图片，提升视觉体验和SEO"
+      ],
+      "optimization_priority": "medium",
+      "estimated_impact": "中 - 预计可提升流量和用户体验",
+      "multimodal_recommendations": [
+        "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+        "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流"
+      ],
+      "llm_evaluation": {}
+    },
+    {
       "id": "content_how-to-use-wechat-pa",
       "title": "Can Foreigners Use WeChat Pay in China? 2026",
       "slug": "how-to-use-wechat-pay-as-a-foreigner",
@@ -3612,7 +3785,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md",
       "publish_date": "2026-05-22",
       "last_updated": "2026-08-24",
-      "word_count": 1672,
+      "word_count": 1737,
       "reading_time": 8,
       "quality_scores": {
         "depth": 70,
@@ -3633,7 +3806,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 14,
+      "internal_link_count": 17,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": false,
@@ -3669,7 +3842,7 @@
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md",
       "publish_date": "2026-09-08",
       "last_updated": "2026-09-08",
-      "word_count": 3300,
+      "word_count": 3315,
       "reading_time": 16,
       "quality_scores": {
         "depth": 90,
@@ -3722,8 +3895,8 @@
       "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
       "file_path": "/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "publish_date": "2026-08-01",
-      "last_updated": "2026-09-27",
-      "word_count": 2825,
+      "last_updated": "2026-10-04",
+      "word_count": 2879,
       "reading_time": 14,
       "quality_scores": {
         "depth": 90,
@@ -3744,7 +3917,7 @@
       "has_faq": true,
       "has_toc": false,
       "has_internal_links": true,
-      "internal_link_count": 20,
+      "internal_link_count": 24,
       "has_affiliate_links": false,
       "affiliate_link_count": 0,
       "has_images": true,
