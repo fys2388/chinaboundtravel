@@ -169,7 +169,7 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 
 
-- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
 
 
 - 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)

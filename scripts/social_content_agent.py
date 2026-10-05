@@ -590,15 +590,24 @@ def llm_enhance(article: dict, ctype: str, platform: str, base_text: str) -> str
     except Exception as e:
         logger.debug("LLM analyzer unavailable: %s", e)
 
-    # 降级: 尝试原有 DeepSeek 直连方式
+    # 降级: 依次尝试 SenseNova → DeepSeek → Doubao 直连方式
     if not os.environ.get("SOCIAL_LLM_ENABLED", ""):
         return base_text
-    key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("DOUBAO_ARK_API_KEY")
-    if not key:
+    if os.environ.get("SENSENOVA_API_KEY"):
+        key = os.environ["SENSENOVA_API_KEY"]
+        endpoint = "https://token.sensenova.cn/v1/chat/completions"
+        model = os.environ.get("SENSENOVA_MODEL", "sensenova-6.8-flash-lite")
+    elif os.environ.get("DEEPSEEK_API_KEY"):
+        key = os.environ["DEEPSEEK_API_KEY"]
+        endpoint = os.environ.get("DEEPSEEK_ENDPOINT",
+                                   "https://api.deepseek.com/chat/completions")
+        model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+    elif os.environ.get("DOUBAO_ARK_API_KEY"):
+        key = os.environ["DOUBAO_ARK_API_KEY"]
+        endpoint = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+        model = "doubao-seed-character-251128"
+    else:
         return base_text
-    endpoint = os.environ.get("DEEPSEEK_ENDPOINT",
-                              "https://api.deepseek.com/chat/completions")
-    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
     try:
         prompt = (
             f"Rewrite this social caption for platform '{platform}' (type '{ctype}') "

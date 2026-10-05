@@ -146,7 +146,7 @@ For more China travel guides, explore our [7-Day China Itinerary](/posts/7-day-c
 - 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
-- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
 - 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---

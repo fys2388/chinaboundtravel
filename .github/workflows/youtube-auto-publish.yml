@@ -32,6 +32,7 @@ jobs:
           sudo apt-get install -y ffmpeg
       - name: Generate and upload video
         env:
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
           YOUTUBE_CLIENT_SECRETS: ${{ secrets.YOUTUBE_CLIENT_SECRETS }}
           YOUTUBE_OAUTH_REFRESH_TOKEN: ${{ secrets.YOUTUBE_OAUTH_REFRESH_TOKEN }}
         working-directory: chinaboundtravel_social_bot

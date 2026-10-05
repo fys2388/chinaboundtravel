@@ -12,6 +12,9 @@ http_client = httpx.Client(
 if Config.DOUBAO_ARK_API_KEY and Config.DOUBAO_MODEL:
     client = OpenAI(api_key=Config.DOUBAO_ARK_API_KEY, base_url=Config.DOUBAO_BASE_URL, http_client=http_client)
     MODEL_TO_USE = Config.DOUBAO_MODEL
+elif Config.SENSENOVA_API_KEY:
+    client = OpenAI(api_key=Config.SENSENOVA_API_KEY, base_url=Config.SENSENOVA_BASE_URL, http_client=http_client)
+    MODEL_TO_USE = Config.SENSENOVA_MODEL
 elif Config.DEEPSEEK_API_KEY:
     client = OpenAI(api_key=Config.DEEPSEEK_API_KEY, base_url=Config.DEEPSEEK_BASE_URL, http_client=http_client)
     MODEL_TO_USE = Config.DEEPSEEK_MODEL

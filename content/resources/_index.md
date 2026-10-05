@@ -67,7 +67,7 @@ Most VPNs fail behind China's firewall. Based on our editorial research, these p
 
 ---
 
-## 🏨 Hotels & Accommodation
+## 🏨 Hotels & Accommodation {#hotels-accommodation}
 
 ### Booking.com — Top-rated for China Hotels
 

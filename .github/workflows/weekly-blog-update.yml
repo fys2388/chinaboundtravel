@@ -1,4 +1,4 @@
-﻿name: Joran博文生成+双AI自动审核发布
+name: Joran博文生成+双AI自动审核发布
 
 on:
   schedule:
@@ -70,6 +70,8 @@ jobs:
       - name: Run Joran blog generator with Doubao AI
         env:
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+          AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: python chinaboundtravel_social_bot/joran_blog_generator.py
 

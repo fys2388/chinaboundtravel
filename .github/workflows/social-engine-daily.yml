@@ -1,4 +1,4 @@
-﻿name: Social Engine Daily (闭环)
+name: Social Engine Daily (闭环)
 
 on:
   schedule:
@@ -58,6 +58,7 @@ jobs:
 
       - name: Ensure inventory exists (增量补充新文章)
         env:
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           # 短链接服务：社媒分享链接使用短链接（保留 UTM 参数）
           SHORT_LINK_WORKER_URL: ${{ secrets.SHORT_LINK_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com' }}
@@ -116,6 +117,8 @@ jobs:
         timeout-minutes: 5
         env:
           IMAGE_GEN_ENABLED: "1"
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+          AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
           ARK_IMAGE_MODEL: ${{ vars.ARK_IMAGE_MODEL || '' }}
         run: |

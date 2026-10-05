@@ -30,7 +30,7 @@ Working remotely from China is an increasingly popular option for digital nomads
 
 This guide covers everything you need to know about working remotely in China, from the practical aspects like visas and transportation to the cultural differences and one of the popular places to work. It's built for European remote workers and digital nomads who want to experience life in China without sacrificing their careers or productivity.
 
-Before we dive in, a solid internet setup is non-negotiable for remote work in China. If you haven't already sorted out your connectivity, check out our [Internet & eSIM in China guide](/posts/internet-connection-china-esim-vpn-guide/) for the latest options, and if you need to access your usual work tools like Google Workspace or Slack, don't skip the [VPN setup section](/posts/internet-connection-china-esim-vpn-guide/#vpn-for-china). We'll talk more about both later in this guide.
+Before we dive in, a solid internet setup is non-negotiable for remote work in China. If you haven't already sorted out your connectivity, check out our [Internet & eSIM in China guide](/posts/internet-connection-china-esim-vpn-guide/) for the latest options, and if you need to access your usual work tools like Google Workspace or Slack, don't skip the [VPN setup section](/posts/internet-connection-china-esim-vpn-guide/). We'll talk more about both later in this guide.
 
 ![A modern office space in Chengdu with a view of the city skyline](/img/china-dest/body/external_f318fda5e4b0.jpg)
 
@@ -124,7 +124,7 @@ So what are you waiting for? Start planning your China remote work adventure tod
 - 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
-- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
 - 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
 
 ---

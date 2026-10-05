@@ -16,6 +16,11 @@ class Config:
     DOUBAO_MODEL = os.environ.get("DOUBAO_MODEL", "doubao-seed-character-251128")
     DOUBAO_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
     
+    # SenseNova（商汤日日新）— 统一降级首选
+    SENSENOVA_API_KEY = os.environ.get("SENSENOVA_API_KEY", "")
+    SENSENOVA_MODEL = os.environ.get("SENSENOVA_MODEL", "sensenova-6.8-flash-lite")
+    SENSENOVA_BASE_URL = "https://token.sensenova.cn/v1"
+    
     GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", "")
     GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
     

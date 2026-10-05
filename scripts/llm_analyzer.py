@@ -193,19 +193,39 @@ class LLMAnalyzer:
             self.available = False
             return
 
-        # 确定提供商
-        self.provider = provider or self.config.get("default_provider", "sensenova")
-        provider_config = self.config.get(self.provider)
-        if not provider_config:
-            logger.warning("Unknown LLM provider: %s", self.provider)
-            self.available = False
-            return
+        # 确定提供商 — 支持 fallback 降级链
+        # 优先尝试 preferred，失败则按 fallback_chain 顺序降级，
+        # 未配置 key 的 provider 统一降级到 SenseNova。
+        preferred = provider or self.config.get("default_provider", "sensenova")
+        fallback_chain = self.config.get("fallback_chain") or [preferred]
+
+        self.provider = None
+        provider_config = None
+        for candidate in [preferred] + [c for c in fallback_chain if c != preferred]:
+            pc = self.config.get(candidate)
+            if not pc:
+                continue
+            key_env = pc.get("api_key_env", "")
+            if os.environ.get(key_env):
+                self.provider = candidate
+                provider_config = pc
+                break
+
+        # 都没有 key → 标记不可用（仍记录 provider 信息用于日志）
+        if not self.provider:
+            self.provider = preferred
+            provider_config = self.config.get(preferred)
+            if not provider_config:
+                logger.warning("Unknown LLM provider: %s", self.provider)
+                self.available = False
+                return
 
         # 获取 API key
         api_key_env = provider_config.get("api_key_env", "")
         self.api_key = os.environ.get(api_key_env, "")
         if not self.api_key:
-            logger.info("LLM %s: %s not set, LLM calls disabled", self.provider, api_key_env)
+            logger.info("LLM %s: %s not set and no fallback available, LLM calls disabled",
+                        self.provider, api_key_env)
             self.available = False
             return
 

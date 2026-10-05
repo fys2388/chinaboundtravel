@@ -5,6 +5,8 @@
 
   "enabled": true,
   "default_provider": "sensenova",
+  "fallback_provider": "sensenova",
+  "fallback_chain": ["sensenova", "deepseek", "openai"],
 
   "sensenova": {
     "base_url": "https://token.sensenova.cn/v1",

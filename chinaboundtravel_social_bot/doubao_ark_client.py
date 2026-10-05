@@ -4,16 +4,28 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 
 class DoubaoArkClient:
-    """豆包 Ark API 客户端"""
+    """豆包 Ark API 客户端 — DOUBAO_ARK_API_KEY 未配置时自动降级到 SenseNova"""
     
     def __init__(self):
+        self.provider = "doubao"
         self.api_key = os.getenv("DOUBAO_ARK_API_KEY")
         if not self.api_key:
-            raise RuntimeError(
-                "DOUBAO_ARK_API_KEY is required but not configured"
-            )
-        self.url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
-        self.default_model = "doubao-seed-character-251128"
+            # 降级: 使用 SenseNova 作为统一 fallback
+            self.api_key = os.getenv("SENSENOVA_API_KEY")
+            if self.api_key:
+                self.provider = "sensenova"
+            else:
+                raise RuntimeError(
+                    "DOUBAO_ARK_API_KEY and SENSENOVA_API_KEY are both not configured"
+                )
+        
+        if self.provider == "sensenova":
+            self.url = "https://token.sensenova.cn/v1/chat/completions"
+            self.default_model = os.getenv("SENSENOVA_MODEL", "sensenova-6.8-flash-lite")
+        else:
+            self.url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+            self.default_model = "doubao-seed-character-251128"
+        
         self._call_count = 0
     
     @retry(stop=stop_after_attempt(2), wait=wait_exponential(multiplier=2, min=3, max=6))

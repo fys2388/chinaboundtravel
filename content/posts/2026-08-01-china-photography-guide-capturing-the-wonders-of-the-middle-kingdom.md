@@ -306,7 +306,7 @@ And if you're interested in learning more about China travel, be sure to check o
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 
 
-- 🔒 [VPN for China Guide](/posts/alipay-wechat-pay-foreigners-guide/#vpn)
+- 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
 
 
 - 🏥 [Top Travel Insurance for China](/posts/best-travel-insurance-china/)
