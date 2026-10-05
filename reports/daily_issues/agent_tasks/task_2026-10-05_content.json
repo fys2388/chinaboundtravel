@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-05_content",
   "created_at": "2026-10-05T01:00:32.155666+00:00",
-  "updated_at": "2026-10-05T02:00:34.102378",
+  "updated_at": "2026-10-05T02:30:30.613339",
   "target_date": "2026-10-05",
   "issue_count": 8,
   "severity_summary": {
@@ -74,7 +74,7 @@
       "detected_at": "2026-10-05T01:00:32.155382+00:00"
     },
     {
-      "id": "site_health-736658afe241eb50",
+      "id": "site_health-3f06ca047da6ec9c",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -91,7 +91,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-05T02:00:33.806371+00:00"
+      "detected_at": "2026-10-05T02:30:30.393002+00:00"
     },
     {
       "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
