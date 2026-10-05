@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-05T03:05:29.154535+00:00",
+  "generated_at": "2026-10-05T03:31:13.245092+00:00",
   "summary": {
-    "total": 11,
+    "total": 10,
     "P0": 0,
     "P1": 6,
-    "P2": 5,
+    "P2": 4,
     "by_source": {
       "content": 7,
-      "site_health": 3,
+      "site_health": 2,
       "visual": 1
     },
     "by_owner": {
       "content": 8,
       "engineering": 1,
-      "seo": 2
+      "seo": 1
     }
   },
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-09-21T07:08:04.572598+00:00",
+      "generated_at": "2026-10-05T03:31:10.026774+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -58,11 +58,11 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-10-04T16:20:10.223958+00:00",
-      "issues": 3,
+      "generated_at": "2026-10-05T03:05:29.321010+00:00",
+      "issues": 2,
       "P0": 0,
       "P1": 1,
-      "P2": 2
+      "P2": 1
     }
   },
   "issues": [
@@ -78,7 +78,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-media-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -92,7 +92,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T07:40:41.202787+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-media-china-solo-travel-guide-safety-hostels-and-making-friends.md",
@@ -106,7 +106,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -120,10 +120,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
-      "id": "site_health-5a1c22ceac7f2580",
+      "id": "site_health-7bc28a67cd1424f3",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -133,8 +133,8 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-05T03:05:29.154535+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "first_seen": "2026-10-05T03:31:13.245092+00:00",
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -148,7 +148,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -162,7 +162,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -176,7 +176,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T07:40:41.202787+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
       "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -190,10 +190,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     },
     {
-      "id": "site_health-4c952a7244088454",
+      "id": "site_health-24df4a6525a0066",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -203,22 +203,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-05T03:05:29.154535+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
-    },
-    {
-      "id": "site_health-192b66ed0ade71ec",
-      "severity": "P2",
-      "source": "site_health",
-      "type": "title_too_long",
-      "title": "title_too_long",
-      "page": "content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
-      "evidence": "Title过长(63字符，模板上限60): Kung Fu And Martial Arts In China: Where...",
-      "recommended_action": "Review and remediate the reported issue.",
-      "owner": "seo",
-      "status": "open",
-      "first_seen": "2026-10-05T03:05:29.154535+00:00",
-      "last_seen": "2026-10-05T03:05:29.154535+00:00"
+      "first_seen": "2026-10-05T03:31:13.245092+00:00",
+      "last_seen": "2026-10-05T03:31:13.245092+00:00"
     }
   ]
 }
