@@ -1,0 +1,80 @@
+{
+  "audit_date": "2026-10-05",
+  "audited_at": "2026-10-05T03:05:32.170666",
+  "score": {
+    "total_score": 75,
+    "max_score": 100,
+    "percentage": 75.0,
+    "stage_scores": {
+      "detection": 20,
+      "assignment": 0,
+      "execution": 25,
+      "writeback": 20,
+      "dashboard": 10
+    },
+    "grade": "B"
+  },
+  "audits": [
+    {
+      "stage": "detection",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "site_health_total": 2,
+        "site_health_file": "site_health_2026-10-05.json",
+        "daily_issues_count": 1
+      }
+    },
+    {
+      "stage": "assignment",
+      "status": "fail",
+      "issues": [
+        "1/1 个问题未分配"
+      ],
+      "details": {
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "assignment_rate": "0.0%",
+        "agent_tasks": 4
+      }
+    },
+    {
+      "stage": "execution",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "total_tasks": 4,
+        "completed": 0,
+        "pending": 0,
+        "failed": 0,
+        "partial": 4,
+        "total_issues": 12,
+        "resolved_issues": 1
+      }
+    },
+    {
+      "stage": "writeback",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "need_manual": 13,
+        "resolved": 12,
+        "execution_log_exists": true,
+        "total_executions": 3956
+      }
+    },
+    {
+      "stage": "dashboard",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "ga4_daily_days": 85,
+        "gsc_daily_days": 76
+      }
+    }
+  ],
+  "all_issues": [
+    "[assignment] 1/1 个问题未分配"
+  ]
+}

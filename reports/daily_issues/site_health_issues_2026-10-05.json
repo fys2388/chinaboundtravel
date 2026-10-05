@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-05T03:05:29.321010+00:00",
+  "source": "site_health_agent",
+  "issues": [
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "message": "Meta description过长(174字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    }
+  ]
+}
