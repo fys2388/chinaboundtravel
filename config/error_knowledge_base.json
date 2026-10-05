@@ -1602,6 +1602,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261005_150708",
+      "timestamp": "2026-10-05T15:07:08.085043",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "37330051787",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
