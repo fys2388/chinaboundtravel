@@ -114,7 +114,7 @@ When you check in for your flight to China, show your **onward ticket** to the a
 The officer will stamp your passport with a **144-hour temporary entry permit**. Done!
 
 ### Step 3: Enjoy Your City
-You're in! You now have 144 hours (from the stamp time, NOT flight time) to explore. Many transit visitors use [China's high-speed rail](/posts/china-high-speed-rail-how-to-book-tickets/) to reach nearby cities within their permitted zone, and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before arrival to avoid payment friction. Getting around town is easy — check our [China transportation guide](/posts/china-transportation-card-guide/) for subway card and ride-hailing tips.
+You're in! You now have 144 hours (from the stamp time, NOT flight time) to explore. Many transit visitors use [China's high-speed rail](/posts/china-high-speed-rail-how-to-book-tickets/) to reach nearby cities within their permitted zone, and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before arrival to avoid payment friction. Getting around town is easy — check our [China transportation complete guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) for subway card and ride-hailing tips.
 
 >  **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM six days later.
 
