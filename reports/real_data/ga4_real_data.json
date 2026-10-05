@@ -1,6 +1,6 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-05T04:45:05.375444",
+  "pull_time": "2026-10-05T12:55:06.681840",
   "data_date": "2026-10-04",
   "is_real_data": true,
   "is_fresh": true,
@@ -8,10 +8,10 @@
     "activeUsers": 212,
     "sessions": 279,
     "screenPageViews": 360,
-    "engagedSessions": 162,
-    "bounceRate": 0.41935483870967744,
-    "averageSessionDuration": 125.03220421505377,
-    "engagementRate": 0.5806451612903226,
+    "engagedSessions": 163,
+    "bounceRate": 0.4157706093189964,
+    "averageSessionDuration": 125.02342005734768,
+    "engagementRate": 0.5842293906810035,
     "newUsers": 209
   },
   "daily": [
@@ -179,9 +179,9 @@
     },
     {
       "date": "2026-10-05",
-      "sessions": 1,
-      "activeUsers": 1,
-      "pageviews": 1
+      "sessions": 4,
+      "activeUsers": 4,
+      "pageviews": 4
     }
   ],
   "top_pages": [
@@ -281,7 +281,7 @@
       "channel": "Organic Social",
       "sessions": 170,
       "activeUsers": 142,
-      "engagementRate": 0.8824
+      "engagementRate": 0.8882
     },
     {
       "channel": "Direct",
@@ -297,8 +297,8 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": 9,
-      "activeUsers": 4,
+      "sessions": 8,
+      "activeUsers": 3,
       "engagementRate": 0.0
     },
     {
