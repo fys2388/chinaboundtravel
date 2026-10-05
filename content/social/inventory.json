@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T06:47:18",
+  "updated_at": "2026-10-05T21:14:22",
   "items": [
     {
       "id": "soc-000001",
@@ -230,8 +230,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-05",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4231,8 +4231,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-05",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4643,7 +4643,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Chengdu tips most first-time visitors miss.\n\n· Western Sichuan Overland Camping Route: 7 Days Through China's Most Epic Wilderness\n· Why Western Sichuan?\n· Pre-Trip Prep: What You Really Need to Pack\n\nRead the full guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/western-sichuan-overland-camping-route-ig-tip-a99a1b7a.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -4658,7 +4658,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "af40f9cdfcca"
+      "_sig": "af40f9cdfcca",
+      "image_generated": true
     },
     {
       "id": "soc-000178",
@@ -4668,7 +4669,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nWestern Sichuan Overland Camping: 7-Day Route | What travelers discover about Chengdu — practical lessons from the ground.\n\n7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/western-sichuan-overland-camping-route-pinterest-story-a828d5c2.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -4683,7 +4684,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "c90efa5e08c9"
+      "_sig": "c90efa5e08c9",
+      "image_generated": true
     },
     {
       "id": "soc-000179",
@@ -4693,7 +4695,7 @@
       "type": "visual",
       "caption": "Visual guide to Chengdu: what to see and capture. 7-day Western Sichuan overland camping route from → https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/western-sichuan-overland-camping-route-x-visual-2fdc8480.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -4708,7 +4710,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "72e2e47723b9"
+      "_sig": "72e2e47723b9",
+      "image_generated": true
     },
     {
       "id": "soc-000180",
@@ -4718,7 +4721,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\n💡 Everything you need to know about Chengdu — in one practical guide.\n\n• Western Sichuan Overland Camping: 7-Day Route\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional conversion social graphic for 'Western Sichuan Overland Camping: 7-Day Route' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-day Western Sichuan overland camping route from Chengdu to Litang: hidden valleys, snow peaks, Tibetan villages, and tips.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/chengdu/western-sichuan-overland-camping-route.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/western-sichuan-overland-camping-route-fb-conversion-615f05ae.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4733,7 +4736,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "8b35e985e263"
+      "_sig": "8b35e985e263",
+      "image_generated": true
     },
     {
       "id": "soc-000181",
@@ -4743,7 +4747,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nResearch-backed facts about Shanghai every traveler should know.\n\n· Shanghai Bund & French Concession 2-Day Deep Dive\n· Why This Shanghai Guide Is Different\n· Day 1: The Bund, Nanjing Road, and the Riverwalk\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260912&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Shanghai 48-Hour: Bund & French Concession' (platform ig). Scene: Shanghai Bund skyline at night. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Two days in Shanghai: the neon Bund, the tree-lined French Concession, and the spots locals actually go to. No tourist traps.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-bund-french-concession-2-day-gu-ig-knowledge-a0b7b471.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -4758,7 +4762,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "cdd71fa12b79"
+      "_sig": "cdd71fa12b79",
+      "image_generated": true
     },
     {
       "id": "soc-000182",
@@ -4901,8 +4906,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-05",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5663,8 +5668,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-05",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5948,8 +5953,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-05",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
