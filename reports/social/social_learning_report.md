@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-10-04 11:29:25
+**生成时间**: 2026-10-05 04:45:09
 **闭环版本**: 2.0
-**策略版本**: 2.0-20261004_112925
+**策略版本**: 2.0-20261005_044509
 
 ---
 
@@ -20,8 +20,8 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 354 |
-| 本轮新增记录 | 13 |
+| 历史帖子总数 | 358 |
+| 本轮新增记录 | 4 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
 | 策略变更项 | 0 |
@@ -39,7 +39,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 twitter
-- 帖子数: 75
+- 帖子数: 76
 - 总展示: 15
 - 总点击: 0
 - 平均CTR: 0.00%
@@ -47,11 +47,11 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 instagram
-- 帖子数: 82
+- 帖子数: 85
 - 总展示: 4725
 - 总点击: 94
-- 平均CTR: 0.24%
-- 平均互动率: 0.62%
+- 平均CTR: 0.23%
+- 平均互动率: 0.60%
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
@@ -125,4 +125,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-10-04 11:29:25*
+*生成时间: 2026-10-05 04:45:09*

@@ -279,8 +279,92 @@
       "metadata": {},
       "calculated": {},
       "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 10,
+        "sessions": 10,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 9,
+        "sessions": 9,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/alipay-for-foreigners-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 8,
+        "sessions": 8,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/alipay-wechat-pay-foreigners-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 8,
+        "sessions": 11,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 7,
+        "sessions": 7,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
+      "title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "date": "2026-10-04",
+      "metrics": {
+        "pageviews": 6,
+        "sessions": 5,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-09-28T04:25:31.460064"
+  "last_updated": "2026-10-05T04:45:10.078042"
 }

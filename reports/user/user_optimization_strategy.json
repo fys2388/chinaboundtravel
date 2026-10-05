@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260928_042531",
-  "last_updated": "2026-09-28T04:25:31.460762",
+  "version": "2.0-20261005_044510",
+  "last_updated": "2026-10-05T04:45:10.078707",
   "segmentation_rules": {
     "new_user": "首次访问，无历史记录",
     "returning_user": "7天内再次访问",
@@ -71,10 +71,6 @@
   ],
   "strategy_changes": [
     {
-      "field": "best_segments",
-      "reason": "基于用户价值分析，更新最佳用户分层排名"
-    },
-    {
       "field": "high_value_segments",
       "reason": "基于收入分析，更新高价值用户分层"
     }
@@ -96,6 +92,18 @@
       "segment": "Direct",
       "revenue_per_user": 0,
       "users": 80,
+      "conversion_rate": 0
+    },
+    {
+      "segment": "Cross-network",
+      "revenue_per_user": 0,
+      "users": 17,
+      "conversion_rate": 0
+    },
+    {
+      "segment": "Organic Search",
+      "revenue_per_user": 0,
+      "users": 13,
       "conversion_rate": 0
     }
   ]

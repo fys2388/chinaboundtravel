@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20260928_042531",
-  "last_updated": "2026-09-28T04:25:31.415762",
+  "version": "2.0-20261005_044510",
+  "last_updated": "2026-10-05T04:45:10.036016",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -24,6 +24,18 @@
       "ctr": 0.33,
       "position": 13.7,
       "impressions": 3
+    },
+    {
+      "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
+      "ctr": 0.2,
+      "position": 4.5,
+      "impressions": 10
+    },
+    {
+      "keyword": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+      "ctr": 0.12,
+      "position": 9.2,
+      "impressions": 8
     },
     {
       "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -66,18 +78,6 @@
       "ctr": 0,
       "position": 80.5,
       "impressions": 2
-    },
-    {
-      "keyword": "144 group visa",
-      "ctr": 0,
-      "position": 87,
-      "impressions": 1
-    },
-    {
-      "keyword": "144 hour transit visa china",
-      "ctr": 0,
-      "position": 46.3,
-      "impressions": 3
     }
   ],
   "best_pages": [],
@@ -86,6 +86,11 @@
       "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
       "traffic_potential": 12.240000000000002,
       "position": 7.6
+    },
+    {
+      "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
+      "traffic_potential": 5.5,
+      "position": 4.5
     },
     {
       "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -98,14 +103,9 @@
       "position": 3.5
     },
     {
-      "keyword": "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/",
-      "traffic_potential": 1.5299999999999994,
-      "position": 8.3
-    },
-    {
-      "keyword": "https://www.chinaboundtravel.com/cities/yangshuo/",
-      "traffic_potential": 1.2,
-      "position": 4
+      "keyword": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
+      "traffic_potential": 1.8,
+      "position": 1
     }
   ],
   "learning_insights": [
@@ -116,7 +116,7 @@
     },
     {
       "pattern": "快速提升机会关键词",
-      "description": "发现 8 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+      "description": "发现 10 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
       "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
       "keywords": [
         "https://www.chinaboundtravel.com/cancel/",
@@ -132,14 +132,14 @@
       "field": "best_keywords",
       "reason": "基于GSC数据分析，更新最佳关键词排名",
       "version": "2.1",
-      "timestamp": "2026-09-28T04:25:31.397742",
+      "timestamp": "2026-10-05T04:45:10.018354",
       "evidence": "based on performance data analysis"
     },
     {
       "field": "high_priority_keywords",
       "reason": "基于流量潜力分析，更新高优先级关键词",
       "version": "2.1",
-      "timestamp": "2026-09-28T04:25:31.397742",
+      "timestamp": "2026-10-05T04:45:10.018354",
       "evidence": "based on performance data analysis"
     }
   ]

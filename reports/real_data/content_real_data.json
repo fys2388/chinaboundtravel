@@ -1,15 +1,15 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-10-04T11:29:25.403877",
-  "data_date": "2026-10-04",
+  "pull_time": "2026-10-05T04:45:09.702050",
+  "data_date": "2026-10-05",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "total_articles": 64,
+    "total_articles": 66,
     "articles_this_week": 0,
-    "avg_word_count": 2086,
-    "articles_with_affiliate_links": 36,
-    "articles_with_internal_links": 63
+    "avg_word_count": 2081,
+    "articles_with_affiliate_links": 37,
+    "articles_with_internal_links": 64
   },
   "top_articles": [
     {

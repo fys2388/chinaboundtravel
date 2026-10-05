@@ -1180,8 +1180,292 @@
         "is_optimization_candidate": true
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay international account",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 61
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "beautiful sichuan scenic spots food recommendations",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 36
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "business meeting in china",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 88.4
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "business travel in china",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 77.5
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "business travel to china visa requirements",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 83
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "business trip to china",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 76.7
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "chengdu traditional tea ceremony experience",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 83
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "china 144 hour transit visa",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 67.2
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "china 144 hour visa",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 63
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
+      "page": "https://www.chinaboundtravel.com/free-itinerary/",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 10,
+        "clicks": 2,
+        "ctr": 0.2,
+        "position": 4.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 5.5,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 8,
+        "clicks": 1,
+        "ctr": 0.12,
+        "position": 9.2
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.6400000000000006,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
+      "page": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 1.8,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 25.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "date": "2026-10-02",
+      "metrics": {
+        "impressions": 26,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 32.8
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-09-28T04:25:31.396162"
+  "last_updated": "2026-10-05T04:45:10.016643"
 }
