@@ -3,18 +3,18 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-05_seo",
   "created_at": "2026-10-05T01:00:32.155985+00:00",
-  "updated_at": "2026-10-05T03:05:32.012239",
+  "updated_at": "2026-10-05T03:30:30.639864",
   "target_date": "2026-10-05",
-  "issue_count": 2,
+  "issue_count": 1,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 2,
+    "medium": 1,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-4c952a7244088454",
+      "id": "site_health-60f389c8b43a7814",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -31,31 +31,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-05T03:05:31.801254+00:00"
-    },
-    {
-      "id": "site_health-192b66ed0ade71ec",
-      "type": "title_too_long",
-      "title": "title_too_long",
-      "description": "title_too_long",
-      "page": "content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
-      "file": "content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
-      "evidence": "Title过长(63字符，模板上限60): Kung Fu And Martial Arts In China: Where...",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-10-05T03:05:31.801260+00:00"
+      "detected_at": "2026-10-05T03:30:30.429649+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-4c952a7244088454",
+    "id": "site_health-60f389c8b43a7814",
     "type": "meta_description_too_long",
     "title": "meta_description_too_long",
     "description": "meta_description_too_long",
@@ -72,16 +52,16 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-10-05T03:05:31.801254+00:00"
+    "detected_at": "2026-10-05T03:30:30.429649+00:00"
   },
   "expected_actions": [
     "manual_review"
   ],
-  "status": "partial",
+  "status": "completed",
   "execution": {
-    "resolved_count": 1,
+    "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": null,
-    "note": "resolved=1, need_manual=0, failed=0"
+    "completed_at": "2026-10-05T03:30:30.639871",
+    "note": "resolved=0, need_manual=0, failed=0"
   }
 }
