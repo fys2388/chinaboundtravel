@@ -775,10 +775,14 @@ class FeishuDailyReporter:
         consistency_str = ("\n\n" + "\n\n".join(_warn_blocks)) if _warn_blocks else ""
         # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障。
         # 「平均时长 >10s 但互动率 0%」的矛盾形态由上方 ga4_session_notes 覆盖。
-        if avg_dur > 600:
+        # 低样本豁免：单日会话 <10 时，0 秒 / 长时长多为单会话噪声（10-03 实测
+        # sessions=2 时「平均时长 0 秒」仍误报），改由上方 7 日滚动口径行兜底，
+        # 不单独输出数据质量告警——避免低样本站点每天被噪声触发。
+        _low_sample = (data.get("sessions") or 0) < 10
+        if not _low_sample and avg_dur > 600:
             consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，"
                                 "可能由 GA4 小流量/单会话长停留导致，建议以 7 日滚动口径为准")
-        elif avg_dur == 0 and (data.get("sessions") or 0) > 0:
+        elif not _low_sample and avg_dur == 0 and (data.get("sessions") or 0) > 0:
             consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
                                 " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，"
                                 "以 7 日滚动口径为准")
