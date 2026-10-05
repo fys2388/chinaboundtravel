@@ -51,7 +51,7 @@ If you're a Schengen visa holder, you may be eligible for a [144-hour visa-free 
 
 Getting around China can be a breeze if you know how to do it. The country has an extensive transportation network that includes airplanes, trains, buses, and subways.
 
-If you're short on time, flying is usually the fastest option. China has a large number of domestic airports, and there are many airlines to choose from. You can book your flights online or through a travel agent. Just make sure you allow enough time for check-in and security.
+If you're short on time, flying is usually the fastest option. China has a large number of domestic airports, and there are many airlines to choose from. You can book your flights online or through a travel agent. Just make sure you allow enough time for check-in and security. For getting from the airport to your hotel or meeting, see the [China Airport Transfer Guide](/posts/china-airport-transfer-guide/) — it compares airport express trains, metro, and private transfers for Beijing, Shanghai, and Guangzhou.
 
 For longer distances, the high-speed rail is a great alternative. China's high-speed rail network is one of the largest and most efficient in the world. It's fast, comfortable, and convenient. [Book tickets via Trip.com or 12306](/posts/china-high-speed-rail-how-to-book-tickets/) — foreigners typically use Trip.com for the English interface. Just make sure you arrive at the station early to allow enough time to find your platform and board the train.
 

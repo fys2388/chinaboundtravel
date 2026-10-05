@@ -51,7 +51,7 @@ However, upscale hotels and restaurants may add a 10-15% service charge to the b
 
 For airport porters or tour guides, they may accept a small tip, but it is always optional. It's not a requirement. Instead of relying on tipping, there are better ways to show appreciation. A simple 'xie xie' (thank you), a warm smile, or a good review can go a long way. It's like giving a standing ovation in a theater when the performance is great.
 
-Remember, in China, showing gratitude through words and gestures is more important than opening your wallet. So, don't stress about tipping like you would in other countries. Enjoy your travels and focus on the amazing experiences and cultures China has to offer, like exploring the hidden neighborhoods in Shanghai as described in [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/).
+Remember, in China, showing gratitude through words and gestures is more important than opening your wallet. So, don't stress about tipping like you would in other countries. Enjoy your travels and focus on the amazing experiences and cultures China has to offer, like exploring the hidden neighborhoods in Shanghai as described in [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/).
 
 ## Taking Photos in China: What Is Allowed and What Is Not
 
@@ -128,6 +128,12 @@ By following these simple etiquette tips, you'll be well on your way to having a
 ---
 
 {{< lead-magnet-cta magnet="itinerary-template" text="Planning Your China Trip? Get the Free 7-Day Itinerary →" >}}
+
+---
+
+{{< soft-recommend partner="esim" topic="etiquette" placement="article_end" text="See eSIM options" >}}
+Reading Chinese menus, asking questions on the street, and translating a quick WeChat message to your host all run easier when you have a stable data connection. An eSIM gets you online from the moment you land.
+{{< /soft-recommend >}}
 
 ---
 

@@ -94,7 +94,7 @@ Shanghai has two main airports: **Pudong (PVG)** and **Hongqiao (SHA)**.
 - **PVG**: The Maglev train reaches Longyang Road in about 8 minutes and connects to metro Line 2 into the city. Metro Line 2 also runs directly from PVG to the city center, at a lower price.
 - **SHA**: Hongqiao is a major hub connected directly to the metro and high-speed rail networks, making onward travel easy.
 
-Taxis and ride-hailing apps are available at both airports. The Maglev is a memorable and fast option for visitors arriving at PVG.
+Taxis and ride-hailing apps are available at both airports. The Maglev is a memorable and fast option for visitors arriving at PVG. For visitors on a [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/), Shanghai's zone includes PVG and nearby cities — time your transfer against the onward flight carefully.
 
 ## Guangzhou Airport Transfer Guide
 
@@ -178,11 +178,11 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 ## Related Reading
 
-- [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
-- [China Transportation Guide for European](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
-- [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
-- [Guilin & Yangshuo: Complete 2026 Travel Guide](https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
-- [Yunnan Travel: Rice Terraces & Ancient Towns](https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+- [China Transportation Card Guide (2026)](/posts/china-transportation-card-guide/)
+- [China Transportation Guide for European](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [China Transportation Guide: Trains, Subways](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
+- [Guilin & Yangshuo: Complete 2026 Travel Guide](/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/)
+- [Yunnan Travel: Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
