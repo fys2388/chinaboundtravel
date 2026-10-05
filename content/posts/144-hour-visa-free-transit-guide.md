@@ -284,6 +284,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Top-rated China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared/)
 
+- [Kung Fu And Martial Arts In China: Where To See And Train Guide](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

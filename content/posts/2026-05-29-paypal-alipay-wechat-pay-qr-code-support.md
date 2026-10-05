@@ -183,3 +183,5 @@ One less thing to stress about. And that's often welcome. Before you land, make 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
+
+- [How to Use Alipay as a Foreigner: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)

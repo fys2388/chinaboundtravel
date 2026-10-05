@@ -192,6 +192,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

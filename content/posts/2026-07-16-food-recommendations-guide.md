@@ -169,3 +169,5 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+- [Kung Fu And Martial Arts In China: Where To See And Train Guide](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/)

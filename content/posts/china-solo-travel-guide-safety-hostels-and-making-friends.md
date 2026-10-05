@@ -150,3 +150,19 @@ Solo travel in a new country benefits from good travel insurance that covers med
 {{< /soft-recommend >}}
 
 If you're looking for more information on traveling to China, be sure to check out our other articles on chinaboundtravel.com. We have articles on a variety of topics, including [visa requirements](/posts/ultimate-guide-to-china-visa-for-tourists/), [transportation](/posts/china-transportation-card-guide/), [safety](/posts/is-china-safe-for-tourists-2026-honest-assessment/), and [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/).
+
+## Related Reading
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
+## Related Reading
+
+- [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+## Related Reading
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+## Related Reading
+
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
