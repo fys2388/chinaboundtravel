@@ -470,7 +470,28 @@ class FeishuWeeklyReporter:
                 body={"startDate": week_start, "endDate": week_end,
                       "dimensions": ["page"], "rowLimit": 1000, "dataState": "final"}
             ).execute()
-            indexed_pages = len(resp.get("rows", []))
+            rows = resp.get("rows", [])
+            indexed_pages = len(rows)
+            # 周窗口曝光/点击总量（与 OKR「周搜索曝光」口径一致；OKR 引擎按
+            # gsc_impressions 顶层键取值，之前只回填 indexed_pages 导致 OKR 恒显「未连接」）
+            impressions_week = 0
+            clicks_week = 0
+            try:
+                total_resp = service.searchanalytics().query(
+                    siteUrl=site_url,
+                    body={"startDate": week_start, "endDate": week_end, "dataState": "final"}
+                ).execute()
+                if total_resp.get("rows"):
+                    impressions_week = int(total_resp["rows"][0].get("impressions", 0) or 0)
+                    clicks_week = int(total_resp["rows"][0].get("clicks", 0) or 0)
+            except Exception:
+                # 总量查询失败时退回按页汇总（不丢数据）
+                for r in rows:
+                    try:
+                        impressions_week += int(r.get("impressions", 0) or 0)
+                        clicks_week += int(r.get("clicks", 0) or 0)
+                    except (TypeError, ValueError):
+                        continue
 
             # sitemap 数量作为收录参考
             sitemap_count = 0
@@ -481,7 +502,9 @@ class FeishuWeeklyReporter:
                 pass
 
             return {"status": "authorized", "indexed_pages": indexed_pages,
-                    "sitemap_count": sitemap_count, "errors": 0}
+                    "sitemap_count": sitemap_count, "errors": 0,
+                    "impressions_week": impressions_week, "clicks_week": clicks_week,
+                    "week_start": week_start, "week_end": week_end}
 
         except Exception as e:
             print(f"   ⚠️ GSC API 获取失败: {e}")
@@ -941,6 +964,31 @@ class FeishuWeeklyReporter:
             print("3️⃣ 获取 GSC 数据...")
             gsc_data = self._fetch_gsc_data()
             data["gsc_data"] = gsc_data
+
+        # GSC 数据契约归一（与日报顶层键对齐）：okr_utils._source_available /
+        # extract_kr 按顶层 gsc_data_available + gsc_impressions/gsc_clicks 取值。
+        # 周/月/季/年报之前只把 GSC 存进嵌套 data['gsc_data']，OKR 引擎读不到 →
+        # 「周搜索曝光」恒显「未连接」（即使 GSC 已授权、数据真实可用）。
+        # 此处统一回填顶层键；快照口径（impressions_28d/clicks_28d）与直连口径
+        # （impressions_week/clicks_week）都映射到顶层 gsc_impressions/gsc_clicks。
+        _gsc = data.get("gsc_data") or {}
+        if _gsc.get("status") == "authorized":
+            _impr = _gsc.get("impressions_week", _gsc.get("impressions_28d", _gsc.get("gsc_impressions", 0))) or 0
+            _clicks = _gsc.get("clicks_week", _gsc.get("clicks_28d", _gsc.get("gsc_clicks", 0))) or 0
+            data["gsc_data_available"] = True
+            data["gsc_impressions"] = _impr
+            data["gsc_clicks"] = _clicks
+            data["gsc_ctr"] = round(_clicks / _impr * 100, 2) if _impr else 0.0
+            data["gsc_sitemap_count"] = _gsc.get("sitemap_count", 0)
+            # 2.0 快照口径带 CTR / 平均位置，回填供 OKR 与搜索表现渲染使用
+            if _gsc.get("gsc_ctr_28d") is not None:
+                data["gsc_ctr"] = _gsc["gsc_ctr_28d"]
+            if _gsc.get("gsc_avg_position_28d") is not None:
+                data["gsc_avg_position"] = _gsc["gsc_avg_position_28d"]
+        else:
+            data["gsc_data_available"] = False
+            data.setdefault("gsc_impressions", 0)
+            data.setdefault("gsc_clicks", 0)
 
         print("2️⃣ 获取 Travelpayouts 数据...")
         tp_data = self._fetch_weekly_travelpayouts()

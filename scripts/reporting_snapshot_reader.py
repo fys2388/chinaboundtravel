@@ -34,6 +34,8 @@ def _load() -> dict:
             "gsc_impressions_28d": _find("seo_gsc", "gsc_impressions_28d").get("value"),
             "gsc_clicks_28d": _find("seo_gsc", "gsc_clicks_28d").get("value"),
             "gsc_indexed_pages": _find("seo_gsc", "indexed_pages").get("value"),
+            "gsc_ctr_28d": _find("seo_gsc", "gsc_ctr_28d").get("value"),
+            "gsc_avg_position_28d": _find("seo_gsc", "gsc_avg_position_28d").get("value"),
         }
     except Exception as e:
         print(f"   \u26a0\ufe0f REPORTING_SNAPSHOT.json 读取失败: {e}")
@@ -91,6 +93,8 @@ def snapshot_gsc():
         # 兼容季报/年报的 gsc_impressions / gsc_clicks 键名（快照只提供 28d 后缀）
         "gsc_impressions": snap.get("gsc_impressions_28d"),
         "gsc_clicks": snap.get("gsc_clicks_28d"),
+        "gsc_ctr_28d": snap.get("gsc_ctr_28d"),
+        "gsc_avg_position_28d": snap.get("gsc_avg_position_28d"),
         "data_source": "SNAPSHOT",
         "snapshot_as_of": snap.get("as_of"),
     }

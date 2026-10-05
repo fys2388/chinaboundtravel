@@ -294,7 +294,8 @@ class FeishuQuarterlyReporter:
                 impressions = int(resp["rows"][0].get("impressions", 0))
                 clicks = int(resp["rows"][0].get("clicks", 0))
             return {"status": "authorized", "gsc_impressions": impressions,
-                    "gsc_clicks": clicks, "impressions_28d": impressions,
+                    "gsc_clicks": clicks, "gsc_data_available": True,
+                    "impressions_28d": impressions,
                     "data_source": "GSC_28d_fallback"}
         except Exception as e:
             print(f"   ⚠️ GSC API 获取失败: {e}")
