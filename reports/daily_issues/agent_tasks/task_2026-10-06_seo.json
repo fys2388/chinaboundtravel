@@ -3,18 +3,38 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-06_seo",
   "created_at": "2026-10-06T00:48:06.476380+00:00",
-  "updated_at": "2026-10-06T03:54:42.472064",
+  "updated_at": "2026-10-06T04:00:33.426883",
   "target_date": "2026-10-06",
-  "issue_count": 2,
+  "issue_count": 3,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 1
   },
   "issues": [
     {
-      "id": "site_health-6add90878bf14024",
+      "id": "site_health-78a44e10c4f46787",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "evidence": "Title过长(61字符，模板上限60): China Nightlife Guide: Bars, Clubs, And ...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-10-06T04:00:33.155950+00:00"
+    },
+    {
+      "id": "site_health-35cb66616b74e1be",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -31,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-06T03:54:42.207969+00:00"
+      "detected_at": "2026-10-06T04:00:33.155945+00:00"
     },
     {
       "id": "issue_d9252be9457f",
@@ -55,13 +75,13 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-6add90878bf14024",
-    "type": "meta_description_too_long",
-    "title": "meta_description_too_long",
-    "description": "meta_description_too_long",
-    "page": "content/posts/144-hour-visa-free-transit-guide.md",
-    "file": "content/posts/144-hour-visa-free-transit-guide.md",
-    "evidence": "Meta description过长(174字符)",
+    "id": "site_health-78a44e10c4f46787",
+    "type": "title_too_long",
+    "title": "title_too_long",
+    "description": "title_too_long",
+    "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+    "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+    "evidence": "Title过长(61字符，模板上限60): China Nightlife Guide: Bars, Clubs, And ...",
     "recommended_action": "Review and remediate the reported issue.",
     "severity": "medium",
     "agent": "seo",
@@ -72,7 +92,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-10-06T03:54:42.207969+00:00"
+    "detected_at": "2026-10-06T04:00:33.155950+00:00"
   },
   "expected_actions": [
     "manual_review",
@@ -80,9 +100,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 1,
+    "resolved_count": 2,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=1, need_manual=0, failed=0"
+    "note": "resolved=2, need_manual=0, failed=0"
   }
 }
