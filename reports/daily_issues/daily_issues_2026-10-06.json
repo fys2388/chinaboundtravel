@@ -1,0 +1,131 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-10-06T03:54:42.135836",
+  "target_date": "2026-10-06",
+  "total_issues": 5,
+  "total_assignments": 1,
+  "issues": [
+    {
+      "id": "issue_25e112f2b42a",
+      "type": "social_no_traffic",
+      "description": "社媒曝光4但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-04.json",
+      "detected_at": "2026-10-06T03:54:42.132180",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_04ebf4c85e75",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: [Image:",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-10-06.json",
+      "detected_at": "2026-10-06T03:54:42.135702",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_17244b659e81",
+      "type": "garbled_text",
+      "description": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_2026-10-06.json",
+      "detected_at": "2026-10-06T03:54:42.135713",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_d9252be9457f",
+      "type": "meta_description_too_short",
+      "description": "Meta description过短(67字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-10-06.json",
+      "detected_at": "2026-10-06T03:54:42.135719",
+      "status": "new",
+      "assigned": true,
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "auto_fixable": true,
+      "assigned_to": "seo"
+    },
+    {
+      "id": "issue_10bea811c299",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(174字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-10-06.json",
+      "detected_at": "2026-10-06T03:54:42.135723",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "auto_fixable": false
+    }
+  ],
+  "assignments": [
+    {
+      "agent": "seo",
+      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+      "task_id": "task_2026-10-06_seo",
+      "created_at": "2026-10-06T03:54:42.135823",
+      "target_date": "2026-10-06",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "issues": [
+        {
+          "id": "issue_d9252be9457f",
+          "type": "meta_description_too_short",
+          "description": "Meta description过短(67字符)",
+          "severity": "low",
+          "agent": "seo",
+          "action": "optimize_meta",
+          "source_file": "site_health_issues_2026-10-06.json",
+          "detected_at": "2026-10-06T03:54:42.135719",
+          "status": "new",
+          "assigned": true,
+          "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+          "auto_fixable": true,
+          "assigned_to": "seo"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_d9252be9457f",
+        "type": "meta_description_too_short",
+        "description": "Meta description过短(67字符)",
+        "severity": "low",
+        "agent": "seo",
+        "action": "optimize_meta",
+        "source_file": "site_health_issues_2026-10-06.json",
+        "detected_at": "2026-10-06T03:54:42.135719",
+        "status": "new",
+        "assigned": true,
+        "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+        "auto_fixable": true,
+        "assigned_to": "seo"
+      },
+      "expected_actions": [
+        "optimize_meta"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-06T03:54:39.743270+00:00",
+  "source": "site_health_agent",
+  "issues": [
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "garbled_text",
+      "severity": "high",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "message": "Meta description过短(67字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-10-06T03:54:42.137331",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(154字符)",
+      "updated_at": "2026-10-06T03:54:42.471155",
+      "resolved_at": "2026-10-06T03:54:42.471165"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "message": "Meta description过长(174字符)",
+      "auto_fixable": false,
+      "agent": "seo"
+    }
+  ]
+}
