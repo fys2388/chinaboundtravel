@@ -1,0 +1,67 @@
+{
+  "agent": "frontend",
+  "agent_name": "Frontend Agent (页面/视觉/响应式)",
+  "task_id": "task_2026-10-06_frontend",
+  "created_at": "2026-10-06T00:48:06.476158+00:00",
+  "updated_at": "2026-10-06T00:48:06.695083",
+  "target_date": "2026-10-06",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "eda93581fbec80e3",
+      "type": "visual_audit_failed",
+      "title": "visual_audit_failed",
+      "description": "visual_audit_failed",
+      "page": "/",
+      "file": "/",
+      "evidence": "Page.goto: Timeout 30000ms exceeded.\n[batch_dedup] 同批次 20 个页面同类超时，只保留 1 条",
+      "recommended_action": "Investigate the browser failure and rerun.",
+      "severity": "high",
+      "agent": "frontend",
+      "action": "manual_review",
+      "source": "visual",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-10-06T00:48:06.475429+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "eda93581fbec80e3",
+    "type": "visual_audit_failed",
+    "title": "visual_audit_failed",
+    "description": "visual_audit_failed",
+    "page": "/",
+    "file": "/",
+    "evidence": "Page.goto: Timeout 30000ms exceeded.\n[batch_dedup] 同批次 20 个页面同类超时，只保留 1 条",
+    "recommended_action": "Investigate the browser failure and rerun.",
+    "severity": "high",
+    "agent": "frontend",
+    "action": "manual_review",
+    "source": "visual",
+    "source_file": "",
+    "task_source": "quality_gate",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "frontend",
+    "detected_at": "2026-10-06T00:48:06.475429+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
