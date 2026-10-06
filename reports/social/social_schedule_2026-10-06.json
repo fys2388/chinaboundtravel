@@ -1,0 +1,431 @@
+{
+  "schedule": [
+    {
+      "date": "2026-10-06",
+      "slots": [
+        {
+          "item_id": "soc-000188",
+          "platform": "x",
+          "type": "story",
+          "utc": "2026-10-06T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000218",
+          "platform": "ig",
+          "type": "story",
+          "utc": "2026-10-06T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000151",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-06T17:00:00+00:00",
+          "slot_et": "13:00"
+        },
+        {
+          "item_id": "soc-000145",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-10-06T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000231",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-06T22:00:00+00:00",
+          "slot_et": "18:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "slots": [
+        {
+          "item_id": "soc-000229",
+          "platform": "fb",
+          "type": "visual",
+          "utc": "2026-10-07T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000162",
+          "platform": "pinterest",
+          "type": "tip",
+          "utc": "2026-10-07T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000122",
+          "platform": "pinterest",
+          "type": "tip",
+          "utc": "2026-10-07T17:30:00+00:00",
+          "slot_et": "13:30"
+        },
+        {
+          "item_id": "soc-000197",
+          "platform": "fb",
+          "type": "tip",
+          "utc": "2026-10-07T16:30:00+00:00",
+          "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000211",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-07T23:30:00+00:00",
+          "slot_et": "19:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "slots": [
+        {
+          "item_id": "soc-000131",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-08T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000285",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-10-08T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000011",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-08T17:00:00+00:00",
+          "slot_et": "13:00"
+        },
+        {
+          "item_id": "soc-000001",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-08T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000106",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-08T13:30:00+00:00",
+          "slot_et": "09:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "slots": [
+        {
+          "item_id": "soc-000166",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-09T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000140",
+          "platform": "fb",
+          "type": "conversion",
+          "utc": "2026-10-09T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000146",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-09T17:30:00+00:00",
+          "slot_et": "13:30"
+        },
+        {
+          "item_id": "soc-000036",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-09T16:30:00+00:00",
+          "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000111",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-09T13:00:00+00:00",
+          "slot_et": "09:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "slots": [
+        {
+          "item_id": "soc-000016",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-10T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000260",
+          "platform": "pinterest",
+          "type": "conversion",
+          "utc": "2026-10-10T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000116",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-10T16:30:00+00:00",
+          "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000041",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-10T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000276",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-10T17:30:00+00:00",
+          "slot_et": "13:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "slots": [
+        {
+          "item_id": "soc-000021",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-11T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000090",
+          "platform": "pinterest",
+          "type": "conversion",
+          "utc": "2026-10-11T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000091",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-11T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000026",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-11T17:30:00+00:00",
+          "slot_et": "13:30"
+        },
+        {
+          "item_id": "soc-000221",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-11T12:30:00+00:00",
+          "slot_et": "08:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "slots": [
+        {
+          "item_id": "soc-000096",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-12T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000050",
+          "platform": "pinterest",
+          "type": "conversion",
+          "utc": "2026-10-12T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000241",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-12T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000201",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-12T16:30:00+00:00",
+          "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000191",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-12T17:30:00+00:00",
+          "slot_et": "13:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "slots": [
+        {
+          "item_id": "soc-000171",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-13T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000075",
+          "platform": "x",
+          "type": "conversion",
+          "utc": "2026-10-13T17:00:00+00:00",
+          "slot_et": "13:00"
+        },
+        {
+          "item_id": "soc-000056",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-13T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000066",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-13T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000261",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-13T12:00:00+00:00",
+          "slot_et": "08:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "slots": [
+        {
+          "item_id": "soc-000286",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-14T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000185",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-10-14T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000126",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-14T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000291",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-14T17:30:00+00:00",
+          "slot_et": "13:30"
+        },
+        {
+          "item_id": "soc-000271",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-14T22:00:00+00:00",
+          "slot_et": "18:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "slots": [
+        {
+          "item_id": "soc-000076",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-15T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000085",
+          "platform": "ig",
+          "type": "conversion",
+          "utc": "2026-10-15T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000266",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-10-15T13:30:00+00:00",
+          "slot_et": "09:30"
+        },
+        {
+          "item_id": "soc-000206",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-15T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000176",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-10-15T16:30:00+00:00",
+          "slot_et": "12:30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "slots": [
+        {
+          "item_id": "soc-000296",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-10-16T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000055",
+          "platform": "x",
+          "type": "conversion",
+          "utc": "2026-10-16T13:00:00+00:00",
+          "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000031",
+          "platform": "x",
+          "type": "knowledge",
+          "utc": "2026-10-16T17:00:00+00:00",
+          "slot_et": "13:00"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-06T07:24:15.621485"
+}
