@@ -1,7 +1,7 @@
 ---
 title: "China Solo Travel Guide: Safety, Hostels, and Making Friends"
-date: "2026-08-23T10:00:00+08:00"
-lastmod: "2026-08-23T10:00:00+08:00"
+date: "2026-10-04T10:00:00+08:00"
+lastmod: "2026-10-04T10:00:00+08:00"
 author: "Joran"
 content_id: "cbt-1ae5808c591a"
 risk_level: "high"

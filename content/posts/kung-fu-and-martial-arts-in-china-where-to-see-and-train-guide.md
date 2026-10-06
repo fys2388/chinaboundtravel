@@ -1,7 +1,7 @@
 ---
 title: "Kung Fu And Martial Arts In China: Where To See And Train Guide"
-date: "2026-08-23T10:00:00+08:00"
-lastmod: "2026-08-23T10:00:00+08:00"
+date: "2026-10-04T10:00:00+08:00"
+lastmod: "2026-10-04T10:00:00+08:00"
 author: "Joran"
 content_id: "cbt-fee36f7750bd"
 risk_level: "medium"

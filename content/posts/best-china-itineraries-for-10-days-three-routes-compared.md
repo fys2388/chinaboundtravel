@@ -1,7 +1,7 @@
 ---
 title: "Top-rated China Itineraries for 10 Days: Three Routes Compared"
-date: "2026-08-27T10:00:00+08:00"
-lastmod: "2026-08-27T10:00:00+08:00"
+date: "2026-10-02T10:00:00+08:00"
+lastmod: "2026-10-02T10:00:00+08:00"
 author: "Joran"
 content_id: "cbt-022cd73babff"
 risk_level: "medium"
