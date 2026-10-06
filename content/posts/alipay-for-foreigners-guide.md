@@ -239,3 +239,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)

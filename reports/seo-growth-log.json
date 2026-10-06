@@ -4493,6 +4493,168 @@
       "target": "https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-05T10:11:07.221144"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-06T09:54:18.546031"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-10-06T09:54:19.132115"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-10-06T09:54:19.757712"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "detail": "'How To Use Alipay In China: Complete' -> 'How To Use Alipay In China: Complete' (keyword: how to use alipay in china)",
+      "timestamp": "2026-10-06T09:54:20.413450"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026 -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:21.108106"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:21.734421"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-nightlife-guide-bars-clubs-and-evening-culture -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:22.362407"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:23.084678"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026 -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:23.875533"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-for-foreigners-guide -> how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
+      "detail": "score=2",
+      "timestamp": "2026-10-06T09:54:24.543757"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:25.165401"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary-beijing-xian-shanghai-first-timers -> how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:25.795515"
+    },
+    {
+      "type": "internal_link",
+      "target": "internet-connection-china-esim-vpn-guide -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:26.413821"
+    },
+    {
+      "type": "internal_link",
+      "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:27.055302"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:27.698089"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-train-survival-guide-booking-classes-and-insider-tips -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:28.325463"
+    },
+    {
+      "type": "internal_link",
+      "target": "a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-06T09:54:28.943250"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:29.309203"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:29.769145"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:30.196097"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:30.624698"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:31.053952"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:31.466518"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:31.836950"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:32.248329"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:32.640562"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-06T09:54:33.104663"
     }
   ]
 }

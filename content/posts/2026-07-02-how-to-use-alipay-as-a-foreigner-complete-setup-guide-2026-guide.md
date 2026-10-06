@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg"
 categories: ["payment", "tech"]
-last_updated: "2026-10-05"
+last_updated: "2026-10-06"
 
 ---
 ## Introduction
@@ -181,3 +181,5 @@ Account restrictions usually happen when Alipay's security system flags unusual 
 - [Dude, What Just Happened?](https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
+
+- [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
