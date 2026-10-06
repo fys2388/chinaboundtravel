@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-06T03:54:39.584639+00:00",
+  "generated_at": "2026-10-06T04:01:09.133863+00:00",
   "summary": {
-    "total": 10,
+    "total": 13,
     "P0": 0,
-    "P1": 6,
-    "P2": 4,
+    "P1": 8,
+    "P2": 5,
     "by_source": {
       "content": 7,
-      "site_health": 2,
+      "site_health": 5,
       "visual": 1
     },
     "by_owner": {
-      "content": 8,
+      "content": 10,
       "engineering": 1,
-      "seo": 1
+      "seo": 2
     }
   },
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-09-21T07:08:04.572598+00:00",
+      "generated_at": "2026-10-06T04:01:07.385893+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -58,11 +58,11 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-10-05T03:05:29.321010+00:00",
-      "issues": 2,
+      "generated_at": "2026-10-06T03:54:39.743270+00:00",
+      "issues": 9,
       "P0": 0,
-      "P1": 1,
-      "P2": 1
+      "P1": 6,
+      "P2": 3
     }
   },
   "issues": [
@@ -78,7 +78,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-media-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -92,7 +92,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T07:40:41.202787+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-media-china-solo-travel-guide-safety-hostels-and-making-friends.md",
@@ -106,7 +106,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -120,10 +120,24 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
-      "id": "site_health-7b3a7b8e85e4973f",
+      "id": "site_health-1d471a7f98292074",
+      "severity": "P1",
+      "source": "site_health",
+      "type": "content_placeholder",
+      "title": "content_placeholder",
+      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "evidence": "发现模板占位符: [Image:",
+      "recommended_action": "Review and remediate the reported issue.",
+      "owner": "content",
+      "status": "open",
+      "first_seen": "2026-10-06T04:01:09.133863+00:00",
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
+    },
+    {
+      "id": "site_health-61da04128c33a360",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -133,8 +147,22 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-06T03:54:39.584639+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "first_seen": "2026-10-06T04:01:09.133863+00:00",
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
+    },
+    {
+      "id": "site_health-525a21039eecb7a5",
+      "severity": "P1",
+      "source": "site_health",
+      "type": "garbled_text",
+      "title": "garbled_text",
+      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "evidence": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "owner": "content",
+      "status": "open",
+      "first_seen": "2026-10-06T04:01:09.133863+00:00",
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -148,7 +176,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -162,7 +190,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -176,7 +204,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T07:40:41.202787+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
       "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -190,10 +218,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-04T14:37:35.602038+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     },
     {
-      "id": "site_health-6add90878bf14024",
+      "id": "site_health-149cf03188848712",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -203,8 +231,22 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-06T03:54:39.584639+00:00",
-      "last_seen": "2026-10-06T03:54:39.584639+00:00"
+      "first_seen": "2026-10-06T04:01:09.133863+00:00",
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
+    },
+    {
+      "id": "site_health-6d7c940c9186528d",
+      "severity": "P2",
+      "source": "site_health",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "evidence": "Title过长(61字符，模板上限60): China Nightlife Guide: Bars, Clubs, And ...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "owner": "seo",
+      "status": "open",
+      "first_seen": "2026-10-06T04:01:09.133863+00:00",
+      "last_seen": "2026-10-06T04:01:09.133863+00:00"
     }
   ]
 }
