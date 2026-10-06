@@ -1,19 +1,19 @@
 {
-  "version": "2.0-20261005_125510",
-  "last_updated": "2026-10-05T12:55:10.587155",
+  "version": "2.0-20261006_122152",
+  "last_updated": "2026-10-06T12:21:52.960507",
   "platforms": {
     "pinterest": {
       "best_times": [
+        "00:00",
         "22:00",
-        "14:00",
-        "13:00"
+        "14:00"
       ],
       "best_hooks": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
       ],
       "best_ctas": [
         "save for later",
@@ -28,16 +28,16 @@
     },
     "instagram": {
       "best_times": [
+        "00:00",
         "22:00",
-        "14:00",
-        "13:00"
+        "14:00"
       ],
       "best_hooks": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
       ],
       "best_ctas": [
         "link in bio",
@@ -52,16 +52,16 @@
     },
     "facebook": {
       "best_times": [
+        "00:00",
         "22:00",
-        "14:00",
-        "13:00"
+        "14:00"
       ],
       "best_hooks": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
       ],
       "best_ctas": [
         "read more",
@@ -76,16 +76,16 @@
     },
     "x": {
       "best_times": [
+        "00:00",
         "22:00",
-        "14:00",
-        "13:00"
+        "14:00"
       ],
       "best_hooks": [
-        "linkedin",
-        "visual",
-        "warning",
-        "conversion",
-        "pinterest"
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
       ],
       "best_ctas": [
         "read thread",
@@ -109,20 +109,173 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 2.68%，比Bottom 20%高 2.68个百分点",
+      "description": "Top 20%帖子平均CTR 47.65%，比Bottom 20%高 47.65个百分点",
       "common_hooks": [
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
+      ],
+      "best_times": [
+        "0:00",
+        "22:00",
+        "14:00"
+      ]
+    }
+  ],
+  "strategy_changes": [
+    {
+      "field": "pinterest.best_times",
+      "old": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "new": [
+        "00:00",
+        "22:00",
+        "14:00"
+      ],
+      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "instagram.best_times",
+      "old": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "new": [
+        "00:00",
+        "22:00",
+        "14:00"
+      ],
+      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "facebook.best_times",
+      "old": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "new": [
+        "00:00",
+        "22:00",
+        "14:00"
+      ],
+      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "x.best_times",
+      "old": [
+        "22:00",
+        "14:00",
+        "13:00"
+      ],
+      "new": [
+        "00:00",
+        "22:00",
+        "14:00"
+      ],
+      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "pinterest.best_hooks",
+      "old": [
         "linkedin",
         "visual",
         "warning",
         "conversion",
         "pinterest"
       ],
-      "best_times": [
-        "22:00",
-        "14:00",
-        "13:00"
-      ]
+      "new": [
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "instagram.best_hooks",
+      "old": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "new": [
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "facebook.best_hooks",
+      "old": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "new": [
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
+    },
+    {
+      "field": "x.best_hooks",
+      "old": [
+        "linkedin",
+        "visual",
+        "warning",
+        "conversion",
+        "pinterest"
+      ],
+      "new": [
+        "what",
+        "travelers",
+        "discover",
+        "about",
+        "visa"
+      ],
+      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "version": "2.1",
+      "timestamp": "2026-10-06T12:21:52.960501",
+      "evidence": "based on performance data analysis"
     }
-  ],
-  "strategy_changes": []
+  ]
 }
