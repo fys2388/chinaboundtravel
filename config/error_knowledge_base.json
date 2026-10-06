@@ -1613,6 +1613,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261006_032404",
+      "timestamp": "2026-10-06T03:24:04.980771",
+      "workflow_name": "Environment Check",
+      "run_id": "37408753641",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
