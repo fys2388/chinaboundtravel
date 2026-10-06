@@ -403,15 +403,24 @@ def main() -> int:
 
     results, stats = scan()
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    stamp = datetime.now().strftime("%Y%m%d")
+    # Per-run stamp: HHMMSS keeps each snapshot immutable, so re-running the
+    # scan cannot clobber the record of what a previous run planned/applied.
+    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
 
     plan_md = REPORTS_DIR / f"duplicate_merge_plan_{stamp}.md"
     plan_json = REPORTS_DIR / f"duplicate_merge_plan_{stamp}.json"
-    plan_md.write_text(render_plan(results, stats), encoding="utf-8")
-    plan_json.write_text(json.dumps({"stats": stats, "drafts": [asdict(r) for r in results]}, ensure_ascii=False, indent=2), encoding="utf-8")
-    (REPORTS_DIR / "duplicate_merge_plan.md").write_text(plan_md.read_text(encoding="utf-8"), encoding="utf-8")
-    (REPORTS_DIR / "duplicate_merge_plan.json").write_text(plan_json.read_text(encoding="utf-8"), encoding="utf-8")
-    print(f"[plan] wrote {plan_md.relative_to(BLOG_ROOT)}")
+    plan_text = render_plan(results, stats)
+    json_text = json.dumps({"stats": stats, "drafts": [asdict(r) for r in results]}, ensure_ascii=False, indent=2)
+    if plan_md.exists():
+        print(f"[plan] snapshot exists, skipping write: {plan_md.name}")
+        plan_text, json_text = plan_md.read_text(encoding="utf-8"), plan_json.read_text(encoding="utf-8")
+    else:
+        plan_md.write_text(plan_text, encoding="utf-8")
+        plan_json.write_text(json_text, encoding="utf-8")
+    # Undated pair is the "latest run" view; it is meant to be overwritten.
+    (REPORTS_DIR / "duplicate_merge_plan.md").write_text(plan_text, encoding="utf-8")
+    (REPORTS_DIR / "duplicate_merge_plan.json").write_text(json_text, encoding="utf-8")
+    print(f"[plan] snapshot {plan_md.relative_to(BLOG_ROOT)}")
     print(f"[plan] {json.dumps(stats)}")
 
     if not args.apply:
