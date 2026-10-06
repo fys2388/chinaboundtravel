@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-06 14:31:18",
+  "generated_at": "2026-10-06 15:01:14",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 245,
+    "response_ms": 175,
     "server": "cloudflare"
   },
   "workflows": [
@@ -113,7 +113,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-10-06T06:01:51Z",
+      "last_run": "2026-10-06T06:31:38Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -149,7 +149,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-10-06T06:01:57Z",
+      "last_run": "2026-10-06T06:40:18Z",
       "last_event": "workflow_run"
     },
     {
@@ -158,8 +158,8 @@
       "id": "feishu-daily-report",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-10-06T00:30:19Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-10-06T06:39:54Z",
+      "last_event": "schedule"
     },
     {
       "file": "geo-check.yml",
@@ -221,7 +221,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-10-06T06:31:03Z",
+      "last_run": "2026-10-06T07:01:02Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -257,7 +257,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-10-06T00:30:56Z",
+      "last_run": "2026-10-06T06:40:18Z",
       "last_event": "workflow_run"
     },
     {
@@ -311,7 +311,7 @@
       "id": "snapshot-daily-refresh",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-10-05T06:00:32Z",
+      "last_run": "2026-10-06T06:38:50Z",
       "last_event": "schedule"
     },
     {
@@ -406,7 +406,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-10-06 06:31",
+    "checked_at": "2026-10-06 07:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -563,9 +563,9 @@
       "date": "2026-10-04"
     },
     "gsc_28d": {
-      "impressions": 245,
+      "impressions": 241,
       "clicks": 0,
-      "date": "2026-10-02"
+      "date": "2026-10-03"
     },
     "content": {
       "total_articles": 66,
@@ -578,7 +578,7 @@
       "sessions": 3,
       "pageviews": 4,
       "new_users": 628,
-      "bounce_rate": 61.7,
+      "bounce_rate": 61.6,
       "date": "2026-10-06",
       "status": "OK",
       "daily": [
@@ -1830,7 +1830,7 @@
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-10-06T06:31:17.979583+00:00",
+    "generated_at": "2026-10-06T07:01:13.568710+00:00",
     "total": 13,
     "P0": 0,
     "P1": 8,
@@ -1907,7 +1907,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-media-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -1921,7 +1921,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-04T07:40:41.202787+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-media-china-solo-travel-guide-safety-hostels-and-making-friends.md",
@@ -1935,7 +1935,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-04T14:37:35.602038+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -1949,10 +1949,10 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-04T14:37:35.602038+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
-        "id": "site_health-47fdc300f80ecfac",
+        "id": "site_health-67d09df3ddaa321a",
         "severity": "P1",
         "source": "site_health",
         "type": "content_placeholder",
@@ -1962,11 +1962,11 @@
         "recommended_action": "Review and remediate the reported issue.",
         "owner": "content",
         "status": "open",
-        "first_seen": "2026-10-06T06:31:17.979583+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "first_seen": "2026-10-06T07:01:13.568710+00:00",
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
-        "id": "site_health-2a304de570cbcc24",
+        "id": "site_health-6b5a14d4d83bef49",
         "severity": "P1",
         "source": "site_health",
         "type": "draft_leak",
@@ -1976,11 +1976,11 @@
         "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
         "owner": "content",
         "status": "accepted_risk",
-        "first_seen": "2026-10-06T06:31:17.979583+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "first_seen": "2026-10-06T07:01:13.568710+00:00",
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
-        "id": "site_health-4b84249a3f006c17",
+        "id": "site_health-130b93716b433583",
         "severity": "P1",
         "source": "site_health",
         "type": "garbled_text",
@@ -1990,8 +1990,8 @@
         "recommended_action": "Review and remediate the reported issue.",
         "owner": "content",
         "status": "open",
-        "first_seen": "2026-10-06T06:31:17.979583+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "first_seen": "2026-10-06T07:01:13.568710+00:00",
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "eda93581fbec80e3",
@@ -2005,7 +2005,7 @@
         "owner": "engineering",
         "status": "open",
         "first_seen": "2026-10-01T23:25:56.543892+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -2019,7 +2019,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -2033,7 +2033,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-04T07:40:41.202787+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
         "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -2047,10 +2047,10 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-04T14:37:35.602038+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
-        "id": "site_health-45c41d7cf8845ecf",
+        "id": "site_health-40be1bd89e799349",
         "severity": "P2",
         "source": "site_health",
         "type": "meta_description_too_long",
@@ -2060,11 +2060,11 @@
         "recommended_action": "Review and remediate the reported issue.",
         "owner": "seo",
         "status": "open",
-        "first_seen": "2026-10-06T06:31:17.979583+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "first_seen": "2026-10-06T07:01:13.568710+00:00",
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       },
       {
-        "id": "site_health-65667ee5f21c79c3",
+        "id": "site_health-6332e48a3e78d14a",
         "severity": "P2",
         "source": "site_health",
         "type": "title_too_long",
@@ -2074,8 +2074,8 @@
         "recommended_action": "Review and remediate the reported issue.",
         "owner": "seo",
         "status": "open",
-        "first_seen": "2026-10-06T06:31:17.979583+00:00",
-        "last_seen": "2026-10-06T06:31:17.979583+00:00"
+        "first_seen": "2026-10-06T07:01:13.568710+00:00",
+        "last_seen": "2026-10-06T07:01:13.568710+00:00"
       }
     ]
   },
@@ -2102,7 +2102,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-10-06T06:31:18.225859"
+        "last_run": "2026-10-06T07:01:13.852135"
       },
       "seo": {
         "total": 1,
@@ -2110,7 +2110,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-10-06T06:31:18.261058"
+        "last_run": "2026-10-06T07:01:13.915867"
       },
       "ops": {
         "total": 1,
@@ -2127,7 +2127,7 @@
     "reason": "OK"
   },
   "data_freshness": {
-    "generated_at": "2026-10-06 14:31:18",
+    "generated_at": "2026-10-06 15:01:14",
     "thresholds": {
       "ga4_daily": 2,
       "gsc_daily": 5,
@@ -2170,11 +2170,11 @@
       },
       "gsc_28d": {
         "name": "gsc_28d",
-        "updated_at": "2026-10-02",
-        "age_days": 4,
+        "updated_at": "2026-10-03",
+        "age_days": 3,
         "threshold_days": 4,
         "status": "fresh",
-        "label": "4 天前"
+        "label": "3 天前"
       },
       "content": {
         "name": "content",
@@ -2210,7 +2210,7 @@
       },
       "quality": {
         "name": "quality",
-        "updated_at": "2026-10-06T06:31:17.979583+00:00",
+        "updated_at": "2026-10-06T07:01:13.568710+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2226,7 +2226,7 @@
       }
     },
     "publish_path_gap": {
-      "dashboard_generated_at": "2026-10-06 14:31:18",
+      "dashboard_generated_at": "2026-10-06 15:01:14",
       "agent_kpi_updated_at": "2026-10-01T08:17:19.333831",
       "agent_kpi_age_days": 5,
       "agent_kpi_threshold_days": 35,
