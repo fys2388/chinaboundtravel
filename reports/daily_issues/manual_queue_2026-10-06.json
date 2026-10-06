@@ -1,9 +1,9 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-10-06T03:54:42.137039",
+  "generated_at": "2026-10-06T17:48:24.234595",
   "target_date": "2026-10-06",
-  "issue_count": 4,
+  "issue_count": 3,
   "by_agent": {
     "content": {
       "count": 1,
@@ -22,28 +22,9 @@
       "types": [
         "meta_description_too_long"
       ]
-    },
-    "social": {
-      "count": 1,
-      "types": [
-        "social_no_traffic"
-      ]
     }
   },
   "issues": [
-    {
-      "id": "issue_25e112f2b42a",
-      "type": "social_no_traffic",
-      "description": "社媒曝光4但点击为0，需检查帖子链接和CTA",
-      "severity": "high",
-      "agent": "social",
-      "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-10-04.json",
-      "detected_at": "2026-10-06T03:54:42.132180",
-      "status": "new",
-      "assigned": false,
-      "auto_fixable": false
-    },
     {
       "id": "issue_04ebf4c85e75",
       "type": "content_placeholder",
@@ -52,7 +33,7 @@
       "agent": "content",
       "action": "fix_placeholder",
       "source_file": "site_health_issues_2026-10-06.json",
-      "detected_at": "2026-10-06T03:54:42.135702",
+      "detected_at": "2026-10-06T17:48:24.210541",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
@@ -66,7 +47,7 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "site_health_issues_2026-10-06.json",
-      "detected_at": "2026-10-06T03:54:42.135713",
+      "detected_at": "2026-10-06T17:48:24.210551",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
@@ -80,7 +61,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-10-06.json",
-      "detected_at": "2026-10-06T03:54:42.135723",
+      "detected_at": "2026-10-06T17:48:24.210557",
       "status": "new",
       "assigned": false,
       "file": "content/posts/144-hour-visa-free-transit-guide.md",

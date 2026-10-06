@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-06T03:54:39.743270+00:00",
+  "timestamp": "2026-10-06T17:48:20.519960+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -8,7 +8,12 @@
       "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "message": "发现模板占位符: [Image:",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": false,
+      "resolved_by": "content_agent",
+      "resolution_note": "占位内容需人工补充",
+      "updated_at": "2026-10-06T17:48:24.571959"
     },
     {
       "type": "garbled_text",
@@ -17,22 +22,6 @@
       "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
       "auto_fixable": false,
       "agent": "content"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "message": "Meta description过短(67字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-10-06T03:54:42.137331",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(154字符)",
-      "updated_at": "2026-10-06T03:54:42.471155",
-      "resolved_at": "2026-10-06T03:54:42.471165"
     },
     {
       "type": "meta_description_too_long",
