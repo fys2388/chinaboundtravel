@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-06_seo",
   "created_at": "2026-10-06T00:48:06.476380+00:00",
-  "updated_at": "2026-10-06T17:48:24.630602",
+  "updated_at": "2026-10-06T18:01:30.728621",
   "target_date": "2026-10-06",
   "issue_count": 2,
   "severity_summary": {
@@ -14,13 +14,13 @@
   },
   "issues": [
     {
-      "id": "site_health-4830b6a0a0ee6d40",
+      "id": "site_health-10784f97f35ee5ac",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
-      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "evidence": "Title过长(61字符，模板上限60): China Nightlife Guide: Bars, Clubs, And ...",
+      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "evidence": "Title过长(63字符，模板上限60): Shanghai Like a Local: Hidden Neighborho...",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-06T17:48:24.378035+00:00"
+      "detected_at": "2026-10-06T18:01:30.437528+00:00"
     },
     {
-      "id": "site_health-29b3703228b20249",
+      "id": "site_health-31dff6411fdb2090",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -51,17 +51,17 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-06T17:48:24.378029+00:00"
+      "detected_at": "2026-10-06T18:01:30.437524+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-4830b6a0a0ee6d40",
+    "id": "site_health-10784f97f35ee5ac",
     "type": "title_too_long",
     "title": "title_too_long",
     "description": "title_too_long",
-    "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-    "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-    "evidence": "Title过长(61字符，模板上限60): China Nightlife Guide: Bars, Clubs, And ...",
+    "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+    "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+    "evidence": "Title过长(63字符，模板上限60): Shanghai Like a Local: Hidden Neighborho...",
     "recommended_action": "Review and remediate the reported issue.",
     "severity": "medium",
     "agent": "seo",
@@ -72,7 +72,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-10-06T17:48:24.378035+00:00"
+    "detected_at": "2026-10-06T18:01:30.437528+00:00"
   },
   "expected_actions": [
     "manual_review"
