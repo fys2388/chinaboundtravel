@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06T07:25:28",
+  "updated_at": "2026-10-06T18:52:48",
   "items": [
     {
       "id": "soc-000001",
@@ -3802,8 +3802,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-06",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3960,8 +3960,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-06",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4828,7 +4828,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\n💡 Visual guide to Shanghai: what to see and capture.\n\n• Two days in Shanghai: the neon Bund, the tree-lined French Concession, and the spots locals actually go to\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260912&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'Shanghai 48-Hour: Bund & French Concession' (platform fb). Scene: Shanghai Bund skyline at night. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Two days in Shanghai: the neon Bund, the tree-lined French Concession, and the spots locals actually go to. No tourist traps.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-bund-french-concession-2-day-gu-fb-visual-fc371cce.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4843,7 +4843,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "f6053b29740c"
+      "_sig": "f6053b29740c",
+      "image_generated": true
     },
     {
       "id": "soc-000185",
@@ -4853,7 +4854,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nEverything you need to know about Shanghai — in one practical guide.\n\n· Shanghai 48-Hour: Bund & French Concession\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260912&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Shanghai 48-Hour: Bund & French Concession' (platform ig). Scene: Shanghai Bund skyline at night. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Two days in Shanghai: the neon Bund, the tree-lined French Concession, and the spots locals actually go to. No tourist traps.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/shanghai/2026-05-25-shanghai-bund-french-concession-2-day-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-bund-french-concession-2-day-gu-ig-conversion-afbdb859.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -4868,7 +4869,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "49493bd837d5"
+      "_sig": "49493bd837d5",
+      "image_generated": true
     },
     {
       "id": "soc-000186",
@@ -4959,7 +4961,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\n💡 Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261006&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/",
       "image_prompt": "Professional visual social graphic for 'China 144 Hour Transit Visa: Complete Guide' (platform fb). Scene: Chinese visa passport and travel documents. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Keeping your phone connected in China is easier with.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/144-hour-visa-free-transit-guide-fb-visual-3823061f.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -4976,7 +4978,8 @@
       },
       "_sig": "0b6bd095055b",
       "recycled_at": "2026-10-06",
-      "recycle_count": 3
+      "recycle_count": 3,
+      "image_generated": true
     },
     {
       "id": "soc-000190",
@@ -5013,7 +5016,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nCan Foreigners Use WeChat Pay in China? 2026 | Research-backed facts about Visa every traveler should know.\n\nCan foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits, and tips here | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Can Foreigners Use WeChat Pay in China? 2026' (platform pinterest). Scene: smartphone QR-code payment at a street vendor. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-wechat-pay-as-a-foreigner-pinterest-knowledge-eb483185.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -5028,7 +5031,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "5edc96d5990f"
+      "_sig": "5edc96d5990f",
+      "image_generated": true
     },
     {
       "id": "soc-000192",
@@ -5038,7 +5042,7 @@
       "type": "tip",
       "caption": "Essential Visa tips most first-time visitors miss. What You Need to Get Started → https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Can Foreigners Use WeChat Pay in China? 2026' (platform x). Scene: smartphone QR-code payment at a street vendor. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-wechat-pay-as-a-foreigner-x-tip-c57f3dd1.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -5053,7 +5057,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "8912c450f7ab"
+      "_sig": "8912c450f7ab",
+      "image_generated": true
     },
     {
       "id": "soc-000193",
@@ -5727,8 +5732,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-06",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6062,8 +6067,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-06",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
