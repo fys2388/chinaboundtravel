@@ -1,7 +1,7 @@
 {
-  "version": "2.1",
+  "version": "2.2",
   "description": "ChinaBound Travel AI Governance - Kill Switch + L0-L3 Permission Boundaries. Single source of truth loaded by all AI agents and workflows.",
-  "last_updated": "2026-09-20",
+  "last_updated": "2026-10-06",
   "kill_switch": {
     "global_enabled": false,
     "reason": "",
@@ -122,9 +122,9 @@
     "content": {
       "permission_level": "L2",
       "name": "内容智能优化Agent",
-      "allowed": ["format_normalize", "persona_cleanup", "quality_audit", "topic_recommendation", "clean_placeholders", "fix_metadata"],
-      "denied": ["modify_facts", "auto_publish_high_risk", "modify_visa_policy"],
-      "notes": "内容优化仅限格式和Persona清理，事实修改需FACT_CHECK_REQUIRED"
+      "allowed": ["format_normalize", "persona_cleanup", "quality_audit", "topic_recommendation", "clean_placeholders", "fix_metadata", "deduplicate", "merge_content"],
+      "denied": ["modify_facts", "auto_publish_high_risk", "modify_visa_policy", "delete_content", "change_url_structure", "publish_new_content"],
+      "notes": "内容优化仅限格式/Persona清理与重复草稿去重。merge_content 仅把草稿中目标文章没有的非事实性指导段落追加到已发布文章，不删除草稿（移到 content/_archived/），不引入 CJK 字符，不触碰 policy_gate 高风险主题（visa/safety/insurance 等）。事实修改需 FACT_CHECK_REQUIRED。"
     },
     "social": {
       "permission_level": "L2",

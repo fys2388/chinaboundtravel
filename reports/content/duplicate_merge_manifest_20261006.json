@@ -1,0 +1,35 @@
+{
+  "applied_at": "2026-10-06T02:34:09.995468+00:00",
+  "records": [
+    {
+      "draft": "content\\_draft\\2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "target": "content\\posts\\2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+      "target_backup": "reports/content/rollback/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md.bak-20261006103409",
+      "draft_archived_to": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "paragraphs_added": 9,
+      "target_sha256_before": "f5c02912ec8f2307a8b4c1115998aea02f4163af5b6d9a8c2c21052ebbf76f94",
+      "target_sha256_after": "6d531819a3e1982cd936f5241a6b67e2a9a84d170c31b3420f40f72628c174df",
+      "rollback": "copy reports/content/rollback/2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md.bak-20261006103409 back over content\\posts\\2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md"
+    },
+    {
+      "draft": "content\\_draft\\2026-07-22-cultural-etiquette-guide.md",
+      "target": "content\\posts\\2026-07-21-cultural-etiquette-guide.md",
+      "target_backup": "reports/content/rollback/2026-07-21-cultural-etiquette-guide.md.bak-20261006103409",
+      "draft_archived_to": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
+      "paragraphs_added": 19,
+      "target_sha256_before": "03756a21e2e4119f877d5f32e9e2fd90c12872a0a496146eaf85a843d48f605d",
+      "target_sha256_after": "2189b1f3df4c4ae0ff927daf3c2c66f51186c40170c9fe74740a7cd32edc5fb5",
+      "rollback": "copy reports/content/rollback/2026-07-21-cultural-etiquette-guide.md.bak-20261006103409 back over content\\posts\\2026-07-21-cultural-etiquette-guide.md"
+    },
+    {
+      "draft": "content\\_draft\\2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "target": "content\\posts\\2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
+      "target_backup": "reports/content/rollback/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md.bak-20261006103409",
+      "draft_archived_to": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "paragraphs_added": 14,
+      "target_sha256_before": "fdc85bdc5c881284617e2c7c8dbc0ed0a0a84c6314c6906d16ae8c1239364188",
+      "target_sha256_after": "3daa1c1093a64f4dc2e4a1f5dfe2b629d6384e84f63b6f6b5f8ecd1b72cf9107",
+      "rollback": "copy reports/content/rollback/2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md.bak-20261006103409 back over content\\posts\\2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md"
+    }
+  ]
+}
