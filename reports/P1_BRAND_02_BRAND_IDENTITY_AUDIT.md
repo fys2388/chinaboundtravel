@@ -87,6 +87,9 @@
 | template | layouts/shortcodes/vpn-link.html | WARN | - | - | False |
 | template | layouts/shortcodes/web3forms-key.html | WARN | - | - | False |
 | content | content/7-day-china-itinerary.md | PASS | - | - | True |
+| content | content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md | WARN | - | - | False |
+| content | content/_archived/2026-07-22-cultural-etiquette-guide.md | PASS | - | - | True |
+| content | content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md | WARN | - | - | False |
 | about | content/about/_index.md | PASS | - | - | True |
 | content | content/affiliate-disclosure.md | PASS | - | - | True |
 | content | content/cancel.md | WARN | - | - | False |
@@ -126,6 +129,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 31/119 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 32/122 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
