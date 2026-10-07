@@ -273,6 +273,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

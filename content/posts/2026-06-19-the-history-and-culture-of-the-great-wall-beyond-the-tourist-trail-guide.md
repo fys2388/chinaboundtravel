@@ -163,3 +163,5 @@ And as often, if you have any questions or comments, feel free to reach out to o
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+- [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
