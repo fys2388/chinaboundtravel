@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-07T07:04:48",
+  "updated_at": "2026-10-07T19:18:11",
   "items": [
     {
       "id": "soc-000001",
@@ -3746,8 +3746,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-07",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4016,8 +4016,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-07",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4210,8 +4210,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-07",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5098,7 +5098,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to Visa: what to see and capture.\n\n· Can foreigners use WeChat Pay in China in 2026?\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Can Foreigners Use WeChat Pay in China? 2026' (platform ig). Scene: smartphone QR-code payment at a street vendor. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-wechat-pay-as-a-foreigner-ig-visual-d7e5e465.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5113,7 +5113,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "344f45ec772b"
+      "_sig": "344f45ec772b",
+      "image_generated": true
     },
     {
       "id": "soc-000195",
@@ -5123,7 +5124,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\nCan Foreigners Use WeChat Pay in China? 2026 | Everything you need to know about Visa — in one practical guide.\n\nCan foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits, and tips here | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Can Foreigners Use WeChat Pay in China? 2026' (platform pinterest). Scene: smartphone QR-code payment at a street vendor. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Can foreigners use WeChat Pay in China in 2026? Yes — link a foreign Visa/Mastercard via Tour Card or Chinese bank card. Setup steps, limits.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-22-how-to-use-wechat-pay-as-a-foreigner.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-wechat-pay-as-a-foreigner-pinterest-conversion-276a8dc0.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -5138,7 +5139,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "4655aeb6d082"
+      "_sig": "4655aeb6d082",
+      "image_generated": true
     },
     {
       "id": "soc-000196",
@@ -5175,7 +5177,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\n💡 Essential High Speed tips most first-time visitors miss.\n\n• China's High-Speed Rail: How to Book Tickets Like a Resident\n• The Quick Answer\n• Why High-Speed Rail CRH is the Way to Go\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional tip social graphic for 'How To Ride China'S High-Speed Trains: How to Book in 2026' (platform fb). Scene: Chinese high-speed train in a modern station. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-rail-how-to-book-ticket-fb-tip-017f7bf9.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -5190,7 +5192,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "6feb3e553e30"
+      "_sig": "6feb3e553e30",
+      "image_generated": true
     },
     {
       "id": "soc-000198",
@@ -5200,7 +5203,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nWhat travelers discover about High Speed — practical lessons from the ground.\n\n· Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'How To Ride China'S High-Speed Trains: How to Book in 2026' (platform ig). Scene: Chinese high-speed train in a modern station. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-rail-how-to-book-ticket-ig-story-4225cd01.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5215,7 +5218,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "54de8e0931bc"
+      "_sig": "54de8e0931bc",
+      "image_generated": true
     },
     {
       "id": "soc-000199",
@@ -5225,7 +5229,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nHow To Ride China'S High-Speed Trains: How to Book in 2026 | Visual guide to High Speed: what to see and capture.\n\nBook China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional visual social graphic for 'How To Ride China'S High-Speed Trains: How to Book in 2026' (platform pinterest). Scene: Chinese high-speed train in a modern station. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-rail-how-to-book-ticket-pinterest-visual-00e7470a.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -5240,7 +5244,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "36faabec2924"
+      "_sig": "36faabec2924",
+      "image_generated": true
     },
     {
       "id": "soc-000200",
@@ -6126,8 +6131,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-07",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6180,8 +6185,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-07",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
