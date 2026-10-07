@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-07_content",
   "created_at": "2026-10-07T01:01:23.590174+00:00",
-  "updated_at": "2026-10-07T17:32:19.584003",
+  "updated_at": "2026-10-07T18:01:30.155698",
   "target_date": "2026-10-07",
   "issue_count": 10,
   "severity_summary": {
@@ -74,7 +74,7 @@
       "detected_at": "2026-10-07T01:01:23.589710+00:00"
     },
     {
-      "id": "site_health-67c24d6f152daf05",
+      "id": "site_health-5314eda515ec568",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -91,10 +91,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-07T17:32:19.360925+00:00"
+      "detected_at": "2026-10-07T18:01:29.821046+00:00"
     },
     {
-      "id": "site_health-1d152f9d2c54a476",
+      "id": "site_health-95947acb08fd6cf",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -111,10 +111,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-07T17:32:19.360930+00:00"
+      "detected_at": "2026-10-07T18:01:29.821050+00:00"
     },
     {
-      "id": "site_health-2f4796a1ce28b69b",
+      "id": "site_health-2eabe263ba0e3b61",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -131,7 +131,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-07T17:32:19.360921+00:00"
+      "detected_at": "2026-10-07T18:01:29.821042+00:00"
     },
     {
       "id": "content-media-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
