@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-10-07",
-  "audited_at": "2026-10-07T03:22:41.515480",
+  "audited_at": "2026-10-07T18:20:09.144731",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -20,7 +20,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 4,
+        "site_health_total": 3,
         "site_health_file": "site_health_2026-10-07.json",
         "daily_issues_count": 3
       }
@@ -45,10 +45,10 @@
       "issues": [],
       "details": {
         "total_tasks": 4,
-        "completed": 0,
+        "completed": 1,
         "pending": 0,
         "failed": 0,
-        "partial": 4,
+        "partial": 3,
         "total_issues": 14,
         "resolved_issues": 1
       }
@@ -58,10 +58,10 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "need_manual": 20,
+        "need_manual": 21,
         "resolved": 15,
         "execution_log_exists": true,
-        "total_executions": 4292
+        "total_executions": 4422
       }
     },
     {
@@ -69,7 +69,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "ga4_daily_days": 84,
+        "ga4_daily_days": 85,
         "gsc_daily_days": 78
       }
     }
