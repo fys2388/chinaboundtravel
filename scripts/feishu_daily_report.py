@@ -512,7 +512,7 @@ def _workflow_status_cell(data: dict, kind: str, window_days: int = 2):
     icon = "✅" if value is True else ("🔴" if value is False else "⚪")
     text = _ci_state_str(
         value,
-        not os.environ.get("GITHUB_TOKEN"),
+        not GITHUB_TOKEN,
         data.get("gh_api_ok"),
         data.get("gh_api_error") or "未知原因",
         data.get(f"gh_{kind}_paths_total"),
@@ -1674,7 +1674,8 @@ class FeishuDailyReporter:
         data["reporting_snapshot"] = load_reporting_snapshot()
 
         # 9. 当期 OKR 进度速览（季度目标）
-        data["okr_section"] = okr_utils.build_okr_section(data, "daily")
+        # fix_daily_okr_signal：修正「日新增文章 0篇/1篇 = 0% 却标 🟢」的假绿。
+        data["okr_section"] = fix_daily_okr_signal(okr_utils.build_okr_section(data, "daily"))
 
         # 10. 自动运营建议（基于真实数据精准生成）
         advice_items = report_advice.generate_advice(data, "daily")
@@ -2706,7 +2707,9 @@ class FeishuDailyReporter:
                         print(f"   📋 日报工作流: {result.get('gh_report_state')} -> "
                               f"{result.get('gh_report_conclusion', 'N/A')}")
                     if result.get(f"gh_{kind}_success") is False:
-                        print(f"   🔴 {kind} 工作流在跑但失败：{window} 天内 "
+                        _label = {"blog": "博客生成", "report": "日报推送",
+                                  "social": "社媒分发"}.get(kind, kind)
+                        print(f"   🔴 {_label}工作流在跑但失败：{window} 天内 "
                               f"{result.get(f'gh_{kind}_failure_count') or 1} 次失败，最近 "
                               f"{result.get(f'gh_{kind}_latest_failure_time', 'N/A')}")
                 except Exception as e:
