@@ -55,6 +55,15 @@ from gsc_utils import (  # noqa: E402
     load_service_account_info,
 )
 
+# AI Governance: L0-L3 permission boundaries
+try:
+    from ai_governance import require_permission  # noqa: E402
+    GOVERNANCE_AVAILABLE = True
+except ImportError:
+    GOVERNANCE_AVAILABLE = False
+    def require_permission(agent_name, action):  # noqa: E402
+        pass  # No governance available; proceed without checks
+
 BLOG_ROOT = SCRIPT_DIR.parent
 CONTENT_DIR = BLOG_ROOT / "content" / "posts"
 REPORTS_DIR = BLOG_ROOT / "reports"
@@ -880,6 +889,10 @@ def main():
         backup_text = post_file.read_text(encoding="utf-8")
 
         try:
+            # --- Permission gate: content agent must have fix_metadata to write ---
+            if not args.dry_run:
+                require_permission("content", "fix_metadata")
+
             # --- Title optimization ---
             if "optimize_title" in analysis["recommended_actions"]:
                 new_title = optimize_title(post)

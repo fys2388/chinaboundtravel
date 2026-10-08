@@ -141,6 +141,17 @@ def _run_single_agent_subprocess(agent_id: str, use_real_data: bool) -> Dict[str
                 "reason": ks_reason,
             }
 
+        # 权限前置检查：agent 必须被注册且被允许产生报告
+        is_permitted, perm_reason = check_permission(agent_id, "report")
+        if not is_permitted:
+            return {
+                "success": False,
+                "error": "permission_denied",
+                "agent": agent_id,
+                "name": agent_config["name"],
+                "reason": perm_reason,
+            }
+
     start_time = datetime.now()
 
     # 构建命令
@@ -241,7 +252,20 @@ class AgentOrchestrator:
                     "reason": ks_reason,
                 }
 
-            # 2) 验证 Agent 是否在治理配置中注册（防止未注册 Agent 静默执行）
+            # 2) 权限前置检查：agent 必须被允许产生报告
+            is_permitted, perm_reason = check_permission(agent_id, "report")
+            if not is_permitted:
+                print(f"  ❌ PERMISSION DENIED [{agent_id}]: {perm_reason}")
+                print(f"  Agent 运行被阻止（权限不足），跳过执行")
+                return {
+                    "success": False,
+                    "error": "permission_denied",
+                    "agent": agent_id,
+                    "name": agent_config["name"],
+                    "reason": perm_reason,
+                }
+
+            # 3) 验证 Agent 是否在治理配置中注册（防止未注册 Agent 静默执行）
             plevel = get_agent_permission_level(agent_id)
             if plevel == "L0":
                 print(f"  ⚠️ Agent '{agent_id}' 权限级别 L0（只读），仅做报告不做写操作")

@@ -61,6 +61,15 @@ from gsc_keyword_baseline import (  # noqa: E402
     process_data,
 )
 
+# AI Governance: L0-L3 permission boundaries
+try:
+    from ai_governance import require_permission  # noqa: E402
+    GOVERNANCE_AVAILABLE = True
+except ImportError:
+    GOVERNANCE_AVAILABLE = False
+    def require_permission(agent_name, action):  # noqa: E402
+        pass  # No governance available; proceed without checks
+
 BLOG_ROOT = SCRIPT_DIR.parent
 CONTENT_DIR = BLOG_ROOT / "content" / "posts"
 REPORTS_DIR = BLOG_ROOT / "reports"
@@ -654,6 +663,10 @@ def main():
     internal_links_added = 0
     titles_optimized = 0
     urls_to_reindex = set()
+
+    # --- Permission gate: seo agent must have optimize_seo_title to write ---
+    if not args.dry_run:
+        require_permission("seo", "optimize_seo_title")
 
     # --- 4a. Title optimization for low-CTR / new Top20 keywords ---
     print("\n[TITLE OPTIMIZATION]")

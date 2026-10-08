@@ -124,21 +124,27 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/quality/ reports/daily_issues/
+          # Only add files this workflow writes. Do NOT `git add reports/daily_issues/`
+          # — those files are written by daily_issue_router.py / agent_task_executor.py
+          # and constantly rewritten by concurrent bots, which forces rebase conflicts
+          # on every push. The artifact upload below preserves the full data.
+          git add reports/quality/quality_*.json reports/quality/visual_audit.json reports/quality/site_audit.json
           if git diff --cached --quiet; then
             echo "No quality report changes"
             exit 0
           fi
           git commit -m "chore(quality): refresh website audit reports [skip ci]"
-          # --autostash: 审计脚本会写到 reports/quality/ 与 reports/daily_issues/
-          # 之外的目录（例如 ops-dashboard/、static/ops/、reports/site_health/），
-          # 那些改动会留在工作区；`git pull --rebase` 遇到 unstaged changes 会以
-          # "cannot pull with rebase: You have unstaged changes" 失败，
-          # 整个「发现→报警→写报告→commit→push」闭环断在最后一步。
+          # --autostash: 审计脚本会写到 reports/quality/ 之外的目录（例如
+          # ops-dashboard/、static/ops/、reports/site_health/），那些改动会留在
+          # 工作区；`git pull --rebase` 遇到 unstaged changes 会以 "cannot pull
+          # with rebase: You have unstaged changes" 失败，整个「发现→报警→写报告
+          # →commit→push」闭环断在最后一步。
           git pull --rebase --autostash origin main || {
-            echo "::error title=Rebase 冲突::quality report commit 无法 rebase，请人工介入"
+            # 冲突不等于数据丢失：quality-monitor-reports artifact 已保留全部报告，
+            # 下一次运行会重新生成。这里只 abort rebase 并 warning，让 job 以 success 结束。
+            echo "::warning title=Rebase 冲突::quality report commit 无法 rebase；数据已保留在 quality-monitor-reports artifact 中，请人工介入"
             git rebase --abort 2>/dev/null || true
-            exit 1
+            exit 0
           }
           git push origin main || {
             echo "::error title=Push 失败::quality reports 已 commit 但 push 被拒（多个机器人每 ~30 分钟提交，push 被拒是常态）"

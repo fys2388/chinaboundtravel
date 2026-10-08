@@ -5,7 +5,6 @@ Only checks new/modified articles; missing cover or external AI image domain blo
 import sys
 import re
 import subprocess
-import time
 from pathlib import Path
 
 POSTS_DIR = Path("content/posts")
@@ -110,41 +109,57 @@ def main():
 
     new_posts = get_new_or_modified_posts()
 
-    # Fallback: if git shows no changes, check posts modified in last 24h
-    if not new_posts:
-        now = time.time()
-        for p in sorted(POSTS_DIR.glob("*.md"), key=lambda x: x.stat().st_mtime, reverse=True):
-            if now - p.stat().st_mtime < 86400:
-                new_posts.append(p)
-        if new_posts:
-            print(f"  (fallback: checking {len(new_posts)} posts modified in last 24h)")
+    # NOTE: no mtime fallback. In CI a fresh checkout gives every file an
+    # mtime equal to checkout time, so an mtime check always passes and
+    # turns this gate into a full-repo audit. An empty `git diff HEAD`
+    # means "no new/modified posts in this change" — that is the correct
+    # signal to skip the gate, not a trigger to fall back to filesystem mtime.
+    # For local dev, use `git log --since=24.hours --name-only -- content/posts/`
+    # if you need a broader audit.
 
     if not new_posts:
         print("  No new articles, cover check passed")
-        return 0
-
-    print(f"  Checking {len(new_posts)} new/modified articles:")
-    failed = 0
-    for post in new_posts:
-        r = check_cover(post)
-        status = "PASS" if r["passed"] else "FAIL"
-        if not r["passed"]:
-            failed += 1
-        print(f"    [{status}] {r['file'][:50]}")
-        for issue in r["issues"]:
-            print(f"           - {issue}")
-        if r["cover_image"] and not r["passed"]:
-            print(f"           cover: {r['cover_image'][:70]}")
-
-    print()
-    if failed > 0:
-        print(f"  FAIL: {failed}/{len(new_posts)} new articles have cover issues")
-        print("     Add a cover or replace external AI image domain, then retry")
-        print("     Block reasons: missing_cover / blocked_ai_image_domain / external_image_domain")
-        return 1
     else:
-        print(f"  PASS: {len(new_posts)} new articles all have valid covers")
-        return 0
+        print(f"  Checking {len(new_posts)} new/modified articles:")
+        failed = 0
+        for post in new_posts:
+            r = check_cover(post)
+            status = "PASS" if r["passed"] else "FAIL"
+            if not r["passed"]:
+                failed += 1
+            print(f"    [{status}] {r['file'][:50]}")
+            for issue in r["issues"]:
+                print(f"           - {issue}")
+            if r["cover_image"] and not r["passed"]:
+                print(f"           cover: {r['cover_image'][:70]}")
+
+        print()
+        if failed > 0:
+            print(f"  FAIL: {failed}/{len(new_posts)} new articles have cover issues")
+            print("     Add a cover or replace external AI image domain, then retry")
+            print("     Block reasons: missing_cover / blocked_ai_image_domain / external_image_domain")
+            return 1
+        else:
+            print(f"  PASS: {len(new_posts)} new articles all have valid covers")
+
+    # Non-blocking audit: warn about all posts missing a cover.
+    # This does NOT affect the exit code — it's for humans to triage.
+    print()
+    print("  [warn] Full-repo cover audit (non-blocking):")
+    all_missing = []
+    for p in sorted(POSTS_DIR.glob("*.md")):
+        r = check_cover(p)
+        if not r["passed"]:
+            all_missing.append(r)
+    if not all_missing:
+        print("    All posts have covers.")
+    else:
+        print(f"    {len(all_missing)} post(s) missing cover or using blocked image domain:")
+        for r in all_missing:
+            print(f"      - {r['file']}")
+            for issue in r["issues"]:
+                print(f"          issue: {issue}")
+    return 0
 
 
 if __name__ == "__main__":

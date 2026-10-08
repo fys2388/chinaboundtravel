@@ -451,33 +451,135 @@ def gsc_windows(now: datetime = None) -> dict:
     }
 
 
-def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total, window_days=2):
-    """CI 状态文案：把「未运行」这个假声明拆成可区分的几种情况。
+def _ci_state_str(value, ci_token_missing, api_ok, api_error, paths_total, window_days=2,
+                  failure_count=0, latest_run_time=None, latest_failure_time=None,
+                  running=False):
+    """CI 状态文案：三态（success / failure / no_runs）+ 诊断态。
 
     原先三种互不相干的情况都渲染成「未运行」：Actions API 调用失败（token 无
     actions:read 权限 / 限流 / 网络）、仓库里没有该 workflow 的记录、以及当日
     确实没有已完成的 run。读者会以为工作流没执行，实际是状态没查出来——
     对一个以「自动化无需人工干预」为目标的日报，这类假声明比缺失更糟。
 
+    2.1 修复（假告警→显式告警）：谎报的主因不是 failure 被丢弃，而是
+    `_fetch_github_actions` 的 API 查询窗口硬编码 [昨日, 今日]，比声明的 workflow
+    窗口（博客 8 天）窄——8 天前失败过的 weekly-blog-update 根本进不了 runs 列表，
+    paths_total=0 → 「⚪ 状态未知（8 天内该 workflow 无任何完成记录）」，把静默失败
+    伪装成「没跑」。修法有两条腿：(1) 查询窗口放宽到最宽 workflow 窗口；
+    (2) 本函数把 failure 升级为带失败次数/最近失败时间的显式告警，不再共用「状态未知」。
+
+    三态语义：
+      success  -> 最近一次已完成 run conclusion=success（或本实例正在运行中）
+      failure  -> 最近一次已完成 run conclusion!=success，附失败次数 + 最近失败时间
+      no_runs  -> 窗口内确实没有任何已完成 run
     window_days：实际使用的完成窗口。原先硬编码「近 2 天」，但真实过滤条件
     曾是「报告日当天」；周更工作流（weekly-blog-update.yml, cron 0 0 * * 1）
     在非周一必然落空，日报于是每周 6 天把健康的周更渲染成「状态未知」。
     """
-    if value is True:
-        return "成功"
-    if value is False:
-        return "失败"
     if ci_token_missing:
         return "CI 状态未获取（本地预览）"
     if api_ok is None:
         return "状态未知（未采集到记录）"
-    if not api_ok:
+    if api_ok is False:
         return f"状态未知（Actions API 失败：{api_error}）"
+    if value is True:
+        if running:
+            fc = int(failure_count or 0)
+            prior = f"；此前 {fc} 次失败" if fc else ""
+            return f"成功（本次运行中，报告即其产物）{prior}"
+        rt = latest_run_time or ""
+        return f"成功（{rt[:10]} 完成）" if rt else "成功"
+    if value is False:
+        fc = int(failure_count or 1)
+        lft = latest_failure_time or latest_run_time or ""
+        lft_s = f"，最近失败 {lft[:10]}" if lft else ""
+        return f"失败（{window_days} 天内 {fc} 次失败{lft_s}）"
+    # value is None：窗口内无已完成 run
     if paths_total is None:
-        return "状态未知（未采集到记录）"
+        return f"状态未知（{window_days} 天内未采集到该 workflow 记录）"
     if paths_total == 0:
-        return f"状态未知（{window_days} 天内该 workflow 无任何完成记录）"
-    return f"状态未知（{window_days} 天内无已完成 run，可能是周期未到期）"
+        return f"未运行（{window_days} 天内无任何已完成记录）"
+    return f"未运行（{window_days} 天内无已完成 run，可能是周期未到期）"
+
+
+def _workflow_status_cell(data: dict, kind: str, window_days: int = 2):
+    """渲染单个工作流状态为 (图标, 文案)。
+
+    图标三档与文案严格一致，杜绝「🔴 失败」被写成「⚪ 状态未知」：
+      ✅ 成功 / 🔴 失败（在跑但失败，必须显式告警）/ ⚪ 未运行或状态未知
+    """
+    value = data.get(f"gh_{kind}_success")
+    icon = "✅" if value is True else ("🔴" if value is False else "⚪")
+    text = _ci_state_str(
+        value,
+        not os.environ.get("GITHUB_TOKEN"),
+        data.get("gh_api_ok"),
+        data.get("gh_api_error") or "未知原因",
+        data.get(f"gh_{kind}_paths_total"),
+        window_days,
+        data.get(f"gh_{kind}_failure_count", 0),
+        data.get(f"gh_{kind}_run_time"),
+        data.get(f"gh_{kind}_latest_failure_time"),
+        data.get(f"gh_{kind}_running", False),
+    )
+    return icon, text
+
+
+# 产出型 KR：当日 0 产出 = 产出停滞信号，不得渲染成 🟢（否则读者以为一切正常）。
+# 非产出型（流量/点击率类）当日 0% 多为统计口径或数据延迟，沿用既有语义，不误报。
+OUTPUT_KR_KEYWORDS = ("新增文章", "佣金", "订阅")
+
+
+def daily_okr_signal(name: str, progress):
+    """OKR 信号灯判定：0% / 部分 / 达标 三档，纯函数便于单测。
+
+    覆盖 okr_utils._zero_run_icon 的假绿：原逻辑对名称含「新增文章」的 KR 兜底
+    🟢，于是「日新增文章 0篇 / 1篇 = 0%」被标成 🟢——0% 完成标绿是谎报，读者会
+    以为产出正常，实际当天零产出。产出型指标 0% 降为 🟡（起步/未产出）；部分达成
+    沿用既有阈值（≥50% 🟡，<50% 🟠）；达标 ✅。progress 为 None（数据不可用）时
+    返回 None，表示不覆盖原有 ⚪。
+    """
+    if progress is None:
+        return None
+    p = int(progress)
+    if p >= 100:
+        return "✅"
+    if p == 0:
+        return "🟡" if any(k in name for k in OUTPUT_KR_KEYWORDS) else "🟢"
+    if p >= 50:
+        return "🟡"
+    return "🟠"
+
+
+def fix_daily_okr_signal(section: str) -> str:
+    """修正 OKR 看板里的假绿：产出型 KR 进度 0% 不得是 🟢。
+
+    只做降级修正，绝不上调严重度——okr_utils 基于 content/posts 真实发布日期推导
+    出的 🔴/🟠（连续 N 天未发布）比按进度重算的结论更强，覆盖它会掩盖生产中断。
+    因此仅在「当前是 🟢 且应判定为 🟡」时替换状态列图标，其余行原样保留。
+    """
+    if not section:
+        return section
+    out = []
+    for line in section.split("\n"):
+        s = line.strip()
+        if s.startswith("|") and s.endswith("|"):
+            cells = [c.strip() for c in s.strip("|").split("|")]
+            # 5 列 = 关键结果 | 当前 | 目标 | 进度 | 状态；表头/分隔行/NOT_AVAILABLE 行
+            # 的进度列分别是「进度」/":---"/"-"，均不以 % 结尾，自然跳过。
+            if len(cells) == 5 and cells[3].endswith("%"):
+                prog_txt = cells[3][:-1]
+                prog = int(prog_txt) if prog_txt.isdigit() else None
+                want = daily_okr_signal(cells[0], prog)
+                icon_now = next((x for x in ("🟢", "🟡", "🟠", "🔴", "✅", "⚪")
+                                 if cells[4].startswith(x)), "")
+                if want == "🟡" and icon_now == "🟢":
+                    note = cells[4][2:].strip()
+                    cells[4] = "🟡 当日零产出，产出型指标 0% 不标绿" + \
+                               (f"，{note}" if note else "")
+                    line = "| " + " | ".join(cells) + " |"
+        out.append(line)
+    return "\n".join(out)
 
 
 class FeishuDailyReporter:
@@ -730,20 +832,33 @@ class FeishuDailyReporter:
         if top_countries:
             country_lines = [f"{c['country']}: {c['users']} 人" for c in top_countries[:5]]
         country_str = "\n".join(country_lines)
-        # GA4 小流量隐私阈值提示：明细合计可能与总数不一致
+        # GA4 一致性校验：小流量下 session 维度指标与事件级总量会背离。
+        # 结论先行——页浏览（screenPageViews，事件级总量）是唯一可靠锚点；
+        # 会话数与渠道明细都走 sessionization 管线，是派生量。
+        _sess = data.get("sessions") or 0
+        _reqs = data.get("requests") or 0
         consistency_notes = []
-        if top_channels and data.get("sessions"):
+        if top_channels and _sess:
             ch_s = sum(c.get("sessions", 0) for c in top_channels)
-            if ch_s != data.get("sessions"):
-                consistency_notes.append(f"渠道会话合计 {ch_s} ≠ 总会话 {data.get('sessions')}")
+            if ch_s != _sess:
+                consistency_notes.append(
+                    f"渠道会话合计 {ch_s} ≠ 总会话 {_sess}（Unassigned 归因伪影会把渠道会话放大）")
         if top_channels and data.get("visitors"):
             ch_u = sum(c.get("users", 0) for c in top_channels)
             if ch_u != data.get("visitors"):
-                consistency_notes.append(f"渠道用户合计 {ch_u} ≠ 总访客 {data.get('visitors')}")
-        if top_pages and data.get("requests"):
+                consistency_notes.append(
+                    f"渠道用户合计 {ch_u} ≠ 总访客 {data.get('visitors')}"
+                    f"（同源 Unassigned 伪影）")
+        if top_pages and _reqs:
             pv = sum(p.get("views", 0) for p in top_pages)
-            if pv != data.get("requests"):
-                consistency_notes.append(f"Top页面浏览合计 {pv} ≠ 总浏览 {data.get('requests')}")
+            if pv != _reqs:
+                consistency_notes.append(f"Top页面浏览合计 {pv} ≠ 总浏览 {_reqs}")
+        # 关键结论：会话数 > 页浏览量在 GA4 定义下不可能（每个会话 ≥1 次页浏览）。
+        # 出现即判为 GA4 渠道归因伪影，显式标注，不留成悬而未决的矛盾。
+        if _reqs > 0 and _sess > _reqs:
+            consistency_notes.append(
+                f"会话数 {_sess} > 页浏览 {_reqs} 在 GA4 定义下不可能（每会话 ≥1 页浏览）"
+                f"——判为 GA4 渠道归因伪影（Unassigned 重复计数），非真实流量差异")
         # GA4 session 维度指标与事件级总量在小样本下会背离（不是隐私抑制，
         # GA4 Data API 对这几个指标没有 GSC 那种 1000 次阈值）。
         # 判定：screenPageViews 是事件级总量，sessions/bounceRate/engagementRate 走
@@ -770,8 +885,11 @@ class FeishuDailyReporter:
             _warn_blocks.append("⚠️ 口径矛盾提示（GA4 sessionization 与事件级总量背离，非隐私抑制）："
                                 + "；".join(ga4_session_notes))
         if consistency_notes:
-            _warn_blocks.append("⚠️ 一致性提示：" + "；".join(consistency_notes)
-                                + "\n（GA4 session 维度指标与事件级总量/分组明细在小样本下会背离）")
+            # 给出明确结论而非悬而未决的矛盾：锚点是页浏览，会话/渠道明细是派生量。
+            _warn_blocks.append(
+                f"⚠️ 一致性结论（页浏览 {_reqs} 次是唯一可靠锚点；会话数与渠道明细为"
+                f"派生量，小样本下会被 Unassigned 归因伪影放大）："
+                + "；".join(consistency_notes))
         consistency_str = ("\n\n" + "\n\n".join(_warn_blocks)) if _warn_blocks else ""
         # 2.0: GA4 平均时长异常提示（DATA_QUALITY_WARNING），不当作转化故障。
         # 「平均时长 >10s 但互动率 0%」的矛盾形态由上方 ga4_session_notes 覆盖。
@@ -795,6 +913,25 @@ class FeishuDailyReporter:
         _cached_imp = _snap.get("gsc_impressions_28d")
         gsc_cache_imp_str = f"{_cached_imp:,.0f} 次" if _cached_imp is not None else "—"
         gsc_cache_clk_str = f"{(_snap.get('gsc_clicks_28d') or 0):,.0f} 次" if _cached_imp is not None else "—"
+        # 缓存窗口一致性校验：28 天窗口 ⊇ 7 天窗口（[D-9,D-3] ⊂ 近 28 天），
+        # 点击数与曝光数都不可能更少。若 28 天 < 7 天，两个数来自不同查询周期
+        # （28 天缓存未刷新/口径不同），不能并列为事实，必须标注数据源异常。
+        gsc_cache_anomaly = None
+        if _cached_imp is not None and gsc_has_data:
+            _c28_clk = _snap.get("gsc_clicks_28d") or 0
+            _c28_imp = _cached_imp or 0
+            _c7_clk = data.get("gsc_clicks") or 0
+            _c7_imp = data.get("gsc_impressions") or 0
+            if _c28_clk < _c7_clk or _c28_imp < _c7_imp:
+                _bits = []
+                if _c28_clk < _c7_clk:
+                    _bits.append(f"缓存点击 {_c28_clk:g} < 7天窗口 {_c7_clk:g}")
+                if _c28_imp < _c7_imp:
+                    _bits.append(f"缓存曝光 {_c28_imp:g} < 7天窗口 {_c7_imp:g}")
+                gsc_cache_anomaly = ("；".join(_bits)
+                                     + "——28 天窗口 ⊇ 7 天窗口，数值不可能更少，"
+                                     "判为数据源异常（28 天缓存很可能来自不同查询周期/未刷新），"
+                                     "不要与 7 天窗口并列为事实，以 7 天窗口为准")
         # A2 修复：真实索引页数来自快照的 GSC UI 快照，与 sitemap_count 不是一回事。
         # 原先日报只显示 sitemap 条数却命名 indexed_pages，读者会把它当索引页数。
         _snap_idx = _snap.get("gsc_indexed_pages")
@@ -853,20 +990,14 @@ class FeishuDailyReporter:
         # ===== 5. 订阅数据 =====
         
         # ===== 6. 自动化运维状态 =====
-        gh_blog = data.get("gh_blog_success")
-        gh_report = data.get("gh_report_success")
         agent_health_block = format_agent_health(data["agent_health"]) if data.get("agent_health") else "🤖 AI Agent 健康: ⚠️ 监控不可用"
-        blog_icon = "✅" if gh_blog == True else ("❌" if gh_blog == False else "⚪")
-        report_icon = "✅" if gh_report == True else ("❌" if gh_report == False else "⚪")
-        ci_token_missing = not os.environ.get("GITHUB_TOKEN")
-        blog_state = _ci_state_str(gh_blog, ci_token_missing, data.get("gh_api_ok", True),
-                                   data.get("gh_api_error") or "未知原因",
-                                   data.get("gh_blog_paths_total"),
-                                   data.get("gh_blog_window_days", 2))
-        report_state = _ci_state_str(gh_report, ci_token_missing, data.get("gh_api_ok", True),
-                                     data.get("gh_api_error") or "未知原因",
-                                     data.get("gh_report_paths_total"),
-                                     data.get("gh_report_window_days", 2))
+        # 三态渲染：✅ 成功 / 🔴 失败（在跑但失败，必须显式告警）/ ⚪ 未运行或状态未知。
+        # 原先失败用 ❌、且检测器把 failure 混进「无完成记录」→「⚪ 状态未知」，
+        # 读者以为系统正常运转，实际关键 workflow 全部静默失败。见 _ci_state_str。
+        blog_icon, blog_state = _workflow_status_cell(data, "blog",
+                                                      data.get("gh_blog_window_days", 2))
+        report_icon, report_state = _workflow_status_cell(data, "report",
+                                                           data.get("gh_report_window_days", 2))
         
         # 高优先级待办
         todos = data.get("high_priority_todos", [])
@@ -939,7 +1070,8 @@ class FeishuDailyReporter:
 | 28天缓存窗口 | {gsc_cache_imp_str} | 缓存点击 | {gsc_cache_clk_str} |
 | 窗口 | {data.get('gsc_window_start', '?')}~{data.get('gsc_window_end', '?')} | 窗口天数 | {data.get('gsc_window_days', '?')} |
 
-**📈 GSC 环比趋势**: 周环比 {gsc_week_trend}（vs 前 7 天） ｜ 月环比 {gsc_month_trend}（vs 4 周前同长窗口）"""
+**📈 GSC 环比趋势**: 周环比 {gsc_week_trend}（vs 前 7 天） ｜ 月环比 {gsc_month_trend}（vs 4 周前同长窗口）
+{'⚠️ ' + gsc_cache_anomaly if gsc_cache_anomaly else ''}"""
                     }
                 },
                 # Top 关键词
@@ -1371,9 +1503,11 @@ class FeishuDailyReporter:
             # GitHub Actions 状态
             "gh_blog_success": None,
             "gh_report_success": None,
+            "gh_social_success": None,
             "gh_api_ok": None,
             "gh_api_error": None,
             "gh_runs_total": None,
+            "gh_query_window_days": None,
             "gh_blog_paths_total": None,
             "gh_report_paths_total": None,
             # 高优先级待办
@@ -1484,19 +1618,25 @@ class FeishuDailyReporter:
         gh_data = self._fetch_github_actions()
         if gh_data:
             data.update(gh_data)
-            blog_status = _ci_state_str(data.get('gh_blog_success'), not GITHUB_TOKEN,
-                                        data.get('gh_api_ok', True), data.get('gh_api_error') or '未知原因',
-                                        data.get('gh_blog_paths_total'))
-            report_status = _ci_state_str(data.get('gh_report_success'), not GITHUB_TOKEN,
-                                          data.get('gh_api_ok', True), data.get('gh_api_error') or '未知原因',
-                                          data.get('gh_report_paths_total'),
-                                          data.get('gh_report_window_days', 2))
-            print(f"   ✅ GitHub Actions: 博客生成 {blog_status}, 日报 {report_status}")
-            # 社媒分发失败 → 真实告警（不被日报状态吞掉）
-            if data.get("gh_social_success") is False:
-                _social_alert = "社媒分发工作流（Social Engine Daily）昨日失败，请检查 Buffer 排期与 Worker 日志"
-                data.setdefault("data_status", []).append(_social_alert)
-                print(f"   ⚠️ {_social_alert}")
+            blog_icon, blog_status = _workflow_status_cell(
+                data, "blog", data.get('gh_blog_window_days', 2))
+            report_icon, report_status = _workflow_status_cell(
+                data, "report", data.get('gh_report_window_days', 2))
+            print(f"   ✅ GitHub Actions: 博客生成 {blog_icon} {blog_status}, "
+                  f"日报 {report_icon} {report_status}")
+            # failure 必须进 data_status：卡片表格里孤立的 🔴 容易被当成排版装饰，
+            # 只有进入「数据源状态提醒」才会被当成需要处理的事项。
+            for kind, label in (("blog", "博客自动生成（Hugo）"),
+                                ("report", "日报自动推送（Feishu）"),
+                                ("social", "社媒分发工作流")):
+                if data.get(f"gh_{kind}_success") is False:
+                    _fc = data.get(f"gh_{kind}_failure_count") or 1
+                    _lft = data.get(f"gh_{kind}_latest_failure_time") or ""
+                    _lft_s = f"，最近失败 {_lft[:10]}" if _lft else ""
+                    _wf_alert = (f"🔴 {label}在跑但失败：{data.get('gh_query_window_days', 2)} "
+                                 f"天内 {_fc} 次失败{_lft_s}，请检查 workflow 日志")
+                    data.setdefault("data_status", []).append(_wf_alert)
+                    print(f"   ⚠️ {_wf_alert}")
         
 
         # 7.5 AI Agent 健康监控
@@ -2410,11 +2550,18 @@ class FeishuDailyReporter:
             }
             
             base_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/runs"
-            # 只统计报告日（UTC 昨日）完成的工作流，避免把历史成功当成当日状态
-            report_day = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
             today_day = datetime.now().strftime("%Y-%m-%d")
-            # 当前正在运行的 run（GitHub Actions 自动注入），排除自身避免误判
+            # 当前正在运行的 run（GitHub Actions 自动注入），排除自身避免把
+            # 「本实例还没跑完」误判成「未运行」——日报推送工作流的自指矛盾。
             current_run_id = str(os.environ.get("GITHUB_RUN_ID", ""))
+            # GITHUB_WORKFLOW_REF 形如 owner/repo/.github/workflows/x.yml@main，
+            # 用于识别「本次正在跑的就是哪个 workflow」，从而修正自指谎报：
+            # 这份日报本身就是日报推送工作流的产物，不能报告说它没跑。
+            _wf_ref = os.environ.get("GITHUB_WORKFLOW_REF", "") or ""
+            current_workflow_path = (
+                ".github/" + _wf_ref.split(".github/", 1)[1].split("@", 1)[0]
+                if ".github/workflows/" in _wf_ref else None
+            )
             
             # 按工作流文件路径精确匹配，避免 "Social Engine Daily" 等名称干扰日报状态
             REPORT_WORKFLOW_PATHS = {".github/workflows/feishu-daily-report.yml"}
@@ -2434,6 +2581,13 @@ class FeishuDailyReporter:
                 "report": 2,  # 日更
                 "social": 2,  # 日更
             }
+            # 关键修复：API 查询窗口必须 ≥ 最宽的 workflow 窗口。原实现查询
+            # [昨日, 今日] 2 天窗口，却声明博客窗口 8 天——8 天前失败过的
+            # weekly-blog-update 根本进不了 runs 列表，paths_total=0 →
+            # 「⚪ 状态未知（8 天内该 workflow 无任何完成记录）」，把静默失败
+            # 伪装成「没跑」。这才是「两个状态未知是假告警」的真正根因。
+            widest_window_days = max(WORKFLOW_WINDOW_DAYS.values())
+            query_since = (datetime.now() - timedelta(days=widest_window_days)).strftime("%Y-%m-%d")
             
             result = {}
             runs = []  # 预定义避免作用域问题
@@ -2447,7 +2601,10 @@ class FeishuDailyReporter:
                 # daily_2026-09-18.json 已复现该假声明，而同日 chinabound-bot 的
                 # OKR 快照提交（if: send_report.outcome == 'success'）证明发送实际成功。
                 page_size = 200
-                for page in range(1, 6):  # 最多 5 页 = 1000 条，覆盖 2 天窗口
+                # 窗口放宽到 widest_window_days 后需相应提高翻页上限：本仓库每天
+                # 128+ 次提交 × (Error Alert + Post-deploy) ≈ 250~400 run/日，
+                # 8 天窗口 ≈ 2000~3200 条。20 页 = 4000 条留足余量。
+                for page in range(1, 21):  # 最多 20 页 = 4000 条，覆盖最宽 workflow 窗口
                     resp = requests.get(
                         base_url,
                         headers=headers,
@@ -2455,7 +2612,7 @@ class FeishuDailyReporter:
                             "per_page": page_size,
                             "page": page,
                             "status": "completed",
-                            "created": f"{report_day}..{today_day}",
+                            "created": f"{query_since}..{today_day}",
                         },
                         timeout=15,
                     )
@@ -2476,6 +2633,7 @@ class FeishuDailyReporter:
             result["gh_api_ok"] = api_ok
             result["gh_api_error"] = None if api_ok else api_error
             result["gh_runs_total"] = len(runs)
+            result["gh_query_window_days"] = widest_window_days
 
             def _completed_runs(paths, since_day):
                 """since_day 起、已完成、排除当前 run、按创建时间倒序。
@@ -2494,58 +2652,67 @@ class FeishuDailyReporter:
                 )
 
             def _path_runs(paths):
-                """该 workflow 路径的全部 run（不限日期/状态），用于区分
-                「仓库里根本没有这个 workflow」与「有记录但当日没跑完」"""
+                """该 workflow 路径在查询窗口内的全部已完成 run。"""
                 return [r for r in runs if r.get("path") in paths]
-            
-            # 检查博客生成工作流
-            try:
-                blog_window = WORKFLOW_WINDOW_DAYS["blog"]
-                blog_since = (datetime.now() - timedelta(days=blog_window)).strftime("%Y-%m-%d")
-                result["gh_blog_window_days"] = blog_window
-                blog_runs = _completed_runs(BLOG_WORKFLOW_PATHS, blog_since)
-                if blog_runs:
-                    latest_blog = blog_runs[0]
-                    result["gh_blog_success"] = latest_blog.get("conclusion") == "success"
-                    result["gh_blog_run_time"] = latest_blog.get("created_at", "")
-                else:
-                    result["gh_blog_success"] = None  # 无已完成的工作流
-                    result["gh_blog_paths_total"] = len(_path_runs(BLOG_WORKFLOW_PATHS))
-            except Exception as e:
-                print(f"   ⚠️ GitHub 博客工作流查询失败: {e}")
-                result["gh_blog_success"] = None
 
-            # 检查日报工作流（精确路径，排除正在运行的当前实例）
-            try:
-                report_window = WORKFLOW_WINDOW_DAYS["report"]
-                report_since = (datetime.now() - timedelta(days=report_window)).strftime("%Y-%m-%d")
-                result["gh_report_window_days"] = report_window
-                report_runs = _completed_runs(REPORT_WORKFLOW_PATHS, report_since)
-                if report_runs:
-                    latest_report = report_runs[0]
-                    result["gh_report_success"] = latest_report.get("conclusion") == "success"
-                    print(f"   📋 日报工作流最新完成: {latest_report.get('display_title', 'N/A')} -> {latest_report.get('conclusion', 'N/A')}")
-                else:
-                    result["gh_report_success"] = None
-                    result["gh_report_paths_total"] = len(_path_runs(REPORT_WORKFLOW_PATHS))
-                    print(f"   ⚠️ 未找到已完成的日报工作流（可能正在运行中）")
-            except Exception as e:
-                print(f"   ⚠️ GitHub 日报工作流查询失败: {e}")
-                result["gh_report_success"] = None
+            def _summarize(kind, paths, window_days):
+                """三态汇总：success / failure / no_runs，附失败次数与最近失败时间。
 
-            # 社媒分发工作流：失败是真实事件，转为告警而非被日报状态吞掉
-            try:
-                social_window = WORKFLOW_WINDOW_DAYS["social"]
-                social_since = (datetime.now() - timedelta(days=social_window)).strftime("%Y-%m-%d")
-                result["gh_social_window_days"] = social_window
-                social_runs = _completed_runs(SOCIAL_WORKFLOW_PATHS, social_since)
-                if social_runs:
-                    latest_social = social_runs[0]
-                    result["gh_social_success"] = latest_social.get("conclusion") == "success"
-                    if not result["gh_social_success"]:
-                        print(f"   ⚠️ 社媒分发工作流最近失败: {latest_social.get('display_title', 'N/A')} -> {latest_social.get('conclusion', 'N/A')}")
-            except Exception as e:
-                print(f"   ⚠️ GitHub 社媒工作流查询失败: {e}")
+                原先只存 conclusion == "success" 的布尔值；真正谎报的是 API 查询
+                窗口窄于声明窗口，导致 failure 根本没进 runs 列表 → paths_total=0
+                → 「⚪ 状态未知」，把静默失败伪装成「没跑」。这里把结论、时间、
+                失败次数一并落盘，渲染端才能把 failure 显式告警而非降级为未知。
+                """
+                since = (datetime.now() - timedelta(days=window_days)).strftime("%Y-%m-%d")
+                result[f"gh_{kind}_window_days"] = window_days
+                result[f"gh_{kind}_paths_total"] = len(_path_runs(paths))
+                w_runs = _completed_runs(paths, since)
+                result[f"gh_{kind}_window_runs"] = len(w_runs)
+                fails = [r for r in w_runs if r.get("conclusion") != "success"]
+                result[f"gh_{kind}_failure_count"] = len(fails)
+                result[f"gh_{kind}_latest_failure_time"] = (
+                    fails[0].get("created_at") if fails else None)
+                if w_runs:
+                    latest = w_runs[0]
+                    conclusion = latest.get("conclusion")
+                    result[f"gh_{kind}_success"] = conclusion == "success"
+                    result[f"gh_{kind}_state"] = "success" if conclusion == "success" else "failure"
+                    result[f"gh_{kind}_conclusion"] = conclusion
+                    result[f"gh_{kind}_run_time"] = latest.get("created_at", "")
+                    result[f"gh_{kind}_display_title"] = latest.get("display_title", "N/A")
+                else:
+                    result[f"gh_{kind}_success"] = None
+                    result[f"gh_{kind}_state"] = "no_runs"
+                    result[f"gh_{kind}_conclusion"] = None
+                    result[f"gh_{kind}_run_time"] = None
+                # 自指修正：本实例正在跑该 workflow 时，不能把自己渲染成「未运行」——
+                # 这份日报本身就是它的产物。窗口内此前的失败计数仍保留，不掩盖故障。
+                if current_run_id and current_workflow_path in paths:
+                    result[f"gh_{kind}_running"] = True
+                    result[f"gh_{kind}_success"] = True
+                    result[f"gh_{kind}_state"] = "success"
+                    if not result.get(f"gh_{kind}_run_time"):
+                        result[f"gh_{kind}_run_time"] = datetime.now(timezone.utc).strftime(
+                            "%Y-%m-%dT%H:%M:%SZ")
+
+            for kind, paths, window in (
+                ("blog", BLOG_WORKFLOW_PATHS, WORKFLOW_WINDOW_DAYS["blog"]),
+                ("report", REPORT_WORKFLOW_PATHS, WORKFLOW_WINDOW_DAYS["report"]),
+                ("social", SOCIAL_WORKFLOW_PATHS, WORKFLOW_WINDOW_DAYS["social"]),
+            ):
+                try:
+                    _summarize(kind, paths, window)
+                    if kind == "report":
+                        print(f"   📋 日报工作流: {result.get('gh_report_state')} -> "
+                              f"{result.get('gh_report_conclusion', 'N/A')}")
+                    if result.get(f"gh_{kind}_success") is False:
+                        print(f"   🔴 {kind} 工作流在跑但失败：{window} 天内 "
+                              f"{result.get(f'gh_{kind}_failure_count') or 1} 次失败，最近 "
+                              f"{result.get(f'gh_{kind}_latest_failure_time', 'N/A')}")
+                except Exception as e:
+                    print(f"   ⚠️ GitHub {kind} 工作流查询失败: {e}")
+                    result[f"gh_{kind}_success"] = None
+                    result[f"gh_{kind}_state"] = None
             
             return result if result else None
             
