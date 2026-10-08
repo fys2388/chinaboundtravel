@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-10-08",
   "experiments": [
     {
       "id": "REV001",
@@ -65,11 +65,11 @@
         {"id": "variant_a", "name": "优化标题(含2026)", "traffic": 50}
       ],
       "goal_event": "page_view",
-      "status": "PLANNED",
+      "status": "RETIRED",
       "start_date": null,
       "end_date": null,
       "min_sample": 2000,
-      "notes": "SEO标题测试需通过GSC数据评估，非前端A/B"
+      "notes": "RETIRED_INVALID_INSTRUMENT (2026-10-08)：三条理由。① 测量通道不存在——type=CTR_TITLE_META 需要按变体拆分曝光/点击，但本实验 notes 声明的 GSC 评估法做不到：GSC 按查询聚合曝光与点击，不区分读者看到的是 control 还是 variant_a，没有 per-variant 归因通道，评估法本身无效。② 样本不可收敛——min_sample=2000/变体（合计 4000），而全站约 10 访客/天，该页即便日均 3 次浏览也需约 3.7 年才能达标。③ 目标页是 144 小时免签政策内容（policy_gate 高风险类目），向 50% 读者投放不同标题在政策准确性上存在责任风险，且与既定「不自动改标题」规则冲突。RETIRED 为终态，不进日报「待启动 N」。若未来具备 server-side 分变体追踪（每变体独立 URL 或参数），可重新立项，勿复用本条目。"
     },
     {
       "id": "DRIVE-001",

@@ -22,6 +22,9 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-sa
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
+cover:
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp"
+  alt: "China Solo Travel Guide: Safety, Hostels, and Making Friends"
 ---
 
 ## China Solo Travel Guide: Safety, Hostels, and Making Friends

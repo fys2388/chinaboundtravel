@@ -27,7 +27,9 @@ slug: "chinabound-travel-guide-2026-09-monthly-update"
 aliases:
   - "/posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/"
 canonicalURL: "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/"
-
+cover:
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp"
+  alt: "ChinaBound Travel Guide 2026.09 Update"
 ---
 ## ChinaBound Travel Guide Now at Version 2026.09
 

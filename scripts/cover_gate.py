@@ -74,16 +74,28 @@ def check_cover(post_path):
                     in_cover = False
             else:
                 # YAML format: cover: then image: "..."
+                # 关键：缩进判断必须用原始行 line，不能用 stripped —— stripped 已去掉
+                # 前导空格，`not stripped.startswith(" ")` 恒为 True，于是 image: 之前的
+                # 任意键（如 alt:）都会把 in_cover 提前复位，合法封面被误判 missing_cover。
                 if stripped.startswith("cover:"):
+                    inline = stripped.split(":", 1)[1].strip()
+                    if inline.startswith("{"):
+                        # 行内写法: cover: {image: "..." , alt: "..."}
+                        m = re.search(r'["\']?image["\']?\s*:\s*["\']([^"\']+)', inline)
+                        if m:
+                            cover_image = m.group(1)
+                            cover_ok = True
+                            break
                     in_cover = True
                     continue
-                if in_cover and stripped.startswith("image:"):
-                    raw = stripped.split(":", 1)[1].strip()
-                    cover_image = raw.strip('"').strip("'")
-                    cover_ok = True
-                    break
-                if in_cover and stripped and not stripped.startswith(" "):
-                    in_cover = False
+                if in_cover:
+                    if stripped.startswith("image:"):
+                        raw = stripped.split(":", 1)[1].strip()
+                        cover_image = raw.strip('"').strip("'")
+                        cover_ok = True
+                        break
+                    if stripped and line[:1] not in (" ", "\t"):
+                        in_cover = False
 
     if not cover_ok:
         issues.append("missing_cover")

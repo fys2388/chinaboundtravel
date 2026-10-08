@@ -22,6 +22,9 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/best-china-itineraries-for
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
+cover:
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/best-china-itineraries-for-10-days-three-routes-compared.webp"
+  alt: "Top-rated China Itineraries for 10 Days: Three Routes Compared"
 ---
 
 ## Top-rated China Itineraries for 10 Days: Three Routes Compared

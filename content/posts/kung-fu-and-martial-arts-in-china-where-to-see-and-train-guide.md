@@ -22,6 +22,9 @@ canonicalURL: "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-i
 ShowToc: "true"
 TocOpen: "false"
 weight: "1"
+cover:
+  image: "https://www.chinaboundtravel.com/img/china-dest/general/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.webp"
+  alt: "Kung Fu And Martial Arts In China: Where To See And Train Guide"
 ---
 
 ## Kung Fu and Martial Arts in China: Where to See and Train
