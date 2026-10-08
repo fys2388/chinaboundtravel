@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-07T19:18:11",
+  "updated_at": "2026-10-08T07:13:32",
   "items": [
     {
       "id": "soc-000001",
@@ -166,7 +166,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "x",
       "type": "tip",
-      "caption": "Essential Bargain tips most first-time visitors miss. → https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=x_v1 #ChinaTravel",
+      "caption": "Essential Bargain tips most first-time visitors miss. → https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'China Bargaining Guide: How to Haggle & Shop' (platform x). Scene: colorful Chinese shopping street market. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-x-tip-0fe09bd3.jpg",
       "utm_params": {
@@ -174,8 +174,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -185,8 +185,8 @@
       },
       "_sig": "8395fba13cb0",
       "image_generated": true,
-      "recycled_at": "2026-10-01",
-      "recycle_count": 2
+      "recycled_at": "2026-10-08",
+      "recycle_count": 3
     },
     {
       "id": "soc-000008",
@@ -1692,7 +1692,7 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "ig",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nEverything you need to know about Food — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 what\n\nEverything you need to know about Food — in one practical guide.\n\n· China Food Guide: Must-Try Dishes &\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Food Guide: Must-Try Dishes &' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-ig-conversion-bcc13869.jpg",
       "utm_params": {
@@ -1701,7 +1701,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-10-01",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1710,8 +1710,8 @@
         "platform": "ig"
       },
       "_sig": "662fe3fdb673",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 3,
+      "recycled_at": "2026-10-08",
+      "recycle_count": 4,
       "image_generated": true
     },
     {
@@ -2742,7 +2742,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "ig",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nEverything you need to know about China travel — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "🔥 what\n\nEverything you need to know about China travel — in one practical guide.\n\n· Where to Stay in China: Complete 2026 Guide\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform ig). Scene: cozy Chinese boutique hotel room. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-ig-conversion-aec0c8d3.jpg",
       "utm_params": {
@@ -2751,7 +2751,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-10-01",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2760,8 +2760,8 @@
         "platform": "ig"
       },
       "_sig": "5ab340d82b59",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 3,
+      "recycled_at": "2026-10-08",
+      "recycle_count": 4,
       "image_generated": true
     },
     {
@@ -3766,7 +3766,7 @@
       "source_title": "Alipay vs WeChat Pay: Which Payment App",
       "platform": "fb",
       "type": "visual",
-      "caption": "🔥 linkedin\n\n💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260930&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "caption": "💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=fb_v1\n\n👉 read more https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "image_prompt": "Professional visual social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-vs-wechat-pay-which-tourists-shou-fb-visual-93c6c3ef.jpg",
       "utm_params": {
@@ -3774,8 +3774,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3784,8 +3784,8 @@
         "platform": "fb"
       },
       "_sig": "d6a1947775fd",
-      "recycled_at": "2026-09-30",
-      "recycle_count": 1,
+      "recycled_at": "2026-10-08",
+      "recycle_count": 2,
       "image_generated": true
     },
     {
@@ -4044,8 +4044,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4148,16 +4148,16 @@
       "source_title": "China Airport Transfer Guide (2026)",
       "platform": "pinterest",
       "type": "story",
-      "caption": "🔥 linkedin\n\nChina Airport Transfer Guide (2026) | What travelers discover about China travel — practical lessons from the ground.\n\nChina Airport Transfer Guide (2026)\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-airport-transfer-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "China Airport Transfer Guide (2026) | What travelers discover about China travel — practical lessons from the ground.\n\nChina Airport Transfer Guide (2026)\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-airport-transfer-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'China Airport Transfer Guide (2026)' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to get from Chinese airports to city centers in 2026: airport express trains, metro, taxis, ride-hailing, and private transfers compared.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/transport/china-airport-transfer-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-airport-transfer-guide-pinterest-story-6cacb1bc.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4166,8 +4166,9 @@
         "platform": "pinterest"
       },
       "_sig": "2dc61b896b8c",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 1
+      "recycled_at": "2026-10-08",
+      "recycle_count": 2,
+      "image_generated": true
     },
     {
       "id": "soc-000159",
@@ -5255,7 +5256,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about High Speed — in one practical guide. → https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'How To Ride China'S High-Speed Trains: How to Book in 2026' (platform x). Scene: Chinese high-speed train in a modern station. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-rail-how-to-book-ticket-x-conversion-c9790fa6.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -5270,7 +5271,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "7ed54694f583"
+      "_sig": "7ed54694f583",
+      "image_generated": true
     },
     {
       "id": "soc-000201",
@@ -5280,7 +5282,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\n💡 Research-backed facts about Visa every traveler should know.\n\n• Why You Need Mobile Payment in China\n• Part 1: Setting Up Alipay for Foreigners\n• Downloading the App\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional knowledge social graphic for 'How to Use Alipay as a Foreigner: Complete' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mis.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-fb-knowledge-ace14b7d.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -5295,7 +5297,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "f1a9496fbb0f"
+      "_sig": "f1a9496fbb0f",
+      "image_generated": true
     },
     {
       "id": "soc-000202",
@@ -5305,7 +5308,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Visa tips most first-time visitors miss.\n\n· Why You Need Mobile Payment in China\n· Part 1: Setting Up Alipay for Foreigners\n· Downloading the App\n\nRead the full guide: https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'How to Use Alipay as a Foreigner: Complete' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mis.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-ig-tip-bdd2b531.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5320,7 +5323,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "e3687b188e7a"
+      "_sig": "e3687b188e7a",
+      "image_generated": true
     },
     {
       "id": "soc-000203",
@@ -5330,7 +5334,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\nHow to Use Alipay as a Foreigner: Complete | What travelers discover about Visa — practical lessons from the ground.\n\nSet up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mistakes | Keywords: visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional story social graphic for 'How to Use Alipay as a Foreigner: Complete' (platform pinterest). Scene: smartphone showing mobile payment at a shop. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mis.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-pinterest-story-883025d1.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -5345,7 +5349,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "fa74fa73b527"
+      "_sig": "fa74fa73b527",
+      "image_generated": true
     },
     {
       "id": "soc-000204",
@@ -5940,7 +5945,7 @@
       "source_title": "China Business Travel: Meetings, Dining &",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "🔥 linkedin\n\nChina Business Travel: Meetings, Dining & | Essential Visa tips most first-time visitors miss.\n\nChina business travel guide 2026: M visa requirements, meeting etiquette, dining customs, networking tips, and practical advice for foreign business travelers | Keywords: etiquette, visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 what\n\nChina Business Travel: Meetings, Dining & | Essential China travel tips most first-time visitors miss.\n\nChina Business Travel: Meetings, Dining &\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-business-travel-guide-meetings-dining-and-networking/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'China Business Travel: Meetings, Dining &' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China business travel guide 2026: M visa requirements, meeting etiquette, dining customs, networking tips, and practical advice for foreign .",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp",
       "utm_params": {
@@ -5948,8 +5953,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5957,7 +5962,9 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "2c338c858b0c"
+      "_sig": "2c338c858b0c",
+      "recycled_at": "2026-10-08",
+      "recycle_count": 1
     },
     {
       "id": "soc-000228",
@@ -6204,7 +6211,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "🔥 linkedin\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 | Essential Itinerary tips most first-time visitors miss.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 what\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 | Essential Itinerary tips most first-time visitors miss.\n\n7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform pinterest). Scene: China travel map with landmarks and compass. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
       "utm_params": {
@@ -6213,7 +6220,7 @@
         "utm_campaign": "cbt_social_20260916"
       },
       "status": "已发布",
-      "publish_date": "2026-10-01",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6222,8 +6229,8 @@
         "platform": "pinterest"
       },
       "_sig": "5edeb5895480",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 2
+      "recycled_at": "2026-10-08",
+      "recycle_count": 3
     },
     {
       "id": "soc-000238",
@@ -6231,7 +6238,7 @@
       "source_title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Itinerary — practical lessons from the ground. → https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Itinerary — practical lessons from the ground. → https://www.chinaboundtravel.com/7-day-china-itinerary-beijing-xian-shanghai-first-timers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for '7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026' (platform x). Scene: China travel map with landmarks and compass. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
       "utm_params": {
@@ -6239,8 +6246,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6249,8 +6256,8 @@
         "platform": "x"
       },
       "_sig": "db00d17a2c9f",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 2
+      "recycled_at": "2026-10-08",
+      "recycle_count": 3
     },
     {
       "id": "soc-000239",
@@ -6437,7 +6444,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "pinterest",
       "type": "knowledge",
-      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Research-backed facts about China travel every traveler should know.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 what\n\nIs China Safe for Tourists in 2026? Honest | Research-backed facts about China travel every traveler should know.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp",
       "utm_params": {
@@ -6445,8 +6452,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-01",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6455,8 +6462,8 @@
         "platform": "pinterest"
       },
       "_sig": "517de33728f3",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 2
+      "recycled_at": "2026-10-08",
+      "recycle_count": 3
     },
     {
       "id": "soc-000247",
@@ -6545,7 +6552,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "🔥 linkedin\n\nIs China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261001&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "🔥 what\n\nIs China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261008&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.webp",
       "utm_params": {
@@ -6554,7 +6561,7 @@
         "utm_campaign": "cbt_social_20260917"
       },
       "status": "已发布",
-      "publish_date": "2026-10-01",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6563,8 +6570,8 @@
         "platform": "pinterest"
       },
       "_sig": "fea6b3401d0c",
-      "recycled_at": "2026-10-01",
-      "recycle_count": 2
+      "recycled_at": "2026-10-08",
+      "recycle_count": 3
     },
     {
       "id": "soc-000251",
