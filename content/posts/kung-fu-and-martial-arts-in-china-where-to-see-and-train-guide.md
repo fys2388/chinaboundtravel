@@ -97,6 +97,8 @@ If you're interested in learning more about Kung Fu and martial arts in China, b
 
 - [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
 
+- [Where to Stay in China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

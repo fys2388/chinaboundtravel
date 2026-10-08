@@ -219,3 +219,5 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [How to Use Alipay as a Foreigner: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+
+- [Where to Stay in China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)

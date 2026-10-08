@@ -171,3 +171,5 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Kung Fu And Martial Arts In China: Where To See And Train Guide](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/)
+
+- [Where to Stay in China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)

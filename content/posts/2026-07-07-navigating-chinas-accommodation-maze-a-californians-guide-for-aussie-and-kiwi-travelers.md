@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-9e2f5ffa1b6d"
-title: "Where to Stay in China: Hotels & Budget"
+title: "Accommodation In China: Hotels & Budget"
 date: "2026-07-07T10:00:00+08:00"
 lastmod: "2026-07-07T10:00:00+08:00"
 author: "Joran"
@@ -21,7 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.jpg"
 categories: ["travel-tips", "cities"]
-last_updated: "2026-07-07"
+last_updated: "2026-10-08"
 
 ---
 ## Navigating China's Accommodation Maze: A Californian's Guide for Aussie and Kiwi Travelers

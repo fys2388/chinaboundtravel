@@ -4799,6 +4799,126 @@
       "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-07T10:01:21.433593"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-08T10:13:45.149205"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-10-08T10:13:46.033441"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-10-08T10:13:46.922557"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "'Where to Stay in China: Hotels & Budget' -> 'Accommodation In China: Hotels & Budget' (keyword: accommodation in china)",
+      "timestamp": "2026-10-08T10:13:47.823277"
+    },
+    {
+      "type": "internal_link",
+      "target": "accommodation-tips-guide -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=3",
+      "timestamp": "2026-10-08T10:13:48.774263"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=2",
+      "timestamp": "2026-10-08T10:13:49.681600"
+    },
+    {
+      "type": "internal_link",
+      "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=2",
+      "timestamp": "2026-10-08T10:13:50.619104"
+    },
+    {
+      "type": "internal_link",
+      "target": "cultural-etiquette-guide -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-08T10:13:51.508466"
+    },
+    {
+      "type": "internal_link",
+      "target": "foodies-guide-to-china-a-gastronomic-adventure -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-08T10:13:52.390515"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-08T10:13:53.266866"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
+      "detail": "FAQ for 'chengdu traditional tea ceremony experience'",
+      "timestamp": "2026-10-08T10:13:54.207092"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:54.715485"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:55.205782"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:55.634904"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:56.057492"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:56.512118"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:56.936278"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:57.343286"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:57.773425"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-08T10:13:58.206918"
     }
   ]
 }
