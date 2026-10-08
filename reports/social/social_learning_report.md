@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-10-07 12:14:13
+**生成时间**: 2026-10-08 12:24:18
 **闭环版本**: 2.0
-**策略版本**: 2.0-20261007_121413
+**策略版本**: 2.0-20261008_122418
 
 ---
 
@@ -20,42 +20,42 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 380 |
+| 历史帖子总数 | 388 |
 | 本轮新增记录 | 8 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
-| 策略变更项 | 0 |
+| 策略变更项 | 4 |
 
 ---
 
 ## 📱 平台表现
 
 ### 🔴 facebook
-- 帖子数: 70
-- 总展示: 2890
+- 帖子数: 72
+- 总展示: 2892
 - 总点击: 82
-- 平均CTR: 0.40%
-- 平均互动率: 0.72%
+- 平均CTR: 0.39%
+- 平均互动率: 0.70%
 - 表现评级: needs_improvement
 
 ### 🟢 twitter
-- 帖子数: 82
-- 总展示: 18
+- 帖子数: 83
+- 总展示: 19
 - 总点击: 1
-- 平均CTR: 40.65%
+- 平均CTR: 40.16%
 - 平均互动率: 0.00%
 - 表现评级: excellent
 
 ### 🔴 instagram
-- 帖子数: 93
+- 帖子数: 97
 - 总展示: 4725
 - 总点击: 94
-- 平均CTR: 0.21%
-- 平均互动率: 0.55%
+- 平均CTR: 0.20%
+- 平均互动率: 0.52%
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 115
+- 帖子数: 116
 - 总展示: 9248
 - 总点击: 364
 - 平均CTR: 0.34%
@@ -84,16 +84,16 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ### 最佳Hook关键词
 
-1. **what** - 平均CTR: 3333.33% (出现1次)
-2. **travelers** - 平均CTR: 3333.33% (出现1次)
-3. **discover** - 平均CTR: 3333.33% (出现1次)
-4. **about** - 平均CTR: 3333.33% (出现1次)
-5. **visa** - 平均CTR: 3333.33% (出现1次)
+1. **travelers** - 平均CTR: 3333.33% (出现1次)
+2. **discover** - 平均CTR: 3333.33% (出现1次)
+3. **about** - 平均CTR: 3333.33% (出现1次)
+4. **visa** - 平均CTR: 3333.33% (出现1次)
+5. **what** - 平均CTR: 1666.67% (出现2次)
 
 
 ### 最佳发布时间
 
-1. **00:00** - 平均CTR: 10.10% (出现330次)
+1. **00:00** - 平均CTR: 9.86% (出现338次)
 2. **22:00** - 平均CTR: 5.84% (出现5次)
 3. **14:00** - 平均CTR: 5.60% (出现5次)
 
@@ -102,7 +102,26 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ## 🎯 策略变更
 
-本轮无策略变更（数据不足或当前策略已最优）
+1. **pinterest.best_hooks**
+   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
+   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+2. **instagram.best_hooks**
+   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
+   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+3. **facebook.best_hooks**
+   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
+   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
+4. **x.best_hooks**
+   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
+   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
+   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+
 ---
 
 ## 🚀 下一步行动
@@ -125,4 +144,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-10-07 12:14:13*
+*生成时间: 2026-10-08 12:24:18*

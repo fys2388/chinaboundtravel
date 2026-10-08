@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-10-07T12:14:13.309284",
+  "run_time": "2026-10-08T12:24:19.400145",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.150423",
+      "version": "2.0-20261008_122419",
+      "last_updated": "2026-10-08T12:24:19.152842",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -120,7 +120,7 @@
         },
         {
           "pattern": "快速提升机会关键词",
-          "description": "发现 10 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+          "description": "发现 11 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
           "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
           "keywords": [
             "https://www.chinaboundtravel.com/cancel/",
@@ -134,8 +134,8 @@
       "strategy_changes": []
     },
     "revenue": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.215203",
+      "version": "2.0-20261008_122419",
+      "last_updated": "2026-10-08T12:24:19.257844",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -218,8 +218,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.112937",
+      "version": "2.0-20261008_122419",
+      "last_updated": "2026-10-08T12:24:19.090306",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -303,8 +303,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.086713",
+      "version": "2.0-20261008_122419",
+      "last_updated": "2026-10-08T12:24:19.047032",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -399,8 +399,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.045683",
+      "version": "2.0-20261008_122418",
+      "last_updated": "2026-10-08T12:24:18.982188",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -409,11 +409,11 @@
             "14:00"
           ],
           "best_hooks": [
-            "what",
             "travelers",
             "discover",
             "about",
-            "visa"
+            "visa",
+            "what"
           ],
           "best_ctas": [
             "save for later",
@@ -433,11 +433,11 @@
             "14:00"
           ],
           "best_hooks": [
-            "what",
             "travelers",
             "discover",
             "about",
-            "visa"
+            "visa",
+            "what"
           ],
           "best_ctas": [
             "link in bio",
@@ -457,11 +457,11 @@
             "14:00"
           ],
           "best_hooks": [
-            "what",
             "travelers",
             "discover",
             "about",
-            "visa"
+            "visa",
+            "what"
           ],
           "best_ctas": [
             "read more",
@@ -481,11 +481,11 @@
             "14:00"
           ],
           "best_hooks": [
-            "what",
             "travelers",
             "discover",
             "about",
-            "visa"
+            "visa",
+            "what"
           ],
           "best_ctas": [
             "read thread",
@@ -509,13 +509,13 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 46.40%，比Bottom 20%高 46.40个百分点",
+          "description": "Top 20%帖子平均CTR 45.80%，比Bottom 20%高 45.80个百分点",
           "common_hooks": [
-            "what",
             "travelers",
             "discover",
             "about",
-            "visa"
+            "visa",
+            "what"
           ],
           "best_times": [
             "0:00",
@@ -524,11 +524,96 @@
           ]
         }
       ],
-      "strategy_changes": []
+      "strategy_changes": [
+        {
+          "field": "pinterest.best_hooks",
+          "old": [
+            "what",
+            "travelers",
+            "discover",
+            "about",
+            "visa"
+          ],
+          "new": [
+            "travelers",
+            "discover",
+            "about",
+            "visa",
+            "what"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-10-08T12:24:18.982182",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "instagram.best_hooks",
+          "old": [
+            "what",
+            "travelers",
+            "discover",
+            "about",
+            "visa"
+          ],
+          "new": [
+            "travelers",
+            "discover",
+            "about",
+            "visa",
+            "what"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-10-08T12:24:18.982182",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "facebook.best_hooks",
+          "old": [
+            "what",
+            "travelers",
+            "discover",
+            "about",
+            "visa"
+          ],
+          "new": [
+            "travelers",
+            "discover",
+            "about",
+            "visa",
+            "what"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-10-08T12:24:18.982182",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "x.best_hooks",
+          "old": [
+            "what",
+            "travelers",
+            "discover",
+            "about",
+            "visa"
+          ],
+          "new": [
+            "travelers",
+            "discover",
+            "about",
+            "visa",
+            "what"
+          ],
+          "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+          "version": "2.1",
+          "timestamp": "2026-10-08T12:24:18.982182",
+          "evidence": "based on performance data analysis"
+        }
+      ]
     },
     "user": {
-      "version": "2.0-20261007_121413",
-      "last_updated": "2026-10-07T12:14:13.176569",
+      "version": "2.0-20261008_122419",
+      "last_updated": "2026-10-08T12:24:19.196306",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -647,77 +732,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/free-itinerary/', 'traffic_potential': 5.5, 'position': 4.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1', 'traffic_potential': 1.8, 'position': 1}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261007_121413"
+      "strategy_version": "2.0-20261008_122419"
     }
   ],
   "domain_summary": {

@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-07T12:14:09.249573",
-  "data_date": "2026-10-06",
+  "pull_time": "2026-10-08T12:24:15.414407",
+  "data_date": "2026-10-07",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 203,
-    "sessions": 251,
+    "activeUsers": 211,
+    "sessions": 256,
     "screenPageViews": 287,
     "engagedSessions": 151,
-    "bounceRate": 0.398406374501992,
-    "averageSessionDuration": 80.08052060557768,
-    "engagementRate": 0.601593625498008,
-    "newUsers": 200
+    "bounceRate": 0.41015625,
+    "averageSessionDuration": 56.52242674609375,
+    "engagementRate": 0.58984375,
+    "newUsers": 209
   },
   "daily": [
-    {
-      "date": "2026-09-10",
-      "sessions": 20,
-      "activeUsers": 17,
-      "pageviews": 21
-    },
     {
       "date": "2026-09-11",
       "sessions": 2,
@@ -182,6 +176,12 @@
       "sessions": 13,
       "activeUsers": 10,
       "pageviews": 10
+    },
+    {
+      "date": "2026-10-08",
+      "sessions": 12,
+      "activeUsers": 12,
+      "pageviews": 14
     }
   ],
   "top_pages": [
@@ -194,8 +194,14 @@
     {
       "path": "/ops/ops-center",
       "title": "ChinaBound Travel · 智能运营中心 v3.0",
-      "pageviews": 29,
-      "sessions": 25
+      "pageviews": 21,
+      "sessions": 18
+    },
+    {
+      "path": "/alipay-for-foreigners-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 16,
+      "sessions": 19
     },
     {
       "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
@@ -226,12 +232,6 @@
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 9,
       "sessions": 9
-    },
-    {
-      "path": "/alipay-for-foreigners-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 8,
-      "sessions": 8
     },
     {
       "path": "/alipay-wechat-pay-foreigners-guide/",
@@ -279,15 +279,21 @@
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 160,
-      "activeUsers": 135,
-      "engagementRate": 0.9062
+      "sessions": 163,
+      "activeUsers": 138,
+      "engagementRate": 0.9018
     },
     {
       "channel": "Direct",
-      "sessions": 60,
-      "activeUsers": 46,
-      "engagementRate": 0.1
+      "sessions": 56,
+      "activeUsers": 48,
+      "engagementRate": 0.0714
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 18,
+      "activeUsers": 3,
+      "engagementRate": 0.0
     },
     {
       "channel": "Organic Search",
@@ -296,15 +302,9 @@
       "engagementRate": 0.0
     },
     {
-      "channel": "Unassigned",
-      "sessions": 9,
-      "activeUsers": 3,
-      "engagementRate": 0.0
-    },
-    {
       "channel": "Cross-network",
-      "sessions": 4,
-      "activeUsers": 4,
+      "sessions": 7,
+      "activeUsers": 7,
       "engagementRate": 0.0
     },
     {
@@ -321,6 +321,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-06"
+    "data_date": "2026-10-07"
   }
 }
