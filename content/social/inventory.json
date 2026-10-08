@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08T07:13:32",
+  "updated_at": "2026-10-08T19:14:40",
   "items": [
     {
       "id": "soc-000001",
@@ -174,8 +174,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3774,8 +3774,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4128,8 +4128,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5360,7 +5360,7 @@
       "type": "visual",
       "caption": "Visual guide to Visa: what to see and capture. → https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'How to Use Alipay as a Foreigner: Complete' (platform x). Scene: smartphone showing mobile payment at a shop. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mis.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-x-visual-859e602e.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -5375,7 +5375,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "bba0c3daf4de"
+      "_sig": "bba0c3daf4de",
+      "image_generated": true
     },
     {
       "id": "soc-000205",
@@ -5385,7 +5386,7 @@
       "type": "conversion",
       "caption": "🔥 linkedin\n\n💡 Everything you need to know about Visa — in one practical guide.\n\n• How to Use Alipay as a Foreigner: Complete\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional conversion social graphic for 'How to Use Alipay as a Foreigner: Complete' (platform fb). Scene: smartphone showing mobile payment at a shop. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up Alipay as a foreigner in 2026: link international Visa/Mastercard, verify identity, pay anywhere in China, and avoid common setup mis.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/how-to-use-alipay-as-a-foreigner-complet-fb-conversion-000c8c20.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -5400,7 +5401,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "10059c88e2a1"
+      "_sig": "10059c88e2a1",
+      "image_generated": true
     },
     {
       "id": "soc-000206",
@@ -5410,7 +5412,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\nResearch-backed facts about Wechat every traveler should know.\n\n· Why WeChat Pay is a Game Changer\n· Step-by-Step Setup for WeChat Pay in 2026\n· Step 1: Download WeChat Before You Leave\n\nRead the full guide: https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'WeChat Pay Setup Guide for Foreigners (2026)' (platform ig). Scene: smartphone QR-code payment at a street vendor. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up and use WeChat Pay in China step by step: register your account, verify your identity, add a foreign card, pay with QR codes, and fix.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/wechat-pay-for-foreigners-step-by-step-s-ig-knowledge-db0e6684.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5425,7 +5427,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "6e7f66c04b7d"
+      "_sig": "6e7f66c04b7d",
+      "image_generated": true
     },
     {
       "id": "soc-000207",
@@ -5435,7 +5438,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nWeChat Pay Setup Guide for Foreigners (2026) | Essential Wechat tips most first-time visitors miss.\n\nSet up and use WeChat Pay in China step by step: register your account, verify your identity, add a foreign card, pay with QR codes, and fix common errors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'WeChat Pay Setup Guide for Foreigners (2026)' (platform pinterest). Scene: smartphone QR-code payment at a street vendor. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up and use WeChat Pay in China step by step: register your account, verify your identity, add a foreign card, pay with QR codes, and fix.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/wechat-pay-for-foreigners-step-by-step-s-pinterest-tip-25aa1d1a.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -5450,7 +5453,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "1ffcf8e3a3f5"
+      "_sig": "1ffcf8e3a3f5",
+      "image_generated": true
     },
     {
       "id": "soc-000208",
@@ -5460,7 +5464,7 @@
       "type": "story",
       "caption": "What travelers discover about Wechat — practical lessons from → https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'WeChat Pay Setup Guide for Foreigners (2026)' (platform x). Scene: smartphone QR-code payment at a street vendor. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Set up and use WeChat Pay in China step by step: register your account, verify your identity, add a foreign card, pay with QR codes, and fix.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/wechat-pay-for-foreigners-step-by-step-s-x-story-8b5d9ce0.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -5475,7 +5479,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "abd3821b7da8"
+      "_sig": "abd3821b7da8",
+      "image_generated": true
     },
     {
       "id": "soc-000209",
@@ -6246,8 +6251,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6452,8 +6457,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-08",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
