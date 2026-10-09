@@ -170,7 +170,7 @@ def _zero_run_icon(source: str, name: str, current: float, progress: int,
     只在有可靠事实源时升级：content_new 用 content/posts 的真实日期；
     其它源没有可靠的历史，保持原有语义（不误报）。
     """
-    base_icon = "🟢" if "新增文章" in name else "🟡"
+    base_icon = "🟢" if "新增文章" in name and current > 0 else "🟡"
     if source != "content_new":
         return base_icon, None
     dslp = _days_since_last_post(report_date)
@@ -342,6 +342,16 @@ def build_okr_section(data: dict, scope: str, report_date=None) -> str:
     rows = build_okr_progress(data, scope, report_date)
     if not rows:
         return ""
+    # 头部图标反映表格真实状态：取所有可用行中最差图标
+    # 严重度排序：🔴 > 🟠 > 🟡 > 🟢 > ✅；全 ✅/🟢 时显示 🟢
+    _SEV = {"🔴": 4, "🟠": 3, "🟡": 2, "🟢": 1, "✅": 0}
+    worst_sev = 0
+    for r in rows:
+        if r.get("available", True):
+            worst_sev = max(worst_sev, _SEV.get(r.get("icon", ""), 0))
+    header_icon = {4: "🔴", 3: "🟠", 2: "🟡", 1: "🟢", 0: "🟢"}[worst_sev]
+    if title.startswith("🎯"):
+        title = header_icon + " " + title[2:]
     header = f"""---
 ## {title}
 | 关键结果 | 当前 | 目标 | 进度 | 状态 |

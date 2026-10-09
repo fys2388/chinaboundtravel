@@ -974,7 +974,10 @@ class FeishuDailyReporter:
         top_keywords = data.get("top_keywords", [])
         kw_lines = ["暂无数据"]
         if gsc_has_data and top_keywords:
-            kw_lines = [f"{i}. {kw['keyword']} (曝光 {kw['impressions']}, 点击 {kw['clicks']}, CTR {kw['ctr']}%, 排名 {kw['position']})" for i, kw in enumerate(top_keywords[:5], 1)]
+            kw_lines = []
+            for i, kw in enumerate(top_keywords[:5], 1):
+                _pos_note = "（曝光不足，仅供参考）" if kw["impressions"] < 20 else ""
+                kw_lines.append(f"{i}. {kw['keyword']} (曝光 {kw['impressions']}, 点击 {kw['clicks']}, CTR {kw['ctr']}%, 排名 {kw['position']}{_pos_note})")
         elif gsc_has_data and not top_keywords:
             kw_lines = ["本窗口无搜索关键词数据"]
         elif gsc_available and not gsc_has_data:
