@@ -1,4 +1,4 @@
----
+﻿---
 title: "Kung Fu And Martial Arts In China: Where To See And Train Guide"
 date: "2026-10-04T10:00:00+08:00"
 lastmod: "2026-10-04T10:00:00+08:00"
@@ -98,7 +98,7 @@ If you're interested in learning more about Kung Fu and martial arts in China, b
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Where to Stay in China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 

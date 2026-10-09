@@ -1,12 +1,12 @@
 ---
 content_id: "cbt-cc4549872c92"
-title: "How To Ride China'S High-Speed Trains: How to Book in 2026"
+title: "China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)"
 date: 2026-05-25T10:00:00+08:00
 slug: "china-high-speed-rail-how-to-book-tickets"
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/"
 tags: ["ChinaTravel", "ChinaTransportation", "HighSpeedRail", "ChinaTravelTips"]
-description: "Book China high-speed rail tickets in 2026: Trip.com vs 12306, seat classes, costs, and station survival tips for foreign travelers."
+description: "How to book China high-speed rail tickets as a foreigner in 2026: Trip.com vs 12306 comparison, seat classes, costs, and station tips."
 author: "Joran"
 params:
   keywords:

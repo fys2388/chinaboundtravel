@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-de065751769e"
 title: "China Transportation Guide: Trains, Subways"
 date: "2026-07-14T10:00:00+08:00"
@@ -138,7 +138,7 @@ If you're interested in learning more about China's transportation system or pla
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 

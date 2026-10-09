@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-255af4ed003a"
 title: "WeChat Pay Setup Guide for Foreigners (2026)"
 date: "2026-07-02T10:00:00+08:00"
@@ -273,4 +273,4 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)

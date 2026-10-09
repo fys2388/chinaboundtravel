@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-07563e9b51cc"
 title: "How to Use Alipay & WeChat Pay in China 2026"
 author: Joran
@@ -206,7 +206,7 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 

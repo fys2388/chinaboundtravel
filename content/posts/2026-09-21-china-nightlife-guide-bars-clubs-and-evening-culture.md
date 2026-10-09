@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Nightlife Guide: Bars, Clubs, and Evening Culture"
 date: "2026-09-21T10:00:00+08:00"
 lastmod: "2026-09-21T10:00:00+08:00"
@@ -169,4 +169,4 @@ Here are some practical tips to help you make the most of your nightlife experie
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)

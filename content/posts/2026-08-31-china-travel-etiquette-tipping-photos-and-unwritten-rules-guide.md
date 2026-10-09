@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Travel Etiquette: Tipping & Photos"
 date: "2026-08-31T10:00:00+08:00"
 lastmod: "2026-08-31T11:50:36+08:00"
@@ -155,4 +155,4 @@ Reading Chinese menus, asking questions on the street, and translating a quick W
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)

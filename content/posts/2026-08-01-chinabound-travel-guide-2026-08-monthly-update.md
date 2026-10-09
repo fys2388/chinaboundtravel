@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-80ac63165adb"
 title: "Travel To China Requirements 2026: August"
 date: 2026-08-01T08:29:34+00:00
@@ -185,7 +185,7 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Nightlife Guide: Bars, Clubs, and Evening Culture](/posts/china-nightlife-guide-bars-clubs-and-evening-culture/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 

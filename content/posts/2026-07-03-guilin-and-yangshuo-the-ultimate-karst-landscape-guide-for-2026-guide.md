@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-bf4ec5e57a07"
 title: "Guilin & Yangshuo: Complete 2026 Travel Guide"
 date: "2026-07-03T10:00:00+08:00"
@@ -217,6 +217,6 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)

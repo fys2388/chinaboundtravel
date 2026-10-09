@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Solo Travel Guide: Safety, Hostels, and Making Friends"
 date: "2026-10-04T10:00:00+08:00"
 lastmod: "2026-10-04T10:00:00+08:00"
@@ -158,7 +158,7 @@ If you're looking for more information on traveling to China, be sure to check o
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 ## Related Reading
 

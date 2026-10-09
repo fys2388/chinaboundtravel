@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-932a277b1899"
 title: "China Packing List 2026: What to Bring"
 date: "2026-08-09T10:00:00+08:00"
@@ -159,7 +159,7 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 

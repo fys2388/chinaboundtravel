@@ -1,4 +1,4 @@
----
+﻿---
 content_id: "cbt-f7e8d9c0b1a2"
 title: "China Visa-Free Entry 2026: Complete Guide"
 date: "2026-09-08T10:00:00+08:00"
@@ -423,7 +423,7 @@ Safe travels, and welcome to China.
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
-- [How To Ride China'S High-Speed Trains: How to Book in 2026](/posts/china-high-speed-rail-how-to-book-tickets/)
+- [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
