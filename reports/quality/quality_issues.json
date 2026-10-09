@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T17:32:08.785491+00:00",
+  "generated_at": "2026-10-09T17:53:08.554046+00:00",
   "summary": {
     "total": 43,
     "P0": 35,
@@ -19,7 +19,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-09T17:32:06.093774+00:00",
+      "generated_at": "2026-09-21T07:08:04.572598+00:00",
       "issues": 0,
       "P0": 0,
       "P1": 0,
@@ -78,7 +78,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
@@ -92,7 +92,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
@@ -106,7 +106,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
@@ -120,7 +120,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
@@ -134,7 +134,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
@@ -148,7 +148,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
@@ -162,7 +162,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
@@ -176,7 +176,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
@@ -190,7 +190,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
@@ -204,7 +204,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
@@ -218,7 +218,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
@@ -232,7 +232,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-14-transportation-guide-guide.md",
@@ -246,7 +246,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-16-food-recommendations-guide.md",
@@ -260,7 +260,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-20-travel-safety-guide.md",
@@ -274,7 +274,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-21-cultural-etiquette-guide.md",
@@ -288,7 +288,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
@@ -302,7 +302,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-27-accommodation-tips-guide.md",
@@ -316,7 +316,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md",
@@ -330,7 +330,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -344,7 +344,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
@@ -358,7 +358,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-03-chinese-language-survival-phrases-guide.md",
@@ -372,7 +372,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-05-china-family-travel-tips-a-californians-guide.md",
@@ -386,7 +386,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-07-china-bargaining-and-shopping-guide.md",
@@ -400,7 +400,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
@@ -414,7 +414,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
@@ -428,7 +428,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md",
@@ -442,7 +442,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
@@ -456,7 +456,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
@@ -470,7 +470,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-alipay-for-foreigners-guide.md",
@@ -484,7 +484,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-alipay-wechat-pay-foreigners-guide.md",
@@ -498,7 +498,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -512,7 +512,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
@@ -526,7 +526,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-china-solo-travel-guide-safety-hostels-and-making-friends.md",
@@ -540,7 +540,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-frontmatter-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -554,10 +554,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
-      "id": "site_health-2de35355eba4fa92",
+      "id": "site_health-658c893730d43a9e",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -567,11 +567,11 @@
       "recommended_action": "占位内容需人工补充",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-10-09T17:32:08.785491+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "first_seen": "2026-10-09T17:53:08.554046+00:00",
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
-      "id": "site_health-59a213e2a26e5d66",
+      "id": "site_health-6687ff252ba9baf9",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -581,11 +581,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-09T17:32:08.785491+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "first_seen": "2026-10-09T17:53:08.554046+00:00",
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
-      "id": "site_health-1358fbf171f0229c",
+      "id": "site_health-277aeffc302833bc",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -595,8 +595,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-09T17:32:08.785491+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "first_seen": "2026-10-09T17:53:08.554046+00:00",
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -610,7 +610,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -624,7 +624,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
@@ -638,7 +638,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
       "id": "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
@@ -652,10 +652,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T10:17:23.924958+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     },
     {
-      "id": "site_health-73f74fdc23b67719",
+      "id": "site_health-128bf60bea36b9fb",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -665,8 +665,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-09T17:32:08.785491+00:00",
-      "last_seen": "2026-10-09T17:32:08.785491+00:00"
+      "first_seen": "2026-10-09T17:53:08.554046+00:00",
+      "last_seen": "2026-10-09T17:53:08.554046+00:00"
     }
   ]
 }

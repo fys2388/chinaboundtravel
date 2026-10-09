@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-09T03:42:54.841952+00:00",
+  "timestamp": "2026-10-09T17:53:08.674011+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 3,
+    "total_issues": 5,
     "critical": 0,
     "high": 2,
     "medium": 0,
-    "low": 1,
+    "low": 3,
     "auto_fixed": 4,
-    "need_manual": 21,
+    "need_manual": 23,
     "resolved": 15,
     "inherited_resolved": 19,
     "in_progress": 0,
-    "last_updated": "2026-10-09T03:42:59.314773"
+    "last_updated": "2026-10-09T17:53:11.991458"
   },
   "issues": [
     {
@@ -251,6 +251,30 @@
     {
       "type": "title_too_long",
       "severity": "low",
+      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "message": "Title过长(74字符，模板上限60): China High-Speed Rail: Complete Ticket B...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 74->56字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "message": "Title过长(81字符，模板上限60): How to Order Food Delivery in China: Mei...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 81->53字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
       "file": "content/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
       "message": "Title过长(63字符，模板上限60): Kung Fu And Martial Arts In China: Where...",
       "auto_fixable": true,
@@ -261,8 +285,8 @@
       "resolved_by": "seo_agent",
       "resolution_note": "title已合规(57字符)",
       "resolved_at": "2026-10-05T03:05:29.321010+00:00",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 63->57字符"
+      "fix_status": "failed",
+      "fix_message": "无 front matter"
     },
     {
       "type": "title_too_long",
@@ -277,8 +301,8 @@
       "resolved_by": "seo_agent",
       "resolution_note": "title已合规(53字符)",
       "resolved_at": "2026-10-03T02:57:33.036264+00:00",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 62->53字符"
+      "fix_status": "failed",
+      "fix_message": "无 front matter"
     },
     {
       "type": "meta_description_too_long",
