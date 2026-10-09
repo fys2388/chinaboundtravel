@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-09",
+  "site_up": true,
+  "response_time": 285.145,
+  "visitors": 12,
+  "sessions": 12,
+  "requests": 14,
+  "visitors_trend": "+0.0%",
+  "week_trend": "+0.0%",
+  "month_trend": "+300.0%",
+  "bounce_rate": 25.0,
+  "avg_session_duration": 24,
+  "engagement_rate": 75.0,
+  "bounce_rate_7d": 40.4,
+  "engagement_rate_7d": 59.6,
+  "avg_session_duration_7d": 18.155248384615383,
+  "sessions_7d": 52,
+  "visitors_7d": 47,
+  "top_pages": [
+    {
+      "path": "/alipay-wechat-pay-foreigners-guide/",
+      "views": 8
+    },
+    {
+      "path": "/",
+      "views": 5
+    },
+    {
+      "path": "/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Organic Social",
+      "users": 8,
+      "sessions": 8
+    },
+    {
+      "channel": "Direct",
+      "users": 3,
+      "sessions": 3
+    },
+    {
+      "channel": "Unassigned",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 9
+    },
+    {
+      "country": "China",
+      "users": 1
+    },
+    {
+      "country": "Netherlands",
+      "users": 1
+    },
+    {
+      "country": "Sweden",
+      "users": 1
+    }
+  ],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 196,
+  "gsc_clicks": 1,
+  "gsc_ctr": 0.51,
+  "gsc_errors": 0,
+  "gsc_week_trend": "+4.3%",
+  "gsc_month_trend": "-28.5%",
+  "top_keywords": [
+    {
+      "keyword": "144 hours visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 81.0
+    },
+    {
+      "keyword": "accommodation in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 7.0
+    },
+    {
+      "keyword": "alipay for foreigners",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 95.0
+    },
+    {
+      "keyword": "alipay for tourists",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keyword": "alipay international account",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 61.0
+    },
+    {
+      "keyword": "alipay international payment",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 70.7
+    },
+    {
+      "keyword": "alipay tutorial",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0.0,
+      "position": 62.2
+    },
+    {
+      "keyword": "beautiful sichuan scenic spots food recommendations",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 34.5
+    },
+    {
+      "keyword": "beijing itinerary 7 days",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "best place to stay in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 71.0
+    }
+  ],
+  "total_posts": 66,
+  "new_posts": 0,
+  "pending_posts": 1,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 0,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": false,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 2,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": null,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "审核并发布 1 篇草稿文章",
+    "🟡 平均时长（7日滚动） 18 秒：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页",
+    "🟠 自然搜索仅 0/12 人（0%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+    "🟠 高流量但联盟零点击：联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-10-08",
+  "gsc_avg_position": 31.3,
+  "gsc_window_start": "2026-09-30",
+  "gsc_window_end": "2026-10-06",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 79,
+  "root_pages_scanned": 13,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_report_window_days": 2,
+  "gh_social_window_days": 2,
+  "gh_social_success": true,
+  "agent_health": {
+    "checked_at": "2026-10-09 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-10-05 04:35:02",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-10-09",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-10-08",
+    "generated_at": "2026-10-08",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 239,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🎯 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 12人 | 13人 | 92% | 🟡 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟢 今日无新发（距上次 5 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 28次 | 33次 | 85% | 🟡 |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **平均时长（7日滚动） 18 秒**：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页\n- 🟠 **自然搜索仅 0/12 人（0%）**：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）\n- 🟠 **高流量但联盟零点击**：联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"
+}
