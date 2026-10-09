@@ -1,102 +1,61 @@
 {
-  "version": "2.0-20261008_122418",
-  "last_updated": "2026-10-08T12:24:18.982188",
+  "version": "2.1-20261009_optimized",
+  "last_updated": "2026-10-09T10:00:00+08:00",
   "platforms": {
     "pinterest": {
-      "best_times": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
+      "best_times": ["08:00", "13:00", "20:00"],
       "best_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
+        "Essential China travel tips",
+        "China itinerary planning",
+        "China visa guide",
+        "China payment setup",
+        "China transportation"
       ],
-      "best_ctas": [
-        "save for later",
-        "click to read"
-      ],
-      "content_types": [
-        "guide",
-        "tips",
-        "itinerary"
-      ],
-      "max_posts_per_day": 3
+      "best_ctas": ["save for later", "click to read"],
+      "content_types": ["guide", "tips", "itinerary"],
+      "max_posts_per_day": 3,
+      "hook_template": "{title} | {type_hook}",
+      "optimal_pin_style": "vertical_2:3, text_overlay_key_points"
     },
     "instagram": {
-      "best_times": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
+      "best_times": ["08:00", "17:00", "21:00"],
       "best_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
+        "Research-backed facts",
+        "Essential tips",
+        "What travelers discover",
+        "Visual guide to"
       ],
-      "best_ctas": [
-        "link in bio",
-        "swipe up"
-      ],
-      "content_types": [
-        "visual",
-        "lifestyle",
-        "tips"
-      ],
-      "max_posts_per_day": 2
+      "best_ctas": ["link in bio", "comment below"],
+      "content_types": ["visual", "lifestyle", "tips"],
+      "max_posts_per_day": 2,
+      "hook_template": "{type_hook}",
+      "optimal_format": "carousel_4:5 or reel_9:16"
     },
     "facebook": {
-      "best_times": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
+      "best_times": ["08:00", "12:00", "19:00"],
       "best_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
+        "Research-backed facts",
+        "Essential tips",
+        "What travelers discover"
       ],
-      "best_ctas": [
-        "read more",
-        "click here"
-      ],
-      "content_types": [
-        "guide",
-        "tips",
-        "news"
-      ],
-      "max_posts_per_day": 2
+      "best_ctas": ["read more", "share your thoughts"],
+      "content_types": ["guide", "tips", "news"],
+      "max_posts_per_day": 2,
+      "hook_template": "{type_hook}",
+      "optimal_format": "single_image_or_carousel"
     },
     "x": {
-      "best_times": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
+      "best_times": ["08:00", "13:00", "19:00"],
       "best_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
+        "Research-backed facts about {topic}",
+        "Essential {topic} tips",
+        "What travelers discover about {topic}"
       ],
-      "best_ctas": [
-        "read thread",
-        "click link"
-      ],
-      "content_types": [
-        "tips",
-        "facts",
-        "thread"
-      ],
-      "max_posts_per_day": 3
+      "best_ctas": ["read thread", "click link"],
+      "content_types": ["tips", "facts", "thread"],
+      "max_posts_per_day": 3,
+      "hook_template": "single_sentence_hook",
+      "optimal_format": "thread_5-8_tweets"
     }
   },
   "global_rules": {
@@ -104,110 +63,46 @@
     "min_interval_minutes": 120,
     "use_utm_tracking": true,
     "brand_voice": "editorial",
-    "avoid_legacy_persona": true
+    "avoid_legacy_persona": true,
+    "no_fire_emoji_prefix": true,
+    "no_single_word_hooks": true
   },
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 45.80%，比Bottom 20%高 45.80个百分点",
+      "description": "Top 20%帖子平均CTR 45.80%，比Bottom 20%高45.80个百分点",
       "common_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
+        "Essential China travel tips",
+        "Research-backed facts",
+        "What travelers discover",
+        "Visual guide to"
       ],
-      "best_times": [
-        "0:00",
-        "22:00",
-        "14:00"
-      ]
+      "best_times": ["08:00", "13:00", "19:00"],
+      "best_content_type": "tip and visual"
+    },
+    {
+      "pattern": "Instagram破模板根因修复",
+      "description": "原策略文件best_hooks为单词碎片（what/linkedIn/travelers），被🔥前缀硬塞导致文案乱码。已替换为完整句子模板。",
+      "fix_version": "2.1",
+      "timestamp": "2026-10-09T10:00:00+08:00"
     }
   ],
   "strategy_changes": [
     {
-      "field": "pinterest.best_hooks",
-      "old": [
-        "what",
-        "travelers",
-        "discover",
-        "about",
-        "visa"
-      ],
-      "new": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "field": "all_platforms.best_hooks",
+      "old": ["what", "travelers", "discover", "about", "visa"],
+      "new": ["Essential China travel tips", "Research-backed facts", "What travelers discover", "Visual guide to"],
+      "reason": "旧值为单词碎片，被🔥前缀注入后产生乱码文案（如'🔥 linkedin'）。替换为完整钩子句子模板。",
       "version": "2.1",
-      "timestamp": "2026-10-08T12:24:18.982182",
-      "evidence": "based on performance data analysis"
+      "timestamp": "2026-10-09T10:00:00+08:00"
     },
     {
-      "field": "instagram.best_hooks",
-      "old": [
-        "what",
-        "travelers",
-        "discover",
-        "about",
-        "visa"
-      ],
-      "new": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
+      "field": "all_platforms.best_times",
+      "old": ["00:00", "22:00", "14:00"],
+      "new": ["08:00", "13:00", "19:00"],
+      "reason": "旧时间为UTC凌晨，对应美东深夜/清晨，完全错开目标受众活跃时段。改为美东黄金时段。",
       "version": "2.1",
-      "timestamp": "2026-10-08T12:24:18.982182",
-      "evidence": "based on performance data analysis"
-    },
-    {
-      "field": "facebook.best_hooks",
-      "old": [
-        "what",
-        "travelers",
-        "discover",
-        "about",
-        "visa"
-      ],
-      "new": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-10-08T12:24:18.982182",
-      "evidence": "based on performance data analysis"
-    },
-    {
-      "field": "x.best_hooks",
-      "old": [
-        "what",
-        "travelers",
-        "discover",
-        "about",
-        "visa"
-      ],
-      "new": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
-      ],
-      "reason": "基于Top 20%高CTR帖子的Hook关键词分析",
-      "version": "2.1",
-      "timestamp": "2026-10-08T12:24:18.982182",
-      "evidence": "based on performance data analysis"
+      "timestamp": "2026-10-09T10:00:00+08:00"
     }
   ]
 }

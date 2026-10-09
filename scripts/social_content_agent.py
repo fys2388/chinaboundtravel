@@ -150,40 +150,84 @@ def get_best_publish_times(platform: str) -> list:
         return []
 
 
-def apply_strategy_to_caption(caption: str, platform: str, content_type: str) -> str:
-    """将学习策略应用到文案生成（真正注入推荐Hook/CTA，去重+失败安全）"""
-    if not _strategy_available:
-        return caption
+# 平台专属 CTA 模板（替换策略文件中零碎关键词，避免 🤯 {keyword} 乱码注入）
+_PLATFORM_CTAS = {
+    "ig":        {"cta_suffix": "👉 link in bio"},
+    "pinterest": {"cta_suffix": "📌 Save for later"},
+    "fb":        {"cta_suffix": "👇 Drop a comment below"},
+    "x":         {},  # X 跳过 CTA 注入，字符数限制严格
+}
+
+# 平台专属 Hook 模板（按内容类型区分，替代策略文件中的零碎关键词）
+_PLATFORM_HOOK_TEMPLATES = {
+    "ig": {
+        "knowledge": "Research-backed facts about {topic} every traveler should know.",
+        "tip":       "Essential {topic} tips most first-time visitors miss.",
+        "story":     "What travelers discover about {topic} — practical lessons from the ground.",
+        "visual":    "Visual guide to {topic}: what to see and capture.",
+        "conversion":"Everything you need to know about {topic} — in one practical guide.",
+    },
+    "pinterest": {
+        "knowledge": "{title} | Research-backed facts about {topic} every traveler should know.",
+        "tip":       "{title} | Essential {topic} tips most first-time visitors miss.",
+        "story":     "{title} | What travelers discover about {topic} — practical lessons from the ground.",
+        "visual":    "{title} | Visual guide to {topic}: what to see and capture.",
+        "conversion":"{title} | Everything you need to know about {topic} — in one practical guide.",
+    },
+    "fb": {
+        "knowledge": "Research-backed facts about {topic} every traveler should know.",
+        "tip":       "Essential {topic} tips most first-time visitors miss.",
+        "story":     "What travelers discover about {topic} — practical lessons from the ground.",
+        "visual":    "Visual guide to {topic}: what to see and capture.",
+        "conversion":"Everything you need to know about {topic} — in one practical guide.",
+    },
+    "x": {
+        "knowledge": "Research-backed facts about {topic}.",
+        "tip":       "Essential {topic} tips most first-timers miss.",
+        "story":     "What travelers discover about {topic} — lessons from the ground.",
+        "visual":    "Visual guide to {topic}.",
+        "conversion":"{topic}: everything you need in one guide.",
+    },
+}
+
+
+def _build_platform_hook(article: dict, platform: str, ctype: str) -> str:
+    """根据平台和类型，从模板生成 Hook（替代策略文件中破碎的 🔥 keyword 注入）。"""
+    kws = _article_keywords(article)
+    topic = kws[0].replace("-", " ").title() if kws else "China travel"
+    title = truncate(article.get("title") or "", 60)
+    templates = _PLATFORM_HOOK_TEMPLATES.get(platform, _PLATFORM_HOOK_TEMPLATES["ig"])
+    tpl = templates.get(ctype, templates["knowledge"])
     try:
-        guidance = get_strategy_guidance(platform)
-        if not guidance:
-            return caption
-        hooks = guidance.get("recommended_hooks", []) or []
-        ctas = guidance.get("recommended_ctas", []) or []
-        applied = []
-        result = caption
-        if hooks:
-            best_hook = str(hooks[0]).strip()
-            if best_hook and best_hook.lower() not in result.lower():
-                result = "\U0001f525 " + best_hook + "\n\n" + result
-                applied.append("hook=" + best_hook)
-        if ctas:
-            best_cta = str(ctas[0]).strip()
-            if best_cta and best_cta.lower() not in result.lower():
-                result = result + "\n\n\U0001f449 " + best_cta
-                applied.append("cta=" + best_cta)
-        if applied:
-            logger.info("策略已应用到 %s 文案: %s (version=%s)",
-                        platform, ", ".join(applied),
-                        guidance.get("strategy_version", "unknown"))
-        return result
-    except Exception as e:
-        logger.warning("应用策略到文案失败，返回原文案: %s", e)
+        return tpl.format(topic=topic, title=title)
+    except KeyError:
+        return tpl.format(topic=topic)
+
+
+def apply_strategy_to_caption(caption: str, platform: str, content_type: str) -> str:
+    """将学习策略应用到文案生成：仅追加 CTA，不注入破碎 hook。
+
+    修复说明：原实现以 🔥 {keyword} 格式硬塞策略文件中的零碎词（如 'linkedin'、'what'），
+    导致所有 Instagram/Pinterest 文案以乱码开头。新逻辑：
+    1. 移除 🔥 hook 注入（hook 已在 _render_caption 中由确定性模板生成）
+    2. 仅追加平台专属 CTA 后缀（来自 _PLATFORM_CTAS）
+    3. CTA 去重：若已存在则跳过
+    """
+    # Hook 已由确定性模板生成，不再从策略文件注入
+    cta_cfg = _PLATFORM_CTAS.get(platform, {})
+    cta_suffix = cta_cfg.get("cta_suffix", "")
+    if not cta_suffix:
         return caption
+    if cta_suffix not in caption:
+        caption = caption.rstrip() + "\n\n" + cta_suffix
+    return caption
 
 
-# 每日排期：美东黄金时段 08:00 / 18:00 / 22:00（UTC 映射见 schedule_slots）
-US_EAST_OFFSET = 4  # EDT (夏令时)；非夏令时脚本内统一按 -4 处理并在文档说明
+# 每日排期：美东黄金时段（目标受众：美国/欧洲计划赴华游客）
+# 活跃窗口：早8点通勤 / 午12点休息 / 晚5点下班 / 晚9点睡前浏览
+# UTC = ET + 4（EDT夏令时）/ UTC = ET + 5（EST冬令时）
+# 脚本统一按 EDT（UTC-4）计算，冬令时手动减1小时
+US_EAST_OFFSET = 4  # EDT
 
 DEFAULT_TOP_N = 20        # 首批拆解 Top20 篇
 ITEMS_PER_ARTICLE = 5     # 每篇 5 条（覆盖 5 种 type）
@@ -193,16 +237,19 @@ REUSE_COOLDOWN_DAYS = 7    # 已发布素材 7 天后复活重新排期（存量
 
 # P2-SOCIAL-01: 单平台每日发布上限 + 智能时间分布
 MAX_PER_PLATFORM_PER_DAY = 5  # 每个平台每天最多5条
-DAILY_SOCIAL_LIMIT = 5     # 每日社媒发布总量上限（与 manifest / social_publisher 统一为 5）
-# 每个平台的发布时间窗口（美东时间 EST），均匀分布到3个活跃窗口：
-#   morning 08:00-10:00 / lunch 12:00-14:00 / prime 20:00-22:00
-# 各平台时间错开，避免同一时间集中发布
+DAILY_SOCIAL_LIMIT = 5     # 每日社媒发布总量上限
+# 各平台时间错开，避免同一时间集中发布。时间为美东（ET），脚本自动转UTC。
 PLATFORM_DAILY_SLOTS = {
-    "ig":        [(8, 0),  (12, 0),  (18, 0),  (20, 0),  (21, 0)],
-    "fb":        [(8, 30), (12, 30), (18, 30), (20, 30), (21, 30)],
-    "x":         [(9, 0),  (13, 0),  (19, 0),  (20, 0),  (22, 0)],
-    "pinterest": [(9, 30), (13, 30), (19, 30), (21, 0),  (22, 0)],
+    "ig":        [(8, 0),  (12, 0),  (17, 0),  (20, 0),  (21, 0)],
+    "fb":        [(8, 30), (12, 30), (17, 30), (20, 30), (21, 30)],
+    "x":         [(9, 0),  (13, 0),  (18, 0),  (20, 0),  (22, 0)],
+    "pinterest": [(8, 0),  (12, 0),  (18, 0),  (21, 0),  (22, 0)],
 }
+# 对应UTC时间（EDT=ET-4）：
+# ig:     UTC 12:00, 16:00, 21:00, 00:00, 01:00
+# fb:     UTC 12:30, 16:30, 21:30, 00:30, 01:30
+# x:      UTC 13:00, 17:00, 22:00, 00:00, 02:00
+# pint:   UTC 12:00, 16:00, 22:00, 01:00, 02:00
 
 VALID_STATUS = ("待审核", "已排期", "已发布")
 VALUE_TYPES = ("knowledge", "tip", "story")   # 80% 价值型
@@ -363,9 +410,10 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
 
     lines = []
     if platform == "pinterest":
-        # 长文案 + 关键词密集，偏攻略实用型 — hook 基于文章标题/关键词（P1修复：去除无关通用句）
-        pin_hook = _article_hook(article, ctype)
-        lines.append(f"{title} | {pin_hook}")
+        # 长文案 + 关键词密集，偏攻略实用型
+        # 使用平台专属Hook模板（替代🔥keyword注入）
+        pin_hook = _build_platform_hook(article, "pinterest", ctype)
+        lines.append(pin_hook)
         dense = _keyword_dense(article)
         if dense:
             lines.append("")
@@ -376,7 +424,9 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         lines.append(f"Full guide: {utm_url}")
     elif platform == "ig":
         # 短文案 + 情绪价值，偏视觉种草
-        lines.append(hook)
+        # 使用平台专属Hook模板替代🔥keyword注入
+        ig_hook = _build_platform_hook(article, "ig", ctype)
+        lines.append(ig_hook)
         if points:
             lines.append("")
             for p in points:
@@ -387,7 +437,9 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         lines.append(" ".join(style["hashtags"]))
     elif platform == "x":
         # 极短文案，观点型 / 避坑型
-        core = hook
+        # 使用平台专属Hook模板（x无🔥前缀，保持简洁）
+        x_hook = _build_platform_hook(article, "x", ctype)
+        core = x_hook
         if points:
             core += f" {points[0]}"
         url_part = f" → {utm_url}"
@@ -398,7 +450,8 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         lines.append(core)
     else:  # fb
         # 中等长度，互动引导型
-        lines.append(hook)
+        fb_hook = _build_platform_hook(article, "fb", ctype)
+        lines.append(fb_hook)
         if points:
             lines.append("")
             for p in points:
@@ -408,7 +461,7 @@ def _render_caption(article: dict, ctype: str, platform: str, utm_url: str) -> s
         lines.append("")
         lines.append(f"Full guide: {utm_url}")
     caption = "\n".join(lines)
-    # Apply learned strategy (Hook/CTA injection) — skip X due to strict char limits
+    # CTA 后缀注入（Hook 已由确定性模板 _build_platform_hook 生成，不再从策略文件注入）
     if platform != "x":
         caption = apply_strategy_to_caption(caption, platform, ctype)
     return caption
