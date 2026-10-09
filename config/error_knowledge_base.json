@@ -1712,6 +1712,17 @@
       "error_message": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261009_133606",
+      "timestamp": "2026-10-09T13:36:06.318135",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "37937901947",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
