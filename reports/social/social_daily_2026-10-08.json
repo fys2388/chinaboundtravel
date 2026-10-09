@@ -1,7 +1,7 @@
 {
   "date": "2026-10-08",
   "total_published": 10,
-  "total_impressions": 1,
+  "total_impressions": 6,
   "total_clicks": 0,
   "total_uv": 0,
   "by_platform": {
@@ -25,7 +25,7 @@
     },
     "fb": {
       "published": 1,
-      "impressions": 0,
+      "impressions": 5,
       "clicks": 0,
       "uv": 0
     }
