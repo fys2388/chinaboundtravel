@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-10-09 18:33:00
+**生成时间**: 2026-10-09 12:13:55
 **闭环版本**: 2.0
-**策略版本**: 2.1-20261009_183300_quality_gated
+**策略版本**: 2.1-20261009_121355_quality_gated
 
 ---
 
@@ -20,46 +20,46 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 388 |
+| 历史帖子总数 | 402 |
 | 本轮新增记录 | 0 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
-| 策略变更项 | 7 |
+| 策略变更项 | 0 |
 
 ---
 
 ## 📱 平台表现
 
 ### 🔴 facebook
-- 帖子数: 72
-- 总展示: 2892
+- 帖子数: 75
+- 总展示: 2899
 - 总点击: 82
-- 平均CTR: 0.39%
-- 平均互动率: 0.70%
+- 平均CTR: 0.38%
+- 平均互动率: 0.67%
 - 表现评级: needs_improvement
 
 ### 🟢 twitter
-- 帖子数: 83
-- 总展示: 19
+- 帖子数: 86
+- 总展示: 20
 - 总点击: 1
-- 平均CTR: 40.16%
+- 平均CTR: 38.76%
 - 平均互动率: 0.00%
 - 表现评级: excellent
 
 ### 🔴 instagram
-- 帖子数: 97
+- 帖子数: 101
 - 总展示: 4725
 - 总点击: 94
 - 平均CTR: 0.20%
-- 平均互动率: 0.52%
+- 平均互动率: 0.50%
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 116
+- 帖子数: 120
 - 总展示: 9248
 - 总点击: 364
-- 平均CTR: 0.34%
-- 平均互动率: 0.51%
+- 平均CTR: 0.33%
+- 平均互动率: 0.49%
 - 表现评级: needs_improvement
 
 ### 🟢 x
@@ -88,12 +88,12 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 2. **discover** - 平均CTR: 3333.33% (出现1次)
 3. **about** - 平均CTR: 3333.33% (出现1次)
 4. **visa** - 平均CTR: 3333.33% (出现1次)
-5. **what** - 平均CTR: 1666.67% (出现2次)
+5. **what** - 平均CTR: 833.33% (出现4次)
 
 
 ### 最佳发布时间
 
-1. **00:00** - 平均CTR: 9.86% (出现338次)
+1. **00:00** - 平均CTR: 9.47% (出现352次)
 2. **22:00** - 平均CTR: 5.84% (出现5次)
 3. **14:00** - 平均CTR: 5.60% (出现5次)
 
@@ -102,41 +102,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ## 🎯 策略变更
 
-1. **pinterest.best_times**
-   - 旧值: ['08:00', '13:00', '20:00']
-   - 新值: ['00:00', '22:00', '14:00']
-   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
-
-2. **instagram.best_times**
-   - 旧值: ['08:00', '17:00', '21:00']
-   - 新值: ['00:00', '22:00', '14:00']
-   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
-
-3. **facebook.best_times**
-   - 旧值: ['08:00', '12:00', '19:00']
-   - 新值: ['00:00', '22:00', '14:00']
-   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
-
-4. **x.best_times**
-   - 旧值: ['08:00', '13:00', '19:00']
-   - 新值: ['00:00', '22:00', '14:00']
-   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
-
-5. **pinterest.best_hooks**
-   - 旧值: ['Essential China travel tips', 'China itinerary planning', 'China visa guide', 'China payment setup', 'China transportation']
-   - 新值: ['Essential China travel tips', 'China itinerary planning', 'China visa guide', 'China payment setup']
-   - 原因: 清理单词碎片hook（长度<3词），保留完整句
-
-6. **instagram.best_hooks**
-   - 旧值: ['Research-backed facts', 'Essential tips', 'What travelers discover', 'Visual guide to']
-   - 新值: ['What travelers discover', 'Visual guide to']
-   - 原因: 清理单词碎片hook（长度<3词），保留完整句
-
-7. **facebook.best_hooks**
-   - 旧值: ['Research-backed facts', 'Essential tips', 'What travelers discover']
-   - 新值: ['What travelers discover']
-   - 原因: 清理单词碎片hook（长度<3词），保留完整句
-
+本轮无策略变更（数据不足或当前策略已最优）
 ---
 
 ## 🚀 下一步行动
@@ -159,4 +125,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-10-09 18:33:00*
+*生成时间: 2026-10-09 12:13:55*

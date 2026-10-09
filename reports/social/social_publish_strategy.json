@@ -1,6 +1,6 @@
 {
-  "version": "2.1-20261009_183300_quality_gated",
-  "last_updated": "2026-10-09T18:33:00.776284",
+  "version": "2.1-20261009_121355_quality_gated",
+  "last_updated": "2026-10-09T12:13:55.824680",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -109,7 +109,7 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 45.80%，比Bottom 20%高 45.80个百分点",
+      "description": "Top 20%帖子平均CTR 44.08%，比Bottom 20%高 44.08个百分点",
       "common_hooks": [
         "travelers",
         "discover",
@@ -124,126 +124,5 @@
       ]
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "pinterest.best_times",
-      "old": [
-        "08:00",
-        "13:00",
-        "20:00"
-      ],
-      "new": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
-      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "instagram.best_times",
-      "old": [
-        "08:00",
-        "17:00",
-        "21:00"
-      ],
-      "new": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
-      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "facebook.best_times",
-      "old": [
-        "08:00",
-        "12:00",
-        "19:00"
-      ],
-      "new": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
-      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "x.best_times",
-      "old": [
-        "08:00",
-        "13:00",
-        "19:00"
-      ],
-      "new": [
-        "00:00",
-        "22:00",
-        "14:00"
-      ],
-      "reason": "基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "pinterest.best_hooks",
-      "old": [
-        "Essential China travel tips",
-        "China itinerary planning",
-        "China visa guide",
-        "China payment setup",
-        "China transportation"
-      ],
-      "new": [
-        "Essential China travel tips",
-        "China itinerary planning",
-        "China visa guide",
-        "China payment setup"
-      ],
-      "reason": "清理单词碎片hook（长度<3词），保留完整句",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "instagram.best_hooks",
-      "old": [
-        "Research-backed facts",
-        "Essential tips",
-        "What travelers discover",
-        "Visual guide to"
-      ],
-      "new": [
-        "What travelers discover",
-        "Visual guide to"
-      ],
-      "reason": "清理单词碎片hook（长度<3词），保留完整句",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    },
-    {
-      "field": "facebook.best_hooks",
-      "old": [
-        "Research-backed facts",
-        "Essential tips",
-        "What travelers discover"
-      ],
-      "new": [
-        "What travelers discover"
-      ],
-      "reason": "清理单词碎片hook（长度<3词），保留完整句",
-      "version": "2.1",
-      "timestamp": "2026-10-09T18:33:00.776284",
-      "evidence": "based on 388 records, 781 clicks"
-    }
-  ]
+  "strategy_changes": []
 }
