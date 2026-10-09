@@ -342,6 +342,13 @@
       "fixed_by": "auto_error_router:content",
       "fix_note": "已发送飞书告警(category=content_quality_p0)",
       "fixed_at": "2026-10-09T09:44:47.250063"
+    },
+    {
+      "workflow": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:content",
+      "fix_note": "已发送飞书告警(category=content_quality_p0)",
+      "fixed_at": "2026-10-09T10:18:03.586326"
     }
   ]
 }

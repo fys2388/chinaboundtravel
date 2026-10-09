@@ -3,11 +3,11 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-09_content",
   "created_at": "2026-10-09T00:05:43.116468+00:00",
-  "updated_at": "2026-10-09T10:17:24.256639",
+  "updated_at": "2026-10-09T10:18:03.841846",
   "target_date": "2026-10-09",
-  "issue_count": 42,
+  "issue_count": 43,
   "severity_summary": {
-    "critical": 36,
+    "critical": 37,
     "high": 3,
     "medium": 3,
     "low": 0
@@ -594,6 +594,26 @@
       "detected_at": "2026-10-09T09:44:43.744348+00:00"
     },
     {
+      "id": "workflow-37916635291-content_quality_p0",
+      "type": "content_quality_p0",
+      "title": "Content Quality Audit (2.0 内容质量综合巡检) 失败：内容质量 P0",
+      "description": "content-quality-audit / 7. 内容质量门禁结论",
+      "page": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "file": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "evidence": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
+      "recommended_action": "内容质量门禁发现 P0 问题。打开失败运行的内容审计 artifact，按文件和规则修复后重跑。",
+      "severity": "critical",
+      "agent": "content",
+      "action": "blocking_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-09T10:18:02.748968+00:00"
+    },
+    {
       "id": "content-frontmatter-alipay-for-foreigners-guide.md",
       "type": "invalid_frontmatter",
       "title": "文章 front matter 无法解析",
@@ -883,6 +903,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=37, failed=0"
+    "note": "resolved=0, need_manual=38, failed=0"
   }
 }
