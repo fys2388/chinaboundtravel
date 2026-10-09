@@ -271,7 +271,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp",
@@ -280,10 +282,10 @@
         "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 92.0,
       "passed": true
     },
     {

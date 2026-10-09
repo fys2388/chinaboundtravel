@@ -3,13 +3,13 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-09_content",
   "created_at": "2026-10-09T00:05:43.116468+00:00",
-  "updated_at": "2026-10-09T10:01:18.339647",
+  "updated_at": "2026-10-09T10:17:24.256639",
   "target_date": "2026-10-09",
-  "issue_count": 41,
+  "issue_count": 42,
   "severity_summary": {
     "critical": 36,
     "high": 3,
-    "medium": 2,
+    "medium": 3,
     "low": 0
   },
   "issues": [
@@ -700,7 +700,7 @@
       "description": "内容质量验证(P0乱码)未通过",
       "page": "content/posts",
       "file": "content/posts",
-      "evidence": "content_quality_validator.py exit code=1; run_id=37913124135",
+      "evidence": "content_quality_validator.py exit code=1; run_id=37916635291",
       "recommended_action": "修复报告中的乱码、编码、front matter 或媒体合规问题后重跑内容质量巡检。",
       "severity": "critical",
       "agent": "content",
@@ -734,7 +734,7 @@
       "detected_at": "2026-10-09T09:44:04.837532+00:00"
     },
     {
-      "id": "site_health-50c106cc64d0f4f",
+      "id": "site_health-776491e20849d908",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -751,10 +751,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-09T10:01:18.124328+00:00"
+      "detected_at": "2026-10-09T10:17:24.048015+00:00"
     },
     {
-      "id": "site_health-2423bf0226e037a5",
+      "id": "site_health-601d1427f3d8f069",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -771,10 +771,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-09T10:01:18.124333+00:00"
+      "detected_at": "2026-10-09T10:17:24.048019+00:00"
     },
     {
-      "id": "site_health-769592d3aa64d0f8",
+      "id": "site_health-548b367c0038dbcf",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -791,7 +791,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-09T10:01:18.124323+00:00"
+      "detected_at": "2026-10-09T10:17:24.048010+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -832,6 +832,26 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-10-09T09:44:04.837559+00:00"
+    },
+    {
+      "id": "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "description": "文章 SEO 字段或结构需要优化",
+      "page": "2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "file": "2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-09T10:17:24.048035+00:00"
     }
   ],
   "priority_issue": {
