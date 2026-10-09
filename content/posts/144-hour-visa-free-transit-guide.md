@@ -286,6 +286,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Kung Fu And Martial Arts In China: Where To See And Train Guide](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?
