@@ -3,18 +3,18 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-09_seo",
   "created_at": "2026-10-09T00:05:43.117081+00:00",
-  "updated_at": "2026-10-09T17:53:11.938195",
+  "updated_at": "2026-10-09T18:01:21.338249",
   "target_date": "2026-10-09",
-  "issue_count": 1,
+  "issue_count": 2,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-128bf60bea36b9fb",
+      "id": "site_health-372f2541ec00e20e",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -31,11 +31,31 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-09T17:53:11.783187+00:00"
+      "detected_at": "2026-10-09T18:01:20.754876+00:00"
+    },
+    {
+      "id": "site_health-48bace155195a69d",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+      "evidence": "Title过长(74字符，模板上限60): China High-Speed Rail: Complete Ticket B...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-10-09T18:01:20.754881+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-128bf60bea36b9fb",
+    "id": "site_health-372f2541ec00e20e",
     "type": "meta_description_too_long",
     "title": "meta_description_too_long",
     "description": "meta_description_too_long",
@@ -52,16 +72,16 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-10-09T17:53:11.783187+00:00"
+    "detected_at": "2026-10-09T18:01:20.754876+00:00"
   },
   "expected_actions": [
     "manual_review"
   ],
-  "status": "completed",
+  "status": "partial",
   "execution": {
-    "resolved_count": 0,
+    "resolved_count": 1,
     "failed_count": 0,
-    "completed_at": "2026-10-09T17:53:11.938201",
-    "note": "resolved=0, need_manual=0, failed=0"
+    "completed_at": null,
+    "note": "resolved=1, need_manual=0, failed=0"
   }
 }
