@@ -184,12 +184,12 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
                 "https://apihub.agnes-ai.com/v1/images/generations",
                 headers={"Authorization": f"Bearer {agnes_key}", "Content-Type": "application/json"},
                 json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
-                timeout=90,
+                timeout=120,
             )
             resp.raise_for_status()
             img_url = (resp.json().get("data") or [{}])[0].get("url", "")
             if img_url:
-                r = requests.get(img_url, timeout=90, stream=True)
+                r = requests.get(img_url, timeout=120, stream=True)
                 if r.status_code == 200 and "image" in r.headers.get("content-type", "").lower():
                     filename = f"{slug}.jpg"
                     image_path = cover_dir / filename

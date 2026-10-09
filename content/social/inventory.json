@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T07:17:39",
+  "updated_at": "2026-10-09T16:50:15",
   "items": [
     {
       "id": "soc-000001",
@@ -5595,7 +5595,7 @@
       "type": "story",
       "caption": "🔥 linkedin\n\n💡 What travelers discover about High Speed — practical lessons from the ground.\n\n• China high-speed train survival guide: booking classes, finding your platform, and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'China High-Speed Trains: Booking & Tips' (platform fb). Scene: Chinese high-speed train in a modern station. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China high-speed train survival guide: booking classes, finding your platform, and insider tips for first-time visitors, based on extensive .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-train-survival-guide-bo-fb-story-71afa0e1.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -5610,7 +5610,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "e1364383d80b"
+      "_sig": "e1364383d80b",
+      "image_generated": true
     },
     {
       "id": "soc-000214",
@@ -5620,7 +5621,7 @@
       "type": "visual",
       "caption": "🔥 linkedin\n\nVisual guide to High Speed: what to see and capture.\n\n· China high-speed train survival guide: booking classes, finding your platform, and\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China High-Speed Trains: Booking & Tips' (platform ig). Scene: Chinese high-speed train in a modern station. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China high-speed train survival guide: booking classes, finding your platform, and insider tips for first-time visitors, based on extensive .",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-high-speed-train-survival-guide-bo-ig-visual-79e0c13c.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5635,7 +5636,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "e74f8e47044f"
+      "_sig": "e74f8e47044f",
+      "image_generated": true
     },
     {
       "id": "soc-000215",
@@ -5805,7 +5807,7 @@
       "type": "knowledge",
       "caption": "🔥 linkedin\n\n💡 Research-backed facts about Tea every traveler should know.\n\n• Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers\n• Hotpot: The Heart of Chengdu\n• Dan Dan Noodles: A Simple yet Delicious Dish\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional knowledge social graphic for 'China Food Guide 2026: What to Eat & Where' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-fb-knowledge-269be5f0.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -5820,7 +5822,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "489a338541d3"
+      "_sig": "489a338541d3",
+      "image_generated": true
     },
     {
       "id": "soc-000222",
@@ -5830,7 +5833,7 @@
       "type": "tip",
       "caption": "🔥 linkedin\n\nEssential Tea tips most first-time visitors miss.\n\n· Title: A Gastronomic Adventure in Chengdu: Food Recommendations for American Travelers\n· Hotpot: The Heart of Chengdu\n· Dan Dan Noodles: A Simple yet Delicious Dish\n\nRead the full guide: https://www.chinaboundtravel.com/posts/food-recommendations-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260913&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'China Food Guide 2026: What to Eat & Where' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: What foreigners should eat in China: authentic local snacks, street food safety, and dining etiquette, researched and verified by our editor.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/food-recommendations-guide-ig-tip-fe43b201.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -5845,7 +5848,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "9d4d6c1b1b7e"
+      "_sig": "9d4d6c1b1b7e",
+      "image_generated": true
     },
     {
       "id": "soc-000223",

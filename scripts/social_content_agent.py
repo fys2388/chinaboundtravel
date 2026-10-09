@@ -653,13 +653,13 @@ def _gen_via_agnes(prompt: str, out_path: Path) -> bool:
             "https://apihub.agnes-ai.com/v1/images/generations",
             headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
             json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
-            timeout=90,
+            timeout=120,
         )
         resp.raise_for_status()
         url = (resp.json().get("data") or [{}])[0].get("url", "")
         if not url:
             return False
-        img = requests.get(url, timeout=90)
+        img = requests.get(url, timeout=120)
         img.raise_for_status()
         out_path.write_bytes(img.content)
         return out_path.stat().st_size > 1000

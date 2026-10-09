@@ -170,7 +170,7 @@ def try_agnes(prompt, width=1200, height=630, seed=None):
             "https://apihub.agnes-ai.com/v1/images/generations",
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
             json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": size_str},
-            timeout=90,
+            timeout=120,
             proxies=PROXIES,
             verify=False,
         )
