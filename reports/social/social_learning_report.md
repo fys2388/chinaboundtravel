@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-10-08 12:24:18
+**生成时间**: 2026-10-09 18:33:00
 **闭环版本**: 2.0
-**策略版本**: 2.0-20261008_122418
+**策略版本**: 2.1-20261009_183300_quality_gated
 
 ---
 
@@ -21,10 +21,10 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 | 指标 | 数值 |
 |------|------|
 | 历史帖子总数 | 388 |
-| 本轮新增记录 | 8 |
+| 本轮新增记录 | 0 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
-| 策略变更项 | 4 |
+| 策略变更项 | 7 |
 
 ---
 
@@ -102,25 +102,40 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 ## 🎯 策略变更
 
-1. **pinterest.best_hooks**
-   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
-   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+1. **pinterest.best_times**
+   - 旧值: ['08:00', '13:00', '20:00']
+   - 新值: ['00:00', '22:00', '14:00']
+   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
 
-2. **instagram.best_hooks**
-   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
-   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+2. **instagram.best_times**
+   - 旧值: ['08:00', '17:00', '21:00']
+   - 新值: ['00:00', '22:00', '14:00']
+   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
 
-3. **facebook.best_hooks**
-   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
-   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+3. **facebook.best_times**
+   - 旧值: ['08:00', '12:00', '19:00']
+   - 新值: ['00:00', '22:00', '14:00']
+   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
 
-4. **x.best_hooks**
-   - 旧值: ['what', 'travelers', 'discover', 'about', 'visa']
-   - 新值: ['travelers', 'discover', 'about', 'visa', 'what']
-   - 原因: 基于Top 20%高CTR帖子的Hook关键词分析
+4. **x.best_times**
+   - 旧值: ['08:00', '13:00', '19:00']
+   - 新值: ['00:00', '22:00', '14:00']
+   - 原因: 基于历史数据分析，最佳CTR时段为 00:00, 22:00, 14:00
+
+5. **pinterest.best_hooks**
+   - 旧值: ['Essential China travel tips', 'China itinerary planning', 'China visa guide', 'China payment setup', 'China transportation']
+   - 新值: ['Essential China travel tips', 'China itinerary planning', 'China visa guide', 'China payment setup']
+   - 原因: 清理单词碎片hook（长度<3词），保留完整句
+
+6. **instagram.best_hooks**
+   - 旧值: ['Research-backed facts', 'Essential tips', 'What travelers discover', 'Visual guide to']
+   - 新值: ['What travelers discover', 'Visual guide to']
+   - 原因: 清理单词碎片hook（长度<3词），保留完整句
+
+7. **facebook.best_hooks**
+   - 旧值: ['Research-backed facts', 'Essential tips', 'What travelers discover']
+   - 新值: ['What travelers discover']
+   - 原因: 清理单词碎片hook（长度<3词），保留完整句
 
 ---
 
@@ -144,4 +159,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-10-08 12:24:18*
+*生成时间: 2026-10-09 18:33:00*
