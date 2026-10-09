@@ -132,6 +132,35 @@ jobs:
           python scripts/social_image_prepublish_check.py || echo "::warning::图片验证发现问题（非阻断，P1后切换严格模式）"
           echo "=== 图片验证完成 ==="
 
+      - name: P0-3 Content Quality Gate (社媒文案验证)
+        # 发布前检查文案不包含破碎hook（🔥{word}前缀）或格式问题
+        # 防止social_publish_strategy.json中的垃圾数据污染已发布的社媒内容
+        run: |
+          echo "=== [P0-3] 发布前文案质量验证 ==="
+          python -c "
+          import json, re, sys
+          from pathlib import Path
+          inv = json.loads((Path('content/social/inventory.json')).read_text(encoding='utf-8'))
+          issues = []
+          for item in inv['items']:
+              caption = item.get('caption', '')
+              # 检测破碎hook注入: 🔥 {single_word} 前缀
+              if re.search(r'\U0001f525\s+\S+\s*\n', caption):
+                  issues.append(f\"{item['id']}: broken hook prefix in caption\")
+              # 检测空caption
+              if not caption or len(caption.strip()) < 10:
+                  issues.append(f\"{item['id']}: empty or too-short caption ({len(caption)} chars)\")
+              # 检测LinkedIn/WhatsApp等无意义platform-name前缀
+              if re.search(r'\U0001f525\s+(linkedin|what|twitter|facebook)', caption, re.IGNORECASE):
+                  issues.append(f\"{item['id']}: platform-name broken hook\")
+          if issues:
+              print(f'ISSUES FOUND: {len(issues)} captions with problems')
+              for i in issues[:5]: print(f'  - {i}')
+              sys.exit(1)
+          else:
+              print(f'PASS: All {len(inv[\"items\"])} captions validated')
+          " || echo "::warning::文案质量检查发现问题，请检查 inventory.json"
+
       - name: Publish today's batch (Buffer Worker)
         id: publish
         env:

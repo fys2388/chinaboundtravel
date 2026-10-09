@@ -39,6 +39,24 @@ from real_data_bridge import get_social_records
 from strategy_change_logger import make_change, STRATEGY_VERSION, save_rollback
 
 
+# P2-fix: Windows GBK encoding safety — strip emoji/non-ASCII from print output
+# Use a distinct name to avoid recursion since regex replaced all print( calls
+_orig_print = print  # capture built-in before any replacement
+
+def safe_print(*args, **kwargs):
+    """跨平台安全打印：自动清理emoji和非ASCII字符防止GBK编码崩溃"""
+    try:
+        _orig_print(*args, **kwargs)
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        cleaned = []
+        for a in args:
+            if isinstance(a, str):
+                cleaned.append(a.encode('ascii', 'replace').decode('ascii'))
+            else:
+                cleaned.append(str(a))
+        _orig_print(*cleaned, **kwargs)
+
+
 # 项目根目录
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -68,7 +86,7 @@ class SocialLearningClosedLoop:
                 with open(social_memory_file, encoding="utf-8") as f:
                     return json.load(f)
             except Exception as e:
-                print(f"  ⚠️ 加载Growth Memory失败: {e}")
+                safe_print(f"  ⚠️ 加载Growth Memory失败: {e}")
         return {"records": [], "last_updated": None}
 
     def _load_performance_history(self) -> Dict[str, Any]:
@@ -78,7 +96,7 @@ class SocialLearningClosedLoop:
                 with open(SOCIAL_PERFORMANCE_HISTORY, encoding="utf-8") as f:
                     return json.load(f)
             except Exception as e:
-                print(f"  ⚠️ 加载社媒表现历史失败: {e}")
+                safe_print(f"  ⚠️ 加载社媒表现历史失败: {e}")
         return {"records": [], "last_updated": None, "version": "1.0"}
 
     def _load_current_strategy(self) -> Dict[str, Any]:
@@ -88,7 +106,7 @@ class SocialLearningClosedLoop:
                 with open(SOCIAL_STRATEGY_FILE, encoding="utf-8") as f:
                     return json.load(f)
             except Exception as e:
-                print(f"  ⚠️ 加载当前策略失败: {e}")
+                safe_print(f"  ⚠️ 加载当前策略失败: {e}")
         # 默认策略
         return {
             "version": "1.0-default",
@@ -136,9 +154,9 @@ class SocialLearningClosedLoop:
 
     def observe_and_record(self) -> List[Dict[str, Any]]:
         """步骤1+2: Observe观察社媒表现并Record记录到Growth Memory"""
-        print("\n" + "=" * 60)
-        print("  步骤1+2: Observe + Record - 观察并记录社媒表现")
-        print("=" * 60)
+        safe_print("\n" + "=" * 60)
+        safe_print("  步骤1+2: Observe + Record - 观察并记录社媒表现")
+        safe_print("=" * 60)
 
         new_records = []
 
@@ -171,9 +189,9 @@ class SocialLearningClosedLoop:
                     self.performance_history["records"].append(social_record)
                     new_records.append(social_record)
                     added += 1
-            print(f"  📥 从 real_data 加载: {added} 条帖子 (共 {len(real_records)} 条可用)")
+            safe_print(f"  📥 从 real_data 加载: {added} 条帖子 (共 {len(real_records)} 条可用)")
         except Exception as e:
-            print(f"  ⚠️ real_data 加载失败: {e}")
+            safe_print(f"  ⚠️ real_data 加载失败: {e}")
 
         # 从社媒报告文件中提取数据
         social_report_files = list(SOCIAL_DIR.glob("*report*.json")) + list(SOCIAL_DIR.glob("*performance*.json"))
@@ -224,26 +242,26 @@ class SocialLearningClosedLoop:
 
                             self.performance_history["records"].append(record)
                             new_records.append(record)
-                            print(f"  ✅ 记录: [{platform}] {record['content']['hook'][:40]}... (CTR: {record['calculated']['ctr']*100:.2f}%)")
+                            safe_print(f"  ✅ 记录: [{platform}] {record['content']['hook'][:40]}... (CTR: {record['calculated']['ctr']*100:.2f}%)")
 
             except Exception as e:
-                print(f"  ⚠️ 处理 {report_file.name} 失败: {e}")
+                safe_print(f"  ⚠️ 处理 {report_file.name} 失败: {e}")
 
         # 保存表现历史
         self.performance_history["last_updated"] = datetime.now().isoformat()
         with open(SOCIAL_PERFORMANCE_HISTORY, "w", encoding="utf-8") as f:
             json.dump(self.performance_history, f, ensure_ascii=False, indent=2)
 
-        print(f"\n  📊 新增记录: {len(new_records)} 条")
-        print(f"  📊 历史总记录: {len(self.performance_history['records'])} 条")
+        safe_print(f"\n  📊 新增记录: {len(new_records)} 条")
+        safe_print(f"  📊 历史总记录: {len(self.performance_history['records'])} 条")
 
         return new_records
 
     def analyze_and_learn(self) -> Dict[str, Any]:
         """步骤3+4: Analyze分析 + Learn学习成功模式"""
-        print("\n" + "=" * 60)
-        print("  步骤3+4: Analyze + Learn - 分析并学习成功模式")
-        print("=" * 60)
+        safe_print("\n" + "=" * 60)
+        safe_print("  步骤3+4: Analyze + Learn - 分析并学习成功模式")
+        safe_print("=" * 60)
 
         insights = {
             "generated_at": datetime.now().isoformat(),
@@ -259,10 +277,10 @@ class SocialLearningClosedLoop:
 
         records = self.performance_history["records"]
         if not records:
-            print("  ⚠️ 没有足够的历史数据进行分析，使用默认策略")
+            safe_print("  ⚠️ 没有足够的历史数据进行分析，使用默认策略")
             return insights
 
-        print(f"\n  📊 分析 {len(records)} 条历史记录...")
+        safe_print(f"\n  📊 分析 {len(records)} 条历史记录...")
 
         # 1. 平台表现分析
         platform_stats = defaultdict(lambda: {
@@ -290,7 +308,7 @@ class SocialLearningClosedLoop:
                 "avg_engagement_rate": avg_engagement,
                 "performance_rating": "excellent" if avg_ctr > 0.05 else "good" if avg_ctr > 0.02 else "average" if avg_ctr > 0.01 else "needs_improvement"
             }
-            print(f"  📱 {platform}: {stats['count']}条, 平均CTR {avg_ctr*100:.2f}%, 评级: {insights['platform_performance'][platform]['performance_rating']}")
+            safe_print(f"  📱 {platform}: {stats['count']}条, 平均CTR {avg_ctr*100:.2f}%, 评级: {insights['platform_performance'][platform]['performance_rating']}")
 
         # 2. 按CTR排序，找出Top表现
         sorted_by_ctr = sorted(records, key=lambda x: x["calculated"]["ctr"], reverse=True)
@@ -340,8 +358,8 @@ class SocialLearningClosedLoop:
         # 6. 生成建议
         insights["recommendations"] = self._generate_strategy_recommendations(insights)
 
-        print(f"\n  💡 识别成功模式: {len(insights['success_patterns'])} 个")
-        print(f"  🚀 生成优化建议: {len(insights['recommendations'])} 条")
+        safe_print(f"\n  💡 识别成功模式: {len(insights['success_patterns'])} 个")
+        safe_print(f"  🚀 生成优化建议: {len(insights['recommendations'])} 条")
 
         return insights
 
@@ -386,14 +404,50 @@ class SocialLearningClosedLoop:
         return recommendations
 
     def decide_and_update_strategy(self, insights: Dict[str, Any]) -> Dict[str, Any]:
-        """步骤5+6: Decide决策 + Act行动 - 更新发布策略"""
-        print("\n" + "=" * 60)
-        print("  步骤5+6: Decide + Act - 决策并更新发布策略")
-        print("=" * 60)
+        """步骤5+6: Decide决策 + Act行动 - 更新发布策略
+
+        P2修复: 增加质量门控 — 数据不足时不更新策略，避免用垃圾数据污染配置
+        """
+        safe_print("\n" + "=" * 60)
+        safe_print("  步骤5+6: Decide + Act - 决策并更新发布策略")
+        safe_print("=" * 60)
+
+        # === 质量门控 ===
+        total_records = len(self.performance_history["records"])
+        records_with_metrics = sum(
+            1 for r in self.performance_history["records"]
+            if r.get("metrics", {}).get("impressions", 0) > 0
+        )
+        total_impressions = sum(
+            r.get("metrics", {}).get("impressions", 0)
+            for r in self.performance_history["records"]
+        )
+        total_clicks = sum(
+            r.get("metrics", {}).get("clicks", 0)
+            for r in self.performance_history["records"]
+        )
+
+        safe_print(f"  [Quality Gate] 历史数据: {total_records}条记录, {records_with_metrics}条有曝光, {total_impressions}总曝光, {total_clicks}总点击")
+
+        # 最低样本门槛: 至少50条有曝光记录 + 至少5次点击才能产出有意义的策略
+        MIN_SAMPLES = 50
+        MIN_CLICKS = 5
+        if records_with_metrics < MIN_SAMPLES or total_clicks < MIN_CLICKS:
+            safe_print(f"  [BLOCKED] 数据不足: 需要>={MIN_SAMPLES}条有曝光记录(当前{records_with_metrics})且>={MIN_CLICKS}次点击(当前{total_clicks})")
+            safe_print(f"  [BLOCKED] 策略不更新 — 等待足够数据积累后重新运行")
+            return self.current_strategy
+
+        # 验证现有策略中的hook质量（检测破碎的单词hook）
+        for plat, cfg in self.current_strategy.get("platforms", {}).items():
+            hooks = cfg.get("best_hooks", [])
+            broken = [h for h in hooks if len(str(h).strip().split()) < 3]
+            if broken:
+                safe_print(f"  [WARN] {plat} 发现破碎hook（少于3词）: {broken}")
+                safe_print(f"  [ACTION] 将在本轮清理")
 
         strategy_changes = []
 
-        # 1. 更新平台最佳时间
+        # 1. 更新平台最佳时间（仅在数据充足时）
         if insights.get("best_times"):
             for platform in self.current_strategy["platforms"]:
                 old_times = self.current_strategy["platforms"][platform]["best_times"]
@@ -406,22 +460,43 @@ class SocialLearningClosedLoop:
                         "new": new_times,
                         "reason": f"基于历史数据分析，最佳CTR时段为 {', '.join(new_times)}"
                     })
-                    print(f"  ✅ 更新{platform}发布时间: {old_times} → {new_times}")
+                    safe_print(f"  [OK] 更新{platform}发布时间: {old_times} → {new_times}")
 
-        # 2. 更新最佳Hook
+        # 2. 更新最佳Hook — 强制使用完整句子模板，拒绝单词
         if insights.get("best_hooks"):
-            for platform in self.current_strategy["platforms"]:
-                old_hooks = self.current_strategy["platforms"][platform]["best_hooks"]
-                new_hooks = [h["keyword"] for h in insights["best_hooks"][:5]]
-                if old_hooks != new_hooks:
-                    self.current_strategy["platforms"][platform]["best_hooks"] = new_hooks
-                    strategy_changes.append({
-                        "field": f"{platform}.best_hooks",
-                        "old": old_hooks,
-                        "new": new_hooks,
-                        "reason": "基于Top 20%高CTR帖子的Hook关键词分析"
-                    })
-                    print(f"  ✅ 更新{platform}Hook关键词: {len(old_hooks)}个 → {len(new_hooks)}个")
+            # 过滤：只保留 >=3词的hook（完整句子），丢弃单词碎片
+            valid_hooks = [
+                h for h in insights["best_hooks"]
+                if len(str(h["keyword"]).strip().split()) >= 3
+            ]
+            if valid_hooks:
+                for platform in self.current_strategy["platforms"]:
+                    old_hooks = self.current_strategy["platforms"][platform]["best_hooks"]
+                    new_hooks = [h["keyword"] for h in valid_hooks[:5]]
+                    if old_hooks != new_hooks:
+                        self.current_strategy["platforms"][platform]["best_hooks"] = new_hooks
+                        strategy_changes.append({
+                            "field": f"{platform}.best_hooks",
+                            "old": old_hooks,
+                            "new": new_hooks,
+                            "reason": f"基于Top 20%高CTR帖子分析（过滤单词碎片，仅保留完整句）"
+                        })
+                        safe_print(f"  [OK] 更新{platform}Hook: {len(old_hooks)}个 → {len(new_hooks)}个完整句")
+            else:
+                safe_print(f"  [SKIP] 没有符合条件的完整句hook，保持现有策略不变")
+                # 清理现有破碎hook
+                for platform in self.current_strategy["platforms"]:
+                    hooks = self.current_strategy["platforms"][platform]["best_hooks"]
+                    cleaned = [h for h in hooks if len(str(h).strip().split()) >= 3]
+                    if len(cleaned) != len(hooks):
+                        self.current_strategy["platforms"][platform]["best_hooks"] = cleaned
+                        strategy_changes.append({
+                            "field": f"{platform}.best_hooks",
+                            "old": hooks,
+                            "new": cleaned,
+                            "reason": "清理单词碎片hook（长度<3词），保留完整句"
+                        })
+                        safe_print(f"  [CLEAN] {platform} 清除 {len(hooks)-len(cleaned)} 个破碎hook")
 
         # 3. 更新学习洞察
         self.current_strategy["learning_insights"] = insights.get("success_patterns", [])
@@ -430,37 +505,37 @@ class SocialLearningClosedLoop:
         for _ch in strategy_changes:
             _ch.setdefault("version", STRATEGY_VERSION)
             _ch.setdefault("timestamp", _now)
-            _ch.setdefault("evidence", "based on performance data analysis")
+            _ch.setdefault("evidence", f"based on {total_records} records, {total_clicks} clicks")
         self.current_strategy["strategy_changes"] = strategy_changes
         self.current_strategy["last_updated"] = datetime.now().isoformat()
-        self.current_strategy["version"] = f"2.0-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        self.current_strategy["version"] = f"2.1-{datetime.now().strftime('%Y%m%d_%H%M%S')}_quality_gated"
 
         # 保存策略
         # P1-AI-OPS-03: Save rollback snapshot before strategy update
         try:
             save_rollback(self.current_strategy, str(SOCIAL_STRATEGY_FILE), "social", self.current_strategy.get("strategy_changes", []))
         except Exception as _rb_e:
-            print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
+            safe_print(f"  \u26a0\ufe0f Rollback skipped: {_rb_e}")
 
         # P1-AI-OPS-04: Data Quality Gate
         _dq_records = self.performance_history.get("records", []) if isinstance(self.performance_history, dict) else (self.performance_history if isinstance(self.performance_history, list) else [])
         if should_block_strategy_update(_dq_records, "social"):
-            print("  \u26a0\ufe0f 策略更新已跳过：数据质量不足")
+            safe_print("  \u26a0\ufe0f 策略更新已跳过：数据质量不足")
             return self.current_strategy
 
         with open(SOCIAL_STRATEGY_FILE, "w", encoding="utf-8") as f:
             json.dump(self.current_strategy, f, ensure_ascii=False, indent=2)
 
-        print(f"\n  📊 策略变更: {len(strategy_changes)} 项")
-        print(f"  📄 策略文件: {SOCIAL_STRATEGY_FILE}")
+        safe_print(f"\n  📊 策略变更: {len(strategy_changes)} 项")
+        safe_print(f"  📄 策略文件: {SOCIAL_STRATEGY_FILE}")
 
         return self.current_strategy
 
     def generate_learning_report(self, insights: Dict[str, Any], strategy: Dict[str, Any]):
         """生成学习报告"""
-        print("\n" + "=" * 60)
-        print("  生成Social Learning闭环报告")
-        print("=" * 60)
+        safe_print("\n" + "=" * 60)
+        safe_print("  生成Social Learning闭环报告")
+        safe_print("=" * 60)
 
         report = f"""# ChinaBound Travel Social Learning 闭环报告
 
@@ -570,14 +645,14 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
         with open(SOCIAL_LEARNING_REPORT, "w", encoding="utf-8") as f:
             f.write(report)
 
-        print(f"  ✅ 学习报告已生成: {SOCIAL_LEARNING_REPORT}")
+        safe_print(f"  ✅ 学习报告已生成: {SOCIAL_LEARNING_REPORT}")
 
     def run_full_closed_loop(self):
         """运行完整闭环"""
-        print("\n" + "=" * 60)
-        print("  ChinaBound Travel Social Learning 完整闭环运行")
-        print("=" * 60)
-        print(f"\n  运行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        safe_print("\n" + "=" * 60)
+        safe_print("  ChinaBound Travel Social Learning 完整闭环运行")
+        safe_print("=" * 60)
+        safe_print(f"\n  运行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
         # 步骤1+2: Observe + Record
         new_records = self.observe_and_record()
@@ -593,19 +668,19 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
         self.generate_learning_report(insights, strategy)
 
         # 总结
-        print("\n" + "=" * 60)
-        print("  Social Learning 完整闭环运行完成")
-        print("=" * 60)
-        print(f"\n  ✅ Observe: 观察完成")
-        print(f"  ✅ Record: 记录完成 ({len(new_records)}条新记录)")
-        print(f"  ✅ Analyze: 分析完成")
-        print(f"  ✅ Learn: 学习完成 ({len(insights.get('success_patterns', []))}个模式)")
-        print(f"  ✅ Decide: 决策完成")
-        print(f"  ✅ Act: 行动完成 ({len(strategy.get('strategy_changes', []))}项策略变更)")
-        print(f"  ⏳ Measure: 等待下一轮效果测量")
-        print(f"\n  📄 策略文件: {SOCIAL_STRATEGY_FILE}")
-        print(f"  📄 学习报告: {SOCIAL_LEARNING_REPORT}")
-        print(f"\n  🎯 闭环状态: 完整闭环已建立，持续进化中")
+        safe_print("\n" + "=" * 60)
+        safe_print("  Social Learning 完整闭环运行完成")
+        safe_print("=" * 60)
+        safe_print(f"\n  ✅ Observe: 观察完成")
+        safe_print(f"  ✅ Record: 记录完成 ({len(new_records)}条新记录)")
+        safe_print(f"  ✅ Analyze: 分析完成")
+        safe_print(f"  ✅ Learn: 学习完成 ({len(insights.get('success_patterns', []))}个模式)")
+        safe_print(f"  ✅ Decide: 决策完成")
+        safe_print(f"  ✅ Act: 行动完成 ({len(strategy.get('strategy_changes', []))}项策略变更)")
+        safe_print(f"  ⏳ Measure: 等待下一轮效果测量")
+        safe_print(f"\n  📄 策略文件: {SOCIAL_STRATEGY_FILE}")
+        safe_print(f"  📄 学习报告: {SOCIAL_LEARNING_REPORT}")
+        safe_print(f"\n  🎯 闭环状态: 完整闭环已建立，持续进化中")
 
         return {
             "new_records": len(new_records),
@@ -634,11 +709,11 @@ def main():
         loop.run_full_closed_loop()
     elif args.analyze_only:
         insights = loop.analyze_and_learn()
-        print(json.dumps(insights, ensure_ascii=False, indent=2))
+        safe_print(json.dumps(insights, ensure_ascii=False, indent=2))
     elif args.generate_strategy:
         insights = loop.analyze_and_learn()
         strategy = loop.decide_and_update_strategy(insights)
-        print(json.dumps(strategy, ensure_ascii=False, indent=2))
+        safe_print(json.dumps(strategy, ensure_ascii=False, indent=2))
     else:
         # 默认运行完整闭环
         loop.run_full_closed_loop()

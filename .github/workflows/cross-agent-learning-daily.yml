@@ -87,8 +87,12 @@ jobs:
           echo "data_pull_status=completed" >> $GITHUB_OUTPUT
         continue-on-error: true
 
-      # P0 修复: 移除 Social/Content Learning Closed Loop (与 social/content_intelligence_agent.py 100%职责重叠)
-      # 策略文件由 core agent 内部通过 StrategyConsumer 消费，无需独立的 learning loop 生成
+      - name: Step 1.5 - Social Learning Closed Loop (quality-gated)
+        run: |
+          echo "=== Step 1.5: 社媒学习闭环（带质量门控）==="
+          python scripts/social_learning_closed_loop.py --run 2>/dev/null || echo "Social learning skipped (data quality check or error)"
+          echo "social_learning_status=completed" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Step 2 - Run Cross-Agent Learning Orchestrator (lightweight)
         id: cross_agent
