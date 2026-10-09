@@ -102,7 +102,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
@@ -111,10 +113,10 @@
         "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 92.0,
       "passed": true
     },
     {
@@ -390,8 +392,8 @@
     },
     {
       "file": "2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -401,18 +403,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
@@ -442,8 +444,8 @@
     },
     {
       "file": "2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -453,18 +455,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
@@ -494,8 +496,8 @@
     },
     {
       "file": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -505,23 +507,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/general/travel-safety-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -531,18 +533,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
@@ -572,8 +574,8 @@
     },
     {
       "file": "2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -583,23 +585,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -609,18 +611,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/body/external_024a9f14060d.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md",
@@ -676,8 +678,8 @@
     },
     {
       "file": "2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -687,23 +689,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -713,23 +715,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -739,23 +741,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -765,23 +767,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-chinas-transportation-a-californians-guide-for-european-travelers.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -791,23 +793,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-14-transportation-guide-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -817,18 +819,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/transport/china-transportation-complete-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
@@ -858,8 +860,8 @@
     },
     {
       "file": "2026-07-16-food-recommendations-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -869,18 +871,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/food/food-recommendations-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md",
@@ -910,8 +912,8 @@
     },
     {
       "file": "2026-07-20-travel-safety-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -921,23 +923,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-21-cultural-etiquette-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -947,23 +949,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -973,23 +975,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/food/foodies-guide-to-china-a-gastronomic-adventure.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-27-accommodation-tips-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -999,23 +1001,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/accommodation/accommodation-tips-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1025,23 +1027,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/chengdu/china-remote-work-guide-a-californians-5-year-chengdu-experience.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1051,23 +1053,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1077,23 +1079,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/general/china-travel-safety-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-03-chinese-language-survival-phrases-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1103,23 +1105,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/chinese-language-survival-phrases-guide.jpg",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-05-china-family-travel-tips-a-californians-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1129,23 +1131,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-family-travel-tips-a-californians-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-07-china-bargaining-and-shopping-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1155,23 +1157,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1181,18 +1183,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-10-chinas-food-through-the-ages-guide.md",
@@ -1274,8 +1276,8 @@
     },
     {
       "file": "2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1285,18 +1287,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md",
@@ -1326,8 +1328,8 @@
     },
     {
       "file": "2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1337,18 +1339,18 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/culture/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
@@ -1362,20 +1364,18 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
-      "cover_ok": false,
-      "cover_image": "",
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
       "scores": {
         "brand": 100,
         "fact": 100,
         "language": 100,
         "mojibake": 100,
         "seo": 100,
-        "media": 75
+        "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {
@@ -1406,45 +1406,8 @@
     },
     {
       "file": "2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
-      "url_ok": true,
-      "canonical_ok": true,
-      "brand_issues": [],
-      "language_issues": [
-        "普",
-        "通",
-        "免",
-        "签",
-        "过",
-        "境",
-        "免",
-        "签",
-        "区",
-        "域"
-      ],
-      "mojibake_issues": [],
-      "encoding_errors": [],
-      "fact_issues": [],
-      "seo_issues": [],
-      "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-06-02-ultimate-guide-to-china-visa-for-tourists.webp",
-      "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 0,
-        "mojibake": 100,
-        "seo": 100,
-        "media": 100
-      },
-      "trust_score": 95.0,
-      "passed": true
-    },
-    {
-      "file": "2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1454,103 +1417,122 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
-      "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
-        "mojibake": 100,
-        "seo": 100,
-        "media": 100
-      },
-      "trust_score": 100.0,
-      "passed": true
-    },
-    {
-      "file": "alipay-for-foreigners-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
-      "url_ok": true,
-      "canonical_ok": true,
-      "brand_issues": [],
-      "language_issues": [],
-      "mojibake_issues": [],
-      "encoding_errors": [],
-      "fact_issues": [],
-      "seo_issues": [],
-      "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "/img/china-dest/general/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.webp",
-      "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
-        "mojibake": 100,
-        "seo": 100,
-        "media": 100
-      },
-      "trust_score": 100.0,
-      "passed": true
-    },
-    {
-      "file": "alipay-wechat-pay-foreigners-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
-      "url_ok": true,
-      "canonical_ok": true,
-      "brand_issues": [],
-      "language_issues": [],
-      "mojibake_issues": [],
-      "encoding_errors": [],
-      "fact_issues": [],
-      "seo_issues": [],
-      "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/alipay-wechat-pay-foreigners-guide.webp",
-      "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
-        "mojibake": 100,
-        "seo": 100,
-        "media": 100
-      },
-      "trust_score": 100.0,
-      "passed": true
-    },
-    {
-      "file": "best-china-itineraries-for-10-days-three-routes-compared.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
-      "url_ok": true,
-      "canonical_ok": true,
-      "brand_issues": [],
-      "language_issues": [
-        "清",
-        "香"
-      ],
-      "mojibake_issues": [],
-      "encoding_errors": [],
-      "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
-      "media_issues": [
-        "missing_cover"
-      ],
       "cover_ok": false,
       "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 60,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 80,
-        "media": 75
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 90.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "alipay-for-foreigners-guide.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "alipay-wechat-pay-foreigners-guide.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "best-china-itineraries-for-10-days-three-routes-compared.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "best-travel-insurance-china.md",
@@ -1606,8 +1588,8 @@
     },
     {
       "file": "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1617,23 +1599,23 @@
       "fact_issues": [],
       "seo_issues": [],
       "media_issues": [],
-      "cover_ok": true,
-      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.webp",
+      "cover_ok": false,
+      "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 100
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 100.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "china-solo-travel-guide-safety-hostels-and-making-friends.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1642,21 +1624,19 @@
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [
-        "missing_cover"
-      ],
+      "media_issues": [],
       "cover_ok": false,
       "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 100,
-        "media": 75
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 95.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "china-transportation-card-guide.md",
@@ -1712,8 +1692,8 @@
     },
     {
       "file": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
-      "frontmatter_ok": true,
-      "content_id_ok": true,
+      "frontmatter_ok": false,
+      "content_id_ok": false,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1721,24 +1701,20 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
-      "media_issues": [
-        "missing_cover"
-      ],
+      "seo_issues": [],
+      "media_issues": [],
       "cover_ok": false,
       "cover_image": "",
       "scores": {
-        "brand": 100,
-        "fact": 100,
-        "language": 100,
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
         "mojibake": 100,
-        "seo": 80,
-        "media": 75
+        "seo": 0,
+        "media": 0
       },
-      "trust_score": 92.0,
-      "passed": true
+      "trust_score": 0,
+      "passed": false
     },
     {
       "file": "western-sichuan-overland-camping-route.md",
@@ -1767,6 +1743,6 @@
       "passed": true
     }
   ],
-  "passed_count": 66,
+  "passed_count": 32,
   "total": 66
 }
