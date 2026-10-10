@@ -1,6 +1,6 @@
 {
-  "version": "2.1-20261009_121355_quality_gated",
-  "last_updated": "2026-10-09T12:13:55.824680",
+  "version": "2.1-20261010_113131_quality_gated",
+  "last_updated": "2026-10-10T11:31:31.380006",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -110,13 +110,7 @@
     {
       "pattern": "高CTR帖子特征",
       "description": "Top 20%帖子平均CTR 44.08%，比Bottom 20%高 44.08个百分点",
-      "common_hooks": [
-        "travelers",
-        "discover",
-        "about",
-        "visa",
-        "what"
-      ],
+      "common_hooks": [],
       "best_times": [
         "0:00",
         "22:00",

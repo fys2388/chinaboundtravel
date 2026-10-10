@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-10-09T12:13:56.236948",
+  "run_time": "2026-10-10T11:31:31.812002",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20261009_121355",
-      "last_updated": "2026-10-09T12:13:55.995246",
+      "version": "2.0-20261010_113131",
+      "last_updated": "2026-10-10T11:31:31.552817",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -134,8 +134,8 @@
       "strategy_changes": []
     },
     "revenue": {
-      "version": "2.0-20261009_121356",
-      "last_updated": "2026-10-09T12:13:56.101471",
+      "version": "2.0-20261010_113131",
+      "last_updated": "2026-10-10T11:31:31.659601",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -218,8 +218,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20261009_121355",
-      "last_updated": "2026-10-09T12:13:55.932254",
+      "version": "2.0-20261010_113131",
+      "last_updated": "2026-10-10T11:31:31.487509",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -303,8 +303,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20261009_121355",
-      "last_updated": "2026-10-09T12:13:55.889433",
+      "version": "2.0-20261010_113131",
+      "last_updated": "2026-10-10T11:31:31.444080",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -399,8 +399,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.1-20261009_121355_quality_gated",
-      "last_updated": "2026-10-09T12:13:55.824680",
+      "version": "2.1-20261010_113131_quality_gated",
+      "last_updated": "2026-10-10T11:31:31.380006",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -510,13 +510,7 @@
         {
           "pattern": "高CTR帖子特征",
           "description": "Top 20%帖子平均CTR 44.08%，比Bottom 20%高 44.08个百分点",
-          "common_hooks": [
-            "travelers",
-            "discover",
-            "about",
-            "visa",
-            "what"
-          ],
+          "common_hooks": [],
           "best_times": [
             "0:00",
             "22:00",
@@ -527,8 +521,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20261009_121356",
-      "last_updated": "2026-10-09T12:13:56.039659",
+      "version": "2.0-20261010_113131",
+      "last_updated": "2026-10-10T11:31:31.597197",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -647,77 +641,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/free-itinerary/', 'traffic_potential': 5.5, 'position': 4.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1', 'traffic_potential': 1.8, 'position': 1}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261009_121355"
+      "strategy_version": "2.0-20261010_113131"
     }
   ],
   "domain_summary": {

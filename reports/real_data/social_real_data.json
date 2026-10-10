@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-10-09T12:13:54.793114",
-  "data_date": "2026-10-09",
+  "pull_time": "2026-10-10T11:31:30.325903",
+  "data_date": "2026-10-10",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 9,
+    "total_impressions": 33,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,14 +14,46 @@
   },
   "posts": [
     {
+      "id": "6ac93624b07d37ac974a9371",
+      "text": "Research-backed facts about Train every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=ig&utm_medium=social&ut",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-10-09T20:45:11.861Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ac93620c4de2d2b1201e9e0",
+      "text": "💡 What travelers discover about China travel — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-26-",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-10-09T20:45:07.598Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 8,
+      "engagement_rate": 0.0
+    },
+    {
       "id": "6ac895107d9f9f33012b9b18",
       "text": "🔥 travelers\n\nEverything you need to know about Train — in one practical guide.\n\n· Chinese Train Stations: Survival Guide for\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-su",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-09T09:17:53.114Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -42,7 +74,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 8,
       "engagement_rate": 0.0
     },
     {
@@ -58,7 +90,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 7,
       "engagement_rate": 0.0
     },
     {
@@ -68,8 +100,8 @@
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-09T09:17:37.282Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -84,8 +116,8 @@
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-09T09:17:36.882Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -106,7 +138,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 7,
       "engagement_rate": 0.0
     },
     {
@@ -122,7 +154,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 2,
       "engagement_rate": 0.0
     },
     {
@@ -139,38 +171,6 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac7eb9296e7c6004866e327",
-      "text": "💡 Visual guide to Alipay: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-10-08T21:14:34.575Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 5,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac7eb8e777d0616a6ff2bd8",
-      "text": "Essential Bargain tips most first-time visitors miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-08T21:14:31.517Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
@@ -336,20 +336,20 @@
   ],
   "by_platform": {
     "instagram": {
-      "posts": 4,
+      "posts": 5,
       "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
-    "twitter": {
-      "posts": 3,
-      "impressions": 1,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
       "posts": 3,
-      "impressions": 7,
+      "impressions": 22,
+      "clicks": 0,
+      "likes": 0
+    },
+    "twitter": {
+      "posts": 2,
+      "impressions": 10,
       "clicks": 0,
       "likes": 0
     },
@@ -363,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 17,
-  "impression_metric_count": 17,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-10-09"
+    "data_date": "2026-10-10"
   }
 }

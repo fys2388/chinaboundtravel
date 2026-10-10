@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-09T12:13:51.290431",
-  "data_date": "2026-10-08",
+  "pull_time": "2026-10-10T11:31:26.633516",
+  "data_date": "2026-10-09",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 208,
-    "sessions": 250,
-    "screenPageViews": 282,
-    "engagedSessions": 156,
-    "bounceRate": 0.376,
-    "averageSessionDuration": 56.271040144000004,
-    "engagementRate": 0.624,
-    "newUsers": 207
+    "activeUsers": 228,
+    "sessions": 269,
+    "screenPageViews": 300,
+    "engagedSessions": 173,
+    "bounceRate": 0.35687732342007433,
+    "averageSessionDuration": 53.77151243494424,
+    "engagementRate": 0.6431226765799256,
+    "newUsers": 227
   },
   "daily": [
-    {
-      "date": "2026-09-12",
-      "sessions": 2,
-      "activeUsers": 2,
-      "pageviews": 2
-    },
     {
       "date": "2026-09-13",
       "sessions": 12,
@@ -179,9 +173,15 @@
     },
     {
       "date": "2026-10-09",
-      "sessions": 7,
-      "activeUsers": 7,
-      "pageviews": 7
+      "sessions": 21,
+      "activeUsers": 20,
+      "pageviews": 20
+    },
+    {
+      "date": "2026-10-10",
+      "sessions": 5,
+      "activeUsers": 5,
+      "pageviews": 6
     }
   ],
   "top_pages": [
@@ -198,6 +198,18 @@
       "sessions": 21
     },
     {
+      "path": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 17,
+      "sessions": 18
+    },
+    {
+      "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 17,
+      "sessions": 17
+    },
+    {
       "path": "/alipay-wechat-pay-foreigners-guide/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 16,
@@ -206,8 +218,8 @@
     {
       "path": "/ops/ops-center",
       "title": "ChinaBound Travel · 智能运营中心 v3.0",
-      "pageviews": 16,
-      "sessions": 13
+      "pageviews": 14,
+      "sessions": 11
     },
     {
       "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
@@ -222,16 +234,10 @@
       "sessions": 11
     },
     {
-      "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-      "title": "404 Page not found | ChinaBound Travel",
+      "path": "/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+      "title": "China High-Speed Trains: Booking & Tips | ChinaBound Travel",
       "pageviews": 10,
       "sessions": 10
-    },
-    {
-      "path": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 9,
-      "sessions": 9
     },
     {
       "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
@@ -268,26 +274,20 @@
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 5,
       "sessions": 5
-    },
-    {
-      "path": "/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 5,
-      "sessions": 5
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 168,
-      "activeUsers": 144,
-      "engagementRate": 0.9107
+      "sessions": 188,
+      "activeUsers": 164,
+      "engagementRate": 0.9096
     },
     {
       "channel": "Direct",
-      "sessions": 51,
+      "sessions": 49,
       "activeUsers": 46,
-      "engagementRate": 0.0392
+      "engagementRate": 0.0204
     },
     {
       "channel": "Organic Search",
@@ -297,9 +297,9 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": 12,
-      "activeUsers": 3,
-      "engagementRate": 0.0833
+      "sessions": 15,
+      "activeUsers": 4,
+      "engagementRate": 0.0667
     },
     {
       "channel": "AI Assistant",
@@ -315,6 +315,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-08"
+    "data_date": "2026-10-09"
   }
 }
