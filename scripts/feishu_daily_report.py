@@ -378,6 +378,23 @@ def get_drive_status() -> str:
         return f"🔴 快照解析失败：{exc}"
 
 
+def _todo_severity_rank(todo: str) -> int:
+    """待办严重度稳定排序 rank（用于高优先级待办按严重度排列，同 rank 内保持原顺序）。
+
+    依据 L382-392 注释定义：🔴 只留给生产故障/收入断链；🟠 业务差距（OKR<50%）；
+    🟡 保持推进（OKR 50-80%）；⏳/🟢/⚪/无图标 视为常规待办，排最后。
+    图标以字符串前缀形式嵌在待办文案里（_generate_todos 产出的纯文本无图标=⏳ 级，
+    generate_priority_tasks 产出的 OKR/建议待办带 🟠/🟡/🟢/⚪ 前缀）。
+    """
+    if todo.startswith("🔴"):
+        return 0
+    if todo.startswith("🟠"):
+        return 1
+    if todo.startswith("🟡"):
+        return 2
+    return 3
+
+
 def generate_priority_tasks(okr_data, suggestions):
     """根据 OKR 完成率和自动运营建议生成高优先级待办列表（P0: 告警-待办打通）。
 
@@ -424,6 +441,10 @@ def generate_priority_tasks(okr_data, suggestions):
         if t not in seen:
             seen.add(t)
             out.append(t)
+    # 4) 按严重度稳定排序：🔴生产故障/收入断链 最先，🟠业务差距，🟡保持推进，
+    #    ⏳/无图标（常规待办，含"审核 N 篇草稿"）排最后。同 rank 内保持原顺序，
+    #    不改任何待办文案。修复"32 天生产中断(🔴)被审核1篇草稿(⏳)压在后面"的错配。
+    out.sort(key=_todo_severity_rank)
     return out
 
 
