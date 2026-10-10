@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10T06:54:40",
+  "updated_at": "2026-10-10T17:45:01",
   "items": [
     {
       "id": "soc-000001",
@@ -258,8 +258,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-10",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1672,8 +1672,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-10",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2694,8 +2694,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-10",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5971,8 +5971,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-10",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6420,7 +6420,7 @@
       "type": "visual",
       "caption": "💡 Visual guide to Tea: what to see and capture.\n\n• Culture. Research-based practical guidance for international travelers planning a China trip\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260917&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'Hangzhou Travel Guide: West Lake & Tea' (platform fb). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Culture. Research-based practical guidance for international travelers planning a China trip. Check official sources f.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/hangzhou/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/hangzhou-west-lake-tea-culture-g20-guide-fb-visual-623bd66b.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -6435,7 +6435,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "0ea43f7eada0"
+      "_sig": "0ea43f7eada0",
+      "image_generated": true
     },
     {
       "id": "soc-000245",
@@ -6445,7 +6446,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Tea — in one practical guide.\n\n· Hangzhou Travel Guide: West Lake & Tea\n\nRead the full guide: https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260917&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Hangzhou Travel Guide: West Lake & Tea' (platform ig). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Culture. Research-based practical guidance for international travelers planning a China trip. Check official sources f.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/hangzhou/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/hangzhou-west-lake-tea-culture-g20-guide-ig-conversion-cc382506.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -6460,7 +6461,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "be5d586ab3a8"
+      "_sig": "be5d586ab3a8",
+      "image_generated": true
     },
     {
       "id": "soc-000246",
@@ -6659,7 +6661,7 @@
       "type": "story",
       "caption": "What travelers discover about Train — lessons from the ground. → https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261010&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Chinese Train Stations: Survival Guide for' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-27-how-to-survive-chinese-train-station.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--x-story-dc4fe0eb.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -6676,7 +6678,8 @@
       },
       "_sig": "a38223e4df39",
       "recycled_at": "2026-10-10",
-      "recycle_count": 3
+      "recycle_count": 3,
+      "image_generated": true
     },
     {
       "id": "soc-000254",
@@ -6740,7 +6743,7 @@
       "type": "knowledge",
       "caption": "Ele.Me China 2026: Meituan & Ele.me | Research-backed facts about Food every traveler should know.\n\nLearn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, pro tips. Start ordering l | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260918&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Ele.Me China 2026: Meituan & Ele.me' (platform pinterest). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, pro tips..",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-food-delivery-meituan-eleme-guid-pinterest-knowledge-946b31e5.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -6755,7 +6758,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "d2f68e4fece0"
+      "_sig": "d2f68e4fece0",
+      "image_generated": true
     },
     {
       "id": "soc-000257",
@@ -6765,7 +6769,7 @@
       "type": "tip",
       "caption": "Essential Food tips most first-time visitors miss. The Foreigner's Guide to Chinese Food Delivery → https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260918&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Ele.Me China 2026: Meituan & Ele.me' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Learn how to order Chinese food delivery with Meituan & Ele.me as a foreigner. Step-by-step 2026 guide: what to order, how to pay, pro tips..",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-food-delivery-meituan-eleme-guid-x-tip-63863141.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -6780,7 +6784,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "7764de07763f"
+      "_sig": "7764de07763f",
+      "image_generated": true
     },
     {
       "id": "soc-000258",
