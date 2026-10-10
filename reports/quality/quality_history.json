@@ -2,32 +2,6 @@
   "version": 1,
   "snapshots": [
     {
-      "timestamp": "2026-10-02T03:31:30.253437+00:00",
-      "summary": {
-        "total": 4,
-        "P0": 0,
-        "P1": 3,
-        "P2": 1,
-        "by_source": {
-          "content": 2,
-          "site_health": 1,
-          "visual": 1
-        },
-        "by_owner": {
-          "content": 3,
-          "engineering": 1
-        }
-      },
-      "issue_ids": [
-        "content-media-2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
-        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "eda93581fbec80e3",
-        "site_health-2370bb0b33601a9d"
-      ],
-      "opened": 1,
-      "resolved": 1
-    },
-    {
       "timestamp": "2026-10-02T03:33:20.422255+00:00",
       "summary": {
         "total": 4,
@@ -13563,7 +13537,74 @@
       ],
       "opened": 5,
       "resolved": 5
+    },
+    {
+      "timestamp": "2026-10-10T14:02:03.695287+00:00",
+      "summary": {
+        "total": 44,
+        "P0": 35,
+        "P1": 4,
+        "P2": 5,
+        "by_source": {
+          "content": 38,
+          "site_health": 5,
+          "visual": 1
+        },
+        "by_owner": {
+          "content": 41,
+          "engineering": 1,
+          "seo": 2
+        }
+      },
+      "issue_ids": [
+        "content-check-quality_validator-failed",
+        "content-frontmatter-2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md",
+        "content-frontmatter-2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md",
+        "content-frontmatter-2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
+        "content-frontmatter-2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md",
+        "content-frontmatter-2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md",
+        "content-frontmatter-2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md",
+        "content-frontmatter-2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md",
+        "content-frontmatter-2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md",
+        "content-frontmatter-2026-07-10-a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers.md",
+        "content-frontmatter-2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md",
+        "content-frontmatter-2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md",
+        "content-frontmatter-2026-07-14-transportation-guide-guide.md",
+        "content-frontmatter-2026-07-16-food-recommendations-guide.md",
+        "content-frontmatter-2026-07-20-travel-safety-guide.md",
+        "content-frontmatter-2026-07-21-cultural-etiquette-guide.md",
+        "content-frontmatter-2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md",
+        "content-frontmatter-2026-07-27-accommodation-tips-guide.md",
+        "content-frontmatter-2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md",
+        "content-frontmatter-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+        "content-frontmatter-2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+        "content-frontmatter-2026-08-03-chinese-language-survival-phrases-guide.md",
+        "content-frontmatter-2026-08-05-china-family-travel-tips-a-californians-guide.md",
+        "content-frontmatter-2026-08-07-china-bargaining-and-shopping-guide.md",
+        "content-frontmatter-2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+        "content-frontmatter-2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md",
+        "content-frontmatter-2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md",
+        "content-frontmatter-2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+        "content-frontmatter-2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md",
+        "content-frontmatter-alipay-for-foreigners-guide.md",
+        "content-frontmatter-alipay-wechat-pay-foreigners-guide.md",
+        "content-frontmatter-best-china-itineraries-for-10-days-three-routes-compared.md",
+        "content-frontmatter-china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+        "content-frontmatter-china-solo-travel-guide-safety-hostels-and-making-friends.md",
+        "content-frontmatter-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
+        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
+        "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
+        "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+        "eda93581fbec80e3",
+        "site_health-2b99c1ecc1438795",
+        "site_health-4afb1a5f035875c6",
+        "site_health-4d84b2bc9da99c85",
+        "site_health-52974bc6779859c1",
+        "site_health-743763142cdb27f5"
+      ],
+      "opened": 5,
+      "resolved": 5
     }
   ],
-  "updated_at": "2026-10-10T13:32:02.969415+00:00"
+  "updated_at": "2026-10-10T14:02:03.695287+00:00"
 }
