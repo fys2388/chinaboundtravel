@@ -150,7 +150,25 @@ def build_prompt(title, slug):
         if kw in title_lower:
             scene_desc = desc
             break
-    return f"Professional travel blog cover image, {scene_desc}, high-resolution travel photography, cinematic lighting, vibrant colors, 4k quality, photorealistic, beautiful scenery, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO man woman child, empty scene, pure landscape architecture food objects only, absolutely no human beings whatsoever"
+    return (
+        f"Ultra-detailed professional travel photography of {scene_desc}, "
+        "natural lighting, vibrant natural colors, photorealistic, 8k resolution, "
+        "sharp focus, award-winning travel magazine quality, no text, no watermark, "
+        "realistic photography only, no abstract, no illustration, no cartoon, "
+        "no vector, no 3d render, no digital art, no minimalism, ZERO people, "
+        "ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, "
+        "ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure "
+        "architecture landscape food objects only, absolutely no human beings whatsoever"
+    )
+
+# 通用负面提示词
+NEGATIVE_PROMPT = (
+    "person, people, face, portrait, human, figure, crowd, man, woman, child, "
+    "close-up face, selfie, group photo, tourists, traveler, backpacker, human being, "
+    "night market, food stall, red lantern, lantern, cinematic, moody, dark, "
+    "atmospheric, dramatic lighting, illustration, painting, digital art, concept art, "
+    "AI art, stylized, artistic, blurry, distorted, deformed, watermark, text"
+)
 
 def try_agnes(prompt, width=1200, height=630, seed=None):
     """API #1: Agnes AI (免费文生图，需 AGNES_API_KEY)"""
@@ -169,7 +187,11 @@ def try_agnes(prompt, width=1200, height=630, seed=None):
         resp = requests.post(
             "https://apihub.agnes-ai.com/v1/images/generations",
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": size_str},
+            json={
+                "model": "agnes-image-2.5-flash",
+                "prompt": prompt,
+                "size": size_str,
+            },
             timeout=120,
             proxies=PROXIES,
             verify=False,

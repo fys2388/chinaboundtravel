@@ -175,6 +175,25 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
     }
     scene_desc = scene_keywords.get(category, "China travel landscape scenic beautiful")
 
+    # 构建结构化提示词（与博文封面生成保持一致）
+    prompt = (
+        f"Ultra-detailed professional travel photography of {scene_desc}, "
+        "natural lighting, vibrant natural colors, photorealistic, 8k resolution, "
+        "sharp focus, award-winning travel magazine quality, no text, no watermark, "
+        "realistic photography only, no abstract, no illustration, no cartoon, "
+        "no vector, no 3d render, no digital art, no minimalism, ZERO people, "
+        "ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, "
+        "ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure "
+        "architecture landscape food objects only, absolutely no human beings whatsoever"
+    )
+    negative = (
+        "person, people, face, portrait, human, figure, crowd, man, woman, child, "
+        "close-up face, selfie, group photo, tourists, traveler, backpacker, human being, "
+        "night market, food stall, red lantern, lantern, cinematic, moody, dark, "
+        "atmospheric, dramatic lighting, illustration, painting, digital art, concept art, "
+        "AI art, stylized, artistic, blurry, distorted, deformed, watermark, text"
+    )
+
     # 尝试 Agnes AI（首选，免费 AI 图片生成，需 AGNES_API_KEY）
     print(f"  [CoverGen] Trying Agnes AI first...")
     agnes_key = os.environ.get("AGNES_API_KEY", "")
@@ -183,7 +202,11 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
             resp = requests.post(
                 "https://apihub.agnes-ai.com/v1/images/generations",
                 headers={"Authorization": f"Bearer {agnes_key}", "Content-Type": "application/json"},
-                json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
+                json={
+                    "model": "agnes-image-2.5-flash",
+                    "prompt": prompt,
+                    "size": "1024x1024",
+                },
                 timeout=120,
             )
             resp.raise_for_status()
@@ -208,9 +231,7 @@ def generate_cover_image(title: str, slug: str, category: str) -> str:
 
     # 尝试 Pollinations.ai（免费 AI 图片生成）
     # 发布规则（2026-08-28）：配图必须是真实写实的实景照片 —— 禁止人物/头像、禁止抽象图
-    prompt = f"Ultra-detailed professional travel photography of {scene_desc}, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever"
     seed = abs(hash(f"{slug}-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}")) % 1000000
-    negative = "person,people,face,portrait,human,figure,crowd,man,woman,child,close-up face,selfie,group photo,tourists,traveler,backpacker,human being,night market,food stall,red lantern,lantern,cinematic,moody,dark,atmospheric,dramatic lighting,illustration,painting,digital art,concept art,AI art,stylized,artistic,blurry,distorted,deformed,watermark,text"
     image_url = f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}?width=1792&height=1024&nologo=true&seed={seed}&model=flux&negative={requests.utils.quote(negative)}"
 
     try:

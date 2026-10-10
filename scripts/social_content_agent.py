@@ -590,10 +590,10 @@ def build_image_prompt(article: dict, ctype: str, platform: str) -> str:
     desc = (article.get("description") or "").strip()
     scene = _image_scene(article)
     ratio_map = {
-        "ig": "vertical 4:5",
-        "pinterest": "vertical 2:3",
-        "x": "wide landscape 16:9",
-        "fb": "landscape 16:9",
+        "ig": "vertical 4:5 composition",
+        "pinterest": "vertical 2:3 composition",
+        "x": "wide landscape 16:9 composition",
+        "fb": "landscape 16:9 composition",
     }
     ctype_angle = {
         "knowledge": "educational",
@@ -603,10 +603,28 @@ def build_image_prompt(article: dict, ctype: str, platform: str) -> str:
         "conversion": "inviting click-worthy",
     }
     desc_extra = f" Key elements: {desc[:140]}." if desc else ""
-    return (f"Professional {ctype} social graphic for '{title}' (platform {platform}). "
-            f"Scene: {scene}. Style: {ratio_map.get(platform, 'travel')}, "
-            f"{ctype_angle.get(ctype, 'high quality')}, bright natural light, photorealistic, vibrant. "
-            f"No people, no faces, no text, no words, no watermark, no logo.{desc_extra}")
+    return (
+        f"Ultra-detailed professional travel photography of {scene}, "
+        f"for social media '{title}'. {ratio_map.get(platform, 'travel')} composition, "
+        f"{ctype_angle.get(ctype, 'high quality')} style, natural lighting, "
+        f"vibrant natural colors, photorealistic, 8k resolution, sharp focus, "
+        f"award-winning travel magazine quality, no text, no watermark, "
+        f"realistic photography only, no abstract, no illustration, no cartoon, "
+        f"no vector, no 3d render, no digital art, no minimalism, ZERO people, "
+        f"ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, "
+        f"ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure "
+        f"architecture landscape food objects only, absolutely no human beings whatsoever{desc_extra}"
+    )
+
+
+# 通用负面提示词：排除人物、抽象风格、卡通等不符合预期的元素
+NEGATIVE_PROMPT = (
+    "person, people, face, portrait, human, figure, crowd, man, woman, child, "
+    "close-up face, selfie, group photo, tourists, traveler, backpacker, human being, "
+    "night market, food stall, red lantern, lantern, cinematic, moody, dark, "
+    "atmospheric, dramatic lighting, illustration, painting, digital art, concept art, "
+    "AI art, stylized, artistic, blurry, distorted, deformed, watermark, text"
+)
 
 
 # ============================================================
@@ -705,7 +723,11 @@ def _gen_via_agnes(prompt: str, out_path: Path) -> bool:
         resp = requests.post(
             "https://apihub.agnes-ai.com/v1/images/generations",
             headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-            json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1024x1024"},
+            json={
+                "model": "agnes-image-2.5-flash",
+                "prompt": prompt,
+                "size": "1024x1024",
+            },
             timeout=120,
         )
         resp.raise_for_status()
@@ -731,8 +753,13 @@ def _gen_via_ark(prompt: str, out_path: Path) -> bool:
         resp = requests.post(
             "https://ark.cn-beijing.volces.com/api/v3/images/generations",
             headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-            json={"model": model, "prompt": prompt, "size": "1024x1024",
-                  "response_format": "url"},
+            json={
+                "model": model,
+                "prompt": prompt,
+                "negative_prompt": NEGATIVE_PROMPT,
+                "size": "1024x1024",
+                "response_format": "url",
+            },
             timeout=90,
         )
         resp.raise_for_status()

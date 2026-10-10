@@ -41,26 +41,61 @@ POSTS = ROOT / "content" / "posts"
 IMG_ROOT = ROOT / "static" / "img" / "china-dest" / "general"
 SITE = "https://www.chinaboundtravel.com"
 
+# 通用负面提示词：排除人物、抽象风格、卡通等不符合预期的元素
+NEGATIVE_PROMPT = (
+    "person, people, face, portrait, human, figure, crowd, man, woman, child, "
+    "close-up face, selfie, group photo, tourists, traveler, backpacker, human being, "
+    "abstract, illustration, cartoon, vector, 3d render, digital art, minimalism, "
+    "text, watermark, blurry, distorted, deformed, night market, food stall, "
+    "red lantern, lantern, cinematic, moody, dark, atmospheric, dramatic lighting, "
+    "stylized, artistic, AI art, concept art"
+)
+
+# 优化后的提示词：结构化描述 + 摄影质量要求 + 明确的场景细节
 PROMPTS = {
-    "itinerar": ("Scenic Chinese landscape at golden hour with misty mountains, "
-                 "a winding river and a traditional village in the valley, wide "
-                 "travel photography, natural light"),
-    "solo-travel": ("Bright modern hostel common room with a wooden sofa and a large "
-                    "window overlooking a busy Chinese city street, a backpack on a "
-                    "chair, warm evening light, travel photography"),
-    "kung-fu": ("Traditional Chinese martial arts training courtyard with ancient "
-                "temple architecture, red pillars and a tiled roof, wooden training "
-                "poles against a whitewashed wall, soft daylight, travel photography"),
-    "monthly-update": ("Wide aerial view of a Chinese scenic landscape with layered "
-                       "mountains, a curving river and terraced hills at dawn, "
-                       "mist, travel photography"),
+    "itinerar": (
+        "Ultra-detailed professional travel photography of a winding stone road "
+        "through misty Chinese mountains at golden hour, a traditional village "
+        "nestled in the valley below, terraced fields on hillsides, winding river "
+        "reflecting warm sunlight, photorealistic, 8k resolution, sharp focus, "
+        "award-winning travel magazine quality, natural lighting, vibrant natural "
+        "colors, realistic photography only"
+    ),
+    "solo-travel": (
+        "Ultra-detailed professional travel photography of a modern hostel common "
+        "room with a wooden sofa and large window overlooking a busy Chinese city "
+        "street at dusk, a backpack on a chair, warm evening light streaming in, "
+        "photorealistic, 8k resolution, sharp focus, award-winning travel magazine "
+        "quality, natural lighting, vibrant colors, realistic photography only"
+    ),
+    "kung-fu": (
+        "Ultra-detailed professional travel photography of a traditional Chinese "
+        "martial arts training courtyard, ancient temple architecture with red "
+        "pillars and tiled roof, wooden training poles against whitewashed wall, "
+        "soft daylight, photorealistic, 8k resolution, sharp focus, award-winning "
+        "travel magazine quality, natural lighting, vibrant colors, realistic "
+        "photography only"
+    ),
+    "monthly-update": (
+        "Ultra-detailed professional travel photography of a wide aerial view of "
+        "Chinese scenic landscape, layered mountains, curving river, terraced hills "
+        "at dawn, mist over valleys, photorealistic, 8k resolution, sharp focus, "
+        "award-winning travel magazine quality, natural lighting, vibrant colors, "
+        "realistic photography only"
+    ),
 }
-DEFAULT_PROMPT = ("Scenic Chinese travel scene with layered mountains, traditional "
-                  "architecture and natural light, wide travel photography")
+DEFAULT_PROMPT = (
+    "Ultra-detailed professional travel photography of a Chinese travel scene, "
+    "traditional architecture, layered mountains, natural lighting, photorealistic, "
+    "8k resolution, sharp focus, award-winning travel magazine quality, vibrant "
+    "colors, realistic photography only"
+)
 
 
 def front_matter(text: str) -> tuple[str, str, bool]:
     """返回 (front-matter 正文, 剩余正文, 是否 TOML)。"""
+    # 去除 UTF-8 BOM
+    text = text.lstrip("\ufeff")
     m = re.match(r"^---\s*\n(.*?)\n---\n?(.*)$", text, re.DOTALL)
     if m:
         return m.group(1), m.group(2), False
@@ -112,11 +147,16 @@ def gen_agnes(prompt: str, out_path: Path) -> bool:
     if not key:
         return False
     try:
+        # Agnes AI 不支持 negative_prompt 参数，使用标准请求格式
         resp = requests.post(
             "https://apihub.agnes-ai.com/v1/images/generations",
             headers={"Authorization": f"Bearer {key}",
                      "Content-Type": "application/json"},
-            json={"model": "agnes-image-2.5-flash", "prompt": prompt, "size": "1280x720"},
+            json={
+                "model": "agnes-image-2.5-flash",
+                "prompt": prompt,
+                "size": "1280x720",
+            },
             timeout=120,
         )
         resp.raise_for_status()
@@ -142,8 +182,13 @@ def gen_ark(prompt: str, out_path: Path) -> bool:
             "https://ark.cn-beijing.volces.com/api/v3/images/generations",
             headers={"Authorization": f"Bearer {key}",
                      "Content-Type": "application/json"},
-            json={"model": model, "prompt": prompt, "size": "1280x720",
-                  "response_format": "url"},
+            json={
+                "model": model,
+                "prompt": prompt,
+                "negative_prompt": NEGATIVE_PROMPT,
+                "size": "1280x720",
+                "response_format": "url",
+            },
             timeout=120,
         )
         resp.raise_for_status()
