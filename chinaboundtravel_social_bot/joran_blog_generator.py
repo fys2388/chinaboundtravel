@@ -1110,6 +1110,8 @@ Requirements for HIGH-QUALITY CONTENT:
     - Include local legends or folklore
     - Explain cultural significance of food, traditions, landmarks
     - Compare/contrast with Western equivalents
+ 11a. DASH SPACING: Do NOT insert spaces around hyphens in compound words ('well-known' not 'well - known', 'co-organizer' not 'co - organizer').
+     - Legitimate dashes for enumeration/ranges ('Beijing - Xi'an - Shanghai' as a route, or list separators) are OK; only compound-word spacing is forbidden.
 12. MAIN FOCUS: China travel - comparisons/California/movies are just flavor, NOT the main dish
 13. NO sensitive topics: communist party, Tiananmen, Taiwan independence, political controversies, religion, or controversial issues.
     References to official government sources (e.g., visa policy, official announcements) are ALLOWED as factual citations.
@@ -1737,15 +1739,22 @@ class BlogGenerator:
             issues.append(f"[P0] Emoji/symbols detected: {set(emoji_pattern)} - use ASCII only")
         
         # 8. Check for hyphen-space artifacts (AI generation artifact)
-        # Pattern: "word - word" where spaces surround a hyphen in compound words
-        hyphen_space_matches = re.findall(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', content)
-        if hyphen_space_matches:
-            samples = list(set(hyphen_space_matches))[:5]
-            issues.append(f"[P0] Hyphen-space artifact detected ({len(hyphen_space_matches)} instances): {samples} - remove spaces around hyphens in compound words")
-        
-        # Auto-fix hyphen-space artifacts in content
-        if hyphen_space_matches:
-            content = re.sub(r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content)
+        # Pattern: "word - word" where spaces surround a hyphen in compound words.
+        # Tightened detection: only judge P0 on artifacts that RESIDUAL after
+        # auto-fix. Legitimate enumeration/range dashes (e.g. "Beijing - Xi'an -
+        # Shanghai" routes, "15 days - perfect" lists) are auto-fixable and no
+        # longer block; only unfixable residuals trigger P0.
+        hyphen_space_residue = re.sub(
+            r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content
+        )
+        residual_matches = re.findall(
+            r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', hyphen_space_residue
+        )
+        if residual_matches:
+            samples = list(set(residual_matches))[:5]
+            issues.append(f"[P0] Hyphen-space artifact residual after auto-fix ({len(residual_matches)} instances): {samples} - remove spaces around hyphens in compound words")
+        else:
+            content = hyphen_space_residue  # auto-fix succeeded; use fixed content
         
         passed = not any("[P0]" in issue for issue in issues)
         return passed, issues
