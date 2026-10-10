@@ -275,6 +275,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

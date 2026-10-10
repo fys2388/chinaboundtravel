@@ -103,3 +103,5 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [Chinese Language Survival Phrases Guide 2026](https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [How to Order Food Delivery in China: Meituan & Ele.me Guide for Foreigners (2026)](/posts/chinese-food-delivery-meituan-eleme-guide/)

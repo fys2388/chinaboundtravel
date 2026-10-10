@@ -297,3 +297,5 @@ Questions about your Zhangjiajie trip? Drop a comment or DM us on Twitter — [@
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
+
+- [How to Order Food Delivery in China: Meituan & Ele.me Guide for Foreigners (2026)](/posts/chinese-food-delivery-meituan-eleme-guide/)
