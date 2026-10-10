@@ -1738,23 +1738,41 @@ class BlogGenerator:
         if emoji_pattern:
             issues.append(f"[P0] Emoji/symbols detected: {set(emoji_pattern)} - use ASCII only")
         
-        # 8. Check for hyphen-space artifacts (AI generation artifact)
-        # Pattern: "word - word" where spaces surround a hyphen in compound words.
-        # Tightened detection: only judge P0 on artifacts that RESIDUAL after
-        # auto-fix. Legitimate enumeration/range dashes (e.g. "Beijing - Xi'an -
-        # Shanghai" routes, "15 days - perfect" lists) are auto-fixable and no
-        # longer block; only unfixable residuals trigger P0.
-        hyphen_space_residue = re.sub(
-            r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', r'\1-\2', content
-        )
-        residual_matches = re.findall(
-            r'\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+(?:\'?[a-zA-Z])?)\b', hyphen_space_residue
-        )
-        if residual_matches:
-            samples = list(set(residual_matches))[:5]
-            issues.append(f"[P0] Hyphen-space artifact residual after auto-fix ({len(residual_matches)} instances): {samples} - remove spaces around hyphens in compound words")
-        else:
-            content = hyphen_space_residue  # auto-fix succeeded; use fixed content
+        # 8. Check for hyphen-space compound-word artifacts (AI generation quirk).
+        # Only flag pairs that are KNOWN compound words with a wrongly-inserted space
+        # ("well - known" -> "well-known"). Legitimate enumeration/range dashes
+        # ("Beijing - Xi'an - Shanghai", "15 days - perfect", "Day - Night") are NOT
+        # compound words, so they never trigger P0 and the content is NOT mangled.
+        # A pure regex can't tell "well - known" from "15 days - perfect" (both are
+        # lowercase-lowercase), so use a curated compound allowlist: P0 only when the
+        # space-surrounded pair is a known compound.
+        hyphen_compound_allowlist = {
+            "well-known", "well-organized", "well-written", "well-covered",
+            "well-priced", "well-equipped", "well-reviewed",
+            "co-organizer", "co-founder", "co-author", "co-traveler", "co-pilot",
+            "high-speed", "high-end", "high-value", "high-quality",
+            "step-by-step", "day-by-day", "state-of-the-art", "up-to-date",
+            "first-timer", "first-timers", "last-minute", "long-term", "short-term",
+            "real-world", "off-peak", "on-site", "in-house", "round-trip",
+            "one-way", "same-day", "full-day", "half-day", "two-day",
+            "pre-trip", "post-trip", "mid-range", "well-equipped",
+        }
+        # Find all space-surrounded "word - word" pairs, lowercase both sides.
+        hyphen_pairs = re.findall(r"\b([a-zA-Z]+)\s+-\s+([a-zA-Z]+)\b", content)
+        compound_hits = []
+        for w1, w2 in hyphen_pairs:
+            joined = f"{w1.lower()}-{w2.lower()}"
+            if joined in hyphen_compound_allowlist:
+                compound_hits.append((w1, w2))
+        if compound_hits:
+            samples = list(set(compound_hits))[:5]
+            issues.append(f"[P0] Hyphen-space compound-word artifact ({len(compound_hits)} instances): {samples} - remove spaces around hyphens in these compound words")
+        # Auto-fix: collapse ONLY the matched compound pairs (allowlisted) to
+        # "word-word". Legitimate non-compound dashes are left untouched.
+        for w1, w2 in compound_hits:
+            # Re-collapse just this pair; case-preserving join on the first occurrence.
+            pattern = re.compile(r"\b" + re.escape(w1) + r"\s+-\s+" + re.escape(w2) + r"\b")
+            content = pattern.sub(lambda m: m.group(0).replace(" ", ""), content, count=1)
         
         passed = not any("[P0]" in issue for issue in issues)
         return passed, issues
