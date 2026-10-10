@@ -147,3 +147,15 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 # 其余 3 个同型孤儿（05-26 / 05-27 / transportation-guide-guide）已在 _redirects:55/56/80
 # 配了 301，本条补齐月报这条唯一缺口。与 _redirects:55/56 的模式完全一致。
 /posts/2026-09-01-chinabound-travel-guide-2026-09-monthly-update/ /posts/chinabound-travel-guide-2026-09-monthly-update/ 301
+
+# ===== 2026-10-10: 根级 slug 301（GA4 实证 404 死链吸量，社媒推根级 URL）=====
+# 社媒/书签/搜索点入的根级 /<slug>/ 命中 404，内容实际在 /posts/<slug>/。
+# 现有 _redirects 只挡 /posts/日期-slug/，未挡根级 /slug/。逐条补 8 条根级 301。
+/alipay-for-foreigners-guide/ /posts/alipay-for-foreigners-guide/ 301
+/alipay-wechat-pay-foreigners-guide/ /posts/alipay-wechat-pay-foreigners-guide/ 301
+/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ 301
+/accommodation-tips-guide/ /posts/accommodation-tips-guide/ 301
+/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/ /posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/ 301
+/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ /posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ 301
+/144-hour-visa-free-transit-guide/ /posts/144-hour-visa-free-transit-guide/ 301
+/is-china-safe-for-tourists-2026-honest-assessment/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
