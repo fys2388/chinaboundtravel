@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-10_seo",
   "created_at": "2026-10-10T01:01:29.288817+00:00",
-  "updated_at": "2026-10-10T03:25:17.692242",
+  "updated_at": "2026-10-10T03:31:24.894509",
   "target_date": "2026-10-10",
   "issue_count": 2,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-7e72f3928b3a50bc",
+      "id": "site_health-41f1c2f07aef9861",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -31,16 +31,16 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-10T03:25:17.369916+00:00"
+      "detected_at": "2026-10-10T03:31:24.614497+00:00"
     },
     {
-      "id": "site_health-4d3309c5f9d48ee0",
+      "id": "site_health-671e985579367457",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
-      "page": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "file": "content/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-      "evidence": "Title过长(74字符，模板上限60): China High-Speed Rail: Complete Ticket B...",
+      "page": "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "file": "content/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
+      "evidence": "Title过长(81字符，模板上限60): How to Order Food Delivery in China: Mei...",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -51,11 +51,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-10T03:25:17.369920+00:00"
+      "detected_at": "2026-10-10T03:31:24.614502+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-7e72f3928b3a50bc",
+    "id": "site_health-41f1c2f07aef9861",
     "type": "meta_description_too_long",
     "title": "meta_description_too_long",
     "description": "meta_description_too_long",
@@ -72,7 +72,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-10-10T03:25:17.369916+00:00"
+    "detected_at": "2026-10-10T03:31:24.614497+00:00"
   },
   "expected_actions": [
     "manual_review"
