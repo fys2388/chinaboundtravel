@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-10-10",
-  "audited_at": "2026-10-10T03:25:17.911803",
+  "audited_at": "2026-10-10T16:50:25.548443",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -20,7 +20,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 5,
+        "site_health_total": 4,
         "site_health_file": "site_health_2026-10-10.json",
         "daily_issues_count": 3
       }
@@ -49,7 +49,7 @@
         "pending": 0,
         "failed": 0,
         "partial": 4,
-        "total_issues": 45,
+        "total_issues": 46,
         "resolved_issues": 1
       }
     },
@@ -59,9 +59,9 @@
       "issues": [],
       "details": {
         "need_manual": 22,
-        "resolved": 16,
+        "resolved": 17,
         "execution_log_exists": true,
-        "total_executions": 4804
+        "total_executions": 4926
       }
     },
     {
