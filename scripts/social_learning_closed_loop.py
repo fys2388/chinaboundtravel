@@ -316,18 +316,40 @@ class SocialLearningClosedLoop:
         bottom_20_percent = sorted_by_ctr[-max(1, len(sorted_by_ctr) // 5):]
 
         # 3. 分析Top表现的Hook模式
+        # P1-AI-OPS-04 修复：hook 提取必须从「专门 hook 字段」取，且过滤单字词/
+        # 停用词（linkedin/what/about/discover/visa 这类零碎词是正文词频，不是 hook），
+        # 否则脏词会被回写进策略文件 common_hooks，污染下一次文案生成。
+        STOP_WORDS = {
+            "the", "and", "for", "with", "from", "about", "what", "this", "that",
+            "you", "your", "our", "are", "was", "were", "all", "any", "how",
+            "can", "will", "have", "has", "had", "more", "most", "very", "just",
+            "also", "like", "one", "two", "new", "now", "get", "use", "read",
+            "china", "travel", "trip", "guide", "tips", "tips", "full",
+        }
         hook_keywords = defaultdict(lambda: {"count": 0, "total_ctr": 0, "posts": []})
         for r in top_20_percent:
-            hook = r["content"]["hook"].lower()
-            # 提取关键词
-            keywords = re.findall(r'\b\w{4,}\b', hook)
+            # 只用专门 hook 字段（content.hook 是首行/钩子，不是正文全量词频）。
+            # 若 hook 字段实际是正文前 100 字（旧数据），过滤单字+停用词后基本为空，
+            # 不再产生 linkedin/what/about 这类脏词。
+            hook = (r["content"].get("hook") or "").lower()
+            # 提取 >=4 字母的关键词，再剔除单字词和停用词
+            keywords = [
+                kw for kw in re.findall(r'\b\w{4,}\b', hook)
+                if kw not in STOP_WORDS and len(kw.split()) >= 1
+            ]
             for kw in keywords[:5]:
                 hook_keywords[kw]["count"] += 1
                 hook_keywords[kw]["total_ctr"] += r["calculated"]["ctr"]
                 hook_keywords[kw]["posts"].append(r["post_id"])
 
         sorted_hooks = sorted(hook_keywords.items(), key=lambda x: x[1]["total_ctr"] / max(1, x[1]["count"]), reverse=True)
-        insights["best_hooks"] = [{"keyword": kw, "avg_ctr": stats["total_ctr"] / max(1, stats["count"]), "count": stats["count"]} for kw, stats in sorted_hooks[:10]]
+        # best_hooks 只保留 >=2 词的完整短语（拒绝单词碎片），与 L469 写平台 best_hooks 的过滤口径一致
+        valid_hook_entries = [
+            {"keyword": kw, "avg_ctr": stats["total_ctr"] / max(1, stats["count"]), "count": stats["count"]}
+            for kw, stats in sorted_hooks[:10]
+            if len(str(kw).strip().split()) >= 2
+        ]
+        insights["best_hooks"] = valid_hook_entries
 
         # 4. 分析最佳发布时间
         time_performance = defaultdict(lambda: {"count": 0, "total_ctr": 0})

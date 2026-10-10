@@ -1917,7 +1917,7 @@ class FeishuDailyReporter:
             # === Top 搜索关键词 Top10（同主窗口，单日窗口拿不到）===
             top_keywords = []
             try:
-                kw_response = gsc_query(window_start, window_end, dimensions=["query"], row_limit=10)
+                kw_response = gsc_query(window_start, window_end, dimensions=["query"], row_limit=25)
                 if "rows" in kw_response:
                     for row in kw_response["rows"]:
                         keyword = row.get("keys", [""])[0] if row.get("keys") else "N/A"
