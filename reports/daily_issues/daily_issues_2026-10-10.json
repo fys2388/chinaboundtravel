@@ -1,0 +1,65 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-10-10T03:25:17.286805",
+  "target_date": "2026-10-10",
+  "total_issues": 4,
+  "total_assignments": 0,
+  "issues": [
+    {
+      "id": "issue_0e9cf4859e8f",
+      "type": "social_no_traffic",
+      "description": "社媒曝光6但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-08.json",
+      "detected_at": "2026-10-10T03:25:17.283943",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_d469bc600a3e",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: [Image:",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-10-10.json",
+      "detected_at": "2026-10-10T03:25:17.286718",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_40a479042957",
+      "type": "garbled_text",
+      "description": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_2026-10-10.json",
+      "detected_at": "2026-10-10T03:25:17.286728",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_4b8ff992025f",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(174字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-10-10.json",
+      "detected_at": "2026-10-10T03:25:17.286732",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
+      "auto_fixable": false
+    }
+  ],
+  "assignments": []
+}
