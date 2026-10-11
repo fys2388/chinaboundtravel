@@ -185,3 +185,5 @@ One less thing to stress about. And that's often welcome. Before you land, make 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
 - [How to Use Alipay as a Foreigner: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
