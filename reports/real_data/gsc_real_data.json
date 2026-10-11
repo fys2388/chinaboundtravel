@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-10T11:31:29.071580",
-  "data_date": "2026-10-07",
+  "pull_time": "2026-10-11T06:07:16.328049",
+  "data_date": "2026-10-08",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 218,
+    "impressions": 242,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 61.4,
+    "average_position": 61.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-10",
-      "impressions": 33,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 29.2
-    },
     {
       "date": "2026-09-11",
       "impressions": 26,
@@ -201,6 +194,20 @@
       "clicks": 0,
       "ctr": 0,
       "position": 29.7
+    },
+    {
+      "date": "2026-10-07",
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 34.6
+    },
+    {
+      "date": "2026-10-08",
+      "impressions": 29,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 35.1
     }
   ],
   "top_queries": [
@@ -224,13 +231,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 84
-    },
-    {
-      "query": "144 hour visa free transit in china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 62
     },
     {
       "query": "144 hours visa china",
@@ -262,10 +262,10 @@
     },
     {
       "query": "alipay for foreigners",
-      "impressions": 1,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 95
+      "position": 88.7
     },
     {
       "query": "alipay for tourists",
@@ -273,6 +273,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 79
+    },
+    {
+      "query": "alipay foreigner",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 85
     },
     {
       "query": "alipay ile ödeme nasıl yapılır",
@@ -297,10 +304,10 @@
     },
     {
       "query": "alipay tutorial",
-      "impressions": 6,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 62.2
+      "position": 61.9
     },
     {
       "query": "beautiful sichuan scenic spots food recommendations",
@@ -332,10 +339,10 @@
     },
     {
       "query": "bullet train china tickets",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 39
+      "position": 42.5
     },
     {
       "query": "business meeting in china",
@@ -348,14 +355,14 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 12,
+      "impressions": 13,
       "clicks": 2,
-      "ctr": 0.17,
-      "position": 5.2
+      "ctr": 0.15,
+      "position": 5.4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 39,
+      "impressions": 37,
       "clicks": 1,
       "ctr": 0.03,
       "position": 8.1
@@ -380,6 +387,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 8.8
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 1
     },
     {
       "page": "https://www.chinaboundtravel.com/cancel/",
@@ -418,10 +432,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 6,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 77.8
+      "position": 78
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/",
@@ -432,10 +446,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-      "impressions": 25,
+      "impressions": 16,
       "clicks": 0,
       "ctr": 0,
-      "position": 49.9
+      "position": 52.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -467,24 +481,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "impressions": 19,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0,
-      "position": 17.9
+      "position": 18.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 91,
+      "impressions": 96,
       "clicks": 0,
       "ctr": 0,
       "position": 55.7
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
-      "impressions": 14,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 50.3
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -494,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-07"
+    "data_date": "2026-10-08"
   }
 }
