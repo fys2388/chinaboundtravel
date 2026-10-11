@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-10T11:31:26.633516",
-  "data_date": "2026-10-09",
+  "pull_time": "2026-10-11T11:44:55.517876",
+  "data_date": "2026-10-10",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 228,
-    "sessions": 269,
-    "screenPageViews": 300,
-    "engagedSessions": 173,
-    "bounceRate": 0.35687732342007433,
-    "averageSessionDuration": 53.77151243494424,
-    "engagementRate": 0.6431226765799256,
-    "newUsers": 227
+    "activeUsers": 233,
+    "sessions": 274,
+    "screenPageViews": 308,
+    "engagedSessions": 177,
+    "bounceRate": 0.354014598540146,
+    "averageSessionDuration": 53.77850312408759,
+    "engagementRate": 0.6459854014598541,
+    "newUsers": 232
   },
   "daily": [
-    {
-      "date": "2026-09-13",
-      "sessions": 12,
-      "activeUsers": 8,
-      "pageviews": 13
-    },
     {
       "date": "2026-09-14",
       "sessions": 7,
@@ -179,17 +173,17 @@
     },
     {
       "date": "2026-10-10",
-      "sessions": 5,
-      "activeUsers": 5,
-      "pageviews": 6
+      "sessions": 7,
+      "activeUsers": 7,
+      "pageviews": 10
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 53,
-      "sessions": 49
+      "pageviews": 55,
+      "sessions": 50
     },
     {
       "path": "/alipay-for-foreigners-guide/",
@@ -218,8 +212,8 @@
     {
       "path": "/ops/ops-center",
       "title": "ChinaBound Travel · 智能运营中心 v3.0",
-      "pageviews": 14,
-      "sessions": 11
+      "pageviews": 13,
+      "sessions": 10
     },
     {
       "path": "/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/",
@@ -242,8 +236,8 @@
     {
       "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
       "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 8,
-      "sessions": 8
+      "pageviews": 9,
+      "sessions": 9
     },
     {
       "path": "/ops-dashboard/",
@@ -281,25 +275,25 @@
       "channel": "Organic Social",
       "sessions": 188,
       "activeUsers": 164,
-      "engagementRate": 0.9096
+      "engagementRate": 0.9202
     },
     {
       "channel": "Direct",
-      "sessions": 49,
-      "activeUsers": 46,
-      "engagementRate": 0.0204
+      "sessions": 51,
+      "activeUsers": 49,
+      "engagementRate": 0.0392
     },
     {
       "channel": "Organic Search",
-      "sessions": 16,
-      "activeUsers": 14,
+      "sessions": 18,
+      "activeUsers": 16,
       "engagementRate": 0.0
     },
     {
       "channel": "Unassigned",
-      "sessions": 15,
-      "activeUsers": 4,
-      "engagementRate": 0.0667
+      "sessions": 14,
+      "activeUsers": 3,
+      "engagementRate": 0.1429
     },
     {
       "channel": "AI Assistant",
@@ -315,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-09"
+    "data_date": "2026-10-10"
   }
 }

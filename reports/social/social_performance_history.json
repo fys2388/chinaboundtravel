@@ -12527,8 +12527,72 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6acb339dbba9419ccb2920aa",
+      "platform": "instagram",
+      "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
+      "published_at": "2026-10-11T08:58:54.463Z",
+      "date": "2026-10-11",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "chinaboundtravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundt",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6acb339af91f772d45bbf252",
+      "platform": "twitter",
+      "text": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_so",
+      "published_at": "2026-10-11T08:58:46.269Z",
+      "date": "2026-10-11",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "fys2388",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinabound",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-10-10T11:31:31.366092",
+  "last_updated": "2026-10-11T11:44:59.008936",
   "version": "1.0"
 }

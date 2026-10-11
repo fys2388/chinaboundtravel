@@ -1,7 +1,7 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-10-10T11:31:31.088570",
-  "data_date": "2026-10-10",
+  "pull_time": "2026-10-11T11:44:58.779404",
+  "data_date": "2026-10-11",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -74,19 +74,19 @@
     },
     {
       "slug": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support",
-      "word_count": 1511,
+      "word_count": 1518,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-02-ultimate-guide-to-china-visa-for-tourists",
-      "word_count": 1801,
+      "word_count": 1808,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
     {
       "slug": "2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide",
-      "word_count": 2733,
+      "word_count": 2740,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
