@@ -1,0 +1,426 @@
+{
+  "date": "2026-10-11",
+  "site_up": true,
+  "response_time": 303.55199999999996,
+  "visitors": 7,
+  "sessions": 7,
+  "requests": 10,
+  "visitors_trend": "-65.0%",
+  "week_trend": "+250.0%",
+  "month_trend": "+600.0%",
+  "bounce_rate": 71.4,
+  "avg_session_duration": 34,
+  "engagement_rate": 28.6,
+  "bounce_rate_7d": 30.8,
+  "engagement_rate_7d": 69.2,
+  "avg_session_duration_7d": 22.53458106153846,
+  "sessions_7d": 65,
+  "visitors_7d": 60,
+  "top_pages": [
+    {
+      "path": "/",
+      "views": 2
+    },
+    {
+      "path": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "views": 2
+    },
+    {
+      "path": "/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "views": 1
+    },
+    {
+      "path": "/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "views": 1
+    },
+    {
+      "path": "/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "views": 1
+    },
+    {
+      "path": "/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "views": 1
+    },
+    {
+      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "views": 1
+    },
+    {
+      "path": "/posts/paypal-alipay-wechat-pay-qr-code-support/",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Direct",
+      "users": 3,
+      "sessions": 3
+    },
+    {
+      "channel": "Organic Search",
+      "users": 3,
+      "sessions": 3
+    },
+    {
+      "channel": "Unassigned",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "users": 5
+    },
+    {
+      "country": "Canada",
+      "users": 1
+    },
+    {
+      "country": "Singapore",
+      "users": 1
+    }
+  ],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 162,
+  "gsc_clicks": 0,
+  "gsc_ctr": 0.0,
+  "gsc_errors": 0,
+  "gsc_week_trend": "-13.8%",
+  "gsc_month_trend": "-33.6%",
+  "top_keywords": [
+    {
+      "keyword": "144 hours visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 81.0
+    },
+    {
+      "keyword": "accommodation in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 7.0
+    },
+    {
+      "keyword": "alipay for foreigners",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 95.0
+    },
+    {
+      "keyword": "alipay for tourists",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keyword": "alipay international account",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 61.0
+    },
+    {
+      "keyword": "alipay international payment",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 70.7
+    },
+    {
+      "keyword": "alipay tutorial",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0.0,
+      "position": 62.2
+    },
+    {
+      "keyword": "beautiful sichuan scenic spots food recommendations",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 34.5
+    },
+    {
+      "keyword": "beijing itinerary 7 days",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "best place to stay in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 71.0
+    },
+    {
+      "keyword": "book high speed train china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 31.0
+    },
+    {
+      "keyword": "bullet train china tickets",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 39.0
+    },
+    {
+      "keyword": "chengdu traditional tea ceremony experience",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "china airport to city",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 74.0
+    },
+    {
+      "keyword": "china bullet train tickets",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 42.0
+    },
+    {
+      "keyword": "china business trip support",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 96.3
+    },
+    {
+      "keyword": "china for business",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 73.0
+    },
+    {
+      "keyword": "china high speed train tickets",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 28.3
+    },
+    {
+      "keyword": "chinabound",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 8.0
+    },
+    {
+      "keyword": "chinabound.online",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 27.0
+    },
+    {
+      "keyword": "chinese etiquette",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 91.0
+    },
+    {
+      "keyword": "cruise api step up alipay",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 66.0
+    },
+    {
+      "keyword": "etiquette in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keyword": "high speed train china ticket price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 32.0
+    },
+    {
+      "keyword": "how to get alipay",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 74.0
+    }
+  ],
+  "total_posts": 66,
+  "new_posts": 0,
+  "pending_posts": 1,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 0,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": false,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 2,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": true,
+  "gh_social_success": true,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_query_window_days": 8,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "审核并发布 1 篇草稿文章",
+    "🟡 日访问用户：当前 7人 / 目标 13人（54%），保持推进",
+    "🟡 日搜索曝光（7天窗口日均）：当前 23.1次 / 目标 33次（70%），保持推进",
+    "🟡 平均时长（7日滚动） 23 秒：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-10-10",
+  "gsc_avg_position": 32.97,
+  "gsc_window_start": "2026-10-02",
+  "gsc_window_end": "2026-10-08",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 79,
+  "root_pages_scanned": 13,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_blog_window_runs": 0,
+  "gh_blog_failure_count": 0,
+  "gh_blog_latest_failure_time": null,
+  "gh_blog_state": "no_runs",
+  "gh_blog_conclusion": null,
+  "gh_blog_run_time": null,
+  "gh_report_window_days": 2,
+  "gh_report_window_runs": 0,
+  "gh_report_failure_count": 0,
+  "gh_report_latest_failure_time": null,
+  "gh_report_state": "success",
+  "gh_report_conclusion": null,
+  "gh_report_run_time": "2026-10-11T00:31:36Z",
+  "gh_report_running": true,
+  "gh_social_window_days": 2,
+  "gh_social_paths_total": 2,
+  "gh_social_window_runs": 2,
+  "gh_social_failure_count": 0,
+  "gh_social_latest_failure_time": null,
+  "gh_social_state": "success",
+  "gh_social_conclusion": "success",
+  "gh_social_run_time": "2026-10-10T20:32:08Z",
+  "gh_social_display_title": "Social Media Distributor",
+  "agent_health": {
+    "checked_at": "2026-10-11 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-10-05 04:35:02",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-10-11",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-10-10",
+    "generated_at": "2026-10-10",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 218,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🔴 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 7人 | 13人 | 54% | 🟡 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🔴 已连续 33 天未发布（超出周更节奏 2 倍，生产中断） |\n| 日搜索曝光（7天窗口日均） | 23.1次 | 33次 | 70% | 🟡 |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **平均时长（7日滚动） 23 秒**：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"
+}
