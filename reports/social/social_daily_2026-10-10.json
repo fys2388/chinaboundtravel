@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-10",
+  "total_published": 42,
+  "total_impressions": 0,
+  "total_clicks": 0,
+  "total_uv": 0,
+  "by_platform": {
+    "ig": {
+      "published": 12,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "pinterest": {
+      "published": 11,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "x": {
+      "published": 9,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    },
+    "fb": {
+      "published": 10,
+      "impressions": 0,
+      "clicks": 0,
+      "uv": 0
+    }
+  },
+  "analytics_status": "ok",
+  "analytics_source": "buffer_api",
+  "analytics_reason": "",
+  "analytics_post_count": 0
+}
