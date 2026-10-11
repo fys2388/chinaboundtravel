@@ -412,21 +412,32 @@ def generate_priority_tasks(okr_data, suggestions):
     tasks = []
 
     # 1) OKR 完成率分级（2.0：数据不可用/进度为 0 的固定配额不进入失败待办）
+    # P1 修复（2026-10-11）：原先 L418-420 把 progress==0 的 KR 全部跳过，导致
+    # "日新增 33 天 0 篇"（okr_utils 已标 🔴 生产中断）不进待办，被"审核 1 篇草稿"
+    # (常规级) 压在 OKR 表里。现改为：progress==0 时读 kr["icon"]——若 okr_utils
+    # 已把它升级成 🔴/🟠（生产中断，见 okr_utils._zero_run_icon），则带图标进待办；
+    # 若仍是 🟡（普通 0 配额，如"邮件订阅 0/3"），保持 2.0 原意不进待办。
     for kr in okr_data or []:
         if not kr.get("available", True):
             continue
         progress = kr.get("progress")
-        if progress is None or int(progress or 0) == 0:
-            continue
-        progress = int(progress)
+        progress_i = 0 if progress is None else int(progress)
         name = kr.get("name", "")
         current = kr.get("current", 0)
         target = kr.get("target", 0)
         unit = kr.get("unit", "")
-        if progress < 50:
-            tasks.append(f"🟠 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），需重点推进")
-        elif progress < 80:
-            tasks.append(f"🟡 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress}%），保持推进")
+        if progress_i == 0:
+            # 仅当 okr_utils 已把该 KR 升级为生产中断级（🔴/🟠）才进待办
+            icon = kr.get("icon", "")
+            if icon in ("🔴", "🟠"):
+                note = kr.get("note") or "未达"
+                tasks.append(f"{icon} {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（0%），{note}")
+            # 否则（icon=🟡，普通 0 配额）保持原 2.0 行为：不进待办
+            continue
+        if progress_i < 50:
+            tasks.append(f"🟠 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress_i}%），需重点推进")
+        elif progress_i < 80:
+            tasks.append(f"🟡 {name}：当前 {current:g}{unit} / 目标 {target:g}{unit}（{progress_i}%），保持推进")
 
     # 2) 自动运营建议 -> 待办
     for s in suggestions or []:
