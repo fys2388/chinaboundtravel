@@ -1706,6 +1706,10 @@ class FeishuDailyReporter:
         data["advice_section"] = report_advice.advice_section(data, "daily")
 
         # 7. 高优先级待办 = 内容巡检 + OKR 完成率 + 运营建议 三源打通（告警-待办闭环）
+        # P1 修复：三源待办（base_todos 常规项 + OKR/建议带图标项）合并去重后，
+        # 必须按严重度统一排序。否则 base_todos 的常规待办（无图标前缀，rank=3）
+        # 会无条件排在前面，把 🟠/🔴 的生产中断/业务差距压在后面（10-10 日报
+        # "审核 1 篇草稿"排在 #1 即此 bug）。_todo_severity_rank 见 L381。
         base_todos = self._generate_todos(data)
         okr_progress = okr_utils.build_okr_progress(data, "daily")
         merged_todos = base_todos + generate_priority_tasks(okr_progress, advice_items)
@@ -1714,6 +1718,7 @@ class FeishuDailyReporter:
             if t not in seen:
                 seen.add(t)
                 todos.append(t)
+        todos.sort(key=_todo_severity_rank)  # 稳定排序：🔴>🟠>🟡>⏳常规，同 rank 保原序
         data["high_priority_todos"] = todos[:8]
 
         return data
