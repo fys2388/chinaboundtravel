@@ -7,6 +7,7 @@ import os
 import sys
 import json
 from pathlib import Path
+from datetime import datetime
 
 # 必需的环境变量（按重要性排序）
 REQUIRED_VARS = [
@@ -191,5 +192,4 @@ def main():
 
 
 if __name__ == "__main__":
-    from datetime import datetime
     sys.exit(main())
