@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-10-05T04:31:59.285928",
+  "analyzed_at": "2026-10-12T04:46:13.028465",
   "total_patterns": 8,
   "viral_patterns": [
     {
@@ -10,9 +10,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.07200234555604741,
       "sample_size": 6,
@@ -36,9 +36,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.07184876543209877,
       "sample_size": 6,
@@ -63,9 +63,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.05821132184768548,
       "sample_size": 6,
@@ -92,9 +92,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.055964711214711214,
       "sample_size": 6,
@@ -119,9 +119,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.04697774943310657,
       "sample_size": 6,
@@ -144,9 +144,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.045080237223094365,
       "sample_size": 7,
@@ -172,9 +172,9 @@
       "platforms": [
         "pinterest",
         "instagram",
+        "linkedin",
         "x",
-        "facebook",
-        "linkedin"
+        "facebook"
       ],
       "avg_engagement_rate": 0.03242562111609731,
       "sample_size": 7,
@@ -197,10 +197,10 @@
       "description": "高表现的conversion类型内容，平均互动率3.0%",
       "content_type": "conversion",
       "platforms": [
-        "x",
         "pinterest",
         "instagram",
         "linkedin",
+        "x",
         "facebook"
       ],
       "avg_engagement_rate": 0.029697813760313763,
