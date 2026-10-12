@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-10-11T11:44:57.768798",
-  "data_date": "2026-10-11",
+  "pull_time": "2026-10-12T05:03:03.719566",
+  "data_date": "2026-10-12",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 64,
+    "total_impressions": 47,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,14 +14,78 @@
   },
   "posts": [
     {
+      "id": "6acbce6b7db619a29141aafc",
+      "text": "What travelers discover about Train — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_camp",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-11T19:59:16.360Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6acbce67fa026cfb810debbe",
+      "text": "Research-backed facts about Food. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&utm_medium=social&utm_campaign=",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-11T19:59:16.397Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6acbce63ea568e911a3789d4",
+      "text": "Everything you need to know about Visa — in one practical guide.\n\n· China 144 Hour Transit Visa: Complete Guide\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-10-11T19:59:11.719Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6acbce5b8e8dd50ffc4f2149",
+      "text": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommen",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-10-11T19:59:05.519Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
       "id": "6acb339dbba9419ccb2920aa",
       "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-11T08:58:54.463Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -42,7 +106,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
@@ -106,31 +170,15 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 15,
       "engagement_rate": 0.0
     },
     {
-      "id": "6ac895097d9f9f33012b97a7",
-      "text": "🔥 travelers\n\n💡 Visual guide to Itinerary: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/7-day-china-itinerary-beij",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-10-09T09:17:33.456Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 9,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac8950604f06b2e8f812991",
-      "text": "🔥 travelers\n\nResearch-backed facts about China travel every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=ig&utm_medium=social&utm_c",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-09T09:17:37.282Z",
+      "id": "6acb33a0f91f772d45bbf2bc",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-11T19:58:46.276Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -139,38 +187,6 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac89503987e694c3c46ec02",
-      "text": "Research-backed facts about Food every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?u",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-09T09:17:36.882Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac8ac4ceba50495e0a6d822",
-      "text": "🔥 linkedin\n\n💡 What travelers discover about High Speed — practical lessons from the ground.\n\n• China high-speed train survival guide: booking classes, finding your platform, and\n\nWhat's your biggest C",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-10-09T09:03:33.087Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 7,
       "engagement_rate": 0.0
     },
     {
@@ -316,46 +332,30 @@
       "clicks": 0,
       "impressions": 3,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ac09e04e22a2e5172b515eb",
-      "text": "🔥 linkedin\n\nChinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFul",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-03T19:17:46.161Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 4,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
+    "twitter": {
+      "posts": 4,
+      "impressions": 16,
+      "clicks": 0,
+      "likes": 0
+    },
     "instagram": {
-      "posts": 5,
+      "posts": 4,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
-    "twitter": {
-      "posts": 2,
-      "impressions": 13,
-      "clicks": 0,
-      "likes": 0
-    },
     "facebook": {
-      "posts": 3,
-      "impressions": 24,
+      "posts": 2,
+      "impressions": 8,
       "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 27,
+      "impressions": 23,
       "clicks": 0,
       "likes": 0
     }
@@ -363,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 19,
-  "impression_metric_count": 19,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-10-11"
+    "data_date": "2026-10-12"
   }
 }
