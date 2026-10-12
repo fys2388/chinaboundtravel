@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12T07:12:12",
+  "updated_at": "2026-10-12T21:41:41",
   "items": [
     {
       "id": "soc-000001",
@@ -2722,8 +2722,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3690,8 +3690,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4894,8 +4894,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5795,8 +5795,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6199,8 +6199,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-12",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7226,7 +7226,7 @@
       "type": "visual",
       "caption": "💡 Visual guide to Great Wall: what to see and capture.\n\n• Explore the Great Wall beyond the tourist trail: its military history, the laborers who\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'Great Wall of China: History & Hidden Secrets' (platform fb). Scene: Great Wall of China winding over green mountains. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Explore the Great Wall beyond the tourist trail: its military history, the laborers who built it, and the myths around it.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/the-history-and-culture-of-the-great-wal-fb-visual-a4a12e62.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -7241,7 +7241,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "e0d1b117e1bb"
+      "_sig": "e0d1b117e1bb",
+      "image_generated": true
     },
     {
       "id": "soc-000275",
@@ -7251,7 +7252,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Great Wall — in one practical guide.\n\n· Great Wall of China: History & Hidden Secrets\n\nRead the full guide: https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Great Wall of China: History & Hidden Secrets' (platform ig). Scene: Great Wall of China winding over green mountains. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Explore the Great Wall beyond the tourist trail: its military history, the laborers who built it, and the myths around it.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/beijing/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/the-history-and-culture-of-the-great-wal-ig-conversion-7a6cd880.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7266,7 +7267,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "92ea4320cf64"
+      "_sig": "92ea4320cf64",
+      "image_generated": true
     },
     {
       "id": "soc-000276",
@@ -7276,7 +7278,7 @@
       "type": "knowledge",
       "caption": "Chinese Tea Culture: History & Types | Research-backed facts about Tea every traveler should know.\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Chinese Tea Culture: History & Types' (platform pinterest). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-pinterest-knowledge-6ce72bdf.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7291,7 +7293,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "58170762c9c1"
+      "_sig": "58170762c9c1",
+      "image_generated": true
     },
     {
       "id": "soc-000277",
@@ -7301,7 +7304,7 @@
       "type": "tip",
       "caption": "Essential Tea tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Chinese Tea Culture: History & Types' (platform x). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-x-tip-aa5e6667.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -7316,7 +7319,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "7e44bda470c5"
+      "_sig": "7e44bda470c5",
+      "image_generated": true
     },
     {
       "id": "soc-000278",
@@ -7326,7 +7330,7 @@
       "type": "story",
       "caption": "💡 What travelers discover about Tea — practical lessons from the ground.\n\n• Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'Chinese Tea Culture: History & Types' (platform fb). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-fb-story-f1005836.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -7341,7 +7345,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "256503efb294"
+      "_sig": "256503efb294",
+      "image_generated": true
     },
     {
       "id": "soc-000279",
