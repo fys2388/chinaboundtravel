@@ -1,8 +1,8 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-09-21
+- Generated: 2026-10-12
 
-统计：content/posts 共 64 篇，命中 legacy persona 短语 0 篇。
+统计：content/posts 共 67 篇，命中 legacy persona 短语 0 篇。
 
 本轮**不修改** legacy 文章；统一标记 LEGACY_PERSONA_CONTENT，后续单独处理。
 
@@ -44,7 +44,6 @@
 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md | 0 | - |
 | 2026-07-20-travel-safety-guide.md | 0 | - |
 | 2026-07-21-cultural-etiquette-guide.md | 0 | - |
-| 2026-07-22-cultural-etiquette-guide.md | 0 | - |
 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md | 0 | - |
 | 2026-07-27-accommodation-tips-guide.md | 0 | - |
 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md | 0 | - |
@@ -64,13 +63,17 @@
 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md | 0 | - |
 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md | 0 | - |
 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md | 0 | - |
+| 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md | 0 | - |
 | alipay-for-foreigners-guide.md | 0 | - |
 | alipay-wechat-pay-foreigners-guide.md | 0 | - |
+| best-china-itineraries-for-10-days-three-routes-compared.md | 0 | - |
 | best-travel-insurance-china.md | 0 | - |
 | china-airport-transfer-guide.md | 0 | - |
 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md | 0 | - |
+| china-solo-travel-guide-safety-hostels-and-making-friends.md | 0 | - |
 | china-transportation-card-guide.md | 0 | - |
 | internet-connection-china-esim-vpn-guide.md | 0 | - |
+| kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md | 0 | - |
 | western-sichuan-overland-camping-route.md | 0 | - |
 
 ## 后续建议

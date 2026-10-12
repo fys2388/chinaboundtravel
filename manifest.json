@@ -1,8 +1,8 @@
 {
   "month_post_count": 1,
-  "last_reset_date": "2026-09-01",
+  "last_reset_date": "2026-10-01",
   "last_social_publish": "2026-10-04 15:01:58",
-  "daily_social_publish_date": "2026-10-04",
+  "daily_social_publish_date": "2026-10-12",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -125,6 +125,12 @@
       "geo_region": "US",
       "category": "general",
       "create_date": "2026-09-21"
+    },
+    {
+      "topic": "Kung Fu and Martial Arts in China: Where to See and Train",
+      "geo_region": "EU",
+      "category": "transportation",
+      "create_date": "2026-10-12"
     }
   ],
   "keyword_convert_rate": {
