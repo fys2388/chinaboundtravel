@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-12T03:21:38.082665+00:00",
+  "timestamp": "2026-10-12T20:48:26.363751+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 3,
+    "total_issues": 4,
     "critical": 0,
     "high": 2,
-    "medium": 0,
+    "medium": 1,
     "low": 1,
     "auto_fixed": 4,
     "need_manual": 23,
-    "resolved": 17,
+    "resolved": 18,
     "inherited_resolved": 21,
     "in_progress": 0,
-    "last_updated": "2026-10-12T03:21:42.254107"
+    "last_updated": "2026-10-12T20:48:29.522090"
   },
   "issues": [
     {
@@ -95,6 +95,18 @@
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)"
     },
     {
       "type": "ai_forbidden_word",

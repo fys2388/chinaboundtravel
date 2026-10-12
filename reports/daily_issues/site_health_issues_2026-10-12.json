@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-12T03:21:38.082665+00:00",
+  "timestamp": "2026-10-12T20:48:26.363751+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -13,7 +13,7 @@
       "assigned": false,
       "resolved_by": "content_agent",
       "resolution_note": "占位内容需人工补充",
-      "updated_at": "2026-10-12T03:21:42.253338"
+      "updated_at": "2026-10-12T20:48:29.520052"
     },
     {
       "type": "garbled_text",
@@ -22,6 +22,22 @@
       "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
       "auto_fixable": false,
       "agent": "content"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "assigned": true,
+      "assigned_to": "content",
+      "assigned_at": "2026-10-12T20:48:29.220705",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "updated_at": "2026-10-12T20:48:29.521621",
+      "resolved_at": "2026-10-12T20:48:29.521627"
     },
     {
       "type": "meta_description_too_long",

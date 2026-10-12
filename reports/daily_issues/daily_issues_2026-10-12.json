@@ -1,19 +1,19 @@
 {
   "router_version": "1.0",
-  "generated_at": "2026-10-12T03:21:41.516542",
+  "generated_at": "2026-10-12T20:48:29.217970",
   "target_date": "2026-10-12",
-  "total_issues": 4,
-  "total_assignments": 0,
+  "total_issues": 5,
+  "total_assignments": 1,
   "issues": [
     {
-      "id": "issue_97c5a8866ad8",
-      "type": "social_zero_engagement",
-      "description": "分析数据可用，社媒已发布42条但曝光为0，需检查发布与指标归属",
-      "severity": "medium",
+      "id": "issue_5bd0062866ed",
+      "type": "social_no_traffic",
+      "description": "社媒曝光1但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
       "agent": "social",
-      "action": "analyze_and_optimize",
-      "source_file": "social_daily_2026-10-10.json",
-      "detected_at": "2026-10-12T03:21:41.514273",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-11.json",
+      "detected_at": "2026-10-12T20:48:29.215148",
       "status": "new",
       "assigned": false,
       "auto_fixable": false
@@ -26,7 +26,7 @@
       "agent": "content",
       "action": "fix_placeholder",
       "source_file": "site_health_issues_2026-10-12.json",
-      "detected_at": "2026-10-12T03:21:41.516474",
+      "detected_at": "2026-10-12T20:48:29.217845",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
@@ -40,11 +40,26 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "site_health_issues_2026-10-12.json",
-      "detected_at": "2026-10-12T03:21:41.516481",
+      "detected_at": "2026-10-12T20:48:29.217855",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
       "auto_fixable": false
+    },
+    {
+      "id": "issue_9233d5ac91e6",
+      "type": "ai_forbidden_word",
+      "description": "AI禁用词: perfect",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source_file": "site_health_issues_2026-10-12.json",
+      "detected_at": "2026-10-12T20:48:29.217860",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "auto_fixable": true,
+      "assigned_to": "content"
     },
     {
       "id": "issue_e9413299f260",
@@ -54,12 +69,63 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-10-12.json",
-      "detected_at": "2026-10-12T03:21:41.516484",
+      "detected_at": "2026-10-12T20:48:29.217864",
       "status": "new",
       "assigned": false,
       "file": "content/posts/144-hour-visa-free-transit-guide.md",
       "auto_fixable": false
     }
   ],
-  "assignments": []
+  "assignments": [
+    {
+      "agent": "content",
+      "agent_name": "Content Intelligence Agent (内容智能优化)",
+      "task_id": "task_2026-10-12_content",
+      "created_at": "2026-10-12T20:48:29.217957",
+      "target_date": "2026-10-12",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_9233d5ac91e6",
+          "type": "ai_forbidden_word",
+          "description": "AI禁用词: perfect",
+          "severity": "medium",
+          "agent": "content",
+          "action": "safe_normalize",
+          "source_file": "site_health_issues_2026-10-12.json",
+          "detected_at": "2026-10-12T20:48:29.217860",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+          "auto_fixable": true,
+          "assigned_to": "content"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_9233d5ac91e6",
+        "type": "ai_forbidden_word",
+        "description": "AI禁用词: perfect",
+        "severity": "medium",
+        "agent": "content",
+        "action": "safe_normalize",
+        "source_file": "site_health_issues_2026-10-12.json",
+        "detected_at": "2026-10-12T20:48:29.217860",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+        "auto_fixable": true,
+        "assigned_to": "content"
+      },
+      "expected_actions": [
+        "safe_normalize"
+      ],
+      "status": "pending"
+    }
+  ]
 }
