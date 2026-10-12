@@ -197,3 +197,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [Top-rated China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared/)
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
+- [Kung Fu and Martial Arts in China: Where to See and Train](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/)
