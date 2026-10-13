@@ -1,12 +1,23 @@
 {
-  "timestamp": "2026-10-06 08:51:26",
+  "timestamp": "2026-10-13 09:14:10",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 8,
+  "indexed_count": 7,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
       "status": "success",
@@ -211,17 +222,6 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
         "verdict": "PASS",
         "indexingState": "INDEXING_ALLOWED",
         "status": "success"
