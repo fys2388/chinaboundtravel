@@ -788,11 +788,30 @@ class FeishuWeeklyReporter:
 
         # ── High 优先级（基建止血）：按实际状态条件过滤 ─────────────
         if _404_rate >= 10 and _404_views >= 3:
-            plan.append({
-                "task": f"修复 404 断链：全量检测内部断链与占位符，修复跳转失效的内链"
-                        f"（本周 Top 页面 404 占浏览量 {_404_rate}%，{_404_views} 次浏览）",
-                "priority": "high", "period": "3天内"
-            })
+            # Deviation 1: 检测 _redirects 是否已覆盖 404 页面 slug
+            _redirects_text = REDIRECTS_PATH.read_text(encoding="utf-8") if REDIRECTS_PATH.exists() else ""
+            _404_slugs = []
+            for p in top_pages:
+                if _is_404(p):
+                    _path = (p.get("path") or "").strip("/")
+                    if _path:
+                        _404_slugs.append(_path)
+            _301_covered = [s for s in _404_slugs if f"/{s}/" in _redirects_text or f"/{s} " in _redirects_text]
+            if _301_covered:
+                _covered_str = ", ".join(f"/{s}/" for s in _301_covered[:5])
+                _more = f" 等 {len(_301_covered)} 条" if len(_301_covered) > 5 else ""
+                plan.append({
+                    "task": f"验证 404 修复：已部署 301 重定向"
+                            f"（本周 Top 页面 404 占浏览量 {_404_rate}%，{_404_views} 次浏览）"
+                            f"｜301 已覆盖：{_covered_str}{_more}，等待 GA4 数据刷新验证（延迟 1-2 天）",
+                    "priority": "medium", "period": "3天内"
+                })
+            else:
+                plan.append({
+                    "task": f"修复 404 断链：全量检测内部断链与占位符，修复跳转失效的内链"
+                            f"（本周 Top 页面 404 占浏览量 {_404_rate}%，{_404_views} 次浏览）",
+                    "priority": "high", "period": "3天内"
+                })
 
         if not REDIRECTS_PATH.exists():
             plan.append({
@@ -855,13 +874,16 @@ class FeishuWeeklyReporter:
         total_posts = data.get("content_data", {}).get("total_posts", 0)
         posts_with_affiliate = data.get("content_data", {}).get("posts_with_affiliate", 0)
         coverage = round(posts_with_affiliate / max(total_posts, 1) * 100, 1) if total_posts > 0 else 0
+        # Deviation 2: 提取周窗口日期，供社媒/内容任务完成判定使用
+        _ws = data.get("week_start", "")
+        _we = data.get("week_end", "")
 
         review = []
         for item in last_week_plan:
             task = item.get("task", "")
             priority = item.get("priority", "medium")
 
-            if "发布" in task and "文章" in task:
+            if "发布" in task and ("文章" in task or "攻略" in task):
                 progress = min(round(weekly_new_posts / 5 * 100, 0), 100)
                 if weekly_new_posts >= 5:
                     status = f"✅ 超额完成 ({progress}%)"
@@ -889,7 +911,23 @@ class FeishuWeeklyReporter:
             elif "SEO" in task:
                 status = "🟡 进行中"
             elif "社媒" in task:
-                status = "🟡 进行中"
+                # Deviation 2: 读 Buffer published_at 判定社媒任务是否完成
+                _social_file = REPORTS_DIR / "real_data" / "social_real_data.json"
+                _social_done = False
+                _social_count = 0
+                if _ws and _we and _social_file.exists():
+                    try:
+                        _sd = json.load(open(_social_file, encoding="utf-8"))
+                        _posts = _sd.get("posts", [])
+                        _in_window = [p for p in _posts if _ws <= str(p.get("published_at", ""))[:10] <= _we]
+                        _social_count = len(_in_window)
+                        _social_done = _social_count > 0
+                    except Exception:
+                        pass
+                if _social_done:
+                    status = f"✅ 已完成（本周发布 {_social_count} 条）"
+                else:
+                    status = "🟡 进行中"
             elif "外链" in task:
                 status = "🟡 进行中"
             elif "301" in task or "重定向" in task:
@@ -1055,7 +1093,15 @@ class FeishuWeeklyReporter:
         else:
             dur_str = f"{week_avg_duration}秒"
 
-        traffic_goal = 500
+        # Deviation 3: 周目标从 okr.json 读 Q4 月目标 / 4.3，不再硬编码 500
+        _okr = okr_utils.load_okr()
+        if _okr:
+            _q = okr_utils.current_quarter()
+            _krs = okr_utils.pick_quarter_krs(_okr, _q)
+            _monthly_traffic = next((kr.get("target", 400) for kr in _krs if kr.get("id") == "traffic"), 400)
+            traffic_goal = round(_monthly_traffic / 4.3)
+        else:
+            traffic_goal = 93
         traffic_rate = round(week_users / traffic_goal * 100, 1) if traffic_goal > 0 else 0
         traffic_status = "✅" if week_users >= traffic_goal else "⚠️"
 
@@ -1232,7 +1278,7 @@ class FeishuWeeklyReporter:
 ### 1. 业务核心指标
 | 指标 | 本周数值 | 周环比 | 周目标 | 达标率 | 状态 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 访客数 | {week_users} 人 | {users_trend} | 500 人 | {traffic_rate}% | {traffic_status} |
+| 访客数 | {week_users} 人 | {users_trend} | {traffic_goal} 人 | {traffic_rate}% | {traffic_status} |
 | 会话数 | {week_sessions} 次 | {sessions_trend} | - | - | - |
 | 页面浏览量 | {week_pageviews} 次 | {pageviews_trend} | - | - | - |
 | 跳出率 | {week_bounce}% | {bounce_trend} | <60% | - | ⚠️ |
@@ -1363,7 +1409,7 @@ class FeishuWeeklyReporter:
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
 
 ### 3. 文章分类分布
-- 暂无数据"""
+- 0 篇"""
 
         if cat_lines:
             content_section = f"""---
@@ -1422,6 +1468,24 @@ class FeishuWeeklyReporter:
 | :--- | :--- | :--- |
 """ + "\n".join(low_plan_rows) + ("\n| - | - | - |" if not low_plan_rows else "")
 
+        # Deviation 4: CTA 状态从 experiments.json 读 REV001/REV002 真实状态
+        _exp_file = BLOG_ROOT / "static" / "experiments.json"
+        _cta_status = "🟡 进行中"
+        if _exp_file.exists():
+            try:
+                _exps = json.load(open(_exp_file, encoding="utf-8")).get("experiments", [])
+                _rev001 = next((e for e in _exps if e.get("id") == "REV001"), None)
+                _rev002 = next((e for e in _exps if e.get("id") == "REV002"), None)
+                _parts = []
+                if _rev001:
+                    _parts.append(f"REV001 {_rev001.get('status', 'UNKNOWN')}")
+                if _rev002:
+                    _parts.append(f"REV002 {_rev002.get('status', 'UNKNOWN')}")
+                if _parts:
+                    _cta_status = "🟡 " + " / ".join(_parts)
+            except Exception:
+                pass
+
         improvement_section = f"""---
 ## 🛠️ 本周整改验收
 | 整改项 | 上周状态 | 本周状态 | 改进效果 |
@@ -1432,7 +1496,7 @@ class FeishuWeeklyReporter:
 | GSC索引提交 | ❌ 未授权 | {gsc_status} | 需手动完成域名验证 |
 | 人设年限统一 | 🟡 {posts_with_conflict}篇冲突 | {'✅ 已修正' if posts_with_conflict == 0 else f'🟡 剩余{posts_with_conflict}篇'} | 内容可信度提升 |
 | 联盟链接覆盖 | 21.4% | {coverage}% | {'📈 提升' if coverage > 21.4 else '➡️ 持平'} |
-| 文章底部CTA区块 | ❌ 缺失 | 🟡 进行中 | 搭建转化入口 |"""
+| 文章底部CTA区块 | ❌ 缺失 | {_cta_status} | 搭建转化入口 |"""
 
         card = {
             "config": {"wide_screen_mode": True},
