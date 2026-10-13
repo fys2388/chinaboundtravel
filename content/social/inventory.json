@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13T07:36:02",
+  "updated_at": "2026-10-13T19:50:33",
   "items": [
     {
       "id": "soc-000001",
@@ -258,8 +258,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-13",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4100,8 +4100,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-13",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4950,8 +4950,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-13",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5742,8 +5742,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-13",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6094,8 +6094,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-13",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7361,7 +7361,7 @@
       "type": "visual",
       "caption": "Visual guide to Tea: what to see and capture.\n\n· Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chinese Tea Culture: History & Types' (platform ig). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-ig-visual-7f2fb3e5.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7376,7 +7376,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "54981bad6742"
+      "_sig": "54981bad6742",
+      "image_generated": true
     },
     {
       "id": "soc-000280",
@@ -7386,7 +7387,7 @@
       "type": "conversion",
       "caption": "Chinese Tea Culture: History & Types | Everything you need to know about Tea — in one practical guide.\n\nDiscover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260920&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Chinese Tea Culture: History & Types' (platform pinterest). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Discover Chinese tea culture: history, tea types, and ceremony traditions, researched and verified by our editorial team.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/chinese-tea-culture-ceremony.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-history-types-and-te-pinterest-conversion-7a777f19.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7401,7 +7402,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "3e63bc5ca2ed"
+      "_sig": "3e63bc5ca2ed",
+      "image_generated": true
     },
     {
       "id": "soc-000281",
@@ -7411,7 +7413,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about China travel every traveler should know.\n\n· The Basics of Chinese Nightlife\n· Best Cities for Nightlife in China\n· Types of Nightlife Venues in China\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260921&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'China Nightlife Guide: Bars, Clubs, and Evening Culture' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-nightlife-guide-bars-clubs-and-eve-ig-knowledge-195a6987.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7426,7 +7428,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "bbbeaa8e1a9d"
+      "_sig": "bbbeaa8e1a9d",
+      "image_generated": true
     },
     {
       "id": "soc-000282",
@@ -7436,7 +7439,7 @@
       "type": "tip",
       "caption": "China Nightlife Guide: Bars, Clubs, and Evening Culture | Essential China travel tips most first-time visitors miss.\n\nChina Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260921&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'China Nightlife Guide: Bars, Clubs, and Evening Culture' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-nightlife-guide-bars-clubs-and-eve-pinterest-tip-cdeafe27.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7451,7 +7454,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "c3dd3bfdbf07"
+      "_sig": "c3dd3bfdbf07",
+      "image_generated": true
     },
     {
       "id": "soc-000283",
@@ -7461,7 +7465,7 @@
       "type": "story",
       "caption": "What travelers discover about China travel — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260921&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Nightlife Guide: Bars, Clubs, and Evening Culture' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-nightlife-guide-bars-clubs-and-eve-x-story-ec3f7fd8.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -7476,7 +7480,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "9fea8d6ad42e"
+      "_sig": "9fea8d6ad42e",
+      "image_generated": true
     },
     {
       "id": "soc-000284",
