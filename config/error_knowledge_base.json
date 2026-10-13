@@ -1844,6 +1844,17 @@
       "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261013_142848",
+      "timestamp": "2026-10-13T14:28:48.985037",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "38413536732",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
