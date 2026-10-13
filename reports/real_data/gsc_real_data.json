@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-12T13:47:06.705399",
-  "data_date": "2026-10-09",
+  "pull_time": "2026-10-13T06:57:18.825831",
+  "data_date": "2026-10-10",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 246,
+    "impressions": 250,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 60.0,
+    "average_position": 60.3,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-12",
-      "impressions": 27,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 26.7
-    },
     {
       "date": "2026-09-13",
       "impressions": 25,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 25.3
+    },
+    {
+      "date": "2026-10-10",
+      "impressions": 54,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 21.1
     }
   ],
   "top_queries": [
@@ -231,6 +231,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 84
+    },
+    {
+      "query": "144 hours",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 86
     },
     {
       "query": "144 hours visa china",
@@ -289,11 +296,18 @@
       "position": 1
     },
     {
-      "query": "alipay international account",
-      "impressions": 2,
+      "query": "alipay international",
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "position": 61
+      "position": 55
+    },
+    {
+      "query": "alipay international account",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "alipay international payment",
@@ -308,6 +322,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 47
+    },
+    {
+      "query": "alipay limit per day for foreigners",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 62
     },
     {
       "query": "alipay tutorial",
@@ -329,64 +350,43 @@
       "clicks": 0,
       "ctr": 0,
       "position": 87
-    },
-    {
-      "query": "best place to stay in china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 71
-    },
-    {
-      "query": "book high speed train china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 31
-    },
-    {
-      "query": "bullet train china tickets",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 42.5
     }
   ],
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 14,
+      "impressions": 16,
       "clicks": 2,
-      "ctr": 0.14,
-      "position": 5.8
+      "ctr": 0.12,
+      "position": 6.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 41,
+      "impressions": 39,
       "clicks": 1,
-      "ctr": 0.02,
-      "position": 8.0
+      "ctr": 0.03,
+      "position": 8.1
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "impressions": 11,
+      "impressions": 14,
       "clicks": 1,
-      "ctr": 0.09,
-      "position": 8.9
+      "ctr": 0.07,
+      "position": 8.6
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 7,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
       "position": 5.7
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 10,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 8.8
+      "position": 9.9
     },
     {
       "page": "https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/",
@@ -432,17 +432,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/internet/",
-      "impressions": 3,
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "position": 79.7
+      "position": 74
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/",
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 17.3
+      "position": 17
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
@@ -453,10 +453,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "impressions": 14,
+      "impressions": 15,
       "clicks": 0,
       "ctr": 0,
-      "position": 26.1
+      "position": 25
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
@@ -467,7 +467,7 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
-      "impressions": 2,
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
       "position": 1
@@ -481,17 +481,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "impressions": 15,
+      "impressions": 18,
       "clicks": 0,
       "ctr": 0,
-      "position": 17.1
+      "position": 11.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 89,
+      "impressions": 88,
       "clicks": 0,
       "ctr": 0,
-      "position": 53.2
+      "position": 51.9
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-09"
+    "data_date": "2026-10-10"
   }
 }
