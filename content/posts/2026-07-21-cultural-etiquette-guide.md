@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/culture/cultural-etiquette-guide.jpg"
 categories: ["travel-tips", "cities"]
-last_updated: "2026-07-21"
+last_updated: "2026-10-14"
 
 ---
 
@@ -163,3 +163,13 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+## FAQ
+
+### What should I know about dos and donts in china?
+
+This guide covers the essentials you need before your trip. Policies and practical details are updated for 2026, but always double-check official sources.
+
+### Is dos and donts in china safe for tourists?
+
+Yes. China is generally very safe for tourists. Exercise normal precautions and keep your belongings secure, especially in crowded areas.
