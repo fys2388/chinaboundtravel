@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T05:59:51",
+  "updated_at": "2026-10-14T17:55:47",
   "items": [
     {
       "id": "soc-000001",
@@ -3746,8 +3746,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-14",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4016,8 +4016,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-14",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4184,8 +4184,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-14",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6122,8 +6122,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-14",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6343,8 +6343,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-14",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7521,7 +7521,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about China travel — in one practical guide.\n\n· China Nightlife Guide: Bars, Clubs, and Evening Culture\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-nightlife-guide-bars-clubs-and-evening-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260921&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Nightlife Guide: Bars, Clubs, and Evening Culture' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China Nightlife: Bars, Clubs, and Evening Culture for travelers visiting China. Practical guide for foreign travelers visiting China.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/culture/china-nightlife-guide-bars-clubs-and-evening-culture.jpg",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-nightlife-guide-bars-clubs-and-eve-ig-conversion-5271ba87.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7536,7 +7536,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "6c786f3ce745"
+      "_sig": "6c786f3ce745",
+      "image_generated": true
     },
     {
       "id": "soc-000286",
@@ -7546,7 +7547,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Shanghai every traveler should know.\n\n· What Makes Shanghai's Hidden Neighborhoods Special\n· The Hidden Neighborhoods of Shanghai\n· Former French Concession\n\nRead the full guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Shanghai Beyond the Bund: Hidden' (platform ig). Scene: Shanghai Bund skyline at night. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-ig-knowledge-6dee9244.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7561,7 +7562,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "6d12cf52329c"
+      "_sig": "6d12cf52329c",
+      "image_generated": true
     },
     {
       "id": "soc-000287",
@@ -7571,7 +7573,7 @@
       "type": "tip",
       "caption": "Shanghai Beyond the Bund: Hidden | Essential Shanghai tips most first-time visitors miss.\n\nShanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authentic cultural experiences\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'Shanghai Beyond the Bund: Hidden' (platform pinterest). Scene: Shanghai Bund skyline at night. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-pinterest-tip-851c858f.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7586,7 +7588,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "bf21c763dee4"
+      "_sig": "bf21c763dee4",
+      "image_generated": true
     },
     {
       "id": "soc-000288",
@@ -7596,7 +7599,7 @@
       "type": "story",
       "caption": "What travelers discover about Shanghai — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Shanghai Beyond the Bund: Hidden' (platform x). Scene: Shanghai Bund skyline at night. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-x-story-8c44cf00.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -7611,7 +7614,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "d506a6ddb13f"
+      "_sig": "d506a6ddb13f",
+      "image_generated": true
     },
     {
       "id": "soc-000289",
@@ -7621,7 +7625,7 @@
       "type": "visual",
       "caption": "💡 Visual guide to Shanghai: what to see and capture.\n\n• Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'Shanghai Beyond the Bund: Hidden' (platform fb). Scene: Shanghai Bund skyline at night. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Shanghai beyond the Bund: explore hidden neighborhoods like the French Concession and Tianzifang, local cuisine, traditional arts, and authe.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/shanghai/shanghai-skyline-golden-hour.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/shanghai-beyond-the-bund-hidden-neighbor-fb-visual-c5d279d5.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -7636,7 +7640,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "7aed06e003db"
+      "_sig": "7aed06e003db",
+      "image_generated": true
     },
     {
       "id": "soc-000290",
