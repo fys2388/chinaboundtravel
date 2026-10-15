@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-14T10:47:37.806772",
-  "data_date": "2026-10-13",
+  "pull_time": "2026-10-15T10:30:09.194825",
+  "data_date": "2026-10-14",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 238,
-    "sessions": 273,
-    "screenPageViews": 307,
-    "engagedSessions": 185,
-    "bounceRate": 0.32234432234432236,
-    "averageSessionDuration": 45.09574198168498,
-    "engagementRate": 0.6776556776556777,
-    "newUsers": 237
+    "activeUsers": 230,
+    "sessions": 261,
+    "screenPageViews": 294,
+    "engagedSessions": 182,
+    "bounceRate": 0.30268199233716475,
+    "averageSessionDuration": 42.132770517241376,
+    "engagementRate": 0.6973180076628352,
+    "newUsers": 229
   },
   "daily": [
-    {
-      "date": "2026-09-17",
-      "sessions": 11,
-      "activeUsers": 10,
-      "pageviews": 14
-    },
     {
       "date": "2026-09-18",
       "sessions": 9,
@@ -179,17 +173,17 @@
     },
     {
       "date": "2026-10-14",
-      "sessions": 2,
-      "activeUsers": 2,
-      "pageviews": 2
+      "sessions": 3,
+      "activeUsers": 3,
+      "pageviews": 3
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 51,
-      "sessions": 46
+      "pageviews": 46,
+      "sessions": 41
     },
     {
       "path": "/alipay-for-foreigners-guide/",
@@ -240,16 +234,16 @@
       "sessions": 10
     },
     {
-      "path": "/ops/ops-center",
-      "title": "ChinaBound Travel · 智能运营中心 v3.0",
-      "pageviews": 9,
-      "sessions": 7
-    },
-    {
       "path": "/posts/accommodation-tips-guide/",
       "title": "Where to Stay in China: Complete 2026 Guide",
       "pageviews": 9,
       "sessions": 9
+    },
+    {
+      "path": "/ops/ops-center",
+      "title": "ChinaBound Travel · 智能运营中心 v3.0",
+      "pageviews": 8,
+      "sessions": 6
     },
     {
       "path": "/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/",
@@ -279,15 +273,15 @@
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 193,
-      "activeUsers": 173,
-      "engagementRate": 0.9326
+      "sessions": 186,
+      "activeUsers": 170,
+      "engagementRate": 0.9516
     },
     {
       "channel": "Direct",
-      "sessions": 43,
-      "activeUsers": 42,
-      "engagementRate": 0.0465
+      "sessions": 38,
+      "activeUsers": 37,
+      "engagementRate": 0.0526
     },
     {
       "channel": "Organic Search",
@@ -315,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-13"
+    "data_date": "2026-10-14"
   }
 }
