@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-14T10:47:39.642620",
-  "data_date": "2026-10-11",
+  "pull_time": "2026-10-15T04:58:28.452535",
+  "data_date": "2026-10-12",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 246,
+    "impressions": 269,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 59.7,
+    "average_position": 60.1,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-14",
-      "impressions": 20,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 41.6
-    },
     {
       "date": "2026-09-15",
       "impressions": 19,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 15.2
+    },
+    {
+      "date": "2026-10-12",
+      "impressions": 51,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 44.4
     }
   ],
   "top_queries": [
@@ -227,10 +227,10 @@
     },
     {
       "query": "144 hours visa china",
-      "impressions": 2,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 78
+      "position": 80
     },
     {
       "query": "144 hours visa free china",
@@ -254,6 +254,48 @@
       "position": 7
     },
     {
+      "query": "accommodation selection suggestions for sichuan scenic spots",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "query": "accommodation standards for sichuan scenic spots",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "accommodation standards of chengdu tourism companies",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "query": "accommodation standards of sichuan international travel service",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "query": "accommodation standards of sichuan tourism companies",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "query": "accommodation standards of sichuan travel agencies",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 68
+    },
+    {
       "query": "alipay for foreigners",
       "impressions": 4,
       "clicks": 0,
@@ -273,13 +315,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 84
-    },
-    {
-      "query": "alipay ile ödeme nasıl yapılır",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 1
     },
     {
       "query": "alipay international",
@@ -315,41 +350,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 62
-    },
-    {
-      "query": "alipay tutorial",
-      "impressions": 7,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 61.9
-    },
-    {
-      "query": "beautiful sichuan scenic spots food recommendations",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 35
-    },
-    {
-      "query": "beijing itinerary 7 days",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "best place to stay in china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 71
-    },
-    {
-      "query": "book high speed train china",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 31
     }
   ],
   "top_pages": [
@@ -362,17 +362,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 41,
+      "impressions": 40,
       "clicks": 1,
-      "ctr": 0.02,
-      "position": 8.1
+      "ctr": 0.03,
+      "position": 8.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "impressions": 14,
+      "impressions": 15,
       "clicks": 1,
       "ctr": 0.07,
-      "position": 8.6
+      "position": 8.8
     },
     {
       "page": "https://www.chinaboundtravel.com/",
@@ -411,10 +411,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
-      "impressions": 6,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 5.5
+      "position": 4.3
     },
     {
       "page": "https://www.chinaboundtravel.com/content/",
@@ -449,7 +449,7 @@
       "impressions": 10,
       "clicks": 0,
       "ctr": 0,
-      "position": 37.9
+      "position": 26.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -460,38 +460,38 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-      "impressions": 11,
+      "impressions": 23,
       "clicks": 0,
       "ctr": 0,
-      "position": 24.2
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 1
+      "position": 45
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
-      "impressions": 6,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 26.2
+      "position": 32.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "impressions": 15,
+      "impressions": 17,
       "clicks": 0,
       "ctr": 0,
       "position": 8.3
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-      "impressions": 84,
+      "impressions": 86,
       "clicks": 0,
       "ctr": 0,
-      "position": 50.7
+      "position": 50.6
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 45.9
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-11"
+    "data_date": "2026-10-12"
   }
 }
