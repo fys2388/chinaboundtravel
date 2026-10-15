@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-15T05:45:51",
+  "updated_at": "2026-10-15T17:43:33",
   "items": [
     {
       "id": "soc-000001",
@@ -3774,8 +3774,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4128,8 +4128,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6150,8 +6150,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6262,8 +6262,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6612,8 +6612,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7681,7 +7681,7 @@
       "type": "knowledge",
       "caption": "Sichuan Hotpot: History & Best Restaurants | Research-backed facts about Hotpot every traveler should know.\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional knowledge social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform pinterest). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-pinterest-knowledge-5b02f004.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7696,7 +7696,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "b5d287fa6cbb"
+      "_sig": "b5d287fa6cbb",
+      "image_generated": true
     },
     {
       "id": "soc-000292",
@@ -7706,7 +7707,7 @@
       "type": "tip",
       "caption": "Essential Hotpot tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform x). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-x-tip-7aa92ab3.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -7721,7 +7722,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "df39369076df"
+      "_sig": "df39369076df",
+      "image_generated": true
     },
     {
       "id": "soc-000293",
@@ -7731,7 +7733,7 @@
       "type": "story",
       "caption": "💡 What travelers discover about Hotpot — practical lessons from the ground.\n\n• Sichuan hotpot: its history, where locals eat, and how to order, with current picks for\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional story social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform fb). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-fb-story-3143ea5d.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -7746,7 +7748,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "888a20922665"
+      "_sig": "888a20922665",
+      "image_generated": true
     },
     {
       "id": "soc-000294",
@@ -7756,7 +7759,7 @@
       "type": "visual",
       "caption": "Visual guide to Hotpot: what to see and capture.\n\n· Sichuan hotpot: its history, where locals eat, and how to order, with current picks for\n\nRead the full guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform ig). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-ig-visual-c5774d61.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7771,7 +7774,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "8e2f783d072a"
+      "_sig": "8e2f783d072a",
+      "image_generated": true
     },
     {
       "id": "soc-000295",
@@ -7781,7 +7785,7 @@
       "type": "conversion",
       "caption": "Sichuan Hotpot: History & Best Restaurants | Everything you need to know about Hotpot — in one practical guide.\n\nSichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260922&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional conversion social graphic for 'Sichuan Hotpot: History & Best Restaurants' (platform pinterest). Scene: Sichuan hotpot bubbling with chili oil, fresh ingredients. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Sichuan hotpot: its history, where locals eat, and how to order, with current picks for first-time visitors.",
-      "image_url": "https://chinaboundtravel.com/img/china-dest/chengdu/sichuan-hotpot-cover.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/sichuan-hotpot-guide-history-best-restau-pinterest-conversion-34247ef6.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7796,7 +7800,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "99a04b05f317"
+      "_sig": "99a04b05f317",
+      "image_generated": true
     },
     {
       "id": "soc-000296",
