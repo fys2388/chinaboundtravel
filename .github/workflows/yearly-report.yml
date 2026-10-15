@@ -1,4 +1,4 @@
-﻿name: Yearly Feishu Report
+name: Yearly Feishu Report
 
 on:
   schedule:
@@ -27,6 +27,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests python-dotenv google-auth google-api-python-client
 
+      - name: Run Agent Analysis
+        env:
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+        run: |
+          python scripts/agent_runner.py --agent seo --goal "分析年度运营数据，评估年度OKR完成度，识别战略趋势，制定下一年度规划" --max-steps 15 || echo "Agent 分析失败"
+
       - name: Run Feishu Yearly Report
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
@@ -39,18 +47,19 @@ jobs:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
         run: |
-          python scripts/feishu_yearly_report.py
+          python scripts/feishu_yearly_report.py --with-agent-insights --agent-name seo
 
-      - name: Commit OKR progress snapshot
+      - name: Commit OKR progress snapshot and Agent outputs
         if: always()
         run: |
           git config user.name "chinabound-bot"
           git config user.email "bot@chinaboundtravel.com"
+          git add reports/agent/ 2>/dev/null || true
           git add reports/okr_progress/ 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "无 OKR 快照变更"
+            echo "无变更需要提交"
           else
-            git commit -m "chore: update OKR progress snapshot [skip ci]"
+            git commit -m "chore: update OKR snapshot and Agent insights [skip ci]"
             git push
           fi
         env:

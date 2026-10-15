@@ -65,6 +65,28 @@ GSC_SITE_URL = os.environ.get("GSC_SITE_URL", "sc-domain:chinaboundtravel.com")
 
 
 class FeishuYearlyReporter:
+    def __init__(self):
+        self.agent_insights = {}  # Agent 洞察
+
+    def _build_agent_insights_section(self) -> str:
+        """构建 Agent AI 洞察板块"""
+        if not self.agent_insights:
+            return ""
+        lines = ["---", "## 🧠 AI 智能洞察", "", "**Agent 分析结论：**", ""]
+        for key, value in self.agent_insights.items():
+            if isinstance(value, dict):
+                title = value.get("title", key)
+                summary = value.get("summary", "")
+                suggestion = value.get("suggestion", "")
+                lines.append(f"- **{title}**: {summary}")
+                if suggestion:
+                    lines.append(f"  - 💡 建议: {suggestion}")
+            else:
+                lines.append(f"- **{key}}: {value}")
+        lines.append("")
+        lines.append("*以上洞察由自主 Agent 分析生成，仅供参考*")
+        return "\n".join(lines)
+
     def _get_period(self):
         """报告上一年度，对比前一年度"""
         now = datetime.now()
@@ -411,6 +433,7 @@ class FeishuYearlyReporter:
                        "content": f"📊 ChinaBound Travel 年度运营报告 | {label}"}},
             "elements": [
                 {"tag": "div", "text": {"tag": "lark_md", "content": main}},
+                ({"tag": "div", "text": {"tag": "lark_md", "content": self._build_agent_insights_section()}} if self.agent_insights else None),
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}}
                  if data.get("okr_section") else None),
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("advice_section", "")}} if data.get("advice_section") else None),
@@ -446,7 +469,30 @@ class FeishuYearlyReporter:
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="飞书年报推送")
+    parser.add_argument("--with-agent-insights", action="store_true",
+                        help="读取 Agent 洞察并嵌入报告")
+    parser.add_argument("--agent-name", type=str, default="seo",
+                        help="Agent 名称 (default: seo)")
+    args = parser.parse_args()
+
     reporter = FeishuYearlyReporter()
+
+    if args.with_agent_insights:
+        try:
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from agent_core import AgentMemory
+            memory = AgentMemory(args.agent_name)
+            insights = memory.get_insights()
+            if insights:
+                reporter.agent_insights = insights
+                print(f"🧠 已加载 {len(insights)} 条 Agent 洞察")
+            else:
+                print("⚠️ Agent 暂无洞察")
+        except Exception as e:
+            print(f"⚠️ 加载 Agent 洞察失败: {e}")
+
     return 0 if reporter.run() else 1
 
 
