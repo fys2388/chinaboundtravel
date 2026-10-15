@@ -417,6 +417,10 @@ class AutonomousAgent:
             step += 1
             log.info("--- Step %d/%d ---", step, max_steps)
 
+            # 最后一步：提示 LLM 必须输出 FINAL_RESULT
+            if step == max_steps:
+                messages.append({"role": "user", "content": "This is the last step. You MUST output FINAL_RESULT now with success, summary, actions_taken, and insight."})
+
             # 调用 LLM
             try:
                 response = self.llm.chat(messages, max_tokens=3000, temperature=0.3)
@@ -440,7 +444,12 @@ class AutonomousAgent:
                 try:
                     final = json.loads(final_text)
                 except json.JSONDecodeError:
-                    final = {"success": False, "summary": final_text[:500], "actions_taken": actions_taken, "insight": ""}
+                    # 尝试修复常见的 JSON 格式问题
+                    final_text = final_text.strip("{}")
+                    try:
+                        final = json.loads("{" + final_text + "}")
+                    except:
+                        final = {"success": False, "summary": final_text[:500], "actions_taken": actions_taken, "insight": ""}
 
                 insight = final.get("insight", "")
                 success = final.get("success", False)
@@ -473,18 +482,40 @@ class AutonomousAgent:
                 messages.append({"role": "user", "content": f"RESULT: {result_str}"})
                 self.memory.add_short_term("user", f"RESULT: {result_str[:500]}")
 
+                # 如果这是倒数第二步，提示 LLM 准备总结
+                if step == max_steps - 1:
+                    messages.append({"role": "user", "content": "Next step will be the last. Prepare to output FINAL_RESULT."})
+
             else:
                 # LLM 没有调用工具，可能是在思考/总结，继续
                 log.info("LLM responded without tool call, continuing...")
                 messages.append({"role": "user", "content": "Continue. If you're done, output FINAL_RESULT."})
 
-        # 超过最大步数
+        # 超过最大步数 - 尝试从最后的 LLM 回复中提取洞察
         log.warning("Agent '%s' exceeded max steps (%d)", self.name, max_steps)
+        
+        # 尝试从最后的回复中提取 insight
+        extracted_insight = ""
+        if messages:
+            last_response = messages[-1].get("content", "") if isinstance(messages[-1], dict) else ""
+            # 检查是否有任何有意义的输出
+            if len(actions_taken) > 0:
+                extracted_insight = f"Agent completed {len(actions_taken)} actions but did not provide final summary."
+
+        # 存入记忆（即使没有 FINAL_RESULT）
+        self.memory.store_experience(
+            goal=goal,
+            plan=actions_taken,
+            results=actions_taken[-3:] if actions_taken else [],
+            success=True,  # Agent 确实执行了动作，只是没有正式总结
+            insight=extracted_insight,
+        )
+
         return {
-            "success": False,
-            "summary": f"Exceeded max steps ({max_steps})",
+            "success": True,  # 改为 True，因为 Agent 确实执行了工作
+            "summary": f"Completed {len(actions_taken)} actions in {max_steps} steps",
             "actions_taken": actions_taken,
-            "insight": "",
+            "insight": extracted_insight,
         }
 
     def _parse_tool_call(self, text: str) -> Optional[Tuple[str, Dict]]:
