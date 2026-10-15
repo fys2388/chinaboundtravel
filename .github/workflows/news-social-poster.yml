@@ -1,0 +1,73 @@
+name: News Social Poster
+
+on:
+  # 每天早上北京时间 9:00（UTC 1:00）发布新闻帖子（紧跟 news-monitor 采集后）
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Max items per category"
+        required: false
+        default: "3"
+        type: string
+      categories:
+        description: "Comma-separated categories (default: all)"
+        required: false
+        default: "all"
+        type: string
+      dry_run:
+        description: "Dry run mode"
+        required: false
+        default: "false"
+        type: boolean
+
+concurrency:
+  group: news-social-poster
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run News Social Poster
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '3' }}"
+          CATS="${{ github.event.inputs.categories || 'all' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          FLAGS=""
+          if [ "$DRY" = "true" ]; then FLAGS="--dry-run"; fi
+          python scripts/news_social_poster.py --count "$COUNT" --categories "$CATS" $FLAGS
+
+      - name: Commit manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/news_social_manifest.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update news social manifest [skip ci]"
+          fi
+          git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase failed"; exit 1; }
+          git push

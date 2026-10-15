@@ -861,7 +861,19 @@ class AIEngine:
                 data["post_index"] = index_data.get("posts", [])
         except:
             data["post_index"] = []
-        
+
+        # 7. 加载实时新闻 / 行业动态 / 政策摘要（news_monitor.py 输出）
+        try:
+            with open(config_dir / "news_digest.json", 'r', encoding='utf-8') as f:
+                news_data = json.load(f)
+                data["news_digest"] = news_data.get("digest", {})
+                data["news_llm_summary"] = news_data.get("llm_summary", {})
+                data["news_last_updated"] = news_data.get("last_updated_date", "")
+        except:
+            data["news_digest"] = {}
+            data["news_llm_summary"] = {}
+            data["news_last_updated"] = ""
+
         return data
     
     def _build_prevention_rules(self):
@@ -1015,7 +1027,99 @@ class AIEngine:
         
         related.sort(key=lambda x: x.get("relevance", 0), reverse=True)
         return related[:5]
-    
+
+    def _build_news_section(self, topic: str) -> str:
+        """构建实时新闻 / 政策摘要段，注入生成 prompt。
+
+        数据来源：config/news_digest.json（由 scripts/news_monitor.py 每日更新）。
+        如果无新闻数据，返回空字符串（不影响正常生成）。
+        """
+        news_digest = self.external_data.get("news_digest", {})
+        last_updated = self.external_data.get("news_last_updated", "")
+
+        if not news_digest:
+            return ""
+
+        topic_lower = topic.lower()
+        section_lines = [
+            "",
+            "===== REAL-TIME NEWS & POLICY UPDATES (AUTOMATED DAILY DIGEST) =====",
+            f"Last updated: {last_updated}",
+            "",
+            "INTEGRATION RULES:",
+            "  - USE these as FACTUAL CONTEXT for your article. Do NOT copy/paste them.",
+            "  - WEAVE relevant news into your article as if discovered through your own research.",
+            "  - When citing policy changes, attribute to 'official Chinese authorities' or 'recent government announcements'.",
+            "  - Do NOT invent news beyond what is listed here.",
+            "  - If a news item is directly relevant to the topic, expand on it with analysis and traveler implications.",
+            "",
+        ]
+
+        # 按相关性筛选：标题含 topic 关键词的优先
+        topic_words = [w for w in topic_lower.split() if len(w) > 3]
+
+        # 收集所有 item 并按相关性排序
+        all_items = []
+        for cat, items in news_digest.items():
+            for item in items:
+                title = item.get("title", "").lower()
+                score = sum(1 for w in topic_words if w in title)
+                all_items.append((score, cat, item))
+
+        # 先输出与 topic 相关的（score > 0），再补各类前几条
+        all_items.sort(key=lambda x: (-x[0], x[1]))
+
+        shown = set()
+        output_items = []
+
+        # 高相关性项
+        for score, cat, item in all_items:
+            if score > 0 and len(output_items) < 8:
+                if item.get("_hash") not in shown:
+                    shown.add(item.get("_hash"))
+                    output_items.append((cat, item))
+
+        # 各类补充（确保覆盖多个分类）
+        for cat in ["visa_policy", "safety_alerts", "travel_industry", "destination_news", "general"]:
+            if len(output_items) >= 10:
+                break
+            for item in news_digest.get(cat, []):
+                if item.get("_hash") not in shown and len(output_items) < 10:
+                    shown.add(item.get("_hash"))
+                    output_items.append((cat, item))
+
+        # 格式化输出
+        cat_labels = {
+            "visa_policy": "VISA & ENTRY POLICY",
+            "safety_alerts": "SAFETY & TRAVEL ALERTS",
+            "travel_industry": "TRAVEL INDUSTRY NEWS",
+            "destination_news": "DESTINATION & EVENT NEWS",
+            "general": "GENERAL NEWS",
+        }
+
+        for cat, item in output_items:
+            label = cat_labels.get(cat, f"{cat.upper()}")
+            title = item.get("title", "")
+            summary = item.get("summary", "")
+            date = item.get("date", "")
+            source = item.get("source", "")
+
+            section_lines.append(f"[{label}] ({date})")
+            section_lines.append(f"  Title: {title}")
+            if summary:
+                section_lines.append(f"  Summary: {summary[:200]}")
+            if source:
+                section_lines.append(f"  Source: {source}")
+            section_lines.append("")
+
+        if not output_items:
+            section_lines.append("  (No news items available)")
+
+        section_lines.append("===== END NEWS DIGEST =====")
+        section_lines.append("")
+
+        return "\n".join(section_lines)
+
     def generate_post(self, topic, geo_region):
         # Geo-region affects CONTENT DETAILS (currency, visa notes), NOT persona voice
         region_context = {
@@ -1087,6 +1191,7 @@ User feedback to address: {'; '.join(user_needs) if user_needs else 'None'}
 
 {knowledge_section}
 {post_index_section}
+{self._build_news_section(topic)}
 
 ===== CRITICAL PREVENTION RULES (MUST FOLLOW) =====
 {prevention_rules}

@@ -1,0 +1,72 @@
+name: News Monitor
+
+on:
+  # 每天早上北京时间 7:30（UTC 23:30 前一天）采集新闻
+  schedule:
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Max items per category"
+        required: false
+        default: "10"
+        type: string
+      sources:
+        description: "Source list: google,rss,ddg,policy"
+        required: false
+        default: "all"
+        type: string
+      dry_run:
+        description: "Dry run mode"
+        required: false
+        default: "false"
+        type: boolean
+
+concurrency:
+  group: news-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests feedparser beautifulsoup4
+
+      - name: Run News Monitor
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '10' }}"
+          SOURCES="${{ github.event.inputs.sources || 'all' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          FLAGS=""
+          if [ "$DRY" = "true" ]; then FLAGS="--dry-run"; fi
+          python scripts/news_monitor.py --count "$COUNT" --sources "$SOURCES" $FLAGS
+
+      - name: Commit news digest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/news_digest.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update news digest [skip ci]"
+          fi
+          git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase failed"; exit 1; }
+          git push

@@ -4,5 +4,6 @@ python-dotenv
 google-api-python-client
 reportlab
 pillow
+feedparser
 # 测试回归闸门（.github/workflows/test-regression.yml）需要 pytest 产出 junit
 pytest
