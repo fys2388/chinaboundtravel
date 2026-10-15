@@ -1,0 +1,101 @@
+name: Autonomous Agent
+
+on:
+  # 每天早上北京时间 8:00（UTC 0:00）运行
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      agent:
+        description: "Agent to run (social, seo, content, general)"
+        required: true
+        default: "social"
+        type: choice
+        options:
+          - social
+          - seo
+          - content
+          - general
+      goal:
+        description: "Custom goal (leave empty for default)"
+        required: false
+        default: ""
+        type: string
+      max_steps:
+        description: "Maximum steps"
+        required: false
+        default: "10"
+        type: string
+      dry_run:
+        description: "Dry run mode (no LLM calls)"
+        required: false
+        default: "false"
+        type: boolean
+
+concurrency:
+  group: autonomous-agent-${{ github.event.inputs.agent || 'social' }}
+  cancel-in-progress: false
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Check API Key
+        run: |
+          if [ -z "${{ secrets.SENSENOVA_API_KEY }}" ]; then
+            echo "::error::SENSENOVA_API_KEY secret not configured"
+            exit 1
+          fi
+          echo "API Key is configured"
+
+      - name: Run Agent
+        env:
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+        run: |
+          AGENT="${{ github.event.inputs.agent || 'social' }}"
+          GOAL="${{ github.event.inputs.goal || '' }}"
+          MAX_STEPS="${{ github.event.inputs.max_steps || '10' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          
+          FLAGS="--max-steps $MAX_STEPS"
+          if [ "$DRY" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+          
+          if [ -n "$GOAL" ]; then
+            FLAGS="$FLAGS --goal '$GOAL'"
+          fi
+          
+          python scripts/agent_runner.py --agent "$AGENT" $FLAGS
+
+      - name: Commit agent outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add agent memory and insights
+          git add reports/agent/ 2>/dev/null || true
+          
+          if git diff --staged --quiet; then
+            echo "No agent outputs to commit"
+          else
+            AGENT="${{ github.event.inputs.agent || 'social' }}"
+            git commit -m "chore(agent): $AGENT memory update [skip ci]"
+          fi
+          
+          git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase failed"; exit 1; }
+          git push
