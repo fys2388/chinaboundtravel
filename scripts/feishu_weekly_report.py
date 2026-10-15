@@ -78,6 +78,39 @@ class FeishuWeeklyReporter:
         self.webhook_url = FEISHU_WEBHOOK_URL
         self.secret = FEISHU_SECRET
         self.last_week_data = self._load_last_week_data()
+        self.agent_insights = {}  # Agent 洞察，由 main() 注入
+
+    def _build_agent_insights_section(self) -> str:
+        """构建 Agent AI 洞察板块"""
+        if not self.agent_insights:
+            return ""
+
+        lines = ["---", "## 🧠 AI 智能洞察", "", "**Agent 分析结论：**", ""]
+
+        # 按优先级排序：trend > risk > opportunity > general
+        priority_order = ["trend", "risk", "opportunity", "general"]
+        sorted_items = sorted(
+            self.agent_insights.items(),
+            key=lambda x: (
+                next((i for i, p in enumerate(priority_order) if p in str(x[0]).lower()), 99),
+                x[0]
+            )
+        )
+
+        for key, value in sorted_items:
+            if isinstance(value, dict):
+                title = value.get("title", key)
+                summary = value.get("summary", "")
+                suggestion = value.get("suggestion", "")
+                lines.append(f"- **{title}**: {summary}")
+                if suggestion:
+                    lines.append(f"  - 💡 建议: {suggestion}")
+            else:
+                lines.append(f"- **{key}**: {value}")
+
+        lines.append("")
+        lines.append(f"*以上洞察由自主 Agent 分析生成，仅供参考*")
+        return "\n".join(lines)
 
     def _load_last_week_data(self) -> dict:
         """加载上周数据用于环比计算"""
@@ -1507,6 +1540,7 @@ class FeishuWeeklyReporter:
             },
             "elements": [
                 {"tag": "div", "text": {"tag": "lark_md", "content": core_kpi_table}},
+                ({"tag": "div", "text": {"tag": "lark_md", "content": self._build_agent_insights_section()}} if self.agent_insights else None),
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("okr_section", "")}} if data.get("okr_section") else None),
                 ({"tag": "div", "text": {"tag": "lark_md", "content": data.get("advice_section", "")}} if data.get("advice_section") else None),
                 {"tag": "div", "text": {"tag": "lark_md", "content": channel_table}},
@@ -1558,7 +1592,31 @@ class FeishuWeeklyReporter:
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="飞书周报推送")
+    parser.add_argument("--with-agent-insights", action="store_true",
+                        help="读取 Agent 洞察并嵌入报告")
+    parser.add_argument("--agent-name", type=str, default="seo",
+                        help="Agent 名称 (default: seo)")
+    args = parser.parse_args()
+
     reporter = FeishuWeeklyReporter()
+
+    # 如果启用 Agent 洞察，读取并传入 reporter
+    if args.with_agent_insights:
+        try:
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from agent_core import AgentMemory
+            memory = AgentMemory(args.agent_name)
+            insights = memory.get_insights()
+            if insights:
+                reporter.agent_insights = insights
+                print(f"🧠 已加载 {len(insights)} 条 Agent 洞察")
+            else:
+                print("⚠️ Agent 暂无洞察，报告将不包含 AI 分析板块")
+        except Exception as e:
+            print(f"⚠️ 加载 Agent 洞察失败: {e}")
+
     success = reporter.run()
     return 0 if success else 1
 
