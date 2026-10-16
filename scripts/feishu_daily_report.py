@@ -1574,7 +1574,23 @@ class FeishuDailyReporter:
             if data.get('top_keywords'):
                 print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,}, 点击 {data['gsc_clicks']:,}")
         else:
-            data["data_status"].append("GA4流量数据获取失败（请配置GA4_SERVICE_ACCOUNT_JSON）")
+            # P3 FIX 2026-10-15: GA4 API 失败时，先回退读本地 ga4_real_data.json。
+            # CI（GitHub Actions）的 GA4_SERVICE_ACCOUNT_JSON 可能过期/丢失，导致
+            # 连续 10 天日报流量全 0（假信号）。本地 .env 有 GA4 配置，能拉到数据，
+            # ga4_real_data.json 是本地拉取的缓存（30 天 metrics + daily 日数据）。
+            # 回退条件：本地缓存 fresh 且 age_days <= 3，避免用过期数据。
+            ga4_local = self._fetch_ga4_local_fallback()
+            if ga4_local:
+                data.update(ga4_local)
+                _local_note = f"GA4 API 获取失败，已回退本地缓存数据（data_date={ga4_local.get('report_date', '?')}，age_days={ga4_local.get('_age_days', '?')}）"
+                data["data_status"].append(_local_note)
+                print(f"   ⚠️ GA4 API 失败，回退本地数据: {data['visitors']:,} 访客, {data.get('sessions', 0):,} 会话")
+                if data.get('top_channels'):
+                    print(f"   ✅ 流量来源: {data['top_channels'][0].get('channel', 'N/A')} ({data['top_channels'][0].get('users', 0)} 人)")
+                if data.get('top_keywords'):
+                    print(f"   ✅ GSC数据: 曝光 {data['gsc_impressions']:,}, 点击 {data['gsc_clicks']:,}")
+            else:
+                data["data_status"].append("GA4流量数据获取失败（请配置GA4_SERVICE_ACCOUNT_JSON）")
             # 降级到 Cloudflare
             cf_data = self._fetch_cloudflare()
             if cf_data:
@@ -1683,19 +1699,42 @@ class FeishuDailyReporter:
             data["agent_health"] = None
 
         # 7.6 Site Health 巡检结果
+        # P1 FIX 2026-10-15: 原逻辑 sorted(glob) 取最后一个文件，但
+        # site_health_audit.json 字母序排在 site_health_2026-*.json 之后（2 < a），
+        # 会被误选。且 CI checkout 可能不含 reports/site_health/（site-health-daily
+        # 00:00 跑但 02:25 才 commit，日报 00:30 跑时 latest 文件还是前一天的）。
+        # 修复：只取带日期的 site_health_YYYY-MM-DD.json，排除 audit 文件；
+        # 若日期文件不存在，fallback 到 site_health_audit.json。
         try:
             import glob as _glob
-            sh_files = sorted(_glob.glob(str(BLOG_ROOT / "reports" / "site_health" / "site_health_*.json")))
-            if sh_files:
-                with open(sh_files[-1], encoding="utf-8") as f:
-                    sh_report = json.load(f)
-                data["site_health"] = sh_report["summary"]
-                sh = sh_report["summary"]
-                print(f"   SiteHealth: {sh['total_issues']} issues, auto-fixed {sh['auto_fixed']}, pending {sh['need_manual']}")
+            import re as _re
+            sh_dir = str(BLOG_ROOT / "reports" / "site_health")
+            all_sh_files = _glob.glob(f"{sh_dir}/site_health_*.json")
+            # 只保留带日期的文件（site_health_2026-10-15.json），排除 site_health_audit.json
+            dated_files = [f for f in all_sh_files if _re.search(r'site_health_\d{4}-\d{2}-\d{2}\.json$', f)]
+            if dated_files:
+                sh_path = sorted(dated_files)[-1]
+            elif all_sh_files:
+                # 只有 audit 文件，fallback 到它
+                sh_path = all_sh_files[-1]
             else:
+                sh_path = None
+            
+            if sh_path:
+                with open(sh_path, encoding="utf-8") as f:
+                    sh_report = json.load(f)
+                if "summary" in sh_report:
+                    data["site_health"] = sh_report["summary"]
+                    sh = sh_report["summary"]
+                    print(f"   SiteHealth: {sh['total_issues']} issues, auto-fixed {sh['auto_fixed']}, pending {sh['need_manual']} (from {sh_path.split('/')[-1]})")
+                else:
+                    print(f"   ⚠️ SiteHealth: {sh_path.split('/')[-1]} 无 summary 字段")
+                    data["site_health"] = None
+            else:
+                print(f"   ⚠️ SiteHealth: {sh_dir} 无 site_health_*.json 文件")
                 data["site_health"] = None
         except Exception as e:
-            print(f"   SiteHealth read failed: {e}")
+            print(f"   ⚠️ SiteHealth read failed: {e}")
             data["site_health"] = None
 
         # 8. 统计总问题数和总佣金
@@ -2312,6 +2351,97 @@ class FeishuDailyReporter:
         
         return None
     
+    def _fetch_ga4_local_fallback(self) -> dict | None:
+        """P3 FIX 2026-10-15: GA4 API 失败时，回退读本地 ga4_real_data.json 缓存。
+        
+        CI 的 GA4_SERVICE_ACCOUNT_JSON 可能过期/丢失，导致连续日报流量全 0（假信号）。
+        本地 .env 有 GA4 配置，ga4_real_data.json 是本地拉取的缓存（30 天 metrics + daily 日数据）。
+        
+        回退条件：本地缓存存在、fresh、age_days <= 3。
+        返回结构与 _fetch_ga4() 一致（visitors, sessions, requests, bounce_rate 等）。
+        """
+        ga4_local_path = REPORTS_DIR / "real_data" / "ga4_real_data.json"
+        if not ga4_local_path.exists():
+            print(f"   ⚠️ GA4 本地回退: {ga4_local_path} 不存在")
+            return None
+        try:
+            with open(ga4_local_path, encoding="utf-8") as f:
+                d = json.load(f)
+        except Exception as e:
+            print(f"   ⚠️ GA4 本地回退: 读取失败 {e}")
+            return None
+        
+        # 检查 freshness：只接受 fresh 且 age_days <= 3 的缓存
+        freshness = d.get("freshness_info", {})
+        if not freshness.get("fresh"):
+            print(f"   ⚠️ GA4 本地回退: 缓存不 fresh（reason={freshness.get('reason')}）")
+            return None
+        age_days = freshness.get("age_days", 999)
+        if age_days > 3:
+            print(f"   ⚠️ GA4 本地回退: 缓存过期 age_days={age_days}")
+            return None
+        
+        data_date = d.get("data_date", "")
+        metrics = d.get("metrics", {})
+        daily = d.get("daily", [])
+        
+        # 从 daily 数组取 data_date 对应数据（昨日）
+        yesterday_data = None
+        for day in daily:
+            if day.get("date") == data_date:
+                yesterday_data = day
+                break
+        
+        if yesterday_data:
+            visitors = int(yesterday_data.get("activeUsers", 0) or 0)
+            sessions = int(yesterday_data.get("sessions", 0) or 0)
+            pageviews = int(yesterday_data.get("pageviews", 0) or 0)
+        else:
+            # daily 里没有 data_date，用 metrics（30 天数据）作为近似
+            print(f"   ⚠️ GA4 本地回退: daily 里没有 {data_date}，用 30 天 metrics 近似")
+            visitors = int(metrics.get("activeUsers", 0) or 0)
+            sessions = int(metrics.get("sessions", 0) or 0)
+            pageviews = int(metrics.get("screenPageViews", 0) or 0)
+        
+        # 映射到 _fetch_ga4() 返回结构
+        bounce_rate = round(metrics.get("bounceRate", 0) * 100, 1)
+        engagement_rate = round(metrics.get("engagementRate", 0) * 100, 1)
+        avg_session_duration = metrics.get("averageSessionDuration", 0)
+        
+        # top_pages 映射
+        top_pages = []
+        for p in d.get("top_pages", [])[:10]:
+            top_pages.append({
+                "path": p.get("path", ""),
+                "views": int(p.get("pageviews", 0) or 0)
+            })
+        
+        # top_channels 映射
+        top_channels = []
+        for c in d.get("traffic_sources", [])[:5]:
+            top_channels.append({
+                "channel": c.get("channel", ""),
+                "users": int(c.get("activeUsers", 0) or 0),
+                "sessions": int(c.get("sessions", 0) or 0),
+                "engagement_rate": c.get("engagementRate", 0)
+            })
+        
+        result = {
+            "report_date": data_date,
+            "visitors": visitors,
+            "sessions": sessions,
+            "requests": pageviews,
+            "bounce_rate": bounce_rate,
+            "avg_session_duration": avg_session_duration,
+            "engagement_rate": engagement_rate,
+            "top_pages": top_pages,
+            "top_channels": top_channels,
+            "_age_days": age_days,  # 内部标记，供 data_status 使用
+        }
+        
+        print(f"   ✅ GA4 本地回退: {visitors} 访客, {sessions} 会话, {pageviews} PV（data_date={data_date}）")
+        return result
+
     def _parse_ga4_rate(self, value: str) -> float:
         """解析 GA4 返回的比率值（如 0.6543 → 65.4%）"""
         try:
