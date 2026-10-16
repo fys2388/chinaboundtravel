@@ -1,6 +1,6 @@
 # 数据真实性和新鲜度验证报告
 
-**验证时间**: 2026-10-15 10:30:14
+**验证时间**: 2026-10-16 10:17:23
 **整体状态**: PASS
 
 ---
@@ -9,10 +9,10 @@
 
 | 数据源 | 真实数据 | 新鲜度 | 数据日期 | API状态 | 验证状态 |
 |--------|---------|--------|---------|---------|---------|
-| GA4 | ✅ | ✅ | 2026-10-14 | OK | PASS |
-| GSC | ✅ | ✅ | 2026-10-12 | OK | PASS |
-| SOCIAL | ✅ | ✅ | 2026-10-15 | OK | PASS |
-| CONTENT | ✅ | ✅ | 2026-10-15 | UNKNOWN | PASS |
+| GA4 | ✅ | ✅ | 2026-10-15 | OK | PASS |
+| GSC | ✅ | ✅ | 2026-10-13 | OK | PASS |
+| SOCIAL | ✅ | ✅ | 2026-10-16 | OK | PASS |
+| CONTENT | ✅ | ✅ | 2026-10-16 | UNKNOWN | PASS |
 | PARTNERIZE | ⏸ | ⏸ | N/A | DISABLED_BY_DECISION | DISABLED |
 | IMPACT | ⏸ | ⏸ | N/A | DISABLED_BY_DECISION | DISABLED |
 | MULTI_PARTNER | ⏸ | ⏸ | N/A | DISABLED_BY_DECISION | DISABLED |
@@ -53,4 +53,4 @@
 ---
 
 *报告由真实数据拉取引擎 v2.1 自动生成*
-*生成时间: 2026-10-15 10:30:14*
+*生成时间: 2026-10-16 10:17:23*
