@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T05:42:40",
+  "updated_at": "2026-10-16T17:18:21",
   "items": [
     {
       "id": "soc-000001",
@@ -1616,8 +1616,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6178,8 +6178,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6318,8 +6318,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260916"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6532,8 +6532,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6754,8 +6754,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-16",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7816,7 +7816,7 @@
       "type": "knowledge",
       "caption": "Research-backed facts about Terracotta every traveler should know.\n\n· Xi'an Terracotta Army: History, Discovery, and Practical Tips\n· Why the Terracotta Army Matters\n· History of the Terracotta Army\n\nRead the full guide: https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260923&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Xi'an Terracotta Army: Tickets & History' (platform ig). Scene: Terracotta Warriors army in Xian museum. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-ig-knowledge-1ae3e5be.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7831,7 +7831,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "59a64113fb22"
+      "_sig": "59a64113fb22",
+      "image_generated": true
     },
     {
       "id": "soc-000297",
@@ -7841,7 +7842,7 @@
       "type": "tip",
       "caption": "Xi'an Terracotta Army: Tickets & History | Essential Terracotta tips most first-time visitors miss.\n\nXi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260923&utm_content=pinterest_v1\n\n👉 save for later",
       "image_prompt": "Professional tip social graphic for 'Xi'an Terracotta Army: Tickets & History' (platform pinterest). Scene: Terracotta Warriors army in Xian museum. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-pinterest-tip-622717e8.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7856,7 +7857,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "25dfa66c23f3"
+      "_sig": "25dfa66c23f3",
+      "image_generated": true
     },
     {
       "id": "soc-000298",
@@ -7866,7 +7868,7 @@
       "type": "story",
       "caption": "What travelers discover about Terracotta — practical lessons from the ground. Xi'an. → https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260923&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Xi'an Terracotta Army: Tickets & History' (platform x). Scene: Terracotta Warriors army in Xian museum. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-x-story-63696ecd.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -7881,7 +7883,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "d45a3a400e67"
+      "_sig": "d45a3a400e67",
+      "image_generated": true
     },
     {
       "id": "soc-000299",
@@ -7891,7 +7894,7 @@
       "type": "visual",
       "caption": "💡 Visual guide to Terracotta: what to see and capture.\n\n• Xi'an. Research-based practical guidance for international travelers planning a China trip\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260923&utm_content=fb_v1\n\n👉 read more",
       "image_prompt": "Professional visual social graphic for 'Xi'an Terracotta Army: Tickets & History' (platform fb). Scene: Terracotta Warriors army in Xian museum. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-fb-visual-4c054a7e.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -7906,7 +7909,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "7769eb89ed98"
+      "_sig": "7769eb89ed98",
+      "image_generated": true
     },
     {
       "id": "soc-000300",
@@ -7916,7 +7920,7 @@
       "type": "conversion",
       "caption": "Everything you need to know about Terracotta — in one practical guide.\n\n· Xi'an Terracotta Army: Tickets & History\n\nRead the full guide: https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260923&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Xi'an Terracotta Army: Tickets & History' (platform ig). Scene: Terracotta Warriors army in Xian museum. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Xi'an. Research-based practical guidance for international travelers planning a China trip. Check official sources for the latest details.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/xian/2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/xian-terracotta-army-history-discovery-a-ig-conversion-28f4e242.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7931,7 +7935,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "7c35dc5fdedf"
+      "_sig": "7c35dc5fdedf",
+      "image_generated": true
     },
     {
       "id": "soc-000301",
