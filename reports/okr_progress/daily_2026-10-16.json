@@ -1,0 +1,24 @@
+{
+  "report_type": "daily",
+  "period": "2026-10-16",
+  "generated_at": "2026-10-16 00:30:45",
+  "plan": [
+    {
+      "task": "🟠 本期无流量：检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "审核并发布 1 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 0.0,
+    "content": 0.0,
+    "gsc": 286.0,
+    "revenue": 0.0,
+    "email": 2.0
+  }
+}

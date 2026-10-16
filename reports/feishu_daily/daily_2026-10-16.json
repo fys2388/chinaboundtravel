@@ -1,0 +1,363 @@
+{
+  "date": "2026-10-16",
+  "site_up": true,
+  "response_time": 238.08599999999998,
+  "visitors": 0,
+  "sessions": 0,
+  "requests": 0,
+  "visitors_trend": "N/A",
+  "week_trend": "N/A",
+  "month_trend": "N/A",
+  "bounce_rate": 0.0,
+  "avg_session_duration": 0,
+  "engagement_rate": 0.0,
+  "bounce_rate_7d": 0.0,
+  "engagement_rate_7d": 0.0,
+  "avg_session_duration_7d": 0,
+  "sessions_7d": 0,
+  "visitors_7d": 0,
+  "top_pages": [],
+  "top_channels": [],
+  "top_countries": [],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 286,
+  "gsc_clicks": 0,
+  "gsc_ctr": 0.0,
+  "gsc_errors": 0,
+  "gsc_week_trend": "+45.9%",
+  "gsc_month_trend": "+89.4%",
+  "top_keywords": [
+    {
+      "keyword": "144 hours",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 86.0
+    },
+    {
+      "keyword": "144 hours visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 84.0
+    },
+    {
+      "keyword": "accommodation selection suggestions for sichuan scenic spots",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 66.0
+    },
+    {
+      "keyword": "accommodation standards for sichuan scenic spots",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 71.0
+    },
+    {
+      "keyword": "accommodation standards of chengdu tourism companies",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 65.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan international travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 88.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan tourism companies",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 95.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan travel agencies",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 68.0
+    },
+    {
+      "keyword": "alipay for foreigners",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 83.3
+    },
+    {
+      "keyword": "alipay foreigner",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "alipay international",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 55.0
+    },
+    {
+      "keyword": "alipay international account",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 70.0
+    },
+    {
+      "keyword": "alipay international settlement",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 47.0
+    },
+    {
+      "keyword": "alipay limit per day for foreigners",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 62.0
+    },
+    {
+      "keyword": "alipay tutorial",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 61.5
+    },
+    {
+      "keyword": "bullet train china tickets",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 46.0
+    },
+    {
+      "keyword": "business travel to china",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "business trip to china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 88.0
+    },
+    {
+      "keyword": "can i use alipay in usa",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 42.0
+    },
+    {
+      "keyword": "can you use alipay in uk",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 67.0
+    },
+    {
+      "keyword": "chengdu photography tour recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 56.0
+    },
+    {
+      "keyword": "chengdu scenic spot tourist behavior norms",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "chengdu travel photography tips recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 50.0
+    },
+    {
+      "keyword": "china 144 hour transit visa",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 67.5
+    },
+    {
+      "keyword": "china 144 hour visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 62.0
+    }
+  ],
+  "total_posts": 67,
+  "new_posts": 0,
+  "pending_posts": 1,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 0,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": false,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 2,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": true,
+  "gh_social_success": true,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 100,
+  "gh_query_window_days": 8,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 0,
+  "high_priority_todos": [
+    "🟠 本期无流量：检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200",
+    "审核并发布 1 篇草稿文章"
+  ],
+  "data_status": [
+    "GA4流量数据获取失败（请配置GA4_SERVICE_ACCOUNT_JSON）",
+    "Cloudflare流量数据未配置",
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "gsc_avg_position": 29.35,
+  "gsc_window_start": "2026-10-07",
+  "gsc_window_end": "2026-10-13",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 80,
+  "root_pages_scanned": 13,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_blog_window_runs": 0,
+  "gh_blog_failure_count": 0,
+  "gh_blog_latest_failure_time": null,
+  "gh_blog_state": "no_runs",
+  "gh_blog_conclusion": null,
+  "gh_blog_run_time": null,
+  "gh_report_window_days": 2,
+  "gh_report_window_runs": 0,
+  "gh_report_failure_count": 0,
+  "gh_report_latest_failure_time": null,
+  "gh_report_state": "success",
+  "gh_report_conclusion": null,
+  "gh_report_run_time": "2026-10-16T00:30:45Z",
+  "gh_report_running": true,
+  "gh_social_window_days": 2,
+  "gh_social_paths_total": 2,
+  "gh_social_window_runs": 2,
+  "gh_social_failure_count": 0,
+  "gh_social_latest_failure_time": null,
+  "gh_social_state": "success",
+  "gh_social_conclusion": "success",
+  "gh_social_run_time": "2026-10-15T20:14:22Z",
+  "gh_social_display_title": "Social Media Distributor",
+  "agent_health": {
+    "checked_at": "2026-10-16 00:30",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-10-12 04:48:46",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-10-16",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": null,
+  "reporting_snapshot": {
+    "as_of": "2026-10-15",
+    "generated_at": "2026-10-15",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 269,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🟡 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 0人 | 13人 | 0% | 🟡 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟡 今日无新发（距上次 4 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 40.9次 | 33次 | 100% | ✅ 当前 40.9次 = 目标的 1×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟠 **本期无流量**：检查社媒自动发布是否正常（Buffer/Feishu），并确认站点 200"
+}
