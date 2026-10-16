@@ -1,6 +1,6 @@
 # P1-GROWTH-28A — 全站 OG / Twitter Card 标签巡检
 
-- Generated: 2026-10-09
+- Generated: 2026-10-16
 - Pages audited: 302
 - Pages with missing/invalid tags: 0
 
