@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T17:18:21",
+  "updated_at": "2026-10-17T05:28:19",
   "items": [
     {
       "id": "soc-000001",
@@ -8,7 +8,7 @@
       "source_title": "China Photography Guide: Top Spots & Tips",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "Research-backed facts about Tea every traveler should know.\n\n· Top-rated Time to Visit Chengdu for Photography\n· Seasonal Considerations\n· Choosing the Right Camera Equipment\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Research-backed facts about Photography every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'China Photography Guide: Top Spots & Tips' (platform ig). Scene: camera on a tripod overlooking a Chinese landscape. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by ou.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-ig-knowledge-244530f3.jpg",
       "utm_params": {
@@ -16,8 +16,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -26,7 +26,9 @@
         "platform": "ig"
       },
       "_sig": "ad39c909ded7",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000002",
@@ -34,7 +36,7 @@
       "source_title": "China Photography Guide: Top Spots & Tips",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "China Photography Guide: Top Spots & Tips | Essential Tea tips most first-time visitors miss.\n\nChina photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by our editorial team | Keywords: photo\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "China Photography Guide: Top Spots & Tips | Essential Photography tips most first-time visitors miss.\n\nChina Photography Guide: Top Spots & Tips | Keywords: photo\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional tip social graphic for 'China Photography Guide: Top Spots & Tips' (platform pinterest). Scene: camera on a tripod overlooking a Chinese landscape. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by ou.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-pinterest-tip-c9702e0f.jpg",
       "utm_params": {
@@ -42,8 +44,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -52,7 +54,9 @@
         "platform": "pinterest"
       },
       "_sig": "1489a46f1f44",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000003",
@@ -60,7 +64,7 @@
       "source_title": "China Photography Guide: Top Spots & Tips",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Tea — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Photography — lessons from the ground. → https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Photography Guide: Top Spots & Tips' (platform x). Scene: camera on a tripod overlooking a Chinese landscape. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by ou.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-x-story-83abaa92.jpg",
       "utm_params": {
@@ -68,8 +72,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -78,7 +82,9 @@
         "platform": "x"
       },
       "_sig": "9f25f1ccd306",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000004",
@@ -86,7 +92,7 @@
       "source_title": "China Photography Guide: Top Spots & Tips",
       "platform": "fb",
       "type": "visual",
-      "caption": "💡 Visual guide to Tea: what to see and capture.\n\n• China photography guide: gear, lighting, composition, and a top choice photo locations\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Visual guide to Photography: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'China Photography Guide: Top Spots & Tips' (platform fb). Scene: camera on a tripod overlooking a Chinese landscape. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by ou.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-fb-visual-90699c12.jpg",
       "utm_params": {
@@ -94,8 +100,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -104,7 +110,9 @@
         "platform": "fb"
       },
       "_sig": "31195554d464",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000005",
@@ -112,7 +120,7 @@
       "source_title": "China Photography Guide: Top Spots & Tips",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Tea — in one practical guide.\n\n· China Photography Guide: Top Spots & Tips\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Photography — in one practical guide.\n\n· China Photography Guide: Top Spots & Tips\n\nRead the full guide: https://www.chinaboundtravel.com/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China Photography Guide: Top Spots & Tips' (platform ig). Scene: camera on a tripod overlooking a Chinese landscape. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China photography guide: gear, lighting, composition, and a top choice photo locations across 12 destinations, researched and verified by ou.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-photography-guide-capturing-the-wo-ig-conversion-1b995650.jpg",
       "utm_params": {
@@ -120,8 +128,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -130,7 +138,9 @@
         "platform": "ig"
       },
       "_sig": "86e6ebdf5946",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000006",
@@ -146,8 +156,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -278,7 +288,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "x",
       "type": "knowledge",
-      "caption": "Research-backed facts about Packing every traveler should know. → https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260917&utm_content=x_v1 #ChinaTravel",
+      "caption": "Research-backed facts about Packing. → https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'China Packing List 2026: What to Bring' (platform x). Scene: packed travel suitcase with China travel essentials. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-x-knowledge-67a89bcd.jpg",
       "utm_params": {
@@ -286,8 +296,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -296,8 +306,8 @@
         "platform": "x"
       },
       "_sig": "422799c40f5f",
-      "recycled_at": "2026-09-17",
-      "recycle_count": 1,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 2,
       "image_generated": true
     },
     {
@@ -306,7 +316,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "fb",
       "type": "tip",
-      "caption": "💡 Essential Tea tips most first-time visitors miss.\n\n• Visa and Documents\n• Understanding the Visa Process\n• Keeping Copies of Important Documents\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Essential Packing tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional tip social graphic for 'China Packing List 2026: What to Bring' (platform fb). Scene: packed travel suitcase with China travel essentials. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-fb-tip-8bea6afe.jpg",
       "utm_params": {
@@ -314,8 +324,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -324,7 +334,9 @@
         "platform": "fb"
       },
       "_sig": "02849d137205",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000013",
@@ -332,7 +344,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "ig",
       "type": "story",
-      "caption": "What travelers discover about Tea — practical lessons from the ground.\n\n· China packing list 2026: what to bring and what to leave at home, an essential checklist\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "What travelers discover about Packing — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'China Packing List 2026: What to Bring' (platform ig). Scene: packed travel suitcase with China travel essentials. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-ig-story-757b9c13.jpg",
       "utm_params": {
@@ -340,8 +352,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -350,7 +362,9 @@
         "platform": "ig"
       },
       "_sig": "8ef95baa019b",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000014",
@@ -358,7 +372,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "China Packing List 2026: What to Bring | Visual guide to Tea: what to see and capture.\n\nChina packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team | Keywords: packing\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "China Packing List 2026: What to Bring | Visual guide to Packing: what to see and capture.\n\nChina Packing List 2026: What to Bring | Keywords: packing\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional visual social graphic for 'China Packing List 2026: What to Bring' (platform pinterest). Scene: packed travel suitcase with China travel essentials. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-pinterest-visual-2a305ba8.jpg",
       "utm_params": {
@@ -366,8 +380,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -376,7 +390,9 @@
         "platform": "pinterest"
       },
       "_sig": "6381a631496c",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000015",
@@ -384,7 +400,7 @@
       "source_title": "China Packing List 2026: What to Bring",
       "platform": "x",
       "type": "conversion",
-      "caption": "Everything you need to know about Tea — in one practical guide. → https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Packing: everything you need in one guide. China Packing List 2026: What to Bring → https://www.chinaboundtravel.com/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'China Packing List 2026: What to Bring' (platform x). Scene: packed travel suitcase with China travel essentials. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China packing list 2026: what to bring and what to leave at home, an essential checklist researched and verified by our editorial team.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-packing-list-2026-what-to-bring-an-x-conversion-77066652.jpg",
       "utm_params": {
@@ -392,8 +408,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -402,7 +418,9 @@
         "platform": "x"
       },
       "_sig": "f7502bae1713",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000016",
@@ -410,7 +428,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years",
       "platform": "fb",
       "type": "knowledge",
-      "caption": "💡 Research-backed facts about Food every traveler should know.\n\n• The First Bite: Fire, Pots, and the Birth of Chinese Cooking\n• Bronze Cauldrons and Ritual Banquets: Xia, Shang, and the Rules of the Table\n• From Cold-Food Festivals to Roujiamo: Warring States to the Han\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Research-backed facts about Food every traveler should know.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional knowledge social graphic for 'How Chinese Food Evolved: 2 Million Years' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-fb-knowledge-25187598.jpg",
       "utm_params": {
@@ -418,8 +436,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -428,7 +446,9 @@
         "platform": "fb"
       },
       "_sig": "611b1a121fd6",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000017",
@@ -436,7 +456,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years",
       "platform": "ig",
       "type": "tip",
-      "caption": "Essential Food tips most first-time visitors miss.\n\n· The First Bite: Fire, Pots, and the Birth of Chinese Cooking\n· Bronze Cauldrons and Ritual Banquets: Xia, Shang, and the Rules of the Table\n· From Cold-Food Festivals to Roujiamo: Warring States to the Han\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Essential Food tips most first-time visitors miss.\n\nRead the full guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'How Chinese Food Evolved: 2 Million Years' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-ig-tip-edba8633.jpg",
       "utm_params": {
@@ -444,8 +464,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -454,7 +474,9 @@
         "platform": "ig"
       },
       "_sig": "66bdda372395",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000018",
@@ -462,7 +484,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years",
       "platform": "pinterest",
       "type": "story",
-      "caption": "How Chinese Food Evolved: 2 Million Years | What travelers discover about Food — practical lessons from the ground.\n\nFrom fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "How Chinese Food Evolved: 2 Million Years | What travelers discover about Food — practical lessons from the ground.\n\nHow Chinese Food Evolved: 2 Million Years | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional story social graphic for 'How Chinese Food Evolved: 2 Million Years' (platform pinterest). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-pinterest-story-6fd0853f.jpg",
       "utm_params": {
@@ -470,8 +492,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -480,7 +502,9 @@
         "platform": "pinterest"
       },
       "_sig": "9b904f2f1c79",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000019",
@@ -488,7 +512,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years",
       "platform": "x",
       "type": "visual",
-      "caption": "Visual guide to Food: what to see and capture. From fire-roasted meat to roujiamo and tofu: how Chinese food → https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Visual guide to Food. → https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'How Chinese Food Evolved: 2 Million Years' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-x-visual-075bbee9.jpg",
       "utm_params": {
@@ -496,8 +520,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -506,7 +530,9 @@
         "platform": "x"
       },
       "_sig": "72f4283cbd24",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000020",
@@ -514,7 +540,7 @@
       "source_title": "How Chinese Food Evolved: 2 Million Years",
       "platform": "fb",
       "type": "conversion",
-      "caption": "💡 Everything you need to know about Food — in one practical guide.\n\n• How Chinese Food Evolved: 2 Million Years\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Everything you need to know about Food — in one practical guide.\n\n• How Chinese Food Evolved: 2 Million Years\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinas-food-through-the-ages-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional conversion social graphic for 'How Chinese Food Evolved: 2 Million Years' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: From fire-roasted meat to roujiamo and tofu: how Chinese food evolved over 2 million years, and where to taste history today.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinas-food-through-the-ages-guide-fb-conversion-e32ddaa9.jpg",
       "utm_params": {
@@ -522,8 +548,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -532,7 +558,9 @@
         "platform": "fb"
       },
       "_sig": "037d035a7e47",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000021",
@@ -540,7 +568,7 @@
       "source_title": "Chinese Tea Culture: Authentic Teahouses",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "Research-backed facts about Tea every traveler should know.\n\n· Chinese Tea Culture: Where to Experience Authentic Teahouses\n· The History of Chinese Tea Culture\n· Types of Chinese Tea\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Research-backed facts about Tea every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Chinese Tea Culture: Authentic Teahouses' (platform ig). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--ig-knowledge-5c05f4dc.jpg",
       "utm_params": {
@@ -548,8 +576,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -558,7 +586,9 @@
         "platform": "ig"
       },
       "_sig": "7d722a7a25a7",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000022",
@@ -566,7 +596,7 @@
       "source_title": "Chinese Tea Culture: Authentic Teahouses",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Chinese Tea Culture: Authentic Teahouses | Essential Tea tips most first-time visitors miss.\n\nChinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Chinese Tea Culture: Authentic Teahouses | Essential Tea tips most first-time visitors miss.\n\nChinese Tea Culture: Authentic Teahouses\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional tip social graphic for 'Chinese Tea Culture: Authentic Teahouses' (platform pinterest). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--pinterest-tip-f1aa4031.jpg",
       "utm_params": {
@@ -574,8 +604,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -584,7 +614,9 @@
         "platform": "pinterest"
       },
       "_sig": "a2fe9b9c88f4",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000023",
@@ -592,7 +624,7 @@
       "source_title": "Chinese Tea Culture: Authentic Teahouses",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Tea — practical lessons from the ground. → https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Tea — lessons from the ground. → https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Chinese Tea Culture: Authentic Teahouses' (platform x). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--x-story-11aa03b9.jpg",
       "utm_params": {
@@ -600,8 +632,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -610,7 +642,9 @@
         "platform": "x"
       },
       "_sig": "a4d6906b8b49",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000024",
@@ -618,7 +652,7 @@
       "source_title": "Chinese Tea Culture: Authentic Teahouses",
       "platform": "fb",
       "type": "visual",
-      "caption": "💡 Visual guide to Tea: what to see and capture.\n\n• Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Visual guide to Tea: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'Chinese Tea Culture: Authentic Teahouses' (platform fb). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--fb-visual-837eee0a.jpg",
       "utm_params": {
@@ -626,8 +660,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -636,7 +670,9 @@
         "platform": "fb"
       },
       "_sig": "85089a91205d",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000025",
@@ -644,7 +680,7 @@
       "source_title": "Chinese Tea Culture: Authentic Teahouses",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Tea — in one practical guide.\n\n· Chinese Tea Culture: Authentic Teahouses\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Tea — in one practical guide.\n\n· Chinese Tea Culture: Authentic Teahouses\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-tea-culture-where-to-experience-authentic-teahouses/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Chinese Tea Culture: Authentic Teahouses' (platform ig). Scene: Chinese tea ceremony, porcelain teaware, green tea. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese Tea Culture: Where to Experience Authentic Teahouses for travelers visiting China, from on-the-ground experience.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-tea-culture-where-to-experience--ig-conversion-08a8ce84.jpg",
       "utm_params": {
@@ -652,8 +688,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -662,7 +698,9 @@
         "platform": "ig"
       },
       "_sig": "9fd7efded1b9",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000026",
@@ -670,7 +708,7 @@
       "source_title": "Chengdu Panda Base: See Pandas Like a Local",
       "platform": "pinterest",
       "type": "knowledge",
-      "caption": "Chengdu Panda Base: See Pandas Like a Local | Research-backed facts about Panda every traveler should know.\n\nVisit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Chengdu Panda Base: See Pandas Like a Local | Research-backed facts about Panda every traveler should know.\n\nChengdu Panda Base: See Pandas Like a Local\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional knowledge social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform pinterest). Scene: giant panda in Chengdu bamboo forest. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-pinterest-knowledge-943db2d1.jpg",
       "utm_params": {
@@ -678,8 +716,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -688,7 +726,9 @@
         "platform": "pinterest"
       },
       "_sig": "462e6e06ef3b",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000027",
@@ -696,7 +736,7 @@
       "source_title": "Chengdu Panda Base: See Pandas Like a Local",
       "platform": "x",
       "type": "tip",
-      "caption": "Essential Panda tips most first-time visitors miss. Further Reading → https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Essential Panda tips most first-timers miss. → https://www.chinaboundtravel.com/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform x). Scene: giant panda in Chengdu bamboo forest. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-x-tip-59740f31.jpg",
       "utm_params": {
@@ -704,8 +744,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -714,7 +754,9 @@
         "platform": "x"
       },
       "_sig": "1f6d7ee22ea4",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000028",
@@ -722,7 +764,7 @@
       "source_title": "Chengdu Panda Base: See Pandas Like a Local",
       "platform": "fb",
       "type": "story",
-      "caption": "💡 What travelers discover about Panda — practical lessons from the ground.\n\n• Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport,\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "What travelers discover about Panda — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional story social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform fb). Scene: giant panda in Chengdu bamboo forest. Style: landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-fb-story-e2432372.jpg",
       "utm_params": {
@@ -730,8 +772,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -740,7 +782,9 @@
         "platform": "fb"
       },
       "_sig": "b82046432e4a",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000029",
@@ -748,7 +792,7 @@
       "source_title": "Chengdu Panda Base: See Pandas Like a Local",
       "platform": "ig",
       "type": "visual",
-      "caption": "Visual guide to Panda: what to see and capture.\n\n· Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Visual guide to Panda: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform ig). Scene: giant panda in Chengdu bamboo forest. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-ig-visual-f509ef61.jpg",
       "utm_params": {
@@ -756,8 +800,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -766,7 +810,9 @@
         "platform": "ig"
       },
       "_sig": "321e7e32e5c8",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000030",
@@ -774,7 +820,7 @@
       "source_title": "Chengdu Panda Base: See Pandas Like a Local",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "Chengdu Panda Base: See Pandas Like a Local | Everything you need to know about Panda — in one practical guide.\n\nVisit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Chengdu Panda Base: See Pandas Like a Local | Everything you need to know about Panda — in one practical guide.\n\nChengdu Panda Base: See Pandas Like a Local\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional conversion social graphic for 'Chengdu Panda Base: See Pandas Like a Local' (platform pinterest). Scene: giant panda in Chengdu bamboo forest. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Visit Chengdu Panda Base in 2026: best times to see pandas active, tickets, transport, and insider tips to skip the crowds.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/dude-wheres-my-panda-a-beijing-guys-guid-pinterest-conversion-29c79b86.jpg",
       "utm_params": {
@@ -782,8 +828,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -792,7 +838,9 @@
         "platform": "pinterest"
       },
       "_sig": "cd3ebd211d2b",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000031",
@@ -826,7 +874,7 @@
       "source_title": "Zhangjiajie Guide: Avatar Mountains",
       "platform": "fb",
       "type": "tip",
-      "caption": "💡 Essential Zhangjiajie tips most first-time visitors miss.\n\n• Zhangjiajie Avatar Mountains: Complete Guide to China's Most Spectacular Park\n• Know Before You Go: Two Separate Parks Not Three\n• 2026 Ticket Prices No BS\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Essential Zhangjiajie tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional tip social graphic for 'Zhangjiajie Guide: Avatar Mountains' (platform fb). Scene: Zhangjiajie sandstone pillars in clouds. Style: landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/zhangjiajie-avatar-mountains-complete-gu-fb-tip-c78518d5.jpg",
       "utm_params": {
@@ -834,8 +882,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -844,7 +892,9 @@
         "platform": "fb"
       },
       "_sig": "5cb99dbd7199",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000033",
@@ -852,7 +902,7 @@
       "source_title": "Zhangjiajie Guide: Avatar Mountains",
       "platform": "ig",
       "type": "story",
-      "caption": "What travelers discover about Zhangjiajie — practical lessons from the ground.\n\n· Plan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use,\n\nRead the full guide: https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "What travelers discover about Zhangjiajie — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional story social graphic for 'Zhangjiajie Guide: Avatar Mountains' (platform ig). Scene: Zhangjiajie sandstone pillars in clouds. Style: vertical 4:5, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/zhangjiajie-avatar-mountains-complete-gu-ig-story-03f77eb7.jpg",
       "utm_params": {
@@ -860,8 +910,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -870,7 +920,9 @@
         "platform": "ig"
       },
       "_sig": "bb2e001a2597",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000034",
@@ -878,7 +930,7 @@
       "source_title": "Zhangjiajie Guide: Avatar Mountains",
       "platform": "pinterest",
       "type": "visual",
-      "caption": "Zhangjiajie Guide: Avatar Mountains | Visual guide to Zhangjiajie: what to see and capture.\n\nPlan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Zhangjiajie Guide: Avatar Mountains | Visual guide to Zhangjiajie: what to see and capture.\n\nZhangjiajie Guide: Avatar Mountains\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional visual social graphic for 'Zhangjiajie Guide: Avatar Mountains' (platform pinterest). Scene: Zhangjiajie sandstone pillars in clouds. Style: vertical 2:3, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan the excellent Zhangjiajie trip in 2026: tickets, the 4-day itinerary locals use, skipping crowds, and cable car tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/zhangjiajie-avatar-mountains-complete-gu-pinterest-visual-e69493c5.jpg",
       "utm_params": {
@@ -886,8 +938,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -896,7 +948,9 @@
         "platform": "pinterest"
       },
       "_sig": "86dbe03c9f37",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000035",
@@ -930,7 +984,7 @@
       "source_title": "China Travel Guide: July 2026 Updates",
       "platform": "fb",
       "type": "knowledge",
-      "caption": "💡 Research-backed facts about Visa every traveler should know.\n\n• ChinaBound Travel Guide Now at Version 2026.07\n• What's New in Version 2026.07\n• Get Your Copy\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Research-backed facts about China travel every traveler should know.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinabound-travel-guide-2026-07-monthly-update/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional knowledge social graphic for 'China Travel Guide: July 2026 Updates' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-07-monthly--fb-knowledge-3ffe9788.jpg",
       "utm_params": {
@@ -938,8 +992,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -948,7 +1002,9 @@
         "platform": "fb"
       },
       "_sig": "1b50a56137d9",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000037",
@@ -956,7 +1012,7 @@
       "source_title": "China Travel Guide: July 2026 Updates",
       "platform": "ig",
       "type": "tip",
-      "caption": "Essential Visa tips most first-time visitors miss.\n\n· ChinaBound Travel Guide Now at Version 2026.07\n· What's New in Version 2026.07\n· Get Your Copy\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Essential China travel tips most first-time visitors miss.\n\nRead the full guide: https://www.chinaboundtravel.com/chinabound-travel-guide-2026-07-monthly-update/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional tip social graphic for 'China Travel Guide: July 2026 Updates' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-07-monthly--ig-tip-bba28deb.jpg",
       "utm_params": {
@@ -964,8 +1020,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -974,7 +1030,9 @@
         "platform": "ig"
       },
       "_sig": "e024be3a0a63",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000038",
@@ -982,7 +1040,7 @@
       "source_title": "China Travel Guide: July 2026 Updates",
       "platform": "pinterest",
       "type": "story",
-      "caption": "China Travel Guide: July 2026 Updates | What travelers discover about Visa — practical lessons from the ground.\n\nJuly 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes | Keywords: payment, visa\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "China Travel Guide: July 2026 Updates | What travelers discover about China travel — practical lessons from the ground.\n\nChina Travel Guide: July 2026 Updates\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinabound-travel-guide-2026-07-monthly-update/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional story social graphic for 'China Travel Guide: July 2026 Updates' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-07-monthly--pinterest-story-040f3ac8.jpg",
       "utm_params": {
@@ -990,8 +1048,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1000,7 +1058,9 @@
         "platform": "pinterest"
       },
       "_sig": "820988fe5b3a",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000039",
@@ -1008,7 +1068,7 @@
       "source_title": "China Travel Guide: July 2026 Updates",
       "platform": "x",
       "type": "visual",
-      "caption": "Visual guide to Visa: what to see and capture. July 2026 China travel updates: visa changes, → https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Visual guide to China travel. → https://www.chinaboundtravel.com/chinabound-travel-guide-2026-07-monthly-update/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional visual social graphic for 'China Travel Guide: July 2026 Updates' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-07-monthly--x-visual-bce08ade.jpg",
       "utm_params": {
@@ -1016,8 +1076,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1026,7 +1086,9 @@
         "platform": "x"
       },
       "_sig": "4532ec6eda6f",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000040",
@@ -1034,7 +1096,7 @@
       "source_title": "China Travel Guide: July 2026 Updates",
       "platform": "fb",
       "type": "conversion",
-      "caption": "💡 Everything you need to know about Visa — in one practical guide.\n\n• China Travel Guide: July 2026 Updates\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Everything you need to know about China travel — in one practical guide.\n\n• China Travel Guide: July 2026 Updates\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinabound-travel-guide-2026-07-monthly-update/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional conversion social graphic for 'China Travel Guide: July 2026 Updates' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: July 2026 China travel updates: visa changes, summer crowds, payment improvements, typhoon alerts, and top Qinghai-Tibet routes.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-07-monthly--fb-conversion-2f57ce9e.jpg",
       "utm_params": {
@@ -1042,8 +1104,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1052,7 +1114,9 @@
         "platform": "fb"
       },
       "_sig": "a5360d7b9942",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000041",
@@ -1060,7 +1124,7 @@
       "source_title": "Chinese Street Food: Night Markets Guide",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "Research-backed facts about Tea every traveler should know.\n\n· Your First Night at a Chinese Night Market\n· The Allure of Chinese Street Food\n· Night Markets: The Heart of Chinese Street Food\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Research-backed facts about Food every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Chinese Street Food: Night Markets Guide' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-ig-knowledge-7a4f5a54.jpg",
       "utm_params": {
@@ -1068,8 +1132,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1078,7 +1142,9 @@
         "platform": "ig"
       },
       "_sig": "9cc109840eec",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000042",
@@ -1086,7 +1152,7 @@
       "source_title": "Chinese Street Food: Night Markets Guide",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Chinese Street Food: Night Markets Guide | Essential Tea tips most first-time visitors miss.\n\nChina street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial team | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Chinese Street Food: Night Markets Guide | Essential Food tips most first-time visitors miss.\n\nChinese Street Food: Night Markets Guide | Keywords: food\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional tip social graphic for 'Chinese Street Food: Night Markets Guide' (platform pinterest). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-pinterest-tip-647d2fff.jpg",
       "utm_params": {
@@ -1094,8 +1160,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1104,7 +1170,9 @@
         "platform": "pinterest"
       },
       "_sig": "f701538e07a8",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000043",
@@ -1112,7 +1180,7 @@
       "source_title": "Chinese Street Food: Night Markets Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Tea — practical lessons from the → https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Food — lessons from the ground. → https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Chinese Street Food: Night Markets Guide' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-x-story-08f8f019.jpg",
       "utm_params": {
@@ -1120,8 +1188,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1130,7 +1198,9 @@
         "platform": "x"
       },
       "_sig": "e4d1d9400f28",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000044",
@@ -1138,7 +1208,7 @@
       "source_title": "Chinese Street Food: Night Markets Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "💡 Visual guide to Tea: what to see and capture.\n\n• China street food for first-timers: top night-market snacks, where to find them, and what\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=fb_v1\n\n👉 read more",
+      "caption": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'Chinese Street Food: Night Markets Guide' (platform fb). Scene: Chinese street food: dumplings, noodles, night market. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-fb-visual-caae92db.jpg",
       "utm_params": {
@@ -1146,8 +1216,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1156,7 +1226,9 @@
         "platform": "fb"
       },
       "_sig": "546a3b23ccc3",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000045",
@@ -1164,7 +1236,7 @@
       "source_title": "Chinese Street Food: Night Markets Guide",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Tea — in one practical guide.\n\n· Chinese Street Food: Night Markets Guide\n\nRead the full guide: https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Food — in one practical guide.\n\n· Chinese Street Food: Night Markets Guide\n\nRead the full guide: https://www.chinaboundtravel.com/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'Chinese Street Food: Night Markets Guide' (platform ig). Scene: Chinese street food: dumplings, noodles, night market. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China street food for first-timers: top night-market snacks, where to find them, and what to avoid, researched and verified by our editorial.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinese-street-food-a-first-timers-guide-ig-conversion-5ae5d917.jpg",
       "utm_params": {
@@ -1172,8 +1244,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1182,7 +1254,9 @@
         "platform": "ig"
       },
       "_sig": "d108ae6588fe",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000046",
@@ -1190,7 +1264,7 @@
       "source_title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
       "platform": "pinterest",
       "type": "knowledge",
-      "caption": "Guilin & Yangshuo: Complete 2026 Travel Guide | Research-backed facts about Guilin every traveler should know.\n\nPlan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Guilin & Yangshuo: Complete 2026 Travel Guide | Research-backed facts about Guilin every traveler should know.\n\nGuilin & Yangshuo: Complete 2026 Travel Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional knowledge social graphic for 'Guilin & Yangshuo: Complete 2026 Travel Guide' (platform pinterest). Scene: Guilin karst mountains and Li River in mist. Style: vertical 2:3, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/guilin-and-yangshuo-the-ultimate-karst-l-pinterest-knowledge-165e6cb3.jpg",
       "utm_params": {
@@ -1198,8 +1272,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1208,7 +1282,9 @@
         "platform": "pinterest"
       },
       "_sig": "3f925ebbbcb2",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000047",
@@ -1216,7 +1292,7 @@
       "source_title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
       "platform": "x",
       "type": "tip",
-      "caption": "Essential Guilin tips most first-time visitors miss. → https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=x_v1 #ChinaTravel",
+      "caption": "Essential Guilin tips most first-timers miss. → https://www.chinaboundtravel.com/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional tip social graphic for 'Guilin & Yangshuo: Complete 2026 Travel Guide' (platform x). Scene: Guilin karst mountains and Li River in mist. Style: wide landscape 16:9, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/guilin-and-yangshuo-the-ultimate-karst-l-x-tip-41c9c3ee.jpg",
       "utm_params": {
@@ -1224,8 +1300,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1234,7 +1310,9 @@
         "platform": "x"
       },
       "_sig": "d7ec45e139a8",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000048",
@@ -1268,7 +1346,7 @@
       "source_title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
       "platform": "ig",
       "type": "visual",
-      "caption": "Visual guide to Guilin: what to see and capture.\n\n· Plan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day\n\nRead the full guide: https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Visual guide to Guilin: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Guilin & Yangshuo: Complete 2026 Travel Guide' (platform ig). Scene: Guilin karst mountains and Li River in mist. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/guilin-and-yangshuo-the-ultimate-karst-l-ig-visual-3bb160b1.jpg",
       "utm_params": {
@@ -1276,8 +1354,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1286,7 +1364,9 @@
         "platform": "ig"
       },
       "_sig": "d76c5977d3d2",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000050",
@@ -1294,7 +1374,7 @@
       "source_title": "Guilin & Yangshuo: Complete 2026 Travel Guide",
       "platform": "pinterest",
       "type": "conversion",
-      "caption": "Guilin & Yangshuo: Complete 2026 Travel Guide | Everything you need to know about Guilin — in one practical guide.\n\nPlan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=pinterest_v1\n\n👉 save for later",
+      "caption": "Guilin & Yangshuo: Complete 2026 Travel Guide | Everything you need to know about Guilin — in one practical guide.\n\nGuilin & Yangshuo: Complete 2026 Travel Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261017&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional conversion social graphic for 'Guilin & Yangshuo: Complete 2026 Travel Guide' (platform pinterest). Scene: Guilin karst mountains and Li River in mist. Style: vertical 2:3, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Plan Guilin and Yangshuo with this 2026 guide: Li River bamboo raft vs cruise, a 3-day itinerary with costs, where to stay and eat.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/guilin-and-yangshuo-the-ultimate-karst-l-pinterest-conversion-ae0dc6e4.jpg",
       "utm_params": {
@@ -1302,8 +1382,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-10",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1312,7 +1392,9 @@
         "platform": "pinterest"
       },
       "_sig": "e1d5db10c5cd",
-      "image_generated": true
+      "image_generated": true,
+      "recycled_at": "2026-10-17",
+      "recycle_count": 1
     },
     {
       "id": "soc-000051",
@@ -4212,8 +4294,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5956,8 +6038,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6560,8 +6642,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6643,8 +6725,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-17",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -7946,7 +8028,7 @@
       "type": "knowledge",
       "caption": "🇨🇳 **ChinaBound Travel Guide — September 2026 Update**\n\nEvery visa rule that matters, distilled into one place.\n\n📌 **What's in Version 2026.09**\n→ Updated visa categories & eligibility criteria\n→ Entry/exit requirements for September travel\n→ Step-by-step setup checklist before departure\n\nNo guesswork. No outdated info. Just the facts travelers need — organized, current, and ready to act on.\n\n🔗 Full guide:\nhttps://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261009&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip #TravelGuide #VisaInfo #China2026 #TravelTips\n\n👉 Link in bio",
       "image_prompt": "Professional knowledge social graphic for 'ChinaBound Travel Guide 2026.09 Update' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: The September 2026 edition of the ChinaBound Travel Guide - updated with this month's visa policy changes, payment status, and safety alerts.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-09-monthly--ig-knowledge-4d7ec1c4.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -7961,7 +8043,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "1d3cca0b63fe"
+      "_sig": "1d3cca0b63fe",
+      "image_generated": true
     },
     {
       "id": "soc-000302",
@@ -7971,7 +8054,7 @@
       "type": "tip",
       "caption": "🇨🇳 CHINA TRAVEL TIP | September 2026 Visa & Payment Updates\n\nMost first-time visitors to China miss these critical details — and they can derail an entire trip.\n\nThe September 2026 ChinaBound Travel Guide covers:\n▸ Visa policy changes in effect this month\n▸ Current payment status (what works, what doesn't)\n▸ Active safety alerts & advisories\n\n📌 Save this pin for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinabound-tr",
       "image_prompt": "Professional tip social graphic for 'ChinaBound Travel Guide 2026.09 Update' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: The September 2026 edition of the ChinaBound Travel Guide - updated with this month's visa policy changes, payment status, and safety alerts.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-09-monthly--pinterest-tip-102c179c.jpg",
       "utm_params": {
         "utm_source": "pinterest",
         "utm_medium": "social",
@@ -7986,7 +8069,8 @@
         "uv": 0,
         "platform": "pinterest"
       },
-      "_sig": "574a6912b335"
+      "_sig": "574a6912b335",
+      "image_generated": true
     },
     {
       "id": "soc-000303",
@@ -7996,7 +8080,7 @@
       "type": "story",
       "caption": "Visa realities on the ground: what travelers are actually encountering. → https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261009&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'ChinaBound Travel Guide 2026.09 Update' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: The September 2026 edition of the ChinaBound Travel Guide - updated with this month's visa policy changes, payment status, and safety alerts.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-09-monthly--x-story-7c6791cf.jpg",
       "utm_params": {
         "utm_source": "x",
         "utm_medium": "social",
@@ -8011,7 +8095,8 @@
         "uv": 0,
         "platform": "x"
       },
-      "_sig": "4e6b3fba73fe"
+      "_sig": "4e6b3fba73fe",
+      "image_generated": true
     },
     {
       "id": "soc-000304",
@@ -8021,7 +8106,7 @@
       "type": "visual",
       "caption": "📸 September 2026 — the ChinaBound Travel Guide is live.\n\nVisa routes, updated regulations, what to photograph and where. Every detail mapped for the month ahead.\n\n👇 What's your biggest China travel question? Drop it below.\n\nFull guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261009&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'ChinaBound Travel Guide 2026.09 Update' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: The September 2026 edition of the ChinaBound Travel Guide - updated with this month's visa policy changes, payment status, and safety alerts.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-09-monthly--fb-visual-4cdb4cd1.jpg",
       "utm_params": {
         "utm_source": "fb",
         "utm_medium": "social",
@@ -8036,7 +8121,8 @@
         "uv": 0,
         "platform": "fb"
       },
-      "_sig": "35bcae075a72"
+      "_sig": "35bcae075a72",
+      "image_generated": true
     },
     {
       "id": "soc-000305",
@@ -8046,7 +8132,7 @@
       "type": "conversion",
       "caption": "Visa rules. Entry requirements. What changed in 2026. All in one place.\n\nChinaBound Travel Guide — September 2026 Update: the practical, no-fluff breakdown of everything you need before you fly. Updated monthly. No guesswork.\n\n🔗 Read the full guide: https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261009&utm_content=ig_v1\n\n👉 Link in bio\n\n#ChinaTravel #VisitChina #ChinaTrip #ChinaBound #ChinaVisa #TravelChina",
       "image_prompt": "Professional conversion social graphic for 'ChinaBound Travel Guide 2026.09 Update' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: The September 2026 edition of the ChinaBound Travel Guide - updated with this month's visa policy changes, payment status, and safety alerts.",
-      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/chinabound-travel-guide-2026-09-monthly-update.webp",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/chinabound-travel-guide-2026-09-monthly--ig-conversion-ab2fba6d.jpg",
       "utm_params": {
         "utm_source": "ig",
         "utm_medium": "social",
@@ -8061,7 +8147,8 @@
         "uv": 0,
         "platform": "ig"
       },
-      "_sig": "514d271217fc"
+      "_sig": "514d271217fc",
+      "image_generated": true
     },
     {
       "id": "soc-000306",
