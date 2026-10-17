@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-17_content",
   "created_at": "2026-10-17T01:00:39.740655+00:00",
-  "updated_at": "2026-10-17T16:30:36.030908",
+  "updated_at": "2026-10-17T16:36:46.798019",
   "target_date": "2026-10-17",
   "issue_count": 41,
   "severity_summary": {
@@ -714,7 +714,7 @@
       "detected_at": "2026-10-17T01:00:39.740160+00:00"
     },
     {
-      "id": "site_health-67ab6f4ffcfddd2b",
+      "id": "site_health-2b87feb83c9e628d",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -731,10 +731,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-17T16:30:35.641842+00:00"
+      "detected_at": "2026-10-17T16:36:46.449588+00:00"
     },
     {
-      "id": "site_health-6ffaed961eb99390",
+      "id": "site_health-5ca375ff4b9291cb",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -751,10 +751,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-17T16:30:35.641851+00:00"
+      "detected_at": "2026-10-17T16:36:46.449597+00:00"
     },
     {
-      "id": "site_health-41d33d09ae41fab3",
+      "id": "site_health-3b3cb40f588184c4",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -771,7 +771,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-17T16:30:35.641837+00:00"
+      "detected_at": "2026-10-17T16:36:46.449581+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
