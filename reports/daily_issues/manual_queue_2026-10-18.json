@@ -1,7 +1,7 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-10-18T02:11:18.777144",
+  "generated_at": "2026-10-18T15:16:24.652749",
   "target_date": "2026-10-18",
   "issue_count": 4,
   "by_agent": {
@@ -26,20 +26,20 @@
     "social": {
       "count": 1,
       "types": [
-        "social_no_traffic"
+        "social_zero_engagement"
       ]
     }
   },
   "issues": [
     {
-      "id": "issue_830a9eb30da7",
-      "type": "social_no_traffic",
-      "description": "社媒曝光17但点击为0，需检查帖子链接和CTA",
-      "severity": "high",
+      "id": "issue_1ace14acd2fa",
+      "type": "social_zero_engagement",
+      "description": "分析数据可用，社媒已发布10条但曝光为0，需检查发布与指标归属",
+      "severity": "medium",
       "agent": "social",
-      "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-10-16.json",
-      "detected_at": "2026-10-18T02:11:18.773209",
+      "action": "analyze_and_optimize",
+      "source_file": "social_daily_2026-10-17.json",
+      "detected_at": "2026-10-18T15:16:24.648830",
       "status": "new",
       "assigned": false,
       "auto_fixable": false
@@ -52,7 +52,7 @@
       "agent": "content",
       "action": "fix_placeholder",
       "source_file": "site_health_issues_2026-10-18.json",
-      "detected_at": "2026-10-18T02:11:18.775975",
+      "detected_at": "2026-10-18T15:16:24.651546",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
@@ -66,7 +66,7 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "site_health_issues_2026-10-18.json",
-      "detected_at": "2026-10-18T02:11:18.775986",
+      "detected_at": "2026-10-18T15:16:24.651555",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
@@ -80,7 +80,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-10-18.json",
-      "detected_at": "2026-10-18T02:11:18.775991",
+      "detected_at": "2026-10-18T15:16:24.651561",
       "status": "new",
       "assigned": false,
       "file": "content/posts/144-hour-visa-free-transit-guide.md",
