@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-17T09:51:28.964016",
-  "data_date": "2026-10-16",
+  "pull_time": "2026-10-18T10:02:46.104983",
+  "data_date": "2026-10-17",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 222,
-    "sessions": 249,
-    "screenPageViews": 279,
-    "engagedSessions": 175,
-    "bounceRate": 0.2971887550200803,
-    "averageSessionDuration": 37.59609795582329,
-    "engagementRate": 0.7028112449799196,
-    "newUsers": 221
+    "activeUsers": 227,
+    "sessions": 254,
+    "screenPageViews": 284,
+    "engagedSessions": 180,
+    "bounceRate": 0.29133858267716534,
+    "averageSessionDuration": 37.20192183858268,
+    "engagementRate": 0.7086614173228346,
+    "newUsers": 226
   },
   "daily": [
-    {
-      "date": "2026-09-20",
-      "sessions": 12,
-      "activeUsers": 11,
-      "pageviews": 23
-    },
     {
       "date": "2026-09-21",
       "sessions": 15,
@@ -173,17 +167,17 @@
     },
     {
       "date": "2026-10-17",
-      "sessions": 10,
-      "activeUsers": 10,
-      "pageviews": 10
+      "sessions": 13,
+      "activeUsers": 13,
+      "pageviews": 13
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 43,
-      "sessions": 38
+      "pageviews": 42,
+      "sessions": 37
     },
     {
       "path": "/alipay-for-foreigners-guide/",
@@ -222,20 +216,14 @@
       "sessions": 10
     },
     {
-      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
-      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 10,
-      "sessions": 10
-    },
-    {
       "path": "/accommodation-tips-guide/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 9,
       "sessions": 10
     },
     {
-      "path": "/posts/accommodation-tips-guide/",
-      "title": "Where to Stay in China: Complete 2026 Guide",
+      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
       "pageviews": 9,
       "sessions": 9
     },
@@ -264,36 +252,42 @@
       "sessions": 5
     },
     {
-      "path": "/144-hour-visa-free-transit-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 5,
-      "sessions": 5
+      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "pageviews": 6,
+      "sessions": 6
+    },
+    {
+      "path": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "title": "How to Use Alipay & WeChat Pay in China 2026",
+      "pageviews": 6,
+      "sessions": 6
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 177,
-      "activeUsers": 164,
-      "engagementRate": 0.9605
+      "sessions": 181,
+      "activeUsers": 168,
+      "engagementRate": 0.9613
     },
     {
       "channel": "Direct",
-      "sessions": 37,
-      "activeUsers": 36,
-      "engagementRate": 0.0541
+      "sessions": 39,
+      "activeUsers": 38,
+      "engagementRate": 0.0513
     },
     {
       "channel": "Organic Search",
       "sessions": 18,
       "activeUsers": 17,
-      "engagementRate": 0.0
+      "engagementRate": 0.0556
     },
     {
       "channel": "Unassigned",
-      "sessions": 14,
-      "activeUsers": 3,
-      "engagementRate": 0.2143
+      "sessions": 13,
+      "activeUsers": 2,
+      "engagementRate": 0.2308
     },
     {
       "channel": "AI Assistant",
@@ -309,6 +303,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-16"
+    "data_date": "2026-10-17"
   }
 }
