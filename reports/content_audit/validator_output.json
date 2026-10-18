@@ -1459,6 +1459,35 @@
       "passed": false
     },
     {
+      "file": "2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [
+        "推",
+        "手"
+      ],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/transport/kung-fu-and-martial-arts-in-china-where-to-see-and-train.jpg",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 60,
+        "mojibake": 100,
+        "seo": 100,
+        "media": 100
+      },
+      "trust_score": 98.0,
+      "passed": true
+    },
+    {
       "file": "alipay-for-foreigners-guide.md",
       "frontmatter_ok": false,
       "content_id_ok": false,
@@ -1745,6 +1774,6 @@
       "passed": true
     }
   ],
-  "passed_count": 32,
-  "total": 66
+  "passed_count": 33,
+  "total": 67
 }

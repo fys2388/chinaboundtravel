@@ -1,12 +1,12 @@
 # P1-CONTENT-TRUST-AUDIT-01 内容信任审计报告
 
-生成时间: 2026-10-11 08:10:36
+生成时间: 2026-10-18 06:53:22
 
 ## 概述
 
-- 审计文章数: **66**
-- 存在问题文章: **66**（100.0%）
-- 问题总数: **1245**
+- 审计文章数: **67**
+- 存在问题文章: **67**（100.0%）
+- 问题总数: **1262**
 
 > 本审计为**只读**：未修改任何 content 文件。
 
@@ -14,18 +14,18 @@
 
 | 问题类型 | 数量 | 严重度 |
 | :--- | :--- | :--- |
-| 事实风险 | 506 | MEDIUM |
-| 品牌风险 | 383 | HIGH |
-| AI幻觉 | 280 | HIGH |
+| 事实风险 | 508 | MEDIUM |
+| 品牌风险 | 391 | HIGH |
+| AI幻觉 | 286 | HIGH |
 | SEO问题 | 72 | MEDIUM |
-| 中文残留 | 4 | HIGH |
+| 中文残留 | 5 | HIGH |
 
 ## 风险等级分布
 
 | 等级 | 数量 |
 | :--- | :--- |
-| HIGH | 667 |
-| MEDIUM | 578 |
+| HIGH | 682 |
+| MEDIUM | 580 |
 
 ## 各文章问题清单
 
@@ -47,14 +47,14 @@
 | 品牌风险 | 144-hour-visa-free-transit-guide.md:L171 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 144-hour-visa-free-transit-guide.md:L174 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 144-hour-visa-free-transit-guide.md:L273 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 '240-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'immigration'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 144-hour-visa-free-transit-guide.md:body | 动态事实关键词 '240-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 144-hour-visa-free-transit-guide.md:frontmatter:description | description 过长(174字>160)；精简 | yes |
 
 ### Chengdu Panda Base: See Pandas Like a Local (`2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c`)
@@ -66,12 +66,12 @@
 | AI幻觉 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L37 | 无来源数据: '80 RMB'；标注来源或移除 | no |
 | AI幻觉 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L43 | 无来源数据: '55 RMB'；标注来源或移除 | no |
 | 品牌风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L31 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L19 | 价格/时间/营业信息: '8:00 AM'；需注明更新日期 | no |
 | 事实风险 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:L19 | 价格/时间/营业信息: '8:00 AM'；需注明更新日期 | no |
 | SEO问题 | 2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md:body | 正文仅 1 个 H2 标题；建议增加小节以利 SEO | yes |
@@ -88,14 +88,14 @@
 | 品牌风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L96 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L109 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:L143 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-22-how-to-use-wechat-pay-as-a-foreigner.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 
 ### China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026) (`2026-05-25-china-high-speed-rail-how-to-book-tickets`)
 
@@ -115,14 +115,14 @@
 | 品牌风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L184 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L254 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:L258 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-05-25-china-high-speed-rail-how-to-book-tickets.md:frontmatter:title | 标题过长(74字>60)；建议精简含核心关键词 | yes |
 
 ### Shanghai 48-Hour: Bund & French Concession (`2026-05-25-shanghai-bund-french-concession-2-day-guide`)
@@ -137,14 +137,14 @@
 | 品牌风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L117 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L142 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:L142 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-25-shanghai-bund-french-concession-2-day-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 
 ### 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026 (`2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers`)
 
@@ -158,14 +158,14 @@
 | 品牌风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L82 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L102 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:L115 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 
 ### Hangzhou Travel Guide: West Lake & Tea (`2026-05-26-hangzhou-west-lake-tea-culture-g20-guide`)
 
@@ -180,14 +180,14 @@
 | 品牌风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L110 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L159 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:L161 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-hangzhou-west-lake-tea-culture-g20-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 
 ### Is China Safe for Tourists in 2026? Honest (`2026-05-26-is-china-safe-for-tourists-2026-honest-assessment`)
 
@@ -202,14 +202,14 @@
 | 品牌风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L21 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L85 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:L85 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-26-is-china-safe-for-tourists-2026-honest-assessment.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 
 ### Chinese Train Stations: Survival Guide for (`2026-05-27-how-to-survive-chinese-train-station`)
 
@@ -224,10 +224,10 @@
 | 品牌风险 | 2026-05-27-how-to-survive-chinese-train-station.md:L111 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-27-how-to-survive-chinese-train-station.md:L111 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-27-how-to-survive-chinese-train-station.md:L111 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:L68 | 价格/时间/营业信息: '2:00pm'；需注明更新日期 | no |
 | 事实风险 | 2026-05-27-how-to-survive-chinese-train-station.md:L68 | 价格/时间/营业信息: '2:00pm'；需注明更新日期 | no |
 
@@ -251,14 +251,14 @@
 | 品牌风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L155 | 第一人称/本地宣称: 'My'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L160 | 第一人称/本地宣称: 'My'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:L167 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-05-28-chinese-food-delivery-meituan-eleme-guide.md:frontmatter:title | 标题过长(81字>60)；建议精简含核心关键词 | yes |
 
 ### PayPal Supports Alipay & WeChat Pay QR (`2026-05-29-paypal-alipay-wechat-pay-qr-code-support`)
@@ -267,14 +267,14 @@
 | :--- | :--- | :--- | :--- |
 | 品牌风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:L102 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:L108 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-05-29-paypal-alipay-wechat-pay-qr-code-support.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
 
 ### China Tourist Visa Guide: How to Apply in 2026 (`2026-06-02-ultimate-guide-to-china-visa-for-tourists`)
 
@@ -288,14 +288,14 @@
 | 品牌风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L128 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L141 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:L149 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-02-ultimate-guide-to-china-visa-for-tourists.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 
 ### Great Wall of China: History & Hidden Secrets (`2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide`)
 
@@ -312,13 +312,13 @@
 | 品牌风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L58 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L58 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L60 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-19-the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide.md:L32 | 价格/时间/营业信息: '2026-05-26'；需注明更新日期 | no |
 
 ### Chinese Tea Culture: History & Types (`2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide`)
@@ -334,10 +334,10 @@
 | 品牌风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L55 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L65 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L105 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-chinese-tea-culture-history-types-and-tea-ceremony-guide.md:L111 | 价格/时间/营业信息: 'Monthly'；需注明更新日期 | no |
 
@@ -361,14 +361,14 @@
 | 品牌风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L40 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L49 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:L53 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-06-22-shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -384,11 +384,11 @@
 | 品牌风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L99 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L114 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L117 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md:L126 | 价格/时间/营业信息: 'Monthly'；需注明更新日期 | no |
 
 ###  (`2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips`)
@@ -408,14 +408,14 @@
 | 品牌风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L19 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L48 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:L142 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-06-30-xian-terracotta-army-history-discovery-and-insider-tips.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -438,25 +438,25 @@
 | 品牌风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L239 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L251 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:L255 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'ticket price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-07-01-chinabound-travel-guide-2026-07-monthly-update`)
 
 | 类型 | 位置 | 建议 | 可自动修复 |
 | :--- | :--- | :--- | :--- |
-| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:L4 | 价格/时间/营业信息: '02:44'；需注明更新日期 | no |
 | 事实风险 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | SEO问题 | 2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
@@ -480,9 +480,9 @@
 | 品牌风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L52 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L87 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-01-chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
@@ -503,14 +503,14 @@
 | 品牌风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L124 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L124 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:L136 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide`)
 
@@ -528,14 +528,14 @@
 | 品牌风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L151 | 第一人称/本地宣称: 'My'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L155 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:L155 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'law'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'restriction'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-02-wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -558,14 +558,14 @@
 | 品牌风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L171 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L173 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:L183 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-03-guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -578,14 +578,14 @@
 | 品牌风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L90 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L148 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:L159 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'opens'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-04-china-high-speed-train-survival-guide-booking-classes-and-insider-tips.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 
 ### Things To Do In Yunnan: Rice Terraces & (`2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide`)
 
@@ -607,14 +607,14 @@
 | 品牌风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L148 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L152 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:L158 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'opens'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers`)
 
@@ -636,14 +636,14 @@
 | 品牌风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L201 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L204 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:L222 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-06-a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -658,14 +658,14 @@
 | AI幻觉 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L45 | 无来源数据: '500 yuan'；标注来源或移除 | no |
 | 品牌风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:L38 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-07-navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -710,14 +710,14 @@
 | 品牌风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L97 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L102 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:L148 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-12-navigating-chinas-transportation-a-californians-guide-for-european-travelers.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -734,14 +734,14 @@
 | 品牌风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L84 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L108 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:L116 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-13-navigating-china-with-confidence-a-californians-guide-to-travel-safety.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -753,8 +753,8 @@
 | 品牌风险 | 2026-07-14-transportation-guide-guide.md:L38 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-14-transportation-guide-guide.md:L111 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 事实风险 | 2026-07-14-transportation-guide-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-14-transportation-guide-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-14-transportation-guide-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-14-transportation-guide-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-14-transportation-guide-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-14-transportation-guide-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-14-transportation-guide-guide.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
@@ -778,14 +778,14 @@
 | 品牌风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L116 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L194 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:L257 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-07-16-food-recommendations-guide`)
 
@@ -800,12 +800,12 @@
 | 品牌风险 | 2026-07-16-food-recommendations-guide.md:L77 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-food-recommendations-guide.md:L103 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-food-recommendations-guide.md:L112 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-food-recommendations-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-food-recommendations-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-16-food-recommendations-guide.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | SEO问题 | 2026-07-16-food-recommendations-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
@@ -824,14 +824,14 @@
 | 品牌风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L31 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L58 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:L130 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'legal'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-16-is-china-safe-for-tourists-2026-honest-safety-assessment.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-07-20-travel-safety-guide`)
 
@@ -853,14 +853,14 @@
 | 品牌风险 | 2026-07-20-travel-safety-guide.md:L160 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-20-travel-safety-guide.md:L250 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-20-travel-safety-guide.md:L320 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-20-travel-safety-guide.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-20-travel-safety-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-20-travel-safety-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -870,9 +870,11 @@
 | :--- | :--- | :--- | :--- |
 | AI幻觉 | 2026-07-21-cultural-etiquette-guide.md:L93 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-07-21-cultural-etiquette-guide.md:L111 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
+| AI幻觉 | 2026-07-21-cultural-etiquette-guide.md:L171 | 绝对化/无依据描述: 'always'；补充来源或弱化语气 | yes |
 | 品牌风险 | 2026-07-21-cultural-etiquette-guide.md:L91 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-21-cultural-etiquette-guide.md:L111 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-21-cultural-etiquette-guide.md:L143 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-07-21-cultural-etiquette-guide.md:L169 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
@@ -880,7 +882,7 @@
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:L5 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-21-cultural-etiquette-guide.md:L5 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
-| 事实风险 | 2026-07-21-cultural-etiquette-guide.md:L25 | 价格/时间/营业信息: '2026-07-21'；需注明更新日期 | no |
+| 事实风险 | 2026-07-21-cultural-etiquette-guide.md:L25 | 价格/时间/营业信息: '2026-10-14'；需注明更新日期 | no |
 | SEO问题 | 2026-07-21-cultural-etiquette-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-21-cultural-etiquette-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -894,8 +896,8 @@
 | 品牌风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L91 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L112 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L112 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | 事实风险 | 2026-07-23-foodies-guide-to-china-a-gastronomic-adventure.md:L5 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
@@ -919,14 +921,14 @@
 | 品牌风险 | 2026-07-27-accommodation-tips-guide.md:L79 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-27-accommodation-tips-guide.md:L81 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-27-accommodation-tips-guide.md:L160 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-27-accommodation-tips-guide.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-27-accommodation-tips-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-27-accommodation-tips-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -942,14 +944,14 @@
 | 品牌风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L61 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L70 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:L103 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-07-31-china-remote-work-guide-a-californians-5-year-chengdu-experience.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -962,19 +964,21 @@
 | AI幻觉 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L195 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L279 | 绝对化/无依据描述: 'Best'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L312 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
+| AI幻觉 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L355 | 绝对化/无依据描述: 'always'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L171 | 无来源数据: '14km'；标注来源或移除 | no |
 | 品牌风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L156 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L171 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L177 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L264 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 品牌风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:L353 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -997,13 +1001,13 @@
 | 品牌风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L96 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L194 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:L202 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
@@ -1024,13 +1028,13 @@
 | 品牌风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:L134 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:L135 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:L161 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-03-chinese-language-survival-phrases-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | SEO问题 | 2026-08-03-chinese-language-survival-phrases-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-03-chinese-language-survival-phrases-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
@@ -1048,14 +1052,14 @@
 | 品牌风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:L94 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:L103 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:L103 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-05-china-family-travel-tips-a-californians-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1074,13 +1078,13 @@
 | 品牌风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:L102 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:L107 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:L107 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-07-china-bargaining-and-shopping-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | SEO问题 | 2026-08-07-china-bargaining-and-shopping-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-07-china-bargaining-and-shopping-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
@@ -1095,14 +1099,14 @@
 | 品牌风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L64 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L69 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:L83 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1133,14 +1137,14 @@
 | 品牌风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L89 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L93 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:L95 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-10-shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 
 ### Chinese Tea Culture: Authentic Teahouses (`2026-08-11-chinese-tea-culture-where-to-experience-authentic-teahouses`)
 
@@ -1166,10 +1170,10 @@
 | AI幻觉 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L62 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L51 | 无来源数据: '8 km'；标注来源或移除 | no |
 | 品牌风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L80 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-08-12-china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide.md:L4 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
@@ -1190,14 +1194,14 @@
 | 品牌风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L119 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L121 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:L150 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-30-china-business-travel-guide-meetings-dining-and-networking.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide`)
 
@@ -1218,14 +1222,14 @@
 | 品牌风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:L54 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:L64 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:L93 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1235,13 +1239,13 @@
 | :--- | :--- | :--- | :--- |
 | AI幻觉 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:L38 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
 | AI幻觉 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:L36 | 无来源数据: '50,'；标注来源或移除 | no |
-| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md:L44 | 价格/时间/营业信息: 'Month'；需注明更新日期 | no |
 
 ### Alipay vs WeChat Pay: Which Payment App (`2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026`)
@@ -1263,14 +1267,14 @@
 | 品牌风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:L297 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:L301 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:L304 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-alipay-vs-wechat-pay-which-tourists-should-use-china-2026.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
 
 ###  (`2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips`)
 
@@ -1293,14 +1297,14 @@
 | 品牌风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:L344 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:L348 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:L352 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'legal'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'immigration'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 '240-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1325,15 +1329,33 @@
 | 品牌风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:L128 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:L142 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'charge'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'open'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:body | 动态事实关键词 'prices'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:L3 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:L3 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | 事实风险 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | SEO问题 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
+
+### Kung Fu and Martial Arts in China: Where to See and Train (`2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train`)
+
+| 类型 | 位置 | 建议 | 可自动修复 |
+| :--- | :--- | :--- | :--- |
+| 中文残留 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L58 | 正文含中文字符，国际读者无法理解；翻译为英文或移除 | yes |
+| AI幻觉 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L14 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
+| AI幻觉 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L58 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
+| AI幻觉 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L103 | 绝对化/无依据描述: 'Best'；补充来源或弱化语气 | yes |
+| AI幻觉 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L103 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L11 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L58 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L97 | 第一人称/本地宣称: 'Insider'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L100 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L106 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
+| 品牌风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:L106 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
+| 事实风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 
 ###  (`alipay-for-foreigners-guide`)
 
@@ -1346,14 +1368,14 @@
 | 品牌风险 | alipay-for-foreigners-guide.md:L157 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | alipay-for-foreigners-guide.md:L169 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | alipay-for-foreigners-guide.md:L201 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'restriction'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-for-foreigners-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | alipay-for-foreigners-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | alipay-for-foreigners-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1365,14 +1387,14 @@
 | AI幻觉 | alipay-wechat-pay-foreigners-guide.md:L183 | 绝对化/无依据描述: 'best'；补充来源或弱化语气 | yes |
 | 品牌风险 | alipay-wechat-pay-foreigners-guide.md:L14 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | alipay-wechat-pay-foreigners-guide.md:L73 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
-| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'fees'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | alipay-wechat-pay-foreigners-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | alipay-wechat-pay-foreigners-guide.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | alipay-wechat-pay-foreigners-guide.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1396,11 +1418,11 @@
 | 品牌风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L65 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L70 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L82 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L3 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L3 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | 事实风险 | best-china-itineraries-for-10-days-three-routes-compared.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
@@ -1427,13 +1449,13 @@
 | 品牌风险 | best-travel-insurance-china.md:L124 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | best-travel-insurance-china.md:L137 | 第一人称/本地宣称: 'My'；改用编辑部口吻 | yes |
 | 品牌风险 | best-travel-insurance-china.md:L137 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | best-travel-insurance-china.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | best-travel-insurance-china.md:L145 | 价格/时间/营业信息: 'Monthly'；需注明更新日期 | no |
 
 ### China Airport Transfer Guide (2026) (`china-airport-transfer-guide`)
@@ -1443,14 +1465,14 @@
 | AI幻觉 | china-airport-transfer-guide.md:L36 | 绝对化/无依据描述: 'Best'；补充来源或弱化语气 | yes |
 | 品牌风险 | china-airport-transfer-guide.md:L121 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | china-airport-transfer-guide.md:L143 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'fare'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-airport-transfer-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 
 ###  (`china-extends-144-hour-visa-free-transit-policy-to-more-countries`)
 
@@ -1466,14 +1488,14 @@
 | 品牌风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L131 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L134 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:L134 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
-| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'immigration'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'rules'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'fee'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | SEO问题 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:frontmatter:title | 标题过短(0字<20)；补充长尾关键词 | yes |
 | SEO问题 | china-extends-144-hour-visa-free-transit-policy-to-more-countries.md:frontmatter:description | 缺少 meta description；补充 120-160 字符描述 | yes |
 
@@ -1489,11 +1511,11 @@
 | 品牌风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L126 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L126 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L128 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L2 | 价格/时间/营业信息: 'Friends'；需注明更新日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L3 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | china-solo-travel-guide-safety-hostels-and-making-friends.md:L3 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
@@ -1511,14 +1533,14 @@
 | 品牌风险 | china-transportation-card-guide.md:L115 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
 | 品牌风险 | china-transportation-card-guide.md:L121 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | china-transportation-card-guide.md:L124 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'opens'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'costs'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'opens'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | china-transportation-card-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 
 ### Internet in China: eSIM vs SIM vs VPN (2026) (`internet-connection-china-esim-vpn-guide`)
 
@@ -1540,14 +1562,14 @@
 | 品牌风险 | internet-connection-china-esim-vpn-guide.md:L57 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
 | 品牌风险 | internet-connection-china-esim-vpn-guide.md:L59 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | internet-connection-china-esim-vpn-guide.md:L72 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
-| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'price'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'charges'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | internet-connection-china-esim-vpn-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
 
 ###  (`kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide`)
 
@@ -1564,10 +1586,10 @@
 | 品牌风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L88 | 第一人称/本地宣称: 'insider'；改用编辑部口吻 | yes |
 | 品牌风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L92 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L92 | 第一人称/本地宣称: 'local'；改用编辑部口吻 | yes |
-| 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L3 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
 | 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L3 | 价格/时间/营业信息: '08:00'；需注明更新日期 | no |
 | 事实风险 | kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md:L4 | 价格/时间/营业信息: '00:00'；需注明更新日期 | no |
@@ -1595,11 +1617,11 @@
 | 品牌风险 | western-sichuan-overland-camping-route.md:L180 | 第一人称/本地宣称: 'Local'；改用编辑部口吻 | yes |
 | 品牌风险 | western-sichuan-overland-camping-route.md:L184 | 第一人称/本地宣称: 'my'；改用编辑部口吻 | yes |
 | 品牌风险 | western-sichuan-overland-camping-route.md:L198 | 第一人称/本地宣称: 'I'；改用编辑部口吻 | yes |
-| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'hours'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'visa'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
-| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'policy'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'passport'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'cost'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'transit'：需核对最新官方信息并注明日期 | no |
 | 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 'high-speed rail'：需核对最新官方信息并注明日期 | no |
+| 事实风险 | western-sichuan-overland-camping-route.md:body | 动态事实关键词 '144-hour'：需核对最新官方信息并注明日期 | no |
