@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-18T05:39:07",
+  "updated_at": "2026-10-18T16:26:22",
   "items": [
     {
       "id": "soc-000001",
@@ -212,8 +212,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1754,8 +1754,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2748,8 +2748,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6670,8 +6670,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260917"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6754,8 +6754,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-18",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
