@@ -122,7 +122,7 @@ jobs:
           DOUBAO_ARK_API_KEY: ${{ secrets.DOUBAO_ARK_API_KEY }}
           ARK_IMAGE_MODEL: ${{ vars.ARK_IMAGE_MODEL || '' }}
         run: |
-          echo "=== 为资产库素材生成独立配图（后端：Ark Seedream → pollinations）==="
+          echo "=== 为资产库素材生成独立配图（后端：Agnes AI → Ark Seedream）==="
           python scripts/social_content_agent.py gen-images --limit 5 || \
             echo "::warning::文生图未完成（限流/服务不可用），沿用文章封面继续发布"
 

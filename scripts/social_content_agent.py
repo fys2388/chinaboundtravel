@@ -771,57 +771,15 @@ def _gen_via_ark(prompt: str, out_path: Path) -> bool:
         out_path.write_bytes(img.content)
         return out_path.stat().st_size > 1000
     except Exception as e:
-        logger.warning("Ark 文生图失败（降级 pollinations）: %s", str(e)[:120])
+        logger.warning("Ark 文生图失败（无可用后端）: %s", str(e)[:120])
         return False
-
-
-def _gen_via_pollinations(prompt: str, out_path: Path, platform: str) -> bool:
-    """兜底：pollinations flux 文生图（免费可用），下载后本地托管（消除外部 URL 依赖）。
-
-    免费匿名额度约 1 张/分钟 → 内置 429 退避重试（45s/90s/120s），
-    按额度自动节流，避免批量生成被限流打爆而丢图。
-    """
-    w, h = 1024, 1024
-    if platform == "ig":
-        w, h = 1024, 1280   # 4:5
-    elif platform == "pinterest":
-        w, h = 1024, 1536   # 2:3
-    elif platform in ("x", "fb"):
-        w, h = 1536, 864    # 16:9
-    negative = ("blurry, distorted, deformed, ugly, disfigured, malformed, extra limbs, "
-                "bad anatomy, low quality, watermark, text, words, letters, logo, person, "
-                "people, face, portrait, human, figure, crowd, man, woman, child, "
-                "night market, food stall, red lantern, lantern, cinematic, moody, dark, "
-                "atmospheric, dramatic lighting, illustration, painting, digital art, "
-                "concept art, AI art, stylized, artistic")
-    url = (f"https://image.pollinations.ai/prompt/{requests.utils.quote(prompt)}"
-           f"?width={w}&height={h}&nologo=true&model=flux&token=anonymous"
-           f"&negative={requests.utils.quote(negative)}")
-    for attempt in range(4):
-        try:
-            r = requests.get(url, timeout=120)
-            if r.status_code == 429:
-                wait = (45, 90, 120, 180)[attempt]
-                logger.warning("pollinations 429 限流，等待 %ss 重试 (%d/3)...", wait, attempt + 1)
-                time.sleep(wait)
-                continue
-            r.raise_for_status()
-            if "image" not in r.headers.get("content-type", "").lower():
-                return False
-            out_path.write_bytes(r.content)
-            return out_path.stat().st_size > 1000
-        except Exception as e:
-            logger.warning("pollinations 文生图失败: %s", str(e)[:120])
-            return False
-    logger.warning("pollinations 多次限流仍失败，跳过该图")
-    return False
 
 
 def generate_image(item: dict, path: Path) -> str:
     """真实文生图：为单条帖子生成独立配图并本地托管到 static/img/china-dest/social/。
 
     后端链：Agnes AI（首选，需 AGNES_API_KEY）→ Ark Seedream（次选，需 ARK_IMAGE_MODEL）
-    → pollinations flux（兜底）→ 空串。
+    → 空串（调用方回退文章封面）。
     返回站点绝对 URL；未生成返回 ""（调用方回退文章封面）。需 IMAGE_GEN_ENABLED=1。
     文件名含 slug/platform/type/prompt 摘要 → 同文同平台同类型也互不重复。
     """
@@ -841,8 +799,7 @@ def generate_image(item: dict, path: Path) -> str:
     if out_path.exists() and out_path.stat().st_size > 1000:
         return _site_img_url(str(out_path))
     if not (_gen_via_agnes(prompt, out_path)
-            or _gen_via_ark(prompt, out_path)
-            or _gen_via_pollinations(prompt, out_path, item.get("platform", "ig"))):
+            or _gen_via_ark(prompt, out_path)):
         try:
             out_path.unlink()
         except Exception:
