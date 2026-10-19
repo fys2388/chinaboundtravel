@@ -318,3 +318,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
+- [Is China Safe in 2026? Honest Guide](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)

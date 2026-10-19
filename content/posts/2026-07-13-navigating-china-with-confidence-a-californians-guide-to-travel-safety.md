@@ -1,6 +1,6 @@
 ﻿---
 content_id: "cbt-57d0b0208d3b"
-title: "Is China Safe in 2026? Honest Guide"
+title: "Is China Safe in 2026? Honest Guide (Còn Trung Quốc)"
 date: "2026-07-13T10:00:00+08:00"
 lastmod: "2026-07-13T10:00:00+08:00"
 author: "Joran"
@@ -21,7 +21,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/navigating-china-with-confidence-a-californians-guide-to-travel-safety.jpg"
 categories: ["safety", "travel"]
-last_updated: "2026-07-13"
+last_updated: "2026-10-19"
 
 ---
 ## Navigating China with Confidence: A Californian's Guide to Travel Safety

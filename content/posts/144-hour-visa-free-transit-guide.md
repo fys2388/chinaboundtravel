@@ -288,6 +288,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [Is China Safe in 2026? Honest Guide](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?
