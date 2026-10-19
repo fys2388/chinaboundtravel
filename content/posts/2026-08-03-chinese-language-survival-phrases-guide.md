@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-cfd5d7b39f09"
 title: "Chinese Language Survival Phrases Guide 2026"
 date: "2026-08-03T10:00:00+08:00"

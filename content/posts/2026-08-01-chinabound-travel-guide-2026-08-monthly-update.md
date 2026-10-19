@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-80ac63165adb"
 title: "Travel To China Requirements 2026: August"
 date: 2026-08-01T08:29:34+00:00

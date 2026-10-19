@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-d7747b73c978"
 
 title: "Xi'an Terracotta Army: Tickets & History"

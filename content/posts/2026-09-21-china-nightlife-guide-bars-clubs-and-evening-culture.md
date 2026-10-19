@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China Nightlife Guide: Bars, Clubs, and Evening Culture"
 date: "2026-09-21T10:00:00+08:00"
 lastmod: "2026-09-21T10:00:00+08:00"

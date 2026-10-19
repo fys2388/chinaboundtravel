@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China Travel Etiquette: Tipping & Photos"
 date: "2026-08-31T10:00:00+08:00"
 lastmod: "2026-08-31T11:50:36+08:00"

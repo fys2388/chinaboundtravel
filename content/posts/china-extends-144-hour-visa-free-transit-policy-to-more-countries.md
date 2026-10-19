@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-244822dc113b"
 title: "144-Hour Validation Program 2026: New Countries"
 author: Joran

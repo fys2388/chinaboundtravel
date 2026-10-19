@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-52a577c1b2b8"
 title: "China Transportation Guide for European (2026 Guide)"
 date: "2026-07-12T10:00:00+08:00"

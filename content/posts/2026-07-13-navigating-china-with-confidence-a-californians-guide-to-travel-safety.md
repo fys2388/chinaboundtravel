@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-57d0b0208d3b"
 title: "Is China Safe in 2026? Honest Guide (Còn Trung Quốc)"
 date: "2026-07-13T10:00:00+08:00"

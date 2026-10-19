@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-255af4ed003a"
 title: "WeChat Pay Setup Guide for Foreigners (2026)"
 date: "2026-07-02T10:00:00+08:00"

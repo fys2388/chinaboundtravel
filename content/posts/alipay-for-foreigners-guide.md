@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-0adceab18b53"
 title: "Alipay in China: Setup & Payment Tips (2026)"
 date: 2026-08-16

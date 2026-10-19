@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-1005a037234b"
 title: "China Food Guide for European Travelers"
 date: "2026-07-06T10:00:00+08:00"

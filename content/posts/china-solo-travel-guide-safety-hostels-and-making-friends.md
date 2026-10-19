@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China Solo Travel Guide: Safety, Hostels, and Making Friends"
 date: "2026-10-04T10:00:00+08:00"
 lastmod: "2026-10-04T10:00:00+08:00"

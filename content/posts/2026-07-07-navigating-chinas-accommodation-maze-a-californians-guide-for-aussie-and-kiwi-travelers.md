@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-9e2f5ffa1b6d"
 title: "Accommodation In China: Hotels & Budget"
 date: "2026-07-07T10:00:00+08:00"

@@ -1,4 +1,4 @@
-﻿---
+---
 content_id: "cbt-663ab3f3b0fa"
 
 title: "Shanghai Beyond the Bund: Hidden"

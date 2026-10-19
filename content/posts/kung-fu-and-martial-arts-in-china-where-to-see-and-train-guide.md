@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Kung Fu And Martial Arts In China: Where To See And Train Guide"
 date: "2026-10-04T10:00:00+08:00"
 lastmod: "2026-10-04T10:00:00+08:00"
