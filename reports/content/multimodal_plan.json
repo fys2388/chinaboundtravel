@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T04:48:46.417082",
+  "generated_at": "2026-10-19T03:41:53.504872",
   "total_recommendations": 29,
   "type_distribution": {
     "infographic": 23,
@@ -267,6 +267,17 @@
       "creation_complexity": "high"
     },
     {
+      "id": "mm_content_paypal-alipay-wechat_0",
+      "content_id": "content_paypal-alipay-wechat",
+      "content_title": "PayPal Supports Alipay & WeChat Pay QR",
+      "media_type": "infographic",
+      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
+      "purpose": "seo + engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
       "id": "mm_content_china-high-speed-rai_0",
       "content_id": "content_china-high-speed-rai",
       "content_title": "China High-Speed Rail: Complete Ticket Booking Gui",
@@ -283,17 +294,6 @@
       "content_title": "China High-Speed Rail: Complete Ticket Booking Gui",
       "media_type": "infographic",
       "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
-      "purpose": "seo + engagement",
-      "priority": "medium",
-      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_paypal-alipay-wechat_0",
-      "content_id": "content_paypal-alipay-wechat",
-      "content_title": "PayPal Supports Alipay & WeChat Pay QR",
-      "media_type": "infographic",
-      "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
       "purpose": "seo + engagement",
       "priority": "medium",
       "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
