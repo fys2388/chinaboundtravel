@@ -45,14 +45,16 @@ jobs:
         run: |
           # 退出非零只表示「有端点失败」，是审计结果不是流水线故障：
           # 一个真的挂掉的端点不应该把报告提交也一并取消。
-          python scripts/api_health_audit.py; echo "api_audit_exit=$?"
+          timeout 180 python scripts/api_health_audit.py || echo "api_audit_exit=$?"
+          echo "api_audit_exit=$?"
 
       - name: Run subscription health audit
         env:
           MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          python scripts/subscription_health_audit.py; echo "sub_audit_exit=$?"
+          timeout 120 python scripts/subscription_health_audit.py || echo "sub_audit_exit=$?"
+          echo "sub_audit_exit=$?"
 
       - name: Summarize
         if: always()

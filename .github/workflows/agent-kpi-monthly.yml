@@ -20,7 +20,12 @@ on:
 jobs:
   agent-kpi-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 15 分钟不够：营收采集(GA4/Stripe/Travelpayouts 网络调用) + KPI 考核(多源)会耗尽配额，
+    # 导致后面的 Generate Agent Growth Data 步骤根本执行不到。
+    # 实证：2026-10-01 提交 76f57b33 只含 4 个 KPI 文件、零 growth 文件，
+    # 而 export_growth_dashboard 每次写新 updated_at → growth 步骤那次确实没跑。
+    # ops-dashboard/agent_growth_data.json 因此自 09-17 起停摆 31 天。
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
@@ -36,7 +41,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          # revenue_data_collector 需要 stripe / google-analytics-data / google-auth，
+          # 之前只装 requests → 采集器里两个数据源直接 ImportError（"stripe 未安装" /
+          # "google-analytics-data 未安装"），GA4 与 Stripe 营收在 CI 里恒为空。
+          pip install requests stripe google-analytics-data google-auth
 
       - name: Run Agent KPI Audit (营收导向)
         id: kpi_audit
@@ -161,6 +169,11 @@ jobs:
           git add ops-dashboard/agent_growth_data.json static/ops/agent_kpi_data.json static/ops/agent_growth_data.json 2>/dev/null || true
           git add reports/agent_kpi/ 2>/dev/null || true
           git add reports/agent_growth/ 2>/dev/null || true
+          # 关键修复：reports/revenue_data/ 此前从未被提交。
+          # 采集器每次在 CI 里生成 revenue_data_YYYYMMDD.json，但因为不在 git add 清单里，
+          # 下次 run 的干净 checkout 里该目录为空 → load_real_revenue_data() 恒返回 {}
+          # → 营收 KPI 一直吃 70 分占位分。加进来才能让真实营收数据进入 KPI 考核。
+          git add reports/revenue_data/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无 KPI 结果变更"
           else

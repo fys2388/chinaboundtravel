@@ -1,17 +1,17 @@
 {
   "kpi_version": "1.0",
-  "audit_time": "2026-10-01T08:17:19.332697",
+  "audit_time": "2026-10-19T20:49:31.033557",
   "month": "2026-10",
   "north_star": "revenue_growth",
   "summary": {
     "agent_count": 7,
-    "avg_score": 62.8,
+    "avg_score": 70.8,
     "grade_distribution": {
       "S": 0,
-      "A": 0,
-      "B": 2,
-      "C": 1,
-      "D": 4
+      "A": 1,
+      "B": 3,
+      "C": 2,
+      "D": 1
     }
   },
   "agents": [
@@ -108,12 +108,12 @@
       "name_cn": "内容 Agent",
       "emoji": "📝",
       "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑",
-      "score": 55.5,
-      "grade": "D",
-      "grade_label": "不合格",
-      "bonus": "-30%绩效",
-      "color": "#e74c3c",
-      "action": "红牌，连续2月D级则Agent流程重构，负责人问责",
+      "score": 74.5,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
+      "action": "维持，关注薄弱项",
       "measured_kpis": 4,
       "total_kpis": 7,
       "data_coverage_weight": 0.5,
@@ -127,9 +127,9 @@
           "type": "revenue",
           "unit": "pct",
           "source": "GA4/GSC",
-          "score": 0.0,
+          "score": 95.0,
           "status": "measured",
-          "actual": -38.53
+          "actual": 83.85
         },
         {
           "id": "content_driven_revenue",
@@ -163,7 +163,7 @@
           "source": "content_coverage_audit",
           "score": 95.0,
           "status": "measured",
-          "actual": 1928.9
+          "actual": 2026.6
         },
         {
           "id": "top10_keywords",
@@ -207,16 +207,16 @@
       "name_cn": "SEO Agent",
       "emoji": "🔍",
       "revenue_chain": "搜索排名↑/索引覆盖率↑ → 自然流量↑ → 联盟点击↑ → 营收↑",
-      "score": 54.0,
-      "grade": "D",
-      "grade_label": "不合格",
-      "bonus": "-30%绩效",
-      "color": "#e74c3c",
-      "action": "红牌，连续2月D级则Agent流程重构，负责人问责",
-      "measured_kpis": 3,
+      "score": 72.2,
+      "grade": "B",
+      "grade_label": "合格",
+      "bonus": "0%",
+      "color": "#f39c12",
+      "action": "维持，关注薄弱项",
+      "measured_kpis": 5,
       "total_kpis": 7,
-      "data_coverage_weight": 0.45,
-      "score_ceiling": 83.5,
+      "data_coverage_weight": 0.65,
+      "score_ceiling": 89.5,
       "kpi_results": [
         {
           "id": "organic_traffic_seo",
@@ -226,9 +226,9 @@
           "type": "revenue",
           "unit": "pct",
           "source": "GA4/GSC",
-          "score": 0.0,
+          "score": 95.0,
           "status": "measured",
-          "actual": -38.53
+          "actual": 83.85
         },
         {
           "id": "seo_driven_revenue",
@@ -262,9 +262,9 @@
           "type": "process",
           "unit": "pct",
           "source": "GSC",
-          "score": 95.0,
+          "score": 0.0,
           "status": "measured",
-          "actual": 43.25
+          "actual": -53.02
         },
         {
           "id": "internal_link_health",
@@ -285,9 +285,9 @@
           "target": "100%",
           "type": "quality",
           "source": "site_health_audit",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 41.0,
+          "status": "measured",
+          "actual": 61.0
         },
         {
           "id": "canonical_consistency",
@@ -296,9 +296,9 @@
           "target": "100%",
           "type": "quality",
           "source": "fix_canonical_urls",
-          "score": 50.0,
-          "status": "no_data",
-          "actual": null
+          "score": 98.8,
+          "status": "measured",
+          "actual": 98.8
         }
       ]
     },
@@ -308,12 +308,12 @@
       "name_cn": "社媒 Agent",
       "emoji": "📱",
       "revenue_chain": "社媒内容→品牌曝光↑/推荐流量↑ → 直接访问↑ → 联盟点击/eBook购买↑",
-      "score": 73.2,
-      "grade": "B",
-      "grade_label": "合格",
-      "bonus": "0%",
-      "color": "#f39c12",
-      "action": "维持，关注薄弱项",
+      "score": 80.1,
+      "grade": "A",
+      "grade_label": "优秀",
+      "bonus": "+10%绩效",
+      "color": "#2e86de",
+      "action": "保持，分享经验",
       "measured_kpis": 4,
       "total_kpis": 7,
       "data_coverage_weight": 0.4,
@@ -350,9 +350,9 @@
           "type": "process",
           "unit": "pct",
           "source": "social_reports",
-          "score": 85.7,
+          "score": 88.9,
           "status": "measured",
-          "actual": 85.7
+          "actual": 88.9
         },
         {
           "id": "engagement_rate",
@@ -362,9 +362,9 @@
           "type": "process",
           "unit": "ratio",
           "source": "各平台后台",
-          "score": 30.0,
+          "score": 95.0,
           "status": "measured",
-          "actual": 0.0
+          "actual": 84.6
         },
         {
           "id": "follower_growth",
@@ -385,9 +385,9 @@
           "target": "100%",
           "type": "quality",
           "source": "social_image_validator",
-          "score": 96.5,
+          "score": 97.0,
           "status": "measured",
-          "actual": 96.5
+          "actual": 97.0
         },
         {
           "id": "brand_consistency",
@@ -408,12 +408,12 @@
       "name_cn": "用户增长 Agent",
       "emoji": "👥",
       "revenue_chain": "邮件列表↑/转化率↑ → eBook销售↑/复购↑/联盟推荐↑ → 营收↑",
-      "score": 59.0,
-      "grade": "D",
-      "grade_label": "不合格",
-      "bonus": "-30%绩效",
-      "color": "#e74c3c",
-      "action": "红牌，连续2月D级则Agent流程重构，负责人问责",
+      "score": 69.0,
+      "grade": "C",
+      "grade_label": "待改进",
+      "bonus": "-10%绩效",
+      "color": "#e67e22",
+      "action": "黄牌警告，制定改进计划，1月内复查",
       "measured_kpis": 3,
       "total_kpis": 7,
       "data_coverage_weight": 0.3,
@@ -452,7 +452,7 @@
           "source": "MailerLite API",
           "score": 0.0,
           "status": "measured",
-          "actual": -66.67
+          "actual": -33.33
         },
         {
           "id": "lead_magnet_download",
@@ -484,9 +484,9 @@
           "target": "≥99%",
           "type": "quality",
           "source": "api_health_audit",
-          "score": 0.0,
+          "score": 100.0,
           "status": "measured",
-          "actual": 0.0
+          "actual": 100.0
         },
         {
           "id": "gdpr_compliance",
@@ -507,7 +507,7 @@
       "name_cn": "运维 Agent",
       "emoji": "⚙️",
       "revenue_chain": "网站可用性↑/性能↑ → 用户体验↑/留存↑ → 长期营收↑/SEO排名↑(Core Web Vitals)",
-      "score": 73.0,
+      "score": 79.0,
       "grade": "B",
       "grade_label": "合格",
       "bonus": "0%",
@@ -583,9 +583,9 @@
           "target": "100%",
           "type": "quality",
           "source": "site_health_audit",
-          "score": 40.0,
+          "score": 100.0,
           "status": "measured",
-          "actual": 60.0
+          "actual": 100.0
         },
         {
           "id": "ci_block_rate",
@@ -606,7 +606,7 @@
       "name_cn": "数据 Agent",
       "emoji": "📊",
       "revenue_chain": "数据准确性↑/洞察及时性↑ → 决策质量↑ → 各Agent优化效率↑ → 间接营收↑",
-      "score": 66.6,
+      "score": 62.0,
       "grade": "C",
       "grade_label": "待改进",
       "bonus": "-10%绩效",
@@ -647,9 +647,9 @@
           "type": "process",
           "unit": "pct",
           "source": "feishu报告记录",
-          "score": 100.0,
+          "score": 50.0,
           "status": "measured",
-          "actual": 100.0
+          "actual": 50.0
         },
         {
           "id": "data_accuracy",
@@ -693,9 +693,9 @@
           "target": "100%",
           "type": "quality",
           "source": "agent_kpi_auditor",
-          "score": 25.8,
+          "score": 30.0,
           "status": "measured",
-          "actual": 45.8
+          "actual": 50.0
         }
       ]
     }

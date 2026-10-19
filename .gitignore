@@ -15,10 +15,15 @@ node_modules/
 /static/generated_images/
 
 # Logs
-
+# Autonomous Agent 的运行日志例外保留入库：
+# scripts/agent_core.py 每次 run() 会 log.info 每一步的 STEP/RESULT，
+# 这是事后复盘「Agent 到底做了什么」的唯一依据。之前 *.log 一刀切忽略，
+# CI runner 上的日志随 job 结束即丢弃，reports/agent/ 只剩 memory/insights 结果、
+# 没有过程，出问题时无法定位。日志每天一个文件、每份几 KB，不会撑爆仓库。
+*.log
+!reports/agent/logs/*.log
 # Content trust fix backups (local rollback only, not committed)
 /reports/content_trust_fix/backup/
-*.log
 
 # Python
 __pycache__/
@@ -35,7 +40,7 @@ Thumbs.db
 reports/quality/screenshots/
 # 测试回归闸门的 junit 输出，每次运行重新生成（~170KB）
 reports/quality/pytest_junit.xml
-# 浣?Lead Magnet PDF 闇€閮ㄧ讲鍒扮珯鐐癸紝淇濈暀 static/lead-magnet/ 涓嬬殑 PDF
+# 注意：Lead Magnet PDF 需部署到站点，保留 static/lead-magnet/ 下的 PDF
 !static/lead-magnet/*.pdf
 
 # Temporary scripts

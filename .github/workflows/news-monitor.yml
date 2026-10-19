@@ -56,7 +56,8 @@ jobs:
           DRY="${{ github.event.inputs.dry_run || 'false' }}"
           FLAGS=""
           if [ "$DRY" = "true" ]; then FLAGS="--dry-run"; fi
-          python scripts/news_monitor.py --count "$COUNT" --sources "$SOURCES" $FLAGS
+          # 网络调用在 CI 中可能超时，失败不阻断提交（digest.json 如有残留则仍可提交）
+          python scripts/news_monitor.py --count "$COUNT" --sources "$SOURCES" $FLAGS || echo "⚠️ news_monitor failed (network?), continuing with existing digest"
 
       - name: Commit news digest
         run: |

@@ -57,7 +57,8 @@ jobs:
           DRY="${{ github.event.inputs.dry_run || 'false' }}"
           FLAGS=""
           if [ "$DRY" = "true" ]; then FLAGS="--dry-run"; fi
-          python scripts/news_social_poster.py --count "$COUNT" --categories "$CATS" $FLAGS
+          # 网络/Worker 调用可能失败，不阻断整个 workflow
+          python scripts/news_social_poster.py --count "$COUNT" --categories "$CATS" $FLAGS || echo "⚠️ news_social_poster failed, manifest still committed"
 
       - name: Commit manifest
         run: |

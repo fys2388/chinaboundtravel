@@ -28,6 +28,7 @@ news_social_poster.py — 将实时新闻 / 行业动态 / 政策更新转化为
 import argparse
 import json
 import os
+import random
 import re
 import sys
 import hashlib
@@ -270,6 +271,37 @@ def record_post(manifest: dict, news_hash: str, title: str, platforms: list, suc
 
 
 # ══════════════════════════════════════════════════════════════════════
+# 图片选择（buffer-worker 要求 /img/china-dest/ 路径）
+# ══════════════════════════════════════════════════════════════════════
+
+_CHINA_DEST_SOCIAL_DIR = BLOG_ROOT / "static" / "img" / "china-dest" / "social"
+
+
+def _pick_random_china_dest_image() -> str:
+    """从已有 china-dest/social 图片池中随机选一张返回绝对 URL。
+
+    buffer-worker 的 ALLOWED_IMAGE_PATH = '/img/china-dest/'，拒绝
+    /img/og-default.jpg 等不在该路径下的图片。新闻条目没有自然配图，
+    从图片池随机取一张做封面以保证提交成功。
+
+    Hugo 部署时会把 static/ 前缀剥掉，所以静态文件
+    static/img/china-dest/social/foo.jpg 在站点上访问路径为
+    /img/china-dest/social/foo.jpg。
+    """
+    if not _CHINA_DEST_SOCIAL_DIR.exists():
+        return ""
+    files = list(_CHINA_DEST_SOCIAL_DIR.glob("*.jpg")) + list(_CHINA_DEST_SOCIAL_DIR.glob("*.jpeg"))
+    if not files:
+        return ""
+    chosen = random.choice(files)
+    # Hugo 去掉 static/ 前缀：static/img/china-dest/... → /img/china-dest/...
+    rel = str(chosen.relative_to(BLOG_ROOT)).replace("\\", "/")
+    if rel.startswith("static/"):
+        rel = rel[len("static/"):]
+    return f"https://www.{SITE_DOMAIN}/{rel}"
+
+
+# ══════════════════════════════════════════════════════════════════════
 # 文案生成
 # ══════════════════════════════════════════════════════════════════════
 
@@ -333,8 +365,10 @@ def generate_social_copy(item: dict, category: str) -> dict:
     insight_lines.append(f"\n{hashtags} #TravelChina #VisitChina")
     insight_text = "\n".join(insight_lines)
 
-    # 图片：使用默认 OG 图
-    image_url = f"{BASE_URL}/img/og-default.jpg"
+    # 图片：buffer-worker 要求路径必须以 /img/china-dest/ 开头。
+    # 新闻条目没有自然配图，从已有 china-dest/social 图片池随机取一张做封面。
+    # 避免使用 /img/og-default.jpg（不在 china-dest/ 下，被 worker 拒绝）。
+    image_url = _pick_random_china_dest_image()
 
     return {
         "title": title,

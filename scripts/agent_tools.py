@@ -14,7 +14,7 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 # 项目路径
 BLOG_ROOT = Path(__file__).resolve().parent.parent
@@ -243,8 +243,21 @@ def tool_get_date() -> Dict[str, Any]:
 # 工具注册
 # ══════════════════════════════════════════════════════════════════════
 
-def create_default_tools() -> ToolRegistry:
-    """创建并注册所有默认工具。"""
+def create_default_tools(agent_name: Optional[str] = None) -> ToolRegistry:
+    """创建并注册所有默认工具。
+
+    agent_name: 该工具集所属 agent 在 config/ai_governance.json 里的**治理注册名**
+    （如 "social" / "seo" / "content"）。传入后 check_governance / read_memory /
+    read_insights / generate_insight 会自动绑定这个名字，LLM 无法再自行填 agent_name。
+
+    为什么要绑定：实测 reports/agent/memory_social.json 里 social agent 调用的是
+    `check_governance(agent_name="social_media_optimizer", ...)`——一个 ai_governance.json
+    里根本没注册的虚构名（注册名是 "social"）。LLM 自填 agent_name 有两个后果：
+      1) check_permission 对未注册名返回 AGENT_NOT_REGISTERED，闸门形同虚设；
+      2) LLM 在推理文本里直接写出 `RESULT: {"permitted": true, ...}` 伪造返回结果
+         （该返回形状在 tool_check_governance 里根本不存在），于是把「权限检查」
+         当成已通过的证据继续推进。绑定注册名后这两条路径都被关掉。
+    """
     registry = ToolRegistry()
 
     registry.register(
@@ -289,12 +302,57 @@ def create_default_tools() -> ToolRegistry:
         tool_list_agents,
     )
 
-    registry.register(
-        "check_governance",
-        "Check if an agent is permitted to perform an action.",
-        {"agent_name": "str", "action": "str"},
-        tool_check_governance,
-    )
+    # 治理/记忆/经验类工具：传入 agent_name 时绑定注册名，否则退化为自填参数
+    if agent_name:
+        registry.register(
+            "check_governance",
+            "Check if THIS agent is permitted to perform an action.",
+            {"action": "str"},
+            lambda action: tool_check_governance(agent_name, action),
+        )
+        registry.register(
+            "read_memory",
+            "Read this agent's long-term memory (past experiences).",
+            {},
+            lambda: tool_read_memory(agent_name),
+        )
+        registry.register(
+            "read_insights",
+            "Read this agent's learned insights/knowledge.",
+            {},
+            lambda: tool_read_insights(agent_name),
+        )
+        registry.register(
+            "generate_insight",
+            "Save a new learned insight for this agent.",
+            {"key": "str", "value": "str"},
+            lambda key, value: tool_generate_insight(agent_name, key, value),
+        )
+    else:
+        registry.register(
+            "check_governance",
+            "Check if an agent is permitted to perform an action.",
+            {"agent_name": "str", "action": "str"},
+            tool_check_governance,
+        )
+        registry.register(
+            "read_memory",
+            "Read an agent's long-term memory (past experiences).",
+            {"agent_name": "str"},
+            tool_read_memory,
+        )
+        registry.register(
+            "read_insights",
+            "Read an agent's learned insights/knowledge.",
+            {"agent_name": "str"},
+            tool_read_insights,
+        )
+        registry.register(
+            "generate_insight",
+            "Save a new learned insight for an agent.",
+            {"agent_name": "str", "key": "str", "value": "str"},
+            tool_generate_insight,
+        )
 
     registry.register(
         "run_script",
@@ -303,26 +361,8 @@ def create_default_tools() -> ToolRegistry:
         tool_run_script,
     )
 
-    registry.register(
-        "read_memory",
-        "Read an agent's long-term memory (past experiences).",
-        {"agent_name": "str"},
-        tool_read_memory,
-    )
-
-    registry.register(
-        "read_insights",
-        "Read an agent's learned insights/knowledge.",
-        {"agent_name": "str"},
-        tool_read_insights,
-    )
-
-    registry.register(
-        "generate_insight",
-        "Save a new learned insight for an agent.",
-        {"agent_name": "str", "key": "str", "value": "str"},
-        tool_generate_insight,
-    )
+    # read_memory / read_insights / generate_insight 已在上方按 agent_name 绑定注册，
+    # 此处不再重复注册（重复注册会用未绑定版本覆盖绑定版本）。
 
     registry.register(
         "get_date",
@@ -335,8 +375,8 @@ def create_default_tools() -> ToolRegistry:
 
 
 def create_social_tools() -> ToolRegistry:
-    """创建社媒专用工具集。"""
-    registry = create_default_tools()
+    """创建社媒专用工具集。agent_name 必须与 ai_governance.json 注册名一致。"""
+    registry = create_default_tools(agent_name="social")
     # 社媒 Agent 可以注册更多专用工具
     # 例如：检查 Buffer 状态、获取社媒数据等
     return registry
@@ -344,13 +384,13 @@ def create_social_tools() -> ToolRegistry:
 
 def create_seo_tools() -> ToolRegistry:
     """创建 SEO 专用工具集。"""
-    registry = create_default_tools()
+    registry = create_default_tools(agent_name="seo")
     # SEO Agent 可以注册更多专用工具
     return registry
 
 
 def create_content_tools() -> ToolRegistry:
     """创建内容专用工具集。"""
-    registry = create_default_tools()
+    registry = create_default_tools(agent_name="content")
     # Content Agent 可以注册更多专用工具
     return registry

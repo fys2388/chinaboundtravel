@@ -60,11 +60,11 @@ jobs:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
           echo "=== 检查是否有联盟链接缺口 ==="
-          # 读取最新的审计报告，提取缺口数量
-          if [ -f reports/affiliate_gap_report.json ]; then
-            GAPS=$(python -c "import json; d=json.load(open('reports/affiliate_gap_report.json')); print(d.get('gaps', 0))" 2>/dev/null || echo "0")
+          # 脚本输出到 reports/revenue/AFFILIATE_GAPS.md（非 affiliate_gap_report.json）
+          if [ -f reports/revenue/AFFILIATE_GAPS.md ]; then
+            GAPS=$(grep -c '^| A:' reports/revenue/AFFILIATE_GAPS.md 2>/dev/null || echo "0")
             echo "检测到 $GAPS 个联盟链接缺口"
-            
+
             if [ "$GAPS" -gt "0" ] && [ -n "$FEISHU_WEBHOOK_URL" ]; then
               curl -s -X POST "$FEISHU_WEBHOOK_URL" -H "Content-Type: application/json" \
                 -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"⚠️ [2.0] 联盟链接缺口审计：检测到 $GAPS 个缺口，请查看报告并补全联盟链接。\"}}" || true
@@ -78,8 +78,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/affiliate_gap_report.json 2>/dev/null || true
-          git add reports/affiliate/ 2>/dev/null || true
+          # 脚本输出路径：reports/revenue/AFFILIATE_GAPS.md + 相关 CSV
+          # 原 workflow 用 reports/affiliate_gap_report.json 与 reports/affiliate/（均不存在）
+          git add reports/revenue/AFFILIATE_GAPS.md reports/revenue/AFFILIATE_GAPS_DETAIL.csv 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无联盟链接审计报告变更"
           else
@@ -93,5 +94,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: affiliate-gap-report
-          path: reports/affiliate_gap_report.json
+          path: reports/revenue/AFFILIATE_GAPS.md
           retention-days: 30

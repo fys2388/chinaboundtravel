@@ -2,7 +2,31 @@ name: Retry Failed Jobs
 
 on:
   workflow_run:
-    workflows: ["Joran博文生成+双AI自动审核发布", "Social Media Distributor", "Content Rotation Distributor", "Feishu Daily Report"]
+    # 覆盖依据见 docs/AI_CONTEXT.md 与核查报告：此前只覆盖 4 个低频 workflow，
+    # 而最容易挂的是部署主链路与每日学习链路，失败后无人重试。
+    # 注意这里匹配的是 workflow 的 `name:` 字段（不是文件名）。
+    workflows:
+      - "Joran博文生成+双AI自动审核发布"
+      - "Social Media Distributor"
+      - "Content Rotation Distributor"
+      - "Feishu Daily Report"
+      # 部署主链路：全仓唯一 cancel-in-progress: true 的 workflow，
+      # ops-dashboard 每 30 分钟一跳极易并发取消，失败必须能重试。
+      - "Post-deploy Tasks"
+      - "Quality Monitor (6-hour)"
+      # 学习/考核链路：失败后整天的 Agent 学习成果直接缺失。
+      - "Cross-Agent Learning Daily"
+      - "Cross-Agent Learning Weekly"
+      - "Agent KPI Monthly Audit (营收导向考核)"
+      # 巡检链路：site-health 有 git add -A 历史风险，endpoint-health 已停摆 26 天，
+      # 让它们失败时至少能被重试而不是静默消失。
+      - "Site Health Daily Check (Full Closed Loop)"
+      - "Endpoint Health Audit (API + Subscribe)"
+      - "Error Alert"
+      # 新闻链路：news-monitor 依赖网络 RSS，CI 中偶发超时；news-social-poster 依赖
+      # buffer-worker。两者失败都不该静默消失。
+      - "News Monitor"
+      - "News Social Poster"
     types: [completed]
     branches: [main]
 
