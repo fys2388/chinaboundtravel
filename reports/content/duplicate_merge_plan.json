@@ -1,10 +1,39 @@
 {
   "stats": {
-    "drafts": 0,
+    "drafts": 2,
     "slug_conflict": 0,
     "topic_duplicate": 0,
-    "publishable": 0,
+    "publishable": 2,
     "mergeable_paras": 0
   },
-  "drafts": []
+  "drafts": [
+    {
+      "draft_file": "content/_draft/2026-10-19-china-travel-insurance-do-you-really-need-it-and-how-to-choose-guide-attempt1.md",
+      "draft_slug": "china-travel-insurance-do-you-really-need-it-and-how-to-choose-guide",
+      "kind": "publishable",
+      "match_file": "",
+      "match_slug": "",
+      "sim": 0.492,
+      "policy_blocked": false,
+      "policy_reason": "",
+      "paras_total": 25,
+      "paras_mergeable": 0,
+      "paragraphs": [],
+      "action": "none: no conflict, leave for normal publishing"
+    },
+    {
+      "draft_file": "content/_draft/2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack-attempt2.md",
+      "draft_slug": "china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "kind": "publishable",
+      "match_file": "",
+      "match_slug": "",
+      "sim": 0.424,
+      "policy_blocked": false,
+      "policy_reason": "",
+      "paras_total": 16,
+      "paras_mergeable": 0,
+      "paragraphs": [],
+      "action": "none: no conflict, leave for normal publishing"
+    }
+  ]
 }
