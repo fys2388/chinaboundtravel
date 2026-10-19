@@ -391,8 +391,64 @@
       "metadata": {},
       "calculated": {},
       "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/2026-05-27-how-to-survive-chinese-train-station/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-18",
+      "metrics": {
+        "pageviews": 6,
+        "sessions": 6,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-18",
+      "metrics": {
+        "pageviews": 6,
+        "sessions": 6,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "title": "How to Use Alipay & WeChat Pay in China 2026",
+      "date": "2026-10-18",
+      "metrics": {
+        "pageviews": 6,
+        "sessions": 6,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/144-hour-visa-free-transit-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-10-18",
+      "metrics": {
+        "pageviews": 5,
+        "sessions": 5,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-10-12T05:03:04.866784"
+  "last_updated": "2026-10-19T03:51:07.546903"
 }

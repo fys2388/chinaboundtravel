@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20261012_050304",
-  "last_updated": "2026-10-12T05:03:04.867259",
+  "version": "2.0-20261019_035107",
+  "last_updated": "2026-10-19T03:51:07.547622",
   "segmentation_rules": {
     "new_user": "首次访问，无历史记录",
     "returning_user": "7天内再次访问",
@@ -69,7 +69,12 @@
       }
     }
   ],
-  "strategy_changes": [],
+  "strategy_changes": [
+    {
+      "field": "high_value_segments",
+      "reason": "基于收入分析，更新高价值用户分层"
+    }
+  ],
   "high_value_segments": [
     {
       "segment": "",
@@ -99,6 +104,12 @@
       "segment": "Organic Search",
       "revenue_per_user": 0,
       "users": 13,
+      "conversion_rate": 0
+    },
+    {
+      "segment": "Unassigned",
+      "revenue_per_user": 0,
+      "users": 4,
       "conversion_rate": 0
     }
   ]

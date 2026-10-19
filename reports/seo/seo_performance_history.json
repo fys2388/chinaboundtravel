@@ -1714,8 +1714,296 @@
         "is_optimization_candidate": false
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hours",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 86
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "144 hrs china visa",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 84
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation selection suggestions for sichuan scenic spots",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 66
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation standards for sichuan scenic spots",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 71
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation standards of chengdu tourism companies",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 65
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation standards of sichuan international travel service",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 88
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation standards of sichuan tourism companies",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 95
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation standards of sichuan travel agencies",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 68
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay in china",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 90
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay international",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 55
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay international collection",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 58
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/ebook/2026-08-03-travel-guide-2026-08/",
+      "page": "https://www.chinaboundtravel.com/ebook/2026-08-03-travel-guide-2026-08/",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 10
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/guides/",
+      "page": "https://www.chinaboundtravel.com/guides/",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.4,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1",
+      "page": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1",
+      "date": "2026-10-16",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 1
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.9,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-10-12T05:03:04.822272"
+  "last_updated": "2026-10-19T03:51:07.488679"
 }

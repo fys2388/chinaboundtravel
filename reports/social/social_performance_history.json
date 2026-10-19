@@ -14607,8 +14607,104 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6ad4f328769b457934ced347",
+      "platform": "instagram",
+      "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
+      "published_at": "2026-10-18T18:26:39.501Z",
+      "date": "2026-10-18",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "chinaboundtravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundt",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6ad4f320ae173d6e000cd7a0",
+      "platform": "facebook",
+      "text": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommen",
+      "published_at": "2026-10-18T18:26:20.397Z",
+      "date": "2026-10-18",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "ChinaBound Travel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it b",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6ad4f31c0b0d72757a2e0182",
+      "platform": "facebook",
+      "text": "What travelers discover about Bargain — practical lessons from the ground.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-bargaining-a",
+      "published_at": "2026-10-18T18:26:20.455Z",
+      "date": "2026-10-18",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "ChinaBound Travel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "What travelers discover about Bargain — practical lessons from the ground.\n\nWhat's your biggest Chin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-10-18T10:02:51.256897",
+  "last_updated": "2026-10-19T03:51:07.329618",
   "version": "1.0"
 }

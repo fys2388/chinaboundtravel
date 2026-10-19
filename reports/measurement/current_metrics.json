@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-10-12T05:03:05.058844",
-  "date": "2026-10-12",
+  "timestamp": "2026-10-19T03:51:07.789874",
+  "date": "2026-10-19",
   "traffic": {
-    "activeUsers": 229,
-    "sessions": 265,
-    "screenPageViews": 298,
-    "engagedSessions": 175,
-    "bounceRate": 0.33962264150943394,
-    "averageSessionDuration": 45.470427381132076,
-    "engagementRate": 0.660377358490566,
-    "newUsers": 228
+    "activeUsers": 218,
+    "sessions": 244,
+    "screenPageViews": 263,
+    "engagedSessions": 172,
+    "bounceRate": 0.29508196721311475,
+    "averageSessionDuration": 32.10862756147541,
+    "engagementRate": 0.7049180327868853,
+    "newUsers": 217
   },
   "content": {
     "total_articles": 67,
     "articles_this_week": 0,
-    "avg_word_count": 2118,
+    "avg_word_count": 2121,
     "articles_with_affiliate_links": 38,
-    "articles_with_internal_links": 65
+    "articles_with_internal_links": 66
   },
   "social": {
     "total_posts": 20,
-    "total_impressions": 47,
+    "total_impressions": 26,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -29,10 +29,10 @@
   "conversion": {},
   "revenue": {},
   "seo": {
-    "impressions": 246,
+    "impressions": 290,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 60.0,
+    "average_position": 61.5,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   }

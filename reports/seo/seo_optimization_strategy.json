@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20261012_050304",
-  "last_updated": "2026-10-12T05:03:04.835180",
+  "version": "2.0-20261019_035107",
+  "last_updated": "2026-10-19T03:51:07.508119",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -116,7 +116,7 @@
     },
     {
       "pattern": "快速提升机会关键词",
-      "description": "发现 11 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+      "description": "发现 13 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
       "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
       "keywords": [
         "https://www.chinaboundtravel.com/cancel/",
