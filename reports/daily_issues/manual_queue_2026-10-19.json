@@ -1,7 +1,7 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-10-19T02:27:21.274615",
+  "generated_at": "2026-10-19T18:14:32.030703",
   "target_date": "2026-10-19",
   "issue_count": 4,
   "by_agent": {
@@ -32,30 +32,16 @@
   },
   "issues": [
     {
-      "id": "issue_eaaaf8d7d19e",
+      "id": "issue_a4f4b1b259ac",
       "type": "social_no_traffic",
-      "description": "社媒曝光5但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光10但点击为0，需检查帖子链接和CTA",
       "severity": "high",
       "agent": "social",
       "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-10-17.json",
-      "detected_at": "2026-10-19T02:27:21.271261",
+      "source_file": "social_daily_2026-10-18.json",
+      "detected_at": "2026-10-19T18:14:32.026739",
       "status": "new",
       "assigned": false,
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_a80c268b1750",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
-      "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-19.json",
-      "detected_at": "2026-10-19T02:27:21.273672",
-      "status": "new",
-      "assigned": false,
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "auto_fixable": false
     },
     {
@@ -66,10 +52,24 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "site_health_issues_2026-10-19.json",
-      "detected_at": "2026-10-19T02:27:21.273683",
+      "detected_at": "2026-10-19T18:14:32.029500",
       "status": "new",
       "assigned": false,
       "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_a80c268b1750",
+      "type": "content_placeholder",
+      "description": "发现模板占位符: [Image:",
+      "severity": "high",
+      "agent": "content",
+      "action": "fix_placeholder",
+      "source_file": "site_health_issues_2026-10-19.json",
+      "detected_at": "2026-10-19T18:14:32.029510",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "auto_fixable": false
     },
     {
@@ -80,7 +80,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-10-19.json",
-      "detected_at": "2026-10-19T02:27:21.273687",
+      "detected_at": "2026-10-19T18:14:32.029516",
       "status": "new",
       "assigned": false,
       "file": "content/posts/144-hour-visa-free-transit-guide.md",
