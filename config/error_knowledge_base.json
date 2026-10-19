@@ -889,11 +889,28 @@
         "Picsum兜底图也使用相同的唯一seed逻辑",
         "禁用固定seed（如hash(title)），必须使用时间相关的动态seed"
       ]
+    },
+    {
+      "hash": "content_quality_failed",
+      "type": "选题",
+      "message": "[P1] Word count 1842 is below 2000 target\n[P1] Only 1 H2 sections (target: 5-7)\n[P0] Hyphen-space compound-word artifact (1 instances): [('long', 'term')] - remove spaces around hyphens in these compound words",
+      "occurrences": 3,
+      "first_seen": "2026-10-19T02:50:46.726070+00:00",
+      "last_seen": "2026-10-19T02:57:43.885699+00:00",
+      "files": [
+        "China Travel Insurance: Do You Really Need It And How To Choose Guide",
+        "China Winter Travel Guide: Where to Go and How to Pack",
+        "Best China Itineraries for 10 Days: Three Routes Compared"
+      ],
+      "suggestion": "避免政治敏感内容",
+      "resolved": false,
+      "priority": "P0",
+      "source": "主编终审"
     }
   ],
   "resolved_count": 20,
-  "total_errors": 43,
-  "last_updated": "2026-08-26T01:08:31.388283+00:00",
+  "total_errors": 46,
+  "last_updated": "2026-10-19T02:57:43.885715+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

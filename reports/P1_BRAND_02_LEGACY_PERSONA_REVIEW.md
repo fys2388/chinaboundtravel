@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-10-12
+- Generated: 2026-10-19
 
 统计：content/posts 共 67 篇，命中 legacy persona 短语 0 篇。
 
