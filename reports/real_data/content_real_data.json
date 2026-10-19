@@ -1,6 +1,6 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-10-19T03:51:07.178587",
+  "pull_time": "2026-10-19T11:28:09.740435",
   "data_date": "2026-10-19",
   "is_real_data": true,
   "is_fresh": true,
@@ -14,7 +14,7 @@
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 2177,
+      "word_count": 2185,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -32,7 +32,7 @@
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2330,
+      "word_count": 2338,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -56,7 +56,7 @@
     },
     {
       "slug": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment",
-      "word_count": 1937,
+      "word_count": 1945,
       "has_affiliate_links": false,
       "has_internal_links": true
     },

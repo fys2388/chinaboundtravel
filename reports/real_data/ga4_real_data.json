@@ -1,6 +1,6 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-19T03:51:03.184257",
+  "pull_time": "2026-10-19T11:28:04.541351",
   "data_date": "2026-10-18",
   "is_real_data": true,
   "is_fresh": true,
@@ -10,7 +10,7 @@
     "screenPageViews": 263,
     "engagedSessions": 172,
     "bounceRate": 0.29508196721311475,
-    "averageSessionDuration": 32.10862756147541,
+    "averageSessionDuration": 32.108627561475416,
     "engagementRate": 0.7049180327868853,
     "newUsers": 217
   },
@@ -173,9 +173,9 @@
     },
     {
       "date": "2026-10-19",
-      "sessions": 1,
-      "activeUsers": 1,
-      "pageviews": 1
+      "sessions": 4,
+      "activeUsers": 4,
+      "pageviews": 4
     }
   ],
   "top_pages": [

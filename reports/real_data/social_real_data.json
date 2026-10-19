@@ -1,18 +1,98 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-10-19T03:51:06.221337",
+  "pull_time": "2026-10-19T11:28:08.027930",
   "data_date": "2026-10-19",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 26,
+    "total_impressions": 9,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
     "total_shares": 0
   },
   "posts": [
+    {
+      "id": "6ad5b10caa3b6d94b201f503",
+      "text": "What travelers discover about Train — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_camp",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-19T07:56:31.392Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad5b108f7043051cb5c0a2f",
+      "text": "Food: everything you need in one guide. China Food Guide for European → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_sour",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-19T07:56:31.558Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad5b104aa3b6d94b201efa8",
+      "text": "Research-backed facts about Visa every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_s",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-10-19T07:56:38.307Z",
+      "status": "sent",
+      "metrics_available": false,
+      "has_impression_metric": false,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad5b100aa3b6d94b201ec67",
+      "text": "Alipay: everything you need in one guide. Alipay in China: Setup & Payment Tips (2026) → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=x&utm_medium=social&utm_",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-19T07:56:31.226Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad5b0fcf7043051cb5c0510",
+      "text": "What travelers discover about China travel — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-19T07:56:16.358Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
     {
       "id": "6ad4f328769b457934ced347",
       "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
@@ -94,27 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad45b700b0d72757a0b71a1",
-      "text": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_so",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-18T07:39:01.482Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 5,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ad39fa4ae173d6e00c4c567",
-      "text": "Everything you need to know about China travel — in one practical guide.\n\n· China Business Travel: Meetings, Dining &\n\nRead the full guide: https://www.chinaboundtravel.com/china-business-travel-guide",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-17T18:17:53.272Z",
+      "id": "6ad4f32cae173d6e000cd8a9",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-19T05:26:31.356Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -126,11 +190,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad39fa00b0d72757ae5f10a",
-      "text": "Research-backed facts about Visa every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/china-extends-144-hour-visa-free-transit-policy-to-more-countries/?utm_source=ig&utm",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-17T18:17:58.227Z",
+      "id": "6ad4f324ae173d6e000cd7e9",
+      "text": "Where to Stay in China: Complete 2026 Guide | Essential China travel tips most first-time visitors miss.\n\nWhere to Stay in China: Complete 2026 Guide\n\n📌 Save this for your China trip planning.\n\nFull g",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-19T05:26:16.133Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -139,38 +203,6 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ad39f980a208cb3232b7e55",
-      "text": "Research-backed facts about China travel every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/china-family-travel-tips-a-californians-guide/?utm_source=ig&utm_medium=soci",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-17T18:17:41.255Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ad39f950b0d72757ae5ef86",
-      "text": "Essential Bargain tips most first-timers miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261015&utm",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-17T18:17:31.274Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 5,
       "engagement_rate": 0.0
     },
     {
@@ -300,43 +332,17 @@
       "clicks": 0,
       "impressions": 1,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6acf1a55b610c3011fa21a2e",
-      "text": "China Food Guide for European Travelers | Visual guide to Food: what to see and capture.\n\nChina Food Guide for European Travelers\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.ch",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-14T19:00:20.057Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 4,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6acf1a4a848c31c809601899",
-      "text": "Alipay vs WeChat Pay: Which Payment App | Essential Alipay tips most first-time visitors miss.\n\nAlipay vs WeChat Pay: Which Payment App\n\n📌 Save this for your China trip planning.\n\nFull guide: https://",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-14T18:59:46.749Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 3,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "instagram": {
+    "twitter": {
       "posts": 5,
+      "impressions": 5,
+      "clicks": 0,
+      "likes": 0
+    },
+    "instagram": {
+      "posts": 3,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -347,15 +353,9 @@
       "clicks": 0,
       "likes": 0
     },
-    "twitter": {
-      "posts": 3,
-      "impressions": 15,
-      "clicks": 0,
-      "likes": 0
-    },
     "pinterest": {
       "posts": 10,
-      "impressions": 11,
+      "impressions": 4,
       "clicks": 0,
       "likes": 0
     }
@@ -363,8 +363,8 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 20,
-  "impression_metric_count": 20,
+  "metrics_available_count": 19,
+  "impression_metric_count": 19,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
