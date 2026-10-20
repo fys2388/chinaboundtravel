@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T23:59:45",
+  "updated_at": "2026-10-20T17:55:29",
   "items": [
     {
       "id": "soc-000001",
@@ -4042,8 +4042,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4182,8 +4182,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5032,8 +5032,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5824,8 +5824,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260913"
       },
-      "status": "待审核",
-      "publish_date": "",
+      "status": "已发布",
+      "publish_date": "2026-10-20",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -8281,6 +8281,261 @@
       },
       "_sig": "2a0e3f0aca88",
       "image_generated": true
+    },
+    {
+      "id": "soc-000311",
+      "source_article": "best-china-itineraries-for-10-days-three-routes-compared",
+      "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "platform": "ig",
+      "type": "knowledge",
+      "caption": "**10 days in China. Three very different routes. Which one fits your timeline?**\n\n📍 **Route 1 — Beijing · Xi'an · Shanghai**\nThe classic. Three megacities, three distinct eras of Chinese history, connected by high-speed rail.\n\n🏛 **Beijing** — Where imperial power meets modern megacity scale. Forbidden City, Great Wall, hutongs.\n🏺 **Xi'an** — The cradle of Chinese civilization. Terracotta Warriors, ancient city walls, Silk Road origins.\n🌆 **Shanghai** — China's financial engine and cultural crossroads. Bund skyline, Yuyuan Garden, neon-lit streets.\n\nEach route is built around research-backed logistics: transit times, seasonal considerations, and pacing that actually works for a 10-day window.\n\n🔗 Full guide with all three routes compared → link in bio\n\n#ChinaTravel #VisitChina #ChinaTrip #ChinaItinerary #Beijing #XiAn #Shanghai #TravelGuide #AsiaTravel #10DaysInChina\n\n👉 Link in bio",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. vertical 4:5 composition composition, educational style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-ig-knowledge-a8e66c61.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "04bbaed88db4",
+      "image_generated": true
+    },
+    {
+      "id": "soc-000312",
+      "source_article": "best-china-itineraries-for-10-days-three-routes-compared",
+      "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "platform": "pinterest",
+      "type": "tip",
+      "caption": "🇨🇳 10 days in China — three proven routes compared side by side.\n\n🔹 Route 1: Classic Grand Tour (Beijing → Xi'an → Shanghai)\n🔹 Route 2: Cultural Deep Dive (Beijing → Chengdu → Chongqing → Yangshuo)\n🔹 Route 3: Modern + Heritage Blend (Shanghai → Suzhou → Xi'an → Beijing)\n\nEach route is rated on pacing, transit efficiency, and cultural depth — so you can match the itinerary to your travel style instead of guessing.\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=pinterest_v1\n\n📌 Save for later",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. vertical 2:3 composition composition, clean and practical style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-pinterest-tip-7bec4536.jpg",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "7ec271976558",
+      "image_generated": true
+    },
+    {
+      "id": "soc-000313",
+      "source_article": "best-china-itineraries-for-10-days-three-routes-compared",
+      "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "platform": "x",
+      "type": "story",
+      "caption": "Three routes. Ten days. One question: which China itinerary delivers the most? 🇨🇳\n\nFrom the Great Wall's misty ridges to Chengdu's bamboo groves — we compared the top-rated 10-day itineraries so you don't have to guess.\n\nSee which route wins on culture, nature, and logistics. → https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. wide landscape 16:9 composition composition, evocative storytelling style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-x-story-127f0d21.jpg",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "526ac6b71f9a",
+      "image_generated": true
+    },
+    {
+      "id": "soc-000314",
+      "source_article": "best-china-itineraries-for-10-days-three-routes-compared",
+      "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "platform": "fb",
+      "type": "visual",
+      "caption": "🇨🇳 **10 Days in China — Three Routes, One Ultimate Guide**\n\nFrom the Great Wall's sweeping ridgelines to Xi'an's ancient terracotta warriors and Shanghai's neon skyline — the most photographed, most-rated itineraries compared in one visual breakdown.\n\n📍 Route 1: Classic Beijing–Xi'an–Shanghai\n📍 Route 2: Yangtze River & Jiangnan Water Towns\n📍 Route 3: Southwest Mountains & Ethnic Villages\n\nEach route mapped with must-see landmarks, optimal photo locations, and pacing tips — so every frame counts.\n\n🔍 Full visual guide: https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=fb_v1\n\n💬 What's your biggest China travel question? Drop it below 👇",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. landscape 16:9 composition composition, striking instagram-worthy style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-fb-visual-6fa99157.jpg",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "4ddddcdef014",
+      "image_generated": true
+    },
+    {
+      "id": "soc-000315",
+      "source_article": "best-china-itineraries-for-10-days-three-routes-compared",
+      "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
+      "platform": "ig",
+      "type": "conversion",
+      "caption": "Three routes. Ten days. One definitive breakdown.\n\nThe most-rated China itineraries of the year — mapped, compared, and stress-tested so you can pick the right one for your trip without the guesswork.\n\n🔹 Route-by-route pros & cons\n🔹 Best fits by traveler type\n🔹 Practical logistics, sorted\n\nRead the full comparison: https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=ig_v1\n\n👉 Link in bio\n\n#ChinaTravel #VisitChina #ChinaTrip",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. vertical 4:5 composition composition, inviting click-worthy style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-ig-conversion-79e968ed.jpg",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "c6cc425e7352",
+      "image_generated": true
+    },
+    {
+      "id": "soc-000316",
+      "source_article": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "source_title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "platform": "pinterest",
+      "type": "knowledge",
+      "caption": "China Solo Travel Guide: Safety, Hostels, and Making Friends | Research-backed facts every solo traveler should know before going to China.\n\nSolo travel in China 2026 — a data-driven guide covering personal safety, hostel selection, and social connections for international travelers | Keywords: safety\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=pinterest_v1\n\n📌 Save for later",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'China Solo Travel Guide: Safety, Hostels, and Making Friends'. vertical 2:3 composition composition, educational style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "fea2672c1c29"
+    },
+    {
+      "id": "soc-000317",
+      "source_article": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "source_title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "platform": "x",
+      "type": "tip",
+      "caption": "Essential Safety tips most first-timers miss. Safety First → https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=x_v1 #ChinaTravel",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'China Solo Travel Guide: Safety, Hostels, and Making Friends'. wide landscape 16:9 composition composition, clean and practical style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp",
+      "utm_params": {
+        "utm_source": "x",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "x"
+      },
+      "_sig": "6a5f3f93bc2c"
+    },
+    {
+      "id": "soc-000318",
+      "source_article": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "source_title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "platform": "fb",
+      "type": "story",
+      "caption": "China solo travel is more accessible than ever — but knowing the safety landscape, the best hostels, and how to connect with fellow travelers still matters.\n\nChina Solo Travel Guide 2026 breaks down:\n✅ Practical safety tips for navigating cities and trains\n✅ How to find hostels that prioritize security and community\n✅ Real strategies for making friends on the road\n\nNo gatekeeping. Just what works.\n\n👇 Drop your biggest China travel question below — we'll answer the best ones in a follow-up post.\n\nFull guide: https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=fb_v1",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'China Solo Travel Guide: Safety, Hostels, and Making Friends'. landscape 16:9 composition composition, evocative storytelling style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp",
+      "utm_params": {
+        "utm_source": "fb",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "fb"
+      },
+      "_sig": "1bed4cd0e5e3"
+    },
+    {
+      "id": "soc-000319",
+      "source_article": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "source_title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "platform": "ig",
+      "type": "visual",
+      "caption": "Solo travel in China isn't just about the destination — it's about navigating it with confidence.\n\nFrom picking the right hostel to knowing how to stay safe in unfamiliar cities, this visual guide breaks down the essentials every solo traveller needs to know.\n\n📍 China solo travel guide 2026: staying safe, finding great hostels, and making friends along the way.\n\nRead the full guide: https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 Link in bio",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'China Solo Travel Guide: Safety, Hostels, and Making Friends'. vertical 4:5 composition composition, striking instagram-worthy style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp",
+      "utm_params": {
+        "utm_source": "ig",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "ig"
+      },
+      "_sig": "2c841ad8dca4"
+    },
+    {
+      "id": "soc-000320",
+      "source_article": "china-solo-travel-guide-safety-hostels-and-making-friends",
+      "source_title": "China Solo Travel Guide: Safety, Hostels, and Making Friends",
+      "platform": "pinterest",
+      "type": "conversion",
+      "caption": "🇨🇳 SOLO TRAVELING CHINA? Start here.\n\nThe complete 2026 guide to staying safe, booking the right hostels, and building a social circle — all in one practical breakdown for foreign travelers.\n\n✅ Safety tips that actually work on the ground\n✅ Hostel picks across major cities\n✅ How to meet people without awkward forced interactions\n✅ What every solo traveler needs to know before booking flights\n\n📌 Save this pin to your China travel board — you'll thank yourself later.\n\n👇 Full guide:\nhttps://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261020&utm_content=pinterest_v1\n\n#ChinaTravel #SoloTravelChina #TravelChina #ChinaHostel #ForeignerInChina #TravelSafety #HostelLife #ChinaTrip #TravelGuide #SoloTraveler",
+      "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'China Solo Travel Guide: Safety, Hostels, and Making Friends'. vertical 2:3 composition composition, inviting click-worthy style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: China solo travel guide 2026: staying safe, finding great hostels, and making friends as a foreign traveler.",
+      "image_url": "https://www.chinaboundtravel.com/img/china-dest/general/china-solo-travel-guide-safety-hostels-and-making-friends.webp",
+      "utm_params": {
+        "utm_source": "pinterest",
+        "utm_medium": "social",
+        "utm_campaign": "cbt_social_20261020"
+      },
+      "status": "待审核",
+      "publish_date": "",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "engagements": 0,
+        "uv": 0,
+        "platform": "pinterest"
+      },
+      "_sig": "a427947a4848"
     }
   ]
 }
