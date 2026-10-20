@@ -12,6 +12,7 @@ try:
     from PIL import Image
     PIL_AVAILABLE = True
 except ImportError:
+    Image = None
     PIL_AVAILABLE = False
 
 # Target dimensions for each platform (width, height)
@@ -70,7 +71,7 @@ def download_image(url: str, dest_dir: str) -> str:
     return local_path
 
 
-def center_crop(img: Image.Image, target_w: int, target_h: int) -> Image.Image:
+def center_crop(img, target_w: int, target_h: int):
     """
     Center-crop image to target aspect ratio, then resize to target dimensions.
     Preserves as much of the center of the image as possible.
