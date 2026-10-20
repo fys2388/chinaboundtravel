@@ -538,6 +538,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/76",
       "fixed_at": "2026-10-20T02:13:35.947703"
+    },
+    {
+      "workflow": "Social Engine Daily (闭环)",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/77",
+      "fixed_at": "2026-10-20T05:49:43.249111"
     }
   ]
 }

@@ -2026,6 +2026,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261020_054941",
+      "timestamp": "2026-10-20T05:49:41.276487",
+      "workflow_name": "Social Engine Daily (闭环)",
+      "run_id": "39376864635",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[group]Run echo \"::error::社媒发布存在失败项（退出码 1），详见上方发布日志\"\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
