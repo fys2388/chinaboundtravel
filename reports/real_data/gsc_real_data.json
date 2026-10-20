@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-19T11:28:06.832932",
-  "data_date": "2026-10-16",
+  "pull_time": "2026-10-20T10:34:13.024824",
+  "data_date": "2026-10-17",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 290,
+    "impressions": 311,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 61.5,
+    "average_position": 61.4,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-19",
-      "impressions": 17,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 16.9
-    },
     {
       "date": "2026-09-20",
       "impressions": 9,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 31.1
+    },
+    {
+      "date": "2026-10-17",
+      "impressions": 47,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 36.3
     }
   ],
   "top_queries": [
@@ -311,10 +311,10 @@
     },
     {
       "query": "alipay foreigner",
-      "impressions": 6,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 80.2
+      "position": 81.1
     },
     {
       "query": "alipay in china",
@@ -355,24 +355,24 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 19,
+      "impressions": 20,
       "clicks": 2,
-      "ctr": 0.11,
-      "position": 5.6
+      "ctr": 0.1,
+      "position": 5.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 43,
+      "impressions": 44,
       "clicks": 1,
       "ctr": 0.02,
       "position": 8.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "impressions": 21,
+      "impressions": 27,
       "clicks": 1,
-      "ctr": 0.05,
-      "position": 8.3
+      "ctr": 0.04,
+      "position": 11.0
     },
     {
       "page": "https://www.chinaboundtravel.com/",
@@ -467,10 +467,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-      "impressions": 22,
+      "impressions": 21,
       "clicks": 0,
       "ctr": 0,
-      "position": 47.7
+      "position": 49.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1",
@@ -481,17 +481,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
-      "impressions": 34,
+      "impressions": 38,
       "clicks": 0,
       "ctr": 0,
-      "position": 14
+      "position": 12.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "impressions": 17,
+      "impressions": 15,
       "clicks": 0,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.5
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-16"
+    "data_date": "2026-10-17"
   }
 }

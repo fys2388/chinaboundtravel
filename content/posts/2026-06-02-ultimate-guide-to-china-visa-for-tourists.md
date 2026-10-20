@@ -303,3 +303,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
+- [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)

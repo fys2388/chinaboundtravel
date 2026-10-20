@@ -193,3 +193,5 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Is China Safe in 2026? Honest Guide](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
