@@ -1,0 +1,111 @@
+{
+  "posts": {
+    "44d24187f7e3": {
+      "title": "Current Status of U.S. Visa Services By Country - October 20",
+      "posted_at": "2026-10-20T05:45:35.186481+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "be6645763ec1": {
+      "title": "China visa-free for UK travellers: ends 31 Dec 2026 - Pixidi",
+      "posted_at": "2026-10-20T05:45:37.586369+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "f9267e2841cf": {
+      "title": "Alleged Chinese agent to remain in custody, judge rules, ami",
+      "posted_at": "2026-10-20T05:45:39.446492+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "38c86176c05c": {
+      "title": "US adds ‘wrongful detention’ warning for Americans travellin",
+      "posted_at": "2026-10-20T05:45:41.514683+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "1c175a412b67": {
+      "title": "Chinese actress cancels Bangkok fan meeting amid embassy tra",
+      "posted_at": "2026-10-20T05:45:43.693190+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "b1243e4b0264": {
+      "title": "Chinese embassy issues fresh Thailand travel alert over kidn",
+      "posted_at": "2026-10-20T05:45:45.695021+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "33536336186c": {
+      "title": "Is inbound tourism boom driving up Shanghai’s luxury hotel r",
+      "posted_at": "2026-10-20T05:45:47.876323+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "afe165739cbc": {
+      "title": "‘China haul’: why foreign tourists are shopping up a storm o",
+      "posted_at": "2026-10-20T05:45:50.278036+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "e9326aa3310d": {
+      "title": "INSIGHTS FROM CHINA'S 2026 NATIONAL DAY HOLIDAY - Tourism Re",
+      "posted_at": "2026-10-20T05:45:52.414860+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "f72c31fda1e7": {
+      "title": "Asia's cultural heritage alliance expands with new partner, ",
+      "posted_at": "2026-10-20T05:45:54.585448+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "178c66ac9f87": {
+      "title": "China Daily Shanxi’s heritage takes the spotlight in Geneva ",
+      "posted_at": "2026-10-20T05:45:55.680060+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "b8cf2397485f": {
+      "title": "In pics: special exhibition on innovative design of Chinese ",
+      "posted_at": "2026-10-20T05:45:56.791238+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "e3aa35ed5a33": {
+      "title": "A local’s travel guide to Washington DC: what to eat, see an",
+      "posted_at": "2026-10-20T05:45:57.904788+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    }
+  },
+  "last_run": "2026-10-20T05:45:57.904808+00:00",
+  "total_posts": 10,
+  "total_failures": 3
+}
