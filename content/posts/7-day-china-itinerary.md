@@ -1,9 +1,10 @@
-﻿---
+---
 title: "Free 7-Day China Itinerary Template (2026)"
 description: "Download your free 7-day China itinerary template. Includes Beijing, Xi'an, Shanghai routes, visa tips, payment setup, and insider recommendations."
-date: 2026-08-03
+date: 2026-10-20
 layout: "single"
-draft: true
+draft: false
+slug: "7-day-china-itinerary"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp"
   alt: "China travel itinerary planning"
@@ -40,8 +41,6 @@ Congratulations on taking the first step toward your China adventure! As a thank
 ## 📥 Download Your Template
 
 Your free itinerary template is on its way to your inbox! Check your email (including spam folder) for the download link.
-
-**Already have the email?** [Click here to download directly →](#)
 
 ---
 

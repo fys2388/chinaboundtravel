@@ -159,3 +159,6 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 /7-day-china-itinerary-beijing-xian-shanghai-first-timers/ /posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ 301
 /144-hour-visa-free-transit-guide/ /posts/144-hour-visa-free-transit-guide/ 301
 /is-china-safe-for-tourists-2026-honest-assessment/ /posts/is-china-safe-for-tourists-2026-honest-safety-assessment/ 301
+
+# 2026-10-20: root-level draft -> posts/ canonical
+/7-day-china-itinerary/ /posts/7-day-china-itinerary/ 301
