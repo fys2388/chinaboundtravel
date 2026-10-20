@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-10-13 09:14:10",
+  "timestamp": "2026-10-20 07:24:49",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 7,
+  "indexed_count": 5,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
@@ -90,9 +90,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
+        "verdict": "error: UNKNOWN - Internal error encountered.",
+        "status": "error"
       }
     },
     {
@@ -123,9 +122,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
+        "verdict": "error: UNKNOWN - Internal error encountered.",
+        "status": "error"
       }
     },
     {
@@ -145,9 +143,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
+        "verdict": "error: UNKNOWN - Internal error encountered.",
+        "status": "error"
       }
     },
     {
