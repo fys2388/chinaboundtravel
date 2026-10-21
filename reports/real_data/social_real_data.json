@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-10-20T10:34:14.088912",
-  "data_date": "2026-10-20",
+  "pull_time": "2026-10-21T10:46:37.057517",
+  "data_date": "2026-10-21",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 4,
+    "total_impressions": 3,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,11 +14,11 @@
   },
   "posts": [
     {
-      "id": "6ad700cbe9c669def5f085a1",
-      "text": "Research-backed facts about Alipay every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=c",
+      "id": "6ad85340a9967de049787299",
+      "text": "Everything you need to know about Itinerary — in one practical guide.\n\n· 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nRead the full guide: https://www.chinaboundtravel.com/7-day-china-itiner",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-20T07:49:10.129Z",
+      "published_at": "2026-10-21T07:53:23.628Z",
       "status": "sent",
       "metrics_available": false,
       "has_impression_metric": false,
@@ -30,11 +30,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad700c8b81183413db428a4",
-      "text": "Essential Food tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies",
+      "id": "6ad853399fdbc474fb02202f",
+      "text": "Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=f",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-10-20T07:49:06.644Z",
+      "published_at": "2026-10-21T07:53:06.088Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -46,27 +46,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad700be2d48e20f64cd419f",
-      "text": "Everything you need to know about Alipay — in one practical guide.\n\n· Alipay vs WeChat Pay: Which Payment App\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-10-20T07:49:09.952Z",
-      "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ad70011cba41b014061f7d4",
-      "text": "🗺️ DESTINATION UPDATE\n\nAsia's cultural heritage alliance expands with new partner, observer states - China Daily\n\nAsia's cultural heritage alliance expands with new partner, observer states China Dail",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:46:01.826Z",
+      "id": "6ad8533650009d9e950ea61c",
+      "text": "Essential Alipay tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-10-21T07:53:06.010Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -78,11 +62,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad7000f9d034d7aeddce2d6",
-      "text": "📊 INDUSTRY NEWS\n\nINSIGHTS FROM CHINA'S 2026 NATIONAL DAY HOLIDAY - Tourism Review News\n\nINSIGHTS FROM CHINA'S 2026 NATIONAL DAY HOLIDAY Tourism Review News\n\nSource: Google News RSS\n\n\n\n#ChinaTravel #To",
+      "id": "6ad85295d894396f66ca468c",
+      "text": "📰 TRAVEL NEWS\n\nA local’s travel guide to Washington DC: what to eat, see and do in three days\n\nTop sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino r",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:46:01.868Z",
+      "published_at": "2026-10-21T07:50:16.353Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -94,11 +78,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad7000c2fcafd0f18513d8a",
-      "text": "📊 INDUSTRY NEWS\n\n‘China haul’: why foreign tourists are shopping up a storm on the mainland - South China Morning...\n\n‘China haul’: why foreign tourists are shopping up a storm on the mainland South C",
+      "id": "6ad85293a9967de0497850e9",
+      "text": "🗺️ DESTINATION UPDATE\n\nChina unveils first 5-year plan for cultural heritage protection, expanding safeguards beyond...\n\nChina unveils first 5-year plan for cultural heritage protection, expanding saf",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:46:01.945Z",
+      "published_at": "2026-10-21T07:50:16.210Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -110,11 +94,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad7000acba41b014061f71c",
-      "text": "📊 INDUSTRY NEWS\n\nIs inbound tourism boom driving up Shanghai’s luxury hotel rates? - Travel Daily Media\n\nIs inbound tourism boom driving up Shanghai’s luxury hotel rates? Travel Daily Media\n\nSource: G",
+      "id": "6ad85291aff466fe09034fb0",
+      "text": "🗺️ DESTINATION UPDATE\n\nCultural heritage protection to be bolstered - China Daily\n\nCultural heritage protection to be bolstered China Daily\n\nSource: Google News RSS\n\n\n\n#ChinaTravel #VisitChina #Travel",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:46:01.996Z",
+      "published_at": "2026-10-21T07:50:16.303Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -126,11 +110,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad70008e9c669def5f067d7",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Chinese embassy issues fresh Thailand travel alert over kidnappings, job scams - South China...\n\nChinese embassy issues fresh Thailand travel alert over kidnappings, job sc",
+      "id": "6ad8528f50009d9e950e816a",
+      "text": "📊 INDUSTRY NEWS\n\nChina’s ‘Hollywood’ turns film sets into short-drama experiences for tourists - Global Times\n\nChina’s ‘Hollywood’ turns film sets into short-drama experiences for tourists Global Time",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:45:46.236Z",
+      "published_at": "2026-10-21T07:50:16.119Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -142,11 +126,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad700069d034d7aeddce1e0",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Chinese actress cancels Bangkok fan meeting amid embassy travel safety alert - Global Times\n\nChinese actress cancels Bangkok fan meeting amid embassy travel safety alert Gl",
+      "id": "6ad8528ddb7d81982149543c",
+      "text": "📋 VISAS UPDATE\n\nIMPORTANT: China sees 192 million passenger border crossings in Q3; visa-free foreign arrivals rise 24.1% -...\n\nChina sees 192 million passenger border crossings in Q3; visa-free forei",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:45:46.201Z",
+      "published_at": "2026-10-21T07:50:16.114Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -158,11 +142,43 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ad70004b81183413db403dc",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n\nUS adds ‘wrongful detention’ warning for Americans travelling to China So",
+      "id": "6ad8528baff466fe09034f14",
+      "text": "📋 VISAS UPDATE\n\nIMPORTANT: China gains favor with foreign visitors as visa-free arrivals rise - Xinhua\n\nChina gains favor with foreign visitors as visa-free arrivals rise Xinhua\n\nSource: Google News R",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-10-20T07:45:46.217Z",
+      "published_at": "2026-10-21T07:50:16.289Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad8528aa9967de049784ffb",
+      "text": "📋 VISAS UPDATE\n\nIMPORTANT: Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation,...\n\nVisa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects app",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-21T07:50:16.327Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ad700c4e9c669def5f0847d",
+      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-20T18:49:02.182Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,33 +332,17 @@
       "clicks": 0,
       "impressions": 1,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6acfc21c2397c8676abbe085",
-      "text": "How to Use Alipay & WeChat Pay in China 2026 | Essential Alipay tips most first-time visitors miss.\n\nHow to Use Alipay & WeChat Pay in China 2026\n\n📌 Save this for your China trip planning.\n\nFull guide",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-15T06:55:46.349Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 1,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "instagram": {
-      "posts": 2,
+      "posts": 1,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
-      "posts": 1,
+      "posts": 2,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -355,7 +355,7 @@
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 4,
+      "impressions": 3,
       "clicks": 0,
       "likes": 0
     }
@@ -363,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 18,
-  "impression_metric_count": 18,
+  "metrics_available_count": 19,
+  "impression_metric_count": 19,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-10-20"
+    "data_date": "2026-10-21"
   }
 }
