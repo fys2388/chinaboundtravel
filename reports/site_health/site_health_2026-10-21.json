@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-21T02:34:22.159520+00:00",
+  "timestamp": "2026-10-21T16:29:21.840949+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -10,10 +10,10 @@
     "low": 1,
     "auto_fixed": 6,
     "need_manual": 24,
-    "resolved": 18,
+    "resolved": 19,
     "inherited_resolved": 22,
     "in_progress": 0,
-    "last_updated": "2026-10-21T02:34:26.447375"
+    "last_updated": "2026-10-21T16:29:24.940121"
   },
   "issues": [
     {
@@ -35,18 +35,6 @@
       "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
       "auto_fixable": false,
       "agent": "content"
-    },
-    {
-      "type": "draft_leak",
-      "severity": "high",
-      "file": "content/7-day-china-itinerary.md",
-      "message": "draft:true的文章可能已发布到线上",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "accepted_risk",
-      "resolved_by": "coordinator_2026-09-23",
-      "resolution_note": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
-      "resolved_at": "2026-09-23"
     },
     {
       "type": "draft_leak",
@@ -155,6 +143,18 @@
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/7-day-china-itinerary.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
     },
     {
       "type": "ai_forbidden_word",
