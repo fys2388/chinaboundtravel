@@ -1,7 +1,7 @@
 {
   "date": "2026-10-20",
   "total_published": 8,
-  "total_impressions": 35,
+  "total_impressions": 17,
   "total_clicks": 0,
   "total_uv": 0,
   "by_platform": {
@@ -19,7 +19,7 @@
     },
     "x": {
       "published": 2,
-      "impressions": 35,
+      "impressions": 17,
       "clicks": 0,
       "uv": 0
     },
@@ -33,5 +33,5 @@
   "analytics_status": "ok",
   "analytics_source": "buffer_api",
   "analytics_reason": "",
-  "analytics_post_count": 16
+  "analytics_post_count": 9
 }
