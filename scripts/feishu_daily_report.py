@@ -2771,11 +2771,14 @@ class FeishuDailyReporter:
                 # gh_report_success 恒 None → 日报把自己渲染成「未运行」。
                 # daily_2026-09-18.json 已复现该假声明，而同日 chinabound-bot 的
                 # OKR 快照提交（if: send_report.outcome == 'success'）证明发送实际成功。
-                page_size = 200
+                page_size = 100  # GitHub API max per_page=100; 200 会被静默截断
                 # 窗口放宽到 widest_window_days 后需相应提高翻页上限：本仓库每天
-                # 128+ 次提交 × (Error Alert + Post-deploy) ≈ 250~400 run/日，
-                # 8 天窗口 ≈ 2000~3200 条。20 页 = 4000 条留足余量。
-                for page in range(1, 21):  # 最多 20 页 = 4000 条，覆盖最宽 workflow 窗口
+                # 128+ 次提交 × (Error Alert + Post-deploy + Site Health + Snapshot + Ops Dashboard)
+                # ≈ 500~800 run/日，8 天窗口 ≈ 4000~6400 条。原 20 页=2000 条不够用
+                # （实测 weekly-blog-update 在 10-19 跑完但 paths_total=0，因分页只覆盖
+                # 最近 2000 条，周一的 run 落在位置 2001+ 被截断）。
+                # 现 80 页=8000 条留足余量，~80 秒 API 调用可接受。
+                for page in range(1, 81):  # 最多 80 页 = 8000 条，覆盖最宽 workflow 窗口
                     resp = requests.get(
                         base_url,
                         headers=headers,
