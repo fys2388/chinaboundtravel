@@ -3,16 +3,36 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-21_content",
   "created_at": "2026-10-21T01:00:44.787922+00:00",
-  "updated_at": "2026-10-21T02:40:59.704417",
+  "updated_at": "2026-10-21T02:41:35.519695",
   "target_date": "2026-10-21",
-  "issue_count": 10,
+  "issue_count": 11,
   "severity_summary": {
-    "critical": 1,
+    "critical": 2,
     "high": 4,
     "medium": 5,
     "low": 0
   },
   "issues": [
+    {
+      "id": "workflow-39534318759-content_quality_p0",
+      "type": "content_quality_p0",
+      "title": "Content Quality Audit (2.0 内容质量综合巡检) 失败：内容质量 P0",
+      "description": "content-quality-audit / 7. 内容质量门禁结论",
+      "page": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "file": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "evidence": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
+      "recommended_action": "内容质量门禁发现 P0 问题。打开失败运行的内容审计 artifact，按文件和规则修复后重跑。",
+      "severity": "critical",
+      "agent": "content",
+      "action": "blocking_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-21T02:41:34.068834+00:00"
+    },
     {
       "id": "content-check-content_id-failed",
       "type": "content_content_id_failed",
@@ -215,26 +235,27 @@
     }
   ],
   "priority_issue": {
-    "id": "content-check-content_id-failed",
-    "type": "content_content_id_failed",
-    "title": "内容ID审计未通过",
-    "description": "内容ID审计未通过",
-    "page": "content/posts",
-    "file": "content/posts",
-    "evidence": "content_id_audit.py exit code=1; run_id=39534318759",
-    "recommended_action": "修复缺失、重复或格式不合法的 content_id，禁止在发布流程中随机生成。",
+    "id": "workflow-39534318759-content_quality_p0",
+    "type": "content_quality_p0",
+    "title": "Content Quality Audit (2.0 内容质量综合巡检) 失败：内容质量 P0",
+    "description": "content-quality-audit / 7. 内容质量门禁结论",
+    "page": "Content Quality Audit (2.0 内容质量综合巡检)",
+    "file": "Content Quality Audit (2.0 内容质量综合巡检)",
+    "evidence": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
+    "recommended_action": "内容质量门禁发现 P0 问题。打开失败运行的内容审计 artifact，按文件和规则修复后重跑。",
     "severity": "critical",
     "agent": "content",
-    "action": "manual_review",
-    "source": "content",
+    "action": "blocking_review",
+    "source": "workflow_failure",
     "source_file": "",
-    "task_source": "quality_gate",
+    "task_source": "workflow_failure",
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-21T02:40:59.305424+00:00"
+    "detected_at": "2026-10-21T02:41:34.068834+00:00"
   },
   "expected_actions": [
+    "blocking_review",
     "manual_review"
   ],
   "status": "partial",
@@ -242,6 +263,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=3, failed=0"
+    "note": "resolved=0, need_manual=4, failed=0"
   }
 }
