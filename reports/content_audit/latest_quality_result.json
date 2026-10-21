@@ -1,12 +1,12 @@
 {
   "status": "failed",
-  "generated_at": "2026-10-18T06:53:22.775090",
-  "run_id": "39105612458",
+  "generated_at": "2026-10-21T02:40:59.140706",
+  "run_id": "39534318759",
   "failed_steps": [
-    "内容质量验证(P0乱码)"
+    "内容ID审计"
   ],
   "blocking_failures": [
-    "quality_validator"
+    "content_id"
   ],
   "checks": [
     {
@@ -37,7 +37,7 @@
       "id": "content_id",
       "name": "内容ID审计",
       "script": "content_id_audit.py",
-      "exit_code": 0,
+      "exit_code": 1,
       "blocking": true,
       "agent": "content"
     },
@@ -45,14 +45,14 @@
       "id": "quality_validator",
       "name": "内容质量验证(P0乱码)",
       "script": "content_quality_validator.py",
-      "exit_code": 1,
+      "exit_code": 0,
       "blocking": true,
       "agent": "content"
     }
   ],
   "content": {
-    "total": 67,
-    "passed_count": 33,
+    "total": 68,
+    "passed_count": 68,
     "mojibake_files": [],
     "encoding_error_files": [],
     "validator_parse_error": null

@@ -9,7 +9,7 @@
       "failed": 0,
       "manual_review": 0,
       "in_progress": 0,
-      "last_run": "2026-10-21T02:34:26.548994"
+      "last_run": "2026-10-21T02:40:59.618036"
     },
     "frontend": {
       "total": 1,
@@ -25,7 +25,7 @@
       "failed": 0,
       "manual_review": 1,
       "in_progress": 0,
-      "last_run": "2026-10-21T02:34:26.455985"
+      "last_run": "2026-10-21T02:40:59.713174"
     },
     "ops": {
       "total": 1,
@@ -53387,8 +53387,40 @@
       "failed": 0,
       "note": "resolved=0, need_manual=0, failed=0",
       "executed_at": "2026-10-21T02:34:26.548994"
+    },
+    {
+      "task_id": "task_2026-10-21_seo",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-10-21T02:40:59.570675"
+    },
+    {
+      "task_id": "task_2026-10-21_seo",
+      "status": "completed",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=0, failed=0",
+      "executed_at": "2026-10-21T02:40:59.618036"
+    },
+    {
+      "task_id": "task_2026-10-21_content",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-10-21T02:40:59.665433"
+    },
+    {
+      "task_id": "task_2026-10-21_content",
+      "status": "partial",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=3, failed=0",
+      "executed_at": "2026-10-21T02:40:59.713174"
     }
   ],
-  "last_run": "2026-10-21T02:34:26.548999",
-  "total_executions": 6668
+  "last_run": "2026-10-21T02:40:59.713180",
+  "total_executions": 6672
 }
