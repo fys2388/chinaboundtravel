@@ -199,3 +199,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Kung Fu and Martial Arts in China: Where to See and Train](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

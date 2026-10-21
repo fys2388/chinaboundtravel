@@ -189,6 +189,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [China Travel Safety 2026: Guide for Travelers](/posts/travel-safety-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?

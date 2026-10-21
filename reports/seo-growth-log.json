@@ -6497,6 +6497,216 @@
       "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-20T08:19:36.178272"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-21T08:23:35.909468"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "'Things To Do In Yunnan: Rice Terraces &' -> 'Things To Do In Yunnan: Rice Terraces &' (keyword: things to do in yunnan)",
+      "timestamp": "2026-10-21T08:23:37.276359"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "detail": "'China Travel Safety 2026: Guide for Travelers' -> 'Còn Trung Quốc: Guide for Travelers' (keyword: còn trung quốc)",
+      "timestamp": "2026-10-21T08:23:38.647953"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "'Travel To China Requirements 2026: August' -> 'Travel To China Requirements 2026: August' (keyword: travel to china requirements 2026)",
+      "timestamp": "2026-10-21T08:23:40.038218"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "'Accommodation In China: Hotels & Budget' -> 'Accommodation In China: Hotels & Budget' (keyword: accommodation in china)",
+      "timestamp": "2026-10-21T08:23:41.406107"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> travel-safety-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-21T08:23:42.861687"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> travel-safety-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-21T08:23:44.250919"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> travel-safety-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-21T08:23:45.649863"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:23:47.018000"
+    },
+    {
+      "type": "internal_link",
+      "target": "2026-05-27-how-to-survive-chinese-train-station -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-21T08:23:48.707887"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-21T08:23:50.354481"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-21T08:23:51.729403"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:23:53.104233"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:23:54.469634"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:23:55.934703"
+    },
+    {
+      "type": "internal_link",
+      "target": "xian-terracotta-army-history-discovery-and-insider-tips -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:23:57.287717"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:23:58.683425"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:24:00.097873"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary-beijing-xian-shanghai-first-timers -> 7-day-china-itinerary",
+      "detail": "score=3",
+      "timestamp": "2026-10-21T08:24:01.489886"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:24:02.854459"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-food-delivery-meituan-eleme-guide -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:24:04.233875"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:24:05.584588"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:24:07.138280"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=2",
+      "timestamp": "2026-10-21T08:24:08.496604"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-21T08:24:09.864652"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:10.491445"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:10.929018"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:11.310473"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:11.744701"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:12.194680"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:12.655794"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:13.069418"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:13.507442"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:13.902416"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-21T08:24:14.292240"
     }
   ]
 }

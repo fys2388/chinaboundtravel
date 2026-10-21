@@ -305,3 +305,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

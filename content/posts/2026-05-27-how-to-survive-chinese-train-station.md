@@ -230,3 +230,5 @@ Remember: **find your platform, know your carriage number, keep your passport ha
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

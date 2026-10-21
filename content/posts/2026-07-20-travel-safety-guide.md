@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-dfe3904705ea"
-title: "China Travel Safety 2026: Guide for Travelers"
+title: "Còn Trung Quốc: Guide for Travelers"
 date: "2026-07-20T10:00:00+08:00"
 lastmod: "2026-07-20T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg"
 categories: ["safety", "travel"]
-last_updated: "2026-09-13"
+last_updated: "2026-10-21"
 
 ---
 # China Travel Safety 2026: The Ultimate Guide for Aussie and Kiwi Travelers
