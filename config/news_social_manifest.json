@@ -98,14 +98,70 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-10-20T05:45:57.904788+00:00",
+      "posted_at": "2026-10-21T05:50:14.513449+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "191a9b20c91f": {
+      "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ r",
+      "posted_at": "2026-10-21T05:50:03.433483+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "be88ed237ca5": {
+      "title": "China gains favor with foreign visitors as visa-free arrival",
+      "posted_at": "2026-10-21T05:50:05.154784+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "1ec0bd2b7fa1": {
+      "title": "China sees 192 million passenger border crossings in Q3; vis",
+      "posted_at": "2026-10-21T05:50:06.855470+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "d133c7e3cfa7": {
+      "title": "China’s ‘Hollywood’ turns film sets into short-drama experie",
+      "posted_at": "2026-10-21T05:50:08.645345+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "55d6c6627e23": {
+      "title": "Cultural heritage protection to be bolstered - China Daily",
+      "posted_at": "2026-10-21T05:50:10.433054+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "58346569bf40": {
+      "title": "China unveils first 5-year plan for cultural heritage protec",
+      "posted_at": "2026-10-21T05:50:12.142481+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "426366667a75": {
+      "title": "China unveils first specialized cultural heritage protection",
+      "posted_at": "2026-10-21T05:50:12.698673+00:00",
       "platforms": [
         "x"
       ],
       "success": false
     }
   },
-  "last_run": "2026-10-20T05:45:57.904808+00:00",
-  "total_posts": 10,
-  "total_failures": 3
+  "last_run": "2026-10-21T05:50:14.513471+00:00",
+  "total_posts": 17,
+  "total_failures": 4
 }
