@@ -2103,6 +2103,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261022_061307",
+      "timestamp": "2026-10-22T06:13:07.362009",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "39732463190",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
