@@ -159,9 +159,65 @@
         "x"
       ],
       "success": false
+    },
+    "b19672f0c4b6": {
+      "title": "Montenegro Introduces New Visa Rules for Russia, China and T",
+      "posted_at": "2026-10-22T05:52:22.100166+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "454c6d010498": {
+      "title": "China attracts 15.6% surge in foreign visitors as visa-free ",
+      "posted_at": "2026-10-22T05:52:23.894729+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "15be67706f82": {
+      "title": "Sihasak asks Chinese Embassy to keep travel warnings proport",
+      "posted_at": "2026-10-22T05:52:25.750722+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "ecdbc8335830": {
+      "title": "China’s tourists flock to experience a pretend typhoon as ‘d",
+      "posted_at": "2026-10-22T05:52:27.782682+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "376a6721a935": {
+      "title": "At China’s Biggest Studio Complex, Tourists Pay to Play the ",
+      "posted_at": "2026-10-22T05:52:29.533243+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "bb14da3adb86": {
+      "title": "Foreign tourists are coming to China. Why aren’t they shoppi",
+      "posted_at": "2026-10-22T05:52:36.056062+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "fbfb9a6cc89c": {
+      "title": "Graphics: China's first five-year plan for cultural heritage",
+      "posted_at": "2026-10-22T05:52:37.952291+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-21T05:50:14.513471+00:00",
-  "total_posts": 17,
+  "last_run": "2026-10-22T05:52:37.952310+00:00",
+  "total_posts": 24,
   "total_failures": 4
 }
