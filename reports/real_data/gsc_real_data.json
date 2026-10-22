@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-21T10:46:36.015302",
-  "data_date": "2026-10-18",
+  "pull_time": "2026-10-22T05:09:11.375037",
+  "data_date": "2026-10-19",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 322,
+    "impressions": 358,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 61.4,
+    "average_position": 62.2,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-21",
-      "impressions": 11,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 49.2
-    },
     {
       "date": "2026-09-22",
       "impressions": 19,
@@ -208,9 +201,23 @@
       "clicks": 1,
       "ctr": 0.03,
       "position": 38.2
+    },
+    {
+      "date": "2026-10-19",
+      "impressions": 60,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 58.8
     }
   ],
   "top_queries": [
+    {
+      "query": "\"wechat accepted\"",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 37
+    },
     {
       "query": "144 hour visa free transit",
       "impressions": 1,
@@ -255,10 +262,10 @@
     },
     {
       "query": "accommodation china",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 63
+      "position": 61
     },
     {
       "query": "accommodation in china",
@@ -276,10 +283,10 @@
     },
     {
       "query": "accommodation standards for sichuan scenic spots",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 71
+      "position": 68.5
     },
     {
       "query": "accommodation standards of chengdu tourism companies",
@@ -297,7 +304,7 @@
     },
     {
       "query": "accommodation standards of sichuan tourism companies",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
       "position": 95
@@ -315,6 +322,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 86.2
+    },
+    {
+      "query": "alipay for foreigners china 2026",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 78
     },
     {
       "query": "alipay for tourists",
@@ -336,20 +350,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 90
-    },
-    {
-      "query": "alipay international",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 55
-    },
-    {
-      "query": "alipay international account",
-      "impressions": 3,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 64
     }
   ],
   "top_pages": [
@@ -383,10 +383,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 7,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
-      "position": 4.7
+      "position": 4.3
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -474,10 +474,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-      "impressions": 25,
+      "impressions": 35,
       "clicks": 0,
       "ctr": 0,
-      "position": 45.2
+      "position": 50.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1",
@@ -488,10 +488,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
-      "impressions": 40,
+      "impressions": 43,
       "clicks": 0,
       "ctr": 0,
-      "position": 12.7
+      "position": 14.4
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-18"
+    "data_date": "2026-10-19"
   }
 }
