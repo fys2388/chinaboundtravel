@@ -3,13 +3,13 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-10-22_ops",
   "created_at": "2026-10-22T01:20:49.664400+00:00",
-  "updated_at": "2026-10-22T12:15:04.193792",
+  "updated_at": "2026-10-22T16:31:02.108391",
   "target_date": "2026-10-22",
-  "issue_count": 3,
+  "issue_count": 4,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 3,
+    "medium": 4,
     "low": 0
   },
   "issues": [
@@ -72,6 +72,26 @@
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-10-22T12:15:02.408488+00:00"
+    },
+    {
+      "id": "site_health-636c7bb708a5693d",
+      "type": "file_mojibake",
+      "title": "file_mojibake",
+      "description": "file_mojibake",
+      "page": "config/news_digest.json",
+      "file": "config/news_digest.json",
+      "evidence": "检测到乱码字符（双编码）",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-10-22T16:30:59.048811+00:00"
     }
   ],
   "priority_issue": {
@@ -102,6 +122,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=3, failed=0"
+    "note": "resolved=0, need_manual=4, failed=0"
   }
 }
