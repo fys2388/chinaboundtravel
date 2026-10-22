@@ -186,6 +186,8 @@ Account restrictions usually happen when Alipay's security system flags unusual 
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### Can foreigners use how to use alipay?

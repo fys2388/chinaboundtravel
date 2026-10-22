@@ -292,6 +292,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Còn Trung Quốc: Guide for Travelers](/posts/travel-safety-guide/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

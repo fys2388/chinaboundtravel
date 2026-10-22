@@ -143,6 +143,8 @@ For more information on China travel, check out these articles:
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

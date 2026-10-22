@@ -291,3 +291,5 @@ If you found this guide helpful, [check out our other China travel guides](/post
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+- [Còn Trung Quốc: Guide for Travelers](/posts/travel-safety-guide/)

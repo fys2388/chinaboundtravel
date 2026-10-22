@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/safety/travel-safety-guide.jpg"
 categories: ["safety", "travel"]
-last_updated: "2026-10-21"
+last_updated: "2026-10-22"
 
 ---
 # China Travel Safety 2026: The Ultimate Guide for Aussie and Kiwi Travelers
