@@ -3,16 +3,36 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-10-23_ops",
   "created_at": "2026-10-23T01:00:59.562501+00:00",
-  "updated_at": "2026-10-23T02:00:54.942514",
+  "updated_at": "2026-10-23T02:05:28.877307",
   "target_date": "2026-10-23",
-  "issue_count": 1,
+  "issue_count": 2,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 0
   },
   "issues": [
+    {
+      "id": "workflow-39887564178-unknown",
+      "type": "unknown",
+      "title": "Environment Check 失败：未分类错误",
+      "description": "env-check / Run environment check",
+      "page": "Environment Check",
+      "file": "Environment Check",
+      "evidence": "##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "medium",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-10-23T02:05:26.940103+00:00"
+    },
     {
       "id": "site_health-34757aa52a21860a",
       "type": "file_mojibake",
@@ -35,24 +55,24 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-34757aa52a21860a",
-    "type": "file_mojibake",
-    "title": "file_mojibake",
-    "description": "file_mojibake",
-    "page": "config/news_digest.json",
-    "file": "config/news_digest.json",
-    "evidence": "检测到乱码字符（双编码）",
-    "recommended_action": "Review and remediate the reported issue.",
+    "id": "workflow-39887564178-unknown",
+    "type": "unknown",
+    "title": "Environment Check 失败：未分类错误",
+    "description": "env-check / Run environment check",
+    "page": "Environment Check",
+    "file": "Environment Check",
+    "evidence": "##[error]Process completed with exit code 1.",
+    "recommended_action": "请查看日志详情，人工分析根因。",
     "severity": "medium",
     "agent": "ops",
     "action": "manual_review",
-    "source": "site_health",
+    "source": "workflow_failure",
     "source_file": "",
-    "task_source": "quality_gate",
+    "task_source": "workflow_failure",
     "status": "new",
     "assigned": true,
     "assigned_to": "ops",
-    "detected_at": "2026-10-23T02:00:54.508059+00:00"
+    "detected_at": "2026-10-23T02:05:26.940103+00:00"
   },
   "expected_actions": [
     "manual_review"
@@ -62,6 +82,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
