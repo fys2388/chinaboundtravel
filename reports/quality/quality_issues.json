@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T06:01:44.095510+00:00",
+  "generated_at": "2026-10-23T06:31:35.531972+00:00",
   "summary": {
     "total": 14,
     "P0": 1,
@@ -21,7 +21,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-23T06:01:42.195580+00:00",
+      "generated_at": "2026-10-23T06:31:33.486373+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 0,
@@ -60,7 +60,7 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-10-23T02:36:10.052756+00:00",
+      "generated_at": "2026-10-23T06:10:46.605132+00:00",
       "issues": 7,
       "P0": 0,
       "P1": 5,
@@ -80,7 +80,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-id-7-day-china-itinerary.md",
@@ -94,49 +94,49 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
-      "id": "site_health-44e199a3806c04ee",
+      "id": "site_health-6f4ac102a63394f6",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
       "title": "content_placeholder",
-      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "page": "content\\_archived\\2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "evidence": "发现模板占位符: [Image:",
-      "recommended_action": "占位内容需人工补充",
+      "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
-      "status": "need_manual",
-      "first_seen": "2026-10-23T06:01:44.095510+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "status": "open",
+      "first_seen": "2026-10-23T06:31:35.531972+00:00",
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
-      "id": "site_health-326baad397639869",
+      "id": "site_health-606936ec52c5a482",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
       "title": "draft_leak",
-      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "page": "content\\_archived\\2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
       "evidence": "draft:true的文章可能已发布到线上",
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-23T06:01:44.095510+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "first_seen": "2026-10-23T06:31:35.531972+00:00",
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
-      "id": "site_health-37c127e513e09449",
+      "id": "site_health-2d977d9f4f381a0b",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
       "title": "garbled_text",
-      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "page": "content\\_archived\\2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
       "evidence": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-23T06:01:44.095510+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "first_seen": "2026-10-23T06:31:35.531972+00:00",
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -150,7 +150,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -164,7 +164,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
@@ -178,7 +178,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
@@ -192,7 +192,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T10:17:23.924958+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -206,7 +206,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -220,7 +220,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
       "id": "3d8eaf1805cf9f56",
@@ -234,35 +234,35 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-23T03:02:06.378613+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
-      "id": "site_health-19ded263744a79bf",
+      "id": "site_health-3ac1e555835e0b8f",
       "severity": "P2",
       "source": "site_health",
       "type": "file_mojibake",
       "title": "file_mojibake",
-      "page": "config/news_digest.json",
+      "page": "config\\news_digest.json",
       "evidence": "检测到乱码字符（双编码）",
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "site_health",
       "status": "open",
-      "first_seen": "2026-10-23T06:01:44.095510+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "first_seen": "2026-10-23T06:31:35.531972+00:00",
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     },
     {
-      "id": "site_health-75f85309a0dfea8b",
+      "id": "site_health-7c0afa7c6b5af9e3",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
-      "page": "content/posts/144-hour-visa-free-transit-guide.md",
+      "page": "content\\posts\\144-hour-visa-free-transit-guide.md",
       "evidence": "Meta description过长(174字符)",
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-23T06:01:44.095510+00:00",
-      "last_seen": "2026-10-23T06:01:44.095510+00:00"
+      "first_seen": "2026-10-23T06:31:35.531972+00:00",
+      "last_seen": "2026-10-23T06:31:35.531972+00:00"
     }
   ]
 }
