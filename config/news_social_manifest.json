@@ -215,9 +215,65 @@
         "x"
       ],
       "success": true
+    },
+    "6fe72a77cb3a": {
+      "title": "Americans could be detained for years in popular travel dest",
+      "posted_at": "2026-10-23T05:51:10.999194+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "1d6e7247fdc5": {
+      "title": "State Department warns travel to popular vacation destinatio",
+      "posted_at": "2026-10-23T05:51:14.536876+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "fa31abf1d061": {
+      "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisor",
+      "posted_at": "2026-10-23T05:51:03.243861+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "1c06495de6fa": {
+      "title": "September 2024 Tourism Market Analysis: Slowing Growth in Eu",
+      "posted_at": "2026-10-23T05:51:05.039129+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "ec3c8cfb32cf": {
+      "title": "Inside Guangxi: How China-Vietnam ties boost trade and touri",
+      "posted_at": "2026-10-23T05:51:07.093924+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "73cf06cbdf84": {
+      "title": "U.S. State Department China travel advisory: Key points to n",
+      "posted_at": "2026-10-23T05:51:09.318511+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "246af33e95c4": {
+      "title": "Trump takes questions on China trip - FOX 10 Phoenix",
+      "posted_at": "2026-10-23T05:51:12.658068+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-22T05:52:37.952310+00:00",
-  "total_posts": 24,
-  "total_failures": 4
+  "last_run": "2026-10-23T05:51:14.536900+00:00",
+  "total_posts": 32,
+  "total_failures": 5
 }
