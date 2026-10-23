@@ -293,3 +293,5 @@ If you found this guide helpful, [check out our other China travel guides](/post
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Còn Trung Quốc: Guide for Travelers](/posts/travel-safety-guide/)
+
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)

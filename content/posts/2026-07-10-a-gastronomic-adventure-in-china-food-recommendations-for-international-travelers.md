@@ -176,6 +176,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### What should I know about best food in china?

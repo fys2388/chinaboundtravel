@@ -159,3 +159,5 @@ Avoid sharing passport details or verification codes with third parties.
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

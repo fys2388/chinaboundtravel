@@ -191,6 +191,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Travel Safety 2026: Guide for Travelers](/posts/travel-safety-guide/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### Do I need a visa for China?

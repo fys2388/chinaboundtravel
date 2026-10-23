@@ -145,6 +145,8 @@ For more information on China travel, check out these articles:
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### How do I book how to take train in china?
