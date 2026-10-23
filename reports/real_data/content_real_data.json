@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-10-22T10:47:31.629195",
-  "data_date": "2026-10-22",
+  "pull_time": "2026-10-23T10:39:32.732847",
+  "data_date": "2026-10-23",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 68,
     "articles_this_week": 0,
-    "avg_word_count": 2106,
+    "avg_word_count": 2107,
     "articles_with_affiliate_links": 38,
     "articles_with_internal_links": 67
   },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1949,
+      "word_count": 1960,
       "has_affiliate_links": true,
       "has_internal_links": true
     },

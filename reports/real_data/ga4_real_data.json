@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-22T10:47:27.461312",
-  "data_date": "2026-10-21",
+  "pull_time": "2026-10-23T10:39:28.490136",
+  "data_date": "2026-10-22",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "activeUsers": 211,
     "sessions": 227,
-    "screenPageViews": 234,
-    "engagedSessions": 165,
-    "bounceRate": 0.27312775330396477,
-    "averageSessionDuration": 23.90064549339207,
-    "engagementRate": 0.7268722466960352,
+    "screenPageViews": 228,
+    "engagedSessions": 166,
+    "bounceRate": 0.2687224669603524,
+    "averageSessionDuration": 21.507542220264316,
+    "engagementRate": 0.7312775330396476,
     "newUsers": 210
   },
   "daily": [
-    {
-      "date": "2026-09-25",
-      "sessions": 3,
-      "activeUsers": 3,
-      "pageviews": 3
-    },
     {
       "date": "2026-09-26",
       "sessions": 8,
@@ -173,16 +167,22 @@
     },
     {
       "date": "2026-10-22",
-      "sessions": 2,
-      "activeUsers": 2,
-      "pageviews": 3
+      "sessions": 3,
+      "activeUsers": 3,
+      "pageviews": 4
+    },
+    {
+      "date": "2026-10-23",
+      "sessions": 1,
+      "activeUsers": 1,
+      "pageviews": 0
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 26,
+      "pageviews": 27,
       "sessions": 24
     },
     {
@@ -240,22 +240,16 @@
       "sessions": 6
     },
     {
-      "path": "/posts/144-hour-visa-free-transit-guide/",
-      "title": "China 144 Hour Transit Visa 2026: Complete Guide",
-      "pageviews": 6,
-      "sessions": 5
-    },
-    {
-      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
-      "pageviews": 6,
-      "sessions": 6
-    },
-    {
       "path": "/posts/alipay-wechat-pay-foreigners-guide/",
       "title": "How to Use Alipay & WeChat Pay in China 2026",
       "pageviews": 6,
       "sessions": 6
+    },
+    {
+      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "pageviews": 5,
+      "sessions": 5
     },
     {
       "path": "/posts/accommodation-tips-guide/",
@@ -268,32 +262,38 @@
       "title": "Alipay in China: Setup & Payment Tips (2026)",
       "pageviews": 5,
       "sessions": 5
+    },
+    {
+      "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
+      "pageviews": 5,
+      "sessions": 5
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
       "sessions": 162,
-      "activeUsers": 159,
+      "activeUsers": 160,
       "engagementRate": 0.9753
     },
     {
       "channel": "Direct",
-      "sessions": 30,
-      "activeUsers": 30,
-      "engagementRate": 0.0333
+      "sessions": 31,
+      "activeUsers": 31,
+      "engagementRate": 0.0323
     },
     {
       "channel": "Organic Search",
-      "sessions": 18,
-      "activeUsers": 18,
-      "engagementRate": 0.1111
+      "sessions": 17,
+      "activeUsers": 17,
+      "engagementRate": 0.1176
     },
     {
       "channel": "Unassigned",
       "sessions": 14,
-      "activeUsers": 2,
-      "engagementRate": 0.2857
+      "activeUsers": 1,
+      "engagementRate": 0.3571
     },
     {
       "channel": "AI Assistant",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-21"
+    "data_date": "2026-10-22"
   }
 }
