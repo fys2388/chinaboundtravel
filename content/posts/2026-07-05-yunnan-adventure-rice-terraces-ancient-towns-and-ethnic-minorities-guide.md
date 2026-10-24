@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-23c31fe5b281"
-title: "Things To Do In Yunnan: Rice Terraces &"
+title: "Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns"
 date: "2026-07-05T10:00:00+08:00"
 lastmod: "2026-07-05T10:00:00+08:00"
 author: "Joran"
@@ -14,7 +14,7 @@ geo: "EU"
 draft: false
 audit_status: "pass4"
 summary: "Yunnan travel guide: 7-day itinerary with budget, Yuanyang rice terraces, Dali and Lijiang ancient towns, ethnic minority culture, and transport tips from a China expat."
-description: "Yunnan in 7 days: Kunming to the Yuanyang rice terraces, Dali, Lijiang, and Jade Dragon Snow Mountain, with real prices."
+description: "Plan Yunnan in 7 days: Kunming, Yuanyang rice terraces, Dali, Lijiang and Jade Dragon Snow Mountain, with real prices and transport tips."
 canonicalURL: "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/"
 ShowToc: "true"
 TocOpen: "false"

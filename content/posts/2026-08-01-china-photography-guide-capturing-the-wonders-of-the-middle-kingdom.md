@@ -4,7 +4,7 @@
 content_id: "cbt-bfeaa5ca9007"
 
 
-title: "China Photography Guide 2026: Top Spots & Tips"
+title: "China Photography Guide: Best Spots, Gear & Tips from a China Pro"
 
 date: "2026-08-01T10:00:00+08:00"
 
@@ -45,7 +45,7 @@ audit_status: "pass2"
 summary: "China photography guide for travelers: essential tips, gear recommendations, composition techniques, and a complete breakdown of a top choice photo locations across 12 major Chinese destinations. Research-based guidance from our editorial team."
 
 
-description: "China photography guide: gear, lighting, composition, and top photo locations across 12 destinations for travelers in 2026."
+description: "Best photo locations across 12 Chinese destinations, plus gear, lighting and composition tips from a pro who's shot China for 5+ years."
 
 
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/"
