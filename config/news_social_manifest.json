@@ -271,9 +271,17 @@
         "x"
       ],
       "success": true
+    },
+    "34870d3de399": {
+      "title": "From embroidery to tourism, SW China's Yunnan turns ethnic t",
+      "posted_at": "2026-10-24T05:33:40.593710+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-23T05:51:14.536900+00:00",
-  "total_posts": 32,
+  "last_run": "2026-10-24T05:33:40.593731+00:00",
+  "total_posts": 33,
   "total_failures": 5
 }
