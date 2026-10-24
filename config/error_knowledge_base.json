@@ -2169,6 +2169,17 @@
       "error_message": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261024_082127",
+      "timestamp": "2026-10-24T08:21:27.923608",
+      "workflow_name": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "run_id": "40077643448",
+      "category": "content_quality_p0",
+      "category_name": "内容质量P0",
+      "error_message": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
