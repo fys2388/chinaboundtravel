@@ -959,6 +959,30 @@
         "position": 18.5
       },
       "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "action": "first_paragraph_intent_flagged",
+      "date": "2026-10-24T06:35:34.734685",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 456,
+        "clicks": 0,
+        "position": 66.5
+      },
+      "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "action": "title: 'China Photography Guide: Top Spots & Tips' -> 'China Photography Guide 2026: Top Spots & Tips', first_paragraph_intent_flagged",
+      "date": "2026-10-24T06:35:35.907465",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 184,
+        "clicks": 0,
+        "position": 24.5
+      },
+      "metrics_after": {}
     }
   ]
 }

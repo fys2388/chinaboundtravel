@@ -4,7 +4,7 @@
 content_id: "cbt-bfeaa5ca9007"
 
 
-title: "China Photography Guide: Top Spots & Tips"
+title: "China Photography Guide 2026: Top Spots & Tips"
 
 date: "2026-08-01T10:00:00+08:00"
 
@@ -67,7 +67,7 @@ cover:
 
 
 categories: ["photography", "travel"]
-last_updated: "2026-10-15"
+last_updated: "2026-10-24"
 
 ---
 
