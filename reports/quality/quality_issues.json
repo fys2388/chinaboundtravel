@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T02:02:06.839039+00:00",
+  "generated_at": "2026-10-24T02:31:45.455625+00:00",
   "summary": {
     "total": 14,
     "P0": 1,
@@ -21,7 +21,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-24T02:02:03.660840+00:00",
+      "generated_at": "2026-10-24T02:31:43.213353+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 0,
@@ -80,7 +80,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-id-7-day-china-itinerary.md",
@@ -94,10 +94,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
-      "id": "site_health-66bb9c6521a6ee74",
+      "id": "site_health-60eb592ba4b4a39e",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -107,11 +107,11 @@
       "recommended_action": "占位内容需人工补充",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-10-24T02:02:06.839039+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "first_seen": "2026-10-24T02:31:45.455625+00:00",
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
-      "id": "site_health-af3a4e6b91c7e2a",
+      "id": "site_health-2be3f7110a5ec06f",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -121,11 +121,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-24T02:02:06.839039+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "first_seen": "2026-10-24T02:31:45.455625+00:00",
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
-      "id": "site_health-94cfe6b81aacb42",
+      "id": "site_health-41b805637ae38510",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -135,8 +135,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-24T02:02:06.839039+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "first_seen": "2026-10-24T02:31:45.455625+00:00",
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -150,7 +150,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -164,7 +164,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
@@ -178,7 +178,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
@@ -192,7 +192,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T10:17:23.924958+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -206,7 +206,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -220,7 +220,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
       "id": "3d8eaf1805cf9f56",
@@ -234,10 +234,10 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-24T01:01:52.439052+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
-      "id": "site_health-d37db70b9f6a418",
+      "id": "site_health-506d0568b8ae155a",
       "severity": "P2",
       "source": "site_health",
       "type": "file_mojibake",
@@ -247,11 +247,11 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "site_health",
       "status": "open",
-      "first_seen": "2026-10-24T02:02:06.839039+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "first_seen": "2026-10-24T02:31:45.455625+00:00",
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     },
     {
-      "id": "site_health-468a3da16fa7a9ed",
+      "id": "site_health-6b39533c7ef9a54f",
       "severity": "P2",
       "source": "site_health",
       "type": "meta_description_too_long",
@@ -261,8 +261,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-24T02:02:06.839039+00:00",
-      "last_seen": "2026-10-24T02:02:06.839039+00:00"
+      "first_seen": "2026-10-24T02:31:45.455625+00:00",
+      "last_seen": "2026-10-24T02:31:45.455625+00:00"
     }
   ]
 }
