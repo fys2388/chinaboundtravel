@@ -636,6 +636,13 @@
       "fixed_by": "auto_error_router:content",
       "fix_note": "已发送飞书告警(category=content_quality_p0)",
       "fixed_at": "2026-10-24T08:21:29.065789"
+    },
+    {
+      "workflow": "Post-deploy Tasks",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/92",
+      "fixed_at": "2026-10-24T08:26:41.532787"
     }
   ]
 }
