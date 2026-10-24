@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: 'China 144-hour visa-free transit 2026: all eligible ports & zones, step-by-step entry process, the 3 mistakes that get travelers denied, and eSIM setup for staying connected.'
+description: '144-hour visa-free transit 2026: eligible ports, entry process, common mistakes, and eSIM setup.'
 ShowToc: true
 TocOpen: false
 cover:

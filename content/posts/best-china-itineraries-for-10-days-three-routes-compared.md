@@ -1,5 +1,5 @@
 ---
-title: "Top-rated China Itineraries for 10 Days: Three Routes Compared"
+title: "Top-rated China Itineraries for 10 Days: Three Routes"
 date: "2026-10-02T10:00:00+08:00"
 lastmod: "2026-10-02T10:00:00+08:00"
 author: "Joran"
