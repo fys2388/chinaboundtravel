@@ -2809,6 +2809,71 @@ class FeishuDailyReporter:
             result["gh_runs_total"] = len(runs)
             result["gh_query_window_days"] = widest_window_days
 
+            # P1 FIX 2026-10-24: 通用 API 查询有分页上限（最多 1000 条），
+            # 周更 blog 的 run 在 10 天窗口内可能被 1000+ 条其他 workflow run 挤到第 11 页之后。
+            # 修复：对每个关键 workflow 单独用 /actions/workflows/{id}/runs 查询，
+            # 该接口不受通用分页限制，确保周更 run 一定被找到。
+            _wf_id_cache = {}
+            def _get_wf_id(workflow_path):
+                if workflow_path not in _wf_id_cache:
+                    wf_url = f"{base_url.replace('/runs', '')}/workflows"
+                    try:
+                        wf_resp = requests.get(wf_url, headers=headers, timeout=10)
+                        if wf_resp.status_code == 200:
+                            for wf in wf_resp.json().get("workflows", []):
+                                _wf_id_cache[wf["path"]] = wf["id"]
+                    except Exception:
+                        pass
+                return _wf_id_cache.get(workflow_path)
+
+            def _fallback_query(workflow_path, since_day, today_day_str):
+                """per-workflow 回退查询：不受通用 API 1000 条分页限制"""
+                wf_id = _get_wf_id(workflow_path)
+                if not wf_id:
+                    return []
+                wf_run_url = f"{base_url.replace('/actions/runs', '')}/actions/workflows/{wf_id}/runs"
+                fallback_runs = []
+                try:
+                    for page in range(1, 21):
+                        resp = requests.get(
+                            wf_run_url,
+                            headers=headers,
+                            params={
+                                "per_page": 100,
+                                "page": page,
+                                "status": "completed",
+                                "created": f"{since_day}..{today_day_str}",
+                            },
+                            timeout=15,
+                        )
+                        if resp.status_code != 200:
+                            break
+                        batch = resp.json().get("workflow_runs", [])
+                        fallback_runs.extend(batch)
+                        if len(batch) < 100:
+                            break
+                except Exception:
+                    pass
+                return fallback_runs
+
+            # 补充 per-workflow 查询（避免分页截断导致周更 run 丢失）
+            _today_str = datetime.now().strftime("%Y-%m-%d")
+            _all_workflow_paths = BLOG_WORKFLOW_PATHS | REPORT_WORKFLOW_PATHS | SOCIAL_WORKFLOW_PATHS
+            _fallback_added = 0
+            for wf_path in _all_workflow_paths:
+                wf_id = _get_wf_id(wf_path)
+                if not wf_id:
+                    continue
+                since_day = (datetime.now() - timedelta(days=widest_window_days)).strftime("%Y-%m-%d")
+                fallback = _fallback_query(wf_path, since_day, _today_str)
+                existing_ids = {str(r["id"]) for r in runs}
+                new_runs = [r for r in fallback if str(r.get("id")) not in existing_ids]
+                if new_runs:
+                    runs.extend(new_runs)
+                    _fallback_added += len(new_runs)
+            if _fallback_added > 0:
+                print(f"   🔧 Per-workflow 回退查询补充了 {_fallback_added} 条 run")
+
             def _completed_runs(paths, since_day):
                 """since_day 起、已完成、排除当前 run、按创建时间倒序。
 
