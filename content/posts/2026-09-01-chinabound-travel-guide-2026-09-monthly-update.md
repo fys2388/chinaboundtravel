@@ -97,3 +97,5 @@ The current edition (2026.09) is included with every plan on [chinaboundtravel.c
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [China Travel Safety 2026: Guide for Travelers](/posts/travel-safety-guide/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

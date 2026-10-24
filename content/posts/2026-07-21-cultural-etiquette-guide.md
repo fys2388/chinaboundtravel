@@ -164,6 +164,8 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### What should I know about dos and donts in china?

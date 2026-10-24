@@ -350,6 +350,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?
