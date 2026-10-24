@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-10-23T10:39:33.252007",
+  "run_time": "2026-10-24T09:57:25.325567",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20261023_103933",
-      "last_updated": "2026-10-23T10:39:33.080370",
+      "version": "2.0-20261024_095725",
+      "last_updated": "2026-10-24T09:57:25.163471",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -44,7 +44,7 @@
         {
           "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
           "ctr": 0.08,
-          "position": 8.8,
+          "position": 8.3,
           "impressions": 13
         },
         {
@@ -107,9 +107,9 @@
           "position": 3.5
         },
         {
-          "keyword": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
-          "traffic_potential": 1.8,
-          "position": 1
+          "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+          "traffic_potential": 2.209999999999999,
+          "position": 8.3
         }
       ],
       "learning_insights": [
@@ -120,7 +120,7 @@
         },
         {
           "pattern": "快速提升机会关键词",
-          "description": "发现 14 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+          "description": "发现 15 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
           "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
           "keywords": [
             "https://www.chinaboundtravel.com/cancel/",
@@ -136,14 +136,21 @@
           "field": "best_keywords",
           "reason": "基于GSC数据分析，更新最佳关键词排名",
           "version": "2.1",
-          "timestamp": "2026-10-23T10:39:33.069265",
+          "timestamp": "2026-10-24T09:57:25.152384",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "high_priority_keywords",
+          "reason": "基于流量潜力分析，更新高优先级关键词",
+          "version": "2.1",
+          "timestamp": "2026-10-24T09:57:25.152384",
           "evidence": "based on performance data analysis"
         }
       ]
     },
     "revenue": {
-      "version": "2.0-20261023_103933",
-      "last_updated": "2026-10-23T10:39:33.154428",
+      "version": "2.0-20261024_095725",
+      "last_updated": "2026-10-24T09:57:25.231461",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -226,8 +233,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20261023_103933",
-      "last_updated": "2026-10-23T10:39:33.037457",
+      "version": "2.0-20261024_095725",
+      "last_updated": "2026-10-24T09:57:25.122395",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -311,8 +318,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20261023_103933",
-      "last_updated": "2026-10-23T10:39:33.008184",
+      "version": "2.0-20261024_095725",
+      "last_updated": "2026-10-24T09:57:25.092823",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -407,8 +414,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.1-20261023_103932_quality_gated",
-      "last_updated": "2026-10-23T10:39:32.958993",
+      "version": "2.1-20261024_095725_quality_gated",
+      "last_updated": "2026-10-24T09:57:25.050218",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -517,7 +524,7 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 33.58%，比Bottom 20%高 33.58个百分点",
+          "description": "Top 20%帖子平均CTR 32.96%，比Bottom 20%高 32.96个百分点",
           "common_hooks": [],
           "best_times": [
             "0:00",
@@ -529,8 +536,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20261023_103933",
-      "last_updated": "2026-10-23T10:39:33.111073",
+      "version": "2.0-20261024_095725",
+      "last_updated": "2026-10-24T09:57:25.191595",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -655,77 +662,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/free-itinerary/', 'traffic_potential': 5.5, 'position': 4.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
-      "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1', 'traffic_potential': 1.8, 'position': 1}",
+      "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 2.209999999999999, 'position': 8.3}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261023_103933"
+      "strategy_version": "2.0-20261024_095725"
     }
   ],
   "domain_summary": {
