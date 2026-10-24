@@ -1,32 +1,10 @@
 {
   "version": "1.0",
-  "last_updated": "2026-10-23T01:42:08.387680+00:00",
-  "last_updated_date": "2026-10-23",
+  "last_updated": "2026-10-24T01:45:49.638081+00:00",
+  "last_updated_date": "2026-10-24",
   "total_items": 40,
   "digest": {
     "visa_policy": [
-      {
-        "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
-        "summary": "Americans could be detained for years in popular travel destination, officials warn Fox News",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UdIBlwFBVV95cUxPQktOT0hNOEh6YWRxcDVEa0ozQ0twZ1pqVUJCbkd1ODJwREIyb3RxTjlJYndLcXVlWU5sZWJGQmhNck5jeVlkMTl0OVY2eGZhVXlMaDZsWURUQlc1UzRPZXhPV1VrV3Etak9TVVJWYTNpaVE1RHFsNFdPOVZiRzhXSko4V2M1LXpGWkZlNkY3WUlIVWVVZE9N?oc=5",
-        "date": "2026-10-22",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "6fe72a77cb3a"
-      },
-      {
-        "title": "State Department warns travel to popular vacation destination could get you thrown in jail - New York Post",
-        "summary": "State Department warns travel to popular vacation destination could get you thrown in jail New York Post",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSmJweTB4TnVaVlR5NXFOUHB2SHY2YXNWSDBrSkVaYlB5Y2tHYVhFcTlyX3dFbjc2Y29PMEk2aFhBUnZaVlA1eURuSzFXenpGbVpYaDZQM0x0UGQwdzByQ1NUbVdNd0I2d3duVWY4VTJsZjJQTmpUOFZTSG9iUmJxR1o5d05kbWN0WXJXbWFDYWdKZ1FIM1dKVkVINnpIWWF2WXJzT0FLVVFyQQ?oc=5",
-        "date": "2026-10-22",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "1d6e7247fdc5"
-      },
       {
         "title": "Montenegro Introduces New Visa Rules for Russia, China and Türkiye - Rus Tourism News",
         "summary": "Montenegro Introduces New Visa Rules for Russia, China and Türkiye Rus Tourism News",
@@ -48,6 +26,28 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "454c6d010498"
+      },
+      {
+        "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times",
+        "summary": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5HNi1VcnlnLTI5OTVBWVNJLXowRTVSRmt6bXg0akJjdWptOUxMNEEtQno0cFdkc1dkUGh6d3dldDM5SUZGMHlfTkw2emRwb0hLbWJIT09Oa21mU0VsQjBFRXhB?oc=5",
+        "date": "2026-10-20",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "191a9b20c91f"
+      },
+      {
+        "title": "China gains favor with foreign visitors as visa-free arrivals rise - Xinhua",
+        "summary": "China gains favor with foreign visitors as visa-free arrivals rise Xinhua",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10dlRXZ1NsVzVkZkdoSWJ6Z251dElzM0owUVVCak84U0ZZVUM1bDgxbWFYMVJTdkVHLUUwS3NoV0lzVTVCbGRwMGhucm1zR1dBemhtRHUtalg5RTZMYjhIdUF5WWkzNkpqOTdPXy1vbGNZNkxrU2ludkpMWVU?oc=5",
+        "date": "2026-10-20",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "be88ed237ca5"
       },
       {
         "title": "Current Status of U.S. Visa Services By Country - October 2026 - Boundless Immigration",
@@ -105,18 +105,29 @@
         "_hash": "fa00ba262d24"
       },
       {
-        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
-        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
-        "date": "2026-08-15",
+        "title": "China adds Kyrgyzstan, Vietnam to 240-hour visa-free transit program - Xinhua",
+        "summary": "China adds Kyrgyzstan, Vietnam to 240-hour visa-free transit program Xinhua",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE15dVUxZ0xBY0U4TlotbVNuMXM1S3puUGhOcU4yeE1GaVdwaGMtTDhkazNZdmFENUFFZU1jX3FqRHdiRFZWSDByRTBjV0tqYXN1Q2tJaWo5NXZMRW4yajQxYWRkOEltV3RpclBUOWU4cVpIRnBrSDZkX3JrQ28?oc=5",
+        "date": "2026-08-20",
         "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
+        "source_query": "China+visa+free+transit+144+hour",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "47da71bd3f02"
+        "_hash": "2ae47247970b"
       }
     ],
     "travel_industry": [
+      {
+        "title": "From embroidery to tourism, SW China's Yunnan turns ethnic traditions into opportunities - Global Times",
+        "summary": "From embroidery to tourism, SW China's Yunnan turns ethnic traditions into opportunities Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBIbVJZZVdESEJNR3ZkaE1EUHFXMEJzd3h0dVc4WTg3MWJlVE9MUDFTZTd4Vkc4R3lGeEhaMWl5Vks4aDNLQXNtVHZ1R0ZKYW0zeWZ6SG5GOEFWbHZ0Y0c3dUx3?oc=5",
+        "date": "2026-10-23",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "34870d3de399"
+      },
       {
         "title": "September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry - eu.36kr.com",
         "summary": "September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry eu.36kr.com",
@@ -127,17 +138,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "1c06495de6fa"
-      },
-      {
-        "title": "Inside Guangxi: How China-Vietnam ties boost trade and tourism - CGTN",
-        "summary": "Inside Guangxi: How China-Vietnam ties boost trade and tourism CGTN",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcXhuZVVQdTZVcVkzYkJvN0lGMzFHR1hwWk12TGJienZncWt1LWRySGNJRWdTS3RDQ1pNSkRNZ21MU293OUxJa3JzQmdjSzV3UG5NcmtMR1RHQWJ3ZExRMy11U2dlUUNRM2FtVjJtYnNIM1JPOHpWN21qc2JJb2tHenUwb1hxQzB1ZTNRVTN3NnlHTjBDOUV1YXNSaVpwTW9XTGdyR1g5TWlONTZyZnhXVnVZTGZOR3V4NUE?oc=5",
-        "date": "2026-10-22",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "ec3c8cfb32cf"
       },
       {
         "title": "U.S. State Department China travel advisory: Key points to note for Americans planning a trip to China - The Economic Times",
@@ -195,15 +195,15 @@
         "_hash": "afe165739cbc"
       },
       {
-        "title": "China Golden Week spending per trip hits four-year low amid overseas travel jump - Reuters",
-        "summary": "China Golden Week spending per trip hits four-year low amid overseas travel jump Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQbXNQOWFRUDZteDBPSUxaSGYzNGRydUhpVWtGbl95VzN0OHp6NHZrdUdoRmxJNy1kb2pTQjlVNGdEQktjdHRLZHNyUEo2QVdZMzF2dkZ3NjE3ekVXM0lnSWpNUFcyYlZvRndFZnN6UlA5dnZYSW96RVI1X0tCbW5LNnFPTnhuQ3RQY0xybEZuMEJyTmhVVnJJSzJ0QjlZeWlJR0tyNktTZmFjdzJhUkE5T0x1bnNtN3pDVTczQ09NMFdXdXM?oc=5",
-        "date": "2026-10-09",
+        "title": "China's Golden Week travel surge masks cautious consumer spending - Reuters",
+        "summary": "China's Golden Week travel surge masks cautious consumer spending Reuters",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm9HZjg0WXpHcEN4R21wd3ZZOFVJNmRMTVRNWUhRQl96TEVVWG1HQnB5UTZvU3JyaWswRUtaRlh5Q2dQMzJqY1U2UFdCRjJRcEY2eDVXenZsU1RWX3R3T1ZLSmlSeXREemhST0FCMEdsbnE3ZDE5MjlwRW9QWTl1VVFmWG5tQ0YyREZ4d2RuZ25PYmNVV2NLRW1YODA5R3FNMHFDa29udTEzTHhTQndvZ2lDeFBvdEdYWEVJ?oc=5",
+        "date": "2026-09-29",
         "source": "Google News RSS",
         "source_query": "China+travel+industry+2026",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "464defa97f38"
+        "_hash": "094bc273bc7a"
       },
       {
         "title": "China tightens travel restrictions for citizens - BBC",
@@ -241,17 +241,6 @@
         "_hash": "6fe72a77cb3a"
       },
       {
-        "title": "Trump takes questions on China trip - FOX 10 Phoenix",
-        "summary": "Trump takes questions on China trip FOX 10 Phoenix",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ1U0NVdhUnMwT0VCMC1BM3Y5WjNaR2YzVnZLaHppVmI0Z05RMC1ZVVRjZTZwbTQ2c1lUWWI1QVF5cEVQeTRpTWw0UElYTVNualZTQjFrMkFLWjVFb01DdnBmbjdPOEtCVGZfZGJLWXJiUkZXVm5rNTRNTXR1eGE4Slh5bEp1cmZrS2x3SnVDRUgwXzR4a0RYa0d2Ny1xanc3SElaV0JSX2pLVnZYd1HSAbMBQVVfeXFMTktFN0kzcnAwV1lRczB1Q1ZUX1ZPbFhJNF93VHlZQVVlbVhxZlo0b2VGRXVadXZOamthZ1ZRVkoyczc5UzUyOXdSWm9aZDJlbUJxUklnVVN6ZmVXTXRWdTdUU29WaGRLeVFQVkZIQV9pb2NPem93TFlPZzlXbV82MVQ4aFM1Qk5KT2FpLTlxQ0QycUdLRWZrdUlFWmVyUm9RWktINGdYSTdKYk45bkE0SDRzWjQ?oc=5",
-        "date": "2026-10-22",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "246af33e95c4"
-      },
-      {
         "title": "State Department warns travel to popular vacation destination could get you thrown in jail - New York Post",
         "summary": "State Department warns travel to popular vacation destination could get you thrown in jail New York Post",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSmJweTB4TnVaVlR5NXFOUHB2SHY2YXNWSDBrSkVaYlB5Y2tHYVhFcTlyX3dFbjc2Y29PMEk2aFhBUnZaVlA1eURuSzFXenpGbVpYaDZQM0x0UGQwdzByQ1NUbVdNd0I2d3duVWY4VTJsZjJQTmpUOFZTSG9iUmJxR1o5d05kbWN0WXJXbWFDYWdKZ1FIM1dKVkVINnpIWWF2WXJzT0FLVVFyQQ?oc=5",
@@ -261,6 +250,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "1d6e7247fdc5"
+      },
+      {
+        "title": "Trump takes questions on China trip - FOX 10 Phoenix",
+        "summary": "Trump takes questions on China trip FOX 10 Phoenix",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ1U0NVdhUnMwT0VCMC1BM3Y5WjNaR2YzVnZLaHppVmI0Z05RMC1ZVVRjZTZwbTQ2c1lUWWI1QVF5cEVQeTRpTWw0UElYTVNualZTQjFrMkFLWjVFb01DdnBmbjdPOEtCVGZfZGJLWXJiUkZXVm5rNTRNTXR1eGE4Slh5bEp1cmZrS2x3SnVDRUgwXzR4a0RYa0d2Ny1xanc3SElaV0JSX2pLVnZYd1HSAbMBQVVfeXFMTktFN0kzcnAwV1lRczB1Q1ZUX1ZPbFhJNF93VHlZQVVlbVhxZlo0b2VGRXVadXZOamthZ1ZRVkoyczc5UzUyOXdSWm9aZDJlbUJxUklnVVN6ZmVXTXRWdTdUU29WaGRLeVFQVkZIQV9pb2NPem93TFlPZzlXbV82MVQ4aFM1Qk5KT2FpLTlxQ0QycUdLRWZrdUlFWmVyUm9RWktINGdYSTdKYk45bkE0SDRzWjQ?oc=5",
+        "date": "2026-10-22",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "246af33e95c4"
       },
       {
         "title": "UNESCO Intangible Cultural Heritage: 64 practices to be examined, as - UNESCO",
@@ -274,6 +274,17 @@
         "_hash": "dd5e2e4fda97"
       },
       {
+        "title": "Graphics: China's first five-year plan for cultural heritage unveiled - CGTN",
+        "summary": "Graphics: China's first five-year plan for cultural heritage unveiled CGTN",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObWJ6Tjg3U2lVa2pjZTFESUtYRDV5RXBfOUxCRm9NZjdIdDlUMnRvMjU3MjFPN3hWcFlPaVVCejZMQzNsLXFjNDJHTGk3ZklKdm80LXg3US1Ba2FkODV4Q2podnpCMnJsdUQ2VE96SnlRRXJDUjNLV090Y3piMVBTdk1vWVNHa0NEQ0JKZkZTN3VWRWtxTXU1MWgtN2IzUlVQYmlCQlBSY25JWXVaWWxHbXJJSGM1TWpSZHVoS1dWS0FiNVE?oc=5",
+        "date": "2026-10-21",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "fbfb9a6cc89c"
+      },
+      {
         "title": "Cultural heritage protection to be bolstered - China Daily",
         "summary": "Cultural heritage protection to be bolstered China Daily",
         "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBVRl80M1Zya000aGFKRjFPbkNRVENrNW1QSDR2Y01oWGI0TFIwc3pjOUJiR2dDTjI0YlplLThZanppdEkwbEZiU3RsRmpuZ3RnZUdQY1NMamNpeU16NFpxbU5wVzNiUmp5UmhDUTJjY182dWZfOV9leVhXRDc1QQ?oc=5",
@@ -283,17 +294,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "55d6c6627e23"
-      },
-      {
-        "title": "China unveils first specialized cultural heritage protection plan — ECNS - UA.NEWS",
-        "summary": "China unveils first specialized cultural heritage protection plan — ECNS UA.NEWS",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVjBjWjRiWUNjUjV0YWdmYW9mMFI1bmFhUGdEa3ZLbHRHbzUwaFV5blVYUE9tYzhON1BDUnNvbGk3aXpXQUdXR2JIbmU0Y3dlOHhSN1VQME1uWUtkT1NFaTdaeG94ZU5SWDZQamZJSUhKUnFiLXdMOERqUjhDdG1ITmZyaXZCTEx6NHVvR2NZVTh5bGRFeE5nMFpCc1JrZDRLdnl5VnFPYmJoUmFDa0tHbw?oc=5",
-        "date": "2026-10-20",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "426366667a75"
       },
       {
         "title": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai - YouTube",
@@ -455,9 +455,9 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-10-22] Americans could be detained for years in popular travel destination, officials warn - Fox News\n  Americans could be detained for years in popular travel destination, officials warn Fox News\n- [2026-10-22] State Department warns travel to popular vacation destination could get you thrown in jail - New York Post\n  State Department warns travel to popular vacation destination could get you thrown in jail New York Post\n- [2026-10-21] Montenegro Introduces New Visa Rules for Russia, China and Türkiye - Rus Tourism News\n  Montenegro Introduces New Visa Rules for Russia, China and Türkiye Rus Tourism News",
-    "travel_industry": "- [2026-10-22] September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry - eu.36kr.com\n  September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry eu.36kr.com\n- [2026-10-22] Inside Guangxi: How China-Vietnam ties boost trade and tourism - CGTN\n  Inside Guangxi: How China-Vietnam ties boost trade and tourism CGTN\n- [2026-10-22] U.S. State Department China travel advisory: Key points to note for Americans planning a trip to China - The Economic Times\n  U.S. State Department China travel advisory: Key points to note for Americans planning a trip to China The Economic Times",
-    "destination_news": "- [2026-10-22] Americans could be detained for years in popular travel destination, officials warn - Fox News\n  Americans could be detained for years in popular travel destination, officials warn Fox News\n- [2026-10-22] Trump takes questions on China trip - FOX 10 Phoenix\n  Trump takes questions on China trip FOX 10 Phoenix\n- [2026-10-22] State Department warns travel to popular vacation destination could get you thrown in jail - New York Post\n  State Department warns travel to popular vacation destination could get you thrown in jail New York Post",
+    "visa_policy": "- [2026-10-21] Montenegro Introduces New Visa Rules for Russia, China and Türkiye - Rus Tourism News\n  Montenegro Introduces New Visa Rules for Russia, China and Türkiye Rus Tourism News\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post\n- [2026-10-20] Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times\n  Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
+    "travel_industry": "- [2026-10-23] From embroidery to tourism, SW China's Yunnan turns ethnic traditions into opportunities - Global Times\n  From embroidery to tourism, SW China's Yunnan turns ethnic traditions into opportunities Global Times\n- [2026-10-22] September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry - eu.36kr.com\n  September 2024 Tourism Market Analysis: Slowing Growth in Europe & America, Strong Rebound in Asia-Pacific Global Travel Industry eu.36kr.com\n- [2026-10-22] U.S. State Department China travel advisory: Key points to note for Americans planning a trip to China - The Economic Times\n  U.S. State Department China travel advisory: Key points to note for Americans planning a trip to China The Economic Times",
+    "destination_news": "- [2026-10-22] Americans could be detained for years in popular travel destination, officials warn - Fox News\n  Americans could be detained for years in popular travel destination, officials warn Fox News\n- [2026-10-22] State Department warns travel to popular vacation destination could get you thrown in jail - New York Post\n  State Department warns travel to popular vacation destination could get you thrown in jail New York Post\n- [2026-10-22] Trump takes questions on China trip - FOX 10 Phoenix\n  Trump takes questions on China trip FOX 10 Phoenix",
     "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-19] US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n  US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post\n- [2026-10-19] Chinese actress cancels Bangkok fan meeting amid embassy travel safety alert - Global Times\n  Chinese actress cancels Bangkok fan meeting amid embassy travel safety alert Global Times",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
