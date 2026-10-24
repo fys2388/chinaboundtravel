@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-10-23T21:27:22.671484+00:00",
+  "generated_at": "2026-10-24T20:53:18.252707+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
-    "pages": 74,
-    "images_checked": 374,
-    "links_checked": 2282,
-    "issues": 0,
+    "pages": 75,
+    "images_checked": 379,
+    "links_checked": 2347,
+    "issues": 1,
     "P0": 0,
     "P1": 0,
-    "P2": 0
+    "P2": 1
   },
-  "issues": []
+  "issues": [
+    {
+      "id": "f88a5fe66eae891f",
+      "severity": "P2",
+      "source": "site",
+      "type": "duplicate_title",
+      "page": "/free-itinerary/",
+      "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+      "recommended_action": "Differentiate titles for distinct search intent."
+    }
+  ]
 }

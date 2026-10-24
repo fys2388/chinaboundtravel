@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T22:09:25.190188+00:00",
+  "generated_at": "2026-10-24T21:35:23.270272+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "summary": {
     "pages": 10,
@@ -34,6 +34,10 @@
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
+    "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/#desktop": {
+      "status": 0,
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
+    },
     "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#desktop": {
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
@@ -45,10 +49,6 @@
     "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#desktop": {
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
-    },
-    "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/#desktop": {
-      "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
     "https://www.chinaboundtravel.com/#mobile": {
       "status": 0,
@@ -74,6 +74,10 @@
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     },
+    "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/#mobile": {
+      "status": 0,
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/7-day-china-itinerary/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
+    },
     "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/#mobile": {
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/accommodation-tips-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
@@ -85,10 +89,6 @@
     "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/#mobile": {
       "status": 0,
       "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
-    },
-    "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/#mobile": {
-      "status": 0,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/\", waiting until \"domcontentloaded\"\n (attempts=3/3)"
     }
   },
   "issues": [
@@ -108,20 +108,20 @@
         "/posts/chinabound-travel-guide-2026-09-monthly-update/",
         "/posts/144-hour-visa-free-transit-guide/",
         "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+        "/posts/7-day-china-itinerary/",
         "/posts/accommodation-tips-guide/",
         "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
         "/posts/alipay-wechat-pay-foreigners-guide/",
-        "/posts/best-china-itineraries-for-10-days-three-routes-compared/",
         "/",
         "/pricing/",
         "/posts/alipay-for-foreigners-guide/",
         "/posts/chinabound-travel-guide-2026-09-monthly-update/",
         "/posts/144-hour-visa-free-transit-guide/",
         "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+        "/posts/7-day-china-itinerary/",
         "/posts/accommodation-tips-guide/",
         "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-        "/posts/alipay-wechat-pay-foreigners-guide/",
-        "/posts/best-china-itineraries-for-10-days-three-routes-compared/"
+        "/posts/alipay-wechat-pay-foreigners-guide/"
       ]
     }
   ]
