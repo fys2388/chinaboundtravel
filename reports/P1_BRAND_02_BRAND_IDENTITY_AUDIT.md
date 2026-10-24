@@ -1,6 +1,6 @@
 # P1-BRAND-02 — Brand Identity Audit
 
-- Generated: 2026-10-21
+- Generated: 2026-10-24
 
 品牌层检查：全部 HTML 模板 + 全部非文章 markdown 页面 + hugo.toml（content/posts 由 --legacy 单独扫描）。
 
@@ -86,7 +86,6 @@
 | template | layouts/shortcodes/travel-faq.html | WARN | - | - | False |
 | template | layouts/shortcodes/vpn-link.html | WARN | - | - | False |
 | template | layouts/shortcodes/web3forms-key.html | WARN | - | - | False |
-| content | content/7-day-china-itinerary.md | PASS | - | - | True |
 | content | content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md | WARN | - | - | False |
 | content | content/_archived/2026-07-22-cultural-etiquette-guide.md | PASS | - | - | True |
 | content | content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md | WARN | - | - | False |
@@ -129,6 +128,6 @@
 | content | content/terms-of-service.md | PASS | - | - | True |
 | content | content/visa/_index.md | WARN | - | - | False |
 
-Summary: 32/122 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
+Summary: 31/121 PASS; 0 FAIL; 0 MISSING (WARN = editorial language not yet present, no violations).
 
 LOW_DATA_WARNING: brand audit is rule-based; manual copy review recommended before publishing changes.
