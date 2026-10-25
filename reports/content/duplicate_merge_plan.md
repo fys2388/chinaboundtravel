@@ -1,6 +1,6 @@
 # Duplicate Draft Merge Plan
 
-Generated 2026-10-24 06:35 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
+Generated 2026-10-25 07:02 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
 
 **Dry run — no files modified.** Re-run with `--apply` to merge.
 
@@ -16,6 +16,6 @@ Generated 2026-10-24 06:35 UTC by `scripts/content_dedup_merge.py` (deterministi
 - action: none: no conflict, leave for normal publishing
 
 ## `2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack-attempt2.md`
-- kind: `publishable`  sim=0.424
+- kind: `publishable`  sim=0.392
 - paragraphs: 16 total, 0 mergeable
 - action: none: no conflict, leave for normal publishing

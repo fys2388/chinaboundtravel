@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-ae69cb9f84b0"
-title: "How To Use Alipay In China: Complete"
+title: "How To Use Alipay In China 2026: Complete"
 date: "2026-07-02T10:00:00+08:00"
 lastmod: "2026-07-02T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.jpg"
 categories: ["payment", "tech"]
-last_updated: "2026-10-09"
+last_updated: "2026-10-25"
 
 ---
 ## Introduction

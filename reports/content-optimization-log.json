@@ -1154,6 +1154,34 @@
         "position": 24.5
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-10-25T07:02:07.612566",
+      "metrics_before": {
+        "impressions": 460,
+        "clicks": 0,
+        "position": 66.2
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "file": "content/posts/2026-07-02-how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026-guide.md",
+      "actions": [
+        "title: 'How To Use Alipay In China: Complete' -> 'How To Use Alipay In China 2026: Complete'"
+      ],
+      "timestamp": "2026-10-25T07:02:08.320895",
+      "metrics_before": {
+        "impressions": 157,
+        "clicks": 0,
+        "position": 45.0
+      },
+      "result": "pending"
     }
   ]
 }
