@@ -3,7 +3,7 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-10-25_ops",
   "created_at": "2026-10-25T01:01:03.570260+00:00",
-  "updated_at": "2026-10-25T14:52:21.913398",
+  "updated_at": "2026-10-25T15:01:11.157423",
   "target_date": "2026-10-25",
   "issue_count": 3,
   "severity_summary": {
@@ -54,7 +54,7 @@
       "detected_at": "2026-10-25T11:55:06.116000+00:00"
     },
     {
-      "id": "site_health-35acb48be5033543",
+      "id": "site_health-7d25dcc3f3484030",
       "type": "file_mojibake",
       "title": "file_mojibake",
       "description": "file_mojibake",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "ops",
-      "detected_at": "2026-10-25T14:52:21.447043+00:00"
+      "detected_at": "2026-10-25T15:01:10.565517+00:00"
     }
   ],
   "priority_issue": {
