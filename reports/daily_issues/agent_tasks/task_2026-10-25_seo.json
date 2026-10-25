@@ -1,0 +1,87 @@
+{
+  "agent": "seo",
+  "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+  "task_id": "task_2026-10-25_seo",
+  "created_at": "2026-10-25T01:01:03.570080+00:00",
+  "updated_at": "2026-10-25T01:01:04.126592",
+  "target_date": "2026-10-25",
+  "issue_count": 2,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "f88a5fe66eae891f",
+      "type": "duplicate_title",
+      "title": "duplicate_title",
+      "description": "duplicate_title",
+      "page": "/free-itinerary/",
+      "file": "/free-itinerary/",
+      "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+      "recommended_action": "Differentiate titles for distinct search intent.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-10-25T01:01:03.569083+00:00"
+    },
+    {
+      "id": "site_health-2e586d755eb2f3b7",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+      "file": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+      "evidence": "Title过长(72字符，模板上限60): Yunnan Travel Guide 2026: 7-Day Itinerar...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-10-25T01:01:03.569094+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "f88a5fe66eae891f",
+    "type": "duplicate_title",
+    "title": "duplicate_title",
+    "description": "duplicate_title",
+    "page": "/free-itinerary/",
+    "file": "/free-itinerary/",
+    "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+    "recommended_action": "Differentiate titles for distinct search intent.",
+    "severity": "medium",
+    "agent": "seo",
+    "action": "manual_review",
+    "source": "site",
+    "source_file": "",
+    "task_source": "quality_gate",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "seo",
+    "detected_at": "2026-10-25T01:01:03.569083+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 1,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=1, need_manual=0, failed=0"
+  }
+}
