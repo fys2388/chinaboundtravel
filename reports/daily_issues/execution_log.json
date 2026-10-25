@@ -9,7 +9,7 @@
       "failed": 0,
       "manual_review": 0,
       "in_progress": 0,
-      "last_run": "2026-10-25T11:01:04.324229"
+      "last_run": "2026-10-25T11:31:05.679984"
     },
     "seo": {
       "total": 1,
@@ -17,7 +17,7 @@
       "failed": 0,
       "manual_review": 1,
       "in_progress": 0,
-      "last_run": "2026-10-25T11:01:04.443872"
+      "last_run": "2026-10-25T11:31:05.739597"
     },
     "frontend": {
       "total": 1,
@@ -33,7 +33,7 @@
       "failed": 0,
       "manual_review": 1,
       "in_progress": 0,
-      "last_run": "2026-10-25T11:01:04.559792"
+      "last_run": "2026-10-25T11:31:05.798332"
     }
   },
   "summary": {
@@ -61099,8 +61099,56 @@
       "failed": 0,
       "note": "resolved=0, need_manual=2, failed=0",
       "executed_at": "2026-10-25T11:01:04.559792"
+    },
+    {
+      "task_id": "task_2026-10-25_content",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-10-25T11:31:05.646693"
+    },
+    {
+      "task_id": "task_2026-10-25_content",
+      "status": "completed",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=0, failed=0",
+      "executed_at": "2026-10-25T11:31:05.679984"
+    },
+    {
+      "task_id": "task_2026-10-25_seo",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-10-25T11:31:05.709399"
+    },
+    {
+      "task_id": "task_2026-10-25_seo",
+      "status": "partial",
+      "resolved": 1,
+      "failed": 0,
+      "note": "resolved=1, need_manual=0, failed=0",
+      "executed_at": "2026-10-25T11:31:05.739597"
+    },
+    {
+      "task_id": "task_2026-10-25_ops",
+      "status": "in_progress",
+      "resolved": 0,
+      "failed": 0,
+      "note": null,
+      "executed_at": "2026-10-25T11:31:05.769194"
+    },
+    {
+      "task_id": "task_2026-10-25_ops",
+      "status": "partial",
+      "resolved": 0,
+      "failed": 0,
+      "note": "resolved=0, need_manual=2, failed=0",
+      "executed_at": "2026-10-25T11:31:05.798332"
     }
   ],
-  "last_run": "2026-10-25T11:01:04.559799",
-  "total_executions": 7632
+  "last_run": "2026-10-25T11:31:05.798336",
+  "total_executions": 7638
 }
