@@ -1,13 +1,9 @@
 {
-  "status": "failed",
-  "generated_at": "2026-10-21T02:40:59.140706",
-  "run_id": "39534318759",
-  "failed_steps": [
-    "内容ID审计"
-  ],
-  "blocking_failures": [
-    "content_id"
-  ],
+  "status": "passed",
+  "generated_at": "2026-10-25T07:12:21.750449",
+  "run_id": "40171851030",
+  "failed_steps": [],
+  "blocking_failures": [],
   "checks": [
     {
       "id": "fact_guard",
@@ -37,7 +33,7 @@
       "id": "content_id",
       "name": "内容ID审计",
       "script": "content_id_audit.py",
-      "exit_code": 1,
+      "exit_code": 0,
       "blocking": true,
       "agent": "content"
     },

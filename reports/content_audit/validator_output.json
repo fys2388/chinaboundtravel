@@ -102,9 +102,7 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
+      "seo_issues": [],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-25-china-high-speed-rail-how-to-book-tickets.webp",
@@ -113,10 +111,10 @@
         "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 80,
+        "seo": 100,
         "media": 100
       },
-      "trust_score": 92.0,
+      "trust_score": 95.0,
       "passed": true
     },
     {
@@ -271,9 +269,7 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
+      "seo_issues": [],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/2026-05-28-chinese-food-delivery-meituan-eleme-guide.webp",
@@ -282,10 +278,10 @@
         "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 80,
+        "seo": 100,
         "media": 100
       },
-      "trust_score": 92.0,
+      "trust_score": 95.0,
       "passed": true
     },
     {
@@ -663,7 +659,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/yunnan/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.jpg",
@@ -672,10 +670,10 @@
         "fact": 100,
         "language": 100,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 97.0,
       "passed": true
     },
     {
@@ -1053,7 +1051,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.jpg",
@@ -1062,10 +1062,10 @@
         "fact": 100,
         "language": 100,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 97.0,
       "passed": true
     },
     {
@@ -1501,7 +1501,7 @@
     {
       "file": "7-day-china-itinerary.md",
       "frontmatter_ok": true,
-      "content_id_ok": false,
+      "content_id_ok": true,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
@@ -1590,9 +1590,7 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
+      "seo_issues": [],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/best-china-itineraries-for-10-days-three-routes-compared.webp",
@@ -1601,10 +1599,10 @@
         "fact": 100,
         "language": 60,
         "mojibake": 100,
-        "seo": 80,
+        "seo": 100,
         "media": 100
       },
-      "trust_score": 95.0,
+      "trust_score": 98.0,
       "passed": true
     },
     {
@@ -1774,9 +1772,7 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [
-        "title_too_long"
-      ],
+      "seo_issues": [],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.webp",
@@ -1785,10 +1781,10 @@
         "fact": 100,
         "language": 100,
         "mojibake": 100,
-        "seo": 80,
+        "seo": 100,
         "media": 100
       },
-      "trust_score": 97.0,
+      "trust_score": 100.0,
       "passed": true
     },
     {
