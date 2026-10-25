@@ -1,19 +1,20 @@
 {
-  "generated_at": "2026-10-25T02:21:54.974218+00:00",
+  "generated_at": "2026-10-25T02:31:59.981079+00:00",
   "summary": {
-    "total": 13,
+    "total": 14,
     "P0": 1,
     "P1": 4,
-    "P2": 8,
+    "P2": 9,
     "by_source": {
       "content": 7,
       "site_health": 4,
       "visual": 1,
+      "predeploy": 1,
       "site": 1
     },
     "by_owner": {
       "content": 9,
-      "engineering": 1,
+      "engineering": 2,
       "seo": 2,
       "site_health": 1
     }
@@ -21,11 +22,11 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-09-21T07:08:04.572598+00:00",
-      "issues": 0,
+      "generated_at": "2026-10-25T02:31:56.789256+00:00",
+      "issues": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     },
     "site": {
       "available": true,
@@ -60,11 +61,11 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-10-24T15:16:44.281922+00:00",
-      "issues": 7,
+      "generated_at": "2026-10-25T02:21:55.118833+00:00",
+      "issues": 6,
       "P0": 0,
       "P1": 4,
-      "P2": 3
+      "P2": 2
     }
   },
   "issues": [
@@ -80,7 +81,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-id-7-day-china-itinerary.md",
@@ -94,10 +95,10 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
-      "id": "site_health-5ecc7a6c72af7390",
+      "id": "site_health-1570181950b5bc4",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -107,11 +108,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-25T02:21:54.974218+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "first_seen": "2026-10-25T02:31:59.981079+00:00",
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
-      "id": "site_health-6b2cda37121b0612",
+      "id": "site_health-719af8b04f90101f",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -121,8 +122,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-25T02:21:54.974218+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "first_seen": "2026-10-25T02:31:59.981079+00:00",
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -136,7 +137,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -150,7 +151,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
@@ -164,7 +165,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T09:44:04.750004+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
@@ -178,7 +179,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-09T10:17:23.924958+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
@@ -192,7 +193,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
@@ -206,7 +207,21 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-21T02:40:59.237995+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
+    },
+    {
+      "id": "3d8eaf1805cf9f56",
+      "severity": "P2",
+      "source": "predeploy",
+      "type": "duplicate_title",
+      "title": "duplicate_title",
+      "page": "/free-itinerary/",
+      "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+      "recommended_action": "Differentiate titles for distinct search intent.",
+      "owner": "engineering",
+      "status": "open",
+      "first_seen": "2026-10-25T02:31:59.981079+00:00",
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
       "id": "f88a5fe66eae891f",
@@ -220,10 +235,10 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-24T21:35:23.367491+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
-      "id": "site_health-311cd1c936f924ad",
+      "id": "site_health-14fd763c56562c41",
       "severity": "P2",
       "source": "site_health",
       "type": "file_mojibake",
@@ -233,22 +248,22 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "site_health",
       "status": "open",
-      "first_seen": "2026-10-25T02:21:54.974218+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "first_seen": "2026-10-25T02:31:59.981079+00:00",
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     },
     {
-      "id": "site_health-5d7cc8f44bb277b5",
+      "id": "site_health-78e6333d584734",
       "severity": "P2",
       "source": "site_health",
       "type": "title_too_long",
       "title": "title_too_long",
-      "page": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-      "evidence": "Title过长(72字符，模板上限60): Yunnan Travel Guide 2026: 7-Day Itinerar...",
+      "page": "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "evidence": "Title过长(65字符，模板上限60): China Photography Guide: Best Spots, Gea...",
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-25T02:21:54.974218+00:00",
-      "last_seen": "2026-10-25T02:21:54.974218+00:00"
+      "first_seen": "2026-10-25T02:31:59.981079+00:00",
+      "last_seen": "2026-10-25T02:31:59.981079+00:00"
     }
   ]
 }
