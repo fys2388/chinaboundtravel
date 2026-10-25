@@ -352,6 +352,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

@@ -241,3 +241,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

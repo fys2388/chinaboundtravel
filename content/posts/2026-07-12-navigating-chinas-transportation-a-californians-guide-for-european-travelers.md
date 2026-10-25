@@ -149,6 +149,8 @@ For more information on China travel, check out these articles:
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

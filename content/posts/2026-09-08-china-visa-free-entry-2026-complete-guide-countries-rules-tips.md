@@ -428,3 +428,5 @@ Safe travels, and welcome to China.
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [How to Use Alipay as a Foreigner: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
