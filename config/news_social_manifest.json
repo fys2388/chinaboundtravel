@@ -234,11 +234,11 @@
     },
     "fa31abf1d061": {
       "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisor",
-      "posted_at": "2026-10-23T05:51:03.243861+00:00",
+      "posted_at": "2026-10-25T05:49:45.519538+00:00",
       "platforms": [
         "x"
       ],
-      "success": false
+      "success": true
     },
     "1c06495de6fa": {
       "title": "September 2024 Tourism Market Analysis: Slowing Growth in Eu",
@@ -279,9 +279,33 @@
         "x"
       ],
       "success": true
+    },
+    "23aafbaecd76": {
+      "title": "Shipping from China to Australia [Updated October 2026 ] - F",
+      "posted_at": "2026-10-25T05:49:48.057346+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "6899e54879c5": {
+      "title": "China to showcase AI-powered tourism innovations at World Tr",
+      "posted_at": "2026-10-25T05:49:52.030044+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "ca071cf3dacb": {
+      "title": "Palace Museum project selected for national digital heritage",
+      "posted_at": "2026-10-25T05:49:54.005031+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-24T05:33:40.593731+00:00",
-  "total_posts": 33,
+  "last_run": "2026-10-25T05:49:54.005053+00:00",
+  "total_posts": 38,
   "total_failures": 5
 }
