@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-10-25_seo",
   "created_at": "2026-10-25T01:01:03.570080+00:00",
-  "updated_at": "2026-10-25T02:21:57.984665",
+  "updated_at": "2026-10-25T02:31:04.020571",
   "target_date": "2026-10-25",
   "issue_count": 2,
   "severity_summary": {
@@ -34,13 +34,13 @@
       "detected_at": "2026-10-25T01:01:03.569083+00:00"
     },
     {
-      "id": "site_health-5d7cc8f44bb277b5",
+      "id": "site_health-17f651e355dfb746",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
-      "page": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-      "file": "content/posts/2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-      "evidence": "Title过长(72字符，模板上限60): Yunnan Travel Guide 2026: 7-Day Itinerar...",
+      "page": "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "file": "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+      "evidence": "Title过长(65字符，模板上限60): China Photography Guide: Best Spots, Gea...",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-10-25T02:21:57.644573+00:00"
+      "detected_at": "2026-10-25T02:31:03.200561+00:00"
     }
   ],
   "priority_issue": {
