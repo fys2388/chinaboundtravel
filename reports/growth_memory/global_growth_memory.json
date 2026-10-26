@@ -1,53 +1,53 @@
 {
   "version": "1.0",
   "created_at": "2026-08-31T01:16:40.176953",
-  "last_updated": "2026-10-26T03:53:03.479930",
+  "last_updated": "2026-10-26T11:47:06.139976",
   "agents": {
     "social": {
       "name": "Social Learning",
-      "last_run": "2026-10-26T03:53:03.227033",
+      "last_run": "2026-10-26T11:47:05.882024",
       "status": "success",
-      "strategy_version": "2.1-20261026_035303_quality_gated",
+      "strategy_version": "2.1-20261026_114705_quality_gated",
       "strategy_changes": 0,
       "learning_insights": 1
     },
     "content": {
       "name": "Content Learning",
-      "last_run": "2026-10-26T03:53:03.271773",
+      "last_run": "2026-10-26T11:47:05.927255",
       "status": "success",
-      "strategy_version": "2.0-20261026_035303",
+      "strategy_version": "2.0-20261026_114705",
       "strategy_changes": 0,
       "learning_insights": 1
     },
     "conversion": {
       "name": "Conversion Learning",
-      "last_run": "2026-10-26T03:53:03.313658",
+      "last_run": "2026-10-26T11:47:05.969507",
       "status": "success",
-      "strategy_version": "2.0-20261026_035303",
+      "strategy_version": "2.0-20261026_114705",
       "strategy_changes": 0,
       "learning_insights": 2
     },
     "seo": {
       "name": "SEO Learning",
-      "last_run": "2026-10-26T03:53:03.376774",
+      "last_run": "2026-10-26T11:47:06.034449",
       "status": "success",
-      "strategy_version": "2.0-20261026_035303",
-      "strategy_changes": 2,
+      "strategy_version": "2.0-20261026_114706",
+      "strategy_changes": 0,
       "learning_insights": 2
     },
     "user": {
       "name": "User Learning",
-      "last_run": "2026-10-26T03:53:03.418882",
+      "last_run": "2026-10-26T11:47:06.078346",
       "status": "success",
-      "strategy_version": "2.0-20261026_035303",
+      "strategy_version": "2.0-20261026_114706",
       "strategy_changes": 0,
       "learning_insights": 2
     },
     "revenue": {
       "name": "Revenue Learning",
-      "last_run": "2026-10-26T03:53:03.479884",
+      "last_run": "2026-10-26T11:47:06.139924",
       "status": "success",
-      "strategy_version": "2.0-20261026_035303",
+      "strategy_version": "2.0-20261026_114706",
       "strategy_changes": 0,
       "learning_insights": 2
     }
