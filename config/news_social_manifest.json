@@ -303,9 +303,41 @@
         "x"
       ],
       "success": true
+    },
+    "b81f67611792": {
+      "title": "U.S. Issues New Travel Warnings for Multiple Countries - Fod",
+      "posted_at": "2026-10-26T05:52:41.010007+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "e187c47216f5": {
+      "title": "China tourist wakes to resort guard in Malaysia allegedly un",
+      "posted_at": "2026-10-26T05:52:41.672556+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "d242cb987d21": {
+      "title": "Hainan's First Year of Customs Closure Sees Offshore Duty-Fr",
+      "posted_at": "2026-10-26T05:52:43.780908+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "dde3c87d4ecd": {
+      "title": "China Intangible Cultural Heritage Expo Heads West to Chongq",
+      "posted_at": "2026-10-26T05:52:45.937679+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-25T05:49:54.005053+00:00",
-  "total_posts": 38,
-  "total_failures": 5
+  "last_run": "2026-10-26T05:52:45.937698+00:00",
+  "total_posts": 41,
+  "total_failures": 6
 }
