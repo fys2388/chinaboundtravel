@@ -1,17 +1,22 @@
-﻿{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{{- $pages := .Site.RegularPages }}
 {{- $excludePaths := site.Params.sitemapExclude | default slice }}
 {{- $seen := dict }}
-{{- range $pages }}
-  {{- $shouldExclude := false }}
+
+{{- /* Include All Pages (posts, pages, sections, paginated) */}}
+{{- range .Site.AllPages }}
+  {{- /* Skip drafts */}}
+  {{- if .Draft }}
+    {{- continue }}
+  {{- end }}
   {{- $pagePath := printf "%s" .RelPermalink }}
-  {{- /* 去重：同一 URL 只输出一次，避免重复 slug 导致 sitemap 重复 */}}
+  {{- /* Dedup: same URL only output once */}}
   {{- if index $seen $pagePath }}
-    {{- $shouldExclude = true }}
+    {{- continue }}
   {{- else }}
     {{- $seen = merge $seen (dict $pagePath true) }}
   {{- end }}
+  {{- $shouldExclude := false }}
   {{- range $excludePaths }}
     {{- $pattern := printf "/%s/" . }}
     {{- if or (strings.HasPrefix $pagePath $pattern) (eq $pagePath $pattern) }}
@@ -23,6 +28,8 @@
     <loc>{{ .Permalink }}</loc>
     {{- if not .Date.IsZero }}
     <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+    {{- else if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
     {{- end }}
   </url>
   {{- end }}
