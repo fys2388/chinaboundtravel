@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-26T02:21:59.757019+00:00",
+  "source": "site_health_agent",
+  "issues": [
+    {
+      "type": "garbled_text",
+      "severity": "high",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "auto_fixable": false,
+      "agent": "content"
+    }
+  ]
+}
