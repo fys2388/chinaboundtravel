@@ -664,6 +664,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/95",
       "fixed_at": "2026-10-25T11:55:07.848560"
+    },
+    {
+      "workflow": "Environment Check",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/96",
+      "fixed_at": "2026-10-26T01:52:53.531029"
     }
   ]
 }
