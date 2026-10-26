@@ -2307,7 +2307,7 @@ class FeishuDailyReporter:
             pages_payload = {
                 "dateRanges": [{"startDate": yesterday, "endDate": yesterday}],
                 "metrics": [{"name": "screenPageViews"}],
-                "dimensions": [{"name": "pagePath"}],
+                "dimensions": [{"name": "pagePath"}, {"name": "pageTitle"}],
                 "orderBys": [{"metric": {"metricName": "screenPageViews"}, "desc": True}],
                 "limit": 10
             }
@@ -2315,10 +2315,12 @@ class FeishuDailyReporter:
             top_pages = []
             if pages_result and "rows" in pages_result:
                 for row in pages_result["rows"]:
-                    path = row.get("dimensionValues", [{}])[0].get("value", "")
+                    dims = row.get("dimensionValues", [])
+                    path = dims[0].get("value", "") if len(dims) > 0 else ""
+                    title = dims[1].get("value", "") if len(dims) > 1 else ""
                     views = int(row.get("metricValues", [{}])[0].get("value", "0"))
                     if path and views > 0:
-                        top_pages.append({"path": path, "views": views})
+                        top_pages.append({"path": path, "title": title, "views": views})
             
             return {
                 "report_date": yesterday,

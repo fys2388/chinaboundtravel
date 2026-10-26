@@ -604,6 +604,8 @@ class FeishuWeeklyReporter:
         """本地内容质量巡检引擎"""
         result = {
             "total_posts": 0,
+            "pending_posts": 0,         # front-matter draft:true 文章
+            "drafts_in_posts_dir": 0,   # draft:true 但位于 posts/ 的卫生问题
             "posts_with_affiliate": 0,
             "posts_with_conflict": 0,
             "posts_without_schema": 0,
@@ -614,6 +616,12 @@ class FeishuWeeklyReporter:
             "site_wide_affiliate": False,
         }
 
+        def _is_truthy_draft(fm_text):
+            """读 front-matter 的 draft 字段判定是否为草稿。"""
+            if not fm_text:
+                return False
+            return re.search(r'\bdraft\s*:\s*(true|1|yes)\b', fm_text, re.IGNORECASE) is not None
+
         if not POSTS_DIR.exists():
             return result
 
@@ -621,7 +629,14 @@ class FeishuWeeklyReporter:
         result["template_level_coverage"] = template_exists
         result["site_wide_affiliate"] = TEMPLATE_AFFILIATE_PATH.exists()
 
+        # 同时扫描 drafts/ 目录（attempt 文件、未发布草稿）
+        drafts_dirs = [d for d in (CONTENT_DIR / "_draft", CONTENT_DIR / "drafts") if d.exists()]
+        draft_files = [f for d in drafts_dirs for f in sorted(d.glob("*.md"))]
+        # 目录级判定：只要在草稿目录下即计为待审，不依赖 front-matter draft 字段
+        result["pending_posts"] += len(draft_files)
+
         posts = list(POSTS_DIR.glob("*.md"))
+        # total_posts 仅计 posts/ 下的已发布文章，不含 draft 目录
         result["total_posts"] = len(posts)
 
         today = datetime.now()
@@ -694,6 +709,12 @@ class FeishuWeeklyReporter:
 
                 if re.search(r'\[IMAGE\]|\[TODO\]|\[PLACEHOLDER\]', content, re.IGNORECASE):
                     result["posts_with_placeholder"] += 1
+
+                # 检查 front-matter 中的 draft 字段
+                fm_match3 = re.search(r'---\r?\n(.*?)\r?\n---', content, re.DOTALL)
+                if fm_match3 and _is_truthy_draft(fm_match3.group(1)):
+                    result["pending_posts"] += 1
+                    result["drafts_in_posts_dir"] += 1
 
             except Exception as e:
                 pass
@@ -1074,6 +1095,10 @@ class FeishuWeeklyReporter:
         print("5️⃣ 扫描内容质量...")
         content_data = self._scan_content_quality()
         data["content_data"] = content_data
+        # okr_utils.extract_kr() 只查顶层 key，需把 content_data 中的关键字段提升到顶层
+        for _k in ("weekly_new_posts", "monthly_new_posts", "total_posts"):
+            if _k in content_data:
+                data[_k] = content_data[_k]
 
         print("6️⃣ 检测风险等级...")
         risks = self._detect_risk_level(data)
@@ -1158,6 +1183,8 @@ class FeishuWeeklyReporter:
         posts_without_schema = content_data.get("posts_without_schema", 0)
         posts_with_placeholder = content_data.get("posts_with_placeholder", 0)
         weekly_new_posts = content_data.get("weekly_new_posts", 0)
+        pending_posts = content_data.get("pending_posts", 0)
+        drafts_in_posts_dir = content_data.get("drafts_in_posts_dir", 0)
         content_goal = 5
         content_rate = round(weekly_new_posts / content_goal * 100, 0) if content_goal > 0 else 0
 
@@ -1257,6 +1284,7 @@ class FeishuWeeklyReporter:
         schema_status = "🟡" if (posts_without_schema > 0 and not template_level_coverage) else "✅"
         placeholder_status = "⚠️" if posts_with_placeholder > 0 else "✅"
         content_rate_status = "✅" if content_rate >= 100 else "⚠️"
+        pending_status = "⏳" if pending_posts > 0 else "✅"
 
         conclusions = []
         if "📉" in users_trend:
@@ -1423,6 +1451,7 @@ class FeishuWeeklyReporter:
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
 | 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
+| 草稿待审 | drafts/ + _draft/ 目录下的未发布文章 | {pending_posts} 篇 | {pending_status} |
 
 ### 3. 文章分类分布
 """ + "\n".join(cat_lines) if cat_lines else f"""---
@@ -1440,6 +1469,7 @@ class FeishuWeeklyReporter:
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
 | 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
+| 草稿待审 | drafts/ + _draft/ 目录下的未发布文章 | {pending_posts} 篇 | {pending_status} |
 
 ### 3. 文章分类分布
 - 0 篇"""
@@ -1460,6 +1490,7 @@ class FeishuWeeklyReporter:
 | 人设一致性 | 同时出现 "5 years" / "10 years" 矛盾表述 | 检测到 {posts_with_conflict} 篇冲突 | {conflict_status} |
 | 结构化数据 | 主题模板自动生成 Article/BlogPosting Schema | {total_posts-posts_without_schema}/{total_posts} 配置 | {schema_status} |
 | 断链 / 占位符 | 含 [IMAGE]、TODO 等空占位符 | {posts_with_placeholder} 篇异常 | {placeholder_status} |
+| 草稿待审 | drafts/ + _draft/ 目录下的未发布文章 | {pending_posts} 篇 | {pending_status} |
 
 ### 3. 文章分类分布
 """ + "\n".join(cat_lines)
