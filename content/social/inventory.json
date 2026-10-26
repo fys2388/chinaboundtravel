@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-25T17:01:21",
+  "updated_at": "2026-10-26T05:54:51",
   "items": [
     {
       "id": "soc-000001",
@@ -232,7 +232,7 @@
       "source_title": "China Bargaining Guide: How to Haggle & Shop",
       "platform": "ig",
       "type": "visual",
-      "caption": "Visual guide to Bargain: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261012&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Visual guide to Bargain: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'China Bargaining Guide: How to Haggle & Shop' (platform ig). Scene: colorful Chinese shopping street market. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How to bargain and shop in China: market etiquette, haggling phrases, and what to know before your trip, researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/china-bargaining-and-shopping-guide-ig-visual-8d375936.jpg",
       "utm_params": {
@@ -240,8 +240,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -251,8 +251,8 @@
       },
       "_sig": "619c6114f397",
       "image_generated": true,
-      "recycled_at": "2026-10-12",
-      "recycle_count": 2
+      "recycled_at": "2026-10-26",
+      "recycle_count": 3
     },
     {
       "id": "soc-000010",
@@ -2768,7 +2768,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about China travel — lessons from the ground. → https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about China travel — lessons from the ground. → https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform x). Scene: cozy Chinese boutique hotel room. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-x-story-4d9af636.jpg",
       "utm_params": {
@@ -2777,7 +2777,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-10-19",
+      "publish_date": "2026-10-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2786,8 +2786,8 @@
         "platform": "x"
       },
       "_sig": "631d90a71ef1",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 5,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 6,
       "image_generated": true
     },
     {
@@ -2796,7 +2796,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "fb",
       "type": "visual",
-      "caption": "Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=fb_v1\n\n👇 Drop a comment below",
+      "caption": "Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform fb). Scene: cozy Chinese boutique hotel room. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-fb-visual-b8a5f890.jpg",
       "utm_params": {
@@ -2804,8 +2804,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2814,8 +2814,8 @@
         "platform": "fb"
       },
       "_sig": "ea7a14e59063",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 5,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 6,
       "image_generated": true
     },
     {
@@ -3764,7 +3764,7 @@
       "source_title": "Alipay vs WeChat Pay: Which Payment App",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "Research-backed facts about Alipay every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Research-backed facts about Alipay every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'Alipay vs WeChat Pay: Which Payment App' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Alipay vs WeChat Pay for tourists in China 2026: compare setup, international cards, merchant coverage, and find the best payment app for yo.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-vs-wechat-pay-which-tourists-shou-ig-knowledge-3fc8d956.jpg",
       "utm_params": {
@@ -3772,8 +3772,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -3782,8 +3782,8 @@
         "platform": "ig"
       },
       "_sig": "653bbd752a17",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 4,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 5,
       "image_generated": true
     },
     {
@@ -4146,7 +4146,7 @@
       "source_title": "Alipay in China: Setup & Payment Tips (2026)",
       "platform": "x",
       "type": "conversion",
-      "caption": "Alipay: everything you need in one guide. Alipay in China: Setup & Payment Tips (2026) → https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=x_v1 #ChinaTravel",
+      "caption": "Alipay: everything you need in one guide. Alipay in China: Setup & Payment Tips (2026) → https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'Alipay in China: Setup & Payment Tips (2026)' (platform x). Scene: smartphone showing mobile payment at a shop. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: How foreigners can use Alipay in China in 2026: step-by-step setup, international card linking, common problems, and Alipay vs WeChat Pay co.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-for-foreigners-guide-x-conversion-d549b7fe.jpg",
       "utm_params": {
@@ -4155,7 +4155,7 @@
         "utm_campaign": "cbt_social_20260910"
       },
       "status": "已发布",
-      "publish_date": "2026-10-19",
+      "publish_date": "2026-10-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4164,8 +4164,8 @@
         "platform": "x"
       },
       "_sig": "4cc6b7050d53",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 4,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 5,
       "image_generated": true
     },
     {
@@ -4968,7 +4968,7 @@
       "source_title": "China 144 Hour Transit Visa: Complete Guide",
       "platform": "ig",
       "type": "knowledge",
-      "caption": "Research-backed facts about Visa every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Research-backed facts about Visa every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional knowledge social graphic for 'China 144 Hour Transit Visa: Complete Guide' (platform ig). Scene: Chinese visa passport and travel documents. Style: vertical 4:5, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Keeping your phone connected in China is easier with.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/144-hour-visa-free-transit-guide-ig-knowledge-0767c3f3.jpg",
       "utm_params": {
@@ -4977,7 +4977,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-10-19",
+      "publish_date": "2026-10-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -4986,8 +4986,8 @@
         "platform": "ig"
       },
       "_sig": "4fa065279792",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 5,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 6,
       "image_generated": true
     },
     {
@@ -5872,7 +5872,7 @@
       "source_title": "China Food Guide for European Travelers",
       "platform": "x",
       "type": "conversion",
-      "caption": "Food: everything you need in one guide. China Food Guide for European → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=x_v1 #ChinaTravel",
+      "caption": "Food: everything you need in one guide. China Food Guide for European → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional conversion social graphic for 'China Food Guide for European Travelers' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-a-foodi-x-conversion-62bc1e18.jpg",
       "utm_params": {
@@ -5881,7 +5881,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-10-19",
+      "publish_date": "2026-10-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5890,8 +5890,8 @@
         "platform": "x"
       },
       "_sig": "a5bd829c1fd9",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 5,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 6,
       "image_generated": true
     },
     {
@@ -6280,7 +6280,7 @@
       "source_title": "How to Use Alipay & WeChat Pay in China 2026",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'How to Use Alipay & WeChat Pay in China 2026' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up your wallet, and pay anywhere with ease.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-wechat-pay-foreigners-guide-ig-conversion-18d8f965.jpg",
       "utm_params": {
@@ -6288,8 +6288,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6298,8 +6298,8 @@
         "platform": "ig"
       },
       "_sig": "528946edea6a",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 4,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 5,
       "image_generated": true
     },
     {
@@ -6774,7 +6774,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Train — lessons from the ground. → https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261018&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Train — lessons from the ground. → https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'Chinese Train Stations: Survival Guide for' (platform x). Scene: iconic China travel scene, landmarks and culture. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--x-story-dc4fe0eb.jpg",
       "utm_params": {
@@ -6783,7 +6783,7 @@
         "utm_campaign": "cbt_social_20260918"
       },
       "status": "已发布",
-      "publish_date": "2026-10-19",
+      "publish_date": "2026-10-26",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6792,8 +6792,8 @@
         "platform": "x"
       },
       "_sig": "a38223e4df39",
-      "recycled_at": "2026-10-18",
-      "recycle_count": 4,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 5,
       "image_generated": true
     },
     {
@@ -6802,7 +6802,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for",
       "platform": "fb",
       "type": "visual",
-      "caption": "Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261019&utm_content=fb_v1\n\n👇 Drop a comment below",
+      "caption": "Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=fb&utm_medium=social&utm_campaign=cbt_social_20261026&utm_content=fb_v1\n\n👇 Drop a comment below",
       "image_prompt": "Professional visual social graphic for 'Chinese Train Stations: Survival Guide for' (platform fb). Scene: iconic China travel scene, landmarks and culture. Style: landscape 16:9, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--fb-visual-0948bd62.jpg",
       "utm_params": {
@@ -6810,8 +6810,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260918"
       },
-      "status": "已发布",
-      "publish_date": "2026-10-19",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6820,8 +6820,8 @@
         "platform": "fb"
       },
       "_sig": "3b7181fef9f7",
-      "recycled_at": "2026-10-19",
-      "recycle_count": 4,
+      "recycled_at": "2026-10-26",
+      "recycle_count": 5,
       "image_generated": true
     },
     {
