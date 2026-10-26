@@ -1,6 +1,6 @@
 # ChinaBound Travel 内容智能优化报告
 
-**生成时间**: 2026-10-19 03:41:53
+**生成时间**: 2026-10-26 03:41:44
 **引擎版本**: v1.0
 **成熟度目标**: L3 → L4
 
@@ -10,13 +10,13 @@
 
 | 指标 | 数值 |
 |------|------|
-| 文章总数 | 33 |
-| 平均质量分 | 68.2/100 |
-| 平均字数 | 1854 |
-| 高优先级优化 | 6篇 |
-| 中优先级优化 | 10篇 |
+| 文章总数 | 68 |
+| 平均质量分 | 68.6/100 |
+| 平均字数 | 1991 |
+| 高优先级优化 | 15篇 |
+| 中优先级优化 | 22篇 |
 | 选题推荐 | 10个 |
-| 多模态内容建议 | 29个 |
+| 多模态内容建议 | 27个 |
 
 ---
 
@@ -26,22 +26,22 @@
 
 | 质量等级 | 文章数 | 占比 |
 |----------|--------|------|
-| excellent | 2 | 6.1% |
-| good | 23 | 69.7% |
-| average | 8 | 24.2% |
+| excellent | 4 | 5.9% |
+| good | 48 | 70.6% |
+| average | 16 | 23.5% |
 | poor | 0 | 0.0% |
 
 ### 各维度平均分
 
 | 维度 | 平均分 | 说明 |
 |------|--------|------|
-| 内容深度 | 71.2/100 | |
-| 互动性 | 78.2/100 | |
-| 内容新鲜度 | 73.6/100 | |
-| 多媒体丰富度 | 42.3/100 | |
-| 可读性 | 83.3/100 | |
-| SEO优化 | 52.9/100 | |
-| 结构完整性 | 76.1/100 | |
+| 内容深度 | 73.5/100 | |
+| 互动性 | 75.6/100 | |
+| 内容新鲜度 | 74.3/100 | |
+| 多媒体丰富度 | 48.1/100 | |
+| 可读性 | 84.0/100 | |
+| SEO优化 | 49.6/100 | |
+| 结构完整性 | 74.8/100 | |
 
 ---
 
@@ -52,9 +52,13 @@
 | 1 | ChinaBound Travel Guide 2026.09 Update | 54 | 0 | 0 | 0 | 内容过短（<1000词），深度不足; 缺少FAQ区块 |
 | 2 | How Chinese Food Evolved: 2 Million Year | 61 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
 | 3 | How to Order Food Delivery in China: Mei | 71 | 159 | 0 | 20 | 长文章缺少目录导航; 高展示低CTR（159次展示，CTR 0.0%） |
-| 4 | Great Wall of China: History & Hidden Se | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 5 | China 144 Hour Transit Visa 2026: Comple | 71 | 107 | 0 | 74 | 长文章缺少目录导航; 搜索排名靠后（第74位） |
-| 6 | Can Foreigners Use WeChat Pay in China?  | 69 | 83 | 0 | 62 | 长文章缺少目录导航; 搜索排名靠后（第62位） |
+| 4 | Kung Fu And Martial Arts In China: Where | 61 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 5 | Top-rated China Itineraries for 10 Days: | 61 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 6 | China Food Guide for European Travelers | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 7 | Great Wall of China: History & Hidden Se | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 8 | China 144 Hour Transit Visa 2026: Comple | 71 | 107 | 0 | 74 | 长文章缺少目录导航; 搜索排名靠后（第74位） |
+| 9 | WeChat Pay Setup Guide for Foreigners (2 | 69 | 1 | 0 | 11 | 长文章缺少目录导航; 页面未被Google索引 |
+| 10 | China Photography Guide: Best Spots, Gea | 79 | 51 | 0 | 21 | 长文章缺少目录导航; 搜索排名靠后（第21位） |
 
 ---
 
@@ -77,13 +81,13 @@
 |--------|------|--------|----------|--------|------|----------|
 | 🔴 high | China eSIM and VPN Guide 2026 | china esim for tourists | commercial | high | medium | how-to guide |
 | 🔴 high | Best China Travel Insurance for Foreigne | china travel insurance | commercial | high | medium | comparison guide |
-| 🔴 high | China Street Food Guide: What to Eat and | china street food guide | informational | high | medium | list guide |
 | 🔴 high | China Cashless Payment: Alipay vs WeChat | alipay vs wechat pay for forei | commercial | medium | medium | comparison guide |
 | 🔴 high | China Photography Locations: Ultimate Gu | best photography spots china | informational | medium | low | list guide |
 | 🔴 high | China Packing List: What to Bring in 202 | china packing list | commercial | high | medium | checklist guide |
 | 🔴 high | China Business Travel Guide: Meetings an | china business travel guide | commercial | medium | low | how-to guide |
 | 🔴 high | China Language Survival Phrases for Trav | basic chinese phrases for trav | informational | high | medium | reference guide |
 | 🟡 medium | China High-Speed Rail Complete Guide 202 | china high speed rail guide | informational | high | high | comprehensive guide |
+| 🟡 medium | China Street Food Guide: What to Eat and | china street food guide | informational | high | medium | list guide |
 | 🟡 medium | China Tea Culture: Complete Guide for Te | china tea culture guide | informational | medium | low | comprehensive guide |
 
 ---
@@ -94,9 +98,9 @@
 
 | 媒体类型 | 数量 | 说明 |
 |----------|------|------|
-| 信息图 | 23 | |
+| 信息图 | 22 | |
 | 步骤示意图 | 3 | |
-| 视频脚本 | 2 | |
+| 视频脚本 | 1 | |
 | 轮播图 | 1 | |
 
 ### 高优先级多模态任务（Top 5）
@@ -114,7 +118,7 @@
 ## 🚀 下一步行动计划
 
 ### 立即执行（1-3天）
-1. 优化6篇高优先级文章的Title和Meta描述
+1. 优化15篇高优先级文章的Title和Meta描述
 2. 为无图片的文章添加2-3张高质量图片
 3. 提交未索引页面到GSC
 
@@ -136,5 +140,5 @@
 
 ---
 
-*报告由内容智能优化Agent自动生成 | 2026-10-19 03:41:53*
+*报告由内容智能优化Agent自动生成 | 2026-10-26 03:41:44*
 *引擎版本: v1.0 | 成熟度目标: L3 → L4*

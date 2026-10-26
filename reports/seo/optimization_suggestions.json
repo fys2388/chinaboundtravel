@@ -28,10 +28,10 @@
     "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
     "file": "144-hour-visa-free-transit-guide.md",
     "current_title": "China 144 Hour Transit Visa 2026: Complete Guide",
-    "current_meta": "China 144-hour visa-free transit 2026: all eligible ports & zones, step-by-step entry process, the 3 mistakes that get travelers denied, and eSIM setup for staying connected.",
+    "current_meta": "144-hour visa-free transit 2026: eligible ports, entry process, common mistakes, and eSIM setup.",
     "priority": "medium",
     "priority_score": 2.14,
-    "suggestion": "Title长度合适，建议优化关键词位置和吸引力; Meta描述过长（174字符），建议精简至150-160字符",
+    "suggestion": "Title长度合适，建议优化关键词位置和吸引力; Meta描述过短（96字符），建议扩充至150-160字符",
     "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
     "status": "pending"
   },
@@ -57,20 +57,6 @@
     "priority_score": 2.14,
     "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
     "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
-    "status": "pending"
-  },
-  {
-    "type": "content_optimization",
-    "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
-    "title": "",
-    "issues": [
-      "内容不足（711词）",
-      "缺少Meta描述"
-    ],
-    "priority": "medium",
-    "priority_score": 22.89,
-    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等; 添加Meta描述（150-160字符），包含核心关键词",
-    "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
   {
@@ -78,24 +64,37 @@
     "target": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
     "title": "ChinaBound Travel Guide 2026.09 Update",
     "issues": [
-      "内容不足（554词）"
+      "内容不足（587词）"
     ],
     "priority": "medium",
-    "priority_score": 14.46,
+    "priority_score": 14.13,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
   {
     "type": "content_optimization",
-    "target": "2026-08-07-china-bargaining-and-shopping-guide.md",
-    "title": "",
+    "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
+    "title": "China Travel Guide: July 2026 Updates",
     "issues": [
-      "缺少Meta描述"
+      "内容不足（670词）"
     ],
     "priority": "medium",
-    "priority_score": 10.0,
-    "suggestion": "添加Meta描述（150-160字符），包含核心关键词",
+    "priority_score": 13.3,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "7-day-china-itinerary.md",
+    "title": "Free 7-Day China Itinerary Template (2026)",
+    "issues": [
+      "内容不足（781词）"
+    ],
+    "priority": "medium",
+    "priority_score": 12.19,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
@@ -114,7 +113,7 @@
   },
   {
     "type": "content_optimization",
-    "target": "2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
+    "target": "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
     "title": "",
     "issues": [
       "缺少Meta描述"
