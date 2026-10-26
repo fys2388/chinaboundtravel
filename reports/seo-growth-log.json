@@ -7439,6 +7439,198 @@
       "target": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-25T08:14:42.834104"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-26T08:40:39.428091"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "'Accommodation In China: Hotels & Budget' -> 'Accommodation In China: Hotels & Budget' (keyword: accommodation in china)",
+      "timestamp": "2026-10-26T08:40:40.891075"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:40:42.476895"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:45.025969"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:46.451994"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-26T08:40:47.873635"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> navigating-chinas-transportation-a-californians-guide-for-european-travelers",
+      "detail": "score=4",
+      "timestamp": "2026-10-26T08:40:49.281583"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> navigating-chinas-transportation-a-californians-guide-for-european-travelers",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:50.720117"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> navigating-chinas-transportation-a-californians-guide-for-european-travelers",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:52.161342"
+    },
+    {
+      "type": "internal_link",
+      "target": "accommodation-tips-guide -> navigating-china-with-confidence-a-californians-guide-to-travel-safety",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:53.580588"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> navigating-china-with-confidence-a-californians-guide-to-travel-safety",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:55.008706"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> navigating-china-with-confidence-a-californians-guide-to-travel-safety",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:56.441760"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:57.878561"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-for-foreigners-guide -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:40:59.318201"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-26T08:41:00.760430"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-10-26T08:41:02.178572"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026 -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:41:03.601929"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:41:05.023286"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-family-travel-tips-a-californians-guide -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:41:06.455671"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-bargaining-and-shopping-guide -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:41:07.877571"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home -> navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers",
+      "detail": "score=1",
+      "timestamp": "2026-10-26T08:41:09.318581"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-26T08:41:11.017759"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:11.486511"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:11.866917"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:12.334639"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:12.751484"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:13.138532"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:13.575281"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:14.000962"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:14.423918"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:14.858346"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-26T08:41:15.302342"
     }
   ]
 }

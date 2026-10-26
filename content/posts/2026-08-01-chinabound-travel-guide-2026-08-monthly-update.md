@@ -195,6 +195,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?

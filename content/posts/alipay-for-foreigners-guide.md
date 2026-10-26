@@ -243,3 +243,5 @@ For international travelers comparing options, flight search platforms help you 
 - [How To Use Alipay In China: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

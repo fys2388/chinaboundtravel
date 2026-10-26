@@ -254,3 +254,5 @@ If you're planning a broader China trip, these guides pair well with Yunnan:
 - [China Remote Work Guide: Digital Nomad Tips](https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

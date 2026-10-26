@@ -294,6 +294,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Còn Trung Quốc: Guide for Travelers](/posts/travel-safety-guide/)
 
+- [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

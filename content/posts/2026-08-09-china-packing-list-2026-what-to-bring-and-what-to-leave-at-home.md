@@ -166,3 +166,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)

@@ -201,3 +201,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [Kung Fu and Martial Arts in China: Where to See and Train](/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

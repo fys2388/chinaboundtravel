@@ -196,6 +196,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?
