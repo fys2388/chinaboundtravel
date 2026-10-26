@@ -2002,8 +2002,191 @@
         "is_optimization_candidate": false
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "\"wechat accepted\"",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 37
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "7 days in china",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 82
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "8 nov",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 1
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0.9,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "accommodation china",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 60.5
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "afternoon tea guantouling",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 44
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay for foreigners china 2026",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 78
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+      "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 14,
+        "clicks": 1,
+        "ctr": 0.07,
+        "position": 8.4
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 2.2399999999999998,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/beijing/",
+      "page": "https://www.chinaboundtravel.com/cities/beijing/",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 14.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/western-sichuan/",
+      "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
+      "date": "2026-10-23",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 11
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-10-19T03:51:07.488679"
+  "last_updated": "2026-10-26T03:53:03.350614"
 }

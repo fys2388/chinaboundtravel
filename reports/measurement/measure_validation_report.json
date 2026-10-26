@@ -1,67 +1,67 @@
 {
-  "validation_time": "2026-10-19T03:51:07.903893",
-  "overall_score": 60.7,
-  "is_effective": true,
+  "validation_time": "2026-10-26T03:53:03.675165",
+  "overall_score": 57.1,
+  "is_effective": false,
   "comparison": {
-    "comparison_time": "2026-10-19T03:51:07.903184",
+    "comparison_time": "2026-10-26T03:53:03.674501",
     "baseline_date": "2026-08-31",
-    "current_date": "2026-10-19",
+    "current_date": "2026-10-26",
     "categories": {
       "traffic": {
         "metrics": {
-          "engagementRate": {
-            "baseline": 0,
-            "current": 0.7049180327868853,
-            "delta": 0.7049180327868853,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
           "engagedSessions": {
             "baseline": 0,
-            "current": 172,
-            "delta": 172,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
-          "bounceRate": {
-            "baseline": 0,
-            "current": 0.29508196721311475,
-            "delta": 0.29508196721311475,
+            "current": 150,
+            "delta": 150,
             "delta_pct": 0,
             "trend": "improved"
           },
           "averageSessionDuration": {
             "baseline": 0,
-            "current": 32.10862756147541,
-            "delta": 32.10862756147541,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
-          "screenPageViews": {
-            "baseline": 0,
-            "current": 263,
-            "delta": 263,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
-          "newUsers": {
-            "baseline": 0,
-            "current": 217,
-            "delta": 217,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
-          "sessions": {
-            "baseline": 0,
-            "current": 244,
-            "delta": 244,
+            "current": 21.283281841346152,
+            "delta": 21.283281841346152,
             "delta_pct": 0,
             "trend": "improved"
           },
           "activeUsers": {
             "baseline": 0,
-            "current": 218,
-            "delta": 218,
+            "current": 193,
+            "delta": 193,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "bounceRate": {
+            "baseline": 0,
+            "current": 0.27884615384615385,
+            "delta": 0.27884615384615385,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "engagementRate": {
+            "baseline": 0,
+            "current": 0.7211538461538461,
+            "delta": 0.7211538461538461,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "newUsers": {
+            "baseline": 0,
+            "current": 191,
+            "delta": 191,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "screenPageViews": {
+            "baseline": 0,
+            "current": 209,
+            "delta": 209,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "sessions": {
+            "baseline": 0,
+            "current": 208,
+            "delta": 208,
             "delta_pct": 0,
             "trend": "improved"
           }
@@ -74,9 +74,23 @@
         "metrics": {
           "avg_word_count": {
             "baseline": 1928,
-            "current": 2121,
-            "delta": 193,
-            "delta_pct": 10.01,
+            "current": 2110,
+            "delta": 182,
+            "delta_pct": 9.44,
+            "trend": "improved"
+          },
+          "articles_with_internal_links": {
+            "baseline": 10,
+            "current": 67,
+            "delta": 57,
+            "delta_pct": 570.0,
+            "trend": "improved"
+          },
+          "total_articles": {
+            "baseline": 59,
+            "current": 68,
+            "delta": 9,
+            "delta_pct": 15.25,
             "trend": "improved"
           },
           "articles_this_week": {
@@ -92,20 +106,6 @@
             "delta": 34,
             "delta_pct": 850.0,
             "trend": "improved"
-          },
-          "total_articles": {
-            "baseline": 59,
-            "current": 67,
-            "delta": 8,
-            "delta_pct": 13.56,
-            "trend": "improved"
-          },
-          "articles_with_internal_links": {
-            "baseline": 10,
-            "current": 66,
-            "delta": 56,
-            "delta_pct": 560.0,
-            "trend": "improved"
           }
         },
         "improved": 4,
@@ -114,6 +114,20 @@
       },
       "social": {
         "metrics": {
+          "avg_engagement_rate": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "total_impressions": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
           "total_clicks": {
             "baseline": 0,
             "current": 0,
@@ -128,13 +142,6 @@
             "delta_pct": 0,
             "trend": "unchanged"
           },
-          "total_posts": {
-            "baseline": 0,
-            "current": 20,
-            "delta": 20,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
           "total_shares": {
             "baseline": 0,
             "current": 0,
@@ -142,10 +149,10 @@
             "delta_pct": 0,
             "trend": "unchanged"
           },
-          "total_impressions": {
+          "total_posts": {
             "baseline": 0,
-            "current": 26,
-            "delta": 26,
+            "current": 20,
+            "delta": 20,
             "delta_pct": 0,
             "trend": "improved"
           },
@@ -155,46 +162,18 @@
             "delta": 0,
             "delta_pct": 0,
             "trend": "unchanged"
-          },
-          "avg_engagement_rate": {
-            "baseline": 0,
-            "current": 0,
-            "delta": 0,
-            "delta_pct": 0,
-            "trend": "unchanged"
           }
         },
-        "improved": 2,
+        "improved": 1,
         "declined": 0,
-        "unchanged": 5
+        "unchanged": 6
       },
       "seo": {
         "metrics": {
-          "ctr": {
-            "baseline": 0,
-            "current": 0.0,
-            "delta": 0.0,
-            "delta_pct": 0,
-            "trend": "unchanged"
-          },
-          "index_errors": {
-            "baseline": 0,
-            "current": 0,
-            "delta": 0,
-            "delta_pct": 0,
-            "trend": "unchanged"
-          },
-          "sitemap_count": {
-            "baseline": 0,
-            "current": 1,
-            "delta": 1,
-            "delta_pct": 0,
-            "trend": "improved"
-          },
           "impressions": {
             "baseline": 0,
-            "current": 290,
-            "delta": 290,
+            "current": 413,
+            "delta": 413,
             "delta_pct": 0,
             "trend": "improved"
           },
@@ -212,6 +191,13 @@
             "delta_pct": 0,
             "trend": "unchanged"
           },
+          "ctr": {
+            "baseline": 0,
+            "current": 0.0,
+            "delta": 0.0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
           "sitemap_pages": {
             "baseline": 0,
             "current": 0,
@@ -221,8 +207,22 @@
           },
           "average_position": {
             "baseline": 0,
-            "current": 61.5,
-            "delta": 61.5,
+            "current": 62.9,
+            "delta": 62.9,
+            "delta_pct": 0,
+            "trend": "improved"
+          },
+          "index_errors": {
+            "baseline": 0,
+            "current": 0,
+            "delta": 0,
+            "delta_pct": 0,
+            "trend": "unchanged"
+          },
+          "sitemap_count": {
+            "baseline": 0,
+            "current": 1,
+            "delta": 1,
             "delta_pct": 0,
             "trend": "improved"
           }
@@ -234,16 +234,16 @@
     },
     "summary": {
       "total_metrics": 28,
-      "improved": 17,
+      "improved": 16,
       "declined": 0,
-      "unchanged": 11,
-      "overall_score": 60.7
+      "unchanged": 12,
+      "overall_score": 57.1
     }
   },
   "effectiveness": {
-    "validation_time": "2026-10-19T03:51:07.903377",
-    "overall_score": 60.7,
-    "is_effective": true,
+    "validation_time": "2026-10-26T03:53:03.674670",
+    "overall_score": 57.1,
+    "is_effective": false,
     "effective_strategies": [
       {
         "category": "traffic",
@@ -261,15 +261,15 @@
     "ineffective_strategies": [
       {
         "category": "social",
-        "improve_rate": 28.6,
-        "improved": 2,
+        "improve_rate": 14.3,
+        "improved": 1,
         "declined": 0,
         "total": 7
       }
     ],
     "needs_more_data": [],
     "recommendations": [
-      "学习策略整体有效，继续当前方向",
+      "学习策略部分有效，需要优化低效策略",
       "低效策略需要优化: social"
     ]
   }

@@ -17199,8 +17199,136 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6ade35de3d5b27036be2600a",
+      "platform": "instagram",
+      "text": "Everything you need to know about China travel — in one practical guide.\n\n· China Business Travel: Meetings, Dining &\n\nRead the full guide: https://www.chinaboundtravel.com/china-business-travel-guide",
+      "published_at": "2026-10-25T19:03:39.419Z",
+      "date": "2026-10-25",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "chinaboundtravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Everything you need to know about China travel — in one practical guide.\n\n· China Business Travel: M",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6ade35d10b5343d070e11e60",
+      "platform": "facebook",
+      "text": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommen",
+      "published_at": "2026-10-25T19:02:54.529Z",
+      "date": "2026-10-25",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "ChinaBound Travel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it b",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6ade35ce0b5343d070e11d02",
+      "platform": "twitter",
+      "text": "Essential Bargain tips most first-timers miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261024&utm",
+      "published_at": "2026-10-25T19:02:50.114Z",
+      "date": "2026-10-25",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "fys2388",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Essential Bargain tips most first-timers miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/chin",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6add98ef0b5343d070b92f83",
+      "platform": "pinterest",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "published_at": "2026-10-25T18:51:46.089Z",
+      "date": "2026-10-25",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nCh",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-10-25T10:19:43.182930",
+  "last_updated": "2026-10-26T03:53:03.183614",
   "version": "1.0"
 }

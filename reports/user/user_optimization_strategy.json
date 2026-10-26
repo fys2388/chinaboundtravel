@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20261019_035107",
-  "last_updated": "2026-10-19T03:51:07.547622",
+  "version": "2.0-20261026_035303",
+  "last_updated": "2026-10-26T03:53:03.413170",
   "segmentation_rules": {
     "new_user": "首次访问，无历史记录",
     "returning_user": "7天内再次访问",
@@ -69,12 +69,7 @@
       }
     }
   ],
-  "strategy_changes": [
-    {
-      "field": "high_value_segments",
-      "reason": "基于收入分析，更新高价值用户分层"
-    }
-  ],
+  "strategy_changes": [],
   "high_value_segments": [
     {
       "segment": "",

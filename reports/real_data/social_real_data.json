@@ -1,7 +1,7 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-10-25T10:19:41.852088",
-  "data_date": "2026-10-25",
+  "pull_time": "2026-10-26T03:53:00.709866",
+  "data_date": "2026-10-26",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -14,14 +14,62 @@
   },
   "posts": [
     {
+      "id": "6ade35de3d5b27036be2600a",
+      "text": "Everything you need to know about China travel — in one practical guide.\n\n· China Business Travel: Meetings, Dining &\n\nRead the full guide: https://www.chinaboundtravel.com/china-business-travel-guide",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-10-25T19:03:39.419Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ade35d10b5343d070e11e60",
+      "text": "Visual guide to Food: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommen",
+      "platform": "facebook",
+      "channel_name": "ChinaBound Travel",
+      "published_at": "2026-10-25T19:02:54.529Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ade35ce0b5343d070e11d02",
+      "text": "Essential Bargain tips most first-timers miss. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/china-bargaining-and-shopping-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261024&utm",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-10-25T19:02:50.114Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
       "id": "6add98eb6887a2efc1ee352f",
       "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-25T07:51:52.820Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -52,8 +100,8 @@
       "channel_name": "chinaboundtravel",
       "published_at": "2026-10-25T07:51:53.620Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -126,43 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6add987a3d5b27036bba9f76",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Shipping from China to Australia [Updated October 2026 ] - Freightos\n\nShipping from China to Australia [Updated October 2026 ] Freightos\n\nSource: Google News RSS\n\n\n\n#Travel",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-25T07:50:01.558Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6add98780b5343d070b91f61",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n\nU.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n\nSource: Google News RSS\n",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-10-25T07:49:46.393Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6adcdd203d5b27036b939cdf",
-      "text": "🇨🇳 **10 Days in China — Three Routes, One Ultimate Guide**\n\nFrom the Great Wall's sweeping ridgelines to Xi'an's ancient terracotta warriors and Shanghai's neon skyline — the most photographed, most-r",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-10-24T18:30:53.181Z",
+      "id": "6add98ef0b5343d070b92f83",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-10-25T18:51:46.089Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,39 +332,23 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ad8fd3cf303dbf7aba1a245",
-      "text": "How to Use Alipay & WeChat Pay in China 2026 | Essential Alipay tips most first-time visitors miss.\n\nHow to Use Alipay & WeChat Pay in China 2026\n\n📌 Save this for your China trip planning.\n\nFull guide",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-22T06:58:31.287Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "instagram": {
-      "posts": 2,
-      "impressions": 0,
-      "clicks": 0,
-      "likes": 0
-    },
-    "twitter": {
-      "posts": 7,
+      "posts": 3,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
       "posts": 1,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0
+    },
+    "twitter": {
+      "posts": 6,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -363,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 18,
-  "impression_metric_count": 18,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-10-25"
+    "data_date": "2026-10-26"
   }
 }

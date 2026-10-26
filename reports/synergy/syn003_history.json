@@ -125,6 +125,15 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "success"
+    },
+    {
+      "run_id": "SYN003_20261026_035303",
+      "timestamp": "2026-10-26T03:53:03.610910",
+      "high_commission_count": 2,
+      "mapping_count": 2,
+      "expected_ctr_boost": 0.1,
+      "expected_revenue_boost": 0.15,
+      "status": "success"
     }
   ],
   "version": "1.0"

@@ -1,10 +1,10 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-10-19 03:51:07
+**验证时间**: 2026-10-26 03:53:03
 **基线日期**: 2026-08-31
-**当前日期**: 2026-10-19
-**整体评分**: 60.7/100
-**学习有效**: ✅ 是
+**当前日期**: 2026-10-26
+**整体评分**: 57.1/100
+**学习有效**: ❌ 否
 
 ---
 
@@ -16,7 +16,7 @@
 |------|---------|---------|---------|--------|
 | TRAFFIC | 8 | 0 | 0 | 100.0% |
 | CONTENT | 4 | 0 | 1 | 80.0% |
-| SOCIAL | 2 | 0 | 5 | 28.6% |
+| SOCIAL | 1 | 0 | 6 | 14.3% |
 | SEO | 3 | 0 | 5 | 37.5% |
 
 ---
@@ -27,49 +27,49 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| engagementRate | 0 | 0.7049180327868853 | +0.70 | +0.0% | 📈 improved |
-| engagedSessions | 0 | 172 | +172.00 | +0.0% | 📈 improved |
-| bounceRate | 0 | 0.29508196721311475 | +0.30 | +0.0% | 📈 improved |
-| averageSessionDuration | 0 | 32.10862756147541 | +32.11 | +0.0% | 📈 improved |
-| screenPageViews | 0 | 263 | +263.00 | +0.0% | 📈 improved |
-| newUsers | 0 | 217 | +217.00 | +0.0% | 📈 improved |
-| sessions | 0 | 244 | +244.00 | +0.0% | 📈 improved |
-| activeUsers | 0 | 218 | +218.00 | +0.0% | 📈 improved |
+| engagedSessions | 0 | 150 | +150.00 | +0.0% | 📈 improved |
+| averageSessionDuration | 0 | 21.283281841346152 | +21.28 | +0.0% | 📈 improved |
+| activeUsers | 0 | 193 | +193.00 | +0.0% | 📈 improved |
+| bounceRate | 0 | 0.27884615384615385 | +0.28 | +0.0% | 📈 improved |
+| engagementRate | 0 | 0.7211538461538461 | +0.72 | +0.0% | 📈 improved |
+| newUsers | 0 | 191 | +191.00 | +0.0% | 📈 improved |
+| screenPageViews | 0 | 209 | +209.00 | +0.0% | 📈 improved |
+| sessions | 0 | 208 | +208.00 | +0.0% | 📈 improved |
 
 ### CONTENT
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| avg_word_count | 1928 | 2121 | +193.00 | +10.0% | 📈 improved |
+| avg_word_count | 1928 | 2110 | +182.00 | +9.4% | 📈 improved |
+| articles_with_internal_links | 10 | 67 | +57.00 | +570.0% | 📈 improved |
+| total_articles | 59 | 68 | +9.00 | +15.2% | 📈 improved |
 | articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | articles_with_affiliate_links | 4 | 38 | +34.00 | +850.0% | 📈 improved |
-| total_articles | 59 | 67 | +8.00 | +13.6% | 📈 improved |
-| articles_with_internal_links | 10 | 66 | +56.00 | +560.0% | 📈 improved |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
+| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_impressions | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
 | total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_impressions | 0 | 26 | +26.00 | +0.0% | 📈 improved |
+| total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
 | total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
-| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| sitemap_count | 0 | 1 | +1.00 | +0.0% | 📈 improved |
-| impressions | 0 | 290 | +290.00 | +0.0% | 📈 improved |
+| impressions | 0 | 413 | +413.00 | +0.0% | 📈 improved |
 | clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
 | sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| average_position | 0 | 61.5 | +61.50 | +0.0% | 📈 improved |
+| average_position | 0 | 62.9 | +62.90 | +0.0% | 📈 improved |
+| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| sitemap_count | 0 | 1 | +1.00 | +0.0% | 📈 improved |
 
 
 ---
@@ -83,13 +83,13 @@
 
 ## ❌ 低效策略（需要优化）
 
-- **SOCIAL**: 改善率 28.6% (2改善 / 0下降 / 7总计)
+- **SOCIAL**: 改善率 14.3% (1改善 / 0下降 / 7总计)
 
 ---
 
 ## 💡 建议和下一步
 
-1. 学习策略整体有效，继续当前方向
+1. 学习策略部分有效，需要优化低效策略
 2. 低效策略需要优化: social
 
 ---
@@ -112,4 +112,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-10-19 03:51:07*
+*生成时间: 2026-10-26 03:53:03*

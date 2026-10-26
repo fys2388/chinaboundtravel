@@ -1,6 +1,6 @@
 # SYN-001 内容-社媒协同机制报告
 
-**生成时间**: 2026-10-19 03:51:07
+**生成时间**: 2026-10-26 03:53:03
 **协同ID**: SYN-001
 **机制**: 高表现内容自动进入社媒优先分发队列
 
@@ -39,16 +39,16 @@
 
 | 排名 | 平台 | 文章标题 | 发布时间 | 优先级 | 推荐Hook |
 |------|------|---------|----------|--------|----------|
-| 1 | pinterest | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-20 | high | Essential China trav |
-| 2 | x | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-20 | high | Research-backed fact |
-| 3 | facebook | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-20 | high | What travelers disco |
-| 4 | instagram | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-20 | high | What travelers disco |
-| 5 | pinterest | 2026 06 19 The History And Culture Of Th | 2026-10-20 | high | Essential China trav |
-| 6 | x | 2026 06 19 The History And Culture Of Th | 2026-10-20 | high | Research-backed fact |
-| 7 | facebook | 2026 06 19 The History And Culture Of Th | 2026-10-20 | high | What travelers disco |
-| 8 | instagram | 2026 06 19 The History And Culture Of Th | 2026-10-20 | high | What travelers disco |
-| 9 | pinterest | 2026 06 22 Chinese Tea Culture History T | 2026-10-21 | high | Essential China trav |
-| 10 | x | 2026 06 22 Chinese Tea Culture History T | 2026-10-21 | high | Research-backed fact |
+| 1 | pinterest | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-27 | high | Essential China trav |
+| 2 | x | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-27 | high | Research-backed fact |
+| 3 | facebook | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-27 | high | What travelers disco |
+| 4 | instagram | 2026 05 26 7 Day China Itinerary Beijing | 2026-10-27 | high | What travelers disco |
+| 5 | pinterest | 2026 06 19 The History And Culture Of Th | 2026-10-27 | high | Essential China trav |
+| 6 | x | 2026 06 19 The History And Culture Of Th | 2026-10-27 | high | Research-backed fact |
+| 7 | facebook | 2026 06 19 The History And Culture Of Th | 2026-10-27 | high | What travelers disco |
+| 8 | instagram | 2026 06 19 The History And Culture Of Th | 2026-10-27 | high | What travelers disco |
+| 9 | pinterest | 2026 06 22 Chinese Tea Culture History T | 2026-10-28 | high | Essential China trav |
+| 10 | x | 2026 06 22 Chinese Tea Culture History T | 2026-10-28 | high | Research-backed fact |
 
 ---
 
@@ -92,4 +92,4 @@ Social Engine优先消费队列项
 ---
 
 *报告由SYN-001内容-社媒协同机制自动生成*
-*生成时间: 2026-10-19 03:51:07*
+*生成时间: 2026-10-26 03:53:03*

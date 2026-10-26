@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-25T10:19:41.066653",
-  "data_date": "2026-10-22",
+  "pull_time": "2026-10-26T03:52:59.778643",
+  "data_date": "2026-10-23",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 395,
+    "impressions": 413,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 63.3,
+    "average_position": 62.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-09-25",
-      "impressions": 14,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 4.4
-    },
     {
       "date": "2026-09-26",
       "impressions": 32,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 39.0
+    },
+    {
+      "date": "2026-10-23",
+      "impressions": 45,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 33.6
     }
   ],
   "top_queries": [
@@ -261,11 +261,18 @@
       "position": 82
     },
     {
-      "query": "accommodation china",
-      "impressions": 3,
+      "query": "8 nov",
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "position": 61
+      "position": 1
+    },
+    {
+      "query": "accommodation china",
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 60.5
     },
     {
       "query": "accommodation in china",
@@ -325,10 +332,10 @@
     },
     {
       "query": "alipay for foreigners",
-      "impressions": 6,
+      "impressions": 7,
       "clicks": 0,
       "ctr": 0,
-      "position": 83.5
+      "position": 80.7
     },
     {
       "query": "alipay for foreigners china 2026",
@@ -343,13 +350,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 79
-    },
-    {
-      "query": "alipay foreigner",
-      "impressions": 9,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 79.4
     }
   ],
   "top_pages": [
@@ -369,10 +369,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-      "impressions": 38,
+      "impressions": 39,
       "clicks": 1,
       "ctr": 0.03,
-      "position": 19.5
+      "position": 20.1
     },
     {
       "page": "https://www.chinaboundtravel.com/",
@@ -411,17 +411,24 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/beijing/",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
       "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 46.5
+      "position": 14.5
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 29
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
@@ -474,24 +481,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-      "impressions": 13,
+      "impressions": 14,
       "clicks": 0,
       "ctr": 0,
-      "position": 27.1
+      "position": 25.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
-      "impressions": 37,
+      "impressions": 38,
       "clicks": 0,
       "ctr": 0,
-      "position": 50.9
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260910&utm_content=ig_v1",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 1
+      "position": 51.1
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-22"
+    "data_date": "2026-10-23"
   }
 }

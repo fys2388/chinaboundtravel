@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-10-19T03:51:07.726320",
+  "last_updated": "2026-10-26T03:53:03.610329",
   "synergy_id": "SYN-003",
   "high_commission_products": [
     {
@@ -47,7 +47,7 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-10-19T03:51:07.726285",
+      "created_at": "2026-10-26T03:53:03.610298",
       "synergy_id": "SYN-003"
     },
     {
@@ -67,7 +67,7 @@
       "expected_ctr_boost": 0.1,
       "expected_revenue_boost": 0.15,
       "status": "ready",
-      "created_at": "2026-10-19T03:51:07.726293",
+      "created_at": "2026-10-26T03:53:03.610305",
       "synergy_id": "SYN-003"
     }
   ],

@@ -447,8 +447,36 @@
       "metadata": {},
       "calculated": {},
       "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/accommodation-tips-guide/",
+      "title": "Where to Stay in China: Complete 2026 Guide",
+      "date": "2026-10-25",
+      "metrics": {
+        "pageviews": 5,
+        "sessions": 5,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/alipay-for-foreigners-guide/",
+      "title": "Alipay in China: Setup & Payment Tips (2026)",
+      "date": "2026-10-25",
+      "metrics": {
+        "pageviews": 5,
+        "sessions": 5,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-10-19T03:51:07.546903"
+  "last_updated": "2026-10-26T03:53:03.412243"
 }
