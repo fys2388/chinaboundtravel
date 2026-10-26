@@ -278,9 +278,9 @@
       "hash": "sensitive_content_politics",
       "type": "风控",
       "message": "文章包含敏感词汇（politics, government, communist等）",
-      "occurrences": 10,
+      "occurrences": 11,
       "first_seen": "2026-06-22T05:00:00",
-      "last_seen": "2026-08-26T01:08:31.388263+00:00",
+      "last_seen": "2026-10-26T02:48:36.644925+00:00",
       "files": [
         "The History and Culture of the Great Wall.md",
         "Best China Itineraries for 10 Days: Three Routes Compared",
@@ -894,13 +894,15 @@
       "hash": "content_quality_failed",
       "type": "选题",
       "message": "[P1] Word count 1842 is below 2000 target\n[P1] Only 1 H2 sections (target: 5-7)\n[P0] Hyphen-space compound-word artifact (1 instances): [('long', 'term')] - remove spaces around hyphens in these compound words",
-      "occurrences": 3,
+      "occurrences": 5,
       "first_seen": "2026-10-19T02:50:46.726070+00:00",
-      "last_seen": "2026-10-19T02:57:43.885699+00:00",
+      "last_seen": "2026-10-26T02:51:56.997434+00:00",
       "files": [
         "China Travel Insurance: Do You Really Need It And How To Choose Guide",
         "China Winter Travel Guide: Where to Go and How to Pack",
-        "Best China Itineraries for 10 Days: Three Routes Compared"
+        "Best China Itineraries for 10 Days: Three Routes Compared",
+        "How To Choose Your First City In China: A Decision Guide",
+        "China Travel Insurance: Do You Really Need It and How to Choose"
       ],
       "suggestion": "避免政治敏感内容",
       "resolved": false,
@@ -909,8 +911,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 46,
-  "last_updated": "2026-10-19T02:57:43.885715+00:00",
+  "total_errors": 49,
+  "last_updated": "2026-10-26T02:51:56.997449+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

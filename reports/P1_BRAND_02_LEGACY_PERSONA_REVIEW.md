@@ -1,8 +1,8 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-10-19
+- Generated: 2026-10-26
 
-统计：content/posts 共 67 篇，命中 legacy persona 短语 0 篇。
+统计：content/posts 共 68 篇，命中 legacy persona 短语 0 篇。
 
 本轮**不修改** legacy 文章；统一标记 LEGACY_PERSONA_CONTENT，后续单独处理。
 
@@ -64,6 +64,7 @@
 | 2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md | 0 | - |
 | 2026-09-21-china-nightlife-guide-bars-clubs-and-evening-culture.md | 0 | - |
 | 2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md | 0 | - |
+| 7-day-china-itinerary.md | 0 | - |
 | alipay-for-foreigners-guide.md | 0 | - |
 | alipay-wechat-pay-foreigners-guide.md | 0 | - |
 | best-china-itineraries-for-10-days-three-routes-compared.md | 0 | - |
