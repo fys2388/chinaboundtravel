@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T10:31:57.984677+00:00",
+  "generated_at": "2026-10-26T11:02:08.540351+00:00",
   "summary": {
     "total": 8,
     "P0": 0,
@@ -21,7 +21,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-26T10:31:56.001165+00:00",
+      "generated_at": "2026-10-26T11:02:06.052826+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 0,
@@ -69,7 +69,7 @@
   },
   "issues": [
     {
-      "id": "site_health-62379f3e0afa926c",
+      "id": "site_health-356c1a86063537c5",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -79,11 +79,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-26T10:31:57.984677+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "first_seen": "2026-10-26T11:02:08.540351+00:00",
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
-      "id": "site_health-3c5143315000987f",
+      "id": "site_health-5247de578bbd18b4",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -93,8 +93,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-26T10:31:57.984677+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "first_seen": "2026-10-26T11:02:08.540351+00:00",
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -108,7 +108,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -122,7 +122,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -136,7 +136,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -150,7 +150,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "3d8eaf1805cf9f56",
@@ -164,7 +164,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-26T02:31:54.400547+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     },
     {
       "id": "f88a5fe66eae891f",
@@ -178,7 +178,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-24T21:35:23.367491+00:00",
-      "last_seen": "2026-10-26T10:31:57.984677+00:00"
+      "last_seen": "2026-10-26T11:02:08.540351+00:00"
     }
   ]
 }
