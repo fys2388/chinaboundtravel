@@ -3,13 +3,13 @@
   "agent_name": "Ops Agent (部署/配置/权限)",
   "task_id": "task_2026-10-26_ops",
   "created_at": "2026-10-26T01:00:55.196849+00:00",
-  "updated_at": "2026-10-26T02:22:03.442365",
+  "updated_at": "2026-10-26T02:31:00.754447+00:00",
   "target_date": "2026-10-26",
-  "issue_count": 2,
+  "issue_count": 1,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 2,
+    "medium": 1,
     "low": 0
   },
   "issues": [
@@ -32,26 +32,6 @@
       "assigned": true,
       "assigned_to": "ops",
       "detected_at": "2026-10-26T01:52:51.322926+00:00"
-    },
-    {
-      "id": "site_health-5351e5cd75c8a1cb",
-      "type": "file_mojibake",
-      "title": "file_mojibake",
-      "description": "file_mojibake",
-      "page": "config/news_digest.json",
-      "file": "config/news_digest.json",
-      "evidence": "检测到乱码字符（双编码）",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "ops",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "ops",
-      "detected_at": "2026-10-26T02:22:03.237114+00:00"
     }
   ],
   "priority_issue": {
