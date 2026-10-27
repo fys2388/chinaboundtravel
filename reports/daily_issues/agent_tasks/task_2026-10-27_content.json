@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-27_content",
   "created_at": "2026-10-27T01:01:00.039774+00:00",
-  "updated_at": "2026-10-27T17:21:15.204930",
+  "updated_at": "2026-10-27T17:32:07.322121",
   "target_date": "2026-10-27",
   "issue_count": 5,
   "severity_summary": {
@@ -14,7 +14,27 @@
   },
   "issues": [
     {
-      "id": "site_health-1de23a3b5d667bd5",
+      "id": "site_health-7d73dd482b855f2",
+      "type": "draft_leak",
+      "title": "draft_leak",
+      "description": "draft_leak",
+      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "evidence": "draft:true的文章可能已发布到线上",
+      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-27T17:32:06.994106+00:00"
+    },
+    {
+      "id": "site_health-1703f249c9ba966d",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -31,27 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-27T17:21:15.066340+00:00"
-    },
-    {
-      "id": "site_health-6956f1984b4065fb",
-      "type": "draft_leak",
-      "title": "draft_leak",
-      "description": "draft_leak",
-      "page": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "evidence": "draft:true的文章可能已发布到线上",
-      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
-      "severity": "high",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-10-27T17:21:15.066328+00:00"
+      "detected_at": "2026-10-27T17:32:06.994122+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -115,14 +115,14 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-1de23a3b5d667bd5",
-    "type": "garbled_text",
-    "title": "garbled_text",
-    "description": "garbled_text",
+    "id": "site_health-7d73dd482b855f2",
+    "type": "draft_leak",
+    "title": "draft_leak",
+    "description": "draft_leak",
     "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
     "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
-    "evidence": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
-    "recommended_action": "Review and remediate the reported issue.",
+    "evidence": "draft:true的文章可能已发布到线上",
+    "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
     "severity": "high",
     "agent": "content",
     "action": "manual_review",
@@ -132,7 +132,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-27T17:21:15.066340+00:00"
+    "detected_at": "2026-10-27T17:32:06.994106+00:00"
   },
   "expected_actions": [
     "manual_review"
@@ -141,7 +141,7 @@
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-10-27T17:21:15.204934",
+    "completed_at": "2026-10-27T17:32:07.322130",
     "note": "resolved=0, need_manual=0, failed=0"
   }
 }
