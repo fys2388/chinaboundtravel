@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-10-27",
-  "audited_at": "2026-10-27T02:57:28.126594",
+  "audited_at": "2026-10-27T17:21:15.298112",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -36,7 +36,7 @@
         "assigned": 0,
         "unassigned": 1,
         "assignment_rate": "0.0%",
-        "agent_tasks": 3
+        "agent_tasks": 4
       }
     },
     {
@@ -44,12 +44,12 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "total_tasks": 3,
+        "total_tasks": 4,
         "completed": 2,
         "pending": 0,
         "failed": 0,
-        "partial": 1,
-        "total_issues": 7,
+        "partial": 2,
+        "total_issues": 8,
         "resolved_issues": 6
       }
     },
@@ -61,7 +61,7 @@
         "need_manual": 1,
         "resolved": 18,
         "execution_log_exists": true,
-        "total_executions": 7836
+        "total_executions": 7900
       }
     },
     {

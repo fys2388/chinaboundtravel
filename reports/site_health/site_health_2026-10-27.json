@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-27T02:57:24.284333+00:00",
+  "timestamp": "2026-10-27T17:21:12.452550+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -25,7 +25,7 @@
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
       "agent": "content",
@@ -37,7 +37,7 @@
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
       "agent": "content",
@@ -61,19 +61,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
-      "message": "AI禁用词: #1",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "file": "content/posts/7-day-china-itinerary.md",
       "message": "AI禁用词: perfect",
       "auto_fixable": false,
       "agent": "content",
@@ -85,7 +73,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -105,6 +93,30 @@
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.md",
+      "message": "AI禁用词: #1",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -133,85 +145,13 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/7-day-china-itinerary.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
-      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "file": "content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
       "status": "resolved",
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "message": "Meta description过短(67字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(154字符)",
-      "resolved_at": "2026-10-06T03:54:39.743270+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-08-03-travel-guide-2026-08.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-07-01-travel-guide-2026-07.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-08-01-travel-guide-2026-08.md",
-      "message": "Meta description过短(54字符)",
-      "auto_fixable": false,
-      "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
@@ -245,6 +185,66 @@
       "resolved_at": "2026-10-25T15:26:41.398183+00:00",
       "fix_status": "fixed",
       "fix_message": "title 已缩短: 65->55字符"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "message": "Meta description过短(67字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(154字符)",
+      "resolved_at": "2026-10-06T03:54:39.743270+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/ebook/2026-08-03-travel-guide-2026-08.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/ebook/2026-07-01-travel-guide-2026-07.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/ebook/2026-08-01-travel-guide-2026-08.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     }
   ]
 }
