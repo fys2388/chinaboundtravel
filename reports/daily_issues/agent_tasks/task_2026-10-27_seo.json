@@ -1,0 +1,67 @@
+{
+  "agent": "seo",
+  "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+  "task_id": "task_2026-10-27_seo",
+  "created_at": "2026-10-27T01:01:00.040285+00:00",
+  "updated_at": "2026-10-27T01:01:00.509625",
+  "target_date": "2026-10-27",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "f88a5fe66eae891f",
+      "type": "duplicate_title",
+      "title": "duplicate_title",
+      "description": "duplicate_title",
+      "page": "/free-itinerary/",
+      "file": "/free-itinerary/",
+      "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+      "recommended_action": "Differentiate titles for distinct search intent.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-10-27T01:01:00.039331+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "f88a5fe66eae891f",
+    "type": "duplicate_title",
+    "title": "duplicate_title",
+    "description": "duplicate_title",
+    "page": "/free-itinerary/",
+    "file": "/free-itinerary/",
+    "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+    "recommended_action": "Differentiate titles for distinct search intent.",
+    "severity": "medium",
+    "agent": "seo",
+    "action": "manual_review",
+    "source": "site",
+    "source_file": "",
+    "task_source": "quality_gate",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "seo",
+    "detected_at": "2026-10-27T01:01:00.039331+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "completed",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": "2026-10-27T01:01:00.509636",
+    "note": "resolved=0, need_manual=0, failed=0"
+  }
+}
