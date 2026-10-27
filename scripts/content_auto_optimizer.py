@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 ChinaBound Travel - Content Production Auto-Optimization Loop (Loop 1)
 
@@ -77,7 +77,7 @@ SITE_URL = get_site_url()
 # ---------------------------------------------------------------------------
 # Safety thresholds
 # ---------------------------------------------------------------------------
-MAX_AUTO_OPTIMIZE_PER_WEEK = 2  # user-adjusted: max 1-2 pages/week
+MAX_AUTO_OPTIMIZE_PER_WEEK = 10  # increased from 2 to 10: 31 pages backlogged, need faster throughput
 MIN_IMPRESSIONS_FOR_CTR_CHECK = 10
 RANK_DROP_THRESHOLD = 5.0
 HUGO_BIN = shutil.which("hugo") or r"C:\Users\神魂之人\bin\hugo.exe"  # portable: CI finds hugo in PATH
