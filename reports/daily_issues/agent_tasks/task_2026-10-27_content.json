@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-27_content",
   "created_at": "2026-10-27T01:01:00.039774+00:00",
-  "updated_at": "2026-10-27T12:31:06.426832",
+  "updated_at": "2026-10-27T12:34:17.529403",
   "target_date": "2026-10-27",
   "issue_count": 5,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-1111e7d2780ac69f",
+      "id": "site_health-1623503071756d47",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-27T12:31:06.189670+00:00"
+      "detected_at": "2026-10-27T12:34:17.151466+00:00"
     },
     {
-      "id": "site_health-7859eb742deaf4b9",
+      "id": "site_health-5ca4e4512de8509",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-27T12:31:06.189657+00:00"
+      "detected_at": "2026-10-27T12:34:17.151451+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -115,7 +115,7 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-1111e7d2780ac69f",
+    "id": "site_health-1623503071756d47",
     "type": "garbled_text",
     "title": "garbled_text",
     "description": "garbled_text",
@@ -132,7 +132,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-27T12:31:06.189670+00:00"
+    "detected_at": "2026-10-27T12:34:17.151466+00:00"
   },
   "expected_actions": [
     "manual_review"
@@ -141,7 +141,7 @@
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-10-27T12:31:06.426842",
+    "completed_at": "2026-10-27T12:34:17.529408",
     "note": "resolved=0, need_manual=0, failed=0"
   }
 }
