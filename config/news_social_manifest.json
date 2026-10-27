@@ -26,11 +26,11 @@
     },
     "38c86176c05c": {
       "title": "US adds ‘wrongful detention’ warning for Americans travellin",
-      "posted_at": "2026-10-20T05:45:41.514683+00:00",
+      "posted_at": "2026-10-27T06:05:21.834086+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "1c175a412b67": {
       "title": "Chinese actress cancels Bangkok fan meeting amid embassy tra",
@@ -335,9 +335,57 @@
         "x"
       ],
       "success": true
+    },
+    "8b91dc7d40d0": {
+      "title": "China Visa Rules Change From October 26: What Indian Travell",
+      "posted_at": "2026-10-27T06:05:21.285095+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "cec88fd76020": {
+      "title": "China sees steady growth in domestic tourism in first 9 mont",
+      "posted_at": "2026-10-27T06:05:23.611636+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "2180fd5ed4c5": {
+      "title": "Tourists explore China's lesser-known cities - China Daily G",
+      "posted_at": "2026-10-27T06:05:25.136728+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "336564d925d1": {
+      "title": "How the world’s highest bridge became a tourist hot spot in ",
+      "posted_at": "2026-10-27T06:05:26.816208+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "9d650cd90b88": {
+      "title": "Why China’s heritage-listed Dog-Carrying Festival honours ca",
+      "posted_at": "2026-10-27T06:05:28.383593+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "efaf6bb45e21": {
+      "title": "Rwanda, China sign agreements on technical education, cultur",
+      "posted_at": "2026-10-27T06:05:30.133017+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-26T05:52:45.937698+00:00",
-  "total_posts": 41,
-  "total_failures": 6
+  "last_run": "2026-10-27T06:05:30.133038+00:00",
+  "total_posts": 47,
+  "total_failures": 7
 }
