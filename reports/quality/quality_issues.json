@@ -1,31 +1,30 @@
 {
-  "generated_at": "2026-10-27T02:31:55.666642+00:00",
+  "generated_at": "2026-10-27T02:57:24.176010+00:00",
   "summary": {
-    "total": 8,
+    "total": 7,
     "P0": 0,
     "P1": 3,
-    "P2": 5,
+    "P2": 4,
     "by_source": {
       "site_health": 2,
       "visual": 1,
       "content": 3,
-      "predeploy": 1,
       "site": 1
     },
     "by_owner": {
       "content": 5,
-      "engineering": 2,
+      "engineering": 1,
       "seo": 1
     }
   },
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-27T02:31:52.324486+00:00",
-      "issues": 1,
+      "generated_at": "2026-09-21T07:08:04.572598+00:00",
+      "issues": 0,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 0
     },
     "site": {
       "available": true,
@@ -69,7 +68,7 @@
   },
   "issues": [
     {
-      "id": "site_health-140b9afa55b6225b",
+      "id": "site_health-1fe2ed53dcf128c2",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -79,11 +78,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-27T02:31:55.666642+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "first_seen": "2026-10-27T02:57:24.176010+00:00",
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
-      "id": "site_health-3f9d447559271156",
+      "id": "site_health-59ce33b563949e62",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -93,8 +92,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-27T02:31:55.666642+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "first_seen": "2026-10-27T02:57:24.176010+00:00",
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -108,7 +107,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -122,7 +121,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
       "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -136,7 +135,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
       "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -150,21 +149,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
-    },
-    {
-      "id": "3d8eaf1805cf9f56",
-      "severity": "P2",
-      "source": "predeploy",
-      "type": "duplicate_title",
-      "title": "duplicate_title",
-      "page": "/free-itinerary/",
-      "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
-      "recommended_action": "Differentiate titles for distinct search intent.",
-      "owner": "engineering",
-      "status": "open",
-      "first_seen": "2026-10-27T01:01:56.460511+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     },
     {
       "id": "f88a5fe66eae891f",
@@ -178,7 +163,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-24T21:35:23.367491+00:00",
-      "last_seen": "2026-10-27T02:31:55.666642+00:00"
+      "last_seen": "2026-10-27T02:57:24.176010+00:00"
     }
   ]
 }
