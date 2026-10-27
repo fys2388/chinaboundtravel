@@ -430,3 +430,5 @@ Safe travels, and welcome to China.
 - [How to Use Alipay as a Foreigner: Complete](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)

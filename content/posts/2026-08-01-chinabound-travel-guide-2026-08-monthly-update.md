@@ -197,6 +197,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
 ## FAQ
 
 ### Do I need a visa for China?

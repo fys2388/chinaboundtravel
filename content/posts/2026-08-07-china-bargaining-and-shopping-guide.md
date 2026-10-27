@@ -198,6 +198,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

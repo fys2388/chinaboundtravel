@@ -230,3 +230,5 @@ No — China is massive and 7 days only covers three cities. But this itinerary 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

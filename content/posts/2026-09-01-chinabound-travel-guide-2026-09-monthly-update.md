@@ -103,3 +103,5 @@ The current edition (2026.09) is included with every plan on [chinaboundtravel.c
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
