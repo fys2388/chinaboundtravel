@@ -32,6 +32,10 @@ jobs:
           TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
           TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
           MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          BUFFER_API_TOKEN_B: ${{ secrets.BUFFER_API_TOKEN_B }}
+          BUFFER_WORKER_URL: ${{ secrets.BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
+          NEW_BUFFER_WORKER_URL: ${{ secrets.NEW_BUFFER_WORKER_URL || 'https://buffer-worker.chinaboundtravel.com/publish' }}
         run: python scripts/env_check.py
 
       - name: Upload report

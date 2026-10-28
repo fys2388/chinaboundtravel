@@ -1,4 +1,4 @@
-﻿name: Content Auto-Optimization Loop
+name: Content Auto-Optimization Loop
 
 on:
   schedule:
@@ -11,9 +11,9 @@ on:
         type: boolean
         default: false
       max_pages:
-        description: 'Max pages to optimize (safety limit: 1-2)'
+        description: 'Max pages to optimize (matches MAX_AUTO_OPTIMIZE_PER_WEEK)'
         type: number
-        default: 2
+        default: 10
 
 concurrency:
   group: content-auto-optimize
