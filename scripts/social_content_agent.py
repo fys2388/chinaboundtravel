@@ -776,12 +776,13 @@ def _gen_via_ark(prompt: str, out_path: Path) -> bool:
 
 
 def generate_image(item: dict, path: Path) -> str:
-    """真实文生图：为单条帖子生成独立配图并本地托管到 static/img/china-dest/social/。
+    """真实文生图：为单条帖子生成独立配图并本地托管到 static/img/china-dest/ai-generated/。
 
     后端链：Agnes AI（首选，需 AGNES_API_KEY）→ Ark Seedream（次选，需 ARK_IMAGE_MODEL）
     → 空串（调用方回退文章封面）。
     返回站点绝对 URL；未生成返回 ""（调用方回退文章封面）。需 IMAGE_GEN_ENABLED=1。
     文件名含 slug/platform/type/prompt 摘要 → 同文同平台同类型也互不重复。
+    输出到 ai-generated/ 而非 social/，避免 AI 生成图进入 news_social_poster 的随机封面池。
     """
     if not os.environ.get("IMAGE_GEN_ENABLED", ""):
         return ""
@@ -793,7 +794,9 @@ def generate_image(item: dict, path: Path) -> str:
             item.get("type", "knowledge"), item.get("platform", "ig"))
     slug = re.sub(r"[^a-z0-9]+", "-", str(item.get("source_article") or "post").lower()).strip("-")[:40]
     digest = hashlib.sha1(f"{slug}|{item.get('platform')}|{item.get('type')}|{prompt}".encode("utf-8")).hexdigest()[:8]
-    out_dir = BLOG_ROOT / "static" / "img" / "china-dest" / "social"
+    # AI 生成图输出到独立目录，避免进入 news_social_poster 的随机图片池（static/img/china-dest/social/）。
+    # 仍位于 buffer-worker 允许的 /img/china-dest/ 路径下。
+    out_dir = BLOG_ROOT / "static" / "img" / "china-dest" / "ai-generated"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"{slug}-{item.get('platform')}-{item.get('type')}-{digest}.jpg"
     if out_path.exists() and out_path.stat().st_size > 1000:
