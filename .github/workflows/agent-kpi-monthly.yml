@@ -57,11 +57,11 @@ jobs:
           python scripts/revenue_data_collector.py --source all --days 30 || echo "⚠️ Revenue collector failed (non-fatal, continuing with cache)"
           
           if [ -n "$MONTH" ]; then
-            python scripts/agent_kpi_auditor.py --month "$MONTH"
+            python scripts/agent_kpi_auditor.py --month "$MONTH" || KPI_EXIT=$?
           else
-            python scripts/agent_kpi_auditor.py
+            python scripts/agent_kpi_auditor.py || KPI_EXIT=$?
           fi
-          KPI_EXIT=$?
+          KPI_EXIT=${KPI_EXIT:-0}
           echo "kpi_exit=$KPI_EXIT" >> $GITHUB_OUTPUT
 
           # 读取考核结果摘要
