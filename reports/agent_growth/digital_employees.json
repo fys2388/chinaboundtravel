@@ -29,6 +29,11 @@
         "month": "2026-09",
         "grade": "B",
         "score": 75.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "B",
+        "score": 74.5
       }
     ],
     "tasks_completed": 5,
@@ -143,6 +148,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 66.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "C",
+        "score": 68.2
       }
     ],
     "tasks_completed": 0,
@@ -178,6 +188,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 66.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "A",
+        "score": 80.2
       }
     ],
     "tasks_completed": 0,
@@ -213,6 +228,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 66.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "D",
+        "score": 58.5
       }
     ],
     "tasks_completed": 0,
@@ -248,6 +268,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 66.5
+      },
+      {
+        "month": "2026-10",
+        "grade": "B",
+        "score": 72.0
       }
     ],
     "tasks_completed": 0,
@@ -283,6 +308,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 63.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "B",
+        "score": 73.0
       }
     ],
     "tasks_completed": 0,
@@ -318,6 +348,11 @@
         "month": "2026-09",
         "grade": "C",
         "score": 66.0
+      },
+      {
+        "month": "2026-10",
+        "grade": "C",
+        "score": 66.6
       }
     ],
     "tasks_completed": 0,
