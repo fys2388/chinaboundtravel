@@ -98,11 +98,11 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-10-21T05:50:14.513449+00:00",
+      "posted_at": "2026-10-28T06:44:09.661226+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "191a9b20c91f": {
       "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ r",
@@ -383,9 +383,65 @@
         "x"
       ],
       "success": true
+    },
+    "f194ce6dfb7d": {
+      "title": "India-China visa update: What changes for Indian passport ho",
+      "posted_at": "2026-10-28T06:43:52.924304+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "92cc489c6fe1": {
+      "title": "China updates visa application process for Indians, new rule",
+      "posted_at": "2026-10-28T06:43:54.713387+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "f14323ceb2ef": {
+      "title": "Chinese travel alert misdirected, claims Sihasak - Thai PBS ",
+      "posted_at": "2026-10-28T06:43:56.597745+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "2fb03e0b53dd": {
+      "title": "US ends visa waiver for Chinese over birth tourism, people s",
+      "posted_at": "2026-10-28T06:43:58.272221+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "1107b7679af5": {
+      "title": "DHS Cracks Down on ‘Birth Tourism’ With China Visa-Free Trav",
+      "posted_at": "2026-10-28T06:43:59.547366+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "c5c1e3b15dca": {
+      "title": "Artists honor Leshan's majestic cultural heritage - China Da",
+      "posted_at": "2026-10-28T06:44:04.625063+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "ce787e34a0de": {
+      "title": "Cultural heritage brings new life to Chinese small products ",
+      "posted_at": "2026-10-28T06:44:09.216304+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-10-27T06:05:30.133038+00:00",
-  "total_posts": 47,
-  "total_failures": 7
+  "last_run": "2026-10-28T06:44:09.661249+00:00",
+  "total_posts": 54,
+  "total_failures": 8
 }
