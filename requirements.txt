@@ -8,6 +8,16 @@ feedparser
 # 测试回归闸门（.github/workflows/test-regression.yml）需要 pytest 产出 junit
 pytest
 
+# 测试 collection 依赖（2026-10-27 修复 test-regression 6 个 collection ERROR）
+# - test_workflow_names/test_workflow_yaml/test_site_health_dashboard_regen: import yaml
+# - test_generation_failure_logging: joran_blog_generator → from tenacity import ...
+# - test_predeploy_quality_gate: scripts/predeploy_quality_gate → from bs4 import ...
+# - test_seo_optimizer_logic: import pandas
+pyyaml
+tenacity
+beautifulsoup4
+pandas
+
 # revenue_data_collector.py 的真实营收采集依赖。
 # 之前缺失 → CI 里 GA4 报 "google-analytics-data 未安装"、Stripe 报 "stripe 未安装"，
 # 两个数据源恒为空，营收 KPI 只能吃 70 分占位分（NO_DATA_BASE_SCORE）。

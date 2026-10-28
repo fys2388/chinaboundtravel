@@ -19,9 +19,6 @@ REQUIRED_VARS = [
     # AI服务（必须）
     ("DOUBAO_ARK_API_KEY", "豆包AI生成"),
     
-    # LLM智能分析（可选，启用后增强Agent能力）
-    ("SENSENOVA_API_KEY", "商汤SenseNova LLM(可选)"),
-    
     # 数据分析（必须）
     ("GA4_API_KEY", "Google Analytics"),
     ("GA4_PROPERTY_ID", "GA4属性ID"),
@@ -38,6 +35,7 @@ REQUIRED_VARS = [
 OPTIONAL_VARS = [
     # 未启用的服务（降级为可选，避免每日检查误报失败）
     ("DEEPSEEK_API_KEY", "DeepSeek辅助(未启用)"),
+    ("SENSENOVA_API_KEY", "商汤SenseNova LLM(可选)"),
     ("STRIPE_SECRET_KEY", "Stripe支付(未启用)"),
     ("STRIPE_WEBHOOK_SECRET", "Stripe回调(未启用)"),
     ("RESEND_API_KEY", "邮件发送(未启用)"),
