@@ -276,13 +276,51 @@ def record_post(manifest: dict, news_hash: str, title: str, platforms: list, suc
 
 _CHINA_DEST_SOCIAL_DIR = BLOG_ROOT / "static" / "img" / "china-dest" / "social"
 
+# 图片池文件大小呈双峰分布（2026-10-28 全量扫描 306 张确认）：
+#   <100KB  = AI 生成图（暗红/阴森风格，带 pollinations.ai 水印）
+#   >300KB  = 真实照片
+#   100-300KB 为空白分隔带。阈值 300KB 可靠排除全部 AI 生成图。
+_MIN_REAL_PHOTO_BYTES = 300 * 1024
+
+# 通用合法比例：1:1 在 X/FB/IG/Pinterest 全部平台均合法；16:9 适用于 X/FB。
+# 同一张封面会随 news-alert（X/FB）与 news-insight（IG/Pinterest）一起用，
+# 首选 1:1 保证全平台合规；16:9 作为横向回退。
+_ALLOWED_UNIVERSAL_RATIOS = (1.0, 16 / 9)
+
+
+def _is_acceptable_pool_image(path: Path) -> bool:
+    """筛选真实照片封面：排除 AI 生成小图与不合规比例图。
+
+    判定依据（2026-10-28 全量验证）：
+      - 文件大小 < 300KB → AI 生成图（pollinations.ai 水印已 OCR 确认），剔除；
+      - 宽高比不在 1:1 或 16:9（±5% 容差）→ 该平台不合法，剔除。
+    任一维度读取失败 → 剔除（宁可缺图回退，不冒险发违规模图）。
+    """
+    try:
+        if path.stat().st_size < _MIN_REAL_PHOTO_BYTES:
+            return False
+        from PIL import Image
+        with Image.open(path) as im:
+            w, h = im.size
+        if w <= 0 or h <= 0:
+            return False
+        ratio = w / h
+        return any(abs(ratio - target) / target <= 0.05 for target in _ALLOWED_UNIVERSAL_RATIOS)
+    except Exception:
+        return False
+
 
 def _pick_random_china_dest_image() -> str:
-    """从已有 china-dest/social 图片池中随机选一张返回绝对 URL。
+    """从已有 china-dest/social 图片池中随机选一张【真实照片】返回绝对 URL。
 
     buffer-worker 的 ALLOWED_IMAGE_PATH = '/img/china-dest/'，拒绝
     /img/og-default.jpg 等不在该路径下的图片。新闻条目没有自然配图，
     从图片池随机取一张做封面以保证提交成功。
+
+    仅从通过 _is_acceptable_pool_image 过滤后的真实照片中选取，避免
+    抽到 AI 生成图（暗红/阴森风格、带 pollinations.ai 水印）或
+    2:3 / 4:5 等 X 平台不合规的竖版图。全部候选被剔除时返回 ""，
+    调用方回退文章封面。
 
     Hugo 部署时会把 static/ 前缀剥掉，所以静态文件
     static/img/china-dest/social/foo.jpg 在站点上访问路径为
@@ -290,7 +328,8 @@ def _pick_random_china_dest_image() -> str:
     """
     if not _CHINA_DEST_SOCIAL_DIR.exists():
         return ""
-    files = list(_CHINA_DEST_SOCIAL_DIR.glob("*.jpg")) + list(_CHINA_DEST_SOCIAL_DIR.glob("*.jpeg"))
+    files = [f for f in _CHINA_DEST_SOCIAL_DIR.glob("*.jpg") if _is_acceptable_pool_image(f)]
+    files += [f for f in _CHINA_DEST_SOCIAL_DIR.glob("*.jpeg") if _is_acceptable_pool_image(f)]
     if not files:
         return ""
     chosen = random.choice(files)
