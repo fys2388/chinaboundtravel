@@ -298,6 +298,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
+- [Where to Stay in China: Complete 2026 Guide](/posts/accommodation-tips-guide/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

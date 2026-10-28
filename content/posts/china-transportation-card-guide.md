@@ -210,3 +210,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

@@ -274,3 +274,5 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

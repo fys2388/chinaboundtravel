@@ -199,6 +199,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
 
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?

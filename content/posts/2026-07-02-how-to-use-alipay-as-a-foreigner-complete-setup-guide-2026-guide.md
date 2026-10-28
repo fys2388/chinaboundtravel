@@ -192,6 +192,8 @@ Account restrictions usually happen when Alipay's security system flags unusual 
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
+- [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
+
 ## FAQ
 
 ### Can foreigners use how to use alipay?

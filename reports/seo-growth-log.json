@@ -7829,6 +7829,198 @@
       "target": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-27T08:47:23.057098"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-28T09:27:17.443632"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "'Where to Stay in China: Complete 2026 Guide' -> 'Accommodation In China: Complete 2026 Guide' (keyword: accommodation in china)",
+      "timestamp": "2026-10-28T09:27:19.520302"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:21.008241"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-28T09:27:22.406258"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary-beijing-xian-shanghai-first-timers -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:23.815907"
+    },
+    {
+      "type": "internal_link",
+      "target": "hangzhou-west-lake-tea-culture-g20-guide -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:25.222269"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-bargaining-and-shopping-guide -> china-airport-transfer-guide",
+      "detail": "score=3",
+      "timestamp": "2026-10-28T09:27:26.622314"
+    },
+    {
+      "type": "internal_link",
+      "target": "wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:28.029159"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:29.456060"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-10-28T09:27:30.887665"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> accommodation-tips-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-28T09:27:32.304879"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> accommodation-tips-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-28T09:27:33.695512"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-visa-free-entry-2026-complete-guide-countries-rules-tips -> accommodation-tips-guide",
+      "detail": "score=4",
+      "timestamp": "2026-10-28T09:27:35.117240"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-bargaining-and-shopping-guide -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:36.501123"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-wechat-pay-foreigners-guide -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:37.890559"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-airport-transfer-guide -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:39.272065"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> 7-day-china-itinerary",
+      "detail": "score=2",
+      "timestamp": "2026-10-28T09:27:40.685851"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026 -> chinese-language-survival-phrases-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:42.077350"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:43.487858"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:44.892221"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-extends-144-hour-visa-free-transit-policy-to-more-countries -> how-to-use-wechat-pay-as-a-foreigner",
+      "detail": "score=1",
+      "timestamp": "2026-10-28T09:27:46.396360"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "FAQ for 'sichuan travel accommodation recommendations'",
+      "timestamp": "2026-10-28T09:27:47.934270"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:48.419955"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:48.854967"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:49.297357"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:49.708842"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:50.129409"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:50.556601"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:50.972115"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:51.408307"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:51.738755"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-28T09:27:52.066143"
     }
   ]
 }

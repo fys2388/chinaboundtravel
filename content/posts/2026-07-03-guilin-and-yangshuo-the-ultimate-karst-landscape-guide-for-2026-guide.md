@@ -222,3 +222,5 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

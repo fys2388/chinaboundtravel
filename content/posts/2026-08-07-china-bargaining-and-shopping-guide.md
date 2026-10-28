@@ -200,6 +200,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?
