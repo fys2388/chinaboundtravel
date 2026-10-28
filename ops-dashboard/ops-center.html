@@ -50,6 +50,10 @@ body {
 @media(max-width:1100px) { .kpi-grid { grid-template-columns:repeat(2,1fr); } }
 .kpi { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; position:relative; overflow:hidden; transition:border-color 0.2s, transform 0.2s; }
 .kpi:hover { border-color:var(--border2); transform:translateY(-2px); }
+.kpi-clickable { cursor:pointer; transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+.kpi-clickable:hover { border-color:var(--accent); transform:translateY(-2px); }
+.kpi-clickable.active { border-color:var(--accent); box-shadow:0 0 18px rgba(0,212,255,0.18); }
+.kpi-clickable.active::after { content:'● 联动'; position:absolute; top:10px; right:12px; font-size:9px; color:var(--accent); font-weight:700; }
 .kpi::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; }
 .kpi.k1::before { background:var(--accent); } .kpi.k2::before { background:var(--blue); }
 .kpi.k3::before { background:var(--purple); } .kpi.k4::before { background:var(--yellow); }
@@ -170,12 +174,12 @@ body {
   <div class="section">
     <div class="section-head"><span class="section-num">📊</span><span class="section-title">网站运营 · 核心指标</span><span class="section-meta">28天窗口 · GA4/GSC/内容</span></div>
     <div class="kpi-grid" id="main-kpis">
-      <div class="kpi k1"><div class="kpi-label">28天访客</div><div class="kpi-value" id="k-visitors">--</div><div class="kpi-sub">GA4真实数据</div></div>
-      <div class="kpi k2"><div class="kpi-label">页面浏览</div><div class="kpi-value" id="k-pageviews">--</div><div class="kpi-sub">28天累计</div></div>
+      <div class="kpi k1 kpi-clickable active" data-metric="visitors" title="点击查看访客/会话/浏览趋势"><div class="kpi-label">28天访客</div><div class="kpi-value" id="k-visitors">--</div><div class="kpi-sub">GA4真实数据</div></div>
+      <div class="kpi k2 kpi-clickable" data-metric="pageviews" title="点击查看页面浏览趋势"><div class="kpi-label">页面浏览</div><div class="kpi-value" id="k-pageviews">--</div><div class="kpi-sub">28天累计</div></div>
       <div class="kpi k3"><div class="kpi-label">跳出率</div><div class="kpi-value" id="k-bounce">--</div><div class="kpi-sub">需优化至 &lt;50%</div></div>
       <div class="kpi k4"><div class="kpi-label">文章总数</div><div class="kpi-value" id="k-articles">--</div><div class="kpi-sub">联盟链接 <span id="k-aff-pct">--</span></div></div>
-      <div class="kpi k5"><div class="kpi-label">GSC 展示</div><div class="kpi-value" id="k-impr">--</div><div class="kpi-sub">28天 · 搜索曝光</div></div>
-      <div class="kpi k6"><div class="kpi-label">GSC 点击</div><div class="kpi-value" id="k-clicks">--</div><div class="kpi-sub">CTR <span id="k-ctr">--</span></div></div>
+      <div class="kpi k5 kpi-clickable" data-metric="impressions" title="点击查看GSC展示趋势"><div class="kpi-label">GSC 展示</div><div class="kpi-value" id="k-impr">--</div><div class="kpi-sub">28天 · 搜索曝光</div></div>
+      <div class="kpi k6 kpi-clickable" data-metric="clicks" title="点击查看GSC点击趋势"><div class="kpi-label">GSC 点击</div><div class="kpi-value" id="k-clicks">--</div><div class="kpi-sub">CTR <span id="k-ctr">--</span></div></div>
       <div class="kpi k7"><div class="kpi-label">Agent 平均分</div><div class="kpi-value" id="k-kpi">--</div><div class="kpi-sub" id="k-kpi-sub">7大Agent</div></div>
       <div class="kpi k8"><div class="kpi-label">工作流成功率</div><div class="kpi-value" id="k-wf">--</div><div class="kpi-sub" id="k-wf-sub">--</div></div>
     </div>
@@ -185,7 +189,7 @@ body {
   <div class="section">
     <div class="card-grid-2">
       <div class="card">
-        <div class="section-head"><span class="section-num">📈</span><span class="section-title">28天流量趋势</span><span class="section-meta">GA4 · 访客/会话/浏览</span></div>
+        <div class="section-head"><span class="section-num">📈</span><span class="section-title" id="trend-title">28天流量趋势</span><span class="section-meta" id="trend-meta">GA4 · 最近28天逐日</span></div>
         <div id="chart-traffic" class="chart-box-sm"></div>
       </div>
       <div class="card">
@@ -385,22 +389,47 @@ function renderCharts(){
   renderTrafficChart('chart-traffic');
   renderKPIPie('chart-kpi');
 }
+// 趋势指标配置：点击核心 KPI 卡切换
+const TRAFFIC_METRICS = {
+  visitors:{title:'28天流量趋势', meta:'GA4 · 最近28天逐日', source:'ga4', series:[{name:'访客',key:'activeUsers',color:'#00d4ff'},{name:'会话',key:'sessions',color:'#3b82f6'},{name:'页面浏览',key:'pageviews',color:'#a78bfa'}]},
+  pageviews:{title:'页面浏览 · 28天趋势', meta:'GA4 · 逐日', source:'ga4', series:[{name:'页面浏览',key:'pageviews',color:'#a78bfa'}]},
+  impressions:{title:'GSC 展示 · 28天趋势', meta:'Search Console · 逐日', source:'gsc', series:[{name:'展示',key:'impressions',color:'#f59e0b'}]},
+  clicks:{title:'GSC 点击 · 28天趋势', meta:'Search Console · 逐日', source:'gsc', series:[{name:'点击',key:'clicks',color:'#22c55e'}]}
+};
+let currentMetric = 'visitors';
 function renderTrafficChart(elId){
   const el = document.getElementById(elId); if(!el||!dashData) return;
   if(charts[elId]) charts[elId].dispose();
   charts[elId] = echarts.init(el);
-  const ga4 = dashData.metrics?.ga4_28d || {};
+  const cfg = TRAFFIC_METRICS[currentMetric] || TRAFFIC_METRICS.visitors;
+  const dailyKey = cfg.source==='gsc' ? 'gsc_daily' : 'ga4_daily';
+  const daily = (dashData.metrics && dashData.metrics[dailyKey] && dashData.metrics[dailyKey].daily) || [];
+  const days = daily.slice(-28);
+  const labels = days.map(d=>(d.date||'').slice(5)); // MM-DD
+  const series = cfg.series.map(s=>({name:s.name,type:'line',smooth:true,data:days.map(d=>d[s.key]||0),itemStyle:{color:s.color},lineStyle:{width:2},symbol:'circle',symbolSize:4}));
+  if(series[0]) series[0].areaStyle={color:cfg.source==='gsc'?'rgba(245,158,11,0.1)':'rgba(0,212,255,0.1)'};
+  setText('trend-title', cfg.title);
+  setText('trend-meta', cfg.meta);
   charts[elId].setOption({
     backgroundColor:'transparent', tooltip:{trigger:'axis'},
-    legend:{data:['访客','会话','页面浏览'],textStyle:{color:'#94a3b8',fontSize:10},top:0},
-    grid:{left:44,right:20,top:30,bottom:30},
-    xAxis:{type:'category',data:['第1周','第2周','第3周','第4周'],axisLabel:{color:'#94a3b8',fontSize:10},axisLine:{lineStyle:{color:'#1e293b'}}},
+    legend:{data:cfg.series.map(s=>s.name),textStyle:{color:'#94a3b8',fontSize:10},top:0},
+    grid:{left:44,right:20,top:30,bottom:46},
+    xAxis:{type:'category',data:labels,axisLabel:{color:'#94a3b8',fontSize:9,rotate:45},axisLine:{lineStyle:{color:'#1e293b'}}},
     yAxis:{type:'value',axisLabel:{color:'#94a3b8',fontSize:10},splitLine:{lineStyle:{color:'#1e293b'}}},
-    series:[
-      {name:'访客',type:'line',smooth:true,data:[.2,.25,.28,.27].map(p=>Math.round((ga4.visitors||0)*p)),itemStyle:{color:'#00d4ff'},areaStyle:{color:'rgba(0,212,255,0.1)'}},
-      {name:'会话',type:'line',smooth:true,data:[.2,.25,.28,.27].map(p=>Math.round((ga4.sessions||0)*p)),itemStyle:{color:'#3b82f6'}},
-      {name:'页面浏览',type:'line',smooth:true,data:[.2,.25,.28,.27].map(p=>Math.round((ga4.pageviews||0)*p)),itemStyle:{color:'#a78bfa'}}
-    ]
+    series
+  });
+}
+// 点击核心 KPI 卡联动趋势图
+function bindMetricClick(){
+  document.querySelectorAll('.kpi-clickable').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      const m = card.getAttribute('data-metric');
+      if(!m) return;
+      currentMetric = m;
+      document.querySelectorAll('.kpi-clickable').forEach(c=>c.classList.remove('active'));
+      card.classList.add('active');
+      renderTrafficChart('chart-traffic');
+    });
   });
 }
 function renderKPIPie(elId){
@@ -556,6 +585,7 @@ function updateTime(){
 }
 
 window.addEventListener('resize', ()=>{ Object.values(charts).forEach(c=>{ if(c) c.resize(); }); });
+bindMetricClick();
 loadAllData();
 </script>
 </body>
