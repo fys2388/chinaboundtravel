@@ -1,0 +1,37 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-10-29T03:32:57.873678",
+  "target_date": "2026-10-29",
+  "total_issues": 2,
+  "total_assignments": 0,
+  "issues": [
+    {
+      "id": "issue_d11b04dbf252",
+      "type": "social_no_traffic",
+      "description": "社媒曝光16但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-27.json",
+      "detected_at": "2026-10-29T03:32:57.870700",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_37c958edb1db",
+      "type": "garbled_text",
+      "description": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_2026-10-29.json",
+      "detected_at": "2026-10-29T03:32:57.873604",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "auto_fixable": false
+    }
+  ],
+  "assignments": []
+}

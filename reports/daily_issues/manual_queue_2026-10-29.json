@@ -1,0 +1,50 @@
+{
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-10-29T03:32:57.874293",
+  "target_date": "2026-10-29",
+  "issue_count": 2,
+  "by_agent": {
+    "ops": {
+      "count": 1,
+      "types": [
+        "garbled_text"
+      ]
+    },
+    "social": {
+      "count": 1,
+      "types": [
+        "social_no_traffic"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue_d11b04dbf252",
+      "type": "social_no_traffic",
+      "description": "社媒曝光16但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-27.json",
+      "detected_at": "2026-10-29T03:32:57.870700",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_37c958edb1db",
+      "type": "garbled_text",
+      "description": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "site_health_issues_2026-10-29.json",
+      "detected_at": "2026-10-29T03:32:57.873604",
+      "status": "new",
+      "assigned": false,
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "auto_fixable": false
+    }
+  ]
+}
