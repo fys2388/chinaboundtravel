@@ -1,15 +1,23 @@
 {
-  "generated_at": "2026-10-28T13:21:48+00:00",
+  "generated_at": "2026-10-29T13:30:47+00:00",
   "counts": {
     "collected": 1350,
-    "failed": 22,
-    "passed": 1328,
+    "failed": 23,
+    "passed": 1327,
     "skipped": 0,
     "baseline": 16,
-    "new_failures": 8,
+    "new_failures": 9,
     "fixed_failures": 2
   },
   "new_failures": [
+    {
+      "node_id": "tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
     {
       "node_id": "tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window",
       "likely_stale_test": false,
@@ -85,6 +93,7 @@
     "tests.test_avatar_webp::test_schema_json_still_has_avatar",
     "tests.test_avatar_webp::test_sidebar_prefers_webp",
     "tests.test_brand_consistency_audit::test_brand_commit_step_is_non_fatal",
+    "tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained",
     "tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window",
     "tests.test_okr_and_experiment_semantics.TestDaysSinceLastPost::test_counts_quoted_dates",
     "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale",
