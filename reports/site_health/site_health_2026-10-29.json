@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-29T03:32:54.844513+00:00",
+  "timestamp": "2026-10-29T17:56:08.001851+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 2,
+    "total_issues": 0,
     "critical": 0,
-    "high": 1,
-    "medium": 1,
+    "high": 0,
+    "medium": 0,
     "low": 0,
     "auto_fixed": 3,
-    "need_manual": 1,
-    "resolved": 18,
+    "need_manual": 0,
+    "resolved": 20,
     "inherited_resolved": 18
   },
   "issues": [
@@ -20,7 +20,12 @@
       "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
       "message": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "status": "accepted_risk",
+      "resolved_by": "agent_captain",
+      "resolution_note": "[WL-006] content/_archived/ 目录存放已归档的历史文章，保留原始编码状态是设计意图（不修改历史内容）。这些文件不影响生产站点（已发布文章在 content/posts/ 有对应副本）。",
+      "resolved_at": "2026-10-29",
+      "whitelist_id": "WL-006"
     },
     {
       "type": "draft_leak",
@@ -66,6 +71,11 @@
       "auto_fixable": true,
       "fix_action": "fix_encoding",
       "agent": "site_health",
+      "status": "false_positive",
+      "resolved_by": "agent_captain",
+      "resolution_note": "[WL-005] config/news_digest.json 是合法 UTF-8 编码 JSON 文件（已通过 utf-8 decode + json.loads 验证）。site_health_agent.py 的 mojibake 检测逻辑对多字节 UTF-8 字符（如中文、emoji）误判为 latin-1 双字节编码残留。",
+      "resolved_at": "2026-10-29",
+      "whitelist_id": "WL-005",
       "fix_status": "fixed",
       "fix_message": "已从latin-1转换为UTF-8"
     },
