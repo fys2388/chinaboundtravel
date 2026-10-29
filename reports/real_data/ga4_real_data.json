@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-28T11:46:59.329120",
-  "data_date": "2026-10-27",
+  "pull_time": "2026-10-29T11:55:05.534272",
+  "data_date": "2026-10-28",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 191,
-    "sessions": 204,
-    "screenPageViews": 204,
-    "engagedSessions": 150,
-    "bounceRate": 0.2647058823529412,
-    "averageSessionDuration": 21.537388034313725,
-    "engagementRate": 0.7352941176470589,
-    "newUsers": 189
+    "activeUsers": 179,
+    "sessions": 198,
+    "screenPageViews": 212,
+    "engagedSessions": 142,
+    "bounceRate": 0.2828282828282828,
+    "averageSessionDuration": 54.27054612626263,
+    "engagementRate": 0.7171717171717171,
+    "newUsers": 177
   },
   "daily": [
-    {
-      "date": "2026-10-01",
-      "sessions": 23,
-      "activeUsers": 20,
-      "pageviews": 20
-    },
     {
       "date": "2026-10-02",
       "sessions": 13,
@@ -173,23 +167,23 @@
     },
     {
       "date": "2026-10-28",
-      "sessions": 4,
+      "sessions": 7,
       "activeUsers": 2,
-      "pageviews": 18
+      "pageviews": 21
+    },
+    {
+      "date": "2026-10-29",
+      "sessions": 4,
+      "activeUsers": 4,
+      "pageviews": 4
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 26,
-      "sessions": 23
-    },
-    {
-      "path": "/alipay-for-foreigners-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 18,
-      "sessions": 21
+      "pageviews": 28,
+      "sessions": 25
     },
     {
       "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
@@ -210,6 +204,18 @@
       "sessions": 18
     },
     {
+      "path": "/alipay-for-foreigners-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 10,
+      "sessions": 13
+    },
+    {
+      "path": "/ops/ops-center",
+      "title": "ChinaBound Travel · 智能运营中心 v3.0",
+      "pageviews": 9,
+      "sessions": 2
+    },
+    {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
       "title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
       "pageviews": 9,
@@ -220,6 +226,12 @@
       "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
       "pageviews": 9,
       "sessions": 9
+    },
+    {
+      "path": "/ops/ops-center",
+      "title": "ChinaBound Travel · 智能运营中心 v4.0",
+      "pageviews": 8,
+      "sessions": 4
     },
     {
       "path": "/posts/alipay-wechat-pay-foreigners-guide/",
@@ -240,6 +252,12 @@
       "sessions": 5
     },
     {
+      "path": "/posts/144-hour-visa-free-transit-guide/",
+      "title": "China 144 Hour Transit Visa 2026: Complete Guide",
+      "pageviews": 5,
+      "sessions": 5
+    },
+    {
       "path": "/posts/accommodation-tips-guide/",
       "title": "Where to Stay in China: Complete 2026 Guide",
       "pageviews": 5,
@@ -250,32 +268,14 @@
       "title": "Alipay in China: Setup & Payment Tips (2026)",
       "pageviews": 5,
       "sessions": 5
-    },
-    {
-      "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-      "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
-      "pageviews": 5,
-      "sessions": 6
-    },
-    {
-      "path": "/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
-      "title": "China High-Speed Trains: Booking & Tips | ChinaBound Travel",
-      "pageviews": 5,
-      "sessions": 5
-    },
-    {
-      "path": "/144-hour-visa-free-transit-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 4,
-      "sessions": 4
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 145,
-      "activeUsers": 145,
-      "engagementRate": 0.9793
+      "sessions": 138,
+      "activeUsers": 134,
+      "engagementRate": 0.9565
     },
     {
       "channel": "Direct",
@@ -284,16 +284,16 @@
       "engagementRate": 0.0345
     },
     {
-      "channel": "Organic Search",
+      "channel": "Unassigned",
       "sessions": 15,
-      "activeUsers": 15,
-      "engagementRate": 0.1333
+      "activeUsers": 1,
+      "engagementRate": 0.4667
     },
     {
-      "channel": "Unassigned",
-      "sessions": 13,
-      "activeUsers": 1,
-      "engagementRate": 0.3846
+      "channel": "Organic Search",
+      "sessions": 14,
+      "activeUsers": 14,
+      "engagementRate": 0.1429
     },
     {
       "channel": "AI Assistant",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-27"
+    "data_date": "2026-10-28"
   }
 }
