@@ -297,3 +297,5 @@ If you found this guide helpful, [check out our other China travel guides](/post
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

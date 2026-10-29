@@ -196,6 +196,8 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
+- [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

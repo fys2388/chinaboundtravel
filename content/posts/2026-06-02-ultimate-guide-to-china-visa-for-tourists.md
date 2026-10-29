@@ -309,3 +309,5 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
+
+- [Accommodation In China: Complete 2026 Guide](/posts/accommodation-tips-guide/)

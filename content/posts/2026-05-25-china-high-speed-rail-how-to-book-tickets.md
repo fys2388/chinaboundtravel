@@ -320,3 +320,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Is China Safe in 2026? Honest Guide](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
+
+- [Accommodation In China: Complete 2026 Guide](/posts/accommodation-tips-guide/)

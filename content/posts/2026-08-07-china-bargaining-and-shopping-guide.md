@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-74e8424894c4"
-title: "China Bargaining Guide 2026: How to Haggle & Shop"
+title: "How To Get Around China Tariffs: How to Haggle & Shop"
 date: "2026-08-07T10:00:00+08:00"
 lastmod: "2026-08-07T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.webp"
 categories: ["shopping", "travel"]
-last_updated: "2026-10-27"
+last_updated: "2026-10-29"
 
 ---
 ## Introduction
@@ -201,6 +201,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 ## FAQ
 
