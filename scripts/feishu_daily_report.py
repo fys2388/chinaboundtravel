@@ -2485,6 +2485,12 @@ class FeishuDailyReporter:
         root_pages = sorted(CONTENT_DIR.glob("*.md"))
         files.extend(root_pages)
 
+        # 扫描草稿目录：content/_draft/ 和 content/drafts/ 下的所有 .md 文件
+        # 这些文件的 front-matter 不一定有 draft:true，用目录级判定确保不漏检
+        draft_dirs = [d for d in (CONTENT_DIR / "_draft", CONTENT_DIR / "drafts") if d.exists()]
+        draft_files = [f for d in draft_dirs for f in sorted(d.glob("*.md"))]
+        result["pending_posts"] += len(draft_files)
+
         posts = [f for f in files if f.parent == POSTS_DIR]
         result["total_posts"] = len(posts)
         result["root_pages_scanned"] = len(root_pages)
