@@ -1266,6 +1266,35 @@
         "position": 46.5
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-10-29T07:43:07.817384",
+      "metrics_before": {
+        "impressions": 463,
+        "clicks": 0,
+        "position": 66.1
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+      "file": "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md",
+      "actions": [
+        "title: 'Sichuan Hotpot: History & Best Restaurants' -> 'Sichuan Hotpot 2026: History & Best Restaurants'",
+        "faq section added"
+      ],
+      "timestamp": "2026-10-29T07:43:09.245130",
+      "metrics_before": {
+        "impressions": 79,
+        "clicks": 0,
+        "position": 20.2
+      },
+      "result": "pending"
     }
   ]
 }
