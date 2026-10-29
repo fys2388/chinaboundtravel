@@ -26,7 +26,7 @@
     },
     "38c86176c05c": {
       "title": "US adds ‘wrongful detention’ warning for Americans travellin",
-      "posted_at": "2026-10-27T06:05:21.834086+00:00",
+      "posted_at": "2026-10-29T06:51:08.267794+00:00",
       "platforms": [
         "x"
       ],
@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-10-28T06:44:09.661226+00:00",
+      "posted_at": "2026-10-29T06:51:09.217424+00:00",
       "platforms": [
         "x"
       ],
@@ -439,9 +439,73 @@
         "x"
       ],
       "success": true
+    },
+    "de71d167bc1c": {
+      "title": "China has revised its visa application process for Indian tr",
+      "posted_at": "2026-10-29T06:51:07.986729+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "e848ebb2cc94": {
+      "title": "Mercedes readies 2030 strategy update with China at its core",
+      "posted_at": "2026-10-29T06:51:08.123206+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "a49e357f24dd": {
+      "title": "1st cross-border tourism zone scores big - China Daily",
+      "posted_at": "2026-10-29T06:51:08.391446+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "6a34515b076d": {
+      "title": "Tourists explore China’s lesser-known cities - Asia News Net",
+      "posted_at": "2026-10-29T06:51:08.518179+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "a37575a6e7c8": {
+      "title": "China steps up efforts to boost EU inbound travel - Global T",
+      "posted_at": "2026-10-29T06:51:08.640707+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "0a8e790f586a": {
+      "title": "Opinion | What China’s best new cultural spaces have in comm",
+      "posted_at": "2026-10-29T06:51:08.763788+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "e0a1bb473062": {
+      "title": "Australia returns ancient relics to China - China Daily",
+      "posted_at": "2026-10-29T06:51:08.896421+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "40f35e527606": {
+      "title": "Timeline: Major Chinese cultural relics returned from overse",
+      "posted_at": "2026-10-29T06:51:09.076342+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
     }
   },
-  "last_run": "2026-10-28T06:44:09.661249+00:00",
+  "last_run": "2026-10-29T06:51:09.217450+00:00",
   "total_posts": 54,
-  "total_failures": 8
+  "total_failures": 18
 }
