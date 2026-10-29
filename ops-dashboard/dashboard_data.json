@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-30 01:31:25",
+  "generated_at": "2026-10-30 02:01:18",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 278,
+    "response_ms": 400,
     "server": "cloudflare"
   },
   "workflows": [
@@ -122,7 +122,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-10-29T17:01:28Z",
+      "last_run": "2026-10-29T17:31:46Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -158,7 +158,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-10-29T17:01:35Z",
+      "last_run": "2026-10-29T17:31:54Z",
       "last_event": "workflow_run"
     },
     {
@@ -248,7 +248,7 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-10-29T17:30:42Z",
+      "last_run": "2026-10-29T18:00:53Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -284,7 +284,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-10-29T17:01:40Z",
+      "last_run": "2026-10-29T17:56:22Z",
       "last_event": "workflow_run"
     },
     {
@@ -329,7 +329,7 @@
       "id": "site-health-daily",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-10-29T03:32:33Z",
+      "last_run": "2026-10-29T17:55:49Z",
       "last_event": "schedule"
     },
     {
@@ -433,7 +433,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-10-29 17:31",
+    "checked_at": "2026-10-29 18:01",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -1953,26 +1953,26 @@
     }
   ],
   "site_health": {
-    "total": 5,
+    "total": 4,
     "critical": 0,
     "high": 4,
-    "medium": 1,
+    "medium": 0,
     "low": 0,
-    "auto_fixed": 0,
-    "pending": 5,
-    "resolved": 15,
-    "timestamp": "2026-10-29T03:32:54.844513+00:00",
+    "auto_fixed": 1,
+    "pending": 4,
+    "resolved": 16,
+    "timestamp": "2026-10-29T17:56:08.001851+00:00",
     "checks": 16
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-10-29T17:31:24.762209+00:00",
-    "total": 8,
+    "generated_at": "2026-10-29T18:01:18.190999+00:00",
+    "total": 7,
     "P0": 0,
     "P1": 3,
-    "P2": 5,
+    "P2": 4,
     "by_source": {
-      "site_health": 3,
+      "site_health": 2,
       "visual": 1,
       "content": 3,
       "site": 1
@@ -1980,8 +1980,7 @@
     "by_owner": {
       "content": 5,
       "engineering": 1,
-      "seo": 1,
-      "site_health": 1
+      "seo": 1
     },
     "sources": {
       "predeploy": {
@@ -2025,16 +2024,16 @@
       },
       "site_health": {
         "available": true,
-        "generated_at": "2026-10-29T03:32:54.844513+00:00",
-        "issues": 5,
+        "generated_at": "2026-10-29T17:56:08.001851+00:00",
+        "issues": 4,
         "P0": 0,
         "P1": 4,
-        "P2": 1
+        "P2": 0
       }
     },
     "issues": [
       {
-        "id": "site_health-7475a138f1bc5c8",
+        "id": "site_health-3ebbc6aed906a3be",
         "severity": "P1",
         "source": "site_health",
         "type": "draft_leak",
@@ -2044,22 +2043,22 @@
         "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
         "owner": "content",
         "status": "accepted_risk",
-        "first_seen": "2026-10-29T17:31:24.762209+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "first_seen": "2026-10-29T18:01:18.190999+00:00",
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
-        "id": "site_health-4d260188dd7d419a",
+        "id": "site_health-c17b65365f00a6f",
         "severity": "P1",
         "source": "site_health",
         "type": "garbled_text",
         "title": "garbled_text",
         "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
         "evidence": "疑似乱码/文本损坏: ...ver discover, based on on-site research and a...",
-        "recommended_action": "Review and remediate the reported issue.",
+        "recommended_action": "[WL-006] content/_archived/ 目录存放已归档的历史文章，保留原始编码状态是设计意图（不修改历史内容）。这些文件不影响生产站点（已发布文章在 content/posts/ 有对应副本）。",
         "owner": "content",
-        "status": "open",
-        "first_seen": "2026-10-29T17:31:24.762209+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "status": "accepted_risk",
+        "first_seen": "2026-10-29T18:01:18.190999+00:00",
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
         "id": "eda93581fbec80e3",
@@ -2073,7 +2072,7 @@
         "owner": "engineering",
         "status": "open",
         "first_seen": "2026-10-01T23:25:56.543892+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
         "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -2087,7 +2086,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
         "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -2101,7 +2100,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-25T07:12:22.874361+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
         "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -2115,7 +2114,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-25T07:12:22.874361+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       },
       {
         "id": "f88a5fe66eae891f",
@@ -2129,21 +2128,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-24T21:35:23.367491+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
-      },
-      {
-        "id": "site_health-51b2d21cae552616",
-        "severity": "P2",
-        "source": "site_health",
-        "type": "file_mojibake",
-        "title": "file_mojibake",
-        "page": "config/news_digest.json",
-        "evidence": "检测到乱码字符（双编码）",
-        "recommended_action": "Review and remediate the reported issue.",
-        "owner": "site_health",
-        "status": "open",
-        "first_seen": "2026-10-29T17:31:24.762209+00:00",
-        "last_seen": "2026-10-29T17:31:24.762209+00:00"
+        "last_seen": "2026-10-29T18:01:18.190999+00:00"
       }
     ]
   },
@@ -2162,7 +2147,7 @@
         "failed": 0,
         "manual_review": 0,
         "in_progress": 0,
-        "last_run": "2026-10-29T17:31:25.070692"
+        "last_run": "2026-10-29T18:01:18.614035"
       },
       "frontend": {
         "total": 1,
@@ -2186,7 +2171,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-10-29T17:31:25.203275"
+        "last_run": "2026-10-29T18:01:18.247390+00:00"
       }
     }
   },
@@ -2195,7 +2180,7 @@
     "reason": "OK"
   },
   "data_freshness": {
-    "generated_at": "2026-10-30 01:31:25",
+    "generated_at": "2026-10-30 02:01:18",
     "thresholds": {
       "ga4_daily": 2,
       "gsc_daily": 5,
@@ -2270,7 +2255,7 @@
       },
       "site_health": {
         "name": "site_health",
-        "updated_at": "2026-10-29T03:32:54.844513+00:00",
+        "updated_at": "2026-10-29T17:56:08.001851+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2278,7 +2263,7 @@
       },
       "quality": {
         "name": "quality",
-        "updated_at": "2026-10-29T17:31:24.762209+00:00",
+        "updated_at": "2026-10-29T18:01:18.190999+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2294,7 +2279,7 @@
       }
     },
     "publish_path_gap": {
-      "dashboard_generated_at": "2026-10-30 01:31:25",
+      "dashboard_generated_at": "2026-10-30 02:01:18",
       "agent_kpi_updated_at": "2026-10-28T01:56:52.560323",
       "agent_kpi_age_days": 1,
       "agent_kpi_threshold_days": 35,
