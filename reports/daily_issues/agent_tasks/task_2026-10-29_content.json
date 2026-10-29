@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-29_content",
   "created_at": "2026-10-29T01:01:00.991835+00:00",
-  "updated_at": "2026-10-29T12:01:11.944274",
+  "updated_at": "2026-10-29T12:31:01.341488",
   "target_date": "2026-10-29",
   "issue_count": 5,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-d5c41931961a289",
+      "id": "site_health-2820e59c28b5a674",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-29T12:01:11.570930+00:00"
+      "detected_at": "2026-10-29T12:31:01.201598+00:00"
     },
     {
-      "id": "site_health-691528e32cf01918",
+      "id": "site_health-2e6a74790f087747",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-29T12:01:11.570949+00:00"
+      "detected_at": "2026-10-29T12:31:01.201613+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -115,7 +115,7 @@
     }
   ],
   "priority_issue": {
-    "id": "site_health-d5c41931961a289",
+    "id": "site_health-2820e59c28b5a674",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -132,7 +132,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-29T12:01:11.570930+00:00"
+    "detected_at": "2026-10-29T12:31:01.201598+00:00"
   },
   "expected_actions": [
     "manual_review"
@@ -141,7 +141,7 @@
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-10-29T12:01:11.944284",
+    "completed_at": "2026-10-29T12:31:01.341502",
     "note": "resolved=0, need_manual=0, failed=0"
   }
 }
