@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T13:53:41.513041+00:00",
+  "generated_at": "2026-10-30T14:02:08.143047+00:00",
   "summary": {
     "total": 11,
     "P0": 0,
@@ -21,7 +21,7 @@
   "sources": {
     "predeploy": {
       "available": true,
-      "generated_at": "2026-10-30T13:53:39.002772+00:00",
+      "generated_at": "2026-10-30T14:02:05.894154+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 0,
@@ -69,7 +69,7 @@
   },
   "issues": [
     {
-      "id": "site_health-61ee1b516bf052d3",
+      "id": "site_health-77588c56d05cbebf",
       "severity": "P1",
       "source": "site_health",
       "type": "content_placeholder",
@@ -79,11 +79,11 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "content",
       "status": "open",
-      "first_seen": "2026-10-30T13:53:41.513041+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "first_seen": "2026-10-30T14:02:08.143047+00:00",
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
-      "id": "site_health-4b3cd1fc65a12d2a",
+      "id": "site_health-751e811065bc5707",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -93,11 +93,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-30T13:53:41.513041+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "first_seen": "2026-10-30T14:02:08.143047+00:00",
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
-      "id": "site_health-46d6f0792714ace8",
+      "id": "site_health-37e62db25dd9ebf0",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -107,8 +107,8 @@
       "recommended_action": "[WL-006] content/_archived/ 目录存放已归档的历史文章，保留原始编码状态是设计意图（不修改历史内容）。这些文件不影响生产站点（已发布文章在 content/posts/ 有对应副本）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-10-30T13:53:41.513041+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "first_seen": "2026-10-30T14:02:08.143047+00:00",
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -122,7 +122,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -136,7 +136,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -150,7 +150,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -164,7 +164,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "3d8eaf1805cf9f56",
@@ -178,7 +178,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-30T04:02:01.939067+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
       "id": "f88a5fe66eae891f",
@@ -192,10 +192,10 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-24T21:35:23.367491+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
-      "id": "site_health-2159b75b81d98749",
+      "id": "site_health-121d16fb8cbb6595",
       "severity": "P2",
       "source": "site_health",
       "type": "ai_forbidden_word",
@@ -205,11 +205,11 @@
       "recommended_action": "无替换表: cheapest",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-10-30T13:53:41.513041+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "first_seen": "2026-10-30T14:02:08.143047+00:00",
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     },
     {
-      "id": "site_health-3f907ff12f55ce28",
+      "id": "site_health-69ddc8d67a7d30cc",
       "severity": "P2",
       "source": "site_health",
       "type": "title_too_long",
@@ -219,8 +219,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-10-30T13:53:41.513041+00:00",
-      "last_seen": "2026-10-30T13:53:41.513041+00:00"
+      "first_seen": "2026-10-30T14:02:08.143047+00:00",
+      "last_seen": "2026-10-30T14:02:08.143047+00:00"
     }
   ]
 }
