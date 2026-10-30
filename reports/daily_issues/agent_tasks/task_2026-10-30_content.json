@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-30_content",
   "created_at": "2026-10-30T01:01:09.337910+00:00",
-  "updated_at": "2026-10-30T17:38:47.146621",
+  "updated_at": "2026-10-30T18:01:35.856858",
   "target_date": "2026-10-30",
   "issue_count": 8,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-69186517ec6a4214",
+      "id": "site_health-6350b4611e181d3f",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T17:38:46.704898+00:00"
+      "detected_at": "2026-10-30T18:01:35.341414+00:00"
     },
     {
-      "id": "site_health-46bb01e3b61a211c",
+      "id": "site_health-2c9837b676abb626",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,17 +51,17 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T17:38:46.704904+00:00"
+      "detected_at": "2026-10-30T18:01:35.341422+00:00"
     },
     {
-      "id": "site_health-7f42967c2cf1540a",
+      "id": "site_health-1c0553214830f9c",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
       "page": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
       "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
       "evidence": "发现模板占位符: [Image:",
-      "recommended_action": "Review and remediate the reported issue.",
+      "recommended_action": "占位内容需人工补充",
       "severity": "high",
       "agent": "content",
       "action": "manual_review",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T17:38:46.704885+00:00"
+      "detected_at": "2026-10-30T18:01:35.341397+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -154,14 +154,14 @@
       "detected_at": "2026-10-30T03:35:58.375285"
     },
     {
-      "id": "site_health-4262f2a3a8e7484e",
+      "id": "site_health-6ab73aae4928f0c6",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
       "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
       "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
       "evidence": "AI禁用词: cheapest",
-      "recommended_action": "无替换表: cheapest",
+      "recommended_action": "无替换表: ai_forbidden_word",
       "severity": "medium",
       "agent": "content",
       "action": "manual_review",
@@ -171,11 +171,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T17:38:46.704944+00:00"
+      "detected_at": "2026-10-30T18:01:35.341476+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-69186517ec6a4214",
+    "id": "site_health-6350b4611e181d3f",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -192,7 +192,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-30T17:38:46.704898+00:00"
+    "detected_at": "2026-10-30T18:01:35.341414+00:00"
   },
   "expected_actions": [
     "manual_review",
