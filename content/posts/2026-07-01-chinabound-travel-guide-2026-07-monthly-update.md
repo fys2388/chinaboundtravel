@@ -132,3 +132,5 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
 
 - [Accommodation In China: Complete 2026 Guide](/posts/accommodation-tips-guide/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)

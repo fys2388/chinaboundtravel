@@ -354,6 +354,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

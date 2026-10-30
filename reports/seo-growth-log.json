@@ -8207,6 +8207,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-29T09:39:23.067964"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-30T09:45:35.968493"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide",
+      "detail": "score=1",
+      "timestamp": "2026-10-30T09:45:37.180339"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=5",
+      "timestamp": "2026-10-30T09:45:38.332693"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:39.486563"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-10-30T09:45:40.612000"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-30T09:45:41.954796"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-30T09:45:43.237737"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-30T09:45:44.347296"
+    },
+    {
+      "type": "internal_link",
+      "target": "paypal-alipay-wechat-pay-qr-code-support -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:46.705296"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:47.845210"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:48.983888"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:50.099877"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:51.232692"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:52.544056"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:53.666984"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:54.804022"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-30T09:45:55.928769"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:57.054601"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-china-with-confidence-a-californians-guide-to-travel-safety -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:58.380560"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:45:59.507267"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-30T09:46:00.672184"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:01.101090"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:01.425511"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:01.708602"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:01.999659"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:02.281090"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:02.570181"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:02.846671"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:03.097888"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:03.379143"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-30T09:46:03.664040"
     }
   ]
 }

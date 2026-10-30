@@ -97,3 +97,11 @@ Choosing your first city in China is an exciting and important decision. By cons
 - [Sichuan Hotpot Guide: History, Best Restaurants, and Cultural Significance](https://www.chinaboundtravel.com/posts/sichuan-hotpot - guide-history - best-restaurants - and-cultural - significance/)
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea - culture-history - types-and - tea-ceremony - guide/)
 - [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinabound
+
+## Related Reading
+
+- [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
+
+## Related Reading
+
+- [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)

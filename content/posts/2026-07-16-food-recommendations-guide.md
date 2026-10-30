@@ -181,3 +181,5 @@ And don't forget to check out some of the other articles on chinaboundtravel.com
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
 
 - [Where to Stay in China: Complete 2026 Guide](/posts/accommodation-tips-guide/)
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
