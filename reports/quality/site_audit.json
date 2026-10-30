@@ -1,17 +1,71 @@
 {
-  "generated_at": "2026-10-29T22:47:59.669010+00:00",
+  "generated_at": "2026-10-30T22:24:50.651804+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
-    "pages": 111,
-    "images_checked": 536,
-    "links_checked": 2943,
-    "issues": 1,
+    "pages": 114,
+    "images_checked": 367,
+    "links_checked": 3056,
+    "issues": 7,
     "P0": 0,
-    "P1": 0,
+    "P1": 6,
     "P2": 1
   },
   "issues": [
+    {
+      "id": "1aaa7c65ea144270",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/144: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
+    {
+      "id": "a74a23a96bd7d7c0",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/2026: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
+    {
+      "id": "2bcf4dbd5b00f7ec",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/chinese-tea: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
+    {
+      "id": "f51ec0bdfb166959",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/sichuan-hotpot: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
+    {
+      "id": "e3e3a24d6f224f85",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/xian-terracotta: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
+    {
+      "id": "7c345dd7c9be459e",
+      "severity": "P1",
+      "source": "site",
+      "type": "broken_internal_link",
+      "page": "/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "evidence": "https://www.chinaboundtravel.com/posts/zhangjiajie-avatar: HTTP 404 ",
+      "recommended_action": "Update the link to a live route or add a redirect."
+    },
     {
       "id": "f88a5fe66eae891f",
       "severity": "P2",
