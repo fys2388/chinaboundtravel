@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-10-29T11:55:05.534272",
-  "data_date": "2026-10-28",
+  "pull_time": "2026-10-30T11:48:34.216173",
+  "data_date": "2026-10-29",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 179,
-    "sessions": 198,
-    "screenPageViews": 212,
-    "engagedSessions": 142,
-    "bounceRate": 0.2828282828282828,
-    "averageSessionDuration": 54.27054612626263,
-    "engagementRate": 0.7171717171717171,
-    "newUsers": 177
+    "activeUsers": 166,
+    "sessions": 182,
+    "screenPageViews": 199,
+    "engagedSessions": 129,
+    "bounceRate": 0.29120879120879123,
+    "averageSessionDuration": 56.97469118681319,
+    "engagementRate": 0.7087912087912088,
+    "newUsers": 164
   },
   "daily": [
-    {
-      "date": "2026-10-02",
-      "sessions": 13,
-      "activeUsers": 12,
-      "pageviews": 13
-    },
     {
       "date": "2026-10-03",
       "sessions": 2,
@@ -173,35 +167,29 @@
     },
     {
       "date": "2026-10-29",
-      "sessions": 4,
-      "activeUsers": 4,
-      "pageviews": 4
+      "sessions": 7,
+      "activeUsers": 7,
+      "pageviews": 7
+    },
+    {
+      "date": "2026-10-30",
+      "sessions": 9,
+      "activeUsers": 9,
+      "pageviews": 9
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 28,
-      "sessions": 25
-    },
-    {
-      "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 17,
-      "sessions": 17
+      "pageviews": 27,
+      "sessions": 24
     },
     {
       "path": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 16,
       "sessions": 17
-    },
-    {
-      "path": "/alipay-wechat-pay-foreigners-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 15,
-      "sessions": 18
     },
     {
       "path": "/alipay-for-foreigners-guide/",
@@ -228,6 +216,12 @@
       "sessions": 9
     },
     {
+      "path": "/alipay-wechat-pay-foreigners-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 8,
+      "sessions": 8
+    },
+    {
       "path": "/ops/ops-center",
       "title": "ChinaBound Travel · 智能运营中心 v4.0",
       "pageviews": 8,
@@ -238,6 +232,12 @@
       "title": "How to Use Alipay & WeChat Pay in China 2026",
       "pageviews": 8,
       "sessions": 8
+    },
+    {
+      "path": "/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 7,
+      "sessions": 7
     },
     {
       "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
@@ -273,27 +273,27 @@
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 138,
-      "activeUsers": 134,
-      "engagementRate": 0.9565
+      "sessions": 125,
+      "activeUsers": 121,
+      "engagementRate": 0.952
     },
     {
       "channel": "Direct",
-      "sessions": 29,
-      "activeUsers": 29,
-      "engagementRate": 0.0345
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 15,
-      "activeUsers": 1,
-      "engagementRate": 0.4667
+      "sessions": 27,
+      "activeUsers": 27,
+      "engagementRate": 0.037
     },
     {
       "channel": "Organic Search",
-      "sessions": 14,
-      "activeUsers": 14,
-      "engagementRate": 0.1429
+      "sessions": 15,
+      "activeUsers": 15,
+      "engagementRate": 0.1333
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 13,
+      "activeUsers": 2,
+      "engagementRate": 0.5385
     },
     {
       "channel": "AI Assistant",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-10-28"
+    "data_date": "2026-10-29"
   }
 }
