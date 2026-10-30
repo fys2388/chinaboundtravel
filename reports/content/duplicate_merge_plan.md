@@ -1,31 +1,11 @@
 # Duplicate Draft Merge Plan
 
-Generated 2026-10-29 07:43 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
+Generated 2026-10-30 07:48 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
 
 **Dry run — no files modified.** Re-run with `--apply` to merge.
 
-- Drafts scanned: **4**
+- Drafts scanned: **0**
 - `slug_conflict` (never merge): **0**
 - `topic_duplicate`: **0**
-- `publishable` (no conflict): **4**
+- `publishable` (no conflict): **0**
 - Mergeable paragraphs total: **0**
-
-## `2026-10-19-china-travel-insurance-do-you-really-need-it-and-how-to-choose-guide-attempt1.md`
-- kind: `publishable`  sim=0.492
-- paragraphs: 25 total, 0 mergeable
-- action: none: no conflict, leave for normal publishing
-
-## `2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack-attempt2.md`
-- kind: `publishable`  sim=0.392
-- paragraphs: 16 total, 0 mergeable
-- action: none: no conflict, leave for normal publishing
-
-## `2026-10-26-best-china-itineraries-for-10-days-three-routes-compared-au-attempt2.md`
-- kind: `publishable`  sim=0.796
-- paragraphs: 20 total, 0 mergeable
-- action: none: no conflict, leave for normal publishing
-
-## `2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide-attempt1.md`
-- kind: `publishable`  sim=0.385
-- paragraphs: 9 total, 0 mergeable
-- action: none: no conflict, leave for normal publishing

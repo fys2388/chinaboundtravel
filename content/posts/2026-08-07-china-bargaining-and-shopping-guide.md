@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-74e8424894c4"
-title: "How To Get Around China Tariffs: How to Haggle & Shop"
+title: "How To Get Around China Tariffs 2026: How to Haggle & Shop"
 date: "2026-08-07T10:00:00+08:00"
 lastmod: "2026-08-07T10:00:00+08:00"
 author: "Joran"
@@ -22,7 +22,7 @@ weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/china-bargaining-and-shopping-guide.webp"
 categories: ["shopping", "travel"]
-last_updated: "2026-10-29"
+last_updated: "2026-10-30"
 
 ---
 ## Introduction
