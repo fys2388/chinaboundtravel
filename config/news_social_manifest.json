@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-10-29T06:51:09.217424+00:00",
+      "posted_at": "2026-10-30T06:54:54.671131+00:00",
       "platforms": [
         "x"
       ],
@@ -442,7 +442,7 @@
     },
     "de71d167bc1c": {
       "title": "China has revised its visa application process for Indian tr",
-      "posted_at": "2026-10-29T06:51:07.986729+00:00",
+      "posted_at": "2026-10-30T06:54:52.911157+00:00",
       "platforms": [
         "x"
       ],
@@ -450,7 +450,7 @@
     },
     "e848ebb2cc94": {
       "title": "Mercedes readies 2030 strategy update with China at its core",
-      "posted_at": "2026-10-29T06:51:08.123206+00:00",
+      "posted_at": "2026-10-30T06:54:53.094593+00:00",
       "platforms": [
         "x"
       ],
@@ -503,9 +503,65 @@
         "x"
       ],
       "success": false
+    },
+    "98af1276a833": {
+      "title": "China foreign arrivals rise 15.6% amid visa-free push - VnEx",
+      "posted_at": "2026-10-30T06:54:53.497824+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "ee35e9a70e9e": {
+      "title": "Is it safe to go to China right now? What the U.S. State Dep",
+      "posted_at": "2026-10-30T06:54:53.293754+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "95ee49743883": {
+      "title": "Global Industry Leaders Take the Stage at ITB Americas Confe",
+      "posted_at": "2026-10-30T06:54:53.690817+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "47a81fbeef95": {
+      "title": "150 Million Visitor Arrivals Flood China with Per Capita Con",
+      "posted_at": "2026-10-30T06:54:53.919530+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "d84e536fff57": {
+      "title": "German president explores China's cultural heritage in Anhui",
+      "posted_at": "2026-10-30T06:54:54.108861+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "0037af7bc20d": {
+      "title": "German president explores China's cultural heritage in Anhui",
+      "posted_at": "2026-10-30T06:54:54.288032+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "f4927ccc0e80": {
+      "title": "Australia returns 2 cultural relics to China - China Daily G",
+      "posted_at": "2026-10-30T06:54:54.478388+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
     }
   },
-  "last_run": "2026-10-29T06:51:09.217450+00:00",
+  "last_run": "2026-10-30T06:54:54.671155+00:00",
   "total_posts": 54,
-  "total_failures": 18
+  "total_failures": 29
 }
