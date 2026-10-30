@@ -2292,6 +2292,17 @@
       "error_message": "gh workflow run \"Post-deploy Tasks\" || echo \"Deploy trigger failed (non-fatal)\"\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261030_030829",
+      "timestamp": "2026-10-30T03:08:29.105902",
+      "workflow_name": "SEO Audit (2.0 SEO综合审计)",
+      "run_id": "40995566504",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "strict mode failed: broken=10 malformed=1\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }

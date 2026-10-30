@@ -1,0 +1,67 @@
+{
+  "agent": "ops",
+  "agent_name": "Ops Agent (部署/配置/权限)",
+  "task_id": "task_2026-10-30_ops",
+  "created_at": "2026-10-30T03:08:29.108444+00:00",
+  "updated_at": "2026-10-30T03:08:31.239184",
+  "target_date": "2026-10-30",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "workflow-40995566504-unknown",
+      "type": "unknown",
+      "title": "SEO Audit (2.0 SEO综合审计) 失败：未分类错误",
+      "description": "seo-audit / 3. 内链审计",
+      "page": "SEO Audit (2.0 SEO综合审计)",
+      "file": "SEO Audit (2.0 SEO综合审计)",
+      "evidence": "strict mode failed: broken=10 malformed=1\n##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "medium",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-10-30T03:08:29.108317+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "workflow-40995566504-unknown",
+    "type": "unknown",
+    "title": "SEO Audit (2.0 SEO综合审计) 失败：未分类错误",
+    "description": "seo-audit / 3. 内链审计",
+    "page": "SEO Audit (2.0 SEO综合审计)",
+    "file": "SEO Audit (2.0 SEO综合审计)",
+    "evidence": "strict mode failed: broken=10 malformed=1\n##[error]Process completed with exit code 1.",
+    "recommended_action": "请查看日志详情，人工分析根因。",
+    "severity": "medium",
+    "agent": "ops",
+    "action": "manual_review",
+    "source": "workflow_failure",
+    "source_file": "",
+    "task_source": "workflow_failure",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "ops",
+    "detected_at": "2026-10-30T03:08:29.108317+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
