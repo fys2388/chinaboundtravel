@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T03:35:55.913859+00:00",
+  "timestamp": "2026-10-30T17:38:41.875245+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -9,11 +9,11 @@
     "medium": 1,
     "low": 1,
     "auto_fixed": 3,
-    "need_manual": 27,
+    "need_manual": 26,
     "resolved": 18,
     "inherited_resolved": 22,
     "in_progress": 0,
-    "last_updated": "2026-10-30T03:35:58.631420"
+    "last_updated": "2026-10-30T17:38:47.145742"
   },
   "issues": [
     {
@@ -22,7 +22,11 @@
       "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
       "message": "发现模板占位符: [Image:",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "占位内容需人工补充"
     },
     {
       "type": "content_placeholder",
@@ -133,7 +137,7 @@
       "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest"
+      "resolution_note": "无替换表: ai_forbidden_word"
     },
     {
       "type": "ai_forbidden_word",

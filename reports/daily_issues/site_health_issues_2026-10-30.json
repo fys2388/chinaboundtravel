@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T03:35:55.913859+00:00",
+  "timestamp": "2026-10-30T17:38:41.875245+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -8,7 +8,12 @@
       "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
       "message": "发现模板占位符: [Image:",
       "auto_fixable": false,
-      "agent": "content"
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": false,
+      "resolved_by": "content_agent",
+      "resolution_note": "占位内容需人工补充",
+      "updated_at": "2026-10-30T17:38:47.141456"
     },
     {
       "type": "content_placeholder",
@@ -43,11 +48,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-10-30T03:35:58.376632",
+      "assigned_at": "2026-10-30T17:38:46.648585",
       "status": "need_manual",
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-10-30T03:35:58.631077"
+      "resolution_note": "无替换表: ai_forbidden_word",
+      "updated_at": "2026-10-30T17:38:47.145291"
     },
     {
       "type": "title_too_long",
@@ -62,7 +67,7 @@
       "fix_message": "无 front matter",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-10-30T03:35:58.376635",
+      "assigned_at": "2026-10-30T17:38:46.648590",
       "status": "assigned"
     }
   ]
