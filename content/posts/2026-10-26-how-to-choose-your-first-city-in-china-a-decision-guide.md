@@ -1,4 +1,4 @@
----
+﻿---
 title: "How To Choose Your First City In China: A Decision Guide"
 date: "2026-10-26T10:00:00+08:00"
 lastmod: "2026-10-26T10:00:00+08:00"
@@ -14,8 +14,7 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "true"
-audit_status: "pending"
+audit_status: "approved"
 summary: "How to Choose Your First City in China: A Decision for travelers visiting China. Practical guide for foreign travelers visiting China."
 description: "How to Choose Your First City in China: A Decision for travelers visiting China. Practical guide for foreign travelers visiting China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/how-to-choose-your-first-city-in-china-a-decision-guide/"

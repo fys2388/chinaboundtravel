@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Travel Insurance: Do You Really Need It and How to Choose"
 date: "2026-10-26T10:00:00+08:00"
 lastmod: "2026-10-26T10:00:00+08:00"
@@ -14,8 +14,7 @@ tags:
 categories:
   - China
 geo: "EU"
-draft: "true"
-audit_status: "pending"
+audit_status: "approved"
 summary: "China Travel Insurance: Do You Really Need It and How to Choose for travelers visiting China. Practical guide for foreign travelers visiting China."
 description: "China Travel Insurance: Do You Really Need It and How to Choose for travelers visiting China. Practical guide for foreign travelers visiting China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/"

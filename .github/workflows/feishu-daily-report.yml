@@ -6,6 +6,12 @@ on:
     - cron: '30 0 * * *'
   workflow_dispatch:  # 手动触发
 
+concurrency:
+  group: feishu-daily-report
+  cancel-in-progress: false
+  # cancel-in-progress=false 让重复触发排队而非取消，配合步骤级 dedup 闸门（check-duplicate）
+  # 防止 schedule + dispatch 同日双跑导致 JSON 被覆盖、visitors/sessions 口径不一致。
+
 jobs:
   daily-report:
     runs-on: ubuntu-latest

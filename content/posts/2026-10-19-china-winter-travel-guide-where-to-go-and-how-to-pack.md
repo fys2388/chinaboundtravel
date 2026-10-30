@@ -1,4 +1,4 @@
----
+﻿---
 title: "China Winter Travel Guide: Where to Go and How to Pack"
 date: "2026-10-19T10:00:00+08:00"
 lastmod: "2026-10-19T10:00:00+08:00"
@@ -14,8 +14,7 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "true"
-audit_status: "pending"
+audit_status: "approved"
 summary: "China Winter Travel: Where to Go and How to Pack for travelers visiting China. Practical guide for foreign travelers visiting China."
 description: "China Winter Travel: Where to Go and How to Pack for travelers visiting China. Practical guide for foreign travelers visiting China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/"

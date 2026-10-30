@@ -1,4 +1,4 @@
----
+﻿---
 title: "Best China Itineraries for 10 Days: Three Routes Compared"
 date: "2026-10-19T10:00:00+08:00"
 lastmod: "2026-10-19T10:00:00+08:00"
@@ -14,8 +14,7 @@ tags:
 categories:
   - China
 geo: "AU"
-draft: "true"
-audit_status: "pending"
+audit_status: "approved"
 summary: "Best China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. Practical guide for foreign travelers visiting China."
 description: "Best China Itineraries for 10 Days: Three Routes Compared for travelers visiting China. Practical guide for foreign travelers visiting China."
 canonicalURL: "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/"

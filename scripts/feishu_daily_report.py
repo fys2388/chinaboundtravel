@@ -2321,7 +2321,9 @@ class FeishuDailyReporter:
                     views = int(row.get("metricValues", [{}])[0].get("value", "0"))
                     if path and views > 0:
                         top_pages.append({"path": path, "title": title, "views": views})
-            
+            # 按 path 去重：同一路径因 pageTitle 不同产生多条时只保留 views 最高的一条
+            top_pages = self._dedup_top_pages(top_pages)
+
             return {
                 "report_date": yesterday,
                 "visitors": yesterday_users,
@@ -2417,7 +2419,9 @@ class FeishuDailyReporter:
                 "path": p.get("path", ""),
                 "views": int(p.get("pageviews", 0) or 0)
             })
-        
+        # 按 path 去重
+        top_pages = self._dedup_top_pages(top_pages)
+
         # top_channels 映射
         top_channels = []
         for c in d.get("traffic_sources", [])[:5]:
@@ -2443,6 +2447,18 @@ class FeishuDailyReporter:
         
         print(f"   ✅ GA4 本地回退: {visitors} 访客, {sessions} 会话, {pageviews} PV（data_date={data_date}）")
         return result
+
+    @staticmethod
+    def _dedup_top_pages(pages: list[dict]) -> list[dict]:
+        """按 path 去重：同一 path 保留 views 最高的条目。
+        解决 GA4 同一路径因 pageTitle 不同（如 v3.0/v4.0）产生多条重复条目的问题。"""
+        seen: dict[str, dict] = {}
+        for p in pages:
+            path = p.get("path", "")
+            views = p.get("views", 0)
+            if path not in seen or views > seen[path].get("views", 0):
+                seen[path] = p
+        return list(seen.values())
 
     def _parse_ga4_rate(self, value: str) -> float:
         """解析 GA4 返回的比率值（如 0.6543 → 65.4%）"""
