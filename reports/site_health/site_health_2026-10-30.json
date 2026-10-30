@@ -1,19 +1,53 @@
 {
-  "timestamp": "2026-10-30T02:36:05.315584+00:00",
+  "timestamp": "2026-10-30T03:35:55.913859+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 0,
+    "total_issues": 6,
     "critical": 0,
-    "high": 0,
-    "medium": 0,
-    "low": 0,
+    "high": 4,
+    "medium": 1,
+    "low": 1,
     "auto_fixed": 3,
-    "need_manual": 0,
-    "resolved": 20,
-    "inherited_resolved": 20
+    "need_manual": 27,
+    "resolved": 18,
+    "inherited_resolved": 22,
+    "in_progress": 0,
+    "last_updated": "2026-10-30T03:35:58.631420"
   },
   "issues": [
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
     {
       "type": "garbled_text",
       "severity": "high",
@@ -80,6 +114,30 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
+      "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
       "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
@@ -140,6 +198,18 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
+      "file": "content/posts/2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
       "file": "content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
@@ -188,6 +258,18 @@
       "resolved_at": "2026-10-25T02:21:55.118833+00:00",
       "fix_status": "fixed",
       "fix_message": "title 已缩短: 72->58字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "failed",
+      "fix_message": "无 front matter"
     },
     {
       "type": "title_too_long",

@@ -3,18 +3,18 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-30_content",
   "created_at": "2026-10-30T01:01:09.337910+00:00",
-  "updated_at": "2026-10-30T03:31:08.232617",
+  "updated_at": "2026-10-30T03:35:58.631853",
   "target_date": "2026-10-30",
-  "issue_count": 5,
+  "issue_count": 6,
   "severity_summary": {
     "critical": 0,
     "high": 2,
-    "medium": 3,
+    "medium": 4,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-35768733fc8a7bc0",
+      "id": "site_health-6dc374fffdcc7dce",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T03:31:08.025040+00:00"
+      "detected_at": "2026-10-30T03:35:58.423227+00:00"
     },
     {
-      "id": "site_health-278b318712227f8b",
+      "id": "site_health-29190e8685bc1575",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-30T03:31:08.025055+00:00"
+      "detected_at": "2026-10-30T03:35:58.423240+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -112,10 +112,30 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-10-30T01:01:09.337641+00:00"
+    },
+    {
+      "id": "issue_2e130cad508f",
+      "type": "ai_forbidden_word",
+      "title": "AI禁用词: cheapest",
+      "description": "AI禁用词: cheapest",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-10-30.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-30T03:35:58.375285"
     }
   ],
   "priority_issue": {
-    "id": "site_health-35768733fc8a7bc0",
+    "id": "site_health-6dc374fffdcc7dce",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -132,16 +152,17 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-30T03:31:08.025040+00:00"
+    "detected_at": "2026-10-30T03:35:58.423227+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "safe_normalize"
   ],
-  "status": "completed",
+  "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
-    "completed_at": "2026-10-30T03:31:08.232628",
-    "note": "resolved=0, need_manual=0, failed=0"
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
   }
 }
