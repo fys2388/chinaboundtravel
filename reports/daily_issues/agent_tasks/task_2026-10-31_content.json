@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-31_content",
   "created_at": "2026-10-31T01:01:16.952299+00:00",
-  "updated_at": "2026-10-31T02:31:09.055025",
+  "updated_at": "2026-10-31T03:01:11.193648",
   "target_date": "2026-10-31",
   "issue_count": 7,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-5868940a33e8a854",
+      "id": "site_health-7a9c9d1fd5e479cf",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T02:31:08.676489+00:00"
+      "detected_at": "2026-10-31T03:01:10.828402+00:00"
     },
     {
-      "id": "site_health-47ce5579b4e13864",
+      "id": "site_health-78e43b6d44f8e084",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,10 +51,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T02:31:08.676496+00:00"
+      "detected_at": "2026-10-31T03:01:10.828410+00:00"
     },
     {
-      "id": "site_health-7284fd09637d45a4",
+      "id": "site_health-18c87994b2bea051",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T02:31:08.676473+00:00"
+      "detected_at": "2026-10-31T03:01:10.828385+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,7 +134,7 @@
       "detected_at": "2026-10-31T01:01:16.951605+00:00"
     },
     {
-      "id": "site_health-3a27eed2c2b263bb",
+      "id": "site_health-ffae824ab7bd08c",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -151,11 +151,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T02:31:08.676534+00:00"
+      "detected_at": "2026-10-31T03:01:10.828447+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-5868940a33e8a854",
+    "id": "site_health-7a9c9d1fd5e479cf",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -172,7 +172,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-31T02:31:08.676489+00:00"
+    "detected_at": "2026-10-31T03:01:10.828402+00:00"
   },
   "expected_actions": [
     "manual_review"
