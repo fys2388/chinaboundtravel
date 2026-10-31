@@ -2,45 +2,6 @@
   "version": 1,
   "snapshots": [
     {
-      "timestamp": "2026-10-22T17:01:46.356152+00:00",
-      "summary": {
-        "total": 14,
-        "P0": 1,
-        "P1": 5,
-        "P2": 8,
-        "by_source": {
-          "content": 7,
-          "site_health": 5,
-          "visual": 1,
-          "predeploy": 1
-        },
-        "by_owner": {
-          "content": 10,
-          "engineering": 2,
-          "site_health": 1,
-          "seo": 1
-        }
-      },
-      "issue_ids": [
-        "3d8eaf1805cf9f56",
-        "content-check-content_id-failed",
-        "content-id-7-day-china-itinerary.md",
-        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "content-seo-2026-05-25-china-high-speed-rail-how-to-book-tickets.md",
-        "content-seo-2026-05-28-chinese-food-delivery-meituan-eleme-guide.md",
-        "content-seo-best-china-itineraries-for-10-days-three-routes-compared.md",
-        "content-seo-kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide.md",
-        "eda93581fbec80e3",
-        "site_health-29ee4e0066eb6dc8",
-        "site_health-397502a8a1090927",
-        "site_health-53eda18412b556d8",
-        "site_health-7e4809c6f8e2274e",
-        "site_health-d8cf8736e949ba7"
-      ],
-      "opened": 5,
-      "resolved": 5
-    },
-    {
       "timestamp": "2026-10-22T17:32:02.281822+00:00",
       "summary": {
         "total": 14,
@@ -12989,7 +12950,49 @@
       ],
       "opened": 5,
       "resolved": 5
+    },
+    {
+      "timestamp": "2026-10-31T08:01:58.705531+00:00",
+      "summary": {
+        "total": 17,
+        "P0": 0,
+        "P1": 10,
+        "P2": 7,
+        "by_source": {
+          "site": 7,
+          "site_health": 5,
+          "visual": 1,
+          "content": 3,
+          "predeploy": 1
+        },
+        "by_owner": {
+          "seo": 8,
+          "content": 7,
+          "engineering": 2
+        }
+      },
+      "issue_ids": [
+        "1aaa7c65ea144270",
+        "2bcf4dbd5b00f7ec",
+        "3d8eaf1805cf9f56",
+        "7c345dd7c9be459e",
+        "a74a23a96bd7d7c0",
+        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
+        "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+        "e3e3a24d6f224f85",
+        "eda93581fbec80e3",
+        "f51ec0bdfb166959",
+        "f88a5fe66eae891f",
+        "site_health-29ec3c59e6d530a8",
+        "site_health-34946e131e0d549",
+        "site_health-65f1de6de74b8032",
+        "site_health-71799664f8e23052",
+        "site_health-92b1761d9a970da"
+      ],
+      "opened": 5,
+      "resolved": 5
     }
   ],
-  "updated_at": "2026-10-31T07:31:59.870315+00:00"
+  "updated_at": "2026-10-31T08:01:58.705531+00:00"
 }
