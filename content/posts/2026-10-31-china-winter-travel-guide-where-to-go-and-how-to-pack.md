@@ -1,7 +1,7 @@
-﻿---
+---
 title: "China Winter Travel Guide: Where to Go and How to Pack"
-date: "2026-10-19T10:00:00+08:00"
-lastmod: "2026-10-19T10:00:00+08:00"
+date: "2026-10-31T10:00:00+08:00"
+lastmod: "2026-10-31T10:00:00+08:00"
 author: "Joran"
 content_id: "cbt-2a513beca370"
 risk_level: "medium"
