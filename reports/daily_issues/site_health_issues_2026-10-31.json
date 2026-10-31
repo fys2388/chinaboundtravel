@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-10-31T03:20:42.868322+00:00",
+  "source": "site_health_agent",
+  "issues": [
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": false,
+      "resolved_by": "content_agent",
+      "resolution_note": "占位内容需人工补充",
+      "updated_at": "2026-10-31T03:20:45.616823"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "content_placeholder",
+      "severity": "high",
+      "file": "content/posts/2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "message": "发现模板占位符: [Image:",
+      "auto_fixable": false,
+      "agent": "content"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "assigned": false,
+      "assigned_to": "content",
+      "assigned_at": "2026-10-31T03:20:45.357496",
+      "status": "need_manual",
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: ai_forbidden_word",
+      "updated_at": "2026-10-31T03:20:45.618421"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "failed",
+      "fix_message": "无 front matter",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-10-31T03:20:45.357498",
+      "status": "assigned"
+    }
+  ]
+}

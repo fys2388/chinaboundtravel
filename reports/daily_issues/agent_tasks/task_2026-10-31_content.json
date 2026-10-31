@@ -3,18 +3,18 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-31_content",
   "created_at": "2026-10-31T01:01:16.952299+00:00",
-  "updated_at": "2026-10-31T03:01:11.193648",
+  "updated_at": "2026-10-31T03:20:45.619159",
   "target_date": "2026-10-31",
-  "issue_count": 7,
+  "issue_count": 8,
   "severity_summary": {
     "critical": 0,
     "high": 3,
-    "medium": 4,
+    "medium": 5,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-7a9c9d1fd5e479cf",
+      "id": "site_health-dac4f7273e00cfd",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T03:01:10.828402+00:00"
+      "detected_at": "2026-10-31T03:20:45.402482+00:00"
     },
     {
-      "id": "site_health-78e43b6d44f8e084",
+      "id": "site_health-4eea29c4bca5187e",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,10 +51,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T03:01:10.828410+00:00"
+      "detected_at": "2026-10-31T03:20:45.402492+00:00"
     },
     {
-      "id": "site_health-18c87994b2bea051",
+      "id": "site_health-4c1ffef9c9aa09bf",
       "type": "content_placeholder",
       "title": "content_placeholder",
       "description": "content_placeholder",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T03:01:10.828385+00:00"
+      "detected_at": "2026-10-31T03:20:45.402470+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,7 +134,27 @@
       "detected_at": "2026-10-31T01:01:16.951605+00:00"
     },
     {
-      "id": "site_health-ffae824ab7bd08c",
+      "id": "issue_78bf8546ede2",
+      "type": "ai_forbidden_word",
+      "title": "AI禁用词: cheapest",
+      "description": "AI禁用词: cheapest",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-10-31.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-10-31T03:20:45.356103"
+    },
+    {
+      "id": "site_health-3bc13704c2875493",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -151,11 +171,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T03:01:10.828447+00:00"
+      "detected_at": "2026-10-31T03:20:45.402510+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-7a9c9d1fd5e479cf",
+    "id": "site_health-dac4f7273e00cfd",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -172,16 +192,17 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-31T03:01:10.828402+00:00"
+    "detected_at": "2026-10-31T03:20:45.402482+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "safe_normalize"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }
