@@ -246,3 +246,7 @@ China has its own set of regulations regarding travel insurance. For example, th
 
 #### Understanding Local Regulations
 Local regulations in China can have a significant impact on
+
+## Related Reading
+
+- [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)

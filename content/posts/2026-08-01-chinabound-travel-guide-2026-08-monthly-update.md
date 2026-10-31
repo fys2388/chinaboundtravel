@@ -203,6 +203,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
+- [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
+
 ## FAQ
 
 ### Do I need a visa for China?

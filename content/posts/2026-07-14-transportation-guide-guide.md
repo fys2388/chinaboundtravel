@@ -145,3 +145,5 @@ If you're interested in learning more about China's transportation system or pla
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

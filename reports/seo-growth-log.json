@@ -8393,6 +8393,198 @@
       "target": "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-10-30T09:46:03.664040"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-10-31T09:25:02.679018"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:03.483824"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:04.262093"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:05.028099"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-31T09:25:05.753767"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-31T09:25:06.477616"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> china-winter-travel-guide-where-to-go-and-how-to-pack",
+      "detail": "score=3",
+      "timestamp": "2026-10-31T09:25:07.197156"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-family-travel-tips-a-californians-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:07.924509"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:10.779435"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:14.033351"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:14.808824"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:15.589292"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:16.352957"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:17.095610"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared-au -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:17.839029"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=1",
+      "timestamp": "2026-10-31T09:25:18.616967"
+    },
+    {
+      "type": "internal_link",
+      "target": "accommodation-tips-guide -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:19.378226"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-language-survival-phrases-guide -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:20.138607"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-visa-free-entry-2026-complete-guide-countries-rules-tips -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:20.901584"
+    },
+    {
+      "type": "internal_link",
+      "target": "a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:21.656395"
+    },
+    {
+      "type": "internal_link",
+      "target": "transportation-guide -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-10-31T09:25:22.390081"
+    },
+    {
+      "type": "faq_addition",
+      "target": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+      "detail": "FAQ for 'china visa itinerary template'",
+      "timestamp": "2026-10-31T09:25:23.191587"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:23.537483"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:23.841600"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:24.139345"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:24.390289"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:24.693674"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:24.990365"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:25.229843"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:26.363035"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:26.622107"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-10-31T09:25:27.368045"
     }
   ]
 }

@@ -129,3 +129,7 @@ This itinerary takes you through three of China's most beautiful cities: Chengdu
 ## Itinerary 3: Beijing-Hangzhou - Shanghai
 
 This itinerary takes you through three of China's most beautiful cities: Beijing, the capital; Hangzhou, the
+
+## Related Reading
+
+- [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)

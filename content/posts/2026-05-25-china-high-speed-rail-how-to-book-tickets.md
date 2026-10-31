@@ -324,3 +324,5 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 - [Accommodation In China: Complete 2026 Guide](/posts/accommodation-tips-guide/)
 
 - [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
+
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)

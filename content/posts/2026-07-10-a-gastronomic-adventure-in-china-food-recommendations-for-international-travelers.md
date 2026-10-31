@@ -178,6 +178,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?

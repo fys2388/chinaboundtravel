@@ -264,3 +264,5 @@ If you're planning a broader China trip, these guides pair well with Yunnan:
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)

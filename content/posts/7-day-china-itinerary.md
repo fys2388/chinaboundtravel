@@ -1,5 +1,6 @@
 ---
 title: "Free 7-Day China Itinerary Template (2026)"
+last_updated: "2026-10-31"
 content_id: "cbt-7d7d2026abc1"
 description: "Download your free 7-day China itinerary template. Includes Beijing, Xi'an, Shanghai routes, visa tips, payment setup, and insider recommendations."
 date: 2026-10-21
@@ -110,3 +111,13 @@ Safe travels! 🐾
 ## Related Reading
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+## FAQ
+
+### Is china visa itinerary template still valid in 2026?
+
+Yes, this policy is current for 2026. However, eligibility criteria and participating ports are updated periodically — always verify with official immigration sources before travel.
+
+### What documents do I need for china visa itinerary template?
+
+You'll need a valid passport (6+ months remaining), a confirmed onward ticket to a third country, and any supporting documents requested by immigration officers.
