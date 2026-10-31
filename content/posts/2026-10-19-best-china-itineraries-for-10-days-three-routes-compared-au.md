@@ -34,8 +34,6 @@ Transportation in China is a fascinating web of options. The country has an exte
 
 Now, let's touch on the budget. China can be a relatively inexpensive country to travel in, but the cost can vary depending on your choices. On average, you can expect to shell out around AUD $50 - $100 per day for accommodation, food, transportation, and activities. But if you're looking for a more luxurious experience with nicer hotels, fancier restaurants, and premium tourist activities, be prepared to spend a bit more.
 
-[Image: A bustling Chinese city street filled with modern skyscrapers, a grid of traffic, and a few green oases of parks. The sun is casting a warm glow over everything, creating a dynamic and energetic scene.]
-
 ## Itinerary 1: Beijing-Xi'an-Shanghai
 
 This itinerary takes you on a journey through three of China's most iconic cities: Beijing, the capital; Xi'an, the ancient capital; and Shanghai, the modern metropolis.
@@ -51,8 +49,6 @@ This itinerary takes you on a journey through three of China's most iconic citie
 
 #### Day 3: Great Wall and Ming Tombs-Take a day trip to the Great Wall. The Badaling section is the most popular near Beijing, and for good reason. As you stand on the wall, looking out over the mountains, you'll be in awe of this ancient wonder. It's like standing on a巨龙 (julong, the Chinese word for dragon) that stretches across the land. The Great Wall is not just a structure; it's a symbol of China's resilience and determination throughout history. When you visit, take the time to learn about its construction and the stories behind it. You can find more information in our article [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/).
 - In the afternoon, visit the Ming Tombs. This is the burial site of 13 emperors of the Ming dynasty. The tombs are set in a beautiful and serene landscape, and they offer a fascinating glimpse into the history and culture of the Ming period. The Ming Tombs are a complex of tombs and memorials that are not only a place of historical significance but also a showcase of the Ming dynasty's architecture and art.
-
-[Image: The Forbidden City in Beijing, with its massive red walls and golden-hued roofs. The surrounding moat reflects the sunlight, creating a picture-perfect scene. The sky is a brilliant blue, and a few white clouds drift by.]
 
 ### Xi'an: Days 4 - 6
 
@@ -96,8 +92,6 @@ This itinerary takes you through three of China's most beautiful cities: Chengdu
 
 #### Day 3: Leshan Giant Buddha and Mount Emei-Take a day trip to the Leshan Giant Buddha. This UNESCO World Heritage Site is a massive Buddha statue carved into the side of a cliff. It's an impressive sight to behold. The Leshan Giant Buddha is a remarkable feat of engineering and art. It's the largest Buddha statue in the world and is a popular tourist attraction.
 - Spend the afternoon at the Mount Emei Scenic Area. This famous Buddhist mountain is known for its beautiful scenery and religious significance. It's like a spiritual retreat in the mountains. Mount Emei is one of the four sacred Buddhist mountains in China. It's a place of great religious significance and is also known for its beautiful natural scenery.
-
-[Image: Aerial view of Zhangjiajie National Forest Park, with its towering sandstone pillars rising out of a sea of lush greenery. The sky is a deep blue, and a few wisps of cloud float around the peaks.]
 
 ### Zhangjiajie: Days 4 - 6
 
