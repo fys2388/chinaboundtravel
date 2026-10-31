@@ -170,11 +170,11 @@
     },
     "454c6d010498": {
       "title": "China attracts 15.6% surge in foreign visitors as visa-free ",
-      "posted_at": "2026-10-22T05:52:23.894729+00:00",
+      "posted_at": "2026-10-31T06:48:48.158623+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "15be67706f82": {
       "title": "Sihasak asks Chinese Embassy to keep travel warnings proport",
@@ -482,7 +482,7 @@
     },
     "0a8e790f586a": {
       "title": "Opinion | What China’s best new cultural spaces have in comm",
-      "posted_at": "2026-10-29T06:51:08.763788+00:00",
+      "posted_at": "2026-10-31T06:48:48.880313+00:00",
       "platforms": [
         "x"
       ],
@@ -559,9 +559,49 @@
         "x"
       ],
       "success": false
+    },
+    "18966a9cd38e": {
+      "title": "US adds wrongful detention warning to China travel advisory ",
+      "posted_at": "2026-10-31T06:48:48.312939+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "d6a4d05a3cd4": {
+      "title": "China Tourism Group Duty Free: Q3 profit and margins improve",
+      "posted_at": "2026-10-31T06:48:48.454296+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "fe340523b49b": {
+      "title": "China Tourism Group Duty Free Corporation Limited Reports Ea",
+      "posted_at": "2026-10-31T06:48:48.587687+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "c376472d7727": {
+      "title": "Digital tools reshape China’s heritage conservation, but gov",
+      "posted_at": "2026-10-31T06:48:48.754918+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
+    },
+    "b306eff1b6b6": {
+      "title": "Australia returns 2 cultural relics to China - China Daily",
+      "posted_at": "2026-10-31T06:48:48.994712+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": false
     }
   },
-  "last_run": "2026-10-30T06:54:54.671155+00:00",
+  "last_run": "2026-10-31T06:48:48.994731+00:00",
   "total_posts": 54,
-  "total_failures": 29
+  "total_failures": 36
 }
