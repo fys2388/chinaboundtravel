@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-31_content",
   "created_at": "2026-10-31T01:01:16.952299+00:00",
-  "updated_at": "2026-10-31T17:52:06.647380",
+  "updated_at": "2026-10-31T18:01:13.814718",
   "target_date": "2026-10-31",
   "issue_count": 7,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-3c94143b38ae6b9",
+      "id": "site_health-77251946cf7a086d",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T17:52:06.390459+00:00"
+      "detected_at": "2026-10-31T18:01:13.481953+00:00"
     },
     {
-      "id": "site_health-2570e9e4af3aebd6",
+      "id": "site_health-3cce98e0787e3e70",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T17:52:06.390475+00:00"
+      "detected_at": "2026-10-31T18:01:13.481969+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -134,7 +134,7 @@
       "detected_at": "2026-10-31T03:20:45.356103"
     },
     {
-      "id": "site_health-53adb7517b3af8f",
+      "id": "site_health-2e1b22a1f1178fac",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -151,11 +151,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T17:52:06.390513+00:00"
+      "detected_at": "2026-10-31T18:01:13.482038+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-3c94143b38ae6b9",
+    "id": "site_health-77251946cf7a086d",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -172,7 +172,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-31T17:52:06.390459+00:00"
+    "detected_at": "2026-10-31T18:01:13.481953+00:00"
   },
   "expected_actions": [
     "manual_review",
