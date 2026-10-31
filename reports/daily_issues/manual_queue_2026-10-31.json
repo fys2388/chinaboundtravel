@@ -1,16 +1,10 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-10-31T03:20:45.357350",
+  "generated_at": "2026-10-31T16:43:01.133852",
   "target_date": "2026-10-31",
-  "issue_count": 5,
+  "issue_count": 1,
   "by_agent": {
-    "content": {
-      "count": 4,
-      "types": [
-        "content_placeholder"
-      ]
-    },
     "social": {
       "count": 1,
       "types": [
@@ -20,72 +14,16 @@
   },
   "issues": [
     {
-      "id": "issue_02870552d363",
+      "id": "issue_f4bdd34a73ae",
       "type": "social_no_traffic",
-      "description": "社媒曝光13但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光6但点击为0，需检查帖子链接和CTA",
       "severity": "high",
       "agent": "social",
       "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-10-29.json",
-      "detected_at": "2026-10-31T03:20:45.353714",
+      "source_file": "social_daily_2026-10-30.json",
+      "detected_at": "2026-10-31T16:43:01.128108",
       "status": "new",
       "assigned": false,
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_067102a2e3de",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
-      "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-31.json",
-      "detected_at": "2026-10-31T03:20:45.356088",
-      "status": "new",
-      "assigned": false,
-      "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_067102a2e3de",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
-      "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-31.json",
-      "detected_at": "2026-10-31T03:20:45.356095",
-      "status": "new",
-      "assigned": false,
-      "file": "content/posts/2026-10-19-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_067102a2e3de",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
-      "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-31.json",
-      "detected_at": "2026-10-31T03:20:45.356098",
-      "status": "new",
-      "assigned": false,
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_067102a2e3de",
-      "type": "content_placeholder",
-      "description": "发现模板占位符: [Image:",
-      "severity": "high",
-      "agent": "content",
-      "action": "fix_placeholder",
-      "source_file": "site_health_issues_2026-10-31.json",
-      "detected_at": "2026-10-31T03:20:45.356100",
-      "status": "new",
-      "assigned": false,
-      "file": "content/posts/2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
       "auto_fixable": false
     }
   ]
