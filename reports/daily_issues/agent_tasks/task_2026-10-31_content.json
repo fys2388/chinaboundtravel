@@ -3,18 +3,18 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-10-31_content",
   "created_at": "2026-10-31T01:01:16.952299+00:00",
-  "updated_at": "2026-10-31T16:43:01.562107",
+  "updated_at": "2026-10-31T17:01:09.698638",
   "target_date": "2026-10-31",
-  "issue_count": 8,
+  "issue_count": 7,
   "severity_summary": {
     "critical": 0,
-    "high": 3,
+    "high": 2,
     "medium": 5,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-1b76606b2a2cbbd",
+      "id": "site_health-2aa68070f19dca7f",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T16:43:01.192526+00:00"
+      "detected_at": "2026-10-31T17:01:09.521429+00:00"
     },
     {
-      "id": "site_health-5d0b7603bebfb069",
+      "id": "site_health-5800b4f01cec526b",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,27 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T16:43:01.192540+00:00"
-    },
-    {
-      "id": "site_health-1a996f6f7e047c92",
-      "type": "content_placeholder",
-      "title": "content_placeholder",
-      "description": "content_placeholder",
-      "page": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "file": "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "evidence": "发现模板占位符: [Image:",
-      "recommended_action": "占位内容需人工补充",
-      "severity": "high",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-10-31T16:43:01.192511+00:00"
+      "detected_at": "2026-10-31T17:01:09.521443+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -154,7 +134,7 @@
       "detected_at": "2026-10-31T03:20:45.356103"
     },
     {
-      "id": "site_health-7ec27b9583fc0cb0",
+      "id": "site_health-41a88a101ada7b4c",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -171,11 +151,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-10-31T16:43:01.192573+00:00"
+      "detected_at": "2026-10-31T17:01:09.521471+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-1b76606b2a2cbbd",
+    "id": "site_health-2aa68070f19dca7f",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -192,7 +172,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-10-31T16:43:01.192526+00:00"
+    "detected_at": "2026-10-31T17:01:09.521429+00:00"
   },
   "expected_actions": [
     "manual_review",
@@ -203,6 +183,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=3, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
