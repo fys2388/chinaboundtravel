@@ -1,0 +1,154 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-11-01T03:20:21.769391",
+  "target_date": "2026-11-01",
+  "total_issues": 3,
+  "total_assignments": 2,
+  "issues": [
+    {
+      "id": "issue_f4bdd34a73ae",
+      "type": "social_no_traffic",
+      "description": "社媒曝光6但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-30.json",
+      "detected_at": "2026-11-01T03:20:21.765596",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_748f5440542b",
+      "type": "ai_forbidden_word",
+      "description": "AI禁用词: cheapest",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source_file": "site_health_issues_2026-11-01.json",
+      "detected_at": "2026-11-01T03:20:21.769269",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "auto_fixable": true,
+      "assigned_to": "content"
+    },
+    {
+      "id": "issue_611fdb93b69b",
+      "type": "title_too_long",
+      "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-11-01.json",
+      "detected_at": "2026-11-01T03:20:21.769278",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "auto_fixable": true,
+      "assigned_to": "seo"
+    }
+  ],
+  "assignments": [
+    {
+      "agent": "content",
+      "agent_name": "Content Intelligence Agent (内容智能优化)",
+      "task_id": "task_2026-11-01_content",
+      "created_at": "2026-11-01T03:20:21.769371",
+      "target_date": "2026-11-01",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_748f5440542b",
+          "type": "ai_forbidden_word",
+          "description": "AI禁用词: cheapest",
+          "severity": "medium",
+          "agent": "content",
+          "action": "safe_normalize",
+          "source_file": "site_health_issues_2026-11-01.json",
+          "detected_at": "2026-11-01T03:20:21.769269",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+          "auto_fixable": true,
+          "assigned_to": "content"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_748f5440542b",
+        "type": "ai_forbidden_word",
+        "description": "AI禁用词: cheapest",
+        "severity": "medium",
+        "agent": "content",
+        "action": "safe_normalize",
+        "source_file": "site_health_issues_2026-11-01.json",
+        "detected_at": "2026-11-01T03:20:21.769269",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+        "auto_fixable": true,
+        "assigned_to": "content"
+      },
+      "expected_actions": [
+        "safe_normalize"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "seo",
+      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+      "task_id": "task_2026-11-01_seo",
+      "created_at": "2026-11-01T03:20:21.769382",
+      "target_date": "2026-11-01",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_611fdb93b69b",
+          "type": "title_too_long",
+          "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-11-01.json",
+          "detected_at": "2026-11-01T03:20:21.769278",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+          "auto_fixable": true,
+          "assigned_to": "seo"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_611fdb93b69b",
+        "type": "title_too_long",
+        "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+        "severity": "medium",
+        "agent": "seo",
+        "action": "optimize_title",
+        "source_file": "site_health_issues_2026-11-01.json",
+        "detected_at": "2026-11-01T03:20:21.769278",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+        "auto_fixable": true,
+        "assigned_to": "seo"
+      },
+      "expected_actions": [
+        "optimize_title"
+      ],
+      "status": "pending"
+    }
+  ]
+}
