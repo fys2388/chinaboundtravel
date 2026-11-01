@@ -2336,6 +2336,17 @@
       "error_message": "raise SystemExit(\"::error::内容质量结果文件未生成，无法判定门禁\")\nfailed = \", \".join(result.get(\"failed_steps\", [])) or \"unknown\"\nraise SystemExit(f\"::error::内容质量门禁失败，失败项: {failed}\")\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261101_120917",
+      "timestamp": "2026-11-01T12:09:17.222914",
+      "workflow_name": "Monthly Ebook Guide Update",
+      "run_id": "41305034938",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "ERROR error building site: assemble: failed to create page from pageMetaSource /posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update.md:2:31\": [1:31] value is not allowed in this context. map key-value is pre-defined\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "agent": "ops",
+  "agent_name": "Ops Agent (部署/配置/权限)",
+  "task_id": "task_2026-11-01_ops",
+  "created_at": "2026-11-01T12:09:17.225421+00:00",
+  "updated_at": "2026-11-01T12:09:18.893575",
+  "target_date": "2026-11-01",
+  "issue_count": 1,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "workflow-41305034938-unknown",
+      "type": "unknown",
+      "title": "Monthly Ebook Guide Update 失败：未分类错误",
+      "description": "monthly-update / Build with Hugo",
+      "page": "Monthly Ebook Guide Update",
+      "file": "Monthly Ebook Guide Update",
+      "evidence": "ERROR error building site: assemble: failed to create page from pageMetaSource /posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update.md:2:31\": [1:31] value is not allowed in this context. map key-value is pre-defined\n##[error]Process completed with exit code 1.",
+      "recommended_action": "请查看日志详情，人工分析根因。",
+      "severity": "medium",
+      "agent": "ops",
+      "action": "manual_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "ops",
+      "detected_at": "2026-11-01T12:09:17.225303+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "workflow-41305034938-unknown",
+    "type": "unknown",
+    "title": "Monthly Ebook Guide Update 失败：未分类错误",
+    "description": "monthly-update / Build with Hugo",
+    "page": "Monthly Ebook Guide Update",
+    "file": "Monthly Ebook Guide Update",
+    "evidence": "ERROR error building site: assemble: failed to create page from pageMetaSource /posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update: \"/home/runner/work/chinaboundtravel/chinaboundtravel/content/posts/2026-11-01-chinabound-travel-guide-2026-11-monthly-update.md:2:31\": [1:31] value is not allowed in this context. map key-value is pre-defined\n##[error]Process completed with exit code 1.",
+    "recommended_action": "请查看日志详情，人工分析根因。",
+    "severity": "medium",
+    "agent": "ops",
+    "action": "manual_review",
+    "source": "workflow_failure",
+    "source_file": "",
+    "task_source": "workflow_failure",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "ops",
+    "detected_at": "2026-11-01T12:09:17.225303+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
