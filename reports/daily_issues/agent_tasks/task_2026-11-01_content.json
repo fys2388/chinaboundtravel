@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-01_content",
   "created_at": "2026-11-01T01:01:09.179186+00:00",
-  "updated_at": "2026-11-01T01:01:09.713325",
+  "updated_at": "2026-11-01T01:31:04.246707",
   "target_date": "2026-11-01",
   "issue_count": 6,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-575a0d38f7447e42",
+      "id": "site_health-510e9819d5856138",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-01T01:01:09.178259+00:00"
+      "detected_at": "2026-11-01T01:31:03.901343+00:00"
     },
     {
-      "id": "site_health-7912ed5407a1128",
+      "id": "site_health-46d51c06ea80e794",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -51,7 +51,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-01T01:01:09.178275+00:00"
+      "detected_at": "2026-11-01T01:31:03.901359+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-01T01:01:09.178299+00:00"
     },
     {
-      "id": "site_health-6ba84d1c528bfa2e",
+      "id": "site_health-e6e9fef8e57529c",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -131,11 +131,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-01T01:01:09.178313+00:00"
+      "detected_at": "2026-11-01T01:31:03.901397+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-575a0d38f7447e42",
+    "id": "site_health-510e9819d5856138",
     "type": "draft_leak",
     "title": "draft_leak",
     "description": "draft_leak",
@@ -152,7 +152,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-11-01T01:01:09.178259+00:00"
+    "detected_at": "2026-11-01T01:31:03.901343+00:00"
   },
   "expected_actions": [
     "manual_review"
