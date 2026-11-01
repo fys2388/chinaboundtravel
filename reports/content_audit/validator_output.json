@@ -1499,6 +1499,115 @@
       "passed": true
     },
     {
+      "file": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "frontmatter_ok": false,
+      "content_id_ok": false,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 0,
+        "fact": 0,
+        "language": 0,
+        "mojibake": 100,
+        "seo": 0,
+        "media": 0
+      },
+      "trust_score": 0,
+      "passed": false
+    },
+    {
+      "file": "2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [
+        "巨",
+        "龙"
+      ],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [],
+      "media_issues": [
+        "missing_cover"
+      ],
+      "cover_ok": false,
+      "cover_image": "",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 60,
+        "mojibake": 100,
+        "seo": 100,
+        "media": 75
+      },
+      "trust_score": 93.0,
+      "passed": true
+    },
+    {
       "file": "7-day-china-itinerary.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1814,6 +1923,6 @@
       "passed": true
     }
   ],
-  "passed_count": 68,
-  "total": 68
+  "passed_count": 69,
+  "total": 72
 }

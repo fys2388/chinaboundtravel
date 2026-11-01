@@ -1,9 +1,13 @@
 {
-  "status": "passed",
-  "generated_at": "2026-10-25T07:12:21.750449",
-  "run_id": "40171851030",
-  "failed_steps": [],
-  "blocking_failures": [],
+  "status": "failed",
+  "generated_at": "2026-11-01T08:36:03.010098",
+  "run_id": "41289512439",
+  "failed_steps": [
+    "内容质量验证(P0乱码)"
+  ],
+  "blocking_failures": [
+    "quality_validator"
+  ],
   "checks": [
     {
       "id": "fact_guard",
@@ -41,14 +45,14 @@
       "id": "quality_validator",
       "name": "内容质量验证(P0乱码)",
       "script": "content_quality_validator.py",
-      "exit_code": 0,
+      "exit_code": 1,
       "blocking": true,
       "agent": "content"
     }
   ],
   "content": {
-    "total": 68,
-    "passed_count": 68,
+    "total": 72,
+    "passed_count": 69,
     "mojibake_files": [],
     "encoding_error_files": [],
     "validator_parse_error": null
