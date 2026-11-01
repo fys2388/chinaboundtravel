@@ -1,0 +1,19 @@
+{
+  "collected_at": "2026-11-01T08:40:42.100505",
+  "period_days": 30,
+  "total_revenue": 0,
+  "sources": {
+    "ga4": {
+      "error": "GA4 未配置",
+      "configured": false
+    },
+    "stripe": {
+      "error": "Stripe 未配置",
+      "configured": false
+    },
+    "travelpayouts": {
+      "error": "Travelpayouts 未配置",
+      "configured": false
+    }
+  }
+}

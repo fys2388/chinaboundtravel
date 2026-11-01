@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-10-28T01:56:52.685735",
+  "updated_at": "2026-11-01T08:40:42.634221",
   "data_sources": {
-    "kpi_report": "reports/agent_kpi/agent_kpi_2026-10.json",
-    "kpi_month": "2026-10",
+    "kpi_report": "reports/agent_kpi/agent_kpi_2026-11.json",
+    "kpi_month": "2026-11",
     "kpi_agents_synced": {
       "content_001": {
-        "month": "2026-10",
-        "grade": "B",
-        "score": 74.5
+        "month": "2026-11",
+        "grade": "A",
+        "score": 81.5
       },
       "seo_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "C",
         "score": 68.2
       },
       "social_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "A",
         "score": 80.2
       },
       "revenue_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "D",
         "score": 58.5
       },
       "user_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "B",
         "score": 72.0
       },
       "ops_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "B",
         "score": 73.0
       },
       "data_001": {
-        "month": "2026-10",
+        "month": "2026-11",
         "grade": "C",
         "score": 66.6
       }
@@ -119,6 +119,11 @@
           "month": "2026-10",
           "grade": "B",
           "score": 74.5
+        },
+        {
+          "month": "2026-11",
+          "grade": "A",
+          "score": 81.5
         }
       ]
     },
@@ -153,6 +158,11 @@
         },
         {
           "month": "2026-10",
+          "grade": "C",
+          "score": 68.2
+        },
+        {
+          "month": "2026-11",
           "grade": "C",
           "score": 68.2
         }
@@ -191,6 +201,11 @@
           "month": "2026-10",
           "grade": "A",
           "score": 80.2
+        },
+        {
+          "month": "2026-11",
+          "grade": "A",
+          "score": 80.2
         }
       ]
     },
@@ -225,6 +240,11 @@
         },
         {
           "month": "2026-10",
+          "grade": "D",
+          "score": 58.5
+        },
+        {
+          "month": "2026-11",
           "grade": "D",
           "score": 58.5
         }
@@ -263,6 +283,11 @@
           "month": "2026-10",
           "grade": "B",
           "score": 72.0
+        },
+        {
+          "month": "2026-11",
+          "grade": "B",
+          "score": 72.0
         }
       ]
     },
@@ -299,6 +324,11 @@
           "month": "2026-10",
           "grade": "B",
           "score": 73.0
+        },
+        {
+          "month": "2026-11",
+          "grade": "B",
+          "score": 73.0
         }
       ]
     },
@@ -333,6 +363,11 @@
         },
         {
           "month": "2026-10",
+          "grade": "C",
+          "score": 66.6
+        },
+        {
+          "month": "2026-11",
           "grade": "C",
           "score": 66.6
         }

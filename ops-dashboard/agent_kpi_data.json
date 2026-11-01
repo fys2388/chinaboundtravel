@@ -1,7 +1,7 @@
 {
-  "month": "2026-10",
-  "updated_at": "2026-10-28T01:56:52.560323",
-  "avg_score": 70.4,
+  "month": "2026-11",
+  "updated_at": "2026-11-01T08:40:42.528871",
+  "avg_score": 71.4,
   "agents": [
     {
       "id": "revenue",
@@ -18,11 +18,11 @@
       "id": "content",
       "name": "内容 Agent",
       "emoji": "📝",
-      "score": 74.5,
-      "grade": "B",
-      "grade_label": "合格",
-      "bonus": "0%",
-      "color": "#f39c12",
+      "score": 81.5,
+      "grade": "A",
+      "grade_label": "优秀",
+      "bonus": "+10%绩效",
+      "color": "#2e86de",
       "revenue_chain": "内容质量/数量 → SEO排名↑ → 自然流量↑ → 联盟点击↑ → 营收↑；内容深度 → 用户信任↑ → eBook购买↑"
     },
     {
