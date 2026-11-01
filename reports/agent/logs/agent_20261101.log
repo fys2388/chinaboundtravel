@@ -1,0 +1,9 @@
+2026-11-01 02:51:57 [INFO] ============================================================
+2026-11-01 02:51:57 [INFO] Agent 'social' starting
+2026-11-01 02:51:57 [INFO] Goal: 分析社媒数据，优化发布时间和内容策略
+2026-11-01 02:51:57 [INFO] ============================================================
+2026-11-01 02:51:57 [INFO] --- Step 1/10 ---
+2026-11-01 02:52:36 [INFO] Executing tool: check_governance({})
+2026-11-01 02:52:36 [ERROR] Tool 'check_governance' execution error: create_default_tools.<locals>.<lambda>() missing 1 required positional argument: 'action'
+2026-11-01 02:52:36 [INFO] --- Step 2/10 ---
+2026-11-01 02:53:11 [INFO] Agent 'social' completed. Success: True
