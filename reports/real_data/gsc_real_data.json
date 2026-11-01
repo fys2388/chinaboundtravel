@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-10-31T11:22:29.166766",
-  "data_date": "2026-10-28",
+  "pull_time": "2026-11-01T06:34:16.274300",
+  "data_date": "2026-10-29",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 514,
+    "impressions": 532,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 61.7,
+    "average_position": 62.0,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-01",
-      "impressions": 14,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 25.3
-    },
     {
       "date": "2026-10-02",
       "impressions": 30,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 22.8
+    },
+    {
+      "date": "2026-10-29",
+      "impressions": 106,
+      "clicks": 1,
+      "ctr": 0.01,
+      "position": 26.3
     }
   ],
   "top_queries": [
@@ -338,21 +338,28 @@
       "position": 44
     },
     {
+      "query": "alipay",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 85
+    },
+    {
       "query": "alipay for foreigners",
       "impressions": 7,
       "clicks": 0,
       "ctr": 0,
       "position": 80.7
-    },
-    {
-      "query": "alipay for foreigners china 2026",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 77
     }
   ],
   "top_pages": [
+    {
+      "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "impressions": 58,
+      "clicks": 1,
+      "ctr": 0.02,
+      "position": 18.2
+    },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
       "impressions": 14,
@@ -362,10 +369,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 8,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0,
-      "position": 3.5
+      "position": 4.6
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -425,10 +432,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
-      "impressions": 11,
+      "impressions": 15,
       "clicks": 0,
       "ctr": 0,
-      "position": 22.5
+      "position": 18.6
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
@@ -467,17 +474,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf",
-      "impressions": 3,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 7.7
+      "position": 7
     },
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 30,
+      "impressions": 35,
       "clicks": 0,
       "ctr": 0,
-      "position": 12.7
+      "position": 11.9
     },
     {
       "page": "https://www.chinaboundtravel.com/guides/",
@@ -485,13 +492,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 6
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/",
-      "impressions": 5,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 21.8
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-28"
+    "data_date": "2026-10-29"
   }
 }
