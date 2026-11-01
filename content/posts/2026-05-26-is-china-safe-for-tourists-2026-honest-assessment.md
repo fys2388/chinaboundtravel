@@ -195,3 +195,5 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 - [Is China Safe in 2026? Honest Guide](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)

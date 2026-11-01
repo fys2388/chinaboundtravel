@@ -283,6 +283,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

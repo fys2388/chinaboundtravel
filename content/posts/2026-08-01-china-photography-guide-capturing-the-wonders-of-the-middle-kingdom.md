@@ -356,6 +356,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?
