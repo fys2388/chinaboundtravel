@@ -1,11 +1,11 @@
 {
-  "version": "2.1-20261031_112230_quality_gated",
-  "last_updated": "2026-10-31T11:22:30.877846",
+  "version": "2.1-20261101_121438_quality_gated",
+  "last_updated": "2026-11-01T12:14:38.380479",
   "platforms": {
     "pinterest": {
       "best_times": [
-        "00:00",
         "22:00",
+        "00:00",
         "14:00"
       ],
       "best_hooks": [
@@ -29,8 +29,8 @@
     },
     "instagram": {
       "best_times": [
-        "00:00",
         "22:00",
+        "00:00",
         "14:00"
       ],
       "best_hooks": [
@@ -52,8 +52,8 @@
     },
     "facebook": {
       "best_times": [
-        "00:00",
         "22:00",
+        "00:00",
         "14:00"
       ],
       "best_hooks": [
@@ -74,8 +74,8 @@
     },
     "x": {
       "best_times": [
-        "00:00",
         "22:00",
+        "00:00",
         "14:00"
       ],
       "best_hooks": [
@@ -109,11 +109,11 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 28.67%，比Bottom 20%高 28.67个百分点",
+      "description": "Top 20%帖子平均CTR 28.44%，比Bottom 20%高 28.44个百分点",
       "common_hooks": [],
       "best_times": [
-        "0:00",
         "22:00",
+        "0:00",
         "14:00"
       ]
     }
