@@ -1,0 +1,447 @@
+{
+  "date": "2026-11-02",
+  "site_up": true,
+  "response_time": 371.123,
+  "visitors": 172,
+  "sessions": 186,
+  "requests": 203,
+  "visitors_trend": "N/A",
+  "week_trend": "N/A",
+  "month_trend": "N/A",
+  "bounce_rate": 28.5,
+  "avg_session_duration": 56.38797705913978,
+  "engagement_rate": 71.5,
+  "bounce_rate_7d": 0.0,
+  "engagement_rate_7d": 0.0,
+  "avg_session_duration_7d": 0,
+  "sessions_7d": 0,
+  "visitors_7d": 0,
+  "top_pages": [
+    {
+      "path": "/",
+      "views": 29
+    },
+    {
+      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "views": 13
+    },
+    {
+      "path": "/posts/alipay-wechat-pay-foreigners-guide/",
+      "views": 11
+    },
+    {
+      "path": "/alipay-for-foreigners-guide/",
+      "views": 10
+    },
+    {
+      "path": "/ops/ops-center",
+      "views": 9
+    },
+    {
+      "path": "/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "views": 8
+    },
+    {
+      "path": "/alipay-wechat-pay-foreigners-guide/",
+      "views": 8
+    },
+    {
+      "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
+      "views": 8
+    },
+    {
+      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "views": 8
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Organic Social",
+      "users": 126,
+      "sessions": 129,
+      "engagement_rate": 0.9535
+    },
+    {
+      "channel": "Direct",
+      "users": 27,
+      "sessions": 27,
+      "engagement_rate": 0.037
+    },
+    {
+      "channel": "Organic Search",
+      "users": 17,
+      "sessions": 17,
+      "engagement_rate": 0.1176
+    },
+    {
+      "channel": "Unassigned",
+      "users": 2,
+      "sessions": 12,
+      "engagement_rate": 0.5833
+    },
+    {
+      "channel": "AI Assistant",
+      "users": 1,
+      "sessions": 1,
+      "engagement_rate": 0.0
+    }
+  ],
+  "top_countries": [],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 640,
+  "gsc_clicks": 1,
+  "gsc_ctr": 0.16,
+  "gsc_errors": 0,
+  "gsc_week_trend": "+95.7%",
+  "gsc_month_trend": "+224.9%",
+  "top_keywords": [
+    {
+      "keyword": "144-hour visa-free transit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 44.0
+    },
+    {
+      "keyword": "7 days china tour package",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 33.0
+    },
+    {
+      "keyword": "accommodation china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 51.0
+    },
+    {
+      "keyword": "alipay",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 85.0
+    },
+    {
+      "keyword": "alipay for foreigners china 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 76.0
+    },
+    {
+      "keyword": "alipay foreigner",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 76.0
+    },
+    {
+      "keyword": "alipay foreigners",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keyword": "alipay tutorial",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 81.3
+    },
+    {
+      "keyword": "best places for photography in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 94.0
+    },
+    {
+      "keyword": "book china high speed rail",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 9.0
+    },
+    {
+      "keyword": "business travel to china visa requirements",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0.0,
+      "position": 79.8
+    },
+    {
+      "keyword": "can us citizens use wechat pay",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 58.0
+    },
+    {
+      "keyword": "chengdu photography tour recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 64.0
+    },
+    {
+      "keyword": "chengdu teahouse culture",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 82.0
+    },
+    {
+      "keyword": "chengdu traditional tea ceremony experience",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 97.0
+    },
+    {
+      "keyword": "chengdu travel photography tips recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 44.0
+    },
+    {
+      "keyword": "china airport to city",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 85.5
+    },
+    {
+      "keyword": "china airport transfer",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 80.0
+    },
+    {
+      "keyword": "china bound",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 8.8
+    },
+    {
+      "keyword": "china bullet train tickets",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 41.0
+    },
+    {
+      "keyword": "china business trip support",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0.0,
+      "position": 89.5
+    },
+    {
+      "keyword": "china etiquette",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 96.0
+    },
+    {
+      "keyword": "china express transfer guide",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 4.0
+    },
+    {
+      "keyword": "china food guide",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 90.0
+    },
+    {
+      "keyword": "china for business",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 71.0
+    }
+  ],
+  "total_posts": 73,
+  "new_posts": 0,
+  "pending_posts": 0,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 1,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": true,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 3,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": true,
+  "gh_report_success": true,
+  "gh_social_success": true,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 1000,
+  "gh_query_window_days": 8,
+  "gh_blog_paths_total": 2,
+  "gh_report_paths_total": 17,
+  "high_priority_todos": [
+    "🟠 自然搜索仅 17/172 人（10%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+    "🟡 联盟 1 次点击 / 0 转化：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"
+  ],
+  "data_status": [
+    "GA4 API 获取失败，已回退本地缓存数据（data_date=2026-11-01，age_days=1）",
+    "Cloudflare流量数据未配置",
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-11-01",
+  "_age_days": 1,
+  "gsc_avg_position": 27.15,
+  "gsc_window_start": "2026-10-24",
+  "gsc_window_end": "2026-10-30",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 85,
+  "root_pages_scanned": 12,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_blog_window_runs": 2,
+  "gh_blog_failure_count": 0,
+  "gh_blog_latest_failure_time": null,
+  "gh_blog_state": "success",
+  "gh_blog_conclusion": "success",
+  "gh_blog_run_time": "2026-11-02T03:52:18Z",
+  "gh_blog_display_title": "Joran博文生成+双AI自动审核发布",
+  "gh_report_window_days": 2,
+  "gh_report_window_runs": 5,
+  "gh_report_failure_count": 1,
+  "gh_report_latest_failure_time": "2026-11-02T00:30:43Z",
+  "gh_report_state": "success",
+  "gh_report_conclusion": "failure",
+  "gh_report_run_time": "2026-11-02T00:30:43Z",
+  "gh_report_display_title": "Feishu Daily Report",
+  "gh_report_running": true,
+  "gh_social_window_days": 2,
+  "gh_social_paths_total": 24,
+  "gh_social_window_runs": 6,
+  "gh_social_failure_count": 0,
+  "gh_social_latest_failure_time": null,
+  "gh_social_state": "success",
+  "gh_social_conclusion": "success",
+  "gh_social_run_time": "2026-11-01T21:03:16Z",
+  "gh_social_display_title": "Social Media Distributor",
+  "agent_health": {
+    "checked_at": "2026-11-02 06:35",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-11-02 04:54:47",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-11-02",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": {
+    "total_issues": 2,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 1,
+    "auto_fixed": 3,
+    "need_manual": 22,
+    "resolved": 17,
+    "inherited_resolved": 21,
+    "in_progress": 0,
+    "last_updated": "2026-11-02T03:29:11.912778"
+  },
+  "reporting_snapshot": {
+    "as_of": "2026-11-02",
+    "generated_at": "2026-11-02",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 546,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🟡 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 172人 | 13人 | 100% | ✅ 当前 172人 = 目标的 13×，进度封顶 100%（目标偏低） |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟡 今日无新发（距上次 0 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 91.4次 | 33次 | 100% | ✅ 当前 91.4次 = 目标的 3×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **联盟 1 次点击 / 0 转化**：链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估\n- 🟠 **自然搜索仅 17/172 人（10%）**：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）"
+}
