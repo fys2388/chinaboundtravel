@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-01T13:41:59+00:00",
+  "generated_at": "2026-11-02T16:26:41+00:00",
   "counts": {
     "collected": 1350,
-    "failed": 25,
-    "passed": 1325,
+    "failed": 26,
+    "passed": 1324,
     "skipped": 0,
     "baseline": 16,
-    "new_failures": 11,
+    "new_failures": 12,
     "fixed_failures": 2
   },
   "new_failures": [
@@ -20,6 +20,14 @@
     },
     {
       "node_id": "tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_growth07_content_differentiation::test_no_duplicate_meta_description",
       "likely_stale_test": false,
       "file": "",
       "commit": "",
@@ -111,6 +119,7 @@
     "tests.test_brand_consistency_audit::test_brand_commit_step_is_non_fatal",
     "tests.test_brand_legacy_pilot::test_internal_links_audit_clean_for_pilots",
     "tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained",
+    "tests.test_growth07_content_differentiation::test_no_duplicate_meta_description",
     "tests.test_internal_links::test_markdown_audit_clean",
     "tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window",
     "tests.test_okr_and_experiment_semantics.TestDaysSinceLastPost::test_counts_quoted_dates",
