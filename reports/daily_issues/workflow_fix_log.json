@@ -748,6 +748,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/108",
       "fixed_at": "2026-11-01T13:42:34.606718"
+    },
+    {
+      "workflow": "Feishu Daily Report",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/109",
+      "fixed_at": "2026-11-02T00:31:46.043233"
     }
   ]
 }

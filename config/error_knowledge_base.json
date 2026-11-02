@@ -2358,6 +2358,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261102_003144",
+      "timestamp": "2026-11-02T00:31:44.255575",
+      "workflow_name": "Feishu Daily Report",
+      "run_id": "41367541564",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
