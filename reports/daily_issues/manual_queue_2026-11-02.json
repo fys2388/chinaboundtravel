@@ -1,0 +1,30 @@
+{
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-11-02T03:29:11.532487",
+  "target_date": "2026-11-02",
+  "issue_count": 1,
+  "by_agent": {
+    "social": {
+      "count": 1,
+      "types": [
+        "social_no_traffic"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue_f0593a34ad8b",
+      "type": "social_no_traffic",
+      "description": "社媒曝光2但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-10-31.json",
+      "detected_at": "2026-11-02T03:29:11.527388",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    }
+  ]
+}
