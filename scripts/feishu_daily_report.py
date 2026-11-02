@@ -684,7 +684,12 @@ class FeishuDailyReporter:
         
         # 状态图标
         # 状态图标
-        traffic_status = "🟢" if data.get("visitors", 0) > 0 else "⚪"
+        _single_day_missing = data.get("_single_day_missing", False)
+        if _single_day_missing:
+            # GA4 单日数据未回填（延迟），fallback 返回 0 非真实：标黄，不按 0 访客判灰
+            traffic_status = "🟡"
+        else:
+            traffic_status = "🟢" if data.get("visitors", 0) > 0 else "⚪"
         content_status = "🟢" if data.get("total_content_issues", 0) == 0 else "🟡"
         tp_available = data.get("tp_available", False)
         nord_available = data.get("nord_available", False)
@@ -1063,13 +1068,13 @@ class FeishuDailyReporter:
                     "tag": "div",
                     "text": {
                         "tag": "lark_md",
-                        "content": f"""**📊 1. 流量总览（GA4 | {report_date}）** {traffic_status}
+                        "content": f"""**📊 1. 流量总览（GA4 | {report_date}）** {traffic_status}{' ⚠️ 单日数据未回填（GA4 延迟）' if _single_day_missing else ''}
 
 | 指标 | 数据 | 指标 | 数据 |
 | --- | --- | --- | --- |
-| 访客数 | {data.get('visitors', 0):,} 人 | 页面浏览 | {data.get('requests', 0):,} 次 |
-| 会话数 | {data.get('sessions', 0):,} 次 | 跳出率 | {data.get('bounce_rate', 0):.1f}% |
-| 互动率 | {data.get('engagement_rate', 0):.1f}% | 平均时长 | {dur_str} |
+| 访客数 | {'未回填' if _single_day_missing else f"{data.get('visitors', 0):,} 人"} | 页面浏览 | {'未回填' if _single_day_missing else f"{data.get('requests', 0):,} 次"} |
+| 会话数 | {'未回填' if _single_day_missing else f"{data.get('sessions', 0):,} 次"} | 跳出率 | {'数据不足' if _single_day_missing else f"{data.get('bounce_rate', 0):.1f}%"} |
+| 互动率 | {'数据不足' if _single_day_missing else f"{data.get('engagement_rate', 0):.1f}%"} | 平均时长 | {'数据不足' if _single_day_missing else dur_str} |
 
 **📈 同比趋势**
 - 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{trend_note}{roll_line}{consistency_str}"""
@@ -1585,7 +1590,12 @@ class FeishuDailyReporter:
             ga4_local = self._fetch_ga4_local_fallback()
             if ga4_local:
                 data.update(ga4_local)
-                _local_note = f"GA4 API 获取失败，已回退本地缓存数据（data_date={ga4_local.get('report_date', '?')}，age_days={ga4_local.get('_age_days', '?')}）"
+                if ga4_local.get('_single_day_missing'):
+                    _local_note = (f"GA4 API 获取失败，已回退本地缓存；但 daily 缺 "
+                                   f"{ga4_local.get('report_date', '?')} 单日数据（GA4 延迟未回填），"
+                                   f"流量显示 0 非真实，以实际单日为准")
+                else:
+                    _local_note = f"GA4 API 获取失败，已回退本地缓存数据（data_date={ga4_local.get('report_date', '?')}，age_days={ga4_local.get('_age_days', '?')}）"
                 data["data_status"].append(_local_note)
                 print(f"   ⚠️ GA4 API 失败，回退本地数据: {data['visitors']:,} 访客, {data.get('sessions', 0):,} 会话")
                 if data.get('top_channels'):
@@ -2399,16 +2409,21 @@ class FeishuDailyReporter:
                 yesterday_data = day
                 break
         
+        _single_day_missing = False
         if yesterday_data:
             visitors = int(yesterday_data.get("activeUsers", 0) or 0)
             sessions = int(yesterday_data.get("sessions", 0) or 0)
             pageviews = int(yesterday_data.get("pageviews", 0) or 0)
         else:
-            # daily 里没有 data_date，用 metrics（30 天数据）作为近似
-            print(f"   ⚠️ GA4 本地回退: daily 里没有 {data_date}，用 30 天 metrics 近似")
-            visitors = int(metrics.get("activeUsers", 0) or 0)
-            sessions = int(metrics.get("sessions", 0) or 0)
-            pageviews = int(metrics.get("screenPageViews", 0) or 0)
+            # daily 里没有 data_date：GA4 单日数据未回填（延迟）。
+            # 2026-11-02 曾把 30 天聚合 metrics（activeUsers=172）误当"单日访客"，
+            # 而 daily 单日实际为个位数（~2~20）。绝不用聚合冒充单日：
+            # 标缺失并返回 0，由调用方/卡片明确标注，避免误导。
+            print(f"   ⚠️ GA4 本地回退: daily 里没有 {data_date}（GA4 单日未回填），标单日缺失，不用聚合 metrics 冒充")
+            _single_day_missing = True
+            visitors = 0
+            sessions = 0
+            pageviews = 0
         
         # 映射到 _fetch_ga4() 返回结构
         bounce_rate = round(metrics.get("bounceRate", 0) * 100, 1)
@@ -2446,6 +2461,7 @@ class FeishuDailyReporter:
             "top_pages": top_pages,
             "top_channels": top_channels,
             "_age_days": age_days,  # 内部标记，供 data_status 使用
+            "_single_day_missing": _single_day_missing,  # True=daily 缺目标单日（GA4 未回填），visitors 为 0 非真实
         }
         
         print(f"   ✅ GA4 本地回退: {visitors} 访客, {sessions} 会话, {pageviews} PV（data_date={data_date}）")
