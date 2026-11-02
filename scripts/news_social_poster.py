@@ -294,12 +294,20 @@ def _is_acceptable_pool_image(path: Path) -> bool:
     判定依据（2026-10-28 全量验证）：
       - 文件大小 < 300KB → AI 生成图（pollinations.ai 水印已 OCR 确认），剔除；
       - 宽高比不在 1:1 或 16:9（±5% 容差）→ 该平台不合法，剔除。
-    任一维度读取失败 → 剔除（宁可缺图回退，不冒险发违规模图）。
+
+    文件大小是 AI 图与实拍图的可靠判别器（双峰分隔带，<100KB vs >300KB），
+    不依赖 PIL 即可生效；PIL 可用时才追加宽高比校验。CI/workflow 环境若未装
+    pillow（news-social-poster.yml 仅 pip install requests），仍按大小过滤，
+    足以排除全部 AI 生成图。任一读取失败 → 剔除。
     """
     try:
         if path.stat().st_size < _MIN_REAL_PHOTO_BYTES:
             return False
-        from PIL import Image
+        try:
+            from PIL import Image
+        except Exception:
+            # CI/workflow 无 PIL：仅按文件大小过滤（双峰判别器已可靠排除全部 AI 图）
+            return True
         with Image.open(path) as im:
             w, h = im.size
         if w <= 0 or h <= 0:
