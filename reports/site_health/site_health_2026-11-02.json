@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-02T03:29:08.334974+00:00",
+  "timestamp": "2026-11-02T21:18:37.642615+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 2,
+    "total_issues": 3,
     "critical": 0,
     "high": 0,
-    "medium": 1,
+    "medium": 2,
     "low": 1,
     "auto_fixed": 3,
     "need_manual": 22,
     "resolved": 17,
-    "inherited_resolved": 21,
+    "inherited_resolved": 22,
     "in_progress": 0,
-    "last_updated": "2026-11-02T03:29:11.912778"
+    "last_updated": "2026-11-02T21:18:41.698751"
   },
   "issues": [
     {
@@ -174,6 +174,31 @@
       "resolved_by": "content_agent",
       "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "AI禁用词: perfect",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00",
+      "assigned": true
     },
     {
       "type": "ai_forbidden_word",

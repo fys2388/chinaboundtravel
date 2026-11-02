@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-11-02",
-  "audited_at": "2026-11-02T03:29:12.042026",
+  "audited_at": "2026-11-02T21:18:41.851474",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -20,22 +20,22 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 2,
+        "site_health_total": 3,
         "site_health_file": "site_health_2026-11-02.json",
-        "daily_issues_count": 2
+        "daily_issues_count": 3
       }
     },
     {
       "stage": "assignment",
       "status": "fail",
       "issues": [
-        "1/2 个问题未分配"
+        "2/3 个问题未分配"
       ],
       "details": {
-        "total": 2,
+        "total": 3,
         "assigned": 1,
-        "unassigned": 1,
-        "assignment_rate": "50.0%",
+        "unassigned": 2,
+        "assignment_rate": "33.3%",
         "agent_tasks": 4
       }
     },
@@ -49,7 +49,7 @@
         "pending": 0,
         "failed": 0,
         "partial": 4,
-        "total_issues": 23,
+        "total_issues": 26,
         "resolved_issues": 0
       }
     },
@@ -61,7 +61,7 @@
         "need_manual": 22,
         "resolved": 17,
         "execution_log_exists": true,
-        "total_executions": 8662
+        "total_executions": 8798
       }
     },
     {
@@ -75,6 +75,6 @@
     }
   ],
   "all_issues": [
-    "[assignment] 1/2 个问题未分配"
+    "[assignment] 2/3 个问题未分配"
   ]
 }
