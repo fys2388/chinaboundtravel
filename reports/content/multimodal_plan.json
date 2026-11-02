@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T03:41:44.540322",
+  "generated_at": "2026-11-02T04:54:47.722140",
   "total_recommendations": 27,
   "type_distribution": {
     "infographic": 22,
@@ -9,8 +9,8 @@
   },
   "priority_distribution": {
     "high": 14,
-    "medium": 8,
-    "low": 5
+    "medium": 9,
+    "low": 4
   },
   "recommendations": [
     {
@@ -225,7 +225,7 @@
     {
       "id": "mm_content_accommodation-tips-g_0",
       "content_id": "content_accommodation-tips-g",
-      "content_title": "Where to Stay in China: Complete 2026 Guide",
+      "content_title": "Accommodation In China: Complete 2026 Guide",
       "media_type": "infographic",
       "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
       "purpose": "seo + engagement",
@@ -245,23 +245,23 @@
       "creation_complexity": "medium"
     },
     {
+      "id": "mm_content_sichuan-hotpot-guide_0",
+      "content_id": "content_sichuan-hotpot-guide",
+      "content_title": "Sichuan Hotpot 2026: History & Best Restaurants",
+      "media_type": "image_carousel",
+      "description": "创建Instagram轮播图（Carousel），每项一张图，提升互动",
+      "purpose": "social engagement",
+      "priority": "medium",
+      "estimated_impact": "中 - 高质量内容，多模态可提升用户体验",
+      "creation_complexity": "medium"
+    },
+    {
       "id": "mm_content_shanghai-bund-french_0",
       "content_id": "content_shanghai-bund-french",
       "content_title": "Shanghai 48-Hour: Bund & French Concession",
       "media_type": "infographic",
       "description": "添加2-3张高质量相关图片（封面图、步骤示意图、信息图）",
       "purpose": "seo + engagement",
-      "priority": "low",
-      "estimated_impact": "低 - 一般内容，多模态提升有限",
-      "creation_complexity": "medium"
-    },
-    {
-      "id": "mm_content_sichuan-hotpot-guide_0",
-      "content_id": "content_sichuan-hotpot-guide",
-      "content_title": "Sichuan Hotpot: History & Best Restaurants",
-      "media_type": "image_carousel",
-      "description": "创建Instagram轮播图（Carousel），每项一张图，提升互动",
-      "purpose": "social engagement",
       "priority": "low",
       "estimated_impact": "低 - 一般内容，多模态提升有限",
       "creation_complexity": "medium"
@@ -302,7 +302,7 @@
     {
       "id": "mm_content_how-to-use-alipay-as_0",
       "content_id": "content_how-to-use-alipay-as",
-      "content_title": "How To Use Alipay In China 2026: Complete",
+      "content_title": "Alipay Tutorial 2026: Complete",
       "media_type": "infographic",
       "description": "创建信息图（Infographic）总结核心要点，便于分享和Pinterest引流",
       "purpose": "seo + engagement",

@@ -1,6 +1,6 @@
 # ChinaBound Travel 内容智能优化报告
 
-**生成时间**: 2026-10-26 03:41:44
+**生成时间**: 2026-11-02 04:54:47
 **引擎版本**: v1.0
 **成熟度目标**: L3 → L4
 
@@ -10,10 +10,10 @@
 
 | 指标 | 数值 |
 |------|------|
-| 文章总数 | 68 |
-| 平均质量分 | 68.6/100 |
-| 平均字数 | 1991 |
-| 高优先级优化 | 15篇 |
+| 文章总数 | 70 |
+| 平均质量分 | 69.0/100 |
+| 平均字数 | 2034 |
+| 高优先级优化 | 16篇 |
 | 中优先级优化 | 22篇 |
 | 选题推荐 | 10个 |
 | 多模态内容建议 | 27个 |
@@ -26,22 +26,22 @@
 
 | 质量等级 | 文章数 | 占比 |
 |----------|--------|------|
-| excellent | 4 | 5.9% |
-| good | 48 | 70.6% |
-| average | 16 | 23.5% |
+| excellent | 5 | 7.1% |
+| good | 48 | 68.6% |
+| average | 17 | 24.3% |
 | poor | 0 | 0.0% |
 
 ### 各维度平均分
 
 | 维度 | 平均分 | 说明 |
 |------|--------|------|
-| 内容深度 | 73.5/100 | |
-| 互动性 | 75.6/100 | |
-| 内容新鲜度 | 74.3/100 | |
-| 多媒体丰富度 | 48.1/100 | |
-| 可读性 | 84.0/100 | |
-| SEO优化 | 49.6/100 | |
-| 结构完整性 | 74.8/100 | |
+| 内容深度 | 74.3/100 | |
+| 互动性 | 76.6/100 | |
+| 内容新鲜度 | 75.9/100 | |
+| 多媒体丰富度 | 48.0/100 | |
+| 可读性 | 84.1/100 | |
+| SEO优化 | 49.0/100 | |
+| 结构完整性 | 75.5/100 | |
 
 ---
 
@@ -49,16 +49,16 @@
 
 | 排名 | 文章 | 质量分 | 展示量 | 点击量 | 排名 | 主要问题 |
 |------|------|--------|--------|--------|------|----------|
-| 1 | ChinaBound Travel Guide 2026.09 Update | 54 | 0 | 0 | 0 | 内容过短（<1000词），深度不足; 缺少FAQ区块 |
-| 2 | How Chinese Food Evolved: 2 Million Year | 61 | 0 | 0 | 0 | 内容深度一般（<1500词）; 缺少FAQ区块 |
-| 3 | How to Order Food Delivery in China: Mei | 71 | 159 | 0 | 20 | 长文章缺少目录导航; 高展示低CTR（159次展示，CTR 0.0%） |
-| 4 | Kung Fu And Martial Arts In China: Where | 61 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 5 | Top-rated China Itineraries for 10 Days: | 61 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 6 | China Food Guide for European Travelers | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 7 | Great Wall of China: History & Hidden Se | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
-| 8 | China 144 Hour Transit Visa 2026: Comple | 71 | 107 | 0 | 74 | 长文章缺少目录导航; 搜索排名靠后（第74位） |
-| 9 | WeChat Pay Setup Guide for Foreigners (2 | 69 | 1 | 0 | 11 | 长文章缺少目录导航; 页面未被Google索引 |
-| 10 | China Photography Guide: Best Spots, Gea | 79 | 51 | 0 | 21 | 长文章缺少目录导航; 搜索排名靠后（第21位） |
+| 1 | How to Order Food Delivery in China: Mei | 71 | 159 | 0 | 20 | 长文章缺少目录导航; 高展示低CTR（159次展示，CTR 0.0%） |
+| 2 | Alipay in China: Setup & Payment Tips (2 | 64 | 0 | 0 | 0 | 长文章缺少目录导航; 页面未被Google索引 |
+| 3 | Can Foreigners Use WeChat Pay in China?  | 69 | 83 | 0 | 62 | 长文章缺少目录导航; 搜索排名靠后（第62位） |
+| 4 | China Food Guide for European Travelers | 64 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 5 | Foodie's Guide to China: Dishes You Must | 63 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 6 | China Travel Guide August 2026: Latest V | 80 | 52 | 0 | 11 | 长文章缺少目录导航; 高展示低CTR（52次展示，CTR 0.0%） |
+| 7 | China 144 Hour Transit Visa 2026: Comple | 71 | 107 | 0 | 74 | 长文章缺少目录导航; 搜索排名靠后（第74位） |
+| 8 | Top-rated China Itineraries for 10 Days: | 59 | 0 | 0 | 0 | 缺少FAQ区块; 长文章缺少目录导航 |
+| 9 | ChinaBound Travel Guide 2026.09 Update | 54 | 0 | 0 | 0 | 内容过短（<1000词），深度不足; 缺少FAQ区块 |
+| 10 | WeChat Pay Setup Guide for Foreigners (2 | 69 | 1 | 0 | 11 | 长文章缺少目录导航; 页面未被Google索引 |
 
 ---
 
@@ -118,7 +118,7 @@
 ## 🚀 下一步行动计划
 
 ### 立即执行（1-3天）
-1. 优化15篇高优先级文章的Title和Meta描述
+1. 优化16篇高优先级文章的Title和Meta描述
 2. 为无图片的文章添加2-3张高质量图片
 3. 提交未索引页面到GSC
 
@@ -140,5 +140,5 @@
 
 ---
 
-*报告由内容智能优化Agent自动生成 | 2026-10-26 03:41:44*
+*报告由内容智能优化Agent自动生成 | 2026-11-02 04:54:47*
 *引擎版本: v1.0 | 成熟度目标: L3 → L4*

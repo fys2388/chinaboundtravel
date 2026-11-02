@@ -61,13 +61,55 @@
   },
   {
     "type": "content_optimization",
+    "target": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+    "title": "",
+    "issues": [
+      "缺少Meta描述",
+      "内链不足（2条）"
+    ],
+    "priority": "medium",
+    "priority_score": 20.0,
+    "suggestion": "添加Meta描述（150-160字符），包含核心关键词; 增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+    "title": "",
+    "issues": [
+      "缺少Meta描述",
+      "内链不足（1条）"
+    ],
+    "priority": "medium",
+    "priority_score": 20.0,
+    "suggestion": "添加Meta描述（150-160字符），包含核心关键词; 增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
+    "target": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+    "title": "",
+    "issues": [
+      "缺少Meta描述",
+      "内链不足（1条）"
+    ],
+    "priority": "medium",
+    "priority_score": 20.0,
+    "suggestion": "添加Meta描述（150-160字符），包含核心关键词; 增加3-5条相关内链，指向同主题的其他文章",
+    "estimated_impact": "优化后可提升排名和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "content_optimization",
     "target": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
     "title": "ChinaBound Travel Guide 2026.09 Update",
     "issues": [
-      "内容不足（587词）"
+      "内容不足（678词）"
     ],
     "priority": "medium",
-    "priority_score": 14.13,
+    "priority_score": 13.22,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
@@ -77,50 +119,11 @@
     "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
     "title": "China Travel Guide: July 2026 Updates",
     "issues": [
-      "内容不足（670词）"
+      "内容不足（768词）"
     ],
     "priority": "medium",
-    "priority_score": 13.3,
+    "priority_score": 12.32,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
-    "estimated_impact": "优化后可提升排名和用户停留时长",
-    "status": "pending"
-  },
-  {
-    "type": "content_optimization",
-    "target": "7-day-china-itinerary.md",
-    "title": "Free 7-Day China Itinerary Template (2026)",
-    "issues": [
-      "内容不足（781词）"
-    ],
-    "priority": "medium",
-    "priority_score": 12.19,
-    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
-    "estimated_impact": "优化后可提升排名和用户停留时长",
-    "status": "pending"
-  },
-  {
-    "type": "content_optimization",
-    "target": "2026-08-10-chinas-food-through-the-ages-guide.md",
-    "title": "How Chinese Food Evolved: 2 Million Years",
-    "issues": [
-      "内链不足（2条）"
-    ],
-    "priority": "medium",
-    "priority_score": 10.0,
-    "suggestion": "增加3-5条相关内链，指向同主题的其他文章",
-    "estimated_impact": "优化后可提升排名和用户停留时长",
-    "status": "pending"
-  },
-  {
-    "type": "content_optimization",
-    "target": "2026-07-16-china-transportation-complete-guide-trains-subways-taxis-and-more.md",
-    "title": "",
-    "issues": [
-      "缺少Meta描述"
-    ],
-    "priority": "medium",
-    "priority_score": 10.0,
-    "suggestion": "添加Meta描述（150-160字符），包含核心关键词",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
