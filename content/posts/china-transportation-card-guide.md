@@ -212,3 +212,5 @@ For international travelers comparing options, flight search platforms help you 
 - [China Transportation Guide for European (2026 Guide)](/posts/navigating-chinas-transportation-a-californians-guide-for-european-travelers/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
