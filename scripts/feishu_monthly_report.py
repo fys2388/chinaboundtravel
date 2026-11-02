@@ -836,10 +836,16 @@ class FeishuMonthlyReporter:
     def build_monthly_card(self, data: dict) -> dict:
         _caliber = reporting_snapshot_reader.caliber_label(data)
         today = datetime.now()
-        month_label = data.get("month_label", today.strftime("%Y年%m月"))
-        prev_month_label = data.get("prev_month_label", "")
-        month_start = data.get("month_start", "")
-        month_end = data.get("month_end", "")
+        # 月份标签/统计周期：优先取 GA4 返回，缺失则回退到统计周期（_get_report_period）。
+        # 原实现回退 today 月份/空串——SNAPSHOT 命中时 GA4 不返回 month_label/start/end，
+        # 导致标题错标为"发布月"、统计周期显示"~"。用 report_period 兜底修正。
+        _period = self._get_report_period()
+        # 用 or 而非默认值：snapshot_traffic 会返回 month_start=""（空串），
+        # data.get(key, default) 命中空串不触发回退，必须用 or 让空串也回退到 period。
+        month_label = data.get("month_label") or _period["report_label"]
+        prev_month_label = data.get("prev_month_label") or _period["compare_label"]
+        month_start = data.get("month_start") or _period["report_start"]
+        month_end = data.get("month_end") or _period["report_end"]
 
         month_users = data.get("month_users", 0)
         month_sessions = data.get("month_sessions", 0)
@@ -900,13 +906,19 @@ class FeishuMonthlyReporter:
         channels = data.get("channels", [])
         channel_rows = []
         for c in channels:
-            dur_c = f"{c['duration']}秒" if c['duration'] < 60 else f"{c['duration']//60}分{c['duration']%60}秒"
-            if c['duration'] >= 30 and c['bounce'] < 60:
-                quality = "🟢 优质"
-            elif c['duration'] < 15 or c['bounce'] > 80:
-                quality = "🔴 较差"
+            _dur = c.get('duration')
+            if _dur is None:
+                # SNAPSHOT 无停留时长维度：标"数据不足"，不误判"较差"
+                dur_c = "数据不足"
+                quality = "⚠️ 数据不足"
             else:
-                quality = "🟡 一般"
+                dur_c = f"{_dur}秒" if _dur < 60 else f"{_dur//60}分{_dur%60}秒"
+                if _dur >= 30 and c['bounce'] < 60:
+                    quality = "🟢 优质"
+                elif _dur < 15 or c['bounce'] > 80:
+                    quality = "🔴 较差"
+                else:
+                    quality = "🟡 一般"
             pct = round(c['users'] / max(month_users, 1) * 100, 1)
             channel_rows.append(f"| {c['channel']} | {c['users']} | {pct}% | {c['bounce']}% | {dur_c} | {quality} |")
 
@@ -1031,7 +1043,7 @@ class FeishuMonthlyReporter:
 - **联盟链接覆盖率**：{coverage_display} {coverage_status}
 - **人设冲突**：{posts_with_conflict} 篇 {conflict_status}
 - **结构化数据**：{schema_status}
-- **占位符**：{posts_with_placeholder} 篇 ⚠️"""
+- **占位符**：{posts_with_placeholder} 篇 {'✅' if posts_with_placeholder == 0 else '⚠️'}"""
 
         affiliate_section = f"""---
 ## 💸 联盟变现数据
