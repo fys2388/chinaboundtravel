@@ -467,7 +467,14 @@ def create_github_issue(workflow_name, run_id, category, error_snippet):
 """
     status, body = http_post(
         f"https://api.github.com/repos/{REPO}/issues",
-        {"title": issue_title, "body": issue_body, "labels": ["auto-error", category]},
+        {
+            "title": issue_title,
+            "body": issue_body,
+            "labels": ["auto-error", category],
+            # 真正 assign，而非只在正文写"分配处理"。默认给仓库所有者，
+            # 可用 GITHUB_ISSUE_ASSIGNEE 覆盖为具体处理人。修复"Issue Assignees=No one"孤儿问题。
+            "assignees": [os.environ.get("GITHUB_ISSUE_ASSIGNEE", REPO.split("/")[0])],
+        },
         {"Authorization": f"Bearer {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     )
     if status == 201:
