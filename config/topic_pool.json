@@ -509,10 +509,11 @@
         "china winter weather"
       ],
       "priority": 4,
-      "status": "pending",
+      "status": "used",
       "source": "gsc",
       "created_at": "2026-08-09T00:00:00",
-      "depth": "deep"
+      "depth": "deep",
+      "used_at": "2026-11-02T03:55:40.113322+00:00"
     },
     {
       "id": "pool-006",
