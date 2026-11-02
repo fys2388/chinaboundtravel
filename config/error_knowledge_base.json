@@ -2369,6 +2369,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261102_050246",
+      "timestamp": "2026-11-02T05:02:46.599492",
+      "workflow_name": "Weekly Feishu Report",
+      "run_id": "41391465641",
+      "category": "git_push_failed",
+      "category_name": "Git推送失败",
+      "error_message": "error: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
