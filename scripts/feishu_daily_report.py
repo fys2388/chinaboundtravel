@@ -124,6 +124,9 @@ def _is_truthy_draft(front_matter):
     return m.group(1).strip().lower() in ('true', 'yes', 'on', '1')
 # --- End 内容质量扫描辅助 ---------------------------------------------------
 CONFIG_DIR = BLOG_ROOT / "config"
+# P3 FIX 2026-10-15 引入 _fetch_ga4_local_fallback 时用了 REPORTS_DIR 但从未定义，
+# 仅在 GA4 API 返回空/失败触发 local fallback 时 NameError（今日 GA4 空数据暴露）。
+REPORTS_DIR = BLOG_ROOT / "reports"
 
 # 飞书配置
 FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
