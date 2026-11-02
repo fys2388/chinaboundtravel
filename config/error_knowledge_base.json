@@ -2380,6 +2380,17 @@
       "error_message": "error: failed to push some refs to 'https://github.com/fys2388/chinaboundtravel'\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261102_162720",
+      "timestamp": "2026-11-02T16:27:20.487841",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "41481277590",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
