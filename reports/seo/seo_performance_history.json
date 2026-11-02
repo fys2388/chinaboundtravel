@@ -2185,8 +2185,145 @@
         "is_optimization_candidate": true
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "7 days china tour package",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 33
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "alipay",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 85
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 62,
+        "clicks": 1,
+        "ctr": 0.02,
+        "position": 17.4
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/about/",
+      "page": "https://www.chinaboundtravel.com/about/",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.4,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/",
+      "page": "https://www.chinaboundtravel.com/cities/",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 8
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.2,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/cities/chengdu/",
+      "page": "https://www.chinaboundtravel.com/cities/chengdu/",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 9
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.1,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf",
+      "page": "https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf",
+      "date": "2026-10-30",
+      "metrics": {
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 6.7
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 1.9799999999999998,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-10-26T03:53:03.350614"
+  "last_updated": "2026-11-02T05:03:59.809938"
 }
