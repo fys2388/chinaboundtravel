@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-11-01T12:14:38.678906",
+  "run_time": "2026-11-02T14:04:36.509620",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20261101_121438",
-      "last_updated": "2026-11-01T12:14:38.506923",
+      "version": "2.0-20261102_140436",
+      "last_updated": "2026-11-02T14:04:36.358535",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -74,8 +74,8 @@
         {
           "keyword": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
           "ctr": 0.02,
-          "position": 18.2,
-          "impressions": 58
+          "position": 17.4,
+          "impressions": 62
         },
         {
           "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
@@ -120,7 +120,7 @@
         },
         {
           "pattern": "快速提升机会关键词",
-          "description": "发现 17 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+          "description": "发现 18 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
           "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
           "keywords": [
             "https://www.chinaboundtravel.com/cancel/",
@@ -131,19 +131,11 @@
           ]
         }
       ],
-      "strategy_changes": [
-        {
-          "field": "best_keywords",
-          "reason": "基于GSC数据分析，更新最佳关键词排名",
-          "version": "2.1",
-          "timestamp": "2026-11-01T12:14:38.495673",
-          "evidence": "based on performance data analysis"
-        }
-      ]
+      "strategy_changes": []
     },
     "revenue": {
-      "version": "2.0-20261101_121438",
-      "last_updated": "2026-11-01T12:14:38.582785",
+      "version": "2.0-20261102_140436",
+      "last_updated": "2026-11-02T14:04:36.427503",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -226,8 +218,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20261101_121438",
-      "last_updated": "2026-11-01T12:14:38.462572",
+      "version": "2.0-20261102_140436",
+      "last_updated": "2026-11-02T14:04:36.314744",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -311,8 +303,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20261101_121438",
-      "last_updated": "2026-11-01T12:14:38.429887",
+      "version": "2.0-20261102_140436",
+      "last_updated": "2026-11-02T14:04:36.286413",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -407,8 +399,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.1-20261101_121438_quality_gated",
-      "last_updated": "2026-11-01T12:14:38.380479",
+      "version": "2.1-20261102_140436_quality_gated",
+      "last_updated": "2026-11-02T14:04:36.238849",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -517,7 +509,7 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 28.44%，比Bottom 20%高 28.44个百分点",
+          "description": "Top 20%帖子平均CTR 27.77%，比Bottom 20%高 27.77个百分点",
           "common_hooks": [],
           "best_times": [
             "22:00",
@@ -529,8 +521,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20261101_121438",
-      "last_updated": "2026-11-01T12:14:38.539266",
+      "version": "2.0-20261102_140436",
+      "last_updated": "2026-11-02T14:04:36.387094",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -655,77 +647,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/free-itinerary/', 'traffic_potential': 5.5, 'position': 4.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/', 'traffic_potential': 2.2399999999999998, 'position': 8.4}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261101_121438"
+      "strategy_version": "2.0-20261102_140436"
     }
   ],
   "domain_summary": {
