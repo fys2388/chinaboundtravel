@@ -1,5 +1,6 @@
 import os
 import glob
+import hashlib
 from datetime import datetime
 
 now = datetime.utcnow()
@@ -17,9 +18,13 @@ filename = f"{date_str}-chinabound-travel-guide-{version.replace('.', '-')}-mont
 filepath = os.path.join(posts_dir, filename)
 
 title = f"ChinaBound Travel Guide {version} - Now Updated With Latest Visa Rules"
+# 确定性 content_id（cbt-<12 hex>），符合 content_id_audit ID_RE = ^cbt-[0-9a-f]{12}$
+# 原代码 `...{:04d}".format(...)` 是 f-string 内嵌 .format()，生成畸形字面文本，
+# 导致 Hugo YAML "map key-value is pre-defined" 解析失败（Issue #107）。
+content_id = "cbt-" + hashlib.sha256(f"monthly-ebook-{version}".encode()).hexdigest()[:12]
 
 markdown_content = f"""---
-content_id: "cbt-{version.replace(".", "")}{{:04d}}".format(hash(version) % 10000)
+content_id: "{content_id}"
 title: "{title}"
 date: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
 lastmod: {now.strftime("%Y-%m-%dT%H:%M:%S+00:00")}
