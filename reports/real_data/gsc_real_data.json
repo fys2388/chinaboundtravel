@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-02T14:04:33.086726",
-  "data_date": "2026-10-30",
+  "pull_time": "2026-11-03T07:04:44.094316",
+  "data_date": "2026-10-31",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 546,
+    "impressions": 555,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 62.6,
+    "average_position": 62.4,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-03",
-      "impressions": 29,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 23.2
-    },
     {
       "date": "2026-10-04",
       "impressions": 22,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 28.4
+    },
+    {
+      "date": "2026-10-31",
+      "impressions": 106,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.6
     }
   ],
   "top_queries": [
@@ -217,6 +217,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 37
+    },
+    {
+      "query": "# role you are a strict image-grounded knowledge assistant. identify entities only when visual evidence is clear, then provide concise background tied to those entities. # rules 1. use visible anchors: readable text, logos, labels, signatures, symbols, distinctive designs, markings, or unique features. 2. provide facts only about entities confirmed by those anchors. 3. do not infer from weak resemblance, broad context, or unsupported association. 4. analyze carefully but keep reasoning internal. # output - start with visual evidence supporting recognition. - follow with brief verifiable background facts. - use direct factual language. - avoid \"maybe,\" \"likely,\" \"possibly,\" \"appears to be,\" \"perhaps,\" \"probably.\" - omit unconfirmed details. # limits - no greetings, closings, meta-comments, or emojis. - no unrelated background. - stop when complete.",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 6
     },
     {
       "query": "144 hour visa free transit",
@@ -252,6 +259,20 @@
       "clicks": 0,
       "ctr": 0,
       "position": 44
+    },
+    {
+      "query": "7 day china tour",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "query": "7 day tour of china",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 29
     },
     {
       "query": "7 days china tour package",
@@ -329,36 +350,15 @@
       "clicks": 0,
       "ctr": 0,
       "position": 68
-    },
-    {
-      "query": "afternoon tea guantouling",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 44
-    },
-    {
-      "query": "alipay",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 85
-    },
-    {
-      "query": "alipay for foreigners",
-      "impressions": 7,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 80.7
     }
   ],
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 62,
+      "impressions": 67,
       "clicks": 1,
-      "ctr": 0.02,
-      "position": 17.4
+      "ctr": 0.01,
+      "position": 17.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
@@ -369,17 +369,24 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 10,
+      "impressions": 9,
       "clicks": 0,
       "ctr": 0,
-      "position": 4.6
+      "position": 4.8
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 3,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 8
+      "position": 6.2
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/_archived/",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 31
     },
     {
       "page": "https://www.chinaboundtravel.com/about/",
@@ -425,24 +432,24 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/chengdu/",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/cities/guilin/",
       "impressions": 5,
       "clicks": 0,
       "ctr": 0,
-      "position": 48.4
+      "position": 9.6
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/cities/guilin/",
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 47.3
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
-      "impressions": 16,
+      "impressions": 21,
       "clicks": 0,
       "ctr": 0,
-      "position": 18.1
+      "position": 15.4
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
@@ -453,10 +460,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 5.3
+      "position": 4
     },
     {
       "page": "https://www.chinaboundtravel.com/content/",
@@ -481,17 +488,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf",
-      "impressions": 6,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0,
-      "position": 6.7
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 36,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 11.8
+      "position": 7.3
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-10-30"
+    "data_date": "2026-10-31"
   }
 }
