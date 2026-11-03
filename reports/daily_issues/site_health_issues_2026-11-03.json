@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-03T04:38:30.167321+00:00",
+  "timestamp": "2026-11-03T18:59:13.988339+00:00",
   "source": "site_health_agent",
   "issues": [
     {
@@ -11,11 +11,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-11-03T04:38:33.021544",
+      "assigned_at": "2026-11-03T18:59:17.475208",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: ai_forbidden_word",
-      "updated_at": "2026-11-03T04:38:33.263321"
+      "updated_at": "2026-11-03T18:59:17.766289"
     },
     {
       "type": "ai_forbidden_word",
@@ -26,11 +26,11 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-11-03T04:38:33.021548",
+      "assigned_at": "2026-11-03T18:59:17.475210",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-11-03T04:38:33.264212"
+      "updated_at": "2026-11-03T18:59:17.767803"
     },
     {
       "type": "title_too_long",
@@ -45,7 +45,7 @@
       "fix_message": "无 front matter",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-11-03T04:38:33.021550",
+      "assigned_at": "2026-11-03T18:59:17.475212",
       "status": "assigned"
     }
   ]
