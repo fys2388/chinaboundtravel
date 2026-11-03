@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-11-02T07:29:51.451634+00:00",
+      "posted_at": "2026-11-03T07:44:18.496486+00:00",
       "platforms": [
         "x"
       ],
@@ -234,7 +234,7 @@
     },
     "fa31abf1d061": {
       "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisor",
-      "posted_at": "2026-11-02T07:29:38.507250+00:00",
+      "posted_at": "2026-11-03T07:44:07.215488+00:00",
       "platforms": [
         "x"
       ],
@@ -514,11 +514,11 @@
     },
     "ee35e9a70e9e": {
       "title": "Is it safe to go to China right now? What the U.S. State Dep",
-      "posted_at": "2026-10-30T06:54:53.293754+00:00",
+      "posted_at": "2026-11-03T07:44:09.532294+00:00",
       "platforms": [
         "x"
       ],
-      "success": false
+      "success": true
     },
     "95ee49743883": {
       "title": "Global Industry Leaders Take the Stage at ITB Americas Confe",
@@ -663,9 +663,65 @@
         "x"
       ],
       "success": true
+    },
+    "1f793d36a669": {
+      "title": "Montenegro Now Requires Visas From Russians, Belarusians, Ch",
+      "posted_at": "2026-11-03T07:44:02.323034+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "4add5e7b4cbc": {
+      "title": "Montenegro to require visas for five nationalities starting ",
+      "posted_at": "2026-11-03T07:44:04.476425+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "0fd398a669ac": {
+      "title": "China Struggles to Attract Talent Despite Easing Visa Rules,",
+      "posted_at": "2026-11-03T07:44:06.615055+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "8dbcd2430a5a": {
+      "title": "Revenues soft but China Tourism Group Duty Free posts +25% r",
+      "posted_at": "2026-11-03T07:44:11.826053+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "8884ef902649": {
+      "title": "As Chinese tourists stay away, airlines cut back 700,000 sea",
+      "posted_at": "2026-11-03T07:44:13.822248+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "086c337c6aa2": {
+      "title": "Echoes of Rome in ancient China? What Beijing’s 1,800-year-o",
+      "posted_at": "2026-11-03T07:44:16.011014+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "5f80333d4e73": {
+      "title": "Chongqing Plans Over 30 Heritage Events Ahead of National He",
+      "posted_at": "2026-11-03T07:44:17.973474+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-02T07:29:51.451658+00:00",
-  "total_posts": 63,
-  "total_failures": 51
+  "last_run": "2026-11-03T07:44:18.496507+00:00",
+  "total_posts": 71,
+  "total_failures": 53
 }
