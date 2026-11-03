@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-03_content",
   "created_at": "2026-11-03T01:01:15.559091+00:00",
-  "updated_at": "2026-11-03T01:01:16.044920",
+  "updated_at": "2026-11-03T01:31:05.305005",
   "target_date": "2026-11-03",
   "issue_count": 11,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-03T01:01:15.558635+00:00"
     },
     {
-      "id": "site_health-387784bb5e284fd8",
+      "id": "site_health-137994d8eda10316",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-03T01:01:15.558681+00:00"
+      "detected_at": "2026-11-03T01:31:04.923534+00:00"
     },
     {
-      "id": "site_health-f4b9359ec787781",
+      "id": "site_health-748f9869ba243cee",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-03T01:01:15.558685+00:00"
+      "detected_at": "2026-11-03T01:31:04.923539+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -214,7 +214,7 @@
       "detected_at": "2026-11-03T01:01:15.558701+00:00"
     },
     {
-      "id": "site_health-614248d70876bd33",
+      "id": "site_health-3f8300ce4648e5a6",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -231,7 +231,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-03T01:01:15.558708+00:00"
+      "detected_at": "2026-11-03T01:31:04.923569+00:00"
     }
   ],
   "priority_issue": {
