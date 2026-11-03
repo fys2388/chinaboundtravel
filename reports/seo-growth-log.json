@@ -8957,6 +8957,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-02T10:44:25.209677"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-03T10:35:37.796282"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:39.036848"
+    },
+    {
+      "type": "internal_link",
+      "target": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:40.345405"
+    },
+    {
+      "type": "internal_link",
+      "target": "xian-terracotta-army-history-discovery-and-insider-tips -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:41.676999"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:42.829352"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:43.976352"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-solo-travel-guide-safety-hostels-and-making-friends -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:46.414983"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:47.545675"
+    },
+    {
+      "type": "internal_link",
+      "target": "foodies-guide-to-china-a-gastronomic-adventure -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:48.668280"
+    },
+    {
+      "type": "internal_link",
+      "target": "accommodation-tips-guide -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:49.816669"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:50.940836"
+    },
+    {
+      "type": "internal_link",
+      "target": "2026-05-26-is-china-safe-for-tourists-2026-honest-assessment -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:52.071921"
+    },
+    {
+      "type": "internal_link",
+      "target": "2026-05-27-how-to-survive-chinese-train-station -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:53.233804"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-packing-list-2026-what-to-bring-and-what-to-leave-at-home -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:54.386790"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-nightlife-guide-bars-clubs-and-evening-culture -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:55.524666"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-03T10:35:56.675021"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared-au -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:58.331690"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:35:59.463723"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-03T10:36:00.626249"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-11-03T10:36:01.781865"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack-au -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=3",
+      "timestamp": "2026-11-03T10:36:02.940624"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-assessment/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:03.550424"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:04.038544"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:04.481247"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:04.928762"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:05.404252"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:05.863035"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:06.303188"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:06.763345"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:07.213457"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-03T10:36:07.641159"
     }
   ]
 }

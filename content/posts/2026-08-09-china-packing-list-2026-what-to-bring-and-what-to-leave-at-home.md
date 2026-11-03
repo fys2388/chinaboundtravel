@@ -169,6 +169,8 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

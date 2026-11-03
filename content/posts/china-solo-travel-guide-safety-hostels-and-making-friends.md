@@ -166,6 +166,8 @@ If you're looking for more information on traveling to China, be sure to check o
 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
 
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

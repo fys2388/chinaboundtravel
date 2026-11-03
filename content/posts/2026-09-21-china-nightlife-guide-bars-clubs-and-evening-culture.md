@@ -172,3 +172,5 @@ Here are some practical tips to help you make the most of your nightlife experie
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

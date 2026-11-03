@@ -197,3 +197,5 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
