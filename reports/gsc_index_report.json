@@ -1,12 +1,67 @@
 {
-  "timestamp": "2026-10-27 07:38:56",
+  "timestamp": "2026-11-03 09:19:45",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 7,
+  "indexed_count": 4,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/",
       "status": "success",
@@ -169,61 +224,6 @@
         "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
         "verdict": "NEUTRAL",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-bargaining-and-shopping-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
-        "verdict": "PASS",
-        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     }
