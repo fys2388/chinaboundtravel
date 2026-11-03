@@ -1,12 +1,12 @@
 {
-  "version": "2.1-20261102_140436_quality_gated",
-  "last_updated": "2026-11-02T14:04:36.238849",
+  "version": "2.1-20261103_131130_quality_gated",
+  "last_updated": "2026-11-03T13:11:30.572493",
   "platforms": {
     "pinterest": {
       "best_times": [
         "22:00",
-        "00:00",
-        "14:00"
+        "14:00",
+        "00:00"
       ],
       "best_hooks": [
         "Essential China travel tips",
@@ -30,8 +30,8 @@
     "instagram": {
       "best_times": [
         "22:00",
-        "00:00",
-        "14:00"
+        "14:00",
+        "00:00"
       ],
       "best_hooks": [
         "What travelers discover",
@@ -53,8 +53,8 @@
     "facebook": {
       "best_times": [
         "22:00",
-        "00:00",
-        "14:00"
+        "14:00",
+        "00:00"
       ],
       "best_hooks": [
         "What travelers discover"
@@ -75,8 +75,8 @@
     "x": {
       "best_times": [
         "22:00",
-        "00:00",
-        "14:00"
+        "14:00",
+        "00:00"
       ],
       "best_hooks": [
         "Research-backed facts about {topic}",
@@ -109,12 +109,12 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 27.77%，比Bottom 20%高 27.77个百分点",
+      "description": "Top 20%帖子平均CTR 27.34%，比Bottom 20%高 27.34个百分点",
       "common_hooks": [],
       "best_times": [
         "22:00",
-        "0:00",
-        "14:00"
+        "14:00",
+        "0:00"
       ]
     }
   ],
