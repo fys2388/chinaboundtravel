@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-03T18:59:15.927551+00:00",
+  "checked_at": "2026-11-04T03:58:04.470529+00:00",
   "base_url": "https://www.chinaboundtravel.com",
   "pages_checked": [
     "/",
@@ -16,7 +16,7 @@
       "destinations": [
         "G-GECBME3YVJ"
       ],
-      "payload_bytes": 542319
+      "payload_bytes": 542333
     }
   },
   "measurement_ids": [

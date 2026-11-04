@@ -1,0 +1,30 @@
+{
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-11-04T03:58:05.630049",
+  "target_date": "2026-11-04",
+  "issue_count": 1,
+  "by_agent": {
+    "social": {
+      "count": 1,
+      "types": [
+        "social_zero_engagement"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue_8e149e949014",
+      "type": "social_zero_engagement",
+      "description": "分析数据可用，社媒已发布7条但曝光为0，需检查发布与指标归属",
+      "severity": "medium",
+      "agent": "social",
+      "action": "analyze_and_optimize",
+      "source_file": "social_daily_2026-11-02.json",
+      "detected_at": "2026-11-04T03:58:05.625142",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    }
+  ]
+}
