@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-03T13:11:24.413507",
-  "data_date": "2026-11-02",
+  "pull_time": "2026-11-04T13:26:00.029477",
+  "data_date": "2026-11-03",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 175,
-    "sessions": 190,
-    "screenPageViews": 207,
-    "engagedSessions": 136,
-    "bounceRate": 0.28421052631578947,
-    "averageSessionDuration": 55.50393517368422,
-    "engagementRate": 0.7157894736842105,
-    "newUsers": 173
+    "activeUsers": 182,
+    "sessions": 198,
+    "screenPageViews": 213,
+    "engagedSessions": 143,
+    "bounceRate": 0.2777777777777778,
+    "averageSessionDuration": 53.92408206565657,
+    "engagementRate": 0.7222222222222222,
+    "newUsers": 180
   },
   "daily": [
-    {
-      "date": "2026-10-07",
-      "sessions": 15,
-      "activeUsers": 12,
-      "pageviews": 12
-    },
     {
       "date": "2026-10-08",
       "sessions": 12,
@@ -167,9 +161,15 @@
     },
     {
       "date": "2026-11-03",
-      "sessions": 6,
-      "activeUsers": 6,
-      "pageviews": 6
+      "sessions": 12,
+      "activeUsers": 11,
+      "pageviews": 11
+    },
+    {
+      "date": "2026-11-04",
+      "sessions": 2,
+      "activeUsers": 2,
+      "pageviews": 2
     }
   ],
   "top_pages": [
@@ -178,6 +178,12 @@
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
       "pageviews": 29,
       "sessions": 26
+    },
+    {
+      "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 12,
+      "sessions": 13
     },
     {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -248,12 +254,6 @@
     {
       "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
       "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 7,
-      "sessions": 7
-    },
-    {
-      "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
-      "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 6,
       "sessions": 6
     },
@@ -267,27 +267,27 @@
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 132,
-      "activeUsers": 129,
-      "engagementRate": 0.9545
+      "sessions": 139,
+      "activeUsers": 136,
+      "engagementRate": 0.9568
     },
     {
       "channel": "Direct",
-      "sessions": 30,
-      "activeUsers": 29,
-      "engagementRate": 0.0333
+      "sessions": 31,
+      "activeUsers": 30,
+      "engagementRate": 0.0323
     },
     {
       "channel": "Organic Search",
-      "sessions": 15,
-      "activeUsers": 15,
-      "engagementRate": 0.1333
+      "sessions": 14,
+      "activeUsers": 14,
+      "engagementRate": 0.1429
     },
     {
       "channel": "Unassigned",
-      "sessions": 12,
+      "sessions": 13,
       "activeUsers": 2,
-      "engagementRate": 0.5833
+      "engagementRate": 0.5385
     },
     {
       "channel": "AI Assistant",
@@ -303,6 +303,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-02"
+    "data_date": "2026-11-03"
   }
 }

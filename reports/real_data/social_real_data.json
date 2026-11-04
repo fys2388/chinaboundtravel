@@ -1,7 +1,7 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-11-03T13:11:28.048133",
-  "data_date": "2026-11-03",
+  "pull_time": "2026-11-04T13:26:03.618238",
+  "data_date": "2026-11-04",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -14,11 +14,27 @@
   },
   "posts": [
     {
-      "id": "6ae991dc3f84a453ac0f8c8b",
-      "text": "Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-stati",
+      "id": "6aeadd9e2b43f8ba7d738631",
+      "text": "Everything you need to know about Itinerary — in one practical guide.\n\n· 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nRead the full guide: https://www.chinaboundtravel.com/7-day-china-itiner",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-04T09:24:25.561Z",
+      "status": "sent",
+      "metrics_available": false,
+      "has_impression_metric": false,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6aeadd98d59713e434292bf8",
+      "text": "Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=f",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-03T09:48:52.047Z",
+      "published_at": "2026-11-04T09:24:22.156Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -30,11 +46,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae991d83f84a453ac0f8bd0",
-      "text": "Essential Food tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies",
+      "id": "6aeadd942b43f8ba7d73847d",
+      "text": "Essential Alipay tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-03T09:48:51.938Z",
+      "published_at": "2026-11-04T09:24:22.026Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -46,27 +62,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae991d164e1ad8ea2efac7e",
-      "text": "Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=f",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-03T09:48:50.831Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6ae990d03f84a453ac0f4a7b",
-      "text": "🗺️ DESTINATION UPDATE\n\nChongqing Plans Over 30 Heritage Events Ahead of National Heritage Expo - iChongqing\n\nChongqing Plans Over 30 Heritage Events Ahead of National Heritage Expo iChongqing\n\nSource:",
+      "id": "6aeadd2bc63bd995bd174547",
+      "text": "🗺️ DESTINATION UPDATE\n\nSeychelles, China and the Art of Being Friends With Everyone: Sherin Francis Takes Island Diplomacy...\n\nSeychelles, China and the Art of Being Friends With Everyone: Sherin Fran",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:31.326Z",
+      "published_at": "2026-11-04T09:22:31.132Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -78,11 +78,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990cee5f645e4e33512dd",
-      "text": "🗺️ DESTINATION UPDATE\n\nEchoes of Rome in ancient China? What Beijing’s 1,800-year-old ship find reveals - South China...\n\nEchoes of Rome in ancient China? What Beijing’s 1,800-year-old ship find revea",
+      "id": "6aeadd2a394911f9f11f90ce",
+      "text": "📊 INDUSTRY NEWS\n\nChina pavilion turns heads at London tourism event - China Daily\n\nChina pavilion turns heads at London tourism event China Daily\n\nSource: Google News RSS\n\n\n\n#ChinaTravel #TourismNews ",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.484Z",
+      "published_at": "2026-11-04T09:22:31.431Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -94,11 +94,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990ccee93f2557f2fb328",
-      "text": "🗺️ DESTINATION UPDATE\n\nAs Chinese tourists stay away, airlines cut back 700,000 seats on Japan routes - VnExpress...\n\nAs Chinese tourists stay away, airlines cut back 700,000 seats on Japan routes VnE",
+      "id": "6aeadd28394911f9f11f908f",
+      "text": "📊 INDUSTRY NEWS\n\nChina travel trade platform IC&GTE makes Penang debut - TTG Asia\n\nChina travel trade platform IC GTE makes Penang debut TTG Asia\n\nSource: Google News RSS\n\n\n\n#ChinaTravel #TourismNews ",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.493Z",
+      "published_at": "2026-11-04T09:22:31.182Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -110,11 +110,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990ca64e1ad8ea2ef66fd",
-      "text": "📊 INDUSTRY NEWS\n\nRevenues soft but China Tourism Group Duty Free posts +25% rise in Q3 net profits - Moodie Davitt...\n\nRevenues soft but China Tourism Group Duty Free posts +25% rise in Q3 net profits",
+      "id": "6aeadd26c63bd995bd1744bc",
+      "text": "📊 INDUSTRY NEWS\n\nChina's tourist submersible designed to dive 200 meters - VnExpress International\n\nChina's tourist submersible designed to dive 200 meters VnExpress International\n\nSource: Google News",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.710Z",
+      "published_at": "2026-11-04T09:22:16.557Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -126,11 +126,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990c76896a4441f6a65ec",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Is it safe to go to China right now? What the U.S. State Department travel advisory warns about...\n\nIs it safe to go to China right now? What the U.S. State Department trav",
+      "id": "6aeadd24c63bd995bd174439",
+      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Hail risk in upper Thailand as South faces very heavy rain - Nation Thailand\n\nHail risk in upper Thailand as South faces very heavy rain Nation Thailand\n\nSource: Google New",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.474Z",
+      "published_at": "2026-11-04T09:22:16.419Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -142,11 +142,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990c564e1ad8ea2ef6610",
-      "text": "📋 VISAS UPDATE\n\nIMPORTANT: China Struggles to Attract Talent Despite Easing Visa Rules, While U.S. Builds AI Talent Hubs in...\n\nChina Struggles to Attract Talent Despite Easing Visa Rules, While U.S. ",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.465Z",
+      "id": "6aea3df82128cca0a51f355c",
+      "text": "What travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-03T22:04:52.930Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -158,11 +158,27 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6ae990c364e1ad8ea2ef65dd",
-      "text": "📋 VISAS UPDATE\n\nIMPORTANT: Montenegro to require visas for five nationalities starting November 1, 2026 - VisasNews\n\nMontenegro to require visas for five nationalities starting November 1, 2026 VisasN",
+      "id": "6aea3df25a7c19a37cd113ba",
+      "text": "What travelers discover about Visa — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-03T09:44:16.521Z",
+      "published_at": "2026-11-03T22:03:06.270Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6ae991d53b00665c737f8e57",
+      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-11-03T20:48:46.426Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,33 +332,23 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ae2ed6a8d517922b235324c",
-      "text": "Alipay in China: Setup & Payment Tips (2026) | Visual guide to Alipay: what to see and capture.\n\nAlipay in China: Setup & Payment Tips (2026)\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-10-29T19:53:47.677Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
+    "instagram": {
+      "posts": 2,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0
+    },
     "facebook": {
-      "posts": 3,
+      "posts": 2,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "twitter": {
-      "posts": 7,
+      "posts": 6,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
@@ -357,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 20,
-  "impression_metric_count": 20,
+  "metrics_available_count": 19,
+  "impression_metric_count": 19,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-11-03"
+    "data_date": "2026-11-04"
   }
 }
