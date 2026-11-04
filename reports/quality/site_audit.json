@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-01T22:05:55.257951+00:00",
+  "generated_at": "2026-11-03T23:26:30.891226+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
-    "pages": 114,
-    "images_checked": 367,
-    "links_checked": 3071,
-    "issues": 7,
+    "pages": 115,
+    "images_checked": 413,
+    "links_checked": 3123,
+    "issues": 8,
     "P0": 0,
     "P1": 6,
-    "P2": 1
+    "P2": 2
   },
   "issues": [
     {
@@ -73,6 +73,15 @@
       "type": "duplicate_title",
       "page": "/free-itinerary/",
       "evidence": "2 pages share the title: Free 7-Day China Itinerary Template (2026)",
+      "recommended_action": "Differentiate titles for distinct search intent."
+    },
+    {
+      "id": "67d1033bd0326074",
+      "severity": "P2",
+      "source": "site",
+      "type": "duplicate_title",
+      "page": "/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
+      "evidence": "2 pages share the title: China Winter Travel Guide: Where to Go and How to Pack",
       "recommended_action": "Differentiate titles for distinct search intent."
     }
   ]
