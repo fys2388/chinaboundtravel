@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T19:15:27.013826+00:00",
+  "generated_at": "2026-11-04T20:30:41.144863+00:00",
   "summary": {
     "total": 21,
     "P0": 4,
@@ -28,7 +28,7 @@
     },
     "site": {
       "available": true,
-      "generated_at": "2026-11-03T23:26:30.891226+00:00",
+      "generated_at": "2026-11-04T19:48:38.580869+00:00",
       "issues": 8,
       "P0": 0,
       "P1": 6,
@@ -36,7 +36,7 @@
     },
     "visual": {
       "available": true,
-      "generated_at": "2026-11-04T00:08:34.007683+00:00",
+      "generated_at": "2026-11-04T20:30:41.073682+00:00",
       "issues": 1,
       "P0": 0,
       "P1": 1,
@@ -59,7 +59,7 @@
     },
     "site_health": {
       "available": true,
-      "generated_at": "2026-11-04T03:58:02.273748+00:00",
+      "generated_at": "2026-11-04T19:15:27.168741+00:00",
       "issues": 8,
       "P0": 0,
       "P1": 4,
@@ -79,7 +79,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-11-01T08:36:03.065906+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-frontmatter-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
@@ -93,7 +93,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-11-01T08:36:03.065906+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
@@ -107,7 +107,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-11-01T08:36:03.065906+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-frontmatter-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
@@ -121,7 +121,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-11-01T08:36:03.065906+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
@@ -135,7 +135,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-11-01T08:36:03.065906+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "1aaa7c65ea144270",
@@ -149,7 +149,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "a74a23a96bd7d7c0",
@@ -163,7 +163,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "2bcf4dbd5b00f7ec",
@@ -177,7 +177,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "f51ec0bdfb166959",
@@ -191,7 +191,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "e3e3a24d6f224f85",
@@ -205,7 +205,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "7c345dd7c9be459e",
@@ -219,10 +219,10 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-30T23:06:53.141955+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
-      "id": "site_health-4b32ddfe59fde9eb",
+      "id": "site_health-62fea9a6ac5216ea",
       "severity": "P1",
       "source": "site_health",
       "type": "draft_leak",
@@ -232,11 +232,11 @@
       "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-11-04T19:15:27.013826+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "first_seen": "2026-11-04T20:30:41.144863+00:00",
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
-      "id": "site_health-298e6e4ca03e0d9",
+      "id": "site_health-59b233cac8e4c9b5",
       "severity": "P1",
       "source": "site_health",
       "type": "garbled_text",
@@ -246,8 +246,8 @@
       "recommended_action": "[WL-006] content/_archived/ 目录存放已归档的历史文章，保留原始编码状态是设计意图（不修改历史内容）。这些文件不影响生产站点（已发布文章在 content/posts/ 有对应副本）。",
       "owner": "content",
       "status": "accepted_risk",
-      "first_seen": "2026-11-04T19:15:27.013826+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "first_seen": "2026-11-04T20:30:41.144863+00:00",
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -261,7 +261,7 @@
       "owner": "engineering",
       "status": "open",
       "first_seen": "2026-10-01T23:25:56.543892+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -275,7 +275,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-09-14T07:48:21.009166+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -289,7 +289,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -303,7 +303,7 @@
       "owner": "content",
       "status": "open",
       "first_seen": "2026-10-25T07:12:22.874361+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "f88a5fe66eae891f",
@@ -317,7 +317,7 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-10-24T21:35:23.367491+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
       "id": "67d1033bd0326074",
@@ -331,10 +331,10 @@
       "owner": "seo",
       "status": "open",
       "first_seen": "2026-11-04T00:08:34.094578+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
-      "id": "site_health-6916adeaed47f849",
+      "id": "site_health-37374732877f8bcd",
       "severity": "P2",
       "source": "site_health",
       "type": "ai_forbidden_word",
@@ -344,11 +344,11 @@
       "recommended_action": "无替换表: ai_forbidden_word",
       "owner": "content",
       "status": "need_manual",
-      "first_seen": "2026-11-04T19:15:27.013826+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "first_seen": "2026-11-04T20:30:41.144863+00:00",
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     },
     {
-      "id": "site_health-6dc6f78d7070d2a6",
+      "id": "site_health-5d459726e8c122b7",
       "severity": "P2",
       "source": "site_health",
       "type": "title_too_long",
@@ -358,8 +358,8 @@
       "recommended_action": "Review and remediate the reported issue.",
       "owner": "seo",
       "status": "open",
-      "first_seen": "2026-11-04T19:15:27.013826+00:00",
-      "last_seen": "2026-11-04T19:15:27.013826+00:00"
+      "first_seen": "2026-11-04T20:30:41.144863+00:00",
+      "last_seen": "2026-11-04T20:30:41.144863+00:00"
     }
   ]
 }
