@@ -172,6 +172,8 @@ For more information on China travel, check out these articles:
 
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## Related Reading
 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)

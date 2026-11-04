@@ -306,6 +306,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
 
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
 ## FAQ
 
 ### Is china 144 hour transit visa still valid in 2026?

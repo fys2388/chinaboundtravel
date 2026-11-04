@@ -9143,6 +9143,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-03T10:36:07.641159"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-04T10:40:00.693954"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:02.274094"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:03.737189"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-train-survival-guide-booking-classes-and-insider-tips -> best-china-itineraries-for-10-days-three-routes-compared-au",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:05.446536"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:07.166727"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:08.596581"
+    },
+    {
+      "type": "internal_link",
+      "target": "144-hour-visa-free-transit-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:10.060756"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:11.498527"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-photography-guide-capturing-the-wonders-of-the-middle-kingdom -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:12.942559"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> how-to-choose-your-first-city-in-china-a-decision-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:14.407616"
+    },
+    {
+      "type": "internal_link",
+      "target": "paypal-alipay-wechat-pay-qr-code-support -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:15.832693"
+    },
+    {
+      "type": "internal_link",
+      "target": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:17.271908"
+    },
+    {
+      "type": "internal_link",
+      "target": "zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:18.711681"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:20.210081"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:21.675595"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack-au -> china-airport-transfer-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:23.157565"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared-au -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:24.622706"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:26.117336"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-04T10:40:27.567623"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:29.026749"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-choose-your-first-city-in-china-a-decision-guide -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-11-04T10:40:30.470831"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:31.179593"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:31.667968"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:32.114008"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:32.549662"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:33.015665"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:33.451020"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:33.909944"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-choose-your-first-city-in-china-a-decision-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:34.387625"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:34.849971"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-04T10:40:35.312267"
     }
   ]
 }

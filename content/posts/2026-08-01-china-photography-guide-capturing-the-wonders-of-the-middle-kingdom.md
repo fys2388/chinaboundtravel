@@ -358,6 +358,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

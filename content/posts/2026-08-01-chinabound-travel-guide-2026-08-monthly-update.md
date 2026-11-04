@@ -205,6 +205,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
 
+- [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?

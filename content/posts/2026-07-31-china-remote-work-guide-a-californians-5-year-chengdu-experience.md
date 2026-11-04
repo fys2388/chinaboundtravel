@@ -164,3 +164,5 @@ So what are you waiting for? Start planning your China remote work adventure tod
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)

@@ -299,3 +299,5 @@ Questions about your Zhangjiajie trip? Drop a comment or DM us on Twitter — [@
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 
 - [How to Order Food Delivery in China: Meituan & Ele.me Guide for Foreigners (2026)](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)

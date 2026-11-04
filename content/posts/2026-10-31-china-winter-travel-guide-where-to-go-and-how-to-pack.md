@@ -153,3 +153,5 @@ You might also be interested in our [Xi'an Terracotta Army: History, Discovery, 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/)
 
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
