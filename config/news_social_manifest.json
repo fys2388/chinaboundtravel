@@ -386,11 +386,11 @@
     },
     "f194ce6dfb7d": {
       "title": "India-China visa update: What changes for Indian passport ho",
-      "posted_at": "2026-10-28T06:43:52.924304+00:00",
+      "posted_at": "2026-11-04T07:22:11.830406+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "92cc489c6fe1": {
       "title": "China updates visa application process for Indians, new rule",
@@ -719,9 +719,49 @@
         "x"
       ],
       "success": true
+    },
+    "1fbff28e83db": {
+      "title": "Hail risk in upper Thailand as South faces very heavy rain -",
+      "posted_at": "2026-11-04T07:22:13.878613+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "d381f6d09f17": {
+      "title": "China's tourist submersible designed to dive 200 meters - Vn",
+      "posted_at": "2026-11-04T07:22:15.655523+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "cb5f2ea78d65": {
+      "title": "China travel trade platform IC&GTE makes Penang debut - TTG ",
+      "posted_at": "2026-11-04T07:22:17.285387+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "97f805c03c3c": {
+      "title": "China pavilion turns heads at London tourism event - China D",
+      "posted_at": "2026-11-04T07:22:19.557817+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "b4f31ffd21de": {
+      "title": "Seychelles, China and the Art of Being Friends With Everyone",
+      "posted_at": "2026-11-04T07:22:20.965939+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-03T07:44:18.496507+00:00",
-  "total_posts": 71,
-  "total_failures": 53
+  "last_run": "2026-11-04T07:22:20.965958+00:00",
+  "total_posts": 76,
+  "total_failures": 54
 }
