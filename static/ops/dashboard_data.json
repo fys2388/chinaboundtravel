@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-06 02:00:55",
+  "generated_at": "2026-11-06 06:11:57",
   "site": {
     "url": "chinaboundtravel.com",
     "status": 200,
     "up": true,
-    "response_ms": 234,
+    "response_ms": 173,
     "server": "cloudflare"
   },
   "workflows": [
@@ -86,7 +86,7 @@
       "id": "content-rotation",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-11-05T08:46:12Z",
+      "last_run": "2026-11-05T20:53:23Z",
       "last_event": "schedule"
     },
     {
@@ -122,7 +122,7 @@
       "id": "deploy-cloudflare-pages",
       "frequency": "手动",
       "last_status": "success",
-      "last_run": "2026-11-05T17:31:10Z",
+      "last_run": "2026-11-05T18:01:23Z",
       "last_event": "workflow_dispatch"
     },
     {
@@ -158,7 +158,7 @@
       "id": "error-alert",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-11-05T17:31:17Z",
+      "last_run": "2026-11-05T20:53:48Z",
       "last_event": "workflow_run"
     },
     {
@@ -248,8 +248,8 @@
       "id": "ops-dashboard-hourly",
       "frequency": "每日",
       "last_status": "",
-      "last_run": "2026-11-05T18:00:27Z",
-      "last_event": "workflow_dispatch"
+      "last_run": "2026-11-05T22:11:32Z",
+      "last_event": "schedule"
     },
     {
       "file": "purge-cache.yml",
@@ -266,7 +266,7 @@
       "id": "quality-monitor",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-11-05T06:51:16Z",
+      "last_run": "2026-11-05T19:58:55Z",
       "last_event": "schedule"
     },
     {
@@ -284,7 +284,7 @@
       "id": "retry-failed",
       "frequency": "手动",
       "last_status": "skipped",
-      "last_run": "2026-11-05T17:31:22Z",
+      "last_run": "2026-11-05T20:53:51Z",
       "last_event": "workflow_run"
     },
     {
@@ -329,7 +329,7 @@
       "id": "site-health-daily",
       "frequency": "每周",
       "last_status": "success",
-      "last_run": "2026-11-05T04:18:15Z",
+      "last_run": "2026-11-05T19:24:13Z",
       "last_event": "schedule"
     },
     {
@@ -356,7 +356,7 @@
       "id": "social-engine-daily",
       "frequency": "每日",
       "last_status": "success",
-      "last_run": "2026-11-05T07:49:35Z",
+      "last_run": "2026-11-05T20:31:40Z",
       "last_event": "schedule"
     },
     {
@@ -433,7 +433,7 @@
     }
   ],
   "agents": {
-    "checked_at": "2026-11-05 18:01",
+    "checked_at": "2026-11-05 22:12",
     "overall": "✅ 健康",
     "kill_switch": "✅ 未激活",
     "unified_report": {
@@ -601,589 +601,20 @@
       "date": "2026-11-05"
     },
     "ga4_daily": {
-      "visitors": 4,
-      "sessions": 4,
-      "pageviews": 4,
-      "new_users": 681,
-      "bounce_rate": 52.4,
-      "date": "2026-11-05",
-      "status": "OK",
-      "daily": [
-        {
-          "date": "2026-08-08",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 21
-        },
-        {
-          "date": "2026-08-09",
-          "sessions": 1,
-          "activeUsers": 0,
-          "pageviews": 1
-        },
-        {
-          "date": "2026-08-10",
-          "sessions": 5,
-          "activeUsers": 5,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-08-11",
-          "sessions": 11,
-          "activeUsers": 10,
-          "pageviews": 11
-        },
-        {
-          "date": "2026-08-12",
-          "sessions": 10,
-          "activeUsers": 10,
-          "pageviews": 15
-        },
-        {
-          "date": "2026-08-13",
-          "sessions": 7,
-          "activeUsers": 6,
-          "pageviews": 9
-        },
-        {
-          "date": "2026-08-14",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 3
-        },
-        {
-          "date": "2026-08-15",
-          "sessions": 1,
-          "activeUsers": 1,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-08-16",
-          "sessions": 4,
-          "activeUsers": 2,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-08-17",
-          "sessions": 1,
-          "activeUsers": 0,
-          "pageviews": 1
-        },
-        {
-          "date": "2026-08-18",
-          "sessions": 4,
-          "activeUsers": 3,
-          "pageviews": 65
-        },
-        {
-          "date": "2026-08-19",
-          "sessions": 7,
-          "activeUsers": 7,
-          "pageviews": 7
-        },
-        {
-          "date": "2026-08-20",
-          "sessions": 38,
-          "activeUsers": 38,
-          "pageviews": 38
-        },
-        {
-          "date": "2026-08-21",
-          "sessions": 23,
-          "activeUsers": 23,
-          "pageviews": 23
-        },
-        {
-          "date": "2026-08-22",
-          "sessions": 24,
-          "activeUsers": 24,
-          "pageviews": 32
-        },
-        {
-          "date": "2026-08-24",
-          "sessions": 11,
-          "activeUsers": 7,
-          "pageviews": 97
-        },
-        {
-          "date": "2026-08-25",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-08-26",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 3
-        },
-        {
-          "date": "2026-08-27",
-          "sessions": 7,
-          "activeUsers": 7,
-          "pageviews": 7
-        },
-        {
-          "date": "2026-08-28",
-          "sessions": 12,
-          "activeUsers": 12,
-          "pageviews": 12
-        },
-        {
-          "date": "2026-08-29",
-          "sessions": 14,
-          "activeUsers": 14,
-          "pageviews": 16
-        },
-        {
-          "date": "2026-08-30",
-          "sessions": 15,
-          "activeUsers": 13,
-          "pageviews": 15
-        },
-        {
-          "date": "2026-08-31",
-          "sessions": 28,
-          "activeUsers": 22,
-          "pageviews": 69
-        },
-        {
-          "date": "2026-09-01",
-          "sessions": 21,
-          "activeUsers": 15,
-          "pageviews": 40
-        },
-        {
-          "date": "2026-09-02",
-          "sessions": 12,
-          "activeUsers": 5,
-          "pageviews": 91
-        },
-        {
-          "date": "2026-09-03",
-          "sessions": 19,
-          "activeUsers": 12,
-          "pageviews": 45
-        },
-        {
-          "date": "2026-09-04",
-          "sessions": 25,
-          "activeUsers": 18,
-          "pageviews": 54
-        },
-        {
-          "date": "2026-09-05",
-          "sessions": 14,
-          "activeUsers": 9,
-          "pageviews": 18
-        },
-        {
-          "date": "2026-09-06",
-          "sessions": 24,
-          "activeUsers": 17,
-          "pageviews": 38
-        },
-        {
-          "date": "2026-09-07",
-          "sessions": 24,
-          "activeUsers": 15,
-          "pageviews": 63
-        },
-        {
-          "date": "2026-09-08",
-          "sessions": 12,
-          "activeUsers": 5,
-          "pageviews": 19
-        },
-        {
-          "date": "2026-09-09",
-          "sessions": 8,
-          "activeUsers": 3,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-09-10",
-          "sessions": 20,
-          "activeUsers": 17,
-          "pageviews": 21
-        },
-        {
-          "date": "2026-09-11",
-          "sessions": 2,
-          "activeUsers": 1,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-09-12",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-09-13",
-          "sessions": 12,
-          "activeUsers": 8,
-          "pageviews": 13
-        },
-        {
-          "date": "2026-09-14",
-          "sessions": 7,
-          "activeUsers": 7,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-09-15",
-          "sessions": 5,
-          "activeUsers": 4,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-09-16",
-          "sessions": 15,
-          "activeUsers": 12,
-          "pageviews": 16
-        },
-        {
-          "date": "2026-09-17",
-          "sessions": 11,
-          "activeUsers": 10,
-          "pageviews": 14
-        },
-        {
-          "date": "2026-09-18",
-          "sessions": 9,
-          "activeUsers": 7,
-          "pageviews": 9
-        },
-        {
-          "date": "2026-09-19",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-09-20",
-          "sessions": 12,
-          "activeUsers": 11,
-          "pageviews": 23
-        },
-        {
-          "date": "2026-09-21",
-          "sessions": 15,
-          "activeUsers": 11,
-          "pageviews": 24
-        },
-        {
-          "date": "2026-09-22",
-          "sessions": 12,
-          "activeUsers": 9,
-          "pageviews": 15
-        },
-        {
-          "date": "2026-09-23",
-          "sessions": 5,
-          "activeUsers": 4,
-          "pageviews": 5
-        },
-        {
-          "date": "2026-09-24",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-09-25",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 3
-        },
-        {
-          "date": "2026-09-26",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-09-27",
-          "sessions": 23,
-          "activeUsers": 22,
-          "pageviews": 22
-        },
-        {
-          "date": "2026-09-28",
-          "sessions": 5,
-          "activeUsers": 5,
-          "pageviews": 5
-        },
-        {
-          "date": "2026-09-29",
-          "sessions": 5,
-          "activeUsers": 5,
-          "pageviews": 6
-        },
-        {
-          "date": "2026-09-30",
-          "sessions": 13,
-          "activeUsers": 13,
-          "pageviews": 13
-        },
-        {
-          "date": "2026-10-01",
-          "sessions": 23,
-          "activeUsers": 20,
-          "pageviews": 20
-        },
-        {
-          "date": "2026-10-02",
-          "sessions": 13,
-          "activeUsers": 12,
-          "pageviews": 13
-        },
-        {
-          "date": "2026-10-03",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-10-04",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-10-05",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-10-06",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 5
-        },
-        {
-          "date": "2026-10-07",
-          "sessions": 15,
-          "activeUsers": 12,
-          "pageviews": 12
-        },
-        {
-          "date": "2026-10-08",
-          "sessions": 12,
-          "activeUsers": 12,
-          "pageviews": 14
-        },
-        {
-          "date": "2026-10-09",
-          "sessions": 21,
-          "activeUsers": 20,
-          "pageviews": 20
-        },
-        {
-          "date": "2026-10-10",
-          "sessions": 7,
-          "activeUsers": 7,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-10-11",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 3
-        },
-        {
-          "date": "2026-10-12",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-10-13",
-          "sessions": 12,
-          "activeUsers": 12,
-          "pageviews": 13
-        },
-        {
-          "date": "2026-10-14",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 3
-        },
-        {
-          "date": "2026-10-16",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-10-17",
-          "sessions": 13,
-          "activeUsers": 13,
-          "pageviews": 13
-        },
-        {
-          "date": "2026-10-18",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-10-19",
-          "sessions": 5,
-          "activeUsers": 5,
-          "pageviews": 5
-        },
-        {
-          "date": "2026-10-20",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-10-21",
-          "sessions": 8,
-          "activeUsers": 8,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-10-22",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-10-23",
-          "sessions": 1,
-          "activeUsers": 1,
-          "pageviews": 0
-        },
-        {
-          "date": "2026-10-24",
-          "sessions": 10,
-          "activeUsers": 10,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-10-25",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-10-26",
-          "sessions": 2,
-          "activeUsers": 2,
-          "pageviews": 2
-        },
-        {
-          "date": "2026-10-27",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 4
-        },
-        {
-          "date": "2026-10-28",
-          "sessions": 7,
-          "activeUsers": 2,
-          "pageviews": 21
-        },
-        {
-          "date": "2026-10-29",
-          "sessions": 7,
-          "activeUsers": 7,
-          "pageviews": 7
-        },
-        {
-          "date": "2026-10-30",
-          "sessions": 11,
-          "activeUsers": 11,
-          "pageviews": 11
-        },
-        {
-          "date": "2026-10-31",
-          "sessions": 10,
-          "activeUsers": 10,
-          "pageviews": 10
-        },
-        {
-          "date": "2026-11-02",
-          "sessions": 8,
-          "activeUsers": 7,
-          "pageviews": 8
-        },
-        {
-          "date": "2026-11-03",
-          "sessions": 12,
-          "activeUsers": 11,
-          "pageviews": 11
-        },
-        {
-          "date": "2026-11-04",
-          "sessions": 3,
-          "activeUsers": 3,
-          "pageviews": 9
-        },
-        {
-          "date": "2026-11-05",
-          "sessions": 4,
-          "activeUsers": 4,
-          "pageviews": 4
-        }
-      ],
-      "ranges": {
-        "today": {
-          "visitors": 4,
-          "sessions": 4,
-          "pageviews": 4,
-          "date_range": "2026-11-05 ~ 2026-11-05",
-          "days": 1
-        },
-        "yesterday": {
-          "visitors": 3,
-          "sessions": 3,
-          "pageviews": 9,
-          "date_range": "2026-11-04 ~ 2026-11-04",
-          "days": 1
-        },
-        "7d": {
-          "visitors": 53,
-          "sessions": 55,
-          "pageviews": 60,
-          "date_range": "2026-10-29 ~ 2026-11-05",
-          "days": 7
-        },
-        "30d": {
-          "visitors": 202,
-          "sessions": 213,
-          "pageviews": 235,
-          "date_range": "2026-10-05 ~ 2026-11-05",
-          "days": 30
-        },
-        "90d": {
-          "visitors": 729,
-          "sessions": 848,
-          "pageviews": 1352,
-          "date_range": "2026-08-08 ~ 2026-11-05",
-          "days": 87
-        },
-        "last_month": {
-          "visitors": 213,
-          "sessions": 226,
-          "pageviews": 240,
-          "date_range": "2026-10-01 ~ 2026-10-31",
-          "days": 30
-        }
-      },
-      "is_real_data": true,
+      "visitors": 0,
+      "sessions": 0,
+      "pageviews": 0,
+      "status": "API_ERROR",
+      "date": "",
+      "daily": [],
+      "is_real_data": false,
       "freshness": {
         "name": "ga4_daily",
-        "updated_at": "2026-11-05",
-        "age_days": 0,
+        "updated_at": "",
+        "age_days": null,
         "threshold_days": 2,
-        "status": "fresh",
-        "label": "实时"
+        "status": "missing",
+        "label": "数据缺失（API status=API_ERROR）"
       }
     },
     "gsc_daily": {
@@ -1878,12 +1309,12 @@
     {
       "name": "GA4",
       "configured": true,
-      "status": "ok",
-      "updated_at": "2026-11-05",
-      "age_days": 0,
+      "status": "API_ERROR",
+      "updated_at": "",
+      "age_days": null,
       "threshold_days": 2,
-      "freshness_status": "fresh",
-      "freshness_label": "实时"
+      "freshness_status": "missing",
+      "freshness_label": "数据缺失（API status=API_ERROR）"
     },
     {
       "name": "GSC",
@@ -1955,12 +1386,12 @@
     "auto_fixed": 0,
     "pending": 5,
     "resolved": 16,
-    "timestamp": "2026-11-05T04:18:41.003980+00:00",
+    "timestamp": "2026-11-05T19:24:33.902691+00:00",
     "checks": 16
   },
   "quality": {
     "available": true,
-    "generated_at": "2026-11-05T18:00:55.289855+00:00",
+    "generated_at": "2026-11-05T22:11:56.721817+00:00",
     "total": 21,
     "P0": 4,
     "P1": 10,
@@ -1987,7 +1418,7 @@
       },
       "site": {
         "available": true,
-        "generated_at": "2026-11-04T19:48:38.580869+00:00",
+        "generated_at": "2026-11-05T20:00:09.686590+00:00",
         "issues": 8,
         "P0": 0,
         "P1": 6,
@@ -1995,7 +1426,7 @@
       },
       "visual": {
         "available": true,
-        "generated_at": "2026-11-04T20:30:41.073682+00:00",
+        "generated_at": "2026-11-05T20:42:11.931664+00:00",
         "issues": 1,
         "P0": 0,
         "P1": 1,
@@ -2018,7 +1449,7 @@
       },
       "site_health": {
         "available": true,
-        "generated_at": "2026-11-05T04:18:41.003980+00:00",
+        "generated_at": "2026-11-05T19:24:33.902691+00:00",
         "issues": 8,
         "P0": 0,
         "P1": 4,
@@ -2038,7 +1469,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-11-01T08:36:03.065906+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-frontmatter-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
@@ -2052,7 +1483,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-11-01T08:36:03.065906+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
@@ -2066,7 +1497,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-11-01T08:36:03.065906+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-frontmatter-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
@@ -2080,7 +1511,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-11-01T08:36:03.065906+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
@@ -2094,7 +1525,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-11-01T08:36:03.065906+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "1aaa7c65ea144270",
@@ -2108,7 +1539,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "a74a23a96bd7d7c0",
@@ -2122,7 +1553,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "2bcf4dbd5b00f7ec",
@@ -2136,7 +1567,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "f51ec0bdfb166959",
@@ -2150,7 +1581,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "e3e3a24d6f224f85",
@@ -2164,7 +1595,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "7c345dd7c9be459e",
@@ -2178,24 +1609,24 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-30T23:06:53.141955+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
-        "id": "site_health-305e801d08f473dd",
+        "id": "site_health-290fe7098bcd56f5",
         "severity": "P1",
         "source": "site_health",
         "type": "draft_leak",
         "title": "draft_leak",
-        "page": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
+        "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
         "evidence": "draft:true的文章可能已发布到线上",
         "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
         "owner": "content",
         "status": "accepted_risk",
-        "first_seen": "2026-11-05T18:00:55.289855+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "first_seen": "2026-11-05T22:11:56.721817+00:00",
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
-        "id": "site_health-3f19bba9605dc3ec",
+        "id": "site_health-15a2985539952558",
         "severity": "P1",
         "source": "site_health",
         "type": "garbled_text",
@@ -2205,8 +1636,8 @@
         "recommended_action": "[WL-006] content/_archived/ 目录存放已归档的历史文章，保留原始编码状态是设计意图（不修改历史内容）。这些文件不影响生产站点（已发布文章在 content/posts/ 有对应副本）。",
         "owner": "content",
         "status": "accepted_risk",
-        "first_seen": "2026-11-05T18:00:55.289855+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "first_seen": "2026-11-05T22:11:56.721817+00:00",
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "eda93581fbec80e3",
@@ -2220,7 +1651,7 @@
         "owner": "engineering",
         "status": "open",
         "first_seen": "2026-10-01T23:25:56.543892+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -2234,7 +1665,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-09-14T07:48:21.009166+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
@@ -2248,7 +1679,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-25T07:12:22.874361+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
@@ -2262,7 +1693,7 @@
         "owner": "content",
         "status": "open",
         "first_seen": "2026-10-25T07:12:22.874361+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "f88a5fe66eae891f",
@@ -2276,7 +1707,7 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-10-24T21:35:23.367491+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
         "id": "67d1033bd0326074",
@@ -2290,10 +1721,10 @@
         "owner": "seo",
         "status": "open",
         "first_seen": "2026-11-04T00:08:34.094578+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
-        "id": "site_health-6724fee36c21d47b",
+        "id": "site_health-68813b5c73dd0ac9",
         "severity": "P2",
         "source": "site_health",
         "type": "ai_forbidden_word",
@@ -2303,11 +1734,11 @@
         "recommended_action": "无替换表: ai_forbidden_word",
         "owner": "content",
         "status": "need_manual",
-        "first_seen": "2026-11-05T18:00:55.289855+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "first_seen": "2026-11-05T22:11:56.721817+00:00",
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       },
       {
-        "id": "site_health-6cbd3f6e2236da23",
+        "id": "site_health-3760697fa050652a",
         "severity": "P2",
         "source": "site_health",
         "type": "title_too_long",
@@ -2317,8 +1748,8 @@
         "recommended_action": "Review and remediate the reported issue.",
         "owner": "seo",
         "status": "open",
-        "first_seen": "2026-11-05T18:00:55.289855+00:00",
-        "last_seen": "2026-11-05T18:00:55.289855+00:00"
+        "first_seen": "2026-11-05T22:11:56.721817+00:00",
+        "last_seen": "2026-11-05T22:11:56.721817+00:00"
       }
     ]
   },
@@ -2345,7 +1776,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-11-05T18:00:55.657310"
+        "last_run": "2026-11-05T22:11:57.045567"
       },
       "content": {
         "total": 1,
@@ -2353,7 +1784,7 @@
         "failed": 0,
         "manual_review": 1,
         "in_progress": 0,
-        "last_run": "2026-11-05T18:00:55.795282"
+        "last_run": "2026-11-05T22:11:57.239546"
       },
       "ops": {
         "total": 1,
@@ -2370,7 +1801,7 @@
     "reason": "OK"
   },
   "data_freshness": {
-    "generated_at": "2026-11-06 02:00:55",
+    "generated_at": "2026-11-06 06:11:57",
     "thresholds": {
       "ga4_daily": 2,
       "gsc_daily": 5,
@@ -2383,17 +1814,19 @@
       "quality": 2,
       "agent_execution": 2
     },
-    "overall": "fresh",
-    "overall_label": "全部数据源均在阈值内",
-    "warnings": [],
+    "overall": "missing",
+    "overall_label": "存在数据缺失的源（详见 warnings）",
+    "warnings": [
+      "[MISSING] 数据缺失（API status=API_ERROR）"
+    ],
     "sources": {
       "ga4_daily": {
         "name": "ga4_daily",
-        "updated_at": "2026-11-05",
-        "age_days": 0,
+        "updated_at": "",
+        "age_days": null,
         "threshold_days": 2,
-        "status": "fresh",
-        "label": "实时"
+        "status": "missing",
+        "label": "数据缺失（API status=API_ERROR）"
       },
       "gsc_daily": {
         "name": "gsc_daily",
@@ -2445,7 +1878,7 @@
       },
       "site_health": {
         "name": "site_health",
-        "updated_at": "2026-11-05T04:18:41.003980+00:00",
+        "updated_at": "2026-11-05T19:24:33.902691+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2453,7 +1886,7 @@
       },
       "quality": {
         "name": "quality",
-        "updated_at": "2026-11-05T18:00:55.289855+00:00",
+        "updated_at": "2026-11-05T22:11:56.721817+00:00",
         "age_days": 0,
         "threshold_days": 2,
         "status": "fresh",
@@ -2469,7 +1902,7 @@
       }
     },
     "publish_path_gap": {
-      "dashboard_generated_at": "2026-11-06 02:00:55",
+      "dashboard_generated_at": "2026-11-06 06:11:57",
       "agent_kpi_updated_at": "2026-11-01T08:40:42.528871",
       "agent_kpi_age_days": 4,
       "agent_kpi_threshold_days": 35,
