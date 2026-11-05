@@ -213,3 +213,5 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

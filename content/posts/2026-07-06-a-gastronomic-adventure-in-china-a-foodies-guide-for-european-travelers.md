@@ -301,3 +301,5 @@ If you found this guide helpful, [check out our other China travel guides](/post
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
+
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)

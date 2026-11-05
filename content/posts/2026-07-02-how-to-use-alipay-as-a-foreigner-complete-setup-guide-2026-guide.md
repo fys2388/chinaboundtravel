@@ -194,6 +194,8 @@ Account restrictions usually happen when Alipay's security system flags unusual 
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
 ## FAQ
 
 ### Can foreigners use how to use alipay?

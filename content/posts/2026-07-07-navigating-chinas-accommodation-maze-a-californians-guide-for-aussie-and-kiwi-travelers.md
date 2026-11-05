@@ -160,6 +160,8 @@ Finding the well-suited accommodation in China can be a challenge, but with a li
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?
