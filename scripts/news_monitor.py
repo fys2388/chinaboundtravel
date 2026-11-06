@@ -63,6 +63,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 BLOG_ROOT = SCRIPT_DIR.parent
 CONFIG_DIR = BLOG_ROOT / "config"
 OUTPUT_PATH = CONFIG_DIR / "news_digest.json"
+# 官方政策事实快照：用于"官方公告变化检测"（policy change detection）
+OFFICIAL_STATE_PATH = CONFIG_DIR / "official_policy_state.json"
 
 SITE_DOMAIN = "chinaboundtravel.com"
 
@@ -83,7 +85,7 @@ CN_STOPWORDS = set("""
 GOOGLE_NEWS_FEEDS = {
     "visa_policy": [
         "China+visa+policy+2026",
-        "China+visa+free+transit+144+hour",
+        "China+visa+free+transit+240+hour",
         "China+entry+policy+foreign+travelers",
         "China+passport+policy+update",
     ],
@@ -115,27 +117,37 @@ DIRECT_RSS_FEEDS = [
 ]
 
 # Visa / policy sources to check
+# Official government policy pages — authoritative sources only.
+# NOTE: URLs verified reachable (2026-11). The old NIA index URL (n741490/n741898) is 404,
+# so it is replaced by the live NIA transit-policy page + the State Council (gov.cn) pages.
 POLICY_SOURCES = [
     {
-        "name": "Chinese Consular Service",
-        "url": "https://cs.mfa.gov.cn/gxwyl/dwqzl/ocny/",
+        "name": "State Council (EN) 240-hour policy",
+        "url": "https://english.www.gov.cn/policies/featured/202412/20/content_WS676548cbc6d0868f4e8ee28f.html",
         "type": "page",
         "category": "visa_policy",
-        "description": "Foreign nationals visiting China — official policy",
+        "description": "China's 240-hour visa-free transit policy (State Council, updated 2026-08)",
     },
     {
-        "name": "NIA 144-hour Transit",
-        "url": "https://www.nia.gov.cn/n741490/n741898/index.html",
+        "name": "NIA visa-free transit policy",
+        "url": "https://www.nia.gov.cn/n741440/n741577/c1731205/content.html",
         "type": "page",
         "category": "visa_policy",
-        "description": "144-hour visa-free transit policy",
+        "description": "240-hour visa-free transit policy (China National Immigration Administration)",
+    },
+    {
+        "name": "State Council 57-country notice",
+        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
+        "type": "page",
+        "category": "visa_policy",
+        "description": "China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
     },
 ]
 
 # DuckDuckGo Instant Answer search topics
 DDG_SEARCH_TOPICS = [
     ("visa_policy", "China visa policy 2026 changes"),
-    ("visa_policy", "144 hour visa free transit China 2026"),
+    ("visa_policy", "240 hour visa free transit China 2026"),
     ("travel_industry", "China inbound tourism 2026 news"),
     ("travel_industry", "China travel restrictions 2026 update"),
     ("destination_news", "China new tourist attractions 2026"),
@@ -265,6 +277,107 @@ def parse_date(date_str: str) -> str:
 
 
 # ══════════════════════════════════════════════════════════════════════
+# 官方政策事实提取 + 快照变化检测（以官方公告为准）
+# ══════════════════════════════════════════════════════════════════════
+
+# 政策事实提取模式（中英双语）。每个字段从官方页面文本中提取关键数字。
+POLICY_FACT_PATTERNS = {
+    # 过境免签时长（小时）：只匹配 72 / 144 / 240 政策锚点，兼容 "240小时" / "240-hour"
+    "hours": r"(?:过境免签|transit)[^\n]{0,40}?(72|144|240)\s*[- ]?\s*(?:小时|hours?|hour)\b|(72|144|240)\s*[- ]?\s*(?:小时|hours?|hour)\b",
+    # 适用国家数（兼容 "57个国家" / "57国"）
+    "countries": r"(\d{2,3})\s*(?:个)?\s*国(?:家)?(?:的|公民|护照)?",
+    # 开放口岸数
+    "ports": r"(\d{2,3})\s*(?:个)?(?:口岸|ports?|entry\s+point)",
+    # 覆盖省份数
+    "provinces": r"(\d{2,3})\s*(?:个)?(?:省|provinces?|regions?)",
+}
+
+
+def extract_policy_facts(text: str) -> dict:
+    """从官方公告页面文本中提取政策事实签名。
+
+    只提取政策锚点数字（如 240 小时、57 国、65 口岸、24 省、10 天），
+    返回 {field: value}。提取不到的不含在结果里。
+    """
+    facts: Dict[str, int] = {}
+    if not text:
+        return facts
+    # 去除 HTML 标签与实体，让"240小时 / 57个国家 / 65个口岸"等连续文本可匹配
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"&#?\w+;", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    # 页面里常含多个数字，政策相关字段取"最常见/最大"的值作为锚点，
+    # 但 hours 用政策锚点（72/144/240）优先。
+    for field, pattern in POLICY_FACT_PATTERNS.items():
+        try:
+            if field == "hours":
+                m = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
+                if m:
+                    val = m.group(1) or m.group(2)
+                    if val:
+                        facts["hours"] = int(val)
+            else:
+                # 收集所有匹配，取众数（出现最多的值），无则取最大值
+                vals = [int(x) for x in re.findall(pattern, text, re.IGNORECASE | re.DOTALL)]
+                if not vals:
+                    continue
+                # 排除明显过大的（如年份 2026）——政策数字应 < 500
+                vals = [v for v in vals if 0 < v < 500]
+                if not vals:
+                    continue
+                counts = {}
+                for v in vals:
+                    counts[v] = counts.get(v, 0) + 1
+                best = max(counts.items(), key=lambda kv: (kv[1], kv[0]))[0]
+                facts[field] = best
+        except Exception:
+            continue
+    return facts
+
+
+def load_official_state() -> dict:
+    """读取上次官方政策事实快照；不存在则返回空。"""
+    if OFFICIAL_STATE_PATH.exists():
+        try:
+            with open(OFFICIAL_STATE_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
+def save_official_state(state: dict):
+    """保存官方政策事实快照。"""
+    try:
+        CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+        with open(OFFICIAL_STATE_PATH, "w", encoding="utf-8") as f:
+            json.dump(state, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"  [WARN] save official state failed: {e}")
+
+
+def detect_policy_change(new_facts: dict, old_facts: dict) -> dict | None:
+    """对比新旧政策事实，返回变化描述（changed fields）；无变化返回 None。
+
+    只有官方事实出现实质变化（时长/国家数/口岸数/省份数/天数不同）才算变化。
+    """
+    if not new_facts:
+        return None
+    if not old_facts:
+        # 首次建立基线：不视为"变化"，但记录（避免首跑就误报）
+        return None
+    changed = {}
+    for field, val in new_facts.items():
+        if field in old_facts and old_facts[field] != val:
+            changed[field] = {"old": old_facts[field], "new": val}
+        elif field not in old_facts:
+            changed[field] = {"old": None, "new": val}
+    if not changed:
+        return None
+    return {"changed_fields": changed, "detected_at": datetime.now(timezone.utc).isoformat()}
+
+
+# ══════════════════════════════════════════════════════════════════════
 # 采集器
 # ══════════════════════════════════════════════════════════════════════
 
@@ -275,6 +388,8 @@ class NewsCollector:
     def __init__(self, session: requests.Session):
         self.session = session
         self.collected: Dict[str, List[dict]] = {}
+        # 官方政策事实（跨来源合并），供变化检测
+        self.policy_facts: Dict[str, int] = {}
 
     def _add(self, category: str, item: dict):
         cat = item.get("category") or classify_item(item.get("title", ""), item.get("summary", ""))
@@ -498,7 +613,11 @@ class NewsCollector:
 
     # ── 4. 签证政策页面抓取 ──────────────────────────────────────────
     def fetch_policy_pages(self) -> int:
-        """抓取官方签证政策页面，提取最新动态。"""
+        """抓取官方签证政策页面，提取最新动态 + 政策事实签名。
+
+        除提取标题当新闻条目外，还从页面文本提取政策事实（240 小时 / 57 国 /
+        65 口岸 / 24 省 / 10 天），供 detect_policy_change 做"官方公告变化检测"。
+        """
         count = 0
         for source in POLICY_SOURCES:
             try:
@@ -507,12 +626,23 @@ class NewsCollector:
                     print(f"  [WARN] Policy page {source['name']} -> HTTP {resp.status_code}")
                     continue
 
-                # 尝试提取页面中的文章/公告列表
-                html = resp.text
+                # 官方页（gov.cn / nia.gov.cn）常被 requests 误判为 ISO-8859-1，
+                # 实际为 UTF-8 —— 强制按 UTF-8 解码，避免中文乱码导致事实提取失败。
+                try:
+                    html = resp.content.decode("utf-8", errors="ignore")
+                except Exception:
+                    html = resp.text
                 title = source["name"]
 
-                # 简单提取标题和内容块
-                # 查找 h2/h3/strong 标签
+                # 提取政策事实（以官方公告为准）
+                page_facts = extract_policy_facts(html)
+                for k, v in page_facts.items():
+                    # 合并：同一字段取更"保守"（更严格）的值？
+                    # 官方多个页面应一致；不一致时以最大值（最新放宽）为准。
+                    if k not in self.policy_facts or v > self.policy_facts[k]:
+                        self.policy_facts[k] = v
+
+                # 简单提取标题和内容块（保留原有逻辑，作为"新闻条目"）
                 title_pattern = re.compile(
                     r"<(?:h[1-3]|strong|a)[^>]*>([^<]{10,200})</(?:h[1-3]|strong|a)>",
                     re.IGNORECASE | re.DOTALL
@@ -532,7 +662,7 @@ class NewsCollector:
                     is_relevant = any(kw in t_lower for kw in [
                         "visa", "visa", "签证", "transit", "入境", "出境",
                         "immigration", "policy", "policy", "rules", "regulations",
-                        "entry", "travel", "foreign", "passport",
+                        "entry", "travel", "foreign", "passport", "免签", "240",
                     ])
                     if not is_relevant:
                         continue
@@ -556,7 +686,7 @@ class NewsCollector:
             except Exception as e:
                 print(f"  [WARN] Policy page error ({source['name']}): {e}")
 
-        print(f"  [OK] Policy pages: {count} items")
+        print(f"  [OK] Policy pages: {count} items, facts={self.policy_facts}")
         return count
 
     # ── 汇总 ──────────────────────────────────────────────────────────
@@ -714,6 +844,26 @@ def run(dry_run: bool = False, count: int = 10, sources: str = "all"):
     # 构建输出
     output = build_output(digest, max_per_category=count)
 
+    # ── 官方公告变化检测（以官方公告为准） ──────────────────────────
+    old_state = load_official_state()
+    old_facts = old_state.get("facts", {})
+    policy_change = detect_policy_change(collector.policy_facts, old_facts)
+    new_state = {
+        "facts": collector.policy_facts,
+        "sources": [s["url"] for s in POLICY_SOURCES],
+        "last_checked": datetime.now(timezone.utc).isoformat(),
+        "last_change": old_state.get("last_change"),
+    }
+    if policy_change:
+        new_state["last_change"] = policy_change["detected_at"]
+    output["official_facts"] = collector.policy_facts
+    output["policy_change"] = policy_change
+    output["official_state_checked_at"] = new_state["last_checked"]
+    if policy_change:
+        print(f"  [POLICY CHANGE] {policy_change['changed_fields']}")
+    else:
+        print(f"  [NO POLICY CHANGE] official facts={collector.policy_facts or 'unavailable'}")
+
     # 显示摘要
     if not dry_run:
         print("\n── Preview (LLM-friendly) ──")
@@ -732,6 +882,10 @@ def run(dry_run: bool = False, count: int = 10, sources: str = "all"):
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\n[OK] Written to {OUTPUT_PATH}")
+
+    # 保存官方政策事实快照（供下次变化检测 + policy_content_sync 读取）
+    save_official_state(new_state)
+    print(f"[OK] Official policy state saved to {OFFICIAL_STATE_PATH}")
 
     # 飞书通知
     send_feishu_notification(output)

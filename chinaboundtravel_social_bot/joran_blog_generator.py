@@ -1123,9 +1123,9 @@ class AIEngine:
     def generate_post(self, topic, geo_region):
         # Geo-region affects CONTENT DETAILS (currency, visa notes), NOT persona voice
         region_context = {
-            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 144-hour visa-free transit in China", "audience_hint": "International travelers from Europe who want authentic, practical China travel advice"},
-            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 144-hour visa-free transit in China", "audience_hint": "American travelers looking for insider China tips from a fellow American expat"},
-            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 144-hour visa-free transit in China", "audience_hint": "Travelers from Australia and New Zealand seeking practical China travel guidance"}
+            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 240-hour visa-free transit in China", "audience_hint": "International travelers from Europe who want authentic, practical China travel advice"},
+            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 240-hour visa-free transit in China", "audience_hint": "American travelers looking for insider China tips from a fellow American expat"},
+            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 240-hour visa-free transit in China", "audience_hint": "Travelers from Australia and New Zealand seeking practical China travel guidance"}
         }
         
         # 构建SEO关键词提示（从外部数据）
@@ -1259,9 +1259,9 @@ Output ONLY the article content with proper Markdown formatting."""
     def rewrite_post(self, content, topic, geo_region, quality_issues=None):
         # Geo-region affects content details, not persona voice
         region_context = {
-            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 144-hour visa-free transit in China"},
-            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 144-hour visa-free transit in China"},
-            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 144-hour visa-free transit in China"}
+            "EU": {"currency": "EUR", "origin": "Europe", "visa_note": "Schengen visa holders may qualify for 240-hour visa-free transit in China"},
+            "US": {"currency": "USD", "origin": "the US/California", "visa_note": "US passport holders qualify for 240-hour visa-free transit in China"},
+            "AU": {"currency": "AUD", "origin": "Australia/New Zealand", "visa_note": "Australian passport holders qualify for 240-hour visa-free transit in China"}
         }
         
         # 构建站点文章索引（用于准确内链）

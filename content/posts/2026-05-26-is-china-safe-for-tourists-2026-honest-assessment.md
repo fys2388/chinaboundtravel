@@ -133,7 +133,7 @@ Tap water is not safe to drink directly in most of China. Drink sealed bottled w
 
 ### Further Reading
 
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Use China's visa-free transit policy to visit safely and legally
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Use China's visa-free transit policy to visit safely and legally
 - [How to Survive a Chinese Train Station](/posts/how-to-survive-chinese-train-station/) — Stations are safe but confusing; this guide helps you navigate them
 - [Alipay & WeChat Pay for Foreigners](/posts/alipay-wechat-pay-foreigners-guide/) — Going cashless is actually safer than carrying large amounts of RMB
 
@@ -178,7 +178,7 @@ And for the GPS waypoints to the hospitals in Beijing, Shanghai, Chengdu, and Xi
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 

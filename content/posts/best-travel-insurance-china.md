@@ -238,7 +238,7 @@ Still have questions? Drop us a line by [Contacting Us](mailto:joran@chinaboundt
 
 ## You Might Also Like
 
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Everything you need to know about China's visa-free transit policy
 - [How to Use WeChat Pay as a Foreigner](/posts/how-to-use-wechat-pay-as-a-foreigner/) — Step-by-step guide to mobile payments in China
 - [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-how-to-book-tickets/) — Book train tickets like a pro
 - [Ultimate China Visa Guide for Tourists](/posts/ultimate-guide-to-china-visa-for-tourists/) — Complete visa application walkthrough

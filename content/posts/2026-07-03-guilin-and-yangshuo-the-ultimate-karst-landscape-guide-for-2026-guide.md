@@ -46,7 +46,7 @@ This is the choice that determines your whole day, and most people get it wrong 
 
 **Editor's take:** The bamboo raft from Yangdi to Xingping is ten times the experience of the big cruise boat for less than half the price. You sit two feet above the water, close enough to touch the river. The raft pilot steers you past the exact karst formation printed on the back of the 20 RMB note — you can hold up the banknote and the landscape matches frame-for-frame. The big cruise boats carry 200+ passengers, the decks are crowded, and you're separated from the scenery by railings and glass. Go with the raft.
 
-> **Actionable tip:** Bamboo rafts for the Yangdi → Xingping route are limited and sell out fast, especially on weekends. Buy your ticket at the Yangdi pier the night before, or ask your hotel in Yangshuo to book it for you (they'll charge a small commission, usually ¥10-20). The [144-hour visa](/posts/144-hour-visa-free-transit-guide/)-free transit applies here — [check if your nationality qualifies](/posts/144-hour-visa-free-transit-guide/) before booking flights.
+> **Actionable tip:** Bamboo rafts for the Yangdi → Xingping route are limited and sell out fast, especially on weekends. Buy your ticket at the Yangdi pier the night before, or ask your hotel in Yangshuo to book it for you (they'll charge a small commission, usually ¥10-20). The [240-hour visa](/posts/144-hour-visa-free-transit-guide/)-free transit applies here — [check if your nationality qualifies](/posts/144-hour-visa-free-transit-guide/) before booking flights.
 
 ## Top-rated Time to Visit
 
@@ -179,7 +179,7 @@ You could push this down to €120 by staying in Guilin city hostels (¥80/night
 If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/) are the natural next destination after Guilin — the sandstone pillars are a completely different geological spectacle but the same "this can't be real" feeling.
 
 **Practical China guides you'll need:**
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Check if your nationality qualifies before booking
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Check if your nationality qualifies before booking
 - [China High-Speed Train Survival Guide](/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/) — How to book, find your platform, and choose the right class
 - [How to Use Alipay as a Foreigner](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) — Set up mobile payments before you arrive
 - [Chinese Street Food: A First-Timer's Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/) — Essential for Yangshuo night markets
@@ -211,7 +211,7 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 

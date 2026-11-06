@@ -176,7 +176,7 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -204,7 +204,7 @@ Safe travels, and may your WeChat Pay often have enough balance. 💴
 - [Dude, What Just Happened?](https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 

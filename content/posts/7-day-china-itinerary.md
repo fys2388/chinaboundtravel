@@ -67,7 +67,7 @@ No problem! Check out these guides — they cover the same ground as the templat
 
 - 📖 [China Travel Guide: July 2026 Updates](/posts/chinabound-travel-guide-2026-07-monthly-update/) — monthly visa, payment, and safety updates
 - 📝 [7-Day China Itinerary: Beijing, Xi'an & Shanghai (Full Guide)](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — the long-form version with photo walkthroughs
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — skip the visa if you qualify
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — skip the visa if you qualify
 - 💳 [Alipay & WeChat Pay Setup Guide](/posts/alipay-wechat-pay-foreigners-guide/) — pay like a local without a Chinese bank
 - 📶 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/) — stay connected without VPN headaches
 - 🏨 [Top-rated Hotels in China (By City)](/resources/#hotels-accommodation) — editor-reviewed picks from ¥100 to ¥500/night
@@ -98,7 +98,7 @@ Safe travels! 🐾
 
 ## Related Reading
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 ## Related Reading
 

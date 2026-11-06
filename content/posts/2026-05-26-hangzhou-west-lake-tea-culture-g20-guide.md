@@ -156,7 +156,7 @@ Or: take a boat on West Lake. Yes, touristy. Yes, worth it. The boat costs about
 
 Hangzhou is China's most livable city  clean, beautiful, well-organized, and genuinely relaxing. It's the well-suited 2-3 day escape from the chaos of bigger cities. The G20 upgrades mean the infrastructure is excellent, and unlike some "beautiful" Chinese cities that are only beautiful in photos, Hangzhou is actually pleasant to walk around in real life.
 
-**Come for the tea, stay for the lake, leave with a full belly and some very good green tea.** Hangzhou is also within the [144-hour visa-free transit zone from Shanghai](/posts/144-hour-visa-free-transit-guide/), making it an easy addition to a transit trip.
+**Come for the tea, stay for the lake, leave with a full belly and some very good green tea.** Hangzhou is also within the [240-hour visa-free transit zone from Shanghai](/posts/144-hour-visa-free-transit-guide/), making it an easy addition to a transit trip.
 
 ### Further Reading
 
@@ -192,7 +192,7 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [China Etiquette Guide for Aussie & Kiwi](https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

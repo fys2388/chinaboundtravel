@@ -41,7 +41,7 @@ The visa landscape in China has shifted more in 2026 than in the previous five y
 
 **15-day visa-free expansion:** The big news is that five additional European countries were added to the unilateral 15-day visa-free list on July 14, 2026. If you hold a passport from Greece, Portugal, Hungary, Romania, or Bulgaria, you can now enter China for up to 15 days without a visa, no application required. This brings the total to 42 countries and regions eligible for either 15-day or 30-day visa-free unilateral entry.
 
-**144-hour transit visa updates:** The [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) has been refreshed with two new ports of entry - Kunming Changshui International Airport and Xiamen Gaoqi International Airport now both support the 144-hour transit policy, which means you can do a visa-free stopover in Yunnan or Fujian province for up to six days if you're flying onward to a third country. This is huge for travelers doing multi-destination Asia itineraries.
+**240-hour transit visa updates:** The [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) has been refreshed with two new ports of entry - Kunming Changshui International Airport and Xiamen Gaoqi International Airport now both support the 240-hour transit policy, which means you can do a visa-free stopover in Yunnan or Fujian province for up to ten days if you're flying onward to a third country. This is huge for travelers doing multi-destination Asia itineraries.
 
 **Multi-entry L-visa (tourist visa) validity:** Reader feedback from the past month confirms that Chinese embassies in London, Berlin, Paris, and Amsterdam are now regularly issuing 10-year multiple-entry L-visas to eligible applicants, even for first-time visitors. Previously, 10-year visas were mostly reserved for frequent travelers or those with family ties. If you've applied for a Chinese tourist visa in the past and only received a 3-month or 6-month single-entry, it's worth reapplying now.
 
@@ -141,7 +141,7 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -175,7 +175,7 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

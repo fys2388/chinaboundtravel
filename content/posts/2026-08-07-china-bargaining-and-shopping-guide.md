@@ -109,9 +109,9 @@ A typical budget for shopping on a trip to China is about 500 - 1000 yuan (about
 - **Avoid Tourist Traps**: Some tourist areas may have overpriced shops. Try to avoid these areas and look for more local shopping areas.
 
 ## Visa Requirements for Shopping in China
-If you're an international traveler from Europe, you'll need to make sure you have the right visa to enter China. Schengen visa holders may qualify for 144 - hour visa-free transit in China, but this is only if you're transiting through certain airports.
+If you're an international traveler from Europe, you'll need to make sure you have the right visa to enter China. Schengen visa holders may qualify for 240-hour visa-free transit in China, but this is only if you're transiting through certain airports.
 
-If you're planning to stay in China for longer than 144 hours, you'll need to apply for a tourist visa. The process for applying for a tourist visa can be a bit involved, so it's important to start the process early.
+If you're planning to stay in China for longer than 240 hours, you'll need to apply for a tourist visa. The process for applying for a tourist visa can be a bit involved, so it's important to start the process early.
 
 Many first-time visitors find the visa application process a bit of a hassle, but it's worth it in the end. With proper preparation, the process becomes much smoother.
 
@@ -200,7 +200,7 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 

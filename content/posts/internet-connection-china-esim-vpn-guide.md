@@ -209,12 +209,12 @@ Staying connected in China is more straightforward than ever in 2026. For most t
 
 **Pro Tip**: often set up and test your VPN before arriving in China, and keep it running in the background for seamless access to your favorite apps.
 
-Having reliable connectivity also gives you access to essential travel tools like the [high-speed rail booking system](/posts/china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](/posts/chinese-food-delivery-meituan-eleme-guide/). If you're on the 144-hour visa-free transit, our [144-hour transit guide](/posts/144-hour-visa-free-transit-guide/) explains how to stay within the permitted zone while exploring nearby cities. With a little preparation—which this guide is designed to provide—you'll be connected and ready to explore from the moment you land.
+Having reliable connectivity also gives you access to essential travel tools like the [high-speed rail booking system](/posts/china-high-speed-rail-how-to-book-tickets/) and [food delivery apps](/posts/chinese-food-delivery-meituan-eleme-guide/). If you're on the 240-hour visa-free transit, our [240-hour transit guide](/posts/144-hour-visa-free-transit-guide/) explains how to stay within the permitted zone while exploring nearby cities. With a little preparation—which this guide is designed to provide—you'll be connected and ready to explore from the moment you land.
 
 ### Further Reading
 
 - [Is China Safe for Tourists in 2026?](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — A VPN is also a privacy and safety tool; this guide explains why
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Many travelers using the transit policy need to get online quickly
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) — Many travelers using the transit policy need to get online quickly
 - [Top Travel Insurance for China](/posts/best-travel-insurance-china/) — You'll need internet to access your insurance app in an emergency
 
 ---
@@ -283,9 +283,9 @@ Using the official app gives you a clear transaction history, which helps with b
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Shanghai 48-Hour: Bund & French Concession](https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/)
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
-- [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 

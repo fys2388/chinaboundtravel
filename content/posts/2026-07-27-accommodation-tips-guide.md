@@ -96,7 +96,7 @@ Actionable tip: Book your accommodation in advance using a trusted booking platf
 
 Before you book your accommodation in China, it's important to make sure you have the correct visa. The visa requirements for China vary depending on your nationality and the purpose of your visit.
 
-If you're a Schengen visa holder, you may qualify for 144-hour visa-free transit in China. This allows you to stay in certain cities in China for up to 144 hours without a visa. However, you must meet certain conditions, such as having a confirmed onward ticket and staying within the designated area.
+If you're a Schengen visa holder, you may qualify for 240-hour visa-free transit in China. This allows you to stay in certain cities in China for up to 240 hours without a visa. However, you must meet certain conditions, such as having a confirmed onward ticket and staying within the designated area.
 
 For other travelers, you will need to apply for a tourist visa. The application process can be somewhat involved, so it's best to start early. You will need to provide a valid passport, a completed visa application form, and supporting documents such as proof of travel plans and financial means.
 
@@ -178,7 +178,7 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -204,7 +204,7 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

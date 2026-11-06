@@ -23,7 +23,7 @@ last_updated: "2026-06-22"
 ---
 
 ## What Makes Shanghai's Hidden Neighborhoods Special
-Beyond the Bund's iconic skyline, Shanghai's real character lives in its hidden neighborhoods — the tree-lined streets of the Former French Concession, the maze-like alleys of Tianzifang, and the local eateries serving xiaolongbao and scallion pancakes. This guide covers the best neighborhoods to explore, Shanghai cuisine specialties, traditional arts, and practical tips for getting off the tourist trail. Most visitors spend 1-2 days beyond the Bund, easily combined with the classic waterfront sights. Before you go, check if you qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) — Shanghai is a major entry port — and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) for cashless payments at local shops and restaurants.
+Beyond the Bund's iconic skyline, Shanghai's real character lives in its hidden neighborhoods — the tree-lined streets of the Former French Concession, the maze-like alleys of Tianzifang, and the local eateries serving xiaolongbao and scallion pancakes. This guide covers the best neighborhoods to explore, Shanghai cuisine specialties, traditional arts, and practical tips for getting off the tourist trail. Most visitors spend 1-2 days beyond the Bund, easily combined with the classic waterfront sights. Before you go, check if you qualify for the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) — Shanghai is a major entry port — and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) for cashless payments at local shops and restaurants.
 
 
 ![Nanjing Road busy intersection with pedestrians crossing and modern billboards](/img/china-dest/shanghai/nanjing-road-street.webp)
@@ -77,7 +77,7 @@ Actionable tip: If you want to watch a Chinese opera performance, book your tick
 ## Practical Information for Your Trip
 
 ### Visa Requirements
-For Australian and New Zealand travelers, you will need a tourist visa to enter China. The process can be a bit tedious, but it's not too difficult. You will need to fill out an application form, provide your passport, and pay a fee. It's a good idea to apply for your visa at least a few weeks before your trip. Depending on your nationality and itinerary, you may also qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) -- check our guide to see if you're eligible.
+For Australian and New Zealand travelers, you will need a tourist visa to enter China. The process can be a bit tedious, but it's not too difficult. You will need to fill out an application form, provide your passport, and pay a fee. It's a good idea to apply for your visa at least a few weeks before your trip. Depending on your nationality and itinerary, you may also qualify for the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) -- check our guide to see if you're eligible.
 
 ### Transportation
 Shanghai has an extensive transportation system. The subway is the most convenient way to get around the city. It's fast, clean, and affordable. To use ride-hailing apps and maps while exploring, make sure you have [internet access set up before you arrive](/posts/internet-connection-china-esim-vpn-guide/). You can also take buses, but they can be a bit crowded during peak hours. And if you want to explore the city at your own pace, you can rent a bike.
@@ -144,7 +144,7 @@ For more China travel guides, explore our [7-Day China Itinerary](/posts/7-day-c
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -184,7 +184,7 @@ Venturing beyond the standard tourist route reveals a Shanghai that feels lived-
 
 - [Great Wall of China: History & Hidden Secrets](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
-- [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
+- [ Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
 - [Xi'an Terracotta Army: Tickets & History](https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/)
 - [The Honest 7-Day China Itinerary (No Fluff, No Gatekeeping)](https://www.chinaboundtravel.com/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
 

@@ -1,5 +1,5 @@
 ---
-title: "China Winter Travel Guide: Where to Go and How to Pack"
+title: "China Winter Travel Guide for Australians: Where to Go and How to Pack"
 date: "2026-11-02T10:00:00+08:00"
 lastmod: "2026-11-02T10:00:00+08:00"
 author: "Joran"
@@ -16,8 +16,8 @@ categories:
 geo: "AU"
 draft: false
 audit_status: "pass2"
-summary: "China Winter Travel: Where to Go and How to Pack for travelers visiting China. Practical guide for foreign travelers visiting China."
-description: "China Winter Travel: Where to Go and How to Pack for travelers visiting China. Practical guide for foreign travelers visiting China."
+summary: "China Winter Travel Guide for Australian travelers. Best winter destinations, packing list for Aussies, visa-free transit rules, and tips for visiting China from Sydney or Melbourne."
+description: "China winter travel guide for Australian travelers. Best winter destinations, packing list for Aussies, visa-free transit rules, and tips for visiting China from Sydney or Melbourne."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/"
 ShowToc: "true"
 TocOpen: "false"
@@ -110,10 +110,10 @@ There are a few other items that you may want to bring with you when traveling t
 ## Practical Tips for Your Winter Trip to China
 
 ### Visa Requirements
-Before you travel to China, you'll need to apply for a visa. Australian passport holders qualify for 144-hour visa-free transit in China, but if you plan to stay longer, you'll need to apply for a tourist visa. The visa application process can be a bit complicated, so it's best to start early and make sure you have all the required documents.
+Before you travel to China, you'll need to apply for a visa. Australian passport holders qualify for 240-hour visa-free transit in China, but if you plan to stay longer, you'll need to apply for a tourist visa. The visa application process can be a bit complicated, so it's best to start early and make sure you have all the required documents.
 
-- **144-hour visa-free transit:** Australian passport holders are eligible for 144-hour visa-free transit in China. This means that you can stay in China for up to 144 hours (6 days) without a visa, as long as you are traveling through China on a connecting flight or train.
-- **Tourist visa:** If you plan to stay in China for longer than 144 hours, you'll need to apply for a tourist visa. The tourist visa application process can be a bit complicated, so it's best to start early and make sure you have all the required documents. You can apply for a tourist visa at the Chinese embassy or consulate in your home country.
+- **240-hour visa-free transit:** Australian passport holders are eligible for 240-hour visa-free transit in China. This means that you can stay in China for up to 240 hours (10 days) without a visa, as long as you are traveling through China on a connecting flight or train.
+- **Tourist visa:** If you plan to stay in China for longer than 240 hours, you'll need to apply for a tourist visa. The tourist visa application process can be a bit complicated, so it's best to start early and make sure you have all the required documents. You can apply for a tourist visa at the Chinese embassy or consulate in your home country.
 
 ### Transportation
 China has an extensive transportation system, including trains, buses, subways, and taxis. The high-speed train is the fastest and most convenient way to travel between cities, but it can also be a bit expensive. Buses are a more affordable option, but they can be slower and less comfortable. Subways are a great way to get around in the cities, and taxis are available for short trips.
@@ -162,7 +162,7 @@ For more information on China travel, check out these articles:
 - [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
 - [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/)
-- [China Extends 144-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [China Extends 240-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?](
 

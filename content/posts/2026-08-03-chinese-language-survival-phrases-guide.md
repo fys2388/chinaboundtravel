@@ -188,7 +188,7 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -214,7 +214,7 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

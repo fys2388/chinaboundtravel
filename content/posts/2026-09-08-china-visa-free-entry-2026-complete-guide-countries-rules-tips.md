@@ -14,8 +14,8 @@ tags:
 geo: "Global"
 draft: false
 audit_status: "pass4"
-summary: "China visa-free entry 2026: complete guide to visa-exempt countries, 144/240-hour transit policies, entry conditions, border procedures, and when you still need a visa."
-description: "China visa-free entry 2026: countries list, 144/240-hour transit rules, entry conditions, border tips, and when you still need a tourist visa."
+summary: "China visa-free entry 2026: complete guide to visa-exempt countries, 240-hour transit policy, entry conditions, border procedures, and when you still need a visa."
+description: "China visa-free entry 2026: countries list, 240-hour transit rules, entry conditions, border tips, and when you still need a tourist visa."
 canonicalURL: "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/"
 ShowToc: "true"
 TocOpen: "false"
@@ -45,7 +45,7 @@ keywords:
   - china visa free countries
   - china entry without visa
   - china visa exemption
-  - 144 hour transit visa free china
+  - 240 hour transit visa free china
 
 ---
 
@@ -79,7 +79,7 @@ This is the policy that has expanded most dramatically since 2023, and it's the 
 
 ### 2. Transit Visa-Free (过境免签)
 
-This policy allows travelers from eligible countries to pass through China en route to a third country without a visa. The 144-hour (6-day) transit visa-free policy is the most well-known, and China has also introduced a 240-hour (10-day) option for certain ports.
+This policy allows travelers from eligible countries to pass through China en route to a third country without a visa. The 240-hour (6-day) transit visa-free policy is the most well-known, and China has also introduced a 240-hour (10-day) option for certain ports.
 
 Key difference: you must be transiting to a third country (not your home country, in most cases), and you're restricted to specific regions during your stay.
 
@@ -163,18 +163,18 @@ Visa-free entry **does not** allow you to:
 - You can enter from one port and exit from another (e.g., fly into Beijing, take the train to Hong Kong and exit there).
 - You must have a **confirmed onward or return ticket** in most cases. Border officers may ask to see it.
 
-## 144-Hour and 240-Hour Transit Visa-Free
+## 240-Hour Transit Visa-Free
 
 If your country isn't on the ordinary visa-free list, the transit visa-free policy might still let you visit China. Here's how it works.
 
-### 144-Hour Visa-Free Transit
+### 240-Hour Visa-Free Transit: The Basics
 
-This policy allows citizens of 53+ countries to transit through China for up to 144 hours (6 days) without a visa, provided they are traveling to a third country.
+This policy allows citizens of 57 countries to transit through China for up to 240 hours (10 days) without a visa, provided they are traveling to a third country.
 
 **Eligible countries** include the US, UK, Canada, Australia, New Zealand, all EU countries, Japan, South Korea, Brazil, Argentina, Chile, and many others.
 
 **Key rules:**
-- You must have a confirmed onward ticket to a third country (not your country of departure) within 144 hours
+- You must have a confirmed onward ticket to a third country (not your country of departure) within 240 hours
 - You must stay within the designated transit region (e.g., if you enter Beijing, you can travel in Beijing, Tianjin, and Hebei province)
 - You must enter and exit through eligible ports (major international airports and some seaports/rail crossings)
 - You need to fill out a temporary entry card at the border
@@ -187,13 +187,11 @@ This policy allows citizens of 53+ countries to transit through China for up to 
 - Liaoning (Shenyang, Dalian)
 - Shandong (Qingdao, Jinan)
 
-For a detailed walkthrough, see our [144-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/).
+For a detailed walkthrough, see our [240-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/).
 
-### 240-Hour Visa-Free Transit
+### Where the 240-Hour Policy Applies
 
-Introduced in 2024, the 240-hour (10-day) transit visa-free policy is available at certain ports, primarily in the Yangtze River Delta region (Shanghai, Jiangsu, Zhejiang, Anhui). The rules are similar to the 144-hour policy but allow a longer stay.
-
-**Important:** The 240-hour policy is only available at specific ports of entry. If you enter through a port that only offers 144-hour transit, you'll be limited to 6 days regardless of your onward destination.
+The 240-hour (10-day) visa-free transit policy is available at designated ports across **24 provinces**, including Beijing, Shanghai, Guangdong, Jiangsu, Zhejiang, Sichuan, Chongqing, Liaoning, Shandong, and more. As of **August 2026** it applies to citizens of **57 countries**. You must hold a confirmed onward ticket to a third country and enter/exit through a designated port.
 
 ### Transit vs. Ordinary Visa-Free: Which Should You Use?
 
@@ -204,7 +202,7 @@ If your country is on the ordinary visa-free list, use that — it's simpler, al
 Despite the expansion, there are situations where a visa is still required:
 
 1. **Your country isn't on the visa-free list** — US, UK, Canadian, and Indian citizens, take note.
-2. **You want to stay longer than 30 days** — visa-free entry caps at 30 days (or 144/240 hours for transit).
+2. **You want to stay longer than 30 days** — visa-free entry caps at 30 days (or 240 hours for transit).
 3. **You plan to work or study** — even short-term work or study requires the appropriate visa.
 4. **You're entering through a non-open port** — some remote border crossings don't support visa-free entry.
 5. **You've been denied entry before** — if you have a history of visa violations or overstays, you may need to apply for a visa even if your country is on the list.
@@ -335,11 +333,11 @@ As of 2026, citizens of over 40 countries can enter China without a visa for up 
 
 ### Can US citizens travel to China without a visa?
 
-US citizens are not currently eligible for ordinary visa-free entry. However, US citizens can use the 144-hour visa-free transit policy if they are transiting through China to a third country, or they can visit Hainan Island under its regional visa-free policy. For longer stays, US citizens must apply for a tourist visa.
+US citizens are not currently eligible for ordinary visa-free entry. However, US citizens can use the 240-hour visa-free transit policy if they are transiting through China to a third country, or they can visit Hainan Island under its regional visa-free policy. For longer stays, US citizens must apply for a tourist visa.
 
 ### How long can I stay in China visa-free?
 
-Most ordinary visa-free travelers can stay for up to 30 days per entry. The 144-hour transit policy allows 6 days, and the 240-hour transit policy allows 10 days. Hainan's regional policy allows 30 days. The clock starts on your entry date, and you must exit before it expires.
+Most ordinary visa-free travelers can stay for up to 30 days per entry. The 240-hour transit policy allows up to 10 days (240 hours). Hainan's regional policy allows 30 days. The clock starts on your entry date, and you must exit before it expires.
 
 ### Can I extend my visa-free stay in China?
 
@@ -351,7 +349,7 @@ Yes, in most cases. Border officers and airlines may require proof of onward or 
 
 ### Can I travel anywhere in China on a visa-free entry?
 
-For ordinary visa-free entry, yes — you can travel anywhere in mainland China during your stay. For transit visa-free (144/240 hour), you are restricted to the designated transit region (e.g., Beijing-Tianjin-Hebei, Shanghai-Jiangsu-Zhejiang-Anhui). Leaving the designated region without permission is a violation.
+For ordinary visa-free entry, yes — you can travel anywhere in mainland China during your stay. For transit visa-free (240 hour), you are restricted to the designated transit region (e.g., Beijing-Tianjin-Hebei, Shanghai-Jiangsu-Zhejiang-Anhui). Leaving the designated region without permission is a violation.
 
 ### Can I visit Hong Kong, Macau, or Taiwan on a China visa-free entry?
 
@@ -385,7 +383,7 @@ Safe travels, and welcome to China.
 
 ### Helpful Guides
 - 🛂 [China Tourist Visa Guide 2026](/posts/ultimate-guide-to-china-visa-for-tourists/)
-- ⏱️ [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- ⏱️ [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay vs WeChat Pay: Which App Should Tourists Use?](/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/)
 - 📡 [Internet & eSIM in China: Complete Guide](/posts/internet-connection-china-esim-vpn-guide/)
 - 🗺️ [7-Day Beijing-Xi'an-Shanghai Itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
@@ -415,7 +413,7 @@ Safe travels, and welcome to China.
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

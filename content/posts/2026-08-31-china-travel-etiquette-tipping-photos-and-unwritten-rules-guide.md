@@ -67,7 +67,7 @@ Respect 'no photo' signs. They are there for a reason.
 
 For practical travel photos, look for unique angles and compositions. Capture the beautiful landscapes, ancient architecture, and vibrant city scenes. But always keep in mind the proper etiquette.
 
-Remember, in China, showing respect through your photography is key. So, go out and take great pictures, but do it with courtesy. If you want to learn more about other aspects of traveling in China, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [China Extends 144-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
+Remember, in China, showing respect through your photography is key. So, go out and take great pictures, but do it with courtesy. If you want to learn more about other aspects of traveling in China, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [China Extends 240-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
 
 ## Dining Etiquette: Chopsticks, Toasts, and the Table
 

@@ -11,7 +11,7 @@ params:
     - question: "How many days do you need to see Beijing, Xi'an, and Shanghai?"
       answer: "Minimum 7 full days. Fly into Beijing (days 1-3), take a high-speed train to Xi'an (day 4-5), then fly or train to Shanghai (days 6-7). This itinerary is the Goldilocks zone  not too rushed, not too slow."
     - question: "Do I need a visa for a 7-day China trip?"
-      answer: "Most nationalities need a tourist visa (L-visa). However, citizens of many countries (US, UK, Canada, Australia, EU) can use the 144-hour transit visa-free policy if arriving in Beijing or Shanghai and departing within 144 hours. Check your specific situation before booking."
+      answer: "Most nationalities need a tourist visa (L-visa). However, citizens of many countries (US, UK, Canada, Australia, EU) can use the 240-hour transit visa-free policy if arriving in Beijing or Shanghai and departing within 240 hours. Check your specific situation before booking."
     - question: "How much does a 7-day China trip cost in 2026?"
       answer: "Budget travelers: $80-120/day ($560-840 total). Mid-range: $150-250/day ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport, and attractions  not international flights."
     - question: "What is a top choice way to travel between Beijing, Xi'an, and Shanghai?"
@@ -38,7 +38,7 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 
 **ChinaBound Travel Editorial Team | Research-based China travel guides**
 
-A 7-day China itinerary covering Beijing, Xi'an, and Shanghai is the most efficient first-timer route — three cities that represent imperial China, ancient history, and modern China. The core logic: fly into Beijing (days 1-3), take the high-speed train to Xi'an (days 4-5), then fly or train to Shanghai (days 6-7). Budget $560-840 per person for mid-range travel, excluding international flights. Before booking, sort your [China tourist visa](/posts/ultimate-guide-to-china-visa-for-tourists/) or check if you qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/). For intercity transport, [book high-speed rail tickets](/posts/china-high-speed-rail-how-to-book-tickets/) in advance.
+A 7-day China itinerary covering Beijing, Xi'an, and Shanghai is the most efficient first-timer route — three cities that represent imperial China, ancient history, and modern China. The core logic: fly into Beijing (days 1-3), take the high-speed train to Xi'an (days 4-5), then fly or train to Shanghai (days 6-7). Budget $560-840 per person for mid-range travel, excluding international flights. Before booking, sort your [China tourist visa](/posts/ultimate-guide-to-china-visa-for-tourists/) or check if you qualify for the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/). For intercity transport, [book high-speed rail tickets](/posts/china-high-speed-rail-how-to-book-tickets/) in advance.
 
 
 > **Related:** [How to Ride China's High-Speed Rail Like a Pro](/posts/china-high-speed-rail-how-to-book-tickets/) → A complete guide to booking tickets, seat classes, and etiquette.
@@ -175,7 +175,7 @@ Budget travelers: -120/day (-840 total). Mid-range: -250/day (,050-1,750). Comfo
 
 #### Do I need a visa for a 7-day China trip?
 
-Most nationalities need a tourist L-visa. However, citizens of 55+ eligible countries can use the 144-hour visa-free transit policy if arriving in Beijing or Shanghai and departing to a third country within 6 days. For a 7-day trip covering three cities, most travelers will need a proper tourist visa. Apply 2-3 weeks before departure.
+Most nationalities need a tourist L-visa. However, citizens of 57 eligible countries can use the 240-hour visa-free transit policy if arriving in Beijing or Shanghai and departing to a third country within 10 days. For a 7-day trip covering three cities, most travelers will need a proper tourist visa. Apply 2-3 weeks before departure.
 
 #### Is 7 days enough to see China?
 
@@ -209,7 +209,7 @@ No — China is massive and 7 days only covers three cities. But this itinerary 
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 

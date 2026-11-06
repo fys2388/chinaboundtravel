@@ -205,7 +205,7 @@ you'll be texting your mom from the Great Wall before the tour bus arrives.
 
 <p style="margin:20px 0 0;font-size:14px;line-height:1.6;color:#6b7280;">
 <strong>Tomorrow:</strong> Visa rules — who needs one, who doesn't, and the
-144-hour transit hack that saves you a $150 visa fee.
+240-hour transit hack that saves you a $150 visa fee.
 </p>
 """
     return {
@@ -231,7 +231,7 @@ bureaucracy nightmare, depending on your passport.
 
 <h3 style="margin:20px 0 10px;font-size:17px;color:#111827;">The Short Version</h3>
 <ul style="margin:0 0 16px;padding-left:20px;font-size:14px;line-height:1.8;">
-<li><strong>144-hour visa-free transit:</strong> If you're passing through to a third country, you get 6 days visa-free in certain cities. Game changer for stopovers.</li>
+<li><strong>240-hour visa-free transit:</strong> If you're passing through to a third country, you get 10 days visa-free in certain cities. Game changer for stopovers.</li>
 <li><strong>15-day visa-free:</strong> Citizens of many countries (France, Germany, Italy, Spain, Malaysia, Thailand, and more) can visit for 15 days without a visa. Check the latest list — it changes often.</li>
 <li><strong>Everyone else:</strong> Standard L (tourist) visa. Apply at your nearest Chinese consulate or via an agency. Budget $150–$200.</li>
 </ul>
@@ -260,7 +260,7 @@ credit card will feel useless.
     return {
         "day": day,
         "subject": "China visa rules 2026 — who's exempt, who's not 🛂",
-        "preview_text": "144-hour transit, 15-day visa-free, or full visa? Plus why travel insurance is non-negotiable.",
+        "preview_text": "240-hour transit, 15-day visa-free, or full visa? Plus why travel insurance is non-negotiable.",
         "name": "7Day-China-Day2-Visa-Insurance",
         "html": _email_shell("China Visa Guide", body, day),
     }

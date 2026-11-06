@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Best China Itineraries for 10 Days: Three Routes Compared"
 date: "2026-10-19T10:00:00+08:00"
 lastmod: "2026-10-19T10:00:00+08:00"
@@ -28,7 +28,7 @@ weight: "1"
 
 Hey there, fellow travelers! If you're gearing up for a 10 - day adventure in China, you're in for a treat. China is a country that seamlessly blends the ancient and the modern, offering a plethora of experiences for every type of traveler. In this guide, I'll be your trusty sherpa, leading you through three distinct 10 - day itineraries that showcase some of the country's most remarkable destinations. Whether you're a history buff, a nature lover, a culture vulture, or a foodie, there's an itinerary here that's tailor-made for you.
 
-Before we dive into the exciting part, let's talk about some essential practicalities. For our Australian and New Zealand friends, there's some great news. You may be eligible for 144 - hour visa-free transit in China. This means you can spend up to 6 days exploring without the need for a visa, as long as you enter through an approved port and have a confirmed onward ticket. However, if you want to extend your stay beyond this period, you'll need to apply for a tourist visa. You can find all the nitty-gritty details about China visa requirements on our website, such as in the article [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
+Before we dive into the exciting part, let's talk about some essential practicalities. For our Australian and New Zealand friends, there's some great news. You may be eligible for 240-hour visa-free transit in China. This means you can spend up to 10 days exploring without the need for a visa, as long as you enter through an approved port and have a confirmed onward ticket. However, if you want to extend your stay beyond this period, you'll need to apply for a tourist visa. You can find all the nitty-gritty details about China visa requirements on our website, such as in the article [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/).
 
 Transportation in China is a fascinating web of options. The country has an extensive network that includes trains, buses, planes, and subways. For traveling between cities, the high-speed train is often the most convenient and cost-effective choice. In our other articles, like [China's High-Speed Rail: How to Book Tickets Like a Local (Trip.com & 12306)](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/), you can learn how to book high-speed train tickets like a pro and navigate the sometimes-bewildering Chinese train stations.
 

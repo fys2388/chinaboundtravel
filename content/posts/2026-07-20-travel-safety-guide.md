@@ -264,7 +264,7 @@ Is China well-suited? No. Are there risks? Yes. But the same is true for any cou
 - [Is China Safe for Tourists in 2026?](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/) — An honest assessment
 - [Top Travel Insurance for China](https://www.chinaboundtravel.com/posts/best-travel-insurance-china/) — Protect yourself
 - [China Transportation Complete Guide](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) — Navigate like a pro
-- [144-Hour Visa-Free Transit Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) — Australia and NZ passport holders qualify!
+- [ Visa-Free Transit Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/) — Australia and NZ passport holders qualify!
 - [Internet in China: eSIM & VPN Guide](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/) — Stay connected
 - [Accommodation Tips for China](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/) — Find the well-suited place to stay
 
@@ -301,7 +301,7 @@ Originally posted on ChinaBound Travel Blog
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

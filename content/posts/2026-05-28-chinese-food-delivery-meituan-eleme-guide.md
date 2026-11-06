@@ -254,14 +254,14 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
 - [Shanghai 48-Hour: Bund & French Concession](https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
 
 - [How Chinese Food Evolved: 2 Million Years](/posts/chinas-food-through-the-ages-guide/)
 
 - [China Cultural Etiquette: Dos and Don'ts](/posts/cultural-etiquette-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 

@@ -243,7 +243,7 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
@@ -265,11 +265,11 @@ WeChat Pay transforms your travel experience in China from a constant scramble f
 - [Alipay in China: Setup & Payment Tips (2026)](https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/)
 - [China Transportation Card Guide (2026)](https://www.chinaboundtravel.com/posts/china-transportation-card-guide/)
 - [Why China's Transportation System Beats What You Are Used To](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
-- [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
+- [ Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

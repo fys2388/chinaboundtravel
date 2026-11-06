@@ -38,7 +38,7 @@ China is a country with a rich history, culture, and natural beauty. From the bu
 ![A group of tourists exploring the Forbidden City in Beijing. The sun is shining, and the ancient buildings are surrounded by a crowd of people.](/img/china-dest/body/external_1e2c8ab6a242.jpg)
 
 ## Visa Requirements
-Before you travel to China, it's crucial to make sure you have the correct visa. US passport holders are eligible for 144-hour visa-free transit in China, but this only applies if you're traveling through certain airports and cities. If you're planning to stay in China for longer than 144 hours, you'll need to apply for a tourist visa. The process can be a bit, but it's essential to follow the instructions carefully and provide all the necessary documents. You can find more information about China visa requirements on the official website of the Chinese embassy or consulate in your country.
+Before you travel to China, it's crucial to make sure you have the correct visa. US passport holders are eligible for 240-hour visa-free transit in China, but this only applies if you're traveling through certain airports and cities. If you're planning to stay in China for longer than 240 hours, you'll need to apply for a tourist visa. The process can be a bit, but it's essential to follow the instructions carefully and provide all the necessary documents. You can find more information about China visa requirements on the official website of the Chinese embassy or consulate in your country.
 
 ## Transportation Safety
 China has an extensive transportation network, including trains, buses, subways, and taxis. While most forms of transportation are safe, it's important to be aware of your surroundings and take some precautions.
@@ -144,7 +144,7 @@ Avoid sharing passport details or verification codes with third parties.
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

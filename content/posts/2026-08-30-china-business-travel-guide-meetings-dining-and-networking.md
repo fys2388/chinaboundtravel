@@ -33,7 +33,7 @@ aliases:
 ## China Business Travel Guide: Meetings, Dining, and Networking
 ## Introduction
 
-Business travel to China requires preparation beyond what most Western trips demand. You'll likely need an M (business) visa — or you may qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) for short trips. On the ground, success depends on understanding meeting etiquette (punctuality, business cards with both hands), dining customs (shared dishes, toasting protocol), and relationship-building before deals. This guide covers visas, transportation, meetings, dining, and networking for foreign business travelers in 2026. Before arrival, set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) — cash is rarely accepted in business settings.
+Business travel to China requires preparation beyond what most Western trips demand. You'll likely need an M (business) visa — or you may qualify for the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) for short trips. On the ground, success depends on understanding meeting etiquette (punctuality, business cards with both hands), dining customs (shared dishes, toasting protocol), and relationship-building before deals. This guide covers visas, transportation, meetings, dining, and networking for foreign business travelers in 2026. Before arrival, set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) — cash is rarely accepted in business settings.
 
 ![Business in a modern meeting room in Shanghai, with a large table, chairs, and a presentation screen. The room has a contemporary design with clean lines and a neutral color palette. The lighting is bright and evenly distributed, highlighting the professional atmosphere. The camera angle is from the side, showing the participants engaged in a discussion.](/img/china-dest/body/external_9b2c1c5a690e.jpg)
 
@@ -45,7 +45,7 @@ First, make sure you have all the necessary documents. This usually includes a v
 
 Once you have all your documents in order, you can submit your visa application to the Chinese embassy or consulate in your home country. The processing time can vary, so it's a good idea to apply well in advance. And don't forget to check the embassy's website for any specific requirements or updates.
 
-If you're a Schengen visa holder, you may be eligible for a [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) in China. This can be a great option if you're just passing through China on your way to another destination. However, there are some restrictions and conditions that you need to meet, so make sure you read the fine print carefully. For longer stays, our [China tourist visa guide](/posts/ultimate-guide-to-china-visa-for-tourists/) covers the L-visa application process.
+If you're a Schengen visa holder, you may be eligible for a [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) in China. This can be a great option if you're just passing through China on your way to another destination. However, there are some restrictions and conditions that you need to meet, so make sure you read the fine print carefully. For longer stays, our [China tourist visa guide](/posts/ultimate-guide-to-china-visa-for-tourists/) covers the L-visa application process.
 
 ## Transportation
 
@@ -112,7 +112,7 @@ In conclusion, business travel to China can be a rewarding and exciting experien
 
 #### Do I need a business visa (M visa) for a business trip to China?
 
-Yes, most foreign business travelers need an M (business) visa, which requires an invitation letter from a Chinese company. Citizens of eligible countries may use the 144-hour visa-free transit policy for short trips under 6 days, but only if they have a confirmed onward ticket to a third country. Apply for the M visa at least 2-3 weeks before your trip through the Chinese embassy or a visa agency.
+Yes, most foreign business travelers need an M (business) visa, which requires an invitation letter from a Chinese company. Citizens of eligible countries may use the 240-hour visa-free transit policy for short trips under 10 days, but only if they have a confirmed onward ticket to a third country. Apply for the M visa at least 2-3 weeks before your trip through the Chinese embassy or a visa agency.
 
 #### What is the proper etiquette for exchanging business cards in China?
 

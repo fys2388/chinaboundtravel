@@ -209,7 +209,7 @@ So what are you waiting for? Pack your bags, grab your passport, and let's go ex
 - [Chinese Train Stations: Survival Guide for](https://www.chinaboundtravel.com/posts/how-to-survive-chinese-train-station/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Shanghai 48-Hour: Bund & French Concession](https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/)
-- [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

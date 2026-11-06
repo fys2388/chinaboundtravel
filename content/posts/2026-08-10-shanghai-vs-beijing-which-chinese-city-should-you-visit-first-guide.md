@@ -38,7 +38,7 @@ For many first-time visitors to China, the biggest question is: Shanghai or Beij
 ![Modern Shanghai skyline with the Bund and skyscrapers, at dusk, with a warm golden glow and a clear sky, from a riverside perspective.](/img/china-dest/body/external_3687b5a74a0f.jpg)
 
 ### The Visa Situation
-First things first, let's talk about visas. As a US passport holder, you qualify for a 144-hour visa-free transit in China. However, this only applies if you're traveling through certain cities, including Shanghai and Beijing. So, if you're planning to spend more time in China, you'll need to apply for a tourist visa. The process can be a bit involved, but there are plenty of resources available online to help you out. Check out our [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) for all the details.
+First things first, let's talk about visas. As a US passport holder, you qualify for a 240-hour visa-free transit in China. However, this only applies if you're traveling through certain cities, including Shanghai and Beijing. So, if you're planning to spend more time in China, you'll need to apply for a tourist visa. The process can be a bit involved, but there are plenty of resources available online to help you out. Check out our [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) for all the details.
 
 Actionable tip: Apply for your visa well in advance to avoid any last-minute stress. Make sure you have all the required documents and follow the instructions carefully.
 

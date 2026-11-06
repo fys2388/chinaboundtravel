@@ -7,7 +7,7 @@ generate_lead_magnet_pdf.py - 生成《China Visa-Free Entry Checklist》Lead Ma
 产出：static/lead-magnet/china-visa-free-entry-checklist.pdf
 
 内容为 2.0 Editorial Voice 的实用 checklist（签证免签入境的准备清单），
-基于 ChinaBound 站内 144-hour visa-free transit / visa 指南的可靠事实。
+基于 ChinaBound 站内 240-hour visa-free transit / visa 指南的可靠事实。
 所有事实均为通用、谨慎表述，不编造政策细节（标注"以官方最新为准"）。
 
 用法：
@@ -66,7 +66,7 @@ SECTIONS = [
     ("1. Confirm Your Eligibility", [
         "Check whether your nationality is on the current visa-free transit list.",
         "Confirm your entry/exit itinerary qualifies (e.g. transit between eligible countries).",
-        "Verify the time window (e.g. 144-hour transit) applies to your routing.",
+        "Verify the time window (e.g. 240-hour transit) applies to your routing.",
         "Keep your return / onward ticket details ready — many checks ask to see them.",
     ]),
     ("2. Documents to Carry", [

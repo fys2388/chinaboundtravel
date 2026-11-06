@@ -152,7 +152,7 @@ Remember to research your destination thoroughly, stay in safe areas, be cautiou
 Solo travel in a new country benefits from good travel insurance that covers medical care and trip changes. Review your options before you fly.
 {{< /soft-recommend >}}
 
-If you're looking for more information on traveling to China, be sure to check out our other articles on chinaboundtravel.com. We have articles on a variety of topics, including [visa requirements](/posts/ultimate-guide-to-china-visa-for-tourists/), [transportation](/posts/china-transportation-card-guide/), [safety](/posts/is-china-safe-for-tourists-2026-honest-assessment/), and [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/).
+If you're looking for more information on traveling to China, be sure to check out our other articles on chinaboundtravel.com. We have articles on a variety of topics, including [visa requirements](/posts/ultimate-guide-to-china-visa-for-tourists/), [transportation](/posts/china-transportation-card-guide/), [safety](/posts/is-china-safe-for-tourists-2026-honest-assessment/), and [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/).
 
 ## Related Reading
 

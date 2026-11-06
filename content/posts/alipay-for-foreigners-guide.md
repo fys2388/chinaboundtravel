@@ -228,7 +228,7 @@ For international travelers comparing options, flight search platforms help you 
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for Foreigners (2026)](/posts/china-high-speed-rail-how-to-book-tickets/)
 

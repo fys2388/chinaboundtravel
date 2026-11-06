@@ -545,7 +545,7 @@ def generate_one(article: dict, ctype: str, platform: str, campaign: str) -> dic
 # 主题关键词 → 场景描述（让每篇文章的配图提示词唯一、主题匹配）
 _IMAGE_SCENE_KEYWORDS = [
     ("visa", "Chinese visa passport and travel documents"),
-    ("144-hour", "modern Chinese airport and Beijing skyline, visa-free transit"),
+    ("240-hour", "modern Chinese airport and Beijing skyline, visa-free transit"),
     ("panda", "giant panda in Chengdu bamboo forest"),
     ("hotpot", "Sichuan hotpot bubbling with chili oil, fresh ingredients"),
     ("tea", "Chinese tea ceremony, porcelain teaware, green tea"),

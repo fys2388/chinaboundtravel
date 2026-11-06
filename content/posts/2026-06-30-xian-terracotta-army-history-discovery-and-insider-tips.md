@@ -156,14 +156,14 @@ If you are making the trip to Xi'an, do not just see the warriors and leave. The
 ## Conclusion
 In conclusion, the Terracotta Army is an amazing site that should not be missed by anyone visiting China. It is a testament to the power and ingenuity of the Qin Dynasty, and it provides valuable insights into the history and culture of ancient China. Whether you're a history buff, a culture enthusiast, or just looking for an unforgettable travel experience, the Terracotta Army is  worth a visit.
 
-So, what are you waiting for? Book your trip to Xi'an today and experience the wonder of the Terracotta Army for yourself. If you're eligible, the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) policy makes it easy to visit China without the hassle of a full visa application. And don't forget to take plenty of photos and share your experiences with your friends and family.
+So, what are you waiting for? Book your trip to Xi'an today and experience the wonder of the Terracotta Army for yourself. If you're eligible, the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) policy makes it easy to visit China without the hassle of a full visa application. And don't forget to take plenty of photos and share your experiences with your friends and family.
 
 ![Panoramic view of the Terracotta Army with rows of warriors stretching into the distance](/img/china-dest/xian/terracotta-army-panoramic.webp)
 
 ## Related Links
 - [Zhangjiajie Avatar Mountains: Complete Guide](/posts/zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park/)
 - [The Great Wall: Beyond the Tourist Trail](/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 
 {{< affiliate-hotel >}}
 
@@ -192,7 +192,7 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)

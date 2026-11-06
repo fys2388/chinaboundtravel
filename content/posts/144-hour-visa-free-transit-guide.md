@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-b4ff4381a014"
-title: "China 144 Hour Transit Visa 2026: Complete Guide"
+title: "China 240 Hour Transit Visa 2026: Complete Guide"
 date: '2026-05-19T10:00:00+08:00'
 draft: false
 canonicalURL: "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/"
@@ -11,7 +11,7 @@ tags:
 - ChinaTravel2026
 - ChinaTransit
 author: Joran
-description: '144-hour visa-free transit 2026: eligible ports, entry process, common mistakes, and eSIM setup.'
+description: '240-hour visa-free transit 2026: eligible ports, entry process, common mistakes, and eSIM setup.'
 ShowToc: true
 TocOpen: false
 cover:
@@ -36,7 +36,7 @@ sources:
     accessed: "2026-09-13"
 
 ---
-## 144-Hour Visa-Free Transit in China: The Complete 2026 Guide
+## 240-Hour Visa-Free Transit in China: The Complete 2026 Guide
 
 
 {{< soft-recommend partner="esim" topic="visa" placement="article_mid_1" text="See eSIM options" >}}
@@ -45,18 +45,18 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 ## Why This Guide Matters
 
-China's 144-hour visa-free transit allows citizens of 55+ eligible countries to stay for up to 6 days without a visa — if they have a confirmed onward ticket to a third country and enter/exit through designated ports. This guide covers eligible countries, participating cities, the step-by-step entry process, and the most common mistakes that get travelers turned away at immigration — updated for 2026. If you need a longer stay, our [complete China tourist visa guide](/posts/ultimate-guide-to-china-visa-for-tourists/) walks through the L-visa application.
+China's 240-hour visa-free transit allows citizens of 57 eligible countries to stay for up to 10 days without a visa — if they have a confirmed onward ticket to a third country and enter/exit through designated ports. This guide covers eligible countries, participating cities, the step-by-step entry process, and the most common mistakes that get travelers turned away at immigration — updated for 2026. If you need a longer stay, our [complete China tourist visa guide](/posts/ultimate-guide-to-china-visa-for-tourists/) walks through the L-visa application.
 
 
-## What Is the 144-Hour Visa-Free Transit?
+## What Is the 240-Hour Visa-Free Transit?
 
-China offers a **144-hour (6-day) visa exemption** for travelers from [55+ eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed—if you're only staying in a designated zone for up to 6 days.
+China offers a **240-hour (10-day) visa exemption** for travelers from [57 eligible countries](https://www.visaforchina-cbp.com/) who are just passing through. No visa needed—if you're only staying in a designated zone for up to 10 days.
 
 Think of it as China's "we promise we're not trying to make your transit miserable" gift to the world. If you need a proper tourist visa instead, check out our [complete guide to China visas for tourists](/posts/ultimate-guide-to-china-visa-for-tourists/).
 
-## Which Cities and Ports Accept 144-Hour Transit?
+## Which Cities and Ports Accept 240-Hour Transit?
 
-**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 144-hour visa-free transit policy to even more countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
+**Important update for 2026**: The policy now covers **more entry/exit port combinations** than ever—in fact, China recently [extended the 240-hour visa-free transit policy to even more countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/). Here are the main zones:
 
 ### Beijing/Tianjin/Hebei
 - **Beijing Capital Airport** (PEK/PKX)
@@ -87,7 +87,7 @@ If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & F
 ### YES You Qualify If:
 1. You hold a passport from an **eligible country** (US, UK, Canada, Australia, Japan, most EU, and many more)
 2. You have a **confirmed onward ticket** to a third country/region (e.g., US -> Shanghai -> Japan = qualifies)
-3. Your **layover is 144 hours or less**
+3. Your **layover is 240 hours or less**
 4. You enter and exit through an **eligible port**
 5. You **stay within the permitted zone** (e.g., Shanghai zone NOT Beijing zone)
 
@@ -96,7 +96,7 @@ If your Shanghai transit gives you time to explore, our [2-day Shanghai Bund & F
 - You're coming FROM China and going back to your home country (it must be transit to a THIRD country)
 - Your passport is from a non-eligible country
 
-## Step-by-Step: How to Use the 144-Hour Rule
+## Step-by-Step: How to Use the 240-Hour Rule
 
 ### Step 1: Before You Board
 When you check in for your flight to China, show your **onward ticket** to the airline staff. They'll verify you're eligible before letting you board.
@@ -104,26 +104,26 @@ When you check in for your flight to China, show your **onward ticket** to the a
 >  **Pro tip**: Print your onward ticket confirmation. Immigration officers love paperwork.
 
 ### Step 2: At Chinese Immigration
-1. Go to the **144-hour visa-free transit counter** (not the regular visa line)
+1. Go to the **240-hour visa-free transit counter** (not the regular visa line)
 2. Fill out the **arrival card** (they'll give you one)
 3. Show your:
    - Passport (valid for 6+ months)
    - Onward ticket
    - Filled arrival card
 
-The officer will stamp your passport with a **144-hour temporary entry permit**. Done!
+The officer will stamp your passport with a **240-hour temporary entry permit**. Done!
 
 ### Step 3: Enjoy Your City
-You're in! You now have 144 hours (from the stamp time, NOT flight time) to explore. Many transit visitors use [China's high-speed rail](/posts/china-high-speed-rail-how-to-book-tickets/) to reach nearby cities within their permitted zone, and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before arrival to avoid payment friction. Getting around town is easy — check our [China transportation complete guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) for subway card and ride-hailing tips.
+You're in! You now have 240 hours (from the stamp time, NOT flight time) to explore. Many transit visitors use [China's high-speed rail](/posts/china-high-speed-rail-how-to-book-tickets/) to reach nearby cities within their permitted zone, and set up [Alipay or WeChat Pay](/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/) before arrival to avoid payment friction. Getting around town is easy — check our [China transportation complete guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/) for subway card and ride-hailing tips.
 
->  **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM six days later.
+>  **Critical**: The clock starts when immigration stamps you, NOT when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, you leave by 11:30 AM ten days later.
 
 {{< affiliate-mid-cta partner="esim" placement="visa_cta_mid_content" text="Compare eSIM Options" >}}
-**Planning your transit stopover?** Your 144-hour window is short. Compare well-located hotel options ahead of time so you can start exploring the moment you clear immigration.
+**Planning your transit stopover?** Your 240-hour window is short. Compare well-located hotel options ahead of time so you can start exploring the moment you clear immigration.
 {{< /affiliate-mid-cta >}}
 
 ### Step 4: Leave on Time
-Exit through any port in your permitted zone before the 144 hours expires.
+Exit through any port in your permitted zone before the 240 hours expires.
 
 ---
 
@@ -140,7 +140,7 @@ Exit through any port in your permitted zone before the 144 hours expires.
 **Solution**: Take a screenshot of your stamp time. Set an alarm for 12 hours before your deadline.
 
 ### Mistake #3: Wrong Exit Port
-**Example**: You enter in Shanghai but need to leave from Beijing for your flight home. Can't do that with 144-hour transit.
+**Example**: You enter in Shanghai but need to leave from Beijing for your flight home. Can't do that with 240-hour transit.
 
 **Solution**: Enter and exit through the same region.
 
@@ -152,13 +152,13 @@ Exit through any port in your permitted zone before the 144 hours expires.
 |--------|-----------|
 | Added 3 new port combinations | January 2025 |
 | Extended eligible country list | Ongoing |
-| Pilot program for 240-hour transit in some zones | Trial phase |
+| 240-hour transit extended to 57 countries | Aug 20, 2026 |
 
 ---
 
 ## Travel Insurance Recommendation
 
-**Don't even think about traveling without it.** Medical costs in China add up fast, and the 144-hour window leaves zero margin for "I'll deal with it when I get home."
+**Don't even think about traveling without it.** Medical costs in China add up fast, and the 240-hour window leaves zero margin for "I'll deal with it when I get home."
 
 **[>>> Compare travel insurance options for China travel (SafetyWing, World Nomads, etc.) <<<](/posts/best-travel-insurance-china/)**
 
@@ -166,30 +166,30 @@ Exit through any port in your permitted zone before the 144 hours expires.
 
 ## Still Have Questions?
 
-China's immigration requirements can be detailed, and the 144-hour transit policy has specific rules about eligible ports, permitted zones, and time calculations. If you're unsure whether your itinerary qualifies, the safest approach is to confirm with your airline or the nearest Chinese embassy or consulate before you travel.
+China's immigration requirements can be detailed, and the 240-hour transit policy has specific rules about eligible ports, permitted zones, and time calculations. If you're unsure whether your itinerary qualifies, the safest approach is to confirm with your airline or the nearest Chinese embassy or consulate before you travel.
 
 For more China entry guidance, explore our [complete guide to China visas for tourists](/posts/ultimate-guide-to-china-visa-for-tourists/) and our [curated China travel resources](/resources/). If you found this guide helpful, consider sharing it with a fellow traveler planning a China trip.
 
 
 ### Frequently Asked Questions
 
-#### Which countries are eligible for the 144-hour visa-free transit?
+#### Which countries are eligible for the 240-hour visa-free transit?
 
-Citizens of 55+ countries including the US, UK, Canada, Australia, Japan, and most EU member states are eligible. The list expands regularly — check the official China Immigration website for the most current country list before booking.
+Citizens of 57 countries including the US, UK, Canada, Australia, Japan, and most EU member states are eligible. The list expands regularly — check the official China Immigration website for the most current country list before booking.
 
-#### Does the 144-hour clock start when my flight lands?
+#### Does the 240-hour clock start when my flight lands?
 
-No. The 144 hours begins when the immigration officer stamps your passport, not when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, your deadline is 11:30 AM six days later. Take a photo of your stamp time and set a reminder.
+No. The 240 hours begins when the immigration officer stamps your passport, not when your flight lands. If you land at 11 PM but get stamped at 11:30 PM, your deadline is 11:30 AM ten days later. Take a photo of your stamp time and set a reminder.
 
 #### Can I leave the designated transit zone to visit other cities?
 
 No. You must stay within the permitted zone associated with your entry port. For example, entering through Shanghai allows travel within Shanghai, Jiangsu, and Zhejiang provinces — but not Beijing. Leaving the zone violates your entry permit and can result in detention or deportation.
 
-#### What happens if I overstay the 144 hours?
+#### What happens if I overstay the 240 hours?
 
 Overstaying is treated as an illegal stay. You may face fines (500 RMB per day, up to 10,000 RMB), detention, and a ban from future visa-free entry. If you anticipate a delay, contact the local Public Security Bureau (PSB) exit-entry administration before your deadline.
 
-#### Can I use the 144-hour transit for a round-trip (US -> China -> US)?
+#### Can I use the 240-hour transit for a round-trip (US -> China -> US)?
 
 No. The policy requires transit to a third country or region. US -> Shanghai -> Japan qualifies, but US -> Shanghai -> US does not. Your onward ticket must show a destination different from your origin country.
 
@@ -310,10 +310,10 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 
 ## FAQ
 
-### Is china 144 hour transit visa still valid in 2026?
+### Is china 240 hour transit visa still valid in 2026?
 
 Yes, this policy is current for 2026. However, eligibility criteria and participating ports are updated periodically — always verify with official immigration sources before travel.
 
-### What documents do I need for china 144 hour transit visa?
+### What documents do I need for china 240 hour transit visa?
 
 You'll need a valid passport (6+ months remaining), a confirmed onward ticket to a third country, and any supporting documents requested by immigration officers.

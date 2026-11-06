@@ -244,7 +244,7 @@ class UserIntelligenceAgent:
 
         # 生成FAQ知识库
         faq_data = [
-            ("Do I need a visa to visit China?", "It depends on your nationality. Many countries qualify for visa-free transit (24/72/144 hours) or visa-free entry for up to 30 days. Check our complete visa guide for your specific situation.", "visa", ["visa", "entry", "passport", "requirement"]),
+            ("Do I need a visa to visit China?", "It depends on your nationality. Many countries qualify for visa-free transit (240 hours) or visa-free entry for up to 30 days. Check our complete visa guide for your specific situation.", "visa", ["visa", "entry", "passport", "requirement"]),
             ("How do I pay for things in China?", "Mobile payment (Alipay and WeChat Pay) is ubiquitous. Foreigners can now link international cards to Alipay. Cash is accepted but less common. Credit cards work at major hotels but not small shops.", "payment", ["payment", "alipay", "wechat", "cash", "credit card"]),
             ("Is China safe for tourists?", "China is generally very safe for tourists. Violent crime is rare. Take normal precautions against pickpockets in crowded areas. Be aware of scams near tourist attractions. Our safety guide has detailed tips.", "safety", ["safety", "crime", "scam", "security"]),
             ("How do I book train tickets in China?", "You can book through official app (12306), third-party platforms like Trip.com, or at train stations. High-speed trains sell out, book 1-2 weeks in advance. Passport is required for pickup and boarding.", "transport", ["train", "ticket", "booking", "high-speed rail"]),

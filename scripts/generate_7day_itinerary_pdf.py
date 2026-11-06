@@ -80,7 +80,7 @@ DAYS = [
 
 PRE_TRIP_CHECKLIST = [
     "Valid passport (6+ months validity, blank pages)",
-    "China tourist visa (L-visa) OR confirm 144-hour visa-free transit eligibility",
+    "China tourist visa (L-visa) OR confirm 240-hour visa-free transit eligibility",
     "Onward / return flight confirmation (print + offline copy)",
     "Hotel booking confirmations for every city",
     "Alipay & WeChat Pay activated before arrival (no Chinese bank needed)",

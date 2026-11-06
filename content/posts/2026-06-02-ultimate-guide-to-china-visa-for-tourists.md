@@ -21,7 +21,7 @@ last_updated: "2026-08-24"
 Keeping your phone connected in China is easier with an eSIM, which avoids a physical SIM swap at the airport. Many travelers set it up before departure.
 {{< /soft-recommend >}}
 
-Most foreign tourists need an L-visa to visit China in 2026. The application requires a valid passport (6+ months validity), completed application form, passport photo, confirmed round-trip flights, hotel reservations, and a detailed itinerary. Fees range from  to  depending on nationality, with standard processing in 4-5 business days. Citizens of 55+ eligible countries may qualify for the [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) for stays under 6 days. This guide covers visa types, required documents, step-by-step application, costs, and country-specific requirements.
+Most foreign tourists need an L-visa to visit China in 2026. The application requires a valid passport (6+ months validity), completed application form, passport photo, confirmed round-trip flights, hotel reservations, and a detailed itinerary. Fees range from  to  depending on nationality, with standard processing in 4-5 business days. Citizens of 57 eligible countries may qualify for the [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/) for stays under 10 days. This guide covers visa types, required documents, step-by-step application, costs, and country-specific requirements.
 
 ## Types of China Visas for Tourists
 
@@ -46,9 +46,9 @@ For business purposes, trade fairs, and conferences. Requires an invitation lett
 
 For tourists traveling in a group of 5 or more people. The travel agency handles the application process.
 
-### 144-Hour Visa-Free Transit
+### 240-Hour Visa-Free Transit
 
-Available for citizens of 53 countries visiting select Chinese cities without a visa. You can stay for up to 144 hours (6 days) in designated transit areas. For the complete walkthrough of how to use this policy, see our [144-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/). China also recently [extended this policy to more countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
+Available for citizens of 57 countries visiting select Chinese cities without a visa. You can stay for up to 240 hours (10 days) in designated transit areas. For the complete walkthrough of how to use this policy, see our [240-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/). China also recently [extended this policy to more countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/).
 
 **Eligible cities**: Beijing, Shanghai, Guangzhou, Chengdu, Chongqing, and more.
 
@@ -279,7 +279,7 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 ## Related Reading
 
 - [China Visa-Free Entry 2026: Complete Guide](https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/)
-- [144-Hour Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
+- [ Visa-Free Transit in China: The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
 - [Where to Stay in China: Complete 2026 Guide](https://www.chinaboundtravel.com/posts/accommodation-tips-guide/)
 - [China Travel Guide: August 2026 Updates](https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/)
 - [Is China Safe in 2026? Honest Guide](https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/)

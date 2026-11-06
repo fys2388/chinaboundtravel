@@ -37,14 +37,14 @@ For many first-time visitors, packing for a trip to China can feel like a daunti
 
 ## Visa and Documents
 ### Understanding the Visa Process
-First things first, let's delve into the world of visas. US passport holders are eligible for 144 - hour visa-free transit in China, which is a great option if you're just passing through. However, if you're planning to stay longer, you'll need to apply for the appropriate visa. This process can be a bit daunting, but it's crucial to have all your documents in order well in advance.
+First things first, let's delve into the world of visas. US passport holders are eligible for 240-hour visa-free transit in China, which is a great option if you're just passing through. However, if you're planning to stay longer, you'll need to apply for the appropriate visa. This process can be a bit daunting, but it's crucial to have all your documents in order well in advance.
 
 Many first-time visitors find their first visa application overwhelming — countless forms to fill out, a long list of requirements to meet, and a general sense of confusion. But once you navigate through it successfully, you're on your way to an amazing Chinese adventure.
 
 ### Keeping Copies of Important Documents
 Actionable tip: Keep a copy of all your important documents (passport, visa, travel itinerary) in a separate place from the originals. This can be an absolute lifesaver if something gets lost or stolen. Many travelers share stories of having their wallets snatched on busy streets — luckily, having copies of passports and other important documents stashed away in a hotel safe can save the day. This way, you'll still have access to the information you need to prove your identity and travel plans.
 
-For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [144 - Hour Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
+For more in-depth information on visas, check out [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) and [ Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/).
 
 ## Clothing
 ### Adapting to China's Diverse Climate
@@ -151,7 +151,7 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [China Transportation Guide: Trains, Subways](https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/)
 - [Shanghai vs Beijing: Which to Visit First](https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 

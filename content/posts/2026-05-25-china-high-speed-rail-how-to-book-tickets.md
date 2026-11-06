@@ -191,7 +191,7 @@ Chinese national holidays (National Day Week, Chinese New Year) sell out weeks i
 
 ## Bottom Line
 
-China's high-speed rail is one of the world's great travel experiences. Clean, punctual, cheap, and covers everywhere you want to go. Get the Trip.com app, book a short route first (Shanghai-Hangzhou is well-suited), and you'll be a pro by your third trip. For a complete trip built around the rail network, check out our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/). For the full picture on trains, subways, and taxis across China, see our [complete China transportation guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/). And if you're using the 144-hour visa-free transit to ride these trains, our [144-hour transit guide](/posts/144-hour-visa-free-transit-guide/) has everything you need to know.
+China's high-speed rail is one of the world's great travel experiences. Clean, punctual, cheap, and covers everywhere you want to go. Get the Trip.com app, book a short route first (Shanghai-Hangzhou is well-suited), and you'll be a pro by your third trip. For a complete trip built around the rail network, check out our [7-day Beijing-Xi'an-Shanghai itinerary](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/). For the full picture on trains, subways, and taxis across China, see our [complete China transportation guide](/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/). And if you're using the 240-hour visa-free transit to ride these trains, our [240-hour transit guide](/posts/144-hour-visa-free-transit-guide/) has everything you need to know.
 
 ## FAQ: Booking China High-Speed Rail Tickets
 
@@ -301,7 +301,7 @@ For airport transfers, pre-booking a registered ride or using the metro often sa
 
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [China Travel Etiquette: Tipping & Photos](/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/)
 

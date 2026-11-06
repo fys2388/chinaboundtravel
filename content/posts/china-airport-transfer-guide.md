@@ -94,7 +94,7 @@ Shanghai has two main airports: **Pudong (PVG)** and **Hongqiao (SHA)**.
 - **PVG**: The Maglev train reaches Longyang Road in about 8 minutes and connects to metro Line 2 into the city. Metro Line 2 also runs directly from PVG to the city center, at a lower price.
 - **SHA**: Hongqiao is a major hub connected directly to the metro and high-speed rail networks, making onward travel easy.
 
-Taxis and ride-hailing apps are available at both airports. The Maglev is a memorable and fast option for visitors arriving at PVG. For visitors on a [144-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/), Shanghai's zone includes PVG and nearby cities — time your transfer against the onward flight carefully.
+Taxis and ride-hailing apps are available at both airports. The Maglev is a memorable and fast option for visitors arriving at PVG. For visitors on a [240-hour visa-free transit](/posts/144-hour-visa-free-transit-guide/), Shanghai's zone includes PVG and nearby cities — time your transfer against the onward flight carefully.
 
 ## Guangzhou Airport Transfer Guide
 
@@ -190,7 +190,7 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 - [Foodie's Guide to China: Dishes You Must Try](/posts/foodies-guide-to-china-a-gastronomic-adventure/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 

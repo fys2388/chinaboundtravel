@@ -140,7 +140,7 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 
 - [China High-Speed Rail Booking Guide](/posts/china-high-speed-rail-how-to-book-tickets/) — Shanghai is a major hub on the CRH network
 - [7-Day China Itinerary: Beijing, Xi'an & Shanghai](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — Shanghai is the final stop on this classic route
-- [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) —Use it to visit Shanghai visa-free for up to 6 days
+- [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) —Use it to visit Shanghai visa-free for up to 10 days
 
 **Next read:** If you're heading to Hangzhou after Shanghai, don't miss our [Hangzhou Guide](/posts/hangzhou-west-lake-tea-culture-g20-guide/) — West Lake is even better in person.
 
@@ -167,13 +167,13 @@ Shanghai is the easiest city in China for foreigners. It's also one of the [safe
 ## Related Reading
 
 - [Hangzhou Travel Guide: West Lake & Tea](https://www.chinaboundtravel.com/posts/hangzhou-west-lake-tea-culture-g20-guide/)
-- [144-Hour Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Visa-Free Transit: New Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Chengdu Panda Base: See Pandas Like a Local](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Chinese Food Delivery 2026: Meituan & Ele.me](https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/)
 - [Internet in China: eSIM vs SIM vs VPN (2026)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 
-- [144-Hour Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [ Validation Program 2026: New Countries](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

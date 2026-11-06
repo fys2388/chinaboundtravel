@@ -1,6 +1,6 @@
 ---
 content_id: "cbt-244822dc113b"
-title: "144-Hour Validation Program 2026: New Countries"
+title: "China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)"
 author: Joran
 date: '2026-06-02T10:00:00+08:00'
 draft: false
@@ -10,7 +10,7 @@ tags:
 - ChinaTravelNews
 - ChinaTransit
 - ChinaTravelPolicy
-description: "China extends 144-hour visa-free transit to 15 more countries in 2026. Full list of eligible nations, cities, and requirements. Check if you qualify."
+description: "China extends 240-hour visa-free transit to 57 countries in 2026. Full list of eligible nations, cities, and requirements. Check if you qualify."
 ShowToc: true
 TocOpen: false
 cover:
@@ -20,7 +20,7 @@ categories: ["visa", "cities"]
 last_updated: "2026-11-05"
 
 ---
-## China Extends 144-Hour Visa-Free Transit Policy to More Countries
+## China Extends 240-Hour Visa-Free Transit Policy to More Countries
 
 Hey there, fellow travelers!
 
@@ -28,9 +28,9 @@ Let's break down this latest immigration news for you in plain English, based on
 
 ## What's New?
 
-The National Immigration Administration announced today that the 144-hour visa-free transit policy will be extended to citizens from an additional 15 countries, making it easier for international travelers to visit China without a visa. See our [144-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/) for the full background.
+The National Immigration Administration announced that the 240-hour visa-free transit policy currently applies to citizens of 57 countries, making it easier for international travelers to visit China without a visa. See our [240-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/) for the full background.
 
-**Newly added countries**: While the official list hasn't been fully released yet, sources indicate it will include several countries from Southeast Asia, the Middle East, and Africa. This brings the total number of eligible countries to 68.
+**Eligible countries**: The list includes the US, UK, Canada, Australia, Japan, most EU member states, and more. This brings the total number of eligible countries to 57.
 
 **Expanded transit zones**: The policy now covers more cities across China, including:
 - Beijing and Tianjin area
@@ -46,19 +46,19 @@ Travelers who have followed China's visa policies over the years have seen a sig
 
 ### Why This Matters for Travelers
 
-**1. Spontaneous trips are now possible**: You can book a flight to China with just 6 days notice and explore major cities without applying for a visa. For the full step-by-step walkthrough, see our [complete 144-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/).
+**1. Spontaneous trips are now possible**: You can book a flight to China with just 6 days notice and explore major cities without applying for a visa. For the full step-by-step walkthrough, see our [complete 240-hour visa-free transit guide](/posts/144-hour-visa-free-transit-guide/).
 
-**2. More time to explore**: 144 hours (6 days) gives you enough time to see the highlights of a city like Beijing or Shanghai.
+**2. More time to explore**: 240 hours (10 days) gives you enough time to see the highlights of a city like Beijing or Shanghai.
 
 **3. Connecting flights are easier**: If you're traveling through China to another destination, you can now leave the airport and explore during your layover.
 
 **4. Business travelers benefit**: Short business meetings or conferences no longer require a full visa application.
 
-## How the 144-Hour Visa-free Transit Works
+## How the 240-Hour Visa-free Transit Works
 
 ### Eligibility Requirements
 
-To qualify for the 144-hour visa-free transit, you must:
+To qualify for the 240-hour visa-free transit, you must:
 
 1. **Be a citizen of an eligible country**: Check the official list before planning your trip
 2. **Have a valid passport**: With at least 6 months validity
@@ -70,7 +70,7 @@ To qualify for the 144-hour visa-free transit, you must:
 
 **Step 1: Plan your itinerary**
 - Choose your entry and exit points carefully
-- Make sure your transit time is within 144 hours
+- Make sure your transit time is within 240 hours
 - Book your onward ticket before arrival
 
 **Step 2: Prepare documents**
@@ -90,15 +90,15 @@ To qualify for the 144-hour visa-free transit, you must:
 - Enjoy your 6-day adventure!
 
 **Step 5: Depart**
-- Leave China within 144 hours
+- Leave China within 240 hours
 - Go through exit immigration
 - Board your onward flight
 
-## Tips for Making the Most of Your 144 Hours
+## Tips for Making the Most of Your 240 Hours
 
 ### For First-Time Visitors
 
-**Beijing**: Use your 6 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the [Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/).
+**Beijing**: Use your 10 days to see the Great Wall, Forbidden City, Temple of Heaven, and Summer Palace. Take a day trip to Xi'an to see the [Terracotta Army](/posts/xian-terracotta-army-history-discovery-and-insider-tips/).
 
 **Shanghai**: Explore the Bund, French Concession, Yu Garden, and Shanghai Museum. Take a day trip to Suzhou or Hangzhou.
 
@@ -120,7 +120,7 @@ To qualify for the 144-hour visa-free transit, you must:
 ## Common Questions
 
 ### Can I extend my stay?
-No, the 144-hour period cannot be extended. You must leave China within 6 days.
+No, the 240-hour period cannot be extended. You must leave China within 10 days.
 
 ### Can I enter and exit through different ports?
 Yes, as long as both ports are within the same transit zone.
@@ -129,7 +129,7 @@ Yes, as long as both ports are within the same transit zone.
 Officially, it's recommended but not often checked. However, it's a good idea to have one for peace of mind.
 
 ### Can I use this policy multiple times?
-Yes, there's no limit to how many times you can use the [144-hour transit](/posts/144-hour-visa-free-transit-guide/), as long as you meet the requirements each time.
+Yes, there's no limit to how many times you can use the [240-hour transit](/posts/144-hour-visa-free-transit-guide/), as long as you meet the requirements each time.
 
 ### What if I miss my onward flight?
 If you miss your flight due to circumstances beyond your control, contact the airport authorities immediately. You may need to apply for a visa or leave on the next available flight.
@@ -140,7 +140,7 @@ China is opening up more than ever, and these policy updates are a clear sign. W
 
 ### Traveler Experience
 
-When the 144-hour transit policy first launched, travelers had to jump through hoops just to get a tourist visa. Now, with policies like this, friends from abroad can cut out the hassle by using the [144-hour transit](/posts/144-hour-visa-free-transit-guide/). Many travelers have come for 6-day visits using the [144-hour transit](/posts/144-hour-visa-free-transit-guide/), and they've loved it. Exploring Chengdu, going to see the pandas, and even taking a day trip to Leshan — it's been the easiest trip many have ever had to China.
+When the 240-hour transit policy first launched, travelers had to jump through hoops just to get a tourist visa. Now, with policies like this, friends from abroad can cut out the hassle by using the [240-hour transit](/posts/144-hour-visa-free-transit-guide/). Many travelers have come for 10-day visits using the [240-hour transit](/posts/144-hour-visa-free-transit-guide/), and they've loved it. Exploring Chengdu, going to see the pandas, and even taking a day trip to Leshan — it's been the easiest trip many have ever had to China.
 
 ### What This Means for the Future
 
@@ -148,7 +148,7 @@ Our editorial team believes this is just the beginning. China is becoming more w
 
 ### Further Reading
 
-- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — The well-suited trip to fit within (or extend beyond) a 144-hour transit
+- [7-Day China Itinerary: Beijing, Xi'an & Shanghai](/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/) — The well-suited trip to fit within (or extend beyond) a 240-hour transit
 - [Internet in China: eSIM & VPN Guide](/posts/internet-connection-china-esim-vpn-guide/) — Get connected before you land
 - [Is China Safe for Tourists in 2026?](/posts/is-china-safe-for-tourists-2026-honest-assessment/) — An honest safety assessment
 
@@ -156,7 +156,7 @@ This is great news for anyone who wants to experience China's rich culture, deli
 
 ## Ready to Plan Your Trip?
 
-If you're ready to take advantage of the extended 144-hour visa-free transit policy, here are some resources to help you plan:
+If you're ready to take advantage of the extended 240-hour visa-free transit policy, here are some resources to help you plan:
 
 - **Flight bookings**: Use Skyscanner or Kayak to find one of the popular deals
 - **Hotel reservations**: Book through Booking.com or Agoda

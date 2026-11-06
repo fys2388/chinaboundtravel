@@ -1,9 +1,10 @@
 name: News Monitor
 
 on:
-  # 每天早上北京时间 7:30（UTC 23:30 前一天）采集新闻
+  # 每日 3 次（UTC 7:30 / 15:30 / 23:30 = 北京 15:30 / 23:30 / 次日 7:30），
+  # 让官方政策变化在数小时内被捕获并同步到博文/社媒。
   schedule:
-    - cron: "30 23 * * *"
+    - cron: "30 7,15,23 * * *"
   workflow_dispatch:
     inputs:
       count:
@@ -59,15 +60,23 @@ jobs:
           # 网络调用在 CI 中可能超时，失败不阻断提交（digest.json 如有残留则仍可提交）
           python scripts/news_monitor.py --count "$COUNT" --sources "$SOURCES" $FLAGS || echo "⚠️ news_monitor failed (network?), continuing with existing digest"
 
-      - name: Commit news digest
+      - name: Sync policy content if official change detected
+        # 官方政策变化（official_policy_state.json 签名变化）时，把 content/posts 里
+        # 过时的过境免签事实（144 小时）同步为官方最新值（240 小时），并生成政策更新
+        # 社媒帖文案（config/policy_social_queue.json，标记 pending_review，不自动发布）。
+        # 幂等：无官方变化/无过时事实时 0 改动，不产生 commit。
+        run: |
+          python scripts/policy_content_sync.py --apply --social || echo "⚠️ policy_sync failed (non-fatal), continuing"
+
+      - name: Commit news digest & policy updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/news_digest.json 2>/dev/null || true
+          git add config/news_digest.json config/official_policy_state.json config/policy_social_queue.json content/posts/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update news digest [skip ci]"
+            git commit -m "chore: update news digest & policy content sync [skip ci]"
           fi
           git pull --rebase origin main || { git rebase --abort 2>/dev/null || true; echo "::error::rebase failed"; exit 1; }
           git push

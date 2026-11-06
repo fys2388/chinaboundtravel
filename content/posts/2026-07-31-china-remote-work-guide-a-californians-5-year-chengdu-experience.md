@@ -37,7 +37,7 @@ Before we dive in, a solid internet setup is non-negotiable for remote work in C
 ## China Visa Requirements
 One of the first things you need to consider when planning a trip to China is the visa requirements. Depending on your nationality and the length of your stay, you may qualify for visa-free entry or need to apply for a specific visa category. The process can be tedious and bureaucratic — you may need to gather documents from multiple government agencies, get authenticated copies of your degree and work history, and attend an in-person interview at the consulate. But despite the paperwork, proper visa planning is essential for a smooth remote work experience.
 
-If you're coming from the EU, here's some good news: you may qualify for visa-free entry depending on your nationality. Many European passport holders can now enter China for up to 15 or 30 days without a visa, which is well-suited for shorter remote work stints or exploratory trips. For stays longer than 30 days, you'll need to look into a work visa (Z visa), a business visa (M visa), or a private visit visa. Our [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) breaks down all the current options for EU travelers, including which nationalities qualify and which ports of entry accept visa-free arrivals.
+If you're coming from the EU, here's some good news: you may qualify for visa-free entry depending on your nationality. Many European passport holders can now enter China for up to 15 or 30 days without a visa, which is well-suited for shorter remote work stints or exploratory trips. For stays longer than 30 days, you'll need to look into a work visa (Z visa), a business visa (M visa), or a private visit visa. Our [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/) breaks down all the current options for EU travelers, including which nationalities qualify and which ports of entry accept visa-free arrivals.
 
 The first step is to determine which type of visa you need. There are several different types of visas available, depending on your purpose for traveling to China. If you're planning to work remotely long-term for a Chinese employer, you'll likely need a work visa. The requirements for a work visa vary depending on your nationality and the type of work you'll be doing, but generally, you'll need to provide a valid passport, a completed visa application form, a recent passport-sized photo, and proof of your employment in China. Some remote workers also qualify for the new talent visa pathways if they have specialized skills or advanced degrees.
 
@@ -121,7 +121,7 @@ So what are you waiting for? Start planning your China remote work adventure tod
 
 ### 📌 Helpful Guides
 - 📖 [China Travel Guide 2026 (Updated Monthly)](/posts/chinabound-travel-guide-2026-08-monthly-update/)
-- 🛂 [144-Hour Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
+- 🛂 [ Visa-Free Transit Guide](/posts/144-hour-visa-free-transit-guide/)
 - 💳 [Alipay & WeChat Pay Setup](/posts/alipay-wechat-pay-foreigners-guide/)
 - 📡 [Internet & eSIM in China](/posts/internet-connection-china-esim-vpn-guide/)
 - 🔒 [VPN for China Guide](/posts/internet-connection-china-esim-vpn-guide/)
