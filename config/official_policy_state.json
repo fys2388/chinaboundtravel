@@ -1,0 +1,14 @@
+{
+  "facts": {
+    "hours": 240,
+    "countries": 57,
+    "provinces": 24
+  },
+  "sources": [
+    "https://english.www.gov.cn/policies/featured/202412/20/content_WS676548cbc6d0868f4e8ee28f.html",
+    "https://www.nia.gov.cn/n741440/n741577/c1731205/content.html",
+    "https://www.gov.cn/lianbo/202608/content_7078699.htm"
+  ],
+  "last_checked": "2026-11-06T15:15:10.971475+00:00",
+  "last_change": null
+}
