@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-06_content",
   "created_at": "2026-11-06T01:01:00.056169+00:00",
-  "updated_at": "2026-11-06T04:16:39.425201",
+  "updated_at": "2026-11-06T04:30:55.270542",
   "target_date": "2026-11-06",
   "issue_count": 13,
   "severity_summary": {
@@ -114,27 +114,7 @@
       "detected_at": "2026-11-06T01:01:00.055557+00:00"
     },
     {
-      "id": "site_health-e9c740631107478",
-      "type": "draft_leak",
-      "title": "draft_leak",
-      "description": "draft_leak",
-      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
-      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
-      "evidence": "draft:true的文章可能已发布到线上",
-      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
-      "severity": "high",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-06T04:16:39.121247+00:00"
-    },
-    {
-      "id": "site_health-5e97173320f6f4d7",
+      "id": "site_health-34155a5c5ee02c93",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +131,27 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-06T04:16:39.121250+00:00"
+      "detected_at": "2026-11-06T04:30:54.515378+00:00"
+    },
+    {
+      "id": "site_health-7a914e453b337424",
+      "type": "draft_leak",
+      "title": "draft_leak",
+      "description": "draft_leak",
+      "page": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
+      "file": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
+      "evidence": "draft:true的文章可能已发布到线上",
+      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-06T04:30:54.515372+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -234,7 +234,7 @@
       "detected_at": "2026-11-06T04:16:39.062700"
     },
     {
-      "id": "site_health-6e774806a262e6bd",
+      "id": "site_health-35c19ec13bc4657a",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -251,7 +251,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-06T04:16:39.121275+00:00"
+      "detected_at": "2026-11-06T04:30:54.515415+00:00"
     },
     {
       "id": "issue_7f4272139fd6",
