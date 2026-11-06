@@ -1,6 +1,6 @@
 # 测试回归报告
 
-生成时间: 2026-11-05T14:51:54
+生成时间: 2026-11-06T14:30:44
 
 - 本次运行: 1350 collected, 26 failed
 - 基线存量失败: 16
@@ -13,7 +13,7 @@
 
 - `tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained`
 
-- `tests.test_growth07_content_differentiation::test_no_duplicate_meta_description`
+- `tests.test_growth12_revenue_experiment::test_title_and_content_id_locked`
 
 - `tests.test_internal_links::test_markdown_audit_clean`
 
