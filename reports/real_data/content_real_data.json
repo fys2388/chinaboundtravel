@@ -1,7 +1,7 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-05T13:39:51.544383",
-  "data_date": "2026-11-05",
+  "pull_time": "2026-11-06T13:24:12.013692",
+  "data_date": "2026-11-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -14,7 +14,7 @@
   "top_articles": [
     {
       "slug": "144-hour-visa-free-transit-guide",
-      "word_count": 2261,
+      "word_count": 2259,
       "has_affiliate_links": false,
       "has_internal_links": true
     },
@@ -32,7 +32,7 @@
     },
     {
       "slug": "2026-05-25-china-high-speed-rail-how-to-book-tickets",
-      "word_count": 2384,
+      "word_count": 2397,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -44,7 +44,7 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2151,
+      "word_count": 2164,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1966,
+      "word_count": 1973,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
