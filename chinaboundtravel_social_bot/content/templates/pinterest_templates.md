@@ -29,7 +29,7 @@ Save this for your China trip! | #ChinaTravel #TravelGuide #BackpackingChina
 Don't let visa confusion ruin your China trip!
 
 Everything you need to know:
-- 144-hour visa-free transit
+- 240-hour visa-free transit
 - Visa on arrival options
 - Application tips
 - Common rejection reasons

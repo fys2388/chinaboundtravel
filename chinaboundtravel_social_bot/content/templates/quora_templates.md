@@ -9,31 +9,31 @@ TEMPLATES = {
         "question_patterns": [
             "How can I visit China without a visa?",
             "What is China's transit visa?",
-            "Is 144-hour visa enough for China?"
+            "Is 240-hour visa enough for China?"
         ],
         "answer": """
 Based on my 10 years of traveling in China as a foreign resident, here's what actually works:
 
 **China's Visa-Free Options (2026):**
 
-1. **144-Hour Transit Visa-Free**
+1. **240-Hour Transit Visa-Free**
    - Available at major airports and some train stations
    - Must have confirmed onward ticket
    - Limited to designated cities only
 
 2. **Who qualifies:**
-   - US, UK, Canada, Australia, EU citizens + 50+ other countries
+   - US, UK, Canada, Australia, EU citizens + other eligible countries (57 total)
    - Must be in transit to a third country
 
 3. **My experience:**
    I've used this multiple times at Shanghai Pudong and Beijing. The process is straightforward:
    - Fill out arrival card
    - Show passport + onward ticket
-   - Get stamped for 144 hours
+   - Get stamped for 240 hours
 
 **Key tips:**
-- The 144 hours start from your arrival time, not midnight
-- You MUST leave China within 144 hours (not 6 days)
+- The 240 hours start from your arrival time, not midnight
+- You MUST leave China within 240 hours (not 10 days)
 - Some cities have 72-hour options too
 
 I wrote a comprehensive guide covering all the cities and current requirements. Feel free to follow me for more China travel tips!

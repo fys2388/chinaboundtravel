@@ -7,11 +7,11 @@
 
 TEMPLATES = {
     "visa": {
-        "title": "Just Used China's 144-Hour Visa-Free Transit - Here's What Actually Happened",
+        "title": "Just Used China's 240-Hour Visa-Free Transit - Here's What Actually Happened",
         "body": """
 Hey everyone,
 
-Just went through China's 144-hour visa-free transit at Shanghai Pudong, and I wanted to share what's actually different in 2026.
+Just went through China's 240-hour visa-free transit at Shanghai Pudong, and I wanted to share what's actually different in 2026.
 
 **My situation:**
 - US citizen
@@ -26,7 +26,7 @@ Just went through China's 144-hour visa-free transit at Shanghai Pudong, and I w
 **What surprised me:**
 - The process was smoother than expected
 - No Chinese required - they had English forms
-- Got a 144-hour stamp, not a transit visa
+- Got a 240-hour stamp, not a transit visa
 
 **Tips from my experience:**
 - Don't try to extend it - the clock starts ticking

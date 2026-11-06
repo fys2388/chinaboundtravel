@@ -9,7 +9,7 @@ faq:
   - question: "How many days do you need to see Beijing, Xi'an, and Shanghai?"
     answer: "Minimum 7 full days. Fly into Beijing (days 1-3), take a high-speed train to Xi'an (day 4-5), then fly or train to Shanghai (days 6-7). This itinerary is the Goldilocks zone — not too rushed, not too slow."
   - question: "Do I need a visa for a 7-day China trip?"
-    answer: "Most nationalities need a tourist visa (L-visa). However, citizens of many countries (US, UK, Canada, Australia, EU) can use the 144-hour transit visa-free policy if arriving in Beijing or Shanghai and departing within 144 hours. Check your specific situation before booking."
+    answer: "Most nationalities need a tourist visa (L-visa). However, citizens of many countries (US, UK, Canada, Australia, EU) can use the 240-hour transit visa-free policy if arriving in Beijing or Shanghai and departing within 240 hours. Check your specific situation before booking."
   - question: "How much does a 7-day China trip cost in 2026?"
     answer: "Budget travelers: $80-120/day ($560-840 total). Mid-range: $150-250/day ($1,050-1,750). Comfort: $300+/day. This includes accommodation, food, transport, and attractions — not international flights."
   - question: "What is the best way to travel between Beijing, Xi'an, and Shanghai?"
