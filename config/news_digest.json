@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-06T15:15:10.971349+00:00",
+  "last_updated": "2026-11-06T20:58:30.577168+00:00",
   "last_updated_date": "2026-11-06",
   "total_items": 40,
   "digest": {
@@ -49,6 +49,17 @@
         "_hash": "191a9b20c91f"
       },
       {
+        "title": "China tightens travel rules over tech security - Reuters",
+        "summary": "China tightens travel rules over tech security Reuters",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
+        "date": "2026-09-15",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "347407ab4f96"
+      },
+      {
         "title": "China tightens travel restrictions for citizens - BBC",
         "summary": "China tightens travel restrictions for citizens BBC",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
@@ -93,26 +104,15 @@
         "_hash": "fa00ba262d24"
       },
       {
-        "title": "China adds Kyrgyzstan and Vietnam to its visa-free entry policy - China Daily",
-        "summary": "China adds Kyrgyzstan and Vietnam to its visa-free entry policy China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBLNE56TXdhdEVTTHFlSmEwVkZaSUc1ZGtiTjdFd1VCd2htYnZIY3VxSDN3UWxrdlNGMUt0cER5dVlfcUstNk1VYjdDTF9SYTBvTS1LX2c1N2lSc1VEZ3A4NkZ5MUwyQ1NKeGU0R1l3SHp6WjdqaTZlaU1jWkFzQQ?oc=5",
+        "title": "Citizens of Kyrgyzstan and Vietnam to use 240-hour visa-free transit through China - TV BRICS",
+        "summary": "Citizens of Kyrgyzstan and Vietnam to use 240-hour visa-free transit through China TV BRICS",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUVIyVldkUUhWOTNpMjR0VnpPTG5rSWZWOWJBaXBxY0ZSakk3QVlua3h5eXVFeWNYVVg3RHMzT3R1aWVEc3BKWi1EN2dhLW1WcGNwbk10Q2h3M29WcE9QWXpGOFBfelMya2VoX1RMcXZwWjZXV0ZNeWZidkNqNnVMekZUT2p0OTNORVVyd3JMUTdjQmR5c0JpQnoxREdSeHJmT05JbDl5MXF6eUs1YW9kMw?oc=5",
         "date": "2026-08-20",
         "source": "Google News RSS",
         "source_query": "China+visa+free+transit+240+hour",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "e605227f57f7"
-      },
-      {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "f6400329b9d7"
+        "_hash": "e0eacd3e063b"
       }
     ],
     "travel_industry": [
@@ -150,28 +150,6 @@
         "_hash": "a90870d55f48"
       },
       {
-        "title": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel - Macau Business",
-        "summary": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel Macau Business",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTmVFVm1uWG1jRHNtR3M5VXFxTG02dWVXaE9KNV9lVFBicDF2NnB3ZlEweGZKVmtkSTRFTG5HOENOSC1PeXk5TFJyRE1ZMjBxdHNXQ0JDczZUNHJwRTBsZzBaM0xfaGJEa2haamI4YmNrbWpLUUMyVGtOUnhsNHVZc3ZlcmFJS0dBakFBY3dDbmtQM3JYVG5aV3prSThDNDVpVXhXVVJVc0RnWENGX3d0MVIzS2lvV0tlaFZ3djNydw?oc=5",
-        "date": "2026-11-03",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "0a35c88eac51"
-      },
-      {
-        "title": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms - South China Morning Post",
-        "summary": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRFY4N29raHRNUGdqTFB6cDktM2VlU1BfNThtWEFJekJucko1U256QWl3MWlqZnRJWTZQLVBac1RGZzJTMmtSOEY3Ujl5U3RnTFgteVo4N3lpblBBR0pxdmRIMmx1Yms3ZjFuTHhLdHVNZEh5cGJ4V3lJT1dfdHZTd3dmbW5GTFltVmZYUVRXZlBhZ1JFb1NVeTc4V2JFM2lDV3lUUWVranR6YjlwWUp1ZFZDdU5tUdIBtgFBVV95cUxPZWw5eW9IRmhBOVEzVGlwbktRRXhNTmdnMkVwak1WdTBsM0hmN29ZTWg3LUNqTDFmV1czMVBILW1CdkNHTFJIZ3ZsbFQzVFdiSWFTMXJKUWRnTmxXcTBtTXRWRnpXbHV3RmZSVGtNQ1RmRXZ2Tm5LUWxFb25DUjNNemtjWWFjTmx6N2NrT1M0SVhOSHhHeHNzU0JjQzljai04c2RKUC1VcHJxcGhDa0MwWUc5NmhjUQ?oc=5",
-        "date": "2026-10-31",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "ca2ef44512e6"
-      },
-      {
         "title": "Visa-free policies boost China's inbound tourism for National Day - CGTN",
         "summary": "Visa-free policies boost China's inbound tourism for National Day CGTN",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdTRRM2RtNFVzU2Q3M1MzRkVieTdjVGNGSG5PZXlVVWVlcGlCdEtSb0UzMUFUZzYtenNWY01rMTdSYU5tUVFaMFA3Z3doNlhqVDRERmVremN1Yndrbnd2VnVMc20xejIycUJWMzNtWUl0d0NCZDhjRTB0MTBudzAtZXV6dE84S1BQSUpyaGNnQU1WYXZjSTF2VXd2VWptYk4yUHhNUUJVekIzSUZQRnlNX3g1SXlqQmhWdF9hZ25Xcw?oc=5",
@@ -205,6 +183,17 @@
         "_hash": "a670e57dd7ee"
       },
       {
+        "title": "China’s visa-free boom is rewriting inbound tourism - Asia Times",
+        "summary": "China’s visa-free boom is rewriting inbound tourism Asia Times",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG53eE4yN3QwRjFPWTJtdmMwZ1I3aTVPT0JMRENkMzhvQVA0SEJ6aVRzMVZrR3phbFk2dTlGOHhLRFZydUltWDR2Nk5QTk1FQmh2SDN1dUN3QVk0U2twXzlkNjBhMGNpd0l6ZWpQLXlqWm56elpqU0w4Z1BNUkE4MXloek5YNzl2?oc=5",
+        "date": "2026-08-31",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "9440552d7b82"
+      },
+      {
         "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
         "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
@@ -225,9 +214,31 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "f6400329b9d7"
+      },
+      {
+        "title": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending - CNBC",
+        "summary": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending CNBC",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1kb1drUGRfck50RDRjbU92Y1JWT1JURnRreWxpQzFLOC1keC1Mc3Y1TTNEX3lfVjlKQUFnYnNSY3JaTHozZks3T2FUaGppcXd5Ykp1eGZhdzllaUNpZ0toNEE4NldBZl9vSjIwU0pySFpjOTNoRnNUM9IBfkFVX3lxTE8yQVpTWi1qeGh2UFlqcDZ2aTVwbnVPdXJ5amtURHkwTS1ucVpoeEc1ZHk0VlJ2RVJkbHNCOEZHTEQ2eDZFNE1kNEhRWEQycDZWWVI2RTZHY0o0VkRHYUVVOGctRWp5SEQ1NHFZZzUtdzM4X3NZb3NZcTcwZXU1dw?oc=5",
+        "date": "2026-08-03",
+        "source": "Google News RSS",
+        "source_query": "China+travel+industry+2026",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "f482eab2b3d4"
       }
     ],
     "destination_news": [
+      {
+        "title": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily",
+        "summary": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5FLXZ2eE9uajh2eG4xWTloMy10MFlxQ3REQUZwbjB5RDI1djdOSlhvMHRQWVJWMzQ0S1BVYWJ5TFZvWndhVVFla2NDS2d0MTJNZFoySGN4dFBrZ0pYZ2xJSmVxSF9wOXQ2eWVvNzB0M3B4eEU2TGZ5X0Z6eFhVQQ?oc=5",
+        "date": "2026-11-06",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "fb4152efc5d9"
+      },
       {
         "title": "9th China Intangible Cultural Heritage Expo opens in Chongqing - Xinhua",
         "summary": "9th China Intangible Cultural Heritage Expo opens in Chongqing Xinhua",
@@ -240,26 +251,15 @@
         "_hash": "3d793370c23a"
       },
       {
-        "title": "UNESCO official: Cooperation, China's vision to protect heritage - CGTN",
-        "summary": "UNESCO official: Cooperation, China's vision to protect heritage CGTN",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUTVobUxiaEs3WjhOZFlOMGd0aFVHT0x5bVNjUW1rdE9jQ1VreGFHWGRCQ3hXd2M4MUl4UkZDM0N2b2Z2aFZoVWxBcEpxYVUtR3Y2OTBKcC1LT2daMm4xVklxX1FZOXFVUXE2QVJqSlJSakFrWGk4U281WC1KaXljc2k1TXRRSERhQ0EzM3RLbjI3d1pGRHdUU1ZseFVxdjdnU0lhdTUzWmEzT1dCel9NUjJfM2Fpc2EyUERV?oc=5",
+        "title": "UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today",
+        "summary": "UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdWdKR3RNRDRjNkdfcnJmZHRCTjJic3llX1lJclgzQktmZEFQTV9kb1EzZXhsR2FpMWo4Vkh6cXlndUdxLWkzMFVLV2J5WFhCWmV2NG92b3dCZG5sUS1LbXEweHNtX0JNbGpEaENzVTNsY3FRTk5CbmVzaERRVHJBQ2k5NWhRT1JsWjNpU3pQVlY1RUwtQWtRWVpreFJXLUVTVTkzaWxyTXhua0pxTV9qUnk4X2plcE9VajFjYVRMak9tUQ?oc=5",
         "date": "2026-11-05",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "58763ba5b229"
-      },
-      {
-        "title": "\"Enduring Heritage, Harmonious Asia-Pacific\" - PR Newswire",
-        "summary": "\"Enduring Heritage, Harmonious Asia-Pacific\" PR Newswire",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQ1FXWUJXaHZGTnVyWktUT3lVeUNfbmtVTGhiYWd0Z2UtZWNST1dNNGlISDlJYm96dzVkYnRrcjZCMDNROXlJT0RLSUlpYkdhZF9UTDc4UlV3eHNGSi1iaEFOTDBDS0thaUZRS0JnRkczZUxzOFRIRHloV0swSmhRV01pZFRWc2pBOVVmQ2FzVmd1TFFVcUZvWldXbHRpZFd3WWNqZA?oc=5",
-        "date": "2026-11-05",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "be9931ef2c33"
+        "_hash": "dfb4004ba33a"
       },
       {
         "title": "Seychelles, China and the Art of Being Friends With Everyone: Sherin Francis Takes Island Diplomacy to Beijing - eTurboNews",
@@ -418,15 +418,15 @@
         "_hash": "dc0c52f4626a"
       },
       {
-        "title": "China’s coastal tourist attractions urged to close as Super Typhoon Bavi looms - South China Morning Post",
-        "summary": "China’s coastal tourist attractions urged to close as Super Typhoon Bavi looms South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTFl2M3Q0cUNTNjRKMTNZR2tMZ2Z4cWhmbzNzTkViQ1o0RG9kUFZGNDh4SW5vLWhidm5kaDlNTHI0bnNtUm5uNU4zZWJVdEk3RE9uS3d4QXZ1SVc5ZDBzRGR0RWVEankwaU5LTXRpeWtYTjAxOFg1M2Q5QVU3bnhPTWFLOUFITHRybEN2OERURjRpcmxCZlpTZEJwWU85WmRYWGRzeDZxRENUbm0zZ1hnMHlsSUVObG9qVTkwUzJqcFh4WGdYNWfSAcYBQVVfeXFMTW5RcTIwT0h6SlpvWGMybU4wekRhaDRGUjUyNi1uMWE1bFEzZ3RiTnFFU3JvY3NvUTgyMkJEVnZEcUkwYnFVeXI3aWVENEJ5RUN0QzhXRUFVMFVEQkhxUmxmU001N1BDN2o0RXlnaTdWXzdtazdVbW5Odk52V2NLLUtYMHg2Y195X29sOG42OWlCVEdZanJlLUVhYmJVTlZXb2w1ZXFMRHduWV9zc3kyeFpsdTZLTndpQ3BvM2tkdEtSOHJONXNn?oc=5",
-        "date": "2026-07-08",
+        "title": "Weather Alert: Potential Severe Weather in Central China, July 11-13 - U.S. Embassy & Consulates in China",
+        "summary": "Weather Alert: Potential Severe Weather in Central China, July 11-13 U.S. Embassy & Consulates in China",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXV3R3BUUTNMSmpUQVV4MldFRndNM0ptNWRFWFZZd1BaUF9TY0V5a0czRHBmbVB1UE1jMkxmODZGSnB2c19CZXFZYUFPZWdrb0ZldWRqc3NZMjFZdFpSZng5M0hkY3FzQllXQXVRcWtaUEVNV09ieXh6YkNOZUJYTWsyZ1JuTW5RRU11bmxzQjJDem5rUmFXNlFObkRDdWRvbDU1WjNqSQ?oc=5",
+        "date": "2026-07-10",
         "source": "Google News RSS",
         "source_query": "China+weather+warning+travel",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "a5bc620462ed"
+        "_hash": "fff1ec053e6c"
       },
       {
         "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
@@ -456,7 +456,7 @@
   "llm_summary": {
     "visa_policy": "- [2026-11-06] India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News\n  India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News\n- [2026-11-06] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
     "travel_industry": "- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News\n- [2026-11-06] Int'l medical tourism zone in China's Hainan sees visitor influx - People's Daily Online\n  Int'l medical tourism zone in China's Hainan sees visitor influx People's Daily Online\n- [2026-11-05] 'Chinamaxxing' spurs tourism boom - China Daily\n  'Chinamaxxing' spurs tourism boom China Daily",
-    "destination_news": "- [2026-11-06] 9th China Intangible Cultural Heritage Expo opens in Chongqing - Xinhua\n  9th China Intangible Cultural Heritage Expo opens in Chongqing Xinhua\n- [2026-11-05] UNESCO official: Cooperation, China's vision to protect heritage - CGTN\n  UNESCO official: Cooperation, China's vision to protect heritage CGTN\n- [2026-11-05] \"Enduring Heritage, Harmonious Asia-Pacific\" - PR Newswire\n  \"Enduring Heritage, Harmonious Asia-Pacific\" PR Newswire",
+    "destination_news": "- [2026-11-06] Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily\n  Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily\n- [2026-11-06] 9th China Intangible Cultural Heritage Expo opens in Chongqing - Xinhua\n  9th China Intangible Cultural Heritage Expo opens in Chongqing Xinhua\n- [2026-11-05] UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today\n  UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
     "safety_alerts": "- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı\n- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-06T15:15:10.971475+00:00"
+  "official_state_checked_at": "2026-11-06T20:58:30.577352+00:00"
 }
