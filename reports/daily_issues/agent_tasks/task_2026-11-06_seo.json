@@ -3,13 +3,13 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-06_seo",
   "created_at": "2026-11-06T01:01:00.056545+00:00",
-  "updated_at": "2026-11-06T04:00:48.745929",
+  "updated_at": "2026-11-06T04:16:39.320818",
   "target_date": "2026-11-06",
-  "issue_count": 9,
+  "issue_count": 10,
   "severity_summary": {
     "critical": 0,
     "high": 6,
-    "medium": 3,
+    "medium": 4,
     "low": 0
   },
   "issues": [
@@ -174,7 +174,27 @@
       "detected_at": "2026-11-06T01:01:00.055649+00:00"
     },
     {
-      "id": "site_health-793f348b977323c5",
+      "id": "issue_1db316025b73",
+      "type": "title_too_long",
+      "title": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-11-06.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-06T04:16:39.062714"
+    },
+    {
+      "id": "site_health-49c4c83e7ce79b26",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
@@ -191,7 +211,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-06T04:00:48.496386+00:00"
+      "detected_at": "2026-11-06T04:16:39.121278+00:00"
     }
   ],
   "priority_issue": {
@@ -215,13 +235,14 @@
     "detected_at": "2026-11-06T01:01:00.055563+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "optimize_title"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }

@@ -1,0 +1,31 @@
+{
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-11-06T04:16:39.064357",
+  "target_date": "2026-11-06",
+  "issue_count": 1,
+  "by_agent": {
+    "seo": {
+      "count": 1,
+      "types": [
+        "meta_description_too_long"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue_3dab5e3d57bb",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(182字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-06.json",
+      "detected_at": "2026-11-06T04:16:39.062718",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "auto_fixable": false
+    }
+  ]
+}
