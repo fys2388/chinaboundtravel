@@ -1,7 +1,7 @@
 {
   "date": "2026-11-05",
   "total_published": 8,
-  "total_impressions": 79,
+  "total_impressions": 115,
   "total_clicks": 0,
   "total_uv": 0,
   "by_platform": {
@@ -19,7 +19,7 @@
     },
     "x": {
       "published": 1,
-      "impressions": 79,
+      "impressions": 115,
       "clicks": 0,
       "uv": 0
     },

@@ -4,52 +4,45 @@
       "date": "2026-11-06",
       "slots": [
         {
-          "item_id": "soc-000246",
-          "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-06T12:00:00+00:00",
-          "slot_et": "08:00"
+          "item_id": "soc-000247",
+          "platform": "x",
+          "type": "tip",
+          "utc": "2026-11-06T13:00:00+00:00",
+          "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000255",
+          "item_id": "soc-000325",
           "platform": "ig",
           "type": "conversion",
           "utc": "2026-11-06T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000321",
+          "item_id": "soc-000239",
+          "platform": "fb",
+          "type": "visual",
+          "utc": "2026-11-06T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000062",
+          "platform": "pinterest",
+          "type": "tip",
+          "utc": "2026-11-06T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000101",
           "platform": "ig",
           "type": "knowledge",
           "utc": "2026-11-06T16:00:00+00:00",
           "slot_et": "12:00"
-        },
-        {
-          "item_id": "soc-000238",
-          "platform": "x",
-          "type": "story",
-          "utc": "2026-11-06T13:00:00+00:00",
-          "slot_et": "09:00"
-        },
-        {
-          "item_id": "soc-000061",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-06T21:00:00+00:00",
-          "slot_et": "17:00"
         }
       ]
     },
     {
       "date": "2026-11-07",
       "slots": [
-        {
-          "item_id": "soc-000101",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-07T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000144",
           "platform": "fb",
@@ -68,8 +61,8 @@
           "item_id": "soc-000311",
           "platform": "ig",
           "type": "knowledge",
-          "utc": "2026-11-07T16:00:00+00:00",
-          "slot_et": "12:00"
+          "utc": "2026-11-07T12:00:00+00:00",
+          "slot_et": "08:00"
         },
         {
           "item_id": "soc-000156",
@@ -77,19 +70,19 @@
           "type": "knowledge",
           "utc": "2026-11-07T16:30:00+00:00",
           "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000008",
+          "platform": "fb",
+          "type": "story",
+          "utc": "2026-11-07T21:30:00+00:00",
+          "slot_et": "17:30"
         }
       ]
     },
     {
       "date": "2026-11-08",
       "slots": [
-        {
-          "item_id": "soc-000008",
-          "platform": "fb",
-          "type": "story",
-          "utc": "2026-11-08T12:30:00+00:00",
-          "slot_et": "08:30"
-        },
         {
           "item_id": "soc-000227",
           "platform": "pinterest",
@@ -98,16 +91,16 @@
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000165",
+          "item_id": "soc-000161",
           "platform": "ig",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-08T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000121",
+          "item_id": "soc-000125",
           "platform": "ig",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-08T16:00:00+00:00",
           "slot_et": "12:00"
         },
@@ -117,19 +110,19 @@
           "type": "knowledge",
           "utc": "2026-11-08T13:00:00+00:00",
           "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000211",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-11-08T16:00:00+00:00",
+          "slot_et": "12:00"
         }
       ]
     },
     {
       "date": "2026-11-09",
       "slots": [
-        {
-          "item_id": "soc-000211",
-          "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-09T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000131",
           "platform": "x",
@@ -138,16 +131,16 @@
           "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000285",
+          "item_id": "soc-000281",
           "platform": "ig",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-09T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000011",
+          "item_id": "soc-000015",
           "platform": "x",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-09T17:00:00+00:00",
           "slot_et": "13:00"
         },
@@ -157,6 +150,13 @@
           "type": "knowledge",
           "utc": "2026-11-09T16:00:00+00:00",
           "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000106",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-11-09T12:00:00+00:00",
+          "slot_et": "08:00"
         }
       ]
     },
@@ -164,30 +164,23 @@
       "date": "2026-11-10",
       "slots": [
         {
-          "item_id": "soc-000106",
+          "item_id": "soc-000316",
           "platform": "pinterest",
           "type": "knowledge",
           "utc": "2026-11-10T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000316",
+          "item_id": "soc-000166",
           "platform": "pinterest",
           "type": "knowledge",
           "utc": "2026-11-10T16:00:00+00:00",
           "slot_et": "12:00"
         },
         {
-          "item_id": "soc-000170",
-          "platform": "pinterest",
-          "type": "conversion",
-          "utc": "2026-11-10T22:00:00+00:00",
-          "slot_et": "18:00"
-        },
-        {
-          "item_id": "soc-000136",
+          "item_id": "soc-000140",
           "platform": "fb",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-10T12:30:00+00:00",
           "slot_et": "08:30"
         },
@@ -195,21 +188,21 @@
           "item_id": "soc-000146",
           "platform": "pinterest",
           "type": "knowledge",
-          "utc": "2026-11-11T01:00:00+00:00",
-          "slot_et": "21:00"
+          "utc": "2026-11-10T22:00:00+00:00",
+          "slot_et": "18:00"
+        },
+        {
+          "item_id": "soc-000326",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-11-10T12:00:00+00:00",
+          "slot_et": "08:00"
         }
       ]
     },
     {
       "date": "2026-11-11",
       "slots": [
-        {
-          "item_id": "soc-000326",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-11T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000036",
           "platform": "fb",
@@ -218,18 +211,18 @@
           "slot_et": "08:30"
         },
         {
-          "item_id": "soc-000115",
+          "item_id": "soc-000111",
           "platform": "x",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-11T13:00:00+00:00",
           "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000301",
+          "item_id": "soc-000305",
           "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-11T16:00:00+00:00",
-          "slot_et": "12:00"
+          "type": "conversion",
+          "utc": "2026-11-11T12:00:00+00:00",
+          "slot_et": "08:00"
         },
         {
           "item_id": "soc-000016",
@@ -237,19 +230,19 @@
           "type": "knowledge",
           "utc": "2026-11-11T16:30:00+00:00",
           "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000256",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-11-11T12:00:00+00:00",
+          "slot_et": "08:00"
         }
       ]
     },
     {
       "date": "2026-11-12",
       "slots": [
-        {
-          "item_id": "soc-000256",
-          "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-12T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000116",
           "platform": "fb",
@@ -258,22 +251,29 @@
           "slot_et": "08:30"
         },
         {
-          "item_id": "soc-000045",
+          "item_id": "soc-000041",
           "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-11-12T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000280",
+          "platform": "pinterest",
           "type": "conversion",
           "utc": "2026-11-12T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000276",
-          "platform": "pinterest",
+          "item_id": "soc-000021",
+          "platform": "ig",
           "type": "knowledge",
           "utc": "2026-11-12T16:00:00+00:00",
           "slot_et": "12:00"
         },
         {
-          "item_id": "soc-000021",
-          "platform": "ig",
+          "item_id": "soc-000086",
+          "platform": "pinterest",
           "type": "knowledge",
           "utc": "2026-11-12T16:00:00+00:00",
           "slot_et": "12:00"
@@ -284,13 +284,6 @@
       "date": "2026-11-13",
       "slots": [
         {
-          "item_id": "soc-000086",
-          "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-13T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
-        {
           "item_id": "soc-000091",
           "platform": "x",
           "type": "knowledge",
@@ -298,16 +291,16 @@
           "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000030",
+          "item_id": "soc-000026",
           "platform": "pinterest",
-          "type": "conversion",
-          "utc": "2026-11-13T16:00:00+00:00",
-          "slot_et": "12:00"
+          "type": "knowledge",
+          "utc": "2026-11-13T12:00:00+00:00",
+          "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000221",
+          "item_id": "soc-000225",
           "platform": "fb",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-13T12:30:00+00:00",
           "slot_et": "08:30"
         },
@@ -317,19 +310,19 @@
           "type": "knowledge",
           "utc": "2026-11-13T16:30:00+00:00",
           "slot_et": "12:30"
+        },
+        {
+          "item_id": "soc-000046",
+          "platform": "pinterest",
+          "type": "knowledge",
+          "utc": "2026-11-13T16:00:00+00:00",
+          "slot_et": "12:00"
         }
       ]
     },
     {
       "date": "2026-11-14",
       "slots": [
-        {
-          "item_id": "soc-000046",
-          "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-14T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000241",
           "platform": "ig",
@@ -338,18 +331,18 @@
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000205",
+          "item_id": "soc-000201",
           "platform": "fb",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-14T12:30:00+00:00",
           "slot_et": "08:30"
         },
         {
-          "item_id": "soc-000191",
+          "item_id": "soc-000195",
           "platform": "pinterest",
-          "type": "knowledge",
-          "utc": "2026-11-14T16:00:00+00:00",
-          "slot_et": "12:00"
+          "type": "conversion",
+          "utc": "2026-11-14T12:00:00+00:00",
+          "slot_et": "08:00"
         },
         {
           "item_id": "soc-000171",
@@ -357,19 +350,19 @@
           "type": "knowledge",
           "utc": "2026-11-14T13:00:00+00:00",
           "slot_et": "09:00"
+        },
+        {
+          "item_id": "soc-000306",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-11-14T16:00:00+00:00",
+          "slot_et": "12:00"
         }
       ]
     },
     {
       "date": "2026-11-15",
       "slots": [
-        {
-          "item_id": "soc-000306",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-15T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000071",
           "platform": "x",
@@ -378,21 +371,28 @@
           "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000060",
+          "item_id": "soc-000056",
           "platform": "fb",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-15T12:30:00+00:00",
           "slot_et": "08:30"
         },
         {
-          "item_id": "soc-000066",
+          "item_id": "soc-000070",
           "platform": "pinterest",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-15T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
           "item_id": "soc-000261",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-11-15T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000286",
           "platform": "ig",
           "type": "knowledge",
           "utc": "2026-11-15T16:00:00+00:00",
@@ -404,30 +404,23 @@
       "date": "2026-11-16",
       "slots": [
         {
-          "item_id": "soc-000286",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-16T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
-        {
           "item_id": "soc-000181",
           "platform": "ig",
           "type": "knowledge",
-          "utc": "2026-11-16T16:00:00+00:00",
-          "slot_et": "12:00"
-        },
-        {
-          "item_id": "soc-000130",
-          "platform": "pinterest",
-          "type": "conversion",
           "utc": "2026-11-16T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000291",
+          "item_id": "soc-000126",
           "platform": "pinterest",
           "type": "knowledge",
+          "utc": "2026-11-16T12:00:00+00:00",
+          "slot_et": "08:00"
+        },
+        {
+          "item_id": "soc-000295",
+          "platform": "pinterest",
+          "type": "conversion",
           "utc": "2026-11-16T16:00:00+00:00",
           "slot_et": "12:00"
         },
@@ -435,21 +428,21 @@
           "item_id": "soc-000271",
           "platform": "ig",
           "type": "knowledge",
-          "utc": "2026-11-16T21:00:00+00:00",
-          "slot_et": "17:00"
+          "utc": "2026-11-16T16:00:00+00:00",
+          "slot_et": "12:00"
+        },
+        {
+          "item_id": "soc-000076",
+          "platform": "fb",
+          "type": "knowledge",
+          "utc": "2026-11-16T12:30:00+00:00",
+          "slot_et": "08:30"
         }
       ]
     },
     {
       "date": "2026-11-17",
       "slots": [
-        {
-          "item_id": "soc-000076",
-          "platform": "fb",
-          "type": "knowledge",
-          "utc": "2026-11-17T12:30:00+00:00",
-          "slot_et": "08:30"
-        },
         {
           "item_id": "soc-000081",
           "platform": "ig",
@@ -458,16 +451,16 @@
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000270",
+          "item_id": "soc-000266",
           "platform": "pinterest",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-17T12:00:00+00:00",
           "slot_et": "08:00"
         },
         {
-          "item_id": "soc-000206",
+          "item_id": "soc-000210",
           "platform": "ig",
-          "type": "knowledge",
+          "type": "conversion",
           "utc": "2026-11-17T16:00:00+00:00",
           "slot_et": "12:00"
         },
@@ -475,21 +468,21 @@
           "item_id": "soc-000176",
           "platform": "fb",
           "type": "knowledge",
-          "utc": "2026-11-17T16:30:00+00:00",
-          "slot_et": "12:30"
+          "utc": "2026-11-17T12:30:00+00:00",
+          "slot_et": "08:30"
+        },
+        {
+          "item_id": "soc-000296",
+          "platform": "ig",
+          "type": "knowledge",
+          "utc": "2026-11-17T21:00:00+00:00",
+          "slot_et": "17:00"
         }
       ]
     },
     {
       "date": "2026-11-18",
       "slots": [
-        {
-          "item_id": "soc-000296",
-          "platform": "ig",
-          "type": "knowledge",
-          "utc": "2026-11-18T12:00:00+00:00",
-          "slot_et": "08:00"
-        },
         {
           "item_id": "soc-000051",
           "platform": "x",
@@ -498,14 +491,14 @@
           "slot_et": "09:00"
         },
         {
-          "item_id": "soc-000035",
+          "item_id": "soc-000031",
           "platform": "x",
-          "type": "conversion",
+          "type": "knowledge",
           "utc": "2026-11-18T17:00:00+00:00",
           "slot_et": "13:00"
         }
       ]
     }
   ],
-  "generated_at": "2026-11-06T07:49:49.189842"
+  "generated_at": "2026-11-06T19:54:49.553108"
 }
