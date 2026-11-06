@@ -285,6 +285,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

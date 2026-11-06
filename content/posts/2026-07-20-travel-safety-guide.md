@@ -317,6 +317,8 @@ Originally posted on ChinaBound Travel Blog
 
 - [Is China Safe in 2026? Honest Guide (Còn Trung Quốc)](/posts/navigating-china-with-confidence-a-californians-guide-to-travel-safety/)
 
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
 ## FAQ
 
 ### What should I know about how safe is china,travel & destinations,210,26,informational,0.0,/resources?

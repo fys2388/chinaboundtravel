@@ -98,6 +98,8 @@ Choosing your first city in China is an exciting and important decision. By cons
 
 - [Shanghai vs Beijing: Which to Visit First](/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## Related Reading
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)

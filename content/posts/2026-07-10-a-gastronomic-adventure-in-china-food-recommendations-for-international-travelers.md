@@ -184,6 +184,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### What should I know about best food in china?

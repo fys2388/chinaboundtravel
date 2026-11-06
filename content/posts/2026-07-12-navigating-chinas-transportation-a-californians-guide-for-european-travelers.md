@@ -155,6 +155,8 @@ For more information on China travel, check out these articles:
 
 - [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

@@ -127,3 +127,5 @@ This itinerary takes you through three of China's most beautiful cities: Beijing
 ## Related Reading
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)
+
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)

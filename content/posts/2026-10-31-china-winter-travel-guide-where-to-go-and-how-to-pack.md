@@ -157,3 +157,5 @@ You might also be interested in our [Xi'an Terracotta Army: History, Discovery, 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
+- [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
