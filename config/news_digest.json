@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-07T14:15:45.576120+00:00",
+  "last_updated": "2026-11-07T19:31:04.352657+00:00",
   "last_updated_date": "2026-11-07",
   "total_items": 40,
   "digest": {
@@ -47,17 +47,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "191a9b20c91f"
-      },
-      {
-        "title": "China tightens travel rules over tech security - Reuters",
-        "summary": "China tightens travel rules over tech security Reuters",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
-        "date": "2026-09-15",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "347407ab4f96"
       },
       {
         "title": "China tightens travel restrictions for citizens - BBC",
@@ -113,6 +102,17 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "e605227f57f7"
+      },
+      {
+        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
+        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
+        "date": "2026-08-06",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "f6400329b9d7"
       }
     ],
     "travel_industry": [
@@ -150,17 +150,6 @@
         "_hash": "01fa23774a86"
       },
       {
-        "title": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel - Macau Business",
-        "summary": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel Macau Business",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTmVFVm1uWG1jRHNtR3M5VXFxTG02dWVXaE9KNV9lVFBicDF2NnB3ZlEweGZKVmtkSTRFTG5HOENOSC1PeXk5TFJyRE1ZMjBxdHNXQ0JDczZUNHJwRTBsZzBaM0xfaGJEa2haamI4YmNrbWpLUUMyVGtOUnhsNHVZc3ZlcmFJS0dBakFBY3dDbmtQM3JYVG5aV3prSThDNDVpVXhXVVJVc0RnWENGX3d0MVIzS2lvV0tlaFZ3djNydw?oc=5",
-        "date": "2026-11-03",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "0a35c88eac51"
-      },
-      {
         "title": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms - South China Morning Post",
         "summary": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms South China Morning Post",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRFY4N29raHRNUGdqTFB6cDktM2VlU1BfNThtWEFJekJucko1U256QWl3MWlqZnRJWTZQLVBac1RGZzJTMmtSOEY3Ujl5U3RnTFgteVo4N3lpblBBR0pxdmRIMmx1Yms3ZjFuTHhLdHVNZEh5cGJ4V3lJT1dfdHZTd3dmbW5GTFltVmZYUVRXZlBhZ1JFb1NVeTc4V2JFM2lDV3lUUWVranR6YjlwWUp1ZFZDdU5tUdIBtgFBVV95cUxPZWw5eW9IRmhBOVEzVGlwbktRRXhNTmdnMkVwak1WdTBsM0hmN29ZTWg3LUNqTDFmV1czMVBILW1CdkNHTFJIZ3ZsbFQzVFdiSWFTMXJKUWRnTmxXcTBtTXRWRnpXbHV3RmZSVGtNQ1RmRXZ2Tm5LUWxFb25DUjNNemtjWWFjTmx6N2NrT1M0SVhOSHhHeHNzU0JjQzljai04c2RKUC1VcHJxcGhDa0MwWUc5NmhjUQ?oc=5",
@@ -170,6 +159,17 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "ca2ef44512e6"
+      },
+      {
+        "title": "Visa-free policies boost China's inbound tourism for National Day - CGTN",
+        "summary": "Visa-free policies boost China's inbound tourism for National Day CGTN",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdTRRM2RtNFVzU2Q3M1MzRkVieTdjVGNGSG5PZXlVVWVlcGlCdEtSb0UzMUFUZzYtenNWY01rMTdSYU5tUVFaMFA3Z3doNlhqVDRERmVremN1Yndrbnd2VnVMc20xejIycUJWMzNtWUl0d0NCZDhjRTB0MTBudzAtZXV6dE84S1BQSUpyaGNnQU1WYXZjSTF2VXd2VWptYk4yUHhNUUJVekIzSUZQRnlNX3g1SXlqQmhWdF9hZ25Xcw?oc=5",
+        "date": "2026-10-09",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "498c62a077c2"
       },
       {
         "title": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 - Tourism Economics",
@@ -240,17 +240,6 @@
         "_hash": "e105a944134b"
       },
       {
-        "title": "Sanae Takaichi slammed online for praising calligraphy without mentioning China - South China Morning Post",
-        "summary": "Sanae Takaichi slammed online for praising calligraphy without mentioning China South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbVNOeWN6Sm8tZ1Zlc1hOTFR6OTVBTUNJcEtaSE5MQ25aSEo3QU5Pc3lXSWNrUVhjT3RsZFpVTEY2MUdiYXNpUjJhUnRaQ1pDb0xmWVdEbDR5T3g0ellxWFIyNk5PTGN6WnY3dUZnUXA5QnMzdWsyb284NFVpTnNkOGMyWVR0c3NUQklYOTVGUjFwOVRITnpDM1lpU0RCeFNDQTFfOVBHbmxmY0ZTSmpoZzl6a3gxMjdiSmZUdENjTHRQNjRVVFB6Q2IxMW56UdIBzgFBVV95cUxPajdVeFBuM0pRT1NjTFdsSFp4ZzhPTEVrT0pfRTRVMm9weVdqSTRRbF9WWFVuTjV6MlU4Q0Vkbi1vQlF3Z2FZMWJjNnBOSy1vSjYzS3UyWGdvTzdTVG0yeTdZNGstRmJjaVRPMFVjQjdJb0lIRHZPMmhhSUk2dUxqT0tXaVg0ZzlRZ0Yxbnh3RnBhZ2hYU3JhVDlEUWRBQTQycmhLNWp0cXlkWDEyR1dCb3NaMFNNNWxCc2pWNlcwVTdKSURsV3ZTUnVkWjhVdw?oc=5",
-        "date": "2026-11-07",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "3c235dd22134"
-      },
-      {
         "title": "(W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? - Ecns.cn",
         "summary": "(W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? Ecns.cn",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ISHVpVk5TQWlaemlGYXBKUFEtN1ZVX29VWmpYZmRnQm4taFNwSjVEWFZ4SmNGOGRMdEE4UUF6ZXVXYVhTVWRfZnUyanNOUDNxd2MwSEw2Qm5qUnRHWFl3WDA1aGQ0endlLURJTHZZR2U3RHlIcEhxQ1RTa21wbTA?oc=5",
@@ -260,6 +249,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "f1eb1d5056fd"
+      },
+      {
+        "title": "China’s intangible cultural heritage expo showcases innovative ways to integrate traditions into modern life - 巴士的報",
+        "summary": "China’s intangible cultural heritage expo showcases innovative ways to integrate traditions into modern life 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQUTFENDFabW80VUNNYTBRbGVmdWpPeW9WRU1JSy1pRjFkM1N5aDRYajlGamZUSFdFaF9hajJkUm9jUm95UWplU3RpYm9iM2VLVlgzV1hOdDczTHp2M1ZnQVRTYjF5dThIYnNRWEJZalA5VzVKM3ZuQ1JfMHo3UENMclpMMzhkSmxsaWVra1V3MnJLbEVERWpCLVkxdnVDQ2pJSDdTWDI0aThLTUJoclV6V0VwcWJ2VlJ4RTd6N0QwTTFuNjV5WDFydUNySUFmUzU3SXJiT3ZyQVlOakpSYlJqeGhfc3ZOUXBOemF1a3pHZEM?oc=5",
+        "date": "2026-11-07",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "52d25236c902"
       },
       {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
@@ -363,6 +363,17 @@
         "_hash": "0d5e9e4b29ee"
       },
       {
+        "title": "Shipping from China to Australia [Updated November 2026 ] - Freightos",
+        "summary": "Shipping from China to Australia [Updated November 2026 ] Freightos",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWTdOQWV2cHM1aXRpQU1UUkFuX0pmaEE4QkdDLUFUSUt6RFdpNmZqZUVXNEZ6aXJ0c2xQQlB5eHNaNWRFZTh4QVcwR2JaNTh6d3FOVUJONTlWenJFTHFyUlBHSlZvWm41eEZ2UUtmV2lCTExWVndJcmw1bGJVZWNrYQ?oc=5",
+        "date": "2026-11-03",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "cf9e85885c3a"
+      },
+      {
         "title": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı",
         "summary": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
         "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWDRKUmdWclVhZlpLVnFCNlJvSkl0NHJXVHJkQXQtWkdYNWtRMnBjRkRlT1Q4NlRlUTlSa3Y5eEU4LUFqNEZla1J6QXlRTlg3TGpickMtUGNRR1o4dkYtTml0Qzl2YW00UGVoZEo1NXNDZ3V5a045RXEzeU8yamVpLWptNFRnaVhvZEpsN1RGVHZyT3gwQ08zenJILUppY1JtZFRjQTV5TUJIVUlfbXhfYlhQSVpTVzJRM0pESHJVYnZBQ245MGM3M1FkQktIUQ?oc=5",
@@ -372,17 +383,6 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "7a3227c9b470"
-      },
-      {
-        "title": "Mercedes readies 2030 strategy update with China at its core - Reuters",
-        "summary": "Mercedes readies 2030 strategy update with China at its core Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPb3RXanRCZVNUand6bVBsaVdRS29UeGlGQ240NnhocVYyQ0pBdUdCZkhWM2F3RDhiZlIwdXNRb0tJbVpmQ1oxTy1Gel9EMFhzWU8xWXc1dnBXSzdkTjdDcjZ3YVFVSnR4TWROYXpUVlpjWEVUVWVHay1wcUhwNHgzOFNXcV8wUFZxczZXT0cwZTl2TUJ5SmlhUWQ2ZzNnMldGaVNaX2ZOUTFlajdoRkxoMkM4WWpPRmh3Wk51Y0hIZV8?oc=5",
-        "date": "2026-10-28",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "e848ebb2cc94"
       },
       {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
@@ -456,8 +456,8 @@
   "llm_summary": {
     "visa_policy": "- [2026-11-07] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-06] India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News\n  India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
     "travel_industry": "- [2026-11-07] What China's first Antarctic law means for science, tourism and beyond - CGTN\n  What China's first Antarctic law means for science, tourism and beyond CGTN\n- [2026-11-07] China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain - VnExpress International\n  China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain VnExpress International\n- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News",
-    "destination_news": "- [2026-11-07] Nearly 1000 inheritors gather in Chongqing for cultural heritage expo - China Daily\n  Nearly 1000 inheritors gather in Chongqing for cultural heritage expo China Daily\n- [2026-11-07] Sanae Takaichi slammed online for praising calligraphy without mentioning China - South China Morning Post\n  Sanae Takaichi slammed online for praising calligraphy without mentioning China South China Morning Post\n- [2026-11-07] (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? - Ecns.cn\n  (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? Ecns.cn",
-    "safety_alerts": "- [2026-11-07] Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning Post\n  Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams South China Morning Post\n- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
+    "destination_news": "- [2026-11-07] Nearly 1000 inheritors gather in Chongqing for cultural heritage expo - China Daily\n  Nearly 1000 inheritors gather in Chongqing for cultural heritage expo China Daily\n- [2026-11-07] (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? - Ecns.cn\n  (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? Ecns.cn\n- [2026-11-07] China’s intangible cultural heritage expo showcases innovative ways to integrate traditions into modern life - 巴士的報\n  China’s intangible cultural heritage expo showcases innovative ways to integrate traditions into modern life 巴士的報",
+    "safety_alerts": "- [2026-11-07] Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning Post\n  Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams South China Morning Post\n- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Shipping from China to Australia [Updated November 2026 ] - Freightos\n  Shipping from China to Australia [Updated November 2026 ] Freightos",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-07T14:15:45.576310+00:00"
+  "official_state_checked_at": "2026-11-07T19:31:04.352844+00:00"
 }
