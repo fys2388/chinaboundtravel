@@ -360,6 +360,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
 
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

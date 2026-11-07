@@ -186,6 +186,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about best food in china?

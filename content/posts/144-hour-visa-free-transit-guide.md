@@ -17,7 +17,7 @@ TocOpen: false
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
-last_updated: "2026-11-06"
+last_updated: "2026-11-07"
 fact_checked: "2026-09-13"
 reviewed_by: "ChinaBound Travel Editorial Team"
 reviewed_at: "2026-09-13"
@@ -307,6 +307,8 @@ Your passport should be valid well beyond your intended stay, with blank pages f
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
 ## FAQ
 
