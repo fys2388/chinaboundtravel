@@ -2435,6 +2435,17 @@
       "error_message": "strict mode failed: broken=0 malformed=2\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261107_132535",
+      "timestamp": "2026-11-07T13:25:35.832108",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "42376744998",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
