@@ -1,10 +1,20 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-06T20:58:30.577168+00:00",
-  "last_updated_date": "2026-11-06",
+  "last_updated": "2026-11-07T02:59:09.784164+00:00",
+  "last_updated_date": "2026-11-07",
   "total_items": 40,
   "digest": {
     "visa_policy": [
+      {
+        "title": "中国240小时过境免签“朋友圈”扩展至57国",
+        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
+        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
+        "date": "2026-11-07",
+        "source": "State Council 57-country notice",
+        "category": "visa_policy",
+        "type": "policy_page",
+        "_hash": "d35a146c4b77"
+      },
       {
         "title": "India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News",
         "summary": "India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News",
@@ -15,16 +25,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "ceef66b0fa4a"
-      },
-      {
-        "title": "中国240小时过境免签“朋友圈”扩展至57国",
-        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
-        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-06",
-        "source": "State Council 57-country notice",
-        "category": "visa_policy",
-        "type": "policy_page",
-        "_hash": "d35a146c4b77"
       },
       {
         "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
@@ -104,15 +104,15 @@
         "_hash": "fa00ba262d24"
       },
       {
-        "title": "Citizens of Kyrgyzstan and Vietnam to use 240-hour visa-free transit through China - TV BRICS",
-        "summary": "Citizens of Kyrgyzstan and Vietnam to use 240-hour visa-free transit through China TV BRICS",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUVIyVldkUUhWOTNpMjR0VnpPTG5rSWZWOWJBaXBxY0ZSakk3QVlua3h5eXVFeWNYVVg3RHMzT3R1aWVEc3BKWi1EN2dhLW1WcGNwbk10Q2h3M29WcE9QWXpGOFBfelMya2VoX1RMcXZwWjZXV0ZNeWZidkNqNnVMekZUT2p0OTNORVVyd3JMUTdjQmR5c0JpQnoxREdSeHJmT05JbDl5MXF6eUs1YW9kMw?oc=5",
+        "title": "China adds Kyrgyzstan and Vietnam to its visa-free entry policy - China Daily",
+        "summary": "China adds Kyrgyzstan and Vietnam to its visa-free entry policy China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBLNE56TXdhdEVTTHFlSmEwVkZaSUc1ZGtiTjdFd1VCd2htYnZIY3VxSDN3UWxrdlNGMUt0cER5dVlfcUstNk1VYjdDTF9SYTBvTS1LX2c1N2lSc1VEZ3A4NkZ5MUwyQ1NKeGU0R1l3SHp6WjdqaTZlaU1jWkFzQQ?oc=5",
         "date": "2026-08-20",
         "source": "Google News RSS",
         "source_query": "China+visa+free+transit+240+hour",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "e0eacd3e063b"
+        "_hash": "e605227f57f7"
       }
     ],
     "travel_industry": [
@@ -139,15 +139,26 @@
         "_hash": "6e6f54e1091c"
       },
       {
-        "title": "'Chinamaxxing' spurs tourism boom - China Daily",
-        "summary": "'Chinamaxxing' spurs tourism boom China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBDdXpmSWx6bnVrY3JQLVNUempZMTlIQXAtYzBMbnJOeFdSaG1iSnZhR0N1MFB1VUIwNzJfVHBsRkpfRENEOUYtSVVwMlI3OE4wYWVIdTk1NURyQVBfd3FaRjJtUFdVWC01Wk84enBqTWxXbm40T2VKNGZNWDZIZw?oc=5",
-        "date": "2026-11-05",
+        "title": "'Mini-breaks' poised to boost tourism - China Daily",
+        "summary": "'Mini-breaks' poised to boost tourism China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9IQXhudGtXM0tnYzdUSklSaW01UHRfVDM3dHVZaWtUTkFYWmN2amdJVE9aWW9mZm91Wmd1NzRYbDZZTXlJMS03OGhTekgyNV85TFM4MnFBbWUxWjAzanEzVUpZQ2w1ZFRzXzl1YVdQOGZJRW1XOGpDWFl4WDhUZw?oc=5",
+        "date": "2026-11-06",
         "source": "Google News RSS",
         "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "a90870d55f48"
+        "_hash": "2f9d54485d08"
+      },
+      {
+        "title": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel - Macau Business",
+        "summary": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel Macau Business",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTmVFVm1uWG1jRHNtR3M5VXFxTG02dWVXaE9KNV9lVFBicDF2NnB3ZlEweGZKVmtkSTRFTG5HOENOSC1PeXk5TFJyRE1ZMjBxdHNXQ0JDczZUNHJwRTBsZzBaM0xfaGJEa2haamI4YmNrbWpLUUMyVGtOUnhsNHVZc3ZlcmFJS0dBakFBY3dDbmtQM3JYVG5aV3prSThDNDVpVXhXVVJVc0RnWENGX3d0MVIzS2lvV0tlaFZ3djNydw?oc=5",
+        "date": "2026-11-03",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "0a35c88eac51"
       },
       {
         "title": "Visa-free policies boost China's inbound tourism for National Day - CGTN",
@@ -214,20 +225,20 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "f6400329b9d7"
-      },
-      {
-        "title": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending - CNBC",
-        "summary": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending CNBC",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1kb1drUGRfck50RDRjbU92Y1JWT1JURnRreWxpQzFLOC1keC1Mc3Y1TTNEX3lfVjlKQUFnYnNSY3JaTHozZks3T2FUaGppcXd5Ykp1eGZhdzllaUNpZ0toNEE4NldBZl9vSjIwU0pySFpjOTNoRnNUM9IBfkFVX3lxTE8yQVpTWi1qeGh2UFlqcDZ2aTVwbnVPdXJ5amtURHkwTS1ucVpoeEc1ZHk0VlJ2RVJkbHNCOEZHTEQ2eDZFNE1kNEhRWEQycDZWWVI2RTZHY0o0VkRHYUVVOGctRWp5SEQ1NHFZZzUtdzM4X3NZb3NZcTcwZXU1dw?oc=5",
-        "date": "2026-08-03",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "f482eab2b3d4"
       }
     ],
     "destination_news": [
+      {
+        "title": "AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships - South China Morning Post",
+        "summary": "AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPNDNmVXFFbVhLYXdTODktMXVhZnBTek1VLXhNRzlISXBpN1o2NUJZTGlLc0tBTjhQQ3hueUNGNzY1ZU5sQWRYQnFFLVJZT1N4ektfUHVvZXRwTGpKN0MwNEtWWFR1Qzh5eVlQMlBvcHBSNnRNM1pPUjAzcUFGZnU0NlU3V3RiVENnUWw3aXdZbG1NVGJUMFRhWW9QNU5sLVFHWHQzbHkwc21LTVc0VHpPc3NHa0FIMFh4TzJ2S2lMc1ZBWjNjaWpZcHhTRW1BWGM2cmw3VktUVGtXeC1UWUxIa2ZzcHhGNHVWdDNWUkVJeE5lWWdK0gH0AUFVX3lxTE5lMGJOdDdjeFJOb1NyZXhqUU1CdGVkVW13a1JxbUlNZHpvV19HZUp6S01UWUxRWkM0M3ZlNmxXUUYwcGUtOUhiajdCRkV4dmlFUE5uNXhETmJiUFhNRGJESW44S1pzMVVYV3E5aE00N2FUZEF5RzMxTEtQYlBFVEZ6VW4wb1Utd0NIVG83N1RtVERZQVdGR2diQ05SR2dabno4bTF0bXZIajVyQkhZNU12M0JyZDhYMTM4R2tKbm5acEhvaE1rdDZodFhjU2E3SXAyYzB5bzBsaHR5VDBkbGFnNHhoQU0yRmVfSGZKYmIxS1NBNlY?oc=5",
+        "date": "2026-11-07",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "b5494eacd96e"
+      },
       {
         "title": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily",
         "summary": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily",
@@ -238,17 +249,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "fb4152efc5d9"
-      },
-      {
-        "title": "9th China Intangible Cultural Heritage Expo opens in Chongqing - Xinhua",
-        "summary": "9th China Intangible Cultural Heritage Expo opens in Chongqing Xinhua",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBaMzV1Zmg0TGdCTlhyYUdVREhVVmRKM2Mya1dnYkJ0b2owcHQtVG82TVRzMUdVbHlHVTVFdGotTnJjQ2ZmUi11ejVFcElrQnZaYkZlZlpuU3hfRXptVV9CTEJKaTdjdnpIcVNwckIyYm13WTJVenFnOVZTdTM?oc=5",
-        "date": "2026-11-06",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "3d793370c23a"
       },
       {
         "title": "UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today",
@@ -407,6 +407,17 @@
         "_hash": "38c86176c05c"
       },
       {
+        "title": "Storm weakens, but disrupts travel in China - Taipei Times",
+        "summary": "Storm weakens, but disrupts travel in China Taipei Times",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
+        "date": "2026-08-11",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "cb324ec34cae"
+      },
+      {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
         "summary": "Weather Alert: Typhoon Dolphin U.S. Embassy & Consulates in China",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1yV3hGMHA1WU54b3BGVEpYeGFhMVJueXlyMHV4blV1STJBb1dVeFY2NmZJWDlrVGFwdURYQ2hTMmN4V2tyMzl4Vko2S3Rmc21mUHBVX0lMWW9kQlZ0MHZnWXh4RGctZWp6WGJmSDAzMjBUQi1jVGc?oc=5",
@@ -416,17 +427,6 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "dc0c52f4626a"
-      },
-      {
-        "title": "Weather Alert: Potential Severe Weather in Central China, July 11-13 - U.S. Embassy & Consulates in China",
-        "summary": "Weather Alert: Potential Severe Weather in Central China, July 11-13 U.S. Embassy & Consulates in China",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXV3R3BUUTNMSmpUQVV4MldFRndNM0ptNWRFWFZZd1BaUF9TY0V5a0czRHBmbVB1UE1jMkxmODZGSnB2c19CZXFZYUFPZWdrb0ZldWRqc3NZMjFZdFpSZng5M0hkY3FzQllXQXVRcWtaUEVNV09ieXh6YkNOZUJYTWsyZ1JuTW5RRU11bmxzQjJDem5rUmFXNlFObkRDdWRvbDU1WjNqSQ?oc=5",
-        "date": "2026-07-10",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "fff1ec053e6c"
       },
       {
         "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
@@ -454,15 +454,15 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-06] India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News\n  India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News\n- [2026-11-06] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
-    "travel_industry": "- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News\n- [2026-11-06] Int'l medical tourism zone in China's Hainan sees visitor influx - People's Daily Online\n  Int'l medical tourism zone in China's Hainan sees visitor influx People's Daily Online\n- [2026-11-05] 'Chinamaxxing' spurs tourism boom - China Daily\n  'Chinamaxxing' spurs tourism boom China Daily",
-    "destination_news": "- [2026-11-06] Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily\n  Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily\n- [2026-11-06] 9th China Intangible Cultural Heritage Expo opens in Chongqing - Xinhua\n  9th China Intangible Cultural Heritage Expo opens in Chongqing Xinhua\n- [2026-11-05] UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today\n  UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
+    "visa_policy": "- [2026-11-07] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-06] India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News\n  India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
+    "travel_industry": "- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News\n- [2026-11-06] Int'l medical tourism zone in China's Hainan sees visitor influx - People's Daily Online\n  Int'l medical tourism zone in China's Hainan sees visitor influx People's Daily Online\n- [2026-11-06] 'Mini-breaks' poised to boost tourism - China Daily\n  'Mini-breaks' poised to boost tourism China Daily",
+    "destination_news": "- [2026-11-07] AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships - South China Morning Post\n  AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships South China Morning Post\n- [2026-11-06] Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily\n  Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily\n- [2026-11-05] UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today\n  UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
     "safety_alerts": "- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı\n- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
-    "Google News RSS": 38,
     "State Council 57-country notice": 1,
+    "Google News RSS": 38,
     "Travel | The Guardian": 1
   },
   "source_config": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-06T20:58:30.577352+00:00"
+  "official_state_checked_at": "2026-11-07T02:59:09.784372+00:00"
 }
