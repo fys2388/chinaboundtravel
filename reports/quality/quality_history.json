@@ -2,41 +2,6 @@
   "version": 1,
   "snapshots": [
     {
-      "timestamp": "2026-10-29T07:56:08.111373+00:00",
-      "summary": {
-        "total": 9,
-        "P0": 0,
-        "P1": 3,
-        "P2": 6,
-        "by_source": {
-          "site_health": 3,
-          "visual": 1,
-          "content": 3,
-          "predeploy": 1,
-          "site": 1
-        },
-        "by_owner": {
-          "content": 5,
-          "engineering": 2,
-          "seo": 1,
-          "site_health": 1
-        }
-      },
-      "issue_ids": [
-        "3d8eaf1805cf9f56",
-        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-        "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-        "eda93581fbec80e3",
-        "f88a5fe66eae891f",
-        "site_health-4628e34e1bfc4d2a",
-        "site_health-675ca404666cb14",
-        "site_health-7c1c610033d247e5"
-      ],
-      "opened": 3,
-      "resolved": 3
-    },
-    {
       "timestamp": "2026-10-29T08:02:06.598945+00:00",
       "summary": {
         "total": 9,
@@ -15960,7 +15925,46 @@
       ],
       "opened": 5,
       "resolved": 5
+    },
+    {
+      "timestamp": "2026-11-07T03:46:58.266515+00:00",
+      "summary": {
+        "total": 15,
+        "P0": 4,
+        "P1": 4,
+        "P2": 7,
+        "by_source": {
+          "content": 8,
+          "site_health": 5,
+          "visual": 1,
+          "site": 1
+        },
+        "by_owner": {
+          "content": 11,
+          "engineering": 1,
+          "seo": 3
+        }
+      },
+      "issue_ids": [
+        "content-check-quality_validator-failed",
+        "content-frontmatter-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+        "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+        "content-frontmatter-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+        "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
+        "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+        "eda93581fbec80e3",
+        "f88a5fe66eae891f",
+        "site_health-1677e62d7342a9c8",
+        "site_health-252cc46dae561ec2",
+        "site_health-3f7094186230969a",
+        "site_health-461e2422aec521fb",
+        "site_health-79e5db639ae55f44"
+      ],
+      "opened": 5,
+      "resolved": 6
     }
   ],
-  "updated_at": "2026-11-07T03:31:52.928707+00:00"
+  "updated_at": "2026-11-07T03:46:58.266515+00:00"
 }
