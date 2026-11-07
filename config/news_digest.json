@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-07T02:59:09.784164+00:00",
+  "last_updated": "2026-11-07T14:15:45.576120+00:00",
   "last_updated_date": "2026-11-07",
   "total_items": 40,
   "digest": {
@@ -117,6 +117,28 @@
     ],
     "travel_industry": [
       {
+        "title": "What China's first Antarctic law means for science, tourism and beyond - CGTN",
+        "summary": "What China's first Antarctic law means for science, tourism and beyond CGTN",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRFF0SWMtelJJSDQtV0lSdXNMQW9XSFpTMFkxRENiaW9sLVhQYjNYUFd3RF83aHF3dWVRMkJCc1RvNUNrb1hkdExzMmFnbVU2SHV3MVRwaTNwLVN6VWFlU2lwUVpkVXhfZGR0SExrc2h2SWRPRnM0RThKRXJpQjh0M1BvOG9HN0Y4ZEpXWEEyQXZDdjc1dWl5MVpoWWVfNTFRTFJ6eFJ3LW5PRDRlVEU4anVNbDZiRGQ4M2l4eDBjV2RoRDZI?oc=5",
+        "date": "2026-11-07",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "a3aabc9f72f4"
+      },
+      {
+        "title": "China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain - VnExpress International",
+        "summary": "China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain VnExpress International",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNYlFJMWYtUTVwNFhQN2VLZjBhS0R4c2hCa2lMTGlKRUpxQUZaUWFoQXFPOHlSaV9FTW4zQWtKQVZCTURxRVhJNHZQSGktczNNb3d0X1BLWjVvUGRFVmV6OGRmbEZoT1RqUm5lb0RyXzRPRVpXcVNzMTZzb2ozZW9xNlk5QXotQWI5QXNzTGoyMk5qaGQxU3A2ZFZHeEVBMm00ZFJUUExUUGxxNkNZVXQycy1zZkxsUmZRR21uZC1JcEZTUUZ1anY3TW5nUEhiZndUODV0bEpfeU9ob1kzQ0xIR0JB?oc=5",
+        "date": "2026-11-07",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "ebb06b3a57fc"
+      },
+      {
         "title": "Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News",
         "summary": "Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOM3VPcVdhNG85clc5eHJCOG5vNVBBcnA5SXdMSkpTZmRVR0dCNUhXXzNkbTFmTXByajA2NWotcTdTUDZQbkxUWmdOM2pHWWtQVVRpRmQtSFRac1VBNmhCWm1ldkZBenkwX0dtZWl0OHp2RXRNeEFDV1NXRVJOR3FQVjU4ZjFiQVdHaG4tOGNCeGg3ckxSdUg1bGpDbVVfQUhiSW5SMGYxRGpUQWQzWER3cGdyU1ZjTHB3aEdUNHl6WQ?oc=5",
@@ -126,28 +148,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "01fa23774a86"
-      },
-      {
-        "title": "Int'l medical tourism zone in China's Hainan sees visitor influx - People's Daily Online",
-        "summary": "Int'l medical tourism zone in China's Hainan sees visitor influx People's Daily Online",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jc0pQQlhOTHR2Snh2NEZqS0N4c2stRHdYOGNPVF8wTnFaemlKWnB4d3BmbmdEakxhTnJwczdtc2U3bmhWLXhjdDdYNmpYRFRzZFdoUFl0YUlYYU5EUzFndGxZN2c?oc=5",
-        "date": "2026-11-06",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "6e6f54e1091c"
-      },
-      {
-        "title": "'Mini-breaks' poised to boost tourism - China Daily",
-        "summary": "'Mini-breaks' poised to boost tourism China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9IQXhudGtXM0tnYzdUSklSaW01UHRfVDM3dHVZaWtUTkFYWmN2amdJVE9aWW9mZm91Wmd1NzRYbDZZTXlJMS03OGhTekgyNV85TFM4MnFBbWUxWjAzanEzVUpZQ2w1ZFRzXzl1YVdQOGZJRW1XOGpDWFl4WDhUZw?oc=5",
-        "date": "2026-11-06",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "2f9d54485d08"
       },
       {
         "title": "US and Canadian Tourists Embark on 12-Day China Tour as Visa-Free Policies Boost Inbound Travel - Macau Business",
@@ -161,15 +161,15 @@
         "_hash": "0a35c88eac51"
       },
       {
-        "title": "Visa-free policies boost China's inbound tourism for National Day - CGTN",
-        "summary": "Visa-free policies boost China's inbound tourism for National Day CGTN",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdTRRM2RtNFVzU2Q3M1MzRkVieTdjVGNGSG5PZXlVVWVlcGlCdEtSb0UzMUFUZzYtenNWY01rMTdSYU5tUVFaMFA3Z3doNlhqVDRERmVremN1Yndrbnd2VnVMc20xejIycUJWMzNtWUl0d0NCZDhjRTB0MTBudzAtZXV6dE84S1BQSUpyaGNnQU1WYXZjSTF2VXd2VWptYk4yUHhNUUJVekIzSUZQRnlNX3g1SXlqQmhWdF9hZ25Xcw?oc=5",
-        "date": "2026-10-09",
+        "title": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms - South China Morning Post",
+        "summary": "‘Enchanting’: why foreign tourists are clamouring to visit Chinese farms South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRFY4N29raHRNUGdqTFB6cDktM2VlU1BfNThtWEFJekJucko1U256QWl3MWlqZnRJWTZQLVBac1RGZzJTMmtSOEY3Ujl5U3RnTFgteVo4N3lpblBBR0pxdmRIMmx1Yms3ZjFuTHhLdHVNZEh5cGJ4V3lJT1dfdHZTd3dmbW5GTFltVmZYUVRXZlBhZ1JFb1NVeTc4V2JFM2lDV3lUUWVranR6YjlwWUp1ZFZDdU5tUdIBtgFBVV95cUxPZWw5eW9IRmhBOVEzVGlwbktRRXhNTmdnMkVwak1WdTBsM0hmN29ZTWg3LUNqTDFmV1czMVBILW1CdkNHTFJIZ3ZsbFQzVFdiSWFTMXJKUWRnTmxXcTBtTXRWRnpXbHV3RmZSVGtNQ1RmRXZ2Tm5LUWxFb25DUjNNemtjWWFjTmx6N2NrT1M0SVhOSHhHeHNzU0JjQzljai04c2RKUC1VcHJxcGhDa0MwWUc5NmhjUQ?oc=5",
+        "date": "2026-10-31",
         "source": "Google News RSS",
         "source_query": "China+inbound+tourism",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "498c62a077c2"
+        "_hash": "ca2ef44512e6"
       },
       {
         "title": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 - Tourism Economics",
@@ -229,48 +229,37 @@
     ],
     "destination_news": [
       {
-        "title": "AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships - South China Morning Post",
-        "summary": "AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPNDNmVXFFbVhLYXdTODktMXVhZnBTek1VLXhNRzlISXBpN1o2NUJZTGlLc0tBTjhQQ3hueUNGNzY1ZU5sQWRYQnFFLVJZT1N4ektfUHVvZXRwTGpKN0MwNEtWWFR1Qzh5eVlQMlBvcHBSNnRNM1pPUjAzcUFGZnU0NlU3V3RiVENnUWw3aXdZbG1NVGJUMFRhWW9QNU5sLVFHWHQzbHkwc21LTVc0VHpPc3NHa0FIMFh4TzJ2S2lMc1ZBWjNjaWpZcHhTRW1BWGM2cmw3VktUVGtXeC1UWUxIa2ZzcHhGNHVWdDNWUkVJeE5lWWdK0gH0AUFVX3lxTE5lMGJOdDdjeFJOb1NyZXhqUU1CdGVkVW13a1JxbUlNZHpvV19HZUp6S01UWUxRWkM0M3ZlNmxXUUYwcGUtOUhiajdCRkV4dmlFUE5uNXhETmJiUFhNRGJESW44S1pzMVVYV3E5aE00N2FUZEF5RzMxTEtQYlBFVEZ6VW4wb1Utd0NIVG83N1RtVERZQVdGR2diQ05SR2dabno4bTF0bXZIajVyQkhZNU12M0JyZDhYMTM4R2tKbm5acEhvaE1rdDZodFhjU2E3SXAyYzB5bzBsaHR5VDBkbGFnNHhoQU0yRmVfSGZKYmIxS1NBNlY?oc=5",
+        "title": "Nearly 1000 inheritors gather in Chongqing for cultural heritage expo - China Daily",
+        "summary": "Nearly 1000 inheritors gather in Chongqing for cultural heritage expo China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0tbmNielZYaDBoVGhXNGFoUnROdTkxT19iWEtfaElTUEFtdUU0Y1lBeXhvUmFfYkQ4ekl4MnZQcTd3SHVkUXBMam9mVjFjZW5YZl8zRnFVc0VxanRmRFJ5dXNJYnNjbXBxQWNkX0dpZER2M3J6VUlBc3RoOERHZw?oc=5",
         "date": "2026-11-07",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "b5494eacd96e"
+        "_hash": "e105a944134b"
       },
       {
-        "title": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily",
-        "summary": "Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5FLXZ2eE9uajh2eG4xWTloMy10MFlxQ3REQUZwbjB5RDI1djdOSlhvMHRQWVJWMzQ0S1BVYWJ5TFZvWndhVVFla2NDS2d0MTJNZFoySGN4dFBrZ0pYZ2xJSmVxSF9wOXQ2eWVvNzB0M3B4eEU2TGZ5X0Z6eFhVQQ?oc=5",
-        "date": "2026-11-06",
+        "title": "Sanae Takaichi slammed online for praising calligraphy without mentioning China - South China Morning Post",
+        "summary": "Sanae Takaichi slammed online for praising calligraphy without mentioning China South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbVNOeWN6Sm8tZ1Zlc1hOTFR6OTVBTUNJcEtaSE5MQ25aSEo3QU5Pc3lXSWNrUVhjT3RsZFpVTEY2MUdiYXNpUjJhUnRaQ1pDb0xmWVdEbDR5T3g0ellxWFIyNk5PTGN6WnY3dUZnUXA5QnMzdWsyb284NFVpTnNkOGMyWVR0c3NUQklYOTVGUjFwOVRITnpDM1lpU0RCeFNDQTFfOVBHbmxmY0ZTSmpoZzl6a3gxMjdiSmZUdENjTHRQNjRVVFB6Q2IxMW56UdIBzgFBVV95cUxPajdVeFBuM0pRT1NjTFdsSFp4ZzhPTEVrT0pfRTRVMm9weVdqSTRRbF9WWFVuTjV6MlU4Q0Vkbi1vQlF3Z2FZMWJjNnBOSy1vSjYzS3UyWGdvTzdTVG0yeTdZNGstRmJjaVRPMFVjQjdJb0lIRHZPMmhhSUk2dUxqT0tXaVg0ZzlRZ0Yxbnh3RnBhZ2hYU3JhVDlEUWRBQTQycmhLNWp0cXlkWDEyR1dCb3NaMFNNNWxCc2pWNlcwVTdKSURsV3ZTUnVkWjhVdw?oc=5",
+        "date": "2026-11-07",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "fb4152efc5d9"
+        "_hash": "3c235dd22134"
       },
       {
-        "title": "UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today",
-        "summary": "UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdWdKR3RNRDRjNkdfcnJmZHRCTjJic3llX1lJclgzQktmZEFQTV9kb1EzZXhsR2FpMWo4Vkh6cXlndUdxLWkzMFVLV2J5WFhCWmV2NG92b3dCZG5sUS1LbXEweHNtX0JNbGpEaENzVTNsY3FRTk5CbmVzaERRVHJBQ2k5NWhRT1JsWjNpU3pQVlY1RUwtQWtRWVpreFJXLUVTVTkzaWxyTXhua0pxTV9qUnk4X2plcE9VajFjYVRMak9tUQ?oc=5",
-        "date": "2026-11-05",
+        "title": "(W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? - Ecns.cn",
+        "summary": "(W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? Ecns.cn",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ISHVpVk5TQWlaemlGYXBKUFEtN1ZVX29VWmpYZmRnQm4taFNwSjVEWFZ4SmNGOGRMdEE4UUF6ZXVXYVhTVWRfZnUyanNOUDNxd2MwSEw2Qm5qUnRHWFl3WDA1aGQ0endlLURJTHZZR2U3RHlIcEhxQ1RTa21wbTA?oc=5",
+        "date": "2026-11-07",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "dfb4004ba33a"
-      },
-      {
-        "title": "Seychelles, China and the Art of Being Friends With Everyone: Sherin Francis Takes Island Diplomacy to Beijing - eTurboNews",
-        "summary": "Seychelles, China and the Art of Being Friends With Everyone: Sherin Francis Takes Island Diplomacy to Beijing eTurboNews",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeUVoSFVvN2tBM3BUUnY0aE1FRXMyd2Q5LVZrWHVWaTFqcDRlM1dNXzJIcTJEd0RIS2xtUW11LTltMVRmaGo0SWw3TklqLXpDclRLdDRSbDJOdm5xV3FoMUJtVjV4cmhPMHpocmFXeW56UFpsN19HSWpFdjA2M0FaUElCQ0lrazVTVjRESDFB?oc=5",
-        "date": "2026-11-03",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "b4f31ffd21de"
+        "_hash": "f1eb1d5056fd"
       },
       {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
@@ -282,6 +271,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6fe72a77cb3a"
+      },
+      {
+        "title": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies - Global Times",
+        "summary": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE91RHBIOGwxWkluSnNzTHp4WGdETkhhMmp5Y25hY3JIeW55UnBOWjJMZTQ2bUFXRHpjN2NEd09jcDZyUk80Vk5ONWN5UnBwNnFwNG9kSXBacncxUHdRdjRQNzN3?oc=5",
+        "date": "2026-10-02",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "8ce17fb31626"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -341,6 +341,17 @@
     ],
     "safety_alerts": [
       {
+        "title": "Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning Post",
+        "summary": "Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPaEl3SmtfaHFNMURPVUJlczBnQVowYnRhTkRMSHRodmd2R3hSRDgyZUgwVGZSMEZtcUk4anNHOHFQYVVBVGt4OUVLRHctZ05oNVdwcTJyOVBTbmhGZTRSUUZiMDlOY2w1U3pGX3o0dUlueW9rY1E2THFZOWZMektlRzhXdXcxVHlrNlI3SktNVUxiYm4zdEhpODJvM3ZxaW53NGY3bHZLVUNFYS1SUWZpN2IydDdObHJoRGN5MnpXVTZRYTlDcW5ITzlXVTJBN2JpdC1Vb9IB1AFBVV95cUxOUWx6b2sxX0xuSXJGSVlIa1o2T2VfcE9PYktseHRISHYtQS1paE5ycjdHbTBTbTduei1pTm51UkZ5ckRXY0RBTmtOZHd4MUxXRWd6RjFMbEZEWFdMSkdPdlk4OXZzNzdNb25RNEh3eHRzMG9DckxkV3c5R2xHbW9EQm1YOWdmVTVhZTBReWdsREExdUUxV0VQSWFTb1dXQW1VdkM3TVlIYk12ZnozVTZFdDNRTTVHUG5weG1zS2FFempLQURxcTBZS1NFdHRZSC03WE5ERA?oc=5",
+        "date": "2026-11-07",
+        "source": "Google News RSS",
+        "source_query": "China+travel+safety+alert",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "7c3d42157519"
+      },
+      {
         "title": "'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India",
         "summary": "'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India",
         "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNQ3ZnZHdjcGpyaE5XbnNla3k0QjIxYlE3V2x6NnVqTTlmMkNuTXFPb052NnFzeWZMcGV2TnU5UWQwYUxRaFdCQThoQ0pra2FhNDc0d2Nqa3BRWlI5QVB1UFVGdFBxUzJsOC12b09TbmIwSkIzMVRMTlFFT0ZlU3hUR3g4dVQyYko1ZVljN3B2S2txc1BTeDQ3YlEyMWR1N0RQYTYzaDZMaWZORHIwRkQtRmFPalNncURNeWE1VkdNUGc5ZG9XNkk4bjM3MlItQ0ZGQWpoVU1tLTc0b1NpaTRqLUVnVDF4ZFhKa01jNmpYcF93UFFPb19IQUJ3dUZnNnJIQWlvR0VqNWg2UdIBjwJBVV95cUxOYlBhMXJBTWlEdERzOWJyWGhaeWRLTGVlbzRzdUotMmZzdmNzVGZFZXZuMDZWUFJvendRSVlmei1qZmRZdE15dlFTXzdpWUZTaDlOdVhBeUl2bnM1LUZHV05HM3RKbE1NZmQ4SXRmRVN5TWlsdi1yalVCMEh3YVlzdlZLZWtFZFk2cjItZktQMmJOUS1Ic2xoVUUyQmxlR3BYY1VWVllLTmNQLW92TjN1NU8xN1V6WnZvZGJpYmFNbFd6dy1XQVpjazlDbnZ2bThRQndfM3ZKRVRRLU00Si1wUkpHQVNESV9YR1NkQ3NYSE12ODVhTHFlbXVuZTJVSkRjTnhQTTRDdFNCQkJ4UU0w?oc=5",
@@ -396,28 +407,6 @@
         "_hash": "18966a9cd38e"
       },
       {
-        "title": "US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post",
-        "summary": "US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbGVETjJPRS1DMEZHUmNsRU5uRFN3TlRnaFdNczR4S1NPejVscWFqQ1lHNzJwQzhLRWtqQ3Z2cEhENDk0MTBIaVdUTTBxWjRGakxCTnBmU1JWNG83M2dFQjFEYXVMRnZidWx6azZGYy0zSldLcDNkSE5TNnpuQmZjMGUwY1NWdWJGdC12aGotR1cwYXRjYzdoQ0NjN2g1YVhEd3FWNFNaQmRDb1d1Qjh5NGRVR0JMeEVXdVdN0gG7AUFVX3lxTE4zaEFHU19wX0VlWWdTZDNOekZXSmJIVjdnVWo5aUxuZ0VGZU9KMXpSVEtCLU5ra2RjeGNPbmxra0tESml6TDllUmVjYTZxSlBaSlhPNlQ2aGxUSTJUUXFUMlZuRU51WkNOX3N6blBNVnhxaU00WmZyVE1ZMHk5TFM4MVNkTXFJV2JNSjlXYUpyNUh6QzhDY3VTTW1qVGlXR3Faa1VKNnpKVElqRVB6OTM0QU1TOC1FanFpWTg?oc=5",
-        "date": "2026-10-20",
-        "source": "Google News RSS",
-        "source_query": "China+travel+safety+alert",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "38c86176c05c"
-      },
-      {
-        "title": "Storm weakens, but disrupts travel in China - Taipei Times",
-        "summary": "Storm weakens, but disrupts travel in China Taipei Times",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
-        "date": "2026-08-11",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "cb324ec34cae"
-      },
-      {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
         "summary": "Weather Alert: Typhoon Dolphin U.S. Embassy & Consulates in China",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1yV3hGMHA1WU54b3BGVEpYeGFhMVJueXlyMHV4blV1STJBb1dVeFY2NmZJWDlrVGFwdURYQ2hTMmN4V2tyMzl4Vko2S3Rmc21mUHBVX0lMWW9kQlZ0MHZnWXh4RGctZWp6WGJmSDAzMjBUQi1jVGc?oc=5",
@@ -427,6 +416,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "dc0c52f4626a"
+      },
+      {
+        "title": "Weather Alert: Potential Severe Weather in Central China, July 11-13 - U.S. Embassy & Consulates in China",
+        "summary": "Weather Alert: Potential Severe Weather in Central China, July 11-13 U.S. Embassy & Consulates in China",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXV3R3BUUTNMSmpUQVV4MldFRndNM0ptNWRFWFZZd1BaUF9TY0V5a0czRHBmbVB1UE1jMkxmODZGSnB2c19CZXFZYUFPZWdrb0ZldWRqc3NZMjFZdFpSZng5M0hkY3FzQllXQXVRcWtaUEVNV09ieXh6YkNOZUJYTWsyZ1JuTW5RRU11bmxzQjJDem5rUmFXNlFObkRDdWRvbDU1WjNqSQ?oc=5",
+        "date": "2026-07-10",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "fff1ec053e6c"
       },
       {
         "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
@@ -455,9 +455,9 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-07] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-06] India eases passport and visa rules for select foreigners, including Pakistan nationals - Gulf News\n  India eases passport and visa rules for select foreigners, including Pakistan nationals Gulf News\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
-    "travel_industry": "- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News\n- [2026-11-06] Int'l medical tourism zone in China's Hainan sees visitor influx - People's Daily Online\n  Int'l medical tourism zone in China's Hainan sees visitor influx People's Daily Online\n- [2026-11-06] 'Mini-breaks' poised to boost tourism - China Daily\n  'Mini-breaks' poised to boost tourism China Daily",
-    "destination_news": "- [2026-11-07] AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships - South China Morning Post\n  AI-generated cats showcasing rural life, Chinese cuisine land top brand sponsorships South China Morning Post\n- [2026-11-06] Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission - China Daily\n  Dong Yuhui: Digital technologies bring new possibilities for cultural heritage preservation and transmission China Daily\n- [2026-11-05] UNESCO body recommends Japan's shodo calligraphy for cultural heritage list - Japan Today\n  UNESCO body recommends Japan's shodo calligraphy for cultural heritage list Japan Today",
-    "safety_alerts": "- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı\n- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters",
+    "travel_industry": "- [2026-11-07] What China's first Antarctic law means for science, tourism and beyond - CGTN\n  What China's first Antarctic law means for science, tourism and beyond CGTN\n- [2026-11-07] China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain - VnExpress International\n  China tourist hotspot offers $3,000 job filming snowy landscapes on 2,200-meter-high mountain VnExpress International\n- [2026-11-06] Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands - Breaking Travel News\n  Tourism Fiji Strengthens China Partnerships as Asian Connectivity Expands Breaking Travel News",
+    "destination_news": "- [2026-11-07] Nearly 1000 inheritors gather in Chongqing for cultural heritage expo - China Daily\n  Nearly 1000 inheritors gather in Chongqing for cultural heritage expo China Daily\n- [2026-11-07] Sanae Takaichi slammed online for praising calligraphy without mentioning China - South China Morning Post\n  Sanae Takaichi slammed online for praising calligraphy without mentioning China South China Morning Post\n- [2026-11-07] (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? - Ecns.cn\n  (W.E. Talk) Daren Tang: What can Dunhuang's millennia-old legacy teach us about creativity in the digital and AI age? Ecns.cn",
+    "safety_alerts": "- [2026-11-07] Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning Post\n  Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams South China Morning Post\n- [2026-11-05] 'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia - The Times of India\n  'Pacific ocean like a person burning with fever': Scientists warn of stronger typhoons in East Asia The Times of India\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-07T02:59:09.784372+00:00"
+  "official_state_checked_at": "2026-11-07T14:15:45.576310+00:00"
 }
