@@ -1,7 +1,7 @@
 {
   "status": "failed",
-  "generated_at": "2026-11-01T08:36:03.010098",
-  "run_id": "41289512439",
+  "generated_at": "2026-11-08T08:28:33.583659",
+  "run_id": "42463063032",
   "failed_steps": [
     "内容质量验证(P0乱码)"
   ],
@@ -51,8 +51,8 @@
     }
   ],
   "content": {
-    "total": 72,
-    "passed_count": 69,
+    "total": 73,
+    "passed_count": 72,
     "mojibake_files": [],
     "encoding_error_files": [],
     "validator_parse_error": null

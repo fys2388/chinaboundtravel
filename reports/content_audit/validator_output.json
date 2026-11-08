@@ -1500,29 +1500,42 @@
     },
     {
       "file": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-      "frontmatter_ok": false,
-      "content_id_ok": false,
+      "frontmatter_ok": true,
+      "content_id_ok": true,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
-      "language_issues": [],
+      "language_issues": [
+        "巨",
+        "龙",
+        "黄",
+        "龙",
+        "洞",
+        "峡",
+        "谷",
+        "黄",
+        "龙",
+        "洞"
+      ],
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [],
+      "media_issues": [
+        "missing_cover"
+      ],
       "cover_ok": false,
       "cover_image": "",
       "scores": {
-        "brand": 0,
-        "fact": 0,
+        "brand": 100,
+        "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 0,
-        "media": 0
+        "seo": 100,
+        "media": 75
       },
-      "trust_score": 0,
-      "passed": false
+      "trust_score": 90.0,
+      "passed": true
     },
     {
       "file": "2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
@@ -1552,29 +1565,41 @@
     },
     {
       "file": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "frontmatter_ok": false,
-      "content_id_ok": false,
+      "frontmatter_ok": true,
+      "content_id_ok": true,
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
-      "language_issues": [],
+      "language_issues": [
+        "一",
+        "定",
+        "要",
+        "一",
+        "定",
+        "要",
+        "一",
+        "定",
+        "要"
+      ],
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
       "seo_issues": [],
-      "media_issues": [],
+      "media_issues": [
+        "missing_cover"
+      ],
       "cover_ok": false,
       "cover_image": "",
       "scores": {
-        "brand": 0,
-        "fact": 0,
+        "brand": 100,
+        "fact": 100,
         "language": 0,
         "mojibake": 100,
-        "seo": 0,
-        "media": 0
+        "seo": 100,
+        "media": 75
       },
-      "trust_score": 0,
-      "passed": false
+      "trust_score": 90.0,
+      "passed": true
     },
     {
       "file": "2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
@@ -1605,6 +1630,34 @@
         "media": 75
       },
       "trust_score": 93.0,
+      "passed": true
+    },
+    {
+      "file": "2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-winter-travel-guide-where-to-go-and-how-to-pack-au.jpg",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 80,
+        "media": 100
+      },
+      "trust_score": 97.0,
       "passed": true
     },
     {
@@ -1777,7 +1830,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/china-extends-144-hour-visa-free-transit-policy-to-more-countries.webp",
@@ -1786,10 +1841,10 @@
         "fact": 100,
         "language": 100,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 97.0,
       "passed": true
     },
     {
@@ -1923,6 +1978,6 @@
       "passed": true
     }
   ],
-  "passed_count": 69,
-  "total": 72
+  "passed_count": 72,
+  "total": 73
 }

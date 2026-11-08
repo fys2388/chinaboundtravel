@@ -3,36 +3,16 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-08_content",
   "created_at": "2026-11-08T01:00:49.233279+00:00",
-  "updated_at": "2026-11-08T08:00:50.738647",
+  "updated_at": "2026-11-08T08:28:34.115111",
   "target_date": "2026-11-08",
-  "issue_count": 13,
+  "issue_count": 15,
   "severity_summary": {
-    "critical": 4,
-    "high": 3,
-    "medium": 6,
+    "critical": 2,
+    "high": 5,
+    "medium": 8,
     "low": 0
   },
   "issues": [
-    {
-      "id": "content-frontmatter-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-      "type": "invalid_frontmatter",
-      "title": "文章 front matter 无法解析",
-      "description": "文章 front matter 无法解析",
-      "page": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-      "file": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-      "evidence": "content_quality_validator could not parse front matter",
-      "recommended_action": "修复 front matter 分隔符或首部 BOM，确保正文可正常构建。",
-      "severity": "critical",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "content",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-08T01:00:49.232933+00:00"
-    },
     {
       "id": "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
       "type": "invalid_frontmatter",
@@ -54,33 +34,13 @@
       "detected_at": "2026-11-08T01:00:49.232938+00:00"
     },
     {
-      "id": "content-frontmatter-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "type": "invalid_frontmatter",
-      "title": "文章 front matter 无法解析",
-      "description": "文章 front matter 无法解析",
-      "page": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "file": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-      "evidence": "content_quality_validator could not parse front matter",
-      "recommended_action": "修复 front matter 分隔符或首部 BOM，确保正文可正常构建。",
-      "severity": "critical",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "content",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-08T01:00:49.232941+00:00"
-    },
-    {
       "id": "content-check-quality_validator-failed",
       "type": "content_quality_validator_failed",
       "title": "内容质量验证(P0乱码)未通过",
       "description": "内容质量验证(P0乱码)未通过",
       "page": "content/posts",
       "file": "content/posts",
-      "evidence": "content_quality_validator.py exit code=1; run_id=41289512439",
+      "evidence": "content_quality_validator.py exit code=1; run_id=42463063032",
       "recommended_action": "修复报告中的乱码、编码、front matter 或媒体合规问题后重跑内容质量巡检。",
       "severity": "critical",
       "agent": "content",
@@ -92,6 +52,46 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-11-08T01:00:49.232918+00:00"
+    },
+    {
+      "id": "content-media-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "type": "media_compliance",
+      "title": "文章媒体资源不符合发布规则",
+      "description": "文章媒体资源不符合发布规则",
+      "page": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "file": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+      "evidence": "missing_cover",
+      "recommended_action": "替换违规图片、补齐封面或改用本站允许的媒体地址。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-08T08:28:33.733330+00:00"
+    },
+    {
+      "id": "content-media-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "type": "media_compliance",
+      "title": "文章媒体资源不符合发布规则",
+      "description": "文章媒体资源不符合发布规则",
+      "page": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "file": "2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+      "evidence": "missing_cover",
+      "recommended_action": "替换违规图片、补齐封面或改用本站允许的媒体地址。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-08T08:28:33.733337+00:00"
     },
     {
       "id": "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-08T01:00:49.232945+00:00"
     },
     {
-      "id": "site_health-25abda7fa601cf9d",
+      "id": "site_health-d8d2f77ac176cb0",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-08T08:00:50.437508+00:00"
+      "detected_at": "2026-11-08T08:28:33.733357+00:00"
     },
     {
-      "id": "site_health-31ed6a8c81583190",
+      "id": "site_health-22124b877396825e",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-08T08:00:50.437503+00:00"
+      "detected_at": "2026-11-08T08:28:33.733352+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -214,6 +214,46 @@
       "detected_at": "2026-11-08T01:00:49.232978+00:00"
     },
     {
+      "id": "content-seo-2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "description": "文章 SEO 字段或结构需要优化",
+      "page": "2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "file": "2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-08T08:28:33.733398+00:00"
+    },
+    {
+      "id": "content-seo-china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "description": "文章 SEO 字段或结构需要优化",
+      "page": "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "file": "china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-08T08:28:33.733403+00:00"
+    },
+    {
       "id": "issue_ff0a11bc961a",
       "type": "ai_forbidden_word",
       "title": "AI禁用词: cheapest",
@@ -234,7 +274,7 @@
       "detected_at": "2026-11-08T03:27:29.476979"
     },
     {
-      "id": "site_health-455c9387d4a5d9d4",
+      "id": "site_health-7b904d0581d2c9f",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -251,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-08T08:00:50.437545+00:00"
+      "detected_at": "2026-11-08T08:28:33.733414+00:00"
     },
     {
       "id": "issue_ff0a11bc961a",
@@ -275,12 +315,12 @@
     }
   ],
   "priority_issue": {
-    "id": "content-frontmatter-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+    "id": "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
     "type": "invalid_frontmatter",
     "title": "文章 front matter 无法解析",
     "description": "文章 front matter 无法解析",
-    "page": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-    "file": "2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+    "page": "2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+    "file": "2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
     "evidence": "content_quality_validator could not parse front matter",
     "recommended_action": "修复 front matter 分隔符或首部 BOM，确保正文可正常构建。",
     "severity": "critical",
@@ -292,7 +332,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "content",
-    "detected_at": "2026-11-08T01:00:49.232933+00:00"
+    "detected_at": "2026-11-08T01:00:49.232938+00:00"
   },
   "expected_actions": [
     "manual_review",
