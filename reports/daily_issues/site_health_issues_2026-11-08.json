@@ -15,7 +15,7 @@
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: ai_forbidden_word",
-      "updated_at": "2026-11-08T08:28:34.111617"
+      "updated_at": "2026-11-08T08:29:01.677281"
     },
     {
       "type": "ai_forbidden_word",
@@ -30,7 +30,7 @@
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-11-08T08:28:34.112681"
+      "updated_at": "2026-11-08T08:29:01.680704"
     },
     {
       "type": "title_too_long",
