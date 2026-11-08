@@ -1,0 +1,436 @@
+{
+  "date": "2026-11-08",
+  "site_up": true,
+  "response_time": 120.63300000000001,
+  "visitors": 6,
+  "sessions": 6,
+  "requests": 6,
+  "visitors_trend": "-40.0%",
+  "week_trend": "N/A",
+  "month_trend": "-70.0%",
+  "bounce_rate": 66.7,
+  "avg_session_duration": 8,
+  "engagement_rate": 33.3,
+  "bounce_rate_7d": 55.6,
+  "engagement_rate_7d": 44.4,
+  "avg_session_duration_7d": 19.23448228888889,
+  "sessions_7d": 45,
+  "visitors_7d": 41,
+  "top_pages": [
+    {
+      "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+      "title": "7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026",
+      "views": 3
+    },
+    {
+      "path": "/posts/accommodation-tips-guide/",
+      "title": "Accommodation In China: Complete 2026 Guide",
+      "views": 1
+    },
+    {
+      "path": "/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
+      "title": "China National Parks: Zhangjiajie & | ChinaBound Travel",
+      "views": 1
+    },
+    {
+      "path": "/posts/how-to-use-alipay-as-a-foreigner-complete-setup-guide-2026/",
+      "title": "Alipay Tutorial 2026: Complete | ChinaBound Travel",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Organic Social",
+      "users": 3,
+      "sessions": 3
+    },
+    {
+      "channel": "Direct",
+      "users": 2,
+      "sessions": 2
+    },
+    {
+      "channel": "Unassigned",
+      "users": 2,
+      "sessions": 3
+    },
+    {
+      "channel": "Organic Search",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "Singapore",
+      "users": 2
+    },
+    {
+      "country": "United States",
+      "users": 2
+    },
+    {
+      "country": "Ireland",
+      "users": 1
+    },
+    {
+      "country": "Sweden",
+      "users": 1
+    }
+  ],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 729,
+  "gsc_clicks": 2,
+  "gsc_ctr": 0.27,
+  "gsc_errors": 0,
+  "gsc_week_trend": "+24.6%",
+  "gsc_month_trend": "+155.8%",
+  "top_keywords": [
+    {
+      "keyword": "# role you are a strict image-grounded knowledge assistant. identify entities only when visual evidence is clear, then provide concise background tied to those entities. # rules 1. use visible anchors: readable text, logos, labels, signatures, symbols, distinctive designs, markings, or unique features. 2. provide facts only about entities confirmed by those anchors. 3. do not infer from weak resemblance, broad context, or unsupported association. 4. analyze carefully but keep reasoning internal. # output - start with visual evidence supporting recognition. - follow with brief verifiable background facts. - use direct factual language. - avoid \"maybe,\" \"likely,\" \"possibly,\" \"appears to be,\" \"perhaps,\" \"probably.\" - omit unconfirmed details. # limits - no greetings, closings, meta-comments, or emojis. - no unrelated background. - stop when complete.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 6.0
+    },
+    {
+      "keyword": "# task role you are a strict assistant for visual evidence analysis and entity-level knowledge retrieval. the image must provide the basis for entity identification. # scope - provide background facts only for entities confirmed by visible cues: text, logo, emblem, signature, label, symbol, distinctive design, unique marker. - keep facts connected to the confirmed entity. - exclude unsupported guesses, uncertain identities, broad associations, unrelated knowledge. # reasoning policy - analyze carefully before answering. - do not output chain-of-thought or process notes. # response style - begin with recognizable visual cues. - follow with concise verified background. - avoid hedging terms. - do not include unsupported details. # output limits - no greetings, closings, emojis, meta-explanations.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 2.0
+    },
+    {
+      "keyword": "144 hour",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 48.0
+    },
+    {
+      "keyword": "144 hours visa china",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 81.0
+    },
+    {
+      "keyword": "7 day china tour",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 31.6
+    },
+    {
+      "keyword": "7 day china tours",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 30.0
+    },
+    {
+      "keyword": "7 day tour of china",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 27.0
+    },
+    {
+      "keyword": "accommodation china",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 76.2
+    },
+    {
+      "keyword": "accommodation in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 82.0
+    },
+    {
+      "keyword": "accommodation standards for sichuan scenic spots",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 6.0
+    },
+    {
+      "keyword": "accommodation standards of chengdu youth travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 45.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan international travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 60.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan travel agencies",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 50.5
+    },
+    {
+      "keyword": "airport transfers",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 88.6
+    },
+    {
+      "keyword": "alipay верификация 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 66.0
+    },
+    {
+      "keyword": "business meeting in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 96.0
+    },
+    {
+      "keyword": "business travel to china visa requirements",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0.0,
+      "position": 85.8
+    },
+    {
+      "keyword": "can americans use wechat pay",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 60.5
+    },
+    {
+      "keyword": "chengdu photography tour recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 65.0
+    },
+    {
+      "keyword": "chengdu teahouse culture",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 100.0
+    },
+    {
+      "keyword": "chengdu travel photography tips recommendation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 30.0
+    },
+    {
+      "keyword": "china 144 hour visa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 49.0
+    },
+    {
+      "keyword": "china airport to city",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 73.0
+    },
+    {
+      "keyword": "china airport transfer",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 78.0
+    },
+    {
+      "keyword": "china business trip planner",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 91.0
+    }
+  ],
+  "total_posts": 73,
+  "new_posts": 0,
+  "pending_posts": 0,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 0,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": false,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 3,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": true,
+  "gh_report_success": true,
+  "gh_social_success": true,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 1000,
+  "gh_query_window_days": 8,
+  "gh_blog_paths_total": 1,
+  "gh_report_paths_total": 16,
+  "high_priority_todos": [
+    "🟠 日访问用户：当前 6人 / 目标 13人（46%），需重点推进",
+    "🟡 自然搜索占比 17%（平均排名 27.58）：瓶颈是排名而非标题：平均排名在 20 名外，改标题最多移动 1-3 位，无法进入 Page 1。优先修 canonical 冲突、补内链到已有排名的页、并核实 Top 查询与该页事实是否对齐",
+    "🟡 平均时长（7日滚动） 19 秒：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-11-07",
+  "gsc_avg_position": 27.58,
+  "gsc_window_start": "2026-10-30",
+  "gsc_window_end": "2026-11-05",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 85,
+  "root_pages_scanned": 12,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_blog_window_runs": 1,
+  "gh_blog_failure_count": 0,
+  "gh_blog_latest_failure_time": null,
+  "gh_blog_state": "success",
+  "gh_blog_conclusion": "success",
+  "gh_blog_run_time": "2026-11-02T03:52:18Z",
+  "gh_blog_display_title": "Joran博文生成+双AI自动审核发布",
+  "gh_report_window_days": 2,
+  "gh_report_window_runs": 4,
+  "gh_report_failure_count": 0,
+  "gh_report_latest_failure_time": null,
+  "gh_report_state": "success",
+  "gh_report_conclusion": "success",
+  "gh_report_run_time": "2026-11-07T06:20:24Z",
+  "gh_report_display_title": "Feishu Daily Report",
+  "gh_report_running": true,
+  "gh_social_window_days": 2,
+  "gh_social_paths_total": 24,
+  "gh_social_window_runs": 6,
+  "gh_social_failure_count": 0,
+  "gh_social_latest_failure_time": null,
+  "gh_social_state": "success",
+  "gh_social_conclusion": "success",
+  "gh_social_run_time": "2026-11-07T20:45:25Z",
+  "gh_social_display_title": "Social Media Distributor",
+  "agent_health": {
+    "checked_at": "2026-11-08 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-11-02 04:54:47",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-11-08",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": {
+    "total_issues": 6,
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 4,
+    "auto_fixed": 4,
+    "need_manual": 24,
+    "resolved": 16,
+    "inherited_resolved": 21,
+    "in_progress": 0,
+    "last_updated": "2026-11-07T17:19:16.878590"
+  },
+  "reporting_snapshot": {
+    "as_of": "2026-11-07",
+    "generated_at": "2026-11-07",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 631,
+    "gsc_clicks_28d": 0,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🟠 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 6人 | 13人 | 46% | 🟠 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟡 今日无新发（距上次 6 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 104.1次 | 33次 | 100% | ✅ 当前 104.1次 = 目标的 3×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **自然搜索占比 17%（平均排名 27.58）**：瓶颈是排名而非标题：平均排名在 20 名外，改标题最多移动 1-3 位，无法进入 Page 1。优先修 canonical 冲突、补内链到已有排名的页、并核实 Top 查询与该页事实是否对齐\n- 🟡 **平均时长（7日滚动） 19 秒**：内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"
+}
