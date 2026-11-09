@@ -362,6 +362,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

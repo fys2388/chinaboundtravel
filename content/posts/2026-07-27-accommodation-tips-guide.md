@@ -232,6 +232,8 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [How To Choose Your First City In China: A Decision Guide](/posts/how-to-choose-your-first-city-in-china-a-decision-guide/)
 
+- [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?
